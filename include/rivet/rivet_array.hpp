@@ -228,7 +228,7 @@ namespace rivet {
 		}
 
 		template<typename U = T>
-		[[maybe_unused]] typename std::enable_if<sizeof(U) <= 2 && std::is_same<U, T>::value && std::is_integral<U>::value, std::string>::type to_wstring() {
+		[[maybe_unused]] typename std::enable_if<sizeof(U) <= 2 && std::is_same<U, T>::value && std::is_integral<U>::value, std::wstring>::type to_wstring() {
 			ensure_null_terminated<U>();
 			if (sizeof(U) == 1) {
 				return std::wstring(to_string());
