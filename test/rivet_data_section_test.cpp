@@ -2,10 +2,8 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/rivet.hpp>
 #include <rivet/data/registry.hpp>
-
-#include <iostream>
+#include <rivet/data/sections/data_section.hpp>
 
 #pragma clang diagnostic push
 #pragma ide diagnostic ignored "UnreachableCode"
@@ -17,7 +15,7 @@ using namespace rivet::data::section;
 
 struct test_section : data_section {
 	constexpr const static rivet_typeid_t type_id = 0x12345678;
-	constexpr const static std::string type_name = "TestSection";
+	constexpr const static char* type_name = "TestSection";
 
 	explicit test_section(std::shared_ptr<rivet_data_array_t> &stream) : data_section(stream) { }
 	RIVET_DELETE_COPY(test_section)

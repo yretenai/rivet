@@ -16,6 +16,6 @@ test_0003 = executable('rivet-test0003-data_section', 'rivet_data_section_test.c
 	link_args: [],
 	cpp_args: cxxargs)
 
-test('rivet version', test_0001)
-test('rivet::data::registry data_type_registry', test_0002)
-test('rivet::data::registry data_section_registry', test_0003)
+test('rivet should report a correct version', test_0001)
+test('rivet data_type_registry should insert data handlers', test_0002)
+test('rivet data_section_registry should insert data section handlers', test_0003)

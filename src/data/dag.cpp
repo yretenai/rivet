@@ -3,6 +3,7 @@
 // SPDX-License-Identifier: MPL-2.0
 
 #include <rivet/data/dag.hpp>
+#include <rivet/data/registry.hpp>
 
 namespace rivet::data {
 	using dependency_dag_registry [[maybe_unused]] = register_data_handler<dependency_dag>;

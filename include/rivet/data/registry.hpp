@@ -8,12 +8,16 @@
 // https://www.cppstories.com/2018/02/factory-selfregister/ and
 // https://stackoverflow.com/questions/60728688/templated-automatic-factory-registration
 
+#include <cassert>
+#include <functional>
+#include <iterator>
+#include <memory>
+#include <string>
+#include <unordered_map>
+#include <utility>
+
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/rivet_array.hpp>
-#include <rivet/data/data_file.hpp>
-
-#include <unordered_map>
-#include <functional>
 
 namespace rivet::data {
 	namespace registry {

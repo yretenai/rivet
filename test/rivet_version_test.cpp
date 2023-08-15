@@ -4,12 +4,9 @@
 
 #include <rivet/rivet.hpp>
 
-#include <iostream>
-
 using namespace std;
 
 int main() {
-	cout << rivet::rivet_version() << " = " << rivet::local_version << endl;
 	if(rivet::rivet_version() != rivet::local_version) {
 		return 1;
 	}

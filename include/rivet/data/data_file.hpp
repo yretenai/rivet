@@ -6,13 +6,15 @@
 
 #include <cstdint>
 
-#include <rivet/rivet_keywords.hpp>
-#include <rivet/rivet_array.hpp>
-#include <rivet/data/registry.hpp>
-#include <rivet/data/sections/data_section.hpp>
-
-#include <unordered_map>
 #include <istream>
+#include <memory>
+#include <unordered_map>
+#include <utility>
+
+#include <rivet/rivet_array.hpp>
+#include <rivet/rivet_keywords.hpp>
+
+namespace rivet::data::section { struct data_section; }
 
 namespace rivet::data {
 	struct data_file {

@@ -4,13 +4,17 @@
 
 #pragma once
 
-#include <rivet/rivet_keywords.hpp>
+#include <iosfwd>
+#include <memory>
+
 #include <rivet/data/data_file.hpp>
+#include <rivet/rivet_keywords.hpp>
+#include <rivet/rivet_array.hpp>
 
 namespace rivet::data {
 	struct RIVET_SHARED archive_toc : data_file {
 		constexpr const static rivet_typeid_t type_id = 0x4D7CF320;
-		constexpr const static std::string type_name = "ArchiveTOC";
+		constexpr const static char* type_name = "ArchiveTOC";
 
 		explicit archive_toc(std::istream &stream);
 		explicit archive_toc(std::shared_ptr<rivet_data_array_t> &stream);

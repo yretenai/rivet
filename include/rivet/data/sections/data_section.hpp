@@ -4,14 +4,10 @@
 
 #pragma once
 
-#include <cstdint>
+#include <memory>
 
-#include <rivet/rivet_keywords.hpp>
 #include <rivet/rivet_array.hpp>
-#include <rivet/data/registry.hpp>
-
-#include <unordered_map>
-#include <istream>
+#include <rivet/rivet_keywords.hpp>
 
 namespace rivet::data::section {
 	struct data_section {

@@ -21,7 +21,6 @@
 #endif
 
 #include <cstdint>
-#include <utility>
 
 #define RIVET_ALIGNMENT 16
 

@@ -1,12 +1,9 @@
-#include <rivet/rivet.hpp>
-#include <rivet/data/registry.hpp>
-#include <rivet/data/dag.hpp>
-#include <rivet/data/toc.hpp>
+#include <rivet/rivet_array.hpp>
 
-#include <iostream>
+#include <memory>
 
 using namespace std;
 
 int main() {
-	rivet::data::registry::dump_registries();
+	auto array = std::make_shared<rivet::rivet_array<uint8_t, RIVET_ALIGNMENT>>(nullptr, 0);
 }

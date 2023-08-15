@@ -3,6 +3,7 @@
 // SPDX-License-Identifier: MPL-2.0
 
 #include <rivet/data/registry.hpp>
+
 #include <iostream>
 #include <iomanip>
 

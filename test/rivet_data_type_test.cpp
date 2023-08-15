@@ -2,10 +2,8 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/rivet.hpp>
 #include <rivet/data/registry.hpp>
-
-#include <iostream>
+#include <rivet/data/data_file.hpp>
 
 #pragma clang diagnostic push
 #pragma ide diagnostic ignored "UnreachableCode"
@@ -16,7 +14,7 @@ using namespace rivet::data;
 
 struct test_data : data_file {
 	constexpr const static rivet_typeid_t type_id = 0x12345678;
-	constexpr const static std::string type_name = "TestType";
+	constexpr const static char* type_name = "TestType";
 
 	explicit test_data(std::istream &stream) : data_file(stream) { }
 	explicit test_data(std::shared_ptr<rivet_data_array_t> &stream) : data_file(stream) { }

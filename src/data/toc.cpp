@@ -3,6 +3,7 @@
 // SPDX-License-Identifier: MPL-2.0
 
 #include <rivet/data/toc.hpp>
+#include <rivet/data/registry.hpp>
 
 namespace rivet::data {
 	using archive_toc_registry [[maybe_unused]] = rivet::data::register_data_handler<archive_toc>;
