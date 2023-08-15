@@ -4,7 +4,9 @@
 
 #pragma once
 
-// based on https://www.cppstories.com/2018/02/factory-selfregister/
+// based on
+// https://www.cppstories.com/2018/02/factory-selfregister/ and
+// https://stackoverflow.com/questions/60728688/templated-automatic-factory-registration
 
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/rivet_array.hpp>

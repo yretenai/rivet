@@ -16,7 +16,7 @@
 
 namespace rivet::data {
 	struct data_file {
-			struct data_header_t {
+		struct data_header_t {
 			uint32_t magic;
 			rivet_typeid_t type_id;
 			rivet_size_t size;
@@ -31,7 +31,7 @@ namespace rivet::data {
 		data_header_t header = {};
 		std::shared_ptr<rivet_data_array_t> buffer = {};
 		std::shared_ptr<rivet_data_array_t> string_buffer = {};
-		std::unordered_map<rivet_typeid_t, std::pair<data_entry_t, std::shared_ptr<data_file>>> sections;
+		std::unordered_map<rivet_typeid_t, std::pair<data_entry_t, std::shared_ptr<section::data_section>>> sections;
 
 		explicit data_file(std::istream &stream) {
 			// todo.
