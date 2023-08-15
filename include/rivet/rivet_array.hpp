@@ -13,6 +13,7 @@
 #include <new>
 #include <sstream>
 #include <string>
+#include <vector>
 #include <utility>
 
 #include <rivet/rivet_keywords.hpp>
