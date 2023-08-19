@@ -14,6 +14,19 @@ incdir = include_directories('include/')
 ldargs = []
 cxxargs = []
 
+compiler = meson.get_compiler('cpp')
+if host_machine.system() == 'windows'
+    if compiler.get_id() == 'clang'
+        cxxargs += ['-fno-ms-compatibility']
+    elif compiler.get_id() == 'msvc'
+        message('msvc is not supported due to my template code being too weird')
+    endif
+endif
+
+if compiler.get_id() == 'clang'
+    cxxargs += ['-finput-charset=utf-8', '-fexec-charset=utf-8', '-fexperimental-relative-c++-abi-vtables']
+endif
+
 subdir('src')
 subdir('cli')
 subdir('test')

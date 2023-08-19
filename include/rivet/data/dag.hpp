@@ -16,8 +16,7 @@ namespace rivet::data {
 		constexpr const static rivet_typeid_t type_id = 0x2A077A51;
 		constexpr const static char* type_name = "DependencyDAG";
 
-		explicit dependency_dag(std::istream &stream);
-		explicit dependency_dag(std::shared_ptr<rivet_data_array_t> &stream);
+		explicit RIVET_DECL dependency_dag(std::shared_ptr<rivet_data_array_t> &stream);
 		RIVET_DELETE_COPY(dependency_dag)
 	};
 }

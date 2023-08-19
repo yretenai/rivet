@@ -16,8 +16,7 @@ namespace rivet::data {
 		constexpr const static rivet_typeid_t type_id = 0x4D7CF320;
 		constexpr const static char* type_name = "ArchiveTOC";
 
-		explicit archive_toc(std::istream &stream);
-		explicit archive_toc(std::shared_ptr<rivet_data_array_t> &stream);
+		explicit RIVET_DECL archive_toc(std::shared_ptr<rivet_data_array_t> &stream);
 		RIVET_DELETE_COPY(archive_toc)
 	};
 }

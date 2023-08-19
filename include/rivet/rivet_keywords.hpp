@@ -20,9 +20,13 @@
 	#define RIVET_INLINE inline
 #endif
 
-#include <cstdint>
+#define RIVET_DECL __stdcall
 
-#define RIVET_ALIGNMENT 16
+#ifndef RIVET_ALIGNMENT
+	#define RIVET_ALIGNMENT 16
+#endif
+
+#include <cstdint>
 
 #define RIVET_DELETE_COPY(TYPE_NAME) \
 TYPE_NAME(TYPE_NAME const&) = delete; \

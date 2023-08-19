@@ -11,7 +11,12 @@
 
 namespace rivet::data::section {
 	struct data_section {
-		explicit data_section(std::shared_ptr<rivet_data_array_t> &stream) { }
+		std::shared_ptr<rivet_data_array_t> buffer = { };
+
+		explicit data_section(std::shared_ptr<rivet_data_array_t> &stream) {
+			buffer = stream;
+		}
+
 		RIVET_DELETE_COPY(data_section);
 	};
 }

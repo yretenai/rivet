@@ -8,11 +8,10 @@
 namespace rivet::data {
 	using dependency_dag_registry [[maybe_unused]] = register_data_handler<dependency_dag>;
 
-	dependency_dag::dependency_dag(std::istream &stream) : data_file(stream) {
-		// todo
-	}
-
 	dependency_dag::dependency_dag(std::shared_ptr<rivet_data_array_t> &stream) : data_file(stream) {
+		if(header.type_id != type_id) {
+			throw invalid_tag_error();
+		}
 		// todo
 	}
 }

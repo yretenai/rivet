@@ -23,7 +23,7 @@ namespace rivet::data {
 	namespace registry {
 		template<typename T>
 		struct data_registry_impl {
-			std::unordered_map<rivet_typeid_t, std::pair<std::string, std::function<std::shared_ptr<T>(std::shared_ptr<rivet_data_array_t> &)>>> registry = {};
+			std::unordered_map<rivet_typeid_t, std::pair<std::string, std::function<std::shared_ptr<T>(std::shared_ptr<rivet_data_array_t> &)>>> registry = { };
 
 			void init(const rivet_typeid_t type_id, const std::string &name, std::function<std::shared_ptr<T>(std::shared_ptr<rivet_data_array_t> &)> ctor) {
 				assert(registry.find(type_id) == registry.end());
@@ -31,7 +31,12 @@ namespace rivet::data {
 			}
 
 			std::shared_ptr<T> operator()(const rivet_typeid_t key, std::shared_ptr<rivet_data_array_t> &buffer) const {
-				return registry.at(key).second(buffer);
+				auto entry = registry.find(key);
+				if(entry == registry.end()) {
+					return std::make_shared<T>(buffer);
+				}
+
+				return entry->second.second(buffer);
 			}
 		};
 
@@ -44,10 +49,12 @@ namespace rivet::data {
 		template<typename T, typename U>
 		struct register_data_ctor {
 			struct helper {
+				static std::shared_ptr<T> ctor_trampoline(std::shared_ptr<rivet_data_array_t> &data) {
+					return std::reinterpret_pointer_cast<T>(data);
+				}
+
 				helper() {
-					data_registry<T>().init(U::type_id, U::type_name, [](std::shared_ptr<rivet_data_array_t> &data) -> std::shared_ptr<T> {
-						return std::reinterpret_pointer_cast<T>(std::make_shared<U>(data));
-					});
+					data_registry<T>().init(U::type_id, U::type_name, ctor_trampoline);
 				};
 			};
 
@@ -62,7 +69,7 @@ namespace rivet::data {
 		template<typename T, typename U>
 		typename register_data_ctor<T, U>::helper register_data_ctor<T, U>::h;
 
-		void RIVET_SHARED dump_registries();
+		RIVET_SHARED void RIVET_DECL dump_registries();
 	}
 
 	struct data_file;

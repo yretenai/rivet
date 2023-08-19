@@ -16,7 +16,6 @@ struct test_data : data_file {
 	constexpr const static rivet_typeid_t type_id = 0x12345678;
 	constexpr const static char* type_name = "TestType";
 
-	explicit test_data(std::istream &stream) : data_file(stream) { }
 	explicit test_data(std::shared_ptr<rivet_data_array_t> &stream) : data_file(stream) { }
 	RIVET_DELETE_COPY(test_data)
 
