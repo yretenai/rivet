@@ -38,7 +38,7 @@ namespace rivet::data {
 #pragma pack(pop)
 
 		archive_toc_header toc_header = { };
-		std::unordered_map<rivet_asset_id, std::shared_ptr<rivet::structures::rivet_asset>> assets = { };
+		std::unordered_map<rivet_asset_id, std::weak_ptr<rivet::structures::rivet_archive>> asset_archive_lookup = { };
 		std::vector<std::shared_ptr<rivet::structures::rivet_archive>> archives = { };
 		uint32_t version = 0;
 

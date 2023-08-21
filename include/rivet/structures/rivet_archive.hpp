@@ -20,5 +20,7 @@ namespace rivet::structures {
 		uint32_t version;
 		uint32_t unknown;
 		uint16_t load_priority;
+
+		std::shared_ptr<std::unordered_map<rivet_asset_id, std::shared_ptr<rivet_asset>>> assets;
 	};
 }

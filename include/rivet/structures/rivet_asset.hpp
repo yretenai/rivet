@@ -38,7 +38,7 @@ namespace rivet::structures {
 		rivet_size size;
 		rivet_off offset;
 		rivet_off metadata_offset;
-		std::shared_ptr<rivet_archive> archive;
+		std::weak_ptr<rivet_archive> archive;
 		std::shared_ptr<std::vector<rivet_asset_id>> dependencies;
 		uint8_t group_id;
 		bool is_streamed_asset;

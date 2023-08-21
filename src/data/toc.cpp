@@ -79,12 +79,13 @@ namespace rivet::data {
 		}
 
 		for (auto archive_entry: *archives_section) {
-			archives.emplace_back(std::make_shared<rivet_archive>(rivet_archive {
+			archives.emplace_back(std::make_shared<rivet_archive>(rivet_archive{
 					std::string(archive_entry.name),
 					archive_entry.time,
 					archive_entry.version,
 					archive_entry.unknown,
-					archive_entry.load_priority
+					archive_entry.load_priority,
+					std::make_shared<std::unordered_map<rivet_asset_id, std::shared_ptr<rivet_asset>>>()
 			}));
 		}
 
@@ -103,9 +104,11 @@ namespace rivet::data {
 			auto id = ids_section->get(i);
 
 			auto info = assets_section->get(i);
-			if (assets.find(id) != assets.end()) {
+			if (asset_archive_lookup.find(id) != asset_archive_lookup.end()) {
 				// duplicate id -- "streamed" assets appear twice. higher resolution?
-				if(assets.find(id)->second->size > info.size) {
+				auto entry = asset_archive_lookup.at(id).lock();
+
+				if (entry->assets->at(id)->size > info.size) {
 					continue;
 				}
 			}
@@ -126,18 +129,19 @@ namespace rivet::data {
 
 			auto archive = archives[info.archive_id];
 			auto chunk_entry = chunk_map.find(id);
-			assets.emplace(id, std::make_shared<rivet_asset>(rivet_asset({
-																				 id,
-																				 nullptr,
-																				 info.size,
-																				 info.archive_offset,
-																				 info.metadata_offset,
-																				 archive,
-																				 std::shared_ptr<std::vector<rivet_asset_id>>(),
-																				 (uint8_t) group_id,
-																				 chunk_entry != chunk_map.end(),
-																				 chunk_entry->second
-																		 })));
+			asset_archive_lookup.emplace(id, archive);
+			archive->assets->emplace(id, std::make_shared<rivet_asset>(rivet_asset{
+					id,
+					nullptr,
+					info.size,
+					info.archive_offset,
+					info.metadata_offset,
+					archive,
+					std::shared_ptr<std::vector<rivet_asset_id>>(),
+					(uint8_t) group_id,
+					chunk_entry != chunk_map.end(),
+					chunk_entry->second
+			}));
 		}
 	}
 }
