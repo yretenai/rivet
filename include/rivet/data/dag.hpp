@@ -15,8 +15,8 @@ namespace rivet::data {
 	struct archive_toc;
 
 	struct RIVET_SHARED dependency_dag : dat1 {
-		constexpr const static rivet_type_id type_id = 0xB8EF3955;
-		constexpr const static rivet_type_id magic = 0x2A077A51;
+		constexpr const static rivet_type_id type_id = 0x2A077A51;
+		constexpr const static rivet_type_id magic = 0xB8EF3955;
 		constexpr const static char* defined_name = "DependencyDAG";
 
 		constexpr const static rivet_type_id section_types = 0x7A0266BC; // todo: rivet_constexpr_hash("Asset Types");

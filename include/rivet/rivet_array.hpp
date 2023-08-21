@@ -24,8 +24,8 @@ namespace rivet {
 	template<typename T, const int Alignment>
 	struct rivet_array {
 		std::shared_ptr<uint8_t[]> ptr = nullptr;
-		rivet_size length = 0;
-		rivet_size offset = 0;
+		rivet_size64 length = 0;
+		rivet_off64 offset = 0;
 
 		struct iterator {
 			using iterator_category [[maybe_unused]] = std::forward_iterator_tag;
@@ -58,28 +58,36 @@ namespace rivet {
 			pointer array_ptr;
 		};
 
-		void alloc(size_t size) {
+	private:
+		void alloc(rivet_size64 size) {
 #ifdef _WIN32
-			if (sizeof(T) <= Alignment || sizeof(T) % 2 == 0) {
-                ptr = std::make_shared<T[]>(size + (Alignment / sizeof(T)) + 1);
-                if (!is_aligned()) {
-                    offset = Alignment - (reinterpret_cast<intptr_t>(this->ptr.get()) % Alignment);
-                }
-            } else {
-                ptr = std::make_shared<T[]>(size);
-            }
+			ptr = std::make_shared<uint8_t[]>(normalize_value(size) + Alignment + 1);
+			if (!is_aligned()) {
+				offset = Alignment - (reinterpret_cast<intptr_t>(this->ptr.get()) % Alignment);
+			}
 #else
 			ptr = std::shared_ptr<T[]>(new (std::align_val_t(Alignment)) T[size]);
 #endif
 		}
 
+		template<typename U = T>
+		static RIVET_INLINE rivet_size64 normalize_value(rivet_size64 index) {
+			return index * sizeof(U);
+		}
+
+		template<typename U = T>
+		static RIVET_INLINE rivet_size64 compact_value(rivet_size64 index) {
+			return index / sizeof(U);
+		}
+
+	public:
 		rivet_array() {
 			length = 0;
 			offset = 0;
 			ptr = nullptr;
 		}
 
-		rivet_array(T *ptr, rivet_size size) : length(size) {
+		rivet_array(T *ptr, rivet_size64 size) : length(size) {
 			alloc(size);
 
 			if (ptr != nullptr) {
@@ -87,14 +95,14 @@ namespace rivet {
 			}
 		}
 
-		rivet_array(T *ptr, rivet_size size, const T &default_value) : rivet_array(ptr, size) {
+		rivet_array(T *ptr, rivet_size64 size, const T &default_value) : rivet_array(ptr, size) {
 			auto buffer = data();
 			for (auto i = 0; i < length; ++i) {
 				buffer[i] = default_value;
 			}
 		}
 
-		rivet_array(std::shared_ptr<uint8_t[]> ptr, rivet_size length, rivet_size offset) : ptr(std::move(ptr)), length(length), offset(offset) { }
+		rivet_array(std::shared_ptr<uint8_t[]> ptr, rivet_size64 length, rivet_off64 offset) : ptr(std::move(ptr)), length(length), offset(offset) { }
 
 		RIVET_DELETE_COPY(rivet_array)
 
@@ -104,19 +112,19 @@ namespace rivet {
 			return reinterpret_cast<intptr_t>(ptr.get() + offset) % Alignment;
 		}
 
-		[[nodiscard]] RIVET_INLINE rivet_size size() const { return length; }
+		[[nodiscard]] RIVET_INLINE rivet_size64 size() const { return length; }
 
-		[[nodiscard]] RIVET_INLINE rivet_size byte_size() const { return size() * sizeof(T); }
+		[[nodiscard]] RIVET_INLINE rivet_size64 byte_size() const { return size() * sizeof(T); }
 
 		[[maybe_unused]] [[nodiscard]] RIVET_INLINE bool empty() const { return size() <= 0 || ptr == nullptr; }
 
-		[[maybe_unused]] RIVET_INLINE T &operator[](rivet_size index) const { return get(index); }
+		[[maybe_unused]] RIVET_INLINE T &operator[](rivet_size64 index) const { return get(index); }
 
 		[[nodiscard]] iterator begin() const { return iterator(data()); }
 
 		[[nodiscard]] iterator end() const { return iterator(data() + size()); }
 
-		[[maybe_unused]] T &get(rivet_size index) const {
+		[[maybe_unused]] T &get(rivet_size64 index) const {
 			if (index >= size()) {
 				throw index_out_of_range();
 			}
@@ -125,7 +133,7 @@ namespace rivet {
 		}
 
 		template<typename U>
-		[[maybe_unused]] U get(rivet_size index) const {
+		[[maybe_unused]] U get(rivet_size64 index) const {
 			if (index >= size()) {
 				throw index_out_of_range();
 			}
@@ -137,7 +145,7 @@ namespace rivet {
 			return reinterpret_cast<U *>(data() + index)[0];
 		}
 
-		[[maybe_unused]] void set(rivet_size index, T value) {
+		[[maybe_unused]] void set(rivet_size64 index, T value) {
 			if (index >= size()) {
 				throw index_out_of_range();
 			}
@@ -146,7 +154,7 @@ namespace rivet {
 		}
 
 		template<typename U>
-		[[maybe_unused]] U set(rivet_size index, U value) {
+		[[maybe_unused]] U set(rivet_size64 index, U value) {
 			if (index >= size()) {
 				throw index_out_of_range();
 			}
@@ -158,17 +166,7 @@ namespace rivet {
 			reinterpret_cast<U *>(data() + index)[0] = value;
 		}
 
-		template<typename U = T>
-		static RIVET_INLINE rivet_size normalize_value(rivet_size index) {
-			return index * sizeof(U);
-		}
-
-		template<typename U = T>
-		static RIVET_INLINE rivet_size compact_value(rivet_size index) {
-			return index / sizeof(U);
-		}
-
-		[[maybe_unused]] [[nodiscard]] std::shared_ptr<rivet_array<T, Alignment>> slice(rivet_size index, rivet_size count) const {
+		[[maybe_unused]] [[nodiscard]] std::shared_ptr<rivet_array<T, Alignment>> slice(rivet_size64 index, rivet_size64 count) const {
 			if (index >= size()) {
 				throw index_out_of_range();
 			}
@@ -180,12 +178,12 @@ namespace rivet {
 			return std::make_shared<rivet_array<T, Alignment>>(ptr, count, offset + index);
 		}
 
-		[[maybe_unused]] [[nodiscard]] std::shared_ptr<rivet_array<T, Alignment>> slice(rivet_size index) const {
+		[[maybe_unused]] [[nodiscard]] std::shared_ptr<rivet_array<T, Alignment>> slice(rivet_size64 index) const {
 			return slice(index, size() - index);
 		}
 
 		template<typename U>
-		[[maybe_unused]] std::shared_ptr<rivet_array<U, Alignment>> slice(rivet_size index, rivet_size count) const {
+		[[maybe_unused]] std::shared_ptr<rivet_array<U, Alignment>> slice(rivet_size64 index, rivet_size64 count) const {
 			auto normalized_offset = offset + normalize_value(index);
 			auto normalized_index = normalize_value(index);
 
@@ -205,8 +203,7 @@ namespace rivet {
 			return std::make_shared<rivet_array<U, Alignment>>(ptr, compact_value<U>(normalize_value(length)), offset);
 		}
 
-		[[maybe_unused]] void
-		copy_to(std::shared_ptr<rivet_array<T, Alignment>> &array, rivet_size index, rivet_size count) {
+		[[maybe_unused]] void copy_to(std::shared_ptr<rivet_array<T, Alignment>> &array, rivet_size64 index, rivet_size64 count) {
 			if (count >= array->size()) {
 				throw index_out_of_range();
 			}
@@ -223,36 +220,32 @@ namespace rivet {
 		}
 
 		template<typename U = T>
-		[[maybe_unused]] typename std::enable_if<
-				sizeof(U) <= 2 && std::is_same<U, T>::value && std::is_integral<U>::value, void>::type
-		ensure_null_terminated() {
+		requires(sizeof(U) <= 2 && std::is_same<U, T>::value && std::is_integral<U>::value)
+		[[maybe_unused]] void ensure_null_terminated() {
 			auto buffer = ptr;
 			if (buffer[size() - 1] != 0) {
 				length += 1;
 				alloc(length);
 				std::copy_n(buffer.get(), size() - 1, data());
-				data()[size() - 1] = static_cast<T>(0);
+				data()[size() - 1] = static_cast<U>(0);
 			}
 		}
 
 		template<typename U = T>
-		[[maybe_unused]] typename std::enable_if<
-				sizeof(U) == 1 && std::is_same<U, T>::value && std::is_integral<U>::value, std::string>::type
-		to_string() {
+		requires(sizeof(U) == 1 && std::is_same<U, T>::value && std::is_integral<U>::value)
+		[[maybe_unused]] std::string to_string() {
 			return std::string(reinterpret_cast<char *>(data()), size());
 		}
 
 		template<typename U = T>
-		[[maybe_unused]] typename std::enable_if<
-				sizeof(U) == 1 && std::is_same<U, T>::value && std::is_integral<U>::value, std::string>::type
-		to_cstring() {
+		requires(sizeof(U) == 1 && std::is_same<U, T>::value && std::is_integral<U>::value)
+		[[maybe_unused]] std::string to_cstring() {
 			return std::string(reinterpret_cast<char *>(data()));
 		}
 
 		template<typename U = T>
-		[[maybe_unused]] typename std::enable_if<
-				sizeof(U) <= 2 && std::is_same<U, T>::value && std::is_integral<U>::value, std::wstring>::type
-		to_wstring() {
+		requires(sizeof(U) <= 2 && std::is_same<U, T>::value && std::is_integral<U>::value)
+		[[maybe_unused]] std::wstring to_wstring() {
 			if (sizeof(U) == 1) {
 				return std::wstring(to_string());
 			}
@@ -261,34 +254,29 @@ namespace rivet {
 		}
 
 		template<typename U = T>
-		[[maybe_unused]] typename std::enable_if<
-				sizeof(U) <= 2 && std::is_same<U, T>::value && std::is_integral<U>::value, std::wstring>::type
-		to_wcstring() {
+		requires(sizeof(U) <= 2 && std::is_same<U, T>::value && std::is_integral<U>::value)
+		[[maybe_unused]] std::wstring to_wcstring() {
 			if (sizeof(U) == 1) {
-				return std::wstring(to_string());
+				return std::wstring(to_cstring());
 			}
 
 			return std::wstring(reinterpret_cast<wchar_t *>(data()));
 		}
 
 		template<typename U = T>
-		[[maybe_unused]] typename std::enable_if<
-				sizeof(U) == 1 && std::is_same<U, T>::value && std::is_integral<U>::value, std::stringstream>::type
-		to_string_stream() {
+		requires(sizeof(U) == 1 && std::is_same<U, T>::value && std::is_integral<U>::value)
+		[[maybe_unused]] std::stringstream to_string_stream() {
 			return std::stringstream(reinterpret_cast<char *>(data()), std::ios::in | std::ios::out);
 		}
 
+
 		template<typename U = T>
-		[[maybe_unused]] typename std::enable_if<
-				sizeof(U) == 2 && std::is_same<U, T>::value && std::is_integral<U>::value, std::wstringstream>::type
-		to_wstring_stream() {
+		requires(sizeof(U) == 2 && std::is_same<U, T>::value && std::is_integral<U>::value)
+		[[maybe_unused]] std::wstringstream to_wstring_stream() {
 			return std::wstringstream(reinterpret_cast<wchar_t *>(data()), std::ios::in | std::ios::out);
 		}
 
-		template<typename U = T>
-		[[maybe_unused]] typename std::enable_if<
-				sizeof(U) == 1 && std::is_same<U, T>::value && std::is_integral<U>::value, std::iostream>::type
-		to_stream() {
+		[[maybe_unused]] std::iostream to_stream() {
 			return std::iostream(reinterpret_cast<char *>(data()), std::ios::in | std::ios::out, byte_size());
 		}
 
@@ -296,7 +284,7 @@ namespace rivet {
 
 		[[maybe_unused]] static std::shared_ptr<rivet_array<uint8_t, Alignment>> from_file(const std::filesystem::path &path) {
 			std::ifstream file(path, std::ios::binary | std::ios::in);
-			auto size = static_cast<size_t>(std::filesystem::file_size(path));
+			auto size = static_cast<rivet_size64>(std::filesystem::file_size(path));
 			auto bytes = std::make_shared<rivet_array<uint8_t, Alignment>>(nullptr, size);
 			file.seekg(0, std::ios::beg);
 			file.read(reinterpret_cast<char *>(bytes->data()), static_cast<std::streamsize>(size));
