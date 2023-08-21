@@ -11,6 +11,8 @@
 		#define RIVET_SHARED __declspec(dllimport)
 	#endif
 	#define RIVET_INLINE inline
+	#define RIVET_DEBUG_BREAK __debugbreak()
+	#define RIVET_DECL __stdcall
 #else
 	#ifdef RIVET_EXPORTING
 		#define RIVET_SHARED __attribute__ ((visibility ("default"))) __attribute__((unused))
@@ -18,9 +20,26 @@
 		#define RIVET_SHARED
 	#endif
 	#define RIVET_INLINE inline
+	// based on https://github.com/scottt/debugbreak
+	#ifndef NDEBUG
+		#ifdef __clang__
+			#define RIVET_DEBUG_BREAK __builtin_debugtrap()
+		#elif defined(__GNUC__)
+			#if (defined(__i386__) || defined(__x86_64__))
+				#define RIVET_DEBUG_BREAK __asm__ volatile("int $0x03")
+			#elif defined(__GNUC__) && defined(__thumb__)
+				#define RIVET_DEBUG_BREAK __asm__ volatile(".inst 0xde01")
+			#elif defined(__GNUC__) && defined(__arm__) && !defined(__thumb__)
+				#define RIVET_DEBUG_BREAK  __asm__ volatile(".inst 0xe7f001f0")
+			#endif
+		#endif
+	#endif
+	#define RIVET_DECL
 #endif
 
-#define RIVET_DECL __stdcall
+#ifndef RIVET_DEBUG_BREAK
+	#define RIVET_DEBUG_BREAK
+#endif
 
 #ifndef RIVET_ALIGNMENT
 	#define RIVET_ALIGNMENT 16
@@ -33,19 +52,19 @@ TYPE_NAME(TYPE_NAME const&) = delete; \
 TYPE_NAME& operator=(TYPE_NAME const&) = delete;
 
 namespace rivet {
-	typedef uint32_t rivet_hash_t;
-	typedef rivet_hash_t rivet_typeid_t;
+	typedef uint32_t rivet_hash;
+	typedef rivet_hash rivet_type_id;
 
-	typedef uint64_t rivet_checksum_t;
-	typedef rivet_checksum_t rivet_assetid_t;
+	typedef uint64_t rivet_checksum;
+	typedef rivet_checksum rivet_asset_id;
 
-	typedef uint32_t rivet_size_t;
-	typedef int32_t rivet_ssize_t;
-	typedef uint32_t rivet_off_t;
-	typedef int32_t rivet_soff_t;
+	typedef uint32_t rivet_size;
+	typedef int32_t rivet_ssize;
+	typedef uint32_t rivet_off;
+	typedef int32_t rivet_soff;
 
-	typedef uint64_t rivet_size64_t;
-	typedef int64_t rivet_ssize64_t;
-	typedef uint64_t rivet_off64_t;
-	typedef int64_t rivet_soff64_t;
+	typedef uint64_t rivet_size64;
+	typedef int64_t rivet_ssize64;
+	typedef uint64_t rivet_off64;
+	typedef int64_t rivet_soff64;
 };

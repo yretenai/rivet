@@ -22,4 +22,9 @@ namespace rivet {
 	struct invalid_tag_error : std::runtime_error {
 		invalid_tag_error() : std::runtime_error("tag in data is not valid for this class") { }
 	};
+
+	struct mismatched_data_error : std::runtime_error {
+		mismatched_data_error() : std::runtime_error("tag in data is not valid for this class") { }
+		explicit mismatched_data_error(const char* string) : std::runtime_error(string) { }
+	};
 }

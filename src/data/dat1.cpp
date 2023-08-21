@@ -3,10 +3,9 @@
 // SPDX-License-Identifier: MPL-2.0
 
 #include <rivet/data/dat1.hpp>
-#include <rivet/data/data_section.hpp>
 
 namespace rivet::data {
-	dat1::dat1(std::shared_ptr<rivet_data_array_t> &&stream) {
+	dat1::dat1(std::shared_ptr<rivet_data_array> &&stream) {
 		buffer = stream;
 
 		auto tag = stream->get<uint32_t>(0);
@@ -17,6 +16,7 @@ namespace rivet::data {
 		header = stream->get<data_header_t>(0);
 		auto section_headers = stream->slice<data_entry_t>(sizeof(data_header_t), header.section_count);
 		string_buffer = buffer->slice(sizeof(data_header_t) + sizeof(data_entry_t) * header.section_count);
+		type_name = string_buffer->to_string();
 
 		for (auto section_header: *section_headers) {
 			auto slice = stream->slice(section_header.offset, section_header.size);
@@ -24,7 +24,7 @@ namespace rivet::data {
 		}
 	}
 
-	std::shared_ptr<rivet_data_array_t> dat1::get_section_data(rivet_typeid_t type_id) {
+	std::shared_ptr<rivet_data_array> dat1::get_section_data(rivet_type_id type_id) {
 		auto entry = sections.find(type_id);
 
 		if(entry == sections.end()) {
