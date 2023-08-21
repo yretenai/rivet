@@ -16,10 +16,8 @@ cxxargs = []
 
 compiler = meson.get_compiler('cpp')
 if host_machine.system() == 'windows'
-    if compiler.get_id() == 'clang'
-        cxxargs += ['-fno-ms-compatibility']
-    elif compiler.get_id() == 'msvc'
-        message('msvc is not supported due to my template code being too weird')
+    if compiler.get_id() == 'msvc'
+        cxxargs += ['/utf-8', '/wd4251']
     endif
 endif
 

@@ -35,9 +35,17 @@ TYPE_NAME& operator=(TYPE_NAME const&) = delete;
 namespace rivet {
 	typedef uint32_t rivet_hash_t;
 	typedef rivet_hash_t rivet_typeid_t;
+
 	typedef uint64_t rivet_checksum_t;
+	typedef rivet_checksum_t rivet_assetid_t;
+
 	typedef uint32_t rivet_size_t;
 	typedef int32_t rivet_ssize_t;
 	typedef uint32_t rivet_off_t;
 	typedef int32_t rivet_soff_t;
+
+	typedef uint64_t rivet_size64_t;
+	typedef int64_t rivet_ssize64_t;
+	typedef uint64_t rivet_off64_t;
+	typedef int64_t rivet_soff64_t;
 };
