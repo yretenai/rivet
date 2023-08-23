@@ -44,10 +44,12 @@ namespace rivet::data {
 
 		auto version_section = get_section_data(section_version);
 		auto archives_section = get_section<rivet_archive_raw>(section_archives);
-		auto groups_section = get_section<std::pair<uint32_t, uint32_t>>(section_groups);
 		auto ids_section = get_section<rivet_asset_id>(section_ids);
 		auto assets_section = get_section<rivet_asset_raw>(section_assets);
-		auto streamed_ids_section = get_section<rivet_asset_id>(section_streamed_ids);
+
+		// optional
+		auto groups_section = get_section<std::pair<uint32_t, uint32_t>>(section_groups);
+		auto localized_ids_section = get_section<rivet_asset_id>(section_localized_ids);
 		auto chunks_section = get_section<rivet_asset_chunk>(section_chunks);
 
 		if (version_section == nullptr) {
@@ -58,11 +60,7 @@ namespace rivet::data {
 			throw mismatched_data_error("missing archives section");
 		}
 
-		if (groups_section == nullptr) {
-			throw mismatched_data_error("missing groups");
-		}
-
-		if (groups_section->size() != 0x100) {
+		if (groups_section != nullptr && groups_section->size() != 0x100) {
 			throw mismatched_data_error("not 256 groups!");
 		}
 
@@ -71,10 +69,10 @@ namespace rivet::data {
 		}
 
 		if (assets_section == nullptr) {
-			throw mismatched_data_error("assets groups");
+			throw mismatched_data_error("assets");
 		}
 
-		if (ids_section->size() != assets_section->size()) {
+		if (ids_section->size() > assets_section->size()) {
 			throw mismatched_data_error("id count does not match asset count");
 		}
 
@@ -85,63 +83,79 @@ namespace rivet::data {
 					archive_entry.version,
 					archive_entry.unknown,
 					archive_entry.load_priority,
-					std::make_shared<std::unordered_map<rivet_asset_id, std::shared_ptr<rivet_asset>>>()
+					{}
 			}));
 		}
 
 		std::map<rivet_asset_id, rivet_asset_chunk> chunk_map;
-		if (streamed_ids_section != nullptr && chunks_section != nullptr) {
-			if (streamed_ids_section->size() != chunks_section->size()) {
+		if (localized_ids_section != nullptr && chunks_section != nullptr) {
+			if (localized_ids_section->size() != chunks_section->size()) {
 				throw mismatched_data_error("streamed id count does not match chunk count");
 			}
 
-			for (rivet_size i = 0; i < streamed_ids_section->size(); ++i) {
-				chunk_map[streamed_ids_section->get(i)] = chunks_section->get(i);
+			for (rivet_size i = 0; i < localized_ids_section->size(); ++i) {
+				chunk_map[localized_ids_section->get(i)] = chunks_section->get(i);
 			}
 		}
 
 		for (rivet_size i = 0; i < ids_section->size(); ++i) {
-			auto id = ids_section->get(i);
+			auto full_id = ids_section->get(i);
+			auto id = full_id & 0xbfffffffffffffff; // strip localized flag.
 
 			auto info = assets_section->get(i);
-			if (asset_archive_lookup.find(id) != asset_archive_lookup.end()) {
-				// duplicate id -- "streamed" assets appear twice. higher resolution?
-				auto entry = asset_archive_lookup.at(id).lock();
-
-				if (entry->assets->at(id)->size > info.size) {
+			std::shared_ptr<rivet_asset> parent = nullptr;
+			if (asset_lookup.find(id) != asset_lookup.end()) {
+				if((full_id & 0x4000000000000000) != 0) {
 					continue;
 				}
+
+				parent = asset_lookup.at(id).lock();
 			}
 
 			rivet_size group_id = -1;
 
-			for (rivet_size j = 0; j < 0x100; ++j) {
-				auto range = groups_section->get(j);
-				if (range.second == 0) {
-					continue;
-				}
+			if (groups_section != nullptr) {
+				for (rivet_size j = 0; j < 0x100; ++j) {
+					auto range = groups_section->get(j);
+					if (range.second == 0) {
+						continue;
+					}
 
-				if (j >= range.first && j < range.first + range.second) {
-					group_id = j;
-					break;
+					if (j >= range.first && j < range.first + range.second) {
+						group_id = j;
+						break;
+					}
 				}
 			}
 
 			auto archive = archives[info.archive_id];
 			auto chunk_entry = chunk_map.find(id);
-			asset_archive_lookup.emplace(id, archive);
-			archive->assets->emplace(id, std::make_shared<rivet_asset>(rivet_asset{
-					id,
-					nullptr,
+			auto asset = std::make_shared<rivet_asset>(rivet_asset{
+					full_id,
+
 					info.size,
 					info.archive_offset,
 					info.metadata_offset,
 					archive,
-					std::shared_ptr<std::vector<rivet_asset_id>>(),
 					(uint8_t) group_id,
 					chunk_entry != chunk_map.end(),
-					chunk_entry->second
-			}));
+					chunk_entry->second,
+
+					0,
+					{},
+					{},
+					rivet_asset_type::NONE,
+
+					{}
+			});
+
+			archive->assets.emplace_back(asset);
+
+			if(parent != nullptr) {
+				parent->subfiles.emplace_back(asset);
+			} else {
+				asset_lookup.emplace(id, asset);
+			}
 		}
 	}
 }

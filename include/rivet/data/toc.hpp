@@ -24,7 +24,7 @@ namespace rivet::data {
 		constexpr const static rivet_type_id section_ids = 0x506D7B8A; // todo: find real name.
 		constexpr const static rivet_type_id section_assets = 0x65BCF461; // todo: find real name.
 		constexpr const static rivet_type_id section_archives = 0x398ABFF0; // todo: find real name.
-		constexpr const static rivet_type_id section_streamed_ids = 0x36A6C8CC; // todo: find real name.
+		constexpr const static rivet_type_id section_localized_ids = 0x36A6C8CC; // todo: find real name.
 		constexpr const static rivet_type_id section_chunks = 0xC9FB9DDA; // todo: find real name.
 		constexpr const static rivet_type_id section_version = 0x62297090 ; // todo: find real name.
 		constexpr const static rivet_type_id section_metadata = 0x654BDED9; // todo: find real name.
@@ -38,7 +38,7 @@ namespace rivet::data {
 #pragma pack(pop)
 
 		archive_toc_header toc_header = { };
-		std::unordered_map<rivet_asset_id, std::weak_ptr<rivet::structures::rivet_archive>> asset_archive_lookup = { };
+		std::unordered_map<rivet_asset_id, std::weak_ptr<rivet::structures::rivet_asset>> asset_lookup = { };
 		std::vector<std::shared_ptr<rivet::structures::rivet_archive>> archives = { };
 		uint32_t version = 0;
 

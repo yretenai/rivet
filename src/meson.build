@@ -1,5 +1,6 @@
 rivetlib = library('rivet', [
 		'rivet.cpp',
+		'rivet_game.cpp',
 
 		'data/dat1.cpp',
 		'data/toc.cpp',

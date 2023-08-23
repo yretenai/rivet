@@ -32,16 +32,52 @@ namespace rivet::structures {
 	static_assert(sizeof(rivet_asset_chunk) == 72);
 #pragma pack(pop)
 
+	enum class rivet_asset_type : uint8_t {
+		LEVEL,
+		ZONE,
+		ACTOR,
+		CONDUIT,
+		CONFIG,
+		CINEMATIC,
+		MODEL,
+		ANIMATION_CLIP,
+		ANIMATION_SET,
+		MATERIAL,
+		MATERIAL_GRAPH,
+		TEXTURE,
+		ATMOSPHERE,
+		EFFECT,
+		SOUNDBANK,
+		LOCALIZATION,
+		UNKNOWN_16,
+		UNKNOWN_17,
+		ZONE_LIGHTING,
+		LEVEL_LIGHTING,
+		NODEGRAPH,
+		UNKNOWN_21,
+		WWISE_LOOKUP,
+
+		NONE = 0xFF
+	};
+
 	struct rivet_asset {
+		// stuff from toc
 		rivet_asset_id id;
-		std::shared_ptr<std::string> name;
 		rivet_size size;
 		rivet_off offset;
 		rivet_off metadata_offset;
 		std::weak_ptr<rivet_archive> archive;
-		std::shared_ptr<std::vector<rivet_asset_id>> dependencies;
 		uint8_t group_id;
-		bool is_streamed_asset;
+		bool is_localized_asset;
 		rivet_asset_chunk chunk;
+
+		// stuff from dag
+		rivet_asset_id dependency_id;
+		std::string name;
+		std::vector<std::pair<std::string, rivet_asset_id>> dependencies;
+		rivet_asset_type type;
+
+		// extra
+		std::vector<std::weak_ptr<rivet_asset>>  subfiles;
 	};
 }

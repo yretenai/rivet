@@ -10,7 +10,8 @@
 #include <rivet/data/dat1.hpp>
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/rivet_array.hpp>
-#include <rivet/rivet_hash.hpp>
+#include <rivet/hash/type_id.hpp>
+#include <rivet/structures/rivet_asset.hpp>
 
 namespace rivet::data {
 	struct archive_toc;
@@ -31,7 +32,7 @@ namespace rivet::data {
 		constexpr const static rivet_type_id section_links = rivet::hash::type_id<section_links_name, sizeof(section_links_name)>::value;
 		constexpr const static rivet_type_id section_graph = 0xBFEC699F; // todo: find real name
 		constexpr const static rivet_type_id section_names = rivet::hash::type_id<section_names_name, sizeof(section_names_name)>::value;
-		constexpr const static rivet_type_id section_heads =rivet::hash::type_id<section_heads_name, sizeof(section_heads_name)>::value;
+		constexpr const static rivet_type_id section_heads = rivet::hash::type_id<section_heads_name, sizeof(section_heads_name)>::value;
 
 #pragma pack(push, 1)
 		struct dependency_dag_header {
@@ -42,6 +43,9 @@ namespace rivet::data {
 #pragma pack(pop)
 
 		dependency_dag_header dag_header = { };
+		std::unordered_map<rivet_asset_id, std::shared_ptr<rivet::structures::rivet_asset>> missing_assets = { };
+		std::vector<std::vector<std::pair<std::string, rivet_asset_id>>> groups;
+		std::shared_ptr<archive_toc> toc;
 
 		explicit RIVET_DECL dependency_dag(std::shared_ptr<rivet_data_array> &&stream, std::shared_ptr<archive_toc> &toc);
 		RIVET_DELETE_COPY(dependency_dag)

@@ -55,8 +55,15 @@ namespace rivet {
 	typedef uint32_t rivet_hash;
 	typedef rivet_hash rivet_type_id;
 
+	// top 2 bits
+	enum class rivet_type_id_flags : uint8_t {
+		NONE = 0b00,
+		LOCALIZED = 0b01, // localized files have this, wem files have the 61st bit set as well despite being a 32-bit hash.
+		SHIPPED = 0b10, // assumption, all files have this
+	};
+
 	typedef uint64_t rivet_checksum;
-	typedef rivet_checksum rivet_asset_id;
+	typedef rivet_checksum rivet_asset_id; // top 2 bits are rivet_type_id_flags
 
 	typedef uint32_t rivet_size;
 	typedef int32_t rivet_ssize;
