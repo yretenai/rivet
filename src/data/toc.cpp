@@ -48,6 +48,7 @@ namespace rivet::data {
 		auto assets_section = get_section<rivet_asset_raw>(section_assets);
 
 		// optional
+		static_assert(sizeof(std::pair<uint32_t, uint32_t>) == 8);
 		auto groups_section = get_section<std::pair<uint32_t, uint32_t>>(section_groups);
 		auto localized_ids_section = get_section<rivet_asset_id>(section_localized_ids);
 		auto chunks_section = get_section<rivet_asset_chunk>(section_chunks);

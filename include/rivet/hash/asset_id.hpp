@@ -45,20 +45,21 @@ namespace rivet::hash {
 		0xdcd7181e300f9e5e, 0x6ff954a033a8c131, 0x28532e49984f3e05, 0x9b7d62f79be8616a, 0xa707db9acf80c06d, 0x14299724cc279f02, 0x5383edcd67c06036, 0xe0ada17364673f59
 	};
 
-	constexpr static rivet_checksum hash_checksum(const char* value, rivet_size length, rivet_checksum hash = 0xc96c5795d7870f42) {
-		for(rivet_size i = 0; i < length; ++i) {
-			hash = crc64_table[(hash ^ value[i]) & 0xff] ^ (hash >> 8);
+	constexpr static rivet_asset_id hash_checksum(const std::string_view &value, rivet_asset_id hash = 0xc96c5795d7870f42) {
+		for(char letter : value) {
+			hash = crc64_table[(hash ^ static_cast<uint8_t>(letter)) & 0xff] ^ (hash >> 8);
 		}
 
 		return hash;
 	}
 
-	constexpr static rivet_checksum hash_checksum(std::string &value, rivet_checksum hash = 0xc96c5795d7870f42) {
-		return hash_checksum(value.c_str(), value.length(), hash);
+	constexpr static rivet_asset_id hash_asset_id(const std::string_view &value, rivet_checksum hash = 0xc96c5795d7870f42, rivet_type_id_flags flags = rivet_type_id_flags::SHIPPED) {
+		// lowercase and replace \\ with /
+		uint64_t flags_full = static_cast<uint64_t>(flags) << 62;
+		return (hash_checksum(value, hash) >> 2) | flags_full;
 	}
 
-	constexpr static rivet_asset_id hash_asset_id(std::string &value, rivet_checksum hash = 0xc96c5795d7870f42, rivet_type_id_flags flags = rivet_type_id_flags::SHIPPED) {
-		// lowercase and replace \\ with /
+	constexpr static rivet_asset_id hash_asset_id(std::string value, rivet_asset_id hash = 0xc96c5795d7870f42, rivet_type_id_flags flags = rivet_type_id_flags::SHIPPED) {
 		std::transform(value.begin(), value.end(), value.begin(),
 					   [](char c) {
 						   if (c == '\\') {
@@ -72,25 +73,19 @@ namespace rivet::hash {
 						   return c;
 					   });
 
-		uint64_t flags_full = static_cast<uint64_t>(flags) << 62;
-		return (hash_checksum(value.c_str(), value.length(), hash) >> 2) | flags_full;
+		return hash_asset_id(std::string_view(value), hash, flags);
 	}
 
-	constexpr static rivet_asset_id hash_asset_id(const char* value, rivet_size length, rivet_asset_id hash = 0xc96c5795d7870f42, rivet_type_id_flags flags = rivet_type_id_flags::SHIPPED) {
-		auto str = std::string(value, length);
-		return hash_asset_id(str, hash, flags);
-	}
-
-	template<const char* Value, rivet_size Length, rivet_asset_id Base = 0xc96c5795d7870f42, rivet_type_id_flags Flags = rivet_type_id_flags::SHIPPED>
+	template<const std::string_view &Value, rivet_asset_id Base = 0xc96c5795d7870f42, rivet_type_id_flags Flags = rivet_type_id_flags::SHIPPED>
 	struct asset_id {
-		constexpr const static rivet_asset_id value = hash_asset_id(Value, Length - 1, Base, Flags);
+		constexpr const static rivet_asset_id value = hash_asset_id(Value, Base, Flags);
 	};
 
-	template<const char* Value, rivet_size Length, rivet_checksum Base = 0xc96c5795d7870f42>
+	template<const std::string_view &Value, rivet_checksum Base = 0xc96c5795d7870f42>
 	struct checksum {
-		constexpr const static rivet_checksum value = hash_checksum(Value, Length - 1, Base);
+		constexpr const static rivet_checksum value = hash_checksum(Value, Base);
 	};
 
-	constexpr const static char asset_id_test_name[] = "test\\asset.bin";
-	static_assert(asset_id<asset_id_test_name, sizeof(asset_id_test_name)>::value == 0xb2ef5c258e42dc6a);
+	constexpr const static std::string_view asset_id_test_name = "test/asset.bin";
+	static_assert(asset_id<asset_id_test_name>::value == 0xb2ef5c258e42dc6a);
 }

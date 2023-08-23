@@ -4,6 +4,8 @@
 
 #pragma once
 
+#include <string_view>
+
 namespace rivet::hash {
 	constexpr const static uint32_t crc32_table[256] = {
 		0x00000000, 0x77073096, 0xee0e612c, 0x990951ba, 0x076dc419, 0x706af48f, 0xe963a535, 0x9e6495a3,
@@ -40,23 +42,19 @@ namespace rivet::hash {
 		0xb3667a2e, 0xc4614ab8, 0x5d681b02, 0x2a6f2b94, 0xb40bbe37, 0xc30c8ea1, 0x5a05df1b, 0x2d02ef8d
 	};
 
-	constexpr static rivet_type_id hash_type_id(const char* value, rivet_size length, rivet_type_id hash = 0xedb88320u) {
-		for(rivet_size i = 0; i < length; ++i) {
-			hash = crc32_table[(hash ^ value[i]) & 0xff] ^ (hash >> 8);
+	constexpr static rivet_type_id hash_type_id(const std::string_view &value, rivet_type_id hash = 0xedb88320u) {
+		for(char letter : value) {
+			hash = crc32_table[(hash ^ letter) & 0xff] ^ (hash >> 8);
 		}
 
 		return hash;
 	}
 
-	constexpr static rivet_type_id hash_type_id(std::string &value, rivet_type_id hash = 0xedb88320u) {
-		return hash_type_id(value.c_str(), value.length(), hash);
-	}
-
-	template<const char* Value, rivet_size Length, rivet_type_id Base = 0xedb88320u>
+	template<const std::string_view &Value, rivet_type_id Base = 0xedb88320u>
 	struct type_id {
-		constexpr const static rivet_type_id value = hash_type_id(Value, Length - 1, Base);
+		constexpr const static rivet_type_id value = hash_type_id(Value, Base);
 	};
 
-	constexpr const static char type_id_test_name[] = "Test Value";
-	static_assert(type_id<type_id_test_name, sizeof(type_id_test_name)>::value == 0xf62a3016);
+	constexpr const static std::string_view type_id_test_name = "Test Value";
+	static_assert(type_id<type_id_test_name>::value == 0xf62a3016);
 }
