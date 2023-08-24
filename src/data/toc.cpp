@@ -52,6 +52,7 @@ namespace rivet::data {
 		auto groups_section = get_section<std::pair<uint32_t, uint32_t>>(section_groups);
 		auto localized_ids_section = get_section<rivet_asset_id>(section_localized_ids);
 		auto chunks_section = get_section<rivet_asset_chunk>(section_chunks);
+		auto metadata_section = get_section<rivet_asset_meta>(section_metadata);
 
 		if (version_section == nullptr) {
 			version = version_section->get<uint32_t>(0);
@@ -131,18 +132,25 @@ namespace rivet::data {
 
 			auto archive = archives[info.archive_id];
 			auto chunk_entry = chunk_map.find(id);
+			rivet_asset_meta meta = {};
+			if (info.metadata_offset != 0xFFFFFFFF && metadata_section != nullptr) {
+				auto normalized = info.metadata_offset / sizeof(rivet_asset_meta);
+				if (normalized < metadata_section->size()) {
+					meta = metadata_section->get(normalized);
+				}
+			}
+
 			auto asset = std::make_shared<rivet_asset>(rivet_asset{
 					full_id,
 
 					info.size,
 					info.archive_offset,
-					info.metadata_offset,
 					archive,
-					(uint8_t) group_id,
+					static_cast<uint8_t>(group_id),
 					chunk_entry != chunk_map.end(),
 					chunk_entry->second,
+					meta,
 
-					0,
 					{},
 					{},
 					rivet_asset_type::NONE,

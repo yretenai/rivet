@@ -52,7 +52,7 @@ int main(int argv, char** argc) {
 		for(const auto& archive : toc->archives) {
 			std::cout << archive->name << std::endl;
 			for (const auto &asset: archive->assets) {
-				std::cout << "\t" << std::hex << asset->id << "\t" << asset->dependency_id << "\t" << std::dec << asset->subfiles.size() << "\t" << asset->name << "\t" << get_rivet_asset_type(asset->type) << std::endl;
+				std::cout << "\t" << std::hex << asset->id << "\t" << std::dec << asset->subfiles.size() << "\t" << asset->name << "\t" << get_rivet_asset_type(asset->type) << std::endl;
 				std::cout << "\t\t\t\t\t" << asset->size << "\t" << asset->offset << std::endl;
 				for(const auto &sub : asset->subfiles) {
 					auto sub_file = sub.lock();
@@ -64,7 +64,7 @@ int main(int argv, char** argc) {
 
 		std::cout << "missing" << std::endl;
 		for(const auto& pair : dag->missing_assets) {
-			std::cout << "\t" << std::hex << pair.first << "\t" << pair.second->dependency_id << "\t" << pair.second->name << std::endl;
+			std::cout << "\t" << std::hex << pair.first << "\t" << "\t" << pair.second->name << std::endl;
 		}
 		std::cout << std::endl;
 

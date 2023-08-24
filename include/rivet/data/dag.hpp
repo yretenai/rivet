@@ -28,7 +28,7 @@ namespace rivet::data {
 		constexpr const static std::string_view section_heads_name = "Dependency Links Heads";
 
 		constexpr const static rivet_type_id section_types = rivet::hash::type_id<section_types_name>::value;
-		constexpr const static rivet_type_id section_ids = rivet::hash::type_id<section_ids_name>::value;
+		constexpr const static rivet_type_id section_ids = rivet::hash::type_id<section_ids_name>::value; // uninitialized ids?
 		constexpr const static rivet_type_id section_links = rivet::hash::type_id<section_links_name>::value;
 		constexpr const static rivet_type_id section_graph = 0xBFEC699F; // todo: find real name
 		constexpr const static rivet_type_id section_names = rivet::hash::type_id<section_names_name>::value;

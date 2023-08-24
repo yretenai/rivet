@@ -30,6 +30,19 @@ namespace rivet::structures {
 		uint64_t unknownD;
 	};
 	static_assert(sizeof(rivet_asset_chunk) == 72);
+
+	struct rivet_asset_meta {
+		uint32_t id;
+		uint32_t size;
+		uint32_t unknown3;
+		uint32_t unknown4;
+		uint32_t unknown5;
+		uint32_t unknown6;
+		uint32_t unknown7;
+		uint32_t unknown8;
+		uint32_t unknown9;
+	};
+	static_assert(sizeof(rivet_asset_meta) == 36);
 #pragma pack(pop)
 
 	enum class rivet_asset_type : uint8_t {
@@ -65,14 +78,13 @@ namespace rivet::structures {
 		rivet_asset_id id;
 		rivet_size size;
 		rivet_off offset;
-		rivet_off metadata_offset;
 		std::weak_ptr<rivet_archive> archive;
 		uint8_t group_id;
 		bool is_localized_asset;
 		rivet_asset_chunk chunk;
+		rivet_asset_meta meta;
 
 		// stuff from dag
-		rivet_asset_id dependency_id;
 		std::string name;
 		std::vector<std::pair<std::string, rivet_asset_id>> dependencies;
 		rivet_asset_type type;

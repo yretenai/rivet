@@ -32,7 +32,6 @@ namespace rivet::data {
 			throw invalid_tag_error();
 		}
 
-		auto ids = get_section<rivet_asset_id>(section_ids);
 		auto links = get_section<uint32_t>(section_links);
 		auto heads = get_section<rivet_off>(section_heads);
 		auto names = get_section<rivet_off>(section_names);
@@ -41,12 +40,8 @@ namespace rivet::data {
 		auto types = get_section<rivet_asset_type>(section_types);
 		auto dependency_groups = get_section<rivet_off>(section_graph);
 
-		if (ids == nullptr) {
+		if (names == nullptr) {
 			throw mismatched_data_error("asset ids");
-		}
-
-		if (types == nullptr) {
-			throw mismatched_data_error("asset types");
 		}
 
 		if (heads == nullptr) {
@@ -57,19 +52,19 @@ namespace rivet::data {
 			throw mismatched_data_error("links");
 		}
 
-		if (types != nullptr && ids->size() > types->size()) {
+		if (types != nullptr && names->size() > types->size()) {
 			throw mismatched_data_error("id count does not match asset count");
 		}
 
-		if (heads->size() > ids->size()) {
+		if (heads->size() > names->size()) {
 			throw mismatched_data_error("dependency head count does not match asset count");
 		}
 
-		if (names->size() > ids->size()) {
+		if (names->size() > names->size()) {
 			throw mismatched_data_error("dependency head count does not match asset count");
 		}
 
-		for (rivet_size i = 0; i < ids->size(); ++i) {
+		for (rivet_size i = 0; i < names->size(); ++i) {
 			auto name_offset = names->get(i);
 			if (name_offset == 0xFFFFFFFF) {
 				continue;
@@ -84,13 +79,12 @@ namespace rivet::data {
 
 						0,
 						0,
-						0,
 						{},
-						(uint8_t) -1,
+						static_cast<uint8_t>(-1),
 						false,
 						{},
+						{},
 
-						0,
 						{},
 						{},
 						rivet_asset_type::NONE,
@@ -105,7 +99,6 @@ namespace rivet::data {
 				auto archive = asset->archive.lock();
 			}
 			asset->name = name;
-			asset->dependency_id = ids->get(i);
 
 			if (types != nullptr) {
 				asset->type = types->get(i);
