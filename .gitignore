@@ -43,3 +43,7 @@ vcs.xml
 .idea
 .vs
 .vscode
+
+subprojects/packagecache
+subprojects/lz4-*
+subprojects/libgdeflate

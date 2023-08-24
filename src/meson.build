@@ -4,16 +4,15 @@ rivetlib = library('rivet', [
 
 		'data/dat1.cpp',
 		'data/toc.cpp',
-		'data/dag.cpp',
+		'data/dag.cpp'
 	],
-	include_directories: incdir,
-	dependencies: [threaddep],
+	include_directories: includedir,
+	dependencies: deps,
 	install: true,
-	link_args: ldargs,
-	cpp_args: cxxargs + ['-DRIVET_EXPORTING'],
+	cpp_args: cpp_args + ['-DRIVET_EXPORTING'],
 	gnu_symbol_visibility: 'hidden')
 
-rivetdep = declare_dependency(link_with: rivetlib, include_directories: incdir)
+rivetdep = declare_dependency(link_with: rivetlib, include_directories: includedir)
 
 pkg_mod = import('pkgconfig')
 pkg_mod.generate(

@@ -1,0 +1,101 @@
+Only in a: config.h
+diff -uwr a/GDeflateCompress.cpp b/GDeflateCompress.cpp
+--- a/GDeflateCompress.cpp	2023-08-25 00:33:49.002253600 +0100
++++ b/GDeflateCompress.cpp	2023-08-25 00:14:21.045055600 +0100
+@@ -16,13 +16,12 @@
+  * limitations under the License.
+  */
+ 
+-#include "GDeflate.h"
++#include "../include/GDeflate.h"
+ #include "TileStream.h"
+ #include "Utils.h"
+-#include "config.h"
+ 
+ #include <assert.h>
+-#include <libdeflate.h>
++#include <libgdeflate.h>
+ #include <string.h>
+ 
+ #include <algorithm>
+diff -uwr a/GDeflateDecompress.cpp b/GDeflateDecompress.cpp
+--- a/GDeflateDecompress.cpp	2023-08-25 00:33:48.897193400 +0100
++++ b/GDeflateDecompress.cpp	2023-08-25 00:07:12.537801700 +0100
+@@ -16,10 +16,11 @@
+  * limitations under the License.
+  */
+ 
++#include "../include/GDeflate.h"
+ #include "TileStream.h"
+ #include "Utils.h"
+ 
+-#include <libdeflate.h>
++#include <libgdeflate.h>
+ 
+ #include <algorithm>
+ #include <atomic>
+diff -uwr a/GDeflate.h b/GDeflate.h
+--- a/GDeflate.h	2023-08-25 00:33:48.938715800 +0100
++++ b/GDeflate.h	2023-08-25 00:08:48.017213800 +0100
+@@ -18,10 +18,29 @@
+ 
+ #pragma once
+ 
+-#include "config.h"
++#include <stddef.h>
++#include <stdint.h>
++
++#if defined _MSC_VER || defined __CYGWIN__
++	#ifdef GDEFLATE_BUILDING
++		#define GDEFLATE_SHARED __declspec(dllexport)
++	#else
++		#define GDEFLATE_SHARED __declspec(dllimport)
++	#endif
++#else
++	#ifdef GDEFLATE_BUILDING
++		#define GDEFLATE_SHARED __attribute__ ((visibility ("default"))) __attribute__((unused))
++	#else
++		#define GDEFLATE_SHARED
++	#endif
++#endif
+ 
+ namespace GDeflate
+ {
++    static constexpr uint8_t kGDeflateId = 4;
++
++    static const size_t kDefaultTileSize = 64 * 1024; /*!< Default tile size */
++
+     // See README.MD in libdeflate_1_8 for details on Compression Levels
+     static const uint32_t MinimumCompressionLevel = 1;
+     static const uint32_t MaximumCompressionLevel = 12;
+@@ -31,9 +50,9 @@
+         COMPRESS_SINGLE_THREAD = 0x200, /*!< Force compression using a single thread. */
+     };
+ 
+-    size_t CompressBound(size_t size);
++    GDEFLATE_SHARED size_t CompressBound(size_t size);
+ 
+-    bool Compress(
++    GDEFLATE_SHARED bool Compress(
+         uint8_t* output,
+         size_t* outputSize,
+         const uint8_t* in,
+@@ -41,6 +60,6 @@
+         uint32_t level,
+         uint32_t flags);
+ 
+-    bool Decompress(uint8_t* output, size_t outputSize, const uint8_t* in, size_t inSize, uint32_t numWorkers);
++    GDEFLATE_SHARED bool Decompress(uint8_t* output, size_t outputSize, const uint8_t* in, size_t inSize, uint32_t numWorkers);
+ 
+ } // namespace GDeflate
+diff -uwr a/TileStream.h b/TileStream.h
+--- a/TileStream.h	2023-08-25 00:33:48.958483400 +0100
++++ b/TileStream.h	2023-08-25 00:14:26.185925100 +0100
+@@ -19,7 +19,6 @@
+ #pragma once
+ 
+ #include "Utils.h"
+-#include "config.h"
+ 
+ #include <assert.h>
+ #include <stdint.h>

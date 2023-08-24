@@ -7,22 +7,54 @@ project('rivet', 'cpp',
 		'cpp_std=c++20'
 	])
 
-threaddep = dependency('threads', required: true)
+thread_dep = dependency('threads', required: true)
 
-incdir = include_directories('include/')
+liblz4_dep = dependency('liblz4-1.9.4', required: false)
+if not liblz4_dep.found() 
+    liblz4_dep = dependency('liblz4')
+endif
 
-ldargs = []
-cxxargs = []
+libgdeflate_dep = dependency('libgdeflate-1.8.0', required: false)
+if not libgdeflate_dep.found() 
+    libgdeflate_dep = dependency('libgdeflate')
+endif
+
+directstorage_gdeflate = subproject('GDeflate')
+directstorage_gdeflate_dep = directstorage_gdeflate.get_variable('directstorage_gdeflate_dep')
+
+deps = [thread_dep, liblz4_dep, libgdeflate_dep, directstorage_gdeflate_dep]
+
+includedir = include_directories('include/')
+
+cpp_args = []
 
 compiler = meson.get_compiler('cpp')
-if host_machine.system() == 'windows'
-    if compiler.get_id() == 'msvc'
-        cxxargs += ['/utf-8', '/wd4251']
-    endif
+if compiler.get_id() == 'msvc'
+    cpp_args += ['/utf-8', '/wd4251']
 endif
 
 if compiler.get_id() == 'clang'
-    cxxargs += ['-finput-charset=utf-8', '-fexec-charset=utf-8', '-fexperimental-relative-c++-abi-vtables']
+    cpp_args += ['-finput-charset=utf-8', '-fexec-charset=utf-8']
+
+    if compiler.has_argument('-fexperimental-relative-c++-abi-vtables')
+        cpp_args += ['-fexperimental-relative-c++-abi-vtables']
+    endif
+
+    if compiler.has_argument('-faddrsig')
+        cpp_args += ['-faddrsig']
+    endif
+
+    if compiler.has_argument('-faligned-new')
+        cpp_args += ['-faligned-new']
+    endif
+
+    if compiler.has_argument('-fcoroutines')
+        cpp_args += ['-fcoroutines']
+    endif
+
+    if compiler.compiles('void test() { }', name: 'has polly', args: ['-mllvm', '-polly'])
+        cpp_args += ['-mllvm', '-polly']
+    endif
 endif
 
 subdir('src')

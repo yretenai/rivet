@@ -1,0 +1,206 @@
+diff --git a/Makefile b/Makefile
+index fab9308..6c0ee2b 100644
+--- a/Makefile
++++ b/Makefile
+@@ -161,7 +161,7 @@ endif
+ 
+ ##############################################################################
+ 
+-COMMON_HEADERS := $(wildcard common/*.h) libdeflate.h
++COMMON_HEADERS := $(wildcard common/*.h) libgdeflate.h
+ DEFAULT_TARGETS :=
+ 
+ #### Library
+@@ -317,7 +317,7 @@ install:all
+ 	install -d $(DESTDIR)$(LIBDIR) $(DESTDIR)$(INCDIR) $(DESTDIR)$(BINDIR)
+ 	install -m644 $(STATIC_LIB) $(DESTDIR)$(LIBDIR)
+ 	install -m755 $(SHARED_LIB) $(DESTDIR)$(LIBDIR)
+-	install -m644 libdeflate.h $(DESTDIR)$(INCDIR)
++	install -m644 libgdeflate.h $(DESTDIR)$(INCDIR)
+ 	install -m755 gzip$(PROG_SUFFIX) \
+ 		$(DESTDIR)$(BINDIR)/libdeflate-gzip$(PROG_SUFFIX)
+ 	ln -f $(DESTDIR)$(BINDIR)/libdeflate-gzip$(PROG_SUFFIX)		\
+@@ -330,7 +330,7 @@ install:all
+ uninstall:
+ 	rm -f $(DESTDIR)$(LIBDIR)/$(STATIC_LIB)				\
+ 	      $(DESTDIR)$(LIBDIR)/$(SHARED_LIB)				\
+-	      $(DESTDIR)$(INCDIR)/libdeflate.h				\
++	      $(DESTDIR)$(INCDIR)/libgdeflate.h				\
+ 	      $(DESTDIR)$(BINDIR)/libdeflate-gzip$(PROG_SUFFIX)		\
+ 	      $(DESTDIR)$(BINDIR)/libdeflate-gunzip$(PROG_SUFFIX)
+ 	if [ -n "$(SHARED_LIB_SYMLINK)" ]; then				\
+diff --git a/common/compiler_msc.h b/common/compiler_msc.h
+index 18cfa12..1db36f7 100644
+--- a/common/compiler_msc.h
++++ b/common/compiler_msc.h
+@@ -2,6 +2,7 @@
+  * compiler_msc.h - definitions for the Microsoft C Compiler
+  */
+ 
++#include <intrin.h>
+ #include <stdint.h>
+ #include <stdlib.h> /* for _byteswap_*() */
+ 
+diff --git a/lib/adler32.c b/lib/adler32.c
+index 32ab0ce..e84cd54 100644
+--- a/lib/adler32.c
++++ b/lib/adler32.c
+@@ -26,7 +26,7 @@
+  */
+ 
+ #include "lib_common.h"
+-#include "libdeflate.h"
++#include "libgdeflate.h"
+ 
+ /* The Adler-32 divisor, or "base", value. */
+ #define DIVISOR 65521
+diff --git a/lib/crc32.c b/lib/crc32.c
+index 6adacc5..55b3518 100644
+--- a/lib/crc32.c
++++ b/lib/crc32.c
+@@ -170,7 +170,7 @@
+  */
+ 
+ #include "lib_common.h"
+-#include "libdeflate.h"
++#include "libgdeflate.h"
+ 
+ typedef u32 (*crc32_func_t)(u32, const u8 *, size_t);
+ 
+diff --git a/lib/deflate_compress.c b/lib/deflate_compress.c
+index 21d4f35..03d65d7 100644
+--- a/lib/deflate_compress.c
++++ b/lib/deflate_compress.c
+@@ -34,7 +34,7 @@
+ #include "deflate_constants.h"
+ #include "unaligned.h"
+ 
+-#include "libdeflate.h"
++#include "libgdeflate.h"
+ 
+ /*
+  * By default, the near-optimal parsing algorithm is enabled at compression
+diff --git a/lib/deflate_decompress.c b/lib/deflate_decompress.c
+index a9d3b64..ebaf86c 100644
+--- a/lib/deflate_decompress.c
++++ b/lib/deflate_decompress.c
+@@ -53,7 +53,7 @@
+ #include "deflate_constants.h"
+ #include "unaligned.h"
+ 
+-#include "libdeflate.h"
++#include "libgdeflate.h"
+ 
+ /*
+  * If the expression passed to SAFETY_CHECK() evaluates to false, then the
+@@ -957,7 +957,7 @@ dispatch(struct libdeflate_decompressor * restrict d,
+ #ifndef HIDE_INTERFACE
+ 
+ /*
+- * This is the main DEFLATE decompression routine.  See libdeflate.h for the
++ * This is the main DEFLATE decompression routine.  See libgdeflate.h for the
+  * documentation.
+  *
+  * Note that the real code is in decompress_template.h.  The part here just
+diff --git a/lib/gdeflate_decompress.c b/lib/gdeflate_decompress.c
+index 8713745..9b466c9 100644
+--- a/lib/gdeflate_decompress.c
++++ b/lib/gdeflate_decompress.c
+@@ -36,7 +36,7 @@
+ #include "deflate_decompress.c"
+ 
+ /*
+- * This is the main GDEFLATE decompression routine.  See libdeflate.h for the
++ * This is the main GDEFLATE decompression routine.  See libgdeflate.h for the
+  * documentation.
+  *
+  * Note that the real code is in gdeflate_decompress_template.h.  The part here
+diff --git a/lib/gzip_compress.c b/lib/gzip_compress.c
+index 3cb8803..c66cfea 100644
+--- a/lib/gzip_compress.c
++++ b/lib/gzip_compress.c
+@@ -31,7 +31,7 @@
+ #include "gzip_constants.h"
+ #include "unaligned.h"
+ 
+-#include "libdeflate.h"
++#include "libgdeflate.h"
+ 
+ LIBDEFLATEEXPORT size_t LIBDEFLATEAPI
+ libdeflate_gzip_compress(struct libdeflate_compressor *c,
+diff --git a/lib/gzip_decompress.c b/lib/gzip_decompress.c
+index 1b31d8a..7e456df 100644
+--- a/lib/gzip_decompress.c
++++ b/lib/gzip_decompress.c
+@@ -30,7 +30,7 @@
+ #include "gzip_constants.h"
+ #include "unaligned.h"
+ 
+-#include "libdeflate.h"
++#include "libgdeflate.h"
+ 
+ LIBDEFLATEEXPORT enum libdeflate_result LIBDEFLATEAPI
+ libdeflate_gzip_decompress_ex(struct libdeflate_decompressor *d,
+diff --git a/lib/lib_common.h b/lib/lib_common.h
+index 2eea56c..e535b6e 100644
+--- a/lib/lib_common.h
++++ b/lib/lib_common.h
+@@ -6,7 +6,7 @@
+ #define LIB_LIB_COMMON_H
+ 
+ #ifdef LIBDEFLATE_H
+-#  error "lib_common.h must always be included before libdeflate.h"
++#  error "lib_common.h must always be included before libgdeflate.h"
+    /* because BUILDING_LIBDEFLATE must be set first */
+ #endif
+ 
+diff --git a/lib/utils.c b/lib/utils.c
+index c626af1..e327b36 100644
+--- a/lib/utils.c
++++ b/lib/utils.c
+@@ -27,7 +27,7 @@
+ 
+ #include "lib_common.h"
+ 
+-#include "libdeflate.h"
++#include "libgdeflate.h"
+ 
+ #ifdef FREESTANDING
+ #  define malloc NULL
+diff --git a/lib/zlib_compress.c b/lib/zlib_compress.c
+index ab00751..ba10e54 100644
+--- a/lib/zlib_compress.c
++++ b/lib/zlib_compress.c
+@@ -31,7 +31,7 @@
+ #include "unaligned.h"
+ #include "zlib_constants.h"
+ 
+-#include "libdeflate.h"
++#include "libgdeflate.h"
+ 
+ LIBDEFLATEEXPORT size_t LIBDEFLATEAPI
+ libdeflate_zlib_compress(struct libdeflate_compressor *c,
+diff --git a/lib/zlib_decompress.c b/lib/zlib_decompress.c
+index 0f6c714..8f38ff7 100644
+--- a/lib/zlib_decompress.c
++++ b/lib/zlib_decompress.c
+@@ -30,7 +30,7 @@
+ #include "unaligned.h"
+ #include "zlib_constants.h"
+ 
+-#include "libdeflate.h"
++#include "libgdeflate.h"
+ 
+ LIBDEFLATEEXPORT enum libdeflate_result LIBDEFLATEAPI
+ libdeflate_zlib_decompress_ex(struct libdeflate_decompressor *d,
+diff --git a/libdeflate.h b/libdeflate.h
+index 1ed0866..b7f2d37 100644
+--- a/libdeflate.h
++++ b/libdeflate.h
+@@ -1,5 +1,5 @@
+ /*
+- * libdeflate.h - public header for libdeflate
++ * libgdeflate.h - public header for libdeflate
+  */
+ 
+ #ifndef LIBDEFLATE_H

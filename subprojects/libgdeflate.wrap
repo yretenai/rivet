@@ -1,0 +1,9 @@
+[wrap-git]
+url = https://github.com/NVIDIA/libdeflate.git
+revision = 3bb5c6924b32a91e6e6a8f54ba00a21f037a8db5
+depth = 1
+patch_directory = libgdeflate
+diff_files = diffs/libgdeflate-0001.patch
+
+[provide]
+libgdeflate = libgdeflate_dep
