@@ -29,13 +29,11 @@ namespace rivet::data {
 		constexpr const static rivet_type_id section_version = 0x62297090 ; // todo: find real name.
 		constexpr const static rivet_type_id section_metadata = 0x654BDED9; // todo: find real name.
 
-#pragma pack(push, 1)
 		struct archive_toc_header {
 			rivet_type_id type_id;
 			rivet_size size;
 		};
 		static_assert(sizeof(archive_toc_header) == 8);
-#pragma pack(pop)
 
 		archive_toc_header toc_header = { };
 		std::unordered_map<rivet_asset_id, std::weak_ptr<rivet::structures::rivet_asset>> asset_lookup = { };

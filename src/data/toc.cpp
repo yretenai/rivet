@@ -161,7 +161,7 @@ namespace rivet::data {
 			archive->assets.emplace_back(asset);
 
 			if(parent != nullptr) {
-				parent->subfiles.emplace_back(asset);
+				parent->sub_files.emplace_back(asset);
 			} else {
 				asset_lookup.emplace(id, asset);
 			}

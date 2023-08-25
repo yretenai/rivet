@@ -27,7 +27,7 @@ std::unordered_map<rivet_asset_type, std::string> rivet_asset_type_lookup {
 	{rivet_asset_type::LOCALIZATION, "LOCALIZATION"},
 	{rivet_asset_type::ZONE_LIGHTING, "ZONE_LIGHTING"},
 	{rivet_asset_type::LEVEL_LIGHTING, "LEVEL_LIGHTING"},
-	{rivet_asset_type::NODEGRAPH, "NODEGRAPH"},
+	{rivet_asset_type::NODE_GRAPH, "NODE_GRAPH"},
 	{rivet_asset_type::WWISE_LOOKUP, "WWISE_LOOKUP"},
 	{rivet_asset_type::NONE, "NONE"},
 };
@@ -52,9 +52,9 @@ int main(int argv, char** argc) {
 		for(const auto& archive : toc->archives) {
 			std::cout << archive->name << std::endl;
 			for (const auto &asset: archive->assets) {
-				std::cout << "\t" << std::hex << asset->id << "\t" << std::dec << asset->subfiles.size() << "\t" << asset->name << "\t" << get_rivet_asset_type(asset->type) << std::endl;
+				std::cout << "\t" << std::hex << asset->id << "\t" << std::dec << asset->sub_files.size() << "\t" << asset->name << "\t" << get_rivet_asset_type(asset->type) << std::endl;
 				std::cout << "\t\t\t\t\t" << asset->size << "\t" << asset->offset << std::endl;
-				for(const auto &sub : asset->subfiles) {
+				for(const auto &sub : asset->sub_files) {
 					auto sub_file = sub.lock();
 					std::cout << "\t\t\t\t\t" << sub_file->size << "\t" << sub_file->offset << std::endl;
 				}

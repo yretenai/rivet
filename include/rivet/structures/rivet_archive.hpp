@@ -11,16 +11,24 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/rivet_array.hpp>
 
-namespace rivet::structures {
-	struct rivet_asset;
+namespace rivet {
+	namespace data {
+		struct data_stream_archive;
+	}
 
-	struct rivet_archive {
-		std::string name;
-		uint64_t time;
-		uint32_t version;
-		uint32_t unknown;
-		uint16_t load_priority;
+	namespace structures {
+		struct rivet_asset;
 
-		std::vector<std::shared_ptr<rivet_asset>> assets;
-	};
+		struct rivet_archive {
+			std::string name;
+			uint64_t time;
+			uint32_t version;
+			uint32_t unknown;
+			uint16_t load_priority;
+
+			std::vector<std::shared_ptr<rivet_asset>> assets;
+
+			std::shared_ptr<rivet::data::data_stream_archive> data_stream;
+		};
+	}
 }

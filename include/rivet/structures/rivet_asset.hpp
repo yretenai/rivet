@@ -13,14 +13,13 @@
 namespace rivet::structures {
 	struct rivet_archive;
 
-#pragma pack(push, 1)
 	struct rivet_asset_chunk {
 		uint64_t unknown1;
 		uint64_t unknown2;
 		uint64_t unknown3;
 		uint32_t unknown4;
 		uint32_t unknown5;
-		uint32_t unknown_bitset;
+		uint32_t unknown6;
 		uint32_t unknown7;
 		uint64_t unknown8;
 		uint32_t unknown9;
@@ -43,7 +42,6 @@ namespace rivet::structures {
 		uint32_t unknown9;
 	};
 	static_assert(sizeof(rivet_asset_meta) == 36);
-#pragma pack(pop)
 
 	enum class rivet_asset_type : uint8_t {
 		LEVEL,
@@ -66,7 +64,7 @@ namespace rivet::structures {
 		UNKNOWN_17,
 		ZONE_LIGHTING,
 		LEVEL_LIGHTING,
-		NODEGRAPH,
+		NODE_GRAPH,
 		UNKNOWN_21,
 		WWISE_LOOKUP,
 
@@ -90,6 +88,6 @@ namespace rivet::structures {
 		rivet_asset_type type;
 
 		// extra
-		std::vector<std::weak_ptr<rivet_asset>>  subfiles;
+		std::vector<std::weak_ptr<rivet_asset>>  sub_files;
 	};
 }

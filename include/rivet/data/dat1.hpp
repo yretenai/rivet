@@ -17,7 +17,6 @@ namespace rivet::data {
 	struct RIVET_SHARED dat1 {
 		constexpr const static uint32_t magic = 0x44415431;
 
-#pragma pack(push, 1)
 		struct data_header_t {
 			uint32_t magic;
 			rivet_type_id type_id;
@@ -33,7 +32,6 @@ namespace rivet::data {
 			rivet_size size;
 		};
 		static_assert(sizeof(data_entry_t) == 12);
-#pragma pack(pop)
 
 		data_header_t header = { };
 		std::shared_ptr<rivet_data_array> buffer = { };

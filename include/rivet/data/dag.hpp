@@ -34,13 +34,12 @@ namespace rivet::data {
 		constexpr const static rivet_type_id section_names = rivet::hash::type_id<section_names_name>::value;
 		constexpr const static rivet_type_id section_heads = rivet::hash::type_id<section_heads_name>::value;
 
-#pragma pack(push, 1)
 		struct dependency_dag_header {
 			rivet_type_id type_id;
-			rivet_size64 size;
+			rivet_size size;
+			rivet_size compressed_size;
 		};
 		static_assert(sizeof(dependency_dag_header) == 12);
-#pragma pack(pop)
 
 		dependency_dag_header dag_header = { };
 		std::unordered_map<rivet_asset_id, std::shared_ptr<rivet::structures::rivet_asset>> missing_assets = { };

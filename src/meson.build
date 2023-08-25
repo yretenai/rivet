@@ -4,7 +4,8 @@ rivetlib = library('rivet', [
 
 		'data/dat1.cpp',
 		'data/toc.cpp',
-		'data/dag.cpp'
+		'data/dag.cpp',
+		'data/dsar.cpp'
 	],
 	include_directories: includedir,
 	dependencies: deps,
