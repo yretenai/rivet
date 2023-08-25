@@ -41,7 +41,7 @@ namespace rivet::data {
 	static_assert(sizeof(rivet_archive_raw) == 0x42);
 #pragma pack(pop)
 
-	archive_toc::archive_toc(std::shared_ptr<rivet_data_array> &&stream) : dat1(stream->slice(0x8)) {
+	archive_toc::archive_toc(const std::shared_ptr<rivet_data_array> &stream) : dat1(stream->slice(0x8)) {
 		if (header.type_id != type_id) {
 			throw invalid_tag_error();
 		}

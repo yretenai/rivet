@@ -107,7 +107,7 @@ int main(int argv, char **argc) {
 				try {
 					std::cout << "Writing " << name << std::endl;
 					std::filesystem::path asset_path = dump / name;
-					if (archive->name.find('.') != std::string::npos) {
+					if ((pair.second->id & 0x4000000000000000) != 0 && archive->name.find('.') != std::string::npos) {
 						asset_path += archive->name.substr(archive->name.find('.'));
 					}
 

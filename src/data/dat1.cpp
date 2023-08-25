@@ -8,7 +8,7 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::data {
-	dat1::dat1(std::shared_ptr<rivet_data_array> &&stream) {
+	dat1::dat1(const std::shared_ptr<rivet_data_array> &stream) {
 		buffer = stream;
 
 		auto tag = stream->get<uint32_t>(0);
@@ -17,13 +17,19 @@ namespace rivet::data {
 		}
 
 		header = stream->get<data_header_t>(0);
-		auto section_headers = stream->slice<data_entry_t>(sizeof(data_header_t), header.section_count);
+		if(header.section_count > 0) {
+			auto section_headers = stream->slice<data_entry_t>(sizeof(data_header_t), header.section_count);
+
+			for (auto section_header: *section_headers) {
+				auto slice = stream->slice(section_header.offset, section_header.size);
+				sections.emplace(section_header.type_id, std::make_pair(section_header, slice));
+			}
+		}
+
 		string_buffer = buffer->slice(sizeof(data_header_t) + sizeof(data_entry_t) * header.section_count);
 		type_name = string_buffer->to_cstring();
-
-		for (auto section_header: *section_headers) {
-			auto slice = stream->slice(section_header.offset, section_header.size);
-			sections.emplace(section_header.type_id, std::make_pair(section_header, slice));
+		if(!type_name.ends_with("Built File")) {
+			type_name = {};
 		}
 	}
 

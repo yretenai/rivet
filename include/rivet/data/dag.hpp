@@ -54,8 +54,8 @@ namespace rivet {
 			std::vector<std::vector<std::pair<std::string, rivet_asset_id>>> groups;
 			std::shared_ptr<archive_toc> toc;
 
-			explicit RIVET_DECL dependency_dag(std::shared_ptr<rivet_data_array> &&stream,
-											   std::shared_ptr<archive_toc> &toc);
+			explicit RIVET_DECL dependency_dag(const std::shared_ptr<rivet_data_array> &stream,
+											   const std::shared_ptr<archive_toc> &toc);
 			RIVET_DELETE_COPY(dependency_dag)
 		};
 	}

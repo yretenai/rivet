@@ -45,7 +45,7 @@ namespace rivet {
 			std::vector<std::shared_ptr<rivet::structures::rivet_archive>> archives = {};
 			uint32_t version = 0;
 
-			explicit RIVET_DECL archive_toc(std::shared_ptr<rivet_data_array> &&stream);
+			explicit RIVET_DECL archive_toc(const std::shared_ptr<rivet_data_array> &stream);
 			RIVET_DELETE_COPY(archive_toc)
 		};
 	}
