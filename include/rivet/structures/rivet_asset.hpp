@@ -6,9 +6,11 @@
 
 #include <cstdint>
 #include <memory>
+#include <string>
+#include <utility>
+#include <vector>
 
 #include <rivet/rivet_keywords.hpp>
-#include <rivet/rivet_array.hpp>
 
 namespace rivet::structures {
 	struct rivet_archive;

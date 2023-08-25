@@ -3,6 +3,9 @@
 // SPDX-License-Identifier: MPL-2.0
 
 #include <rivet/data/dat1.hpp>
+#include <rivet/exceptions.hpp>
+#include <rivet/rivet_array.hpp>
+#include <rivet/rivet_keywords.hpp>
 
 namespace rivet::data {
 	dat1::dat1(std::shared_ptr<rivet_data_array> &&stream) {

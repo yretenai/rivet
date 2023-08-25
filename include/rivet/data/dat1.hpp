@@ -5,10 +5,10 @@
 #pragma once
 
 #include <cstdint>
-
 #include <memory>
 #include <unordered_map>
 #include <utility>
+#include <string>
 
 #include <rivet/rivet_array.hpp>
 #include <rivet/rivet_keywords.hpp>

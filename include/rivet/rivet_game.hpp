@@ -4,7 +4,9 @@
 
 #pragma once
 
-#include <unordered_map>
+#include <filesystem>
+#include <memory>
+#include <string>
 
 #include <rivet/rivet_array.hpp>
 #include <rivet/rivet_keywords.hpp>

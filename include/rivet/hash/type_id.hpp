@@ -4,7 +4,10 @@
 
 #pragma once
 
+#include <cstdint>
 #include <string_view>
+
+#include <rivet/rivet_keywords.hpp>
 
 namespace rivet::hash {
 	constexpr const static uint32_t crc32_table[256] = {

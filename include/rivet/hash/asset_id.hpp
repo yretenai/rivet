@@ -4,10 +4,12 @@
 
 #pragma once
 
+#include <string_view>
 #include <cstdint>
-#include <rivet/rivet_keywords.hpp>
 #include <string>
 #include <algorithm>
+
+#include <rivet/rivet_keywords.hpp>
 
 namespace rivet::hash {
 	constexpr const static uint64_t crc64_table[256] = {

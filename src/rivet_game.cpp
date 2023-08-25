@@ -4,6 +4,8 @@
 
 #include <rivet/rivet_game.hpp>
 #include <rivet/hash/asset_id.hpp>
+#include <rivet/rivet_array.hpp>
+#include <rivet/rivet_keywords.hpp>
 
 using namespace rivet::data;
 using namespace rivet::hash;

@@ -2,10 +2,21 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
+#include <cstdint>
+#include <memory>
+#include <string>
+#include <unordered_map>
+#include <utility>
+#include <vector>
+
 #include <rivet/data/dag.hpp>
 #include <rivet/data/toc.hpp>
-
+#include <rivet/data/dat1.hpp>
 #include <rivet/hash/asset_id.hpp>
+#include <rivet/structures/rivet_asset.hpp>
+#include <rivet/exceptions.hpp>
+#include <rivet/rivet_array.hpp>
+#include <rivet/rivet_keywords.hpp>
 
 using namespace rivet;
 using namespace rivet::structures;

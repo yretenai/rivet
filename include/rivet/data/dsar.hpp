@@ -4,6 +4,9 @@
 
 #pragma once
 
+#include <cstddef>
+#include <cstdint>
+#include <filesystem>
 #include <iosfwd>
 #include <memory>
 
@@ -14,6 +17,7 @@ namespace rivet {
 	namespace structures {
 		struct rivet_archive;
 	}
+
 	namespace data {
 		struct RIVET_SHARED data_stream_archive { // assumption: dsar = data stream archive
 			struct dsar_header {

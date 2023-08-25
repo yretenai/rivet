@@ -6,10 +6,8 @@
 
 #include <cstdint>
 #include <string>
-#include <unordered_map>
-
-#include <rivet/rivet_keywords.hpp>
-#include <rivet/rivet_array.hpp>
+#include <memory>
+#include <vector>
 
 namespace rivet {
 	namespace data {

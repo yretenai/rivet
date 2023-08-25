@@ -4,15 +4,14 @@
 
 #pragma once
 
+#include <type_traits>
 #include <algorithm>
-#include <cstddef>
 #include <cstdint>
 #include <iterator>
 #include <filesystem>
 #include <fstream>
 #include <memory>
 #include <new>
-#include <sstream>
 #include <string>
 #include <vector>
 #include <utility>

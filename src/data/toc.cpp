@@ -3,11 +3,20 @@
 // SPDX-License-Identifier: MPL-2.0
 
 #include <cstdint>
-#include <string>
 #include <map>
+#include <memory>
+#include <string>
+#include <unordered_map>
+#include <utility>
+#include <vector>
 
 #include <rivet/data/toc.hpp>
+#include <rivet/data/dat1.hpp>
 #include <rivet/rivet_keywords.hpp>
+#include <rivet/exceptions.hpp>
+#include <rivet/rivet_array.hpp>
+#include <rivet/structures/rivet_archive.hpp>
+#include <rivet/structures/rivet_asset.hpp>
 
 using namespace rivet;
 using namespace rivet::structures;
