@@ -202,8 +202,8 @@ namespace rivet {
 			return std::make_shared<rivet_array<U, Alignment>>(ptr, compact_value<U>(normalize_value(length)), offset);
 		}
 
-		[[maybe_unused]] void copy_to(std::shared_ptr<rivet_array<T, Alignment>> &array, rivet_size64 index, rivet_size64 count) {
-			if (count >= array->size()) {
+		[[maybe_unused]] void copy_to(std::shared_ptr<rivet_array<T, Alignment>> &array, rivet_size64 index, rivet_size64 count, rivet_size64 output_index = 0) {
+			if (count > array->size() - output_index) {
 				throw index_out_of_range();
 			}
 
@@ -211,11 +211,11 @@ namespace rivet {
 				throw index_out_of_range();
 			}
 
-			if (index + count >= size()) {
+			if (index + count > size()) {
 				throw index_out_of_range();
 			}
 
-			std::copy_n((data() + index), count, array->data());
+			std::copy_n((data() + index), count, (array->data() + output_index));
 		}
 
 		template<typename U = T>

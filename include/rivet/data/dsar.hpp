@@ -15,6 +15,7 @@
 
 namespace rivet {
 	namespace structures {
+		struct rivet_asset;
 		struct rivet_archive;
 	}
 
@@ -25,7 +26,7 @@ namespace rivet {
 				uint16_t version_major;
 				uint16_t version_minor;
 				rivet_size chunk_count;
-				rivet_off first_chunk_offset; // offset of the first chunk
+				rivet_soff first_chunk_offset; // offset of the first chunk
 				rivet_size64 total_size; // size of all chunks
 				uint64_t padding_value; // PADDING*
 			};
@@ -40,8 +41,8 @@ namespace rivet {
 			};
 
 			struct dsar_entry {
-				rivet_off64 offset;
-				rivet_off64 compressed_offset;
+				rivet_soff64 offset;
+				rivet_soff64 compressed_offset;
 				rivet_size size;
 				rivet_size compressed_size;
 				dsar_compression compression_type;
@@ -53,11 +54,14 @@ namespace rivet {
 			std::weak_ptr<rivet::structures::rivet_archive> archive;
 			dsar_header header{};
 			std::shared_ptr<rivet_array<dsar_entry, RIVET_ALIGNMENT>> chunks;
+			bool is_compressed;
+			bool exists;
 
-			explicit RIVET_DECL data_stream_archive(std::filesystem::path &root, std::shared_ptr<rivet::structures::rivet_archive> &archive);
+			explicit RIVET_DECL data_stream_archive(const std::filesystem::path &root, const std::shared_ptr<rivet::structures::rivet_archive> &archive);
 			RIVET_DELETE_COPY(data_stream_archive)
 
-			[[nodiscard]] std::shared_ptr<rivet_data_array> read_file(rivet_asset_id id) const;
+			[[nodiscard]] std::shared_ptr<rivet_data_array>
+			read_file(const std::shared_ptr<rivet::structures::rivet_asset> &asset) const;
 		};
 	}
 }

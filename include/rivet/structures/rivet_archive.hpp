@@ -7,7 +7,7 @@
 #include <cstdint>
 #include <string>
 #include <memory>
-#include <vector>
+#include <unordered_map>
 
 namespace rivet {
 	namespace data {
@@ -24,7 +24,7 @@ namespace rivet {
 			uint32_t unknown;
 			uint16_t load_priority;
 
-			std::vector<std::shared_ptr<rivet_asset>> assets;
+			std::unordered_map<rivet_asset_id, std::shared_ptr<rivet_asset>> assets;
 
 			std::shared_ptr<rivet::data::data_stream_archive> data_stream;
 		};

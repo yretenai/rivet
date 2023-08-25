@@ -116,12 +116,25 @@ namespace rivet::data {
 
 			auto info = assets_section->get(i);
 			std::shared_ptr<rivet_asset> parent = nullptr;
+			bool store_in_archive = true;
+			bool is_sub_file = false;
 			if (asset_lookup.find(id) != asset_lookup.end()) {
-				if((full_id & 0x4000000000000000) != 0) {
-					continue;
-				}
+				store_in_archive = false;
+				is_sub_file = true;
+				if((full_id & 0x4000000000000000) == 0) {
+					parent = asset_lookup.at(id).lock();
+					auto parent_archive = parent->archive.lock();
+					if (parent_archive == nullptr) {
+						throw unreachable_error();
+					}
 
-				parent = asset_lookup.at(id).lock();
+					auto current_archive = archives[info.archive_id];
+					if (parent_archive->name != current_archive->name) {
+						store_in_archive = true;
+					}
+				} else {
+					throw unreachable_error();
+				}
 			}
 
 			rivet_size group_id = -1;
@@ -165,15 +178,18 @@ namespace rivet::data {
 					{},
 					rivet_asset_type::NONE,
 
-					{}
+					{},
+					is_sub_file
 			});
-
-			archive->assets.emplace_back(asset);
 
 			if(parent != nullptr) {
 				parent->sub_files.emplace_back(asset);
-			} else {
+			} else if((full_id & 0x4000000000000000) == 0) {
 				asset_lookup.emplace(id, asset);
+			}
+
+			if(store_in_archive) {
+				archive->assets.emplace(id, asset);
 			}
 		}
 	}

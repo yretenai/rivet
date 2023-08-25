@@ -90,6 +90,7 @@ namespace rivet::structures {
 		rivet_asset_type type;
 
 		// extra
-		std::vector<std::weak_ptr<rivet_asset>>  sub_files;
+		std::vector<std::shared_ptr<rivet_asset>> sub_files;
+		bool is_sub_file;
 	};
 }

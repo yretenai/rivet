@@ -100,7 +100,8 @@ namespace rivet::data {
 						{},
 						rivet_asset_type::NONE,
 
-						{}
+						{},
+						false
 				});
 
 				missing_assets.emplace(id, asset);
