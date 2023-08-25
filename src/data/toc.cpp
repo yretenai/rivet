@@ -85,7 +85,8 @@ namespace rivet::data {
 					archive_entry.version,
 					archive_entry.unknown,
 					archive_entry.load_priority,
-					{}
+					{},
+					nullptr
 			}));
 		}
 

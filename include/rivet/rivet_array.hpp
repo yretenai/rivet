@@ -66,7 +66,7 @@ namespace rivet {
 				offset = Alignment - (reinterpret_cast<intptr_t>(this->ptr.get()) % Alignment);
 			}
 #else
-			ptr = std::shared_ptr<T[]>(new (std::align_val_t(Alignment)) T[size]);
+			ptr = std::shared_ptr<uint8_t[]>(new (std::align_val_t(Alignment)) uint8_t[normalize_value(size)]);
 #endif
 		}
 

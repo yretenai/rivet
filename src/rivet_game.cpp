@@ -2,8 +2,6 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#pragma once
-
 #include <rivet/rivet_game.hpp>
 #include <rivet/hash/asset_id.hpp>
 
