@@ -33,11 +33,11 @@ namespace rivet::data {
 		};
 		static_assert(sizeof(data_entry_t) == 12);
 
-		data_header_t header = { };
-		std::shared_ptr<rivet_data_array> buffer = { };
-		std::shared_ptr<rivet_data_array> string_buffer = { };
+		data_header_t header = {};
+		std::shared_ptr<rivet_data_array> buffer = {};
+		std::shared_ptr<rivet_data_array> string_buffer = {};
 		std::unordered_map<rivet_type_id, std::pair<data_entry_t, std::shared_ptr<rivet_data_array>>> sections;
-		std::string type_name = { };
+		std::string type_name = {};
 
 		explicit dat1(std::shared_ptr<rivet_data_array> &&stream);
 		RIVET_DELETE_COPY(dat1)
@@ -47,7 +47,7 @@ namespace rivet::data {
 		template<typename T>
 		std::shared_ptr<rivet_array<T, RIVET_ALIGNMENT>> get_section(rivet_type_id type_id) {
 			auto data = get_section_data(type_id);
-			if(data == nullptr) {
+			if (data == nullptr) {
 				return nullptr;
 			}
 

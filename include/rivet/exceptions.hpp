@@ -47,10 +47,12 @@ namespace rivet {
 		mismatched_data_error() : std::runtime_error("tag in data is not valid for this class") {
 			RIVET_DEBUG_BREAK;
 		}
-		explicit mismatched_data_error(const char* string) : std::runtime_error(string) {
+
+		explicit mismatched_data_error(const char *string) : std::runtime_error(string) {
 			RIVET_DEBUG_BREAK;
 		}
-		explicit mismatched_data_error(const std::string& string) : std::runtime_error(string) {
+
+		explicit mismatched_data_error(const std::string &string) : std::runtime_error(string) {
 			RIVET_DEBUG_BREAK;
 		}
 	};

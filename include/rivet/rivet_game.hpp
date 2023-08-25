@@ -29,8 +29,13 @@ namespace rivet {
 
 		explicit rivet_game(std::filesystem::path &&root);
 
-		[[nodiscard]] std::shared_ptr<rivet_data_array> open_file(const std::string &path, rivet_size sub_file_id) const;
+		[[nodiscard]] std::shared_ptr<rivet_data_array>
+		open_file(const std::string &path, rivet_size sub_file_id) const;
+
 		[[nodiscard]] std::shared_ptr<rivet_data_array> open_file(rivet_asset_id id, rivet_size sub_file_id) const;
-		[[nodiscard]] std::shared_ptr<rivet_data_array> open_file(const std::shared_ptr<rivet::structures::rivet_archive> &archive, const std::shared_ptr<rivet::structures::rivet_asset> &asset) const;
+
+		[[nodiscard]] std::shared_ptr<rivet_data_array>
+		open_file(const std::shared_ptr<rivet::structures::rivet_archive> &archive,
+				  const std::shared_ptr<rivet::structures::rivet_asset> &asset) const;
 	};
 }

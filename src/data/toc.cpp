@@ -121,7 +121,7 @@ namespace rivet::data {
 			if (asset_lookup.find(id) != asset_lookup.end()) {
 				store_in_archive = false;
 				is_sub_file = true;
-				if((full_id & 0x4000000000000000) == 0) {
+				if ((full_id & 0x4000000000000000) == 0) {
 					parent = asset_lookup.at(id).lock();
 					auto parent_archive = parent->archive.lock();
 					if (parent_archive == nullptr) {
@@ -182,13 +182,13 @@ namespace rivet::data {
 					is_sub_file
 			});
 
-			if(parent != nullptr) {
+			if (parent != nullptr) {
 				parent->sub_files.emplace_back(asset);
-			} else if((full_id & 0x4000000000000000) == 0) {
+			} else if ((full_id & 0x4000000000000000) == 0) {
 				asset_lookup.emplace(id, asset);
 			}
 
-			if(store_in_archive) {
+			if (store_in_archive) {
 				archive->assets.emplace(id, asset);
 			}
 		}

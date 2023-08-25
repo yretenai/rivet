@@ -33,7 +33,7 @@ namespace rivet {
 			using pointer = value_type *;
 			using reference = value_type &;
 
-			explicit iterator(pointer ptr) : array_ptr(ptr) { }
+			explicit iterator(pointer ptr) : array_ptr(ptr) {}
 
 			reference operator*() const { return *array_ptr; }
 
@@ -101,7 +101,9 @@ namespace rivet {
 			}
 		}
 
-		rivet_array(std::shared_ptr<uint8_t[]> ptr, rivet_size64 length, rivet_off64 offset) : ptr(std::move(ptr)), length(length), offset(offset) { }
+		rivet_array(std::shared_ptr<uint8_t[]> ptr, rivet_size64 length, rivet_off64 offset) : ptr(std::move(ptr)),
+																							   length(length),
+																							   offset(offset) {}
 
 		RIVET_DELETE_COPY(rivet_array)
 
@@ -165,7 +167,8 @@ namespace rivet {
 			reinterpret_cast<U *>(data() + index)[0] = value;
 		}
 
-		[[maybe_unused]] [[nodiscard]] std::shared_ptr<rivet_array<T, Alignment>> slice(rivet_size64 index, rivet_size64 count) const {
+		[[maybe_unused]] [[nodiscard]] std::shared_ptr<rivet_array<T, Alignment>>
+		slice(rivet_size64 index, rivet_size64 count) const {
 			if (index >= size()) {
 				throw index_out_of_range();
 			}
@@ -182,15 +185,16 @@ namespace rivet {
 		}
 
 		template<typename U>
-		[[maybe_unused]] std::shared_ptr<rivet_array<U, Alignment>> slice(rivet_size64 index, rivet_size64 count) const {
+		[[maybe_unused]] std::shared_ptr<rivet_array<U, Alignment>>
+		slice(rivet_size64 index, rivet_size64 count) const {
 			auto normalized_offset = offset + normalize_value(index);
 			auto normalized_index = normalize_value(index);
 
-			if(normalized_index > byte_size()) {
+			if (normalized_index > byte_size()) {
 				throw index_out_of_range();
 			}
 
-			if(normalized_index + normalized_offset > byte_size()) {
+			if (normalized_index + normalized_offset > byte_size()) {
 				throw index_out_of_range();
 			}
 
@@ -202,7 +206,9 @@ namespace rivet {
 			return std::make_shared<rivet_array<U, Alignment>>(ptr, compact_value<U>(normalize_value(length)), offset);
 		}
 
-		[[maybe_unused]] void copy_to(std::shared_ptr<rivet_array<T, Alignment>> &array, rivet_size64 index, rivet_size64 count, rivet_size64 output_index = 0) {
+		[[maybe_unused]] void
+		copy_to(std::shared_ptr<rivet_array<T, Alignment>> &array, rivet_size64 index, rivet_size64 count,
+				rivet_size64 output_index = 0) {
 			if (count > array->size() - output_index) {
 				throw index_out_of_range();
 			}
@@ -281,7 +287,8 @@ namespace rivet {
 
 		[[maybe_unused]] std::vector<T> to_vector() { return std::vector<T>(data(), data() + size()); }
 
-		[[maybe_unused]] static std::shared_ptr<rivet_array<uint8_t, Alignment>> from_file(const std::filesystem::path &path) {
+		[[maybe_unused]] static std::shared_ptr<rivet_array<uint8_t, Alignment>>
+		from_file(const std::filesystem::path &path) {
 			std::ifstream file(path, std::ios::binary | std::ios::in);
 			auto size = static_cast<rivet_size64>(std::filesystem::file_size(path));
 			auto bytes = std::make_shared<rivet_array<uint8_t, Alignment>>(nullptr, size);

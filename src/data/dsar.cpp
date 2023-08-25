@@ -18,9 +18,11 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::data {
-	rivet::data::data_stream_archive::data_stream_archive(const std::filesystem::path& root, const std::shared_ptr<rivet::structures::rivet_archive>& archive) : archive(archive), exists(true) {
+	rivet::data::data_stream_archive::data_stream_archive(const std::filesystem::path &root,
+														  const std::shared_ptr<rivet::structures::rivet_archive> &archive)
+			: archive(archive), exists(true) {
 		auto path = root / archive->name;
-		if(!std::filesystem::exists(path)) {
+		if (!std::filesystem::exists(path)) {
 			exists = false;
 		}
 		base_stream = std::make_shared<std::ifstream>(path, std::ios::binary | std::ios::in);
@@ -44,8 +46,9 @@ namespace rivet::data {
 		base_stream->read(reinterpret_cast<char *>(chunks->data()), static_cast<std::streamsize>(chunks->byte_size()));
 	}
 
-	std::shared_ptr<rivet_data_array> data_stream_archive::read_file(const std::shared_ptr<rivet::structures::rivet_asset> &asset) const {
-		if(!exists) {
+	std::shared_ptr<rivet_data_array>
+	data_stream_archive::read_file(const std::shared_ptr<rivet::structures::rivet_asset> &asset) const {
+		if (!exists) {
 			return nullptr;
 		}
 
@@ -56,7 +59,8 @@ namespace rivet::data {
 
 		if (!is_compressed) {
 			base_stream->seekg(asset_offset, std::ios::beg);
-			base_stream->read(reinterpret_cast<char *>(buffer->data()), static_cast<std::streamsize>(buffer->byte_size()));
+			base_stream->read(reinterpret_cast<char *>(buffer->data()),
+							  static_cast<std::streamsize>(buffer->byte_size()));
 			return buffer;
 		}
 
@@ -82,7 +86,7 @@ namespace rivet::data {
 		// main decompression loop
 		rivet_size local_offset = 0;
 		while (local_offset < asset_size) {
-			if(chunk_index > chunks->size()) {
+			if (chunk_index > chunks->size()) {
 				throw unreachable_error();
 			}
 
@@ -141,7 +145,7 @@ namespace rivet::data {
 			}
 
 			// oob check
-			if(chunk_size > buffer->byte_size() - local_offset) {
+			if (chunk_size > buffer->byte_size() - local_offset) {
 				throw unreachable_error();
 			}
 

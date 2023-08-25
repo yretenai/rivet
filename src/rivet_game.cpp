@@ -28,26 +28,26 @@ namespace rivet {
 
 	std::shared_ptr<rivet_data_array> rivet_game::open_file(rivet_asset_id id, rivet_size sub_file_id) const {
 		auto asset_ptr = toc->asset_lookup.at(id).lock();
-		if(!asset_ptr) {
+		if (!asset_ptr) {
 			return nullptr;
 		}
 
 		auto archive_ptr = asset_ptr->archive.lock();
 
-		if(!archive_ptr) {
+		if (!archive_ptr) {
 			return nullptr;
 		}
 
-		if(sub_file_id > 0) { // localization count = 32 sub files, tile stream = 1 sub file
+		if (sub_file_id > 0) { // localization count = 32 sub files, tile stream = 1 sub file
 			auto sub_file = asset_ptr->sub_files.at(sub_file_id - 1);
-			if(!sub_file) {
+			if (!sub_file) {
 				return nullptr;
 			}
 
 			asset_ptr = sub_file;
 			archive_ptr = asset_ptr->archive.lock();
 
-			if(!archive_ptr) {
+			if (!archive_ptr) {
 				return nullptr;
 			}
 		}
@@ -56,11 +56,12 @@ namespace rivet {
 	}
 
 	std::shared_ptr<rivet_data_array>
-	rivet_game::open_file(const std::shared_ptr<rivet_archive> &archive, const std::shared_ptr<rivet_asset> &asset) const {
-			if (!archive->data_stream) {
-				archive->data_stream = std::make_shared<data_stream_archive>(root, archive);
-			}
+	rivet_game::open_file(const std::shared_ptr<rivet_archive> &archive,
+						  const std::shared_ptr<rivet_asset> &asset) const {
+		if (!archive->data_stream) {
+			archive->data_stream = std::make_shared<data_stream_archive>(root, archive);
+		}
 
-			return archive->data_stream->read_file(asset);
+		return archive->data_stream->read_file(asset);
 	}
 }

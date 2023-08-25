@@ -33,7 +33,8 @@ namespace rivet::data {
 		return vector;
 	}
 
-	dependency_dag::dependency_dag(std::shared_ptr<rivet_data_array> &&stream, std::shared_ptr<archive_toc> &toc) : dat1(stream->slice(12)), toc(toc) {
+	dependency_dag::dependency_dag(std::shared_ptr<rivet_data_array> &&stream, std::shared_ptr<archive_toc> &toc)
+			: dat1(stream->slice(12)), toc(toc) {
 		if (header.type_id != type_id) {
 			throw invalid_tag_error();
 		}
@@ -82,7 +83,7 @@ namespace rivet::data {
 			}
 
 			auto name = buffer->slice(name_offset)->to_cstring();
-			auto id = rivet::hash::hash_asset_id(name); // todo: some models and textures has a different path or ext? -> probably .dx11 or smth? -> localized?
+			auto id = rivet::hash::hash_asset_id(name);
 			std::shared_ptr<rivet_asset> asset;
 			if (toc->asset_lookup.find(id) == toc->asset_lookup.end()) {
 				asset = std::make_shared<rivet_asset>(rivet_asset{

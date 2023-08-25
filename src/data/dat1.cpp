@@ -30,7 +30,7 @@ namespace rivet::data {
 	std::shared_ptr<rivet_data_array> dat1::get_section_data(rivet_type_id type_id) {
 		auto entry = sections.find(type_id);
 
-		if(entry == sections.end()) {
+		if (entry == sections.end()) {
 			return nullptr;
 		}
 

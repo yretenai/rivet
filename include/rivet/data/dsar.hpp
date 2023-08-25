@@ -57,7 +57,8 @@ namespace rivet {
 			bool is_compressed;
 			bool exists;
 
-			explicit RIVET_DECL data_stream_archive(const std::filesystem::path &root, const std::shared_ptr<rivet::structures::rivet_archive> &archive);
+			explicit RIVET_DECL data_stream_archive(const std::filesystem::path &root,
+													const std::shared_ptr<rivet::structures::rivet_archive> &archive);
 			RIVET_DELETE_COPY(data_stream_archive)
 
 			[[nodiscard]] std::shared_ptr<rivet_data_array>
