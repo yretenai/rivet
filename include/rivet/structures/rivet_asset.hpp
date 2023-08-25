@@ -80,7 +80,7 @@ namespace rivet::structures {
 		rivet_off offset;
 		std::weak_ptr<rivet_archive> archive;
 		uint8_t group_id;
-		bool is_localized_asset;
+		bool is_streamed_asset;
 		rivet_asset_chunk chunk;
 		rivet_asset_meta meta;
 

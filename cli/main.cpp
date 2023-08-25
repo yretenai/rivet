@@ -35,32 +35,31 @@ std::unordered_map<rivet_asset_type, std::string> rivet_asset_type_lookup {
 	{rivet_asset_type::NONE, "NONE"},
 };
 
-std::array<std::string, 32> localization_enum {
-	"none",
-	"en",
-	"en-gb",
-	"da",
+std::array<std::string, 31> localization_enum {
+	"us",
+	"gb",
+	"dk",
 	"nl",
 	"fi",
 	"fr",
 	"de",
 	"it",
-	"ja",
-	"ko",
+	"jp",
+	"kr",
 	"no",
 	"pl",
 	"pt",
 	"ru",
 	"es",
-	"sv",
-	"pt-br",
+	"se",
+	"br",
 	"ar",
 	"tr",
-	"es-mx",
-	"zh-hans",
-	"zh-hant",
-	"fr-ca",
+	"la",
 	"cs",
+	"ct",
+	"fc",
+	"cz",
 	"hu",
 	"el",
 	"ro",
@@ -69,14 +68,6 @@ std::array<std::string, 32> localization_enum {
 	"id",
 	"hr"
 };
-
-std::string get_rivet_asset_type(rivet_asset_type &type) {
-	if(rivet_asset_type_lookup.find(type) != rivet_asset_type_lookup.end()) {
-		return rivet_asset_type_lookup.at(type);
-	}
-
-	return std::string("UNKNOWN_") + std::to_string(static_cast<int>(type));
-}
 
 int main(int argv, char** argc) {
 	if (argv < 2) {
@@ -92,41 +83,37 @@ int main(int argv, char** argc) {
 		}
 
 		std::filesystem::path dump(argc[2]);
-		for(const auto &archive : game->toc->archives) {
-			// skip wem, soundbank, and movie archives for now
-			if(archive->name.find("wem_") != std::string::npos) {
-				continue;
-			}
-
-			if(archive->name.find("soundbank.") != std::string::npos) {
-				continue;
-			}
-
-			if(archive->name.find("movie.") != std::string::npos) {
-				continue;
-			}
-
-			for(const auto &pair : archive->assets) {
-				if(pair.second->is_sub_file) {
+		for (const auto &archive: game->toc->archives) {
+			for (const auto &pair: archive->assets) {
+				if (pair.second->is_sub_file) {
 					continue;
 				}
 
 				auto name = pair.second->name;
-				if(name.empty()) {
-					name = archive->name + std::string("/") + std::to_string(pair.second->id);
+				if (name.empty()) {
+					if ((pair.second->id & 0x4000000000000000) != 0) {
+						auto locale = std::string("");
+						if (archive->name.find('.') != std::string::npos) {
+							locale = archive->name.substr(archive->name.find('.') + 1) + std::string("/");
+						}
+
+						name = std::string("sound/wem/") + locale + std::to_string(pair.second->id & 0xFFFFFFFF) +
+							   std::string(".wem");
+					} else {
+						name = archive->name + std::string("/") + std::to_string(pair.second->id);
+					}
 				}
 
 				try {
-					std::cout << "Dumping " << name << " (" << get_rivet_asset_type(pair.second->type) << ")"
-							  << std::endl;
+					std::cout << "Writing " << name << std::endl;
 					std::filesystem::path asset_path = dump / name;
-					if(pair.second->sub_files.size() == 31) {
-						asset_path += std::string(".") + localization_enum[0];
+					if (archive->name.find('.') != std::string::npos) {
+						asset_path += archive->name.substr(archive->name.find('.'));
 					}
 
 					std::filesystem::create_directories(asset_path.parent_path());
 					{
-						auto asset = game->open_file(pair.first, 0);
+						auto asset = game->open_file(archive, pair.second);
 						if (!asset) {
 							std::cout << "Failed to open asset " << name << std::endl;
 							continue;
@@ -138,21 +125,20 @@ int main(int argv, char** argc) {
 						asset_file.close();
 					}
 
-					if(pair.second->id & 0x80000000) {
+					if (pair.second->id & 0x80000000) {
 						continue;
 					}
-					for(rivet_size i = 0; i < pair.second->sub_files.size(); i++) {
+					for (rivet_size i = 0; i < pair.second->sub_files.size(); i++) {
 						auto stream_path = name;
-						if(pair.second->sub_files.size() == 31) {
-							stream_path += std::string(".") + localization_enum[i + 1];
+						if (pair.second->sub_files.size() == 31) {
+							stream_path += std::string(".") + localization_enum[i];
 						} else {
 							stream_path += std::string(".stream");
-							if(i > 0) {
+							if (i > 0) {
 								stream_path += std::to_string(i + 1);
 							}
 						}
-						std::cout << "Dumping " << stream_path << " (" << get_rivet_asset_type(pair.second->type) << ")"
-								  << std::endl;
+						std::cout << "Writing " << stream_path << std::endl;
 						auto asset = game->open_file(pair.first, i + 1);
 						if (!asset) {
 							std::cout << "Failed to open asset " << name << std::endl;
@@ -165,7 +151,7 @@ int main(int argv, char** argc) {
 						asset_file.close();
 					}
 				} catch (std::exception &e) {
-					std::cout << "Failed to dump asset " << name << ": " << e.what() << std::endl;
+					std::cout << "Failed to write asset " << name << ": " << e.what() << std::endl;
 				}
 			}
 		}

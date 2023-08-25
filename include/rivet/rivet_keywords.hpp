@@ -58,7 +58,7 @@ namespace rivet {
 	// top 2 bits
 	enum class rivet_type_id_flags : uint8_t {
 		NONE = 0b00,
-		LOCALIZED = 0b01, // localized files have this, wem files have the 61st bit set as well despite being a 32-bit hash.
+		EXT = 0b01, // only 32-bit wem hashes have this
 		SHIPPED = 0b10, // assumption, all files have this
 	};
 
