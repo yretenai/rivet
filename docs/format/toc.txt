@@ -1,5 +1,5 @@
 TOC FORMAT
-    ArchiveTOC
+	ArchiveTOC
 
 This structure is specialized to Rift Apart.
 Other iterations of the engine for other games may have different structures.
@@ -39,12 +39,12 @@ SECTION 0xede8ada9 "Archive TOC Header"
 	Read as array.
 
 	Used as ranges.
-    Index is the index of the first asset.
+	Index is the index of the first asset.
 	The total sum of count is the number of assets.
-    Total number of struct entries is 256.
+	Total number of struct entries is 256.
 	Each 8 entries is a locale.
 	First 8 entries are unlocalized, and always loaded.
-    Suggested lookup route is "locale" -> "us" -> "none"
+	Suggested lookup route is "locale" -> "us" -> "none"
 	
 	Rift Apart has the following locales:
 		"none" "us" "gb" "dk" "nl" "fi" "fr" "de"
@@ -146,14 +146,14 @@ APPENDIX A
 	Overall Structure
 
 	A TOC file 8 sections.
-        Archive TOC Asset IDs
-        Archive TOC Header
-        Archive TOC Asset Metadata
-        Archive TOC File Metadata
-        Archive TOC Asset Header Data
-        Archive TOC Texture Asset Ids
-        Archive TOC Texture Header
-        Archive TOC Texture Meta
+		Archive TOC Asset IDs
+		Archive TOC Header
+		Archive TOC Asset Metadata
+		Archive TOC File Metadata
+		Archive TOC Asset Header Data
+		Archive TOC Texture Asset Ids
+		Archive TOC Texture Header
+		Archive TOC Texture Meta
 
 	These all make up a list of assets, and where/how to load them.
 
@@ -163,11 +163,11 @@ APPENDIX A
 	If the ID is present in Archive TOC Texture Asset Ids, it will have a corresponding Archive TOC Texture Meta entry.
 
 APPENDIX B
-    Calculating Asset IDs
+	Calculating Asset IDs
 
-    Asset IDs are calculated using CRC64 with the polynomial 0xc96c5795d7870f42 which is the ECMA polynomial.
-    The initial value is 0xc96c5795d7870f42.
-    The CRC is calculated on the lowercase path with backward slashes being replaced with forward slashes.
-    The resulting value is NOT reflected or XORed, instead it is shifted left by 2 bits and the 64th bit is set.
-    The 63rd bit is set if the hash is 32-bits, with the 62th to 32th bits being an identifier for the hash type (MSB first).
-    At the moment this is only the case for Wwise hashes which use the FNV hash (meaning the 64th, 63rd and 62th bits are set).
+	Asset IDs are calculated using CRC64 with the polynomial 0xc96c5795d7870f42 which is the ECMA polynomial.
+	The initial value is 0xc96c5795d7870f42.
+	The CRC is calculated on the lowercase path with backward slashes being replaced with forward slashes.
+	The resulting value is NOT reflected or XORed, instead it is shifted left by 2 bits and the 64th bit is set.
+	The 63rd bit is set if the hash is 32-bits, with the 62th to 32th bits being an identifier for the hash type (MSB first).
+	At the moment this is only the case for Wwise hashes which use the FNV hash (meaning the 64th, 63rd and 62th bits are set).

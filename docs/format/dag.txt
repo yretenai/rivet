@@ -1,5 +1,5 @@
 DAG FORMAT
-    DependencyDAG
+	DependencyDAG
 
 This structure is specialized to Rift Apart.
 Other iterations of the engine for other games may have different structures.

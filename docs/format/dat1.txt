@@ -1,5 +1,5 @@
 DAT1 FORMAT
-    DATA
+	DATA
 
 This structure is specialized to Rift Apart.
 Other iterations of the engine for other games may have different structures.
@@ -18,23 +18,23 @@ HEADER
 	cstring type_name;
 >
 
-    All sections are aligned to 16 bytes.
+	All sections are aligned to 16 bytes.
 
 SECTION_HEADER
 
 <
-    uint32 type_id;
-    uint32 offset;
-    uint32 size;
+	uint32 type_id;
+	uint32 offset;
+	uint32 size;
 >
 
-    Offset is relative to the start of the DAT1 structure.
+	Offset is relative to the start of the DAT1 structure.
 
-    The type_id is the specific to the section being loaded. Refer to the individual file format for more information.
+	The type_id is the specific to the section being loaded. Refer to the individual file format for more information.
 
 APPENDIX A
-    Calculating Type IDs
+	Calculating Type IDs
 
-    Type IDs are calculated using CRC32 with the polynomial 0xedb88320 which the reverse ISO polynomial.
-    The initial value is 0xedb88320u and the final value is NOT inverted.
-    There is no further processing done to the CRC32 value.
+	Type IDs are calculated using CRC32 with the polynomial 0xedb88320 which the reverse ISO polynomial.
+	The initial value is 0xedb88320u and the final value is NOT inverted.
+	There is no further processing done to the CRC32 value.

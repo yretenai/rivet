@@ -1,49 +1,49 @@
 DSAR FORMAT
-    Data Stream Archive
+	Data Stream Archive
 
-    This structure is specialized to Rift Apart.
-    Other iterations of the engine for other games may have different structures.
+	This structure is specialized to Rift Apart.
+	Other iterations of the engine for other games may have different structures.
 
-    See common.txt for common structures.
+	See common.txt for common structures.
 
 HEADER
 
 <
-    uint32 magic; // 0x52415344 (DSAR)
-    uint16 version_major; // 3
-    uint16 version_minor; // 1
-    uint32 chunk_count;
-    uint32 first_chunk_offset;
-    uint64 total_size;
-    uint64 padding;
+	uint32 magic; // 0x52415344 (DSAR)
+	uint16 version_major; // 3
+	uint16 version_minor; // 1
+	uint32 chunk_count;
+	uint32 first_chunk_offset;
+	uint64 total_size;
+	uint64 padding;
 >
 
 CHUNK ENTRY
 
 <
-    uint64 offset;
-    uint64 compressed_offset;
-    uint32 size;
-    uint32 compressed_size;
-    uint8 type;
-    uint8 padding[7] = { 0x55 };
+	uint64 offset;
+	uint64 compressed_offset;
+	uint32 size;
+	uint32 compressed_size;
+	uint8 type;
+	uint8 padding[7] = { 0x55 };
 >
 
-    The compressed offset is relative to the start of the archive.
-    The offset is absolute in the decompressed stream.
+	The compressed offset is relative to the start of the archive.
+	The offset is absolute in the decompressed stream.
 
-    Known types:
-        NONE (0) - No compression, never used.
-        UNKNOWN (1) - Unknown type. Assumption is Oodle on PS5.
-        GDEFLATE (2) - A modified version of DEFLATE, optimized for DirectStorage. Exclusively used for Textures.
-            References
-                https://github.com/microsoft/DirectStorage/tree/56489d25900d916a9cc450f5efe9e62b01789030/GDeflate/GDeflate
-                https://github.com/NVIDIA/libdeflate/tree/3bb5c6924b32a91e6e6a8f54ba00a21f037a8db5
-        LZ4 (3) - Standard LZ4 compression.
+	Known types:
+		NONE (0) - No compression, never used.
+		UNKNOWN (1) - Unknown type. Assumption is Oodle on PS5.
+		GDEFLATE (2) - A modified version of DEFLATE, optimized for DirectStorage. Exclusively used for Textures.
+			References
+				https://github.com/microsoft/DirectStorage/tree/56489d25900d916a9cc450f5efe9e62b01789030/GDeflate/GDeflate
+				https://github.com/NVIDIA/libdeflate/tree/3bb5c6924b32a91e6e6a8f54ba00a21f037a8db5
+		LZ4 (3) - Standard LZ4 compression.
 
 APPENDIX A
-    Resolving Assets from TOC
+	Resolving Assets from TOC
 
-    The TOC has assets and lists an offset in a DSAR. This offset is in the UNCOMPRESSED BUFFER.
-    You must find the chunks that contain the asset and decompress them to find the asset.
-    An asset may be split across multiple chunks.
+	The TOC has assets and lists an offset in a DSAR. This offset is in the UNCOMPRESSED BUFFER.
+	You must find the chunks that contain the asset and decompress them to find the asset.
+	An asset may be split across multiple chunks.
