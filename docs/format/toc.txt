@@ -48,7 +48,7 @@ HEADER
 
 	See dat1.txt for DAT1 STRUCTURE
 
-SECTION 0x506d7b8a
+SECTION 0x506d7b8a "Archive TOC Asset IDs"
 
 <
 	asset_id id;
@@ -99,7 +99,7 @@ SECTION 65bcf461 "Archive TOC Asset Metadata"
 	uint32 size;
 	uint32 file_index;
 	uint32 offset;
-	uint32 x654bded9_offset;
+	uint32 header_offset;
 >
 
 	Read as array.
@@ -107,7 +107,7 @@ SECTION 65bcf461 "Archive TOC Asset Metadata"
 	Size is the decompressed size of the asset.
 	File Index is the index in "Archive TOC File Metadata".
 	Offset is the offset in the DECOMPRESSED file.
-	x654bded9_offset is the offset in the 654bded9 section.
+	Header Offset is the offset in the "Archive TOC Asset Header Data" section.
 
 SECTION 398abff0 "Archive TOC File Metadata"
 
@@ -163,6 +163,6 @@ SECTION c9fb9dda "Archive TOC Texture Meta"
 
 	Read as array.
 
-SECTION 654bded9
+SECTION 654bded9 "Archive TOC Asset Header Data"
 
-	Read as buffer, assumed to be asset headers.
+	Read as buffer.
