@@ -15,7 +15,7 @@
 namespace rivet::structures {
 	struct rivet_archive;
 
-	struct rivet_asset_chunk {
+	struct rivet_asset_texture_meta {
 		uint64_t unknown1;
 		uint64_t unknown2;
 		uint64_t unknown3;
@@ -30,7 +30,7 @@ namespace rivet::structures {
 		uint32_t unknownC;
 		uint64_t unknownD;
 	};
-	static_assert(sizeof(rivet_asset_chunk) == 72);
+	static_assert(sizeof(rivet_asset_texture_meta) == 72);
 
 	struct rivet_asset_meta {
 		uint32_t id;
@@ -79,9 +79,9 @@ namespace rivet::structures {
 		rivet_size size;
 		rivet_off offset;
 		std::weak_ptr<rivet_archive> archive;
-		uint8_t group_id;
-		bool is_streamed_asset;
-		rivet_asset_chunk chunk;
+		rivet_size group_id;
+		bool is_streamed_texture;
+		rivet_asset_texture_meta chunk;
 		rivet_asset_meta meta;
 
 		// stuff from dag

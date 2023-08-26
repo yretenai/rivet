@@ -5,11 +5,14 @@
 #pragma once
 
 #include <cstdint>
+#include <array>
+#include <string_view>
 #include <unordered_map>
 #include <memory>
 #include <vector>
 
 #include <rivet/data/dat1.hpp>
+#include <rivet/hash/type_id.hpp>
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/rivet_array.hpp>
 
@@ -25,13 +28,20 @@ namespace rivet {
 			constexpr const static rivet_type_id magic = 0x34E89035;
 			constexpr const static char *defined_name = "ArchiveTOC";
 
-			constexpr const static rivet_type_id section_groups = 0xEDE8ADA9; // todo: find real name.
+			constexpr const static std::string_view section_header_name = "Archive TOC Header";
+			constexpr const static std::string_view section_assets_name = "Archive TOC Asset Metadata";
+			constexpr const static std::string_view section_archives_name = "Archive TOC File Metadata";
+			constexpr const static std::string_view section_texture_ids_name = "Archive TOC Texture Asset Ids";
+			constexpr const static std::string_view section_texture_header_name = "Archive TOC Texture Header";
+			constexpr const static std::string_view section_texture_meta_name = "Archive TOC Texture Meta";
+
+			constexpr const static rivet_type_id section_header = rivet::hash::type_id<section_header_name>::value;
 			constexpr const static rivet_type_id section_ids = 0x506D7B8A; // todo: find real name.
-			constexpr const static rivet_type_id section_assets = 0x65BCF461; // todo: find real name.
-			constexpr const static rivet_type_id section_archives = 0x398ABFF0; // todo: find real name.
-			constexpr const static rivet_type_id section_localized_ids = 0x36A6C8CC; // todo: find real name.
-			constexpr const static rivet_type_id section_chunks = 0xC9FB9DDA; // todo: find real name.
-			constexpr const static rivet_type_id section_version = 0x62297090; // todo: find real name.
+			constexpr const static rivet_type_id section_assets = rivet::hash::type_id<section_assets_name>::value;
+			constexpr const static rivet_type_id section_archives = rivet::hash::type_id<section_archives_name>::value;
+			constexpr const static rivet_type_id section_texture_ids = rivet::hash::type_id<section_texture_ids_name>::value;
+			constexpr const static rivet_type_id section_texture_meta = rivet::hash::type_id<section_texture_meta_name>::value;
+			constexpr const static rivet_type_id section_texture_header = rivet::hash::type_id<section_texture_header_name>::value;
 			constexpr const static rivet_type_id section_metadata = 0x654BDED9; // todo: find real name.
 
 			struct archive_toc_header {
@@ -43,7 +53,8 @@ namespace rivet {
 			archive_toc_header toc_header = {};
 			std::unordered_map<rivet_asset_id, std::weak_ptr<rivet::structures::rivet_asset>> asset_lookup = {};
 			std::vector<std::shared_ptr<rivet::structures::rivet_archive>> archives = {};
-			uint32_t version = 0;
+			std::array<std::vector<std::weak_ptr<rivet::structures::rivet_asset>>, 0x100> groups = {};
+			uint32_t streamed_texture_count = 0;
 
 			explicit RIVET_DECL archive_toc(const std::shared_ptr<rivet_data_array> &stream);
 			RIVET_DELETE_COPY(archive_toc)

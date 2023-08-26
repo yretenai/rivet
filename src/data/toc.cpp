@@ -51,20 +51,20 @@ namespace rivet::data {
 			throw invalid_tag_error();
 		}
 
-		auto version_section = get_section_data(section_version);
+		auto textures_header = get_section_data(section_texture_header);
 		auto archives_section = get_section<rivet_archive_raw>(section_archives);
 		auto ids_section = get_section<rivet_asset_id>(section_ids);
 		auto assets_section = get_section<rivet_asset_raw>(section_assets);
 
 		// optional
 		static_assert(sizeof(std::pair<uint32_t, uint32_t>) == 8);
-		auto groups_section = get_section<std::pair<uint32_t, uint32_t>>(section_groups);
-		auto localized_ids_section = get_section<rivet_asset_id>(section_localized_ids);
-		auto chunks_section = get_section<rivet_asset_chunk>(section_chunks);
+		auto groups_section = get_section<std::pair<uint32_t, uint32_t>>(section_header);
+		auto texture_ids = get_section<rivet_asset_id>(section_texture_ids);
+		auto texture_metas = get_section<rivet_asset_texture_meta>(section_texture_meta);
 		auto metadata_section = get_section<rivet_asset_meta>(section_metadata);
 
-		if (version_section == nullptr) {
-			version = version_section->get<uint32_t>(0);
+		if (textures_header == nullptr) {
+			streamed_texture_count = textures_header->get<uint32_t>(0);
 		}
 
 		if (archives_section == nullptr) {
@@ -99,14 +99,14 @@ namespace rivet::data {
 			}));
 		}
 
-		std::map<rivet_asset_id, rivet_asset_chunk> chunk_map;
-		if (localized_ids_section != nullptr && chunks_section != nullptr) {
-			if (localized_ids_section->size() != chunks_section->size()) {
+		std::map<rivet_asset_id, rivet_asset_texture_meta> chunk_map;
+		if (texture_ids != nullptr && texture_metas != nullptr) {
+			if (texture_ids->size() != texture_metas->size()) {
 				throw mismatched_data_error("streamed id count does not match chunk count");
 			}
 
-			for (rivet_size i = 0; i < localized_ids_section->size(); ++i) {
-				chunk_map[localized_ids_section->get(i)] = chunks_section->get(i);
+			for (rivet_size i = 0; i < texture_ids->size(); ++i) {
+				chunk_map[texture_ids->get(i)] = texture_metas->get(i);
 			}
 		}
 
@@ -137,7 +137,7 @@ namespace rivet::data {
 				}
 			}
 
-			rivet_size group_id = -1;
+			rivet_size group_id = 0xFFFFFFFF;
 
 			if (groups_section != nullptr) {
 				for (rivet_size j = 0; j < 0x100; ++j) {
@@ -169,7 +169,7 @@ namespace rivet::data {
 					info.size,
 					info.archive_offset,
 					archive,
-					static_cast<uint8_t>(group_id),
+					group_id,
 					chunk_entry != chunk_map.end(),
 					chunk_entry->second,
 					meta,
@@ -181,6 +181,10 @@ namespace rivet::data {
 					{},
 					is_sub_file
 			});
+
+			if (group_id != 0xFFFFFFFF) {
+				groups[group_id].emplace_back(asset);
+			}
 
 			if (parent != nullptr) {
 				parent->sub_files.emplace_back(asset);
