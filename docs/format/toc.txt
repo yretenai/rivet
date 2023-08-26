@@ -1,37 +1,10 @@
 TOC FORMAT
+    ArchiveTOC
 
 This structure is specialized to Rift Apart.
 Other iterations of the engine for other games may have different structures.
 
-general definitions:
-	char = 8-bit value
-
-	uint8 = unsigned 8-bit value
-
-	uint16 = unsigned 16-bit value
-
-	uint32 = unsigned 32-bit value
-
-	uint64 = unsigned 64-bit value
-
-	int8 = signed 8-bit value
-
-	int16 = signed 16-bit value
-
-	int32 = signed 32-bit value
-
-	int64 = signed 64-bit value
-
-	cstring = "char" until value is 0 
-
-	type_id = uint32 value
-
-	asset_id = uint64 value
-		64th bit is always set
-		63rd bit is set if only 32-bits are used
-		62th bit is set if 63rd bit is set and the hash is a Wwise FNV hash
-
-structures:
+See common.txt for common structures.
 
 HEADER
 
@@ -124,6 +97,8 @@ SECTION 398abff0 "Archive TOC File Metadata"
 	Name is a path relative to the TOC file.
 	"Time" is an assumed name, it increases every time the TOC is built.
 	"Version" is an assumed name, it randomly increases (but never decreases) every time the TOC is built.
+	The archive file MAY be a DSAR file. See dsar.txt for more information.
+	It may also be a regular file or a raw stream.
 
 SECTION 36a6c8cc "Archive TOC Texture Asset Ids"
 
@@ -166,3 +141,33 @@ SECTION c9fb9dda "Archive TOC Texture Meta"
 SECTION 654bded9 "Archive TOC Asset Header Data"
 
 	Read as buffer.
+
+APPENDIX A
+	Overall Structure
+
+	A TOC file 8 sections.
+        Archive TOC Asset IDs
+        Archive TOC Header
+        Archive TOC Asset Metadata
+        Archive TOC File Metadata
+        Archive TOC Asset Header Data
+        Archive TOC Texture Asset Ids
+        Archive TOC Texture Header
+        Archive TOC Texture Meta
+
+	These all make up a list of assets, and where/how to load them.
+
+	The number of assets is the number of Archive TOC Asset IDs entries.
+	Each Archive TOC Asset ID entry has a corresponding Archive TOC Asset Metadata entry.
+
+	If the ID is present in Archive TOC Texture Asset Ids, it will have a corresponding Archive TOC Texture Meta entry.
+
+APPENDIX B
+    Calculating Asset IDs
+
+    Asset IDs are calculated using CRC64 with the polynomial 0xc96c5795d7870f42 which is the ECMA polynomial.
+    The initial value is 0xc96c5795d7870f42.
+    The CRC is calculated on the lowercase path with backward slashes being replaced with forward slashes.
+    The resulting value is NOT reflected or XORed, instead it is shifted left by 2 bits and the 64th bit is set.
+    The 63rd bit is set if the hash is 32-bits, with the 62th to 32th bits being an identifier for the hash type (MSB first).
+    At the moment this is only the case for Wwise hashes which use the FNV hash (meaning the 64th, 63rd and 62th bits are set).

@@ -1,1 +1,157 @@
-todo
+DAG FORMAT
+    DependencyDAG
+
+This structure is specialized to Rift Apart.
+Other iterations of the engine for other games may have different structures.
+
+See common.txt for common structures.
+
+HEADER
+
+<
+	uint32 magic;
+	uint32 size;
+	uint32 compressed_size;
+	DAT1 STRUCTURE OR COMPRESSED BUFFER dat1;
+>
+
+	IF magic is 0xB8EF3955, the file IS NOT compressed. (Seen in Rift Apart)
+		size is the total file size
+	IF magic is 0x891F77AF, the file IS compressed. (Seen in Spider-Man)
+		size is the decompressed size. Read Compressed Size bytes and decompress using ZLIB.
+
+	See dat1.txt for DAT1 STRUCTURE
+
+SECTION 933c0d32 / "Asset Ids"
+
+<
+	uint64 id;
+>
+
+	Read as array.
+
+	Id is the id of the asset.
+	NOTICE The id is UNINITIALIZED, and needs to be calculated manually from the name.
+	See toc.txt APPENDIX B for more information on how to calculate the asset id from the name.
+
+SECTION d101a6cc / "Asset Names"
+
+<
+	uint32 offset;
+>
+
+	Read as array.
+
+	Offset is the offset of the asset name in the DAT1 section.
+	The offset is relative to the start of the DAT1 section.
+	Read the name as a cstring at the offset.
+
+SECTION 7a0266bc / "Asset Types"
+
+<
+	uint8 type;
+>
+
+	Read as array.
+
+	Type is the type of the asset.
+	Known types:
+		LEVEL = 0,
+		ZONE,
+		ACTOR,
+		CONDUIT,
+		CONFIG,
+		CINEMATIC,
+		MODEL,
+		ANIMATION_CLIP,
+		ANIMATION_SET,
+		MATERIAL,
+		MATERIAL_GRAPH,
+		TEXTURE,
+		ATMOSPHERE,
+		EFFECT,
+		SOUNDBANK,
+		LOCALIZATION,
+		UNKNOWN_16,
+		UNKNOWN_17,
+		ZONE_LIGHTING,
+		LEVEL_LIGHTING,
+		NODE_GRAPH,
+		UNKNOWN_21,
+		WWISE_LOOKUP,
+
+SECTION bc91d1cc / "Dependency Links"
+
+<
+	uint32 asset_index;
+>
+
+	Read as array (or buffer.)
+
+	Asset Index is the index of an asset id.
+	See APPENDIX B Reading Link Chains for more information.
+
+SECTION f958372e / "Dependency Links Heads"
+
+<
+	uint32 index;
+>
+
+	Read as array.
+
+	Index is the start index of a Dependency Links chain.
+	See APPENDIX B Reading Link Chains for more information.
+
+SECTION bfec699f
+
+<
+	uint32 index;
+>
+
+	Read as array.
+
+	Index is the start index of a Dependency Links chain.
+	My assumption is that these are load group assets.
+	See APPENDIX B Reading Link Chains for more information.
+
+APPENDIX A
+	Overall Structure
+
+	A DAG File has 6 sections:
+		Asset Ids
+		Asset Names
+		Asset Types
+		Dependency Links
+		Dependency Links Heads
+		bfec699f
+
+	These all make up the dependency graph of all assets.
+
+	The number of assets present is the number of entries in the Asset Ids section.
+	This number MUST match the number of entries in Asset Names, Asset Types and Dependency Links Heads sections.
+	The number of entries in the Dependency Links section is total number of dependencies, so the number of entries is dynamic.
+	The number of entries in the bfec699f section is the number of load group assets, this is generally a small number.
+
+	An Asset MUST have the following properties:
+		Id
+		Name
+		Type
+		Dependencies[]
+
+	An bfec699f Asset MUST have the following properties:
+		Dependencies[]
+
+APPENDIX B
+	Reading Link Chains
+
+	A Link Chain is a simple representation of indices to make a linked list (or generally an array of undetermined size).
+	Each entry is an index to an asset entry, with the only exception being the last entry, which is 0xFFFFFFFF.
+	Entries MAY have the 32st bit set, which turns the value negative. I do not know if it has any significance.
+	Rivet at the moment does not use this bit and treats it as a positive value.
+
+APPENDIX C
+	Asset Ids Notice
+
+	The Asset Ids section is an array of asset ids, or so the name implies. They are largely UNINITIALIZED, and need to be
+	calculated manually from the name.
+	See toc.txt APPENDIX B for more information on how to calculate the asset id from the name.

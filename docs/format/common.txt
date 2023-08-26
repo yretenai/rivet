@@ -1,0 +1,28 @@
+COMMON STRUCTURES
+
+	char = 8-bit value
+
+	uint8 = unsigned 8-bit value
+
+	uint16 = unsigned 16-bit value
+
+	uint32 = unsigned 32-bit value
+
+	uint64 = unsigned 64-bit value
+
+	int8 = signed 8-bit value
+
+	int16 = signed 16-bit value
+
+	int32 = signed 32-bit value
+
+	int64 = signed 64-bit value
+
+	cstring = "char" until value is 0
+
+	type_id = uint32 value
+
+	asset_id = uint64 value
+		64th bit is always set
+		63rd bit is set if only 32-bits are used
+		62th bit is set if 63rd bit is set and the hash is a Wwise FNV hash
