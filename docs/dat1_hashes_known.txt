@@ -123,7 +123,7 @@ c6a5905e Zone Model Names
 17afffce Zone Override Tris
 06abcab2 Zone Scene Objects
 5e54accf Zone Script Actions
-beab52e7 Zone Script Plugsz
+beab52e7 Zone Script Plugs
 2300d240 Zone Script Priuses
 ef8637d5 Zone Script Strings
 d86a7934 Zone Script Vars
