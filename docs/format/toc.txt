@@ -1,0 +1,168 @@
+TOC FORMAT
+
+This structure is specialized to Rift Apart.
+Other iterations of the engine for other games may have different structures.
+
+general definitions:
+	char = 8-bit value
+
+	uint8 = unsigned 8-bit value
+
+	uint16 = unsigned 16-bit value
+
+	uint32 = unsigned 32-bit value
+
+	uint64 = unsigned 64-bit value
+
+	int8 = signed 8-bit value
+
+	int16 = signed 16-bit value
+
+	int32 = signed 32-bit value
+
+	int64 = signed 64-bit value
+
+	cstring = "char" until value is 0 
+
+	type_id = uint32 value
+
+	asset_id = uint64 value
+		64th bit is always set
+		63rd bit is set if only 32-bits are used
+		62th bit is set if 63rd bit is set and the hash is a Wwise FNV hash
+
+structures:
+
+HEADER
+
+<
+	uint32 magic;
+	uint32 size;
+	DAT1 STRUCTURE OR COMPRESSED BUFFER dat1;
+>
+
+	IF magic is 0x34E89035, the file IS NOT compressed. (Seen in Rift Apart)
+		size is the total file size
+	IF magic is 0x77AF12AF, the file IS compressed. (Seen in Spider-Man)
+		size is the decompressed size. Read until EOF and decompress using ZLIB.
+
+	See dat1.txt for DAT1 STRUCTURE
+
+SECTION 0x506d7b8a
+
+<
+	asset_id id;
+>
+
+	Read as array.
+
+SECTION 0xede8ada9 "Archive TOC Header"
+
+<
+	uint32 index;
+	uint32 count;
+>
+
+	Read as array.
+
+	Used as ranges.
+    Index is the index of the first asset.
+	The total sum of count is the number of assets.
+    Total number of struct entries is 256.
+	Each 8 entries is a locale.
+	First 8 entries are unlocalized, and always loaded.
+    Suggested lookup route is "locale" -> "us" -> "none"
+	
+	Rift Apart has the following locales:
+		"none" "us" "gb" "dk" "nl" "fi" "fr" "de"
+		  "it" "jp" "kr" "no" "pl" "pt" "ru" "es"
+		  "se" "br" "ar" "tr" "la" "cs" "ct" "fc"
+		  "cz" "hu" "el" "ro" "th" "vi" "id" "hr"
+
+	0: DAT1 Assets
+	1: Raw Assets
+	2: DAT1 Audio
+	3: Raw Audio
+	4: DAT1 AnimStream
+	5: Raw AnimStream
+	6: DAT1 ZoneLight
+	7: Raw ZoneLight
+
+	I am assuming this is actually 4 entries with 2 sub entries each.
+	"Main", "Audio", "AnimStream", and "ZoneLight"
+	With 0 being "DAT1" and 1 being "Raw Stream"
+	The DAT1 entries for everything except main is always an empty array.
+
+SECTION 65bcf461 "Archive TOC Asset Metadata"
+
+<
+	uint32 size;
+	uint32 file_index;
+	uint32 offset;
+	uint32 x654bded9_offset;
+>
+
+	Read as array.
+
+	Size is the decompressed size of the asset.
+	File Index is the index in "Archive TOC File Metadata".
+	Offset is the offset in the DECOMPRESSED file.
+	x654bded9_offset is the offset in the 654bded9 section.
+
+SECTION 398abff0 "Archive TOC File Metadata"
+
+<
+	char name[0x30];
+	uint64 time;
+	uint32 version;
+	uint32 unknown1;
+	uint16 unknown2;
+>
+
+	Read as array.
+
+	Name is a path relative to the TOC file.
+	"Time" is an assumed name, it increases every time the TOC is built.
+	"Version" is an assumed name, it randomly increases (but never decreases) every time the TOC is built.
+
+SECTION 36a6c8cc "Archive TOC Texture Asset Ids"
+
+<
+	asset_id id;
+>
+
+	Read as array.
+
+	These are ids also present in 0x506d7b8a, but will have a second file for tile streams.
+
+SECTION 62297090 "Archive TOC Texture Header"
+
+<
+	uint32 streamed_texture_count;
+>
+
+	Read as value.
+
+SECTION c9fb9dda "Archive TOC Texture Meta"
+
+<
+	uint64 unknown1;
+	uint64 unknown2;
+	uint64 unknown3;
+	uint32 unknown4;
+	uint32 unknown5;
+	uint32 unknown6;
+	uint32 unknown7;
+	uint64 unknown8;
+	uint32 unknown9;
+	uint32 unknownA;
+	uint32 unknownB;
+	uint32 unknownC;
+	uint64 unknownD;
+>
+
+	Read as array.
+
+SECTION 654bded9
+
+	Read as buffer, assumed to be asset headers.
