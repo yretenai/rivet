@@ -42,5 +42,14 @@ libgdeflate_dep = declare_dependency(
 )
 
 install_headers(
-  'libdeflate.h'
+  'libgdeflate.h'
+)
+
+pkg_mod = import('pkgconfig')
+pkg_mod.generate(
+	name: 'gdeflate',
+	filebase: 'libgdeflate',
+	description: '',
+	libraries: libgdeflate,
+	version: '1.8.0',
 )
