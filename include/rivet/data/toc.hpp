@@ -24,9 +24,9 @@ namespace rivet {
 
 	namespace data {
 		struct RIVET_SHARED archive_toc : dat1 {
+			constexpr const static std::string_view type_name = "ArchiveTOC";
 			constexpr const static rivet_type_id type_id = 0x4D7CF320;
 			constexpr const static rivet_type_id magic = 0x34E89035;
-			constexpr const static char *defined_name = "ArchiveTOC";
 
 			RIVET_DEFINE_TYPE_ID(header, "Archive TOC Header");
 			RIVET_DEFINE_TYPE_ID(ids, "Archive TOC Asset IDs");

@@ -21,9 +21,9 @@ namespace rivet::data {
 	struct archive_toc;
 
 	struct RIVET_SHARED dependency_dag : dat1 {
+		constexpr const static std::string_view type_name = "DependencyDAG";
 		constexpr const static rivet_type_id type_id = 0x2A077A51;
 		constexpr const static rivet_type_id magic = 0xB8EF3955;
-		constexpr const static std::string_view defined_name = "DependencyDAG";
 
 		RIVET_DEFINE_TYPE_ID(types, "Asset Types");
 		RIVET_DEFINE_TYPE_ID(ids, "Asset Ids");
