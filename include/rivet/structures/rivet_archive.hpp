@@ -24,8 +24,6 @@ namespace rivet {
 			uint32_t unknown;
 			uint16_t load_priority;
 
-			std::unordered_map<rivet_asset_id, std::shared_ptr<rivet_asset>> assets;
-
 			std::shared_ptr<rivet::data::data_stream_archive> data_stream;
 		};
 	}

@@ -19,6 +19,12 @@ namespace rivet {
 		}
 	};
 
+	struct invalid_operation : std::runtime_error {
+		invalid_operation() : std::runtime_error("invalid operation attempted") {
+			RIVET_DEBUG_BREAK;
+		}
+	};
+
 	struct index_out_of_range : std::out_of_range {
 		index_out_of_range() : std::out_of_range("index is out of range") {
 			RIVET_DEBUG_BREAK;

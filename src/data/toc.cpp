@@ -94,8 +94,7 @@ namespace rivet::data {
 					archive_entry.version,
 					archive_entry.unknown,
 					archive_entry.load_priority,
-					{},
-					nullptr
+					{}
 			}));
 		}
 
@@ -114,31 +113,7 @@ namespace rivet::data {
 			auto full_id = ids_section->get(i);
 			auto id = full_id & 0xbfffffffffffffff; // strip localized flag.
 
-			auto info = assets_section->get(i);
-			std::shared_ptr<rivet_asset> parent = nullptr;
-			bool store_in_archive = true;
-			bool is_sub_file = false;
-			if (asset_lookup.find(id) != asset_lookup.end()) {
-				store_in_archive = false;
-				is_sub_file = true;
-				if ((full_id & 0x4000000000000000) == 0) {
-					parent = asset_lookup.at(id).lock();
-					auto parent_archive = parent->archive.lock();
-					if (parent_archive == nullptr) {
-						throw unreachable_error();
-					}
-
-					auto current_archive = archives[info.archive_id];
-					if (parent_archive->name != current_archive->name) {
-						store_in_archive = true;
-					}
-				} else {
-					throw unreachable_error();
-				}
-			}
-
 			rivet_size group_id = 0xFFFFFFFF;
-
 			if (groups_section != nullptr) {
 				for (rivet_size j = 0; j < 0x100; ++j) {
 					auto range = groups_section->get(j);
@@ -146,13 +121,18 @@ namespace rivet::data {
 						continue;
 					}
 
-					if (j >= range.first && j < range.first + range.second) {
+					if (i >= range.first && i < range.first + range.second) {
 						group_id = j;
 						break;
 					}
 				}
+
+				if (group_id == 0xFFFFFFFF) {
+					throw unreachable_error();
+				}
 			}
 
+			auto info = assets_section->get(i);
 			auto archive = archives[info.archive_id];
 			auto chunk_entry = chunk_map.find(id);
 			rivet_asset_meta meta = {};
@@ -163,38 +143,103 @@ namespace rivet::data {
 				}
 			}
 
+			rivet_locale locale = rivet_locale::None;
+			rivet_asset_category category = rivet_asset_category::Game;
+			bool is_raw = false;
+
+			if (group_id != 0xFFFFFFFF) {
+				locale = static_cast<rivet_locale>(group_id / 8);
+				category = static_cast<rivet_asset_category>((group_id / 2) % 4);
+				is_raw = group_id % 2 == 1;
+			}
+
 			auto asset = std::make_shared<rivet_asset>(rivet_asset{
 					full_id,
 
 					info.size,
 					info.archive_offset,
 					archive,
-					group_id,
+					locale,
+					category,
+					is_raw,
 					chunk_entry != chunk_map.end(),
 					chunk_entry->second,
 					meta,
 
 					{},
 					{},
-					rivet_asset_type::NONE,
-
-					{},
-					is_sub_file
+					rivet_asset_type::NONE
 			});
 
 			if (group_id != 0xFFFFFFFF) {
-				groups[group_id].emplace_back(asset);
+				groups[group_id / 8][(group_id / 2) % 4][is_raw ? 1 : 0].emplace_back(asset);
 			}
 
-			if (parent != nullptr) {
-				parent->sub_files.emplace_back(asset);
-			} else if ((full_id & 0x4000000000000000) == 0) {
-				asset_lookup.emplace(id, asset);
+			if (asset_lookup.find(id) == asset_lookup.end()) {
+				asset_lookup[id] = {};
 			}
-
-			if (store_in_archive) {
-				archive->assets.emplace(id, asset);
-			}
+			asset_lookup[id].emplace_back(asset);
 		}
+	}
+
+	std::vector<std::shared_ptr<rivet::structures::rivet_asset>>
+	archive_toc::get_group(rivet_locale locale, rivet_asset_category category, bool raw) const {
+		if(locale >= rivet_locale::Max) {
+			return {};
+		}
+
+		if(category >= rivet_asset_category::Max) {
+			return {};
+		}
+
+		return groups[static_cast<int32_t>(locale)][static_cast<int32_t>(category)][raw ? 1 : 0];
+	}
+
+	std::shared_ptr<rivet::structures::rivet_asset>
+	archive_toc::get_asset(rivet_asset_id id, rivet_locale locale, rivet_asset_category category, bool raw) const {
+		if(locale >= rivet_locale::Max) {
+			return nullptr;
+		}
+
+		if(category >= rivet_asset_category::Max) {
+			return nullptr;
+		}
+
+		auto find_check = [id](const std::shared_ptr<rivet::structures::rivet_asset> &asset) {
+			if(asset == nullptr) {
+				return false;
+			}
+
+			return asset->id == id;
+		};
+
+		auto group = get_group(locale, category, raw);
+		auto it = std::find_if(group.begin(), group.end(), find_check);
+
+		if(it == group.end()) {
+			// fallback to english
+			if(locale != rivet_locale::None && locale != rivet_locale::English) {
+				locale = rivet_locale::English;
+				auto en_group = get_group(locale, category, raw);
+				it = std::find_if(en_group.begin(), en_group.end(), find_check);
+				if(it != en_group.end()) {
+					return *it;
+				}
+			}
+
+			// fallback to global
+			if(locale != rivet_locale::None) {
+				locale = rivet_locale::None;
+				auto global_group = get_group(locale, category, raw);
+				it = std::find_if(global_group.begin(), global_group.end(), find_check);
+				if(it != global_group.end()) {
+					return *it;
+				}
+			}
+
+			return nullptr;
+		}
+
+		return *it;
 	}
 }

@@ -62,6 +62,50 @@ namespace rivet {
 		SHIPPED = 0b10, // assumption, all files have this
 	};
 
+	enum class rivet_locale {
+		None,
+		English,
+		EnglishGB,
+		Danish,
+		Dutch,
+		Finnish,
+		French,
+		German,
+		Italian,
+		Japanese,
+		Korean,
+		Norwegian,
+		Polish,
+		Portuguese,
+		Russian,
+		Spanish,
+		Swedish,
+		PortugueseBR,
+		Arabic,
+		Turkish,
+		SpanishLatinAmerica,
+		ChineseSimplified,
+		ChineseTraditional,
+		FrenchCanada,
+		Czech,
+		Hungarian,
+		Greek,
+		Romanian,
+		Thai,
+		Vietnamese,
+		Indonesian,
+		Croatian,
+		Max
+	};
+
+	enum class rivet_asset_category {
+		Game,
+		AudioStream,
+		AnimationStream,
+		ZoneLightBin,
+		Max
+	};
+
 	typedef uint64_t rivet_checksum;
 	typedef rivet_checksum rivet_asset_id; // top 2 bits are rivet_type_id_flags
 

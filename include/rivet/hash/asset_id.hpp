@@ -64,8 +64,7 @@ namespace rivet::hash {
 		return (hash_checksum(value, hash) >> 2) | flags_full;
 	}
 
-	constexpr static rivet_asset_id hash_asset_id(std::string value, rivet_asset_id hash = 0xc96c5795d7870f42,
-												  rivet_type_id_flags flags = rivet_type_id_flags::SHIPPED) {
+	constexpr static void normalize_asset_path(std::string &value) {
 		std::transform(value.begin(), value.end(), value.begin(),
 					   [](char c) {
 						   if (c == '\\') {
@@ -78,6 +77,11 @@ namespace rivet::hash {
 
 						   return c;
 					   });
+	}
+
+	constexpr static rivet_asset_id hash_asset_id(std::string value, rivet_asset_id hash = 0xc96c5795d7870f42,
+												  rivet_type_id_flags flags = rivet_type_id_flags::SHIPPED) {
+		normalize_asset_path(value);
 
 		return hash_asset_id(std::string_view(value), hash, flags);
 	}

@@ -78,8 +78,10 @@ namespace rivet::structures {
 		rivet_asset_id id;
 		rivet_size size;
 		rivet_off offset;
-		std::weak_ptr<rivet_archive> archive;
-		rivet_size group_id;
+		std::shared_ptr<rivet_archive> archive;
+		rivet_locale locale;
+		rivet_asset_category category;
+		bool is_raw;
 		bool is_streamed_texture;
 		rivet_asset_texture_meta chunk;
 		rivet_asset_meta meta;
@@ -88,9 +90,5 @@ namespace rivet::structures {
 		std::string name;
 		std::vector<std::pair<std::string, rivet_asset_id>> dependencies;
 		rivet_asset_type type;
-
-		// extra
-		std::vector<std::shared_ptr<rivet_asset>> sub_files;
-		bool is_sub_file;
 	};
 }

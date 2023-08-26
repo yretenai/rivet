@@ -51,13 +51,16 @@ namespace rivet {
 			static_assert(sizeof(archive_toc_header) == 8);
 
 			archive_toc_header toc_header = {};
-			std::unordered_map<rivet_asset_id, std::weak_ptr<rivet::structures::rivet_asset>> asset_lookup = {};
+			std::unordered_map<rivet_asset_id, std::vector<std::weak_ptr<rivet::structures::rivet_asset>>> asset_lookup = {};
 			std::vector<std::shared_ptr<rivet::structures::rivet_archive>> archives = {};
-			std::array<std::vector<std::weak_ptr<rivet::structures::rivet_asset>>, 0x100> groups = {};
+			std::array<std::array<std::array<std::vector<std::shared_ptr<rivet::structures::rivet_asset>>, 2>, 4>, 32> groups = {};
 			uint32_t streamed_texture_count = 0;
 
 			explicit RIVET_DECL archive_toc(const std::shared_ptr<rivet_data_array> &stream);
 			RIVET_DELETE_COPY(archive_toc)
+
+			[[maybe_unused]] [[nodiscard]] std::vector<std::shared_ptr<rivet::structures::rivet_asset>> get_group(rivet_locale locale, rivet_asset_category category, bool raw) const;
+			[[nodiscard]] std::shared_ptr<rivet::structures::rivet_asset> get_asset(rivet_asset_id id, rivet_locale locale, rivet_asset_category category, bool raw) const;
 		};
 	}
 }
