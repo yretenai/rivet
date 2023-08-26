@@ -32,7 +32,7 @@ namespace rivet::structures {
 	};
 	static_assert(sizeof(rivet_asset_texture_meta) == 72);
 
-	struct rivet_asset_meta {
+	struct rivet_asset_header {
 		uint32_t id;
 		uint32_t size;
 		uint32_t unknown3;
@@ -43,7 +43,7 @@ namespace rivet::structures {
 		uint32_t unknown8;
 		uint32_t unknown9;
 	};
-	static_assert(sizeof(rivet_asset_meta) == 36);
+	static_assert(sizeof(rivet_asset_header) == 36);
 
 	enum class rivet_asset_type : uint8_t {
 		LEVEL,
@@ -84,7 +84,7 @@ namespace rivet::structures {
 		bool is_raw;
 		bool is_streamed_texture;
 		rivet_asset_texture_meta chunk;
-		rivet_asset_meta meta;
+		rivet_asset_header header;
 
 		// stuff from dag
 		std::string name;

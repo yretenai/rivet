@@ -61,7 +61,7 @@ namespace rivet::data {
 		auto groups_section = get_section<std::pair<uint32_t, uint32_t>>(section_header);
 		auto texture_ids = get_section<rivet_asset_id>(section_texture_ids);
 		auto texture_metas = get_section<rivet_asset_texture_meta>(section_texture_meta);
-		auto metadata_section = get_section<rivet_asset_meta>(section_metadata);
+		auto asset_headers = get_section<rivet_asset_header>(section_asset_headers);
 
 		if (textures_header == nullptr) {
 			streamed_texture_count = textures_header->get<uint32_t>(0);
@@ -135,11 +135,11 @@ namespace rivet::data {
 			auto info = assets_section->get(i);
 			auto archive = archives[info.archive_id];
 			auto chunk_entry = chunk_map.find(id);
-			rivet_asset_meta meta = {};
-			if (info.metadata_offset != 0xFFFFFFFF && metadata_section != nullptr) {
-				auto normalized = info.metadata_offset / sizeof(rivet_asset_meta);
-				if (normalized < metadata_section->size()) {
-					meta = metadata_section->get(normalized);
+			rivet_asset_header meta = {};
+			if (info.metadata_offset != 0xFFFFFFFF && asset_headers != nullptr) {
+				auto normalized = info.metadata_offset / sizeof(rivet_asset_header);
+				if (normalized < asset_headers->size()) {
+					meta = asset_headers->get(normalized);
 				}
 			}
 
