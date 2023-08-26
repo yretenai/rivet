@@ -19,6 +19,9 @@ e08aa35f Anim Clip Motion Data
 d070d358 Anim Clip Sample Elem
 6962f7de Anim Clip Trigger Data
 6c69a660 Anim Set Built
+d614b18b Anim Set Remap Hierarchies
+654bded9 Archive TOC Asset Header Data
+506d7b8a Archive TOC Asset IDs
 65bcf461 Archive TOC Asset Metadata
 398abff0 Archive TOC File Metadata
 ede8ada9 Archive TOC Header
@@ -47,11 +50,13 @@ e501186f Config Built
 bc91d1cc Dependency Links
 f958372e Dependency Links Heads
 7ca7267d Level Built
+46efd07a Level Light Asset References
 2236c47a Level Link Names
 4130d903 Level Region Names
 396f9418 Level Regions Built
 2ba33702 Level Zone Names
 4e023760 Level Zones Built
+27204b67 Light Grid Positions
 b0653243 Localization Flags Built
 d540a903 Localization Header Built
 4d73cebd Localization Tags Built
@@ -72,6 +77,7 @@ dcc88a19 Model Bind Pose
 ccbaff15 Model GPU Skin
 0859863d Model Index
 15df9d3b Model Joint
+0ad3a708 Model Joint Bspheres
 90cdb60c Model Joint Hierarchy
 ee31971c Model Joint Lookup
 b7380e8c Model Leaf Ids
@@ -103,6 +109,9 @@ d78e007c Visual Effect KeyFrames Info
 73ce6a3f Visual Effect KeyFrames Mod
 af650e9e Visual Effect Material Data
 b86cf442 Visual Effect Renderer Data
+3f03be86 Visual Effect Spawn Styles
+52b343e8 Wwise Lookup Banks Data
+7f9a96aa Wwise Lookup Elems Data
 0cf58a6e Zone Actor Groups
 dc625b3d Zone Actor Names
 50edc53d Zone Actor Priuses
