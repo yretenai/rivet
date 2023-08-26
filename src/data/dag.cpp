@@ -103,13 +103,13 @@ namespace rivet::data {
 			throw invalid_tag_error();
 		}
 
-		auto links = get_section<uint32_t>(section_links);
-		auto heads = get_section<rivet_off>(section_heads);
-		auto names = get_section<rivet_off>(section_names);
+		auto links = get_section<uint32_t>(links_type_id);
+		auto heads = get_section<rivet_off>(heads_type_id);
+		auto names = get_section<rivet_off>(names_type_id);
 
 		// optional
-		auto types = get_section<rivet_asset_type>(section_types);
-		auto dependency_groups = get_section<rivet_off>(section_graph);
+		auto types = get_section<rivet_asset_type>(types_type_id);
+		auto dependency_groups = get_section<rivet_off>(graph_type_id);
 
 		if (names == nullptr) {
 			throw mismatched_data_error("asset ids");

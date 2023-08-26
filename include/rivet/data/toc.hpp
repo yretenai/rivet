@@ -28,23 +28,14 @@ namespace rivet {
 			constexpr const static rivet_type_id magic = 0x34E89035;
 			constexpr const static char *defined_name = "ArchiveTOC";
 
-			constexpr const static std::string_view section_header_name = "Archive TOC Header";
-			constexpr const static std::string_view section_ids_name = "Archive TOC Asset IDs";
-			constexpr const static std::string_view section_assets_name = "Archive TOC Asset Metadata";
-			constexpr const static std::string_view section_archives_name = "Archive TOC File Metadata";
-			constexpr const static std::string_view section_texture_ids_name = "Archive TOC Texture Asset Ids";
-			constexpr const static std::string_view section_texture_meta_name = "Archive TOC Texture Meta";
-			constexpr const static std::string_view section_texture_header_name = "Archive TOC Texture Header";
-			constexpr const static std::string_view section_asset_headers_name = "Archive TOC Asset Header Data";
-
-			constexpr const static rivet_type_id section_header = rivet::hash::type_id<section_header_name>::value;
-			constexpr const static rivet_type_id section_ids = rivet::hash::type_id<section_ids_name>::value;
-			constexpr const static rivet_type_id section_assets = rivet::hash::type_id<section_assets_name>::value;
-			constexpr const static rivet_type_id section_archives = rivet::hash::type_id<section_archives_name>::value;
-			constexpr const static rivet_type_id section_texture_ids = rivet::hash::type_id<section_texture_ids_name>::value;
-			constexpr const static rivet_type_id section_texture_meta = rivet::hash::type_id<section_texture_meta_name>::value;
-			constexpr const static rivet_type_id section_texture_header = rivet::hash::type_id<section_texture_header_name>::value;
-			constexpr const static rivet_type_id section_asset_headers = rivet::hash::type_id<section_asset_headers_name>::value;
+			RIVET_DEFINE_TYPE_ID(header, "Archive TOC Header");
+			RIVET_DEFINE_TYPE_ID(ids, "Archive TOC Asset IDs");
+			RIVET_DEFINE_TYPE_ID(assets, "Archive TOC Asset Metadata");
+			RIVET_DEFINE_TYPE_ID(archives, "Archive TOC File Metadata");
+			RIVET_DEFINE_TYPE_ID(texture_ids, "Archive TOC Texture Asset Ids");
+			RIVET_DEFINE_TYPE_ID(texture_meta, "Archive TOC Texture Meta");
+			RIVET_DEFINE_TYPE_ID(texture_header, "Archive TOC Texture Header");
+			RIVET_DEFINE_TYPE_ID(asset_headers, "Archive TOC Asset Header Data");
 
 			struct archive_toc_header {
 				rivet_type_id type_id;

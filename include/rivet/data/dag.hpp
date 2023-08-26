@@ -25,18 +25,13 @@ namespace rivet::data {
 		constexpr const static rivet_type_id magic = 0xB8EF3955;
 		constexpr const static std::string_view defined_name = "DependencyDAG";
 
-		constexpr const static std::string_view section_types_name = "Asset Types";
-		constexpr const static std::string_view section_ids_name = "Asset Ids";
-		constexpr const static std::string_view section_links_name = "Dependency Links";
-		constexpr const static std::string_view section_names_name = "Asset Names";
-		constexpr const static std::string_view section_heads_name = "Dependency Links Heads";
+		RIVET_DEFINE_TYPE_ID(types, "Asset Types");
+		RIVET_DEFINE_TYPE_ID(ids, "Asset Ids");
+		RIVET_DEFINE_TYPE_ID(links, "Dependency Links");
+		RIVET_DEFINE_TYPE_ID(names, "Asset Names");
+		RIVET_DEFINE_TYPE_ID(heads, "Dependency Links Heads");
 
-		constexpr const static rivet_type_id section_types = rivet::hash::type_id<section_types_name>::value;
-		constexpr const static rivet_type_id section_ids = rivet::hash::type_id<section_ids_name>::value; // uninitialized ids?
-		constexpr const static rivet_type_id section_links = rivet::hash::type_id<section_links_name>::value;
-		constexpr const static rivet_type_id section_graph = 0xBFEC699F; // todo: find real name
-		constexpr const static rivet_type_id section_names = rivet::hash::type_id<section_names_name>::value;
-		constexpr const static rivet_type_id section_heads = rivet::hash::type_id<section_heads_name>::value;
+		constexpr const static rivet_type_id graph_type_id = 0xBFEC699F; // todo: find real name
 
 		struct dependency_dag_header {
 			rivet_type_id type_id;

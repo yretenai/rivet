@@ -51,17 +51,17 @@ namespace rivet::data {
 			throw invalid_tag_error();
 		}
 
-		auto textures_header = get_section_data(section_texture_header);
-		auto archives_section = get_section<rivet_archive_raw>(section_archives);
-		auto ids_section = get_section<rivet_asset_id>(section_ids);
-		auto assets_section = get_section<rivet_asset_raw>(section_assets);
+		auto textures_header = get_section_data(texture_header_type_id);
+		auto archives_section = get_section<rivet_archive_raw>(archives_type_id);
+		auto ids_section = get_section<rivet_asset_id>(ids_type_id);
+		auto assets_section = get_section<rivet_asset_raw>(assets_type_id);
 
 		// optional
 		static_assert(sizeof(std::pair<uint32_t, uint32_t>) == 8);
-		auto groups_section = get_section<std::pair<uint32_t, uint32_t>>(section_header);
-		auto texture_ids = get_section<rivet_asset_id>(section_texture_ids);
-		auto texture_metas = get_section<rivet_asset_texture_meta>(section_texture_meta);
-		auto asset_headers = get_section<rivet_asset_header>(section_asset_headers);
+		auto groups_section = get_section<std::pair<uint32_t, uint32_t>>(header_type_id);
+		auto texture_ids = get_section<rivet_asset_id>(texture_ids_type_id);
+		auto texture_metas = get_section<rivet_asset_texture_meta>(texture_meta_type_id);
+		auto asset_headers = get_section<rivet_asset_header>(asset_headers_type_id);
 
 		if (textures_header == nullptr) {
 			streamed_texture_count = textures_header->get<uint32_t>(0);
