@@ -31,5 +31,7 @@ namespace rivet {
 
 		[[nodiscard]] std::shared_ptr<rivet_data_array>
 		open_file(const std::shared_ptr<rivet::structures::rivet_asset> &asset) const;
+
+		void load_streamed_files_list(const std::filesystem::path &path);
 	};
 }

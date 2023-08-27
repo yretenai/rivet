@@ -59,6 +59,11 @@ int main(int argv, char **argc) {
 			return 0;
 		}
 
+		auto streamed_files_path = std::filesystem::path("streamed_files.txt");
+		if(std::filesystem::exists(streamed_files_path)) {
+			game->load_streamed_files_list(streamed_files_path);
+		}
+
 		std::filesystem::path dump(argc[2]);
 		for(auto locale_id = 0; locale_id < 32; locale_id++) {
 			std::string local_path;
@@ -96,6 +101,11 @@ int main(int argv, char **argc) {
 						if (!asset_data) {
 							std::cout << "Failed to open asset " << name << std::endl;
 							continue;
+						}
+
+						// rename .movie to .bik
+						if(asset_data->get<uint32_t>(0) == 0x6A32424B) {
+							asset_path = asset_path.substr(0, asset_path.find_last_of('.')) + ".bik";
 						}
 
 						auto output_path = dump / asset_path;
