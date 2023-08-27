@@ -153,6 +153,8 @@ namespace rivet::data {
 				is_raw = group_id % 2 == 1;
 			}
 
+			auto is_streamed = chunk_entry != chunk_map.end();
+
 			auto asset = std::make_shared<rivet_asset>(rivet_asset{
 					full_id,
 
@@ -162,8 +164,8 @@ namespace rivet::data {
 					locale,
 					category,
 					is_raw,
-					chunk_entry != chunk_map.end(),
-					chunk_entry->second,
+					is_streamed,
+					is_streamed ? chunk_entry->second : rivet_asset_texture_meta(),
 					meta,
 
 					{},

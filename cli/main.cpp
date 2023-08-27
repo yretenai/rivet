@@ -69,7 +69,7 @@ int main(int argv, char **argc) {
 
 			auto locale = static_cast<rivet_locale>(locale_id);
 
-			for(auto category_id = 3; category_id < 4; category_id++) {
+			for(auto category_id = 0; category_id < 4; category_id++) {
 				auto category = static_cast<rivet_asset_category>(category_id);
 				for(auto subtype_id = 0; subtype_id < 2; subtype_id++) {
 					auto assets = game->toc->get_group(locale, category, subtype_id == 1);
