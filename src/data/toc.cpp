@@ -63,7 +63,7 @@ namespace rivet::data {
 		auto texture_metas = get_section<rivet_asset_texture_meta>(texture_meta_type_id);
 		auto asset_headers = get_section<rivet_asset_header>(asset_headers_type_id);
 
-		if (textures_header == nullptr) {
+		if (textures_header != nullptr) {
 			streamed_texture_count = textures_header->get<uint32_t>(0);
 		}
 

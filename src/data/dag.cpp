@@ -92,7 +92,7 @@ namespace rivet::data {
 		}
 	}
 
-	dependency_dag::dependency_dag(const std::shared_ptr<rivet_data_array> &stream, const std::shared_ptr<archive_toc> &toc)
+	dependency_dag::dependency_dag(const std::shared_ptr<rivet_data_array>& stream, const std::shared_ptr<archive_toc> &toc)
 			: dat1(stream->slice(12)), toc(toc) {
 		if (header.type_id != type_id) {
 			throw invalid_tag_error();

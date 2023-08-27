@@ -8,29 +8,23 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::data {
-	dat1::dat1(const std::shared_ptr<rivet_data_array> &stream) {
-		buffer = stream;
-
-		auto tag = stream->get<uint32_t>(0);
+	dat1::dat1(const std::shared_ptr<rivet_data_array> &stream) : buffer(stream) {
+		auto tag = buffer->get<uint32_t>(0);
 		if (tag != magic) {
 			throw invalid_tag_error();
 		}
 
-		header = stream->get<data_header_t>(0);
+		header = buffer->get<data_header_t>(0);
 		if(header.section_count > 0) {
-			auto section_headers = stream->slice<data_entry_t>(sizeof(data_header_t), header.section_count);
+			auto section_headers = buffer->slice<data_entry_t>(sizeof(data_header_t), header.section_count);
 
 			for (auto section_header: *section_headers) {
-				auto slice = stream->slice(section_header.offset, section_header.size);
+				auto slice = buffer->slice(section_header.offset, section_header.size);
 				sections.emplace(section_header.type_id, std::make_pair(section_header, slice));
 			}
 		}
 
-		string_buffer = buffer->slice(sizeof(data_header_t) + sizeof(data_entry_t) * header.section_count);
-		type_name = string_buffer->to_cstring();
-		if(!type_name.ends_with("Built File")) {
-			type_name = {};
-		}
+		type_name = buffer->to_cstring(sizeof(data_header_t) + sizeof(data_entry_t) * header.section_count);
 	}
 
 	std::shared_ptr<rivet_data_array> dat1::get_section_data(rivet_type_id type_id) {

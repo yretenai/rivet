@@ -139,7 +139,7 @@ namespace rivet {
 				throw index_out_of_range();
 			}
 
-			if (sizeof(T) * index + sizeof(U) >= byte_size()) {
+			if (sizeof(T) * index + sizeof(U) > byte_size()) {
 				throw index_out_of_range();
 			}
 
@@ -160,7 +160,7 @@ namespace rivet {
 				throw index_out_of_range();
 			}
 
-			if (sizeof(T) * index + sizeof(U) >= byte_size()) {
+			if (sizeof(T) * index + sizeof(U) > byte_size()) {
 				throw index_out_of_range();
 			}
 
@@ -244,8 +244,8 @@ namespace rivet {
 
 		template<typename U = T>
 		requires(sizeof(U) == 1 && std::is_same<U, T>::value && std::is_integral<U>::value)
-		[[maybe_unused]] std::string to_cstring() {
-			return std::string(reinterpret_cast<char *>(data()));
+		[[maybe_unused]] std::string to_cstring(rivet_size64 index = 0) {
+			return std::string(reinterpret_cast<char *>(data() + index));
 		}
 
 		template<typename U = T>
@@ -260,12 +260,12 @@ namespace rivet {
 
 		template<typename U = T>
 		requires(sizeof(U) <= 2 && std::is_same<U, T>::value && std::is_integral<U>::value)
-		[[maybe_unused]] std::wstring to_wcstring() {
+		[[maybe_unused]] std::wstring to_wcstring(rivet_size64 index = 0) {
 			if (sizeof(U) == 1) {
-				return std::wstring(to_cstring());
+				return std::wstring(to_cstring() + index * 2);
 			}
 
-			return std::wstring(reinterpret_cast<wchar_t *>(data()));
+			return std::wstring(reinterpret_cast<wchar_t *>(data() + index));
 		}
 
 		template<typename U = T>

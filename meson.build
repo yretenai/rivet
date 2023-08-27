@@ -36,18 +36,6 @@ endif
 if compiler.get_id() == 'clang'
     cpp_args += ['-finput-charset=utf-8', '-fexec-charset=utf-8']
 
-    if compiler.has_argument('-fexperimental-relative-c++-abi-vtables')
-        cpp_args += ['-fexperimental-relative-c++-abi-vtables']
-    endif
-
-    if compiler.has_argument('-faddrsig')
-        cpp_args += ['-faddrsig']
-    endif
-
-    if compiler.has_argument('-faligned-new')
-        cpp_args += ['-faligned-new']
-    endif
-
     if compiler.has_argument('-fcoroutines')
         cpp_args += ['-fcoroutines']
     endif

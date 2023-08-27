@@ -29,7 +29,7 @@
 	#endif
 #else
 	#ifdef GDEFLATE_BUILDING
-		#define GDEFLATE_SHARED __attribute__ ((visibility ("default"))) __attribute__((unused))
+		#define GDEFLATE_SHARED __attribute__ ((visibility ("default")))
 	#else
 		#define GDEFLATE_SHARED
 	#endif

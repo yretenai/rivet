@@ -10,11 +10,7 @@ project(
   meson_version: '>=0.50.0'
 )
 
-cpp_args = []
-
-if host_machine.system() == 'windows' and get_option('default_library') != 'static'
-  cpp_args += '-DGDEFLATE_BUILDING=1'
-endif
+cpp_args = ['-DGDEFLATE_BUILDING']
 
 libgdeflate_dep = dependency('libgdeflate')
 
@@ -26,6 +22,7 @@ directstorage_gdeflate = library(
   ],
   install: true,
   version: '1.0.0',
+  cpp_args: cpp_args,
   dependencies: [libgdeflate_dep],
   gnu_symbol_visibility: 'hidden'
 )
