@@ -63,8 +63,7 @@ int main(int argv, char **argc) {
 		for(auto locale_id = 0; locale_id < 32; locale_id++) {
 			std::string local_path;
 			if(locale_id > 0) {
-				local_path += "locale/";
-				local_path += localization_enum[locale_id - 1] + "/";
+				local_path += "locale/" + localization_enum[locale_id - 1] + "/";
 			}
 
 			auto locale = static_cast<rivet_locale>(locale_id);
@@ -74,13 +73,13 @@ int main(int argv, char **argc) {
 				for(auto subtype_id = 0; subtype_id < 2; subtype_id++) {
 					auto assets = game->toc->get_group(locale, category, subtype_id == 1);
 
-					for(auto &asset: assets) {
+					for(const auto &asset: assets) {
 						auto name = asset->name;
 						if(name.empty()) {
 							if(asset->id & 0x4000000000000000) {
 								name = "sound/wem/" + std::to_string(asset->id & 0xFFFFFFFF) + std::string(".wem");
 							} else {
-								name = std::to_string(asset->id);
+								name = asset->archive->name + "/" + std::to_string(asset->id);
 							}
 						} else {
 							rivet::hash::normalize_asset_path(name);
