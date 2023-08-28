@@ -66,7 +66,8 @@ int main(int argv, char **argc) {
 
 	std::filesystem::path dump(argc[2]);
 
-	std::filesystem::path dag_path = dump / "d" / "missing.txt";
+	auto root_prefix = std::string("d/");
+	std::filesystem::path dag_path = dump / root_prefix / "missing.txt";
 	std::filesystem::create_directories(dag_path.parent_path());
 	std::ofstream dag_file(dag_path, std::ios::out);
 	if(!dag_file.is_open()) {
@@ -98,6 +99,9 @@ int main(int argv, char **argc) {
 							name = "sound/wem/" + std::to_string(asset->id & 0xFFFFFFFF) + std::string(".wem");
 						} else {
 							name = std::string(asset->archive->name) + "/" + std::to_string(asset->id);
+							if (!name.starts_with(root_prefix)) {
+								name = root_prefix.append(name);
+							}
 						}
 					} else {
 						rivet::hash::normalize_asset_path(name);
