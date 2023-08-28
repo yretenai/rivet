@@ -137,7 +137,7 @@ namespace rivet::data {
 				throw decompression_error();
 			}
 
-			ret = inflate(&zs, Z_PARTIAL_FLUSH);
+			ret = inflate(&zs, Z_FULL_FLUSH);
 			if (ret != Z_OK && zs.avail_out != 0 && zs.avail_in != 0) {
 				throw decompression_error();
 			}
