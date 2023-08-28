@@ -23,6 +23,7 @@ namespace rivet {
 	}
 
 	struct RIVET_SHARED rivet_game : std::enable_shared_from_this<rivet_game> {
+		std::vector<std::shared_ptr<std::string>> string_pool = {};
 		std::shared_ptr<data::dependency_dag> dag = nullptr;
 		std::shared_ptr<data::archive_toc> toc = nullptr;
 		std::filesystem::path root;
@@ -32,6 +33,6 @@ namespace rivet {
 		[[nodiscard]] std::shared_ptr<rivet_data_array>
 		open_file(const std::shared_ptr<rivet::structures::rivet_asset> &asset) const;
 
-		void load_streamed_files_list(const std::filesystem::path &path) const;
+		void load_streamed_files_list(const std::filesystem::path &path);
 	};
 }

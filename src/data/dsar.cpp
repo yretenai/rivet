@@ -26,6 +26,11 @@ namespace rivet::data {
 			exists = false;
 		}
 		base_stream = std::make_shared<std::ifstream>(path, std::ios::binary | std::ios::in);
+		if (!base_stream->is_open()) {
+			exists = false;
+			base_stream = nullptr;
+			return;
+		}
 
 		header = {};
 		base_stream->read(reinterpret_cast<char *>(&header), sizeof(dsar_header));

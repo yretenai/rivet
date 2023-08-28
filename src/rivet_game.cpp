@@ -19,12 +19,26 @@ using namespace rivet::structures;
 
 namespace rivet {
 	rivet_game::rivet_game(std::filesystem::path &&root) : root(root) {
-		toc = std::make_shared<archive_toc>(rivet::rivet_data_array::from_file(root / "toc"));
-		dag = std::make_shared<dependency_dag>(rivet::rivet_data_array::from_file(root / "dag"), toc);
+		auto toc_stream = rivet::rivet_data_array::from_file(root / "toc");
+		if (toc_stream == nullptr) {
+			throw std::runtime_error("Failed to load TOC");
+		}
+
+		auto dag_stream = rivet::rivet_data_array::from_file(root / "dag");
+		if (dag_stream == nullptr) {
+			throw std::runtime_error("Failed to load DAG");
+		}
+
+		toc = std::make_shared<archive_toc>(toc_stream);
+		dag = std::make_shared<dependency_dag>(dag_stream, toc);
 	}
 
-	void rivet_game::load_streamed_files_list(const std::filesystem::path &path) const {
+	void rivet_game::load_streamed_files_list(const std::filesystem::path &path) {
 		auto file = std::ifstream(path);
+		if(!file.is_open()) {
+			return;
+		}
+
 		std::string line;
 		while(std::getline(file, line)) {
 			if(line.empty()) {
@@ -38,6 +52,9 @@ namespace rivet {
 				continue;
 			}
 
+			auto ptr = std::make_shared<std::string>(line);
+			string_pool.emplace_back(ptr);
+
 			for(auto &asset_ptr : entry->second) {
 				auto asset = asset_ptr.lock();
 				if(!asset) {
@@ -45,7 +62,7 @@ namespace rivet {
 				}
 
 				if(asset->name.empty()) {
-					asset->name = line;
+					asset->name = *ptr;
 				}
 			}
 		}

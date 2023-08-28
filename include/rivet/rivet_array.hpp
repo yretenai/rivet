@@ -311,6 +311,10 @@ namespace rivet {
 		[[maybe_unused]] static std::shared_ptr<rivet_array<uint8_t, Alignment>>
 		from_file(const std::filesystem::path &path) {
 			std::ifstream file(path, std::ios::binary | std::ios::in);
+			if (!file.is_open()) {
+				return nullptr;
+			}
+
 			auto size = static_cast<rivet_size64>(std::filesystem::file_size(path));
 			auto bytes = std::make_shared<rivet_array<uint8_t, Alignment>>(nullptr, size);
 			file.seekg(0, std::ios::beg);
