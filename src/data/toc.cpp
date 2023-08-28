@@ -10,6 +10,8 @@
 #include <utility>
 #include <vector>
 
+#include <libgdeflate.h>
+
 #include <rivet/data/toc.hpp>
 #include <rivet/data/dat1.hpp>
 #include <rivet/rivet_keywords.hpp>
@@ -22,7 +24,39 @@ using namespace rivet;
 using namespace rivet::structures;
 
 namespace rivet::data {
-	archive_toc::archive_toc(const std::shared_ptr<rivet_data_array> &stream) : dat1(stream->slice(0x8)) {
+	std::shared_ptr<rivet_data_array> get_data_buffer(const std::shared_ptr<rivet_data_array>& stream) {
+		if (stream->size() < sizeof(archive_toc::archive_toc_header)) {
+			throw invalid_tag_error();
+		}
+
+		auto header = stream->get<archive_toc::archive_toc_header>(0);
+
+		if (header.type_id == archive_toc::magic) {
+			return stream->slice(sizeof(archive_toc::archive_toc_header));
+		} else if (header.type_id != archive_toc::magic_compressed) {
+			auto buffer = std::make_shared<rivet_data_array>(nullptr, header.size);
+			auto compressed_buffer = stream->slice(sizeof(archive_toc::archive_toc_header));
+
+			auto decompressor = libdeflate_alloc_decompressor();
+			auto result = libdeflate_zlib_decompress(decompressor,
+													 compressed_buffer->data(),
+													 compressed_buffer->size(),
+													 buffer->data(),
+													 buffer->size(),
+													 nullptr);
+			libdeflate_free_decompressor(decompressor);
+
+			if (result == 0) {
+				throw decompression_error();
+			}
+
+			return buffer;
+		}
+
+		throw invalid_tag_error();
+	}
+
+	archive_toc::archive_toc(const std::shared_ptr<rivet_data_array> &stream) : dat1(get_data_buffer(stream)) {
 		if (header.type_id != type_id) {
 			throw invalid_tag_error();
 		}

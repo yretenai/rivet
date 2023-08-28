@@ -24,6 +24,7 @@ namespace rivet::data {
 		constexpr const static std::string_view type_name = "DependencyDAG";
 		constexpr const static rivet_type_id type_id = 0x2A077A51;
 		constexpr const static rivet_type_id magic = 0xB8EF3955;
+		constexpr const static rivet_type_id magic_compressed = 0x891F77AF;
 
 		RIVET_DEFINE_TYPE_ID(types, "Asset Types");
 		RIVET_DEFINE_TYPE_ID(ids, "Asset Ids");

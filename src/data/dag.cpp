@@ -9,6 +9,8 @@
 #include <utility>
 #include <vector>
 
+#include <libgdeflate.h>
+
 #include <rivet/data/dag.hpp>
 #include <rivet/data/toc.hpp>
 #include <rivet/data/dat1.hpp>
@@ -104,9 +106,41 @@ namespace rivet::data {
 		}
 	}
 
+	std::shared_ptr<rivet_data_array> get_data_buffer(const std::shared_ptr<rivet_data_array>& stream) {
+		if (stream->size() < sizeof(dependency_dag::dependency_dag_header)) {
+			throw invalid_tag_error();
+		}
+
+		auto header = stream->get<dependency_dag::dependency_dag_header>(0);
+
+		if (header.type_id == dependency_dag::magic) {
+			return stream->slice(sizeof(dependency_dag::dependency_dag_header));
+		} else if (header.type_id != dependency_dag::magic_compressed) {
+			auto buffer = std::make_shared<rivet_data_array>(nullptr, header.size);
+			auto compressed_buffer = stream->slice(sizeof(dependency_dag::dependency_dag_header), header.compressed_size);
+
+			auto decompressor = libdeflate_alloc_decompressor();
+			auto result = libdeflate_zlib_decompress(decompressor,
+													 compressed_buffer->data(),
+													 compressed_buffer->size(),
+													 buffer->data(),
+													 buffer->size(),
+													 nullptr);
+			libdeflate_free_decompressor(decompressor);
+
+			if (result == 0) {
+				throw decompression_error();
+			}
+
+			return buffer;
+		}
+
+		throw invalid_tag_error();
+	}
+
 	dependency_dag::dependency_dag(const std::shared_ptr<rivet_data_array>& stream,
 								   const std::shared_ptr<archive_toc> &toc)
-								   : dat1(stream->slice(12)), toc(toc) {
+								   : dat1(get_data_buffer(stream)), toc(toc) {
 		if (header.type_id != type_id) {
 			throw invalid_tag_error();
 		}
