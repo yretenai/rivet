@@ -13,7 +13,7 @@ using namespace rivet;
 using namespace rivet::structures;
 
 std::array<std::string, 32> localization_enum {
-		"none"
+		"none",
 		"us",
 		"gb",
 		"dk",
