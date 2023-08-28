@@ -13,6 +13,7 @@ using namespace rivet;
 using namespace rivet::structures;
 
 std::array<std::string, 31> localization_enum {
+		"none"
 		"us",
 		"gb",
 		"dk",
@@ -68,14 +69,14 @@ int main(int argv, char **argc) {
 		for(auto locale_id = 0; locale_id < 32; locale_id++) {
 			std::string local_path;
 			if(locale_id > 0) {
-				local_path += "locale/" + localization_enum[locale_id - 1] + "/";
+				local_path += "locale/" + localization_enum[locale_id] + "/";
 			}
 
 			auto locale = static_cast<rivet_locale>(locale_id);
 
 			for(auto category_id = 0; category_id < 4; category_id++) {
 				auto category = static_cast<rivet_asset_category>(category_id);
-				for(auto subtype_id = 0; subtype_id < 2; subtype_id++) {
+				for(auto subtype_id = 1; subtype_id < 2; subtype_id++) {
 					auto assets = game->toc->get_group(locale, category, subtype_id == 1);
 
 					for(const auto &asset: assets) {
@@ -91,7 +92,7 @@ int main(int argv, char **argc) {
 						}
 
 						auto asset_path = local_path + name;
-						if(subtype_id == 1 && asset->is_streamed_texture) {
+						if(subtype_id == 1 && asset->flags.is_texture) {
 							asset_path += ".stream";
 						}
 
@@ -111,6 +112,20 @@ int main(int argv, char **argc) {
 						auto output_path = dump / asset_path;
 						std::filesystem::create_directories(output_path.parent_path());
 						std::ofstream asset_file(output_path, std::ios::binary | std::ios::out);
+
+						if(!asset_file.is_open()) {
+							std::cout << "Failed to open output file " << output_path << std::endl;
+							continue;
+						}
+
+						if (asset->flags.has_header) {
+							asset_file.write(reinterpret_cast<const char *>(&asset->header), sizeof(rivet_asset_header));
+						}
+
+						if(asset->flags.is_texture && asset->flags.is_raw) {
+							asset_file.write(reinterpret_cast<const char *>(&asset->chunk), sizeof(rivet_asset_texture_meta));
+						}
+
 						asset_file.write(reinterpret_cast<const char *>(asset_data->data()),
 										 static_cast<std::streamsize>(asset_data->byte_size()));
 						asset_file.close();

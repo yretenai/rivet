@@ -228,69 +228,78 @@ namespace rivet {
 		requires(sizeof(U) <= 2 && std::is_same<U, T>::value && std::is_integral<U>::value)
 		[[maybe_unused]] void ensure_null_terminated() {
 			auto buffer = ptr;
-			if (buffer[size() - 1] != 0) {
+			if (buffer[byte_size() - 1] != 0) {
 				length += 1;
 				alloc(length);
-				std::copy_n(buffer.get(), size() - 1, data());
-				data()[size() - 1] = static_cast<U>(0);
+				std::copy_n(buffer.get(), byte_size() - sizeof(U), data());
+				data()[byte_size() - sizeof(U)] = static_cast<U>(0);
 			}
 		}
 
 		template<typename U = T>
 		requires(sizeof(U) == 1 && std::is_same<U, T>::value && std::is_integral<U>::value)
 		[[maybe_unused]] std::string to_string() {
-			return std::string(reinterpret_cast<char *>(data()), size());
+			ensure_null_terminated<U>();
+			return std::string(reinterpret_cast<char *>(data()), byte_size());
 		}
 
 		template<typename U = T>
-		requires(sizeof(U) == 1 && std::is_same<U, T>::value && std::is_integral<U>::value)
-		[[maybe_unused]] std::string_view to_string_view() {
-			return std::string_view(reinterpret_cast<char *>(data()), size());
-		}
-
-		template<typename U = T>
-		requires(sizeof(U) == 1 && std::is_same<U, T>::value && std::is_integral<U>::value)
-		[[maybe_unused]] std::string to_cstring(rivet_size64 index = 0) {
-			return std::string(reinterpret_cast<char *>(data() + index));
-		}
-
-		template<typename U = T>
-		requires(sizeof(U) == 1 && std::is_same<U, T>::value && std::is_integral<U>::value)
-		[[maybe_unused]] std::string_view to_cstring_view(rivet_size64 index = 0) {
-			return std::string_view(reinterpret_cast<char *>(data() + index));
-		}
-
-		template<typename U = T>
-		requires(sizeof(U) <= 2 && std::is_same<U, T>::value && std::is_integral<U>::value)
+		requires(sizeof(U) <= 2 && std::is_integral<U>::value)
 		[[maybe_unused]] std::wstring to_wstring() {
 			if (sizeof(U) == 1) {
 				return std::wstring(to_string());
 			}
 
-			return std::wstring(reinterpret_cast<wchar_t *>(data()), size());
+			ensure_null_terminated<U>();
+			return std::wstring(reinterpret_cast<wchar_t *>(data()), byte_size() >> 1);
 		}
 
 		template<typename U = T>
-		requires(sizeof(U) <= 2 && std::is_same<U, T>::value && std::is_integral<U>::value)
-		[[maybe_unused]] std::wstring to_wcstring(rivet_size64 index = 0) {
+		requires(sizeof(U) == 1 && std::is_integral<U>::value)
+		[[maybe_unused]] std::string_view to_string_view() {
+			ensure_null_terminated<U>();
+			return std::string_view(reinterpret_cast<char *>(data()), byte_size());
+		}
+
+		template<typename U = T>
+		requires(sizeof(U) <= 2 && std::is_integral<U>::value)
+		[[maybe_unused]] std::wstring_view to_wstring_view() {
 			if (sizeof(U) == 1) {
-				return std::wstring(to_cstring() + index * 2);
+				return std::wstring_view(to_string_view());
 			}
 
-			return std::wstring(reinterpret_cast<wchar_t *>(data() + index));
+			ensure_null_terminated<U>();
+			return std::wstring_view(reinterpret_cast<wchar_t *>(data()), byte_size() >> 1);
 		}
 
 		template<typename U = T>
-		requires(sizeof(U) == 1 && std::is_same<U, T>::value && std::is_integral<U>::value)
+		requires(sizeof(U) == 1 && std::is_integral<U>::value)
 		[[maybe_unused]] std::stringstream to_string_stream() {
+			ensure_null_terminated();
 			return std::stringstream(reinterpret_cast<char *>(data()), std::ios::in | std::ios::out);
 		}
 
-
 		template<typename U = T>
-		requires(sizeof(U) == 2 && std::is_same<U, T>::value && std::is_integral<U>::value)
+		requires(sizeof(U) <= 2 && std::is_integral<U>::value)
 		[[maybe_unused]] std::wstringstream to_wstring_stream() {
+			ensure_null_terminated();
 			return std::wstringstream(reinterpret_cast<wchar_t *>(data()), std::ios::in | std::ios::out);
+		}
+
+		[[maybe_unused]] std::string to_cstring(rivet_size64 index = 0) {
+			return std::string(reinterpret_cast<char *>(data()) + normalize_value(index));
+		}
+
+		[[maybe_unused]] std::wstring to_wcstring(rivet_size64 index = 0) {
+			return std::wstring(reinterpret_cast<wchar_t *>(data()) + (normalize_value(index) >> 1));
+		}
+
+		[[maybe_unused]] std::string_view to_cstring_view(rivet_size64 index = 0) {
+			return std::string_view(reinterpret_cast<char *>(data()) + normalize_value(index));
+		}
+
+		[[maybe_unused]] std::wstring_view to_wstring_view(rivet_size64 index = 0) {
+			return std::wstring_view(reinterpret_cast<wchar_t *>(data()) + (normalize_value(index) >> 1));
 		}
 
 		[[maybe_unused]] std::iostream to_stream() {

@@ -41,27 +41,28 @@ namespace rivet::data {
 									const std::string_view &name,
 									bool return_fast) noexcept {
 		std::vector<std::weak_ptr<rivet_asset>> assets{};
-		auto id = rivet::hash::hash_asset_id(name);
+		auto name_str = std::string(name);
+		rivet::hash::normalize_asset_path(name_str);
+		auto id = rivet::hash::hash_asset_id(name_str);
 		if (toc->asset_lookup.find(id) == toc->asset_lookup.end()) {
 			if(return_fast) {
 				return;
 			}
 			auto asset = std::make_shared<rivet_asset>(rivet_asset{
-					id,
+				id,
 
-					0,
-					0,
-					{},
-					rivet_locale::None,
-					rivet_asset_category::Game,
-					false,
-					false,
-					{},
-					{},
+				0,
+				0,
+				{},
+				rivet_locale::None,
+				rivet_asset_category::Game,
+				{false, false, false, true},
+				{},
+				{},
 
-					{},
-					{},
-					rivet_asset_type::NONE
+				{},
+				{},
+				rivet_asset_type::NONE
 			});
 
 			missing_assets.emplace(id, asset);

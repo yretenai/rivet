@@ -92,6 +92,13 @@ namespace rivet::structures {
 		NONE = 0xFF
 	};
 
+	struct rivet_asset_flags {
+		bool is_raw: 1;
+		bool is_texture: 1;
+		bool has_header: 1;
+		bool is_virtual: 1;
+	};
+
 	struct rivet_asset {
 		// stuff from toc
 		rivet_asset_id id;
@@ -100,8 +107,7 @@ namespace rivet::structures {
 		std::shared_ptr<rivet_archive> archive;
 		rivet_locale locale;
 		rivet_asset_category category;
-		bool is_raw;
-		bool is_streamed_texture;
+		rivet_asset_flags flags;
 		rivet_asset_texture_meta chunk;
 		rivet_asset_header header;
 

@@ -68,9 +68,10 @@ namespace rivet::data {
 			throw mismatched_data_error("id count does not match asset count");
 		}
 
+		auto archive_index = 0;
 		for (auto archive_entry: *archives_section) {
 			archives.emplace_back(std::make_shared<rivet_archive>(rivet_archive{
-					std::string_view(archive_entry.name),
+					archives_section->to_cstring_view(archive_index++),
 					archive_entry.time,
 					archive_entry.version,
 					archive_entry.unknown,
@@ -137,21 +138,25 @@ namespace rivet::data {
 			auto is_streamed = chunk_entry != chunk_map.end();
 
 			auto asset = std::make_shared<rivet_asset>(rivet_asset{
-					full_id,
+				full_id,
 
-					info.size,
-					info.archive_offset,
-					archive,
-					locale,
-					category,
+				info.size,
+				info.archive_offset,
+				archive,
+				locale,
+				category,
+				{
 					is_raw,
 					is_streamed,
-					is_streamed ? chunk_entry->second : rivet_asset_texture_meta(),
-					meta,
+					info.metadata_offset != 0xFFFFFFFF,
+					false
+				},
+				is_streamed ? chunk_entry->second : rivet_asset_texture_meta(),
+				meta,
 
-					{},
-					{},
-					rivet_asset_type::NONE
+				{},
+				{},
+				rivet_asset_type::NONE
 			});
 
 			if (group_id != 0xFFFFFFFF) {
