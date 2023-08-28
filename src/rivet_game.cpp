@@ -34,7 +34,7 @@ namespace rivet {
 		dag = std::make_shared<dependency_dag>(dag_stream, toc);
 	}
 
-	void rivet_game::load_streamed_files_list(const std::filesystem::path &path) const {
+	void rivet_game::load_streamed_files_list(const std::filesystem::path &path) const noexcept {
 		auto file = std::ifstream(path);
 		if(!file.is_open()) {
 			return;
@@ -78,7 +78,7 @@ namespace rivet {
 		return archive->data_stream->read_file(asset);
 	}
 
-	bool rivet_game::prepare_archive(const std::shared_ptr<rivet::structures::rivet_asset> &asset) const {
+	bool rivet_game::prepare_archive(const std::shared_ptr<rivet::structures::rivet_asset> &asset) const noexcept {
 		auto archive = asset->archive;
 		if (!archive->data_stream) {
 			archive->data_stream = std::make_shared<data_stream_archive>(root, archive);

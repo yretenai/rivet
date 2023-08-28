@@ -27,7 +27,7 @@ namespace rivet::data {
 		type_name = buffer->to_cstring_view(sizeof(data_header_t) + sizeof(data_entry_t) * header.section_count);
 	}
 
-	std::shared_ptr<rivet_data_array> dat1::get_section_data(rivet_type_id type_id) {
+	std::shared_ptr<rivet_data_array> dat1::get_section_data(rivet_type_id type_id) const {
 		auto entry = sections.find(type_id);
 
 		if (entry == sections.end()) {

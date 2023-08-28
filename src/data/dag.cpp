@@ -43,7 +43,7 @@ namespace rivet::data {
 									const std::shared_ptr<rivet_array<rivet_off>> &names,
 									const std::shared_ptr<rivet_array<rivet_asset_type>> &types,
 									std::string_view name,
-									bool is_ephemeral) noexcept {
+									bool is_ephemeral) const noexcept {
 		std::vector<std::weak_ptr<rivet_asset>> assets{};
 		auto name_str = std::string(name);
 		rivet::hash::normalize_asset_path(name_str);

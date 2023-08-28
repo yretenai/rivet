@@ -42,10 +42,10 @@ namespace rivet::data {
 		explicit dat1(const std::shared_ptr<rivet_data_array> &stream);
 		RIVET_DELETE_COPY(dat1)
 
-		std::shared_ptr<rivet_data_array> get_section_data(rivet_type_id type_id);
+		[[nodiscard]] std::shared_ptr<rivet_data_array> get_section_data(rivet_type_id type_id) const;
 
 		template<typename T>
-		std::shared_ptr<rivet_array<T>> get_section(rivet_type_id type_id) {
+		std::shared_ptr<rivet_array<T>> get_section(rivet_type_id type_id) const {
 			auto data = get_section_data(type_id);
 			if (data == nullptr) {
 				return nullptr;

@@ -41,7 +41,7 @@ namespace rivet::data {
 		};
 		static_assert(sizeof(dependency_dag_header) == 12);
 
-		std::unordered_map<rivet_asset_id, std::shared_ptr<rivet::structures::rivet_asset>> missing_assets = {};
+		mutable std::unordered_map<rivet_asset_id, std::shared_ptr<rivet::structures::rivet_asset>> missing_assets = {};
 		std::vector<std::vector<std::pair<std::string_view, rivet_asset_id>>> groups;
 		std::shared_ptr<archive_toc> toc;
 
@@ -55,6 +55,6 @@ namespace rivet::data {
 							 const std::shared_ptr<rivet_array<rivet_off>> &heads,
 							 const std::shared_ptr<rivet_array<rivet_off>> &names,
 							 const std::shared_ptr<rivet_array<rivet::structures::rivet_asset_type>> &types,
-							 std::string_view name, bool is_ephemeral = false) noexcept;
+							 std::string_view name, bool is_ephemeral = false) const noexcept;
 	};
 }

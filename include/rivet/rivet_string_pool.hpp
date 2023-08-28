@@ -16,6 +16,6 @@ namespace rivet {
 		RIVET_DELETE_COPY(rivet_string_pool)
 		rivet_string_pool() = delete;
 
-		static std::shared_ptr<std::string> alloc_string(const std::string_view &str);
+		static std::shared_ptr<std::string> alloc_string(const std::string_view &str) noexcept;
 	};
 }
