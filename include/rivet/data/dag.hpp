@@ -55,6 +55,6 @@ namespace rivet::data {
 							 const std::shared_ptr<rivet_array<rivet_off, RIVET_ALIGNMENT>> &heads,
 							 const std::shared_ptr<rivet_array<rivet_off, RIVET_ALIGNMENT>> &names,
 							 const std::shared_ptr<rivet_array<rivet::structures::rivet_asset_type, RIVET_ALIGNMENT>> &types,
-							 const std::string_view &name, bool return_fast = false) noexcept;
+							 std::string_view name, bool is_ephemeral = false) noexcept;
 	};
 }

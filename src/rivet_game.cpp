@@ -9,9 +9,10 @@
 #include <rivet/hash/asset_id.hpp>
 #include <rivet/structures/rivet_asset.hpp>
 #include <rivet/structures/rivet_archive.hpp>
+#include <rivet/structures/rivet_serialization.hpp>
 #include <rivet/rivet_array.hpp>
 #include <rivet/rivet_keywords.hpp>
-#include <rivet/structures/rivet_serialization.hpp>
+#include <rivet/rivet_string_pool.hpp>
 
 using namespace rivet::data;
 using namespace rivet::hash;
@@ -33,7 +34,7 @@ namespace rivet {
 		dag = std::make_shared<dependency_dag>(dag_stream, toc);
 	}
 
-	void rivet_game::load_streamed_files_list(const std::filesystem::path &path) {
+	void rivet_game::load_streamed_files_list(const std::filesystem::path &path) const {
 		auto file = std::ifstream(path);
 		if(!file.is_open()) {
 			return;
@@ -52,8 +53,7 @@ namespace rivet {
 				continue;
 			}
 
-			auto ptr = std::make_shared<std::string>(line);
-			string_pool.emplace_back(ptr);
+			auto ptr = rivet_string_pool::alloc_string(line);
 
 			for(auto &asset_ptr : entry->second) {
 				auto asset = asset_ptr.lock();
@@ -76,5 +76,14 @@ namespace rivet {
 		}
 
 		return archive->data_stream->read_file(asset);
+	}
+
+	bool rivet_game::prepare_archive(const std::shared_ptr<rivet::structures::rivet_asset> &asset) const {
+		auto archive = asset->archive;
+		if (!archive->data_stream) {
+			archive->data_stream = std::make_shared<data_stream_archive>(root, archive);
+		}
+
+		return archive->data_stream->exists;
 	}
 }

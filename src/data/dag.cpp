@@ -17,6 +17,7 @@
 #include <rivet/exceptions.hpp>
 #include <rivet/rivet_array.hpp>
 #include <rivet/rivet_keywords.hpp>
+#include <rivet/rivet_string_pool.hpp>
 
 using namespace rivet;
 using namespace rivet::structures;
@@ -38,14 +39,14 @@ namespace rivet::data {
 									const std::shared_ptr<rivet_array<rivet_off, RIVET_ALIGNMENT>> &heads,
 									const std::shared_ptr<rivet_array<rivet_off, RIVET_ALIGNMENT>> &names,
 									const std::shared_ptr<rivet_array<rivet_asset_type, RIVET_ALIGNMENT>> &types,
-									const std::string_view &name,
-									bool return_fast) noexcept {
+									std::string_view name,
+									bool is_ephemeral) noexcept {
 		std::vector<std::weak_ptr<rivet_asset>> assets{};
 		auto name_str = std::string(name);
 		rivet::hash::normalize_asset_path(name_str);
 		auto id = rivet::hash::hash_asset_id(name_str);
 		if (toc->asset_lookup.find(id) == toc->asset_lookup.end()) {
-			if(return_fast) {
+			if(is_ephemeral) {
 				return;
 			}
 			auto asset = std::make_shared<rivet_asset>(rivet_asset{
@@ -71,6 +72,16 @@ namespace rivet::data {
 			assets = toc->asset_lookup.at(id);
 		}
 
+		if (assets.empty()) {
+			return;
+		}
+
+
+		if(is_ephemeral) {
+			auto ptr = rivet_string_pool::alloc_string(name);
+			name = *ptr;
+		}
+
 		for (const auto &asset_ptr: assets) {
 			auto asset = asset_ptr.lock();
 			asset->name = name;
@@ -93,8 +104,9 @@ namespace rivet::data {
 		}
 	}
 
-	dependency_dag::dependency_dag(const std::shared_ptr<rivet_data_array>& stream, const std::shared_ptr<archive_toc> &toc)
-			: dat1(stream->slice(12)), toc(toc) {
+	dependency_dag::dependency_dag(const std::shared_ptr<rivet_data_array>& stream,
+								   const std::shared_ptr<archive_toc> &toc)
+								   : dat1(stream->slice(12)), toc(toc) {
 		if (header.type_id != type_id) {
 			throw invalid_tag_error();
 		}

@@ -93,6 +93,10 @@ int main(int argv, char **argc) {
 				auto assets = game->toc->get_group(locale, category, subtype_id == 1);
 
 				for(const auto &asset: assets) {
+					if(!game->prepare_archive(asset)) {
+						continue;
+					}
+
 					auto name = std::string(asset->name);
 					if(name.empty()) {
 						if(asset->id & 0x4000000000000000) {
@@ -104,18 +108,18 @@ int main(int argv, char **argc) {
 						rivet::hash::normalize_asset_path(name);
 					}
 
+					auto asset_data = game->open_file(asset);
+					if (asset_data == nullptr || asset_data->empty()) {
+						std::cout << "Failed to open asset " << asset->name << std::endl;
+						continue;
+					}
+
 					auto asset_path = local_path + name;
 					if(subtype_id == 1 && asset->flags.is_texture) {
 						asset_path += ".stream";
 					}
 
 					std::cout << "Writing " << asset_path << std::endl;
-
-					auto asset_data = game->open_file(asset);
-					if (!asset_data) {
-						std::cout << "Failed to open asset " << name << std::endl;
-						continue;
-					}
 
 					// rename .movie to .bik
 					if(asset_data->get<uint32_t>(0) == 0x6A32424B) {
