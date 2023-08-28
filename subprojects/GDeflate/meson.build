@@ -14,8 +14,8 @@ cpp_args = ['-DGDEFLATE_BUILDING']
 
 libgdeflate_dep = dependency('libgdeflate')
 
-directstorage_gdeflate = library(
-  'directstorage_gdeflate',
+gdeflate_core = library(
+  'GDeflateCore',
   [
     'src/GDeflateCompress.cpp',
     'src/GDeflateDecompress.cpp'
@@ -27,8 +27,8 @@ directstorage_gdeflate = library(
   gnu_symbol_visibility: 'hidden'
 )
 
-directstorage_gdeflate_dep = declare_dependency(
-  link_with: directstorage_gdeflate,
+gdeflate_core_dep = declare_dependency(
+  link_with: gdeflate_core,
   include_directories: 'include'
 )
 
