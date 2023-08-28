@@ -244,8 +244,20 @@ namespace rivet {
 
 		template<typename U = T>
 		requires(sizeof(U) == 1 && std::is_same<U, T>::value && std::is_integral<U>::value)
+		[[maybe_unused]] std::string_view to_string_view() {
+			return std::string_view(reinterpret_cast<char *>(data()), size());
+		}
+
+		template<typename U = T>
+		requires(sizeof(U) == 1 && std::is_same<U, T>::value && std::is_integral<U>::value)
 		[[maybe_unused]] std::string to_cstring(rivet_size64 index = 0) {
 			return std::string(reinterpret_cast<char *>(data() + index));
+		}
+
+		template<typename U = T>
+		requires(sizeof(U) == 1 && std::is_same<U, T>::value && std::is_integral<U>::value)
+		[[maybe_unused]] std::string_view to_cstring_view(rivet_size64 index = 0) {
+			return std::string_view(reinterpret_cast<char *>(data() + index));
 		}
 
 		template<typename U = T>

@@ -15,6 +15,25 @@
 namespace rivet::structures {
 	struct rivet_archive;
 
+#pragma pack(push, 1)
+	struct rivet_asset_raw {
+		rivet_size size;
+		uint32_t archive_id;
+		rivet_off archive_offset;
+		rivet_off metadata_offset;
+	};
+	static_assert(sizeof(rivet_asset_raw) == 16);
+
+	struct rivet_archive_raw {
+		const char name[0x30];
+		uint64_t time;
+		uint32_t version;
+		uint32_t unknown;
+		uint16_t load_priority;
+	};
+	static_assert(sizeof(rivet_archive_raw) == 0x42);
+#pragma pack(pop)
+
 	struct rivet_asset_texture_meta {
 		uint64_t unknown1;
 		uint64_t unknown2;
@@ -87,8 +106,8 @@ namespace rivet::structures {
 		rivet_asset_header header;
 
 		// stuff from dag
-		std::string name;
-		std::vector<std::pair<std::string, rivet_asset_id>> dependencies;
+		std::string_view name;
+		std::vector<std::pair<std::string_view, rivet_asset_id>> dependencies;
 		rivet_asset_type type;
 	};
 }

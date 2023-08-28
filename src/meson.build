@@ -2,10 +2,12 @@ rivetlib = library('rivet', [
 		'rivet.cpp',
 		'rivet_game.cpp',
 
-		'data/dat1.cpp',
-		'data/toc.cpp',
 		'data/dag.cpp',
-		'data/dsar.cpp'
+		'data/dat1.cpp',
+		'data/dsar.cpp',
+		'data/toc.cpp',
+
+		'serialization/serialization.cpp',
 	],
 	include_directories: includedir,
 	dependencies: deps,

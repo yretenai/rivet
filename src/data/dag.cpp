@@ -38,7 +38,7 @@ namespace rivet::data {
 									const std::shared_ptr<rivet_array<rivet_off, RIVET_ALIGNMENT>> &heads,
 									const std::shared_ptr<rivet_array<rivet_off, RIVET_ALIGNMENT>> &names,
 									const std::shared_ptr<rivet_array<rivet_asset_type, RIVET_ALIGNMENT>> &types,
-									const std::string &name,
+									const std::string_view &name,
 									bool return_fast) noexcept {
 		std::vector<std::weak_ptr<rivet_asset>> assets{};
 		auto id = rivet::hash::hash_asset_id(name);
@@ -85,7 +85,7 @@ namespace rivet::data {
 					continue;
 				}
 
-				auto dependency_name = buffer->slice(dependency_name_offset)->to_cstring();
+				auto dependency_name = buffer->to_cstring_view(dependency_name_offset);
 				auto dependency_id = hash::hash_asset_id(dependency_name);
 				asset->dependencies.emplace_back(dependency_name, dependency_id);
 			}
@@ -141,18 +141,18 @@ namespace rivet::data {
 				continue;
 			}
 
-			auto name = buffer->slice(name_offset)->to_cstring();
+			auto name = buffer->to_cstring_view(name_offset);
 			insert_dag_data(i, links, heads, names, types, name);
 			// anim streams are not in the dag, but are in the toc
-			insert_dag_data(i, links, heads, names, types, name + ".animstrm", true);
-			// todo: manually build names for .bnk, .wem, and the user interface web files
-			// they are almost all referenced in the config files.
+			insert_dag_data(i, links, heads, names, types, std::string(name) + ".animstrm", true);
+			// todo: manually build names for the user interface web files
+			// it starts with a bunch of html files referenced in config files
 		}
 
 		if (dependency_groups != nullptr) {
 			for (rivet_size i = 0; i < dependency_groups->size(); ++i) {
 				auto dependencies = load_array_partition(links, dependency_groups->get(i));
-				std::vector<std::pair<std::string, rivet_asset_id>> group;
+				std::vector<std::pair<std::string_view, rivet_asset_id>> group;
 				group.reserve(dependencies.size());
 				for (auto entry: dependencies) {
 					auto dependency_name_offset = names->get(entry & 0x7FFFFFFF);
@@ -160,7 +160,7 @@ namespace rivet::data {
 						continue;
 					}
 
-					auto dependency_name = buffer->slice(dependency_name_offset)->to_cstring();
+					auto dependency_name = buffer->to_cstring_view(dependency_name_offset);
 					auto dependency_id = rivet::hash::hash_asset_id(dependency_name);
 					group.emplace_back(dependency_name, dependency_id);
 				}

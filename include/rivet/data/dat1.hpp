@@ -37,7 +37,7 @@ namespace rivet::data {
 		std::shared_ptr<rivet_data_array> buffer = {};
 		std::shared_ptr<rivet_data_array> string_buffer = {};
 		std::unordered_map<rivet_type_id, std::pair<data_entry_t, std::shared_ptr<rivet_data_array>>> sections;
-		std::string type_name = {};
+		std::string_view type_name = {};
 
 		explicit dat1(const std::shared_ptr<rivet_data_array> &stream);
 		RIVET_DELETE_COPY(dat1)

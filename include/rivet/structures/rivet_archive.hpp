@@ -18,7 +18,7 @@ namespace rivet {
 		struct rivet_asset;
 
 		struct rivet_archive {
-			std::string name;
+			std::string_view name;
 			uint64_t time;
 			uint32_t version;
 			uint32_t unknown;

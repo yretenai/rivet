@@ -79,12 +79,12 @@ int main(int argv, char **argc) {
 					auto assets = game->toc->get_group(locale, category, subtype_id == 1);
 
 					for(const auto &asset: assets) {
-						auto name = asset->name;
+						auto name = std::string(asset->name);
 						if(name.empty()) {
 							if(asset->id & 0x4000000000000000) {
 								name = "sound/wem/" + std::to_string(asset->id & 0xFFFFFFFF) + std::string(".wem");
 							} else {
-								name = asset->archive->name + "/" + std::to_string(asset->id);
+								name = std::string(asset->archive->name) + "/" + std::to_string(asset->id);
 							}
 						} else {
 							rivet::hash::normalize_asset_path(name);

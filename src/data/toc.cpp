@@ -22,25 +22,6 @@ using namespace rivet;
 using namespace rivet::structures;
 
 namespace rivet::data {
-#pragma pack(push, 1)
-	struct rivet_asset_raw {
-		rivet_size size;
-		uint32_t archive_id;
-		rivet_off archive_offset;
-		rivet_off metadata_offset;
-	};
-	static_assert(sizeof(rivet_asset_raw) == 16);
-
-	struct rivet_archive_raw {
-		const char name[0x30];
-		uint64_t time;
-		uint32_t version;
-		uint32_t unknown;
-		uint16_t load_priority;
-	};
-	static_assert(sizeof(rivet_archive_raw) == 0x42);
-#pragma pack(pop)
-
 	archive_toc::archive_toc(const std::shared_ptr<rivet_data_array> &stream) : dat1(stream->slice(0x8)) {
 		if (header.type_id != type_id) {
 			throw invalid_tag_error();
@@ -89,7 +70,7 @@ namespace rivet::data {
 
 		for (auto archive_entry: *archives_section) {
 			archives.emplace_back(std::make_shared<rivet_archive>(rivet_archive{
-					std::string(archive_entry.name),
+					std::string_view(archive_entry.name),
 					archive_entry.time,
 					archive_entry.version,
 					archive_entry.unknown,

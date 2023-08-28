@@ -42,7 +42,7 @@ namespace rivet::data {
 
 		dependency_dag_header dag_header = {};
 		std::unordered_map<rivet_asset_id, std::shared_ptr<rivet::structures::rivet_asset>> missing_assets = {};
-		std::vector<std::vector<std::pair<std::string, rivet_asset_id>>> groups;
+		std::vector<std::vector<std::pair<std::string_view, rivet_asset_id>>> groups;
 		std::shared_ptr<archive_toc> toc;
 
 		explicit RIVET_DECL dependency_dag(const std::shared_ptr<rivet_data_array> &stream,
@@ -55,6 +55,6 @@ namespace rivet::data {
 							 const std::shared_ptr<rivet_array<rivet_off, RIVET_ALIGNMENT>> &heads,
 							 const std::shared_ptr<rivet_array<rivet_off, RIVET_ALIGNMENT>> &names,
 							 const std::shared_ptr<rivet_array<rivet::structures::rivet_asset_type, RIVET_ALIGNMENT>> &types,
-							 const std::string &name, bool return_fast = false) noexcept;
+							 const std::string_view &name, bool return_fast = false) noexcept;
 	};
 }
