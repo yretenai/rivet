@@ -66,6 +66,20 @@ int main(int argv, char **argc) {
 		}
 
 		std::filesystem::path dump(argc[2]);
+
+		std::filesystem::path dag_path = dump / "d" / "missing.txt";
+		std::filesystem::create_directories(dag_path.parent_path());
+		std::ofstream dag_file(dag_path, std::ios::out);
+		if(!dag_file.is_open()) {
+			std::cout << "Failed to open output file " << dag_path << std::endl;
+			return 1;
+		}
+
+		for(const auto &asset: game->dag->missing_assets) {
+			dag_file << std::string(asset.second->name) << std::endl;
+		}
+		dag_file.close();
+
 		for(auto locale_id = 0; locale_id < 32; locale_id++) {
 			std::string local_path;
 			if(locale_id > 0) {
@@ -76,7 +90,7 @@ int main(int argv, char **argc) {
 
 			for(auto category_id = 0; category_id < 4; category_id++) {
 				auto category = static_cast<rivet_asset_category>(category_id);
-				for(auto subtype_id = 1; subtype_id < 2; subtype_id++) {
+				for(auto subtype_id = 0; subtype_id < 2; subtype_id++) {
 					auto assets = game->toc->get_group(locale, category, subtype_id == 1);
 
 					for(const auto &asset: assets) {
