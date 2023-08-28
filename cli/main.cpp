@@ -100,7 +100,7 @@ int main(int argv, char **argc) {
 						} else {
 							name = std::string(asset->archive->name) + "/" + std::to_string(asset->id);
 							if (!name.starts_with(root_prefix)) {
-								name = root_prefix.append(name);
+								name = root_prefix + name;
 							}
 						}
 					} else {
