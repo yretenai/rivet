@@ -2,11 +2,16 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
+#pragma clang diagnostic push
+#pragma GCC diagnostic ignored "-Wunknown-pragmas"
+#pragma clang diagnostic ignored "-Wunknown-pragmas"
+#pragma ide diagnostic ignored "OCUnusedGlobalDeclarationInspection"
 #pragma once
 
 #include <cstdint>
 #include <memory>
 #include <string>
+#include <optional>
 #include <utility>
 #include <vector>
 
@@ -47,7 +52,7 @@ namespace rivet::structures {
 	static_assert(sizeof(rivet_archive_raw_spider) == 0x48);
 #pragma pack(pop)
 
-	struct rivet_asset_texture_meta {
+	struct rivet_asset_texture_header {
 		uint64_t unknown1;
 		uint64_t unknown2;
 		uint64_t unknown3;
@@ -62,7 +67,7 @@ namespace rivet::structures {
 		uint32_t unknownC;
 		uint64_t unknownD;
 	};
-	static_assert(sizeof(rivet_asset_texture_meta) == 72);
+	static_assert(sizeof(rivet_asset_texture_header) == 72);
 
 	struct rivet_asset_header {
 		uint32_t id;
@@ -122,12 +127,14 @@ namespace rivet::structures {
 		rivet_locale locale;
 		rivet_asset_category category;
 		rivet_asset_flags flags;
-		rivet_asset_texture_meta chunk;
-		rivet_asset_header header;
+		std::optional<rivet_asset_texture_header> texture_header;
+		std::optional<rivet_asset_header> header;
 
 		// stuff from dag
-		std::string_view name;
+		std::optional<std::string_view> name;
 		std::vector<std::pair<std::string_view, rivet_asset_id>> dependencies;
 		rivet_asset_type type;
 	};
 }
+
+#pragma clang diagnostic pop

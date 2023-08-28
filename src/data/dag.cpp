@@ -52,22 +52,13 @@ namespace rivet::data {
 			if(is_ephemeral) {
 				return;
 			}
-			auto asset = std::make_shared<rivet_asset>(rivet_asset{
-				id,
 
-				0,
-				0,
-				{},
-				rivet_locale::None,
-				rivet_asset_category::Game,
-				{false, false, false, true, false},
-				{},
-				{},
-
-				{},
-				{},
-				rivet_asset_type::NONE
-			});
+			auto asset = std::make_shared<rivet_asset>();
+			asset->id = id;
+			asset->flags.is_virtual = true,
+			asset->archive = nullptr;
+			asset->header = std::nullopt;
+			asset->texture_header = std::nullopt;
 
 			missing_assets.emplace(id, asset);
 			assets.emplace_back(asset);

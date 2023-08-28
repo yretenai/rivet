@@ -61,7 +61,7 @@ namespace rivet {
 					continue;
 				}
 
-				if(asset->name.empty()) {
+				if(!asset->name.has_value()) {
 					asset->name = *ptr;
 				}
 			}

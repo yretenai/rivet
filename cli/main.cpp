@@ -13,7 +13,7 @@ using namespace rivet;
 using namespace rivet::structures;
 
 std::array<std::string, 32> localization_enum {
-		"",
+		"none",
 		"us",
 		"gb",
 		"dk",
@@ -67,6 +67,7 @@ int main(int argv, char **argc) {
 	std::filesystem::path dump(argc[2]);
 
 	auto root_prefix = std::string("d/");
+	/*
 	std::filesystem::path dag_path = dump / root_prefix / "missing.txt";
 	std::filesystem::create_directories(dag_path.parent_path());
 	std::ofstream dag_file(dag_path, std::ios::out);
@@ -76,9 +77,10 @@ int main(int argv, char **argc) {
 	}
 
 	for(const auto &asset: game->dag->missing_assets) {
-		dag_file << std::string(asset.second->name) << std::endl;
+		dag_file << asset.second->name.value() << std::endl;
 	}
 	dag_file.close();
+	*/
 
 	for(auto locale_id = 0; locale_id < 32; locale_id++) {
 		auto locale = static_cast<rivet_locale>(locale_id);
@@ -93,17 +95,19 @@ int main(int argv, char **argc) {
 						continue;
 					}
 
-					auto name = std::string(asset->name);
-					if(name.empty()) {
+					std::string name;
+					if(!asset->name.has_value()) {
 						if(asset->id & 0x4000000000000000) {
 							name = "sound/wem/" + std::to_string(asset->id & 0xFFFFFFFF) + std::string(".wem");
 						} else {
-							name = std::string(asset->archive->name) + "/" + std::to_string(asset->id);
-							if (!name.starts_with(root_prefix)) {
-								name = root_prefix + name;
+							if (asset->archive->name.find('/') == std::string::npos && asset->archive->name.find('\\') == std::string::npos) {
+								name = root_prefix + std::string(asset->archive->name) + "/" + std::to_string(asset->id);
+							} else {
+								name = std::string(asset->archive->name) + "/" + std::to_string(asset->id);
 							}
 						}
 					} else {
+						name = asset->name.value();
 						rivet::hash::normalize_asset_path(name);
 					}
 
@@ -115,7 +119,7 @@ int main(int argv, char **argc) {
 
 					auto asset_data = game->open_file(asset);
 					if (asset_data == nullptr || asset_data->empty()) {
-						std::cout << "Failed to open asset " << asset->name << std::endl;
+						std::cout << "Failed to open asset " << name << std::endl;
 						continue;
 					}
 
@@ -139,12 +143,12 @@ int main(int argv, char **argc) {
 						continue;
 					}
 
-					if (asset->flags.has_header) {
-						asset_file.write(reinterpret_cast<const char *>(&asset->header), sizeof(rivet_asset_header));
+					if (asset->header.has_value()) {
+						asset_file.write(reinterpret_cast<const char *>(&asset->header.value()), sizeof(rivet_asset_header));
 					}
 
-					if(asset->flags.is_texture && asset->flags.is_raw) {
-						asset_file.write(reinterpret_cast<const char *>(&asset->chunk), sizeof(rivet_asset_texture_meta));
+					if(asset->texture_header.has_value()) {
+						asset_file.write(reinterpret_cast<const char *>(&asset->texture_header.value()), sizeof(rivet_asset_texture_header));
 					}
 
 					asset_file.write(reinterpret_cast<const char *>(asset_data->data()),

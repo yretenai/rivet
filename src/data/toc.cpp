@@ -125,7 +125,7 @@ namespace rivet::data {
 		static_assert(sizeof(std::pair<uint32_t, uint32_t>) == 8);
 		auto groups_section = get_section<std::pair<uint32_t, uint32_t>>(header_type_id);
 		auto texture_ids = get_section<rivet_asset_id>(texture_ids_type_id);
-		auto texture_metas = get_section<rivet_asset_texture_meta>(texture_meta_type_id);
+		auto texture_metas = get_section<rivet_asset_texture_header>(texture_meta_type_id);
 		auto asset_headers = get_section<rivet_asset_header>(asset_headers_type_id);
 		auto key_assets = get_section<rivet_asset_id>(key_asset_ids_type_id);
 
@@ -163,17 +163,17 @@ namespace rivet::data {
 				view = archives_section->to_cstring_view(archive_index++);
 			}
 
-			archives.emplace_back(std::make_shared<rivet_archive>(rivet_archive{
-					view,
-					archive_entry.time,
-					archive_entry.version,
-					archive_entry.unknown,
-					archive_entry.load_priority,
-					{}
-			}));
+			auto archive = std::make_shared<rivet_archive>();
+			archive->name = view;
+			archive->time = archive_entry.time;
+			archive->version = archive_entry.version;
+			archive->unknown = archive_entry.unknown;
+			archive->load_priority = archive_entry.load_priority;\
+
+			archives.emplace_back(archive);
 		}
 
-		std::unordered_map<rivet_asset_id, rivet_asset_texture_meta> chunk_map;
+		std::unordered_map<rivet_asset_id, rivet_asset_texture_header> chunk_map;
 		if (texture_ids != nullptr && texture_metas != nullptr) {
 			if (texture_ids->size() != texture_metas->size()) {
 				throw mismatched_data_error("streamed id count does not match chunk count");
@@ -215,7 +215,7 @@ namespace rivet::data {
 			auto info = assets_section->get(i);
 			auto archive = archives[info.archive_id];
 			auto chunk_entry = chunk_map.find(id);
-			rivet_asset_header meta = {};
+			std::optional<rivet_asset_header> meta;
 			if (info.metadata_offset != 0xFFFFFFFF && asset_headers != nullptr) {
 				auto normalized = info.metadata_offset / sizeof(rivet_asset_header);
 				if (normalized < asset_headers->size()) {
@@ -234,31 +234,30 @@ namespace rivet::data {
 			}
 
 			auto is_streamed = chunk_entry != chunk_map.end();
+			std::optional<rivet_asset_texture_header> texture_header;
+			if (is_streamed) {
+				texture_header = chunk_entry->second;
+			}
 
 			auto is_key = key_asset_lookup.find(id) != key_asset_lookup.end();
 
-			auto asset = std::make_shared<rivet_asset>(rivet_asset{
-				full_id,
-
-				info.size,
-				info.archive_offset,
-				archive,
-				locale,
-				category,
-				{
-					is_raw,
-					is_streamed,
-					info.metadata_offset != 0xFFFFFFFF,
-					false,
-					is_key
-				},
-				is_streamed ? chunk_entry->second : rivet_asset_texture_meta(),
-				meta,
-
-				{},
-				{},
-				rivet_asset_type::NONE
-			});
+			auto asset = std::make_shared<rivet_asset>();
+			asset->id = full_id;
+			asset->size = info.size;
+			asset->offset = info.archive_offset;
+			asset->archive = archive;
+			asset->locale = locale;
+			asset->category = category;
+			asset->flags.is_raw = is_raw;
+			asset->flags.is_texture = is_streamed;
+			asset->flags.has_header = info.metadata_offset != 0xFFFFFFFF;
+			asset->flags.is_virtual = false;
+			asset->flags.is_key = is_key;
+			asset->texture_header = texture_header;
+			asset->header = meta;
+			asset->name = std::nullopt;
+			asset->dependencies = {};
+			asset->type = rivet_asset_type::NONE;
 
 			if (group_id != 0xFFFFFFFF) {
 				groups[group_id / 8][(group_id / 2) % 4][is_raw ? 1 : 0].emplace_back(asset);

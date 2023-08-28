@@ -2,6 +2,10 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
+#pragma clang diagnostic push
+#pragma GCC diagnostic ignored "-Wunknown-pragmas"
+#pragma clang diagnostic ignored "-Wunknown-pragmas"
+#pragma ide diagnostic ignored "OCUnusedGlobalDeclarationInspection"
 #pragma once
 
 #include <cstdint>
@@ -87,3 +91,5 @@ namespace rivet::structures {
 		std::unordered_map<std::shared_ptr<std::string_view>, std::vector<rivet_serialized_value>> values = {};
 	};
 }
+
+#pragma clang diagnostic pop
