@@ -44,6 +44,7 @@ vcs.xml
 .vs
 .vscode
 
-subprojects/packagecache
-subprojects/lz4-*
-subprojects/libgdeflate
+subprojects/*
+!subprojects/GDeflate
+!subprojects/packagefiles
+!subprojects/*.wrap

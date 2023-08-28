@@ -53,7 +53,7 @@ namespace rivet {
 			std::shared_ptr<std::ifstream> base_stream;
 			std::weak_ptr<rivet::structures::rivet_archive> archive;
 			dsar_header header{};
-			std::shared_ptr<rivet_array<dsar_entry, RIVET_ALIGNMENT>> chunks;
+			std::shared_ptr<rivet_array<dsar_entry>> chunks;
 			bool is_compressed;
 			bool exists;
 

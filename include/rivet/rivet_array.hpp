@@ -19,8 +19,12 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/exceptions.hpp>
 
+#ifndef RIVET_ALIGNMENT
+	#define RIVET_ALIGNMENT 16
+#endif
+
 namespace rivet {
-	template<typename T, const int Alignment>
+	template<typename T, const int Alignment = RIVET_ALIGNMENT>
 	struct rivet_array {
 		std::shared_ptr<uint8_t[]> ptr = nullptr;
 		rivet_size64 length = 0;
@@ -110,7 +114,7 @@ namespace rivet {
 		[[nodiscard]] RIVET_INLINE T *data() const { return reinterpret_cast<T *>(ptr.get() + offset); }
 
 		[[maybe_unused]] [[nodiscard]] RIVET_INLINE bool is_aligned() const {
-			return reinterpret_cast<intptr_t>(ptr.get() + offset) % Alignment;
+			return (reinterpret_cast<intptr_t>(ptr.get()) % Alignment) == 0;
 		}
 
 		[[nodiscard]] RIVET_INLINE rivet_size64 size() const { return length; }
@@ -328,5 +332,5 @@ namespace rivet {
 		}
 	};
 
-	using rivet_data_array = rivet_array<uint8_t, RIVET_ALIGNMENT>;
+	using rivet_data_array = rivet_array<uint8_t>;
 }

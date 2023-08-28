@@ -41,10 +41,6 @@
 	#define RIVET_DEBUG_BREAK
 #endif
 
-#ifndef RIVET_ALIGNMENT
-	#define RIVET_ALIGNMENT 16
-#endif
-
 #include <cstdint>
 
 #define RIVET_DELETE_COPY(TYPE_NAME) \

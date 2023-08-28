@@ -19,10 +19,15 @@ if not libgdeflate_dep.found()
     libgdeflate_dep = dependency('libgdeflate')
 endif
 
+zlib_dep = dependency('zlib-1.3-2', required: false)
+if not zlib_dep.found()
+    zlib_dep = dependency('zlib')
+endif
+
 directstorage_gdeflate = subproject('GDeflate')
 directstorage_gdeflate_dep = directstorage_gdeflate.get_variable('directstorage_gdeflate_dep')
 
-deps = [thread_dep, liblz4_dep, libgdeflate_dep, directstorage_gdeflate_dep]
+deps = [thread_dep, liblz4_dep, libgdeflate_dep, directstorage_gdeflate_dep, zlib_dep]
 
 includedir = include_directories('include/')
 

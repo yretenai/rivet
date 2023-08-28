@@ -19,7 +19,7 @@ namespace rivet::data {
 
 		struct data_header_t {
 			uint32_t magic;
-			rivet_type_id type_id;
+			rivet_type_id schema;
 			rivet_size size;
 			uint16_t section_count;
 			uint16_t reserved;
@@ -45,7 +45,7 @@ namespace rivet::data {
 		std::shared_ptr<rivet_data_array> get_section_data(rivet_type_id type_id);
 
 		template<typename T>
-		std::shared_ptr<rivet_array<T, RIVET_ALIGNMENT>> get_section(rivet_type_id type_id) {
+		std::shared_ptr<rivet_array<T>> get_section(rivet_type_id type_id) {
 			auto data = get_section_data(type_id);
 			if (data == nullptr) {
 				return nullptr;

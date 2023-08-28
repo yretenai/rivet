@@ -79,7 +79,7 @@ int main(int argv, char **argc) {
 	}
 	dag_file.close();
 
-	for(auto locale_id = 1; locale_id < 32; locale_id++) {
+	for(auto locale_id = 0; locale_id < 32; locale_id++) {
 		auto locale = static_cast<rivet_locale>(locale_id);
 
 		for(auto category_id = 0; category_id < 4; category_id++) {

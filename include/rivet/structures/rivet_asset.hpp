@@ -23,15 +23,28 @@ namespace rivet::structures {
 		rivet_off metadata_offset;
 	};
 	static_assert(sizeof(rivet_asset_raw) == 16);
+	struct rivet_asset_raw_spider {
+		uint32_t unknown;
+		uint32_t size;
+		uint32_t chunk_id;
+	};
+	static_assert(sizeof(rivet_asset_raw_spider) == 0xC);
 
 	struct rivet_archive_raw {
-		const char name[0x30];
+		char name[0x30];
 		uint64_t time;
 		uint32_t version;
 		uint32_t unknown;
 		uint16_t load_priority;
 	};
 	static_assert(sizeof(rivet_archive_raw) == 0x42);
+
+	struct rivet_archive_raw_spider {
+		uint32_t install_id;
+		uint32_t chunk_id;
+		char name[0x40];
+	};
+	static_assert(sizeof(rivet_archive_raw_spider) == 0x48);
 #pragma pack(pop)
 
 	struct rivet_asset_texture_meta {
@@ -97,6 +110,7 @@ namespace rivet::structures {
 		bool is_texture: 1;
 		bool has_header: 1;
 		bool is_virtual: 1;
+		bool is_key: 1;
 	};
 
 	struct rivet_asset {

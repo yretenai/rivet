@@ -10,7 +10,7 @@ HEADER
 
 <
 	uint32 magic; // 0x44415431 (DAT1)
-	type_id type_id;
+	type_id version;
 	uint32 size;
 	uint16 section_count;
 	uint16 unknown;
@@ -23,14 +23,14 @@ HEADER
 SECTION_HEADER
 
 <
-	uint32 type_id;
+	type_id id;
 	uint32 offset;
 	uint32 size;
 >
 
 	Offset is relative to the start of the DAT1 structure.
 
-	The type_id is the specific to the section being loaded. Refer to the individual file format for more information.
+	The id is the specific to the section being loaded. Refer to the individual file format for more information.
 
 APPENDIX A
 	Calculating Type IDs

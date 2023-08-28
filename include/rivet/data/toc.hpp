@@ -26,6 +26,7 @@ namespace rivet {
 		struct RIVET_SHARED archive_toc : dat1 {
 			constexpr const static std::string_view type_name = "ArchiveTOC";
 			constexpr const static rivet_type_id type_id = 0x4D7CF320;
+			constexpr const static rivet_type_id type_id_spider = 0x51B8E006;
 			constexpr const static rivet_type_id magic = 0x34E89035;
 			constexpr const static rivet_type_id magic_compressed = 0x77AF12AF;
 
@@ -37,6 +38,8 @@ namespace rivet {
 			RIVET_DEFINE_TYPE_ID(texture_meta, "Archive TOC Texture Meta");
 			RIVET_DEFINE_TYPE_ID(texture_header, "Archive TOC Texture Header");
 			RIVET_DEFINE_TYPE_ID(asset_headers, "Archive TOC Asset Header Data");
+			RIVET_DEFINE_TYPE_ID(key_asset_ids, "Archive TOC Key Asset IDs");
+			constexpr const static rivet_type_id archive_asset_offsets_type_id = 0xDCD720B5;
 
 			struct archive_toc_header {
 				rivet_type_id type_id;
@@ -44,7 +47,6 @@ namespace rivet {
 			};
 			static_assert(sizeof(archive_toc_header) == 8);
 
-			archive_toc_header toc_header = {};
 			std::unordered_map<rivet_asset_id, std::vector<std::weak_ptr<rivet::structures::rivet_asset>>> asset_lookup = {};
 			std::vector<std::shared_ptr<rivet::structures::rivet_archive>> archives = {};
 			std::array<std::array<std::array<std::vector<std::shared_ptr<rivet::structures::rivet_asset>>, 2>, 4>, 32> groups = {};

@@ -47,7 +47,7 @@ namespace rivet::data {
 			throw version_not_supported();
 		}
 
-		chunks = std::make_shared<rivet_array<dsar_entry, RIVET_ALIGNMENT>>(nullptr, header.chunk_count);
+		chunks = std::make_shared<rivet_array<dsar_entry>>(nullptr, header.chunk_count);
 		base_stream->read(reinterpret_cast<char *>(chunks->data()), static_cast<std::streamsize>(chunks->byte_size()));
 	}
 

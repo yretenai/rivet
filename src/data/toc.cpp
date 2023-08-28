@@ -3,20 +3,21 @@
 // SPDX-License-Identifier: MPL-2.0
 
 #include <cstdint>
-#include <map>
+#include <set>
 #include <memory>
 #include <string>
 #include <unordered_map>
 #include <utility>
 #include <vector>
 
-#include <libgdeflate.h>
+#include <zlib.h>
 
 #include <rivet/data/toc.hpp>
 #include <rivet/data/dat1.hpp>
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/exceptions.hpp>
 #include <rivet/rivet_array.hpp>
+#include <rivet/rivet_string_pool.hpp>
 #include <rivet/structures/rivet_archive.hpp>
 #include <rivet/structures/rivet_asset.hpp>
 
@@ -24,29 +25,38 @@ using namespace rivet;
 using namespace rivet::structures;
 
 namespace rivet::data {
-	std::shared_ptr<rivet_data_array> get_data_buffer(const std::shared_ptr<rivet_data_array>& stream) {
+	std::shared_ptr<rivet_data_array> get_toc_data_buffer(const std::shared_ptr<rivet_data_array>& stream) {
 		if (stream->size() < sizeof(archive_toc::archive_toc_header)) {
 			throw invalid_tag_error();
 		}
 
 		auto header = stream->get<archive_toc::archive_toc_header>(0);
 
+		if(header.type_id == dat1::magic) {
+			return stream;
+		}
+
 		if (header.type_id == archive_toc::magic) {
 			return stream->slice(sizeof(archive_toc::archive_toc_header));
-		} else if (header.type_id != archive_toc::magic_compressed) {
+		} else if (header.type_id == archive_toc::magic_compressed) {
 			auto buffer = std::make_shared<rivet_data_array>(nullptr, header.size);
-			auto compressed_buffer = stream->slice(sizeof(archive_toc::archive_toc_header));
 
-			auto decompressor = libdeflate_alloc_decompressor();
-			auto result = libdeflate_zlib_decompress(decompressor,
-													 compressed_buffer->data(),
-													 compressed_buffer->size(),
-													 buffer->data(),
-													 buffer->size(),
-													 nullptr);
-			libdeflate_free_decompressor(decompressor);
+			z_stream zs;
+			zs.zalloc = Z_NULL;
+			zs.zfree = Z_NULL;
+			zs.opaque = Z_NULL;
+			zs.avail_in = stream->size() - sizeof(archive_toc::archive_toc_header);
+			zs.next_in = stream->data() + sizeof(archive_toc::archive_toc_header);
+			zs.avail_out = header.size;
+			zs.next_out = buffer->data();
 
-			if (result == 0) {
+			auto ret = inflateInit(&zs);
+			if (ret != Z_OK) {
+				throw decompression_error();
+			}
+
+			ret = inflate(&zs, Z_PARTIAL_FLUSH);
+			if (ret != Z_OK && zs.avail_out != 0 && zs.avail_in != 0) {
 				throw decompression_error();
 			}
 
@@ -56,20 +66,59 @@ namespace rivet::data {
 		throw invalid_tag_error();
 	}
 
-	archive_toc::archive_toc(const std::shared_ptr<rivet_data_array> &stream) : dat1(get_data_buffer(stream)) {
-		if (header.type_id != type_id) {
+	archive_toc::archive_toc(const std::shared_ptr<rivet_data_array> &stream) : dat1(get_toc_data_buffer(stream)) {
+		if (header.schema != type_id && header.schema != type_id_spider) {
 			throw invalid_tag_error();
 		}
 
-		toc_header = stream->get<archive_toc_header>(0);
-		if (toc_header.type_id != magic) {
-			throw invalid_tag_error();
-		}
+		bool is_spider = header.schema == type_id_spider;
 
 		auto textures_header = get_section_data(texture_header_type_id);
-		auto archives_section = get_section<rivet_archive_raw>(archives_type_id);
+		std::shared_ptr<rivet_array<rivet_archive_raw>> archives_section;
+		if (is_spider) {
+			auto archives_spider_section = get_section<rivet_archive_raw_spider>(archives_type_id);
+			if(archives_spider_section == nullptr) {
+				throw mismatched_data_error("missing archives section");
+			}
+
+			archives_section = std::make_shared<rivet_array<rivet_archive_raw>>(nullptr, archives_spider_section->size());
+
+			for (rivet_size i = 0; i < archives_spider_section->size(); ++i) {
+				auto entry = archives_spider_section->get(i);
+				auto existing = archives_section->get(i);
+				existing.unknown = entry.chunk_id;
+				std::memcpy(existing.name, entry.name, sizeof(entry.name));
+				archives_section->set(i, existing);
+			}
+		} else {
+			archives_section = get_section<rivet_archive_raw>(archives_type_id);
+		}
+
 		auto ids_section = get_section<rivet_asset_id>(ids_type_id);
-		auto assets_section = get_section<rivet_asset_raw>(assets_type_id);
+		std::shared_ptr<rivet_array<rivet_asset_raw>> assets_section;
+		if (is_spider) {
+			auto assets_spider_section = get_section<rivet_asset_raw_spider>(assets_type_id);
+			assets_section = std::make_shared<rivet_array<rivet_asset_raw>>(nullptr, assets_spider_section->size());
+
+			static_assert(sizeof(std::pair<uint32_t, rivet_off>) == 8);
+			auto chunk_section = get_section<std::pair<uint32_t, rivet_off>>(archive_asset_offsets_type_id);
+			if(chunk_section == nullptr) {
+				throw mismatched_data_error("missing chunk section");
+			}
+
+			for (rivet_size i = 0; i < assets_spider_section->size(); ++i) {
+				auto entry = assets_spider_section->get(i);
+				auto existing = assets_section->get(i);
+				existing.size = entry.size;
+				auto chunk = chunk_section->get(entry.chunk_id);
+				existing.archive_id = chunk.first;
+				existing.archive_offset = chunk.second;
+				existing.metadata_offset = 0xFFFFFFFF;
+				assets_section->set(i, existing);
+			}
+		} else {
+			assets_section = get_section<rivet_asset_raw>(assets_type_id);
+		}
 
 		// optional
 		static_assert(sizeof(std::pair<uint32_t, uint32_t>) == 8);
@@ -77,6 +126,7 @@ namespace rivet::data {
 		auto texture_ids = get_section<rivet_asset_id>(texture_ids_type_id);
 		auto texture_metas = get_section<rivet_asset_texture_meta>(texture_meta_type_id);
 		auto asset_headers = get_section<rivet_asset_header>(asset_headers_type_id);
+		auto key_assets = get_section<rivet_asset_id>(key_asset_ids_type_id);
 
 		if (textures_header != nullptr) {
 			streamed_texture_count = textures_header->get<uint32_t>(0);
@@ -104,8 +154,16 @@ namespace rivet::data {
 
 		auto archive_index = 0;
 		for (auto archive_entry: *archives_section) {
+			std::string_view view;
+			if (is_spider) {
+				auto str = rivet_string_pool::alloc_string(archive_entry.name);
+				view = std::string_view(*str);
+			} else {
+				view = archives_section->to_cstring_view(archive_index++);
+			}
+
 			archives.emplace_back(std::make_shared<rivet_archive>(rivet_archive{
-					archives_section->to_cstring_view(archive_index++),
+					view,
 					archive_entry.time,
 					archive_entry.version,
 					archive_entry.unknown,
@@ -114,7 +172,7 @@ namespace rivet::data {
 			}));
 		}
 
-		std::map<rivet_asset_id, rivet_asset_texture_meta> chunk_map;
+		std::unordered_map<rivet_asset_id, rivet_asset_texture_meta> chunk_map;
 		if (texture_ids != nullptr && texture_metas != nullptr) {
 			if (texture_ids->size() != texture_metas->size()) {
 				throw mismatched_data_error("streamed id count does not match chunk count");
@@ -123,6 +181,11 @@ namespace rivet::data {
 			for (rivet_size i = 0; i < texture_ids->size(); ++i) {
 				chunk_map[texture_ids->get(i)] = texture_metas->get(i);
 			}
+		}
+
+		std::set<rivet_asset_id> key_asset_lookup {};
+		if(key_assets != nullptr) {
+			key_asset_lookup.insert(key_assets->begin(), key_assets->end());
 		}
 
 		for (rivet_size i = 0; i < ids_section->size(); ++i) {
@@ -171,6 +234,8 @@ namespace rivet::data {
 
 			auto is_streamed = chunk_entry != chunk_map.end();
 
+			auto is_key = key_asset_lookup.find(id) != key_asset_lookup.end();
+
 			auto asset = std::make_shared<rivet_asset>(rivet_asset{
 				full_id,
 
@@ -183,7 +248,8 @@ namespace rivet::data {
 					is_raw,
 					is_streamed,
 					info.metadata_offset != 0xFFFFFFFF,
-					false
+					false,
+					is_key
 				},
 				is_streamed ? chunk_entry->second : rivet_asset_texture_meta(),
 				meta,

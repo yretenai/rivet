@@ -9,7 +9,7 @@
 #include <utility>
 #include <vector>
 
-#include <libgdeflate.h>
+#include <zlib.h>
 
 #include <rivet/data/dag.hpp>
 #include <rivet/data/toc.hpp>
@@ -26,7 +26,7 @@ using namespace rivet::structures;
 
 namespace rivet::data {
 	std::vector<uint32_t>
-	load_array_partition(const std::shared_ptr<rivet_array<uint32_t, RIVET_ALIGNMENT>> &array, rivet_off index) {
+	load_array_partition(const std::shared_ptr<rivet_array<uint32_t>> &array, rivet_off index) {
 		std::vector<uint32_t> vector;
 
 		while (index <= array->size() && array->get(index) != 0xFFFFFFFF) {
@@ -35,12 +35,13 @@ namespace rivet::data {
 
 		return vector;
 	}
+
 	void
 	dependency_dag::insert_dag_data(rivet_size index,
-									const std::shared_ptr<rivet_array<uint32_t, RIVET_ALIGNMENT>> &links,
-									const std::shared_ptr<rivet_array<rivet_off, RIVET_ALIGNMENT>> &heads,
-									const std::shared_ptr<rivet_array<rivet_off, RIVET_ALIGNMENT>> &names,
-									const std::shared_ptr<rivet_array<rivet_asset_type, RIVET_ALIGNMENT>> &types,
+									const std::shared_ptr<rivet_array<uint32_t>> &links,
+									const std::shared_ptr<rivet_array<rivet_off>> &heads,
+									const std::shared_ptr<rivet_array<rivet_off>> &names,
+									const std::shared_ptr<rivet_array<rivet_asset_type>> &types,
 									std::string_view name,
 									bool is_ephemeral) noexcept {
 		std::vector<std::weak_ptr<rivet_asset>> assets{};
@@ -59,7 +60,7 @@ namespace rivet::data {
 				{},
 				rivet_locale::None,
 				rivet_asset_category::Game,
-				{false, false, false, true},
+				{false, false, false, true, false},
 				{},
 				{},
 
@@ -106,29 +107,38 @@ namespace rivet::data {
 		}
 	}
 
-	std::shared_ptr<rivet_data_array> get_data_buffer(const std::shared_ptr<rivet_data_array>& stream) {
+	std::shared_ptr<rivet_data_array> get_dag_data_buffer(const std::shared_ptr<rivet_data_array>& stream) {
 		if (stream->size() < sizeof(dependency_dag::dependency_dag_header)) {
 			throw invalid_tag_error();
 		}
 
 		auto header = stream->get<dependency_dag::dependency_dag_header>(0);
 
+		if(header.type_id == dat1::magic) {
+			return stream;
+		}
+
 		if (header.type_id == dependency_dag::magic) {
 			return stream->slice(sizeof(dependency_dag::dependency_dag_header));
-		} else if (header.type_id != dependency_dag::magic_compressed) {
+		} else if (header.type_id == dependency_dag::magic_compressed) {
 			auto buffer = std::make_shared<rivet_data_array>(nullptr, header.size);
-			auto compressed_buffer = stream->slice(sizeof(dependency_dag::dependency_dag_header), header.compressed_size);
 
-			auto decompressor = libdeflate_alloc_decompressor();
-			auto result = libdeflate_zlib_decompress(decompressor,
-													 compressed_buffer->data(),
-													 compressed_buffer->size(),
-													 buffer->data(),
-													 buffer->size(),
-													 nullptr);
-			libdeflate_free_decompressor(decompressor);
+			z_stream zs;
+			zs.zalloc = Z_NULL;
+			zs.zfree = Z_NULL;
+			zs.opaque = Z_NULL;
+			zs.avail_in = stream->size() - sizeof(dependency_dag::dependency_dag_header);
+			zs.next_in = stream->data() + sizeof(dependency_dag::dependency_dag_header);
+			zs.avail_out = header.size;
+			zs.next_out = buffer->data();
 
-			if (result == 0) {
+			auto ret = inflateInit(&zs);
+			if (ret != Z_OK) {
+				throw decompression_error();
+			}
+
+			ret = inflate(&zs, Z_PARTIAL_FLUSH);
+			if (ret != Z_OK && zs.avail_out != 0 && zs.avail_in != 0) {
 				throw decompression_error();
 			}
 
@@ -140,13 +150,8 @@ namespace rivet::data {
 
 	dependency_dag::dependency_dag(const std::shared_ptr<rivet_data_array>& stream,
 								   const std::shared_ptr<archive_toc> &toc)
-								   : dat1(get_data_buffer(stream)), toc(toc) {
-		if (header.type_id != type_id) {
-			throw invalid_tag_error();
-		}
-
-		dag_header = stream->get<dependency_dag_header>(0);
-		if (dag_header.type_id != magic) {
+								   : dat1(get_dag_data_buffer(stream)), toc(toc) {
+		if (header.schema != type_id) {
 			throw invalid_tag_error();
 		}
 
