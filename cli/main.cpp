@@ -64,10 +64,10 @@ int main(int argv, char **argc) {
 		game->load_streamed_files_list(streamed_files_path);
 	}
 
-	std::filesystem::path dump(argc[2]);
 
 	auto root_prefix = std::string("d/");
-	/*
+
+	std::filesystem::path dump(argc[2]);
 	std::filesystem::path dag_path = dump / root_prefix / "missing.txt";
 	std::filesystem::create_directories(dag_path.parent_path());
 	std::ofstream dag_file(dag_path, std::ios::out);
@@ -80,7 +80,6 @@ int main(int argv, char **argc) {
 		dag_file << asset.second->name.value() << std::endl;
 	}
 	dag_file.close();
-	*/
 
 	for(auto locale_id = 0; locale_id < 32; locale_id++) {
 		auto locale = static_cast<rivet_locale>(locale_id);
