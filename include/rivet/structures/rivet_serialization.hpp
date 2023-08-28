@@ -11,6 +11,7 @@
 #include <unordered_map>
 #include <memory>
 
+#include <rivet/rivet_array.hpp>
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::structures {
@@ -26,16 +27,16 @@ namespace rivet::structures {
 		float32,
 		float64,
 		string,
-		global_string, // dat1 header offset?
-		bitfield, // equivalent to uint64, but maps to an enum
-		object, // nested object, no idea how to determine the subtype in polymorphic structures
+		enum_value,
+		bitfield,
+		object,
 		none,
-		boolean, // equivalent to uint8
-		asset, // string
-		persistent_instance_id, // equivalent to uint64, also known as tuid
-		buffer, // byte buffer??
-		unknown19, // unused?
-		id = 0x14, // equivalent to uint64
+		boolean,
+		file,
+		tuid,
+		json,
+		unknown19,
+		instance_id = 0x14,
 		max = 0x14
 	};
 
@@ -77,9 +78,10 @@ namespace rivet::structures {
 
 	struct rivet_serialized_object;
 
-	typedef std::variant<uint8_t, uint16_t, uint32_t, uint64_t, int8_t, int16_t, int32_t, int64_t, float, double,
-	                     std::shared_ptr<std::string_view>, rivet_hash, rivet_checksum, std::shared_ptr<rivet_serialized_object>,
-						 bool, rivet_asset_id, std::nullptr_t> rivet_serialized_value;
+	typedef std::variant<uint64_t, int64_t, double, bool, std::nullptr_t,
+						 std::shared_ptr<std::string_view>,
+						 std::shared_ptr<rivet_serialized_object>,
+						 std::shared_ptr<rivet_data_array>> rivet_serialized_value;
 
 	struct rivet_serialized_object {
 		std::unordered_map<std::shared_ptr<std::string_view>, std::vector<rivet_serialized_value>> values = {};
