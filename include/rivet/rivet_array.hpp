@@ -4,20 +4,20 @@
 
 #pragma once
 
-#include <type_traits>
 #include <algorithm>
 #include <cstdint>
-#include <iterator>
 #include <filesystem>
 #include <fstream>
+#include <iterator>
 #include <memory>
 #include <new>
 #include <string>
-#include <vector>
+#include <type_traits>
 #include <utility>
+#include <vector>
 
-#include <rivet/rivet_keywords.hpp>
 #include <rivet/exceptions.hpp>
+#include <rivet/rivet_keywords.hpp>
 
 #ifndef RIVET_ALIGNMENT
 	#define RIVET_ALIGNMENT 16
@@ -54,9 +54,9 @@ namespace rivet {
 				return tmp;
 			}
 
-			friend bool operator==(const iterator &a, const iterator &b) noexcept { return a.array_ptr == b.array_ptr; };
+			friend bool operator==(const iterator &lhs, const iterator &rhs) noexcept { return lhs.array_ptr == rhs.array_ptr; };
 
-			friend bool operator!=(const iterator &a, const iterator &b) noexcept { return a.array_ptr != b.array_ptr; };
+			friend bool operator!=(const iterator &lhs, const iterator &rhs) noexcept { return lhs.array_ptr != rhs.array_ptr; };
 
 			pointer array_ptr;
 		};
@@ -84,11 +84,7 @@ namespace rivet {
 		}
 
 	public:
-		rivet_array() {
-			length = 0;
-			offset = 0;
-			ptr = nullptr;
-		}
+		rivet_array() : ptr(nullptr) { }
 
 		rivet_array(T *ptr, rivet_size64 size) : length(size) {
 			alloc(size);
@@ -108,8 +104,6 @@ namespace rivet {
 		rivet_array(std::shared_ptr<uint8_t[]> ptr, rivet_size64 length, rivet_off64 offset) : ptr(std::move(ptr)),
 																							   length(length),
 																							   offset(offset) {}
-
-		RIVET_DELETE_COPY(rivet_array)
 
 		[[nodiscard]] RIVET_INLINE T *data() const noexcept { return reinterpret_cast<T *>(ptr.get() + offset); }
 
@@ -229,7 +223,7 @@ namespace rivet {
 		}
 
 		template<typename U = T>
-		requires(sizeof(U) <= 2 && std::is_same<U, T>::value && std::is_integral<U>::value)
+		requires(sizeof(U) <= 2 && std::is_same_v<U, T> && std::is_integral_v<U>)
 		[[maybe_unused]] void ensure_null_terminated() noexcept {
 			auto buffer = ptr;
 			if (buffer[byte_size() - 1] != 0) {
@@ -241,14 +235,14 @@ namespace rivet {
 		}
 
 		template<typename U = T>
-		requires(sizeof(U) == 1 && std::is_same<U, T>::value && std::is_integral<U>::value)
+		requires(sizeof(U) == 1 && std::is_same_v<U, T> && std::is_integral_v<U>)
 		[[maybe_unused]] std::string to_string() noexcept {
 			ensure_null_terminated<U>();
 			return std::string(reinterpret_cast<char *>(data()), byte_size());
 		}
 
 		template<typename U = T>
-		requires(sizeof(U) <= 2 && std::is_integral<U>::value)
+		requires(sizeof(U) <= 2 && std::is_integral_v<U>)
 		[[maybe_unused]] std::wstring to_wstring() noexcept {
 			if (sizeof(U) == 1) {
 				return std::wstring(to_string());
@@ -259,14 +253,14 @@ namespace rivet {
 		}
 
 		template<typename U = T>
-		requires(sizeof(U) == 1 && std::is_integral<U>::value)
+		requires(sizeof(U) == 1 && std::is_integral_v<U>)
 		[[maybe_unused]] [[nodiscard]] std::string_view to_string_view() const noexcept {
 			ensure_null_terminated<U>();
 			return std::string_view(reinterpret_cast<char *>(data()), byte_size());
 		}
 
 		template<typename U = T>
-		requires(sizeof(U) <= 2 && std::is_integral<U>::value)
+		requires(sizeof(U) <= 2 && std::is_integral_v<U>)
 		[[maybe_unused]] [[nodiscard]] std::wstring_view to_wstring_view() const noexcept {
 			if (sizeof(U) == 1) {
 				return std::wstring_view(to_string_view());
@@ -277,14 +271,14 @@ namespace rivet {
 		}
 
 		template<typename U = T>
-		requires(sizeof(U) == 1 && std::is_integral<U>::value)
+		requires(sizeof(U) == 1 && std::is_integral_v<U>)
 		[[maybe_unused]] [[nodiscard]] std::stringstream to_string_stream() const noexcept {
 			ensure_null_terminated();
 			return std::stringstream(reinterpret_cast<char *>(data()), std::ios::in | std::ios::out);
 		}
 
 		template<typename U = T>
-		requires(sizeof(U) <= 2 && std::is_integral<U>::value)
+		requires(sizeof(U) <= 2 && std::is_integral_v<U>)
 		[[maybe_unused]] [[nodiscard]] std::wstringstream to_wstring_stream() const noexcept {
 			ensure_null_terminated();
 			return std::wstringstream(reinterpret_cast<wchar_t *>(data()), std::ios::in | std::ios::out);
@@ -333,4 +327,4 @@ namespace rivet {
 	};
 
 	using rivet_data_array = rivet_array<uint8_t>;
-}
+} // namespace rivet

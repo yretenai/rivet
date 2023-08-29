@@ -4,23 +4,23 @@
 
 #pragma once
 
-#include <cstdint>
 #include <array>
+#include <cstdint>
+#include <memory>
 #include <string_view>
 #include <unordered_map>
-#include <memory>
 #include <vector>
 
 #include <rivet/data/dat1.hpp>
 #include <rivet/hash/type_id.hpp>
-#include <rivet/rivet_keywords.hpp>
 #include <rivet/rivet_array.hpp>
+#include <rivet/rivet_keywords.hpp>
 
 namespace rivet {
 	namespace structures {
 		struct rivet_archive;
 		struct rivet_asset;
-	}
+	} // namespace structures
 
 	namespace data {
 		struct RIVET_SHARED archive_toc : dat1 {
@@ -52,11 +52,13 @@ namespace rivet {
 			std::array<std::array<std::array<std::vector<std::shared_ptr<rivet::structures::rivet_asset>>, 2>, 4>, 32> groups = {};
 			uint32_t streamed_texture_count = 0;
 
-			explicit RIVET_DECL archive_toc(const std::shared_ptr<rivet_data_array> &stream);
-			RIVET_DELETE_COPY(archive_toc)
+			explicit RIVET_ABI archive_toc(const std::shared_ptr<rivet_data_array> &stream);
 
-			[[maybe_unused]] [[nodiscard]] std::vector<std::shared_ptr<rivet::structures::rivet_asset>> get_group(rivet_locale locale, rivet_asset_category category, bool raw) const;
-			[[nodiscard]] std::shared_ptr<rivet::structures::rivet_asset> get_asset(rivet_asset_id id, rivet_locale locale, rivet_asset_category category, bool raw) const;
+			[[maybe_unused]] [[nodiscard]] std::vector<std::shared_ptr<rivet::structures::rivet_asset>>
+			RIVET_ABI get_group(rivet_locale locale, rivet_asset_category category, bool raw) const;
+
+			[[nodiscard]] std::shared_ptr<rivet::structures::rivet_asset>
+			RIVET_ABI get_asset(rivet_asset_id asset_id, rivet_locale locale, rivet_asset_category category, bool raw) const;
 		};
-	}
-}
+	} // namespace data
+} // namespace rivet

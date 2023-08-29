@@ -36,4 +36,4 @@ namespace rivet::data {
 
 		return entry->second.second;
 	}
-}
+} // namespace rivet::data

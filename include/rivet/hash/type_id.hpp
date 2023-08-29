@@ -4,13 +4,14 @@
 
 #pragma once
 
+#include <array>
 #include <cstdint>
 #include <string_view>
 
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::hash {
-	constexpr const static uint32_t crc32_table[256] = {
+	constexpr const static std::array<uint32_t, 256> crc32_table = {
 			0x00000000, 0x77073096, 0xee0e612c, 0x990951ba, 0x076dc419, 0x706af48f, 0xe963a535, 0x9e6495a3,
 			0x0edb8832, 0x79dcb8a4, 0xe0d5e91e, 0x97d2d988, 0x09b64c2b, 0x7eb17cbd, 0xe7b82d07, 0x90bf1d91,
 			0x1db71064, 0x6ab020f2, 0xf3b97148, 0x84be41de, 0x1adad47d, 0x6ddde4eb, 0xf4d4b551, 0x83d385c7,
@@ -45,8 +46,9 @@ namespace rivet::hash {
 			0xb3667a2e, 0xc4614ab8, 0x5d681b02, 0x2a6f2b94, 0xb40bbe37, 0xc30c8ea1, 0x5a05df1b, 0x2d02ef8d
 	};
 
-	constexpr static rivet_type_id hash_type_id(const std::string_view &value, rivet_type_id hash = 0xedb88320u) noexcept {
-		for (char letter: value) {
+	constexpr static
+	rivet_type_id RIVET_ABI hash_type_id(const std::string_view &value, rivet_type_id hash = 0xedb88320u) noexcept {
+		for (const char letter: value) {
 			hash = crc32_table[(hash ^ letter) & 0xff] ^ (hash >> 8);
 		}
 
@@ -64,4 +66,4 @@ namespace rivet::hash {
 #define RIVET_DEFINE_TYPE_ID(id, name) \
     constexpr const static std::string_view id ## _type_name = name; \
     constexpr const static rivet_type_id id ## _type_id = rivet::hash::type_id<id ## _type_name>::value
-}
+} // namespace rivet::hash

@@ -12,7 +12,7 @@
 	#endif
 	#define RIVET_INLINE inline
 	#define RIVET_DEBUG_BREAK __debugbreak()
-	#define RIVET_DECL __stdcall
+	#define RIVET_ABI __stdcall
 #else
 	#ifdef RIVET_EXPORTING
 		#define RIVET_SHARED __attribute__ ((visibility ("default"))) __attribute__((unused))
@@ -34,7 +34,7 @@
 			#endif
 		#endif
 	#endif
-	#define RIVET_DECL
+	#define RIVET_ABI
 #endif
 
 #ifndef RIVET_DEBUG_BREAK
@@ -43,13 +43,9 @@
 
 #include <cstdint>
 
-#define RIVET_DELETE_COPY(TYPE_NAME) \
-TYPE_NAME(TYPE_NAME const&) = delete; \
-TYPE_NAME& operator=(TYPE_NAME const&) = delete;
-
 namespace rivet {
-	typedef uint32_t rivet_hash;
-	typedef rivet_hash rivet_type_id;
+	using rivet_hash = uint32_t;
+	using rivet_type_id = rivet_hash;
 
 	// top 2 bits
 	enum class rivet_type_id_flags : uint8_t {
@@ -79,10 +75,10 @@ namespace rivet {
 		PortugueseBR,
 		Arabic,
 		Turkish,
-		SpanishLatinAmerica,
+		SpanishLATAM,
 		ChineseSimplified,
 		ChineseTraditional,
-		FrenchCanada,
+		FrenchCA,
 		Czech,
 		Hungarian,
 		Greek,
@@ -102,16 +98,16 @@ namespace rivet {
 		Max
 	};
 
-	typedef uint64_t rivet_checksum;
-	typedef rivet_checksum rivet_asset_id; // top 2 bits are rivet_type_id_flags
+	using rivet_checksum = uint64_t;
+	using rivet_asset_id = rivet_checksum; // top 2 bits are rivet_type_id_flags
 
-	typedef uint32_t rivet_size;
-	typedef int32_t rivet_ssize;
-	typedef uint32_t rivet_off;
-	typedef int32_t rivet_soff;
+	using rivet_size = uint32_t;
+	using rivet_ssize = int32_t;
+	using rivet_off = uint32_t;
+	using rivet_soff = int32_t;
 
-	typedef uint64_t rivet_size64;
-	typedef int64_t rivet_ssize64;
-	typedef uint64_t rivet_off64;
-	typedef int64_t rivet_soff64;
-};
+	using rivet_size64 = uint64_t;
+	using rivet_ssize64 = int64_t;
+	using rivet_off64 = uint64_t;
+	using rivet_soff64 = int64_t;
+} // namespace rivet

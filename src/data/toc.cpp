@@ -2,10 +2,10 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <cstring>
 #include <cstdint>
-#include <set>
+#include <cstring>
 #include <memory>
+#include <set>
 #include <string>
 #include <unordered_map>
 #include <utility>
@@ -13,11 +13,11 @@
 
 #include <zlib.h>
 
-#include <rivet/data/toc.hpp>
 #include <rivet/data/dat1.hpp>
-#include <rivet/rivet_keywords.hpp>
+#include <rivet/data/toc.hpp>
 #include <rivet/exceptions.hpp>
 #include <rivet/rivet_array.hpp>
+#include <rivet/rivet_keywords.hpp>
 #include <rivet/rivet_string_pool.hpp>
 #include <rivet/structures/rivet_archive.hpp>
 #include <rivet/structures/rivet_asset.hpp>
@@ -39,25 +39,28 @@ namespace rivet::data {
 
 		if (header.type_id == archive_toc::magic) {
 			return stream->slice(sizeof(archive_toc::archive_toc_header));
-		} else if (header.type_id == archive_toc::magic_compressed) {
+		}
+
+		if (header.type_id == archive_toc::magic_compressed) {
 			auto buffer = std::make_shared<rivet_data_array>(nullptr, header.size);
+			auto slice = stream->slice(sizeof(archive_toc::archive_toc_header));
 
-			z_stream zs;
-			zs.zalloc = Z_NULL;
-			zs.zfree = Z_NULL;
-			zs.opaque = Z_NULL;
-			zs.avail_in = stream->size() - sizeof(archive_toc::archive_toc_header);
-			zs.next_in = stream->data() + sizeof(archive_toc::archive_toc_header);
-			zs.avail_out = header.size;
-			zs.next_out = buffer->data();
+			z_stream zstream;
+			zstream.zalloc = Z_NULL;
+			zstream.zfree = Z_NULL;
+			zstream.opaque = Z_NULL;
+			zstream.avail_in = slice->size();
+			zstream.next_in = slice->data();
+			zstream.avail_out = header.size;
+			zstream.next_out = buffer->data();
 
-			auto ret = inflateInit(&zs);
+			auto ret = inflateInit(&zstream);
 			if (ret != Z_OK) {
 				throw decompression_error();
 			}
 
-			ret = inflate(&zs, Z_FULL_FLUSH);
-			if (ret != Z_OK && zs.avail_out != 0 && zs.avail_in != 0) {
+			ret = inflate(&zstream, Z_FULL_FLUSH);
+			if (ret != Z_OK && zstream.avail_out != 0 && zstream.avail_in != 0) {
 				throw decompression_error();
 			}
 
@@ -72,7 +75,7 @@ namespace rivet::data {
 			throw invalid_tag_error();
 		}
 
-		bool is_spider = header.schema == type_id_spider;
+		bool const is_spider = header.schema == type_id_spider;
 
 		auto textures_header = get_section_data(texture_header_type_id);
 		std::shared_ptr<rivet_array<rivet_archive_raw>> archives_section;
@@ -88,7 +91,7 @@ namespace rivet::data {
 				auto entry = archives_spider_section->get(i);
 				auto existing = archives_section->get(i);
 				existing.unknown = entry.chunk_id;
-				std::memcpy(existing.name, entry.name, sizeof(entry.name));
+				std::copy(entry.name.begin(), entry.name.end(), existing.name.begin());
 				archives_section->set(i, existing);
 			}
 		} else {
@@ -157,7 +160,7 @@ namespace rivet::data {
 		for (auto archive_entry: *archives_section) {
 			std::string_view view;
 			if (is_spider) {
-				auto str = rivet_string_pool::alloc_string(archive_entry.name);
+				auto str = rivet_string_pool::alloc_string(std::string_view(archive_entry.name.data(), archive_entry.name.size()));
 				view = std::string_view(*str);
 			} else {
 				view = archives_section->to_cstring_view(archive_index++);
@@ -191,7 +194,7 @@ namespace rivet::data {
 
 		for (rivet_size i = 0; i < ids_section->size(); ++i) {
 			auto full_id = ids_section->get(i);
-			auto id = full_id & 0xbfffffffffffffff; // strip localized flag.
+			auto generic_id = full_id & 0xbfffffffffffffff; // strip localized flag.
 
 			rivet_size group_id = 0xFFFFFFFF;
 			if (groups_section != nullptr) {
@@ -214,7 +217,7 @@ namespace rivet::data {
 
 			auto info = assets_section->get(i);
 			auto archive = archives[info.archive_id];
-			auto chunk_entry = chunk_map.find(id);
+			auto chunk_entry = chunk_map.find(generic_id);
 			std::optional<rivet_asset_header> meta;
 			if (info.metadata_offset != 0xFFFFFFFF && asset_headers != nullptr) {
 				auto normalized = info.metadata_offset / sizeof(rivet_asset_header);
@@ -239,7 +242,7 @@ namespace rivet::data {
 				texture_header = chunk_entry->second;
 			}
 
-			auto is_key = key_asset_lookup.find(id) != key_asset_lookup.end();
+			auto is_key = key_asset_lookup.find(generic_id) != key_asset_lookup.end();
 
 			auto asset = std::make_shared<rivet_asset>();
 			asset->id = full_id;
@@ -263,10 +266,10 @@ namespace rivet::data {
 				groups[group_id / 8][(group_id / 2) % 4][is_raw ? 1 : 0].emplace_back(asset);
 			}
 
-			if (asset_lookup.find(id) == asset_lookup.end()) {
-				asset_lookup[id] = {};
+			if (asset_lookup.find(generic_id) == asset_lookup.end()) {
+				asset_lookup[generic_id] = {};
 			}
-			asset_lookup[id].emplace_back(asset);
+			asset_lookup[generic_id].emplace_back(asset);
 		}
 	}
 
@@ -284,7 +287,7 @@ namespace rivet::data {
 	}
 
 	std::shared_ptr<rivet::structures::rivet_asset>
-	archive_toc::get_asset(rivet_asset_id id, rivet_locale locale, rivet_asset_category category, bool raw) const {
+	archive_toc::get_asset(rivet_asset_id asset_id, rivet_locale locale, rivet_asset_category category, bool raw) const {
 		if(locale >= rivet_locale::Max) {
 			return nullptr;
 		}
@@ -293,25 +296,25 @@ namespace rivet::data {
 			return nullptr;
 		}
 
-		auto find_check = [id](const std::shared_ptr<rivet::structures::rivet_asset> &asset) {
+		auto find_check = [asset_id](const std::shared_ptr<rivet::structures::rivet_asset> &asset) {
 			if(asset == nullptr) {
 				return false;
 			}
 
-			return asset->id == id;
+			return asset->id == asset_id;
 		};
 
 		auto group = get_group(locale, category, raw);
-		auto it = std::find_if(group.begin(), group.end(), find_check);
+		auto iter = std::find_if(group.begin(), group.end(), find_check);
 
-		if(it == group.end()) {
+		if(iter == group.end()) {
 			// fallback to english
 			if(locale != rivet_locale::None && locale != rivet_locale::English) {
 				locale = rivet_locale::English;
 				auto en_group = get_group(locale, category, raw);
-				it = std::find_if(en_group.begin(), en_group.end(), find_check);
-				if(it != en_group.end()) {
-					return *it;
+				iter = std::find_if(en_group.begin(), en_group.end(), find_check);
+				if(iter != en_group.end()) {
+					return *iter;
 				}
 			}
 
@@ -319,15 +322,15 @@ namespace rivet::data {
 			if(locale != rivet_locale::None) {
 				locale = rivet_locale::None;
 				auto global_group = get_group(locale, category, raw);
-				it = std::find_if(global_group.begin(), global_group.end(), find_check);
-				if(it != global_group.end()) {
-					return *it;
+				iter = std::find_if(global_group.begin(), global_group.end(), find_check);
+				if(iter != global_group.end()) {
+					return *iter;
 				}
 			}
 
 			return nullptr;
 		}
 
-		return *it;
+		return *iter;
 	}
-}
+} // namespace rivet::data

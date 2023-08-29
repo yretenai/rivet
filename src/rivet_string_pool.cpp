@@ -21,4 +21,4 @@ namespace rivet {
 		string_pool.emplace_back(ptr);
 		return ptr;
 	}
-}
+} // namespace rivet

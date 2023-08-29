@@ -6,9 +6,9 @@
 
 #include <cstdint>
 #include <memory>
+#include <string>
 #include <unordered_map>
 #include <utility>
-#include <string>
 
 #include <rivet/rivet_array.hpp>
 #include <rivet/rivet_keywords.hpp>
@@ -39,13 +39,12 @@ namespace rivet::data {
 		std::unordered_map<rivet_type_id, std::pair<data_entry_t, std::shared_ptr<rivet_data_array>>> sections;
 		std::string_view type_name = {};
 
-		explicit dat1(const std::shared_ptr<rivet_data_array> &stream);
-		RIVET_DELETE_COPY(dat1)
+		explicit RIVET_ABI dat1(const std::shared_ptr<rivet_data_array> &stream);
 
-		[[nodiscard]] std::shared_ptr<rivet_data_array> get_section_data(rivet_type_id type_id) const;
+		[[nodiscard]] std::shared_ptr<rivet_data_array> RIVET_ABI get_section_data(rivet_type_id type_id) const;
 
 		template<typename T>
-		std::shared_ptr<rivet_array<T>> get_section(rivet_type_id type_id) const {
+		std::shared_ptr<rivet_array<T>> RIVET_ABI get_section(rivet_type_id type_id) const {
 			auto data = get_section_data(type_id);
 			if (data == nullptr) {
 				return nullptr;
@@ -54,4 +53,4 @@ namespace rivet::data {
 			return data->cast<T>();
 		}
 	};
-}
+} // namespace rivet::data

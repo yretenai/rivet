@@ -6,6 +6,8 @@
 
 #include <stdexcept>
 
+#include <rivet/rivet_keywords.hpp>
+
 namespace rivet {
 	struct not_implemented_error : std::logic_error {
 		not_implemented_error() : std::logic_error("not implemented, sorry") {
@@ -62,4 +64,4 @@ namespace rivet {
 			RIVET_DEBUG_BREAK;
 		}
 	};
-}
+} // namespace rivet

@@ -4,18 +4,18 @@
 
 #pragma once
 
+#include <memory>
 #include <string>
 #include <string_view>
 #include <unordered_map>
 #include <utility>
 #include <vector>
-#include <memory>
 
 #include <rivet/data/dat1.hpp>
 #include <rivet/hash/type_id.hpp>
-#include <rivet/structures/rivet_asset.hpp>
-#include <rivet/rivet_keywords.hpp>
 #include <rivet/rivet_array.hpp>
+#include <rivet/rivet_keywords.hpp>
+#include <rivet/structures/rivet_asset.hpp>
 
 namespace rivet::data {
 	struct archive_toc;
@@ -45,16 +45,15 @@ namespace rivet::data {
 		std::vector<std::vector<std::pair<std::string_view, rivet_asset_id>>> groups;
 		std::shared_ptr<archive_toc> toc;
 
-		explicit RIVET_DECL dependency_dag(const std::shared_ptr<rivet_data_array> &stream,
-										   const std::shared_ptr<archive_toc> &toc);
-		RIVET_DELETE_COPY(dependency_dag)
+		explicit RIVET_ABI dependency_dag(const std::shared_ptr<rivet_data_array> &stream,
+										  const std::shared_ptr<archive_toc> &toc);
 
 	private:
-		void insert_dag_data(rivet_size index,
-							 const std::shared_ptr<rivet_array<uint32_t>> &links,
-							 const std::shared_ptr<rivet_array<rivet_off>> &heads,
-							 const std::shared_ptr<rivet_array<rivet_off>> &names,
-							 const std::shared_ptr<rivet_array<rivet::structures::rivet_asset_type>> &types,
-							 std::string_view name, bool is_ephemeral = false) const noexcept;
+		void RIVET_ABI insert_dag_data(rivet_size index,
+									   const std::shared_ptr<rivet_array<uint32_t>> &links,
+									   const std::shared_ptr<rivet_array<rivet_off>> &heads,
+									   const std::shared_ptr<rivet_array<rivet_off>> &names,
+									   const std::shared_ptr<rivet_array<rivet::structures::rivet_asset_type>> &types,
+									   std::string_view name, bool is_ephemeral = false) const;
 	};
-}
+} // namespace rivet::data

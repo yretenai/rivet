@@ -4,15 +4,16 @@
 
 #pragma once
 
-#include <string_view>
+#include <algorithm>
+#include <array>
 #include <cstdint>
 #include <string>
-#include <algorithm>
+#include <string_view>
 
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::hash {
-	constexpr const static uint64_t crc64_table[256] = {
+	constexpr const static std::array<uint64_t, 256> crc64_table = {
 			0x0000000000000000, 0xb32e4cbe03a75f6f, 0xf4843657a840a05b, 0x47aa7ae9abe7ff34, 0x7bd0c384ff8f5e33, 0xc8fe8f3afc28015c, 0x8f54f5d357cffe68, 0x3c7ab96d5468a107,
 			0xf7a18709ff1ebc66, 0x448fcbb7fcb9e309, 0x0325b15e575e1c3d, 0xb00bfde054f94352, 0x8c71448d0091e255, 0x3f5f08330336bd3a, 0x78f572daa8d1420e, 0xcbdb3e64ab761d61,
 			0x7d9ba13851336649, 0xceb5ed8652943926, 0x891f976ff973c612, 0x3a31dbd1fad4997d, 0x064b62bcaebc387a, 0xb5652e02ad1b6715, 0xf2cf54eb06fc9821, 0x41e11855055bc74e,
@@ -47,39 +48,41 @@ namespace rivet::hash {
 			0xdcd7181e300f9e5e, 0x6ff954a033a8c131, 0x28532e49984f3e05, 0x9b7d62f79be8616a, 0xa707db9acf80c06d, 0x14299724cc279f02, 0x5383edcd67c06036, 0xe0ada17364673f59
 	};
 
-	constexpr static rivet_asset_id
-	hash_checksum(const std::string_view &value, rivet_asset_id hash = 0xc96c5795d7870f42) noexcept {
-		for (char letter: value) {
+	constexpr static
+	rivet_asset_id RIVET_ABI hash_checksum(const std::string_view &value, rivet_asset_id hash = 0xc96c5795d7870f42) noexcept {
+		for (const char letter: value) {
 			hash = crc64_table[(hash ^ static_cast<uint8_t>(letter)) & 0xff] ^ (hash >> 8);
 		}
 
 		return hash;
 	}
 
-	constexpr static rivet_asset_id
-	hash_asset_id(const std::string_view &value, rivet_checksum hash = 0xc96c5795d7870f42,
+	constexpr static
+	rivet_asset_id RIVET_ABI hash_asset_id(const std::string_view &value, rivet_checksum hash = 0xc96c5795d7870f42,
 				  rivet_type_id_flags flags = rivet_type_id_flags::SHIPPED) noexcept {
 		// lowercase and replace \\ with /
-		uint64_t flags_full = static_cast<uint64_t>(flags) << 62;
+		const auto flags_full = static_cast<uint64_t>(flags) << 62;
 		return (hash_checksum(value, hash) >> 2) | flags_full;
 	}
 
-	constexpr static void normalize_asset_path(std::string &value) noexcept {
+	constexpr static
+	void RIVET_ABI normalize_asset_path(std::string &value) noexcept {
 		std::transform(value.begin(), value.end(), value.begin(),
-					   [](char c) {
-						   if (c == '\\') {
+					   [](char letter) {
+						   if (letter == '\\') {
 							   return '/';
 						   }
 
-						   if (c >= 'A' && c <= 'Z') {
-							   return static_cast<char>(c | 0x20);
+						   if (letter >= 'A' && letter <= 'Z') {
+							   return static_cast<char>(letter | 0x20);
 						   }
 
-						   return c;
+						   return letter;
 					   });
 	}
 
-	constexpr static rivet_asset_id hash_asset_id(std::string value, rivet_asset_id hash = 0xc96c5795d7870f42,
+	constexpr static
+	rivet_asset_id RIVET_ABI hash_asset_id(std::string value, rivet_asset_id hash = 0xc96c5795d7870f42,
 												  rivet_type_id_flags flags = rivet_type_id_flags::SHIPPED) noexcept {
 		normalize_asset_path(value);
 
@@ -98,4 +101,4 @@ namespace rivet::hash {
 
 	constexpr const static std::string_view asset_id_test_name = "test/asset.bin";
 	static_assert(asset_id<asset_id_test_name>::value == 0xb2ef5c258e42dc6a);
-}
+} // namespace rivet::hash

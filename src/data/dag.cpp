@@ -12,24 +12,24 @@
 #include <zlib.h>
 
 #include <rivet/data/dag.hpp>
-#include <rivet/data/toc.hpp>
 #include <rivet/data/dat1.hpp>
-#include <rivet/hash/asset_id.hpp>
-#include <rivet/structures/rivet_asset.hpp>
+#include <rivet/data/toc.hpp>
 #include <rivet/exceptions.hpp>
+#include <rivet/hash/asset_id.hpp>
 #include <rivet/rivet_array.hpp>
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/rivet_string_pool.hpp>
+#include <rivet/structures/rivet_asset.hpp>
 
 using namespace rivet;
 using namespace rivet::structures;
 
 namespace rivet::data {
-	std::vector<uint32_t>
-	load_array_partition(const std::shared_ptr<rivet_array<uint32_t>> &array, rivet_off index) {
+	auto
+	load_array_partition(const std::shared_ptr<rivet_array<uint32_t>> &array, rivet_off index) -> std::vector<uint32_t> {
 		std::vector<uint32_t> vector;
 
-		while (index <= array->size() && array->get(index) != 0xFFFFFFFF) {
+		while (index <= array->size() && array->get(index) != UINT32_MAX) {
 			vector.emplace_back(array->get(index++));
 		}
 
@@ -43,27 +43,27 @@ namespace rivet::data {
 									const std::shared_ptr<rivet_array<rivet_off>> &names,
 									const std::shared_ptr<rivet_array<rivet_asset_type>> &types,
 									std::string_view name,
-									bool is_ephemeral) const noexcept {
+									bool is_ephemeral) const {
 		std::vector<std::weak_ptr<rivet_asset>> assets{};
 		auto name_str = std::string(name);
 		rivet::hash::normalize_asset_path(name_str);
-		auto id = rivet::hash::hash_asset_id(name_str);
-		if (toc->asset_lookup.find(id) == toc->asset_lookup.end()) {
+		auto asset_id = rivet::hash::hash_asset_id(name_str);
+		if (toc->asset_lookup.find(asset_id) == toc->asset_lookup.end()) {
 			if(is_ephemeral) {
 				return;
 			}
 
 			auto asset = std::make_shared<rivet_asset>();
-			asset->id = id;
+			asset->id = asset_id;
 			asset->flags.is_virtual = true,
 			asset->archive = nullptr;
 			asset->header = std::nullopt;
 			asset->texture_header = std::nullopt;
 
-			missing_assets.emplace(id, asset);
+			missing_assets.emplace(asset_id, asset);
 			assets.emplace_back(asset);
 		} else {
-			assets = toc->asset_lookup.at(id);
+			assets = toc->asset_lookup.at(asset_id);
 		}
 
 		if (assets.empty()) {
@@ -86,8 +86,8 @@ namespace rivet::data {
 
 			auto dependencies = load_array_partition(links, heads->get(index));
 			for (auto entry: dependencies) {
-				auto dependency_name_offset = names->get(entry & 0x7FFFFFFF);
-				if (dependency_name_offset == 0xFFFFFFFF) {
+				auto dependency_name_offset = names->get(entry & INT32_MAX);
+				if (dependency_name_offset == UINT32_MAX) {
 					continue;
 				}
 
@@ -111,25 +111,28 @@ namespace rivet::data {
 
 		if (header.type_id == dependency_dag::magic) {
 			return stream->slice(sizeof(dependency_dag::dependency_dag_header));
-		} else if (header.type_id == dependency_dag::magic_compressed) {
+		}
+
+		if (header.type_id == dependency_dag::magic_compressed) {
 			auto buffer = std::make_shared<rivet_data_array>(nullptr, header.size);
+			auto slice = stream->slice(sizeof(dependency_dag::dependency_dag_header));
 
-			z_stream zs;
-			zs.zalloc = Z_NULL;
-			zs.zfree = Z_NULL;
-			zs.opaque = Z_NULL;
-			zs.avail_in = stream->size() - sizeof(dependency_dag::dependency_dag_header);
-			zs.next_in = stream->data() + sizeof(dependency_dag::dependency_dag_header);
-			zs.avail_out = header.size;
-			zs.next_out = buffer->data();
+			z_stream zstream;
+			zstream.zalloc = Z_NULL;
+			zstream.zfree = Z_NULL;
+			zstream.opaque = Z_NULL;
+			zstream.avail_in = slice->size();
+			zstream.next_in = slice->data();
+			zstream.avail_out = header.size;
+			zstream.next_out = buffer->data();
 
-			auto ret = inflateInit(&zs);
+			auto ret = inflateInit(&zstream);
 			if (ret != Z_OK) {
 				throw decompression_error();
 			}
 
-			ret = inflate(&zs, Z_FULL_FLUSH);
-			if (ret != Z_OK && zs.avail_out != 0 && zs.avail_in != 0) {
+			ret = inflate(&zstream, Z_FULL_FLUSH);
+			if (ret != Z_OK && zstream.avail_out != 0 && zstream.avail_in != 0) {
 				throw decompression_error();
 			}
 
@@ -211,4 +214,4 @@ namespace rivet::data {
 			}
 		}
 	}
-}
+} // namespace rivet::data

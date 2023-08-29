@@ -2,24 +2,24 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/rivet_game.hpp>
-#include <rivet/data/toc.hpp>
 #include <rivet/data/dag.hpp>
 #include <rivet/data/dsar.hpp>
+#include <rivet/data/toc.hpp>
 #include <rivet/hash/asset_id.hpp>
-#include <rivet/structures/rivet_asset.hpp>
-#include <rivet/structures/rivet_archive.hpp>
-#include <rivet/structures/rivet_serialization.hpp>
 #include <rivet/rivet_array.hpp>
+#include <rivet/rivet_game.hpp>
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/rivet_string_pool.hpp>
+#include <rivet/structures/rivet_archive.hpp>
+#include <rivet/structures/rivet_asset.hpp>
+#include <rivet/structures/rivet_serialization.hpp>
 
 using namespace rivet::data;
 using namespace rivet::hash;
 using namespace rivet::structures;
 
 namespace rivet {
-	rivet_game::rivet_game(std::filesystem::path &&root) : root(root) {
+	rivet_game::rivet_game(const std::filesystem::path &root) : root(root) {
 		auto toc_stream = rivet::rivet_data_array::from_file(root / "toc");
 		if (toc_stream == nullptr) {
 			throw std::runtime_error("Failed to load TOC");
@@ -34,7 +34,7 @@ namespace rivet {
 		dag = std::make_shared<dependency_dag>(dag_stream, toc);
 	}
 
-	void rivet_game::load_streamed_files_list(const std::filesystem::path &path) const noexcept {
+	void rivet_game::load_streamed_files_list(const std::filesystem::path &path) const {
 		auto file = std::ifstream(path);
 		if(!file.is_open()) {
 			return;
@@ -86,4 +86,4 @@ namespace rivet {
 
 		return archive->data_stream->exists;
 	}
-}
+} // namespace rivet

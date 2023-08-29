@@ -2,16 +2,13 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#pragma clang diagnostic push
-#pragma GCC diagnostic ignored "-Wunknown-pragmas"
-#pragma clang diagnostic ignored "-Wunknown-pragmas"
-#pragma ide diagnostic ignored "OCUnusedGlobalDeclarationInspection"
 #pragma once
 
+#include <array>
 #include <cstdint>
 #include <memory>
-#include <string>
 #include <optional>
+#include <string>
 #include <utility>
 #include <vector>
 
@@ -28,6 +25,7 @@ namespace rivet::structures {
 		rivet_off metadata_offset;
 	};
 	static_assert(sizeof(rivet_asset_raw) == 16);
+
 	struct rivet_asset_raw_spider {
 		uint32_t unknown;
 		uint32_t size;
@@ -36,7 +34,7 @@ namespace rivet::structures {
 	static_assert(sizeof(rivet_asset_raw_spider) == 0xC);
 
 	struct rivet_archive_raw {
-		char name[0x30];
+		std::array<char, 0x30> name;
 		uint64_t time;
 		uint32_t version;
 		uint32_t unknown;
@@ -47,7 +45,7 @@ namespace rivet::structures {
 	struct rivet_archive_raw_spider {
 		uint32_t install_id;
 		uint32_t chunk_id;
-		char name[0x40];
+		std::array<char, 0x40> name;
 	};
 	static_assert(sizeof(rivet_archive_raw_spider) == 0x48);
 #pragma pack(pop)
@@ -135,6 +133,4 @@ namespace rivet::structures {
 		std::vector<std::pair<std::string_view, rivet_asset_id>> dependencies;
 		rivet_asset_type type;
 	};
-}
-
-#pragma clang diagnostic pop
+} // namespace rivet::structures

@@ -2,18 +2,14 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#pragma clang diagnostic push
-#pragma GCC diagnostic ignored "-Wunknown-pragmas"
-#pragma clang diagnostic ignored "-Wunknown-pragmas"
-#pragma ide diagnostic ignored "OCUnusedGlobalDeclarationInspection"
 #pragma once
 
 #include <cstdint>
+#include <memory>
 #include <string>
+#include <unordered_map>
 #include <variant>
 #include <vector>
-#include <unordered_map>
-#include <memory>
 
 #include <rivet/rivet_array.hpp>
 #include <rivet/rivet_keywords.hpp>
@@ -70,8 +66,6 @@ namespace rivet::structures {
 		}
 	};
 	static_assert(sizeof(rivet_serialization_field_header) == 8);
-	static_assert(offsetof(rivet_serialization_field_header, type_id) == 0);
-	static_assert(offsetof(rivet_serialization_field_header, meta) == 4);
 
 	struct rivet_serialization_string_header {
 		rivet_size length;
@@ -82,14 +76,12 @@ namespace rivet::structures {
 
 	struct rivet_serialized_object;
 
-	typedef std::variant<uint64_t, int64_t, double, bool, std::nullptr_t,
-						 std::shared_ptr<std::string_view>,
-						 std::shared_ptr<rivet_serialized_object>,
-						 std::shared_ptr<rivet_data_array>> rivet_serialized_value;
+	using rivet_serialized_value = std::variant<uint64_t, int64_t, double, bool, std::nullptr_t,
+												std::shared_ptr<std::string_view>,
+												std::shared_ptr<rivet_serialized_object>,
+												std::shared_ptr<rivet_data_array>>;
 
 	struct rivet_serialized_object {
 		std::unordered_map<std::shared_ptr<std::string_view>, std::vector<rivet_serialized_value>> values = {};
 	};
-}
-
-#pragma clang diagnostic pop
+} // namespace rivet::structures

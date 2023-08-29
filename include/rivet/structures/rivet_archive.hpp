@@ -2,21 +2,17 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#pragma clang diagnostic push
-#pragma GCC diagnostic ignored "-Wunknown-pragmas"
-#pragma clang diagnostic ignored "-Wunknown-pragmas"
-#pragma ide diagnostic ignored "OCUnusedGlobalDeclarationInspection"
 #pragma once
 
 #include <cstdint>
-#include <string>
 #include <memory>
+#include <string>
 #include <unordered_map>
 
 namespace rivet {
 	namespace data {
 		struct data_stream_archive;
-	}
+	} // namespace data
 
 	namespace structures {
 		struct rivet_asset;
@@ -30,7 +26,5 @@ namespace rivet {
 
 			std::shared_ptr<rivet::data::data_stream_archive> data_stream;
 		};
-	}
-}
-
-#pragma clang diagnostic pop
+	} // namespace structures
+} // namespace rivet

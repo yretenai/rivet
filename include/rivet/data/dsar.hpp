@@ -10,14 +10,14 @@
 #include <iosfwd>
 #include <memory>
 
-#include <rivet/rivet_keywords.hpp>
 #include <rivet/rivet_array.hpp>
+#include <rivet/rivet_keywords.hpp>
 
 namespace rivet {
 	namespace structures {
 		struct rivet_asset;
 		struct rivet_archive;
-	}
+	} // namespace structures
 
 	namespace data {
 		struct RIVET_SHARED data_stream_archive { // assumption: dsar = data stream archive
@@ -30,7 +30,6 @@ namespace rivet {
 				rivet_size64 total_size; // size of all chunks
 				uint64_t padding_value; // PADDING*
 			};
-			static_assert(offsetof(dsar_header, padding_value) == 24);
 			static_assert(sizeof(dsar_header) == 32);
 
 			enum class dsar_compression : uint8_t {
@@ -47,7 +46,6 @@ namespace rivet {
 				rivet_size compressed_size;
 				dsar_compression compression_type;
 			};
-			static_assert(offsetof(dsar_entry, compression_type) == 24);
 			static_assert(sizeof(dsar_entry) == 32);
 
 			std::shared_ptr<std::ifstream> base_stream;
@@ -57,12 +55,11 @@ namespace rivet {
 			bool is_compressed;
 			bool exists;
 
-			explicit RIVET_DECL data_stream_archive(const std::filesystem::path &root,
-													const std::shared_ptr<rivet::structures::rivet_archive> &archive);
-			RIVET_DELETE_COPY(data_stream_archive)
+			explicit RIVET_ABI data_stream_archive(const std::filesystem::path &root,
+												   const std::shared_ptr<rivet::structures::rivet_archive> &archive);
 
 			[[nodiscard]] std::shared_ptr<rivet_data_array>
-			read_file(const std::shared_ptr<rivet::structures::rivet_asset> &asset) const;
+			RIVET_ABI read_file(const std::shared_ptr<rivet::structures::rivet_asset> &asset) const;
 		};
-	}
-}
+	} // namespace data
+} // namespace rivet
