@@ -40,12 +40,19 @@ meson setup ../ -Drivet_tests=true
 ninja build
 ```
 
+## windows
+
 on windows, in order to run rivet you will need to have all the dll files from the dependencies in the same 
 directory as the rivet executable. you can do this by running the following command:
 
 ```bash
 meson install --destdir staging
 ```
+
+this will "install" the files into "staging", which will be a directory in the build directory.
+the resulting build files are in staging/usr/bin. these can be safely copied out of the build directory.
+
+## macOS and linux
 
 to install rivet, run the following command:
 
@@ -54,9 +61,6 @@ this is not encouraged as it will install the dependencies to your system, which
 ```bash
 meson install
 ```
-
-this will "install" the files into "staging", which will be a directory in the build directory.
-the resulting build files are in staging/usr/bin.
 
 ## usage
 
