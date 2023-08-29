@@ -24,11 +24,6 @@ if not zlib_dep.found()
     zlib_dep = dependency('zlib')
 endif
 
-snitch_dep = dependency('snitch-1.1.1', required: false)
-if not snitch_dep.found()
-    snitch_dep = dependency('snitch')
-endif
-
 nlohmann_json_dep = dependency('nlohmann_json-3.11.2', required: false)
 if not nlohmann_json_dep.found()
     nlohmann_json_dep = dependency('nlohmann_json')
@@ -38,7 +33,6 @@ gdeflate_core = subproject('GDeflate')
 gdeflate_core_dep = gdeflate_core.get_variable('gdeflate_core_dep')
 
 deps = [thread_dep, liblz4_dep, libgdeflate_dep, gdeflate_core_dep, zlib_dep, nlohmann_json_dep]
-test_deps = deps + [snitch_dep]
 
 includedir = include_directories('include/')
 
@@ -70,8 +64,14 @@ if compiler.get_id() == 'clang'
 endif
 
 subdir('src')
-subdir('cli')
-subdir('test')
+
+if not get_option('lib_only')
+    subdir('cli')
+endif
+
+if get_option('rivet_tests')
+    subdir('test')
+endif
 
 install_subdir('include/',
 	install_dir: 'include/',

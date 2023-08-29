@@ -1,0 +1,2 @@
+option('rivet_tests', type: 'boolean', value: false, description: 'build and run tests')
+option('lib_only', type: 'boolean', value: false, description: 'only build the library')
