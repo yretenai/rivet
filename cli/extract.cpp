@@ -50,7 +50,7 @@ const std::array<std::string, 32> localization_enum {
 int main(int argv, const char **argc) {
 	try {
 		if (argv < 2) {
-			std::cout << "usage: rivet-cli path/to/game path/to/dump\n";
+			std::cout << "usage: rivet-extract path/to/game path/to/dump\n";
 			return 1;
 		}
 

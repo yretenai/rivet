@@ -1,3 +1,3 @@
-executable('rivet-cli', ['main.cpp'],
+executable('rivet-extract', ['extract.cpp'],
 	dependencies: deps + [rivetdep],
 	install: true)
