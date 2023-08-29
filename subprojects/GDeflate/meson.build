@@ -35,3 +35,12 @@ gdeflate_core_dep = declare_dependency(
 install_headers(
   'include/GDeflate.h'
 )
+
+pkg_mod = import('pkgconfig')
+pkg_mod.generate(
+	name: 'GDeflateCore',
+	filebase: 'GDeflateCore',
+	description: '',
+	libraries: gdeflate_core,
+	version: '1.0.0',
+)
