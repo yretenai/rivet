@@ -11,10 +11,22 @@ namespace rivet::data {
 	dat1::dat1(const std::shared_ptr<rivet_data_array> &stream) : buffer(stream) {
 		auto tag = buffer->get<uint32_t>(0);
 		if (tag != magic) {
-			throw invalid_tag_error();
+			// check for a 36 byte header
+			tag = buffer->get<uint32_t>(36);
+			if (tag != magic) {
+				throw invalid_tag_error();
+			}
+
+			asset_header = buffer->get<rivet::structures::rivet_asset_header>(0);
+			buffer = buffer->slice(36);
 		}
 
 		header = buffer->get<data_header_t>(0);
+		if (asset_header.schema == 0) {
+			asset_header.schema = header.schema;
+			asset_header.size = header.size;
+		}
+
 		if(header.section_count > 0) {
 			auto section_headers = buffer->slice<data_entry_t>(sizeof(data_header_t), header.section_count);
 

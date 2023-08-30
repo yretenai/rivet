@@ -98,7 +98,7 @@ namespace rivet::data {
 		}
 	}
 
-	std::shared_ptr<rivet_data_array> get_dag_data_buffer(const std::shared_ptr<rivet_data_array>& stream) {
+	std::shared_ptr<rivet_data_array> dependency_dag::get_dag_data_buffer(const std::shared_ptr<rivet_data_array>& stream) {
 		if (stream->size() < sizeof(dependency_dag::dependency_dag_header)) {
 			throw invalid_tag_error();
 		}

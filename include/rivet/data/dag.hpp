@@ -48,6 +48,8 @@ namespace rivet::data {
 		explicit RIVET_ABI dependency_dag(const std::shared_ptr<rivet_data_array> &stream,
 										  const std::shared_ptr<archive_toc> &toc);
 
+		static std::shared_ptr<rivet_data_array> RIVET_ABI get_dag_data_buffer(const std::shared_ptr<rivet_data_array>& stream);
+
 	private:
 		void RIVET_ABI insert_dag_data(rivet_size index,
 									   const std::shared_ptr<rivet_array<uint32_t>> &links,

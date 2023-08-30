@@ -12,6 +12,7 @@
 
 #include <rivet/rivet_array.hpp>
 #include <rivet/rivet_keywords.hpp>
+#include <rivet/structures/rivet_asset.hpp>
 
 namespace rivet::data {
 	struct RIVET_SHARED dat1 {
@@ -38,6 +39,7 @@ namespace rivet::data {
 		std::shared_ptr<rivet_data_array> string_buffer = {};
 		std::unordered_map<rivet_type_id, std::pair<data_entry_t, std::shared_ptr<rivet_data_array>>> sections;
 		std::string_view type_name = {};
+		rivet::structures::rivet_asset_header asset_header = {};
 
 		explicit RIVET_ABI dat1(const std::shared_ptr<rivet_data_array> &stream);
 

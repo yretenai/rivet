@@ -26,7 +26,7 @@ using namespace rivet;
 using namespace rivet::structures;
 
 namespace rivet::data {
-	std::shared_ptr<rivet_data_array> get_toc_data_buffer(const std::shared_ptr<rivet_data_array>& stream) {
+	std::shared_ptr<rivet_data_array> archive_toc::get_toc_data_buffer(const std::shared_ptr<rivet_data_array>& stream) {
 		if (stream->size() < sizeof(archive_toc::archive_toc_header)) {
 			throw invalid_tag_error();
 		}

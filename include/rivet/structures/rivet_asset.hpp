@@ -68,9 +68,9 @@ namespace rivet::structures {
 	static_assert(sizeof(rivet_asset_texture_header) == 72);
 
 	struct rivet_asset_header {
-		uint32_t id;
-		uint32_t size;
-		uint32_t unknown3;
+		rivet_type_id schema;
+		rivet_size size;
+		rivet_size heap_size;
 		uint32_t unknown4;
 		uint32_t unknown5;
 		uint32_t unknown6;
