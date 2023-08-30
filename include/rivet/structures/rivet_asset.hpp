@@ -66,8 +66,8 @@ namespace rivet::structures {
 		uint64_t unknown8;
 		uint32_t unknown9;
 		uint32_t unknownA;
-		uint32_t unknownB;
-		uint32_t unknownC;
+		uint32_t size;
+		uint32_t size_streamed;
 		uint64_t unknownD;
 	};
 

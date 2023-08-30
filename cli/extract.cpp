@@ -108,11 +108,16 @@ extract(const std::vector<std::string_view> &args) -> int {
 					}
 
 					auto output_path = dump / name;
-					std::ofstream asset_file;
+					std::fstream asset_file;
 					if (subtype_id == 1 && std::filesystem::exists(output_path)) { // append to existing file
 						// append to existing file
-						asset_file = std::ofstream(output_path, std::ios::binary | std::ios::out);
-						asset_file.seekp(0, std::ios::end);
+						asset_file = std::fstream(output_path, std::ios::binary | std::ios::out | std::ios::ate | std::ios::app);
+
+						if (!asset_file.is_open()) {
+							std::cout << "failed to open output file " << output_path << '\n';
+							error_file << "output " << name << '\n';
+							continue;
+						}
 					} else {
 						if (subtype_id == 1) { // normalize extension
 							auto ext = stream_exts[category_id];
@@ -122,11 +127,12 @@ extract(const std::vector<std::string_view> &args) -> int {
 
 							output_path = dump / name;
 						}
+
 						std::filesystem::create_directories(output_path.parent_path());
-						asset_file = std::ofstream(output_path, std::ios::binary | std::ios::out | std::ios::trunc);
+						asset_file = std::fstream(output_path, std::ios::binary | std::ios::out | std::ios::trunc);
 
 						if (!asset_file.is_open()) {
-							std::cout << "Failed to open output file " << output_path << '\n';
+							std::cout << "failed to open output file " << output_path << '\n';
 							error_file << "output " << name << '\n';
 							continue;
 						}
