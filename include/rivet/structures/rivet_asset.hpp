@@ -23,7 +23,7 @@ namespace rivet::structures {
 		rivet_size size;
 		uint32_t archive_id;
 		rivet_off archive_offset;
-		rivet_off metadata_offset;
+		rivet_off header_offset;
 	};
 
 	static_assert(sizeof(rivet_asset_raw) == 16);

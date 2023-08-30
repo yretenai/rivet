@@ -10,8 +10,8 @@
 #include <lz4.h>
 
 #include <rivet/data/dsar.hpp>
-#include <rivet/hash/asset_id.hpp>
 #include <rivet/exceptions.hpp>
+#include <rivet/hash/asset_id.hpp>
 #include <rivet/rivet_array.hpp>
 #include <rivet/rivet_game.hpp>
 #include <rivet/rivet_keywords.hpp>

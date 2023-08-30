@@ -118,7 +118,7 @@ namespace rivet::data {
 				auto chunk = chunk_section->get(entry.chunk_id);
 				existing.archive_id = chunk.first;
 				existing.archive_offset = chunk.second;
-				existing.metadata_offset = 0xFFFFFFFF;
+				existing.header_offset = 0xFFFFFFFF;
 				assets_section->set(i, existing);
 			}
 		} else {
@@ -220,8 +220,8 @@ namespace rivet::data {
 			auto archive = archives[info.archive_id];
 			auto chunk_entry = chunk_map.find(generic_id);
 			std::optional<rivet_asset_header> meta;
-			if (info.metadata_offset != 0xFFFFFFFF && asset_headers != nullptr) {
-				auto normalized = info.metadata_offset / sizeof(rivet_asset_header);
+			if (info.header_offset != 0xFFFFFFFF && asset_headers != nullptr) {
+				auto normalized = info.header_offset / sizeof(rivet_asset_header);
 				if (normalized < asset_headers->size()) {
 					meta = asset_headers->get(normalized);
 				}
@@ -254,7 +254,7 @@ namespace rivet::data {
 			asset->category = category;
 			asset->flags.is_stream = is_stream;
 			asset->flags.is_texture = is_streamed;
-			asset->flags.has_header = info.metadata_offset != 0xFFFFFFFF;
+			asset->flags.has_header = info.header_offset != 0xFFFFFFFF;
 			asset->flags.is_virtual = false;
 			asset->flags.is_key = is_key;
 			asset->texture_header = texture_header;
