@@ -5,8 +5,8 @@
 #include <fstream>
 #include <iostream>
 
-#include <rivet/data/dat1.hpp>
 #include <rivet/data/dag.hpp>
+#include <rivet/data/dat1.hpp>
 #include <rivet/data/toc.hpp>
 
 #include "helper.hpp"
@@ -17,7 +17,7 @@ using namespace rivet::structures;
 
 auto
 dump_dat1(const std::vector<std::string_view> &args) -> int {
-	if (args.size() < 2) {
+	if (args.empty()) {
 		std::cout << "Usage: rivet-dat1-dump <path-to-dat1> [output-path]\n";
 		return 1;
 	}
@@ -32,7 +32,12 @@ dump_dat1(const std::vector<std::string_view> &args) -> int {
 	if (args.size() > 1) {
 		output_path = std::filesystem::path(args[1]);
 	} else {
-		output_path = dat1_path.replace_extension(".sections");
+		output_path = dat1_path;
+		output_path.replace_extension(".sections");
+	}
+
+	if (!std::filesystem::exists(output_path)) {
+		std::filesystem::create_directories(output_path);
 	}
 
 	auto dat1_buffer = rivet_data_array::from_file(dat1_path);
@@ -52,8 +57,9 @@ dump_dat1(const std::vector<std::string_view> &args) -> int {
 	for (const auto &section : dat->sections) {
 		std::cout << "section " << std::setfill('0') << std::setw(8) << std::hex << section.first << '\n';
 
-		auto section_path = output_path / std::to_string(section.first);
-		section_path.replace_extension(".bin");
+		auto filename_stream = std::stringstream();
+		filename_stream << std::setfill('0') << std::setw(8) << std::hex << section.first << ".bin";
+		auto section_path = output_path / filename_stream.str();
 
 		std::ofstream section_file(section_path, std::ios::binary);
 		if (!section_file.is_open()) {

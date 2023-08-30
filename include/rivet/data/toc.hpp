@@ -15,8 +15,8 @@
 #include <rivet/hash/type_id.hpp>
 #include <rivet/rivet_array.hpp>
 #include <rivet/rivet_keywords.hpp>
-#include <rivet/structures/rivet_asset.hpp>
 #include <rivet/structures/rivet_archive.hpp>
+#include <rivet/structures/rivet_asset.hpp>
 
 namespace rivet::data {
 	struct RIVET_SHARED archive_toc : dat1 {
