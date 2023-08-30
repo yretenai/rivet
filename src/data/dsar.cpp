@@ -10,6 +10,7 @@
 #include <lz4.h>
 
 #include <rivet/data/dsar.hpp>
+#include <rivet/hash/asset_id.hpp>
 #include <rivet/exceptions.hpp>
 #include <rivet/rivet_array.hpp>
 #include <rivet/rivet_game.hpp>
@@ -21,7 +22,10 @@ namespace rivet::data {
 	rivet::data::data_stream_archive::data_stream_archive(const std::filesystem::path &root,
 														  const std::shared_ptr<rivet::structures::rivet_archive> &archive)
 			: archive(archive), exists(true) {
-		auto path = root / archive->name;
+		auto archive_name = std::string(archive->name);
+		rivet::hash::normalize_asset_path(archive_name);
+
+		auto path = root / archive_name;
 		if (!std::filesystem::exists(path)) {
 			exists = false;
 		}

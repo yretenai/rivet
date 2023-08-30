@@ -48,13 +48,16 @@ cpp_args = compiler.get_supported_arguments(
     '-fexec-charset=utf-8',
     '-faddrsig',
     '-faligned-new',
-    '-fcoroutines',
-    '-march=native',
-    '-mtune=native',
-    '-fopenmp'
+    '-fcoroutines'
 )
 
-if get_option('buildtype') == 'release-polly'
+if get_option('buildtype') == 'custom'
+    cpp_args += compiler.get_supported_arguments(
+        '-march=native',
+        '-mtune=native',
+        '-fopenmp'
+    )
+
     if compiler.get_id() == 'clang'
         if compiler.compiles('void test() { }', name: 'has polly', args: ['-mllvm', '-polly'])
             cpp_args += ['-mllvm', '-polly']
