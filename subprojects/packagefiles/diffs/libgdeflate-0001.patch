@@ -29,6 +29,23 @@ index fab9308..6c0ee2b 100644
  	      $(DESTDIR)$(BINDIR)/libdeflate-gzip$(PROG_SUFFIX)		\
  	      $(DESTDIR)$(BINDIR)/libdeflate-gunzip$(PROG_SUFFIX)
  	if [ -n "$(SHARED_LIB_SYMLINK)" ]; then				\
+diff --git a/common/compiler_gcc.h b/common/compiler_gcc.h
+index 18147a2..53cd775 100644
+--- a/common/compiler_gcc.h
++++ b/common/compiler_gcc.h
+@@ -204,6 +204,7 @@ typedef char  __v64qi __attribute__((__vector_size__(64)));
+  * Setup rotation macros similar to MSVS intrinsics.
+  * These should recognized by compilers.
+  */
++#ifndef __MINGW32__
+ #ifndef _rotr16
+ #define _rotr16(x,n)	((x>>n) + (x<<(16-n)))
+ #endif
+@@ -215,3 +216,4 @@ typedef char  __v64qi __attribute__((__vector_size__(64)));
+ #ifndef _rotr64
+ #define _rotr64(x,n)	((x>>n) + (x<<(64-n)))
+ #endif
++#endif
 diff --git a/common/compiler_msc.h b/common/compiler_msc.h
 index 18cfa12..1db36f7 100644
 --- a/common/compiler_msc.h

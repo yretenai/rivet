@@ -18,7 +18,6 @@ namespace rivet::structures {
 	struct rivet_archive;
 
 #pragma pack(push, 1)
-
 	struct rivet_asset_raw {
 		rivet_size size;
 		uint32_t archive_id;
@@ -35,24 +34,6 @@ namespace rivet::structures {
 	};
 
 	static_assert(sizeof(rivet_asset_raw_spider) == 0xC);
-
-	struct rivet_archive_raw {
-		std::array<char, 0x30> name;
-		uint64_t time;
-		uint32_t version;
-		uint32_t unknown;
-		uint16_t load_priority;
-	};
-
-	static_assert(sizeof(rivet_archive_raw) == 0x42);
-
-	struct rivet_archive_raw_spider {
-		uint32_t install_id;
-		uint32_t chunk_id;
-		std::array<char, 0x40> name;
-	};
-
-	static_assert(sizeof(rivet_archive_raw_spider) == 0x48);
 #pragma pack(pop)
 
 	struct rivet_asset_texture_header {
