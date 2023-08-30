@@ -19,12 +19,7 @@ using namespace rivet::structures;
 const std::array<std::string, 32> localization_enum { "none", "us", "gb", "dk", "nl", "fi", "fr", "de", "it", "jp", "kr", "no", "pl", "pt", "ru", "es",
 													  "se",	  "br", "ar", "tr", "la", "cs", "ct", "fc", "cz", "hu", "el", "ro", "th", "vi", "id", "hr" };
 
-const std::array<std::string_view, (int) rivet_asset_category::Max> stream_exts {
-	".stream",
-	".wem",
-	".animstrm",
-	".lgstream"
-};
+const std::array<std::string_view, (int) rivet_asset_category::Max> stream_exts { ".stream", ".wem", ".animstrm", ".lgstream" };
 
 auto
 extract(const std::vector<std::string_view> &args) -> int {
@@ -105,13 +100,6 @@ extract(const std::vector<std::string_view> &args) -> int {
 						continue;
 					}
 
-					if (subtype_id == 1) {
-						auto ext = stream_exts[category_id];
-						if (!ext.empty() && !name.ends_with(ext)) {
-							name += ext;
-						}
-					}
-
 					std::cout << "Writing " << name << '\n';
 
 					// rename .movie to .bik
@@ -120,27 +108,36 @@ extract(const std::vector<std::string_view> &args) -> int {
 					}
 
 					auto output_path = dump / name;
+					std::ofstream asset_file;
+					if (subtype_id == 1 && std::filesystem::exists(output_path)) { // append to existing file
+						// append to existing file
+						asset_file = std::ofstream(output_path, std::ios::binary | std::ios::out);
+						asset_file.seekp(0, std::ios::end);
+					} else {
+						if (subtype_id == 1) { // normalize extension
+							auto ext = stream_exts[category_id];
+							if (!ext.empty() && !name.ends_with(ext)) {
+								name += ext;
+							}
 
-					if (std::filesystem::exists(output_path)) {
-						error_file << "exist " << name << '\n';
-						continue;
-					}
+							output_path = dump / name;
+						}
+						std::filesystem::create_directories(output_path.parent_path());
+						asset_file = std::ofstream(output_path, std::ios::binary | std::ios::out | std::ios::trunc);
 
-					std::filesystem::create_directories(output_path.parent_path());
-					std::ofstream asset_file(output_path, std::ios::binary | std::ios::out);
+						if (!asset_file.is_open()) {
+							std::cout << "Failed to open output file " << output_path << '\n';
+							error_file << "output " << name << '\n';
+							continue;
+						}
 
-					if (!asset_file.is_open()) {
-						std::cout << "Failed to open output file " << output_path << '\n';
-						error_file << "output " << name << '\n';
-						continue;
-					}
+						if (asset->header.has_value()) {
+							asset_file.write(reinterpret_cast<const char *>(&asset->header.value()), sizeof(rivet_asset_header));
+						}
 
-					if (asset->header.has_value()) {
-						asset_file.write(reinterpret_cast<const char *>(&asset->header.value()), sizeof(rivet_asset_header));
-					}
-
-					if (asset->texture_header.has_value()) {
-						asset_file.write(reinterpret_cast<const char *>(&asset->texture_header.value()), sizeof(rivet_asset_texture_header));
+						if (asset->texture_header.has_value()) {
+							asset_file.write(reinterpret_cast<const char *>(&asset->texture_header.value()), sizeof(rivet_asset_texture_header));
+						}
 					}
 
 					asset_file.write(reinterpret_cast<const char *>(asset_data->data()), static_cast<std::streamsize>(asset_data->byte_size()));
