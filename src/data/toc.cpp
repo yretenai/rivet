@@ -229,12 +229,12 @@ namespace rivet::data {
 
 			rivet_locale locale = rivet_locale::None;
 			rivet_asset_category category = rivet_asset_category::Game;
-			bool is_raw = false;
+			bool is_stream = false;
 
 			if (group_id != 0xFFFFFFFF) {
 				locale = static_cast<rivet_locale>(group_id / 8);
 				category = static_cast<rivet_asset_category>((group_id / 2) % 4);
-				is_raw = group_id % 2 == 1;
+				is_stream = group_id % 2 == 1;
 			}
 
 			auto is_streamed = chunk_entry != chunk_map.end();
@@ -252,7 +252,7 @@ namespace rivet::data {
 			asset->archive = archive;
 			asset->locale = locale;
 			asset->category = category;
-			asset->flags.is_raw = is_raw;
+			asset->flags.is_stream = is_stream;
 			asset->flags.is_texture = is_streamed;
 			asset->flags.has_header = info.metadata_offset != 0xFFFFFFFF;
 			asset->flags.is_virtual = false;
@@ -264,7 +264,7 @@ namespace rivet::data {
 			asset->type = rivet_asset_type::NONE;
 
 			if (group_id != 0xFFFFFFFF) {
-				groups[group_id / 8][(group_id / 2) % 4][is_raw ? 1 : 0].emplace_back(asset);
+				groups[group_id / 8][(group_id / 2) % 4][is_stream ? 1 : 0].emplace_back(asset);
 			}
 
 			if (asset_lookup.find(generic_id) == asset_lookup.end()) {
@@ -275,7 +275,7 @@ namespace rivet::data {
 	}
 
 	auto
-	archive_toc::get_group(rivet_locale locale, rivet_asset_category category, bool raw) const -> std::vector<std::shared_ptr<rivet::structures::rivet_asset>> {
+	archive_toc::get_group(rivet_locale locale, rivet_asset_category category, bool is_stream) const -> std::vector<std::shared_ptr<rivet::structures::rivet_asset>> {
 		if (locale >= rivet_locale::Max) {
 			return {};
 		}
@@ -284,11 +284,11 @@ namespace rivet::data {
 			return {};
 		}
 
-		return groups[static_cast<int32_t>(locale)][static_cast<int32_t>(category)][raw ? 1 : 0];
+		return groups[static_cast<int32_t>(locale)][static_cast<int32_t>(category)][is_stream ? 1 : 0];
 	}
 
 	auto
-	archive_toc::get_asset(rivet_asset_id asset_id, rivet_locale locale, rivet_asset_category category, bool raw) const -> std::shared_ptr<rivet::structures::rivet_asset> {
+	archive_toc::get_asset(rivet_asset_id asset_id, rivet_locale locale, rivet_asset_category category, bool is_stream) const -> std::shared_ptr<rivet::structures::rivet_asset> {
 		if (locale >= rivet_locale::Max) {
 			return nullptr;
 		}
@@ -305,14 +305,14 @@ namespace rivet::data {
 			return asset->id == asset_id;
 		};
 
-		auto group = get_group(locale, category, raw);
+		auto group = get_group(locale, category, is_stream);
 		auto iter = std::find_if(group.begin(), group.end(), find_check);
 
 		if (iter == group.end()) {
 			// fallback to english
 			if (locale != rivet_locale::None && locale != rivet_locale::English) {
 				locale = rivet_locale::English;
-				auto en_group = get_group(locale, category, raw);
+				auto en_group = get_group(locale, category, is_stream);
 				iter = std::find_if(en_group.begin(), en_group.end(), find_check);
 				if (iter != en_group.end()) {
 					return *iter;
@@ -322,7 +322,7 @@ namespace rivet::data {
 			// fallback to global
 			if (locale != rivet_locale::None) {
 				locale = rivet_locale::None;
-				auto global_group = get_group(locale, category, raw);
+				auto global_group = get_group(locale, category, is_stream);
 				iter = std::find_if(global_group.begin(), global_group.end(), find_check);
 				if (iter != global_group.end()) {
 					return *iter;

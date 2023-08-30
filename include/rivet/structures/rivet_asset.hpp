@@ -111,7 +111,7 @@ namespace rivet::structures {
 	};
 
 	struct rivet_asset_flags {
-		bool is_raw : 1;
+		bool is_stream : 1;
 		bool is_texture : 1;
 		bool has_header : 1;
 		bool is_virtual : 1;

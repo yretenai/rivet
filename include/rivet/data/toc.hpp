@@ -55,9 +55,9 @@ namespace rivet::data {
 		get_toc_data_buffer(const std::shared_ptr<rivet_data_array> &stream) -> std::shared_ptr<rivet_data_array>;
 
 		[[maybe_unused]] [[nodiscard]] auto
-		get_group(rivet_locale locale, rivet_asset_category category, bool raw) const -> std::vector<std::shared_ptr<rivet::structures::rivet_asset>>;
+		get_group(rivet_locale locale, rivet_asset_category category, bool is_stream) const -> std::vector<std::shared_ptr<rivet::structures::rivet_asset>>;
 
 		[[nodiscard]] auto
-		get_asset(rivet_asset_id asset_id, rivet_locale locale, rivet_asset_category category, bool raw) const -> std::shared_ptr<rivet::structures::rivet_asset>;
+		get_asset(rivet_asset_id asset_id, rivet_locale locale, rivet_asset_category category, bool is_stream) const -> std::shared_ptr<rivet::structures::rivet_asset>;
 	};
 } // namespace rivet::data
