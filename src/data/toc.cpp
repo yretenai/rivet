@@ -92,7 +92,7 @@ namespace rivet::data {
 				auto entry = archives_spider_section->get(i);
 				auto existing = archives_section->get(i);
 				existing.unknown = entry.chunk_id;
-				std::copy(entry.name.begin(), entry.name.end(), existing.name.begin());
+				std::copy(entry.name.begin(), entry.name.begin() + 0x30, existing.name.begin());
 				archives_section->set(i, existing);
 			}
 		} else {

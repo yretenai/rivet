@@ -94,7 +94,7 @@ extract(const std::vector<std::string_view> &args) -> int {
 						continue;
 					}
 
-					if (subtype_id == 1 && asset->flags.is_texture) {
+					if (subtype_id == 1) {
 						name += ".stream";
 					}
 
@@ -106,6 +106,10 @@ extract(const std::vector<std::string_view> &args) -> int {
 					}
 
 					auto output_path = dump / name;
+					if (std::filesystem::exists(output_path)) {
+						RIVET_DEBUG_BREAK;
+					}
+
 					std::filesystem::create_directories(output_path.parent_path());
 					std::ofstream asset_file(output_path, std::ios::binary | std::ios::out);
 

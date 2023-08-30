@@ -31,7 +31,6 @@ namespace rivet::data {
 		RIVET_DEFINE_TYPE_ID(links, "Dependency Links");
 		RIVET_DEFINE_TYPE_ID(names, "Asset Names");
 		RIVET_DEFINE_TYPE_ID(heads, "Dependency Links Heads");
-
 		constexpr const static rivet_type_id graph_type_id = 0xBFEC699F; // todo: find real name
 
 		struct dependency_dag_header {

@@ -140,7 +140,13 @@ SECTION c9fb9dda "Archive TOC Texture Meta"
 
 SECTION 654bded9 "Archive TOC Asset Header Data"
 
-	Read as buffer.
+<
+    rivet_type schema;
+    uint32_t sizes[8]; // sizes of each block, may be 0 or spill into .stream
+    // _art.zone: 0 - content, 1 - physics, 2 - ?? -- this file type is the only file that has all 8 specified
+>
+
+	Read as array (but is accessed as an offset, not an index.)
 
 APPENDIX A
 	Overall Structure
