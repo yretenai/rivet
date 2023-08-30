@@ -23,7 +23,7 @@ const std::array<std::string_view, (int) rivet_asset_category::Max> stream_exts 
 	".stream",
 	".wem",
 	".animstrm",
-	".zonelightbin"
+	".lgstream"
 };
 
 auto
