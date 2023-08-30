@@ -19,6 +19,13 @@ using namespace rivet::structures;
 const std::array<std::string, 32> localization_enum { "none", "us", "gb", "dk", "nl", "fi", "fr", "de", "it", "jp", "kr", "no", "pl", "pt", "ru", "es",
 													  "se",	  "br", "ar", "tr", "la", "cs", "ct", "fc", "cz", "hu", "el", "ro", "th", "vi", "id", "hr" };
 
+const std::array<std::string_view, (int) rivet_asset_category::Max> stream_exts {
+	".stream",
+	".wem",
+	".animstrm",
+	".zonelightbin"
+};
+
 auto
 extract(const std::vector<std::string_view> &args) -> int {
 	if (args.empty()) {
@@ -52,6 +59,9 @@ extract(const std::vector<std::string_view> &args) -> int {
 		dag_file << asset.second->name.value() << '\n';
 	}
 	dag_file.close();
+
+	const std::filesystem::path error_path = dump / root_prefix / "errors.txt";
+	std::ofstream error_file(error_path, std::ios::out);
 
 	for (auto locale_id = 0; locale_id < 32; locale_id++) {
 		auto locale = static_cast<rivet_locale>(locale_id);
@@ -91,11 +101,15 @@ extract(const std::vector<std::string_view> &args) -> int {
 					auto asset_data = game->open_file(asset);
 					if (asset_data == nullptr || asset_data->empty()) {
 						std::cout << "Failed to open asset " << name << '\n';
+						error_file << "open " << name << '\n';
 						continue;
 					}
 
 					if (subtype_id == 1) {
-						name += ".stream";
+						auto ext = stream_exts[category_id];
+						if (!ext.empty() && !name.ends_with(ext)) {
+							name += ext;
+						}
 					}
 
 					std::cout << "Writing " << name << '\n';
@@ -106,8 +120,10 @@ extract(const std::vector<std::string_view> &args) -> int {
 					}
 
 					auto output_path = dump / name;
+
 					if (std::filesystem::exists(output_path)) {
-						RIVET_DEBUG_BREAK;
+						error_file << "exist " << name << '\n';
+						continue;
 					}
 
 					std::filesystem::create_directories(output_path.parent_path());
@@ -115,6 +131,7 @@ extract(const std::vector<std::string_view> &args) -> int {
 
 					if (!asset_file.is_open()) {
 						std::cout << "Failed to open output file " << output_path << '\n';
+						error_file << "output " << name << '\n';
 						continue;
 					}
 
@@ -132,6 +149,8 @@ extract(const std::vector<std::string_view> &args) -> int {
 			}
 		}
 	}
+
+	error_file.close();
 
 	return 0;
 }
