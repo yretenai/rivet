@@ -3,6 +3,7 @@ rivetlib = library('rivet', [
 		'rivet_game.cpp',
 		'rivet_string_pool.cpp',
 
+		'data/asset_bundle.cpp',
 		'data/dag.cpp',
 		'data/dat1.cpp',
 		'data/dsar.cpp',
@@ -13,7 +14,7 @@ rivetlib = library('rivet', [
 	include_directories: includedir,
 	dependencies: deps,
 	install: true,
-	cpp_args: cpp_args + ['-DRIVET_EXPORTING'],
+	cpp_args: ['-DRIVET_EXPORTING'],
 	gnu_symbol_visibility: 'hidden')
 
 rivetdep = declare_dependency(link_with: rivetlib, include_directories: includedir)

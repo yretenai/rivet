@@ -75,7 +75,7 @@ extract(const std::vector<std::string_view> &args) -> int {
 					std::string name;
 					if (!asset->name.has_value()) {
 						if ((asset->id & 0x40000000'00000000) != 0) {
-							name = "sound/wem/" + std::to_string(asset->id & 0xFFFFFFFF) + std::string(".wem");
+							name = "sound/wem/" + std::to_string(asset->id & UINT32_MAX) + std::string(".wem");
 						} else {
 							if (asset->archive->name.find('/') == std::string::npos && asset->archive->name.find('\\') == std::string::npos) {
 								name = root_prefix + std::string(asset->archive->name) + "/" + std::to_string(asset->id);
@@ -109,42 +109,46 @@ extract(const std::vector<std::string_view> &args) -> int {
 					}
 
 					auto output_path = dump / name;
-					std::fstream asset_file;
-					if (subtype_id == 1 && std::filesystem::exists(output_path)) { // append to existing file
-						// append to existing file
-						asset_file = std::fstream(output_path, std::ios::binary | std::ios::out | std::ios::ate | std::ios::app);
-
-						if (!asset_file.is_open()) {
-							std::cout << "failed to open output file " << output_path << '\n';
-							error_file << "output " << name << '\n';
-							continue;
-						}
-					} else {
-						if (subtype_id == 1) { // normalize extension
-							auto ext = stream_exts[category_id];
-							if (!ext.empty() && !name.ends_with(ext)) {
-								name += ext;
-							}
-
-							output_path = dump / name;
+					if (subtype_id == 1) { // normalize extension
+						auto ext = stream_exts[category_id];
+						if (!ext.empty() && !name.ends_with(ext)) {
+							name += ext;
 						}
 
-						std::filesystem::create_directories(output_path.parent_path());
-						asset_file = std::fstream(output_path, std::ios::binary | std::ios::out | std::ios::trunc);
+						output_path = dump / name;
+					}
 
-						if (!asset_file.is_open()) {
-							std::cout << "failed to open output file " << output_path << '\n';
-							error_file << "output " << name << '\n';
-							continue;
-						}
+					std::filesystem::create_directories(output_path.parent_path());
+					auto asset_file = std::fstream(output_path, std::ios::binary | std::ios::out | std::ios::trunc);
 
+					if (!asset_file.is_open()) {
+						std::cout << "failed to open output file " << output_path << '\n';
+						error_file << "output " << name << '\n';
+						continue;
+					}
+
+					if (subtype_id == 0) {
 						if (asset->header.has_value()) {
 							asset_file.write(reinterpret_cast<const char *>(&asset->header.value()), sizeof(rivet_asset_header));
 						}
 
 						if (asset->texture_header.has_value()) {
+							if (asset->header.has_value() && asset->header.value().schema != 0x8F53A199) {
+								std::cout << "ill texture header " << name << '\n';
+								error_file << "ill texture header " << name << '\n';
+							}
 							asset_file.write(reinterpret_cast<const char *>(&asset->texture_header.value()), sizeof(rivet_asset_texture_header));
+						} else if (asset->header.has_value() && asset->header.value().schema == 0x8F53A199) { // todo: replace 0x8F53A199 with rivet::gfx::texture::type_id
+							std::cout << "ill formed texture " << name << '\n';
+							error_file << "ill texture " << name << '\n';
+							auto empty_header = rivet_asset_texture_header {};
+							asset_file.write(reinterpret_cast<const char *>(&empty_header), sizeof(rivet_asset_texture_header));
 						}
+					}
+
+					if(subtype_id == 1 && asset->header.has_value()) {
+						std::cout << "ill header " << name << '\n';
+						error_file << "ill header " << name << '\n';
 					}
 
 					asset_file.write(reinterpret_cast<const char *>(asset_data->data()), static_cast<std::streamsize>(asset_data->byte_size()));

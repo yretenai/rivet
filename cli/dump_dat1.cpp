@@ -5,6 +5,7 @@
 #include <fstream>
 #include <iostream>
 
+#include <rivet/data/asset_bundle.h>
 #include <rivet/data/dag.hpp>
 #include <rivet/data/dat1.hpp>
 #include <rivet/data/toc.hpp>
@@ -46,28 +47,57 @@ dump_dat1(const std::vector<std::string_view> &args) -> int {
 		return 3;
 	}
 
+	std::vector<std::shared_ptr<rivet_data_array>> buffers;
+	std::shared_ptr<rivet::data::asset_bundle> bundle;
 	auto tag = dat1_buffer->get<uint32_t>(0);
 	if (tag == archive_toc::magic || tag == archive_toc::magic_compressed) {
-		dat1_buffer = archive_toc::get_toc_data_buffer(dat1_buffer);
+		buffers.emplace_back(archive_toc::get_toc_data_buffer(dat1_buffer));
 	} else if (tag == dependency_dag::magic || tag == dependency_dag::magic_compressed) {
-		dat1_buffer = dependency_dag::get_dag_data_buffer(dat1_buffer);
+		buffers.emplace_back(dependency_dag::get_dag_data_buffer(dat1_buffer));
+	} else if (tag != dat1::magic) {
+		bundle = std::make_shared<rivet::data::asset_bundle>(dat1_buffer);
+		for (rivet_size i = 0; i < bundle->header.sizes.size(); i++) {
+			auto entry = bundle->get_entry(i);
+			buffers.emplace_back(entry);
+		}
 	}
 
-	auto dat = std::make_shared<dat1>(dat1_buffer);
-	for (const auto &section : dat->sections) {
-		std::cout << "section " << std::setfill('0') << std::setw(8) << std::hex << section.first << '\n';
+	auto idx = 1;
+	for (const auto &buffer : buffers) {
+		const std::string stream_name = "stream_" + std::to_string(idx++);
 
-		auto filename_stream = std::stringstream();
-		filename_stream << std::setfill('0') << std::setw(8) << std::hex << section.first << ".bin";
-		auto section_path = output_path / filename_stream.str();
-
-		std::ofstream section_file(section_path, std::ios::binary);
-		if (!section_file.is_open()) {
-			std::cout << "failed to open " << section_path << '\n';
-			return 4;
+		if (buffer == nullptr || buffer->empty()) {
+			continue;
 		}
 
-		section_file.write(reinterpret_cast<const char *>(section.second.second->data()), static_cast<std::streamsize>(section.second.second->size()));
+		std::cout << "stream " << stream_name << '\n';
+		auto buffer_path = output_path / (stream_name + ".bin");
+		std::ofstream buffer_file(buffer_path, std::ios::binary);
+		if (!buffer_file.is_open()) {
+			std::cout << "failed to open " << buffer_path << '\n';
+			return 4;
+		}
+		buffer_file.write(reinterpret_cast<const char *>(buffer->data()), static_cast<std::streamsize>(buffer->size()));
+
+		if (buffer->size() > 4 && buffer->get<uint32_t>(0) == dat1::magic) {
+			auto dat = std::make_shared<dat1>(buffer);
+			for (const auto &section : dat->sections) {
+				std::cout << "section " << std::setfill('0') << std::setw(8) << std::hex << section.first << '\n';
+
+				auto filename_stream = std::stringstream();
+				filename_stream << std::setfill('0') << std::setw(8) << std::hex << section.first << ".bin";
+				auto section_path = output_path / stream_name / filename_stream.str();
+				std::filesystem::create_directories(section_path.parent_path());
+
+				std::ofstream section_file(section_path, std::ios::binary);
+				if (!section_file.is_open()) {
+					std::cout << "failed to open " << section_path << '\n';
+					return 4;
+				}
+
+				section_file.write(reinterpret_cast<const char *>(section.second.second->data()), static_cast<std::streamsize>(section.second.second->size()));
+			}
+		}
 	}
 
 	return 0;

@@ -91,6 +91,8 @@ if get_option('buildtype') == 'custom'
     endif
 endif
 
+add_project_arguments(cpp_args, language: 'cpp')
+
 subdir('src')
 
 if not get_option('lib_only')

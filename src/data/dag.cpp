@@ -175,7 +175,7 @@ namespace rivet::data {
 
 		for (rivet_size i = 0; i < names->size(); ++i) {
 			auto name_offset = names->get(i);
-			if (name_offset == 0xFFFFFFFF) {
+			if (name_offset == rivet_unknown) {
 				continue;
 			}
 
@@ -194,7 +194,7 @@ namespace rivet::data {
 				group.reserve(dependencies.size());
 				for (auto entry : dependencies) {
 					auto dependency_name_offset = names->get(entry & 0x7FFFFFFFu);
-					if (dependency_name_offset == 0xFFFFFFFF) {
+					if (dependency_name_offset == rivet_unknown) {
 						continue;
 					}
 

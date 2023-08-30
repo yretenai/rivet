@@ -118,7 +118,7 @@ namespace rivet::data {
 				auto chunk = chunk_section->get(entry.chunk_id);
 				existing.archive_id = chunk.first;
 				existing.archive_offset = chunk.second;
-				existing.header_offset = 0xFFFFFFFF;
+				existing.header_offset = rivet_unknown;
 				assets_section->set(i, existing);
 			}
 		} else {
@@ -197,7 +197,7 @@ namespace rivet::data {
 			auto full_id = ids_section->get(i);
 			auto generic_id = full_id & 0xbfffffff'ffffffff; // strip localized flag.
 
-			rivet_size group_id = 0xFFFFFFFF;
+			rivet_size group_id = rivet_unknown;
 			if (groups_section != nullptr) {
 				for (rivet_size j = 0; j < 0x100; ++j) {
 					auto range = groups_section->get(j);
@@ -211,7 +211,7 @@ namespace rivet::data {
 					}
 				}
 
-				if (group_id == 0xFFFFFFFF) {
+				if (group_id == rivet_unknown) {
 					throw unreachable_error();
 				}
 			}
@@ -220,7 +220,7 @@ namespace rivet::data {
 			auto archive = archives[info.archive_id];
 			auto chunk_entry = chunk_map.find(generic_id);
 			std::optional<rivet_asset_header> meta;
-			if (info.header_offset != 0xFFFFFFFF && asset_headers != nullptr) {
+			if (info.header_offset != rivet_unknown && asset_headers != nullptr) {
 				auto normalized = info.header_offset / sizeof(rivet_asset_header);
 				if (normalized < asset_headers->size()) {
 					meta = asset_headers->get(normalized);
@@ -231,7 +231,7 @@ namespace rivet::data {
 			rivet_asset_category category = rivet_asset_category::Game;
 			bool is_stream = false;
 
-			if (group_id != 0xFFFFFFFF) {
+			if (group_id != rivet_unknown) {
 				locale = static_cast<rivet_locale>(group_id / 8);
 				category = static_cast<rivet_asset_category>((group_id / 2) % 4);
 				is_stream = group_id % 2 == 1;
@@ -254,7 +254,7 @@ namespace rivet::data {
 			asset->category = category;
 			asset->flags.is_stream = is_stream;
 			asset->flags.is_texture = is_streamed;
-			asset->flags.has_header = info.header_offset != 0xFFFFFFFF;
+			asset->flags.has_header = info.header_offset != rivet_unknown;
 			asset->flags.is_virtual = false;
 			asset->flags.is_key = is_key;
 			asset->texture_header = texture_header;
@@ -263,7 +263,7 @@ namespace rivet::data {
 			asset->dependencies = {};
 			asset->type = rivet_asset_type::NONE;
 
-			if (group_id != 0xFFFFFFFF) {
+			if (group_id != rivet_unknown) {
 				groups[group_id / 8][(group_id / 2) % 4][is_stream ? 1 : 0].emplace_back(asset);
 			}
 

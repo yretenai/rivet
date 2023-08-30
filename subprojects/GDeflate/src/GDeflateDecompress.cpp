@@ -68,7 +68,7 @@ namespace GDeflate
         uint32_t numItems;
     };
 
-    static void TileDecompressionJob(DecompressionContext& context, uint32_t compressorId)
+    static void TileDecompressionJob(DecompressionContext& context, [[maybe_unused]] uint32_t compressorId)
     {
         std::unique_ptr<libdeflate_gdeflate_decompressor> decompressor(libdeflate_alloc_gdeflate_decompressor());
 

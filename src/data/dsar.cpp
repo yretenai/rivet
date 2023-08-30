@@ -74,7 +74,7 @@ namespace rivet::data {
 			throw mismatched_data_error();
 		}
 
-		rivet_size chunk_index = 0xFFFFFFFF;
+		rivet_size chunk_index = rivet_unknown;
 
 		// find the first chunk that contains the start offset
 		for (rivet_size i = 0; i < chunks->size(); i++) {
@@ -85,7 +85,7 @@ namespace rivet::data {
 			}
 		}
 
-		if (chunk_index == 0xFFFFFFFF) {
+		if (chunk_index == rivet_unknown) {
 			throw unreachable_error();
 		}
 

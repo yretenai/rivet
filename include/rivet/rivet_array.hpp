@@ -124,7 +124,7 @@ namespace rivet {
 			return reinterpret_cast<T *>(ptr.get() + offset);
 		}
 
-		[[maybe_unused]] [[nodiscard]] RIVET_INLINE auto
+		[[maybe_unused, nodiscard]] RIVET_INLINE auto
 		is_aligned() const noexcept -> bool {
 			return (reinterpret_cast<intptr_t>(ptr.get()) % Alignment) == 0;
 		}
@@ -139,7 +139,7 @@ namespace rivet {
 			return size() * sizeof(T);
 		}
 
-		[[maybe_unused]] [[nodiscard]] RIVET_INLINE auto
+		[[maybe_unused, nodiscard]] RIVET_INLINE auto
 		empty() const noexcept -> bool {
 			return size() <= 0 || ptr == nullptr;
 		}
@@ -205,7 +205,7 @@ namespace rivet {
 			reinterpret_cast<U *>(data() + index)[0] = value;
 		}
 
-		[[maybe_unused]] [[nodiscard]] auto
+		[[maybe_unused, nodiscard]] auto
 		slice(rivet_size64 index, rivet_size64 count) const -> std::shared_ptr<rivet_array<T, Alignment>> {
 			if (index >= size()) {
 				throw index_out_of_range();
@@ -218,7 +218,7 @@ namespace rivet {
 			return std::make_shared<rivet_array<T, Alignment>>(ptr, count, offset + index);
 		}
 
-		[[maybe_unused]] [[nodiscard]] auto
+		[[maybe_unused, nodiscard]] auto
 		slice(rivet_size64 index) const -> std::shared_ptr<rivet_array<T, Alignment>> {
 			return slice(index, size() - index);
 		}
@@ -226,7 +226,7 @@ namespace rivet {
 		template <typename U>
 		[[maybe_unused]] auto
 		slice(rivet_size64 index, rivet_size64 count) const -> std::shared_ptr<rivet_array<U, Alignment>> {
-			auto normalized_offset = offset + normalize_value(index);
+			auto normalized_offset = normalize_value(index);
 			auto normalized_index = normalize_value(index);
 
 			if (normalized_index > byte_size()) {
@@ -237,7 +237,7 @@ namespace rivet {
 				throw index_out_of_range();
 			}
 
-			return std::make_shared<rivet_array<U, Alignment>>(ptr, count, normalized_offset);
+			return std::make_shared<rivet_array<U, Alignment>>(ptr, count, offset + normalized_offset);
 		}
 
 		template <typename U>
@@ -298,7 +298,7 @@ namespace rivet {
 
 		template <typename U = T>
 			requires(sizeof(U) == 1 && std::is_integral_v<U>)
-		[[maybe_unused]] [[nodiscard]] auto
+		[[maybe_unused, nodiscard]] auto
 		to_string_view() const noexcept -> std::string_view {
 			ensure_null_terminated<U>();
 			return std::string_view(reinterpret_cast<char *>(data()), byte_size());
@@ -306,7 +306,7 @@ namespace rivet {
 
 		template <typename U = T>
 			requires(sizeof(U) <= 2 && std::is_integral_v<U>)
-		[[maybe_unused]] [[nodiscard]] auto
+		[[maybe_unused, nodiscard]] auto
 		to_wstring_view() const noexcept -> std::wstring_view {
 			if (sizeof(U) == 1) {
 				return std::wstring_view(to_string_view());
@@ -318,7 +318,7 @@ namespace rivet {
 
 		template <typename U = T>
 			requires(sizeof(U) == 1 && std::is_integral_v<U>)
-		[[maybe_unused]] [[nodiscard]] auto
+		[[maybe_unused, nodiscard]] auto
 		to_string_stream() const noexcept -> std::stringstream {
 			ensure_null_terminated();
 			return std::stringstream(reinterpret_cast<char *>(data()), std::ios::in | std::ios::out);
@@ -326,33 +326,33 @@ namespace rivet {
 
 		template <typename U = T>
 			requires(sizeof(U) <= 2 && std::is_integral_v<U>)
-		[[maybe_unused]] [[nodiscard]] auto
+		[[maybe_unused, nodiscard]] auto
 		to_wstring_stream() const noexcept -> std::wstringstream {
 			ensure_null_terminated();
 			return std::wstringstream(reinterpret_cast<wchar_t *>(data()), std::ios::in | std::ios::out);
 		}
 
-		[[maybe_unused]] [[nodiscard]] auto
+		[[maybe_unused, nodiscard]] auto
 		to_cstring(rivet_size64 index = 0) const noexcept -> std::string {
 			return std::string(reinterpret_cast<char *>(data()) + normalize_value(index));
 		}
 
-		[[maybe_unused]] [[nodiscard]] auto
+		[[maybe_unused, nodiscard]] auto
 		to_wcstring(rivet_size64 index = 0) const noexcept -> std::wstring {
 			return std::wstring(reinterpret_cast<wchar_t *>(data()) + (normalize_value(index) >> 1));
 		}
 
-		[[maybe_unused]] [[nodiscard]] auto
+		[[maybe_unused, nodiscard]] auto
 		to_cstring_view(rivet_size64 index = 0) const noexcept -> std::string_view {
 			return std::string_view(reinterpret_cast<char *>(data()) + normalize_value(index));
 		}
 
-		[[maybe_unused]] [[nodiscard]] auto
+		[[maybe_unused, nodiscard]] auto
 		to_wstring_view(rivet_size64 index = 0) const noexcept -> std::wstring_view {
 			return std::wstring_view(reinterpret_cast<wchar_t *>(data()) + (normalize_value(index) >> 1));
 		}
 
-		[[maybe_unused]] [[nodiscard]] auto
+		[[maybe_unused, nodiscard]] auto
 		to_stream() const noexcept -> std::iostream {
 			return std::iostream(reinterpret_cast<char *>(data()), std::ios::in | std::ios::out, byte_size());
 		}

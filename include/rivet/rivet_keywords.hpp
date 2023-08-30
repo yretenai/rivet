@@ -14,7 +14,7 @@
 	#define RIVET_DEBUG_BREAK __debugbreak()
 #else
 	#ifdef RIVET_EXPORTING
-		#define RIVET_SHARED __attribute__ ((visibility ("default"))) __attribute__((unused))
+		#define RIVET_SHARED [[visibility("default")]]
 	#else
 		#define RIVET_SHARED
 	#endif
@@ -108,4 +108,10 @@ namespace rivet {
 	using rivet_ssize64 = int64_t;
 	using rivet_off64 = uint64_t;
 	using rivet_soff64 = int64_t;
+
+	using rivet_index = rivet_size;
+	using rivet_index64 = rivet_size64;
+
+	static constexpr rivet_index rivet_unknown = UINT32_MAX;
+	static constexpr rivet_index64 rivet_unknown64 = UINT64_MAX;
 } // namespace rivet
