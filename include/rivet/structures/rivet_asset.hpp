@@ -18,12 +18,14 @@ namespace rivet::structures {
 	struct rivet_archive;
 
 #pragma pack(push, 1)
+
 	struct rivet_asset_raw {
 		rivet_size size;
 		uint32_t archive_id;
 		rivet_off archive_offset;
 		rivet_off metadata_offset;
 	};
+
 	static_assert(sizeof(rivet_asset_raw) == 16);
 
 	struct rivet_asset_raw_spider {
@@ -31,6 +33,7 @@ namespace rivet::structures {
 		uint32_t size;
 		uint32_t chunk_id;
 	};
+
 	static_assert(sizeof(rivet_asset_raw_spider) == 0xC);
 
 	struct rivet_archive_raw {
@@ -40,6 +43,7 @@ namespace rivet::structures {
 		uint32_t unknown;
 		uint16_t load_priority;
 	};
+
 	static_assert(sizeof(rivet_archive_raw) == 0x42);
 
 	struct rivet_archive_raw_spider {
@@ -47,6 +51,7 @@ namespace rivet::structures {
 		uint32_t chunk_id;
 		std::array<char, 0x40> name;
 	};
+
 	static_assert(sizeof(rivet_archive_raw_spider) == 0x48);
 #pragma pack(pop)
 
@@ -65,6 +70,7 @@ namespace rivet::structures {
 		uint32_t unknownC;
 		uint64_t unknownD;
 	};
+
 	static_assert(sizeof(rivet_asset_texture_header) == 72);
 
 	struct rivet_asset_header {
@@ -78,6 +84,7 @@ namespace rivet::structures {
 		uint32_t unknown8;
 		uint32_t unknown9;
 	};
+
 	static_assert(sizeof(rivet_asset_header) == 36);
 
 	enum class rivet_asset_type : uint8_t {
@@ -109,11 +116,11 @@ namespace rivet::structures {
 	};
 
 	struct rivet_asset_flags {
-		bool is_raw: 1;
-		bool is_texture: 1;
-		bool has_header: 1;
-		bool is_virtual: 1;
-		bool is_key: 1;
+		bool is_raw : 1;
+		bool is_texture : 1;
+		bool has_header : 1;
+		bool is_virtual : 1;
+		bool is_key : 1;
 	};
 
 	struct rivet_asset {

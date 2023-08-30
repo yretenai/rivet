@@ -15,15 +15,16 @@ using namespace rivet;
 using namespace rivet::data;
 using namespace rivet::structures;
 
-int dump_dat1(const std::vector<std::string_view> &args) {
+auto
+dump_dat1(const std::vector<std::string_view> &args) -> int {
 	if (args.size() < 2) {
-		std::cout << "Usage: rivet-dat1-dump <path-to-dat1> [output-path]" << std::endl;
+		std::cout << "Usage: rivet-dat1-dump <path-to-dat1> [output-path]\n";
 		return 1;
 	}
 
 	auto dat1_path = std::filesystem::path(args[0]);
 	if (!std::filesystem::exists(dat1_path)) {
-		std::cout << dat1_path << " does not exist" << std::endl;
+		std::cout << dat1_path << " does not exist\n";
 		return 2;
 	}
 
@@ -36,7 +37,7 @@ int dump_dat1(const std::vector<std::string_view> &args) {
 
 	auto dat1_buffer = rivet_data_array::from_file(dat1_path);
 	if (dat1_buffer == nullptr) {
-		std::cout << "failed to load " << dat1_path << std::endl;
+		std::cout << "failed to load " << dat1_path << '\n';
 		return 3;
 	}
 
@@ -48,20 +49,19 @@ int dump_dat1(const std::vector<std::string_view> &args) {
 	}
 
 	auto dat = std::make_shared<dat1>(dat1_buffer);
-	for (const auto &section: dat->sections) {
-		std::cout << "section " << std::setfill('0') << std::setw(8) << std::hex << section.first << std::endl;
+	for (const auto &section : dat->sections) {
+		std::cout << "section " << std::setfill('0') << std::setw(8) << std::hex << section.first << '\n';
 
 		auto section_path = output_path / std::to_string(section.first);
 		section_path.replace_extension(".bin");
 
 		std::ofstream section_file(section_path, std::ios::binary);
 		if (!section_file.is_open()) {
-			std::cout << "failed to open " << section_path << std::endl;
+			std::cout << "failed to open " << section_path << '\n';
 			return 4;
 		}
 
-		section_file.write(reinterpret_cast<const char *>(section.second.second->data()),
-						   static_cast<std::streamsize>(section.second.second->size()));
+		section_file.write(reinterpret_cast<const char *>(section.second.second->data()), static_cast<std::streamsize>(section.second.second->size()));
 	}
 
 	return 0;

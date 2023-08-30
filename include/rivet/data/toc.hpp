@@ -41,6 +41,7 @@ namespace rivet::data {
 			rivet_type_id type_id;
 			rivet_size size;
 		};
+
 		static_assert(sizeof(archive_toc_header) == 8);
 
 		std::unordered_map<rivet_asset_id, std::vector<std::weak_ptr<rivet::structures::rivet_asset>>> asset_lookup = {};
@@ -48,15 +49,15 @@ namespace rivet::data {
 		std::array<std::array<std::array<std::vector<std::shared_ptr<rivet::structures::rivet_asset>>, 2>, 4>, 32> groups = {};
 		uint32_t streamed_texture_count = 0;
 
-		explicit RIVET_ABI archive_toc(const std::shared_ptr<rivet_data_array> &stream);
+		explicit archive_toc(const std::shared_ptr<rivet_data_array> &stream);
 
-		static std::shared_ptr<rivet_data_array> RIVET_ABI get_toc_data_buffer(const std::shared_ptr<rivet_data_array>& stream);
+		static auto
+		get_toc_data_buffer(const std::shared_ptr<rivet_data_array> &stream) -> std::shared_ptr<rivet_data_array>;
 
-		[[maybe_unused]] [[nodiscard]] std::vector<std::shared_ptr<rivet::structures::rivet_asset>>
-		RIVET_ABI get_group(rivet_locale locale, rivet_asset_category category, bool raw) const;
+		[[maybe_unused]] [[nodiscard]] auto
+		get_group(rivet_locale locale, rivet_asset_category category, bool raw) const -> std::vector<std::shared_ptr<rivet::structures::rivet_asset>>;
 
-		[[nodiscard]] std::shared_ptr<rivet::structures::rivet_asset>
-		RIVET_ABI get_asset(rivet_asset_id asset_id, rivet_locale locale, rivet_asset_category category, bool raw) const;
+		[[nodiscard]] auto
+		get_asset(rivet_asset_id asset_id, rivet_locale locale, rivet_asset_category category, bool raw) const -> std::shared_ptr<rivet::structures::rivet_asset>;
 	};
 } // namespace rivet::data
-

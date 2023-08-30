@@ -1,3 +1,7 @@
+// rivet project
+// Copyright (c) 2023 <https://github.com/yretenai/rivet>
+// SPDX-License-Identifier: MPL-2.0
+
 #include <array>
 #include <fstream>
 #include <iostream>
@@ -12,42 +16,11 @@
 using namespace rivet;
 using namespace rivet::structures;
 
-const std::array<std::string, 32> localization_enum {
-		"none",
-		"us",
-		"gb",
-		"dk",
-		"nl",
-		"fi",
-		"fr",
-		"de",
-		"it",
-		"jp",
-		"kr",
-		"no",
-		"pl",
-		"pt",
-		"ru",
-		"es",
-		"se",
-		"br",
-		"ar",
-		"tr",
-		"la",
-		"cs",
-		"ct",
-		"fc",
-		"cz",
-		"hu",
-		"el",
-		"ro",
-		"th",
-		"vi",
-		"id",
-		"hr"
-};
+const std::array<std::string, 32> localization_enum { "none", "us", "gb", "dk", "nl", "fi", "fr", "de", "it", "jp", "kr", "no", "pl", "pt", "ru", "es",
+													  "se",	  "br", "ar", "tr", "la", "cs", "ct", "fc", "cz", "hu", "el", "ro", "th", "vi", "id", "hr" };
 
-int extract(const std::vector<std::string_view>& args) {
+auto
+extract(const std::vector<std::string_view> &args) -> int {
 	if (args.empty()) {
 		std::cout << "usage: rivet-extract path/to/game path/to/dump\n";
 		return 1;
@@ -64,7 +37,6 @@ int extract(const std::vector<std::string_view>& args) {
 		game->load_streamed_files_list(streamed_files_path);
 	}
 
-
 	auto root_prefix = std::string("d/");
 
 	const std::filesystem::path dump(args[1]);
@@ -76,7 +48,7 @@ int extract(const std::vector<std::string_view>& args) {
 		return 1;
 	}
 
-	for (const auto &asset: game->dag->missing_assets) {
+	for (const auto &asset : game->dag->missing_assets) {
 		dag_file << asset.second->name.value() << '\n';
 	}
 	dag_file.close();
@@ -89,20 +61,18 @@ int extract(const std::vector<std::string_view>& args) {
 			for (auto subtype_id = 0; subtype_id < 2; subtype_id++) {
 				auto assets = game->toc->get_group(locale, category, subtype_id == 1);
 
-				for (const auto &asset: assets) {
+				for (const auto &asset : assets) {
 					if (!game->prepare_archive(asset)) {
 						continue;
 					}
 
 					std::string name;
 					if (!asset->name.has_value()) {
-						if ((asset->id & 0x4000000000000000) != 0) {
+						if ((asset->id & 0x40000000'00000000) != 0) {
 							name = "sound/wem/" + std::to_string(asset->id & 0xFFFFFFFF) + std::string(".wem");
 						} else {
-							if (asset->archive->name.find('/') == std::string::npos &&
-								asset->archive->name.find('\\') == std::string::npos) {
-								name = root_prefix + std::string(asset->archive->name) + "/" +
-									   std::to_string(asset->id);
+							if (asset->archive->name.find('/') == std::string::npos && asset->archive->name.find('\\') == std::string::npos) {
+								name = root_prefix + std::string(asset->archive->name) + "/" + std::to_string(asset->id);
 							} else {
 								name = std::string(asset->archive->name) + "/" + std::to_string(asset->id);
 							}
@@ -113,11 +83,9 @@ int extract(const std::vector<std::string_view>& args) {
 					}
 
 					if (name.ends_with("/localization_all.localization")) {
-						name = name.substr(0, name.find_last_of('/')) + "/localization_" +
-							   localization_enum[locale_id] + ".localization";
+						name = name.substr(0, name.find_last_of('/')) + "/localization_" + localization_enum[locale_id] + ".localization";
 					} else if (locale_id > 0) {
-						name = name.substr(0, name.find_last_of('/')) + "/" + localization_enum[locale_id] + "/" +
-							   name.substr(name.find_last_of('/') + 1);
+						name = name.substr(0, name.find_last_of('/')) + "/" + localization_enum[locale_id] + "/" + name.substr(name.find_last_of('/') + 1);
 					}
 
 					auto asset_data = game->open_file(asset);
@@ -147,17 +115,14 @@ int extract(const std::vector<std::string_view>& args) {
 					}
 
 					if (asset->header.has_value()) {
-						asset_file.write(reinterpret_cast<const char *>(&asset->header.value()),
-										 sizeof(rivet_asset_header));
+						asset_file.write(reinterpret_cast<const char *>(&asset->header.value()), sizeof(rivet_asset_header));
 					}
 
 					if (asset->texture_header.has_value()) {
-						asset_file.write(reinterpret_cast<const char *>(&asset->texture_header.value()),
-										 sizeof(rivet_asset_texture_header));
+						asset_file.write(reinterpret_cast<const char *>(&asset->texture_header.value()), sizeof(rivet_asset_texture_header));
 					}
 
-					asset_file.write(reinterpret_cast<const char *>(asset_data->data()),
-									 static_cast<std::streamsize>(asset_data->byte_size()));
+					asset_file.write(reinterpret_cast<const char *>(asset_data->data()), static_cast<std::streamsize>(asset_data->byte_size()));
 					asset_file.close();
 				}
 			}

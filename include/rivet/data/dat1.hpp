@@ -25,6 +25,7 @@ namespace rivet::data {
 			uint16_t section_count;
 			uint16_t reserved;
 		};
+
 		static_assert(sizeof(data_header_t) == 16);
 
 		struct data_entry_t {
@@ -32,6 +33,7 @@ namespace rivet::data {
 			rivet_off offset;
 			rivet_size size;
 		};
+
 		static_assert(sizeof(data_entry_t) == 12);
 
 		data_header_t header = {};
@@ -41,12 +43,14 @@ namespace rivet::data {
 		std::string_view type_name = {};
 		rivet::structures::rivet_asset_header asset_header = {};
 
-		explicit RIVET_ABI dat1(const std::shared_ptr<rivet_data_array> &stream);
+		explicit dat1(const std::shared_ptr<rivet_data_array> &stream);
 
-		[[nodiscard]] std::shared_ptr<rivet_data_array> RIVET_ABI get_section_data(rivet_type_id type_id) const;
+		[[nodiscard]] auto
+		get_section_data(rivet_type_id type_id) const -> std::shared_ptr<rivet_data_array>;
 
-		template<typename T>
-		std::shared_ptr<rivet_array<T>> RIVET_ABI get_section(rivet_type_id type_id) const {
+		template <typename T>
+		auto
+		get_section(rivet_type_id type_id) const -> std::shared_ptr<rivet_array<T>> {
 			auto data = get_section_data(type_id);
 			if (data == nullptr) {
 				return nullptr;

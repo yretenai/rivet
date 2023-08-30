@@ -26,14 +26,15 @@ using namespace rivet;
 using namespace rivet::structures;
 
 namespace rivet::data {
-	std::shared_ptr<rivet_data_array> archive_toc::get_toc_data_buffer(const std::shared_ptr<rivet_data_array>& stream) {
+	auto
+	archive_toc::get_toc_data_buffer(const std::shared_ptr<rivet_data_array> &stream) -> std::shared_ptr<rivet_data_array> {
 		if (stream->size() < sizeof(archive_toc::archive_toc_header)) {
 			throw invalid_tag_error();
 		}
 
 		auto header = stream->get<archive_toc::archive_toc_header>(0);
 
-		if(header.type_id == dat1::magic) {
+		if (header.type_id == dat1::magic) {
 			return stream;
 		}
 
@@ -70,18 +71,18 @@ namespace rivet::data {
 		throw invalid_tag_error();
 	}
 
-	archive_toc::archive_toc(const std::shared_ptr<rivet_data_array> &stream) : dat1(get_toc_data_buffer(stream)) {
+	archive_toc::archive_toc(const std::shared_ptr<rivet_data_array> &stream): dat1(get_toc_data_buffer(stream)) {
 		if (header.schema != type_id && header.schema != type_id_spider) {
 			throw invalid_tag_error();
 		}
 
-		bool const is_spider = header.schema == type_id_spider;
+		const bool is_spider = header.schema == type_id_spider;
 
 		auto textures_header = get_section_data(texture_header_type_id);
 		std::shared_ptr<rivet_array<rivet_archive_raw>> archives_section;
 		if (is_spider) {
 			auto archives_spider_section = get_section<rivet_archive_raw_spider>(archives_type_id);
-			if(archives_spider_section == nullptr) {
+			if (archives_spider_section == nullptr) {
 				throw mismatched_data_error("missing archives section");
 			}
 
@@ -106,7 +107,7 @@ namespace rivet::data {
 
 			static_assert(sizeof(std::pair<uint32_t, rivet_off>) == 8);
 			auto chunk_section = get_section<std::pair<uint32_t, rivet_off>>(archive_asset_offsets_type_id);
-			if(chunk_section == nullptr) {
+			if (chunk_section == nullptr) {
 				throw mismatched_data_error("missing chunk section");
 			}
 
@@ -157,7 +158,7 @@ namespace rivet::data {
 		}
 
 		auto archive_index = 0;
-		for (auto archive_entry: *archives_section) {
+		for (auto archive_entry : *archives_section) {
 			std::string_view view;
 			if (is_spider) {
 				auto str = rivet_string_pool::alloc_string(std::string_view(archive_entry.name.data(), archive_entry.name.size()));
@@ -171,7 +172,7 @@ namespace rivet::data {
 			archive->time = archive_entry.time;
 			archive->version = archive_entry.version;
 			archive->unknown = archive_entry.unknown;
-			archive->load_priority = archive_entry.load_priority;\
+			archive->load_priority = archive_entry.load_priority;
 
 			archives.emplace_back(archive);
 		}
@@ -188,13 +189,13 @@ namespace rivet::data {
 		}
 
 		std::set<rivet_asset_id> key_asset_lookup {};
-		if(key_assets != nullptr) {
+		if (key_assets != nullptr) {
 			key_asset_lookup.insert(key_assets->begin(), key_assets->end());
 		}
 
 		for (rivet_size i = 0; i < ids_section->size(); ++i) {
 			auto full_id = ids_section->get(i);
-			auto generic_id = full_id & 0xbfffffffffffffff; // strip localized flag.
+			auto generic_id = full_id & 0xbfffffff'ffffffff; // strip localized flag.
 
 			rivet_size group_id = 0xFFFFFFFF;
 			if (groups_section != nullptr) {
@@ -273,31 +274,31 @@ namespace rivet::data {
 		}
 	}
 
-	std::vector<std::shared_ptr<rivet::structures::rivet_asset>>
-	archive_toc::get_group(rivet_locale locale, rivet_asset_category category, bool raw) const {
-		if(locale >= rivet_locale::Max) {
+	auto
+	archive_toc::get_group(rivet_locale locale, rivet_asset_category category, bool raw) const -> std::vector<std::shared_ptr<rivet::structures::rivet_asset>> {
+		if (locale >= rivet_locale::Max) {
 			return {};
 		}
 
-		if(category >= rivet_asset_category::Max) {
+		if (category >= rivet_asset_category::Max) {
 			return {};
 		}
 
 		return groups[static_cast<int32_t>(locale)][static_cast<int32_t>(category)][raw ? 1 : 0];
 	}
 
-	std::shared_ptr<rivet::structures::rivet_asset>
-	archive_toc::get_asset(rivet_asset_id asset_id, rivet_locale locale, rivet_asset_category category, bool raw) const {
-		if(locale >= rivet_locale::Max) {
+	auto
+	archive_toc::get_asset(rivet_asset_id asset_id, rivet_locale locale, rivet_asset_category category, bool raw) const -> std::shared_ptr<rivet::structures::rivet_asset> {
+		if (locale >= rivet_locale::Max) {
 			return nullptr;
 		}
 
-		if(category >= rivet_asset_category::Max) {
+		if (category >= rivet_asset_category::Max) {
 			return nullptr;
 		}
 
 		auto find_check = [asset_id](const std::shared_ptr<rivet::structures::rivet_asset> &asset) {
-			if(asset == nullptr) {
+			if (asset == nullptr) {
 				return false;
 			}
 
@@ -307,23 +308,23 @@ namespace rivet::data {
 		auto group = get_group(locale, category, raw);
 		auto iter = std::find_if(group.begin(), group.end(), find_check);
 
-		if(iter == group.end()) {
+		if (iter == group.end()) {
 			// fallback to english
-			if(locale != rivet_locale::None && locale != rivet_locale::English) {
+			if (locale != rivet_locale::None && locale != rivet_locale::English) {
 				locale = rivet_locale::English;
 				auto en_group = get_group(locale, category, raw);
 				iter = std::find_if(en_group.begin(), en_group.end(), find_check);
-				if(iter != en_group.end()) {
+				if (iter != en_group.end()) {
 					return *iter;
 				}
 			}
 
 			// fallback to global
-			if(locale != rivet_locale::None) {
+			if (locale != rivet_locale::None) {
 				locale = rivet_locale::None;
 				auto global_group = get_group(locale, category, raw);
 				iter = std::find_if(global_group.begin(), global_group.end(), find_check);
-				if(iter != global_group.end()) {
+				if (iter != global_group.end()) {
 					return *iter;
 				}
 			}

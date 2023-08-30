@@ -19,7 +19,7 @@ using namespace rivet::hash;
 using namespace rivet::structures;
 
 namespace rivet {
-	rivet_game::rivet_game(const std::filesystem::path &root) : root(root) {
+	rivet_game::rivet_game(const std::filesystem::path &root): root(root) {
 		auto toc_stream = rivet::rivet_data_array::from_file(root / "toc");
 		if (toc_stream == nullptr) {
 			throw std::runtime_error("Failed to load TOC");
@@ -34,42 +34,43 @@ namespace rivet {
 		dag = std::make_shared<dependency_dag>(dag_stream, toc);
 	}
 
-	void rivet_game::load_streamed_files_list(const std::filesystem::path &path) const {
+	void
+	rivet_game::load_streamed_files_list(const std::filesystem::path &path) const {
 		auto file = std::ifstream(path);
-		if(!file.is_open()) {
+		if (!file.is_open()) {
 			return;
 		}
 
 		std::string line;
-		while(std::getline(file, line)) {
-			if(line.empty()) {
+		while (std::getline(file, line)) {
+			if (line.empty()) {
 				continue;
 			}
 
 			auto hash = hash_asset_id(line);
 			auto entry = toc->asset_lookup.find(hash);
 
-			if(entry == toc->asset_lookup.end()) {
+			if (entry == toc->asset_lookup.end()) {
 				continue;
 			}
 
 			auto ptr = rivet_string_pool::alloc_string(line);
 
-			for(auto &asset_ptr : entry->second) {
+			for (auto &asset_ptr : entry->second) {
 				auto asset = asset_ptr.lock();
-				if(!asset) {
+				if (!asset) {
 					continue;
 				}
 
-				if(!asset->name.has_value()) {
+				if (!asset->name.has_value()) {
 					asset->name = *ptr;
 				}
 			}
 		}
 	}
 
-	std::shared_ptr<rivet_data_array>
-	rivet_game::open_file(const std::shared_ptr<rivet_asset> &asset) const {
+	auto
+	rivet_game::open_file(const std::shared_ptr<rivet_asset> &asset) const -> std::shared_ptr<rivet_data_array> {
 		auto archive = asset->archive;
 		if (!archive->data_stream) {
 			archive->data_stream = std::make_shared<data_stream_archive>(root, archive);
@@ -78,7 +79,8 @@ namespace rivet {
 		return archive->data_stream->read_file(asset);
 	}
 
-	bool rivet_game::prepare_archive(const std::shared_ptr<rivet::structures::rivet_asset> &asset) const noexcept {
+	auto
+	rivet_game::prepare_archive(const std::shared_ptr<rivet::structures::rivet_asset> &asset) const noexcept -> bool {
 		auto archive = asset->archive;
 		if (!archive->data_stream) {
 			archive->data_stream = std::make_shared<data_stream_archive>(root, archive);

@@ -12,7 +12,6 @@
 	#endif
 	#define RIVET_INLINE inline
 	#define RIVET_DEBUG_BREAK __debugbreak()
-	#define RIVET_ABI __stdcall
 #else
 	#ifdef RIVET_EXPORTING
 		#define RIVET_SHARED __attribute__ ((visibility ("default"))) __attribute__((unused))
@@ -34,7 +33,6 @@
 			#endif
 		#endif
 	#endif
-	#define RIVET_ABI
 #endif
 
 #ifndef RIVET_DEBUG_BREAK

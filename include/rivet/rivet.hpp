@@ -11,5 +11,6 @@
 namespace rivet {
 	const uint64_t local_version = 1;
 
-	RIVET_SHARED uint64_t RIVET_ABI rivet_version();
+	RIVET_SHARED auto
+	rivet_version() -> uint64_t;
 } // namespace rivet

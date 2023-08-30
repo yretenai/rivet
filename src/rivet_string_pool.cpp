@@ -8,12 +8,11 @@
 namespace rivet {
 	std::vector<std::shared_ptr<std::string>> rivet_string_pool::string_pool = {};
 
-	std::shared_ptr<std::string> rivet_string_pool::alloc_string(const std::string_view &str) noexcept {
-		auto existing = std::find_if(string_pool.begin(), string_pool.end(), [&str](const auto &ptr) {
-			return *ptr == str;
-		});
+	auto
+	rivet_string_pool::alloc_string(const std::string_view &str) noexcept -> std::shared_ptr<std::string> {
+		auto existing = std::find_if(string_pool.begin(), string_pool.end(), [&str](const auto &ptr) { return *ptr == str; });
 
-		if(existing != string_pool.end()) {
+		if (existing != string_pool.end()) {
 			return *existing;
 		}
 

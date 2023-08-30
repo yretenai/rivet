@@ -15,6 +15,4 @@
 using namespace rivet;
 using namespace rivet::structures;
 
-namespace rivet::serialization {
-
-} // namespace rivet::serialization
+namespace rivet::serialization { } // namespace rivet::serialization

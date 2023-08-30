@@ -13,7 +13,8 @@ namespace rivet {
 	struct RIVET_SHARED rivet_string_pool {
 		rivet_string_pool() = delete;
 
-		static std::shared_ptr<std::string> RIVET_ABI alloc_string(const std::string_view &str) noexcept;
+		static auto
+		alloc_string(const std::string_view &str) noexcept -> std::shared_ptr<std::string>;
 
 	private:
 		static std::vector<std::shared_ptr<std::string>> string_pool;

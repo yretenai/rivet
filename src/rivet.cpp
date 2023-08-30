@@ -4,6 +4,9 @@
 
 #include <rivet/rivet.hpp>
 
-uint64_t rivet::rivet_version() {
-	return rivet::local_version;
-}
+namespace rivet {
+	auto
+	rivet_version() -> uint64_t {
+		return rivet::local_version;
+	}
+} // namespace rivet

@@ -47,24 +47,29 @@ namespace rivet::structures {
 		rivet_size node_count;
 		rivet_size size;
 	};
+
 	static_assert(sizeof(rivet_serialization_object_header) == 16);
 
 	struct rivet_serialization_field_header {
 		rivet_type_id type_id;
 		uint32_t meta;
 
-		[[nodiscard]] uint32_t get_length() const noexcept {
+		[[nodiscard]] auto
+		get_length() const noexcept -> uint32_t {
 			return (meta & 0x00FFFFFF) >> 4;
 		}
 
-		[[nodiscard]] rivet_serialization_type get_type() const noexcept {
+		[[nodiscard]] auto
+		get_type() const noexcept -> rivet_serialization_type {
 			return static_cast<rivet_serialization_type>(meta >> 24);
 		}
 
-		[[nodiscard]] uint32_t get_unknown() const noexcept {
+		[[nodiscard]] auto
+		get_unknown() const noexcept -> uint32_t {
 			return meta & 0x0000000F;
 		}
 	};
+
 	static_assert(sizeof(rivet_serialization_field_header) == 8);
 
 	struct rivet_serialization_string_header {
@@ -72,14 +77,13 @@ namespace rivet::structures {
 		rivet_hash hash;
 		rivet_checksum checksum;
 	};
+
 	static_assert(sizeof(rivet_serialization_string_header) == 16);
 
 	struct rivet_serialized_object;
 
-	using rivet_serialized_value = std::variant<uint64_t, int64_t, double, bool, std::nullptr_t,
-												std::shared_ptr<std::string_view>,
-												std::shared_ptr<rivet_serialized_object>,
-												std::shared_ptr<rivet_data_array>>;
+	using rivet_serialized_value =
+		std::variant<uint64_t, int64_t, double, bool, std::nullptr_t, std::shared_ptr<std::string_view>, std::shared_ptr<rivet_serialized_object>, std::shared_ptr<rivet_data_array>>;
 
 	struct rivet_serialized_object {
 		std::unordered_map<std::shared_ptr<std::string_view>, std::vector<rivet_serialized_value>> values = {};

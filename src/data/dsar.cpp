@@ -19,9 +19,7 @@
 #include <rivet/structures/rivet_asset.hpp>
 
 namespace rivet::data {
-	rivet::data::data_stream_archive::data_stream_archive(const std::filesystem::path &root,
-														  const std::shared_ptr<rivet::structures::rivet_archive> &archive)
-			: archive(archive), exists(true) {
+	rivet::data::data_stream_archive::data_stream_archive(const std::filesystem::path &root, const std::shared_ptr<rivet::structures::rivet_archive> &archive): archive(archive), exists(true) {
 		auto archive_name = std::string(archive->name);
 		rivet::hash::normalize_asset_path(archive_name);
 
@@ -29,7 +27,7 @@ namespace rivet::data {
 		if (!std::filesystem::exists(path)) {
 			exists = false;
 		}
-		base_stream = std::make_shared<std::ifstream>(path, std::ios::binary | std::ios::in);
+		base_stream = std::make_shared<std::ifstream>(path, std::ios::binary);
 		if (!base_stream->is_open()) {
 			exists = false;
 			base_stream = nullptr;
@@ -55,8 +53,8 @@ namespace rivet::data {
 		base_stream->read(reinterpret_cast<char *>(chunks->data()), static_cast<std::streamsize>(chunks->byte_size()));
 	}
 
-	std::shared_ptr<rivet_data_array>
-	data_stream_archive::read_file(const std::shared_ptr<rivet::structures::rivet_asset> &asset) const {
+	auto
+	data_stream_archive::read_file(const std::shared_ptr<rivet::structures::rivet_asset> &asset) const -> std::shared_ptr<rivet_data_array> {
 		if (!exists) {
 			return nullptr;
 		}
@@ -68,8 +66,7 @@ namespace rivet::data {
 
 		if (!is_compressed) {
 			base_stream->seekg(asset_offset, std::ios::beg);
-			base_stream->read(reinterpret_cast<char *>(buffer->data()),
-							  static_cast<std::streamsize>(buffer->byte_size()));
+			base_stream->read(reinterpret_cast<char *>(buffer->data()), static_cast<std::streamsize>(buffer->byte_size()));
 			return buffer;
 		}
 
@@ -114,8 +111,7 @@ namespace rivet::data {
 			auto chunk_buffer = std::make_shared<rivet_data_array>(nullptr, chunk_size);
 			auto compressed_buffer = std::make_shared<rivet_data_array>(nullptr, compressed_size);
 			base_stream->seekg(compressed_offset, std::ios::beg);
-			base_stream->read(reinterpret_cast<char *>(compressed_buffer->data()),
-							  static_cast<std::streamsize>(compressed_buffer->byte_size()));
+			base_stream->read(reinterpret_cast<char *>(compressed_buffer->data()), static_cast<std::streamsize>(compressed_buffer->byte_size()));
 
 			switch (chunk.compression_type) {
 				case dsar_compression::none:

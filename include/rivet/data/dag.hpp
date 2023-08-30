@@ -39,23 +39,22 @@ namespace rivet::data {
 			rivet_size size;
 			rivet_size compressed_size;
 		};
+
 		static_assert(sizeof(dependency_dag_header) == 12);
 
 		mutable std::unordered_map<rivet_asset_id, std::shared_ptr<rivet::structures::rivet_asset>> missing_assets = {};
 		std::vector<std::vector<std::pair<std::string_view, rivet_asset_id>>> groups;
 		std::shared_ptr<archive_toc> toc;
 
-		explicit RIVET_ABI dependency_dag(const std::shared_ptr<rivet_data_array> &stream,
-										  const std::shared_ptr<archive_toc> &toc);
+		explicit dependency_dag(const std::shared_ptr<rivet_data_array> &stream, const std::shared_ptr<archive_toc> &toc);
 
-		static std::shared_ptr<rivet_data_array> RIVET_ABI get_dag_data_buffer(const std::shared_ptr<rivet_data_array>& stream);
+		static auto
+		get_dag_data_buffer(const std::shared_ptr<rivet_data_array> &stream) -> std::shared_ptr<rivet_data_array>;
 
 	private:
-		void RIVET_ABI insert_dag_data(rivet_size index,
-									   const std::shared_ptr<rivet_array<uint32_t>> &links,
-									   const std::shared_ptr<rivet_array<rivet_off>> &heads,
-									   const std::shared_ptr<rivet_array<rivet_off>> &names,
-									   const std::shared_ptr<rivet_array<rivet::structures::rivet_asset_type>> &types,
-									   std::string_view name, bool is_ephemeral = false) const;
+		void
+		insert_dag_data(rivet_size index, const std::shared_ptr<rivet_array<uint32_t>> &links, const std::shared_ptr<rivet_array<rivet_off>> &heads,
+						const std::shared_ptr<rivet_array<rivet_off>> &names, const std::shared_ptr<rivet_array<rivet::structures::rivet_asset_type>> &types, std::string_view name,
+						bool is_ephemeral = false) const;
 	};
 } // namespace rivet::data
