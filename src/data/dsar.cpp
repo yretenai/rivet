@@ -141,7 +141,7 @@ namespace rivet::data {
 			rivet_size shift = 0;
 			// if this is the first chunk, and the asset offset is not aligned to the chunk offset
 			if (local_offset == 0 && chunk_offset < asset_offset) {
-				shift = asset_offset - chunk_offset;
+				shift = static_cast<rivet_size>(static_cast<rivet_size64>(asset_offset) - chunk_offset);
 				chunk_size -= shift;
 			}
 
@@ -154,7 +154,7 @@ namespace rivet::data {
 				throw unreachable_error();
 			}
 
-			chunk_buffer->copy_to(buffer, shift, chunk_size, local_offset);
+			chunk_buffer->copy_to(buffer, static_cast<rivet_size64>(shift), chunk_size, local_offset);
 
 			local_offset += chunk_size;
 		}

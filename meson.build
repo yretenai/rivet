@@ -39,25 +39,19 @@ includedir = include_directories('include/')
 cpp_args = []
 
 compiler = meson.get_compiler('cpp')
-if compiler.get_id() == 'msvc'
-    cpp_args += ['/utf-8', '/wd4251']
-endif
+
+cpp_args = compiler.get_supported_arguments(
+    '/wd4251', # do i need to define my own template exports? kinda cringe! do better msvc
+    '/utf-8',
+    '/EHsc',
+    '-finput-charset=utf-8',
+    '-fexec-charset=utf-8',
+    '-faddrsig',
+    '-faligned-new',
+    '-fcoroutines',
+)
 
 if compiler.get_id() == 'clang'
-    cpp_args += ['-finput-charset=utf-8', '-fexec-charset=utf-8']
-
-    if compiler.has_argument('-faddrsig')
-        cpp_args += ['-faddrsig']
-    endif
-
-    if compiler.has_argument('-faligned-new')
-        cpp_args += ['-faligned-new']
-    endif
-
-    if compiler.has_argument('-fcoroutines')
-        cpp_args += ['-fcoroutines']
-    endif
-
     if compiler.compiles('void test() { }', name: 'has polly', args: ['-mllvm', '-polly'])
         cpp_args += ['-mllvm', '-polly']
     endif

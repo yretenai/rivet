@@ -121,7 +121,7 @@ namespace rivet::data {
 			zstream.zalloc = Z_NULL;
 			zstream.zfree = Z_NULL;
 			zstream.opaque = Z_NULL;
-			zstream.avail_in = slice->size();
+			zstream.avail_in = static_cast<uint32_t>(slice->size());
 			zstream.next_in = slice->data();
 			zstream.avail_out = header.size;
 			zstream.next_out = buffer->data();
