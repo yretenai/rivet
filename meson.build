@@ -49,11 +49,42 @@ cpp_args = compiler.get_supported_arguments(
     '-faddrsig',
     '-faligned-new',
     '-fcoroutines',
+    '-march=native',
+    '-mtune=native',
+    '-fopenmp'
 )
 
-if compiler.get_id() == 'clang'
-    if compiler.compiles('void test() { }', name: 'has polly', args: ['-mllvm', '-polly'])
-        cpp_args += ['-mllvm', '-polly']
+if get_option('buildtype') == 'release-polly'
+    if compiler.get_id() == 'clang'
+        if compiler.compiles('void test() { }', name: 'has polly', args: ['-mllvm', '-polly'])
+            cpp_args += ['-mllvm', '-polly']
+
+            if compiler.compiles('void test() { }', name: 'has polly vectorizer', args: ['-mllvm', '-polly-vectorizer=stripmine'])
+                cpp_args += ['-mllvm', '-polly-vectorizer=stripmine']
+            endif
+
+            if compiler.compiles('void test() { }', name: 'has polly parallel', args: ['-mllvm', '-polly-parallel'])
+                cpp_args += ['-mllvm', '-polly-parallel']
+            endif
+
+            if compiler.compiles('void test() { }', name: 'has polly omp backend', args: ['-mllvm', '-polly-omp-backend=LLVM'])
+                cpp_args += ['-mllvm', '-polly-omp-backend=LLVM']
+            endif
+
+            if compiler.compiles('void test() { }', name: 'has polly num threads', args: ['-mllvm', '-polly-num-threads=24'])
+                cpp_args += ['-mllvm', '-polly-num-threads=24']
+            endif
+
+            if compiler.compiles('void test() { }', name: 'has polly scheduling', args: ['-mllvm', '-polly-scheduling=dynamic'])
+                cpp_args += ['-mllvm', '-polly-scheduling=dynamic']
+            endif
+
+            if compiler.compiles('void test() { }', name: 'has polly scheduling chunksize', args: ['-mllvm', '-polly-scheduling-chunksize=1'])
+                cpp_args += ['-mllvm', '-polly-scheduling-chunksize=1']
+            endif
+
+            add_project_arguments('-O3', language: 'cpp')
+        endif
     endif
 endif
 
