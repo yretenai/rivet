@@ -25,7 +25,7 @@
 
 namespace rivet {
 	template <typename T, const int Alignment = RIVET_ALIGNMENT> struct rivet_array {
-		std::shared_ptr<uint8_t[]> ptr = nullptr;
+		std::shared_ptr<uint8_t[]> ptr = nullptr; // NOLINT(*-avoid-c-arrays)
 		rivet_size64 length = 0;
 		rivet_off64 offset = 0;
 
@@ -78,7 +78,7 @@ namespace rivet {
 		void
 		alloc(rivet_size64 size) noexcept {
 #ifdef _WIN32
-			ptr = std::make_shared<uint8_t[]>(normalize_value(size) + Alignment + 1);
+			ptr = std::make_shared<uint8_t[]>(normalize_value(size) + Alignment + 1); // NOLINT(*-avoid-c-arrays)
 			if (!is_aligned()) {
 				offset = Alignment - (reinterpret_cast<intptr_t>(this->ptr.get()) % Alignment);
 			}
@@ -117,11 +117,11 @@ namespace rivet {
 			}
 		}
 
-		rivet_array(std::shared_ptr<uint8_t[]> ptr, rivet_size64 length, rivet_off64 offset): ptr(std::move(ptr)), length(length), offset(offset) { }
+		rivet_array(std::shared_ptr<uint8_t[]> ptr, rivet_size64 length, rivet_off64 offset): ptr(std::move(ptr)), length(length), offset(offset) { } // NOLINT(*-avoid-c-arrays)
 
 		[[nodiscard]] RIVET_INLINE auto
 		data() const noexcept -> T * {
-			return reinterpret_cast<T *>(ptr.get() + offset);
+			return reinterpret_cast<T *>(ptr.get() + offset); // NOLINT(*-pro-bounds-pointer-arithmetic)
 		}
 
 		[[maybe_unused, nodiscard]] RIVET_INLINE auto
@@ -179,7 +179,7 @@ namespace rivet {
 				throw index_out_of_range();
 			}
 
-			return reinterpret_cast<U *>(data() + index)[0];
+			return reinterpret_cast<U *>(data() + index)[0]; // NOLINT(*-pro-bounds-pointer-arithmetic)
 		}
 
 		[[maybe_unused]] void
@@ -202,7 +202,7 @@ namespace rivet {
 				throw index_out_of_range();
 			}
 
-			reinterpret_cast<U *>(data() + index)[0] = value;
+			reinterpret_cast<U *>(data() + index)[0] = value; // NOLINT(*-pro-bounds-pointer-arithmetic)
 		}
 
 		[[maybe_unused, nodiscard]] auto

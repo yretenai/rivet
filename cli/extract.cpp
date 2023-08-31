@@ -8,10 +8,10 @@
 
 #include <clipp.h>
 
-#include <rivet/rivet.hpp>
 #include <rivet/data/dag.hpp>
 #include <rivet/data/toc.hpp>
 #include <rivet/hash/asset_id.hpp>
+#include <rivet/rivet.hpp>
 #include <rivet/rivet_game.hpp>
 
 #include "helper.hpp"
@@ -119,14 +119,11 @@ extract(int argc, char **argv) -> int {
 	bool version_flag = false;
 	bool help_flag = false;
 
-	auto cli = (
-		clipp::option("-h", "--help").set(help_flag) % "show help",
-		clipp::option("-v", "--version").set(version_flag) % "show version",
-		clipp::required("-g", "--game") & clipp::required("game", game_path) % "path to game directory",
-		clipp::option("-o", "--output-dir") & clipp::value("output-dir", output_dir) % "output directory"
-	);
+	auto cli = (clipp::joinable(clipp::option("-h", "--help").set(help_flag, true) % "show help", clipp::option("-v", "--version").set(version_flag, true) % "show version"),
+				clipp::required("-g", "--game") & clipp::required("game", game_path) % "path to game directory",
+				clipp::option("-o", "--output-dir") & clipp::value("output-dir", output_dir) % "output directory");
 
-	if(!clipp::parse(argc, argv, cli) || help_flag || version_flag) {
+	if (!clipp::parse(argc, argv, cli) || help_flag || version_flag) {
 		if (version_flag) {
 			std::cout << "rivet-extract version " << rivet::rivet_version() << '\n';
 			return 0;

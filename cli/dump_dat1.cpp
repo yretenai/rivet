@@ -7,11 +7,11 @@
 
 #include <clipp.h>
 
-#include <rivet/rivet.hpp>
 #include <rivet/data/asset_bundle.h>
 #include <rivet/data/dag.hpp>
 #include <rivet/data/dat1.hpp>
 #include <rivet/data/toc.hpp>
+#include <rivet/rivet.hpp>
 
 #include "helper.hpp"
 
@@ -27,15 +27,13 @@ dump_dat1(int argc, char **argv) -> int {
 	bool help_flag = false;
 	bool verbose = false;
 
-	auto cli = (
-		clipp::option("-h", "--help").set(help_flag, true) % "show help",
-		clipp::option("-v", "--version").set(version_flag, true) % "show version",
-		clipp::option("-V", "--verbose").set(verbose, true) % "verbose logging",
-		clipp::option("-o", "--output-dir") & clipp::value("output_dir", output_dir) % "output directory",
-		clipp::values("input-files", input_files) % "input files"
-	);
+	auto cli = (clipp::joinable(clipp::option("-h", "--help").set(help_flag, true) % "show help",
+								clipp::option("-v", "--version").set(version_flag, true) % "show version",
+								clipp::option("-V", "--verbose").set(verbose, true) % "verbose logging"),
+				clipp::option("-o", "--output-dir") & clipp::value("output_dir", output_dir) % "output directory",
+				clipp::values("input-files", input_files) % "input files");
 
-	if(!clipp::parse(argc, argv, cli) || help_flag || version_flag) {
+	if (!clipp::parse(argc, argv, cli) || help_flag || version_flag) {
 		if (version_flag) {
 			std::cout << "rivet-dat1-dump version " << rivet::rivet_version() << '\n';
 			return 0;
