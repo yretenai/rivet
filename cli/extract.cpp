@@ -6,6 +6,9 @@
 #include <fstream>
 #include <iostream>
 
+#include <clipp.h>
+
+#include <rivet/rivet.hpp>
 #include <rivet/data/dag.hpp>
 #include <rivet/data/toc.hpp>
 #include <rivet/hash/asset_id.hpp>
@@ -110,14 +113,36 @@ process_asset(const std::shared_ptr<rivet_game> &game, const std::shared_ptr<riv
 }
 
 auto
-extract(const std::vector<std::string_view> &args) -> int {
-	if (args.empty()) {
-		std::cout << "usage: rivet-extract path/to/game path/to/dump\n";
+extract(int argc, char **argv) -> int {
+	const std::string game_path;
+	std::string output_dir;
+	bool version_flag = false;
+	bool help_flag = false;
+
+	auto cli = (
+		clipp::option("-h", "--help").set(help_flag) % "show help",
+		clipp::option("-v", "--version").set(version_flag) % "show version",
+		clipp::option("-g", "--game") & clipp::required("game", game_path) % "path to game directory",
+		clipp::option("-o", "--output-dir") & clipp::value("output-dir", output_dir) % "output directory"
+	);
+
+	if(!clipp::parse(argc, argv, cli) || help_flag || version_flag) {
+		if (version_flag) {
+			std::cout << "rivet-extract version " << rivet::rivet_version() << '\n';
+			return 0;
+		}
+
+		if (help_flag) {
+			std::cout << clipp::make_man_page(cli, "rivet-extract") << '\n';
+			return 1;
+		}
+
+		std::cout << clipp::usage_lines(cli, "rivet-extract") << '\n';
 		return 1;
 	}
 
-	auto game = std::make_shared<rivet_game>(std::filesystem::path(args[0]));
-	if (args.size() < 2) {
+	auto game = std::make_shared<rivet_game>(game_path);
+	if (output_dir.empty()) {
 		std::cout << "no output path provided, exiting\n";
 		return 0;
 	}
@@ -129,7 +154,7 @@ extract(const std::vector<std::string_view> &args) -> int {
 
 	auto root_prefix = std::string("d/");
 
-	const std::filesystem::path dump(args[1]);
+	const std::filesystem::path dump(output_dir);
 
 	const std::filesystem::path error_path = dump / root_prefix / "errors.txt";
 	std::ofstream error_file(error_path, std::ios::out);

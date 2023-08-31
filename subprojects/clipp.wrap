@@ -1,0 +1,8 @@
+[wrap-git]
+url = https://github.com/GerHobbelt/clipp.git
+revision = 02783b6782ebedbb2bebc2e6ceda738ee51c7df2
+depth = 1
+patch_directory = clipp
+
+[provide]
+clipp = clipp_dep

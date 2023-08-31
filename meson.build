@@ -13,13 +13,12 @@ compiler = meson.get_compiler('cpp')
 deps = []
 deps += [dependency('threads', required: true)]
 deps += [dependency('liblz4', version: '>= 1.9.4')]
-deps += [dependency('libgdeflate', version: '1.8.0')]
-deps += [dependency('zlib', version: '1.3')]
-deps += [dependency('nlohmann_json', version: '3.11.2')]
-deps += [dependency('absl_base', version: '20230125.1')]
-deps += [dependency('absl_flags', version: '20230125.1')]
+deps += [dependency('libgdeflate', version: '>=1.8.0')]
+deps += [dependency('zlib', version: '>=1.3')]
+deps += [dependency('nlohmann_json', version: '>=3.11.2')]
+deps += [dependency('clipp', version: '>=1.2.4')]
 if not compiler.check_header('ankerl/unordered_dense.h')
-    deps += [dependency('unordered_dense', version: '4.1.1')]
+    deps += [dependency('unordered_dense', version: '>=4.1.1')]
 endif
 
 gdeflate_core = subproject('GDeflate')
