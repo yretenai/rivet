@@ -27,7 +27,7 @@ namespace rivet::data {
 		}
 
 		if (excess_data_size > 0) {
-			header.sizes[header.sizes.size() - 1] += excess_data_size;
+			header.sizes[header.sizes.size() - 1] += static_cast<rivet_size>(excess_data_size);
 		}
 	}
 
