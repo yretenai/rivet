@@ -42,11 +42,11 @@ dump_dat1(int argc, char **argv) -> int {
 		}
 
 		if (help_flag) {
-			std::cout << clipp::make_man_page(cli, "rivet-extract") << '\n';
+			std::cout << clipp::make_man_page(cli, "rivet-dat1-dump") << '\n';
 			return 1;
 		}
 
-		std::cout << clipp::usage_lines(cli, "rivet-extract") << '\n';
+		std::cout << clipp::usage_lines(cli, "rivet-dat1-dump") << '\n';
 		return 1;
 	}
 
