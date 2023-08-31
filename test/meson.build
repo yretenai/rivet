@@ -1,5 +1,2 @@
-snitch_dep = dependency('snitch-1.1.1', required: false)
-if not snitch_dep.found()
-    snitch_dep = dependency('snitch')
-endif
+snitch_dep = dependency('snitch', version: '>=1.1.1')
 test_deps = deps + [snitch_dep]

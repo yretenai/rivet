@@ -1,0 +1,13 @@
+diff --git a/meson.build b/meson.build
+index f8388c3..e105d24 100644
+--- a/meson.build
++++ b/meson.build
+@@ -28,5 +28,6 @@ project('unordered_dense', 'cpp',
+     ])
+ 
+ incdir = include_directories('include')
+-subdir('test')
+-
++unordered_dense_dep = declare_dependency(
++    include_directories: incdir
++)

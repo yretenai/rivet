@@ -4,10 +4,10 @@
 
 #pragma once
 
+#include <ankerl/unordered_dense.h>
 #include <cstdint>
 #include <memory>
 #include <string>
-#include <unordered_map>
 #include <variant>
 #include <vector>
 
@@ -86,6 +86,6 @@ namespace rivet::structures {
 		std::variant<uint64_t, int64_t, double, bool, std::nullptr_t, std::shared_ptr<std::string_view>, std::shared_ptr<rivet_serialized_object>, std::shared_ptr<rivet_data_array>>;
 
 	struct rivet_serialized_object {
-		std::unordered_map<std::shared_ptr<std::string_view>, std::vector<rivet_serialized_value>> values = {};
+		ankerl::unordered_dense::map<std::shared_ptr<std::string_view>, std::vector<rivet_serialized_value>> values = {};
 	};
 } // namespace rivet::structures

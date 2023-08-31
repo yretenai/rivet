@@ -7,38 +7,27 @@ project('rivet', 'cpp',
 		'cpp_std=c++20'
 	])
 
-thread_dep = dependency('threads', required: true)
 
-liblz4_dep = dependency('liblz4-1.9.4', required: false)
-if not liblz4_dep.found() 
-    liblz4_dep = dependency('liblz4')
-endif
+compiler = meson.get_compiler('cpp')
 
-libgdeflate_dep = dependency('libgdeflate-1.8.0', required: false)
-if not libgdeflate_dep.found() 
-    libgdeflate_dep = dependency('libgdeflate')
-endif
-
-zlib_dep = dependency('zlib-1.3-2', required: false)
-if not zlib_dep.found()
-    zlib_dep = dependency('zlib')
-endif
-
-nlohmann_json_dep = dependency('nlohmann_json-3.11.2', required: false)
-if not nlohmann_json_dep.found()
-    nlohmann_json_dep = dependency('nlohmann_json')
+deps = []
+deps += [dependency('threads', required: true)]
+deps += [dependency('liblz4', version: '>= 1.9.4')]
+deps += [dependency('libgdeflate', version: '1.8.0')]
+deps += [dependency('zlib', version: '1.3')]
+deps += [dependency('nlohmann_json', version: '3.11.2')]
+deps += [dependency('absl_base', version: '20230125.1')]
+deps += [dependency('absl_flags', version: '20230125.1')]
+if not compiler.check_header('ankerl/unordered_dense.h')
+    deps += [dependency('unordered_dense', version: '4.1.1')]
 endif
 
 gdeflate_core = subproject('GDeflate')
-gdeflate_core_dep = gdeflate_core.get_variable('gdeflate_core_dep')
-
-deps = [thread_dep, liblz4_dep, libgdeflate_dep, gdeflate_core_dep, zlib_dep, nlohmann_json_dep]
+deps += [gdeflate_core.get_variable('gdeflate_core_dep')]
 
 includedir = include_directories('include/')
 
 cpp_args = []
-
-compiler = meson.get_compiler('cpp')
 
 cpp_args = compiler.get_supported_arguments(
     '/wd4251', # do i need to define my own template exports? kinda cringe! do better msvc

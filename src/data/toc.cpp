@@ -7,7 +7,6 @@
 #include <memory>
 #include <set>
 #include <string>
-#include <unordered_map>
 #include <utility>
 #include <vector>
 
@@ -177,7 +176,7 @@ namespace rivet::data {
 			archives.emplace_back(archive);
 		}
 
-		std::unordered_map<rivet_asset_id, rivet_asset_texture_header> chunk_map;
+		ankerl::unordered_dense::map<rivet_asset_id, rivet_asset_texture_header> chunk_map;
 		if (texture_ids != nullptr && texture_metas != nullptr) {
 			if (texture_ids->size() != texture_metas->size()) {
 				throw mismatched_data_error("streamed id count does not match chunk count");

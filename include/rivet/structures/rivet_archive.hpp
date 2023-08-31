@@ -7,7 +7,6 @@
 #include <cstdint>
 #include <memory>
 #include <string>
-#include <unordered_map>
 
 namespace rivet {
 	namespace data {
@@ -18,6 +17,7 @@ namespace rivet {
 		struct rivet_asset;
 
 #pragma pack(push, 1)
+
 		struct rivet_archive_raw {
 			std::array<char, 0x30> name;
 			uint64_t time;
@@ -25,6 +25,7 @@ namespace rivet {
 			uint32_t unknown;
 			uint16_t load_priority;
 		};
+
 		static_assert(sizeof(rivet_archive_raw) == 0x42);
 
 		struct rivet_archive_raw_spider {

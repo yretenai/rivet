@@ -18,6 +18,7 @@ namespace rivet::structures {
 	struct rivet_archive;
 
 #pragma pack(push, 1)
+
 	struct rivet_asset_raw {
 		rivet_size size;
 		uint32_t archive_id;

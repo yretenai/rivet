@@ -4,11 +4,11 @@
 
 #pragma once
 
+#include <ankerl/unordered_dense.h>
 #include <array>
 #include <cstdint>
 #include <memory>
 #include <string_view>
-#include <unordered_map>
 #include <vector>
 
 #include <rivet/data/dat1.hpp>
@@ -44,7 +44,7 @@ namespace rivet::data {
 
 		static_assert(sizeof(archive_toc_header) == 8);
 
-		std::unordered_map<rivet_asset_id, std::vector<std::weak_ptr<rivet::structures::rivet_asset>>> asset_lookup = {};
+		ankerl::unordered_dense::map<rivet_asset_id, std::vector<std::weak_ptr<rivet::structures::rivet_asset>>> asset_lookup = {};
 		std::vector<std::shared_ptr<rivet::structures::rivet_archive>> archives = {};
 		std::array<std::array<std::array<std::vector<std::shared_ptr<rivet::structures::rivet_asset>>, 2>, 4>, 32> groups = {};
 		uint32_t streamed_texture_count = 0;

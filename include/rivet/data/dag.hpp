@@ -4,10 +4,10 @@
 
 #pragma once
 
+#include <ankerl/unordered_dense.h>
 #include <memory>
 #include <string>
 #include <string_view>
-#include <unordered_map>
 #include <utility>
 #include <vector>
 
@@ -41,7 +41,7 @@ namespace rivet::data {
 
 		static_assert(sizeof(dependency_dag_header) == 12);
 
-		mutable std::unordered_map<rivet_asset_id, std::shared_ptr<rivet::structures::rivet_asset>> missing_assets = {};
+		mutable ankerl::unordered_dense::map<rivet_asset_id, std::shared_ptr<rivet::structures::rivet_asset>> missing_assets = {};
 		std::vector<std::vector<std::pair<std::string_view, rivet_asset_id>>> groups;
 		std::shared_ptr<archive_toc> toc;
 
