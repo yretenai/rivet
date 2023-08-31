@@ -122,7 +122,7 @@ extract(int argc, char **argv) -> int {
 	auto cli = (
 		clipp::option("-h", "--help").set(help_flag) % "show help",
 		clipp::option("-v", "--version").set(version_flag) % "show version",
-		clipp::option("-g", "--game") & clipp::required("game", game_path) % "path to game directory",
+		clipp::required("-g", "--game") & clipp::required("game", game_path) % "path to game directory",
 		clipp::option("-o", "--output-dir") & clipp::value("output-dir", output_dir) % "output directory"
 	);
 
