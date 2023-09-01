@@ -17,6 +17,7 @@ deps += [dependency('libgdeflate', version: '>=1.8.0')]
 deps += [dependency('zlib', version: '>=1.3')]
 deps += [dependency('nlohmann_json', version: '>=3.11.2')]
 deps += [dependency('clipp', version: '>=1.2.4')]
+deps += [dependency('cmp_compressonator', version: '>=4.4.19', static: true)]
 if not compiler.check_header('ankerl/unordered_dense.h')
     deps += [dependency('unordered_dense', version: '>=4.1.1')]
 endif
@@ -30,6 +31,7 @@ cpp_args = []
 
 cpp_args = compiler.get_supported_arguments(
     '/wd4251', # do i need to define my own template exports? kinda cringe! do better msvc
+    '/wd4913',
     '/utf-8',
     '/EHsc',
     '-finput-charset=utf-8',
