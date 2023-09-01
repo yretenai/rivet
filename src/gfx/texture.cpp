@@ -3,6 +3,8 @@
 // SPDX-License-Identifier: MPL-2.0
 
 #include <compressonator.h>
+#include <csetjmp>
+#include <cstddef>
 #include <png.h>
 #include <tiffio.h>
 
@@ -70,6 +72,50 @@ namespace rivet::gfx {
 		}
 
 		stream_buffer = stream;
+	}
+
+	auto
+	texture::is_convertable() const -> bool {
+		auto dxgi = static_cast<dxgi_format>(header.format);
+		switch (dxgi) {
+			case dxgi_format::bc1_unorm:
+			case dxgi_format::bc1_unorm_srgb:
+			case dxgi_format::bc2_unorm:
+			case dxgi_format::bc2_unorm_srgb:
+			case dxgi_format::bc3_unorm:
+			case dxgi_format::bc3_unorm_srgb:
+			case dxgi_format::bc4_unorm:
+			case dxgi_format::bc4_snorm:
+			case dxgi_format::bc5_unorm:
+			case dxgi_format::bc5_snorm:
+			case dxgi_format::bc6h_uf16:
+			case dxgi_format::bc6h_sf16:
+			case dxgi_format::bc7_unorm:
+			case dxgi_format::bc7_unorm_srgb:
+			case dxgi_format::r8g8b8a8_unorm:
+			case dxgi_format::r8g8b8a8_unorm_srgb:
+			case dxgi_format::r8g8b8a8_snorm:
+			case dxgi_format::r8g8b8a8_sint:
+			case dxgi_format::r16g16b16a16_float:
+			case dxgi_format::r32g32b32a32_float:
+			case dxgi_format::a8_unorm:
+			case dxgi_format::r8_unorm:
+			case dxgi_format::r8_snorm:
+			case dxgi_format::r16_float:
+			case dxgi_format::r32_float:
+			case dxgi_format::r8g8_unorm:
+			case dxgi_format::r8g8_snorm:
+			case dxgi_format::r16g16_float:
+			case dxgi_format::r32g32_float:
+			case dxgi_format::r10g10b10a2_unorm:
+			case dxgi_format::r10g10b10a2_uint:
+			case dxgi_format::b8g8r8a8_unorm:
+			case dxgi_format::b8g8r8a8_unorm_srgb:
+			case dxgi_format::b8g8r8x8_unorm:
+			case dxgi_format::b8g8r8x8_unorm_srgb: return true;
+
+			default: return false;
+		}
 	}
 
 	auto
@@ -154,10 +200,9 @@ namespace rivet::gfx {
 			case dxgi_format::b8g8r8x8_unorm:
 			case dxgi_format::b8g8r8x8_unorm_srgb: texture.format = CMP_FORMAT_BGRA_8888; break;
 
-			default:
-				throw invalid_operation("texture::decompress_compressonator: unsupported texture format");
+			default: throw invalid_operation("texture::decompress_compressonator: unsupported texture format");
 		}
-		texture.dwDataSize = pixel_data->size();
+		texture.dwDataSize = static_cast<CMP_DWORD>(pixel_data->size());
 		texture.pData = pixel_data->data();
 
 		auto dest_texture = CMP_Texture {};
@@ -188,7 +233,8 @@ namespace rivet::gfx {
 	auto
 	texture::to_png([[maybe_unused]] rivet_index surface_index) const -> std::shared_ptr<rivet_data_array> {
 		auto has_stream = needs_stream() && stream_buffer != nullptr;
-		auto array = decompress_compressonator(CMP_FORMAT_RGBA_8888);
+		auto hdr = is_hdr();
+		auto array = decompress_compressonator(hdr ? CMP_FORMAT_RGBA_16 : CMP_FORMAT_RGBA_8888);
 
 		auto *png = png_create_write_struct(PNG_LIBPNG_VER_STRING, nullptr, nullptr, nullptr);
 		if (png == nullptr) {
@@ -211,10 +257,11 @@ namespace rivet::gfx {
 
 		auto png_data = std::make_shared<std::vector<uint8_t>>();
 		png_set_write_fn(png, png_data.get(), png_write_data, nullptr);
-		png_set_IHDR(png, info, width, height, 8, PNG_COLOR_TYPE_RGBA, PNG_INTERLACE_NONE, PNG_COMPRESSION_TYPE_DEFAULT, PNG_FILTER_TYPE_DEFAULT);
+		auto stride = hdr ? 8 : 4;
+		png_set_IHDR(png, info, width, height, stride << 1, PNG_COLOR_TYPE_RGBA, PNG_INTERLACE_NONE, PNG_COMPRESSION_TYPE_DEFAULT, PNG_FILTER_TYPE_DEFAULT);
 		png_write_info(png, info);
 		for (auto row = 0u; row < height; row++) {
-			png_write_row(png, array->data() + static_cast<size_t>(row * width * 4)); // NOLINT(*-pro-bounds-pointer-arithmetic)
+			png_write_row(png, array->data() + static_cast<size_t>(row * width * stride)); // NOLINT(*-pro-bounds-pointer-arithmetic)
 		}
 		png_write_end(png, nullptr);
 		png_destroy_write_struct(&png, &info);
@@ -222,11 +269,35 @@ namespace rivet::gfx {
 		return rivet_data_array::from_vector(*png_data);
 	}
 
-	auto
-	texture::to_tiff([[maybe_unused]] rivet_index surface_index) const -> std::shared_ptr<rivet_data_array> {
-		auto array = decompress_compressonator(CMP_FORMAT_RGBA_16F);
+	// because meson does not support libtiffxx, and I don't have the energy to fix it we're using the fopen C API
+	// the alternative is hacking together a streamable TIFF writer, which is not something I want to do right now.
+	void
+	texture::to_tiff([[maybe_unused]] rivet_index surface_index, const std::filesystem::path &path) const {
+		auto has_stream = needs_stream() && stream_buffer != nullptr;
+		auto hdr = is_hdr();
+		auto array = decompress_compressonator(hdr ? CMP_FORMAT_RGBA_16F : CMP_FORMAT_RGBA_8888);
 
-		throw not_implemented_error("texture::to_tiff: not implemented");
+		auto *tiff = TIFFOpen(path.string().c_str(), "w");
+		if (tiff == nullptr) {
+			throw invalid_operation("texture::to_tiff: failed to create tiff stream");
+		}
+
+		auto width = has_stream ? header.stream_width : header.resident_width;
+		auto height = has_stream ? header.stream_height : header.resident_height;
+		const tmsize_t stride = hdr ? 32 : 4;
+
+		TIFFSetField(tiff, TIFFTAG_IMAGEWIDTH, width);											 // NOLINT(*-vararg)
+		TIFFSetField(tiff, TIFFTAG_IMAGELENGTH, height);										 // NOLINT(*-vararg)
+		TIFFSetField(tiff, TIFFTAG_ROWSPERSTRIP, height);										 // NOLINT(*-vararg)
+		TIFFSetField(tiff, TIFFTAG_SAMPLESPERPIXEL, 4);											 // NOLINT(*-vararg)
+		TIFFSetField(tiff, TIFFTAG_BITSPERSAMPLE, hdr ? 16 : 8);								 // NOLINT(*-vararg)
+		TIFFSetField(tiff, TIFFTAG_SAMPLEFORMAT, hdr ? SAMPLEFORMAT_IEEEFP : SAMPLEFORMAT_UINT); // NOLINT(*-vararg)
+		TIFFSetField(tiff, TIFFTAG_ORIENTATION, ORIENTATION_TOPLEFT);							 // NOLINT(*-vararg)
+		TIFFSetField(tiff, TIFFTAG_PLANARCONFIG, PLANARCONFIG_CONTIG);							 // NOLINT(*-vararg)
+		TIFFSetField(tiff, TIFFTAG_PHOTOMETRIC, hdr ? PHOTOMETRIC_LOGL : PHOTOMETRIC_RGB);		 // NOLINT(*-vararg)
+		TIFFSetField(tiff, TIFFTAG_COMPRESSION, COMPRESSION_NONE);								 // NOLINT(*-vararg)
+		TIFFWriteEncodedStrip(tiff, 0, array->data(), static_cast<tmsize_t>(width) * static_cast<tmsize_t>(height) * stride);
+		TIFFClose(tiff);
 	}
 
 	auto

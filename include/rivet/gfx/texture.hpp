@@ -49,10 +49,13 @@ namespace rivet::gfx {
 		provide_stream(const std::shared_ptr<rivet_data_array> &stream);
 
 		[[nodiscard]] auto
-		to_png([[maybe_unused]] rivet_index surface_index) const -> std::shared_ptr<rivet_data_array>;
+		is_convertable() const -> bool;
 
 		[[nodiscard]] auto
-		to_tiff([[maybe_unused]] rivet_index surface_index) const -> std::shared_ptr<rivet_data_array>;
+		to_png([[maybe_unused]] rivet_index surface_index) const -> std::shared_ptr<rivet_data_array>;
+
+		void
+		to_tiff([[maybe_unused]] rivet_index surface_index, const std::filesystem::path &path) const;
 
 		[[nodiscard]] auto
 		to_dds() const -> std::shared_ptr<rivet_data_array>;

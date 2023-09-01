@@ -24,10 +24,16 @@ convert_texture(int argc, char **argv) -> int {
 	bool version_flag = false;
 	bool help_flag = false;
 	bool dds = false;
+	bool tif = false;
+	bool force_dds_on_hdr = false;
+	bool force_tif_on_hdr = false;
 
 	auto cli = (clipp::joinable(clipp::option("-h", "--help").set(help_flag, true) % "show help",
 								clipp::option("-v", "--version").set(version_flag, true) % "show version",
-								clipp::option("-d", "--dds").set(dds, true) % "convert to DDS"),
+								clipp::option("-d", "--dds").set(dds, true) % "convert to DDS",
+								clipp::option("-t", "--tif").set(tif, true) % "convert to TIFF",
+								clipp::option("-f", "--force-dds-on-hdr").set(force_dds_on_hdr, true) % "force DDS on HDR textures",
+								clipp::option("-F", "--force-tif-on-hdr").set(force_tif_on_hdr, true) % "force TIFF on HDR textures"),
 				clipp::option("-o", "--output-dir") & clipp::value("output_dir", output_dir) % "output directory",
 				clipp::values("input-files", input_files) % "input files");
 
@@ -68,19 +74,33 @@ convert_texture(int argc, char **argv) -> int {
 			output_path = std::filesystem::path(input_file);
 		}
 
-		output_path.replace_extension(dds ? ".dds" : tex.is_hdr() ? ".tiff" : ".png");
-
-		auto image_buffer = dds ? tex.to_dds() : tex.is_hdr() ? tex.to_tiff(0) : tex.to_png(0);
-
-		std::ofstream output_file(output_path, std::ios::binary | std::ios::trunc);
-		if (!output_file.is_open()) {
-			std::cout << "failed to open " << output_path << '\n';
-			continue;
+		auto local_dds = dds || !tex.is_convertable();
+		auto local_tif = tif;
+		if (!local_dds) {
+			auto is_hdr = tex.is_hdr();
+			if (force_dds_on_hdr) {
+				local_dds = is_hdr;
+			} else if (force_tif_on_hdr) {
+				local_tif = is_hdr;
+			}
 		}
 
-		std::cout << "writing " << output_path.string() << '\n';
+		output_path.replace_extension(local_dds ? ".dds" : local_tif ? ".tiff" : ".png");
 
-		output_file.write(reinterpret_cast<const char *>(image_buffer->data()), static_cast<std::streamsize>(image_buffer->byte_size()));
+		std::cout << "writing " << output_path.string() << '\n';
+		if (local_tif) {
+			tex.to_tiff(0, output_path);
+		} else {
+			auto image_buffer = local_dds ? tex.to_dds() : tex.to_png(0);
+
+			std::ofstream output_file(output_path, std::ios::binary | std::ios::trunc);
+			if (!output_file.is_open()) {
+				std::cout << "failed to open " << output_path << '\n';
+				continue;
+			}
+
+			output_file.write(reinterpret_cast<const char *>(image_buffer->data()), static_cast<std::streamsize>(image_buffer->byte_size()));
+		}
 	}
 
 	return 0;
