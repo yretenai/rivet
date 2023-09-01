@@ -5,20 +5,31 @@
 #include <rivet/data/dat1.hpp>
 #include <rivet/gfx/support/dxgi.hpp>
 #include <rivet/gfx/texture.hpp>
+// #include <libpng.h>
+// #include <libtiff.h>
 
 using namespace rivet::data;
 using namespace rivet::gfx::support;
 
 namespace rivet::gfx {
+	texture::texture(const std::shared_ptr<rivet_data_array> &stream, rivet_size index): texture::texture(rivet::data::asset_bundle(stream), index) { }
 
-	texture::texture(const std::shared_ptr<rivet_data_array> &stream, int index): texture::texture(rivet::data::asset_bundle(stream), index) { }
-
-	texture::texture(const rivet::data::asset_bundle &bundle, int index): asset_bundle(bundle), index(index) {
+	texture::texture(const rivet::data::asset_bundle &bundle, rivet_size index) {
 		auto dat1_stream = bundle.get_entry(index);
 		if (dat1_stream == nullptr) {
 			throw invalid_operation("texture::texture: invalid texture stream");
 		}
 
+		auto buffer = bundle.get_entry(index + 1);
+		if (buffer == nullptr) {
+			throw invalid_operation("texture::texture: invalid texture stream");
+		}
+
+		init(dat1_stream, buffer);
+	}
+
+	void
+	texture::init(const std::shared_ptr<rivet_data_array> &dat1_stream, const std::shared_ptr<rivet_data_array> &resident, const std::shared_ptr<rivet_data_array> &stream) {
 		auto data = dat1(dat1_stream);
 		if (data.type_name != "Texture Built File") {
 			throw invalid_operation("texture::texture: invalid texture stream");
@@ -34,6 +45,20 @@ namespace rivet::gfx {
 		}
 
 		header = header_stream->get<texture::texture_header>(0);
+		if (header.resident_size != resident->size()) {
+			throw invalid_operation("texture::texture: invalid texture stream");
+		}
+		resident_buffer = resident;
+
+		if (stream_buffer != nullptr) {
+			if (header.stream_size != 0 && header.stream_size != stream_buffer->size()) {
+				throw invalid_operation("texture::texture: invalid texture stream");
+			}
+
+			if (header.stream_size > 0) {
+				stream_buffer = stream;
+			}
+		}
 	}
 
 	void
@@ -46,49 +71,45 @@ namespace rivet::gfx {
 	}
 
 	auto
-	texture::get_texture_rgba(rivet_index surface_index) const -> std::shared_ptr<rivet_data_array> {
+	texture::to_png(rivet_index surface_index) const -> std::shared_ptr<rivet_data_array> {
 		auto num_mips = header.mip_count;
 		if (needs_stream() && stream_buffer == nullptr) {
 			num_mips -= header.streamed_mips;
 		}
 
-		auto pixel_data = get_entry(index + 1);
+		auto pixel_data = resident_buffer;
 
-		throw not_implemented_error("texture::get_texture_rgba: not implemented");
-
-		return nullptr;
+		throw not_implemented_error("texture::to_png: not implemented");
 	}
 
 	auto
-	texture::get_texture_hdr(rivet_index surface_index) const -> std::shared_ptr<rivet_data_array> {
+	texture::to_tiff(rivet_index surface_index) const -> std::shared_ptr<rivet_data_array> {
 		auto num_mips = header.mip_count;
 		if (needs_stream() && stream_buffer == nullptr) {
 			num_mips -= header.streamed_mips;
 		}
 
-		auto pixel_data = get_entry(index + 1);
+		auto pixel_data = resident_buffer;
 
-		throw not_implemented_error("texture::get_texture_hdr: not implemented");
-
-		return nullptr;
+		throw not_implemented_error("texture::to_tiff: not implemented");
 	}
 
 	auto
-	texture::get_dds() const -> std::shared_ptr<rivet_data_array> {
+	texture::to_dds() const -> std::shared_ptr<rivet_data_array> {
 		auto num_mips = header.mip_count;
 		auto has_stream = needs_stream() && stream_buffer != nullptr;
 		if (!has_stream) {
 			num_mips -= header.streamed_mips;
 		}
 
-		auto pixel_data = get_entry(index + 1);
+		auto pixel_data = resident_buffer;
 
 		if (pixel_data == nullptr) {
-			throw invalid_operation("texture::get_dds: invalid texture stream");
+			throw invalid_operation("texture::to_dds: invalid texture stream");
 		}
 
 		if (pixel_data->size() < header.resident_size) {
-			throw invalid_operation("texture::get_dds: texture data too short?");
+			throw invalid_operation("texture::to_dds: texture data too short?");
 		}
 
 		dds_header dds = {};

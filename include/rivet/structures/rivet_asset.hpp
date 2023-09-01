@@ -58,8 +58,12 @@ namespace rivet::structures {
 	struct rivet_asset_header {
 		rivet_type_id schema;
 		// sizes of each block, may be 0 or spill into .stream
-		std::array<rivet_size, 8> sizes;
-		// _art.zone: 0 - main block, 1 - physics, 2 - ??
+		std::array<rivet_size, 4> sizes;
+		// _art.zone: 0 - main block, 1 - physics, 2 - unknown, 3 - texture data
+		uint32_t unknown6;
+		uint32_t unknown7;
+		uint32_t unknown8;
+		uint32_t unknown9;
 	};
 
 	static_assert(sizeof(rivet_asset_header) == 36);

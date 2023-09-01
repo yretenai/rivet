@@ -141,7 +141,7 @@ namespace rivet::data {
 		}
 
 		if (groups_section != nullptr && groups_section->size() != 0x100) {
-			throw mismatched_data_error("archive_toc::archive_toc: not 256 groups!");
+			throw mismatched_data_error("archive_toc::archive_toc: not 256 groups");
 		}
 
 		if (ids_section == nullptr) {

@@ -103,7 +103,7 @@ namespace rivet::gfx::support {
 			uint32_t a_bit_mask = 0;
 		} pixel_format;
 
-		dds_caps caps = dds_caps::texture;
+		dds_caps caps = dds_caps::none;
 		dds_caps2 caps2 = dds_caps2::none;
 		uint32_t caps3 = 0;
 		uint32_t caps4 = 0;

@@ -2,7 +2,7 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/data/asset_bundle.h>
+#include <rivet/data/asset_bundle.hpp>
 #include <rivet/exceptions.hpp>
 
 namespace rivet::data {
@@ -21,8 +21,13 @@ namespace rivet::data {
 
 		buffer = stream->slice(start_offset);
 
-		auto excess_data_size = buffer->size();
-		for (auto size : header.sizes) {
+		auto excess_data_size = static_cast<rivet_ssize64>(buffer->size());
+		for (auto &size : header.sizes) {
+			if (excess_data_size <= 0) {
+				size = 0;
+				continue;
+			}
+
 			excess_data_size -= size;
 		}
 

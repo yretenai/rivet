@@ -7,7 +7,7 @@
 
 #include <clipp.h>
 
-#include <rivet/data/asset_bundle.h>
+#include <rivet/data/asset_bundle.hpp>
 #include <rivet/data/dag.hpp>
 #include <rivet/data/dat1.hpp>
 #include <rivet/data/toc.hpp>

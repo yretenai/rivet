@@ -4,12 +4,12 @@
 
 #pragma once
 
-#include <rivet/data/asset_bundle.h>
+#include <rivet/data/asset_bundle.hpp>
 #include <rivet/hash/type_id.hpp>
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::gfx {
-	struct RIVET_SHARED texture : rivet::data::asset_bundle {
+	struct RIVET_SHARED texture {
 #pragma pack(push, 1)
 
 		struct texture_header {
@@ -38,20 +38,24 @@ namespace rivet::gfx {
 
 		RIVET_DEFINE_TYPE_ID(texture_header, "Texture Header");
 
-		explicit texture(const std::shared_ptr<rivet_data_array> &stream, int index = 0);
-		explicit texture(const rivet::data::asset_bundle &bundle, int index = 0);
+		explicit texture(const std::shared_ptr<rivet_data_array> &stream, rivet_size index = 0);
+		explicit texture(const rivet::data::asset_bundle &bundle, rivet_size index = 0);
+
+		texture(const std::shared_ptr<rivet_data_array> &dat1_stream, const std::shared_ptr<rivet_data_array> &resident, const std::shared_ptr<rivet_data_array> &stream = nullptr) {
+			init(dat1_stream, resident, stream);
+		}
 
 		void
 		provide_stream(const std::shared_ptr<rivet_data_array> &stream);
 
 		[[nodiscard]] auto
-		get_texture_rgba(rivet_index surface_index) const -> std::shared_ptr<rivet_data_array>;
+		to_png(rivet_index surface_index) const -> std::shared_ptr<rivet_data_array>;
 
 		[[nodiscard]] auto
-		get_texture_hdr(rivet_index surface_index) const -> std::shared_ptr<rivet_data_array>;
+		to_tiff(rivet_index surface_index) const -> std::shared_ptr<rivet_data_array>;
 
 		[[nodiscard]] auto
-		get_dds() const -> std::shared_ptr<rivet_data_array>;
+		to_dds() const -> std::shared_ptr<rivet_data_array>;
 
 		[[nodiscard]] auto
 		is_hdr() const -> bool {
@@ -70,7 +74,10 @@ namespace rivet::gfx {
 
 	private:
 		texture_header header {};
+		std::shared_ptr<rivet_data_array> resident_buffer;
 		std::shared_ptr<rivet_data_array> stream_buffer;
-		int index;
+
+		void
+		init(const std::shared_ptr<rivet_data_array> &dat1_stream, const std::shared_ptr<rivet_data_array> &resident_buffer, const std::shared_ptr<rivet_data_array> &stream_buffer = nullptr);
 	};
 } // namespace rivet::gfx
