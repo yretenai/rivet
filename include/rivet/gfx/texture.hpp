@@ -19,17 +19,17 @@ namespace rivet::gfx {
 			uint16_t stream_height;
 			uint16_t resident_width;
 			uint16_t resident_height;
-			uint16_t type;
-			uint16_t flags;
-			uint32_t format; // DXGI_FORMAT on Windows
-			uint32_t unknown18;
-			uint16_t unknown1C;
+			uint16_t unknown10; // usually 1. could be type, could be number of surfaces
+			uint16_t unknown12; // flags? changes wildly. could be two bytes.
+			uint32_t format;	// DXGI_FORMAT on Windows
+			uint32_t unknown18; // zero
+			uint16_t unknown1C; // usually 1. surfaces?
 			uint16_t mip_count;
-			uint8_t streamed_mips;
-			uint8_t unknown21;
-			uint8_t unknown22;
-			uint8_t unknown23;
-			uint64_t unknown24;
+			uint8_t streamed_mips; // 0 when stream_size is 0
+			uint8_t unknown21;	   // usually 1.
+			uint8_t unknown22;	   // usually 1.
+			uint8_t unknown23;	   // usually 1.
+			uint64_t unknown24;	   // zero
 		};
 
 		static_assert(sizeof(texture_header) == 0x2C);
