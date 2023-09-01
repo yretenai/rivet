@@ -28,7 +28,7 @@ namespace rivet::data {
 	auto
 	archive_toc::get_toc_data_buffer(const std::shared_ptr<rivet_data_array> &stream) -> std::shared_ptr<rivet_data_array> {
 		if (stream->size() < sizeof(archive_toc::archive_toc_header)) {
-			throw invalid_tag_error();
+			throw invalid_tag_error("archive_toc::archive_toc: invalid stream");
 		}
 
 		auto header = stream->get<archive_toc::archive_toc_header>(0);
@@ -56,23 +56,23 @@ namespace rivet::data {
 
 			auto ret = inflateInit(&zstream);
 			if (ret != Z_OK) {
-				throw decompression_error();
+				throw decompression_error("archive_toc::get_toc_data_buffer: failed to initialize zlib");
 			}
 
 			ret = inflate(&zstream, Z_FULL_FLUSH);
 			if (ret != Z_OK && zstream.avail_out != 0 && zstream.avail_in != 0) {
-				throw decompression_error();
+				throw decompression_error("archive_toc::get_toc_data_buffer: failed to inflate zlib");
 			}
 
 			return buffer;
 		}
 
-		throw invalid_tag_error();
+		throw invalid_tag_error("archive_toc::get_toc_data_buffer: invalid stream");
 	}
 
 	archive_toc::archive_toc(const std::shared_ptr<rivet_data_array> &stream): dat1(get_toc_data_buffer(stream)) {
 		if (header.schema != type_id && header.schema != type_id_spider) {
-			throw invalid_tag_error();
+			throw invalid_tag_error("archive_toc::archive_toc: invalid stream");
 		}
 
 		const bool is_spider = header.schema == type_id_spider;
@@ -82,7 +82,7 @@ namespace rivet::data {
 		if (is_spider) {
 			auto archives_spider_section = get_section<rivet_archive_raw_spider>(archives_type_id);
 			if (archives_spider_section == nullptr) {
-				throw mismatched_data_error("missing archives section");
+				throw mismatched_data_error("archive_toc::archive_toc: missing archives section");
 			}
 
 			archives_section = std::make_shared<rivet_array<rivet_archive_raw>>(nullptr, archives_spider_section->size());
@@ -107,7 +107,7 @@ namespace rivet::data {
 			static_assert(sizeof(std::pair<uint32_t, rivet_off>) == 8);
 			auto chunk_section = get_section<std::pair<uint32_t, rivet_off>>(archive_asset_offsets_type_id);
 			if (chunk_section == nullptr) {
-				throw mismatched_data_error("missing chunk section");
+				throw mismatched_data_error("archive_toc::archive_toc: missing chunk section");
 			}
 
 			for (rivet_size i = 0; i < assets_spider_section->size(); ++i) {
@@ -137,23 +137,23 @@ namespace rivet::data {
 		}
 
 		if (archives_section == nullptr) {
-			throw mismatched_data_error("missing archives section");
+			throw mismatched_data_error("archive_toc::archive_toc: missing archives section");
 		}
 
 		if (groups_section != nullptr && groups_section->size() != 0x100) {
-			throw mismatched_data_error("not 256 groups!");
+			throw mismatched_data_error("archive_toc::archive_toc: not 256 groups!");
 		}
 
 		if (ids_section == nullptr) {
-			throw mismatched_data_error("ids groups");
+			throw mismatched_data_error("archive_toc::archive_toc: missing ids groups");
 		}
 
 		if (assets_section == nullptr) {
-			throw mismatched_data_error("assets");
+			throw mismatched_data_error("archive_toc::archive_toc: missing assets");
 		}
 
 		if (ids_section->size() > assets_section->size()) {
-			throw mismatched_data_error("id count does not match asset count");
+			throw mismatched_data_error("archive_toc::archive_toc: id count does not match asset count");
 		}
 
 		auto archive_index = 0;
@@ -179,7 +179,7 @@ namespace rivet::data {
 		ankerl::unordered_dense::map<rivet_asset_id, rivet_asset_texture_header> chunk_map;
 		if (texture_ids != nullptr && texture_metas != nullptr) {
 			if (texture_ids->size() != texture_metas->size()) {
-				throw mismatched_data_error("streamed id count does not match chunk count");
+				throw mismatched_data_error("archive_toc::archive_toc: streamed id count does not match chunk count");
 			}
 
 			for (rivet_size i = 0; i < texture_ids->size(); ++i) {
@@ -211,7 +211,7 @@ namespace rivet::data {
 				}
 
 				if (group_id == rivet_unknown) {
-					throw unreachable_error();
+					throw unreachable_error("archive_toc::archive_toc: failed to find group id, goodbye");
 				}
 			}
 

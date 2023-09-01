@@ -4,18 +4,22 @@
 
 #pragma once
 
+#include <cstdio>
 #include <string_view>
 #include <vector>
 
-#define MAIN_WRAPPER(name) \
-	auto main(int argc, char **argv) -> int { \
-		try { \
-			return name(argc, argv); \
-		} catch (std::exception & e) { \
-			RIVET_DEBUG_BREAK; \
-			try { \
-				std::cout << "Exception: " << e.what() << '\n'; \
-			} catch (...) { } \
-			return 1; \
-		} \
-	}
+#ifdef NDEBUG
+	#define MAIN_WRAPPER(name)                                \
+		auto main(int argc, char **argv) -> int {             \
+			try {                                             \
+				return name(argc, argv);                      \
+			} catch (std::exception & e) {                    \
+				RIVET_DEBUG_BREAK;                            \
+				printf("Uncaught Exception: %s\n", e.what()); \
+				return 1;                                     \
+			}                                                 \
+		}
+#else
+	#define MAIN_WRAPPER(name) \
+		auto main(int argc, char **argv) -> int { return name(argc, argv); }
+#endif

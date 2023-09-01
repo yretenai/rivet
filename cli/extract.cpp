@@ -13,6 +13,7 @@
 #include <rivet/hash/asset_id.hpp>
 #include <rivet/rivet.hpp>
 #include <rivet/rivet_game.hpp>
+#include <rivet/structures/rivet_print_helper.hpp>
 
 #include "helper.hpp"
 
@@ -118,8 +119,11 @@ extract(int argc, char **argv) -> int {
 	std::string output_dir;
 	bool version_flag = false;
 	bool help_flag = false;
+	bool verbose = false;
 
-	auto cli = (clipp::joinable(clipp::option("-h", "--help").set(help_flag, true) % "show help", clipp::option("-v", "--version").set(version_flag, true) % "show version"),
+	auto cli = (clipp::joinable(clipp::option("-h", "--help").set(help_flag, true) % "show help",
+								clipp::option("-v", "--version").set(version_flag, true) % "show version",
+								clipp::option("-V", "--verbose").set(verbose, true) % "verbose output"),
 				clipp::required("-g", "--game") & clipp::required("game", game_path) % "path to game directory",
 				clipp::option("-o", "--output-dir") & clipp::value("output-dir", output_dir) % "output directory");
 

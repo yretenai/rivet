@@ -13,7 +13,7 @@ namespace rivet::data {
 	dat1::dat1(const std::shared_ptr<rivet_data_array> &stream): buffer(stream) {
 		auto tag = buffer->get<uint32_t>(0);
 		if (tag != magic) {
-			throw invalid_tag_error();
+			throw invalid_tag_error("dat1::dat1: invalid tag");
 		}
 
 		header = buffer->get<data_header_t>(0);

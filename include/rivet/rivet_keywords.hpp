@@ -19,7 +19,7 @@
 		#define RIVET_SHARED
 	#endif
 	#define RIVET_INLINE inline
-	// based on https://github.com/scottt/debugbreak
+// based on https://github.com/scottt/debugbreak
 	#ifndef NDEBUG
 		#ifdef __clang__
 			#define RIVET_DEBUG_BREAK __builtin_debugtrap()
@@ -29,7 +29,7 @@
 			#elif defined(__GNUC__) && defined(__thumb__)
 				#define RIVET_DEBUG_BREAK __asm__ volatile(".inst 0xde01")
 			#elif defined(__GNUC__) && defined(__arm__) && !defined(__thumb__)
-				#define RIVET_DEBUG_BREAK  __asm__ volatile(".inst 0xe7f001f0")
+				#define RIVET_DEBUG_BREAK __asm__ volatile(".inst 0xe7f001f0")
 			#endif
 		#endif
 	#endif
@@ -48,7 +48,7 @@ namespace rivet {
 	// top 2 bits
 	enum class rivet_type_id_flags : uint8_t {
 		NONE = 0b00,
-		EXT = 0b01, // only 32-bit wem hashes have this
+		EXT = 0b01,		// only 32-bit wem hashes have this
 		SHIPPED = 0b10, // assumption, all files have this
 	};
 

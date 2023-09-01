@@ -162,7 +162,7 @@ namespace rivet {
 		[[maybe_unused]] auto
 		get(rivet_size64 index) const -> T & {
 			if (index >= size()) {
-				throw index_out_of_range();
+				throw index_out_of_range("rivet_array::get: index out of range");
 			}
 
 			return data()[index];
@@ -172,11 +172,11 @@ namespace rivet {
 		[[maybe_unused]] auto
 		get(rivet_size64 index) const -> U {
 			if (index >= size()) {
-				throw index_out_of_range();
+				throw index_out_of_range("rivet_array::get: index out of range");
 			}
 
 			if (sizeof(T) * index + sizeof(U) > byte_size()) {
-				throw index_out_of_range();
+				throw index_out_of_range("rivet_array::get: index out of range");
 			}
 
 			return reinterpret_cast<U *>(data() + index)[0]; // NOLINT(*-pro-bounds-pointer-arithmetic)
@@ -185,7 +185,7 @@ namespace rivet {
 		[[maybe_unused]] void
 		set(rivet_size64 index, T value) {
 			if (index >= size()) {
-				throw index_out_of_range();
+				throw index_out_of_range("rivet_array::set: index out of range");
 			}
 
 			data()[index] = value;
@@ -195,11 +195,11 @@ namespace rivet {
 		[[maybe_unused]] void
 		set(rivet_size64 index, U value) {
 			if (index >= size()) {
-				throw index_out_of_range();
+				throw index_out_of_range("rivet_array::set: index out of range");
 			}
 
 			if (sizeof(T) * index + sizeof(U) > byte_size()) {
-				throw index_out_of_range();
+				throw index_out_of_range("rivet_array::set: index out of range");
 			}
 
 			reinterpret_cast<U *>(data() + index)[0] = value; // NOLINT(*-pro-bounds-pointer-arithmetic)
@@ -208,11 +208,11 @@ namespace rivet {
 		[[maybe_unused, nodiscard]] auto
 		slice(rivet_size64 index, rivet_size64 count) const -> std::shared_ptr<rivet_array<T, Alignment>> {
 			if (index >= size()) {
-				throw index_out_of_range();
+				throw index_out_of_range("rivet_array::slice: index out of range");
 			}
 
 			if (index + count > size()) {
-				throw index_out_of_range();
+				throw index_out_of_range("rivet_array::slice: index out of range");
 			}
 
 			return std::make_shared<rivet_array<T, Alignment>>(ptr, count, offset + index);
@@ -230,11 +230,11 @@ namespace rivet {
 			auto normalized_index = normalize_value(index);
 
 			if (normalized_index > byte_size()) {
-				throw index_out_of_range();
+				throw index_out_of_range("rivet_array::slice: index out of range");
 			}
 
 			if (normalized_index + normalized_offset > byte_size()) {
-				throw index_out_of_range();
+				throw index_out_of_range("rivet_array::slice: index out of range");
 			}
 
 			return std::make_shared<rivet_array<U, Alignment>>(ptr, count, offset + normalized_offset);
@@ -249,15 +249,15 @@ namespace rivet {
 		[[maybe_unused]] void
 		copy_to(std::shared_ptr<rivet_array<T, Alignment>> &array, rivet_size64 index, rivet_size64 count, rivet_size64 output_index = 0) {
 			if (count > array->size() - output_index) {
-				throw index_out_of_range();
+				throw index_out_of_range("rivet_array::copy_to: index out of range");
 			}
 
 			if (index >= size()) {
-				throw index_out_of_range();
+				throw index_out_of_range("rivet_array::copy_to: index out of range");
 			}
 
 			if (index + count > size()) {
-				throw index_out_of_range();
+				throw index_out_of_range("rivet_array::copy_to: index out of range");
 			}
 
 			std::copy_n((data() + index), count, (array->data() + output_index));

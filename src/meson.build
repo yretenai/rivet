@@ -9,6 +9,8 @@ rivetlib = library('rivet', [
 		'data/dsar.cpp',
 		'data/toc.cpp',
 
+		'gfx/texture.cpp',
+
 		'serialization/serialization.cpp',
 	],
 	include_directories: includedir,

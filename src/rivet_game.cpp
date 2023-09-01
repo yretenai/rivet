@@ -22,12 +22,12 @@ namespace rivet {
 	rivet_game::rivet_game(const std::filesystem::path &root): root(root) {
 		auto toc_stream = rivet::rivet_data_array::from_file(root / "toc");
 		if (toc_stream == nullptr) {
-			throw std::runtime_error("Failed to load TOC");
+			throw invalid_operation("rivet_game::rivet_game: failed to load TOC");
 		}
 
 		auto dag_stream = rivet::rivet_data_array::from_file(root / "dag");
 		if (dag_stream == nullptr) {
-			throw std::runtime_error("Failed to load DAG");
+			throw invalid_operation("rivet_game::rivet_game: failed to load DAG");
 		}
 
 		toc = std::make_shared<archive_toc>(toc_stream);

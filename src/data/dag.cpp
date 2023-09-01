@@ -94,7 +94,7 @@ namespace rivet::data {
 	auto
 	dependency_dag::get_dag_data_buffer(const std::shared_ptr<rivet_data_array> &stream) -> std::shared_ptr<rivet_data_array> {
 		if (stream->size() < sizeof(dependency_dag::dependency_dag_header)) {
-			throw invalid_tag_error();
+			throw invalid_tag_error("dependency_dag::get_dag_data_buffer: invalid stream");
 		}
 
 		auto header = stream->get<dependency_dag::dependency_dag_header>(0);
@@ -122,23 +122,23 @@ namespace rivet::data {
 
 			auto ret = inflateInit(&zstream);
 			if (ret != Z_OK) {
-				throw decompression_error();
+				throw decompression_error("dependency_dag::get_dag_data_buffer: failed to initialize zlib");
 			}
 
 			ret = inflate(&zstream, Z_FULL_FLUSH);
 			if (ret != Z_OK && zstream.avail_out != 0 && zstream.avail_in != 0) {
-				throw decompression_error();
+				throw decompression_error("dependency_dag::get_dag_data_buffer: failed to inflate zlib");
 			}
 
 			return buffer;
 		}
 
-		throw invalid_tag_error();
+		throw invalid_tag_error("dependency_dag::get_dag_data_buffer: invalid stream");
 	}
 
 	dependency_dag::dependency_dag(const std::shared_ptr<rivet_data_array> &stream, const std::shared_ptr<archive_toc> &toc): dat1(get_dag_data_buffer(stream)), toc(toc) {
 		if (header.schema != type_id) {
-			throw invalid_tag_error();
+			throw invalid_tag_error("dependency_dag::dependency_dag: invalid stream");
 		}
 
 		auto links = get_section<uint32_t>(links_type_id);
@@ -150,27 +150,27 @@ namespace rivet::data {
 		auto dependency_groups = get_section<rivet_off>(graph_type_id);
 
 		if (names == nullptr) {
-			throw mismatched_data_error("asset ids");
+			throw mismatched_data_error("dependency_dag::dependency_dag: missing asset ids");
 		}
 
 		if (heads == nullptr) {
-			throw mismatched_data_error("dependency heads");
+			throw mismatched_data_error("dependency_dag::dependency_dag: missing dependency heads");
 		}
 
 		if (links == nullptr) {
-			throw mismatched_data_error("links");
+			throw mismatched_data_error("dependency_dag::dependency_dag: missing links");
 		}
 
 		if (types != nullptr && names->size() > types->size()) {
-			throw mismatched_data_error("id count does not match asset count");
+			throw mismatched_data_error("dependency_dag::dependency_dag: id count does not match asset count");
 		}
 
 		if (heads->size() > names->size()) {
-			throw mismatched_data_error("dependency head count does not match asset count");
+			throw mismatched_data_error("dependency_dag::dependency_dag: dependency head count does not match asset count");
 		}
 
 		if (names->size() > names->size()) {
-			throw mismatched_data_error("dependency head count does not match asset count");
+			throw mismatched_data_error("dependency_dag::dependency_dag: dependency head count does not match asset count");
 		}
 
 		for (rivet_size i = 0; i < names->size(); ++i) {

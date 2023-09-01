@@ -46,7 +46,7 @@ namespace rivet::data {
 		}
 
 		if (header.version_major != 3 && header.version_minor != 1) {
-			throw version_not_supported();
+			throw version_not_supported("dsar::dsar: unsupported version");
 		}
 
 		chunks = std::make_shared<rivet_array<dsar_entry>>(nullptr, header.chunk_count);
@@ -71,7 +71,7 @@ namespace rivet::data {
 		}
 
 		if (asset_end > header.total_size) {
-			throw mismatched_data_error();
+			throw mismatched_data_error("dsar::read_file: asset end is greater than total size");
 		}
 
 		rivet_size chunk_index = rivet_unknown;
@@ -86,14 +86,14 @@ namespace rivet::data {
 		}
 
 		if (chunk_index == rivet_unknown) {
-			throw unreachable_error();
+			throw unreachable_error("dsar::read_file: chunk index is unknown, goodbye");
 		}
 
 		// main decompression loop
 		rivet_size local_offset = 0;
 		while (local_offset < asset_size) {
 			if (chunk_index > chunks->size()) {
-				throw unreachable_error();
+				throw unreachable_error("dsar::read_file: chunk index is greater than chunk count, goodbye");
 			}
 
 			const auto &chunk = chunks->get(chunk_index++);
@@ -105,7 +105,7 @@ namespace rivet::data {
 			auto compressed_size = chunk.compressed_size;
 
 			if (chunk_offset > asset_end) {
-				throw unreachable_error();
+				throw unreachable_error("dsar::read_file: chunk offset is greater than asset end, goodbye");
 			}
 
 			auto chunk_buffer = std::make_shared<rivet_data_array>(nullptr, chunk_size);
@@ -115,16 +115,16 @@ namespace rivet::data {
 
 			switch (chunk.compression_type) {
 				case dsar_compression::none:
-					throw unreachable_error();
+					throw unreachable_error("dsar::read_file: chunk is not compressed, goodbye");
 				case dsar_compression::unknown:
-					throw not_implemented_error();
+					throw not_implemented_error("dsar::read_file: chunk is compressed with an unknown compression type");
 				case dsar_compression::gdeflate:
 					if (!GDeflate::Decompress(chunk_buffer->data(),
 											  static_cast<size_t>(chunk_buffer->byte_size()),
 											  compressed_buffer->data(),
 											  static_cast<size_t>(compressed_buffer->byte_size()),
 											  1)) {
-						throw decompression_error();
+						throw decompression_error("dsar::read_file: failed to decompress chunk using gdeflate");
 					}
 					break;
 				case dsar_compression::lz4:
@@ -133,7 +133,7 @@ namespace rivet::data {
 													  static_cast<int>(compressed_buffer->byte_size()),
 													  static_cast<int>(chunk_buffer->byte_size()));
 					if (result < 0) {
-						throw decompression_error();
+						throw decompression_error("dsar::read_file: failed to decompress chunk using lz4");
 					}
 					break;
 			}
@@ -151,7 +151,7 @@ namespace rivet::data {
 
 			// oob check
 			if (chunk_size > buffer->byte_size() - local_offset) {
-				throw unreachable_error();
+				throw unreachable_error("dsar::read_file: chunk size is greater than buffer size, goodbye");
 			}
 
 			chunk_buffer->copy_to(buffer, static_cast<rivet_size64>(shift), chunk_size, local_offset);
