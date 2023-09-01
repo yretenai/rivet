@@ -56,12 +56,12 @@ process_asset(const std::shared_ptr<rivet_game> &game, const std::shared_ptr<riv
 
 	auto asset_data = game->open_file(asset);
 	if (asset_data == nullptr || asset_data->empty()) {
-		std::cout << "Failed to open asset " << name << '\n';
+		std::cout << "failed to open asset " << name << '\n';
 		error_file << "open " << name << '\n';
 		return;
 	}
 
-	std::cout << "Writing " << name << '\n';
+	std::cout << "writing " << name << '\n';
 
 	// rename .movie to .bik
 	if (asset_data->get<uint32_t>(0) == 0x6A32424B) {
@@ -183,7 +183,7 @@ extract(int argc, char **argv) -> int {
 	std::filesystem::create_directories(dag_path.parent_path());
 	std::ofstream dag_file(dag_path, std::ios::out);
 	if (!dag_file.is_open()) {
-		std::cout << "Failed to open output file " << dag_path << '\n';
+		std::cout << "failed to open output file " << dag_path << '\n';
 		return 1;
 	}
 

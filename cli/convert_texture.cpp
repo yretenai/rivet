@@ -74,11 +74,11 @@ convert_texture(int argc, char **argv) -> int {
 
 		std::ofstream output_file(output_path, std::ios::binary | std::ios::trunc);
 		if (!output_file.is_open()) {
-			std::cout << "Failed to open " << output_path << '\n';
+			std::cout << "failed to open " << output_path << '\n';
 			continue;
 		}
 
-		std::cout << "Writing " << output_path << '\n';
+		std::cout << "writing " << output_path.string() << '\n';
 
 		output_file.write(reinterpret_cast<const char *>(image_buffer->data()), static_cast<std::streamsize>(image_buffer->byte_size()));
 	}

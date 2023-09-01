@@ -10,20 +10,28 @@ project('rivet', 'cpp',
 
 compiler = meson.get_compiler('cpp')
 
+# public dependencies
 deps = []
-deps += [dependency('threads', required: true)]
-deps += [dependency('liblz4', version: '>= 1.9.4')]
-deps += [dependency('libgdeflate', version: '>=1.8.0')]
-deps += [dependency('zlib', version: '>=1.3')]
-deps += [dependency('nlohmann_json', version: '>=3.11.2')]
-deps += [dependency('clipp', version: '>=1.2.4')]
-deps += [dependency('cmp_compressonator', version: '>=4.4.19', static: true)]
 if not compiler.check_header('ankerl/unordered_dense.h')
     deps += [dependency('unordered_dense', version: '>=4.1.1')]
 endif
 
+# cli dependencies
+cli_deps = [] + deps
+cli_deps += [dependency('clipp', version: '>=1.2.4')]
+
+# private dependencies
+rivet_deps = [] + deps
+rivet_deps += [dependency('nlohmann_json', version: '>=3.11.2')]
+rivet_deps += [dependency('liblz4', version: '>= 1.9.4')]
+rivet_deps += [dependency('libgdeflate', version: '>=1.8.0')]
+rivet_deps += [dependency('zlib', version: '>=1.3')]
+rivet_deps += [dependency('cmp_compressonator', version: '>=4.4.19', static: true)]
+rivet_deps += [dependency('libtiff-4')]
+rivet_deps += [dependency('libpng', version: '>=1.6.40')]
+
 gdeflate_core = subproject('GDeflate')
-deps += [gdeflate_core.get_variable('gdeflate_core_dep')]
+rivet_deps += [gdeflate_core.get_variable('gdeflate_core_dep')]
 
 includedir = include_directories('include/')
 

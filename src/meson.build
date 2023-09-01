@@ -14,7 +14,7 @@ rivetlib = library('rivet', [
 		'serialization/serialization.cpp',
 	],
 	include_directories: includedir,
-	dependencies: deps,
+	dependencies: rivet_deps,
 	install: true,
 	cpp_args: ['-DRIVET_EXPORTING'],
 	gnu_symbol_visibility: 'hidden')

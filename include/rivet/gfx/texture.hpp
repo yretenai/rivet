@@ -49,10 +49,10 @@ namespace rivet::gfx {
 		provide_stream(const std::shared_ptr<rivet_data_array> &stream);
 
 		[[nodiscard]] auto
-		to_png(rivet_index surface_index) const -> std::shared_ptr<rivet_data_array>;
+		to_png([[maybe_unused]] rivet_index surface_index) const -> std::shared_ptr<rivet_data_array>;
 
 		[[nodiscard]] auto
-		to_tiff(rivet_index surface_index) const -> std::shared_ptr<rivet_data_array>;
+		to_tiff([[maybe_unused]] rivet_index surface_index) const -> std::shared_ptr<rivet_data_array>;
 
 		[[nodiscard]] auto
 		to_dds() const -> std::shared_ptr<rivet_data_array>;
@@ -76,6 +76,9 @@ namespace rivet::gfx {
 		texture_header header {};
 		std::shared_ptr<rivet_data_array> resident_buffer;
 		std::shared_ptr<rivet_data_array> stream_buffer;
+
+		[[nodiscard]] auto
+		decompress_compressonator(uint32_t target) const -> std::shared_ptr<rivet_data_array>;
 
 		void
 		init(const std::shared_ptr<rivet_data_array> &dat1_stream, const std::shared_ptr<rivet_data_array> &resident_buffer, const std::shared_ptr<rivet_data_array> &stream_buffer = nullptr);

@@ -76,6 +76,8 @@ dump_dat1(int argc, char **argv) -> int {
 			continue;
 		}
 
+		std::cout << "processing " << output_path.string() << '\n';
+
 		std::vector<std::shared_ptr<rivet_data_array>> buffers;
 		std::shared_ptr<rivet::data::asset_bundle> bundle;
 		auto tag = dat1_buffer->get<uint32_t>(0);
