@@ -6,7 +6,8 @@
 
 #include "helper.hpp"
 
-int convert_texture(int argc, char **argv) {
+int
+convert_texture(int argc, char **argv) {
 	return 0;
 }
 

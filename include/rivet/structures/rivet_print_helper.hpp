@@ -102,5 +102,5 @@ operator<<(std::ostream &out, const rivet::structures::rivet_asset &asset) -> st
 			   << "locale: " << asset.locale << ", "
 			   << "category: " << asset.category << ", "
 			   << "flags: " << asset.flags << ", "
-				<< "dependencies: " << asset.dependencies << " }";
+			   << "dependencies: " << asset.dependencies << " }";
 }

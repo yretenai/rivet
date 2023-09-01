@@ -62,7 +62,7 @@ namespace rivet::hash {
 	constexpr const static std::string_view type_id_test_name = "Test Value";
 	static_assert(type_id<type_id_test_name>::value == 0xf62a3016);
 
-#define RIVET_DEFINE_TYPE_ID(id, name) \
+#define RIVET_DEFINE_TYPE_ID(id, name)                             \
 	constexpr const static std::string_view id##_type_name = name; \
 	constexpr const static rivet_type_id id##_type_id = rivet::hash::type_id<id##_type_name>::value
 } // namespace rivet::hash

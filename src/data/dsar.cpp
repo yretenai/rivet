@@ -114,10 +114,8 @@ namespace rivet::data {
 			base_stream->read(reinterpret_cast<char *>(compressed_buffer->data()), static_cast<std::streamsize>(compressed_buffer->byte_size()));
 
 			switch (chunk.compression_type) {
-				case dsar_compression::none:
-					throw unreachable_error("dsar::read_file: chunk is not compressed, goodbye");
-				case dsar_compression::unknown:
-					throw not_implemented_error("dsar::read_file: chunk is compressed with an unknown compression type");
+				case dsar_compression::none: throw unreachable_error("dsar::read_file: chunk is not compressed, goodbye");
+				case dsar_compression::unknown: throw not_implemented_error("dsar::read_file: chunk is compressed with an unknown compression type");
 				case dsar_compression::gdeflate:
 					if (!GDeflate::Decompress(chunk_buffer->data(),
 											  static_cast<size_t>(chunk_buffer->byte_size()),
