@@ -14,7 +14,7 @@
 	#define RIVET_DEBUG_BREAK __debugbreak()
 #else
 	#ifdef RIVET_EXPORTING
-		#define RIVET_SHARED [[visibility("default")]]
+		#define RIVET_SHARED __attribute__ ((visibility ("default"))) __attribute__((unused))
 	#else
 		#define RIVET_SHARED
 	#endif

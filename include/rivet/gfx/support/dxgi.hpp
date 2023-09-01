@@ -277,7 +277,7 @@ namespace rivet::gfx::support {
 	};
 
 	struct dx10_header {
-		dxgi_format dxgi_format = dxgi_format::unknown;
+		dxgi_format format = dxgi_format::unknown;
 		dx10_resource_dimension resource_dimension = dx10_resource_dimension::texture2d;
 		dx10_misc_flags misc_flag = dx10_misc_flags::none;
 		uint32_t array_size = 1;

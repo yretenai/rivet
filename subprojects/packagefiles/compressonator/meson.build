@@ -1,5 +1,5 @@
 project(
-    'cmp_compressonator',
+    'compressonator',
     'cpp', 'c',
     license: 'MIT',
     version: '4.4.19',
@@ -38,6 +38,84 @@ add_project_arguments(cxx_compiler.get_supported_arguments(
     '/Zc:strictStrings-'
 ), language: 'cpp')
 
+arch_sse = []
+if cxx_compiler.has_argument('-march=nehalem')
+    arch_sse += ['-march=nehalem']
+endif
+
+cmp_core_sse = static_library(
+    'cmp_core_sse',
+    files('cmp_core/source/core_simd_sse.cpp'),
+    include_directories: [
+        cmp_core_shaders_dir,
+        cmp_core_source_dir,
+        cmp_libs_cmp_math_dir
+    ],
+    cpp_args: cmp_core_args + arch_sse)
+
+cmp_core_sse_dep = declare_dependency(
+    include_directories: [
+        cmp_core_shaders_dir,
+        cmp_core_source_dir,
+        cmp_libs_cmp_math_dir
+    ],
+    link_with: cmp_core_sse
+)
+
+arch_avx = []
+if cxx_compiler.has_argument('-march=haswell')
+    arch_avx += ['-march=haswell']
+endif
+if cxx_compiler.has_argument('/arch:AVX2')
+    arch_avx += ['/arch:AVX2']
+endif
+
+cmp_core_avx = static_library(
+    'cmp_core_avx',
+    files('cmp_core/source/core_simd_avx.cpp'),
+    include_directories: [
+        cmp_core_shaders_dir,
+        cmp_core_source_dir,
+        cmp_libs_cmp_math_dir
+    ],
+    cpp_args: cmp_core_args + arch_avx)
+
+cmp_core_avx_dep = declare_dependency(
+    include_directories: [
+        cmp_core_shaders_dir,
+        cmp_core_source_dir,
+        cmp_libs_cmp_math_dir
+    ],
+    link_with: cmp_core_avx
+)
+
+arch_avx512 = []
+if cxx_compiler.has_argument('-march=knl')
+    arch_avx512 += ['-march=knl']
+endif
+if cxx_compiler.has_argument('/arch:AVX-512')
+    arch_avx512 += ['/arch:AVX-512']
+endif
+
+cmp_core_avx512 = static_library(
+    'cmp_core_avx512',
+    files('cmp_core/source/core_simd_avx512.cpp'),
+    include_directories: [
+        cmp_core_shaders_dir,
+        cmp_core_source_dir,
+        cmp_libs_cmp_math_dir
+    ],
+    cpp_args: cmp_core_args + arch_avx512)
+
+cmp_core_avx512_dep = declare_dependency(
+    include_directories: [
+        cmp_core_shaders_dir,
+        cmp_core_source_dir,
+        cmp_libs_cmp_math_dir
+    ],
+    link_with: cmp_core_avx512
+)
+
 cmp_core = static_library(
     'cmp_core',
     files(cmp_core_sources),
@@ -45,6 +123,11 @@ cmp_core = static_library(
         cmp_core_shaders_dir,
         cmp_core_source_dir,
         cmp_libs_cmp_math_dir
+    ],
+    dependencies: [
+        cmp_core_sse_dep,
+        cmp_core_avx_dep,
+        cmp_core_avx512_dep
     ],
     cpp_args: cmp_core_args)
 

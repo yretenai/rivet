@@ -324,7 +324,7 @@ namespace rivet::gfx {
 		dds.height = has_stream ? header.stream_height : header.resident_height;
 		dds.width = has_stream ? header.stream_width : header.resident_width;
 		dds.mip_map_count = num_mips;
-		dx10.dxgi_format = static_cast<dxgi_format>(header.format);
+		dx10.format = static_cast<dxgi_format>(header.format);
 
 		auto buffer_size = sizeof(dds_header) + sizeof(dx10_header) + header.resident_size;
 		if (has_stream) {
