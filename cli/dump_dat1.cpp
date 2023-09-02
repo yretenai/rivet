@@ -35,7 +35,7 @@ dump_dat1(int argc, char **argv) -> int {
 
 	if (!clipp::parse(argc, argv, cli) || help_flag || version_flag) {
 		if (version_flag) {
-			std::cout << "rivet-dat1-dump version " << rivet::rivet_version() << '\n';
+			std::cout << "rivet-dat1-dump version " << rivet::rivet_version_detailed() << '\n';
 			return 0;
 		}
 

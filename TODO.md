@@ -18,7 +18,7 @@
 
 ## graphics
 
-- [ ] load and convert textures to dds
+- [x] load and convert textures to dds
 - [ ] load and convert materials to a json or text format
 - [ ] load and convert models to gltf2
 - [ ] load and convert animations to gltf2

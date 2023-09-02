@@ -28,5 +28,5 @@ pkg_mod.generate(
 	description: 'interoperability for ratchet and clank rift apart',
 	subdirs: 'rivet',
 	libraries: rivetlib,
-	version: '0.1',
+	version: '0.0.6',
 )

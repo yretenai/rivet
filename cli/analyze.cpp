@@ -32,7 +32,7 @@ analyze(int argc, char **argv) -> int {
 
 	if (!clipp::parse(argc, argv, cli) || help_flag || version_flag) {
 		if (version_flag) {
-			std::cout << "rivet-debug-analyze version " << rivet::rivet_version() << '\n';
+			std::cout << "rivet-debug-analyze version " << rivet::rivet_version_detailed() << '\n';
 			return 0;
 		}
 
@@ -61,13 +61,14 @@ analyze(int argc, char **argv) -> int {
 	};
 
 	ankerl::unordered_dense::map<std::string, ankerl::unordered_dense::map<uint64_t, std::set<std::string>>> texture_values = {
-		{"unknown11",  {}},
-		 { "unknown12", {}},
-		  { "unknown1C", {}},
-		   { "unknown21", {}},
-		{ "unknown22", {}},
-		 { "unknown23", {}},
-		  { "unknown24", {}},
+		{"surface_count", {}},
+		 { "unknown11",	{}},
+		  { "unknown12",	 {}},
+		   { "unknown1C",	  {}},
+		{ "unknown21",	   {}},
+		 { "unknown22",	{}},
+		  { "unknown23",	 {}},
+		   { "unknown24",	  {}},
 	};
 
 	for (auto locale_id = 0; locale_id < 32; locale_id++) {
@@ -110,6 +111,7 @@ analyze(int argc, char **argv) -> int {
 					auto tex = texture(asset_data);
 					auto tex_header = tex.get_header();
 
+					texture_values["surface_count"][tex_header.surface_count].emplace(name);
 					texture_values["unknown11"][tex_header.unknown11].emplace(name);
 					texture_values["unknown12"][tex_header.unknown12].emplace(name);
 					texture_values["unknown1C"][tex_header.unknown1C].emplace(name);
@@ -127,14 +129,8 @@ analyze(int argc, char **argv) -> int {
 		std::cout << std::hex << key << ' ' << std::dec << value.size() << " entries\n";
 		for (const auto &[key2, value2] : value) {
 			std::cout << '\t' << std::hex << key2 << ' ' << std::dec << value2.size() << " entries\n";
-			auto limit = 10;
 			for (const auto &name : value2) {
 				std::cout << "\t\t" << name << '\n';
-
-				if (limit-- < 0) {
-					std::cout << "\t\t\t...\n";
-					break;
-				}
 			}
 		}
 	}
@@ -144,14 +140,8 @@ analyze(int argc, char **argv) -> int {
 		std::cout << std::hex << key << ' ' << std::dec << value.size() << " entries\n";
 		for (const auto &[key2, value2] : value) {
 			std::cout << '\t' << std::hex << key2 << ' ' << std::dec << value2.size() << " entries\n";
-			auto limit = 10;
 			for (const auto &name : value2) {
 				std::cout << "\t\t" << name << '\n';
-
-				if (limit-- < 0) {
-					std::cout << "\t\t\t...\n";
-					break;
-				}
 			}
 		}
 	}

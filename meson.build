@@ -1,6 +1,6 @@
 project('rivet', 'cpp',
 	license: 'MPL-2.0',
-	version: '0.1',
+	version: '0.0.6',
 	default_options: [
 		'prefix=/usr',
 		'warning_level=3',
