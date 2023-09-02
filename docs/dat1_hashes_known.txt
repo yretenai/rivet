@@ -60,7 +60,11 @@ f958372e Dependency Links Heads
 b0653243 Localization Flags Built
 d540a903 Localization Header Built
 4d73cebd Localization Tags Built
+A4EA55B2 Localization TagOffsets Built
 70a382b8 Localization Text Built
+F80DEEB4 Localization TextOffsets Built
+0CD2CFE9 Localization SortedIndexes Built
+C43731B5 Localization SortedHashes Built
 1f6a31a6 Map Data
 d9b12454 Material Fur Info
 e1275683 Material Header

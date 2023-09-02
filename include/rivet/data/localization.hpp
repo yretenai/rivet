@@ -21,11 +21,11 @@ namespace rivet::data {
 		RIVET_DEFINE_TYPE_ID(flags, "Localization Flags Built");
 		RIVET_DEFINE_TYPE_ID(tags, "Localization Tags Built");
 		RIVET_DEFINE_TYPE_ID(text, "Localization Text Built");
-		RIVET_DEFINE_FAKE_TYPE_ID(tags_offsets, "Localization Tags Offsets", 0xa4ea55b2); // todo: find real type id
-		RIVET_DEFINE_FAKE_TYPE_ID(text_offsets, "Localization Text Offsets", 0xf80deeb4); // todo: find real type id
-		RIVET_DEFINE_FAKE_TYPE_ID(indices, "Localization Sorted Tags", 0x0cd2cfe9);		  // todo: find real type id
+		RIVET_DEFINE_TYPE_ID(tags_offsets, "Localization TagOffsets Built");
+		RIVET_DEFINE_TYPE_ID(text_offsets, "Localization TextOffsets Built");
+		RIVET_DEFINE_TYPE_ID(indices, "Localization SortedIndexes Built");
+		RIVET_DEFINE_TYPE_ID(ids, "Localization SortedHashes Built");
 		RIVET_DEFINE_FAKE_TYPE_ID(hashes, "Localization Tag Hashes", 0x06a58050);		  // todo: find real type id
-		RIVET_DEFINE_FAKE_TYPE_ID(ids, "Localization IDs", 0xc43731b5);					  // todo: find real type id
 
 		explicit localization(const std::shared_ptr<rivet_data_array> &stream);
 		explicit localization(const rivet::data::asset_bundle &bundle, rivet_size index = 0);
