@@ -269,7 +269,7 @@ namespace rivet::gfx {
 			// this will always work as long as width and height are stable powers of 2, you're welcome
 			auto mask = (texture.dwWidth * texture.dwHeight / pixels_per_block * bits_per_block) >> 3;
 			for (auto i = 0; i < num_mips; ++i) {
-				one_surface ^= mask;
+				one_surface ^= mask; // maybe use += instead of ^= for non-power-of-2?
 				mask >>= 2;
 			}
 
