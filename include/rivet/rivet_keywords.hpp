@@ -14,7 +14,7 @@
 	#define RIVET_DEBUG_BREAK __debugbreak()
 #else
 	#ifdef RIVET_EXPORTING
-		#define RIVET_SHARED __attribute__ ((visibility ("default"))) __attribute__((unused))
+		#define RIVET_SHARED __attribute__((visibility("default"))) __attribute__((unused))
 	#else
 		#define RIVET_SHARED
 	#endif
@@ -43,6 +43,7 @@
 
 namespace rivet {
 	using rivet_hash = uint32_t;
+	using rivet_id = uint32_t;
 	using rivet_type_id = rivet_hash;
 
 	// top 2 bits

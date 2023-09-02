@@ -108,7 +108,7 @@ analyze(int argc, char **argv) -> int {
 
 				if (header.schema == texture::type_id) {
 					auto asset_data = game->open_file(asset);
-					auto tex = texture(asset_data);
+					auto tex = texture(rivet::data::asset_bundle(asset_data));
 					auto tex_header = tex.get_header();
 
 					texture_values["surface_count"][tex_header.surface_count].emplace(name);

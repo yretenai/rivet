@@ -59,7 +59,7 @@ convert_texture(int argc, char **argv) -> int {
 
 	for (const auto &input_file : normalized_input_files) {
 		auto tex_buffer = rivet_data_array::from_file(input_file);
-		auto tex = texture(tex_buffer);
+		auto tex = texture(rivet::data::asset_bundle(tex_buffer));
 
 		if (tex.needs_stream()) {
 			auto stream_path = std::filesystem::path(input_file.string() + ".stream");

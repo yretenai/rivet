@@ -35,7 +35,7 @@ namespace rivet::data {
 		RIVET_DEFINE_TYPE_ID(texture_header, "Archive TOC Texture Header");
 		RIVET_DEFINE_TYPE_ID(asset_headers, "Archive TOC Asset Header Data");
 		RIVET_DEFINE_TYPE_ID(key_asset_ids, "Archive TOC Key Asset IDs");
-		constexpr const static rivet_type_id archive_asset_offsets_type_id = 0xDCD720B5;
+		RIVET_DEFINE_FAKE_TYPE_ID(archive_asset_offsets, "Archive TOC Asset Offsets", 0xDCD720B5);
 
 		struct archive_toc_header {
 			rivet_type_id type_id;

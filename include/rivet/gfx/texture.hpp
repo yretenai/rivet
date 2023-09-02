@@ -41,7 +41,6 @@ namespace rivet::gfx {
 
 		RIVET_DEFINE_TYPE_ID(texture_header, "Texture Header");
 
-		explicit texture(const std::shared_ptr<rivet_data_array> &stream, rivet_size index = 0);
 		explicit texture(const rivet::data::asset_bundle &bundle, rivet_size index = 0);
 
 		texture(const std::shared_ptr<rivet_data_array> &dat1_stream, const std::shared_ptr<rivet_data_array> &resident, const std::shared_ptr<rivet_data_array> &stream = nullptr) {

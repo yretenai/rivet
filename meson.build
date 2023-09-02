@@ -19,6 +19,7 @@ endif
 # cli dependencies
 cli_deps = [] + deps
 cli_deps += [dependency('clipp', version: '>=1.2.4')]
+cli_deps += [dependency('nlohmann_json', version: '>=3.11.2')]
 
 # private dependencies
 rivet_deps = [] + deps

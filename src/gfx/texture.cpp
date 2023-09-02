@@ -16,8 +16,6 @@ using namespace rivet::data;
 using namespace rivet::gfx::support;
 
 namespace rivet::gfx {
-	texture::texture(const std::shared_ptr<rivet_data_array> &stream, rivet_size index): texture::texture(rivet::data::asset_bundle(stream), index) { }
-
 	texture::texture(const rivet::data::asset_bundle &bundle, rivet_size index) {
 		auto dat1_stream = bundle.get_entry(index);
 		if (dat1_stream == nullptr) {

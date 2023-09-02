@@ -7,6 +7,7 @@ rivetlib = library('rivet', [
 		'data/dag.cpp',
 		'data/dat1.cpp',
 		'data/dsar.cpp',
+		'data/localization.cpp',
 		'data/toc.cpp',
 
 		'gfx/texture.cpp',

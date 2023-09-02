@@ -295,6 +295,14 @@ namespace rivet {
 		}
 
 		template <typename U = T>
+			requires(sizeof(U) == 1 && std::is_same_v<U, T> && std::is_integral_v<U>)
+		[[maybe_unused]] auto
+		to_u8string() noexcept -> std::u8string {
+			ensure_null_terminated<U>();
+			return std::u8string(reinterpret_cast<char *>(data()), byte_size());
+		}
+
+		template <typename U = T>
 			requires(sizeof(U) <= 2 && std::is_integral_v<U>)
 		[[maybe_unused]] auto
 		to_wstring() noexcept -> std::wstring {
@@ -312,6 +320,14 @@ namespace rivet {
 		to_string_view() const noexcept -> std::string_view {
 			ensure_null_terminated<U>();
 			return std::string_view(reinterpret_cast<char *>(data()), byte_size());
+		}
+
+		template <typename U = T>
+			requires(sizeof(U) == 1 && std::is_integral_v<U>)
+		[[maybe_unused, nodiscard]] auto
+		to_u8string_view() const noexcept -> std::u8string_view {
+			ensure_null_terminated<U>();
+			return std::u8string_view(reinterpret_cast<char8_t *>(data()), byte_size());
 		}
 
 		template <typename U = T>
@@ -348,6 +364,11 @@ namespace rivet {
 		}
 
 		[[maybe_unused, nodiscard]] auto
+		to_u8cstring(rivet_size64 index = 0) const noexcept -> std::u8string {
+			return std::u8string(reinterpret_cast<char8_t *>(data()) + normalize_value(index));
+		}
+
+		[[maybe_unused, nodiscard]] auto
 		to_wcstring(rivet_size64 index = 0) const noexcept -> std::wstring {
 			return std::wstring(reinterpret_cast<wchar_t *>(data()) + (normalize_value(index) >> 1));
 		}
@@ -358,7 +379,12 @@ namespace rivet {
 		}
 
 		[[maybe_unused, nodiscard]] auto
-		to_wstring_view(rivet_size64 index = 0) const noexcept -> std::wstring_view {
+		to_u8cstring_view(rivet_size64 index = 0) const noexcept -> std::u8string_view {
+			return std::u8string_view(reinterpret_cast<char8_t *>(data()) + normalize_value(index));
+		}
+
+		[[maybe_unused, nodiscard]] auto
+		to_wcstring_view(rivet_size64 index = 0) const noexcept -> std::wstring_view {
 			return std::wstring_view(reinterpret_cast<wchar_t *>(data()) + (normalize_value(index) >> 1));
 		}
 
