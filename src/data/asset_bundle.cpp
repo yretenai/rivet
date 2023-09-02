@@ -3,7 +3,9 @@
 // SPDX-License-Identifier: MPL-2.0
 
 #include <rivet/data/asset_bundle.hpp>
+#include <rivet/data/dat1.hpp>
 #include <rivet/exceptions.hpp>
+#include <rivet/gfx/texture.hpp>
 
 namespace rivet::data {
 	asset_bundle::asset_bundle(const std::shared_ptr<rivet_data_array> &stream): buffer(stream) {
@@ -11,10 +13,18 @@ namespace rivet::data {
 			throw rivet::invalid_operation("asset_bundle::asset_bundle: invalid stream");
 		}
 
+		if (stream->get<rivet_type_id>(0) == rivet::data::dat1::magic) {
+			auto dat1_header = stream->get<rivet::data::dat1::data_header_t>(0);
+			header.schema = dat1_header.schema;
+			header.sizes[0] = dat1_header.size;
+			buffer = stream;
+			return;
+		}
+
 		header = stream->get<rivet::structures::rivet_asset_header>(0);
 		auto start_offset = sizeof(rivet::structures::rivet_asset_header);
 
-		if (header.schema == 0x8F53A199) { // todo: replace 0x8F53A199 with rivet::gfx::texture::type_id
+		if (header.schema == rivet::gfx::texture::type_id) {
 			texture_header = stream->get<rivet::structures::rivet_asset_texture_header>(start_offset);
 			start_offset += sizeof(rivet::structures::rivet_asset_texture_header);
 		}

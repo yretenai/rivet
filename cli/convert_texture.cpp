@@ -85,21 +85,35 @@ convert_texture(int argc, char **argv) -> int {
 			}
 		}
 
-		output_path.replace_extension(local_dds ? ".dds" : local_tif ? ".tiff" : ".png");
+		const std::string ext = local_dds ? ".dds" : local_tif ? ".tiff" : ".png";
+		output_path.replace_extension(ext);
 
-		std::cout << "writing " << output_path.string() << '\n';
-		if (local_tif) {
-			tex.to_tiff(0, output_path);
-		} else {
-			auto image_buffer = local_dds ? tex.to_dds() : tex.to_png(0);
+		auto surface_count = tex.get_header().surface_count;
 
-			std::ofstream output_file(output_path, std::ios::binary | std::ios::trunc);
-			if (!output_file.is_open()) {
-				std::cout << "failed to open " << output_path << '\n';
-				continue;
+		const auto output_name = output_path.filename().string();
+
+		for (auto surface_index = 0; surface_index < surface_count; ++surface_index) {
+			if (surface_index > 0) {
+				output_path = output_path.replace_filename(output_name).replace_extension(std::to_string(surface_index) + ext);
+			}
+			std::cout << "writing " << output_path.string() << '\n';
+			if (local_tif) {
+				tex.to_tiff(surface_index, output_path);
+			} else {
+				auto image_buffer = local_dds ? tex.to_dds() : tex.to_png(surface_index);
+
+				std::ofstream output_file(output_path, std::ios::binary | std::ios::trunc);
+				if (!output_file.is_open()) {
+					std::cout << "failed to open " << output_path << '\n';
+					continue;
+				}
+
+				output_file.write(reinterpret_cast<const char *>(image_buffer->data()), static_cast<std::streamsize>(image_buffer->byte_size()));
 			}
 
-			output_file.write(reinterpret_cast<const char *>(image_buffer->data()), static_cast<std::streamsize>(image_buffer->byte_size()));
+			if (dds) {
+				break;
+			}
 		}
 	}
 

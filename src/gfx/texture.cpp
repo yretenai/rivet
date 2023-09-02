@@ -24,12 +24,7 @@ namespace rivet::gfx {
 			throw invalid_operation("texture::texture: invalid texture stream");
 		}
 
-		auto buffer = bundle.get_entry(index + 1);
-		if (buffer == nullptr) {
-			throw invalid_operation("texture::texture: invalid texture stream");
-		}
-
-		init(dat1_stream, buffer);
+		init(dat1_stream, bundle.get_entry(index + 1));
 	}
 
 	void
@@ -49,19 +44,12 @@ namespace rivet::gfx {
 		}
 
 		header = header_stream->get<texture::texture_header>(0);
-		if (header.resident_size != resident->size()) {
-			throw invalid_operation("texture::texture: invalid texture stream");
+		if (resident != nullptr) {
+			provide_resident(resident);
 		}
-		resident_buffer = resident;
 
 		if (stream_buffer != nullptr) {
-			if (header.stream_size != 0 && header.stream_size != stream_buffer->size()) {
-				throw invalid_operation("texture::texture: invalid texture stream");
-			}
-
-			if (header.stream_size > 0) {
-				stream_buffer = stream;
-			}
+			provide_stream(stream);
 		}
 	}
 
@@ -72,6 +60,15 @@ namespace rivet::gfx {
 		}
 
 		stream_buffer = stream;
+	}
+
+	void
+	texture::provide_resident(const std::shared_ptr<rivet_data_array> &stream) {
+		if (stream->size() < header.resident_size) {
+			throw invalid_operation("texture::provide_resident: stream too short");
+		}
+
+		resident_buffer = stream;
 	}
 
 	auto
@@ -109,6 +106,8 @@ namespace rivet::gfx {
 			case dxgi_format::r32g32_float:
 			case dxgi_format::r10g10b10a2_unorm:
 			case dxgi_format::r10g10b10a2_uint:
+			case dxgi_format::r16g16_unorm:
+			case dxgi_format::r16g16_snorm:
 			case dxgi_format::b8g8r8a8_unorm:
 			case dxgi_format::b8g8r8a8_unorm_srgb:
 			case dxgi_format::b8g8r8x8_unorm:
@@ -119,20 +118,136 @@ namespace rivet::gfx {
 	}
 
 	auto
-	texture::decompress_compressonator(uint32_t target) const -> std::shared_ptr<rivet_data_array> {
+	get_cmp_format(dxgi_format dxgi) -> CMP_FORMAT {
+		switch (dxgi) {
+			case dxgi_format::bc1_unorm:
+			case dxgi_format::bc1_unorm_srgb: return CMP_FORMAT_BC1;
+
+			case dxgi_format::bc2_unorm:
+			case dxgi_format::bc2_unorm_srgb: return CMP_FORMAT_BC2;
+
+			case dxgi_format::bc3_unorm:
+			case dxgi_format::bc3_unorm_srgb: return CMP_FORMAT_BC3;
+
+			case dxgi_format::bc4_unorm:
+			case dxgi_format::bc4_snorm: return CMP_FORMAT_BC4;
+
+			case dxgi_format::bc5_unorm:
+			case dxgi_format::bc5_snorm: return CMP_FORMAT_BC5;
+
+			case dxgi_format::bc6h_uf16:
+			case dxgi_format::bc6h_sf16: return CMP_FORMAT_BC6H;
+
+			case dxgi_format::bc7_unorm:
+			case dxgi_format::bc7_unorm_srgb: return CMP_FORMAT_BC7;
+
+			case dxgi_format::r8g8b8a8_unorm:
+			case dxgi_format::r8g8b8a8_unorm_srgb: return CMP_FORMAT_RGBA_8888;
+
+			case dxgi_format::r8g8b8a8_snorm:
+			case dxgi_format::r8g8b8a8_sint: return CMP_FORMAT_RGBA_8888_S;
+
+			case dxgi_format::r16g16b16a16_float: return CMP_FORMAT_RGBA_16F;
+
+			case dxgi_format::r32g32b32a32_float: return CMP_FORMAT_RGBA_32F;
+
+			case dxgi_format::a8_unorm:
+			case dxgi_format::r8_unorm: return CMP_FORMAT_R_8;
+
+			case dxgi_format::r8_snorm: return CMP_FORMAT_R_8_S;
+
+			case dxgi_format::r16_float: return CMP_FORMAT_R_16F;
+
+			case dxgi_format::r32_float: return CMP_FORMAT_R_32F;
+
+			case dxgi_format::r8g8_unorm: return CMP_FORMAT_RG_8;
+
+			case dxgi_format::r8g8_snorm: return CMP_FORMAT_RG_8_S;
+
+			case dxgi_format::r16g16_float: return CMP_FORMAT_RG_16F;
+
+			case dxgi_format::r32g32_float: return CMP_FORMAT_RG_32F;
+
+			case dxgi_format::r10g10b10a2_unorm:
+			case dxgi_format::r10g10b10a2_uint: return CMP_FORMAT_RGBA_1010102;
+
+			case dxgi_format::r16g16_unorm:
+			case dxgi_format::r16g16_snorm: return CMP_FORMAT_RG_16;
+
+			case dxgi_format::b8g8r8a8_unorm:
+			case dxgi_format::b8g8r8a8_unorm_srgb:
+			case dxgi_format::b8g8r8x8_unorm:
+			case dxgi_format::b8g8r8x8_unorm_srgb: return CMP_FORMAT_BGRA_8888;
+
+			default: throw invalid_operation("texture::decompress_compressonator: unsupported texture format");
+		}
+	}
+
+	// tuple(bits_per_block, pixels_per_block)
+	auto
+	get_pitch_factor(dxgi_format dxgi) -> std::tuple<rivet_size, rivet_size> {
+		switch (dxgi) {
+			case dxgi_format::bc1_unorm:
+			case dxgi_format::bc1_unorm_srgb:
+			case dxgi_format::bc2_unorm:
+			case dxgi_format::bc2_unorm_srgb: return std::make_tuple(64, 16);
+
+			case dxgi_format::bc3_unorm:
+			case dxgi_format::bc3_unorm_srgb: return std::make_tuple(16, 16);
+
+			case dxgi_format::bc4_unorm:
+			case dxgi_format::bc4_snorm: return std::make_tuple(64, 16);
+
+			case dxgi_format::bc5_unorm:
+			case dxgi_format::bc5_snorm:
+			case dxgi_format::bc6h_uf16:
+			case dxgi_format::bc6h_sf16:
+			case dxgi_format::bc7_unorm:
+			case dxgi_format::bc7_unorm_srgb: return std::make_tuple(128, 16);
+
+			case dxgi_format::a8_unorm:
+			case dxgi_format::r8_unorm:
+			case dxgi_format::r8_snorm: return std::make_tuple(8, 1);
+
+			case dxgi_format::r8g8_unorm:
+			case dxgi_format::r8g8_snorm:
+			case dxgi_format::r16_float: return std::make_tuple(16, 1);
+
+			case dxgi_format::r8g8b8a8_unorm:
+			case dxgi_format::r8g8b8a8_unorm_srgb:
+			case dxgi_format::r8g8b8a8_snorm:
+			case dxgi_format::r8g8b8a8_sint:
+			case dxgi_format::r32_float:
+			case dxgi_format::r16g16_float:
+			case dxgi_format::r10g10b10a2_unorm:
+			case dxgi_format::r10g10b10a2_uint:
+			case dxgi_format::r16g16_unorm:
+			case dxgi_format::r16g16_snorm:
+			case dxgi_format::b8g8r8a8_unorm:
+			case dxgi_format::b8g8r8a8_unorm_srgb:
+			case dxgi_format::b8g8r8x8_unorm:
+			case dxgi_format::b8g8r8x8_unorm_srgb: return std::make_tuple(32, 1);
+
+			case dxgi_format::r16g16b16a16_float:
+			case dxgi_format::r32g32_float: return std::make_tuple(64, 1);
+
+			case dxgi_format::r32g32b32a32_float: return std::make_tuple(128, 1);
+
+			default: throw invalid_operation("texture::decompress_compressonator: unsupported texture format");
+		}
+	}
+
+	auto
+	texture::decompress_compressonator(uint32_t target, uint32_t surface) const -> std::shared_ptr<rivet_data_array> {
 		auto num_mips = header.mip_count;
 		auto has_stream = needs_stream() && stream_buffer != nullptr;
 		if (!has_stream) {
 			num_mips -= header.streamed_mips;
+		} else {
+			num_mips = header.streamed_mips;
 		}
 
-		auto pixel_data = std::make_shared<rivet_data_array>(nullptr, header.resident_size + (has_stream ? header.stream_size : 0u));
-		auto resident_offset = 0u;
-		if (has_stream) {
-			resident_offset = header.stream_size;
-			stream_buffer->copy_to(pixel_data, 0, header.stream_size, 0);
-		}
-		resident_buffer->copy_to(pixel_data, 0, header.resident_size, resident_offset);
+		auto pixel_data = has_stream ? stream_buffer : resident_buffer;
 
 		auto texture = CMP_Texture {};
 		texture.dwSize = sizeof(CMP_Texture);
@@ -143,67 +258,28 @@ namespace rivet::gfx {
 			texture.dwHeight = header.stream_height;
 		}
 		auto dxgi = static_cast<dxgi_format>(header.format);
-		switch (dxgi) {
-			case dxgi_format::bc1_unorm:
-			case dxgi_format::bc1_unorm_srgb: texture.format = CMP_FORMAT_BC1; break;
+		texture.format = get_cmp_format(dxgi);
 
-			case dxgi_format::bc2_unorm:
-			case dxgi_format::bc2_unorm_srgb: texture.format = CMP_FORMAT_BC2; break;
+		if (surface > 0) {
+			auto one_surface = 0u;
+			rivet_size bits_per_block = 0;
+			rivet_size pixels_per_block = 0;
+			std::tie(bits_per_block, pixels_per_block) = get_pitch_factor(dxgi);
 
-			case dxgi_format::bc3_unorm:
-			case dxgi_format::bc3_unorm_srgb: texture.format = CMP_FORMAT_BC3; break;
+			// this will always work as long as width and height are stable powers of 2, you're welcome
+			auto mask = (texture.dwWidth * texture.dwHeight / pixels_per_block * bits_per_block) >> 3;
+			for (auto i = 0; i < num_mips; ++i) {
+				one_surface ^= mask;
+				mask >>= 2;
+			}
 
-			case dxgi_format::bc4_unorm:
-			case dxgi_format::bc4_snorm: texture.format = CMP_FORMAT_BC4; break;
-
-			case dxgi_format::bc5_unorm:
-			case dxgi_format::bc5_snorm: texture.format = CMP_FORMAT_BC5; break;
-
-			case dxgi_format::bc6h_uf16:
-			case dxgi_format::bc6h_sf16: texture.format = CMP_FORMAT_BC6H; break;
-
-			case dxgi_format::bc7_unorm:
-			case dxgi_format::bc7_unorm_srgb: texture.format = CMP_FORMAT_BC7; break;
-
-			case dxgi_format::r8g8b8a8_unorm:
-			case dxgi_format::r8g8b8a8_unorm_srgb: texture.format = CMP_FORMAT_RGBA_8888; break;
-
-			case dxgi_format::r8g8b8a8_snorm:
-			case dxgi_format::r8g8b8a8_sint: texture.format = CMP_FORMAT_RGBA_8888_S; break;
-
-			case dxgi_format::r16g16b16a16_float: texture.format = CMP_FORMAT_RGBA_16F; break;
-
-			case dxgi_format::r32g32b32a32_float: texture.format = CMP_FORMAT_RGBA_32F; break;
-
-			case dxgi_format::a8_unorm:
-			case dxgi_format::r8_unorm: texture.format = CMP_FORMAT_R_8; break;
-
-			case dxgi_format::r8_snorm: texture.format = CMP_FORMAT_R_8_S; break;
-
-			case dxgi_format::r16_float: texture.format = CMP_FORMAT_R_16F; break;
-
-			case dxgi_format::r32_float: texture.format = CMP_FORMAT_R_32F; break;
-
-			case dxgi_format::r8g8_unorm: texture.format = CMP_FORMAT_RG_8; break;
-
-			case dxgi_format::r8g8_snorm: texture.format = CMP_FORMAT_RG_8_S; break;
-
-			case dxgi_format::r16g16_float: texture.format = CMP_FORMAT_RG_16F; break;
-
-			case dxgi_format::r32g32_float: texture.format = CMP_FORMAT_RG_32F; break;
-
-			case dxgi_format::r10g10b10a2_unorm:
-			case dxgi_format::r10g10b10a2_uint: texture.format = CMP_FORMAT_RGBA_1010102; break;
-
-			case dxgi_format::b8g8r8a8_unorm:
-			case dxgi_format::b8g8r8a8_unorm_srgb:
-			case dxgi_format::b8g8r8x8_unorm:
-			case dxgi_format::b8g8r8x8_unorm_srgb: texture.format = CMP_FORMAT_BGRA_8888; break;
-
-			default: throw invalid_operation("texture::decompress_compressonator: unsupported texture format");
+			texture.dwDataSize = one_surface;
+			auto offset = one_surface * surface;
+			texture.pData = pixel_data->data(offset);
+		} else {
+			texture.dwDataSize = static_cast<CMP_DWORD>(pixel_data->size());
+			texture.pData = pixel_data->data();
 		}
-		texture.dwDataSize = static_cast<CMP_DWORD>(pixel_data->size());
-		texture.pData = pixel_data->data();
 
 		auto dest_texture = CMP_Texture {};
 		dest_texture.dwSize = sizeof(CMP_Texture);
@@ -231,10 +307,10 @@ namespace rivet::gfx {
 	}
 
 	auto
-	texture::to_png([[maybe_unused]] rivet_index surface_index) const -> std::shared_ptr<rivet_data_array> {
+	texture::to_png(rivet_index surface_index) const -> std::shared_ptr<rivet_data_array> {
 		auto has_stream = needs_stream() && stream_buffer != nullptr;
 		auto hdr = is_hdr();
-		auto array = decompress_compressonator(hdr ? CMP_FORMAT_RGBA_16 : CMP_FORMAT_RGBA_8888);
+		auto array = decompress_compressonator(hdr ? CMP_FORMAT_RGBA_16 : CMP_FORMAT_RGBA_8888, surface_index);
 
 		auto *png = png_create_write_struct(PNG_LIBPNG_VER_STRING, nullptr, nullptr, nullptr);
 		if (png == nullptr) {
@@ -260,8 +336,8 @@ namespace rivet::gfx {
 		auto stride = hdr ? 8 : 4;
 		png_set_IHDR(png, info, width, height, stride << 1, PNG_COLOR_TYPE_RGBA, PNG_INTERLACE_NONE, PNG_COMPRESSION_TYPE_DEFAULT, PNG_FILTER_TYPE_DEFAULT);
 		png_write_info(png, info);
-		for (auto row = 0u; row < height; row++) {
-			png_write_row(png, array->data() + static_cast<size_t>(row * width * stride)); // NOLINT(*-pro-bounds-pointer-arithmetic)
+		for (rivet_size64 row = 0; row < height; row++) {
+			png_write_row(png, array->data(static_cast<rivet_size64>(row * width * stride)));
 		}
 		png_write_end(png, nullptr);
 		png_destroy_write_struct(&png, &info);
@@ -272,10 +348,10 @@ namespace rivet::gfx {
 	// because meson does not support libtiffxx, and I don't have the energy to fix it we're using the fopen C API
 	// the alternative is hacking together a streamable TIFF writer, which is not something I want to do right now.
 	void
-	texture::to_tiff([[maybe_unused]] rivet_index surface_index, const std::filesystem::path &path) const {
+	texture::to_tiff(rivet_index surface_index, const std::filesystem::path &path) const {
 		auto has_stream = needs_stream() && stream_buffer != nullptr;
 		auto hdr = is_hdr();
-		auto array = decompress_compressonator(hdr ? CMP_FORMAT_RGBA_16F : CMP_FORMAT_RGBA_8888);
+		auto array = decompress_compressonator(hdr ? CMP_FORMAT_RGBA_16F : CMP_FORMAT_RGBA_8888, surface_index);
 
 		auto *tiff = TIFFOpen(path.string().c_str(), "w");
 		if (tiff == nullptr) {
@@ -308,7 +384,13 @@ namespace rivet::gfx {
 			num_mips -= header.streamed_mips;
 		}
 
-		auto pixel_data = resident_buffer;
+		// stream has mipmaps, which means surface 0 will have its mips overlap into surface 1 (because they're in resident)
+		auto stream_only = has_stream && header.surface_count > 1;
+		if (stream_only) {
+			num_mips = header.streamed_mips;
+		}
+
+		auto pixel_data = stream_only ? stream_buffer : resident_buffer;
 
 		if (pixel_data == nullptr) {
 			throw invalid_operation("texture::to_dds: invalid texture stream");
@@ -325,10 +407,15 @@ namespace rivet::gfx {
 		dds.width = has_stream ? header.stream_width : header.resident_width;
 		dds.mip_map_count = num_mips;
 		dx10.format = static_cast<dxgi_format>(header.format);
+		dx10.array_size = header.surface_count;
 
-		auto buffer_size = sizeof(dds_header) + sizeof(dx10_header) + header.resident_size;
+		auto buffer_size = sizeof(dds_header) + sizeof(dx10_header);
 		if (has_stream) {
 			buffer_size += header.stream_size;
+		}
+
+		if (!stream_only) {
+			buffer_size += header.resident_size;
 		}
 
 		auto buffer = std::make_shared<rivet_data_array>(nullptr, buffer_size);
@@ -340,7 +427,9 @@ namespace rivet::gfx {
 			stream_buffer->copy_to(buffer, 0, header.stream_size, sizeof(dds_header) + sizeof(dx10_header));
 		}
 
-		pixel_data->copy_to(buffer, 0, header.resident_size, resident_offset);
+		if (!stream_only) {
+			pixel_data->copy_to(buffer, 0, header.resident_size, resident_offset);
+		}
 
 		return buffer;
 	}

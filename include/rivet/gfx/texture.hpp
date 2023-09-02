@@ -10,6 +10,8 @@
 
 namespace rivet::gfx {
 	struct RIVET_SHARED texture {
+		constexpr const static rivet_type_id type_id = 0x8F53A199;
+
 #pragma pack(push, 1)
 
 		struct texture_header {
@@ -19,17 +21,18 @@ namespace rivet::gfx {
 			uint16_t stream_height;
 			uint16_t resident_width;
 			uint16_t resident_height;
-			uint16_t unknown10; // usually 1. could be type, could be number of surfaces
-			uint16_t unknown12; // flags? changes wildly. could be two bytes.
-			uint32_t format;	// DXGI_FORMAT on Windows
-			uint32_t unknown18; // zero
-			uint16_t unknown1C; // usually 1. surfaces?
+			uint16_t surface_count;
+			uint8_t unknown11; // flags? 27 possible combinations, most common = 0x10
+			uint8_t unknown12; // seems to be grouped by type
+			uint32_t format;
+			float mid_alpha_level;
+			uint16_t unknown1C; // 0: Vertex Animation, 1: Texture, 2: ??, 3: ??, 4: Cubemap
 			uint16_t mip_count;
 			uint8_t streamed_mips; // 0 when stream_size is 0
-			uint8_t unknown21;	   // usually 1.
-			uint8_t unknown22;	   // usually 1.
-			uint8_t unknown23;	   // usually 1.
-			uint64_t unknown24;	   // zero
+			uint8_t unknown21;	   // 1 - 3. usually 1. 2 seems to be some sort of cubemap? 3 = vertex animation?
+			uint8_t unknown22;	   // copy of unknown21
+			uint8_t unknown23;	   // copy of unknown21
+			uint64_t unknown24;	   // always zero, maybe not in embedded textures.
 		};
 
 		static_assert(sizeof(texture_header) == 0x2C);
@@ -48,14 +51,17 @@ namespace rivet::gfx {
 		void
 		provide_stream(const std::shared_ptr<rivet_data_array> &stream);
 
+		void
+		provide_resident(const std::shared_ptr<rivet_data_array> &stream);
+
 		[[nodiscard]] auto
 		is_convertable() const -> bool;
 
 		[[nodiscard]] auto
-		to_png([[maybe_unused]] rivet_index surface_index) const -> std::shared_ptr<rivet_data_array>;
+		to_png(rivet_index surface_index) const -> std::shared_ptr<rivet_data_array>;
 
 		void
-		to_tiff([[maybe_unused]] rivet_index surface_index, const std::filesystem::path &path) const;
+		to_tiff(rivet_index surface_index, const std::filesystem::path &path) const;
 
 		[[nodiscard]] auto
 		to_dds() const -> std::shared_ptr<rivet_data_array>;
@@ -81,7 +87,7 @@ namespace rivet::gfx {
 		std::shared_ptr<rivet_data_array> stream_buffer;
 
 		[[nodiscard]] auto
-		decompress_compressonator(uint32_t target) const -> std::shared_ptr<rivet_data_array>;
+		decompress_compressonator(uint32_t target, rivet_index surface_index) const -> std::shared_ptr<rivet_data_array>;
 
 		void
 		init(const std::shared_ptr<rivet_data_array> &dat1_stream, const std::shared_ptr<rivet_data_array> &resident_buffer, const std::shared_ptr<rivet_data_array> &stream_buffer = nullptr);

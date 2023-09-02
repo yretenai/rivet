@@ -9,3 +9,7 @@ executable('rivet-dat1-dump', ['dump_dat1.cpp'],
 executable('rivet-texture-convert', ['convert_texture.cpp'],
 	dependencies: cli_deps + [rivetdep],
 	install: true)
+
+executable('rivet-debug-analyze', ['analyze.cpp'],
+	dependencies: cli_deps + [rivetdep],
+	install: true)

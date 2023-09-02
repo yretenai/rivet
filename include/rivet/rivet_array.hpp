@@ -8,10 +8,10 @@
 #include <cstdint>
 #include <filesystem>
 #include <fstream>
-#include <sstream>
 #include <iterator>
 #include <memory>
 #include <new>
+#include <sstream>
 #include <string>
 #include <type_traits>
 #include <utility>
@@ -123,6 +123,15 @@ namespace rivet {
 		[[nodiscard]] RIVET_INLINE auto
 		data() const noexcept -> T * {
 			return reinterpret_cast<T *>(ptr.get() + offset); // NOLINT(*-pro-bounds-pointer-arithmetic)
+		}
+
+		[[nodiscard]] RIVET_INLINE auto
+		data(rivet_size64 index) const -> T * {
+			if (offset + index >= byte_size()) {
+				throw index_out_of_range("rivet_array::data: index out of range");
+			}
+
+			return reinterpret_cast<T *>(ptr.get() + offset + index); // NOLINT(*-pro-bounds-pointer-arithmetic)
 		}
 
 		[[maybe_unused, nodiscard]] RIVET_INLINE auto

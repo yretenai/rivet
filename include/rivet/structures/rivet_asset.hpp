@@ -60,10 +60,11 @@ namespace rivet::structures {
 		// sizes of each block, may be 0 or spill into .stream
 		std::array<rivet_size, 4> sizes;
 		// _art.zone: 0 - main block, 1 - physics, 2 - unknown, 3 - texture data
-		uint32_t unknown6;
-		uint32_t unknown7;
-		uint32_t unknown8;
-		uint32_t unknown9;
+		uint16_t unknown14; // second-smallest number
+		uint16_t unknown16; // flags, likely. 0x100, 0x200, 0x400, 0x800, 0x1000
+		uint32_t unknown18; // smaller number, probably size of some chunk
+		uint32_t unknown1C; // 3 possible values, 0x3010248, 0x3020148, 0x3030048
+		uint32_t unknown20; // large number, scales with size of asset, caps at 0x10000000
 	};
 
 	static_assert(sizeof(rivet_asset_header) == 36);

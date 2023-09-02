@@ -10,6 +10,7 @@
 
 #include <rivet/data/dag.hpp>
 #include <rivet/data/toc.hpp>
+#include <rivet/gfx/texture.hpp>
 #include <rivet/hash/asset_id.hpp>
 #include <rivet/rivet.hpp>
 #include <rivet/rivet_game.hpp>
@@ -93,12 +94,12 @@ process_asset(const std::shared_ptr<rivet_game> &game, const std::shared_ptr<riv
 		}
 
 		if (asset->texture_header.has_value()) {
-			if (asset->header.has_value() && asset->header.value().schema != 0x8F53A199) {
+			if (asset->header.has_value() && asset->header.value().schema != rivet::gfx::texture::type_id) {
 				std::cout << "ill texture header " << name << '\n';
 				error_file << "ill texture header " << name << '\n';
 			}
 			asset_file.write(reinterpret_cast<const char *>(&asset->texture_header.value()), sizeof(rivet_asset_texture_header));
-		} else if (asset->header.has_value() && asset->header.value().schema == 0x8F53A199) { // todo: replace 0x8F53A199 with rivet::gfx::texture::type_id
+		} else if (asset->header.has_value() && asset->header.value().schema == rivet::gfx::texture::type_id) {
 			std::cout << "ill formed texture " << name << '\n';
 			error_file << "ill texture " << name << '\n';
 			auto empty_header = rivet_asset_texture_header {};
@@ -115,7 +116,7 @@ process_asset(const std::shared_ptr<rivet_game> &game, const std::shared_ptr<riv
 
 auto
 extract(int argc, char **argv) -> int {
-	const std::string game_path;
+	std::string game_path;
 	std::string output_dir;
 	bool version_flag = false;
 	bool help_flag = false;
@@ -124,7 +125,7 @@ extract(int argc, char **argv) -> int {
 	auto cli = (clipp::joinable(clipp::option("-h", "--help").set(help_flag, true) % "show help",
 								clipp::option("-v", "--version").set(version_flag, true) % "show version",
 								clipp::option("-V", "--verbose").set(verbose, true) % "verbose output"),
-				clipp::required("-g", "--game") & clipp::required("game", game_path) % "path to game directory",
+				clipp::value("game", game_path) % "path to game directory",
 				clipp::option("-o", "--output-dir") & clipp::value("output-dir", output_dir) % "output directory");
 
 	if (!clipp::parse(argc, argv, cli) || help_flag || version_flag) {
