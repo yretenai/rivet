@@ -60,6 +60,33 @@ operator<<(std::ostream &out, const rivet::rivet_locale &locale) -> std::ostream
 }
 
 auto
+operator<<(std::ostream &out, const rivet::structures::rivet_asset_type &type) -> std::ostream & {
+	switch (type) {
+		case rivet::structures::rivet_asset_type::LEVEL: return out << "LEVEL";
+		case rivet::structures::rivet_asset_type::ZONE: return out << "ZONE";
+		case rivet::structures::rivet_asset_type::ACTOR: return out << "ACTOR";
+		case rivet::structures::rivet_asset_type::CONDUIT: return out << "CONDUIT";
+		case rivet::structures::rivet_asset_type::CONFIG: return out << "CONFIG";
+		case rivet::structures::rivet_asset_type::CINEMATIC2: return out << "CINEMATIC2";
+		case rivet::structures::rivet_asset_type::MODEL: return out << "MODEL";
+		case rivet::structures::rivet_asset_type::ANIMATION_CLIP: return out << "ANIMATION_CLIP";
+		case rivet::structures::rivet_asset_type::ANIMATION_SET: return out << "ANIMATION_SET";
+		case rivet::structures::rivet_asset_type::MATERIAL: return out << "MATERIAL";
+		case rivet::structures::rivet_asset_type::MATERIAL_GRAPH: return out << "MATERIAL_GRAPH";
+		case rivet::structures::rivet_asset_type::TEXTURE: return out << "TEXTURE";
+		case rivet::structures::rivet_asset_type::ATMOSPHERE: return out << "ATMOSPHERE";
+		case rivet::structures::rivet_asset_type::EFFECT: return out << "EFFECT";
+		case rivet::structures::rivet_asset_type::SOUNDBANK: return out << "SOUNDBANK";
+		case rivet::structures::rivet_asset_type::LOCALIZATION: return out << "LOCALIZATION";
+		case rivet::structures::rivet_asset_type::ZONE_LIGHTING: return out << "ZONE_LIGHTING";
+		case rivet::structures::rivet_asset_type::LEVEL_LIGHTING: return out << "LEVEL_LIGHTING";
+		case rivet::structures::rivet_asset_type::NODE_GRAPH: return out << "NODE_GRAPH";
+		case rivet::structures::rivet_asset_type::WWISE_LOOKUP: return out << "WWISE_LOOKUP";
+		default: return out << "UNKNOWN_" << static_cast<uint32_t>(type);
+	}
+}
+
+auto
 operator<<(std::ostream &out, const rivet::rivet_asset_category &category) -> std::ostream & {
 	switch (category) {
 		case rivet::rivet_asset_category::Game: return out << "Game";

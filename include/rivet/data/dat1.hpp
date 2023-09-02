@@ -8,6 +8,7 @@
 #include <cstdint>
 #include <memory>
 #include <string>
+#include <unordered_set>
 #include <utility>
 
 #include <rivet/rivet_array.hpp>
@@ -39,6 +40,7 @@ namespace rivet::data {
 		data_header_t header = {};
 		std::shared_ptr<rivet_data_array> buffer = {};
 		std::shared_ptr<rivet_data_array> string_buffer = {};
+		std::unordered_set<rivet_type_id> section_ids = {};
 		ankerl::unordered_dense::map<rivet_type_id, std::pair<data_entry_t, std::shared_ptr<rivet_data_array>>> sections;
 		std::string_view type_name = {};
 

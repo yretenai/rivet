@@ -5,8 +5,8 @@
 #include <cstdint>
 #include <cstring>
 #include <memory>
-#include <set>
 #include <string>
+#include <unordered_set>
 #include <utility>
 #include <vector>
 
@@ -187,7 +187,7 @@ namespace rivet::data {
 			}
 		}
 
-		std::set<rivet_asset_id> key_asset_lookup {};
+		std::unordered_set<rivet_asset_id> key_asset_lookup {};
 		if (key_assets != nullptr) {
 			key_asset_lookup.insert(key_assets->begin(), key_assets->end());
 		}

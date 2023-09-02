@@ -75,7 +75,7 @@ namespace rivet::structures {
 		ACTOR,
 		CONDUIT,
 		CONFIG,
-		CINEMATIC,
+		CINEMATIC2,
 		MODEL,
 		ANIMATION_CLIP,
 		ANIMATION_SET,

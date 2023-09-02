@@ -9,7 +9,7 @@
 
 namespace rivet::data {
 	asset_bundle::asset_bundle(const std::shared_ptr<rivet_data_array> &stream): buffer(stream) {
-		if (stream->size() < sizeof(rivet::structures::rivet_asset_header)) {
+		if (stream->size() < 4) {
 			throw rivet::invalid_operation("asset_bundle::asset_bundle: invalid stream");
 		}
 
@@ -19,6 +19,10 @@ namespace rivet::data {
 			header.sizes[0] = dat1_header.size;
 			buffer = stream;
 			return;
+		}
+
+		if (stream->size() < sizeof(rivet::structures::rivet_asset_header)) {
+			throw rivet::invalid_operation("asset_bundle::asset_bundle: invalid stream");
 		}
 
 		header = stream->get<rivet::structures::rivet_asset_header>(0);

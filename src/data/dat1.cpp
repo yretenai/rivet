@@ -22,6 +22,7 @@ namespace rivet::data {
 			auto section_headers = buffer->slice<data_entry_t>(sizeof(data_header_t), header.section_count);
 
 			for (auto section_header : *section_headers) {
+				section_ids.emplace(section_header.type_id);
 				auto slice = buffer->slice(section_header.offset, section_header.size);
 				sections.emplace(section_header.type_id, std::make_pair(section_header, slice));
 			}
