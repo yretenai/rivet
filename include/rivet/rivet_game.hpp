@@ -7,19 +7,14 @@
 #include <filesystem>
 #include <memory>
 
+#include <rivet/data/dag.hpp>  // IWYU pragma: keep
+#include <rivet/data/dsar.hpp> // IWYU pragma: keep
+#include <rivet/data/toc.hpp>  // IWYU pragma: keep
 #include <rivet/rivet_array.hpp>
 #include <rivet/rivet_keywords.hpp>
+#include <rivet/structures/rivet_asset.hpp> // IWYU pragma: keep
 
 namespace rivet {
-	namespace structures {
-		struct rivet_asset;
-	} // namespace structures
-
-	namespace data {
-		struct dependency_dag;
-		struct archive_toc;
-	} // namespace data
-
 	struct RIVET_SHARED rivet_game : std::enable_shared_from_this<rivet_game> {
 		std::shared_ptr<data::dependency_dag> dag = nullptr;
 		std::shared_ptr<data::archive_toc> toc = nullptr;

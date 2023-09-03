@@ -13,10 +13,9 @@
 #include <vector>
 
 #include <rivet/rivet_keywords.hpp>
+#include <rivet/structures/rivet_archive.hpp> // IWYU pragma: keep
 
 namespace rivet::structures {
-	struct rivet_archive;
-
 #pragma pack(push, 1)
 
 	struct rivet_asset_raw {
