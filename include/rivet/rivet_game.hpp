@@ -6,7 +6,6 @@
 
 #include <filesystem>
 #include <memory>
-#include <string>
 
 #include <rivet/rivet_array.hpp>
 #include <rivet/rivet_keywords.hpp>
@@ -14,7 +13,6 @@
 namespace rivet {
 	namespace structures {
 		struct rivet_asset;
-		struct rivet_archive;
 	} // namespace structures
 
 	namespace data {

@@ -4,9 +4,15 @@
 
 #pragma once
 
+#include <cstdint>
+#include <memory>
+#include <optional>
 #include <ostream>
+#include <string_view>
+#include <utility>
+#include <vector>
 
-#include <rivet/gfx/texture.hpp>
+#include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_archive.hpp>
 #include <rivet/structures/rivet_asset.hpp>
 

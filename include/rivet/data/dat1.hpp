@@ -7,13 +7,12 @@
 #include <ankerl/unordered_dense.h>
 #include <cstdint>
 #include <memory>
-#include <string>
+#include <string_view>
 #include <unordered_set>
 #include <utility>
 
 #include <rivet/rivet_array.hpp>
 #include <rivet/rivet_keywords.hpp>
-#include <rivet/structures/rivet_asset.hpp>
 
 namespace rivet::data {
 	struct RIVET_SHARED dat1 {

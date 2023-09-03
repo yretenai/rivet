@@ -3,6 +3,11 @@
 // SPDX-License-Identifier: MPL-2.0
 
 #include <algorithm>
+#include <memory>
+#include <string>
+#include <string_view>
+#include <vector>
+
 #include <rivet/rivet_string_pool.hpp>
 
 namespace rivet {

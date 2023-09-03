@@ -2,15 +2,20 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#pragma once
-
-#include <fstream>
+#include <filesystem>
 #include <iostream>
+#include <memory>
+#include <string>
+#include <string_view>
+#include <vector>
 
 #include <clipp.h>
 
+#include <rivet/data/asset_bundle.hpp>
 #include <rivet/gfx/texture.hpp>
 #include <rivet/rivet.hpp>
+#include <rivet/rivet_array.hpp>
+#include <rivet/rivet_keywords.hpp>
 
 #include "helper.hpp"
 

@@ -4,18 +4,19 @@
 
 #pragma once
 
-#include <ankerl/unordered_dense.h>
+#include <cstdint>
 #include <memory>
-#include <string>
 #include <string_view>
 #include <utility>
 #include <vector>
+
+#include <ankerl/unordered_dense.h>
 
 #include <rivet/data/dat1.hpp>
 #include <rivet/hash/type_id.hpp>
 #include <rivet/rivet_array.hpp>
 #include <rivet/rivet_keywords.hpp>
-#include <rivet/structures/rivet_asset.hpp>
+#include <rivet/structures/rivet_asset.hpp> // IWYU pragma: keep
 
 namespace rivet::data {
 	struct archive_toc;

@@ -2,7 +2,17 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
+#include <cstdint>
+#include <memory>
+
+#include <ankerl/unordered_dense.h>
+
+#include <rivet/data/asset_bundle.hpp>
+#include <rivet/data/dat1.hpp>
 #include <rivet/data/localization.hpp>
+#include <rivet/exceptions.hpp>
+#include <rivet/rivet_array.hpp>
+#include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_localization.hpp>
 
 namespace rivet::data {

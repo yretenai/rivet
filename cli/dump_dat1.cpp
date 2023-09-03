@@ -2,9 +2,18 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <fstream>
+#include <array>
+#include <cstdint>
+#include <filesystem>
+#include <iomanip>
 #include <iostream>
+#include <memory>
+#include <string>
+#include <string_view>
+#include <utility>
+#include <vector>
 
+#include <ankerl/unordered_dense.h>
 #include <clipp.h>
 
 #include <rivet/data/asset_bundle.hpp>
@@ -12,6 +21,9 @@
 #include <rivet/data/dat1.hpp>
 #include <rivet/data/toc.hpp>
 #include <rivet/rivet.hpp>
+#include <rivet/rivet_array.hpp>
+#include <rivet/rivet_keywords.hpp>
+#include <rivet/structures/rivet_asset.hpp>
 
 #include "helper.hpp"
 

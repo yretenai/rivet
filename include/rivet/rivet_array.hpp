@@ -4,16 +4,15 @@
 
 #pragma once
 
-#include <algorithm>
+#include <algorithm> // IWYU pragma: keep
 #include <cstdint>
 #include <filesystem>
 #include <fstream>
 #include <iterator>
 #include <memory>
 #include <new>
-#include <sstream>
 #include <string>
-#include <type_traits>
+#include <string_view>
 #include <utility>
 #include <vector>
 

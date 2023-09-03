@@ -6,8 +6,9 @@
 
 #include <ankerl/unordered_dense.h>
 #include <cstdint>
+#include <iosfwd>
 #include <memory>
-#include <string>
+#include <string_view>
 #include <variant>
 #include <vector>
 

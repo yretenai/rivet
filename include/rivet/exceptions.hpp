@@ -5,6 +5,7 @@
 #pragma once
 
 #include <stdexcept>
+#include <string>
 
 #include <rivet/rivet_keywords.hpp>
 

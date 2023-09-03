@@ -2,17 +2,28 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
+#include <filesystem>
+#include <istream>
+#include <memory>
+#include <optional>
+#include <string>
+#include <utility>
+#include <vector>
+
+#include <ankerl/unordered_dense.h>
+
 #include <rivet/data/dag.hpp>
+#include <rivet/data/dat1.hpp>
 #include <rivet/data/dsar.hpp>
 #include <rivet/data/toc.hpp>
+#include <rivet/exceptions.hpp>
 #include <rivet/hash/asset_id.hpp>
+#include <rivet/hash/type_id.hpp>
 #include <rivet/rivet_array.hpp>
 #include <rivet/rivet_game.hpp>
-#include <rivet/rivet_keywords.hpp>
 #include <rivet/rivet_string_pool.hpp>
 #include <rivet/structures/rivet_archive.hpp>
 #include <rivet/structures/rivet_asset.hpp>
-#include <rivet/structures/rivet_serialization.hpp>
 
 using namespace rivet::data;
 using namespace rivet::hash;

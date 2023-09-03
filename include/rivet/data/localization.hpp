@@ -4,16 +4,21 @@
 
 #pragma once
 
+#include <cstdint>
+#include <memory>
+#include <string_view>
+
 #include <ankerl/unordered_dense.h>
 
-#include <rivet/data/asset_bundle.hpp>
 #include <rivet/data/dat1.hpp>
 #include <rivet/hash/type_id.hpp>
 #include <rivet/rivet_array.hpp>
 #include <rivet/rivet_keywords.hpp>
-#include <rivet/structures/rivet_localization.hpp>
+#include <rivet/structures/rivet_localization.hpp> // IWYU pragma: keep
 
 namespace rivet::data {
+	struct asset_bundle;
+
 	struct RIVET_SHARED localization {
 		constexpr static rivet_type_id type_id = 0x122BB0AB;
 

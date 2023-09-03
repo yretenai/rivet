@@ -2,15 +2,29 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <compressonator.h>
+#include <algorithm>
 #include <csetjmp>
-#include <cstddef>
+#include <cstdint>
+#include <filesystem>
+#include <memory>
+#include <string>
+#include <string_view>
+#include <tuple>
+#include <vector>
+
+#include <compressonator.h>
 #include <png.h>
+#include <pngconf.h>
+#include <tiff.h>
 #include <tiffio.h>
 
+#include <rivet/data/asset_bundle.hpp>
 #include <rivet/data/dat1.hpp>
+#include <rivet/exceptions.hpp>
 #include <rivet/gfx/support/dxgi.hpp>
 #include <rivet/gfx/texture.hpp>
+#include <rivet/rivet_array.hpp>
+#include <rivet/rivet_keywords.hpp>
 
 using namespace rivet::data;
 using namespace rivet::gfx::support;

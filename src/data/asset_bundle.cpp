@@ -2,10 +2,17 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
+#include <array>
+#include <memory>
+#include <optional>
+
 #include <rivet/data/asset_bundle.hpp>
 #include <rivet/data/dat1.hpp>
 #include <rivet/exceptions.hpp>
 #include <rivet/gfx/texture.hpp>
+#include <rivet/rivet_array.hpp>
+#include <rivet/rivet_keywords.hpp>
+#include <rivet/structures/rivet_asset.hpp>
 
 namespace rivet::data {
 	asset_bundle::asset_bundle(const std::shared_ptr<rivet_data_array> &stream): buffer(stream) {

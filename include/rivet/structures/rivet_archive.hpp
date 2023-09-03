@@ -4,9 +4,10 @@
 
 #pragma once
 
+#include <array>
 #include <cstdint>
 #include <memory>
-#include <string>
+#include <string_view>
 
 namespace rivet {
 	namespace data {
@@ -14,8 +15,6 @@ namespace rivet {
 	} // namespace data
 
 	namespace structures {
-		struct rivet_asset;
-
 #pragma pack(push, 1)
 
 		struct rivet_archive_raw {

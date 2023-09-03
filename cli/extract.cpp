@@ -3,9 +3,17 @@
 // SPDX-License-Identifier: MPL-2.0
 
 #include <array>
-#include <fstream>
+#include <filesystem>
 #include <iostream>
+#include <memory>
+#include <optional>
+#include <cstdint>
+#include <string>
+#include <string_view>
+#include <utility>
+#include <vector>
 
+#include <ankerl/unordered_dense.h>
 #include <clipp.h>
 
 #include <rivet/data/dag.hpp>
@@ -13,8 +21,11 @@
 #include <rivet/gfx/texture.hpp>
 #include <rivet/hash/asset_id.hpp>
 #include <rivet/rivet.hpp>
+#include <rivet/rivet_array.hpp>
 #include <rivet/rivet_game.hpp>
-#include <rivet/structures/rivet_print_helper.hpp>
+#include <rivet/rivet_keywords.hpp>
+#include <rivet/structures/rivet_archive.hpp>
+#include <rivet/structures/rivet_asset.hpp>
 
 #include "helper.hpp"
 

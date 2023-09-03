@@ -2,7 +2,13 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <cassert>
+#include <cstdint>
+#include <memory>
+#include <unordered_set>
+#include <utility>
+#include <vector>
+
+#include <ankerl/unordered_dense.h>
 
 #include <rivet/data/dat1.hpp>
 #include <rivet/exceptions.hpp>
