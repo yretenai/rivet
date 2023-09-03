@@ -40,18 +40,7 @@ convert_texture(int argc, char **argv) -> int {
 				clipp::values("input-files", input_files) % "input files");
 
 	if (!clipp::parse(argc, argv, cli) || help_flag || version_flag) {
-		if (version_flag) {
-			std::cout << "rivet-localization-dump version " << rivet::rivet_version_detailed() << '\n';
-			return 0;
-		}
-
-		if (help_flag) {
-			std::cout << clipp::make_man_page(cli, "rivet-localization-dump") << '\n';
-			return 1;
-		}
-
-		std::cout << clipp::usage_lines(cli, "rivet-localization-dump") << '\n';
-		return 1;
+		return handle_exit("rivet-localization-dump", cli, version_flag, help_flag);
 	}
 
 	const auto normalized_input_files = find_glob(input_files, ".localization");

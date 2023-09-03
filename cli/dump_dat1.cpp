@@ -20,7 +20,6 @@
 #include <rivet/data/dag.hpp>
 #include <rivet/data/dat1.hpp>
 #include <rivet/data/toc.hpp>
-#include <rivet/rivet.hpp>
 #include <rivet/rivet_array.hpp>
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_asset.hpp>
@@ -46,18 +45,7 @@ dump_dat1(int argc, char **argv) -> int {
 				clipp::values("input-files", input_files) % "input files");
 
 	if (!clipp::parse(argc, argv, cli) || help_flag || version_flag) {
-		if (version_flag) {
-			std::cout << "rivet-dat1-dump version " << rivet::rivet_version_detailed() << '\n';
-			return 0;
-		}
-
-		if (help_flag) {
-			std::cout << clipp::make_man_page(cli, "rivet-dat1-dump") << '\n';
-			return 1;
-		}
-
-		std::cout << clipp::usage_lines(cli, "rivet-dat1-dump") << '\n';
-		return 1;
+		return handle_exit("rivet-dat1-dump", cli, version_flag, help_flag);
 	}
 
 	auto has_output_dir = !output_dir.empty();

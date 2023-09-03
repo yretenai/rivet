@@ -5,8 +5,28 @@
 #pragma once
 
 #include <cstdio>
-#include <string_view>
+#include <filesystem>
+#include <string>
 #include <vector>
+
+#include <rivet/ddl/rivet_ddl.hpp>
+#include <rivet/rivet.hpp>
+
+auto
+handle_exit(const std::string &name, const clipp::group &cli, bool version_flag, bool help_flag) -> int {
+	if (version_flag) {
+		std::cout << name << " version " << rivet::rivet_version_detailed() << ", ddl: " << rivet::ddl::ddl_version_detailed() << '\n';
+		return 0;
+	}
+
+	if (help_flag) {
+		std::cout << clipp::make_man_page(cli, name) << '\n';
+		return 1;
+	}
+
+	std::cout << clipp::usage_lines(cli, name) << '\n';
+	return 1;
+}
 
 auto
 find_glob(const std::vector<std::string> &input_files, const std::string &ext = {}, bool recursive = false) -> std::vector<std::filesystem::path> { // NOLINT(*-no-recursion)

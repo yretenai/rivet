@@ -140,18 +140,7 @@ extract(int argc, char **argv) -> int {
 				clipp::option("-o", "--output-dir") & clipp::value("output-dir", output_dir) % "output directory");
 
 	if (!clipp::parse(argc, argv, cli) || help_flag || version_flag) {
-		if (version_flag) {
-			std::cout << "rivet-extract version " << rivet::rivet_version_detailed() << '\n';
-			return 0;
-		}
-
-		if (help_flag) {
-			std::cout << clipp::make_man_page(cli, "rivet-extract") << '\n';
-			return 1;
-		}
-
-		std::cout << clipp::usage_lines(cli, "rivet-extract") << '\n';
-		return 1;
+		return handle_exit("rivet-extract", cli, version_flag, help_flag);
 	}
 
 	auto game = std::make_shared<rivet_game>(game_path);

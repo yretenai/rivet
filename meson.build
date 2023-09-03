@@ -47,7 +47,7 @@ rivet_deps += [dependency('libpng', version: '>=1.6.40')]
 gdeflate_core = subproject('GDeflate')
 rivet_deps += [gdeflate_core.get_variable('gdeflate_core_dep')]
 
-includedir = include_directories('include/')
+libdeps = []
 
 cpp_args = []
 
@@ -106,6 +106,7 @@ endif
 add_project_arguments(cpp_args, language: 'cpp')
 
 subdir('src')
+subdir('ddl')
 
 if not get_option('lib_only')
     subdir('cli')

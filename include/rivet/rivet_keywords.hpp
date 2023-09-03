@@ -5,18 +5,38 @@
 #pragma once
 
 #if defined _MSC_VER || defined __CYGWIN__
-	#ifdef RIVET_EXPORTING
-		#define RIVET_SHARED __declspec(dllexport)
+	#ifdef RIVET_STATIC
+		#define RIVET_SHARED
+		#define RIVET_DDL_SHARED
 	#else
-		#define RIVET_SHARED __declspec(dllimport)
+		#ifdef RIVET_EXPORTING
+			#define RIVET_SHARED __declspec(dllexport)
+		#else
+			#define RIVET_SHARED __declspec(dllimport)
+		#endif
+		#ifdef RIVET_DDL_EXPORTING
+			#define RIVET_DDL_SHARED __declspec(dllexport)
+		#else
+			#define RIVET_DDL_SHARED __declspec(dllimport)
+		#endif
 	#endif
 	#define RIVET_INLINE inline
 	#define RIVET_DEBUG_BREAK __debugbreak()
 #else
-	#ifdef RIVET_EXPORTING
-		#define RIVET_SHARED __attribute__((visibility("default"))) __attribute__((unused))
-	#else
+	#ifdef RIVET_STATIC
 		#define RIVET_SHARED
+		#define RIVET_DDL_SHARED
+	#else
+		#ifdef RIVET_EXPORTING
+			#define RIVET_SHARED __attribute__((visibility("default"))) __attribute__((unused))
+		#else
+			#define RIVET_SHARED
+		#endif
+		#ifdef RIVET_DDL_EXPORTING
+			#define RIVET_DDL_SHARED __attribute__((visibility("default"))) __attribute__((unused))
+		#else
+			#define RIVET_DDL_SHARED
+		#endif
 	#endif
 	#define RIVET_INLINE inline
 // based on https://github.com/scottt/debugbreak

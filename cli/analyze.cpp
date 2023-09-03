@@ -306,18 +306,7 @@ analyze(int argc, char **argv) -> int {
 				clipp::value("game", game_path) % "path to game directory");
 
 	if (!clipp::parse(argc, argv, cli) || help_flag || version_flag) {
-		if (version_flag) {
-			std::cout << "rivet-debug-analyze version " << rivet::rivet_version_detailed() << '\n';
-			return 0;
-		}
-
-		if (help_flag) {
-			std::cout << clipp::make_man_page(cli, "rivet-debug-analyze") << '\n';
-			return 1;
-		}
-
-		std::cout << clipp::usage_lines(cli, "rivet-debug-analyze") << '\n';
-		return 1;
+		return handle_exit("rivet-debug-analyze", cli, version_flag, help_flag);
 	}
 
 	analyze_target target_enum = analyze_target::none;
