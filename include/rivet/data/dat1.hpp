@@ -18,7 +18,7 @@ namespace rivet::data {
 	struct RIVET_SHARED dat1 {
 		constexpr const static uint32_t magic = 0x44415431;
 
-		struct data_header_t {
+		struct dat1_header {
 			uint32_t magic;
 			rivet_type_id schema;
 			rivet_size size;
@@ -26,22 +26,22 @@ namespace rivet::data {
 			uint16_t reserved;
 		};
 
-		static_assert(sizeof(data_header_t) == 16);
+		static_assert(sizeof(dat1_header) == 16);
 
-		struct data_entry_t {
+		struct dat1_entry {
 			rivet_type_id type_id;
 			rivet_off offset;
 			rivet_size size;
 		};
 
-		static_assert(sizeof(data_entry_t) == 12);
+		static_assert(sizeof(dat1_entry) == 12);
 
-		data_header_t header = {};
+		dat1_header header = {};
 		std::shared_ptr<rivet_data_array> buffer = {};
 		std::shared_ptr<rivet_data_array> resident_buffer = {};
 		std::shared_ptr<rivet_data_array> string_buffer = {};
 		std::unordered_set<rivet_type_id> section_ids = {};
-		ankerl::unordered_dense::map<rivet_type_id, std::pair<data_entry_t, std::shared_ptr<rivet_data_array>>> sections;
+		ankerl::unordered_dense::map<rivet_type_id, std::pair<dat1_entry, std::shared_ptr<rivet_data_array>>> sections;
 		std::string_view type_name = {};
 
 		explicit dat1(const std::shared_ptr<rivet_data_array> &stream, const std::shared_ptr<rivet_data_array> &resident_buffer = nullptr);

@@ -22,10 +22,10 @@ namespace rivet::data {
 			throw invalid_tag_error("dat1::dat1: invalid tag");
 		}
 
-		header = buffer->get<data_header_t>(0);
+		header = buffer->get<dat1_header>(0);
 
 		if (header.section_count > 0) {
-			auto section_headers = buffer->slice<data_entry_t>(sizeof(data_header_t), header.section_count);
+			auto section_headers = buffer->slice<dat1_entry>(sizeof(dat1_header), header.section_count);
 
 			auto resident_start = buffer->size();
 			auto resident_end = resident_start + (resident_buffer == nullptr ? 0 : resident_buffer->size());
@@ -46,7 +46,7 @@ namespace rivet::data {
 			}
 		}
 
-		type_name = buffer->to_cstring_view(sizeof(data_header_t) + sizeof(data_entry_t) * header.section_count);
+		type_name = buffer->to_cstring_view(sizeof(dat1_header) + sizeof(dat1_entry) * header.section_count);
 	}
 
 	auto

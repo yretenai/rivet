@@ -16,7 +16,7 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::structures {
-	enum class rivet_serialization_type : uint8_t {
+	enum class rivet_serialized_type : uint8_t {
 		uint8,
 		uint16,
 		uint32,
@@ -41,28 +41,27 @@ namespace rivet::structures {
 		max = 0x14
 	};
 
-	struct rivet_serialization_object_header {
+	struct rivet_serialized_header {
 		uint32_t zero;
-		uint16_t version_major;
-		uint16_t version_minor;
+		uint32_t magic;
 		rivet_size node_count;
 		rivet_size size;
 	};
 
-	static_assert(sizeof(rivet_serialization_object_header) == 16);
+	static_assert(sizeof(rivet_serialized_header) == 16);
 
-	struct rivet_serialization_field_header {
+	struct rivet_serialized_field {
 		rivet_type_id type_id;
 		uint32_t meta;
 
 		[[nodiscard]] auto
-		get_length() const noexcept -> uint32_t {
+		get_count() const noexcept -> uint32_t {
 			return (meta & 0x00FFFFFF) >> 4;
 		}
 
 		[[nodiscard]] auto
-		get_type() const noexcept -> rivet_serialization_type {
-			return static_cast<rivet_serialization_type>(meta >> 24);
+		get_type() const noexcept -> rivet_serialized_type {
+			return static_cast<rivet_serialized_type>(meta >> 24);
 		}
 
 		[[nodiscard]] auto
@@ -71,22 +70,75 @@ namespace rivet::structures {
 		}
 	};
 
-	static_assert(sizeof(rivet_serialization_field_header) == 8);
+	static_assert(sizeof(rivet_serialized_field) == 8);
 
-	struct rivet_serialization_string_header {
+	struct rivet_serialized_string {
 		rivet_size length;
 		rivet_hash hash;
 		rivet_checksum checksum;
 	};
 
-	static_assert(sizeof(rivet_serialization_string_header) == 16);
+	static_assert(sizeof(rivet_serialized_string) == 16);
 
+	// this is a circular dependency hell-hole, the order of these declarations is important.
 	struct rivet_serialized_object;
 
-	using rivet_serialized_value =
-		std::variant<uint64_t, int64_t, double, bool, std::nullptr_t, std::shared_ptr<std::string_view>, std::shared_ptr<rivet_serialized_object>, std::shared_ptr<rivet_data_array>>;
+	struct rivet_ddl_base {
+		RIVET_DEFINE_TYPE_ID(define, "Rivet DDL Base");
+		std::shared_ptr<rivet_data_array> host_buffer;
 
-	struct rivet_serialized_object {
-		ankerl::unordered_dense::map<std::shared_ptr<std::string_view>, std::vector<rivet_serialized_value>> values = {};
+		explicit rivet_ddl_base(const rivet_serialized_object &serialized);
 	};
+
+	using rivet_serialized_value = std::variant<uint64_t, int64_t, double, bool, std::monostate, std::string_view, std::shared_ptr<rivet_serialized_object>, std::shared_ptr<rivet_data_array>>;
+
+	// this is exported in src/rivet/ddl/serialization.cpp. UPDATE THIS COMMENT IF YOU MOVE IT
+	extern ankerl::unordered_dense::map<rivet_type_id, std::function<std::shared_ptr<rivet_ddl_base>(const rivet_serialized_object &)>> ddl_constructors;
+
+	struct RIVET_SHARED rivet_serialized_object {
+		ankerl::unordered_dense::map<uint32_t, std::vector<rivet_serialized_value>> values = {};
+		std::shared_ptr<rivet_data_array> host_buffer;
+
+		rivet_serialized_object() = default;
+
+		explicit rivet_serialized_object(const std::shared_ptr<rivet_data_array> &buffer): host_buffer(buffer) { }
+
+		[[nodiscard]] auto RIVET_INLINE
+		get_field(const rivet_type_id &field_id) const noexcept -> std::optional<std::vector<rivet::structures::rivet_serialized_value>> {
+			auto entry = values.find(field_id);
+			if (entry == values.end()) {
+				return std::nullopt;
+			}
+
+			return entry->second;
+		}
+
+		[[nodiscard]] auto RIVET_INLINE
+		get_field(const std::string_view &name) const noexcept -> std::optional<std::vector<rivet::structures::rivet_serialized_value>> {
+			return get_field(rivet::hash::hash_type_id(name));
+		}
+
+		[[nodiscard]] auto RIVET_INLINE
+		has_field(const rivet_type_id &field_id) const noexcept -> bool {
+			return values.find(field_id) != values.end();
+		}
+
+		[[nodiscard]] auto RIVET_INLINE
+		has_field(const std::string_view &name) const noexcept -> bool {
+			return has_field(rivet::hash::hash_type_id(name));
+		}
+
+		template <typename T>
+			requires(std::is_base_of_v<rivet::structures::rivet_ddl_base, T> && !std::is_same_v<rivet::structures::rivet_ddl_base, T>)
+		[[nodiscard]] auto
+		unwrap_into() const noexcept -> std::shared_ptr<rivet_ddl_base> {
+			if (ddl_constructors.contains(T::define_type_id)) {
+				return ddl_constructors[T::define_type_id](this);
+			}
+
+			return nullptr;
+		}
+	};
+
+	rivet_ddl_base::rivet_ddl_base(const rivet_serialized_object &serialized): host_buffer(serialized.host_buffer) { }
 } // namespace rivet::structures

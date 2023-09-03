@@ -14,7 +14,7 @@ rivetlib = library('rivet', [
 
 		'gfx/texture.cpp',
 
-		'serialization/serialization.cpp',
+		'ddl/serialization.cpp',
 	],
 	include_directories: rivetlib_includedir,
 	dependencies: rivet_deps,

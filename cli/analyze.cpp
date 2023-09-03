@@ -180,14 +180,14 @@ analyze_dat1_sections(const std::shared_ptr<rivet_game> &game) {
 	auto &dat1_info = dat1_info_map[asset->type];
 
 	auto asset_data = game->open_file(asset);
-	if (asset_data == nullptr || asset_data->size() < sizeof(rivet::data::dat1::data_header_t) || asset_data->size() < sizeof(rivet::structures::rivet_asset_header)) {
+	if (asset_data == nullptr || asset_data->size() < sizeof(rivet::data::dat1::dat1_header) || asset_data->size() < sizeof(rivet::structures::rivet_asset_header)) {
 		continue;
 	}
 	auto asset_bundle = rivet::data::asset_bundle(asset_data);
 
 	for (auto bundle_index = 0; bundle_index < asset_bundle.header.sizes.size(); ++bundle_index) {
 		auto bundle_data = asset_bundle.get_entry(bundle_index);
-		if (bundle_data == nullptr || bundle_data->size() < sizeof(rivet::data::dat1::data_header_t) || bundle_data->get<rivet_type_id>(0) != rivet::data::dat1::magic) {
+		if (bundle_data == nullptr || bundle_data->size() < sizeof(rivet::data::dat1::dat1_header) || bundle_data->get<rivet_type_id>(0) != rivet::data::dat1::magic) {
 			continue;
 		}
 
@@ -247,7 +247,7 @@ analyze_nested_dats(const std::shared_ptr<rivet_game> &game) {
 	auto &map = nested_values[asset->type];
 
 	auto asset_data = game->open_file(asset);
-	if (asset_data == nullptr || asset_data->size() < sizeof(rivet::data::dat1::data_header_t) || asset_data->size() < sizeof(rivet::structures::rivet_asset_header)) {
+	if (asset_data == nullptr || asset_data->size() < sizeof(rivet::data::dat1::dat1_header) || asset_data->size() < sizeof(rivet::structures::rivet_asset_header)) {
 		continue;
 	}
 	auto asset_bundle = rivet::data::asset_bundle(asset_data);
@@ -258,7 +258,7 @@ analyze_nested_dats(const std::shared_ptr<rivet_game> &game) {
 			continue;
 		}
 
-		if (bundle_data->size() < sizeof(rivet::data::dat1::data_header_t) || bundle_data->get<rivet_type_id>(0) != rivet::data::dat1::magic) {
+		if (bundle_data->size() < sizeof(rivet::data::dat1::dat1_header) || bundle_data->get<rivet_type_id>(0) != rivet::data::dat1::magic) {
 			auto found = std::search(bundle_data->begin(), bundle_data->end(), dat1_magic.begin(), dat1_magic.end());
 			if (found == bundle_data->end()) {
 				continue;

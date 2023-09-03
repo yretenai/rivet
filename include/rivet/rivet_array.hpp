@@ -11,7 +11,6 @@
 #include <iterator>
 #include <memory>
 #include <new>
-#include <string>
 #include <string_view>
 #include <utility>
 #include <vector>
@@ -235,7 +234,7 @@ namespace rivet {
 		template <typename U>
 		[[maybe_unused]] auto
 		slice(rivet_size64 index, rivet_size64 count) const -> std::shared_ptr<rivet_array<U, Alignment>> {
-			auto normalized_offset = normalize_value(index);
+			auto normalized_offset = normalize_value(count);
 			auto normalized_index = normalize_value(index);
 
 			if (normalized_index > byte_size()) {
@@ -273,51 +272,9 @@ namespace rivet {
 		}
 
 		template <typename U = T>
-			requires(sizeof(U) <= 2 && std::is_same_v<U, T> && std::is_integral_v<U>)
-		[[maybe_unused]] void
-		ensure_null_terminated() noexcept {
-			auto buffer = ptr;
-			if (buffer[byte_size() - 1] != 0) {
-				length += 1;
-				alloc(length);
-				std::copy_n(buffer.get(), byte_size() - sizeof(U), data());
-				data()[byte_size() - sizeof(U)] = static_cast<U>(0);
-			}
-		}
-
-		template <typename U = T>
-			requires(sizeof(U) == 1 && std::is_same_v<U, T> && std::is_integral_v<U>)
-		[[maybe_unused]] auto
-		to_string() noexcept -> std::string {
-			ensure_null_terminated<U>();
-			return std::string(reinterpret_cast<char *>(data()), byte_size());
-		}
-
-		template <typename U = T>
-			requires(sizeof(U) == 1 && std::is_same_v<U, T> && std::is_integral_v<U>)
-		[[maybe_unused]] auto
-		to_u8string() noexcept -> std::u8string {
-			ensure_null_terminated<U>();
-			return std::u8string(reinterpret_cast<char *>(data()), byte_size());
-		}
-
-		template <typename U = T>
-			requires(sizeof(U) <= 2 && std::is_integral_v<U>)
-		[[maybe_unused]] auto
-		to_wstring() noexcept -> std::wstring {
-			if (sizeof(U) == 1) {
-				return std::wstring(to_string());
-			}
-
-			ensure_null_terminated<U>();
-			return std::wstring(reinterpret_cast<wchar_t *>(data()), byte_size() >> 1);
-		}
-
-		template <typename U = T>
 			requires(sizeof(U) == 1 && std::is_integral_v<U>)
 		[[maybe_unused, nodiscard]] auto
 		to_string_view() const noexcept -> std::string_view {
-			ensure_null_terminated<U>();
 			return std::string_view(reinterpret_cast<char *>(data()), byte_size());
 		}
 
@@ -325,7 +282,6 @@ namespace rivet {
 			requires(sizeof(U) == 1 && std::is_integral_v<U>)
 		[[maybe_unused, nodiscard]] auto
 		to_u8string_view() const noexcept -> std::u8string_view {
-			ensure_null_terminated<U>();
 			return std::u8string_view(reinterpret_cast<char8_t *>(data()), byte_size());
 		}
 
@@ -337,39 +293,58 @@ namespace rivet {
 				return std::wstring_view(to_string_view());
 			}
 
-			ensure_null_terminated<U>();
 			return std::wstring_view(reinterpret_cast<wchar_t *>(data()), byte_size() >> 1);
 		}
 
 		template <typename U = T>
 			requires(sizeof(U) == 1 && std::is_integral_v<U>)
 		[[maybe_unused, nodiscard]] auto
-		to_string_stream() const noexcept -> std::stringstream {
-			ensure_null_terminated();
-			return std::stringstream(reinterpret_cast<char *>(data()), std::ios::in | std::ios::out);
+		to_string_view(rivet_index index, rivet_off count) const -> std::string_view {
+			auto normalized_offset = normalize_value(count);
+			auto normalized_index = normalize_value(index);
+
+			if (normalized_index > byte_size()) {
+				throw index_out_of_range("rivet_array::to_string_view: index out of range");
+			}
+
+			if (normalized_index + normalized_offset > byte_size()) {
+				throw index_out_of_range("rivet_array::to_string_view: index out of range");
+			}
+			return std::string_view(reinterpret_cast<char *>(data() + normalized_index), normalized_offset);
+		}
+
+		template <typename U = T>
+			requires(sizeof(U) == 1 && std::is_integral_v<U>)
+		[[maybe_unused, nodiscard]] auto
+		to_u8string_view(rivet_index index, rivet_off count) const -> std::u8string_view {
+			auto normalized_offset = normalize_value(count);
+			auto normalized_index = normalize_value(index);
+
+			if (normalized_index > byte_size()) {
+				throw index_out_of_range("rivet_array::to_u8string_view: index out of range");
+			}
+
+			if (normalized_index + normalized_offset > byte_size()) {
+				throw index_out_of_range("rivet_array::to_u8string_view: index out of range");
+			}
+			return std::u8string_view(reinterpret_cast<char *>(data() + normalized_index), normalized_offset);
 		}
 
 		template <typename U = T>
 			requires(sizeof(U) <= 2 && std::is_integral_v<U>)
 		[[maybe_unused, nodiscard]] auto
-		to_wstring_stream() const noexcept -> std::wstringstream {
-			ensure_null_terminated();
-			return std::wstringstream(reinterpret_cast<wchar_t *>(data()), std::ios::in | std::ios::out);
-		}
+		to_wstring_view(rivet_index index, rivet_off count) const -> std::wstring_view {
+			auto normalized_offset = normalize_value(count);
+			auto normalized_index = normalize_value(index);
 
-		[[maybe_unused, nodiscard]] auto
-		to_cstring(rivet_size64 index = 0) const noexcept -> std::string {
-			return std::string(reinterpret_cast<char *>(data()) + normalize_value(index));
-		}
+			if (normalized_index > byte_size()) {
+				throw index_out_of_range("rivet_array::to_wstring_view: index out of range");
+			}
 
-		[[maybe_unused, nodiscard]] auto
-		to_u8cstring(rivet_size64 index = 0) const noexcept -> std::u8string {
-			return std::u8string(reinterpret_cast<char8_t *>(data()) + normalize_value(index));
-		}
-
-		[[maybe_unused, nodiscard]] auto
-		to_wcstring(rivet_size64 index = 0) const noexcept -> std::wstring {
-			return std::wstring(reinterpret_cast<wchar_t *>(data()) + (normalize_value(index) >> 1));
+			if (normalized_index + normalized_offset > byte_size()) {
+				throw index_out_of_range("rivet_array::to_wstring_view: index out of range");
+			}
+			return std::wstring_view(reinterpret_cast<char *>(data() + normalized_index), normalized_offset);
 		}
 
 		[[maybe_unused, nodiscard]] auto
