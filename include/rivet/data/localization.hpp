@@ -25,7 +25,7 @@ namespace rivet::data {
 		RIVET_DEFINE_TYPE_ID(text_offsets, "Localization TextOffsets Built");
 		RIVET_DEFINE_TYPE_ID(indices, "Localization SortedIndexes Built");
 		RIVET_DEFINE_TYPE_ID(ids, "Localization SortedHashes Built");
-		RIVET_DEFINE_FAKE_TYPE_ID(hashes, "Localization Tag Hashes", 0x06a58050);		  // todo: find real type id
+		RIVET_DEFINE_FAKE_TYPE_ID(hashes, "Localization Tag Hashes", 0x06a58050); // todo: find real type id
 
 		explicit localization(const std::shared_ptr<rivet_data_array> &stream);
 		explicit localization(const rivet::data::asset_bundle &bundle, rivet_size index = 0);

@@ -327,11 +327,6 @@ analyze(int argc, char **argv) -> int {
 
 	auto game = std::make_shared<rivet_game>(game_path);
 
-	auto streamed_files_path = std::filesystem::path("streamed_files.txt");
-	if (std::filesystem::exists(streamed_files_path)) {
-		game->load_streamed_files_list(streamed_files_path);
-	}
-
 	switch (target_enum) {
 		case analyze_target::header: analyze_header(game); break;
 		case analyze_target::texture_header: analyze_texture_header(game); break;

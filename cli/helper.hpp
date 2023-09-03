@@ -9,14 +9,19 @@
 #include <vector>
 
 auto
-find_glob(const std::vector<std::string> &input_files, const std::string &ext) -> std::vector<std::filesystem::path> {
+find_glob(const std::vector<std::string> &input_files, const std::string &ext = {}, bool recursive = false) -> std::vector<std::filesystem::path> { // NOLINT(*-no-recursion)
 	std::vector<std::filesystem::path> files;
 	for (const auto &path : input_files) {
 		if (std::filesystem::is_directory(path)) {
-			for (const auto &entry : std::filesystem::recursive_directory_iterator(path)) {
-				if (entry.is_regular_file() && entry.path().extension() == ext) {
+			for (const auto &entry : std::filesystem::directory_iterator(path)) {
+				if (entry.is_regular_file() && (ext.empty() || entry.path().extension() == ext)) {
 					files.emplace_back(entry.path());
 				}
+			}
+
+			if (recursive) {
+				auto nested = find_glob({ path }, ext, recursive);
+				files.insert(files.end(), nested.begin(), nested.end());
 			}
 
 			continue;

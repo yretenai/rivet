@@ -149,6 +149,7 @@ extract(int argc, char **argv) -> int {
 		return 0;
 	}
 
+	// todo: this really should be in /share/ or something
 	auto streamed_files_path = std::filesystem::path("streamed_files.txt");
 	if (std::filesystem::exists(streamed_files_path)) {
 		game->load_streamed_files_list(streamed_files_path);

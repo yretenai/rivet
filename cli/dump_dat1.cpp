@@ -51,7 +51,23 @@ dump_dat1(int argc, char **argv) -> int {
 	auto has_output_dir = !output_dir.empty();
 	auto root_path = std::filesystem::path(output_dir);
 
-	for (const auto &input_file : input_files) {
+	const auto normalized_input_files = find_glob(input_files);
+
+	auto section_name_map = ankerl::unordered_dense::map<rivet_type_id, std::string>();
+
+	// todo: this really should be in /share/ or something
+	if (std::filesystem::exists("dat1_hashes_known.txt")) {
+		std::ifstream file("dat1_hashes_known.txt");
+		std::string line;
+		while (std::getline(file, line)) {
+			auto split = line.find_first_of(' ');
+			auto hash = std::stoul(line.substr(0, split), nullptr, 16);
+			auto name = line.substr(split + 1);
+			section_name_map.emplace(hash, name);
+		}
+	}
+
+	for (const auto &input_file : normalized_input_files) {
 		auto dat1_path = std::filesystem::path(input_file);
 		if (!std::filesystem::exists(dat1_path)) {
 			std::cout << dat1_path << " does not exist\n";
@@ -63,7 +79,7 @@ dump_dat1(int argc, char **argv) -> int {
 			output_path = root_path / dat1_path.filename();
 		} else {
 			output_path = dat1_path;
-			output_path.replace_extension(".sections");
+			output_path.replace_extension(output_path.extension().string() + ".sections");
 		}
 
 		if (!std::filesystem::exists(output_path)) {
@@ -93,9 +109,9 @@ dump_dat1(int argc, char **argv) -> int {
 			}
 		}
 
-		auto idx = 1;
+		auto idx = 0;
 		for (const auto &buffer : buffers) {
-			const std::string stream_name = "stream_" + std::to_string(idx++);
+			const std::string stream_name = "stream_" + std::to_string(++idx);
 
 			if (buffer == nullptr || buffer->empty()) {
 				continue;
@@ -113,14 +129,25 @@ dump_dat1(int argc, char **argv) -> int {
 			buffer_file.write(reinterpret_cast<const char *>(buffer->data()), static_cast<std::streamsize>(buffer->size()));
 
 			if (buffer->size() > 4 && buffer->get<uint32_t>(0) == dat1::magic) {
-				auto dat = std::make_shared<dat1>(buffer);
+				auto dat = std::make_shared<dat1>(buffer, idx < buffers.size() ? buffers[idx] : nullptr);
 				for (const auto &section : dat->sections) {
 					if (verbose) {
-						std::cout << "section " << std::setfill('0') << std::setw(8) << std::hex << section.first << '\n';
+						std::cout << "section " << std::setfill('0') << std::setw(8) << std::hex << section.first;
+
+						auto name = section_name_map.find(section.first);
+						if (name != section_name_map.end()) {
+							std::cout << " (" << name->second << ")";
+						}
+
+						std::cout << '\n';
 					}
 
 					auto filename_stream = std::stringstream();
-					filename_stream << std::setfill('0') << std::setw(8) << std::hex << section.first << ".bin";
+					filename_stream << std::setfill('0') << std::setw(8) << std::hex << section.first;
+					if (section_name_map.find(section.first) != section_name_map.end()) {
+						filename_stream << '_' << section_name_map[section.first];
+					}
+					filename_stream << ".bin";
 					auto section_path = output_path / stream_name / filename_stream.str();
 					std::filesystem::create_directories(section_path.parent_path());
 

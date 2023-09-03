@@ -10,7 +10,7 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::data {
-	dat1::dat1(const std::shared_ptr<rivet_data_array> &stream): buffer(stream) {
+	dat1::dat1(const std::shared_ptr<rivet_data_array> &stream, const std::shared_ptr<rivet_data_array> &resident_stream): buffer(stream), resident_buffer(resident_stream) {
 		auto tag = buffer->get<uint32_t>(0);
 		if (tag != magic) {
 			throw invalid_tag_error("dat1::dat1: invalid tag");
@@ -21,10 +21,22 @@ namespace rivet::data {
 		if (header.section_count > 0) {
 			auto section_headers = buffer->slice<data_entry_t>(sizeof(data_header_t), header.section_count);
 
+			auto resident_start = buffer->size();
+			auto resident_end = resident_start + (resident_buffer == nullptr ? 0 : resident_buffer->size());
 			for (auto section_header : *section_headers) {
 				section_ids.emplace(section_header.type_id);
-				auto slice = buffer->slice(section_header.offset, section_header.size);
-				sections.emplace(section_header.type_id, std::make_pair(section_header, slice));
+
+				if (section_header.offset > resident_end) {
+					throw invalid_operation("dat1::dat1: section offset is out of bounds");
+				}
+
+				if (section_header.offset < resident_start) {
+					auto slice = buffer->slice(section_header.offset, section_header.size);
+					sections.emplace(section_header.type_id, std::make_pair(section_header, slice));
+				} else {
+					auto slice = resident_buffer->slice(section_header.offset - resident_start, section_header.size);
+					sections.emplace(section_header.type_id, std::make_pair(section_header, slice));
+				}
 			}
 		}
 
