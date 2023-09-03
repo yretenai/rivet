@@ -7,7 +7,7 @@
 #include <array>
 #include <cstdint>
 
-namespace rivet::gfx::support {
+namespace rivet::support {
 	static constexpr uint32_t fourcc_dxt1 = '1TXD'; // DXGI_FORMAT_BC1_UNORM, DXT1
 	static constexpr uint32_t fourcc_dxt2 = '2TXD'; // DXGI_FORMAT_BC2_UNORM, DXT2
 	static constexpr uint32_t fourcc_dxt3 = '3TXD'; // DXGI_FORMAT_BC2_UNORM, DXT3
@@ -91,7 +91,7 @@ namespace rivet::gfx::support {
 		uint32_t surface_size = 0;
 		uint32_t depth = 0;
 		uint32_t mip_map_count = 1;
-		std::array<uint32_t, 11> reserved = {};
+		std::array<uint32_t, 11> reserved1 = {};
 
 		struct {
 			uint32_t size = 32;
@@ -284,4 +284,4 @@ namespace rivet::gfx::support {
 		uint32_t array_size = 1;
 		dx10_misc_flags2 misc_flags2 = dx10_misc_flags2::none;
 	};
-} // namespace rivet::gfx::support
+} // namespace rivet::support

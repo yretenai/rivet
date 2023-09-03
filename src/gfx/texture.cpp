@@ -21,13 +21,13 @@
 #include <rivet/data/asset_bundle.hpp>
 #include <rivet/data/dat1.hpp>
 #include <rivet/exceptions.hpp>
-#include <rivet/gfx/support/dxgi.hpp>
 #include <rivet/gfx/texture.hpp>
 #include <rivet/rivet_array.hpp>
 #include <rivet/rivet_keywords.hpp>
+#include <rivet/support/dxgi.hpp>
 
 using namespace rivet::data;
-using namespace rivet::gfx::support;
+using namespace rivet::support;
 
 namespace rivet::gfx {
 	texture::texture(const rivet::data::asset_bundle &bundle, rivet_size index) {

@@ -1,0 +1,8 @@
+[wrap-git]
+url = https://github.com/jessey-git/fx-gltf.git
+revision = 7766c237ea81c0bb3759e78e5c0f22854843eef8
+depth = 1
+patch_directory = fx-gltf
+
+[provide]
+fx-gltf = fx_gltf_dep
