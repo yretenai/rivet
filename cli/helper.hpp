@@ -29,19 +29,22 @@ handle_exit(const std::string &name, const clipp::group &cli, bool version_flag,
 }
 
 auto
-find_glob(const std::vector<std::string> &input_files, const std::string &ext = {}, bool recursive = false) -> std::vector<std::filesystem::path> { // NOLINT(*-no-recursion)
+find_glob(const std::vector<std::string> &input_files, const std::string &ext = {}, bool recursive = false) -> std::vector<std::filesystem::path> {
 	std::vector<std::filesystem::path> files;
 	for (const auto &path : input_files) {
 		if (std::filesystem::is_directory(path)) {
-			for (const auto &entry : std::filesystem::directory_iterator(path)) {
-				if (entry.is_regular_file() && (ext.empty() || entry.path().extension() == ext)) {
-					files.emplace_back(entry.path());
+			if(recursive) {
+				for (const auto &entry : std::filesystem::recursive_directory_iterator(path)) {
+					if (entry.is_regular_file() && (ext.empty() || entry.path().extension() == ext)) {
+						files.emplace_back(entry.path());
+					}
 				}
-			}
-
-			if (recursive) {
-				auto nested = find_glob({ path }, ext, recursive);
-				files.insert(files.end(), nested.begin(), nested.end());
+			} else {
+				for (const auto &entry : std::filesystem::directory_iterator(path)) {
+					if (entry.is_regular_file() && (ext.empty() || entry.path().extension() == ext)) {
+						files.emplace_back(entry.path());
+					}
+				}
 			}
 
 			continue;

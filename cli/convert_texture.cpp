@@ -28,17 +28,23 @@ convert_texture(int argc, char **argv) -> int {
 	std::vector<std::string> input_files;
 	bool version_flag = false;
 	bool help_flag = false;
+	bool recursive = false;
 	bool dds = false;
 	bool tif = false;
 	bool force_dds_on_hdr = false;
 	bool force_tif_on_hdr = false;
+	bool force_dds_on_multisurface = false;
+	bool use_tif_pages_on_multisurface = false;
 
 	auto cli = (clipp::joinable(clipp::option("-h", "--help").set(help_flag, true) % "show help",
 								clipp::option("-v", "--version").set(version_flag, true) % "show version",
-								clipp::option("-d", "--dds").set(dds, true) % "convert to DDS",
-								clipp::option("-t", "--tif").set(tif, true) % "convert to TIFF",
-								clipp::option("-f", "--force-dds-on-hdr").set(force_dds_on_hdr, true) % "force DDS on HDR textures",
-								clipp::option("-F", "--force-tif-on-hdr").set(force_tif_on_hdr, true) % "force TIFF on HDR textures"),
+								clipp::option("-r", "--recursive").set(recursive, true) % "find files in directories recursively",
+								clipp::option("-d", "--dds").set(dds, true) % "convert to dds",
+								clipp::option("-t", "--tif").set(tif, true) % "convert to tiff",
+								clipp::option("-f", "--force-dds-on-hdr").set(force_dds_on_hdr, true) % "force dds on HDR textures",
+								clipp::option("-F", "--force-tif-on-hdr").set(force_tif_on_hdr, true) % "force tiff on HDR textures",
+								clipp::option("-m", "--force-dds-on-multisurface").set(force_dds_on_multisurface, true) % "force dds on multisurface textures",
+								clipp::option("-M", "--use-tif-pages-on-multisurface").set(use_tif_pages_on_multisurface, true) % "use tiff pages on multisurface textures"),
 				clipp::option("-o", "--output-dir") & clipp::value("output_dir", output_dir) % "output directory",
 				clipp::values("input-files", input_files) % "input files");
 
@@ -46,7 +52,7 @@ convert_texture(int argc, char **argv) -> int {
 		return handle_exit("rivet-texture-convert", cli, version_flag, help_flag);
 	}
 
-	const auto normalized_input_files = find_glob(input_files, ".texture"); // todo: .zone has a texture too
+	const auto normalized_input_files = find_glob(input_files, ".texture", recursive); // todo: .zone has a texture too
 
 	auto has_output_dir = !output_dir.empty();
 	auto root_path = std::filesystem::path(output_dir);
@@ -68,6 +74,9 @@ convert_texture(int argc, char **argv) -> int {
 			output_path = std::filesystem::path(input_file);
 		}
 
+		auto surface_count = tex.get_header().surface_count;
+		auto has_multisurface = surface_count > 1;
+
 		auto local_dds = dds || !tex.is_convertable();
 		auto local_tif = tif;
 		if (!local_dds) {
@@ -77,12 +86,20 @@ convert_texture(int argc, char **argv) -> int {
 			} else if (force_tif_on_hdr) {
 				local_tif = is_hdr;
 			}
+
+			if(has_multisurface && force_dds_on_multisurface) {
+				local_dds = true;
+			} else if(has_multisurface && use_tif_pages_on_multisurface) {
+				local_tif = true;
+			}
 		}
 
 		const std::string ext = local_dds ? ".dds" : local_tif ? ".tiff" : ".png";
 		output_path.replace_extension(ext);
 
-		auto surface_count = tex.get_header().surface_count;
+		if(local_dds || (has_multisurface && use_tif_pages_on_multisurface)) {
+			surface_count = 1;
+		}
 
 		const auto output_name = output_path.filename().string();
 
@@ -92,7 +109,7 @@ convert_texture(int argc, char **argv) -> int {
 			}
 			std::cout << "writing " << output_path.string() << '\n';
 			if (local_tif) {
-				tex.to_tiff(surface_index, output_path);
+				tex.to_tiff(use_tif_pages_on_multisurface ? -1 : surface_index, output_path);
 			} else {
 				auto image_buffer = local_dds ? tex.to_dds() : tex.to_png(surface_index);
 
@@ -103,10 +120,6 @@ convert_texture(int argc, char **argv) -> int {
 				}
 
 				output_file.write(reinterpret_cast<const char *>(image_buffer->data()), static_cast<std::streamsize>(image_buffer->byte_size()));
-			}
-
-			if (dds) {
-				break;
 			}
 		}
 	}

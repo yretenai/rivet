@@ -363,7 +363,6 @@ namespace rivet::gfx {
 	texture::to_tiff(rivet_index surface_index, const std::filesystem::path &path) const {
 		auto has_stream = needs_stream() && stream_buffer != nullptr;
 		auto hdr = is_hdr();
-		auto array = decompress_compressonator(hdr ? CMP_FORMAT_RGBA_16F : CMP_FORMAT_RGBA_8888, surface_index);
 
 		auto *tiff = TIFFOpen(path.string().c_str(), "w");
 		if (tiff == nullptr) {
@@ -374,17 +373,25 @@ namespace rivet::gfx {
 		auto height = has_stream ? header.stream_height : header.resident_height;
 		const tmsize_t stride = hdr ? 32 : 4;
 
-		TIFFSetField(tiff, TIFFTAG_IMAGEWIDTH, width);											 // NOLINT(*-vararg)
-		TIFFSetField(tiff, TIFFTAG_IMAGELENGTH, height);										 // NOLINT(*-vararg)
-		TIFFSetField(tiff, TIFFTAG_ROWSPERSTRIP, height);										 // NOLINT(*-vararg)
-		TIFFSetField(tiff, TIFFTAG_SAMPLESPERPIXEL, 4);											 // NOLINT(*-vararg)
-		TIFFSetField(tiff, TIFFTAG_BITSPERSAMPLE, hdr ? 16 : 8);								 // NOLINT(*-vararg)
-		TIFFSetField(tiff, TIFFTAG_SAMPLEFORMAT, hdr ? SAMPLEFORMAT_IEEEFP : SAMPLEFORMAT_UINT); // NOLINT(*-vararg)
-		TIFFSetField(tiff, TIFFTAG_ORIENTATION, ORIENTATION_TOPLEFT);							 // NOLINT(*-vararg)
-		TIFFSetField(tiff, TIFFTAG_PLANARCONFIG, PLANARCONFIG_CONTIG);							 // NOLINT(*-vararg)
-		TIFFSetField(tiff, TIFFTAG_PHOTOMETRIC, hdr ? PHOTOMETRIC_LOGL : PHOTOMETRIC_RGB);		 // NOLINT(*-vararg)
-		TIFFSetField(tiff, TIFFTAG_COMPRESSION, COMPRESSION_NONE);								 // NOLINT(*-vararg)
-		TIFFWriteEncodedStrip(tiff, 0, array->data(), static_cast<tmsize_t>(width) * static_cast<tmsize_t>(height) * stride);
+		auto num_dirs = surface_index > -1 ? 1 : header.surface_count;
+		for (auto page = 0; page < num_dirs; ++page) {
+			TIFFSetField(tiff, TIFFTAG_IMAGEWIDTH, width);											 // NOLINT(*-vararg)
+			TIFFSetField(tiff, TIFFTAG_IMAGELENGTH, height);										 // NOLINT(*-vararg)
+			TIFFSetField(tiff, TIFFTAG_ROWSPERSTRIP, height);										 // NOLINT(*-vararg)
+			TIFFSetField(tiff, TIFFTAG_SAMPLESPERPIXEL, 4);											 // NOLINT(*-vararg)
+			TIFFSetField(tiff, TIFFTAG_BITSPERSAMPLE, hdr ? 16 : 8);								 // NOLINT(*-vararg)
+			TIFFSetField(tiff, TIFFTAG_SAMPLEFORMAT, hdr ? SAMPLEFORMAT_IEEEFP : SAMPLEFORMAT_UINT); // NOLINT(*-vararg)
+			TIFFSetField(tiff, TIFFTAG_ORIENTATION, ORIENTATION_TOPLEFT);							 // NOLINT(*-vararg)
+			TIFFSetField(tiff, TIFFTAG_PLANARCONFIG, PLANARCONFIG_CONTIG);							 // NOLINT(*-vararg)
+			TIFFSetField(tiff, TIFFTAG_PHOTOMETRIC, hdr ? PHOTOMETRIC_LOGL : PHOTOMETRIC_RGB);		 // NOLINT(*-vararg)
+			TIFFSetField(tiff, TIFFTAG_COMPRESSION, COMPRESSION_NONE);								 // NOLINT(*-vararg)
+
+			auto surface = surface_index > -1 ? surface_index : page;
+			auto array = decompress_compressonator(hdr ? CMP_FORMAT_RGBA_16F : CMP_FORMAT_RGBA_8888, surface);
+			TIFFWriteEncodedStrip(tiff, 0, array->data(), static_cast<tmsize_t>(width) * static_cast<tmsize_t>(height) * stride);
+			TIFFWriteDirectory(tiff);
+		}
+
 		TIFFClose(tiff);
 	}
 

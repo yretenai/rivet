@@ -36,10 +36,12 @@ dump_dat1(int argc, char **argv) -> int {
 	std::vector<std::string> input_files;
 	bool version_flag = false;
 	bool help_flag = false;
+	bool recursive = false;
 	bool verbose = false;
 
 	auto cli = (clipp::joinable(clipp::option("-h", "--help").set(help_flag, true) % "show help",
 								clipp::option("-v", "--version").set(version_flag, true) % "show version",
+								clipp::option("-r", "--recursive").set(recursive, true) % "find files in directories recursively",
 								clipp::option("-V", "--verbose").set(verbose, true) % "verbose logging"),
 				clipp::option("-o", "--output-dir") & clipp::value("output_dir", output_dir) % "output directory",
 				clipp::values("input-files", input_files) % "input files");
@@ -51,7 +53,7 @@ dump_dat1(int argc, char **argv) -> int {
 	auto has_output_dir = !output_dir.empty();
 	auto root_path = std::filesystem::path(output_dir);
 
-	const auto normalized_input_files = find_glob(input_files);
+	const auto normalized_input_files = find_glob(input_files, {}, recursive);
 
 	auto section_name_map = ankerl::unordered_dense::map<rivet_type_id, std::string>();
 

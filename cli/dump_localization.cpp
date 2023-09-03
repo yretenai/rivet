@@ -30,11 +30,13 @@ convert_texture(int argc, char **argv) -> int {
 	std::vector<std::string> input_files;
 	bool version_flag = false;
 	bool help_flag = false;
+	bool recursive = false;
 	bool tsv = false;
 	bool json = false;
 
 	auto cli = (clipp::joinable(clipp::option("-h", "--help").set(help_flag, true) % "show help",
 								clipp::option("-v", "--version").set(version_flag, true) % "show version",
+								clipp::option("-r", "--recursive").set(recursive, true) % "find files in directories recursively",
 								clipp::option("-t", "--tsv").set(tsv, true) % "convert to TSV",
 								clipp::option("-j", "--json").set(json, true) % "convert to JSON"),
 				clipp::values("input-files", input_files) % "input files");
@@ -43,7 +45,7 @@ convert_texture(int argc, char **argv) -> int {
 		return handle_exit("rivet-localization-dump", cli, version_flag, help_flag);
 	}
 
-	const auto normalized_input_files = find_glob(input_files, ".localization");
+	const auto normalized_input_files = find_glob(input_files, ".localization", recursive);
 
 	for (const auto &input_file : normalized_input_files) {
 		std::cout << "converting " << input_file << '\n';
