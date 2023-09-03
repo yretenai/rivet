@@ -13,6 +13,7 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::hash {
+	// clang-format off
 	constexpr const static std::array<uint64_t, 256> crc64_table = {
 			0x0000000000000000, 0xb32e4cbe03a75f6f, 0xf4843657a840a05b, 0x47aa7ae9abe7ff34, 0x7bd0c384ff8f5e33, 0xc8fe8f3afc28015c, 0x8f54f5d357cffe68, 0x3c7ab96d5468a107,
 			0xf7a18709ff1ebc66, 0x448fcbb7fcb9e309, 0x0325b15e575e1c3d, 0xb00bfde054f94352, 0x8c71448d0091e255, 0x3f5f08330336bd3a, 0x78f572daa8d1420e, 0xcbdb3e64ab761d61,
@@ -47,6 +48,8 @@ namespace rivet::hash {
 			0x2b769f17cf112238, 0x9858d3a9ccb67d57, 0xdff2a94067518263, 0x6cdce5fe64f6dd0c, 0x50a65c93309e7c0b, 0xe388102d33392364, 0xa4226ac498dedc50, 0x170c267a9b79833f,
 			0xdcd7181e300f9e5e, 0x6ff954a033a8c131, 0x28532e49984f3e05, 0x9b7d62f79be8616a, 0xa707db9acf80c06d, 0x14299724cc279f02, 0x5383edcd67c06036, 0xe0ada17364673f59
 	};
+
+	// clang-format on
 
 	constexpr static auto
 	hash_checksum(const std::string_view &value, rivet_asset_id hash = 0xc96c5795'd7870f42) noexcept -> rivet_asset_id {
