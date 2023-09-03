@@ -3,11 +3,11 @@
 // SPDX-License-Identifier: MPL-2.0
 
 #include <array>
+#include <cstdint>
 #include <filesystem>
 #include <iostream>
 #include <memory>
 #include <optional>
-#include <cstdint>
 #include <string>
 #include <string_view>
 #include <utility>
