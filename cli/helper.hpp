@@ -33,7 +33,7 @@ find_glob(const std::vector<std::string> &input_files, const std::string &ext = 
 	std::vector<std::filesystem::path> files;
 	for (const auto &path : input_files) {
 		if (std::filesystem::is_directory(path)) {
-			if(recursive) {
+			if (recursive) {
 				for (const auto &entry : std::filesystem::recursive_directory_iterator(path)) {
 					if (entry.is_regular_file() && (ext.empty() || entry.path().extension() == ext)) {
 						files.emplace_back(entry.path());

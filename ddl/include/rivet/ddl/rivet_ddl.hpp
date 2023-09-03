@@ -17,4 +17,4 @@ namespace rivet::ddl {
 
 	RIVET_DDL_SHARED auto
 	ddl_version_detailed() -> std::string_view;
-}
+} // namespace rivet::ddl

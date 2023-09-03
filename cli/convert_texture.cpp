@@ -87,9 +87,9 @@ convert_texture(int argc, char **argv) -> int {
 				local_tif = is_hdr;
 			}
 
-			if(has_multisurface && force_dds_on_multisurface) {
+			if (has_multisurface && force_dds_on_multisurface) {
 				local_dds = true;
-			} else if(has_multisurface && use_tif_pages_on_multisurface) {
+			} else if (has_multisurface && use_tif_pages_on_multisurface) {
 				local_tif = true;
 			}
 		}
@@ -97,7 +97,7 @@ convert_texture(int argc, char **argv) -> int {
 		const std::string ext = local_dds ? ".dds" : local_tif ? ".tiff" : ".png";
 		output_path.replace_extension(ext);
 
-		if(local_dds || (has_multisurface && use_tif_pages_on_multisurface)) {
+		if (local_dds || (has_multisurface && use_tif_pages_on_multisurface)) {
 			surface_count = 1;
 		}
 
