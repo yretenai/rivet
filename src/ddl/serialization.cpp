@@ -13,7 +13,8 @@ using namespace rivet::structures;
 namespace rivet {
 	namespace structures {
 		// UPDATE THE COMMENT IN rivet_serialization.hpp IF YOU CHANGE THE LOCATION OF THIS
-		ankerl::unordered_dense::map<rivet_type_id, std::function<std::shared_ptr<rivet::structures::rivet_ddl_base>(const rivet::structures::rivet_serialized_object &)>> ddl_constructors;
+		ankerl::unordered_dense::map<rivet_type_id, std::function<std::shared_ptr<rivet::structures::rivet_ddl_base>(const std::shared_ptr<const rivet::structures::rivet_serialized_object> &)>>
+			ddl_constructors;
 	} // namespace structures
 
 	namespace ddl {

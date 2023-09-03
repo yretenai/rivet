@@ -87,15 +87,15 @@ namespace rivet::structures {
 		RIVET_DEFINE_TYPE_ID(define, "Rivet DDL Base");
 		std::shared_ptr<rivet_data_array> host_buffer;
 
-		explicit rivet_ddl_base(const rivet_serialized_object &serialized);
+		explicit rivet_ddl_base(const std::shared_ptr<const rivet_serialized_object> &serialized);
 	};
 
 	using rivet_serialized_value = std::variant<uint64_t, int64_t, double, bool, std::monostate, std::string_view, std::shared_ptr<rivet_serialized_object>, std::shared_ptr<rivet_data_array>>;
 
 	// this is exported in src/rivet/ddl/serialization.cpp. UPDATE THIS COMMENT IF YOU MOVE IT
-	extern ankerl::unordered_dense::map<rivet_type_id, std::function<std::shared_ptr<rivet_ddl_base>(const rivet_serialized_object &)>> ddl_constructors;
+	extern ankerl::unordered_dense::map<rivet_type_id, std::function<std::shared_ptr<rivet_ddl_base>(const std::shared_ptr<const rivet_serialized_object> &)>> ddl_constructors;
 
-	struct RIVET_SHARED rivet_serialized_object {
+	struct RIVET_SHARED rivet_serialized_object : std::enable_shared_from_this<rivet_serialized_object> {
 		ankerl::unordered_dense::map<uint32_t, std::vector<rivet_serialized_value>> values = {};
 		std::shared_ptr<rivet_data_array> host_buffer;
 
@@ -132,13 +132,18 @@ namespace rivet::structures {
 			requires(std::is_base_of_v<rivet::structures::rivet_ddl_base, T> && !std::is_same_v<rivet::structures::rivet_ddl_base, T>)
 		[[nodiscard]] auto
 		unwrap_into() const noexcept -> std::shared_ptr<rivet_ddl_base> {
-			if (ddl_constructors.contains(T::define_type_id)) {
-				return ddl_constructors[T::define_type_id](this);
+			return std::make_shared<T>(shared_from_this());
+		}
+
+		[[nodiscard]] auto
+		unwrap_into(rivet_type_id type_id) const noexcept -> std::shared_ptr<rivet_ddl_base> {
+			if (ddl_constructors.contains(type_id)) {
+				return ddl_constructors[type_id](shared_from_this());
 			}
 
 			return nullptr;
 		}
 	};
 
-	rivet_ddl_base::rivet_ddl_base(const rivet_serialized_object &serialized): host_buffer(serialized.host_buffer) { }
+	rivet_ddl_base::rivet_ddl_base(const std::shared_ptr<const rivet_serialized_object> &serialized): host_buffer(serialized->host_buffer) { }
 } // namespace rivet::structures
