@@ -16,6 +16,7 @@ if not compiler.check_header('ankerl/unordered_dense.h')
     deps += [dependency('unordered_dense', version: '>=4.1.1')]
 endif
 
+# cross dependencies between cli and rivet
 nlohmann_json_dep = dependency('', required: false)
 if not compiler.check_header('nlohmann/json.hpp')
     nlohmann_json_dep = dependency('nlohmann_json', version: '>=3.11.2')
@@ -28,7 +29,7 @@ if not compiler.check_header('clipp.h')
 endif
 cli_deps += [nlohmann_json_dep]
 
-# private dependencies
+# rivet dependencies
 rivet_deps = [] + deps
 rivet_deps += [nlohmann_json_dep]
 if not compiler.check_header('fx/gltf.h')
