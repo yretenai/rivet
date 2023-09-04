@@ -45,6 +45,7 @@ namespace rivet::ddl {
 
 #ifndef _NDEBUG
 			[[maybe_unused]] auto debug_offset = buffer->offset + cursor;
+			[[maybe_unused]] auto debug_type = field.get_type();
 #endif
 
 			switch (field.get_type()) {
@@ -144,6 +145,9 @@ namespace rivet::ddl {
 					}
 					break;
 				case rivet_serialized_type::unknown19:
+					if (count == 0) {
+						continue;
+					}
 				default: throw rivet::not_implemented_error("serialized::serialized: unknown type");
 			}
 		}
