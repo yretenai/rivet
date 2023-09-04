@@ -15,8 +15,7 @@ using namespace rivet;
 using namespace rivet::structures;
 
 namespace rivet::structures {
-	ankerl::unordered_dense::map<rivet_type_id, std::function<std::shared_ptr<rivet::structures::rivet_ddl_base>(const std::shared_ptr<const rivet::structures::rivet_serialized_object> &)>>
-		ddl_constructors;
+	ankerl::unordered_dense::map<rivet_type_id, rivet_ddl_ctor> ddl_constructors;
 
 	rivet_serialized_object::rivet_serialized_object(const std::shared_ptr<rivet_data_array> &buffer): host_buffer(buffer) { }
 
@@ -47,7 +46,7 @@ namespace rivet::structures {
 
 	[[nodiscard]] auto
 	rivet_serialized_object::unwrap_into(rivet_type_id type_id) const noexcept -> std::shared_ptr<rivet_ddl_base> {
-		if (ddl_constructors.contains(type_id)) {
+		if (ddl_constructors.contains(type_id)) { // no polymorphic handling because ddl constructors will only have root types.
 			return ddl_constructors[type_id](shared_from_this());
 		}
 

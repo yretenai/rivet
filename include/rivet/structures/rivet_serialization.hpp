@@ -8,6 +8,7 @@
 #include <iosfwd>
 #include <memory>
 #include <string_view>
+#include <unordered_set>
 #include <variant>
 #include <vector>
 
@@ -93,11 +94,16 @@ namespace rivet::structures {
 
 		explicit rivet_ddl_base() = default;
 		explicit rivet_ddl_base(const std::shared_ptr<const rivet_serialized_object> &serialized);
+
+		virtual auto
+		from_substruct(const std::string_view &type, const std::shared_ptr<const rivet_serialized_object> &serialized) -> std::shared_ptr<rivet_ddl_base> = 0;
 	};
 
 	using rivet_serialized_value = std::variant<uint64_t, int64_t, double, bool, std::nullptr_t, std::string_view, std::shared_ptr<rivet_serialized_object>>;
 
-	extern ankerl::unordered_dense::map<rivet_type_id, std::function<std::shared_ptr<rivet_ddl_base>(const std::shared_ptr<const rivet_serialized_object> &)>> ddl_constructors;
+	using rivet_ddl_ctor = std::function<std::shared_ptr<rivet::structures::rivet_ddl_base>(const std::shared_ptr<const rivet::structures::rivet_serialized_object> &)>;
+
+	extern ankerl::unordered_dense::map<rivet_type_id, rivet_ddl_ctor> ddl_constructors;
 
 	struct RIVET_SHARED rivet_serialized_object : std::enable_shared_from_this<rivet_serialized_object> {
 		ankerl::unordered_dense::map<uint32_t, std::vector<rivet_serialized_value>> values = {};
@@ -169,7 +175,16 @@ namespace rivet::structures {
 		template <typename T>
 			requires(std::is_base_of_v<rivet::structures::rivet_ddl_base, T> && !std::is_same_v<rivet::structures::rivet_ddl_base, T>)
 		[[nodiscard]] auto
-		unwrap_into() const noexcept -> std::shared_ptr<rivet_ddl_base> {
+		unwrap_into(rivet_type_id type_id) const noexcept -> std::shared_ptr<rivet_ddl_base> {
+			if (values.size() == 2 && ddl_constructors.contains(type_id)) {
+				auto obj = get_field<std::shared_ptr<rivet_serialized_object>>(0x6c33fda5); // "Obj"
+				auto type = get_field<std::string_view>(0xbc4e9799);						// "Type"
+				auto instance = T::from_substruct(type.value(), obj.value());
+				if (instance != nullptr) {
+					return instance;
+				}
+			}
+
 			return std::make_shared<T>(shared_from_this());
 		}
 
