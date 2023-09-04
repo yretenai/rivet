@@ -23,12 +23,16 @@ namespace rivet::data {
 
 	// this is really more of a proof-of-concept on the serialization functions
 	struct RIVET_SHARED config_type : rivet::structures::rivet_ddl_base {
+		RIVET_DEFINE_TYPE_ID(type_name, "Config Type");
 		RIVET_DEFINE_TYPE_ID(type, "Type");
 
 		explicit config_type() = default;
 		explicit config_type(const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);
 
 		std::string_view type;
+
+		auto
+		from_substruct(rivet_type_id type_id, const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized) -> std::shared_ptr<rivet_ddl_base> override;
 	};
 
 	struct RIVET_SHARED config {

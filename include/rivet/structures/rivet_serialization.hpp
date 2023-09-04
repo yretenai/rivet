@@ -94,9 +94,16 @@ namespace rivet::structures {
 
 		explicit rivet_ddl_base() = default;
 		explicit rivet_ddl_base(const std::shared_ptr<const rivet_serialized_object> &serialized);
+		virtual ~rivet_ddl_base() = default;
+		rivet_ddl_base(const rivet_ddl_base &other) = default;
+		rivet_ddl_base(rivet_ddl_base &&other) noexcept = default;
+		auto
+		operator=(const rivet_ddl_base &other) -> rivet_ddl_base & = default;
+		auto
+		operator=(rivet_ddl_base &&other) noexcept -> rivet_ddl_base & = default;
 
 		virtual auto
-		from_substruct(const std::string_view &type, const std::shared_ptr<const rivet_serialized_object> &serialized) -> std::shared_ptr<rivet_ddl_base> = 0;
+		from_substruct(rivet_type_id type_id, const std::shared_ptr<const rivet_serialized_object> &serialized) -> std::shared_ptr<rivet_ddl_base> = 0;
 	};
 
 	using rivet_serialized_value = std::variant<uint64_t, int64_t, double, bool, std::nullptr_t, std::string_view, std::shared_ptr<rivet_serialized_object>>;
@@ -179,7 +186,8 @@ namespace rivet::structures {
 			if (values.size() == 2 && ddl_constructors.contains(type_id)) {
 				auto obj = get_field<std::shared_ptr<rivet_serialized_object>>(0x6c33fda5); // "Obj"
 				auto type = get_field<std::string_view>(0xbc4e9799);						// "Type"
-				auto instance = T::from_substruct(type.value(), obj.value());
+				auto type_hash = rivet::hash::hash_type_id(type.value());
+				auto instance = T::from_substruct(type_hash, obj.value());
 				if (instance != nullptr) {
 					return instance;
 				}
