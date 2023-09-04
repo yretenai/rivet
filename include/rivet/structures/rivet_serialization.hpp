@@ -36,12 +36,12 @@ namespace rivet::structures {
 		enum_value,
 		bitfield,
 		object,
-		none,
+		unknown14,
 		boolean,
 		file,
 		tuid,
 		json,
-		unknown19,
+		none,
 		instance_id = 0x14,
 		max = 0x14
 	};

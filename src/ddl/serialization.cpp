@@ -48,6 +48,7 @@ namespace rivet::ddl {
 			[[maybe_unused]] auto debug_type = field.get_type();
 #endif
 
+			entry.reserve(count);
 			switch (field.get_type()) {
 				case rivet_serialized_type::boolean:
 					for (auto index = 0u; index < count; index++) {
@@ -143,11 +144,10 @@ namespace rivet::ddl {
 					for (auto index = 0u; index < count; index++) {
 						entry.emplace_back(std::nullptr_t());
 					}
+
+					cursor += count;
 					break;
-				case rivet_serialized_type::unknown19:
-					if (count == 0) {
-						continue;
-					}
+				case rivet_serialized_type::unknown14:
 				default: throw rivet::not_implemented_error("serialized::serialized: unknown type");
 			}
 		}
