@@ -22,6 +22,15 @@ namespace rivet::data {
 		return nullptr;
 	}
 
+	auto
+	config_type::from_substruct(rivet_type_id type_id) -> std::shared_ptr<rivet_ddl_base> {
+		if (type_id == type_name_type_id) {
+			return std::make_shared<config_type>();
+		}
+
+		return nullptr;
+	}
+
 	config::config(const std::shared_ptr<rivet_data_array> &stream): data(stream) {
 		data = rivet::data::dat1(stream);
 

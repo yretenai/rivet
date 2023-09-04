@@ -31,8 +31,11 @@ namespace rivet::data {
 
 		std::string_view type;
 
-		auto
-		from_substruct(rivet_type_id type_id, const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized) -> std::shared_ptr<rivet_ddl_base> override;
+		static auto
+		from_substruct(rivet_type_id type_id, const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized) -> std::shared_ptr<rivet_ddl_base>;
+
+		static auto
+		from_substruct(rivet_type_id type_id) -> std::shared_ptr<rivet_ddl_base>;
 	};
 
 	struct RIVET_SHARED config {
