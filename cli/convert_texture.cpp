@@ -52,7 +52,7 @@ convert_texture(int argc, char **argv) -> int {
 		return handle_exit("rivet-texture-convert", cli, version_flag, help_flag);
 	}
 
-	const auto normalized_input_files = find_glob(input_files, ".texture", recursive); // todo: .zone has a texture too
+	const auto normalized_input_files = find_glob(input_files, ".texture", recursive); // todo: .zone, .atmosphere has a texture too
 
 	auto has_output_dir = !output_dir.empty();
 	auto root_path = std::filesystem::path(output_dir);

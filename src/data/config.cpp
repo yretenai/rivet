@@ -10,7 +10,7 @@
 
 namespace rivet::data {
 	config_type::config_type(const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet_ddl_base(serialized) {
-		type = serialized->get_field<std::string_view>(type_type_id).value_or("");
+		type = serialized->get_field<std::string_view>(type_type_id).value_or(type);
 	}
 
 	config::config(const std::shared_ptr<rivet_data_array> &stream): data(stream) {

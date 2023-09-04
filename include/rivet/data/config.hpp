@@ -21,6 +21,7 @@
 namespace rivet::data {
 	struct asset_bundle;
 
+	// this is really more of a proof-of-concept on the serialization functions
 	struct RIVET_SHARED config_type : rivet::structures::rivet_ddl_base {
 		RIVET_DEFINE_TYPE_ID(type, "Type");
 
