@@ -89,7 +89,6 @@ namespace rivet::structures {
 	struct rivet_serialized_object;
 
 	struct RIVET_SHARED rivet_ddl_base {
-		RIVET_DEFINE_TYPE_ID(define, "Rivet DDL Base");
 		std::shared_ptr<rivet_data_array> host_buffer;
 
 		explicit rivet_ddl_base() = default;
