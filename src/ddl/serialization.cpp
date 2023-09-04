@@ -43,7 +43,9 @@ namespace rivet::ddl {
 
 			auto &entry = values[field.type_id];
 
-			auto absolute_offset = buffer->offset + cursor;
+#ifndef _NDEBUG
+			[[maybe_unused]] auto debug_offset = buffer->offset + cursor;
+#endif
 
 			switch (field.get_type()) {
 				case rivet_serialized_type::boolean:
@@ -70,9 +72,9 @@ namespace rivet::ddl {
 						cursor += sizeof(uint32_t);
 					}
 					break;
-				case rivet_serialized_type::uint64:
 				case rivet_serialized_type::tuid:
-				case rivet_serialized_type::instance_id:
+				case rivet_serialized_type::instance_id: RIVET_DEBUG_BREAK; // fallthrough to uint64?
+				case rivet_serialized_type::uint64:
 					for (auto index = 0u; index < count; index++) {
 						entry.emplace_back(buffer->get<uint64_t>(cursor));
 						cursor += sizeof(uint64_t);
