@@ -21,14 +21,9 @@ namespace rivet::ddl {
 		constexpr const static rivet_type_id magic_a = 0;
 		constexpr const static rivet_type_id magic_b = 0x03150044;
 
-		rivet::structures::rivet_serialized_header header = {};
 		std::shared_ptr<rivet_data_array> buffer;
 		std::shared_ptr<rivet_array<rivet::structures::rivet_serialized_field>> field_info;
-		std::vector<std::string_view> field_names;
 
-		explicit serialized(const std::shared_ptr<rivet_data_array> &buffer);
-
-		[[nodiscard]] auto RIVET_INLINE
-		to_json() const noexcept -> std::string;
+		explicit serialized(const std::shared_ptr<rivet_data_array> &buffer, const std::shared_ptr<rivet_data_array> &dat1);
 	};
 } // namespace rivet::ddl

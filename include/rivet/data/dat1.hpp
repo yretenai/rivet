@@ -39,7 +39,6 @@ namespace rivet::data {
 		dat1_header header = {};
 		std::shared_ptr<rivet_data_array> buffer = {};
 		std::shared_ptr<rivet_data_array> resident_buffer = {};
-		std::shared_ptr<rivet_data_array> string_buffer = {};
 		std::unordered_set<rivet_type_id> section_ids = {};
 		ankerl::unordered_dense::map<rivet_type_id, std::pair<dat1_entry, std::shared_ptr<rivet_data_array>>> sections;
 		std::string_view type_name = {};

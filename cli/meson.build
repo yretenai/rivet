@@ -10,6 +10,10 @@ executable('rivet-localization-dump', ['dump_localization.cpp'],
 	dependencies: cli_deps + libdeps,
 	install: true)
 
+executable('rivet-config-dump', ['dump_config.cpp'],
+	dependencies: cli_deps + libdeps,
+	install: true)
+
 executable('rivet-texture-convert', ['convert_texture.cpp'],
 	dependencies: cli_deps + libdeps,
 	install: true)

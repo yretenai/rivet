@@ -215,7 +215,7 @@ namespace rivet {
 
 		[[maybe_unused, nodiscard]] auto
 		slice(rivet_size64 index, rivet_size64 count) const -> std::shared_ptr<rivet_array<T, Alignment>> {
-			if (index >= size()) {
+			if (index > size()) {
 				throw index_out_of_range("rivet_array::slice: index out of range");
 			}
 
@@ -245,7 +245,7 @@ namespace rivet {
 				throw index_out_of_range("rivet_array::slice: index out of range");
 			}
 
-			return std::make_shared<rivet_array<U, Alignment>>(ptr, count, offset + normalized_offset);
+			return std::make_shared<rivet_array<U, Alignment>>(ptr, count, offset + normalized_index);
 		}
 
 		template <typename U>

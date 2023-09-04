@@ -26,7 +26,7 @@ using namespace rivet;
 using namespace rivet::data;
 
 auto
-convert_texture(int argc, char **argv) -> int {
+dump_localization(int argc, char **argv) -> int {
 	std::vector<std::string> input_files;
 	bool version_flag = false;
 	bool help_flag = false;
@@ -104,4 +104,4 @@ convert_texture(int argc, char **argv) -> int {
 	return 0;
 }
 
-MAIN_WRAPPER(convert_texture)
+MAIN_WRAPPER(dump_localization)

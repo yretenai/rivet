@@ -1,20 +1,19 @@
 rivetlib_includedir = include_directories('../include/')
 
 rivetlib = library('rivet', [
-		'rivet.cpp',
-		'rivet_game.cpp',
-		'rivet_string_pool.cpp',
-
 		'data/asset_bundle.cpp',
+		'data/config.cpp',
 		'data/dag.cpp',
 		'data/dat1.cpp',
 		'data/dsar.cpp',
 		'data/localization.cpp',
 		'data/toc.cpp',
-
-		'gfx/texture.cpp',
-
 		'ddl/serialization.cpp',
+		'gfx/texture.cpp',
+		'structures/rivet_serialization.cpp',
+		'rivet.cpp',
+		'rivet_game.cpp',
+		'rivet_string_pool.cpp',
 	],
 	include_directories: rivetlib_includedir,
 	dependencies: rivet_deps,
