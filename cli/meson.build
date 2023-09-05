@@ -21,3 +21,8 @@ executable('rivet-texture-convert', ['convert_texture.cpp'],
 executable('rivet-debug-analyze', ['analyze.cpp'],
 	dependencies: cli_deps + libdeps,
 	install: true)
+
+executable('rivet-codegen-ddl', ['codegen_ddl.cpp'],
+	dependencies: cli_deps,
+	include_directories: ['../include'],
+	install: true)

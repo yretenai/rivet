@@ -17,6 +17,11 @@ using namespace rivet::structures;
 namespace rivet::structures {
 	ankerl::unordered_dense::map<rivet_type_id, rivet_ddl_ctor> ddl_constructors;
 
+	auto
+	get_ddl_constructors() -> ankerl::unordered_dense::map<rivet_type_id, rivet_ddl_ctor> & {
+		return ddl_constructors;
+	}
+
 	rivet_serialized_object::rivet_serialized_object(const std::shared_ptr<rivet_data_array> &buffer): host_buffer(buffer) { }
 
 	[[nodiscard]] auto RIVET_INLINE

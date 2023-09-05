@@ -7,13 +7,16 @@
 #if defined _MSC_VER || defined __CYGWIN__
 	#ifdef RIVET_STATIC
 		#define RIVET_SHARED
-		#define RIVET_DDL_SHARED
 	#else
 		#ifdef RIVET_EXPORTING
 			#define RIVET_SHARED __declspec(dllexport)
 		#else
 			#define RIVET_SHARED __declspec(dllimport)
 		#endif
+	#endif
+	#ifdef RIVET_DDL_STATIC
+		#define RIVET_DDL_SHARED
+	#else
 		#ifdef RIVET_DDL_EXPORTING
 			#define RIVET_DDL_SHARED __declspec(dllexport)
 		#else

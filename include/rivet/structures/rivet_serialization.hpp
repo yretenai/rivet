@@ -80,6 +80,12 @@ namespace rivet::structures {
 		auto
 		operator=(rivet_ddl_base &&other) noexcept -> rivet_ddl_base & = default;
 
+		[[nodiscard]] virtual auto
+		get_type_id() const noexcept -> rivet_type_id = 0;
+
+		[[nodiscard]] virtual auto
+		get_type_name() const noexcept -> std::string_view = 0;
+
 		static auto
 		from_substruct([[maybe_unused]] rivet_type_id type_id) -> std::shared_ptr<rivet_ddl_base> {
 			return nullptr;
@@ -95,13 +101,14 @@ namespace rivet::structures {
 
 	using rivet_ddl_ctor = std::function<std::shared_ptr<rivet::structures::rivet_ddl_base>(const std::shared_ptr<const rivet::structures::rivet_serialized_object> &)>;
 
-	extern ankerl::unordered_dense::map<rivet_type_id, rivet_ddl_ctor> ddl_constructors;
+	auto
+	get_ddl_constructors() -> ankerl::unordered_dense::map<rivet_type_id, rivet_ddl_ctor> &;
 
 	template <typename T>
 		requires(std::is_base_of_v<rivet_ddl_base, T> && !std::is_same_v<rivet_ddl_base, T>)
 	auto
 	register_ddl_type() -> void {
-		ddl_constructors.emplace(T::type_id, [](const std::shared_ptr<const rivet_serialized_object> &serialized) -> std::shared_ptr<rivet_ddl_base> { return std::make_shared<T>(serialized); });
+		get_ddl_constructors().emplace(T::type_id, [](const std::shared_ptr<const rivet_serialized_object> &serialized) -> std::shared_ptr<rivet_ddl_base> { return std::make_shared<T>(serialized); });
 	}
 
 	struct RIVET_SHARED rivet_serialized_object : std::enable_shared_from_this<rivet_serialized_object> {
@@ -295,7 +302,7 @@ namespace rivet::structures {
 			requires(std::is_base_of_v<rivet::structures::rivet_ddl_base, T> && !std::is_same_v<rivet::structures::rivet_ddl_base, T>)
 		[[nodiscard]] auto
 		unwrap_this_into(rivet_type_id type_id) const noexcept -> std::shared_ptr<T> {
-			if (values.size() == 2 && ddl_constructors.contains(type_id)) {
+			if (values.size() == 2 && get_ddl_constructors().contains(type_id)) {
 				auto has_obj = has_field(0x6c33fda5);										// "Obj"
 				auto obj = get_field<std::shared_ptr<rivet_serialized_object>>(0x6c33fda5); // "Obj"
 				auto type = get_field<std::string_view>(0xbc4e9799);						// "Type"

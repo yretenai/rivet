@@ -55,7 +55,9 @@ cpp_args = compiler.get_supported_arguments(
     '/wd4251', # do i need to define my own template exports? kinda cringe! do better msvc
     '/wd4913',
     '/utf-8',
+    '/bigobj',
     '/EHsc',
+    '-fPIC',
     '-finput-charset=utf-8',
     '-fexec-charset=utf-8',
     '-faddrsig',
@@ -106,6 +108,7 @@ endif
 add_project_arguments(cpp_args, language: 'cpp')
 
 subdir('src')
+subdir('ddl')
 
 if not get_option('lib_only')
     subdir('cli')
