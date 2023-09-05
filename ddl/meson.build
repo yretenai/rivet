@@ -2,7 +2,7 @@ rivetddllib_includedir = include_directories('include/')
 
 ddl_codegen_files = []
 
-subdir('src/generated')
+subdir('gen')
 
 rivetddllib = library('rivet-ddl', ddl_codegen_files + [
         'src/rivet_ddl.cpp',

@@ -13,6 +13,8 @@
 #include <ankerl/unordered_dense.h>
 #include <clipp.h>
 
+#include <rivet/hash/type_id.hpp>
+
 #include "codegen/ddl_dump_schema.hpp"
 #include "codegen/template.hpp"
 
@@ -79,7 +81,7 @@ gather_base_defined_types(const dump_root &root, uint32_t type_id, std::unordere
 
 auto
 generate_struct(const dump_root &root, const std::shared_ptr<struct_info> &struct_, const std::filesystem::path &include_path, const std::filesystem::path &source_path,
-				const std::unordered_set<uint32_t> &ignore) -> std::tuple<std::string, std::unordered_set<uint32_t>> {
+				const std::unordered_set<uint32_t> &ignore, rivet::rivet_size &index) -> std::tuple<std::string, std::unordered_set<uint32_t>> {
 	auto struct_name = struct_->name.get_name_safe();
 	auto struct_id = struct_->name.get_id_hex();
 	std::cout << "generating struct " << struct_name << '\n';
@@ -125,9 +127,13 @@ generate_struct(const dump_root &root, const std::shared_ptr<struct_info> &struc
 	auto base_fields = gather_base_defined_types(root, struct_->base_name.id, visited);
 
 	for (const auto &field : struct_->fields) {
+		if (base_fields.find(field.type_name.id) != base_fields.end()) {
+			continue;
+		}
+
 		auto type_id = std::string(template_struct_type_id);
 		auto field_name = field.name.get_name_safe();
-		auto field_id = field.name.get_id_hex();
+		auto field_id = std::format("{:x}", rivet::hash::hash_type_id(field_name));
 
 		if (field_name == struct_name) {
 			field_name += "_";
@@ -143,7 +149,7 @@ generate_struct(const dump_root &root, const std::shared_ptr<struct_info> &struc
 		auto is_array = field.array_type != serialized_array_type::none;
 
 		auto type = field.type;
-		if(ignore.find(field.type_name.id) != ignore.end()) {
+		if (ignore.find(field.type_name.id) != ignore.end()) {
 			type = rivet::structures::rivet_serialized_type::json;
 		}
 
@@ -407,17 +413,17 @@ generate_struct(const dump_root &root, const std::shared_ptr<struct_info> &struc
 	hpp_file.write(header.data(), static_cast<std::streamsize>(header.size()));
 	hpp_file.close();
 
-	auto cpp_path = source_path / (struct_name + ".cpp");
+	auto cpp_path = source_path / (std::to_string(index) + ".cpp");
 	std::ofstream cpp_file(cpp_path, std::ios::out | std::ios::binary | std::ios::trunc);
 	cpp_file.write(source.data(), static_cast<std::streamsize>(source.size()));
 	cpp_file.close();
 
-	return std::make_tuple(struct_name + ".cpp", referenced_types);
+	return std::make_tuple(std::to_string(index) + ".cpp", referenced_types);
 }
 
 void
 generate_structs(const dump_root &root, const std::filesystem::path &include_path, const std::filesystem::path &source_path, std::stringstream &meson_build_files, // NOLINT(*-no-recursion)
-				 std::unordered_set<uint32_t> &referenced_types, std::unordered_set<uint32_t> &lookup_types, const std::unordered_set<uint32_t> &ignore) {
+				 std::unordered_set<uint32_t> &referenced_types, std::unordered_set<uint32_t> &lookup_types, const std::unordered_set<uint32_t> &ignore, rivet::rivet_size &index) {
 	for (auto lookup_id : lookup_types) {
 		if (referenced_types.find(lookup_id) != referenced_types.end()) {
 			continue;
@@ -431,10 +437,10 @@ generate_structs(const dump_root &root, const std::filesystem::path &include_pat
 
 		auto struct_ = std::get<std::shared_ptr<struct_info>>(root.lookup.at(lookup_id));
 
-		auto [path, referenced] = generate_struct(root, struct_, include_path, source_path, ignore);
-		meson_build_files << "\t'src/generated/" << path << "',\n";
+		auto [path, referenced] = generate_struct(root, struct_, include_path, source_path, ignore, ++index);
+		meson_build_files << "\t'gen/" << path << "',\n";
 
-		generate_structs(root, include_path, source_path, meson_build_files, referenced_types, referenced, ignore);
+		generate_structs(root, include_path, source_path, meson_build_files, referenced_types, referenced, ignore, index);
 	}
 }
 
@@ -575,7 +581,7 @@ main(int argc, char **argv) -> int { // NOLINT(*-exception-escape)
 	auto bitset_path = include_path / "bitsets";
 	std::filesystem::create_directories(bitset_path);
 
-	auto source_path = std::filesystem::path(output_dir) / "src" / "generated";
+	auto source_path = std::filesystem::path(output_dir) / "gen";
 	std::filesystem::create_directories(source_path);
 
 	std::stringstream meson_build_files;
@@ -589,7 +595,7 @@ main(int argc, char **argv) -> int { // NOLINT(*-exception-escape)
 	std::unordered_set<uint32_t> referenced_types;
 	std::unordered_set<uint32_t> ignore;
 	for (const auto &struct_ : root.structs) {
-		if(struct_->name.id == 3202290298) {
+		if (struct_->name.id == 3202290298) {
 			ignore.insert(struct_->name.id);
 			continue;
 		}
@@ -609,7 +615,8 @@ main(int argc, char **argv) -> int { // NOLINT(*-exception-escape)
 
 		ignore.insert(struct_->name.id);
 	}
-	generate_structs(root, include_path, source_path, meson_build_files, referenced_types, lookup_types, ignore);
+	auto index = rivet::rivet_size(0);
+	generate_structs(root, include_path, source_path, meson_build_files, referenced_types, lookup_types, ignore, index);
 
 	for (const auto &enum_ : root.enums) {
 		generate_enum(enum_, enum_path);

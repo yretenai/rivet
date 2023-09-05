@@ -59,6 +59,11 @@ namespace rivet::structures {
 	}
 
 	[[nodiscard]] auto
+	rivet_serialized_object::construct(const std::string_view &name) const noexcept -> std::shared_ptr<rivet_ddl_base> {
+		return construct(rivet::hash::hash_type_id(name));
+	}
+
+	[[nodiscard]] auto
 	rivet_serialized_object::get_uint64(rivet_type_id field_id) const noexcept -> uint64_t {
 		return get_field<uint64_t>(field_id);
 	}

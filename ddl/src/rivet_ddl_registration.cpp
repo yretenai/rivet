@@ -290,7 +290,7 @@
 #include <rivet/ddl/generated/MissionOrderConfigBase.hpp>
 #include <rivet/ddl/generated/PriusReferenceGenerationRulesConfig.hpp>
 #include <rivet/ddl/generated/FlockDensityConfig.hpp>
-#include <rivet/ddl/generated/FlockingManagerConfig.hpp>
+#include <rivet/ddl/generated/FlockingManagerConfig.hpp> 
 
 namespace rivet::ddl {
 	void
@@ -579,6 +579,6 @@ namespace rivet::ddl {
 		rivet::structures::register_ddl_type<rivet::ddl::generated::ObjectiveSystemConfig_Tools>();
 		rivet::structures::register_ddl_type<rivet::ddl::generated::MasterMissionOrderConfigBase>();
 		rivet::structures::register_ddl_type<rivet::ddl::generated::FlockConfig>();
-		rivet::structures::register_ddl_type<rivet::ddl::generated::FlockingManagerConfig>();
+		rivet::structures::register_ddl_type<rivet::ddl::generated::FlockingManagerConfig>(); 
 	}
 } // namespace rivet::ddl

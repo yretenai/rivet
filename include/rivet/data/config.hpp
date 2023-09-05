@@ -62,5 +62,6 @@ namespace rivet::data {
 		config_type type;
 		std::shared_ptr<rivet::structures::rivet_serialized_object> value;
 		std::vector<std::tuple<rivet::structures::rivet_ref, std::string_view>> refs;
+		std::shared_ptr<rivet::structures::rivet_ddl_base> constructed_value;
 	};
 } // namespace rivet::data

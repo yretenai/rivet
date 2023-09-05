@@ -49,6 +49,7 @@ namespace rivet::data {
 		auto type_serialized = std::make_shared<rivet::ddl::serialized>(type_blob, data.buffer);
 		value = std::make_shared<rivet::ddl::serialized>(data_blob, data.buffer);
 		type = config_type(type_serialized);
+		constructed_value = value->construct(type.type);
 
 		if (asset_refs == nullptr) {
 			return;

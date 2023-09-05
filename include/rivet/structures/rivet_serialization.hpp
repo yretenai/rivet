@@ -96,8 +96,8 @@ namespace rivet::structures {
 
 	using rivet_ddl_ctor = std::function<std::shared_ptr<rivet::structures::rivet_ddl_base>(const std::shared_ptr<const rivet::structures::rivet_serialized_object> &)>;
 
-	auto
-	RIVET_SHARED get_ddl_constructors() -> ankerl::unordered_dense::map<rivet_type_id, rivet_ddl_ctor> &;
+	auto RIVET_SHARED
+	get_ddl_constructors() -> ankerl::unordered_dense::map<rivet_type_id, rivet_ddl_ctor> &;
 
 	template <typename T>
 		requires(std::is_base_of_v<rivet_ddl_base, T> && !std::is_same_v<rivet_ddl_base, T>)
@@ -296,8 +296,8 @@ namespace rivet::structures {
 		template <typename T = rivet_ddl_base>
 			requires(std::is_base_of_v<rivet::structures::rivet_ddl_base, T> && !std::is_same_v<rivet::structures::rivet_ddl_base, T>)
 		[[nodiscard]] auto
-		unwrap_this_into(rivet_type_id type_id) const noexcept -> std::shared_ptr<T> {
-			if (values.size() == 2 && get_ddl_constructors().contains(type_id)) {
+		unwrap_this_into() const noexcept -> std::shared_ptr<T> {
+			if (values.size() == 2) {
 				auto has_obj = has_field(0x6c33fda5); // "Obj"
 				if (has_obj) {
 					auto obj = get_field<std::shared_ptr<rivet_serialized_object>>(0x6c33fda5); // "Obj"
@@ -320,10 +320,17 @@ namespace rivet::structures {
 			auto value = get_field<std::shared_ptr<rivet_serialized_object>>(type_id);
 
 			if (value != nullptr) {
-				return value->unwrap_this_into<T>(type_id);
+				return value->unwrap_this_into<T>();
 			}
 
 			return nullptr;
+		}
+
+		template <typename T = rivet_ddl_base>
+			requires(std::is_base_of_v<rivet::structures::rivet_ddl_base, T> && !std::is_same_v<rivet::structures::rivet_ddl_base, T>)
+		[[nodiscard]] auto
+		unwrap_into(const std::string_view &type_id) const noexcept -> std::shared_ptr<T> {
+			return unwrap_into<T>(rivet::hash::hash_type_id(type_id));
 		}
 
 		template <typename T = rivet_ddl_base>
@@ -334,13 +341,20 @@ namespace rivet::structures {
 
 			auto instance_values = get_fields<std::shared_ptr<rivet_serialized_object>>(type_id);
 			for (const auto &value : instance_values) {
-				auto instance = value->unwrap_this_into<T>(type_id);
+				auto instance = value->unwrap_this_into<T>();
 				if (instance != nullptr) {
 					result.emplace_back(instance);
 				}
 			}
 
 			return result;
+		}
+
+		template <typename T = rivet_ddl_base>
+			requires(std::is_base_of_v<rivet::structures::rivet_ddl_base, T> && !std::is_same_v<rivet::structures::rivet_ddl_base, T>)
+		[[nodiscard]] auto
+		unwrap_into_many(const std::string_view &type_id) const noexcept -> std::vector<std::shared_ptr<T>> {
+			return unwrap_into_many<T>(rivet::hash::hash_type_id(type_id));
 		}
 
 		[[nodiscard]] auto
@@ -357,6 +371,9 @@ namespace rivet::structures {
 
 		[[nodiscard]] auto
 		construct(rivet_type_id type_id) const noexcept -> std::shared_ptr<rivet_ddl_base>;
+
+		[[nodiscard]] auto
+		construct(const std::string_view &type_id) const noexcept -> std::shared_ptr<rivet_ddl_base>;
 
 		[[nodiscard]] auto
 		get_uint64(rivet_type_id field_id) const noexcept -> uint64_t;
