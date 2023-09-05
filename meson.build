@@ -106,7 +106,6 @@ endif
 add_project_arguments(cpp_args, language: 'cpp')
 
 subdir('src')
-subdir('ddl')
 
 if not get_option('lib_only')
     subdir('cli')

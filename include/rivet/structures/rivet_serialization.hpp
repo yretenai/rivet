@@ -21,31 +21,9 @@
 #include <rivet/rivet_array.hpp>
 #include <rivet/rivet_keywords.hpp>
 
+#include <rivet/structures/rivet_serialization_type.hpp> // IWYU pragma: export
+
 namespace rivet::structures {
-	enum class rivet_serialized_type : uint8_t {
-		uint8,
-		uint16,
-		uint32,
-		uint64,
-		int8,
-		int16,
-		int32,
-		int64,
-		float32,
-		float64,
-		string,
-		enum_value,
-		bitfield,
-		object,
-		unknown14,
-		boolean,
-		file,
-		tuid,
-		json,
-		none,
-		instance_id = 0x14,
-		max = 0x14
-	};
 
 	struct rivet_serialized_header {
 		uint32_t zero;
@@ -103,12 +81,12 @@ namespace rivet::structures {
 		operator=(rivet_ddl_base &&other) noexcept -> rivet_ddl_base & = default;
 
 		static auto
-		from_substruct(rivet_type_id type_id) -> std::shared_ptr<rivet_ddl_base> {
+		from_substruct([[maybe_unused]] rivet_type_id type_id) -> std::shared_ptr<rivet_ddl_base> {
 			return nullptr;
 		}
 
 		static auto
-		from_substruct(rivet_type_id type_id, const std::shared_ptr<const rivet_serialized_object> &serialized) -> std::shared_ptr<rivet_ddl_base> {
+		from_substruct([[maybe_unused]] rivet_type_id type_id, [[maybe_unused]] const std::shared_ptr<const rivet_serialized_object> &serialized) -> std::shared_ptr<rivet_ddl_base> {
 			return nullptr;
 		}
 	};
@@ -118,6 +96,13 @@ namespace rivet::structures {
 	using rivet_ddl_ctor = std::function<std::shared_ptr<rivet::structures::rivet_ddl_base>(const std::shared_ptr<const rivet::structures::rivet_serialized_object> &)>;
 
 	extern ankerl::unordered_dense::map<rivet_type_id, rivet_ddl_ctor> ddl_constructors;
+
+	template <typename T>
+		requires(std::is_base_of_v<rivet_ddl_base, T> && !std::is_same_v<rivet_ddl_base, T>)
+	auto
+	register_ddl_type() -> void {
+		ddl_constructors.emplace(T::type_id, [](const std::shared_ptr<const rivet_serialized_object> &serialized) -> std::shared_ptr<rivet_ddl_base> { return std::make_shared<T>(serialized); });
+	}
 
 	struct RIVET_SHARED rivet_serialized_object : std::enable_shared_from_this<rivet_serialized_object> {
 		ankerl::unordered_dense::map<uint32_t, std::vector<rivet_serialized_value>> values = {};
@@ -132,19 +117,19 @@ namespace rivet::structures {
 			requires(std::is_same_v<T, uint64_t> || std::is_same_v<T, int64_t> || std::is_same_v<T, double> || std::is_same_v<T, bool> || std::is_same_v<T, bool> ||
 					 std::is_same_v<T, std::string_view> || std::is_same_v<T, std::shared_ptr<rivet_serialized_object>> || std::is_same_v<T, std::shared_ptr<rivet_data_array>>)
 		auto
-		get_field(const rivet_type_id &field_id) const noexcept -> std::optional<TCast> {
+		get_field(const rivet_type_id &field_id) const noexcept -> TCast {
 			auto entry = values.find(field_id);
 			if (entry == values.end()) {
-				return std::nullopt;
+				return {};
 			}
 
 			if (entry->second.empty()) {
-				return std::nullopt;
+				return {};
 			}
 
 			auto variant = entry->second.at(0);
 			if (!std::holds_alternative<T>(variant)) {
-				return std::nullopt;
+				return {};
 			}
 
 			return static_cast<TCast>(std::get<T>(variant));
@@ -154,7 +139,7 @@ namespace rivet::structures {
 			requires(std::is_same_v<T, uint64_t> || std::is_same_v<T, int64_t> || std::is_same_v<T, double> || std::is_same_v<T, bool> || std::is_same_v<T, bool> ||
 					 std::is_same_v<T, std::string_view> || std::is_same_v<T, std::shared_ptr<rivet_serialized_object>> || std::is_same_v<T, std::shared_ptr<rivet_data_array>>)
 		auto
-		get_field(const std::string_view &name) const noexcept -> std::optional<TCast> {
+		get_field(const std::string_view &name) const noexcept -> TCast {
 			return get_field<T, TCast>(rivet::hash::hash_type_id(name));
 		}
 
@@ -186,22 +171,172 @@ namespace rivet::structures {
 			return get_fields<T, TCast>(rivet::hash::hash_type_id(name));
 		}
 
+		template <typename T, size_t N, typename TCast = T>
+			requires(std::is_enum_v<T>)
+		auto
+		get_enum(const rivet_type_id &field_id, const std::array<std::string_view, N> &enum_values) const noexcept -> T {
+			auto value = values.find(field_id);
+			if (value == values.end()) {
+				return {};
+			}
+
+			if (value->second.empty()) {
+				return {};
+			}
+
+			auto variant = value->second.at(0);
+			if (std::holds_alternative<uint64_t>(variant)) {
+				return static_cast<T>(std::get<uint64_t>(variant));
+			}
+
+			if (std::holds_alternative<int64_t>(variant)) {
+				return static_cast<T>(std::get<int64_t>(variant));
+			}
+
+			if (std::holds_alternative<std::string_view>(variant)) {
+				auto str = std::get<std::string_view>(variant);
+				for (auto i = 0; i < N; i++) {
+					if (str == enum_values.at(i)) {
+						return static_cast<T>(i);
+					}
+				}
+			}
+
+			return {};
+		}
+
+		template <typename T, size_t N, typename TCast = T>
+			requires(std::is_enum_v<T>)
+		auto
+		get_enum(const std::string_view &name, const std::array<std::string_view, N> &enum_values) const noexcept -> T {
+			return get_enum<T, N, TCast>(rivet::hash::hash_type_id(name), enum_values);
+		}
+
+		template <typename T, size_t N, typename TCast = T>
+			requires(std::is_enum_v<T>)
+		auto
+		get_enums(const rivet_type_id &field_id, const std::array<std::string_view, N> &enum_values) const noexcept -> std::vector<T> {
+			std::vector<T> result;
+			auto value = values.find(field_id);
+			if (value == values.end() || value->second.empty()) {
+				return result;
+			}
+
+			result.reserve(value->second.size());
+
+			for (const auto &enum_value : value->second) {
+				if (std::holds_alternative<uint64_t>(enum_value)) {
+					result.emplace_back(static_cast<T>(std::get<uint64_t>(enum_value)));
+				} else if (std::holds_alternative<int64_t>(enum_value)) {
+					result.emplace_back(static_cast<T>(std::get<int64_t>(enum_value)));
+				} else if (std::holds_alternative<std::string_view>(enum_value)) {
+					auto str = std::get<std::string_view>(enum_value);
+					for (auto i = 0; i < N; i++) {
+						if (str == enum_values.at(i)) {
+							result.emplace_back(static_cast<T>(i));
+							break;
+						}
+					}
+				}
+			}
+
+			return result;
+		}
+
+		template <typename T, size_t N, typename TCast = T>
+			requires(std::is_enum_v<T>)
+		auto
+		get_enums(const std::string_view &name, const std::array<std::string_view, N> &enum_values) const noexcept -> std::vector<T> {
+			return get_enums<T, N, TCast>(rivet::hash::hash_type_id(name), enum_values);
+		}
+
+		template <typename T, size_t N, typename TCast = T>
+			requires(std::is_enum_v<T>)
+		auto
+		get_bitset(const rivet_type_id &field_id, const std::array<std::tuple<std::string_view, uint64_t>, N> &bitset_values) const noexcept -> T {
+			auto value = values.find(field_id);
+			if (value == values.end()) {
+				return {};
+			}
+
+			if (value->second.empty()) {
+				return {};
+			}
+
+			uint64_t result {};
+
+			for (const auto &variant : value->second) {
+				if (std::holds_alternative<uint64_t>(variant)) {
+					result |= std::get<uint64_t>(variant);
+				} else if (std::holds_alternative<int64_t>(variant)) {
+					result |= static_cast<uint64_t>(std::get<int64_t>(variant));
+				} else if (std::holds_alternative<std::string_view>(variant)) {
+					auto str = std::get<std::string_view>(variant);
+					for (auto i = 0; i < N; i++) {
+						if (str == std::get<0>(bitset_values.at(i))) {
+							result |= std::get<1>(bitset_values.at(i));
+							break;
+						}
+					}
+				}
+			}
+
+			return static_cast<T>(result);
+		}
+
+		template <typename T, size_t N, typename TCast = T>
+			requires(std::is_enum_v<T>)
+		auto
+		get_bitset(const std::string_view &name, const std::array<std::tuple<std::string_view, uint64_t>, N> &bitset_values) const noexcept -> T {
+			return get_bitset<T, N, TCast>(rivet::hash::hash_type_id(name), bitset_values);
+		}
+
 		template <typename T = rivet_ddl_base>
 			requires(std::is_base_of_v<rivet::structures::rivet_ddl_base, T> && !std::is_same_v<rivet::structures::rivet_ddl_base, T>)
 		[[nodiscard]] auto
-		unwrap_into(rivet_type_id type_id) const noexcept -> std::shared_ptr<rivet_ddl_base> {
+		unwrap_this_into(rivet_type_id type_id) const noexcept -> std::shared_ptr<T> {
 			if (values.size() == 2 && ddl_constructors.contains(type_id)) {
 				auto has_obj = has_field(0x6c33fda5);										// "Obj"
 				auto obj = get_field<std::shared_ptr<rivet_serialized_object>>(0x6c33fda5); // "Obj"
 				auto type = get_field<std::string_view>(0xbc4e9799);						// "Type"
-				auto type_hash = rivet::hash::hash_type_id(type.value());
-				auto instance = has_obj ? T::from_substruct(type_hash, obj.value()) : T::from_substruct(type_hash);
+				auto type_hash = rivet::hash::hash_type_id(type);
+				auto instance = has_obj ? T::from_substruct(type_hash, obj) : T::from_substruct(type_hash);
 				if (instance != nullptr) {
-					return instance;
+					return std::reinterpret_pointer_cast<T>(instance);
 				}
 			}
 
 			return std::make_shared<T>(shared_from_this());
+		}
+
+		template <typename T = rivet_ddl_base>
+			requires(std::is_base_of_v<rivet::structures::rivet_ddl_base, T> && !std::is_same_v<rivet::structures::rivet_ddl_base, T>)
+		[[nodiscard]] auto
+		unwrap_into(rivet_type_id type_id) const noexcept -> std::shared_ptr<T> {
+			auto value = get_field<std::shared_ptr<rivet_serialized_object>>(type_id);
+
+			if (value != nullptr) {
+				return value->unwrap_this_into<T>(type_id);
+			}
+
+			return nullptr;
+		}
+
+		template <typename T = rivet_ddl_base>
+			requires(std::is_base_of_v<rivet::structures::rivet_ddl_base, T> && !std::is_same_v<rivet::structures::rivet_ddl_base, T>)
+		[[nodiscard]] auto
+		unwrap_into_many(rivet_type_id type_id) const noexcept -> std::vector<std::shared_ptr<T>> {
+			auto result = std::vector<std::shared_ptr<T>>();
+
+			auto instance_values = get_fields<std::shared_ptr<rivet_serialized_object>>(type_id);
+			for (const auto &value : instance_values) {
+				auto instance = value->unwrap_this_into<T>(type_id);
+				if (instance != nullptr) {
+					result.emplace_back(instance);
+				}
+			}
+
+			return result;
 		}
 
 		[[nodiscard]] auto RIVET_INLINE

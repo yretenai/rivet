@@ -67,10 +67,10 @@ namespace rivet::hash {
 
 #define RIVET_DEFINE_TYPE_ID(id, name)                             \
 	constexpr const static std::string_view id##_type_name = name; \
-	constexpr const static rivet_type_id id##_type_id = rivet::hash::type_id<id##_type_name>::value
+	constexpr const static rivet::rivet_type_id id##_type_id = rivet::hash::type_id<id##_type_name>::value
 
-#define RIVET_DEFINE_FAKE_TYPE_ID(id, name, val)                   \
-	constexpr const static std::string_view id##_type_name = name; \
-	constexpr const static rivet_type_id id##_type_id = val;       \
+#define RIVET_DEFINE_FAKE_TYPE_ID(id, name, val)                    \
+	constexpr const static std::string_view id##_type_name = name;  \
+	constexpr const static rivet::rivet_type_id id##_type_id = val; \
 	static_assert(rivet::hash::type_id<id##_type_name>::value != val)
 } // namespace rivet::hash

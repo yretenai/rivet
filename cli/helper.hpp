@@ -9,13 +9,12 @@
 #include <string>
 #include <vector>
 
-#include <rivet/ddl/rivet_ddl.hpp>
 #include <rivet/rivet.hpp>
 
 auto
 handle_exit(const std::string &name, const clipp::group &cli, bool version_flag, bool help_flag) -> int {
 	if (version_flag) {
-		std::cout << name << " version " << rivet::rivet_version_detailed() << ", ddl: " << rivet::ddl::ddl_version_detailed() << '\n';
+		std::cout << name << " version " << rivet::rivet_version_detailed() << '\n';
 		return 0;
 	}
 
