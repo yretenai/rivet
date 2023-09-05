@@ -87,11 +87,6 @@ namespace rivet::structures {
 		get_type_name() const noexcept -> std::string_view = 0;
 
 		static auto
-		from_substruct([[maybe_unused]] rivet_type_id type_id) -> std::shared_ptr<rivet_ddl_base> {
-			return nullptr;
-		}
-
-		static auto
 		from_substruct([[maybe_unused]] rivet_type_id type_id, [[maybe_unused]] const std::shared_ptr<const rivet_serialized_object> &serialized) -> std::shared_ptr<rivet_ddl_base> {
 			return nullptr;
 		}
@@ -102,7 +97,7 @@ namespace rivet::structures {
 	using rivet_ddl_ctor = std::function<std::shared_ptr<rivet::structures::rivet_ddl_base>(const std::shared_ptr<const rivet::structures::rivet_serialized_object> &)>;
 
 	auto
-	get_ddl_constructors() -> ankerl::unordered_dense::map<rivet_type_id, rivet_ddl_ctor> &;
+	RIVET_SHARED get_ddl_constructors() -> ankerl::unordered_dense::map<rivet_type_id, rivet_ddl_ctor> &;
 
 	template <typename T>
 		requires(std::is_base_of_v<rivet_ddl_base, T> && !std::is_same_v<rivet_ddl_base, T>)
@@ -124,7 +119,7 @@ namespace rivet::structures {
 			requires(std::is_same_v<T, uint64_t> || std::is_same_v<T, int64_t> || std::is_same_v<T, double> || std::is_same_v<T, bool> || std::is_same_v<T, bool> ||
 					 std::is_same_v<T, std::string_view> || std::is_same_v<T, std::shared_ptr<rivet_serialized_object>> || std::is_same_v<T, std::shared_ptr<rivet_data_array>>)
 		auto
-		get_field(const rivet_type_id &field_id) const noexcept -> TCast {
+		get_field(rivet_type_id field_id) const noexcept -> TCast {
 			auto entry = values.find(field_id);
 			if (entry == values.end()) {
 				return {};
@@ -154,7 +149,7 @@ namespace rivet::structures {
 			requires(std::is_same_v<T, uint64_t> || std::is_same_v<T, int64_t> || std::is_same_v<T, double> || std::is_same_v<T, bool> || std::is_same_v<T, bool> ||
 					 std::is_same_v<T, std::string_view> || std::is_same_v<T, std::shared_ptr<rivet_serialized_object>> || std::is_same_v<T, std::shared_ptr<rivet_data_array>>)
 		auto
-		get_fields(const rivet_type_id &field_id) const noexcept -> std::vector<TCast> {
+		get_fields(rivet_type_id field_id) const noexcept -> std::vector<TCast> {
 			auto entry = values.find(field_id);
 			if (entry == values.end()) {
 				return {};
@@ -171,8 +166,8 @@ namespace rivet::structures {
 		}
 
 		template <typename T, typename TCast = T>
-			requires(std::is_same_v<T, uint64_t> || std::is_same_v<T, int64_t> || std::is_same_v<T, double> || std::is_same_v<T, bool> || std::is_same_v<T, bool> ||
-					 std::is_same_v<T, std::string_view> || std::is_same_v<T, std::shared_ptr<rivet_serialized_object>> || std::is_same_v<T, std::shared_ptr<rivet_data_array>>)
+			requires(std::is_same_v<T, uint64_t> || std::is_same_v<T, int64_t> || std::is_same_v<T, double> || std::is_same_v<T, bool> || std::is_same_v<T, std::string_view> ||
+					 std::is_same_v<T, std::shared_ptr<rivet_serialized_object>> || std::is_same_v<T, std::shared_ptr<rivet_data_array>>)
 		auto
 		get_fields(const std::string_view &name) const noexcept -> std::vector<TCast> {
 			return get_fields<T, TCast>(rivet::hash::hash_type_id(name));
@@ -181,7 +176,7 @@ namespace rivet::structures {
 		template <typename T, size_t N, typename TCast = T>
 			requires(std::is_enum_v<T>)
 		auto
-		get_enum(const rivet_type_id &field_id, const std::array<std::string_view, N> &enum_values) const noexcept -> T {
+		get_enum(rivet_type_id field_id, const std::array<std::string_view, N> &enum_values) const noexcept -> T {
 			auto value = values.find(field_id);
 			if (value == values.end()) {
 				return {};
@@ -222,7 +217,7 @@ namespace rivet::structures {
 		template <typename T, size_t N, typename TCast = T>
 			requires(std::is_enum_v<T>)
 		auto
-		get_enums(const rivet_type_id &field_id, const std::array<std::string_view, N> &enum_values) const noexcept -> std::vector<T> {
+		get_enums(rivet_type_id field_id, const std::array<std::string_view, N> &enum_values) const noexcept -> std::vector<T> {
 			std::vector<T> result;
 			auto value = values.find(field_id);
 			if (value == values.end() || value->second.empty()) {
@@ -260,7 +255,7 @@ namespace rivet::structures {
 		template <typename T, size_t N, typename TCast = T>
 			requires(std::is_enum_v<T>)
 		auto
-		get_bitset(const rivet_type_id &field_id, const std::array<std::tuple<std::string_view, uint64_t>, N> &bitset_values) const noexcept -> T {
+		get_bitset(rivet_type_id field_id, const std::array<std::tuple<std::string_view, uint64_t>, N> &bitset_values) const noexcept -> T {
 			auto value = values.find(field_id);
 			if (value == values.end()) {
 				return {};
@@ -303,13 +298,15 @@ namespace rivet::structures {
 		[[nodiscard]] auto
 		unwrap_this_into(rivet_type_id type_id) const noexcept -> std::shared_ptr<T> {
 			if (values.size() == 2 && get_ddl_constructors().contains(type_id)) {
-				auto has_obj = has_field(0x6c33fda5);										// "Obj"
-				auto obj = get_field<std::shared_ptr<rivet_serialized_object>>(0x6c33fda5); // "Obj"
-				auto type = get_field<std::string_view>(0xbc4e9799);						// "Type"
-				auto type_hash = rivet::hash::hash_type_id(type);
-				auto instance = has_obj ? T::from_substruct(type_hash, obj) : T::from_substruct(type_hash);
-				if (instance != nullptr) {
-					return std::reinterpret_pointer_cast<T>(instance);
+				auto has_obj = has_field(0x6c33fda5); // "Obj"
+				if (has_obj) {
+					auto obj = get_field<std::shared_ptr<rivet_serialized_object>>(0x6c33fda5); // "Obj"
+					auto type = get_field<std::string_view>(0xbc4e9799);						// "Type"
+					auto type_hash = rivet::hash::hash_type_id(type);
+					auto instance = T::from_substruct(type_hash, obj);
+					if (instance != nullptr) {
+						return std::reinterpret_pointer_cast<T>(instance);
+					}
 				}
 			}
 
@@ -346,26 +343,98 @@ namespace rivet::structures {
 			return result;
 		}
 
-		[[nodiscard]] auto RIVET_INLINE
-		get_field(const rivet_type_id &field_id) const noexcept -> std::optional<std::vector<rivet::structures::rivet_serialized_value>>;
+		[[nodiscard]] auto
+		get_field(rivet_type_id field_id) const noexcept -> std::optional<std::vector<rivet::structures::rivet_serialized_value>>;
 
-		[[nodiscard]] auto RIVET_INLINE
+		[[nodiscard]] auto
 		get_field(const std::string_view &name) const noexcept -> std::optional<std::vector<rivet::structures::rivet_serialized_value>>;
 
-		[[nodiscard]] auto RIVET_INLINE
-		has_field(const rivet_type_id &field_id) const noexcept -> bool;
+		[[nodiscard]] auto
+		has_field(rivet_type_id field_id) const noexcept -> bool;
 
-		[[nodiscard]] auto RIVET_INLINE
+		[[nodiscard]] auto
 		has_field(const std::string_view &name) const noexcept -> bool;
 
 		[[nodiscard]] auto
-		unwrap_into(rivet_type_id type_id) const noexcept -> std::shared_ptr<rivet_ddl_base>;
+		construct(rivet_type_id type_id) const noexcept -> std::shared_ptr<rivet_ddl_base>;
 
-		[[nodiscard]] auto RIVET_INLINE
+		[[nodiscard]] auto
+		get_uint64(rivet_type_id field_id) const noexcept -> uint64_t;
+
+		[[nodiscard]] auto
+		get_uint32(rivet_type_id field_id) const noexcept -> uint32_t;
+
+		[[nodiscard]] auto
+		get_uint16(rivet_type_id field_id) const noexcept -> uint16_t;
+
+		[[nodiscard]] auto
+		get_uint8(rivet_type_id field_id) const noexcept -> uint8_t;
+
+		[[nodiscard]] auto
+		get_int64(rivet_type_id field_id) const noexcept -> int64_t;
+
+		[[nodiscard]] auto
+		get_int32(rivet_type_id field_id) const noexcept -> int32_t;
+
+		[[nodiscard]] auto
+		get_int16(rivet_type_id field_id) const noexcept -> int16_t;
+
+		[[nodiscard]] auto
+		get_int8(rivet_type_id field_id) const noexcept -> int8_t;
+
+		[[nodiscard]] auto
+		get_double(rivet_type_id field_id) const noexcept -> double;
+
+		[[nodiscard]] auto
+		get_float(rivet_type_id field_id) const noexcept -> float;
+
+		[[nodiscard]] auto
+		get_bool(rivet_type_id field_id) const noexcept -> bool;
+
+		[[nodiscard]] auto
+		get_string(rivet_type_id field_id) const noexcept -> std::string_view;
+
+		[[nodiscard]] auto
+		get_uint64s(rivet_type_id field_id) const noexcept -> std::vector<uint64_t>;
+
+		[[nodiscard]] auto
+		get_uint32s(rivet_type_id field_id) const noexcept -> std::vector<uint32_t>;
+
+		[[nodiscard]] auto
+		get_uint16s(rivet_type_id field_id) const noexcept -> std::vector<uint16_t>;
+
+		[[nodiscard]] auto
+		get_uint8s(rivet_type_id field_id) const noexcept -> std::vector<uint8_t>;
+
+		[[nodiscard]] auto
+		get_int64s(rivet_type_id field_id) const noexcept -> std::vector<int64_t>;
+
+		[[nodiscard]] auto
+		get_int32s(rivet_type_id field_id) const noexcept -> std::vector<int32_t>;
+
+		[[nodiscard]] auto
+		get_int16s(rivet_type_id field_id) const noexcept -> std::vector<int16_t>;
+
+		[[nodiscard]] auto
+		get_int8s(rivet_type_id field_id) const noexcept -> std::vector<int8_t>;
+
+		[[nodiscard]] auto
+		get_doubles(rivet_type_id field_id) const noexcept -> std::vector<double>;
+
+		[[nodiscard]] auto
+		get_floats(rivet_type_id field_id) const noexcept -> std::vector<float>;
+
+		[[nodiscard]] auto
+		get_bools(rivet_type_id field_id) const noexcept -> std::vector<bool>;
+
+		[[nodiscard]] auto
+		get_strings(rivet_type_id field_id) const noexcept -> std::vector<std::string_view>;
+
+		[[nodiscard]] auto
 		to_json(int indent = -1, char indent_char = ' ', bool ensure_ascii = false) const -> std::string;
 
 #ifdef RIVET_USE_NLOHMANN
-		[[nodiscard]] auto RIVET_INLINE
+		[[nodiscard]] auto
 		to_nlohmann_json() const -> nlohmann::json;
 #endif
 	};

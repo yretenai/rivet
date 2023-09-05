@@ -78,8 +78,8 @@ gather_base_defined_types(const dump_root &root, uint32_t type_id, std::unordere
 }
 
 auto
-generate_struct(const dump_root &root, const std::shared_ptr<struct_info> &struct_, const std::filesystem::path &include_path, const std::filesystem::path &source_path)
-	-> std::tuple<std::string, std::unordered_set<uint32_t>> {
+generate_struct(const dump_root &root, const std::shared_ptr<struct_info> &struct_, const std::filesystem::path &include_path, const std::filesystem::path &source_path,
+				const std::unordered_set<uint32_t> &ignore) -> std::tuple<std::string, std::unordered_set<uint32_t>> {
 	auto struct_name = struct_->name.get_name_safe();
 	auto struct_id = struct_->name.get_id_hex();
 	std::cout << "generating struct " << struct_name << '\n';
@@ -94,8 +94,7 @@ generate_struct(const dump_root &root, const std::shared_ptr<struct_info> &struc
 
 	std::stringstream includes;
 	std::stringstream field_init;
-	std::stringstream substructs_1;
-	std::stringstream substructs_2;
+	std::stringstream substructs;
 
 	std::unordered_set<std::string> header_includes_set;
 	std::unordered_set<std::string> fwd_decls_set;
@@ -143,12 +142,17 @@ generate_struct(const dump_root &root, const std::shared_ptr<struct_info> &struc
 
 		auto is_array = field.array_type != serialized_array_type::none;
 
-		switch (field.type) {
+		auto type = field.type;
+		if(ignore.find(field.type_name.id) != ignore.end()) {
+			type = rivet::structures::rivet_serialized_type::json;
+		}
+
+		switch (type) {
 			case rivet::structures::rivet_serialized_type::uint8:
 				assert(field.type_name.id == rivet::structures::ddl_uint8_type_id);
 				replace_string(field_ctor, "%field_init%", is_array ? template_struct_field_array : template_struct_field_value);
 				replace_string(field_fwd, "%field_type%", is_array ? "std::vector<uint8_t>" : "uint8_t");
-				replace_string(field_ctor, "%field_type%", "uint64_t, uint8_t");
+				replace_string(field_ctor, "%field_type%", "uint8");
 				replace_string(field_fwd, "%field_name%", field_name);
 				replace_string(field_ctor, "%field_name%", field_name);
 				break;
@@ -156,7 +160,7 @@ generate_struct(const dump_root &root, const std::shared_ptr<struct_info> &struc
 				assert(field.type_name.id == rivet::structures::ddl_uint16_type_id);
 				replace_string(field_ctor, "%field_init%", is_array ? template_struct_field_array : template_struct_field_value);
 				replace_string(field_fwd, "%field_type%", is_array ? "std::vector<uint16_t>" : "uint16_t");
-				replace_string(field_ctor, "%field_type%", "uint64_t, uint16_t");
+				replace_string(field_ctor, "%field_type%", "uint16");
 				replace_string(field_fwd, "%field_name%", field_name);
 				replace_string(field_ctor, "%field_name%", field_name);
 				break;
@@ -164,7 +168,7 @@ generate_struct(const dump_root &root, const std::shared_ptr<struct_info> &struc
 				assert(field.type_name.id == rivet::structures::ddl_uint32_type_id);
 				replace_string(field_ctor, "%field_init%", is_array ? template_struct_field_array : template_struct_field_value);
 				replace_string(field_fwd, "%field_type%", is_array ? "std::vector<uint32_t>" : "uint32_t");
-				replace_string(field_ctor, "%field_type%", "uint64_t, uint32_t");
+				replace_string(field_ctor, "%field_type%", "uint32");
 				replace_string(field_fwd, "%field_name%", field_name);
 				replace_string(field_ctor, "%field_name%", field_name);
 				break;
@@ -175,7 +179,7 @@ generate_struct(const dump_root &root, const std::shared_ptr<struct_info> &struc
 					   field.type_name.id == rivet::structures::ddl_tuid_type_id);
 				replace_string(field_ctor, "%field_init%", is_array ? template_struct_field_array : template_struct_field_value);
 				replace_string(field_fwd, "%field_type%", is_array ? "std::vector<uint64_t>" : "uint64_t");
-				replace_string(field_ctor, "%field_type%", "uint64_t");
+				replace_string(field_ctor, "%field_type%", "uint64");
 				replace_string(field_fwd, "%field_name%", field_name);
 				replace_string(field_ctor, "%field_name%", field_name);
 				break;
@@ -183,7 +187,7 @@ generate_struct(const dump_root &root, const std::shared_ptr<struct_info> &struc
 				assert(field.type_name.id == rivet::structures::ddl_int8_type_id);
 				replace_string(field_ctor, "%field_init%", is_array ? template_struct_field_array : template_struct_field_value);
 				replace_string(field_fwd, "%field_type%", is_array ? "std::vector<int8_t>" : "int8_t");
-				replace_string(field_ctor, "%field_type%", "int64_t, int8_t");
+				replace_string(field_ctor, "%field_type%", "int8");
 				replace_string(field_fwd, "%field_name%", field_name);
 				replace_string(field_ctor, "%field_name%", field_name);
 				break;
@@ -191,7 +195,7 @@ generate_struct(const dump_root &root, const std::shared_ptr<struct_info> &struc
 				assert(field.type_name.id == rivet::structures::ddl_int16_type_id);
 				replace_string(field_ctor, "%field_init%", is_array ? template_struct_field_array : template_struct_field_value);
 				replace_string(field_fwd, "%field_type%", is_array ? "std::vector<int16_t>" : "int16_t");
-				replace_string(field_ctor, "%field_type%", "int64_t, int16_t");
+				replace_string(field_ctor, "%field_type%", "int16");
 				replace_string(field_fwd, "%field_name%", field_name);
 				replace_string(field_ctor, "%field_name%", field_name);
 				break;
@@ -199,7 +203,7 @@ generate_struct(const dump_root &root, const std::shared_ptr<struct_info> &struc
 				assert(field.type_name.id == rivet::structures::ddl_int32_type_id);
 				replace_string(field_ctor, "%field_init%", is_array ? template_struct_field_array : template_struct_field_value);
 				replace_string(field_fwd, "%field_type%", is_array ? "std::vector<int32_t>" : "int32_t");
-				replace_string(field_ctor, "%field_type%", "int64_t, int32_t");
+				replace_string(field_ctor, "%field_type%", "int32");
 				replace_string(field_fwd, "%field_name%", field_name);
 				replace_string(field_ctor, "%field_name%", field_name);
 				break;
@@ -207,7 +211,7 @@ generate_struct(const dump_root &root, const std::shared_ptr<struct_info> &struc
 				assert(field.type_name.id == rivet::structures::ddl_int64_type_id);
 				replace_string(field_ctor, "%field_init%", is_array ? template_struct_field_array : template_struct_field_value);
 				replace_string(field_fwd, "%field_type%", is_array ? "std::vector<int64_t>" : "int64_t");
-				replace_string(field_ctor, "%field_type%", "int64_t");
+				replace_string(field_ctor, "%field_type%", "int64");
 				replace_string(field_fwd, "%field_name%", field_name);
 				replace_string(field_ctor, "%field_name%", field_name);
 				break;
@@ -215,7 +219,7 @@ generate_struct(const dump_root &root, const std::shared_ptr<struct_info> &struc
 				assert(field.type_name.id == rivet::structures::ddl_float_type_id);
 				replace_string(field_ctor, "%field_init%", is_array ? template_struct_field_array : template_struct_field_value);
 				replace_string(field_fwd, "%field_type%", is_array ? "std::vector<float>" : "float");
-				replace_string(field_ctor, "%field_type%", "double, float");
+				replace_string(field_ctor, "%field_type%", "float");
 				replace_string(field_fwd, "%field_name%", field_name);
 				replace_string(field_ctor, "%field_name%", field_name);
 				break;
@@ -232,13 +236,20 @@ generate_struct(const dump_root &root, const std::shared_ptr<struct_info> &struc
 				assert(field.type_name.id == rivet::structures::ddl_file_type_id || field.type_name.id == rivet::structures::ddl_json_type_id ||
 					   field.type_name.id == rivet::structures::ddl_string_type_id);
 				replace_string(field_ctor, "%field_init%", is_array ? template_struct_field_array : template_struct_field_value);
-				replace_string(field_ctor, "%field_type%", "std::string_view");
+				replace_string(field_ctor, "%field_type%", "string");
 				replace_string(field_fwd, "%field_type%", is_array ? "std::vector<std::string_view>" : "std::string_view");
 				replace_string(field_fwd, "%field_name%", field_name);
 				replace_string(field_ctor, "%field_name%", field_name);
 				break;
 			case rivet::structures::rivet_serialized_type::enum_value:
 				{
+					/*
+					replace_string(field_ctor, "%field_init%", is_array ? template_struct_field_array : template_struct_field_value);
+					replace_string(field_ctor, "%field_type%", "string");
+					replace_string(field_fwd, "%field_type%", is_array ? "std::vector<std::string_view>" : "std::string_view");
+					replace_string(field_fwd, "%field_name%", field_name);
+					replace_string(field_ctor, "%field_name%", field_name);
+*/
 					auto enum_path = std::string(ddl_enum_include);
 					auto enum_full_name = "rivet::ddl::generated::" + field.type_name.get_name_safe();
 					replace_string(enum_path, "%enum_name%", field.type_name.get_name_safe());
@@ -252,6 +263,13 @@ generate_struct(const dump_root &root, const std::shared_ptr<struct_info> &struc
 				break;
 			case rivet::structures::rivet_serialized_type::bitfield:
 				{
+					/*
+					replace_string(field_ctor, "%field_init%", template_struct_field_array);
+					replace_string(field_ctor, "%field_type%", "string");
+					replace_string(field_fwd, "%field_type%", "std::vector<std::string_view>");
+					replace_string(field_fwd, "%field_name%", field_name);
+					replace_string(field_ctor, "%field_name%", field_name);
+					*/
 					auto bitset_path = std::string(ddl_bitset_include);
 					auto bitset_full_name = "rivet::ddl::generated::" + field.type_name.get_name_safe();
 					replace_string(bitset_path, "%bitset_name%", field.type_name.get_name_safe());
@@ -304,25 +322,19 @@ generate_struct(const dump_root &root, const std::shared_ptr<struct_info> &struc
 		field_init << field_ctor << '\n';
 	}
 
-	auto root_substruct_1 = std::string(template_struct_substruct_1);
-	auto root_substruct_2 = std::string(template_struct_substruct_2);
+	auto root_substruct = std::string(template_struct_substruct);
 
-	replace_string(root_substruct_1, "%struct_name%", struct_name);
-	replace_string(root_substruct_2, "%struct_name%", struct_name);
+	replace_string(root_substruct, "%struct_name%", struct_name);
 
-	substructs_1 << root_substruct_1 << '\n';
-	substructs_2 << root_substruct_2 << '\n';
+	substructs << root_substruct << '\n';
 
 	for (const auto &descendant : struct_->descendants) {
-		auto substruct_1 = std::string(template_struct_substruct_1_recur);
-		auto substruct_2 = std::string(template_struct_substruct_2_recur);
+		auto substruct = std::string(template_struct_substruct_recur);
 
 		auto substruct_name = descendant.get_name_safe();
-		replace_string(substruct_1, "%struct_name%", substruct_name);
-		replace_string(substruct_2, "%struct_name%", substruct_name);
+		replace_string(substruct, "%struct_name%", substruct_name);
 
-		substructs_1 << substruct_1 << '\n';
-		substructs_2 << substruct_2 << '\n';
+		substructs << substruct << '\n';
 
 		auto struct_path = std::string(ddl_include);
 		replace_string(struct_path, "%name%", substruct_name);
@@ -378,20 +390,14 @@ generate_struct(const dump_root &root, const std::shared_ptr<struct_info> &struc
 		field_init << ' ';
 	}
 
-	if (substructs_1.tellp() > 0) {
-		substructs_1.seekp(-1, std::ios_base::end);
-		substructs_1 << ' ';
-	}
-
-	if (substructs_2.tellp() > 0) {
-		substructs_2.seekp(-1, std::ios_base::end);
-		substructs_2 << ' ';
+	if (substructs.tellp() > 0) {
+		substructs.seekp(-1, std::ios_base::end);
+		substructs << ' ';
 	}
 
 	replace_string(source, "%includes%", includes.str());
 	replace_string(source, "%field_init%", field_init.str());
-	replace_string(source, "%substructs_1%", substructs_1.str());
-	replace_string(source, "%substructs_2%", substructs_2.str());
+	replace_string(source, "%substructs%", substructs.str());
 
 	replace_string(header, "\n\n\n", "\n");
 	replace_string(source, "\n\n\n", "\n");
@@ -411,19 +417,24 @@ generate_struct(const dump_root &root, const std::shared_ptr<struct_info> &struc
 
 void
 generate_structs(const dump_root &root, const std::filesystem::path &include_path, const std::filesystem::path &source_path, std::stringstream &meson_build_files, // NOLINT(*-no-recursion)
-				 std::unordered_set<uint32_t> &referenced_types, std::unordered_set<uint32_t> &lookup_types) {
+				 std::unordered_set<uint32_t> &referenced_types, std::unordered_set<uint32_t> &lookup_types, const std::unordered_set<uint32_t> &ignore) {
 	for (auto lookup_id : lookup_types) {
 		if (referenced_types.find(lookup_id) != referenced_types.end()) {
+			continue;
+		}
+
+		if (ignore.find(lookup_id) != ignore.end()) {
 			continue;
 		}
 
 		referenced_types.insert(lookup_id);
 
 		auto struct_ = std::get<std::shared_ptr<struct_info>>(root.lookup.at(lookup_id));
-		auto [path, referenced] = generate_struct(root, struct_, include_path, source_path);
+
+		auto [path, referenced] = generate_struct(root, struct_, include_path, source_path, ignore);
 		meson_build_files << "\t'src/generated/" << path << "',\n";
 
-		generate_structs(root, include_path, source_path, meson_build_files, referenced_types, referenced);
+		generate_structs(root, include_path, source_path, meson_build_files, referenced_types, referenced, ignore);
 	}
 }
 
@@ -576,7 +587,29 @@ main(int argc, char **argv) -> int { // NOLINT(*-exception-escape)
 	}
 
 	std::unordered_set<uint32_t> referenced_types;
-	generate_structs(root, include_path, source_path, meson_build_files, referenced_types, lookup_types);
+	std::unordered_set<uint32_t> ignore;
+	for (const auto &struct_ : root.structs) {
+		if(struct_->name.id == 3202290298) {
+			ignore.insert(struct_->name.id);
+			continue;
+		}
+
+		auto parent = struct_->base_name.id;
+		while (parent != 0) {
+			if (parent == 3202290298) {
+				break;
+			}
+			auto base_struct = std::get<std::shared_ptr<struct_info>>(root.lookup.at(parent));
+			parent = base_struct->base_name.id;
+		}
+
+		if (parent != 3202290298) { // skip EventBase
+			continue;
+		}
+
+		ignore.insert(struct_->name.id);
+	}
+	generate_structs(root, include_path, source_path, meson_build_files, referenced_types, lookup_types, ignore);
 
 	for (const auto &enum_ : root.enums) {
 		generate_enum(enum_, enum_path);
@@ -585,7 +618,6 @@ main(int argc, char **argv) -> int { // NOLINT(*-exception-escape)
 	for (const auto &bitset : root.bitsets) {
 		generate_bitset(bitset, bitset_path);
 	}
-
 
 	std::unordered_set<std::string> includes_set;
 	std::unordered_set<std::string> registration_set;

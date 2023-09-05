@@ -4,12 +4,12 @@ ddl_codegen_files = []
 
 subdir('src/generated')
 
-rivetddllib = static_library('rivet-ddl', ddl_codegen_files + [
+rivetddllib = library('rivet-ddl', ddl_codegen_files + [
         'src/rivet_ddl.cpp',
         'src/rivet_ddl_registration.cpp',
 	],
 	include_directories: rivetddllib_includedir,
-	dependencies: rivet_deps + [rivetdep],
+	dependencies: deps + [rivetdep],
 	install: true,
 	cpp_args: ['-DRIVET_DDL_EXPORTING'],
 	gnu_symbol_visibility: 'hidden')

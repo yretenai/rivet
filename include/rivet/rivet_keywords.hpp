@@ -17,7 +17,7 @@
 	#ifdef RIVET_DDL_STATIC
 		#define RIVET_DDL_SHARED
 	#else
-		#ifdef RIVET_DDL_EXPORTING
+		#if defined(RIVET_DDL_EXPORTING) || defined(RIVET_EXPORTING)
 			#define RIVET_DDL_SHARED __declspec(dllexport)
 		#else
 			#define RIVET_DDL_SHARED __declspec(dllimport)
