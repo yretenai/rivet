@@ -11,6 +11,7 @@
 #include <unordered_set>
 #include <variant>
 #include <vector>
+#include <optional>
 
 #include <ankerl/unordered_dense.h>
 
@@ -197,7 +198,7 @@ namespace rivet::structures {
 
 			if (std::holds_alternative<std::string_view>(variant)) {
 				auto str = std::get<std::string_view>(variant);
-				for (auto i = 0; i < N; i++) {
+				for (auto i = 0u; i < N; i++) {
 					if (str == enum_values.at(i)) {
 						return static_cast<T>(i);
 					}
@@ -233,7 +234,7 @@ namespace rivet::structures {
 					result.emplace_back(static_cast<T>(std::get<int64_t>(enum_value)));
 				} else if (std::holds_alternative<std::string_view>(enum_value)) {
 					auto str = std::get<std::string_view>(enum_value);
-					for (auto i = 0; i < N; i++) {
+					for (auto i = 0u; i < N; i++) {
 						if (str == enum_values.at(i)) {
 							result.emplace_back(static_cast<T>(i));
 							break;
@@ -274,7 +275,7 @@ namespace rivet::structures {
 					result |= static_cast<uint64_t>(std::get<int64_t>(variant));
 				} else if (std::holds_alternative<std::string_view>(variant)) {
 					auto str = std::get<std::string_view>(variant);
-					for (auto i = 0; i < N; i++) {
+					for (auto i = 0u; i < N; i++) {
 						if (str == std::get<0>(bitset_values.at(i))) {
 							result |= std::get<1>(bitset_values.at(i));
 							break;

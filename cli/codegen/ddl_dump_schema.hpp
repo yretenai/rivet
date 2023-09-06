@@ -6,6 +6,12 @@
 
 #include <unordered_set>
 #include <variant>
+#include <version>
+#ifdef __cpp_lib_format
+#include <format>
+#else
+#include <sstream>
+#endif
 
 #include <nlohmann/json.hpp>
 
@@ -21,6 +27,17 @@ enum class serialized_array_type : uint8_t {
 	dynamic,
 	hashmap
 };
+
+auto
+to_hex(uint32_t value) -> std::string {
+#ifdef __cpp_lib_format
+	return std::format("{:x}", value);
+#else
+	std::stringstream stream;
+	stream << std::hex << value;
+	return stream.str();
+#endif
+}
 
 template <typename T>
 auto
@@ -47,7 +64,7 @@ struct name_info {
 
 	[[nodiscard]] auto
 	get_id_hex() const -> std::string {
-		return std::format("{:x}", id);
+		return to_hex(id);
 	}
 
 	[[nodiscard]] auto
@@ -145,7 +162,7 @@ struct bitset_value_info {
 
 	[[nodiscard]] auto
 	get_value_hex() const -> std::string {
-		return std::format("{:x}", value);
+		return to_hex(value);
 	}
 };
 

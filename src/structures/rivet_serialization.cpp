@@ -207,7 +207,7 @@ namespace rivet::structures {
 				std::visit(
 					[&json, field_name](auto &&arg) {
 						using T = std::decay_t<decltype(arg)>;
-						if constexpr (std::is_same_v<T, uint64_t> || std::is_same_v<T, int64_t> || std::is_same_v<T, double> || std::is_same_v<T, bool> || std::is_same_v<T, nullptr_t>) {
+						if constexpr (std::is_same_v<T, uint64_t> || std::is_same_v<T, int64_t> || std::is_same_v<T, double> || std::is_same_v<T, bool> || std::is_same_v<T, std::nullptr_t>) {
 							json[field_name] = arg;
 							return;
 						} else if constexpr (std::is_same_v<T, std::string_view>) {
@@ -226,7 +226,7 @@ namespace rivet::structures {
 					std::visit(
 						[&array](auto &&arg) {
 							using T = std::decay_t<decltype(arg)>;
-							if constexpr (std::is_same_v<T, uint64_t> || std::is_same_v<T, int64_t> || std::is_same_v<T, double> || std::is_same_v<T, bool> || std::is_same_v<T, nullptr_t>) {
+							if constexpr (std::is_same_v<T, uint64_t> || std::is_same_v<T, int64_t> || std::is_same_v<T, double> || std::is_same_v<T, bool> || std::is_same_v<T, std::nullptr_t>) {
 								array.emplace_back(arg);
 								return;
 							} else if constexpr (std::is_same_v<T, std::string_view>) {

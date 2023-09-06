@@ -133,7 +133,7 @@ generate_struct(const dump_root &root, const std::shared_ptr<struct_info> &struc
 
 		auto type_id = std::string(template_struct_type_id);
 		auto field_name = field.name.get_name_safe();
-		auto field_id = std::format("{:x}", rivet::hash::hash_type_id(field_name));
+		auto field_id = to_hex(rivet::hash::hash_type_id(field_name));
 
 		if (field_name == struct_name) {
 			field_name += "_";
