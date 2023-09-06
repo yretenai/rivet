@@ -4,16 +4,16 @@ use a memory dumped executable, as these structures are initially empty, engine 
 
 it is possible to make a dll hook that does this, in theory you could just cast the pointers to the C structs.
 
-note: the signatures below use SIMD instructions. 
+note: the signatures below use SIMD instructions.
 
 if the engine is compiled without SIMD support or uses a more recent instruction set,
 the instructions will be different
 
 ### finding hash_map<br/>-> map<?, type_descriptor*>
 
-`0f 57 c0 48 8d [?? ?? ?? ?? ??] 0f 11 05 ?? ?? ?? ?? 0f 11 05 ?? ?? ?? ?? 0f 11 05 ?? ?? ?? ??`
+`0f 57 c0 48 8d [?? ?? ?? ?? ??] 0f 11 05 ?? ?? ?? ?? 0f 11 05 ?? ?? ?? ?? 0f 11 05`
 
-relative address in the `[ ]` block is the pointer to the hash_map struct 
+relative address in the `[ ]` block is the pointer to the hash_map struct
 
 ### finding type_descriptor<br/>-> type_descriptor*
 
