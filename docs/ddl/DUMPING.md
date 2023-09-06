@@ -9,13 +9,13 @@ note: the signatures below use SIMD instructions.
 if the engine is compiled without SIMD support or uses a more recent instruction set,
 the instructions will be different
 
-### finding hash_map<br/>-> map<?, type_descriptor*>
+### finding hash_map<br/>-> map<?, type_descriptor*>*
 
 `0f 57 c0 48 8d [?? ?? ?? ?? ??] 0f 11 05 ?? ?? ?? ?? 0f 11 05 ?? ?? ?? ?? 0f 11 05`
 
 relative address in the `[ ]` block is the pointer to the hash_map struct
 
-### finding type_descriptor<br/>-> type_descriptor*
+### finding type_descriptor<br/>-> type_descriptor**
 
 `48 8d [?? ?? ?? ?? ??] 66 89 41 14 8b ?? ?? ?? ?? ?? 48 89 ?? ?? ff c0 89 [?? ?? ?? ?? ??] c3`
 
@@ -26,6 +26,16 @@ relative address in the `[ ]` block is the pointer to the type_descriptor* array
 `48 8d ?? ?? ?? ?? ?? 66 89 41 14 8b [?? ?? ?? ?? ??] 48 89 ?? ?? ff c0 89 ?? ?? ?? ?? ?? c3`
 
 relative address in the `[ ]` block is the pointer to the array count (note this is the same function as above)
+
+### finding function_descriptor<br/>-> function_descriptor**
+
+`48 8b [?? ?? ?? ?? ??] 48 85 c0 74 07 48 89 81 88 00 00`
+
+this is a linked list.
+
+relative address in the `[ ]` block is the pointer to the last function_descriptor* entry. +8 = count, +16 = some pointer?
+
+the value +8 is a pointer that can be leading into heap memory!
 
 ### c structs
 ```c
@@ -109,10 +119,41 @@ struct hash_map {
     int capacity;
 };
 
-// there's a count for functions, but the pointer points to heap memory so this map is probably dynamic
-struct function_entry { // todo: where does this start?
+struct function_entry {
+    void* unknown0; // zero?
+    void* unknown8; // zero?
+    void* unknown10; // zero?
+    void* unknown18; // zero?
+    void* unknown20; // zero?
+    void* unknown28; // zero?
+    void* unknown30; // zero?
+    void* unknown38; // zero?
+    void* unknown40; // zero?
+    void* unknown48; // zero?
+    void* unknown50; // zero?
+    void* unknown58; // zero?
+    const char* name;
+    void* unknown68; // zero?
+    void* unknown70; // zero?
+    int size; // ????
+    int id;
+    function_entry* parent;
     function_entry* previous;
-    void* a; // todo
-    void* b; // todo
+    void* unknown90; // zero?
+    void* unknown98; // zero?
+    void* unknowna0; // zero?
+    void* unknowna8; // zero?
+    void* unknownb0; // zero?
+    void* unknownb8; // zero?
+    void* unknownc0; // zero?
+    type_info* type;
+    void* ctor;
+    int unknownd8; // zero?
+    unsigned short offset; // goes down as you go up in parents?
+    unsigned short offset_again; // matches offset
+    short unknowne0; // -1?
+    unsigned int flags; // 1 or 0x1400001?
+    uint16_t index;
 };
+
 ```
