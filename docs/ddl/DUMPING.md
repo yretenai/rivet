@@ -13,19 +13,19 @@ the instructions will be different
 
 `0f 57 c0 48 8d [?? ?? ?? ?? ??] 0f 11 05 ?? ?? ?? ?? 0f 11 05 ?? ?? ?? ?? 0f 11 05`
 
-relative address in the `[ ]` block is the pointer to the hash_map struct
+relative address in the `[ ]` block is the offset to a pointer that leads to the hash_map struct
 
 ### finding type_descriptor<br/>-> type_descriptor**
 
 `48 8d [?? ?? ?? ?? ??] 66 89 41 14 8b ?? ?? ?? ?? ?? 48 89 ?? ?? ff c0 89 [?? ?? ?? ?? ??] c3`
 
-relative address in the `[ ]` block is the pointer to the type_descriptor* array
+relative address in the `[ ]` block  is the offset to a pointer that leads to the type_descriptor* array
 
 ### finding the array size of type_descriptor*<br/>-> int
 
 `48 8d ?? ?? ?? ?? ?? 66 89 41 14 8b [?? ?? ?? ?? ??] 48 89 ?? ?? ff c0 89 ?? ?? ?? ?? ?? c3`
 
-relative address in the `[ ]` block is the pointer to the array count (note this is the same function as above)
+relative address in the `[ ]` block is the offset to the array count (note this is the same function as above)
 
 ### finding function_descriptor<br/>-> function_descriptor**
 
@@ -33,9 +33,9 @@ relative address in the `[ ]` block is the pointer to the array count (note this
 
 this is a linked list.
 
-relative address in the `[ ]` block is the pointer to the last function_descriptor* entry. +8 = count, +16 = some pointer?
+relative address in the `[ ]` block is the offset to a pointer that leads to the last function_descriptor* entry. +8 = count, +16 = some pointer?
 
-the value +8 is a pointer that can be leading into heap memory!
+the value +0 is a pointer that can be leading into heap memory!
 
 ### c structs
 ```c
