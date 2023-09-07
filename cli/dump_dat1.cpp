@@ -2,6 +2,8 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
+#define RIVET_USE_NLOHMANN
+
 #include <array>
 #include <cstdint>
 #include <filesystem>
@@ -23,6 +25,8 @@
 #include <rivet/rivet_array.hpp>
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_asset.hpp>
+#include <rivet/structures/rivet_serialization.hpp>
+#include <rivet/ddl/serialization.hpp>
 
 #include "helper.hpp"
 
@@ -103,7 +107,9 @@ dump_dat1(int argc, char **argv) -> int {
 			buffers.emplace_back(archive_toc::get_toc_data_buffer(dat1_buffer));
 		} else if (tag == dependency_dag::magic || tag == dependency_dag::magic_compressed) {
 			buffers.emplace_back(dependency_dag::get_dag_data_buffer(dat1_buffer));
-		} else if (tag != dat1::magic) {
+		} else if (tag == dat1::magic) {
+			buffers.emplace_back(dat1_buffer);
+		} else {
 			bundle = std::make_shared<rivet::data::asset_bundle>(dat1_buffer);
 			for (rivet_size i = 0; i < bundle->header.sizes.size(); i++) {
 				auto entry = bundle->get_entry(i);
@@ -132,11 +138,11 @@ dump_dat1(int argc, char **argv) -> int {
 
 			if (buffer->size() > 4 && buffer->get<uint32_t>(0) == dat1::magic) {
 				auto dat = std::make_shared<dat1>(buffer, idx < buffers.size() ? buffers[idx] : nullptr);
-				for (const auto &section : dat->sections) {
+				for (const auto &[section_id, section] : dat->sections) {
 					if (verbose) {
-						std::cout << "section " << std::setfill('0') << std::setw(8) << std::hex << section.first;
+						std::cout << "section " << std::setfill('0') << std::setw(8) << std::hex << section_id;
 
-						auto name = section_name_map.find(section.first);
+						auto name = section_name_map.find(section_id);
 						if (name != section_name_map.end()) {
 							std::cout << " (" << name->second << ")";
 						}
@@ -145,9 +151,9 @@ dump_dat1(int argc, char **argv) -> int {
 					}
 
 					auto filename_stream = std::stringstream();
-					filename_stream << std::setfill('0') << std::setw(8) << std::hex << section.first;
-					if (section_name_map.find(section.first) != section_name_map.end()) {
-						filename_stream << '_' << section_name_map[section.first];
+					filename_stream << std::setfill('0') << std::setw(8) << std::hex << section_id;
+					if (section_name_map.find(section_id) != section_name_map.end()) {
+						filename_stream << '_' << section_name_map[section_id];
 					}
 					filename_stream << ".bin";
 					auto section_path = output_path / stream_name / filename_stream.str();
@@ -159,7 +165,25 @@ dump_dat1(int argc, char **argv) -> int {
 						continue;
 					}
 
-					section_file.write(reinterpret_cast<const char *>(section.second.second->data()), static_cast<std::streamsize>(section.second.second->size()));
+					section_file.write(reinterpret_cast<const char *>(section.second->data()), static_cast<std::streamsize>(section.second->size()));
+
+					if(section.second->size() > 8) {
+						if(section.second->get<rivet_type_id>(0) == rivet::ddl::serialized::magic_a &&
+							section.second->get<rivet_type_id>(4) == rivet::ddl::serialized::magic_b) {
+							auto serialized = std::make_shared<rivet::ddl::serialized>(section.second, dat->buffer);
+							auto json = serialized->to_nlohmann_json();
+
+							auto json_path = section_path;
+							json_path.replace_extension(".json");
+							std::ofstream json_file(json_path, std::ios::binary);
+							if (!json_file.is_open()) {
+								std::cout << "failed to open " << json_path << '\n';
+								continue;
+							}
+
+							json_file << json.dump(4) << '\n';
+						}
+					}
 				}
 			}
 		}

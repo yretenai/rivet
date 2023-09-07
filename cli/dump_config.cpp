@@ -58,8 +58,8 @@ dump_config(int argc, char **argv) -> int {
 		path = path.replace_extension(".json");
 
 		nlohmann::json json_data;
-		json_data["type"] = conf.type.type;
-		json_data["data"] = conf.value->to_nlohmann_json();
+		json_data["Type"] = conf.type.type;
+		json_data["Obj"] = conf.value->to_nlohmann_json();
 
 		std::ofstream out(path, std::ios::out | std::ios::trunc | std::ios::binary);
 		if (!out.is_open()) {

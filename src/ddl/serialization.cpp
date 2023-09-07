@@ -35,6 +35,11 @@ namespace rivet::ddl {
 		}
 
 		rivet_size cursor = ((sizeof(rivet_serialized_field) + sizeof(rivet_off)) * header.node_count);
+		auto abs_offset = buffer->offset + cursor;
+		if((abs_offset % 4) != 0) {
+			cursor += 4 - (abs_offset % 4); // align to 4 bytes??
+		}
+
 		for (const auto &field : *field_info) {
 			auto count = field.get_count();
 			if (field.get_unknown() != 0) {
@@ -141,6 +146,10 @@ namespace rivet::ddl {
 					}
 					break;
 				case rivet_serialized_type::none:
+					if (count < 1) { // only happens in save files?
+						count = 1;
+					}
+
 					for (auto index = 0u; index < count; index++) {
 						entry.emplace_back(std::nullptr_t());
 					}
