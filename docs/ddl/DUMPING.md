@@ -59,8 +59,9 @@ struct type_info_ex_type_13 {
 
 struct type_info_ex_type_12 {
     int count;
-    void* unknown1; // as far as i can tell this is always zero
-    void* unknown2; // ditto
+    int unknown4;
+    void* unknown8; // as far as i can tell this is always zero
+    void* unknown16; // ditto
     int* values;
     const char** names;
     int* ids;
@@ -69,8 +70,8 @@ struct type_info_ex_type_12 {
 struct type_ex_select_info {
     int type_id;
     int count;
-    void* unknown1; // as far as i can tell this is always zero
-    void* unknown2; // ditto
+    void* unknown8; // as far as i can tell this is always zero
+    void* unknown16; // ditto
     int* ids;
     const char** names;
     const char** descriptions;
@@ -79,7 +80,6 @@ struct type_ex_select_info {
 
 struct type_info_ex_type_11 {
     type_ex_select_info* select_info;
-    int default_value;
 };
 
 struct type_info {
@@ -109,7 +109,7 @@ struct type_descriptor {
     const char* name; // same as type_info.name
     int type_id; // same as type_info.type_id
     int index; // index into root_types
-    type_descriptor* parent; // points to another type_descriptor, init chain?
+    type_descriptor** parent; // points to another type_descriptor, init chain?
 };
 
 struct hash_map {
