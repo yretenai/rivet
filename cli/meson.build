@@ -1,4 +1,8 @@
-executable('rivet-extract', ['extract.cpp'],
+executable('rivet-toc-extract', ['extract_toc.cpp'],
+	dependencies: cli_deps + libdeps,
+	install: true)
+
+executable('rivet-toc-dump', ['dump_toc.cpp'],
 	dependencies: cli_deps + libdeps,
 	install: true)
 
