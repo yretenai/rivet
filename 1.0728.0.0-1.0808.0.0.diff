@@ -1,0 +1,8 @@
+--- 1.0728.0.0.txt	2023-09-08 11:54:04.648266700 +0100
++++ 1.0808.0.0.txt	2023-09-08 11:54:19.550770100 +0100
+@@ -1 +1 @@
+-# version 1.0728.0.0
++# version 1.0808.0.0
+@@ -65766 +65766 @@
+-aed6101948aafa54,configs/system/system_photomodeconfiggame.config,21a56f68,none,none,n,263216,d\config
++aed6101948aafa54,configs/system/system_photomodeconfiggame.config,21a56f68,none,none,n,263280,d\config

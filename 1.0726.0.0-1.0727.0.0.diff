@@ -1,0 +1,35 @@
+--- 1.0726.0.0.txt	2023-09-08 11:53:46.486699600 +0100
++++ 1.0727.0.0.txt	2023-09-08 11:53:54.855866600 +0100
+@@ -1 +1 @@
+-# version 1.0726.0.0
++# version 1.0727.0.0
+@@ -17720 +17720 @@
+-8c9357431555eef1,levels/i29/openarea/ardolis/tile_b17/tile_b17_lgt.zone,1f390aa0,none,none,n,9424,d\zone_openarea
++8c9357431555eef1,levels/i29/openarea/ardolis/tile_b17/tile_b17_lgt.zone,1f390aa0,none,none,n,7840,d\zone_openarea
+@@ -24997 +24997 @@
+-91c0685dd99c9321,levels/i29/openarea/ardolis/tile_f19/tile_f19_lgt.zone,1f390aa0,none,none,n,20704,d\zone_openarea
++91c0685dd99c9321,levels/i29/openarea/ardolis/tile_f19/tile_f19_lgt.zone,1f390aa0,none,none,n,19904,d\zone_openarea
+@@ -43926 +43926 @@
+-9f4d5a323765d081,levels/i29/openarea/ardolis/tile_zz17/tile_zz17_lgt.zone,1f390aa0,none,none,n,36172,d\zone_openarea
++9f4d5a323765d081,levels/i29/openarea/ardolis/tile_zz17/tile_zz17_lgt.zone,1f390aa0,none,none,n,35772,d\zone_openarea
+@@ -44221 +44221 @@
+-9f8151ff759554b3,levels/i29/openarea/ardolis/tile_a19/tile_a19_lgt.zone,1f390aa0,none,none,n,784,d\zone_openarea
++9f8151ff759554b3,levels/i29/openarea/ardolis/tile_a19/tile_a19_lgt.zone,1f390aa0,none,none,n,384,d\zone_openarea
+@@ -55972 +55972 @@
+-a7fe9fa37f45249c,levels/i29/openarea/ardolis/tile_b18/tile_b18_lgt.zone,1f390aa0,none,none,n,7408,d\zone_openarea
++a7fe9fa37f45249c,levels/i29/openarea/ardolis/tile_b18/tile_b18_lgt.zone,1f390aa0,none,none,n,6992,d\zone_openarea
+@@ -58509 +58509 @@
+-a9bfa601d34ce30e,levels/i29/openarea/ardolis/tile_e18/tile_e18_lgt.zone,1f390aa0,none,none,n,4000,d\zone_openarea
++a9bfa601d34ce30e,levels/i29/openarea/ardolis/tile_e18/tile_e18_lgt.zone,1f390aa0,none,none,n,3584,d\zone_openarea
+@@ -63936 +63936 @@
+-ad90f2aa27a40c44,levels/i29/openarea/ardolis/tile_d20/tile_d20_lgt.zone,1f390aa0,none,none,n,1312,d\zone_openarea
++ad90f2aa27a40c44,levels/i29/openarea/ardolis/tile_d20/tile_d20_lgt.zone,1f390aa0,none,none,n,896,d\zone_openarea
+@@ -71934 +71934 @@
+-b34deba68d4a7580,levels/i29/openarea/ardolis/tile_a17/tile_a17_lgt.zone,1f390aa0,none,none,n,20304,d\zone_openarea
++b34deba68d4a7580,levels/i29/openarea/ardolis/tile_a17/tile_a17_lgt.zone,1f390aa0,none,none,n,18736,d\zone_openarea
+@@ -74422 +74422 @@
+-b51586b99a7fb912,levels/i29/openarea/ardolis/tile_c19/tile_c19_lgt.zone,1f390aa0,none,none,n,784,d\zone_openarea
++b51586b99a7fb912,levels/i29/openarea/ardolis/tile_c19/tile_c19_lgt.zone,1f390aa0,none,none,n,384,d\zone_openarea
+@@ -79763 +79763 @@
+-b8da990950517a94,levels/i29/openarea/ardolis/tile_e20/tile_e20_lgt.zone,1f390aa0,none,none,n,12560,d\zone_openarea
++b8da990950517a94,levels/i29/openarea/ardolis/tile_e20/tile_e20_lgt.zone,1f390aa0,none,none,n,11376,d\zone_openarea

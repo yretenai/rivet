@@ -1,0 +1,22 @@
+--- 1.0815.0.0.txt	2023-09-08 11:54:29.224265400 +0100
++++ 1.0831.0.0.txt	2023-09-08 11:53:17.520746000 +0100
+@@ -1 +1 @@
+-# version 1.0815.0.0
++# version 1.0831.0.0
+@@ -2836 +2836 @@
+-8204eb5b857474bc,configs/equipment/wpn_schrodinger_item.config,21a56f68,none,none,n,1616,d\config
++8204eb5b857474bc,configs/equipment/wpn_schrodinger_item.config,21a56f68,none,none,n,1472,d\config
+@@ -7716 +7715,0 @@
+-857db50d41a23463,movies/weaponvids/wpn_magnamissle/wpn_magnamissle.movie,0,none,none,n,60004076,d\movie_weaponvids
+@@ -31250 +31248,0 @@
+-963d08fac80e58ac,configs/video/wpn_schrodinger_video.config,21a56f68,none,none,n,464,d\config
+@@ -47181 +47178,0 @@
+-a1adec585ea1b35a,movies/weaponvids/wpn_schrodingers/wpn_schrodingers.movie,0,none,none,n,60004076,d\movie_weaponvids
+@@ -67350 +67347 @@
+-affb9d69d0886e9e,conduit/mission/mis_cord_emergency_raft_vfx/mis_cord_emergency_raft_vfx.conduit,44c1aa50,none,none,n,7152,d\conduit
++affb9d69d0886e9e,conduit/mission/mis_cord_emergency_raft_vfx/mis_cord_emergency_raft_vfx.conduit,44c1aa50,none,none,n,5696,d\conduit
+@@ -77051 +77048 @@
+-b6efbb1e32ce5336,configs/equipment/wpn_magnamissile_item.config,21a56f68,none,none,n,1616,d\config
++b6efbb1e32ce5336,configs/equipment/wpn_magnamissile_item.config,21a56f68,none,none,n,1488,d\config
+@@ -82081 +82077,0 @@
+-ba80dce6f5fcab73,configs/video/wpn_magnamissile_video.config,21a56f68,none,none,n,448,d\config
