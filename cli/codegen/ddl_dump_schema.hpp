@@ -29,7 +29,7 @@ enum class serialized_array_type : uint8_t {
 };
 
 auto
-to_hex(uint32_t value) -> std::string {
+to_hex(const uint64_t value) -> std::string {
 #ifdef __cpp_lib_format
 	return std::format("{:x}", value);
 #else

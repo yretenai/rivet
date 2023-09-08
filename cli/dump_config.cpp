@@ -17,7 +17,6 @@
 #include <rivet/data/asset_bundle.hpp>
 #include <rivet/data/config.hpp>
 #include <rivet/ddl/serialization.hpp>
-#include <rivet/ddl/rivet_ddl.hpp>
 #include <rivet/rivet.hpp>
 #include <rivet/rivet_array.hpp>
 #include <rivet/rivet_keywords.hpp>
@@ -45,8 +44,6 @@ dump_config(int argc, char **argv) -> int {
 	}
 
 	const auto normalized_input_files = find_glob(input_files, ".config", recursive);
-
-	rivet::ddl::register_ddl_types();
 
 	for (const auto &input_file : normalized_input_files) {
 		std::cout << "converting " << input_file << '\n';
