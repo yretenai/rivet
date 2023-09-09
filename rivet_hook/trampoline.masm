@@ -1,0 +1,7 @@
+.data
+extern proc_address : qword
+.code
+trampoline proc
+jmp qword ptr [proc_address]
+trampoline endp
+end

@@ -113,6 +113,8 @@ if not get_option('lib_only')
     subdir('cli')
 endif
 
+subdir('rivet_hook')
+
 if get_option('rivet_tests')
     subdir('test')
 endif
