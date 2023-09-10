@@ -96,11 +96,13 @@ efd92e68 Model Physics Data
 bce86b01 Model Render Overrides
 c61b1ff5 Model Skin Batch
 dca379a2 Model Skin Data
+5240c82b Model Skin Joint Remap
 27ca5246 Model Splines
 3c9dabdf Model Spline Subsets
 a98be69b Model Std Vert
 78d9cbde Model Subset
 00823787 Model Texture Overrides
+6b855eed Model UV1 Vert
 fbd496d6 Node Graph Refs
 4765351a Sound Bank Built
 0e19e37f Sound Bank Info
