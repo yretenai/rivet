@@ -80,6 +80,11 @@ dump_dat1(int argc, char **argv) -> int {
 			continue;
 		}
 
+		// ignore recursion
+		if (std::find(dat1_path.begin(), dat1_path.end(), ".sections") != dat1_path.end()) {
+			continue;
+		}
+
 		std::filesystem::path output_path;
 		if (has_output_dir) {
 			output_path = root_path / dat1_path.filename();
@@ -98,7 +103,7 @@ dump_dat1(int argc, char **argv) -> int {
 			continue;
 		}
 
-		std::cout << "processing " << output_path.string() << '\n';
+		std::cout << "processing " << dat1_path.string() << '\n';
 
 		std::vector<std::shared_ptr<rivet_data_array>> buffers;
 		std::shared_ptr<rivet::data::asset_bundle> bundle;

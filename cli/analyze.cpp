@@ -17,6 +17,7 @@
 
 #include <ankerl/unordered_dense.h>
 #include <clipp.h>
+#include <nlohmann/json.hpp>
 
 #include <rivet/data/asset_bundle.hpp>
 #include <rivet/data/dat1.hpp>
@@ -45,11 +46,6 @@ enum class analyze_target {
 };
 
 const std::array<std::string, (int) analyze_target::max> analyze_target_enum { "none", "header", "texture_header", "dat1_sections", "nested_dat1" };
-
-struct dat1_info {
-	ankerl::unordered_dense::map<rivet_type_id, std::unordered_set<std::string>> schemas;
-	ankerl::unordered_dense::map<rivet_type_id, std::unordered_set<std::string>> sections;
-};
 
 #define LOOP_START                                                          \
 	for (auto locale_id = 0; locale_id < 32; locale_id++) {                 \
@@ -165,7 +161,9 @@ analyze_texture_header(const std::shared_ptr<rivet_game> &game) {
 
 void
 analyze_dat1_sections(const std::shared_ptr<rivet_game> &game) {
-	ankerl::unordered_dense::map<rivet_asset_type, dat1_info> dat1_info_map;
+	nlohmann::json dat1_info_map;
+	nlohmann::json root;
+	nlohmann::json id_map;
 
 	LOOP_START
 
@@ -177,7 +175,14 @@ analyze_dat1_sections(const std::shared_ptr<rivet_game> &game) {
 		continue;
 	}
 
-	auto &dat1_info = dat1_info_map[asset->type];
+	id_map[std::to_string(asset->id)] = asset->name.value_or(std::to_string(asset->id));
+
+	auto asset_type_str = rivet::helpers::rivet_asset_type_enum[static_cast<uint32_t>(asset->type)];
+	if (dat1_info_map.find(asset_type_str) == dat1_info_map.end()) {
+		dat1_info_map[asset_type_str] = nlohmann::json::object_t();
+	}
+
+	auto &dat1_info = dat1_info_map[asset_type_str];
 
 	auto asset_data = game->open_file(asset);
 	if (asset_data == nullptr || asset_data->size() < sizeof(rivet::data::dat1::dat1_header) || asset_data->size() < sizeof(rivet::structures::rivet_asset_header)) {
@@ -192,40 +197,33 @@ analyze_dat1_sections(const std::shared_ptr<rivet_game> &game) {
 		}
 
 		auto dat1 = rivet::data::dat1(bundle_data);
-
-		if (dat1_info.schemas[dat1.header.schema].size() < 10) {
-			dat1_info.schemas[dat1.header.schema].emplace(asset->name.value_or(std::to_string(asset->id)));
-		}
-
 		for (const auto &section_id : dat1.section_ids) {
-			if (dat1_info.sections[section_id].size() < 10) {
-				dat1_info.sections[section_id].emplace(asset->name.value_or(std::to_string(asset->id)));
+			auto [section_data, _] = dat1.sections.find(section_id)->second;
+			auto section_list = dat1_info.find(std::to_string(section_id));
+			if (section_list == dat1_info.end()) {
+				section_list = dat1_info.emplace(std::to_string(section_id), nlohmann::json::array_t()).first;
 			}
+			nlohmann::json value {};
+			value["asset"] = asset->id;
+			value["size"] = section_data.size;
+			section_list.value().emplace_back(value);
 		}
 	}
 
 	LOOP_END
 
-	for (const auto &[key, value] : dat1_info_map) {
-		std::cout << key << ' ' << value.schemas.size() << " schemas, " << value.sections.size() << " sections\n";
-		std::cout << '\t' << "schemas\n";
-
-		for (const auto &[key2, value2] : value.schemas) {
-			std::cout << "\t\t" << key2 << ' ' << value2.size() << " entries\n";
-			for (const auto &name : value2) {
-				std::cout << "\t\t\t" << name << '\n';
-			}
-		}
-
-		std::cout << '\t' << "sections\n";
-
-		for (const auto &[key2, value2] : value.sections) {
-			std::cout << "\t\t" << key2 << ' ' << value2.size() << " entries\n";
-			for (const auto &name : value2) {
-				std::cout << "\t\t\t" << name << '\n';
-			}
+	// sort by size
+	for (const auto &[key, value] : dat1_info_map.items()) {
+		for (const auto &[key2, value2] : value.items()) {
+			std::sort(value2.begin(), value2.end(), [](const auto &left, const auto &right) { return left["size"] < right["size"]; });
 		}
 	}
+
+	auto json_stream = std::ofstream("dat1_sections.json");
+	root["ids"] = id_map;
+	root["dat"] = dat1_info_map;
+	json_stream << root.dump(4);
+	json_stream.close();
 }
 
 void
