@@ -26,6 +26,10 @@ executable('rivet-debug-analyze', ['analyze.cpp'],
 	dependencies: cli_deps + libdeps,
 	install: true)
 
+executable('rivet-debug-hash', ['hash.cpp'],
+	dependencies: cli_deps + libdeps,
+	install: true)
+
 executable('rivet-codegen-ddl', ['codegen_ddl.cpp'],
 	dependencies: cli_deps,
 	include_directories: ['../include'],
