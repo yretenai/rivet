@@ -14,12 +14,14 @@
 #include "signature.hpp"
 #include "signature_engine.hpp"
 
+#include <MinHook.h>
 #include <nlohmann/json.hpp>
 
 namespace {
 	std::ofstream g_output;
 	HMODULE g_renderdoc = nullptr;
 	HMODULE g_game_module = nullptr;
+	bool g_minhook_initialized = false;
 	rivet_hook::settings g_settings;
 	std::thread g_ddl_dump_thread;
 } // namespace
@@ -221,8 +223,118 @@ namespace rivet_hook {
 		g_output << "[DDL] found " << bitsets.size() << " bitsets\n";
 		g_output << "[DDL] found " << roots.size() << " roots\n";
 		g_output << "[DDL] found " << types.size() << " types\n";
+	}
 
-		return;
+	using context_log_t = const char *(*) (const char *, const char *);
+	context_log_t fwd_context_log = nullptr;
+
+	std::string last_context;
+	std::string last_message;
+
+	auto
+	context_log(const char *context, const char *message) -> const char * {
+		auto valid = (context != nullptr && context[0] != 0 && context[0] != '?') && (message != nullptr && message[0] != 0 && message[0] != '?');
+		const auto *result = fwd_context_log(context, message);
+		if (valid) {
+			auto current_context = std::string(context);
+			auto current_message = std::string(message);
+
+			if (current_context != last_context || current_message != last_message) {
+				last_context = current_context;
+				last_message = current_message;
+				g_output << "[ctx] [" << (context == nullptr ? "?" : context) << "] " << (message == nullptr ? "" : message) << '\n';
+			}
+		}
+		return result;
+	}
+
+	auto
+	log(const char *message, ...) -> void * {
+		if (message != nullptr) {
+			va_list args;
+			va_start(args, message);
+			auto buffer_size = vsnprintf(nullptr, 0, message, args) + 1;
+			auto buffer = std::make_unique<char[]>(buffer_size);
+			vsnprintf(buffer.get(), buffer_size, message, args);
+			va_end(args);
+			std::string buffer_str(buffer.get());
+			g_output << "[log] " << buffer_str;
+			if (buffer_str.back() != '\n') {
+				g_output << '\n';
+			}
+		}
+
+		return nullptr;
+	}
+
+	void
+	init_minhook() {
+		if (g_minhook_initialized) {
+			return;
+		}
+
+		if (MH_Initialize() != MH_OK) {
+			g_output << "[rivet] failed to initialize minhook\n";
+			return;
+		}
+
+		g_minhook_initialized = true;
+	}
+
+	void
+	attach_context_log() {
+		auto ptrs = scan(g_game_module, CONTEXT_LOG_SIGNATURE);
+		if (ptrs.empty()) {
+			g_output << "[rivet] could not find context log pointer, aborting\n";
+			return;
+		}
+
+		if (ptrs.size() > 1) {
+			g_output << "[rivet] too many context log pointers, aborting\n";
+			return;
+		}
+
+		init_minhook();
+
+		if (MH_CreateHook(ptrs[0], &context_log, reinterpret_cast<LPVOID *>(&fwd_context_log)) != MH_OK) {
+			g_output << "[rivet] failed to hook context log\n";
+			return;
+		}
+
+		if (MH_EnableHook(ptrs[0]) != MH_OK) {
+			g_output << "[rivet] failed to enable context log hook\n";
+			return;
+		}
+
+		g_output << "[rivet] hooked context log\n";
+	}
+
+	void
+	attach_log() {
+		auto ptrs = scan(g_game_module, LOG_SIGNATURE);
+		if (ptrs.empty()) {
+			g_output << "[rivet] could not find log pointer, aborting\n";
+			return;
+		}
+
+		if (ptrs.size() > 1) {
+			g_output << "[rivet] too many log pointers, aborting\n";
+			return;
+		}
+
+		init_minhook();
+
+		if (MH_CreateHook(ptrs[0], &log, nullptr) != MH_OK) {
+			g_output << "[rivet] failed to hook log\n";
+			return;
+		}
+
+		if (MH_EnableHook(ptrs[0]) != MH_OK) {
+			g_output << "[rivet] failed to enable log hook\n";
+			return;
+		}
+
+		g_output << "[rivet] hooked log\n";
 	}
 
 #pragma clang diagnostic pop
@@ -247,15 +359,36 @@ namespace rivet_hook {
 			if (g_settings.load_renderdoc) {
 				g_output << "[rivet] loading renderdoc\n";
 				if (std::filesystem::exists("renderdoc.dll")) {
+					g_output << "[rivet] loaded local renderdoc\n";
 					g_renderdoc = LoadLibraryA("renderdoc.dll");
 				} else {
-					g_output << "[rivet] renderdoc.dll not found\n";
+					auto renderdoc_path = std::filesystem::path(g_settings.renderdoc_path.data());
+					if (renderdoc_path.empty()) {
+						g_output << "[rivet] renderdoc.dll not found\n";
+					} else {
+						if (std::filesystem::exists(renderdoc_path)) {
+							g_output << "[rivet] loaded " << renderdoc_path << "\n";
+							g_renderdoc = LoadLibraryA(g_settings.renderdoc_path.data());
+						} else {
+							g_output << "[rivet] renderdoc.dll not found\n";
+						}
+					}
 				}
 			}
 
 			if (g_settings.dump_ddl) {
 				g_output << "[rivet] starting ddl dump thread\n";
 				g_ddl_dump_thread = std::thread(dump_ddl);
+			}
+
+			if (g_settings.attach_context_log) {
+				g_output << "[rivet] attaching context log\n";
+				attach_context_log();
+			}
+
+			if (g_settings.attach_log) {
+				g_output << "[rivet] attaching log\n";
+				attach_log();
 			}
 
 			g_output << "[rivet] init complete\n";
