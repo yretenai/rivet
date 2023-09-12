@@ -75,9 +75,19 @@ c24b19d9 Material Template Globals
 1cafe804 Material Template Samplers
 3e45aa13 Material Variation Info
 958f7b33 Material Water Info
+add1cbd3 Model Anim Dynamics Def
+cd903318 Model Anim Geom Info
+3f70f60d Model Anim Geom Particles
+5e709570 Model Anim Morph Data
+a600c108 Model Anim Morph Indices
+380a5744 Model Anim Morph Info
+42349a17 Model Anim Ziva Info
+244e5823 Model Anim Ziva Data
 dcc88a19 Model Bind Pose
 283d0383 Model Built
 5cba9de9 Model Col Vert
+5796fef6 Model Collision Index Data
+f4cb2f37 Model Collision Vertex Data
 ccbaff15 Model GPU Skin
 0859863d Model Index
 15df9d3b Model Joint
@@ -92,6 +102,9 @@ b7380e8c Model Leaf Ids
 4ccea4ad Model Look Group
 3250bb80 Model Material
 c5354b60 Model Mirror Ids
+45079bc5 Model Morph Data
+237d59f1 Model Morph Info
+0ba45069 Model Ray-Tracing Parameters
 efd92e68 Model Physics Data
 bce86b01 Model Render Overrides
 c61b1ff5 Model Skin Batch
@@ -99,8 +112,12 @@ dca379a2 Model Skin Data
 5240c82b Model Skin Joint Remap
 27ca5246 Model Splines
 3c9dabdf Model Spline Subsets
+bb7303d5 Model Spline Skin Binding
+14d8b13c Model Spline Joint Binding
+5d5cf541 Model Spline Joint Weights
 a98be69b Model Std Vert
 78d9cbde Model Subset
+16f3ba18 Model Tex Vert
 00823787 Model Texture Overrides
 6b855eed Model UV1 Vert
 fbd496d6 Node Graph Refs
