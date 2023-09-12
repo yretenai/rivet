@@ -17,6 +17,9 @@
 #include <MinHook.h>
 #include <nlohmann/json.hpp>
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wmicrosoft-cast"
+
 namespace {
 	std::ofstream g_output;
 	HMODULE g_renderdoc = nullptr;
@@ -73,6 +76,9 @@ namespace rivet_hook {
 			g_output << "[DDL] too many type list pointers, aborting\n";
 			return;
 		}
+
+		g_output << "[rivet] found hash map pointer at " << std::hex << reinterpret_cast<uintptr_t>(hm_ptrs[0]) << '\n';
+		g_output << "[rivet] found type list pointer at " << std::hex << reinterpret_cast<uintptr_t>(tl_ptrs[0]) << '\n';
 
 		g_output << "[DDL] sleeping by 5 seconds to give the game a chance to "
 					"set up...\n";
@@ -249,13 +255,13 @@ namespace rivet_hook {
 	}
 
 	auto
-	log(const char *message, ...) -> void * {
+	log(const char *message, ...) -> void * { // NOLINT(*-dcl50-cpp)
 		if (message != nullptr) {
-			va_list args;
+			va_list args; // NOLINT(*-init-variables)
 			va_start(args, message);
 			auto buffer_size = vsnprintf(nullptr, 0, message, args) + 1;
-			auto buffer = std::make_unique<char[]>(buffer_size);
-			vsnprintf(buffer.get(), buffer_size, message, args);
+			auto buffer = std::make_unique<char[]>(buffer_size); // NOLINT(*-avoid-c-arrays)
+			vsnprintf(buffer.get(), buffer_size, message, args); // NOLINT(*-err33-c)
 			va_end(args);
 			std::string buffer_str(buffer.get());
 			g_output << "[log] " << buffer_str;
@@ -266,6 +272,9 @@ namespace rivet_hook {
 
 		return nullptr;
 	}
+
+	void
+	null_func() { }
 
 	void
 	init_minhook() {
@@ -282,59 +291,34 @@ namespace rivet_hook {
 	}
 
 	void
-	attach_context_log() {
-		auto ptrs = scan(g_game_module, CONTEXT_LOG_SIGNATURE);
+	create_hook(const std::string_view &name, std::ostream &output, HMODULE game, const hex_signature &signature, LPVOID detour, LPVOID *original) {
+		output << "[rivet] searching for " << name << " pointer\n";
+		auto ptrs = scan(game, signature);
 		if (ptrs.empty()) {
-			g_output << "[rivet] could not find context log pointer, aborting\n";
+			output << "[rivet] could not find " << name << " pointer, aborting\n";
 			return;
 		}
 
 		if (ptrs.size() > 1) {
-			g_output << "[rivet] too many context log pointers, aborting\n";
+			output << "[rivet] found " << ptrs.size() << " " << name << " pointers, too many. aborting\n";
 			return;
 		}
 
+		output << "[rivet] found " << name << " pointer at " << std::hex << reinterpret_cast<uintptr_t>(ptrs[0]) << std::dec << "\n";
+
 		init_minhook();
 
-		if (MH_CreateHook(ptrs[0], &context_log, reinterpret_cast<LPVOID *>(&fwd_context_log)) != MH_OK) {
-			g_output << "[rivet] failed to hook context log\n";
+		if (MH_CreateHook(ptrs[0], detour, original) != MH_OK) {
+			output << "[rivet] failed to create " << name << " hook\n";
 			return;
 		}
 
 		if (MH_EnableHook(ptrs[0]) != MH_OK) {
-			g_output << "[rivet] failed to enable context log hook\n";
+			output << "[rivet] failed to enable " << name << " hook\n";
 			return;
 		}
 
-		g_output << "[rivet] hooked context log\n";
-	}
-
-	void
-	attach_log() {
-		auto ptrs = scan(g_game_module, LOG_SIGNATURE);
-		if (ptrs.empty()) {
-			g_output << "[rivet] could not find log pointer, aborting\n";
-			return;
-		}
-
-		if (ptrs.size() > 1) {
-			g_output << "[rivet] too many log pointers, aborting\n";
-			return;
-		}
-
-		init_minhook();
-
-		if (MH_CreateHook(ptrs[0], &log, nullptr) != MH_OK) {
-			g_output << "[rivet] failed to hook log\n";
-			return;
-		}
-
-		if (MH_EnableHook(ptrs[0]) != MH_OK) {
-			g_output << "[rivet] failed to enable log hook\n";
-			return;
-		}
-
-		g_output << "[rivet] hooked log\n";
+		output << "[rivet] created " << name << " hook\n";
 	}
 
 #pragma clang diagnostic pop
@@ -382,13 +366,15 @@ namespace rivet_hook {
 			}
 
 			if (g_settings.attach_context_log) {
-				g_output << "[rivet] attaching context log\n";
-				attach_context_log();
+				create_hook("context log", g_output, g_game_module, CONTEXT_LOG_SIGNATURE, &context_log, reinterpret_cast<LPVOID *>(&fwd_context_log));
 			}
 
 			if (g_settings.attach_log) {
-				g_output << "[rivet] attaching log\n";
-				attach_log();
+				create_hook("log", g_output, g_game_module, LOG_SIGNATURE, &log, nullptr);
+			}
+
+			if (g_settings.suppress_crash_handler) {
+				create_hook("crash handler", g_output, g_game_module, CRASH_HANDLER_SIGNATURE, &null_func, nullptr);
 			}
 
 			g_output << "[rivet] init complete\n";
@@ -414,3 +400,5 @@ namespace rivet_hook {
 		}
 	} // namespace runtime
 } // namespace rivet_hook
+
+#pragma clang diagnostic pop
