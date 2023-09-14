@@ -39,10 +39,10 @@ struct range_t {
 // stream size * 8 / vertex_component_size_bits = 9 components (3 * 3)
 // unknown = either compression type, number of elements, or index scalar size.
 struct morph_entry_params_t { // sizeof(morph_entry_params_t) == 4
-	/* 0x00       */ uint8_t unknown : 7;                     //       & 0x7F  0b00000000000000000000000001111111 -- usually 2
-	/* 0x00, 0x01 */ uint8_t vertex_stride_bits : 8;          // >> 7  & 0xFF  0b00000000000000000111111110000000 -- bits for element. typically vertex_component_size_bits * 3
-	/* 0x01, 0x02 */ uint8_t vertex_component_size_bits :1 8; // >> 15 & 0xFF  0b00000000011111111000000000000000 -- bits for each element component. usually 26
-	/* 0x02, 0x03 */ uint16_t reserved : 9;                   // >> 23 & 0x1FF 0b11111111100000000000000000000000 -- always zero.
+	/* 0x00       */ uint8_t unknown : 7;                    //       & 0x7F  0b00000000000000000000000001111111 -- usually 2
+	/* 0x00, 0x01 */ uint8_t vertex_stride_bits : 8;         // >> 7  & 0xFF  0b00000000000000000111111110000000 -- bits for element. typically vertex_component_size_bits * 3
+	/* 0x01, 0x02 */ uint8_t vertex_component_size_bits : 8; // >> 15 & 0xFF  0b00000000011111111000000000000000 -- bits for each element component. usually 26
+	/* 0x02, 0x03 */ uint16_t reserved : 9;                  // >> 23 & 0x1FF 0b11111111100000000000000000000000 -- always zero.
 };
 
 struct morph_entry_t {
