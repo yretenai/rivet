@@ -5,7 +5,8 @@ project('rivet', 'cpp',
 		'prefix=/usr',
 		'warning_level=3',
 		'cpp_std=c++20'
-	])
+	],
+    meson_version: '>=1.2.1')
 
 
 compiler = meson.get_compiler('cpp')
@@ -106,6 +107,16 @@ if get_option('buildtype') == 'custom'
 endif
 
 add_project_arguments(cpp_args, language: 'cpp')
+
+icon_sources = []
+if host_machine.system() == 'windows'
+    if import('fs').is_file('resources/icon.ico')
+        icon_sources += import('windows').compile_resources(
+            'resources/rivet.rc',
+            include_directories : [meson.current_build_dir(), 'resources'],
+        )
+    endif
+endif
 
 subdir('src')
 
