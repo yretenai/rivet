@@ -35,24 +35,20 @@ struct range_t {
 	/* 0x04 */ float min;
 };
 
-// stream size * 8 / vertex_stride_bits = 3 vertex elements
-// stream size * 8 / vertex_component_size_bits = 9 components (3 * 3)
-// unknown = either compression type, number of elements, or index scalar size.
-struct morph_entry_params_t { // sizeof(morph_entry_params_t) == 4
-	/* 0x00       */ uint8_t unknown : 7;                    //       & 0x7F  0b00000000000000000000000001111111 -- usually 2
-	/* 0x00, 0x01 */ uint8_t vertex_stride_bits : 8;         // >> 7  & 0xFF  0b00000000000000000111111110000000 -- bits for element. typically vertex_component_size_bits * 3
-	/* 0x01, 0x02 */ uint8_t vertex_component_size_bits : 8; // >> 15 & 0xFF  0b00000000011111111000000000000000 -- bits for each element component. usually 26
-	/* 0x02, 0x03 */ uint16_t reserved : 9;                  // >> 23 & 0x1FF 0b11111111100000000000000000000000 -- always zero.
-};
 
+// chunk bits = element_count * element_bit_size * verts
+// read as a bit stream, 1 = pos, 2 = norm, 3 = ?, 4 = ?
+// unpack = base_value + max * morph_value + min;
 struct morph_entry_t {
 	/* 0x00 */ uint32_t id;
 	/* 0x04 */ uint32_t name_offset; // from start of DAT1
 	/* 0x08 */ uint32_t vertex_offset;
 	/* 0x0C */ uint32_t index_offset; // maybe vertex_id list?
-	/* 0x10 */ morph_entry_params_t params;
-	/* 0x14 */ range_t pos_range;
-	/* 0x1c */ range_t morph_range;
+	/* 0x10 */ uint8_t element_count; // usually 2.
+	/* 0x11 */ uint8_t element_bit_size;
+	/* 0x12 */ uint8_t component_bit_size;
+	/* 0x13 */ uint8_t padding;
+	/* 0x14 */ range_t ranges[element_count]; // offset comments assume 2.
 	/* 0x24 */ uint16_t subset_count;
 	/* 0x26 */ uint16_t descriptor_size; // size of struct - 0x30
 	/* 0x28 */ uint32_t vertex_size;
