@@ -21,6 +21,7 @@ namespace rivet {
 
 	namespace gfx {
 		struct RIVET_SHARED model {
+			constexpr const static rivet_type_id type_id = 0x9D2C0FA9;
 
 			RIVET_DEFINE_TYPE_ID(model_anim_dyndef, "Model Anim Dynamics Def");
 			RIVET_DEFINE_TYPE_ID(model_anim_geom, "Model Anim Geom Info");
@@ -133,13 +134,11 @@ namespace rivet {
 
 			explicit model(const rivet::data::asset_bundle &bundle, rivet_size index = 0);
 
-			model(const std::shared_ptr<rivet_data_array> &dat1_stream, const std::shared_ptr<rivet_data_array> &resident, const std::shared_ptr<rivet_data_array> &stream = nullptr) {
-				init(dat1_stream, resident, stream);
-			}
+			model(const std::shared_ptr<rivet_data_array> &dat1_stream, const std::shared_ptr<rivet_data_array> &resident) { init(dat1_stream, resident); }
 
 		private:
 			void
-			init(const std::shared_ptr<rivet_data_array> &dat1_stream, const std::shared_ptr<rivet_data_array> &resident, const std::shared_ptr<rivet_data_array> &stream = nullptr);
+			init(const std::shared_ptr<rivet_data_array> &dat1_stream, const std::shared_ptr<rivet_data_array> &resident);
 		};
 	} // namespace gfx
 } // namespace rivet
