@@ -10,7 +10,7 @@
 
 namespace rivet::structures::gfx {
 	static const float rivet_sqrt2 = 1.4142135623730950488016887242097f;
-	static const float rivet_sqrt2_511 = rivet_sqrt2 / 511.0f;
+	static const float rivet_sqrt2_bits = rivet_sqrt2 / (0x3ff / 2.0f);
 	static const float rivet_one = 1.0f;
 	static const float rivet_half = 0.50f;
 	static const float rivet_quarter = 0.25f;
@@ -36,7 +36,7 @@ namespace rivet::structures::gfx {
 			auto packed_y = static_cast<float>((normal_tangent >> 10) & 0x3FF);
 			auto flip = (normal_tangent >> 31) == 0;
 
-			auto nxy = rivet_vec2f(packed_x, packed_y) * rivet_sqrt2_511 - rivet_sqrt2;
+			auto nxy = rivet_vec2f(packed_x, packed_y) * rivet_sqrt2_bits - rivet_sqrt2;
 			auto nxxyy = nxy[0] * nxy[0] + nxy[1] * nxy[1];
 			auto weight = std::sqrt(rivet_one - nxxyy * rivet_quarter);
 			nxy[0] *= weight;

@@ -89,11 +89,13 @@ namespace rivet {
 			struct morph_info {
 				std::string_view name;
 				std::vector<uint32_t> indices;
+				// todo: this should be indices and the vertices/indices should be unpacked once. reused buffers may be a problem for memory.
 				std::vector<morph_vertex> vertices;
 			};
 
 			struct subset_info {
 				std::string_view name;
+				// todo: this should be indices and the vertices/indices should be unpacked once. reused buffers may be a problem for memory.
 				std::vector<rivet_vec3f> vertices;
 				std::vector<rivet_vec3f> normals;
 				std::vector<rivet_vec2f> uv0;
