@@ -9,6 +9,7 @@ rivetlib = library('rivet', [
 		'data/localization.cpp',
 		'data/toc.cpp',
 		'ddl/serialization.cpp',
+		'gfx/model.cpp',
 		'gfx/texture.cpp',
 		'structures/rivet_serialization.cpp',
 		'rivet.cpp',
