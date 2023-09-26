@@ -60,6 +60,11 @@ namespace rivet::structures::gfx {
 			unpacked[1] *= -1.0f;
 			return unpacked;
 		}
+
+		[[nodiscard]] auto RIVET_INLINE
+		unpack(const float &scale) const -> std::tuple<rivet_vec4f, rivet_vec3f, rivet_vec2f> {
+			return std::make_tuple(unpack_position(scale), unpack_normal(), unpack_texcoord(scale));
+		}
 	};
 
 	struct rivet_gpu_skin_vert {
@@ -70,6 +75,16 @@ namespace rivet::structures::gfx {
 		unpack_weights() const -> rivet_vec4f {
 			return rivet_vec4f(blend_weights) / rivet_unorm8;
 		}
+
+		[[nodiscard]] auto RIVET_INLINE
+		unpack_index() const -> rivet_vec4b {
+			return blend_indices;
+		}
+
+		[[nodiscard]] auto RIVET_INLINE
+		unpack() const -> std::tuple<rivet_vec4b, rivet_vec4f> {
+			return std::make_tuple(unpack_index(), unpack_weights());
+		}
 	};
 
 	struct rivet_skin_vert {
@@ -79,6 +94,16 @@ namespace rivet::structures::gfx {
 		[[nodiscard]] auto RIVET_INLINE
 		unpack_weights() const -> float {
 			return static_cast<float>(blend_weight) / rivet_unorm8;
+		}
+
+		[[nodiscard]] auto RIVET_INLINE
+		unpack_index() const -> uint8_t {
+			return blend_index;
+		}
+
+		[[nodiscard]] auto RIVET_INLINE
+		unpack() const -> std::tuple<uint8_t, float> {
+			return std::make_tuple(unpack_index(), unpack_weights());
 		}
 	};
 
