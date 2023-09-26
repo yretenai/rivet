@@ -123,6 +123,11 @@ namespace rivet {
 	using rivet_checksum = uint64_t;
 	using rivet_asset_id = rivet_checksum; // top 2 bits are rivet_type_id_flags
 
+	using rivet_size16 = uint16_t;
+	using rivet_ssize16 = int16_t;
+	using rivet_off16 = uint16_t;
+	using rivet_soff16 = int16_t;
+
 	using rivet_size = uint32_t;
 	using rivet_ssize = int32_t;
 	using rivet_off = uint32_t;

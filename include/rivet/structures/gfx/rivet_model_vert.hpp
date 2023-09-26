@@ -10,7 +10,7 @@
 
 namespace rivet::structures::gfx {
 	static const float rivet_sqrt2 = 1.4142135623730950488016887242097f;
-	static const float rivet_sqrt2_bits = rivet_sqrt2 / (0x3ff / 2.0f);
+	static const float rivet_sqrt2_bits = rivet_sqrt2 / (0x3ff / 2.0f); // 10 bits, divide by 2 to get [-1, 1]
 	static const float rivet_one = 1.0f;
 	static const float rivet_half = 0.50f;
 	static const float rivet_quarter = 0.25f;

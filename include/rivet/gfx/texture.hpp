@@ -26,17 +26,17 @@ namespace rivet {
 			struct texture_header {
 				rivet_size resident_size;
 				rivet_size stream_size;
-				uint16_t stream_width;
-				uint16_t stream_height;
-				uint16_t resident_width;
-				uint16_t resident_height;
-				uint16_t surface_count;
+				rivet_size16 stream_width;
+				rivet_size16 stream_height;
+				rivet_size16 resident_width;
+				rivet_size16 resident_height;
+				rivet_size16 surface_count;
 				uint8_t unknown11; // flags? 27 possible combinations, most common = 0x10
 				uint8_t unknown12; // seems to be grouped by type
 				uint32_t format;
 				float mid_alpha_level;
 				uint16_t unknown1C; // 0: Vertex Animation, 1: Texture, 2: ??, 3: ??, 4: Cubemap
-				uint16_t mip_count;
+				rivet_size16 mip_count;
 				uint8_t streamed_mips; // 0 when stream_size is 0
 				uint8_t unknown21;	   // 1 - 3. usually 1. 2 seems to be some sort of cubemap? 3 = vertex animation?
 				uint8_t unknown22;	   // copy of unknown21
