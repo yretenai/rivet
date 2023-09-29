@@ -48,8 +48,3 @@ subprojects/*
 !subprojects/GDeflate
 !subprojects/packagefiles
 !subprojects/*.wrap
-
-icon.ico
-icon.png
-icon.icns
-icon.iconset

@@ -34,13 +34,14 @@ if host_machine.system() != 'windows'
 endif
 
 cxx_compiler = meson.get_compiler('cpp')
+
 add_project_arguments(cxx_compiler.get_supported_arguments(
     '/Zc:strictStrings-'
 ), language: 'cpp')
 
 arch_sse = []
 if cxx_compiler.has_argument('-march=nehalem')
-    arch_sse += ['-march=nehalem']
+    arch_sse += ['-march=nehalem', '-mtune=nehalem']
 endif
 
 cmp_core_sse = static_library(
@@ -64,7 +65,7 @@ cmp_core_sse_dep = declare_dependency(
 
 arch_avx = []
 if cxx_compiler.has_argument('-march=haswell')
-    arch_avx += ['-march=haswell']
+    arch_avx += ['-march=haswell', '-mtune=haswell']
 endif
 if cxx_compiler.has_argument('/arch:AVX2')
     arch_avx += ['/arch:AVX2']
@@ -91,7 +92,7 @@ cmp_core_avx_dep = declare_dependency(
 
 arch_avx512 = []
 if cxx_compiler.has_argument('-march=knl')
-    arch_avx512 += ['-march=knl']
+    arch_avx512 += ['-march=knl', '-mtune=knl']
 endif
 if cxx_compiler.has_argument('/arch:AVX-512')
     arch_avx512 += ['/arch:AVX-512']
@@ -129,7 +130,7 @@ cmp_core = static_library(
         cmp_core_avx_dep,
         cmp_core_avx512_dep
     ],
-    cpp_args: cmp_core_args)
+    cpp_args: cmp_core_args + arch_sse)
 
 cmp_core_dep = declare_dependency(
     include_directories: [
@@ -265,6 +266,7 @@ cmp_compressonator_sources = [
 cmp_compressonator = static_library('cmp_compressonator',
     files(cmp_compressonator_sources),
     include_directories: cmp_compressonator_includes,
+    cpp_args: arch_sse,
     dependencies: [
         cmp_core_dep
     ]

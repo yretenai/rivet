@@ -14,7 +14,7 @@ rivet::gfx::model::model(const rivet::data::asset_bundle &bundle, rivet::rivet_s
 
 	auto dat1_stream = bundle.get_entry(index);
 	if (dat1_stream == nullptr) {
-		throw invalid_operation("texture::texture: invalid texture stream");
+		throw invalid_operation("model::model: invalid model stream");
 	}
 
 	init(dat1_stream, bundle.get_entry(index + 1));
@@ -23,25 +23,7 @@ rivet::gfx::model::model(const rivet::data::asset_bundle &bundle, rivet::rivet_s
 void
 rivet::gfx::model::init(const std::shared_ptr<rivet_data_array> &dat1_stream, const std::shared_ptr<rivet_data_array> &resident) {
 	auto data = dat1(dat1_stream);
-	if (data.type_name != "Texture Built File") {
-		throw invalid_operation("texture::texture: invalid texture stream");
-	}
-
-	auto header_stream = data.get_section<model_header>(model::model_built_type_id);
-	if (header_stream == nullptr) {
-		throw invalid_operation("texture::texture: invalid texture stream");
-	}
-
-	if (header_stream->empty()) {
-		throw invalid_operation("texture::texture: invalid texture stream");
-	}
-
-	header = header_stream->get<texture::texture_header>(0);
-	if (resident != nullptr) {
-		provide_resident(resident);
-	}
-
-	if (stream_buffer != nullptr) {
-		provide_stream(stream);
+	if (data.type_name != "Model Built File") {
+		throw invalid_operation("model::model: invalid model stream");
 	}
 }

@@ -1,0 +1,71 @@
+name: build
+
+on:
+  push:
+    branches: [develop]
+
+env:
+  CC: clang
+  CXX: clang++
+  CC_LD: lld-link
+  CXX_LD: lld-link
+  CXXFLAGS: -target x86_64-pc-windows-msvc
+  CFLAGS: -target x86_64-pc-windows-msvc
+  PIP_BREAK_SYSTEM_PACKAGES: 1
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Install dependencies (Windows)
+        if: runner.os == 'Windows'
+        run: |
+          choco install ninja python3 llvm
+          choco upgrade llvm
+          pip install meson
+      - name: Setup msvc
+        if: runner.os == 'Windows'
+        uses: ilammy/msvc-dev-cmd@v1
+        with:
+          arch: amd64
+      - name: Install dependencies (Linux)
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt update
+          sudo apt install -y libstdc++-13-dev ninja-build python3 python3-pip build-essential
+          sudo pip3 install meson
+          wget https://apt.llvm.org/llvm.sh
+          chmod +x llvm.sh
+          sudo ./llvm.sh 17 all
+          echo "CC=clang-17" >> $GITHUB_ENV
+          echo "CXX=clang++-17" >> $GITHUB_ENV
+          echo "CC_LD=lld" >> $GITHUB_ENV
+          echo "CXX_LD=lld" >> $GITHUB_ENV
+          echo "CXXFLAGS=-target x86_64-pc-linux-gnu" >> $GITHUB_ENV
+          echo "CFLAGS=-target x86_64-pc-linux-gnu" >> $GITHUB_ENV
+      - name: Configure
+        run: |
+          mkdir build
+          cd build
+          meson setup ..
+          cd ..
+      - name: Fix Ninja script for LLVM on Windows
+        if: runner.os == 'Windows'
+        run: python3 fix-llvm-win.py build/build.ninja
+      - name: Build
+        run: |
+          cd build
+          meson install --destdir staging
+          mkdir -p staging/usr/share/rivet
+          cd ..
+          cp ATTRIBUTION build/staging/usr/share/rivet/
+      - name: Upload build
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-${{matrix.os}}
+          path: build/staging
