@@ -17,6 +17,7 @@ jobs:
   build:
     strategy:
       matrix:
+        type: [release, custom]
         os: [ubuntu-latest, windows-latest]
     runs-on: ${{ matrix.os }}
     steps:
@@ -52,7 +53,7 @@ jobs:
         run: |
           mkdir build
           cd build
-          meson setup ..
+          meson setup .. --buildtype=${{matrix.type}}
           cd ..
       - name: Fix Ninja script for LLVM on Windows
         if: runner.os == 'Windows'
@@ -67,5 +68,5 @@ jobs:
       - name: Upload build
         uses: actions/upload-artifact@v3
         with:
-          name: build-${{matrix.os}}
+          name: rivet-${{runner.os}}-${{matrix.type}}
           path: build/staging
