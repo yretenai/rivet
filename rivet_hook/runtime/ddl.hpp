@@ -4,8 +4,8 @@
 
 #pragma once
 
-#include <cstdint>
 #include <array>
+#include <cstdint>
 
 namespace rivet_hook::ddl {
 #pragma pack(push, 1)

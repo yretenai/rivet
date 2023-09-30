@@ -7,7 +7,7 @@
 namespace rivet_hook::runtime {
 	void
 	init();
-	
+
 	void
 	fini();
 } // namespace rivet_hook::runtime

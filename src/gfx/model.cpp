@@ -11,7 +11,6 @@ using namespace rivet::data;
 using namespace rivet::structures::gfx;
 
 rivet::gfx::model::model(const rivet::data::asset_bundle &bundle, rivet::rivet_size index) {
-
 	auto dat1_stream = bundle.get_entry(index);
 	if (dat1_stream == nullptr) {
 		throw invalid_operation("model::model: invalid model stream");

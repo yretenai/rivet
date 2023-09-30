@@ -7,11 +7,11 @@
 #include <cstdint>
 #include <iosfwd>
 #include <memory>
+#include <optional>
 #include <string_view>
 #include <unordered_set>
 #include <variant>
 #include <vector>
-#include <optional>
 
 #include <ankerl/unordered_dense.h>
 

@@ -33,7 +33,7 @@ namespace rivet::ddl {
 
 		rivet_size cursor = ((sizeof(rivet_serialized_field) + sizeof(rivet_off)) * header.node_count);
 		auto abs_offset = buffer->offset + cursor;
-		if((abs_offset % 4) != 0) {
+		if ((abs_offset % 4) != 0) {
 			cursor += 4 - (abs_offset % 4); // align to 4 bytes??
 		}
 
