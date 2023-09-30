@@ -4,9 +4,7 @@
 
 #include <rivet/data/asset_bundle.hpp>
 #include <rivet/data/config.hpp>
-#include <rivet/data/dat1.hpp>
 #include <rivet/ddl/serialization.hpp>
-#include <rivet/structures/rivet_serialization.hpp>
 
 namespace rivet::data {
 	config_type::config_type(const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet_ddl_base(serialized) {

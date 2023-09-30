@@ -35,7 +35,7 @@ namespace rivet {
 				uint8_t unknown12; // seems to be grouped by type
 				uint32_t format;
 				float mid_alpha_level;
-				uint16_t unknown1C; // 0: Vertex Animation, 1: Texture, 2: ??, 3: ??, 4: Cubemap
+				uint16_t unknown1C; // 0: Vertex Animation, 1: Texture, 2: ??, 3: ??, 4: cubemap
 				rivet_size16 mip_count;
 				uint8_t streamed_mips; // 0 when stream_size is 0
 				uint8_t unknown21;	   // 1 - 3. usually 1. 2 seems to be some sort of cubemap? 3 = vertex animation?
@@ -63,7 +63,7 @@ namespace rivet {
 			provide_resident(const std::shared_ptr<rivet_data_array> &stream);
 
 			[[nodiscard]] auto
-			is_convertable() const -> bool;
+			is_convertible() const -> bool;
 
 			[[nodiscard]] auto
 			to_png(rivet_index surface_index) const -> std::shared_ptr<rivet_data_array>;

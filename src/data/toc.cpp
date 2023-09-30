@@ -2,12 +2,9 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <algorithm>
 #include <array>
-#include <cstdint>
 #include <memory>
 #include <optional>
-#include <string>
 #include <string_view>
 #include <unordered_set>
 #include <utility>
@@ -18,12 +15,7 @@
 
 #include <rivet/data/dat1.hpp>
 #include <rivet/data/toc.hpp>
-#include <rivet/exceptions.hpp>
-#include <rivet/rivet_array.hpp>
-#include <rivet/rivet_keywords.hpp>
 #include <rivet/rivet_string_pool.hpp>
-#include <rivet/structures/rivet_archive.hpp>
-#include <rivet/structures/rivet_asset.hpp>
 
 using namespace rivet;
 using namespace rivet::structures;

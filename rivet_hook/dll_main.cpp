@@ -5,7 +5,6 @@
 #include <array>
 #include <filesystem>
 #include <mutex>
-#include <thread>
 
 #include "runtime/runtime.hpp"
 

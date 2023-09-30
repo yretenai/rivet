@@ -54,7 +54,7 @@ namespace rivet::hash {
 	constexpr static auto
 	hash_checksum(const std::string_view &value, rivet_asset_id hash = 0xc96c5795'd7870f42) noexcept -> rivet_asset_id {
 		for (const char letter : value) {
-			hash = crc64_table[(hash ^ static_cast<uint8_t>(letter)) & 0xff] ^ (hash >> 8);
+			hash = crc64_table[(hash ^ static_cast<uint8_t>(letter)) & 0xffu] ^ (hash >> 8u);
 		}
 
 		return hash;
@@ -63,8 +63,8 @@ namespace rivet::hash {
 	constexpr static auto
 	hash_asset_id(const std::string_view &value, rivet_checksum hash = 0xc96c5795'd7870f42, rivet_type_id_flags flags = rivet_type_id_flags::SHIPPED) noexcept -> rivet_asset_id {
 		// lowercase and replace \\ with /
-		const auto flags_full = static_cast<uint64_t>(flags) << 62;
-		return (hash_checksum(value, hash) >> 2) | flags_full;
+		const auto flags_full = static_cast<uint64_t>(flags) << 62u;
+		return (hash_checksum(value, hash) >> 2u) | flags_full;
 	}
 
 	constexpr static void
@@ -75,7 +75,7 @@ namespace rivet::hash {
 			}
 
 			if (letter >= 'A' && letter <= 'Z') {
-				return static_cast<char>(letter | 0x20);
+				return static_cast<char>(static_cast<uint8_t>(letter) | 0x20u);
 			}
 
 			return letter;

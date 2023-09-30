@@ -2,7 +2,6 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <cstddef>
 #include <filesystem>
 #include <fstream>
 #include <memory>
@@ -12,12 +11,7 @@
 #include <lz4.h>
 
 #include <rivet/data/dsar.hpp>
-#include <rivet/exceptions.hpp>
 #include <rivet/hash/asset_id.hpp>
-#include <rivet/rivet_array.hpp>
-#include <rivet/rivet_keywords.hpp>
-#include <rivet/structures/rivet_archive.hpp>
-#include <rivet/structures/rivet_asset.hpp>
 
 namespace rivet::data {
 	rivet::data::data_stream_archive::data_stream_archive(const std::filesystem::path &root, const std::shared_ptr<rivet::structures::rivet_archive> &archive): archive(archive), exists(true) {

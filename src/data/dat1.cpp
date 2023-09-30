@@ -2,18 +2,12 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <cstdint>
 #include <memory>
-#include <unordered_set>
 #include <utility>
-#include <vector>
 
 #include <ankerl/unordered_dense.h>
 
 #include <rivet/data/dat1.hpp>
-#include <rivet/exceptions.hpp>
-#include <rivet/rivet_array.hpp>
-#include <rivet/rivet_keywords.hpp>
 
 namespace rivet::data {
 	dat1::dat1(const std::shared_ptr<rivet_data_array> &stream, const std::shared_ptr<rivet_data_array> &resident_stream): buffer(stream), resident_buffer(resident_stream) {

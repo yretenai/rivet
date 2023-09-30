@@ -41,17 +41,17 @@ namespace rivet::structures {
 
 		[[nodiscard]] auto
 		get_count() const noexcept -> uint32_t {
-			return (meta & 0x00FFFFFF) >> 4;
+			return (meta & 0x00FFFFFFu) >> 4u;
 		}
 
 		[[nodiscard]] auto
 		get_type() const noexcept -> rivet_serialized_type {
-			return static_cast<rivet_serialized_type>(meta >> 24);
+			return static_cast<rivet_serialized_type>(meta >> 24u);
 		}
 
 		[[nodiscard]] auto
 		get_unknown() const noexcept -> uint32_t {
-			return meta & 0x0000000F;
+			return meta & 0x0000000Fu;
 		}
 	};
 
@@ -174,7 +174,7 @@ namespace rivet::structures {
 			return get_fields<T, TCast>(rivet::hash::hash_type_id(name));
 		}
 
-		template <typename T, size_t N, typename TCast = T>
+		template <typename T, size_t N>
 			requires(std::is_enum_v<T>)
 		auto
 		get_enum(rivet_type_id field_id, const std::array<std::string_view, N> &enum_values) const noexcept -> T {
@@ -215,7 +215,7 @@ namespace rivet::structures {
 			return get_enum<T, N, TCast>(rivet::hash::hash_type_id(name), enum_values);
 		}
 
-		template <typename T, size_t N, typename TCast = T>
+		template <typename T, size_t N>
 			requires(std::is_enum_v<T>)
 		auto
 		get_enums(rivet_type_id field_id, const std::array<std::string_view, N> &enum_values) const noexcept -> std::vector<T> {
@@ -240,6 +240,8 @@ namespace rivet::structures {
 							break;
 						}
 					}
+				} else {
+					throw std::runtime_error("rivet_serialized_object::get_enums: invalid variant type");
 				}
 			}
 
@@ -253,7 +255,7 @@ namespace rivet::structures {
 			return get_enums<T, N, TCast>(rivet::hash::hash_type_id(name), enum_values);
 		}
 
-		template <typename T, size_t N, typename TCast = T>
+		template <typename T, size_t N>
 			requires(std::is_enum_v<T>)
 		auto
 		get_bitset(rivet_type_id field_id, const std::array<std::tuple<std::string_view, uint64_t>, N> &bitset_values) const noexcept -> T {

@@ -5,7 +5,6 @@
 #include <cstdint>
 #include <memory>
 #include <optional>
-#include <string>
 #include <string_view>
 #include <utility>
 #include <vector>
@@ -14,14 +13,9 @@
 #include <zlib.h>
 
 #include <rivet/data/dag.hpp>
-#include <rivet/data/dat1.hpp>
 #include <rivet/data/toc.hpp>
-#include <rivet/exceptions.hpp>
 #include <rivet/hash/asset_id.hpp>
-#include <rivet/rivet_array.hpp>
-#include <rivet/rivet_keywords.hpp>
 #include <rivet/rivet_string_pool.hpp>
-#include <rivet/structures/rivet_asset.hpp>
 
 using namespace rivet;
 using namespace rivet::structures;

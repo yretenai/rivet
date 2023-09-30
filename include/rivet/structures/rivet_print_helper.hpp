@@ -45,7 +45,7 @@ operator<<(std::ostream &out, const rivet::structures::rivet_archive &archive) -
 
 auto
 operator<<(std::ostream &out, const rivet::rivet_locale &locale) -> std::ostream & {
-	auto index = static_cast<uint32_t>(locale);
+	auto index = static_cast<const uint32_t>(locale);
 	if (index >= rivet::helpers::rivet_locale_enum.size()) {
 		return out << "UnknownLocale" << index;
 	}
@@ -59,7 +59,7 @@ operator<<(std::ostream &out, const rivet::rivet_locale &locale) -> std::ostream
 
 auto
 operator<<(std::ostream &out, const rivet::structures::rivet_asset_type &type) -> std::ostream & {
-	auto index = static_cast<uint32_t>(type);
+	auto index = static_cast<const uint32_t>(type);
 	if (index >= rivet::helpers::rivet_asset_type_enum.size()) {
 		return out << "UNKNOWN_TYPE_" << index;
 	}
@@ -73,7 +73,7 @@ operator<<(std::ostream &out, const rivet::structures::rivet_asset_type &type) -
 
 auto
 operator<<(std::ostream &out, const rivet::rivet_asset_category &category) -> std::ostream & {
-	auto index = static_cast<uint32_t>(category);
+	auto index = static_cast<const uint32_t>(category);
 	if (index >= rivet::helpers::rivet_asset_category_enum.size()) {
 		return out << "UnknownCategory" << index;
 	}
@@ -94,7 +94,7 @@ operator<<(std::ostream &out, const rivet::structures::rivet_asset_flags &flags)
 auto
 operator<<(std::ostream &out, const std::vector<std::pair<std::string_view, rivet::rivet_asset_id>> &dependencies) -> std::ostream & {
 	out << "{ ";
-	for (auto i = 0; i < dependencies.size(); i++) {
+	for (size_t i = 0; i < dependencies.size(); i++) {
 		out << dependencies.at(i).first;
 		if (i != dependencies.size() - 1) {
 			out << ", ";

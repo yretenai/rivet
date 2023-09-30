@@ -77,7 +77,7 @@ convert_texture(int argc, char **argv) -> int {
 		auto surface_count = tex.get_header().surface_count;
 		auto has_multisurface = surface_count > 1;
 
-		auto local_dds = dds || !tex.is_convertable();
+		auto local_dds = dds || !tex.is_convertible();
 		auto local_tif = tif;
 		if (!local_dds) {
 			auto is_hdr = tex.is_hdr();

@@ -16,7 +16,7 @@
 
 namespace rivet::data {
 	struct RIVET_SHARED dat1 {
-		constexpr const static uint32_t magic = 0x44415431;
+		constexpr const static uint32_t magic = 0x44415431u;
 
 		struct dat1_header {
 			uint32_t magic;

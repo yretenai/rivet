@@ -32,7 +32,7 @@ namespace {
 namespace rivet_hook {
 	auto
 	get_game() -> HMODULE {
-		HMODULE module = nullptr;
+		HMODULE module;
 
 		// if the exe name is set, use that
 		if (strnlen_s(g_settings.exe_name.data(), g_settings.exe_name.size()) > 0) {
@@ -55,30 +55,30 @@ namespace rivet_hook {
 		g_output << "[rivet] dumping DDL structures\n";
 		using namespace std::chrono_literals;
 
-		std::vector<uint8_t *> hm_ptrs = scan(g_game_module, DDL_HASH_MAP_SIGNATURE);
-		std::vector<uint8_t *> tl_ptrs = scan(g_game_module, DDL_TYPE_LIST_SIGNATURE);
-		if (hm_ptrs.empty()) {
+		std::vector<uint8_t *> hm_pointers = scan(g_game_module, DDL_HASH_MAP_SIGNATURE);
+		std::vector<uint8_t *> tl_pointers = scan(g_game_module, DDL_TYPE_LIST_SIGNATURE);
+		if (hm_pointers.empty()) {
 			g_output << "[DDL] could not find hash map pointer, aborting\n";
 			return;
 		}
 
-		if (hm_ptrs.size() > 1) {
+		if (hm_pointers.size() > 1) {
 			g_output << "[DDL] too many hash map pointers, aborting\n";
 			return;
 		}
 
-		if (tl_ptrs.empty()) {
+		if (tl_pointers.empty()) {
 			g_output << "[DDL] could not find type list pointer, aborting\n";
 			return;
 		}
 
-		if (tl_ptrs.size() > 1) {
+		if (tl_pointers.size() > 1) {
 			g_output << "[DDL] too many type list pointers, aborting\n";
 			return;
 		}
 
-		g_output << "[rivet] found hash map pointer at " << std::hex << reinterpret_cast<uintptr_t>(hm_ptrs[0]) << '\n';
-		g_output << "[rivet] found type list pointer at " << std::hex << reinterpret_cast<uintptr_t>(tl_ptrs[0]) << '\n';
+		g_output << "[rivet] found hash map pointer at " << std::hex << reinterpret_cast<uintptr_t>(hm_pointers[0]) << '\n';
+		g_output << "[rivet] found type list pointer at " << std::hex << reinterpret_cast<uintptr_t>(tl_pointers[0]) << '\n';
 
 		g_output << "[DDL] sleeping by 5 seconds to give the game a chance to "
 					"set up...\n";
@@ -87,16 +87,16 @@ namespace rivet_hook {
 
 		g_output << "[DDL] dumping...\n";
 
-		auto *hm_rip = hm_ptrs[0] + 3 + 7;
-		auto hm_rip_rel = reinterpret_cast<uint32_t *>(hm_ptrs[0] + 6)[0];
+		const auto *hm_rip = hm_pointers[0] + 3 + 7;
+		const auto hm_rip_rel = reinterpret_cast<uint32_t *>(hm_pointers[0] + 6)[0];
 		const auto *type_hash_map = reinterpret_cast<const rivet_hook::ddl::ddl_hash_map *>(hm_rip + hm_rip_rel);
 
-		auto *tl_rip = tl_ptrs[0] + 7;
-		auto tl_rip_rel = reinterpret_cast<uint32_t *>(tl_ptrs[0] + 3)[0];
+		auto *tl_rip = tl_pointers[0] + 7;
+		const auto tl_rip_rel = reinterpret_cast<uint32_t *>(tl_pointers[0] + 3)[0];
 		const auto **type_list = reinterpret_cast<const rivet_hook::ddl::ddl_type_descriptor **>(tl_rip + tl_rip_rel);
 
-		auto *tlc_rip = tl_ptrs[0] + 17;
-		auto tlc_rip_rel = reinterpret_cast<uint32_t *>(tl_ptrs[0] + 13)[0];
+		auto *tlc_rip = tl_pointers[0] + 17;
+		auto tlc_rip_rel = reinterpret_cast<uint32_t *>(tl_pointers[0] + 13)[0];
 		const auto type_count = reinterpret_cast<uint32_t *>(tlc_rip + tlc_rip_rel)[0];
 
 		std::unordered_set<uint32_t> enum_ids;
@@ -293,27 +293,27 @@ namespace rivet_hook {
 	void
 	create_hook(const std::string_view &name, std::ostream &output, HMODULE game, const hex_signature &signature, LPVOID detour, LPVOID *original) {
 		output << "[rivet] searching for " << name << " pointer\n";
-		auto ptrs = scan(game, signature);
-		if (ptrs.empty()) {
+		auto pointers = scan(game, signature);
+		if (pointers.empty()) {
 			output << "[rivet] could not find " << name << " pointer, aborting\n";
 			return;
 		}
 
-		if (ptrs.size() > 1) {
-			output << "[rivet] found " << ptrs.size() << " " << name << " pointers, too many. aborting\n";
+		if (pointers.size() > 1) {
+			output << "[rivet] found " << pointers.size() << " " << name << " pointers, too many. aborting\n";
 			return;
 		}
 
-		output << "[rivet] found " << name << " pointer at " << std::hex << reinterpret_cast<uintptr_t>(ptrs[0]) << std::dec << "\n";
+		output << "[rivet] found " << name << " pointer at " << std::hex << reinterpret_cast<uintptr_t>(pointers[0]) << std::dec << "\n";
 
 		init_minhook();
 
-		if (MH_CreateHook(ptrs[0], detour, original) != MH_OK) {
+		if (MH_CreateHook(pointers[0], detour, original) != MH_OK) {
 			output << "[rivet] failed to create " << name << " hook\n";
 			return;
 		}
 
-		if (MH_EnableHook(ptrs[0]) != MH_OK) {
+		if (MH_EnableHook(pointers[0]) != MH_OK) {
 			output << "[rivet] failed to enable " << name << " hook\n";
 			return;
 		}

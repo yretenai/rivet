@@ -4,26 +4,19 @@
 
 #include <algorithm>
 #include <csetjmp>
-#include <cstdint>
 #include <filesystem>
 #include <memory>
-#include <string>
-#include <string_view>
 #include <tuple>
 #include <vector>
 
 #include <compressonator.h>
 #include <png.h>
-#include <pngconf.h>
 #include <tiff.h>
 #include <tiffio.h>
 
 #include <rivet/data/asset_bundle.hpp>
 #include <rivet/data/dat1.hpp>
-#include <rivet/exceptions.hpp>
 #include <rivet/gfx/texture.hpp>
-#include <rivet/rivet_array.hpp>
-#include <rivet/rivet_keywords.hpp>
 #include <rivet/support/dxgi.hpp>
 
 using namespace rivet::data;
@@ -84,7 +77,7 @@ namespace rivet::gfx {
 	}
 
 	auto
-	texture::is_convertable() const -> bool {
+	texture::is_convertible() const -> bool {
 		auto dxgi = static_cast<dxgi_format>(header.format);
 		switch (dxgi) {
 			case dxgi_format::bc1_unorm:
