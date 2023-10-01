@@ -2,13 +2,20 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
+#pragma once
+
 #include <tuple>
 #include <vector>
+
+#ifdef RIVET_USE_NLOHMANN
+	#include <nlohmann/json.hpp>
+#endif
 
 #include <ankerl/unordered_dense.h>
 
 #include <rivet/hash/type_id.hpp>
 
+#include <rivet/data/dat1.hpp>
 #include <rivet/rivet_array.hpp>
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/rivet_vec.hpp>
@@ -94,7 +101,6 @@ namespace rivet {
 			};
 
 			struct subset_info {
-				std::string_view name;
 				// todo: this should be indices and the vertices/indices should be unpacked once. reused buffers may be a problem for memory.
 				std::vector<rivet_vec3f> vertices;
 				std::vector<rivet_vec3f> normals;
@@ -105,6 +111,11 @@ namespace rivet {
 				std::vector<rivet_vec4f> blend_weights;
 				std::vector<rivet_vec3i> faces;
 				std::vector<morph_info> morphs;
+
+				rivet::rivet_vec3f center_of_mass {};
+				rivet::rivet_vec2f extent {};
+				model_subset_flags flags {};
+				int32_t material_id;
 			};
 
 			struct bone_info {
@@ -129,16 +140,32 @@ namespace rivet {
 				uint32_t flags;
 			};
 
+			struct look_info {
+				std::string_view name;
+				std::array<std::vector<uint32_t>, 8> subsets;
+			};
+
 			std::vector<subset_info> subsets;
 			std::vector<bone_info> bones;
 			std::vector<locator_info> locators;
 			std::vector<material_info> materials;
+			std::vector<look_info> looks;
 
 			explicit model(const rivet::data::asset_bundle &bundle, rivet_size index = 0);
 
 			model(const std::shared_ptr<rivet_data_array> &dat1_stream, const std::shared_ptr<rivet_data_array> &resident) { init(dat1_stream, resident); }
 
+#ifdef RIVET_USE_NLOHMANN
+			[[nodiscard]] auto
+			to_nlohmann_json() const -> nlohmann::json;
+#endif
+
+			auto
+			to_gltf(const std::filesystem::path &path, const std::string &name, int lod = 0) const -> void;
+
 		private:
+			rivet::data::dat1 data;
+
 			void
 			init(const std::shared_ptr<rivet_data_array> &dat1_stream, const std::shared_ptr<rivet_data_array> &resident);
 		};
