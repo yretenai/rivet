@@ -1,5 +1,7 @@
 # rivet <br/> managing rift apart
 
+[![Builds](https://github.com/yretenai/rivet/actions/workflows/build-rivet.yml/badge.svg?branch=release)](https://github.com/yretenai/rivet/actions/workflows/build-rivet.yml)
+
 rivet is a processor for rift apart archives.
 
 ## status
