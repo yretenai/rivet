@@ -94,8 +94,8 @@ arch_avx512 = []
 if cxx_compiler.has_argument('-march=knl')
     arch_avx512 += ['-march=knl', '-mtune=knl']
 endif
-if cxx_compiler.has_argument('/arch:AVX-512')
-    arch_avx512 += ['/arch:AVX-512']
+if cxx_compiler.has_argument('/arch:AVX512')
+    arch_avx512 += ['/arch:AVX512']
 endif
 
 cmp_core_avx512 = static_library(
