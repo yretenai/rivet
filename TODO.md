@@ -11,8 +11,8 @@
 
 ## ddl
 
-- [ ] load binary ddl structures
-- [ ] dump ddl data to json
+- [x] load binary ddl structures
+- [x] dump ddl data to json
 - [ ] load ddl data from json
 - [ ] serialize loaded ddl to binary
 
