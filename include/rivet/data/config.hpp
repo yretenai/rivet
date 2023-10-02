@@ -51,10 +51,6 @@ namespace rivet::data {
 	struct RIVET_SHARED config {
 		constexpr static rivet_type_id type_id = 0x21a56f68;
 
-		RIVET_DEFINE_TYPE_ID(refs, "Config Asset Refs");
-		RIVET_DEFINE_TYPE_ID(type, "Config Type");
-		RIVET_DEFINE_TYPE_ID(data, "Config Built");
-
 		explicit config(const std::shared_ptr<rivet_data_array> &stream);
 		explicit config(const rivet::data::asset_bundle &bundle, rivet_size index = 0);
 

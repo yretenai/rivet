@@ -26,17 +26,6 @@ namespace rivet::data {
 		constexpr const static rivet_type_id magic = 0x34E89035;
 		constexpr const static rivet_type_id magic_compressed = 0x77AF12AF;
 
-		RIVET_DEFINE_TYPE_ID(header, "Archive TOC Header");
-		RIVET_DEFINE_TYPE_ID(ids, "Archive TOC Asset IDs");
-		RIVET_DEFINE_TYPE_ID(assets, "Archive TOC Asset Metadata");
-		RIVET_DEFINE_TYPE_ID(archives, "Archive TOC File Metadata");
-		RIVET_DEFINE_TYPE_ID(texture_ids, "Archive TOC Texture Asset Ids");
-		RIVET_DEFINE_TYPE_ID(texture_meta, "Archive TOC Texture Meta");
-		RIVET_DEFINE_TYPE_ID(texture_header, "Archive TOC Texture Header");
-		RIVET_DEFINE_TYPE_ID(asset_headers, "Archive TOC Asset Header Data");
-		RIVET_DEFINE_TYPE_ID(key_asset_ids, "Archive TOC Key Asset IDs");
-		RIVET_DEFINE_FAKE_TYPE_ID(archive_asset_offsets, "Archive TOC Asset Offsets", 0xDCD720B5);
-
 		struct archive_toc_header {
 			rivet_type_id type_id;
 			rivet_size size;

@@ -15,10 +15,12 @@
 
 #include <rivet/data/dat1.hpp>
 #include <rivet/data/toc.hpp>
+#include <rivet/hash/type_id_registry.hpp>
 #include <rivet/rivet_string_pool.hpp>
 
 using namespace rivet;
 using namespace rivet::structures;
+using namespace rivet::type_id;
 
 namespace rivet::data {
 	auto
@@ -73,10 +75,10 @@ namespace rivet::data {
 
 		const bool is_spider = header.schema == type_id_spider;
 
-		auto textures_header = get_section_data(texture_header_type_id);
+		auto textures_header = get_section_data(archive_texture_header_type_id);
 		std::shared_ptr<rivet_array<rivet_archive_raw>> archives_section;
 		if (is_spider) {
-			auto archives_spider_section = get_section<rivet_archive_raw_spider>(archives_type_id);
+			auto archives_spider_section = get_section<rivet_archive_raw_spider>(archive_archives_type_id);
 			if (archives_spider_section == nullptr) {
 				throw mismatched_data_error("archive_toc::archive_toc: missing archives section");
 			}
@@ -91,13 +93,13 @@ namespace rivet::data {
 				archives_section->set(i, existing);
 			}
 		} else {
-			archives_section = get_section<rivet_archive_raw>(archives_type_id);
+			archives_section = get_section<rivet_archive_raw>(archive_archives_type_id);
 		}
 
-		auto ids_section = get_section<rivet_asset_id>(ids_type_id);
+		auto ids_section = get_section<rivet_asset_id>(archive_ids_type_id);
 		std::shared_ptr<rivet_array<rivet_asset_raw>> assets_section;
 		if (is_spider) {
-			auto assets_spider_section = get_section<rivet_asset_raw_spider>(assets_type_id);
+			auto assets_spider_section = get_section<rivet_asset_raw_spider>(archive_assets_type_id);
 			assets_section = std::make_shared<rivet_array<rivet_asset_raw>>(nullptr, assets_spider_section->size());
 
 			static_assert(sizeof(std::pair<uint32_t, rivet_off>) == 8);
@@ -117,16 +119,16 @@ namespace rivet::data {
 				assets_section->set(i, existing);
 			}
 		} else {
-			assets_section = get_section<rivet_asset_raw>(assets_type_id);
+			assets_section = get_section<rivet_asset_raw>(archive_assets_type_id);
 		}
 
 		// optional
 		static_assert(sizeof(std::pair<uint32_t, uint32_t>) == 8);
-		auto groups_section = get_section<std::pair<uint32_t, uint32_t>>(header_type_id);
-		auto texture_ids = get_section<rivet_asset_id>(texture_ids_type_id);
-		auto texture_metas = get_section<rivet_asset_texture_header>(texture_meta_type_id);
-		auto asset_headers = get_section<rivet_asset_header>(asset_headers_type_id);
-		auto key_assets = get_section<rivet_asset_id>(key_asset_ids_type_id);
+		auto groups_section = get_section<std::pair<uint32_t, uint32_t>>(archive_header_type_id);
+		auto texture_ids = get_section<rivet_asset_id>(archive_texture_ids_type_id);
+		auto texture_metas = get_section<rivet_asset_texture_header>(archive_texture_meta_type_id);
+		auto asset_headers = get_section<rivet_asset_header>(archive_asset_headers_type_id);
+		auto key_assets = get_section<rivet_asset_id>(archive_key_asset_ids_type_id);
 
 		if (textures_header != nullptr) {
 			streamed_texture_count = textures_header->get<uint32_t>(0);

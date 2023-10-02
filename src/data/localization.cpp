@@ -9,6 +9,9 @@
 #include <rivet/data/asset_bundle.hpp>
 #include <rivet/data/dat1.hpp>
 #include <rivet/data/localization.hpp>
+#include <rivet/hash/type_id_registry.hpp>
+
+using namespace rivet::type_id;
 
 namespace rivet::data {
 	localization::localization(const std::shared_ptr<rivet_data_array> &stream): data(stream) {
@@ -16,15 +19,15 @@ namespace rivet::data {
 			throw invalid_tag_error("localization::localization: invalid type id");
 		}
 
-		auto header = data.get_section<rivet_size>(header_type_id);
-		auto flags = data.get_section<uint32_t>(flags_type_id);
-		auto tags = data.get_section_data(tags_type_id);
-		auto texts = data.get_section_data(text_type_id);
-		auto tags_offsets = data.get_section<rivet_off>(tags_offsets_type_id);
-		auto text_offsets = data.get_section<rivet_off>(text_offsets_type_id);
-		auto indices = data.get_section<uint16_t>(indices_type_id);
-		auto hashes = data.get_section<rivet_hash>(hashes_type_id);
-		auto ids = data.get_section<rivet_id>(ids_type_id);
+		auto header = data.get_section<rivet_size>(localization_header_type_id);
+		auto flags = data.get_section<uint32_t>(localization_flags_type_id);
+		auto tags = data.get_section_data(localization_tags_type_id);
+		auto texts = data.get_section_data(localization_text_type_id);
+		auto tags_offsets = data.get_section<rivet_off>(localization_tags_offsets_type_id);
+		auto text_offsets = data.get_section<rivet_off>(localization_text_offsets_type_id);
+		auto indices = data.get_section<uint16_t>(localization_indices_type_id);
+		auto hashes = data.get_section<rivet_hash>(localization_hashes_type_id);
+		auto ids = data.get_section<rivet_id>(localization_ids_type_id);
 
 		count = header->get(0);
 		if (flags->size() < count) {

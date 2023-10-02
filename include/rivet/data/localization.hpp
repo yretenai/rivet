@@ -22,16 +22,6 @@ namespace rivet::data {
 	struct RIVET_SHARED localization {
 		constexpr static rivet_type_id type_id = 0x122BB0AB;
 
-		RIVET_DEFINE_TYPE_ID(header, "Localization Header Built");
-		RIVET_DEFINE_TYPE_ID(flags, "Localization Flags Built");
-		RIVET_DEFINE_TYPE_ID(tags, "Localization Tags Built");
-		RIVET_DEFINE_TYPE_ID(text, "Localization Text Built");
-		RIVET_DEFINE_TYPE_ID(tags_offsets, "Localization TagOffsets Built");
-		RIVET_DEFINE_TYPE_ID(text_offsets, "Localization TextOffsets Built");
-		RIVET_DEFINE_TYPE_ID(indices, "Localization SortedIndexes Built");
-		RIVET_DEFINE_TYPE_ID(ids, "Localization SortedHashes Built");
-		RIVET_DEFINE_FAKE_TYPE_ID(hashes, "Localization Tag Hashes", 0x06a58050); // todo: find real type id
-
 		explicit localization(const std::shared_ptr<rivet_data_array> &stream);
 		explicit localization(const rivet::data::asset_bundle &bundle, rivet_size index = 0);
 

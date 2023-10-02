@@ -17,10 +17,12 @@
 #include <rivet/data/asset_bundle.hpp>
 #include <rivet/data/dat1.hpp>
 #include <rivet/gfx/texture.hpp>
+#include <rivet/hash/type_id_registry.hpp>
 #include <rivet/support/dxgi.hpp>
 
 using namespace rivet::data;
 using namespace rivet::support;
+using namespace rivet::type_id;
 
 namespace rivet::gfx {
 	texture::texture(const rivet::data::asset_bundle &bundle, rivet_size index) {
@@ -39,7 +41,7 @@ namespace rivet::gfx {
 			throw invalid_operation("texture::texture: invalid texture stream");
 		}
 
-		auto header_stream = data.get_section<texture::texture_header>(texture::texture_header_type_id);
+		auto header_stream = data.get_section<texture::texture_header>(texture_header_type_id);
 		if (header_stream == nullptr) {
 			throw invalid_operation("texture::texture: invalid texture stream");
 		}

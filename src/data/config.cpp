@@ -5,6 +5,9 @@
 #include <rivet/data/asset_bundle.hpp>
 #include <rivet/data/config.hpp>
 #include <rivet/ddl/serialization.hpp>
+#include <rivet/hash/type_id_registry.hpp>
+
+using namespace rivet::type_id;
 
 namespace rivet::data {
 	config_type::config_type(const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet_ddl_base(serialized) {
@@ -32,9 +35,9 @@ namespace rivet::data {
 	config::config(const std::shared_ptr<rivet_data_array> &stream): data(stream) {
 		data = rivet::data::dat1(stream);
 
-		auto asset_refs = data.get_section<rivet::structures::rivet_ref>(refs_type_id);
-		auto type_blob = data.get_section_data(type_type_id);
-		auto data_blob = data.get_section_data(data_type_id);
+		auto asset_refs = data.get_section<rivet::structures::rivet_ref>(config_refs_type_id);
+		auto type_blob = data.get_section_data(config_type_type_id);
+		auto data_blob = data.get_section_data(config_data_type_id);
 
 		if (type_blob == nullptr) {
 			throw rivet::invalid_operation("config::config: invalid stream");

@@ -27,13 +27,6 @@ namespace rivet::data {
 		constexpr const static rivet_type_id magic = 0xB8EF3955;
 		constexpr const static rivet_type_id magic_compressed = 0x891F77AF;
 
-		RIVET_DEFINE_TYPE_ID(types, "Asset Types");
-		RIVET_DEFINE_TYPE_ID(ids, "Asset Ids");
-		RIVET_DEFINE_TYPE_ID(links, "Dependency Links");
-		RIVET_DEFINE_TYPE_ID(names, "Asset Names");
-		RIVET_DEFINE_TYPE_ID(heads, "Dependency Links Heads");
-		RIVET_DEFINE_FAKE_TYPE_ID(graph, "Dependency Graph", 0xBFEC699F); // todo: find real name
-
 		struct dependency_dag_header {
 			rivet_type_id type_id;
 			rivet_size size;

@@ -9,10 +9,12 @@
 
 #include <rivet/data/asset_bundle.hpp>
 #include <rivet/gfx/model.hpp>
+#include <rivet/hash/type_id_registry.hpp>
 #include <rivet/structures/gfx/rivet_model.hpp>
 
 using namespace rivet::data;
 using namespace rivet::structures::gfx;
+using namespace rivet::type_id;
 
 namespace rivet::gfx {
 	model::model(const rivet::data::asset_bundle &bundle, rivet::rivet_size index) {

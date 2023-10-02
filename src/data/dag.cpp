@@ -15,10 +15,12 @@
 #include <rivet/data/dag.hpp>
 #include <rivet/data/toc.hpp>
 #include <rivet/hash/asset_id.hpp>
+#include <rivet/hash/type_id_registry.hpp>
 #include <rivet/rivet_string_pool.hpp>
 
 using namespace rivet;
 using namespace rivet::structures;
+using namespace rivet::type_id;
 
 namespace rivet::data {
 	auto
@@ -137,12 +139,12 @@ namespace rivet::data {
 			throw invalid_tag_error("dependency_dag::dependency_dag: invalid stream");
 		}
 
-		auto links = get_section<uint32_t>(links_type_id);
-		auto heads = get_section<rivet_off>(heads_type_id);
-		auto names = get_section<rivet_off>(names_type_id);
+		auto links = get_section<uint32_t>(dependency_links_type_id);
+		auto heads = get_section<rivet_off>(dependency_heads_type_id);
+		auto names = get_section<rivet_off>(dependency_names_type_id);
 
 		// optional
-		auto types = get_section<rivet_asset_type>(types_type_id);
+		auto types = get_section<rivet_asset_type>(dependency_types_type_id);
 		auto dependency_groups = get_section<rivet_off>(graph_type_id);
 
 		if (names == nullptr) {
