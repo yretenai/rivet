@@ -19,6 +19,7 @@
 #include <rivet/rivet_array.hpp>
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/rivet_vec.hpp>
+#include <rivet/structures/gfx/rivet_model.hpp>
 #include <rivet/structures/gfx/rivet_model_vert.hpp>
 
 namespace rivet {
@@ -114,7 +115,7 @@ namespace rivet {
 
 				rivet::rivet_vec3f center_of_mass {};
 				rivet::rivet_vec2f extent {};
-				model_subset_flags flags {};
+				rivet::structures::gfx::model_subset_flags flags {};
 				int32_t material_id;
 			};
 

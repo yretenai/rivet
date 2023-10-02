@@ -205,7 +205,7 @@ namespace rivet::gfx {
 
 			auto morph_array = subset["morphs"] = nlohmann::json::array();
 			for (const auto &morph_info : subset_info.morphs) {
-				morph_array.emplace_back(morph_info.name)
+				morph_array.emplace_back(morph_info.name);
 			}
 		}
 
