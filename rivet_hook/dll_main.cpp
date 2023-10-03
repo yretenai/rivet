@@ -12,7 +12,7 @@
 
 namespace {
 	HINSTANCE h_this = nullptr;
-	FARPROC proc[47];
+	std::array<FARPROC, 47> proc;
 	HINSTANCE h_library = nullptr;
 	std::once_flag init;
 	std::once_flag fini;
@@ -26,7 +26,7 @@ HIDDllMain(HINSTANCE hInst, DWORD dwReason, [[maybe_unused]] LPVOID lpReserved) 
 		GetSystemDirectoryW(system32.data(), static_cast<UINT>(system32.size()));
 		auto hid_dll = std::filesystem::path(system32.data()) / "hid.dll";
 
-		h_library = LoadLibraryW(reinterpret_cast<LPCWSTR>(hid_dll.c_str()));
+		h_library = LoadLibraryW(hid_dll.c_str());
 		if (h_library == nullptr) {
 			return 0;
 		}

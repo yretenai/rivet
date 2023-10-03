@@ -32,19 +32,18 @@ namespace {
 namespace rivet_hook {
 	auto
 	get_game() -> HMODULE {
-		HMODULE module;
+		HMODULE module = nullptr;
 
 		// if the exe name is set, use that
 		if (strnlen_s(g_settings.exe_name.data(), g_settings.exe_name.size()) > 0) {
 			module = GetModuleHandleA(g_settings.exe_name.data());
 			if (module != nullptr) {
 				g_output << "[rivet] found " << std::string_view(g_settings.exe_name.data()) << '\n';
-				return module;
 			}
 		}
 
 		// not found
-		return nullptr;
+		return module;
 	}
 
 #pragma clang diagnostic push
