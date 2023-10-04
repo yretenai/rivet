@@ -20,7 +20,7 @@ namespace rivet::data {
 		}
 
 		auto header = data.get_section<rivet_size>(localization_header_type_id);
-		auto flags = data.get_section<uint32_t>(localization_flags_type_id);
+		auto flags = data.get_section<rivet::structures::rivet_localization_flag>(localization_flags_type_id);
 		auto tags = data.get_section_data(localization_tags_type_id);
 		auto texts = data.get_section_data(localization_text_type_id);
 		auto tags_offsets = data.get_section<rivet_off>(localization_tags_offsets_type_id);

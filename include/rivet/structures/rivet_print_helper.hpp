@@ -16,6 +16,7 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_archive.hpp>
 #include <rivet/structures/rivet_asset.hpp>
+#include <rivet/structures/rivet_localization.hpp>
 
 namespace rivet::helpers {
 	std::array<std::string_view, 0xFF> rivet_locale_enum {
@@ -28,6 +29,8 @@ namespace rivet::helpers {
 		"LEVEL",	  "ZONE",	"ACTOR",	 "CONDUIT",		 "CONFIG", "CINEMATIC2", "MODEL",		  "ANIMATION_CLIP", "ANIMATION_SET", "MATERIAL", "MATERIAL_GRAPH", "TEXTURE",
 		"ATMOSPHERE", "EFFECT", "SOUNDBANK", "LOCALIZATION", {},	   {},			 "ZONE_LIGHTING", "LEVEL_LIGHTING", "NODE_GRAPH",	 {},		 "WWISE_LOOKUP",
 	};
+
+	std::array<std::string_view, 3> rivet_localization_flag { "NONE", "HIDE", "FORCE" };
 
 	std::array<std::string_view, static_cast<int>(rivet::rivet_asset_category::Max)> rivet_asset_category_enum { "Game", "AudioStream", "AnimationStream", "ZoneLightBin" };
 
@@ -69,6 +72,20 @@ operator<<(std::ostream &out, const rivet::structures::rivet_asset_type &type) -
 	}
 
 	return out << rivet::helpers::rivet_asset_type_enum[index];
+}
+
+auto
+operator<<(std::ostream &out, const rivet::structures::rivet_localization_flag &flag) -> std::ostream & {
+	auto index = static_cast<const uint8_t>(flag);
+	if (index >= rivet::helpers::rivet_localization_flag.size()) {
+		return out << "UNKNOWN_FLAG_" << index;
+	}
+
+	if (rivet::helpers::rivet_localization_flag[index].empty()) {
+		return out << "UNKNOWN_FLAG_" << index;
+	}
+
+	return out << rivet::helpers::rivet_localization_flag[index];
 }
 
 auto

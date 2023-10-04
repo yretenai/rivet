@@ -9,11 +9,17 @@
 #include <string_view>
 
 namespace rivet::structures {
+	enum class rivet_localization_flag : uint8_t {
+		None,
+		Hide,
+		Force
+	};
+
 	struct rivet_localization_entry {
 		rivet_id id;
 		rivet_hash hash;
 		uint16_t sorting_index;
-		uint32_t flags;
+		rivet_localization_flag flags;
 		std::string_view tag;
 		std::u8string_view text;
 	};

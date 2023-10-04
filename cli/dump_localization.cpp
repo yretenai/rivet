@@ -19,6 +19,7 @@
 #include <rivet/rivet_array.hpp>
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_localization.hpp>
+#include <rivet/structures/rivet_print_helper.hpp>
 
 #include "helper.hpp"
 
@@ -60,12 +61,18 @@ dump_localization(int argc, char **argv) -> int {
 
 			for (const auto &entry_pair : loc.entries) {
 				const auto &entry = entry_pair.second;
+				auto flag_id = static_cast<uint32_t>(entry.flags);
+				std::string flag = "UNKNOWN_FLAG_" + std::to_string(flag_id);
+				if (flag_id < rivet::helpers::rivet_localization_flag.size() && !rivet::helpers::rivet_localization_flag[flag_id].empty()) {
+					flag = rivet::helpers::rivet_localization_flag[flag_id];
+				}
+
 				json_data.emplace_back(nlohmann::json {
-					{"id",		entry.id										 },
-					{ "flags", entry.flags									   },
+					{ "id",	entry.id										  },
+					{ "flags", flag											  },
 					{ "hash",  entry.hash										 },
-					{ "tag",	 entry.tag										},
-					{ "text",  reinterpret_cast<const char *>(entry.text.data())},
+					{ "tag",	 entry.tag										 },
+					{ "text",  reinterpret_cast<const char *>(entry.text.data()) },
 				});
 			}
 
