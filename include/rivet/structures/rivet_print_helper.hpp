@@ -30,7 +30,8 @@ namespace rivet::helpers {
 		"ATMOSPHERE", "EFFECT", "SOUNDBANK", "LOCALIZATION", {},	   {},			 "ZONE_LIGHTING", "LEVEL_LIGHTING", "NODE_GRAPH",	 {},		 "WWISE_LOOKUP",
 	};
 
-	std::array<std::string_view, 3> rivet_localization_flag { "NONE", "HIDE", "FORCE" };
+	//                                                        0     , 1,       2,      1 | 2,        4,       1 | 4,         2 | 4,         1 | 2 | 4
+	std::array<std::string_view, 8> rivet_localization_flag { "NONE", "NONE", "HIDE", "NONE, HIDE", "FORCE", "NONE, FORCE", "HIDE, FORCE", "NONE, HIDE, FORCE" };
 
 	std::array<std::string_view, static_cast<int>(rivet::rivet_asset_category::Max)> rivet_asset_category_enum { "Game", "AudioStream", "AnimationStream", "ZoneLightBin" };
 
