@@ -24,6 +24,8 @@
 		#endif
 	#endif
 	#define RIVET_INLINE inline
+	#define RIVET_FORCE_INLINE __forceinline RIVET_INLINE
+	#define RIVET_FLATTEN [[msvc::flatten]]
 	#define RIVET_DEBUG_BREAK __debugbreak()
 #else
 	#ifdef RIVET_STATIC
@@ -42,6 +44,8 @@
 		#endif
 	#endif
 	#define RIVET_INLINE inline
+	#define RIVET_FORCE_INLINE __attribute__((always_inline)) RIVET_INLINE
+	#define RIVET_FLATTEN __attribute__((flatten))
 // based on https://github.com/scottt/debugbreak
 	#ifndef NDEBUG
 		#ifdef __clang__

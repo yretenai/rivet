@@ -82,9 +82,6 @@ namespace rivet::structures {
 		operator=(rivet_ddl_base &&other) noexcept -> rivet_ddl_base & = default;
 
 		[[nodiscard]] virtual auto
-		get_type_id() const noexcept -> rivet_type_id = 0;
-
-		[[nodiscard]] virtual auto
 		get_type_name() const noexcept -> std::string_view = 0;
 
 		static auto
@@ -241,7 +238,7 @@ namespace rivet::structures {
 						}
 					}
 				} else {
-					throw std::runtime_error("rivet_serialized_object::get_enums: invalid variant type");
+					return {};
 				}
 			}
 

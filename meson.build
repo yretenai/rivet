@@ -127,6 +127,8 @@ endif
 
 subdir('src')
 
+subdir('ddl')
+
 if not get_option('lib_only')
     subdir('cli')
 endif

@@ -32,11 +32,6 @@ namespace rivet::data {
 		std::string_view type;
 
 		[[nodiscard]] auto
-		get_type_id() const noexcept -> rivet::rivet_type_id override {
-			return type_type_id;
-		}
-
-		[[nodiscard]] auto
 		get_type_name() const noexcept -> std::string_view override {
 			return type_type_name;
 		}

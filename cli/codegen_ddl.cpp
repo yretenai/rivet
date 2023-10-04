@@ -413,12 +413,12 @@ generate_struct(const dump_root &root, const std::shared_ptr<struct_info> &struc
 	hpp_file.write(header.data(), static_cast<std::streamsize>(header.size()));
 	hpp_file.close();
 
-	auto cpp_path = source_path / (std::to_string(index) + ".cpp");
+	auto cpp_path = source_path / (struct_name + ".cpp");
 	std::ofstream cpp_file(cpp_path, std::ios::out | std::ios::binary | std::ios::trunc);
 	cpp_file.write(source.data(), static_cast<std::streamsize>(source.size()));
 	cpp_file.close();
 
-	return std::make_tuple(std::to_string(index) + ".cpp", referenced_types);
+	return std::make_tuple(struct_name + ".cpp", referenced_types);
 }
 
 void
