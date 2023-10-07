@@ -1,0 +1,50 @@
+diff -wrU0 1.0815.0.0/conduit.txt 1.0831.0.0/conduit.txt
+--- 1.0815.0.0/conduit.txt	2023-10-07 23:39:00.645513200 +0100
++++ 1.0831.0.0/conduit.txt	2023-10-07 23:47:44.941629700 +0100
+@@ -807 +807 @@
+-affb9d69d0886e9e,conduit/mission/mis_cord_emergency_raft_vfx/mis_cord_emergency_raft_vfx.conduit,44c1aa50,none,none,n,7152,58270e0e924a4ec7
++affb9d69d0886e9e,conduit/mission/mis_cord_emergency_raft_vfx/mis_cord_emergency_raft_vfx.conduit,44c1aa50,none,none,n,5696,f273b7345a737259
+diff -wrU0 1.0815.0.0/config.txt 1.0831.0.0/config.txt
+--- 1.0815.0.0/config.txt	2023-10-07 23:38:59.452290100 +0100
++++ 1.0831.0.0/config.txt	2023-10-07 23:39:13.350635300 +0100
+@@ -69 +69 @@
+-8204eb5b857474bc,configs/equipment/wpn_schrodinger_item.config,21a56f68,none,none,n,1616,cab0dab43874a85e
++8204eb5b857474bc,configs/equipment/wpn_schrodinger_item.config,21a56f68,none,none,n,1472,c8e2ac4253278566
+@@ -642 +641,0 @@
+-963d08fac80e58ac,configs/video/wpn_schrodinger_video.config,21a56f68,none,none,n,464,1fa7ff776f4151cb
+@@ -1005 +1004 @@
+-a2feb6cffd1dfaa3,configs/uiconfig/uicredits.config,21a56f68,none,none,n,7556,43fd0891e0aaa66e
++a2feb6cffd1dfaa3,configs/uiconfig/uicredits.config,21a56f68,none,none,n,7556,cb5fbe4ae774b420
+@@ -1598 +1597 @@
+-b6efbb1e32ce5336,configs/equipment/wpn_magnamissile_item.config,21a56f68,none,none,n,1616,2619869914ddb76d
++b6efbb1e32ce5336,configs/equipment/wpn_magnamissile_item.config,21a56f68,none,none,n,1488,2d611e3657bade05
+@@ -1690 +1688,0 @@
+-ba80dce6f5fcab73,configs/video/wpn_magnamissile_video.config,21a56f68,none,none,n,448,86f0aa8c3020934b
+diff -wrU0 1.0815.0.0/material.txt 1.0831.0.0/material.txt
+--- 1.0815.0.0/material.txt	2023-10-07 23:39:04.752199500 +0100
++++ 1.0831.0.0/material.txt	2023-10-07 23:39:10.995143600 +0100
+@@ -2661 +2661 @@
+-9daefac3b905964e,material/visualeffect/global/gbl_generic_water_foam/gbl_generic_water_foam_slow.material,7c7bd7d6,none,none,n,368,1d36f80cede9a59a
++9daefac3b905964e,material/visualeffect/global/gbl_generic_water_foam/gbl_generic_water_foam_slow.material,7c7bd7d6,none,none,n,368,6796c8db445e3163
+@@ -3572 +3572 @@
+-a7bd338c044213e0,material/visualeffect/global/gbl_generic_water_foam/gbl_generic_water_foam.material,7c7bd7d6,none,none,n,367472,ff2c1550c494aaae
++a7bd338c044213e0,material/visualeffect/global/gbl_generic_water_foam/gbl_generic_water_foam.material,7c7bd7d6,none,none,n,367472,5a9adfe3f066574e
+@@ -4243 +4243 @@
+-af2dc02b8cfcc667,material/visualeffect/global/gbl_amb_boat_wake_foam/gbl_water_foam_break_up.material,7c7bd7d6,none,none,n,336,f3642e0d5e98b913
++af2dc02b8cfcc667,material/visualeffect/global/gbl_amb_boat_wake_foam/gbl_water_foam_break_up.material,7c7bd7d6,none,none,n,336,4ba781bc9704baf1
+@@ -5582 +5582 @@
+-be326ab65255efd3,material/visualeffect/global/gbl_amb_boat_wake_foam/gbl_water_foam_break_up_slowin.material,7c7bd7d6,none,none,n,352,edacdf09559b19fa
++be326ab65255efd3,material/visualeffect/global/gbl_amb_boat_wake_foam/gbl_water_foam_break_up_slowin.material,7c7bd7d6,none,none,n,352,f4516c87b17dca14
+diff -wrU0 1.0815.0.0/movie_weaponvids.txt 1.0831.0.0/movie_weaponvids.txt
+--- 1.0815.0.0/movie_weaponvids.txt	2023-10-07 23:39:03.394455600 +0100
++++ 1.0831.0.0/movie_weaponvids.txt	2023-10-07 23:47:44.976396200 +0100
+@@ -4 +3,0 @@
+-857db50d41a23463,d\movie_weaponvids/9619043447673599075,0,none,none,n,60004076,893b268162da843e
+@@ -16 +14,0 @@
+-a1adec585ea1b35a,d\movie_weaponvids/11650227675366273882,0,none,none,n,60004076,893b268162da843e
+diff -wrU0 1.0815.0.0/visualeffect.txt 1.0831.0.0/visualeffect.txt
+--- 1.0815.0.0/visualeffect.txt	2023-10-07 23:39:02.000468200 +0100
++++ 1.0831.0.0/visualeffect.txt	2023-10-07 23:47:44.945139300 +0100
+@@ -699 +699 @@
+-8e6682d83f91dabf,visualeffect/environment/global/ambient/gbl_amb_raindrop_ground_splash/water_splash_ripple_on.visualeffect,21400ee4,none,none,n,7756,3b09e6678dc8521d
++8e6682d83f91dabf,visualeffect/environment/global/ambient/gbl_amb_raindrop_ground_splash/water_splash_ripple_on.visualeffect,21400ee4,none,none,n,7756,2a15d09d2c45f667

@@ -1,0 +1,6 @@
+diff -wrU0 1.0728.0.0/config.txt 1.0808.0.0/config.txt
+--- 1.0728.0.0/config.txt	2023-10-07 23:38:47.336839900 +0100
++++ 1.0808.0.0/config.txt	2023-10-07 23:38:52.979615100 +0100
+@@ -1351 +1351 @@
+-aed6101948aafa54,configs/system/system_photomodeconfiggame.config,21a56f68,none,none,n,263216,5d4cd929b44a4a96
++aed6101948aafa54,configs/system/system_photomodeconfiggame.config,21a56f68,none,none,n,263280,8420505ba68bed28

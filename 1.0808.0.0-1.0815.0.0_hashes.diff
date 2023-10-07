@@ -1,0 +1,27 @@
+diff -wrU0 1.0808.0.0/config.txt 1.0815.0.0/config.txt
+--- 1.0808.0.0/config.txt	2023-10-07 23:38:52.979615100 +0100
++++ 1.0815.0.0/config.txt	2023-10-07 23:38:59.452290100 +0100
+@@ -875 +875 @@
+-9e439288de960bf2,configs/uiconfig/uiiconmarkup.config,21a56f68,none,none,n,82048,f498c35d3edb63dc
++9e439288de960bf2,configs/uiconfig/uiiconmarkup.config,21a56f68,none,none,n,83488,c71a7c009bc0eab3
+diff -wrU0 1.0808.0.0/userinterface.txt 1.0815.0.0/userinterface.txt
+--- 1.0808.0.0/userinterface.txt	2023-10-07 23:38:54.324756200 +0100
++++ 1.0815.0.0/userinterface.txt	2023-10-07 23:47:44.966212500 +0100
+@@ -194 +194 @@
+-9788b7b39fa73791,d\userinterface/10919179278665332625,0,none,none,n,77833,9902110bb2e3e6dc
++9788b7b39fa73791,d\userinterface/10919179278665332625,0,none,none,n,78115,2356deae284f32c6
+@@ -218 +218 @@
+-99fe4bb4c1209323,d\userinterface/11096389771593814819,0,none,none,n,5376,01feadfdb82b1933
++99fe4bb4c1209323,d\userinterface/11096389771593814819,0,none,none,n,6320,5640bb6e484bdf84
+@@ -242 +242 @@
+-9c0753a06501db1b,d\userinterface/11243046943108225819,0,none,none,n,1092444,7e072fe795263e74
++9c0753a06501db1b,d\userinterface/11243046943108225819,0,none,none,n,1092444,0124c2e8f4e67a4d
+@@ -316 +316 @@
+-a23b17f80a09c12e,d\userinterface/11689963611857994030,0,none,none,n,20291,50c97842a99c4c6b
++a23b17f80a09c12e,d\userinterface/11689963611857994030,0,none,none,n,20959,49beb0b45bc3cb1e
+@@ -487 +487 @@
+-b6e4b36a44e15ccd,d\userinterface/13178855678596439245,0,none,none,n,19793,25cc3bd87306f6a7
++b6e4b36a44e15ccd,d\userinterface/13178855678596439245,0,none,none,n,20126,6495dfb4b6eda275
+@@ -541 +541 @@
+-bbf912cdd429c519,d\userinterface/13544878029530580249,0,none,none,n,53770,5f4e2539c5a19e45
++bbf912cdd429c519,d\userinterface/13544878029530580249,0,none,none,n,55672,fe30a27fe7c4bfea
