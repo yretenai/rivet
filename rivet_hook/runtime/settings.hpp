@@ -31,6 +31,7 @@ namespace rivet_hook {
 		bool attach_context_log = false;	// disable by default for clutter reasons
 		bool attach_log = false;			// disable by default because the same line is printed frequently
 		bool suppress_crash_handler = true; //
+		bool list_versions = true;          //
 
 		std::array<char, MAX_PATH + 1> exe_name {};		  // name of the exe we are patching, used to find the exe in the same directory.
 		std::array<char, MAX_PATH + 1> renderdoc_path {}; // path to renderdoc/dll
@@ -45,6 +46,7 @@ namespace rivet_hook {
 			LOAD_SETTING_BOOL(attach_context_log);
 			LOAD_SETTING_BOOL(attach_log);
 			LOAD_SETTING_BOOL(suppress_crash_handler);
+			LOAD_SETTING_BOOL(list_versions);
 			LOAD_SETTING(exe_name)
 			LOAD_SETTING(renderdoc_path)
 
@@ -64,6 +66,7 @@ namespace rivet_hook {
 			SAVE_SETTING_BOOL(attach_context_log);
 			SAVE_SETTING_BOOL(attach_log);
 			SAVE_SETTING_BOOL(suppress_crash_handler);
+			SAVE_SETTING_BOOL(list_versions);
 			SAVE_SETTING(exe_name);
 			SAVE_SETTING(renderdoc_path);
 		}

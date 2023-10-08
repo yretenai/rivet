@@ -230,6 +230,51 @@ namespace rivet_hook {
 		g_output << "[DDL] found " << types.size() << " types\n";
 	}
 
+	void
+	list_versions() {
+		g_output << "[rivet] dumping versions\n";
+		using namespace std::chrono_literals;
+		using version_str_fn = const char *(*) (uint32_t index);
+		using version_hash_fn = uint32_t(*) (uint32_t index);
+
+		std::vector<uint8_t *> function_ptrs = scan(g_game_module, VERSION_SIGNATURE);
+		std::vector<uint8_t *> hash_function_ptrs = scan(g_game_module, VERSION_HASH_SIGNATURE);
+
+		if (function_ptrs.size() != 1 && hash_function_ptrs.size() != 1) {
+			g_output << "[ver] could not find version pointer, aborting\n";
+			return;
+		}
+
+		version_str_fn func1 = reinterpret_cast<version_str_fn>(function_ptrs[0]);
+		version_hash_fn func2 = reinterpret_cast<version_hash_fn>(hash_function_ptrs[0]);
+
+		int32_t index = 0;
+		nlohmann::json versions = nlohmann::json::array_t();
+		while(true) {
+			auto version_str = func1(index++);
+			if(reinterpret_cast<int64_t>(version_str) == -1) {
+				break;
+			}
+
+			auto hash = func2(index);
+			nlohmann::json version;
+			std::stringstream str_stream;
+			str_stream << std::hex << std::setfill('0') << std::setw(8) << hash;
+			version["hash"] = str_stream.str();
+			version["version"] = version_str;
+			versions.emplace_back(version);
+			g_output << "[ver] " << version << ' = ' << str_stream.str() << '\n';
+		}
+
+		std::ofstream json_data;
+
+		json_data.open("./versions.json");
+		auto json_text = versions.dump();
+		json_data.write(json_text.c_str(), static_cast<std::streamsize>(json_text.size()));
+		json_data.flush();
+		json_data.close();
+	}
+
 	using context_log_t = const char *(*) (const char *, const char *);
 	context_log_t fwd_context_log = nullptr;
 
@@ -339,6 +384,10 @@ namespace rivet_hook {
 				return;
 			}
 
+			if (g_settings.suppress_crash_handler) {
+				create_hook("crash handler", g_output, g_game_module, CRASH_HANDLER_SIGNATURE, &null_func, nullptr);
+			}
+
 			if (g_settings.load_renderdoc) {
 				g_output << "[rivet] loading renderdoc\n";
 				if (std::filesystem::exists("renderdoc.dll")) {
@@ -372,8 +421,9 @@ namespace rivet_hook {
 				create_hook("log", g_output, g_game_module, LOG_SIGNATURE, &log, nullptr);
 			}
 
-			if (g_settings.suppress_crash_handler) {
-				create_hook("crash handler", g_output, g_game_module, CRASH_HANDLER_SIGNATURE, &null_func, nullptr);
+			if (g_settings.list_versions) {
+				g_output << "[rivet] dumping versions\n";
+				list_versions();
 			}
 
 			g_output << "[rivet] init complete\n";
