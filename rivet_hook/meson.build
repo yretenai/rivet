@@ -1,19 +1,25 @@
+# todo: 
+#   figure out how to get meson to use mingw on linux for this target alone
+#     -> can i just override $CC and $CXX temporarily?
 if host_machine.system() == 'windows'
     minhook_dep = dependency('minhook', version: '>= 1.3.3')
-    cc = meson.get_compiler('c')
-    if not add_languages('masm', native: false, required: cc.get_argument_syntax() == 'msvc')
-      error('masm not available')
+
+    if host_machine.system() == 'windows'
+      if not add_languages('masm', native: false, required: true)
+        error('masm not available')
+      endif
     endif
 
     rivet_hook = shared_library('rivet_hook', [
             'dll_main.cpp',
-            'trampoline.masm',
+            'trampoline.masm' if host_machine.system() == 'windows' else 'trampoline.nasm',
             'runtime/runtime.cpp'
         ],
         dependencies: [
             nlohmann_json_dep,
             minhook_dep,
         ],
+        nasm_args: '-f win64'
         vs_module_defs: 'hid.def'
     )
 endif

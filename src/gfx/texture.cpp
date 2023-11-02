@@ -292,7 +292,6 @@ namespace rivet::gfx {
 		dest_texture.dwSize = sizeof(CMP_Texture);
 		dest_texture.dwWidth = texture.dwWidth;
 		dest_texture.dwHeight = texture.dwHeight;
-		dest_texture.dwPitch = texture.dwPitch;
 		dest_texture.format = static_cast<CMP_FORMAT>(target);
 		dest_texture.dwDataSize = CMP_CalculateBufferSize(&dest_texture);
 		auto array = std::make_shared<rivet_data_array>(nullptr, dest_texture.dwDataSize);
