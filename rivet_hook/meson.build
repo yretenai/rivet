@@ -4,15 +4,13 @@
 if host_machine.system() == 'windows'
     minhook_dep = dependency('minhook', version: '>= 1.3.3')
 
-    if host_machine.system() == 'windows'
-      if not add_languages('masm', native: false, required: true)
-        error('masm not available')
-      endif
+    if not add_languages('masm' if build_machine.system() == 'windows' else 'nasm', native: false, required: true)
+      error('masm not available')
     endif
 
     rivet_hook = shared_library('rivet_hook', [
             'dll_main.cpp',
-            'trampoline.masm' if host_machine.system() == 'windows' else 'trampoline.nasm',
+            'trampoline.masm' if build_machine.system() == 'windows' else 'trampoline.nasm',
             'runtime/runtime.cpp'
         ],
         dependencies: [
