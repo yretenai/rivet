@@ -6,7 +6,7 @@ strip = 'x86_64-w64-mingw32-strip'
 nasm = 'nasm'
 exe_wrapper = 'wine64'
 
-[properties]
+[built-in options]
 c_args = ['-static-libgcc']
 cpp_args = ['-static-libgcc', '-static-libstdc++']
 nasm_args = ['-f win64']

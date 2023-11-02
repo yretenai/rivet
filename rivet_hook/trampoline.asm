@@ -4,5 +4,5 @@ section .data
 section .text
 	global trampoline
 	trampoline:
-		mov rax, proc_address
-		jmp rax
+		%use masm
+		jmp qword [proc_address]

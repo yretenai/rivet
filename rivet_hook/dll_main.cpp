@@ -22,11 +22,7 @@ auto WINAPI
 HIDDllMain(HINSTANCE hInst, DWORD dwReason, [[maybe_unused]] LPVOID lpReserved) -> BOOL {
 	if (dwReason == DLL_PROCESS_ATTACH) {
 		h_this = hInst;
-		std::array<wchar_t, MAX_PATH + 1> system32 {};
-		GetSystemDirectoryW(system32.data(), static_cast<UINT>(system32.size()));
-		auto hid_dll = std::filesystem::path(system32.data()) / "hid.dll";
-
-		h_library = LoadLibraryW(hid_dll.c_str());
+		h_library = LoadLibraryA("C:\\windows\\system32\\HID.DLL");
 		if (h_library == nullptr) {
 			return 0;
 		}
