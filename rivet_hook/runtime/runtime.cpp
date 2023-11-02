@@ -6,6 +6,7 @@
 #include <fstream>
 #include <memory>
 #include <ostream>
+#include <thread>
 #include <unordered_set>
 
 #include "ddl.hpp"
@@ -385,7 +386,7 @@ namespace rivet_hook {
 			}
 
 			if (g_settings.suppress_crash_handler) {
-				create_hook("crash handler", g_output, g_game_module, CRASH_HANDLER_SIGNATURE, &null_func, nullptr);
+				create_hook("crash handler", g_output, g_game_module, CRASH_HANDLER_SIGNATURE, reinterpret_cast<LPVOID>(&null_func), nullptr);
 			}
 
 			if (g_settings.load_renderdoc) {
@@ -414,11 +415,11 @@ namespace rivet_hook {
 			}
 
 			if (g_settings.attach_context_log) {
-				create_hook("context log", g_output, g_game_module, CONTEXT_LOG_SIGNATURE, &context_log, reinterpret_cast<LPVOID *>(&fwd_context_log));
+				create_hook("context log", g_output, g_game_module, CONTEXT_LOG_SIGNATURE, reinterpret_cast<LPVOID>(&context_log), reinterpret_cast<LPVOID *>(&fwd_context_log));
 			}
 
 			if (g_settings.attach_log) {
-				create_hook("log", g_output, g_game_module, LOG_SIGNATURE, &log, nullptr);
+				create_hook("log", g_output, g_game_module, LOG_SIGNATURE, reinterpret_cast<LPVOID>(&log), nullptr);
 			}
 
 			if (g_settings.list_versions) {

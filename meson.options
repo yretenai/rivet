@@ -1,3 +1,4 @@
 option('rivet_tests', type: 'boolean', value: false, description: 'build and run tests')
-option('lib_only', type: 'boolean', value: false, description: 'only build the library')
-option('no_ddl', type: 'boolean', value: false, description: 'skip DDL compilation')
+option('lib_only', type: 'boolean', value: false, description: 'only build rivet')
+option('hook_only', type: 'boolean', value: false, description: 'only build rivet_hook')
+option('no_ddl', type: 'boolean', value: false, description: 'skip rivet_ddl')

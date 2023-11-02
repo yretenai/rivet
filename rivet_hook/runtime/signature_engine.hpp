@@ -7,7 +7,7 @@
 #define WIN32_LEAN_AND_MEAN
 #include <windows.h>
 
-#include <Psapi.h>
+#include <psapi.h>
 #include <algorithm>
 #include <array>
 #include <cstdint>

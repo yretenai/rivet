@@ -58,16 +58,37 @@ if get_option('buildtype') == 'custom'
     add_global_arguments(opt_args, language: 'cpp')
 endif
 
-# public dependencies
-deps = []
-if not compiler.check_header('ankerl/unordered_dense.h')
-    deps += [dependency('unordered_dense', version: '>=4.1.1')]
-endif
+cpp_args = []
+
+cpp_args = compiler.get_supported_arguments(
+    '/wd4251', # do i need to define my own template exports? kinda cringe! do better msvc
+    '/wd4913',
+    '/utf-8',
+    '/bigobj',
+    '/EHsc',
+    '-fPIC',
+    '-finput-charset=utf-8',
+    '-fexec-charset=utf-8',
+    '-faddrsig',
+    '-faligned-new',
+    '-fcoroutines'
+)
+
+add_project_arguments(cpp_args, language: 'cpp')
 
 # cross dependencies between cli and rivet
 nlohmann_json_dep = dependency('', required: false)
 if not compiler.check_header('nlohmann/json.hpp')
     nlohmann_json_dep = dependency('nlohmann_json', version: '>=3.11.2')
+endif
+
+subdir('rivet_hook')
+
+if not get_option('hook_only')
+# public dependencies
+deps = []
+if not compiler.check_header('ankerl/unordered_dense.h')
+    deps += [dependency('unordered_dense', version: '>=4.1.1')]
 endif
 
 # cli dependencies
@@ -97,24 +118,6 @@ rivet_deps += [gdeflate_core.get_variable('gdeflate_core_dep')]
 
 libdeps = []
 
-cpp_args = []
-
-cpp_args = compiler.get_supported_arguments(
-    '/wd4251', # do i need to define my own template exports? kinda cringe! do better msvc
-    '/wd4913',
-    '/utf-8',
-    '/bigobj',
-    '/EHsc',
-    '-fPIC',
-    '-finput-charset=utf-8',
-    '-fexec-charset=utf-8',
-    '-faddrsig',
-    '-faligned-new',
-    '-fcoroutines'
-)
-
-add_project_arguments(cpp_args, language: 'cpp')
-
 icon_sources = []
 if host_machine.system() == 'windows'
     if import('fs').is_file('resources/icon.ico')
@@ -133,8 +136,6 @@ if not get_option('lib_only')
     subdir('cli')
 endif
 
-subdir('rivet_hook')
-
 if get_option('rivet_tests')
     subdir('test')
 endif
@@ -142,3 +143,4 @@ endif
 install_subdir('include/',
 	install_dir: 'include/',
 	strip_directory: true)
+endif
