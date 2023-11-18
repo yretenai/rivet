@@ -4,9 +4,7 @@
 
 #pragma once
 
-#include <cstdint>
 #include <rivet/rivet_keywords.hpp>
-#include <string_view>
 
 namespace rivet::structures {
 	struct rivet_ref {

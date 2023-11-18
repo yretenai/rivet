@@ -20,6 +20,6 @@ namespace rivet::data {
 		explicit asset_bundle(const std::shared_ptr<rivet_data_array> &stream);
 
 		[[nodiscard]] auto
-		get_entry(const rivet_index index) const -> std::shared_ptr<rivet_data_array>;
+		get_entry(rivet_index index) const -> std::shared_ptr<rivet_data_array>;
 	};
 } // namespace rivet::data

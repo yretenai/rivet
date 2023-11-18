@@ -15,7 +15,7 @@ namespace rivet::data {
 	}
 
 	auto
-	config_type::from_substruct(rivet_type_id type_id, const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized) -> std::shared_ptr<rivet_ddl_base> {
+	config_type::from_substruct(const rivet_type_id type_id, const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized) -> std::shared_ptr<rivet_ddl_base> {
 		if (type_id == type_name_type_id) {
 			return std::make_shared<config_type>(serialized);
 		}
@@ -24,7 +24,7 @@ namespace rivet::data {
 	}
 
 	auto
-	config_type::from_substruct(rivet_type_id type_id) -> std::shared_ptr<rivet_ddl_base> {
+	config_type::from_substruct(const rivet_type_id type_id) -> std::shared_ptr<rivet_ddl_base> {
 		if (type_id == type_name_type_id) {
 			return std::make_shared<config_type>();
 		}
@@ -35,7 +35,7 @@ namespace rivet::data {
 	config::config(const std::shared_ptr<rivet_data_array> &stream): data(stream) {
 		data = rivet::data::dat1(stream);
 
-		auto asset_refs = data.get_section<rivet::structures::rivet_ref>(config_refs_type_id);
+		const auto asset_refs = data.get_section<rivet::structures::rivet_ref>(config_refs_type_id);
 		auto type_blob = data.get_section_data(config_type_type_id);
 		auto data_blob = data.get_section_data(config_data_type_id);
 
@@ -47,7 +47,7 @@ namespace rivet::data {
 			throw rivet::invalid_operation("config::config: invalid stream");
 		}
 
-		auto type_serialized = std::make_shared<rivet::ddl::serialized>(type_blob, data.buffer);
+		const auto type_serialized = std::make_shared<rivet::ddl::serialized>(type_blob, data.buffer);
 		value = std::make_shared<rivet::ddl::serialized>(data_blob, data.buffer);
 		type = config_type(type_serialized);
 		constructed_value = value->construct(type.type);
@@ -61,5 +61,5 @@ namespace rivet::data {
 		}
 	}
 
-	config::config(const asset_bundle &bundle, rivet_size index): config(bundle.get_entry(index)) { }
+	config::config(const asset_bundle &bundle, const rivet_size index): config(bundle.get_entry(index)) { }
 } // namespace rivet::data

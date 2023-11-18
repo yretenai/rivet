@@ -11,14 +11,15 @@
 #include <rivet/gfx/model.hpp>
 #include <rivet/hash/type_id_registry.hpp>
 #include <rivet/structures/gfx/rivet_model.hpp>
+#include <rivet/structures/gfx/rivet_model_vert.hpp>
 
 using namespace rivet::data;
 using namespace rivet::structures::gfx;
 using namespace rivet::type_id;
 
 namespace rivet::gfx {
-	model::model(const rivet::data::asset_bundle &bundle, rivet::rivet_size index) {
-		auto dat1_stream = bundle.get_entry(index);
+	model::model(const rivet::data::asset_bundle &bundle, const rivet::rivet_size index) {
+		const auto dat1_stream = bundle.get_entry(index);
 		if (dat1_stream == nullptr) {
 			throw invalid_operation("model::model: invalid model stream");
 		}
@@ -61,8 +62,7 @@ namespace rivet::gfx {
 		}
 
 		// note: As far as I can tell the vertex data is the same for all 4 types, only anim has index data. Rift Apart only uses Anim Morph. Ziva is for muscles, and only exists in Miles Morales?
-		auto anim_morph_data = data.get_section_data(model_anim_morph_type_id);
-		if (anim_morph_data != nullptr) {
+		if (auto anim_morph_data = data.get_section_data(model_anim_morph_type_id); anim_morph_data != nullptr) {
 			auto anim_morph_index_stream = data.get_section_data(model_anim_morph_index_type_id);
 			auto anim_morph_vert_stream = data.get_section_data(model_anim_morph_vert_type_id);
 			if (anim_morph_vert_stream == nullptr) {
@@ -72,8 +72,7 @@ namespace rivet::gfx {
 			// todo: anim morph
 		}
 
-		auto anim_geom_data = data.get_section_data(model_anim_geom_type_id);
-		if (anim_geom_data != nullptr) {
+		if (auto anim_geom_data = data.get_section_data(model_anim_geom_type_id); anim_geom_data != nullptr) {
 			auto anim_geom_vert_stream = data.get_section_data(model_anim_geom_vfx_type_id);
 			if (anim_geom_vert_stream == nullptr) {
 				throw invalid_operation("model::model: invalid Model Geom stream");
@@ -82,8 +81,7 @@ namespace rivet::gfx {
 			// todo: anim geom
 		}
 
-		auto anim_ziva_data = data.get_section_data(model_anim_ziva_type_id);
-		if (anim_ziva_data != nullptr) {
+		if (auto anim_ziva_data = data.get_section_data(model_anim_ziva_type_id); anim_ziva_data != nullptr) {
 			auto anim_ziva_vert_stream = data.get_section_data(model_anim_ziva_vert_type_id);
 			if (anim_ziva_vert_stream == nullptr) {
 				throw invalid_operation("model::model: invalid Model Ziva stream");
@@ -93,8 +91,7 @@ namespace rivet::gfx {
 		}
 
 		// very old? not sure if this is used anymore
-		auto morph_data = data.get_section_data(model_morph_type_id);
-		if (morph_data != nullptr) {
+		if (auto morph_data = data.get_section_data(model_morph_type_id); morph_data != nullptr) {
 			auto morph_vert_stream = data.get_section_data(model_morph_vert_type_id);
 			if (morph_vert_stream == nullptr) {
 				throw invalid_operation("model::model: invalid Model Morph stream");
@@ -103,20 +100,17 @@ namespace rivet::gfx {
 			// todo: morph
 		}
 
-		auto material_data = data.get_section_data(model_material_type_id);
-		if (material_data != nullptr) {
+		if (auto material_data = data.get_section_data(model_material_type_id); material_data != nullptr) {
 			auto override_data = data.get_section_data(model_tex_overrides_type_id);
 			// todo: materials
 		}
 
-		auto joint_data = data.get_section_data(model_joint_type_id);
-		if (joint_data != nullptr) {
+		if (auto joint_data = data.get_section_data(model_joint_type_id); joint_data != nullptr) {
 			auto joint_remap = data.get_section_data(model_joint_remap_type_id);
 			auto joint_hierarchy_data = data.get_section_data(model_joint_hierarchy_type_id);
 			// todo: joints
 
-			auto skin_data = data.get_section_data(model_skin_type_id);
-			if (skin_data != nullptr) {
+			if (auto skin_data = data.get_section_data(model_skin_type_id); skin_data != nullptr) {
 				auto bind_data = data.get_section_data(model_bind_type_id);
 				auto skin_data_stream = data.get_section_data(model_skin_data_type_id);
 				auto gpu_data_stream = data.get_section_data(model_gpu_vert_type_id);
@@ -136,14 +130,12 @@ namespace rivet::gfx {
 				// todo: skin
 			}
 
-			auto locator_data = data.get_section_data(model_locator_type_id);
-			if (locator_data != nullptr) {
+			if (auto locator_data = data.get_section_data(model_locator_type_id); locator_data != nullptr) {
 				// todo: locators
 			}
 		}
 
-		auto spline_data = data.get_section_data(model_spline_type_id);
-		if (spline_data != nullptr) {
+		if (auto spline_data = data.get_section_data(model_spline_type_id); spline_data != nullptr) {
 			auto spline_subset_data = data.get_section_data(model_spline_subsets_type_id);
 
 			if (spline_subset_data == nullptr) {
@@ -152,8 +144,7 @@ namespace rivet::gfx {
 
 			// todo: spline
 
-			auto spline_skin_data = data.get_section_data(model_spline_skin_type_id);
-			if (spline_skin_data != nullptr) {
+			if (auto spline_skin_data = data.get_section_data(model_spline_skin_type_id); spline_skin_data != nullptr) {
 				auto spline_joint_data = data.get_section_data(model_spline_joint_type_id);
 				auto spline_weight_data = data.get_section_data(model_spline_weight_type_id);
 
@@ -175,11 +166,11 @@ namespace rivet::gfx {
 		auto obj = nlohmann::json();
 		auto look_array = obj["looks"] = nlohmann::json::array();
 
-		for (const auto &look_info : looks) {
+		for (const auto &[name, subsets] : looks) {
 			auto look = look_array.emplace_back();
-			look["name"] = look_info.name;
+			look["name"] = name;
 			auto subset_array = look["subsets"] = nlohmann::json::array();
-			for (const auto &subset : look_info.subsets) {
+			for (const auto &subset : subsets) {
 				auto lod = subset_array.emplace_back(nlohmann::json::array());
 				for (const auto &subset_id : subset) {
 					lod.emplace_back(subset_id);
@@ -188,45 +179,45 @@ namespace rivet::gfx {
 		}
 
 		auto material_array = obj["materials"] = nlohmann::json::array();
-		for (const auto &material_info : materials) {
+		for (const auto &[id, hash, path, name, flags] : materials) {
 			auto material = material_array.emplace_back();
-			material["id"] = material_info.id;
-			material["hash"] = material_info.hash;
-			material["path"] = material_info.path;
-			material["name"] = material_info.name;
-			material["flags"] = material_info.flags;
+			material["id"] = id;
+			material["hash"] = hash;
+			material["path"] = path;
+			material["name"] = name;
+			material["flags"] = flags;
 		}
 
 		auto subset_array = obj["subsets"] = nlohmann::json::array();
-		for (const auto &subset_info : subsets) {
+		for (const auto &[vertices, normals, uv0, uv1, color, blend_indices, blend_weights, faces, morphs, center_of_mass, extent, flags, material_id] : subsets) {
 			auto subset = subset_array.emplace_back();
-			subset["center_of_mass"] = subset_info.center_of_mass;
-			subset["extent"] = subset_info.extent;
-			subset["flags"] = static_cast<uint32_t>(subset_info.flags);
-			subset["material"] = subset_info.material_id;
+			subset["center_of_mass"] = center_of_mass;
+			subset["extent"] = extent;
+			subset["flags"] = static_cast<uint32_t>(flags);
+			subset["material"] = material_id;
 
 			auto morph_array = subset["morphs"] = nlohmann::json::array();
-			for (const auto &morph_info : subset_info.morphs) {
-				morph_array.emplace_back(morph_info.name);
+			for (const auto &[name, indices, vertices] : morphs) {
+				morph_array.emplace_back(name);
 			}
 		}
 
 		auto bone_array = obj["bones"] = nlohmann::json::array();
-		for (const auto &bone_info : bones) {
+		for (const auto &[name, position, rotation, scale, parent] : bones) {
 			auto bone = bone_array.emplace_back();
-			bone["name"] = bone_info.name;
-			bone["position"] = bone_info.position;
-			bone["rotation"] = bone_info.rotation;
-			bone["scale"] = bone_info.scale;
-			bone["parent"] = bone_info.parent;
+			bone["name"] = name;
+			bone["position"] = position;
+			bone["rotation"] = rotation;
+			bone["scale"] = scale;
+			bone["parent"] = parent;
 		}
 
 		auto locator_array = obj["locators"] = nlohmann::json::array();
-		for (const auto &locator_info : locators) {
+		for (const auto &[name, transform, parent] : locators) {
 			auto locator = locator_array.emplace_back();
-			locator["name"] = locator_info.name;
-			locator["transform"] = locator_info.transform;
-			locator["parent"] = locator_info.parent;
+			locator["name"] = name;
+			locator["transform"] = transform;
+			locator["parent"] = parent;
 		}
 
 		return obj;

@@ -19,9 +19,7 @@
 
 #include <rivet/data/dag.hpp>
 #include <rivet/data/toc.hpp>
-#include <rivet/gfx/texture.hpp>
 #include <rivet/hash/asset_id.hpp>
-#include <rivet/rivet.hpp>
 #include <rivet/rivet_game.hpp>
 #include <rivet/structures/rivet_print_helper.hpp>
 
@@ -33,24 +31,24 @@ using namespace rivet::structures;
 const std::array<const std::string, 32> localization_enum { "none", "us", "gb", "dk", "nl", "fi", "fr", "de", "it", "jp", "kr", "no", "pl", "pt", "ru", "es",
 															"se",	"br", "ar", "tr", "la", "cs", "ct", "fc", "cz", "hu", "el", "ro", "th", "vi", "id", "hr" };
 
-const std::array<const std::string_view, (int) rivet_asset_category::Max> stream_exts { ".stream", ".wem", ".animstrm", ".lgstream" };
+constexpr std::array<const std::string_view, static_cast<int>(rivet_asset_category::Max)> stream_exts { ".stream", ".wem", ".animstrm", ".lgstream" };
 
-const std::array<const std::string_view, (int) rivet_asset_category::Max> category_enum { "none", "sound", "animation", "lightgrid" };
+constexpr std::array<const std::string_view, static_cast<int>(rivet_asset_category::Max)> category_enum { "none", "sound", "animation", "lightgrid" };
 
 static auto
-hash_checksum(const std::shared_ptr<rivet_array<uint8_t>> &value, rivet_asset_id hash = 0xc96c5795'd7870f42) noexcept -> rivet_asset_id {
+hash_checksum(const std::shared_ptr<rivet_array<uint8_t>> &value, rivet_asset_id hash = rivet::hash::asset_hash_basis) noexcept -> rivet_asset_id {
 	for (const uint8_t byte_value : *value) {
-		hash = rivet::hash::crc64_table[(hash ^ byte_value) & 0xffu] ^ (hash >> 8u);
+		hash = rivet::hash::crc64_table[(hash ^ byte_value) & 0xffu] ^ hash >> 8u;
 	}
 
 	return hash;
 }
 
 void
-process_asset(const std::shared_ptr<rivet::structures::rivet_asset> &asset, rivet_size locale_id, rivet_size category_id, bool is_stream, const std::string &root_prefix, std::ostream &toc_file) {
+process_asset(const std::shared_ptr<rivet::structures::rivet_asset> &asset, const rivet_size locale_id, const rivet_size category_id, const bool is_stream, const std::string &root_prefix, std::ostream &toc_file) {
 	std::string name;
 	if (!asset->name.has_value()) {
-		if ((asset->id & 0x40000000'00000000) != 0) {
+		if ((asset->id & rivet::hash::wem_mask) != 0) {
 			name = "sound/wem/" + std::to_string(asset->id & UINT32_MAX) + std::string(".wem");
 		} else {
 			if (asset->archive->name.find('/') == std::string::npos && asset->archive->name.find('\\') == std::string::npos) {
@@ -71,8 +69,7 @@ process_asset(const std::shared_ptr<rivet::structures::rivet_asset> &asset, rive
 	}
 
 	if (is_stream) { // normalize extension
-		auto ext = stream_exts[category_id];
-		if (!ext.empty() && !name.ends_with(ext)) {
+		if (const auto ext = stream_exts[category_id]; !ext.empty() && !name.ends_with(ext)) {
 			name += ext;
 		}
 	}
@@ -82,21 +79,20 @@ process_asset(const std::shared_ptr<rivet::structures::rivet_asset> &asset, rive
 }
 
 auto
-extract(int argc, char **argv) -> int {
+extract(const int argc, char **argv) -> int {
 	std::string game_path;
 	std::string output_dir;
 	bool hash_data = false;
 	bool version_flag = false;
 	bool help_flag = false;
 
-	auto cli = (clipp::joinable(clipp::option("-h", "--help").set(help_flag, true) % "show help",
-								clipp::option("-v", "--version").set(version_flag, true) % "show version",
-								clipp::option("-H", "--hash").set(hash_data, true) % "hash dta"),
-				clipp::value("game", game_path) % "path to game directory",
-				clipp::option("-o", "--output-dir") & clipp::value("output-dir", output_dir) % "output directory");
-
-	if (!clipp::parse(argc, argv, cli) || help_flag || version_flag) {
-		return handle_exit("rivet-extract", cli, version_flag, help_flag);
+	if (const auto cli = (clipp::joinable(clipp::option("-h", "--help").set(help_flag, true) % "show help",
+									clipp::option("-v", "--version").set(version_flag, true) % "show version",
+									clipp::option("-H", "--hash").set(hash_data, true) % "hash dta"),
+					clipp::value("game", game_path) % "path to game directory",
+					clipp::option("-o", "--output-dir") & clipp::value("output-dir", output_dir) % "output directory");
+		!clipp::parse(argc, argv, cli) || help_flag || version_flag) {
+		return handle_exit("rivet-toc-dump", cli, version_flag, help_flag);
 	}
 
 	if (output_dir.empty()) {
@@ -111,15 +107,14 @@ extract(int argc, char **argv) -> int {
 			const auto &exe_path = entry.path();
 			auto exe_bin = rivet_data_array::from_file(exe_path);
 			auto exe_binw = exe_bin->cast<wchar_t>();
-			const std::wstring_view file_version = L"FileVersion";
-			auto file_version_offset = std::search(exe_binw->begin(), exe_binw->end(), file_version.begin(), file_version.end());
-			if (file_version_offset != exe_binw->end()) {
-				auto file_version_string_offset = static_cast<intptr_t>(reinterpret_cast<uint8_t *>(file_version_offset.array_ptr) - exe_bin->data()) + ((file_version.size() + 1) << 1);
-				file_version_string_offset = (file_version_string_offset + 3) & ~3;
+			constexpr std::wstring_view file_version = L"FileVersion";
+			if (auto file_version_offset = std::search(exe_binw->begin(), exe_binw->end(), file_version.begin(), file_version.end()); file_version_offset != exe_binw->end()) {
+				auto file_version_string_offset = reinterpret_cast<uint8_t *>(file_version_offset.array_ptr) - exe_bin->data() + (static_cast<uint>(file_version.size() + 1) << 1u);
+				file_version_string_offset = static_cast<uint>(file_version_string_offset + 3) & ~3u;
 				auto file_version_string = std::wstring(reinterpret_cast<const wchar_t *>(exe_bin->data() + file_version_string_offset)); // NOLINT(*-pro-bounds-pointer-arithmetic)
 				file_version_string_u8.clear();
 				file_version_string_u8.reserve(file_version_string.size());
-				std::transform(file_version_string.begin(), file_version_string.end(), std::back_inserter(file_version_string_u8), [](wchar_t test) { return static_cast<char>(test); });
+				std::ranges::transform(file_version_string, std::back_inserter(file_version_string_u8), [](const wchar_t test) { return static_cast<char>(test); });
 			}
 			break;
 		}
@@ -143,9 +138,8 @@ extract(int argc, char **argv) -> int {
 	}
 	toc_file << "id,name,type,locale,category,is_stream,size,archive\n";
 
-	// todo: this really should be in /share/ or something
-	auto streamed_files_path = std::filesystem::path("streamed_files.txt");
-	if (std::filesystem::exists(streamed_files_path)) {
+	// todo: this really should be in /share/ or something on linux
+	if (auto streamed_files_path = std::filesystem::path("streamed_files.txt"); std::filesystem::exists(streamed_files_path)) {
 		game->load_streamed_files_list(streamed_files_path);
 	}
 
@@ -164,9 +158,8 @@ extract(int argc, char **argv) -> int {
 			for (auto subtype_id = 0; subtype_id < 2; subtype_id++) {
 				auto is_stream = subtype_id == 1;
 				std::cout << (is_stream ? "stream" : "dat1") << '\n';
-				auto assets = game->toc->get_group(locale, category, is_stream);
 
-				for (const auto &asset : assets) {
+				for (const auto &asset : game->toc->get_group(locale, category, is_stream)) {
 					std::stringstream str_stream;
 					process_asset(asset, locale_id, category_id, is_stream, root_prefix, str_stream);
 					toc_file << str_stream.str() << (asset->archive != nullptr ? asset->archive->name : "") << '\n';

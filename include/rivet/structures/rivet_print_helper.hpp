@@ -6,7 +6,6 @@
 
 #include <array>
 #include <cstdint>
-#include <memory>
 #include <optional>
 #include <ostream>
 #include <string_view>
@@ -19,25 +18,25 @@
 #include <rivet/structures/rivet_localization.hpp>
 
 namespace rivet::helpers {
-	std::array<std::string_view, 0xFF> rivet_locale_enum {
+	inline constexpr std::array<std::string_view, 0xFF> rivet_locale_enum {
 		"None",		  "English",  "EnglishGB", "Danish",	 "Dutch",		 "Finnish",	 "French",	"German",		"Italian",			 "Japanese",		   "Korean",   "Norwegian", "Polish",
 		"Portuguese", "Russian",  "Spanish",   "Swedish",	 "PortugueseBR", "Arabic",	 "Turkish", "SpanishLATAM", "ChineseSimplified", "ChineseTraditional", "FrenchCA", "Czech",		"Hungarian",
 		"Greek",	  "Romanian", "Thai",	   "Vietnamese", "Indonesian",	 "Croatian",
 	};
 
-	std::array<std::string_view, 0xFF> rivet_asset_type_enum {
+	inline constexpr std::array<std::string_view, 0xFF> rivet_asset_type_enum {
 		"LEVEL",	  "ZONE",	"ACTOR",	 "CONDUIT",		 "CONFIG", "CINEMATIC2", "MODEL",		  "ANIMATION_CLIP", "ANIMATION_SET", "MATERIAL", "MATERIAL_GRAPH", "TEXTURE",
 		"ATMOSPHERE", "EFFECT", "SOUNDBANK", "LOCALIZATION", {},	   {},			 "ZONE_LIGHTING", "LEVEL_LIGHTING", "NODE_GRAPH",	 {},		 "WWISE_LOOKUP",
 	};
 
-	//                                                        0     , 1,       2,      1 | 2 = 3,    4,       1 | 4 = 5      2 | 4 = 6,     1 | 2 | 4 = 7
-	std::array<std::string_view, 8> rivet_localization_flag { "NONE", "NONE", "HIDE", "NONE, HIDE", "FORCE", "NONE, FORCE", "HIDE, FORCE", "NONE, HIDE, FORCE" };
+	//                                                               0     , 1,       2,      1 | 2 = 3,    4,       1 | 4 = 5      2 | 4 = 6,     1 | 2 | 4 = 7
+	inline constexpr std::array<std::string_view, 8> rivet_localization_flag { "NONE", "NONE", "HIDE", "NONE, HIDE", "FORCE", "NONE, FORCE", "HIDE, FORCE", "NONE, HIDE, FORCE" };
 
-	std::array<std::string_view, static_cast<int>(rivet::rivet_asset_category::Max)> rivet_asset_category_enum { "Game", "AudioStream", "AnimationStream", "ZoneLightBin" };
+	inline constexpr std::array<std::string_view, static_cast<int>(rivet::rivet_asset_category::Max)> rivet_asset_category_enum { "Game", "AudioStream", "AnimationStream", "ZoneLightBin" };
 
 } // namespace rivet::helpers
 
-auto
+inline auto
 operator<<(std::ostream &out, const rivet::structures::rivet_archive &archive) -> std::ostream & {
 	return out << "rivet_archive { "
 			   << "name: " << archive.name << ", "
@@ -47,9 +46,9 @@ operator<<(std::ostream &out, const rivet::structures::rivet_archive &archive) -
 			   << "load_priority: " << archive.load_priority << " }";
 }
 
-auto
+inline auto
 operator<<(std::ostream &out, const rivet::rivet_locale &locale) -> std::ostream & {
-	auto index = static_cast<const uint32_t>(locale);
+	const auto index = static_cast<const uint32_t>(locale);
 	if (index >= rivet::helpers::rivet_locale_enum.size()) {
 		return out << "UnknownLocale" << index;
 	}
@@ -61,9 +60,9 @@ operator<<(std::ostream &out, const rivet::rivet_locale &locale) -> std::ostream
 	return out << rivet::helpers::rivet_locale_enum[index];
 }
 
-auto
+inline auto
 operator<<(std::ostream &out, const rivet::structures::rivet_asset_type &type) -> std::ostream & {
-	auto index = static_cast<const uint32_t>(type);
+	const auto index = static_cast<const uint32_t>(type);
 	if (index >= rivet::helpers::rivet_asset_type_enum.size()) {
 		return out << "UNKNOWN_TYPE_" << index;
 	}
@@ -75,9 +74,9 @@ operator<<(std::ostream &out, const rivet::structures::rivet_asset_type &type) -
 	return out << rivet::helpers::rivet_asset_type_enum[index];
 }
 
-auto
+inline auto
 operator<<(std::ostream &out, const rivet::structures::rivet_localization_flag &flag) -> std::ostream & {
-	auto index = static_cast<const uint8_t>(flag);
+	const auto index = static_cast<const uint8_t>(flag);
 	if (index >= rivet::helpers::rivet_localization_flag.size()) {
 		return out << "UNKNOWN_FLAG_" << index;
 	}
@@ -89,9 +88,9 @@ operator<<(std::ostream &out, const rivet::structures::rivet_localization_flag &
 	return out << rivet::helpers::rivet_localization_flag[index];
 }
 
-auto
+inline auto
 operator<<(std::ostream &out, const rivet::rivet_asset_category &category) -> std::ostream & {
-	auto index = static_cast<const uint32_t>(category);
+	const auto index = static_cast<const uint32_t>(category);
 	if (index >= rivet::helpers::rivet_asset_category_enum.size()) {
 		return out << "UnknownCategory" << index;
 	}
@@ -99,7 +98,7 @@ operator<<(std::ostream &out, const rivet::rivet_asset_category &category) -> st
 	return out << rivet::helpers::rivet_asset_category_enum[index];
 }
 
-auto
+inline auto
 operator<<(std::ostream &out, const rivet::structures::rivet_asset_flags &flags) -> std::ostream & {
 	return out << "rivet_asset_flags { "
 			   << "is_stream: " << flags.is_stream << ", "
@@ -109,7 +108,7 @@ operator<<(std::ostream &out, const rivet::structures::rivet_asset_flags &flags)
 			   << "is_key: " << flags.is_key << " }";
 }
 
-auto
+inline auto
 operator<<(std::ostream &out, const std::vector<std::pair<std::string_view, rivet::rivet_asset_id>> &dependencies) -> std::ostream & {
 	out << "{ ";
 	for (size_t i = 0; i < dependencies.size(); i++) {
@@ -121,7 +120,7 @@ operator<<(std::ostream &out, const std::vector<std::pair<std::string_view, rive
 	return out << " }";
 }
 
-auto
+inline auto
 operator<<(std::ostream &out, const rivet::structures::rivet_asset &asset) -> std::ostream & {
 	return out << "rivet_asset { "
 			   << "name: " << asset.name.value_or("null") << ", "

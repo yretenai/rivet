@@ -11,8 +11,9 @@ namespace rivet::ddl {
 		return rivet::ddl::local_version;
 	}
 
-	const static std::string_view rivet_version_detailed_string = "ra815";
+	static constexpr std::string_view rivet_version_detailed_string = "ra815";
 
+	// ReSharper disable once CppDFAConstantFunctionResult
 	auto
 	ddl_version_detailed() -> std::string_view {
 		return rivet_version_detailed_string;

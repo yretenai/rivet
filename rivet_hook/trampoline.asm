@@ -4,5 +4,5 @@ section .data
 section .text
 	global trampoline
 	trampoline:
-		%use masm
+		default rel
 		jmp qword [proc_address]

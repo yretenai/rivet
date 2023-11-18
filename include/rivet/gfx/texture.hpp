@@ -8,7 +8,6 @@
 #include <filesystem>
 #include <memory>
 
-#include <rivet/hash/type_id.hpp>
 #include <rivet/rivet_array.hpp>
 #include <rivet/rivet_keywords.hpp>
 

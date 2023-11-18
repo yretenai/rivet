@@ -12,7 +12,6 @@
 #include <vector>
 
 #include <rivet/data/dat1.hpp>
-#include <rivet/hash/type_id.hpp>
 #include <rivet/rivet_array.hpp>
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_archive.hpp> // IWYU pragma: keep
@@ -20,11 +19,11 @@
 
 namespace rivet::data {
 	struct RIVET_SHARED archive_toc : dat1 {
-		constexpr const static std::string_view type_name = "ArchiveTOC";
-		constexpr const static rivet_type_id type_id = 0x4D7CF320;
-		constexpr const static rivet_type_id type_id_spider = 0x51B8E006;
-		constexpr const static rivet_type_id magic = 0x34E89035;
-		constexpr const static rivet_type_id magic_compressed = 0x77AF12AF;
+		constexpr static std::string_view type_name = "ArchiveTOC";
+		constexpr static rivet_type_id type_id = 0x4D7CF320;
+		constexpr static rivet_type_id type_id_spider = 0x51B8E006;
+		constexpr static rivet_type_id magic = 0x34E89035;
+		constexpr static rivet_type_id magic_compressed = 0x77AF12AF;
 
 		struct archive_toc_header {
 			rivet_type_id type_id;

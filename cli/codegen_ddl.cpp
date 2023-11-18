@@ -18,15 +18,19 @@
 #include "codegen/ddl_dump_schema.hpp"
 #include "codegen/template.hpp"
 
+using namespace std::filesystem;
+using namespace std;
+using namespace rivet;
+
 [[maybe_unused]] auto
-handle_exit(const std::string &name, const clipp::group &cli, bool version_flag, bool help_flag) -> int {
+handle_exit(const std::string &name, const clipp::group &cli, const bool version_flag, const bool help_flag) -> int {
 	if (version_flag) {
 		std::cout << name << " version 1\n";
 		return 0;
 	}
 
 	if (help_flag) {
-		std::cout << clipp::make_man_page(cli, name) << '\n';
+		std::cout << make_man_page(cli, name) << '\n';
 		return 1;
 	}
 
@@ -46,16 +50,16 @@ replace_string(std::string &str, const std::string_view &search, const std::stri
 }
 
 auto
-gather_base_defined_types(const dump_root &root, uint32_t type_id, std::unordered_set<uint32_t> &visited) -> std::unordered_set<uint32_t> { // NOLINT(*-no-recursion)
+gather_base_defined_types(const dump_root &root, const uint32_t type_id, std::unordered_set<uint32_t> &visited) -> std::unordered_set<uint32_t> { // NOLINT(*-no-recursion)
 	if (type_id == 0) {
 		return {};
 	}
 
-	if (visited.find(type_id) != visited.end()) {
+	if (visited.contains(type_id)) {
 		return {}; // already visited
 	}
 
-	auto entry = root.lookup.find(type_id);
+	const auto entry = root.lookup.find(type_id);
 	if (entry == root.lookup.end()) {
 		throw std::runtime_error("unknown type");
 	}
@@ -66,11 +70,11 @@ gather_base_defined_types(const dump_root &root, uint32_t type_id, std::unordere
 		return {};
 	}
 
-	auto struct_ = std::get<std::shared_ptr<struct_info>>(entry->second);
+	const auto struct_ = std::get<std::shared_ptr<struct_info>>(entry->second);
 
 	std::unordered_set<uint32_t> field_ids;
-	for (const auto &field : struct_->fields) {
-		field_ids.insert(field.type_name.id);
+	for (const auto & [name, type_name, allow_base_type, type, array_type] : struct_->fields) {
+		field_ids.insert(type_name.id);
 	}
 
 	auto base = gather_base_defined_types(root, struct_->base_name.id, visited);
@@ -80,8 +84,8 @@ gather_base_defined_types(const dump_root &root, uint32_t type_id, std::unordere
 }
 
 auto
-generate_struct(const dump_root &root, const std::shared_ptr<struct_info> &struct_, const std::filesystem::path &include_path, const std::filesystem::path &source_path,
-				const std::unordered_set<uint32_t> &ignore, rivet::rivet_size &index) -> std::tuple<std::string, std::unordered_set<uint32_t>> {
+generate_struct(const dump_root &root, const std::shared_ptr<struct_info> &struct_, const path &include_path, const path &source_path)
+	-> std::tuple<std::string, std::unordered_set<uint32_t>> {
 	auto struct_name = struct_->name.get_name_safe();
 	auto struct_id = struct_->name.get_id_hex();
 	std::cout << "generating struct " << struct_name << '\n';
@@ -126,13 +130,13 @@ generate_struct(const dump_root &root, const std::shared_ptr<struct_info> &struc
 	std::unordered_set<uint32_t> visited;
 	auto base_fields = gather_base_defined_types(root, struct_->base_name.id, visited);
 
-	for (const auto &field : struct_->fields) {
-		if (base_fields.find(field.type_name.id) != base_fields.end()) {
+	for (const auto & [name, type_name, allow_base_type, type, array_type] : struct_->fields) {
+		if (base_fields.contains(type_name.id)) {
 			continue;
 		}
 
 		auto type_id = std::string(template_struct_type_id);
-		auto field_name = field.name.get_name_safe();
+		auto field_name = name.get_name_safe();
 		auto field_id = to_hex(rivet::hash::hash_type_id(field_name));
 
 		if (field_name == struct_name) {
@@ -146,108 +150,103 @@ generate_struct(const dump_root &root, const std::shared_ptr<struct_info> &struc
 		auto field_fwd = std::string(template_struct_field);
 		auto field_ctor = std::string(template_struct_field_init);
 
-		auto is_array = field.array_type != serialized_array_type::none;
-
-		auto type = field.type;
-		if (ignore.find(field.type_name.id) != ignore.end()) {
-			type = rivet::structures::rivet_serialized_type::json;
-		}
+		auto is_array = array_type != serialized_array_type::none;
 
 		switch (type) {
-			case rivet::structures::rivet_serialized_type::uint8:
-				assert(field.type_name.id == rivet::structures::ddl_uint8_type_id);
+			case structures::rivet_serialized_type::uint8:
+				assert(type_name.id == rivet::structures::ddl_uint8_type_id);
 				replace_string(field_ctor, "%field_init%", is_array ? template_struct_field_array : template_struct_field_value);
 				replace_string(field_fwd, "%field_type%", is_array ? "std::vector<uint8_t>" : "uint8_t");
 				replace_string(field_ctor, "%field_type%", "uint8");
 				replace_string(field_fwd, "%field_name%", field_name);
 				replace_string(field_ctor, "%field_name%", field_name);
 				break;
-			case rivet::structures::rivet_serialized_type::uint16:
-				assert(field.type_name.id == rivet::structures::ddl_uint16_type_id);
+			case structures::rivet_serialized_type::uint16:
+				assert(type_name.id == rivet::structures::ddl_uint16_type_id);
 				replace_string(field_ctor, "%field_init%", is_array ? template_struct_field_array : template_struct_field_value);
 				replace_string(field_fwd, "%field_type%", is_array ? "std::vector<uint16_t>" : "uint16_t");
 				replace_string(field_ctor, "%field_type%", "uint16");
 				replace_string(field_fwd, "%field_name%", field_name);
 				replace_string(field_ctor, "%field_name%", field_name);
 				break;
-			case rivet::structures::rivet_serialized_type::uint32:
-				assert(field.type_name.id == rivet::structures::ddl_uint32_type_id);
+			case structures::rivet_serialized_type::uint32:
+				assert(type_name.id == rivet::structures::ddl_uint32_type_id);
 				replace_string(field_ctor, "%field_init%", is_array ? template_struct_field_array : template_struct_field_value);
 				replace_string(field_fwd, "%field_type%", is_array ? "std::vector<uint32_t>" : "uint32_t");
 				replace_string(field_ctor, "%field_type%", "uint32");
 				replace_string(field_fwd, "%field_name%", field_name);
 				replace_string(field_ctor, "%field_name%", field_name);
 				break;
-			case rivet::structures::rivet_serialized_type::tuid:
-			case rivet::structures::rivet_serialized_type::instance_id:
-			case rivet::structures::rivet_serialized_type::uint64:
-				assert(field.type_name.id == rivet::structures::ddl_uint64_type_id || field.type_name.id == rivet::structures::ddl_instance_id_type_id ||
-					   field.type_name.id == rivet::structures::ddl_tuid_type_id);
+			case structures::rivet_serialized_type::tuid:
+			case structures::rivet_serialized_type::instance_id:
+			case structures::rivet_serialized_type::uint64:
+				assert(type_name.id == rivet::structures::ddl_uint64_type_id || type_name.id == rivet::structures::ddl_instance_id_type_id ||
+					   type_name.id == rivet::structures::ddl_tuid_type_id);
 				replace_string(field_ctor, "%field_init%", is_array ? template_struct_field_array : template_struct_field_value);
 				replace_string(field_fwd, "%field_type%", is_array ? "std::vector<uint64_t>" : "uint64_t");
 				replace_string(field_ctor, "%field_type%", "uint64");
 				replace_string(field_fwd, "%field_name%", field_name);
 				replace_string(field_ctor, "%field_name%", field_name);
 				break;
-			case rivet::structures::rivet_serialized_type::int8:
-				assert(field.type_name.id == rivet::structures::ddl_int8_type_id);
+			case structures::rivet_serialized_type::int8:
+				assert(type_name.id == rivet::structures::ddl_int8_type_id);
 				replace_string(field_ctor, "%field_init%", is_array ? template_struct_field_array : template_struct_field_value);
 				replace_string(field_fwd, "%field_type%", is_array ? "std::vector<int8_t>" : "int8_t");
 				replace_string(field_ctor, "%field_type%", "int8");
 				replace_string(field_fwd, "%field_name%", field_name);
 				replace_string(field_ctor, "%field_name%", field_name);
 				break;
-			case rivet::structures::rivet_serialized_type::int16:
-				assert(field.type_name.id == rivet::structures::ddl_int16_type_id);
+			case structures::rivet_serialized_type::int16:
+				assert(type_name.id == rivet::structures::ddl_int16_type_id);
 				replace_string(field_ctor, "%field_init%", is_array ? template_struct_field_array : template_struct_field_value);
 				replace_string(field_fwd, "%field_type%", is_array ? "std::vector<int16_t>" : "int16_t");
 				replace_string(field_ctor, "%field_type%", "int16");
 				replace_string(field_fwd, "%field_name%", field_name);
 				replace_string(field_ctor, "%field_name%", field_name);
 				break;
-			case rivet::structures::rivet_serialized_type::int32:
-				assert(field.type_name.id == rivet::structures::ddl_int32_type_id);
+			case structures::rivet_serialized_type::int32:
+				assert(type_name.id == rivet::structures::ddl_int32_type_id);
 				replace_string(field_ctor, "%field_init%", is_array ? template_struct_field_array : template_struct_field_value);
 				replace_string(field_fwd, "%field_type%", is_array ? "std::vector<int32_t>" : "int32_t");
 				replace_string(field_ctor, "%field_type%", "int32");
 				replace_string(field_fwd, "%field_name%", field_name);
 				replace_string(field_ctor, "%field_name%", field_name);
 				break;
-			case rivet::structures::rivet_serialized_type::int64:
-				assert(field.type_name.id == rivet::structures::ddl_int64_type_id);
+			case structures::rivet_serialized_type::int64:
+				assert(type_name.id == rivet::structures::ddl_int64_type_id);
 				replace_string(field_ctor, "%field_init%", is_array ? template_struct_field_array : template_struct_field_value);
 				replace_string(field_fwd, "%field_type%", is_array ? "std::vector<int64_t>" : "int64_t");
 				replace_string(field_ctor, "%field_type%", "int64");
 				replace_string(field_fwd, "%field_name%", field_name);
 				replace_string(field_ctor, "%field_name%", field_name);
 				break;
-			case rivet::structures::rivet_serialized_type::float32:
-				assert(field.type_name.id == rivet::structures::ddl_float_type_id);
+			case structures::rivet_serialized_type::float32:
+				assert(type_name.id == rivet::structures::ddl_float_type_id);
 				replace_string(field_ctor, "%field_init%", is_array ? template_struct_field_array : template_struct_field_value);
 				replace_string(field_fwd, "%field_type%", is_array ? "std::vector<float>" : "float");
 				replace_string(field_ctor, "%field_type%", "float");
 				replace_string(field_fwd, "%field_name%", field_name);
 				replace_string(field_ctor, "%field_name%", field_name);
 				break;
-			case rivet::structures::rivet_serialized_type::float64:
-				assert(field.type_name.id == rivet::structures::ddl_double_type_id);
+			case structures::rivet_serialized_type::float64:
+				assert(type_name.id == rivet::structures::ddl_double_type_id);
 				replace_string(field_ctor, "%field_init%", is_array ? template_struct_field_array : template_struct_field_value);
 				replace_string(field_fwd, "%field_type%", is_array ? "std::vector<double>" : "double");
 				replace_string(field_ctor, "%field_type%", "double");
 				replace_string(field_fwd, "%field_name%", field_name);
 				replace_string(field_ctor, "%field_name%", field_name);
 				break;
-			case rivet::structures::rivet_serialized_type::file:
-			case rivet::structures::rivet_serialized_type::string:
-				assert(field.type_name.id == rivet::structures::ddl_file_type_id || field.type_name.id == rivet::structures::ddl_json_type_id ||
-					   field.type_name.id == rivet::structures::ddl_string_type_id);
+			case structures::rivet_serialized_type::file:
+			case structures::rivet_serialized_type::string:
+				assert(type_name.id == rivet::structures::ddl_file_type_id || type_name.id == rivet::structures::ddl_json_type_id ||
+					   type_name.id == rivet::structures::ddl_string_type_id);
 				replace_string(field_ctor, "%field_init%", is_array ? template_struct_field_array : template_struct_field_value);
 				replace_string(field_ctor, "%field_type%", "string");
 				replace_string(field_fwd, "%field_type%", is_array ? "std::vector<std::string_view>" : "std::string_view");
 				replace_string(field_fwd, "%field_name%", field_name);
 				replace_string(field_ctor, "%field_name%", field_name);
 				break;
-			case rivet::structures::rivet_serialized_type::enum_value:
+			case structures::rivet_serialized_type::enum_value:
 				{
 					/*
 					replace_string(field_ctor, "%field_init%", is_array ? template_struct_field_array : template_struct_field_value);
@@ -257,8 +256,8 @@ generate_struct(const dump_root &root, const std::shared_ptr<struct_info> &struc
 					replace_string(field_ctor, "%field_name%", field_name);
 */
 					auto enum_path = std::string(ddl_enum_include);
-					auto enum_full_name = "rivet::ddl::generated::" + field.type_name.get_name_safe();
-					replace_string(enum_path, "%enum_name%", field.type_name.get_name_safe());
+					auto enum_full_name = "rivet::ddl::generated::" + type_name.get_name_safe();
+					replace_string(enum_path, "%enum_name%", type_name.get_name_safe());
 					header_includes_set.insert(enum_path);
 					replace_string(field_ctor, "%field_init%", is_array ? template_struct_field_enum_array : template_struct_field_enum);
 					replace_string(field_ctor, "%field_type%", enum_full_name);
@@ -267,7 +266,7 @@ generate_struct(const dump_root &root, const std::shared_ptr<struct_info> &struc
 					replace_string(field_ctor, "%field_name%", field_name);
 				}
 				break;
-			case rivet::structures::rivet_serialized_type::bitfield:
+			case structures::rivet_serialized_type::bitfield:
 				{
 					/*
 					replace_string(field_ctor, "%field_init%", template_struct_field_array);
@@ -277,8 +276,8 @@ generate_struct(const dump_root &root, const std::shared_ptr<struct_info> &struc
 					replace_string(field_ctor, "%field_name%", field_name);
 					*/
 					auto bitset_path = std::string(ddl_bitset_include);
-					auto bitset_full_name = "rivet::ddl::generated::" + field.type_name.get_name_safe();
-					replace_string(bitset_path, "%bitset_name%", field.type_name.get_name_safe());
+					auto bitset_full_name = "rivet::ddl::generated::" + type_name.get_name_safe();
+					replace_string(bitset_path, "%bitset_name%", type_name.get_name_safe());
 					header_includes_set.insert(bitset_path);
 					replace_string(field_ctor, "%field_init%", template_struct_field_bitset);
 					replace_string(field_ctor, "%field_type%", bitset_full_name);
@@ -287,24 +286,24 @@ generate_struct(const dump_root &root, const std::shared_ptr<struct_info> &struc
 					replace_string(field_ctor, "%field_name%", field_name);
 				}
 				break;
-			case rivet::structures::rivet_serialized_type::object:
+			case structures::rivet_serialized_type::object:
 				{
 					auto struct_path = std::string(ddl_include);
-					auto struct_full_name = "rivet::ddl::generated::" + field.type_name.get_name_safe();
+					auto struct_full_name = "rivet::ddl::generated::" + type_name.get_name_safe();
 					auto struct_fwd_decl = std::string(template_struct_fwd_decl);
-					replace_string(struct_path, "%name%", field.type_name.get_name_safe());
-					replace_string(struct_fwd_decl, "%struct_name%", field.type_name.get_name_safe());
+					replace_string(struct_path, "%name%", type_name.get_name_safe());
+					replace_string(struct_fwd_decl, "%struct_name%", type_name.get_name_safe());
 					includes_set.insert(struct_path);
 					fwd_decls_set.insert(struct_fwd_decl);
-					referenced_types.insert(field.type_name.id);
+					referenced_types.insert(type_name.id);
 					replace_string(field_ctor, "%field_init%", is_array ? template_struct_field_struct_array : template_struct_field_struct);
 					replace_string(field_ctor, "%field_type%", struct_full_name);
-					replace_string(field_fwd, "%field_type%", is_array ? ("std::vector<std::shared_ptr<" + struct_full_name + ">>") : ("std::shared_ptr<" + struct_full_name + ">"));
+					replace_string(field_fwd, "%field_type%", is_array ? "std::vector<std::shared_ptr<" + struct_full_name + ">>" : "std::shared_ptr<" + struct_full_name + ">");
 					replace_string(field_fwd, "%field_name%", field_name);
 					replace_string(field_ctor, "%field_name%", field_name);
 				}
 				break;
-			case rivet::structures::rivet_serialized_type::json:
+			case structures::rivet_serialized_type::json:
 				{
 					replace_string(field_ctor, "%field_init%", template_struct_field_any);
 					replace_string(field_fwd, "%field_type%", "std::optional<std::vector<rivet::structures::rivet_serialized_value>>");
@@ -313,8 +312,8 @@ generate_struct(const dump_root &root, const std::shared_ptr<struct_info> &struc
 					replace_string(field_ctor, "%field_name%", field_name);
 				}
 				break;
-			case rivet::structures::rivet_serialized_type::boolean:
-				assert(field.type_name.id == rivet::structures::ddl_boolean_type_id);
+			case structures::rivet_serialized_type::boolean:
+				assert(type_name.id == rivet::structures::ddl_boolean_type_id);
 				replace_string(field_ctor, "%field_init%", is_array ? template_struct_field_array : template_struct_field_value);
 				replace_string(field_fwd, "%field_type%", is_array ? "std::vector<bool>" : "bool");
 				replace_string(field_ctor, "%field_type%", "bool");
@@ -422,14 +421,10 @@ generate_struct(const dump_root &root, const std::shared_ptr<struct_info> &struc
 }
 
 void
-generate_structs(const dump_root &root, const std::filesystem::path &include_path, const std::filesystem::path &source_path, std::stringstream &meson_build_files, // NOLINT(*-no-recursion)
-				 std::unordered_set<uint32_t> &referenced_types, std::unordered_set<uint32_t> &lookup_types, const std::unordered_set<uint32_t> &ignore, rivet::rivet_size &index) {
+generate_structs(const dump_root &root, const path &include_path, const path &source_path, std::stringstream &meson_build_files, // NOLINT(*-no-recursion)
+				 std::unordered_set<uint32_t> &referenced_types, const std::unordered_set<uint32_t> &lookup_types) {
 	for (auto lookup_id : lookup_types) {
-		if (referenced_types.find(lookup_id) != referenced_types.end()) {
-			continue;
-		}
-
-		if (ignore.find(lookup_id) != ignore.end()) {
+		if (referenced_types.contains(lookup_id)) {
 			continue;
 		}
 
@@ -437,15 +432,15 @@ generate_structs(const dump_root &root, const std::filesystem::path &include_pat
 
 		auto struct_ = std::get<std::shared_ptr<struct_info>>(root.lookup.at(lookup_id));
 
-		auto [path, referenced] = generate_struct(root, struct_, include_path, source_path, ignore, ++index);
+		auto [path, referenced] = generate_struct(root, struct_, include_path, source_path);
 		meson_build_files << "\t'gen/" << path << "',\n";
 
-		generate_structs(root, include_path, source_path, meson_build_files, referenced_types, referenced, ignore, index);
+		generate_structs(root, include_path, source_path, meson_build_files, referenced_types, referenced);
 	}
 }
 
 void
-generate_enum(const std::shared_ptr<enum_info> &enum_, const std::filesystem::path &include_path) {
+generate_enum(const std::shared_ptr<enum_info> &enum_, const path &include_path) {
 	auto enum_name = enum_->name.get_name_safe();
 	auto enum_id = enum_->name.get_id_hex();
 	std::cout << "generating enum " << enum_name << '\n';
@@ -460,13 +455,12 @@ generate_enum(const std::shared_ptr<enum_info> &enum_, const std::filesystem::pa
 	std::stringstream decl_fields;
 	std::stringstream fields;
 
-	for (const auto &value : enum_->values) {
-		auto value_name = value.name.get_name_safe();
-		auto decl_name = value.decl_name.get_name_safe();
-		auto value_id = value.name.get_id_hex();
+	for (const auto & [name, decl_name, friendly_name] : enum_->values) {
+		auto value_name = name.get_name_safe();
+		auto field_decl_name = decl_name.get_name_safe();
 
 		auto field_decl = std::string(template_enum_field_decl);
-		replace_string(field_decl, "%field_name%", decl_name);
+		replace_string(field_decl, "%field_name%", field_decl_name);
 		decl_fields << field_decl << '\n';
 
 		auto field = std::string(template_enum_field);
@@ -489,7 +483,7 @@ generate_enum(const std::shared_ptr<enum_info> &enum_, const std::filesystem::pa
 }
 
 void
-generate_bitset(const std::shared_ptr<bitset_info> &bitset, const std::filesystem::path &include_path) {
+generate_bitset(const std::shared_ptr<bitset_info> &bitset, const path &include_path) {
 	auto bitset_name = bitset->name.get_name_safe();
 	std::cout << "generating bitset " << bitset_name << '\n';
 	auto bitset_id = bitset->name.get_id_hex();
@@ -507,7 +501,6 @@ generate_bitset(const std::shared_ptr<bitset_info> &bitset, const std::filesyste
 	for (const auto &value : bitset->values) {
 		auto value_name = value.name.get_name_safe();
 		auto decl_name = value.decl_name.get_name_safe();
-		auto value_id = value.name.get_id_hex();
 
 		auto field_decl = std::string(template_bitset_field_decl);
 		replace_string(field_decl, "%field_name%", decl_name);
@@ -535,7 +528,7 @@ generate_bitset(const std::shared_ptr<bitset_info> &bitset, const std::filesyste
 }
 
 auto
-main(int argc, char **argv) -> int { // NOLINT(*-exception-escape)
+main(const int argc, char **argv) -> int { // NOLINT(*-exception-escape)
 #ifdef _NDEBUG
 	std::cerr << "rivet-coedgen-ddl is only available in debug builds.\n";
 	return 1;
@@ -545,11 +538,9 @@ main(int argc, char **argv) -> int { // NOLINT(*-exception-escape)
 	bool version_flag = false;
 	bool help_flag = false;
 
-	auto cli = (clipp::joinable(clipp::option("-h", "--help").set(help_flag, true) % "show help", clipp::option("-v", "--version").set(version_flag, true) % "show version"),
-				clipp::option("-i", "--input-file") & clipp::value("input-file", input_file) % "type dump file",
-				clipp::option("-o", "--output-dir") & clipp::value("output_dir", output_dir) % "output directory");
-
-	if (!clipp::parse(argc, argv, cli) || help_flag || version_flag) {
+	if (auto cli = (clipp::joinable(clipp::option("-h", "--help").set(help_flag, true) % "show help", clipp::option("-v", "--version").set(version_flag, true) % "show version"),
+	                clipp::option("-i", "--input-file") & clipp::value("input-file", input_file) % "type dump file",
+	                clipp::option("-o", "--output-dir") & clipp::value("output_dir", output_dir) % "output directory"); !parse(argc, argv, cli) || help_flag || version_flag) {
 		return handle_exit("rivet-codegen-ddl", cli, version_flag, help_flag);
 	}
 
@@ -572,51 +563,28 @@ main(int argc, char **argv) -> int { // NOLINT(*-exception-escape)
 	dump_root root;
 	root.from_json(json);
 
-	auto include_path = std::filesystem::path(output_dir) / "include" / "rivet" / "ddl" / "generated";
-	std::filesystem::create_directories(include_path);
+	auto include_path = path(output_dir) / "include" / "rivet" / "ddl" / "generated";
+	create_directories(include_path);
 
 	auto enum_path = include_path / "enums";
-	std::filesystem::create_directories(enum_path);
+	create_directories(enum_path);
 
 	auto bitset_path = include_path / "bitsets";
-	std::filesystem::create_directories(bitset_path);
+	create_directories(bitset_path);
 
-	auto source_path = std::filesystem::path(output_dir) / "gen";
-	std::filesystem::create_directories(source_path);
+	auto source_path = path(output_dir) / "gen";
+	create_directories(source_path);
 
 	std::stringstream meson_build_files;
 
 	std::unordered_set<uint32_t> lookup_types;
 
-	for (const auto &root_info : root.roots) {
-		lookup_types.insert(root_info.id);
+	for (const auto & [name, id] : root.roots) {
+		lookup_types.insert(id);
 	}
 
 	std::unordered_set<uint32_t> referenced_types;
-	std::unordered_set<uint32_t> ignore;
-	for (const auto &struct_ : root.structs) {
-		if (struct_->name.id == 3202290298) {
-			ignore.insert(struct_->name.id);
-			continue;
-		}
-
-		auto parent = struct_->base_name.id;
-		while (parent != 0) {
-			if (parent == 3202290298) {
-				break;
-			}
-			auto base_struct = std::get<std::shared_ptr<struct_info>>(root.lookup.at(parent));
-			parent = base_struct->base_name.id;
-		}
-
-		if (parent != 3202290298) { // skip EventBase
-			continue;
-		}
-
-		ignore.insert(struct_->name.id);
-	}
-	auto index = rivet::rivet_size(0);
-	generate_structs(root, include_path, source_path, meson_build_files, referenced_types, lookup_types, ignore, index);
+	generate_structs(root, include_path, source_path, meson_build_files, referenced_types, lookup_types);
 
 	for (const auto &enum_ : root.enums) {
 		generate_enum(enum_, enum_path);
@@ -665,7 +633,7 @@ main(int argc, char **argv) -> int { // NOLINT(*-exception-escape)
 
 	replace_string(registration, "%type_registrations%", registrations.str());
 
-	auto registration_path = std::filesystem::path(output_dir) / "src" / "rivet_ddl_registration.cpp";
+	auto registration_path = path(output_dir) / "src" / "rivet_ddl_registration.cpp";
 	std::ofstream registration_stream(registration_path, std::ios::out | std::ios::binary | std::ios::trunc);
 	registration_stream.write(registration.data(), static_cast<std::streamsize>(registration.size()));
 	registration_stream.close();

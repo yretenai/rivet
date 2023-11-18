@@ -11,6 +11,8 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::hash {
+	constexpr rivet_type_id type_hash_basis = 0xedb88320u;
+
 	// clang-format off
 	constexpr const static std::array<uint32_t, 256> crc32_table = {
 			0x00000000, 0x77073096, 0xee0e612c, 0x990951ba, 0x076dc419, 0x706af48f, 0xe963a535, 0x9e6495a3,
@@ -50,7 +52,7 @@ namespace rivet::hash {
 	// clang-format on
 
 	constexpr static auto
-	hash_type_id(const std::string_view &value, rivet_type_id hash = 0xedb88320u) noexcept -> rivet_type_id {
+	hash_type_id(const std::string_view &value, rivet_type_id hash = type_hash_basis) noexcept -> rivet_type_id {
 		for (const char letter : value) {
 			hash = crc32_table[(hash ^ static_cast<uint8_t>(letter)) & 0xffu] ^ (hash >> 8);
 		}
@@ -58,7 +60,7 @@ namespace rivet::hash {
 		return hash;
 	}
 
-	template <const std::string_view &Value, rivet_type_id Base = 0xedb88320u> struct type_id {
+	template <const std::string_view &Value, rivet_type_id Base = type_hash_basis> struct type_id {
 		constexpr const static rivet_type_id value = hash_type_id(Value, Base);
 	};
 

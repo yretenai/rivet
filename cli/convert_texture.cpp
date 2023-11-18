@@ -13,9 +13,7 @@
 
 #include <rivet/data/asset_bundle.hpp>
 #include <rivet/gfx/texture.hpp>
-#include <rivet/rivet.hpp>
 #include <rivet/rivet_array.hpp>
-#include <rivet/rivet_keywords.hpp>
 
 #include "helper.hpp"
 
@@ -23,7 +21,7 @@ using namespace rivet;
 using namespace rivet::gfx;
 
 auto
-convert_texture(int argc, char **argv) -> int {
+convert_texture(const int argc, char **argv) -> int {
 	std::string output_dir;
 	std::vector<std::string> input_files;
 	bool version_flag = false;
@@ -36,19 +34,18 @@ convert_texture(int argc, char **argv) -> int {
 	bool force_dds_on_multisurface = false;
 	bool use_tif_pages_on_multisurface = false;
 
-	auto cli = (clipp::joinable(clipp::option("-h", "--help").set(help_flag, true) % "show help",
-								clipp::option("-v", "--version").set(version_flag, true) % "show version",
-								clipp::option("-r", "--recursive").set(recursive, true) % "find files in directories recursively",
-								clipp::option("-d", "--dds").set(dds, true) % "convert to dds",
-								clipp::option("-t", "--tif").set(tif, true) % "convert to tiff",
-								clipp::option("-f", "--force-dds-on-hdr").set(force_dds_on_hdr, true) % "force dds on HDR textures",
-								clipp::option("-F", "--force-tif-on-hdr").set(force_tif_on_hdr, true) % "force tiff on HDR textures",
-								clipp::option("-m", "--force-dds-on-multisurface").set(force_dds_on_multisurface, true) % "force dds on multisurface textures",
-								clipp::option("-M", "--use-tif-pages-on-multisurface").set(use_tif_pages_on_multisurface, true) % "use tiff pages on multisurface textures"),
-				clipp::option("-o", "--output-dir") & clipp::value("output_dir", output_dir) % "output directory",
-				clipp::values("input-files", input_files) % "input files");
-
-	if (!clipp::parse(argc, argv, cli) || help_flag || version_flag) {
+	if (const auto cli = (clipp::joinable(clipp::option("-h", "--help").set(help_flag, true) % "show help",
+									clipp::option("-v", "--version").set(version_flag, true) % "show version",
+									clipp::option("-r", "--recursive").set(recursive, true) % "find files in directories recursively",
+									clipp::option("-d", "--dds").set(dds, true) % "convert to dds",
+									clipp::option("-t", "--tif").set(tif, true) % "convert to tiff",
+									clipp::option("-f", "--force-dds-on-hdr").set(force_dds_on_hdr, true) % "force dds on HDR textures",
+									clipp::option("-F", "--force-tif-on-hdr").set(force_tif_on_hdr, true) % "force tiff on HDR textures",
+									clipp::option("-m", "--force-dds-on-multisurface").set(force_dds_on_multisurface, true) % "force dds on multisurface textures",
+									clipp::option("-M", "--use-tif-pages-on-multisurface").set(use_tif_pages_on_multisurface, true) % "use tiff pages on multisurface textures"),
+					clipp::option("-o", "--output-dir") & clipp::value("output_dir", output_dir) % "output directory",
+					clipp::values("input-files", input_files) % "input files");
+		!clipp::parse(argc, argv, cli) || help_flag || version_flag) {
 		return handle_exit("rivet-texture-convert", cli, version_flag, help_flag);
 	}
 

@@ -35,13 +35,13 @@ namespace rivet::data {
 	}
 
 	void
-	dependency_dag::insert_dag_data(rivet_size index, const std::shared_ptr<rivet_array<uint32_t>> &links, const std::shared_ptr<rivet_array<rivet_off>> &heads,
-									const std::shared_ptr<rivet_array<rivet_off>> &names, const std::shared_ptr<rivet_array<rivet_asset_type>> &types, std::string_view name, bool is_ephemeral) const {
+	dependency_dag::insert_dag_data(const rivet_size index, const std::shared_ptr<rivet_array<uint32_t>> &links, const std::shared_ptr<rivet_array<rivet_off>> &heads,
+									const std::shared_ptr<rivet_array<rivet_off>> &names, const std::shared_ptr<rivet_array<rivet_asset_type>> &types, std::string_view name,
+									const bool is_ephemeral) const {
 		std::vector<std::weak_ptr<rivet_asset>> assets {};
 		auto name_str = std::string(name);
 		rivet::hash::normalize_asset_path(name_str);
-		auto asset_id = rivet::hash::hash_asset_id(name_str);
-		if (toc->asset_lookup.find(asset_id) == toc->asset_lookup.end()) {
+		if (auto asset_id = rivet::hash::hash_asset_id(name_str); toc->asset_lookup.find(asset_id) == toc->asset_lookup.end()) {
 			if (is_ephemeral) {
 				return;
 			}
@@ -63,21 +63,20 @@ namespace rivet::data {
 		}
 
 		if (is_ephemeral) {
-			auto ptr = rivet_string_pool::alloc_string(name);
+			const auto ptr = rivet_string_pool::alloc_string(name);
 			name = *ptr;
 		}
 
 		for (const auto &asset_ptr : assets) {
-			auto asset = asset_ptr.lock();
+			const auto asset = asset_ptr.lock();
 			asset->name = name;
 
 			if (types != nullptr) {
 				asset->type = types->get(index);
 			}
 
-			auto dependencies = load_array_partition(links, heads->get(index));
-			for (auto entry : dependencies) {
-				auto dependency_name_offset = names->get(entry & INT32_MAX);
+			for (const auto entry : load_array_partition(links, heads->get(index))) {
+				const auto dependency_name_offset = names->get(entry & INT32_MAX);
 				if (dependency_name_offset == UINT32_MAX) {
 					continue;
 				}
@@ -95,27 +94,27 @@ namespace rivet::data {
 			throw invalid_tag_error("dependency_dag::get_dag_data_buffer: invalid stream");
 		}
 
-		auto header = stream->get<dependency_dag::dependency_dag_header>(0);
+		auto [type_id, size, compressed_size] = stream->get<dependency_dag::dependency_dag_header>(0);
 
-		if (header.type_id == dat1::magic) {
+		if (type_id == dat1::magic) {
 			return stream;
 		}
 
-		if (header.type_id == dependency_dag::magic) {
+		if (type_id == dependency_dag::magic) {
 			return stream->slice(sizeof(dependency_dag::dependency_dag_header));
 		}
 
-		if (header.type_id == dependency_dag::magic_compressed) {
-			auto buffer = std::make_shared<rivet_data_array>(nullptr, header.size);
-			auto slice = stream->slice(sizeof(dependency_dag::dependency_dag_header));
+		if (type_id == dependency_dag::magic_compressed) {
+			auto buffer = std::make_shared<rivet_data_array>(nullptr, size);
+			const auto slice = stream->slice(sizeof(dependency_dag::dependency_dag_header));
 
 			z_stream zstream;
-			zstream.zalloc = Z_NULL;
-			zstream.zfree = Z_NULL;
-			zstream.opaque = Z_NULL;
+			zstream.zalloc = nullptr;
+			zstream.zfree = nullptr;
+			zstream.opaque = nullptr;
 			zstream.avail_in = static_cast<uint32_t>(slice->size());
 			zstream.next_in = slice->data();
-			zstream.avail_out = header.size;
+			zstream.avail_out = size;
 			zstream.next_out = buffer->data();
 
 			auto ret = inflateInit(&zstream);
@@ -139,13 +138,13 @@ namespace rivet::data {
 			throw invalid_tag_error("dependency_dag::dependency_dag: invalid stream");
 		}
 
-		auto links = get_section<uint32_t>(dependency_links_type_id);
-		auto heads = get_section<rivet_off>(dependency_heads_type_id);
-		auto names = get_section<rivet_off>(dependency_names_type_id);
+		const auto links = get_section<uint32_t>(dependency_links_type_id);
+		const auto heads = get_section<rivet_off>(dependency_heads_type_id);
+		const auto names = get_section<rivet_off>(dependency_names_type_id);
 
 		// optional
-		auto types = get_section<rivet_asset_type>(dependency_types_type_id);
-		auto dependency_groups = get_section<rivet_off>(graph_type_id);
+		const auto types = get_section<rivet_asset_type>(dependency_types_type_id);
+		const auto dependency_groups = get_section<rivet_off>(graph_type_id);
 
 		if (names == nullptr) {
 			throw mismatched_data_error("dependency_dag::dependency_dag: missing asset ids");
@@ -167,12 +166,8 @@ namespace rivet::data {
 			throw mismatched_data_error("dependency_dag::dependency_dag: dependency head count does not match asset count");
 		}
 
-		if (names->size() > names->size()) {
-			throw mismatched_data_error("dependency_dag::dependency_dag: dependency head count does not match asset count");
-		}
-
 		for (rivet_size i = 0; i < names->size(); ++i) {
-			auto name_offset = names->get(i);
+			const auto name_offset = names->get(i);
 			if (name_offset == rivet_unknown) {
 				continue;
 			}
@@ -190,8 +185,8 @@ namespace rivet::data {
 				auto dependencies = load_array_partition(links, dependency_groups->get(i));
 				std::vector<std::pair<std::string_view, rivet_asset_id>> group;
 				group.reserve(dependencies.size());
-				for (auto entry : dependencies) {
-					auto dependency_name_offset = names->get(entry & 0x7FFFFFFFu);
+				for (const auto entry : dependencies) {
+					const auto dependency_name_offset = names->get(entry & 0x7FFFFFFFu);
 					if (dependency_name_offset == rivet_unknown) {
 						continue;
 					}

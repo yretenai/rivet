@@ -298,8 +298,7 @@ namespace rivet::structures {
 		[[nodiscard]] auto
 		unwrap_this_into() const noexcept -> std::shared_ptr<T> {
 			if (values.size() == 2) {
-				auto has_obj = has_field(0x6c33fda5); // "Obj"
-				if (has_obj) {
+				if (has_field(0x6c33fda5)) {
 					auto obj = get_field<std::shared_ptr<rivet_serialized_object>>(0x6c33fda5); // "Obj"
 					auto type = get_field<std::string_view>(0xbc4e9799);						// "Type"
 					auto type_hash = rivet::hash::hash_type_id(type);
@@ -317,9 +316,7 @@ namespace rivet::structures {
 			requires(std::is_base_of_v<rivet::structures::rivet_ddl_base, T> && !std::is_same_v<rivet::structures::rivet_ddl_base, T>)
 		[[nodiscard]] auto
 		unwrap_into(rivet_type_id type_id) const noexcept -> std::shared_ptr<T> {
-			auto value = get_field<std::shared_ptr<rivet_serialized_object>>(type_id);
-
-			if (value != nullptr) {
+			if (auto value = get_field<std::shared_ptr<rivet_serialized_object>>(type_id); value != nullptr) {
 				return value->unwrap_this_into<T>();
 			}
 
@@ -339,8 +336,7 @@ namespace rivet::structures {
 		unwrap_into_many(rivet_type_id type_id) const noexcept -> std::vector<std::shared_ptr<T>> {
 			auto result = std::vector<std::shared_ptr<T>>();
 
-			auto instance_values = get_fields<std::shared_ptr<rivet_serialized_object>>(type_id);
-			for (const auto &value : instance_values) {
+			for (const auto &value : get_fields<std::shared_ptr<rivet_serialized_object>>(type_id)) {
 				auto instance = value->unwrap_this_into<T>();
 				if (instance != nullptr) {
 					result.emplace_back(instance);

@@ -4,15 +4,14 @@
 
 #pragma once
 
-#include <cstdio>
 #include <filesystem>
 #include <string>
 #include <vector>
 
 #include <rivet/rivet.hpp>
 
-auto
-handle_exit(const std::string &name, const clipp::group &cli, bool version_flag, bool help_flag) -> int {
+inline auto
+handle_exit(const std::string &name, const clipp::group &cli, const bool version_flag, const bool help_flag) -> int {
 	if (version_flag) {
 		std::cout << name << " version " << rivet::rivet_version_detailed() << '\n';
 		return 0;
@@ -27,8 +26,8 @@ handle_exit(const std::string &name, const clipp::group &cli, bool version_flag,
 	return 1;
 }
 
-auto
-find_glob(const std::vector<std::string> &input_files, const std::string &ext = {}, bool recursive = false) -> std::vector<std::filesystem::path> {
+inline auto
+find_glob(const std::vector<std::string> &input_files, const std::string &ext = {}, const bool recursive = false) -> std::vector<std::filesystem::path> {
 	std::vector<std::filesystem::path> files;
 	for (const auto &path : input_files) {
 		if (std::filesystem::is_directory(path)) {
@@ -59,7 +58,7 @@ find_glob(const std::vector<std::string> &input_files, const std::string &ext = 
 
 #ifdef NDEBUG
 	#define MAIN_WRAPPER(name)                                \
-		auto main(int argc, char **argv) -> int {             \
+		auto main(const int argc, char **argv) -> int {             \
 			try {                                             \
 				return name(argc, argv);                      \
 			} catch (std::exception & e) {                    \
@@ -70,5 +69,5 @@ find_glob(const std::vector<std::string> &input_files, const std::string &ext = 
 		}
 #else
 	#define MAIN_WRAPPER(name) \
-		auto main(int argc, char **argv) -> int { return name(argc, argv); } // NOLINT(*-exception-escape)
+		auto main(const int argc, char **argv) -> int { return name(argc, argv); } // NOLINT(*-exception-escape)
 #endif

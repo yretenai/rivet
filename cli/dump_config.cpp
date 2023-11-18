@@ -17,9 +17,7 @@
 #include <rivet/data/asset_bundle.hpp>
 #include <rivet/data/config.hpp>
 #include <rivet/ddl/serialization.hpp>
-#include <rivet/rivet.hpp>
 #include <rivet/rivet_array.hpp>
-#include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
 #include "helper.hpp"
@@ -28,24 +26,21 @@ using namespace rivet;
 using namespace rivet::data;
 
 auto
-dump_config(int argc, char **argv) -> int {
+dump_config(const int argc, char **argv) -> int {
 	std::vector<std::string> input_files;
 	bool version_flag = false;
 	bool help_flag = false;
 	bool recursive = false;
 
-	auto cli = (clipp::joinable(clipp::option("-h", "--help").set(help_flag, true) % "show help",
-								clipp::option("-v", "--version").set(version_flag, true) % "show version",
-								clipp::option("-r", "--recursive").set(recursive, true) % "find files in directories recursively"),
-				clipp::values("input-files", input_files) % "input files");
-
-	if (!clipp::parse(argc, argv, cli) || help_flag || version_flag) {
+	if (const auto cli = (clipp::joinable(clipp::option("-h", "--help").set(help_flag, true) % "show help",
+							 clipp::option("-v", "--version").set(version_flag, true) % "show version",
+							 clipp::option("-r", "--recursive").set(recursive, true) % "find files in directories recursively"),
+					clipp::values("input-files", input_files) % "input files");
+		!clipp::parse(argc, argv, cli) || help_flag || version_flag) {
 		return handle_exit("rivet-config-dump", cli, version_flag, help_flag);
 	}
 
-	const auto normalized_input_files = find_glob(input_files, ".config", recursive);
-
-	for (const auto &input_file : normalized_input_files) {
+	for (const auto &input_file : find_glob(input_files, ".config", recursive)) {
 		std::cout << "converting " << input_file << '\n';
 
 		auto config_buffer = rivet_data_array::from_file(input_file);

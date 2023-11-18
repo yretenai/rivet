@@ -14,7 +14,9 @@
 #include <rivet/hash/asset_id.hpp>
 
 namespace rivet::data {
-	rivet::data::data_stream_archive::data_stream_archive(const std::filesystem::path &root, const std::shared_ptr<rivet::structures::rivet_archive> &archive): archive(archive), exists(true) {
+	rivet::data::data_stream_archive::
+	data_stream_archive(const std::filesystem::path &root, const std::shared_ptr<rivet::structures::rivet_archive> &archive)
+		: archive(archive), exists(true) {
 		auto archive_name = std::string(archive->name);
 		rivet::hash::normalize_asset_path(archive_name);
 
@@ -54,9 +56,9 @@ namespace rivet::data {
 			return nullptr;
 		}
 
-		auto asset_offset = asset->offset;
+		const auto asset_offset = asset->offset;
 		auto asset_size = asset->size;
-		auto asset_end = asset_offset + asset_size;
+		const auto asset_end = asset_offset + asset_size;
 		auto buffer = std::make_shared<rivet_data_array>(nullptr, asset_size);
 
 		if (!is_compressed) {
@@ -73,8 +75,7 @@ namespace rivet::data {
 
 		// find the first chunk that contains the start offset
 		for (rivet_size i = 0; i < chunks->size(); i++) {
-			const auto &chunk = chunks->get(i);
-			if (chunk.offset <= asset_offset && chunk.offset + chunk.size > asset_offset) {
+			if (const auto &[offset, compressed_offset, size, compressed_size, compression_type] = chunks->get(i); offset <= asset_offset && offset + size > asset_offset) {
 				chunk_index = i;
 				break;
 			}
@@ -91,24 +92,19 @@ namespace rivet::data {
 				throw unreachable_error("dsar::read_file: chunk index is greater than chunk count, goodbye");
 			}
 
-			const auto &chunk = chunks->get(chunk_index++);
-			auto chunk_offset = chunk.offset;
-			auto chunk_size = chunk.size;
-			auto chunk_end = chunk_offset + chunk_size;
-
-			auto compressed_offset = chunk.compressed_offset;
-			auto compressed_size = chunk.compressed_size;
+			auto &[chunk_offset, compressed_offset, chunk_size, compressed_size, compression_type] = chunks->get(chunk_index++);
+			const auto chunk_end = chunk_offset + chunk_size;
 
 			if (chunk_offset > asset_end) {
 				throw unreachable_error("dsar::read_file: chunk offset is greater than asset end, goodbye");
 			}
 
-			auto chunk_buffer = std::make_shared<rivet_data_array>(nullptr, chunk_size);
-			auto compressed_buffer = std::make_shared<rivet_data_array>(nullptr, compressed_size);
+			const auto chunk_buffer = std::make_shared<rivet_data_array>(nullptr, chunk_size);
+			const auto compressed_buffer = std::make_shared<rivet_data_array>(nullptr, compressed_size);
 			base_stream->seekg(compressed_offset, std::ios::beg);
 			base_stream->read(reinterpret_cast<char *>(compressed_buffer->data()), static_cast<std::streamsize>(compressed_buffer->byte_size()));
 
-			switch (chunk.compression_type) {
+			switch (compression_type) {
 				case dsar_compression::none: throw unreachable_error("dsar::read_file: chunk is not compressed, goodbye");
 				case dsar_compression::unknown: throw not_implemented_error("dsar::read_file: chunk is compressed with an unknown compression type");
 				case dsar_compression::gdeflate:
@@ -121,10 +117,10 @@ namespace rivet::data {
 					}
 					break;
 				case dsar_compression::lz4:
-					auto result = LZ4_decompress_safe(reinterpret_cast<const char *>(compressed_buffer->data()),
-													  reinterpret_cast<char *>(chunk_buffer->data()),
-													  static_cast<int>(compressed_buffer->byte_size()),
-													  static_cast<int>(chunk_buffer->byte_size()));
+					const auto result = LZ4_decompress_safe(reinterpret_cast<const char *>(compressed_buffer->data()),
+															reinterpret_cast<char *>(chunk_buffer->data()),
+															static_cast<int>(compressed_buffer->byte_size()),
+															static_cast<int>(chunk_buffer->byte_size()));
 					if (result < 0) {
 						throw decompression_error("dsar::read_file: failed to decompress chunk using lz4");
 					}

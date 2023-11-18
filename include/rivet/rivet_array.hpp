@@ -4,6 +4,8 @@
 
 #pragma once
 
+// ReSharper disable CppDFAUnreachableCode
+
 #include <algorithm> // IWYU pragma: keep
 #include <cstdint>
 #include <filesystem>
@@ -35,7 +37,7 @@ namespace rivet {
 			using pointer = value_type *;
 			using reference = value_type &;
 
-			explicit iterator(pointer ptr): array_ptr(ptr) { }
+			explicit iterator(const pointer ptr): array_ptr(ptr) { } // NOLINT(*-misplaced-const)
 
 			auto
 			operator*() const noexcept -> reference {
@@ -49,26 +51,26 @@ namespace rivet {
 
 			auto
 			operator++() noexcept -> iterator & {
-				array_ptr++;
+				++array_ptr;
 				return *this;
 			}
 
 			auto
 			operator++(int) noexcept -> iterator { // NOLINT(cert-dcl21-cpp)
 				iterator tmp = *this;
-				array_ptr++;
+				++array_ptr;
 				return tmp;
 			}
 
 			friend auto
 			operator==(const iterator &lhs, const iterator &rhs) noexcept -> bool {
 				return lhs.array_ptr == rhs.array_ptr;
-			};
+			}
 
 			friend auto
 			operator!=(const iterator &lhs, const iterator &rhs) noexcept -> bool {
 				return lhs.array_ptr != rhs.array_ptr;
-			};
+			}
 
 			pointer array_ptr;
 		};
@@ -82,26 +84,26 @@ namespace rivet {
 				offset = Alignment - (reinterpret_cast<intptr_t>(this->ptr.get()) % Alignment);
 			}
 #else
-			ptr = std::shared_ptr<uint8_t[]>(new (std::align_val_t(Alignment)) uint8_t[normalize_value(size)]);
+			ptr = std::shared_ptr<uint8_t[]>(new (static_cast<std::align_val_t>(Alignment)) uint8_t[normalize_value(size)]);
 #endif
 		}
 
 		template <typename U = T>
-		static RIVET_INLINE auto
-		normalize_value(rivet_size64 index) noexcept -> rivet_size64 {
+		static auto
+		normalize_value(const rivet_size64 index) noexcept -> rivet_size64 {
 			return index * sizeof(U);
 		}
 
 		template <typename U = T>
-		static RIVET_INLINE auto
-		compact_value(rivet_size64 index) noexcept -> rivet_size64 {
+		static auto
+		compact_value(const rivet_size64 index) noexcept -> rivet_size64 {
 			return index / sizeof(U);
 		}
 
 	public:
-		rivet_array(): ptr(nullptr) { }
+		rivet_array() = default;
 
-		rivet_array(T *ptr, rivet_size64 size): length(size) {
+		rivet_array(T *ptr, const rivet_size64 size): length(size) {
 			alloc(size);
 
 			if (ptr != nullptr) {
@@ -116,15 +118,15 @@ namespace rivet {
 			}
 		}
 
-		rivet_array(std::shared_ptr<uint8_t[]> ptr, rivet_size64 length, rivet_off64 offset): ptr(std::move(ptr)), length(length), offset(offset) { } // NOLINT(*-avoid-c-arrays)
+		rivet_array(std::shared_ptr<uint8_t[]> ptr, const rivet_size64 length, const rivet_off64 offset): ptr(std::move(ptr)), length(length), offset(offset) { } // NOLINT(*-avoid-c-arrays)
 
-		[[nodiscard]] RIVET_INLINE auto
+		[[nodiscard]] auto
 		data() const noexcept -> T * {
 			return reinterpret_cast<T *>(ptr.get() + offset); // NOLINT(*-pro-bounds-pointer-arithmetic)
 		}
 
-		[[nodiscard]] RIVET_INLINE auto
-		data(rivet_size64 index) const -> T * {
+		[[nodiscard]] auto
+		data(const rivet_size64 index) const -> T * {
 			if (offset + index >= byte_size()) {
 				throw index_out_of_range("rivet_array::data: index out of range");
 			}
@@ -132,28 +134,28 @@ namespace rivet {
 			return reinterpret_cast<T *>(ptr.get() + offset + index); // NOLINT(*-pro-bounds-pointer-arithmetic)
 		}
 
-		[[maybe_unused, nodiscard]] RIVET_INLINE auto
+		[[maybe_unused, nodiscard]] auto
 		is_aligned() const noexcept -> bool {
-			return (reinterpret_cast<intptr_t>(ptr.get()) % Alignment) == 0;
+			return reinterpret_cast<intptr_t>(ptr.get()) % Alignment == 0;
 		}
 
-		[[nodiscard]] RIVET_INLINE auto
+		[[nodiscard]] auto
 		size() const noexcept -> rivet_size64 {
 			return length;
 		}
 
-		[[nodiscard]] RIVET_INLINE auto
+		[[nodiscard]] auto
 		byte_size() const noexcept -> rivet_size64 {
 			return size() * sizeof(T);
 		}
 
-		[[maybe_unused, nodiscard]] RIVET_INLINE auto
+		[[maybe_unused, nodiscard]] auto
 		empty() const noexcept -> bool {
 			return size() <= 0 || ptr == nullptr;
 		}
 
-		[[maybe_unused]] RIVET_INLINE auto
-		operator[](rivet_size64 index) const -> T & {
+		[[maybe_unused]] auto
+		operator[](const rivet_size64 index) const -> T & {
 			return get(index);
 		}
 
@@ -214,7 +216,7 @@ namespace rivet {
 		}
 
 		[[maybe_unused, nodiscard]] auto
-		slice(rivet_size64 index, rivet_size64 count) const -> std::shared_ptr<rivet_array<T, Alignment>> {
+		slice(const rivet_size64 index, rivet_size64 count) const -> std::shared_ptr<rivet_array> {
 			if (index > size()) {
 				throw index_out_of_range("rivet_array::slice: index out of range");
 			}
@@ -223,19 +225,19 @@ namespace rivet {
 				throw index_out_of_range("rivet_array::slice: index out of range");
 			}
 
-			return std::make_shared<rivet_array<T, Alignment>>(ptr, count, offset + index);
+			return std::make_shared<rivet_array>(ptr, count, offset + index);
 		}
 
 		[[maybe_unused, nodiscard]] auto
-		slice(rivet_size64 index) const -> std::shared_ptr<rivet_array<T, Alignment>> {
+		slice(const rivet_size64 index) const -> std::shared_ptr<rivet_array> {
 			return slice(index, size() - index);
 		}
 
 		template <typename U>
 		[[maybe_unused]] auto
-		slice(rivet_size64 index, rivet_size64 count) const -> std::shared_ptr<rivet_array<U, Alignment>> {
-			auto normalized_offset = normalize_value(count);
-			auto normalized_index = normalize_value(index);
+		slice(const rivet_size64 index, rivet_size64 count) const -> std::shared_ptr<rivet_array<U, Alignment>> {
+			const auto normalized_offset = normalize_value(count);
+			const auto normalized_index = normalize_value(index);
 
 			if (normalized_index > byte_size()) {
 				throw index_out_of_range("rivet_array::slice: index out of range");
@@ -255,7 +257,7 @@ namespace rivet {
 		}
 
 		[[maybe_unused]] void
-		copy_to(std::shared_ptr<rivet_array<T, Alignment>> &array, rivet_size64 index, rivet_size64 count, rivet_size64 output_index = 0) {
+		copy_to(std::shared_ptr<rivet_array> &array, rivet_size64 index, rivet_size64 count, rivet_size64 output_index = 0) {
 			if (count > array->size() - output_index) {
 				throw index_out_of_range("rivet_array::copy_to: index out of range");
 			}
@@ -268,7 +270,7 @@ namespace rivet {
 				throw index_out_of_range("rivet_array::copy_to: index out of range");
 			}
 
-			std::copy_n((data() + index), count, (array->data() + output_index));
+			std::copy_n(data() + index, count, array->data() + output_index);
 		}
 
 		template <typename U = T>
@@ -290,7 +292,7 @@ namespace rivet {
 		[[maybe_unused, nodiscard]] auto
 		to_wstring_view() const noexcept -> std::wstring_view {
 			if (sizeof(U) == 1) {
-				return std::wstring_view(to_string_view());
+				return std::wstring_view(to_string_view<U>());
 			}
 
 			return std::wstring_view(reinterpret_cast<wchar_t *>(data()), byte_size() >> 1);
@@ -299,9 +301,9 @@ namespace rivet {
 		template <typename U = T>
 			requires(sizeof(U) == 1 && std::is_integral_v<U>)
 		[[maybe_unused, nodiscard]] auto
-		to_string_view(rivet_index index, rivet_off count) const -> std::string_view {
-			auto normalized_offset = normalize_value(count);
-			auto normalized_index = normalize_value(index);
+		to_string_view(const rivet_index index, const rivet_off count) const -> std::string_view {
+			const auto normalized_offset = normalize_value(count);
+			const auto normalized_index = normalize_value(index);
 
 			if (normalized_index > byte_size()) {
 				throw index_out_of_range("rivet_array::to_string_view: index out of range");
@@ -316,9 +318,9 @@ namespace rivet {
 		template <typename U = T>
 			requires(sizeof(U) == 1 && std::is_integral_v<U>)
 		[[maybe_unused, nodiscard]] auto
-		to_u8string_view(rivet_index index, rivet_off count) const -> std::u8string_view {
-			auto normalized_offset = normalize_value(count);
-			auto normalized_index = normalize_value(index);
+		to_u8string_view(const rivet_index index, const rivet_off count) const -> std::u8string_view {
+			const auto normalized_offset = normalize_value(count);
+			const auto normalized_index = normalize_value(index);
 
 			if (normalized_index > byte_size()) {
 				throw index_out_of_range("rivet_array::to_u8string_view: index out of range");
@@ -333,9 +335,9 @@ namespace rivet {
 		template <typename U = T>
 			requires(sizeof(U) <= 2 && std::is_integral_v<U>)
 		[[maybe_unused, nodiscard]] auto
-		to_wstring_view(rivet_index index, rivet_off count) const -> std::wstring_view {
-			auto normalized_offset = normalize_value(count);
-			auto normalized_index = normalize_value(index);
+		to_wstring_view(const rivet_index index, const rivet_off count) const -> std::wstring_view {
+			const auto normalized_offset = normalize_value(count);
+			const auto normalized_index = normalize_value(index);
 
 			if (normalized_index > byte_size()) {
 				throw index_out_of_range("rivet_array::to_wstring_view: index out of range");
@@ -348,17 +350,17 @@ namespace rivet {
 		}
 
 		[[maybe_unused, nodiscard]] auto
-		to_cstring_view(rivet_size64 index = 0) const noexcept -> std::string_view {
+		to_cstring_view(const rivet_size64 index = 0) const noexcept -> std::string_view {
 			return std::string_view(reinterpret_cast<char *>(data()) + normalize_value(index));
 		}
 
 		[[maybe_unused, nodiscard]] auto
-		to_u8cstring_view(rivet_size64 index = 0) const noexcept -> std::u8string_view {
+		to_u8cstring_view(const rivet_size64 index = 0) const noexcept -> std::u8string_view {
 			return std::u8string_view(reinterpret_cast<char8_t *>(data()) + normalize_value(index));
 		}
 
 		[[maybe_unused, nodiscard]] auto
-		to_wcstring_view(rivet_size64 index = 0) const noexcept -> std::wstring_view {
+		to_wcstring_view(const rivet_size64 index = 0) const noexcept -> std::wstring_view {
 			return std::wstring_view(reinterpret_cast<wchar_t *>(data()) + (normalize_value(index) >> 1));
 		}
 
@@ -379,7 +381,7 @@ namespace rivet {
 				return nullptr;
 			}
 
-			auto size = static_cast<rivet_size64>(std::filesystem::file_size(path));
+			auto size = std::filesystem::file_size(path);
 			auto bytes = std::make_shared<rivet_array<uint8_t, Alignment>>(nullptr, size);
 			file.seekg(0, std::ios::beg);
 			file.read(reinterpret_cast<char *>(bytes->data()), static_cast<std::streamsize>(size));
@@ -388,8 +390,8 @@ namespace rivet {
 		}
 
 		[[maybe_unused]] static auto
-		from_vector(std::vector<T> &vector) noexcept -> std::shared_ptr<rivet_array<T, Alignment>> {
-			return std::make_shared<rivet_array<T, Alignment>>(vector.data(), vector.size());
+		from_vector(std::vector<T> &vector) noexcept -> std::shared_ptr<rivet_array> {
+			return std::make_shared<rivet_array>(vector.data(), vector.size());
 		}
 	};
 

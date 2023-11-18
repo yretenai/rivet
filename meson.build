@@ -70,8 +70,7 @@ cpp_args = compiler.get_supported_arguments(
     '-finput-charset=utf-8',
     '-fexec-charset=utf-8',
     '-faddrsig',
-    '-faligned-new',
-    '-fcoroutines'
+    '-faligned-new'
 )
 
 add_project_arguments(cpp_args, language: 'cpp')
@@ -140,7 +139,5 @@ if get_option('rivet_tests')
     subdir('test')
 endif
 
-install_subdir('include/',
-	install_dir: 'include/',
-	strip_directory: true)
+install_subdir('include/', install_dir: 'include/', strip_directory: true)
 endif

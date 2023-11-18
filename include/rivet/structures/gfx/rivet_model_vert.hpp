@@ -11,12 +11,12 @@
 #include <rivet/rivet_vec.hpp>
 
 namespace rivet::structures::gfx {
-	static const float rivet_sqrt2 = 1.4142135623730950488016887242097f;
-	static const float rivet_sqrt2_bits = rivet_sqrt2 / (static_cast<float>(0x3ff) / 2.0f); // 10 bits, divide by 2 to get [-1, 1]
-	static const float rivet_one = 1.0f;
-	static const float rivet_half = 0.50f;
-	static const float rivet_quarter = 0.25f;
-	static const float rivet_unorm8 = 255.0f;
+	static constexpr float rivet_sqrt2 = 1.4142135623730950488016887242097f;
+	static constexpr float rivet_sqrt2_bits = rivet_sqrt2 / (static_cast<float>(0x3ff) / 2.0f); // 10 bits, divide by 2 to get [-1, 1]
+	static constexpr float rivet_one = 1.0f;
+	static constexpr float rivet_half = 0.50f;
+	static constexpr float rivet_quarter = 0.25f;
+	static constexpr float rivet_unorm8 = 255.0f;
 
 #pragma pack(push, 1)
 
@@ -34,13 +34,13 @@ namespace rivet::structures::gfx {
 		unpack_normal() const -> rivet_vec3f {
 			auto normal = rivet_vec3f();
 
-			auto packed_x = static_cast<float>(normal_tangent & 0x3FFu);
-			auto packed_y = static_cast<float>((normal_tangent >> 10u) & 0x3FFu);
-			auto flip = (normal_tangent >> 31u) == 0;
+			const auto packed_x = static_cast<float>(normal_tangent & 0x3FFu);
+			const auto packed_y = static_cast<float>((normal_tangent >> 10u) & 0x3FFu);
+			const auto flip = (normal_tangent >> 31u) == 0;
 
 			auto nxy = rivet_vec2f(packed_x, packed_y) * rivet_sqrt2_bits - rivet_sqrt2;
-			auto nxxyy = nxy[0] * nxy[0] + nxy[1] * nxy[1];
-			auto weight = std::sqrt(rivet_one - nxxyy * rivet_quarter);
+			const auto nxxyy = nxy[0] * nxy[0] + nxy[1] * nxy[1];
+			const auto weight = std::sqrt(rivet_one - nxxyy * rivet_quarter);
 			nxy[0] *= weight;
 			nxy[1] *= weight;
 			auto nz = std::sqrt(rivet_one - nxxyy * rivet_half); // NOLINT(*-identifier-length)

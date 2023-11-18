@@ -13,7 +13,6 @@
 #include <ankerl/unordered_dense.h>
 
 #include <rivet/data/dat1.hpp>
-#include <rivet/hash/type_id.hpp>
 #include <rivet/rivet_array.hpp>
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_asset.hpp> // IWYU pragma: keep
@@ -22,10 +21,10 @@ namespace rivet::data {
 	struct archive_toc;
 
 	struct RIVET_SHARED dependency_dag : dat1 {
-		constexpr const static std::string_view type_name = "DependencyDAG";
-		constexpr const static rivet_type_id type_id = 0x2A077A51;
-		constexpr const static rivet_type_id magic = 0xB8EF3955;
-		constexpr const static rivet_type_id magic_compressed = 0x891F77AF;
+		constexpr static std::string_view type_name = "DependencyDAG";
+		constexpr static rivet_type_id type_id = 0x2A077A51;
+		constexpr static rivet_type_id magic = 0xB8EF3955;
+		constexpr static rivet_type_id magic_compressed = 0x891F77AF;
 
 		struct dependency_dag_header {
 			rivet_type_id type_id;

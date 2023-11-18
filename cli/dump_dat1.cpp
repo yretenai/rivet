@@ -35,7 +35,7 @@ using namespace rivet::data;
 using namespace rivet::structures;
 
 auto
-dump_dat1(int argc, char **argv) -> int {
+dump_dat1(const int argc, char **argv) -> int {
 	std::string output_dir;
 	std::vector<std::string> input_files;
 	bool version_flag = false;
@@ -43,14 +43,13 @@ dump_dat1(int argc, char **argv) -> int {
 	bool recursive = false;
 	bool verbose = false;
 
-	auto cli = (clipp::joinable(clipp::option("-h", "--help").set(help_flag, true) % "show help",
-								clipp::option("-v", "--version").set(version_flag, true) % "show version",
-								clipp::option("-r", "--recursive").set(recursive, true) % "find files in directories recursively",
-								clipp::option("-V", "--verbose").set(verbose, true) % "verbose logging"),
-				clipp::option("-o", "--output-dir") & clipp::value("output_dir", output_dir) % "output directory",
-				clipp::values("input-files", input_files) % "input files");
-
-	if (!clipp::parse(argc, argv, cli) || help_flag || version_flag) {
+	if (const auto cli = (clipp::joinable(clipp::option("-h", "--help").set(help_flag, true) % "show help",
+									clipp::option("-v", "--version").set(version_flag, true) % "show version",
+									clipp::option("-r", "--recursive").set(recursive, true) % "find files in directories recursively",
+									clipp::option("-V", "--verbose").set(verbose, true) % "verbose logging"),
+					clipp::option("-o", "--output-dir") & clipp::value("output_dir", output_dir) % "output directory",
+					clipp::values("input-files", input_files) % "input files");
+		!clipp::parse(argc, argv, cli) || help_flag || version_flag) {
 		return handle_exit("rivet-dat1-dump", cli, version_flag, help_flag);
 	}
 
@@ -81,7 +80,7 @@ dump_dat1(int argc, char **argv) -> int {
 		}
 
 		// ignore recursion
-		if (std::find(dat1_path.begin(), dat1_path.end(), ".sections") != dat1_path.end()) {
+		if (std::ranges::find(dat1_path, ".sections") != dat1_path.end()) {
 			continue;
 		}
 
@@ -106,16 +105,14 @@ dump_dat1(int argc, char **argv) -> int {
 		std::cout << "processing " << dat1_path.string() << '\n';
 
 		std::vector<std::shared_ptr<rivet_data_array>> buffers;
-		std::shared_ptr<rivet::data::asset_bundle> bundle;
-		auto tag = dat1_buffer->get<uint32_t>(0);
-		if (tag == archive_toc::magic || tag == archive_toc::magic_compressed) {
+		if (auto tag = dat1_buffer->get<uint32_t>(0); tag == archive_toc::magic || tag == archive_toc::magic_compressed) {
 			buffers.emplace_back(archive_toc::get_toc_data_buffer(dat1_buffer));
 		} else if (tag == dependency_dag::magic || tag == dependency_dag::magic_compressed) {
 			buffers.emplace_back(dependency_dag::get_dag_data_buffer(dat1_buffer));
 		} else if (tag == dat1::magic) {
 			buffers.emplace_back(dat1_buffer);
 		} else {
-			bundle = std::make_shared<rivet::data::asset_bundle>(dat1_buffer);
+			auto bundle = std::make_shared<rivet::data::asset_bundle>(dat1_buffer);
 			for (rivet_size i = 0; i < bundle->header.sizes.size(); i++) {
 				auto entry = bundle->get_entry(i);
 				buffers.emplace_back(entry);
@@ -142,13 +139,11 @@ dump_dat1(int argc, char **argv) -> int {
 			buffer_file.write(reinterpret_cast<const char *>(buffer->data()), static_cast<std::streamsize>(buffer->size()));
 
 			if (buffer->size() > 4 && buffer->get<uint32_t>(0) == dat1::magic) {
-				auto dat = std::make_shared<dat1>(buffer, idx < buffers.size() ? buffers[idx] : nullptr);
-				for (const auto &[section_id, section] : dat->sections) {
+				for (const auto &[section_id, section] : std::make_shared<dat1>(buffer, idx < buffers.size() ? buffers[idx] : nullptr)->sections) {
 					if (verbose) {
 						std::cout << "section " << std::setfill('0') << std::setw(8) << std::hex << section_id;
 
-						auto name = section_name_map.find(section_id);
-						if (name != section_name_map.end()) {
+						if (auto name = section_name_map.find(section_id); name != section_name_map.end()) {
 							std::cout << " (" << name->second << ")";
 						}
 

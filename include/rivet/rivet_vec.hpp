@@ -5,7 +5,6 @@
 #pragma once
 
 #include <array>
-#include <cstdarg>
 #include <cstdint>
 
 namespace rivet {
@@ -84,7 +83,7 @@ namespace rivet {
 		auto
 		operator++() -> rivet_vec<T, N> & {
 			for (size_t i = 0; i < N; i++) {
-				data[i]++;
+				++data[i];
 			}
 			return *this;
 		}
@@ -92,7 +91,7 @@ namespace rivet {
 		auto
 		operator--() -> rivet_vec<T, N> & {
 			for (size_t i = 0; i < N; i++) {
-				data[i]--;
+				--data[i];
 			}
 			return *this;
 		}
@@ -171,8 +170,8 @@ namespace rivet {
 			return data;
 		}
 
-		[[nodiscard]] auto
-		size() const -> size_t {
+		[[nodiscard]] static auto
+		size() -> size_t {
 			return N;
 		}
 
@@ -206,8 +205,8 @@ namespace rivet {
 			return data.data();
 		}
 
-		[[nodiscard]] auto
-		data_size() const -> size_t {
+		[[nodiscard]] static auto
+		data_size() -> size_t {
 			return sizeof(T) * N;
 		}
 	};

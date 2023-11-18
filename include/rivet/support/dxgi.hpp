@@ -4,6 +4,8 @@
 
 #pragma once
 
+// ReSharper disable CppMultiCharacterLiteral
+
 #include <array>
 #include <cstdint>
 
@@ -33,7 +35,7 @@ namespace rivet::support {
 		mip_mapped_dxt_texture = dxt_texture | mip_map_count,
 	};
 
-	auto
+	inline auto
 	operator|(dds_flags lhs, dds_flags rhs) -> dds_flags {
 		return static_cast<dds_flags>(static_cast<uint32_t>(lhs) | static_cast<uint32_t>(rhs));
 	}
@@ -45,7 +47,7 @@ namespace rivet::support {
 		mip_map = 0x400000,
 	};
 
-	auto
+	inline auto
 	operator|(dds_caps lhs, dds_caps rhs) -> dds_caps {
 		return static_cast<dds_caps>(static_cast<uint32_t>(lhs) | static_cast<uint32_t>(rhs));
 	}
@@ -62,7 +64,7 @@ namespace rivet::support {
 		volume = 0x200000,
 	};
 
-	auto
+	inline auto
 	operator|(dds_caps2 lhs, dds_caps2 rhs) -> dds_caps2 {
 		return static_cast<dds_caps2>(static_cast<uint32_t>(lhs) | static_cast<uint32_t>(rhs));
 	}
@@ -77,7 +79,7 @@ namespace rivet::support {
 		luminance = 0x20000,
 	};
 
-	auto
+	inline auto
 	operator|(dds_pixel_format_flags lhs, dds_pixel_format_flags rhs) -> dds_pixel_format_flags {
 		return static_cast<dds_pixel_format_flags>(static_cast<uint32_t>(lhs) | static_cast<uint32_t>(rhs));
 	}
@@ -264,7 +266,7 @@ namespace rivet::support {
 		hw_protected = 0x80000,
 	};
 
-	auto
+	inline auto
 	operator|(dx10_misc_flags lhs, dx10_misc_flags rhs) -> dx10_misc_flags {
 		return static_cast<dx10_misc_flags>(static_cast<uint32_t>(lhs) | static_cast<uint32_t>(rhs));
 	}

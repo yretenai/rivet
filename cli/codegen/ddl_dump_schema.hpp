@@ -13,6 +13,7 @@
 #include <sstream>
 #endif
 
+#include <ankerl/unordered_dense.h>
 #include <nlohmann/json.hpp>
 
 #include <rivet/hash/type_id.hpp> // IWYU pragma: keep
@@ -28,7 +29,7 @@ enum class serialized_array_type : uint8_t {
 	hashmap
 };
 
-auto
+inline auto
 to_hex(const uint64_t value) -> std::string {
 #ifdef __cpp_lib_format
 	return std::format("{:x}", value);
@@ -42,8 +43,7 @@ to_hex(const uint64_t value) -> std::string {
 template <typename T>
 auto
 get_optional_json(const nlohmann::json &json, const char *property) -> std::optional<T> {
-	auto iterator = json.find(property);
-	if (iterator != json.end() && !iterator->is_null()) {
+	if (const auto iterator = json.find(property); iterator != json.end() && !iterator->is_null()) {
 		return json.at(property).get<T>();
 	}
 	return std::nullopt;
@@ -193,21 +193,21 @@ struct dump_root {
 	sanity() {
 		std::unordered_set<std::string> struct_names_lower;
 
-		for (auto &struct_ : structs) {
+		for (const auto &struct_ : structs) {
 			if (struct_->name.name.empty()) {
 				throw std::runtime_error("struct name is empty");
 			}
 
 			auto lower_name = std::string(struct_->name.name);
-			std::transform(lower_name.begin(), lower_name.end(), lower_name.begin(), [](unsigned char test) { return static_cast<char>(std::tolower(test)); });
+			std::ranges::transform(lower_name, lower_name.begin(), [](const unsigned char test) { return static_cast<char>(std::tolower(test)); });
 
-			if (struct_names_lower.find(lower_name) != struct_names_lower.end()) {
+			if (struct_names_lower.contains(lower_name)) {
 				throw std::runtime_error("struct name is not unique");
 			}
 
 			struct_names_lower.insert(lower_name);
 
-			if (std::find(reserved_keywords.begin(), reserved_keywords.end(), struct_->name.name) != reserved_keywords.end()) {
+			if (std::ranges::find(reserved_keywords, struct_->name.name) != reserved_keywords.end()) {
 				throw std::runtime_error("struct name is a reserved keyword");
 			}
 
@@ -215,44 +215,44 @@ struct dump_root {
 				throw std::runtime_error("struct name does not start with a letter");
 			}
 
-			if (!std::all_of(struct_->name.name.begin(), struct_->name.name.end(), [](unsigned char test) { return std::isalnum(test) != 0 || test == '_'; })) {
+			if (!std::ranges::all_of(struct_->name.name, [](const unsigned char test) { return std::isalnum(test) != 0 || test == '_'; })) {
 				throw std::runtime_error("struct name is not alphanumeric");
 			}
 
-			for (auto &field : struct_->fields) {
-				if (field.name.name.empty()) {
+			for (auto &[name, type_name, allow_base_type, type, array_type] : struct_->fields) {
+				if (name.name.empty()) {
 					throw std::runtime_error("field name is empty");
 				}
 
-				if (std::find(reserved_keywords.begin(), reserved_keywords.end(), field.name.name) != reserved_keywords.end()) {
+				if (std::ranges::find(reserved_keywords, name.name) != reserved_keywords.end()) {
 					throw std::runtime_error("field name is a reserved keyword");
 				}
 
-				if (std::isalpha(field.name.name[0]) == 0 && field.name.name[0] != '_') {
+				if (std::isalpha(name.name[0]) == 0 && name.name[0] != '_') {
 					throw std::runtime_error("field name does not start with a letter");
 				}
 
-				if (!std::all_of(field.name.name.begin(), field.name.name.end(), [](unsigned char test) { return std::isalnum(test) != 0 || test == '_'; })) {
+				if (!std::ranges::all_of(name.name, [](const unsigned char test) { return std::isalnum(test) != 0 || test == '_'; })) {
 					throw std::runtime_error("field name is not alphanumeric");
 				}
 
-				if (field.type == rivet::structures::rivet_serialized_type::bitfield && field.array_type != serialized_array_type::none) {
+				if (type == rivet::structures::rivet_serialized_type::bitfield && array_type != serialized_array_type::none) {
 					throw std::runtime_error("field is an array and a bitfield, this is uncharted territory");
 				}
 
-				if (lookup.find(field.type_name.id) == lookup.end()) {
-					missing[field.type_name.id].insert(field.type);
+				if (lookup.find(type_name.id) == lookup.end()) {
+					missing[type_name.id].insert(type);
 					continue;
 				}
 			}
 		}
 
-		for (auto &enum_ : enums) {
-			if (!std::all_of(enum_->name.name.begin(), enum_->name.name.end(), [](unsigned char test) { return std::isalnum(test) != 0 || test == '_'; })) {
+		for (const auto &enum_ : enums) {
+			if (!std::ranges::all_of(enum_->name.name, [](const unsigned char test) { return std::isalnum(test) != 0 || test == '_'; })) {
 				throw std::runtime_error("enum name is not alphanumeric");
 			}
 
-			if (std::find(reserved_keywords.begin(), reserved_keywords.end(), enum_->name.name) != reserved_keywords.end()) {
+			if (std::ranges::find(reserved_keywords, enum_->name.name) != reserved_keywords.end()) {
 				throw std::runtime_error("enum name is a reserved keyword");
 			}
 
@@ -260,31 +260,31 @@ struct dump_root {
 				throw std::runtime_error("enum name does not start with a letter");
 			}
 
-			for (auto &value : enum_->values) {
-				if (value.name.name.empty()) {
+			for (auto &[name, decl_name, friendly_name] : enum_->values) {
+				if (name.name.empty()) {
 					throw std::runtime_error("enum value name is empty");
 				}
 
-				if (std::find(reserved_keywords.begin(), reserved_keywords.end(), value.name.name) != reserved_keywords.end()) {
+				if (std::ranges::find(reserved_keywords, name.name) != reserved_keywords.end()) {
 					throw std::runtime_error("enum value name is a reserved keyword");
 				}
 
-				if (std::isalpha(value.name.name[0]) == 0 && value.name.name[0] != '_') {
+				if (std::isalpha(name.name[0]) == 0 && name.name[0] != '_') {
 					throw std::runtime_error("enum value name does not start with a letter");
 				}
 
-				if (!std::all_of(value.name.name.begin(), value.name.name.end(), [](unsigned char test) { return std::isalnum(test) != 0 || test == '_'; })) {
+				if (!std::ranges::all_of(name.name, [](const unsigned char test) { return std::isalnum(test) != 0 || test == '_'; })) {
 					throw std::runtime_error("enum value name is not alphanumeric");
 				}
 			}
 		}
 
-		for (auto &bitset : bitsets) {
-			if (!std::all_of(bitset->name.name.begin(), bitset->name.name.end(), [](unsigned char test) { return std::isalnum(test) != 0 || test == '_'; })) {
+		for (const auto &bitset : bitsets) {
+			if (!std::ranges::all_of(bitset->name.name, [](const unsigned char test) { return std::isalnum(test) != 0 || test == '_'; })) {
 				throw std::runtime_error("bitset name is not alphanumeric");
 			}
 
-			if (std::find(reserved_keywords.begin(), reserved_keywords.end(), bitset->name.name) != reserved_keywords.end()) {
+			if (std::ranges::find(reserved_keywords, bitset->name.name) != reserved_keywords.end()) {
 				throw std::runtime_error("bitset name is a reserved keyword");
 			}
 
@@ -292,20 +292,20 @@ struct dump_root {
 				throw std::runtime_error("bitset name does not start with a letter");
 			}
 
-			for (auto &value : bitset->values) {
-				if (value.name.name.empty()) {
+			for (auto &[name, decl_name, value] : bitset->values) {
+				if (name.name.empty()) {
 					throw std::runtime_error("bitset value name is empty");
 				}
 
-				if (std::find(reserved_keywords.begin(), reserved_keywords.end(), value.name.name) != reserved_keywords.end()) {
+				if (std::ranges::find(reserved_keywords, name.name) != reserved_keywords.end()) {
 					throw std::runtime_error("bitset value name is a reserved keyword");
 				}
 
-				if (std::isalpha(value.name.name[0]) == 0 && value.name.name[0] != '_') {
+				if (std::isalpha(name.name[0]) == 0 && name.name[0] != '_') {
 					throw std::runtime_error("bitset value name does not start with a letter");
 				}
 
-				if (!std::all_of(value.name.name.begin(), value.name.name.end(), [](unsigned char test) { return std::isalnum(test) != 0 || test == '_'; })) {
+				if (!std::ranges::all_of(name.name, [](const unsigned char test) { return std::isalnum(test) != 0 || test == '_'; })) {
 					throw std::runtime_error("bitset value name is not alphanumeric");
 				}
 			}
@@ -321,16 +321,16 @@ struct dump_root {
 		for (auto &enum_ : enums) {
 			lookup[enum_->name.id] = enum_;
 
-			for (auto &value : enum_->values) {
+			for (auto &[name, decl_name, friendly_name] : enum_->values) {
 				// check if alphanum and starts with a letter
-				if (!value.friendly_name.name.empty() && (std::isalpha(value.friendly_name.name[0]) != 0 || value.friendly_name.name[0] == '_') &&
-					std::all_of(value.friendly_name.name.begin(), value.friendly_name.name.end(), [](unsigned char test) { return std::isalnum(test) != 0 || test == '_' || test == ' '; })) {
-					value.name = value.friendly_name;
-					std::replace(value.name.name.begin(), value.name.name.end(), ' ', '_');
+				if (!friendly_name.name.empty() && (std::isalpha(friendly_name.name[0]) != 0 || friendly_name.name[0] == '_') &&
+					std::ranges::all_of(friendly_name.name, [](const unsigned char test) { return std::isalnum(test) != 0 || test == '_' || test == ' '; })) {
+					name = friendly_name;
+					std::ranges::replace(name.name, ' ', '_');
 				} else {
 					// remove leading k
-					if (value.name.name.size() >= 2 && value.name.name.starts_with('k') && std::isdigit(value.name.name[1]) == 0) {
-						value.name.name = value.name.name.substr(1);
+					if (name.name.size() >= 2 && name.name.starts_with('k') && std::isdigit(name.name[1]) == 0) {
+						name.name = name.name.substr(1);
 					}
 				}
 			}
@@ -339,19 +339,18 @@ struct dump_root {
 		for (auto &bitset : bitsets) {
 			lookup[bitset->name.id] = bitset;
 
-			for (auto &value : bitset->values) {
+			for (auto &[name, decl_name, value] : bitset->values) {
 				// remove leading k
-				if (value.name.name.size() >= 2 && value.name.name.starts_with('k') && std::isdigit(value.name.name[1]) == 0) {
-					value.name.name = value.name.name.substr(1);
+				if (name.name.size() >= 2 && name.name.starts_with('k') && std::isdigit(name.name[1]) == 0) {
+					name.name = name.name.substr(1);
 				}
 			}
 		}
 
-		for (auto &struct_ : structs) {
+		for (const auto &struct_ : structs) {
 			if (struct_->base_name.id != 0) {
-				auto base_type = lookup[struct_->base_name.id];
-				if (std::holds_alternative<std::shared_ptr<struct_info>>(base_type)) {
-					auto base_struct = std::get<std::shared_ptr<struct_info>>(base_type);
+				if (auto base_type = lookup[struct_->base_name.id]; std::holds_alternative<std::shared_ptr<struct_info>>(base_type)) {
+					const auto base_struct = std::get<std::shared_ptr<struct_info>>(base_type);
 					if (struct_->base_name.name.empty()) {
 						struct_->base_name.name = base_struct->name.name;
 					}
@@ -373,22 +372,22 @@ struct dump_root {
 	}
 
 	void
-	guess() {
+	guess() const {
 		ankerl::unordered_dense::map<uint32_t, std::unordered_set<std::string>> name_counts {};
-		for (auto &struct_ : structs) {
-			for (auto &field : struct_->fields) {
-				name_counts[field.type_name.id].insert(field.name.name);
+		for (const auto &struct_ : structs) {
+			for (auto &[name, type_name, allow_base_type, type, array_type] : struct_->fields) {
+				name_counts[type_name.id].insert(name.name);
 			}
 		}
 
-		for (auto &enum_info : enums) {
+		for (const auto &enum_info : enums) {
 			if (!enum_info->name.name.empty()) {
 				continue;
 			}
 
 			const auto &field_names = name_counts[enum_info->name.id];
 
-			auto target_hash = enum_info->name.id;
+			const auto target_hash = enum_info->name.id;
 
 			for (const auto &field_name : field_names) {
 				if (rivet::hash::hash_type_id(field_name) == target_hash) {
@@ -423,14 +422,14 @@ struct dump_root {
 
 		const std::array<std::string, 7> bitset_suffixes = { "", "Flags", "Bits", "Flag", "Bit", "Bitset", "Game" };
 
-		for (auto &bitset_info : bitsets) {
+		for (const auto &bitset_info : bitsets) {
 			if (!bitset_info->name.name.empty()) {
 				continue;
 			}
 
 			const auto &field_names = name_counts[bitset_info->name.id];
 
-			auto target_hash = bitset_info->name.id;
+			const auto target_hash = bitset_info->name.id;
 
 			for (const auto &field_name : field_names) {
 				if (rivet::hash::hash_type_id(field_name) == target_hash) {

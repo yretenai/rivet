@@ -11,18 +11,17 @@
 
 namespace rivet::data {
 	dat1::dat1(const std::shared_ptr<rivet_data_array> &stream, const std::shared_ptr<rivet_data_array> &resident_stream): buffer(stream), resident_buffer(resident_stream) {
-		auto tag = buffer->get<uint32_t>(0);
-		if (tag != magic) {
+		if (buffer->get<uint32_t>(0) != magic) {
 			throw invalid_tag_error("dat1::dat1: invalid tag");
 		}
 
 		header = buffer->get<dat1_header>(0);
 
 		if (header.section_count > 0) {
-			auto section_headers = buffer->slice<dat1_entry>(sizeof(dat1_header), header.section_count);
+			const auto section_headers = buffer->slice<dat1_entry>(sizeof(dat1_header), header.section_count);
 
-			auto resident_start = buffer->size();
-			auto resident_end = resident_start + (resident_buffer == nullptr ? 0 : resident_buffer->size());
+			const auto resident_start = buffer->size();
+			const auto resident_end = resident_start + (resident_buffer == nullptr ? 0 : resident_buffer->size());
 			for (auto section_header : *section_headers) {
 				section_ids.emplace(section_header.type_id);
 
@@ -44,8 +43,8 @@ namespace rivet::data {
 	}
 
 	auto
-	dat1::get_section_data(rivet_type_id type_id) const -> std::shared_ptr<rivet_data_array> {
-		auto entry = sections.find(type_id);
+	dat1::get_section_data(const rivet_type_id type_id) const -> std::shared_ptr<rivet_data_array> {
+		const auto entry = sections.find(type_id);
 
 		if (entry == sections.end()) {
 			return nullptr;

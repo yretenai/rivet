@@ -68,10 +68,10 @@ meson install
 
 ### extracting files
 
-to extract files from an archive, use the `rivet-extract` program:
+to extract files from an archive, use the `rivet-toc-extract` program:
 
 ```bash
-rivet-extract <path/to/folder/that/contains/toc> <output directory>
+rivet-toc-extract <path/to/folder/that/contains/toc> <output directory>
 ```
 
 the output directory will be created if it does not exist.

@@ -13,6 +13,9 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::hash {
+	constexpr rivet_asset_id wem_mask = 0x40000000'00000000;
+	constexpr rivet_asset_id asset_hash_basis = 0xc96c5795'd7870f42;
+
 	// clang-format off
 	constexpr const static std::array<uint64_t, 256> crc64_table = {
 			0x0000000000000000, 0xb32e4cbe03a75f6f, 0xf4843657a840a05b, 0x47aa7ae9abe7ff34, 0x7bd0c384ff8f5e33, 0xc8fe8f3afc28015c, 0x8f54f5d357cffe68, 0x3c7ab96d5468a107,
@@ -52,7 +55,7 @@ namespace rivet::hash {
 	// clang-format on
 
 	constexpr static auto
-	hash_checksum(const std::string_view &value, rivet_asset_id hash = 0xc96c5795'd7870f42) noexcept -> rivet_asset_id {
+	hash_checksum(const std::string_view &value, rivet_asset_id hash = asset_hash_basis) noexcept -> rivet_asset_id {
 		for (const char letter : value) {
 			hash = crc64_table[(hash ^ static_cast<uint8_t>(letter)) & 0xffu] ^ (hash >> 8u);
 		}
@@ -61,7 +64,7 @@ namespace rivet::hash {
 	}
 
 	constexpr static auto
-	hash_asset_id(const std::string_view &value, rivet_checksum hash = 0xc96c5795'd7870f42, rivet_type_id_flags flags = rivet_type_id_flags::SHIPPED) noexcept -> rivet_asset_id {
+	hash_asset_id(const std::string_view &value, const rivet_checksum hash = asset_hash_basis, rivet_type_id_flags flags = rivet_type_id_flags::SHIPPED) noexcept -> rivet_asset_id {
 		// lowercase and replace \\ with /
 		const auto flags_full = static_cast<uint64_t>(flags) << 62u;
 		return (hash_checksum(value, hash) >> 2u) | flags_full;
@@ -69,7 +72,7 @@ namespace rivet::hash {
 
 	constexpr static void
 	normalize_asset_path(std::string &value) noexcept {
-		std::transform(value.begin(), value.end(), value.begin(), [](char letter) {
+		std::ranges::transform(value, value.begin(), [](const char letter) {
 			if (letter == '\\') {
 				return '/';
 			}
@@ -83,17 +86,17 @@ namespace rivet::hash {
 	}
 
 	constexpr static auto
-	hash_asset_id(std::string value, rivet_asset_id hash = 0xc96c5795'd7870f42, rivet_type_id_flags flags = rivet_type_id_flags::SHIPPED) noexcept -> rivet_asset_id {
+	hash_asset_id(std::string value, const rivet_asset_id hash = asset_hash_basis, const rivet_type_id_flags flags = rivet_type_id_flags::SHIPPED) noexcept -> rivet_asset_id {
 		normalize_asset_path(value);
 
 		return hash_asset_id(std::string_view(value), hash, flags);
 	}
 
-	template <const std::string_view &Value, rivet_asset_id Base = 0xc96c5795'd7870f42, rivet_type_id_flags Flags = rivet_type_id_flags::SHIPPED> struct asset_id {
+	template <const std::string_view &Value, rivet_asset_id Base = asset_hash_basis, rivet_type_id_flags Flags = rivet_type_id_flags::SHIPPED> struct asset_id {
 		constexpr const static rivet_asset_id value = hash_asset_id(Value, Base, Flags);
 	};
 
-	template <const std::string_view &Value, rivet_checksum Base = 0xc96c5795'd7870f42> struct checksum {
+	template <const std::string_view &Value, rivet_checksum Base = asset_hash_basis> struct checksum {
 		constexpr const static rivet_checksum value = hash_checksum(Value, Base);
 	};
 

@@ -16,7 +16,7 @@
 
 namespace rivet::data {
 	struct RIVET_SHARED dat1 {
-		constexpr const static uint32_t magic = 0x44415431u;
+		constexpr static uint32_t magic = 0x44415431u;
 
 		struct dat1_header {
 			uint32_t magic;
@@ -52,8 +52,8 @@ namespace rivet::data {
 
 		template <typename T>
 		auto
-		get_section(rivet_type_id type_id) const -> std::shared_ptr<rivet_array<T>> {
-			auto data = get_section_data(type_id);
+		get_section(const rivet_type_id type_id) const -> std::shared_ptr<rivet_array<T>> {
+			const auto data = get_section_data(type_id);
 			if (data == nullptr) {
 				return nullptr;
 			}

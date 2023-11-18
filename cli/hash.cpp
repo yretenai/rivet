@@ -7,7 +7,6 @@
 
 #include <clipp.h>
 
-#include <rivet/rivet.hpp>
 #include <rivet/hash/asset_id.hpp>
 #include <rivet/hash/type_id.hpp>
 
@@ -18,13 +17,13 @@
 using namespace rivet;
 
 auto
-debug_hash(int argc, char **argv) -> int {
+debug_hash(const int argc, char **argv) -> int {
 	for (auto argi = 1; argi < argc; ++argi) {
 		const auto arg = std::string_view(argv[argi]); // NOLINT(*-pro-bounds-pointer-arithmetic)
 
-		auto type_id = rivet::hash::hash_type_id(arg);
-		auto asset_id = rivet::hash::hash_asset_id(arg);
-		auto checksum = rivet::hash::hash_checksum(arg);
+		const auto type_id = rivet::hash::hash_type_id(arg);
+		const auto asset_id = rivet::hash::hash_asset_id(arg);
+		const auto checksum = rivet::hash::hash_checksum(arg);
 
 		std::cout << arg << ": " << std::hex << std::setfill('0') << std::setw(8) << type_id << ' ' << std::setw(16) << asset_id << ' ' << std::setw(16) << checksum << '\n';
 	}

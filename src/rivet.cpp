@@ -10,8 +10,9 @@ namespace rivet {
 		return rivet::local_version;
 	}
 
-	const static std::string_view rivet_version_detailed_string = "0.0.6";
+	static constexpr std::string_view rivet_version_detailed_string = "0.0.6";
 
+	// ReSharper disable once CppDFAConstantFunctionResult
 	auto
 	rivet_version_detailed() -> std::string_view {
 		return rivet_version_detailed_string;

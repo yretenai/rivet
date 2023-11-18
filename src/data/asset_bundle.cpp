@@ -15,9 +15,9 @@ namespace rivet::data {
 		}
 
 		if (stream->get<rivet_type_id>(0) == rivet::data::dat1::magic) {
-			auto dat1_header = stream->get<rivet::data::dat1::dat1_header>(0);
-			header.schema = dat1_header.schema;
-			header.sizes[0] = dat1_header.size;
+			const auto [magic, schema, size, section_count, reserved] = stream->get<rivet::data::dat1::dat1_header>(0);
+			header.schema = schema;
+			header.sizes[0] = size;
 			buffer = stream;
 			return;
 		}

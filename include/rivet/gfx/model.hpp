@@ -4,7 +4,6 @@
 
 #pragma once
 
-#include <tuple>
 #include <vector>
 
 #ifdef RIVET_USE_NLOHMANN
@@ -13,14 +12,11 @@
 
 #include <ankerl/unordered_dense.h>
 
-#include <rivet/hash/type_id.hpp>
-
 #include <rivet/data/dat1.hpp>
 #include <rivet/rivet_array.hpp>
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/rivet_vec.hpp>
 #include <rivet/structures/gfx/rivet_model.hpp>
-#include <rivet/structures/gfx/rivet_model_vert.hpp>
 
 namespace rivet {
 	namespace data {

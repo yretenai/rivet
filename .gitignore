@@ -48,3 +48,4 @@ subprojects/*
 !subprojects/GDeflate
 !subprojects/packagefiles
 !subprojects/*.wrap
+.clangd

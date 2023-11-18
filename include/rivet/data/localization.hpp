@@ -11,7 +11,6 @@
 #include <ankerl/unordered_dense.h>
 
 #include <rivet/data/dat1.hpp>
-#include <rivet/hash/type_id.hpp>
 #include <rivet/rivet_array.hpp>
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_localization.hpp> // IWYU pragma: keep

@@ -31,10 +31,9 @@ namespace rivet::ddl {
 			}
 		}
 
-		rivet_size cursor = ((sizeof(rivet_serialized_field) + sizeof(rivet_off)) * header.node_count);
-		auto abs_offset = buffer->offset + cursor;
-		if ((abs_offset % 4) != 0) {
-			cursor += 4 - (abs_offset % 4); // align to 4 bytes??
+		rivet_size cursor = (sizeof(rivet_serialized_field) + sizeof(rivet_off)) * header.node_count;
+		if (auto abs_offset = buffer->offset + cursor; abs_offset % 4 != 0) {
+			cursor += 4 - abs_offset % 4; // align to 4 bytes??
 		}
 
 		for (const auto &field : *field_info) {
@@ -46,8 +45,12 @@ namespace rivet::ddl {
 			auto &entry = values[field.type_id];
 
 #ifndef _NDEBUG
+			// ReSharper disable CppDFAUnreadVariable
+			// ReSharper disable CppDFAUnusedValue
 			[[maybe_unused]] auto debug_offset = buffer->offset + cursor;
 			[[maybe_unused]] auto debug_type = field.get_type();
+			// ReSharper restore CppDFAUnreadVariable
+			// ReSharper restore CppDFAUnusedValue
 #endif
 
 			entry.reserve(count);
@@ -126,11 +129,11 @@ namespace rivet::ddl {
 				case rivet_serialized_type::file: RIVET_DEBUG_BREAK; // fallthrough to string?
 				case rivet_serialized_type::string:
 					for (auto index = 0u; index < count; index++) {
-						auto string = buffer->get<rivet_serialized_string>(cursor);
-						entry.emplace_back(buffer->to_string_view(cursor + sizeof(rivet_serialized_string), string.length));
-						cursor += sizeof(rivet_serialized_string) + string.length + 1; // null byte.
+						auto [length, hash, checksum] = buffer->get<rivet_serialized_string>(cursor);
+						entry.emplace_back(buffer->to_string_view(cursor + sizeof(rivet_serialized_string), length));
+						cursor += sizeof(rivet_serialized_string) + length + 1; // null byte.
 
-						cursor = (cursor + 3) & ~3; // align to 4 bytes
+						cursor = cursor + 3 & ~3u; // align to 4 bytes
 					}
 					break;
 				case rivet_serialized_type::object:
@@ -139,7 +142,7 @@ namespace rivet::ddl {
 						entry.emplace_back(object);
 						cursor += sizeof(rivet_serialized_header) + object->header.size;
 
-						cursor = (cursor + 3) & ~3; // align to 4 bytes
+						cursor = cursor + 3 & ~3u; // align to 4 bytes
 					}
 					break;
 				case rivet_serialized_type::none:

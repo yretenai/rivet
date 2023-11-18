@@ -25,8 +25,8 @@ using namespace rivet::support;
 using namespace rivet::type_id;
 
 namespace rivet::gfx {
-	texture::texture(const rivet::data::asset_bundle &bundle, rivet_size index) {
-		auto dat1_stream = bundle.get_entry(index);
+	texture::texture(const rivet::data::asset_bundle &bundle, const rivet_size index) {
+		const auto dat1_stream = bundle.get_entry(index);
 		if (dat1_stream == nullptr) {
 			throw invalid_operation("texture::texture: invalid texture stream");
 		}
@@ -36,12 +36,12 @@ namespace rivet::gfx {
 
 	void
 	texture::init(const std::shared_ptr<rivet_data_array> &dat1_stream, const std::shared_ptr<rivet_data_array> &resident, const std::shared_ptr<rivet_data_array> &stream) {
-		auto data = dat1(dat1_stream);
+		const auto data = dat1(dat1_stream);
 		if (data.type_name != "Texture Built File") {
 			throw invalid_operation("texture::texture: invalid texture stream");
 		}
 
-		auto header_stream = data.get_section<texture::texture_header>(texture_header_type_id);
+		const auto header_stream = data.get_section<texture::texture_header>(texture_header_type_id);
 		if (header_stream == nullptr) {
 			throw invalid_operation("texture::texture: invalid texture stream");
 		}
@@ -80,8 +80,7 @@ namespace rivet::gfx {
 
 	auto
 	texture::is_convertible() const -> bool {
-		auto dxgi = static_cast<dxgi_format>(header.format);
-		switch (dxgi) {
+		switch (static_cast<dxgi_format>(header.format)) {
 			case dxgi_format::bc1_unorm:
 			case dxgi_format::bc1_unorm_srgb:
 			case dxgi_format::bc2_unorm:
@@ -125,7 +124,7 @@ namespace rivet::gfx {
 	}
 
 	auto
-	get_cmp_format(dxgi_format dxgi) -> CMP_FORMAT {
+	get_cmp_format(const dxgi_format dxgi) -> CMP_FORMAT {
 		switch (dxgi) {
 			case dxgi_format::bc1_unorm:
 			case dxgi_format::bc1_unorm_srgb: return CMP_FORMAT_BC1;
@@ -192,7 +191,7 @@ namespace rivet::gfx {
 
 	// tuple(bits_per_block, pixels_per_block)
 	auto
-	get_pitch_factor(dxgi_format dxgi) -> std::tuple<rivet_size, rivet_size> {
+	get_pitch_factor(const dxgi_format dxgi) -> std::tuple<rivet_size, rivet_size> {
 		switch (dxgi) {
 			case dxgi_format::bc1_unorm:
 			case dxgi_format::bc1_unorm_srgb:
@@ -245,16 +244,16 @@ namespace rivet::gfx {
 	}
 
 	auto
-	texture::decompress_compressonator(uint32_t target, uint32_t surface) const -> std::shared_ptr<rivet_data_array> {
+	texture::decompress_compressonator(uint32_t target, const uint32_t surface) const -> std::shared_ptr<rivet_data_array> {
 		auto num_mips = header.mip_count;
-		auto has_stream = needs_stream() && stream_buffer != nullptr;
+		const auto has_stream = needs_stream() && stream_buffer != nullptr;
 		if (!has_stream) {
 			num_mips -= header.streamed_mips;
 		} else {
 			num_mips = header.streamed_mips;
 		}
 
-		auto pixel_data = has_stream ? stream_buffer : resident_buffer;
+		const auto pixel_data = has_stream ? stream_buffer : resident_buffer;
 
 		auto texture = CMP_Texture {};
 		texture.dwSize = sizeof(CMP_Texture);
@@ -264,7 +263,7 @@ namespace rivet::gfx {
 			texture.dwWidth = header.stream_width;
 			texture.dwHeight = header.stream_height;
 		}
-		auto dxgi = static_cast<dxgi_format>(header.format);
+		const auto dxgi = static_cast<dxgi_format>(header.format);
 		texture.format = get_cmp_format(dxgi);
 
 		if (surface > 0) {
@@ -274,14 +273,14 @@ namespace rivet::gfx {
 			std::tie(bits_per_block, pixels_per_block) = get_pitch_factor(dxgi);
 
 			// this will always work as long as width and height are stable powers of 2, you're welcome
-			auto mask = (texture.dwWidth * texture.dwHeight / pixels_per_block * bits_per_block) >> 3;
+			auto mask = (texture.dwWidth * texture.dwHeight / pixels_per_block * bits_per_block) >> 3u;
 			for (auto i = 0; i < num_mips; ++i) {
 				one_surface ^= mask; // maybe use += instead of ^= for non-power-of-2?
-				mask >>= 2;
+				mask >>= 2u;
 			}
 
 			texture.dwDataSize = one_surface;
-			auto offset = one_surface * surface;
+			const auto offset = one_surface * surface;
 			texture.pData = pixel_data->data(offset);
 		} else {
 			texture.dwDataSize = static_cast<CMP_DWORD>(pixel_data->size());
@@ -297,9 +296,7 @@ namespace rivet::gfx {
 		auto array = std::make_shared<rivet_data_array>(nullptr, dest_texture.dwDataSize);
 		dest_texture.pData = array->data();
 
-		auto result = CMP_ConvertTexture(&texture, &dest_texture, nullptr, nullptr);
-
-		if (result != CMP_OK) {
+		if (CMP_ConvertTexture(&texture, &dest_texture, nullptr, nullptr) != CMP_OK) {
 			throw invalid_operation("texture::decompress_compressonator: failed to decompress texture");
 		}
 
@@ -307,16 +304,16 @@ namespace rivet::gfx {
 	}
 
 	void
-	png_write_data(png_structp png_ptr, png_bytep data, png_size_t length) {
+	png_write_data(const png_structp png_ptr, const png_bytep data, const png_size_t length) {
 		auto *array = static_cast<std::vector<uint8_t> *>(png_get_io_ptr(png_ptr));
 		array->insert(array->end(), data, data + length);
 	}
 
 	auto
-	texture::to_png(rivet_index surface_index) const -> std::shared_ptr<rivet_data_array> {
-		auto has_stream = needs_stream() && stream_buffer != nullptr;
-		auto hdr = is_hdr();
-		auto array = decompress_compressonator(hdr ? CMP_FORMAT_RGBA_16 : CMP_FORMAT_RGBA_8888, surface_index);
+	texture::to_png(const rivet_index surface_index) const -> std::shared_ptr<rivet_data_array> {
+		const auto has_stream = needs_stream() && stream_buffer != nullptr;
+		const auto hdr = is_hdr();
+		const auto array = decompress_compressonator(hdr ? CMP_FORMAT_RGBA_16 : CMP_FORMAT_RGBA_8888, surface_index);
 
 		auto *png = png_create_write_struct(PNG_LIBPNG_VER_STRING, nullptr, nullptr, nullptr);
 		if (png == nullptr) {
@@ -334,13 +331,13 @@ namespace rivet::gfx {
 			throw invalid_operation("texture::to_png: failed to setjmp");
 		}
 
-		auto width = has_stream ? header.stream_width : header.resident_width;
-		auto height = has_stream ? header.stream_height : header.resident_height;
+		const auto width = has_stream ? header.stream_width : header.resident_width;
+		const auto height = has_stream ? header.stream_height : header.resident_height;
 
-		auto png_data = std::make_shared<std::vector<uint8_t>>();
+		const auto png_data = std::make_shared<std::vector<uint8_t>>();
 		png_set_write_fn(png, png_data.get(), png_write_data, nullptr);
-		auto stride = hdr ? 8 : 4;
-		png_set_IHDR(png, info, width, height, stride << 1, PNG_COLOR_TYPE_RGBA, PNG_INTERLACE_NONE, PNG_COMPRESSION_TYPE_DEFAULT, PNG_FILTER_TYPE_DEFAULT);
+		const auto stride = hdr ? 8u : 4u;
+		png_set_IHDR(png, info, width, height, static_cast<int>(stride << 1u), PNG_COLOR_TYPE_RGBA, PNG_INTERLACE_NONE, PNG_COMPRESSION_TYPE_DEFAULT, PNG_FILTER_TYPE_DEFAULT); // NOLINT(*-signed-bitwise)
 		png_write_info(png, info);
 		for (rivet_size64 row = 0; row < height; row++) {
 			png_write_row(png, array->data(static_cast<rivet_size64>(row * width * stride)));
@@ -354,20 +351,20 @@ namespace rivet::gfx {
 	// because meson does not support libtiffxx, and I don't have the energy to fix it we're using the fopen C API
 	// the alternative is hacking together a streamable TIFF writer, which is not something I want to do right now.
 	void
-	texture::to_tiff(rivet_index surface_index, const std::filesystem::path &path) const {
-		auto has_stream = needs_stream() && stream_buffer != nullptr;
-		auto hdr = is_hdr();
+	texture::to_tiff(const rivet_index surface_index, const std::filesystem::path &path) const {
+		const auto has_stream = needs_stream() && stream_buffer != nullptr;
+		const auto hdr = is_hdr();
 
 		auto *tiff = TIFFOpen(path.string().c_str(), "w");
 		if (tiff == nullptr) {
 			throw invalid_operation("texture::to_tiff: failed to create tiff stream");
 		}
 
-		auto width = has_stream ? header.stream_width : header.resident_width;
-		auto height = has_stream ? header.stream_height : header.resident_height;
+		const auto width = has_stream ? header.stream_width : header.resident_width;
+		const auto height = has_stream ? header.stream_height : header.resident_height;
 		const tmsize_t stride = hdr ? 32 : 4;
 
-		auto num_dirs = surface_index > -1 ? 1 : header.surface_count;
+		const auto num_dirs = surface_index > -1 ? 1 : header.surface_count;
 		for (auto page = 0; page < num_dirs; ++page) {
 			TIFFSetField(tiff, TIFFTAG_IMAGEWIDTH, width);											 // NOLINT(*-vararg)
 			TIFFSetField(tiff, TIFFTAG_IMAGELENGTH, height);										 // NOLINT(*-vararg)
@@ -380,8 +377,8 @@ namespace rivet::gfx {
 			TIFFSetField(tiff, TIFFTAG_PHOTOMETRIC, hdr ? PHOTOMETRIC_LOGL : PHOTOMETRIC_RGB);		 // NOLINT(*-vararg)
 			TIFFSetField(tiff, TIFFTAG_COMPRESSION, COMPRESSION_NONE);								 // NOLINT(*-vararg)
 
-			auto surface = surface_index > -1 ? surface_index : page;
-			auto array = decompress_compressonator(hdr ? CMP_FORMAT_RGBA_16F : CMP_FORMAT_RGBA_8888, surface);
+			const auto surface = surface_index > -1 ? surface_index : page;
+			const auto array = decompress_compressonator(hdr ? CMP_FORMAT_RGBA_16F : CMP_FORMAT_RGBA_8888, surface);
 			TIFFWriteEncodedStrip(tiff, 0, array->data(), static_cast<tmsize_t>(width) * static_cast<tmsize_t>(height) * stride);
 			TIFFWriteDirectory(tiff);
 		}
@@ -392,18 +389,18 @@ namespace rivet::gfx {
 	auto
 	texture::to_dds() const -> std::shared_ptr<rivet_data_array> {
 		auto num_mips = header.mip_count;
-		auto has_stream = needs_stream() && stream_buffer != nullptr;
+		const auto has_stream = needs_stream() && stream_buffer != nullptr;
 		if (!has_stream) {
 			num_mips -= header.streamed_mips;
 		}
 
 		// stream has mipmaps, which means surface 0 will have its mips overlap into surface 1 (because they're in resident)
-		auto stream_only = has_stream && header.surface_count > 1;
+		const auto stream_only = has_stream && header.surface_count > 1;
 		if (stream_only) {
 			num_mips = header.streamed_mips;
 		}
 
-		auto pixel_data = stream_only ? stream_buffer : resident_buffer;
+		const auto pixel_data = stream_only ? stream_buffer : resident_buffer;
 
 		if (pixel_data == nullptr) {
 			throw invalid_operation("texture::to_dds: invalid texture stream");
