@@ -17,32 +17,32 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/CameraPrius.hpp>
-#include <rivet/ddl/generated/enums/x73a6f97a.hpp> 
+#include <rivet/ddl/generated/enums/x73a6f97a.hpp>
+#include <rivet/ddl/generated/CameraPrius.hpp> 
 
 namespace rivet::ddl::generated {
-	struct DDLVector3;
+	struct CameraRotationInputData;
 	struct OffsetSplineData;
-	struct CameraRotationInputData; 
+	struct DDLVector3; 
 
 	struct RIVET_DDL_SHARED SplineCameraProximityPrius : CameraPrius {
-		constexpr const static std::string_view type_name = "SplineCameraProximityPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x62f4eabc;
+		constexpr static std::string_view type_name = "SplineCameraProximityPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x62f4eabc;
 
-		constexpr const static std::string_view MotionSpline_type_name = "MotionSpline";
-		constexpr const static rivet::rivet_type_id MotionSpline_type_id = 0x93329739;
-		constexpr const static std::string_view ProximityTarget_type_name = "ProximityTarget";
-		constexpr const static rivet::rivet_type_id ProximityTarget_type_id = 0x8c0b1736;
-		constexpr const static std::string_view LookTarget_type_name = "LookTarget";
-		constexpr const static rivet::rivet_type_id LookTarget_type_id = 0xc6bda5;
-		constexpr const static std::string_view LookMode_type_name = "LookMode";
-		constexpr const static rivet::rivet_type_id LookMode_type_id = 0x646527bb;
-		constexpr const static std::string_view TargetOffset_type_name = "TargetOffset";
-		constexpr const static rivet::rivet_type_id TargetOffset_type_id = 0xabbb80f6;
-		constexpr const static std::string_view OffsetData_type_name = "OffsetData";
-		constexpr const static rivet::rivet_type_id OffsetData_type_id = 0x84c3a9b1;
-		constexpr const static std::string_view RotationInput_type_name = "RotationInput";
-		constexpr const static rivet::rivet_type_id RotationInput_type_id = 0x329d413f; 
+		constexpr static std::string_view MotionSpline_type_name = "MotionSpline";
+		constexpr static rivet::rivet_type_id MotionSpline_type_id = 0x93329739;
+		constexpr static std::string_view ProximityTarget_type_name = "ProximityTarget";
+		constexpr static rivet::rivet_type_id ProximityTarget_type_id = 0x8c0b1736;
+		constexpr static std::string_view LookTarget_type_name = "LookTarget";
+		constexpr static rivet::rivet_type_id LookTarget_type_id = 0xc6bda5;
+		constexpr static std::string_view LookMode_type_name = "LookMode";
+		constexpr static rivet::rivet_type_id LookMode_type_id = 0x646527bb;
+		constexpr static std::string_view TargetOffset_type_name = "TargetOffset";
+		constexpr static rivet::rivet_type_id TargetOffset_type_id = 0xabbb80f6;
+		constexpr static std::string_view OffsetData_type_name = "OffsetData";
+		constexpr static rivet::rivet_type_id OffsetData_type_id = 0x84c3a9b1;
+		constexpr static std::string_view RotationInput_type_name = "RotationInput";
+		constexpr static rivet::rivet_type_id RotationInput_type_id = 0x329d413f; 
 
 		explicit SplineCameraProximityPrius() = default;
 		explicit SplineCameraProximityPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

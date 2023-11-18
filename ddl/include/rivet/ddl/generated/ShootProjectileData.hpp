@@ -20,37 +20,37 @@
 #include <rivet/ddl/generated/bitsets/x768b595c.hpp> 
 
 namespace rivet::ddl::generated {
-	struct BurstSequence;
-	struct AimModWrapper; 
+	struct AimModWrapper;
+	struct BurstSequence; 
 
 	struct RIVET_DDL_SHARED ShootProjectileData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "ShootProjectileData";
-		constexpr const static rivet::rivet_type_id type_id = 0x9bf02991;
+		constexpr static std::string_view type_name = "ShootProjectileData";
+		constexpr static rivet::rivet_type_id type_id = 0x9bf02991;
 
-		constexpr const static std::string_view ShootFlags_type_name = "ShootFlags";
-		constexpr const static rivet::rivet_type_id ShootFlags_type_id = 0x2a197307;
-		constexpr const static std::string_view FireIntroAnim_type_name = "FireIntroAnim";
-		constexpr const static rivet::rivet_type_id FireIntroAnim_type_id = 0xae4278c9;
-		constexpr const static std::string_view FireAnim_type_name = "FireAnim";
-		constexpr const static rivet::rivet_type_id FireAnim_type_id = 0x666c829d;
-		constexpr const static std::string_view FireOutroAnim_type_name = "FireOutroAnim";
-		constexpr const static rivet::rivet_type_id FireOutroAnim_type_id = 0xfc892c3e;
-		constexpr const static std::string_view ChargeTimeMin_type_name = "ChargeTimeMin";
-		constexpr const static rivet::rivet_type_id ChargeTimeMin_type_id = 0x9dc9f347;
-		constexpr const static std::string_view ChargeTimeMax_type_name = "ChargeTimeMax";
-		constexpr const static rivet::rivet_type_id ChargeTimeMax_type_id = 0xa1c4cc1e;
-		constexpr const static std::string_view ShotSpawnerDescription_type_name = "ShotSpawnerDescription";
-		constexpr const static rivet::rivet_type_id ShotSpawnerDescription_type_id = 0xd9cf9f4a;
-		constexpr const static std::string_view ShotIndex_type_name = "ShotIndex";
-		constexpr const static rivet::rivet_type_id ShotIndex_type_id = 0xc409037f;
-		constexpr const static std::string_view UseOverrideBurst_type_name = "UseOverrideBurst";
-		constexpr const static rivet::rivet_type_id UseOverrideBurst_type_id = 0xd98a5e2b;
-		constexpr const static std::string_view OverrideBurst_type_name = "OverrideBurst";
-		constexpr const static rivet::rivet_type_id OverrideBurst_type_id = 0x4d2a3ec2;
-		constexpr const static std::string_view AimMods_type_name = "AimMods";
-		constexpr const static rivet::rivet_type_id AimMods_type_id = 0x1d7694a1;
-		constexpr const static std::string_view CleanupAimModsOnBurstComplete_type_name = "CleanupAimModsOnBurstComplete";
-		constexpr const static rivet::rivet_type_id CleanupAimModsOnBurstComplete_type_id = 0x7a7c2ae3; 
+		constexpr static std::string_view ShootFlags_type_name = "ShootFlags";
+		constexpr static rivet::rivet_type_id ShootFlags_type_id = 0x2a197307;
+		constexpr static std::string_view FireIntroAnim_type_name = "FireIntroAnim";
+		constexpr static rivet::rivet_type_id FireIntroAnim_type_id = 0xae4278c9;
+		constexpr static std::string_view FireAnim_type_name = "FireAnim";
+		constexpr static rivet::rivet_type_id FireAnim_type_id = 0x666c829d;
+		constexpr static std::string_view FireOutroAnim_type_name = "FireOutroAnim";
+		constexpr static rivet::rivet_type_id FireOutroAnim_type_id = 0xfc892c3e;
+		constexpr static std::string_view ChargeTimeMin_type_name = "ChargeTimeMin";
+		constexpr static rivet::rivet_type_id ChargeTimeMin_type_id = 0x9dc9f347;
+		constexpr static std::string_view ChargeTimeMax_type_name = "ChargeTimeMax";
+		constexpr static rivet::rivet_type_id ChargeTimeMax_type_id = 0xa1c4cc1e;
+		constexpr static std::string_view ShotSpawnerDescription_type_name = "ShotSpawnerDescription";
+		constexpr static rivet::rivet_type_id ShotSpawnerDescription_type_id = 0xd9cf9f4a;
+		constexpr static std::string_view ShotIndex_type_name = "ShotIndex";
+		constexpr static rivet::rivet_type_id ShotIndex_type_id = 0xc409037f;
+		constexpr static std::string_view UseOverrideBurst_type_name = "UseOverrideBurst";
+		constexpr static rivet::rivet_type_id UseOverrideBurst_type_id = 0xd98a5e2b;
+		constexpr static std::string_view OverrideBurst_type_name = "OverrideBurst";
+		constexpr static rivet::rivet_type_id OverrideBurst_type_id = 0x4d2a3ec2;
+		constexpr static std::string_view AimMods_type_name = "AimMods";
+		constexpr static rivet::rivet_type_id AimMods_type_id = 0x1d7694a1;
+		constexpr static std::string_view CleanupAimModsOnBurstComplete_type_name = "CleanupAimModsOnBurstComplete";
+		constexpr static rivet::rivet_type_id CleanupAimModsOnBurstComplete_type_id = 0x7a7c2ae3; 
 
 		explicit ShootProjectileData() = default;
 		explicit ShootProjectileData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

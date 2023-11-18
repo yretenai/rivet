@@ -17,28 +17,28 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/ScriptedShotEffectBasePrius.hpp>
-#include <rivet/ddl/generated/enums/x4891b54.hpp> 
+#include <rivet/ddl/generated/enums/x4891b54.hpp>
+#include <rivet/ddl/generated/ScriptedShotEffectBasePrius.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED AttachToActorEffectPrius : ScriptedShotEffectBasePrius {
-		constexpr const static std::string_view type_name = "AttachToActorEffectPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x8dbdaa42;
+		constexpr static std::string_view type_name = "AttachToActorEffectPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x8dbdaa42;
 
-		constexpr const static std::string_view ActorType_type_name = "ActorType";
-		constexpr const static rivet::rivet_type_id ActorType_type_id = 0x1eb7640e;
-		constexpr const static std::string_view ResetScriptedShotLifeTime_type_name = "ResetScriptedShotLifeTime";
-		constexpr const static rivet::rivet_type_id ResetScriptedShotLifeTime_type_id = 0x8664041b;
-		constexpr const static std::string_view NewLifeTime_type_name = "NewLifeTime";
-		constexpr const static rivet::rivet_type_id NewLifeTime_type_id = 0x46741ea8;
-		constexpr const static std::string_view DestroyOnBotDeath_type_name = "DestroyOnBotDeath";
-		constexpr const static rivet::rivet_type_id DestroyOnBotDeath_type_id = 0xbf9f9307;
-		constexpr const static std::string_view DestroyOnNonBotDeath_type_name = "DestroyOnNonBotDeath";
-		constexpr const static rivet::rivet_type_id DestroyOnNonBotDeath_type_id = 0x2f074a2b;
-		constexpr const static std::string_view MatchDestroy_type_name = "MatchDestroy";
-		constexpr const static rivet::rivet_type_id MatchDestroy_type_id = 0x282599e5;
-		constexpr const static std::string_view HideOnAutoDestroy_type_name = "HideOnAutoDestroy";
-		constexpr const static rivet::rivet_type_id HideOnAutoDestroy_type_id = 0xe71cbd5a; 
+		constexpr static std::string_view ActorType_type_name = "ActorType";
+		constexpr static rivet::rivet_type_id ActorType_type_id = 0x1eb7640e;
+		constexpr static std::string_view ResetScriptedShotLifeTime_type_name = "ResetScriptedShotLifeTime";
+		constexpr static rivet::rivet_type_id ResetScriptedShotLifeTime_type_id = 0x8664041b;
+		constexpr static std::string_view NewLifeTime_type_name = "NewLifeTime";
+		constexpr static rivet::rivet_type_id NewLifeTime_type_id = 0x46741ea8;
+		constexpr static std::string_view DestroyOnBotDeath_type_name = "DestroyOnBotDeath";
+		constexpr static rivet::rivet_type_id DestroyOnBotDeath_type_id = 0xbf9f9307;
+		constexpr static std::string_view DestroyOnNonBotDeath_type_name = "DestroyOnNonBotDeath";
+		constexpr static rivet::rivet_type_id DestroyOnNonBotDeath_type_id = 0x2f074a2b;
+		constexpr static std::string_view MatchDestroy_type_name = "MatchDestroy";
+		constexpr static rivet::rivet_type_id MatchDestroy_type_id = 0x282599e5;
+		constexpr static std::string_view HideOnAutoDestroy_type_name = "HideOnAutoDestroy";
+		constexpr static rivet::rivet_type_id HideOnAutoDestroy_type_id = 0xe71cbd5a; 
 
 		explicit AttachToActorEffectPrius() = default;
 		explicit AttachToActorEffectPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

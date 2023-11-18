@@ -3,11 +3,13 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
+#include <rivet/ddl/generated/EventBase.hpp> 
+
 #include <rivet/ddl/generated/DebugActorEventFilterItem.hpp>
 
 namespace rivet::ddl::generated {
 	DebugActorEventFilterItem::DebugActorEventFilterItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		EventItem = serialized->get_field(EventItem_type_id); 
+		EventItem = serialized->unwrap_into<rivet::ddl::generated::EventBase>(EventItem_type_id); 
 	}
 
 	[[nodiscard]] auto

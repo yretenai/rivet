@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED RecoilCameraShakeNone : RecoilCameraShake {
-		constexpr const static std::string_view type_name = "RecoilCameraShakeNone";
-		constexpr const static rivet::rivet_type_id type_id = 0x46fa6e26;
+		constexpr static std::string_view type_name = "RecoilCameraShakeNone";
+		constexpr static rivet::rivet_type_id type_id = 0x46fa6e26;
 
 		explicit RecoilCameraShakeNone() = default;
 		explicit RecoilCameraShakeNone([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

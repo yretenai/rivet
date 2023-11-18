@@ -17,20 +17,20 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/POIConfigData.hpp>
-#include <rivet/ddl/generated/enums/x942777d3.hpp> 
+#include <rivet/ddl/generated/enums/x942777d3.hpp>
+#include <rivet/ddl/generated/POIConfigData.hpp> 
 
 namespace rivet::ddl::generated {
 	struct POIAttributeOutroBase; 
 
 	struct RIVET_DDL_SHARED POIGameConfigData : POIConfigData {
-		constexpr const static std::string_view type_name = "POIGameConfigData";
-		constexpr const static rivet::rivet_type_id type_id = 0x6b32a1a2;
+		constexpr static std::string_view type_name = "POIGameConfigData";
+		constexpr static rivet::rivet_type_id type_id = 0x6b32a1a2;
 
-		constexpr const static std::string_view Outro_type_name = "Outro";
-		constexpr const static rivet::rivet_type_id Outro_type_id = 0xb0e2cdf;
-		constexpr const static std::string_view SymbolType_type_name = "SymbolType";
-		constexpr const static rivet::rivet_type_id SymbolType_type_id = 0x86cd9534; 
+		constexpr static std::string_view Outro_type_name = "Outro";
+		constexpr static rivet::rivet_type_id Outro_type_id = 0xb0e2cdf;
+		constexpr static std::string_view SymbolType_type_name = "SymbolType";
+		constexpr static rivet::rivet_type_id SymbolType_type_id = 0x86cd9534; 
 
 		explicit POIGameConfigData() = default;
 		explicit POIGameConfigData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

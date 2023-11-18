@@ -21,15 +21,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED PartialReactGamePrius : PartialReactBasePrius {
-		constexpr const static std::string_view type_name = "PartialReactGamePrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x97d70662;
+		constexpr static std::string_view type_name = "PartialReactGamePrius";
+		constexpr static rivet::rivet_type_id type_id = 0x97d70662;
 
-		constexpr const static std::string_view AdditiveReactDriver_type_name = "AdditiveReactDriver";
-		constexpr const static rivet::rivet_type_id AdditiveReactDriver_type_id = 0x40ab026f;
-		constexpr const static std::string_view PartialReactDriver_type_name = "PartialReactDriver";
-		constexpr const static rivet::rivet_type_id PartialReactDriver_type_id = 0x4f63a6f1;
-		constexpr const static std::string_view PartialReactCooldown_type_name = "PartialReactCooldown";
-		constexpr const static rivet::rivet_type_id PartialReactCooldown_type_id = 0xa4e1f543; 
+		constexpr static std::string_view AdditiveReactDriver_type_name = "AdditiveReactDriver";
+		constexpr static rivet::rivet_type_id AdditiveReactDriver_type_id = 0x40ab026f;
+		constexpr static std::string_view PartialReactDriver_type_name = "PartialReactDriver";
+		constexpr static rivet::rivet_type_id PartialReactDriver_type_id = 0x4f63a6f1;
+		constexpr static std::string_view PartialReactCooldown_type_name = "PartialReactCooldown";
+		constexpr static rivet::rivet_type_id PartialReactCooldown_type_id = 0xa4e1f543; 
 
 		explicit PartialReactGamePrius() = default;
 		explicit PartialReactGamePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

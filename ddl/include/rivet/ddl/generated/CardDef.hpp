@@ -17,47 +17,47 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/enums/x507460e6.hpp>
-#include <rivet/ddl/generated/enums/LevelEnum.hpp>
-#include <rivet/ddl/generated/enums/xa9c1295e.hpp>
+#include <rivet/ddl/generated/enums/x73ee3658.hpp>
 #include <rivet/ddl/generated/enums/x1f61db2e.hpp>
-#include <rivet/ddl/generated/enums/x73ee3658.hpp> 
+#include <rivet/ddl/generated/enums/xa9c1295e.hpp>
+#include <rivet/ddl/generated/enums/LevelEnum.hpp>
+#include <rivet/ddl/generated/enums/x507460e6.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED CardDef : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "CardDef";
-		constexpr const static rivet::rivet_type_id type_id = 0x19ee9ba9;
+		constexpr static std::string_view type_name = "CardDef";
+		constexpr static rivet::rivet_type_id type_id = 0x19ee9ba9;
 
-		constexpr const static std::string_view CardID_type_name = "CardID";
-		constexpr const static rivet::rivet_type_id CardID_type_id = 0x7b6ab6e3;
-		constexpr const static std::string_view CardNameLocTag_type_name = "CardNameLocTag";
-		constexpr const static rivet::rivet_type_id CardNameLocTag_type_id = 0x5fa3f550;
-		constexpr const static std::string_view TempCardName_type_name = "TempCardName";
-		constexpr const static rivet::rivet_type_id TempCardName_type_id = 0x15f0c337;
-		constexpr const static std::string_view ImageTexture_type_name = "ImageTexture";
-		constexpr const static rivet::rivet_type_id ImageTexture_type_id = 0xd87bb525;
-		constexpr const static std::string_view HLMLocTag_type_name = "HLMLocTag";
-		constexpr const static rivet::rivet_type_id HLMLocTag_type_id = 0x564f3112;
-		constexpr const static std::string_view JSCLocTag_type_name = "JSCLocTag";
-		constexpr const static rivet::rivet_type_id JSCLocTag_type_id = 0x8d1d414e;
-		constexpr const static std::string_view FirstAppLocTag_type_name = "FirstAppLocTag";
-		constexpr const static rivet::rivet_type_id FirstAppLocTag_type_id = 0x29b69ed9;
-		constexpr const static std::string_view BioLocTag_type_name = "BioLocTag";
-		constexpr const static rivet::rivet_type_id BioLocTag_type_id = 0x2ad5ff0b;
-		constexpr const static std::string_view Level_type_name = "Level";
-		constexpr const static rivet::rivet_type_id Level_type_id = 0x83b900d2;
-		constexpr const static std::string_view Class_type_name = "Class";
-		constexpr const static rivet::rivet_type_id Class_type_id = 0xf418d55e;
-		constexpr const static std::string_view Tradeable_type_name = "Tradeable";
-		constexpr const static rivet::rivet_type_id Tradeable_type_id = 0xf4e143e2;
-		constexpr const static std::string_view HLMType_type_name = "HLMType";
-		constexpr const static rivet::rivet_type_id HLMType_type_id = 0xf18ecf20;
-		constexpr const static std::string_view JSCType_type_name = "JSCType";
-		constexpr const static rivet::rivet_type_id JSCType_type_id = 0x2ba1d026;
-		constexpr const static std::string_view OverrideDuplicateTradeCount_type_name = "OverrideDuplicateTradeCount";
-		constexpr const static rivet::rivet_type_id OverrideDuplicateTradeCount_type_id = 0x5aa75b9b;
-		constexpr const static std::string_view DuplicateTradeCount_type_name = "DuplicateTradeCount";
-		constexpr const static rivet::rivet_type_id DuplicateTradeCount_type_id = 0xde9fb801; 
+		constexpr static std::string_view CardID_type_name = "CardID";
+		constexpr static rivet::rivet_type_id CardID_type_id = 0x7b6ab6e3;
+		constexpr static std::string_view CardNameLocTag_type_name = "CardNameLocTag";
+		constexpr static rivet::rivet_type_id CardNameLocTag_type_id = 0x5fa3f550;
+		constexpr static std::string_view TempCardName_type_name = "TempCardName";
+		constexpr static rivet::rivet_type_id TempCardName_type_id = 0x15f0c337;
+		constexpr static std::string_view ImageTexture_type_name = "ImageTexture";
+		constexpr static rivet::rivet_type_id ImageTexture_type_id = 0xd87bb525;
+		constexpr static std::string_view HLMLocTag_type_name = "HLMLocTag";
+		constexpr static rivet::rivet_type_id HLMLocTag_type_id = 0x564f3112;
+		constexpr static std::string_view JSCLocTag_type_name = "JSCLocTag";
+		constexpr static rivet::rivet_type_id JSCLocTag_type_id = 0x8d1d414e;
+		constexpr static std::string_view FirstAppLocTag_type_name = "FirstAppLocTag";
+		constexpr static rivet::rivet_type_id FirstAppLocTag_type_id = 0x29b69ed9;
+		constexpr static std::string_view BioLocTag_type_name = "BioLocTag";
+		constexpr static rivet::rivet_type_id BioLocTag_type_id = 0x2ad5ff0b;
+		constexpr static std::string_view Level_type_name = "Level";
+		constexpr static rivet::rivet_type_id Level_type_id = 0x83b900d2;
+		constexpr static std::string_view Class_type_name = "Class";
+		constexpr static rivet::rivet_type_id Class_type_id = 0xf418d55e;
+		constexpr static std::string_view Tradeable_type_name = "Tradeable";
+		constexpr static rivet::rivet_type_id Tradeable_type_id = 0xf4e143e2;
+		constexpr static std::string_view HLMType_type_name = "HLMType";
+		constexpr static rivet::rivet_type_id HLMType_type_id = 0xf18ecf20;
+		constexpr static std::string_view JSCType_type_name = "JSCType";
+		constexpr static rivet::rivet_type_id JSCType_type_id = 0x2ba1d026;
+		constexpr static std::string_view OverrideDuplicateTradeCount_type_name = "OverrideDuplicateTradeCount";
+		constexpr static rivet::rivet_type_id OverrideDuplicateTradeCount_type_id = 0x5aa75b9b;
+		constexpr static std::string_view DuplicateTradeCount_type_name = "DuplicateTradeCount";
+		constexpr static rivet::rivet_type_id DuplicateTradeCount_type_id = 0xde9fb801; 
 
 		explicit CardDef() = default;
 		explicit CardDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

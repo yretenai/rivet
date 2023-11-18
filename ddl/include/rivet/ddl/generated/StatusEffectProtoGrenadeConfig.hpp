@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED StatusEffectProtoGrenadeConfig : StatusEffectConfig {
-		constexpr const static std::string_view type_name = "StatusEffectProtoGrenadeConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x1ec2b5af;
+		constexpr static std::string_view type_name = "StatusEffectProtoGrenadeConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x1ec2b5af;
 
 		explicit StatusEffectProtoGrenadeConfig() = default;
 		explicit StatusEffectProtoGrenadeConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

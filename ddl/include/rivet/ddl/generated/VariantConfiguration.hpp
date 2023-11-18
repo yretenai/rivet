@@ -23,15 +23,15 @@ namespace rivet::ddl::generated {
 	struct VariantLookData; 
 
 	struct RIVET_DDL_SHARED VariantConfiguration : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "VariantConfiguration";
-		constexpr const static rivet::rivet_type_id type_id = 0xd360e847;
+		constexpr static std::string_view type_name = "VariantConfiguration";
+		constexpr static rivet::rivet_type_id type_id = 0xd360e847;
 
-		constexpr const static std::string_view Variant_type_name = "Variant";
-		constexpr const static rivet::rivet_type_id Variant_type_id = 0xf0a9dc95;
-		constexpr const static std::string_view ValidLookGroups_type_name = "ValidLookGroups";
-		constexpr const static rivet::rivet_type_id ValidLookGroups_type_id = 0xe1d6fd5b;
-		constexpr const static std::string_view VariantConstantLooks_type_name = "VariantConstantLooks";
-		constexpr const static rivet::rivet_type_id VariantConstantLooks_type_id = 0x8729cb27; 
+		constexpr static std::string_view Variant_type_name = "Variant";
+		constexpr static rivet::rivet_type_id Variant_type_id = 0xf0a9dc95;
+		constexpr static std::string_view ValidLookGroups_type_name = "ValidLookGroups";
+		constexpr static rivet::rivet_type_id ValidLookGroups_type_id = 0xe1d6fd5b;
+		constexpr static std::string_view VariantConstantLooks_type_name = "VariantConstantLooks";
+		constexpr static rivet::rivet_type_id VariantConstantLooks_type_id = 0x8729cb27; 
 
 		explicit VariantConfiguration() = default;
 		explicit VariantConfiguration([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

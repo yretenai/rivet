@@ -23,13 +23,13 @@ namespace rivet::ddl::generated {
 	struct AwardGroup; 
 
 	struct RIVET_DDL_SHARED AwardsConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "AwardsConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xd700f2fb;
+		constexpr static std::string_view type_name = "AwardsConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xd700f2fb;
 
-		constexpr const static std::string_view ImagePath_type_name = "ImagePath";
-		constexpr const static rivet::rivet_type_id ImagePath_type_id = 0x3c1a7294;
-		constexpr const static std::string_view AwardGroups_type_name = "AwardGroups";
-		constexpr const static rivet::rivet_type_id AwardGroups_type_id = 0xff03c137; 
+		constexpr static std::string_view ImagePath_type_name = "ImagePath";
+		constexpr static rivet::rivet_type_id ImagePath_type_id = 0x3c1a7294;
+		constexpr static std::string_view AwardGroups_type_name = "AwardGroups";
+		constexpr static rivet::rivet_type_id AwardGroups_type_id = 0xff03c137; 
 
 		explicit AwardsConfig() = default;
 		explicit AwardsConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

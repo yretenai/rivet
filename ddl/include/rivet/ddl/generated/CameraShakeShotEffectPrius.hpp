@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct CameraShakingWithFallOffData; 
 
 	struct RIVET_DDL_SHARED CameraShakeShotEffectPrius : ScriptedShotEffectBasePrius {
-		constexpr const static std::string_view type_name = "CameraShakeShotEffectPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x3977a94d;
+		constexpr static std::string_view type_name = "CameraShakeShotEffectPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x3977a94d;
 
-		constexpr const static std::string_view ShakeData_type_name = "ShakeData";
-		constexpr const static rivet::rivet_type_id ShakeData_type_id = 0x9c710c08; 
+		constexpr static std::string_view ShakeData_type_name = "ShakeData";
+		constexpr static rivet::rivet_type_id ShakeData_type_id = 0x9c710c08; 
 
 		explicit CameraShakeShotEffectPrius() = default;
 		explicit CameraShakeShotEffectPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

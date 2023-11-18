@@ -23,25 +23,25 @@ namespace rivet::ddl::generated {
 	struct UIDisplayObjectData; 
 
 	struct RIVET_DDL_SHARED UIObjectDisplayerConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "UIObjectDisplayerConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x2d3eda31;
+		constexpr static std::string_view type_name = "UIObjectDisplayerConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x2d3eda31;
 
-		constexpr const static std::string_view VendorWeaponZone_type_name = "VendorWeaponZone";
-		constexpr const static rivet::rivet_type_id VendorWeaponZone_type_id = 0x66510e78;
-		constexpr const static std::string_view VendorWeaponAtmosphere_type_name = "VendorWeaponAtmosphere";
-		constexpr const static rivet::rivet_type_id VendorWeaponAtmosphere_type_id = 0x58b5d7a2;
-		constexpr const static std::string_view PauseMenuZone_type_name = "PauseMenuZone";
-		constexpr const static rivet::rivet_type_id PauseMenuZone_type_id = 0xf4b6f9fb;
-		constexpr const static std::string_view PauseMenuAtmosphere_type_name = "PauseMenuAtmosphere";
-		constexpr const static rivet::rivet_type_id PauseMenuAtmosphere_type_id = 0x8fba2886;
-		constexpr const static std::string_view PauseMapZone_type_name = "PauseMapZone";
-		constexpr const static rivet::rivet_type_id PauseMapZone_type_id = 0x7235b15c;
-		constexpr const static std::string_view PauseMapAtmosphere_type_name = "PauseMapAtmosphere";
-		constexpr const static rivet::rivet_type_id PauseMapAtmosphere_type_id = 0xf97464bf;
-		constexpr const static std::string_view PauseMenuCameraTransition_type_name = "PauseMenuCameraTransition";
-		constexpr const static rivet::rivet_type_id PauseMenuCameraTransition_type_id = 0x27c4ed9a;
-		constexpr const static std::string_view UIDisplayObjectData_type_name = "UIDisplayObjectData";
-		constexpr const static rivet::rivet_type_id UIDisplayObjectData_type_id = 0xf7620dfb; 
+		constexpr static std::string_view VendorWeaponZone_type_name = "VendorWeaponZone";
+		constexpr static rivet::rivet_type_id VendorWeaponZone_type_id = 0x66510e78;
+		constexpr static std::string_view VendorWeaponAtmosphere_type_name = "VendorWeaponAtmosphere";
+		constexpr static rivet::rivet_type_id VendorWeaponAtmosphere_type_id = 0x58b5d7a2;
+		constexpr static std::string_view PauseMenuZone_type_name = "PauseMenuZone";
+		constexpr static rivet::rivet_type_id PauseMenuZone_type_id = 0xf4b6f9fb;
+		constexpr static std::string_view PauseMenuAtmosphere_type_name = "PauseMenuAtmosphere";
+		constexpr static rivet::rivet_type_id PauseMenuAtmosphere_type_id = 0x8fba2886;
+		constexpr static std::string_view PauseMapZone_type_name = "PauseMapZone";
+		constexpr static rivet::rivet_type_id PauseMapZone_type_id = 0x7235b15c;
+		constexpr static std::string_view PauseMapAtmosphere_type_name = "PauseMapAtmosphere";
+		constexpr static rivet::rivet_type_id PauseMapAtmosphere_type_id = 0xf97464bf;
+		constexpr static std::string_view PauseMenuCameraTransition_type_name = "PauseMenuCameraTransition";
+		constexpr static rivet::rivet_type_id PauseMenuCameraTransition_type_id = 0x27c4ed9a;
+		constexpr static std::string_view UIDisplayObjectData_type_name = "UIDisplayObjectData";
+		constexpr static rivet::rivet_type_id UIDisplayObjectData_type_id = 0xf7620dfb; 
 
 		explicit UIObjectDisplayerConfig() = default;
 		explicit UIObjectDisplayerConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

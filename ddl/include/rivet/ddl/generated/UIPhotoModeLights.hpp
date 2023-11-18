@@ -21,15 +21,15 @@ namespace rivet::ddl::generated {
 	struct UIPhotoModeOption; 
 
 	struct RIVET_DDL_SHARED UIPhotoModeLights : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "UIPhotoModeLights";
-		constexpr const static rivet::rivet_type_id type_id = 0xf44ab588;
+		constexpr static std::string_view type_name = "UIPhotoModeLights";
+		constexpr static rivet::rivet_type_id type_id = 0xf44ab588;
 
-		constexpr const static std::string_view LightOptions_type_name = "LightOptions";
-		constexpr const static rivet::rivet_type_id LightOptions_type_id = 0xc0e4c861;
-		constexpr const static std::string_view KeyLightOptions_type_name = "KeyLightOptions";
-		constexpr const static rivet::rivet_type_id KeyLightOptions_type_id = 0x1d634a29;
-		constexpr const static std::string_view AdditionalOptions_type_name = "AdditionalOptions";
-		constexpr const static rivet::rivet_type_id AdditionalOptions_type_id = 0xfe3ef31f; 
+		constexpr static std::string_view LightOptions_type_name = "LightOptions";
+		constexpr static rivet::rivet_type_id LightOptions_type_id = 0xc0e4c861;
+		constexpr static std::string_view KeyLightOptions_type_name = "KeyLightOptions";
+		constexpr static rivet::rivet_type_id KeyLightOptions_type_id = 0x1d634a29;
+		constexpr static std::string_view AdditionalOptions_type_name = "AdditionalOptions";
+		constexpr static rivet::rivet_type_id AdditionalOptions_type_id = 0xfe3ef31f; 
 
 		explicit UIPhotoModeLights() = default;
 		explicit UIPhotoModeLights([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

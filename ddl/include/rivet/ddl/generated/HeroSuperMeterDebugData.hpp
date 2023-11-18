@@ -21,21 +21,21 @@ namespace rivet::ddl::generated {
 	struct DDLVector2; 
 
 	struct RIVET_DDL_SHARED HeroSuperMeterDebugData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "HeroSuperMeterDebugData";
-		constexpr const static rivet::rivet_type_id type_id = 0xcd306d02;
+		constexpr static std::string_view type_name = "HeroSuperMeterDebugData";
+		constexpr static rivet::rivet_type_id type_id = 0xcd306d02;
 
-		constexpr const static std::string_view DrawMeter_type_name = "DrawMeter";
-		constexpr const static rivet::rivet_type_id DrawMeter_type_id = 0xe90a6378;
-		constexpr const static std::string_view DrawControls_type_name = "DrawControls";
-		constexpr const static rivet::rivet_type_id DrawControls_type_id = 0xf91fb2f8;
-		constexpr const static std::string_view MeterPos_type_name = "MeterPos";
-		constexpr const static rivet::rivet_type_id MeterPos_type_id = 0x4ac11292;
-		constexpr const static std::string_view MeterSize_type_name = "MeterSize";
-		constexpr const static rivet::rivet_type_id MeterSize_type_id = 0xe469ceb8;
-		constexpr const static std::string_view ControlsPos_type_name = "ControlsPos";
-		constexpr const static rivet::rivet_type_id ControlsPos_type_id = 0x53f21a42;
-		constexpr const static std::string_view ControlsSize_type_name = "ControlsSize";
-		constexpr const static rivet::rivet_type_id ControlsSize_type_id = 0x62a32f64; 
+		constexpr static std::string_view DrawMeter_type_name = "DrawMeter";
+		constexpr static rivet::rivet_type_id DrawMeter_type_id = 0xe90a6378;
+		constexpr static std::string_view DrawControls_type_name = "DrawControls";
+		constexpr static rivet::rivet_type_id DrawControls_type_id = 0xf91fb2f8;
+		constexpr static std::string_view MeterPos_type_name = "MeterPos";
+		constexpr static rivet::rivet_type_id MeterPos_type_id = 0x4ac11292;
+		constexpr static std::string_view MeterSize_type_name = "MeterSize";
+		constexpr static rivet::rivet_type_id MeterSize_type_id = 0xe469ceb8;
+		constexpr static std::string_view ControlsPos_type_name = "ControlsPos";
+		constexpr static rivet::rivet_type_id ControlsPos_type_id = 0x53f21a42;
+		constexpr static std::string_view ControlsSize_type_name = "ControlsSize";
+		constexpr static rivet::rivet_type_id ControlsSize_type_id = 0x62a32f64; 
 
 		explicit HeroSuperMeterDebugData() = default;
 		explicit HeroSuperMeterDebugData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

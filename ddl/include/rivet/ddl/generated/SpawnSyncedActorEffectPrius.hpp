@@ -21,19 +21,19 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED SpawnSyncedActorEffectPrius : ScriptedShotEffectBasePrius {
-		constexpr const static std::string_view type_name = "SpawnSyncedActorEffectPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x91e958ec;
+		constexpr static std::string_view type_name = "SpawnSyncedActorEffectPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x91e958ec;
 
-		constexpr const static std::string_view ActorAsset_type_name = "ActorAsset";
-		constexpr const static rivet::rivet_type_id ActorAsset_type_id = 0x75356989;
-		constexpr const static std::string_view LifeTime_type_name = "LifeTime";
-		constexpr const static rivet::rivet_type_id LifeTime_type_id = 0x67d422c6;
-		constexpr const static std::string_view AttachToHitActor_type_name = "AttachToHitActor";
-		constexpr const static rivet::rivet_type_id AttachToHitActor_type_id = 0x27919c52;
-		constexpr const static std::string_view MatchCreatorAllegiance_type_name = "MatchCreatorAllegiance";
-		constexpr const static rivet::rivet_type_id MatchCreatorAllegiance_type_id = 0x60d5eba5;
-		constexpr const static std::string_view MatchCreatorZone_type_name = "MatchCreatorZone";
-		constexpr const static rivet::rivet_type_id MatchCreatorZone_type_id = 0xfc7075c0; 
+		constexpr static std::string_view ActorAsset_type_name = "ActorAsset";
+		constexpr static rivet::rivet_type_id ActorAsset_type_id = 0x75356989;
+		constexpr static std::string_view LifeTime_type_name = "LifeTime";
+		constexpr static rivet::rivet_type_id LifeTime_type_id = 0x67d422c6;
+		constexpr static std::string_view AttachToHitActor_type_name = "AttachToHitActor";
+		constexpr static rivet::rivet_type_id AttachToHitActor_type_id = 0x27919c52;
+		constexpr static std::string_view MatchCreatorAllegiance_type_name = "MatchCreatorAllegiance";
+		constexpr static rivet::rivet_type_id MatchCreatorAllegiance_type_id = 0x60d5eba5;
+		constexpr static std::string_view MatchCreatorZone_type_name = "MatchCreatorZone";
+		constexpr static rivet::rivet_type_id MatchCreatorZone_type_id = 0xfc7075c0; 
 
 		explicit SpawnSyncedActorEffectPrius() = default;
 		explicit SpawnSyncedActorEffectPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

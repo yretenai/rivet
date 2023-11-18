@@ -21,25 +21,25 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED AimAssistAutoTargetLocation : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "AimAssistAutoTargetLocation";
-		constexpr const static rivet::rivet_type_id type_id = 0x6734eaa9;
+		constexpr static std::string_view type_name = "AimAssistAutoTargetLocation";
+		constexpr static rivet::rivet_type_id type_id = 0x6734eaa9;
 
-		constexpr const static std::string_view AssistZoneParent_type_name = "AssistZoneParent";
-		constexpr const static rivet::rivet_type_id AssistZoneParent_type_id = 0x951f65ee;
-		constexpr const static std::string_view FaceAngle_type_name = "FaceAngle";
-		constexpr const static rivet::rivet_type_id FaceAngle_type_id = 0xb2c98628;
-		constexpr const static std::string_view OverrideRange_type_name = "OverrideRange";
-		constexpr const static rivet::rivet_type_id OverrideRange_type_id = 0xa393c43b;
-		constexpr const static std::string_view OverrideAngle_type_name = "OverrideAngle";
-		constexpr const static rivet::rivet_type_id OverrideAngle_type_id = 0x3095db7b;
-		constexpr const static std::string_view RequireBodyVisible_type_name = "RequireBodyVisible";
-		constexpr const static rivet::rivet_type_id RequireBodyVisible_type_id = 0xb49e6b43;
-		constexpr const static std::string_view RequireHeadVisible_type_name = "RequireHeadVisible";
-		constexpr const static rivet::rivet_type_id RequireHeadVisible_type_id = 0xec3ac2bb;
-		constexpr const static std::string_view OnlyAsFallback_type_name = "OnlyAsFallback";
-		constexpr const static rivet::rivet_type_id OnlyAsFallback_type_id = 0x10937c5e;
-		constexpr const static std::string_view LocationType_type_name = "LocationType";
-		constexpr const static rivet::rivet_type_id LocationType_type_id = 0xc3db52f8; 
+		constexpr static std::string_view AssistZoneParent_type_name = "AssistZoneParent";
+		constexpr static rivet::rivet_type_id AssistZoneParent_type_id = 0x951f65ee;
+		constexpr static std::string_view FaceAngle_type_name = "FaceAngle";
+		constexpr static rivet::rivet_type_id FaceAngle_type_id = 0xb2c98628;
+		constexpr static std::string_view OverrideRange_type_name = "OverrideRange";
+		constexpr static rivet::rivet_type_id OverrideRange_type_id = 0xa393c43b;
+		constexpr static std::string_view OverrideAngle_type_name = "OverrideAngle";
+		constexpr static rivet::rivet_type_id OverrideAngle_type_id = 0x3095db7b;
+		constexpr static std::string_view RequireBodyVisible_type_name = "RequireBodyVisible";
+		constexpr static rivet::rivet_type_id RequireBodyVisible_type_id = 0xb49e6b43;
+		constexpr static std::string_view RequireHeadVisible_type_name = "RequireHeadVisible";
+		constexpr static rivet::rivet_type_id RequireHeadVisible_type_id = 0xec3ac2bb;
+		constexpr static std::string_view OnlyAsFallback_type_name = "OnlyAsFallback";
+		constexpr static rivet::rivet_type_id OnlyAsFallback_type_id = 0x10937c5e;
+		constexpr static std::string_view LocationType_type_name = "LocationType";
+		constexpr static rivet::rivet_type_id LocationType_type_id = 0xc3db52f8; 
 
 		explicit AimAssistAutoTargetLocation() = default;
 		explicit AimAssistAutoTargetLocation([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED StatusEffectLightningRodConfig : StatusEffectConfig {
-		constexpr const static std::string_view type_name = "StatusEffectLightningRodConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xafb9fc2b;
+		constexpr static std::string_view type_name = "StatusEffectLightningRodConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xafb9fc2b;
 
 		explicit StatusEffectLightningRodConfig() = default;
 		explicit StatusEffectLightningRodConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

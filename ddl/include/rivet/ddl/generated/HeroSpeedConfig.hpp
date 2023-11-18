@@ -19,27 +19,27 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED HeroSpeedConfig : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "HeroSpeedConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x5568366a;
+		constexpr static std::string_view type_name = "HeroSpeedConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x5568366a;
 
-		constexpr const static std::string_view WalkRunStickThreshold_type_name = "WalkRunStickThreshold";
-		constexpr const static rivet::rivet_type_id WalkRunStickThreshold_type_id = 0x2d03208b;
-		constexpr const static std::string_view WalkSpeedMin_type_name = "WalkSpeedMin";
-		constexpr const static rivet::rivet_type_id WalkSpeedMin_type_id = 0x80278447;
-		constexpr const static std::string_view WalkSpeedMax_type_name = "WalkSpeedMax";
-		constexpr const static rivet::rivet_type_id WalkSpeedMax_type_id = 0xbc2abb1e;
-		constexpr const static std::string_view RunSpeedMin_type_name = "RunSpeedMin";
-		constexpr const static rivet::rivet_type_id RunSpeedMin_type_id = 0x28cdbf43;
-		constexpr const static std::string_view RunSpeedMax_type_name = "RunSpeedMax";
-		constexpr const static rivet::rivet_type_id RunSpeedMax_type_id = 0x14c0801a;
-		constexpr const static std::string_view RunSpeedBackwardMin_type_name = "RunSpeedBackwardMin";
-		constexpr const static rivet::rivet_type_id RunSpeedBackwardMin_type_id = 0x6a4f1fe3;
-		constexpr const static std::string_view RunSpeedBackwardMax_type_name = "RunSpeedBackwardMax";
-		constexpr const static rivet::rivet_type_id RunSpeedBackwardMax_type_id = 0x564220ba;
-		constexpr const static std::string_view RunSpeedSideMin_type_name = "RunSpeedSideMin";
-		constexpr const static rivet::rivet_type_id RunSpeedSideMin_type_id = 0x1b9c3526;
-		constexpr const static std::string_view RunSpeedSideMax_type_name = "RunSpeedSideMax";
-		constexpr const static rivet::rivet_type_id RunSpeedSideMax_type_id = 0x27910a7f; 
+		constexpr static std::string_view WalkRunStickThreshold_type_name = "WalkRunStickThreshold";
+		constexpr static rivet::rivet_type_id WalkRunStickThreshold_type_id = 0x2d03208b;
+		constexpr static std::string_view WalkSpeedMin_type_name = "WalkSpeedMin";
+		constexpr static rivet::rivet_type_id WalkSpeedMin_type_id = 0x80278447;
+		constexpr static std::string_view WalkSpeedMax_type_name = "WalkSpeedMax";
+		constexpr static rivet::rivet_type_id WalkSpeedMax_type_id = 0xbc2abb1e;
+		constexpr static std::string_view RunSpeedMin_type_name = "RunSpeedMin";
+		constexpr static rivet::rivet_type_id RunSpeedMin_type_id = 0x28cdbf43;
+		constexpr static std::string_view RunSpeedMax_type_name = "RunSpeedMax";
+		constexpr static rivet::rivet_type_id RunSpeedMax_type_id = 0x14c0801a;
+		constexpr static std::string_view RunSpeedBackwardMin_type_name = "RunSpeedBackwardMin";
+		constexpr static rivet::rivet_type_id RunSpeedBackwardMin_type_id = 0x6a4f1fe3;
+		constexpr static std::string_view RunSpeedBackwardMax_type_name = "RunSpeedBackwardMax";
+		constexpr static rivet::rivet_type_id RunSpeedBackwardMax_type_id = 0x564220ba;
+		constexpr static std::string_view RunSpeedSideMin_type_name = "RunSpeedSideMin";
+		constexpr static rivet::rivet_type_id RunSpeedSideMin_type_id = 0x1b9c3526;
+		constexpr static std::string_view RunSpeedSideMax_type_name = "RunSpeedSideMax";
+		constexpr static rivet::rivet_type_id RunSpeedSideMax_type_id = 0x27910a7f; 
 
 		explicit HeroSpeedConfig() = default;
 		explicit HeroSpeedConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

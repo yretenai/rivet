@@ -21,17 +21,17 @@ namespace rivet::ddl::generated {
 	struct IconMapBase; 
 
 	struct RIVET_DDL_SHARED Markup : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "Markup";
-		constexpr const static rivet::rivet_type_id type_id = 0x187b1de4;
+		constexpr static std::string_view type_name = "Markup";
+		constexpr static rivet::rivet_type_id type_id = 0x187b1de4;
 
-		constexpr const static std::string_view MarkupText_type_name = "MarkupText";
-		constexpr const static rivet::rivet_type_id MarkupText_type_id = 0x28b909c2;
-		constexpr const static std::string_view IconMapping_type_name = "IconMapping";
-		constexpr const static rivet::rivet_type_id IconMapping_type_id = 0xaa9ec16d;
-		constexpr const static std::string_view Clone_type_name = "Clone";
-		constexpr const static rivet::rivet_type_id Clone_type_id = 0xf53e2119;
-		constexpr const static std::string_view SourceMarkup_type_name = "SourceMarkup";
-		constexpr const static rivet::rivet_type_id SourceMarkup_type_id = 0xf1115996; 
+		constexpr static std::string_view MarkupText_type_name = "MarkupText";
+		constexpr static rivet::rivet_type_id MarkupText_type_id = 0x28b909c2;
+		constexpr static std::string_view IconMapping_type_name = "IconMapping";
+		constexpr static rivet::rivet_type_id IconMapping_type_id = 0xaa9ec16d;
+		constexpr static std::string_view Clone_type_name = "Clone";
+		constexpr static rivet::rivet_type_id Clone_type_id = 0xf53e2119;
+		constexpr static std::string_view SourceMarkup_type_name = "SourceMarkup";
+		constexpr static rivet::rivet_type_id SourceMarkup_type_id = 0xf1115996; 
 
 		explicit Markup() = default;
 		explicit Markup([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -21,17 +21,17 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED UITutorialModalButton : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "UITutorialModalButton";
-		constexpr const static rivet::rivet_type_id type_id = 0x18c494dc;
+		constexpr static std::string_view type_name = "UITutorialModalButton";
+		constexpr static rivet::rivet_type_id type_id = 0x18c494dc;
 
-		constexpr const static std::string_view ShowModalButton_type_name = "ShowModalButton";
-		constexpr const static rivet::rivet_type_id ShowModalButton_type_id = 0xe54cc011;
-		constexpr const static std::string_view Button_type_name = "Button";
-		constexpr const static rivet::rivet_type_id Button_type_id = 0x47ee25a;
-		constexpr const static std::string_view Text_type_name = "Text";
-		constexpr const static rivet::rivet_type_id Text_type_id = 0xb1b6777;
-		constexpr const static std::string_view PassthroughInput_type_name = "PassthroughInput";
-		constexpr const static rivet::rivet_type_id PassthroughInput_type_id = 0x35d04713; 
+		constexpr static std::string_view ShowModalButton_type_name = "ShowModalButton";
+		constexpr static rivet::rivet_type_id ShowModalButton_type_id = 0xe54cc011;
+		constexpr static std::string_view Button_type_name = "Button";
+		constexpr static rivet::rivet_type_id Button_type_id = 0x47ee25a;
+		constexpr static std::string_view Text_type_name = "Text";
+		constexpr static rivet::rivet_type_id Text_type_id = 0xb1b6777;
+		constexpr static std::string_view PassthroughInput_type_name = "PassthroughInput";
+		constexpr static rivet::rivet_type_id PassthroughInput_type_id = 0x35d04713; 
 
 		explicit UITutorialModalButton() = default;
 		explicit UITutorialModalButton([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

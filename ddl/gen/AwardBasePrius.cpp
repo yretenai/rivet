@@ -3,26 +3,26 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/AwardGlobalSaveKeyPrius.hpp>
-#include <rivet/ddl/generated/AwardPrizeBasePrius.hpp>
-#include <rivet/ddl/generated/AwardCompleteObjectivesPrius.hpp>
-#include <rivet/ddl/generated/GameAwardVanityBundleStatusPrius.hpp>
 #include <rivet/ddl/generated/GameAwardWeaponLevelUpPrius.hpp>
-#include <rivet/ddl/generated/GameAwardMagShieldKillCountPrius.hpp>
-#include <rivet/ddl/generated/GameAwardDetachingBotKillCountPrius.hpp>
-#include <rivet/ddl/generated/GameAwardFossilizerHeadshotPrius.hpp>
-#include <rivet/ddl/generated/GameAwardStatusEffectKillCountPrius.hpp>
-#include <rivet/ddl/generated/GameAwardHoverbootDoubleJumpPrius.hpp>
-#include <rivet/ddl/generated/GameAwardRicochetKillCountPrius.hpp>
-#include <rivet/ddl/generated/GameAwardMrFunGuyAppearPrius.hpp>
-#include <rivet/ddl/generated/GameAwardGrindrailDoubleJumpPrius.hpp>
-#include <rivet/ddl/generated/AwardPlatinumPrius.hpp>
-#include <rivet/ddl/generated/AwardPickupsPrius.hpp>
+#include <rivet/ddl/generated/GameAwardPurchaseWeaponPrius.hpp>
+#include <rivet/ddl/generated/GameAwardActorKillCountPrius.hpp>
 #include <rivet/ddl/generated/GameAwardLightningRodChainCountPrius.hpp>
 #include <rivet/ddl/generated/GameAwardStatusEffectMeleeCountPrius.hpp>
+#include <rivet/ddl/generated/GameAwardRicochetKillCountPrius.hpp>
+#include <rivet/ddl/generated/AwardPrizeBasePrius.hpp>
+#include <rivet/ddl/generated/GameAwardMagShieldKillCountPrius.hpp>
+#include <rivet/ddl/generated/GameAwardVanityBundleStatusPrius.hpp>
+#include <rivet/ddl/generated/AwardCompleteObjectivesPrius.hpp>
+#include <rivet/ddl/generated/GameAwardStatusEffectKillCountPrius.hpp>
+#include <rivet/ddl/generated/AwardPickupsPrius.hpp>
 #include <rivet/ddl/generated/GameAwardWeaponFullUpgradePrius.hpp>
-#include <rivet/ddl/generated/GameAwardPurchaseWeaponPrius.hpp>
-#include <rivet/ddl/generated/GameAwardActorKillCountPrius.hpp> 
+#include <rivet/ddl/generated/GameAwardDetachingBotKillCountPrius.hpp>
+#include <rivet/ddl/generated/GameAwardHoverbootDoubleJumpPrius.hpp>
+#include <rivet/ddl/generated/GameAwardFossilizerHeadshotPrius.hpp>
+#include <rivet/ddl/generated/AwardPlatinumPrius.hpp>
+#include <rivet/ddl/generated/AwardGlobalSaveKeyPrius.hpp>
+#include <rivet/ddl/generated/GameAwardMrFunGuyAppearPrius.hpp>
+#include <rivet/ddl/generated/GameAwardGrindrailDoubleJumpPrius.hpp> 
 
 #include <rivet/ddl/generated/AwardBasePrius.hpp>
 

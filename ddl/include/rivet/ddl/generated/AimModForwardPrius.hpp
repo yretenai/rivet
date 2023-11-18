@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED AimModForwardPrius : AimModifierPrius {
-		constexpr const static std::string_view type_name = "AimModForwardPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x64d8ddc0;
+		constexpr static std::string_view type_name = "AimModForwardPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x64d8ddc0;
 
-		constexpr const static std::string_view ReferenceLocator_type_name = "ReferenceLocator";
-		constexpr const static rivet::rivet_type_id ReferenceLocator_type_id = 0x10a1eab4; 
+		constexpr static std::string_view ReferenceLocator_type_name = "ReferenceLocator";
+		constexpr static rivet::rivet_type_id ReferenceLocator_type_id = 0x10a1eab4; 
 
 		explicit AimModForwardPrius() = default;
 		explicit AimModForwardPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

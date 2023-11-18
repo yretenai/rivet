@@ -23,17 +23,17 @@ namespace rivet::ddl::generated {
 	struct PulseNavObstruction; 
 
 	struct RIVET_DDL_SHARED DimensionalPulseTargetPrius : DimensionalPulseTargetBasePrius {
-		constexpr const static std::string_view type_name = "DimensionalPulseTargetPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x783b402e;
+		constexpr static std::string_view type_name = "DimensionalPulseTargetPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x783b402e;
 
-		constexpr const static std::string_view PreCompositeShader_type_name = "PreCompositeShader";
-		constexpr const static rivet::rivet_type_id PreCompositeShader_type_id = 0x76e460d;
-		constexpr const static std::string_view PostCompositeShader_type_name = "PostCompositeShader";
-		constexpr const static rivet::rivet_type_id PostCompositeShader_type_id = 0xe2b72d5f;
-		constexpr const static std::string_view ReactDriver_type_name = "ReactDriver";
-		constexpr const static rivet::rivet_type_id ReactDriver_type_id = 0xdd88dafa;
-		constexpr const static std::string_view NavObstruction_type_name = "NavObstruction";
-		constexpr const static rivet::rivet_type_id NavObstruction_type_id = 0xb89f80a5; 
+		constexpr static std::string_view PreCompositeShader_type_name = "PreCompositeShader";
+		constexpr static rivet::rivet_type_id PreCompositeShader_type_id = 0x76e460d;
+		constexpr static std::string_view PostCompositeShader_type_name = "PostCompositeShader";
+		constexpr static rivet::rivet_type_id PostCompositeShader_type_id = 0xe2b72d5f;
+		constexpr static std::string_view ReactDriver_type_name = "ReactDriver";
+		constexpr static rivet::rivet_type_id ReactDriver_type_id = 0xdd88dafa;
+		constexpr static std::string_view NavObstruction_type_name = "NavObstruction";
+		constexpr static rivet::rivet_type_id NavObstruction_type_id = 0xb89f80a5; 
 
 		explicit DimensionalPulseTargetPrius() = default;
 		explicit DimensionalPulseTargetPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

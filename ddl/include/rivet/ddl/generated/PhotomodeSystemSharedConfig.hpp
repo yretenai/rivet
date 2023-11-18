@@ -20,29 +20,29 @@
 #include <rivet/ddl/generated/ConfigBase.hpp> 
 
 namespace rivet::ddl::generated {
-	struct InputSettingsData;
 	struct FilterData;
-	struct StickerModeData;
+	struct PhotomodeCameraManagerData;
 	struct PhotoLightSettings;
+	struct StickerModeData;
 	struct FrameData;
-	struct PhotomodeCameraManagerData; 
+	struct InputSettingsData; 
 
 	struct RIVET_DDL_SHARED PhotomodeSystemSharedConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "PhotomodeSystemSharedConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x41c600f0;
+		constexpr static std::string_view type_name = "PhotomodeSystemSharedConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x41c600f0;
 
-		constexpr const static std::string_view InputSettings_type_name = "InputSettings";
-		constexpr const static rivet::rivet_type_id InputSettings_type_id = 0x421458bb;
-		constexpr const static std::string_view StickerMode_type_name = "StickerMode";
-		constexpr const static rivet::rivet_type_id StickerMode_type_id = 0x94bb6350;
-		constexpr const static std::string_view LightSettings_type_name = "LightSettings";
-		constexpr const static rivet::rivet_type_id LightSettings_type_id = 0x7e3ed937;
-		constexpr const static std::string_view Cameras_type_name = "Cameras";
-		constexpr const static rivet::rivet_type_id Cameras_type_id = 0x6ab54452;
-		constexpr const static std::string_view Frames_type_name = "Frames";
-		constexpr const static rivet::rivet_type_id Frames_type_id = 0xc016c75d;
-		constexpr const static std::string_view Filters_type_name = "Filters";
-		constexpr const static rivet::rivet_type_id Filters_type_id = 0x799d04b5; 
+		constexpr static std::string_view InputSettings_type_name = "InputSettings";
+		constexpr static rivet::rivet_type_id InputSettings_type_id = 0x421458bb;
+		constexpr static std::string_view StickerMode_type_name = "StickerMode";
+		constexpr static rivet::rivet_type_id StickerMode_type_id = 0x94bb6350;
+		constexpr static std::string_view LightSettings_type_name = "LightSettings";
+		constexpr static rivet::rivet_type_id LightSettings_type_id = 0x7e3ed937;
+		constexpr static std::string_view Cameras_type_name = "Cameras";
+		constexpr static rivet::rivet_type_id Cameras_type_id = 0x6ab54452;
+		constexpr static std::string_view Frames_type_name = "Frames";
+		constexpr static rivet::rivet_type_id Frames_type_id = 0xc016c75d;
+		constexpr static std::string_view Filters_type_name = "Filters";
+		constexpr static rivet::rivet_type_id Filters_type_id = 0x799d04b5; 
 
 		explicit PhotomodeSystemSharedConfig() = default;
 		explicit PhotomodeSystemSharedConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

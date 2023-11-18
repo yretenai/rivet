@@ -21,15 +21,15 @@ namespace rivet::ddl::generated {
 	struct ObjSysUnlockSequence; 
 
 	struct RIVET_DDL_SHARED CrowdSpawnerType : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "CrowdSpawnerType";
-		constexpr const static rivet::rivet_type_id type_id = 0xd2e8fa8f;
+		constexpr static std::string_view type_name = "CrowdSpawnerType";
+		constexpr static rivet::rivet_type_id type_id = 0xd2e8fa8f;
 
-		constexpr const static std::string_view TypeConfig_type_name = "TypeConfig";
-		constexpr const static rivet::rivet_type_id TypeConfig_type_id = 0x8c241f18;
-		constexpr const static std::string_view EnabledContainerRegions_type_name = "EnabledContainerRegions";
-		constexpr const static rivet::rivet_type_id EnabledContainerRegions_type_id = 0xb8e32d51;
-		constexpr const static std::string_view MissionUnlocks_type_name = "MissionUnlocks";
-		constexpr const static rivet::rivet_type_id MissionUnlocks_type_id = 0x17ff21a7; 
+		constexpr static std::string_view TypeConfig_type_name = "TypeConfig";
+		constexpr static rivet::rivet_type_id TypeConfig_type_id = 0x8c241f18;
+		constexpr static std::string_view EnabledContainerRegions_type_name = "EnabledContainerRegions";
+		constexpr static rivet::rivet_type_id EnabledContainerRegions_type_id = 0xb8e32d51;
+		constexpr static std::string_view MissionUnlocks_type_name = "MissionUnlocks";
+		constexpr static rivet::rivet_type_id MissionUnlocks_type_id = 0x17ff21a7; 
 
 		explicit CrowdSpawnerType() = default;
 		explicit CrowdSpawnerType([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

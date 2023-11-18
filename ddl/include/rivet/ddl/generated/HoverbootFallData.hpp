@@ -19,11 +19,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED HoverbootFallData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "HoverbootFallData";
-		constexpr const static rivet::rivet_type_id type_id = 0x134207d9;
+		constexpr static std::string_view type_name = "HoverbootFallData";
+		constexpr static rivet::rivet_type_id type_id = 0x134207d9;
 
-		constexpr const static std::string_view JumpInputGracePeriod_type_name = "JumpInputGracePeriod";
-		constexpr const static rivet::rivet_type_id JumpInputGracePeriod_type_id = 0xe295a94b; 
+		constexpr static std::string_view JumpInputGracePeriod_type_name = "JumpInputGracePeriod";
+		constexpr static rivet::rivet_type_id JumpInputGracePeriod_type_id = 0xe295a94b; 
 
 		explicit HoverbootFallData() = default;
 		explicit HoverbootFallData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

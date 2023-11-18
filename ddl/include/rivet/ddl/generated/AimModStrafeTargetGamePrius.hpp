@@ -21,17 +21,17 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED AimModStrafeTargetGamePrius : AimModStrafeTargetPrius {
-		constexpr const static std::string_view type_name = "AimModStrafeTargetGamePrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x4f9e109c;
+		constexpr static std::string_view type_name = "AimModStrafeTargetGamePrius";
+		constexpr static rivet::rivet_type_id type_id = 0x4f9e109c;
 
-		constexpr const static std::string_view StrafeAlongForward_type_name = "StrafeAlongForward";
-		constexpr const static rivet::rivet_type_id StrafeAlongForward_type_id = 0x1deeff38;
-		constexpr const static std::string_view ReverseStrafeDir_type_name = "ReverseStrafeDir";
-		constexpr const static rivet::rivet_type_id ReverseStrafeDir_type_id = 0xa175378e;
-		constexpr const static std::string_view RandomizeStrafeDir_type_name = "RandomizeStrafeDir";
-		constexpr const static rivet::rivet_type_id RandomizeStrafeDir_type_id = 0x9fb0d575;
-		constexpr const static std::string_view FanFromCenter_type_name = "FanFromCenter";
-		constexpr const static rivet::rivet_type_id FanFromCenter_type_id = 0x778b70fa; 
+		constexpr static std::string_view StrafeAlongForward_type_name = "StrafeAlongForward";
+		constexpr static rivet::rivet_type_id StrafeAlongForward_type_id = 0x1deeff38;
+		constexpr static std::string_view ReverseStrafeDir_type_name = "ReverseStrafeDir";
+		constexpr static rivet::rivet_type_id ReverseStrafeDir_type_id = 0xa175378e;
+		constexpr static std::string_view RandomizeStrafeDir_type_name = "RandomizeStrafeDir";
+		constexpr static rivet::rivet_type_id RandomizeStrafeDir_type_id = 0x9fb0d575;
+		constexpr static std::string_view FanFromCenter_type_name = "FanFromCenter";
+		constexpr static rivet::rivet_type_id FanFromCenter_type_id = 0x778b70fa; 
 
 		explicit AimModStrafeTargetGamePrius() = default;
 		explicit AimModStrafeTargetGamePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

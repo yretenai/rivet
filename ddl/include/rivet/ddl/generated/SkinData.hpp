@@ -19,21 +19,21 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED SkinData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "SkinData";
-		constexpr const static rivet::rivet_type_id type_id = 0x1131f88a;
+		constexpr static std::string_view type_name = "SkinData";
+		constexpr static rivet::rivet_type_id type_id = 0x1131f88a;
 
-		constexpr const static std::string_view BodyLookGroup_type_name = "BodyLookGroup";
-		constexpr const static rivet::rivet_type_id BodyLookGroup_type_id = 0xaab66ede;
-		constexpr const static std::string_view GloveLookGroup_type_name = "GloveLookGroup";
-		constexpr const static rivet::rivet_type_id GloveLookGroup_type_id = 0xc1a6779f;
-		constexpr const static std::string_view BootsLookGroup_type_name = "BootsLookGroup";
-		constexpr const static rivet::rivet_type_id BootsLookGroup_type_id = 0x8a133d52;
-		constexpr const static std::string_view CapLookGroup_type_name = "CapLookGroup";
-		constexpr const static rivet::rivet_type_id CapLookGroup_type_id = 0xc407913a;
-		constexpr const static std::string_view HelmetModel_type_name = "HelmetModel";
-		constexpr const static rivet::rivet_type_id HelmetModel_type_id = 0x537019f1;
-		constexpr const static std::string_view OxygenTankModel_type_name = "OxygenTankModel";
-		constexpr const static rivet::rivet_type_id OxygenTankModel_type_id = 0xce8dd78b; 
+		constexpr static std::string_view BodyLookGroup_type_name = "BodyLookGroup";
+		constexpr static rivet::rivet_type_id BodyLookGroup_type_id = 0xaab66ede;
+		constexpr static std::string_view GloveLookGroup_type_name = "GloveLookGroup";
+		constexpr static rivet::rivet_type_id GloveLookGroup_type_id = 0xc1a6779f;
+		constexpr static std::string_view BootsLookGroup_type_name = "BootsLookGroup";
+		constexpr static rivet::rivet_type_id BootsLookGroup_type_id = 0x8a133d52;
+		constexpr static std::string_view CapLookGroup_type_name = "CapLookGroup";
+		constexpr static rivet::rivet_type_id CapLookGroup_type_id = 0xc407913a;
+		constexpr static std::string_view HelmetModel_type_name = "HelmetModel";
+		constexpr static rivet::rivet_type_id HelmetModel_type_id = 0x537019f1;
+		constexpr static std::string_view OxygenTankModel_type_name = "OxygenTankModel";
+		constexpr static rivet::rivet_type_id OxygenTankModel_type_id = 0xce8dd78b; 
 
 		explicit SkinData() = default;
 		explicit SkinData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

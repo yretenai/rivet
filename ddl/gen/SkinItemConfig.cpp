@@ -3,18 +3,18 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/SkinItemModel.hpp>
-#include <rivet/ddl/generated/SkinItemModelVariantOverrideListElement.hpp>
-#include <rivet/ddl/generated/SkinItemLocatorOverrideListElement.hpp>
 #include <rivet/ddl/generated/SkinItemSwitchGroupListElement.hpp>
-#include <rivet/ddl/generated/SkinItemTextureOverrideListElement.hpp>
-#include <rivet/ddl/generated/SkinItemMaterialOverrideListElement.hpp>
-#include <rivet/ddl/generated/SkinItemConduitOverrideListElement.hpp>
-#include <rivet/ddl/generated/SkinItemCompositeMaterialOverrideListElement.hpp>
-#include <rivet/ddl/generated/SkinItemCompanionItemListElement.hpp>
-#include <rivet/ddl/generated/AssetReferenceDef.hpp>
 #include <rivet/ddl/generated/SkinShaderUpdaterPrius.hpp>
-#include <rivet/ddl/generated/VanityItemConfig.hpp> 
+#include <rivet/ddl/generated/SkinItemModelVariantOverrideListElement.hpp>
+#include <rivet/ddl/generated/SkinItemConduitOverrideListElement.hpp>
+#include <rivet/ddl/generated/SkinItemCompanionItemListElement.hpp>
+#include <rivet/ddl/generated/SkinItemMaterialOverrideListElement.hpp>
+#include <rivet/ddl/generated/AssetReferenceDef.hpp>
+#include <rivet/ddl/generated/SkinItemCompositeMaterialOverrideListElement.hpp>
+#include <rivet/ddl/generated/SkinItemTextureOverrideListElement.hpp>
+#include <rivet/ddl/generated/VanityItemConfig.hpp>
+#include <rivet/ddl/generated/SkinItemLocatorOverrideListElement.hpp>
+#include <rivet/ddl/generated/SkinItemModel.hpp> 
 
 #include <rivet/ddl/generated/SkinItemConfig.hpp>
 

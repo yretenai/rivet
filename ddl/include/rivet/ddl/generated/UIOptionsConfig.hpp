@@ -21,28 +21,28 @@
 
 namespace rivet::ddl::generated {
 	struct UIOptionsPresetData;
-	struct UIOptionsPage;
 	struct UIHUDIconToggleOptions;
-	struct UIOptionColorData; 
+	struct UIOptionColorData;
+	struct UIOptionsPage; 
 
 	struct RIVET_DDL_SHARED UIOptionsConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "UIOptionsConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x2a6dc9fe;
+		constexpr static std::string_view type_name = "UIOptionsConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x2a6dc9fe;
 
-		constexpr const static std::string_view Pages_type_name = "Pages";
-		constexpr const static rivet::rivet_type_id Pages_type_id = 0x392729b4;
-		constexpr const static std::string_view Colors_type_name = "Colors";
-		constexpr const static rivet::rivet_type_id Colors_type_id = 0xfcc68df8;
-		constexpr const static std::string_view HUDIconToggleOptions_type_name = "HUDIconToggleOptions";
-		constexpr const static rivet::rivet_type_id HUDIconToggleOptions_type_id = 0x4f656054;
-		constexpr const static std::string_view SimpleControlsOptions_type_name = "SimpleControlsOptions";
-		constexpr const static rivet::rivet_type_id SimpleControlsOptions_type_id = 0x223c7a8a;
-		constexpr const static std::string_view VisualPresetOptions_type_name = "VisualPresetOptions";
-		constexpr const static rivet::rivet_type_id VisualPresetOptions_type_id = 0x395f5c48;
-		constexpr const static std::string_view HearingPresetOptions_type_name = "HearingPresetOptions";
-		constexpr const static rivet::rivet_type_id HearingPresetOptions_type_id = 0x94ec4cbd;
-		constexpr const static std::string_view MotorPresetOptions_type_name = "MotorPresetOptions";
-		constexpr const static rivet::rivet_type_id MotorPresetOptions_type_id = 0x31bc6617; 
+		constexpr static std::string_view Pages_type_name = "Pages";
+		constexpr static rivet::rivet_type_id Pages_type_id = 0x392729b4;
+		constexpr static std::string_view Colors_type_name = "Colors";
+		constexpr static rivet::rivet_type_id Colors_type_id = 0xfcc68df8;
+		constexpr static std::string_view HUDIconToggleOptions_type_name = "HUDIconToggleOptions";
+		constexpr static rivet::rivet_type_id HUDIconToggleOptions_type_id = 0x4f656054;
+		constexpr static std::string_view SimpleControlsOptions_type_name = "SimpleControlsOptions";
+		constexpr static rivet::rivet_type_id SimpleControlsOptions_type_id = 0x223c7a8a;
+		constexpr static std::string_view VisualPresetOptions_type_name = "VisualPresetOptions";
+		constexpr static rivet::rivet_type_id VisualPresetOptions_type_id = 0x395f5c48;
+		constexpr static std::string_view HearingPresetOptions_type_name = "HearingPresetOptions";
+		constexpr static rivet::rivet_type_id HearingPresetOptions_type_id = 0x94ec4cbd;
+		constexpr static std::string_view MotorPresetOptions_type_name = "MotorPresetOptions";
+		constexpr static rivet::rivet_type_id MotorPresetOptions_type_id = 0x31bc6617; 
 
 		explicit UIOptionsConfig() = default;
 		explicit UIOptionsConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

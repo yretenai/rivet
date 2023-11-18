@@ -19,21 +19,21 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DEVOFlexibleCriterion : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "DEVOFlexibleCriterion";
-		constexpr const static rivet::rivet_type_id type_id = 0xcc08f78b;
+		constexpr static std::string_view type_name = "DEVOFlexibleCriterion";
+		constexpr static rivet::rivet_type_id type_id = 0xcc08f78b;
 
-		constexpr const static std::string_view FactName_type_name = "FactName";
-		constexpr const static rivet::rivet_type_id FactName_type_id = 0xf901b9ab;
-		constexpr const static std::string_view AsString_type_name = "AsString";
-		constexpr const static rivet::rivet_type_id AsString_type_id = 0x76321eb6;
-		constexpr const static std::string_view NumericLow_type_name = "NumericLow";
-		constexpr const static rivet::rivet_type_id NumericLow_type_id = 0x71195476;
-		constexpr const static std::string_view NumericHigh_type_name = "NumericHigh";
-		constexpr const static rivet::rivet_type_id NumericHigh_type_id = 0x3b53dd83;
-		constexpr const static std::string_view IncludeNumericLow_type_name = "IncludeNumericLow";
-		constexpr const static rivet::rivet_type_id IncludeNumericLow_type_id = 0xd5c78e69;
-		constexpr const static std::string_view IncludeNumericHigh_type_name = "IncludeNumericHigh";
-		constexpr const static rivet::rivet_type_id IncludeNumericHigh_type_id = 0xb6ff0eac; 
+		constexpr static std::string_view FactName_type_name = "FactName";
+		constexpr static rivet::rivet_type_id FactName_type_id = 0xf901b9ab;
+		constexpr static std::string_view AsString_type_name = "AsString";
+		constexpr static rivet::rivet_type_id AsString_type_id = 0x76321eb6;
+		constexpr static std::string_view NumericLow_type_name = "NumericLow";
+		constexpr static rivet::rivet_type_id NumericLow_type_id = 0x71195476;
+		constexpr static std::string_view NumericHigh_type_name = "NumericHigh";
+		constexpr static rivet::rivet_type_id NumericHigh_type_id = 0x3b53dd83;
+		constexpr static std::string_view IncludeNumericLow_type_name = "IncludeNumericLow";
+		constexpr static rivet::rivet_type_id IncludeNumericLow_type_id = 0xd5c78e69;
+		constexpr static std::string_view IncludeNumericHigh_type_name = "IncludeNumericHigh";
+		constexpr static rivet::rivet_type_id IncludeNumericHigh_type_id = 0xb6ff0eac; 
 
 		explicit DEVOFlexibleCriterion() = default;
 		explicit DEVOFlexibleCriterion([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

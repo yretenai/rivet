@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED TriggerEffectKeyFrameBlendLinear : TriggerEffectKeyFrameBlendBase {
-		constexpr const static std::string_view type_name = "TriggerEffectKeyFrameBlendLinear";
-		constexpr const static rivet::rivet_type_id type_id = 0xf0b0355e;
+		constexpr static std::string_view type_name = "TriggerEffectKeyFrameBlendLinear";
+		constexpr static rivet::rivet_type_id type_id = 0xf0b0355e;
 
 		explicit TriggerEffectKeyFrameBlendLinear() = default;
 		explicit TriggerEffectKeyFrameBlendLinear([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

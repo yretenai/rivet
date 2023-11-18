@@ -21,15 +21,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED RelativeAnimCameraPrius : CameraPrius {
-		constexpr const static std::string_view type_name = "RelativeAnimCameraPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x6f35fc5c;
+		constexpr static std::string_view type_name = "RelativeAnimCameraPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x6f35fc5c;
 
-		constexpr const static std::string_view RelativeActor_type_name = "RelativeActor";
-		constexpr const static rivet::rivet_type_id RelativeActor_type_id = 0xc843c120;
-		constexpr const static std::string_view CameraAnimList_type_name = "CameraAnimList";
-		constexpr const static rivet::rivet_type_id CameraAnimList_type_id = 0x3bb9260b;
-		constexpr const static std::string_view DoCollision_type_name = "DoCollision";
-		constexpr const static rivet::rivet_type_id DoCollision_type_id = 0x198fefc3; 
+		constexpr static std::string_view RelativeActor_type_name = "RelativeActor";
+		constexpr static rivet::rivet_type_id RelativeActor_type_id = 0xc843c120;
+		constexpr static std::string_view CameraAnimList_type_name = "CameraAnimList";
+		constexpr static rivet::rivet_type_id CameraAnimList_type_id = 0x3bb9260b;
+		constexpr static std::string_view DoCollision_type_name = "DoCollision";
+		constexpr static rivet::rivet_type_id DoCollision_type_id = 0x198fefc3; 
 
 		explicit RelativeAnimCameraPrius() = default;
 		explicit RelativeAnimCameraPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

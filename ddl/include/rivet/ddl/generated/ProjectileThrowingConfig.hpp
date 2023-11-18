@@ -21,25 +21,25 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ProjectileThrowingConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "ProjectileThrowingConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xbcd4e648;
+		constexpr static std::string_view type_name = "ProjectileThrowingConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xbcd4e648;
 
-		constexpr const static std::string_view DesiredFlightTime_type_name = "DesiredFlightTime";
-		constexpr const static rivet::rivet_type_id DesiredFlightTime_type_id = 0xd292ec09;
-		constexpr const static std::string_view MinSpeed_type_name = "MinSpeed";
-		constexpr const static rivet::rivet_type_id MinSpeed_type_id = 0xf0d89680;
-		constexpr const static std::string_view MaxSpeed_type_name = "MaxSpeed";
-		constexpr const static rivet::rivet_type_id MaxSpeed_type_id = 0x16b83961;
-		constexpr const static std::string_view ArcHeights_type_name = "ArcHeights";
-		constexpr const static rivet::rivet_type_id ArcHeights_type_id = 0x5f3d6c97;
-		constexpr const static std::string_view CollCheckWidth_type_name = "CollCheckWidth";
-		constexpr const static rivet::rivet_type_id CollCheckWidth_type_id = 0x74e30d9b;
-		constexpr const static std::string_view MaxPredictionSpeed_type_name = "MaxPredictionSpeed";
-		constexpr const static rivet::rivet_type_id MaxPredictionSpeed_type_id = 0x276306e;
-		constexpr const static std::string_view MaxPredictionSpeedTraversal_type_name = "MaxPredictionSpeedTraversal";
-		constexpr const static rivet::rivet_type_id MaxPredictionSpeedTraversal_type_id = 0x1cdc53fd;
-		constexpr const static std::string_view CameraFacingOffset_type_name = "CameraFacingOffset";
-		constexpr const static rivet::rivet_type_id CameraFacingOffset_type_id = 0x478fd459; 
+		constexpr static std::string_view DesiredFlightTime_type_name = "DesiredFlightTime";
+		constexpr static rivet::rivet_type_id DesiredFlightTime_type_id = 0xd292ec09;
+		constexpr static std::string_view MinSpeed_type_name = "MinSpeed";
+		constexpr static rivet::rivet_type_id MinSpeed_type_id = 0xf0d89680;
+		constexpr static std::string_view MaxSpeed_type_name = "MaxSpeed";
+		constexpr static rivet::rivet_type_id MaxSpeed_type_id = 0x16b83961;
+		constexpr static std::string_view ArcHeights_type_name = "ArcHeights";
+		constexpr static rivet::rivet_type_id ArcHeights_type_id = 0x5f3d6c97;
+		constexpr static std::string_view CollCheckWidth_type_name = "CollCheckWidth";
+		constexpr static rivet::rivet_type_id CollCheckWidth_type_id = 0x74e30d9b;
+		constexpr static std::string_view MaxPredictionSpeed_type_name = "MaxPredictionSpeed";
+		constexpr static rivet::rivet_type_id MaxPredictionSpeed_type_id = 0x276306e;
+		constexpr static std::string_view MaxPredictionSpeedTraversal_type_name = "MaxPredictionSpeedTraversal";
+		constexpr static rivet::rivet_type_id MaxPredictionSpeedTraversal_type_id = 0x1cdc53fd;
+		constexpr static std::string_view CameraFacingOffset_type_name = "CameraFacingOffset";
+		constexpr static rivet::rivet_type_id CameraFacingOffset_type_id = 0x478fd459; 
 
 		explicit ProjectileThrowingConfig() = default;
 		explicit ProjectileThrowingConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

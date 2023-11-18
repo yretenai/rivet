@@ -18,23 +18,23 @@
 #include <rivet/structures/rivet_serialization.hpp>
 
 namespace rivet::ddl::generated {
-	struct ActivityLinkBase;
-	struct ActivityHintWithId; 
+	struct ActivityHintWithId;
+	struct ActivityLinkBase; 
 
 	struct RIVET_DDL_SHARED ActivityDefBase : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "ActivityDefBase";
-		constexpr const static rivet::rivet_type_id type_id = 0x8a0fcb5d;
+		constexpr static std::string_view type_name = "ActivityDefBase";
+		constexpr static rivet::rivet_type_id type_id = 0x8a0fcb5d;
 
-		constexpr const static std::string_view ActivityId_type_name = "ActivityId";
-		constexpr const static rivet::rivet_type_id ActivityId_type_id = 0xc803bcc5;
-		constexpr const static std::string_view ActivityLink_type_name = "ActivityLink";
-		constexpr const static rivet::rivet_type_id ActivityLink_type_id = 0x6a428937;
-		constexpr const static std::string_view SendLocationOnEnd_type_name = "SendLocationOnEnd";
-		constexpr const static rivet::rivet_type_id SendLocationOnEnd_type_id = 0xaf619063;
-		constexpr const static std::string_view DefaultPlaytimeEstimate_type_name = "DefaultPlaytimeEstimate";
-		constexpr const static rivet::rivet_type_id DefaultPlaytimeEstimate_type_id = 0xa76d47a6;
-		constexpr const static std::string_view Hints_type_name = "Hints";
-		constexpr const static rivet::rivet_type_id Hints_type_id = 0xf00bc587; 
+		constexpr static std::string_view ActivityId_type_name = "ActivityId";
+		constexpr static rivet::rivet_type_id ActivityId_type_id = 0xc803bcc5;
+		constexpr static std::string_view ActivityLink_type_name = "ActivityLink";
+		constexpr static rivet::rivet_type_id ActivityLink_type_id = 0x6a428937;
+		constexpr static std::string_view SendLocationOnEnd_type_name = "SendLocationOnEnd";
+		constexpr static rivet::rivet_type_id SendLocationOnEnd_type_id = 0xaf619063;
+		constexpr static std::string_view DefaultPlaytimeEstimate_type_name = "DefaultPlaytimeEstimate";
+		constexpr static rivet::rivet_type_id DefaultPlaytimeEstimate_type_id = 0xa76d47a6;
+		constexpr static std::string_view Hints_type_name = "Hints";
+		constexpr static rivet::rivet_type_id Hints_type_id = 0xf00bc587; 
 
 		explicit ActivityDefBase() = default;
 		explicit ActivityDefBase([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

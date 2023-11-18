@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct TargetingLocationWeightData; 
 
 	struct RIVET_DDL_SHARED SpawnShotBotTargetingRandomLocationPrius : SpawnShotBotTargetingPrius {
-		constexpr const static std::string_view type_name = "SpawnShotBotTargetingRandomLocationPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xeb0ec715;
+		constexpr static std::string_view type_name = "SpawnShotBotTargetingRandomLocationPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xeb0ec715;
 
-		constexpr const static std::string_view LocationWeightData_type_name = "LocationWeightData";
-		constexpr const static rivet::rivet_type_id LocationWeightData_type_id = 0x48766868; 
+		constexpr static std::string_view LocationWeightData_type_name = "LocationWeightData";
+		constexpr static rivet::rivet_type_id LocationWeightData_type_id = 0x48766868; 
 
 		explicit SpawnShotBotTargetingRandomLocationPrius() = default;
 		explicit SpawnShotBotTargetingRandomLocationPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

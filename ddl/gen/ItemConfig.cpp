@@ -3,9 +3,9 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/GameItemConfig.hpp>
+#include <rivet/ddl/generated/GridItemConfig.hpp>
 #include <rivet/ddl/generated/SkinItemConfig.hpp>
-#include <rivet/ddl/generated/GridItemConfig.hpp> 
+#include <rivet/ddl/generated/GameItemConfig.hpp> 
 
 #include <rivet/ddl/generated/ItemConfig.hpp>
 

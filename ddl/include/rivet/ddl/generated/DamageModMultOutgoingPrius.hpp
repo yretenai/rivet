@@ -17,24 +17,24 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/DamageModifierOutgoingPrius.hpp>
-#include <rivet/ddl/generated/enums/x8d7e44cf.hpp> 
+#include <rivet/ddl/generated/enums/x8d7e44cf.hpp>
+#include <rivet/ddl/generated/DamageModifierOutgoingPrius.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DamageModMultOutgoingPrius : DamageModifierOutgoingPrius {
-		constexpr const static std::string_view type_name = "DamageModMultOutgoingPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xcc29fed4;
+		constexpr static std::string_view type_name = "DamageModMultOutgoingPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xcc29fed4;
 
-		constexpr const static std::string_view Multiplier_type_name = "Multiplier";
-		constexpr const static rivet::rivet_type_id Multiplier_type_id = 0x7facf762;
-		constexpr const static std::string_view DamageFilter_type_name = "DamageFilter";
-		constexpr const static rivet::rivet_type_id DamageFilter_type_id = 0xa75ecb2f;
-		constexpr const static std::string_view WeaponTypeFilter_type_name = "WeaponTypeFilter";
-		constexpr const static rivet::rivet_type_id WeaponTypeFilter_type_id = 0x5d5c06eb;
-		constexpr const static std::string_view AllegianceFilter_type_name = "AllegianceFilter";
-		constexpr const static rivet::rivet_type_id AllegianceFilter_type_id = 0x1b32101d;
-		constexpr const static std::string_view ModifiedTag_type_name = "ModifiedTag";
-		constexpr const static rivet::rivet_type_id ModifiedTag_type_id = 0x75529898; 
+		constexpr static std::string_view Multiplier_type_name = "Multiplier";
+		constexpr static rivet::rivet_type_id Multiplier_type_id = 0x7facf762;
+		constexpr static std::string_view DamageFilter_type_name = "DamageFilter";
+		constexpr static rivet::rivet_type_id DamageFilter_type_id = 0xa75ecb2f;
+		constexpr static std::string_view WeaponTypeFilter_type_name = "WeaponTypeFilter";
+		constexpr static rivet::rivet_type_id WeaponTypeFilter_type_id = 0x5d5c06eb;
+		constexpr static std::string_view AllegianceFilter_type_name = "AllegianceFilter";
+		constexpr static rivet::rivet_type_id AllegianceFilter_type_id = 0x1b32101d;
+		constexpr static std::string_view ModifiedTag_type_name = "ModifiedTag";
+		constexpr static rivet::rivet_type_id ModifiedTag_type_id = 0x75529898; 
 
 		explicit DamageModMultOutgoingPrius() = default;
 		explicit DamageModMultOutgoingPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

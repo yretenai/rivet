@@ -19,13 +19,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED MayaNameTrackTags : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "MayaNameTrackTags";
-		constexpr const static rivet::rivet_type_id type_id = 0x2d1628f0;
+		constexpr static std::string_view type_name = "MayaNameTrackTags";
+		constexpr static rivet::rivet_type_id type_id = 0x2d1628f0;
 
-		constexpr const static std::string_view MayaName_type_name = "MayaName";
-		constexpr const static rivet::rivet_type_id MayaName_type_id = 0xae269cf2;
-		constexpr const static std::string_view TrackTagsDef_type_name = "TrackTagsDef";
-		constexpr const static rivet::rivet_type_id TrackTagsDef_type_id = 0x62710a73; 
+		constexpr static std::string_view MayaName_type_name = "MayaName";
+		constexpr static rivet::rivet_type_id MayaName_type_id = 0xae269cf2;
+		constexpr static std::string_view TrackTagsDef_type_name = "TrackTagsDef";
+		constexpr static rivet::rivet_type_id TrackTagsDef_type_id = 0x62710a73; 
 
 		explicit MayaNameTrackTags() = default;
 		explicit MayaNameTrackTags([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

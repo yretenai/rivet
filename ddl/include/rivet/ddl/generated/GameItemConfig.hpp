@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct GameItemData; 
 
 	struct RIVET_DDL_SHARED GameItemConfig : ItemConfig {
-		constexpr const static std::string_view type_name = "GameItemConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xf1864f6d;
+		constexpr static std::string_view type_name = "GameItemConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xf1864f6d;
 
-		constexpr const static std::string_view GameItemData_type_name = "GameItemData";
-		constexpr const static rivet::rivet_type_id GameItemData_type_id = 0x7ccdfa11; 
+		constexpr static std::string_view GameItemData_type_name = "GameItemData";
+		constexpr static rivet::rivet_type_id GameItemData_type_id = 0x7ccdfa11; 
 
 		explicit GameItemConfig() = default;
 		explicit GameItemConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

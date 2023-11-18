@@ -21,15 +21,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED AimModContractingSpreadPrius : AimModifierPrius {
-		constexpr const static std::string_view type_name = "AimModContractingSpreadPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x8ae5671e;
+		constexpr static std::string_view type_name = "AimModContractingSpreadPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x8ae5671e;
 
-		constexpr const static std::string_view InaccuracyMin_type_name = "InaccuracyMin";
-		constexpr const static rivet::rivet_type_id InaccuracyMin_type_id = 0x445162fd;
-		constexpr const static std::string_view InaccuracyMax_type_name = "InaccuracyMax";
-		constexpr const static rivet::rivet_type_id InaccuracyMax_type_id = 0x785c5da4;
-		constexpr const static std::string_view ShotsToMinAccuracy_type_name = "ShotsToMinAccuracy";
-		constexpr const static rivet::rivet_type_id ShotsToMinAccuracy_type_id = 0xe4a2c370; 
+		constexpr static std::string_view InaccuracyMin_type_name = "InaccuracyMin";
+		constexpr static rivet::rivet_type_id InaccuracyMin_type_id = 0x445162fd;
+		constexpr static std::string_view InaccuracyMax_type_name = "InaccuracyMax";
+		constexpr static rivet::rivet_type_id InaccuracyMax_type_id = 0x785c5da4;
+		constexpr static std::string_view ShotsToMinAccuracy_type_name = "ShotsToMinAccuracy";
+		constexpr static rivet::rivet_type_id ShotsToMinAccuracy_type_id = 0xe4a2c370; 
 
 		explicit AimModContractingSpreadPrius() = default;
 		explicit AimModContractingSpreadPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

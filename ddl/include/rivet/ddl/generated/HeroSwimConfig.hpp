@@ -19,13 +19,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED HeroSwimConfig : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "HeroSwimConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xa52683af;
+		constexpr static std::string_view type_name = "HeroSwimConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xa52683af;
 
-		constexpr const static std::string_view SwimSurfaceSpeed_type_name = "SwimSurfaceSpeed";
-		constexpr const static rivet::rivet_type_id SwimSurfaceSpeed_type_id = 0x42a23d1c;
-		constexpr const static std::string_view SwimHydropackSpeed_type_name = "SwimHydropackSpeed";
-		constexpr const static rivet::rivet_type_id SwimHydropackSpeed_type_id = 0x24a8bf29; 
+		constexpr static std::string_view SwimSurfaceSpeed_type_name = "SwimSurfaceSpeed";
+		constexpr static rivet::rivet_type_id SwimSurfaceSpeed_type_id = 0x42a23d1c;
+		constexpr static std::string_view SwimHydropackSpeed_type_name = "SwimHydropackSpeed";
+		constexpr static rivet::rivet_type_id SwimHydropackSpeed_type_id = 0x24a8bf29; 
 
 		explicit HeroSwimConfig() = default;
 		explicit HeroSwimConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED TurretIonCannonShotPrius : BasicBulletPrius {
-		constexpr const static std::string_view type_name = "TurretIonCannonShotPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x14f4fa8;
+		constexpr static std::string_view type_name = "TurretIonCannonShotPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x14f4fa8;
 
 		explicit TurretIonCannonShotPrius() = default;
 		explicit TurretIonCannonShotPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

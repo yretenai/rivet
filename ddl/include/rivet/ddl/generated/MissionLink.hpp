@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED MissionLink : ActivityLinkBase {
-		constexpr const static std::string_view type_name = "MissionLink";
-		constexpr const static rivet::rivet_type_id type_id = 0xcd4ce997;
+		constexpr static std::string_view type_name = "MissionLink";
+		constexpr static rivet::rivet_type_id type_id = 0xcd4ce997;
 
-		constexpr const static std::string_view MissionName_type_name = "MissionName";
-		constexpr const static rivet::rivet_type_id MissionName_type_id = 0xa5c30e60; 
+		constexpr static std::string_view MissionName_type_name = "MissionName";
+		constexpr static rivet::rivet_type_id MissionName_type_id = 0xa5c30e60; 
 
 		explicit MissionLink() = default;
 		explicit MissionLink([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

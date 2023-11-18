@@ -23,13 +23,13 @@ namespace rivet::ddl::generated {
 	struct AssetReferenceDef; 
 
 	struct RIVET_DDL_SHARED SelfieWeaponData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "SelfieWeaponData";
-		constexpr const static rivet::rivet_type_id type_id = 0xf8d2e544;
+		constexpr static std::string_view type_name = "SelfieWeaponData";
+		constexpr static rivet::rivet_type_id type_id = 0xf8d2e544;
 
-		constexpr const static std::string_view WeaponActor_type_name = "WeaponActor";
-		constexpr const static rivet::rivet_type_id WeaponActor_type_id = 0xed52b0c2;
-		constexpr const static std::string_view GripStyle_type_name = "GripStyle";
-		constexpr const static rivet::rivet_type_id GripStyle_type_id = 0x93d195a6; 
+		constexpr static std::string_view WeaponActor_type_name = "WeaponActor";
+		constexpr static rivet::rivet_type_id WeaponActor_type_id = 0xed52b0c2;
+		constexpr static std::string_view GripStyle_type_name = "GripStyle";
+		constexpr static rivet::rivet_type_id GripStyle_type_id = 0x93d195a6; 
 
 		explicit SelfieWeaponData() = default;
 		explicit SelfieWeaponData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

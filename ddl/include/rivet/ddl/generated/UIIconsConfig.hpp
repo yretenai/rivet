@@ -20,37 +20,37 @@
 #include <rivet/ddl/generated/ConfigBase.hpp> 
 
 namespace rivet::ddl::generated {
-	struct PauseMapIconData;
-	struct GadgetIconData;
-	struct WeaponIconData;
-	struct ShortcutIconData;
+	struct LogoCustomData;
+	struct WeaponImageData;
 	struct VanityIconData;
 	struct CollectibleImageData;
-	struct WeaponImageData;
-	struct LogoCustomData; 
+	struct PauseMapIconData;
+	struct ShortcutIconData;
+	struct GadgetIconData;
+	struct WeaponIconData; 
 
 	struct RIVET_DDL_SHARED UIIconsConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "UIIconsConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x5416c35b;
+		constexpr static std::string_view type_name = "UIIconsConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x5416c35b;
 
-		constexpr const static std::string_view Weapons_type_name = "Weapons";
-		constexpr const static rivet::rivet_type_id Weapons_type_id = 0x53e4d8d9;
-		constexpr const static std::string_view Gadgets_type_name = "Gadgets";
-		constexpr const static rivet::rivet_type_id Gadgets_type_id = 0x173f995a;
-		constexpr const static std::string_view Shortcuts_type_name = "Shortcuts";
-		constexpr const static rivet::rivet_type_id Shortcuts_type_id = 0x60647757;
-		constexpr const static std::string_view MapIcons_type_name = "MapIcons";
-		constexpr const static rivet::rivet_type_id MapIcons_type_id = 0xffa71584;
-		constexpr const static std::string_view VanityIcons_type_name = "VanityIcons";
-		constexpr const static rivet::rivet_type_id VanityIcons_type_id = 0xac6fd639;
-		constexpr const static std::string_view WeaponImages_type_name = "WeaponImages";
-		constexpr const static rivet::rivet_type_id WeaponImages_type_id = 0x83bf9f25;
-		constexpr const static std::string_view CollectibleImages_type_name = "CollectibleImages";
-		constexpr const static rivet::rivet_type_id CollectibleImages_type_id = 0xe3c87c5a;
-		constexpr const static std::string_view LogoImage_type_name = "LogoImage";
-		constexpr const static rivet::rivet_type_id LogoImage_type_id = 0xa20558a7;
-		constexpr const static std::string_view CustomLogos_type_name = "CustomLogos";
-		constexpr const static rivet::rivet_type_id CustomLogos_type_id = 0x8f1ac676; 
+		constexpr static std::string_view Weapons_type_name = "Weapons";
+		constexpr static rivet::rivet_type_id Weapons_type_id = 0x53e4d8d9;
+		constexpr static std::string_view Gadgets_type_name = "Gadgets";
+		constexpr static rivet::rivet_type_id Gadgets_type_id = 0x173f995a;
+		constexpr static std::string_view Shortcuts_type_name = "Shortcuts";
+		constexpr static rivet::rivet_type_id Shortcuts_type_id = 0x60647757;
+		constexpr static std::string_view MapIcons_type_name = "MapIcons";
+		constexpr static rivet::rivet_type_id MapIcons_type_id = 0xffa71584;
+		constexpr static std::string_view VanityIcons_type_name = "VanityIcons";
+		constexpr static rivet::rivet_type_id VanityIcons_type_id = 0xac6fd639;
+		constexpr static std::string_view WeaponImages_type_name = "WeaponImages";
+		constexpr static rivet::rivet_type_id WeaponImages_type_id = 0x83bf9f25;
+		constexpr static std::string_view CollectibleImages_type_name = "CollectibleImages";
+		constexpr static rivet::rivet_type_id CollectibleImages_type_id = 0xe3c87c5a;
+		constexpr static std::string_view LogoImage_type_name = "LogoImage";
+		constexpr static rivet::rivet_type_id LogoImage_type_id = 0xa20558a7;
+		constexpr static std::string_view CustomLogos_type_name = "CustomLogos";
+		constexpr static rivet::rivet_type_id CustomLogos_type_id = 0x8f1ac676; 
 
 		explicit UIIconsConfig() = default;
 		explicit UIIconsConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

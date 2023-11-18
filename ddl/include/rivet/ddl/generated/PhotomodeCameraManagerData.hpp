@@ -21,11 +21,11 @@ namespace rivet::ddl::generated {
 	struct PhotomodeCameraDef; 
 
 	struct RIVET_DDL_SHARED PhotomodeCameraManagerData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "PhotomodeCameraManagerData";
-		constexpr const static rivet::rivet_type_id type_id = 0x3917e604;
+		constexpr static std::string_view type_name = "PhotomodeCameraManagerData";
+		constexpr static rivet::rivet_type_id type_id = 0x3917e604;
 
-		constexpr const static std::string_view Cameras_type_name = "Cameras";
-		constexpr const static rivet::rivet_type_id Cameras_type_id = 0x6ab54452; 
+		constexpr static std::string_view Cameras_type_name = "Cameras";
+		constexpr static rivet::rivet_type_id Cameras_type_id = 0x6ab54452; 
 
 		explicit PhotomodeCameraManagerData() = default;
 		explicit PhotomodeCameraManagerData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

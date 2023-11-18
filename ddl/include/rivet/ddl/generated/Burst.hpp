@@ -21,27 +21,27 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED Burst : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "Burst";
-		constexpr const static rivet::rivet_type_id type_id = 0x646d6c71;
+		constexpr static std::string_view type_name = "Burst";
+		constexpr static rivet::rivet_type_id type_id = 0x646d6c71;
 
-		constexpr const static std::string_view Type_type_name = "Type";
-		constexpr const static rivet::rivet_type_id Type_type_id = 0xbc4e9799;
-		constexpr const static std::string_view BurstShotsMin_type_name = "BurstShotsMin";
-		constexpr const static rivet::rivet_type_id BurstShotsMin_type_id = 0x7dc9fae1;
-		constexpr const static std::string_view BurstShotsMax_type_name = "BurstShotsMax";
-		constexpr const static rivet::rivet_type_id BurstShotsMax_type_id = 0x41c4c5b8;
-		constexpr const static std::string_view BurstShots_type_name = "BurstShots";
-		constexpr const static rivet::rivet_type_id BurstShots_type_id = 0xb4290d8a;
-		constexpr const static std::string_view BurstDurationMin_type_name = "BurstDurationMin";
-		constexpr const static rivet::rivet_type_id BurstDurationMin_type_id = 0x282f869c;
-		constexpr const static std::string_view BurstDurationMax_type_name = "BurstDurationMax";
-		constexpr const static rivet::rivet_type_id BurstDurationMax_type_id = 0x1422b9c5;
-		constexpr const static std::string_view BurstDuration_type_name = "BurstDuration";
-		constexpr const static rivet::rivet_type_id BurstDuration_type_id = 0xee3f4769;
-		constexpr const static std::string_view BurstRateOfFire_type_name = "BurstRateOfFire";
-		constexpr const static rivet::rivet_type_id BurstRateOfFire_type_id = 0xa1723d89;
-		constexpr const static std::string_view BurstTimeBetweenShots_type_name = "BurstTimeBetweenShots";
-		constexpr const static rivet::rivet_type_id BurstTimeBetweenShots_type_id = 0x264280a7; 
+		constexpr static std::string_view Type_type_name = "Type";
+		constexpr static rivet::rivet_type_id Type_type_id = 0xbc4e9799;
+		constexpr static std::string_view BurstShotsMin_type_name = "BurstShotsMin";
+		constexpr static rivet::rivet_type_id BurstShotsMin_type_id = 0x7dc9fae1;
+		constexpr static std::string_view BurstShotsMax_type_name = "BurstShotsMax";
+		constexpr static rivet::rivet_type_id BurstShotsMax_type_id = 0x41c4c5b8;
+		constexpr static std::string_view BurstShots_type_name = "BurstShots";
+		constexpr static rivet::rivet_type_id BurstShots_type_id = 0xb4290d8a;
+		constexpr static std::string_view BurstDurationMin_type_name = "BurstDurationMin";
+		constexpr static rivet::rivet_type_id BurstDurationMin_type_id = 0x282f869c;
+		constexpr static std::string_view BurstDurationMax_type_name = "BurstDurationMax";
+		constexpr static rivet::rivet_type_id BurstDurationMax_type_id = 0x1422b9c5;
+		constexpr static std::string_view BurstDuration_type_name = "BurstDuration";
+		constexpr static rivet::rivet_type_id BurstDuration_type_id = 0xee3f4769;
+		constexpr static std::string_view BurstRateOfFire_type_name = "BurstRateOfFire";
+		constexpr static rivet::rivet_type_id BurstRateOfFire_type_id = 0xa1723d89;
+		constexpr static std::string_view BurstTimeBetweenShots_type_name = "BurstTimeBetweenShots";
+		constexpr static rivet::rivet_type_id BurstTimeBetweenShots_type_id = 0x264280a7; 
 
 		explicit Burst() = default;
 		explicit Burst([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

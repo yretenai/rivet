@@ -23,13 +23,13 @@ namespace rivet::ddl::generated {
 	struct SkinItemConduitOverride; 
 
 	struct RIVET_DDL_SHARED SkinItemConduitOverrideListElement : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "SkinItemConduitOverrideListElement";
-		constexpr const static rivet::rivet_type_id type_id = 0xd9eba302;
+		constexpr static std::string_view type_name = "SkinItemConduitOverrideListElement";
+		constexpr static rivet::rivet_type_id type_id = 0xd9eba302;
 
-		constexpr const static std::string_view Available_type_name = "Available";
-		constexpr const static rivet::rivet_type_id Available_type_id = 0x27723b89;
-		constexpr const static std::string_view ConduitOverride_type_name = "ConduitOverride";
-		constexpr const static rivet::rivet_type_id ConduitOverride_type_id = 0x93ecbebe; 
+		constexpr static std::string_view Available_type_name = "Available";
+		constexpr static rivet::rivet_type_id Available_type_id = 0x27723b89;
+		constexpr static std::string_view ConduitOverride_type_name = "ConduitOverride";
+		constexpr static rivet::rivet_type_id ConduitOverride_type_id = 0x93ecbebe; 
 
 		explicit SkinItemConduitOverrideListElement() = default;
 		explicit SkinItemConduitOverrideListElement([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

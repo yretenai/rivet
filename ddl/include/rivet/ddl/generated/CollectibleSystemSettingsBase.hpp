@@ -19,8 +19,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED CollectibleSystemSettingsBase : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "CollectibleSystemSettingsBase";
-		constexpr const static rivet::rivet_type_id type_id = 0xae46408d;
+		constexpr static std::string_view type_name = "CollectibleSystemSettingsBase";
+		constexpr static rivet::rivet_type_id type_id = 0xae46408d;
 
 		explicit CollectibleSystemSettingsBase() = default;
 		explicit CollectibleSystemSettingsBase([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

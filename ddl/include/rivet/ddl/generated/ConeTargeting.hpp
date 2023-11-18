@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ConeTargeting : SpawnShotTargetingMode {
-		constexpr const static std::string_view type_name = "ConeTargeting";
-		constexpr const static rivet::rivet_type_id type_id = 0x6b4650c0;
+		constexpr static std::string_view type_name = "ConeTargeting";
+		constexpr static rivet::rivet_type_id type_id = 0x6b4650c0;
 
-		constexpr const static std::string_view ConeAngle_type_name = "ConeAngle";
-		constexpr const static rivet::rivet_type_id ConeAngle_type_id = 0x8c03b095;
-		constexpr const static std::string_view ConeDistance_type_name = "ConeDistance";
-		constexpr const static rivet::rivet_type_id ConeDistance_type_id = 0x7da7f57f; 
+		constexpr static std::string_view ConeAngle_type_name = "ConeAngle";
+		constexpr static rivet::rivet_type_id ConeAngle_type_id = 0x8c03b095;
+		constexpr static std::string_view ConeDistance_type_name = "ConeDistance";
+		constexpr static rivet::rivet_type_id ConeDistance_type_id = 0x7da7f57f; 
 
 		explicit ConeTargeting() = default;
 		explicit ConeTargeting([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

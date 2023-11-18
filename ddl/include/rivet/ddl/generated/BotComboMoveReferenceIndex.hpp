@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED BotComboMoveReferenceIndex : BotComboMoveBase {
-		constexpr const static std::string_view type_name = "BotComboMoveReferenceIndex";
-		constexpr const static rivet::rivet_type_id type_id = 0xf558fd84;
+		constexpr static std::string_view type_name = "BotComboMoveReferenceIndex";
+		constexpr static rivet::rivet_type_id type_id = 0xf558fd84;
 
-		constexpr const static std::string_view Index_type_name = "Index";
-		constexpr const static rivet::rivet_type_id Index_type_id = 0x9920abc0; 
+		constexpr static std::string_view Index_type_name = "Index";
+		constexpr static rivet::rivet_type_id Index_type_id = 0x9920abc0; 
 
 		explicit BotComboMoveReferenceIndex() = default;
 		explicit BotComboMoveReferenceIndex([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

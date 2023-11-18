@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct BarrelObstructionBase; 
 
 	struct RIVET_DDL_SHARED WeaponObstructionSingle : WeaponObstructionBase {
-		constexpr const static std::string_view type_name = "WeaponObstructionSingle";
-		constexpr const static rivet::rivet_type_id type_id = 0x1c7d7bba;
+		constexpr static std::string_view type_name = "WeaponObstructionSingle";
+		constexpr static rivet::rivet_type_id type_id = 0x1c7d7bba;
 
-		constexpr const static std::string_view Weapon_type_name = "Weapon";
-		constexpr const static rivet::rivet_type_id Weapon_type_id = 0x574be981; 
+		constexpr static std::string_view Weapon_type_name = "Weapon";
+		constexpr static rivet::rivet_type_id Weapon_type_id = 0x574be981; 
 
 		explicit WeaponObstructionSingle() = default;
 		explicit WeaponObstructionSingle([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

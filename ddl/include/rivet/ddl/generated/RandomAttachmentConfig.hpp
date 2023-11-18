@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct RandomAttachment; 
 
 	struct RIVET_DDL_SHARED RandomAttachmentConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "RandomAttachmentConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x6a7d6586;
+		constexpr static std::string_view type_name = "RandomAttachmentConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x6a7d6586;
 
-		constexpr const static std::string_view Attachments_type_name = "Attachments";
-		constexpr const static rivet::rivet_type_id Attachments_type_id = 0xca18ab0d; 
+		constexpr static std::string_view Attachments_type_name = "Attachments";
+		constexpr static rivet::rivet_type_id Attachments_type_id = 0xca18ab0d; 
 
 		explicit RandomAttachmentConfig() = default;
 		explicit RandomAttachmentConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view AmbientShadowType_type_name = "AmbientShadowType";
-	constexpr const static rivet::rivet_type_id AmbientShadowType_type_id = 0x792f84a6;
+	constexpr static std::string_view AmbientShadowType_type_name = "AmbientShadowType";
+	constexpr static rivet::rivet_type_id AmbientShadowType_type_id = 0x792f84a6;
 
-	constexpr const static std::array<std::string_view, 4> AmbientShadowType_values = {
+	constexpr static std::array<std::string_view, 4> AmbientShadowType_values = {
 		"kNone",
 		"kPedestrian",
 		"kPlayer",

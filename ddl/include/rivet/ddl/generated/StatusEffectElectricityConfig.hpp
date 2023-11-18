@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED StatusEffectElectricityConfig : StatusEffectConfig {
-		constexpr const static std::string_view type_name = "StatusEffectElectricityConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x8898769d;
+		constexpr static std::string_view type_name = "StatusEffectElectricityConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x8898769d;
 
 		explicit StatusEffectElectricityConfig() = default;
 		explicit StatusEffectElectricityConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

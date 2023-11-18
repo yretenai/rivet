@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ConversationCommunicatorHUDPrius : ConversationCommunicatorBasePrius {
-		constexpr const static std::string_view type_name = "ConversationCommunicatorHUDPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x9402e79;
+		constexpr static std::string_view type_name = "ConversationCommunicatorHUDPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x9402e79;
 
-		constexpr const static std::string_view SpeakerTexture_type_name = "SpeakerTexture";
-		constexpr const static rivet::rivet_type_id SpeakerTexture_type_id = 0x8f837688;
-		constexpr const static std::string_view SpeakerNameLocTag_type_name = "SpeakerNameLocTag";
-		constexpr const static rivet::rivet_type_id SpeakerNameLocTag_type_id = 0x208bdcbe; 
+		constexpr static std::string_view SpeakerTexture_type_name = "SpeakerTexture";
+		constexpr static rivet::rivet_type_id SpeakerTexture_type_id = 0x8f837688;
+		constexpr static std::string_view SpeakerNameLocTag_type_name = "SpeakerNameLocTag";
+		constexpr static rivet::rivet_type_id SpeakerNameLocTag_type_id = 0x208bdcbe; 
 
 		explicit ConversationCommunicatorHUDPrius() = default;
 		explicit ConversationCommunicatorHUDPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

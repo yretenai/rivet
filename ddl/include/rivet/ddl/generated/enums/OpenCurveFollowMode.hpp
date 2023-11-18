@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view OpenCurveFollowMode_type_name = "OpenCurveFollowMode";
-	constexpr const static rivet::rivet_type_id OpenCurveFollowMode_type_id = 0xc850698f;
+	constexpr static std::string_view OpenCurveFollowMode_type_name = "OpenCurveFollowMode";
+	constexpr static rivet::rivet_type_id OpenCurveFollowMode_type_id = 0xc850698f;
 
-	constexpr const static std::array<std::string_view, 3> OpenCurveFollowMode_values = {
+	constexpr static std::array<std::string_view, 3> OpenCurveFollowMode_values = {
 		"kLoop",
 		"kOscillate",
 		"kOneShot", 

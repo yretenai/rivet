@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct DDLVector2; 
 
 	struct RIVET_DDL_SHARED POIAttributeEdgeModeRing : POIAttributeEdgeModeBase {
-		constexpr const static std::string_view type_name = "POIAttributeEdgeModeRing";
-		constexpr const static rivet::rivet_type_id type_id = 0x4373553b;
+		constexpr static std::string_view type_name = "POIAttributeEdgeModeRing";
+		constexpr static rivet::rivet_type_id type_id = 0x4373553b;
 
-		constexpr const static std::string_view RingRadius_type_name = "RingRadius";
-		constexpr const static rivet::rivet_type_id RingRadius_type_id = 0x3ca25e38; 
+		constexpr static std::string_view RingRadius_type_name = "RingRadius";
+		constexpr static rivet::rivet_type_id RingRadius_type_id = 0x3ca25e38; 
 
 		explicit POIAttributeEdgeModeRing() = default;
 		explicit POIAttributeEdgeModeRing([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

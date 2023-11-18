@@ -21,15 +21,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ShieldWithHealthPrius : DamageModifierIncomingPrius {
-		constexpr const static std::string_view type_name = "ShieldWithHealthPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xa9a4e9f6;
+		constexpr static std::string_view type_name = "ShieldWithHealthPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xa9a4e9f6;
 
-		constexpr const static std::string_view ShieldHealth_type_name = "ShieldHealth";
-		constexpr const static rivet::rivet_type_id ShieldHealth_type_id = 0xba976b43;
-		constexpr const static std::string_view PercentDamageMitigation_type_name = "PercentDamageMitigation";
-		constexpr const static rivet::rivet_type_id PercentDamageMitigation_type_id = 0xd3071983;
-		constexpr const static std::string_view MaterialID_type_name = "MaterialID";
-		constexpr const static rivet::rivet_type_id MaterialID_type_id = 0xe6bcba51; 
+		constexpr static std::string_view ShieldHealth_type_name = "ShieldHealth";
+		constexpr static rivet::rivet_type_id ShieldHealth_type_id = 0xba976b43;
+		constexpr static std::string_view PercentDamageMitigation_type_name = "PercentDamageMitigation";
+		constexpr static rivet::rivet_type_id PercentDamageMitigation_type_id = 0xd3071983;
+		constexpr static std::string_view MaterialID_type_name = "MaterialID";
+		constexpr static rivet::rivet_type_id MaterialID_type_id = 0xe6bcba51; 
 
 		explicit ShieldWithHealthPrius() = default;
 		explicit ShieldWithHealthPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct DDLVector3; 
 
 	struct RIVET_DDL_SHARED WeakspotRadiusBasedPrius : WeakspotPrius {
-		constexpr const static std::string_view type_name = "WeakspotRadiusBasedPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xc012b844;
+		constexpr static std::string_view type_name = "WeakspotRadiusBasedPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xc012b844;
 
-		constexpr const static std::string_view LocalJointOffset_type_name = "LocalJointOffset";
-		constexpr const static rivet::rivet_type_id LocalJointOffset_type_id = 0xfd0ee199; 
+		constexpr static std::string_view LocalJointOffset_type_name = "LocalJointOffset";
+		constexpr static rivet::rivet_type_id LocalJointOffset_type_id = 0xfd0ee199; 
 
 		explicit WeakspotRadiusBasedPrius() = default;
 		explicit WeakspotRadiusBasedPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct UIFontMapping; 
 
 	struct RIVET_DDL_SHARED UIFontMapConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "UIFontMapConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x9b28598;
+		constexpr static std::string_view type_name = "UIFontMapConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x9b28598;
 
-		constexpr const static std::string_view FontMappings_type_name = "FontMappings";
-		constexpr const static rivet::rivet_type_id FontMappings_type_id = 0x54070dc5; 
+		constexpr static std::string_view FontMappings_type_name = "FontMappings";
+		constexpr static rivet::rivet_type_id FontMappings_type_id = 0x54070dc5; 
 
 		explicit UIFontMapConfig() = default;
 		explicit UIFontMapConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

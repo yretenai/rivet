@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct ModelSplineDescriptionDef; 
 
 	struct RIVET_DDL_SHARED ModelSplineConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "ModelSplineConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xf29a3b97;
+		constexpr static std::string_view type_name = "ModelSplineConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xf29a3b97;
 
-		constexpr const static std::string_view SplineDescription_type_name = "SplineDescription";
-		constexpr const static rivet::rivet_type_id SplineDescription_type_id = 0x89dbdd10; 
+		constexpr static std::string_view SplineDescription_type_name = "SplineDescription";
+		constexpr static rivet::rivet_type_id SplineDescription_type_id = 0x89dbdd10; 
 
 		explicit ModelSplineConfig() = default;
 		explicit ModelSplineConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

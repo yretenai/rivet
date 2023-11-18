@@ -18,29 +18,29 @@
 #include <rivet/structures/rivet_serialization.hpp>
 
 namespace rivet::ddl::generated {
-	struct AimAssistDistanceModifier;
-	struct AimAssistRelativeSpeedModifier;
-	struct AimAssistTurnMatchModifier;
-	struct AimAssistMoveTurnModifier;
 	struct AimAssistMultiTargetModifier;
-	struct AimAssistTraversalModifier; 
+	struct AimAssistMoveTurnModifier;
+	struct AimAssistRelativeSpeedModifier;
+	struct AimAssistTraversalModifier;
+	struct AimAssistTurnMatchModifier;
+	struct AimAssistDistanceModifier; 
 
 	struct RIVET_DDL_SHARED AimAssistFactorModifiers : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "AimAssistFactorModifiers";
-		constexpr const static rivet::rivet_type_id type_id = 0x3533a587;
+		constexpr static std::string_view type_name = "AimAssistFactorModifiers";
+		constexpr static rivet::rivet_type_id type_id = 0x3533a587;
 
-		constexpr const static std::string_view DistanceMod_type_name = "DistanceMod";
-		constexpr const static rivet::rivet_type_id DistanceMod_type_id = 0xd73da520;
-		constexpr const static std::string_view SpeedMod_type_name = "SpeedMod";
-		constexpr const static rivet::rivet_type_id SpeedMod_type_id = 0x3cc3ee7b;
-		constexpr const static std::string_view MoveTurnMod_type_name = "MoveTurnMod";
-		constexpr const static rivet::rivet_type_id MoveTurnMod_type_id = 0x4223de86;
-		constexpr const static std::string_view TurnMatchMod_type_name = "TurnMatchMod";
-		constexpr const static rivet::rivet_type_id TurnMatchMod_type_id = 0x896d7437;
-		constexpr const static std::string_view ManyTargetMod_type_name = "ManyTargetMod";
-		constexpr const static rivet::rivet_type_id ManyTargetMod_type_id = 0xfa5560cf;
-		constexpr const static std::string_view TraversalMod_type_name = "TraversalMod";
-		constexpr const static rivet::rivet_type_id TraversalMod_type_id = 0xefd5b009; 
+		constexpr static std::string_view DistanceMod_type_name = "DistanceMod";
+		constexpr static rivet::rivet_type_id DistanceMod_type_id = 0xd73da520;
+		constexpr static std::string_view SpeedMod_type_name = "SpeedMod";
+		constexpr static rivet::rivet_type_id SpeedMod_type_id = 0x3cc3ee7b;
+		constexpr static std::string_view MoveTurnMod_type_name = "MoveTurnMod";
+		constexpr static rivet::rivet_type_id MoveTurnMod_type_id = 0x4223de86;
+		constexpr static std::string_view TurnMatchMod_type_name = "TurnMatchMod";
+		constexpr static rivet::rivet_type_id TurnMatchMod_type_id = 0x896d7437;
+		constexpr static std::string_view ManyTargetMod_type_name = "ManyTargetMod";
+		constexpr static rivet::rivet_type_id ManyTargetMod_type_id = 0xfa5560cf;
+		constexpr static std::string_view TraversalMod_type_name = "TraversalMod";
+		constexpr static rivet::rivet_type_id TraversalMod_type_id = 0xefd5b009; 
 
 		explicit AimAssistFactorModifiers() = default;
 		explicit AimAssistFactorModifiers([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

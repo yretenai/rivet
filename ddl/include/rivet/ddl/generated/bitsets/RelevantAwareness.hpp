@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view RelevantAwareness_type_name = "RelevantAwareness";
-	constexpr const static rivet::rivet_type_id RelevantAwareness_type_id = 0x2575d3dc;
+	constexpr static std::string_view RelevantAwareness_type_name = "RelevantAwareness";
+	constexpr static rivet::rivet_type_id RelevantAwareness_type_id = 0x2575d3dc;
 
-	constexpr const static std::array<std::tuple<std::string_view, uint64_t>, 3> RelevantAwareness_values = {
+	constexpr static std::array<std::tuple<std::string_view, uint64_t>, 3> RelevantAwareness_values = {
 		std::make_tuple("Passive", 0x1),
 		std::make_tuple("Searching", 0x2),
 		std::make_tuple("Engaged", 0x4), 

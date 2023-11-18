@@ -19,13 +19,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ProximitySpawnInfo : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "ProximitySpawnInfo";
-		constexpr const static rivet::rivet_type_id type_id = 0xea555bab;
+		constexpr static std::string_view type_name = "ProximitySpawnInfo";
+		constexpr static rivet::rivet_type_id type_id = 0xea555bab;
 
-		constexpr const static std::string_view MaxAlive_type_name = "MaxAlive";
-		constexpr const static rivet::rivet_type_id MaxAlive_type_id = 0x9a59dc4;
-		constexpr const static std::string_view ActorType_type_name = "ActorType";
-		constexpr const static rivet::rivet_type_id ActorType_type_id = 0x1eb7640e; 
+		constexpr static std::string_view MaxAlive_type_name = "MaxAlive";
+		constexpr static rivet::rivet_type_id MaxAlive_type_id = 0x9a59dc4;
+		constexpr static std::string_view ActorType_type_name = "ActorType";
+		constexpr static rivet::rivet_type_id ActorType_type_id = 0x1eb7640e; 
 
 		explicit ProximitySpawnInfo() = default;
 		explicit ProximitySpawnInfo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

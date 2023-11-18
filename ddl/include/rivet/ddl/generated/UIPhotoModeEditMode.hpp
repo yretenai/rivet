@@ -21,15 +21,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED UIPhotoModeEditMode : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "UIPhotoModeEditMode";
-		constexpr const static rivet::rivet_type_id type_id = 0xd851659;
+		constexpr static std::string_view type_name = "UIPhotoModeEditMode";
+		constexpr static rivet::rivet_type_id type_id = 0xd851659;
 
-		constexpr const static std::string_view EditModeType_type_name = "EditModeType";
-		constexpr const static rivet::rivet_type_id EditModeType_type_id = 0x6863c464;
-		constexpr const static std::string_view Name_type_name = "Name";
-		constexpr const static rivet::rivet_type_id Name_type_id = 0x6eb3beb6;
-		constexpr const static std::string_view Icon_type_name = "Icon";
-		constexpr const static rivet::rivet_type_id Icon_type_id = 0x5504e96b; 
+		constexpr static std::string_view EditModeType_type_name = "EditModeType";
+		constexpr static rivet::rivet_type_id EditModeType_type_id = 0x6863c464;
+		constexpr static std::string_view Name_type_name = "Name";
+		constexpr static rivet::rivet_type_id Name_type_id = 0x6eb3beb6;
+		constexpr static std::string_view Icon_type_name = "Icon";
+		constexpr static rivet::rivet_type_id Icon_type_id = 0x5504e96b; 
 
 		explicit UIPhotoModeEditMode() = default;
 		explicit UIPhotoModeEditMode([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

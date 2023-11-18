@@ -21,31 +21,31 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED AimModMissTargetGamePrius : AimModifierPrius {
-		constexpr const static std::string_view type_name = "AimModMissTargetGamePrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xf53b8822;
+		constexpr static std::string_view type_name = "AimModMissTargetGamePrius";
+		constexpr static rivet::rivet_type_id type_id = 0xf53b8822;
 
-		constexpr const static std::string_view MissOffsetXZMin_type_name = "MissOffsetXZMin";
-		constexpr const static rivet::rivet_type_id MissOffsetXZMin_type_id = 0xb1fe59a;
-		constexpr const static std::string_view MissOffsetXZMax_type_name = "MissOffsetXZMax";
-		constexpr const static rivet::rivet_type_id MissOffsetXZMax_type_id = 0x3712dac3;
-		constexpr const static std::string_view MissOffsetYMin_type_name = "MissOffsetYMin";
-		constexpr const static rivet::rivet_type_id MissOffsetYMin_type_id = 0xa631d34;
-		constexpr const static std::string_view MissOffsetYMax_type_name = "MissOffsetYMax";
-		constexpr const static rivet::rivet_type_id MissOffsetYMax_type_id = 0x366e226d;
-		constexpr const static std::string_view MissOffsetXZMinFromScreen_type_name = "MissOffsetXZMinFromScreen";
-		constexpr const static rivet::rivet_type_id MissOffsetXZMinFromScreen_type_id = 0xc6cd6dda;
-		constexpr const static std::string_view MissOffsetXZMaxFromScreen_type_name = "MissOffsetXZMaxFromScreen";
-		constexpr const static rivet::rivet_type_id MissOffsetXZMaxFromScreen_type_id = 0x868215ac;
-		constexpr const static std::string_view MissWhenOffScreen_type_name = "MissWhenOffScreen";
-		constexpr const static rivet::rivet_type_id MissWhenOffScreen_type_id = 0xa6677983;
-		constexpr const static std::string_view AttacksUntilAccurate_OffScreen_type_name = "AttacksUntilAccurate_OffScreen";
-		constexpr const static rivet::rivet_type_id AttacksUntilAccurate_OffScreen_type_id = 0x9ba01fb;
-		constexpr const static std::string_view MissAtRange_type_name = "MissAtRange";
-		constexpr const static rivet::rivet_type_id MissAtRange_type_id = 0x5db3ce9b;
-		constexpr const static std::string_view MissRange_type_name = "MissRange";
-		constexpr const static rivet::rivet_type_id MissRange_type_id = 0xc22e6148;
-		constexpr const static std::string_view AttacksUntilAccurate_Range_type_name = "AttacksUntilAccurate_Range";
-		constexpr const static rivet::rivet_type_id AttacksUntilAccurate_Range_type_id = 0x95b53851; 
+		constexpr static std::string_view MissOffsetXZMin_type_name = "MissOffsetXZMin";
+		constexpr static rivet::rivet_type_id MissOffsetXZMin_type_id = 0xb1fe59a;
+		constexpr static std::string_view MissOffsetXZMax_type_name = "MissOffsetXZMax";
+		constexpr static rivet::rivet_type_id MissOffsetXZMax_type_id = 0x3712dac3;
+		constexpr static std::string_view MissOffsetYMin_type_name = "MissOffsetYMin";
+		constexpr static rivet::rivet_type_id MissOffsetYMin_type_id = 0xa631d34;
+		constexpr static std::string_view MissOffsetYMax_type_name = "MissOffsetYMax";
+		constexpr static rivet::rivet_type_id MissOffsetYMax_type_id = 0x366e226d;
+		constexpr static std::string_view MissOffsetXZMinFromScreen_type_name = "MissOffsetXZMinFromScreen";
+		constexpr static rivet::rivet_type_id MissOffsetXZMinFromScreen_type_id = 0xc6cd6dda;
+		constexpr static std::string_view MissOffsetXZMaxFromScreen_type_name = "MissOffsetXZMaxFromScreen";
+		constexpr static rivet::rivet_type_id MissOffsetXZMaxFromScreen_type_id = 0x868215ac;
+		constexpr static std::string_view MissWhenOffScreen_type_name = "MissWhenOffScreen";
+		constexpr static rivet::rivet_type_id MissWhenOffScreen_type_id = 0xa6677983;
+		constexpr static std::string_view AttacksUntilAccurate_OffScreen_type_name = "AttacksUntilAccurate_OffScreen";
+		constexpr static rivet::rivet_type_id AttacksUntilAccurate_OffScreen_type_id = 0x9ba01fb;
+		constexpr static std::string_view MissAtRange_type_name = "MissAtRange";
+		constexpr static rivet::rivet_type_id MissAtRange_type_id = 0x5db3ce9b;
+		constexpr static std::string_view MissRange_type_name = "MissRange";
+		constexpr static rivet::rivet_type_id MissRange_type_id = 0xc22e6148;
+		constexpr static std::string_view AttacksUntilAccurate_Range_type_name = "AttacksUntilAccurate_Range";
+		constexpr static rivet::rivet_type_id AttacksUntilAccurate_Range_type_id = 0x95b53851; 
 
 		explicit AimModMissTargetGamePrius() = default;
 		explicit AimModMissTargetGamePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

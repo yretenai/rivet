@@ -19,15 +19,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED WarshipFiringRangeDiffValue : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "WarshipFiringRangeDiffValue";
-		constexpr const static rivet::rivet_type_id type_id = 0x47c244b3;
+		constexpr static std::string_view type_name = "WarshipFiringRangeDiffValue";
+		constexpr static rivet::rivet_type_id type_id = 0x47c244b3;
 
-		constexpr const static std::string_view RangeEasy_type_name = "RangeEasy";
-		constexpr const static rivet::rivet_type_id RangeEasy_type_id = 0xf15eda06;
-		constexpr const static std::string_view RangeNormal_type_name = "RangeNormal";
-		constexpr const static rivet::rivet_type_id RangeNormal_type_id = 0x7eda38ec;
-		constexpr const static std::string_view RangeHard_type_name = "RangeHard";
-		constexpr const static rivet::rivet_type_id RangeHard_type_id = 0x79295f43; 
+		constexpr static std::string_view RangeEasy_type_name = "RangeEasy";
+		constexpr static rivet::rivet_type_id RangeEasy_type_id = 0xf15eda06;
+		constexpr static std::string_view RangeNormal_type_name = "RangeNormal";
+		constexpr static rivet::rivet_type_id RangeNormal_type_id = 0x7eda38ec;
+		constexpr static std::string_view RangeHard_type_name = "RangeHard";
+		constexpr static rivet::rivet_type_id RangeHard_type_id = 0x79295f43; 
 
 		explicit WarshipFiringRangeDiffValue() = default;
 		explicit WarshipFiringRangeDiffValue([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

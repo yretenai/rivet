@@ -19,21 +19,21 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED PhysicsMotionPropertiesParam : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "PhysicsMotionPropertiesParam";
-		constexpr const static rivet::rivet_type_id type_id = 0xb969677a;
+		constexpr static std::string_view type_name = "PhysicsMotionPropertiesParam";
+		constexpr static rivet::rivet_type_id type_id = 0xb969677a;
 
-		constexpr const static std::string_view UseAggressiveRagdollSettling_type_name = "UseAggressiveRagdollSettling";
-		constexpr const static rivet::rivet_type_id UseAggressiveRagdollSettling_type_id = 0x3dd00e5b;
-		constexpr const static std::string_view GravityFactor_type_name = "GravityFactor";
-		constexpr const static rivet::rivet_type_id GravityFactor_type_id = 0x1b8daea5;
-		constexpr const static std::string_view MaxLinearSpeed_type_name = "MaxLinearSpeed";
-		constexpr const static rivet::rivet_type_id MaxLinearSpeed_type_id = 0xd7031ecf;
-		constexpr const static std::string_view MaxAngularSpeed_type_name = "MaxAngularSpeed";
-		constexpr const static rivet::rivet_type_id MaxAngularSpeed_type_id = 0x5fec8281;
-		constexpr const static std::string_view LinearDamping_type_name = "LinearDamping";
-		constexpr const static rivet::rivet_type_id LinearDamping_type_id = 0x97613ca3;
-		constexpr const static std::string_view AngularDamping_type_name = "AngularDamping";
-		constexpr const static rivet::rivet_type_id AngularDamping_type_id = 0xcdf27098; 
+		constexpr static std::string_view UseAggressiveRagdollSettling_type_name = "UseAggressiveRagdollSettling";
+		constexpr static rivet::rivet_type_id UseAggressiveRagdollSettling_type_id = 0x3dd00e5b;
+		constexpr static std::string_view GravityFactor_type_name = "GravityFactor";
+		constexpr static rivet::rivet_type_id GravityFactor_type_id = 0x1b8daea5;
+		constexpr static std::string_view MaxLinearSpeed_type_name = "MaxLinearSpeed";
+		constexpr static rivet::rivet_type_id MaxLinearSpeed_type_id = 0xd7031ecf;
+		constexpr static std::string_view MaxAngularSpeed_type_name = "MaxAngularSpeed";
+		constexpr static rivet::rivet_type_id MaxAngularSpeed_type_id = 0x5fec8281;
+		constexpr static std::string_view LinearDamping_type_name = "LinearDamping";
+		constexpr static rivet::rivet_type_id LinearDamping_type_id = 0x97613ca3;
+		constexpr static std::string_view AngularDamping_type_name = "AngularDamping";
+		constexpr static rivet::rivet_type_id AngularDamping_type_id = 0xcdf27098; 
 
 		explicit PhysicsMotionPropertiesParam() = default;
 		explicit PhysicsMotionPropertiesParam([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

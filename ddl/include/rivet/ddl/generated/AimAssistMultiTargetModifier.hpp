@@ -19,21 +19,21 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED AimAssistMultiTargetModifier : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "AimAssistMultiTargetModifier";
-		constexpr const static rivet::rivet_type_id type_id = 0x30050cc0;
+		constexpr static std::string_view type_name = "AimAssistMultiTargetModifier";
+		constexpr static rivet::rivet_type_id type_id = 0x30050cc0;
 
-		constexpr const static std::string_view Enable_type_name = "Enable";
-		constexpr const static rivet::rivet_type_id Enable_type_id = 0xcdd88655;
-		constexpr const static std::string_view MinTargets_type_name = "MinTargets";
-		constexpr const static rivet::rivet_type_id MinTargets_type_id = 0xd496c408;
-		constexpr const static std::string_view ManyTargetCount_type_name = "ManyTargetCount";
-		constexpr const static rivet::rivet_type_id ManyTargetCount_type_id = 0xf12d4a6;
-		constexpr const static std::string_view FrictionMod_type_name = "FrictionMod";
-		constexpr const static rivet::rivet_type_id FrictionMod_type_id = 0x259d7ff2;
-		constexpr const static std::string_view MagnetMod_type_name = "MagnetMod";
-		constexpr const static rivet::rivet_type_id MagnetMod_type_id = 0xcc015279;
-		constexpr const static std::string_view CenterMod_type_name = "CenterMod";
-		constexpr const static rivet::rivet_type_id CenterMod_type_id = 0x9237bce3; 
+		constexpr static std::string_view Enable_type_name = "Enable";
+		constexpr static rivet::rivet_type_id Enable_type_id = 0xcdd88655;
+		constexpr static std::string_view MinTargets_type_name = "MinTargets";
+		constexpr static rivet::rivet_type_id MinTargets_type_id = 0xd496c408;
+		constexpr static std::string_view ManyTargetCount_type_name = "ManyTargetCount";
+		constexpr static rivet::rivet_type_id ManyTargetCount_type_id = 0xf12d4a6;
+		constexpr static std::string_view FrictionMod_type_name = "FrictionMod";
+		constexpr static rivet::rivet_type_id FrictionMod_type_id = 0x259d7ff2;
+		constexpr static std::string_view MagnetMod_type_name = "MagnetMod";
+		constexpr static rivet::rivet_type_id MagnetMod_type_id = 0xcc015279;
+		constexpr static std::string_view CenterMod_type_name = "CenterMod";
+		constexpr static rivet::rivet_type_id CenterMod_type_id = 0x9237bce3; 
 
 		explicit AimAssistMultiTargetModifier() = default;
 		explicit AimAssistMultiTargetModifier([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

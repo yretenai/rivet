@@ -3,10 +3,10 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/VelocityFromTrajectory.hpp>
+#include <rivet/ddl/generated/VelocityFromTarget.hpp>
 #include <rivet/ddl/generated/VelocityFromEmit.hpp>
 #include <rivet/ddl/generated/VelocityFromHeightAndSpeed.hpp>
-#include <rivet/ddl/generated/VelocityFromTarget.hpp> 
+#include <rivet/ddl/generated/VelocityFromTrajectory.hpp> 
 
 #include <rivet/ddl/generated/GrenadeVelocityMode.hpp>
 

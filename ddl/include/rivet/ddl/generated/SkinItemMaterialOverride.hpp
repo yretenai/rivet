@@ -21,17 +21,17 @@ namespace rivet::ddl::generated {
 	struct AssetReferenceDef; 
 
 	struct RIVET_DDL_SHARED SkinItemMaterialOverride : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "SkinItemMaterialOverride";
-		constexpr const static rivet::rivet_type_id type_id = 0xfa073729;
+		constexpr static std::string_view type_name = "SkinItemMaterialOverride";
+		constexpr static rivet::rivet_type_id type_id = 0xfa073729;
 
-		constexpr const static std::string_view OriginalMaterial_type_name = "OriginalMaterial";
-		constexpr const static rivet::rivet_type_id OriginalMaterial_type_id = 0x3608a389;
-		constexpr const static std::string_view OverrideMaterial_type_name = "OverrideMaterial";
-		constexpr const static rivet::rivet_type_id OverrideMaterial_type_id = 0x21926360;
-		constexpr const static std::string_view SecondaryOriginalMaterial_type_name = "SecondaryOriginalMaterial";
-		constexpr const static rivet::rivet_type_id SecondaryOriginalMaterial_type_id = 0x73e10018;
-		constexpr const static std::string_view SecondaryOverrideMaterial_type_name = "SecondaryOverrideMaterial";
-		constexpr const static rivet::rivet_type_id SecondaryOverrideMaterial_type_id = 0x647bc0f1; 
+		constexpr static std::string_view OriginalMaterial_type_name = "OriginalMaterial";
+		constexpr static rivet::rivet_type_id OriginalMaterial_type_id = 0x3608a389;
+		constexpr static std::string_view OverrideMaterial_type_name = "OverrideMaterial";
+		constexpr static rivet::rivet_type_id OverrideMaterial_type_id = 0x21926360;
+		constexpr static std::string_view SecondaryOriginalMaterial_type_name = "SecondaryOriginalMaterial";
+		constexpr static rivet::rivet_type_id SecondaryOriginalMaterial_type_id = 0x73e10018;
+		constexpr static std::string_view SecondaryOverrideMaterial_type_name = "SecondaryOverrideMaterial";
+		constexpr static rivet::rivet_type_id SecondaryOverrideMaterial_type_id = 0x647bc0f1; 
 
 		explicit SkinItemMaterialOverride() = default;
 		explicit SkinItemMaterialOverride([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

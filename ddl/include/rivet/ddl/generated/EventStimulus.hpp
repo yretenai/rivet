@@ -17,35 +17,37 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/enums/xbd2e617d.hpp>
-#include <rivet/ddl/generated/bitsets/RelevantAwareness.hpp> 
+#include <rivet/ddl/generated/bitsets/RelevantAwareness.hpp>
+#include <rivet/ddl/generated/enums/xbd2e617d.hpp> 
 
 namespace rivet::ddl::generated {
-	struct RIVET_DDL_SHARED EventStimulus : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "EventStimulus";
-		constexpr const static rivet::rivet_type_id type_id = 0xa0fb5782;
+	struct EventBase; 
 
-		constexpr const static std::string_view Event_type_name = "Event";
-		constexpr const static rivet::rivet_type_id Event_type_id = 0x22fdc666;
-		constexpr const static std::string_view BonusConfirmTime_type_name = "BonusConfirmTime";
-		constexpr const static rivet::rivet_type_id BonusConfirmTime_type_id = 0x8c4af54b;
-		constexpr const static std::string_view NewMinTargetAwareness_type_name = "NewMinTargetAwareness";
-		constexpr const static rivet::rivet_type_id NewMinTargetAwareness_type_id = 0x5c01be78;
-		constexpr const static std::string_view Aggro_type_name = "Aggro";
-		constexpr const static rivet::rivet_type_id Aggro_type_id = 0x504e1083;
-		constexpr const static std::string_view ListenRadius_type_name = "ListenRadius";
-		constexpr const static rivet::rivet_type_id ListenRadius_type_id = 0xc03b8831;
-		constexpr const static std::string_view StealTargetFromFriendlySender_type_name = "StealTargetFromFriendlySender";
-		constexpr const static rivet::rivet_type_id StealTargetFromFriendlySender_type_id = 0x96d5cd23;
-		constexpr const static std::string_view StealthDamage_type_name = "StealthDamage";
-		constexpr const static rivet::rivet_type_id StealthDamage_type_id = 0x826b4443;
-		constexpr const static std::string_view RelevantAwareness_type_name = "RelevantAwareness";
-		constexpr const static rivet::rivet_type_id RelevantAwareness_type_id = 0x2575d3dc; 
+	struct RIVET_DDL_SHARED EventStimulus : rivet::structures::rivet_ddl_base {
+		constexpr static std::string_view type_name = "EventStimulus";
+		constexpr static rivet::rivet_type_id type_id = 0xa0fb5782;
+
+		constexpr static std::string_view Event_type_name = "Event";
+		constexpr static rivet::rivet_type_id Event_type_id = 0x22fdc666;
+		constexpr static std::string_view BonusConfirmTime_type_name = "BonusConfirmTime";
+		constexpr static rivet::rivet_type_id BonusConfirmTime_type_id = 0x8c4af54b;
+		constexpr static std::string_view NewMinTargetAwareness_type_name = "NewMinTargetAwareness";
+		constexpr static rivet::rivet_type_id NewMinTargetAwareness_type_id = 0x5c01be78;
+		constexpr static std::string_view Aggro_type_name = "Aggro";
+		constexpr static rivet::rivet_type_id Aggro_type_id = 0x504e1083;
+		constexpr static std::string_view ListenRadius_type_name = "ListenRadius";
+		constexpr static rivet::rivet_type_id ListenRadius_type_id = 0xc03b8831;
+		constexpr static std::string_view StealTargetFromFriendlySender_type_name = "StealTargetFromFriendlySender";
+		constexpr static rivet::rivet_type_id StealTargetFromFriendlySender_type_id = 0x96d5cd23;
+		constexpr static std::string_view StealthDamage_type_name = "StealthDamage";
+		constexpr static rivet::rivet_type_id StealthDamage_type_id = 0x826b4443;
+		constexpr static std::string_view RelevantAwareness_type_name = "RelevantAwareness";
+		constexpr static rivet::rivet_type_id RelevantAwareness_type_id = 0x2575d3dc; 
 
 		explicit EventStimulus() = default;
 		explicit EventStimulus([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);
 
-		std::optional<std::vector<rivet::structures::rivet_serialized_value>> Event {};
+		std::shared_ptr<rivet::ddl::generated::EventBase> Event {};
 		float BonusConfirmTime {};
 		rivet::ddl::generated::xbd2e617d NewMinTargetAwareness {};
 		float Aggro {};

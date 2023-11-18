@@ -21,29 +21,29 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ShootAtCurveFollowTarget : ShootAtMortarFiringStyle {
-		constexpr const static std::string_view type_name = "ShootAtCurveFollowTarget";
-		constexpr const static rivet::rivet_type_id type_id = 0x7ad40106;
+		constexpr static std::string_view type_name = "ShootAtCurveFollowTarget";
+		constexpr static rivet::rivet_type_id type_id = 0x7ad40106;
 
-		constexpr const static std::string_view InitFollowSpeed_type_name = "InitFollowSpeed";
-		constexpr const static rivet::rivet_type_id InitFollowSpeed_type_id = 0x49065dfd;
-		constexpr const static std::string_view MaxFollowSpeed_type_name = "MaxFollowSpeed";
-		constexpr const static rivet::rivet_type_id MaxFollowSpeed_type_id = 0x9f9ef4f;
-		constexpr const static std::string_view FollowAccel_type_name = "FollowAccel";
-		constexpr const static rivet::rivet_type_id FollowAccel_type_id = 0x7203cb7c;
-		constexpr const static std::string_view FollowDecel_type_name = "FollowDecel";
-		constexpr const static rivet::rivet_type_id FollowDecel_type_id = 0x9f881bd0;
-		constexpr const static std::string_view FollowWhileFiring_type_name = "FollowWhileFiring";
-		constexpr const static rivet::rivet_type_id FollowWhileFiring_type_id = 0xe504f09e;
-		constexpr const static std::string_view OrientTowardsTarget_type_name = "OrientTowardsTarget";
-		constexpr const static rivet::rivet_type_id OrientTowardsTarget_type_id = 0x79a3a5e6;
-		constexpr const static std::string_view PredictTargetPos_type_name = "PredictTargetPos";
-		constexpr const static rivet::rivet_type_id PredictTargetPos_type_id = 0x36f74268;
-		constexpr const static std::string_view MaxPredictSpeed_type_name = "MaxPredictSpeed";
-		constexpr const static rivet::rivet_type_id MaxPredictSpeed_type_id = 0xdad50f41;
-		constexpr const static std::string_view ExpectedMortarTime_type_name = "ExpectedMortarTime";
-		constexpr const static rivet::rivet_type_id ExpectedMortarTime_type_id = 0x8284658e;
-		constexpr const static std::string_view ClampToCombatArea_type_name = "ClampToCombatArea";
-		constexpr const static rivet::rivet_type_id ClampToCombatArea_type_id = 0x801b5504; 
+		constexpr static std::string_view InitFollowSpeed_type_name = "InitFollowSpeed";
+		constexpr static rivet::rivet_type_id InitFollowSpeed_type_id = 0x49065dfd;
+		constexpr static std::string_view MaxFollowSpeed_type_name = "MaxFollowSpeed";
+		constexpr static rivet::rivet_type_id MaxFollowSpeed_type_id = 0x9f9ef4f;
+		constexpr static std::string_view FollowAccel_type_name = "FollowAccel";
+		constexpr static rivet::rivet_type_id FollowAccel_type_id = 0x7203cb7c;
+		constexpr static std::string_view FollowDecel_type_name = "FollowDecel";
+		constexpr static rivet::rivet_type_id FollowDecel_type_id = 0x9f881bd0;
+		constexpr static std::string_view FollowWhileFiring_type_name = "FollowWhileFiring";
+		constexpr static rivet::rivet_type_id FollowWhileFiring_type_id = 0xe504f09e;
+		constexpr static std::string_view OrientTowardsTarget_type_name = "OrientTowardsTarget";
+		constexpr static rivet::rivet_type_id OrientTowardsTarget_type_id = 0x79a3a5e6;
+		constexpr static std::string_view PredictTargetPos_type_name = "PredictTargetPos";
+		constexpr static rivet::rivet_type_id PredictTargetPos_type_id = 0x36f74268;
+		constexpr static std::string_view MaxPredictSpeed_type_name = "MaxPredictSpeed";
+		constexpr static rivet::rivet_type_id MaxPredictSpeed_type_id = 0xdad50f41;
+		constexpr static std::string_view ExpectedMortarTime_type_name = "ExpectedMortarTime";
+		constexpr static rivet::rivet_type_id ExpectedMortarTime_type_id = 0x8284658e;
+		constexpr static std::string_view ClampToCombatArea_type_name = "ClampToCombatArea";
+		constexpr static rivet::rivet_type_id ClampToCombatArea_type_id = 0x801b5504; 
 
 		explicit ShootAtCurveFollowTarget() = default;
 		explicit ShootAtCurveFollowTarget([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

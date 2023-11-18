@@ -21,17 +21,17 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED BotAreaAwarenessPrius : AwarenessBasePrius {
-		constexpr const static std::string_view type_name = "BotAreaAwarenessPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x80c2a448;
+		constexpr static std::string_view type_name = "BotAreaAwarenessPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x80c2a448;
 
-		constexpr const static std::string_view SourceLocatorName_type_name = "SourceLocatorName";
-		constexpr const static rivet::rivet_type_id SourceLocatorName_type_id = 0x58c28db;
-		constexpr const static std::string_view NearbyAlertRange_type_name = "NearbyAlertRange";
-		constexpr const static rivet::rivet_type_id NearbyAlertRange_type_id = 0x63b1b5d4;
-		constexpr const static std::string_view NearbyShotAlertRange_type_name = "NearbyShotAlertRange";
-		constexpr const static rivet::rivet_type_id NearbyShotAlertRange_type_id = 0xac8ad7f;
-		constexpr const static std::string_view UseRandomConfirmTime_type_name = "UseRandomConfirmTime";
-		constexpr const static rivet::rivet_type_id UseRandomConfirmTime_type_id = 0x8209aaa8; 
+		constexpr static std::string_view SourceLocatorName_type_name = "SourceLocatorName";
+		constexpr static rivet::rivet_type_id SourceLocatorName_type_id = 0x58c28db;
+		constexpr static std::string_view NearbyAlertRange_type_name = "NearbyAlertRange";
+		constexpr static rivet::rivet_type_id NearbyAlertRange_type_id = 0x63b1b5d4;
+		constexpr static std::string_view NearbyShotAlertRange_type_name = "NearbyShotAlertRange";
+		constexpr static rivet::rivet_type_id NearbyShotAlertRange_type_id = 0xac8ad7f;
+		constexpr static std::string_view UseRandomConfirmTime_type_name = "UseRandomConfirmTime";
+		constexpr static rivet::rivet_type_id UseRandomConfirmTime_type_id = 0x8209aaa8; 
 
 		explicit BotAreaAwarenessPrius() = default;
 		explicit BotAreaAwarenessPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

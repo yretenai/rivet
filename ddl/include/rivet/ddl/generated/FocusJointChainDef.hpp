@@ -19,15 +19,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED FocusJointChainDef : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "FocusJointChainDef";
-		constexpr const static rivet::rivet_type_id type_id = 0xe4c7411d;
+		constexpr static std::string_view type_name = "FocusJointChainDef";
+		constexpr static rivet::rivet_type_id type_id = 0xe4c7411d;
 
-		constexpr const static std::string_view JointChainName_type_name = "JointChainName";
-		constexpr const static rivet::rivet_type_id JointChainName_type_id = 0xa30d46f8;
-		constexpr const static std::string_view StartJointName_type_name = "StartJointName";
-		constexpr const static rivet::rivet_type_id StartJointName_type_id = 0x381bf2e1;
-		constexpr const static std::string_view EndJointName_type_name = "EndJointName";
-		constexpr const static rivet::rivet_type_id EndJointName_type_id = 0x6fa4e87a; 
+		constexpr static std::string_view JointChainName_type_name = "JointChainName";
+		constexpr static rivet::rivet_type_id JointChainName_type_id = 0xa30d46f8;
+		constexpr static std::string_view StartJointName_type_name = "StartJointName";
+		constexpr static rivet::rivet_type_id StartJointName_type_id = 0x381bf2e1;
+		constexpr static std::string_view EndJointName_type_name = "EndJointName";
+		constexpr static rivet::rivet_type_id EndJointName_type_id = 0x6fa4e87a; 
 
 		explicit FocusJointChainDef() = default;
 		explicit FocusJointChainDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

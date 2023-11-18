@@ -19,11 +19,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED UniqueDancerData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "UniqueDancerData";
-		constexpr const static rivet::rivet_type_id type_id = 0x2b9ae231;
+		constexpr static std::string_view type_name = "UniqueDancerData";
+		constexpr static rivet::rivet_type_id type_id = 0x2b9ae231;
 
-		constexpr const static std::string_view DancerActors_type_name = "DancerActors";
-		constexpr const static rivet::rivet_type_id DancerActors_type_id = 0x222c526f; 
+		constexpr static std::string_view DancerActors_type_name = "DancerActors";
+		constexpr static rivet::rivet_type_id DancerActors_type_id = 0x222c526f; 
 
 		explicit UniqueDancerData() = default;
 		explicit UniqueDancerData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

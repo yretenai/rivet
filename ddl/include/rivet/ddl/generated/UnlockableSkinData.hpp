@@ -21,13 +21,13 @@ namespace rivet::ddl::generated {
 	struct SkinData; 
 
 	struct RIVET_DDL_SHARED UnlockableSkinData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "UnlockableSkinData";
-		constexpr const static rivet::rivet_type_id type_id = 0x5853fa27;
+		constexpr static std::string_view type_name = "UnlockableSkinData";
+		constexpr static rivet::rivet_type_id type_id = 0x5853fa27;
 
-		constexpr const static std::string_view UnlockSkinID_type_name = "UnlockSkinID";
-		constexpr const static rivet::rivet_type_id UnlockSkinID_type_id = 0xa951b39a;
-		constexpr const static std::string_view Skin_type_name = "Skin";
-		constexpr const static rivet::rivet_type_id Skin_type_id = 0x32e9a8ae; 
+		constexpr static std::string_view UnlockSkinID_type_name = "UnlockSkinID";
+		constexpr static rivet::rivet_type_id UnlockSkinID_type_id = 0xa951b39a;
+		constexpr static std::string_view Skin_type_name = "Skin";
+		constexpr static rivet::rivet_type_id Skin_type_id = 0x32e9a8ae; 
 
 		explicit UnlockableSkinData() = default;
 		explicit UnlockableSkinData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

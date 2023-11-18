@@ -21,15 +21,15 @@ namespace rivet::ddl::generated {
 	struct DDLVector3; 
 
 	struct RIVET_DDL_SHARED VanityUIColor : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "VanityUIColor";
-		constexpr const static rivet::rivet_type_id type_id = 0x90e4a08b;
+		constexpr static std::string_view type_name = "VanityUIColor";
+		constexpr static rivet::rivet_type_id type_id = 0x90e4a08b;
 
-		constexpr const static std::string_view ColorIndex_type_name = "ColorIndex";
-		constexpr const static rivet::rivet_type_id ColorIndex_type_id = 0xba765d63;
-		constexpr const static std::string_view UIColorPrimary_type_name = "UIColorPrimary";
-		constexpr const static rivet::rivet_type_id UIColorPrimary_type_id = 0xb006f9f4;
-		constexpr const static std::string_view UIColorSecondary_type_name = "UIColorSecondary";
-		constexpr const static rivet::rivet_type_id UIColorSecondary_type_id = 0xc33d9b03; 
+		constexpr static std::string_view ColorIndex_type_name = "ColorIndex";
+		constexpr static rivet::rivet_type_id ColorIndex_type_id = 0xba765d63;
+		constexpr static std::string_view UIColorPrimary_type_name = "UIColorPrimary";
+		constexpr static rivet::rivet_type_id UIColorPrimary_type_id = 0xb006f9f4;
+		constexpr static std::string_view UIColorSecondary_type_name = "UIColorSecondary";
+		constexpr static rivet::rivet_type_id UIColorSecondary_type_id = 0xc33d9b03; 
 
 		explicit VanityUIColor() = default;
 		explicit VanityUIColor([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

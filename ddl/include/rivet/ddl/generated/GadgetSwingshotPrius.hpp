@@ -19,13 +19,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED GadgetSwingshotPrius : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "GadgetSwingshotPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x30c8f7b8;
+		constexpr static std::string_view type_name = "GadgetSwingshotPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x30c8f7b8;
 
-		constexpr const static std::string_view EmitLocator_type_name = "EmitLocator";
-		constexpr const static rivet::rivet_type_id EmitLocator_type_id = 0x138c6595;
-		constexpr const static std::string_view ShotActor_type_name = "ShotActor";
-		constexpr const static rivet::rivet_type_id ShotActor_type_id = 0xf3287; 
+		constexpr static std::string_view EmitLocator_type_name = "EmitLocator";
+		constexpr static rivet::rivet_type_id EmitLocator_type_id = 0x138c6595;
+		constexpr static std::string_view ShotActor_type_name = "ShotActor";
+		constexpr static rivet::rivet_type_id ShotActor_type_id = 0xf3287; 
 
 		explicit GadgetSwingshotPrius() = default;
 		explicit GadgetSwingshotPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

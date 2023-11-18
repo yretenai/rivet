@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct AssetReferenceDef; 
 
 	struct RIVET_DDL_SHARED StatusEffectTrackerShrubberyPrius : StatusEffectTrackerBasePrius {
-		constexpr const static std::string_view type_name = "StatusEffectTrackerShrubberyPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xd0b1dd1f;
+		constexpr static std::string_view type_name = "StatusEffectTrackerShrubberyPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xd0b1dd1f;
 
-		constexpr const static std::string_view TopiaryModel_type_name = "TopiaryModel";
-		constexpr const static rivet::rivet_type_id TopiaryModel_type_id = 0xc15f0313; 
+		constexpr static std::string_view TopiaryModel_type_name = "TopiaryModel";
+		constexpr static rivet::rivet_type_id TopiaryModel_type_id = 0xc15f0313; 
 
 		explicit StatusEffectTrackerShrubberyPrius() = default;
 		explicit StatusEffectTrackerShrubberyPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

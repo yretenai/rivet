@@ -21,21 +21,21 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ProtoShotgunDamageRange : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "ProtoShotgunDamageRange";
-		constexpr const static rivet::rivet_type_id type_id = 0x3e9c47f0;
+		constexpr static std::string_view type_name = "ProtoShotgunDamageRange";
+		constexpr static rivet::rivet_type_id type_id = 0x3e9c47f0;
 
-		constexpr const static std::string_view IsFirst_type_name = "IsFirst";
-		constexpr const static rivet::rivet_type_id IsFirst_type_id = 0x9a8cfc51;
-		constexpr const static std::string_view StartRangePercent_type_name = "StartRangePercent";
-		constexpr const static rivet::rivet_type_id StartRangePercent_type_id = 0x2b62dc22;
-		constexpr const static std::string_view DamagePercent_type_name = "DamagePercent";
-		constexpr const static rivet::rivet_type_id DamagePercent_type_id = 0x7bbba4a0;
-		constexpr const static std::string_view StatusPercent_type_name = "StatusPercent";
-		constexpr const static rivet::rivet_type_id StatusPercent_type_id = 0xd50b14fe;
-		constexpr const static std::string_view KnockbackLevel_type_name = "KnockbackLevel";
-		constexpr const static rivet::rivet_type_id KnockbackLevel_type_id = 0x2554a262;
-		constexpr const static std::string_view KnockbackAmount_type_name = "KnockbackAmount";
-		constexpr const static rivet::rivet_type_id KnockbackAmount_type_id = 0x7b1e600b; 
+		constexpr static std::string_view IsFirst_type_name = "IsFirst";
+		constexpr static rivet::rivet_type_id IsFirst_type_id = 0x9a8cfc51;
+		constexpr static std::string_view StartRangePercent_type_name = "StartRangePercent";
+		constexpr static rivet::rivet_type_id StartRangePercent_type_id = 0x2b62dc22;
+		constexpr static std::string_view DamagePercent_type_name = "DamagePercent";
+		constexpr static rivet::rivet_type_id DamagePercent_type_id = 0x7bbba4a0;
+		constexpr static std::string_view StatusPercent_type_name = "StatusPercent";
+		constexpr static rivet::rivet_type_id StatusPercent_type_id = 0xd50b14fe;
+		constexpr static std::string_view KnockbackLevel_type_name = "KnockbackLevel";
+		constexpr static rivet::rivet_type_id KnockbackLevel_type_id = 0x2554a262;
+		constexpr static std::string_view KnockbackAmount_type_name = "KnockbackAmount";
+		constexpr static rivet::rivet_type_id KnockbackAmount_type_id = 0x7b1e600b; 
 
 		explicit ProtoShotgunDamageRange() = default;
 		explicit ProtoShotgunDamageRange([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

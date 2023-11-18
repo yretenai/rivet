@@ -18,29 +18,29 @@
 #include <rivet/structures/rivet_serialization.hpp>
 
 namespace rivet::ddl::generated {
-	struct StickersData;
-	struct StickersCategoryData; 
+	struct StickersCategoryData;
+	struct StickersData; 
 
 	struct RIVET_DDL_SHARED StickerModeData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "StickerModeData";
-		constexpr const static rivet::rivet_type_id type_id = 0x5d4ad9b4;
+		constexpr static std::string_view type_name = "StickerModeData";
+		constexpr static rivet::rivet_type_id type_id = 0x5d4ad9b4;
 
-		constexpr const static std::string_view StickerSpeed_type_name = "StickerSpeed";
-		constexpr const static rivet::rivet_type_id StickerSpeed_type_id = 0xf7484bcb;
-		constexpr const static std::string_view RotationSpeed_type_name = "RotationSpeed";
-		constexpr const static rivet::rivet_type_id RotationSpeed_type_id = 0xe5938d1e;
-		constexpr const static std::string_view StickerSpeed4k_type_name = "StickerSpeed4k";
-		constexpr const static rivet::rivet_type_id StickerSpeed4k_type_id = 0xa84a2af2;
-		constexpr const static std::string_view ScaleRate_type_name = "ScaleRate";
-		constexpr const static rivet::rivet_type_id ScaleRate_type_id = 0xae01ecbc;
-		constexpr const static std::string_view ScaleRate4k_type_name = "ScaleRate4k";
-		constexpr const static rivet::rivet_type_id ScaleRate4k_type_id = 0x8086aac1;
-		constexpr const static std::string_view EmptyLayer_type_name = "EmptyLayer";
-		constexpr const static rivet::rivet_type_id EmptyLayer_type_id = 0xd93c5f2a;
-		constexpr const static std::string_view LockedLayer_type_name = "LockedLayer";
-		constexpr const static rivet::rivet_type_id LockedLayer_type_id = 0xddc56db4;
-		constexpr const static std::string_view Categories_type_name = "Categories";
-		constexpr const static rivet::rivet_type_id Categories_type_id = 0xe1c51851; 
+		constexpr static std::string_view StickerSpeed_type_name = "StickerSpeed";
+		constexpr static rivet::rivet_type_id StickerSpeed_type_id = 0xf7484bcb;
+		constexpr static std::string_view RotationSpeed_type_name = "RotationSpeed";
+		constexpr static rivet::rivet_type_id RotationSpeed_type_id = 0xe5938d1e;
+		constexpr static std::string_view StickerSpeed4k_type_name = "StickerSpeed4k";
+		constexpr static rivet::rivet_type_id StickerSpeed4k_type_id = 0xa84a2af2;
+		constexpr static std::string_view ScaleRate_type_name = "ScaleRate";
+		constexpr static rivet::rivet_type_id ScaleRate_type_id = 0xae01ecbc;
+		constexpr static std::string_view ScaleRate4k_type_name = "ScaleRate4k";
+		constexpr static rivet::rivet_type_id ScaleRate4k_type_id = 0x8086aac1;
+		constexpr static std::string_view EmptyLayer_type_name = "EmptyLayer";
+		constexpr static rivet::rivet_type_id EmptyLayer_type_id = 0xd93c5f2a;
+		constexpr static std::string_view LockedLayer_type_name = "LockedLayer";
+		constexpr static rivet::rivet_type_id LockedLayer_type_id = 0xddc56db4;
+		constexpr static std::string_view Categories_type_name = "Categories";
+		constexpr static rivet::rivet_type_id Categories_type_id = 0xe1c51851; 
 
 		explicit StickerModeData() = default;
 		explicit StickerModeData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

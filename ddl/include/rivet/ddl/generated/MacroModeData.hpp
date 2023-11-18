@@ -18,19 +18,19 @@
 #include <rivet/structures/rivet_serialization.hpp>
 
 namespace rivet::ddl::generated {
-	struct AssetReferenceDef;
-	struct MacroLevelDataListItem; 
+	struct MacroLevelDataListItem;
+	struct AssetReferenceDef; 
 
 	struct RIVET_DDL_SHARED MacroModeData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "MacroModeData";
-		constexpr const static rivet::rivet_type_id type_id = 0x532108b9;
+		constexpr static std::string_view type_name = "MacroModeData";
+		constexpr static rivet::rivet_type_id type_id = 0x532108b9;
 
-		constexpr const static std::string_view Name_type_name = "Name";
-		constexpr const static rivet::rivet_type_id Name_type_id = 0x6eb3beb6;
-		constexpr const static std::string_view DefaultLevel_type_name = "DefaultLevel";
-		constexpr const static rivet::rivet_type_id DefaultLevel_type_id = 0x8071908a;
-		constexpr const static std::string_view Levels_type_name = "Levels";
-		constexpr const static rivet::rivet_type_id Levels_type_id = 0xa1522a7e; 
+		constexpr static std::string_view Name_type_name = "Name";
+		constexpr static rivet::rivet_type_id Name_type_id = 0x6eb3beb6;
+		constexpr static std::string_view DefaultLevel_type_name = "DefaultLevel";
+		constexpr static rivet::rivet_type_id DefaultLevel_type_id = 0x8071908a;
+		constexpr static std::string_view Levels_type_name = "Levels";
+		constexpr static rivet::rivet_type_id Levels_type_id = 0xa1522a7e; 
 
 		explicit MacroModeData() = default;
 		explicit MacroModeData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

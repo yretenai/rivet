@@ -17,20 +17,20 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/ConfigBase.hpp>
-#include <rivet/ddl/generated/enums/xfdd79442.hpp> 
+#include <rivet/ddl/generated/enums/xfdd79442.hpp>
+#include <rivet/ddl/generated/ConfigBase.hpp> 
 
 namespace rivet::ddl::generated {
 	struct JointToBodyFilter; 
 
 	struct RIVET_DDL_SHARED BodypartToFilterConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "BodypartToFilterConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xea705a6c;
+		constexpr static std::string_view type_name = "BodypartToFilterConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xea705a6c;
 
-		constexpr const static std::string_view DefaultBodyPartFilter_type_name = "DefaultBodyPartFilter";
-		constexpr const static rivet::rivet_type_id DefaultBodyPartFilter_type_id = 0x3b7089a2;
-		constexpr const static std::string_view JointMap_type_name = "JointMap";
-		constexpr const static rivet::rivet_type_id JointMap_type_id = 0x1af3775a; 
+		constexpr static std::string_view DefaultBodyPartFilter_type_name = "DefaultBodyPartFilter";
+		constexpr static rivet::rivet_type_id DefaultBodyPartFilter_type_id = 0x3b7089a2;
+		constexpr static std::string_view JointMap_type_name = "JointMap";
+		constexpr static rivet::rivet_type_id JointMap_type_id = 0x1af3775a; 
 
 		explicit BodypartToFilterConfig() = default;
 		explicit BodypartToFilterConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

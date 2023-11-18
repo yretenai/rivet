@@ -24,15 +24,15 @@ namespace rivet::ddl::generated {
 	struct GridLayerData; 
 
 	struct RIVET_DDL_SHARED WeaponGridConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "WeaponGridConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x7d5df308;
+		constexpr static std::string_view type_name = "WeaponGridConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x7d5df308;
 
-		constexpr const static std::string_view Layers_type_name = "Layers";
-		constexpr const static rivet::rivet_type_id Layers_type_id = 0xd8f0a337;
-		constexpr const static std::string_view TransformScale_type_name = "TransformScale";
-		constexpr const static rivet::rivet_type_id TransformScale_type_id = 0x429b412;
-		constexpr const static std::string_view TransformOffset_type_name = "TransformOffset";
-		constexpr const static rivet::rivet_type_id TransformOffset_type_id = 0x928c7cbd; 
+		constexpr static std::string_view Layers_type_name = "Layers";
+		constexpr static rivet::rivet_type_id Layers_type_id = 0xd8f0a337;
+		constexpr static std::string_view TransformScale_type_name = "TransformScale";
+		constexpr static rivet::rivet_type_id TransformScale_type_id = 0x429b412;
+		constexpr static std::string_view TransformOffset_type_name = "TransformOffset";
+		constexpr static rivet::rivet_type_id TransformOffset_type_id = 0x928c7cbd; 
 
 		explicit WeaponGridConfig() = default;
 		explicit WeaponGridConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

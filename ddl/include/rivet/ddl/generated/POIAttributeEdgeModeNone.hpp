@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED POIAttributeEdgeModeNone : POIAttributeEdgeModeBase {
-		constexpr const static std::string_view type_name = "POIAttributeEdgeModeNone";
-		constexpr const static rivet::rivet_type_id type_id = 0xb33fa082;
+		constexpr static std::string_view type_name = "POIAttributeEdgeModeNone";
+		constexpr static rivet::rivet_type_id type_id = 0xb33fa082;
 
 		explicit POIAttributeEdgeModeNone() = default;
 		explicit POIAttributeEdgeModeNone([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

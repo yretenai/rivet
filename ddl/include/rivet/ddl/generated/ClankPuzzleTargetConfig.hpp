@@ -17,26 +17,26 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/ClankPuzzleTargetBaseConfig.hpp>
-#include <rivet/ddl/generated/enums/x10b3c4cf.hpp> 
+#include <rivet/ddl/generated/enums/x10b3c4cf.hpp>
+#include <rivet/ddl/generated/ClankPuzzleTargetBaseConfig.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ClankPuzzleTargetConfig : ClankPuzzleTargetBaseConfig {
-		constexpr const static std::string_view type_name = "ClankPuzzleTargetConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xefc617b2;
+		constexpr static std::string_view type_name = "ClankPuzzleTargetConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xefc617b2;
 
-		constexpr const static std::string_view SlowDownMult_type_name = "SlowDownMult";
-		constexpr const static rivet::rivet_type_id SlowDownMult_type_id = 0x4007e76e;
-		constexpr const static std::string_view MaxSlowDown_type_name = "MaxSlowDown";
-		constexpr const static rivet::rivet_type_id MaxSlowDown_type_id = 0xb0238676;
-		constexpr const static std::string_view SpeedUpMult_type_name = "SpeedUpMult";
-		constexpr const static rivet::rivet_type_id SpeedUpMult_type_id = 0x862191c1;
-		constexpr const static std::string_view MaxSpeedUp_type_name = "MaxSpeedUp";
-		constexpr const static rivet::rivet_type_id MaxSpeedUp_type_id = 0xb42a1c7b;
-		constexpr const static std::string_view WorldTimeManipulationPercent_type_name = "WorldTimeManipulationPercent";
-		constexpr const static rivet::rivet_type_id WorldTimeManipulationPercent_type_id = 0xd26ad13c;
-		constexpr const static std::string_view HeavyDangerMaterial_type_name = "HeavyDangerMaterial";
-		constexpr const static rivet::rivet_type_id HeavyDangerMaterial_type_id = 0x1e7e3814; 
+		constexpr static std::string_view SlowDownMult_type_name = "SlowDownMult";
+		constexpr static rivet::rivet_type_id SlowDownMult_type_id = 0x4007e76e;
+		constexpr static std::string_view MaxSlowDown_type_name = "MaxSlowDown";
+		constexpr static rivet::rivet_type_id MaxSlowDown_type_id = 0xb0238676;
+		constexpr static std::string_view SpeedUpMult_type_name = "SpeedUpMult";
+		constexpr static rivet::rivet_type_id SpeedUpMult_type_id = 0x862191c1;
+		constexpr static std::string_view MaxSpeedUp_type_name = "MaxSpeedUp";
+		constexpr static rivet::rivet_type_id MaxSpeedUp_type_id = 0xb42a1c7b;
+		constexpr static std::string_view WorldTimeManipulationPercent_type_name = "WorldTimeManipulationPercent";
+		constexpr static rivet::rivet_type_id WorldTimeManipulationPercent_type_id = 0xd26ad13c;
+		constexpr static std::string_view HeavyDangerMaterial_type_name = "HeavyDangerMaterial";
+		constexpr static rivet::rivet_type_id HeavyDangerMaterial_type_id = 0x1e7e3814; 
 
 		explicit ClankPuzzleTargetConfig() = default;
 		explicit ClankPuzzleTargetConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

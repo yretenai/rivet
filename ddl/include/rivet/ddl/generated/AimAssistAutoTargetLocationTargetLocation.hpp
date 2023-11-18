@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED AimAssistAutoTargetLocationTargetLocation : AimAssistAutoTargetLocation {
-		constexpr const static std::string_view type_name = "AimAssistAutoTargetLocationTargetLocation";
-		constexpr const static rivet::rivet_type_id type_id = 0x1e50cd41;
+		constexpr static std::string_view type_name = "AimAssistAutoTargetLocationTargetLocation";
+		constexpr static rivet::rivet_type_id type_id = 0x1e50cd41;
 
-		constexpr const static std::string_view TargetIndex_type_name = "TargetIndex";
-		constexpr const static rivet::rivet_type_id TargetIndex_type_id = 0x5c537f74; 
+		constexpr static std::string_view TargetIndex_type_name = "TargetIndex";
+		constexpr static rivet::rivet_type_id TargetIndex_type_id = 0x5c537f74; 
 
 		explicit AimAssistAutoTargetLocationTargetLocation() = default;
 		explicit AimAssistAutoTargetLocationTargetLocation([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

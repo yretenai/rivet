@@ -19,15 +19,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED FastTravelAnimElement : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "FastTravelAnimElement";
-		constexpr const static rivet::rivet_type_id type_id = 0xd8680dd0;
+		constexpr static std::string_view type_name = "FastTravelAnimElement";
+		constexpr static rivet::rivet_type_id type_id = 0xd8680dd0;
 
-		constexpr const static std::string_view Weight_type_name = "Weight";
-		constexpr const static rivet::rivet_type_id Weight_type_id = 0x39b51b26;
-		constexpr const static std::string_view AnimDriverName_type_name = "AnimDriverName";
-		constexpr const static rivet::rivet_type_id AnimDriverName_type_id = 0x45f98c1e;
-		constexpr const static std::string_view UseCameraAnimation_type_name = "UseCameraAnimation";
-		constexpr const static rivet::rivet_type_id UseCameraAnimation_type_id = 0xdc481867; 
+		constexpr static std::string_view Weight_type_name = "Weight";
+		constexpr static rivet::rivet_type_id Weight_type_id = 0x39b51b26;
+		constexpr static std::string_view AnimDriverName_type_name = "AnimDriverName";
+		constexpr static rivet::rivet_type_id AnimDriverName_type_id = 0x45f98c1e;
+		constexpr static std::string_view UseCameraAnimation_type_name = "UseCameraAnimation";
+		constexpr static rivet::rivet_type_id UseCameraAnimation_type_id = 0xdc481867; 
 
 		explicit FastTravelAnimElement() = default;
 		explicit FastTravelAnimElement([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

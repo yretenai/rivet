@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DevstatsTimeConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "DevstatsTimeConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xe738536c;
+		constexpr static std::string_view type_name = "DevstatsTimeConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xe738536c;
 
-		constexpr const static std::string_view IdleTimeout_type_name = "IdleTimeout";
-		constexpr const static rivet::rivet_type_id IdleTimeout_type_id = 0xe402a39f; 
+		constexpr static std::string_view IdleTimeout_type_name = "IdleTimeout";
+		constexpr static rivet::rivet_type_id IdleTimeout_type_id = 0xe402a39f; 
 
 		explicit DevstatsTimeConfig() = default;
 		explicit DevstatsTimeConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -21,15 +21,15 @@ namespace rivet::ddl::generated {
 	struct PhotomodeCameraBasePrius; 
 
 	struct RIVET_DDL_SHARED PhotomodeCameraDef : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "PhotomodeCameraDef";
-		constexpr const static rivet::rivet_type_id type_id = 0x3c9490b3;
+		constexpr static std::string_view type_name = "PhotomodeCameraDef";
+		constexpr static rivet::rivet_type_id type_id = 0x3c9490b3;
 
-		constexpr const static std::string_view Name_type_name = "Name";
-		constexpr const static rivet::rivet_type_id Name_type_id = 0x6eb3beb6;
-		constexpr const static std::string_view Description_type_name = "Description";
-		constexpr const static rivet::rivet_type_id Description_type_id = 0xe03811fd;
-		constexpr const static std::string_view CameraType_type_name = "CameraType";
-		constexpr const static rivet::rivet_type_id CameraType_type_id = 0x34041fcf; 
+		constexpr static std::string_view Name_type_name = "Name";
+		constexpr static rivet::rivet_type_id Name_type_id = 0x6eb3beb6;
+		constexpr static std::string_view Description_type_name = "Description";
+		constexpr static rivet::rivet_type_id Description_type_id = 0xe03811fd;
+		constexpr static std::string_view CameraType_type_name = "CameraType";
+		constexpr static rivet::rivet_type_id CameraType_type_id = 0x34041fcf; 
 
 		explicit PhotomodeCameraDef() = default;
 		explicit PhotomodeCameraDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

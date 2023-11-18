@@ -17,18 +17,18 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/ShotMotionBasePrius.hpp>
-#include <rivet/ddl/generated/enums/x404ff3ae.hpp> 
+#include <rivet/ddl/generated/enums/x404ff3ae.hpp>
+#include <rivet/ddl/generated/ShotMotionBasePrius.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED AttachedShotMotionPrius : ShotMotionBasePrius {
-		constexpr const static std::string_view type_name = "AttachedShotMotionPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x5db8fb2d;
+		constexpr static std::string_view type_name = "AttachedShotMotionPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x5db8fb2d;
 
-		constexpr const static std::string_view AttachmentType_type_name = "AttachmentType";
-		constexpr const static rivet::rivet_type_id AttachmentType_type_id = 0x22654694;
-		constexpr const static std::string_view AttachToJoint_type_name = "AttachToJoint";
-		constexpr const static rivet::rivet_type_id AttachToJoint_type_id = 0x66348122; 
+		constexpr static std::string_view AttachmentType_type_name = "AttachmentType";
+		constexpr static rivet::rivet_type_id AttachmentType_type_id = 0x22654694;
+		constexpr static std::string_view AttachToJoint_type_name = "AttachToJoint";
+		constexpr static rivet::rivet_type_id AttachToJoint_type_id = 0x66348122; 
 
 		explicit AttachedShotMotionPrius() = default;
 		explicit AttachedShotMotionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

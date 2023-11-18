@@ -23,15 +23,15 @@ namespace rivet::ddl::generated {
 	struct LootTableElement; 
 
 	struct RIVET_DDL_SHARED LootTableConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "LootTableConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xbf8c84c7;
+		constexpr static std::string_view type_name = "LootTableConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xbf8c84c7;
 
-		constexpr const static std::string_view MinCash_type_name = "MinCash";
-		constexpr const static rivet::rivet_type_id MinCash_type_id = 0xf8d19346;
-		constexpr const static std::string_view MaxCash_type_name = "MaxCash";
-		constexpr const static rivet::rivet_type_id MaxCash_type_id = 0xfb227309;
-		constexpr const static std::string_view LootLists_type_name = "LootLists";
-		constexpr const static rivet::rivet_type_id LootLists_type_id = 0x35e07f62; 
+		constexpr static std::string_view MinCash_type_name = "MinCash";
+		constexpr static rivet::rivet_type_id MinCash_type_id = 0xf8d19346;
+		constexpr static std::string_view MaxCash_type_name = "MaxCash";
+		constexpr static rivet::rivet_type_id MaxCash_type_id = 0xfb227309;
+		constexpr static std::string_view LootLists_type_name = "LootLists";
+		constexpr static rivet::rivet_type_id LootLists_type_id = 0x35e07f62; 
 
 		explicit LootTableConfig() = default;
 		explicit LootTableConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

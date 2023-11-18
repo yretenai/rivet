@@ -3,17 +3,17 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/HeroReactConfig.hpp>
-#include <rivet/ddl/generated/HeroCameraConfig.hpp>
-#include <rivet/ddl/generated/HeroCVCConfig.hpp>
-#include <rivet/ddl/generated/HeroMotionConfig.hpp>
-#include <rivet/ddl/generated/HeroMeleeSmashConfig.hpp>
-#include <rivet/ddl/generated/HeroAimConfig.hpp>
-#include <rivet/ddl/generated/HeroFlavorAnimConfig.hpp>
-#include <rivet/ddl/generated/HeroAttackerConfig.hpp>
-#include <rivet/ddl/generated/HeroHealthConfig.hpp>
 #include <rivet/ddl/generated/HeroEffectsConfig.hpp>
-#include <rivet/ddl/generated/HeroSuperMeterPrius.hpp> 
+#include <rivet/ddl/generated/HeroAttackerConfig.hpp>
+#include <rivet/ddl/generated/HeroFlavorAnimConfig.hpp>
+#include <rivet/ddl/generated/HeroMeleeSmashConfig.hpp>
+#include <rivet/ddl/generated/HeroCVCConfig.hpp>
+#include <rivet/ddl/generated/HeroHealthConfig.hpp>
+#include <rivet/ddl/generated/HeroReactConfig.hpp>
+#include <rivet/ddl/generated/HeroSuperMeterPrius.hpp>
+#include <rivet/ddl/generated/HeroMotionConfig.hpp>
+#include <rivet/ddl/generated/HeroAimConfig.hpp>
+#include <rivet/ddl/generated/HeroCameraConfig.hpp> 
 
 #include <rivet/ddl/generated/SharedHeroConfig.hpp>
 

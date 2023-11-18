@@ -21,17 +21,17 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED AimModOverCollisionPrius : AimModifierPrius {
-		constexpr const static std::string_view type_name = "AimModOverCollisionPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xeb000b4d;
+		constexpr static std::string_view type_name = "AimModOverCollisionPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xeb000b4d;
 
-		constexpr const static std::string_view SourceLocator_type_name = "SourceLocator";
-		constexpr const static rivet::rivet_type_id SourceLocator_type_id = 0xc54e6703;
-		constexpr const static std::string_view CollRadius_type_name = "CollRadius";
-		constexpr const static rivet::rivet_type_id CollRadius_type_id = 0xc7f69ee3;
-		constexpr const static std::string_view MaxTargetOffset_type_name = "MaxTargetOffset";
-		constexpr const static rivet::rivet_type_id MaxTargetOffset_type_id = 0x90fc80d2;
-		constexpr const static std::string_view BaseOffset_type_name = "BaseOffset";
-		constexpr const static rivet::rivet_type_id BaseOffset_type_id = 0xb283ec91; 
+		constexpr static std::string_view SourceLocator_type_name = "SourceLocator";
+		constexpr static rivet::rivet_type_id SourceLocator_type_id = 0xc54e6703;
+		constexpr static std::string_view CollRadius_type_name = "CollRadius";
+		constexpr static rivet::rivet_type_id CollRadius_type_id = 0xc7f69ee3;
+		constexpr static std::string_view MaxTargetOffset_type_name = "MaxTargetOffset";
+		constexpr static rivet::rivet_type_id MaxTargetOffset_type_id = 0x90fc80d2;
+		constexpr static std::string_view BaseOffset_type_name = "BaseOffset";
+		constexpr static rivet::rivet_type_id BaseOffset_type_id = 0xb283ec91; 
 
 		explicit AimModOverCollisionPrius() = default;
 		explicit AimModOverCollisionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

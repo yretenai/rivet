@@ -21,11 +21,11 @@ namespace rivet::ddl::generated {
 	struct MacroLevelData; 
 
 	struct RIVET_DDL_SHARED MacroLevelDataListItem : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "MacroLevelDataListItem";
-		constexpr const static rivet::rivet_type_id type_id = 0x8474bc9;
+		constexpr static std::string_view type_name = "MacroLevelDataListItem";
+		constexpr static rivet::rivet_type_id type_id = 0x8474bc9;
 
-		constexpr const static std::string_view LevelData_type_name = "LevelData";
-		constexpr const static rivet::rivet_type_id LevelData_type_id = 0xe16e3538; 
+		constexpr static std::string_view LevelData_type_name = "LevelData";
+		constexpr static rivet::rivet_type_id LevelData_type_id = 0xe16e3538; 
 
 		explicit MacroLevelDataListItem() = default;
 		explicit MacroLevelDataListItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct DebugGraphList_Tools; 
 
 	struct RIVET_DDL_SHARED ObjectiveSystemConfig_Tools : ConfigBase {
-		constexpr const static std::string_view type_name = "ObjectiveSystemConfig_Tools";
-		constexpr const static rivet::rivet_type_id type_id = 0x5d42736;
+		constexpr static std::string_view type_name = "ObjectiveSystemConfig_Tools";
+		constexpr static rivet::rivet_type_id type_id = 0x5d42736;
 
-		constexpr const static std::string_view DebugGraphList_type_name = "DebugGraphList";
-		constexpr const static rivet::rivet_type_id DebugGraphList_type_id = 0x63f0f436; 
+		constexpr static std::string_view DebugGraphList_type_name = "DebugGraphList";
+		constexpr static rivet::rivet_type_id DebugGraphList_type_id = 0x63f0f436; 
 
 		explicit ObjectiveSystemConfig_Tools() = default;
 		explicit ObjectiveSystemConfig_Tools([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

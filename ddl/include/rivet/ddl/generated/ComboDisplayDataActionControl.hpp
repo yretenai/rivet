@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ComboDisplayDataActionControl : ComboDisplayDataBase {
-		constexpr const static std::string_view type_name = "ComboDisplayDataActionControl";
-		constexpr const static rivet::rivet_type_id type_id = 0xd25d536;
+		constexpr static std::string_view type_name = "ComboDisplayDataActionControl";
+		constexpr static rivet::rivet_type_id type_id = 0xd25d536;
 
 		explicit ComboDisplayDataActionControl() = default;
 		explicit ComboDisplayDataActionControl([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

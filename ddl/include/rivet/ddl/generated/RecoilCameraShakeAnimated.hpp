@@ -21,23 +21,23 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED RecoilCameraShakeAnimated : RecoilCameraShake {
-		constexpr const static std::string_view type_name = "RecoilCameraShakeAnimated";
-		constexpr const static rivet::rivet_type_id type_id = 0x66e9f372;
+		constexpr static std::string_view type_name = "RecoilCameraShakeAnimated";
+		constexpr static rivet::rivet_type_id type_id = 0x66e9f372;
 
-		constexpr const static std::string_view AnimDriverName_type_name = "AnimDriverName";
-		constexpr const static rivet::rivet_type_id AnimDriverName_type_id = 0x45f98c1e;
-		constexpr const static std::string_view AnimLoopTime_type_name = "AnimLoopTime";
-		constexpr const static rivet::rivet_type_id AnimLoopTime_type_id = 0x648e7476;
-		constexpr const static std::string_view AnimMotionScaleX_type_name = "AnimMotionScaleX";
-		constexpr const static rivet::rivet_type_id AnimMotionScaleX_type_id = 0xa5a6ebcc;
-		constexpr const static std::string_view AnimMotionScaleY_type_name = "AnimMotionScaleY";
-		constexpr const static rivet::rivet_type_id AnimMotionScaleY_type_id = 0xd2a1db5a;
-		constexpr const static std::string_view AnimMotionScaleZ_type_name = "AnimMotionScaleZ";
-		constexpr const static rivet::rivet_type_id AnimMotionScaleZ_type_id = 0x4ba88ae0;
-		constexpr const static std::string_view AnimRotationScale_type_name = "AnimRotationScale";
-		constexpr const static rivet::rivet_type_id AnimRotationScale_type_id = 0xe7a3276a;
-		constexpr const static std::string_view AnimTimeScale_type_name = "AnimTimeScale";
-		constexpr const static rivet::rivet_type_id AnimTimeScale_type_id = 0x946cda1c; 
+		constexpr static std::string_view AnimDriverName_type_name = "AnimDriverName";
+		constexpr static rivet::rivet_type_id AnimDriverName_type_id = 0x45f98c1e;
+		constexpr static std::string_view AnimLoopTime_type_name = "AnimLoopTime";
+		constexpr static rivet::rivet_type_id AnimLoopTime_type_id = 0x648e7476;
+		constexpr static std::string_view AnimMotionScaleX_type_name = "AnimMotionScaleX";
+		constexpr static rivet::rivet_type_id AnimMotionScaleX_type_id = 0xa5a6ebcc;
+		constexpr static std::string_view AnimMotionScaleY_type_name = "AnimMotionScaleY";
+		constexpr static rivet::rivet_type_id AnimMotionScaleY_type_id = 0xd2a1db5a;
+		constexpr static std::string_view AnimMotionScaleZ_type_name = "AnimMotionScaleZ";
+		constexpr static rivet::rivet_type_id AnimMotionScaleZ_type_id = 0x4ba88ae0;
+		constexpr static std::string_view AnimRotationScale_type_name = "AnimRotationScale";
+		constexpr static rivet::rivet_type_id AnimRotationScale_type_id = 0xe7a3276a;
+		constexpr static std::string_view AnimTimeScale_type_name = "AnimTimeScale";
+		constexpr static rivet::rivet_type_id AnimTimeScale_type_id = 0x946cda1c; 
 
 		explicit RecoilCameraShakeAnimated() = default;
 		explicit RecoilCameraShakeAnimated([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -21,15 +21,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DamageModifierConditionHasComponentPrius : DamageModifierConditionBasePrius {
-		constexpr const static std::string_view type_name = "DamageModifierConditionHasComponentPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x56f13314;
+		constexpr static std::string_view type_name = "DamageModifierConditionHasComponentPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x56f13314;
 
-		constexpr const static std::string_view CheckComponentHash_type_name = "CheckComponentHash";
-		constexpr const static rivet::rivet_type_id CheckComponentHash_type_id = 0x4a8e53b7;
-		constexpr const static std::string_view IsInclude_type_name = "IsInclude";
-		constexpr const static rivet::rivet_type_id IsInclude_type_id = 0x9497a047;
-		constexpr const static std::string_view CheckComponentOnDamager_type_name = "CheckComponentOnDamager";
-		constexpr const static rivet::rivet_type_id CheckComponentOnDamager_type_id = 0x64c921f1; 
+		constexpr static std::string_view CheckComponentHash_type_name = "CheckComponentHash";
+		constexpr static rivet::rivet_type_id CheckComponentHash_type_id = 0x4a8e53b7;
+		constexpr static std::string_view IsInclude_type_name = "IsInclude";
+		constexpr static rivet::rivet_type_id IsInclude_type_id = 0x9497a047;
+		constexpr static std::string_view CheckComponentOnDamager_type_name = "CheckComponentOnDamager";
+		constexpr static rivet::rivet_type_id CheckComponentOnDamager_type_id = 0x64c921f1; 
 
 		explicit DamageModifierConditionHasComponentPrius() = default;
 		explicit DamageModifierConditionHasComponentPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

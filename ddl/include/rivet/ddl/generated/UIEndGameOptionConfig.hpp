@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct UIEndGameOption; 
 
 	struct RIVET_DDL_SHARED UIEndGameOptionConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "UIEndGameOptionConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x3eae7f0d;
+		constexpr static std::string_view type_name = "UIEndGameOptionConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x3eae7f0d;
 
-		constexpr const static std::string_view Options_type_name = "Options";
-		constexpr const static rivet::rivet_type_id Options_type_id = 0xd1df99bf; 
+		constexpr static std::string_view Options_type_name = "Options";
+		constexpr static rivet::rivet_type_id Options_type_id = 0xd1df99bf; 
 
 		explicit UIEndGameOptionConfig() = default;
 		explicit UIEndGameOptionConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

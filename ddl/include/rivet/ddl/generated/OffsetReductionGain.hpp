@@ -21,15 +21,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED OffsetReductionGain : OffsetReductionMode {
-		constexpr const static std::string_view type_name = "OffsetReductionGain";
-		constexpr const static rivet::rivet_type_id type_id = 0xd8075e3c;
+		constexpr static std::string_view type_name = "OffsetReductionGain";
+		constexpr static rivet::rivet_type_id type_id = 0xd8075e3c;
 
-		constexpr const static std::string_view Gain_type_name = "Gain";
-		constexpr const static rivet::rivet_type_id Gain_type_id = 0xe005edb0;
-		constexpr const static std::string_view Damp_type_name = "Damp";
-		constexpr const static rivet::rivet_type_id Damp_type_id = 0x6cd3ba39;
-		constexpr const static std::string_view Speed_type_name = "Speed";
-		constexpr const static rivet::rivet_type_id Speed_type_id = 0x16753237; 
+		constexpr static std::string_view Gain_type_name = "Gain";
+		constexpr static rivet::rivet_type_id Gain_type_id = 0xe005edb0;
+		constexpr static std::string_view Damp_type_name = "Damp";
+		constexpr static rivet::rivet_type_id Damp_type_id = 0x6cd3ba39;
+		constexpr static std::string_view Speed_type_name = "Speed";
+		constexpr static rivet::rivet_type_id Speed_type_id = 0x16753237; 
 
 		explicit OffsetReductionGain() = default;
 		explicit OffsetReductionGain([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

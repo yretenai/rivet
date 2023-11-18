@@ -18,20 +18,20 @@
 #include <rivet/structures/rivet_serialization.hpp>
 
 namespace rivet::ddl::generated {
-	struct HeroSuperMeterData;
+	struct HeroSuperMeterDebugData;
 	struct HeroSuperMeterBuildUpData;
-	struct HeroSuperMeterDebugData; 
+	struct HeroSuperMeterData; 
 
 	struct RIVET_DDL_SHARED HeroSuperMeterPrius : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "HeroSuperMeterPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x998091ad;
+		constexpr static std::string_view type_name = "HeroSuperMeterPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x998091ad;
 
-		constexpr const static std::string_view MeterData_type_name = "MeterData";
-		constexpr const static rivet::rivet_type_id MeterData_type_id = 0xbe5a19b1;
-		constexpr const static std::string_view BuildUpData_type_name = "BuildUpData";
-		constexpr const static rivet::rivet_type_id BuildUpData_type_id = 0x7fea9125;
-		constexpr const static std::string_view DebugData_type_name = "DebugData";
-		constexpr const static rivet::rivet_type_id DebugData_type_id = 0xbd211c77; 
+		constexpr static std::string_view MeterData_type_name = "MeterData";
+		constexpr static rivet::rivet_type_id MeterData_type_id = 0xbe5a19b1;
+		constexpr static std::string_view BuildUpData_type_name = "BuildUpData";
+		constexpr static rivet::rivet_type_id BuildUpData_type_id = 0x7fea9125;
+		constexpr static std::string_view DebugData_type_name = "DebugData";
+		constexpr static rivet::rivet_type_id DebugData_type_id = 0xbd211c77; 
 
 		explicit HeroSuperMeterPrius() = default;
 		explicit HeroSuperMeterPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -19,8 +19,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED GrenadeLandMode : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "GrenadeLandMode";
-		constexpr const static rivet::rivet_type_id type_id = 0x901809e4;
+		constexpr static std::string_view type_name = "GrenadeLandMode";
+		constexpr static rivet::rivet_type_id type_id = 0x901809e4;
 
 		explicit GrenadeLandMode() = default;
 		explicit GrenadeLandMode([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

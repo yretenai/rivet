@@ -17,42 +17,42 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/enums/x6be956dd.hpp>
-#include <rivet/ddl/generated/enums/BonusType.hpp> 
+#include <rivet/ddl/generated/enums/BonusType.hpp>
+#include <rivet/ddl/generated/enums/x6be956dd.hpp> 
 
 namespace rivet::ddl::generated {
 	struct VendorWeaponInfo; 
 
 	struct RIVET_DDL_SHARED VendorItemData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "VendorItemData";
-		constexpr const static rivet::rivet_type_id type_id = 0x66ae7475;
+		constexpr static std::string_view type_name = "VendorItemData";
+		constexpr static rivet::rivet_type_id type_id = 0x66ae7475;
 
-		constexpr const static std::string_view Item_type_name = "Item";
-		constexpr const static rivet::rivet_type_id Item_type_id = 0x2f8be5ae;
-		constexpr const static std::string_view Price_type_name = "Price";
-		constexpr const static rivet::rivet_type_id Price_type_id = 0xd39bee18;
-		constexpr const static std::string_view MissionShow_type_name = "MissionShow";
-		constexpr const static rivet::rivet_type_id MissionShow_type_id = 0xc9eea967;
-		constexpr const static std::string_view ObjectiveShow_type_name = "ObjectiveShow";
-		constexpr const static rivet::rivet_type_id ObjectiveShow_type_id = 0x3459cc9c;
-		constexpr const static std::string_view MissionUnlock_type_name = "MissionUnlock";
-		constexpr const static rivet::rivet_type_id MissionUnlock_type_id = 0x489fe4ed;
-		constexpr const static std::string_view ObjectiveUnlock_type_name = "ObjectiveUnlock";
-		constexpr const static rivet::rivet_type_id ObjectiveUnlock_type_id = 0x820fb4fb;
-		constexpr const static std::string_view UnlockedInChallengeMode_type_name = "UnlockedInChallengeMode";
-		constexpr const static rivet::rivet_type_id UnlockedInChallengeMode_type_id = 0xc014338b;
-		constexpr const static std::string_view NowInStockEmergentVO_type_name = "NowInStockEmergentVO";
-		constexpr const static rivet::rivet_type_id NowInStockEmergentVO_type_id = 0xa2ab8889;
-		constexpr const static std::string_view OmegaPrice_type_name = "OmegaPrice";
-		constexpr const static rivet::rivet_type_id OmegaPrice_type_id = 0x6de5f5ca;
-		constexpr const static std::string_view OmegaRequiredCardBonus_type_name = "OmegaRequiredCardBonus";
-		constexpr const static rivet::rivet_type_id OmegaRequiredCardBonus_type_id = 0xc46aa58d;
-		constexpr const static std::string_view OmegaOnly_type_name = "OmegaOnly";
-		constexpr const static rivet::rivet_type_id OmegaOnly_type_id = 0xa5423192;
-		constexpr const static std::string_view IsAmmo_type_name = "IsAmmo";
-		constexpr const static rivet::rivet_type_id IsAmmo_type_id = 0x70ca2541;
-		constexpr const static std::string_view WeaponInfo_type_name = "WeaponInfo";
-		constexpr const static rivet::rivet_type_id WeaponInfo_type_id = 0x5fab299d; 
+		constexpr static std::string_view Item_type_name = "Item";
+		constexpr static rivet::rivet_type_id Item_type_id = 0x2f8be5ae;
+		constexpr static std::string_view Price_type_name = "Price";
+		constexpr static rivet::rivet_type_id Price_type_id = 0xd39bee18;
+		constexpr static std::string_view MissionShow_type_name = "MissionShow";
+		constexpr static rivet::rivet_type_id MissionShow_type_id = 0xc9eea967;
+		constexpr static std::string_view ObjectiveShow_type_name = "ObjectiveShow";
+		constexpr static rivet::rivet_type_id ObjectiveShow_type_id = 0x3459cc9c;
+		constexpr static std::string_view MissionUnlock_type_name = "MissionUnlock";
+		constexpr static rivet::rivet_type_id MissionUnlock_type_id = 0x489fe4ed;
+		constexpr static std::string_view ObjectiveUnlock_type_name = "ObjectiveUnlock";
+		constexpr static rivet::rivet_type_id ObjectiveUnlock_type_id = 0x820fb4fb;
+		constexpr static std::string_view UnlockedInChallengeMode_type_name = "UnlockedInChallengeMode";
+		constexpr static rivet::rivet_type_id UnlockedInChallengeMode_type_id = 0xc014338b;
+		constexpr static std::string_view NowInStockEmergentVO_type_name = "NowInStockEmergentVO";
+		constexpr static rivet::rivet_type_id NowInStockEmergentVO_type_id = 0xa2ab8889;
+		constexpr static std::string_view OmegaPrice_type_name = "OmegaPrice";
+		constexpr static rivet::rivet_type_id OmegaPrice_type_id = 0x6de5f5ca;
+		constexpr static std::string_view OmegaRequiredCardBonus_type_name = "OmegaRequiredCardBonus";
+		constexpr static rivet::rivet_type_id OmegaRequiredCardBonus_type_id = 0xc46aa58d;
+		constexpr static std::string_view OmegaOnly_type_name = "OmegaOnly";
+		constexpr static rivet::rivet_type_id OmegaOnly_type_id = 0xa5423192;
+		constexpr static std::string_view IsAmmo_type_name = "IsAmmo";
+		constexpr static rivet::rivet_type_id IsAmmo_type_id = 0x70ca2541;
+		constexpr static std::string_view WeaponInfo_type_name = "WeaponInfo";
+		constexpr static rivet::rivet_type_id WeaponInfo_type_id = 0x5fab299d; 
 
 		explicit VendorItemData() = default;
 		explicit VendorItemData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

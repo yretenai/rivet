@@ -3,11 +3,11 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/BotReactionBucket.hpp>
-#include <rivet/ddl/generated/KnockbackData.hpp>
-#include <rivet/ddl/generated/KnockdownData.hpp>
+#include <rivet/ddl/generated/BotHitShaderData.hpp>
 #include <rivet/ddl/generated/DeathData.hpp>
-#include <rivet/ddl/generated/BotHitShaderData.hpp> 
+#include <rivet/ddl/generated/KnockdownData.hpp>
+#include <rivet/ddl/generated/KnockbackData.hpp>
+#include <rivet/ddl/generated/BotReactionBucket.hpp> 
 
 #include <rivet/ddl/generated/HitReactGamePrius.hpp>
 

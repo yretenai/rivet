@@ -23,19 +23,19 @@ namespace rivet::ddl::generated {
 	struct ContractingVolley; 
 
 	struct RIVET_DDL_SHARED AimModAdvContractingSpreadPrius : AimModifierPrius {
-		constexpr const static std::string_view type_name = "AimModAdvContractingSpreadPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xff0c416b;
+		constexpr static std::string_view type_name = "AimModAdvContractingSpreadPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xff0c416b;
 
-		constexpr const static std::string_view InitialVolley_type_name = "InitialVolley";
-		constexpr const static rivet::rivet_type_id InitialVolley_type_id = 0xcc7fd050;
-		constexpr const static std::string_view FinalVolley_type_name = "FinalVolley";
-		constexpr const static rivet::rivet_type_id FinalVolley_type_id = 0x77e56887;
-		constexpr const static std::string_view VolleysToReachFinal_type_name = "VolleysToReachFinal";
-		constexpr const static rivet::rivet_type_id VolleysToReachFinal_type_id = 0xd3958b4;
-		constexpr const static std::string_view ResetTime_type_name = "ResetTime";
-		constexpr const static rivet::rivet_type_id ResetTime_type_id = 0x45a33419;
-		constexpr const static std::string_view ResetDist_type_name = "ResetDist";
-		constexpr const static rivet::rivet_type_id ResetDist_type_id = 0xab4b7cab; 
+		constexpr static std::string_view InitialVolley_type_name = "InitialVolley";
+		constexpr static rivet::rivet_type_id InitialVolley_type_id = 0xcc7fd050;
+		constexpr static std::string_view FinalVolley_type_name = "FinalVolley";
+		constexpr static rivet::rivet_type_id FinalVolley_type_id = 0x77e56887;
+		constexpr static std::string_view VolleysToReachFinal_type_name = "VolleysToReachFinal";
+		constexpr static rivet::rivet_type_id VolleysToReachFinal_type_id = 0xd3958b4;
+		constexpr static std::string_view ResetTime_type_name = "ResetTime";
+		constexpr static rivet::rivet_type_id ResetTime_type_id = 0x45a33419;
+		constexpr static std::string_view ResetDist_type_name = "ResetDist";
+		constexpr static rivet::rivet_type_id ResetDist_type_id = 0xab4b7cab; 
 
 		explicit AimModAdvContractingSpreadPrius() = default;
 		explicit AimModAdvContractingSpreadPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

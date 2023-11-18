@@ -21,11 +21,11 @@ namespace rivet::ddl::generated {
 	struct ObjSysUnlockOverrideConditionBase; 
 
 	struct RIVET_DDL_SHARED ObjSysUnlockOverrideConditionEntry : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "ObjSysUnlockOverrideConditionEntry";
-		constexpr const static rivet::rivet_type_id type_id = 0x9ec5b23d;
+		constexpr static std::string_view type_name = "ObjSysUnlockOverrideConditionEntry";
+		constexpr static rivet::rivet_type_id type_id = 0x9ec5b23d;
 
-		constexpr const static std::string_view Condition_type_name = "Condition";
-		constexpr const static rivet::rivet_type_id Condition_type_id = 0x3f2b174f; 
+		constexpr static std::string_view Condition_type_name = "Condition";
+		constexpr static rivet::rivet_type_id Condition_type_id = 0x3f2b174f; 
 
 		explicit ObjSysUnlockOverrideConditionEntry() = default;
 		explicit ObjSysUnlockOverrideConditionEntry([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

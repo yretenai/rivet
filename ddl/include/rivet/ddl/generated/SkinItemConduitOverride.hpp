@@ -21,11 +21,11 @@ namespace rivet::ddl::generated {
 	struct AssetReferenceDef; 
 
 	struct RIVET_DDL_SHARED SkinItemConduitOverride : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "SkinItemConduitOverride";
-		constexpr const static rivet::rivet_type_id type_id = 0x3b292579;
+		constexpr static std::string_view type_name = "SkinItemConduitOverride";
+		constexpr static rivet::rivet_type_id type_id = 0x3b292579;
 
-		constexpr const static std::string_view Conduit_type_name = "Conduit";
-		constexpr const static rivet::rivet_type_id Conduit_type_id = 0xfc5131b9; 
+		constexpr static std::string_view Conduit_type_name = "Conduit";
+		constexpr static rivet::rivet_type_id Conduit_type_id = 0xfc5131b9; 
 
 		explicit SkinItemConduitOverride() = default;
 		explicit SkinItemConduitOverride([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

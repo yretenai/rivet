@@ -3,11 +3,11 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/LaserShotTypeShootToTarget.hpp>
 #include <rivet/ddl/generated/LaserShotTypeCentipedeSweep.hpp>
-#include <rivet/ddl/generated/LaserShotTypeSweepFollow.hpp>
+#include <rivet/ddl/generated/LaserShotTypeAnimEventDriven.hpp>
 #include <rivet/ddl/generated/LaserShotTypeSweep.hpp>
-#include <rivet/ddl/generated/LaserShotTypeAnimEventDriven.hpp> 
+#include <rivet/ddl/generated/LaserShotTypeSweepFollow.hpp>
+#include <rivet/ddl/generated/LaserShotTypeShootToTarget.hpp> 
 
 #include <rivet/ddl/generated/BotComboLaserShotType.hpp>
 

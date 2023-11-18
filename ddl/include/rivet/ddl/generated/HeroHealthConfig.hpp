@@ -19,15 +19,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED HeroHealthConfig : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "HeroHealthConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xd5e3d13d;
+		constexpr static std::string_view type_name = "HeroHealthConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xd5e3d13d;
 
-		constexpr const static std::string_view PostCinematicImmunity_type_name = "PostCinematicImmunity";
-		constexpr const static rivet::rivet_type_id PostCinematicImmunity_type_id = 0xacaf5004;
-		constexpr const static std::string_view PostFadeInImmunity_type_name = "PostFadeInImmunity";
-		constexpr const static rivet::rivet_type_id PostFadeInImmunity_type_id = 0xf08f0e37;
-		constexpr const static std::string_view PostHitReactImmunity_type_name = "PostHitReactImmunity";
-		constexpr const static rivet::rivet_type_id PostHitReactImmunity_type_id = 0x195242ce; 
+		constexpr static std::string_view PostCinematicImmunity_type_name = "PostCinematicImmunity";
+		constexpr static rivet::rivet_type_id PostCinematicImmunity_type_id = 0xacaf5004;
+		constexpr static std::string_view PostFadeInImmunity_type_name = "PostFadeInImmunity";
+		constexpr static rivet::rivet_type_id PostFadeInImmunity_type_id = 0xf08f0e37;
+		constexpr static std::string_view PostHitReactImmunity_type_name = "PostHitReactImmunity";
+		constexpr static rivet::rivet_type_id PostHitReactImmunity_type_id = 0x195242ce; 
 
 		explicit HeroHealthConfig() = default;
 		explicit HeroHealthConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

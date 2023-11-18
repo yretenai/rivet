@@ -21,19 +21,19 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DamageModifierConditionHealthThreshholdPrius : DamageModifierConditionBasePrius {
-		constexpr const static std::string_view type_name = "DamageModifierConditionHealthThreshholdPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x4e90fbf1;
+		constexpr static std::string_view type_name = "DamageModifierConditionHealthThreshholdPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x4e90fbf1;
 
-		constexpr const static std::string_view HealthAmount_type_name = "HealthAmount";
-		constexpr const static rivet::rivet_type_id HealthAmount_type_id = 0x9b788aa2;
-		constexpr const static std::string_view CompareTotalHealth_type_name = "CompareTotalHealth";
-		constexpr const static rivet::rivet_type_id CompareTotalHealth_type_id = 0x5f86dac3;
-		constexpr const static std::string_view IsMax_type_name = "IsMax";
-		constexpr const static rivet::rivet_type_id IsMax_type_id = 0x68a39ce9;
-		constexpr const static std::string_view IsPercent_type_name = "IsPercent";
-		constexpr const static rivet::rivet_type_id IsPercent_type_id = 0x858c4cf5;
-		constexpr const static std::string_view TestDamagerHealth_type_name = "TestDamagerHealth";
-		constexpr const static rivet::rivet_type_id TestDamagerHealth_type_id = 0xf8628ac0; 
+		constexpr static std::string_view HealthAmount_type_name = "HealthAmount";
+		constexpr static rivet::rivet_type_id HealthAmount_type_id = 0x9b788aa2;
+		constexpr static std::string_view CompareTotalHealth_type_name = "CompareTotalHealth";
+		constexpr static rivet::rivet_type_id CompareTotalHealth_type_id = 0x5f86dac3;
+		constexpr static std::string_view IsMax_type_name = "IsMax";
+		constexpr static rivet::rivet_type_id IsMax_type_id = 0x68a39ce9;
+		constexpr static std::string_view IsPercent_type_name = "IsPercent";
+		constexpr static rivet::rivet_type_id IsPercent_type_id = 0x858c4cf5;
+		constexpr static std::string_view TestDamagerHealth_type_name = "TestDamagerHealth";
+		constexpr static rivet::rivet_type_id TestDamagerHealth_type_id = 0xf8628ac0; 
 
 		explicit DamageModifierConditionHealthThreshholdPrius() = default;
 		explicit DamageModifierConditionHealthThreshholdPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

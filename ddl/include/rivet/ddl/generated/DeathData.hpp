@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DeathData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "DeathData";
-		constexpr const static rivet::rivet_type_id type_id = 0xc5c5429e;
+		constexpr static std::string_view type_name = "DeathData";
+		constexpr static rivet::rivet_type_id type_id = 0xc5c5429e;
 
-		constexpr const static std::string_view BlastKnockbackLevel_type_name = "BlastKnockbackLevel";
-		constexpr const static rivet::rivet_type_id BlastKnockbackLevel_type_id = 0x4c616d1f; 
+		constexpr static std::string_view BlastKnockbackLevel_type_name = "BlastKnockbackLevel";
+		constexpr static rivet::rivet_type_id BlastKnockbackLevel_type_id = 0x4c616d1f; 
 
 		explicit DeathData() = default;
 		explicit DeathData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

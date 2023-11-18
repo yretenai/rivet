@@ -19,17 +19,17 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED VehicleCollisionInfo : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "VehicleCollisionInfo";
-		constexpr const static rivet::rivet_type_id type_id = 0x59a7ee0b;
+		constexpr static std::string_view type_name = "VehicleCollisionInfo";
+		constexpr static rivet::rivet_type_id type_id = 0x59a7ee0b;
 
-		constexpr const static std::string_view ObstacleStopDist_type_name = "ObstacleStopDist";
-		constexpr const static rivet::rivet_type_id ObstacleStopDist_type_id = 0x78f92315;
-		constexpr const static std::string_view ObstacleNoteDist_type_name = "ObstacleNoteDist";
-		constexpr const static rivet::rivet_type_id ObstacleNoteDist_type_id = 0x3b8f2571;
-		constexpr const static std::string_view MinDistanceToObstacle_type_name = "MinDistanceToObstacle";
-		constexpr const static rivet::rivet_type_id MinDistanceToObstacle_type_id = 0x1a2a6b45;
-		constexpr const static std::string_view ObstacleSampleCount_type_name = "ObstacleSampleCount";
-		constexpr const static rivet::rivet_type_id ObstacleSampleCount_type_id = 0xdcd1b83f; 
+		constexpr static std::string_view ObstacleStopDist_type_name = "ObstacleStopDist";
+		constexpr static rivet::rivet_type_id ObstacleStopDist_type_id = 0x78f92315;
+		constexpr static std::string_view ObstacleNoteDist_type_name = "ObstacleNoteDist";
+		constexpr static rivet::rivet_type_id ObstacleNoteDist_type_id = 0x3b8f2571;
+		constexpr static std::string_view MinDistanceToObstacle_type_name = "MinDistanceToObstacle";
+		constexpr static rivet::rivet_type_id MinDistanceToObstacle_type_id = 0x1a2a6b45;
+		constexpr static std::string_view ObstacleSampleCount_type_name = "ObstacleSampleCount";
+		constexpr static rivet::rivet_type_id ObstacleSampleCount_type_id = 0xdcd1b83f; 
 
 		explicit VehicleCollisionInfo() = default;
 		explicit VehicleCollisionInfo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view HitLocation_type_name = "HitLocation";
-	constexpr const static rivet::rivet_type_id HitLocation_type_id = 0x4e3b1edd;
+	constexpr static std::string_view HitLocation_type_name = "HitLocation";
+	constexpr static rivet::rivet_type_id HitLocation_type_id = 0x4e3b1edd;
 
-	constexpr const static std::array<std::string_view, 8> HitLocation_values = {
+	constexpr static std::array<std::string_view, 8> HitLocation_values = {
 		"None",
 		"Head",
 		"Torso",

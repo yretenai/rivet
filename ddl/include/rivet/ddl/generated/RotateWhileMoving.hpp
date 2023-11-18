@@ -17,26 +17,26 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/OrientationMode.hpp>
-#include <rivet/ddl/generated/enums/xea512758.hpp> 
+#include <rivet/ddl/generated/enums/xea512758.hpp>
+#include <rivet/ddl/generated/OrientationMode.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED RotateWhileMoving : OrientationMode {
-		constexpr const static std::string_view type_name = "RotateWhileMoving";
-		constexpr const static rivet::rivet_type_id type_id = 0x64449591;
+		constexpr static std::string_view type_name = "RotateWhileMoving";
+		constexpr static rivet::rivet_type_id type_id = 0x64449591;
 
-		constexpr const static std::string_view Axis_type_name = "Axis";
-		constexpr const static rivet::rivet_type_id Axis_type_id = 0xb59f464a;
-		constexpr const static std::string_view RotationalSpeed_type_name = "RotationalSpeed";
-		constexpr const static rivet::rivet_type_id RotationalSpeed_type_id = 0x1691e955;
-		constexpr const static std::string_view RotationJoint_type_name = "RotationJoint";
-		constexpr const static rivet::rivet_type_id RotationJoint_type_id = 0x77400fef;
-		constexpr const static std::string_view LocalToVelocity_type_name = "LocalToVelocity";
-		constexpr const static rivet::rivet_type_id LocalToVelocity_type_id = 0x4213956b;
-		constexpr const static std::string_view TiltWithVelocity_type_name = "TiltWithVelocity";
-		constexpr const static rivet::rivet_type_id TiltWithVelocity_type_id = 0x17226367;
-		constexpr const static std::string_view AxisIsWorld_type_name = "AxisIsWorld";
-		constexpr const static rivet::rivet_type_id AxisIsWorld_type_id = 0x21314bb0; 
+		constexpr static std::string_view Axis_type_name = "Axis";
+		constexpr static rivet::rivet_type_id Axis_type_id = 0xb59f464a;
+		constexpr static std::string_view RotationalSpeed_type_name = "RotationalSpeed";
+		constexpr static rivet::rivet_type_id RotationalSpeed_type_id = 0x1691e955;
+		constexpr static std::string_view RotationJoint_type_name = "RotationJoint";
+		constexpr static rivet::rivet_type_id RotationJoint_type_id = 0x77400fef;
+		constexpr static std::string_view LocalToVelocity_type_name = "LocalToVelocity";
+		constexpr static rivet::rivet_type_id LocalToVelocity_type_id = 0x4213956b;
+		constexpr static std::string_view TiltWithVelocity_type_name = "TiltWithVelocity";
+		constexpr static rivet::rivet_type_id TiltWithVelocity_type_id = 0x17226367;
+		constexpr static std::string_view AxisIsWorld_type_name = "AxisIsWorld";
+		constexpr static rivet::rivet_type_id AxisIsWorld_type_id = 0x21314bb0; 
 
 		explicit RotateWhileMoving() = default;
 		explicit RotateWhileMoving([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

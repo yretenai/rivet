@@ -21,15 +21,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ManualAwarenessPrius : AwarenessBasePrius {
-		constexpr const static std::string_view type_name = "ManualAwarenessPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xb3d7fa07;
+		constexpr static std::string_view type_name = "ManualAwarenessPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xb3d7fa07;
 
-		constexpr const static std::string_view UpdateVisionShapes_type_name = "UpdateVisionShapes";
-		constexpr const static rivet::rivet_type_id UpdateVisionShapes_type_id = 0x9a4d8bb9;
-		constexpr const static std::string_view Force_type_name = "Force";
-		constexpr const static rivet::rivet_type_id Force_type_id = 0x8e3b4fe9;
-		constexpr const static std::string_view PerformLOSTests_type_name = "PerformLOSTests";
-		constexpr const static rivet::rivet_type_id PerformLOSTests_type_id = 0x8893521; 
+		constexpr static std::string_view UpdateVisionShapes_type_name = "UpdateVisionShapes";
+		constexpr static rivet::rivet_type_id UpdateVisionShapes_type_id = 0x9a4d8bb9;
+		constexpr static std::string_view Force_type_name = "Force";
+		constexpr static rivet::rivet_type_id Force_type_id = 0x8e3b4fe9;
+		constexpr static std::string_view PerformLOSTests_type_name = "PerformLOSTests";
+		constexpr static rivet::rivet_type_id PerformLOSTests_type_id = 0x8893521; 
 
 		explicit ManualAwarenessPrius() = default;
 		explicit ManualAwarenessPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

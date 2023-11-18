@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED WaterAwarenessPrius : OmniAwarenessPrius {
-		constexpr const static std::string_view type_name = "WaterAwarenessPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xcddf63a8;
+		constexpr static std::string_view type_name = "WaterAwarenessPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xcddf63a8;
 
 		explicit WaterAwarenessPrius() = default;
 		explicit WaterAwarenessPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED SpawnShotTargetingMode : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "SpawnShotTargetingMode";
-		constexpr const static rivet::rivet_type_id type_id = 0x8966918b;
+		constexpr static std::string_view type_name = "SpawnShotTargetingMode";
+		constexpr static rivet::rivet_type_id type_id = 0x8966918b;
 
-		constexpr const static std::string_view VectorMode_type_name = "VectorMode";
-		constexpr const static rivet::rivet_type_id VectorMode_type_id = 0xff506db2;
-		constexpr const static std::string_view VectorSource_type_name = "VectorSource";
-		constexpr const static rivet::rivet_type_id VectorSource_type_id = 0x5ee865d8; 
+		constexpr static std::string_view VectorMode_type_name = "VectorMode";
+		constexpr static rivet::rivet_type_id VectorMode_type_id = 0xff506db2;
+		constexpr static std::string_view VectorSource_type_name = "VectorSource";
+		constexpr static rivet::rivet_type_id VectorSource_type_id = 0x5ee865d8; 
 
 		explicit SpawnShotTargetingMode() = default;
 		explicit SpawnShotTargetingMode([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

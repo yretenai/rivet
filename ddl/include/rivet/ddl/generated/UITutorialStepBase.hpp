@@ -23,19 +23,19 @@ namespace rivet::ddl::generated {
 	struct UITutorialAllowableInput; 
 
 	struct RIVET_DDL_SHARED UITutorialStepBase : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "UITutorialStepBase";
-		constexpr const static rivet::rivet_type_id type_id = 0x61fbfd47;
+		constexpr static std::string_view type_name = "UITutorialStepBase";
+		constexpr static rivet::rivet_type_id type_id = 0x61fbfd47;
 
-		constexpr const static std::string_view Text_type_name = "Text";
-		constexpr const static rivet::rivet_type_id Text_type_id = 0xb1b6777;
-		constexpr const static std::string_view PostStepVO_type_name = "PostStepVO";
-		constexpr const static rivet::rivet_type_id PostStepVO_type_id = 0xa3146a0d;
-		constexpr const static std::string_view AllowableInputs_type_name = "AllowableInputs";
-		constexpr const static rivet::rivet_type_id AllowableInputs_type_id = 0x373690c8;
-		constexpr const static std::string_view ModalButton_type_name = "ModalButton";
-		constexpr const static rivet::rivet_type_id ModalButton_type_id = 0x80473a41;
-		constexpr const static std::string_view ElementPosition_type_name = "ElementPosition";
-		constexpr const static rivet::rivet_type_id ElementPosition_type_id = 0x3f12f707; 
+		constexpr static std::string_view Text_type_name = "Text";
+		constexpr static rivet::rivet_type_id Text_type_id = 0xb1b6777;
+		constexpr static std::string_view PostStepVO_type_name = "PostStepVO";
+		constexpr static rivet::rivet_type_id PostStepVO_type_id = 0xa3146a0d;
+		constexpr static std::string_view AllowableInputs_type_name = "AllowableInputs";
+		constexpr static rivet::rivet_type_id AllowableInputs_type_id = 0x373690c8;
+		constexpr static std::string_view ModalButton_type_name = "ModalButton";
+		constexpr static rivet::rivet_type_id ModalButton_type_id = 0x80473a41;
+		constexpr static std::string_view ElementPosition_type_name = "ElementPosition";
+		constexpr static rivet::rivet_type_id ElementPosition_type_id = 0x3f12f707; 
 
 		explicit UITutorialStepBase() = default;
 		explicit UITutorialStepBase([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

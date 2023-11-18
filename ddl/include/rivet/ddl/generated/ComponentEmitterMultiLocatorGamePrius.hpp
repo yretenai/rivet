@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ComponentEmitterMultiLocatorGamePrius : ComponentEmitterBasePrius {
-		constexpr const static std::string_view type_name = "ComponentEmitterMultiLocatorGamePrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x1ff647ba;
+		constexpr static std::string_view type_name = "ComponentEmitterMultiLocatorGamePrius";
+		constexpr static rivet::rivet_type_id type_id = 0x1ff647ba;
 
-		constexpr const static std::string_view DefaultLocators_type_name = "DefaultLocators";
-		constexpr const static rivet::rivet_type_id DefaultLocators_type_id = 0xba29f75f;
-		constexpr const static std::string_view UpgradedLocators_type_name = "UpgradedLocators";
-		constexpr const static rivet::rivet_type_id UpgradedLocators_type_id = 0x2fe7ad2; 
+		constexpr static std::string_view DefaultLocators_type_name = "DefaultLocators";
+		constexpr static rivet::rivet_type_id DefaultLocators_type_id = 0xba29f75f;
+		constexpr static std::string_view UpgradedLocators_type_name = "UpgradedLocators";
+		constexpr static rivet::rivet_type_id UpgradedLocators_type_id = 0x2fe7ad2; 
 
 		explicit ComponentEmitterMultiLocatorGamePrius() = default;
 		explicit ComponentEmitterMultiLocatorGamePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

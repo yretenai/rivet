@@ -19,11 +19,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ModeUnavailableData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "ModeUnavailableData";
-		constexpr const static rivet::rivet_type_id type_id = 0xa52f8aca;
+		constexpr static std::string_view type_name = "ModeUnavailableData";
+		constexpr static rivet::rivet_type_id type_id = 0xa52f8aca;
 
-		constexpr const static std::string_view Objectives_type_name = "Objectives";
-		constexpr const static rivet::rivet_type_id Objectives_type_id = 0xb7863755; 
+		constexpr static std::string_view Objectives_type_name = "Objectives";
+		constexpr static rivet::rivet_type_id Objectives_type_id = 0xb7863755; 
 
 		explicit ModeUnavailableData() = default;
 		explicit ModeUnavailableData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

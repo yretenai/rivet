@@ -19,8 +19,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED BaseComponentAmmoPrius : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "BaseComponentAmmoPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x22214878;
+		constexpr static std::string_view type_name = "BaseComponentAmmoPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x22214878;
 
 		explicit BaseComponentAmmoPrius() = default;
 		explicit BaseComponentAmmoPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

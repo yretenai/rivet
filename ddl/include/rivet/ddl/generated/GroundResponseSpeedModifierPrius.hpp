@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct HeroSpeedConfigCollection; 
 
 	struct RIVET_DDL_SHARED GroundResponseSpeedModifierPrius : HeroGroundResponseBasePrius {
-		constexpr const static std::string_view type_name = "GroundResponseSpeedModifierPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x42c2b55c;
+		constexpr static std::string_view type_name = "GroundResponseSpeedModifierPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x42c2b55c;
 
-		constexpr const static std::string_view SpeedConfigCollection_type_name = "SpeedConfigCollection";
-		constexpr const static rivet::rivet_type_id SpeedConfigCollection_type_id = 0x7630c913; 
+		constexpr static std::string_view SpeedConfigCollection_type_name = "SpeedConfigCollection";
+		constexpr static rivet::rivet_type_id SpeedConfigCollection_type_id = 0x7630c913; 
 
 		explicit GroundResponseSpeedModifierPrius() = default;
 		explicit GroundResponseSpeedModifierPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

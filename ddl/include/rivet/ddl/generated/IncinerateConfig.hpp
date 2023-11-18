@@ -21,19 +21,19 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED IncinerateConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "IncinerateConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x552a26f1;
+		constexpr static std::string_view type_name = "IncinerateConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x552a26f1;
 
-		constexpr const static std::string_view PreMaterialGraph_type_name = "PreMaterialGraph";
-		constexpr const static rivet::rivet_type_id PreMaterialGraph_type_id = 0xa9b2b374;
-		constexpr const static std::string_view PostMaterialGraph_type_name = "PostMaterialGraph";
-		constexpr const static rivet::rivet_type_id PostMaterialGraph_type_id = 0xcaf646bf;
-		constexpr const static std::string_view DefaultDuration_type_name = "DefaultDuration";
-		constexpr const static rivet::rivet_type_id DefaultDuration_type_id = 0xfa0f8223;
-		constexpr const static std::string_view DefaultDelay_type_name = "DefaultDelay";
-		constexpr const static rivet::rivet_type_id DefaultDelay_type_id = 0xa801dc02;
-		constexpr const static std::string_view UseJointCrawl_type_name = "UseJointCrawl";
-		constexpr const static rivet::rivet_type_id UseJointCrawl_type_id = 0xd85731c6; 
+		constexpr static std::string_view PreMaterialGraph_type_name = "PreMaterialGraph";
+		constexpr static rivet::rivet_type_id PreMaterialGraph_type_id = 0xa9b2b374;
+		constexpr static std::string_view PostMaterialGraph_type_name = "PostMaterialGraph";
+		constexpr static rivet::rivet_type_id PostMaterialGraph_type_id = 0xcaf646bf;
+		constexpr static std::string_view DefaultDuration_type_name = "DefaultDuration";
+		constexpr static rivet::rivet_type_id DefaultDuration_type_id = 0xfa0f8223;
+		constexpr static std::string_view DefaultDelay_type_name = "DefaultDelay";
+		constexpr static rivet::rivet_type_id DefaultDelay_type_id = 0xa801dc02;
+		constexpr static std::string_view UseJointCrawl_type_name = "UseJointCrawl";
+		constexpr static rivet::rivet_type_id UseJointCrawl_type_id = 0xd85731c6; 
 
 		explicit IncinerateConfig() = default;
 		explicit IncinerateConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

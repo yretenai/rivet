@@ -20,35 +20,35 @@
 #include <rivet/ddl/generated/ConfigBase.hpp> 
 
 namespace rivet::ddl::generated {
-	struct DDLVector3;
-	struct CameraAimContextBlend; 
+	struct CameraAimContextBlend;
+	struct DDLVector3; 
 
 	struct RIVET_DDL_SHARED CameraAimContextConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "CameraAimContextConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xcb83b8aa;
+		constexpr static std::string_view type_name = "CameraAimContextConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xcb83b8aa;
 
-		constexpr const static std::string_view FieldOfViewStand_type_name = "FieldOfViewStand";
-		constexpr const static rivet::rivet_type_id FieldOfViewStand_type_id = 0xbf1a570a;
-		constexpr const static std::string_view StandPivotHeight_type_name = "StandPivotHeight";
-		constexpr const static rivet::rivet_type_id StandPivotHeight_type_id = 0x9d94a803;
-		constexpr const static std::string_view TargetSpeedFactorDist_type_name = "TargetSpeedFactorDist";
-		constexpr const static rivet::rivet_type_id TargetSpeedFactorDist_type_id = 0xfc1f45a9;
-		constexpr const static std::string_view TargetSpeedFactorMinSpeed_type_name = "TargetSpeedFactorMinSpeed";
-		constexpr const static rivet::rivet_type_id TargetSpeedFactorMinSpeed_type_id = 0x9bf3c383;
-		constexpr const static std::string_view TargetSpeedFactorMaxSpeed_type_name = "TargetSpeedFactorMaxSpeed";
-		constexpr const static rivet::rivet_type_id TargetSpeedFactorMaxSpeed_type_id = 0x7d936c62;
-		constexpr const static std::string_view StandOffsetLevel_type_name = "StandOffsetLevel";
-		constexpr const static rivet::rivet_type_id StandOffsetLevel_type_id = 0x597528ab;
-		constexpr const static std::string_view StandOffsetDown_type_name = "StandOffsetDown";
-		constexpr const static rivet::rivet_type_id StandOffsetDown_type_id = 0x80fff9e0;
-		constexpr const static std::string_view StandOffsetUp_type_name = "StandOffsetUp";
-		constexpr const static rivet::rivet_type_id StandOffsetUp_type_id = 0xff496313;
-		constexpr const static std::string_view BlendIn_type_name = "BlendIn";
-		constexpr const static rivet::rivet_type_id BlendIn_type_id = 0xb1dd8d49;
-		constexpr const static std::string_view BlendOut_type_name = "BlendOut";
-		constexpr const static rivet::rivet_type_id BlendOut_type_id = 0xf56226b4;
-		constexpr const static std::string_view OverridesHeroConfig_type_name = "OverridesHeroConfig";
-		constexpr const static rivet::rivet_type_id OverridesHeroConfig_type_id = 0x8223193e; 
+		constexpr static std::string_view FieldOfViewStand_type_name = "FieldOfViewStand";
+		constexpr static rivet::rivet_type_id FieldOfViewStand_type_id = 0xbf1a570a;
+		constexpr static std::string_view StandPivotHeight_type_name = "StandPivotHeight";
+		constexpr static rivet::rivet_type_id StandPivotHeight_type_id = 0x9d94a803;
+		constexpr static std::string_view TargetSpeedFactorDist_type_name = "TargetSpeedFactorDist";
+		constexpr static rivet::rivet_type_id TargetSpeedFactorDist_type_id = 0xfc1f45a9;
+		constexpr static std::string_view TargetSpeedFactorMinSpeed_type_name = "TargetSpeedFactorMinSpeed";
+		constexpr static rivet::rivet_type_id TargetSpeedFactorMinSpeed_type_id = 0x9bf3c383;
+		constexpr static std::string_view TargetSpeedFactorMaxSpeed_type_name = "TargetSpeedFactorMaxSpeed";
+		constexpr static rivet::rivet_type_id TargetSpeedFactorMaxSpeed_type_id = 0x7d936c62;
+		constexpr static std::string_view StandOffsetLevel_type_name = "StandOffsetLevel";
+		constexpr static rivet::rivet_type_id StandOffsetLevel_type_id = 0x597528ab;
+		constexpr static std::string_view StandOffsetDown_type_name = "StandOffsetDown";
+		constexpr static rivet::rivet_type_id StandOffsetDown_type_id = 0x80fff9e0;
+		constexpr static std::string_view StandOffsetUp_type_name = "StandOffsetUp";
+		constexpr static rivet::rivet_type_id StandOffsetUp_type_id = 0xff496313;
+		constexpr static std::string_view BlendIn_type_name = "BlendIn";
+		constexpr static rivet::rivet_type_id BlendIn_type_id = 0xb1dd8d49;
+		constexpr static std::string_view BlendOut_type_name = "BlendOut";
+		constexpr static rivet::rivet_type_id BlendOut_type_id = 0xf56226b4;
+		constexpr static std::string_view OverridesHeroConfig_type_name = "OverridesHeroConfig";
+		constexpr static rivet::rivet_type_id OverridesHeroConfig_type_id = 0x8223193e; 
 
 		explicit CameraAimContextConfig() = default;
 		explicit CameraAimContextConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

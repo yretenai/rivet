@@ -21,13 +21,13 @@ namespace rivet::ddl::generated {
 	struct PhysicsAVMaterialElement; 
 
 	struct RIVET_DDL_SHARED GroundResponseBasePrius : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "GroundResponseBasePrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xf732e8a4;
+		constexpr static std::string_view type_name = "GroundResponseBasePrius";
+		constexpr static rivet::rivet_type_id type_id = 0xf732e8a4;
 
-		constexpr const static std::string_view ResponseName_type_name = "ResponseName";
-		constexpr const static rivet::rivet_type_id ResponseName_type_id = 0x6d072a69;
-		constexpr const static std::string_view Material_type_name = "Material";
-		constexpr const static rivet::rivet_type_id Material_type_id = 0x86bfc8e5; 
+		constexpr static std::string_view ResponseName_type_name = "ResponseName";
+		constexpr static rivet::rivet_type_id ResponseName_type_id = 0x6d072a69;
+		constexpr static std::string_view Material_type_name = "Material";
+		constexpr static rivet::rivet_type_id Material_type_id = 0x86bfc8e5; 
 
 		explicit GroundResponseBasePrius() = default;
 		explicit GroundResponseBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

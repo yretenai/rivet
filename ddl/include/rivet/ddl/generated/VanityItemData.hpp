@@ -17,16 +17,16 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/GameItemData.hpp>
-#include <rivet/ddl/generated/enums/x36ceb0b.hpp> 
+#include <rivet/ddl/generated/enums/x36ceb0b.hpp>
+#include <rivet/ddl/generated/GameItemData.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED VanityItemData : GameItemData {
-		constexpr const static std::string_view type_name = "VanityItemData";
-		constexpr const static rivet::rivet_type_id type_id = 0x3098b726;
+		constexpr static std::string_view type_name = "VanityItemData";
+		constexpr static rivet::rivet_type_id type_id = 0x3098b726;
 
-		constexpr const static std::string_view SkinType_type_name = "SkinType";
-		constexpr const static rivet::rivet_type_id SkinType_type_id = 0x301c5cc0; 
+		constexpr static std::string_view SkinType_type_name = "SkinType";
+		constexpr static rivet::rivet_type_id SkinType_type_id = 0x301c5cc0; 
 
 		explicit VanityItemData() = default;
 		explicit VanityItemData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

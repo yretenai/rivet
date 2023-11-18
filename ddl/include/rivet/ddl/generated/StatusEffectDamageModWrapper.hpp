@@ -21,11 +21,11 @@ namespace rivet::ddl::generated {
 	struct DamageModifierIncomingPrius; 
 
 	struct RIVET_DDL_SHARED StatusEffectDamageModWrapper : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "StatusEffectDamageModWrapper";
-		constexpr const static rivet::rivet_type_id type_id = 0xc69a644e;
+		constexpr static std::string_view type_name = "StatusEffectDamageModWrapper";
+		constexpr static rivet::rivet_type_id type_id = 0xc69a644e;
 
-		constexpr const static std::string_view DamageMod_type_name = "DamageMod";
-		constexpr const static rivet::rivet_type_id DamageMod_type_id = 0xa7e16a23; 
+		constexpr static std::string_view DamageMod_type_name = "DamageMod";
+		constexpr static rivet::rivet_type_id DamageMod_type_id = 0xa7e16a23; 
 
 		explicit StatusEffectDamageModWrapper() = default;
 		explicit StatusEffectDamageModWrapper([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

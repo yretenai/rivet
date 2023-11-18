@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct SwapDataEntry; 
 
 	struct RIVET_DDL_SHARED EconomyBoltModelSwapConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "EconomyBoltModelSwapConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x43420566;
+		constexpr static std::string_view type_name = "EconomyBoltModelSwapConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x43420566;
 
-		constexpr const static std::string_view SwapData_type_name = "SwapData";
-		constexpr const static rivet::rivet_type_id SwapData_type_id = 0x82cca5be; 
+		constexpr static std::string_view SwapData_type_name = "SwapData";
+		constexpr static rivet::rivet_type_id SwapData_type_id = 0x82cca5be; 
 
 		explicit EconomyBoltModelSwapConfig() = default;
 		explicit EconomyBoltModelSwapConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

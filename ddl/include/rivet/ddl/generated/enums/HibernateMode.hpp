@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view HibernateMode_type_name = "HibernateMode";
-	constexpr const static rivet::rivet_type_id HibernateMode_type_id = 0xf588598;
+	constexpr static std::string_view HibernateMode_type_name = "HibernateMode";
+	constexpr static rivet::rivet_type_id HibernateMode_type_id = 0xf588598;
 
-	constexpr const static std::array<std::string_view, 4> HibernateMode_values = {
+	constexpr static std::array<std::string_view, 4> HibernateMode_values = {
 		"kNone",
 		"kMidRange",
 		"kFarRange",

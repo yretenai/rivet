@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct ShootProjectileData; 
 
 	struct RIVET_DDL_SHARED BotComboMoveStandAndShoot : BotComboMove {
-		constexpr const static std::string_view type_name = "BotComboMoveStandAndShoot";
-		constexpr const static rivet::rivet_type_id type_id = 0xcd4334d1;
+		constexpr static std::string_view type_name = "BotComboMoveStandAndShoot";
+		constexpr static rivet::rivet_type_id type_id = 0xcd4334d1;
 
-		constexpr const static std::string_view ShootProjectileData_type_name = "ShootProjectileData";
-		constexpr const static rivet::rivet_type_id ShootProjectileData_type_id = 0x9bf02991; 
+		constexpr static std::string_view ShootProjectileData_type_name = "ShootProjectileData";
+		constexpr static rivet::rivet_type_id ShootProjectileData_type_id = 0x9bf02991; 
 
 		explicit BotComboMoveStandAndShoot() = default;
 		explicit BotComboMoveStandAndShoot([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

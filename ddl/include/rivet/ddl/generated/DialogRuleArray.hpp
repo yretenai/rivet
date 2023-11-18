@@ -21,11 +21,11 @@ namespace rivet::ddl::generated {
 	struct DialogRuleContainer; 
 
 	struct RIVET_DDL_SHARED DialogRuleArray : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "DialogRuleArray";
-		constexpr const static rivet::rivet_type_id type_id = 0x3a0fa4f4;
+		constexpr static std::string_view type_name = "DialogRuleArray";
+		constexpr static rivet::rivet_type_id type_id = 0x3a0fa4f4;
 
-		constexpr const static std::string_view Rules_type_name = "Rules";
-		constexpr const static rivet::rivet_type_id Rules_type_id = 0x90c955fd; 
+		constexpr static std::string_view Rules_type_name = "Rules";
+		constexpr static rivet::rivet_type_id Rules_type_id = 0x90c955fd; 
 
 		explicit DialogRuleArray() = default;
 		explicit DialogRuleArray([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

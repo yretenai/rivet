@@ -23,23 +23,23 @@ namespace rivet::ddl::generated {
 	struct BotMusicValue; 
 
 	struct RIVET_DDL_SHARED MusicIntensityTrackerConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "MusicIntensityTrackerConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x1530d8ed;
+		constexpr static std::string_view type_name = "MusicIntensityTrackerConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x1530d8ed;
 
-		constexpr const static std::string_view LowIntensityThreshold_type_name = "LowIntensityThreshold";
-		constexpr const static rivet::rivet_type_id LowIntensityThreshold_type_id = 0xd96bc793;
-		constexpr const static std::string_view HighIntensityThreshold_type_name = "HighIntensityThreshold";
-		constexpr const static rivet::rivet_type_id HighIntensityThreshold_type_id = 0x39f26870;
-		constexpr const static std::string_view Max_type_name = "Max";
-		constexpr const static rivet::rivet_type_id Max_type_id = 0xb7230b40;
-		constexpr const static std::string_view SlewRate_type_name = "SlewRate";
-		constexpr const static rivet::rivet_type_id SlewRate_type_id = 0xbcbb3fd6;
-		constexpr const static std::string_view DefaultBotValue_type_name = "DefaultBotValue";
-		constexpr const static rivet::rivet_type_id DefaultBotValue_type_id = 0x7c6589ba;
-		constexpr const static std::string_view DefaultBotRadius_type_name = "DefaultBotRadius";
-		constexpr const static rivet::rivet_type_id DefaultBotRadius_type_id = 0xe31f3d21;
-		constexpr const static std::string_view OtherValues_type_name = "OtherValues";
-		constexpr const static rivet::rivet_type_id OtherValues_type_id = 0x525b0339; 
+		constexpr static std::string_view LowIntensityThreshold_type_name = "LowIntensityThreshold";
+		constexpr static rivet::rivet_type_id LowIntensityThreshold_type_id = 0xd96bc793;
+		constexpr static std::string_view HighIntensityThreshold_type_name = "HighIntensityThreshold";
+		constexpr static rivet::rivet_type_id HighIntensityThreshold_type_id = 0x39f26870;
+		constexpr static std::string_view Max_type_name = "Max";
+		constexpr static rivet::rivet_type_id Max_type_id = 0xb7230b40;
+		constexpr static std::string_view SlewRate_type_name = "SlewRate";
+		constexpr static rivet::rivet_type_id SlewRate_type_id = 0xbcbb3fd6;
+		constexpr static std::string_view DefaultBotValue_type_name = "DefaultBotValue";
+		constexpr static rivet::rivet_type_id DefaultBotValue_type_id = 0x7c6589ba;
+		constexpr static std::string_view DefaultBotRadius_type_name = "DefaultBotRadius";
+		constexpr static rivet::rivet_type_id DefaultBotRadius_type_id = 0xe31f3d21;
+		constexpr static std::string_view OtherValues_type_name = "OtherValues";
+		constexpr static rivet::rivet_type_id OtherValues_type_id = 0x525b0339; 
 
 		explicit MusicIntensityTrackerConfig() = default;
 		explicit MusicIntensityTrackerConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

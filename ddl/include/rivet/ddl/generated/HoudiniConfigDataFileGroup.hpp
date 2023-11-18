@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED HoudiniConfigDataFileGroup : HoudiniConfigData {
-		constexpr const static std::string_view type_name = "HoudiniConfigDataFileGroup";
-		constexpr const static rivet::rivet_type_id type_id = 0xfdd25430;
+		constexpr static std::string_view type_name = "HoudiniConfigDataFileGroup";
+		constexpr static rivet::rivet_type_id type_id = 0xfdd25430;
 
-		constexpr const static std::string_view Values_type_name = "Values";
-		constexpr const static rivet::rivet_type_id Values_type_id = 0x4df0281; 
+		constexpr static std::string_view Values_type_name = "Values";
+		constexpr static rivet::rivet_type_id Values_type_id = 0x4df0281; 
 
 		explicit HoudiniConfigDataFileGroup() = default;
 		explicit HoudiniConfigDataFileGroup([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

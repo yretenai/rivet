@@ -21,19 +21,19 @@
 #include <rivet/ddl/generated/WeaponMeleePrius.hpp> 
 
 namespace rivet::ddl::generated {
-	struct ThrownWeaponDamageInfo;
-	struct WeaponPickupAttachment; 
+	struct WeaponPickupAttachment;
+	struct ThrownWeaponDamageInfo; 
 
 	struct RIVET_DDL_SHARED WeaponWrenchPrius : WeaponMeleePrius {
-		constexpr const static std::string_view type_name = "WeaponWrenchPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x758e6188;
+		constexpr static std::string_view type_name = "WeaponWrenchPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x758e6188;
 
-		constexpr const static std::string_view ThrowDamageInfo_type_name = "ThrowDamageInfo";
-		constexpr const static rivet::rivet_type_id ThrowDamageInfo_type_id = 0x451c6d0;
-		constexpr const static std::string_view ThrowOrientation_type_name = "ThrowOrientation";
-		constexpr const static rivet::rivet_type_id ThrowOrientation_type_id = 0x82982dfa;
-		constexpr const static std::string_view ThrowPickupAttachment_type_name = "ThrowPickupAttachment";
-		constexpr const static rivet::rivet_type_id ThrowPickupAttachment_type_id = 0x7bf606ec; 
+		constexpr static std::string_view ThrowDamageInfo_type_name = "ThrowDamageInfo";
+		constexpr static rivet::rivet_type_id ThrowDamageInfo_type_id = 0x451c6d0;
+		constexpr static std::string_view ThrowOrientation_type_name = "ThrowOrientation";
+		constexpr static rivet::rivet_type_id ThrowOrientation_type_id = 0x82982dfa;
+		constexpr static std::string_view ThrowPickupAttachment_type_name = "ThrowPickupAttachment";
+		constexpr static rivet::rivet_type_id ThrowPickupAttachment_type_id = 0x7bf606ec; 
 
 		explicit WeaponWrenchPrius() = default;
 		explicit WeaponWrenchPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

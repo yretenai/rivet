@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view xfcb30197_type_name = "xfcb30197";
-	constexpr const static rivet::rivet_type_id xfcb30197_type_id = 0xfcb30197;
+	constexpr static std::string_view xfcb30197_type_name = "xfcb30197";
+	constexpr static rivet::rivet_type_id xfcb30197_type_id = 0xfcb30197;
 
-	constexpr const static std::array<std::string_view, 7> xfcb30197_values = {
+	constexpr static std::array<std::string_view, 7> xfcb30197_values = {
 		"POITypeNone",
 		"POITypeObjective",
 		"POITypeObjectiveOptional",

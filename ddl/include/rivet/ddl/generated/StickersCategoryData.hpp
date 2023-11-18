@@ -21,15 +21,15 @@ namespace rivet::ddl::generated {
 	struct StickersData; 
 
 	struct RIVET_DDL_SHARED StickersCategoryData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "StickersCategoryData";
-		constexpr const static rivet::rivet_type_id type_id = 0xfea56423;
+		constexpr static std::string_view type_name = "StickersCategoryData";
+		constexpr static rivet::rivet_type_id type_id = 0xfea56423;
 
-		constexpr const static std::string_view Label_type_name = "Label";
-		constexpr const static rivet::rivet_type_id Label_type_id = 0x17f49c29;
-		constexpr const static std::string_view Icon_type_name = "Icon";
-		constexpr const static rivet::rivet_type_id Icon_type_id = 0x5504e96b;
-		constexpr const static std::string_view Stickers_type_name = "Stickers";
-		constexpr const static rivet::rivet_type_id Stickers_type_id = 0x228c1166; 
+		constexpr static std::string_view Label_type_name = "Label";
+		constexpr static rivet::rivet_type_id Label_type_id = 0x17f49c29;
+		constexpr static std::string_view Icon_type_name = "Icon";
+		constexpr static rivet::rivet_type_id Icon_type_id = 0x5504e96b;
+		constexpr static std::string_view Stickers_type_name = "Stickers";
+		constexpr static rivet::rivet_type_id Stickers_type_id = 0x228c1166; 
 
 		explicit StickersCategoryData() = default;
 		explicit StickersCategoryData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

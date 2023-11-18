@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct WeaponEquipListenerData; 
 
 	struct RIVET_DDL_SHARED WeaponEquipListenerConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "WeaponEquipListenerConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xdb8aa2d3;
+		constexpr static std::string_view type_name = "WeaponEquipListenerConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xdb8aa2d3;
 
-		constexpr const static std::string_view EquipListenerData_type_name = "EquipListenerData";
-		constexpr const static rivet::rivet_type_id EquipListenerData_type_id = 0xc1c4ec55; 
+		constexpr static std::string_view EquipListenerData_type_name = "EquipListenerData";
+		constexpr static rivet::rivet_type_id EquipListenerData_type_id = 0xc1c4ec55; 
 
 		explicit WeaponEquipListenerConfig() = default;
 		explicit WeaponEquipListenerConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

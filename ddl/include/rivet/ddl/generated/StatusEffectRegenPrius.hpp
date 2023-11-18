@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED StatusEffectRegenPrius : StatusEffectBasePrius {
-		constexpr const static std::string_view type_name = "StatusEffectRegenPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x5723cbbb;
+		constexpr static std::string_view type_name = "StatusEffectRegenPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x5723cbbb;
 
-		constexpr const static std::string_view IsPercent_type_name = "IsPercent";
-		constexpr const static rivet::rivet_type_id IsPercent_type_id = 0x858c4cf5;
-		constexpr const static std::string_view CanRessurect_type_name = "CanRessurect";
-		constexpr const static rivet::rivet_type_id CanRessurect_type_id = 0x8adaccf8; 
+		constexpr static std::string_view IsPercent_type_name = "IsPercent";
+		constexpr static rivet::rivet_type_id IsPercent_type_id = 0x858c4cf5;
+		constexpr static std::string_view CanRessurect_type_name = "CanRessurect";
+		constexpr static rivet::rivet_type_id CanRessurect_type_id = 0x8adaccf8; 
 
 		explicit StatusEffectRegenPrius() = default;
 		explicit StatusEffectRegenPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

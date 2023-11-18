@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED PhotomodeCameraBasePrius : CameraPrius {
-		constexpr const static std::string_view type_name = "PhotomodeCameraBasePrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xede38c7a;
+		constexpr static std::string_view type_name = "PhotomodeCameraBasePrius";
+		constexpr static rivet::rivet_type_id type_id = 0xede38c7a;
 
 		explicit PhotomodeCameraBasePrius() = default;
 		explicit PhotomodeCameraBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

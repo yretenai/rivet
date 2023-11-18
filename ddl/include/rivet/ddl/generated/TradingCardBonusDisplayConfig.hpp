@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct BonusDisplayDef; 
 
 	struct RIVET_DDL_SHARED TradingCardBonusDisplayConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "TradingCardBonusDisplayConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x51539d2f;
+		constexpr static std::string_view type_name = "TradingCardBonusDisplayConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x51539d2f;
 
-		constexpr const static std::string_view BonusDisplayList_type_name = "BonusDisplayList";
-		constexpr const static rivet::rivet_type_id BonusDisplayList_type_id = 0x26720388; 
+		constexpr static std::string_view BonusDisplayList_type_name = "BonusDisplayList";
+		constexpr static rivet::rivet_type_id BonusDisplayList_type_id = 0x26720388; 
 
 		explicit TradingCardBonusDisplayConfig() = default;
 		explicit TradingCardBonusDisplayConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

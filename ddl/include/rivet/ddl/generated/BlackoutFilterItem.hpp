@@ -21,13 +21,13 @@ namespace rivet::ddl::generated {
 	struct AssetReferenceDef; 
 
 	struct RIVET_DDL_SHARED BlackoutFilterItem : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "BlackoutFilterItem";
-		constexpr const static rivet::rivet_type_id type_id = 0xa6eadaf4;
+		constexpr static std::string_view type_name = "BlackoutFilterItem";
+		constexpr static rivet::rivet_type_id type_id = 0xa6eadaf4;
 
-		constexpr const static std::string_view Name_type_name = "Name";
-		constexpr const static rivet::rivet_type_id Name_type_id = 0x6eb3beb6;
-		constexpr const static std::string_view FilterAsset_type_name = "FilterAsset";
-		constexpr const static rivet::rivet_type_id FilterAsset_type_id = 0x7bad33e1; 
+		constexpr static std::string_view Name_type_name = "Name";
+		constexpr static rivet::rivet_type_id Name_type_id = 0x6eb3beb6;
+		constexpr static std::string_view FilterAsset_type_name = "FilterAsset";
+		constexpr static rivet::rivet_type_id FilterAsset_type_id = 0x7bad33e1; 
 
 		explicit BlackoutFilterItem() = default;
 		explicit BlackoutFilterItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED TriggerEffectDataVibration : TriggerEffectDataBase {
-		constexpr const static std::string_view type_name = "TriggerEffectDataVibration";
-		constexpr const static rivet::rivet_type_id type_id = 0xe7ca40e1;
+		constexpr static std::string_view type_name = "TriggerEffectDataVibration";
+		constexpr static rivet::rivet_type_id type_id = 0xe7ca40e1;
 
 		explicit TriggerEffectDataVibration() = default;
 		explicit TriggerEffectDataVibration([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

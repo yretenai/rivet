@@ -18,17 +18,17 @@
 #include <rivet/structures/rivet_serialization.hpp>
 
 namespace rivet::ddl::generated {
-	struct DDLVector3;
-	struct EnvelopeColorDef; 
+	struct EnvelopeColorDef;
+	struct DDLVector3; 
 
 	struct RIVET_DDL_SHARED ModelSplineEnvelopeColorDef : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "ModelSplineEnvelopeColorDef";
-		constexpr const static rivet::rivet_type_id type_id = 0xb662a5d3;
+		constexpr static std::string_view type_name = "ModelSplineEnvelopeColorDef";
+		constexpr static rivet::rivet_type_id type_id = 0xb662a5d3;
 
-		constexpr const static std::string_view BaseValue_type_name = "BaseValue";
-		constexpr const static rivet::rivet_type_id BaseValue_type_id = 0x950d56d7;
-		constexpr const static std::string_view Envelope_type_name = "Envelope";
-		constexpr const static rivet::rivet_type_id Envelope_type_id = 0x7094c518; 
+		constexpr static std::string_view BaseValue_type_name = "BaseValue";
+		constexpr static rivet::rivet_type_id BaseValue_type_id = 0x950d56d7;
+		constexpr static std::string_view Envelope_type_name = "Envelope";
+		constexpr static rivet::rivet_type_id Envelope_type_id = 0x7094c518; 
 
 		explicit ModelSplineEnvelopeColorDef() = default;
 		explicit ModelSplineEnvelopeColorDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

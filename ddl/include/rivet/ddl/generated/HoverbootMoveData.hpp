@@ -19,35 +19,35 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED HoverbootMoveData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "HoverbootMoveData";
-		constexpr const static rivet::rivet_type_id type_id = 0xb14a235e;
+		constexpr static std::string_view type_name = "HoverbootMoveData";
+		constexpr static rivet::rivet_type_id type_id = 0xb14a235e;
 
-		constexpr const static std::string_view InitialMinSpeed_type_name = "InitialMinSpeed";
-		constexpr const static rivet::rivet_type_id InitialMinSpeed_type_id = 0x307e12fe;
-		constexpr const static std::string_view MaxSpeed_type_name = "MaxSpeed";
-		constexpr const static rivet::rivet_type_id MaxSpeed_type_id = 0x16b83961;
-		constexpr const static std::string_view Accel_type_name = "Accel";
-		constexpr const static rivet::rivet_type_id Accel_type_id = 0x44affa24;
-		constexpr const static std::string_view Decel_type_name = "Decel";
-		constexpr const static rivet::rivet_type_id Decel_type_id = 0xa9242a88;
-		constexpr const static std::string_view LateralDecel_type_name = "LateralDecel";
-		constexpr const static rivet::rivet_type_id LateralDecel_type_id = 0xe619575a;
-		constexpr const static std::string_view LateralDecelNoInput_type_name = "LateralDecelNoInput";
-		constexpr const static rivet::rivet_type_id LateralDecelNoInput_type_id = 0x3a973cc4;
-		constexpr const static std::string_view TurnGain_type_name = "TurnGain";
-		constexpr const static rivet::rivet_type_id TurnGain_type_id = 0x38623a3b;
-		constexpr const static std::string_view TurnDamp_type_name = "TurnDamp";
-		constexpr const static rivet::rivet_type_id TurnDamp_type_id = 0xb4b46db2;
-		constexpr const static std::string_view TurnMinSpeed_type_name = "TurnMinSpeed";
-		constexpr const static rivet::rivet_type_id TurnMinSpeed_type_id = 0xe0f22389;
-		constexpr const static std::string_view TurnMaxSpeed_type_name = "TurnMaxSpeed";
-		constexpr const static rivet::rivet_type_id TurnMaxSpeed_type_id = 0x6928c68;
-		constexpr const static std::string_view BreakableSpeedThreshold_type_name = "BreakableSpeedThreshold";
-		constexpr const static rivet::rivet_type_id BreakableSpeedThreshold_type_id = 0x62799f5f;
-		constexpr const static std::string_view NoGroundFallTime_type_name = "NoGroundFallTime";
-		constexpr const static rivet::rivet_type_id NoGroundFallTime_type_id = 0x482d01ab;
-		constexpr const static std::string_view DecelToIdealSpeed_type_name = "DecelToIdealSpeed";
-		constexpr const static rivet::rivet_type_id DecelToIdealSpeed_type_id = 0x5101a65f; 
+		constexpr static std::string_view InitialMinSpeed_type_name = "InitialMinSpeed";
+		constexpr static rivet::rivet_type_id InitialMinSpeed_type_id = 0x307e12fe;
+		constexpr static std::string_view MaxSpeed_type_name = "MaxSpeed";
+		constexpr static rivet::rivet_type_id MaxSpeed_type_id = 0x16b83961;
+		constexpr static std::string_view Accel_type_name = "Accel";
+		constexpr static rivet::rivet_type_id Accel_type_id = 0x44affa24;
+		constexpr static std::string_view Decel_type_name = "Decel";
+		constexpr static rivet::rivet_type_id Decel_type_id = 0xa9242a88;
+		constexpr static std::string_view LateralDecel_type_name = "LateralDecel";
+		constexpr static rivet::rivet_type_id LateralDecel_type_id = 0xe619575a;
+		constexpr static std::string_view LateralDecelNoInput_type_name = "LateralDecelNoInput";
+		constexpr static rivet::rivet_type_id LateralDecelNoInput_type_id = 0x3a973cc4;
+		constexpr static std::string_view TurnGain_type_name = "TurnGain";
+		constexpr static rivet::rivet_type_id TurnGain_type_id = 0x38623a3b;
+		constexpr static std::string_view TurnDamp_type_name = "TurnDamp";
+		constexpr static rivet::rivet_type_id TurnDamp_type_id = 0xb4b46db2;
+		constexpr static std::string_view TurnMinSpeed_type_name = "TurnMinSpeed";
+		constexpr static rivet::rivet_type_id TurnMinSpeed_type_id = 0xe0f22389;
+		constexpr static std::string_view TurnMaxSpeed_type_name = "TurnMaxSpeed";
+		constexpr static rivet::rivet_type_id TurnMaxSpeed_type_id = 0x6928c68;
+		constexpr static std::string_view BreakableSpeedThreshold_type_name = "BreakableSpeedThreshold";
+		constexpr static rivet::rivet_type_id BreakableSpeedThreshold_type_id = 0x62799f5f;
+		constexpr static std::string_view NoGroundFallTime_type_name = "NoGroundFallTime";
+		constexpr static rivet::rivet_type_id NoGroundFallTime_type_id = 0x482d01ab;
+		constexpr static std::string_view DecelToIdealSpeed_type_name = "DecelToIdealSpeed";
+		constexpr static rivet::rivet_type_id DecelToIdealSpeed_type_id = 0x5101a65f; 
 
 		explicit HoverbootMoveData() = default;
 		explicit HoverbootMoveData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

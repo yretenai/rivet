@@ -17,20 +17,20 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/StatusEmitterBasePrius.hpp>
-#include <rivet/ddl/generated/enums/x8d7e44cf.hpp> 
+#include <rivet/ddl/generated/enums/x8d7e44cf.hpp>
+#include <rivet/ddl/generated/StatusEmitterBasePrius.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED StatusEmitterOnDamagedPrius : StatusEmitterBasePrius {
-		constexpr const static std::string_view type_name = "StatusEmitterOnDamagedPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x87f50a9f;
+		constexpr static std::string_view type_name = "StatusEmitterOnDamagedPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x87f50a9f;
 
-		constexpr const static std::string_view DamageThreshold_type_name = "DamageThreshold";
-		constexpr const static rivet::rivet_type_id DamageThreshold_type_id = 0x3623f7e6;
-		constexpr const static std::string_view ProcPercent_type_name = "ProcPercent";
-		constexpr const static rivet::rivet_type_id ProcPercent_type_id = 0x41c6897;
-		constexpr const static std::string_view DamageTypes_type_name = "DamageTypes";
-		constexpr const static rivet::rivet_type_id DamageTypes_type_id = 0xc1e511be; 
+		constexpr static std::string_view DamageThreshold_type_name = "DamageThreshold";
+		constexpr static rivet::rivet_type_id DamageThreshold_type_id = 0x3623f7e6;
+		constexpr static std::string_view ProcPercent_type_name = "ProcPercent";
+		constexpr static rivet::rivet_type_id ProcPercent_type_id = 0x41c6897;
+		constexpr static std::string_view DamageTypes_type_name = "DamageTypes";
+		constexpr static rivet::rivet_type_id DamageTypes_type_id = 0xc1e511be; 
 
 		explicit StatusEmitterOnDamagedPrius() = default;
 		explicit StatusEmitterOnDamagedPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

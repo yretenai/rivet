@@ -21,13 +21,13 @@ namespace rivet::ddl::generated {
 	struct StatusEffectsData; 
 
 	struct RIVET_DDL_SHARED StatusEmitterBasePrius : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "StatusEmitterBasePrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xa041059e;
+		constexpr static std::string_view type_name = "StatusEmitterBasePrius";
+		constexpr static rivet::rivet_type_id type_id = 0xa041059e;
 
-		constexpr const static std::string_view StatusEffectsData_type_name = "StatusEffectsData";
-		constexpr const static rivet::rivet_type_id StatusEffectsData_type_id = 0x3436174e;
-		constexpr const static std::string_view ApplyEffectsWhileDead_type_name = "ApplyEffectsWhileDead";
-		constexpr const static rivet::rivet_type_id ApplyEffectsWhileDead_type_id = 0x7b27a8fa; 
+		constexpr static std::string_view StatusEffectsData_type_name = "StatusEffectsData";
+		constexpr static rivet::rivet_type_id StatusEffectsData_type_id = 0x3436174e;
+		constexpr static std::string_view ApplyEffectsWhileDead_type_name = "ApplyEffectsWhileDead";
+		constexpr static rivet::rivet_type_id ApplyEffectsWhileDead_type_id = 0x7b27a8fa; 
 
 		explicit StatusEmitterBasePrius() = default;
 		explicit StatusEmitterBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

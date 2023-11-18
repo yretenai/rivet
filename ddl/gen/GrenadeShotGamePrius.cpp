@@ -3,9 +3,9 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/PirateHeavyBounceBombShotPrius.hpp>
+#include <rivet/ddl/generated/PirateHeavyMiniBounceBombShotPrius.hpp>
 #include <rivet/ddl/generated/ShotGrenadeHazardPrius.hpp>
-#include <rivet/ddl/generated/PirateHeavyMiniBounceBombShotPrius.hpp> 
+#include <rivet/ddl/generated/PirateHeavyBounceBombShotPrius.hpp> 
 
 #include <rivet/ddl/generated/GrenadeShotGamePrius.hpp>
 

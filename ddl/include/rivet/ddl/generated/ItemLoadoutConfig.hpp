@@ -23,13 +23,13 @@ namespace rivet::ddl::generated {
 	struct ItemLoadout; 
 
 	struct RIVET_DDL_SHARED ItemLoadoutConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "ItemLoadoutConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xfa5c64a7;
+		constexpr static std::string_view type_name = "ItemLoadoutConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xfa5c64a7;
 
-		constexpr const static std::string_view Preload_type_name = "Preload";
-		constexpr const static rivet::rivet_type_id Preload_type_id = 0x6394039b;
-		constexpr const static std::string_view Loadout_type_name = "Loadout";
-		constexpr const static rivet::rivet_type_id Loadout_type_id = 0x7f8fad7a; 
+		constexpr static std::string_view Preload_type_name = "Preload";
+		constexpr static rivet::rivet_type_id Preload_type_id = 0x6394039b;
+		constexpr static std::string_view Loadout_type_name = "Loadout";
+		constexpr static rivet::rivet_type_id Loadout_type_id = 0x7f8fad7a; 
 
 		explicit ItemLoadoutConfig() = default;
 		explicit ItemLoadoutConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

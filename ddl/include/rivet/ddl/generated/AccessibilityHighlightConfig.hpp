@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct AccessibilityHighlightComponentPrius; 
 
 	struct RIVET_DDL_SHARED AccessibilityHighlightConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "AccessibilityHighlightConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x3ecbd146;
+		constexpr static std::string_view type_name = "AccessibilityHighlightConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x3ecbd146;
 
-		constexpr const static std::string_view HighlightData_type_name = "HighlightData";
-		constexpr const static rivet::rivet_type_id HighlightData_type_id = 0x954bcfb0; 
+		constexpr static std::string_view HighlightData_type_name = "HighlightData";
+		constexpr static rivet::rivet_type_id HighlightData_type_id = 0x954bcfb0; 
 
 		explicit AccessibilityHighlightConfig() = default;
 		explicit AccessibilityHighlightConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

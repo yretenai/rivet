@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED VelocityFromTrajectory : GrenadeVelocityMode {
-		constexpr const static std::string_view type_name = "VelocityFromTrajectory";
-		constexpr const static rivet::rivet_type_id type_id = 0xae4502bd;
+		constexpr static std::string_view type_name = "VelocityFromTrajectory";
+		constexpr static rivet::rivet_type_id type_id = 0xae4502bd;
 
 		explicit VelocityFromTrajectory() = default;
 		explicit VelocityFromTrajectory([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

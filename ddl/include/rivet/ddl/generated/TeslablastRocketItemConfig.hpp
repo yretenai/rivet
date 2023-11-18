@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED TeslablastRocketItemConfig : GameItemConfig {
-		constexpr const static std::string_view type_name = "TeslablastRocketItemConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xb01d33d2;
+		constexpr static std::string_view type_name = "TeslablastRocketItemConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xb01d33d2;
 
 		explicit TeslablastRocketItemConfig() = default;
 		explicit TeslablastRocketItemConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

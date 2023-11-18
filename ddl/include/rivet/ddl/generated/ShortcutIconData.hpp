@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ShortcutIconData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "ShortcutIconData";
-		constexpr const static rivet::rivet_type_id type_id = 0xfab722e1;
+		constexpr static std::string_view type_name = "ShortcutIconData";
+		constexpr static rivet::rivet_type_id type_id = 0xfab722e1;
 
-		constexpr const static std::string_view Shortcut_type_name = "Shortcut";
-		constexpr const static rivet::rivet_type_id Shortcut_type_id = 0xd4f982ec;
-		constexpr const static std::string_view Icon_type_name = "Icon";
-		constexpr const static rivet::rivet_type_id Icon_type_id = 0x5504e96b; 
+		constexpr static std::string_view Shortcut_type_name = "Shortcut";
+		constexpr static rivet::rivet_type_id Shortcut_type_id = 0xd4f982ec;
+		constexpr static std::string_view Icon_type_name = "Icon";
+		constexpr static rivet::rivet_type_id Icon_type_id = 0x5504e96b; 
 
 		explicit ShortcutIconData() = default;
 		explicit ShortcutIconData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

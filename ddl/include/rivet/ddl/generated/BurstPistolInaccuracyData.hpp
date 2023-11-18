@@ -19,23 +19,23 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED BurstPistolInaccuracyData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "BurstPistolInaccuracyData";
-		constexpr const static rivet::rivet_type_id type_id = 0xa5e2adfe;
+		constexpr static std::string_view type_name = "BurstPistolInaccuracyData";
+		constexpr static rivet::rivet_type_id type_id = 0xa5e2adfe;
 
-		constexpr const static std::string_view InitialAngle_type_name = "InitialAngle";
-		constexpr const static rivet::rivet_type_id InitialAngle_type_id = 0x158e06db;
-		constexpr const static std::string_view MinShotsToIncrease_type_name = "MinShotsToIncrease";
-		constexpr const static rivet::rivet_type_id MinShotsToIncrease_type_id = 0x3ee300c4;
-		constexpr const static std::string_view AngleMax_type_name = "AngleMax";
-		constexpr const static rivet::rivet_type_id AngleMax_type_id = 0x475aea60;
-		constexpr const static std::string_view IncreaseAnglePerShot_type_name = "IncreaseAnglePerShot";
-		constexpr const static rivet::rivet_type_id IncreaseAnglePerShot_type_id = 0xea409f8b;
-		constexpr const static std::string_view IncreaseAngleMax_type_name = "IncreaseAngleMax";
-		constexpr const static rivet::rivet_type_id IncreaseAngleMax_type_id = 0xc7fe4fd8;
-		constexpr const static std::string_view DecreaseDelay_type_name = "DecreaseDelay";
-		constexpr const static rivet::rivet_type_id DecreaseDelay_type_id = 0x4f49c248;
-		constexpr const static std::string_view DecreaseAnglePerSec_type_name = "DecreaseAnglePerSec";
-		constexpr const static rivet::rivet_type_id DecreaseAnglePerSec_type_id = 0xe33c63c7; 
+		constexpr static std::string_view InitialAngle_type_name = "InitialAngle";
+		constexpr static rivet::rivet_type_id InitialAngle_type_id = 0x158e06db;
+		constexpr static std::string_view MinShotsToIncrease_type_name = "MinShotsToIncrease";
+		constexpr static rivet::rivet_type_id MinShotsToIncrease_type_id = 0x3ee300c4;
+		constexpr static std::string_view AngleMax_type_name = "AngleMax";
+		constexpr static rivet::rivet_type_id AngleMax_type_id = 0x475aea60;
+		constexpr static std::string_view IncreaseAnglePerShot_type_name = "IncreaseAnglePerShot";
+		constexpr static rivet::rivet_type_id IncreaseAnglePerShot_type_id = 0xea409f8b;
+		constexpr static std::string_view IncreaseAngleMax_type_name = "IncreaseAngleMax";
+		constexpr static rivet::rivet_type_id IncreaseAngleMax_type_id = 0xc7fe4fd8;
+		constexpr static std::string_view DecreaseDelay_type_name = "DecreaseDelay";
+		constexpr static rivet::rivet_type_id DecreaseDelay_type_id = 0x4f49c248;
+		constexpr static std::string_view DecreaseAnglePerSec_type_name = "DecreaseAnglePerSec";
+		constexpr static rivet::rivet_type_id DecreaseAnglePerSec_type_id = 0xe33c63c7; 
 
 		explicit BurstPistolInaccuracyData() = default;
 		explicit BurstPistolInaccuracyData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -23,13 +23,13 @@ namespace rivet::ddl::generated {
 	struct DamageInnerOuterData; 
 
 	struct RIVET_DDL_SHARED DamageModifierInnerOuterPrius : DamageModifierOutgoingPrius {
-		constexpr const static std::string_view type_name = "DamageModifierInnerOuterPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xed7100f;
+		constexpr static std::string_view type_name = "DamageModifierInnerOuterPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xed7100f;
 
-		constexpr const static std::string_view DamageData_type_name = "DamageData";
-		constexpr const static rivet::rivet_type_id DamageData_type_id = 0xa521b107;
-		constexpr const static std::string_view RequestID_type_name = "RequestID";
-		constexpr const static rivet::rivet_type_id RequestID_type_id = 0x18f0cfc5; 
+		constexpr static std::string_view DamageData_type_name = "DamageData";
+		constexpr static rivet::rivet_type_id DamageData_type_id = 0xa521b107;
+		constexpr static std::string_view RequestID_type_name = "RequestID";
+		constexpr static rivet::rivet_type_id RequestID_type_id = 0x18f0cfc5; 
 
 		explicit DamageModifierInnerOuterPrius() = default;
 		explicit DamageModifierInnerOuterPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

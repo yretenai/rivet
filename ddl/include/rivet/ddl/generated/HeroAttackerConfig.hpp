@@ -21,19 +21,19 @@ namespace rivet::ddl::generated {
 	struct JobManagerAttackPrius; 
 
 	struct RIVET_DDL_SHARED HeroAttackerConfig : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "HeroAttackerConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x8be51a62;
+		constexpr static std::string_view type_name = "HeroAttackerConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x8be51a62;
 
-		constexpr const static std::string_view SmallMeleeManagerPrius_type_name = "SmallMeleeManagerPrius";
-		constexpr const static rivet::rivet_type_id SmallMeleeManagerPrius_type_id = 0x6bbdd051;
-		constexpr const static std::string_view LargeMeleeManagerPrius_type_name = "LargeMeleeManagerPrius";
-		constexpr const static rivet::rivet_type_id LargeMeleeManagerPrius_type_id = 0x3440eab3;
-		constexpr const static std::string_view StandardRangedManagerPrius_type_name = "StandardRangedManagerPrius";
-		constexpr const static rivet::rivet_type_id StandardRangedManagerPrius_type_id = 0xc4a476fc;
-		constexpr const static std::string_view LargeRangedManagerPrius_type_name = "LargeRangedManagerPrius";
-		constexpr const static rivet::rivet_type_id LargeRangedManagerPrius_type_id = 0xf2dc98da;
-		constexpr const static std::string_view SpecialAttackManagerPrius_type_name = "SpecialAttackManagerPrius";
-		constexpr const static rivet::rivet_type_id SpecialAttackManagerPrius_type_id = 0xac071b52; 
+		constexpr static std::string_view SmallMeleeManagerPrius_type_name = "SmallMeleeManagerPrius";
+		constexpr static rivet::rivet_type_id SmallMeleeManagerPrius_type_id = 0x6bbdd051;
+		constexpr static std::string_view LargeMeleeManagerPrius_type_name = "LargeMeleeManagerPrius";
+		constexpr static rivet::rivet_type_id LargeMeleeManagerPrius_type_id = 0x3440eab3;
+		constexpr static std::string_view StandardRangedManagerPrius_type_name = "StandardRangedManagerPrius";
+		constexpr static rivet::rivet_type_id StandardRangedManagerPrius_type_id = 0xc4a476fc;
+		constexpr static std::string_view LargeRangedManagerPrius_type_name = "LargeRangedManagerPrius";
+		constexpr static rivet::rivet_type_id LargeRangedManagerPrius_type_id = 0xf2dc98da;
+		constexpr static std::string_view SpecialAttackManagerPrius_type_name = "SpecialAttackManagerPrius";
+		constexpr static rivet::rivet_type_id SpecialAttackManagerPrius_type_id = 0xac071b52; 
 
 		explicit HeroAttackerConfig() = default;
 		explicit HeroAttackerConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -17,20 +17,20 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/BattleBrewEmitterBasePrius.hpp>
-#include <rivet/ddl/generated/bitsets/TargetType.hpp> 
+#include <rivet/ddl/generated/bitsets/TargetType.hpp>
+#include <rivet/ddl/generated/BattleBrewEmitterBasePrius.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED BattleBrewEmitterPulsePrius : BattleBrewEmitterBasePrius {
-		constexpr const static std::string_view type_name = "BattleBrewEmitterPulsePrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x1f46b337;
+		constexpr static std::string_view type_name = "BattleBrewEmitterPulsePrius";
+		constexpr static rivet::rivet_type_id type_id = 0x1f46b337;
 
-		constexpr const static std::string_view Range_type_name = "Range";
-		constexpr const static rivet::rivet_type_id Range_type_id = 0x8ad49688;
-		constexpr const static std::string_view Time_type_name = "Time";
-		constexpr const static rivet::rivet_type_id Time_type_id = 0x5f0458f5;
-		constexpr const static std::string_view ValidTargetTypes_type_name = "ValidTargetTypes";
-		constexpr const static rivet::rivet_type_id ValidTargetTypes_type_id = 0x3b4c9303; 
+		constexpr static std::string_view Range_type_name = "Range";
+		constexpr static rivet::rivet_type_id Range_type_id = 0x8ad49688;
+		constexpr static std::string_view Time_type_name = "Time";
+		constexpr static rivet::rivet_type_id Time_type_id = 0x5f0458f5;
+		constexpr static std::string_view ValidTargetTypes_type_name = "ValidTargetTypes";
+		constexpr static rivet::rivet_type_id ValidTargetTypes_type_id = 0x3b4c9303; 
 
 		explicit BattleBrewEmitterPulsePrius() = default;
 		explicit BattleBrewEmitterPulsePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

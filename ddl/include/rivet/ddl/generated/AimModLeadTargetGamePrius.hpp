@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED AimModLeadTargetGamePrius : AimModLeadTargetPrius {
-		constexpr const static std::string_view type_name = "AimModLeadTargetGamePrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xe693be21;
+		constexpr static std::string_view type_name = "AimModLeadTargetGamePrius";
+		constexpr static rivet::rivet_type_id type_id = 0xe693be21;
 
-		constexpr const static std::string_view FlattenY_type_name = "FlattenY";
-		constexpr const static rivet::rivet_type_id FlattenY_type_id = 0x49c3e63d;
-		constexpr const static std::string_view OnlyLeadLaterally_type_name = "OnlyLeadLaterally";
-		constexpr const static rivet::rivet_type_id OnlyLeadLaterally_type_id = 0x7423736d; 
+		constexpr static std::string_view FlattenY_type_name = "FlattenY";
+		constexpr static rivet::rivet_type_id FlattenY_type_id = 0x49c3e63d;
+		constexpr static std::string_view OnlyLeadLaterally_type_name = "OnlyLeadLaterally";
+		constexpr static rivet::rivet_type_id OnlyLeadLaterally_type_id = 0x7423736d; 
 
 		explicit AimModLeadTargetGamePrius() = default;
 		explicit AimModLeadTargetGamePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

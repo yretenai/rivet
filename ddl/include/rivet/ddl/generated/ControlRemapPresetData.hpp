@@ -23,15 +23,15 @@ namespace rivet::ddl::generated {
 	struct ControlRemapSet; 
 
 	struct RIVET_DDL_SHARED ControlRemapPresetData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "ControlRemapPresetData";
-		constexpr const static rivet::rivet_type_id type_id = 0xe733a797;
+		constexpr static std::string_view type_name = "ControlRemapPresetData";
+		constexpr static rivet::rivet_type_id type_id = 0xe733a797;
 
-		constexpr const static std::string_view Id_type_name = "Id";
-		constexpr const static rivet::rivet_type_id Id_type_id = 0x8a514a8d;
-		constexpr const static std::string_view DisplayName_type_name = "DisplayName";
-		constexpr const static rivet::rivet_type_id DisplayName_type_id = 0xeaf33243;
-		constexpr const static std::string_view RemapSet_type_name = "RemapSet";
-		constexpr const static rivet::rivet_type_id RemapSet_type_id = 0xf2c7cf7d; 
+		constexpr static std::string_view Id_type_name = "Id";
+		constexpr static rivet::rivet_type_id Id_type_id = 0x8a514a8d;
+		constexpr static std::string_view DisplayName_type_name = "DisplayName";
+		constexpr static rivet::rivet_type_id DisplayName_type_id = 0xeaf33243;
+		constexpr static std::string_view RemapSet_type_name = "RemapSet";
+		constexpr static rivet::rivet_type_id RemapSet_type_id = 0xf2c7cf7d; 
 
 		explicit ControlRemapPresetData() = default;
 		explicit ControlRemapPresetData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

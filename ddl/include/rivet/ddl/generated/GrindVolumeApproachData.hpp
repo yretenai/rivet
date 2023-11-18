@@ -19,13 +19,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED GrindVolumeApproachData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "GrindVolumeApproachData";
-		constexpr const static rivet::rivet_type_id type_id = 0x688620fd;
+		constexpr static std::string_view type_name = "GrindVolumeApproachData";
+		constexpr static rivet::rivet_type_id type_id = 0x688620fd;
 
-		constexpr const static std::string_view ApproachStartDistance_type_name = "ApproachStartDistance";
-		constexpr const static rivet::rivet_type_id ApproachStartDistance_type_id = 0x4c8c0423;
-		constexpr const static std::string_view ApproachDoneDistance_type_name = "ApproachDoneDistance";
-		constexpr const static rivet::rivet_type_id ApproachDoneDistance_type_id = 0x227583a9; 
+		constexpr static std::string_view ApproachStartDistance_type_name = "ApproachStartDistance";
+		constexpr static rivet::rivet_type_id ApproachStartDistance_type_id = 0x4c8c0423;
+		constexpr static std::string_view ApproachDoneDistance_type_name = "ApproachDoneDistance";
+		constexpr static rivet::rivet_type_id ApproachDoneDistance_type_id = 0x227583a9; 
 
 		explicit GrindVolumeApproachData() = default;
 		explicit GrindVolumeApproachData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

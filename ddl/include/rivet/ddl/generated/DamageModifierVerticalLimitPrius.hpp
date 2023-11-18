@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DamageModifierVerticalLimitPrius : DamageModifierOutgoingPrius {
-		constexpr const static std::string_view type_name = "DamageModifierVerticalLimitPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xa7dda0ec;
+		constexpr static std::string_view type_name = "DamageModifierVerticalLimitPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xa7dda0ec;
 
-		constexpr const static std::string_view OffsetMin_type_name = "OffsetMin";
-		constexpr const static rivet::rivet_type_id OffsetMin_type_id = 0x4782278f;
-		constexpr const static std::string_view OffsetMax_type_name = "OffsetMax";
-		constexpr const static rivet::rivet_type_id OffsetMax_type_id = 0x7b8f18d6; 
+		constexpr static std::string_view OffsetMin_type_name = "OffsetMin";
+		constexpr static rivet::rivet_type_id OffsetMin_type_id = 0x4782278f;
+		constexpr static std::string_view OffsetMax_type_name = "OffsetMax";
+		constexpr static rivet::rivet_type_id OffsetMax_type_id = 0x7b8f18d6; 
 
 		explicit DamageModifierVerticalLimitPrius() = default;
 		explicit DamageModifierVerticalLimitPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

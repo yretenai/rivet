@@ -3,9 +3,9 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/HeroSuperMeterData.hpp>
+#include <rivet/ddl/generated/HeroSuperMeterDebugData.hpp>
 #include <rivet/ddl/generated/HeroSuperMeterBuildUpData.hpp>
-#include <rivet/ddl/generated/HeroSuperMeterDebugData.hpp> 
+#include <rivet/ddl/generated/HeroSuperMeterData.hpp> 
 
 #include <rivet/ddl/generated/HeroSuperMeterPrius.hpp>
 

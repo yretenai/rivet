@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED UIArenaChallengeRewardRaritanium : UIArenaChallengeReward {
-		constexpr const static std::string_view type_name = "UIArenaChallengeRewardRaritanium";
-		constexpr const static rivet::rivet_type_id type_id = 0xa600b97e;
+		constexpr static std::string_view type_name = "UIArenaChallengeRewardRaritanium";
+		constexpr static rivet::rivet_type_id type_id = 0xa600b97e;
 
-		constexpr const static std::string_view Amount_type_name = "Amount";
-		constexpr const static rivet::rivet_type_id Amount_type_id = 0xb0d93e25; 
+		constexpr static std::string_view Amount_type_name = "Amount";
+		constexpr static rivet::rivet_type_id Amount_type_id = 0xb0d93e25; 
 
 		explicit UIArenaChallengeRewardRaritanium() = default;
 		explicit UIArenaChallengeRewardRaritanium([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

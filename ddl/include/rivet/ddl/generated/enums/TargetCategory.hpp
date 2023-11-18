@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view TargetCategory_type_name = "TargetCategory";
-	constexpr const static rivet::rivet_type_id TargetCategory_type_id = 0x1242d225;
+	constexpr static std::string_view TargetCategory_type_name = "TargetCategory";
+	constexpr static rivet::rivet_type_id TargetCategory_type_id = 0x1242d225;
 
-	constexpr const static std::array<std::string_view, 7> TargetCategory_values = {
+	constexpr static std::array<std::string_view, 7> TargetCategory_values = {
 		"kNone",
 		"kSmall",
 		"kMedium",

@@ -21,15 +21,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED VehicleTypeListEntry : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "VehicleTypeListEntry";
-		constexpr const static rivet::rivet_type_id type_id = 0xe4926db4;
+		constexpr static std::string_view type_name = "VehicleTypeListEntry";
+		constexpr static rivet::rivet_type_id type_id = 0xe4926db4;
 
-		constexpr const static std::string_view VehicleClass_type_name = "VehicleClass";
-		constexpr const static rivet::rivet_type_id VehicleClass_type_id = 0xc0bc4d5c;
-		constexpr const static std::string_view Actor_type_name = "Actor";
-		constexpr const static rivet::rivet_type_id Actor_type_id = 0x5d269a38;
-		constexpr const static std::string_view Frequency_type_name = "Frequency";
-		constexpr const static rivet::rivet_type_id Frequency_type_id = 0xa482271f; 
+		constexpr static std::string_view VehicleClass_type_name = "VehicleClass";
+		constexpr static rivet::rivet_type_id VehicleClass_type_id = 0xc0bc4d5c;
+		constexpr static std::string_view Actor_type_name = "Actor";
+		constexpr static rivet::rivet_type_id Actor_type_id = 0x5d269a38;
+		constexpr static std::string_view Frequency_type_name = "Frequency";
+		constexpr static rivet::rivet_type_id Frequency_type_id = 0xa482271f; 
 
 		explicit VehicleTypeListEntry() = default;
 		explicit VehicleTypeListEntry([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -19,11 +19,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED CommonLootData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "CommonLootData";
-		constexpr const static rivet::rivet_type_id type_id = 0x19950d87;
+		constexpr static std::string_view type_name = "CommonLootData";
+		constexpr static rivet::rivet_type_id type_id = 0x19950d87;
 
-		constexpr const static std::string_view LootSetupConfig_type_name = "LootSetupConfig";
-		constexpr const static rivet::rivet_type_id LootSetupConfig_type_id = 0x169493ac; 
+		constexpr static std::string_view LootSetupConfig_type_name = "LootSetupConfig";
+		constexpr static rivet::rivet_type_id LootSetupConfig_type_id = 0x169493ac; 
 
 		explicit CommonLootData() = default;
 		explicit CommonLootData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

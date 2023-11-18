@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct BotPlayAnimData; 
 
 	struct RIVET_DDL_SHARED BotComboMovePlayAnim : BotComboMove {
-		constexpr const static std::string_view type_name = "BotComboMovePlayAnim";
-		constexpr const static rivet::rivet_type_id type_id = 0x2ce5d9f3;
+		constexpr static std::string_view type_name = "BotComboMovePlayAnim";
+		constexpr static rivet::rivet_type_id type_id = 0x2ce5d9f3;
 
-		constexpr const static std::string_view PlayAnimData_type_name = "PlayAnimData";
-		constexpr const static rivet::rivet_type_id PlayAnimData_type_id = 0xf898fac0; 
+		constexpr static std::string_view PlayAnimData_type_name = "PlayAnimData";
+		constexpr static rivet::rivet_type_id PlayAnimData_type_id = 0xf898fac0; 
 
 		explicit BotComboMovePlayAnim() = default;
 		explicit BotComboMovePlayAnim([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

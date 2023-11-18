@@ -21,11 +21,11 @@ namespace rivet::ddl::generated {
 	struct AimAssistTargetZone; 
 
 	struct RIVET_DDL_SHARED AimAssistTargetZoneListItem : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "AimAssistTargetZoneListItem";
-		constexpr const static rivet::rivet_type_id type_id = 0x90271b36;
+		constexpr static std::string_view type_name = "AimAssistTargetZoneListItem";
+		constexpr static rivet::rivet_type_id type_id = 0x90271b36;
 
-		constexpr const static std::string_view TargetZone_type_name = "TargetZone";
-		constexpr const static rivet::rivet_type_id TargetZone_type_id = 0x59940a0f; 
+		constexpr static std::string_view TargetZone_type_name = "TargetZone";
+		constexpr static rivet::rivet_type_id TargetZone_type_id = 0x59940a0f; 
 
 		explicit AimAssistTargetZoneListItem() = default;
 		explicit AimAssistTargetZoneListItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

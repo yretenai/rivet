@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct CrowdSpawnerType; 
 
 	struct RIVET_DDL_SHARED CrowdSpawnerSystemConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "CrowdSpawnerSystemConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x77ad4b9a;
+		constexpr static std::string_view type_name = "CrowdSpawnerSystemConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x77ad4b9a;
 
-		constexpr const static std::string_view Types_type_name = "Types";
-		constexpr const static rivet::rivet_type_id Types_type_id = 0x406345f1; 
+		constexpr static std::string_view Types_type_name = "Types";
+		constexpr static rivet::rivet_type_id Types_type_id = 0x406345f1; 
 
 		explicit CrowdSpawnerSystemConfig() = default;
 		explicit CrowdSpawnerSystemConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

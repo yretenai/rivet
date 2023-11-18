@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED TimedExplosion : GrenadeExplosionMode {
-		constexpr const static std::string_view type_name = "TimedExplosion";
-		constexpr const static rivet::rivet_type_id type_id = 0xa35b600c;
+		constexpr static std::string_view type_name = "TimedExplosion";
+		constexpr static rivet::rivet_type_id type_id = 0xa35b600c;
 
-		constexpr const static std::string_view ReleasedTime_type_name = "ReleasedTime";
-		constexpr const static rivet::rivet_type_id ReleasedTime_type_id = 0x972e367b; 
+		constexpr static std::string_view ReleasedTime_type_name = "ReleasedTime";
+		constexpr static rivet::rivet_type_id ReleasedTime_type_id = 0x972e367b; 
 
 		explicit TimedExplosion() = default;
 		explicit TimedExplosion([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

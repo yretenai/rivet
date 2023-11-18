@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED CameraFPSPrius : CameraPrius {
-		constexpr const static std::string_view type_name = "CameraFPSPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xedba1456;
+		constexpr static std::string_view type_name = "CameraFPSPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xedba1456;
 
 		explicit CameraFPSPrius() = default;
 		explicit CameraFPSPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

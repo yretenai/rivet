@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view AdaptiveTriggerMode_type_name = "AdaptiveTriggerMode";
-	constexpr const static rivet::rivet_type_id AdaptiveTriggerMode_type_id = 0xa1a56643;
+	constexpr static std::string_view AdaptiveTriggerMode_type_name = "AdaptiveTriggerMode";
+	constexpr static rivet::rivet_type_id AdaptiveTriggerMode_type_id = 0xa1a56643;
 
-	constexpr const static std::array<std::string_view, 3> AdaptiveTriggerMode_values = {
+	constexpr static std::array<std::string_view, 3> AdaptiveTriggerMode_values = {
 		"kDefault",
 		"kLight",
 		"kOff", 

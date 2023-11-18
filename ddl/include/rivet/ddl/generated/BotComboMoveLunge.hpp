@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct LungeAttackData; 
 
 	struct RIVET_DDL_SHARED BotComboMoveLunge : BotComboMove {
-		constexpr const static std::string_view type_name = "BotComboMoveLunge";
-		constexpr const static rivet::rivet_type_id type_id = 0xf330c0a7;
+		constexpr static std::string_view type_name = "BotComboMoveLunge";
+		constexpr static rivet::rivet_type_id type_id = 0xf330c0a7;
 
-		constexpr const static std::string_view LungeAttackData_type_name = "LungeAttackData";
-		constexpr const static rivet::rivet_type_id LungeAttackData_type_id = 0xa18815c3; 
+		constexpr static std::string_view LungeAttackData_type_name = "LungeAttackData";
+		constexpr static rivet::rivet_type_id LungeAttackData_type_id = 0xa18815c3; 
 
 		explicit BotComboMoveLunge() = default;
 		explicit BotComboMoveLunge([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

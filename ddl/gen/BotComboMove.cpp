@@ -3,18 +3,18 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/BotComboMoveMelee.hpp>
-#include <rivet/ddl/generated/BotComboFlyOver.hpp>
-#include <rivet/ddl/generated/BotComboMoveCharge.hpp>
-#include <rivet/ddl/generated/BotComboMoveShootAtMortarCurve.hpp>
-#include <rivet/ddl/generated/BotComboMovePlayAnim.hpp>
-#include <rivet/ddl/generated/BotComboMoveLunge.hpp>
+#include <rivet/ddl/generated/BotComboMoveThrowProjectile.hpp>
+#include <rivet/ddl/generated/BotComboMoveMeleeAirDashCharge.hpp>
 #include <rivet/ddl/generated/BotComboMoveTelekinesis.hpp>
 #include <rivet/ddl/generated/BotComboMoveFinaleLaserSweep.hpp>
-#include <rivet/ddl/generated/BotComboLaserShot.hpp>
+#include <rivet/ddl/generated/BotComboMoveLunge.hpp>
 #include <rivet/ddl/generated/BotComboMoveStandAndShoot.hpp>
-#include <rivet/ddl/generated/BotComboMoveThrowProjectile.hpp>
-#include <rivet/ddl/generated/BotComboMoveMeleeAirDashCharge.hpp> 
+#include <rivet/ddl/generated/BotComboLaserShot.hpp>
+#include <rivet/ddl/generated/BotComboFlyOver.hpp>
+#include <rivet/ddl/generated/BotComboMovePlayAnim.hpp>
+#include <rivet/ddl/generated/BotComboMoveShootAtMortarCurve.hpp>
+#include <rivet/ddl/generated/BotComboMoveMelee.hpp>
+#include <rivet/ddl/generated/BotComboMoveCharge.hpp> 
 
 #include <rivet/ddl/generated/BotComboMove.hpp>
 

@@ -19,15 +19,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED VehicleSpawnInfo : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "VehicleSpawnInfo";
-		constexpr const static rivet::rivet_type_id type_id = 0xe447bbc8;
+		constexpr static std::string_view type_name = "VehicleSpawnInfo";
+		constexpr static rivet::rivet_type_id type_id = 0xe447bbc8;
 
-		constexpr const static std::string_view MinDistance_type_name = "MinDistance";
-		constexpr const static rivet::rivet_type_id MinDistance_type_id = 0x448e693a;
-		constexpr const static std::string_view MaxDistance_type_name = "MaxDistance";
-		constexpr const static rivet::rivet_type_id MaxDistance_type_id = 0x88831235;
-		constexpr const static std::string_view MaxDistanceOffScreen_type_name = "MaxDistanceOffScreen";
-		constexpr const static rivet::rivet_type_id MaxDistanceOffScreen_type_id = 0x87ce0c81; 
+		constexpr static std::string_view MinDistance_type_name = "MinDistance";
+		constexpr static rivet::rivet_type_id MinDistance_type_id = 0x448e693a;
+		constexpr static std::string_view MaxDistance_type_name = "MaxDistance";
+		constexpr static rivet::rivet_type_id MaxDistance_type_id = 0x88831235;
+		constexpr static std::string_view MaxDistanceOffScreen_type_name = "MaxDistanceOffScreen";
+		constexpr static rivet::rivet_type_id MaxDistanceOffScreen_type_id = 0x87ce0c81; 
 
 		explicit VehicleSpawnInfo() = default;
 		explicit VehicleSpawnInfo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

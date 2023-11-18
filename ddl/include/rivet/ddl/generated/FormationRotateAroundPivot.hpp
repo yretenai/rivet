@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED FormationRotateAroundPivot : FormationRotateBase {
-		constexpr const static std::string_view type_name = "FormationRotateAroundPivot";
-		constexpr const static rivet::rivet_type_id type_id = 0x2f7759f4;
+		constexpr static std::string_view type_name = "FormationRotateAroundPivot";
+		constexpr static rivet::rivet_type_id type_id = 0x2f7759f4;
 
 		explicit FormationRotateAroundPivot() = default;
 		explicit FormationRotateAroundPivot([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

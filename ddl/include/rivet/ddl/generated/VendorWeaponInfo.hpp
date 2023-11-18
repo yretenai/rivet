@@ -21,17 +21,17 @@ namespace rivet::ddl::generated {
 	struct VendorWeaponStat; 
 
 	struct RIVET_DDL_SHARED VendorWeaponInfo : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "VendorWeaponInfo";
-		constexpr const static rivet::rivet_type_id type_id = 0xd33ff28;
+		constexpr static std::string_view type_name = "VendorWeaponInfo";
+		constexpr static rivet::rivet_type_id type_id = 0xd33ff28;
 
-		constexpr const static std::string_view Class_type_name = "Class";
-		constexpr const static rivet::rivet_type_id Class_type_id = 0xf418d55e;
-		constexpr const static std::string_view Special_type_name = "Special";
-		constexpr const static rivet::rivet_type_id Special_type_id = 0x4d815cdb;
-		constexpr const static std::string_view Stats_type_name = "Stats";
-		constexpr const static rivet::rivet_type_id Stats_type_id = 0x4e14ab6b;
-		constexpr const static std::string_view CustomStatName_type_name = "CustomStatName";
-		constexpr const static rivet::rivet_type_id CustomStatName_type_id = 0x974a32b4; 
+		constexpr static std::string_view Class_type_name = "Class";
+		constexpr static rivet::rivet_type_id Class_type_id = 0xf418d55e;
+		constexpr static std::string_view Special_type_name = "Special";
+		constexpr static rivet::rivet_type_id Special_type_id = 0x4d815cdb;
+		constexpr static std::string_view Stats_type_name = "Stats";
+		constexpr static rivet::rivet_type_id Stats_type_id = 0x4e14ab6b;
+		constexpr static std::string_view CustomStatName_type_name = "CustomStatName";
+		constexpr static rivet::rivet_type_id CustomStatName_type_id = 0x974a32b4; 
 
 		explicit VendorWeaponInfo() = default;
 		explicit VendorWeaponInfo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -19,23 +19,23 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED HeroMagbootConfig : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "HeroMagbootConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x37cfc96f;
+		constexpr static std::string_view type_name = "HeroMagbootConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x37cfc96f;
 
-		constexpr const static std::string_view MagbootLaunchMinDistance_type_name = "MagbootLaunchMinDistance";
-		constexpr const static rivet::rivet_type_id MagbootLaunchMinDistance_type_id = 0xa0eddfad;
-		constexpr const static std::string_view MagbootLaunchMaxDistance_type_name = "MagbootLaunchMaxDistance";
-		constexpr const static rivet::rivet_type_id MagbootLaunchMaxDistance_type_id = 0x6ce0a4a2;
-		constexpr const static std::string_view MagbootLaunchTurnSpeedGain_type_name = "MagbootLaunchTurnSpeedGain";
-		constexpr const static rivet::rivet_type_id MagbootLaunchTurnSpeedGain_type_id = 0xd8a2e830;
-		constexpr const static std::string_view MagbootLaunchTurnSpeedDamp_type_name = "MagbootLaunchTurnSpeedDamp";
-		constexpr const static rivet::rivet_type_id MagbootLaunchTurnSpeedDamp_type_id = 0x5474bfb9;
-		constexpr const static std::string_view MagbootLaunchTurnSpeedMax_type_name = "MagbootLaunchTurnSpeedMax";
-		constexpr const static rivet::rivet_type_id MagbootLaunchTurnSpeedMax_type_id = 0xc8e44fe2;
-		constexpr const static std::string_view MagbootDiveAccel_type_name = "MagbootDiveAccel";
-		constexpr const static rivet::rivet_type_id MagbootDiveAccel_type_id = 0x46ce6346;
-		constexpr const static std::string_view MagbootDiveMaxSpeed_type_name = "MagbootDiveMaxSpeed";
-		constexpr const static rivet::rivet_type_id MagbootDiveMaxSpeed_type_id = 0xc7dd46b0; 
+		constexpr static std::string_view MagbootLaunchMinDistance_type_name = "MagbootLaunchMinDistance";
+		constexpr static rivet::rivet_type_id MagbootLaunchMinDistance_type_id = 0xa0eddfad;
+		constexpr static std::string_view MagbootLaunchMaxDistance_type_name = "MagbootLaunchMaxDistance";
+		constexpr static rivet::rivet_type_id MagbootLaunchMaxDistance_type_id = 0x6ce0a4a2;
+		constexpr static std::string_view MagbootLaunchTurnSpeedGain_type_name = "MagbootLaunchTurnSpeedGain";
+		constexpr static rivet::rivet_type_id MagbootLaunchTurnSpeedGain_type_id = 0xd8a2e830;
+		constexpr static std::string_view MagbootLaunchTurnSpeedDamp_type_name = "MagbootLaunchTurnSpeedDamp";
+		constexpr static rivet::rivet_type_id MagbootLaunchTurnSpeedDamp_type_id = 0x5474bfb9;
+		constexpr static std::string_view MagbootLaunchTurnSpeedMax_type_name = "MagbootLaunchTurnSpeedMax";
+		constexpr static rivet::rivet_type_id MagbootLaunchTurnSpeedMax_type_id = 0xc8e44fe2;
+		constexpr static std::string_view MagbootDiveAccel_type_name = "MagbootDiveAccel";
+		constexpr static rivet::rivet_type_id MagbootDiveAccel_type_id = 0x46ce6346;
+		constexpr static std::string_view MagbootDiveMaxSpeed_type_name = "MagbootDiveMaxSpeed";
+		constexpr static rivet::rivet_type_id MagbootDiveMaxSpeed_type_id = 0xc7dd46b0; 
 
 		explicit HeroMagbootConfig() = default;
 		explicit HeroMagbootConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -3,11 +3,11 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/BattleBrewTimeDilationPrius.hpp>
-#include <rivet/ddl/generated/BattleBrewArmorPrius.hpp>
 #include <rivet/ddl/generated/BattleBrewScalePrius.hpp>
+#include <rivet/ddl/generated/BattleBrewNanotechDrainPrius.hpp>
 #include <rivet/ddl/generated/BattleBrewFloatPrius.hpp>
-#include <rivet/ddl/generated/BattleBrewNanotechDrainPrius.hpp> 
+#include <rivet/ddl/generated/BattleBrewArmorPrius.hpp>
+#include <rivet/ddl/generated/BattleBrewTimeDilationPrius.hpp> 
 
 #include <rivet/ddl/generated/BattleBrewBasePrius.hpp>
 

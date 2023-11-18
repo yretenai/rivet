@@ -21,11 +21,11 @@ namespace rivet::ddl::generated {
 	struct MacroLoadpointData; 
 
 	struct RIVET_DDL_SHARED MacroLoadpointListItem : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "MacroLoadpointListItem";
-		constexpr const static rivet::rivet_type_id type_id = 0x959e174b;
+		constexpr static std::string_view type_name = "MacroLoadpointListItem";
+		constexpr static rivet::rivet_type_id type_id = 0x959e174b;
 
-		constexpr const static std::string_view LoadpointData_type_name = "LoadpointData";
-		constexpr const static rivet::rivet_type_id LoadpointData_type_id = 0x42bb0aa9; 
+		constexpr static std::string_view LoadpointData_type_name = "LoadpointData";
+		constexpr static rivet::rivet_type_id LoadpointData_type_id = 0x42bb0aa9; 
 
 		explicit MacroLoadpointListItem() = default;
 		explicit MacroLoadpointListItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

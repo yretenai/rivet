@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED GadgetIconData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "GadgetIconData";
-		constexpr const static rivet::rivet_type_id type_id = 0xe055f2c;
+		constexpr static std::string_view type_name = "GadgetIconData";
+		constexpr static rivet::rivet_type_id type_id = 0xe055f2c;
 
-		constexpr const static std::string_view Gadget_type_name = "Gadget";
-		constexpr const static rivet::rivet_type_id Gadget_type_id = 0x882719ed;
-		constexpr const static std::string_view Icon_type_name = "Icon";
-		constexpr const static rivet::rivet_type_id Icon_type_id = 0x5504e96b; 
+		constexpr static std::string_view Gadget_type_name = "Gadget";
+		constexpr static rivet::rivet_type_id Gadget_type_id = 0x882719ed;
+		constexpr static std::string_view Icon_type_name = "Icon";
+		constexpr static rivet::rivet_type_id Icon_type_id = 0x5504e96b; 
 
 		explicit GadgetIconData() = default;
 		explicit GadgetIconData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

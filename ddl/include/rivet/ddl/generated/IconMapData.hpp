@@ -19,23 +19,23 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED IconMapData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "IconMapData";
-		constexpr const static rivet::rivet_type_id type_id = 0x828aa0cd;
+		constexpr static std::string_view type_name = "IconMapData";
+		constexpr static rivet::rivet_type_id type_id = 0x828aa0cd;
 
-		constexpr const static std::string_view Icon_type_name = "Icon";
-		constexpr const static rivet::rivet_type_id Icon_type_id = 0x5504e96b;
-		constexpr const static std::string_view MarkupText_type_name = "MarkupText";
-		constexpr const static rivet::rivet_type_id MarkupText_type_id = 0x28b909c2;
-		constexpr const static std::string_view Width_type_name = "Width";
-		constexpr const static rivet::rivet_type_id Width_type_id = 0x954989ee;
-		constexpr const static std::string_view Height_type_name = "Height";
-		constexpr const static rivet::rivet_type_id Height_type_id = 0xcb35ab68;
-		constexpr const static std::string_view MinHeight_type_name = "MinHeight";
-		constexpr const static rivet::rivet_type_id MinHeight_type_id = 0x9ed620e3;
-		constexpr const static std::string_view MaxHeight_type_name = "MaxHeight";
-		constexpr const static rivet::rivet_type_id MaxHeight_type_id = 0x493d92a2;
-		constexpr const static std::string_view Vspace_type_name = "Vspace";
-		constexpr const static rivet::rivet_type_id Vspace_type_id = 0xbd91373f; 
+		constexpr static std::string_view Icon_type_name = "Icon";
+		constexpr static rivet::rivet_type_id Icon_type_id = 0x5504e96b;
+		constexpr static std::string_view MarkupText_type_name = "MarkupText";
+		constexpr static rivet::rivet_type_id MarkupText_type_id = 0x28b909c2;
+		constexpr static std::string_view Width_type_name = "Width";
+		constexpr static rivet::rivet_type_id Width_type_id = 0x954989ee;
+		constexpr static std::string_view Height_type_name = "Height";
+		constexpr static rivet::rivet_type_id Height_type_id = 0xcb35ab68;
+		constexpr static std::string_view MinHeight_type_name = "MinHeight";
+		constexpr static rivet::rivet_type_id MinHeight_type_id = 0x9ed620e3;
+		constexpr static std::string_view MaxHeight_type_name = "MaxHeight";
+		constexpr static rivet::rivet_type_id MaxHeight_type_id = 0x493d92a2;
+		constexpr static std::string_view Vspace_type_name = "Vspace";
+		constexpr static rivet::rivet_type_id Vspace_type_id = 0xbd91373f; 
 
 		explicit IconMapData() = default;
 		explicit IconMapData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

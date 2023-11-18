@@ -21,17 +21,17 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED POIAttributeDistanceScale : POIAttributeDistanceScaleBase {
-		constexpr const static std::string_view type_name = "POIAttributeDistanceScale";
-		constexpr const static rivet::rivet_type_id type_id = 0xce5792d7;
+		constexpr static std::string_view type_name = "POIAttributeDistanceScale";
+		constexpr static rivet::rivet_type_id type_id = 0xce5792d7;
 
-		constexpr const static std::string_view MinScale_type_name = "MinScale";
-		constexpr const static rivet::rivet_type_id MinScale_type_id = 0x13b84df2;
-		constexpr const static std::string_view MaxScale_type_name = "MaxScale";
-		constexpr const static rivet::rivet_type_id MaxScale_type_id = 0xf5d8e213;
-		constexpr const static std::string_view MinDistance_type_name = "MinDistance";
-		constexpr const static rivet::rivet_type_id MinDistance_type_id = 0x448e693a;
-		constexpr const static std::string_view MaxDistance_type_name = "MaxDistance";
-		constexpr const static rivet::rivet_type_id MaxDistance_type_id = 0x88831235; 
+		constexpr static std::string_view MinScale_type_name = "MinScale";
+		constexpr static rivet::rivet_type_id MinScale_type_id = 0x13b84df2;
+		constexpr static std::string_view MaxScale_type_name = "MaxScale";
+		constexpr static rivet::rivet_type_id MaxScale_type_id = 0xf5d8e213;
+		constexpr static std::string_view MinDistance_type_name = "MinDistance";
+		constexpr static rivet::rivet_type_id MinDistance_type_id = 0x448e693a;
+		constexpr static std::string_view MaxDistance_type_name = "MaxDistance";
+		constexpr static rivet::rivet_type_id MaxDistance_type_id = 0x88831235; 
 
 		explicit POIAttributeDistanceScale() = default;
 		explicit POIAttributeDistanceScale([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

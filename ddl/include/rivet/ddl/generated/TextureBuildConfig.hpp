@@ -21,17 +21,17 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED TextureBuildConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "TextureBuildConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x52c18b2c;
+		constexpr static std::string_view type_name = "TextureBuildConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x52c18b2c;
 
-		constexpr const static std::string_view PreferDXT1_type_name = "PreferDXT1";
-		constexpr const static rivet::rivet_type_id PreferDXT1_type_id = 0x42368aca;
-		constexpr const static std::string_view SizeCap_type_name = "SizeCap";
-		constexpr const static rivet::rivet_type_id SizeCap_type_id = 0x8f58cf7e;
-		constexpr const static std::string_view LegacyPreferDXT1_type_name = "LegacyPreferDXT1";
-		constexpr const static rivet::rivet_type_id LegacyPreferDXT1_type_id = 0x97685e5b;
-		constexpr const static std::string_view LegacySizeCap_type_name = "LegacySizeCap";
-		constexpr const static rivet::rivet_type_id LegacySizeCap_type_id = 0x59ed4d21; 
+		constexpr static std::string_view PreferDXT1_type_name = "PreferDXT1";
+		constexpr static rivet::rivet_type_id PreferDXT1_type_id = 0x42368aca;
+		constexpr static std::string_view SizeCap_type_name = "SizeCap";
+		constexpr static rivet::rivet_type_id SizeCap_type_id = 0x8f58cf7e;
+		constexpr static std::string_view LegacyPreferDXT1_type_name = "LegacyPreferDXT1";
+		constexpr static rivet::rivet_type_id LegacyPreferDXT1_type_id = 0x97685e5b;
+		constexpr static std::string_view LegacySizeCap_type_name = "LegacySizeCap";
+		constexpr static rivet::rivet_type_id LegacySizeCap_type_id = 0x59ed4d21; 
 
 		explicit TextureBuildConfig() = default;
 		explicit TextureBuildConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

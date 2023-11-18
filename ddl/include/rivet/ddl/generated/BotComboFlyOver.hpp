@@ -21,15 +21,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED BotComboFlyOver : BotComboMove {
-		constexpr const static std::string_view type_name = "BotComboFlyOver";
-		constexpr const static rivet::rivet_type_id type_id = 0xdcb74779;
+		constexpr static std::string_view type_name = "BotComboFlyOver";
+		constexpr static rivet::rivet_type_id type_id = 0xdcb74779;
 
-		constexpr const static std::string_view FirepointSetActorId_type_name = "FirepointSetActorId";
-		constexpr const static rivet::rivet_type_id FirepointSetActorId_type_id = 0xde41ffb7;
-		constexpr const static std::string_view FlyOverAnimRate_type_name = "FlyOverAnimRate";
-		constexpr const static rivet::rivet_type_id FlyOverAnimRate_type_id = 0xbc33e9fb;
-		constexpr const static std::string_view FlyOverOutroAnimRate_type_name = "FlyOverOutroAnimRate";
-		constexpr const static rivet::rivet_type_id FlyOverOutroAnimRate_type_id = 0x633979a7; 
+		constexpr static std::string_view FirepointSetActorId_type_name = "FirepointSetActorId";
+		constexpr static rivet::rivet_type_id FirepointSetActorId_type_id = 0xde41ffb7;
+		constexpr static std::string_view FlyOverAnimRate_type_name = "FlyOverAnimRate";
+		constexpr static rivet::rivet_type_id FlyOverAnimRate_type_id = 0xbc33e9fb;
+		constexpr static std::string_view FlyOverOutroAnimRate_type_name = "FlyOverOutroAnimRate";
+		constexpr static rivet::rivet_type_id FlyOverOutroAnimRate_type_id = 0x633979a7; 
 
 		explicit BotComboFlyOver() = default;
 		explicit BotComboFlyOver([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

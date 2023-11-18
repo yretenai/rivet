@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED StatusEffectInfiniteAmmoPrius : StatusEffectBasePrius {
-		constexpr const static std::string_view type_name = "StatusEffectInfiniteAmmoPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xb5a9858e;
+		constexpr static std::string_view type_name = "StatusEffectInfiniteAmmoPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xb5a9858e;
 
 		explicit StatusEffectInfiniteAmmoPrius() = default;
 		explicit StatusEffectInfiniteAmmoPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -21,13 +21,13 @@ namespace rivet::ddl::generated {
 	struct FastTravelAnimElement; 
 
 	struct RIVET_DDL_SHARED FastTravelPropElement : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "FastTravelPropElement";
-		constexpr const static rivet::rivet_type_id type_id = 0x1e262acd;
+		constexpr static std::string_view type_name = "FastTravelPropElement";
+		constexpr static rivet::rivet_type_id type_id = 0x1e262acd;
 
-		constexpr const static std::string_view PropAsset_type_name = "PropAsset";
-		constexpr const static rivet::rivet_type_id PropAsset_type_id = 0x9b26d12;
-		constexpr const static std::string_view Animations_type_name = "Animations";
-		constexpr const static rivet::rivet_type_id Animations_type_id = 0x4fd05d49; 
+		constexpr static std::string_view PropAsset_type_name = "PropAsset";
+		constexpr static rivet::rivet_type_id PropAsset_type_id = 0x9b26d12;
+		constexpr static std::string_view Animations_type_name = "Animations";
+		constexpr static rivet::rivet_type_id Animations_type_id = 0x4fd05d49; 
 
 		explicit FastTravelPropElement() = default;
 		explicit FastTravelPropElement([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -19,15 +19,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED FlyBackData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "FlyBackData";
-		constexpr const static rivet::rivet_type_id type_id = 0xc39f1714;
+		constexpr static std::string_view type_name = "FlyBackData";
+		constexpr static rivet::rivet_type_id type_id = 0xc39f1714;
 
-		constexpr const static std::string_view SpeedMin_type_name = "SpeedMin";
-		constexpr const static rivet::rivet_type_id SpeedMin_type_id = 0x8a4ca0e3;
-		constexpr const static std::string_view SpeedMax_type_name = "SpeedMax";
-		constexpr const static rivet::rivet_type_id SpeedMax_type_id = 0xb6419fba;
-		constexpr const static std::string_view Time_type_name = "Time";
-		constexpr const static rivet::rivet_type_id Time_type_id = 0x5f0458f5; 
+		constexpr static std::string_view SpeedMin_type_name = "SpeedMin";
+		constexpr static rivet::rivet_type_id SpeedMin_type_id = 0x8a4ca0e3;
+		constexpr static std::string_view SpeedMax_type_name = "SpeedMax";
+		constexpr static rivet::rivet_type_id SpeedMax_type_id = 0xb6419fba;
+		constexpr static std::string_view Time_type_name = "Time";
+		constexpr static rivet::rivet_type_id Time_type_id = 0x5f0458f5; 
 
 		explicit FlyBackData() = default;
 		explicit FlyBackData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

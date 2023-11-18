@@ -20,31 +20,31 @@
 #include <rivet/ddl/generated/enums/xfb0b3aad.hpp> 
 
 namespace rivet::ddl::generated {
-	struct POIAttributeIconBase;
-	struct POIAttributeEdgeModeBase;
+	struct POIAttributeDistanceTextBase;
 	struct POIAttributeDistanceScaleBase;
-	struct POIAttributeDistanceTextBase; 
+	struct POIAttributeEdgeModeBase;
+	struct POIAttributeIconBase; 
 
 	struct RIVET_DDL_SHARED POIConfigData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "POIConfigData";
-		constexpr const static rivet::rivet_type_id type_id = 0x96379876;
+		constexpr static std::string_view type_name = "POIConfigData";
+		constexpr static rivet::rivet_type_id type_id = 0x96379876;
 
-		constexpr const static std::string_view CoherentPOI_type_name = "CoherentPOI";
-		constexpr const static rivet::rivet_type_id CoherentPOI_type_id = 0x85fde7d2;
-		constexpr const static std::string_view Icon_type_name = "Icon";
-		constexpr const static rivet::rivet_type_id Icon_type_id = 0x5504e96b;
-		constexpr const static std::string_view Priority_type_name = "Priority";
-		constexpr const static rivet::rivet_type_id Priority_type_id = 0x98a76157;
-		constexpr const static std::string_view EdgeMode_type_name = "EdgeMode";
-		constexpr const static rivet::rivet_type_id EdgeMode_type_id = 0x2a4e5466;
-		constexpr const static std::string_view OffscreenIndicator_type_name = "OffscreenIndicator";
-		constexpr const static rivet::rivet_type_id OffscreenIndicator_type_id = 0xbe47c5ca;
-		constexpr const static std::string_view DistanceScaleMode_type_name = "DistanceScaleMode";
-		constexpr const static rivet::rivet_type_id DistanceScaleMode_type_id = 0x6c21b587;
-		constexpr const static std::string_view DistanceText_type_name = "DistanceText";
-		constexpr const static rivet::rivet_type_id DistanceText_type_id = 0xaa2068d6;
-		constexpr const static std::string_view DistanceTextMode_type_name = "DistanceTextMode";
-		constexpr const static rivet::rivet_type_id DistanceTextMode_type_id = 0xf0c02500; 
+		constexpr static std::string_view CoherentPOI_type_name = "CoherentPOI";
+		constexpr static rivet::rivet_type_id CoherentPOI_type_id = 0x85fde7d2;
+		constexpr static std::string_view Icon_type_name = "Icon";
+		constexpr static rivet::rivet_type_id Icon_type_id = 0x5504e96b;
+		constexpr static std::string_view Priority_type_name = "Priority";
+		constexpr static rivet::rivet_type_id Priority_type_id = 0x98a76157;
+		constexpr static std::string_view EdgeMode_type_name = "EdgeMode";
+		constexpr static rivet::rivet_type_id EdgeMode_type_id = 0x2a4e5466;
+		constexpr static std::string_view OffscreenIndicator_type_name = "OffscreenIndicator";
+		constexpr static rivet::rivet_type_id OffscreenIndicator_type_id = 0xbe47c5ca;
+		constexpr static std::string_view DistanceScaleMode_type_name = "DistanceScaleMode";
+		constexpr static rivet::rivet_type_id DistanceScaleMode_type_id = 0x6c21b587;
+		constexpr static std::string_view DistanceText_type_name = "DistanceText";
+		constexpr static rivet::rivet_type_id DistanceText_type_id = 0xaa2068d6;
+		constexpr static std::string_view DistanceTextMode_type_name = "DistanceTextMode";
+		constexpr static rivet::rivet_type_id DistanceTextMode_type_id = 0xf0c02500; 
 
 		explicit POIConfigData() = default;
 		explicit POIConfigData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

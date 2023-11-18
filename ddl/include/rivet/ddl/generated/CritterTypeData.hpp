@@ -19,13 +19,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED CritterTypeData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "CritterTypeData";
-		constexpr const static rivet::rivet_type_id type_id = 0x5bd9fa4a;
+		constexpr static std::string_view type_name = "CritterTypeData";
+		constexpr static rivet::rivet_type_id type_id = 0x5bd9fa4a;
 
-		constexpr const static std::string_view Config_type_name = "Config";
-		constexpr const static rivet::rivet_type_id Config_type_id = 0xeaf2611b;
-		constexpr const static std::string_view Planets_type_name = "Planets";
-		constexpr const static rivet::rivet_type_id Planets_type_id = 0xbc30e83e; 
+		constexpr static std::string_view Config_type_name = "Config";
+		constexpr static rivet::rivet_type_id Config_type_id = 0xeaf2611b;
+		constexpr static std::string_view Planets_type_name = "Planets";
+		constexpr static rivet::rivet_type_id Planets_type_id = 0xbc30e83e; 
 
 		explicit CritterTypeData() = default;
 		explicit CritterTypeData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

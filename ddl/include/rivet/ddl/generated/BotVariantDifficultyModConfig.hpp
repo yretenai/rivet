@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct BotVariantDifficultyEntry; 
 
 	struct RIVET_DDL_SHARED BotVariantDifficultyModConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "BotVariantDifficultyModConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xbf0315aa;
+		constexpr static std::string_view type_name = "BotVariantDifficultyModConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xbf0315aa;
 
-		constexpr const static std::string_view DifficultyVariants_type_name = "DifficultyVariants";
-		constexpr const static rivet::rivet_type_id DifficultyVariants_type_id = 0xc88853c7; 
+		constexpr static std::string_view DifficultyVariants_type_name = "DifficultyVariants";
+		constexpr static rivet::rivet_type_id DifficultyVariants_type_id = 0xc88853c7; 
 
 		explicit BotVariantDifficultyModConfig() = default;
 		explicit BotVariantDifficultyModConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

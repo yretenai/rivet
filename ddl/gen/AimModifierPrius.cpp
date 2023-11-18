@@ -3,29 +3,29 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/AimModWalkToTargetPrius.hpp>
-#include <rivet/ddl/generated/AimModRCPS4GimpPrius.hpp>
-#include <rivet/ddl/generated/AimModAlignedOffsetPrius.hpp>
+#include <rivet/ddl/generated/AimModStrafeTargetPrius.hpp>
+#include <rivet/ddl/generated/AimModFollowTargetFromOffsetPrius.hpp>
+#include <rivet/ddl/generated/AimModAdvContractingSpreadPrius.hpp>
+#include <rivet/ddl/generated/AimModLockWhenTargetDodgePrius.hpp>
 #include <rivet/ddl/generated/AimModLockOnAimingAtCoverPrius.hpp>
 #include <rivet/ddl/generated/AimModForwardPrius.hpp>
-#include <rivet/ddl/generated/AimModGimpPrius.hpp>
-#include <rivet/ddl/generated/AimModOffCameraPrius.hpp>
-#include <rivet/ddl/generated/AimModLockAfterTimePrius.hpp>
-#include <rivet/ddl/generated/AimModContractingSpreadPrius.hpp>
-#include <rivet/ddl/generated/AimModTargetBestGroundPosPrius.hpp>
-#include <rivet/ddl/generated/AimModContractingSpreadOffScreenPrius.hpp>
-#include <rivet/ddl/generated/AimModFixedOffsetPrius.hpp>
+#include <rivet/ddl/generated/AimModWalkToTargetPrius.hpp>
 #include <rivet/ddl/generated/AimModSweepPrius.hpp>
-#include <rivet/ddl/generated/AimModLeadTargetPrius.hpp>
-#include <rivet/ddl/generated/AimModRandomOffsetPrius.hpp>
-#include <rivet/ddl/generated/AimModFollowTargetFromOffsetPrius.hpp>
-#include <rivet/ddl/generated/AimModMissTargetGamePrius.hpp>
-#include <rivet/ddl/generated/AimModOverCollisionPrius.hpp>
-#include <rivet/ddl/generated/AimModPredictTargetPrius.hpp>
-#include <rivet/ddl/generated/AimModAdvContractingSpreadPrius.hpp>
 #include <rivet/ddl/generated/AimModLosTimeContractingSpreadPrius.hpp>
-#include <rivet/ddl/generated/AimModLockWhenTargetDodgePrius.hpp>
-#include <rivet/ddl/generated/AimModStrafeTargetPrius.hpp> 
+#include <rivet/ddl/generated/AimModGimpPrius.hpp>
+#include <rivet/ddl/generated/AimModPredictTargetPrius.hpp>
+#include <rivet/ddl/generated/AimModMissTargetGamePrius.hpp>
+#include <rivet/ddl/generated/AimModRandomOffsetPrius.hpp>
+#include <rivet/ddl/generated/AimModRCPS4GimpPrius.hpp>
+#include <rivet/ddl/generated/AimModFixedOffsetPrius.hpp>
+#include <rivet/ddl/generated/AimModAlignedOffsetPrius.hpp>
+#include <rivet/ddl/generated/AimModOffCameraPrius.hpp>
+#include <rivet/ddl/generated/AimModLeadTargetPrius.hpp>
+#include <rivet/ddl/generated/AimModContractingSpreadPrius.hpp>
+#include <rivet/ddl/generated/AimModLockAfterTimePrius.hpp>
+#include <rivet/ddl/generated/AimModOverCollisionPrius.hpp>
+#include <rivet/ddl/generated/AimModTargetBestGroundPosPrius.hpp>
+#include <rivet/ddl/generated/AimModContractingSpreadOffScreenPrius.hpp> 
 
 #include <rivet/ddl/generated/AimModifierPrius.hpp>
 

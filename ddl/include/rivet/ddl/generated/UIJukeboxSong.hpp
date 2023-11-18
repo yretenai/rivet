@@ -23,19 +23,19 @@ namespace rivet::ddl::generated {
 	struct WwiseState; 
 
 	struct RIVET_DDL_SHARED UIJukeboxSong : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "UIJukeboxSong";
-		constexpr const static rivet::rivet_type_id type_id = 0xc6148d3e;
+		constexpr static std::string_view type_name = "UIJukeboxSong";
+		constexpr static rivet::rivet_type_id type_id = 0xc6148d3e;
 
-		constexpr const static std::string_view WwiseState_type_name = "WwiseState";
-		constexpr const static rivet::rivet_type_id WwiseState_type_id = 0x5686e39f;
-		constexpr const static std::string_view Title_type_name = "Title";
-		constexpr const static rivet::rivet_type_id Title_type_id = 0x3265b4aa;
-		constexpr const static std::string_view Artist_type_name = "Artist";
-		constexpr const static rivet::rivet_type_id Artist_type_id = 0x3f21d8e0;
-		constexpr const static std::string_view GoldBoltUnlock_type_name = "GoldBoltUnlock";
-		constexpr const static rivet::rivet_type_id GoldBoltUnlock_type_id = 0xd459aa8c;
-		constexpr const static std::string_view MissionUnlock_type_name = "MissionUnlock";
-		constexpr const static rivet::rivet_type_id MissionUnlock_type_id = 0x489fe4ed; 
+		constexpr static std::string_view WwiseState_type_name = "WwiseState";
+		constexpr static rivet::rivet_type_id WwiseState_type_id = 0x5686e39f;
+		constexpr static std::string_view Title_type_name = "Title";
+		constexpr static rivet::rivet_type_id Title_type_id = 0x3265b4aa;
+		constexpr static std::string_view Artist_type_name = "Artist";
+		constexpr static rivet::rivet_type_id Artist_type_id = 0x3f21d8e0;
+		constexpr static std::string_view GoldBoltUnlock_type_name = "GoldBoltUnlock";
+		constexpr static rivet::rivet_type_id GoldBoltUnlock_type_id = 0xd459aa8c;
+		constexpr static std::string_view MissionUnlock_type_name = "MissionUnlock";
+		constexpr static rivet::rivet_type_id MissionUnlock_type_id = 0x489fe4ed; 
 
 		explicit UIJukeboxSong() = default;
 		explicit UIJukeboxSong([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED WeaponEarnedXPData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "WeaponEarnedXPData";
-		constexpr const static rivet::rivet_type_id type_id = 0x9b4de8f7;
+		constexpr static std::string_view type_name = "WeaponEarnedXPData";
+		constexpr static rivet::rivet_type_id type_id = 0x9b4de8f7;
 
-		constexpr const static std::string_view XPSource_type_name = "XPSource";
-		constexpr const static rivet::rivet_type_id XPSource_type_id = 0x2aa7da6d;
-		constexpr const static std::string_view XPValue_type_name = "XPValue";
-		constexpr const static rivet::rivet_type_id XPValue_type_id = 0x551baad0; 
+		constexpr static std::string_view XPSource_type_name = "XPSource";
+		constexpr static rivet::rivet_type_id XPSource_type_id = 0x2aa7da6d;
+		constexpr static std::string_view XPValue_type_name = "XPValue";
+		constexpr static rivet::rivet_type_id XPValue_type_id = 0x551baad0; 
 
 		explicit WeaponEarnedXPData() = default;
 		explicit WeaponEarnedXPData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

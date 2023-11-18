@@ -21,17 +21,17 @@ namespace rivet::ddl::generated {
 	struct DDLVector2; 
 
 	struct RIVET_DDL_SHARED UIViewInfo : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "UIViewInfo";
-		constexpr const static rivet::rivet_type_id type_id = 0x8ebeddfb;
+		constexpr static std::string_view type_name = "UIViewInfo";
+		constexpr static rivet::rivet_type_id type_id = 0x8ebeddfb;
 
-		constexpr const static std::string_view Name_type_name = "Name";
-		constexpr const static rivet::rivet_type_id Name_type_id = 0x6eb3beb6;
-		constexpr const static std::string_view URL_type_name = "URL";
-		constexpr const static rivet::rivet_type_id URL_type_id = 0x70c9680d;
-		constexpr const static std::string_view StageSize_type_name = "StageSize";
-		constexpr const static rivet::rivet_type_id StageSize_type_id = 0x9a943f1e;
-		constexpr const static std::string_view ViewScale_type_name = "ViewScale";
-		constexpr const static rivet::rivet_type_id ViewScale_type_id = 0xce529cb; 
+		constexpr static std::string_view Name_type_name = "Name";
+		constexpr static rivet::rivet_type_id Name_type_id = 0x6eb3beb6;
+		constexpr static std::string_view URL_type_name = "URL";
+		constexpr static rivet::rivet_type_id URL_type_id = 0x70c9680d;
+		constexpr static std::string_view StageSize_type_name = "StageSize";
+		constexpr static rivet::rivet_type_id StageSize_type_id = 0x9a943f1e;
+		constexpr static std::string_view ViewScale_type_name = "ViewScale";
+		constexpr static rivet::rivet_type_id ViewScale_type_id = 0xce529cb; 
 
 		explicit UIViewInfo() = default;
 		explicit UIViewInfo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

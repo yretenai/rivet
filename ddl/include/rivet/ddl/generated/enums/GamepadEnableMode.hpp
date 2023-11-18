@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view GamepadEnableMode_type_name = "GamepadEnableMode";
-	constexpr const static rivet::rivet_type_id GamepadEnableMode_type_id = 0xcfd4e774;
+	constexpr static std::string_view GamepadEnableMode_type_name = "GamepadEnableMode";
+	constexpr static rivet::rivet_type_id GamepadEnableMode_type_id = 0xcfd4e774;
 
-	constexpr const static std::array<std::string_view, 4> GamepadEnableMode_values = {
+	constexpr static std::array<std::string_view, 4> GamepadEnableMode_values = {
 		"kNever",
 		"kAlways",
 		"kApplicationFocus",

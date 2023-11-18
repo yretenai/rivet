@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct RicochetData; 
 
 	struct RIVET_DDL_SHARED ShotMotionRicochetPrius : BasicShotMotionPrius {
-		constexpr const static std::string_view type_name = "ShotMotionRicochetPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x9cc91e8f;
+		constexpr static std::string_view type_name = "ShotMotionRicochetPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x9cc91e8f;
 
-		constexpr const static std::string_view RicochetDataList_type_name = "RicochetDataList";
-		constexpr const static rivet::rivet_type_id RicochetDataList_type_id = 0x461557c4; 
+		constexpr static std::string_view RicochetDataList_type_name = "RicochetDataList";
+		constexpr static rivet::rivet_type_id RicochetDataList_type_id = 0x461557c4; 
 
 		explicit ShotMotionRicochetPrius() = default;
 		explicit ShotMotionRicochetPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

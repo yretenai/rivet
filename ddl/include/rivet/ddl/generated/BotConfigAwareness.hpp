@@ -17,25 +17,25 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/ConfigBase.hpp>
-#include <rivet/ddl/generated/enums/x2efb4283.hpp> 
+#include <rivet/ddl/generated/enums/x2efb4283.hpp>
+#include <rivet/ddl/generated/ConfigBase.hpp> 
 
 namespace rivet::ddl::generated {
-	struct AwarenessBasePrius;
-	struct TargetingStimulusListenerPrius; 
+	struct TargetingStimulusListenerPrius;
+	struct AwarenessBasePrius; 
 
 	struct RIVET_DDL_SHARED BotConfigAwareness : ConfigBase {
-		constexpr const static std::string_view type_name = "BotConfigAwareness";
-		constexpr const static rivet::rivet_type_id type_id = 0xbc11c5bc;
+		constexpr static std::string_view type_name = "BotConfigAwareness";
+		constexpr static rivet::rivet_type_id type_id = 0xbc11c5bc;
 
-		constexpr const static std::string_view Awareness_type_name = "Awareness";
-		constexpr const static rivet::rivet_type_id Awareness_type_id = 0xeb7b1622;
-		constexpr const static std::string_view StimulusSource_type_name = "StimulusSource";
-		constexpr const static rivet::rivet_type_id StimulusSource_type_id = 0x3bf83781;
-		constexpr const static std::string_view StimulusConfig_type_name = "StimulusConfig";
-		constexpr const static rivet::rivet_type_id StimulusConfig_type_id = 0xb0f8678e;
-		constexpr const static std::string_view TargetingStimulus_type_name = "TargetingStimulus";
-		constexpr const static rivet::rivet_type_id TargetingStimulus_type_id = 0xa40dee7c; 
+		constexpr static std::string_view Awareness_type_name = "Awareness";
+		constexpr static rivet::rivet_type_id Awareness_type_id = 0xeb7b1622;
+		constexpr static std::string_view StimulusSource_type_name = "StimulusSource";
+		constexpr static rivet::rivet_type_id StimulusSource_type_id = 0x3bf83781;
+		constexpr static std::string_view StimulusConfig_type_name = "StimulusConfig";
+		constexpr static rivet::rivet_type_id StimulusConfig_type_id = 0xb0f8678e;
+		constexpr static std::string_view TargetingStimulus_type_name = "TargetingStimulus";
+		constexpr static rivet::rivet_type_id TargetingStimulus_type_id = 0xa40dee7c; 
 
 		explicit BotConfigAwareness() = default;
 		explicit BotConfigAwareness([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

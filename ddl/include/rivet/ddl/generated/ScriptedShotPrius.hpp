@@ -23,19 +23,19 @@ namespace rivet::ddl::generated {
 	struct ScriptedShotEffectListElement; 
 
 	struct RIVET_DDL_SHARED ScriptedShotPrius : ShotBasePrius {
-		constexpr const static std::string_view type_name = "ScriptedShotPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xcff274f2;
+		constexpr static std::string_view type_name = "ScriptedShotPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xcff274f2;
 
-		constexpr const static std::string_view DelayFirstUpdateInterval_type_name = "DelayFirstUpdateInterval";
-		constexpr const static rivet::rivet_type_id DelayFirstUpdateInterval_type_id = 0xd8c2f7d9;
-		constexpr const static std::string_view UseActorCollision_type_name = "UseActorCollision";
-		constexpr const static rivet::rivet_type_id UseActorCollision_type_id = 0xd1a39273;
-		constexpr const static std::string_view LifetimeExpiredOnMaxRange_type_name = "LifetimeExpiredOnMaxRange";
-		constexpr const static rivet::rivet_type_id LifetimeExpiredOnMaxRange_type_id = 0x589995dd;
-		constexpr const static std::string_view ShowReticle_type_name = "ShowReticle";
-		constexpr const static rivet::rivet_type_id ShowReticle_type_id = 0x7eea1a49;
-		constexpr const static std::string_view Effects_type_name = "Effects";
-		constexpr const static rivet::rivet_type_id Effects_type_id = 0x49e15f92; 
+		constexpr static std::string_view DelayFirstUpdateInterval_type_name = "DelayFirstUpdateInterval";
+		constexpr static rivet::rivet_type_id DelayFirstUpdateInterval_type_id = 0xd8c2f7d9;
+		constexpr static std::string_view UseActorCollision_type_name = "UseActorCollision";
+		constexpr static rivet::rivet_type_id UseActorCollision_type_id = 0xd1a39273;
+		constexpr static std::string_view LifetimeExpiredOnMaxRange_type_name = "LifetimeExpiredOnMaxRange";
+		constexpr static rivet::rivet_type_id LifetimeExpiredOnMaxRange_type_id = 0x589995dd;
+		constexpr static std::string_view ShowReticle_type_name = "ShowReticle";
+		constexpr static rivet::rivet_type_id ShowReticle_type_id = 0x7eea1a49;
+		constexpr static std::string_view Effects_type_name = "Effects";
+		constexpr static rivet::rivet_type_id Effects_type_id = 0x49e15f92; 
 
 		explicit ScriptedShotPrius() = default;
 		explicit ScriptedShotPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ItemComponentAmmoPrius : BaseComponentAmmoPrius {
-		constexpr const static std::string_view type_name = "ItemComponentAmmoPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x9997d84;
+		constexpr static std::string_view type_name = "ItemComponentAmmoPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x9997d84;
 
-		constexpr const static std::string_view AmmoItemConfig_type_name = "AmmoItemConfig";
-		constexpr const static rivet::rivet_type_id AmmoItemConfig_type_id = 0x7151e5a4;
-		constexpr const static std::string_view ClipMax_type_name = "ClipMax";
-		constexpr const static rivet::rivet_type_id ClipMax_type_id = 0xfc892dc4; 
+		constexpr static std::string_view AmmoItemConfig_type_name = "AmmoItemConfig";
+		constexpr static rivet::rivet_type_id AmmoItemConfig_type_id = 0x7151e5a4;
+		constexpr static std::string_view ClipMax_type_name = "ClipMax";
+		constexpr static rivet::rivet_type_id ClipMax_type_id = 0xfc892dc4; 
 
 		explicit ItemComponentAmmoPrius() = default;
 		explicit ItemComponentAmmoPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

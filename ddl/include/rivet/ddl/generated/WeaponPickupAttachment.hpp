@@ -21,15 +21,15 @@ namespace rivet::ddl::generated {
 	struct DDLVector3; 
 
 	struct RIVET_DDL_SHARED WeaponPickupAttachment : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "WeaponPickupAttachment";
-		constexpr const static rivet::rivet_type_id type_id = 0x80f6608a;
+		constexpr static std::string_view type_name = "WeaponPickupAttachment";
+		constexpr static rivet::rivet_type_id type_id = 0x80f6608a;
 
-		constexpr const static std::string_view Locator_type_name = "Locator";
-		constexpr const static rivet::rivet_type_id Locator_type_id = 0x7bac1d57;
-		constexpr const static std::string_view OffsetFromLocator_type_name = "OffsetFromLocator";
-		constexpr const static rivet::rivet_type_id OffsetFromLocator_type_id = 0xb1c76511;
-		constexpr const static std::string_view PickupSpacing_type_name = "PickupSpacing";
-		constexpr const static rivet::rivet_type_id PickupSpacing_type_id = 0x32272c38; 
+		constexpr static std::string_view Locator_type_name = "Locator";
+		constexpr static rivet::rivet_type_id Locator_type_id = 0x7bac1d57;
+		constexpr static std::string_view OffsetFromLocator_type_name = "OffsetFromLocator";
+		constexpr static rivet::rivet_type_id OffsetFromLocator_type_id = 0xb1c76511;
+		constexpr static std::string_view PickupSpacing_type_name = "PickupSpacing";
+		constexpr static rivet::rivet_type_id PickupSpacing_type_id = 0x32272c38; 
 
 		explicit WeaponPickupAttachment() = default;
 		explicit WeaponPickupAttachment([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view ExistingLedgeFlockBehavior_type_name = "ExistingLedgeFlockBehavior";
-	constexpr const static rivet::rivet_type_id ExistingLedgeFlockBehavior_type_id = 0xc723d92a;
+	constexpr static std::string_view ExistingLedgeFlockBehavior_type_name = "ExistingLedgeFlockBehavior";
+	constexpr static rivet::rivet_type_id ExistingLedgeFlockBehavior_type_id = 0xc723d92a;
 
-	constexpr const static std::array<std::string_view, 2> ExistingLedgeFlockBehavior_values = {
+	constexpr static std::array<std::string_view, 2> ExistingLedgeFlockBehavior_values = {
 		"kScatterBirds",
 		"kDestroyBirds", 
 	};

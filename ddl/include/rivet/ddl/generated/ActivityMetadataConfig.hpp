@@ -21,27 +21,27 @@
 
 namespace rivet::ddl::generated {
 	struct RynoActivityData;
-	struct ActivitySubCategoryInfo;
-	struct ArenaCupActivityData; 
+	struct ArenaCupActivityData;
+	struct ActivitySubCategoryInfo; 
 
 	struct RIVET_DDL_SHARED ActivityMetadataConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "ActivityMetadataConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xf3b99ec5;
+		constexpr static std::string_view type_name = "ActivityMetadataConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xf3b99ec5;
 
-		constexpr const static std::string_view SubCategories_type_name = "SubCategories";
-		constexpr const static rivet::rivet_type_id SubCategories_type_id = 0x1546408e;
-		constexpr const static std::string_view BronzeCup_type_name = "BronzeCup";
-		constexpr const static rivet::rivet_type_id BronzeCup_type_id = 0x781fd602;
-		constexpr const static std::string_view SilverCup_type_name = "SilverCup";
-		constexpr const static rivet::rivet_type_id SilverCup_type_id = 0x13665853;
-		constexpr const static std::string_view GoldenCup_type_name = "GoldenCup";
-		constexpr const static rivet::rivet_type_id GoldenCup_type_id = 0x70f4091e;
-		constexpr const static std::string_view RynoActivityData_type_name = "RynoActivityData";
-		constexpr const static rivet::rivet_type_id RynoActivityData_type_id = 0xbae9f85c;
-		constexpr const static std::string_view FallbackSmallImage_type_name = "FallbackSmallImage";
-		constexpr const static rivet::rivet_type_id FallbackSmallImage_type_id = 0xc3541300;
-		constexpr const static std::string_view FallbackLargeImage_type_name = "FallbackLargeImage";
-		constexpr const static rivet::rivet_type_id FallbackLargeImage_type_id = 0x24f9098b; 
+		constexpr static std::string_view SubCategories_type_name = "SubCategories";
+		constexpr static rivet::rivet_type_id SubCategories_type_id = 0x1546408e;
+		constexpr static std::string_view BronzeCup_type_name = "BronzeCup";
+		constexpr static rivet::rivet_type_id BronzeCup_type_id = 0x781fd602;
+		constexpr static std::string_view SilverCup_type_name = "SilverCup";
+		constexpr static rivet::rivet_type_id SilverCup_type_id = 0x13665853;
+		constexpr static std::string_view GoldenCup_type_name = "GoldenCup";
+		constexpr static rivet::rivet_type_id GoldenCup_type_id = 0x70f4091e;
+		constexpr static std::string_view RynoActivityData_type_name = "RynoActivityData";
+		constexpr static rivet::rivet_type_id RynoActivityData_type_id = 0xbae9f85c;
+		constexpr static std::string_view FallbackSmallImage_type_name = "FallbackSmallImage";
+		constexpr static rivet::rivet_type_id FallbackSmallImage_type_id = 0xc3541300;
+		constexpr static std::string_view FallbackLargeImage_type_name = "FallbackLargeImage";
+		constexpr static rivet::rivet_type_id FallbackLargeImage_type_id = 0x24f9098b; 
 
 		explicit ActivityMetadataConfig() = default;
 		explicit ActivityMetadataConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

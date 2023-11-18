@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct HeadSizeMapping; 
 
 	struct RIVET_DDL_SHARED RewardHeadSizeConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "RewardHeadSizeConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x221b6911;
+		constexpr static std::string_view type_name = "RewardHeadSizeConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x221b6911;
 
-		constexpr const static std::string_view HeadSizeMappings_type_name = "HeadSizeMappings";
-		constexpr const static rivet::rivet_type_id HeadSizeMappings_type_id = 0x545d887f; 
+		constexpr static std::string_view HeadSizeMappings_type_name = "HeadSizeMappings";
+		constexpr static rivet::rivet_type_id HeadSizeMappings_type_id = 0x545d887f; 
 
 		explicit RewardHeadSizeConfig() = default;
 		explicit RewardHeadSizeConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

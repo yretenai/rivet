@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct AmmoConfigBase; 
 
 	struct RIVET_DDL_SHARED AmmoItemConfig : GameItemConfig {
-		constexpr const static std::string_view type_name = "AmmoItemConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x7151e5a4;
+		constexpr static std::string_view type_name = "AmmoItemConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x7151e5a4;
 
-		constexpr const static std::string_view AmmoData_type_name = "AmmoData";
-		constexpr const static rivet::rivet_type_id AmmoData_type_id = 0xea8e9040; 
+		constexpr static std::string_view AmmoData_type_name = "AmmoData";
+		constexpr static rivet::rivet_type_id AmmoData_type_id = 0xea8e9040; 
 
 		explicit AmmoItemConfig() = default;
 		explicit AmmoItemConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

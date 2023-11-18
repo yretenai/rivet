@@ -20,17 +20,17 @@
 #include <rivet/ddl/generated/ShotMotionBasePrius.hpp> 
 
 namespace rivet::ddl::generated {
-	struct FireFromLookData;
-	struct DDLVector3; 
+	struct DDLVector3;
+	struct FireFromLookData; 
 
 	struct RIVET_DDL_SHARED BasicShotMotionPrius : ShotMotionBasePrius {
-		constexpr const static std::string_view type_name = "BasicShotMotionPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x4bccd259;
+		constexpr static std::string_view type_name = "BasicShotMotionPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x4bccd259;
 
-		constexpr const static std::string_view FireFromLookPositionData_type_name = "FireFromLookPositionData";
-		constexpr const static rivet::rivet_type_id FireFromLookPositionData_type_id = 0x3a7d57a3;
-		constexpr const static std::string_view EmitSimOffset_type_name = "EmitSimOffset";
-		constexpr const static rivet::rivet_type_id EmitSimOffset_type_id = 0xc069a8a0; 
+		constexpr static std::string_view FireFromLookPositionData_type_name = "FireFromLookPositionData";
+		constexpr static rivet::rivet_type_id FireFromLookPositionData_type_id = 0x3a7d57a3;
+		constexpr static std::string_view EmitSimOffset_type_name = "EmitSimOffset";
+		constexpr static rivet::rivet_type_id EmitSimOffset_type_id = 0xc069a8a0; 
 
 		explicit BasicShotMotionPrius() = default;
 		explicit BasicShotMotionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

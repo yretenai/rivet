@@ -21,13 +21,13 @@ namespace rivet::ddl::generated {
 	struct VariantConfiguration; 
 
 	struct RIVET_DDL_SHARED BotLookSelectorData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "BotLookSelectorData";
-		constexpr const static rivet::rivet_type_id type_id = 0x5fe39e8d;
+		constexpr static std::string_view type_name = "BotLookSelectorData";
+		constexpr static rivet::rivet_type_id type_id = 0x5fe39e8d;
 
-		constexpr const static std::string_view Variants_type_name = "Variants";
-		constexpr const static rivet::rivet_type_id Variants_type_id = 0x4999ee91;
-		constexpr const static std::string_view LockPhysicsOnSpawn_type_name = "LockPhysicsOnSpawn";
-		constexpr const static rivet::rivet_type_id LockPhysicsOnSpawn_type_id = 0xd50a5a5c; 
+		constexpr static std::string_view Variants_type_name = "Variants";
+		constexpr static rivet::rivet_type_id Variants_type_id = 0x4999ee91;
+		constexpr static std::string_view LockPhysicsOnSpawn_type_name = "LockPhysicsOnSpawn";
+		constexpr static rivet::rivet_type_id LockPhysicsOnSpawn_type_id = 0xd50a5a5c; 
 
 		explicit BotLookSelectorData() = default;
 		explicit BotLookSelectorData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

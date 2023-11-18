@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED TriggerEffectKeyFrameDataCustom : TriggerEffectKeyFrameDataBase {
-		constexpr const static std::string_view type_name = "TriggerEffectKeyFrameDataCustom";
-		constexpr const static rivet::rivet_type_id type_id = 0x6e7a162b;
+		constexpr static std::string_view type_name = "TriggerEffectKeyFrameDataCustom";
+		constexpr static rivet::rivet_type_id type_id = 0x6e7a162b;
 
-		constexpr const static std::string_view CustomValue_type_name = "CustomValue";
-		constexpr const static rivet::rivet_type_id CustomValue_type_id = 0xd399e0d; 
+		constexpr static std::string_view CustomValue_type_name = "CustomValue";
+		constexpr static rivet::rivet_type_id CustomValue_type_id = 0xd399e0d; 
 
 		explicit TriggerEffectKeyFrameDataCustom() = default;
 		explicit TriggerEffectKeyFrameDataCustom([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

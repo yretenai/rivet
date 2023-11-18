@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED FormationRotateBase : FormationMotionBase {
-		constexpr const static std::string_view type_name = "FormationRotateBase";
-		constexpr const static rivet::rivet_type_id type_id = 0x48559f73;
+		constexpr static std::string_view type_name = "FormationRotateBase";
+		constexpr static rivet::rivet_type_id type_id = 0x48559f73;
 
-		constexpr const static std::string_view DegreesPerSecond_type_name = "DegreesPerSecond";
-		constexpr const static rivet::rivet_type_id DegreesPerSecond_type_id = 0x1f11e275; 
+		constexpr static std::string_view DegreesPerSecond_type_name = "DegreesPerSecond";
+		constexpr static rivet::rivet_type_id DegreesPerSecond_type_id = 0x1f11e275; 
 
 		explicit FormationRotateBase() = default;
 		explicit FormationRotateBase([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct CameraCurveElement; 
 
 	struct RIVET_DDL_SHARED CameraCurve : ConfigBase {
-		constexpr const static std::string_view type_name = "CameraCurve";
-		constexpr const static rivet::rivet_type_id type_id = 0xcc4a2f3f;
+		constexpr static std::string_view type_name = "CameraCurve";
+		constexpr static rivet::rivet_type_id type_id = 0xcc4a2f3f;
 
-		constexpr const static std::string_view Points_type_name = "Points";
-		constexpr const static rivet::rivet_type_id Points_type_id = 0x19c2c04e; 
+		constexpr static std::string_view Points_type_name = "Points";
+		constexpr static rivet::rivet_type_id Points_type_id = 0x19c2c04e; 
 
 		explicit CameraCurve() = default;
 		explicit CameraCurve([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

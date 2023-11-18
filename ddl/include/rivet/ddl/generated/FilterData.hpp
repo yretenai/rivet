@@ -21,29 +21,29 @@ namespace rivet::ddl::generated {
 	struct AssetReferenceDef; 
 
 	struct RIVET_DDL_SHARED FilterData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "FilterData";
-		constexpr const static rivet::rivet_type_id type_id = 0x7c489a4c;
+		constexpr static std::string_view type_name = "FilterData";
+		constexpr static rivet::rivet_type_id type_id = 0x7c489a4c;
 
-		constexpr const static std::string_view Name_type_name = "Name";
-		constexpr const static rivet::rivet_type_id Name_type_id = 0x6eb3beb6;
-		constexpr const static std::string_view FilterRef_type_name = "FilterRef";
-		constexpr const static rivet::rivet_type_id FilterRef_type_id = 0x1b0b9021;
-		constexpr const static std::string_view FXFilterRef_type_name = "FXFilterRef";
-		constexpr const static rivet::rivet_type_id FXFilterRef_type_id = 0x9f7e3d0;
-		constexpr const static std::string_view FilterActorRef_type_name = "FilterActorRef";
-		constexpr const static rivet::rivet_type_id FilterActorRef_type_id = 0x324f4ad3;
-		constexpr const static std::string_view DisableAaMode_type_name = "DisableAaMode";
-		constexpr const static rivet::rivet_type_id DisableAaMode_type_id = 0x48ecd6d3;
-		constexpr const static std::string_view ComputeLuminanceEarly_type_name = "ComputeLuminanceEarly";
-		constexpr const static rivet::rivet_type_id ComputeLuminanceEarly_type_id = 0xba1c17dd;
-		constexpr const static std::string_view BlendMin_type_name = "BlendMin";
-		constexpr const static rivet::rivet_type_id BlendMin_type_id = 0xedf356fd;
-		constexpr const static std::string_view BlendMax_type_name = "BlendMax";
-		constexpr const static rivet::rivet_type_id BlendMax_type_id = 0xd1fe69a4;
-		constexpr const static std::string_view ExcludeIndoors_type_name = "ExcludeIndoors";
-		constexpr const static rivet::rivet_type_id ExcludeIndoors_type_id = 0x9c9893d5;
-		constexpr const static std::string_view ExcludeInGame_type_name = "ExcludeInGame";
-		constexpr const static rivet::rivet_type_id ExcludeInGame_type_id = 0x9869b628; 
+		constexpr static std::string_view Name_type_name = "Name";
+		constexpr static rivet::rivet_type_id Name_type_id = 0x6eb3beb6;
+		constexpr static std::string_view FilterRef_type_name = "FilterRef";
+		constexpr static rivet::rivet_type_id FilterRef_type_id = 0x1b0b9021;
+		constexpr static std::string_view FXFilterRef_type_name = "FXFilterRef";
+		constexpr static rivet::rivet_type_id FXFilterRef_type_id = 0x9f7e3d0;
+		constexpr static std::string_view FilterActorRef_type_name = "FilterActorRef";
+		constexpr static rivet::rivet_type_id FilterActorRef_type_id = 0x324f4ad3;
+		constexpr static std::string_view DisableAaMode_type_name = "DisableAaMode";
+		constexpr static rivet::rivet_type_id DisableAaMode_type_id = 0x48ecd6d3;
+		constexpr static std::string_view ComputeLuminanceEarly_type_name = "ComputeLuminanceEarly";
+		constexpr static rivet::rivet_type_id ComputeLuminanceEarly_type_id = 0xba1c17dd;
+		constexpr static std::string_view BlendMin_type_name = "BlendMin";
+		constexpr static rivet::rivet_type_id BlendMin_type_id = 0xedf356fd;
+		constexpr static std::string_view BlendMax_type_name = "BlendMax";
+		constexpr static rivet::rivet_type_id BlendMax_type_id = 0xd1fe69a4;
+		constexpr static std::string_view ExcludeIndoors_type_name = "ExcludeIndoors";
+		constexpr static rivet::rivet_type_id ExcludeIndoors_type_id = 0x9c9893d5;
+		constexpr static std::string_view ExcludeInGame_type_name = "ExcludeInGame";
+		constexpr static rivet::rivet_type_id ExcludeInGame_type_id = 0x9869b628; 
 
 		explicit FilterData() = default;
 		explicit FilterData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

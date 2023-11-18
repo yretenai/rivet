@@ -3,16 +3,16 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/OrbitCamData.hpp>
-#include <rivet/ddl/generated/SelfieModeData.hpp>
-#include <rivet/ddl/generated/ModeUnavailableData.hpp>
-#include <rivet/ddl/generated/IntersectionFadeData.hpp>
-#include <rivet/ddl/generated/FirstPersonCamData.hpp>
-#include <rivet/ddl/generated/FreeMoveCamData.hpp>
-#include <rivet/ddl/generated/DefaultPhotoLightSettings.hpp>
 #include <rivet/ddl/generated/BlackoutData.hpp>
+#include <rivet/ddl/generated/DefaultPhotoLightSettings.hpp>
+#include <rivet/ddl/generated/FirstPersonCamData.hpp>
+#include <rivet/ddl/generated/BlackoutFilterItem.hpp>
+#include <rivet/ddl/generated/OrbitCamData.hpp>
+#include <rivet/ddl/generated/FreeMoveCamData.hpp>
 #include <rivet/ddl/generated/GoldBoltRewardItem.hpp>
-#include <rivet/ddl/generated/BlackoutFilterItem.hpp> 
+#include <rivet/ddl/generated/IntersectionFadeData.hpp>
+#include <rivet/ddl/generated/SelfieModeData.hpp>
+#include <rivet/ddl/generated/ModeUnavailableData.hpp> 
 
 #include <rivet/ddl/generated/PhotomodeSystemConfig.hpp>
 

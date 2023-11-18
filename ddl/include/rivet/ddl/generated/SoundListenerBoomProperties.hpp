@@ -19,19 +19,19 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED SoundListenerBoomProperties : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "SoundListenerBoomProperties";
-		constexpr const static rivet::rivet_type_id type_id = 0x5ba7691c;
+		constexpr static std::string_view type_name = "SoundListenerBoomProperties";
+		constexpr static rivet::rivet_type_id type_id = 0x5ba7691c;
 
-		constexpr const static std::string_view RangeMin_type_name = "RangeMin";
-		constexpr const static rivet::rivet_type_id RangeMin_type_id = 0x2ff4f3c1;
-		constexpr const static std::string_view RangeMax_type_name = "RangeMax";
-		constexpr const static rivet::rivet_type_id RangeMax_type_id = 0x13f9cc98;
-		constexpr const static std::string_view BoomLength_type_name = "BoomLength";
-		constexpr const static rivet::rivet_type_id BoomLength_type_id = 0x3acd0962;
-		constexpr const static std::string_view TargetUpOffset_type_name = "TargetUpOffset";
-		constexpr const static rivet::rivet_type_id TargetUpOffset_type_id = 0x96903517;
-		constexpr const static std::string_view TargetLocator_type_name = "TargetLocator";
-		constexpr const static rivet::rivet_type_id TargetLocator_type_id = 0x7abba555; 
+		constexpr static std::string_view RangeMin_type_name = "RangeMin";
+		constexpr static rivet::rivet_type_id RangeMin_type_id = 0x2ff4f3c1;
+		constexpr static std::string_view RangeMax_type_name = "RangeMax";
+		constexpr static rivet::rivet_type_id RangeMax_type_id = 0x13f9cc98;
+		constexpr static std::string_view BoomLength_type_name = "BoomLength";
+		constexpr static rivet::rivet_type_id BoomLength_type_id = 0x3acd0962;
+		constexpr static std::string_view TargetUpOffset_type_name = "TargetUpOffset";
+		constexpr static rivet::rivet_type_id TargetUpOffset_type_id = 0x96903517;
+		constexpr static std::string_view TargetLocator_type_name = "TargetLocator";
+		constexpr static rivet::rivet_type_id TargetLocator_type_id = 0x7abba555; 
 
 		explicit SoundListenerBoomProperties() = default;
 		explicit SoundListenerBoomProperties([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

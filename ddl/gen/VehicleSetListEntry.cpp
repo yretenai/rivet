@@ -3,10 +3,10 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/VehicleSpawnInfo.hpp>
-#include <rivet/ddl/generated/ObjSysUnlockSequence.hpp>
+#include <rivet/ddl/generated/VehicleTypeListEntry.hpp>
 #include <rivet/ddl/generated/VehicleNodeParams.hpp>
-#include <rivet/ddl/generated/VehicleTypeListEntry.hpp> 
+#include <rivet/ddl/generated/VehicleSpawnInfo.hpp>
+#include <rivet/ddl/generated/ObjSysUnlockSequence.hpp> 
 
 #include <rivet/ddl/generated/VehicleSetListEntry.hpp>
 

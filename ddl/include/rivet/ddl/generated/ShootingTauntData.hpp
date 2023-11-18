@@ -19,21 +19,21 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ShootingTauntData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "ShootingTauntData";
-		constexpr const static rivet::rivet_type_id type_id = 0x50e2e8ee;
+		constexpr static std::string_view type_name = "ShootingTauntData";
+		constexpr static rivet::rivet_type_id type_id = 0x50e2e8ee;
 
-		constexpr const static std::string_view MinRangedAttacksMissedForTaunt_type_name = "MinRangedAttacksMissedForTaunt";
-		constexpr const static rivet::rivet_type_id MinRangedAttacksMissedForTaunt_type_id = 0x590d8a16;
-		constexpr const static std::string_view MaxRangedAttacksMissedForTaunt_type_name = "MaxRangedAttacksMissedForTaunt";
-		constexpr const static rivet::rivet_type_id MaxRangedAttacksMissedForTaunt_type_id = 0xe932902a;
-		constexpr const static std::string_view TauntChance_type_name = "TauntChance";
-		constexpr const static rivet::rivet_type_id TauntChance_type_id = 0x63a2f192;
-		constexpr const static std::string_view IdleTauntChance_type_name = "IdleTauntChance";
-		constexpr const static rivet::rivet_type_id IdleTauntChance_type_id = 0x52d8671b;
-		constexpr const static std::string_view AimFidgetChance_type_name = "AimFidgetChance";
-		constexpr const static rivet::rivet_type_id AimFidgetChance_type_id = 0x4219b0b4;
-		constexpr const static std::string_view AimAdjustBias_type_name = "AimAdjustBias";
-		constexpr const static rivet::rivet_type_id AimAdjustBias_type_id = 0x4af6ba; 
+		constexpr static std::string_view MinRangedAttacksMissedForTaunt_type_name = "MinRangedAttacksMissedForTaunt";
+		constexpr static rivet::rivet_type_id MinRangedAttacksMissedForTaunt_type_id = 0x590d8a16;
+		constexpr static std::string_view MaxRangedAttacksMissedForTaunt_type_name = "MaxRangedAttacksMissedForTaunt";
+		constexpr static rivet::rivet_type_id MaxRangedAttacksMissedForTaunt_type_id = 0xe932902a;
+		constexpr static std::string_view TauntChance_type_name = "TauntChance";
+		constexpr static rivet::rivet_type_id TauntChance_type_id = 0x63a2f192;
+		constexpr static std::string_view IdleTauntChance_type_name = "IdleTauntChance";
+		constexpr static rivet::rivet_type_id IdleTauntChance_type_id = 0x52d8671b;
+		constexpr static std::string_view AimFidgetChance_type_name = "AimFidgetChance";
+		constexpr static rivet::rivet_type_id AimFidgetChance_type_id = 0x4219b0b4;
+		constexpr static std::string_view AimAdjustBias_type_name = "AimAdjustBias";
+		constexpr static rivet::rivet_type_id AimAdjustBias_type_id = 0x4af6ba; 
 
 		explicit ShootingTauntData() = default;
 		explicit ShootingTauntData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

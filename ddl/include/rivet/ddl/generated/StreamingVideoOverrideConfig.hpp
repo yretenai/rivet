@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct StreamingVideoBaseConfig; 
 
 	struct RIVET_DDL_SHARED StreamingVideoOverrideConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "StreamingVideoOverrideConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x31623a77;
+		constexpr static std::string_view type_name = "StreamingVideoOverrideConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x31623a77;
 
-		constexpr const static std::string_view StreamingData_type_name = "StreamingData";
-		constexpr const static rivet::rivet_type_id StreamingData_type_id = 0xaa4e455d; 
+		constexpr static std::string_view StreamingData_type_name = "StreamingData";
+		constexpr static rivet::rivet_type_id StreamingData_type_id = 0xaa4e455d; 
 
 		explicit StreamingVideoOverrideConfig() = default;
 		explicit StreamingVideoOverrideConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

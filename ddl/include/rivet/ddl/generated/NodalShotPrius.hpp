@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED NodalShotPrius : NodalShotBasePrius {
-		constexpr const static std::string_view type_name = "NodalShotPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x1c08e8f0;
+		constexpr static std::string_view type_name = "NodalShotPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x1c08e8f0;
 
 		explicit NodalShotPrius() = default;
 		explicit NodalShotPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

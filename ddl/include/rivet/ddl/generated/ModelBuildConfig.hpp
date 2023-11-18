@@ -17,18 +17,18 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/ConfigBase.hpp>
-#include <rivet/ddl/generated/enums/x9833bb27.hpp> 
+#include <rivet/ddl/generated/enums/x9833bb27.hpp>
+#include <rivet/ddl/generated/ConfigBase.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ModelBuildConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "ModelBuildConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xd4263e25;
+		constexpr static std::string_view type_name = "ModelBuildConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xd4263e25;
 
-		constexpr const static std::string_view MaximumCollisionPolysPerNonstaticMesh_type_name = "MaximumCollisionPolysPerNonstaticMesh";
-		constexpr const static rivet::rivet_type_id MaximumCollisionPolysPerNonstaticMesh_type_id = 0x631fe4f3;
-		constexpr const static std::string_view WarnOnMoreThanMaxCollisionPolys_type_name = "WarnOnMoreThanMaxCollisionPolys";
-		constexpr const static rivet::rivet_type_id WarnOnMoreThanMaxCollisionPolys_type_id = 0xb0c6a52a; 
+		constexpr static std::string_view MaximumCollisionPolysPerNonstaticMesh_type_name = "MaximumCollisionPolysPerNonstaticMesh";
+		constexpr static rivet::rivet_type_id MaximumCollisionPolysPerNonstaticMesh_type_id = 0x631fe4f3;
+		constexpr static std::string_view WarnOnMoreThanMaxCollisionPolys_type_name = "WarnOnMoreThanMaxCollisionPolys";
+		constexpr static rivet::rivet_type_id WarnOnMoreThanMaxCollisionPolys_type_id = 0xb0c6a52a; 
 
 		explicit ModelBuildConfig() = default;
 		explicit ModelBuildConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

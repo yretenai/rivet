@@ -23,19 +23,19 @@ namespace rivet::ddl::generated {
 	struct SpawnerBotThrowData; 
 
 	struct RIVET_DDL_SHARED SpawnerBotBaseConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "SpawnerBotBaseConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x9e208b03;
+		constexpr static std::string_view type_name = "SpawnerBotBaseConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x9e208b03;
 
-		constexpr const static std::string_view NumActiveSpawnedBots_type_name = "NumActiveSpawnedBots";
-		constexpr const static rivet::rivet_type_id NumActiveSpawnedBots_type_id = 0x67e67610;
-		constexpr const static std::string_view SpawnDelay_type_name = "SpawnDelay";
-		constexpr const static rivet::rivet_type_id SpawnDelay_type_id = 0x6768b329;
-		constexpr const static std::string_view SpawnTriggerDelay_type_name = "SpawnTriggerDelay";
-		constexpr const static rivet::rivet_type_id SpawnTriggerDelay_type_id = 0x9402d4cb;
-		constexpr const static std::string_view DefaultSpawn_type_name = "DefaultSpawn";
-		constexpr const static rivet::rivet_type_id DefaultSpawn_type_id = 0x8a95937e;
-		constexpr const static std::string_view ThrowData_type_name = "ThrowData";
-		constexpr const static rivet::rivet_type_id ThrowData_type_id = 0x2f976166; 
+		constexpr static std::string_view NumActiveSpawnedBots_type_name = "NumActiveSpawnedBots";
+		constexpr static rivet::rivet_type_id NumActiveSpawnedBots_type_id = 0x67e67610;
+		constexpr static std::string_view SpawnDelay_type_name = "SpawnDelay";
+		constexpr static rivet::rivet_type_id SpawnDelay_type_id = 0x6768b329;
+		constexpr static std::string_view SpawnTriggerDelay_type_name = "SpawnTriggerDelay";
+		constexpr static rivet::rivet_type_id SpawnTriggerDelay_type_id = 0x9402d4cb;
+		constexpr static std::string_view DefaultSpawn_type_name = "DefaultSpawn";
+		constexpr static rivet::rivet_type_id DefaultSpawn_type_id = 0x8a95937e;
+		constexpr static std::string_view ThrowData_type_name = "ThrowData";
+		constexpr static rivet::rivet_type_id ThrowData_type_id = 0x2f976166; 
 
 		explicit SpawnerBotBaseConfig() = default;
 		explicit SpawnerBotBaseConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

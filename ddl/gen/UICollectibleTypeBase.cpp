@@ -4,8 +4,8 @@
 // SPDX-License-Identifier: MPL-2.0
 
 #include <rivet/ddl/generated/UICollectibleTypeGoldBolt.hpp>
-#include <rivet/ddl/generated/UICollectibleTypeRynoPlan.hpp>
-#include <rivet/ddl/generated/UICollectibleTypeRuinToken.hpp> 
+#include <rivet/ddl/generated/UICollectibleTypeRuinToken.hpp>
+#include <rivet/ddl/generated/UICollectibleTypeRynoPlan.hpp> 
 
 #include <rivet/ddl/generated/UICollectibleTypeBase.hpp>
 

@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view WeightSpreadScheme_type_name = "WeightSpreadScheme";
-	constexpr const static rivet::rivet_type_id WeightSpreadScheme_type_id = 0xab2ca92f;
+	constexpr static std::string_view WeightSpreadScheme_type_name = "WeightSpreadScheme";
+	constexpr static rivet::rivet_type_id WeightSpreadScheme_type_id = 0xab2ca92f;
 
-	constexpr const static std::array<std::string_view, 3> WeightSpreadScheme_values = {
+	constexpr static std::array<std::string_view, 3> WeightSpreadScheme_values = {
 		"kEvenSpread",
 		"kFavorBaseOfChain",
 		"kFavorEndOfChain", 

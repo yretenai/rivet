@@ -19,13 +19,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED CooldownPerDifficultyData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "CooldownPerDifficultyData";
-		constexpr const static rivet::rivet_type_id type_id = 0x7ebda3f9;
+		constexpr static std::string_view type_name = "CooldownPerDifficultyData";
+		constexpr static rivet::rivet_type_id type_id = 0x7ebda3f9;
 
-		constexpr const static std::string_view MinCooldown_type_name = "MinCooldown";
-		constexpr const static rivet::rivet_type_id MinCooldown_type_id = 0x867fdf62;
-		constexpr const static std::string_view MaxCooldown_type_name = "MaxCooldown";
-		constexpr const static rivet::rivet_type_id MaxCooldown_type_id = 0x4a72a46d; 
+		constexpr static std::string_view MinCooldown_type_name = "MinCooldown";
+		constexpr static rivet::rivet_type_id MinCooldown_type_id = 0x867fdf62;
+		constexpr static std::string_view MaxCooldown_type_name = "MaxCooldown";
+		constexpr static rivet::rivet_type_id MaxCooldown_type_id = 0x4a72a46d; 
 
 		explicit CooldownPerDifficultyData() = default;
 		explicit CooldownPerDifficultyData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

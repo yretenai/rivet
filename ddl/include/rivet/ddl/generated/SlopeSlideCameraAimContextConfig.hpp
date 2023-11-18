@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED SlopeSlideCameraAimContextConfig : CameraAimContextVariableFOVConfig {
-		constexpr const static std::string_view type_name = "SlopeSlideCameraAimContextConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x87e5bc76;
+		constexpr static std::string_view type_name = "SlopeSlideCameraAimContextConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x87e5bc76;
 
 		explicit SlopeSlideCameraAimContextConfig() = default;
 		explicit SlopeSlideCameraAimContextConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

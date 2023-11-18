@@ -23,19 +23,19 @@ namespace rivet::ddl::generated {
 	struct ShotBasePrius; 
 
 	struct RIVET_DDL_SHARED HurdleShotPrius : GroundWaveShotPrius {
-		constexpr const static std::string_view type_name = "HurdleShotPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x2b449d75;
+		constexpr static std::string_view type_name = "HurdleShotPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x2b449d75;
 
-		constexpr const static std::string_view DamageFromBeginning_type_name = "DamageFromBeginning";
-		constexpr const static rivet::rivet_type_id DamageFromBeginning_type_id = 0x49c78205;
-		constexpr const static std::string_view DisableGroundCrawlMotion_type_name = "DisableGroundCrawlMotion";
-		constexpr const static rivet::rivet_type_id DisableGroundCrawlMotion_type_id = 0xe032a00f;
-		constexpr const static std::string_view NumShotsInHurdle_type_name = "NumShotsInHurdle";
-		constexpr const static rivet::rivet_type_id NumShotsInHurdle_type_id = 0x90281afe;
-		constexpr const static std::string_view SecondaryShotSpawnEmit_type_name = "SecondaryShotSpawnEmit";
-		constexpr const static rivet::rivet_type_id SecondaryShotSpawnEmit_type_id = 0xc749f57c;
-		constexpr const static std::string_view SecondaryShotPrius_type_name = "SecondaryShotPrius";
-		constexpr const static rivet::rivet_type_id SecondaryShotPrius_type_id = 0x73df6d85; 
+		constexpr static std::string_view DamageFromBeginning_type_name = "DamageFromBeginning";
+		constexpr static rivet::rivet_type_id DamageFromBeginning_type_id = 0x49c78205;
+		constexpr static std::string_view DisableGroundCrawlMotion_type_name = "DisableGroundCrawlMotion";
+		constexpr static rivet::rivet_type_id DisableGroundCrawlMotion_type_id = 0xe032a00f;
+		constexpr static std::string_view NumShotsInHurdle_type_name = "NumShotsInHurdle";
+		constexpr static rivet::rivet_type_id NumShotsInHurdle_type_id = 0x90281afe;
+		constexpr static std::string_view SecondaryShotSpawnEmit_type_name = "SecondaryShotSpawnEmit";
+		constexpr static rivet::rivet_type_id SecondaryShotSpawnEmit_type_id = 0xc749f57c;
+		constexpr static std::string_view SecondaryShotPrius_type_name = "SecondaryShotPrius";
+		constexpr static rivet::rivet_type_id SecondaryShotPrius_type_id = 0x73df6d85; 
 
 		explicit HurdleShotPrius() = default;
 		explicit HurdleShotPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

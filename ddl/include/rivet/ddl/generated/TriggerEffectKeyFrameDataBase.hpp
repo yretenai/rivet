@@ -18,17 +18,17 @@
 #include <rivet/structures/rivet_serialization.hpp>
 
 namespace rivet::ddl::generated {
-	struct TriggerEffectDataBase;
-	struct TriggerEffectKeyFrameBlendBase; 
+	struct TriggerEffectKeyFrameBlendBase;
+	struct TriggerEffectDataBase; 
 
 	struct RIVET_DDL_SHARED TriggerEffectKeyFrameDataBase : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "TriggerEffectKeyFrameDataBase";
-		constexpr const static rivet::rivet_type_id type_id = 0xd8e4ea8f;
+		constexpr static std::string_view type_name = "TriggerEffectKeyFrameDataBase";
+		constexpr static rivet::rivet_type_id type_id = 0xd8e4ea8f;
 
-		constexpr const static std::string_view TriggerEffect_type_name = "TriggerEffect";
-		constexpr const static rivet::rivet_type_id TriggerEffect_type_id = 0x4163ac0d;
-		constexpr const static std::string_view BlendStyle_type_name = "BlendStyle";
-		constexpr const static rivet::rivet_type_id BlendStyle_type_id = 0xb34024ea; 
+		constexpr static std::string_view TriggerEffect_type_name = "TriggerEffect";
+		constexpr static rivet::rivet_type_id TriggerEffect_type_id = 0x4163ac0d;
+		constexpr static std::string_view BlendStyle_type_name = "BlendStyle";
+		constexpr static rivet::rivet_type_id BlendStyle_type_id = 0xb34024ea; 
 
 		explicit TriggerEffectKeyFrameDataBase() = default;
 		explicit TriggerEffectKeyFrameDataBase([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

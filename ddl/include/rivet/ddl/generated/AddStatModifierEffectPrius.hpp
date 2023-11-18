@@ -17,21 +17,21 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/ScriptedShotEffectBasePrius.hpp>
+#include <rivet/ddl/generated/enums/x2d67b08a.hpp>
 #include <rivet/ddl/generated/enums/x67c7527d.hpp>
-#include <rivet/ddl/generated/enums/x2d67b08a.hpp> 
+#include <rivet/ddl/generated/ScriptedShotEffectBasePrius.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED AddStatModifierEffectPrius : ScriptedShotEffectBasePrius {
-		constexpr const static std::string_view type_name = "AddStatModifierEffectPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x91f90128;
+		constexpr static std::string_view type_name = "AddStatModifierEffectPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x91f90128;
 
-		constexpr const static std::string_view Stat_type_name = "Stat";
-		constexpr const static rivet::rivet_type_id Stat_type_id = 0x10283f91;
-		constexpr const static std::string_view Op_type_name = "Op";
-		constexpr const static rivet::rivet_type_id Op_type_id = 0xc6d13976;
-		constexpr const static std::string_view Value_type_name = "Value";
-		constexpr const static rivet::rivet_type_id Value_type_id = 0x42494f5; 
+		constexpr static std::string_view Stat_type_name = "Stat";
+		constexpr static rivet::rivet_type_id Stat_type_id = 0x10283f91;
+		constexpr static std::string_view Op_type_name = "Op";
+		constexpr static rivet::rivet_type_id Op_type_id = 0xc6d13976;
+		constexpr static std::string_view Value_type_name = "Value";
+		constexpr static rivet::rivet_type_id Value_type_id = 0x42494f5; 
 
 		explicit AddStatModifierEffectPrius() = default;
 		explicit AddStatModifierEffectPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

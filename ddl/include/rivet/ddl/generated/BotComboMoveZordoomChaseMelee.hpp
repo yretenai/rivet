@@ -21,21 +21,21 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED BotComboMoveZordoomChaseMelee : BotComboMoveBase {
-		constexpr const static std::string_view type_name = "BotComboMoveZordoomChaseMelee";
-		constexpr const static rivet::rivet_type_id type_id = 0x8d5b338a;
+		constexpr static std::string_view type_name = "BotComboMoveZordoomChaseMelee";
+		constexpr static rivet::rivet_type_id type_id = 0x8d5b338a;
 
-		constexpr const static std::string_view IntroAnim_type_name = "IntroAnim";
-		constexpr const static rivet::rivet_type_id IntroAnim_type_id = 0xf227a2c3;
-		constexpr const static std::string_view ActiveAnim_type_name = "ActiveAnim";
-		constexpr const static rivet::rivet_type_id ActiveAnim_type_id = 0x3f3770a4;
-		constexpr const static std::string_view OutroAnim_type_name = "OutroAnim";
-		constexpr const static rivet::rivet_type_id OutroAnim_type_id = 0xa0ecf634;
-		constexpr const static std::string_view IntroDuration_type_name = "IntroDuration";
-		constexpr const static rivet::rivet_type_id IntroDuration_type_id = 0x5d9ecce9;
-		constexpr const static std::string_view ActiveDuration_type_name = "ActiveDuration";
-		constexpr const static rivet::rivet_type_id ActiveDuration_type_id = 0xda754e51;
-		constexpr const static std::string_view OutroDuration_type_name = "OutroDuration";
-		constexpr const static rivet::rivet_type_id OutroDuration_type_id = 0x80f15ac6; 
+		constexpr static std::string_view IntroAnim_type_name = "IntroAnim";
+		constexpr static rivet::rivet_type_id IntroAnim_type_id = 0xf227a2c3;
+		constexpr static std::string_view ActiveAnim_type_name = "ActiveAnim";
+		constexpr static rivet::rivet_type_id ActiveAnim_type_id = 0x3f3770a4;
+		constexpr static std::string_view OutroAnim_type_name = "OutroAnim";
+		constexpr static rivet::rivet_type_id OutroAnim_type_id = 0xa0ecf634;
+		constexpr static std::string_view IntroDuration_type_name = "IntroDuration";
+		constexpr static rivet::rivet_type_id IntroDuration_type_id = 0x5d9ecce9;
+		constexpr static std::string_view ActiveDuration_type_name = "ActiveDuration";
+		constexpr static rivet::rivet_type_id ActiveDuration_type_id = 0xda754e51;
+		constexpr static std::string_view OutroDuration_type_name = "OutroDuration";
+		constexpr static rivet::rivet_type_id OutroDuration_type_id = 0x80f15ac6; 
 
 		explicit BotComboMoveZordoomChaseMelee() = default;
 		explicit BotComboMoveZordoomChaseMelee([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

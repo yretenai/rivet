@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DamageModifierConditionRequestIdPrius : DamageModifierConditionBasePrius {
-		constexpr const static std::string_view type_name = "DamageModifierConditionRequestIdPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x2a369d76;
+		constexpr static std::string_view type_name = "DamageModifierConditionRequestIdPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x2a369d76;
 
-		constexpr const static std::string_view RequestId_type_name = "RequestId";
-		constexpr const static rivet::rivet_type_id RequestId_type_id = 0x239eef0d;
-		constexpr const static std::string_view IsInclude_type_name = "IsInclude";
-		constexpr const static rivet::rivet_type_id IsInclude_type_id = 0x9497a047; 
+		constexpr static std::string_view RequestId_type_name = "RequestId";
+		constexpr static rivet::rivet_type_id RequestId_type_id = 0x239eef0d;
+		constexpr static std::string_view IsInclude_type_name = "IsInclude";
+		constexpr static rivet::rivet_type_id IsInclude_type_id = 0x9497a047; 
 
 		explicit DamageModifierConditionRequestIdPrius() = default;
 		explicit DamageModifierConditionRequestIdPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DimensionalPulseTargetSwapPrius : DimensionalPulseTargetPrius {
-		constexpr const static std::string_view type_name = "DimensionalPulseTargetSwapPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xdb41ced7;
+		constexpr static std::string_view type_name = "DimensionalPulseTargetSwapPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xdb41ced7;
 
-		constexpr const static std::string_view NextActor_type_name = "NextActor";
-		constexpr const static rivet::rivet_type_id NextActor_type_id = 0x64fc2030; 
+		constexpr static std::string_view NextActor_type_name = "NextActor";
+		constexpr static rivet::rivet_type_id NextActor_type_id = 0x64fc2030; 
 
 		explicit DimensionalPulseTargetSwapPrius() = default;
 		explicit DimensionalPulseTargetSwapPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

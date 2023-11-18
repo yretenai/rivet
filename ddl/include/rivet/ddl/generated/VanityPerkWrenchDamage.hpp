@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED VanityPerkWrenchDamage : VanityPerkBase {
-		constexpr const static std::string_view type_name = "VanityPerkWrenchDamage";
-		constexpr const static rivet::rivet_type_id type_id = 0xf55ce623;
+		constexpr static std::string_view type_name = "VanityPerkWrenchDamage";
+		constexpr static rivet::rivet_type_id type_id = 0xf55ce623;
 
-		constexpr const static std::string_view WrenchDamageMultSet_type_name = "WrenchDamageMultSet";
-		constexpr const static rivet::rivet_type_id WrenchDamageMultSet_type_id = 0xed6d2f5e;
-		constexpr const static std::string_view WrenchDamageMultPiece_type_name = "WrenchDamageMultPiece";
-		constexpr const static rivet::rivet_type_id WrenchDamageMultPiece_type_id = 0xec730172; 
+		constexpr static std::string_view WrenchDamageMultSet_type_name = "WrenchDamageMultSet";
+		constexpr static rivet::rivet_type_id WrenchDamageMultSet_type_id = 0xed6d2f5e;
+		constexpr static std::string_view WrenchDamageMultPiece_type_name = "WrenchDamageMultPiece";
+		constexpr static rivet::rivet_type_id WrenchDamageMultPiece_type_id = 0xec730172; 
 
 		explicit VanityPerkWrenchDamage() = default;
 		explicit VanityPerkWrenchDamage([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

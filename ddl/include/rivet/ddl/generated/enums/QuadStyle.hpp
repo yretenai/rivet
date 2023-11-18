@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view QuadStyle_type_name = "QuadStyle";
-	constexpr const static rivet::rivet_type_id QuadStyle_type_id = 0xed66a9ae;
+	constexpr static std::string_view QuadStyle_type_name = "QuadStyle";
+	constexpr static rivet::rivet_type_id QuadStyle_type_id = 0xed66a9ae;
 
-	constexpr const static std::array<std::string_view, 2> QuadStyle_values = {
+	constexpr static std::array<std::string_view, 2> QuadStyle_values = {
 		"kQuad",
 		"kBeam", 
 	};

@@ -21,15 +21,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED SplashGeneratorConfig : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "SplashGeneratorConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x82080250;
+		constexpr static std::string_view type_name = "SplashGeneratorConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x82080250;
 
-		constexpr const static std::string_view LocatorHash_type_name = "LocatorHash";
-		constexpr const static rivet::rivet_type_id LocatorHash_type_id = 0xd78f4ef3;
-		constexpr const static std::string_view YOffset_type_name = "YOffset";
-		constexpr const static rivet::rivet_type_id YOffset_type_id = 0xa1247fb;
-		constexpr const static std::string_view Splash_type_name = "Splash";
-		constexpr const static rivet::rivet_type_id Splash_type_id = 0x84405a97; 
+		constexpr static std::string_view LocatorHash_type_name = "LocatorHash";
+		constexpr static rivet::rivet_type_id LocatorHash_type_id = 0xd78f4ef3;
+		constexpr static std::string_view YOffset_type_name = "YOffset";
+		constexpr static rivet::rivet_type_id YOffset_type_id = 0xa1247fb;
+		constexpr static std::string_view Splash_type_name = "Splash";
+		constexpr static rivet::rivet_type_id Splash_type_id = 0x84405a97; 
 
 		explicit SplashGeneratorConfig() = default;
 		explicit SplashGeneratorConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

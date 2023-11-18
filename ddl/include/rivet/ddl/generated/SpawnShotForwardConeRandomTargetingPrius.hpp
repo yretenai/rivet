@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED SpawnShotForwardConeRandomTargetingPrius : SpawnShotForwardConeTargetingPrius {
-		constexpr const static std::string_view type_name = "SpawnShotForwardConeRandomTargetingPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x688db7c6;
+		constexpr static std::string_view type_name = "SpawnShotForwardConeRandomTargetingPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x688db7c6;
 
-		constexpr const static std::string_view FireAtGroundPos_type_name = "FireAtGroundPos";
-		constexpr const static rivet::rivet_type_id FireAtGroundPos_type_id = 0xb34e8b73; 
+		constexpr static std::string_view FireAtGroundPos_type_name = "FireAtGroundPos";
+		constexpr static rivet::rivet_type_id FireAtGroundPos_type_id = 0xb34e8b73; 
 
 		explicit SpawnShotForwardConeRandomTargetingPrius() = default;
 		explicit SpawnShotForwardConeRandomTargetingPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

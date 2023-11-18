@@ -19,13 +19,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED WeakspotModelData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "WeakspotModelData";
-		constexpr const static rivet::rivet_type_id type_id = 0xd1bd73ea;
+		constexpr static std::string_view type_name = "WeakspotModelData";
+		constexpr static rivet::rivet_type_id type_id = 0xd1bd73ea;
 
-		constexpr const static std::string_view Model_type_name = "Model";
-		constexpr const static rivet::rivet_type_id Model_type_id = 0xcec6be18;
-		constexpr const static std::string_view HpThreshold_type_name = "HpThreshold";
-		constexpr const static rivet::rivet_type_id HpThreshold_type_id = 0x7587ae49; 
+		constexpr static std::string_view Model_type_name = "Model";
+		constexpr static rivet::rivet_type_id Model_type_id = 0xcec6be18;
+		constexpr static std::string_view HpThreshold_type_name = "HpThreshold";
+		constexpr static rivet::rivet_type_id HpThreshold_type_id = 0x7587ae49; 
 
 		explicit WeakspotModelData() = default;
 		explicit WeakspotModelData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

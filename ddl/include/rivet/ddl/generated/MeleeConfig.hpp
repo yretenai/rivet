@@ -24,15 +24,15 @@ namespace rivet::ddl::generated {
 	struct DamageKnockbackOverrideData; 
 
 	struct RIVET_DDL_SHARED MeleeConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "MeleeConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xd3e3c0f8;
+		constexpr static std::string_view type_name = "MeleeConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xd3e3c0f8;
 
-		constexpr const static std::string_view StreakConfig_type_name = "StreakConfig";
-		constexpr const static rivet::rivet_type_id StreakConfig_type_id = 0xb6282e07;
-		constexpr const static std::string_view ThrownOverrideData_type_name = "ThrownOverrideData";
-		constexpr const static rivet::rivet_type_id ThrownOverrideData_type_id = 0x637d96c;
-		constexpr const static std::string_view MeleeAttackList_type_name = "MeleeAttackList";
-		constexpr const static rivet::rivet_type_id MeleeAttackList_type_id = 0x1b9dd2e8; 
+		constexpr static std::string_view StreakConfig_type_name = "StreakConfig";
+		constexpr static rivet::rivet_type_id StreakConfig_type_id = 0xb6282e07;
+		constexpr static std::string_view ThrownOverrideData_type_name = "ThrownOverrideData";
+		constexpr static rivet::rivet_type_id ThrownOverrideData_type_id = 0x637d96c;
+		constexpr static std::string_view MeleeAttackList_type_name = "MeleeAttackList";
+		constexpr static rivet::rivet_type_id MeleeAttackList_type_id = 0x1b9dd2e8; 
 
 		explicit MeleeConfig() = default;
 		explicit MeleeConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

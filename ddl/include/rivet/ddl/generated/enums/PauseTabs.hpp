@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view PauseTabs_type_name = "PauseTabs";
-	constexpr const static rivet::rivet_type_id PauseTabs_type_id = 0x799f80cd;
+	constexpr static std::string_view PauseTabs_type_name = "PauseTabs";
+	constexpr static rivet::rivet_type_id PauseTabs_type_id = 0x799f80cd;
 
-	constexpr const static std::array<std::string_view, 6> PauseTabs_values = {
+	constexpr static std::array<std::string_view, 6> PauseTabs_values = {
 		"kMap",
 		"kArmor",
 		"kCollectibles",

@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ShellCasingDataSingleEmit : ShellCasingData {
-		constexpr const static std::string_view type_name = "ShellCasingDataSingleEmit";
-		constexpr const static rivet::rivet_type_id type_id = 0x3f97996;
+		constexpr static std::string_view type_name = "ShellCasingDataSingleEmit";
+		constexpr static rivet::rivet_type_id type_id = 0x3f97996;
 
-		constexpr const static std::string_view SpawnLocator_type_name = "SpawnLocator";
-		constexpr const static rivet::rivet_type_id SpawnLocator_type_id = 0x52bc144e; 
+		constexpr static std::string_view SpawnLocator_type_name = "SpawnLocator";
+		constexpr static rivet::rivet_type_id SpawnLocator_type_id = 0x52bc144e; 
 
 		explicit ShellCasingDataSingleEmit() = default;
 		explicit ShellCasingDataSingleEmit([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

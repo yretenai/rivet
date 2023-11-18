@@ -20,17 +20,17 @@
 #include <rivet/ddl/generated/AwardBasePrius.hpp> 
 
 namespace rivet::ddl::generated {
-	struct StatusEffectBasePrius;
-	struct ActorAssetReferenceDef; 
+	struct ActorAssetReferenceDef;
+	struct StatusEffectBasePrius; 
 
 	struct RIVET_DDL_SHARED GameAwardStatusEffectMeleeCountPrius : AwardBasePrius {
-		constexpr const static std::string_view type_name = "GameAwardStatusEffectMeleeCountPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x6e1d0533;
+		constexpr static std::string_view type_name = "GameAwardStatusEffectMeleeCountPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x6e1d0533;
 
-		constexpr const static std::string_view RequiredStatusEffect_type_name = "RequiredStatusEffect";
-		constexpr const static rivet::rivet_type_id RequiredStatusEffect_type_id = 0xedfb7a1b;
-		constexpr const static std::string_view MeleeWeaponAssets_type_name = "MeleeWeaponAssets";
-		constexpr const static rivet::rivet_type_id MeleeWeaponAssets_type_id = 0x4f96d2e; 
+		constexpr static std::string_view RequiredStatusEffect_type_name = "RequiredStatusEffect";
+		constexpr static rivet::rivet_type_id RequiredStatusEffect_type_id = 0xedfb7a1b;
+		constexpr static std::string_view MeleeWeaponAssets_type_name = "MeleeWeaponAssets";
+		constexpr static rivet::rivet_type_id MeleeWeaponAssets_type_id = 0x4f96d2e; 
 
 		explicit GameAwardStatusEffectMeleeCountPrius() = default;
 		explicit GameAwardStatusEffectMeleeCountPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

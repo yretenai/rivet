@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED WeaponTunnelerPrius : WeaponGamePrius {
-		constexpr const static std::string_view type_name = "WeaponTunnelerPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x9584a05e;
+		constexpr static std::string_view type_name = "WeaponTunnelerPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x9584a05e;
 
-		constexpr const static std::string_view InitialLockOnDuration_type_name = "InitialLockOnDuration";
-		constexpr const static rivet::rivet_type_id InitialLockOnDuration_type_id = 0x4d8ba716; 
+		constexpr static std::string_view InitialLockOnDuration_type_name = "InitialLockOnDuration";
+		constexpr static rivet::rivet_type_id InitialLockOnDuration_type_id = 0x4d8ba716; 
 
 		explicit WeaponTunnelerPrius() = default;
 		explicit WeaponTunnelerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

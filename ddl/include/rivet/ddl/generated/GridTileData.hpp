@@ -19,13 +19,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED GridTileData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "GridTileData";
-		constexpr const static rivet::rivet_type_id type_id = 0xa3812f1f;
+		constexpr static std::string_view type_name = "GridTileData";
+		constexpr static rivet::rivet_type_id type_id = 0xa3812f1f;
 
-		constexpr const static std::string_view GridIndex_type_name = "GridIndex";
-		constexpr const static rivet::rivet_type_id GridIndex_type_id = 0xb8580a40;
-		constexpr const static std::string_view TileIndex_type_name = "TileIndex";
-		constexpr const static rivet::rivet_type_id TileIndex_type_id = 0x95a0a58b; 
+		constexpr static std::string_view GridIndex_type_name = "GridIndex";
+		constexpr static rivet::rivet_type_id GridIndex_type_id = 0xb8580a40;
+		constexpr static std::string_view TileIndex_type_name = "TileIndex";
+		constexpr static rivet::rivet_type_id TileIndex_type_id = 0x95a0a58b; 
 
 		explicit GridTileData() = default;
 		explicit GridTileData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -18,39 +18,39 @@
 #include <rivet/structures/rivet_serialization.hpp>
 
 namespace rivet::ddl::generated {
-	struct WwiseSwitch;
-	struct WwiseSwitchSelectItem; 
+	struct WwiseSwitchSelectItem;
+	struct WwiseSwitch; 
 
 	struct RIVET_DDL_SHARED SoundSourceComponentPrius : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "SoundSourceComponentPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x6afd5c14;
+		constexpr static std::string_view type_name = "SoundSourceComponentPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x6afd5c14;
 
-		constexpr const static std::string_view Use3dBoom_type_name = "Use3dBoom";
-		constexpr const static rivet::rivet_type_id Use3dBoom_type_id = 0x683d2aa1;
-		constexpr const static std::string_view UsePropagation2_type_name = "UsePropagation2";
-		constexpr const static rivet::rivet_type_id UsePropagation2_type_id = 0x85ed0e0b;
-		constexpr const static std::string_view Propagation2UsePortaling_type_name = "Propagation2UsePortaling";
-		constexpr const static rivet::rivet_type_id Propagation2UsePortaling_type_id = 0xd1cc1229;
-		constexpr const static std::string_view Propagation2UseReverb_type_name = "Propagation2UseReverb";
-		constexpr const static rivet::rivet_type_id Propagation2UseReverb_type_id = 0xfc9b6180;
-		constexpr const static std::string_view DirectPathPropagation_type_name = "DirectPathPropagation";
-		constexpr const static rivet::rivet_type_id DirectPathPropagation_type_id = 0x43a8e3f8;
-		constexpr const static std::string_view SourceDependentReverb_type_name = "SourceDependentReverb";
-		constexpr const static rivet::rivet_type_id SourceDependentReverb_type_id = 0xcc7b2cb3;
-		constexpr const static std::string_view DirectPathSampleAreaScaleX_type_name = "DirectPathSampleAreaScaleX";
-		constexpr const static rivet::rivet_type_id DirectPathSampleAreaScaleX_type_id = 0x90731b2;
-		constexpr const static std::string_view DirectPathSampleAreaScaleY_type_name = "DirectPathSampleAreaScaleY";
-		constexpr const static rivet::rivet_type_id DirectPathSampleAreaScaleY_type_id = 0x7e000124;
-		constexpr const static std::string_view DirectPathStickinessIncreasing_type_name = "DirectPathStickinessIncreasing";
-		constexpr const static rivet::rivet_type_id DirectPathStickinessIncreasing_type_id = 0x37c10dd1;
-		constexpr const static std::string_view DirectPathStickinessDecreasing_type_name = "DirectPathStickinessDecreasing";
-		constexpr const static rivet::rivet_type_id DirectPathStickinessDecreasing_type_id = 0x406a18bc;
-		constexpr const static std::string_view SwitchGroupsCountMax_type_name = "SwitchGroupsCountMax";
-		constexpr const static rivet::rivet_type_id SwitchGroupsCountMax_type_id = 0xe2b0bd65;
-		constexpr const static std::string_view SwitchGroupList_type_name = "SwitchGroupList";
-		constexpr const static rivet::rivet_type_id SwitchGroupList_type_id = 0xa76c9412;
-		constexpr const static std::string_view RandomSelectList_type_name = "RandomSelectList";
-		constexpr const static rivet::rivet_type_id RandomSelectList_type_id = 0x1bab6614; 
+		constexpr static std::string_view Use3dBoom_type_name = "Use3dBoom";
+		constexpr static rivet::rivet_type_id Use3dBoom_type_id = 0x683d2aa1;
+		constexpr static std::string_view UsePropagation2_type_name = "UsePropagation2";
+		constexpr static rivet::rivet_type_id UsePropagation2_type_id = 0x85ed0e0b;
+		constexpr static std::string_view Propagation2UsePortaling_type_name = "Propagation2UsePortaling";
+		constexpr static rivet::rivet_type_id Propagation2UsePortaling_type_id = 0xd1cc1229;
+		constexpr static std::string_view Propagation2UseReverb_type_name = "Propagation2UseReverb";
+		constexpr static rivet::rivet_type_id Propagation2UseReverb_type_id = 0xfc9b6180;
+		constexpr static std::string_view DirectPathPropagation_type_name = "DirectPathPropagation";
+		constexpr static rivet::rivet_type_id DirectPathPropagation_type_id = 0x43a8e3f8;
+		constexpr static std::string_view SourceDependentReverb_type_name = "SourceDependentReverb";
+		constexpr static rivet::rivet_type_id SourceDependentReverb_type_id = 0xcc7b2cb3;
+		constexpr static std::string_view DirectPathSampleAreaScaleX_type_name = "DirectPathSampleAreaScaleX";
+		constexpr static rivet::rivet_type_id DirectPathSampleAreaScaleX_type_id = 0x90731b2;
+		constexpr static std::string_view DirectPathSampleAreaScaleY_type_name = "DirectPathSampleAreaScaleY";
+		constexpr static rivet::rivet_type_id DirectPathSampleAreaScaleY_type_id = 0x7e000124;
+		constexpr static std::string_view DirectPathStickinessIncreasing_type_name = "DirectPathStickinessIncreasing";
+		constexpr static rivet::rivet_type_id DirectPathStickinessIncreasing_type_id = 0x37c10dd1;
+		constexpr static std::string_view DirectPathStickinessDecreasing_type_name = "DirectPathStickinessDecreasing";
+		constexpr static rivet::rivet_type_id DirectPathStickinessDecreasing_type_id = 0x406a18bc;
+		constexpr static std::string_view SwitchGroupsCountMax_type_name = "SwitchGroupsCountMax";
+		constexpr static rivet::rivet_type_id SwitchGroupsCountMax_type_id = 0xe2b0bd65;
+		constexpr static std::string_view SwitchGroupList_type_name = "SwitchGroupList";
+		constexpr static rivet::rivet_type_id SwitchGroupList_type_id = 0xa76c9412;
+		constexpr static std::string_view RandomSelectList_type_name = "RandomSelectList";
+		constexpr static rivet::rivet_type_id RandomSelectList_type_id = 0x1bab6614; 
 
 		explicit SoundSourceComponentPrius() = default;
 		explicit SoundSourceComponentPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

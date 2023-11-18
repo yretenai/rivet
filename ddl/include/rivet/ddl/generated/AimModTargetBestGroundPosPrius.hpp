@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED AimModTargetBestGroundPosPrius : AimModifierPrius {
-		constexpr const static std::string_view type_name = "AimModTargetBestGroundPosPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x8e87d7c1;
+		constexpr static std::string_view type_name = "AimModTargetBestGroundPosPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x8e87d7c1;
 
-		constexpr const static std::string_view UseGroundY_type_name = "UseGroundY";
-		constexpr const static rivet::rivet_type_id UseGroundY_type_id = 0xa853df8a; 
+		constexpr static std::string_view UseGroundY_type_name = "UseGroundY";
+		constexpr static rivet::rivet_type_id UseGroundY_type_id = 0xa853df8a; 
 
 		explicit AimModTargetBestGroundPosPrius() = default;
 		explicit AimModTargetBestGroundPosPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

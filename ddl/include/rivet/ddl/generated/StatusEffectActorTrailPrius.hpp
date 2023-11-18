@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED StatusEffectActorTrailPrius : StatusEffectBasePrius {
-		constexpr const static std::string_view type_name = "StatusEffectActorTrailPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x4ef6aeac;
+		constexpr static std::string_view type_name = "StatusEffectActorTrailPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x4ef6aeac;
 
-		constexpr const static std::string_view DropOnGround_type_name = "DropOnGround";
-		constexpr const static rivet::rivet_type_id DropOnGround_type_id = 0xdfab1e86; 
+		constexpr static std::string_view DropOnGround_type_name = "DropOnGround";
+		constexpr static rivet::rivet_type_id DropOnGround_type_id = 0xdfab1e86; 
 
 		explicit StatusEffectActorTrailPrius() = default;
 		explicit StatusEffectActorTrailPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

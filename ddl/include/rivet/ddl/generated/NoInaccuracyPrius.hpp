@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED NoInaccuracyPrius : WeaponAccuracyBasePrius {
-		constexpr const static std::string_view type_name = "NoInaccuracyPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xda929f62;
+		constexpr static std::string_view type_name = "NoInaccuracyPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xda929f62;
 
 		explicit NoInaccuracyPrius() = default;
 		explicit NoInaccuracyPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

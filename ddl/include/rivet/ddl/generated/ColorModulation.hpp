@@ -21,13 +21,13 @@ namespace rivet::ddl::generated {
 	struct DDLVector3; 
 
 	struct RIVET_DDL_SHARED ColorModulation : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "ColorModulation";
-		constexpr const static rivet::rivet_type_id type_id = 0x7cc42e6;
+		constexpr static std::string_view type_name = "ColorModulation";
+		constexpr static rivet::rivet_type_id type_id = 0x7cc42e6;
 
-		constexpr const static std::string_view Modulation_type_name = "Modulation";
-		constexpr const static rivet::rivet_type_id Modulation_type_id = 0x45decbb8;
-		constexpr const static std::string_view Height_type_name = "Height";
-		constexpr const static rivet::rivet_type_id Height_type_id = 0xcb35ab68; 
+		constexpr static std::string_view Modulation_type_name = "Modulation";
+		constexpr static rivet::rivet_type_id Modulation_type_id = 0x45decbb8;
+		constexpr static std::string_view Height_type_name = "Height";
+		constexpr static rivet::rivet_type_id Height_type_id = 0xcb35ab68; 
 
 		explicit ColorModulation() = default;
 		explicit ColorModulation([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

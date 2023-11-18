@@ -23,17 +23,17 @@ namespace rivet::ddl::generated {
 	struct DDLVector3; 
 
 	struct RIVET_DDL_SHARED ComponentEmitterLocalRandomOffsetPrius : ComponentEmitterBasePrius {
-		constexpr const static std::string_view type_name = "ComponentEmitterLocalRandomOffsetPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xd62c6fa8;
+		constexpr static std::string_view type_name = "ComponentEmitterLocalRandomOffsetPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xd62c6fa8;
 
-		constexpr const static std::string_view EmitFromUser_type_name = "EmitFromUser";
-		constexpr const static rivet::rivet_type_id EmitFromUser_type_id = 0x13b721db;
-		constexpr const static std::string_view UseWorldUp_type_name = "UseWorldUp";
-		constexpr const static rivet::rivet_type_id UseWorldUp_type_id = 0x4cdc032f;
-		constexpr const static std::string_view MinOffset_type_name = "MinOffset";
-		constexpr const static rivet::rivet_type_id MinOffset_type_id = 0x32910f3c;
-		constexpr const static std::string_view MaxOffset_type_name = "MaxOffset";
-		constexpr const static rivet::rivet_type_id MaxOffset_type_id = 0xe57abd7d; 
+		constexpr static std::string_view EmitFromUser_type_name = "EmitFromUser";
+		constexpr static rivet::rivet_type_id EmitFromUser_type_id = 0x13b721db;
+		constexpr static std::string_view UseWorldUp_type_name = "UseWorldUp";
+		constexpr static rivet::rivet_type_id UseWorldUp_type_id = 0x4cdc032f;
+		constexpr static std::string_view MinOffset_type_name = "MinOffset";
+		constexpr static rivet::rivet_type_id MinOffset_type_id = 0x32910f3c;
+		constexpr static std::string_view MaxOffset_type_name = "MaxOffset";
+		constexpr static rivet::rivet_type_id MaxOffset_type_id = 0xe57abd7d; 
 
 		explicit ComponentEmitterLocalRandomOffsetPrius() = default;
 		explicit ComponentEmitterLocalRandomOffsetPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

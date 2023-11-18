@@ -19,11 +19,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED FocusTrackingInstData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "FocusTrackingInstData";
-		constexpr const static rivet::rivet_type_id type_id = 0x19da2e52;
+		constexpr static std::string_view type_name = "FocusTrackingInstData";
+		constexpr static rivet::rivet_type_id type_id = 0x19da2e52;
 
-		constexpr const static std::string_view StartingFocusScale_type_name = "StartingFocusScale";
-		constexpr const static rivet::rivet_type_id StartingFocusScale_type_id = 0x9e86842c; 
+		constexpr static std::string_view StartingFocusScale_type_name = "StartingFocusScale";
+		constexpr static rivet::rivet_type_id StartingFocusScale_type_id = 0x9e86842c; 
 
 		explicit FocusTrackingInstData() = default;
 		explicit FocusTrackingInstData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -3,18 +3,18 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/DualSplineCameraProximityPrius.hpp>
-#include <rivet/ddl/generated/CameraToolMayaPrius.hpp>
-#include <rivet/ddl/generated/DualSplineCameraFlyPrius.hpp>
-#include <rivet/ddl/generated/SplineCameraProximityPrius.hpp>
-#include <rivet/ddl/generated/CameraFPSPrius.hpp>
-#include <rivet/ddl/generated/RelativeAnimCameraPrius.hpp>
-#include <rivet/ddl/generated/CameraToolBasePrius.hpp>
-#include <rivet/ddl/generated/PhotomodeCameraBasePrius.hpp>
-#include <rivet/ddl/generated/SplineCameraFlyPrius.hpp>
-#include <rivet/ddl/generated/GameCameraPrius.hpp>
 #include <rivet/ddl/generated/MapCameraPrius.hpp>
-#include <rivet/ddl/generated/PlacedCameraPrius.hpp> 
+#include <rivet/ddl/generated/SplineCameraFlyPrius.hpp>
+#include <rivet/ddl/generated/DualSplineCameraProximityPrius.hpp>
+#include <rivet/ddl/generated/CameraFPSPrius.hpp>
+#include <rivet/ddl/generated/PlacedCameraPrius.hpp>
+#include <rivet/ddl/generated/GameCameraPrius.hpp>
+#include <rivet/ddl/generated/RelativeAnimCameraPrius.hpp>
+#include <rivet/ddl/generated/PhotomodeCameraBasePrius.hpp>
+#include <rivet/ddl/generated/CameraToolBasePrius.hpp>
+#include <rivet/ddl/generated/CameraToolMayaPrius.hpp>
+#include <rivet/ddl/generated/SplineCameraProximityPrius.hpp>
+#include <rivet/ddl/generated/DualSplineCameraFlyPrius.hpp> 
 
 #include <rivet/ddl/generated/CameraPrius.hpp>
 

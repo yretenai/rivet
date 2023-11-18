@@ -21,15 +21,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED UIEndGameOption : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "UIEndGameOption";
-		constexpr const static rivet::rivet_type_id type_id = 0xc6363cdb;
+		constexpr static std::string_view type_name = "UIEndGameOption";
+		constexpr static rivet::rivet_type_id type_id = 0xc6363cdb;
 
-		constexpr const static std::string_view OptionID_type_name = "OptionID";
-		constexpr const static rivet::rivet_type_id OptionID_type_id = 0xf172a74;
-		constexpr const static std::string_view Label_type_name = "Label";
-		constexpr const static rivet::rivet_type_id Label_type_id = 0x17f49c29;
-		constexpr const static std::string_view Description_type_name = "Description";
-		constexpr const static rivet::rivet_type_id Description_type_id = 0xe03811fd; 
+		constexpr static std::string_view OptionID_type_name = "OptionID";
+		constexpr static rivet::rivet_type_id OptionID_type_id = 0xf172a74;
+		constexpr static std::string_view Label_type_name = "Label";
+		constexpr static rivet::rivet_type_id Label_type_id = 0x17f49c29;
+		constexpr static std::string_view Description_type_name = "Description";
+		constexpr static rivet::rivet_type_id Description_type_id = 0xe03811fd; 
 
 		explicit UIEndGameOption() = default;
 		explicit UIEndGameOption([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

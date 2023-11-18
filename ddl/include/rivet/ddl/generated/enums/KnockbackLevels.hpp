@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view KnockbackLevels_type_name = "KnockbackLevels";
-	constexpr const static rivet::rivet_type_id KnockbackLevels_type_id = 0x6a957450;
+	constexpr static std::string_view KnockbackLevels_type_name = "KnockbackLevels";
+	constexpr static rivet::rivet_type_id KnockbackLevels_type_id = 0x6a957450;
 
-	constexpr const static std::array<std::string_view, 6> KnockbackLevels_values = {
+	constexpr static std::array<std::string_view, 6> KnockbackLevels_values = {
 		"kNone",
 		"kOne",
 		"kTwo",

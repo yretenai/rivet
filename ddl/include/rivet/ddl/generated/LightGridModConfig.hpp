@@ -23,15 +23,15 @@ namespace rivet::ddl::generated {
 	struct ColorModulation; 
 
 	struct RIVET_DDL_SHARED LightGridModConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "LightGridModConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x54ebf356;
+		constexpr static std::string_view type_name = "LightGridModConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x54ebf356;
 
-		constexpr const static std::string_view AoStength_type_name = "AoStength";
-		constexpr const static rivet::rivet_type_id AoStength_type_id = 0x6b20e09f;
-		constexpr const static std::string_view AoVerticality_type_name = "AoVerticality";
-		constexpr const static rivet::rivet_type_id AoVerticality_type_id = 0x88441f9e;
-		constexpr const static std::string_view ColorMods_type_name = "ColorMods";
-		constexpr const static rivet::rivet_type_id ColorMods_type_id = 0xdc1f2ebd; 
+		constexpr static std::string_view AoStength_type_name = "AoStength";
+		constexpr static rivet::rivet_type_id AoStength_type_id = 0x6b20e09f;
+		constexpr static std::string_view AoVerticality_type_name = "AoVerticality";
+		constexpr static rivet::rivet_type_id AoVerticality_type_id = 0x88441f9e;
+		constexpr static std::string_view ColorMods_type_name = "ColorMods";
+		constexpr static rivet::rivet_type_id ColorMods_type_id = 0xdc1f2ebd; 
 
 		explicit LightGridModConfig() = default;
 		explicit LightGridModConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

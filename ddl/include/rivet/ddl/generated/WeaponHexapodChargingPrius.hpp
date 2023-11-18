@@ -23,17 +23,17 @@ namespace rivet::ddl::generated {
 	struct HexapodWeaponTriggerData; 
 
 	struct RIVET_DDL_SHARED WeaponHexapodChargingPrius : WeaponBlasterPrius {
-		constexpr const static std::string_view type_name = "WeaponHexapodChargingPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xd62f8b46;
+		constexpr static std::string_view type_name = "WeaponHexapodChargingPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xd62f8b46;
 
-		constexpr const static std::string_view ChargeTimeMax_type_name = "ChargeTimeMax";
-		constexpr const static rivet::rivet_type_id ChargeTimeMax_type_id = 0xa1c4cc1e;
-		constexpr const static std::string_view ChargedDamageMultiplier_type_name = "ChargedDamageMultiplier";
-		constexpr const static rivet::rivet_type_id ChargedDamageMultiplier_type_id = 0x8259e9be;
-		constexpr const static std::string_view ChargingTriggerData_type_name = "ChargingTriggerData";
-		constexpr const static rivet::rivet_type_id ChargingTriggerData_type_id = 0x2351960d;
-		constexpr const static std::string_view BeamActor_type_name = "BeamActor";
-		constexpr const static rivet::rivet_type_id BeamActor_type_id = 0x5457596a; 
+		constexpr static std::string_view ChargeTimeMax_type_name = "ChargeTimeMax";
+		constexpr static rivet::rivet_type_id ChargeTimeMax_type_id = 0xa1c4cc1e;
+		constexpr static std::string_view ChargedDamageMultiplier_type_name = "ChargedDamageMultiplier";
+		constexpr static rivet::rivet_type_id ChargedDamageMultiplier_type_id = 0x8259e9be;
+		constexpr static std::string_view ChargingTriggerData_type_name = "ChargingTriggerData";
+		constexpr static rivet::rivet_type_id ChargingTriggerData_type_id = 0x2351960d;
+		constexpr static std::string_view BeamActor_type_name = "BeamActor";
+		constexpr static rivet::rivet_type_id BeamActor_type_id = 0x5457596a; 
 
 		explicit WeaponHexapodChargingPrius() = default;
 		explicit WeaponHexapodChargingPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

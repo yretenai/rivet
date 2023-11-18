@@ -23,15 +23,15 @@ namespace rivet::ddl::generated {
 	struct SkinItemPart; 
 
 	struct RIVET_DDL_SHARED SkinItemPartList : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "SkinItemPartList";
-		constexpr const static rivet::rivet_type_id type_id = 0x9f7b215b;
+		constexpr static std::string_view type_name = "SkinItemPartList";
+		constexpr static rivet::rivet_type_id type_id = 0x9f7b215b;
 
-		constexpr const static std::string_view PartType_type_name = "PartType";
-		constexpr const static rivet::rivet_type_id PartType_type_id = 0x59a27916;
-		constexpr const static std::string_view PartList_type_name = "PartList";
-		constexpr const static rivet::rivet_type_id PartList_type_id = 0x91b4d627;
-		constexpr const static std::string_view SkipPartTypeList_type_name = "SkipPartTypeList";
-		constexpr const static rivet::rivet_type_id SkipPartTypeList_type_id = 0x9aa89904; 
+		constexpr static std::string_view PartType_type_name = "PartType";
+		constexpr static rivet::rivet_type_id PartType_type_id = 0x59a27916;
+		constexpr static std::string_view PartList_type_name = "PartList";
+		constexpr static rivet::rivet_type_id PartList_type_id = 0x91b4d627;
+		constexpr static std::string_view SkipPartTypeList_type_name = "SkipPartTypeList";
+		constexpr static rivet::rivet_type_id SkipPartTypeList_type_id = 0x9aa89904; 
 
 		explicit SkinItemPartList() = default;
 		explicit SkinItemPartList([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

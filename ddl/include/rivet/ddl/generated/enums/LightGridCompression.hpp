@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view LightGridCompression_type_name = "LightGridCompression";
-	constexpr const static rivet::rivet_type_id LightGridCompression_type_id = 0x845970a5;
+	constexpr static std::string_view LightGridCompression_type_name = "LightGridCompression";
+	constexpr static rivet::rivet_type_id LightGridCompression_type_id = 0x845970a5;
 
-	constexpr const static std::array<std::string_view, 5> LightGridCompression_values = {
+	constexpr static std::array<std::string_view, 5> LightGridCompression_values = {
 		"kNoCompression",
 		"kLowCompression",
 		"kMediumCompression",

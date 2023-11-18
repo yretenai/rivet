@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED NullTargetingPrius : TargetingBasePrius {
-		constexpr const static std::string_view type_name = "NullTargetingPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xd265e5e2;
+		constexpr static std::string_view type_name = "NullTargetingPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xd265e5e2;
 
 		explicit NullTargetingPrius() = default;
 		explicit NullTargetingPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

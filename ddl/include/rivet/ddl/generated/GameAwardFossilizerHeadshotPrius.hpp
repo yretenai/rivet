@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct ConfigAssetReferenceDef; 
 
 	struct RIVET_DDL_SHARED GameAwardFossilizerHeadshotPrius : AwardBasePrius {
-		constexpr const static std::string_view type_name = "GameAwardFossilizerHeadshotPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x5f842181;
+		constexpr static std::string_view type_name = "GameAwardFossilizerHeadshotPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x5f842181;
 
-		constexpr const static std::string_view WeaponConfigAsset_type_name = "WeaponConfigAsset";
-		constexpr const static rivet::rivet_type_id WeaponConfigAsset_type_id = 0x9d4ccc69; 
+		constexpr static std::string_view WeaponConfigAsset_type_name = "WeaponConfigAsset";
+		constexpr static rivet::rivet_type_id WeaponConfigAsset_type_id = 0x9d4ccc69; 
 
 		explicit GameAwardFossilizerHeadshotPrius() = default;
 		explicit GameAwardFossilizerHeadshotPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -3,10 +3,10 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/CollectibleTypeDenum.hpp>
-#include <rivet/ddl/generated/ObjSysUnlockSequence.hpp>
 #include <rivet/ddl/generated/CollectibleParentTypeInfo.hpp>
-#include <rivet/ddl/generated/CollectibleTypeInfo.hpp> 
+#include <rivet/ddl/generated/ObjSysUnlockSequence.hpp>
+#include <rivet/ddl/generated/CollectibleTypeInfo.hpp>
+#include <rivet/ddl/generated/CollectibleTypeDenum.hpp> 
 
 #include <rivet/ddl/generated/CollectibleTypeInfoBase.hpp>
 

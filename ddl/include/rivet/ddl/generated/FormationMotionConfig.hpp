@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct FormationMotionBase; 
 
 	struct RIVET_DDL_SHARED FormationMotionConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "FormationMotionConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x31903d6d;
+		constexpr static std::string_view type_name = "FormationMotionConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x31903d6d;
 
-		constexpr const static std::string_view MotionType_type_name = "MotionType";
-		constexpr const static rivet::rivet_type_id MotionType_type_id = 0x7b43320e; 
+		constexpr static std::string_view MotionType_type_name = "MotionType";
+		constexpr static rivet::rivet_type_id MotionType_type_id = 0x7b43320e; 
 
 		explicit FormationMotionConfig() = default;
 		explicit FormationMotionConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

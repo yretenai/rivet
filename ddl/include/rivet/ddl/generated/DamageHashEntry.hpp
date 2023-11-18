@@ -19,11 +19,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DamageHashEntry : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "DamageHashEntry";
-		constexpr const static rivet::rivet_type_id type_id = 0xd54f48af;
+		constexpr static std::string_view type_name = "DamageHashEntry";
+		constexpr static rivet::rivet_type_id type_id = 0xd54f48af;
 
-		constexpr const static std::string_view DamageString_type_name = "DamageString";
-		constexpr const static rivet::rivet_type_id DamageString_type_id = 0x4624269b; 
+		constexpr static std::string_view DamageString_type_name = "DamageString";
+		constexpr static rivet::rivet_type_id DamageString_type_id = 0x4624269b; 
 
 		explicit DamageHashEntry() = default;
 		explicit DamageHashEntry([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

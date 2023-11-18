@@ -19,19 +19,19 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED HexapodFallData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "HexapodFallData";
-		constexpr const static rivet::rivet_type_id type_id = 0x10f2b375;
+		constexpr static std::string_view type_name = "HexapodFallData";
+		constexpr static rivet::rivet_type_id type_id = 0x10f2b375;
 
-		constexpr const static std::string_view MaxSpeed_type_name = "MaxSpeed";
-		constexpr const static rivet::rivet_type_id MaxSpeed_type_id = 0x16b83961;
-		constexpr const static std::string_view GravityAccel_type_name = "GravityAccel";
-		constexpr const static rivet::rivet_type_id GravityAccel_type_id = 0x5ef2b816;
-		constexpr const static std::string_view WalkSpeedHorizontal_type_name = "WalkSpeedHorizontal";
-		constexpr const static rivet::rivet_type_id WalkSpeedHorizontal_type_id = 0x3b043e98;
-		constexpr const static std::string_view DashSpeedHorizontal_type_name = "DashSpeedHorizontal";
-		constexpr const static rivet::rivet_type_id DashSpeedHorizontal_type_id = 0x730b9d61;
-		constexpr const static std::string_view MoveAccel_type_name = "MoveAccel";
-		constexpr const static rivet::rivet_type_id MoveAccel_type_id = 0x4d8dca42; 
+		constexpr static std::string_view MaxSpeed_type_name = "MaxSpeed";
+		constexpr static rivet::rivet_type_id MaxSpeed_type_id = 0x16b83961;
+		constexpr static std::string_view GravityAccel_type_name = "GravityAccel";
+		constexpr static rivet::rivet_type_id GravityAccel_type_id = 0x5ef2b816;
+		constexpr static std::string_view WalkSpeedHorizontal_type_name = "WalkSpeedHorizontal";
+		constexpr static rivet::rivet_type_id WalkSpeedHorizontal_type_id = 0x3b043e98;
+		constexpr static std::string_view DashSpeedHorizontal_type_name = "DashSpeedHorizontal";
+		constexpr static rivet::rivet_type_id DashSpeedHorizontal_type_id = 0x730b9d61;
+		constexpr static std::string_view MoveAccel_type_name = "MoveAccel";
+		constexpr static rivet::rivet_type_id MoveAccel_type_id = 0x4d8dca42; 
 
 		explicit HexapodFallData() = default;
 		explicit HexapodFallData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

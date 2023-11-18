@@ -3,13 +3,13 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/DistanceHeuristics.hpp>
 #include <rivet/ddl/generated/MultiHeuristicTargetingPrius.hpp>
-#include <rivet/ddl/generated/LosHeuristics.hpp>
-#include <rivet/ddl/generated/PlayerHeuristics.hpp>
-#include <rivet/ddl/generated/AggroHeuristics.hpp>
+#include <rivet/ddl/generated/SpreadHeuristics.hpp>
 #include <rivet/ddl/generated/DirectionHeuristics.hpp>
-#include <rivet/ddl/generated/SpreadHeuristics.hpp> 
+#include <rivet/ddl/generated/PlayerHeuristics.hpp>
+#include <rivet/ddl/generated/LosHeuristics.hpp>
+#include <rivet/ddl/generated/AggroHeuristics.hpp>
+#include <rivet/ddl/generated/DistanceHeuristics.hpp> 
 
 #include <rivet/ddl/generated/HeuristicTargetingPrius.hpp>
 

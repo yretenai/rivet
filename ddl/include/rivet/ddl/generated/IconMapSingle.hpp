@@ -17,16 +17,16 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/IconMapBase.hpp>
-#include <rivet/ddl/generated/enums/x445aeabc.hpp> 
+#include <rivet/ddl/generated/enums/x445aeabc.hpp>
+#include <rivet/ddl/generated/IconMapBase.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED IconMapSingle : IconMapBase {
-		constexpr const static std::string_view type_name = "IconMapSingle";
-		constexpr const static rivet::rivet_type_id type_id = 0x49988bb6;
+		constexpr static std::string_view type_name = "IconMapSingle";
+		constexpr static rivet::rivet_type_id type_id = 0x49988bb6;
 
-		constexpr const static std::string_view IconId_type_name = "IconId";
-		constexpr const static rivet::rivet_type_id IconId_type_id = 0x34bbecb9; 
+		constexpr static std::string_view IconId_type_name = "IconId";
+		constexpr static rivet::rivet_type_id IconId_type_id = 0x34bbecb9; 
 
 		explicit IconMapSingle() = default;
 		explicit IconMapSingle([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

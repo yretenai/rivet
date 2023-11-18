@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ShieldConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "ShieldConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xa0c7672c;
+		constexpr static std::string_view type_name = "ShieldConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xa0c7672c;
 
-		constexpr const static std::string_view DamagePassthroughPercent_type_name = "DamagePassthroughPercent";
-		constexpr const static rivet::rivet_type_id DamagePassthroughPercent_type_id = 0x9c8550c9;
-		constexpr const static std::string_view MaxAngle_type_name = "MaxAngle";
-		constexpr const static rivet::rivet_type_id MaxAngle_type_id = 0x191f829e; 
+		constexpr static std::string_view DamagePassthroughPercent_type_name = "DamagePassthroughPercent";
+		constexpr static rivet::rivet_type_id DamagePassthroughPercent_type_id = 0x9c8550c9;
+		constexpr static std::string_view MaxAngle_type_name = "MaxAngle";
+		constexpr static rivet::rivet_type_id MaxAngle_type_id = 0x191f829e; 
 
 		explicit ShieldConfig() = default;
 		explicit ShieldConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

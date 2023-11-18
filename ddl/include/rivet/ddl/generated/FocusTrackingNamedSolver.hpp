@@ -21,13 +21,13 @@ namespace rivet::ddl::generated {
 	struct FocusTrackingSolverData; 
 
 	struct RIVET_DDL_SHARED FocusTrackingNamedSolver : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "FocusTrackingNamedSolver";
-		constexpr const static rivet::rivet_type_id type_id = 0x9bb2541d;
+		constexpr static std::string_view type_name = "FocusTrackingNamedSolver";
+		constexpr static rivet::rivet_type_id type_id = 0x9bb2541d;
 
-		constexpr const static std::string_view Name_type_name = "Name";
-		constexpr const static rivet::rivet_type_id Name_type_id = 0x6eb3beb6;
-		constexpr const static std::string_view SolverDefinition_type_name = "SolverDefinition";
-		constexpr const static rivet::rivet_type_id SolverDefinition_type_id = 0x23ca3809; 
+		constexpr static std::string_view Name_type_name = "Name";
+		constexpr static rivet::rivet_type_id Name_type_id = 0x6eb3beb6;
+		constexpr static std::string_view SolverDefinition_type_name = "SolverDefinition";
+		constexpr static rivet::rivet_type_id SolverDefinition_type_id = 0x23ca3809; 
 
 		explicit FocusTrackingNamedSolver() = default;
 		explicit FocusTrackingNamedSolver([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

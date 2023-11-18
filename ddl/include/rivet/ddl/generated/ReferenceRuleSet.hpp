@@ -21,13 +21,13 @@ namespace rivet::ddl::generated {
 	struct ReferenceRule; 
 
 	struct RIVET_DDL_SHARED ReferenceRuleSet : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "ReferenceRuleSet";
-		constexpr const static rivet::rivet_type_id type_id = 0xa6b13186;
+		constexpr static std::string_view type_name = "ReferenceRuleSet";
+		constexpr static rivet::rivet_type_id type_id = 0xa6b13186;
 
-		constexpr const static std::string_view Name_type_name = "Name";
-		constexpr const static rivet::rivet_type_id Name_type_id = 0x6eb3beb6;
-		constexpr const static std::string_view Rules_type_name = "Rules";
-		constexpr const static rivet::rivet_type_id Rules_type_id = 0x90c955fd; 
+		constexpr static std::string_view Name_type_name = "Name";
+		constexpr static rivet::rivet_type_id Name_type_id = 0x6eb3beb6;
+		constexpr static std::string_view Rules_type_name = "Rules";
+		constexpr static rivet::rivet_type_id Rules_type_id = 0x90c955fd; 
 
 		explicit ReferenceRuleSet() = default;
 		explicit ReferenceRuleSet([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

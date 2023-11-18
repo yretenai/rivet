@@ -19,15 +19,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DistanceHeuristics : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "DistanceHeuristics";
-		constexpr const static rivet::rivet_type_id type_id = 0x69b1eeb0;
+		constexpr static std::string_view type_name = "DistanceHeuristics";
+		constexpr static rivet::rivet_type_id type_id = 0x69b1eeb0;
 
-		constexpr const static std::string_view Weight_type_name = "Weight";
-		constexpr const static rivet::rivet_type_id Weight_type_id = 0x39b51b26;
-		constexpr const static std::string_view BoostRange_type_name = "BoostRange";
-		constexpr const static rivet::rivet_type_id BoostRange_type_id = 0xbee81951;
-		constexpr const static std::string_view BoostMul_type_name = "BoostMul";
-		constexpr const static rivet::rivet_type_id BoostMul_type_id = 0xbd9057db; 
+		constexpr static std::string_view Weight_type_name = "Weight";
+		constexpr static rivet::rivet_type_id Weight_type_id = 0x39b51b26;
+		constexpr static std::string_view BoostRange_type_name = "BoostRange";
+		constexpr static rivet::rivet_type_id BoostRange_type_id = 0xbee81951;
+		constexpr static std::string_view BoostMul_type_name = "BoostMul";
+		constexpr static rivet::rivet_type_id BoostMul_type_id = 0xbd9057db; 
 
 		explicit DistanceHeuristics() = default;
 		explicit DistanceHeuristics([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -23,13 +23,13 @@ namespace rivet::ddl::generated {
 	struct CollectibleInstanceEntry; 
 
 	struct RIVET_DDL_SHARED CollectibleTypeInfo : CollectibleTypeInfoBase {
-		constexpr const static std::string_view type_name = "CollectibleTypeInfo";
-		constexpr const static rivet::rivet_type_id type_id = 0xcf32e535;
+		constexpr static std::string_view type_name = "CollectibleTypeInfo";
+		constexpr static rivet::rivet_type_id type_id = 0xcf32e535;
 
-		constexpr const static std::string_view AutoSequential_type_name = "AutoSequential";
-		constexpr const static rivet::rivet_type_id AutoSequential_type_id = 0xae7581c8;
-		constexpr const static std::string_view PreRegisteredInstances_type_name = "PreRegisteredInstances";
-		constexpr const static rivet::rivet_type_id PreRegisteredInstances_type_id = 0xe637229d; 
+		constexpr static std::string_view AutoSequential_type_name = "AutoSequential";
+		constexpr static rivet::rivet_type_id AutoSequential_type_id = 0xae7581c8;
+		constexpr static std::string_view PreRegisteredInstances_type_name = "PreRegisteredInstances";
+		constexpr static rivet::rivet_type_id PreRegisteredInstances_type_id = 0xe637229d; 
 
 		explicit CollectibleTypeInfo() = default;
 		explicit CollectibleTypeInfo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

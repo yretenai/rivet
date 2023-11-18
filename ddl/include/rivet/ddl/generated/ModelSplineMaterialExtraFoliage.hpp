@@ -21,15 +21,15 @@ namespace rivet::ddl::generated {
 	struct DDLVector3; 
 
 	struct RIVET_DDL_SHARED ModelSplineMaterialExtraFoliage : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "ModelSplineMaterialExtraFoliage";
-		constexpr const static rivet::rivet_type_id type_id = 0x4aa50b37;
+		constexpr static std::string_view type_name = "ModelSplineMaterialExtraFoliage";
+		constexpr static rivet::rivet_type_id type_id = 0x4aa50b37;
 
-		constexpr const static std::string_view Transmittance_type_name = "Transmittance";
-		constexpr const static rivet::rivet_type_id Transmittance_type_id = 0x6e91413e;
-		constexpr const static std::string_view LightWrap_type_name = "LightWrap";
-		constexpr const static rivet::rivet_type_id LightWrap_type_id = 0x9aaf5b2e;
-		constexpr const static std::string_view AverageColor_type_name = "AverageColor";
-		constexpr const static rivet::rivet_type_id AverageColor_type_id = 0x9f7cbe08; 
+		constexpr static std::string_view Transmittance_type_name = "Transmittance";
+		constexpr static rivet::rivet_type_id Transmittance_type_id = 0x6e91413e;
+		constexpr static std::string_view LightWrap_type_name = "LightWrap";
+		constexpr static rivet::rivet_type_id LightWrap_type_id = 0x9aaf5b2e;
+		constexpr static std::string_view AverageColor_type_name = "AverageColor";
+		constexpr static rivet::rivet_type_id AverageColor_type_id = 0x9f7cbe08; 
 
 		explicit ModelSplineMaterialExtraFoliage() = default;
 		explicit ModelSplineMaterialExtraFoliage([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

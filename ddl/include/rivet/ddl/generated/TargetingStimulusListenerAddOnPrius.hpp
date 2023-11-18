@@ -19,15 +19,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED TargetingStimulusListenerAddOnPrius : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "TargetingStimulusListenerAddOnPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xbd5946bb;
+		constexpr static std::string_view type_name = "TargetingStimulusListenerAddOnPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xbd5946bb;
 
-		constexpr const static std::string_view BonusConfirmTime_type_name = "BonusConfirmTime";
-		constexpr const static rivet::rivet_type_id BonusConfirmTime_type_id = 0x8c4af54b;
-		constexpr const static std::string_view Aggro_type_name = "Aggro";
-		constexpr const static rivet::rivet_type_id Aggro_type_id = 0x504e1083;
-		constexpr const static std::string_view ListenRadius_type_name = "ListenRadius";
-		constexpr const static rivet::rivet_type_id ListenRadius_type_id = 0xc03b8831; 
+		constexpr static std::string_view BonusConfirmTime_type_name = "BonusConfirmTime";
+		constexpr static rivet::rivet_type_id BonusConfirmTime_type_id = 0x8c4af54b;
+		constexpr static std::string_view Aggro_type_name = "Aggro";
+		constexpr static rivet::rivet_type_id Aggro_type_id = 0x504e1083;
+		constexpr static std::string_view ListenRadius_type_name = "ListenRadius";
+		constexpr static rivet::rivet_type_id ListenRadius_type_id = 0xc03b8831; 
 
 		explicit TargetingStimulusListenerAddOnPrius() = default;
 		explicit TargetingStimulusListenerAddOnPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

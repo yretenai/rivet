@@ -3,8 +3,8 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/Burst.hpp>
-#include <rivet/ddl/generated/SubBurst.hpp> 
+#include <rivet/ddl/generated/SubBurst.hpp>
+#include <rivet/ddl/generated/Burst.hpp> 
 
 #include <rivet/ddl/generated/BurstSequence.hpp>
 

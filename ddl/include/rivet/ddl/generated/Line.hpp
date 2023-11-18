@@ -20,25 +20,25 @@
 #include <rivet/ddl/generated/enums/x8d474ebb.hpp> 
 
 namespace rivet::ddl::generated {
-	struct DEVOLineMemoryWriteback;
-	struct DEVOFollowup; 
+	struct DEVOFollowup;
+	struct DEVOLineMemoryWriteback; 
 
 	struct RIVET_DDL_SHARED Line : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "Line";
-		constexpr const static rivet::rivet_type_id type_id = 0xe1847446;
+		constexpr static std::string_view type_name = "Line";
+		constexpr static rivet::rivet_type_id type_id = 0xe1847446;
 
-		constexpr const static std::string_view CharacterVoice_type_name = "CharacterVoice";
-		constexpr const static rivet::rivet_type_id CharacterVoice_type_id = 0x3ebbe218;
-		constexpr const static std::string_view LineTagStart_type_name = "LineTagStart";
-		constexpr const static rivet::rivet_type_id LineTagStart_type_id = 0x16868fea;
-		constexpr const static std::string_view LineTagEnd_type_name = "LineTagEnd";
-		constexpr const static rivet::rivet_type_id LineTagEnd_type_id = 0x4d044360;
-		constexpr const static std::string_view Weight_type_name = "Weight";
-		constexpr const static rivet::rivet_type_id Weight_type_id = 0x39b51b26;
-		constexpr const static std::string_view Writebacks_type_name = "Writebacks";
-		constexpr const static rivet::rivet_type_id Writebacks_type_id = 0x183ac164;
-		constexpr const static std::string_view Followup_type_name = "Followup";
-		constexpr const static rivet::rivet_type_id Followup_type_id = 0xe71bc74b; 
+		constexpr static std::string_view CharacterVoice_type_name = "CharacterVoice";
+		constexpr static rivet::rivet_type_id CharacterVoice_type_id = 0x3ebbe218;
+		constexpr static std::string_view LineTagStart_type_name = "LineTagStart";
+		constexpr static rivet::rivet_type_id LineTagStart_type_id = 0x16868fea;
+		constexpr static std::string_view LineTagEnd_type_name = "LineTagEnd";
+		constexpr static rivet::rivet_type_id LineTagEnd_type_id = 0x4d044360;
+		constexpr static std::string_view Weight_type_name = "Weight";
+		constexpr static rivet::rivet_type_id Weight_type_id = 0x39b51b26;
+		constexpr static std::string_view Writebacks_type_name = "Writebacks";
+		constexpr static rivet::rivet_type_id Writebacks_type_id = 0x183ac164;
+		constexpr static std::string_view Followup_type_name = "Followup";
+		constexpr static rivet::rivet_type_id Followup_type_id = 0xe71bc74b; 
 
 		explicit Line() = default;
 		explicit Line([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

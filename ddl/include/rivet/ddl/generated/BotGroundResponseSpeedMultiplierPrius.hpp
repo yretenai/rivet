@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED BotGroundResponseSpeedMultiplierPrius : BotGroundResponseBasePrius {
-		constexpr const static std::string_view type_name = "BotGroundResponseSpeedMultiplierPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xd9d5495b;
+		constexpr static std::string_view type_name = "BotGroundResponseSpeedMultiplierPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xd9d5495b;
 
-		constexpr const static std::string_view SpeedMultiplier_type_name = "SpeedMultiplier";
-		constexpr const static rivet::rivet_type_id SpeedMultiplier_type_id = 0x621b85e8; 
+		constexpr static std::string_view SpeedMultiplier_type_name = "SpeedMultiplier";
+		constexpr static rivet::rivet_type_id SpeedMultiplier_type_id = 0x621b85e8; 
 
 		explicit BotGroundResponseSpeedMultiplierPrius() = default;
 		explicit BotGroundResponseSpeedMultiplierPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -17,16 +17,16 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/UIOptionTypeSettingColor.hpp>
-#include <rivet/ddl/generated/enums/x33afe7f4.hpp> 
+#include <rivet/ddl/generated/enums/x33afe7f4.hpp>
+#include <rivet/ddl/generated/UIOptionTypeSettingColor.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED UIOptionTypeSettingColorCustom : UIOptionTypeSettingColor {
-		constexpr const static std::string_view type_name = "UIOptionTypeSettingColorCustom";
-		constexpr const static rivet::rivet_type_id type_id = 0x9b44e799;
+		constexpr static std::string_view type_name = "UIOptionTypeSettingColorCustom";
+		constexpr static rivet::rivet_type_id type_id = 0x9b44e799;
 
-		constexpr const static std::string_view CustomColorOptionID_type_name = "CustomColorOptionID";
-		constexpr const static rivet::rivet_type_id CustomColorOptionID_type_id = 0x2e615811; 
+		constexpr static std::string_view CustomColorOptionID_type_name = "CustomColorOptionID";
+		constexpr static rivet::rivet_type_id CustomColorOptionID_type_id = 0x2e615811; 
 
 		explicit UIOptionTypeSettingColorCustom() = default;
 		explicit UIOptionTypeSettingColorCustom([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

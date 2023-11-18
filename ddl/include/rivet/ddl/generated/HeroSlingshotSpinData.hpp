@@ -19,15 +19,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED HeroSlingshotSpinData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "HeroSlingshotSpinData";
-		constexpr const static rivet::rivet_type_id type_id = 0x26079a78;
+		constexpr static std::string_view type_name = "HeroSlingshotSpinData";
+		constexpr static rivet::rivet_type_id type_id = 0x26079a78;
 
-		constexpr const static std::string_view MinRotationSpeed_type_name = "MinRotationSpeed";
-		constexpr const static rivet::rivet_type_id MinRotationSpeed_type_id = 0x88529592;
-		constexpr const static std::string_view MaxRotationSpeed_type_name = "MaxRotationSpeed";
-		constexpr const static rivet::rivet_type_id MaxRotationSpeed_type_id = 0xd9ab2ecf;
-		constexpr const static std::string_view TimeToReachMaxRotationSpeed_type_name = "TimeToReachMaxRotationSpeed";
-		constexpr const static rivet::rivet_type_id TimeToReachMaxRotationSpeed_type_id = 0x7555c1c4; 
+		constexpr static std::string_view MinRotationSpeed_type_name = "MinRotationSpeed";
+		constexpr static rivet::rivet_type_id MinRotationSpeed_type_id = 0x88529592;
+		constexpr static std::string_view MaxRotationSpeed_type_name = "MaxRotationSpeed";
+		constexpr static rivet::rivet_type_id MaxRotationSpeed_type_id = 0xd9ab2ecf;
+		constexpr static std::string_view TimeToReachMaxRotationSpeed_type_name = "TimeToReachMaxRotationSpeed";
+		constexpr static rivet::rivet_type_id TimeToReachMaxRotationSpeed_type_id = 0x7555c1c4; 
 
 		explicit HeroSlingshotSpinData() = default;
 		explicit HeroSlingshotSpinData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

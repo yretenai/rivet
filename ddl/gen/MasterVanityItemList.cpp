@@ -3,9 +3,9 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/VanityAccessoryData.hpp>
+#include <rivet/ddl/generated/VanityCineHelmetTransData.hpp>
 #include <rivet/ddl/generated/VanityUIColor.hpp>
-#include <rivet/ddl/generated/VanityCineHelmetTransData.hpp> 
+#include <rivet/ddl/generated/VanityAccessoryData.hpp> 
 
 #include <rivet/ddl/generated/MasterVanityItemList.hpp>
 

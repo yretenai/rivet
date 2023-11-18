@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view x32cc2d2c_type_name = "x32cc2d2c";
-	constexpr const static rivet::rivet_type_id x32cc2d2c_type_id = 0x32cc2d2c;
+	constexpr static std::string_view x32cc2d2c_type_name = "x32cc2d2c";
+	constexpr static rivet::rivet_type_id x32cc2d2c_type_id = 0x32cc2d2c;
 
-	constexpr const static std::array<std::string_view, 3> x32cc2d2c_values = {
+	constexpr static std::array<std::string_view, 3> x32cc2d2c_values = {
 		"kDisableShadows",
 		"kAlwaysCastShadows",
 		"kCanDissolveShadows", 

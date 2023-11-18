@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED StatusEffectWarpRifleImplosionConfig : StatusEffectConfig {
-		constexpr const static std::string_view type_name = "StatusEffectWarpRifleImplosionConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x3437cc6;
+		constexpr static std::string_view type_name = "StatusEffectWarpRifleImplosionConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x3437cc6;
 
-		constexpr const static std::string_view ImplosionConfig_type_name = "ImplosionConfig";
-		constexpr const static rivet::rivet_type_id ImplosionConfig_type_id = 0xd2cb4645; 
+		constexpr static std::string_view ImplosionConfig_type_name = "ImplosionConfig";
+		constexpr static rivet::rivet_type_id ImplosionConfig_type_id = 0xd2cb4645; 
 
 		explicit StatusEffectWarpRifleImplosionConfig() = default;
 		explicit StatusEffectWarpRifleImplosionConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

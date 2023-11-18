@@ -21,11 +21,11 @@ namespace rivet::ddl::generated {
 	struct TargetingStimulusListenerAddOnPrius; 
 
 	struct RIVET_DDL_SHARED TargetingStimulusListenerAddOnEntry : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "TargetingStimulusListenerAddOnEntry";
-		constexpr const static rivet::rivet_type_id type_id = 0xb4fcf994;
+		constexpr static std::string_view type_name = "TargetingStimulusListenerAddOnEntry";
+		constexpr static rivet::rivet_type_id type_id = 0xb4fcf994;
 
-		constexpr const static std::string_view AddOn_type_name = "AddOn";
-		constexpr const static rivet::rivet_type_id AddOn_type_id = 0x5d52791c; 
+		constexpr static std::string_view AddOn_type_name = "AddOn";
+		constexpr static rivet::rivet_type_id AddOn_type_id = 0x5d52791c; 
 
 		explicit TargetingStimulusListenerAddOnEntry() = default;
 		explicit TargetingStimulusListenerAddOnEntry([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

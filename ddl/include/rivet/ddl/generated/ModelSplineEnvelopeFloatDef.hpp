@@ -21,13 +21,13 @@ namespace rivet::ddl::generated {
 	struct EnvelopeFloatDef; 
 
 	struct RIVET_DDL_SHARED ModelSplineEnvelopeFloatDef : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "ModelSplineEnvelopeFloatDef";
-		constexpr const static rivet::rivet_type_id type_id = 0xd3a52239;
+		constexpr static std::string_view type_name = "ModelSplineEnvelopeFloatDef";
+		constexpr static rivet::rivet_type_id type_id = 0xd3a52239;
 
-		constexpr const static std::string_view BaseValue_type_name = "BaseValue";
-		constexpr const static rivet::rivet_type_id BaseValue_type_id = 0x950d56d7;
-		constexpr const static std::string_view Envelope_type_name = "Envelope";
-		constexpr const static rivet::rivet_type_id Envelope_type_id = 0x7094c518; 
+		constexpr static std::string_view BaseValue_type_name = "BaseValue";
+		constexpr static rivet::rivet_type_id BaseValue_type_id = 0x950d56d7;
+		constexpr static std::string_view Envelope_type_name = "Envelope";
+		constexpr static rivet::rivet_type_id Envelope_type_id = 0x7094c518; 
 
 		explicit ModelSplineEnvelopeFloatDef() = default;
 		explicit ModelSplineEnvelopeFloatDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

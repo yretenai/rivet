@@ -23,13 +23,13 @@ namespace rivet::ddl::generated {
 	struct CommonLootData; 
 
 	struct RIVET_DDL_SHARED WeaponPixelizerPrius : WeaponGamePrius {
-		constexpr const static std::string_view type_name = "WeaponPixelizerPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x36249da0;
+		constexpr static std::string_view type_name = "WeaponPixelizerPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x36249da0;
 
-		constexpr const static std::string_view AmmoLootData_type_name = "AmmoLootData";
-		constexpr const static rivet::rivet_type_id AmmoLootData_type_id = 0xed96576d;
-		constexpr const static std::string_view HealthLootData_type_name = "HealthLootData";
-		constexpr const static rivet::rivet_type_id HealthLootData_type_id = 0x422c198; 
+		constexpr static std::string_view AmmoLootData_type_name = "AmmoLootData";
+		constexpr static rivet::rivet_type_id AmmoLootData_type_id = 0xed96576d;
+		constexpr static std::string_view HealthLootData_type_name = "HealthLootData";
+		constexpr static rivet::rivet_type_id HealthLootData_type_id = 0x422c198; 
 
 		explicit WeaponPixelizerPrius() = default;
 		explicit WeaponPixelizerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -20,21 +20,21 @@
 #include <rivet/ddl/generated/BotComboMove.hpp> 
 
 namespace rivet::ddl::generated {
-	struct BotMeleeAttackData;
-	struct BotAttackDodgeData; 
+	struct BotAttackDodgeData;
+	struct BotMeleeAttackData; 
 
 	struct RIVET_DDL_SHARED BotComboMoveMelee : BotComboMove {
-		constexpr const static std::string_view type_name = "BotComboMoveMelee";
-		constexpr const static rivet::rivet_type_id type_id = 0xaffb0864;
+		constexpr static std::string_view type_name = "BotComboMoveMelee";
+		constexpr static rivet::rivet_type_id type_id = 0xaffb0864;
 
-		constexpr const static std::string_view MeleeAttackData_type_name = "MeleeAttackData";
-		constexpr const static rivet::rivet_type_id MeleeAttackData_type_id = 0xf2a6d993;
-		constexpr const static std::string_view AttackDodgeData_type_name = "AttackDodgeData";
-		constexpr const static rivet::rivet_type_id AttackDodgeData_type_id = 0x685f8480;
-		constexpr const static std::string_view DisableHitReactPartialsDuringAttack_type_name = "DisableHitReactPartialsDuringAttack";
-		constexpr const static rivet::rivet_type_id DisableHitReactPartialsDuringAttack_type_id = 0x760d56f1;
-		constexpr const static std::string_view PrioritizeMotionScaling_type_name = "PrioritizeMotionScaling";
-		constexpr const static rivet::rivet_type_id PrioritizeMotionScaling_type_id = 0x2c704b31; 
+		constexpr static std::string_view MeleeAttackData_type_name = "MeleeAttackData";
+		constexpr static rivet::rivet_type_id MeleeAttackData_type_id = 0xf2a6d993;
+		constexpr static std::string_view AttackDodgeData_type_name = "AttackDodgeData";
+		constexpr static rivet::rivet_type_id AttackDodgeData_type_id = 0x685f8480;
+		constexpr static std::string_view DisableHitReactPartialsDuringAttack_type_name = "DisableHitReactPartialsDuringAttack";
+		constexpr static rivet::rivet_type_id DisableHitReactPartialsDuringAttack_type_id = 0x760d56f1;
+		constexpr static std::string_view PrioritizeMotionScaling_type_name = "PrioritizeMotionScaling";
+		constexpr static rivet::rivet_type_id PrioritizeMotionScaling_type_id = 0x2c704b31; 
 
 		explicit BotComboMoveMelee() = default;
 		explicit BotComboMoveMelee([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

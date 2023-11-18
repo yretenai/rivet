@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED PlacedCameraPrius : CameraPrius {
-		constexpr const static std::string_view type_name = "PlacedCameraPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x907e71b3;
+		constexpr static std::string_view type_name = "PlacedCameraPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x907e71b3;
 
-		constexpr const static std::string_view ActivationVolume_type_name = "ActivationVolume";
-		constexpr const static rivet::rivet_type_id ActivationVolume_type_id = 0x9b85fce4; 
+		constexpr static std::string_view ActivationVolume_type_name = "ActivationVolume";
+		constexpr static rivet::rivet_type_id ActivationVolume_type_id = 0x9b85fce4; 
 
 		explicit PlacedCameraPrius() = default;
 		explicit PlacedCameraPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

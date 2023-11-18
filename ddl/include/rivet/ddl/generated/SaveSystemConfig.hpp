@@ -20,26 +20,26 @@
 #include <rivet/ddl/generated/ConfigBase.hpp> 
 
 namespace rivet::ddl::generated {
+	struct VanityBundleSaveWeight;
 	struct RYNOPlanSaveWeight;
-	struct GoldBoltSaveWeight;
-	struct VanityBundleSaveWeight; 
+	struct GoldBoltSaveWeight; 
 
 	struct RIVET_DDL_SHARED SaveSystemConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "SaveSystemConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xcf9cf810;
+		constexpr static std::string_view type_name = "SaveSystemConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xcf9cf810;
 
-		constexpr const static std::string_view GoldenPathCategoryWeight_type_name = "GoldenPathCategoryWeight";
-		constexpr const static rivet::rivet_type_id GoldenPathCategoryWeight_type_id = 0x7e65c21d;
-		constexpr const static std::string_view OptionalMissionCategoryWeight_type_name = "OptionalMissionCategoryWeight";
-		constexpr const static rivet::rivet_type_id OptionalMissionCategoryWeight_type_id = 0xeca047a4;
-		constexpr const static std::string_view CollectiblesCategoryWeight_type_name = "CollectiblesCategoryWeight";
-		constexpr const static rivet::rivet_type_id CollectiblesCategoryWeight_type_id = 0x2ec9a442;
-		constexpr const static std::string_view GoldBoltWeights_type_name = "GoldBoltWeights";
-		constexpr const static rivet::rivet_type_id GoldBoltWeights_type_id = 0x1cd5112d;
-		constexpr const static std::string_view RYNOPlanWeights_type_name = "RYNOPlanWeights";
-		constexpr const static rivet::rivet_type_id RYNOPlanWeights_type_id = 0x833cb21e;
-		constexpr const static std::string_view VanityBundleWeights_type_name = "VanityBundleWeights";
-		constexpr const static rivet::rivet_type_id VanityBundleWeights_type_id = 0x6fd5bf42; 
+		constexpr static std::string_view GoldenPathCategoryWeight_type_name = "GoldenPathCategoryWeight";
+		constexpr static rivet::rivet_type_id GoldenPathCategoryWeight_type_id = 0x7e65c21d;
+		constexpr static std::string_view OptionalMissionCategoryWeight_type_name = "OptionalMissionCategoryWeight";
+		constexpr static rivet::rivet_type_id OptionalMissionCategoryWeight_type_id = 0xeca047a4;
+		constexpr static std::string_view CollectiblesCategoryWeight_type_name = "CollectiblesCategoryWeight";
+		constexpr static rivet::rivet_type_id CollectiblesCategoryWeight_type_id = 0x2ec9a442;
+		constexpr static std::string_view GoldBoltWeights_type_name = "GoldBoltWeights";
+		constexpr static rivet::rivet_type_id GoldBoltWeights_type_id = 0x1cd5112d;
+		constexpr static std::string_view RYNOPlanWeights_type_name = "RYNOPlanWeights";
+		constexpr static rivet::rivet_type_id RYNOPlanWeights_type_id = 0x833cb21e;
+		constexpr static std::string_view VanityBundleWeights_type_name = "VanityBundleWeights";
+		constexpr static rivet::rivet_type_id VanityBundleWeights_type_id = 0x6fd5bf42; 
 
 		explicit SaveSystemConfig() = default;
 		explicit SaveSystemConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

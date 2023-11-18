@@ -17,31 +17,31 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/StatusEffectBasePrius.hpp>
+#include <rivet/ddl/generated/enums/x8d7e44cf.hpp>
 #include <rivet/ddl/generated/enums/KnockbackLevels.hpp>
-#include <rivet/ddl/generated/enums/x8d7e44cf.hpp> 
+#include <rivet/ddl/generated/StatusEffectBasePrius.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED StatusEffectDamagePrius : StatusEffectBasePrius {
-		constexpr const static std::string_view type_name = "StatusEffectDamagePrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x7574c17a;
+		constexpr static std::string_view type_name = "StatusEffectDamagePrius";
+		constexpr static rivet::rivet_type_id type_id = 0x7574c17a;
 
-		constexpr const static std::string_view DamageSelf_type_name = "DamageSelf";
-		constexpr const static rivet::rivet_type_id DamageSelf_type_id = 0x73997b07;
-		constexpr const static std::string_view DamageFriends_type_name = "DamageFriends";
-		constexpr const static rivet::rivet_type_id DamageFriends_type_id = 0x3be354f0;
-		constexpr const static std::string_view LoS_type_name = "LoS";
-		constexpr const static rivet::rivet_type_id LoS_type_id = 0x84deb5b9;
-		constexpr const static std::string_view Knockback_type_name = "Knockback";
-		constexpr const static rivet::rivet_type_id Knockback_type_id = 0x2e553fdd;
-		constexpr const static std::string_view Type_type_name = "Type";
-		constexpr const static rivet::rivet_type_id Type_type_id = 0xbc4e9799;
-		constexpr const static std::string_view DamageStartTimeRandom_type_name = "DamageStartTimeRandom";
-		constexpr const static rivet::rivet_type_id DamageStartTimeRandom_type_id = 0xec05fac9;
-		constexpr const static std::string_view DamageLocator_type_name = "DamageLocator";
-		constexpr const static rivet::rivet_type_id DamageLocator_type_id = 0x604b5af6;
-		constexpr const static std::string_view IgnoreActor_type_name = "IgnoreActor";
-		constexpr const static rivet::rivet_type_id IgnoreActor_type_id = 0x3cb6ea9; 
+		constexpr static std::string_view DamageSelf_type_name = "DamageSelf";
+		constexpr static rivet::rivet_type_id DamageSelf_type_id = 0x73997b07;
+		constexpr static std::string_view DamageFriends_type_name = "DamageFriends";
+		constexpr static rivet::rivet_type_id DamageFriends_type_id = 0x3be354f0;
+		constexpr static std::string_view LoS_type_name = "LoS";
+		constexpr static rivet::rivet_type_id LoS_type_id = 0x84deb5b9;
+		constexpr static std::string_view Knockback_type_name = "Knockback";
+		constexpr static rivet::rivet_type_id Knockback_type_id = 0x2e553fdd;
+		constexpr static std::string_view Type_type_name = "Type";
+		constexpr static rivet::rivet_type_id Type_type_id = 0xbc4e9799;
+		constexpr static std::string_view DamageStartTimeRandom_type_name = "DamageStartTimeRandom";
+		constexpr static rivet::rivet_type_id DamageStartTimeRandom_type_id = 0xec05fac9;
+		constexpr static std::string_view DamageLocator_type_name = "DamageLocator";
+		constexpr static rivet::rivet_type_id DamageLocator_type_id = 0x604b5af6;
+		constexpr static std::string_view IgnoreActor_type_name = "IgnoreActor";
+		constexpr static rivet::rivet_type_id IgnoreActor_type_id = 0x3cb6ea9; 
 
 		explicit StatusEffectDamagePrius() = default;
 		explicit StatusEffectDamagePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

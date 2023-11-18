@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct FactionArmorDataElement; 
 
 	struct RIVET_DDL_SHARED VanityArmorPerk : VanityPerkBase {
-		constexpr const static std::string_view type_name = "VanityArmorPerk";
-		constexpr const static rivet::rivet_type_id type_id = 0x1130bb5e;
+		constexpr static std::string_view type_name = "VanityArmorPerk";
+		constexpr static rivet::rivet_type_id type_id = 0x1130bb5e;
 
-		constexpr const static std::string_view FactionArmorData_type_name = "FactionArmorData";
-		constexpr const static rivet::rivet_type_id FactionArmorData_type_id = 0x94665754; 
+		constexpr static std::string_view FactionArmorData_type_name = "FactionArmorData";
+		constexpr static rivet::rivet_type_id FactionArmorData_type_id = 0x94665754; 
 
 		explicit VanityArmorPerk() = default;
 		explicit VanityArmorPerk([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

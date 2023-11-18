@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED BarrageEmitterPrius : WeaponEmitterBasePrius {
-		constexpr const static std::string_view type_name = "BarrageEmitterPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x92b7c23d;
+		constexpr static std::string_view type_name = "BarrageEmitterPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x92b7c23d;
 
-		constexpr const static std::string_view EmitFromUser_type_name = "EmitFromUser";
-		constexpr const static rivet::rivet_type_id EmitFromUser_type_id = 0x13b721db; 
+		constexpr static std::string_view EmitFromUser_type_name = "EmitFromUser";
+		constexpr static rivet::rivet_type_id EmitFromUser_type_id = 0x13b721db; 
 
 		explicit BarrageEmitterPrius() = default;
 		explicit BarrageEmitterPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

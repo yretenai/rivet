@@ -23,31 +23,31 @@ namespace rivet::ddl::generated {
 	struct AimModWrapper; 
 
 	struct RIVET_DDL_SHARED LaserShotTypeShootToTarget : BotComboLaserShotType {
-		constexpr const static std::string_view type_name = "LaserShotTypeShootToTarget";
-		constexpr const static rivet::rivet_type_id type_id = 0xce53abf;
+		constexpr static std::string_view type_name = "LaserShotTypeShootToTarget";
+		constexpr static rivet::rivet_type_id type_id = 0xce53abf;
 
-		constexpr const static std::string_view LaserTargetingTime_type_name = "LaserTargetingTime";
-		constexpr const static rivet::rivet_type_id LaserTargetingTime_type_id = 0x7c4f3000;
-		constexpr const static std::string_view LaserWarningTime_type_name = "LaserWarningTime";
-		constexpr const static rivet::rivet_type_id LaserWarningTime_type_id = 0x18024a7c;
-		constexpr const static std::string_view LaserShootTime_type_name = "LaserShootTime";
-		constexpr const static rivet::rivet_type_id LaserShootTime_type_id = 0x58784031;
-		constexpr const static std::string_view StopOnDamage_type_name = "StopOnDamage";
-		constexpr const static rivet::rivet_type_id StopOnDamage_type_id = 0xf9a907b2;
-		constexpr const static std::string_view FaceTowardsAimPos_type_name = "FaceTowardsAimPos";
-		constexpr const static rivet::rivet_type_id FaceTowardsAimPos_type_id = 0x6b0f75c4;
-		constexpr const static std::string_view UseAimingComponent_type_name = "UseAimingComponent";
-		constexpr const static rivet::rivet_type_id UseAimingComponent_type_id = 0x2fc3f981;
-		constexpr const static std::string_view StartAimModOnTargeting_type_name = "StartAimModOnTargeting";
-		constexpr const static rivet::rivet_type_id StartAimModOnTargeting_type_id = 0x96807863;
-		constexpr const static std::string_view EndAimModsOnShootEnd_type_name = "EndAimModsOnShootEnd";
-		constexpr const static rivet::rivet_type_id EndAimModsOnShootEnd_type_id = 0x7560b934;
-		constexpr const static std::string_view LockAimWhileFiring_type_name = "LockAimWhileFiring";
-		constexpr const static rivet::rivet_type_id LockAimWhileFiring_type_id = 0x38687f13;
-		constexpr const static std::string_view MimicShotRate_type_name = "MimicShotRate";
-		constexpr const static rivet::rivet_type_id MimicShotRate_type_id = 0xd7ef4376;
-		constexpr const static std::string_view AimMods_type_name = "AimMods";
-		constexpr const static rivet::rivet_type_id AimMods_type_id = 0x1d7694a1; 
+		constexpr static std::string_view LaserTargetingTime_type_name = "LaserTargetingTime";
+		constexpr static rivet::rivet_type_id LaserTargetingTime_type_id = 0x7c4f3000;
+		constexpr static std::string_view LaserWarningTime_type_name = "LaserWarningTime";
+		constexpr static rivet::rivet_type_id LaserWarningTime_type_id = 0x18024a7c;
+		constexpr static std::string_view LaserShootTime_type_name = "LaserShootTime";
+		constexpr static rivet::rivet_type_id LaserShootTime_type_id = 0x58784031;
+		constexpr static std::string_view StopOnDamage_type_name = "StopOnDamage";
+		constexpr static rivet::rivet_type_id StopOnDamage_type_id = 0xf9a907b2;
+		constexpr static std::string_view FaceTowardsAimPos_type_name = "FaceTowardsAimPos";
+		constexpr static rivet::rivet_type_id FaceTowardsAimPos_type_id = 0x6b0f75c4;
+		constexpr static std::string_view UseAimingComponent_type_name = "UseAimingComponent";
+		constexpr static rivet::rivet_type_id UseAimingComponent_type_id = 0x2fc3f981;
+		constexpr static std::string_view StartAimModOnTargeting_type_name = "StartAimModOnTargeting";
+		constexpr static rivet::rivet_type_id StartAimModOnTargeting_type_id = 0x96807863;
+		constexpr static std::string_view EndAimModsOnShootEnd_type_name = "EndAimModsOnShootEnd";
+		constexpr static rivet::rivet_type_id EndAimModsOnShootEnd_type_id = 0x7560b934;
+		constexpr static std::string_view LockAimWhileFiring_type_name = "LockAimWhileFiring";
+		constexpr static rivet::rivet_type_id LockAimWhileFiring_type_id = 0x38687f13;
+		constexpr static std::string_view MimicShotRate_type_name = "MimicShotRate";
+		constexpr static rivet::rivet_type_id MimicShotRate_type_id = 0xd7ef4376;
+		constexpr static std::string_view AimMods_type_name = "AimMods";
+		constexpr static rivet::rivet_type_id AimMods_type_id = 0x1d7694a1; 
 
 		explicit LaserShotTypeShootToTarget() = default;
 		explicit LaserShotTypeShootToTarget([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

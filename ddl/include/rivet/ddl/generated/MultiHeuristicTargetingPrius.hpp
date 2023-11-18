@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED MultiHeuristicTargetingPrius : HeuristicTargetingPrius {
-		constexpr const static std::string_view type_name = "MultiHeuristicTargetingPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xaa517c49;
+		constexpr static std::string_view type_name = "MultiHeuristicTargetingPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xaa517c49;
 
-		constexpr const static std::string_view MaxTrackedTargets_type_name = "MaxTrackedTargets";
-		constexpr const static rivet::rivet_type_id MaxTrackedTargets_type_id = 0xb7611a91; 
+		constexpr static std::string_view MaxTrackedTargets_type_name = "MaxTrackedTargets";
+		constexpr static rivet::rivet_type_id MaxTrackedTargets_type_id = 0xb7611a91; 
 
 		explicit MultiHeuristicTargetingPrius() = default;
 		explicit MultiHeuristicTargetingPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

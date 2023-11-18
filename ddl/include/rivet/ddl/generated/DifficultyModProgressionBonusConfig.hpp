@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct ProgressionBonusEntry; 
 
 	struct RIVET_DDL_SHARED DifficultyModProgressionBonusConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "DifficultyModProgressionBonusConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xd1e78125;
+		constexpr static std::string_view type_name = "DifficultyModProgressionBonusConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xd1e78125;
 
-		constexpr const static std::string_view ModProgressionBonuses_type_name = "ModProgressionBonuses";
-		constexpr const static rivet::rivet_type_id ModProgressionBonuses_type_id = 0x18f4c422; 
+		constexpr static std::string_view ModProgressionBonuses_type_name = "ModProgressionBonuses";
+		constexpr static rivet::rivet_type_id ModProgressionBonuses_type_id = 0x18f4c422; 
 
 		explicit DifficultyModProgressionBonusConfig() = default;
 		explicit DifficultyModProgressionBonusConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

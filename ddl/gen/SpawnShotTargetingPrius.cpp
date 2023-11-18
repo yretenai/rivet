@@ -3,15 +3,15 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/SpawnShotForwardConeTargetingPrius.hpp>
-#include <rivet/ddl/generated/SpawnShotAimOffsetTargetingPrius.hpp>
 #include <rivet/ddl/generated/SpawnShotForwardTargetingPrius.hpp>
-#include <rivet/ddl/generated/SpawnShotBotTargetingPrius.hpp>
-#include <rivet/ddl/generated/SpawnShotCodeTargetingPrius.hpp>
 #include <rivet/ddl/generated/SpawnShotHeroTargetingPrius.hpp>
 #include <rivet/ddl/generated/SpawnShotForwardRandomTargetingPrius.hpp>
+#include <rivet/ddl/generated/SpawnShotForwardStrafingTargetingPrius.hpp>
+#include <rivet/ddl/generated/SpawnShotCodeTargetingPrius.hpp>
 #include <rivet/ddl/generated/SpawnShotForwardRandomAimTargetingPrius.hpp>
-#include <rivet/ddl/generated/SpawnShotForwardStrafingTargetingPrius.hpp> 
+#include <rivet/ddl/generated/SpawnShotForwardConeTargetingPrius.hpp>
+#include <rivet/ddl/generated/SpawnShotBotTargetingPrius.hpp>
+#include <rivet/ddl/generated/SpawnShotAimOffsetTargetingPrius.hpp> 
 
 #include <rivet/ddl/generated/SpawnShotTargetingPrius.hpp>
 

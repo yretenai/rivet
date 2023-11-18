@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct ZoneList; 
 
 	struct RIVET_DDL_SHARED AssetSwapPlatSpec : ConfigBase {
-		constexpr const static std::string_view type_name = "AssetSwapPlatSpec";
-		constexpr const static rivet::rivet_type_id type_id = 0x22ff43f2;
+		constexpr static std::string_view type_name = "AssetSwapPlatSpec";
+		constexpr static rivet::rivet_type_id type_id = 0x22ff43f2;
 
-		constexpr const static std::string_view ZoneLists_type_name = "ZoneLists";
-		constexpr const static rivet::rivet_type_id ZoneLists_type_id = 0x84c79e13; 
+		constexpr static std::string_view ZoneLists_type_name = "ZoneLists";
+		constexpr static rivet::rivet_type_id ZoneLists_type_id = 0x84c79e13; 
 
 		explicit AssetSwapPlatSpec() = default;
 		explicit AssetSwapPlatSpec([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

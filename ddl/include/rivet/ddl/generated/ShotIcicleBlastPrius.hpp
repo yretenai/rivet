@@ -23,17 +23,17 @@ namespace rivet::ddl::generated {
 	struct IcicleDamageRange; 
 
 	struct RIVET_DDL_SHARED ShotIcicleBlastPrius : SimpleShotPrius {
-		constexpr const static std::string_view type_name = "ShotIcicleBlastPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x4523a9fc;
+		constexpr static std::string_view type_name = "ShotIcicleBlastPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x4523a9fc;
 
-		constexpr const static std::string_view CloseRangeDamage_type_name = "CloseRangeDamage";
-		constexpr const static rivet::rivet_type_id CloseRangeDamage_type_id = 0xf9273eee;
-		constexpr const static std::string_view MidRangeDamage_type_name = "MidRangeDamage";
-		constexpr const static rivet::rivet_type_id MidRangeDamage_type_id = 0x34a69b54;
-		constexpr const static std::string_view LongRangeDamage_type_name = "LongRangeDamage";
-		constexpr const static rivet::rivet_type_id LongRangeDamage_type_id = 0x8f353c5f;
-		constexpr const static std::string_view DamageHashString_type_name = "DamageHashString";
-		constexpr const static rivet::rivet_type_id DamageHashString_type_id = 0x5a2efcb4; 
+		constexpr static std::string_view CloseRangeDamage_type_name = "CloseRangeDamage";
+		constexpr static rivet::rivet_type_id CloseRangeDamage_type_id = 0xf9273eee;
+		constexpr static std::string_view MidRangeDamage_type_name = "MidRangeDamage";
+		constexpr static rivet::rivet_type_id MidRangeDamage_type_id = 0x34a69b54;
+		constexpr static std::string_view LongRangeDamage_type_name = "LongRangeDamage";
+		constexpr static rivet::rivet_type_id LongRangeDamage_type_id = 0x8f353c5f;
+		constexpr static std::string_view DamageHashString_type_name = "DamageHashString";
+		constexpr static rivet::rivet_type_id DamageHashString_type_id = 0x5a2efcb4; 
 
 		explicit ShotIcicleBlastPrius() = default;
 		explicit ShotIcicleBlastPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

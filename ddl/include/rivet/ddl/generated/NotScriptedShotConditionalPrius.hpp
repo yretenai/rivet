@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct ScriptedShotConditionalBasePrius; 
 
 	struct RIVET_DDL_SHARED NotScriptedShotConditionalPrius : ScriptedShotConditionalBasePrius {
-		constexpr const static std::string_view type_name = "NotScriptedShotConditionalPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xa63d8092;
+		constexpr static std::string_view type_name = "NotScriptedShotConditionalPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xa63d8092;
 
-		constexpr const static std::string_view Cond_type_name = "Cond";
-		constexpr const static rivet::rivet_type_id Cond_type_id = 0xca6d2834; 
+		constexpr static std::string_view Cond_type_name = "Cond";
+		constexpr static rivet::rivet_type_id Cond_type_id = 0xca6d2834; 
 
 		explicit NotScriptedShotConditionalPrius() = default;
 		explicit NotScriptedShotConditionalPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -19,19 +19,19 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED SpawnerBotThrowData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "SpawnerBotThrowData";
-		constexpr const static rivet::rivet_type_id type_id = 0xdd8621c7;
+		constexpr static std::string_view type_name = "SpawnerBotThrowData";
+		constexpr static rivet::rivet_type_id type_id = 0xdd8621c7;
 
-		constexpr const static std::string_view ThrowSpawnedBots_type_name = "ThrowSpawnedBots";
-		constexpr const static rivet::rivet_type_id ThrowSpawnedBots_type_id = 0xbc501d47;
-		constexpr const static std::string_view ThrowFromJoint_type_name = "ThrowFromJoint";
-		constexpr const static rivet::rivet_type_id ThrowFromJoint_type_id = 0x2b67368c;
-		constexpr const static std::string_view ThrowHeight_type_name = "ThrowHeight";
-		constexpr const static rivet::rivet_type_id ThrowHeight_type_id = 0xd7e273b9;
-		constexpr const static std::string_view ThrowRangeMin_type_name = "ThrowRangeMin";
-		constexpr const static rivet::rivet_type_id ThrowRangeMin_type_id = 0x3fdf41ae;
-		constexpr const static std::string_view ThrowRangeMax_type_name = "ThrowRangeMax";
-		constexpr const static rivet::rivet_type_id ThrowRangeMax_type_id = 0x3d27ef7; 
+		constexpr static std::string_view ThrowSpawnedBots_type_name = "ThrowSpawnedBots";
+		constexpr static rivet::rivet_type_id ThrowSpawnedBots_type_id = 0xbc501d47;
+		constexpr static std::string_view ThrowFromJoint_type_name = "ThrowFromJoint";
+		constexpr static rivet::rivet_type_id ThrowFromJoint_type_id = 0x2b67368c;
+		constexpr static std::string_view ThrowHeight_type_name = "ThrowHeight";
+		constexpr static rivet::rivet_type_id ThrowHeight_type_id = 0xd7e273b9;
+		constexpr static std::string_view ThrowRangeMin_type_name = "ThrowRangeMin";
+		constexpr static rivet::rivet_type_id ThrowRangeMin_type_id = 0x3fdf41ae;
+		constexpr static std::string_view ThrowRangeMax_type_name = "ThrowRangeMax";
+		constexpr static rivet::rivet_type_id ThrowRangeMax_type_id = 0x3d27ef7; 
 
 		explicit SpawnerBotThrowData() = default;
 		explicit SpawnerBotThrowData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

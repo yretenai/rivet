@@ -20,33 +20,33 @@
 #include <rivet/ddl/generated/HitReactPrius.hpp> 
 
 namespace rivet::ddl::generated {
-	struct HitReactMeters;
-	struct KnockbackReactionModifier; 
+	struct KnockbackReactionModifier;
+	struct HitReactMeters; 
 
 	struct RIVET_DDL_SHARED HitReactMeteredPrius : HitReactPrius {
-		constexpr const static std::string_view type_name = "HitReactMeteredPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xa6789e54;
+		constexpr static std::string_view type_name = "HitReactMeteredPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xa6789e54;
 
-		constexpr const static std::string_view MeterData_type_name = "MeterData";
-		constexpr const static rivet::rivet_type_id MeterData_type_id = 0xbe5a19b1;
-		constexpr const static std::string_view FullbodyCooldown_type_name = "FullbodyCooldown";
-		constexpr const static rivet::rivet_type_id FullbodyCooldown_type_id = 0x1a79d7b;
-		constexpr const static std::string_view PartialReactDriver_type_name = "PartialReactDriver";
-		constexpr const static rivet::rivet_type_id PartialReactDriver_type_id = 0x4f63a6f1;
-		constexpr const static std::string_view PartialReactCooldown_type_name = "PartialReactCooldown";
-		constexpr const static rivet::rivet_type_id PartialReactCooldown_type_id = 0xa4e1f543;
-		constexpr const static std::string_view BodypartToFilterConfig_type_name = "BodypartToFilterConfig";
-		constexpr const static rivet::rivet_type_id BodypartToFilterConfig_type_id = 0xea705a6c;
-		constexpr const static std::string_view OverrideKnockbackLength_type_name = "OverrideKnockbackLength";
-		constexpr const static rivet::rivet_type_id OverrideKnockbackLength_type_id = 0xb4da608a;
-		constexpr const static std::string_view OverrideKnockdownLength_type_name = "OverrideKnockdownLength";
-		constexpr const static rivet::rivet_type_id OverrideKnockdownLength_type_id = 0xdbcfdb29;
-		constexpr const static std::string_view ContinousPartialTime_type_name = "ContinousPartialTime";
-		constexpr const static rivet::rivet_type_id ContinousPartialTime_type_id = 0xd3e857da;
-		constexpr const static std::string_view KineticResistance_type_name = "KineticResistance";
-		constexpr const static rivet::rivet_type_id KineticResistance_type_id = 0xa7f5f712;
-		constexpr const static std::string_view ReactionMods_type_name = "ReactionMods";
-		constexpr const static rivet::rivet_type_id ReactionMods_type_id = 0x19e69f6; 
+		constexpr static std::string_view MeterData_type_name = "MeterData";
+		constexpr static rivet::rivet_type_id MeterData_type_id = 0xbe5a19b1;
+		constexpr static std::string_view FullbodyCooldown_type_name = "FullbodyCooldown";
+		constexpr static rivet::rivet_type_id FullbodyCooldown_type_id = 0x1a79d7b;
+		constexpr static std::string_view PartialReactDriver_type_name = "PartialReactDriver";
+		constexpr static rivet::rivet_type_id PartialReactDriver_type_id = 0x4f63a6f1;
+		constexpr static std::string_view PartialReactCooldown_type_name = "PartialReactCooldown";
+		constexpr static rivet::rivet_type_id PartialReactCooldown_type_id = 0xa4e1f543;
+		constexpr static std::string_view BodypartToFilterConfig_type_name = "BodypartToFilterConfig";
+		constexpr static rivet::rivet_type_id BodypartToFilterConfig_type_id = 0xea705a6c;
+		constexpr static std::string_view OverrideKnockbackLength_type_name = "OverrideKnockbackLength";
+		constexpr static rivet::rivet_type_id OverrideKnockbackLength_type_id = 0xb4da608a;
+		constexpr static std::string_view OverrideKnockdownLength_type_name = "OverrideKnockdownLength";
+		constexpr static rivet::rivet_type_id OverrideKnockdownLength_type_id = 0xdbcfdb29;
+		constexpr static std::string_view ContinousPartialTime_type_name = "ContinousPartialTime";
+		constexpr static rivet::rivet_type_id ContinousPartialTime_type_id = 0xd3e857da;
+		constexpr static std::string_view KineticResistance_type_name = "KineticResistance";
+		constexpr static rivet::rivet_type_id KineticResistance_type_id = 0xa7f5f712;
+		constexpr static std::string_view ReactionMods_type_name = "ReactionMods";
+		constexpr static rivet::rivet_type_id ReactionMods_type_id = 0x19e69f6; 
 
 		explicit HitReactMeteredPrius() = default;
 		explicit HitReactMeteredPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

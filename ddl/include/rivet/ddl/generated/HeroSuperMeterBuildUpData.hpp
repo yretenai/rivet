@@ -21,17 +21,17 @@ namespace rivet::ddl::generated {
 	struct HeroSuperMeterDecayData; 
 
 	struct RIVET_DDL_SHARED HeroSuperMeterBuildUpData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "HeroSuperMeterBuildUpData";
-		constexpr const static rivet::rivet_type_id type_id = 0xaa02d2d;
+		constexpr static std::string_view type_name = "HeroSuperMeterBuildUpData";
+		constexpr static rivet::rivet_type_id type_id = 0xaa02d2d;
 
-		constexpr const static std::string_view PerDamageRate_type_name = "PerDamageRate";
-		constexpr const static rivet::rivet_type_id PerDamageRate_type_id = 0x3c99607b;
-		constexpr const static std::string_view CanAccrueWhileUsing_type_name = "CanAccrueWhileUsing";
-		constexpr const static rivet::rivet_type_id CanAccrueWhileUsing_type_id = 0x5af3ac07;
-		constexpr const static std::string_view InCombat_type_name = "InCombat";
-		constexpr const static rivet::rivet_type_id InCombat_type_id = 0xb031a93c;
-		constexpr const static std::string_view OutOfCombat_type_name = "OutOfCombat";
-		constexpr const static rivet::rivet_type_id OutOfCombat_type_id = 0xbbbcb05f; 
+		constexpr static std::string_view PerDamageRate_type_name = "PerDamageRate";
+		constexpr static rivet::rivet_type_id PerDamageRate_type_id = 0x3c99607b;
+		constexpr static std::string_view CanAccrueWhileUsing_type_name = "CanAccrueWhileUsing";
+		constexpr static rivet::rivet_type_id CanAccrueWhileUsing_type_id = 0x5af3ac07;
+		constexpr static std::string_view InCombat_type_name = "InCombat";
+		constexpr static rivet::rivet_type_id InCombat_type_id = 0xb031a93c;
+		constexpr static std::string_view OutOfCombat_type_name = "OutOfCombat";
+		constexpr static rivet::rivet_type_id OutOfCombat_type_id = 0xbbbcb05f; 
 
 		explicit HeroSuperMeterBuildUpData() = default;
 		explicit HeroSuperMeterBuildUpData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

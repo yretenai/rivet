@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED UIArenaChallengeRewardVanity : UIArenaChallengeReward {
-		constexpr const static std::string_view type_name = "UIArenaChallengeRewardVanity";
-		constexpr const static rivet::rivet_type_id type_id = 0xc89e18c5;
+		constexpr static std::string_view type_name = "UIArenaChallengeRewardVanity";
+		constexpr static rivet::rivet_type_id type_id = 0xc89e18c5;
 
-		constexpr const static std::string_view VanityBundleConfig_type_name = "VanityBundleConfig";
-		constexpr const static rivet::rivet_type_id VanityBundleConfig_type_id = 0xb68fd998;
-		constexpr const static std::string_view Icon_type_name = "Icon";
-		constexpr const static rivet::rivet_type_id Icon_type_id = 0x5504e96b; 
+		constexpr static std::string_view VanityBundleConfig_type_name = "VanityBundleConfig";
+		constexpr static rivet::rivet_type_id VanityBundleConfig_type_id = 0xb68fd998;
+		constexpr static std::string_view Icon_type_name = "Icon";
+		constexpr static rivet::rivet_type_id Icon_type_id = 0x5504e96b; 
 
 		explicit UIArenaChallengeRewardVanity() = default;
 		explicit UIArenaChallengeRewardVanity([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

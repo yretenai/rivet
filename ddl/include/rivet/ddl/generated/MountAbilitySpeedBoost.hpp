@@ -21,21 +21,21 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED MountAbilitySpeedBoost : MountAbilityBase {
-		constexpr const static std::string_view type_name = "MountAbilitySpeedBoost";
-		constexpr const static rivet::rivet_type_id type_id = 0x3992ae0d;
+		constexpr static std::string_view type_name = "MountAbilitySpeedBoost";
+		constexpr static rivet::rivet_type_id type_id = 0x3992ae0d;
 
-		constexpr const static std::string_view AdditionalBoostSpeed_type_name = "AdditionalBoostSpeed";
-		constexpr const static rivet::rivet_type_id AdditionalBoostSpeed_type_id = 0xb32eb162;
-		constexpr const static std::string_view BoostDuration_type_name = "BoostDuration";
-		constexpr const static rivet::rivet_type_id BoostDuration_type_id = 0x6d72cb38;
-		constexpr const static std::string_view HoldToBoost_type_name = "HoldToBoost";
-		constexpr const static rivet::rivet_type_id HoldToBoost_type_id = 0xbde99b1c;
-		constexpr const static std::string_view BoostIntroAnim_type_name = "BoostIntroAnim";
-		constexpr const static rivet::rivet_type_id BoostIntroAnim_type_id = 0x11558527;
-		constexpr const static std::string_view BoostLoopingAnim_type_name = "BoostLoopingAnim";
-		constexpr const static rivet::rivet_type_id BoostLoopingAnim_type_id = 0xcdf4dc19;
-		constexpr const static std::string_view BoostOutroAnim_type_name = "BoostOutroAnim";
-		constexpr const static rivet::rivet_type_id BoostOutroAnim_type_id = 0x439ed1d0; 
+		constexpr static std::string_view AdditionalBoostSpeed_type_name = "AdditionalBoostSpeed";
+		constexpr static rivet::rivet_type_id AdditionalBoostSpeed_type_id = 0xb32eb162;
+		constexpr static std::string_view BoostDuration_type_name = "BoostDuration";
+		constexpr static rivet::rivet_type_id BoostDuration_type_id = 0x6d72cb38;
+		constexpr static std::string_view HoldToBoost_type_name = "HoldToBoost";
+		constexpr static rivet::rivet_type_id HoldToBoost_type_id = 0xbde99b1c;
+		constexpr static std::string_view BoostIntroAnim_type_name = "BoostIntroAnim";
+		constexpr static rivet::rivet_type_id BoostIntroAnim_type_id = 0x11558527;
+		constexpr static std::string_view BoostLoopingAnim_type_name = "BoostLoopingAnim";
+		constexpr static rivet::rivet_type_id BoostLoopingAnim_type_id = 0xcdf4dc19;
+		constexpr static std::string_view BoostOutroAnim_type_name = "BoostOutroAnim";
+		constexpr static rivet::rivet_type_id BoostOutroAnim_type_id = 0x439ed1d0; 
 
 		explicit MountAbilitySpeedBoost() = default;
 		explicit MountAbilitySpeedBoost([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

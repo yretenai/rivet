@@ -21,25 +21,25 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED PhysicsMaterialPropertiesParam : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "PhysicsMaterialPropertiesParam";
-		constexpr const static rivet::rivet_type_id type_id = 0xbd3c26f7;
+		constexpr static std::string_view type_name = "PhysicsMaterialPropertiesParam";
+		constexpr static rivet::rivet_type_id type_id = 0xbd3c26f7;
 
-		constexpr const static std::string_view DynamicFriction_type_name = "DynamicFriction";
-		constexpr const static rivet::rivet_type_id DynamicFriction_type_id = 0x42a5a5b6;
-		constexpr const static std::string_view DynFrictionCombinePolicy_type_name = "DynFrictionCombinePolicy";
-		constexpr const static rivet::rivet_type_id DynFrictionCombinePolicy_type_id = 0x55cfa570;
-		constexpr const static std::string_view StaticFriction_type_name = "StaticFriction";
-		constexpr const static rivet::rivet_type_id StaticFriction_type_id = 0x54e83e16;
-		constexpr const static std::string_view Restitution_type_name = "Restitution";
-		constexpr const static rivet::rivet_type_id Restitution_type_id = 0xc2747146;
-		constexpr const static std::string_view RestitutionCombinePolicy_type_name = "RestitutionCombinePolicy";
-		constexpr const static rivet::rivet_type_id RestitutionCombinePolicy_type_id = 0x2ed93ad9;
-		constexpr const static std::string_view SoftContactForceFactor_type_name = "SoftContactForceFactor";
-		constexpr const static rivet::rivet_type_id SoftContactForceFactor_type_id = 0xad38544e;
-		constexpr const static std::string_view SoftContactDampFactor_type_name = "SoftContactDampFactor";
-		constexpr const static rivet::rivet_type_id SoftContactDampFactor_type_id = 0xebcff8d2;
-		constexpr const static std::string_view SoftContactSepVelocity_type_name = "SoftContactSepVelocity";
-		constexpr const static rivet::rivet_type_id SoftContactSepVelocity_type_id = 0xb57d6391; 
+		constexpr static std::string_view DynamicFriction_type_name = "DynamicFriction";
+		constexpr static rivet::rivet_type_id DynamicFriction_type_id = 0x42a5a5b6;
+		constexpr static std::string_view DynFrictionCombinePolicy_type_name = "DynFrictionCombinePolicy";
+		constexpr static rivet::rivet_type_id DynFrictionCombinePolicy_type_id = 0x55cfa570;
+		constexpr static std::string_view StaticFriction_type_name = "StaticFriction";
+		constexpr static rivet::rivet_type_id StaticFriction_type_id = 0x54e83e16;
+		constexpr static std::string_view Restitution_type_name = "Restitution";
+		constexpr static rivet::rivet_type_id Restitution_type_id = 0xc2747146;
+		constexpr static std::string_view RestitutionCombinePolicy_type_name = "RestitutionCombinePolicy";
+		constexpr static rivet::rivet_type_id RestitutionCombinePolicy_type_id = 0x2ed93ad9;
+		constexpr static std::string_view SoftContactForceFactor_type_name = "SoftContactForceFactor";
+		constexpr static rivet::rivet_type_id SoftContactForceFactor_type_id = 0xad38544e;
+		constexpr static std::string_view SoftContactDampFactor_type_name = "SoftContactDampFactor";
+		constexpr static rivet::rivet_type_id SoftContactDampFactor_type_id = 0xebcff8d2;
+		constexpr static std::string_view SoftContactSepVelocity_type_name = "SoftContactSepVelocity";
+		constexpr static rivet::rivet_type_id SoftContactSepVelocity_type_id = 0xb57d6391; 
 
 		explicit PhysicsMaterialPropertiesParam() = default;
 		explicit PhysicsMaterialPropertiesParam([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

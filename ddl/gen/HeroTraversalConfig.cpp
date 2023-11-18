@@ -3,24 +3,24 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/HeroSpeedConfig.hpp>
-#include <rivet/ddl/generated/HeroWallStickConfig.hpp>
-#include <rivet/ddl/generated/HeroLedgeConfig.hpp>
-#include <rivet/ddl/generated/HeroSlingshotConfig.hpp>
-#include <rivet/ddl/generated/HeroWallRunConfig.hpp>
-#include <rivet/ddl/generated/HeroBounceConfig.hpp>
-#include <rivet/ddl/generated/HeroSwingshotConfig.hpp>
-#include <rivet/ddl/generated/HeroHookshotConfig.hpp>
+#include <rivet/ddl/generated/GroundResponseElement.hpp>
 #include <rivet/ddl/generated/HeroJumpConfigCollection.hpp>
-#include <rivet/ddl/generated/HeroTetherConfig.hpp>
-#include <rivet/ddl/generated/HeroSwimConfig.hpp>
-#include <rivet/ddl/generated/HeroDashConfig.hpp>
-#include <rivet/ddl/generated/HeroMagbootConfig.hpp>
-#include <rivet/ddl/generated/HeroSkyDiveConfig.hpp>
 #include <rivet/ddl/generated/HeroGroovitronConfig.hpp>
+#include <rivet/ddl/generated/HeroSpeedConfig.hpp>
+#include <rivet/ddl/generated/HeroTetherConfig.hpp>
+#include <rivet/ddl/generated/HeroWallStickConfig.hpp>
+#include <rivet/ddl/generated/HeroWallRunConfig.hpp>
+#include <rivet/ddl/generated/HeroLedgeConfig.hpp>
 #include <rivet/ddl/generated/HeroRespawnConfig.hpp>
+#include <rivet/ddl/generated/HeroBounceConfig.hpp>
+#include <rivet/ddl/generated/HeroHookshotConfig.hpp>
+#include <rivet/ddl/generated/HeroSlingshotConfig.hpp>
+#include <rivet/ddl/generated/HeroDashConfig.hpp>
+#include <rivet/ddl/generated/HeroSkyDiveConfig.hpp>
+#include <rivet/ddl/generated/HeroSwimConfig.hpp>
 #include <rivet/ddl/generated/HeroShadowDimensionConfig.hpp>
-#include <rivet/ddl/generated/GroundResponseElement.hpp> 
+#include <rivet/ddl/generated/HeroSwingshotConfig.hpp>
+#include <rivet/ddl/generated/HeroMagbootConfig.hpp> 
 
 #include <rivet/ddl/generated/HeroTraversalConfig.hpp>
 

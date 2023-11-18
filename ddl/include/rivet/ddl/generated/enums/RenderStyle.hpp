@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view RenderStyle_type_name = "RenderStyle";
-	constexpr const static rivet::rivet_type_id RenderStyle_type_id = 0x1ce19fbd;
+	constexpr static std::string_view RenderStyle_type_name = "RenderStyle";
+	constexpr static rivet::rivet_type_id RenderStyle_type_id = 0x1ce19fbd;
 
-	constexpr const static std::array<std::string_view, 17> RenderStyle_values = {
+	constexpr static std::array<std::string_view, 17> RenderStyle_values = {
 		"kSingleQuad",
 		"kMultiQuads",
 		"kSingleLight",

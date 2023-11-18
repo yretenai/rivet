@@ -4,8 +4,8 @@
 // SPDX-License-Identifier: MPL-2.0
 
 #include <rivet/ddl/generated/CustomHeadData.hpp>
-#include <rivet/ddl/generated/SkinData.hpp>
-#include <rivet/ddl/generated/UnlockableSkinData.hpp> 
+#include <rivet/ddl/generated/UnlockableSkinData.hpp>
+#include <rivet/ddl/generated/SkinData.hpp> 
 
 #include <rivet/ddl/generated/HeroSkinConfig.hpp>
 

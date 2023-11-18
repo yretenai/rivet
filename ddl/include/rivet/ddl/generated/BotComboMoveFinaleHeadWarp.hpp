@@ -21,15 +21,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED BotComboMoveFinaleHeadWarp : BotComboMoveBase {
-		constexpr const static std::string_view type_name = "BotComboMoveFinaleHeadWarp";
-		constexpr const static rivet::rivet_type_id type_id = 0xe1f7cd03;
+		constexpr static std::string_view type_name = "BotComboMoveFinaleHeadWarp";
+		constexpr static rivet::rivet_type_id type_id = 0xe1f7cd03;
 
-		constexpr const static std::string_view PortalActorAsset_type_name = "PortalActorAsset";
-		constexpr const static rivet::rivet_type_id PortalActorAsset_type_id = 0xfec29c86;
-		constexpr const static std::string_view HeadActorAsset_type_name = "HeadActorAsset";
-		constexpr const static rivet::rivet_type_id HeadActorAsset_type_id = 0x7e95e9fa;
-		constexpr const static std::string_view HeadActorVol_type_name = "HeadActorVol";
-		constexpr const static rivet::rivet_type_id HeadActorVol_type_id = 0x53f23acb; 
+		constexpr static std::string_view PortalActorAsset_type_name = "PortalActorAsset";
+		constexpr static rivet::rivet_type_id PortalActorAsset_type_id = 0xfec29c86;
+		constexpr static std::string_view HeadActorAsset_type_name = "HeadActorAsset";
+		constexpr static rivet::rivet_type_id HeadActorAsset_type_id = 0x7e95e9fa;
+		constexpr static std::string_view HeadActorVol_type_name = "HeadActorVol";
+		constexpr static rivet::rivet_type_id HeadActorVol_type_id = 0x53f23acb; 
 
 		explicit BotComboMoveFinaleHeadWarp() = default;
 		explicit BotComboMoveFinaleHeadWarp([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DamageModifierSlotPercentPrius : DamageModifierIncomingPrius {
-		constexpr const static std::string_view type_name = "DamageModifierSlotPercentPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xee49070a;
+		constexpr static std::string_view type_name = "DamageModifierSlotPercentPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xee49070a;
 
-		constexpr const static std::string_view PercentSlot_type_name = "PercentSlot";
-		constexpr const static rivet::rivet_type_id PercentSlot_type_id = 0x65dc2ad9; 
+		constexpr static std::string_view PercentSlot_type_name = "PercentSlot";
+		constexpr static rivet::rivet_type_id PercentSlot_type_id = 0x65dc2ad9; 
 
 		explicit DamageModifierSlotPercentPrius() = default;
 		explicit DamageModifierSlotPercentPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

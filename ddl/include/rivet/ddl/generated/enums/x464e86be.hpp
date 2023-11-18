@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view x464e86be_type_name = "x464e86be";
-	constexpr const static rivet::rivet_type_id x464e86be_type_id = 0x464e86be;
+	constexpr static std::string_view x464e86be_type_name = "x464e86be";
+	constexpr static rivet::rivet_type_id x464e86be_type_id = 0x464e86be;
 
-	constexpr const static std::array<std::string_view, 3> x464e86be_values = {
+	constexpr static std::array<std::string_view, 3> x464e86be_values = {
 		"kBatchedStatic",
 		"kDynamicProximty",
 		"kDynamicNoProximity", 

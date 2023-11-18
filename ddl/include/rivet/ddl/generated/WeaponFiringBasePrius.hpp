@@ -21,19 +21,19 @@ namespace rivet::ddl::generated {
 	struct WeaponEmitterBasePrius; 
 
 	struct RIVET_DDL_SHARED WeaponFiringBasePrius : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "WeaponFiringBasePrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x9c98ee69;
+		constexpr static std::string_view type_name = "WeaponFiringBasePrius";
+		constexpr static rivet::rivet_type_id type_id = 0x9c98ee69;
 
-		constexpr const static std::string_view Emitter_type_name = "Emitter";
-		constexpr const static rivet::rivet_type_id Emitter_type_id = 0x7464ae09;
-		constexpr const static std::string_view FireSoundRange_type_name = "FireSoundRange";
-		constexpr const static rivet::rivet_type_id FireSoundRange_type_id = 0x7ea9ad35;
-		constexpr const static std::string_view NoiseMultiplier_type_name = "NoiseMultiplier";
-		constexpr const static rivet::rivet_type_id NoiseMultiplier_type_id = 0x5240ce16;
-		constexpr const static std::string_view ScentMultiplier_type_name = "ScentMultiplier";
-		constexpr const static rivet::rivet_type_id ScentMultiplier_type_id = 0xa7acfc9a;
-		constexpr const static std::string_view FireEventFxId_type_name = "FireEventFxId";
-		constexpr const static rivet::rivet_type_id FireEventFxId_type_id = 0x2c812937; 
+		constexpr static std::string_view Emitter_type_name = "Emitter";
+		constexpr static rivet::rivet_type_id Emitter_type_id = 0x7464ae09;
+		constexpr static std::string_view FireSoundRange_type_name = "FireSoundRange";
+		constexpr static rivet::rivet_type_id FireSoundRange_type_id = 0x7ea9ad35;
+		constexpr static std::string_view NoiseMultiplier_type_name = "NoiseMultiplier";
+		constexpr static rivet::rivet_type_id NoiseMultiplier_type_id = 0x5240ce16;
+		constexpr static std::string_view ScentMultiplier_type_name = "ScentMultiplier";
+		constexpr static rivet::rivet_type_id ScentMultiplier_type_id = 0xa7acfc9a;
+		constexpr static std::string_view FireEventFxId_type_name = "FireEventFxId";
+		constexpr static rivet::rivet_type_id FireEventFxId_type_id = 0x2c812937; 
 
 		explicit WeaponFiringBasePrius() = default;
 		explicit WeaponFiringBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

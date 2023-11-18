@@ -21,15 +21,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED WeaponSchrodingerPrius : WeaponGamePrius {
-		constexpr const static std::string_view type_name = "WeaponSchrodingerPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x466dd798;
+		constexpr static std::string_view type_name = "WeaponSchrodingerPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x466dd798;
 
-		constexpr const static std::string_view AttachActor_type_name = "AttachActor";
-		constexpr const static rivet::rivet_type_id AttachActor_type_id = 0x24c2eb7e;
-		constexpr const static std::string_view AttachLocator_type_name = "AttachLocator";
-		constexpr const static rivet::rivet_type_id AttachLocator_type_id = 0xfa8dcd9a;
-		constexpr const static std::string_view AttachActorScale_type_name = "AttachActorScale";
-		constexpr const static rivet::rivet_type_id AttachActorScale_type_id = 0xcffac682; 
+		constexpr static std::string_view AttachActor_type_name = "AttachActor";
+		constexpr static rivet::rivet_type_id AttachActor_type_id = 0x24c2eb7e;
+		constexpr static std::string_view AttachLocator_type_name = "AttachLocator";
+		constexpr static rivet::rivet_type_id AttachLocator_type_id = 0xfa8dcd9a;
+		constexpr static std::string_view AttachActorScale_type_name = "AttachActorScale";
+		constexpr static rivet::rivet_type_id AttachActorScale_type_id = 0xcffac682; 
 
 		explicit WeaponSchrodingerPrius() = default;
 		explicit WeaponSchrodingerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -18,31 +18,31 @@
 #include <rivet/structures/rivet_serialization.hpp>
 
 namespace rivet::ddl::generated {
+	struct LookSwap;
 	struct GenericChunk;
-	struct DamageStateElement;
 	struct LookChunk;
-	struct LookSwap; 
+	struct DamageStateElement; 
 
 	struct RIVET_DDL_SHARED DamageStateData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "DamageStateData";
-		constexpr const static rivet::rivet_type_id type_id = 0x1a41da5e;
+		constexpr static std::string_view type_name = "DamageStateData";
+		constexpr static rivet::rivet_type_id type_id = 0x1a41da5e;
 
-		constexpr const static std::string_view MinPixelizedSize_type_name = "MinPixelizedSize";
-		constexpr const static rivet::rivet_type_id MinPixelizedSize_type_id = 0x5e3ab76d;
-		constexpr const static std::string_view DamageStates_type_name = "DamageStates";
-		constexpr const static rivet::rivet_type_id DamageStates_type_id = 0xe958e37f;
-		constexpr const static std::string_view ChunkableLooks_type_name = "ChunkableLooks";
-		constexpr const static rivet::rivet_type_id ChunkableLooks_type_id = 0x8fd2594c;
-		constexpr const static std::string_view GenericChunks_type_name = "GenericChunks";
-		constexpr const static rivet::rivet_type_id GenericChunks_type_id = 0x1c9c7798;
-		constexpr const static std::string_view SwappableLooks_type_name = "SwappableLooks";
-		constexpr const static rivet::rivet_type_id SwappableLooks_type_id = 0x56c7559e;
-		constexpr const static std::string_view Conduit_type_name = "Conduit";
-		constexpr const static rivet::rivet_type_id Conduit_type_id = 0xfc5131b9;
-		constexpr const static std::string_view AudioConduit_type_name = "AudioConduit";
-		constexpr const static rivet::rivet_type_id AudioConduit_type_id = 0xab4b5b8;
-		constexpr const static std::string_view DestroyOnDeathChunkSpawn_type_name = "DestroyOnDeathChunkSpawn";
-		constexpr const static rivet::rivet_type_id DestroyOnDeathChunkSpawn_type_id = 0x6ff4d60; 
+		constexpr static std::string_view MinPixelizedSize_type_name = "MinPixelizedSize";
+		constexpr static rivet::rivet_type_id MinPixelizedSize_type_id = 0x5e3ab76d;
+		constexpr static std::string_view DamageStates_type_name = "DamageStates";
+		constexpr static rivet::rivet_type_id DamageStates_type_id = 0xe958e37f;
+		constexpr static std::string_view ChunkableLooks_type_name = "ChunkableLooks";
+		constexpr static rivet::rivet_type_id ChunkableLooks_type_id = 0x8fd2594c;
+		constexpr static std::string_view GenericChunks_type_name = "GenericChunks";
+		constexpr static rivet::rivet_type_id GenericChunks_type_id = 0x1c9c7798;
+		constexpr static std::string_view SwappableLooks_type_name = "SwappableLooks";
+		constexpr static rivet::rivet_type_id SwappableLooks_type_id = 0x56c7559e;
+		constexpr static std::string_view Conduit_type_name = "Conduit";
+		constexpr static rivet::rivet_type_id Conduit_type_id = 0xfc5131b9;
+		constexpr static std::string_view AudioConduit_type_name = "AudioConduit";
+		constexpr static rivet::rivet_type_id AudioConduit_type_id = 0xab4b5b8;
+		constexpr static std::string_view DestroyOnDeathChunkSpawn_type_name = "DestroyOnDeathChunkSpawn";
+		constexpr static rivet::rivet_type_id DestroyOnDeathChunkSpawn_type_id = 0x6ff4d60; 
 
 		explicit DamageStateData() = default;
 		explicit DamageStateData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

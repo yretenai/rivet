@@ -3,9 +3,9 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/TriggerEffectDataVibration.hpp>
+#include <rivet/ddl/generated/TriggerEffectDataFeedbackRange.hpp>
 #include <rivet/ddl/generated/TriggerEffectDataFeedback.hpp>
-#include <rivet/ddl/generated/TriggerEffectDataFeedbackRange.hpp> 
+#include <rivet/ddl/generated/TriggerEffectDataVibration.hpp> 
 
 #include <rivet/ddl/generated/TriggerEffectDataBase.hpp>
 

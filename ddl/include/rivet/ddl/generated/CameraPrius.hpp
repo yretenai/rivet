@@ -19,17 +19,17 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED CameraPrius : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "CameraPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xb95750d7;
+		constexpr static std::string_view type_name = "CameraPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xb95750d7;
 
-		constexpr const static std::string_view HorizontalFOV_type_name = "HorizontalFOV";
-		constexpr const static rivet::rivet_type_id HorizontalFOV_type_id = 0xc6a759d9;
-		constexpr const static std::string_view NearClip_type_name = "NearClip";
-		constexpr const static rivet::rivet_type_id NearClip_type_id = 0xef20b8c7;
-		constexpr const static std::string_view FarClip_type_name = "FarClip";
-		constexpr const static rivet::rivet_type_id FarClip_type_id = 0x180cce8c;
-		constexpr const static std::string_view HorizontalLength_type_name = "HorizontalLength";
-		constexpr const static rivet::rivet_type_id HorizontalLength_type_id = 0xfb44929f; 
+		constexpr static std::string_view HorizontalFOV_type_name = "HorizontalFOV";
+		constexpr static rivet::rivet_type_id HorizontalFOV_type_id = 0xc6a759d9;
+		constexpr static std::string_view NearClip_type_name = "NearClip";
+		constexpr static rivet::rivet_type_id NearClip_type_id = 0xef20b8c7;
+		constexpr static std::string_view FarClip_type_name = "FarClip";
+		constexpr static rivet::rivet_type_id FarClip_type_id = 0x180cce8c;
+		constexpr static std::string_view HorizontalLength_type_name = "HorizontalLength";
+		constexpr static rivet::rivet_type_id HorizontalLength_type_id = 0xfb44929f; 
 
 		explicit CameraPrius() = default;
 		explicit CameraPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

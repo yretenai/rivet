@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED HoudiniConfigDataString : HoudiniConfigData {
-		constexpr const static std::string_view type_name = "HoudiniConfigDataString";
-		constexpr const static rivet::rivet_type_id type_id = 0x8efadc33;
+		constexpr static std::string_view type_name = "HoudiniConfigDataString";
+		constexpr static rivet::rivet_type_id type_id = 0x8efadc33;
 
 		explicit HoudiniConfigDataString() = default;
 		explicit HoudiniConfigDataString([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view AwarenessLos_type_name = "AwarenessLos";
-	constexpr const static rivet::rivet_type_id AwarenessLos_type_id = 0xb26fac4c;
+	constexpr static std::string_view AwarenessLos_type_name = "AwarenessLos";
+	constexpr static rivet::rivet_type_id AwarenessLos_type_id = 0xb26fac4c;
 
-	constexpr const static std::array<std::string_view, 3> AwarenessLos_values = {
+	constexpr static std::array<std::string_view, 3> AwarenessLos_values = {
 		"kNone",
 		"kBestTarget",
 		"kAllTargets", 

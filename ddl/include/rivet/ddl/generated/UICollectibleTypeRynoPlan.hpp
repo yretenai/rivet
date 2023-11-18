@@ -17,20 +17,20 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/UICollectibleTypeBase.hpp>
-#include <rivet/ddl/generated/enums/x81d3e717.hpp> 
+#include <rivet/ddl/generated/enums/x81d3e717.hpp>
+#include <rivet/ddl/generated/UICollectibleTypeBase.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED UICollectibleTypeRynoPlan : UICollectibleTypeBase {
-		constexpr const static std::string_view type_name = "UICollectibleTypeRynoPlan";
-		constexpr const static rivet::rivet_type_id type_id = 0x6a244fa4;
+		constexpr static std::string_view type_name = "UICollectibleTypeRynoPlan";
+		constexpr static rivet::rivet_type_id type_id = 0x6a244fa4;
 
-		constexpr const static std::string_view SaveID_type_name = "SaveID";
-		constexpr const static rivet::rivet_type_id SaveID_type_id = 0xf61c4918;
-		constexpr const static std::string_view DialogueLine_type_name = "DialogueLine";
-		constexpr const static rivet::rivet_type_id DialogueLine_type_id = 0x21617c3c;
-		constexpr const static std::string_view RYNOSchematic_type_name = "RYNOSchematic";
-		constexpr const static rivet::rivet_type_id RYNOSchematic_type_id = 0x8467261b; 
+		constexpr static std::string_view SaveID_type_name = "SaveID";
+		constexpr static rivet::rivet_type_id SaveID_type_id = 0xf61c4918;
+		constexpr static std::string_view DialogueLine_type_name = "DialogueLine";
+		constexpr static rivet::rivet_type_id DialogueLine_type_id = 0x21617c3c;
+		constexpr static std::string_view RYNOSchematic_type_name = "RYNOSchematic";
+		constexpr static rivet::rivet_type_id RYNOSchematic_type_id = 0x8467261b; 
 
 		explicit UICollectibleTypeRynoPlan() = default;
 		explicit UICollectibleTypeRynoPlan([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

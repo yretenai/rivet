@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED FinaleMechStatusEffectShrubberyPrius : StatusEffectShrubberyPrius {
-		constexpr const static std::string_view type_name = "FinaleMechStatusEffectShrubberyPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xce723832;
+		constexpr static std::string_view type_name = "FinaleMechStatusEffectShrubberyPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xce723832;
 
 		explicit FinaleMechStatusEffectShrubberyPrius() = default;
 		explicit FinaleMechStatusEffectShrubberyPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

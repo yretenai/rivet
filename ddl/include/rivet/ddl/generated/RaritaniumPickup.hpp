@@ -19,13 +19,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED RaritaniumPickup : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "RaritaniumPickup";
-		constexpr const static rivet::rivet_type_id type_id = 0xfc0ec04c;
+		constexpr static std::string_view type_name = "RaritaniumPickup";
+		constexpr static rivet::rivet_type_id type_id = 0xfc0ec04c;
 
-		constexpr const static std::string_view Actor_type_name = "Actor";
-		constexpr const static rivet::rivet_type_id Actor_type_id = 0x5d269a38;
-		constexpr const static std::string_view Chance_type_name = "Chance";
-		constexpr const static rivet::rivet_type_id Chance_type_id = 0x1a437543; 
+		constexpr static std::string_view Actor_type_name = "Actor";
+		constexpr static rivet::rivet_type_id Actor_type_id = 0x5d269a38;
+		constexpr static std::string_view Chance_type_name = "Chance";
+		constexpr static rivet::rivet_type_id Chance_type_id = 0x1a437543; 
 
 		explicit RaritaniumPickup() = default;
 		explicit RaritaniumPickup([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

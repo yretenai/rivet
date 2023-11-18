@@ -3,8 +3,8 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/DamagePrimContainer.hpp>
-#include <rivet/ddl/generated/CustomDamageContainer.hpp> 
+#include <rivet/ddl/generated/CustomDamageContainer.hpp>
+#include <rivet/ddl/generated/DamagePrimContainer.hpp> 
 
 #include <rivet/ddl/generated/AnimDamageAttackStyleMultiPrim.hpp>
 

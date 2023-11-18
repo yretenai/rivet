@@ -19,15 +19,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED HoverbootHoverEffectData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "HoverbootHoverEffectData";
-		constexpr const static rivet::rivet_type_id type_id = 0xf7ba80d;
+		constexpr static std::string_view type_name = "HoverbootHoverEffectData";
+		constexpr static rivet::rivet_type_id type_id = 0xf7ba80d;
 
-		constexpr const static std::string_view EffectActor_type_name = "EffectActor";
-		constexpr const static rivet::rivet_type_id EffectActor_type_id = 0xc5286fc4;
-		constexpr const static std::string_view HeightAboveGroundMax_type_name = "HeightAboveGroundMax";
-		constexpr const static rivet::rivet_type_id HeightAboveGroundMax_type_id = 0x36763b4f;
-		constexpr const static std::string_view FastSpeedThreshold_type_name = "FastSpeedThreshold";
-		constexpr const static rivet::rivet_type_id FastSpeedThreshold_type_id = 0x874f9bed; 
+		constexpr static std::string_view EffectActor_type_name = "EffectActor";
+		constexpr static rivet::rivet_type_id EffectActor_type_id = 0xc5286fc4;
+		constexpr static std::string_view HeightAboveGroundMax_type_name = "HeightAboveGroundMax";
+		constexpr static rivet::rivet_type_id HeightAboveGroundMax_type_id = 0x36763b4f;
+		constexpr static std::string_view FastSpeedThreshold_type_name = "FastSpeedThreshold";
+		constexpr static rivet::rivet_type_id FastSpeedThreshold_type_id = 0x874f9bed; 
 
 		explicit HoverbootHoverEffectData() = default;
 		explicit HoverbootHoverEffectData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

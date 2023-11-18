@@ -19,29 +19,29 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED StatusEffectBasePrius : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "StatusEffectBasePrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xfb28bffa;
+		constexpr static std::string_view type_name = "StatusEffectBasePrius";
+		constexpr static rivet::rivet_type_id type_id = 0xfb28bffa;
 
-		constexpr const static std::string_view DecayTime_type_name = "DecayTime";
-		constexpr const static rivet::rivet_type_id DecayTime_type_id = 0x9ea6158b;
-		constexpr const static std::string_view SourceComponent_type_name = "SourceComponent";
-		constexpr const static rivet::rivet_type_id SourceComponent_type_id = 0xa50480cb;
-		constexpr const static std::string_view SourceActor_type_name = "SourceActor";
-		constexpr const static rivet::rivet_type_id SourceActor_type_id = 0x54c7dd3e;
-		constexpr const static std::string_view SourceDamageHash_type_name = "SourceDamageHash";
-		constexpr const static rivet::rivet_type_id SourceDamageHash_type_id = 0x290bb426;
-		constexpr const static std::string_view SourceWeaponId_type_name = "SourceWeaponId";
-		constexpr const static rivet::rivet_type_id SourceWeaponId_type_id = 0xfc928207;
-		constexpr const static std::string_view SourceWeaponMacroType_type_name = "SourceWeaponMacroType";
-		constexpr const static rivet::rivet_type_id SourceWeaponMacroType_type_id = 0xedb347f;
-		constexpr const static std::string_view Shader_type_name = "Shader";
-		constexpr const static rivet::rivet_type_id Shader_type_id = 0xc18bd04f;
-		constexpr const static std::string_view ShaderTValRampUpTime_type_name = "ShaderTValRampUpTime";
-		constexpr const static rivet::rivet_type_id ShaderTValRampUpTime_type_id = 0xab42d6b2;
-		constexpr const static std::string_view ShaderTValRampDownTime_type_name = "ShaderTValRampDownTime";
-		constexpr const static rivet::rivet_type_id ShaderTValRampDownTime_type_id = 0xc26ea8f1;
-		constexpr const static std::string_view ShaderTValRampDownEndTime_type_name = "ShaderTValRampDownEndTime";
-		constexpr const static rivet::rivet_type_id ShaderTValRampDownEndTime_type_id = 0x4b74497e; 
+		constexpr static std::string_view DecayTime_type_name = "DecayTime";
+		constexpr static rivet::rivet_type_id DecayTime_type_id = 0x9ea6158b;
+		constexpr static std::string_view SourceComponent_type_name = "SourceComponent";
+		constexpr static rivet::rivet_type_id SourceComponent_type_id = 0xa50480cb;
+		constexpr static std::string_view SourceActor_type_name = "SourceActor";
+		constexpr static rivet::rivet_type_id SourceActor_type_id = 0x54c7dd3e;
+		constexpr static std::string_view SourceDamageHash_type_name = "SourceDamageHash";
+		constexpr static rivet::rivet_type_id SourceDamageHash_type_id = 0x290bb426;
+		constexpr static std::string_view SourceWeaponId_type_name = "SourceWeaponId";
+		constexpr static rivet::rivet_type_id SourceWeaponId_type_id = 0xfc928207;
+		constexpr static std::string_view SourceWeaponMacroType_type_name = "SourceWeaponMacroType";
+		constexpr static rivet::rivet_type_id SourceWeaponMacroType_type_id = 0xedb347f;
+		constexpr static std::string_view Shader_type_name = "Shader";
+		constexpr static rivet::rivet_type_id Shader_type_id = 0xc18bd04f;
+		constexpr static std::string_view ShaderTValRampUpTime_type_name = "ShaderTValRampUpTime";
+		constexpr static rivet::rivet_type_id ShaderTValRampUpTime_type_id = 0xab42d6b2;
+		constexpr static std::string_view ShaderTValRampDownTime_type_name = "ShaderTValRampDownTime";
+		constexpr static rivet::rivet_type_id ShaderTValRampDownTime_type_id = 0xc26ea8f1;
+		constexpr static std::string_view ShaderTValRampDownEndTime_type_name = "ShaderTValRampDownEndTime";
+		constexpr static rivet::rivet_type_id ShaderTValRampDownEndTime_type_id = 0x4b74497e; 
 
 		explicit StatusEffectBasePrius() = default;
 		explicit StatusEffectBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

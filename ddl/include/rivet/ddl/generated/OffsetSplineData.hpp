@@ -19,17 +19,17 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED OffsetSplineData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "OffsetSplineData";
-		constexpr const static rivet::rivet_type_id type_id = 0x83b4728f;
+		constexpr static std::string_view type_name = "OffsetSplineData";
+		constexpr static rivet::rivet_type_id type_id = 0x83b4728f;
 
-		constexpr const static std::string_view OffsetSpline_type_name = "OffsetSpline";
-		constexpr const static rivet::rivet_type_id OffsetSpline_type_id = 0x4c9f7151;
-		constexpr const static std::string_view OffsetAccel_type_name = "OffsetAccel";
-		constexpr const static rivet::rivet_type_id OffsetAccel_type_id = 0xe70a5aca;
-		constexpr const static std::string_view OffsetDecel_type_name = "OffsetDecel";
-		constexpr const static rivet::rivet_type_id OffsetDecel_type_id = 0xa818a66;
-		constexpr const static std::string_view OffsetSpeed_type_name = "OffsetSpeed";
-		constexpr const static rivet::rivet_type_id OffsetSpeed_type_id = 0xb5d092d9; 
+		constexpr static std::string_view OffsetSpline_type_name = "OffsetSpline";
+		constexpr static rivet::rivet_type_id OffsetSpline_type_id = 0x4c9f7151;
+		constexpr static std::string_view OffsetAccel_type_name = "OffsetAccel";
+		constexpr static rivet::rivet_type_id OffsetAccel_type_id = 0xe70a5aca;
+		constexpr static std::string_view OffsetDecel_type_name = "OffsetDecel";
+		constexpr static rivet::rivet_type_id OffsetDecel_type_id = 0xa818a66;
+		constexpr static std::string_view OffsetSpeed_type_name = "OffsetSpeed";
+		constexpr static rivet::rivet_type_id OffsetSpeed_type_id = 0xb5d092d9; 
 
 		explicit OffsetSplineData() = default;
 		explicit OffsetSplineData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

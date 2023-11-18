@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED StatusEmitterSelfPrius : StatusEmitterBasePrius {
-		constexpr const static std::string_view type_name = "StatusEmitterSelfPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x88b2c3df;
+		constexpr static std::string_view type_name = "StatusEmitterSelfPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x88b2c3df;
 
 		explicit StatusEmitterSelfPrius() = default;
 		explicit StatusEmitterSelfPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -19,29 +19,29 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED AimAssistDistanceModifier : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "AimAssistDistanceModifier";
-		constexpr const static rivet::rivet_type_id type_id = 0xbc6167b5;
+		constexpr static std::string_view type_name = "AimAssistDistanceModifier";
+		constexpr static rivet::rivet_type_id type_id = 0xbc6167b5;
 
-		constexpr const static std::string_view Enable_type_name = "Enable";
-		constexpr const static rivet::rivet_type_id Enable_type_id = 0xcdd88655;
-		constexpr const static std::string_view FrictionDistanceNear_type_name = "FrictionDistanceNear";
-		constexpr const static rivet::rivet_type_id FrictionDistanceNear_type_id = 0xe66f6da4;
-		constexpr const static std::string_view FrictionDistanceFar_type_name = "FrictionDistanceFar";
-		constexpr const static rivet::rivet_type_id FrictionDistanceFar_type_id = 0xe2f0705f;
-		constexpr const static std::string_view FrictionMod_type_name = "FrictionMod";
-		constexpr const static rivet::rivet_type_id FrictionMod_type_id = 0x259d7ff2;
-		constexpr const static std::string_view MagnetDistanceNear_type_name = "MagnetDistanceNear";
-		constexpr const static rivet::rivet_type_id MagnetDistanceNear_type_id = 0x793fd2b3;
-		constexpr const static std::string_view MagnetDistanceFar_type_name = "MagnetDistanceFar";
-		constexpr const static rivet::rivet_type_id MagnetDistanceFar_type_id = 0xdabc219;
-		constexpr const static std::string_view MagnetMod_type_name = "MagnetMod";
-		constexpr const static rivet::rivet_type_id MagnetMod_type_id = 0xcc015279;
-		constexpr const static std::string_view CenterDistanceNear_type_name = "CenterDistanceNear";
-		constexpr const static rivet::rivet_type_id CenterDistanceNear_type_id = 0x4de9d4af;
-		constexpr const static std::string_view CenterDistanceFar_type_name = "CenterDistanceFar";
-		constexpr const static rivet::rivet_type_id CenterDistanceFar_type_id = 0xb5742270;
-		constexpr const static std::string_view CenterMod_type_name = "CenterMod";
-		constexpr const static rivet::rivet_type_id CenterMod_type_id = 0x9237bce3; 
+		constexpr static std::string_view Enable_type_name = "Enable";
+		constexpr static rivet::rivet_type_id Enable_type_id = 0xcdd88655;
+		constexpr static std::string_view FrictionDistanceNear_type_name = "FrictionDistanceNear";
+		constexpr static rivet::rivet_type_id FrictionDistanceNear_type_id = 0xe66f6da4;
+		constexpr static std::string_view FrictionDistanceFar_type_name = "FrictionDistanceFar";
+		constexpr static rivet::rivet_type_id FrictionDistanceFar_type_id = 0xe2f0705f;
+		constexpr static std::string_view FrictionMod_type_name = "FrictionMod";
+		constexpr static rivet::rivet_type_id FrictionMod_type_id = 0x259d7ff2;
+		constexpr static std::string_view MagnetDistanceNear_type_name = "MagnetDistanceNear";
+		constexpr static rivet::rivet_type_id MagnetDistanceNear_type_id = 0x793fd2b3;
+		constexpr static std::string_view MagnetDistanceFar_type_name = "MagnetDistanceFar";
+		constexpr static rivet::rivet_type_id MagnetDistanceFar_type_id = 0xdabc219;
+		constexpr static std::string_view MagnetMod_type_name = "MagnetMod";
+		constexpr static rivet::rivet_type_id MagnetMod_type_id = 0xcc015279;
+		constexpr static std::string_view CenterDistanceNear_type_name = "CenterDistanceNear";
+		constexpr static rivet::rivet_type_id CenterDistanceNear_type_id = 0x4de9d4af;
+		constexpr static std::string_view CenterDistanceFar_type_name = "CenterDistanceFar";
+		constexpr static rivet::rivet_type_id CenterDistanceFar_type_id = 0xb5742270;
+		constexpr static std::string_view CenterMod_type_name = "CenterMod";
+		constexpr static rivet::rivet_type_id CenterMod_type_id = 0x9237bce3; 
 
 		explicit AimAssistDistanceModifier() = default;
 		explicit AimAssistDistanceModifier([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

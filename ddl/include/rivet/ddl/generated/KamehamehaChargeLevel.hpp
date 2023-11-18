@@ -19,15 +19,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED KamehamehaChargeLevel : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "KamehamehaChargeLevel";
-		constexpr const static rivet::rivet_type_id type_id = 0x56d4d5;
+		constexpr static std::string_view type_name = "KamehamehaChargeLevel";
+		constexpr static rivet::rivet_type_id type_id = 0x56d4d5;
 
-		constexpr const static std::string_view ChargeDuration_type_name = "ChargeDuration";
-		constexpr const static rivet::rivet_type_id ChargeDuration_type_id = 0xdd206ea;
-		constexpr const static std::string_view BeamDuration_type_name = "BeamDuration";
-		constexpr const static rivet::rivet_type_id BeamDuration_type_id = 0xd4b30240;
-		constexpr const static std::string_view BeamRadius_type_name = "BeamRadius";
-		constexpr const static rivet::rivet_type_id BeamRadius_type_id = 0x80686126; 
+		constexpr static std::string_view ChargeDuration_type_name = "ChargeDuration";
+		constexpr static rivet::rivet_type_id ChargeDuration_type_id = 0xdd206ea;
+		constexpr static std::string_view BeamDuration_type_name = "BeamDuration";
+		constexpr static rivet::rivet_type_id BeamDuration_type_id = 0xd4b30240;
+		constexpr static std::string_view BeamRadius_type_name = "BeamRadius";
+		constexpr static rivet::rivet_type_id BeamRadius_type_id = 0x80686126; 
 
 		explicit KamehamehaChargeLevel() = default;
 		explicit KamehamehaChargeLevel([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

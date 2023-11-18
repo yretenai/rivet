@@ -18,27 +18,27 @@
 #include <rivet/structures/rivet_serialization.hpp>
 
 namespace rivet::ddl::generated {
-	struct AssetReferenceDef;
-	struct MacroLoadpointListItem; 
+	struct MacroLoadpointListItem;
+	struct AssetReferenceDef; 
 
 	struct RIVET_DDL_SHARED MacroLevelData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "MacroLevelData";
-		constexpr const static rivet::rivet_type_id type_id = 0xb5a442c4;
+		constexpr static std::string_view type_name = "MacroLevelData";
+		constexpr static rivet::rivet_type_id type_id = 0xb5a442c4;
 
-		constexpr const static std::string_view LevelZone_type_name = "LevelZone";
-		constexpr const static rivet::rivet_type_id LevelZone_type_id = 0xec76065c;
-		constexpr const static std::string_view LevelAreaConfig_type_name = "LevelAreaConfig";
-		constexpr const static rivet::rivet_type_id LevelAreaConfig_type_id = 0x53a0873d;
-		constexpr const static std::string_view LevelNameLocTag_type_name = "LevelNameLocTag";
-		constexpr const static rivet::rivet_type_id LevelNameLocTag_type_id = 0xfc464c5c;
-		constexpr const static std::string_view LevelDescLocTag_type_name = "LevelDescLocTag";
-		constexpr const static rivet::rivet_type_id LevelDescLocTag_type_id = 0xbc699bba;
-		constexpr const static std::string_view LevelNumber_type_name = "LevelNumber";
-		constexpr const static rivet::rivet_type_id LevelNumber_type_id = 0xfc01a22c;
-		constexpr const static std::string_view LevelInstallGroup_type_name = "LevelInstallGroup";
-		constexpr const static rivet::rivet_type_id LevelInstallGroup_type_id = 0xc7a77e5e;
-		constexpr const static std::string_view Loadpoints_type_name = "Loadpoints";
-		constexpr const static rivet::rivet_type_id Loadpoints_type_id = 0x857d7b9d; 
+		constexpr static std::string_view LevelZone_type_name = "LevelZone";
+		constexpr static rivet::rivet_type_id LevelZone_type_id = 0xec76065c;
+		constexpr static std::string_view LevelAreaConfig_type_name = "LevelAreaConfig";
+		constexpr static rivet::rivet_type_id LevelAreaConfig_type_id = 0x53a0873d;
+		constexpr static std::string_view LevelNameLocTag_type_name = "LevelNameLocTag";
+		constexpr static rivet::rivet_type_id LevelNameLocTag_type_id = 0xfc464c5c;
+		constexpr static std::string_view LevelDescLocTag_type_name = "LevelDescLocTag";
+		constexpr static rivet::rivet_type_id LevelDescLocTag_type_id = 0xbc699bba;
+		constexpr static std::string_view LevelNumber_type_name = "LevelNumber";
+		constexpr static rivet::rivet_type_id LevelNumber_type_id = 0xfc01a22c;
+		constexpr static std::string_view LevelInstallGroup_type_name = "LevelInstallGroup";
+		constexpr static rivet::rivet_type_id LevelInstallGroup_type_id = 0xc7a77e5e;
+		constexpr static std::string_view Loadpoints_type_name = "Loadpoints";
+		constexpr static rivet::rivet_type_id Loadpoints_type_id = 0x857d7b9d; 
 
 		explicit MacroLevelData() = default;
 		explicit MacroLevelData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

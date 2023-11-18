@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ObstructionShapeCylinder : NavMeshObstructionShapeBase {
-		constexpr const static std::string_view type_name = "ObstructionShapeCylinder";
-		constexpr const static rivet::rivet_type_id type_id = 0x6aeaa3da;
+		constexpr static std::string_view type_name = "ObstructionShapeCylinder";
+		constexpr static rivet::rivet_type_id type_id = 0x6aeaa3da;
 
-		constexpr const static std::string_view Height_type_name = "Height";
-		constexpr const static rivet::rivet_type_id Height_type_id = 0xcb35ab68;
-		constexpr const static std::string_view Radius_type_name = "Radius";
-		constexpr const static rivet::rivet_type_id Radius_type_id = 0x504203d; 
+		constexpr static std::string_view Height_type_name = "Height";
+		constexpr static rivet::rivet_type_id Height_type_id = 0xcb35ab68;
+		constexpr static std::string_view Radius_type_name = "Radius";
+		constexpr static rivet::rivet_type_id Radius_type_id = 0x504203d; 
 
 		explicit ObstructionShapeCylinder() = default;
 		explicit ObstructionShapeCylinder([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

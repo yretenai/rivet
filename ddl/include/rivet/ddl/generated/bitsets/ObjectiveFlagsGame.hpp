@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view ObjectiveFlagsGame_type_name = "ObjectiveFlagsGame";
-	constexpr const static rivet::rivet_type_id ObjectiveFlagsGame_type_id = 0xddf1d6d4;
+	constexpr static std::string_view ObjectiveFlagsGame_type_name = "ObjectiveFlagsGame";
+	constexpr static rivet::rivet_type_id ObjectiveFlagsGame_type_id = 0xddf1d6d4;
 
-	constexpr const static std::array<std::tuple<std::string_view, uint64_t>, 1> ObjectiveFlagsGame_values = {
+	constexpr static std::array<std::tuple<std::string_view, uint64_t>, 1> ObjectiveFlagsGame_values = {
 		std::make_tuple("kSkipped", 0x1), 
 	};
 

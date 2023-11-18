@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view TemporalAAStyle_type_name = "TemporalAAStyle";
-	constexpr const static rivet::rivet_type_id TemporalAAStyle_type_id = 0xd219660a;
+	constexpr static std::string_view TemporalAAStyle_type_name = "TemporalAAStyle";
+	constexpr static rivet::rivet_type_id TemporalAAStyle_type_id = 0xd219660a;
 
-	constexpr const static std::array<std::string_view, 3> TemporalAAStyle_values = {
+	constexpr static std::array<std::string_view, 3> TemporalAAStyle_values = {
 		"kInheritMaterial",
 		"kNonResponsive",
 		"kResponsive", 

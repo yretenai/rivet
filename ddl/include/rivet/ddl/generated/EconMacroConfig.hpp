@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct MacroEcon; 
 
 	struct RIVET_DDL_SHARED EconMacroConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "EconMacroConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xaa59542;
+		constexpr static std::string_view type_name = "EconMacroConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xaa59542;
 
-		constexpr const static std::string_view Econ_type_name = "Econ";
-		constexpr const static rivet::rivet_type_id Econ_type_id = 0x1fd256d3; 
+		constexpr static std::string_view Econ_type_name = "Econ";
+		constexpr static rivet::rivet_type_id Econ_type_id = 0x1fd256d3; 
 
 		explicit EconMacroConfig() = default;
 		explicit EconMacroConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -21,15 +21,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED UIOptionTypeSettingSlider : UIOptionTypeSettingBase {
-		constexpr const static std::string_view type_name = "UIOptionTypeSettingSlider";
-		constexpr const static rivet::rivet_type_id type_id = 0xbb79dbda;
+		constexpr static std::string_view type_name = "UIOptionTypeSettingSlider";
+		constexpr static rivet::rivet_type_id type_id = 0xbb79dbda;
 
-		constexpr const static std::string_view SliderMinimum_type_name = "SliderMinimum";
-		constexpr const static rivet::rivet_type_id SliderMinimum_type_id = 0x5a3038ce;
-		constexpr const static std::string_view SliderFidelity_type_name = "SliderFidelity";
-		constexpr const static rivet::rivet_type_id SliderFidelity_type_id = 0x5ade504f;
-		constexpr const static std::string_view GamePreview_type_name = "GamePreview";
-		constexpr const static rivet::rivet_type_id GamePreview_type_id = 0x7fe20d3c; 
+		constexpr static std::string_view SliderMinimum_type_name = "SliderMinimum";
+		constexpr static rivet::rivet_type_id SliderMinimum_type_id = 0x5a3038ce;
+		constexpr static std::string_view SliderFidelity_type_name = "SliderFidelity";
+		constexpr static rivet::rivet_type_id SliderFidelity_type_id = 0x5ade504f;
+		constexpr static std::string_view GamePreview_type_name = "GamePreview";
+		constexpr static rivet::rivet_type_id GamePreview_type_id = 0x7fe20d3c; 
 
 		explicit UIOptionTypeSettingSlider() = default;
 		explicit UIOptionTypeSettingSlider([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

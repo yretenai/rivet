@@ -18,26 +18,26 @@
 #include <rivet/structures/rivet_serialization.hpp>
 
 namespace rivet::ddl::generated {
-	struct FocusJointChainDef;
-	struct FocusTrackingNamedPosition;
+	struct FocusTrackingNamedSolver;
 	struct FocusTrackingInstData;
+	struct FocusTrackingNamedPosition;
 	struct FocusTrackingSolverData;
-	struct FocusTrackingNamedSolver; 
+	struct FocusJointChainDef; 
 
 	struct RIVET_DDL_SHARED FocusTrackingManagerData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "FocusTrackingManagerData";
-		constexpr const static rivet::rivet_type_id type_id = 0x6fa4fdd7;
+		constexpr static std::string_view type_name = "FocusTrackingManagerData";
+		constexpr static rivet::rivet_type_id type_id = 0x6fa4fdd7;
 
-		constexpr const static std::string_view JointChains_type_name = "JointChains";
-		constexpr const static rivet::rivet_type_id JointChains_type_id = 0x8f2a4210;
-		constexpr const static std::string_view NamedFocusPositions_type_name = "NamedFocusPositions";
-		constexpr const static rivet::rivet_type_id NamedFocusPositions_type_id = 0xbf44fea1;
-		constexpr const static std::string_view DefaultTracking_type_name = "DefaultTracking";
-		constexpr const static rivet::rivet_type_id DefaultTracking_type_id = 0xd42c60ff;
-		constexpr const static std::string_view DefaultSolverDefinitions_type_name = "DefaultSolverDefinitions";
-		constexpr const static rivet::rivet_type_id DefaultSolverDefinitions_type_id = 0x176fd2c;
-		constexpr const static std::string_view NamedSolverDefinitions_type_name = "NamedSolverDefinitions";
-		constexpr const static rivet::rivet_type_id NamedSolverDefinitions_type_id = 0xc833cc6b; 
+		constexpr static std::string_view JointChains_type_name = "JointChains";
+		constexpr static rivet::rivet_type_id JointChains_type_id = 0x8f2a4210;
+		constexpr static std::string_view NamedFocusPositions_type_name = "NamedFocusPositions";
+		constexpr static rivet::rivet_type_id NamedFocusPositions_type_id = 0xbf44fea1;
+		constexpr static std::string_view DefaultTracking_type_name = "DefaultTracking";
+		constexpr static rivet::rivet_type_id DefaultTracking_type_id = 0xd42c60ff;
+		constexpr static std::string_view DefaultSolverDefinitions_type_name = "DefaultSolverDefinitions";
+		constexpr static rivet::rivet_type_id DefaultSolverDefinitions_type_id = 0x176fd2c;
+		constexpr static std::string_view NamedSolverDefinitions_type_name = "NamedSolverDefinitions";
+		constexpr static rivet::rivet_type_id NamedSolverDefinitions_type_id = 0xc833cc6b; 
 
 		explicit FocusTrackingManagerData() = default;
 		explicit FocusTrackingManagerData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

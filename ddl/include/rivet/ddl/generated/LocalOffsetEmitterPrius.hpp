@@ -23,13 +23,13 @@ namespace rivet::ddl::generated {
 	struct DDLVector3; 
 
 	struct RIVET_DDL_SHARED LocalOffsetEmitterPrius : WeaponEmitterBasePrius {
-		constexpr const static std::string_view type_name = "LocalOffsetEmitterPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xb9099797;
+		constexpr static std::string_view type_name = "LocalOffsetEmitterPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xb9099797;
 
-		constexpr const static std::string_view EmitFromUser_type_name = "EmitFromUser";
-		constexpr const static rivet::rivet_type_id EmitFromUser_type_id = 0x13b721db;
-		constexpr const static std::string_view Offset_type_name = "Offset";
-		constexpr const static rivet::rivet_type_id Offset_type_id = 0x677284b7; 
+		constexpr static std::string_view EmitFromUser_type_name = "EmitFromUser";
+		constexpr static rivet::rivet_type_id EmitFromUser_type_id = 0x13b721db;
+		constexpr static std::string_view Offset_type_name = "Offset";
+		constexpr static rivet::rivet_type_id Offset_type_id = 0x677284b7; 
 
 		explicit LocalOffsetEmitterPrius() = default;
 		explicit LocalOffsetEmitterPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view AllegianceRelation_type_name = "AllegianceRelation";
-	constexpr const static rivet::rivet_type_id AllegianceRelation_type_id = 0xc5336d41;
+	constexpr static std::string_view AllegianceRelation_type_name = "AllegianceRelation";
+	constexpr static rivet::rivet_type_id AllegianceRelation_type_id = 0xc5336d41;
 
-	constexpr const static std::array<std::string_view, 7> AllegianceRelation_values = {
+	constexpr static std::array<std::string_view, 7> AllegianceRelation_values = {
 		"kAny",
 		"kOnly",
 		"kFriends",

@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED AccessibilityOptionTypeShortcut : AccessibilityOptionTypeBase {
-		constexpr const static std::string_view type_name = "AccessibilityOptionTypeShortcut";
-		constexpr const static rivet::rivet_type_id type_id = 0x7812ee88;
+		constexpr static std::string_view type_name = "AccessibilityOptionTypeShortcut";
+		constexpr static rivet::rivet_type_id type_id = 0x7812ee88;
 
 		explicit AccessibilityOptionTypeShortcut() = default;
 		explicit AccessibilityOptionTypeShortcut([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

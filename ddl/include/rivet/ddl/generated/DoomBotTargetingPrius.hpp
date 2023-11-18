@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct MultiTargetPenalty; 
 
 	struct RIVET_DDL_SHARED DoomBotTargetingPrius : TieredAggroTargetingPrius {
-		constexpr const static std::string_view type_name = "DoomBotTargetingPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x968aec5d;
+		constexpr static std::string_view type_name = "DoomBotTargetingPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x968aec5d;
 
-		constexpr const static std::string_view MultiTargetPenalties_type_name = "MultiTargetPenalties";
-		constexpr const static rivet::rivet_type_id MultiTargetPenalties_type_id = 0x6ef99657; 
+		constexpr static std::string_view MultiTargetPenalties_type_name = "MultiTargetPenalties";
+		constexpr static rivet::rivet_type_id MultiTargetPenalties_type_id = 0x6ef99657; 
 
 		explicit DoomBotTargetingPrius() = default;
 		explicit DoomBotTargetingPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

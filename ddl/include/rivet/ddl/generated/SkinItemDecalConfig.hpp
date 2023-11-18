@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct SkinItemDecalListElement; 
 
 	struct RIVET_DDL_SHARED SkinItemDecalConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "SkinItemDecalConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x6b0843e4;
+		constexpr static std::string_view type_name = "SkinItemDecalConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x6b0843e4;
 
-		constexpr const static std::string_view DecalList_type_name = "DecalList";
-		constexpr const static rivet::rivet_type_id DecalList_type_id = 0x1dfa6d24; 
+		constexpr static std::string_view DecalList_type_name = "DecalList";
+		constexpr static rivet::rivet_type_id DecalList_type_id = 0x1dfa6d24; 
 
 		explicit SkinItemDecalConfig() = default;
 		explicit SkinItemDecalConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -3,9 +3,9 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/TierData.hpp>
+#include <rivet/ddl/generated/DoomBotTargetingPrius.hpp>
 #include <rivet/ddl/generated/TieredAggroTargetingGamePrius.hpp>
-#include <rivet/ddl/generated/DoomBotTargetingPrius.hpp> 
+#include <rivet/ddl/generated/TierData.hpp> 
 
 #include <rivet/ddl/generated/TieredAggroTargetingPrius.hpp>
 

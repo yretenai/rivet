@@ -3,10 +3,10 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/HackySeparatorStruct.hpp>
-#include <rivet/ddl/generated/SlopeSlideCameraAimContextConfig.hpp>
 #include <rivet/ddl/generated/GrindCameraAimContextConfig.hpp>
-#include <rivet/ddl/generated/HoverbootCameraAimContextConfig.hpp> 
+#include <rivet/ddl/generated/HoverbootCameraAimContextConfig.hpp>
+#include <rivet/ddl/generated/SlopeSlideCameraAimContextConfig.hpp>
+#include <rivet/ddl/generated/HackySeparatorStruct.hpp> 
 
 #include <rivet/ddl/generated/CameraAimContextVariableFOVConfig.hpp>
 

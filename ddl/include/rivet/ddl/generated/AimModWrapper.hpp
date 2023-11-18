@@ -21,11 +21,11 @@ namespace rivet::ddl::generated {
 	struct AimModifierPrius; 
 
 	struct RIVET_DDL_SHARED AimModWrapper : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "AimModWrapper";
-		constexpr const static rivet::rivet_type_id type_id = 0xec69247e;
+		constexpr static std::string_view type_name = "AimModWrapper";
+		constexpr static rivet::rivet_type_id type_id = 0xec69247e;
 
-		constexpr const static std::string_view AimMod_type_name = "AimMod";
-		constexpr const static rivet::rivet_type_id AimMod_type_id = 0xc184c563; 
+		constexpr static std::string_view AimMod_type_name = "AimMod";
+		constexpr static rivet::rivet_type_id AimMod_type_id = 0xc184c563; 
 
 		explicit AimModWrapper() = default;
 		explicit AimModWrapper([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

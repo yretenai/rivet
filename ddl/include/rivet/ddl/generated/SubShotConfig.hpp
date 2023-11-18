@@ -23,13 +23,13 @@ namespace rivet::ddl::generated {
 	struct ShotBasePrius; 
 
 	struct RIVET_DDL_SHARED SubShotConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "SubShotConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x45f2be71;
+		constexpr static std::string_view type_name = "SubShotConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x45f2be71;
 
-		constexpr const static std::string_view SubShotActor_type_name = "SubShotActor";
-		constexpr const static rivet::rivet_type_id SubShotActor_type_id = 0x57e2bc91;
-		constexpr const static std::string_view SubShotPrius_type_name = "SubShotPrius";
-		constexpr const static rivet::rivet_type_id SubShotPrius_type_id = 0x3113c837; 
+		constexpr static std::string_view SubShotActor_type_name = "SubShotActor";
+		constexpr static rivet::rivet_type_id SubShotActor_type_id = 0x57e2bc91;
+		constexpr static std::string_view SubShotPrius_type_name = "SubShotPrius";
+		constexpr static rivet::rivet_type_id SubShotPrius_type_id = 0x3113c837; 
 
 		explicit SubShotConfig() = default;
 		explicit SubShotConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

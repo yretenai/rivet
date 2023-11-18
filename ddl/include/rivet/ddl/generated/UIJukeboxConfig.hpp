@@ -20,19 +20,19 @@
 #include <rivet/ddl/generated/ConfigBase.hpp> 
 
 namespace rivet::ddl::generated {
-	struct WwiseState;
-	struct UIJukeboxSong; 
+	struct UIJukeboxSong;
+	struct WwiseState; 
 
 	struct RIVET_DDL_SHARED UIJukeboxConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "UIJukeboxConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xb7316e4d;
+		constexpr static std::string_view type_name = "UIJukeboxConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xb7316e4d;
 
-		constexpr const static std::string_view WwiseStateZurkies_type_name = "WwiseStateZurkies";
-		constexpr const static rivet::rivet_type_id WwiseStateZurkies_type_id = 0x7c6fdc58;
-		constexpr const static std::string_view WwiseStateJukebox_type_name = "WwiseStateJukebox";
-		constexpr const static rivet::rivet_type_id WwiseStateJukebox_type_id = 0xf7f61cb5;
-		constexpr const static std::string_view Songs_type_name = "Songs";
-		constexpr const static rivet::rivet_type_id Songs_type_id = 0xa3bf7d5a; 
+		constexpr static std::string_view WwiseStateZurkies_type_name = "WwiseStateZurkies";
+		constexpr static rivet::rivet_type_id WwiseStateZurkies_type_id = 0x7c6fdc58;
+		constexpr static std::string_view WwiseStateJukebox_type_name = "WwiseStateJukebox";
+		constexpr static rivet::rivet_type_id WwiseStateJukebox_type_id = 0xf7f61cb5;
+		constexpr static std::string_view Songs_type_name = "Songs";
+		constexpr static rivet::rivet_type_id Songs_type_id = 0xa3bf7d5a; 
 
 		explicit UIJukeboxConfig() = default;
 		explicit UIJukeboxConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

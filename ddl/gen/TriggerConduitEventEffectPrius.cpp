@@ -3,12 +3,14 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
+#include <rivet/ddl/generated/ScriptedShotGenericEvent.hpp> 
+
 #include <rivet/ddl/generated/TriggerConduitEventEffectPrius.hpp>
 
 namespace rivet::ddl::generated {
 	TriggerConduitEventEffectPrius::TriggerConduitEventEffectPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ScriptedShotEffectBasePrius(serialized) {
 		ActorType = serialized->get_enum<rivet::ddl::generated::x4891b54>(ActorType_type_id, rivet::ddl::generated::x4891b54_values);
-		Event = serialized->get_field(Event_type_id);
+		Event = serialized->unwrap_into<rivet::ddl::generated::ScriptedShotGenericEvent>(Event_type_id);
 		Broadcast = serialized->get_bool(Broadcast_type_id); 
 	}
 

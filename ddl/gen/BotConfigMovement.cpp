@@ -3,13 +3,13 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/MoverConfig.hpp>
-#include <rivet/ddl/generated/MovementConfig.hpp>
-#include <rivet/ddl/generated/CVCShapeConfig.hpp>
+#include <rivet/ddl/generated/NavCapsule.hpp>
+#include <rivet/ddl/generated/SteeringPartnerCurveConfig.hpp>
 #include <rivet/ddl/generated/SteeringConfig.hpp>
 #include <rivet/ddl/generated/GameBotConfigMovement.hpp>
-#include <rivet/ddl/generated/NavCapsule.hpp>
-#include <rivet/ddl/generated/SteeringPartnerCurveConfig.hpp> 
+#include <rivet/ddl/generated/CVCShapeConfig.hpp>
+#include <rivet/ddl/generated/MoverConfig.hpp>
+#include <rivet/ddl/generated/MovementConfig.hpp> 
 
 #include <rivet/ddl/generated/BotConfigMovement.hpp>
 

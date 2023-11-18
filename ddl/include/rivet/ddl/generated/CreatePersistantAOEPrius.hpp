@@ -23,21 +23,21 @@ namespace rivet::ddl::generated {
 	struct ScriptedShotEffectListElement; 
 
 	struct RIVET_DDL_SHARED CreatePersistantAOEPrius : ScriptedShotEffectBasePrius {
-		constexpr const static std::string_view type_name = "CreatePersistantAOEPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x99670ad2;
+		constexpr static std::string_view type_name = "CreatePersistantAOEPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x99670ad2;
 
-		constexpr const static std::string_view RepeatTime_type_name = "RepeatTime";
-		constexpr const static rivet::rivet_type_id RepeatTime_type_id = 0x88322744;
-		constexpr const static std::string_view LifeTime_type_name = "LifeTime";
-		constexpr const static rivet::rivet_type_id LifeTime_type_id = 0x67d422c6;
-		constexpr const static std::string_view UpdateInterval_type_name = "UpdateInterval";
-		constexpr const static rivet::rivet_type_id UpdateInterval_type_id = 0x811184bd;
-		constexpr const static std::string_view Radius_type_name = "Radius";
-		constexpr const static rivet::rivet_type_id Radius_type_id = 0x504203d;
-		constexpr const static std::string_view LOS_type_name = "LOS";
-		constexpr const static rivet::rivet_type_id LOS_type_id = 0x115a911b;
-		constexpr const static std::string_view AOEEffects_type_name = "AOEEffects";
-		constexpr const static rivet::rivet_type_id AOEEffects_type_id = 0x7c158316; 
+		constexpr static std::string_view RepeatTime_type_name = "RepeatTime";
+		constexpr static rivet::rivet_type_id RepeatTime_type_id = 0x88322744;
+		constexpr static std::string_view LifeTime_type_name = "LifeTime";
+		constexpr static rivet::rivet_type_id LifeTime_type_id = 0x67d422c6;
+		constexpr static std::string_view UpdateInterval_type_name = "UpdateInterval";
+		constexpr static rivet::rivet_type_id UpdateInterval_type_id = 0x811184bd;
+		constexpr static std::string_view Radius_type_name = "Radius";
+		constexpr static rivet::rivet_type_id Radius_type_id = 0x504203d;
+		constexpr static std::string_view LOS_type_name = "LOS";
+		constexpr static rivet::rivet_type_id LOS_type_id = 0x115a911b;
+		constexpr static std::string_view AOEEffects_type_name = "AOEEffects";
+		constexpr static rivet::rivet_type_id AOEEffects_type_id = 0x7c158316; 
 
 		explicit CreatePersistantAOEPrius() = default;
 		explicit CreatePersistantAOEPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

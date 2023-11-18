@@ -17,56 +17,56 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/enums/x4f5e74b9.hpp>
-#include <rivet/ddl/generated/enums/x457f748b.hpp> 
+#include <rivet/ddl/generated/enums/x457f748b.hpp>
+#include <rivet/ddl/generated/enums/x4f5e74b9.hpp> 
 
 namespace rivet::ddl::generated {
-	struct BurstSequence;
+	struct AimModWrapper;
 	struct AimingBasePrius;
-	struct AimModWrapper; 
+	struct BurstSequence; 
 
 	struct RIVET_DDL_SHARED FiringBasePrius : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "FiringBasePrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x84462ace;
+		constexpr static std::string_view type_name = "FiringBasePrius";
+		constexpr static rivet::rivet_type_id type_id = 0x84462ace;
 
-		constexpr const static std::string_view BurstSequence_type_name = "BurstSequence";
-		constexpr const static rivet::rivet_type_id BurstSequence_type_id = 0x3ae61082;
-		constexpr const static std::string_view TriggerIndex_type_name = "TriggerIndex";
-		constexpr const static rivet::rivet_type_id TriggerIndex_type_id = 0xee73b5b3;
-		constexpr const static std::string_view MinFiringDot_type_name = "MinFiringDot";
-		constexpr const static rivet::rivet_type_id MinFiringDot_type_id = 0x9e5cb03d;
-		constexpr const static std::string_view ShortRange_type_name = "ShortRange";
-		constexpr const static rivet::rivet_type_id ShortRange_type_id = 0xb49295fa;
-		constexpr const static std::string_view IdealRange_type_name = "IdealRange";
-		constexpr const static rivet::rivet_type_id IdealRange_type_id = 0x4a596da2;
-		constexpr const static std::string_view LongRange_type_name = "LongRange";
-		constexpr const static rivet::rivet_type_id LongRange_type_id = 0x8d74c10f;
-		constexpr const static std::string_view MaxRange_type_name = "MaxRange";
-		constexpr const static rivet::rivet_type_id MaxRange_type_id = 0x8a199dde;
-		constexpr const static std::string_view NeedsLos_type_name = "NeedsLos";
-		constexpr const static rivet::rivet_type_id NeedsLos_type_id = 0x9c24d08e;
-		constexpr const static std::string_view NeedsJob_type_name = "NeedsJob";
-		constexpr const static rivet::rivet_type_id NeedsJob_type_id = 0xf2198cce;
-		constexpr const static std::string_view RankTargetLocs_type_name = "RankTargetLocs";
-		constexpr const static rivet::rivet_type_id RankTargetLocs_type_id = 0xf36caef5;
-		constexpr const static std::string_view AimType_type_name = "AimType";
-		constexpr const static rivet::rivet_type_id AimType_type_id = 0xf2b63172;
-		constexpr const static std::string_view HoldFireForVictimStates_type_name = "HoldFireForVictimStates";
-		constexpr const static rivet::rivet_type_id HoldFireForVictimStates_type_id = 0xfa0f2332;
-		constexpr const static std::string_view AvoidShootingFriends_type_name = "AvoidShootingFriends";
-		constexpr const static rivet::rivet_type_id AvoidShootingFriends_type_id = 0x64355aaf;
-		constexpr const static std::string_view FireAtUnseenTargetsTime_type_name = "FireAtUnseenTargetsTime";
-		constexpr const static rivet::rivet_type_id FireAtUnseenTargetsTime_type_id = 0x58a02877;
-		constexpr const static std::string_view TargetLocation_type_name = "TargetLocation";
-		constexpr const static rivet::rivet_type_id TargetLocation_type_id = 0x4a90422f;
-		constexpr const static std::string_view TargetLocationName_type_name = "TargetLocationName";
-		constexpr const static rivet::rivet_type_id TargetLocationName_type_id = 0xb352ca76;
-		constexpr const static std::string_view Aiming_type_name = "Aiming";
-		constexpr const static rivet::rivet_type_id Aiming_type_id = 0x7ed24ba4;
-		constexpr const static std::string_view AimMods_type_name = "AimMods";
-		constexpr const static rivet::rivet_type_id AimMods_type_id = 0x1d7694a1;
-		constexpr const static std::string_view BotConfigAiming_type_name = "BotConfigAiming";
-		constexpr const static rivet::rivet_type_id BotConfigAiming_type_id = 0x8d73a96b; 
+		constexpr static std::string_view BurstSequence_type_name = "BurstSequence";
+		constexpr static rivet::rivet_type_id BurstSequence_type_id = 0x3ae61082;
+		constexpr static std::string_view TriggerIndex_type_name = "TriggerIndex";
+		constexpr static rivet::rivet_type_id TriggerIndex_type_id = 0xee73b5b3;
+		constexpr static std::string_view MinFiringDot_type_name = "MinFiringDot";
+		constexpr static rivet::rivet_type_id MinFiringDot_type_id = 0x9e5cb03d;
+		constexpr static std::string_view ShortRange_type_name = "ShortRange";
+		constexpr static rivet::rivet_type_id ShortRange_type_id = 0xb49295fa;
+		constexpr static std::string_view IdealRange_type_name = "IdealRange";
+		constexpr static rivet::rivet_type_id IdealRange_type_id = 0x4a596da2;
+		constexpr static std::string_view LongRange_type_name = "LongRange";
+		constexpr static rivet::rivet_type_id LongRange_type_id = 0x8d74c10f;
+		constexpr static std::string_view MaxRange_type_name = "MaxRange";
+		constexpr static rivet::rivet_type_id MaxRange_type_id = 0x8a199dde;
+		constexpr static std::string_view NeedsLos_type_name = "NeedsLos";
+		constexpr static rivet::rivet_type_id NeedsLos_type_id = 0x9c24d08e;
+		constexpr static std::string_view NeedsJob_type_name = "NeedsJob";
+		constexpr static rivet::rivet_type_id NeedsJob_type_id = 0xf2198cce;
+		constexpr static std::string_view RankTargetLocs_type_name = "RankTargetLocs";
+		constexpr static rivet::rivet_type_id RankTargetLocs_type_id = 0xf36caef5;
+		constexpr static std::string_view AimType_type_name = "AimType";
+		constexpr static rivet::rivet_type_id AimType_type_id = 0xf2b63172;
+		constexpr static std::string_view HoldFireForVictimStates_type_name = "HoldFireForVictimStates";
+		constexpr static rivet::rivet_type_id HoldFireForVictimStates_type_id = 0xfa0f2332;
+		constexpr static std::string_view AvoidShootingFriends_type_name = "AvoidShootingFriends";
+		constexpr static rivet::rivet_type_id AvoidShootingFriends_type_id = 0x64355aaf;
+		constexpr static std::string_view FireAtUnseenTargetsTime_type_name = "FireAtUnseenTargetsTime";
+		constexpr static rivet::rivet_type_id FireAtUnseenTargetsTime_type_id = 0x58a02877;
+		constexpr static std::string_view TargetLocation_type_name = "TargetLocation";
+		constexpr static rivet::rivet_type_id TargetLocation_type_id = 0x4a90422f;
+		constexpr static std::string_view TargetLocationName_type_name = "TargetLocationName";
+		constexpr static rivet::rivet_type_id TargetLocationName_type_id = 0xb352ca76;
+		constexpr static std::string_view Aiming_type_name = "Aiming";
+		constexpr static rivet::rivet_type_id Aiming_type_id = 0x7ed24ba4;
+		constexpr static std::string_view AimMods_type_name = "AimMods";
+		constexpr static rivet::rivet_type_id AimMods_type_id = 0x1d7694a1;
+		constexpr static std::string_view BotConfigAiming_type_name = "BotConfigAiming";
+		constexpr static rivet::rivet_type_id BotConfigAiming_type_id = 0x8d73a96b; 
 
 		explicit FiringBasePrius() = default;
 		explicit FiringBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

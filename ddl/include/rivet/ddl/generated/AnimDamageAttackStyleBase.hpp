@@ -19,13 +19,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED AnimDamageAttackStyleBase : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "AnimDamageAttackStyleBase";
-		constexpr const static rivet::rivet_type_id type_id = 0xeed69346;
+		constexpr static std::string_view type_name = "AnimDamageAttackStyleBase";
+		constexpr static rivet::rivet_type_id type_id = 0xeed69346;
 
-		constexpr const static std::string_view DamageIdHash_type_name = "DamageIdHash";
-		constexpr const static rivet::rivet_type_id DamageIdHash_type_id = 0x7adfa814;
-		constexpr const static std::string_view WeaponIdHash_type_name = "WeaponIdHash";
-		constexpr const static rivet::rivet_type_id WeaponIdHash_type_id = 0xc1e51d69; 
+		constexpr static std::string_view DamageIdHash_type_name = "DamageIdHash";
+		constexpr static rivet::rivet_type_id DamageIdHash_type_id = 0x7adfa814;
+		constexpr static std::string_view WeaponIdHash_type_name = "WeaponIdHash";
+		constexpr static rivet::rivet_type_id WeaponIdHash_type_id = 0xc1e51d69; 
 
 		explicit AnimDamageAttackStyleBase() = default;
 		explicit AnimDamageAttackStyleBase([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

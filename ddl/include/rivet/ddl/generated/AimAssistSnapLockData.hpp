@@ -19,15 +19,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED AimAssistSnapLockData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "AimAssistSnapLockData";
-		constexpr const static rivet::rivet_type_id type_id = 0x2b93d4c9;
+		constexpr static std::string_view type_name = "AimAssistSnapLockData";
+		constexpr static rivet::rivet_type_id type_id = 0x2b93d4c9;
 
-		constexpr const static std::string_view Enable_type_name = "Enable";
-		constexpr const static rivet::rivet_type_id Enable_type_id = 0xcdd88655;
-		constexpr const static std::string_view SnapHoldTime_type_name = "SnapHoldTime";
-		constexpr const static rivet::rivet_type_id SnapHoldTime_type_id = 0x5d4bafd1;
-		constexpr const static std::string_view SnapDecayTime_type_name = "SnapDecayTime";
-		constexpr const static rivet::rivet_type_id SnapDecayTime_type_id = 0xe9e0dba1; 
+		constexpr static std::string_view Enable_type_name = "Enable";
+		constexpr static rivet::rivet_type_id Enable_type_id = 0xcdd88655;
+		constexpr static std::string_view SnapHoldTime_type_name = "SnapHoldTime";
+		constexpr static rivet::rivet_type_id SnapHoldTime_type_id = 0x5d4bafd1;
+		constexpr static std::string_view SnapDecayTime_type_name = "SnapDecayTime";
+		constexpr static rivet::rivet_type_id SnapDecayTime_type_id = 0xe9e0dba1; 
 
 		explicit AimAssistSnapLockData() = default;
 		explicit AimAssistSnapLockData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

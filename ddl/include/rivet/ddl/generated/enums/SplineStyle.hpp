@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view SplineStyle_type_name = "SplineStyle";
-	constexpr const static rivet::rivet_type_id SplineStyle_type_id = 0xb5cf515f;
+	constexpr static std::string_view SplineStyle_type_name = "SplineStyle";
+	constexpr static rivet::rivet_type_id SplineStyle_type_id = 0xb5cf515f;
 
-	constexpr const static std::array<std::string_view, 3> SplineStyle_values = {
+	constexpr static std::array<std::string_view, 3> SplineStyle_values = {
 		"kStandard",
 		"kCenter",
 		"kCenterLoop", 

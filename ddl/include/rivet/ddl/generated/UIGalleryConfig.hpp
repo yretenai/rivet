@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct UIGalleryEntry; 
 
 	struct RIVET_DDL_SHARED UIGalleryConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "UIGalleryConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xf85a47e;
+		constexpr static std::string_view type_name = "UIGalleryConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xf85a47e;
 
-		constexpr const static std::string_view Entries_type_name = "Entries";
-		constexpr const static rivet::rivet_type_id Entries_type_id = 0x2c12d0fd; 
+		constexpr static std::string_view Entries_type_name = "Entries";
+		constexpr static rivet::rivet_type_id Entries_type_id = 0x2c12d0fd; 
 
 		explicit UIGalleryConfig() = default;
 		explicit UIGalleryConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

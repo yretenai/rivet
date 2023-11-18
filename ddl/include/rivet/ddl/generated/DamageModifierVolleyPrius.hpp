@@ -21,15 +21,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DamageModifierVolleyPrius : DamageModifierIncomingPrius {
-		constexpr const static std::string_view type_name = "DamageModifierVolleyPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xc7e840a9;
+		constexpr static std::string_view type_name = "DamageModifierVolleyPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xc7e840a9;
 
-		constexpr const static std::string_view PerHitReduction_type_name = "PerHitReduction";
-		constexpr const static rivet::rivet_type_id PerHitReduction_type_id = 0x37f9af79;
-		constexpr const static std::string_view MinReduction_type_name = "MinReduction";
-		constexpr const static rivet::rivet_type_id MinReduction_type_id = 0x3f0ecd12;
-		constexpr const static std::string_view RechargeRate_type_name = "RechargeRate";
-		constexpr const static rivet::rivet_type_id RechargeRate_type_id = 0xf1cdaed2; 
+		constexpr static std::string_view PerHitReduction_type_name = "PerHitReduction";
+		constexpr static rivet::rivet_type_id PerHitReduction_type_id = 0x37f9af79;
+		constexpr static std::string_view MinReduction_type_name = "MinReduction";
+		constexpr static rivet::rivet_type_id MinReduction_type_id = 0x3f0ecd12;
+		constexpr static std::string_view RechargeRate_type_name = "RechargeRate";
+		constexpr static rivet::rivet_type_id RechargeRate_type_id = 0xf1cdaed2; 
 
 		explicit DamageModifierVolleyPrius() = default;
 		explicit DamageModifierVolleyPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

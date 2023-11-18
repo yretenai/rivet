@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view ImpostorHQType_type_name = "ImpostorHQType";
-	constexpr const static rivet::rivet_type_id ImpostorHQType_type_id = 0x260c3706;
+	constexpr static std::string_view ImpostorHQType_type_name = "ImpostorHQType";
+	constexpr static rivet::rivet_type_id ImpostorHQType_type_id = 0x260c3706;
 
-	constexpr const static std::array<std::string_view, 3> ImpostorHQType_values = {
+	constexpr static std::array<std::string_view, 3> ImpostorHQType_values = {
 		"kInheritFromMaterial",
 		"kForceImpostorHQOff",
 		"kForceImpostorHQOn", 

@@ -21,17 +21,17 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED POIAttributeIconSingle : POIAttributeIconBase {
-		constexpr const static std::string_view type_name = "POIAttributeIconSingle";
-		constexpr const static rivet::rivet_type_id type_id = 0x5bec4565;
+		constexpr static std::string_view type_name = "POIAttributeIconSingle";
+		constexpr static rivet::rivet_type_id type_id = 0x5bec4565;
 
-		constexpr const static std::string_view Texture_type_name = "Texture";
-		constexpr const static rivet::rivet_type_id Texture_type_id = 0x838c6e4a;
-		constexpr const static std::string_view Width_type_name = "Width";
-		constexpr const static rivet::rivet_type_id Width_type_id = 0x954989ee;
-		constexpr const static std::string_view Height_type_name = "Height";
-		constexpr const static rivet::rivet_type_id Height_type_id = 0xcb35ab68;
-		constexpr const static std::string_view ApplyWidthHeight_type_name = "ApplyWidthHeight";
-		constexpr const static rivet::rivet_type_id ApplyWidthHeight_type_id = 0x559bf66d; 
+		constexpr static std::string_view Texture_type_name = "Texture";
+		constexpr static rivet::rivet_type_id Texture_type_id = 0x838c6e4a;
+		constexpr static std::string_view Width_type_name = "Width";
+		constexpr static rivet::rivet_type_id Width_type_id = 0x954989ee;
+		constexpr static std::string_view Height_type_name = "Height";
+		constexpr static rivet::rivet_type_id Height_type_id = 0xcb35ab68;
+		constexpr static std::string_view ApplyWidthHeight_type_name = "ApplyWidthHeight";
+		constexpr static rivet::rivet_type_id ApplyWidthHeight_type_id = 0x559bf66d; 
 
 		explicit POIAttributeIconSingle() = default;
 		explicit POIAttributeIconSingle([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

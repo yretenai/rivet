@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view CameraProjectionType_type_name = "CameraProjectionType";
-	constexpr const static rivet::rivet_type_id CameraProjectionType_type_id = 0x87a65665;
+	constexpr static std::string_view CameraProjectionType_type_name = "CameraProjectionType";
+	constexpr static rivet::rivet_type_id CameraProjectionType_type_id = 0x87a65665;
 
-	constexpr const static std::array<std::string_view, 7> CameraProjectionType_values = {
+	constexpr static std::array<std::string_view, 7> CameraProjectionType_values = {
 		"kPerspective",
 		"kOrthographicX",
 		"kOrthographicXNeg",

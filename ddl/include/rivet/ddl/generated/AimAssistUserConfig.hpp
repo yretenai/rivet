@@ -20,40 +20,40 @@
 #include <rivet/ddl/generated/ConfigBase.hpp> 
 
 namespace rivet::ddl::generated {
+	struct AimAssistSnapLockData;
+	struct AimAssistBoxProcessData;
 	struct AimAssistSettleDecel;
-	struct AimAssistMagnetData;
-	struct AimAssistFrictionData;
+	struct AimAssistFactorModifiers;
+	struct AimAssistTargetSelection;
 	struct AimAssistSnagData;
 	struct AimAssistCentering;
-	struct AimAssistBoxProcessData;
-	struct AimAssistSnapLockData;
-	struct AimAssistTargetSelection;
-	struct AimAssistFactorModifiers; 
+	struct AimAssistMagnetData;
+	struct AimAssistFrictionData; 
 
 	struct RIVET_DDL_SHARED AimAssistUserConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "AimAssistUserConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xdf3bd36;
+		constexpr static std::string_view type_name = "AimAssistUserConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xdf3bd36;
 
-		constexpr const static std::string_view FrictionData_type_name = "FrictionData";
-		constexpr const static rivet::rivet_type_id FrictionData_type_id = 0x54772f50;
-		constexpr const static std::string_view MagnetData_type_name = "MagnetData";
-		constexpr const static rivet::rivet_type_id MagnetData_type_id = 0x2ef4e9d5;
-		constexpr const static std::string_view CenteringData_type_name = "CenteringData";
-		constexpr const static rivet::rivet_type_id CenteringData_type_id = 0x1d038c45;
-		constexpr const static std::string_view SnagData_type_name = "SnagData";
-		constexpr const static rivet::rivet_type_id SnagData_type_id = 0xa24a3731;
-		constexpr const static std::string_view SettleDecel_type_name = "SettleDecel";
-		constexpr const static rivet::rivet_type_id SettleDecel_type_id = 0x90bb906a;
-		constexpr const static std::string_view BoxProcessData_type_name = "BoxProcessData";
-		constexpr const static rivet::rivet_type_id BoxProcessData_type_id = 0x74e65f59;
-		constexpr const static std::string_view SnapLockData_type_name = "SnapLockData";
-		constexpr const static rivet::rivet_type_id SnapLockData_type_id = 0x6860ef09;
-		constexpr const static std::string_view TargetSelection_type_name = "TargetSelection";
-		constexpr const static rivet::rivet_type_id TargetSelection_type_id = 0xe3d4cbf0;
-		constexpr const static std::string_view FactorModifiers_type_name = "FactorModifiers";
-		constexpr const static rivet::rivet_type_id FactorModifiers_type_id = 0xbc9a7f1a;
-		constexpr const static std::string_view AimAssistAngle_type_name = "AimAssistAngle";
-		constexpr const static rivet::rivet_type_id AimAssistAngle_type_id = 0xebc9ff29; 
+		constexpr static std::string_view FrictionData_type_name = "FrictionData";
+		constexpr static rivet::rivet_type_id FrictionData_type_id = 0x54772f50;
+		constexpr static std::string_view MagnetData_type_name = "MagnetData";
+		constexpr static rivet::rivet_type_id MagnetData_type_id = 0x2ef4e9d5;
+		constexpr static std::string_view CenteringData_type_name = "CenteringData";
+		constexpr static rivet::rivet_type_id CenteringData_type_id = 0x1d038c45;
+		constexpr static std::string_view SnagData_type_name = "SnagData";
+		constexpr static rivet::rivet_type_id SnagData_type_id = 0xa24a3731;
+		constexpr static std::string_view SettleDecel_type_name = "SettleDecel";
+		constexpr static rivet::rivet_type_id SettleDecel_type_id = 0x90bb906a;
+		constexpr static std::string_view BoxProcessData_type_name = "BoxProcessData";
+		constexpr static rivet::rivet_type_id BoxProcessData_type_id = 0x74e65f59;
+		constexpr static std::string_view SnapLockData_type_name = "SnapLockData";
+		constexpr static rivet::rivet_type_id SnapLockData_type_id = 0x6860ef09;
+		constexpr static std::string_view TargetSelection_type_name = "TargetSelection";
+		constexpr static rivet::rivet_type_id TargetSelection_type_id = 0xe3d4cbf0;
+		constexpr static std::string_view FactorModifiers_type_name = "FactorModifiers";
+		constexpr static rivet::rivet_type_id FactorModifiers_type_id = 0xbc9a7f1a;
+		constexpr static std::string_view AimAssistAngle_type_name = "AimAssistAngle";
+		constexpr static rivet::rivet_type_id AimAssistAngle_type_id = 0xebc9ff29; 
 
 		explicit AimAssistUserConfig() = default;
 		explicit AimAssistUserConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

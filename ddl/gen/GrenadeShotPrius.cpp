@@ -3,23 +3,23 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/ShotTopiaryBlasterPrius.hpp>
-#include <rivet/ddl/generated/GrenadeExplosionMode.hpp>
+#include <rivet/ddl/generated/FusionGrenadeSubShotPrius.hpp>
+#include <rivet/ddl/generated/ShockwaveGrenadeShotPrius.hpp>
+#include <rivet/ddl/generated/ShotBouncerPrius.hpp>
 #include <rivet/ddl/generated/DamageModifierExplosionPrius.hpp>
-#include <rivet/ddl/generated/GrenadeShotGamePrius.hpp>
-#include <rivet/ddl/generated/ShotFlingGrenadePrius.hpp>
-#include <rivet/ddl/generated/PyrocitorEmberShotPrius.hpp>
 #include <rivet/ddl/generated/ShotProtoGrenadePrius.hpp>
 #include <rivet/ddl/generated/ShotBouncerMiniBombPrius.hpp>
-#include <rivet/ddl/generated/CarpetBomberSubShotPrius.hpp>
+#include <rivet/ddl/generated/PyrocitorEmberShotPrius.hpp>
+#include <rivet/ddl/generated/GrenadeShotGamePrius.hpp>
+#include <rivet/ddl/generated/ShotFusionGrenadePrius.hpp>
 #include <rivet/ddl/generated/ShotZapperPrius.hpp>
 #include <rivet/ddl/generated/ShotCarpetBomberPrius.hpp>
-#include <rivet/ddl/generated/ShotFusionGrenadePrius.hpp>
 #include <rivet/ddl/generated/ShotStunWebPrius.hpp>
-#include <rivet/ddl/generated/ShotBouncerPrius.hpp>
-#include <rivet/ddl/generated/ShockwaveGrenadeShotPrius.hpp>
-#include <rivet/ddl/generated/FusionGrenadeSubShotPrius.hpp>
-#include <rivet/ddl/generated/GroovitronShotPrius.hpp> 
+#include <rivet/ddl/generated/GroovitronShotPrius.hpp>
+#include <rivet/ddl/generated/CarpetBomberSubShotPrius.hpp>
+#include <rivet/ddl/generated/ShotTopiaryBlasterPrius.hpp>
+#include <rivet/ddl/generated/GrenadeExplosionMode.hpp>
+#include <rivet/ddl/generated/ShotFlingGrenadePrius.hpp> 
 
 #include <rivet/ddl/generated/GrenadeShotPrius.hpp>
 

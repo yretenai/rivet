@@ -19,15 +19,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DenomSettings : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "DenomSettings";
-		constexpr const static rivet::rivet_type_id type_id = 0xb8c5960d;
+		constexpr static std::string_view type_name = "DenomSettings";
+		constexpr static rivet::rivet_type_id type_id = 0xb8c5960d;
 
-		constexpr const static std::string_view ModelOverride_type_name = "ModelOverride";
-		constexpr const static rivet::rivet_type_id ModelOverride_type_id = 0x50d70eaa;
-		constexpr const static std::string_view MaterialOverride_type_name = "MaterialOverride";
-		constexpr const static rivet::rivet_type_id MaterialOverride_type_id = 0xffafa5a1;
-		constexpr const static std::string_view Scale_type_name = "Scale";
-		constexpr const static rivet::rivet_type_id Scale_type_id = 0xf515e945; 
+		constexpr static std::string_view ModelOverride_type_name = "ModelOverride";
+		constexpr static rivet::rivet_type_id ModelOverride_type_id = 0x50d70eaa;
+		constexpr static std::string_view MaterialOverride_type_name = "MaterialOverride";
+		constexpr static rivet::rivet_type_id MaterialOverride_type_id = 0xffafa5a1;
+		constexpr static std::string_view Scale_type_name = "Scale";
+		constexpr static rivet::rivet_type_id Scale_type_id = 0xf515e945; 
 
 		explicit DenomSettings() = default;
 		explicit DenomSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

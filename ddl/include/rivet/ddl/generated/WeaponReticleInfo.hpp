@@ -19,17 +19,17 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED WeaponReticleInfo : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "WeaponReticleInfo";
-		constexpr const static rivet::rivet_type_id type_id = 0xd50e0968;
+		constexpr static std::string_view type_name = "WeaponReticleInfo";
+		constexpr static rivet::rivet_type_id type_id = 0xd50e0968;
 
-		constexpr const static std::string_view SpreadScale_type_name = "SpreadScale";
-		constexpr const static rivet::rivet_type_id SpreadScale_type_id = 0x648de351;
-		constexpr const static std::string_view SpreadReturn_type_name = "SpreadReturn";
-		constexpr const static rivet::rivet_type_id SpreadReturn_type_id = 0x83ad3d1f;
-		constexpr const static std::string_view SpreadReturnDuration_type_name = "SpreadReturnDuration";
-		constexpr const static rivet::rivet_type_id SpreadReturnDuration_type_id = 0x25e01298;
-		constexpr const static std::string_view SpreadReturnDelay_type_name = "SpreadReturnDelay";
-		constexpr const static rivet::rivet_type_id SpreadReturnDelay_type_id = 0x94867d16; 
+		constexpr static std::string_view SpreadScale_type_name = "SpreadScale";
+		constexpr static rivet::rivet_type_id SpreadScale_type_id = 0x648de351;
+		constexpr static std::string_view SpreadReturn_type_name = "SpreadReturn";
+		constexpr static rivet::rivet_type_id SpreadReturn_type_id = 0x83ad3d1f;
+		constexpr static std::string_view SpreadReturnDuration_type_name = "SpreadReturnDuration";
+		constexpr static rivet::rivet_type_id SpreadReturnDuration_type_id = 0x25e01298;
+		constexpr static std::string_view SpreadReturnDelay_type_name = "SpreadReturnDelay";
+		constexpr static rivet::rivet_type_id SpreadReturnDelay_type_id = 0x94867d16; 
 
 		explicit WeaponReticleInfo() = default;
 		explicit WeaponReticleInfo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

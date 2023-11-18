@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED HurdleShotAlongGroundMotionPrius : MoveAlongGroundShotMotionPrius {
-		constexpr const static std::string_view type_name = "HurdleShotAlongGroundMotionPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x68adb7e1;
+		constexpr static std::string_view type_name = "HurdleShotAlongGroundMotionPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x68adb7e1;
 
 		explicit HurdleShotAlongGroundMotionPrius() = default;
 		explicit HurdleShotAlongGroundMotionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

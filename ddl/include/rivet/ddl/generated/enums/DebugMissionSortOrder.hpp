@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view DebugMissionSortOrder_type_name = "DebugMissionSortOrder";
-	constexpr const static rivet::rivet_type_id DebugMissionSortOrder_type_id = 0xac8d000f;
+	constexpr static std::string_view DebugMissionSortOrder_type_name = "DebugMissionSortOrder";
+	constexpr static rivet::rivet_type_id DebugMissionSortOrder_type_id = 0xac8d000f;
 
-	constexpr const static std::array<std::string_view, 2> DebugMissionSortOrder_values = {
+	constexpr static std::array<std::string_view, 2> DebugMissionSortOrder_values = {
 		"kAlphabetical",
 		"kDepthFirst", 
 	};

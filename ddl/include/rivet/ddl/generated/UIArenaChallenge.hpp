@@ -21,25 +21,25 @@ namespace rivet::ddl::generated {
 	struct UIArenaChallengeReward; 
 
 	struct RIVET_DDL_SHARED UIArenaChallenge : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "UIArenaChallenge";
-		constexpr const static rivet::rivet_type_id type_id = 0x8d9cbbf4;
+		constexpr static std::string_view type_name = "UIArenaChallenge";
+		constexpr static rivet::rivet_type_id type_id = 0x8d9cbbf4;
 
-		constexpr const static std::string_view Title_type_name = "Title";
-		constexpr const static rivet::rivet_type_id Title_type_id = 0x3265b4aa;
-		constexpr const static std::string_view Description_type_name = "Description";
-		constexpr const static rivet::rivet_type_id Description_type_id = 0xe03811fd;
-		constexpr const static std::string_view Reward_type_name = "Reward";
-		constexpr const static rivet::rivet_type_id Reward_type_id = 0x70a93c34;
-		constexpr const static std::string_view RewardSecondary_type_name = "RewardSecondary";
-		constexpr const static rivet::rivet_type_id RewardSecondary_type_id = 0x705ae88;
-		constexpr const static std::string_view ChallengeModeReward_type_name = "ChallengeModeReward";
-		constexpr const static rivet::rivet_type_id ChallengeModeReward_type_id = 0x4f23303;
-		constexpr const static std::string_view ChallengeModeRewardSecondary_type_name = "ChallengeModeRewardSecondary";
-		constexpr const static rivet::rivet_type_id ChallengeModeRewardSecondary_type_id = 0x2514e3a5;
-		constexpr const static std::string_view MissionName_type_name = "MissionName";
-		constexpr const static rivet::rivet_type_id MissionName_type_id = 0xa5c30e60;
-		constexpr const static std::string_view GlobalSaveTableKey_type_name = "GlobalSaveTableKey";
-		constexpr const static rivet::rivet_type_id GlobalSaveTableKey_type_id = 0x6cecc314; 
+		constexpr static std::string_view Title_type_name = "Title";
+		constexpr static rivet::rivet_type_id Title_type_id = 0x3265b4aa;
+		constexpr static std::string_view Description_type_name = "Description";
+		constexpr static rivet::rivet_type_id Description_type_id = 0xe03811fd;
+		constexpr static std::string_view Reward_type_name = "Reward";
+		constexpr static rivet::rivet_type_id Reward_type_id = 0x70a93c34;
+		constexpr static std::string_view RewardSecondary_type_name = "RewardSecondary";
+		constexpr static rivet::rivet_type_id RewardSecondary_type_id = 0x705ae88;
+		constexpr static std::string_view ChallengeModeReward_type_name = "ChallengeModeReward";
+		constexpr static rivet::rivet_type_id ChallengeModeReward_type_id = 0x4f23303;
+		constexpr static std::string_view ChallengeModeRewardSecondary_type_name = "ChallengeModeRewardSecondary";
+		constexpr static rivet::rivet_type_id ChallengeModeRewardSecondary_type_id = 0x2514e3a5;
+		constexpr static std::string_view MissionName_type_name = "MissionName";
+		constexpr static rivet::rivet_type_id MissionName_type_id = 0xa5c30e60;
+		constexpr static std::string_view GlobalSaveTableKey_type_name = "GlobalSaveTableKey";
+		constexpr static rivet::rivet_type_id GlobalSaveTableKey_type_id = 0x6cecc314; 
 
 		explicit UIArenaChallenge() = default;
 		explicit UIArenaChallenge([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -19,15 +19,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED IntersectionFadeData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "IntersectionFadeData";
-		constexpr const static rivet::rivet_type_id type_id = 0x25b478aa;
+		constexpr static std::string_view type_name = "IntersectionFadeData";
+		constexpr static rivet::rivet_type_id type_id = 0x25b478aa;
 
-		constexpr const static std::string_view FadeOutDistance_type_name = "FadeOutDistance";
-		constexpr const static rivet::rivet_type_id FadeOutDistance_type_id = 0xa3cc9166;
-		constexpr const static std::string_view HeadFadeOutDistance_type_name = "HeadFadeOutDistance";
-		constexpr const static rivet::rivet_type_id HeadFadeOutDistance_type_id = 0xca6b39e9;
-		constexpr const static std::string_view FadeTime_type_name = "FadeTime";
-		constexpr const static rivet::rivet_type_id FadeTime_type_id = 0x8833d162; 
+		constexpr static std::string_view FadeOutDistance_type_name = "FadeOutDistance";
+		constexpr static rivet::rivet_type_id FadeOutDistance_type_id = 0xa3cc9166;
+		constexpr static std::string_view HeadFadeOutDistance_type_name = "HeadFadeOutDistance";
+		constexpr static rivet::rivet_type_id HeadFadeOutDistance_type_id = 0xca6b39e9;
+		constexpr static std::string_view FadeTime_type_name = "FadeTime";
+		constexpr static rivet::rivet_type_id FadeTime_type_id = 0x8833d162; 
 
 		explicit IntersectionFadeData() = default;
 		explicit IntersectionFadeData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

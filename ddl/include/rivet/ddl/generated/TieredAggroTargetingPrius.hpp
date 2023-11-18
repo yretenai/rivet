@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct TierData; 
 
 	struct RIVET_DDL_SHARED TieredAggroTargetingPrius : TargetingBasePrius {
-		constexpr const static std::string_view type_name = "TieredAggroTargetingPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x749ba1b6;
+		constexpr static std::string_view type_name = "TieredAggroTargetingPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x749ba1b6;
 
-		constexpr const static std::string_view Data_type_name = "Data";
-		constexpr const static rivet::rivet_type_id Data_type_id = 0x9d6333d3; 
+		constexpr static std::string_view Data_type_name = "Data";
+		constexpr static rivet::rivet_type_id Data_type_id = 0x9d6333d3; 
 
 		explicit TieredAggroTargetingPrius() = default;
 		explicit TieredAggroTargetingPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

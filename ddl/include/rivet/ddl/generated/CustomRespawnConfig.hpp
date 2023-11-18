@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct CustomRespawn; 
 
 	struct RIVET_DDL_SHARED CustomRespawnConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "CustomRespawnConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xa59b5510;
+		constexpr static std::string_view type_name = "CustomRespawnConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xa59b5510;
 
-		constexpr const static std::string_view CustomRespawns_type_name = "CustomRespawns";
-		constexpr const static rivet::rivet_type_id CustomRespawns_type_id = 0x1ed42638; 
+		constexpr static std::string_view CustomRespawns_type_name = "CustomRespawns";
+		constexpr static rivet::rivet_type_id CustomRespawns_type_id = 0x1ed42638; 
 
 		explicit CustomRespawnConfig() = default;
 		explicit CustomRespawnConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

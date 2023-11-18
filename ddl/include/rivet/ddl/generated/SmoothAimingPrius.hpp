@@ -21,15 +21,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED SmoothAimingPrius : FocusTrackingAimingPrius {
-		constexpr const static std::string_view type_name = "SmoothAimingPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xaca2f9fd;
+		constexpr static std::string_view type_name = "SmoothAimingPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xaca2f9fd;
 
-		constexpr const static std::string_view AimPosAccel_type_name = "AimPosAccel";
-		constexpr const static rivet::rivet_type_id AimPosAccel_type_id = 0x8aebedf;
-		constexpr const static std::string_view AimPosDecel_type_name = "AimPosDecel";
-		constexpr const static rivet::rivet_type_id AimPosDecel_type_id = 0xe5256e73;
-		constexpr const static std::string_view AimPosMaxSpeed_type_name = "AimPosMaxSpeed";
-		constexpr const static rivet::rivet_type_id AimPosMaxSpeed_type_id = 0x4c3b1f8b; 
+		constexpr static std::string_view AimPosAccel_type_name = "AimPosAccel";
+		constexpr static rivet::rivet_type_id AimPosAccel_type_id = 0x8aebedf;
+		constexpr static std::string_view AimPosDecel_type_name = "AimPosDecel";
+		constexpr static rivet::rivet_type_id AimPosDecel_type_id = 0xe5256e73;
+		constexpr static std::string_view AimPosMaxSpeed_type_name = "AimPosMaxSpeed";
+		constexpr static rivet::rivet_type_id AimPosMaxSpeed_type_id = 0x4c3b1f8b; 
 
 		explicit SmoothAimingPrius() = default;
 		explicit SmoothAimingPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

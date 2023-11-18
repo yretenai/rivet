@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DamageModifierHitDirectionOutgoingPrius : DamageModifierOutgoingPrius {
-		constexpr const static std::string_view type_name = "DamageModifierHitDirectionOutgoingPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x3560429a;
+		constexpr static std::string_view type_name = "DamageModifierHitDirectionOutgoingPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x3560429a;
 
-		constexpr const static std::string_view ConeAngle_type_name = "ConeAngle";
-		constexpr const static rivet::rivet_type_id ConeAngle_type_id = 0x8c03b095;
-		constexpr const static std::string_view KeepHitsInCone_type_name = "KeepHitsInCone";
-		constexpr const static rivet::rivet_type_id KeepHitsInCone_type_id = 0x97e703ce; 
+		constexpr static std::string_view ConeAngle_type_name = "ConeAngle";
+		constexpr static rivet::rivet_type_id ConeAngle_type_id = 0x8c03b095;
+		constexpr static std::string_view KeepHitsInCone_type_name = "KeepHitsInCone";
+		constexpr static rivet::rivet_type_id KeepHitsInCone_type_id = 0x97e703ce; 
 
 		explicit DamageModifierHitDirectionOutgoingPrius() = default;
 		explicit DamageModifierHitDirectionOutgoingPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

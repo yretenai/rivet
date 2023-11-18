@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view SyncTypes_type_name = "SyncTypes";
-	constexpr const static rivet::rivet_type_id SyncTypes_type_id = 0x15ffe56c;
+	constexpr static std::string_view SyncTypes_type_name = "SyncTypes";
+	constexpr static rivet::rivet_type_id SyncTypes_type_id = 0x15ffe56c;
 
-	constexpr const static std::array<std::string_view, 3> SyncTypes_values = {
+	constexpr static std::array<std::string_view, 3> SyncTypes_values = {
 		"kSyncNone",
 		"kSyncInteract",
 		"kSyncContinuous", 

@@ -4,9 +4,9 @@
 // SPDX-License-Identifier: MPL-2.0
 
 #include <rivet/ddl/generated/BotMovementFly.hpp>
-#include <rivet/ddl/generated/BotMovementSteerable.hpp>
 #include <rivet/ddl/generated/BotMovementFullControl.hpp>
-#include <rivet/ddl/generated/BotMovementHexapod.hpp> 
+#include <rivet/ddl/generated/BotMovementHexapod.hpp>
+#include <rivet/ddl/generated/BotMovementSteerable.hpp> 
 
 #include <rivet/ddl/generated/BotMovementBase.hpp>
 

@@ -19,17 +19,17 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED YawAndPitchData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "YawAndPitchData";
-		constexpr const static rivet::rivet_type_id type_id = 0xad5d2466;
+		constexpr static std::string_view type_name = "YawAndPitchData";
+		constexpr static rivet::rivet_type_id type_id = 0xad5d2466;
 
-		constexpr const static std::string_view YawMin_type_name = "YawMin";
-		constexpr const static rivet::rivet_type_id YawMin_type_id = 0x975af737;
-		constexpr const static std::string_view YawMax_type_name = "YawMax";
-		constexpr const static rivet::rivet_type_id YawMax_type_id = 0xab57c86e;
-		constexpr const static std::string_view PitchMin_type_name = "PitchMin";
-		constexpr const static rivet::rivet_type_id PitchMin_type_id = 0xfb99e53b;
-		constexpr const static std::string_view PitchMax_type_name = "PitchMax";
-		constexpr const static rivet::rivet_type_id PitchMax_type_id = 0xc794da62; 
+		constexpr static std::string_view YawMin_type_name = "YawMin";
+		constexpr static rivet::rivet_type_id YawMin_type_id = 0x975af737;
+		constexpr static std::string_view YawMax_type_name = "YawMax";
+		constexpr static rivet::rivet_type_id YawMax_type_id = 0xab57c86e;
+		constexpr static std::string_view PitchMin_type_name = "PitchMin";
+		constexpr static rivet::rivet_type_id PitchMin_type_id = 0xfb99e53b;
+		constexpr static std::string_view PitchMax_type_name = "PitchMax";
+		constexpr static rivet::rivet_type_id PitchMax_type_id = 0xc794da62; 
 
 		explicit YawAndPitchData() = default;
 		explicit YawAndPitchData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

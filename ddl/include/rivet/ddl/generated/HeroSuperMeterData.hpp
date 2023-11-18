@@ -19,13 +19,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED HeroSuperMeterData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "HeroSuperMeterData";
-		constexpr const static rivet::rivet_type_id type_id = 0xad6d72f0;
+		constexpr static std::string_view type_name = "HeroSuperMeterData";
+		constexpr static rivet::rivet_type_id type_id = 0xad6d72f0;
 
-		constexpr const static std::string_view NumSegments_type_name = "NumSegments";
-		constexpr const static rivet::rivet_type_id NumSegments_type_id = 0xe32f1330;
-		constexpr const static std::string_view TotalSize_type_name = "TotalSize";
-		constexpr const static rivet::rivet_type_id TotalSize_type_id = 0x318b4daf; 
+		constexpr static std::string_view NumSegments_type_name = "NumSegments";
+		constexpr static rivet::rivet_type_id NumSegments_type_id = 0xe32f1330;
+		constexpr static std::string_view TotalSize_type_name = "TotalSize";
+		constexpr static rivet::rivet_type_id TotalSize_type_id = 0x318b4daf; 
 
 		explicit HeroSuperMeterData() = default;
 		explicit HeroSuperMeterData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

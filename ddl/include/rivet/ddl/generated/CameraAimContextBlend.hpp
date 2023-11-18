@@ -19,8 +19,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED CameraAimContextBlend : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "CameraAimContextBlend";
-		constexpr const static rivet::rivet_type_id type_id = 0x77e3b9dd;
+		constexpr static std::string_view type_name = "CameraAimContextBlend";
+		constexpr static rivet::rivet_type_id type_id = 0x77e3b9dd;
 
 		explicit CameraAimContextBlend() = default;
 		explicit CameraAimContextBlend([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -21,21 +21,21 @@ namespace rivet::ddl::generated {
 	struct DDLVector3; 
 
 	struct RIVET_DDL_SHARED DefaultPhotoLightSettings : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "DefaultPhotoLightSettings";
-		constexpr const static rivet::rivet_type_id type_id = 0x484ea4f6;
+		constexpr static std::string_view type_name = "DefaultPhotoLightSettings";
+		constexpr static rivet::rivet_type_id type_id = 0x484ea4f6;
 
-		constexpr const static std::string_view DefaultIntensity_type_name = "DefaultIntensity";
-		constexpr const static rivet::rivet_type_id DefaultIntensity_type_id = 0x2cfb4df;
-		constexpr const static std::string_view DefaultLightConeAngle_type_name = "DefaultLightConeAngle";
-		constexpr const static rivet::rivet_type_id DefaultLightConeAngle_type_id = 0x10b8dc80;
-		constexpr const static std::string_view DefaultSoftness_type_name = "DefaultSoftness";
-		constexpr const static rivet::rivet_type_id DefaultSoftness_type_id = 0xcc575ef5;
-		constexpr const static std::string_view DefaultRange_type_name = "DefaultRange";
-		constexpr const static rivet::rivet_type_id DefaultRange_type_id = 0x891c06d0;
-		constexpr const static std::string_view DefaultShadowOn_type_name = "DefaultShadowOn";
-		constexpr const static rivet::rivet_type_id DefaultShadowOn_type_id = 0xc3fec21c;
-		constexpr const static std::string_view DefaultColorRGB_type_name = "DefaultColorRGB";
-		constexpr const static rivet::rivet_type_id DefaultColorRGB_type_id = 0xd75802d4; 
+		constexpr static std::string_view DefaultIntensity_type_name = "DefaultIntensity";
+		constexpr static rivet::rivet_type_id DefaultIntensity_type_id = 0x2cfb4df;
+		constexpr static std::string_view DefaultLightConeAngle_type_name = "DefaultLightConeAngle";
+		constexpr static rivet::rivet_type_id DefaultLightConeAngle_type_id = 0x10b8dc80;
+		constexpr static std::string_view DefaultSoftness_type_name = "DefaultSoftness";
+		constexpr static rivet::rivet_type_id DefaultSoftness_type_id = 0xcc575ef5;
+		constexpr static std::string_view DefaultRange_type_name = "DefaultRange";
+		constexpr static rivet::rivet_type_id DefaultRange_type_id = 0x891c06d0;
+		constexpr static std::string_view DefaultShadowOn_type_name = "DefaultShadowOn";
+		constexpr static rivet::rivet_type_id DefaultShadowOn_type_id = 0xc3fec21c;
+		constexpr static std::string_view DefaultColorRGB_type_name = "DefaultColorRGB";
+		constexpr static rivet::rivet_type_id DefaultColorRGB_type_id = 0xd75802d4; 
 
 		explicit DefaultPhotoLightSettings() = default;
 		explicit DefaultPhotoLightSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

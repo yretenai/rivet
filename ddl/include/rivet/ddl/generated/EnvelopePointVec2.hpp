@@ -21,19 +21,19 @@ namespace rivet::ddl::generated {
 	struct DDLVector2; 
 
 	struct RIVET_DDL_SHARED EnvelopePointVec2 : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "EnvelopePointVec2";
-		constexpr const static rivet::rivet_type_id type_id = 0x489d14f7;
+		constexpr static std::string_view type_name = "EnvelopePointVec2";
+		constexpr static rivet::rivet_type_id type_id = 0x489d14f7;
 
-		constexpr const static std::string_view CanModifyX_type_name = "CanModifyX";
-		constexpr const static rivet::rivet_type_id CanModifyX_type_id = 0xade0c28b;
-		constexpr const static std::string_view CanModifyY_type_name = "CanModifyY";
-		constexpr const static rivet::rivet_type_id CanModifyY_type_id = 0xdae7f21d;
-		constexpr const static std::string_view HoudiniInterpolationType_type_name = "HoudiniInterpolationType";
-		constexpr const static rivet::rivet_type_id HoudiniInterpolationType_type_id = 0x367642d7;
-		constexpr const static std::string_view X_type_name = "X";
-		constexpr const static rivet::rivet_type_id X_type_id = 0x5e33418d;
-		constexpr const static std::string_view Y_type_name = "Y";
-		constexpr const static rivet::rivet_type_id Y_type_id = 0x2934711b; 
+		constexpr static std::string_view CanModifyX_type_name = "CanModifyX";
+		constexpr static rivet::rivet_type_id CanModifyX_type_id = 0xade0c28b;
+		constexpr static std::string_view CanModifyY_type_name = "CanModifyY";
+		constexpr static rivet::rivet_type_id CanModifyY_type_id = 0xdae7f21d;
+		constexpr static std::string_view HoudiniInterpolationType_type_name = "HoudiniInterpolationType";
+		constexpr static rivet::rivet_type_id HoudiniInterpolationType_type_id = 0x367642d7;
+		constexpr static std::string_view X_type_name = "X";
+		constexpr static rivet::rivet_type_id X_type_id = 0x5e33418d;
+		constexpr static std::string_view Y_type_name = "Y";
+		constexpr static rivet::rivet_type_id Y_type_id = 0x2934711b; 
 
 		explicit EnvelopePointVec2() = default;
 		explicit EnvelopePointVec2([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

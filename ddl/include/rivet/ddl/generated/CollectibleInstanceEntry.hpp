@@ -21,11 +21,11 @@ namespace rivet::ddl::generated {
 	struct CollectibleInstanceInfo; 
 
 	struct RIVET_DDL_SHARED CollectibleInstanceEntry : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "CollectibleInstanceEntry";
-		constexpr const static rivet::rivet_type_id type_id = 0xdf805b90;
+		constexpr static std::string_view type_name = "CollectibleInstanceEntry";
+		constexpr static rivet::rivet_type_id type_id = 0xdf805b90;
 
-		constexpr const static std::string_view InstanceInfo_type_name = "InstanceInfo";
-		constexpr const static rivet::rivet_type_id InstanceInfo_type_id = 0xedb6ea2b; 
+		constexpr static std::string_view InstanceInfo_type_name = "InstanceInfo";
+		constexpr static rivet::rivet_type_id InstanceInfo_type_id = 0xedb6ea2b; 
 
 		explicit CollectibleInstanceEntry() = default;
 		explicit CollectibleInstanceEntry([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

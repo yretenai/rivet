@@ -17,45 +17,45 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/enums/x58d054ed.hpp>
+#include <rivet/ddl/generated/enums/xa26ce77.hpp>
 #include <rivet/ddl/generated/enums/x4dd7659a.hpp>
-#include <rivet/ddl/generated/enums/xaab5853c.hpp>
 #include <rivet/ddl/generated/enums/x63d1a5d5.hpp>
-#include <rivet/ddl/generated/enums/xbcfeb3f2.hpp>
-#include <rivet/ddl/generated/bitsets/xa80df7b6.hpp>
 #include <rivet/ddl/generated/enums/xa80b028a.hpp>
 #include <rivet/ddl/generated/enums/x77a4e9ba.hpp>
-#include <rivet/ddl/generated/enums/xa26ce77.hpp> 
+#include <rivet/ddl/generated/bitsets/xa80df7b6.hpp>
+#include <rivet/ddl/generated/enums/xbcfeb3f2.hpp>
+#include <rivet/ddl/generated/enums/xaab5853c.hpp>
+#include <rivet/ddl/generated/enums/x58d054ed.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED WeaponTriggerData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "WeaponTriggerData";
-		constexpr const static rivet::rivet_type_id type_id = 0xd73612d3;
+		constexpr static std::string_view type_name = "WeaponTriggerData";
+		constexpr static rivet::rivet_type_id type_id = 0xd73612d3;
 
-		constexpr const static std::string_view Button_type_name = "Button";
-		constexpr const static rivet::rivet_type_id Button_type_id = 0x47ee25a;
-		constexpr const static std::string_view TriggerType_type_name = "TriggerType";
-		constexpr const static rivet::rivet_type_id TriggerType_type_id = 0xe8607298;
-		constexpr const static std::string_view ResponseType_type_name = "ResponseType";
-		constexpr const static rivet::rivet_type_id ResponseType_type_id = 0xbffa0346;
-		constexpr const static std::string_view TriggerFlags_type_name = "TriggerFlags";
-		constexpr const static rivet::rivet_type_id TriggerFlags_type_id = 0x65059308;
-		constexpr const static std::string_view EmitterIndex_type_name = "EmitterIndex";
-		constexpr const static rivet::rivet_type_id EmitterIndex_type_id = 0x23b96c51;
-		constexpr const static std::string_view AmmoIndex_type_name = "AmmoIndex";
-		constexpr const static rivet::rivet_type_id AmmoIndex_type_id = 0xf051849d;
-		constexpr const static std::string_view ShotIndex_type_name = "ShotIndex";
-		constexpr const static rivet::rivet_type_id ShotIndex_type_id = 0xc409037f;
-		constexpr const static std::string_view AccuracyIndex_type_name = "AccuracyIndex";
-		constexpr const static rivet::rivet_type_id AccuracyIndex_type_id = 0xb60559ce;
-		constexpr const static std::string_view UserStateIndex_type_name = "UserStateIndex";
-		constexpr const static rivet::rivet_type_id UserStateIndex_type_id = 0xd80d6f55;
-		constexpr const static std::string_view FireSoundRange_type_name = "FireSoundRange";
-		constexpr const static rivet::rivet_type_id FireSoundRange_type_id = 0x7ea9ad35;
-		constexpr const static std::string_view RoundsPerSecond_type_name = "RoundsPerSecond";
-		constexpr const static rivet::rivet_type_id RoundsPerSecond_type_id = 0xaabfb37f;
-		constexpr const static std::string_view FireAnimName_type_name = "FireAnimName";
-		constexpr const static rivet::rivet_type_id FireAnimName_type_id = 0x1f571875; 
+		constexpr static std::string_view Button_type_name = "Button";
+		constexpr static rivet::rivet_type_id Button_type_id = 0x47ee25a;
+		constexpr static std::string_view TriggerType_type_name = "TriggerType";
+		constexpr static rivet::rivet_type_id TriggerType_type_id = 0xe8607298;
+		constexpr static std::string_view ResponseType_type_name = "ResponseType";
+		constexpr static rivet::rivet_type_id ResponseType_type_id = 0xbffa0346;
+		constexpr static std::string_view TriggerFlags_type_name = "TriggerFlags";
+		constexpr static rivet::rivet_type_id TriggerFlags_type_id = 0x65059308;
+		constexpr static std::string_view EmitterIndex_type_name = "EmitterIndex";
+		constexpr static rivet::rivet_type_id EmitterIndex_type_id = 0x23b96c51;
+		constexpr static std::string_view AmmoIndex_type_name = "AmmoIndex";
+		constexpr static rivet::rivet_type_id AmmoIndex_type_id = 0xf051849d;
+		constexpr static std::string_view ShotIndex_type_name = "ShotIndex";
+		constexpr static rivet::rivet_type_id ShotIndex_type_id = 0xc409037f;
+		constexpr static std::string_view AccuracyIndex_type_name = "AccuracyIndex";
+		constexpr static rivet::rivet_type_id AccuracyIndex_type_id = 0xb60559ce;
+		constexpr static std::string_view UserStateIndex_type_name = "UserStateIndex";
+		constexpr static rivet::rivet_type_id UserStateIndex_type_id = 0xd80d6f55;
+		constexpr static std::string_view FireSoundRange_type_name = "FireSoundRange";
+		constexpr static rivet::rivet_type_id FireSoundRange_type_id = 0x7ea9ad35;
+		constexpr static std::string_view RoundsPerSecond_type_name = "RoundsPerSecond";
+		constexpr static rivet::rivet_type_id RoundsPerSecond_type_id = 0xaabfb37f;
+		constexpr static std::string_view FireAnimName_type_name = "FireAnimName";
+		constexpr static rivet::rivet_type_id FireAnimName_type_id = 0x1f571875; 
 
 		explicit WeaponTriggerData() = default;
 		explicit WeaponTriggerData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

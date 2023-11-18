@@ -3,11 +3,11 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
+#include <rivet/ddl/generated/TriggerEffectKeyFrameDataCustom.hpp>
 #include <rivet/ddl/generated/TriggerEffectKeyFrameDataTime.hpp>
-#include <rivet/ddl/generated/TriggerEffectDataBase.hpp>
-#include <rivet/ddl/generated/TriggerEffectKeyFrameBlendBase.hpp>
 #include <rivet/ddl/generated/TriggerEffectKeyFrameDataPosition.hpp>
-#include <rivet/ddl/generated/TriggerEffectKeyFrameDataCustom.hpp> 
+#include <rivet/ddl/generated/TriggerEffectKeyFrameBlendBase.hpp>
+#include <rivet/ddl/generated/TriggerEffectDataBase.hpp> 
 
 #include <rivet/ddl/generated/TriggerEffectKeyFrameDataBase.hpp>
 

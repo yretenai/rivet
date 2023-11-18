@@ -17,18 +17,18 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/enums/x6571cd70.hpp>
-#include <rivet/ddl/generated/enums/xfdd79442.hpp> 
+#include <rivet/ddl/generated/enums/xfdd79442.hpp>
+#include <rivet/ddl/generated/enums/x6571cd70.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED FilterPair : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "FilterPair";
-		constexpr const static rivet::rivet_type_id type_id = 0xd8e17746;
+		constexpr static std::string_view type_name = "FilterPair";
+		constexpr static rivet::rivet_type_id type_id = 0xd8e17746;
 
-		constexpr const static std::string_view GroupId_type_name = "GroupId";
-		constexpr const static rivet::rivet_type_id GroupId_type_id = 0xec6beb88;
-		constexpr const static std::string_view FilterId_type_name = "FilterId";
-		constexpr const static rivet::rivet_type_id FilterId_type_id = 0xd404a13f; 
+		constexpr static std::string_view GroupId_type_name = "GroupId";
+		constexpr static rivet::rivet_type_id GroupId_type_id = 0xec6beb88;
+		constexpr static std::string_view FilterId_type_name = "FilterId";
+		constexpr static rivet::rivet_type_id FilterId_type_id = 0xd404a13f; 
 
 		explicit FilterPair() = default;
 		explicit FilterPair([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

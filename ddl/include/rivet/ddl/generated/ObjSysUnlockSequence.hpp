@@ -18,17 +18,17 @@
 #include <rivet/structures/rivet_serialization.hpp>
 
 namespace rivet::ddl::generated {
-	struct ObjSysUnlockArray;
-	struct ObjSysUnlockSequenceOverride; 
+	struct ObjSysUnlockSequenceOverride;
+	struct ObjSysUnlockArray; 
 
 	struct RIVET_DDL_SHARED ObjSysUnlockSequence : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "ObjSysUnlockSequence";
-		constexpr const static rivet::rivet_type_id type_id = 0xeee8cee;
+		constexpr static std::string_view type_name = "ObjSysUnlockSequence";
+		constexpr static rivet::rivet_type_id type_id = 0xeee8cee;
 
-		constexpr const static std::string_view DefaultUnlocks_type_name = "DefaultUnlocks";
-		constexpr const static rivet::rivet_type_id DefaultUnlocks_type_id = 0xa856f0ba;
-		constexpr const static std::string_view ObjectiveUnlockOverrides_type_name = "ObjectiveUnlockOverrides";
-		constexpr const static rivet::rivet_type_id ObjectiveUnlockOverrides_type_id = 0x4c3b0cd7; 
+		constexpr static std::string_view DefaultUnlocks_type_name = "DefaultUnlocks";
+		constexpr static rivet::rivet_type_id DefaultUnlocks_type_id = 0xa856f0ba;
+		constexpr static std::string_view ObjectiveUnlockOverrides_type_name = "ObjectiveUnlockOverrides";
+		constexpr static rivet::rivet_type_id ObjectiveUnlockOverrides_type_id = 0x4c3b0cd7; 
 
 		explicit ObjSysUnlockSequence() = default;
 		explicit ObjSysUnlockSequence([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

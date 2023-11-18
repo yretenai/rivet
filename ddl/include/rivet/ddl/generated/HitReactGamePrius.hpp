@@ -20,30 +20,30 @@
 #include <rivet/ddl/generated/HitReactPrius.hpp> 
 
 namespace rivet::ddl::generated {
-	struct BotReactionBucket;
-	struct KnockbackData;
-	struct KnockdownData;
+	struct BotHitShaderData;
 	struct DeathData;
-	struct BotHitShaderData; 
+	struct KnockdownData;
+	struct KnockbackData;
+	struct BotReactionBucket; 
 
 	struct RIVET_DDL_SHARED HitReactGamePrius : HitReactPrius {
-		constexpr const static std::string_view type_name = "HitReactGamePrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x1c70e4dd;
+		constexpr static std::string_view type_name = "HitReactGamePrius";
+		constexpr static rivet::rivet_type_id type_id = 0x1c70e4dd;
 
-		constexpr const static std::string_view Buckets_type_name = "Buckets";
-		constexpr const static rivet::rivet_type_id Buckets_type_id = 0x25b695d8;
-		constexpr const static std::string_view KnockbackData_type_name = "KnockbackData";
-		constexpr const static rivet::rivet_type_id KnockbackData_type_id = 0xcc96e476;
-		constexpr const static std::string_view KnockdownData_type_name = "KnockdownData";
-		constexpr const static rivet::rivet_type_id KnockdownData_type_id = 0xa615951;
-		constexpr const static std::string_view DeathData_type_name = "DeathData";
-		constexpr const static rivet::rivet_type_id DeathData_type_id = 0xc5c5429e;
-		constexpr const static std::string_view HitShaderData_type_name = "HitShaderData";
-		constexpr const static rivet::rivet_type_id HitShaderData_type_id = 0xbe73a2ef;
-		constexpr const static std::string_view CollisionTestHeight_type_name = "CollisionTestHeight";
-		constexpr const static rivet::rivet_type_id CollisionTestHeight_type_id = 0x4015bc6e;
-		constexpr const static std::string_view CollisionTestRadius_type_name = "CollisionTestRadius";
-		constexpr const static rivet::rivet_type_id CollisionTestRadius_type_id = 0x8e24373b; 
+		constexpr static std::string_view Buckets_type_name = "Buckets";
+		constexpr static rivet::rivet_type_id Buckets_type_id = 0x25b695d8;
+		constexpr static std::string_view KnockbackData_type_name = "KnockbackData";
+		constexpr static rivet::rivet_type_id KnockbackData_type_id = 0xcc96e476;
+		constexpr static std::string_view KnockdownData_type_name = "KnockdownData";
+		constexpr static rivet::rivet_type_id KnockdownData_type_id = 0xa615951;
+		constexpr static std::string_view DeathData_type_name = "DeathData";
+		constexpr static rivet::rivet_type_id DeathData_type_id = 0xc5c5429e;
+		constexpr static std::string_view HitShaderData_type_name = "HitShaderData";
+		constexpr static rivet::rivet_type_id HitShaderData_type_id = 0xbe73a2ef;
+		constexpr static std::string_view CollisionTestHeight_type_name = "CollisionTestHeight";
+		constexpr static rivet::rivet_type_id CollisionTestHeight_type_id = 0x4015bc6e;
+		constexpr static std::string_view CollisionTestRadius_type_name = "CollisionTestRadius";
+		constexpr static rivet::rivet_type_id CollisionTestRadius_type_id = 0x8e24373b; 
 
 		explicit HitReactGamePrius() = default;
 		explicit HitReactGamePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

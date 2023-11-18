@@ -21,11 +21,11 @@ namespace rivet::ddl::generated {
 	struct CollectibleTypeInfoBase; 
 
 	struct RIVET_DDL_SHARED CollectibleTypeEntry : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "CollectibleTypeEntry";
-		constexpr const static rivet::rivet_type_id type_id = 0x5a9bc95d;
+		constexpr static std::string_view type_name = "CollectibleTypeEntry";
+		constexpr static rivet::rivet_type_id type_id = 0x5a9bc95d;
 
-		constexpr const static std::string_view TypeInfo_type_name = "TypeInfo";
-		constexpr const static rivet::rivet_type_id TypeInfo_type_id = 0xdec6dc02; 
+		constexpr static std::string_view TypeInfo_type_name = "TypeInfo";
+		constexpr static rivet::rivet_type_id TypeInfo_type_id = 0xdec6dc02; 
 
 		explicit CollectibleTypeEntry() = default;
 		explicit CollectibleTypeEntry([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

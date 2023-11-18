@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct TargetingBasePrius; 
 
 	struct RIVET_DDL_SHARED BotConfigTargeting : ConfigBase {
-		constexpr const static std::string_view type_name = "BotConfigTargeting";
-		constexpr const static rivet::rivet_type_id type_id = 0x36b719ab;
+		constexpr static std::string_view type_name = "BotConfigTargeting";
+		constexpr static rivet::rivet_type_id type_id = 0x36b719ab;
 
-		constexpr const static std::string_view Targeting_type_name = "Targeting";
-		constexpr const static rivet::rivet_type_id Targeting_type_id = 0x61ddca35; 
+		constexpr static std::string_view Targeting_type_name = "Targeting";
+		constexpr static rivet::rivet_type_id Targeting_type_id = 0x61ddca35; 
 
 		explicit BotConfigTargeting() = default;
 		explicit BotConfigTargeting([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

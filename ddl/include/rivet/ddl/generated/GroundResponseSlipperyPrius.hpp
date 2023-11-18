@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED GroundResponseSlipperyPrius : GroundResponseSpeedModifierPrius {
-		constexpr const static std::string_view type_name = "GroundResponseSlipperyPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xac304651;
+		constexpr static std::string_view type_name = "GroundResponseSlipperyPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xac304651;
 
-		constexpr const static std::string_view MomentumWeightWalk_type_name = "MomentumWeightWalk";
-		constexpr const static rivet::rivet_type_id MomentumWeightWalk_type_id = 0x15db87b8;
-		constexpr const static std::string_view MomentumWeightRun_type_name = "MomentumWeightRun";
-		constexpr const static rivet::rivet_type_id MomentumWeightRun_type_id = 0xc7c185a4; 
+		constexpr static std::string_view MomentumWeightWalk_type_name = "MomentumWeightWalk";
+		constexpr static rivet::rivet_type_id MomentumWeightWalk_type_id = 0x15db87b8;
+		constexpr static std::string_view MomentumWeightRun_type_name = "MomentumWeightRun";
+		constexpr static rivet::rivet_type_id MomentumWeightRun_type_id = 0xc7c185a4; 
 
 		explicit GroundResponseSlipperyPrius() = default;
 		explicit GroundResponseSlipperyPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

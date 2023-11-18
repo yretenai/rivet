@@ -19,15 +19,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ModelSplineColorRandomness : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "ModelSplineColorRandomness";
-		constexpr const static rivet::rivet_type_id type_id = 0xaa32b636;
+		constexpr static std::string_view type_name = "ModelSplineColorRandomness";
+		constexpr static rivet::rivet_type_id type_id = 0xaa32b636;
 
-		constexpr const static std::string_view X_type_name = "X";
-		constexpr const static rivet::rivet_type_id X_type_id = 0x5e33418d;
-		constexpr const static std::string_view Y_type_name = "Y";
-		constexpr const static rivet::rivet_type_id Y_type_id = 0x2934711b;
-		constexpr const static std::string_view Z_type_name = "Z";
-		constexpr const static rivet::rivet_type_id Z_type_id = 0xb03d20a1; 
+		constexpr static std::string_view X_type_name = "X";
+		constexpr static rivet::rivet_type_id X_type_id = 0x5e33418d;
+		constexpr static std::string_view Y_type_name = "Y";
+		constexpr static rivet::rivet_type_id Y_type_id = 0x2934711b;
+		constexpr static std::string_view Z_type_name = "Z";
+		constexpr static rivet::rivet_type_id Z_type_id = 0xb03d20a1; 
 
 		explicit ModelSplineColorRandomness() = default;
 		explicit ModelSplineColorRandomness([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

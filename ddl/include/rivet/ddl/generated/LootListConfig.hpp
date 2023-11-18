@@ -17,20 +17,20 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/ConfigBase.hpp>
-#include <rivet/ddl/generated/enums/xd80b176a.hpp> 
+#include <rivet/ddl/generated/enums/xd80b176a.hpp>
+#include <rivet/ddl/generated/ConfigBase.hpp> 
 
 namespace rivet::ddl::generated {
 	struct ItemElement; 
 
 	struct RIVET_DDL_SHARED LootListConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "LootListConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x342f7277;
+		constexpr static std::string_view type_name = "LootListConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x342f7277;
 
-		constexpr const static std::string_view SelectType_type_name = "SelectType";
-		constexpr const static rivet::rivet_type_id SelectType_type_id = 0xe2660679;
-		constexpr const static std::string_view Items_type_name = "Items";
-		constexpr const static rivet::rivet_type_id Items_type_id = 0xf84d258c; 
+		constexpr static std::string_view SelectType_type_name = "SelectType";
+		constexpr static rivet::rivet_type_id SelectType_type_id = 0xe2660679;
+		constexpr static std::string_view Items_type_name = "Items";
+		constexpr static rivet::rivet_type_id Items_type_id = 0xf84d258c; 
 
 		explicit LootListConfig() = default;
 		explicit LootListConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

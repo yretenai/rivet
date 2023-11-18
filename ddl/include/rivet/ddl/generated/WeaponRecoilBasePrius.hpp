@@ -19,11 +19,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED WeaponRecoilBasePrius : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "WeaponRecoilBasePrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x2f04b1a3;
+		constexpr static std::string_view type_name = "WeaponRecoilBasePrius";
+		constexpr static rivet::rivet_type_id type_id = 0x2f04b1a3;
 
-		constexpr const static std::string_view RecoilAnim_type_name = "RecoilAnim";
-		constexpr const static rivet::rivet_type_id RecoilAnim_type_id = 0x6a8aecf2; 
+		constexpr static std::string_view RecoilAnim_type_name = "RecoilAnim";
+		constexpr static rivet::rivet_type_id RecoilAnim_type_id = 0x6a8aecf2; 
 
 		explicit WeaponRecoilBasePrius() = default;
 		explicit WeaponRecoilBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

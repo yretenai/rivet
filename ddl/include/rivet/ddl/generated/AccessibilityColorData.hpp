@@ -21,13 +21,13 @@ namespace rivet::ddl::generated {
 	struct DDLVector3; 
 
 	struct RIVET_DDL_SHARED AccessibilityColorData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "AccessibilityColorData";
-		constexpr const static rivet::rivet_type_id type_id = 0xb2457259;
+		constexpr static std::string_view type_name = "AccessibilityColorData";
+		constexpr static rivet::rivet_type_id type_id = 0xb2457259;
 
-		constexpr const static std::string_view ColorName_type_name = "ColorName";
-		constexpr const static rivet::rivet_type_id ColorName_type_id = 0xe122a241;
-		constexpr const static std::string_view ColorValue_type_name = "ColorValue";
-		constexpr const static rivet::rivet_type_id ColorValue_type_id = 0x27726256; 
+		constexpr static std::string_view ColorName_type_name = "ColorName";
+		constexpr static rivet::rivet_type_id ColorName_type_id = 0xe122a241;
+		constexpr static std::string_view ColorValue_type_name = "ColorValue";
+		constexpr static rivet::rivet_type_id ColorValue_type_id = 0x27726256; 
 
 		explicit AccessibilityColorData() = default;
 		explicit AccessibilityColorData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

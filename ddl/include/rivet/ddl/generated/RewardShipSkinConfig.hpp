@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct ShipSkinMaterialGroup; 
 
 	struct RIVET_DDL_SHARED RewardShipSkinConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "RewardShipSkinConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x8a5b85ed;
+		constexpr static std::string_view type_name = "RewardShipSkinConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x8a5b85ed;
 
-		constexpr const static std::string_view Skins_type_name = "Skins";
-		constexpr const static rivet::rivet_type_id Skins_type_id = 0xf85047c1; 
+		constexpr static std::string_view Skins_type_name = "Skins";
+		constexpr static rivet::rivet_type_id Skins_type_id = 0xf85047c1; 
 
 		explicit RewardShipSkinConfig() = default;
 		explicit RewardShipSkinConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

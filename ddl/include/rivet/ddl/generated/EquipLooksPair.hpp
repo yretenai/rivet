@@ -19,15 +19,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED EquipLooksPair : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "EquipLooksPair";
-		constexpr const static rivet::rivet_type_id type_id = 0x95386222;
+		constexpr static std::string_view type_name = "EquipLooksPair";
+		constexpr static rivet::rivet_type_id type_id = 0x95386222;
 
-		constexpr const static std::string_view EquippedLooks_type_name = "EquippedLooks";
-		constexpr const static rivet::rivet_type_id EquippedLooks_type_id = 0xda69e16b;
-		constexpr const static std::string_view UnequippedLooks_type_name = "UnequippedLooks";
-		constexpr const static rivet::rivet_type_id UnequippedLooks_type_id = 0x4cc12898;
-		constexpr const static std::string_view SoundSwitchGroupName_type_name = "SoundSwitchGroupName";
-		constexpr const static rivet::rivet_type_id SoundSwitchGroupName_type_id = 0x736eb367; 
+		constexpr static std::string_view EquippedLooks_type_name = "EquippedLooks";
+		constexpr static rivet::rivet_type_id EquippedLooks_type_id = 0xda69e16b;
+		constexpr static std::string_view UnequippedLooks_type_name = "UnequippedLooks";
+		constexpr static rivet::rivet_type_id UnequippedLooks_type_id = 0x4cc12898;
+		constexpr static std::string_view SoundSwitchGroupName_type_name = "SoundSwitchGroupName";
+		constexpr static rivet::rivet_type_id SoundSwitchGroupName_type_id = 0x736eb367; 
 
 		explicit EquipLooksPair() = default;
 		explicit EquipLooksPair([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

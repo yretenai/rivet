@@ -20,20 +20,20 @@
 #include <rivet/ddl/generated/ConfigBase.hpp> 
 
 namespace rivet::ddl::generated {
-	struct CineMenuOption;
 	struct MayaNameTrackTags;
-	struct AnimSkeletonInfo; 
+	struct AnimSkeletonInfo;
+	struct CineMenuOption; 
 
 	struct RIVET_DDL_SHARED Cinematic2ActorCustomizationConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "Cinematic2ActorCustomizationConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xd8b57470;
+		constexpr static std::string_view type_name = "Cinematic2ActorCustomizationConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xd8b57470;
 
-		constexpr const static std::string_view CineOptionsMenu_type_name = "CineOptionsMenu";
-		constexpr const static rivet::rivet_type_id CineOptionsMenu_type_id = 0x3d07821f;
-		constexpr const static std::string_view MayaNameTrackTags_type_name = "MayaNameTrackTags";
-		constexpr const static rivet::rivet_type_id MayaNameTrackTags_type_id = 0x2d1628f0;
-		constexpr const static std::string_view AnimSkeletonInfos_type_name = "AnimSkeletonInfos";
-		constexpr const static rivet::rivet_type_id AnimSkeletonInfos_type_id = 0xfd3c800a; 
+		constexpr static std::string_view CineOptionsMenu_type_name = "CineOptionsMenu";
+		constexpr static rivet::rivet_type_id CineOptionsMenu_type_id = 0x3d07821f;
+		constexpr static std::string_view MayaNameTrackTags_type_name = "MayaNameTrackTags";
+		constexpr static rivet::rivet_type_id MayaNameTrackTags_type_id = 0x2d1628f0;
+		constexpr static std::string_view AnimSkeletonInfos_type_name = "AnimSkeletonInfos";
+		constexpr static rivet::rivet_type_id AnimSkeletonInfos_type_id = 0xfd3c800a; 
 
 		explicit Cinematic2ActorCustomizationConfig() = default;
 		explicit Cinematic2ActorCustomizationConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

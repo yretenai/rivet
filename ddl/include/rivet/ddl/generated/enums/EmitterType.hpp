@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view EmitterType_type_name = "EmitterType";
-	constexpr const static rivet::rivet_type_id EmitterType_type_id = 0xf5bf036d;
+	constexpr static std::string_view EmitterType_type_name = "EmitterType";
+	constexpr static rivet::rivet_type_id EmitterType_type_id = 0xf5bf036d;
 
-	constexpr const static std::array<std::string_view, 2> EmitterType_values = {
+	constexpr static std::array<std::string_view, 2> EmitterType_values = {
 		"kCPU",
 		"kGPU", 
 	};

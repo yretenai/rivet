@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ControlRemapPresetDataGame : ControlRemapPresetData {
-		constexpr const static std::string_view type_name = "ControlRemapPresetDataGame";
-		constexpr const static rivet::rivet_type_id type_id = 0x94f8c1bd;
+		constexpr static std::string_view type_name = "ControlRemapPresetDataGame";
+		constexpr static rivet::rivet_type_id type_id = 0x94f8c1bd;
 
 		explicit ControlRemapPresetDataGame() = default;
 		explicit ControlRemapPresetDataGame([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct LevelArea; 
 
 	struct RIVET_DDL_SHARED LevelAreaConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "LevelAreaConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x53a0873d;
+		constexpr static std::string_view type_name = "LevelAreaConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x53a0873d;
 
-		constexpr const static std::string_view Areas_type_name = "Areas";
-		constexpr const static rivet::rivet_type_id Areas_type_id = 0x41e37e9d; 
+		constexpr static std::string_view Areas_type_name = "Areas";
+		constexpr static rivet::rivet_type_id Areas_type_id = 0x41e37e9d; 
 
 		explicit LevelAreaConfig() = default;
 		explicit LevelAreaConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -19,13 +19,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED HeroAimConfig : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "HeroAimConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xdc6608eb;
+		constexpr static std::string_view type_name = "HeroAimConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xdc6608eb;
 
-		constexpr const static std::string_view StandardAimCameraBlend_type_name = "StandardAimCameraBlend";
-		constexpr const static rivet::rivet_type_id StandardAimCameraBlend_type_id = 0xe5f33d5f;
-		constexpr const static std::string_view GrenadeAimDelay_type_name = "GrenadeAimDelay";
-		constexpr const static rivet::rivet_type_id GrenadeAimDelay_type_id = 0x71119e7a; 
+		constexpr static std::string_view StandardAimCameraBlend_type_name = "StandardAimCameraBlend";
+		constexpr static rivet::rivet_type_id StandardAimCameraBlend_type_id = 0xe5f33d5f;
+		constexpr static std::string_view GrenadeAimDelay_type_name = "GrenadeAimDelay";
+		constexpr static rivet::rivet_type_id GrenadeAimDelay_type_id = 0x71119e7a; 
 
 		explicit HeroAimConfig() = default;
 		explicit HeroAimConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

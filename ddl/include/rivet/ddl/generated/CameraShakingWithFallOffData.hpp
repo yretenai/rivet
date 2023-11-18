@@ -19,17 +19,17 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED CameraShakingWithFallOffData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "CameraShakingWithFallOffData";
-		constexpr const static rivet::rivet_type_id type_id = 0xe0f8377c;
+		constexpr static std::string_view type_name = "CameraShakingWithFallOffData";
+		constexpr static rivet::rivet_type_id type_id = 0xe0f8377c;
 
-		constexpr const static std::string_view InnerRadius_type_name = "InnerRadius";
-		constexpr const static rivet::rivet_type_id InnerRadius_type_id = 0xf8a3836d;
-		constexpr const static std::string_view OuterRadius_type_name = "OuterRadius";
-		constexpr const static rivet::rivet_type_id OuterRadius_type_id = 0xf6b6fbde;
-		constexpr const static std::string_view FollowActor_type_name = "FollowActor";
-		constexpr const static rivet::rivet_type_id FollowActor_type_id = 0x6b8aab60;
-		constexpr const static std::string_view ShakeDataConfig_type_name = "ShakeDataConfig";
-		constexpr const static rivet::rivet_type_id ShakeDataConfig_type_id = 0x6ccd62e8; 
+		constexpr static std::string_view InnerRadius_type_name = "InnerRadius";
+		constexpr static rivet::rivet_type_id InnerRadius_type_id = 0xf8a3836d;
+		constexpr static std::string_view OuterRadius_type_name = "OuterRadius";
+		constexpr static rivet::rivet_type_id OuterRadius_type_id = 0xf6b6fbde;
+		constexpr static std::string_view FollowActor_type_name = "FollowActor";
+		constexpr static rivet::rivet_type_id FollowActor_type_id = 0x6b8aab60;
+		constexpr static std::string_view ShakeDataConfig_type_name = "ShakeDataConfig";
+		constexpr static rivet::rivet_type_id ShakeDataConfig_type_id = 0x6ccd62e8; 
 
 		explicit CameraShakingWithFallOffData() = default;
 		explicit CameraShakingWithFallOffData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

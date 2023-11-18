@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct SubtaskDef; 
 
 	struct RIVET_DDL_SHARED TaskDef : ActivityDefBase {
-		constexpr const static std::string_view type_name = "TaskDef";
-		constexpr const static rivet::rivet_type_id type_id = 0xde94000f;
+		constexpr static std::string_view type_name = "TaskDef";
+		constexpr static rivet::rivet_type_id type_id = 0xde94000f;
 
-		constexpr const static std::string_view Subtasks_type_name = "Subtasks";
-		constexpr const static rivet::rivet_type_id Subtasks_type_id = 0xd0ea373d; 
+		constexpr static std::string_view Subtasks_type_name = "Subtasks";
+		constexpr static rivet::rivet_type_id Subtasks_type_id = 0xd0ea373d; 
 
 		explicit TaskDef() = default;
 		explicit TaskDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct CameraShakingData; 
 
 	struct RIVET_DDL_SHARED CameraShakingConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "CameraShakingConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x2b6a7e31;
+		constexpr static std::string_view type_name = "CameraShakingConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x2b6a7e31;
 
-		constexpr const static std::string_view Data_type_name = "Data";
-		constexpr const static rivet::rivet_type_id Data_type_id = 0x9d6333d3; 
+		constexpr static std::string_view Data_type_name = "Data";
+		constexpr static rivet::rivet_type_id Data_type_id = 0x9d6333d3; 
 
 		explicit CameraShakingConfig() = default;
 		explicit CameraShakingConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

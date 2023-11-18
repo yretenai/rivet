@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct TimeScaleBasePrius; 
 
 	struct RIVET_DDL_SHARED TimeScaleConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "TimeScaleConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x2f07711a;
+		constexpr static std::string_view type_name = "TimeScaleConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x2f07711a;
 
-		constexpr const static std::string_view TimeScalePrius_type_name = "TimeScalePrius";
-		constexpr const static rivet::rivet_type_id TimeScalePrius_type_id = 0x74fc5126; 
+		constexpr static std::string_view TimeScalePrius_type_name = "TimeScalePrius";
+		constexpr static rivet::rivet_type_id TimeScalePrius_type_id = 0x74fc5126; 
 
 		explicit TimeScaleConfig() = default;
 		explicit TimeScaleConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

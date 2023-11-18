@@ -21,19 +21,19 @@ namespace rivet::ddl::generated {
 	struct HeroSpeedConfig; 
 
 	struct RIVET_DDL_SHARED HeroSpeedConfigCollection : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "HeroSpeedConfigCollection";
-		constexpr const static rivet::rivet_type_id type_id = 0xb9975e6b;
+		constexpr static std::string_view type_name = "HeroSpeedConfigCollection";
+		constexpr static rivet::rivet_type_id type_id = 0xb9975e6b;
 
-		constexpr const static std::string_view NormalSpeedConfig_type_name = "NormalSpeedConfig";
-		constexpr const static rivet::rivet_type_id NormalSpeedConfig_type_id = 0xea9590d5;
-		constexpr const static std::string_view AimSpeedConfig_type_name = "AimSpeedConfig";
-		constexpr const static rivet::rivet_type_id AimSpeedConfig_type_id = 0x295decfa;
-		constexpr const static std::string_view JumpSpeedConfig_type_name = "JumpSpeedConfig";
-		constexpr const static rivet::rivet_type_id JumpSpeedConfig_type_id = 0x76a7baf5;
-		constexpr const static std::string_view RunAccel_type_name = "RunAccel";
-		constexpr const static rivet::rivet_type_id RunAccel_type_id = 0xa7e78bae;
-		constexpr const static std::string_view RunDecel_type_name = "RunDecel";
-		constexpr const static rivet::rivet_type_id RunDecel_type_id = 0x4a6c5b02; 
+		constexpr static std::string_view NormalSpeedConfig_type_name = "NormalSpeedConfig";
+		constexpr static rivet::rivet_type_id NormalSpeedConfig_type_id = 0xea9590d5;
+		constexpr static std::string_view AimSpeedConfig_type_name = "AimSpeedConfig";
+		constexpr static rivet::rivet_type_id AimSpeedConfig_type_id = 0x295decfa;
+		constexpr static std::string_view JumpSpeedConfig_type_name = "JumpSpeedConfig";
+		constexpr static rivet::rivet_type_id JumpSpeedConfig_type_id = 0x76a7baf5;
+		constexpr static std::string_view RunAccel_type_name = "RunAccel";
+		constexpr static rivet::rivet_type_id RunAccel_type_id = 0xa7e78bae;
+		constexpr static std::string_view RunDecel_type_name = "RunDecel";
+		constexpr static rivet::rivet_type_id RunDecel_type_id = 0x4a6c5b02; 
 
 		explicit HeroSpeedConfigCollection() = default;
 		explicit HeroSpeedConfigCollection([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

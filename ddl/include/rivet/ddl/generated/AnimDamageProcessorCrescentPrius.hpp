@@ -17,57 +17,57 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
+#include <rivet/ddl/generated/enums/KnockbackLevels.hpp>
 #include <rivet/ddl/generated/enums/x8d7e44cf.hpp>
-#include <rivet/ddl/generated/AnimDamageAttackStyleBase.hpp>
-#include <rivet/ddl/generated/enums/KnockbackLevels.hpp> 
+#include <rivet/ddl/generated/AnimDamageAttackStyleBase.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED AnimDamageProcessorCrescentPrius : AnimDamageAttackStyleBase {
-		constexpr const static std::string_view type_name = "AnimDamageProcessorCrescentPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xfd9d079a;
+		constexpr static std::string_view type_name = "AnimDamageProcessorCrescentPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xfd9d079a;
 
-		constexpr const static std::string_view DamageType_type_name = "DamageType";
-		constexpr const static rivet::rivet_type_id DamageType_type_id = 0x840c154d;
-		constexpr const static std::string_view DamageAmount_type_name = "DamageAmount";
-		constexpr const static rivet::rivet_type_id DamageAmount_type_id = 0x563be470;
-		constexpr const static std::string_view DamageFalloff_type_name = "DamageFalloff";
-		constexpr const static rivet::rivet_type_id DamageFalloff_type_id = 0x55600861;
-		constexpr const static std::string_view DamageVictimMin_type_name = "DamageVictimMin";
-		constexpr const static rivet::rivet_type_id DamageVictimMin_type_id = 0x66b9697e;
-		constexpr const static std::string_view DamageVictimMax_type_name = "DamageVictimMax";
-		constexpr const static rivet::rivet_type_id DamageVictimMax_type_id = 0x5ab45627;
-		constexpr const static std::string_view Knockback_type_name = "Knockback";
-		constexpr const static rivet::rivet_type_id Knockback_type_id = 0x2e553fdd;
-		constexpr const static std::string_view KnockbackAmount_type_name = "KnockbackAmount";
-		constexpr const static rivet::rivet_type_id KnockbackAmount_type_id = 0x7b1e600b;
-		constexpr const static std::string_view KnockbackVictimMax_type_name = "KnockbackVictimMax";
-		constexpr const static rivet::rivet_type_id KnockbackVictimMax_type_id = 0x16fb58b3;
-		constexpr const static std::string_view ArcHeight_type_name = "ArcHeight";
-		constexpr const static rivet::rivet_type_id ArcHeight_type_id = 0x38e49f4a;
-		constexpr const static std::string_view ArcHeightAlt_type_name = "ArcHeightAlt";
-		constexpr const static rivet::rivet_type_id ArcHeightAlt_type_id = 0xc3cbcee3;
-		constexpr const static std::string_view SweepAngle_type_name = "SweepAngle";
-		constexpr const static rivet::rivet_type_id SweepAngle_type_id = 0xfcc5fb84;
-		constexpr const static std::string_view SweepRange_type_name = "SweepRange";
-		constexpr const static rivet::rivet_type_id SweepRange_type_id = 0x6fc3e4c4;
-		constexpr const static std::string_view SweepRangeSide_type_name = "SweepRangeSide";
-		constexpr const static rivet::rivet_type_id SweepRangeSide_type_id = 0xc8e992fe;
-		constexpr const static std::string_view SweepRangeBack_type_name = "SweepRangeBack";
-		constexpr const static rivet::rivet_type_id SweepRangeBack_type_id = 0x86a6487c;
-		constexpr const static std::string_view CollRadius_type_name = "CollRadius";
-		constexpr const static rivet::rivet_type_id CollRadius_type_id = 0xc7f69ee3;
-		constexpr const static std::string_view CollRadiusSide_type_name = "CollRadiusSide";
-		constexpr const static rivet::rivet_type_id CollRadiusSide_type_id = 0xd6560193;
-		constexpr const static std::string_view CollRadiusBack_type_name = "CollRadiusBack";
-		constexpr const static rivet::rivet_type_id CollRadiusBack_type_id = 0x9819db11;
-		constexpr const static std::string_view MaxHits_type_name = "MaxHits";
-		constexpr const static rivet::rivet_type_id MaxHits_type_id = 0xe714fa9b;
-		constexpr const static std::string_view PosAngleLimit_type_name = "PosAngleLimit";
-		constexpr const static rivet::rivet_type_id PosAngleLimit_type_id = 0xe4520813;
-		constexpr const static std::string_view RotationRate_type_name = "RotationRate";
-		constexpr const static rivet::rivet_type_id RotationRate_type_id = 0xb0b29e9b;
-		constexpr const static std::string_view Duration_type_name = "Duration";
-		constexpr const static rivet::rivet_type_id Duration_type_id = 0x7c5e3db0; 
+		constexpr static std::string_view DamageType_type_name = "DamageType";
+		constexpr static rivet::rivet_type_id DamageType_type_id = 0x840c154d;
+		constexpr static std::string_view DamageAmount_type_name = "DamageAmount";
+		constexpr static rivet::rivet_type_id DamageAmount_type_id = 0x563be470;
+		constexpr static std::string_view DamageFalloff_type_name = "DamageFalloff";
+		constexpr static rivet::rivet_type_id DamageFalloff_type_id = 0x55600861;
+		constexpr static std::string_view DamageVictimMin_type_name = "DamageVictimMin";
+		constexpr static rivet::rivet_type_id DamageVictimMin_type_id = 0x66b9697e;
+		constexpr static std::string_view DamageVictimMax_type_name = "DamageVictimMax";
+		constexpr static rivet::rivet_type_id DamageVictimMax_type_id = 0x5ab45627;
+		constexpr static std::string_view Knockback_type_name = "Knockback";
+		constexpr static rivet::rivet_type_id Knockback_type_id = 0x2e553fdd;
+		constexpr static std::string_view KnockbackAmount_type_name = "KnockbackAmount";
+		constexpr static rivet::rivet_type_id KnockbackAmount_type_id = 0x7b1e600b;
+		constexpr static std::string_view KnockbackVictimMax_type_name = "KnockbackVictimMax";
+		constexpr static rivet::rivet_type_id KnockbackVictimMax_type_id = 0x16fb58b3;
+		constexpr static std::string_view ArcHeight_type_name = "ArcHeight";
+		constexpr static rivet::rivet_type_id ArcHeight_type_id = 0x38e49f4a;
+		constexpr static std::string_view ArcHeightAlt_type_name = "ArcHeightAlt";
+		constexpr static rivet::rivet_type_id ArcHeightAlt_type_id = 0xc3cbcee3;
+		constexpr static std::string_view SweepAngle_type_name = "SweepAngle";
+		constexpr static rivet::rivet_type_id SweepAngle_type_id = 0xfcc5fb84;
+		constexpr static std::string_view SweepRange_type_name = "SweepRange";
+		constexpr static rivet::rivet_type_id SweepRange_type_id = 0x6fc3e4c4;
+		constexpr static std::string_view SweepRangeSide_type_name = "SweepRangeSide";
+		constexpr static rivet::rivet_type_id SweepRangeSide_type_id = 0xc8e992fe;
+		constexpr static std::string_view SweepRangeBack_type_name = "SweepRangeBack";
+		constexpr static rivet::rivet_type_id SweepRangeBack_type_id = 0x86a6487c;
+		constexpr static std::string_view CollRadius_type_name = "CollRadius";
+		constexpr static rivet::rivet_type_id CollRadius_type_id = 0xc7f69ee3;
+		constexpr static std::string_view CollRadiusSide_type_name = "CollRadiusSide";
+		constexpr static rivet::rivet_type_id CollRadiusSide_type_id = 0xd6560193;
+		constexpr static std::string_view CollRadiusBack_type_name = "CollRadiusBack";
+		constexpr static rivet::rivet_type_id CollRadiusBack_type_id = 0x9819db11;
+		constexpr static std::string_view MaxHits_type_name = "MaxHits";
+		constexpr static rivet::rivet_type_id MaxHits_type_id = 0xe714fa9b;
+		constexpr static std::string_view PosAngleLimit_type_name = "PosAngleLimit";
+		constexpr static rivet::rivet_type_id PosAngleLimit_type_id = 0xe4520813;
+		constexpr static std::string_view RotationRate_type_name = "RotationRate";
+		constexpr static rivet::rivet_type_id RotationRate_type_id = 0xb0b29e9b;
+		constexpr static std::string_view Duration_type_name = "Duration";
+		constexpr static rivet::rivet_type_id Duration_type_id = 0x7c5e3db0; 
 
 		explicit AnimDamageProcessorCrescentPrius() = default;
 		explicit AnimDamageProcessorCrescentPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

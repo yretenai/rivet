@@ -17,25 +17,25 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/BotMovementBase.hpp>
-#include <rivet/ddl/generated/enums/x99bafe38.hpp> 
+#include <rivet/ddl/generated/enums/x99bafe38.hpp>
+#include <rivet/ddl/generated/BotMovementBase.hpp> 
 
 namespace rivet::ddl::generated {
-	struct BotMountDamageData;
-	struct DDLVector3; 
+	struct DDLVector3;
+	struct BotMountDamageData; 
 
 	struct RIVET_DDL_SHARED BotMovementSteerable : BotMovementBase {
-		constexpr const static std::string_view type_name = "BotMovementSteerable";
-		constexpr const static rivet::rivet_type_id type_id = 0xaaca6ca9;
+		constexpr static std::string_view type_name = "BotMovementSteerable";
+		constexpr static rivet::rivet_type_id type_id = 0xaaca6ca9;
 
-		constexpr const static std::string_view DamageHeroKamikaze_type_name = "DamageHeroKamikaze";
-		constexpr const static rivet::rivet_type_id DamageHeroKamikaze_type_id = 0xbcbb5b42;
-		constexpr const static std::string_view BotKamikazeDamageData_type_name = "BotKamikazeDamageData";
-		constexpr const static rivet::rivet_type_id BotKamikazeDamageData_type_id = 0x71543d2;
-		constexpr const static std::string_view BotImpactDamageData_type_name = "BotImpactDamageData";
-		constexpr const static rivet::rivet_type_id BotImpactDamageData_type_id = 0xe38d4b35;
-		constexpr const static std::string_view BreakableBusterLocalOffset_type_name = "BreakableBusterLocalOffset";
-		constexpr const static rivet::rivet_type_id BreakableBusterLocalOffset_type_id = 0x466f3ca0; 
+		constexpr static std::string_view DamageHeroKamikaze_type_name = "DamageHeroKamikaze";
+		constexpr static rivet::rivet_type_id DamageHeroKamikaze_type_id = 0xbcbb5b42;
+		constexpr static std::string_view BotKamikazeDamageData_type_name = "BotKamikazeDamageData";
+		constexpr static rivet::rivet_type_id BotKamikazeDamageData_type_id = 0x71543d2;
+		constexpr static std::string_view BotImpactDamageData_type_name = "BotImpactDamageData";
+		constexpr static rivet::rivet_type_id BotImpactDamageData_type_id = 0xe38d4b35;
+		constexpr static std::string_view BreakableBusterLocalOffset_type_name = "BreakableBusterLocalOffset";
+		constexpr static rivet::rivet_type_id BreakableBusterLocalOffset_type_id = 0x466f3ca0; 
 
 		explicit BotMovementSteerable() = default;
 		explicit BotMovementSteerable([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

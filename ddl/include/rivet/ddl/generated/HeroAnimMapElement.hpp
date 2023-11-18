@@ -19,13 +19,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED HeroAnimMapElement : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "HeroAnimMapElement";
-		constexpr const static rivet::rivet_type_id type_id = 0x6773d0c9;
+		constexpr static std::string_view type_name = "HeroAnimMapElement";
+		constexpr static rivet::rivet_type_id type_id = 0x6773d0c9;
 
-		constexpr const static std::string_view MountAnim_type_name = "MountAnim";
-		constexpr const static rivet::rivet_type_id MountAnim_type_id = 0xa6329c96;
-		constexpr const static std::string_view HeroAnim_type_name = "HeroAnim";
-		constexpr const static rivet::rivet_type_id HeroAnim_type_id = 0xfef6e27a; 
+		constexpr static std::string_view MountAnim_type_name = "MountAnim";
+		constexpr static rivet::rivet_type_id MountAnim_type_id = 0xa6329c96;
+		constexpr static std::string_view HeroAnim_type_name = "HeroAnim";
+		constexpr static rivet::rivet_type_id HeroAnim_type_id = 0xfef6e27a; 
 
 		explicit HeroAnimMapElement() = default;
 		explicit HeroAnimMapElement([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -3,14 +3,14 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/ModelSplineEnvelopeFloatDef.hpp>
-#include <rivet/ddl/generated/ModelSplineColorRandomness.hpp>
-#include <rivet/ddl/generated/ModelSplineEnvelopeVec2Def.hpp>
-#include <rivet/ddl/generated/DDLVector2.hpp>
-#include <rivet/ddl/generated/ModelSplineMaterialExtraFoliage.hpp>
-#include <rivet/ddl/generated/ModelSplineMaterialExtraHair.hpp>
+#include <rivet/ddl/generated/DDLVector3.hpp>
 #include <rivet/ddl/generated/ModelSplineEnvelopeColorDef.hpp>
-#include <rivet/ddl/generated/DDLVector3.hpp> 
+#include <rivet/ddl/generated/ModelSplineMaterialExtraHair.hpp>
+#include <rivet/ddl/generated/ModelSplineMaterialExtraFoliage.hpp>
+#include <rivet/ddl/generated/DDLVector2.hpp>
+#include <rivet/ddl/generated/ModelSplineEnvelopeVec2Def.hpp>
+#include <rivet/ddl/generated/ModelSplineColorRandomness.hpp>
+#include <rivet/ddl/generated/ModelSplineEnvelopeFloatDef.hpp> 
 
 #include <rivet/ddl/generated/ModelSplineDescriptionDef.hpp>
 

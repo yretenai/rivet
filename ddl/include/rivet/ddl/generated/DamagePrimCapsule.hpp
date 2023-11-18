@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DamagePrimCapsule : DamagePrimBase {
-		constexpr const static std::string_view type_name = "DamagePrimCapsule";
-		constexpr const static rivet::rivet_type_id type_id = 0xda0a6b77;
+		constexpr static std::string_view type_name = "DamagePrimCapsule";
+		constexpr static rivet::rivet_type_id type_id = 0xda0a6b77;
 
-		constexpr const static std::string_view DamageRadius_type_name = "DamageRadius";
-		constexpr const static rivet::rivet_type_id DamageRadius_type_id = 0xe3e6fa68; 
+		constexpr static std::string_view DamageRadius_type_name = "DamageRadius";
+		constexpr static rivet::rivet_type_id DamageRadius_type_id = 0xe3e6fa68; 
 
 		explicit DamagePrimCapsule() = default;
 		explicit DamagePrimCapsule([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

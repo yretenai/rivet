@@ -21,11 +21,11 @@ namespace rivet::ddl::generated {
 	struct DynamicEnumValueRef; 
 
 	struct RIVET_DDL_SHARED CollectibleTypeDenum : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "CollectibleTypeDenum";
-		constexpr const static rivet::rivet_type_id type_id = 0xf4d003f0;
+		constexpr static std::string_view type_name = "CollectibleTypeDenum";
+		constexpr static rivet::rivet_type_id type_id = 0xf4d003f0;
 
-		constexpr const static std::string_view Denum_type_name = "Denum";
-		constexpr const static rivet::rivet_type_id Denum_type_id = 0x9c399b1c; 
+		constexpr static std::string_view Denum_type_name = "Denum";
+		constexpr static rivet::rivet_type_id Denum_type_id = 0x9c399b1c; 
 
 		explicit CollectibleTypeDenum() = default;
 		explicit CollectibleTypeDenum([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -22,11 +22,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DebugLink : ActivityLinkBase {
-		constexpr const static std::string_view type_name = "DebugLink";
-		constexpr const static rivet::rivet_type_id type_id = 0x267e76e5;
+		constexpr static std::string_view type_name = "DebugLink";
+		constexpr static rivet::rivet_type_id type_id = 0x267e76e5;
 
-		constexpr const static std::string_view ActivityState_type_name = "ActivityState";
-		constexpr const static rivet::rivet_type_id ActivityState_type_id = 0x3cab4e3; 
+		constexpr static std::string_view ActivityState_type_name = "ActivityState";
+		constexpr static rivet::rivet_type_id ActivityState_type_id = 0x3cab4e3; 
 
 		explicit DebugLink() = default;
 		explicit DebugLink([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

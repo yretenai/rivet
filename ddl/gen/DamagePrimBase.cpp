@@ -4,10 +4,10 @@
 // SPDX-License-Identifier: MPL-2.0
 
 #include <rivet/ddl/generated/DamagePrimCapsule.hpp>
-#include <rivet/ddl/generated/DDLVector3.hpp>
-#include <rivet/ddl/generated/DamagePrimSweptSphere.hpp>
+#include <rivet/ddl/generated/DamagePrimSphere.hpp>
 #include <rivet/ddl/generated/DamagePrimFan.hpp>
-#include <rivet/ddl/generated/DamagePrimSphere.hpp> 
+#include <rivet/ddl/generated/DamagePrimSweptSphere.hpp>
+#include <rivet/ddl/generated/DDLVector3.hpp> 
 
 #include <rivet/ddl/generated/DamagePrimBase.hpp>
 

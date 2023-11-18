@@ -24,19 +24,19 @@ namespace rivet::ddl::generated {
 	struct DDLVector2; 
 
 	struct RIVET_DDL_SHARED HoudiniHeightFieldScatterPerPointData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "HoudiniHeightFieldScatterPerPointData";
-		constexpr const static rivet::rivet_type_id type_id = 0x98856c4;
+		constexpr static std::string_view type_name = "HoudiniHeightFieldScatterPerPointData";
+		constexpr static rivet::rivet_type_id type_id = 0x98856c4;
 
-		constexpr const static std::string_view PerPointCountMethod_type_name = "PerPointCountMethod";
-		constexpr const static rivet::rivet_type_id PerPointCountMethod_type_id = 0x493c4cd6;
-		constexpr const static std::string_view ParamExactNumber_type_name = "ParamExactNumber";
-		constexpr const static rivet::rivet_type_id ParamExactNumber_type_id = 0x88ad89d5;
-		constexpr const static std::string_view ParamPoissonRange_type_name = "ParamPoissonRange";
-		constexpr const static rivet::rivet_type_id ParamPoissonRange_type_id = 0x67b21701;
-		constexpr const static std::string_view PositioningMethod_type_name = "PositioningMethod";
-		constexpr const static rivet::rivet_type_id PositioningMethod_type_id = 0x364e4f57;
-		constexpr const static std::string_view SourceLayerName_type_name = "SourceLayerName";
-		constexpr const static rivet::rivet_type_id SourceLayerName_type_id = 0xd16b513d; 
+		constexpr static std::string_view PerPointCountMethod_type_name = "PerPointCountMethod";
+		constexpr static rivet::rivet_type_id PerPointCountMethod_type_id = 0x493c4cd6;
+		constexpr static std::string_view ParamExactNumber_type_name = "ParamExactNumber";
+		constexpr static rivet::rivet_type_id ParamExactNumber_type_id = 0x88ad89d5;
+		constexpr static std::string_view ParamPoissonRange_type_name = "ParamPoissonRange";
+		constexpr static rivet::rivet_type_id ParamPoissonRange_type_id = 0x67b21701;
+		constexpr static std::string_view PositioningMethod_type_name = "PositioningMethod";
+		constexpr static rivet::rivet_type_id PositioningMethod_type_id = 0x364e4f57;
+		constexpr static std::string_view SourceLayerName_type_name = "SourceLayerName";
+		constexpr static rivet::rivet_type_id SourceLayerName_type_id = 0xd16b513d; 
 
 		explicit HoudiniHeightFieldScatterPerPointData() = default;
 		explicit HoudiniHeightFieldScatterPerPointData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

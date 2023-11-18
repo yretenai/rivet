@@ -21,11 +21,11 @@ namespace rivet::ddl::generated {
 	struct WaterImpulseData; 
 
 	struct RIVET_DDL_SHARED WaterImpulseGeneratorPrius : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "WaterImpulseGeneratorPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xaa4bf9ee;
+		constexpr static std::string_view type_name = "WaterImpulseGeneratorPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xaa4bf9ee;
 
-		constexpr const static std::string_view ImpulseList_type_name = "ImpulseList";
-		constexpr const static rivet::rivet_type_id ImpulseList_type_id = 0xa804b292; 
+		constexpr static std::string_view ImpulseList_type_name = "ImpulseList";
+		constexpr static rivet::rivet_type_id ImpulseList_type_id = 0xa804b292; 
 
 		explicit WaterImpulseGeneratorPrius() = default;
 		explicit WaterImpulseGeneratorPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

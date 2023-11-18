@@ -19,17 +19,17 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED WwiseSwitch : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "WwiseSwitch";
-		constexpr const static rivet::rivet_type_id type_id = 0xf7c114e5;
+		constexpr static std::string_view type_name = "WwiseSwitch";
+		constexpr static rivet::rivet_type_id type_id = 0xf7c114e5;
 
-		constexpr const static std::string_view SwitchGroupName_type_name = "SwitchGroupName";
-		constexpr const static rivet::rivet_type_id SwitchGroupName_type_id = 0xbd87120c;
-		constexpr const static std::string_view SwitchName_type_name = "SwitchName";
-		constexpr const static rivet::rivet_type_id SwitchName_type_id = 0x9ef4a63c;
-		constexpr const static std::string_view SwitchGroupId_type_name = "SwitchGroupId";
-		constexpr const static rivet::rivet_type_id SwitchGroupId_type_id = 0x6a6a3944;
-		constexpr const static std::string_view SwitchId_type_name = "SwitchId";
-		constexpr const static rivet::rivet_type_id SwitchId_type_id = 0xb3a9912a; 
+		constexpr static std::string_view SwitchGroupName_type_name = "SwitchGroupName";
+		constexpr static rivet::rivet_type_id SwitchGroupName_type_id = 0xbd87120c;
+		constexpr static std::string_view SwitchName_type_name = "SwitchName";
+		constexpr static rivet::rivet_type_id SwitchName_type_id = 0x9ef4a63c;
+		constexpr static std::string_view SwitchGroupId_type_name = "SwitchGroupId";
+		constexpr static rivet::rivet_type_id SwitchGroupId_type_id = 0x6a6a3944;
+		constexpr static std::string_view SwitchId_type_name = "SwitchId";
+		constexpr static rivet::rivet_type_id SwitchId_type_id = 0xb3a9912a; 
 
 		explicit WwiseSwitch() = default;
 		explicit WwiseSwitch([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

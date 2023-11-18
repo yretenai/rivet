@@ -23,15 +23,15 @@ namespace rivet::ddl::generated {
 	struct PhysicsComponentPrius; 
 
 	struct RIVET_DDL_SHARED BotConfigPhysics : ConfigBase {
-		constexpr const static std::string_view type_name = "BotConfigPhysics";
-		constexpr const static rivet::rivet_type_id type_id = 0xd2f3fa18;
+		constexpr static std::string_view type_name = "BotConfigPhysics";
+		constexpr static rivet::rivet_type_id type_id = 0xd2f3fa18;
 
-		constexpr const static std::string_view CollisionEnabled_type_name = "CollisionEnabled";
-		constexpr const static rivet::rivet_type_id CollisionEnabled_type_id = 0x22b79e74;
-		constexpr const static std::string_view DisableCharacterMoveCollision_type_name = "DisableCharacterMoveCollision";
-		constexpr const static rivet::rivet_type_id DisableCharacterMoveCollision_type_id = 0x68ac22ee;
-		constexpr const static std::string_view PhysicsComponentPrius_type_name = "PhysicsComponentPrius";
-		constexpr const static rivet::rivet_type_id PhysicsComponentPrius_type_id = 0xcc30dca6; 
+		constexpr static std::string_view CollisionEnabled_type_name = "CollisionEnabled";
+		constexpr static rivet::rivet_type_id CollisionEnabled_type_id = 0x22b79e74;
+		constexpr static std::string_view DisableCharacterMoveCollision_type_name = "DisableCharacterMoveCollision";
+		constexpr static rivet::rivet_type_id DisableCharacterMoveCollision_type_id = 0x68ac22ee;
+		constexpr static std::string_view PhysicsComponentPrius_type_name = "PhysicsComponentPrius";
+		constexpr static rivet::rivet_type_id PhysicsComponentPrius_type_id = 0xcc30dca6; 
 
 		explicit BotConfigPhysics() = default;
 		explicit BotConfigPhysics([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

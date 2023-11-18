@@ -19,23 +19,23 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED VisionConfig : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "VisionConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x5ad7564;
+		constexpr static std::string_view type_name = "VisionConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x5ad7564;
 
-		constexpr const static std::string_view SphereRadius_type_name = "SphereRadius";
-		constexpr const static rivet::rivet_type_id SphereRadius_type_id = 0x7b804017;
-		constexpr const static std::string_view WedgeRadius_type_name = "WedgeRadius";
-		constexpr const static rivet::rivet_type_id WedgeRadius_type_id = 0x89b1b8f4;
-		constexpr const static std::string_view WedgeHalfAngle_type_name = "WedgeHalfAngle";
-		constexpr const static rivet::rivet_type_id WedgeHalfAngle_type_id = 0x963ab5af;
-		constexpr const static std::string_view WedgeHeightUp_type_name = "WedgeHeightUp";
-		constexpr const static rivet::rivet_type_id WedgeHeightUp_type_id = 0x9f057313;
-		constexpr const static std::string_view WedgeHeightDown_type_name = "WedgeHeightDown";
-		constexpr const static rivet::rivet_type_id WedgeHeightDown_type_id = 0x9d4889c8;
-		constexpr const static std::string_view ConeRadius_type_name = "ConeRadius";
-		constexpr const static rivet::rivet_type_id ConeRadius_type_id = 0x104bdc4d;
-		constexpr const static std::string_view ConeHalfAngle_type_name = "ConeHalfAngle";
-		constexpr const static rivet::rivet_type_id ConeHalfAngle_type_id = 0x4cc508; 
+		constexpr static std::string_view SphereRadius_type_name = "SphereRadius";
+		constexpr static rivet::rivet_type_id SphereRadius_type_id = 0x7b804017;
+		constexpr static std::string_view WedgeRadius_type_name = "WedgeRadius";
+		constexpr static rivet::rivet_type_id WedgeRadius_type_id = 0x89b1b8f4;
+		constexpr static std::string_view WedgeHalfAngle_type_name = "WedgeHalfAngle";
+		constexpr static rivet::rivet_type_id WedgeHalfAngle_type_id = 0x963ab5af;
+		constexpr static std::string_view WedgeHeightUp_type_name = "WedgeHeightUp";
+		constexpr static rivet::rivet_type_id WedgeHeightUp_type_id = 0x9f057313;
+		constexpr static std::string_view WedgeHeightDown_type_name = "WedgeHeightDown";
+		constexpr static rivet::rivet_type_id WedgeHeightDown_type_id = 0x9d4889c8;
+		constexpr static std::string_view ConeRadius_type_name = "ConeRadius";
+		constexpr static rivet::rivet_type_id ConeRadius_type_id = 0x104bdc4d;
+		constexpr static std::string_view ConeHalfAngle_type_name = "ConeHalfAngle";
+		constexpr static rivet::rivet_type_id ConeHalfAngle_type_id = 0x4cc508; 
 
 		explicit VisionConfig() = default;
 		explicit VisionConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

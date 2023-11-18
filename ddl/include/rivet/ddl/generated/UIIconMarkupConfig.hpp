@@ -20,17 +20,17 @@
 #include <rivet/ddl/generated/ConfigBase.hpp> 
 
 namespace rivet::ddl::generated {
-	struct Icon;
-	struct Markup; 
+	struct Markup;
+	struct Icon; 
 
 	struct RIVET_DDL_SHARED UIIconMarkupConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "UIIconMarkupConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x210f3f65;
+		constexpr static std::string_view type_name = "UIIconMarkupConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x210f3f65;
 
-		constexpr const static std::string_view Icons_type_name = "Icons";
-		constexpr const static rivet::rivet_type_id Icons_type_id = 0x13399cbf;
-		constexpr const static std::string_view Markups_type_name = "Markups";
-		constexpr const static rivet::rivet_type_id Markups_type_id = 0x6e737dfa; 
+		constexpr static std::string_view Icons_type_name = "Icons";
+		constexpr static rivet::rivet_type_id Icons_type_id = 0x13399cbf;
+		constexpr static std::string_view Markups_type_name = "Markups";
+		constexpr static rivet::rivet_type_id Markups_type_id = 0x6e737dfa; 
 
 		explicit UIIconMarkupConfig() = default;
 		explicit UIIconMarkupConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

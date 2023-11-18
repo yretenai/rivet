@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ObstructionShapeAABB : NavMeshObstructionShapeBase {
-		constexpr const static std::string_view type_name = "ObstructionShapeAABB";
-		constexpr const static rivet::rivet_type_id type_id = 0x39269e52;
+		constexpr static std::string_view type_name = "ObstructionShapeAABB";
+		constexpr static rivet::rivet_type_id type_id = 0x39269e52;
 
 		explicit ObstructionShapeAABB() = default;
 		explicit ObstructionShapeAABB([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

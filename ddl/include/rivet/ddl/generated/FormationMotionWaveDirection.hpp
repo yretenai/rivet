@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct DDLVector3; 
 
 	struct RIVET_DDL_SHARED FormationMotionWaveDirection : FormationMotionWaveBase {
-		constexpr const static std::string_view type_name = "FormationMotionWaveDirection";
-		constexpr const static rivet::rivet_type_id type_id = 0xd9c5d9be;
+		constexpr static std::string_view type_name = "FormationMotionWaveDirection";
+		constexpr static rivet::rivet_type_id type_id = 0xd9c5d9be;
 
-		constexpr const static std::string_view MotionDirection_type_name = "MotionDirection";
-		constexpr const static rivet::rivet_type_id MotionDirection_type_id = 0x29478e52; 
+		constexpr static std::string_view MotionDirection_type_name = "MotionDirection";
+		constexpr static rivet::rivet_type_id MotionDirection_type_id = 0x29478e52; 
 
 		explicit FormationMotionWaveDirection() = default;
 		explicit FormationMotionWaveDirection([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

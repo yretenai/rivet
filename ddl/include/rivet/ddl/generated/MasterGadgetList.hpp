@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct GadgetListElement; 
 
 	struct RIVET_DDL_SHARED MasterGadgetList : ConfigBase {
-		constexpr const static std::string_view type_name = "MasterGadgetList";
-		constexpr const static rivet::rivet_type_id type_id = 0x209a942e;
+		constexpr static std::string_view type_name = "MasterGadgetList";
+		constexpr static rivet::rivet_type_id type_id = 0x209a942e;
 
-		constexpr const static std::string_view Gadgets_type_name = "Gadgets";
-		constexpr const static rivet::rivet_type_id Gadgets_type_id = 0x173f995a; 
+		constexpr static std::string_view Gadgets_type_name = "Gadgets";
+		constexpr static rivet::rivet_type_id Gadgets_type_id = 0x173f995a; 
 
 		explicit MasterGadgetList() = default;
 		explicit MasterGadgetList([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

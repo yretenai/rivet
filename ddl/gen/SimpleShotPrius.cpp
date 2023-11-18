@@ -3,13 +3,13 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/SonicShotPrius.hpp>
-#include <rivet/ddl/generated/ShotProtoShotgunPrius.hpp>
 #include <rivet/ddl/generated/ZurkonShotPrius.hpp>
-#include <rivet/ddl/generated/ExplosiveBulletPrius.hpp>
+#include <rivet/ddl/generated/BasicBulletPrius.hpp>
 #include <rivet/ddl/generated/ShotIcicleBombPrius.hpp>
 #include <rivet/ddl/generated/ShotIcicleBlastPrius.hpp>
-#include <rivet/ddl/generated/BasicBulletPrius.hpp> 
+#include <rivet/ddl/generated/SonicShotPrius.hpp>
+#include <rivet/ddl/generated/ExplosiveBulletPrius.hpp>
+#include <rivet/ddl/generated/ShotProtoShotgunPrius.hpp> 
 
 #include <rivet/ddl/generated/SimpleShotPrius.hpp>
 

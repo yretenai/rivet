@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct GameFocusTrackingManagerData; 
 
 	struct RIVET_DDL_SHARED GameFocusTrackingConfig : FocusTrackingConfig {
-		constexpr const static std::string_view type_name = "GameFocusTrackingConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x59d9e07f;
+		constexpr static std::string_view type_name = "GameFocusTrackingConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x59d9e07f;
 
-		constexpr const static std::string_view GameFocusTrackingData_type_name = "GameFocusTrackingData";
-		constexpr const static rivet::rivet_type_id GameFocusTrackingData_type_id = 0xd44893b3; 
+		constexpr static std::string_view GameFocusTrackingData_type_name = "GameFocusTrackingData";
+		constexpr static rivet::rivet_type_id GameFocusTrackingData_type_id = 0xd44893b3; 
 
 		explicit GameFocusTrackingConfig() = default;
 		explicit GameFocusTrackingConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

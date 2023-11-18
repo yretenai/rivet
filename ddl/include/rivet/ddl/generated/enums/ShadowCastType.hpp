@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view ShadowCastType_type_name = "ShadowCastType";
-	constexpr const static rivet::rivet_type_id ShadowCastType_type_id = 0xa056bfc6;
+	constexpr static std::string_view ShadowCastType_type_name = "ShadowCastType";
+	constexpr static rivet::rivet_type_id ShadowCastType_type_id = 0xa056bfc6;
 
-	constexpr const static std::array<std::string_view, 3> ShadowCastType_values = {
+	constexpr static std::array<std::string_view, 3> ShadowCastType_values = {
 		"kCacheStaticModels",
 		"kOnlyStaticModels",
 		"kOnlyDynamicModels", 

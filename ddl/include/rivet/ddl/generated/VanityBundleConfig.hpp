@@ -19,26 +19,26 @@
 
 #include <rivet/ddl/generated/enums/x56bca86c.hpp>
 #include <rivet/ddl/generated/enums/xd230f155.hpp>
-#include <rivet/ddl/generated/ConfigBase.hpp>
-#include <rivet/ddl/generated/enums/xf2db3ee.hpp> 
+#include <rivet/ddl/generated/enums/xf2db3ee.hpp>
+#include <rivet/ddl/generated/ConfigBase.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED VanityBundleConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "VanityBundleConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xb68fd998;
+		constexpr static std::string_view type_name = "VanityBundleConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xb68fd998;
 
-		constexpr const static std::string_view BundleType_type_name = "BundleType";
-		constexpr const static rivet::rivet_type_id BundleType_type_id = 0xce4eaef0;
-		constexpr const static std::string_view SaveID_type_name = "SaveID";
-		constexpr const static rivet::rivet_type_id SaveID_type_id = 0xf61c4918;
-		constexpr const static std::string_view DisplayImage_type_name = "DisplayImage";
-		constexpr const static rivet::rivet_type_id DisplayImage_type_id = 0x113d8e81;
-		constexpr const static std::string_view VanityItems_type_name = "VanityItems";
-		constexpr const static rivet::rivet_type_id VanityItems_type_id = 0x471b6f0a;
-		constexpr const static std::string_view Accessories_type_name = "Accessories";
-		constexpr const static rivet::rivet_type_id Accessories_type_id = 0xacd6779b;
-		constexpr const static std::string_view CoversVoice_type_name = "CoversVoice";
-		constexpr const static rivet::rivet_type_id CoversVoice_type_id = 0x26a653c; 
+		constexpr static std::string_view BundleType_type_name = "BundleType";
+		constexpr static rivet::rivet_type_id BundleType_type_id = 0xce4eaef0;
+		constexpr static std::string_view SaveID_type_name = "SaveID";
+		constexpr static rivet::rivet_type_id SaveID_type_id = 0xf61c4918;
+		constexpr static std::string_view DisplayImage_type_name = "DisplayImage";
+		constexpr static rivet::rivet_type_id DisplayImage_type_id = 0x113d8e81;
+		constexpr static std::string_view VanityItems_type_name = "VanityItems";
+		constexpr static rivet::rivet_type_id VanityItems_type_id = 0x471b6f0a;
+		constexpr static std::string_view Accessories_type_name = "Accessories";
+		constexpr static rivet::rivet_type_id Accessories_type_id = 0xacd6779b;
+		constexpr static std::string_view CoversVoice_type_name = "CoversVoice";
+		constexpr static rivet::rivet_type_id CoversVoice_type_id = 0x26a653c; 
 
 		explicit VanityBundleConfig() = default;
 		explicit VanityBundleConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -21,25 +21,25 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED JobManagerAttackPrius : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "JobManagerAttackPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xff270f7c;
+		constexpr static std::string_view type_name = "JobManagerAttackPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xff270f7c;
 
-		constexpr const static std::string_view AttackJobPool_type_name = "AttackJobPool";
-		constexpr const static rivet::rivet_type_id AttackJobPool_type_id = 0x885938c5;
-		constexpr const static std::string_view ConfigModHash_type_name = "ConfigModHash";
-		constexpr const static rivet::rivet_type_id ConfigModHash_type_id = 0xcd45dc8b;
-		constexpr const static std::string_view MaxAttackers_type_name = "MaxAttackers";
-		constexpr const static rivet::rivet_type_id MaxAttackers_type_id = 0xe8b2f0d2;
-		constexpr const static std::string_view JobRepostTime_type_name = "JobRepostTime";
-		constexpr const static rivet::rivet_type_id JobRepostTime_type_id = 0x43622aea;
-		constexpr const static std::string_view AttackCycleHotTime_type_name = "AttackCycleHotTime";
-		constexpr const static rivet::rivet_type_id AttackCycleHotTime_type_id = 0x878e1b64;
-		constexpr const static std::string_view AttackCycleHotMaxRepeat_type_name = "AttackCycleHotMaxRepeat";
-		constexpr const static rivet::rivet_type_id AttackCycleHotMaxRepeat_type_id = 0xd4a3ec5f;
-		constexpr const static std::string_view AttackCycleColdTime_type_name = "AttackCycleColdTime";
-		constexpr const static rivet::rivet_type_id AttackCycleColdTime_type_id = 0xa9df9803;
-		constexpr const static std::string_view AttackCycleColdChance_type_name = "AttackCycleColdChance";
-		constexpr const static rivet::rivet_type_id AttackCycleColdChance_type_id = 0xc3c10713; 
+		constexpr static std::string_view AttackJobPool_type_name = "AttackJobPool";
+		constexpr static rivet::rivet_type_id AttackJobPool_type_id = 0x885938c5;
+		constexpr static std::string_view ConfigModHash_type_name = "ConfigModHash";
+		constexpr static rivet::rivet_type_id ConfigModHash_type_id = 0xcd45dc8b;
+		constexpr static std::string_view MaxAttackers_type_name = "MaxAttackers";
+		constexpr static rivet::rivet_type_id MaxAttackers_type_id = 0xe8b2f0d2;
+		constexpr static std::string_view JobRepostTime_type_name = "JobRepostTime";
+		constexpr static rivet::rivet_type_id JobRepostTime_type_id = 0x43622aea;
+		constexpr static std::string_view AttackCycleHotTime_type_name = "AttackCycleHotTime";
+		constexpr static rivet::rivet_type_id AttackCycleHotTime_type_id = 0x878e1b64;
+		constexpr static std::string_view AttackCycleHotMaxRepeat_type_name = "AttackCycleHotMaxRepeat";
+		constexpr static rivet::rivet_type_id AttackCycleHotMaxRepeat_type_id = 0xd4a3ec5f;
+		constexpr static std::string_view AttackCycleColdTime_type_name = "AttackCycleColdTime";
+		constexpr static rivet::rivet_type_id AttackCycleColdTime_type_id = 0xa9df9803;
+		constexpr static std::string_view AttackCycleColdChance_type_name = "AttackCycleColdChance";
+		constexpr static rivet::rivet_type_id AttackCycleColdChance_type_id = 0xc3c10713; 
 
 		explicit JobManagerAttackPrius() = default;
 		explicit JobManagerAttackPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

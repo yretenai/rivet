@@ -21,11 +21,11 @@ namespace rivet::ddl::generated {
 	struct UIHUDIconToggleOption; 
 
 	struct RIVET_DDL_SHARED UIHUDIconToggleOptions : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "UIHUDIconToggleOptions";
-		constexpr const static rivet::rivet_type_id type_id = 0x10bb96c8;
+		constexpr static std::string_view type_name = "UIHUDIconToggleOptions";
+		constexpr static rivet::rivet_type_id type_id = 0x10bb96c8;
 
-		constexpr const static std::string_view ToggleOptions_type_name = "ToggleOptions";
-		constexpr const static rivet::rivet_type_id ToggleOptions_type_id = 0xfaea1dc4; 
+		constexpr static std::string_view ToggleOptions_type_name = "ToggleOptions";
+		constexpr static rivet::rivet_type_id ToggleOptions_type_id = 0xfaea1dc4; 
 
 		explicit UIHUDIconToggleOptions() = default;
 		explicit UIHUDIconToggleOptions([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -20,33 +20,33 @@
 #include <rivet/ddl/generated/ConfigBase.hpp> 
 
 namespace rivet::ddl::generated {
-	struct BotMeleeAttackData;
-	struct AnimDamageHandlerPrius; 
+	struct AnimDamageHandlerPrius;
+	struct BotMeleeAttackData; 
 
 	struct RIVET_DDL_SHARED BotConfigMelee : ConfigBase {
-		constexpr const static std::string_view type_name = "BotConfigMelee";
-		constexpr const static rivet::rivet_type_id type_id = 0xce273072;
+		constexpr static std::string_view type_name = "BotConfigMelee";
+		constexpr static rivet::rivet_type_id type_id = 0xce273072;
 
-		constexpr const static std::string_view AttackRange_type_name = "AttackRange";
-		constexpr const static rivet::rivet_type_id AttackRange_type_id = 0x75a49560;
-		constexpr const static std::string_view IdealRange_type_name = "IdealRange";
-		constexpr const static rivet::rivet_type_id IdealRange_type_id = 0x4a596da2;
-		constexpr const static std::string_view MaxSuckDist_type_name = "MaxSuckDist";
-		constexpr const static rivet::rivet_type_id MaxSuckDist_type_id = 0xd34a55f;
-		constexpr const static std::string_view CanFlank_type_name = "CanFlank";
-		constexpr const static rivet::rivet_type_id CanFlank_type_id = 0x10305686;
-		constexpr const static std::string_view FlankPercent_type_name = "FlankPercent";
-		constexpr const static rivet::rivet_type_id FlankPercent_type_id = 0x3198dcb6;
-		constexpr const static std::string_view DoDelayAttacks_type_name = "DoDelayAttacks";
-		constexpr const static rivet::rivet_type_id DoDelayAttacks_type_id = 0xe6b8ca8d;
-		constexpr const static std::string_view MinTimeBetweenAttacks_type_name = "MinTimeBetweenAttacks";
-		constexpr const static rivet::rivet_type_id MinTimeBetweenAttacks_type_id = 0xa8651169;
-		constexpr const static std::string_view PreMeleeDuration_type_name = "PreMeleeDuration";
-		constexpr const static rivet::rivet_type_id PreMeleeDuration_type_id = 0xffde51e7;
-		constexpr const static std::string_view MeleeAttackData_type_name = "MeleeAttackData";
-		constexpr const static rivet::rivet_type_id MeleeAttackData_type_id = 0xf2a6d993;
-		constexpr const static std::string_view AnimDamage_type_name = "AnimDamage";
-		constexpr const static rivet::rivet_type_id AnimDamage_type_id = 0x105b657b; 
+		constexpr static std::string_view AttackRange_type_name = "AttackRange";
+		constexpr static rivet::rivet_type_id AttackRange_type_id = 0x75a49560;
+		constexpr static std::string_view IdealRange_type_name = "IdealRange";
+		constexpr static rivet::rivet_type_id IdealRange_type_id = 0x4a596da2;
+		constexpr static std::string_view MaxSuckDist_type_name = "MaxSuckDist";
+		constexpr static rivet::rivet_type_id MaxSuckDist_type_id = 0xd34a55f;
+		constexpr static std::string_view CanFlank_type_name = "CanFlank";
+		constexpr static rivet::rivet_type_id CanFlank_type_id = 0x10305686;
+		constexpr static std::string_view FlankPercent_type_name = "FlankPercent";
+		constexpr static rivet::rivet_type_id FlankPercent_type_id = 0x3198dcb6;
+		constexpr static std::string_view DoDelayAttacks_type_name = "DoDelayAttacks";
+		constexpr static rivet::rivet_type_id DoDelayAttacks_type_id = 0xe6b8ca8d;
+		constexpr static std::string_view MinTimeBetweenAttacks_type_name = "MinTimeBetweenAttacks";
+		constexpr static rivet::rivet_type_id MinTimeBetweenAttacks_type_id = 0xa8651169;
+		constexpr static std::string_view PreMeleeDuration_type_name = "PreMeleeDuration";
+		constexpr static rivet::rivet_type_id PreMeleeDuration_type_id = 0xffde51e7;
+		constexpr static std::string_view MeleeAttackData_type_name = "MeleeAttackData";
+		constexpr static rivet::rivet_type_id MeleeAttackData_type_id = 0xf2a6d993;
+		constexpr static std::string_view AnimDamage_type_name = "AnimDamage";
+		constexpr static rivet::rivet_type_id AnimDamage_type_id = 0x105b657b; 
 
 		explicit BotConfigMelee() = default;
 		explicit BotConfigMelee([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

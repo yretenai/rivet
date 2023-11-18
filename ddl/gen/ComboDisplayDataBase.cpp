@@ -3,10 +3,10 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/ComboDisplayDataStringOnly.hpp>
-#include <rivet/ddl/generated/ComboDisplayDataPadButtonList.hpp>
 #include <rivet/ddl/generated/ComboDisplayDataActionControl.hpp>
-#include <rivet/ddl/generated/ComboDisplayDataComboString.hpp> 
+#include <rivet/ddl/generated/ComboDisplayDataComboString.hpp>
+#include <rivet/ddl/generated/ComboDisplayDataPadButtonList.hpp>
+#include <rivet/ddl/generated/ComboDisplayDataStringOnly.hpp> 
 
 #include <rivet/ddl/generated/ComboDisplayDataBase.hpp>
 

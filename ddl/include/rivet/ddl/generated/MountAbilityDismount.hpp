@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED MountAbilityDismount : MountAbilityBase {
-		constexpr const static std::string_view type_name = "MountAbilityDismount";
-		constexpr const static rivet::rivet_type_id type_id = 0x7d3fc7ec;
+		constexpr static std::string_view type_name = "MountAbilityDismount";
+		constexpr static rivet::rivet_type_id type_id = 0x7d3fc7ec;
 
 		explicit MountAbilityDismount() = default;
 		explicit MountAbilityDismount([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

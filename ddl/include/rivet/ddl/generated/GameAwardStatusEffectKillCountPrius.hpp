@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct StatusEffectBasePrius; 
 
 	struct RIVET_DDL_SHARED GameAwardStatusEffectKillCountPrius : AwardBasePrius {
-		constexpr const static std::string_view type_name = "GameAwardStatusEffectKillCountPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x424284ae;
+		constexpr static std::string_view type_name = "GameAwardStatusEffectKillCountPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x424284ae;
 
-		constexpr const static std::string_view RequiredStatusEffect_type_name = "RequiredStatusEffect";
-		constexpr const static rivet::rivet_type_id RequiredStatusEffect_type_id = 0xedfb7a1b; 
+		constexpr static std::string_view RequiredStatusEffect_type_name = "RequiredStatusEffect";
+		constexpr static rivet::rivet_type_id RequiredStatusEffect_type_id = 0xedfb7a1b; 
 
 		explicit GameAwardStatusEffectKillCountPrius() = default;
 		explicit GameAwardStatusEffectKillCountPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

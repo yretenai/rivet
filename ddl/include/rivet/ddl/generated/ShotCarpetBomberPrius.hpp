@@ -20,19 +20,19 @@
 #include <rivet/ddl/generated/GrenadeShotPrius.hpp> 
 
 namespace rivet::ddl::generated {
-	struct WeaponShotData;
-	struct ShotCarpetBomberData; 
+	struct ShotCarpetBomberData;
+	struct WeaponShotData; 
 
 	struct RIVET_DDL_SHARED ShotCarpetBomberPrius : GrenadeShotPrius {
-		constexpr const static std::string_view type_name = "ShotCarpetBomberPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x1103d7d2;
+		constexpr static std::string_view type_name = "ShotCarpetBomberPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x1103d7d2;
 
-		constexpr const static std::string_view BomberShot_type_name = "BomberShot";
-		constexpr const static rivet::rivet_type_id BomberShot_type_id = 0xc8e9910e;
-		constexpr const static std::string_view LastBomberShot_type_name = "LastBomberShot";
-		constexpr const static rivet::rivet_type_id LastBomberShot_type_id = 0x54894358;
-		constexpr const static std::string_view ShotData_type_name = "ShotData";
-		constexpr const static rivet::rivet_type_id ShotData_type_id = 0xdcd08e29; 
+		constexpr static std::string_view BomberShot_type_name = "BomberShot";
+		constexpr static rivet::rivet_type_id BomberShot_type_id = 0xc8e9910e;
+		constexpr static std::string_view LastBomberShot_type_name = "LastBomberShot";
+		constexpr static rivet::rivet_type_id LastBomberShot_type_id = 0x54894358;
+		constexpr static std::string_view ShotData_type_name = "ShotData";
+		constexpr static rivet::rivet_type_id ShotData_type_id = 0xdcd08e29; 
 
 		explicit ShotCarpetBomberPrius() = default;
 		explicit ShotCarpetBomberPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

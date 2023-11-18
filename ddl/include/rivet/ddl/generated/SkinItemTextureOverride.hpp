@@ -21,15 +21,15 @@ namespace rivet::ddl::generated {
 	struct AssetReferenceDef; 
 
 	struct RIVET_DDL_SHARED SkinItemTextureOverride : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "SkinItemTextureOverride";
-		constexpr const static rivet::rivet_type_id type_id = 0x4a72d761;
+		constexpr static std::string_view type_name = "SkinItemTextureOverride";
+		constexpr static rivet::rivet_type_id type_id = 0x4a72d761;
 
-		constexpr const static std::string_view OriginalMaterial_type_name = "OriginalMaterial";
-		constexpr const static rivet::rivet_type_id OriginalMaterial_type_id = 0x3608a389;
-		constexpr const static std::string_view OverrideTexture_type_name = "OverrideTexture";
-		constexpr const static rivet::rivet_type_id OverrideTexture_type_id = 0xc9018aae;
-		constexpr const static std::string_view ConstantName_type_name = "ConstantName";
-		constexpr const static rivet::rivet_type_id ConstantName_type_id = 0xc6991700; 
+		constexpr static std::string_view OriginalMaterial_type_name = "OriginalMaterial";
+		constexpr static rivet::rivet_type_id OriginalMaterial_type_id = 0x3608a389;
+		constexpr static std::string_view OverrideTexture_type_name = "OverrideTexture";
+		constexpr static rivet::rivet_type_id OverrideTexture_type_id = 0xc9018aae;
+		constexpr static std::string_view ConstantName_type_name = "ConstantName";
+		constexpr static rivet::rivet_type_id ConstantName_type_id = 0xc6991700; 
 
 		explicit SkinItemTextureOverride() = default;
 		explicit SkinItemTextureOverride([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

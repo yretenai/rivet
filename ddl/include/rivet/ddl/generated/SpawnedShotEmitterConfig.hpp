@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct WeaponEmitterBasePrius; 
 
 	struct RIVET_DDL_SHARED SpawnedShotEmitterConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "SpawnedShotEmitterConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x690daf0d;
+		constexpr static std::string_view type_name = "SpawnedShotEmitterConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x690daf0d;
 
-		constexpr const static std::string_view EmitterPrius_type_name = "EmitterPrius";
-		constexpr const static rivet::rivet_type_id EmitterPrius_type_id = 0x814e290f; 
+		constexpr static std::string_view EmitterPrius_type_name = "EmitterPrius";
+		constexpr static rivet::rivet_type_id EmitterPrius_type_id = 0x814e290f; 
 
 		explicit SpawnedShotEmitterConfig() = default;
 		explicit SpawnedShotEmitterConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

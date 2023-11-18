@@ -21,25 +21,25 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED AmbientBarrageConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "AmbientBarrageConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xc1d92357;
+		constexpr static std::string_view type_name = "AmbientBarrageConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xc1d92357;
 
-		constexpr const static std::string_view MinNumBursts_type_name = "MinNumBursts";
-		constexpr const static rivet::rivet_type_id MinNumBursts_type_id = 0x94ec8381;
-		constexpr const static std::string_view MaxNumBursts_type_name = "MaxNumBursts";
-		constexpr const static rivet::rivet_type_id MaxNumBursts_type_id = 0x49f936b;
-		constexpr const static std::string_view MinBurstDuration_type_name = "MinBurstDuration";
-		constexpr const static rivet::rivet_type_id MinBurstDuration_type_id = 0x83fe5fe5;
-		constexpr const static std::string_view MaxBurstDuration_type_name = "MaxBurstDuration";
-		constexpr const static rivet::rivet_type_id MaxBurstDuration_type_id = 0xd207e4b8;
-		constexpr const static std::string_view MinBurstDelay_type_name = "MinBurstDelay";
-		constexpr const static rivet::rivet_type_id MinBurstDelay_type_id = 0xf8cfef99;
-		constexpr const static std::string_view MaxBurstDelay_type_name = "MaxBurstDelay";
-		constexpr const static rivet::rivet_type_id MaxBurstDelay_type_id = 0xb88097ef;
-		constexpr const static std::string_view MinCooldownDuration_type_name = "MinCooldownDuration";
-		constexpr const static rivet::rivet_type_id MinCooldownDuration_type_id = 0x119c13b3;
-		constexpr const static std::string_view MaxCooldownDuration_type_name = "MaxCooldownDuration";
-		constexpr const static rivet::rivet_type_id MaxCooldownDuration_type_id = 0xb6a893ca; 
+		constexpr static std::string_view MinNumBursts_type_name = "MinNumBursts";
+		constexpr static rivet::rivet_type_id MinNumBursts_type_id = 0x94ec8381;
+		constexpr static std::string_view MaxNumBursts_type_name = "MaxNumBursts";
+		constexpr static rivet::rivet_type_id MaxNumBursts_type_id = 0x49f936b;
+		constexpr static std::string_view MinBurstDuration_type_name = "MinBurstDuration";
+		constexpr static rivet::rivet_type_id MinBurstDuration_type_id = 0x83fe5fe5;
+		constexpr static std::string_view MaxBurstDuration_type_name = "MaxBurstDuration";
+		constexpr static rivet::rivet_type_id MaxBurstDuration_type_id = 0xd207e4b8;
+		constexpr static std::string_view MinBurstDelay_type_name = "MinBurstDelay";
+		constexpr static rivet::rivet_type_id MinBurstDelay_type_id = 0xf8cfef99;
+		constexpr static std::string_view MaxBurstDelay_type_name = "MaxBurstDelay";
+		constexpr static rivet::rivet_type_id MaxBurstDelay_type_id = 0xb88097ef;
+		constexpr static std::string_view MinCooldownDuration_type_name = "MinCooldownDuration";
+		constexpr static rivet::rivet_type_id MinCooldownDuration_type_id = 0x119c13b3;
+		constexpr static std::string_view MaxCooldownDuration_type_name = "MaxCooldownDuration";
+		constexpr static rivet::rivet_type_id MaxCooldownDuration_type_id = 0xb6a893ca; 
 
 		explicit AmbientBarrageConfig() = default;
 		explicit AmbientBarrageConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

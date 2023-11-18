@@ -17,22 +17,22 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/ConfigBase.hpp>
-#include <rivet/ddl/generated/enums/x63d44ada.hpp> 
+#include <rivet/ddl/generated/enums/x63d44ada.hpp>
+#include <rivet/ddl/generated/ConfigBase.hpp> 
 
 namespace rivet::ddl::generated {
 	struct ShotBasePrius; 
 
 	struct RIVET_DDL_SHARED SpawnedShotConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "SpawnedShotConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x7e9e8e66;
+		constexpr static std::string_view type_name = "SpawnedShotConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x7e9e8e66;
 
-		constexpr const static std::string_view ShotAsset_type_name = "ShotAsset";
-		constexpr const static rivet::rivet_type_id ShotAsset_type_id = 0x46d53e22;
-		constexpr const static std::string_view ShotPrius_type_name = "ShotPrius";
-		constexpr const static rivet::rivet_type_id ShotPrius_type_id = 0x66fe4621;
-		constexpr const static std::string_view MacroWeapon_type_name = "MacroWeapon";
-		constexpr const static rivet::rivet_type_id MacroWeapon_type_id = 0x6a0640b5; 
+		constexpr static std::string_view ShotAsset_type_name = "ShotAsset";
+		constexpr static rivet::rivet_type_id ShotAsset_type_id = 0x46d53e22;
+		constexpr static std::string_view ShotPrius_type_name = "ShotPrius";
+		constexpr static rivet::rivet_type_id ShotPrius_type_id = 0x66fe4621;
+		constexpr static std::string_view MacroWeapon_type_name = "MacroWeapon";
+		constexpr static rivet::rivet_type_id MacroWeapon_type_id = 0x6a0640b5; 
 
 		explicit SpawnedShotConfig() = default;
 		explicit SpawnedShotConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

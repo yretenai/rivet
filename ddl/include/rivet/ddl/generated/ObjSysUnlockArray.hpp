@@ -21,11 +21,11 @@ namespace rivet::ddl::generated {
 	struct ObjSysUnlock; 
 
 	struct RIVET_DDL_SHARED ObjSysUnlockArray : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "ObjSysUnlockArray";
-		constexpr const static rivet::rivet_type_id type_id = 0x9079f1d2;
+		constexpr static std::string_view type_name = "ObjSysUnlockArray";
+		constexpr static rivet::rivet_type_id type_id = 0x9079f1d2;
 
-		constexpr const static std::string_view ObjectiveUnlocks_type_name = "ObjectiveUnlocks";
-		constexpr const static rivet::rivet_type_id ObjectiveUnlocks_type_id = 0xe3e104a6; 
+		constexpr static std::string_view ObjectiveUnlocks_type_name = "ObjectiveUnlocks";
+		constexpr static rivet::rivet_type_id ObjectiveUnlocks_type_id = 0xe3e104a6; 
 
 		explicit ObjSysUnlockArray() = default;
 		explicit ObjSysUnlockArray([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

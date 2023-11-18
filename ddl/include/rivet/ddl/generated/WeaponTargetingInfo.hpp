@@ -19,15 +19,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED WeaponTargetingInfo : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "WeaponTargetingInfo";
-		constexpr const static rivet::rivet_type_id type_id = 0x9a03997f;
+		constexpr static std::string_view type_name = "WeaponTargetingInfo";
+		constexpr static rivet::rivet_type_id type_id = 0x9a03997f;
 
-		constexpr const static std::string_view TargetingRange_type_name = "TargetingRange";
-		constexpr const static rivet::rivet_type_id TargetingRange_type_id = 0x1de24741;
-		constexpr const static std::string_view UsesAimAssist_type_name = "UsesAimAssist";
-		constexpr const static rivet::rivet_type_id UsesAimAssist_type_id = 0x3539e8f;
-		constexpr const static std::string_view UsesAutoTarget_type_name = "UsesAutoTarget";
-		constexpr const static rivet::rivet_type_id UsesAutoTarget_type_id = 0x5389a8e0; 
+		constexpr static std::string_view TargetingRange_type_name = "TargetingRange";
+		constexpr static rivet::rivet_type_id TargetingRange_type_id = 0x1de24741;
+		constexpr static std::string_view UsesAimAssist_type_name = "UsesAimAssist";
+		constexpr static rivet::rivet_type_id UsesAimAssist_type_id = 0x3539e8f;
+		constexpr static std::string_view UsesAutoTarget_type_name = "UsesAutoTarget";
+		constexpr static rivet::rivet_type_id UsesAutoTarget_type_id = 0x5389a8e0; 
 
 		explicit WeaponTargetingInfo() = default;
 		explicit WeaponTargetingInfo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED UIGoldBoltOptionTypeList : UIGoldBoltOptionTypeBase {
-		constexpr const static std::string_view type_name = "UIGoldBoltOptionTypeList";
-		constexpr const static rivet::rivet_type_id type_id = 0x462dfced;
+		constexpr static std::string_view type_name = "UIGoldBoltOptionTypeList";
+		constexpr static rivet::rivet_type_id type_id = 0x462dfced;
 
-		constexpr const static std::string_view Options_type_name = "Options";
-		constexpr const static rivet::rivet_type_id Options_type_id = 0xd1df99bf; 
+		constexpr static std::string_view Options_type_name = "Options";
+		constexpr static rivet::rivet_type_id Options_type_id = 0xd1df99bf; 
 
 		explicit UIGoldBoltOptionTypeList() = default;
 		explicit UIGoldBoltOptionTypeList([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

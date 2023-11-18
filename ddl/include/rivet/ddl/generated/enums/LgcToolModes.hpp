@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view LgcToolModes_type_name = "LgcToolModes";
-	constexpr const static rivet::rivet_type_id LgcToolModes_type_id = 0xafff15db;
+	constexpr static std::string_view LgcToolModes_type_name = "LgcToolModes";
+	constexpr static rivet::rivet_type_id LgcToolModes_type_id = 0xafff15db;
 
-	constexpr const static std::array<std::string_view, 2> LgcToolModes_values = {
+	constexpr static std::array<std::string_view, 2> LgcToolModes_values = {
 		"kLgc2",
 		"kLgc2Debug", 
 	};

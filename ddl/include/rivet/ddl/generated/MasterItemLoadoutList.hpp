@@ -20,17 +20,17 @@
 #include <rivet/ddl/generated/ConfigBase.hpp> 
 
 namespace rivet::ddl::generated {
-	struct ItemLoadoutCategoryList;
-	struct MissionTestLoadout; 
+	struct MissionTestLoadout;
+	struct ItemLoadoutCategoryList; 
 
 	struct RIVET_DDL_SHARED MasterItemLoadoutList : ConfigBase {
-		constexpr const static std::string_view type_name = "MasterItemLoadoutList";
-		constexpr const static rivet::rivet_type_id type_id = 0x79fad5c0;
+		constexpr static std::string_view type_name = "MasterItemLoadoutList";
+		constexpr static rivet::rivet_type_id type_id = 0x79fad5c0;
 
-		constexpr const static std::string_view ItemLoadoutCategoryList_type_name = "ItemLoadoutCategoryList";
-		constexpr const static rivet::rivet_type_id ItemLoadoutCategoryList_type_id = 0x5ba74a3e;
-		constexpr const static std::string_view MissionLoadouts_type_name = "MissionLoadouts";
-		constexpr const static rivet::rivet_type_id MissionLoadouts_type_id = 0x9c4b4d92; 
+		constexpr static std::string_view ItemLoadoutCategoryList_type_name = "ItemLoadoutCategoryList";
+		constexpr static rivet::rivet_type_id ItemLoadoutCategoryList_type_id = 0x5ba74a3e;
+		constexpr static std::string_view MissionLoadouts_type_name = "MissionLoadouts";
+		constexpr static rivet::rivet_type_id MissionLoadouts_type_id = 0x9c4b4d92; 
 
 		explicit MasterItemLoadoutList() = default;
 		explicit MasterItemLoadoutList([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

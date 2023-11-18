@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct HoudiniMenuItem; 
 
 	struct RIVET_DDL_SHARED HoudiniMenuConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "HoudiniMenuConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x5c50b49;
+		constexpr static std::string_view type_name = "HoudiniMenuConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x5c50b49;
 
-		constexpr const static std::string_view Items_type_name = "Items";
-		constexpr const static rivet::rivet_type_id Items_type_id = 0xf84d258c; 
+		constexpr static std::string_view Items_type_name = "Items";
+		constexpr static rivet::rivet_type_id Items_type_id = 0xf84d258c; 
 
 		explicit HoudiniMenuConfig() = default;
 		explicit HoudiniMenuConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

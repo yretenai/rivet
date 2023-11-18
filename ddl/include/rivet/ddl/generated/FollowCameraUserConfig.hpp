@@ -20,25 +20,25 @@
 #include <rivet/ddl/generated/ConfigBase.hpp> 
 
 namespace rivet::ddl::generated {
-	struct CameraTargetTrackData;
-	struct VelocityFollowerData; 
+	struct VelocityFollowerData;
+	struct CameraTargetTrackData; 
 
 	struct RIVET_DDL_SHARED FollowCameraUserConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "FollowCameraUserConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x245a7f0a;
+		constexpr static std::string_view type_name = "FollowCameraUserConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x245a7f0a;
 
-		constexpr const static std::string_view PitchMin_type_name = "PitchMin";
-		constexpr const static rivet::rivet_type_id PitchMin_type_id = 0xfb99e53b;
-		constexpr const static std::string_view PitchMax_type_name = "PitchMax";
-		constexpr const static rivet::rivet_type_id PitchMax_type_id = 0xc794da62;
-		constexpr const static std::string_view NearClipOverride_type_name = "NearClipOverride";
-		constexpr const static rivet::rivet_type_id NearClipOverride_type_id = 0xd086a10b;
-		constexpr const static std::string_view FarClipOverride_type_name = "FarClipOverride";
-		constexpr const static rivet::rivet_type_id FarClipOverride_type_id = 0xa1b3d3a1;
-		constexpr const static std::string_view TargetTrackingData_type_name = "TargetTrackingData";
-		constexpr const static rivet::rivet_type_id TargetTrackingData_type_id = 0x66203f35;
-		constexpr const static std::string_view VelocityFollowData_type_name = "VelocityFollowData";
-		constexpr const static rivet::rivet_type_id VelocityFollowData_type_id = 0x91dd2f41; 
+		constexpr static std::string_view PitchMin_type_name = "PitchMin";
+		constexpr static rivet::rivet_type_id PitchMin_type_id = 0xfb99e53b;
+		constexpr static std::string_view PitchMax_type_name = "PitchMax";
+		constexpr static rivet::rivet_type_id PitchMax_type_id = 0xc794da62;
+		constexpr static std::string_view NearClipOverride_type_name = "NearClipOverride";
+		constexpr static rivet::rivet_type_id NearClipOverride_type_id = 0xd086a10b;
+		constexpr static std::string_view FarClipOverride_type_name = "FarClipOverride";
+		constexpr static rivet::rivet_type_id FarClipOverride_type_id = 0xa1b3d3a1;
+		constexpr static std::string_view TargetTrackingData_type_name = "TargetTrackingData";
+		constexpr static rivet::rivet_type_id TargetTrackingData_type_id = 0x66203f35;
+		constexpr static std::string_view VelocityFollowData_type_name = "VelocityFollowData";
+		constexpr static rivet::rivet_type_id VelocityFollowData_type_id = 0x91dd2f41; 
 
 		explicit FollowCameraUserConfig() = default;
 		explicit FollowCameraUserConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

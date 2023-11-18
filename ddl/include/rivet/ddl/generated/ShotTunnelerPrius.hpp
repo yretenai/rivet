@@ -23,13 +23,13 @@ namespace rivet::ddl::generated {
 	struct TunnelerBombPrius; 
 
 	struct RIVET_DDL_SHARED ShotTunnelerPrius : ExplosiveBulletPrius {
-		constexpr const static std::string_view type_name = "ShotTunnelerPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x8b248f4b;
+		constexpr static std::string_view type_name = "ShotTunnelerPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x8b248f4b;
 
-		constexpr const static std::string_view IsPuppy_type_name = "IsPuppy";
-		constexpr const static rivet::rivet_type_id IsPuppy_type_id = 0x39fb8d44;
-		constexpr const static std::string_view BombData_type_name = "BombData";
-		constexpr const static rivet::rivet_type_id BombData_type_id = 0xb0e423b; 
+		constexpr static std::string_view IsPuppy_type_name = "IsPuppy";
+		constexpr static rivet::rivet_type_id IsPuppy_type_id = 0x39fb8d44;
+		constexpr static std::string_view BombData_type_name = "BombData";
+		constexpr static rivet::rivet_type_id BombData_type_id = 0xb0e423b; 
 
 		explicit ShotTunnelerPrius() = default;
 		explicit ShotTunnelerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

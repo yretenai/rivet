@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED RapidOmniAwarenessPrius : OmniAwarenessPrius {
-		constexpr const static std::string_view type_name = "RapidOmniAwarenessPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xcc644631;
+		constexpr static std::string_view type_name = "RapidOmniAwarenessPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xcc644631;
 
 		explicit RapidOmniAwarenessPrius() = default;
 		explicit RapidOmniAwarenessPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

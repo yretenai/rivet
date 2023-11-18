@@ -17,16 +17,16 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/ActivityLinkBase.hpp>
-#include <rivet/ddl/generated/enums/x7038301.hpp> 
+#include <rivet/ddl/generated/enums/x7038301.hpp>
+#include <rivet/ddl/generated/ActivityLinkBase.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED GoldBoltLink : ActivityLinkBase {
-		constexpr const static std::string_view type_name = "GoldBoltLink";
-		constexpr const static rivet::rivet_type_id type_id = 0x3f11b4a1;
+		constexpr static std::string_view type_name = "GoldBoltLink";
+		constexpr static rivet::rivet_type_id type_id = 0x3f11b4a1;
 
-		constexpr const static std::string_view SaveID_type_name = "SaveID";
-		constexpr const static rivet::rivet_type_id SaveID_type_id = 0xf61c4918; 
+		constexpr static std::string_view SaveID_type_name = "SaveID";
+		constexpr static rivet::rivet_type_id SaveID_type_id = 0xf61c4918; 
 
 		explicit GoldBoltLink() = default;
 		explicit GoldBoltLink([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

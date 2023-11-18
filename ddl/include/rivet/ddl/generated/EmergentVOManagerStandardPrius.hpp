@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED EmergentVOManagerStandardPrius : EmergentVOManagerGamePrius {
-		constexpr const static std::string_view type_name = "EmergentVOManagerStandardPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x752daa97;
+		constexpr static std::string_view type_name = "EmergentVOManagerStandardPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x752daa97;
 
-		constexpr const static std::string_view EmergentVOConfig_type_name = "EmergentVOConfig";
-		constexpr const static rivet::rivet_type_id EmergentVOConfig_type_id = 0xde8b92bf;
-		constexpr const static std::string_view TriggerRadius_type_name = "TriggerRadius";
-		constexpr const static rivet::rivet_type_id TriggerRadius_type_id = 0xcc7f53a5; 
+		constexpr static std::string_view EmergentVOConfig_type_name = "EmergentVOConfig";
+		constexpr static rivet::rivet_type_id EmergentVOConfig_type_id = 0xde8b92bf;
+		constexpr static std::string_view TriggerRadius_type_name = "TriggerRadius";
+		constexpr static rivet::rivet_type_id TriggerRadius_type_id = 0xcc7f53a5; 
 
 		explicit EmergentVOManagerStandardPrius() = default;
 		explicit EmergentVOManagerStandardPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

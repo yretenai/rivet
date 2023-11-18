@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct SargassoCentipedeAODPrius; 
 
 	struct RIVET_DDL_SHARED ShotSargassoCentipedeAODPrius : LobbedShotPrius {
-		constexpr const static std::string_view type_name = "ShotSargassoCentipedeAODPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x57012c0b;
+		constexpr static std::string_view type_name = "ShotSargassoCentipedeAODPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x57012c0b;
 
-		constexpr const static std::string_view AOD_type_name = "AOD";
-		constexpr const static rivet::rivet_type_id AOD_type_id = 0x9a51878f; 
+		constexpr static std::string_view AOD_type_name = "AOD";
+		constexpr static rivet::rivet_type_id AOD_type_id = 0x9a51878f; 
 
 		explicit ShotSargassoCentipedeAODPrius() = default;
 		explicit ShotSargassoCentipedeAODPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -23,19 +23,19 @@ namespace rivet::ddl::generated {
 	struct VanityPerkBase; 
 
 	struct RIVET_DDL_SHARED VanitySetConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "VanitySetConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x4d121082;
+		constexpr static std::string_view type_name = "VanitySetConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x4d121082;
 
-		constexpr const static std::string_view VanityBundles_type_name = "VanityBundles";
-		constexpr const static rivet::rivet_type_id VanityBundles_type_id = 0x229d71b5;
-		constexpr const static std::string_view DefaultColor_type_name = "DefaultColor";
-		constexpr const static rivet::rivet_type_id DefaultColor_type_id = 0x7ccd1470;
-		constexpr const static std::string_view IsDuplicate_type_name = "IsDuplicate";
-		constexpr const static rivet::rivet_type_id IsDuplicate_type_id = 0xa6036107;
-		constexpr const static std::string_view OriginalSet_type_name = "OriginalSet";
-		constexpr const static rivet::rivet_type_id OriginalSet_type_id = 0x254f8245;
-		constexpr const static std::string_view Perk_type_name = "Perk";
-		constexpr const static rivet::rivet_type_id Perk_type_id = 0xf39e155f; 
+		constexpr static std::string_view VanityBundles_type_name = "VanityBundles";
+		constexpr static rivet::rivet_type_id VanityBundles_type_id = 0x229d71b5;
+		constexpr static std::string_view DefaultColor_type_name = "DefaultColor";
+		constexpr static rivet::rivet_type_id DefaultColor_type_id = 0x7ccd1470;
+		constexpr static std::string_view IsDuplicate_type_name = "IsDuplicate";
+		constexpr static rivet::rivet_type_id IsDuplicate_type_id = 0xa6036107;
+		constexpr static std::string_view OriginalSet_type_name = "OriginalSet";
+		constexpr static rivet::rivet_type_id OriginalSet_type_id = 0x254f8245;
+		constexpr static std::string_view Perk_type_name = "Perk";
+		constexpr static rivet::rivet_type_id Perk_type_id = 0xf39e155f; 
 
 		explicit VanitySetConfig() = default;
 		explicit VanitySetConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

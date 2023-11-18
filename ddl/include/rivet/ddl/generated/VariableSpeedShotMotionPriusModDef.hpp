@@ -23,13 +23,13 @@ namespace rivet::ddl::generated {
 	struct ConfigModListElement; 
 
 	struct RIVET_DDL_SHARED VariableSpeedShotMotionPriusModDef : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "VariableSpeedShotMotionPriusModDef";
-		constexpr const static rivet::rivet_type_id type_id = 0xc7a16fb6;
+		constexpr static std::string_view type_name = "VariableSpeedShotMotionPriusModDef";
+		constexpr static rivet::rivet_type_id type_id = 0xc7a16fb6;
 
-		constexpr const static std::string_view Variable_type_name = "Variable";
-		constexpr const static rivet::rivet_type_id Variable_type_id = 0x364c3afd;
-		constexpr const static std::string_view ModList_type_name = "ModList";
-		constexpr const static rivet::rivet_type_id ModList_type_id = 0x2649755b; 
+		constexpr static std::string_view Variable_type_name = "Variable";
+		constexpr static rivet::rivet_type_id Variable_type_id = 0x364c3afd;
+		constexpr static std::string_view ModList_type_name = "ModList";
+		constexpr static rivet::rivet_type_id ModList_type_id = 0x2649755b; 
 
 		explicit VariableSpeedShotMotionPriusModDef() = default;
 		explicit VariableSpeedShotMotionPriusModDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

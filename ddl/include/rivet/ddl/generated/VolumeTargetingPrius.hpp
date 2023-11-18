@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED VolumeTargetingPrius : DistanceTargetingPrius {
-		constexpr const static std::string_view type_name = "VolumeTargetingPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x83416f48;
+		constexpr static std::string_view type_name = "VolumeTargetingPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x83416f48;
 
 		explicit VolumeTargetingPrius() = default;
 		explicit VolumeTargetingPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -21,11 +21,11 @@ namespace rivet::ddl::generated {
 	struct WwiseSwitch; 
 
 	struct RIVET_DDL_SHARED WwiseSwitchSelectItem : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "WwiseSwitchSelectItem";
-		constexpr const static rivet::rivet_type_id type_id = 0x3170d767;
+		constexpr static std::string_view type_name = "WwiseSwitchSelectItem";
+		constexpr static rivet::rivet_type_id type_id = 0x3170d767;
 
-		constexpr const static std::string_view SwitchGroupList_type_name = "SwitchGroupList";
-		constexpr const static rivet::rivet_type_id SwitchGroupList_type_id = 0xa76c9412; 
+		constexpr static std::string_view SwitchGroupList_type_name = "SwitchGroupList";
+		constexpr static rivet::rivet_type_id SwitchGroupList_type_id = 0xa76c9412; 
 
 		explicit WwiseSwitchSelectItem() = default;
 		explicit WwiseSwitchSelectItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

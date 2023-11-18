@@ -17,30 +17,30 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/enums/x1eee6c26.hpp>
-#include <rivet/ddl/generated/bitsets/x74d56eb6.hpp> 
+#include <rivet/ddl/generated/bitsets/x74d56eb6.hpp>
+#include <rivet/ddl/generated/enums/x1eee6c26.hpp> 
 
 namespace rivet::ddl::generated {
 	struct AwardEntry; 
 
 	struct RIVET_DDL_SHARED AwardGroup : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "AwardGroup";
-		constexpr const static rivet::rivet_type_id type_id = 0xcab47aa;
+		constexpr static std::string_view type_name = "AwardGroup";
+		constexpr static rivet::rivet_type_id type_id = 0xcab47aa;
 
-		constexpr const static std::string_view GroupType_type_name = "GroupType";
-		constexpr const static rivet::rivet_type_id GroupType_type_id = 0x60e89698;
-		constexpr const static std::string_view CodeName_type_name = "CodeName";
-		constexpr const static rivet::rivet_type_id CodeName_type_id = 0xa15b4218;
-		constexpr const static std::string_view Platform_type_name = "Platform";
-		constexpr const static rivet::rivet_type_id Platform_type_id = 0xc3536dbb;
-		constexpr const static std::string_view NameLocTag_type_name = "NameLocTag";
-		constexpr const static rivet::rivet_type_id NameLocTag_type_id = 0xa0041b54;
-		constexpr const static std::string_view DescLocTag_type_name = "DescLocTag";
-		constexpr const static rivet::rivet_type_id DescLocTag_type_id = 0xe02bccb2;
-		constexpr const static std::string_view ImagePath_type_name = "ImagePath";
-		constexpr const static rivet::rivet_type_id ImagePath_type_id = 0x3c1a7294;
-		constexpr const static std::string_view Awards_type_name = "Awards";
-		constexpr const static rivet::rivet_type_id Awards_type_id = 0x1b92ad99; 
+		constexpr static std::string_view GroupType_type_name = "GroupType";
+		constexpr static rivet::rivet_type_id GroupType_type_id = 0x60e89698;
+		constexpr static std::string_view CodeName_type_name = "CodeName";
+		constexpr static rivet::rivet_type_id CodeName_type_id = 0xa15b4218;
+		constexpr static std::string_view Platform_type_name = "Platform";
+		constexpr static rivet::rivet_type_id Platform_type_id = 0xc3536dbb;
+		constexpr static std::string_view NameLocTag_type_name = "NameLocTag";
+		constexpr static rivet::rivet_type_id NameLocTag_type_id = 0xa0041b54;
+		constexpr static std::string_view DescLocTag_type_name = "DescLocTag";
+		constexpr static rivet::rivet_type_id DescLocTag_type_id = 0xe02bccb2;
+		constexpr static std::string_view ImagePath_type_name = "ImagePath";
+		constexpr static rivet::rivet_type_id ImagePath_type_id = 0x3c1a7294;
+		constexpr static std::string_view Awards_type_name = "Awards";
+		constexpr static rivet::rivet_type_id Awards_type_id = 0x1b92ad99; 
 
 		explicit AwardGroup() = default;
 		explicit AwardGroup([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -23,21 +23,21 @@ namespace rivet::ddl::generated {
 	struct GoldBoltRewardCost; 
 
 	struct RIVET_DDL_SHARED GoldBoltSystemConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "GoldBoltSystemConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x38fb4b65;
+		constexpr static std::string_view type_name = "GoldBoltSystemConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x38fb4b65;
 
-		constexpr const static std::string_view Rewards_type_name = "Rewards";
-		constexpr const static rivet::rivet_type_id Rewards_type_id = 0xe8c87d0f;
-		constexpr const static std::string_view HeadSizeConfig_type_name = "HeadSizeConfig";
-		constexpr const static rivet::rivet_type_id HeadSizeConfig_type_id = 0x5858daab;
-		constexpr const static std::string_view MeleeModelSwapConfig_type_name = "MeleeModelSwapConfig";
-		constexpr const static rivet::rivet_type_id MeleeModelSwapConfig_type_id = 0x479883e6;
-		constexpr const static std::string_view HomeRunHitterConfig_type_name = "HomeRunHitterConfig";
-		constexpr const static rivet::rivet_type_id HomeRunHitterConfig_type_id = 0x6e6a1ded;
-		constexpr const static std::string_view RewardRenderModeConfig_type_name = "RewardRenderModeConfig";
-		constexpr const static rivet::rivet_type_id RewardRenderModeConfig_type_id = 0x50681d04;
-		constexpr const static std::string_view ShipSkinConfig_type_name = "ShipSkinConfig";
-		constexpr const static rivet::rivet_type_id ShipSkinConfig_type_id = 0xf0183657; 
+		constexpr static std::string_view Rewards_type_name = "Rewards";
+		constexpr static rivet::rivet_type_id Rewards_type_id = 0xe8c87d0f;
+		constexpr static std::string_view HeadSizeConfig_type_name = "HeadSizeConfig";
+		constexpr static rivet::rivet_type_id HeadSizeConfig_type_id = 0x5858daab;
+		constexpr static std::string_view MeleeModelSwapConfig_type_name = "MeleeModelSwapConfig";
+		constexpr static rivet::rivet_type_id MeleeModelSwapConfig_type_id = 0x479883e6;
+		constexpr static std::string_view HomeRunHitterConfig_type_name = "HomeRunHitterConfig";
+		constexpr static rivet::rivet_type_id HomeRunHitterConfig_type_id = 0x6e6a1ded;
+		constexpr static std::string_view RewardRenderModeConfig_type_name = "RewardRenderModeConfig";
+		constexpr static rivet::rivet_type_id RewardRenderModeConfig_type_id = 0x50681d04;
+		constexpr static std::string_view ShipSkinConfig_type_name = "ShipSkinConfig";
+		constexpr static rivet::rivet_type_id ShipSkinConfig_type_id = 0xf0183657; 
 
 		explicit GoldBoltSystemConfig() = default;
 		explicit GoldBoltSystemConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

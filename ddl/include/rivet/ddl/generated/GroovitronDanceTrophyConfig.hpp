@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct UniqueDancerData; 
 
 	struct RIVET_DDL_SHARED GroovitronDanceTrophyConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "GroovitronDanceTrophyConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xc614f563;
+		constexpr static std::string_view type_name = "GroovitronDanceTrophyConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xc614f563;
 
-		constexpr const static std::string_view DancerList_type_name = "DancerList";
-		constexpr const static rivet::rivet_type_id DancerList_type_id = 0xca02462f; 
+		constexpr static std::string_view DancerList_type_name = "DancerList";
+		constexpr static rivet::rivet_type_id DancerList_type_id = 0xca02462f; 
 
 		explicit GroovitronDanceTrophyConfig() = default;
 		explicit GroovitronDanceTrophyConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

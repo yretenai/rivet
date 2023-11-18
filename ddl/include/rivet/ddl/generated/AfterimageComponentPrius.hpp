@@ -19,25 +19,25 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED AfterimageComponentPrius : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "AfterimageComponentPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x42c5baea;
+		constexpr static std::string_view type_name = "AfterimageComponentPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x42c5baea;
 
-		constexpr const static std::string_view ActorMaterial_type_name = "ActorMaterial";
-		constexpr const static rivet::rivet_type_id ActorMaterial_type_id = 0xec0c4441;
-		constexpr const static std::string_view ActorMaterialMappingName_type_name = "ActorMaterialMappingName";
-		constexpr const static rivet::rivet_type_id ActorMaterialMappingName_type_id = 0x15410949;
-		constexpr const static std::string_view AfterimageMaterial_type_name = "AfterimageMaterial";
-		constexpr const static rivet::rivet_type_id AfterimageMaterial_type_id = 0x1146a29;
-		constexpr const static std::string_view AfterimageMaterialMappingName_type_name = "AfterimageMaterialMappingName";
-		constexpr const static rivet::rivet_type_id AfterimageMaterialMappingName_type_id = 0xa10f9d8e;
-		constexpr const static std::string_view Interval_type_name = "Interval";
-		constexpr const static rivet::rivet_type_id Interval_type_id = 0xe3c752bb;
-		constexpr const static std::string_view NumAfterimages_type_name = "NumAfterimages";
-		constexpr const static rivet::rivet_type_id NumAfterimages_type_id = 0x1d2a06e;
-		constexpr const static std::string_view MinLoD_type_name = "MinLoD";
-		constexpr const static rivet::rivet_type_id MinLoD_type_id = 0x9e5fe009;
-		constexpr const static std::string_view ExpireDuration_type_name = "ExpireDuration";
-		constexpr const static rivet::rivet_type_id ExpireDuration_type_id = 0x9afa4336; 
+		constexpr static std::string_view ActorMaterial_type_name = "ActorMaterial";
+		constexpr static rivet::rivet_type_id ActorMaterial_type_id = 0xec0c4441;
+		constexpr static std::string_view ActorMaterialMappingName_type_name = "ActorMaterialMappingName";
+		constexpr static rivet::rivet_type_id ActorMaterialMappingName_type_id = 0x15410949;
+		constexpr static std::string_view AfterimageMaterial_type_name = "AfterimageMaterial";
+		constexpr static rivet::rivet_type_id AfterimageMaterial_type_id = 0x1146a29;
+		constexpr static std::string_view AfterimageMaterialMappingName_type_name = "AfterimageMaterialMappingName";
+		constexpr static rivet::rivet_type_id AfterimageMaterialMappingName_type_id = 0xa10f9d8e;
+		constexpr static std::string_view Interval_type_name = "Interval";
+		constexpr static rivet::rivet_type_id Interval_type_id = 0xe3c752bb;
+		constexpr static std::string_view NumAfterimages_type_name = "NumAfterimages";
+		constexpr static rivet::rivet_type_id NumAfterimages_type_id = 0x1d2a06e;
+		constexpr static std::string_view MinLoD_type_name = "MinLoD";
+		constexpr static rivet::rivet_type_id MinLoD_type_id = 0x9e5fe009;
+		constexpr static std::string_view ExpireDuration_type_name = "ExpireDuration";
+		constexpr static rivet::rivet_type_id ExpireDuration_type_id = 0x9afa4336; 
 
 		explicit AfterimageComponentPrius() = default;
 		explicit AfterimageComponentPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

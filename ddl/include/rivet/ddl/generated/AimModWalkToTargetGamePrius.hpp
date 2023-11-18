@@ -17,16 +17,16 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/AimModWalkToTargetPrius.hpp>
-#include <rivet/ddl/generated/enums/x6d09c1a1.hpp> 
+#include <rivet/ddl/generated/enums/x6d09c1a1.hpp>
+#include <rivet/ddl/generated/AimModWalkToTargetPrius.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED AimModWalkToTargetGamePrius : AimModWalkToTargetPrius {
-		constexpr const static std::string_view type_name = "AimModWalkToTargetGamePrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x1aec0662;
+		constexpr static std::string_view type_name = "AimModWalkToTargetGamePrius";
+		constexpr static rivet::rivet_type_id type_id = 0x1aec0662;
 
-		constexpr const static std::string_view AimLockType_type_name = "AimLockType";
-		constexpr const static rivet::rivet_type_id AimLockType_type_id = 0x9939178b; 
+		constexpr static std::string_view AimLockType_type_name = "AimLockType";
+		constexpr static rivet::rivet_type_id AimLockType_type_id = 0x9939178b; 
 
 		explicit AimModWalkToTargetGamePrius() = default;
 		explicit AimModWalkToTargetGamePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

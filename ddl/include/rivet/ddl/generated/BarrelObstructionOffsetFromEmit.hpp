@@ -17,20 +17,20 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/BarrelObstructionBase.hpp>
-#include <rivet/ddl/generated/enums/x77a4e9ba.hpp> 
+#include <rivet/ddl/generated/enums/x77a4e9ba.hpp>
+#include <rivet/ddl/generated/BarrelObstructionBase.hpp> 
 
 namespace rivet::ddl::generated {
 	struct DDLVector3; 
 
 	struct RIVET_DDL_SHARED BarrelObstructionOffsetFromEmit : BarrelObstructionBase {
-		constexpr const static std::string_view type_name = "BarrelObstructionOffsetFromEmit";
-		constexpr const static rivet::rivet_type_id type_id = 0x8c268224;
+		constexpr static std::string_view type_name = "BarrelObstructionOffsetFromEmit";
+		constexpr static rivet::rivet_type_id type_id = 0x8c268224;
 
-		constexpr const static std::string_view EmitterIndex_type_name = "EmitterIndex";
-		constexpr const static rivet::rivet_type_id EmitterIndex_type_id = 0x23b96c51;
-		constexpr const static std::string_view LocalSpaceOffset_type_name = "LocalSpaceOffset";
-		constexpr const static rivet::rivet_type_id LocalSpaceOffset_type_id = 0x1f64e101; 
+		constexpr static std::string_view EmitterIndex_type_name = "EmitterIndex";
+		constexpr static rivet::rivet_type_id EmitterIndex_type_id = 0x23b96c51;
+		constexpr static std::string_view LocalSpaceOffset_type_name = "LocalSpaceOffset";
+		constexpr static rivet::rivet_type_id LocalSpaceOffset_type_id = 0x1f64e101; 
 
 		explicit BarrelObstructionOffsetFromEmit() = default;
 		explicit BarrelObstructionOffsetFromEmit([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -24,13 +24,13 @@ namespace rivet::ddl::generated {
 	struct HexapodSlideData; 
 
 	struct RIVET_DDL_SHARED BotMovementHexapod : BotMovementBase {
-		constexpr const static std::string_view type_name = "BotMovementHexapod";
-		constexpr const static rivet::rivet_type_id type_id = 0x54bf27a8;
+		constexpr static std::string_view type_name = "BotMovementHexapod";
+		constexpr static rivet::rivet_type_id type_id = 0x54bf27a8;
 
-		constexpr const static std::string_view SlideData_type_name = "SlideData";
-		constexpr const static rivet::rivet_type_id SlideData_type_id = 0xda82fe40;
-		constexpr const static std::string_view FallData_type_name = "FallData";
-		constexpr const static rivet::rivet_type_id FallData_type_id = 0xab175a58; 
+		constexpr static std::string_view SlideData_type_name = "SlideData";
+		constexpr static rivet::rivet_type_id SlideData_type_id = 0xda82fe40;
+		constexpr static std::string_view FallData_type_name = "FallData";
+		constexpr static rivet::rivet_type_id FallData_type_id = 0xab175a58; 
 
 		explicit BotMovementHexapod() = default;
 		explicit BotMovementHexapod([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

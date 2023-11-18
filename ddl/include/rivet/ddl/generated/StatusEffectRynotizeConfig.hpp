@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED StatusEffectRynotizeConfig : StatusEffectConfig {
-		constexpr const static std::string_view type_name = "StatusEffectRynotizeConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x6cb6e5d5;
+		constexpr static std::string_view type_name = "StatusEffectRynotizeConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x6cb6e5d5;
 
-		constexpr const static std::string_view HealthPackConfig_type_name = "HealthPackConfig";
-		constexpr const static rivet::rivet_type_id HealthPackConfig_type_id = 0x99a5be38;
-		constexpr const static std::string_view SpeedMultiplier_type_name = "SpeedMultiplier";
-		constexpr const static rivet::rivet_type_id SpeedMultiplier_type_id = 0x621b85e8; 
+		constexpr static std::string_view HealthPackConfig_type_name = "HealthPackConfig";
+		constexpr static rivet::rivet_type_id HealthPackConfig_type_id = 0x99a5be38;
+		constexpr static std::string_view SpeedMultiplier_type_name = "SpeedMultiplier";
+		constexpr static rivet::rivet_type_id SpeedMultiplier_type_id = 0x621b85e8; 
 
 		explicit StatusEffectRynotizeConfig() = default;
 		explicit StatusEffectRynotizeConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

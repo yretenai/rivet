@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED LookAtTargetPrius : TargetingAimAnglePrius {
-		constexpr const static std::string_view type_name = "LookAtTargetPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xddf9944c;
+		constexpr static std::string_view type_name = "LookAtTargetPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xddf9944c;
 
 		explicit LookAtTargetPrius() = default;
 		explicit LookAtTargetPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

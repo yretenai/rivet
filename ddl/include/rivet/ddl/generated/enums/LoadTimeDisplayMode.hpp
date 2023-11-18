@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view LoadTimeDisplayMode_type_name = "LoadTimeDisplayMode";
-	constexpr const static rivet::rivet_type_id LoadTimeDisplayMode_type_id = 0x522ab918;
+	constexpr static std::string_view LoadTimeDisplayMode_type_name = "LoadTimeDisplayMode";
+	constexpr static rivet::rivet_type_id LoadTimeDisplayMode_type_id = 0x522ab918;
 
-	constexpr const static std::array<std::string_view, 3> LoadTimeDisplayMode_values = {
+	constexpr static std::array<std::string_view, 3> LoadTimeDisplayMode_values = {
 		"kNone",
 		"kOverbudget",
 		"kAlways", 

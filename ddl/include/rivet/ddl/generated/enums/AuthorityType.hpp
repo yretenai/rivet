@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view AuthorityType_type_name = "AuthorityType";
-	constexpr const static rivet::rivet_type_id AuthorityType_type_id = 0xc9120f11;
+	constexpr static std::string_view AuthorityType_type_name = "AuthorityType";
+	constexpr static rivet::rivet_type_id AuthorityType_type_id = 0xc9120f11;
 
-	constexpr const static std::array<std::string_view, 3> AuthorityType_values = {
+	constexpr static std::array<std::string_view, 3> AuthorityType_values = {
 		"kDefault",
 		"kPermanent",
 		"kInvalid", 

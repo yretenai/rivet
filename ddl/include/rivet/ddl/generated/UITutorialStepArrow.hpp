@@ -17,16 +17,16 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/UITutorialStepBase.hpp>
-#include <rivet/ddl/generated/enums/xbc1de3ff.hpp> 
+#include <rivet/ddl/generated/enums/xbc1de3ff.hpp>
+#include <rivet/ddl/generated/UITutorialStepBase.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED UITutorialStepArrow : UITutorialStepBase {
-		constexpr const static std::string_view type_name = "UITutorialStepArrow";
-		constexpr const static rivet::rivet_type_id type_id = 0xd899cb4d;
+		constexpr static std::string_view type_name = "UITutorialStepArrow";
+		constexpr static rivet::rivet_type_id type_id = 0xd899cb4d;
 
-		constexpr const static std::string_view ArrowDirection_type_name = "ArrowDirection";
-		constexpr const static rivet::rivet_type_id ArrowDirection_type_id = 0xde38b39; 
+		constexpr static std::string_view ArrowDirection_type_name = "ArrowDirection";
+		constexpr static rivet::rivet_type_id ArrowDirection_type_id = 0xde38b39; 
 
 		explicit UITutorialStepArrow() = default;
 		explicit UITutorialStepArrow([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED WeaponObstructionNone : WeaponObstructionBase {
-		constexpr const static std::string_view type_name = "WeaponObstructionNone";
-		constexpr const static rivet::rivet_type_id type_id = 0x5323fa6b;
+		constexpr static std::string_view type_name = "WeaponObstructionNone";
+		constexpr static rivet::rivet_type_id type_id = 0x5323fa6b;
 
 		explicit WeaponObstructionNone() = default;
 		explicit WeaponObstructionNone([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

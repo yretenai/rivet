@@ -17,30 +17,30 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/enums/x8d7e44cf.hpp>
-#include <rivet/ddl/generated/enums/KnockbackLevels.hpp> 
+#include <rivet/ddl/generated/enums/KnockbackLevels.hpp>
+#include <rivet/ddl/generated/enums/x8d7e44cf.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED BotMountDamageData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "BotMountDamageData";
-		constexpr const static rivet::rivet_type_id type_id = 0x8d47bf30;
+		constexpr static std::string_view type_name = "BotMountDamageData";
+		constexpr static rivet::rivet_type_id type_id = 0x8d47bf30;
 
-		constexpr const static std::string_view EnableTouchDamage_type_name = "EnableTouchDamage";
-		constexpr const static rivet::rivet_type_id EnableTouchDamage_type_id = 0xbfaa9b05;
-		constexpr const static std::string_view LocatorName_type_name = "LocatorName";
-		constexpr const static rivet::rivet_type_id LocatorName_type_id = 0x5814524d;
-		constexpr const static std::string_view DamageSphereRadius_type_name = "DamageSphereRadius";
-		constexpr const static rivet::rivet_type_id DamageSphereRadius_type_id = 0x359f9b0a;
-		constexpr const static std::string_view DamageAmount_type_name = "DamageAmount";
-		constexpr const static rivet::rivet_type_id DamageAmount_type_id = 0x563be470;
-		constexpr const static std::string_view DamageType_type_name = "DamageType";
-		constexpr const static rivet::rivet_type_id DamageType_type_id = 0x840c154d;
-		constexpr const static std::string_view Knockback_type_name = "Knockback";
-		constexpr const static rivet::rivet_type_id Knockback_type_id = 0x2e553fdd;
-		constexpr const static std::string_view DamageStr_type_name = "DamageStr";
-		constexpr const static rivet::rivet_type_id DamageStr_type_id = 0xecbb9a92;
-		constexpr const static std::string_view KnockbackAmount_type_name = "KnockbackAmount";
-		constexpr const static rivet::rivet_type_id KnockbackAmount_type_id = 0x7b1e600b; 
+		constexpr static std::string_view EnableTouchDamage_type_name = "EnableTouchDamage";
+		constexpr static rivet::rivet_type_id EnableTouchDamage_type_id = 0xbfaa9b05;
+		constexpr static std::string_view LocatorName_type_name = "LocatorName";
+		constexpr static rivet::rivet_type_id LocatorName_type_id = 0x5814524d;
+		constexpr static std::string_view DamageSphereRadius_type_name = "DamageSphereRadius";
+		constexpr static rivet::rivet_type_id DamageSphereRadius_type_id = 0x359f9b0a;
+		constexpr static std::string_view DamageAmount_type_name = "DamageAmount";
+		constexpr static rivet::rivet_type_id DamageAmount_type_id = 0x563be470;
+		constexpr static std::string_view DamageType_type_name = "DamageType";
+		constexpr static rivet::rivet_type_id DamageType_type_id = 0x840c154d;
+		constexpr static std::string_view Knockback_type_name = "Knockback";
+		constexpr static rivet::rivet_type_id Knockback_type_id = 0x2e553fdd;
+		constexpr static std::string_view DamageStr_type_name = "DamageStr";
+		constexpr static rivet::rivet_type_id DamageStr_type_id = 0xecbb9a92;
+		constexpr static std::string_view KnockbackAmount_type_name = "KnockbackAmount";
+		constexpr static rivet::rivet_type_id KnockbackAmount_type_id = 0x7b1e600b; 
 
 		explicit BotMountDamageData() = default;
 		explicit BotMountDamageData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

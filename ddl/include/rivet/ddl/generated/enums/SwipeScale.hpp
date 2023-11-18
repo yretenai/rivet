@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view SwipeScale_type_name = "SwipeScale";
-	constexpr const static rivet::rivet_type_id SwipeScale_type_id = 0x2150ae07;
+	constexpr static std::string_view SwipeScale_type_name = "SwipeScale";
+	constexpr static rivet::rivet_type_id SwipeScale_type_id = 0x2150ae07;
 
-	constexpr const static std::array<std::string_view, 2> SwipeScale_values = {
+	constexpr static std::array<std::string_view, 2> SwipeScale_values = {
 		"kOrigin",
 		"kCenter", 
 	};

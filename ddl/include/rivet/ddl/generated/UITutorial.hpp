@@ -23,21 +23,21 @@ namespace rivet::ddl::generated {
 	struct UITutorialStep; 
 
 	struct RIVET_DDL_SHARED UITutorial : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "UITutorial";
-		constexpr const static rivet::rivet_type_id type_id = 0xd28f19;
+		constexpr static std::string_view type_name = "UITutorial";
+		constexpr static rivet::rivet_type_id type_id = 0xd28f19;
 
-		constexpr const static std::string_view TutorialID_type_name = "TutorialID";
-		constexpr const static rivet::rivet_type_id TutorialID_type_id = 0x685b5c40;
-		constexpr const static std::string_view Name_type_name = "Name";
-		constexpr const static rivet::rivet_type_id Name_type_id = 0x6eb3beb6;
-		constexpr const static std::string_view Mission_type_name = "Mission";
-		constexpr const static rivet::rivet_type_id Mission_type_id = 0x918d9104;
-		constexpr const static std::string_view Objective_type_name = "Objective";
-		constexpr const static rivet::rivet_type_id Objective_type_id = 0x3b6b6e0d;
-		constexpr const static std::string_view ChallengeMode_type_name = "ChallengeMode";
-		constexpr const static rivet::rivet_type_id ChallengeMode_type_id = 0x5ca1bef6;
-		constexpr const static std::string_view TutorialSteps_type_name = "TutorialSteps";
-		constexpr const static rivet::rivet_type_id TutorialSteps_type_id = 0xe87930b5; 
+		constexpr static std::string_view TutorialID_type_name = "TutorialID";
+		constexpr static rivet::rivet_type_id TutorialID_type_id = 0x685b5c40;
+		constexpr static std::string_view Name_type_name = "Name";
+		constexpr static rivet::rivet_type_id Name_type_id = 0x6eb3beb6;
+		constexpr static std::string_view Mission_type_name = "Mission";
+		constexpr static rivet::rivet_type_id Mission_type_id = 0x918d9104;
+		constexpr static std::string_view Objective_type_name = "Objective";
+		constexpr static rivet::rivet_type_id Objective_type_id = 0x3b6b6e0d;
+		constexpr static std::string_view ChallengeMode_type_name = "ChallengeMode";
+		constexpr static rivet::rivet_type_id ChallengeMode_type_id = 0x5ca1bef6;
+		constexpr static std::string_view TutorialSteps_type_name = "TutorialSteps";
+		constexpr static rivet::rivet_type_id TutorialSteps_type_id = 0xe87930b5; 
 
 		explicit UITutorial() = default;
 		explicit UITutorial([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

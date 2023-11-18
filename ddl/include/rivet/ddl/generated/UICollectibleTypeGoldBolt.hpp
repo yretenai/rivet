@@ -24,13 +24,13 @@ namespace rivet::ddl::generated {
 	struct UIGoldBoltOptionTypeBase; 
 
 	struct RIVET_DDL_SHARED UICollectibleTypeGoldBolt : UICollectibleTypeBase {
-		constexpr const static std::string_view type_name = "UICollectibleTypeGoldBolt";
-		constexpr const static rivet::rivet_type_id type_id = 0xd0f3ef7f;
+		constexpr static std::string_view type_name = "UICollectibleTypeGoldBolt";
+		constexpr static rivet::rivet_type_id type_id = 0xd0f3ef7f;
 
-		constexpr const static std::string_view RewardID_type_name = "RewardID";
-		constexpr const static rivet::rivet_type_id RewardID_type_id = 0xc44f8e1c;
-		constexpr const static std::string_view Type_type_name = "Type";
-		constexpr const static rivet::rivet_type_id Type_type_id = 0xbc4e9799; 
+		constexpr static std::string_view RewardID_type_name = "RewardID";
+		constexpr static rivet::rivet_type_id RewardID_type_id = 0xc44f8e1c;
+		constexpr static std::string_view Type_type_name = "Type";
+		constexpr static rivet::rivet_type_id Type_type_id = 0xbc4e9799; 
 
 		explicit UICollectibleTypeGoldBolt() = default;
 		explicit UICollectibleTypeGoldBolt([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

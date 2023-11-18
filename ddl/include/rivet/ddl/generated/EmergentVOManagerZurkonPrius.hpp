@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED EmergentVOManagerZurkonPrius : EmergentVOManagerGamePrius {
-		constexpr const static std::string_view type_name = "EmergentVOManagerZurkonPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x565dc85a;
+		constexpr static std::string_view type_name = "EmergentVOManagerZurkonPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x565dc85a;
 
-		constexpr const static std::string_view EmergentVOConfigAssetId_type_name = "EmergentVOConfigAssetId";
-		constexpr const static rivet::rivet_type_id EmergentVOConfigAssetId_type_id = 0x63f2ca25;
-		constexpr const static std::string_view HeroHandle_type_name = "HeroHandle";
-		constexpr const static rivet::rivet_type_id HeroHandle_type_id = 0x581d988d; 
+		constexpr static std::string_view EmergentVOConfigAssetId_type_name = "EmergentVOConfigAssetId";
+		constexpr static rivet::rivet_type_id EmergentVOConfigAssetId_type_id = 0x63f2ca25;
+		constexpr static std::string_view HeroHandle_type_name = "HeroHandle";
+		constexpr static rivet::rivet_type_id HeroHandle_type_id = 0x581d988d; 
 
 		explicit EmergentVOManagerZurkonPrius() = default;
 		explicit EmergentVOManagerZurkonPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

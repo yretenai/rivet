@@ -23,13 +23,13 @@ namespace rivet::ddl::generated {
 	struct CritterDensity; 
 
 	struct RIVET_DDL_SHARED CritterTypeConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "CritterTypeConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xa8c9ece6;
+		constexpr static std::string_view type_name = "CritterTypeConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xa8c9ece6;
 
-		constexpr const static std::string_view CritterActor_type_name = "CritterActor";
-		constexpr const static rivet::rivet_type_id CritterActor_type_id = 0x358cc844;
-		constexpr const static std::string_view DefaultDensity_type_name = "DefaultDensity";
-		constexpr const static rivet::rivet_type_id DefaultDensity_type_id = 0x432f4e12; 
+		constexpr static std::string_view CritterActor_type_name = "CritterActor";
+		constexpr static rivet::rivet_type_id CritterActor_type_id = 0x358cc844;
+		constexpr static std::string_view DefaultDensity_type_name = "DefaultDensity";
+		constexpr static rivet::rivet_type_id DefaultDensity_type_id = 0x432f4e12; 
 
 		explicit CritterTypeConfig() = default;
 		explicit CritterTypeConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -18,41 +18,41 @@
 #include <rivet/structures/rivet_serialization.hpp>
 
 namespace rivet::ddl::generated {
-	struct FlavorCycleConfig;
-	struct HeroAwarenessConfig; 
+	struct HeroAwarenessConfig;
+	struct FlavorCycleConfig; 
 
 	struct RIVET_DDL_SHARED HeroFlavorAnimConfig : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "HeroFlavorAnimConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x99daea31;
+		constexpr static std::string_view type_name = "HeroFlavorAnimConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x99daea31;
 
-		constexpr const static std::string_view FidgetIntervalMin_type_name = "FidgetIntervalMin";
-		constexpr const static rivet::rivet_type_id FidgetIntervalMin_type_id = 0xe7d7f59e;
-		constexpr const static std::string_view FidgetIntervalMax_type_name = "FidgetIntervalMax";
-		constexpr const static rivet::rivet_type_id FidgetIntervalMax_type_id = 0xdbdacac7;
-		constexpr const static std::string_view JumpLandHeightRangeShort_type_name = "JumpLandHeightRangeShort";
-		constexpr const static rivet::rivet_type_id JumpLandHeightRangeShort_type_id = 0x91ce0483;
-		constexpr const static std::string_view JumpLandHeightRangeLong_type_name = "JumpLandHeightRangeLong";
-		constexpr const static rivet::rivet_type_id JumpLandHeightRangeLong_type_id = 0xd39b90dc;
-		constexpr const static std::string_view FallHeightRangeShort_type_name = "FallHeightRangeShort";
-		constexpr const static rivet::rivet_type_id FallHeightRangeShort_type_id = 0x92c8e416;
-		constexpr const static std::string_view FallHeightRangeMid_type_name = "FallHeightRangeMid";
-		constexpr const static rivet::rivet_type_id FallHeightRangeMid_type_id = 0x2828a3d5;
-		constexpr const static std::string_view FallHeightRangeLong_type_name = "FallHeightRangeLong";
-		constexpr const static rivet::rivet_type_id FallHeightRangeLong_type_id = 0x6399095e;
-		constexpr const static std::string_view SlopeVarLerpSpeed_type_name = "SlopeVarLerpSpeed";
-		constexpr const static rivet::rivet_type_id SlopeVarLerpSpeed_type_id = 0xae9d14e4;
-		constexpr const static std::string_view TurbulenceMinSpeed_type_name = "TurbulenceMinSpeed";
-		constexpr const static rivet::rivet_type_id TurbulenceMinSpeed_type_id = 0xd58c9625;
-		constexpr const static std::string_view TurbulenceMaxSpeed_type_name = "TurbulenceMaxSpeed";
-		constexpr const static rivet::rivet_type_id TurbulenceMaxSpeed_type_id = 0x33ec39c4;
-		constexpr const static std::string_view RunCycles_type_name = "RunCycles";
-		constexpr const static rivet::rivet_type_id RunCycles_type_id = 0x414ee70c;
-		constexpr const static std::string_view GrindCycles_type_name = "GrindCycles";
-		constexpr const static rivet::rivet_type_id GrindCycles_type_id = 0xe386f418;
-		constexpr const static std::string_view GrindSlideCycles_type_name = "GrindSlideCycles";
-		constexpr const static rivet::rivet_type_id GrindSlideCycles_type_id = 0xa9a5d53c;
-		constexpr const static std::string_view HeroAwareness_type_name = "HeroAwareness";
-		constexpr const static rivet::rivet_type_id HeroAwareness_type_id = 0x5fd01dd0; 
+		constexpr static std::string_view FidgetIntervalMin_type_name = "FidgetIntervalMin";
+		constexpr static rivet::rivet_type_id FidgetIntervalMin_type_id = 0xe7d7f59e;
+		constexpr static std::string_view FidgetIntervalMax_type_name = "FidgetIntervalMax";
+		constexpr static rivet::rivet_type_id FidgetIntervalMax_type_id = 0xdbdacac7;
+		constexpr static std::string_view JumpLandHeightRangeShort_type_name = "JumpLandHeightRangeShort";
+		constexpr static rivet::rivet_type_id JumpLandHeightRangeShort_type_id = 0x91ce0483;
+		constexpr static std::string_view JumpLandHeightRangeLong_type_name = "JumpLandHeightRangeLong";
+		constexpr static rivet::rivet_type_id JumpLandHeightRangeLong_type_id = 0xd39b90dc;
+		constexpr static std::string_view FallHeightRangeShort_type_name = "FallHeightRangeShort";
+		constexpr static rivet::rivet_type_id FallHeightRangeShort_type_id = 0x92c8e416;
+		constexpr static std::string_view FallHeightRangeMid_type_name = "FallHeightRangeMid";
+		constexpr static rivet::rivet_type_id FallHeightRangeMid_type_id = 0x2828a3d5;
+		constexpr static std::string_view FallHeightRangeLong_type_name = "FallHeightRangeLong";
+		constexpr static rivet::rivet_type_id FallHeightRangeLong_type_id = 0x6399095e;
+		constexpr static std::string_view SlopeVarLerpSpeed_type_name = "SlopeVarLerpSpeed";
+		constexpr static rivet::rivet_type_id SlopeVarLerpSpeed_type_id = 0xae9d14e4;
+		constexpr static std::string_view TurbulenceMinSpeed_type_name = "TurbulenceMinSpeed";
+		constexpr static rivet::rivet_type_id TurbulenceMinSpeed_type_id = 0xd58c9625;
+		constexpr static std::string_view TurbulenceMaxSpeed_type_name = "TurbulenceMaxSpeed";
+		constexpr static rivet::rivet_type_id TurbulenceMaxSpeed_type_id = 0x33ec39c4;
+		constexpr static std::string_view RunCycles_type_name = "RunCycles";
+		constexpr static rivet::rivet_type_id RunCycles_type_id = 0x414ee70c;
+		constexpr static std::string_view GrindCycles_type_name = "GrindCycles";
+		constexpr static rivet::rivet_type_id GrindCycles_type_id = 0xe386f418;
+		constexpr static std::string_view GrindSlideCycles_type_name = "GrindSlideCycles";
+		constexpr static rivet::rivet_type_id GrindSlideCycles_type_id = 0xa9a5d53c;
+		constexpr static std::string_view HeroAwareness_type_name = "HeroAwareness";
+		constexpr static rivet::rivet_type_id HeroAwareness_type_id = 0x5fd01dd0; 
 
 		explicit HeroFlavorAnimConfig() = default;
 		explicit HeroFlavorAnimConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

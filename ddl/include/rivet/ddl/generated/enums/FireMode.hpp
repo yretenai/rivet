@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view FireMode_type_name = "FireMode";
-	constexpr const static rivet::rivet_type_id FireMode_type_id = 0x960da16d;
+	constexpr static std::string_view FireMode_type_name = "FireMode";
+	constexpr static rivet::rivet_type_id FireMode_type_id = 0x960da16d;
 
-	constexpr const static std::array<std::string_view, 3> FireMode_values = {
+	constexpr static std::array<std::string_view, 3> FireMode_values = {
 		"kDefault",
 		"kHold",
 		"kToggle", 

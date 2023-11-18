@@ -23,15 +23,15 @@ namespace rivet::ddl::generated {
 	struct CooldownPerDifficultyData; 
 
 	struct RIVET_DDL_SHARED RegisterAttackCooldownData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "RegisterAttackCooldownData";
-		constexpr const static rivet::rivet_type_id type_id = 0xa54a469e;
+		constexpr static std::string_view type_name = "RegisterAttackCooldownData";
+		constexpr static rivet::rivet_type_id type_id = 0xa54a469e;
 
-		constexpr const static std::string_view CooldownType_type_name = "CooldownType";
-		constexpr const static rivet::rivet_type_id CooldownType_type_id = 0xaad24eb7;
-		constexpr const static std::string_view GlobalCooldown_type_name = "GlobalCooldown";
-		constexpr const static rivet::rivet_type_id GlobalCooldown_type_id = 0x6a819eb7;
-		constexpr const static std::string_view PersonalCooldown_type_name = "PersonalCooldown";
-		constexpr const static rivet::rivet_type_id PersonalCooldown_type_id = 0x91725d19; 
+		constexpr static std::string_view CooldownType_type_name = "CooldownType";
+		constexpr static rivet::rivet_type_id CooldownType_type_id = 0xaad24eb7;
+		constexpr static std::string_view GlobalCooldown_type_name = "GlobalCooldown";
+		constexpr static rivet::rivet_type_id GlobalCooldown_type_id = 0x6a819eb7;
+		constexpr static std::string_view PersonalCooldown_type_name = "PersonalCooldown";
+		constexpr static rivet::rivet_type_id PersonalCooldown_type_id = 0x91725d19; 
 
 		explicit RegisterAttackCooldownData() = default;
 		explicit RegisterAttackCooldownData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

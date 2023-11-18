@@ -19,11 +19,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED CritterDensity : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "CritterDensity";
-		constexpr const static rivet::rivet_type_id type_id = 0xc7ad674a;
+		constexpr static std::string_view type_name = "CritterDensity";
+		constexpr static rivet::rivet_type_id type_id = 0xc7ad674a;
 
-		constexpr const static std::string_view MaxActive_type_name = "MaxActive";
-		constexpr const static rivet::rivet_type_id MaxActive_type_id = 0xf76e8baf; 
+		constexpr static std::string_view MaxActive_type_name = "MaxActive";
+		constexpr static rivet::rivet_type_id MaxActive_type_id = 0xf76e8baf; 
 
 		explicit CritterDensity() = default;
 		explicit CritterDensity([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

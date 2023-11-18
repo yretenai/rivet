@@ -23,17 +23,17 @@ namespace rivet::ddl::generated {
 	struct HazardTurretTargeting; 
 
 	struct RIVET_DDL_SHARED HazardTurretConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "HazardTurretConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xa8fc3a55;
+		constexpr static std::string_view type_name = "HazardTurretConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xa8fc3a55;
 
-		constexpr const static std::string_view MaxHP_type_name = "MaxHP";
-		constexpr const static rivet::rivet_type_id MaxHP_type_id = 0x3460b557;
-		constexpr const static std::string_view Targeting_type_name = "Targeting";
-		constexpr const static rivet::rivet_type_id Targeting_type_id = 0x61ddca35;
-		constexpr const static std::string_view BurstShots_type_name = "BurstShots";
-		constexpr const static rivet::rivet_type_id BurstShots_type_id = 0xb4290d8a;
-		constexpr const static std::string_view CooldownDuration_type_name = "CooldownDuration";
-		constexpr const static rivet::rivet_type_id CooldownDuration_type_id = 0x97cb9b45; 
+		constexpr static std::string_view MaxHP_type_name = "MaxHP";
+		constexpr static rivet::rivet_type_id MaxHP_type_id = 0x3460b557;
+		constexpr static std::string_view Targeting_type_name = "Targeting";
+		constexpr static rivet::rivet_type_id Targeting_type_id = 0x61ddca35;
+		constexpr static std::string_view BurstShots_type_name = "BurstShots";
+		constexpr static rivet::rivet_type_id BurstShots_type_id = 0xb4290d8a;
+		constexpr static std::string_view CooldownDuration_type_name = "CooldownDuration";
+		constexpr static rivet::rivet_type_id CooldownDuration_type_id = 0x97cb9b45; 
 
 		explicit HazardTurretConfig() = default;
 		explicit HazardTurretConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

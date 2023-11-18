@@ -21,23 +21,23 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED BotComboMoveFinaleSweepChase : BotComboMoveBase {
-		constexpr const static std::string_view type_name = "BotComboMoveFinaleSweepChase";
-		constexpr const static rivet::rivet_type_id type_id = 0xb9f912b;
+		constexpr static std::string_view type_name = "BotComboMoveFinaleSweepChase";
+		constexpr static rivet::rivet_type_id type_id = 0xb9f912b;
 
-		constexpr const static std::string_view AnimDriver_type_name = "AnimDriver";
-		constexpr const static rivet::rivet_type_id AnimDriver_type_id = 0x10f54dce;
-		constexpr const static std::string_view PlaneActorAsset_type_name = "PlaneActorAsset";
-		constexpr const static rivet::rivet_type_id PlaneActorAsset_type_id = 0x451dcd63;
-		constexpr const static std::string_view PlaneSpawnPos_type_name = "PlaneSpawnPos";
-		constexpr const static rivet::rivet_type_id PlaneSpawnPos_type_id = 0xcc967d8a;
-		constexpr const static std::string_view PlaneStartPos_type_name = "PlaneStartPos";
-		constexpr const static rivet::rivet_type_id PlaneStartPos_type_id = 0xcf9d6112;
-		constexpr const static std::string_view PlaneEndPos_type_name = "PlaneEndPos";
-		constexpr const static rivet::rivet_type_id PlaneEndPos_type_id = 0xe5359ef;
-		constexpr const static std::string_view TurnRateMin_type_name = "TurnRateMin";
-		constexpr const static rivet::rivet_type_id TurnRateMin_type_id = 0xb2cb313d;
-		constexpr const static std::string_view TurnRateMax_type_name = "TurnRateMax";
-		constexpr const static rivet::rivet_type_id TurnRateMax_type_id = 0x8ec60e64; 
+		constexpr static std::string_view AnimDriver_type_name = "AnimDriver";
+		constexpr static rivet::rivet_type_id AnimDriver_type_id = 0x10f54dce;
+		constexpr static std::string_view PlaneActorAsset_type_name = "PlaneActorAsset";
+		constexpr static rivet::rivet_type_id PlaneActorAsset_type_id = 0x451dcd63;
+		constexpr static std::string_view PlaneSpawnPos_type_name = "PlaneSpawnPos";
+		constexpr static rivet::rivet_type_id PlaneSpawnPos_type_id = 0xcc967d8a;
+		constexpr static std::string_view PlaneStartPos_type_name = "PlaneStartPos";
+		constexpr static rivet::rivet_type_id PlaneStartPos_type_id = 0xcf9d6112;
+		constexpr static std::string_view PlaneEndPos_type_name = "PlaneEndPos";
+		constexpr static rivet::rivet_type_id PlaneEndPos_type_id = 0xe5359ef;
+		constexpr static std::string_view TurnRateMin_type_name = "TurnRateMin";
+		constexpr static rivet::rivet_type_id TurnRateMin_type_id = 0xb2cb313d;
+		constexpr static std::string_view TurnRateMax_type_name = "TurnRateMax";
+		constexpr static rivet::rivet_type_id TurnRateMax_type_id = 0x8ec60e64; 
 
 		explicit BotComboMoveFinaleSweepChase() = default;
 		explicit BotComboMoveFinaleSweepChase([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

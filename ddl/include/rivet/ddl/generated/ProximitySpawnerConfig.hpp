@@ -17,43 +17,43 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/ConfigBase.hpp>
-#include <rivet/ddl/generated/enums/xd3395131.hpp> 
+#include <rivet/ddl/generated/enums/xd3395131.hpp>
+#include <rivet/ddl/generated/ConfigBase.hpp> 
 
 namespace rivet::ddl::generated {
-	struct ProximityTieredOverrides;
-	struct ProximitySpawnInfo; 
+	struct ProximitySpawnInfo;
+	struct ProximityTieredOverrides; 
 
 	struct RIVET_DDL_SHARED ProximitySpawnerConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "ProximitySpawnerConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xd41cfbb3;
+		constexpr static std::string_view type_name = "ProximitySpawnerConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xd41cfbb3;
 
-		constexpr const static std::string_view DefaultCleanUpType_type_name = "DefaultCleanUpType";
-		constexpr const static rivet::rivet_type_id DefaultCleanUpType_type_id = 0x1dd72c3c;
-		constexpr const static std::string_view MaxAlive_type_name = "MaxAlive";
-		constexpr const static rivet::rivet_type_id MaxAlive_type_id = 0x9a59dc4;
-		constexpr const static std::string_view MinSpawnRadius_type_name = "MinSpawnRadius";
-		constexpr const static rivet::rivet_type_id MinSpawnRadius_type_id = 0x5cc2d615;
-		constexpr const static std::string_view MaxSpawnRadius_type_name = "MaxSpawnRadius";
-		constexpr const static rivet::rivet_type_id MaxSpawnRadius_type_id = 0xe5e44d64;
-		constexpr const static std::string_view MinDeleteRadius_type_name = "MinDeleteRadius";
-		constexpr const static rivet::rivet_type_id MinDeleteRadius_type_id = 0xfd9e205;
-		constexpr const static std::string_view MinDelayBetweenSpawns_type_name = "MinDelayBetweenSpawns";
-		constexpr const static rivet::rivet_type_id MinDelayBetweenSpawns_type_id = 0xddc34ce5;
-		constexpr const static std::string_view MaxDelayBetweenSpawns_type_name = "MaxDelayBetweenSpawns";
-		constexpr const static rivet::rivet_type_id MaxDelayBetweenSpawns_type_id = 0xce86aa4e;
-		constexpr const static std::string_view StartAggressive_type_name = "StartAggressive";
-		constexpr const static rivet::rivet_type_id StartAggressive_type_id = 0x11ec3aff;
-		constexpr const static std::string_view EncourageIdleWandering_type_name = "EncourageIdleWandering";
-		constexpr const static rivet::rivet_type_id EncourageIdleWandering_type_id = 0x88e10cad;
-		constexpr const static std::string_view CleanupDeleteRadius_type_name = "CleanupDeleteRadius";
-		constexpr const static rivet::rivet_type_id CleanupDeleteRadius_type_id = 0xa6c5605e;
-		constexpr const static std::string_view MaxRelativeReward_type_name = "MaxRelativeReward";
-		constexpr const static rivet::rivet_type_id MaxRelativeReward_type_id = 0x92b81bd8;
-		constexpr const static std::string_view TieredOverrides_type_name = "TieredOverrides";
-		constexpr const static rivet::rivet_type_id TieredOverrides_type_id = 0xf7a5b86d;
-		constexpr const static std::string_view SpawnInfos_type_name = "SpawnInfos";
-		constexpr const static rivet::rivet_type_id SpawnInfos_type_id = 0x3b38b1df; 
+		constexpr static std::string_view DefaultCleanUpType_type_name = "DefaultCleanUpType";
+		constexpr static rivet::rivet_type_id DefaultCleanUpType_type_id = 0x1dd72c3c;
+		constexpr static std::string_view MaxAlive_type_name = "MaxAlive";
+		constexpr static rivet::rivet_type_id MaxAlive_type_id = 0x9a59dc4;
+		constexpr static std::string_view MinSpawnRadius_type_name = "MinSpawnRadius";
+		constexpr static rivet::rivet_type_id MinSpawnRadius_type_id = 0x5cc2d615;
+		constexpr static std::string_view MaxSpawnRadius_type_name = "MaxSpawnRadius";
+		constexpr static rivet::rivet_type_id MaxSpawnRadius_type_id = 0xe5e44d64;
+		constexpr static std::string_view MinDeleteRadius_type_name = "MinDeleteRadius";
+		constexpr static rivet::rivet_type_id MinDeleteRadius_type_id = 0xfd9e205;
+		constexpr static std::string_view MinDelayBetweenSpawns_type_name = "MinDelayBetweenSpawns";
+		constexpr static rivet::rivet_type_id MinDelayBetweenSpawns_type_id = 0xddc34ce5;
+		constexpr static std::string_view MaxDelayBetweenSpawns_type_name = "MaxDelayBetweenSpawns";
+		constexpr static rivet::rivet_type_id MaxDelayBetweenSpawns_type_id = 0xce86aa4e;
+		constexpr static std::string_view StartAggressive_type_name = "StartAggressive";
+		constexpr static rivet::rivet_type_id StartAggressive_type_id = 0x11ec3aff;
+		constexpr static std::string_view EncourageIdleWandering_type_name = "EncourageIdleWandering";
+		constexpr static rivet::rivet_type_id EncourageIdleWandering_type_id = 0x88e10cad;
+		constexpr static std::string_view CleanupDeleteRadius_type_name = "CleanupDeleteRadius";
+		constexpr static rivet::rivet_type_id CleanupDeleteRadius_type_id = 0xa6c5605e;
+		constexpr static std::string_view MaxRelativeReward_type_name = "MaxRelativeReward";
+		constexpr static rivet::rivet_type_id MaxRelativeReward_type_id = 0x92b81bd8;
+		constexpr static std::string_view TieredOverrides_type_name = "TieredOverrides";
+		constexpr static rivet::rivet_type_id TieredOverrides_type_id = 0xf7a5b86d;
+		constexpr static std::string_view SpawnInfos_type_name = "SpawnInfos";
+		constexpr static rivet::rivet_type_id SpawnInfos_type_id = 0x3b38b1df; 
 
 		explicit ProximitySpawnerConfig() = default;
 		explicit ProximitySpawnerConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

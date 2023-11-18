@@ -3,9 +3,9 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/AimAssistTargetZoneOBB.hpp>
+#include <rivet/ddl/generated/AimAssistTargetZoneGroundRelative.hpp>
 #include <rivet/ddl/generated/AimAssistTargetZoneJoint.hpp>
-#include <rivet/ddl/generated/AimAssistTargetZoneGroundRelative.hpp> 
+#include <rivet/ddl/generated/AimAssistTargetZoneOBB.hpp> 
 
 #include <rivet/ddl/generated/AimAssistTargetZone.hpp>
 

@@ -19,17 +19,17 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ChargeAttackParams : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "ChargeAttackParams";
-		constexpr const static rivet::rivet_type_id type_id = 0x23222987;
+		constexpr static std::string_view type_name = "ChargeAttackParams";
+		constexpr static rivet::rivet_type_id type_id = 0x23222987;
 
-		constexpr const static std::string_view MinChargeTime_type_name = "MinChargeTime";
-		constexpr const static rivet::rivet_type_id MinChargeTime_type_id = 0x91ca2410;
-		constexpr const static std::string_view MaxChargeTime_type_name = "MaxChargeTime";
-		constexpr const static rivet::rivet_type_id MaxChargeTime_type_id = 0xd1855c66;
-		constexpr const static std::string_view MaxDamage_type_name = "MaxDamage";
-		constexpr const static rivet::rivet_type_id MaxDamage_type_id = 0xadb823c1;
-		constexpr const static std::string_view MaxKnockbackForce_type_name = "MaxKnockbackForce";
-		constexpr const static rivet::rivet_type_id MaxKnockbackForce_type_id = 0xd93e37b8; 
+		constexpr static std::string_view MinChargeTime_type_name = "MinChargeTime";
+		constexpr static rivet::rivet_type_id MinChargeTime_type_id = 0x91ca2410;
+		constexpr static std::string_view MaxChargeTime_type_name = "MaxChargeTime";
+		constexpr static rivet::rivet_type_id MaxChargeTime_type_id = 0xd1855c66;
+		constexpr static std::string_view MaxDamage_type_name = "MaxDamage";
+		constexpr static rivet::rivet_type_id MaxDamage_type_id = 0xadb823c1;
+		constexpr static std::string_view MaxKnockbackForce_type_name = "MaxKnockbackForce";
+		constexpr static rivet::rivet_type_id MaxKnockbackForce_type_id = 0xd93e37b8; 
 
 		explicit ChargeAttackParams() = default;
 		explicit ChargeAttackParams([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

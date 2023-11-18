@@ -17,16 +17,16 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/GameItemConfig.hpp>
-#include <rivet/ddl/generated/enums/x5793ba5e.hpp> 
+#include <rivet/ddl/generated/enums/x5793ba5e.hpp>
+#include <rivet/ddl/generated/GameItemConfig.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED WeaponItemConfig : GameItemConfig {
-		constexpr const static std::string_view type_name = "WeaponItemConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xd2b9eaad;
+		constexpr static std::string_view type_name = "WeaponItemConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xd2b9eaad;
 
-		constexpr const static std::string_view PreferredHeldSlot_type_name = "PreferredHeldSlot";
-		constexpr const static rivet::rivet_type_id PreferredHeldSlot_type_id = 0xefb4c5fe; 
+		constexpr static std::string_view PreferredHeldSlot_type_name = "PreferredHeldSlot";
+		constexpr static rivet::rivet_type_id PreferredHeldSlot_type_id = 0xefb4c5fe; 
 
 		explicit WeaponItemConfig() = default;
 		explicit WeaponItemConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

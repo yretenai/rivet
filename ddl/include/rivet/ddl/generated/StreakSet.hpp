@@ -21,11 +21,11 @@ namespace rivet::ddl::generated {
 	struct StreakData; 
 
 	struct RIVET_DDL_SHARED StreakSet : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "StreakSet";
-		constexpr const static rivet::rivet_type_id type_id = 0xcf6320e2;
+		constexpr static std::string_view type_name = "StreakSet";
+		constexpr static rivet::rivet_type_id type_id = 0xcf6320e2;
 
-		constexpr const static std::string_view Streaks_type_name = "Streaks";
-		constexpr const static rivet::rivet_type_id Streaks_type_id = 0x584fbe44; 
+		constexpr static std::string_view Streaks_type_name = "Streaks";
+		constexpr static rivet::rivet_type_id Streaks_type_id = 0x584fbe44; 
 
 		explicit StreakSet() = default;
 		explicit StreakSet([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

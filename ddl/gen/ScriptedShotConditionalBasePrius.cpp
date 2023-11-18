@@ -4,11 +4,11 @@
 // SPDX-License-Identifier: MPL-2.0
 
 #include <rivet/ddl/generated/AndScriptedShotConditionalPrius.hpp>
-#include <rivet/ddl/generated/NotScriptedShotConditionalPrius.hpp>
-#include <rivet/ddl/generated/HitActorScriptedShotConditionalPrius.hpp>
-#include <rivet/ddl/generated/OrScriptedShotConditionalPrius.hpp>
+#include <rivet/ddl/generated/NoScriptedShotConditionalPrius.hpp>
 #include <rivet/ddl/generated/XorScriptedShotConditionalPrius.hpp>
-#include <rivet/ddl/generated/NoScriptedShotConditionalPrius.hpp> 
+#include <rivet/ddl/generated/OrScriptedShotConditionalPrius.hpp>
+#include <rivet/ddl/generated/HitActorScriptedShotConditionalPrius.hpp>
+#include <rivet/ddl/generated/NotScriptedShotConditionalPrius.hpp> 
 
 #include <rivet/ddl/generated/ScriptedShotConditionalBasePrius.hpp>
 

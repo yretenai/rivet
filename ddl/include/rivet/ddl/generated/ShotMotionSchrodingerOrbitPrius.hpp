@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ShotMotionSchrodingerOrbitPrius : ShotMotionBasePrius {
-		constexpr const static std::string_view type_name = "ShotMotionSchrodingerOrbitPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x3d529b25;
+		constexpr static std::string_view type_name = "ShotMotionSchrodingerOrbitPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x3d529b25;
 
-		constexpr const static std::string_view NomNomAnim_type_name = "NomNomAnim";
-		constexpr const static rivet::rivet_type_id NomNomAnim_type_id = 0x554fedbd; 
+		constexpr static std::string_view NomNomAnim_type_name = "NomNomAnim";
+		constexpr static rivet::rivet_type_id NomNomAnim_type_id = 0x554fedbd; 
 
 		explicit ShotMotionSchrodingerOrbitPrius() = default;
 		explicit ShotMotionSchrodingerOrbitPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

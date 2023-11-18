@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view CollisionType_type_name = "CollisionType";
-	constexpr const static rivet::rivet_type_id CollisionType_type_id = 0x56defaed;
+	constexpr static std::string_view CollisionType_type_name = "CollisionType";
+	constexpr static rivet::rivet_type_id CollisionType_type_id = 0x56defaed;
 
-	constexpr const static std::array<std::string_view, 3> CollisionType_values = {
+	constexpr static std::array<std::string_view, 3> CollisionType_values = {
 		"kStatic",
 		"kDynamic",
 		"kInactive", 

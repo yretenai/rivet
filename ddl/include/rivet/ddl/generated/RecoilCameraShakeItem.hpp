@@ -21,11 +21,11 @@ namespace rivet::ddl::generated {
 	struct RecoilCameraShake; 
 
 	struct RIVET_DDL_SHARED RecoilCameraShakeItem : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "RecoilCameraShakeItem";
-		constexpr const static rivet::rivet_type_id type_id = 0x26714bf7;
+		constexpr static std::string_view type_name = "RecoilCameraShakeItem";
+		constexpr static rivet::rivet_type_id type_id = 0x26714bf7;
 
-		constexpr const static std::string_view CameraShake_type_name = "CameraShake";
-		constexpr const static rivet::rivet_type_id CameraShake_type_id = 0xefd546ca; 
+		constexpr static std::string_view CameraShake_type_name = "CameraShake";
+		constexpr static rivet::rivet_type_id CameraShake_type_id = 0xefd546ca; 
 
 		explicit RecoilCameraShakeItem() = default;
 		explicit RecoilCameraShakeItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -20,46 +20,46 @@
 #include <rivet/ddl/generated/ConfigBase.hpp> 
 
 namespace rivet::ddl::generated {
-	struct DDLVector3;
 	struct DimensionalPulseTargetFlockPrius;
-	struct LedgeBirdType; 
+	struct LedgeBirdType;
+	struct DDLVector3; 
 
 	struct RIVET_DDL_SHARED LedgeBirdSystemConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "LedgeBirdSystemConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xbd2fc977;
+		constexpr static std::string_view type_name = "LedgeBirdSystemConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xbd2fc977;
 
-		constexpr const static std::string_view MaxHeroSpeed_type_name = "MaxHeroSpeed";
-		constexpr const static rivet::rivet_type_id MaxHeroSpeed_type_id = 0xdb34a3f;
-		constexpr const static std::string_view StopSpawnDistance_type_name = "StopSpawnDistance";
-		constexpr const static rivet::rivet_type_id StopSpawnDistance_type_id = 0x41cafbf3;
-		constexpr const static std::string_view MinSpawnDistance_type_name = "MinSpawnDistance";
-		constexpr const static rivet::rivet_type_id MinSpawnDistance_type_id = 0xef1087b4;
-		constexpr const static std::string_view MaxSpawnDistance_type_name = "MaxSpawnDistance";
-		constexpr const static rivet::rivet_type_id MaxSpawnDistance_type_id = 0xbee93ce9;
-		constexpr const static std::string_view LedgeSpawnCooldown_type_name = "LedgeSpawnCooldown";
-		constexpr const static rivet::rivet_type_id LedgeSpawnCooldown_type_id = 0x444cc687;
-		constexpr const static std::string_view MaxSpawnedFlocks_type_name = "MaxSpawnedFlocks";
-		constexpr const static rivet::rivet_type_id MaxSpawnedFlocks_type_id = 0x3acfae85;
-		constexpr const static std::string_view SpawnQueryDimensions_type_name = "SpawnQueryDimensions";
-		constexpr const static rivet::rivet_type_id SpawnQueryDimensions_type_id = 0x2c50d568;
-		constexpr const static std::string_view CulledLedgeDespawnTime_type_name = "CulledLedgeDespawnTime";
-		constexpr const static rivet::rivet_type_id CulledLedgeDespawnTime_type_id = 0x40255610;
-		constexpr const static std::string_view OffscreenFleeDespawnTime_type_name = "OffscreenFleeDespawnTime";
-		constexpr const static rivet::rivet_type_id OffscreenFleeDespawnTime_type_id = 0xdab894d2;
-		constexpr const static std::string_view FleeDistance_type_name = "FleeDistance";
-		constexpr const static rivet::rivet_type_id FleeDistance_type_id = 0x84061f99;
-		constexpr const static std::string_view FleeDistanceCoeffY_type_name = "FleeDistanceCoeffY";
-		constexpr const static rivet::rivet_type_id FleeDistanceCoeffY_type_id = 0xe892a6d4;
-		constexpr const static std::string_view InitialLoadDelay_type_name = "InitialLoadDelay";
-		constexpr const static rivet::rivet_type_id InitialLoadDelay_type_id = 0x6bc8e325;
-		constexpr const static std::string_view MinLedgeRespawnTime_type_name = "MinLedgeRespawnTime";
-		constexpr const static rivet::rivet_type_id MinLedgeRespawnTime_type_id = 0x135ac45a;
-		constexpr const static std::string_view FleeFromPulses_type_name = "FleeFromPulses";
-		constexpr const static rivet::rivet_type_id FleeFromPulses_type_id = 0x97e14b23;
-		constexpr const static std::string_view PulseFlockTargetPrius_type_name = "PulseFlockTargetPrius";
-		constexpr const static rivet::rivet_type_id PulseFlockTargetPrius_type_id = 0xefb78e9c;
-		constexpr const static std::string_view BirdTypes_type_name = "BirdTypes";
-		constexpr const static rivet::rivet_type_id BirdTypes_type_id = 0x6f844477; 
+		constexpr static std::string_view MaxHeroSpeed_type_name = "MaxHeroSpeed";
+		constexpr static rivet::rivet_type_id MaxHeroSpeed_type_id = 0xdb34a3f;
+		constexpr static std::string_view StopSpawnDistance_type_name = "StopSpawnDistance";
+		constexpr static rivet::rivet_type_id StopSpawnDistance_type_id = 0x41cafbf3;
+		constexpr static std::string_view MinSpawnDistance_type_name = "MinSpawnDistance";
+		constexpr static rivet::rivet_type_id MinSpawnDistance_type_id = 0xef1087b4;
+		constexpr static std::string_view MaxSpawnDistance_type_name = "MaxSpawnDistance";
+		constexpr static rivet::rivet_type_id MaxSpawnDistance_type_id = 0xbee93ce9;
+		constexpr static std::string_view LedgeSpawnCooldown_type_name = "LedgeSpawnCooldown";
+		constexpr static rivet::rivet_type_id LedgeSpawnCooldown_type_id = 0x444cc687;
+		constexpr static std::string_view MaxSpawnedFlocks_type_name = "MaxSpawnedFlocks";
+		constexpr static rivet::rivet_type_id MaxSpawnedFlocks_type_id = 0x3acfae85;
+		constexpr static std::string_view SpawnQueryDimensions_type_name = "SpawnQueryDimensions";
+		constexpr static rivet::rivet_type_id SpawnQueryDimensions_type_id = 0x2c50d568;
+		constexpr static std::string_view CulledLedgeDespawnTime_type_name = "CulledLedgeDespawnTime";
+		constexpr static rivet::rivet_type_id CulledLedgeDespawnTime_type_id = 0x40255610;
+		constexpr static std::string_view OffscreenFleeDespawnTime_type_name = "OffscreenFleeDespawnTime";
+		constexpr static rivet::rivet_type_id OffscreenFleeDespawnTime_type_id = 0xdab894d2;
+		constexpr static std::string_view FleeDistance_type_name = "FleeDistance";
+		constexpr static rivet::rivet_type_id FleeDistance_type_id = 0x84061f99;
+		constexpr static std::string_view FleeDistanceCoeffY_type_name = "FleeDistanceCoeffY";
+		constexpr static rivet::rivet_type_id FleeDistanceCoeffY_type_id = 0xe892a6d4;
+		constexpr static std::string_view InitialLoadDelay_type_name = "InitialLoadDelay";
+		constexpr static rivet::rivet_type_id InitialLoadDelay_type_id = 0x6bc8e325;
+		constexpr static std::string_view MinLedgeRespawnTime_type_name = "MinLedgeRespawnTime";
+		constexpr static rivet::rivet_type_id MinLedgeRespawnTime_type_id = 0x135ac45a;
+		constexpr static std::string_view FleeFromPulses_type_name = "FleeFromPulses";
+		constexpr static rivet::rivet_type_id FleeFromPulses_type_id = 0x97e14b23;
+		constexpr static std::string_view PulseFlockTargetPrius_type_name = "PulseFlockTargetPrius";
+		constexpr static rivet::rivet_type_id PulseFlockTargetPrius_type_id = 0xefb78e9c;
+		constexpr static std::string_view BirdTypes_type_name = "BirdTypes";
+		constexpr static rivet::rivet_type_id BirdTypes_type_id = 0x6f844477; 
 
 		explicit LedgeBirdSystemConfig() = default;
 		explicit LedgeBirdSystemConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

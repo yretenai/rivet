@@ -21,21 +21,21 @@ namespace rivet::ddl::generated {
 	struct DamageKnockbackPerTypeData; 
 
 	struct RIVET_DDL_SHARED DamageKnockbackOverrideData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "DamageKnockbackOverrideData";
-		constexpr const static rivet::rivet_type_id type_id = 0x6d21ea0f;
+		constexpr static std::string_view type_name = "DamageKnockbackOverrideData";
+		constexpr static rivet::rivet_type_id type_id = 0x6d21ea0f;
 
-		constexpr const static std::string_view SmallData_type_name = "SmallData";
-		constexpr const static rivet::rivet_type_id SmallData_type_id = 0xc48450a5;
-		constexpr const static std::string_view MediumData_type_name = "MediumData";
-		constexpr const static rivet::rivet_type_id MediumData_type_id = 0x561676dc;
-		constexpr const static std::string_view TankData_type_name = "TankData";
-		constexpr const static rivet::rivet_type_id TankData_type_id = 0x6a611115;
-		constexpr const static std::string_view LargeData_type_name = "LargeData";
-		constexpr const static rivet::rivet_type_id LargeData_type_id = 0xd1b3dcab;
-		constexpr const static std::string_view TransportData_type_name = "TransportData";
-		constexpr const static rivet::rivet_type_id TransportData_type_id = 0xa2f8eb5d;
-		constexpr const static std::string_view BossData_type_name = "BossData";
-		constexpr const static rivet::rivet_type_id BossData_type_id = 0x6f529fe2; 
+		constexpr static std::string_view SmallData_type_name = "SmallData";
+		constexpr static rivet::rivet_type_id SmallData_type_id = 0xc48450a5;
+		constexpr static std::string_view MediumData_type_name = "MediumData";
+		constexpr static rivet::rivet_type_id MediumData_type_id = 0x561676dc;
+		constexpr static std::string_view TankData_type_name = "TankData";
+		constexpr static rivet::rivet_type_id TankData_type_id = 0x6a611115;
+		constexpr static std::string_view LargeData_type_name = "LargeData";
+		constexpr static rivet::rivet_type_id LargeData_type_id = 0xd1b3dcab;
+		constexpr static std::string_view TransportData_type_name = "TransportData";
+		constexpr static rivet::rivet_type_id TransportData_type_id = 0xa2f8eb5d;
+		constexpr static std::string_view BossData_type_name = "BossData";
+		constexpr static rivet::rivet_type_id BossData_type_id = 0x6f529fe2; 
 
 		explicit DamageKnockbackOverrideData() = default;
 		explicit DamageKnockbackOverrideData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

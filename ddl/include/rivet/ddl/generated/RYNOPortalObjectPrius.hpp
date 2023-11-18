@@ -21,21 +21,21 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED RYNOPortalObjectPrius : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "RYNOPortalObjectPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x3cdfcbb3;
+		constexpr static std::string_view type_name = "RYNOPortalObjectPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x3cdfcbb3;
 
-		constexpr const static std::string_view PostCompositeShader_type_name = "PostCompositeShader";
-		constexpr const static rivet::rivet_type_id PostCompositeShader_type_id = 0xe2b72d5f;
-		constexpr const static std::string_view PreCompositeShader_type_name = "PreCompositeShader";
-		constexpr const static rivet::rivet_type_id PreCompositeShader_type_id = 0x76e460d;
-		constexpr const static std::string_view Conduit_type_name = "Conduit";
-		constexpr const static rivet::rivet_type_id Conduit_type_id = 0xfc5131b9;
-		constexpr const static std::string_view PortalActor_type_name = "PortalActor";
-		constexpr const static rivet::rivet_type_id PortalActor_type_id = 0xdfbb9f90;
-		constexpr const static std::string_view Size_type_name = "Size";
-		constexpr const static rivet::rivet_type_id Size_type_id = 0xc750e4da;
-		constexpr const static std::string_view VersionIndex_type_name = "VersionIndex";
-		constexpr const static rivet::rivet_type_id VersionIndex_type_id = 0x6e091c9a; 
+		constexpr static std::string_view PostCompositeShader_type_name = "PostCompositeShader";
+		constexpr static rivet::rivet_type_id PostCompositeShader_type_id = 0xe2b72d5f;
+		constexpr static std::string_view PreCompositeShader_type_name = "PreCompositeShader";
+		constexpr static rivet::rivet_type_id PreCompositeShader_type_id = 0x76e460d;
+		constexpr static std::string_view Conduit_type_name = "Conduit";
+		constexpr static rivet::rivet_type_id Conduit_type_id = 0xfc5131b9;
+		constexpr static std::string_view PortalActor_type_name = "PortalActor";
+		constexpr static rivet::rivet_type_id PortalActor_type_id = 0xdfbb9f90;
+		constexpr static std::string_view Size_type_name = "Size";
+		constexpr static rivet::rivet_type_id Size_type_id = 0xc750e4da;
+		constexpr static std::string_view VersionIndex_type_name = "VersionIndex";
+		constexpr static rivet::rivet_type_id VersionIndex_type_id = 0x6e091c9a; 
 
 		explicit RYNOPortalObjectPrius() = default;
 		explicit RYNOPortalObjectPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

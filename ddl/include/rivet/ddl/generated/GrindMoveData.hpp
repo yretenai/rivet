@@ -19,15 +19,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED GrindMoveData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "GrindMoveData";
-		constexpr const static rivet::rivet_type_id type_id = 0x18e553c;
+		constexpr static std::string_view type_name = "GrindMoveData";
+		constexpr static rivet::rivet_type_id type_id = 0x18e553c;
 
-		constexpr const static std::string_view SpeedDefault_type_name = "SpeedDefault";
-		constexpr const static rivet::rivet_type_id SpeedDefault_type_id = 0xd1b9bcbb;
-		constexpr const static std::string_view Accel_type_name = "Accel";
-		constexpr const static rivet::rivet_type_id Accel_type_id = 0x44affa24;
-		constexpr const static std::string_view Decel_type_name = "Decel";
-		constexpr const static rivet::rivet_type_id Decel_type_id = 0xa9242a88; 
+		constexpr static std::string_view SpeedDefault_type_name = "SpeedDefault";
+		constexpr static rivet::rivet_type_id SpeedDefault_type_id = 0xd1b9bcbb;
+		constexpr static std::string_view Accel_type_name = "Accel";
+		constexpr static rivet::rivet_type_id Accel_type_id = 0x44affa24;
+		constexpr static std::string_view Decel_type_name = "Decel";
+		constexpr static rivet::rivet_type_id Decel_type_id = 0xa9242a88; 
 
 		explicit GrindMoveData() = default;
 		explicit GrindMoveData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

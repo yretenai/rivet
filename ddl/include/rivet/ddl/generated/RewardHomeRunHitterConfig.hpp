@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED RewardHomeRunHitterConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "RewardHomeRunHitterConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x9cd64ec9;
+		constexpr static std::string_view type_name = "RewardHomeRunHitterConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x9cd64ec9;
 
-		constexpr const static std::string_view DeathAnimScaleXZ_type_name = "DeathAnimScaleXZ";
-		constexpr const static rivet::rivet_type_id DeathAnimScaleXZ_type_id = 0xe94266da;
-		constexpr const static std::string_view DeathAnimScaleY_type_name = "DeathAnimScaleY";
-		constexpr const static rivet::rivet_type_id DeathAnimScaleY_type_id = 0x56c4dfca; 
+		constexpr static std::string_view DeathAnimScaleXZ_type_name = "DeathAnimScaleXZ";
+		constexpr static rivet::rivet_type_id DeathAnimScaleXZ_type_id = 0xe94266da;
+		constexpr static std::string_view DeathAnimScaleY_type_name = "DeathAnimScaleY";
+		constexpr static rivet::rivet_type_id DeathAnimScaleY_type_id = 0x56c4dfca; 
 
 		explicit RewardHomeRunHitterConfig() = default;
 		explicit RewardHomeRunHitterConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

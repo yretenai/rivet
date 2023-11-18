@@ -21,17 +21,17 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED AimModRandomOffsetPrius : AimModifierPrius {
-		constexpr const static std::string_view type_name = "AimModRandomOffsetPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xe76ec8ce;
+		constexpr static std::string_view type_name = "AimModRandomOffsetPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xe76ec8ce;
 
-		constexpr const static std::string_view VerticalMin_type_name = "VerticalMin";
-		constexpr const static rivet::rivet_type_id VerticalMin_type_id = 0x12d6232c;
-		constexpr const static std::string_view VerticalMax_type_name = "VerticalMax";
-		constexpr const static rivet::rivet_type_id VerticalMax_type_id = 0x2edb1c75;
-		constexpr const static std::string_view HorizontalMin_type_name = "HorizontalMin";
-		constexpr const static rivet::rivet_type_id HorizontalMin_type_id = 0x212e8d82;
-		constexpr const static std::string_view HorizontalMax_type_name = "HorizontalMax";
-		constexpr const static rivet::rivet_type_id HorizontalMax_type_id = 0x1d23b2db; 
+		constexpr static std::string_view VerticalMin_type_name = "VerticalMin";
+		constexpr static rivet::rivet_type_id VerticalMin_type_id = 0x12d6232c;
+		constexpr static std::string_view VerticalMax_type_name = "VerticalMax";
+		constexpr static rivet::rivet_type_id VerticalMax_type_id = 0x2edb1c75;
+		constexpr static std::string_view HorizontalMin_type_name = "HorizontalMin";
+		constexpr static rivet::rivet_type_id HorizontalMin_type_id = 0x212e8d82;
+		constexpr static std::string_view HorizontalMax_type_name = "HorizontalMax";
+		constexpr static rivet::rivet_type_id HorizontalMax_type_id = 0x1d23b2db; 
 
 		explicit AimModRandomOffsetPrius() = default;
 		explicit AimModRandomOffsetPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

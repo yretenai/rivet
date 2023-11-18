@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct ColorCorrectionItem; 
 
 	struct RIVET_DDL_SHARED ColorCorrectionSystemConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "ColorCorrectionSystemConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x880d8c0a;
+		constexpr static std::string_view type_name = "ColorCorrectionSystemConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x880d8c0a;
 
-		constexpr const static std::string_view ColorCorrections_type_name = "ColorCorrections";
-		constexpr const static rivet::rivet_type_id ColorCorrections_type_id = 0xdf5b56b5; 
+		constexpr static std::string_view ColorCorrections_type_name = "ColorCorrections";
+		constexpr static rivet::rivet_type_id ColorCorrections_type_id = 0xdf5b56b5; 
 
 		explicit ColorCorrectionSystemConfig() = default;
 		explicit ColorCorrectionSystemConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

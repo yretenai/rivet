@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED PlanetLink : ActivityLinkBase {
-		constexpr const static std::string_view type_name = "PlanetLink";
-		constexpr const static rivet::rivet_type_id type_id = 0x50db67cf;
+		constexpr static std::string_view type_name = "PlanetLink";
+		constexpr static rivet::rivet_type_id type_id = 0x50db67cf;
 
-		constexpr const static std::string_view PlanetName_type_name = "PlanetName";
-		constexpr const static rivet::rivet_type_id PlanetName_type_id = 0x38548038; 
+		constexpr static std::string_view PlanetName_type_name = "PlanetName";
+		constexpr static rivet::rivet_type_id PlanetName_type_id = 0x38548038; 
 
 		explicit PlanetLink() = default;
 		explicit PlanetLink([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct SetDef; 
 
 	struct RIVET_DDL_SHARED TradingCardSetConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "TradingCardSetConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x6bec11df;
+		constexpr static std::string_view type_name = "TradingCardSetConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x6bec11df;
 
-		constexpr const static std::string_view SetList_type_name = "SetList";
-		constexpr const static rivet::rivet_type_id SetList_type_id = 0xd0d3262c; 
+		constexpr static std::string_view SetList_type_name = "SetList";
+		constexpr static rivet::rivet_type_id SetList_type_id = 0xd0d3262c; 
 
 		explicit TradingCardSetConfig() = default;
 		explicit TradingCardSetConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

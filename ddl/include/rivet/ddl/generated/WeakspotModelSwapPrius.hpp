@@ -23,15 +23,15 @@ namespace rivet::ddl::generated {
 	struct WeakspotModelData; 
 
 	struct RIVET_DDL_SHARED WeakspotModelSwapPrius : WeakspotDestructiblePrius {
-		constexpr const static std::string_view type_name = "WeakspotModelSwapPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xe435c614;
+		constexpr static std::string_view type_name = "WeakspotModelSwapPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xe435c614;
 
-		constexpr const static std::string_view DefaultModel_type_name = "DefaultModel";
-		constexpr const static rivet::rivet_type_id DefaultModel_type_id = 0xcd0e2e40;
-		constexpr const static std::string_view DestroyedModel_type_name = "DestroyedModel";
-		constexpr const static rivet::rivet_type_id DestroyedModel_type_id = 0x408586cc;
-		constexpr const static std::string_view IntermediateModels_type_name = "IntermediateModels";
-		constexpr const static rivet::rivet_type_id IntermediateModels_type_id = 0x4754fa30; 
+		constexpr static std::string_view DefaultModel_type_name = "DefaultModel";
+		constexpr static rivet::rivet_type_id DefaultModel_type_id = 0xcd0e2e40;
+		constexpr static std::string_view DestroyedModel_type_name = "DestroyedModel";
+		constexpr static rivet::rivet_type_id DestroyedModel_type_id = 0x408586cc;
+		constexpr static std::string_view IntermediateModels_type_name = "IntermediateModels";
+		constexpr static rivet::rivet_type_id IntermediateModels_type_id = 0x4754fa30; 
 
 		explicit WeakspotModelSwapPrius() = default;
 		explicit WeakspotModelSwapPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -21,17 +21,17 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED EntitlementSystemConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "EntitlementSystemConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x48e017d4;
+		constexpr static std::string_view type_name = "EntitlementSystemConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x48e017d4;
 
-		constexpr const static std::string_view CarbonoxArmorSet_type_name = "CarbonoxArmorSet";
-		constexpr const static rivet::rivet_type_id CarbonoxArmorSet_type_id = 0xc1445231;
-		constexpr const static std::string_view FiveArmorsSets_type_name = "FiveArmorsSets";
-		constexpr const static rivet::rivet_type_id FiveArmorsSets_type_id = 0xe0308fa9;
-		constexpr const static std::string_view PixelizerItem_type_name = "PixelizerItem";
-		constexpr const static rivet::rivet_type_id PixelizerItem_type_id = 0x3480ccb7;
-		constexpr const static std::string_view ArmorPatchSets_type_name = "ArmorPatchSets";
-		constexpr const static rivet::rivet_type_id ArmorPatchSets_type_id = 0x8b1914ae; 
+		constexpr static std::string_view CarbonoxArmorSet_type_name = "CarbonoxArmorSet";
+		constexpr static rivet::rivet_type_id CarbonoxArmorSet_type_id = 0xc1445231;
+		constexpr static std::string_view FiveArmorsSets_type_name = "FiveArmorsSets";
+		constexpr static rivet::rivet_type_id FiveArmorsSets_type_id = 0xe0308fa9;
+		constexpr static std::string_view PixelizerItem_type_name = "PixelizerItem";
+		constexpr static rivet::rivet_type_id PixelizerItem_type_id = 0x3480ccb7;
+		constexpr static std::string_view ArmorPatchSets_type_name = "ArmorPatchSets";
+		constexpr static rivet::rivet_type_id ArmorPatchSets_type_id = 0x8b1914ae; 
 
 		explicit EntitlementSystemConfig() = default;
 		explicit EntitlementSystemConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

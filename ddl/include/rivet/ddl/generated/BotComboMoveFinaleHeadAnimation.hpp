@@ -21,21 +21,21 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED BotComboMoveFinaleHeadAnimation : BotComboMoveBase {
-		constexpr const static std::string_view type_name = "BotComboMoveFinaleHeadAnimation";
-		constexpr const static rivet::rivet_type_id type_id = 0xa764b97b;
+		constexpr static std::string_view type_name = "BotComboMoveFinaleHeadAnimation";
+		constexpr static rivet::rivet_type_id type_id = 0xa764b97b;
 
-		constexpr const static std::string_view PortalActorAsset_type_name = "PortalActorAsset";
-		constexpr const static rivet::rivet_type_id PortalActorAsset_type_id = 0xfec29c86;
-		constexpr const static std::string_view HeadActorAsset_type_name = "HeadActorAsset";
-		constexpr const static rivet::rivet_type_id HeadActorAsset_type_id = 0x7e95e9fa;
-		constexpr const static std::string_view HeadActorVol_type_name = "HeadActorVol";
-		constexpr const static rivet::rivet_type_id HeadActorVol_type_id = 0x53f23acb;
-		constexpr const static std::string_view LookAtActor_type_name = "LookAtActor";
-		constexpr const static rivet::rivet_type_id LookAtActor_type_id = 0xa37bf657;
-		constexpr const static std::string_view AnimDriver_type_name = "AnimDriver";
-		constexpr const static rivet::rivet_type_id AnimDriver_type_id = 0x10f54dce;
-		constexpr const static std::string_view RemainAfterAttack_type_name = "RemainAfterAttack";
-		constexpr const static rivet::rivet_type_id RemainAfterAttack_type_id = 0xe09d2afc; 
+		constexpr static std::string_view PortalActorAsset_type_name = "PortalActorAsset";
+		constexpr static rivet::rivet_type_id PortalActorAsset_type_id = 0xfec29c86;
+		constexpr static std::string_view HeadActorAsset_type_name = "HeadActorAsset";
+		constexpr static rivet::rivet_type_id HeadActorAsset_type_id = 0x7e95e9fa;
+		constexpr static std::string_view HeadActorVol_type_name = "HeadActorVol";
+		constexpr static rivet::rivet_type_id HeadActorVol_type_id = 0x53f23acb;
+		constexpr static std::string_view LookAtActor_type_name = "LookAtActor";
+		constexpr static rivet::rivet_type_id LookAtActor_type_id = 0xa37bf657;
+		constexpr static std::string_view AnimDriver_type_name = "AnimDriver";
+		constexpr static rivet::rivet_type_id AnimDriver_type_id = 0x10f54dce;
+		constexpr static std::string_view RemainAfterAttack_type_name = "RemainAfterAttack";
+		constexpr static rivet::rivet_type_id RemainAfterAttack_type_id = 0xe09d2afc; 
 
 		explicit BotComboMoveFinaleHeadAnimation() = default;
 		explicit BotComboMoveFinaleHeadAnimation([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

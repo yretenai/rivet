@@ -19,19 +19,19 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED TunnelerJumpParams : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "TunnelerJumpParams";
-		constexpr const static rivet::rivet_type_id type_id = 0x4018b74;
+		constexpr static std::string_view type_name = "TunnelerJumpParams";
+		constexpr static rivet::rivet_type_id type_id = 0x4018b74;
 
-		constexpr const static std::string_view IdealJumpAngle_type_name = "IdealJumpAngle";
-		constexpr const static rivet::rivet_type_id IdealJumpAngle_type_id = 0xcc7f5545;
-		constexpr const static std::string_view MinimumJumpDistance_type_name = "MinimumJumpDistance";
-		constexpr const static rivet::rivet_type_id MinimumJumpDistance_type_id = 0x409f5a2b;
-		constexpr const static std::string_view TargetSearchDistance_type_name = "TargetSearchDistance";
-		constexpr const static rivet::rivet_type_id TargetSearchDistance_type_id = 0x455fab52;
-		constexpr const static std::string_view TargetSearchHalfAngle_type_name = "TargetSearchHalfAngle";
-		constexpr const static rivet::rivet_type_id TargetSearchHalfAngle_type_id = 0x45ab6123;
-		constexpr const static std::string_view TargetSearchHeight_type_name = "TargetSearchHeight";
-		constexpr const static rivet::rivet_type_id TargetSearchHeight_type_id = 0x2d16466d; 
+		constexpr static std::string_view IdealJumpAngle_type_name = "IdealJumpAngle";
+		constexpr static rivet::rivet_type_id IdealJumpAngle_type_id = 0xcc7f5545;
+		constexpr static std::string_view MinimumJumpDistance_type_name = "MinimumJumpDistance";
+		constexpr static rivet::rivet_type_id MinimumJumpDistance_type_id = 0x409f5a2b;
+		constexpr static std::string_view TargetSearchDistance_type_name = "TargetSearchDistance";
+		constexpr static rivet::rivet_type_id TargetSearchDistance_type_id = 0x455fab52;
+		constexpr static std::string_view TargetSearchHalfAngle_type_name = "TargetSearchHalfAngle";
+		constexpr static rivet::rivet_type_id TargetSearchHalfAngle_type_id = 0x45ab6123;
+		constexpr static std::string_view TargetSearchHeight_type_name = "TargetSearchHeight";
+		constexpr static rivet::rivet_type_id TargetSearchHeight_type_id = 0x2d16466d; 
 
 		explicit TunnelerJumpParams() = default;
 		explicit TunnelerJumpParams([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

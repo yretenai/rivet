@@ -21,25 +21,25 @@ namespace rivet::ddl::generated {
 	struct AssetReferenceDef; 
 
 	struct RIVET_DDL_SHARED StickersData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "StickersData";
-		constexpr const static rivet::rivet_type_id type_id = 0x6d7a747a;
+		constexpr static std::string_view type_name = "StickersData";
+		constexpr static rivet::rivet_type_id type_id = 0x6d7a747a;
 
-		constexpr const static std::string_view Name_type_name = "Name";
-		constexpr const static rivet::rivet_type_id Name_type_id = 0x6eb3beb6;
-		constexpr const static std::string_view MissionLock_type_name = "MissionLock";
-		constexpr const static rivet::rivet_type_id MissionLock_type_id = 0x7c6feb68;
-		constexpr const static std::string_view ObjectiveLock_type_name = "ObjectiveLock";
-		constexpr const static rivet::rivet_type_id ObjectiveLock_type_id = 0x81d88e93;
-		constexpr const static std::string_view SuitLock_type_name = "SuitLock";
-		constexpr const static rivet::rivet_type_id SuitLock_type_id = 0x26fcf857;
-		constexpr const static std::string_view UnlockedByProgression_type_name = "UnlockedByProgression";
-		constexpr const static rivet::rivet_type_id UnlockedByProgression_type_id = 0x2a7064c9;
-		constexpr const static std::string_view UnlockedByEntitlement_type_name = "UnlockedByEntitlement";
-		constexpr const static rivet::rivet_type_id UnlockedByEntitlement_type_id = 0x586b49b;
-		constexpr const static std::string_view StickerRef_type_name = "StickerRef";
-		constexpr const static rivet::rivet_type_id StickerRef_type_id = 0xdcc3b907;
-		constexpr const static std::string_view ThumbnailRef_type_name = "ThumbnailRef";
-		constexpr const static rivet::rivet_type_id ThumbnailRef_type_id = 0x7412ab61; 
+		constexpr static std::string_view Name_type_name = "Name";
+		constexpr static rivet::rivet_type_id Name_type_id = 0x6eb3beb6;
+		constexpr static std::string_view MissionLock_type_name = "MissionLock";
+		constexpr static rivet::rivet_type_id MissionLock_type_id = 0x7c6feb68;
+		constexpr static std::string_view ObjectiveLock_type_name = "ObjectiveLock";
+		constexpr static rivet::rivet_type_id ObjectiveLock_type_id = 0x81d88e93;
+		constexpr static std::string_view SuitLock_type_name = "SuitLock";
+		constexpr static rivet::rivet_type_id SuitLock_type_id = 0x26fcf857;
+		constexpr static std::string_view UnlockedByProgression_type_name = "UnlockedByProgression";
+		constexpr static rivet::rivet_type_id UnlockedByProgression_type_id = 0x2a7064c9;
+		constexpr static std::string_view UnlockedByEntitlement_type_name = "UnlockedByEntitlement";
+		constexpr static rivet::rivet_type_id UnlockedByEntitlement_type_id = 0x586b49b;
+		constexpr static std::string_view StickerRef_type_name = "StickerRef";
+		constexpr static rivet::rivet_type_id StickerRef_type_id = 0xdcc3b907;
+		constexpr static std::string_view ThumbnailRef_type_name = "ThumbnailRef";
+		constexpr static rivet::rivet_type_id ThumbnailRef_type_id = 0x7412ab61; 
 
 		explicit StickersData() = default;
 		explicit StickersData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED WeaponMagShieldPrius : WeaponGamePrius {
-		constexpr const static std::string_view type_name = "WeaponMagShieldPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xef5bd680;
+		constexpr static std::string_view type_name = "WeaponMagShieldPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xef5bd680;
 
-		constexpr const static std::string_view BlastWaveMinTime_type_name = "BlastWaveMinTime";
-		constexpr const static rivet::rivet_type_id BlastWaveMinTime_type_id = 0x93ece8e1; 
+		constexpr static std::string_view BlastWaveMinTime_type_name = "BlastWaveMinTime";
+		constexpr static rivet::rivet_type_id BlastWaveMinTime_type_id = 0x93ece8e1; 
 
 		explicit WeaponMagShieldPrius() = default;
 		explicit WeaponMagShieldPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

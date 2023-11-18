@@ -22,11 +22,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DamageModifierByTypePrius : DamageModifierInvulnerablePrius {
-		constexpr const static std::string_view type_name = "DamageModifierByTypePrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x13372a43;
+		constexpr static std::string_view type_name = "DamageModifierByTypePrius";
+		constexpr static rivet::rivet_type_id type_id = 0x13372a43;
 
-		constexpr const static std::string_view InvincibleToDamageTypes_type_name = "InvincibleToDamageTypes";
-		constexpr const static rivet::rivet_type_id InvincibleToDamageTypes_type_id = 0x30fed5ea; 
+		constexpr static std::string_view InvincibleToDamageTypes_type_name = "InvincibleToDamageTypes";
+		constexpr static rivet::rivet_type_id InvincibleToDamageTypes_type_id = 0x30fed5ea; 
 
 		explicit DamageModifierByTypePrius() = default;
 		explicit DamageModifierByTypePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

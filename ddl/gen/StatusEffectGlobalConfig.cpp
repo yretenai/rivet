@@ -3,18 +3,18 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/StatusEffectPixelizedConfig.hpp>
-#include <rivet/ddl/generated/StatusEffectPoisonConfig.hpp>
-#include <rivet/ddl/generated/StatusEffectFireConfig.hpp>
-#include <rivet/ddl/generated/StatusEffectConfuseConfig.hpp>
-#include <rivet/ddl/generated/StatusEffectFreezeConfig.hpp>
-#include <rivet/ddl/generated/StatusEffectFossilizeConfig.hpp>
+#include <rivet/ddl/generated/StatusEffectWarpRifleImplosionConfig.hpp>
+#include <rivet/ddl/generated/StatusEffectProtoGrenadeConfig.hpp>
 #include <rivet/ddl/generated/StatusEffectMagnaMissileConfig.hpp>
 #include <rivet/ddl/generated/StatusEffectShrubberyConfig.hpp>
+#include <rivet/ddl/generated/StatusEffectPixelizedConfig.hpp>
+#include <rivet/ddl/generated/StatusEffectRynotizeConfig.hpp>
+#include <rivet/ddl/generated/StatusEffectConfuseConfig.hpp>
+#include <rivet/ddl/generated/StatusEffectPoisonConfig.hpp>
 #include <rivet/ddl/generated/StatusEffectLightningRodConfig.hpp>
-#include <rivet/ddl/generated/StatusEffectProtoGrenadeConfig.hpp>
-#include <rivet/ddl/generated/StatusEffectWarpRifleImplosionConfig.hpp>
-#include <rivet/ddl/generated/StatusEffectRynotizeConfig.hpp> 
+#include <rivet/ddl/generated/StatusEffectFreezeConfig.hpp>
+#include <rivet/ddl/generated/StatusEffectFossilizeConfig.hpp>
+#include <rivet/ddl/generated/StatusEffectFireConfig.hpp> 
 
 #include <rivet/ddl/generated/StatusEffectGlobalConfig.hpp>
 

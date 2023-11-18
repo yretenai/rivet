@@ -21,15 +21,15 @@ namespace rivet::ddl::generated {
 	struct AssetReferenceDef; 
 
 	struct RIVET_DDL_SHARED AssertPortalInfo : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "AssertPortalInfo";
-		constexpr const static rivet::rivet_type_id type_id = 0x37ea70b1;
+		constexpr static std::string_view type_name = "AssertPortalInfo";
+		constexpr static rivet::rivet_type_id type_id = 0x37ea70b1;
 
-		constexpr const static std::string_view PortalObjectActor_type_name = "PortalObjectActor";
-		constexpr const static rivet::rivet_type_id PortalObjectActor_type_id = 0x586c8e4a;
-		constexpr const static std::string_view IsOtherIP_type_name = "IsOtherIP";
-		constexpr const static rivet::rivet_type_id IsOtherIP_type_id = 0x2c044252;
-		constexpr const static std::string_view WasUsed_type_name = "WasUsed";
-		constexpr const static rivet::rivet_type_id WasUsed_type_id = 0x30a20739; 
+		constexpr static std::string_view PortalObjectActor_type_name = "PortalObjectActor";
+		constexpr static rivet::rivet_type_id PortalObjectActor_type_id = 0x586c8e4a;
+		constexpr static std::string_view IsOtherIP_type_name = "IsOtherIP";
+		constexpr static rivet::rivet_type_id IsOtherIP_type_id = 0x2c044252;
+		constexpr static std::string_view WasUsed_type_name = "WasUsed";
+		constexpr static rivet::rivet_type_id WasUsed_type_id = 0x30a20739; 
 
 		explicit AssertPortalInfo() = default;
 		explicit AssertPortalInfo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

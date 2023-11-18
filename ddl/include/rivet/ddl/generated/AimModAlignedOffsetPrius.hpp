@@ -21,19 +21,19 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED AimModAlignedOffsetPrius : AimModifierPrius {
-		constexpr const static std::string_view type_name = "AimModAlignedOffsetPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xa23e5382;
+		constexpr static std::string_view type_name = "AimModAlignedOffsetPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xa23e5382;
 
-		constexpr const static std::string_view OffsetAmountForward_type_name = "OffsetAmountForward";
-		constexpr const static rivet::rivet_type_id OffsetAmountForward_type_id = 0x20856b16;
-		constexpr const static std::string_view OffsetAmountLeft_type_name = "OffsetAmountLeft";
-		constexpr const static rivet::rivet_type_id OffsetAmountLeft_type_id = 0x5985dd1c;
-		constexpr const static std::string_view OffsetAmountUp_type_name = "OffsetAmountUp";
-		constexpr const static rivet::rivet_type_id OffsetAmountUp_type_id = 0x159cb33f;
-		constexpr const static std::string_view ClampToFrontOfShooter_type_name = "ClampToFrontOfShooter";
-		constexpr const static rivet::rivet_type_id ClampToFrontOfShooter_type_id = 0x523adf77;
-		constexpr const static std::string_view ClampFrontOffset_type_name = "ClampFrontOffset";
-		constexpr const static rivet::rivet_type_id ClampFrontOffset_type_id = 0xbb0fd0e4; 
+		constexpr static std::string_view OffsetAmountForward_type_name = "OffsetAmountForward";
+		constexpr static rivet::rivet_type_id OffsetAmountForward_type_id = 0x20856b16;
+		constexpr static std::string_view OffsetAmountLeft_type_name = "OffsetAmountLeft";
+		constexpr static rivet::rivet_type_id OffsetAmountLeft_type_id = 0x5985dd1c;
+		constexpr static std::string_view OffsetAmountUp_type_name = "OffsetAmountUp";
+		constexpr static rivet::rivet_type_id OffsetAmountUp_type_id = 0x159cb33f;
+		constexpr static std::string_view ClampToFrontOfShooter_type_name = "ClampToFrontOfShooter";
+		constexpr static rivet::rivet_type_id ClampToFrontOfShooter_type_id = 0x523adf77;
+		constexpr static std::string_view ClampFrontOffset_type_name = "ClampFrontOffset";
+		constexpr static rivet::rivet_type_id ClampFrontOffset_type_id = 0xbb0fd0e4; 
 
 		explicit AimModAlignedOffsetPrius() = default;
 		explicit AimModAlignedOffsetPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

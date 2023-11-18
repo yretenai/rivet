@@ -21,23 +21,23 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED MountAbilityFlyGoto : MountAbilityBase {
-		constexpr const static std::string_view type_name = "MountAbilityFlyGoto";
-		constexpr const static rivet::rivet_type_id type_id = 0x14288b4d;
+		constexpr static std::string_view type_name = "MountAbilityFlyGoto";
+		constexpr static rivet::rivet_type_id type_id = 0x14288b4d;
 
-		constexpr const static std::string_view AnimOutroName_type_name = "AnimOutroName";
-		constexpr const static rivet::rivet_type_id AnimOutroName_type_id = 0x52eadacf;
-		constexpr const static std::string_view AnimIntroName_type_name = "AnimIntroName";
-		constexpr const static rivet::rivet_type_id AnimIntroName_type_id = 0x218e38;
-		constexpr const static std::string_view FlyerGotoLocator_type_name = "FlyerGotoLocator";
-		constexpr const static rivet::rivet_type_id FlyerGotoLocator_type_id = 0xcb06900;
-		constexpr const static std::string_view GotoActorLocator_type_name = "GotoActorLocator";
-		constexpr const static rivet::rivet_type_id GotoActorLocator_type_id = 0x7d971e7d;
-		constexpr const static std::string_view GotoSpeed_type_name = "GotoSpeed";
-		constexpr const static rivet::rivet_type_id GotoSpeed_type_id = 0xbc7dba80;
-		constexpr const static std::string_view MinOutroSpeed_type_name = "MinOutroSpeed";
-		constexpr const static rivet::rivet_type_id MinOutroSpeed_type_id = 0xb984ea2f;
-		constexpr const static std::string_view MaxOutroSpeed_type_name = "MaxOutroSpeed";
-		constexpr const static rivet::rivet_type_id MaxOutroSpeed_type_id = 0xf9cb9259; 
+		constexpr static std::string_view AnimOutroName_type_name = "AnimOutroName";
+		constexpr static rivet::rivet_type_id AnimOutroName_type_id = 0x52eadacf;
+		constexpr static std::string_view AnimIntroName_type_name = "AnimIntroName";
+		constexpr static rivet::rivet_type_id AnimIntroName_type_id = 0x218e38;
+		constexpr static std::string_view FlyerGotoLocator_type_name = "FlyerGotoLocator";
+		constexpr static rivet::rivet_type_id FlyerGotoLocator_type_id = 0xcb06900;
+		constexpr static std::string_view GotoActorLocator_type_name = "GotoActorLocator";
+		constexpr static rivet::rivet_type_id GotoActorLocator_type_id = 0x7d971e7d;
+		constexpr static std::string_view GotoSpeed_type_name = "GotoSpeed";
+		constexpr static rivet::rivet_type_id GotoSpeed_type_id = 0xbc7dba80;
+		constexpr static std::string_view MinOutroSpeed_type_name = "MinOutroSpeed";
+		constexpr static rivet::rivet_type_id MinOutroSpeed_type_id = 0xb984ea2f;
+		constexpr static std::string_view MaxOutroSpeed_type_name = "MaxOutroSpeed";
+		constexpr static rivet::rivet_type_id MaxOutroSpeed_type_id = 0xf9cb9259; 
 
 		explicit MountAbilityFlyGoto() = default;
 		explicit MountAbilityFlyGoto([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

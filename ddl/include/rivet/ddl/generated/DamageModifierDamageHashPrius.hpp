@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DamageModifierDamageHashPrius : DamageModifierIncomingPrius {
-		constexpr const static std::string_view type_name = "DamageModifierDamageHashPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xd039ea17;
+		constexpr static std::string_view type_name = "DamageModifierDamageHashPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xd039ea17;
 
-		constexpr const static std::string_view HashList_type_name = "HashList";
-		constexpr const static rivet::rivet_type_id HashList_type_id = 0x50a6559f;
-		constexpr const static std::string_view Exclude_type_name = "Exclude";
-		constexpr const static rivet::rivet_type_id Exclude_type_id = 0x63688441; 
+		constexpr static std::string_view HashList_type_name = "HashList";
+		constexpr static rivet::rivet_type_id HashList_type_id = 0x50a6559f;
+		constexpr static std::string_view Exclude_type_name = "Exclude";
+		constexpr static rivet::rivet_type_id Exclude_type_id = 0x63688441; 
 
 		explicit DamageModifierDamageHashPrius() = default;
 		explicit DamageModifierDamageHashPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

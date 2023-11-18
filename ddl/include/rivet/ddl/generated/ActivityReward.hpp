@@ -19,13 +19,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ActivityReward : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "ActivityReward";
-		constexpr const static rivet::rivet_type_id type_id = 0x8f1f5cee;
+		constexpr static std::string_view type_name = "ActivityReward";
+		constexpr static rivet::rivet_type_id type_id = 0x8f1f5cee;
 
-		constexpr const static std::string_view RewardTag_type_name = "RewardTag";
-		constexpr const static rivet::rivet_type_id RewardTag_type_id = 0x3b1e07fe;
-		constexpr const static std::string_view RewardImagePath_type_name = "RewardImagePath";
-		constexpr const static rivet::rivet_type_id RewardImagePath_type_id = 0xa2b13705; 
+		constexpr static std::string_view RewardTag_type_name = "RewardTag";
+		constexpr static rivet::rivet_type_id RewardTag_type_id = 0x3b1e07fe;
+		constexpr static std::string_view RewardImagePath_type_name = "RewardImagePath";
+		constexpr static rivet::rivet_type_id RewardImagePath_type_id = 0xa2b13705; 
 
 		explicit ActivityReward() = default;
 		explicit ActivityReward([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

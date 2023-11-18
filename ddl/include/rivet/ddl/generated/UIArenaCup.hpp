@@ -21,17 +21,17 @@ namespace rivet::ddl::generated {
 	struct UIArenaChallenge; 
 
 	struct RIVET_DDL_SHARED UIArenaCup : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "UIArenaCup";
-		constexpr const static rivet::rivet_type_id type_id = 0x491dc60b;
+		constexpr static std::string_view type_name = "UIArenaCup";
+		constexpr static rivet::rivet_type_id type_id = 0x491dc60b;
 
-		constexpr const static std::string_view Title_type_name = "Title";
-		constexpr const static rivet::rivet_type_id Title_type_id = 0x3265b4aa;
-		constexpr const static std::string_view Description_type_name = "Description";
-		constexpr const static rivet::rivet_type_id Description_type_id = 0xe03811fd;
-		constexpr const static std::string_view MissionUnlock_type_name = "MissionUnlock";
-		constexpr const static rivet::rivet_type_id MissionUnlock_type_id = 0x489fe4ed;
-		constexpr const static std::string_view Challenges_type_name = "Challenges";
-		constexpr const static rivet::rivet_type_id Challenges_type_id = 0xdc83f9d9; 
+		constexpr static std::string_view Title_type_name = "Title";
+		constexpr static rivet::rivet_type_id Title_type_id = 0x3265b4aa;
+		constexpr static std::string_view Description_type_name = "Description";
+		constexpr static rivet::rivet_type_id Description_type_id = 0xe03811fd;
+		constexpr static std::string_view MissionUnlock_type_name = "MissionUnlock";
+		constexpr static rivet::rivet_type_id MissionUnlock_type_id = 0x489fe4ed;
+		constexpr static std::string_view Challenges_type_name = "Challenges";
+		constexpr static rivet::rivet_type_id Challenges_type_id = 0xdc83f9d9; 
 
 		explicit UIArenaCup() = default;
 		explicit UIArenaCup([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

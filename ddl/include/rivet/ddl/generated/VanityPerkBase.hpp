@@ -19,13 +19,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED VanityPerkBase : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "VanityPerkBase";
-		constexpr const static rivet::rivet_type_id type_id = 0x6e11c0dd;
+		constexpr static std::string_view type_name = "VanityPerkBase";
+		constexpr static rivet::rivet_type_id type_id = 0x6e11c0dd;
 
-		constexpr const static std::string_view DescriptionLoc_type_name = "DescriptionLoc";
-		constexpr const static rivet::rivet_type_id DescriptionLoc_type_id = 0x899948c3;
-		constexpr const static std::string_view DisplayIcon_type_name = "DisplayIcon";
-		constexpr const static rivet::rivet_type_id DisplayIcon_type_id = 0xd144659e; 
+		constexpr static std::string_view DescriptionLoc_type_name = "DescriptionLoc";
+		constexpr static rivet::rivet_type_id DescriptionLoc_type_id = 0x899948c3;
+		constexpr static std::string_view DisplayIcon_type_name = "DisplayIcon";
+		constexpr static rivet::rivet_type_id DisplayIcon_type_id = 0xd144659e; 
 
 		explicit VanityPerkBase() = default;
 		explicit VanityPerkBase([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

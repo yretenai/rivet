@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view OverlapType_type_name = "OverlapType";
-	constexpr const static rivet::rivet_type_id OverlapType_type_id = 0x5d6518ba;
+	constexpr static std::string_view OverlapType_type_name = "OverlapType";
+	constexpr static rivet::rivet_type_id OverlapType_type_id = 0x5d6518ba;
 
-	constexpr const static std::array<std::string_view, 3> OverlapType_values = {
+	constexpr static std::array<std::string_view, 3> OverlapType_values = {
 		"kFull",
 		"kColorOnly",
 		"kNormalOnly", 

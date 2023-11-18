@@ -21,21 +21,21 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED RecoilCameraShakeProcedural : RecoilCameraShake {
-		constexpr const static std::string_view type_name = "RecoilCameraShakeProcedural";
-		constexpr const static rivet::rivet_type_id type_id = 0xa654dd0e;
+		constexpr static std::string_view type_name = "RecoilCameraShakeProcedural";
+		constexpr static rivet::rivet_type_id type_id = 0xa654dd0e;
 
-		constexpr const static std::string_view CamShakeAttackTime_type_name = "CamShakeAttackTime";
-		constexpr const static rivet::rivet_type_id CamShakeAttackTime_type_id = 0xd2983d81;
-		constexpr const static std::string_view CamShakeSustainTime_type_name = "CamShakeSustainTime";
-		constexpr const static rivet::rivet_type_id CamShakeSustainTime_type_id = 0x1280e843;
-		constexpr const static std::string_view CamShakeDecayTime_type_name = "CamShakeDecayTime";
-		constexpr const static rivet::rivet_type_id CamShakeDecayTime_type_id = 0x95bf6d8;
-		constexpr const static std::string_view CamShakeStrength_type_name = "CamShakeStrength";
-		constexpr const static rivet::rivet_type_id CamShakeStrength_type_id = 0x38287a3;
-		constexpr const static std::string_view CamShakeFrequency_type_name = "CamShakeFrequency";
-		constexpr const static rivet::rivet_type_id CamShakeFrequency_type_id = 0x337fc44c;
-		constexpr const static std::string_view CameraShakeData_type_name = "CameraShakeData";
-		constexpr const static rivet::rivet_type_id CameraShakeData_type_id = 0x8d98b2e2; 
+		constexpr static std::string_view CamShakeAttackTime_type_name = "CamShakeAttackTime";
+		constexpr static rivet::rivet_type_id CamShakeAttackTime_type_id = 0xd2983d81;
+		constexpr static std::string_view CamShakeSustainTime_type_name = "CamShakeSustainTime";
+		constexpr static rivet::rivet_type_id CamShakeSustainTime_type_id = 0x1280e843;
+		constexpr static std::string_view CamShakeDecayTime_type_name = "CamShakeDecayTime";
+		constexpr static rivet::rivet_type_id CamShakeDecayTime_type_id = 0x95bf6d8;
+		constexpr static std::string_view CamShakeStrength_type_name = "CamShakeStrength";
+		constexpr static rivet::rivet_type_id CamShakeStrength_type_id = 0x38287a3;
+		constexpr static std::string_view CamShakeFrequency_type_name = "CamShakeFrequency";
+		constexpr static rivet::rivet_type_id CamShakeFrequency_type_id = 0x337fc44c;
+		constexpr static std::string_view CameraShakeData_type_name = "CameraShakeData";
+		constexpr static rivet::rivet_type_id CameraShakeData_type_id = 0x8d98b2e2; 
 
 		explicit RecoilCameraShakeProcedural() = default;
 		explicit RecoilCameraShakeProcedural([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

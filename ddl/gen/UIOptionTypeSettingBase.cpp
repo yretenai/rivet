@@ -3,12 +3,12 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/UIOption.hpp>
-#include <rivet/ddl/generated/UIOptionTypeSettingSlider.hpp>
-#include <rivet/ddl/generated/UIOptionTypeSettingList.hpp>
-#include <rivet/ddl/generated/UIOptionTypeKeyBinding.hpp>
 #include <rivet/ddl/generated/UIOptionTypeSettingColor.hpp>
-#include <rivet/ddl/generated/UIOptionTypeShortcut.hpp> 
+#include <rivet/ddl/generated/UIOptionTypeKeyBinding.hpp>
+#include <rivet/ddl/generated/UIOptionTypeShortcut.hpp>
+#include <rivet/ddl/generated/UIOptionTypeSettingList.hpp>
+#include <rivet/ddl/generated/UIOptionTypeSettingSlider.hpp>
+#include <rivet/ddl/generated/UIOption.hpp> 
 
 #include <rivet/ddl/generated/UIOptionTypeSettingBase.hpp>
 

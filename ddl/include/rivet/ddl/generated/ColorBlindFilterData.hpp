@@ -19,15 +19,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ColorBlindFilterData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "ColorBlindFilterData";
-		constexpr const static rivet::rivet_type_id type_id = 0xf196ce57;
+		constexpr static std::string_view type_name = "ColorBlindFilterData";
+		constexpr static rivet::rivet_type_id type_id = 0xf196ce57;
 
-		constexpr const static std::string_view ProtanopiaFilterTexture_type_name = "ProtanopiaFilterTexture";
-		constexpr const static rivet::rivet_type_id ProtanopiaFilterTexture_type_id = 0xabaa47d;
-		constexpr const static std::string_view DeuteranopiaFilterTexture_type_name = "DeuteranopiaFilterTexture";
-		constexpr const static rivet::rivet_type_id DeuteranopiaFilterTexture_type_id = 0xcb513f24;
-		constexpr const static std::string_view TritanopiaFilterTexture_type_name = "TritanopiaFilterTexture";
-		constexpr const static rivet::rivet_type_id TritanopiaFilterTexture_type_id = 0xfcdb0028; 
+		constexpr static std::string_view ProtanopiaFilterTexture_type_name = "ProtanopiaFilterTexture";
+		constexpr static rivet::rivet_type_id ProtanopiaFilterTexture_type_id = 0xabaa47d;
+		constexpr static std::string_view DeuteranopiaFilterTexture_type_name = "DeuteranopiaFilterTexture";
+		constexpr static rivet::rivet_type_id DeuteranopiaFilterTexture_type_id = 0xcb513f24;
+		constexpr static std::string_view TritanopiaFilterTexture_type_name = "TritanopiaFilterTexture";
+		constexpr static rivet::rivet_type_id TritanopiaFilterTexture_type_id = 0xfcdb0028; 
 
 		explicit ColorBlindFilterData() = default;
 		explicit ColorBlindFilterData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

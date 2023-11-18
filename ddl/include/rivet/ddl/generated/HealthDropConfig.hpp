@@ -23,15 +23,15 @@ namespace rivet::ddl::generated {
 	struct HealthDropTier; 
 
 	struct RIVET_DDL_SHARED HealthDropConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "HealthDropConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x10db3c65;
+		constexpr static std::string_view type_name = "HealthDropConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x10db3c65;
 
-		constexpr const static std::string_view HealthDropActor_type_name = "HealthDropActor";
-		constexpr const static rivet::rivet_type_id HealthDropActor_type_id = 0x7b468726;
-		constexpr const static std::string_view InWorldHealthDropScale_type_name = "InWorldHealthDropScale";
-		constexpr const static rivet::rivet_type_id InWorldHealthDropScale_type_id = 0x8b878e97;
-		constexpr const static std::string_view DropTiers_type_name = "DropTiers";
-		constexpr const static rivet::rivet_type_id DropTiers_type_id = 0xec761f91; 
+		constexpr static std::string_view HealthDropActor_type_name = "HealthDropActor";
+		constexpr static rivet::rivet_type_id HealthDropActor_type_id = 0x7b468726;
+		constexpr static std::string_view InWorldHealthDropScale_type_name = "InWorldHealthDropScale";
+		constexpr static rivet::rivet_type_id InWorldHealthDropScale_type_id = 0x8b878e97;
+		constexpr static std::string_view DropTiers_type_name = "DropTiers";
+		constexpr static rivet::rivet_type_id DropTiers_type_id = 0xec761f91; 
 
 		explicit HealthDropConfig() = default;
 		explicit HealthDropConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

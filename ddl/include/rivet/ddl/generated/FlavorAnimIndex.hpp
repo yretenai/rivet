@@ -19,13 +19,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED FlavorAnimIndex : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "FlavorAnimIndex";
-		constexpr const static rivet::rivet_type_id type_id = 0x1a0a438c;
+		constexpr static std::string_view type_name = "FlavorAnimIndex";
+		constexpr static rivet::rivet_type_id type_id = 0x1a0a438c;
 
-		constexpr const static std::string_view Weight_type_name = "Weight";
-		constexpr const static rivet::rivet_type_id Weight_type_id = 0x39b51b26;
-		constexpr const static std::string_view CanDuplicate_type_name = "CanDuplicate";
-		constexpr const static rivet::rivet_type_id CanDuplicate_type_id = 0xcf5c2a3a; 
+		constexpr static std::string_view Weight_type_name = "Weight";
+		constexpr static rivet::rivet_type_id Weight_type_id = 0x39b51b26;
+		constexpr static std::string_view CanDuplicate_type_name = "CanDuplicate";
+		constexpr static rivet::rivet_type_id CanDuplicate_type_id = 0xcf5c2a3a; 
 
 		explicit FlavorAnimIndex() = default;
 		explicit FlavorAnimIndex([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

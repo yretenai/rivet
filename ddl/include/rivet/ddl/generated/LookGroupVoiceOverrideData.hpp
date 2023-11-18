@@ -21,11 +21,11 @@ namespace rivet::ddl::generated {
 	struct LookGroupVoiceOverride; 
 
 	struct RIVET_DDL_SHARED LookGroupVoiceOverrideData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "LookGroupVoiceOverrideData";
-		constexpr const static rivet::rivet_type_id type_id = 0x177a05d0;
+		constexpr static std::string_view type_name = "LookGroupVoiceOverrideData";
+		constexpr static rivet::rivet_type_id type_id = 0x177a05d0;
 
-		constexpr const static std::string_view LookGroupVoiceOverrides_type_name = "LookGroupVoiceOverrides";
-		constexpr const static rivet::rivet_type_id LookGroupVoiceOverrides_type_id = 0x2b44c93a; 
+		constexpr static std::string_view LookGroupVoiceOverrides_type_name = "LookGroupVoiceOverrides";
+		constexpr static rivet::rivet_type_id LookGroupVoiceOverrides_type_id = 0x2b44c93a; 
 
 		explicit LookGroupVoiceOverrideData() = default;
 		explicit LookGroupVoiceOverrideData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

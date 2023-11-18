@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct StatusEffectDamageModifierData; 
 
 	struct RIVET_DDL_SHARED StatusEffectApplyDamageModifiersPrius : StatusEffectBasePrius {
-		constexpr const static std::string_view type_name = "StatusEffectApplyDamageModifiersPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x1c185e11;
+		constexpr static std::string_view type_name = "StatusEffectApplyDamageModifiersPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x1c185e11;
 
-		constexpr const static std::string_view StatusEffectDamageModifierData_type_name = "StatusEffectDamageModifierData";
-		constexpr const static rivet::rivet_type_id StatusEffectDamageModifierData_type_id = 0x571b93a0; 
+		constexpr static std::string_view StatusEffectDamageModifierData_type_name = "StatusEffectDamageModifierData";
+		constexpr static rivet::rivet_type_id StatusEffectDamageModifierData_type_id = 0x571b93a0; 
 
 		explicit StatusEffectApplyDamageModifiersPrius() = default;
 		explicit StatusEffectApplyDamageModifiersPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

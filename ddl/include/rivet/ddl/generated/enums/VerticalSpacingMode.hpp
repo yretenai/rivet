@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view VerticalSpacingMode_type_name = "VerticalSpacingMode";
-	constexpr const static rivet::rivet_type_id VerticalSpacingMode_type_id = 0x3953b966;
+	constexpr static std::string_view VerticalSpacingMode_type_name = "VerticalSpacingMode";
+	constexpr static rivet::rivet_type_id VerticalSpacingMode_type_id = 0x3953b966;
 
-	constexpr const static std::array<std::string_view, 4> VerticalSpacingMode_values = {
+	constexpr static std::array<std::string_view, 4> VerticalSpacingMode_values = {
 		"CompactSpacing",
 		"StraightenLines",
 		"BalancedSpacing",

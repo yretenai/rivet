@@ -17,28 +17,28 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/BattleBrewBasePrius.hpp>
-#include <rivet/ddl/generated/enums/KnockbackLevels.hpp> 
+#include <rivet/ddl/generated/enums/KnockbackLevels.hpp>
+#include <rivet/ddl/generated/BattleBrewBasePrius.hpp> 
 
 namespace rivet::ddl::generated {
-	struct DamageModifierIncomingBattleBrewScalePrius;
 	struct DamageModifierOutgoingBattleBrewScalePrius;
-	struct TrampolinePrius; 
+	struct TrampolinePrius;
+	struct DamageModifierIncomingBattleBrewScalePrius; 
 
 	struct RIVET_DDL_SHARED BattleBrewScalePrius : BattleBrewBasePrius {
-		constexpr const static std::string_view type_name = "BattleBrewScalePrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x4c1e9a42;
+		constexpr static std::string_view type_name = "BattleBrewScalePrius";
+		constexpr static rivet::rivet_type_id type_id = 0x4c1e9a42;
 
-		constexpr const static std::string_view ScaleReactAnimDriver_type_name = "ScaleReactAnimDriver";
-		constexpr const static rivet::rivet_type_id ScaleReactAnimDriver_type_id = 0xa6a58654;
-		constexpr const static std::string_view ShrunkJumpedOnKnockback_type_name = "ShrunkJumpedOnKnockback";
-		constexpr const static rivet::rivet_type_id ShrunkJumpedOnKnockback_type_id = 0xed968220;
-		constexpr const static std::string_view IncomingDamageModifier_type_name = "IncomingDamageModifier";
-		constexpr const static rivet::rivet_type_id IncomingDamageModifier_type_id = 0xfd58369;
-		constexpr const static std::string_view OutgoingDamageModifier_type_name = "OutgoingDamageModifier";
-		constexpr const static rivet::rivet_type_id OutgoingDamageModifier_type_id = 0x65db3b20;
-		constexpr const static std::string_view Trampoline_type_name = "Trampoline";
-		constexpr const static rivet::rivet_type_id Trampoline_type_id = 0xf7bf349; 
+		constexpr static std::string_view ScaleReactAnimDriver_type_name = "ScaleReactAnimDriver";
+		constexpr static rivet::rivet_type_id ScaleReactAnimDriver_type_id = 0xa6a58654;
+		constexpr static std::string_view ShrunkJumpedOnKnockback_type_name = "ShrunkJumpedOnKnockback";
+		constexpr static rivet::rivet_type_id ShrunkJumpedOnKnockback_type_id = 0xed968220;
+		constexpr static std::string_view IncomingDamageModifier_type_name = "IncomingDamageModifier";
+		constexpr static rivet::rivet_type_id IncomingDamageModifier_type_id = 0xfd58369;
+		constexpr static std::string_view OutgoingDamageModifier_type_name = "OutgoingDamageModifier";
+		constexpr static rivet::rivet_type_id OutgoingDamageModifier_type_id = 0x65db3b20;
+		constexpr static std::string_view Trampoline_type_name = "Trampoline";
+		constexpr static rivet::rivet_type_id Trampoline_type_id = 0xf7bf349; 
 
 		explicit BattleBrewScalePrius() = default;
 		explicit BattleBrewScalePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

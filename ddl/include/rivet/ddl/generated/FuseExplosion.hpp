@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED FuseExplosion : GrenadeExplosionMode {
-		constexpr const static std::string_view type_name = "FuseExplosion";
-		constexpr const static rivet::rivet_type_id type_id = 0x67935ba7;
+		constexpr static std::string_view type_name = "FuseExplosion";
+		constexpr static rivet::rivet_type_id type_id = 0x67935ba7;
 
-		constexpr const static std::string_view FuseTime_type_name = "FuseTime";
-		constexpr const static rivet::rivet_type_id FuseTime_type_id = 0x5715b9c; 
+		constexpr static std::string_view FuseTime_type_name = "FuseTime";
+		constexpr static rivet::rivet_type_id FuseTime_type_id = 0x5715b9c; 
 
 		explicit FuseExplosion() = default;
 		explicit FuseExplosion([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

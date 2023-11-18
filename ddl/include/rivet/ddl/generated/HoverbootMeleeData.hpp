@@ -19,15 +19,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED HoverbootMeleeData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "HoverbootMeleeData";
-		constexpr const static rivet::rivet_type_id type_id = 0xa2ac6661;
+		constexpr static std::string_view type_name = "HoverbootMeleeData";
+		constexpr static rivet::rivet_type_id type_id = 0xa2ac6661;
 
-		constexpr const static std::string_view Decel_type_name = "Decel";
-		constexpr const static rivet::rivet_type_id Decel_type_id = 0xa9242a88;
-		constexpr const static std::string_view MinAnimRate_type_name = "MinAnimRate";
-		constexpr const static rivet::rivet_type_id MinAnimRate_type_id = 0xea35193a;
-		constexpr const static std::string_view MaxAnimRate_type_name = "MaxAnimRate";
-		constexpr const static rivet::rivet_type_id MaxAnimRate_type_id = 0x26386235; 
+		constexpr static std::string_view Decel_type_name = "Decel";
+		constexpr static rivet::rivet_type_id Decel_type_id = 0xa9242a88;
+		constexpr static std::string_view MinAnimRate_type_name = "MinAnimRate";
+		constexpr static rivet::rivet_type_id MinAnimRate_type_id = 0xea35193a;
+		constexpr static std::string_view MaxAnimRate_type_name = "MaxAnimRate";
+		constexpr static rivet::rivet_type_id MaxAnimRate_type_id = 0x26386235; 
 
 		explicit HoverbootMeleeData() = default;
 		explicit HoverbootMeleeData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -21,15 +21,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED HexapodWeaponEmitterPrius : ComponentEmitterBasePrius {
-		constexpr const static std::string_view type_name = "HexapodWeaponEmitterPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x3323edd2;
+		constexpr static std::string_view type_name = "HexapodWeaponEmitterPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x3323edd2;
 
-		constexpr const static std::string_view Locators_type_name = "Locators";
-		constexpr const static rivet::rivet_type_id Locators_type_id = 0x3c7848cc;
-		constexpr const static std::string_view ZOffset_type_name = "ZOffset";
-		constexpr const static rivet::rivet_type_id ZOffset_type_id = 0x3bfa5d66;
-		constexpr const static std::string_view EmitFromUser_type_name = "EmitFromUser";
-		constexpr const static rivet::rivet_type_id EmitFromUser_type_id = 0x13b721db; 
+		constexpr static std::string_view Locators_type_name = "Locators";
+		constexpr static rivet::rivet_type_id Locators_type_id = 0x3c7848cc;
+		constexpr static std::string_view ZOffset_type_name = "ZOffset";
+		constexpr static rivet::rivet_type_id ZOffset_type_id = 0x3bfa5d66;
+		constexpr static std::string_view EmitFromUser_type_name = "EmitFromUser";
+		constexpr static rivet::rivet_type_id EmitFromUser_type_id = 0x13b721db; 
 
 		explicit HexapodWeaponEmitterPrius() = default;
 		explicit HexapodWeaponEmitterPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

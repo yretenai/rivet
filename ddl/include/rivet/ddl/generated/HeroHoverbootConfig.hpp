@@ -20,39 +20,39 @@
 #include <rivet/ddl/generated/ConfigBase.hpp> 
 
 namespace rivet::ddl::generated {
-	struct HoverbootFallData;
-	struct HoverbootMoveData;
-	struct HoverbootMeleeData;
-	struct HoverbootJumpData;
 	struct HeroSpeedConfig;
-	struct HoverbootSurfaceDeformationData;
+	struct HoverbootFallData;
 	struct HoverbootKickData;
-	struct HoverbootHoverEffectData; 
+	struct HoverbootHoverEffectData;
+	struct HoverbootSurfaceDeformationData;
+	struct HoverbootJumpData;
+	struct HoverbootMeleeData;
+	struct HoverbootMoveData; 
 
 	struct RIVET_DDL_SHARED HeroHoverbootConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "HeroHoverbootConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xdd1f2497;
+		constexpr static std::string_view type_name = "HeroHoverbootConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xdd1f2497;
 
-		constexpr const static std::string_view MoveData_type_name = "MoveData";
-		constexpr const static rivet::rivet_type_id MoveData_type_id = 0x91f7edf;
-		constexpr const static std::string_view BoostMoveData_type_name = "BoostMoveData";
-		constexpr const static rivet::rivet_type_id BoostMoveData_type_id = 0x18338857;
-		constexpr const static std::string_view MeleeData_type_name = "MeleeData";
-		constexpr const static rivet::rivet_type_id MeleeData_type_id = 0x38ab808a;
-		constexpr const static std::string_view JumpData_type_name = "JumpData";
-		constexpr const static rivet::rivet_type_id JumpData_type_id = 0x1655eec;
-		constexpr const static std::string_view SurfaceDeformationData_type_name = "SurfaceDeformationData";
-		constexpr const static rivet::rivet_type_id SurfaceDeformationData_type_id = 0xdc6e0c7c;
-		constexpr const static std::string_view KickData_type_name = "KickData";
-		constexpr const static rivet::rivet_type_id KickData_type_id = 0x408b6f2b;
-		constexpr const static std::string_view FallData_type_name = "FallData";
-		constexpr const static rivet::rivet_type_id FallData_type_id = 0xab175a58;
-		constexpr const static std::string_view HoverEffectData_type_name = "HoverEffectData";
-		constexpr const static rivet::rivet_type_id HoverEffectData_type_id = 0xb93f74ac;
-		constexpr const static std::string_view BoostJumpConfig_type_name = "BoostJumpConfig";
-		constexpr const static rivet::rivet_type_id BoostJumpConfig_type_id = 0x26ab9e82;
-		constexpr const static std::string_view HoverbootFastCameraShakeConfig_type_name = "HoverbootFastCameraShakeConfig";
-		constexpr const static rivet::rivet_type_id HoverbootFastCameraShakeConfig_type_id = 0x4d9198cc; 
+		constexpr static std::string_view MoveData_type_name = "MoveData";
+		constexpr static rivet::rivet_type_id MoveData_type_id = 0x91f7edf;
+		constexpr static std::string_view BoostMoveData_type_name = "BoostMoveData";
+		constexpr static rivet::rivet_type_id BoostMoveData_type_id = 0x18338857;
+		constexpr static std::string_view MeleeData_type_name = "MeleeData";
+		constexpr static rivet::rivet_type_id MeleeData_type_id = 0x38ab808a;
+		constexpr static std::string_view JumpData_type_name = "JumpData";
+		constexpr static rivet::rivet_type_id JumpData_type_id = 0x1655eec;
+		constexpr static std::string_view SurfaceDeformationData_type_name = "SurfaceDeformationData";
+		constexpr static rivet::rivet_type_id SurfaceDeformationData_type_id = 0xdc6e0c7c;
+		constexpr static std::string_view KickData_type_name = "KickData";
+		constexpr static rivet::rivet_type_id KickData_type_id = 0x408b6f2b;
+		constexpr static std::string_view FallData_type_name = "FallData";
+		constexpr static rivet::rivet_type_id FallData_type_id = 0xab175a58;
+		constexpr static std::string_view HoverEffectData_type_name = "HoverEffectData";
+		constexpr static rivet::rivet_type_id HoverEffectData_type_id = 0xb93f74ac;
+		constexpr static std::string_view BoostJumpConfig_type_name = "BoostJumpConfig";
+		constexpr static rivet::rivet_type_id BoostJumpConfig_type_id = 0x26ab9e82;
+		constexpr static std::string_view HoverbootFastCameraShakeConfig_type_name = "HoverbootFastCameraShakeConfig";
+		constexpr static rivet::rivet_type_id HoverbootFastCameraShakeConfig_type_id = 0x4d9198cc; 
 
 		explicit HeroHoverbootConfig() = default;
 		explicit HeroHoverbootConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

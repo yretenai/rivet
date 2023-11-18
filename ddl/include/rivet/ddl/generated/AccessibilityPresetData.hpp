@@ -21,11 +21,11 @@ namespace rivet::ddl::generated {
 	struct ControlRemapPresetData; 
 
 	struct RIVET_DDL_SHARED AccessibilityPresetData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "AccessibilityPresetData";
-		constexpr const static rivet::rivet_type_id type_id = 0x3d1dd96;
+		constexpr static std::string_view type_name = "AccessibilityPresetData";
+		constexpr static rivet::rivet_type_id type_id = 0x3d1dd96;
 
-		constexpr const static std::string_view Preset_type_name = "Preset";
-		constexpr const static rivet::rivet_type_id Preset_type_id = 0x1227aa55; 
+		constexpr static std::string_view Preset_type_name = "Preset";
+		constexpr static rivet::rivet_type_id Preset_type_id = 0x1227aa55; 
 
 		explicit AccessibilityPresetData() = default;
 		explicit AccessibilityPresetData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

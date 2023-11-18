@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view ShadowRes_type_name = "ShadowRes";
-	constexpr const static rivet::rivet_type_id ShadowRes_type_id = 0x4344f8a2;
+	constexpr static std::string_view ShadowRes_type_name = "ShadowRes";
+	constexpr static rivet::rivet_type_id ShadowRes_type_id = 0x4344f8a2;
 
-	constexpr const static std::array<std::string_view, 4> ShadowRes_values = {
+	constexpr static std::array<std::string_view, 4> ShadowRes_values = {
 		"kLowRes",
 		"kNormal",
 		"kHighRes",

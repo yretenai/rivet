@@ -3,9 +3,9 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/CineMenuOption.hpp>
+#include <rivet/ddl/generated/AnimSkeletonInfo.hpp>
 #include <rivet/ddl/generated/MayaNameTrackTags.hpp>
-#include <rivet/ddl/generated/AnimSkeletonInfo.hpp> 
+#include <rivet/ddl/generated/CineMenuOption.hpp> 
 
 #include <rivet/ddl/generated/Cinematic2ActorCustomizationConfig.hpp>
 

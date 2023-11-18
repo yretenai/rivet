@@ -18,17 +18,17 @@
 #include <rivet/structures/rivet_serialization.hpp>
 
 namespace rivet::ddl::generated {
-	struct EventStimulus;
-	struct TargetingStimulusListenerAddOnEntry; 
+	struct TargetingStimulusListenerAddOnEntry;
+	struct EventStimulus; 
 
 	struct RIVET_DDL_SHARED TargetingStimulusListenerPrius : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "TargetingStimulusListenerPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x89f5de50;
+		constexpr static std::string_view type_name = "TargetingStimulusListenerPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x89f5de50;
 
-		constexpr const static std::string_view GenericEventHandlers_type_name = "GenericEventHandlers";
-		constexpr const static rivet::rivet_type_id GenericEventHandlers_type_id = 0x1cb9421f;
-		constexpr const static std::string_view AddOns_type_name = "AddOns";
-		constexpr const static rivet::rivet_type_id AddOns_type_id = 0xdd502eb0; 
+		constexpr static std::string_view GenericEventHandlers_type_name = "GenericEventHandlers";
+		constexpr static rivet::rivet_type_id GenericEventHandlers_type_id = 0x1cb9421f;
+		constexpr static std::string_view AddOns_type_name = "AddOns";
+		constexpr static rivet::rivet_type_id AddOns_type_id = 0xdd502eb0; 
 
 		explicit TargetingStimulusListenerPrius() = default;
 		explicit TargetingStimulusListenerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

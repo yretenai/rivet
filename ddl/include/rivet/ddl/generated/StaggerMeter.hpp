@@ -21,23 +21,23 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED StaggerMeter : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "StaggerMeter";
-		constexpr const static rivet::rivet_type_id type_id = 0xbffbbd24;
+		constexpr static std::string_view type_name = "StaggerMeter";
+		constexpr static rivet::rivet_type_id type_id = 0xbffbbd24;
 
-		constexpr const static std::string_view DebugName_type_name = "DebugName";
-		constexpr const static rivet::rivet_type_id DebugName_type_id = 0x4ef19112;
-		constexpr const static std::string_view Types_type_name = "Types";
-		constexpr const static rivet::rivet_type_id Types_type_id = 0x406345f1;
-		constexpr const static std::string_view Threshhold_type_name = "Threshhold";
-		constexpr const static rivet::rivet_type_id Threshhold_type_id = 0xd245446;
-		constexpr const static std::string_view Decay_type_name = "Decay";
-		constexpr const static rivet::rivet_type_id Decay_type_id = 0xa0950b67;
-		constexpr const static std::string_view DecayDelay_type_name = "DecayDelay";
-		constexpr const static rivet::rivet_type_id DecayDelay_type_id = 0x1cb5b22c;
-		constexpr const static std::string_view StartingValue_type_name = "StartingValue";
-		constexpr const static rivet::rivet_type_id StartingValue_type_id = 0xc59eb3b5;
-		constexpr const static std::string_view Cooldown_type_name = "Cooldown";
-		constexpr const static rivet::rivet_type_id Cooldown_type_id = 0x246291a9; 
+		constexpr static std::string_view DebugName_type_name = "DebugName";
+		constexpr static rivet::rivet_type_id DebugName_type_id = 0x4ef19112;
+		constexpr static std::string_view Types_type_name = "Types";
+		constexpr static rivet::rivet_type_id Types_type_id = 0x406345f1;
+		constexpr static std::string_view Threshhold_type_name = "Threshhold";
+		constexpr static rivet::rivet_type_id Threshhold_type_id = 0xd245446;
+		constexpr static std::string_view Decay_type_name = "Decay";
+		constexpr static rivet::rivet_type_id Decay_type_id = 0xa0950b67;
+		constexpr static std::string_view DecayDelay_type_name = "DecayDelay";
+		constexpr static rivet::rivet_type_id DecayDelay_type_id = 0x1cb5b22c;
+		constexpr static std::string_view StartingValue_type_name = "StartingValue";
+		constexpr static rivet::rivet_type_id StartingValue_type_id = 0xc59eb3b5;
+		constexpr static std::string_view Cooldown_type_name = "Cooldown";
+		constexpr static rivet::rivet_type_id Cooldown_type_id = 0x246291a9; 
 
 		explicit StaggerMeter() = default;
 		explicit StaggerMeter([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

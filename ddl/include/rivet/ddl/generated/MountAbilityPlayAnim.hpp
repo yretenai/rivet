@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED MountAbilityPlayAnim : MountAbilityBase {
-		constexpr const static std::string_view type_name = "MountAbilityPlayAnim";
-		constexpr const static rivet::rivet_type_id type_id = 0x773cefd3;
+		constexpr static std::string_view type_name = "MountAbilityPlayAnim";
+		constexpr static rivet::rivet_type_id type_id = 0x773cefd3;
 
-		constexpr const static std::string_view AttackAnimName_type_name = "AttackAnimName";
-		constexpr const static rivet::rivet_type_id AttackAnimName_type_id = 0x153eb5d6; 
+		constexpr static std::string_view AttackAnimName_type_name = "AttackAnimName";
+		constexpr static rivet::rivet_type_id AttackAnimName_type_id = 0x153eb5d6; 
 
 		explicit MountAbilityPlayAnim() = default;
 		explicit MountAbilityPlayAnim([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

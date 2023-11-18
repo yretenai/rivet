@@ -21,15 +21,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ShotMotionSchrodingerPrius : BasicShotMotionPrius {
-		constexpr const static std::string_view type_name = "ShotMotionSchrodingerPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xac996ff4;
+		constexpr static std::string_view type_name = "ShotMotionSchrodingerPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xac996ff4;
 
-		constexpr const static std::string_view IntroAnim_type_name = "IntroAnim";
-		constexpr const static rivet::rivet_type_id IntroAnim_type_id = 0xf227a2c3;
-		constexpr const static std::string_view InAirAnim_type_name = "InAirAnim";
-		constexpr const static rivet::rivet_type_id InAirAnim_type_id = 0xf91d895d;
-		constexpr const static std::string_view AttackAnim_type_name = "AttackAnim";
-		constexpr const static rivet::rivet_type_id AttackAnim_type_id = 0x28523c32; 
+		constexpr static std::string_view IntroAnim_type_name = "IntroAnim";
+		constexpr static rivet::rivet_type_id IntroAnim_type_id = 0xf227a2c3;
+		constexpr static std::string_view InAirAnim_type_name = "InAirAnim";
+		constexpr static rivet::rivet_type_id InAirAnim_type_id = 0xf91d895d;
+		constexpr static std::string_view AttackAnim_type_name = "AttackAnim";
+		constexpr static rivet::rivet_type_id AttackAnim_type_id = 0x28523c32; 
 
 		explicit ShotMotionSchrodingerPrius() = default;
 		explicit ShotMotionSchrodingerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

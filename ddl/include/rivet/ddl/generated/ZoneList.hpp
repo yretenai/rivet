@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ZoneList : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "ZoneList";
-		constexpr const static rivet::rivet_type_id type_id = 0x79dfcd60;
+		constexpr static std::string_view type_name = "ZoneList";
+		constexpr static rivet::rivet_type_id type_id = 0x79dfcd60;
 
-		constexpr const static std::string_view Platform_type_name = "Platform";
-		constexpr const static rivet::rivet_type_id Platform_type_id = 0xc3536dbb;
-		constexpr const static std::string_view Zones_type_name = "Zones";
-		constexpr const static rivet::rivet_type_id Zones_type_id = 0x9c997da9; 
+		constexpr static std::string_view Platform_type_name = "Platform";
+		constexpr static rivet::rivet_type_id Platform_type_id = 0xc3536dbb;
+		constexpr static std::string_view Zones_type_name = "Zones";
+		constexpr static rivet::rivet_type_id Zones_type_id = 0x9c997da9; 
 
 		explicit ZoneList() = default;
 		explicit ZoneList([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

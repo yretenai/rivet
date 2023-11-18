@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED EnterRagdollStatePrius : ScriptedShotEffectBasePrius {
-		constexpr const static std::string_view type_name = "EnterRagdollStatePrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xbf2d557c;
+		constexpr static std::string_view type_name = "EnterRagdollStatePrius";
+		constexpr static rivet::rivet_type_id type_id = 0xbf2d557c;
 
-		constexpr const static std::string_view Impulse_type_name = "Impulse";
-		constexpr const static rivet::rivet_type_id Impulse_type_id = 0xebf69433;
-		constexpr const static std::string_view LifeTime_type_name = "LifeTime";
-		constexpr const static rivet::rivet_type_id LifeTime_type_id = 0x67d422c6; 
+		constexpr static std::string_view Impulse_type_name = "Impulse";
+		constexpr static rivet::rivet_type_id Impulse_type_id = 0xebf69433;
+		constexpr static std::string_view LifeTime_type_name = "LifeTime";
+		constexpr static rivet::rivet_type_id LifeTime_type_id = 0x67d422c6; 
 
 		explicit EnterRagdollStatePrius() = default;
 		explicit EnterRagdollStatePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

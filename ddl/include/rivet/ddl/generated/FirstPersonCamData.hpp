@@ -21,13 +21,13 @@ namespace rivet::ddl::generated {
 	struct YawAndPitchData; 
 
 	struct RIVET_DDL_SHARED FirstPersonCamData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "FirstPersonCamData";
-		constexpr const static rivet::rivet_type_id type_id = 0x3f0b5b0d;
+		constexpr static std::string_view type_name = "FirstPersonCamData";
+		constexpr static rivet::rivet_type_id type_id = 0x3f0b5b0d;
 
-		constexpr const static std::string_view YawAndPitch_type_name = "YawAndPitch";
-		constexpr const static rivet::rivet_type_id YawAndPitch_type_id = 0x44749354;
-		constexpr const static std::string_view StickConfig_type_name = "StickConfig";
-		constexpr const static rivet::rivet_type_id StickConfig_type_id = 0x3bc8f276; 
+		constexpr static std::string_view YawAndPitch_type_name = "YawAndPitch";
+		constexpr static rivet::rivet_type_id YawAndPitch_type_id = 0x44749354;
+		constexpr static std::string_view StickConfig_type_name = "StickConfig";
+		constexpr static rivet::rivet_type_id StickConfig_type_id = 0x3bc8f276; 
 
 		explicit FirstPersonCamData() = default;
 		explicit FirstPersonCamData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -19,13 +19,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ProxAggroRange : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "ProxAggroRange";
-		constexpr const static rivet::rivet_type_id type_id = 0x286665aa;
+		constexpr static std::string_view type_name = "ProxAggroRange";
+		constexpr static rivet::rivet_type_id type_id = 0x286665aa;
 
-		constexpr const static std::string_view Range_type_name = "Range";
-		constexpr const static rivet::rivet_type_id Range_type_id = 0x8ad49688;
-		constexpr const static std::string_view AggroAtRange_type_name = "AggroAtRange";
-		constexpr const static rivet::rivet_type_id AggroAtRange_type_id = 0x704da834; 
+		constexpr static std::string_view Range_type_name = "Range";
+		constexpr static rivet::rivet_type_id Range_type_id = 0x8ad49688;
+		constexpr static std::string_view AggroAtRange_type_name = "AggroAtRange";
+		constexpr static rivet::rivet_type_id AggroAtRange_type_id = 0x704da834; 
 
 		explicit ProxAggroRange() = default;
 		explicit ProxAggroRange([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

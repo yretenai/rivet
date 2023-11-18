@@ -20,26 +20,26 @@
 #include <rivet/ddl/generated/ConfigBase.hpp> 
 
 namespace rivet::ddl::generated {
-	struct HoudiniConfigDataFileGroup;
-	struct HoudiniConfigDataFile;
+	struct HoudiniConfigDataString;
 	struct HoudiniConfigDataInteger;
 	struct HoudiniConfigDataFloat;
-	struct HoudiniConfigDataString; 
+	struct HoudiniConfigDataFile;
+	struct HoudiniConfigDataFileGroup; 
 
 	struct RIVET_DDL_SHARED HoudiniConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "HoudiniConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x2029034f;
+		constexpr static std::string_view type_name = "HoudiniConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x2029034f;
 
-		constexpr const static std::string_view FileGroups_type_name = "FileGroups";
-		constexpr const static rivet::rivet_type_id FileGroups_type_id = 0xc4c3ed4;
-		constexpr const static std::string_view Files_type_name = "Files";
-		constexpr const static rivet::rivet_type_id Files_type_id = 0x1f668c98;
-		constexpr const static std::string_view Floats_type_name = "Floats";
-		constexpr const static rivet::rivet_type_id Floats_type_id = 0xa5da43f9;
-		constexpr const static std::string_view Integers_type_name = "Integers";
-		constexpr const static rivet::rivet_type_id Integers_type_id = 0x7687a458;
-		constexpr const static std::string_view Strings_type_name = "Strings";
-		constexpr const static rivet::rivet_type_id Strings_type_id = 0xb57009cd; 
+		constexpr static std::string_view FileGroups_type_name = "FileGroups";
+		constexpr static rivet::rivet_type_id FileGroups_type_id = 0xc4c3ed4;
+		constexpr static std::string_view Files_type_name = "Files";
+		constexpr static rivet::rivet_type_id Files_type_id = 0x1f668c98;
+		constexpr static std::string_view Floats_type_name = "Floats";
+		constexpr static rivet::rivet_type_id Floats_type_id = 0xa5da43f9;
+		constexpr static std::string_view Integers_type_name = "Integers";
+		constexpr static rivet::rivet_type_id Integers_type_id = 0x7687a458;
+		constexpr static std::string_view Strings_type_name = "Strings";
+		constexpr static rivet::rivet_type_id Strings_type_id = 0xb57009cd; 
 
 		explicit HoudiniConfig() = default;
 		explicit HoudiniConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

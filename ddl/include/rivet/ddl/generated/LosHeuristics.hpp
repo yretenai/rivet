@@ -19,15 +19,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED LosHeuristics : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "LosHeuristics";
-		constexpr const static rivet::rivet_type_id type_id = 0x2892c67b;
+		constexpr static std::string_view type_name = "LosHeuristics";
+		constexpr static rivet::rivet_type_id type_id = 0x2892c67b;
 
-		constexpr const static std::string_view Weight_type_name = "Weight";
-		constexpr const static rivet::rivet_type_id Weight_type_id = 0x39b51b26;
-		constexpr const static std::string_view VisibleTimeMax_type_name = "VisibleTimeMax";
-		constexpr const static rivet::rivet_type_id VisibleTimeMax_type_id = 0x586ac93d;
-		constexpr const static std::string_view HiddenTimeMax_type_name = "HiddenTimeMax";
-		constexpr const static rivet::rivet_type_id HiddenTimeMax_type_id = 0xf5d356ef; 
+		constexpr static std::string_view Weight_type_name = "Weight";
+		constexpr static rivet::rivet_type_id Weight_type_id = 0x39b51b26;
+		constexpr static std::string_view VisibleTimeMax_type_name = "VisibleTimeMax";
+		constexpr static rivet::rivet_type_id VisibleTimeMax_type_id = 0x586ac93d;
+		constexpr static std::string_view HiddenTimeMax_type_name = "HiddenTimeMax";
+		constexpr static rivet::rivet_type_id HiddenTimeMax_type_id = 0xf5d356ef; 
 
 		explicit LosHeuristics() = default;
 		explicit LosHeuristics([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -20,17 +20,17 @@
 #include <rivet/ddl/generated/ConfigBase.hpp> 
 
 namespace rivet::ddl::generated {
-	struct SoundListenerBoomProperties;
-	struct SoundListenerPriority; 
+	struct SoundListenerPriority;
+	struct SoundListenerBoomProperties; 
 
 	struct RIVET_DDL_SHARED SoundListenerConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "SoundListenerConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x1bb0b1e5;
+		constexpr static std::string_view type_name = "SoundListenerConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x1bb0b1e5;
 
-		constexpr const static std::string_view BoomProperties_type_name = "BoomProperties";
-		constexpr const static rivet::rivet_type_id BoomProperties_type_id = 0x2d41beab;
-		constexpr const static std::string_view ListenerPriorities_type_name = "ListenerPriorities";
-		constexpr const static rivet::rivet_type_id ListenerPriorities_type_id = 0xcb62563c; 
+		constexpr static std::string_view BoomProperties_type_name = "BoomProperties";
+		constexpr static rivet::rivet_type_id BoomProperties_type_id = 0x2d41beab;
+		constexpr static std::string_view ListenerPriorities_type_name = "ListenerPriorities";
+		constexpr static rivet::rivet_type_id ListenerPriorities_type_id = 0xcb62563c; 
 
 		explicit SoundListenerConfig() = default;
 		explicit SoundListenerConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

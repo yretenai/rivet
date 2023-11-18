@@ -4,10 +4,10 @@
 // SPDX-License-Identifier: MPL-2.0
 
 #include <rivet/ddl/generated/POIGameConfigData.hpp>
-#include <rivet/ddl/generated/POIAttributeIconBase.hpp>
-#include <rivet/ddl/generated/POIAttributeEdgeModeBase.hpp>
+#include <rivet/ddl/generated/POIAttributeDistanceTextBase.hpp>
 #include <rivet/ddl/generated/POIAttributeDistanceScaleBase.hpp>
-#include <rivet/ddl/generated/POIAttributeDistanceTextBase.hpp> 
+#include <rivet/ddl/generated/POIAttributeEdgeModeBase.hpp>
+#include <rivet/ddl/generated/POIAttributeIconBase.hpp> 
 
 #include <rivet/ddl/generated/POIConfigData.hpp>
 

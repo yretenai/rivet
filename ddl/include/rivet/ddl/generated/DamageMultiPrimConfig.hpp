@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct DamagePrimContainer; 
 
 	struct RIVET_DDL_SHARED DamageMultiPrimConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "DamageMultiPrimConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x47021935;
+		constexpr static std::string_view type_name = "DamageMultiPrimConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x47021935;
 
-		constexpr const static std::string_view Prims_type_name = "Prims";
-		constexpr const static rivet::rivet_type_id Prims_type_id = 0xb9cc76c7; 
+		constexpr static std::string_view Prims_type_name = "Prims";
+		constexpr static rivet::rivet_type_id Prims_type_id = 0xb9cc76c7; 
 
 		explicit DamageMultiPrimConfig() = default;
 		explicit DamageMultiPrimConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

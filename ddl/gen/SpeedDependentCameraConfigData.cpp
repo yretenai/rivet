@@ -3,8 +3,8 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/CameraAimContextConfig.hpp>
-#include <rivet/ddl/generated/FollowCameraUserConfig.hpp> 
+#include <rivet/ddl/generated/FollowCameraUserConfig.hpp>
+#include <rivet/ddl/generated/CameraAimContextConfig.hpp> 
 
 #include <rivet/ddl/generated/SpeedDependentCameraConfigData.hpp>
 

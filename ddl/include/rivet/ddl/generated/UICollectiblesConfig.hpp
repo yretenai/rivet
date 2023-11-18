@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct UICollectibleCategory; 
 
 	struct RIVET_DDL_SHARED UICollectiblesConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "UICollectiblesConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xdc304074;
+		constexpr static std::string_view type_name = "UICollectiblesConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xdc304074;
 
-		constexpr const static std::string_view Categories_type_name = "Categories";
-		constexpr const static rivet::rivet_type_id Categories_type_id = 0xe1c51851; 
+		constexpr static std::string_view Categories_type_name = "Categories";
+		constexpr static rivet::rivet_type_id Categories_type_id = 0xe1c51851; 
 
 		explicit UICollectiblesConfig() = default;
 		explicit UICollectiblesConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

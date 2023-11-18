@@ -19,8 +19,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED GadgetPortalTetherPrius : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "GadgetPortalTetherPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xf616d16a;
+		constexpr static std::string_view type_name = "GadgetPortalTetherPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xf616d16a;
 
 		explicit GadgetPortalTetherPrius() = default;
 		explicit GadgetPortalTetherPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

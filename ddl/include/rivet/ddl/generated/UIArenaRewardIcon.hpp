@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED UIArenaRewardIcon : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "UIArenaRewardIcon";
-		constexpr const static rivet::rivet_type_id type_id = 0x36c82f86;
+		constexpr static std::string_view type_name = "UIArenaRewardIcon";
+		constexpr static rivet::rivet_type_id type_id = 0x36c82f86;
 
-		constexpr const static std::string_view Type_type_name = "Type";
-		constexpr const static rivet::rivet_type_id Type_type_id = 0xbc4e9799;
-		constexpr const static std::string_view Icon_type_name = "Icon";
-		constexpr const static rivet::rivet_type_id Icon_type_id = 0x5504e96b; 
+		constexpr static std::string_view Type_type_name = "Type";
+		constexpr static rivet::rivet_type_id Type_type_id = 0xbc4e9799;
+		constexpr static std::string_view Icon_type_name = "Icon";
+		constexpr static rivet::rivet_type_id Icon_type_id = 0x5504e96b; 
 
 		explicit UIArenaRewardIcon() = default;
 		explicit UIArenaRewardIcon([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

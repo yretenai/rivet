@@ -23,15 +23,15 @@ namespace rivet::ddl::generated {
 	struct AssetReferenceDef; 
 
 	struct RIVET_DDL_SHARED SkinItemMaterialOverrideListEntry : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "SkinItemMaterialOverrideListEntry";
-		constexpr const static rivet::rivet_type_id type_id = 0x4607e1e6;
+		constexpr static std::string_view type_name = "SkinItemMaterialOverrideListEntry";
+		constexpr static rivet::rivet_type_id type_id = 0x4607e1e6;
 
-		constexpr const static std::string_view Available_type_name = "Available";
-		constexpr const static rivet::rivet_type_id Available_type_id = 0x27723b89;
-		constexpr const static std::string_view OverrideMaterial_type_name = "OverrideMaterial";
-		constexpr const static rivet::rivet_type_id OverrideMaterial_type_id = 0x21926360;
-		constexpr const static std::string_view SecondaryOverrideMaterial_type_name = "SecondaryOverrideMaterial";
-		constexpr const static rivet::rivet_type_id SecondaryOverrideMaterial_type_id = 0x647bc0f1; 
+		constexpr static std::string_view Available_type_name = "Available";
+		constexpr static rivet::rivet_type_id Available_type_id = 0x27723b89;
+		constexpr static std::string_view OverrideMaterial_type_name = "OverrideMaterial";
+		constexpr static rivet::rivet_type_id OverrideMaterial_type_id = 0x21926360;
+		constexpr static std::string_view SecondaryOverrideMaterial_type_name = "SecondaryOverrideMaterial";
+		constexpr static rivet::rivet_type_id SecondaryOverrideMaterial_type_id = 0x647bc0f1; 
 
 		explicit SkinItemMaterialOverrideListEntry() = default;
 		explicit SkinItemMaterialOverrideListEntry([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

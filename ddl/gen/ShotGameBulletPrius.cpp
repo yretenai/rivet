@@ -3,9 +3,9 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/ShotRYNOPrius.hpp>
+#include <rivet/ddl/generated/ShotRYNOPortalPrius.hpp>
 #include <rivet/ddl/generated/ShotGameBulletMrFunGuyPrius.hpp>
-#include <rivet/ddl/generated/ShotRYNOPortalPrius.hpp> 
+#include <rivet/ddl/generated/ShotRYNOPrius.hpp> 
 
 #include <rivet/ddl/generated/ShotGameBulletPrius.hpp>
 

@@ -23,21 +23,21 @@ namespace rivet::ddl::generated {
 	struct DDLVector3; 
 
 	struct RIVET_DDL_SHARED DamageModifierShockwavePrius : DamageModifierOutgoingPrius {
-		constexpr const static std::string_view type_name = "DamageModifierShockwavePrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xe489cb45;
+		constexpr static std::string_view type_name = "DamageModifierShockwavePrius";
+		constexpr static rivet::rivet_type_id type_id = 0xe489cb45;
 
-		constexpr const static std::string_view RequestId_type_name = "RequestId";
-		constexpr const static rivet::rivet_type_id RequestId_type_id = 0x239eef0d;
-		constexpr const static std::string_view CenterPosition_type_name = "CenterPosition";
-		constexpr const static rivet::rivet_type_id CenterPosition_type_id = 0xdcf8a816;
-		constexpr const static std::string_view UpVector_type_name = "UpVector";
-		constexpr const static rivet::rivet_type_id UpVector_type_id = 0x3afbc108;
-		constexpr const static std::string_view Height_type_name = "Height";
-		constexpr const static rivet::rivet_type_id Height_type_id = 0xcb35ab68;
-		constexpr const static std::string_view InnerRadius_type_name = "InnerRadius";
-		constexpr const static rivet::rivet_type_id InnerRadius_type_id = 0xf8a3836d;
-		constexpr const static std::string_view OuterRadius_type_name = "OuterRadius";
-		constexpr const static rivet::rivet_type_id OuterRadius_type_id = 0xf6b6fbde; 
+		constexpr static std::string_view RequestId_type_name = "RequestId";
+		constexpr static rivet::rivet_type_id RequestId_type_id = 0x239eef0d;
+		constexpr static std::string_view CenterPosition_type_name = "CenterPosition";
+		constexpr static rivet::rivet_type_id CenterPosition_type_id = 0xdcf8a816;
+		constexpr static std::string_view UpVector_type_name = "UpVector";
+		constexpr static rivet::rivet_type_id UpVector_type_id = 0x3afbc108;
+		constexpr static std::string_view Height_type_name = "Height";
+		constexpr static rivet::rivet_type_id Height_type_id = 0xcb35ab68;
+		constexpr static std::string_view InnerRadius_type_name = "InnerRadius";
+		constexpr static rivet::rivet_type_id InnerRadius_type_id = 0xf8a3836d;
+		constexpr static std::string_view OuterRadius_type_name = "OuterRadius";
+		constexpr static rivet::rivet_type_id OuterRadius_type_id = 0xf6b6fbde; 
 
 		explicit DamageModifierShockwavePrius() = default;
 		explicit DamageModifierShockwavePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

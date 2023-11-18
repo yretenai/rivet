@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct GeneralInventoryListElement; 
 
 	struct RIVET_DDL_SHARED MasterGeneralInventoryList : ConfigBase {
-		constexpr const static std::string_view type_name = "MasterGeneralInventoryList";
-		constexpr const static rivet::rivet_type_id type_id = 0xc126f8a5;
+		constexpr static std::string_view type_name = "MasterGeneralInventoryList";
+		constexpr static rivet::rivet_type_id type_id = 0xc126f8a5;
 
-		constexpr const static std::string_view GeneralInventoryItems_type_name = "GeneralInventoryItems";
-		constexpr const static rivet::rivet_type_id GeneralInventoryItems_type_id = 0x214c59bf; 
+		constexpr static std::string_view GeneralInventoryItems_type_name = "GeneralInventoryItems";
+		constexpr static rivet::rivet_type_id GeneralInventoryItems_type_id = 0x214c59bf; 
 
 		explicit MasterGeneralInventoryList() = default;
 		explicit MasterGeneralInventoryList([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

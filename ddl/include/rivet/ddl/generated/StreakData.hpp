@@ -21,25 +21,25 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED StreakData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "StreakData";
-		constexpr const static rivet::rivet_type_id type_id = 0xbeb97640;
+		constexpr static std::string_view type_name = "StreakData";
+		constexpr static rivet::rivet_type_id type_id = 0xbeb97640;
 
-		constexpr const static std::string_view MaterialOverride_type_name = "MaterialOverride";
-		constexpr const static rivet::rivet_type_id MaterialOverride_type_id = 0xffafa5a1;
-		constexpr const static std::string_view Style_type_name = "Style";
-		constexpr const static rivet::rivet_type_id Style_type_id = 0x2aee74ab;
-		constexpr const static std::string_view MeleeWidthMinScale_type_name = "MeleeWidthMinScale";
-		constexpr const static rivet::rivet_type_id MeleeWidthMinScale_type_id = 0xff2351d3;
-		constexpr const static std::string_view MeleeWidthMaxScale_type_name = "MeleeWidthMaxScale";
-		constexpr const static rivet::rivet_type_id MeleeWidthMaxScale_type_id = 0x1943fe32;
-		constexpr const static std::string_view MeleeOffset_type_name = "MeleeOffset";
-		constexpr const static rivet::rivet_type_id MeleeOffset_type_id = 0x5e632554;
-		constexpr const static std::string_view SmashWidthMinScale_type_name = "SmashWidthMinScale";
-		constexpr const static rivet::rivet_type_id SmashWidthMinScale_type_id = 0xf6952963;
-		constexpr const static std::string_view SmashWidthMaxScale_type_name = "SmashWidthMaxScale";
-		constexpr const static rivet::rivet_type_id SmashWidthMaxScale_type_id = 0x10f58682;
-		constexpr const static std::string_view SmashOffset_type_name = "SmashOffset";
-		constexpr const static rivet::rivet_type_id SmashOffset_type_id = 0x9b783456; 
+		constexpr static std::string_view MaterialOverride_type_name = "MaterialOverride";
+		constexpr static rivet::rivet_type_id MaterialOverride_type_id = 0xffafa5a1;
+		constexpr static std::string_view Style_type_name = "Style";
+		constexpr static rivet::rivet_type_id Style_type_id = 0x2aee74ab;
+		constexpr static std::string_view MeleeWidthMinScale_type_name = "MeleeWidthMinScale";
+		constexpr static rivet::rivet_type_id MeleeWidthMinScale_type_id = 0xff2351d3;
+		constexpr static std::string_view MeleeWidthMaxScale_type_name = "MeleeWidthMaxScale";
+		constexpr static rivet::rivet_type_id MeleeWidthMaxScale_type_id = 0x1943fe32;
+		constexpr static std::string_view MeleeOffset_type_name = "MeleeOffset";
+		constexpr static rivet::rivet_type_id MeleeOffset_type_id = 0x5e632554;
+		constexpr static std::string_view SmashWidthMinScale_type_name = "SmashWidthMinScale";
+		constexpr static rivet::rivet_type_id SmashWidthMinScale_type_id = 0xf6952963;
+		constexpr static std::string_view SmashWidthMaxScale_type_name = "SmashWidthMaxScale";
+		constexpr static rivet::rivet_type_id SmashWidthMaxScale_type_id = 0x10f58682;
+		constexpr static std::string_view SmashOffset_type_name = "SmashOffset";
+		constexpr static rivet::rivet_type_id SmashOffset_type_id = 0x9b783456; 
 
 		explicit StreakData() = default;
 		explicit StreakData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

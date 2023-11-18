@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED GameCameraPrius : CameraPrius {
-		constexpr const static std::string_view type_name = "GameCameraPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x3c6b69c3;
+		constexpr static std::string_view type_name = "GameCameraPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x3c6b69c3;
 
-		constexpr const static std::string_view ForceCamDirAim_type_name = "ForceCamDirAim";
-		constexpr const static rivet::rivet_type_id ForceCamDirAim_type_id = 0xce70ce9e;
-		constexpr const static std::string_view ForceCamAimOnCasual_type_name = "ForceCamAimOnCasual";
-		constexpr const static rivet::rivet_type_id ForceCamAimOnCasual_type_id = 0xa189776d; 
+		constexpr static std::string_view ForceCamDirAim_type_name = "ForceCamDirAim";
+		constexpr static rivet::rivet_type_id ForceCamDirAim_type_id = 0xce70ce9e;
+		constexpr static std::string_view ForceCamAimOnCasual_type_name = "ForceCamAimOnCasual";
+		constexpr static rivet::rivet_type_id ForceCamAimOnCasual_type_id = 0xa189776d; 
 
 		explicit GameCameraPrius() = default;
 		explicit GameCameraPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

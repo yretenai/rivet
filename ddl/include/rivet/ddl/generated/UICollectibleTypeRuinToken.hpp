@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED UICollectibleTypeRuinToken : UICollectibleTypeBase {
-		constexpr const static std::string_view type_name = "UICollectibleTypeRuinToken";
-		constexpr const static rivet::rivet_type_id type_id = 0x2bd9a2b6;
+		constexpr static std::string_view type_name = "UICollectibleTypeRuinToken";
+		constexpr static rivet::rivet_type_id type_id = 0x2bd9a2b6;
 
-		constexpr const static std::string_view DialogueLine_type_name = "DialogueLine";
-		constexpr const static rivet::rivet_type_id DialogueLine_type_id = 0x21617c3c; 
+		constexpr static std::string_view DialogueLine_type_name = "DialogueLine";
+		constexpr static rivet::rivet_type_id DialogueLine_type_id = 0x21617c3c; 
 
 		explicit UICollectibleTypeRuinToken() = default;
 		explicit UICollectibleTypeRuinToken([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

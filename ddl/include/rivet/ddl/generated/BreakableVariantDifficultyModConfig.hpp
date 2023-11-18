@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct BreakableVariantDifficultyEntry; 
 
 	struct RIVET_DDL_SHARED BreakableVariantDifficultyModConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "BreakableVariantDifficultyModConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x5fbc0c8c;
+		constexpr static std::string_view type_name = "BreakableVariantDifficultyModConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x5fbc0c8c;
 
-		constexpr const static std::string_view VariantMods_type_name = "VariantMods";
-		constexpr const static rivet::rivet_type_id VariantMods_type_id = 0x2e1daaa6; 
+		constexpr static std::string_view VariantMods_type_name = "VariantMods";
+		constexpr static rivet::rivet_type_id VariantMods_type_id = 0x2e1daaa6; 
 
 		explicit BreakableVariantDifficultyModConfig() = default;
 		explicit BreakableVariantDifficultyModConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

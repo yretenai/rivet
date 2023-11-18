@@ -23,17 +23,17 @@ namespace rivet::ddl::generated {
 	struct UICollectible; 
 
 	struct RIVET_DDL_SHARED UICollectibleCategory : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "UICollectibleCategory";
-		constexpr const static rivet::rivet_type_id type_id = 0x36c709bf;
+		constexpr static std::string_view type_name = "UICollectibleCategory";
+		constexpr static rivet::rivet_type_id type_id = 0x36c709bf;
 
-		constexpr const static std::string_view DisplayName_type_name = "DisplayName";
-		constexpr const static rivet::rivet_type_id DisplayName_type_id = 0xeaf33243;
-		constexpr const static std::string_view DisplayIcon_type_name = "DisplayIcon";
-		constexpr const static rivet::rivet_type_id DisplayIcon_type_id = 0xd144659e;
-		constexpr const static std::string_view DisplayObject_type_name = "DisplayObject";
-		constexpr const static rivet::rivet_type_id DisplayObject_type_id = 0x1b10bb38;
-		constexpr const static std::string_view Collectibles_type_name = "Collectibles";
-		constexpr const static rivet::rivet_type_id Collectibles_type_id = 0x7297a443; 
+		constexpr static std::string_view DisplayName_type_name = "DisplayName";
+		constexpr static rivet::rivet_type_id DisplayName_type_id = 0xeaf33243;
+		constexpr static std::string_view DisplayIcon_type_name = "DisplayIcon";
+		constexpr static rivet::rivet_type_id DisplayIcon_type_id = 0xd144659e;
+		constexpr static std::string_view DisplayObject_type_name = "DisplayObject";
+		constexpr static rivet::rivet_type_id DisplayObject_type_id = 0x1b10bb38;
+		constexpr static std::string_view Collectibles_type_name = "Collectibles";
+		constexpr static rivet::rivet_type_id Collectibles_type_id = 0x7297a443; 
 
 		explicit UICollectibleCategory() = default;
 		explicit UICollectibleCategory([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

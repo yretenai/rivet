@@ -23,13 +23,13 @@ namespace rivet::ddl::generated {
 	struct ShellCasingDataMultiEmit; 
 
 	struct RIVET_DDL_SHARED WeaponProtoShotgunPrius : WeaponGamePrius {
-		constexpr const static std::string_view type_name = "WeaponProtoShotgunPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x52b5fd87;
+		constexpr static std::string_view type_name = "WeaponProtoShotgunPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x52b5fd87;
 
-		constexpr const static std::string_view V1ShellCasingData_type_name = "V1ShellCasingData";
-		constexpr const static rivet::rivet_type_id V1ShellCasingData_type_id = 0x6f1fda2a;
-		constexpr const static std::string_view V5ShellCasingData_type_name = "V5ShellCasingData";
-		constexpr const static rivet::rivet_type_id V5ShellCasingData_type_id = 0xbb2e96ad; 
+		constexpr static std::string_view V1ShellCasingData_type_name = "V1ShellCasingData";
+		constexpr static rivet::rivet_type_id V1ShellCasingData_type_id = 0x6f1fda2a;
+		constexpr static std::string_view V5ShellCasingData_type_name = "V5ShellCasingData";
+		constexpr static rivet::rivet_type_id V5ShellCasingData_type_id = 0xbb2e96ad; 
 
 		explicit WeaponProtoShotgunPrius() = default;
 		explicit WeaponProtoShotgunPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

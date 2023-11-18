@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DoomBotAwarenessPrius : OmniAwarenessPrius {
-		constexpr const static std::string_view type_name = "DoomBotAwarenessPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x3451f0fd;
+		constexpr static std::string_view type_name = "DoomBotAwarenessPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x3451f0fd;
 
 		explicit DoomBotAwarenessPrius() = default;
 		explicit DoomBotAwarenessPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

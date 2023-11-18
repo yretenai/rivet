@@ -19,13 +19,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED FinaleLaserCurve : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "FinaleLaserCurve";
-		constexpr const static rivet::rivet_type_id type_id = 0x49886a67;
+		constexpr static std::string_view type_name = "FinaleLaserCurve";
+		constexpr static rivet::rivet_type_id type_id = 0x49886a67;
 
-		constexpr const static std::string_view CurveActor_type_name = "CurveActor";
-		constexpr const static rivet::rivet_type_id CurveActor_type_id = 0xc23a6c53;
-		constexpr const static std::string_view GroundBlastTriggerVolume_type_name = "GroundBlastTriggerVolume";
-		constexpr const static rivet::rivet_type_id GroundBlastTriggerVolume_type_id = 0x391d6f9e; 
+		constexpr static std::string_view CurveActor_type_name = "CurveActor";
+		constexpr static rivet::rivet_type_id CurveActor_type_id = 0xc23a6c53;
+		constexpr static std::string_view GroundBlastTriggerVolume_type_name = "GroundBlastTriggerVolume";
+		constexpr static rivet::rivet_type_id GroundBlastTriggerVolume_type_id = 0x391d6f9e; 
 
 		explicit FinaleLaserCurve() = default;
 		explicit FinaleLaserCurve([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

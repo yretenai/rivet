@@ -19,13 +19,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ConfigBase : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "ConfigBase";
-		constexpr const static rivet::rivet_type_id type_id = 0xe99a7793;
+		constexpr static std::string_view type_name = "ConfigBase";
+		constexpr static rivet::rivet_type_id type_id = 0xe99a7793;
 
-		constexpr const static std::string_view ID_type_name = "ID";
-		constexpr const static rivet::rivet_type_id ID_type_id = 0xb13f6a45;
-		constexpr const static std::string_view Comment_type_name = "Comment";
-		constexpr const static rivet::rivet_type_id Comment_type_id = 0x959e3154; 
+		constexpr static std::string_view ID_type_name = "ID";
+		constexpr static rivet::rivet_type_id ID_type_id = 0xb13f6a45;
+		constexpr static std::string_view Comment_type_name = "Comment";
+		constexpr static rivet::rivet_type_id Comment_type_id = 0x959e3154; 
 
 		explicit ConfigBase() = default;
 		explicit ConfigBase([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

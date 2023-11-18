@@ -19,11 +19,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED WeaponAccuracyBasePrius : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "WeaponAccuracyBasePrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xc20c25d6;
+		constexpr static std::string_view type_name = "WeaponAccuracyBasePrius";
+		constexpr static rivet::rivet_type_id type_id = 0xc20c25d6;
 
-		constexpr const static std::string_view ModifyVelocityForAutoTarget_type_name = "ModifyVelocityForAutoTarget";
-		constexpr const static rivet::rivet_type_id ModifyVelocityForAutoTarget_type_id = 0xf3916a59; 
+		constexpr static std::string_view ModifyVelocityForAutoTarget_type_name = "ModifyVelocityForAutoTarget";
+		constexpr static rivet::rivet_type_id ModifyVelocityForAutoTarget_type_id = 0xf3916a59; 
 
 		explicit WeaponAccuracyBasePrius() = default;
 		explicit WeaponAccuracyBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

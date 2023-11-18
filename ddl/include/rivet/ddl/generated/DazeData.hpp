@@ -19,13 +19,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DazeData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "DazeData";
-		constexpr const static rivet::rivet_type_id type_id = 0x31added2;
+		constexpr static std::string_view type_name = "DazeData";
+		constexpr static rivet::rivet_type_id type_id = 0x31added2;
 
-		constexpr const static std::string_view Time_type_name = "Time";
-		constexpr const static rivet::rivet_type_id Time_type_id = 0x5f0458f5;
-		constexpr const static std::string_view DamageMult_type_name = "DamageMult";
-		constexpr const static rivet::rivet_type_id DamageMult_type_id = 0x2cc08993; 
+		constexpr static std::string_view Time_type_name = "Time";
+		constexpr static rivet::rivet_type_id Time_type_id = 0x5f0458f5;
+		constexpr static std::string_view DamageMult_type_name = "DamageMult";
+		constexpr static rivet::rivet_type_id DamageMult_type_id = 0x2cc08993; 
 
 		explicit DazeData() = default;
 		explicit DazeData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

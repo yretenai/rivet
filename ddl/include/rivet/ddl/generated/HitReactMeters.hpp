@@ -21,11 +21,11 @@ namespace rivet::ddl::generated {
 	struct StaggerMeter; 
 
 	struct RIVET_DDL_SHARED HitReactMeters : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "HitReactMeters";
-		constexpr const static rivet::rivet_type_id type_id = 0x145afa6a;
+		constexpr static std::string_view type_name = "HitReactMeters";
+		constexpr static rivet::rivet_type_id type_id = 0x145afa6a;
 
-		constexpr const static std::string_view Meters_type_name = "Meters";
-		constexpr const static rivet::rivet_type_id Meters_type_id = 0x14460e8f; 
+		constexpr static std::string_view Meters_type_name = "Meters";
+		constexpr static rivet::rivet_type_id Meters_type_id = 0x14460e8f; 
 
 		explicit HitReactMeters() = default;
 		explicit HitReactMeters([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -20,19 +20,19 @@
 #include <rivet/ddl/generated/ConfigBase.hpp> 
 
 namespace rivet::ddl::generated {
-	struct HitReactPrius;
-	struct PartialReactNonePrius; 
+	struct PartialReactNonePrius;
+	struct HitReactPrius; 
 
 	struct RIVET_DDL_SHARED BotConfigHitReact : ConfigBase {
-		constexpr const static std::string_view type_name = "BotConfigHitReact";
-		constexpr const static rivet::rivet_type_id type_id = 0xe50934e;
+		constexpr static std::string_view type_name = "BotConfigHitReact";
+		constexpr static rivet::rivet_type_id type_id = 0xe50934e;
 
-		constexpr const static std::string_view HitReact_type_name = "HitReact";
-		constexpr const static rivet::rivet_type_id HitReact_type_id = 0xc36283a;
-		constexpr const static std::string_view PartialReact_type_name = "PartialReact";
-		constexpr const static rivet::rivet_type_id PartialReact_type_id = 0xd16d75b3;
-		constexpr const static std::string_view BodyPartToFilterConfig_type_name = "BodyPartToFilterConfig";
-		constexpr const static rivet::rivet_type_id BodyPartToFilterConfig_type_id = 0xb736e25c; 
+		constexpr static std::string_view HitReact_type_name = "HitReact";
+		constexpr static rivet::rivet_type_id HitReact_type_id = 0xc36283a;
+		constexpr static std::string_view PartialReact_type_name = "PartialReact";
+		constexpr static rivet::rivet_type_id PartialReact_type_id = 0xd16d75b3;
+		constexpr static std::string_view BodyPartToFilterConfig_type_name = "BodyPartToFilterConfig";
+		constexpr static rivet::rivet_type_id BodyPartToFilterConfig_type_id = 0xb736e25c; 
 
 		explicit BotConfigHitReact() = default;
 		explicit BotConfigHitReact([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

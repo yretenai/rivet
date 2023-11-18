@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED PredictiveAccuracyPrius : WeaponAccuracyBasePrius {
-		constexpr const static std::string_view type_name = "PredictiveAccuracyPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xf3c9c8c5;
+		constexpr static std::string_view type_name = "PredictiveAccuracyPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xf3c9c8c5;
 
-		constexpr const static std::string_view MaxPredictionTime_type_name = "MaxPredictionTime";
-		constexpr const static rivet::rivet_type_id MaxPredictionTime_type_id = 0x5d5a4ee9; 
+		constexpr static std::string_view MaxPredictionTime_type_name = "MaxPredictionTime";
+		constexpr static rivet::rivet_type_id MaxPredictionTime_type_id = 0x5d5a4ee9; 
 
 		explicit PredictiveAccuracyPrius() = default;
 		explicit PredictiveAccuracyPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

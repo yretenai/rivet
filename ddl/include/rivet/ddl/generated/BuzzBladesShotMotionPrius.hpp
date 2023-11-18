@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED BuzzBladesShotMotionPrius : BasicShotMotionPrius {
-		constexpr const static std::string_view type_name = "BuzzBladesShotMotionPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x7767fa6e;
+		constexpr static std::string_view type_name = "BuzzBladesShotMotionPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x7767fa6e;
 
-		constexpr const static std::string_view MaxBounces_type_name = "MaxBounces";
-		constexpr const static rivet::rivet_type_id MaxBounces_type_id = 0x73e25a00;
-		constexpr const static std::string_view SpinJoint_type_name = "SpinJoint";
-		constexpr const static rivet::rivet_type_id SpinJoint_type_id = 0xb74c2620; 
+		constexpr static std::string_view MaxBounces_type_name = "MaxBounces";
+		constexpr static rivet::rivet_type_id MaxBounces_type_id = 0x73e25a00;
+		constexpr static std::string_view SpinJoint_type_name = "SpinJoint";
+		constexpr static rivet::rivet_type_id SpinJoint_type_id = 0xb74c2620; 
 
 		explicit BuzzBladesShotMotionPrius() = default;
 		explicit BuzzBladesShotMotionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

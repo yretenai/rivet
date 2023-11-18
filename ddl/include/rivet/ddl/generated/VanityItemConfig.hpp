@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct VanityItemData; 
 
 	struct RIVET_DDL_SHARED VanityItemConfig : SkinItemConfig {
-		constexpr const static std::string_view type_name = "VanityItemConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x69ec9e21;
+		constexpr static std::string_view type_name = "VanityItemConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x69ec9e21;
 
-		constexpr const static std::string_view VanityItemData_type_name = "VanityItemData";
-		constexpr const static rivet::rivet_type_id VanityItemData_type_id = 0x3098b726; 
+		constexpr static std::string_view VanityItemData_type_name = "VanityItemData";
+		constexpr static rivet::rivet_type_id VanityItemData_type_id = 0x3098b726; 
 
 		explicit VanityItemConfig() = default;
 		explicit VanityItemConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

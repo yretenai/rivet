@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED OffsetReductionDistance : OffsetReductionMode {
-		constexpr const static std::string_view type_name = "OffsetReductionDistance";
-		constexpr const static rivet::rivet_type_id type_id = 0x9c30b427;
+		constexpr static std::string_view type_name = "OffsetReductionDistance";
+		constexpr static rivet::rivet_type_id type_id = 0x9c30b427;
 
 		explicit OffsetReductionDistance() = default;
 		explicit OffsetReductionDistance([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

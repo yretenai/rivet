@@ -20,25 +20,25 @@
 #include <rivet/ddl/generated/AccessibilitySystemConfig.hpp> 
 
 namespace rivet::ddl::generated {
-	struct AccessibilityOption;
-	struct AccessibilityColorData; 
+	struct AccessibilityColorData;
+	struct AccessibilityOption; 
 
 	struct RIVET_DDL_SHARED AccessibilitySystemConfigGame : AccessibilitySystemConfig {
-		constexpr const static std::string_view type_name = "AccessibilitySystemConfigGame";
-		constexpr const static rivet::rivet_type_id type_id = 0x4306d034;
+		constexpr static std::string_view type_name = "AccessibilitySystemConfigGame";
+		constexpr static rivet::rivet_type_id type_id = 0x4306d034;
 
-		constexpr const static std::string_view HighContrastPingMaterial_type_name = "HighContrastPingMaterial";
-		constexpr const static rivet::rivet_type_id HighContrastPingMaterial_type_id = 0xb0b11dfa;
-		constexpr const static std::string_view ChaseAssistVehicleSpeedMult_type_name = "ChaseAssistVehicleSpeedMult";
-		constexpr const static rivet::rivet_type_id ChaseAssistVehicleSpeedMult_type_id = 0x36ea2060;
-		constexpr const static std::string_view ChaseAssistStopDistance_type_name = "ChaseAssistStopDistance";
-		constexpr const static rivet::rivet_type_id ChaseAssistStopDistance_type_id = 0x155d3c26;
-		constexpr const static std::string_view DefaultHeroAccesibilityHighlightConfig_type_name = "DefaultHeroAccesibilityHighlightConfig";
-		constexpr const static rivet::rivet_type_id DefaultHeroAccesibilityHighlightConfig_type_id = 0x6fe830dd;
-		constexpr const static std::string_view AccessibilityOptions_type_name = "AccessibilityOptions";
-		constexpr const static rivet::rivet_type_id AccessibilityOptions_type_id = 0xd328654f;
-		constexpr const static std::string_view ArcColors_type_name = "ArcColors";
-		constexpr const static rivet::rivet_type_id ArcColors_type_id = 0xf17b9da; 
+		constexpr static std::string_view HighContrastPingMaterial_type_name = "HighContrastPingMaterial";
+		constexpr static rivet::rivet_type_id HighContrastPingMaterial_type_id = 0xb0b11dfa;
+		constexpr static std::string_view ChaseAssistVehicleSpeedMult_type_name = "ChaseAssistVehicleSpeedMult";
+		constexpr static rivet::rivet_type_id ChaseAssistVehicleSpeedMult_type_id = 0x36ea2060;
+		constexpr static std::string_view ChaseAssistStopDistance_type_name = "ChaseAssistStopDistance";
+		constexpr static rivet::rivet_type_id ChaseAssistStopDistance_type_id = 0x155d3c26;
+		constexpr static std::string_view DefaultHeroAccesibilityHighlightConfig_type_name = "DefaultHeroAccesibilityHighlightConfig";
+		constexpr static rivet::rivet_type_id DefaultHeroAccesibilityHighlightConfig_type_id = 0x6fe830dd;
+		constexpr static std::string_view AccessibilityOptions_type_name = "AccessibilityOptions";
+		constexpr static rivet::rivet_type_id AccessibilityOptions_type_id = 0xd328654f;
+		constexpr static std::string_view ArcColors_type_name = "ArcColors";
+		constexpr static rivet::rivet_type_id ArcColors_type_id = 0xf17b9da; 
 
 		explicit AccessibilitySystemConfigGame() = default;
 		explicit AccessibilitySystemConfigGame([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

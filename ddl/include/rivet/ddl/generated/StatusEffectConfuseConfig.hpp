@@ -23,15 +23,15 @@ namespace rivet::ddl::generated {
 	struct TierData; 
 
 	struct RIVET_DDL_SHARED StatusEffectConfuseConfig : StatusEffectConfig {
-		constexpr const static std::string_view type_name = "StatusEffectConfuseConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xae0cd206;
+		constexpr static std::string_view type_name = "StatusEffectConfuseConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xae0cd206;
 
-		constexpr const static std::string_view ConfuseTargetingTiers_type_name = "ConfuseTargetingTiers";
-		constexpr const static rivet::rivet_type_id ConfuseTargetingTiers_type_id = 0x4467fef3;
-		constexpr const static std::string_view VictimMaterialGraph_type_name = "VictimMaterialGraph";
-		constexpr const static rivet::rivet_type_id VictimMaterialGraph_type_id = 0xee2f28cb;
-		constexpr const static std::string_view StandardDuration_type_name = "StandardDuration";
-		constexpr const static rivet::rivet_type_id StandardDuration_type_id = 0x61cc167d; 
+		constexpr static std::string_view ConfuseTargetingTiers_type_name = "ConfuseTargetingTiers";
+		constexpr static rivet::rivet_type_id ConfuseTargetingTiers_type_id = 0x4467fef3;
+		constexpr static std::string_view VictimMaterialGraph_type_name = "VictimMaterialGraph";
+		constexpr static rivet::rivet_type_id VictimMaterialGraph_type_id = 0xee2f28cb;
+		constexpr static std::string_view StandardDuration_type_name = "StandardDuration";
+		constexpr static rivet::rivet_type_id StandardDuration_type_id = 0x61cc167d; 
 
 		explicit StatusEffectConfuseConfig() = default;
 		explicit StatusEffectConfuseConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

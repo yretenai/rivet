@@ -20,23 +20,23 @@
 #include <rivet/ddl/generated/ConfigBase.hpp> 
 
 namespace rivet::ddl::generated {
-	struct FinaleMechStatusEffectTrackerPixelizedPrius;
-	struct FinaleMechStatusEffectTrackerFreezePrius;
+	struct FinaleMechStatusEffectTrackerLightningRodPrius;
 	struct FinaleMechStatusEffectTrackerShrubberyPrius;
-	struct FinaleMechStatusEffectTrackerLightningRodPrius; 
+	struct FinaleMechStatusEffectTrackerFreezePrius;
+	struct FinaleMechStatusEffectTrackerPixelizedPrius; 
 
 	struct RIVET_DDL_SHARED FinaleMechConfigStatusEffects : ConfigBase {
-		constexpr const static std::string_view type_name = "FinaleMechConfigStatusEffects";
-		constexpr const static rivet::rivet_type_id type_id = 0x9918e1b8;
+		constexpr static std::string_view type_name = "FinaleMechConfigStatusEffects";
+		constexpr static rivet::rivet_type_id type_id = 0x9918e1b8;
 
-		constexpr const static std::string_view PixelizedTrackerPrius_type_name = "PixelizedTrackerPrius";
-		constexpr const static rivet::rivet_type_id PixelizedTrackerPrius_type_id = 0x5d48d42;
-		constexpr const static std::string_view FreezeTrackerPrius_type_name = "FreezeTrackerPrius";
-		constexpr const static rivet::rivet_type_id FreezeTrackerPrius_type_id = 0x72373026;
-		constexpr const static std::string_view ShrubberyTrackerPrius_type_name = "ShrubberyTrackerPrius";
-		constexpr const static rivet::rivet_type_id ShrubberyTrackerPrius_type_id = 0xb35aac7a;
-		constexpr const static std::string_view LightningRodTrackerPrius_type_name = "LightningRodTrackerPrius";
-		constexpr const static rivet::rivet_type_id LightningRodTrackerPrius_type_id = 0x9dc20243; 
+		constexpr static std::string_view PixelizedTrackerPrius_type_name = "PixelizedTrackerPrius";
+		constexpr static rivet::rivet_type_id PixelizedTrackerPrius_type_id = 0x5d48d42;
+		constexpr static std::string_view FreezeTrackerPrius_type_name = "FreezeTrackerPrius";
+		constexpr static rivet::rivet_type_id FreezeTrackerPrius_type_id = 0x72373026;
+		constexpr static std::string_view ShrubberyTrackerPrius_type_name = "ShrubberyTrackerPrius";
+		constexpr static rivet::rivet_type_id ShrubberyTrackerPrius_type_id = 0xb35aac7a;
+		constexpr static std::string_view LightningRodTrackerPrius_type_name = "LightningRodTrackerPrius";
+		constexpr static rivet::rivet_type_id LightningRodTrackerPrius_type_id = 0x9dc20243; 
 
 		explicit FinaleMechConfigStatusEffects() = default;
 		explicit FinaleMechConfigStatusEffects([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

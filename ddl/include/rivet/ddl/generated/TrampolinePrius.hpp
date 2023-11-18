@@ -17,48 +17,48 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/enums/x925714c8.hpp>
-#include <rivet/ddl/generated/enums/x10b3c4cf.hpp> 
+#include <rivet/ddl/generated/enums/x10b3c4cf.hpp>
+#include <rivet/ddl/generated/enums/x925714c8.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED TrampolinePrius : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "TrampolinePrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x3b6be249;
+		constexpr static std::string_view type_name = "TrampolinePrius";
+		constexpr static rivet::rivet_type_id type_id = 0x3b6be249;
 
-		constexpr const static std::string_view ReflectionFactor_type_name = "ReflectionFactor";
-		constexpr const static rivet::rivet_type_id ReflectionFactor_type_id = 0x9b2b4ebb;
-		constexpr const static std::string_view MinHeight_type_name = "MinHeight";
-		constexpr const static rivet::rivet_type_id MinHeight_type_id = 0x9ed620e3;
-		constexpr const static std::string_view MaxHeight_type_name = "MaxHeight";
-		constexpr const static rivet::rivet_type_id MaxHeight_type_id = 0x493d92a2;
-		constexpr const static std::string_view TimeToPeak_type_name = "TimeToPeak";
-		constexpr const static rivet::rivet_type_id TimeToPeak_type_id = 0xa54bc58;
-		constexpr const static std::string_view MinDesiredDistance_type_name = "MinDesiredDistance";
-		constexpr const static rivet::rivet_type_id MinDesiredDistance_type_id = 0x3252a5bd;
-		constexpr const static std::string_view MaxDesiredDistance_type_name = "MaxDesiredDistance";
-		constexpr const static rivet::rivet_type_id MaxDesiredDistance_type_id = 0x61f4bd59;
-		constexpr const static std::string_view CameraMode_type_name = "CameraMode";
-		constexpr const static rivet::rivet_type_id CameraMode_type_id = 0x2f100f4d;
-		constexpr const static std::string_view JumpPad_type_name = "JumpPad";
-		constexpr const static rivet::rivet_type_id JumpPad_type_id = 0xb8b7f1e8;
-		constexpr const static std::string_view EnableSuperJump_type_name = "EnableSuperJump";
-		constexpr const static rivet::rivet_type_id EnableSuperJump_type_id = 0x2622a132;
-		constexpr const static std::string_view DisableOnDestroyed_type_name = "DisableOnDestroyed";
-		constexpr const static rivet::rivet_type_id DisableOnDestroyed_type_id = 0x48fd9be5;
-		constexpr const static std::string_view OverrideMaterial_type_name = "OverrideMaterial";
-		constexpr const static rivet::rivet_type_id OverrideMaterial_type_id = 0x21926360;
-		constexpr const static std::string_view VibrateOnBounce_type_name = "VibrateOnBounce";
-		constexpr const static rivet::rivet_type_id VibrateOnBounce_type_id = 0x13a1c2e7;
-		constexpr const static std::string_view VibratePosConstant_type_name = "VibratePosConstant";
-		constexpr const static rivet::rivet_type_id VibratePosConstant_type_id = 0x1f072edc;
-		constexpr const static std::string_view VibrateTConstant_type_name = "VibrateTConstant";
-		constexpr const static rivet::rivet_type_id VibrateTConstant_type_id = 0x10510c10;
-		constexpr const static std::string_view VibrateDuration_type_name = "VibrateDuration";
-		constexpr const static rivet::rivet_type_id VibrateDuration_type_id = 0x16cc482d;
-		constexpr const static std::string_view Enabled_type_name = "Enabled";
-		constexpr const static rivet::rivet_type_id Enabled_type_id = 0x5113d8bc;
-		constexpr const static std::string_view DoesBounceUseMomentum_type_name = "DoesBounceUseMomentum";
-		constexpr const static rivet::rivet_type_id DoesBounceUseMomentum_type_id = 0x2f58ee8; 
+		constexpr static std::string_view ReflectionFactor_type_name = "ReflectionFactor";
+		constexpr static rivet::rivet_type_id ReflectionFactor_type_id = 0x9b2b4ebb;
+		constexpr static std::string_view MinHeight_type_name = "MinHeight";
+		constexpr static rivet::rivet_type_id MinHeight_type_id = 0x9ed620e3;
+		constexpr static std::string_view MaxHeight_type_name = "MaxHeight";
+		constexpr static rivet::rivet_type_id MaxHeight_type_id = 0x493d92a2;
+		constexpr static std::string_view TimeToPeak_type_name = "TimeToPeak";
+		constexpr static rivet::rivet_type_id TimeToPeak_type_id = 0xa54bc58;
+		constexpr static std::string_view MinDesiredDistance_type_name = "MinDesiredDistance";
+		constexpr static rivet::rivet_type_id MinDesiredDistance_type_id = 0x3252a5bd;
+		constexpr static std::string_view MaxDesiredDistance_type_name = "MaxDesiredDistance";
+		constexpr static rivet::rivet_type_id MaxDesiredDistance_type_id = 0x61f4bd59;
+		constexpr static std::string_view CameraMode_type_name = "CameraMode";
+		constexpr static rivet::rivet_type_id CameraMode_type_id = 0x2f100f4d;
+		constexpr static std::string_view JumpPad_type_name = "JumpPad";
+		constexpr static rivet::rivet_type_id JumpPad_type_id = 0xb8b7f1e8;
+		constexpr static std::string_view EnableSuperJump_type_name = "EnableSuperJump";
+		constexpr static rivet::rivet_type_id EnableSuperJump_type_id = 0x2622a132;
+		constexpr static std::string_view DisableOnDestroyed_type_name = "DisableOnDestroyed";
+		constexpr static rivet::rivet_type_id DisableOnDestroyed_type_id = 0x48fd9be5;
+		constexpr static std::string_view OverrideMaterial_type_name = "OverrideMaterial";
+		constexpr static rivet::rivet_type_id OverrideMaterial_type_id = 0x21926360;
+		constexpr static std::string_view VibrateOnBounce_type_name = "VibrateOnBounce";
+		constexpr static rivet::rivet_type_id VibrateOnBounce_type_id = 0x13a1c2e7;
+		constexpr static std::string_view VibratePosConstant_type_name = "VibratePosConstant";
+		constexpr static rivet::rivet_type_id VibratePosConstant_type_id = 0x1f072edc;
+		constexpr static std::string_view VibrateTConstant_type_name = "VibrateTConstant";
+		constexpr static rivet::rivet_type_id VibrateTConstant_type_id = 0x10510c10;
+		constexpr static std::string_view VibrateDuration_type_name = "VibrateDuration";
+		constexpr static rivet::rivet_type_id VibrateDuration_type_id = 0x16cc482d;
+		constexpr static std::string_view Enabled_type_name = "Enabled";
+		constexpr static rivet::rivet_type_id Enabled_type_id = 0x5113d8bc;
+		constexpr static std::string_view DoesBounceUseMomentum_type_name = "DoesBounceUseMomentum";
+		constexpr static rivet::rivet_type_id DoesBounceUseMomentum_type_id = 0x2f58ee8; 
 
 		explicit TrampolinePrius() = default;
 		explicit TrampolinePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

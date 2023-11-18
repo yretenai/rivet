@@ -3,14 +3,14 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/HoverbootFallData.hpp>
-#include <rivet/ddl/generated/HoverbootMoveData.hpp>
-#include <rivet/ddl/generated/HoverbootJumpData.hpp>
-#include <rivet/ddl/generated/HoverbootMeleeData.hpp>
 #include <rivet/ddl/generated/HeroSpeedConfig.hpp>
 #include <rivet/ddl/generated/HoverbootHoverEffectData.hpp>
+#include <rivet/ddl/generated/HoverbootFallData.hpp>
+#include <rivet/ddl/generated/HoverbootKickData.hpp>
 #include <rivet/ddl/generated/HoverbootSurfaceDeformationData.hpp>
-#include <rivet/ddl/generated/HoverbootKickData.hpp> 
+#include <rivet/ddl/generated/HoverbootJumpData.hpp>
+#include <rivet/ddl/generated/HoverbootMeleeData.hpp>
+#include <rivet/ddl/generated/HoverbootMoveData.hpp> 
 
 #include <rivet/ddl/generated/HeroHoverbootConfig.hpp>
 

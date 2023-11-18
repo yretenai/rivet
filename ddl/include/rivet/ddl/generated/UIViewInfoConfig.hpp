@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct UIViewInfo; 
 
 	struct RIVET_DDL_SHARED UIViewInfoConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "UIViewInfoConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x7ad2d6f8;
+		constexpr static std::string_view type_name = "UIViewInfoConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x7ad2d6f8;
 
-		constexpr const static std::string_view Views_type_name = "Views";
-		constexpr const static rivet::rivet_type_id Views_type_id = 0x8a35046; 
+		constexpr static std::string_view Views_type_name = "Views";
+		constexpr static rivet::rivet_type_id Views_type_id = 0x8a35046; 
 
 		explicit UIViewInfoConfig() = default;
 		explicit UIViewInfoConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

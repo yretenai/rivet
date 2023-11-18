@@ -21,13 +21,13 @@ namespace rivet::ddl::generated {
 	struct AssetReferenceDef; 
 
 	struct RIVET_DDL_SHARED SkinItemModelVariantOverride : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "SkinItemModelVariantOverride";
-		constexpr const static rivet::rivet_type_id type_id = 0x930268a4;
+		constexpr static std::string_view type_name = "SkinItemModelVariantOverride";
+		constexpr static rivet::rivet_type_id type_id = 0x930268a4;
 
-		constexpr const static std::string_view ModelVariant_type_name = "ModelVariant";
-		constexpr const static rivet::rivet_type_id ModelVariant_type_id = 0x27a47dad;
-		constexpr const static std::string_view VariantName_type_name = "VariantName";
-		constexpr const static rivet::rivet_type_id VariantName_type_id = 0x1320265a; 
+		constexpr static std::string_view ModelVariant_type_name = "ModelVariant";
+		constexpr static rivet::rivet_type_id ModelVariant_type_id = 0x27a47dad;
+		constexpr static std::string_view VariantName_type_name = "VariantName";
+		constexpr static rivet::rivet_type_id VariantName_type_id = 0x1320265a; 
 
 		explicit SkinItemModelVariantOverride() = default;
 		explicit SkinItemModelVariantOverride([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

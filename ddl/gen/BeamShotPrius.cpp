@@ -3,10 +3,10 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/SheepinatorShotPrius.hpp>
-#include <rivet/ddl/generated/ShotKamehamehaPrius.hpp>
 #include <rivet/ddl/generated/PyrocitorShotPrius.hpp>
-#include <rivet/ddl/generated/OldPyrocitorShotPrius.hpp> 
+#include <rivet/ddl/generated/OldPyrocitorShotPrius.hpp>
+#include <rivet/ddl/generated/SheepinatorShotPrius.hpp>
+#include <rivet/ddl/generated/ShotKamehamehaPrius.hpp> 
 
 #include <rivet/ddl/generated/BeamShotPrius.hpp>
 

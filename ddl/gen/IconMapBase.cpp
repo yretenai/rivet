@@ -3,17 +3,17 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/IconMapPadSpecific.hpp>
-#include <rivet/ddl/generated/IconMapMulti.hpp>
-#include <rivet/ddl/generated/IconMapPadButton.hpp>
-#include <rivet/ddl/generated/IconMapXOSwap.hpp>
-#include <rivet/ddl/generated/IconMapSingle.hpp>
-#include <rivet/ddl/generated/IconMapStickSwap.hpp>
-#include <rivet/ddl/generated/IconMapAccessibilityControl.hpp>
-#include <rivet/ddl/generated/IconMapMkbBinding.hpp>
+#include <rivet/ddl/generated/IconMapSteamBinding.hpp>
 #include <rivet/ddl/generated/IconMapMultiChild.hpp>
 #include <rivet/ddl/generated/IconMapHeroControl.hpp>
-#include <rivet/ddl/generated/IconMapSteamBinding.hpp> 
+#include <rivet/ddl/generated/IconMapMkbBinding.hpp>
+#include <rivet/ddl/generated/IconMapPadSpecific.hpp>
+#include <rivet/ddl/generated/IconMapStickSwap.hpp>
+#include <rivet/ddl/generated/IconMapAccessibilityControl.hpp>
+#include <rivet/ddl/generated/IconMapSingle.hpp>
+#include <rivet/ddl/generated/IconMapXOSwap.hpp>
+#include <rivet/ddl/generated/IconMapMulti.hpp>
+#include <rivet/ddl/generated/IconMapPadButton.hpp> 
 
 #include <rivet/ddl/generated/IconMapBase.hpp>
 

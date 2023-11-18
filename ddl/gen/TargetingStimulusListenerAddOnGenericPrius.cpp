@@ -3,11 +3,13 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
+#include <rivet/ddl/generated/EventBase.hpp> 
+
 #include <rivet/ddl/generated/TargetingStimulusListenerAddOnGenericPrius.hpp>
 
 namespace rivet::ddl::generated {
 	TargetingStimulusListenerAddOnGenericPrius::TargetingStimulusListenerAddOnGenericPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): TargetingStimulusListenerAddOnPrius(serialized) {
-		Event = serialized->get_field(Event_type_id); 
+		Event = serialized->unwrap_into<rivet::ddl::generated::EventBase>(Event_type_id); 
 	}
 
 	[[nodiscard]] auto

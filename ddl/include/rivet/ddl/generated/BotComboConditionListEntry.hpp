@@ -21,11 +21,11 @@ namespace rivet::ddl::generated {
 	struct BotComboConditionBasePrius; 
 
 	struct RIVET_DDL_SHARED BotComboConditionListEntry : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "BotComboConditionListEntry";
-		constexpr const static rivet::rivet_type_id type_id = 0xc0fdb9c1;
+		constexpr static std::string_view type_name = "BotComboConditionListEntry";
+		constexpr static rivet::rivet_type_id type_id = 0xc0fdb9c1;
 
-		constexpr const static std::string_view BotComboCondition_type_name = "BotComboCondition";
-		constexpr const static rivet::rivet_type_id BotComboCondition_type_id = 0x4f46982d; 
+		constexpr static std::string_view BotComboCondition_type_name = "BotComboCondition";
+		constexpr static rivet::rivet_type_id BotComboCondition_type_id = 0x4f46982d; 
 
 		explicit BotComboConditionListEntry() = default;
 		explicit BotComboConditionListEntry([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -23,17 +23,17 @@ namespace rivet::ddl::generated {
 	struct BounceData; 
 
 	struct RIVET_DDL_SHARED Bounce : GrenadeLandMode {
-		constexpr const static std::string_view type_name = "Bounce";
-		constexpr const static rivet::rivet_type_id type_id = 0xbc44ba3e;
+		constexpr static std::string_view type_name = "Bounce";
+		constexpr static rivet::rivet_type_id type_id = 0xbc44ba3e;
 
-		constexpr const static std::string_view BounceCoefs_type_name = "BounceCoefs";
-		constexpr const static rivet::rivet_type_id BounceCoefs_type_id = 0x9b9c4c11;
-		constexpr const static std::string_view StopSpeed_type_name = "StopSpeed";
-		constexpr const static rivet::rivet_type_id StopSpeed_type_id = 0xfbd9fcfa;
-		constexpr const static std::string_view StopSlope_type_name = "StopSlope";
-		constexpr const static rivet::rivet_type_id StopSlope_type_id = 0xac334789;
-		constexpr const static std::string_view IgnoreSpeedIfOnStopSlope_type_name = "IgnoreSpeedIfOnStopSlope";
-		constexpr const static rivet::rivet_type_id IgnoreSpeedIfOnStopSlope_type_id = 0xdf0e5e43; 
+		constexpr static std::string_view BounceCoefs_type_name = "BounceCoefs";
+		constexpr static rivet::rivet_type_id BounceCoefs_type_id = 0x9b9c4c11;
+		constexpr static std::string_view StopSpeed_type_name = "StopSpeed";
+		constexpr static rivet::rivet_type_id StopSpeed_type_id = 0xfbd9fcfa;
+		constexpr static std::string_view StopSlope_type_name = "StopSlope";
+		constexpr static rivet::rivet_type_id StopSlope_type_id = 0xac334789;
+		constexpr static std::string_view IgnoreSpeedIfOnStopSlope_type_name = "IgnoreSpeedIfOnStopSlope";
+		constexpr static rivet::rivet_type_id IgnoreSpeedIfOnStopSlope_type_id = 0xdf0e5e43; 
 
 		explicit Bounce() = default;
 		explicit Bounce([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

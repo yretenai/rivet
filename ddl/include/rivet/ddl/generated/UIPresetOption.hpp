@@ -21,15 +21,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED UIPresetOption : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "UIPresetOption";
-		constexpr const static rivet::rivet_type_id type_id = 0xdf26b1d0;
+		constexpr static std::string_view type_name = "UIPresetOption";
+		constexpr static rivet::rivet_type_id type_id = 0xdf26b1d0;
 
-		constexpr const static std::string_view OptionID_type_name = "OptionID";
-		constexpr const static rivet::rivet_type_id OptionID_type_id = 0xf172a74;
-		constexpr const static std::string_view NumberValue_type_name = "NumberValue";
-		constexpr const static rivet::rivet_type_id NumberValue_type_id = 0x4e8b9d45;
-		constexpr const static std::string_view StringValue_type_name = "StringValue";
-		constexpr const static rivet::rivet_type_id StringValue_type_id = 0xbb242993; 
+		constexpr static std::string_view OptionID_type_name = "OptionID";
+		constexpr static rivet::rivet_type_id OptionID_type_id = 0xf172a74;
+		constexpr static std::string_view NumberValue_type_name = "NumberValue";
+		constexpr static rivet::rivet_type_id NumberValue_type_id = 0x4e8b9d45;
+		constexpr static std::string_view StringValue_type_name = "StringValue";
+		constexpr static rivet::rivet_type_id StringValue_type_id = 0xbb242993; 
 
 		explicit UIPresetOption() = default;
 		explicit UIPresetOption([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

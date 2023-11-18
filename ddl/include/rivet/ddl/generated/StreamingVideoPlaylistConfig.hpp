@@ -20,17 +20,17 @@
 #include <rivet/ddl/generated/StreamingVideoBaseConfig.hpp> 
 
 namespace rivet::ddl::generated {
-	struct StreamingVideoPlaylistElement;
-	struct StreamingVideoBaseConfig; 
+	struct StreamingVideoBaseConfig;
+	struct StreamingVideoPlaylistElement; 
 
 	struct RIVET_DDL_SHARED StreamingVideoPlaylistConfig : StreamingVideoBaseConfig {
-		constexpr const static std::string_view type_name = "StreamingVideoPlaylistConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x218bd039;
+		constexpr static std::string_view type_name = "StreamingVideoPlaylistConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x218bd039;
 
-		constexpr const static std::string_view Playlist_type_name = "Playlist";
-		constexpr const static rivet::rivet_type_id Playlist_type_id = 0x2d83ac5d;
-		constexpr const static std::string_view ImmediatePlay_type_name = "ImmediatePlay";
-		constexpr const static rivet::rivet_type_id ImmediatePlay_type_id = 0x5e6c3857; 
+		constexpr static std::string_view Playlist_type_name = "Playlist";
+		constexpr static rivet::rivet_type_id Playlist_type_id = 0x2d83ac5d;
+		constexpr static std::string_view ImmediatePlay_type_name = "ImmediatePlay";
+		constexpr static rivet::rivet_type_id ImmediatePlay_type_id = 0x5e6c3857; 
 
 		explicit StreamingVideoPlaylistConfig() = default;
 		explicit StreamingVideoPlaylistConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -19,13 +19,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED RegionMacroEconomyEntry : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "RegionMacroEconomyEntry";
-		constexpr const static rivet::rivet_type_id type_id = 0x39a2e421;
+		constexpr static std::string_view type_name = "RegionMacroEconomyEntry";
+		constexpr static rivet::rivet_type_id type_id = 0x39a2e421;
 
-		constexpr const static std::string_view Regions_type_name = "Regions";
-		constexpr const static rivet::rivet_type_id Regions_type_id = 0xa38d1acb;
-		constexpr const static std::string_view EconConfig_type_name = "EconConfig";
-		constexpr const static rivet::rivet_type_id EconConfig_type_id = 0xda3a4a5c; 
+		constexpr static std::string_view Regions_type_name = "Regions";
+		constexpr static rivet::rivet_type_id Regions_type_id = 0xa38d1acb;
+		constexpr static std::string_view EconConfig_type_name = "EconConfig";
+		constexpr static rivet::rivet_type_id EconConfig_type_id = 0xda3a4a5c; 
 
 		explicit RegionMacroEconomyEntry() = default;
 		explicit RegionMacroEconomyEntry([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

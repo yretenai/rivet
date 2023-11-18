@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED GameAwardVanityBundleStatusPrius : AwardBasePrius {
-		constexpr const static std::string_view type_name = "GameAwardVanityBundleStatusPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x2933a520;
+		constexpr static std::string_view type_name = "GameAwardVanityBundleStatusPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x2933a520;
 
 		explicit GameAwardVanityBundleStatusPrius() = default;
 		explicit GameAwardVanityBundleStatusPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

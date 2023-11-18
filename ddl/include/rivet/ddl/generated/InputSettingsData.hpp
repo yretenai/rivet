@@ -19,13 +19,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED InputSettingsData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "InputSettingsData";
-		constexpr const static rivet::rivet_type_id type_id = 0x3225c23b;
+		constexpr static std::string_view type_name = "InputSettingsData";
+		constexpr static rivet::rivet_type_id type_id = 0x3225c23b;
 
-		constexpr const static std::string_view SelectionHeldInputIgnoreDuration_type_name = "SelectionHeldInputIgnoreDuration";
-		constexpr const static rivet::rivet_type_id SelectionHeldInputIgnoreDuration_type_id = 0xeb4b14dd;
-		constexpr const static std::string_view SelectionDoubleSpeed_type_name = "SelectionDoubleSpeed";
-		constexpr const static rivet::rivet_type_id SelectionDoubleSpeed_type_id = 0x45f40af1; 
+		constexpr static std::string_view SelectionHeldInputIgnoreDuration_type_name = "SelectionHeldInputIgnoreDuration";
+		constexpr static rivet::rivet_type_id SelectionHeldInputIgnoreDuration_type_id = 0xeb4b14dd;
+		constexpr static std::string_view SelectionDoubleSpeed_type_name = "SelectionDoubleSpeed";
+		constexpr static rivet::rivet_type_id SelectionDoubleSpeed_type_id = 0x45f40af1; 
 
 		explicit InputSettingsData() = default;
 		explicit InputSettingsData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

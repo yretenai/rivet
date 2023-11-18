@@ -3,17 +3,17 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/ExtermibotSprayShotPrius.hpp>
-#include <rivet/ddl/generated/GrenadeShotPrius.hpp>
-#include <rivet/ddl/generated/GrabbedActorShotPrius.hpp>
-#include <rivet/ddl/generated/ShotThumperPrius.hpp>
-#include <rivet/ddl/generated/ShotGloveOfDoomPrius.hpp>
-#include <rivet/ddl/generated/ShotRYNOGrenadePrius.hpp>
-#include <rivet/ddl/generated/ShotVolcanicEruptorPrius.hpp>
-#include <rivet/ddl/generated/ShotSargassoCentipedeAODPrius.hpp>
-#include <rivet/ddl/generated/ItemShotPrius.hpp>
+#include <rivet/ddl/generated/ShotMrFunGuyPrius.hpp>
 #include <rivet/ddl/generated/ShotClankPuzzlePrius.hpp>
-#include <rivet/ddl/generated/ShotMrFunGuyPrius.hpp> 
+#include <rivet/ddl/generated/ShotVolcanicEruptorPrius.hpp>
+#include <rivet/ddl/generated/ShotRYNOGrenadePrius.hpp>
+#include <rivet/ddl/generated/ItemShotPrius.hpp>
+#include <rivet/ddl/generated/ShotThumperPrius.hpp>
+#include <rivet/ddl/generated/GrenadeShotPrius.hpp>
+#include <rivet/ddl/generated/ShotGloveOfDoomPrius.hpp>
+#include <rivet/ddl/generated/GrabbedActorShotPrius.hpp>
+#include <rivet/ddl/generated/ShotSargassoCentipedeAODPrius.hpp>
+#include <rivet/ddl/generated/ExtermibotSprayShotPrius.hpp> 
 
 #include <rivet/ddl/generated/LobbedShotPrius.hpp>
 

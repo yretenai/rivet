@@ -19,11 +19,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED HeroRespawnConfig : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "HeroRespawnConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x3ef855ef;
+		constexpr static std::string_view type_name = "HeroRespawnConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x3ef855ef;
 
-		constexpr const static std::string_view RespawnPortal_type_name = "RespawnPortal";
-		constexpr const static rivet::rivet_type_id RespawnPortal_type_id = 0x4019ca19; 
+		constexpr static std::string_view RespawnPortal_type_name = "RespawnPortal";
+		constexpr static rivet::rivet_type_id RespawnPortal_type_id = 0x4019ca19; 
 
 		explicit HeroRespawnConfig() = default;
 		explicit HeroRespawnConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

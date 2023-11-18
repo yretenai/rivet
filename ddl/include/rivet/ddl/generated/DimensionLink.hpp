@@ -23,17 +23,17 @@ namespace rivet::ddl::generated {
 	struct ObjSysUnlockSequence; 
 
 	struct RIVET_DDL_SHARED DimensionLink : ActivityLinkBase {
-		constexpr const static std::string_view type_name = "DimensionLink";
-		constexpr const static rivet::rivet_type_id type_id = 0x27180e4e;
+		constexpr static std::string_view type_name = "DimensionLink";
+		constexpr static rivet::rivet_type_id type_id = 0x27180e4e;
 
-		constexpr const static std::string_view PlanetName_type_name = "PlanetName";
-		constexpr const static rivet::rivet_type_id PlanetName_type_id = 0x38548038;
-		constexpr const static std::string_view DimensionCodeName_type_name = "DimensionCodeName";
-		constexpr const static rivet::rivet_type_id DimensionCodeName_type_id = 0x2d4a9b83;
-		constexpr const static std::string_view Checkpoint_type_name = "Checkpoint";
-		constexpr const static rivet::rivet_type_id Checkpoint_type_id = 0xd436a987;
-		constexpr const static std::string_view UnlockSequence_type_name = "UnlockSequence";
-		constexpr const static rivet::rivet_type_id UnlockSequence_type_id = 0xdd7a0acc; 
+		constexpr static std::string_view PlanetName_type_name = "PlanetName";
+		constexpr static rivet::rivet_type_id PlanetName_type_id = 0x38548038;
+		constexpr static std::string_view DimensionCodeName_type_name = "DimensionCodeName";
+		constexpr static rivet::rivet_type_id DimensionCodeName_type_id = 0x2d4a9b83;
+		constexpr static std::string_view Checkpoint_type_name = "Checkpoint";
+		constexpr static rivet::rivet_type_id Checkpoint_type_id = 0xd436a987;
+		constexpr static std::string_view UnlockSequence_type_name = "UnlockSequence";
+		constexpr static rivet::rivet_type_id UnlockSequence_type_id = 0xdd7a0acc; 
 
 		explicit DimensionLink() = default;
 		explicit DimensionLink([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

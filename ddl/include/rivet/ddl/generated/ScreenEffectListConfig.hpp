@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct ScreenEffectEntry; 
 
 	struct RIVET_DDL_SHARED ScreenEffectListConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "ScreenEffectListConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x46d591a4;
+		constexpr static std::string_view type_name = "ScreenEffectListConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x46d591a4;
 
-		constexpr const static std::string_view ScreenEffectList_type_name = "ScreenEffectList";
-		constexpr const static rivet::rivet_type_id ScreenEffectList_type_id = 0x7dbc6d12; 
+		constexpr static std::string_view ScreenEffectList_type_name = "ScreenEffectList";
+		constexpr static rivet::rivet_type_id ScreenEffectList_type_id = 0x7dbc6d12; 
 
 		explicit ScreenEffectListConfig() = default;
 		explicit ScreenEffectListConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

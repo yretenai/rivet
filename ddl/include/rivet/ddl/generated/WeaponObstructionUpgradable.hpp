@@ -23,13 +23,13 @@ namespace rivet::ddl::generated {
 	struct BarrelObstructionBase; 
 
 	struct RIVET_DDL_SHARED WeaponObstructionUpgradable : WeaponObstructionBase {
-		constexpr const static std::string_view type_name = "WeaponObstructionUpgradable";
-		constexpr const static rivet::rivet_type_id type_id = 0x3e885aae;
+		constexpr static std::string_view type_name = "WeaponObstructionUpgradable";
+		constexpr static rivet::rivet_type_id type_id = 0x3e885aae;
 
-		constexpr const static std::string_view WeaponV1_type_name = "WeaponV1";
-		constexpr const static rivet::rivet_type_id WeaponV1_type_id = 0x46715e75;
-		constexpr const static std::string_view WeaponV5_type_name = "WeaponV5";
-		constexpr const static rivet::rivet_type_id WeaponV5_type_id = 0x411c9a6c; 
+		constexpr static std::string_view WeaponV1_type_name = "WeaponV1";
+		constexpr static rivet::rivet_type_id WeaponV1_type_id = 0x46715e75;
+		constexpr static std::string_view WeaponV5_type_name = "WeaponV5";
+		constexpr static rivet::rivet_type_id WeaponV5_type_id = 0x411c9a6c; 
 
 		explicit WeaponObstructionUpgradable() = default;
 		explicit WeaponObstructionUpgradable([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

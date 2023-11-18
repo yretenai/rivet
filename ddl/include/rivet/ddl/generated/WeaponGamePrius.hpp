@@ -20,25 +20,25 @@
 #include <rivet/ddl/generated/WeaponBasePrius.hpp> 
 
 namespace rivet::ddl::generated {
-	struct DDLVector3;
-	struct BasicRecoilPrius; 
+	struct BasicRecoilPrius;
+	struct DDLVector3; 
 
 	struct RIVET_DDL_SHARED WeaponGamePrius : WeaponBasePrius {
-		constexpr const static std::string_view type_name = "WeaponGamePrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x8bbbb4eb;
+		constexpr static std::string_view type_name = "WeaponGamePrius";
+		constexpr static rivet::rivet_type_id type_id = 0x8bbbb4eb;
 
-		constexpr const static std::string_view DebugColorEnabled_type_name = "DebugColorEnabled";
-		constexpr const static rivet::rivet_type_id DebugColorEnabled_type_id = 0x14446789;
-		constexpr const static std::string_view DebugColor_type_name = "DebugColor";
-		constexpr const static rivet::rivet_type_id DebugColor_type_id = 0xae9ea1f6;
-		constexpr const static std::string_view IgnoreCameraContextVolumesForAiming_type_name = "IgnoreCameraContextVolumesForAiming";
-		constexpr const static rivet::rivet_type_id IgnoreCameraContextVolumesForAiming_type_id = 0x351c9a6a;
-		constexpr const static std::string_view SupportsToggleFire_type_name = "SupportsToggleFire";
-		constexpr const static rivet::rivet_type_id SupportsToggleFire_type_id = 0xbda2e316;
-		constexpr const static std::string_view SupportsHoldFire_type_name = "SupportsHoldFire";
-		constexpr const static rivet::rivet_type_id SupportsHoldFire_type_id = 0xb9f35c34;
-		constexpr const static std::string_view Recoil_type_name = "Recoil";
-		constexpr const static rivet::rivet_type_id Recoil_type_id = 0x2a1925e; 
+		constexpr static std::string_view DebugColorEnabled_type_name = "DebugColorEnabled";
+		constexpr static rivet::rivet_type_id DebugColorEnabled_type_id = 0x14446789;
+		constexpr static std::string_view DebugColor_type_name = "DebugColor";
+		constexpr static rivet::rivet_type_id DebugColor_type_id = 0xae9ea1f6;
+		constexpr static std::string_view IgnoreCameraContextVolumesForAiming_type_name = "IgnoreCameraContextVolumesForAiming";
+		constexpr static rivet::rivet_type_id IgnoreCameraContextVolumesForAiming_type_id = 0x351c9a6a;
+		constexpr static std::string_view SupportsToggleFire_type_name = "SupportsToggleFire";
+		constexpr static rivet::rivet_type_id SupportsToggleFire_type_id = 0xbda2e316;
+		constexpr static std::string_view SupportsHoldFire_type_name = "SupportsHoldFire";
+		constexpr static rivet::rivet_type_id SupportsHoldFire_type_id = 0xb9f35c34;
+		constexpr static std::string_view Recoil_type_name = "Recoil";
+		constexpr static rivet::rivet_type_id Recoil_type_id = 0x2a1925e; 
 
 		explicit WeaponGamePrius() = default;
 		explicit WeaponGamePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

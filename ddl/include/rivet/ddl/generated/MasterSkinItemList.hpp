@@ -20,26 +20,26 @@
 #include <rivet/ddl/generated/ConfigBase.hpp> 
 
 namespace rivet::ddl::generated {
-	struct SkinItemCategoryList;
+	struct VanityCategoryListItem;
 	struct SkinItemPartList;
-	struct VanityCategoryListItem; 
+	struct SkinItemCategoryList; 
 
 	struct RIVET_DDL_SHARED MasterSkinItemList : ConfigBase {
-		constexpr const static std::string_view type_name = "MasterSkinItemList";
-		constexpr const static rivet::rivet_type_id type_id = 0xdcbf0fe4;
+		constexpr static std::string_view type_name = "MasterSkinItemList";
+		constexpr static rivet::rivet_type_id type_id = 0xdcbf0fe4;
 
-		constexpr const static std::string_view ItemCategoryList_type_name = "ItemCategoryList";
-		constexpr const static rivet::rivet_type_id ItemCategoryList_type_id = 0x6bbf2976;
-		constexpr const static std::string_view ItemPartList_type_name = "ItemPartList";
-		constexpr const static rivet::rivet_type_id ItemPartList_type_id = 0x2e58f6a8;
-		constexpr const static std::string_view VanityCategoryList_type_name = "VanityCategoryList";
-		constexpr const static rivet::rivet_type_id VanityCategoryList_type_id = 0xf89a4963;
-		constexpr const static std::string_view ColorConfigs_type_name = "ColorConfigs";
-		constexpr const static rivet::rivet_type_id ColorConfigs_type_id = 0x9277805e;
-		constexpr const static std::string_view ConstantConfigs_type_name = "ConstantConfigs";
-		constexpr const static rivet::rivet_type_id ConstantConfigs_type_id = 0x262e5777;
-		constexpr const static std::string_view DecalConfigs_type_name = "DecalConfigs";
-		constexpr const static rivet::rivet_type_id DecalConfigs_type_id = 0x54b89253; 
+		constexpr static std::string_view ItemCategoryList_type_name = "ItemCategoryList";
+		constexpr static rivet::rivet_type_id ItemCategoryList_type_id = 0x6bbf2976;
+		constexpr static std::string_view ItemPartList_type_name = "ItemPartList";
+		constexpr static rivet::rivet_type_id ItemPartList_type_id = 0x2e58f6a8;
+		constexpr static std::string_view VanityCategoryList_type_name = "VanityCategoryList";
+		constexpr static rivet::rivet_type_id VanityCategoryList_type_id = 0xf89a4963;
+		constexpr static std::string_view ColorConfigs_type_name = "ColorConfigs";
+		constexpr static rivet::rivet_type_id ColorConfigs_type_id = 0x9277805e;
+		constexpr static std::string_view ConstantConfigs_type_name = "ConstantConfigs";
+		constexpr static rivet::rivet_type_id ConstantConfigs_type_id = 0x262e5777;
+		constexpr static std::string_view DecalConfigs_type_name = "DecalConfigs";
+		constexpr static rivet::rivet_type_id DecalConfigs_type_id = 0x54b89253; 
 
 		explicit MasterSkinItemList() = default;
 		explicit MasterSkinItemList([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

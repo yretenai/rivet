@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct MeleeWeaponSkinData; 
 
 	struct RIVET_DDL_SHARED RewardMeleeWeaponSkinConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "RewardMeleeWeaponSkinConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x56619b43;
+		constexpr static std::string_view type_name = "RewardMeleeWeaponSkinConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x56619b43;
 
-		constexpr const static std::string_view Skins_type_name = "Skins";
-		constexpr const static rivet::rivet_type_id Skins_type_id = 0xf85047c1; 
+		constexpr static std::string_view Skins_type_name = "Skins";
+		constexpr static rivet::rivet_type_id Skins_type_id = 0xf85047c1; 
 
 		explicit RewardMeleeWeaponSkinConfig() = default;
 		explicit RewardMeleeWeaponSkinConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

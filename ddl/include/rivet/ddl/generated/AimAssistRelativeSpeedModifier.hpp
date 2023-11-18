@@ -19,29 +19,29 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED AimAssistRelativeSpeedModifier : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "AimAssistRelativeSpeedModifier";
-		constexpr const static rivet::rivet_type_id type_id = 0x4039c132;
+		constexpr static std::string_view type_name = "AimAssistRelativeSpeedModifier";
+		constexpr static rivet::rivet_type_id type_id = 0x4039c132;
 
-		constexpr const static std::string_view Enable_type_name = "Enable";
-		constexpr const static rivet::rivet_type_id Enable_type_id = 0xcdd88655;
-		constexpr const static std::string_view FrictionSpeedMin_type_name = "FrictionSpeedMin";
-		constexpr const static rivet::rivet_type_id FrictionSpeedMin_type_id = 0xac8a4e63;
-		constexpr const static std::string_view FrictionSpeedMax_type_name = "FrictionSpeedMax";
-		constexpr const static rivet::rivet_type_id FrictionSpeedMax_type_id = 0x9087713a;
-		constexpr const static std::string_view FrictionMod_type_name = "FrictionMod";
-		constexpr const static rivet::rivet_type_id FrictionMod_type_id = 0x259d7ff2;
-		constexpr const static std::string_view MagnetSpeedMin_type_name = "MagnetSpeedMin";
-		constexpr const static rivet::rivet_type_id MagnetSpeedMin_type_id = 0x4351b132;
-		constexpr const static std::string_view MagnetSpeedMax_type_name = "MagnetSpeedMax";
-		constexpr const static rivet::rivet_type_id MagnetSpeedMax_type_id = 0x7f5c8e6b;
-		constexpr const static std::string_view MagnetMod_type_name = "MagnetMod";
-		constexpr const static rivet::rivet_type_id MagnetMod_type_id = 0xcc015279;
-		constexpr const static std::string_view CenterSpeedMin_type_name = "CenterSpeedMin";
-		constexpr const static rivet::rivet_type_id CenterSpeedMin_type_id = 0xea995170;
-		constexpr const static std::string_view CenterSpeedMax_type_name = "CenterSpeedMax";
-		constexpr const static rivet::rivet_type_id CenterSpeedMax_type_id = 0xd6946e29;
-		constexpr const static std::string_view CenterMod_type_name = "CenterMod";
-		constexpr const static rivet::rivet_type_id CenterMod_type_id = 0x9237bce3; 
+		constexpr static std::string_view Enable_type_name = "Enable";
+		constexpr static rivet::rivet_type_id Enable_type_id = 0xcdd88655;
+		constexpr static std::string_view FrictionSpeedMin_type_name = "FrictionSpeedMin";
+		constexpr static rivet::rivet_type_id FrictionSpeedMin_type_id = 0xac8a4e63;
+		constexpr static std::string_view FrictionSpeedMax_type_name = "FrictionSpeedMax";
+		constexpr static rivet::rivet_type_id FrictionSpeedMax_type_id = 0x9087713a;
+		constexpr static std::string_view FrictionMod_type_name = "FrictionMod";
+		constexpr static rivet::rivet_type_id FrictionMod_type_id = 0x259d7ff2;
+		constexpr static std::string_view MagnetSpeedMin_type_name = "MagnetSpeedMin";
+		constexpr static rivet::rivet_type_id MagnetSpeedMin_type_id = 0x4351b132;
+		constexpr static std::string_view MagnetSpeedMax_type_name = "MagnetSpeedMax";
+		constexpr static rivet::rivet_type_id MagnetSpeedMax_type_id = 0x7f5c8e6b;
+		constexpr static std::string_view MagnetMod_type_name = "MagnetMod";
+		constexpr static rivet::rivet_type_id MagnetMod_type_id = 0xcc015279;
+		constexpr static std::string_view CenterSpeedMin_type_name = "CenterSpeedMin";
+		constexpr static rivet::rivet_type_id CenterSpeedMin_type_id = 0xea995170;
+		constexpr static std::string_view CenterSpeedMax_type_name = "CenterSpeedMax";
+		constexpr static rivet::rivet_type_id CenterSpeedMax_type_id = 0xd6946e29;
+		constexpr static std::string_view CenterMod_type_name = "CenterMod";
+		constexpr static rivet::rivet_type_id CenterMod_type_id = 0x9237bce3; 
 
 		explicit AimAssistRelativeSpeedModifier() = default;
 		explicit AimAssistRelativeSpeedModifier([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

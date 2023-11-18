@@ -19,15 +19,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED MovieSubtitle : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "MovieSubtitle";
-		constexpr const static rivet::rivet_type_id type_id = 0xc354b421;
+		constexpr static std::string_view type_name = "MovieSubtitle";
+		constexpr static rivet::rivet_type_id type_id = 0xc354b421;
 
-		constexpr const static std::string_view FrameStart_type_name = "FrameStart";
-		constexpr const static rivet::rivet_type_id FrameStart_type_id = 0xc933754;
-		constexpr const static std::string_view FrameEnd_type_name = "FrameEnd";
-		constexpr const static rivet::rivet_type_id FrameEnd_type_id = 0x9b52ce56;
-		constexpr const static std::string_view LocTag_type_name = "LocTag";
-		constexpr const static rivet::rivet_type_id LocTag_type_id = 0x6f8b0e5; 
+		constexpr static std::string_view FrameStart_type_name = "FrameStart";
+		constexpr static rivet::rivet_type_id FrameStart_type_id = 0xc933754;
+		constexpr static std::string_view FrameEnd_type_name = "FrameEnd";
+		constexpr static rivet::rivet_type_id FrameEnd_type_id = 0x9b52ce56;
+		constexpr static std::string_view LocTag_type_name = "LocTag";
+		constexpr static rivet::rivet_type_id LocTag_type_id = 0x6f8b0e5; 
 
 		explicit MovieSubtitle() = default;
 		explicit MovieSubtitle([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

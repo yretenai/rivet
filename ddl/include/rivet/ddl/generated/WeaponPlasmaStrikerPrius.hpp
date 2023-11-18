@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED WeaponPlasmaStrikerPrius : WeaponGamePrius {
-		constexpr const static std::string_view type_name = "WeaponPlasmaStrikerPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xa2a27f8d;
+		constexpr static std::string_view type_name = "WeaponPlasmaStrikerPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xa2a27f8d;
 
-		constexpr const static std::string_view ScopeOverlayActor_type_name = "ScopeOverlayActor";
-		constexpr const static rivet::rivet_type_id ScopeOverlayActor_type_id = 0x30af9095;
-		constexpr const static std::string_view WeakspotActor_type_name = "WeakspotActor";
-		constexpr const static rivet::rivet_type_id WeakspotActor_type_id = 0x3483e017; 
+		constexpr static std::string_view ScopeOverlayActor_type_name = "ScopeOverlayActor";
+		constexpr static rivet::rivet_type_id ScopeOverlayActor_type_id = 0x30af9095;
+		constexpr static std::string_view WeakspotActor_type_name = "WeakspotActor";
+		constexpr static rivet::rivet_type_id WeakspotActor_type_id = 0x3483e017; 
 
 		explicit WeaponPlasmaStrikerPrius() = default;
 		explicit WeaponPlasmaStrikerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

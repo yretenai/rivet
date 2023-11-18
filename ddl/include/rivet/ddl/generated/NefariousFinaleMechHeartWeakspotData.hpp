@@ -19,19 +19,19 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED NefariousFinaleMechHeartWeakspotData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "NefariousFinaleMechHeartWeakspotData";
-		constexpr const static rivet::rivet_type_id type_id = 0xd751ca1c;
+		constexpr static std::string_view type_name = "NefariousFinaleMechHeartWeakspotData";
+		constexpr static rivet::rivet_type_id type_id = 0xd751ca1c;
 
-		constexpr const static std::string_view MaterialMappingName_Trim_type_name = "MaterialMappingName_Trim";
-		constexpr const static rivet::rivet_type_id MaterialMappingName_Trim_type_id = 0xb48a742f;
-		constexpr const static std::string_view ConstantOverride_Trim_type_name = "ConstantOverride_Trim";
-		constexpr const static rivet::rivet_type_id ConstantOverride_Trim_type_id = 0x96c4750;
-		constexpr const static std::string_view MaterialMappingName_Bulb_type_name = "MaterialMappingName_Bulb";
-		constexpr const static rivet::rivet_type_id MaterialMappingName_Bulb_type_id = 0x297f833d;
-		constexpr const static std::string_view ConstantOverride_Bulb_type_name = "ConstantOverride_Bulb";
-		constexpr const static rivet::rivet_type_id ConstantOverride_Bulb_type_id = 0x9499b042;
-		constexpr const static std::string_view Partial_Anim_type_name = "Partial_Anim";
-		constexpr const static rivet::rivet_type_id Partial_Anim_type_id = 0x93758e1c; 
+		constexpr static std::string_view MaterialMappingName_Trim_type_name = "MaterialMappingName_Trim";
+		constexpr static rivet::rivet_type_id MaterialMappingName_Trim_type_id = 0xb48a742f;
+		constexpr static std::string_view ConstantOverride_Trim_type_name = "ConstantOverride_Trim";
+		constexpr static rivet::rivet_type_id ConstantOverride_Trim_type_id = 0x96c4750;
+		constexpr static std::string_view MaterialMappingName_Bulb_type_name = "MaterialMappingName_Bulb";
+		constexpr static rivet::rivet_type_id MaterialMappingName_Bulb_type_id = 0x297f833d;
+		constexpr static std::string_view ConstantOverride_Bulb_type_name = "ConstantOverride_Bulb";
+		constexpr static rivet::rivet_type_id ConstantOverride_Bulb_type_id = 0x9499b042;
+		constexpr static std::string_view Partial_Anim_type_name = "Partial_Anim";
+		constexpr static rivet::rivet_type_id Partial_Anim_type_id = 0x93758e1c; 
 
 		explicit NefariousFinaleMechHeartWeakspotData() = default;
 		explicit NefariousFinaleMechHeartWeakspotData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

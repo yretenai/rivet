@@ -21,27 +21,27 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ChunkManagerConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "ChunkManagerConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x5ab3e104;
+		constexpr static std::string_view type_name = "ChunkManagerConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x5ab3e104;
 
-		constexpr const static std::string_view CleanUpThreshold_type_name = "CleanUpThreshold";
-		constexpr const static rivet::rivet_type_id CleanUpThreshold_type_id = 0xd0ab700b;
-		constexpr const static std::string_view CleanUpTarget_type_name = "CleanUpTarget";
-		constexpr const static rivet::rivet_type_id CleanUpTarget_type_id = 0x24c49aec;
-		constexpr const static std::string_view DefaultLifeTime_type_name = "DefaultLifeTime";
-		constexpr const static rivet::rivet_type_id DefaultLifeTime_type_id = 0xe1859d55;
-		constexpr const static std::string_view DefaultFadeTime_type_name = "DefaultFadeTime";
-		constexpr const static rivet::rivet_type_id DefaultFadeTime_type_id = 0xe626ef1;
-		constexpr const static std::string_view DesiredHighPriority_type_name = "DesiredHighPriority";
-		constexpr const static rivet::rivet_type_id DesiredHighPriority_type_id = 0x40de1050;
-		constexpr const static std::string_view AutoDeleteDistance_type_name = "AutoDeleteDistance";
-		constexpr const static rivet::rivet_type_id AutoDeleteDistance_type_id = 0x6cb7892d;
-		constexpr const static std::string_view AutoDeleteFallDistance_type_name = "AutoDeleteFallDistance";
-		constexpr const static rivet::rivet_type_id AutoDeleteFallDistance_type_id = 0x5cc532dc;
-		constexpr const static std::string_view AutoDeleteWithNoPhysics_type_name = "AutoDeleteWithNoPhysics";
-		constexpr const static rivet::rivet_type_id AutoDeleteWithNoPhysics_type_id = 0x4458e4b7;
-		constexpr const static std::string_view AutoDeleteFrameDelay_type_name = "AutoDeleteFrameDelay";
-		constexpr const static rivet::rivet_type_id AutoDeleteFrameDelay_type_id = 0x3d936c98; 
+		constexpr static std::string_view CleanUpThreshold_type_name = "CleanUpThreshold";
+		constexpr static rivet::rivet_type_id CleanUpThreshold_type_id = 0xd0ab700b;
+		constexpr static std::string_view CleanUpTarget_type_name = "CleanUpTarget";
+		constexpr static rivet::rivet_type_id CleanUpTarget_type_id = 0x24c49aec;
+		constexpr static std::string_view DefaultLifeTime_type_name = "DefaultLifeTime";
+		constexpr static rivet::rivet_type_id DefaultLifeTime_type_id = 0xe1859d55;
+		constexpr static std::string_view DefaultFadeTime_type_name = "DefaultFadeTime";
+		constexpr static rivet::rivet_type_id DefaultFadeTime_type_id = 0xe626ef1;
+		constexpr static std::string_view DesiredHighPriority_type_name = "DesiredHighPriority";
+		constexpr static rivet::rivet_type_id DesiredHighPriority_type_id = 0x40de1050;
+		constexpr static std::string_view AutoDeleteDistance_type_name = "AutoDeleteDistance";
+		constexpr static rivet::rivet_type_id AutoDeleteDistance_type_id = 0x6cb7892d;
+		constexpr static std::string_view AutoDeleteFallDistance_type_name = "AutoDeleteFallDistance";
+		constexpr static rivet::rivet_type_id AutoDeleteFallDistance_type_id = 0x5cc532dc;
+		constexpr static std::string_view AutoDeleteWithNoPhysics_type_name = "AutoDeleteWithNoPhysics";
+		constexpr static rivet::rivet_type_id AutoDeleteWithNoPhysics_type_id = 0x4458e4b7;
+		constexpr static std::string_view AutoDeleteFrameDelay_type_name = "AutoDeleteFrameDelay";
+		constexpr static rivet::rivet_type_id AutoDeleteFrameDelay_type_id = 0x3d936c98; 
 
 		explicit ChunkManagerConfig() = default;
 		explicit ChunkManagerConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

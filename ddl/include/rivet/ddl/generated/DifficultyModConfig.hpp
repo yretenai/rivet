@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct DifficultyModDef; 
 
 	struct RIVET_DDL_SHARED DifficultyModConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "DifficultyModConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x5f875925;
+		constexpr static std::string_view type_name = "DifficultyModConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x5f875925;
 
-		constexpr const static std::string_view DifficultyModDefs_type_name = "DifficultyModDefs";
-		constexpr const static rivet::rivet_type_id DifficultyModDefs_type_id = 0xec9d4cb3; 
+		constexpr static std::string_view DifficultyModDefs_type_name = "DifficultyModDefs";
+		constexpr static rivet::rivet_type_id DifficultyModDefs_type_id = 0xec9d4cb3; 
 
 		explicit DifficultyModConfig() = default;
 		explicit DifficultyModConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

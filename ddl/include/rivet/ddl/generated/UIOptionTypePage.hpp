@@ -22,11 +22,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED UIOptionTypePage : UIOptionTypeBase {
-		constexpr const static std::string_view type_name = "UIOptionTypePage";
-		constexpr const static rivet::rivet_type_id type_id = 0xc654c1cc;
+		constexpr static std::string_view type_name = "UIOptionTypePage";
+		constexpr static rivet::rivet_type_id type_id = 0xc654c1cc;
 
-		constexpr const static std::string_view PageID_type_name = "PageID";
-		constexpr const static rivet::rivet_type_id PageID_type_id = 0x982d0b4c; 
+		constexpr static std::string_view PageID_type_name = "PageID";
+		constexpr static rivet::rivet_type_id PageID_type_id = 0x982d0b4c; 
 
 		explicit UIOptionTypePage() = default;
 		explicit UIOptionTypePage([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

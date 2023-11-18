@@ -21,15 +21,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED CollectibleImageData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "CollectibleImageData";
-		constexpr const static rivet::rivet_type_id type_id = 0x22115bce;
+		constexpr static std::string_view type_name = "CollectibleImageData";
+		constexpr static rivet::rivet_type_id type_id = 0x22115bce;
 
-		constexpr const static std::string_view Type_type_name = "Type";
-		constexpr const static rivet::rivet_type_id Type_type_id = 0xbc4e9799;
-		constexpr const static std::string_view Texture_type_name = "Texture";
-		constexpr const static rivet::rivet_type_id Texture_type_id = 0x838c6e4a;
-		constexpr const static std::string_view Label_type_name = "Label";
-		constexpr const static rivet::rivet_type_id Label_type_id = 0x17f49c29; 
+		constexpr static std::string_view Type_type_name = "Type";
+		constexpr static rivet::rivet_type_id Type_type_id = 0xbc4e9799;
+		constexpr static std::string_view Texture_type_name = "Texture";
+		constexpr static rivet::rivet_type_id Texture_type_id = 0x838c6e4a;
+		constexpr static std::string_view Label_type_name = "Label";
+		constexpr static rivet::rivet_type_id Label_type_id = 0x17f49c29; 
 
 		explicit CollectibleImageData() = default;
 		explicit CollectibleImageData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

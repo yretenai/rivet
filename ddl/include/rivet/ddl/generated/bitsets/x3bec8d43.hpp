@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view x3bec8d43_type_name = "x3bec8d43";
-	constexpr const static rivet::rivet_type_id x3bec8d43_type_id = 0x3bec8d43;
+	constexpr static std::string_view x3bec8d43_type_name = "x3bec8d43";
+	constexpr static rivet::rivet_type_id x3bec8d43_type_id = 0x3bec8d43;
 
-	constexpr const static std::array<std::tuple<std::string_view, uint64_t>, 3> x3bec8d43_values = {
+	constexpr static std::array<std::tuple<std::string_view, uint64_t>, 3> x3bec8d43_values = {
 		std::make_tuple("kAnimTriggerFlagsIgnoreBlendOut", 0x1),
 		std::make_tuple("kAnimTriggerFlagsQueryOnly", 0x2),
 		std::make_tuple("kAnimTriggerFlagsRepeat", 0x4), 

@@ -19,27 +19,27 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DeathReactionModifier : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "DeathReactionModifier";
-		constexpr const static rivet::rivet_type_id type_id = 0x55f8d4a2;
+		constexpr static std::string_view type_name = "DeathReactionModifier";
+		constexpr static rivet::rivet_type_id type_id = 0x55f8d4a2;
 
-		constexpr const static std::string_view DeathDriverName_type_name = "DeathDriverName";
-		constexpr const static rivet::rivet_type_id DeathDriverName_type_id = 0x75cede9;
-		constexpr const static std::string_view MinYTranslationScale_type_name = "MinYTranslationScale";
-		constexpr const static rivet::rivet_type_id MinYTranslationScale_type_id = 0x7796775c;
-		constexpr const static std::string_view MaxYTranslationScale_type_name = "MaxYTranslationScale";
-		constexpr const static rivet::rivet_type_id MaxYTranslationScale_type_id = 0x5ee88a44;
-		constexpr const static std::string_view MinXZTranslationScale_type_name = "MinXZTranslationScale";
-		constexpr const static rivet::rivet_type_id MinXZTranslationScale_type_id = 0x66d45ba2;
-		constexpr const static std::string_view MaxXZTranslationScale_type_name = "MaxXZTranslationScale";
-		constexpr const static rivet::rivet_type_id MaxXZTranslationScale_type_id = 0x7591bd09;
-		constexpr const static std::string_view MinTimeScale_type_name = "MinTimeScale";
-		constexpr const static rivet::rivet_type_id MinTimeScale_type_id = 0x53f6eacc;
-		constexpr const static std::string_view MaxTimeScale_type_name = "MaxTimeScale";
-		constexpr const static rivet::rivet_type_id MaxTimeScale_type_id = 0xc385fa26;
-		constexpr const static std::string_view PopMotionToHitDirection_type_name = "PopMotionToHitDirection";
-		constexpr const static rivet::rivet_type_id PopMotionToHitDirection_type_id = 0x338a746a;
-		constexpr const static std::string_view DeleteOnImpact_type_name = "DeleteOnImpact";
-		constexpr const static rivet::rivet_type_id DeleteOnImpact_type_id = 0xb990988d; 
+		constexpr static std::string_view DeathDriverName_type_name = "DeathDriverName";
+		constexpr static rivet::rivet_type_id DeathDriverName_type_id = 0x75cede9;
+		constexpr static std::string_view MinYTranslationScale_type_name = "MinYTranslationScale";
+		constexpr static rivet::rivet_type_id MinYTranslationScale_type_id = 0x7796775c;
+		constexpr static std::string_view MaxYTranslationScale_type_name = "MaxYTranslationScale";
+		constexpr static rivet::rivet_type_id MaxYTranslationScale_type_id = 0x5ee88a44;
+		constexpr static std::string_view MinXZTranslationScale_type_name = "MinXZTranslationScale";
+		constexpr static rivet::rivet_type_id MinXZTranslationScale_type_id = 0x66d45ba2;
+		constexpr static std::string_view MaxXZTranslationScale_type_name = "MaxXZTranslationScale";
+		constexpr static rivet::rivet_type_id MaxXZTranslationScale_type_id = 0x7591bd09;
+		constexpr static std::string_view MinTimeScale_type_name = "MinTimeScale";
+		constexpr static rivet::rivet_type_id MinTimeScale_type_id = 0x53f6eacc;
+		constexpr static std::string_view MaxTimeScale_type_name = "MaxTimeScale";
+		constexpr static rivet::rivet_type_id MaxTimeScale_type_id = 0xc385fa26;
+		constexpr static std::string_view PopMotionToHitDirection_type_name = "PopMotionToHitDirection";
+		constexpr static rivet::rivet_type_id PopMotionToHitDirection_type_id = 0x338a746a;
+		constexpr static std::string_view DeleteOnImpact_type_name = "DeleteOnImpact";
+		constexpr static rivet::rivet_type_id DeleteOnImpact_type_id = 0xb990988d; 
 
 		explicit DeathReactionModifier() = default;
 		explicit DeathReactionModifier([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

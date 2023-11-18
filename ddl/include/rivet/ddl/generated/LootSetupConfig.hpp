@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct LootSetupElement; 
 
 	struct RIVET_DDL_SHARED LootSetupConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "LootSetupConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x169493ac;
+		constexpr static std::string_view type_name = "LootSetupConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x169493ac;
 
-		constexpr const static std::string_view LootTables_type_name = "LootTables";
-		constexpr const static rivet::rivet_type_id LootTables_type_id = 0x53787c5f; 
+		constexpr static std::string_view LootTables_type_name = "LootTables";
+		constexpr static rivet::rivet_type_id LootTables_type_id = 0x53787c5f; 
 
 		explicit LootSetupConfig() = default;
 		explicit LootSetupConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

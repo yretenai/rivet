@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct FastTravelPropElement; 
 
 	struct RIVET_DDL_SHARED FastTravelConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "FastTravelConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x42b31686;
+		constexpr static std::string_view type_name = "FastTravelConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x42b31686;
 
-		constexpr const static std::string_view Props_type_name = "Props";
-		constexpr const static rivet::rivet_type_id Props_type_id = 0x422d6669; 
+		constexpr static std::string_view Props_type_name = "Props";
+		constexpr static rivet::rivet_type_id Props_type_id = 0x422d6669; 
 
 		explicit FastTravelConfig() = default;
 		explicit FastTravelConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

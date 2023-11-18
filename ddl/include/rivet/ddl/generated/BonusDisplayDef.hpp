@@ -21,19 +21,19 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED BonusDisplayDef : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "BonusDisplayDef";
-		constexpr const static rivet::rivet_type_id type_id = 0x6448de1b;
+		constexpr static std::string_view type_name = "BonusDisplayDef";
+		constexpr static rivet::rivet_type_id type_id = 0x6448de1b;
 
-		constexpr const static std::string_view Bonus_type_name = "Bonus";
-		constexpr const static rivet::rivet_type_id Bonus_type_id = 0x86cbb3bb;
-		constexpr const static std::string_view BonusDescLocTag_type_name = "BonusDescLocTag";
-		constexpr const static rivet::rivet_type_id BonusDescLocTag_type_id = 0x5c3ff112;
-		constexpr const static std::string_view InsertNumber_type_name = "InsertNumber";
-		constexpr const static rivet::rivet_type_id InsertNumber_type_id = 0xd224362c;
-		constexpr const static std::string_view StringLocTag_type_name = "StringLocTag";
-		constexpr const static rivet::rivet_type_id StringLocTag_type_id = 0xa2967435;
-		constexpr const static std::string_view InsertString_type_name = "InsertString";
-		constexpr const static rivet::rivet_type_id InsertString_type_id = 0xda0a9bd1; 
+		constexpr static std::string_view Bonus_type_name = "Bonus";
+		constexpr static rivet::rivet_type_id Bonus_type_id = 0x86cbb3bb;
+		constexpr static std::string_view BonusDescLocTag_type_name = "BonusDescLocTag";
+		constexpr static rivet::rivet_type_id BonusDescLocTag_type_id = 0x5c3ff112;
+		constexpr static std::string_view InsertNumber_type_name = "InsertNumber";
+		constexpr static rivet::rivet_type_id InsertNumber_type_id = 0xd224362c;
+		constexpr static std::string_view StringLocTag_type_name = "StringLocTag";
+		constexpr static rivet::rivet_type_id StringLocTag_type_id = 0xa2967435;
+		constexpr static std::string_view InsertString_type_name = "InsertString";
+		constexpr static rivet::rivet_type_id InsertString_type_id = 0xda0a9bd1; 
 
 		explicit BonusDisplayDef() = default;
 		explicit BonusDisplayDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

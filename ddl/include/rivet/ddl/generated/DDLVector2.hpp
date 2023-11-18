@@ -19,13 +19,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DDLVector2 : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "DDLVector2";
-		constexpr const static rivet::rivet_type_id type_id = 0xa95aa937;
+		constexpr static std::string_view type_name = "DDLVector2";
+		constexpr static rivet::rivet_type_id type_id = 0xa95aa937;
 
-		constexpr const static std::string_view X_type_name = "X";
-		constexpr const static rivet::rivet_type_id X_type_id = 0x5e33418d;
-		constexpr const static std::string_view Y_type_name = "Y";
-		constexpr const static rivet::rivet_type_id Y_type_id = 0x2934711b; 
+		constexpr static std::string_view X_type_name = "X";
+		constexpr static rivet::rivet_type_id X_type_id = 0x5e33418d;
+		constexpr static std::string_view Y_type_name = "Y";
+		constexpr static rivet::rivet_type_id Y_type_id = 0x2934711b; 
 
 		explicit DDLVector2() = default;
 		explicit DDLVector2([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

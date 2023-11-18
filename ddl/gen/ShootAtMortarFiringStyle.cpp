@@ -3,9 +3,9 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/ShootAtCurveInWorld.hpp>
+#include <rivet/ddl/generated/ShootAtMortarNoCurve.hpp>
 #include <rivet/ddl/generated/ShootAtCurveFollowTarget.hpp>
-#include <rivet/ddl/generated/ShootAtMortarNoCurve.hpp> 
+#include <rivet/ddl/generated/ShootAtCurveInWorld.hpp> 
 
 #include <rivet/ddl/generated/ShootAtMortarFiringStyle.hpp>
 

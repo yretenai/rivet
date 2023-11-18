@@ -23,17 +23,17 @@ namespace rivet::ddl::generated {
 	struct SkinItemDecal; 
 
 	struct RIVET_DDL_SHARED SkinItemDecalListElement : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "SkinItemDecalListElement";
-		constexpr const static rivet::rivet_type_id type_id = 0x3956ece6;
+		constexpr static std::string_view type_name = "SkinItemDecalListElement";
+		constexpr static rivet::rivet_type_id type_id = 0x3956ece6;
 
-		constexpr const static std::string_view DebugName_type_name = "DebugName";
-		constexpr const static rivet::rivet_type_id DebugName_type_id = 0x4ef19112;
-		constexpr const static std::string_view NameLocTag_type_name = "NameLocTag";
-		constexpr const static rivet::rivet_type_id NameLocTag_type_id = 0xa0041b54;
-		constexpr const static std::string_view Available_type_name = "Available";
-		constexpr const static rivet::rivet_type_id Available_type_id = 0x27723b89;
-		constexpr const static std::string_view Decal_type_name = "Decal";
-		constexpr const static rivet::rivet_type_id Decal_type_id = 0xcd48ef8c; 
+		constexpr static std::string_view DebugName_type_name = "DebugName";
+		constexpr static rivet::rivet_type_id DebugName_type_id = 0x4ef19112;
+		constexpr static std::string_view NameLocTag_type_name = "NameLocTag";
+		constexpr static rivet::rivet_type_id NameLocTag_type_id = 0xa0041b54;
+		constexpr static std::string_view Available_type_name = "Available";
+		constexpr static rivet::rivet_type_id Available_type_id = 0x27723b89;
+		constexpr static std::string_view Decal_type_name = "Decal";
+		constexpr static rivet::rivet_type_id Decal_type_id = 0xcd48ef8c; 
 
 		explicit SkinItemDecalListElement() = default;
 		explicit SkinItemDecalListElement([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

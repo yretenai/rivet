@@ -3,10 +3,10 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/StreamingGameDVRConfig.hpp>
-#include <rivet/ddl/generated/StreamingVideoPlaylistConfig.hpp>
+#include <rivet/ddl/generated/StreamingStaticImageConfig.hpp>
 #include <rivet/ddl/generated/StreamingBinkConfig.hpp>
-#include <rivet/ddl/generated/StreamingStaticImageConfig.hpp> 
+#include <rivet/ddl/generated/StreamingVideoPlaylistConfig.hpp>
+#include <rivet/ddl/generated/StreamingGameDVRConfig.hpp> 
 
 #include <rivet/ddl/generated/StreamingVideoBaseConfig.hpp>
 

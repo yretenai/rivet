@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ShotMotionTunnelerPuppyPrius : BasicShotMotionPrius {
-		constexpr const static std::string_view type_name = "ShotMotionTunnelerPuppyPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xfde1e103;
+		constexpr static std::string_view type_name = "ShotMotionTunnelerPuppyPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xfde1e103;
 
-		constexpr const static std::string_view ParentComponentHandle_type_name = "ParentComponentHandle";
-		constexpr const static rivet::rivet_type_id ParentComponentHandle_type_id = 0x52cadb;
-		constexpr const static std::string_view HistoryOffset_type_name = "HistoryOffset";
-		constexpr const static rivet::rivet_type_id HistoryOffset_type_id = 0xb25fc988; 
+		constexpr static std::string_view ParentComponentHandle_type_name = "ParentComponentHandle";
+		constexpr static rivet::rivet_type_id ParentComponentHandle_type_id = 0x52cadb;
+		constexpr static std::string_view HistoryOffset_type_name = "HistoryOffset";
+		constexpr static rivet::rivet_type_id HistoryOffset_type_id = 0xb25fc988; 
 
 		explicit ShotMotionTunnelerPuppyPrius() = default;
 		explicit ShotMotionTunnelerPuppyPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

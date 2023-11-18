@@ -20,20 +20,20 @@
 #include <rivet/ddl/generated/ConfigBase.hpp> 
 
 namespace rivet::ddl::generated {
-	struct ColorBlindFilterData;
 	struct AccessibilityMaterial;
-	struct AccessibilityRemapData; 
+	struct AccessibilityRemapData;
+	struct ColorBlindFilterData; 
 
 	struct RIVET_DDL_SHARED AccessibilitySystemConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "AccessibilitySystemConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xc8669b59;
+		constexpr static std::string_view type_name = "AccessibilitySystemConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xc8669b59;
 
-		constexpr const static std::string_view ColorBlindFilters_type_name = "ColorBlindFilters";
-		constexpr const static rivet::rivet_type_id ColorBlindFilters_type_id = 0x51f45b69;
-		constexpr const static std::string_view AccessibilityMaterials_type_name = "AccessibilityMaterials";
-		constexpr const static rivet::rivet_type_id AccessibilityMaterials_type_id = 0xb95dd4c4;
-		constexpr const static std::string_view ControlRemapData_type_name = "ControlRemapData";
-		constexpr const static rivet::rivet_type_id ControlRemapData_type_id = 0x6e300f35; 
+		constexpr static std::string_view ColorBlindFilters_type_name = "ColorBlindFilters";
+		constexpr static rivet::rivet_type_id ColorBlindFilters_type_id = 0x51f45b69;
+		constexpr static std::string_view AccessibilityMaterials_type_name = "AccessibilityMaterials";
+		constexpr static rivet::rivet_type_id AccessibilityMaterials_type_id = 0xb95dd4c4;
+		constexpr static std::string_view ControlRemapData_type_name = "ControlRemapData";
+		constexpr static rivet::rivet_type_id ControlRemapData_type_id = 0x6e300f35; 
 
 		explicit AccessibilitySystemConfig() = default;
 		explicit AccessibilitySystemConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

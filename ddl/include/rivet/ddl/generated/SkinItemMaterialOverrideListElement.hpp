@@ -20,21 +20,21 @@
 #include <rivet/ddl/generated/enums/x7ecfc969.hpp> 
 
 namespace rivet::ddl::generated {
-	struct AssetReferenceDef;
-	struct SkinItemMaterialOverrideListEntry; 
+	struct SkinItemMaterialOverrideListEntry;
+	struct AssetReferenceDef; 
 
 	struct RIVET_DDL_SHARED SkinItemMaterialOverrideListElement : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "SkinItemMaterialOverrideListElement";
-		constexpr const static rivet::rivet_type_id type_id = 0x7e31316b;
+		constexpr static std::string_view type_name = "SkinItemMaterialOverrideListElement";
+		constexpr static rivet::rivet_type_id type_id = 0x7e31316b;
 
-		constexpr const static std::string_view Available_type_name = "Available";
-		constexpr const static rivet::rivet_type_id Available_type_id = 0x27723b89;
-		constexpr const static std::string_view OriginalMaterial_type_name = "OriginalMaterial";
-		constexpr const static rivet::rivet_type_id OriginalMaterial_type_id = 0x3608a389;
-		constexpr const static std::string_view SecondaryOriginalMaterial_type_name = "SecondaryOriginalMaterial";
-		constexpr const static rivet::rivet_type_id SecondaryOriginalMaterial_type_id = 0x73e10018;
-		constexpr const static std::string_view OverrideList_type_name = "OverrideList";
-		constexpr const static rivet::rivet_type_id OverrideList_type_id = 0xeac313d1; 
+		constexpr static std::string_view Available_type_name = "Available";
+		constexpr static rivet::rivet_type_id Available_type_id = 0x27723b89;
+		constexpr static std::string_view OriginalMaterial_type_name = "OriginalMaterial";
+		constexpr static rivet::rivet_type_id OriginalMaterial_type_id = 0x3608a389;
+		constexpr static std::string_view SecondaryOriginalMaterial_type_name = "SecondaryOriginalMaterial";
+		constexpr static rivet::rivet_type_id SecondaryOriginalMaterial_type_id = 0x73e10018;
+		constexpr static std::string_view OverrideList_type_name = "OverrideList";
+		constexpr static rivet::rivet_type_id OverrideList_type_id = 0xeac313d1; 
 
 		explicit SkinItemMaterialOverrideListElement() = default;
 		explicit SkinItemMaterialOverrideListElement([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

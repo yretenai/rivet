@@ -21,19 +21,19 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ShotShakeData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "ShotShakeData";
-		constexpr const static rivet::rivet_type_id type_id = 0x5f97ecbe;
+		constexpr static std::string_view type_name = "ShotShakeData";
+		constexpr static rivet::rivet_type_id type_id = 0x5f97ecbe;
 
-		constexpr const static std::string_view ShakeEvent_type_name = "ShakeEvent";
-		constexpr const static rivet::rivet_type_id ShakeEvent_type_id = 0x33fddf05;
-		constexpr const static std::string_view ShakeConfig_type_name = "ShakeConfig";
-		constexpr const static rivet::rivet_type_id ShakeConfig_type_id = 0x3e5851e0;
-		constexpr const static std::string_view InnerRadius_type_name = "InnerRadius";
-		constexpr const static rivet::rivet_type_id InnerRadius_type_id = 0xf8a3836d;
-		constexpr const static std::string_view OuterRadius_type_name = "OuterRadius";
-		constexpr const static rivet::rivet_type_id OuterRadius_type_id = 0xf6b6fbde;
-		constexpr const static std::string_view LocalOnly_type_name = "LocalOnly";
-		constexpr const static rivet::rivet_type_id LocalOnly_type_id = 0x93f318bc; 
+		constexpr static std::string_view ShakeEvent_type_name = "ShakeEvent";
+		constexpr static rivet::rivet_type_id ShakeEvent_type_id = 0x33fddf05;
+		constexpr static std::string_view ShakeConfig_type_name = "ShakeConfig";
+		constexpr static rivet::rivet_type_id ShakeConfig_type_id = 0x3e5851e0;
+		constexpr static std::string_view InnerRadius_type_name = "InnerRadius";
+		constexpr static rivet::rivet_type_id InnerRadius_type_id = 0xf8a3836d;
+		constexpr static std::string_view OuterRadius_type_name = "OuterRadius";
+		constexpr static rivet::rivet_type_id OuterRadius_type_id = 0xf6b6fbde;
+		constexpr static std::string_view LocalOnly_type_name = "LocalOnly";
+		constexpr static rivet::rivet_type_id LocalOnly_type_id = 0x93f318bc; 
 
 		explicit ShotShakeData() = default;
 		explicit ShotShakeData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

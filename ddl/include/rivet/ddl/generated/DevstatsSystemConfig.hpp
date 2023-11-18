@@ -17,20 +17,20 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/ConfigBase.hpp>
-#include <rivet/ddl/generated/bitsets/xe5616699.hpp> 
+#include <rivet/ddl/generated/bitsets/xe5616699.hpp>
+#include <rivet/ddl/generated/ConfigBase.hpp> 
 
 namespace rivet::ddl::generated {
 	struct DevstatsEventEntry; 
 
 	struct RIVET_DDL_SHARED DevstatsSystemConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "DevstatsSystemConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x86c0710a;
+		constexpr static std::string_view type_name = "DevstatsSystemConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x86c0710a;
 
-		constexpr const static std::string_view EnabledConfigurations_type_name = "EnabledConfigurations";
-		constexpr const static rivet::rivet_type_id EnabledConfigurations_type_id = 0x2cc6ad5e;
-		constexpr const static std::string_view EventTypes_type_name = "EventTypes";
-		constexpr const static rivet::rivet_type_id EventTypes_type_id = 0x129c4bd; 
+		constexpr static std::string_view EnabledConfigurations_type_name = "EnabledConfigurations";
+		constexpr static rivet::rivet_type_id EnabledConfigurations_type_id = 0x2cc6ad5e;
+		constexpr static std::string_view EventTypes_type_name = "EventTypes";
+		constexpr static rivet::rivet_type_id EventTypes_type_id = 0x129c4bd; 
 
 		explicit DevstatsSystemConfig() = default;
 		explicit DevstatsSystemConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

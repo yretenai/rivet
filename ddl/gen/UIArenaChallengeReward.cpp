@@ -3,11 +3,11 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/UIArenaChallengeRewardRaritanium.hpp>
+#include <rivet/ddl/generated/UIArenaChallengeRewardGoldBolt.hpp>
+#include <rivet/ddl/generated/UIArenaChallengeRewardBolts.hpp>
 #include <rivet/ddl/generated/UIArenaChallengeRewardVanity.hpp>
 #include <rivet/ddl/generated/UIArenaChallengeRewardGeneric.hpp>
-#include <rivet/ddl/generated/UIArenaChallengeRewardBolts.hpp>
-#include <rivet/ddl/generated/UIArenaChallengeRewardGoldBolt.hpp> 
+#include <rivet/ddl/generated/UIArenaChallengeRewardRaritanium.hpp> 
 
 #include <rivet/ddl/generated/UIArenaChallengeReward.hpp>
 

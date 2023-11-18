@@ -19,13 +19,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DynamicEnumValueType : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "DynamicEnumValueType";
-		constexpr const static rivet::rivet_type_id type_id = 0x8d528ae0;
+		constexpr static std::string_view type_name = "DynamicEnumValueType";
+		constexpr static rivet::rivet_type_id type_id = 0x8d528ae0;
 
-		constexpr const static std::string_view EnumAsset_type_name = "EnumAsset";
-		constexpr const static rivet::rivet_type_id EnumAsset_type_id = 0xb8179c8d;
-		constexpr const static std::string_view EnumValue_type_name = "EnumValue";
-		constexpr const static rivet::rivet_type_id EnumValue_type_id = 0xa7cf9ee5; 
+		constexpr static std::string_view EnumAsset_type_name = "EnumAsset";
+		constexpr static rivet::rivet_type_id EnumAsset_type_id = 0xb8179c8d;
+		constexpr static std::string_view EnumValue_type_name = "EnumValue";
+		constexpr static rivet::rivet_type_id EnumValue_type_id = 0xa7cf9ee5; 
 
 		explicit DynamicEnumValueType() = default;
 		explicit DynamicEnumValueType([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

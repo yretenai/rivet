@@ -23,17 +23,17 @@ namespace rivet::ddl::generated {
 	struct DamageModifierExplosionPrius; 
 
 	struct RIVET_DDL_SHARED StatusEffectPoisonConfig : StatusEffectConfig {
-		constexpr const static std::string_view type_name = "StatusEffectPoisonConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x4a8c9c12;
+		constexpr static std::string_view type_name = "StatusEffectPoisonConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x4a8c9c12;
 
-		constexpr const static std::string_view DamagePerSecond_type_name = "DamagePerSecond";
-		constexpr const static rivet::rivet_type_id DamagePerSecond_type_id = 0x287ed02a;
-		constexpr const static std::string_view Duration_type_name = "Duration";
-		constexpr const static rivet::rivet_type_id Duration_type_id = 0x7c5e3db0;
-		constexpr const static std::string_view ExplosionData_type_name = "ExplosionData";
-		constexpr const static rivet::rivet_type_id ExplosionData_type_id = 0x7860aa8f;
-		constexpr const static std::string_view VictimMaterialGraph_type_name = "VictimMaterialGraph";
-		constexpr const static rivet::rivet_type_id VictimMaterialGraph_type_id = 0xee2f28cb; 
+		constexpr static std::string_view DamagePerSecond_type_name = "DamagePerSecond";
+		constexpr static rivet::rivet_type_id DamagePerSecond_type_id = 0x287ed02a;
+		constexpr static std::string_view Duration_type_name = "Duration";
+		constexpr static rivet::rivet_type_id Duration_type_id = 0x7c5e3db0;
+		constexpr static std::string_view ExplosionData_type_name = "ExplosionData";
+		constexpr static rivet::rivet_type_id ExplosionData_type_id = 0x7860aa8f;
+		constexpr static std::string_view VictimMaterialGraph_type_name = "VictimMaterialGraph";
+		constexpr static rivet::rivet_type_id VictimMaterialGraph_type_id = 0xee2f28cb; 
 
 		explicit StatusEffectPoisonConfig() = default;
 		explicit StatusEffectPoisonConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

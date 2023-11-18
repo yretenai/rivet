@@ -17,22 +17,22 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/enums/x756cf95f.hpp>
-#include <rivet/ddl/generated/enums/x2d67b08a.hpp> 
+#include <rivet/ddl/generated/enums/x2d67b08a.hpp>
+#include <rivet/ddl/generated/enums/x756cf95f.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ConfigModListElement : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "ConfigModListElement";
-		constexpr const static rivet::rivet_type_id type_id = 0x60522c77;
+		constexpr static std::string_view type_name = "ConfigModListElement";
+		constexpr static rivet::rivet_type_id type_id = 0x60522c77;
 
-		constexpr const static std::string_view ModType_type_name = "ModType";
-		constexpr const static rivet::rivet_type_id ModType_type_id = 0xee5fda6a;
-		constexpr const static std::string_view Op_type_name = "Op";
-		constexpr const static rivet::rivet_type_id Op_type_id = 0xc6d13976;
-		constexpr const static std::string_view Value_type_name = "Value";
-		constexpr const static rivet::rivet_type_id Value_type_id = 0x42494f5;
-		constexpr const static std::string_view ClassId_type_name = "ClassId";
-		constexpr const static rivet::rivet_type_id ClassId_type_id = 0xb9e5f394; 
+		constexpr static std::string_view ModType_type_name = "ModType";
+		constexpr static rivet::rivet_type_id ModType_type_id = 0xee5fda6a;
+		constexpr static std::string_view Op_type_name = "Op";
+		constexpr static rivet::rivet_type_id Op_type_id = 0xc6d13976;
+		constexpr static std::string_view Value_type_name = "Value";
+		constexpr static rivet::rivet_type_id Value_type_id = 0x42494f5;
+		constexpr static std::string_view ClassId_type_name = "ClassId";
+		constexpr static rivet::rivet_type_id ClassId_type_id = 0xb9e5f394; 
 
 		explicit ConfigModListElement() = default;
 		explicit ConfigModListElement([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

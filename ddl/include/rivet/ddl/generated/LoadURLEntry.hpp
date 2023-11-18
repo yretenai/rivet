@@ -19,17 +19,17 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED LoadURLEntry : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "LoadURLEntry";
-		constexpr const static rivet::rivet_type_id type_id = 0x9451883c;
+		constexpr static std::string_view type_name = "LoadURLEntry";
+		constexpr static rivet::rivet_type_id type_id = 0x9451883c;
 
-		constexpr const static std::string_view DisplayName_type_name = "DisplayName";
-		constexpr const static rivet::rivet_type_id DisplayName_type_id = 0xeaf33243;
-		constexpr const static std::string_view URL_type_name = "URL";
-		constexpr const static rivet::rivet_type_id URL_type_id = 0x70c9680d;
-		constexpr const static std::string_view FontFolderPath_type_name = "FontFolderPath";
-		constexpr const static rivet::rivet_type_id FontFolderPath_type_id = 0xe82def0b;
-		constexpr const static std::string_view DefaultFontName_type_name = "DefaultFontName";
-		constexpr const static rivet::rivet_type_id DefaultFontName_type_id = 0x93f16ebb; 
+		constexpr static std::string_view DisplayName_type_name = "DisplayName";
+		constexpr static rivet::rivet_type_id DisplayName_type_id = 0xeaf33243;
+		constexpr static std::string_view URL_type_name = "URL";
+		constexpr static rivet::rivet_type_id URL_type_id = 0x70c9680d;
+		constexpr static std::string_view FontFolderPath_type_name = "FontFolderPath";
+		constexpr static rivet::rivet_type_id FontFolderPath_type_id = 0xe82def0b;
+		constexpr static std::string_view DefaultFontName_type_name = "DefaultFontName";
+		constexpr static rivet::rivet_type_id DefaultFontName_type_id = 0x93f16ebb; 
 
 		explicit LoadURLEntry() = default;
 		explicit LoadURLEntry([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

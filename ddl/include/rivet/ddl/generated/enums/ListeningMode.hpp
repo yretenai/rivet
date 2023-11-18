@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view ListeningMode_type_name = "ListeningMode";
-	constexpr const static rivet::rivet_type_id ListeningMode_type_id = 0x4b360d91;
+	constexpr static std::string_view ListeningMode_type_name = "ListeningMode";
+	constexpr static rivet::rivet_type_id ListeningMode_type_id = 0x4b360d91;
 
-	constexpr const static std::array<std::string_view, 4> ListeningMode_values = {
+	constexpr static std::array<std::string_view, 4> ListeningMode_values = {
 		"kListeningModeSpeakers",
 		"kListeningModeHeadphones",
 		"kListeningModeSoundBar",

@@ -3,17 +3,17 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/ShotMotionBasePrius.hpp>
-#include <rivet/ddl/generated/NodalShotBasePrius.hpp>
-#include <rivet/ddl/generated/ShotShakeData.hpp>
-#include <rivet/ddl/generated/ScriptedShotPrius.hpp>
-#include <rivet/ddl/generated/SimpleShotPrius.hpp>
-#include <rivet/ddl/generated/ShotSchrodingerPrius.hpp>
-#include <rivet/ddl/generated/ShotSwingshotPrius.hpp>
-#include <rivet/ddl/generated/BotLaserShotPrius.hpp>
 #include <rivet/ddl/generated/BeamShotPrius.hpp>
 #include <rivet/ddl/generated/GrappleHookShotPrius.hpp>
-#include <rivet/ddl/generated/FlyerPickupShotPrius.hpp> 
+#include <rivet/ddl/generated/ShotSchrodingerPrius.hpp>
+#include <rivet/ddl/generated/ScriptedShotPrius.hpp>
+#include <rivet/ddl/generated/ShotSwingshotPrius.hpp>
+#include <rivet/ddl/generated/BotLaserShotPrius.hpp>
+#include <rivet/ddl/generated/NodalShotBasePrius.hpp>
+#include <rivet/ddl/generated/SimpleShotPrius.hpp>
+#include <rivet/ddl/generated/FlyerPickupShotPrius.hpp>
+#include <rivet/ddl/generated/ShotShakeData.hpp>
+#include <rivet/ddl/generated/ShotMotionBasePrius.hpp> 
 
 #include <rivet/ddl/generated/ShotBasePrius.hpp>
 

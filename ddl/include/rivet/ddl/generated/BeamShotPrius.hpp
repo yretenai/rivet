@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED BeamShotPrius : ShotBasePrius {
-		constexpr const static std::string_view type_name = "BeamShotPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xdbeb5902;
+		constexpr static std::string_view type_name = "BeamShotPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xdbeb5902;
 
-		constexpr const static std::string_view ImpactJoint_type_name = "ImpactJoint";
-		constexpr const static rivet::rivet_type_id ImpactJoint_type_id = 0xb5c2190b; 
+		constexpr static std::string_view ImpactJoint_type_name = "ImpactJoint";
+		constexpr static rivet::rivet_type_id ImpactJoint_type_id = 0xb5c2190b; 
 
 		explicit BeamShotPrius() = default;
 		explicit BeamShotPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

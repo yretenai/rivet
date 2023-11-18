@@ -20,20 +20,20 @@
 #include <rivet/ddl/generated/StatusEffectConfig.hpp> 
 
 namespace rivet::ddl::generated {
+	struct FreezeSlideData;
 	struct FreezeShatterData;
-	struct FreezeShaderData;
-	struct FreezeSlideData; 
+	struct FreezeShaderData; 
 
 	struct RIVET_DDL_SHARED StatusEffectFreezeConfig : StatusEffectConfig {
-		constexpr const static std::string_view type_name = "StatusEffectFreezeConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x3f71ed02;
+		constexpr static std::string_view type_name = "StatusEffectFreezeConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x3f71ed02;
 
-		constexpr const static std::string_view ShaderData_type_name = "ShaderData";
-		constexpr const static rivet::rivet_type_id ShaderData_type_id = 0x566f4dbc;
-		constexpr const static std::string_view ShatterData_type_name = "ShatterData";
-		constexpr const static rivet::rivet_type_id ShatterData_type_id = 0xcf20c0f3;
-		constexpr const static std::string_view SlideData_type_name = "SlideData";
-		constexpr const static rivet::rivet_type_id SlideData_type_id = 0xda82fe40; 
+		constexpr static std::string_view ShaderData_type_name = "ShaderData";
+		constexpr static rivet::rivet_type_id ShaderData_type_id = 0x566f4dbc;
+		constexpr static std::string_view ShatterData_type_name = "ShatterData";
+		constexpr static rivet::rivet_type_id ShatterData_type_id = 0xcf20c0f3;
+		constexpr static std::string_view SlideData_type_name = "SlideData";
+		constexpr static rivet::rivet_type_id SlideData_type_id = 0xda82fe40; 
 
 		explicit StatusEffectFreezeConfig() = default;
 		explicit StatusEffectFreezeConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct ZoomData; 
 
 	struct RIVET_DDL_SHARED ZoomConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "ZoomConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xdb4379b0;
+		constexpr static std::string_view type_name = "ZoomConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xdb4379b0;
 
-		constexpr const static std::string_view ZoomLevels_type_name = "ZoomLevels";
-		constexpr const static rivet::rivet_type_id ZoomLevels_type_id = 0x90e332d5; 
+		constexpr static std::string_view ZoomLevels_type_name = "ZoomLevels";
+		constexpr static rivet::rivet_type_id ZoomLevels_type_id = 0x90e332d5; 
 
 		explicit ZoomConfig() = default;
 		explicit ZoomConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

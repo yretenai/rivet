@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED HorizontalAngleOffsetEmitterPrius : LocalOffsetEmitterPrius {
-		constexpr const static std::string_view type_name = "HorizontalAngleOffsetEmitterPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x218e3a54;
+		constexpr static std::string_view type_name = "HorizontalAngleOffsetEmitterPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x218e3a54;
 
-		constexpr const static std::string_view OffsetDegrees_type_name = "OffsetDegrees";
-		constexpr const static rivet::rivet_type_id OffsetDegrees_type_id = 0xd8d3e193; 
+		constexpr static std::string_view OffsetDegrees_type_name = "OffsetDegrees";
+		constexpr static rivet::rivet_type_id OffsetDegrees_type_id = 0xd8d3e193; 
 
 		explicit HorizontalAngleOffsetEmitterPrius() = default;
 		explicit HorizontalAngleOffsetEmitterPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct MacroModeData; 
 
 	struct RIVET_DDL_SHARED GameMacroConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "GameMacroConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x5283f13b;
+		constexpr static std::string_view type_name = "GameMacroConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x5283f13b;
 
-		constexpr const static std::string_view Modes_type_name = "Modes";
-		constexpr const static rivet::rivet_type_id Modes_type_id = 0x43ceb3ed; 
+		constexpr static std::string_view Modes_type_name = "Modes";
+		constexpr static rivet::rivet_type_id Modes_type_id = 0x43ceb3ed; 
 
 		explicit GameMacroConfig() = default;
 		explicit GameMacroConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

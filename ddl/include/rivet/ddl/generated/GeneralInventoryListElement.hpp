@@ -19,11 +19,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED GeneralInventoryListElement : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "GeneralInventoryListElement";
-		constexpr const static rivet::rivet_type_id type_id = 0xe7ea02c4;
+		constexpr static std::string_view type_name = "GeneralInventoryListElement";
+		constexpr static rivet::rivet_type_id type_id = 0xe7ea02c4;
 
-		constexpr const static std::string_view ItemConfigFile_type_name = "ItemConfigFile";
-		constexpr const static rivet::rivet_type_id ItemConfigFile_type_id = 0x22c4a442; 
+		constexpr static std::string_view ItemConfigFile_type_name = "ItemConfigFile";
+		constexpr static rivet::rivet_type_id ItemConfigFile_type_id = 0x22c4a442; 
 
 		explicit GeneralInventoryListElement() = default;
 		explicit GeneralInventoryListElement([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

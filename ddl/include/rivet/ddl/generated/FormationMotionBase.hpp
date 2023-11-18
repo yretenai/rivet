@@ -19,8 +19,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED FormationMotionBase : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "FormationMotionBase";
-		constexpr const static rivet::rivet_type_id type_id = 0xb3dec838;
+		constexpr static std::string_view type_name = "FormationMotionBase";
+		constexpr static rivet::rivet_type_id type_id = 0xb3dec838;
 
 		explicit FormationMotionBase() = default;
 		explicit FormationMotionBase([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view BotUsage_type_name = "BotUsage";
-	constexpr const static rivet::rivet_type_id BotUsage_type_id = 0x37a8306d;
+	constexpr static std::string_view BotUsage_type_name = "BotUsage";
+	constexpr static rivet::rivet_type_id BotUsage_type_id = 0x37a8306d;
 
-	constexpr const static std::array<std::string_view, 4> BotUsage_values = {
+	constexpr static std::array<std::string_view, 4> BotUsage_values = {
 		"EnemyGround",
 		"EnemyAir",
 		"Ally",

@@ -19,29 +19,29 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED StatusEffectTrackerBasePrius : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "StatusEffectTrackerBasePrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xa5fcb80d;
+		constexpr static std::string_view type_name = "StatusEffectTrackerBasePrius";
+		constexpr static rivet::rivet_type_id type_id = 0xa5fcb80d;
 
-		constexpr const static std::string_view Threshhold_type_name = "Threshhold";
-		constexpr const static rivet::rivet_type_id Threshhold_type_id = 0xd245446;
-		constexpr const static std::string_view DecayRate_type_name = "DecayRate";
-		constexpr const static rivet::rivet_type_id DecayRate_type_id = 0x2edeb2f7;
-		constexpr const static std::string_view DecayDelay_type_name = "DecayDelay";
-		constexpr const static rivet::rivet_type_id DecayDelay_type_id = 0x1cb5b22c;
-		constexpr const static std::string_view Vulnerability_type_name = "Vulnerability";
-		constexpr const static rivet::rivet_type_id Vulnerability_type_id = 0x5337a2d2;
-		constexpr const static std::string_view DurationMod_type_name = "DurationMod";
-		constexpr const static rivet::rivet_type_id DurationMod_type_id = 0xf39d069b;
-		constexpr const static std::string_view CooldownMod_type_name = "CooldownMod";
-		constexpr const static rivet::rivet_type_id CooldownMod_type_id = 0xcdb7115e;
-		constexpr const static std::string_view AllowRefresh_type_name = "AllowRefresh";
-		constexpr const static rivet::rivet_type_id AllowRefresh_type_id = 0x8da6ae6c;
-		constexpr const static std::string_view AllowProportionalRefresh_type_name = "AllowProportionalRefresh";
-		constexpr const static rivet::rivet_type_id AllowProportionalRefresh_type_id = 0x73683995;
-		constexpr const static std::string_view AllowIfDead_type_name = "AllowIfDead";
-		constexpr const static rivet::rivet_type_id AllowIfDead_type_id = 0x74ff837c;
-		constexpr const static std::string_view OnlyApplyOnDeath_type_name = "OnlyApplyOnDeath";
-		constexpr const static rivet::rivet_type_id OnlyApplyOnDeath_type_id = 0xe4e0dda4; 
+		constexpr static std::string_view Threshhold_type_name = "Threshhold";
+		constexpr static rivet::rivet_type_id Threshhold_type_id = 0xd245446;
+		constexpr static std::string_view DecayRate_type_name = "DecayRate";
+		constexpr static rivet::rivet_type_id DecayRate_type_id = 0x2edeb2f7;
+		constexpr static std::string_view DecayDelay_type_name = "DecayDelay";
+		constexpr static rivet::rivet_type_id DecayDelay_type_id = 0x1cb5b22c;
+		constexpr static std::string_view Vulnerability_type_name = "Vulnerability";
+		constexpr static rivet::rivet_type_id Vulnerability_type_id = 0x5337a2d2;
+		constexpr static std::string_view DurationMod_type_name = "DurationMod";
+		constexpr static rivet::rivet_type_id DurationMod_type_id = 0xf39d069b;
+		constexpr static std::string_view CooldownMod_type_name = "CooldownMod";
+		constexpr static rivet::rivet_type_id CooldownMod_type_id = 0xcdb7115e;
+		constexpr static std::string_view AllowRefresh_type_name = "AllowRefresh";
+		constexpr static rivet::rivet_type_id AllowRefresh_type_id = 0x8da6ae6c;
+		constexpr static std::string_view AllowProportionalRefresh_type_name = "AllowProportionalRefresh";
+		constexpr static rivet::rivet_type_id AllowProportionalRefresh_type_id = 0x73683995;
+		constexpr static std::string_view AllowIfDead_type_name = "AllowIfDead";
+		constexpr static rivet::rivet_type_id AllowIfDead_type_id = 0x74ff837c;
+		constexpr static std::string_view OnlyApplyOnDeath_type_name = "OnlyApplyOnDeath";
+		constexpr static rivet::rivet_type_id OnlyApplyOnDeath_type_id = 0xe4e0dda4; 
 
 		explicit StatusEffectTrackerBasePrius() = default;
 		explicit StatusEffectTrackerBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

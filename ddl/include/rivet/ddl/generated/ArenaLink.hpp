@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ArenaLink : ParentLink {
-		constexpr const static std::string_view type_name = "ArenaLink";
-		constexpr const static rivet::rivet_type_id type_id = 0x396132ee;
+		constexpr static std::string_view type_name = "ArenaLink";
+		constexpr static rivet::rivet_type_id type_id = 0x396132ee;
 
-		constexpr const static std::string_view Checkpoint_type_name = "Checkpoint";
-		constexpr const static rivet::rivet_type_id Checkpoint_type_id = 0xd436a987; 
+		constexpr static std::string_view Checkpoint_type_name = "Checkpoint";
+		constexpr static rivet::rivet_type_id Checkpoint_type_id = 0xd436a987; 
 
 		explicit ArenaLink() = default;
 		explicit ArenaLink([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

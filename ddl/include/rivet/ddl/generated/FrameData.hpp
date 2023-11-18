@@ -18,19 +18,19 @@
 #include <rivet/structures/rivet_serialization.hpp>
 
 namespace rivet::ddl::generated {
-	struct PhotoFrameUnlock;
-	struct AssetReferenceDef; 
+	struct AssetReferenceDef;
+	struct PhotoFrameUnlock; 
 
 	struct RIVET_DDL_SHARED FrameData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "FrameData";
-		constexpr const static rivet::rivet_type_id type_id = 0x4104c5c8;
+		constexpr static std::string_view type_name = "FrameData";
+		constexpr static rivet::rivet_type_id type_id = 0x4104c5c8;
 
-		constexpr const static std::string_view Name_type_name = "Name";
-		constexpr const static rivet::rivet_type_id Name_type_id = 0x6eb3beb6;
-		constexpr const static std::string_view Unlocks_type_name = "Unlocks";
-		constexpr const static rivet::rivet_type_id Unlocks_type_id = 0x2a3bb76a;
-		constexpr const static std::string_view FrameRef_type_name = "FrameRef";
-		constexpr const static rivet::rivet_type_id FrameRef_type_id = 0x8fc1c344; 
+		constexpr static std::string_view Name_type_name = "Name";
+		constexpr static rivet::rivet_type_id Name_type_id = 0x6eb3beb6;
+		constexpr static std::string_view Unlocks_type_name = "Unlocks";
+		constexpr static rivet::rivet_type_id Unlocks_type_id = 0x2a3bb76a;
+		constexpr static std::string_view FrameRef_type_name = "FrameRef";
+		constexpr static rivet::rivet_type_id FrameRef_type_id = 0x8fc1c344; 
 
 		explicit FrameData() = default;
 		explicit FrameData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

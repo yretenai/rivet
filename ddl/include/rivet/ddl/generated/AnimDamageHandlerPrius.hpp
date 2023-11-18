@@ -21,17 +21,17 @@ namespace rivet::ddl::generated {
 	struct AnimDamageAttack; 
 
 	struct RIVET_DDL_SHARED AnimDamageHandlerPrius : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "AnimDamageHandlerPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xcdbccce9;
+		constexpr static std::string_view type_name = "AnimDamageHandlerPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xcdbccce9;
 
-		constexpr const static std::string_view DeferAnimDamageWarning_type_name = "DeferAnimDamageWarning";
-		constexpr const static rivet::rivet_type_id DeferAnimDamageWarning_type_id = 0x5494c7f6;
-		constexpr const static std::string_view DeferAnimDamage_type_name = "DeferAnimDamage";
-		constexpr const static rivet::rivet_type_id DeferAnimDamage_type_id = 0xcb17b7e3;
-		constexpr const static std::string_view ApplyActorScale_type_name = "ApplyActorScale";
-		constexpr const static rivet::rivet_type_id ApplyActorScale_type_id = 0x3b6cec91;
-		constexpr const static std::string_view AttackIndices_type_name = "AttackIndices";
-		constexpr const static rivet::rivet_type_id AttackIndices_type_id = 0xe73af6d; 
+		constexpr static std::string_view DeferAnimDamageWarning_type_name = "DeferAnimDamageWarning";
+		constexpr static rivet::rivet_type_id DeferAnimDamageWarning_type_id = 0x5494c7f6;
+		constexpr static std::string_view DeferAnimDamage_type_name = "DeferAnimDamage";
+		constexpr static rivet::rivet_type_id DeferAnimDamage_type_id = 0xcb17b7e3;
+		constexpr static std::string_view ApplyActorScale_type_name = "ApplyActorScale";
+		constexpr static rivet::rivet_type_id ApplyActorScale_type_id = 0x3b6cec91;
+		constexpr static std::string_view AttackIndices_type_name = "AttackIndices";
+		constexpr static rivet::rivet_type_id AttackIndices_type_id = 0xe73af6d; 
 
 		explicit AnimDamageHandlerPrius() = default;
 		explicit AnimDamageHandlerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

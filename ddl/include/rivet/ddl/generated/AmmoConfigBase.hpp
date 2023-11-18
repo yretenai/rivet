@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED AmmoConfigBase : ConfigBase {
-		constexpr const static std::string_view type_name = "AmmoConfigBase";
-		constexpr const static rivet::rivet_type_id type_id = 0x30441108;
+		constexpr static std::string_view type_name = "AmmoConfigBase";
+		constexpr static rivet::rivet_type_id type_id = 0x30441108;
 
-		constexpr const static std::string_view MaxReserveAmmo_type_name = "MaxReserveAmmo";
-		constexpr const static rivet::rivet_type_id MaxReserveAmmo_type_id = 0x9679a035; 
+		constexpr static std::string_view MaxReserveAmmo_type_name = "MaxReserveAmmo";
+		constexpr static rivet::rivet_type_id MaxReserveAmmo_type_id = 0x9679a035; 
 
 		explicit AmmoConfigBase() = default;
 		explicit AmmoConfigBase([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

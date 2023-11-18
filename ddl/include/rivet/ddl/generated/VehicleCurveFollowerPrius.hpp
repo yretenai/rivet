@@ -19,21 +19,21 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED VehicleCurveFollowerPrius : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "VehicleCurveFollowerPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x4dda3ad0;
+		constexpr static std::string_view type_name = "VehicleCurveFollowerPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x4dda3ad0;
 
-		constexpr const static std::string_view Accel_type_name = "Accel";
-		constexpr const static rivet::rivet_type_id Accel_type_id = 0x44affa24;
-		constexpr const static std::string_view Decel_type_name = "Decel";
-		constexpr const static rivet::rivet_type_id Decel_type_id = 0xa9242a88;
-		constexpr const static std::string_view BankAccel_type_name = "BankAccel";
-		constexpr const static rivet::rivet_type_id BankAccel_type_id = 0xe985a478;
-		constexpr const static std::string_view MaxBankSpeed_type_name = "MaxBankSpeed";
-		constexpr const static rivet::rivet_type_id MaxBankSpeed_type_id = 0x27387af7;
-		constexpr const static std::string_view BankLookaheadTime_type_name = "BankLookaheadTime";
-		constexpr const static rivet::rivet_type_id BankLookaheadTime_type_id = 0x9b2a0818;
-		constexpr const static std::string_view MaxBankAngle_type_name = "MaxBankAngle";
-		constexpr const static rivet::rivet_type_id MaxBankAngle_type_id = 0x289fc108; 
+		constexpr static std::string_view Accel_type_name = "Accel";
+		constexpr static rivet::rivet_type_id Accel_type_id = 0x44affa24;
+		constexpr static std::string_view Decel_type_name = "Decel";
+		constexpr static rivet::rivet_type_id Decel_type_id = 0xa9242a88;
+		constexpr static std::string_view BankAccel_type_name = "BankAccel";
+		constexpr static rivet::rivet_type_id BankAccel_type_id = 0xe985a478;
+		constexpr static std::string_view MaxBankSpeed_type_name = "MaxBankSpeed";
+		constexpr static rivet::rivet_type_id MaxBankSpeed_type_id = 0x27387af7;
+		constexpr static std::string_view BankLookaheadTime_type_name = "BankLookaheadTime";
+		constexpr static rivet::rivet_type_id BankLookaheadTime_type_id = 0x9b2a0818;
+		constexpr static std::string_view MaxBankAngle_type_name = "MaxBankAngle";
+		constexpr static rivet::rivet_type_id MaxBankAngle_type_id = 0x289fc108; 
 
 		explicit VehicleCurveFollowerPrius() = default;
 		explicit VehicleCurveFollowerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

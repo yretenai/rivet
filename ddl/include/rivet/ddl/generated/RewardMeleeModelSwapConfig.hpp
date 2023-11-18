@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct MeleeModelSwapData; 
 
 	struct RIVET_DDL_SHARED RewardMeleeModelSwapConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "RewardMeleeModelSwapConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x7b69db64;
+		constexpr static std::string_view type_name = "RewardMeleeModelSwapConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x7b69db64;
 
-		constexpr const static std::string_view MeleeModelSwapData_type_name = "MeleeModelSwapData";
-		constexpr const static rivet::rivet_type_id MeleeModelSwapData_type_id = 0x9ab26759; 
+		constexpr static std::string_view MeleeModelSwapData_type_name = "MeleeModelSwapData";
+		constexpr static rivet::rivet_type_id MeleeModelSwapData_type_id = 0x9ab26759; 
 
 		explicit RewardMeleeModelSwapConfig() = default;
 		explicit RewardMeleeModelSwapConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -21,21 +21,21 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DEVOLineMemoryWriteback : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "DEVOLineMemoryWriteback";
-		constexpr const static rivet::rivet_type_id type_id = 0xe0643e70;
+		constexpr static std::string_view type_name = "DEVOLineMemoryWriteback";
+		constexpr static rivet::rivet_type_id type_id = 0xe0643e70;
 
-		constexpr const static std::string_view FactKey_type_name = "FactKey";
-		constexpr const static rivet::rivet_type_id FactKey_type_id = 0xc01b176b;
-		constexpr const static std::string_view ValueString_type_name = "ValueString";
-		constexpr const static rivet::rivet_type_id ValueString_type_id = 0x61508ff3;
-		constexpr const static std::string_view ValueNumeric_type_name = "ValueNumeric";
-		constexpr const static rivet::rivet_type_id ValueNumeric_type_id = 0x1ee22511;
-		constexpr const static std::string_view Duration_type_name = "Duration";
-		constexpr const static rivet::rivet_type_id Duration_type_id = 0x7c5e3db0;
-		constexpr const static std::string_view Whom_type_name = "Whom";
-		constexpr const static rivet::rivet_type_id Whom_type_id = 0x709e779c;
-		constexpr const static std::string_view IsDelta_type_name = "IsDelta";
-		constexpr const static rivet::rivet_type_id IsDelta_type_id = 0x9ebeecdf; 
+		constexpr static std::string_view FactKey_type_name = "FactKey";
+		constexpr static rivet::rivet_type_id FactKey_type_id = 0xc01b176b;
+		constexpr static std::string_view ValueString_type_name = "ValueString";
+		constexpr static rivet::rivet_type_id ValueString_type_id = 0x61508ff3;
+		constexpr static std::string_view ValueNumeric_type_name = "ValueNumeric";
+		constexpr static rivet::rivet_type_id ValueNumeric_type_id = 0x1ee22511;
+		constexpr static std::string_view Duration_type_name = "Duration";
+		constexpr static rivet::rivet_type_id Duration_type_id = 0x7c5e3db0;
+		constexpr static std::string_view Whom_type_name = "Whom";
+		constexpr static rivet::rivet_type_id Whom_type_id = 0x709e779c;
+		constexpr static std::string_view IsDelta_type_name = "IsDelta";
+		constexpr static rivet::rivet_type_id IsDelta_type_id = 0x9ebeecdf; 
 
 		explicit DEVOLineMemoryWriteback() = default;
 		explicit DEVOLineMemoryWriteback([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

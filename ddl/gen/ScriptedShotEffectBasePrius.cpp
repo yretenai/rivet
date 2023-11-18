@@ -3,29 +3,29 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/HealEffectPrius.hpp>
-#include <rivet/ddl/generated/ScriptedShotConditionalBasePrius.hpp>
-#include <rivet/ddl/generated/AttachToActorEffectPrius.hpp>
-#include <rivet/ddl/generated/CreatePersistantAOEPrius.hpp>
-#include <rivet/ddl/generated/AttachToHitSurfaceEffectPrius.hpp>
-#include <rivet/ddl/generated/CameraShakeShotEffectPrius.hpp>
-#include <rivet/ddl/generated/ForwardingShotEffectPrius.hpp>
-#include <rivet/ddl/generated/ContinueShotMotionEffectPrius.hpp>
-#include <rivet/ddl/generated/ToggleLightsEffectPrius.hpp>
-#include <rivet/ddl/generated/SpawnSyncedActorEffectPrius.hpp>
-#include <rivet/ddl/generated/PlayAnimEffectPrius.hpp>
-#include <rivet/ddl/generated/SpawnShotEffectPrius.hpp>
-#include <rivet/ddl/generated/ExplodeShotEffectPrius.hpp>
-#include <rivet/ddl/generated/SpawnSyncedActorForHitEffectPrius.hpp>
-#include <rivet/ddl/generated/DealDamageEffectPrius.hpp>
-#include <rivet/ddl/generated/CreateAOEPrius.hpp>
-#include <rivet/ddl/generated/DontDestroyShotAfterCollisionEffectPrius.hpp>
-#include <rivet/ddl/generated/AddStatModifierEffectPrius.hpp>
-#include <rivet/ddl/generated/AddStatusEffectShotEffectPrius.hpp>
-#include <rivet/ddl/generated/BounceShotEffectPrius.hpp>
 #include <rivet/ddl/generated/TriggerConduitEventEffectPrius.hpp>
+#include <rivet/ddl/generated/AddStatusEffectShotEffectPrius.hpp>
 #include <rivet/ddl/generated/DestroyShotEffectPrius.hpp>
-#include <rivet/ddl/generated/EnterRagdollStatePrius.hpp> 
+#include <rivet/ddl/generated/CreateAOEPrius.hpp>
+#include <rivet/ddl/generated/DealDamageEffectPrius.hpp>
+#include <rivet/ddl/generated/AddStatModifierEffectPrius.hpp>
+#include <rivet/ddl/generated/ScriptedShotConditionalBasePrius.hpp>
+#include <rivet/ddl/generated/EnterRagdollStatePrius.hpp>
+#include <rivet/ddl/generated/DontDestroyShotAfterCollisionEffectPrius.hpp>
+#include <rivet/ddl/generated/SpawnSyncedActorEffectPrius.hpp>
+#include <rivet/ddl/generated/AttachToActorEffectPrius.hpp>
+#include <rivet/ddl/generated/BounceShotEffectPrius.hpp>
+#include <rivet/ddl/generated/HealEffectPrius.hpp>
+#include <rivet/ddl/generated/CreatePersistantAOEPrius.hpp>
+#include <rivet/ddl/generated/SpawnShotEffectPrius.hpp>
+#include <rivet/ddl/generated/CameraShakeShotEffectPrius.hpp>
+#include <rivet/ddl/generated/AttachToHitSurfaceEffectPrius.hpp>
+#include <rivet/ddl/generated/ContinueShotMotionEffectPrius.hpp>
+#include <rivet/ddl/generated/PlayAnimEffectPrius.hpp>
+#include <rivet/ddl/generated/ForwardingShotEffectPrius.hpp>
+#include <rivet/ddl/generated/ToggleLightsEffectPrius.hpp>
+#include <rivet/ddl/generated/ExplodeShotEffectPrius.hpp>
+#include <rivet/ddl/generated/SpawnSyncedActorForHitEffectPrius.hpp> 
 
 #include <rivet/ddl/generated/ScriptedShotEffectBasePrius.hpp>
 

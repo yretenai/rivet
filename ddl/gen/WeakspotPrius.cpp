@@ -3,10 +3,10 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/NefariousFinaleWeakspotPrius.hpp>
-#include <rivet/ddl/generated/WeakspotDestructiblePrius.hpp>
+#include <rivet/ddl/generated/WeakspotFilteredPrius.hpp>
 #include <rivet/ddl/generated/WeakspotRadiusBasedPrius.hpp>
-#include <rivet/ddl/generated/WeakspotFilteredPrius.hpp> 
+#include <rivet/ddl/generated/WeakspotDestructiblePrius.hpp>
+#include <rivet/ddl/generated/NefariousFinaleWeakspotPrius.hpp> 
 
 #include <rivet/ddl/generated/WeakspotPrius.hpp>
 

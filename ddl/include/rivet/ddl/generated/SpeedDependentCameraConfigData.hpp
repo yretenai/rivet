@@ -18,23 +18,23 @@
 #include <rivet/structures/rivet_serialization.hpp>
 
 namespace rivet::ddl::generated {
-	struct CameraAimContextConfig;
-	struct FollowCameraUserConfig; 
+	struct FollowCameraUserConfig;
+	struct CameraAimContextConfig; 
 
 	struct RIVET_DDL_SHARED SpeedDependentCameraConfigData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "SpeedDependentCameraConfigData";
-		constexpr const static rivet::rivet_type_id type_id = 0x54ebe33a;
+		constexpr static std::string_view type_name = "SpeedDependentCameraConfigData";
+		constexpr static rivet::rivet_type_id type_id = 0x54ebe33a;
 
-		constexpr const static std::string_view Speed_type_name = "Speed";
-		constexpr const static rivet::rivet_type_id Speed_type_id = 0x16753237;
-		constexpr const static std::string_view AimContext_type_name = "AimContext";
-		constexpr const static rivet::rivet_type_id AimContext_type_id = 0xd3bb808;
-		constexpr const static std::string_view FollowCameraConfig_type_name = "FollowCameraConfig";
-		constexpr const static rivet::rivet_type_id FollowCameraConfig_type_id = 0x5afbbea3;
-		constexpr const static std::string_view UseFollowConfigOverride_type_name = "UseFollowConfigOverride";
-		constexpr const static rivet::rivet_type_id UseFollowConfigOverride_type_id = 0x26755e46;
-		constexpr const static std::string_view AllowCameraInput_type_name = "AllowCameraInput";
-		constexpr const static rivet::rivet_type_id AllowCameraInput_type_id = 0xc114162f; 
+		constexpr static std::string_view Speed_type_name = "Speed";
+		constexpr static rivet::rivet_type_id Speed_type_id = 0x16753237;
+		constexpr static std::string_view AimContext_type_name = "AimContext";
+		constexpr static rivet::rivet_type_id AimContext_type_id = 0xd3bb808;
+		constexpr static std::string_view FollowCameraConfig_type_name = "FollowCameraConfig";
+		constexpr static rivet::rivet_type_id FollowCameraConfig_type_id = 0x5afbbea3;
+		constexpr static std::string_view UseFollowConfigOverride_type_name = "UseFollowConfigOverride";
+		constexpr static rivet::rivet_type_id UseFollowConfigOverride_type_id = 0x26755e46;
+		constexpr static std::string_view AllowCameraInput_type_name = "AllowCameraInput";
+		constexpr static rivet::rivet_type_id AllowCameraInput_type_id = 0xc114162f; 
 
 		explicit SpeedDependentCameraConfigData() = default;
 		explicit SpeedDependentCameraConfigData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

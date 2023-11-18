@@ -21,15 +21,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DebugPlaytestHeroInfo : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "DebugPlaytestHeroInfo";
-		constexpr const static rivet::rivet_type_id type_id = 0xadf8cd7a;
+		constexpr static std::string_view type_name = "DebugPlaytestHeroInfo";
+		constexpr static rivet::rivet_type_id type_id = 0xadf8cd7a;
 
-		constexpr const static std::string_view SpawnAsHero_type_name = "SpawnAsHero";
-		constexpr const static rivet::rivet_type_id SpawnAsHero_type_id = 0xeb1836f9;
-		constexpr const static std::string_view SpawnLoadout_type_name = "SpawnLoadout";
-		constexpr const static rivet::rivet_type_id SpawnLoadout_type_id = 0x569fa463;
-		constexpr const static std::string_view BackpackLoadout_type_name = "BackpackLoadout";
-		constexpr const static rivet::rivet_type_id BackpackLoadout_type_id = 0xc1772340; 
+		constexpr static std::string_view SpawnAsHero_type_name = "SpawnAsHero";
+		constexpr static rivet::rivet_type_id SpawnAsHero_type_id = 0xeb1836f9;
+		constexpr static std::string_view SpawnLoadout_type_name = "SpawnLoadout";
+		constexpr static rivet::rivet_type_id SpawnLoadout_type_id = 0x569fa463;
+		constexpr static std::string_view BackpackLoadout_type_name = "BackpackLoadout";
+		constexpr static rivet::rivet_type_id BackpackLoadout_type_id = 0xc1772340; 
 
 		explicit DebugPlaytestHeroInfo() = default;
 		explicit DebugPlaytestHeroInfo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

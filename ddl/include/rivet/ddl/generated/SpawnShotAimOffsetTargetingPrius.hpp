@@ -23,15 +23,15 @@ namespace rivet::ddl::generated {
 	struct DDLVector3; 
 
 	struct RIVET_DDL_SHARED SpawnShotAimOffsetTargetingPrius : SpawnShotTargetingPrius {
-		constexpr const static std::string_view type_name = "SpawnShotAimOffsetTargetingPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xfe20515b;
+		constexpr static std::string_view type_name = "SpawnShotAimOffsetTargetingPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xfe20515b;
 
-		constexpr const static std::string_view AimOffset_type_name = "AimOffset";
-		constexpr const static rivet::rivet_type_id AimOffset_type_id = 0xe54de6b5;
-		constexpr const static std::string_view AimOffsetSmall_type_name = "AimOffsetSmall";
-		constexpr const static rivet::rivet_type_id AimOffsetSmall_type_id = 0x2deb2b0;
-		constexpr const static std::string_view AimOffsetLarge_type_name = "AimOffsetLarge";
-		constexpr const static rivet::rivet_type_id AimOffsetLarge_type_id = 0x2ef0711d; 
+		constexpr static std::string_view AimOffset_type_name = "AimOffset";
+		constexpr static rivet::rivet_type_id AimOffset_type_id = 0xe54de6b5;
+		constexpr static std::string_view AimOffsetSmall_type_name = "AimOffsetSmall";
+		constexpr static rivet::rivet_type_id AimOffsetSmall_type_id = 0x2deb2b0;
+		constexpr static std::string_view AimOffsetLarge_type_name = "AimOffsetLarge";
+		constexpr static rivet::rivet_type_id AimOffsetLarge_type_id = 0x2ef0711d; 
 
 		explicit SpawnShotAimOffsetTargetingPrius() = default;
 		explicit SpawnShotAimOffsetTargetingPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

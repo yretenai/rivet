@@ -23,19 +23,19 @@ namespace rivet::ddl::generated {
 	struct ScriptedShotEffectListElement; 
 
 	struct RIVET_DDL_SHARED CreateAOEPrius : ScriptedShotEffectBasePrius {
-		constexpr const static std::string_view type_name = "CreateAOEPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x4c8cfecd;
+		constexpr static std::string_view type_name = "CreateAOEPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x4c8cfecd;
 
-		constexpr const static std::string_view Radius_type_name = "Radius";
-		constexpr const static rivet::rivet_type_id Radius_type_id = 0x504203d;
-		constexpr const static std::string_view LOS_type_name = "LOS";
-		constexpr const static rivet::rivet_type_id LOS_type_id = 0x115a911b;
-		constexpr const static std::string_view TriggerExplode_type_name = "TriggerExplode";
-		constexpr const static rivet::rivet_type_id TriggerExplode_type_id = 0xab842fb0;
-		constexpr const static std::string_view IgnoreHitActor_type_name = "IgnoreHitActor";
-		constexpr const static rivet::rivet_type_id IgnoreHitActor_type_id = 0x39c79f3;
-		constexpr const static std::string_view AOESubEffects_type_name = "AOESubEffects";
-		constexpr const static rivet::rivet_type_id AOESubEffects_type_id = 0x6683fcbf; 
+		constexpr static std::string_view Radius_type_name = "Radius";
+		constexpr static rivet::rivet_type_id Radius_type_id = 0x504203d;
+		constexpr static std::string_view LOS_type_name = "LOS";
+		constexpr static rivet::rivet_type_id LOS_type_id = 0x115a911b;
+		constexpr static std::string_view TriggerExplode_type_name = "TriggerExplode";
+		constexpr static rivet::rivet_type_id TriggerExplode_type_id = 0xab842fb0;
+		constexpr static std::string_view IgnoreHitActor_type_name = "IgnoreHitActor";
+		constexpr static rivet::rivet_type_id IgnoreHitActor_type_id = 0x39c79f3;
+		constexpr static std::string_view AOESubEffects_type_name = "AOESubEffects";
+		constexpr static rivet::rivet_type_id AOESubEffects_type_id = 0x6683fcbf; 
 
 		explicit CreateAOEPrius() = default;
 		explicit CreateAOEPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

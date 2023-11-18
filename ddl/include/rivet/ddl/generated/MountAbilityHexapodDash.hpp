@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED MountAbilityHexapodDash : MountAbilityBase {
-		constexpr const static std::string_view type_name = "MountAbilityHexapodDash";
-		constexpr const static rivet::rivet_type_id type_id = 0xd0d7f344;
+		constexpr static std::string_view type_name = "MountAbilityHexapodDash";
+		constexpr static rivet::rivet_type_id type_id = 0xd0d7f344;
 
-		constexpr const static std::string_view DashSpeed_type_name = "DashSpeed";
-		constexpr const static rivet::rivet_type_id DashSpeed_type_id = 0x48d89a41; 
+		constexpr static std::string_view DashSpeed_type_name = "DashSpeed";
+		constexpr static rivet::rivet_type_id DashSpeed_type_id = 0x48d89a41; 
 
 		explicit MountAbilityHexapodDash() = default;
 		explicit MountAbilityHexapodDash([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

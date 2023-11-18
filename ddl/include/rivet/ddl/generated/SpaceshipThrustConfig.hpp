@@ -23,19 +23,19 @@ namespace rivet::ddl::generated {
 	struct CameraShakingData; 
 
 	struct RIVET_DDL_SHARED SpaceshipThrustConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "SpaceshipThrustConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x54c4dd2c;
+		constexpr static std::string_view type_name = "SpaceshipThrustConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x54c4dd2c;
 
-		constexpr const static std::string_view ThrustFOV_type_name = "ThrustFOV";
-		constexpr const static rivet::rivet_type_id ThrustFOV_type_id = 0x317c04a8;
-		constexpr const static std::string_view ThrustCameraOffset_type_name = "ThrustCameraOffset";
-		constexpr const static rivet::rivet_type_id ThrustCameraOffset_type_id = 0xd9a69145;
-		constexpr const static std::string_view ThrustOffsetDuration_type_name = "ThrustOffsetDuration";
-		constexpr const static rivet::rivet_type_id ThrustOffsetDuration_type_id = 0x747b44ec;
-		constexpr const static std::string_view ThrustOffsetCurve_type_name = "ThrustOffsetCurve";
-		constexpr const static rivet::rivet_type_id ThrustOffsetCurve_type_id = 0xb0ea6da3;
-		constexpr const static std::string_view ThrustCameraShake_type_name = "ThrustCameraShake";
-		constexpr const static rivet::rivet_type_id ThrustCameraShake_type_id = 0xb2501af1; 
+		constexpr static std::string_view ThrustFOV_type_name = "ThrustFOV";
+		constexpr static rivet::rivet_type_id ThrustFOV_type_id = 0x317c04a8;
+		constexpr static std::string_view ThrustCameraOffset_type_name = "ThrustCameraOffset";
+		constexpr static rivet::rivet_type_id ThrustCameraOffset_type_id = 0xd9a69145;
+		constexpr static std::string_view ThrustOffsetDuration_type_name = "ThrustOffsetDuration";
+		constexpr static rivet::rivet_type_id ThrustOffsetDuration_type_id = 0x747b44ec;
+		constexpr static std::string_view ThrustOffsetCurve_type_name = "ThrustOffsetCurve";
+		constexpr static rivet::rivet_type_id ThrustOffsetCurve_type_id = 0xb0ea6da3;
+		constexpr static std::string_view ThrustCameraShake_type_name = "ThrustCameraShake";
+		constexpr static rivet::rivet_type_id ThrustCameraShake_type_id = 0xb2501af1; 
 
 		explicit SpaceshipThrustConfig() = default;
 		explicit SpaceshipThrustConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

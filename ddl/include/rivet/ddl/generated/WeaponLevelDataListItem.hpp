@@ -21,13 +21,13 @@ namespace rivet::ddl::generated {
 	struct WeaponUpgradeListItem; 
 
 	struct RIVET_DDL_SHARED WeaponLevelDataListItem : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "WeaponLevelDataListItem";
-		constexpr const static rivet::rivet_type_id type_id = 0x89e3c4e9;
+		constexpr static std::string_view type_name = "WeaponLevelDataListItem";
+		constexpr static rivet::rivet_type_id type_id = 0x89e3c4e9;
 
-		constexpr const static std::string_view XPRequired_type_name = "XPRequired";
-		constexpr const static rivet::rivet_type_id XPRequired_type_id = 0xd3bfaa63;
-		constexpr const static std::string_view UpgradeList_type_name = "UpgradeList";
-		constexpr const static rivet::rivet_type_id UpgradeList_type_id = 0x63d89b84; 
+		constexpr static std::string_view XPRequired_type_name = "XPRequired";
+		constexpr static rivet::rivet_type_id XPRequired_type_id = 0xd3bfaa63;
+		constexpr static std::string_view UpgradeList_type_name = "UpgradeList";
+		constexpr static rivet::rivet_type_id UpgradeList_type_id = 0x63d89b84; 
 
 		explicit WeaponLevelDataListItem() = default;
 		explicit WeaponLevelDataListItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

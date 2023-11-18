@@ -21,17 +21,17 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED FixedCameraPrius : PlacedCameraPrius {
-		constexpr const static std::string_view type_name = "FixedCameraPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xcb01aa04;
+		constexpr static std::string_view type_name = "FixedCameraPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xcb01aa04;
 
-		constexpr const static std::string_view ZeroSettle_type_name = "ZeroSettle";
-		constexpr const static rivet::rivet_type_id ZeroSettle_type_id = 0xc455894b;
-		constexpr const static std::string_view LockPosition_type_name = "LockPosition";
-		constexpr const static rivet::rivet_type_id LockPosition_type_id = 0x68b14458;
-		constexpr const static std::string_view ResetOnActivate_type_name = "ResetOnActivate";
-		constexpr const static rivet::rivet_type_id ResetOnActivate_type_id = 0x5a8accb9;
-		constexpr const static std::string_view StickConfig_type_name = "StickConfig";
-		constexpr const static rivet::rivet_type_id StickConfig_type_id = 0x3bc8f276; 
+		constexpr static std::string_view ZeroSettle_type_name = "ZeroSettle";
+		constexpr static rivet::rivet_type_id ZeroSettle_type_id = 0xc455894b;
+		constexpr static std::string_view LockPosition_type_name = "LockPosition";
+		constexpr static rivet::rivet_type_id LockPosition_type_id = 0x68b14458;
+		constexpr static std::string_view ResetOnActivate_type_name = "ResetOnActivate";
+		constexpr static rivet::rivet_type_id ResetOnActivate_type_id = 0x5a8accb9;
+		constexpr static std::string_view StickConfig_type_name = "StickConfig";
+		constexpr static rivet::rivet_type_id StickConfig_type_id = 0x3bc8f276; 
 
 		explicit FixedCameraPrius() = default;
 		explicit FixedCameraPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

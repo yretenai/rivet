@@ -21,21 +21,21 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED WeaponMeleePrius : WeaponGamePrius {
-		constexpr const static std::string_view type_name = "WeaponMeleePrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x53f3a6ef;
+		constexpr static std::string_view type_name = "WeaponMeleePrius";
+		constexpr static rivet::rivet_type_id type_id = 0x53f3a6ef;
 
-		constexpr const static std::string_view SnapRangeEnemy_type_name = "SnapRangeEnemy";
-		constexpr const static rivet::rivet_type_id SnapRangeEnemy_type_id = 0x75e1a5ae;
-		constexpr const static std::string_view SnapRangeBreak_type_name = "SnapRangeBreak";
-		constexpr const static rivet::rivet_type_id SnapRangeBreak_type_id = 0x8202afdd;
-		constexpr const static std::string_view EmissiveColorConstantName_type_name = "EmissiveColorConstantName";
-		constexpr const static rivet::rivet_type_id EmissiveColorConstantName_type_id = 0xa1a7becd;
-		constexpr const static std::string_view EmissiveMaterialMappingName_type_name = "EmissiveMaterialMappingName";
-		constexpr const static rivet::rivet_type_id EmissiveMaterialMappingName_type_id = 0x6c50b4a7;
-		constexpr const static std::string_view DefaultEmissiveIDValue_type_name = "DefaultEmissiveIDValue";
-		constexpr const static rivet::rivet_type_id DefaultEmissiveIDValue_type_id = 0xb2a7616a;
-		constexpr const static std::string_view UpgradeEmissiveIDValue_type_name = "UpgradeEmissiveIDValue";
-		constexpr const static rivet::rivet_type_id UpgradeEmissiveIDValue_type_id = 0x94983748; 
+		constexpr static std::string_view SnapRangeEnemy_type_name = "SnapRangeEnemy";
+		constexpr static rivet::rivet_type_id SnapRangeEnemy_type_id = 0x75e1a5ae;
+		constexpr static std::string_view SnapRangeBreak_type_name = "SnapRangeBreak";
+		constexpr static rivet::rivet_type_id SnapRangeBreak_type_id = 0x8202afdd;
+		constexpr static std::string_view EmissiveColorConstantName_type_name = "EmissiveColorConstantName";
+		constexpr static rivet::rivet_type_id EmissiveColorConstantName_type_id = 0xa1a7becd;
+		constexpr static std::string_view EmissiveMaterialMappingName_type_name = "EmissiveMaterialMappingName";
+		constexpr static rivet::rivet_type_id EmissiveMaterialMappingName_type_id = 0x6c50b4a7;
+		constexpr static std::string_view DefaultEmissiveIDValue_type_name = "DefaultEmissiveIDValue";
+		constexpr static rivet::rivet_type_id DefaultEmissiveIDValue_type_id = 0xb2a7616a;
+		constexpr static std::string_view UpgradeEmissiveIDValue_type_name = "UpgradeEmissiveIDValue";
+		constexpr static rivet::rivet_type_id UpgradeEmissiveIDValue_type_id = 0x94983748; 
 
 		explicit WeaponMeleePrius() = default;
 		explicit WeaponMeleePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

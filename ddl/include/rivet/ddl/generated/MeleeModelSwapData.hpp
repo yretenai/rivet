@@ -17,24 +17,24 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/enums/x84053194.hpp>
-#include <rivet/ddl/generated/enums/HeroTypes.hpp> 
+#include <rivet/ddl/generated/enums/HeroTypes.hpp>
+#include <rivet/ddl/generated/enums/x84053194.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED MeleeModelSwapData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "MeleeModelSwapData";
-		constexpr const static rivet::rivet_type_id type_id = 0x9ab26759;
+		constexpr static std::string_view type_name = "MeleeModelSwapData";
+		constexpr static rivet::rivet_type_id type_id = 0x9ab26759;
 
-		constexpr const static std::string_view ModelLabel_type_name = "ModelLabel";
-		constexpr const static rivet::rivet_type_id ModelLabel_type_id = 0x64227d29;
-		constexpr const static std::string_view Pack_type_name = "Pack";
-		constexpr const static rivet::rivet_type_id Pack_type_id = 0xa74e9e93;
-		constexpr const static std::string_view Model_type_name = "Model";
-		constexpr const static rivet::rivet_type_id Model_type_id = 0xcec6be18;
-		constexpr const static std::string_view AudioSwitchValue_type_name = "AudioSwitchValue";
-		constexpr const static rivet::rivet_type_id AudioSwitchValue_type_id = 0x20ee3d6a;
-		constexpr const static std::string_view SpecificHero_type_name = "SpecificHero";
-		constexpr const static rivet::rivet_type_id SpecificHero_type_id = 0x419e02a9; 
+		constexpr static std::string_view ModelLabel_type_name = "ModelLabel";
+		constexpr static rivet::rivet_type_id ModelLabel_type_id = 0x64227d29;
+		constexpr static std::string_view Pack_type_name = "Pack";
+		constexpr static rivet::rivet_type_id Pack_type_id = 0xa74e9e93;
+		constexpr static std::string_view Model_type_name = "Model";
+		constexpr static rivet::rivet_type_id Model_type_id = 0xcec6be18;
+		constexpr static std::string_view AudioSwitchValue_type_name = "AudioSwitchValue";
+		constexpr static rivet::rivet_type_id AudioSwitchValue_type_id = 0x20ee3d6a;
+		constexpr static std::string_view SpecificHero_type_name = "SpecificHero";
+		constexpr static rivet::rivet_type_id SpecificHero_type_id = 0x419e02a9; 
 
 		explicit MeleeModelSwapData() = default;
 		explicit MeleeModelSwapData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

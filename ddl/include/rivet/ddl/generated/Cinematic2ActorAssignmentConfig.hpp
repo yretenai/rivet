@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct Cinematic2NamespaceActor; 
 
 	struct RIVET_DDL_SHARED Cinematic2ActorAssignmentConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "Cinematic2ActorAssignmentConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x6aa0ef6a;
+		constexpr static std::string_view type_name = "Cinematic2ActorAssignmentConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x6aa0ef6a;
 
-		constexpr const static std::string_view Assignments_type_name = "Assignments";
-		constexpr const static rivet::rivet_type_id Assignments_type_id = 0xbd560106; 
+		constexpr static std::string_view Assignments_type_name = "Assignments";
+		constexpr static rivet::rivet_type_id Assignments_type_id = 0xbd560106; 
 
 		explicit Cinematic2ActorAssignmentConfig() = default;
 		explicit Cinematic2ActorAssignmentConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

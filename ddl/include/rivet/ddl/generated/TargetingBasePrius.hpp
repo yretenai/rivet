@@ -21,23 +21,23 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED TargetingBasePrius : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "TargetingBasePrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xca8745a5;
+		constexpr static std::string_view type_name = "TargetingBasePrius";
+		constexpr static rivet::rivet_type_id type_id = 0xca8745a5;
 
-		constexpr const static std::string_view AutoReselectTargets_type_name = "AutoReselectTargets";
-		constexpr const static rivet::rivet_type_id AutoReselectTargets_type_id = 0x38567476;
-		constexpr const static std::string_view TimeBetweenReselects_type_name = "TimeBetweenReselects";
-		constexpr const static rivet::rivet_type_id TimeBetweenReselects_type_id = 0xe4195ac3;
-		constexpr const static std::string_view AggroMax_type_name = "AggroMax";
-		constexpr const static rivet::rivet_type_id AggroMax_type_id = 0x62af6634;
-		constexpr const static std::string_view StartWarningDistance_type_name = "StartWarningDistance";
-		constexpr const static rivet::rivet_type_id StartWarningDistance_type_id = 0x29360c16;
-		constexpr const static std::string_view StopWarningDistance_type_name = "StopWarningDistance";
-		constexpr const static rivet::rivet_type_id StopWarningDistance_type_id = 0x7dde2128;
-		constexpr const static std::string_view WarningTime_type_name = "WarningTime";
-		constexpr const static rivet::rivet_type_id WarningTime_type_id = 0xfd73b5f5;
-		constexpr const static std::string_view AttackJobPool_type_name = "AttackJobPool";
-		constexpr const static rivet::rivet_type_id AttackJobPool_type_id = 0x885938c5; 
+		constexpr static std::string_view AutoReselectTargets_type_name = "AutoReselectTargets";
+		constexpr static rivet::rivet_type_id AutoReselectTargets_type_id = 0x38567476;
+		constexpr static std::string_view TimeBetweenReselects_type_name = "TimeBetweenReselects";
+		constexpr static rivet::rivet_type_id TimeBetweenReselects_type_id = 0xe4195ac3;
+		constexpr static std::string_view AggroMax_type_name = "AggroMax";
+		constexpr static rivet::rivet_type_id AggroMax_type_id = 0x62af6634;
+		constexpr static std::string_view StartWarningDistance_type_name = "StartWarningDistance";
+		constexpr static rivet::rivet_type_id StartWarningDistance_type_id = 0x29360c16;
+		constexpr static std::string_view StopWarningDistance_type_name = "StopWarningDistance";
+		constexpr static rivet::rivet_type_id StopWarningDistance_type_id = 0x7dde2128;
+		constexpr static std::string_view WarningTime_type_name = "WarningTime";
+		constexpr static rivet::rivet_type_id WarningTime_type_id = 0xfd73b5f5;
+		constexpr static std::string_view AttackJobPool_type_name = "AttackJobPool";
+		constexpr static rivet::rivet_type_id AttackJobPool_type_id = 0x885938c5; 
 
 		explicit TargetingBasePrius() = default;
 		explicit TargetingBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

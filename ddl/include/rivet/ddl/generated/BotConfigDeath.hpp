@@ -20,25 +20,25 @@
 #include <rivet/ddl/generated/ConfigBase.hpp> 
 
 namespace rivet::ddl::generated {
-	struct BloodPoolPrius;
-	struct DeathReactionModifier; 
+	struct DeathReactionModifier;
+	struct BloodPoolPrius; 
 
 	struct RIVET_DDL_SHARED BotConfigDeath : ConfigBase {
-		constexpr const static std::string_view type_name = "BotConfigDeath";
-		constexpr const static rivet::rivet_type_id type_id = 0xe6879efd;
+		constexpr static std::string_view type_name = "BotConfigDeath";
+		constexpr static rivet::rivet_type_id type_id = 0xe6879efd;
 
-		constexpr const static std::string_view CorpseCleanup_type_name = "CorpseCleanup";
-		constexpr const static rivet::rivet_type_id CorpseCleanup_type_id = 0x40490ca0;
-		constexpr const static std::string_view DeleteOnDeath_type_name = "DeleteOnDeath";
-		constexpr const static rivet::rivet_type_id DeleteOnDeath_type_id = 0x76eb9e87;
-		constexpr const static std::string_view CanRagdoll_type_name = "CanRagdoll";
-		constexpr const static rivet::rivet_type_id CanRagdoll_type_id = 0xaa66c4ff;
-		constexpr const static std::string_view BloodPool_type_name = "BloodPool";
-		constexpr const static rivet::rivet_type_id BloodPool_type_id = 0x572c1ede;
-		constexpr const static std::string_view SkeletonActor_type_name = "SkeletonActor";
-		constexpr const static rivet::rivet_type_id SkeletonActor_type_id = 0xb6d32598;
-		constexpr const static std::string_view DeathReactionMods_type_name = "DeathReactionMods";
-		constexpr const static rivet::rivet_type_id DeathReactionMods_type_id = 0x3e3f13ac; 
+		constexpr static std::string_view CorpseCleanup_type_name = "CorpseCleanup";
+		constexpr static rivet::rivet_type_id CorpseCleanup_type_id = 0x40490ca0;
+		constexpr static std::string_view DeleteOnDeath_type_name = "DeleteOnDeath";
+		constexpr static rivet::rivet_type_id DeleteOnDeath_type_id = 0x76eb9e87;
+		constexpr static std::string_view CanRagdoll_type_name = "CanRagdoll";
+		constexpr static rivet::rivet_type_id CanRagdoll_type_id = 0xaa66c4ff;
+		constexpr static std::string_view BloodPool_type_name = "BloodPool";
+		constexpr static rivet::rivet_type_id BloodPool_type_id = 0x572c1ede;
+		constexpr static std::string_view SkeletonActor_type_name = "SkeletonActor";
+		constexpr static rivet::rivet_type_id SkeletonActor_type_id = 0xb6d32598;
+		constexpr static std::string_view DeathReactionMods_type_name = "DeathReactionMods";
+		constexpr static rivet::rivet_type_id DeathReactionMods_type_id = 0x3e3f13ac; 
 
 		explicit BotConfigDeath() = default;
 		explicit BotConfigDeath([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

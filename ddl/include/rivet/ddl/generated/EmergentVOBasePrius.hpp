@@ -21,13 +21,13 @@ namespace rivet::ddl::generated {
 	struct EmergentVOTagList; 
 
 	struct RIVET_DDL_SHARED EmergentVOBasePrius : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "EmergentVOBasePrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x62c7a2d2;
+		constexpr static std::string_view type_name = "EmergentVOBasePrius";
+		constexpr static rivet::rivet_type_id type_id = 0x62c7a2d2;
 
-		constexpr const static std::string_view EntityType_type_name = "EntityType";
-		constexpr const static rivet::rivet_type_id EntityType_type_id = 0xc43edf73;
-		constexpr const static std::string_view DialogTags_type_name = "DialogTags";
-		constexpr const static rivet::rivet_type_id DialogTags_type_id = 0x7c5dd1d8; 
+		constexpr static std::string_view EntityType_type_name = "EntityType";
+		constexpr static rivet::rivet_type_id EntityType_type_id = 0xc43edf73;
+		constexpr static std::string_view DialogTags_type_name = "DialogTags";
+		constexpr static rivet::rivet_type_id DialogTags_type_id = 0x7c5dd1d8; 
 
 		explicit EmergentVOBasePrius() = default;
 		explicit EmergentVOBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct BotVariantEntry; 
 
 	struct RIVET_DDL_SHARED BotVariantConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "BotVariantConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x93b9f6ad;
+		constexpr static std::string_view type_name = "BotVariantConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x93b9f6ad;
 
-		constexpr const static std::string_view Variants_type_name = "Variants";
-		constexpr const static rivet::rivet_type_id Variants_type_id = 0x4999ee91; 
+		constexpr static std::string_view Variants_type_name = "Variants";
+		constexpr static rivet::rivet_type_id Variants_type_id = 0x4999ee91; 
 
 		explicit BotVariantConfig() = default;
 		explicit BotVariantConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

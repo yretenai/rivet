@@ -21,15 +21,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ObjectiveLink : ActivityLinkBase {
-		constexpr const static std::string_view type_name = "ObjectiveLink";
-		constexpr const static rivet::rivet_type_id type_id = 0x30fb8c6c;
+		constexpr static std::string_view type_name = "ObjectiveLink";
+		constexpr static rivet::rivet_type_id type_id = 0x30fb8c6c;
 
-		constexpr const static std::string_view MissionName_type_name = "MissionName";
-		constexpr const static rivet::rivet_type_id MissionName_type_id = 0xa5c30e60;
-		constexpr const static std::string_view StartObjectiveName_type_name = "StartObjectiveName";
-		constexpr const static rivet::rivet_type_id StartObjectiveName_type_id = 0xe2320ffa;
-		constexpr const static std::string_view EndObjectiveName_type_name = "EndObjectiveName";
-		constexpr const static rivet::rivet_type_id EndObjectiveName_type_id = 0xf9039d9; 
+		constexpr static std::string_view MissionName_type_name = "MissionName";
+		constexpr static rivet::rivet_type_id MissionName_type_id = 0xa5c30e60;
+		constexpr static std::string_view StartObjectiveName_type_name = "StartObjectiveName";
+		constexpr static rivet::rivet_type_id StartObjectiveName_type_id = 0xe2320ffa;
+		constexpr static std::string_view EndObjectiveName_type_name = "EndObjectiveName";
+		constexpr static rivet::rivet_type_id EndObjectiveName_type_id = 0xf9039d9; 
 
 		explicit ObjectiveLink() = default;
 		explicit ObjectiveLink([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

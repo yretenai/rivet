@@ -17,20 +17,20 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/AwarenessBasePrius.hpp>
-#include <rivet/ddl/generated/enums/OmniAwarenessLos.hpp> 
+#include <rivet/ddl/generated/enums/OmniAwarenessLos.hpp>
+#include <rivet/ddl/generated/AwarenessBasePrius.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED OmniAwarenessPrius : AwarenessBasePrius {
-		constexpr const static std::string_view type_name = "OmniAwarenessPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xda8a02a8;
+		constexpr static std::string_view type_name = "OmniAwarenessPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xda8a02a8;
 
-		constexpr const static std::string_view Range_type_name = "Range";
-		constexpr const static rivet::rivet_type_id Range_type_id = 0x8ad49688;
-		constexpr const static std::string_view OmniAwarenessLos_type_name = "OmniAwarenessLos";
-		constexpr const static rivet::rivet_type_id OmniAwarenessLos_type_id = 0x780dee83;
-		constexpr const static std::string_view SourceLocatorName_type_name = "SourceLocatorName";
-		constexpr const static rivet::rivet_type_id SourceLocatorName_type_id = 0x58c28db; 
+		constexpr static std::string_view Range_type_name = "Range";
+		constexpr static rivet::rivet_type_id Range_type_id = 0x8ad49688;
+		constexpr static std::string_view OmniAwarenessLos_type_name = "OmniAwarenessLos";
+		constexpr static rivet::rivet_type_id OmniAwarenessLos_type_id = 0x780dee83;
+		constexpr static std::string_view SourceLocatorName_type_name = "SourceLocatorName";
+		constexpr static rivet::rivet_type_id SourceLocatorName_type_id = 0x58c28db; 
 
 		explicit OmniAwarenessPrius() = default;
 		explicit OmniAwarenessPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

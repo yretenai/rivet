@@ -17,20 +17,20 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/ConfigBase.hpp>
-#include <rivet/ddl/generated/enums/xc47e2a72.hpp> 
+#include <rivet/ddl/generated/enums/xc47e2a72.hpp>
+#include <rivet/ddl/generated/ConfigBase.hpp> 
 
 namespace rivet::ddl::generated {
 	struct SkinItemColor; 
 
 	struct RIVET_DDL_SHARED SkinItemColorConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "SkinItemColorConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xa8c3fcde;
+		constexpr static std::string_view type_name = "SkinItemColorConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xa8c3fcde;
 
-		constexpr const static std::string_view ColorCategory_type_name = "ColorCategory";
-		constexpr const static rivet::rivet_type_id ColorCategory_type_id = 0xe79df551;
-		constexpr const static std::string_view ColorList_type_name = "ColorList";
-		constexpr const static rivet::rivet_type_id ColorList_type_id = 0xfbc9245f; 
+		constexpr static std::string_view ColorCategory_type_name = "ColorCategory";
+		constexpr static rivet::rivet_type_id ColorCategory_type_id = 0xe79df551;
+		constexpr static std::string_view ColorList_type_name = "ColorList";
+		constexpr static rivet::rivet_type_id ColorList_type_id = 0xfbc9245f; 
 
 		explicit SkinItemColorConfig() = default;
 		explicit SkinItemColorConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

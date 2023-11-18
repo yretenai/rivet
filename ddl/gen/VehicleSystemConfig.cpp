@@ -4,8 +4,8 @@
 // SPDX-License-Identifier: MPL-2.0
 
 #include <rivet/ddl/generated/VehicleCollisionInfo.hpp>
-#include <rivet/ddl/generated/VehicleCurveGeneratorInfo.hpp>
-#include <rivet/ddl/generated/VehicleCurveFollowerPrius.hpp> 
+#include <rivet/ddl/generated/VehicleCurveFollowerPrius.hpp>
+#include <rivet/ddl/generated/VehicleCurveGeneratorInfo.hpp> 
 
 #include <rivet/ddl/generated/VehicleSystemConfig.hpp>
 

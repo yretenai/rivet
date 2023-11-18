@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ReflectionProperty : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "ReflectionProperty";
-		constexpr const static rivet::rivet_type_id type_id = 0xf5c2cd85;
+		constexpr static std::string_view type_name = "ReflectionProperty";
+		constexpr static rivet::rivet_type_id type_id = 0xf5c2cd85;
 
-		constexpr const static std::string_view Material_type_name = "Material";
-		constexpr const static rivet::rivet_type_id Material_type_id = 0x86bfc8e5;
-		constexpr const static std::string_view ReflectionCoefficient_type_name = "ReflectionCoefficient";
-		constexpr const static rivet::rivet_type_id ReflectionCoefficient_type_id = 0x1e54c7ae; 
+		constexpr static std::string_view Material_type_name = "Material";
+		constexpr static rivet::rivet_type_id Material_type_id = 0x86bfc8e5;
+		constexpr static std::string_view ReflectionCoefficient_type_name = "ReflectionCoefficient";
+		constexpr static rivet::rivet_type_id ReflectionCoefficient_type_id = 0x1e54c7ae; 
 
 		explicit ReflectionProperty() = default;
 		explicit ReflectionProperty([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

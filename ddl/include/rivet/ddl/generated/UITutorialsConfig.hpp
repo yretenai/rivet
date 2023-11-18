@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct UITutorial; 
 
 	struct RIVET_DDL_SHARED UITutorialsConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "UITutorialsConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x51f11276;
+		constexpr static std::string_view type_name = "UITutorialsConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x51f11276;
 
-		constexpr const static std::string_view Tutorials_type_name = "Tutorials";
-		constexpr const static rivet::rivet_type_id Tutorials_type_id = 0x40e36124; 
+		constexpr static std::string_view Tutorials_type_name = "Tutorials";
+		constexpr static rivet::rivet_type_id Tutorials_type_id = 0x40e36124; 
 
 		explicit UITutorialsConfig() = default;
 		explicit UITutorialsConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

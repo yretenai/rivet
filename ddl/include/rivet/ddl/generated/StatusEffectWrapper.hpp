@@ -21,11 +21,11 @@ namespace rivet::ddl::generated {
 	struct StatusEffectBasePrius; 
 
 	struct RIVET_DDL_SHARED StatusEffectWrapper : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "StatusEffectWrapper";
-		constexpr const static rivet::rivet_type_id type_id = 0x30fffba7;
+		constexpr static std::string_view type_name = "StatusEffectWrapper";
+		constexpr static rivet::rivet_type_id type_id = 0x30fffba7;
 
-		constexpr const static std::string_view Effect_type_name = "Effect";
-		constexpr const static rivet::rivet_type_id Effect_type_id = 0x8818df95; 
+		constexpr static std::string_view Effect_type_name = "Effect";
+		constexpr static rivet::rivet_type_id Effect_type_id = 0x8818df95; 
 
 		explicit StatusEffectWrapper() = default;
 		explicit StatusEffectWrapper([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

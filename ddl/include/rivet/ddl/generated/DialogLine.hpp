@@ -23,25 +23,25 @@ namespace rivet::ddl::generated {
 	struct ConversationCommunicatorBasePrius; 
 
 	struct RIVET_DDL_SHARED DialogLine : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "DialogLine";
-		constexpr const static rivet::rivet_type_id type_id = 0xc2f5f108;
+		constexpr static std::string_view type_name = "DialogLine";
+		constexpr static rivet::rivet_type_id type_id = 0xc2f5f108;
 
-		constexpr const static std::string_view LocalizationTag_type_name = "LocalizationTag";
-		constexpr const static rivet::rivet_type_id LocalizationTag_type_id = 0x3446b219;
-		constexpr const static std::string_view Speaker_type_name = "Speaker";
-		constexpr const static rivet::rivet_type_id Speaker_type_id = 0x7a6fb859;
-		constexpr const static std::string_view PreLineDelay_type_name = "PreLineDelay";
-		constexpr const static rivet::rivet_type_id PreLineDelay_type_id = 0xcc5ae14d;
-		constexpr const static std::string_view InterruptRestorePoint_type_name = "InterruptRestorePoint";
-		constexpr const static rivet::rivet_type_id InterruptRestorePoint_type_id = 0x3349a51b;
-		constexpr const static std::string_view InterruptLineTag_type_name = "InterruptLineTag";
-		constexpr const static rivet::rivet_type_id InterruptLineTag_type_id = 0xe2127a80;
-		constexpr const static std::string_view ResumeLineTag_type_name = "ResumeLineTag";
-		constexpr const static rivet::rivet_type_id ResumeLineTag_type_id = 0x5afc6331;
-		constexpr const static std::string_view CompleteOnInterrupt_type_name = "CompleteOnInterrupt";
-		constexpr const static rivet::rivet_type_id CompleteOnInterrupt_type_id = 0xfab608e7;
-		constexpr const static std::string_view ConversationCommunicatorData_type_name = "ConversationCommunicatorData";
-		constexpr const static rivet::rivet_type_id ConversationCommunicatorData_type_id = 0xb0cf1e79; 
+		constexpr static std::string_view LocalizationTag_type_name = "LocalizationTag";
+		constexpr static rivet::rivet_type_id LocalizationTag_type_id = 0x3446b219;
+		constexpr static std::string_view Speaker_type_name = "Speaker";
+		constexpr static rivet::rivet_type_id Speaker_type_id = 0x7a6fb859;
+		constexpr static std::string_view PreLineDelay_type_name = "PreLineDelay";
+		constexpr static rivet::rivet_type_id PreLineDelay_type_id = 0xcc5ae14d;
+		constexpr static std::string_view InterruptRestorePoint_type_name = "InterruptRestorePoint";
+		constexpr static rivet::rivet_type_id InterruptRestorePoint_type_id = 0x3349a51b;
+		constexpr static std::string_view InterruptLineTag_type_name = "InterruptLineTag";
+		constexpr static rivet::rivet_type_id InterruptLineTag_type_id = 0xe2127a80;
+		constexpr static std::string_view ResumeLineTag_type_name = "ResumeLineTag";
+		constexpr static rivet::rivet_type_id ResumeLineTag_type_id = 0x5afc6331;
+		constexpr static std::string_view CompleteOnInterrupt_type_name = "CompleteOnInterrupt";
+		constexpr static rivet::rivet_type_id CompleteOnInterrupt_type_id = 0xfab608e7;
+		constexpr static std::string_view ConversationCommunicatorData_type_name = "ConversationCommunicatorData";
+		constexpr static rivet::rivet_type_id ConversationCommunicatorData_type_id = 0xb0cf1e79; 
 
 		explicit DialogLine() = default;
 		explicit DialogLine([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

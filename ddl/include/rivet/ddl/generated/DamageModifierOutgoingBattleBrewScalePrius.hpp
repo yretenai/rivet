@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DamageModifierOutgoingBattleBrewScalePrius : DamageModifierOutgoingPrius {
-		constexpr const static std::string_view type_name = "DamageModifierOutgoingBattleBrewScalePrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xe500a4f9;
+		constexpr static std::string_view type_name = "DamageModifierOutgoingBattleBrewScalePrius";
+		constexpr static rivet::rivet_type_id type_id = 0xe500a4f9;
 
-		constexpr const static std::string_view OutgoingDamageMultiplier_type_name = "OutgoingDamageMultiplier";
-		constexpr const static rivet::rivet_type_id OutgoingDamageMultiplier_type_id = 0x9fd14dc6;
-		constexpr const static std::string_view KnockbackLevelModifier_type_name = "KnockbackLevelModifier";
-		constexpr const static rivet::rivet_type_id KnockbackLevelModifier_type_id = 0xeb2febd6; 
+		constexpr static std::string_view OutgoingDamageMultiplier_type_name = "OutgoingDamageMultiplier";
+		constexpr static rivet::rivet_type_id OutgoingDamageMultiplier_type_id = 0x9fd14dc6;
+		constexpr static std::string_view KnockbackLevelModifier_type_name = "KnockbackLevelModifier";
+		constexpr static rivet::rivet_type_id KnockbackLevelModifier_type_id = 0xeb2febd6; 
 
 		explicit DamageModifierOutgoingBattleBrewScalePrius() = default;
 		explicit DamageModifierOutgoingBattleBrewScalePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -21,15 +21,15 @@ namespace rivet::ddl::generated {
 	struct ScaleData; 
 
 	struct RIVET_DDL_SHARED KnockdownData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "KnockdownData";
-		constexpr const static rivet::rivet_type_id type_id = 0xa615951;
+		constexpr static std::string_view type_name = "KnockdownData";
+		constexpr static rivet::rivet_type_id type_id = 0xa615951;
 
-		constexpr const static std::string_view Driver_type_name = "Driver";
-		constexpr const static rivet::rivet_type_id Driver_type_id = 0x2f1e32be;
-		constexpr const static std::string_view Normal_type_name = "Normal";
-		constexpr const static rivet::rivet_type_id Normal_type_id = 0x1ffd2683;
-		constexpr const static std::string_view Blast_type_name = "Blast";
-		constexpr const static rivet::rivet_type_id Blast_type_id = 0x571c694d; 
+		constexpr static std::string_view Driver_type_name = "Driver";
+		constexpr static rivet::rivet_type_id Driver_type_id = 0x2f1e32be;
+		constexpr static std::string_view Normal_type_name = "Normal";
+		constexpr static rivet::rivet_type_id Normal_type_id = 0x1ffd2683;
+		constexpr static std::string_view Blast_type_name = "Blast";
+		constexpr static rivet::rivet_type_id Blast_type_id = 0x571c694d; 
 
 		explicit KnockdownData() = default;
 		explicit KnockdownData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

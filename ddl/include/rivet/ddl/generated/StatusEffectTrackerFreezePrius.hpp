@@ -21,21 +21,21 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED StatusEffectTrackerFreezePrius : StatusEffectTrackerBasePrius {
-		constexpr const static std::string_view type_name = "StatusEffectTrackerFreezePrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x1d83afb1;
+		constexpr static std::string_view type_name = "StatusEffectTrackerFreezePrius";
+		constexpr static rivet::rivet_type_id type_id = 0x1d83afb1;
 
-		constexpr const static std::string_view IntroAnim_type_name = "IntroAnim";
-		constexpr const static rivet::rivet_type_id IntroAnim_type_id = 0xf227a2c3;
-		constexpr const static std::string_view LoopAnim_type_name = "LoopAnim";
-		constexpr const static rivet::rivet_type_id LoopAnim_type_id = 0x8334a2d8;
-		constexpr const static std::string_view BreakOutAnim_type_name = "BreakOutAnim";
-		constexpr const static rivet::rivet_type_id BreakOutAnim_type_id = 0x2808cae0;
-		constexpr const static std::string_view DeathAnim_type_name = "DeathAnim";
-		constexpr const static rivet::rivet_type_id DeathAnim_type_id = 0xf9dd5a6;
-		constexpr const static std::string_view IceActor_type_name = "IceActor";
-		constexpr const static rivet::rivet_type_id IceActor_type_id = 0xf1769ff8;
-		constexpr const static std::string_view IceAttachLocator_type_name = "IceAttachLocator";
-		constexpr const static rivet::rivet_type_id IceAttachLocator_type_id = 0x6b4adf6a; 
+		constexpr static std::string_view IntroAnim_type_name = "IntroAnim";
+		constexpr static rivet::rivet_type_id IntroAnim_type_id = 0xf227a2c3;
+		constexpr static std::string_view LoopAnim_type_name = "LoopAnim";
+		constexpr static rivet::rivet_type_id LoopAnim_type_id = 0x8334a2d8;
+		constexpr static std::string_view BreakOutAnim_type_name = "BreakOutAnim";
+		constexpr static rivet::rivet_type_id BreakOutAnim_type_id = 0x2808cae0;
+		constexpr static std::string_view DeathAnim_type_name = "DeathAnim";
+		constexpr static rivet::rivet_type_id DeathAnim_type_id = 0xf9dd5a6;
+		constexpr static std::string_view IceActor_type_name = "IceActor";
+		constexpr static rivet::rivet_type_id IceActor_type_id = 0xf1769ff8;
+		constexpr static std::string_view IceAttachLocator_type_name = "IceAttachLocator";
+		constexpr static rivet::rivet_type_id IceAttachLocator_type_id = 0x6b4adf6a; 
 
 		explicit StatusEffectTrackerFreezePrius() = default;
 		explicit StatusEffectTrackerFreezePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

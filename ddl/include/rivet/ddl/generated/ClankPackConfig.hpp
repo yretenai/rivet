@@ -21,15 +21,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ClankPackConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "ClankPackConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x79d6844;
+		constexpr static std::string_view type_name = "ClankPackConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x79d6844;
 
-		constexpr const static std::string_view ClankPackActor_type_name = "ClankPackActor";
-		constexpr const static rivet::rivet_type_id ClankPackActor_type_id = 0x8aace5b8;
-		constexpr const static std::string_view BrokenClank_type_name = "BrokenClank";
-		constexpr const static rivet::rivet_type_id BrokenClank_type_id = 0xffdc5057;
-		constexpr const static std::string_view HasHelipack_type_name = "HasHelipack";
-		constexpr const static rivet::rivet_type_id HasHelipack_type_id = 0x853fe62c; 
+		constexpr static std::string_view ClankPackActor_type_name = "ClankPackActor";
+		constexpr static rivet::rivet_type_id ClankPackActor_type_id = 0x8aace5b8;
+		constexpr static std::string_view BrokenClank_type_name = "BrokenClank";
+		constexpr static rivet::rivet_type_id BrokenClank_type_id = 0xffdc5057;
+		constexpr static std::string_view HasHelipack_type_name = "HasHelipack";
+		constexpr static rivet::rivet_type_id HasHelipack_type_id = 0x853fe62c; 
 
 		explicit ClankPackConfig() = default;
 		explicit ClankPackConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

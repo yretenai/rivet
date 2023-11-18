@@ -3,11 +3,11 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/OmniDelayAwarenessPrius.hpp>
-#include <rivet/ddl/generated/DoomBotAwarenessPrius.hpp>
-#include <rivet/ddl/generated/WaterAwarenessPrius.hpp>
 #include <rivet/ddl/generated/RapidOmniAwarenessPrius.hpp>
-#include <rivet/ddl/generated/PoolSharkAwarenessPrius.hpp> 
+#include <rivet/ddl/generated/PoolSharkAwarenessPrius.hpp>
+#include <rivet/ddl/generated/WaterAwarenessPrius.hpp>
+#include <rivet/ddl/generated/DoomBotAwarenessPrius.hpp>
+#include <rivet/ddl/generated/OmniDelayAwarenessPrius.hpp> 
 
 #include <rivet/ddl/generated/OmniAwarenessPrius.hpp>
 

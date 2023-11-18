@@ -23,13 +23,13 @@ namespace rivet::ddl::generated {
 	struct ContractingVolley; 
 
 	struct RIVET_DDL_SHARED AimModContractingSpreadOffScreenPrius : AimModifierPrius {
-		constexpr const static std::string_view type_name = "AimModContractingSpreadOffScreenPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xa75d2336;
+		constexpr static std::string_view type_name = "AimModContractingSpreadOffScreenPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xa75d2336;
 
-		constexpr const static std::string_view OffScreen_type_name = "OffScreen";
-		constexpr const static rivet::rivet_type_id OffScreen_type_id = 0x70eed091;
-		constexpr const static std::string_view OnScreen_type_name = "OnScreen";
-		constexpr const static rivet::rivet_type_id OnScreen_type_id = 0x24432213; 
+		constexpr static std::string_view OffScreen_type_name = "OffScreen";
+		constexpr static rivet::rivet_type_id OffScreen_type_id = 0x70eed091;
+		constexpr static std::string_view OnScreen_type_name = "OnScreen";
+		constexpr static rivet::rivet_type_id OnScreen_type_id = 0x24432213; 
 
 		explicit AimModContractingSpreadOffScreenPrius() = default;
 		explicit AimModContractingSpreadOffScreenPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -21,15 +21,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED MountAbilityHexapodRewind : MountAbilityBase {
-		constexpr const static std::string_view type_name = "MountAbilityHexapodRewind";
-		constexpr const static rivet::rivet_type_id type_id = 0xafafa03e;
+		constexpr static std::string_view type_name = "MountAbilityHexapodRewind";
+		constexpr static rivet::rivet_type_id type_id = 0xafafa03e;
 
-		constexpr const static std::string_view Rate_type_name = "Rate";
-		constexpr const static rivet::rivet_type_id Rate_type_id = 0xef7cff89;
-		constexpr const static std::string_view Accel_type_name = "Accel";
-		constexpr const static rivet::rivet_type_id Accel_type_id = 0x44affa24;
-		constexpr const static std::string_view Delay_type_name = "Delay";
-		constexpr const static rivet::rivet_type_id Delay_type_id = 0xabc94c5a; 
+		constexpr static std::string_view Rate_type_name = "Rate";
+		constexpr static rivet::rivet_type_id Rate_type_id = 0xef7cff89;
+		constexpr static std::string_view Accel_type_name = "Accel";
+		constexpr static rivet::rivet_type_id Accel_type_id = 0x44affa24;
+		constexpr static std::string_view Delay_type_name = "Delay";
+		constexpr static rivet::rivet_type_id Delay_type_id = 0xabc94c5a; 
 
 		explicit MountAbilityHexapodRewind() = default;
 		explicit MountAbilityHexapodRewind([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

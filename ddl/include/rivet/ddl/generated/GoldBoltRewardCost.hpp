@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED GoldBoltRewardCost : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "GoldBoltRewardCost";
-		constexpr const static rivet::rivet_type_id type_id = 0x5b4a5050;
+		constexpr static std::string_view type_name = "GoldBoltRewardCost";
+		constexpr static rivet::rivet_type_id type_id = 0x5b4a5050;
 
-		constexpr const static std::string_view Reward_type_name = "Reward";
-		constexpr const static rivet::rivet_type_id Reward_type_id = 0x70a93c34;
-		constexpr const static std::string_view Cost_type_name = "Cost";
-		constexpr const static rivet::rivet_type_id Cost_type_id = 0x28b6544c; 
+		constexpr static std::string_view Reward_type_name = "Reward";
+		constexpr static rivet::rivet_type_id Reward_type_id = 0x70a93c34;
+		constexpr static std::string_view Cost_type_name = "Cost";
+		constexpr static rivet::rivet_type_id Cost_type_id = 0x28b6544c; 
 
 		explicit GoldBoltRewardCost() = default;
 		explicit GoldBoltRewardCost([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ShotStunWebPrius : GrenadeShotPrius {
-		constexpr const static std::string_view type_name = "ShotStunWebPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x1147633a;
+		constexpr static std::string_view type_name = "ShotStunWebPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x1147633a;
 
 		explicit ShotStunWebPrius() = default;
 		explicit ShotStunWebPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -20,21 +20,21 @@
 #include <rivet/ddl/generated/ConfigBase.hpp> 
 
 namespace rivet::ddl::generated {
-	struct PyrocitorExplosionShotPrius;
-	struct PyrocitorEmberShotPrius; 
+	struct PyrocitorEmberShotPrius;
+	struct PyrocitorExplosionShotPrius; 
 
 	struct RIVET_DDL_SHARED PyrocitorSubShotConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "PyrocitorSubShotConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x18a813f7;
+		constexpr static std::string_view type_name = "PyrocitorSubShotConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x18a813f7;
 
-		constexpr const static std::string_view ExplosionShotActor_type_name = "ExplosionShotActor";
-		constexpr const static rivet::rivet_type_id ExplosionShotActor_type_id = 0x1ceb0793;
-		constexpr const static std::string_view ExplosionShotPrius_type_name = "ExplosionShotPrius";
-		constexpr const static rivet::rivet_type_id ExplosionShotPrius_type_id = 0x7a1a7335;
-		constexpr const static std::string_view EmberShotActor_type_name = "EmberShotActor";
-		constexpr const static rivet::rivet_type_id EmberShotActor_type_id = 0x331e75c9;
-		constexpr const static std::string_view EmberShotPrius_type_name = "EmberShotPrius";
-		constexpr const static rivet::rivet_type_id EmberShotPrius_type_id = 0x55ef016f; 
+		constexpr static std::string_view ExplosionShotActor_type_name = "ExplosionShotActor";
+		constexpr static rivet::rivet_type_id ExplosionShotActor_type_id = 0x1ceb0793;
+		constexpr static std::string_view ExplosionShotPrius_type_name = "ExplosionShotPrius";
+		constexpr static rivet::rivet_type_id ExplosionShotPrius_type_id = 0x7a1a7335;
+		constexpr static std::string_view EmberShotActor_type_name = "EmberShotActor";
+		constexpr static rivet::rivet_type_id EmberShotActor_type_id = 0x331e75c9;
+		constexpr static std::string_view EmberShotPrius_type_name = "EmberShotPrius";
+		constexpr static rivet::rivet_type_id EmberShotPrius_type_id = 0x55ef016f; 
 
 		explicit PyrocitorSubShotConfig() = default;
 		explicit PyrocitorSubShotConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED StreamingBinkFileConfig : StreamingBinkConfig {
-		constexpr const static std::string_view type_name = "StreamingBinkFileConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xfe28cfca;
+		constexpr static std::string_view type_name = "StreamingBinkFileConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xfe28cfca;
 
-		constexpr const static std::string_view FilePath_type_name = "FilePath";
-		constexpr const static rivet::rivet_type_id FilePath_type_id = 0x334f0e22;
-		constexpr const static std::string_view SubtitleConfigFilePath_type_name = "SubtitleConfigFilePath";
-		constexpr const static rivet::rivet_type_id SubtitleConfigFilePath_type_id = 0x4aca4eb3; 
+		constexpr static std::string_view FilePath_type_name = "FilePath";
+		constexpr static rivet::rivet_type_id FilePath_type_id = 0x334f0e22;
+		constexpr static std::string_view SubtitleConfigFilePath_type_name = "SubtitleConfigFilePath";
+		constexpr static rivet::rivet_type_id SubtitleConfigFilePath_type_id = 0x4aca4eb3; 
 
 		explicit StreamingBinkFileConfig() = default;
 		explicit StreamingBinkFileConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

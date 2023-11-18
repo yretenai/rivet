@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED FocusTrackingAimingPrius : AimingBasePrius {
-		constexpr const static std::string_view type_name = "FocusTrackingAimingPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xcea126e4;
+		constexpr static std::string_view type_name = "FocusTrackingAimingPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xcea126e4;
 
 		explicit FocusTrackingAimingPrius() = default;
 		explicit FocusTrackingAimingPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

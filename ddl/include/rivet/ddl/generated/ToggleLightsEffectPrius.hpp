@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ToggleLightsEffectPrius : ScriptedShotEffectBasePrius {
-		constexpr const static std::string_view type_name = "ToggleLightsEffectPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x3bb49d5c;
+		constexpr static std::string_view type_name = "ToggleLightsEffectPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x3bb49d5c;
 
-		constexpr const static std::string_view Distance_type_name = "Distance";
-		constexpr const static rivet::rivet_type_id Distance_type_id = 0xe69327f1;
-		constexpr const static std::string_view OffTime_type_name = "OffTime";
-		constexpr const static rivet::rivet_type_id OffTime_type_id = 0xc7450687; 
+		constexpr static std::string_view Distance_type_name = "Distance";
+		constexpr static rivet::rivet_type_id Distance_type_id = 0xe69327f1;
+		constexpr static std::string_view OffTime_type_name = "OffTime";
+		constexpr static rivet::rivet_type_id OffTime_type_id = 0xc7450687; 
 
 		explicit ToggleLightsEffectPrius() = default;
 		explicit ToggleLightsEffectPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -21,15 +21,15 @@ namespace rivet::ddl::generated {
 	struct LightingConditionBitSet; 
 
 	struct RIVET_DDL_SHARED FarmExtraTileZoneData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "FarmExtraTileZoneData";
-		constexpr const static rivet::rivet_type_id type_id = 0x71eb2382;
+		constexpr static std::string_view type_name = "FarmExtraTileZoneData";
+		constexpr static rivet::rivet_type_id type_id = 0x71eb2382;
 
-		constexpr const static std::string_view TileName_type_name = "TileName";
-		constexpr const static rivet::rivet_type_id TileName_type_id = 0x58a6cd7d;
-		constexpr const static std::string_view Zones_type_name = "Zones";
-		constexpr const static rivet::rivet_type_id Zones_type_id = 0x9c997da9;
-		constexpr const static std::string_view LightingConditions_type_name = "LightingConditions";
-		constexpr const static rivet::rivet_type_id LightingConditions_type_id = 0xfda14c35; 
+		constexpr static std::string_view TileName_type_name = "TileName";
+		constexpr static rivet::rivet_type_id TileName_type_id = 0x58a6cd7d;
+		constexpr static std::string_view Zones_type_name = "Zones";
+		constexpr static rivet::rivet_type_id Zones_type_id = 0x9c997da9;
+		constexpr static std::string_view LightingConditions_type_name = "LightingConditions";
+		constexpr static rivet::rivet_type_id LightingConditions_type_id = 0xfda14c35; 
 
 		explicit FarmExtraTileZoneData() = default;
 		explicit FarmExtraTileZoneData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

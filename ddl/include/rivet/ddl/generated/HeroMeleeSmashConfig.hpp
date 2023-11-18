@@ -19,15 +19,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED HeroMeleeSmashConfig : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "HeroMeleeSmashConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x93fafa11;
+		constexpr static std::string_view type_name = "HeroMeleeSmashConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x93fafa11;
 
-		constexpr const static std::string_view MeleeSmashMinHeight_type_name = "MeleeSmashMinHeight";
-		constexpr const static rivet::rivet_type_id MeleeSmashMinHeight_type_id = 0xbade2cbf;
-		constexpr const static std::string_view MeleeSmashDescendGravity_type_name = "MeleeSmashDescendGravity";
-		constexpr const static rivet::rivet_type_id MeleeSmashDescendGravity_type_id = 0x2860974b;
-		constexpr const static std::string_view MeleeSmashCameraShakeConfig_type_name = "MeleeSmashCameraShakeConfig";
-		constexpr const static rivet::rivet_type_id MeleeSmashCameraShakeConfig_type_id = 0xab2b42b0; 
+		constexpr static std::string_view MeleeSmashMinHeight_type_name = "MeleeSmashMinHeight";
+		constexpr static rivet::rivet_type_id MeleeSmashMinHeight_type_id = 0xbade2cbf;
+		constexpr static std::string_view MeleeSmashDescendGravity_type_name = "MeleeSmashDescendGravity";
+		constexpr static rivet::rivet_type_id MeleeSmashDescendGravity_type_id = 0x2860974b;
+		constexpr static std::string_view MeleeSmashCameraShakeConfig_type_name = "MeleeSmashCameraShakeConfig";
+		constexpr static rivet::rivet_type_id MeleeSmashCameraShakeConfig_type_id = 0xab2b42b0; 
 
 		explicit HeroMeleeSmashConfig() = default;
 		explicit HeroMeleeSmashConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

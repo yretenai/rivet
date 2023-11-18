@@ -21,11 +21,11 @@ namespace rivet::ddl::generated {
 	struct StreamingVideoBaseConfig; 
 
 	struct RIVET_DDL_SHARED StreamingVideoPlaylistElement : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "StreamingVideoPlaylistElement";
-		constexpr const static rivet::rivet_type_id type_id = 0x95010554;
+		constexpr static std::string_view type_name = "StreamingVideoPlaylistElement";
+		constexpr static rivet::rivet_type_id type_id = 0x95010554;
 
-		constexpr const static std::string_view StreamingData_type_name = "StreamingData";
-		constexpr const static rivet::rivet_type_id StreamingData_type_id = 0xaa4e455d; 
+		constexpr static std::string_view StreamingData_type_name = "StreamingData";
+		constexpr static rivet::rivet_type_id StreamingData_type_id = 0xaa4e455d; 
 
 		explicit StreamingVideoPlaylistElement() = default;
 		explicit StreamingVideoPlaylistElement([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

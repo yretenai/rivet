@@ -19,13 +19,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED PropItem : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "PropItem";
-		constexpr const static rivet::rivet_type_id type_id = 0xd6993af7;
+		constexpr static std::string_view type_name = "PropItem";
+		constexpr static rivet::rivet_type_id type_id = 0xd6993af7;
 
-		constexpr const static std::string_view PropName_type_name = "PropName";
-		constexpr const static rivet::rivet_type_id PropName_type_id = 0x97a161ef;
-		constexpr const static std::string_view PropAsset_type_name = "PropAsset";
-		constexpr const static rivet::rivet_type_id PropAsset_type_id = 0x9b26d12; 
+		constexpr static std::string_view PropName_type_name = "PropName";
+		constexpr static rivet::rivet_type_id PropName_type_id = 0x97a161ef;
+		constexpr static std::string_view PropAsset_type_name = "PropAsset";
+		constexpr static rivet::rivet_type_id PropAsset_type_id = 0x9b26d12; 
 
 		explicit PropItem() = default;
 		explicit PropItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

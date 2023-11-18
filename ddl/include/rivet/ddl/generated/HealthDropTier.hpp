@@ -19,13 +19,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED HealthDropTier : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "HealthDropTier";
-		constexpr const static rivet::rivet_type_id type_id = 0xad23e50a;
+		constexpr static std::string_view type_name = "HealthDropTier";
+		constexpr static rivet::rivet_type_id type_id = 0xad23e50a;
 
-		constexpr const static std::string_view HealthPrecentage_type_name = "HealthPrecentage";
-		constexpr const static rivet::rivet_type_id HealthPrecentage_type_id = 0x5f9ba52b;
-		constexpr const static std::string_view DropPercentage_type_name = "DropPercentage";
-		constexpr const static rivet::rivet_type_id DropPercentage_type_id = 0x5702cb8c; 
+		constexpr static std::string_view HealthPrecentage_type_name = "HealthPrecentage";
+		constexpr static rivet::rivet_type_id HealthPrecentage_type_id = 0x5f9ba52b;
+		constexpr static std::string_view DropPercentage_type_name = "DropPercentage";
+		constexpr static rivet::rivet_type_id DropPercentage_type_id = 0x5702cb8c; 
 
 		explicit HealthDropTier() = default;
 		explicit HealthDropTier([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

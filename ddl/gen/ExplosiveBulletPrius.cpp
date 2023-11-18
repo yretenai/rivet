@@ -3,12 +3,12 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/DamageModifierExplosionPrius.hpp>
-#include <rivet/ddl/generated/ShotPredatorLauncherPrius.hpp>
+#include <rivet/ddl/generated/ShotTunnelerPrius.hpp>
+#include <rivet/ddl/generated/PyrocitorExplosionShotPrius.hpp>
 #include <rivet/ddl/generated/ShotWarmongerMicroRocketPrius.hpp>
 #include <rivet/ddl/generated/ShotWarmongerRocketPrius.hpp>
-#include <rivet/ddl/generated/PyrocitorExplosionShotPrius.hpp>
-#include <rivet/ddl/generated/ShotTunnelerPrius.hpp> 
+#include <rivet/ddl/generated/ShotPredatorLauncherPrius.hpp>
+#include <rivet/ddl/generated/DamageModifierExplosionPrius.hpp> 
 
 #include <rivet/ddl/generated/ExplosiveBulletPrius.hpp>
 

@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view ManipSpaceMode_type_name = "ManipSpaceMode";
-	constexpr const static rivet::rivet_type_id ManipSpaceMode_type_id = 0x7452ffcb;
+	constexpr static std::string_view ManipSpaceMode_type_name = "ManipSpaceMode";
+	constexpr static rivet::rivet_type_id ManipSpaceMode_type_id = 0x7452ffcb;
 
-	constexpr const static std::array<std::string_view, 2> ManipSpaceMode_values = {
+	constexpr static std::array<std::string_view, 2> ManipSpaceMode_values = {
 		"kWorld",
 		"kObject", 
 	};

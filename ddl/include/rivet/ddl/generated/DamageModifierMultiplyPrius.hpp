@@ -17,32 +17,32 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/DamageModifierIncomingPrius.hpp>
-#include <rivet/ddl/generated/enums/x8d7e44cf.hpp> 
+#include <rivet/ddl/generated/enums/x8d7e44cf.hpp>
+#include <rivet/ddl/generated/DamageModifierIncomingPrius.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DamageModifierMultiplyPrius : DamageModifierIncomingPrius {
-		constexpr const static std::string_view type_name = "DamageModifierMultiplyPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xcfede227;
+		constexpr static std::string_view type_name = "DamageModifierMultiplyPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xcfede227;
 
-		constexpr const static std::string_view Multiplier_type_name = "Multiplier";
-		constexpr const static rivet::rivet_type_id Multiplier_type_id = 0x7facf762;
-		constexpr const static std::string_view StatusMultiplier_type_name = "StatusMultiplier";
-		constexpr const static rivet::rivet_type_id StatusMultiplier_type_id = 0x6fc67017;
-		constexpr const static std::string_view Lifetime_type_name = "Lifetime";
-		constexpr const static rivet::rivet_type_id Lifetime_type_id = 0xc7e68df8;
-		constexpr const static std::string_view ApplyHeal_type_name = "ApplyHeal";
-		constexpr const static rivet::rivet_type_id ApplyHeal_type_id = 0xcc7e1ced;
-		constexpr const static std::string_view ApplyToKnockdown_type_name = "ApplyToKnockdown";
-		constexpr const static rivet::rivet_type_id ApplyToKnockdown_type_id = 0xaae98b21;
-		constexpr const static std::string_view DamageFiltersAreExclude_type_name = "DamageFiltersAreExclude";
-		constexpr const static rivet::rivet_type_id DamageFiltersAreExclude_type_id = 0xef96e64d;
-		constexpr const static std::string_view DamageFilter_type_name = "DamageFilter";
-		constexpr const static rivet::rivet_type_id DamageFilter_type_id = 0xa75ecb2f;
-		constexpr const static std::string_view AllegianceFilter_type_name = "AllegianceFilter";
-		constexpr const static rivet::rivet_type_id AllegianceFilter_type_id = 0x1b32101d;
-		constexpr const static std::string_view ModifiedTag_type_name = "ModifiedTag";
-		constexpr const static rivet::rivet_type_id ModifiedTag_type_id = 0x75529898; 
+		constexpr static std::string_view Multiplier_type_name = "Multiplier";
+		constexpr static rivet::rivet_type_id Multiplier_type_id = 0x7facf762;
+		constexpr static std::string_view StatusMultiplier_type_name = "StatusMultiplier";
+		constexpr static rivet::rivet_type_id StatusMultiplier_type_id = 0x6fc67017;
+		constexpr static std::string_view Lifetime_type_name = "Lifetime";
+		constexpr static rivet::rivet_type_id Lifetime_type_id = 0xc7e68df8;
+		constexpr static std::string_view ApplyHeal_type_name = "ApplyHeal";
+		constexpr static rivet::rivet_type_id ApplyHeal_type_id = 0xcc7e1ced;
+		constexpr static std::string_view ApplyToKnockdown_type_name = "ApplyToKnockdown";
+		constexpr static rivet::rivet_type_id ApplyToKnockdown_type_id = 0xaae98b21;
+		constexpr static std::string_view DamageFiltersAreExclude_type_name = "DamageFiltersAreExclude";
+		constexpr static rivet::rivet_type_id DamageFiltersAreExclude_type_id = 0xef96e64d;
+		constexpr static std::string_view DamageFilter_type_name = "DamageFilter";
+		constexpr static rivet::rivet_type_id DamageFilter_type_id = 0xa75ecb2f;
+		constexpr static std::string_view AllegianceFilter_type_name = "AllegianceFilter";
+		constexpr static rivet::rivet_type_id AllegianceFilter_type_id = 0x1b32101d;
+		constexpr static std::string_view ModifiedTag_type_name = "ModifiedTag";
+		constexpr static rivet::rivet_type_id ModifiedTag_type_id = 0x75529898; 
 
 		explicit DamageModifierMultiplyPrius() = default;
 		explicit DamageModifierMultiplyPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

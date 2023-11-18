@@ -18,22 +18,22 @@
 #include <rivet/structures/rivet_serialization.hpp>
 
 #include <rivet/ddl/generated/enums/xc837e0c6.hpp>
-#include <rivet/ddl/generated/enums/x1b3f99b5.hpp>
-#include <rivet/ddl/generated/enums/x5eb34cd6.hpp> 
+#include <rivet/ddl/generated/enums/x5eb34cd6.hpp>
+#include <rivet/ddl/generated/enums/x1b3f99b5.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED SkinItemPart : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "SkinItemPart";
-		constexpr const static rivet::rivet_type_id type_id = 0xfe3ec914;
+		constexpr static std::string_view type_name = "SkinItemPart";
+		constexpr static rivet::rivet_type_id type_id = 0xfe3ec914;
 
-		constexpr const static std::string_view Slot_type_name = "Slot";
-		constexpr const static rivet::rivet_type_id Slot_type_id = 0x9c9ee0d7;
-		constexpr const static std::string_view Layer_type_name = "Layer";
-		constexpr const static rivet::rivet_type_id Layer_type_id = 0xfd88eddb;
-		constexpr const static std::string_view Hidden_type_name = "Hidden";
-		constexpr const static rivet::rivet_type_id Hidden_type_id = 0xb625a7da;
-		constexpr const static std::string_view ExcludeInner_type_name = "ExcludeInner";
-		constexpr const static rivet::rivet_type_id ExcludeInner_type_id = 0x656e21b9; 
+		constexpr static std::string_view Slot_type_name = "Slot";
+		constexpr static rivet::rivet_type_id Slot_type_id = 0x9c9ee0d7;
+		constexpr static std::string_view Layer_type_name = "Layer";
+		constexpr static rivet::rivet_type_id Layer_type_id = 0xfd88eddb;
+		constexpr static std::string_view Hidden_type_name = "Hidden";
+		constexpr static rivet::rivet_type_id Hidden_type_id = 0xb625a7da;
+		constexpr static std::string_view ExcludeInner_type_name = "ExcludeInner";
+		constexpr static rivet::rivet_type_id ExcludeInner_type_id = 0x656e21b9; 
 
 		explicit SkinItemPart() = default;
 		explicit SkinItemPart([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

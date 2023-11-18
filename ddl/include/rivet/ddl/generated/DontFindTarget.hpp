@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DontFindTarget : SpawnShotTargetingMode {
-		constexpr const static std::string_view type_name = "DontFindTarget";
-		constexpr const static rivet::rivet_type_id type_id = 0x99740853;
+		constexpr static std::string_view type_name = "DontFindTarget";
+		constexpr static rivet::rivet_type_id type_id = 0x99740853;
 
 		explicit DontFindTarget() = default;
 		explicit DontFindTarget([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

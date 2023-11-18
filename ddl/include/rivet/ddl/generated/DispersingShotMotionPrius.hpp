@@ -17,16 +17,16 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/HomingShotMotionPrius.hpp>
-#include <rivet/ddl/generated/enums/xfb474e10.hpp> 
+#include <rivet/ddl/generated/enums/xfb474e10.hpp>
+#include <rivet/ddl/generated/HomingShotMotionPrius.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DispersingShotMotionPrius : HomingShotMotionPrius {
-		constexpr const static std::string_view type_name = "DispersingShotMotionPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xc0d5dab7;
+		constexpr static std::string_view type_name = "DispersingShotMotionPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xc0d5dab7;
 
-		constexpr const static std::string_view DispersionType_type_name = "DispersionType";
-		constexpr const static rivet::rivet_type_id DispersionType_type_id = 0x3560b19a; 
+		constexpr static std::string_view DispersionType_type_name = "DispersionType";
+		constexpr static rivet::rivet_type_id DispersionType_type_id = 0x3560b19a; 
 
 		explicit DispersingShotMotionPrius() = default;
 		explicit DispersingShotMotionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

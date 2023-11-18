@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED AimAssistSnapLocationJoint : AimAssistSnapLocation {
-		constexpr const static std::string_view type_name = "AimAssistSnapLocationJoint";
-		constexpr const static rivet::rivet_type_id type_id = 0x2079caf5;
+		constexpr static std::string_view type_name = "AimAssistSnapLocationJoint";
+		constexpr static rivet::rivet_type_id type_id = 0x2079caf5;
 
-		constexpr const static std::string_view JointName_type_name = "JointName";
-		constexpr const static rivet::rivet_type_id JointName_type_id = 0x5ba51db8; 
+		constexpr static std::string_view JointName_type_name = "JointName";
+		constexpr static rivet::rivet_type_id JointName_type_id = 0x5ba51db8; 
 
 		explicit AimAssistSnapLocationJoint() = default;
 		explicit AimAssistSnapLocationJoint([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

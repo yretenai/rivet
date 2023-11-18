@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view OccluderType_type_name = "OccluderType";
-	constexpr const static rivet::rivet_type_id OccluderType_type_id = 0xe6e6cd23;
+	constexpr static std::string_view OccluderType_type_name = "OccluderType";
+	constexpr static rivet::rivet_type_id OccluderType_type_id = 0xe6e6cd23;
 
-	constexpr const static std::array<std::string_view, 2> OccluderType_values = {
+	constexpr static std::array<std::string_view, 2> OccluderType_values = {
 		"kOccludeIfStatic",
 		"kNeverOcclude", 
 	};

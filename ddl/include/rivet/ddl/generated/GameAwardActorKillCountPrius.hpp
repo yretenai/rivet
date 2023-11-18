@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct ActorAssetReferenceDef; 
 
 	struct RIVET_DDL_SHARED GameAwardActorKillCountPrius : AwardBasePrius {
-		constexpr const static std::string_view type_name = "GameAwardActorKillCountPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x48ed0cbd;
+		constexpr static std::string_view type_name = "GameAwardActorKillCountPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x48ed0cbd;
 
-		constexpr const static std::string_view KillTargetAsset_type_name = "KillTargetAsset";
-		constexpr const static rivet::rivet_type_id KillTargetAsset_type_id = 0x6d202ffb; 
+		constexpr static std::string_view KillTargetAsset_type_name = "KillTargetAsset";
+		constexpr static rivet::rivet_type_id KillTargetAsset_type_id = 0x6d202ffb; 
 
 		explicit GameAwardActorKillCountPrius() = default;
 		explicit GameAwardActorKillCountPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

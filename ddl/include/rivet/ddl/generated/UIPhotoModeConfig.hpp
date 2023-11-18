@@ -20,23 +20,23 @@
 #include <rivet/ddl/generated/ConfigBase.hpp> 
 
 namespace rivet::ddl::generated {
-	struct UIPhotoModeLights;
-	struct UIPhotoModeOptionsPage;
+	struct UIPhotoModeOption;
 	struct UIPhotoModeEditMode;
-	struct UIPhotoModeOption; 
+	struct UIPhotoModeLights;
+	struct UIPhotoModeOptionsPage; 
 
 	struct RIVET_DDL_SHARED UIPhotoModeConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "UIPhotoModeConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x187c281c;
+		constexpr static std::string_view type_name = "UIPhotoModeConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x187c281c;
 
-		constexpr const static std::string_view OptionsPages_type_name = "OptionsPages";
-		constexpr const static rivet::rivet_type_id OptionsPages_type_id = 0x6bbe8ad4;
-		constexpr const static std::string_view Lights_type_name = "Lights";
-		constexpr const static rivet::rivet_type_id Lights_type_id = 0x6c4fc8f;
-		constexpr const static std::string_view EditModes_type_name = "EditModes";
-		constexpr const static rivet::rivet_type_id EditModes_type_id = 0xf54200dc;
-		constexpr const static std::string_view CharacterControls_type_name = "CharacterControls";
-		constexpr const static rivet::rivet_type_id CharacterControls_type_id = 0x5751aaef; 
+		constexpr static std::string_view OptionsPages_type_name = "OptionsPages";
+		constexpr static rivet::rivet_type_id OptionsPages_type_id = 0x6bbe8ad4;
+		constexpr static std::string_view Lights_type_name = "Lights";
+		constexpr static rivet::rivet_type_id Lights_type_id = 0x6c4fc8f;
+		constexpr static std::string_view EditModes_type_name = "EditModes";
+		constexpr static rivet::rivet_type_id EditModes_type_id = 0xf54200dc;
+		constexpr static std::string_view CharacterControls_type_name = "CharacterControls";
+		constexpr static rivet::rivet_type_id CharacterControls_type_id = 0x5751aaef; 
 
 		explicit UIPhotoModeConfig() = default;
 		explicit UIPhotoModeConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

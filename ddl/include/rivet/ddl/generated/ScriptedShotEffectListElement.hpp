@@ -23,13 +23,13 @@ namespace rivet::ddl::generated {
 	struct ScriptedShotEffectBasePrius; 
 
 	struct RIVET_DDL_SHARED ScriptedShotEffectListElement : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "ScriptedShotEffectListElement";
-		constexpr const static rivet::rivet_type_id type_id = 0xe61759bc;
+		constexpr static std::string_view type_name = "ScriptedShotEffectListElement";
+		constexpr static rivet::rivet_type_id type_id = 0xe61759bc;
 
-		constexpr const static std::string_view EventType_type_name = "EventType";
-		constexpr const static rivet::rivet_type_id EventType_type_id = 0xf2b5bb32;
-		constexpr const static std::string_view Effect_type_name = "Effect";
-		constexpr const static rivet::rivet_type_id Effect_type_id = 0x8818df95; 
+		constexpr static std::string_view EventType_type_name = "EventType";
+		constexpr static rivet::rivet_type_id EventType_type_id = 0xf2b5bb32;
+		constexpr static std::string_view Effect_type_name = "Effect";
+		constexpr static rivet::rivet_type_id Effect_type_id = 0x8818df95; 
 
 		explicit ScriptedShotEffectListElement() = default;
 		explicit ScriptedShotEffectListElement([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

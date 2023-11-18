@@ -21,25 +21,25 @@ namespace rivet::ddl::generated {
 	struct DDLVector3; 
 
 	struct RIVET_DDL_SHARED ClankPuzzleTargetColorData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "ClankPuzzleTargetColorData";
-		constexpr const static rivet::rivet_type_id type_id = 0x9c8a630b;
+		constexpr static std::string_view type_name = "ClankPuzzleTargetColorData";
+		constexpr static rivet::rivet_type_id type_id = 0x9c8a630b;
 
-		constexpr const static std::string_view ColorConstant_type_name = "ColorConstant";
-		constexpr const static rivet::rivet_type_id ColorConstant_type_id = 0x2abb3948;
-		constexpr const static std::string_view LerpInValue_type_name = "LerpInValue";
-		constexpr const static rivet::rivet_type_id LerpInValue_type_id = 0xa78f92;
-		constexpr const static std::string_view LerpOutValue_type_name = "LerpOutValue";
-		constexpr const static rivet::rivet_type_id LerpOutValue_type_id = 0x7255935b;
-		constexpr const static std::string_view DefaultColor_type_name = "DefaultColor";
-		constexpr const static rivet::rivet_type_id DefaultColor_type_id = 0x7ccd1470;
-		constexpr const static std::string_view SpeedUpColor_type_name = "SpeedUpColor";
-		constexpr const static rivet::rivet_type_id SpeedUpColor_type_id = 0x7b4c01a7;
-		constexpr const static std::string_view SlowDownColor_type_name = "SlowDownColor";
-		constexpr const static rivet::rivet_type_id SlowDownColor_type_id = 0x3de399a8;
-		constexpr const static std::string_view GravityColor_type_name = "GravityColor";
-		constexpr const static rivet::rivet_type_id GravityColor_type_id = 0x6558c61a;
-		constexpr const static std::string_view EnergyColor_type_name = "EnergyColor";
-		constexpr const static rivet::rivet_type_id EnergyColor_type_id = 0xf3fe021a; 
+		constexpr static std::string_view ColorConstant_type_name = "ColorConstant";
+		constexpr static rivet::rivet_type_id ColorConstant_type_id = 0x2abb3948;
+		constexpr static std::string_view LerpInValue_type_name = "LerpInValue";
+		constexpr static rivet::rivet_type_id LerpInValue_type_id = 0xa78f92;
+		constexpr static std::string_view LerpOutValue_type_name = "LerpOutValue";
+		constexpr static rivet::rivet_type_id LerpOutValue_type_id = 0x7255935b;
+		constexpr static std::string_view DefaultColor_type_name = "DefaultColor";
+		constexpr static rivet::rivet_type_id DefaultColor_type_id = 0x7ccd1470;
+		constexpr static std::string_view SpeedUpColor_type_name = "SpeedUpColor";
+		constexpr static rivet::rivet_type_id SpeedUpColor_type_id = 0x7b4c01a7;
+		constexpr static std::string_view SlowDownColor_type_name = "SlowDownColor";
+		constexpr static rivet::rivet_type_id SlowDownColor_type_id = 0x3de399a8;
+		constexpr static std::string_view GravityColor_type_name = "GravityColor";
+		constexpr static rivet::rivet_type_id GravityColor_type_id = 0x6558c61a;
+		constexpr static std::string_view EnergyColor_type_name = "EnergyColor";
+		constexpr static rivet::rivet_type_id EnergyColor_type_id = 0xf3fe021a; 
 
 		explicit ClankPuzzleTargetColorData() = default;
 		explicit ClankPuzzleTargetColorData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -17,16 +17,16 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/IconMapBase.hpp>
-#include <rivet/ddl/generated/enums/xbdfca5a1.hpp> 
+#include <rivet/ddl/generated/enums/xbdfca5a1.hpp>
+#include <rivet/ddl/generated/IconMapBase.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED IconMapAccessibilityControl : IconMapBase {
-		constexpr const static std::string_view type_name = "IconMapAccessibilityControl";
-		constexpr const static rivet::rivet_type_id type_id = 0x174925f;
+		constexpr static std::string_view type_name = "IconMapAccessibilityControl";
+		constexpr static rivet::rivet_type_id type_id = 0x174925f;
 
-		constexpr const static std::string_view AccessibilityControl_type_name = "AccessibilityControl";
-		constexpr const static rivet::rivet_type_id AccessibilityControl_type_id = 0xeec6b383; 
+		constexpr static std::string_view AccessibilityControl_type_name = "AccessibilityControl";
+		constexpr static rivet::rivet_type_id AccessibilityControl_type_id = 0xeec6b383; 
 
 		explicit IconMapAccessibilityControl() = default;
 		explicit IconMapAccessibilityControl([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

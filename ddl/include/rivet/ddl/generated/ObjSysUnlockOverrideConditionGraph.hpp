@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct AssetReferenceDef; 
 
 	struct RIVET_DDL_SHARED ObjSysUnlockOverrideConditionGraph : ObjSysUnlockOverrideConditionBase {
-		constexpr const static std::string_view type_name = "ObjSysUnlockOverrideConditionGraph";
-		constexpr const static rivet::rivet_type_id type_id = 0xbca12a91;
+		constexpr static std::string_view type_name = "ObjSysUnlockOverrideConditionGraph";
+		constexpr static rivet::rivet_type_id type_id = 0xbca12a91;
 
-		constexpr const static std::string_view MissionGraph_type_name = "MissionGraph";
-		constexpr const static rivet::rivet_type_id MissionGraph_type_id = 0x7f6dce4c; 
+		constexpr static std::string_view MissionGraph_type_name = "MissionGraph";
+		constexpr static rivet::rivet_type_id MissionGraph_type_id = 0x7f6dce4c; 
 
 		explicit ObjSysUnlockOverrideConditionGraph() = default;
 		explicit ObjSysUnlockOverrideConditionGraph([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

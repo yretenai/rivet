@@ -23,17 +23,17 @@ namespace rivet::ddl::generated {
 	struct UISongData; 
 
 	struct RIVET_DDL_SHARED UICreditsConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "UICreditsConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x580b2a48;
+		constexpr static std::string_view type_name = "UICreditsConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x580b2a48;
 
-		constexpr const static std::string_view CreditsStartIndex_type_name = "CreditsStartIndex";
-		constexpr const static rivet::rivet_type_id CreditsStartIndex_type_id = 0x5aaad564;
-		constexpr const static std::string_view PostInsomnaicCreditsStartIndex_type_name = "PostInsomnaicCreditsStartIndex";
-		constexpr const static rivet::rivet_type_id PostInsomnaicCreditsStartIndex_type_id = 0x5b786e02;
-		constexpr const static std::string_view CreditsEnableSkipIndex_type_name = "CreditsEnableSkipIndex";
-		constexpr const static rivet::rivet_type_id CreditsEnableSkipIndex_type_id = 0xdcef1100;
-		constexpr const static std::string_view CreditsSongData_type_name = "CreditsSongData";
-		constexpr const static rivet::rivet_type_id CreditsSongData_type_id = 0x3ad94972; 
+		constexpr static std::string_view CreditsStartIndex_type_name = "CreditsStartIndex";
+		constexpr static rivet::rivet_type_id CreditsStartIndex_type_id = 0x5aaad564;
+		constexpr static std::string_view PostInsomnaicCreditsStartIndex_type_name = "PostInsomnaicCreditsStartIndex";
+		constexpr static rivet::rivet_type_id PostInsomnaicCreditsStartIndex_type_id = 0x5b786e02;
+		constexpr static std::string_view CreditsEnableSkipIndex_type_name = "CreditsEnableSkipIndex";
+		constexpr static rivet::rivet_type_id CreditsEnableSkipIndex_type_id = 0xdcef1100;
+		constexpr static std::string_view CreditsSongData_type_name = "CreditsSongData";
+		constexpr static rivet::rivet_type_id CreditsSongData_type_id = 0x3ad94972; 
 
 		explicit UICreditsConfig() = default;
 		explicit UICreditsConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

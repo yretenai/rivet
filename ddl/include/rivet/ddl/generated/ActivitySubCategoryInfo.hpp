@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ActivitySubCategoryInfo : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "ActivitySubCategoryInfo";
-		constexpr const static rivet::rivet_type_id type_id = 0x552f5c96;
+		constexpr static std::string_view type_name = "ActivitySubCategoryInfo";
+		constexpr static rivet::rivet_type_id type_id = 0x552f5c96;
 
-		constexpr const static std::string_view SubCategory_type_name = "SubCategory";
-		constexpr const static rivet::rivet_type_id SubCategory_type_id = 0x797697c5;
-		constexpr const static std::string_view NameTag_type_name = "NameTag";
-		constexpr const static rivet::rivet_type_id NameTag_type_id = 0x2d78cbbd; 
+		constexpr static std::string_view SubCategory_type_name = "SubCategory";
+		constexpr static rivet::rivet_type_id SubCategory_type_id = 0x797697c5;
+		constexpr static std::string_view NameTag_type_name = "NameTag";
+		constexpr static rivet::rivet_type_id NameTag_type_id = 0x2d78cbbd; 
 
 		explicit ActivitySubCategoryInfo() = default;
 		explicit ActivitySubCategoryInfo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

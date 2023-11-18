@@ -17,29 +17,29 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/ScriptedShotEffectBasePrius.hpp>
-#include <rivet/ddl/generated/enums/x4891b54.hpp> 
+#include <rivet/ddl/generated/enums/x4891b54.hpp>
+#include <rivet/ddl/generated/ScriptedShotEffectBasePrius.hpp> 
 
 namespace rivet::ddl::generated {
-	struct SpawnShotTargetingMode;
+	struct ScriptedShotEffectListElement;
 	struct WeaponAccuracyBasePrius;
 	struct WeaponFiringBasePrius;
-	struct ScriptedShotEffectListElement; 
+	struct SpawnShotTargetingMode; 
 
 	struct RIVET_DDL_SHARED SpawnShotEffectPrius : ScriptedShotEffectBasePrius {
-		constexpr const static std::string_view type_name = "SpawnShotEffectPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x882713ff;
+		constexpr static std::string_view type_name = "SpawnShotEffectPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x882713ff;
 
-		constexpr const static std::string_view SpawnFromActor_type_name = "SpawnFromActor";
-		constexpr const static rivet::rivet_type_id SpawnFromActor_type_id = 0xcd2673a5;
-		constexpr const static std::string_view TargetMode_type_name = "TargetMode";
-		constexpr const static rivet::rivet_type_id TargetMode_type_id = 0x6eb58da3;
-		constexpr const static std::string_view AccuracyPrius_type_name = "AccuracyPrius";
-		constexpr const static rivet::rivet_type_id AccuracyPrius_type_id = 0x14f21c90;
-		constexpr const static std::string_view FiringPrius_type_name = "FiringPrius";
-		constexpr const static rivet::rivet_type_id FiringPrius_type_id = 0x89263129;
-		constexpr const static std::string_view ShotSubEffects_type_name = "ShotSubEffects";
-		constexpr const static rivet::rivet_type_id ShotSubEffects_type_id = 0x35230399; 
+		constexpr static std::string_view SpawnFromActor_type_name = "SpawnFromActor";
+		constexpr static rivet::rivet_type_id SpawnFromActor_type_id = 0xcd2673a5;
+		constexpr static std::string_view TargetMode_type_name = "TargetMode";
+		constexpr static rivet::rivet_type_id TargetMode_type_id = 0x6eb58da3;
+		constexpr static std::string_view AccuracyPrius_type_name = "AccuracyPrius";
+		constexpr static rivet::rivet_type_id AccuracyPrius_type_id = 0x14f21c90;
+		constexpr static std::string_view FiringPrius_type_name = "FiringPrius";
+		constexpr static rivet::rivet_type_id FiringPrius_type_id = 0x89263129;
+		constexpr static std::string_view ShotSubEffects_type_name = "ShotSubEffects";
+		constexpr static rivet::rivet_type_id ShotSubEffects_type_id = 0x35230399; 
 
 		explicit SpawnShotEffectPrius() = default;
 		explicit SpawnShotEffectPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

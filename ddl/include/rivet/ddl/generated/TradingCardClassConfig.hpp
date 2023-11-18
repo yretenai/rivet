@@ -23,15 +23,15 @@ namespace rivet::ddl::generated {
 	struct ClassModifierDef; 
 
 	struct RIVET_DDL_SHARED TradingCardClassConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "TradingCardClassConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xb0c9dd34;
+		constexpr static std::string_view type_name = "TradingCardClassConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xb0c9dd34;
 
-		constexpr const static std::string_view ClassA_type_name = "ClassA";
-		constexpr const static rivet::rivet_type_id ClassA_type_id = 0x8dfc1520;
-		constexpr const static std::string_view ClassB_type_name = "ClassB";
-		constexpr const static rivet::rivet_type_id ClassB_type_id = 0x14f5449a;
-		constexpr const static std::string_view ClassC_type_name = "ClassC";
-		constexpr const static rivet::rivet_type_id ClassC_type_id = 0x63f2740c; 
+		constexpr static std::string_view ClassA_type_name = "ClassA";
+		constexpr static rivet::rivet_type_id ClassA_type_id = 0x8dfc1520;
+		constexpr static std::string_view ClassB_type_name = "ClassB";
+		constexpr static rivet::rivet_type_id ClassB_type_id = 0x14f5449a;
+		constexpr static std::string_view ClassC_type_name = "ClassC";
+		constexpr static rivet::rivet_type_id ClassC_type_id = 0x63f2740c; 
 
 		explicit TradingCardClassConfig() = default;
 		explicit TradingCardClassConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

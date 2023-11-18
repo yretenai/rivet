@@ -18,24 +18,24 @@
 #include <rivet/structures/rivet_serialization.hpp>
 
 namespace rivet::ddl::generated {
-	struct AnimDamageAttackStyleBase;
+	struct AnimDamageAttackModDef;
 	struct ChargeAttackParams;
-	struct AnimDamageAttackModDef; 
+	struct AnimDamageAttackStyleBase; 
 
 	struct RIVET_DDL_SHARED AnimDamageAttack : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "AnimDamageAttack";
-		constexpr const static rivet::rivet_type_id type_id = 0xc1b3a742;
+		constexpr static std::string_view type_name = "AnimDamageAttack";
+		constexpr static rivet::rivet_type_id type_id = 0xc1b3a742;
 
-		constexpr const static std::string_view Description_type_name = "Description";
-		constexpr const static rivet::rivet_type_id Description_type_id = 0xe03811fd;
-		constexpr const static std::string_view SpecializedReact_type_name = "SpecializedReact";
-		constexpr const static rivet::rivet_type_id SpecializedReact_type_id = 0x9041e2fc;
-		constexpr const static std::string_view AttackStyle_type_name = "AttackStyle";
-		constexpr const static rivet::rivet_type_id AttackStyle_type_id = 0xd59e7743;
-		constexpr const static std::string_view ChargeAttack_type_name = "ChargeAttack";
-		constexpr const static rivet::rivet_type_id ChargeAttack_type_id = 0x1ffef039;
-		constexpr const static std::string_view ConfigModDefs_type_name = "ConfigModDefs";
-		constexpr const static rivet::rivet_type_id ConfigModDefs_type_id = 0x3d4ae417; 
+		constexpr static std::string_view Description_type_name = "Description";
+		constexpr static rivet::rivet_type_id Description_type_id = 0xe03811fd;
+		constexpr static std::string_view SpecializedReact_type_name = "SpecializedReact";
+		constexpr static rivet::rivet_type_id SpecializedReact_type_id = 0x9041e2fc;
+		constexpr static std::string_view AttackStyle_type_name = "AttackStyle";
+		constexpr static rivet::rivet_type_id AttackStyle_type_id = 0xd59e7743;
+		constexpr static std::string_view ChargeAttack_type_name = "ChargeAttack";
+		constexpr static rivet::rivet_type_id ChargeAttack_type_id = 0x1ffef039;
+		constexpr static std::string_view ConfigModDefs_type_name = "ConfigModDefs";
+		constexpr static rivet::rivet_type_id ConfigModDefs_type_id = 0x3d4ae417; 
 
 		explicit AnimDamageAttack() = default;
 		explicit AnimDamageAttack([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DevstatsEventEntry : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "DevstatsEventEntry";
-		constexpr const static rivet::rivet_type_id type_id = 0x535afa02;
+		constexpr static std::string_view type_name = "DevstatsEventEntry";
+		constexpr static rivet::rivet_type_id type_id = 0x535afa02;
 
-		constexpr const static std::string_view EventCodeName_type_name = "EventCodeName";
-		constexpr const static rivet::rivet_type_id EventCodeName_type_id = 0x6c4a3779;
-		constexpr const static std::string_view EnabledConfigurations_type_name = "EnabledConfigurations";
-		constexpr const static rivet::rivet_type_id EnabledConfigurations_type_id = 0x2cc6ad5e; 
+		constexpr static std::string_view EventCodeName_type_name = "EventCodeName";
+		constexpr static rivet::rivet_type_id EventCodeName_type_id = 0x6c4a3779;
+		constexpr static std::string_view EnabledConfigurations_type_name = "EnabledConfigurations";
+		constexpr static rivet::rivet_type_id EnabledConfigurations_type_id = 0x2cc6ad5e; 
 
 		explicit DevstatsEventEntry() = default;
 		explicit DevstatsEventEntry([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

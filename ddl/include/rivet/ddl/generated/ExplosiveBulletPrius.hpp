@@ -17,26 +17,26 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/SimpleShotPrius.hpp>
-#include <rivet/ddl/generated/enums/x8d7e44cf.hpp>
+#include <rivet/ddl/generated/enums/DamageLOSTypes.hpp>
 #include <rivet/ddl/generated/bitsets/x65d7dac2.hpp>
-#include <rivet/ddl/generated/enums/DamageLOSTypes.hpp> 
+#include <rivet/ddl/generated/enums/x8d7e44cf.hpp>
+#include <rivet/ddl/generated/SimpleShotPrius.hpp> 
 
 namespace rivet::ddl::generated {
 	struct DamageModifierExplosionPrius; 
 
 	struct RIVET_DDL_SHARED ExplosiveBulletPrius : SimpleShotPrius {
-		constexpr const static std::string_view type_name = "ExplosiveBulletPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x95d7972b;
+		constexpr static std::string_view type_name = "ExplosiveBulletPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x95d7972b;
 
-		constexpr const static std::string_view ExplosionDamageType_type_name = "ExplosionDamageType";
-		constexpr const static rivet::rivet_type_id ExplosionDamageType_type_id = 0x9eca2505;
-		constexpr const static std::string_view DamageFlags_type_name = "DamageFlags";
-		constexpr const static rivet::rivet_type_id DamageFlags_type_id = 0x93d0d934;
-		constexpr const static std::string_view ExplosionData_type_name = "ExplosionData";
-		constexpr const static rivet::rivet_type_id ExplosionData_type_id = 0x7860aa8f;
-		constexpr const static std::string_view DamageLOSType_type_name = "DamageLOSType";
-		constexpr const static rivet::rivet_type_id DamageLOSType_type_id = 0x4762f7df; 
+		constexpr static std::string_view ExplosionDamageType_type_name = "ExplosionDamageType";
+		constexpr static rivet::rivet_type_id ExplosionDamageType_type_id = 0x9eca2505;
+		constexpr static std::string_view DamageFlags_type_name = "DamageFlags";
+		constexpr static rivet::rivet_type_id DamageFlags_type_id = 0x93d0d934;
+		constexpr static std::string_view ExplosionData_type_name = "ExplosionData";
+		constexpr static rivet::rivet_type_id ExplosionData_type_id = 0x7860aa8f;
+		constexpr static std::string_view DamageLOSType_type_name = "DamageLOSType";
+		constexpr static rivet::rivet_type_id DamageLOSType_type_id = 0x4762f7df; 
 
 		explicit ExplosiveBulletPrius() = default;
 		explicit ExplosiveBulletPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

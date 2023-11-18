@@ -19,13 +19,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED Cinematic2NamespaceActor : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "Cinematic2NamespaceActor";
-		constexpr const static rivet::rivet_type_id type_id = 0x373044ac;
+		constexpr static std::string_view type_name = "Cinematic2NamespaceActor";
+		constexpr static rivet::rivet_type_id type_id = 0x373044ac;
 
-		constexpr const static std::string_view MayaNamespace_type_name = "MayaNamespace";
-		constexpr const static rivet::rivet_type_id MayaNamespace_type_id = 0x2676c033;
-		constexpr const static std::string_view Actor_type_name = "Actor";
-		constexpr const static rivet::rivet_type_id Actor_type_id = 0x5d269a38; 
+		constexpr static std::string_view MayaNamespace_type_name = "MayaNamespace";
+		constexpr static rivet::rivet_type_id MayaNamespace_type_id = 0x2676c033;
+		constexpr static std::string_view Actor_type_name = "Actor";
+		constexpr static rivet::rivet_type_id Actor_type_id = 0x5d269a38; 
 
 		explicit Cinematic2NamespaceActor() = default;
 		explicit Cinematic2NamespaceActor([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

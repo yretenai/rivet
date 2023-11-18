@@ -21,11 +21,11 @@ namespace rivet::ddl::generated {
 	struct FlavorAnimIndex; 
 
 	struct RIVET_DDL_SHARED FlavorCycleConfig : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "FlavorCycleConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xded62d48;
+		constexpr static std::string_view type_name = "FlavorCycleConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xded62d48;
 
-		constexpr const static std::string_view CycleIndices_type_name = "CycleIndices";
-		constexpr const static rivet::rivet_type_id CycleIndices_type_id = 0x2892b2e4; 
+		constexpr static std::string_view CycleIndices_type_name = "CycleIndices";
+		constexpr static rivet::rivet_type_id CycleIndices_type_id = 0x2892b2e4; 
 
 		explicit FlavorCycleConfig() = default;
 		explicit FlavorCycleConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

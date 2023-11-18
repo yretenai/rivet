@@ -21,13 +21,13 @@ namespace rivet::ddl::generated {
 	struct AssetReferenceDef; 
 
 	struct RIVET_DDL_SHARED SkinItemDecal : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "SkinItemDecal";
-		constexpr const static rivet::rivet_type_id type_id = 0x6e734e81;
+		constexpr static std::string_view type_name = "SkinItemDecal";
+		constexpr static rivet::rivet_type_id type_id = 0x6e734e81;
 
-		constexpr const static std::string_view Material_type_name = "Material";
-		constexpr const static rivet::rivet_type_id Material_type_id = 0x86bfc8e5;
-		constexpr const static std::string_view Scale_type_name = "Scale";
-		constexpr const static rivet::rivet_type_id Scale_type_id = 0xf515e945; 
+		constexpr static std::string_view Material_type_name = "Material";
+		constexpr static rivet::rivet_type_id Material_type_id = 0x86bfc8e5;
+		constexpr static std::string_view Scale_type_name = "Scale";
+		constexpr static rivet::rivet_type_id Scale_type_id = 0xf515e945; 
 
 		explicit SkinItemDecal() = default;
 		explicit SkinItemDecal([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

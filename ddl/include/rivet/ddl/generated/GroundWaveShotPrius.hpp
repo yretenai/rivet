@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED GroundWaveShotPrius : BasicBulletPrius {
-		constexpr const static std::string_view type_name = "GroundWaveShotPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xecb3861e;
+		constexpr static std::string_view type_name = "GroundWaveShotPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xecb3861e;
 
 		explicit GroundWaveShotPrius() = default;
 		explicit GroundWaveShotPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

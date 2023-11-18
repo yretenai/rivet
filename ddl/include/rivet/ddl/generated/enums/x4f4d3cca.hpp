@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view x4f4d3cca_type_name = "x4f4d3cca";
-	constexpr const static rivet::rivet_type_id x4f4d3cca_type_id = 0x4f4d3cca;
+	constexpr static std::string_view x4f4d3cca_type_name = "x4f4d3cca";
+	constexpr static rivet::rivet_type_id x4f4d3cca_type_id = 0x4f4d3cca;
 
-	constexpr const static std::array<std::string_view, 3> x4f4d3cca_values = {
+	constexpr static std::array<std::string_view, 3> x4f4d3cca_values = {
 		"OnlyTriggerOnEvent",
 		"OnlyTriggerOnZoneLoad",
 		"TriggerOnLoadAndEvent", 

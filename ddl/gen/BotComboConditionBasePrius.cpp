@@ -3,16 +3,16 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/BotComboConditionClearSpacePrius.hpp>
-#include <rivet/ddl/generated/BotComboConditionHealthCheckPrius.hpp>
-#include <rivet/ddl/generated/BotComboConditionHaveArcFinderPrius.hpp>
+#include <rivet/ddl/generated/BotComboConditionHaveAnimFilterPrius.hpp>
+#include <rivet/ddl/generated/BotComboConditionVariantCheckPrius.hpp>
+#include <rivet/ddl/generated/BotComboConditionDistFromClosestNavPrius.hpp>
+#include <rivet/ddl/generated/BotComboConditionTargetIsInFrontPrius.hpp>
+#include <rivet/ddl/generated/BotComboConditionTargetIsBehindPrius.hpp>
 #include <rivet/ddl/generated/BotComboConditionTargetIsInFactionPrius.hpp>
 #include <rivet/ddl/generated/BotComboConditionTargetHasComponentPrius.hpp>
-#include <rivet/ddl/generated/BotComboConditionTargetIsInFrontPrius.hpp>
-#include <rivet/ddl/generated/BotComboConditionHaveAnimFilterPrius.hpp>
-#include <rivet/ddl/generated/BotComboConditionTargetIsBehindPrius.hpp>
-#include <rivet/ddl/generated/BotComboConditionDistFromClosestNavPrius.hpp>
-#include <rivet/ddl/generated/BotComboConditionVariantCheckPrius.hpp> 
+#include <rivet/ddl/generated/BotComboConditionHaveArcFinderPrius.hpp>
+#include <rivet/ddl/generated/BotComboConditionHealthCheckPrius.hpp>
+#include <rivet/ddl/generated/BotComboConditionClearSpacePrius.hpp> 
 
 #include <rivet/ddl/generated/BotComboConditionBasePrius.hpp>
 

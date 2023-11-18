@@ -21,11 +21,11 @@ namespace rivet::ddl::generated {
 	struct StringFilterCriterion; 
 
 	struct RIVET_DDL_SHARED StringFilter : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "StringFilter";
-		constexpr const static rivet::rivet_type_id type_id = 0xe5d2d5aa;
+		constexpr static std::string_view type_name = "StringFilter";
+		constexpr static rivet::rivet_type_id type_id = 0xe5d2d5aa;
 
-		constexpr const static std::string_view Criteria_type_name = "Criteria";
-		constexpr const static rivet::rivet_type_id Criteria_type_id = 0x4c1e26f1; 
+		constexpr static std::string_view Criteria_type_name = "Criteria";
+		constexpr static rivet::rivet_type_id Criteria_type_id = 0x4c1e26f1; 
 
 		explicit StringFilter() = default;
 		explicit StringFilter([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

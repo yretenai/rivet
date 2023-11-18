@@ -23,25 +23,25 @@ namespace rivet::ddl::generated {
 	struct DenomSettings; 
 
 	struct RIVET_DDL_SHARED SwapDataEntry : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "SwapDataEntry";
-		constexpr const static rivet::rivet_type_id type_id = 0x68808fc6;
+		constexpr static std::string_view type_name = "SwapDataEntry";
+		constexpr static rivet::rivet_type_id type_id = 0x68808fc6;
 
-		constexpr const static std::string_view BoltModelId_type_name = "BoltModelId";
-		constexpr const static rivet::rivet_type_id BoltModelId_type_id = 0xcadf612a;
-		constexpr const static std::string_view BaseModel_type_name = "BaseModel";
-		constexpr const static rivet::rivet_type_id BaseModel_type_id = 0x5fef7c3a;
-		constexpr const static std::string_view RndOptModel_type_name = "RndOptModel";
-		constexpr const static rivet::rivet_type_id RndOptModel_type_id = 0xd2a40a13;
-		constexpr const static std::string_view ForceYUpAndRot_type_name = "ForceYUpAndRot";
-		constexpr const static rivet::rivet_type_id ForceYUpAndRot_type_id = 0x4bdef177;
-		constexpr const static std::string_view BronzeSettings_type_name = "BronzeSettings";
-		constexpr const static rivet::rivet_type_id BronzeSettings_type_id = 0xe212882f;
-		constexpr const static std::string_view SilverSettings_type_name = "SilverSettings";
-		constexpr const static rivet::rivet_type_id SilverSettings_type_id = 0x37ce4eef;
-		constexpr const static std::string_view GoldSettings_type_name = "GoldSettings";
-		constexpr const static rivet::rivet_type_id GoldSettings_type_id = 0x94f8303a;
-		constexpr const static std::string_view PlatinumSettings_type_name = "PlatinumSettings";
-		constexpr const static rivet::rivet_type_id PlatinumSettings_type_id = 0x6d8549b4; 
+		constexpr static std::string_view BoltModelId_type_name = "BoltModelId";
+		constexpr static rivet::rivet_type_id BoltModelId_type_id = 0xcadf612a;
+		constexpr static std::string_view BaseModel_type_name = "BaseModel";
+		constexpr static rivet::rivet_type_id BaseModel_type_id = 0x5fef7c3a;
+		constexpr static std::string_view RndOptModel_type_name = "RndOptModel";
+		constexpr static rivet::rivet_type_id RndOptModel_type_id = 0xd2a40a13;
+		constexpr static std::string_view ForceYUpAndRot_type_name = "ForceYUpAndRot";
+		constexpr static rivet::rivet_type_id ForceYUpAndRot_type_id = 0x4bdef177;
+		constexpr static std::string_view BronzeSettings_type_name = "BronzeSettings";
+		constexpr static rivet::rivet_type_id BronzeSettings_type_id = 0xe212882f;
+		constexpr static std::string_view SilverSettings_type_name = "SilverSettings";
+		constexpr static rivet::rivet_type_id SilverSettings_type_id = 0x37ce4eef;
+		constexpr static std::string_view GoldSettings_type_name = "GoldSettings";
+		constexpr static rivet::rivet_type_id GoldSettings_type_id = 0x94f8303a;
+		constexpr static std::string_view PlatinumSettings_type_name = "PlatinumSettings";
+		constexpr static rivet::rivet_type_id PlatinumSettings_type_id = 0x6d8549b4; 
 
 		explicit SwapDataEntry() = default;
 		explicit SwapDataEntry([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

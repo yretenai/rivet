@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED AimAssistTargetZoneJoint : AimAssistTargetZone {
-		constexpr const static std::string_view type_name = "AimAssistTargetZoneJoint";
-		constexpr const static rivet::rivet_type_id type_id = 0x6f31ff07;
+		constexpr static std::string_view type_name = "AimAssistTargetZoneJoint";
+		constexpr static rivet::rivet_type_id type_id = 0x6f31ff07;
 
-		constexpr const static std::string_view AimBoxJointBottom_type_name = "AimBoxJointBottom";
-		constexpr const static rivet::rivet_type_id AimBoxJointBottom_type_id = 0x832f8e54;
-		constexpr const static std::string_view AimBoxJointTop_type_name = "AimBoxJointTop";
-		constexpr const static rivet::rivet_type_id AimBoxJointTop_type_id = 0xb9cb0716; 
+		constexpr static std::string_view AimBoxJointBottom_type_name = "AimBoxJointBottom";
+		constexpr static rivet::rivet_type_id AimBoxJointBottom_type_id = 0x832f8e54;
+		constexpr static std::string_view AimBoxJointTop_type_name = "AimBoxJointTop";
+		constexpr static rivet::rivet_type_id AimBoxJointTop_type_id = 0xb9cb0716; 
 
 		explicit AimAssistTargetZoneJoint() = default;
 		explicit AimAssistTargetZoneJoint([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

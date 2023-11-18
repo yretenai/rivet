@@ -21,15 +21,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED BotComboMoveFinaleAimCalibration : BotComboMoveBase {
-		constexpr const static std::string_view type_name = "BotComboMoveFinaleAimCalibration";
-		constexpr const static rivet::rivet_type_id type_id = 0xf67fe0f5;
+		constexpr static std::string_view type_name = "BotComboMoveFinaleAimCalibration";
+		constexpr static rivet::rivet_type_id type_id = 0xf67fe0f5;
 
-		constexpr const static std::string_view PortalActorAsset_type_name = "PortalActorAsset";
-		constexpr const static rivet::rivet_type_id PortalActorAsset_type_id = 0xfec29c86;
-		constexpr const static std::string_view WeaponActorAsset_type_name = "WeaponActorAsset";
-		constexpr const static rivet::rivet_type_id WeaponActorAsset_type_id = 0xf03001b;
-		constexpr const static std::string_view WeaponActorVol_type_name = "WeaponActorVol";
-		constexpr const static rivet::rivet_type_id WeaponActorVol_type_id = 0x3ddbd4ba; 
+		constexpr static std::string_view PortalActorAsset_type_name = "PortalActorAsset";
+		constexpr static rivet::rivet_type_id PortalActorAsset_type_id = 0xfec29c86;
+		constexpr static std::string_view WeaponActorAsset_type_name = "WeaponActorAsset";
+		constexpr static rivet::rivet_type_id WeaponActorAsset_type_id = 0xf03001b;
+		constexpr static std::string_view WeaponActorVol_type_name = "WeaponActorVol";
+		constexpr static rivet::rivet_type_id WeaponActorVol_type_id = 0x3ddbd4ba; 
 
 		explicit BotComboMoveFinaleAimCalibration() = default;
 		explicit BotComboMoveFinaleAimCalibration([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

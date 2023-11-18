@@ -21,17 +21,17 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED AimModLockOnAimingAtCoverPrius : AimModifierPrius {
-		constexpr const static std::string_view type_name = "AimModLockOnAimingAtCoverPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xf7f872ac;
+		constexpr static std::string_view type_name = "AimModLockOnAimingAtCoverPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xf7f872ac;
 
-		constexpr const static std::string_view SourceLocator_type_name = "SourceLocator";
-		constexpr const static rivet::rivet_type_id SourceLocator_type_id = 0xc54e6703;
-		constexpr const static std::string_view CollRadius_type_name = "CollRadius";
-		constexpr const static rivet::rivet_type_id CollRadius_type_id = 0xc7f69ee3;
-		constexpr const static std::string_view LockRangeFromTargetToCover_type_name = "LockRangeFromTargetToCover";
-		constexpr const static rivet::rivet_type_id LockRangeFromTargetToCover_type_id = 0x62a27d08;
-		constexpr const static std::string_view LockDelay_type_name = "LockDelay";
-		constexpr const static rivet::rivet_type_id LockDelay_type_id = 0xba7cba66; 
+		constexpr static std::string_view SourceLocator_type_name = "SourceLocator";
+		constexpr static rivet::rivet_type_id SourceLocator_type_id = 0xc54e6703;
+		constexpr static std::string_view CollRadius_type_name = "CollRadius";
+		constexpr static rivet::rivet_type_id CollRadius_type_id = 0xc7f69ee3;
+		constexpr static std::string_view LockRangeFromTargetToCover_type_name = "LockRangeFromTargetToCover";
+		constexpr static rivet::rivet_type_id LockRangeFromTargetToCover_type_id = 0x62a27d08;
+		constexpr static std::string_view LockDelay_type_name = "LockDelay";
+		constexpr static rivet::rivet_type_id LockDelay_type_id = 0xba7cba66; 
 
 		explicit AimModLockOnAimingAtCoverPrius() = default;
 		explicit AimModLockOnAimingAtCoverPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

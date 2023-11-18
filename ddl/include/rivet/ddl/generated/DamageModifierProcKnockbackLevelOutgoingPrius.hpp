@@ -17,18 +17,18 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/DamageModifierProcOutgoingPrius.hpp>
-#include <rivet/ddl/generated/enums/KnockbackLevels.hpp> 
+#include <rivet/ddl/generated/enums/KnockbackLevels.hpp>
+#include <rivet/ddl/generated/DamageModifierProcOutgoingPrius.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DamageModifierProcKnockbackLevelOutgoingPrius : DamageModifierProcOutgoingPrius {
-		constexpr const static std::string_view type_name = "DamageModifierProcKnockbackLevelOutgoingPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x5fbae359;
+		constexpr static std::string_view type_name = "DamageModifierProcKnockbackLevelOutgoingPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x5fbae359;
 
-		constexpr const static std::string_view KnockbackLevel_type_name = "KnockbackLevel";
-		constexpr const static rivet::rivet_type_id KnockbackLevel_type_id = 0x2554a262;
-		constexpr const static std::string_view AllowKnockbackDowngrade_type_name = "AllowKnockbackDowngrade";
-		constexpr const static rivet::rivet_type_id AllowKnockbackDowngrade_type_id = 0x2079692c; 
+		constexpr static std::string_view KnockbackLevel_type_name = "KnockbackLevel";
+		constexpr static rivet::rivet_type_id KnockbackLevel_type_id = 0x2554a262;
+		constexpr static std::string_view AllowKnockbackDowngrade_type_name = "AllowKnockbackDowngrade";
+		constexpr static rivet::rivet_type_id AllowKnockbackDowngrade_type_id = 0x2079692c; 
 
 		explicit DamageModifierProcKnockbackLevelOutgoingPrius() = default;
 		explicit DamageModifierProcKnockbackLevelOutgoingPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

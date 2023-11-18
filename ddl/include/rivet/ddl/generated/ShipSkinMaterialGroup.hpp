@@ -17,20 +17,20 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/enums/x8a806a76.hpp>
-#include <rivet/ddl/generated/enums/x84053194.hpp> 
+#include <rivet/ddl/generated/enums/x84053194.hpp>
+#include <rivet/ddl/generated/enums/x8a806a76.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ShipSkinMaterialGroup : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "ShipSkinMaterialGroup";
-		constexpr const static rivet::rivet_type_id type_id = 0x55d5dbbd;
+		constexpr static std::string_view type_name = "ShipSkinMaterialGroup";
+		constexpr static rivet::rivet_type_id type_id = 0x55d5dbbd;
 
-		constexpr const static std::string_view SkinType_type_name = "SkinType";
-		constexpr const static rivet::rivet_type_id SkinType_type_id = 0x301c5cc0;
-		constexpr const static std::string_view Pack_type_name = "Pack";
-		constexpr const static rivet::rivet_type_id Pack_type_id = 0xa74e9e93;
-		constexpr const static std::string_view Material_type_name = "Material";
-		constexpr const static rivet::rivet_type_id Material_type_id = 0x86bfc8e5; 
+		constexpr static std::string_view SkinType_type_name = "SkinType";
+		constexpr static rivet::rivet_type_id SkinType_type_id = 0x301c5cc0;
+		constexpr static std::string_view Pack_type_name = "Pack";
+		constexpr static rivet::rivet_type_id Pack_type_id = 0xa74e9e93;
+		constexpr static std::string_view Material_type_name = "Material";
+		constexpr static rivet::rivet_type_id Material_type_id = 0x86bfc8e5; 
 
 		explicit ShipSkinMaterialGroup() = default;
 		explicit ShipSkinMaterialGroup([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

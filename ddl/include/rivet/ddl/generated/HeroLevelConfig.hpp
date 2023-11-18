@@ -17,44 +17,44 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/ConfigBase.hpp>
-#include <rivet/ddl/generated/enums/KnockbackLevels.hpp> 
+#include <rivet/ddl/generated/enums/KnockbackLevels.hpp>
+#include <rivet/ddl/generated/ConfigBase.hpp> 
 
 namespace rivet::ddl::generated {
 	struct HeroLevelData; 
 
 	struct RIVET_DDL_SHARED HeroLevelConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "HeroLevelConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xf437c18;
+		constexpr static std::string_view type_name = "HeroLevelConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xf437c18;
 
-		constexpr const static std::string_view ExplosionDelayTime_type_name = "ExplosionDelayTime";
-		constexpr const static rivet::rivet_type_id ExplosionDelayTime_type_id = 0x740a5076;
-		constexpr const static std::string_view DamageRadius_type_name = "DamageRadius";
-		constexpr const static rivet::rivet_type_id DamageRadius_type_id = 0xe3e6fa68;
-		constexpr const static std::string_view BaseDamageAmount_type_name = "BaseDamageAmount";
-		constexpr const static rivet::rivet_type_id BaseDamageAmount_type_id = 0x9b14b8ce;
-		constexpr const static std::string_view BonusPerLevelDamage_type_name = "BonusPerLevelDamage";
-		constexpr const static rivet::rivet_type_id BonusPerLevelDamage_type_id = 0x241e8cc0;
-		constexpr const static std::string_view KnockbackLevel_type_name = "KnockbackLevel";
-		constexpr const static rivet::rivet_type_id KnockbackLevel_type_id = 0x2554a262;
-		constexpr const static std::string_view KnockbackAmount_type_name = "KnockbackAmount";
-		constexpr const static rivet::rivet_type_id KnockbackAmount_type_id = 0x7b1e600b;
-		constexpr const static std::string_view SlowDownPercent_type_name = "SlowDownPercent";
-		constexpr const static rivet::rivet_type_id SlowDownPercent_type_id = 0x38d95575;
-		constexpr const static std::string_view RatchetCompositeMaterial_type_name = "RatchetCompositeMaterial";
-		constexpr const static rivet::rivet_type_id RatchetCompositeMaterial_type_id = 0x8e09fab6;
-		constexpr const static std::string_view RivetCompositeMaterial_type_name = "RivetCompositeMaterial";
-		constexpr const static rivet::rivet_type_id RivetCompositeMaterial_type_id = 0xf6016f94;
-		constexpr const static std::string_view MaterialFadeOutTime_type_name = "MaterialFadeOutTime";
-		constexpr const static rivet::rivet_type_id MaterialFadeOutTime_type_id = 0xadc337be;
-		constexpr const static std::string_view RampUpCameraShake_type_name = "RampUpCameraShake";
-		constexpr const static rivet::rivet_type_id RampUpCameraShake_type_id = 0x4ccb3ecf;
-		constexpr const static std::string_view ExplosionCameraShake_type_name = "ExplosionCameraShake";
-		constexpr const static rivet::rivet_type_id ExplosionCameraShake_type_id = 0x97c84958;
-		constexpr const static std::string_view NormalModeLevelCap_type_name = "NormalModeLevelCap";
-		constexpr const static rivet::rivet_type_id NormalModeLevelCap_type_id = 0x487934f5;
-		constexpr const static std::string_view Levels_type_name = "Levels";
-		constexpr const static rivet::rivet_type_id Levels_type_id = 0xa1522a7e; 
+		constexpr static std::string_view ExplosionDelayTime_type_name = "ExplosionDelayTime";
+		constexpr static rivet::rivet_type_id ExplosionDelayTime_type_id = 0x740a5076;
+		constexpr static std::string_view DamageRadius_type_name = "DamageRadius";
+		constexpr static rivet::rivet_type_id DamageRadius_type_id = 0xe3e6fa68;
+		constexpr static std::string_view BaseDamageAmount_type_name = "BaseDamageAmount";
+		constexpr static rivet::rivet_type_id BaseDamageAmount_type_id = 0x9b14b8ce;
+		constexpr static std::string_view BonusPerLevelDamage_type_name = "BonusPerLevelDamage";
+		constexpr static rivet::rivet_type_id BonusPerLevelDamage_type_id = 0x241e8cc0;
+		constexpr static std::string_view KnockbackLevel_type_name = "KnockbackLevel";
+		constexpr static rivet::rivet_type_id KnockbackLevel_type_id = 0x2554a262;
+		constexpr static std::string_view KnockbackAmount_type_name = "KnockbackAmount";
+		constexpr static rivet::rivet_type_id KnockbackAmount_type_id = 0x7b1e600b;
+		constexpr static std::string_view SlowDownPercent_type_name = "SlowDownPercent";
+		constexpr static rivet::rivet_type_id SlowDownPercent_type_id = 0x38d95575;
+		constexpr static std::string_view RatchetCompositeMaterial_type_name = "RatchetCompositeMaterial";
+		constexpr static rivet::rivet_type_id RatchetCompositeMaterial_type_id = 0x8e09fab6;
+		constexpr static std::string_view RivetCompositeMaterial_type_name = "RivetCompositeMaterial";
+		constexpr static rivet::rivet_type_id RivetCompositeMaterial_type_id = 0xf6016f94;
+		constexpr static std::string_view MaterialFadeOutTime_type_name = "MaterialFadeOutTime";
+		constexpr static rivet::rivet_type_id MaterialFadeOutTime_type_id = 0xadc337be;
+		constexpr static std::string_view RampUpCameraShake_type_name = "RampUpCameraShake";
+		constexpr static rivet::rivet_type_id RampUpCameraShake_type_id = 0x4ccb3ecf;
+		constexpr static std::string_view ExplosionCameraShake_type_name = "ExplosionCameraShake";
+		constexpr static rivet::rivet_type_id ExplosionCameraShake_type_id = 0x97c84958;
+		constexpr static std::string_view NormalModeLevelCap_type_name = "NormalModeLevelCap";
+		constexpr static rivet::rivet_type_id NormalModeLevelCap_type_id = 0x487934f5;
+		constexpr static std::string_view Levels_type_name = "Levels";
+		constexpr static rivet::rivet_type_id Levels_type_id = 0xa1522a7e; 
 
 		explicit HeroLevelConfig() = default;
 		explicit HeroLevelConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

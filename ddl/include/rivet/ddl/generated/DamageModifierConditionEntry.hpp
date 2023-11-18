@@ -21,11 +21,11 @@ namespace rivet::ddl::generated {
 	struct DamageModifierConditionBasePrius; 
 
 	struct RIVET_DDL_SHARED DamageModifierConditionEntry : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "DamageModifierConditionEntry";
-		constexpr const static rivet::rivet_type_id type_id = 0x326fc921;
+		constexpr static std::string_view type_name = "DamageModifierConditionEntry";
+		constexpr static rivet::rivet_type_id type_id = 0x326fc921;
 
-		constexpr const static std::string_view Condition_type_name = "Condition";
-		constexpr const static rivet::rivet_type_id Condition_type_id = 0x3f2b174f; 
+		constexpr static std::string_view Condition_type_name = "Condition";
+		constexpr static rivet::rivet_type_id Condition_type_id = 0x3f2b174f; 
 
 		explicit DamageModifierConditionEntry() = default;
 		explicit DamageModifierConditionEntry([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view DoubleSidedType_type_name = "DoubleSidedType";
-	constexpr const static rivet::rivet_type_id DoubleSidedType_type_id = 0xa20f844;
+	constexpr static std::string_view DoubleSidedType_type_name = "DoubleSidedType";
+	constexpr static rivet::rivet_type_id DoubleSidedType_type_id = 0xa20f844;
 
-	constexpr const static std::array<std::string_view, 3> DoubleSidedType_values = {
+	constexpr static std::array<std::string_view, 3> DoubleSidedType_values = {
 		"kInheritFromMaterial",
 		"kForceSingleSidedInLod1",
 		"kForceSingleSided", 

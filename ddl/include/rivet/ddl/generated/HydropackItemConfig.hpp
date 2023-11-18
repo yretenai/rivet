@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED HydropackItemConfig : GameItemConfig {
-		constexpr const static std::string_view type_name = "HydropackItemConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x9af3f45b;
+		constexpr static std::string_view type_name = "HydropackItemConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x9af3f45b;
 
 		explicit HydropackItemConfig() = default;
 		explicit HydropackItemConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

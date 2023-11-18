@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ForwardingShotEffectPrius : ScriptedShotEffectBasePrius {
-		constexpr const static std::string_view type_name = "ForwardingShotEffectPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xa303306a;
+		constexpr static std::string_view type_name = "ForwardingShotEffectPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xa303306a;
 
-		constexpr const static std::string_view ForwardingIndex_type_name = "ForwardingIndex";
-		constexpr const static rivet::rivet_type_id ForwardingIndex_type_id = 0xea1837; 
+		constexpr static std::string_view ForwardingIndex_type_name = "ForwardingIndex";
+		constexpr static rivet::rivet_type_id ForwardingIndex_type_id = 0xea1837; 
 
 		explicit ForwardingShotEffectPrius() = default;
 		explicit ForwardingShotEffectPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

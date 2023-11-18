@@ -18,22 +18,22 @@
 #include <rivet/structures/rivet_serialization.hpp>
 
 namespace rivet::ddl::generated {
-	struct BiomeAsset;
+	struct HoudiniHeightFieldMaskByFeatureData;
 	struct HoudiniHeightFieldScatterData;
-	struct HoudiniHeightFieldMaskByFeatureData; 
+	struct BiomeAsset; 
 
 	struct RIVET_DDL_SHARED BiomeLayer : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "BiomeLayer";
-		constexpr const static rivet::rivet_type_id type_id = 0x45c52d25;
+		constexpr static std::string_view type_name = "BiomeLayer";
+		constexpr static rivet::rivet_type_id type_id = 0x45c52d25;
 
-		constexpr const static std::string_view Name_type_name = "Name";
-		constexpr const static rivet::rivet_type_id Name_type_id = 0x6eb3beb6;
-		constexpr const static std::string_view Assets_type_name = "Assets";
-		constexpr const static rivet::rivet_type_id Assets_type_id = 0x47a933e9;
-		constexpr const static std::string_view ScatterData_type_name = "ScatterData";
-		constexpr const static rivet::rivet_type_id ScatterData_type_id = 0x37c03b04;
-		constexpr const static std::string_view MaskData_type_name = "MaskData";
-		constexpr const static rivet::rivet_type_id MaskData_type_id = 0xb6dd2a50; 
+		constexpr static std::string_view Name_type_name = "Name";
+		constexpr static rivet::rivet_type_id Name_type_id = 0x6eb3beb6;
+		constexpr static std::string_view Assets_type_name = "Assets";
+		constexpr static rivet::rivet_type_id Assets_type_id = 0x47a933e9;
+		constexpr static std::string_view ScatterData_type_name = "ScatterData";
+		constexpr static rivet::rivet_type_id ScatterData_type_id = 0x37c03b04;
+		constexpr static std::string_view MaskData_type_name = "MaskData";
+		constexpr static rivet::rivet_type_id MaskData_type_id = 0xb6dd2a50; 
 
 		explicit BiomeLayer() = default;
 		explicit BiomeLayer([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

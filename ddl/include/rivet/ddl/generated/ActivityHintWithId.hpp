@@ -19,17 +19,17 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ActivityHintWithId : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "ActivityHintWithId";
-		constexpr const static rivet::rivet_type_id type_id = 0x5fda6c6;
+		constexpr static std::string_view type_name = "ActivityHintWithId";
+		constexpr static rivet::rivet_type_id type_id = 0x5fda6c6;
 
-		constexpr const static std::string_view NameTag_type_name = "NameTag";
-		constexpr const static rivet::rivet_type_id NameTag_type_id = 0x2d78cbbd;
-		constexpr const static std::string_view DescTag_type_name = "DescTag";
-		constexpr const static rivet::rivet_type_id DescTag_type_id = 0xe822a0da;
-		constexpr const static std::string_view MediaFile_type_name = "MediaFile";
-		constexpr const static rivet::rivet_type_id MediaFile_type_id = 0xa86a6d25;
-		constexpr const static std::string_view HintId_type_name = "HintId";
-		constexpr const static rivet::rivet_type_id HintId_type_id = 0x1c5a667e; 
+		constexpr static std::string_view NameTag_type_name = "NameTag";
+		constexpr static rivet::rivet_type_id NameTag_type_id = 0x2d78cbbd;
+		constexpr static std::string_view DescTag_type_name = "DescTag";
+		constexpr static rivet::rivet_type_id DescTag_type_id = 0xe822a0da;
+		constexpr static std::string_view MediaFile_type_name = "MediaFile";
+		constexpr static rivet::rivet_type_id MediaFile_type_id = 0xa86a6d25;
+		constexpr static std::string_view HintId_type_name = "HintId";
+		constexpr static rivet::rivet_type_id HintId_type_id = 0x1c5a667e; 
 
 		explicit ActivityHintWithId() = default;
 		explicit ActivityHintWithId([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

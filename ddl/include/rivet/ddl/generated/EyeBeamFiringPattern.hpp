@@ -19,17 +19,17 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED EyeBeamFiringPattern : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "EyeBeamFiringPattern";
-		constexpr const static rivet::rivet_type_id type_id = 0x1f3089b2;
+		constexpr static std::string_view type_name = "EyeBeamFiringPattern";
+		constexpr static rivet::rivet_type_id type_id = 0x1f3089b2;
 
-		constexpr const static std::string_view MinShotCount_type_name = "MinShotCount";
-		constexpr const static rivet::rivet_type_id MinShotCount_type_id = 0xcdb7266a;
-		constexpr const static std::string_view MaxShotCount_type_name = "MaxShotCount";
-		constexpr const static rivet::rivet_type_id MaxShotCount_type_id = 0x5dc43680;
-		constexpr const static std::string_view MinShotDelay_type_name = "MinShotDelay";
-		constexpr const static rivet::rivet_type_id MinShotDelay_type_id = 0xfaf4e293;
-		constexpr const static std::string_view MaxShotDelay_type_name = "MaxShotDelay";
-		constexpr const static rivet::rivet_type_id MaxShotDelay_type_id = 0x6a87f279; 
+		constexpr static std::string_view MinShotCount_type_name = "MinShotCount";
+		constexpr static rivet::rivet_type_id MinShotCount_type_id = 0xcdb7266a;
+		constexpr static std::string_view MaxShotCount_type_name = "MaxShotCount";
+		constexpr static rivet::rivet_type_id MaxShotCount_type_id = 0x5dc43680;
+		constexpr static std::string_view MinShotDelay_type_name = "MinShotDelay";
+		constexpr static rivet::rivet_type_id MinShotDelay_type_id = 0xfaf4e293;
+		constexpr static std::string_view MaxShotDelay_type_name = "MaxShotDelay";
+		constexpr static rivet::rivet_type_id MaxShotDelay_type_id = 0x6a87f279; 
 
 		explicit EyeBeamFiringPattern() = default;
 		explicit EyeBeamFiringPattern([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

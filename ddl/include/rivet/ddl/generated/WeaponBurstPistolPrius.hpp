@@ -20,21 +20,21 @@
 #include <rivet/ddl/generated/WeaponGamePrius.hpp> 
 
 namespace rivet::ddl::generated {
-	struct BurstPistolInaccuracyData;
-	struct ShellCasingDataSingleEmit; 
+	struct ShellCasingDataSingleEmit;
+	struct BurstPistolInaccuracyData; 
 
 	struct RIVET_DDL_SHARED WeaponBurstPistolPrius : WeaponGamePrius {
-		constexpr const static std::string_view type_name = "WeaponBurstPistolPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xd687d27f;
+		constexpr static std::string_view type_name = "WeaponBurstPistolPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xd687d27f;
 
-		constexpr const static std::string_view NumShotsSlowToFast_type_name = "NumShotsSlowToFast";
-		constexpr const static rivet::rivet_type_id NumShotsSlowToFast_type_id = 0x30d2490c;
-		constexpr const static std::string_view SlowInaccuracyData_type_name = "SlowInaccuracyData";
-		constexpr const static rivet::rivet_type_id SlowInaccuracyData_type_id = 0x5cfeb341;
-		constexpr const static std::string_view InaccuracyData_type_name = "InaccuracyData";
-		constexpr const static rivet::rivet_type_id InaccuracyData_type_id = 0x3acb6ae4;
-		constexpr const static std::string_view ShellCasingData_type_name = "ShellCasingData";
-		constexpr const static rivet::rivet_type_id ShellCasingData_type_id = 0x2fda4eac; 
+		constexpr static std::string_view NumShotsSlowToFast_type_name = "NumShotsSlowToFast";
+		constexpr static rivet::rivet_type_id NumShotsSlowToFast_type_id = 0x30d2490c;
+		constexpr static std::string_view SlowInaccuracyData_type_name = "SlowInaccuracyData";
+		constexpr static rivet::rivet_type_id SlowInaccuracyData_type_id = 0x5cfeb341;
+		constexpr static std::string_view InaccuracyData_type_name = "InaccuracyData";
+		constexpr static rivet::rivet_type_id InaccuracyData_type_id = 0x3acb6ae4;
+		constexpr static std::string_view ShellCasingData_type_name = "ShellCasingData";
+		constexpr static rivet::rivet_type_id ShellCasingData_type_id = 0x2fda4eac; 
 
 		explicit WeaponBurstPistolPrius() = default;
 		explicit WeaponBurstPistolPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -21,15 +21,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED TargetingLocationWeightData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "TargetingLocationWeightData";
-		constexpr const static rivet::rivet_type_id type_id = 0xf6b5bd70;
+		constexpr static std::string_view type_name = "TargetingLocationWeightData";
+		constexpr static rivet::rivet_type_id type_id = 0xf6b5bd70;
 
-		constexpr const static std::string_view BodyPart_type_name = "BodyPart";
-		constexpr const static rivet::rivet_type_id BodyPart_type_id = 0xdfcd36c5;
-		constexpr const static std::string_view BodyPartName_type_name = "BodyPartName";
-		constexpr const static rivet::rivet_type_id BodyPartName_type_id = 0xd618ef74;
-		constexpr const static std::string_view Weight_type_name = "Weight";
-		constexpr const static rivet::rivet_type_id Weight_type_id = 0x39b51b26; 
+		constexpr static std::string_view BodyPart_type_name = "BodyPart";
+		constexpr static rivet::rivet_type_id BodyPart_type_id = 0xdfcd36c5;
+		constexpr static std::string_view BodyPartName_type_name = "BodyPartName";
+		constexpr static rivet::rivet_type_id BodyPartName_type_id = 0xd618ef74;
+		constexpr static std::string_view Weight_type_name = "Weight";
+		constexpr static rivet::rivet_type_id Weight_type_id = 0x39b51b26; 
 
 		explicit TargetingLocationWeightData() = default;
 		explicit TargetingLocationWeightData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

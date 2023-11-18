@@ -21,11 +21,11 @@ namespace rivet::ddl::generated {
 	struct HeroMoveAbilities; 
 
 	struct RIVET_DDL_SHARED CharacterOptionData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "CharacterOptionData";
-		constexpr const static rivet::rivet_type_id type_id = 0xe4386a41;
+		constexpr static std::string_view type_name = "CharacterOptionData";
+		constexpr static rivet::rivet_type_id type_id = 0xe4386a41;
 
-		constexpr const static std::string_view MoveAbilities_type_name = "MoveAbilities";
-		constexpr const static rivet::rivet_type_id MoveAbilities_type_id = 0xde8da163; 
+		constexpr static std::string_view MoveAbilities_type_name = "MoveAbilities";
+		constexpr static rivet::rivet_type_id MoveAbilities_type_id = 0xde8da163; 
 
 		explicit CharacterOptionData() = default;
 		explicit CharacterOptionData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

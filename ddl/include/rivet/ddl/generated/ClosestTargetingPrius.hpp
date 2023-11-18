@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ClosestTargetingPrius : TargetingBasePrius {
-		constexpr const static std::string_view type_name = "ClosestTargetingPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x287ecab9;
+		constexpr static std::string_view type_name = "ClosestTargetingPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x287ecab9;
 
 		explicit ClosestTargetingPrius() = default;
 		explicit ClosestTargetingPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

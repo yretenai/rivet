@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view ObjectiveStates_type_name = "ObjectiveStates";
-	constexpr const static rivet::rivet_type_id ObjectiveStates_type_id = 0xd9297359;
+	constexpr static std::string_view ObjectiveStates_type_name = "ObjectiveStates";
+	constexpr static rivet::rivet_type_id ObjectiveStates_type_id = 0xd9297359;
 
-	constexpr const static std::array<std::string_view, 4> ObjectiveStates_values = {
+	constexpr static std::array<std::string_view, 4> ObjectiveStates_values = {
 		"kInactive",
 		"kActive",
 		"kComplete",

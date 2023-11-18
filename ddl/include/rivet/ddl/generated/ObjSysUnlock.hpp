@@ -17,22 +17,22 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/enums/x9aa8a36a.hpp>
-#include <rivet/ddl/generated/enums/x5e401570.hpp> 
+#include <rivet/ddl/generated/enums/x5e401570.hpp>
+#include <rivet/ddl/generated/enums/x9aa8a36a.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ObjSysUnlock : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "ObjSysUnlock";
-		constexpr const static rivet::rivet_type_id type_id = 0xd52a9f12;
+		constexpr static std::string_view type_name = "ObjSysUnlock";
+		constexpr static rivet::rivet_type_id type_id = 0xd52a9f12;
 
-		constexpr const static std::string_view LockType_type_name = "LockType";
-		constexpr const static rivet::rivet_type_id LockType_type_id = 0x8b3f742;
-		constexpr const static std::string_view Trigger_type_name = "Trigger";
-		constexpr const static rivet::rivet_type_id Trigger_type_id = 0x1b816c65;
-		constexpr const static std::string_view MissionName_type_name = "MissionName";
-		constexpr const static rivet::rivet_type_id MissionName_type_id = 0xa5c30e60;
-		constexpr const static std::string_view ObjectiveName_type_name = "ObjectiveName";
-		constexpr const static rivet::rivet_type_id ObjectiveName_type_id = 0x58746b9b; 
+		constexpr static std::string_view LockType_type_name = "LockType";
+		constexpr static rivet::rivet_type_id LockType_type_id = 0x8b3f742;
+		constexpr static std::string_view Trigger_type_name = "Trigger";
+		constexpr static rivet::rivet_type_id Trigger_type_id = 0x1b816c65;
+		constexpr static std::string_view MissionName_type_name = "MissionName";
+		constexpr static rivet::rivet_type_id MissionName_type_id = 0xa5c30e60;
+		constexpr static std::string_view ObjectiveName_type_name = "ObjectiveName";
+		constexpr static rivet::rivet_type_id ObjectiveName_type_id = 0x58746b9b; 
 
 		explicit ObjSysUnlock() = default;
 		explicit ObjSysUnlock([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -21,17 +21,17 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED WeaponLevelConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "WeaponLevelConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xa0605605;
+		constexpr static std::string_view type_name = "WeaponLevelConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xa0605605;
 
-		constexpr const static std::string_view TimeScale_type_name = "TimeScale";
-		constexpr const static rivet::rivet_type_id TimeScale_type_id = 0x5fe2ecba;
-		constexpr const static std::string_view TimeScaleDuration_type_name = "TimeScaleDuration";
-		constexpr const static rivet::rivet_type_id TimeScaleDuration_type_id = 0x78f2d960;
-		constexpr const static std::string_view StartCameraShake_type_name = "StartCameraShake";
-		constexpr const static rivet::rivet_type_id StartCameraShake_type_id = 0xb4193c80;
-		constexpr const static std::string_view LevelUpCameraShake_type_name = "LevelUpCameraShake";
-		constexpr const static rivet::rivet_type_id LevelUpCameraShake_type_id = 0x5fb57995; 
+		constexpr static std::string_view TimeScale_type_name = "TimeScale";
+		constexpr static rivet::rivet_type_id TimeScale_type_id = 0x5fe2ecba;
+		constexpr static std::string_view TimeScaleDuration_type_name = "TimeScaleDuration";
+		constexpr static rivet::rivet_type_id TimeScaleDuration_type_id = 0x78f2d960;
+		constexpr static std::string_view StartCameraShake_type_name = "StartCameraShake";
+		constexpr static rivet::rivet_type_id StartCameraShake_type_id = 0xb4193c80;
+		constexpr static std::string_view LevelUpCameraShake_type_name = "LevelUpCameraShake";
+		constexpr static rivet::rivet_type_id LevelUpCameraShake_type_id = 0x5fb57995; 
 
 		explicit WeaponLevelConfig() = default;
 		explicit WeaponLevelConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

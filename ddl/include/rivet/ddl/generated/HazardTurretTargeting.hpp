@@ -19,19 +19,19 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED HazardTurretTargeting : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "HazardTurretTargeting";
-		constexpr const static rivet::rivet_type_id type_id = 0xa52ec325;
+		constexpr static std::string_view type_name = "HazardTurretTargeting";
+		constexpr static rivet::rivet_type_id type_id = 0xa52ec325;
 
-		constexpr const static std::string_view FOVAngle_type_name = "FOVAngle";
-		constexpr const static rivet::rivet_type_id FOVAngle_type_id = 0xe651b84f;
-		constexpr const static std::string_view Range_type_name = "Range";
-		constexpr const static rivet::rivet_type_id Range_type_id = 0x8ad49688;
-		constexpr const static std::string_view WarningTime_type_name = "WarningTime";
-		constexpr const static rivet::rivet_type_id WarningTime_type_id = 0xfd73b5f5;
-		constexpr const static std::string_view CooldownTime_type_name = "CooldownTime";
-		constexpr const static rivet::rivet_type_id CooldownTime_type_id = 0x499881db;
-		constexpr const static std::string_view TurnSpeed_type_name = "TurnSpeed";
-		constexpr const static rivet::rivet_type_id TurnSpeed_type_id = 0x6cc70f48; 
+		constexpr static std::string_view FOVAngle_type_name = "FOVAngle";
+		constexpr static rivet::rivet_type_id FOVAngle_type_id = 0xe651b84f;
+		constexpr static std::string_view Range_type_name = "Range";
+		constexpr static rivet::rivet_type_id Range_type_id = 0x8ad49688;
+		constexpr static std::string_view WarningTime_type_name = "WarningTime";
+		constexpr static rivet::rivet_type_id WarningTime_type_id = 0xfd73b5f5;
+		constexpr static std::string_view CooldownTime_type_name = "CooldownTime";
+		constexpr static rivet::rivet_type_id CooldownTime_type_id = 0x499881db;
+		constexpr static std::string_view TurnSpeed_type_name = "TurnSpeed";
+		constexpr static rivet::rivet_type_id TurnSpeed_type_id = 0x6cc70f48; 
 
 		explicit HazardTurretTargeting() = default;
 		explicit HazardTurretTargeting([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

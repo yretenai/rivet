@@ -19,13 +19,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED MultiTargetPenalty : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "MultiTargetPenalty";
-		constexpr const static rivet::rivet_type_id type_id = 0x5f896fcd;
+		constexpr static std::string_view type_name = "MultiTargetPenalty";
+		constexpr static rivet::rivet_type_id type_id = 0x5f896fcd;
 
-		constexpr const static std::string_view NumTargeters_type_name = "NumTargeters";
-		constexpr const static rivet::rivet_type_id NumTargeters_type_id = 0xa03b83f8;
-		constexpr const static std::string_view Penalty_type_name = "Penalty";
-		constexpr const static rivet::rivet_type_id Penalty_type_id = 0xae08ece0; 
+		constexpr static std::string_view NumTargeters_type_name = "NumTargeters";
+		constexpr static rivet::rivet_type_id NumTargeters_type_id = 0xa03b83f8;
+		constexpr static std::string_view Penalty_type_name = "Penalty";
+		constexpr static rivet::rivet_type_id Penalty_type_id = 0xae08ece0; 
 
 		explicit MultiTargetPenalty() = default;
 		explicit MultiTargetPenalty([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

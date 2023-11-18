@@ -21,17 +21,17 @@ namespace rivet::ddl::generated {
 	struct CrateMaterialOverride; 
 
 	struct RIVET_DDL_SHARED RegionCrateVariants : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "RegionCrateVariants";
-		constexpr const static rivet::rivet_type_id type_id = 0x3b7568a2;
+		constexpr static std::string_view type_name = "RegionCrateVariants";
+		constexpr static rivet::rivet_type_id type_id = 0x3b7568a2;
 
-		constexpr const static std::string_view ContainerRegions_type_name = "ContainerRegions";
-		constexpr const static rivet::rivet_type_id ContainerRegions_type_id = 0xc9f0b22b;
-		constexpr const static std::string_view BoltCrateOverride_type_name = "BoltCrateOverride";
-		constexpr const static rivet::rivet_type_id BoltCrateOverride_type_id = 0xcadfd873;
-		constexpr const static std::string_view AmmoCrateOverride_type_name = "AmmoCrateOverride";
-		constexpr const static rivet::rivet_type_id AmmoCrateOverride_type_id = 0x8e947afd;
-		constexpr const static std::string_view HealthCrateOverride_type_name = "HealthCrateOverride";
-		constexpr const static rivet::rivet_type_id HealthCrateOverride_type_id = 0xdb8005c1; 
+		constexpr static std::string_view ContainerRegions_type_name = "ContainerRegions";
+		constexpr static rivet::rivet_type_id ContainerRegions_type_id = 0xc9f0b22b;
+		constexpr static std::string_view BoltCrateOverride_type_name = "BoltCrateOverride";
+		constexpr static rivet::rivet_type_id BoltCrateOverride_type_id = 0xcadfd873;
+		constexpr static std::string_view AmmoCrateOverride_type_name = "AmmoCrateOverride";
+		constexpr static rivet::rivet_type_id AmmoCrateOverride_type_id = 0x8e947afd;
+		constexpr static std::string_view HealthCrateOverride_type_name = "HealthCrateOverride";
+		constexpr static rivet::rivet_type_id HealthCrateOverride_type_id = 0xdb8005c1; 
 
 		explicit RegionCrateVariants() = default;
 		explicit RegionCrateVariants([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

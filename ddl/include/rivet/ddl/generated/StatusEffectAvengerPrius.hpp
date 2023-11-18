@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED StatusEffectAvengerPrius : StatusEffectBasePrius {
-		constexpr const static std::string_view type_name = "StatusEffectAvengerPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x9fb2104d;
+		constexpr static std::string_view type_name = "StatusEffectAvengerPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x9fb2104d;
 
-		constexpr const static std::string_view DamageIsPercent_type_name = "DamageIsPercent";
-		constexpr const static rivet::rivet_type_id DamageIsPercent_type_id = 0xda280e89;
-		constexpr const static std::string_view HPIsPercent_type_name = "HPIsPercent";
-		constexpr const static rivet::rivet_type_id HPIsPercent_type_id = 0xd6d154f6; 
+		constexpr static std::string_view DamageIsPercent_type_name = "DamageIsPercent";
+		constexpr static rivet::rivet_type_id DamageIsPercent_type_id = 0xda280e89;
+		constexpr static std::string_view HPIsPercent_type_name = "HPIsPercent";
+		constexpr static rivet::rivet_type_id HPIsPercent_type_id = 0xd6d154f6; 
 
 		explicit StatusEffectAvengerPrius() = default;
 		explicit StatusEffectAvengerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

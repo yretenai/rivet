@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct SplashGeneratorConfig; 
 
 	struct RIVET_DDL_SHARED BotConfigWaterFx : ConfigBase {
-		constexpr const static std::string_view type_name = "BotConfigWaterFx";
-		constexpr const static rivet::rivet_type_id type_id = 0xd2eb1c52;
+		constexpr static std::string_view type_name = "BotConfigWaterFx";
+		constexpr static rivet::rivet_type_id type_id = 0xd2eb1c52;
 
-		constexpr const static std::string_view SplashGeneratorData_type_name = "SplashGeneratorData";
-		constexpr const static rivet::rivet_type_id SplashGeneratorData_type_id = 0x4f914ba2; 
+		constexpr static std::string_view SplashGeneratorData_type_name = "SplashGeneratorData";
+		constexpr static rivet::rivet_type_id SplashGeneratorData_type_id = 0x4f914ba2; 
 
 		explicit BotConfigWaterFx() = default;
 		explicit BotConfigWaterFx([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -19,19 +19,19 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED HeroHookshotConfig : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "HeroHookshotConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x56b79f2;
+		constexpr static std::string_view type_name = "HeroHookshotConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x56b79f2;
 
-		constexpr const static std::string_view IdealCableLength_type_name = "IdealCableLength";
-		constexpr const static rivet::rivet_type_id IdealCableLength_type_id = 0x9d4b8549;
-		constexpr const static std::string_view Accel_type_name = "Accel";
-		constexpr const static rivet::rivet_type_id Accel_type_id = 0x44affa24;
-		constexpr const static std::string_view Decel_type_name = "Decel";
-		constexpr const static rivet::rivet_type_id Decel_type_id = 0xa9242a88;
-		constexpr const static std::string_view MaxSpeed_type_name = "MaxSpeed";
-		constexpr const static rivet::rivet_type_id MaxSpeed_type_id = 0x16b83961;
-		constexpr const static std::string_view AnimMaxTargetSpeed_type_name = "AnimMaxTargetSpeed";
-		constexpr const static rivet::rivet_type_id AnimMaxTargetSpeed_type_id = 0x13a4ffe7; 
+		constexpr static std::string_view IdealCableLength_type_name = "IdealCableLength";
+		constexpr static rivet::rivet_type_id IdealCableLength_type_id = 0x9d4b8549;
+		constexpr static std::string_view Accel_type_name = "Accel";
+		constexpr static rivet::rivet_type_id Accel_type_id = 0x44affa24;
+		constexpr static std::string_view Decel_type_name = "Decel";
+		constexpr static rivet::rivet_type_id Decel_type_id = 0xa9242a88;
+		constexpr static std::string_view MaxSpeed_type_name = "MaxSpeed";
+		constexpr static rivet::rivet_type_id MaxSpeed_type_id = 0x16b83961;
+		constexpr static std::string_view AnimMaxTargetSpeed_type_name = "AnimMaxTargetSpeed";
+		constexpr static rivet::rivet_type_id AnimMaxTargetSpeed_type_id = 0x13a4ffe7; 
 
 		explicit HeroHookshotConfig() = default;
 		explicit HeroHookshotConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

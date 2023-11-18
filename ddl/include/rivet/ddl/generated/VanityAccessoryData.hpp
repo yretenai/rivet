@@ -17,27 +17,27 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/enums/x56bca86c.hpp>
+#include <rivet/ddl/generated/enums/x36ceb0b.hpp>
 #include <rivet/ddl/generated/enums/xf2db3ee.hpp>
-#include <rivet/ddl/generated/enums/x36ceb0b.hpp> 
+#include <rivet/ddl/generated/enums/x56bca86c.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED VanityAccessoryData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "VanityAccessoryData";
-		constexpr const static rivet::rivet_type_id type_id = 0x77910c26;
+		constexpr static std::string_view type_name = "VanityAccessoryData";
+		constexpr static rivet::rivet_type_id type_id = 0x77910c26;
 
-		constexpr const static std::string_view Type_type_name = "Type";
-		constexpr const static rivet::rivet_type_id Type_type_id = 0xbc4e9799;
-		constexpr const static std::string_view BundleType_type_name = "BundleType";
-		constexpr const static rivet::rivet_type_id BundleType_type_id = 0xce4eaef0;
-		constexpr const static std::string_view SkinType_type_name = "SkinType";
-		constexpr const static rivet::rivet_type_id SkinType_type_id = 0x301c5cc0;
-		constexpr const static std::string_view RatchetModel_type_name = "RatchetModel";
-		constexpr const static rivet::rivet_type_id RatchetModel_type_id = 0xe1790da4;
-		constexpr const static std::string_view RivetModel_type_name = "RivetModel";
-		constexpr const static rivet::rivet_type_id RivetModel_type_id = 0xc9b44a57;
-		constexpr const static std::string_view OnForDefault_type_name = "OnForDefault";
-		constexpr const static rivet::rivet_type_id OnForDefault_type_id = 0xafbbf9ea; 
+		constexpr static std::string_view Type_type_name = "Type";
+		constexpr static rivet::rivet_type_id Type_type_id = 0xbc4e9799;
+		constexpr static std::string_view BundleType_type_name = "BundleType";
+		constexpr static rivet::rivet_type_id BundleType_type_id = 0xce4eaef0;
+		constexpr static std::string_view SkinType_type_name = "SkinType";
+		constexpr static rivet::rivet_type_id SkinType_type_id = 0x301c5cc0;
+		constexpr static std::string_view RatchetModel_type_name = "RatchetModel";
+		constexpr static rivet::rivet_type_id RatchetModel_type_id = 0xe1790da4;
+		constexpr static std::string_view RivetModel_type_name = "RivetModel";
+		constexpr static rivet::rivet_type_id RivetModel_type_id = 0xc9b44a57;
+		constexpr static std::string_view OnForDefault_type_name = "OnForDefault";
+		constexpr static rivet::rivet_type_id OnForDefault_type_id = 0xafbbf9ea; 
 
 		explicit VanityAccessoryData() = default;
 		explicit VanityAccessoryData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

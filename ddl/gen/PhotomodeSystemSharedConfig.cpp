@@ -3,13 +3,13 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/InputSettingsData.hpp>
 #include <rivet/ddl/generated/PhotomodeSystemConfig.hpp>
-#include <rivet/ddl/generated/StickerModeData.hpp>
-#include <rivet/ddl/generated/FrameData.hpp>
-#include <rivet/ddl/generated/PhotoLightSettings.hpp>
+#include <rivet/ddl/generated/FilterData.hpp>
 #include <rivet/ddl/generated/PhotomodeCameraManagerData.hpp>
-#include <rivet/ddl/generated/FilterData.hpp> 
+#include <rivet/ddl/generated/PhotoLightSettings.hpp>
+#include <rivet/ddl/generated/FrameData.hpp>
+#include <rivet/ddl/generated/StickerModeData.hpp>
+#include <rivet/ddl/generated/InputSettingsData.hpp> 
 
 #include <rivet/ddl/generated/PhotomodeSystemSharedConfig.hpp>
 

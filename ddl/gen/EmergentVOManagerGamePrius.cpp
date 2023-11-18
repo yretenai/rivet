@@ -3,12 +3,12 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/EmergentVOManagerBotPrius.hpp>
 #include <rivet/ddl/generated/EmergentVOManagerHeroPrius.hpp>
-#include <rivet/ddl/generated/EmergentVOManagerHeroCompanionPrius.hpp>
-#include <rivet/ddl/generated/EmergentVOManagerStandardPrius.hpp>
+#include <rivet/ddl/generated/EmergentVOManagerZurkonPrius.hpp>
 #include <rivet/ddl/generated/EmergentVOManagerUIPrius.hpp>
-#include <rivet/ddl/generated/EmergentVOManagerZurkonPrius.hpp> 
+#include <rivet/ddl/generated/EmergentVOManagerStandardPrius.hpp>
+#include <rivet/ddl/generated/EmergentVOManagerHeroCompanionPrius.hpp>
+#include <rivet/ddl/generated/EmergentVOManagerBotPrius.hpp> 
 
 #include <rivet/ddl/generated/EmergentVOManagerGamePrius.hpp>
 

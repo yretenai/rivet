@@ -21,11 +21,11 @@ namespace rivet::ddl::generated {
 	struct AssetReferenceDef; 
 
 	struct RIVET_DDL_SHARED SkinItemCompanionItemListElement : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "SkinItemCompanionItemListElement";
-		constexpr const static rivet::rivet_type_id type_id = 0x10a7f3e9;
+		constexpr static std::string_view type_name = "SkinItemCompanionItemListElement";
+		constexpr static rivet::rivet_type_id type_id = 0x10a7f3e9;
 
-		constexpr const static std::string_view CompanionItem_type_name = "CompanionItem";
-		constexpr const static rivet::rivet_type_id CompanionItem_type_id = 0x6561b09e; 
+		constexpr static std::string_view CompanionItem_type_name = "CompanionItem";
+		constexpr static rivet::rivet_type_id CompanionItem_type_id = 0x6561b09e; 
 
 		explicit SkinItemCompanionItemListElement() = default;
 		explicit SkinItemCompanionItemListElement([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

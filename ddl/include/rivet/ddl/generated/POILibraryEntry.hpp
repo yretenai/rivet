@@ -24,15 +24,15 @@ namespace rivet::ddl::generated {
 	struct POIConfigData; 
 
 	struct RIVET_DDL_SHARED POILibraryEntry : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "POILibraryEntry";
-		constexpr const static rivet::rivet_type_id type_id = 0x8dbfc417;
+		constexpr static std::string_view type_name = "POILibraryEntry";
+		constexpr static rivet::rivet_type_id type_id = 0x8dbfc417;
 
-		constexpr const static std::string_view POIType_type_name = "POIType";
-		constexpr const static rivet::rivet_type_id POIType_type_id = 0xd6abc9e7;
-		constexpr const static std::string_view POIConfigData_type_name = "POIConfigData";
-		constexpr const static rivet::rivet_type_id POIConfigData_type_id = 0x96379876;
-		constexpr const static std::string_view POIPriusType_type_name = "POIPriusType";
-		constexpr const static rivet::rivet_type_id POIPriusType_type_id = 0xd1324193; 
+		constexpr static std::string_view POIType_type_name = "POIType";
+		constexpr static rivet::rivet_type_id POIType_type_id = 0xd6abc9e7;
+		constexpr static std::string_view POIConfigData_type_name = "POIConfigData";
+		constexpr static rivet::rivet_type_id POIConfigData_type_id = 0x96379876;
+		constexpr static std::string_view POIPriusType_type_name = "POIPriusType";
+		constexpr static rivet::rivet_type_id POIPriusType_type_id = 0xd1324193; 
 
 		explicit POILibraryEntry() = default;
 		explicit POILibraryEntry([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

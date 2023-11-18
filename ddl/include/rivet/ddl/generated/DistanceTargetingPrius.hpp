@@ -17,16 +17,16 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/TargetingBasePrius.hpp>
-#include <rivet/ddl/generated/bitsets/TargetType.hpp> 
+#include <rivet/ddl/generated/bitsets/TargetType.hpp>
+#include <rivet/ddl/generated/TargetingBasePrius.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DistanceTargetingPrius : TargetingBasePrius {
-		constexpr const static std::string_view type_name = "DistanceTargetingPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xcb90698;
+		constexpr static std::string_view type_name = "DistanceTargetingPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xcb90698;
 
-		constexpr const static std::string_view ValidTargetTypes_type_name = "ValidTargetTypes";
-		constexpr const static rivet::rivet_type_id ValidTargetTypes_type_id = 0x3b4c9303; 
+		constexpr static std::string_view ValidTargetTypes_type_name = "ValidTargetTypes";
+		constexpr static rivet::rivet_type_id ValidTargetTypes_type_id = 0x3b4c9303; 
 
 		explicit DistanceTargetingPrius() = default;
 		explicit DistanceTargetingPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

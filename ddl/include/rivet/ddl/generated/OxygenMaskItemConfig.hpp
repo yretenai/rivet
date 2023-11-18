@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED OxygenMaskItemConfig : GameItemConfig {
-		constexpr const static std::string_view type_name = "OxygenMaskItemConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x5e9b2b69;
+		constexpr static std::string_view type_name = "OxygenMaskItemConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x5e9b2b69;
 
 		explicit OxygenMaskItemConfig() = default;
 		explicit OxygenMaskItemConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

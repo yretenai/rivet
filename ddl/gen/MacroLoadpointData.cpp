@@ -3,8 +3,8 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/AssetReferenceDef.hpp>
-#include <rivet/ddl/generated/GameMacroLoadpointData.hpp> 
+#include <rivet/ddl/generated/GameMacroLoadpointData.hpp>
+#include <rivet/ddl/generated/AssetReferenceDef.hpp> 
 
 #include <rivet/ddl/generated/MacroLoadpointData.hpp>
 

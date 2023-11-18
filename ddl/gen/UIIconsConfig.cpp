@@ -3,14 +3,14 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/PauseMapIconData.hpp>
-#include <rivet/ddl/generated/GadgetIconData.hpp>
-#include <rivet/ddl/generated/WeaponIconData.hpp>
-#include <rivet/ddl/generated/ShortcutIconData.hpp>
-#include <rivet/ddl/generated/VanityIconData.hpp>
+#include <rivet/ddl/generated/LogoCustomData.hpp>
 #include <rivet/ddl/generated/WeaponImageData.hpp>
+#include <rivet/ddl/generated/VanityIconData.hpp>
+#include <rivet/ddl/generated/PauseMapIconData.hpp>
+#include <rivet/ddl/generated/ShortcutIconData.hpp>
+#include <rivet/ddl/generated/GadgetIconData.hpp>
 #include <rivet/ddl/generated/CollectibleImageData.hpp>
-#include <rivet/ddl/generated/LogoCustomData.hpp> 
+#include <rivet/ddl/generated/WeaponIconData.hpp> 
 
 #include <rivet/ddl/generated/UIIconsConfig.hpp>
 

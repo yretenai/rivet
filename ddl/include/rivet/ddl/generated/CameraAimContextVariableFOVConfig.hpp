@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct HackySeparatorStruct; 
 
 	struct RIVET_DDL_SHARED CameraAimContextVariableFOVConfig : CameraAimContextConfig {
-		constexpr const static std::string_view type_name = "CameraAimContextVariableFOVConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xb2edddf3;
+		constexpr static std::string_view type_name = "CameraAimContextVariableFOVConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xb2edddf3;
 
-		constexpr const static std::string_view SeparatorFOVConfig_type_name = "SeparatorFOVConfig";
-		constexpr const static rivet::rivet_type_id SeparatorFOVConfig_type_id = 0xf63dbb91; 
+		constexpr static std::string_view SeparatorFOVConfig_type_name = "SeparatorFOVConfig";
+		constexpr static rivet::rivet_type_id SeparatorFOVConfig_type_id = 0xf63dbb91; 
 
 		explicit CameraAimContextVariableFOVConfig() = default;
 		explicit CameraAimContextVariableFOVConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

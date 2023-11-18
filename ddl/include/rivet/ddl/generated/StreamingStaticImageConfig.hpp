@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED StreamingStaticImageConfig : StreamingVideoBaseConfig {
-		constexpr const static std::string_view type_name = "StreamingStaticImageConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x9781586f;
+		constexpr static std::string_view type_name = "StreamingStaticImageConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x9781586f;
 
-		constexpr const static std::string_view TextureAsset_type_name = "TextureAsset";
-		constexpr const static rivet::rivet_type_id TextureAsset_type_id = 0x34776bf1;
-		constexpr const static std::string_view Duration_type_name = "Duration";
-		constexpr const static rivet::rivet_type_id Duration_type_id = 0x7c5e3db0; 
+		constexpr static std::string_view TextureAsset_type_name = "TextureAsset";
+		constexpr static rivet::rivet_type_id TextureAsset_type_id = 0x34776bf1;
+		constexpr static std::string_view Duration_type_name = "Duration";
+		constexpr static rivet::rivet_type_id Duration_type_id = 0x7c5e3db0; 
 
 		explicit StreamingStaticImageConfig() = default;
 		explicit StreamingStaticImageConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

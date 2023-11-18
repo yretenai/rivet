@@ -23,29 +23,29 @@ namespace rivet::ddl::generated {
 	struct AccessibilityHighlightMaterialConstant; 
 
 	struct RIVET_DDL_SHARED AccessibilityHighlightComponentPrius : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "AccessibilityHighlightComponentPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xe14e1d99;
+		constexpr static std::string_view type_name = "AccessibilityHighlightComponentPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xe14e1d99;
 
-		constexpr const static std::string_view Type_type_name = "Type";
-		constexpr const static rivet::rivet_type_id Type_type_id = 0xbc4e9799;
-		constexpr const static std::string_view RemoveHighlightOnDeath_type_name = "RemoveHighlightOnDeath";
-		constexpr const static rivet::rivet_type_id RemoveHighlightOnDeath_type_id = 0x17ed4fe2;
-		constexpr const static std::string_view DisableHighlights_type_name = "DisableHighlights";
-		constexpr const static rivet::rivet_type_id DisableHighlights_type_id = 0x963c454f;
-		constexpr const static std::string_view ToggleHair_type_name = "ToggleHair";
-		constexpr const static rivet::rivet_type_id ToggleHair_type_id = 0xe39ea036;
-		constexpr const static std::string_view SkipLookToggleOnOrbis_type_name = "SkipLookToggleOnOrbis";
-		constexpr const static rivet::rivet_type_id SkipLookToggleOnOrbis_type_id = 0x16b47c0f;
-		constexpr const static std::string_view ForceKeepOnNPCBot_type_name = "ForceKeepOnNPCBot";
-		constexpr const static rivet::rivet_type_id ForceKeepOnNPCBot_type_id = 0x60d07c39;
-		constexpr const static std::string_view LookEnableList_type_name = "LookEnableList";
-		constexpr const static rivet::rivet_type_id LookEnableList_type_id = 0x227baf14;
-		constexpr const static std::string_view LookDisableList_type_name = "LookDisableList";
-		constexpr const static rivet::rivet_type_id LookDisableList_type_id = 0x10863bd7;
-		constexpr const static std::string_view SkipMaterialList_type_name = "SkipMaterialList";
-		constexpr const static rivet::rivet_type_id SkipMaterialList_type_id = 0x23e71733;
-		constexpr const static std::string_view MaterialConstantList_type_name = "MaterialConstantList";
-		constexpr const static rivet::rivet_type_id MaterialConstantList_type_id = 0xddf6a4b5; 
+		constexpr static std::string_view Type_type_name = "Type";
+		constexpr static rivet::rivet_type_id Type_type_id = 0xbc4e9799;
+		constexpr static std::string_view RemoveHighlightOnDeath_type_name = "RemoveHighlightOnDeath";
+		constexpr static rivet::rivet_type_id RemoveHighlightOnDeath_type_id = 0x17ed4fe2;
+		constexpr static std::string_view DisableHighlights_type_name = "DisableHighlights";
+		constexpr static rivet::rivet_type_id DisableHighlights_type_id = 0x963c454f;
+		constexpr static std::string_view ToggleHair_type_name = "ToggleHair";
+		constexpr static rivet::rivet_type_id ToggleHair_type_id = 0xe39ea036;
+		constexpr static std::string_view SkipLookToggleOnOrbis_type_name = "SkipLookToggleOnOrbis";
+		constexpr static rivet::rivet_type_id SkipLookToggleOnOrbis_type_id = 0x16b47c0f;
+		constexpr static std::string_view ForceKeepOnNPCBot_type_name = "ForceKeepOnNPCBot";
+		constexpr static rivet::rivet_type_id ForceKeepOnNPCBot_type_id = 0x60d07c39;
+		constexpr static std::string_view LookEnableList_type_name = "LookEnableList";
+		constexpr static rivet::rivet_type_id LookEnableList_type_id = 0x227baf14;
+		constexpr static std::string_view LookDisableList_type_name = "LookDisableList";
+		constexpr static rivet::rivet_type_id LookDisableList_type_id = 0x10863bd7;
+		constexpr static std::string_view SkipMaterialList_type_name = "SkipMaterialList";
+		constexpr static rivet::rivet_type_id SkipMaterialList_type_id = 0x23e71733;
+		constexpr static std::string_view MaterialConstantList_type_name = "MaterialConstantList";
+		constexpr static rivet::rivet_type_id MaterialConstantList_type_id = 0xddf6a4b5; 
 
 		explicit AccessibilityHighlightComponentPrius() = default;
 		explicit AccessibilityHighlightComponentPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

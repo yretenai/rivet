@@ -3,17 +3,17 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/BotComboMoveFinaleBarrage.hpp>
-#include <rivet/ddl/generated/BotComboMoveFinaleSweepChase.hpp>
-#include <rivet/ddl/generated/BotComboMoveReferenceIndex.hpp>
-#include <rivet/ddl/generated/BotComboMoveFinaleProtonSeeker.hpp>
+#include <rivet/ddl/generated/BotComboMoveFinaleHeadAnimation.hpp>
+#include <rivet/ddl/generated/BotComboMoveFinaleWeaponMultiAttack.hpp>
 #include <rivet/ddl/generated/BotComboMoveZordoomChaseMelee.hpp>
+#include <rivet/ddl/generated/BotComboMoveFinaleProtonSeeker.hpp>
+#include <rivet/ddl/generated/BotComboMoveFinaleSweepChase.hpp>
+#include <rivet/ddl/generated/BotComboMoveFinaleHeadWarp.hpp>
 #include <rivet/ddl/generated/BotComboMove.hpp>
 #include <rivet/ddl/generated/BotComboMoveFinaleAimCalibration.hpp>
+#include <rivet/ddl/generated/BotComboMoveReferenceIndex.hpp>
 #include <rivet/ddl/generated/BotComboMoveFinaleEyeBeam.hpp>
-#include <rivet/ddl/generated/BotComboMoveFinaleHeadWarp.hpp>
-#include <rivet/ddl/generated/BotComboMoveFinaleWeaponMultiAttack.hpp>
-#include <rivet/ddl/generated/BotComboMoveFinaleHeadAnimation.hpp> 
+#include <rivet/ddl/generated/BotComboMoveFinaleBarrage.hpp> 
 
 #include <rivet/ddl/generated/BotComboMoveBase.hpp>
 

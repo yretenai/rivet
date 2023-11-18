@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DropshipAimingPrius : AimingBasePrius {
-		constexpr const static std::string_view type_name = "DropshipAimingPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xdf063f8d;
+		constexpr static std::string_view type_name = "DropshipAimingPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xdf063f8d;
 
 		explicit DropshipAimingPrius() = default;
 		explicit DropshipAimingPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

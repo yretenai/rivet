@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view MultiConversationOption_type_name = "MultiConversationOption";
-	constexpr const static rivet::rivet_type_id MultiConversationOption_type_id = 0xea118791;
+	constexpr static std::string_view MultiConversationOption_type_name = "MultiConversationOption";
+	constexpr static rivet::rivet_type_id MultiConversationOption_type_id = 0xea118791;
 
-	constexpr const static std::array<std::string_view, 3> MultiConversationOption_values = {
+	constexpr static std::array<std::string_view, 3> MultiConversationOption_values = {
 		"SingleConversation",
 		"Loop",
 		"PlayAllOnce", 

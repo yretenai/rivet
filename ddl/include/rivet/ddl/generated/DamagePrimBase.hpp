@@ -21,13 +21,13 @@ namespace rivet::ddl::generated {
 	struct DDLVector3; 
 
 	struct RIVET_DDL_SHARED DamagePrimBase : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "DamagePrimBase";
-		constexpr const static rivet::rivet_type_id type_id = 0xe6d5259f;
+		constexpr static std::string_view type_name = "DamagePrimBase";
+		constexpr static rivet::rivet_type_id type_id = 0xe6d5259f;
 
-		constexpr const static std::string_view DamageLocator_type_name = "DamageLocator";
-		constexpr const static rivet::rivet_type_id DamageLocator_type_id = 0x604b5af6;
-		constexpr const static std::string_view LocalOffset_type_name = "LocalOffset";
-		constexpr const static rivet::rivet_type_id LocalOffset_type_id = 0x46a4eea5; 
+		constexpr static std::string_view DamageLocator_type_name = "DamageLocator";
+		constexpr static rivet::rivet_type_id DamageLocator_type_id = 0x604b5af6;
+		constexpr static std::string_view LocalOffset_type_name = "LocalOffset";
+		constexpr static rivet::rivet_type_id LocalOffset_type_id = 0x46a4eea5; 
 
 		explicit DamagePrimBase() = default;
 		explicit DamagePrimBase([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

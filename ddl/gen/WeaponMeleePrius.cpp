@@ -3,9 +3,9 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/WeaponClankMeleePrius.hpp>
+#include <rivet/ddl/generated/WeaponHammerPrius.hpp>
 #include <rivet/ddl/generated/WeaponWrenchPrius.hpp>
-#include <rivet/ddl/generated/WeaponHammerPrius.hpp> 
+#include <rivet/ddl/generated/WeaponClankMeleePrius.hpp> 
 
 #include <rivet/ddl/generated/WeaponMeleePrius.hpp>
 

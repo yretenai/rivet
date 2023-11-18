@@ -19,11 +19,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ComboDisplayDataBase : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "ComboDisplayDataBase";
-		constexpr const static rivet::rivet_type_id type_id = 0x845a39b;
+		constexpr static std::string_view type_name = "ComboDisplayDataBase";
+		constexpr static rivet::rivet_type_id type_id = 0x845a39b;
 
-		constexpr const static std::string_view DisplayName_type_name = "DisplayName";
-		constexpr const static rivet::rivet_type_id DisplayName_type_id = 0xeaf33243; 
+		constexpr static std::string_view DisplayName_type_name = "DisplayName";
+		constexpr static rivet::rivet_type_id DisplayName_type_id = 0xeaf33243; 
 
 		explicit ComboDisplayDataBase() = default;
 		explicit ComboDisplayDataBase([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

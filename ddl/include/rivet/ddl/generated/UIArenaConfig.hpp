@@ -20,17 +20,17 @@
 #include <rivet/ddl/generated/ConfigBase.hpp> 
 
 namespace rivet::ddl::generated {
-	struct UIArenaCup;
-	struct UIArenaRewardIcon; 
+	struct UIArenaRewardIcon;
+	struct UIArenaCup; 
 
 	struct RIVET_DDL_SHARED UIArenaConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "UIArenaConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x43d6cfb1;
+		constexpr static std::string_view type_name = "UIArenaConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x43d6cfb1;
 
-		constexpr const static std::string_view Cups_type_name = "Cups";
-		constexpr const static rivet::rivet_type_id Cups_type_id = 0x8c4eb48a;
-		constexpr const static std::string_view RewardIcons_type_name = "RewardIcons";
-		constexpr const static rivet::rivet_type_id RewardIcons_type_id = 0x1a43ce21; 
+		constexpr static std::string_view Cups_type_name = "Cups";
+		constexpr static rivet::rivet_type_id Cups_type_id = 0x8c4eb48a;
+		constexpr static std::string_view RewardIcons_type_name = "RewardIcons";
+		constexpr static rivet::rivet_type_id RewardIcons_type_id = 0x1a43ce21; 
 
 		explicit UIArenaConfig() = default;
 		explicit UIArenaConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

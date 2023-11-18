@@ -19,17 +19,17 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED BotMusicValue : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "BotMusicValue";
-		constexpr const static rivet::rivet_type_id type_id = 0x33ea711c;
+		constexpr static std::string_view type_name = "BotMusicValue";
+		constexpr static rivet::rivet_type_id type_id = 0x33ea711c;
 
-		constexpr const static std::string_view Category_type_name = "Category";
-		constexpr const static rivet::rivet_type_id Category_type_id = 0xfc4da4b1;
-		constexpr const static std::string_view Value_type_name = "Value";
-		constexpr const static rivet::rivet_type_id Value_type_id = 0x42494f5;
-		constexpr const static std::string_view Radius_type_name = "Radius";
-		constexpr const static rivet::rivet_type_id Radius_type_id = 0x504203d;
-		constexpr const static std::string_view Bots_type_name = "Bots";
-		constexpr const static rivet::rivet_type_id Bots_type_id = 0x412f304d; 
+		constexpr static std::string_view Category_type_name = "Category";
+		constexpr static rivet::rivet_type_id Category_type_id = 0xfc4da4b1;
+		constexpr static std::string_view Value_type_name = "Value";
+		constexpr static rivet::rivet_type_id Value_type_id = 0x42494f5;
+		constexpr static std::string_view Radius_type_name = "Radius";
+		constexpr static rivet::rivet_type_id Radius_type_id = 0x504203d;
+		constexpr static std::string_view Bots_type_name = "Bots";
+		constexpr static rivet::rivet_type_id Bots_type_id = 0x412f304d; 
 
 		explicit BotMusicValue() = default;
 		explicit BotMusicValue([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -23,15 +23,15 @@ namespace rivet::ddl::generated {
 	struct SoundVolumeOffsets71; 
 
 	struct RIVET_DDL_SHARED SoundEngineConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "SoundEngineConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xab08aa7d;
+		constexpr static std::string_view type_name = "SoundEngineConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xab08aa7d;
 
-		constexpr const static std::string_view InitBank_type_name = "InitBank";
-		constexpr const static rivet::rivet_type_id InitBank_type_id = 0xf1b139f4;
-		constexpr const static std::string_view ExternalSourceBank_type_name = "ExternalSourceBank";
-		constexpr const static rivet::rivet_type_id ExternalSourceBank_type_id = 0xe21bae0b;
-		constexpr const static std::string_view VolumeOffsets71_type_name = "VolumeOffsets71";
-		constexpr const static rivet::rivet_type_id VolumeOffsets71_type_id = 0xfe67bd0a; 
+		constexpr static std::string_view InitBank_type_name = "InitBank";
+		constexpr static rivet::rivet_type_id InitBank_type_id = 0xf1b139f4;
+		constexpr static std::string_view ExternalSourceBank_type_name = "ExternalSourceBank";
+		constexpr static rivet::rivet_type_id ExternalSourceBank_type_id = 0xe21bae0b;
+		constexpr static std::string_view VolumeOffsets71_type_name = "VolumeOffsets71";
+		constexpr static rivet::rivet_type_id VolumeOffsets71_type_id = 0xfe67bd0a; 
 
 		explicit SoundEngineConfig() = default;
 		explicit SoundEngineConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

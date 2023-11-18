@@ -23,27 +23,27 @@ namespace rivet::ddl::generated {
 	struct AwardPrizeBasePrius; 
 
 	struct RIVET_DDL_SHARED AwardBasePrius : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "AwardBasePrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xd4f8d602;
+		constexpr static std::string_view type_name = "AwardBasePrius";
+		constexpr static rivet::rivet_type_id type_id = 0xd4f8d602;
 
-		constexpr const static std::string_view CodeName_type_name = "CodeName";
-		constexpr const static rivet::rivet_type_id CodeName_type_id = 0xa15b4218;
-		constexpr const static std::string_view NameLocTag_type_name = "NameLocTag";
-		constexpr const static rivet::rivet_type_id NameLocTag_type_id = 0xa0041b54;
-		constexpr const static std::string_view DescLocTag_type_name = "DescLocTag";
-		constexpr const static rivet::rivet_type_id DescLocTag_type_id = 0xe02bccb2;
-		constexpr const static std::string_view ImagePath_type_name = "ImagePath";
-		constexpr const static rivet::rivet_type_id ImagePath_type_id = 0x3c1a7294;
-		constexpr const static std::string_view Level_type_name = "Level";
-		constexpr const static rivet::rivet_type_id Level_type_id = 0x83b900d2;
-		constexpr const static std::string_view Hidden_type_name = "Hidden";
-		constexpr const static rivet::rivet_type_id Hidden_type_id = 0xb625a7da;
-		constexpr const static std::string_view Progressive_type_name = "Progressive";
-		constexpr const static rivet::rivet_type_id Progressive_type_id = 0x54bc7138;
-		constexpr const static std::string_view TargetValue_type_name = "TargetValue";
-		constexpr const static rivet::rivet_type_id TargetValue_type_id = 0xc1574041;
-		constexpr const static std::string_view Prize_type_name = "Prize";
-		constexpr const static rivet::rivet_type_id Prize_type_id = 0x489b4700; 
+		constexpr static std::string_view CodeName_type_name = "CodeName";
+		constexpr static rivet::rivet_type_id CodeName_type_id = 0xa15b4218;
+		constexpr static std::string_view NameLocTag_type_name = "NameLocTag";
+		constexpr static rivet::rivet_type_id NameLocTag_type_id = 0xa0041b54;
+		constexpr static std::string_view DescLocTag_type_name = "DescLocTag";
+		constexpr static rivet::rivet_type_id DescLocTag_type_id = 0xe02bccb2;
+		constexpr static std::string_view ImagePath_type_name = "ImagePath";
+		constexpr static rivet::rivet_type_id ImagePath_type_id = 0x3c1a7294;
+		constexpr static std::string_view Level_type_name = "Level";
+		constexpr static rivet::rivet_type_id Level_type_id = 0x83b900d2;
+		constexpr static std::string_view Hidden_type_name = "Hidden";
+		constexpr static rivet::rivet_type_id Hidden_type_id = 0xb625a7da;
+		constexpr static std::string_view Progressive_type_name = "Progressive";
+		constexpr static rivet::rivet_type_id Progressive_type_id = 0x54bc7138;
+		constexpr static std::string_view TargetValue_type_name = "TargetValue";
+		constexpr static rivet::rivet_type_id TargetValue_type_id = 0xc1574041;
+		constexpr static std::string_view Prize_type_name = "Prize";
+		constexpr static rivet::rivet_type_id Prize_type_id = 0x489b4700; 
 
 		explicit AwardBasePrius() = default;
 		explicit AwardBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

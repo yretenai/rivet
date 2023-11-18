@@ -20,46 +20,46 @@
 #include <rivet/ddl/generated/ConfigBase.hpp> 
 
 namespace rivet::ddl::generated {
+	struct GrindVolumeApproachData;
 	struct GrindSlopeData;
-	struct GrindMoveData;
-	struct GrindVolumeApproachData; 
+	struct GrindMoveData; 
 
 	struct RIVET_DDL_SHARED HeroGrindConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "HeroGrindConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xf4ecbe5c;
+		constexpr static std::string_view type_name = "HeroGrindConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xf4ecbe5c;
 
-		constexpr const static std::string_view MoveData_type_name = "MoveData";
-		constexpr const static rivet::rivet_type_id MoveData_type_id = 0x91f7edf;
-		constexpr const static std::string_view SlopeData_type_name = "SlopeData";
-		constexpr const static rivet::rivet_type_id SlopeData_type_id = 0x21158bf7;
-		constexpr const static std::string_view GapApproachData_type_name = "GapApproachData";
-		constexpr const static rivet::rivet_type_id GapApproachData_type_id = 0xf4747b90;
-		constexpr const static std::string_view HazardApproachData_type_name = "HazardApproachData";
-		constexpr const static rivet::rivet_type_id HazardApproachData_type_id = 0x84803ab7;
-		constexpr const static std::string_view MinAccessibilityTimeSlowScale_type_name = "MinAccessibilityTimeSlowScale";
-		constexpr const static rivet::rivet_type_id MinAccessibilityTimeSlowScale_type_id = 0xeb4be193;
-		constexpr const static std::string_view CameraShakeConfig_type_name = "CameraShakeConfig";
-		constexpr const static rivet::rivet_type_id CameraShakeConfig_type_id = 0xb610c5e4;
-		constexpr const static std::string_view GrindHorizontalTolerance_type_name = "GrindHorizontalTolerance";
-		constexpr const static rivet::rivet_type_id GrindHorizontalTolerance_type_id = 0x5c6e5f5e;
-		constexpr const static std::string_view GrindVerticalTolerance_type_name = "GrindVerticalTolerance";
-		constexpr const static rivet::rivet_type_id GrindVerticalTolerance_type_id = 0xd0ba2734;
-		constexpr const static std::string_view GrindPreferCameraAngleTol_type_name = "GrindPreferCameraAngleTol";
-		constexpr const static rivet::rivet_type_id GrindPreferCameraAngleTol_type_id = 0xa8141602;
-		constexpr const static std::string_view GrindPreferPlayerAngleTol_type_name = "GrindPreferPlayerAngleTol";
-		constexpr const static rivet::rivet_type_id GrindPreferPlayerAngleTol_type_id = 0x4329063;
-		constexpr const static std::string_view GrindForwardToleranceJump_type_name = "GrindForwardToleranceJump";
-		constexpr const static rivet::rivet_type_id GrindForwardToleranceJump_type_id = 0x9e7be45a;
-		constexpr const static std::string_view GrindVerticalToleranceJump_type_name = "GrindVerticalToleranceJump";
-		constexpr const static rivet::rivet_type_id GrindVerticalToleranceJump_type_id = 0xfc77dd41;
-		constexpr const static std::string_view GrindHorizontalMinimumJump_type_name = "GrindHorizontalMinimumJump";
-		constexpr const static rivet::rivet_type_id GrindHorizontalMinimumJump_type_id = 0x712b2679;
-		constexpr const static std::string_view GrindHorizontalMaximumJump_type_name = "GrindHorizontalMaximumJump";
-		constexpr const static rivet::rivet_type_id GrindHorizontalMaximumJump_type_id = 0xbd265d76;
-		constexpr const static std::string_view WallRunTransferLookAheadTime_type_name = "WallRunTransferLookAheadTime";
-		constexpr const static rivet::rivet_type_id WallRunTransferLookAheadTime_type_id = 0x9b62e55c;
-		constexpr const static std::string_view FastSpeedThresholdPercent_type_name = "FastSpeedThresholdPercent";
-		constexpr const static rivet::rivet_type_id FastSpeedThresholdPercent_type_id = 0x8c9c0696; 
+		constexpr static std::string_view MoveData_type_name = "MoveData";
+		constexpr static rivet::rivet_type_id MoveData_type_id = 0x91f7edf;
+		constexpr static std::string_view SlopeData_type_name = "SlopeData";
+		constexpr static rivet::rivet_type_id SlopeData_type_id = 0x21158bf7;
+		constexpr static std::string_view GapApproachData_type_name = "GapApproachData";
+		constexpr static rivet::rivet_type_id GapApproachData_type_id = 0xf4747b90;
+		constexpr static std::string_view HazardApproachData_type_name = "HazardApproachData";
+		constexpr static rivet::rivet_type_id HazardApproachData_type_id = 0x84803ab7;
+		constexpr static std::string_view MinAccessibilityTimeSlowScale_type_name = "MinAccessibilityTimeSlowScale";
+		constexpr static rivet::rivet_type_id MinAccessibilityTimeSlowScale_type_id = 0xeb4be193;
+		constexpr static std::string_view CameraShakeConfig_type_name = "CameraShakeConfig";
+		constexpr static rivet::rivet_type_id CameraShakeConfig_type_id = 0xb610c5e4;
+		constexpr static std::string_view GrindHorizontalTolerance_type_name = "GrindHorizontalTolerance";
+		constexpr static rivet::rivet_type_id GrindHorizontalTolerance_type_id = 0x5c6e5f5e;
+		constexpr static std::string_view GrindVerticalTolerance_type_name = "GrindVerticalTolerance";
+		constexpr static rivet::rivet_type_id GrindVerticalTolerance_type_id = 0xd0ba2734;
+		constexpr static std::string_view GrindPreferCameraAngleTol_type_name = "GrindPreferCameraAngleTol";
+		constexpr static rivet::rivet_type_id GrindPreferCameraAngleTol_type_id = 0xa8141602;
+		constexpr static std::string_view GrindPreferPlayerAngleTol_type_name = "GrindPreferPlayerAngleTol";
+		constexpr static rivet::rivet_type_id GrindPreferPlayerAngleTol_type_id = 0x4329063;
+		constexpr static std::string_view GrindForwardToleranceJump_type_name = "GrindForwardToleranceJump";
+		constexpr static rivet::rivet_type_id GrindForwardToleranceJump_type_id = 0x9e7be45a;
+		constexpr static std::string_view GrindVerticalToleranceJump_type_name = "GrindVerticalToleranceJump";
+		constexpr static rivet::rivet_type_id GrindVerticalToleranceJump_type_id = 0xfc77dd41;
+		constexpr static std::string_view GrindHorizontalMinimumJump_type_name = "GrindHorizontalMinimumJump";
+		constexpr static rivet::rivet_type_id GrindHorizontalMinimumJump_type_id = 0x712b2679;
+		constexpr static std::string_view GrindHorizontalMaximumJump_type_name = "GrindHorizontalMaximumJump";
+		constexpr static rivet::rivet_type_id GrindHorizontalMaximumJump_type_id = 0xbd265d76;
+		constexpr static std::string_view WallRunTransferLookAheadTime_type_name = "WallRunTransferLookAheadTime";
+		constexpr static rivet::rivet_type_id WallRunTransferLookAheadTime_type_id = 0x9b62e55c;
+		constexpr static std::string_view FastSpeedThresholdPercent_type_name = "FastSpeedThresholdPercent";
+		constexpr static rivet::rivet_type_id FastSpeedThresholdPercent_type_id = 0x8c9c0696; 
 
 		explicit HeroGrindConfig() = default;
 		explicit HeroGrindConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

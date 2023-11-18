@@ -18,17 +18,17 @@
 #include <rivet/structures/rivet_serialization.hpp>
 
 namespace rivet::ddl::generated {
-	struct AssetReferenceDef;
-	struct MapElementData; 
+	struct MapElementData;
+	struct AssetReferenceDef; 
 
 	struct RIVET_DDL_SHARED MapElementTypeArray : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "MapElementTypeArray";
-		constexpr const static rivet::rivet_type_id type_id = 0xac5c711f;
+		constexpr static std::string_view type_name = "MapElementTypeArray";
+		constexpr static rivet::rivet_type_id type_id = 0xac5c711f;
 
-		constexpr const static std::string_view LevelZone_type_name = "LevelZone";
-		constexpr const static rivet::rivet_type_id LevelZone_type_id = 0xec76065c;
-		constexpr const static std::string_view Checkpoints_type_name = "Checkpoints";
-		constexpr const static rivet::rivet_type_id Checkpoints_type_id = 0xba0400ac; 
+		constexpr static std::string_view LevelZone_type_name = "LevelZone";
+		constexpr static rivet::rivet_type_id LevelZone_type_id = 0xec76065c;
+		constexpr static std::string_view Checkpoints_type_name = "Checkpoints";
+		constexpr static rivet::rivet_type_id Checkpoints_type_id = 0xba0400ac; 
 
 		explicit MapElementTypeArray() = default;
 		explicit MapElementTypeArray([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

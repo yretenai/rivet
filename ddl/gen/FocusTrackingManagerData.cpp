@@ -3,11 +3,11 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/FocusJointChainDef.hpp>
 #include <rivet/ddl/generated/FocusTrackingNamedSolver.hpp>
+#include <rivet/ddl/generated/FocusTrackingSolverData.hpp>
 #include <rivet/ddl/generated/FocusTrackingInstData.hpp>
 #include <rivet/ddl/generated/FocusTrackingNamedPosition.hpp>
-#include <rivet/ddl/generated/FocusTrackingSolverData.hpp> 
+#include <rivet/ddl/generated/FocusJointChainDef.hpp> 
 
 #include <rivet/ddl/generated/FocusTrackingManagerData.hpp>
 

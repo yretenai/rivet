@@ -21,31 +21,31 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED AttachToHitSurfaceEffectPrius : ScriptedShotEffectBasePrius {
-		constexpr const static std::string_view type_name = "AttachToHitSurfaceEffectPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xd1efdc42;
+		constexpr static std::string_view type_name = "AttachToHitSurfaceEffectPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xd1efdc42;
 
-		constexpr const static std::string_view ResetScriptedShotLifeTime_type_name = "ResetScriptedShotLifeTime";
-		constexpr const static rivet::rivet_type_id ResetScriptedShotLifeTime_type_id = 0x8664041b;
-		constexpr const static std::string_view AttachOffset_type_name = "AttachOffset";
-		constexpr const static rivet::rivet_type_id AttachOffset_type_id = 0xf8b48463;
-		constexpr const static std::string_view AttachOffsetVelocity_type_name = "AttachOffsetVelocity";
-		constexpr const static rivet::rivet_type_id AttachOffsetVelocity_type_id = 0xf9ae48d0;
-		constexpr const static std::string_view NewLifeTime_type_name = "NewLifeTime";
-		constexpr const static rivet::rivet_type_id NewLifeTime_type_id = 0x46741ea8;
-		constexpr const static std::string_view NewLifeTimeEnemy_type_name = "NewLifeTimeEnemy";
-		constexpr const static rivet::rivet_type_id NewLifeTimeEnemy_type_id = 0xf9365e44;
-		constexpr const static std::string_view DestroyOnBotDeath_type_name = "DestroyOnBotDeath";
-		constexpr const static rivet::rivet_type_id DestroyOnBotDeath_type_id = 0xbf9f9307;
-		constexpr const static std::string_view DestroyOnNonBotDeath_type_name = "DestroyOnNonBotDeath";
-		constexpr const static rivet::rivet_type_id DestroyOnNonBotDeath_type_id = 0x2f074a2b;
-		constexpr const static std::string_view MatchDestroy_type_name = "MatchDestroy";
-		constexpr const static rivet::rivet_type_id MatchDestroy_type_id = 0x282599e5;
-		constexpr const static std::string_view HideOnAutoDestroy_type_name = "HideOnAutoDestroy";
-		constexpr const static rivet::rivet_type_id HideOnAutoDestroy_type_id = 0xe71cbd5a;
-		constexpr const static std::string_view OrientToHitNormal_type_name = "OrientToHitNormal";
-		constexpr const static rivet::rivet_type_id OrientToHitNormal_type_id = 0x4fab2aea;
-		constexpr const static std::string_view TriggerLifetimeOnFail_type_name = "TriggerLifetimeOnFail";
-		constexpr const static rivet::rivet_type_id TriggerLifetimeOnFail_type_id = 0xac1b49d2; 
+		constexpr static std::string_view ResetScriptedShotLifeTime_type_name = "ResetScriptedShotLifeTime";
+		constexpr static rivet::rivet_type_id ResetScriptedShotLifeTime_type_id = 0x8664041b;
+		constexpr static std::string_view AttachOffset_type_name = "AttachOffset";
+		constexpr static rivet::rivet_type_id AttachOffset_type_id = 0xf8b48463;
+		constexpr static std::string_view AttachOffsetVelocity_type_name = "AttachOffsetVelocity";
+		constexpr static rivet::rivet_type_id AttachOffsetVelocity_type_id = 0xf9ae48d0;
+		constexpr static std::string_view NewLifeTime_type_name = "NewLifeTime";
+		constexpr static rivet::rivet_type_id NewLifeTime_type_id = 0x46741ea8;
+		constexpr static std::string_view NewLifeTimeEnemy_type_name = "NewLifeTimeEnemy";
+		constexpr static rivet::rivet_type_id NewLifeTimeEnemy_type_id = 0xf9365e44;
+		constexpr static std::string_view DestroyOnBotDeath_type_name = "DestroyOnBotDeath";
+		constexpr static rivet::rivet_type_id DestroyOnBotDeath_type_id = 0xbf9f9307;
+		constexpr static std::string_view DestroyOnNonBotDeath_type_name = "DestroyOnNonBotDeath";
+		constexpr static rivet::rivet_type_id DestroyOnNonBotDeath_type_id = 0x2f074a2b;
+		constexpr static std::string_view MatchDestroy_type_name = "MatchDestroy";
+		constexpr static rivet::rivet_type_id MatchDestroy_type_id = 0x282599e5;
+		constexpr static std::string_view HideOnAutoDestroy_type_name = "HideOnAutoDestroy";
+		constexpr static rivet::rivet_type_id HideOnAutoDestroy_type_id = 0xe71cbd5a;
+		constexpr static std::string_view OrientToHitNormal_type_name = "OrientToHitNormal";
+		constexpr static rivet::rivet_type_id OrientToHitNormal_type_id = 0x4fab2aea;
+		constexpr static std::string_view TriggerLifetimeOnFail_type_name = "TriggerLifetimeOnFail";
+		constexpr static rivet::rivet_type_id TriggerLifetimeOnFail_type_id = 0xac1b49d2; 
 
 		explicit AttachToHitSurfaceEffectPrius() = default;
 		explicit AttachToHitSurfaceEffectPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

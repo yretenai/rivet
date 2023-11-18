@@ -21,23 +21,23 @@ namespace rivet::ddl::generated {
 	struct DDLVector3; 
 
 	struct RIVET_DDL_SHARED ShellCasingData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "ShellCasingData";
-		constexpr const static rivet::rivet_type_id type_id = 0x2fda4eac;
+		constexpr static std::string_view type_name = "ShellCasingData";
+		constexpr static rivet::rivet_type_id type_id = 0x2fda4eac;
 
-		constexpr const static std::string_view ShellAsset_type_name = "ShellAsset";
-		constexpr const static rivet::rivet_type_id ShellAsset_type_id = 0x6c1eee42;
-		constexpr const static std::string_view LifetimeMin_type_name = "LifetimeMin";
-		constexpr const static rivet::rivet_type_id LifetimeMin_type_id = 0x1ae401c6;
-		constexpr const static std::string_view LifetimeMax_type_name = "LifetimeMax";
-		constexpr const static rivet::rivet_type_id LifetimeMax_type_id = 0x26e93e9f;
-		constexpr const static std::string_view EjectSpeedMin_type_name = "EjectSpeedMin";
-		constexpr const static rivet::rivet_type_id EjectSpeedMin_type_id = 0xbbb1fe4f;
-		constexpr const static std::string_view EjectSpeedMax_type_name = "EjectSpeedMax";
-		constexpr const static rivet::rivet_type_id EjectSpeedMax_type_id = 0x87bcc116;
-		constexpr const static std::string_view EjectSpinMin_type_name = "EjectSpinMin";
-		constexpr const static rivet::rivet_type_id EjectSpinMin_type_id = 0xf0582fb1;
-		constexpr const static std::string_view EjectSpinMax_type_name = "EjectSpinMax";
-		constexpr const static rivet::rivet_type_id EjectSpinMax_type_id = 0xcc5510e8; 
+		constexpr static std::string_view ShellAsset_type_name = "ShellAsset";
+		constexpr static rivet::rivet_type_id ShellAsset_type_id = 0x6c1eee42;
+		constexpr static std::string_view LifetimeMin_type_name = "LifetimeMin";
+		constexpr static rivet::rivet_type_id LifetimeMin_type_id = 0x1ae401c6;
+		constexpr static std::string_view LifetimeMax_type_name = "LifetimeMax";
+		constexpr static rivet::rivet_type_id LifetimeMax_type_id = 0x26e93e9f;
+		constexpr static std::string_view EjectSpeedMin_type_name = "EjectSpeedMin";
+		constexpr static rivet::rivet_type_id EjectSpeedMin_type_id = 0xbbb1fe4f;
+		constexpr static std::string_view EjectSpeedMax_type_name = "EjectSpeedMax";
+		constexpr static rivet::rivet_type_id EjectSpeedMax_type_id = 0x87bcc116;
+		constexpr static std::string_view EjectSpinMin_type_name = "EjectSpinMin";
+		constexpr static rivet::rivet_type_id EjectSpinMin_type_id = 0xf0582fb1;
+		constexpr static std::string_view EjectSpinMax_type_name = "EjectSpinMax";
+		constexpr static rivet::rivet_type_id EjectSpinMax_type_id = 0xcc5510e8; 
 
 		explicit ShellCasingData() = default;
 		explicit ShellCasingData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

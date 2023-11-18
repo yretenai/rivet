@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED CompassItemConfig : GameItemConfig {
-		constexpr const static std::string_view type_name = "CompassItemConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x7b5c646b;
+		constexpr static std::string_view type_name = "CompassItemConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x7b5c646b;
 
 		explicit CompassItemConfig() = default;
 		explicit CompassItemConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

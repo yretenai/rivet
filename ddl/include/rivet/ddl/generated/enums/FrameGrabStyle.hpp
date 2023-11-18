@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view FrameGrabStyle_type_name = "FrameGrabStyle";
-	constexpr const static rivet::rivet_type_id FrameGrabStyle_type_id = 0x3a08c00f;
+	constexpr static std::string_view FrameGrabStyle_type_name = "FrameGrabStyle";
+	constexpr static rivet::rivet_type_id FrameGrabStyle_type_id = 0x3a08c00f;
 
-	constexpr const static std::array<std::string_view, 2> FrameGrabStyle_values = {
+	constexpr static std::array<std::string_view, 2> FrameGrabStyle_values = {
 		"kStandard",
 		"kPersistent", 
 	};

@@ -17,31 +17,31 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/enums/xa57aac73.hpp>
 #include <rivet/ddl/generated/enums/BonusType.hpp>
-#include <rivet/ddl/generated/enums/x507460e6.hpp> 
+#include <rivet/ddl/generated/enums/x507460e6.hpp>
+#include <rivet/ddl/generated/enums/xa57aac73.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED SetDef : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "SetDef";
-		constexpr const static rivet::rivet_type_id type_id = 0x7c4b21ce;
+		constexpr static std::string_view type_name = "SetDef";
+		constexpr static rivet::rivet_type_id type_id = 0x7c4b21ce;
 
-		constexpr const static std::string_view SetID_type_name = "SetID";
-		constexpr const static rivet::rivet_type_id SetID_type_id = 0x6e0917bb;
-		constexpr const static std::string_view SetNameLocTag_type_name = "SetNameLocTag";
-		constexpr const static rivet::rivet_type_id SetNameLocTag_type_id = 0x1edca0ff;
-		constexpr const static std::string_view TempSetName_type_name = "TempSetName";
-		constexpr const static rivet::rivet_type_id TempSetName_type_id = 0x711dcf9;
-		constexpr const static std::string_view SetDescLocTag_type_name = "SetDescLocTag";
-		constexpr const static rivet::rivet_type_id SetDescLocTag_type_id = 0x5ef37719;
-		constexpr const static std::string_view TempSetDesc_type_name = "TempSetDesc";
-		constexpr const static rivet::rivet_type_id TempSetDesc_type_id = 0x52870eab;
-		constexpr const static std::string_view CardIDs_type_name = "CardIDs";
-		constexpr const static rivet::rivet_type_id CardIDs_type_id = 0xf074f9f2;
-		constexpr const static std::string_view Bonus_type_name = "Bonus";
-		constexpr const static rivet::rivet_type_id Bonus_type_id = 0x86cbb3bb;
-		constexpr const static std::string_view BonusAmount_type_name = "BonusAmount";
-		constexpr const static rivet::rivet_type_id BonusAmount_type_id = 0x5b514b90; 
+		constexpr static std::string_view SetID_type_name = "SetID";
+		constexpr static rivet::rivet_type_id SetID_type_id = 0x6e0917bb;
+		constexpr static std::string_view SetNameLocTag_type_name = "SetNameLocTag";
+		constexpr static rivet::rivet_type_id SetNameLocTag_type_id = 0x1edca0ff;
+		constexpr static std::string_view TempSetName_type_name = "TempSetName";
+		constexpr static rivet::rivet_type_id TempSetName_type_id = 0x711dcf9;
+		constexpr static std::string_view SetDescLocTag_type_name = "SetDescLocTag";
+		constexpr static rivet::rivet_type_id SetDescLocTag_type_id = 0x5ef37719;
+		constexpr static std::string_view TempSetDesc_type_name = "TempSetDesc";
+		constexpr static rivet::rivet_type_id TempSetDesc_type_id = 0x52870eab;
+		constexpr static std::string_view CardIDs_type_name = "CardIDs";
+		constexpr static rivet::rivet_type_id CardIDs_type_id = 0xf074f9f2;
+		constexpr static std::string_view Bonus_type_name = "Bonus";
+		constexpr static rivet::rivet_type_id Bonus_type_id = 0x86cbb3bb;
+		constexpr static std::string_view BonusAmount_type_name = "BonusAmount";
+		constexpr static rivet::rivet_type_id BonusAmount_type_id = 0x5b514b90; 
 
 		explicit SetDef() = default;
 		explicit SetDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

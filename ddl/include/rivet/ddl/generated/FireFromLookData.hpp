@@ -21,17 +21,17 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED FireFromLookData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "FireFromLookData";
-		constexpr const static rivet::rivet_type_id type_id = 0x272b4bcf;
+		constexpr static std::string_view type_name = "FireFromLookData";
+		constexpr static rivet::rivet_type_id type_id = 0x272b4bcf;
 
-		constexpr const static std::string_view PerformAdditionalTestsAlongEmitPath_type_name = "PerformAdditionalTestsAlongEmitPath";
-		constexpr const static rivet::rivet_type_id PerformAdditionalTestsAlongEmitPath_type_id = 0xd28849ec;
-		constexpr const static std::string_view CollideWithNonActors_type_name = "CollideWithNonActors";
-		constexpr const static rivet::rivet_type_id CollideWithNonActors_type_id = 0x59a6bb1a;
-		constexpr const static std::string_view CollideWithNonTargets_type_name = "CollideWithNonTargets";
-		constexpr const static rivet::rivet_type_id CollideWithNonTargets_type_id = 0x50c59358;
-		constexpr const static std::string_view CollideWithTargetTypes_type_name = "CollideWithTargetTypes";
-		constexpr const static rivet::rivet_type_id CollideWithTargetTypes_type_id = 0x7a0385a0; 
+		constexpr static std::string_view PerformAdditionalTestsAlongEmitPath_type_name = "PerformAdditionalTestsAlongEmitPath";
+		constexpr static rivet::rivet_type_id PerformAdditionalTestsAlongEmitPath_type_id = 0xd28849ec;
+		constexpr static std::string_view CollideWithNonActors_type_name = "CollideWithNonActors";
+		constexpr static rivet::rivet_type_id CollideWithNonActors_type_id = 0x59a6bb1a;
+		constexpr static std::string_view CollideWithNonTargets_type_name = "CollideWithNonTargets";
+		constexpr static rivet::rivet_type_id CollideWithNonTargets_type_id = 0x50c59358;
+		constexpr static std::string_view CollideWithTargetTypes_type_name = "CollideWithTargetTypes";
+		constexpr static rivet::rivet_type_id CollideWithTargetTypes_type_id = 0x7a0385a0; 
 
 		explicit FireFromLookData() = default;
 		explicit FireFromLookData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

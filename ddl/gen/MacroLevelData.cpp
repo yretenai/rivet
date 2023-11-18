@@ -4,8 +4,8 @@
 // SPDX-License-Identifier: MPL-2.0
 
 #include <rivet/ddl/generated/GameMacroLevelData.hpp>
-#include <rivet/ddl/generated/AssetReferenceDef.hpp>
-#include <rivet/ddl/generated/MacroLoadpointListItem.hpp> 
+#include <rivet/ddl/generated/MacroLoadpointListItem.hpp>
+#include <rivet/ddl/generated/AssetReferenceDef.hpp> 
 
 #include <rivet/ddl/generated/MacroLevelData.hpp>
 

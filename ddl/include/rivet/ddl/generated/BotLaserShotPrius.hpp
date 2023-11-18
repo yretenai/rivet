@@ -17,24 +17,24 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/ShotBasePrius.hpp>
-#include <rivet/ddl/generated/enums/x6f69eca.hpp> 
+#include <rivet/ddl/generated/enums/x6f69eca.hpp>
+#include <rivet/ddl/generated/ShotBasePrius.hpp> 
 
 namespace rivet::ddl::generated {
 	struct ShotDamageData; 
 
 	struct RIVET_DDL_SHARED BotLaserShotPrius : ShotBasePrius {
-		constexpr const static std::string_view type_name = "BotLaserShotPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xa4a3503c;
+		constexpr static std::string_view type_name = "BotLaserShotPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xa4a3503c;
 
-		constexpr const static std::string_view DamageData_type_name = "DamageData";
-		constexpr const static rivet::rivet_type_id DamageData_type_id = 0xa521b107;
-		constexpr const static std::string_view AudioFollowerType_type_name = "AudioFollowerType";
-		constexpr const static rivet::rivet_type_id AudioFollowerType_type_id = 0x8987c9e4;
-		constexpr const static std::string_view AudioFollowerJoint_type_name = "AudioFollowerJoint";
-		constexpr const static rivet::rivet_type_id AudioFollowerJoint_type_id = 0xaa277419;
-		constexpr const static std::string_view ImpactJoint_type_name = "ImpactJoint";
-		constexpr const static rivet::rivet_type_id ImpactJoint_type_id = 0xb5c2190b; 
+		constexpr static std::string_view DamageData_type_name = "DamageData";
+		constexpr static rivet::rivet_type_id DamageData_type_id = 0xa521b107;
+		constexpr static std::string_view AudioFollowerType_type_name = "AudioFollowerType";
+		constexpr static rivet::rivet_type_id AudioFollowerType_type_id = 0x8987c9e4;
+		constexpr static std::string_view AudioFollowerJoint_type_name = "AudioFollowerJoint";
+		constexpr static rivet::rivet_type_id AudioFollowerJoint_type_id = 0xaa277419;
+		constexpr static std::string_view ImpactJoint_type_name = "ImpactJoint";
+		constexpr static rivet::rivet_type_id ImpactJoint_type_id = 0xb5c2190b; 
 
 		explicit BotLaserShotPrius() = default;
 		explicit BotLaserShotPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -19,25 +19,25 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED SoundVolumeOffsets71 : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "SoundVolumeOffsets71";
-		constexpr const static rivet::rivet_type_id type_id = 0x308e1c61;
+		constexpr static std::string_view type_name = "SoundVolumeOffsets71";
+		constexpr static rivet::rivet_type_id type_id = 0x308e1c61;
 
-		constexpr const static std::string_view FrontLeft_type_name = "FrontLeft";
-		constexpr const static rivet::rivet_type_id FrontLeft_type_id = 0x1dbb6602;
-		constexpr const static std::string_view FrontRight_type_name = "FrontRight";
-		constexpr const static rivet::rivet_type_id FrontRight_type_id = 0xcbc8ce5e;
-		constexpr const static std::string_view Center_type_name = "Center";
-		constexpr const static rivet::rivet_type_id Center_type_id = 0x7e88a543;
-		constexpr const static std::string_view RearLeft_type_name = "RearLeft";
-		constexpr const static rivet::rivet_type_id RearLeft_type_id = 0x13736fac;
-		constexpr const static std::string_view RearRight_type_name = "RearRight";
-		constexpr const static rivet::rivet_type_id RearRight_type_id = 0xfaa888b8;
-		constexpr const static std::string_view SideLeft_type_name = "SideLeft";
-		constexpr const static rivet::rivet_type_id SideLeft_type_id = 0x9a74df67;
-		constexpr const static std::string_view SideRight_type_name = "SideRight";
-		constexpr const static rivet::rivet_type_id SideRight_type_id = 0xf6979430;
-		constexpr const static std::string_view LFE_type_name = "LFE";
-		constexpr const static rivet::rivet_type_id LFE_type_id = 0x344c9f03; 
+		constexpr static std::string_view FrontLeft_type_name = "FrontLeft";
+		constexpr static rivet::rivet_type_id FrontLeft_type_id = 0x1dbb6602;
+		constexpr static std::string_view FrontRight_type_name = "FrontRight";
+		constexpr static rivet::rivet_type_id FrontRight_type_id = 0xcbc8ce5e;
+		constexpr static std::string_view Center_type_name = "Center";
+		constexpr static rivet::rivet_type_id Center_type_id = 0x7e88a543;
+		constexpr static std::string_view RearLeft_type_name = "RearLeft";
+		constexpr static rivet::rivet_type_id RearLeft_type_id = 0x13736fac;
+		constexpr static std::string_view RearRight_type_name = "RearRight";
+		constexpr static rivet::rivet_type_id RearRight_type_id = 0xfaa888b8;
+		constexpr static std::string_view SideLeft_type_name = "SideLeft";
+		constexpr static rivet::rivet_type_id SideLeft_type_id = 0x9a74df67;
+		constexpr static std::string_view SideRight_type_name = "SideRight";
+		constexpr static rivet::rivet_type_id SideRight_type_id = 0xf6979430;
+		constexpr static std::string_view LFE_type_name = "LFE";
+		constexpr static rivet::rivet_type_id LFE_type_id = 0x344c9f03; 
 
 		explicit SoundVolumeOffsets71() = default;
 		explicit SoundVolumeOffsets71([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

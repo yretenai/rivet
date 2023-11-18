@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct GadgetSwingshotPrius; 
 
 	struct RIVET_DDL_SHARED SwingshotItemConfig : GadgetItemConfig {
-		constexpr const static std::string_view type_name = "SwingshotItemConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x65a99688;
+		constexpr static std::string_view type_name = "SwingshotItemConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x65a99688;
 
-		constexpr const static std::string_view SwingshotPrius_type_name = "SwingshotPrius";
-		constexpr const static rivet::rivet_type_id SwingshotPrius_type_id = 0x54025d0c; 
+		constexpr static std::string_view SwingshotPrius_type_name = "SwingshotPrius";
+		constexpr static rivet::rivet_type_id SwingshotPrius_type_id = 0x54025d0c; 
 
 		explicit SwingshotItemConfig() = default;
 		explicit SwingshotItemConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

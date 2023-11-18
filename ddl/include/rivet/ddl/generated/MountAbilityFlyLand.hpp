@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED MountAbilityFlyLand : MountAbilityFlyGoto {
-		constexpr const static std::string_view type_name = "MountAbilityFlyLand";
-		constexpr const static rivet::rivet_type_id type_id = 0xee480215;
+		constexpr static std::string_view type_name = "MountAbilityFlyLand";
+		constexpr static rivet::rivet_type_id type_id = 0xee480215;
 
 		explicit MountAbilityFlyLand() = default;
 		explicit MountAbilityFlyLand([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

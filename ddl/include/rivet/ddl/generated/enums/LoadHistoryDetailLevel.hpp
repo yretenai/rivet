@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view LoadHistoryDetailLevel_type_name = "LoadHistoryDetailLevel";
-	constexpr const static rivet::rivet_type_id LoadHistoryDetailLevel_type_id = 0xa3c0a673;
+	constexpr static std::string_view LoadHistoryDetailLevel_type_name = "LoadHistoryDetailLevel";
+	constexpr static rivet::rivet_type_id LoadHistoryDetailLevel_type_id = 0xa3c0a673;
 
-	constexpr const static std::array<std::string_view, 3> LoadHistoryDetailLevel_values = {
+	constexpr static std::array<std::string_view, 3> LoadHistoryDetailLevel_values = {
 		"kNone",
 		"kMinimal",
 		"kDetailed", 

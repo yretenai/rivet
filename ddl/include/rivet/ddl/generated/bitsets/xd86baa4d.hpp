@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view xd86baa4d_type_name = "xd86baa4d";
-	constexpr const static rivet::rivet_type_id xd86baa4d_type_id = 0xd86baa4d;
+	constexpr static std::string_view xd86baa4d_type_name = "xd86baa4d";
+	constexpr static rivet::rivet_type_id xd86baa4d_type_id = 0xd86baa4d;
 
-	constexpr const static std::array<std::tuple<std::string_view, uint64_t>, 26> xd86baa4d_values = {
+	constexpr static std::array<std::tuple<std::string_view, uint64_t>, 26> xd86baa4d_values = {
 		std::make_tuple("kHero", 0x1),
 		std::make_tuple("kBot", 0x2),
 		std::make_tuple("kAlly", 0x4),

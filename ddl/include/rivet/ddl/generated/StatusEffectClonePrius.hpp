@@ -21,15 +21,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED StatusEffectClonePrius : StatusEffectBasePrius {
-		constexpr const static std::string_view type_name = "StatusEffectClonePrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x88c928ba;
+		constexpr static std::string_view type_name = "StatusEffectClonePrius";
+		constexpr static rivet::rivet_type_id type_id = 0x88c928ba;
 
-		constexpr const static std::string_view IsPercent_type_name = "IsPercent";
-		constexpr const static rivet::rivet_type_id IsPercent_type_id = 0x858c4cf5;
-		constexpr const static std::string_view MaxClones_type_name = "MaxClones";
-		constexpr const static rivet::rivet_type_id MaxClones_type_id = 0x2f9a8fad;
-		constexpr const static std::string_view IsMaxHPPercent_type_name = "IsMaxHPPercent";
-		constexpr const static rivet::rivet_type_id IsMaxHPPercent_type_id = 0x7f55e6c8; 
+		constexpr static std::string_view IsPercent_type_name = "IsPercent";
+		constexpr static rivet::rivet_type_id IsPercent_type_id = 0x858c4cf5;
+		constexpr static std::string_view MaxClones_type_name = "MaxClones";
+		constexpr static rivet::rivet_type_id MaxClones_type_id = 0x2f9a8fad;
+		constexpr static std::string_view IsMaxHPPercent_type_name = "IsMaxHPPercent";
+		constexpr static rivet::rivet_type_id IsMaxHPPercent_type_id = 0x7f55e6c8; 
 
 		explicit StatusEffectClonePrius() = default;
 		explicit StatusEffectClonePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

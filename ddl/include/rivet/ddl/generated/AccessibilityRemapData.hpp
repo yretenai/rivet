@@ -18,17 +18,17 @@
 #include <rivet/structures/rivet_serialization.hpp>
 
 namespace rivet::ddl::generated {
-	struct AccessibilityPresetData;
-	struct AccessibilityComboDisplayData; 
+	struct AccessibilityComboDisplayData;
+	struct AccessibilityPresetData; 
 
 	struct RIVET_DDL_SHARED AccessibilityRemapData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "AccessibilityRemapData";
-		constexpr const static rivet::rivet_type_id type_id = 0x7e830107;
+		constexpr static std::string_view type_name = "AccessibilityRemapData";
+		constexpr static rivet::rivet_type_id type_id = 0x7e830107;
 
-		constexpr const static std::string_view Presets_type_name = "Presets";
-		constexpr const static rivet::rivet_type_id Presets_type_id = 0xd21fa257;
-		constexpr const static std::string_view Combos_type_name = "Combos";
-		constexpr const static rivet::rivet_type_id Combos_type_id = 0xb3ce15d2; 
+		constexpr static std::string_view Presets_type_name = "Presets";
+		constexpr static rivet::rivet_type_id Presets_type_id = 0xd21fa257;
+		constexpr static std::string_view Combos_type_name = "Combos";
+		constexpr static rivet::rivet_type_id Combos_type_id = 0xb3ce15d2; 
 
 		explicit AccessibilityRemapData() = default;
 		explicit AccessibilityRemapData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

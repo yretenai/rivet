@@ -21,23 +21,23 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DebugPlaytestLoadInfo : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "DebugPlaytestLoadInfo";
-		constexpr const static rivet::rivet_type_id type_id = 0x7f50ddea;
+		constexpr static std::string_view type_name = "DebugPlaytestLoadInfo";
+		constexpr static rivet::rivet_type_id type_id = 0x7f50ddea;
 
-		constexpr const static std::string_view Level_type_name = "Level";
-		constexpr const static rivet::rivet_type_id Level_type_id = 0x83b900d2;
-		constexpr const static std::string_view UseChallengeMode_type_name = "UseChallengeMode";
-		constexpr const static rivet::rivet_type_id UseChallengeMode_type_id = 0xc801de1f;
-		constexpr const static std::string_view OverrideCheckpoints_type_name = "OverrideCheckpoints";
-		constexpr const static rivet::rivet_type_id OverrideCheckpoints_type_id = 0x55d6e037;
-		constexpr const static std::string_view Checkpoint_type_name = "Checkpoint";
-		constexpr const static rivet::rivet_type_id Checkpoint_type_id = 0xd436a987;
-		constexpr const static std::string_view DimensionCheckpoint_type_name = "DimensionCheckpoint";
-		constexpr const static rivet::rivet_type_id DimensionCheckpoint_type_id = 0xb98c1c37;
-		constexpr const static std::string_view OverrideLightingMode_type_name = "OverrideLightingMode";
-		constexpr const static rivet::rivet_type_id OverrideLightingMode_type_id = 0x344cb7e0;
-		constexpr const static std::string_view LightingMode_type_name = "LightingMode";
-		constexpr const static rivet::rivet_type_id LightingMode_type_id = 0x537e2fcc; 
+		constexpr static std::string_view Level_type_name = "Level";
+		constexpr static rivet::rivet_type_id Level_type_id = 0x83b900d2;
+		constexpr static std::string_view UseChallengeMode_type_name = "UseChallengeMode";
+		constexpr static rivet::rivet_type_id UseChallengeMode_type_id = 0xc801de1f;
+		constexpr static std::string_view OverrideCheckpoints_type_name = "OverrideCheckpoints";
+		constexpr static rivet::rivet_type_id OverrideCheckpoints_type_id = 0x55d6e037;
+		constexpr static std::string_view Checkpoint_type_name = "Checkpoint";
+		constexpr static rivet::rivet_type_id Checkpoint_type_id = 0xd436a987;
+		constexpr static std::string_view DimensionCheckpoint_type_name = "DimensionCheckpoint";
+		constexpr static rivet::rivet_type_id DimensionCheckpoint_type_id = 0xb98c1c37;
+		constexpr static std::string_view OverrideLightingMode_type_name = "OverrideLightingMode";
+		constexpr static rivet::rivet_type_id OverrideLightingMode_type_id = 0x344cb7e0;
+		constexpr static std::string_view LightingMode_type_name = "LightingMode";
+		constexpr static rivet::rivet_type_id LightingMode_type_id = 0x537e2fcc; 
 
 		explicit DebugPlaytestLoadInfo() = default;
 		explicit DebugPlaytestLoadInfo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

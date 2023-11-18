@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct MovieSubtitle; 
 
 	struct RIVET_DDL_SHARED MovieSubtitlesConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "MovieSubtitlesConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xfe9e0af7;
+		constexpr static std::string_view type_name = "MovieSubtitlesConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xfe9e0af7;
 
-		constexpr const static std::string_view Subtitle_type_name = "Subtitle";
-		constexpr const static rivet::rivet_type_id Subtitle_type_id = 0xab842ac1; 
+		constexpr static std::string_view Subtitle_type_name = "Subtitle";
+		constexpr static rivet::rivet_type_id Subtitle_type_id = 0xab842ac1; 
 
 		explicit MovieSubtitlesConfig() = default;
 		explicit MovieSubtitlesConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

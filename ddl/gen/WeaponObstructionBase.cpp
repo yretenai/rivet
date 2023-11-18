@@ -3,9 +3,9 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/WeaponObstructionSingle.hpp>
+#include <rivet/ddl/generated/WeaponObstructionNone.hpp>
 #include <rivet/ddl/generated/WeaponObstructionUpgradable.hpp>
-#include <rivet/ddl/generated/WeaponObstructionNone.hpp> 
+#include <rivet/ddl/generated/WeaponObstructionSingle.hpp> 
 
 #include <rivet/ddl/generated/WeaponObstructionBase.hpp>
 

@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct IconMapBase; 
 
 	struct RIVET_DDL_SHARED IconMapMultiChild : IconMapBase {
-		constexpr const static std::string_view type_name = "IconMapMultiChild";
-		constexpr const static rivet::rivet_type_id type_id = 0x202e78af;
+		constexpr static std::string_view type_name = "IconMapMultiChild";
+		constexpr static rivet::rivet_type_id type_id = 0x202e78af;
 
-		constexpr const static std::string_view IconMap_type_name = "IconMap";
-		constexpr const static rivet::rivet_type_id IconMap_type_id = 0x98f29d61; 
+		constexpr static std::string_view IconMap_type_name = "IconMap";
+		constexpr static rivet::rivet_type_id IconMap_type_id = 0x98f29d61; 
 
 		explicit IconMapMultiChild() = default;
 		explicit IconMapMultiChild([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

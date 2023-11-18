@@ -21,11 +21,11 @@ namespace rivet::ddl::generated {
 	struct Tier; 
 
 	struct RIVET_DDL_SHARED TierData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "TierData";
-		constexpr const static rivet::rivet_type_id type_id = 0x5eb95a42;
+		constexpr static std::string_view type_name = "TierData";
+		constexpr static rivet::rivet_type_id type_id = 0x5eb95a42;
 
-		constexpr const static std::string_view Tiers_type_name = "Tiers";
-		constexpr const static rivet::rivet_type_id Tiers_type_id = 0xf14f763; 
+		constexpr static std::string_view Tiers_type_name = "Tiers";
+		constexpr static rivet::rivet_type_id Tiers_type_id = 0xf14f763; 
 
 		explicit TierData() = default;
 		explicit TierData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

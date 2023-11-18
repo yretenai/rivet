@@ -20,20 +20,20 @@
 #include <rivet/ddl/generated/BotMovementBase.hpp> 
 
 namespace rivet::ddl::generated {
-	struct DamageModifierDamageHashPrius;
 	struct MountAbilityFlyPickup;
-	struct MovementFlyOnRails; 
+	struct MovementFlyOnRails;
+	struct DamageModifierDamageHashPrius; 
 
 	struct RIVET_DDL_SHARED BotMovementFly : BotMovementBase {
-		constexpr const static std::string_view type_name = "BotMovementFly";
-		constexpr const static rivet::rivet_type_id type_id = 0x229c38f8;
+		constexpr static std::string_view type_name = "BotMovementFly";
+		constexpr static rivet::rivet_type_id type_id = 0x229c38f8;
 
-		constexpr const static std::string_view BoostDamageMod_type_name = "BoostDamageMod";
-		constexpr const static rivet::rivet_type_id BoostDamageMod_type_id = 0x44934dc7;
-		constexpr const static std::string_view OnRailsMovement_type_name = "OnRailsMovement";
-		constexpr const static rivet::rivet_type_id OnRailsMovement_type_id = 0x1e0cb67b;
-		constexpr const static std::string_view PickupData_type_name = "PickupData";
-		constexpr const static rivet::rivet_type_id PickupData_type_id = 0x6758c493; 
+		constexpr static std::string_view BoostDamageMod_type_name = "BoostDamageMod";
+		constexpr static rivet::rivet_type_id BoostDamageMod_type_id = 0x44934dc7;
+		constexpr static std::string_view OnRailsMovement_type_name = "OnRailsMovement";
+		constexpr static rivet::rivet_type_id OnRailsMovement_type_id = 0x1e0cb67b;
+		constexpr static std::string_view PickupData_type_name = "PickupData";
+		constexpr static rivet::rivet_type_id PickupData_type_id = 0x6758c493; 
 
 		explicit BotMovementFly() = default;
 		explicit BotMovementFly([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

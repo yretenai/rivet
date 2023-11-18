@@ -19,13 +19,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED PhotoLightData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "PhotoLightData";
-		constexpr const static rivet::rivet_type_id type_id = 0x74cece71;
+		constexpr static std::string_view type_name = "PhotoLightData";
+		constexpr static rivet::rivet_type_id type_id = 0x74cece71;
 
-		constexpr const static std::string_view MinIntensity_type_name = "MinIntensity";
-		constexpr const static rivet::rivet_type_id MinIntensity_type_id = 0x675b21e8;
-		constexpr const static std::string_view MaxIntensity_type_name = "MaxIntensity";
-		constexpr const static rivet::rivet_type_id MaxIntensity_type_id = 0xf7283102; 
+		constexpr static std::string_view MinIntensity_type_name = "MinIntensity";
+		constexpr static rivet::rivet_type_id MinIntensity_type_id = 0x675b21e8;
+		constexpr static std::string_view MaxIntensity_type_name = "MaxIntensity";
+		constexpr static rivet::rivet_type_id MaxIntensity_type_id = 0xf7283102; 
 
 		explicit PhotoLightData() = default;
 		explicit PhotoLightData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

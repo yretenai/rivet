@@ -19,8 +19,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED AimingBasePrius : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "AimingBasePrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x8c30563b;
+		constexpr static std::string_view type_name = "AimingBasePrius";
+		constexpr static rivet::rivet_type_id type_id = 0x8c30563b;
 
 		explicit AimingBasePrius() = default;
 		explicit AimingBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -21,15 +21,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ComponentEmitterLocatorPrius : ComponentEmitterBasePrius {
-		constexpr const static std::string_view type_name = "ComponentEmitterLocatorPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x74434b49;
+		constexpr static std::string_view type_name = "ComponentEmitterLocatorPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x74434b49;
 
-		constexpr const static std::string_view EmitFromUser_type_name = "EmitFromUser";
-		constexpr const static rivet::rivet_type_id EmitFromUser_type_id = 0x13b721db;
-		constexpr const static std::string_view UseWorldUp_type_name = "UseWorldUp";
-		constexpr const static rivet::rivet_type_id UseWorldUp_type_id = 0x4cdc032f;
-		constexpr const static std::string_view Locator_type_name = "Locator";
-		constexpr const static rivet::rivet_type_id Locator_type_id = 0x7bac1d57; 
+		constexpr static std::string_view EmitFromUser_type_name = "EmitFromUser";
+		constexpr static rivet::rivet_type_id EmitFromUser_type_id = 0x13b721db;
+		constexpr static std::string_view UseWorldUp_type_name = "UseWorldUp";
+		constexpr static rivet::rivet_type_id UseWorldUp_type_id = 0x4cdc032f;
+		constexpr static std::string_view Locator_type_name = "Locator";
+		constexpr static rivet::rivet_type_id Locator_type_id = 0x7bac1d57; 
 
 		explicit ComponentEmitterLocatorPrius() = default;
 		explicit ComponentEmitterLocatorPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

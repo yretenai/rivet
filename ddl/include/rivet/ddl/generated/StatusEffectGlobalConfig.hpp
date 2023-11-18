@@ -20,47 +20,47 @@
 #include <rivet/ddl/generated/ConfigBase.hpp> 
 
 namespace rivet::ddl::generated {
-	struct StatusEffectFireConfig;
-	struct StatusEffectFreezeConfig;
-	struct StatusEffectShrubberyConfig;
-	struct StatusEffectPoisonConfig;
-	struct StatusEffectConfuseConfig;
-	struct StatusEffectMagnaMissileConfig;
-	struct StatusEffectFossilizeConfig;
-	struct StatusEffectPixelizedConfig;
-	struct StatusEffectLightningRodConfig;
 	struct StatusEffectRynotizeConfig;
+	struct StatusEffectWarpRifleImplosionConfig;
+	struct StatusEffectLightningRodConfig;
+	struct StatusEffectMagnaMissileConfig;
+	struct StatusEffectShrubberyConfig;
+	struct StatusEffectPixelizedConfig;
+	struct StatusEffectConfuseConfig;
+	struct StatusEffectFossilizeConfig;
+	struct StatusEffectPoisonConfig;
+	struct StatusEffectFreezeConfig;
 	struct StatusEffectProtoGrenadeConfig;
-	struct StatusEffectWarpRifleImplosionConfig; 
+	struct StatusEffectFireConfig; 
 
 	struct RIVET_DDL_SHARED StatusEffectGlobalConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "StatusEffectGlobalConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x9f5edb0e;
+		constexpr static std::string_view type_name = "StatusEffectGlobalConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x9f5edb0e;
 
-		constexpr const static std::string_view FireConfig_type_name = "FireConfig";
-		constexpr const static rivet::rivet_type_id FireConfig_type_id = 0x419a0bc1;
-		constexpr const static std::string_view FreezeConfig_type_name = "FreezeConfig";
-		constexpr const static rivet::rivet_type_id FreezeConfig_type_id = 0x7ebab219;
-		constexpr const static std::string_view PoisonConfig_type_name = "PoisonConfig";
-		constexpr const static rivet::rivet_type_id PoisonConfig_type_id = 0xb47c309;
-		constexpr const static std::string_view ConfuseConfig_type_name = "ConfuseConfig";
-		constexpr const static rivet::rivet_type_id ConfuseConfig_type_id = 0x2428d0b5;
-		constexpr const static std::string_view PixelizedConfig_type_name = "PixelizedConfig";
-		constexpr const static rivet::rivet_type_id PixelizedConfig_type_id = 0x374ee290;
-		constexpr const static std::string_view FossilizeConfig_type_name = "FossilizeConfig";
-		constexpr const static rivet::rivet_type_id FossilizeConfig_type_id = 0xac2724a5;
-		constexpr const static std::string_view ShrubberyConfig_type_name = "ShrubberyConfig";
-		constexpr const static rivet::rivet_type_id ShrubberyConfig_type_id = 0x24e37a28;
-		constexpr const static std::string_view MagnaMissileConfig_type_name = "MagnaMissileConfig";
-		constexpr const static rivet::rivet_type_id MagnaMissileConfig_type_id = 0xa4597a28;
-		constexpr const static std::string_view LightningRodConfig_type_name = "LightningRodConfig";
-		constexpr const static rivet::rivet_type_id LightningRodConfig_type_id = 0xacffd899;
-		constexpr const static std::string_view ProtoGrenadeConfig_type_name = "ProtoGrenadeConfig";
-		constexpr const static rivet::rivet_type_id ProtoGrenadeConfig_type_id = 0x1d84911d;
-		constexpr const static std::string_view WarpRifleImplosionConfig_type_name = "WarpRifleImplosionConfig";
-		constexpr const static rivet::rivet_type_id WarpRifleImplosionConfig_type_id = 0xdc39fec4;
-		constexpr const static std::string_view RynotizeConfig_type_name = "RynotizeConfig";
-		constexpr const static rivet::rivet_type_id RynotizeConfig_type_id = 0x3e5423e1; 
+		constexpr static std::string_view FireConfig_type_name = "FireConfig";
+		constexpr static rivet::rivet_type_id FireConfig_type_id = 0x419a0bc1;
+		constexpr static std::string_view FreezeConfig_type_name = "FreezeConfig";
+		constexpr static rivet::rivet_type_id FreezeConfig_type_id = 0x7ebab219;
+		constexpr static std::string_view PoisonConfig_type_name = "PoisonConfig";
+		constexpr static rivet::rivet_type_id PoisonConfig_type_id = 0xb47c309;
+		constexpr static std::string_view ConfuseConfig_type_name = "ConfuseConfig";
+		constexpr static rivet::rivet_type_id ConfuseConfig_type_id = 0x2428d0b5;
+		constexpr static std::string_view PixelizedConfig_type_name = "PixelizedConfig";
+		constexpr static rivet::rivet_type_id PixelizedConfig_type_id = 0x374ee290;
+		constexpr static std::string_view FossilizeConfig_type_name = "FossilizeConfig";
+		constexpr static rivet::rivet_type_id FossilizeConfig_type_id = 0xac2724a5;
+		constexpr static std::string_view ShrubberyConfig_type_name = "ShrubberyConfig";
+		constexpr static rivet::rivet_type_id ShrubberyConfig_type_id = 0x24e37a28;
+		constexpr static std::string_view MagnaMissileConfig_type_name = "MagnaMissileConfig";
+		constexpr static rivet::rivet_type_id MagnaMissileConfig_type_id = 0xa4597a28;
+		constexpr static std::string_view LightningRodConfig_type_name = "LightningRodConfig";
+		constexpr static rivet::rivet_type_id LightningRodConfig_type_id = 0xacffd899;
+		constexpr static std::string_view ProtoGrenadeConfig_type_name = "ProtoGrenadeConfig";
+		constexpr static rivet::rivet_type_id ProtoGrenadeConfig_type_id = 0x1d84911d;
+		constexpr static std::string_view WarpRifleImplosionConfig_type_name = "WarpRifleImplosionConfig";
+		constexpr static rivet::rivet_type_id WarpRifleImplosionConfig_type_id = 0xdc39fec4;
+		constexpr static std::string_view RynotizeConfig_type_name = "RynotizeConfig";
+		constexpr static rivet::rivet_type_id RynotizeConfig_type_id = 0x3e5423e1; 
 
 		explicit StatusEffectGlobalConfig() = default;
 		explicit StatusEffectGlobalConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

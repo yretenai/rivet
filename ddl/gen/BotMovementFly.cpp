@@ -3,9 +3,9 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/DamageModifierDamageHashPrius.hpp>
+#include <rivet/ddl/generated/MountAbilityFlyPickup.hpp>
 #include <rivet/ddl/generated/MovementFlyOnRails.hpp>
-#include <rivet/ddl/generated/MountAbilityFlyPickup.hpp> 
+#include <rivet/ddl/generated/DamageModifierDamageHashPrius.hpp> 
 
 #include <rivet/ddl/generated/BotMovementFly.hpp>
 

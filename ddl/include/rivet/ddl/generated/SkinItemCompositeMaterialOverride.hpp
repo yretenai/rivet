@@ -21,13 +21,13 @@ namespace rivet::ddl::generated {
 	struct AssetReferenceDef; 
 
 	struct RIVET_DDL_SHARED SkinItemCompositeMaterialOverride : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "SkinItemCompositeMaterialOverride";
-		constexpr const static rivet::rivet_type_id type_id = 0xfe1471d7;
+		constexpr static std::string_view type_name = "SkinItemCompositeMaterialOverride";
+		constexpr static rivet::rivet_type_id type_id = 0xfe1471d7;
 
-		constexpr const static std::string_view PreCompositeMaterial_type_name = "PreCompositeMaterial";
-		constexpr const static rivet::rivet_type_id PreCompositeMaterial_type_id = 0x5d9c15f6;
-		constexpr const static std::string_view PostCompositeMaterial_type_name = "PostCompositeMaterial";
-		constexpr const static rivet::rivet_type_id PostCompositeMaterial_type_id = 0xf717729; 
+		constexpr static std::string_view PreCompositeMaterial_type_name = "PreCompositeMaterial";
+		constexpr static rivet::rivet_type_id PreCompositeMaterial_type_id = 0x5d9c15f6;
+		constexpr static std::string_view PostCompositeMaterial_type_name = "PostCompositeMaterial";
+		constexpr static rivet::rivet_type_id PostCompositeMaterial_type_id = 0xf717729; 
 
 		explicit SkinItemCompositeMaterialOverride() = default;
 		explicit SkinItemCompositeMaterialOverride([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view OrientStyle_type_name = "OrientStyle";
-	constexpr const static rivet::rivet_type_id OrientStyle_type_id = 0xc0645650;
+	constexpr static std::string_view OrientStyle_type_name = "OrientStyle";
+	constexpr static rivet::rivet_type_id OrientStyle_type_id = 0xc0645650;
 
-	constexpr const static std::array<std::string_view, 4> OrientStyle_values = {
+	constexpr static std::array<std::string_view, 4> OrientStyle_values = {
 		"kCamera",
 		"kLocal",
 		"kWorld",

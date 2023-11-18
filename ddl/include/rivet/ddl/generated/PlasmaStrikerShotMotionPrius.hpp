@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED PlasmaStrikerShotMotionPrius : HitScanShotMotionPrius {
-		constexpr const static std::string_view type_name = "PlasmaStrikerShotMotionPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x9cec8485;
+		constexpr static std::string_view type_name = "PlasmaStrikerShotMotionPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x9cec8485;
 
 		explicit PlasmaStrikerShotMotionPrius() = default;
 		explicit PlasmaStrikerShotMotionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

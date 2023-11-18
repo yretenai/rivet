@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct PropItem; 
 
 	struct RIVET_DDL_SHARED PropConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "PropConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x97e7b151;
+		constexpr static std::string_view type_name = "PropConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x97e7b151;
 
-		constexpr const static std::string_view PropList_type_name = "PropList";
-		constexpr const static rivet::rivet_type_id PropList_type_id = 0x8d4ae7f1; 
+		constexpr static std::string_view PropList_type_name = "PropList";
+		constexpr static rivet::rivet_type_id PropList_type_id = 0x8d4ae7f1; 
 
 		explicit PropConfig() = default;
 		explicit PropConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

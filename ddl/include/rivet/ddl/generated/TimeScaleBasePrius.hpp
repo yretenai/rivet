@@ -17,24 +17,24 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/enums/xd4d128f9.hpp>
-#include <rivet/ddl/generated/enums/x7d9b794e.hpp> 
+#include <rivet/ddl/generated/enums/x7d9b794e.hpp>
+#include <rivet/ddl/generated/enums/xd4d128f9.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED TimeScaleBasePrius : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "TimeScaleBasePrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x2c29528c;
+		constexpr static std::string_view type_name = "TimeScaleBasePrius";
+		constexpr static rivet::rivet_type_id type_id = 0x2c29528c;
 
-		constexpr const static std::string_view Channel_type_name = "Channel";
-		constexpr const static rivet::rivet_type_id Channel_type_id = 0xa313ed7f;
-		constexpr const static std::string_view Context_type_name = "Context";
-		constexpr const static rivet::rivet_type_id Context_type_id = 0xe3b7e646;
-		constexpr const static std::string_view TimeScale_type_name = "TimeScale";
-		constexpr const static rivet::rivet_type_id TimeScale_type_id = 0x5fe2ecba;
-		constexpr const static std::string_view Duration_type_name = "Duration";
-		constexpr const static rivet::rivet_type_id Duration_type_id = 0x7c5e3db0;
-		constexpr const static std::string_view DurationUnits_type_name = "DurationUnits";
-		constexpr const static rivet::rivet_type_id DurationUnits_type_id = 0x197db178; 
+		constexpr static std::string_view Channel_type_name = "Channel";
+		constexpr static rivet::rivet_type_id Channel_type_id = 0xa313ed7f;
+		constexpr static std::string_view Context_type_name = "Context";
+		constexpr static rivet::rivet_type_id Context_type_id = 0xe3b7e646;
+		constexpr static std::string_view TimeScale_type_name = "TimeScale";
+		constexpr static rivet::rivet_type_id TimeScale_type_id = 0x5fe2ecba;
+		constexpr static std::string_view Duration_type_name = "Duration";
+		constexpr static rivet::rivet_type_id Duration_type_id = 0x7c5e3db0;
+		constexpr static std::string_view DurationUnits_type_name = "DurationUnits";
+		constexpr static rivet::rivet_type_id DurationUnits_type_id = 0x197db178; 
 
 		explicit TimeScaleBasePrius() = default;
 		explicit TimeScaleBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

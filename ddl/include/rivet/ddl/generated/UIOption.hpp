@@ -23,29 +23,29 @@ namespace rivet::ddl::generated {
 	struct UIOptionTypeBase; 
 
 	struct RIVET_DDL_SHARED UIOption : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "UIOption";
-		constexpr const static rivet::rivet_type_id type_id = 0x46e86962;
+		constexpr static std::string_view type_name = "UIOption";
+		constexpr static rivet::rivet_type_id type_id = 0x46e86962;
 
-		constexpr const static std::string_view OptionID_type_name = "OptionID";
-		constexpr const static rivet::rivet_type_id OptionID_type_id = 0xf172a74;
-		constexpr const static std::string_view Label_type_name = "Label";
-		constexpr const static rivet::rivet_type_id Label_type_id = 0x17f49c29;
-		constexpr const static std::string_view Description_type_name = "Description";
-		constexpr const static rivet::rivet_type_id Description_type_id = 0xe03811fd;
-		constexpr const static std::string_view DescriptionAlt_type_name = "DescriptionAlt";
-		constexpr const static rivet::rivet_type_id DescriptionAlt_type_id = 0x29bf0d94;
-		constexpr const static std::string_view AccessibilityIcon_type_name = "AccessibilityIcon";
-		constexpr const static rivet::rivet_type_id AccessibilityIcon_type_id = 0x7c679f8e;
-		constexpr const static std::string_view InputAnnotationIcon_type_name = "InputAnnotationIcon";
-		constexpr const static rivet::rivet_type_id InputAnnotationIcon_type_id = 0xd8d7e231;
-		constexpr const static std::string_view PreviewImage_type_name = "PreviewImage";
-		constexpr const static rivet::rivet_type_id PreviewImage_type_id = 0x4cfbd8af;
-		constexpr const static std::string_view Type_type_name = "Type";
-		constexpr const static rivet::rivet_type_id Type_type_id = 0xbc4e9799;
-		constexpr const static std::string_view ForGamepad_type_name = "ForGamepad";
-		constexpr const static rivet::rivet_type_id ForGamepad_type_id = 0xc47c2ed2;
-		constexpr const static std::string_view ForMkb_type_name = "ForMkb";
-		constexpr const static rivet::rivet_type_id ForMkb_type_id = 0xd6b42783; 
+		constexpr static std::string_view OptionID_type_name = "OptionID";
+		constexpr static rivet::rivet_type_id OptionID_type_id = 0xf172a74;
+		constexpr static std::string_view Label_type_name = "Label";
+		constexpr static rivet::rivet_type_id Label_type_id = 0x17f49c29;
+		constexpr static std::string_view Description_type_name = "Description";
+		constexpr static rivet::rivet_type_id Description_type_id = 0xe03811fd;
+		constexpr static std::string_view DescriptionAlt_type_name = "DescriptionAlt";
+		constexpr static rivet::rivet_type_id DescriptionAlt_type_id = 0x29bf0d94;
+		constexpr static std::string_view AccessibilityIcon_type_name = "AccessibilityIcon";
+		constexpr static rivet::rivet_type_id AccessibilityIcon_type_id = 0x7c679f8e;
+		constexpr static std::string_view InputAnnotationIcon_type_name = "InputAnnotationIcon";
+		constexpr static rivet::rivet_type_id InputAnnotationIcon_type_id = 0xd8d7e231;
+		constexpr static std::string_view PreviewImage_type_name = "PreviewImage";
+		constexpr static rivet::rivet_type_id PreviewImage_type_id = 0x4cfbd8af;
+		constexpr static std::string_view Type_type_name = "Type";
+		constexpr static rivet::rivet_type_id Type_type_id = 0xbc4e9799;
+		constexpr static std::string_view ForGamepad_type_name = "ForGamepad";
+		constexpr static rivet::rivet_type_id ForGamepad_type_id = 0xc47c2ed2;
+		constexpr static std::string_view ForMkb_type_name = "ForMkb";
+		constexpr static rivet::rivet_type_id ForMkb_type_id = 0xd6b42783; 
 
 		explicit UIOption() = default;
 		explicit UIOption([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

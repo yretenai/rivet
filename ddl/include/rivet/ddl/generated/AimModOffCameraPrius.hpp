@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED AimModOffCameraPrius : AimModifierPrius {
-		constexpr const static std::string_view type_name = "AimModOffCameraPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x5456ba29;
+		constexpr static std::string_view type_name = "AimModOffCameraPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x5456ba29;
 
-		constexpr const static std::string_view MissTime_type_name = "MissTime";
-		constexpr const static rivet::rivet_type_id MissTime_type_id = 0x17c5d352;
-		constexpr const static std::string_view MissDist_type_name = "MissDist";
-		constexpr const static rivet::rivet_type_id MissDist_type_id = 0xf92d9be0; 
+		constexpr static std::string_view MissTime_type_name = "MissTime";
+		constexpr static rivet::rivet_type_id MissTime_type_id = 0x17c5d352;
+		constexpr static std::string_view MissDist_type_name = "MissDist";
+		constexpr static rivet::rivet_type_id MissDist_type_id = 0xf92d9be0; 
 
 		explicit AimModOffCameraPrius() = default;
 		explicit AimModOffCameraPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

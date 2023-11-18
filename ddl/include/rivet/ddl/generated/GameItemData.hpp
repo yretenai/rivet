@@ -17,34 +17,34 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/enums/xaa9dd5a4.hpp>
-#include <rivet/ddl/generated/enums/xd64fa9b1.hpp> 
+#include <rivet/ddl/generated/enums/xd64fa9b1.hpp>
+#include <rivet/ddl/generated/enums/xaa9dd5a4.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED GameItemData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "GameItemData";
-		constexpr const static rivet::rivet_type_id type_id = 0x7ccdfa11;
+		constexpr static std::string_view type_name = "GameItemData";
+		constexpr static rivet::rivet_type_id type_id = 0x7ccdfa11;
 
-		constexpr const static std::string_view Icon_type_name = "Icon";
-		constexpr const static rivet::rivet_type_id Icon_type_id = 0x5504e96b;
-		constexpr const static std::string_view Video_type_name = "Video";
-		constexpr const static rivet::rivet_type_id Video_type_id = 0x659416ed;
-		constexpr const static std::string_view ScrapAmount_type_name = "ScrapAmount";
-		constexpr const static rivet::rivet_type_id ScrapAmount_type_id = 0xadf8243c;
-		constexpr const static std::string_view MissionUnlock_type_name = "MissionUnlock";
-		constexpr const static rivet::rivet_type_id MissionUnlock_type_id = 0x489fe4ed;
-		constexpr const static std::string_view ChallengeModePrepBehavior_type_name = "ChallengeModePrepBehavior";
-		constexpr const static rivet::rivet_type_id ChallengeModePrepBehavior_type_id = 0x8e166dac;
-		constexpr const static std::string_view DisplayNameTag_type_name = "DisplayNameTag";
-		constexpr const static rivet::rivet_type_id DisplayNameTag_type_id = 0x7f9decd5;
-		constexpr const static std::string_view DisplayNameUpperTag_type_name = "DisplayNameUpperTag";
-		constexpr const static rivet::rivet_type_id DisplayNameUpperTag_type_id = 0xc7615daf;
-		constexpr const static std::string_view DisplayDescriptionTag_type_name = "DisplayDescriptionTag";
-		constexpr const static rivet::rivet_type_id DisplayDescriptionTag_type_id = 0x2182eb16;
-		constexpr const static std::string_view UIDisplayObject_type_name = "UIDisplayObject";
-		constexpr const static rivet::rivet_type_id UIDisplayObject_type_id = 0x966feb26;
-		constexpr const static std::string_view IdleAnim_type_name = "IdleAnim";
-		constexpr const static rivet::rivet_type_id IdleAnim_type_id = 0xe747921a; 
+		constexpr static std::string_view Icon_type_name = "Icon";
+		constexpr static rivet::rivet_type_id Icon_type_id = 0x5504e96b;
+		constexpr static std::string_view Video_type_name = "Video";
+		constexpr static rivet::rivet_type_id Video_type_id = 0x659416ed;
+		constexpr static std::string_view ScrapAmount_type_name = "ScrapAmount";
+		constexpr static rivet::rivet_type_id ScrapAmount_type_id = 0xadf8243c;
+		constexpr static std::string_view MissionUnlock_type_name = "MissionUnlock";
+		constexpr static rivet::rivet_type_id MissionUnlock_type_id = 0x489fe4ed;
+		constexpr static std::string_view ChallengeModePrepBehavior_type_name = "ChallengeModePrepBehavior";
+		constexpr static rivet::rivet_type_id ChallengeModePrepBehavior_type_id = 0x8e166dac;
+		constexpr static std::string_view DisplayNameTag_type_name = "DisplayNameTag";
+		constexpr static rivet::rivet_type_id DisplayNameTag_type_id = 0x7f9decd5;
+		constexpr static std::string_view DisplayNameUpperTag_type_name = "DisplayNameUpperTag";
+		constexpr static rivet::rivet_type_id DisplayNameUpperTag_type_id = 0xc7615daf;
+		constexpr static std::string_view DisplayDescriptionTag_type_name = "DisplayDescriptionTag";
+		constexpr static rivet::rivet_type_id DisplayDescriptionTag_type_id = 0x2182eb16;
+		constexpr static std::string_view UIDisplayObject_type_name = "UIDisplayObject";
+		constexpr static rivet::rivet_type_id UIDisplayObject_type_id = 0x966feb26;
+		constexpr static std::string_view IdleAnim_type_name = "IdleAnim";
+		constexpr static rivet::rivet_type_id IdleAnim_type_id = 0xe747921a; 
 
 		explicit GameItemData() = default;
 		explicit GameItemData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

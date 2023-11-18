@@ -19,17 +19,17 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED SoundFocusComponentData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "SoundFocusComponentData";
-		constexpr const static rivet::rivet_type_id type_id = 0xb8072cb8;
+		constexpr static std::string_view type_name = "SoundFocusComponentData";
+		constexpr static rivet::rivet_type_id type_id = 0xb8072cb8;
 
-		constexpr const static std::string_view PlayerFocusValue_type_name = "PlayerFocusValue";
-		constexpr const static rivet::rivet_type_id PlayerFocusValue_type_id = 0x287a9996;
-		constexpr const static std::string_view DefaultFocusValue_type_name = "DefaultFocusValue";
-		constexpr const static rivet::rivet_type_id DefaultFocusValue_type_id = 0x113b5a0e;
-		constexpr const static std::string_view AttackingFocusValue_type_name = "AttackingFocusValue";
-		constexpr const static rivet::rivet_type_id AttackingFocusValue_type_id = 0x756a73f9;
-		constexpr const static std::string_view AttackingPlayerFocusValue_type_name = "AttackingPlayerFocusValue";
-		constexpr const static rivet::rivet_type_id AttackingPlayerFocusValue_type_id = 0x5e15e442; 
+		constexpr static std::string_view PlayerFocusValue_type_name = "PlayerFocusValue";
+		constexpr static rivet::rivet_type_id PlayerFocusValue_type_id = 0x287a9996;
+		constexpr static std::string_view DefaultFocusValue_type_name = "DefaultFocusValue";
+		constexpr static rivet::rivet_type_id DefaultFocusValue_type_id = 0x113b5a0e;
+		constexpr static std::string_view AttackingFocusValue_type_name = "AttackingFocusValue";
+		constexpr static rivet::rivet_type_id AttackingFocusValue_type_id = 0x756a73f9;
+		constexpr static std::string_view AttackingPlayerFocusValue_type_name = "AttackingPlayerFocusValue";
+		constexpr static rivet::rivet_type_id AttackingPlayerFocusValue_type_id = 0x5e15e442; 
 
 		explicit SoundFocusComponentData() = default;
 		explicit SoundFocusComponentData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

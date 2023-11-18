@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view ToolMode_type_name = "ToolMode";
-	constexpr const static rivet::rivet_type_id ToolMode_type_id = 0x791bd135;
+	constexpr static std::string_view ToolMode_type_name = "ToolMode";
+	constexpr static rivet::rivet_type_id ToolMode_type_id = 0x791bd135;
 
-	constexpr const static std::array<std::string_view, 2> ToolMode_values = {
+	constexpr static std::array<std::string_view, 2> ToolMode_values = {
 		"kSelection",
 		"kCustom", 
 	};

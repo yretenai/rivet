@@ -19,17 +19,17 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ExplosiveStatusInnerOuterData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "ExplosiveStatusInnerOuterData";
-		constexpr const static rivet::rivet_type_id type_id = 0xf246b070;
+		constexpr static std::string_view type_name = "ExplosiveStatusInnerOuterData";
+		constexpr static rivet::rivet_type_id type_id = 0xf246b070;
 
-		constexpr const static std::string_view InnerDamage_type_name = "InnerDamage";
-		constexpr const static rivet::rivet_type_id InnerDamage_type_id = 0xd217b95b;
-		constexpr const static std::string_view OuterDamage_type_name = "OuterDamage";
-		constexpr const static rivet::rivet_type_id OuterDamage_type_id = 0xdc02c1e8;
-		constexpr const static std::string_view InnerRadius_type_name = "InnerRadius";
-		constexpr const static rivet::rivet_type_id InnerRadius_type_id = 0xf8a3836d;
-		constexpr const static std::string_view OuterRadius_type_name = "OuterRadius";
-		constexpr const static rivet::rivet_type_id OuterRadius_type_id = 0xf6b6fbde; 
+		constexpr static std::string_view InnerDamage_type_name = "InnerDamage";
+		constexpr static rivet::rivet_type_id InnerDamage_type_id = 0xd217b95b;
+		constexpr static std::string_view OuterDamage_type_name = "OuterDamage";
+		constexpr static rivet::rivet_type_id OuterDamage_type_id = 0xdc02c1e8;
+		constexpr static std::string_view InnerRadius_type_name = "InnerRadius";
+		constexpr static rivet::rivet_type_id InnerRadius_type_id = 0xf8a3836d;
+		constexpr static std::string_view OuterRadius_type_name = "OuterRadius";
+		constexpr static rivet::rivet_type_id OuterRadius_type_id = 0xf6b6fbde; 
 
 		explicit ExplosiveStatusInnerOuterData() = default;
 		explicit ExplosiveStatusInnerOuterData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

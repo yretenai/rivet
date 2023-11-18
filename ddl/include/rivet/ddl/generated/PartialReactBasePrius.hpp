@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED PartialReactBasePrius : PartialReactNonePrius {
-		constexpr const static std::string_view type_name = "PartialReactBasePrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xeaa1a4be;
+		constexpr static std::string_view type_name = "PartialReactBasePrius";
+		constexpr static rivet::rivet_type_id type_id = 0xeaa1a4be;
 
 		explicit PartialReactBasePrius() = default;
 		explicit PartialReactBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

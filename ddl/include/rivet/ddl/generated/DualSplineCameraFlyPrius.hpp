@@ -21,17 +21,17 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DualSplineCameraFlyPrius : CameraPrius {
-		constexpr const static std::string_view type_name = "DualSplineCameraFlyPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x97d23543;
+		constexpr static std::string_view type_name = "DualSplineCameraFlyPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x97d23543;
 
-		constexpr const static std::string_view MotionSpline_type_name = "MotionSpline";
-		constexpr const static rivet::rivet_type_id MotionSpline_type_id = 0x93329739;
-		constexpr const static std::string_view TargetSpline_type_name = "TargetSpline";
-		constexpr const static rivet::rivet_type_id TargetSpline_type_id = 0xc7471fcf;
-		constexpr const static std::string_view StartAtEnd_type_name = "StartAtEnd";
-		constexpr const static rivet::rivet_type_id StartAtEnd_type_id = 0x39b65e8c;
-		constexpr const static std::string_view LockMatchT_type_name = "LockMatchT";
-		constexpr const static rivet::rivet_type_id LockMatchT_type_id = 0xdf12523c; 
+		constexpr static std::string_view MotionSpline_type_name = "MotionSpline";
+		constexpr static rivet::rivet_type_id MotionSpline_type_id = 0x93329739;
+		constexpr static std::string_view TargetSpline_type_name = "TargetSpline";
+		constexpr static rivet::rivet_type_id TargetSpline_type_id = 0xc7471fcf;
+		constexpr static std::string_view StartAtEnd_type_name = "StartAtEnd";
+		constexpr static rivet::rivet_type_id StartAtEnd_type_id = 0x39b65e8c;
+		constexpr static std::string_view LockMatchT_type_name = "LockMatchT";
+		constexpr static rivet::rivet_type_id LockMatchT_type_id = 0xdf12523c; 
 
 		explicit DualSplineCameraFlyPrius() = default;
 		explicit DualSplineCameraFlyPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

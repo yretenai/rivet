@@ -19,13 +19,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ItemElement : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "ItemElement";
-		constexpr const static rivet::rivet_type_id type_id = 0x7ceba432;
+		constexpr static std::string_view type_name = "ItemElement";
+		constexpr static rivet::rivet_type_id type_id = 0x7ceba432;
 
-		constexpr const static std::string_view ItemConfig_type_name = "ItemConfig";
-		constexpr const static rivet::rivet_type_id ItemConfig_type_id = 0xa88f833f;
-		constexpr const static std::string_view DropWeight_type_name = "DropWeight";
-		constexpr const static rivet::rivet_type_id DropWeight_type_id = 0x6ae5eafe; 
+		constexpr static std::string_view ItemConfig_type_name = "ItemConfig";
+		constexpr static rivet::rivet_type_id ItemConfig_type_id = 0xa88f833f;
+		constexpr static std::string_view DropWeight_type_name = "DropWeight";
+		constexpr static rivet::rivet_type_id DropWeight_type_id = 0x6ae5eafe; 
 
 		explicit ItemElement() = default;
 		explicit ItemElement([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

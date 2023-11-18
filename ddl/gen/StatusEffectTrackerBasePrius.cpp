@@ -3,17 +3,17 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/StatusEffectTrackerLightningRodPrius.hpp>
-#include <rivet/ddl/generated/StatusEffectTrackerWarpRifleImplodePrius.hpp>
-#include <rivet/ddl/generated/StatusEffectTrackerFossilizePrius.hpp>
+#include <rivet/ddl/generated/StatusEffectTrackerFirePrius.hpp>
+#include <rivet/ddl/generated/StatusEffectTrackerRynotizePrius.hpp>
+#include <rivet/ddl/generated/StatusEffectTrackerFreezePrius.hpp>
 #include <rivet/ddl/generated/StatusEffectTrackerShrubberyPrius.hpp>
 #include <rivet/ddl/generated/FinaleMechStatusEffectTrackerPixelizedPrius.hpp>
+#include <rivet/ddl/generated/StatusEffectTrackerWarpRifleImplodePrius.hpp>
 #include <rivet/ddl/generated/StatusEffectTrackerMagnaMissilePrius.hpp>
+#include <rivet/ddl/generated/StatusEffectTrackerFossilizePrius.hpp>
+#include <rivet/ddl/generated/StatusEffectTrackerElectricityPrius.hpp>
 #include <rivet/ddl/generated/StatusEffectTrackerProtoGrenadePrius.hpp>
-#include <rivet/ddl/generated/StatusEffectTrackerFreezePrius.hpp>
-#include <rivet/ddl/generated/StatusEffectTrackerRynotizePrius.hpp>
-#include <rivet/ddl/generated/StatusEffectTrackerFirePrius.hpp>
-#include <rivet/ddl/generated/StatusEffectTrackerElectricityPrius.hpp> 
+#include <rivet/ddl/generated/StatusEffectTrackerLightningRodPrius.hpp> 
 
 #include <rivet/ddl/generated/StatusEffectTrackerBasePrius.hpp>
 

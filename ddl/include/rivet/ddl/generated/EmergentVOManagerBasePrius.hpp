@@ -17,18 +17,18 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/EmergentVOBasePrius.hpp>
-#include <rivet/ddl/generated/enums/x8d474ebb.hpp> 
+#include <rivet/ddl/generated/enums/x8d474ebb.hpp>
+#include <rivet/ddl/generated/EmergentVOBasePrius.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED EmergentVOManagerBasePrius : EmergentVOBasePrius {
-		constexpr const static std::string_view type_name = "EmergentVOManagerBasePrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xd1aba9d9;
+		constexpr static std::string_view type_name = "EmergentVOManagerBasePrius";
+		constexpr static rivet::rivet_type_id type_id = 0xd1aba9d9;
 
-		constexpr const static std::string_view Voice_type_name = "Voice";
-		constexpr const static rivet::rivet_type_id Voice_type_id = 0xfea894fa;
-		constexpr const static std::string_view EnableInMultiplayer_type_name = "EnableInMultiplayer";
-		constexpr const static rivet::rivet_type_id EnableInMultiplayer_type_id = 0xf0fdc3c6; 
+		constexpr static std::string_view Voice_type_name = "Voice";
+		constexpr static rivet::rivet_type_id Voice_type_id = 0xfea894fa;
+		constexpr static std::string_view EnableInMultiplayer_type_name = "EnableInMultiplayer";
+		constexpr static rivet::rivet_type_id EnableInMultiplayer_type_id = 0xf0fdc3c6; 
 
 		explicit EmergentVOManagerBasePrius() = default;
 		explicit EmergentVOManagerBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct AllegianceWithRelationPair; 
 
 	struct RIVET_DDL_SHARED DamageModifierInnerOuterForAllegiancePrius : DamageModifierInnerOuterPrius {
-		constexpr const static std::string_view type_name = "DamageModifierInnerOuterForAllegiancePrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xc528b7be;
+		constexpr static std::string_view type_name = "DamageModifierInnerOuterForAllegiancePrius";
+		constexpr static rivet::rivet_type_id type_id = 0xc528b7be;
 
-		constexpr const static std::string_view AllegianceTest_type_name = "AllegianceTest";
-		constexpr const static rivet::rivet_type_id AllegianceTest_type_id = 0x882baae6; 
+		constexpr static std::string_view AllegianceTest_type_name = "AllegianceTest";
+		constexpr static rivet::rivet_type_id AllegianceTest_type_id = 0x882baae6; 
 
 		explicit DamageModifierInnerOuterForAllegiancePrius() = default;
 		explicit DamageModifierInnerOuterForAllegiancePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

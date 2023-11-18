@@ -20,17 +20,17 @@
 #include <rivet/ddl/generated/ConfigBase.hpp> 
 
 namespace rivet::ddl::generated {
-	struct DebugActorEventFilter;
-	struct DebugActor3dViewWhiteListItem; 
+	struct DebugActor3dViewWhiteListItem;
+	struct DebugActorEventFilter; 
 
 	struct RIVET_DDL_SHARED DebugActorSystemConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "DebugActorSystemConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xfe879f44;
+		constexpr static std::string_view type_name = "DebugActorSystemConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xfe879f44;
 
-		constexpr const static std::string_view FilterList_type_name = "FilterList";
-		constexpr const static rivet::rivet_type_id FilterList_type_id = 0x95739137;
-		constexpr const static std::string_view DebugActor3dViewWhiteList_type_name = "DebugActor3dViewWhiteList";
-		constexpr const static rivet::rivet_type_id DebugActor3dViewWhiteList_type_id = 0xbb65844e; 
+		constexpr static std::string_view FilterList_type_name = "FilterList";
+		constexpr static rivet::rivet_type_id FilterList_type_id = 0x95739137;
+		constexpr static std::string_view DebugActor3dViewWhiteList_type_name = "DebugActor3dViewWhiteList";
+		constexpr static rivet::rivet_type_id DebugActor3dViewWhiteList_type_id = 0xbb65844e; 
 
 		explicit DebugActorSystemConfig() = default;
 		explicit DebugActorSystemConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

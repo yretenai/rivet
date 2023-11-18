@@ -19,19 +19,19 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED UseMagCamInfo : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "UseMagCamInfo";
-		constexpr const static rivet::rivet_type_id type_id = 0x82e5f339;
+		constexpr static std::string_view type_name = "UseMagCamInfo";
+		constexpr static rivet::rivet_type_id type_id = 0x82e5f339;
 
-		constexpr const static std::string_view UseMagCamFOV_type_name = "UseMagCamFOV";
-		constexpr const static rivet::rivet_type_id UseMagCamFOV_type_id = 0x4c1d9a4b;
-		constexpr const static std::string_view UseMagCamFollowHeight_type_name = "UseMagCamFollowHeight";
-		constexpr const static rivet::rivet_type_id UseMagCamFollowHeight_type_id = 0xbc29f044;
-		constexpr const static std::string_view UseMagCamFollowDist_type_name = "UseMagCamFollowDist";
-		constexpr const static rivet::rivet_type_id UseMagCamFollowDist_type_id = 0xdbf36a12;
-		constexpr const static std::string_view UseMagCamTargYOffset_type_name = "UseMagCamTargYOffset";
-		constexpr const static rivet::rivet_type_id UseMagCamTargYOffset_type_id = 0xe610a581;
-		constexpr const static std::string_view UseMagCamPitchOffet_type_name = "UseMagCamPitchOffet";
-		constexpr const static rivet::rivet_type_id UseMagCamPitchOffet_type_id = 0x4ae4eee0; 
+		constexpr static std::string_view UseMagCamFOV_type_name = "UseMagCamFOV";
+		constexpr static rivet::rivet_type_id UseMagCamFOV_type_id = 0x4c1d9a4b;
+		constexpr static std::string_view UseMagCamFollowHeight_type_name = "UseMagCamFollowHeight";
+		constexpr static rivet::rivet_type_id UseMagCamFollowHeight_type_id = 0xbc29f044;
+		constexpr static std::string_view UseMagCamFollowDist_type_name = "UseMagCamFollowDist";
+		constexpr static rivet::rivet_type_id UseMagCamFollowDist_type_id = 0xdbf36a12;
+		constexpr static std::string_view UseMagCamTargYOffset_type_name = "UseMagCamTargYOffset";
+		constexpr static rivet::rivet_type_id UseMagCamTargYOffset_type_id = 0xe610a581;
+		constexpr static std::string_view UseMagCamPitchOffet_type_name = "UseMagCamPitchOffet";
+		constexpr static rivet::rivet_type_id UseMagCamPitchOffet_type_id = 0x4ae4eee0; 
 
 		explicit UseMagCamInfo() = default;
 		explicit UseMagCamInfo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

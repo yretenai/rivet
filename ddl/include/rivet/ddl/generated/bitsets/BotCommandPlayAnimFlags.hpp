@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view BotCommandPlayAnimFlags_type_name = "BotCommandPlayAnimFlags";
-	constexpr const static rivet::rivet_type_id BotCommandPlayAnimFlags_type_id = 0x7e08633c;
+	constexpr static std::string_view BotCommandPlayAnimFlags_type_name = "BotCommandPlayAnimFlags";
+	constexpr static rivet::rivet_type_id BotCommandPlayAnimFlags_type_id = 0x7e08633c;
 
-	constexpr const static std::array<std::tuple<std::string_view, uint64_t>, 2> BotCommandPlayAnimFlags_values = {
+	constexpr static std::array<std::tuple<std::string_view, uint64_t>, 2> BotCommandPlayAnimFlags_values = {
 		std::make_tuple("ApplyGravity", 0x1),
 		std::make_tuple("RandomStart", 0x2), 
 	};

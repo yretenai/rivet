@@ -19,13 +19,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED HeroLevelData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "HeroLevelData";
-		constexpr const static rivet::rivet_type_id type_id = 0x55c53eca;
+		constexpr static std::string_view type_name = "HeroLevelData";
+		constexpr static rivet::rivet_type_id type_id = 0x55c53eca;
 
-		constexpr const static std::string_view XPForLevel_type_name = "XPForLevel";
-		constexpr const static rivet::rivet_type_id XPForLevel_type_id = 0xe69ffdf3;
-		constexpr const static std::string_view Health_type_name = "Health";
-		constexpr const static rivet::rivet_type_id Health_type_id = 0xf0a26d74; 
+		constexpr static std::string_view XPForLevel_type_name = "XPForLevel";
+		constexpr static rivet::rivet_type_id XPForLevel_type_id = 0xe69ffdf3;
+		constexpr static std::string_view Health_type_name = "Health";
+		constexpr static rivet::rivet_type_id Health_type_id = 0xf0a26d74; 
 
 		explicit HeroLevelData() = default;
 		explicit HeroLevelData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

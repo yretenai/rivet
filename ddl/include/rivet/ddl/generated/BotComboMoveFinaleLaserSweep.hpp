@@ -20,37 +20,37 @@
 #include <rivet/ddl/generated/BotComboMove.hpp> 
 
 namespace rivet::ddl::generated {
-	struct BotComboLaserShotType;
-	struct FinaleLaserSweepConfig; 
+	struct FinaleLaserSweepConfig;
+	struct BotComboLaserShotType; 
 
 	struct RIVET_DDL_SHARED BotComboMoveFinaleLaserSweep : BotComboMove {
-		constexpr const static std::string_view type_name = "BotComboMoveFinaleLaserSweep";
-		constexpr const static rivet::rivet_type_id type_id = 0xeb2ac0b9;
+		constexpr static std::string_view type_name = "BotComboMoveFinaleLaserSweep";
+		constexpr static rivet::rivet_type_id type_id = 0xeb2ac0b9;
 
-		constexpr const static std::string_view LaserShotType_type_name = "LaserShotType";
-		constexpr const static rivet::rivet_type_id LaserShotType_type_id = 0x240dd6c;
-		constexpr const static std::string_view LaserMaxLength_type_name = "LaserMaxLength";
-		constexpr const static rivet::rivet_type_id LaserMaxLength_type_id = 0x2d4d4979;
-		constexpr const static std::string_view SpawnedShotConfig_type_name = "SpawnedShotConfig";
-		constexpr const static rivet::rivet_type_id SpawnedShotConfig_type_id = 0x7e9e8e66;
-		constexpr const static std::string_view CurveActorId_type_name = "CurveActorId";
-		constexpr const static rivet::rivet_type_id CurveActorId_type_id = 0xbef6b0d3;
-		constexpr const static std::string_view MultiLaserSweepData_type_name = "MultiLaserSweepData";
-		constexpr const static rivet::rivet_type_id MultiLaserSweepData_type_id = 0x64ce791a;
-		constexpr const static std::string_view PortalActorAsset_type_name = "PortalActorAsset";
-		constexpr const static rivet::rivet_type_id PortalActorAsset_type_id = 0xfec29c86;
-		constexpr const static std::string_view WeaponActorAsset_type_name = "WeaponActorAsset";
-		constexpr const static rivet::rivet_type_id WeaponActorAsset_type_id = 0xf03001b;
-		constexpr const static std::string_view AttachCurveToTarget_type_name = "AttachCurveToTarget";
-		constexpr const static rivet::rivet_type_id AttachCurveToTarget_type_id = 0xf459bfe3;
-		constexpr const static std::string_view AttachCurveTargetVol_type_name = "AttachCurveTargetVol";
-		constexpr const static rivet::rivet_type_id AttachCurveTargetVol_type_id = 0xd3a1937;
-		constexpr const static std::string_view PredictTarget_type_name = "PredictTarget";
-		constexpr const static rivet::rivet_type_id PredictTarget_type_id = 0xfd85b67e;
-		constexpr const static std::string_view SweepCount_type_name = "SweepCount";
-		constexpr const static rivet::rivet_type_id SweepCount_type_id = 0x799dfaef;
-		constexpr const static std::string_view CancelOutOfVolume_type_name = "CancelOutOfVolume";
-		constexpr const static rivet::rivet_type_id CancelOutOfVolume_type_id = 0xb95b8abe; 
+		constexpr static std::string_view LaserShotType_type_name = "LaserShotType";
+		constexpr static rivet::rivet_type_id LaserShotType_type_id = 0x240dd6c;
+		constexpr static std::string_view LaserMaxLength_type_name = "LaserMaxLength";
+		constexpr static rivet::rivet_type_id LaserMaxLength_type_id = 0x2d4d4979;
+		constexpr static std::string_view SpawnedShotConfig_type_name = "SpawnedShotConfig";
+		constexpr static rivet::rivet_type_id SpawnedShotConfig_type_id = 0x7e9e8e66;
+		constexpr static std::string_view CurveActorId_type_name = "CurveActorId";
+		constexpr static rivet::rivet_type_id CurveActorId_type_id = 0xbef6b0d3;
+		constexpr static std::string_view MultiLaserSweepData_type_name = "MultiLaserSweepData";
+		constexpr static rivet::rivet_type_id MultiLaserSweepData_type_id = 0x64ce791a;
+		constexpr static std::string_view PortalActorAsset_type_name = "PortalActorAsset";
+		constexpr static rivet::rivet_type_id PortalActorAsset_type_id = 0xfec29c86;
+		constexpr static std::string_view WeaponActorAsset_type_name = "WeaponActorAsset";
+		constexpr static rivet::rivet_type_id WeaponActorAsset_type_id = 0xf03001b;
+		constexpr static std::string_view AttachCurveToTarget_type_name = "AttachCurveToTarget";
+		constexpr static rivet::rivet_type_id AttachCurveToTarget_type_id = 0xf459bfe3;
+		constexpr static std::string_view AttachCurveTargetVol_type_name = "AttachCurveTargetVol";
+		constexpr static rivet::rivet_type_id AttachCurveTargetVol_type_id = 0xd3a1937;
+		constexpr static std::string_view PredictTarget_type_name = "PredictTarget";
+		constexpr static rivet::rivet_type_id PredictTarget_type_id = 0xfd85b67e;
+		constexpr static std::string_view SweepCount_type_name = "SweepCount";
+		constexpr static rivet::rivet_type_id SweepCount_type_id = 0x799dfaef;
+		constexpr static std::string_view CancelOutOfVolume_type_name = "CancelOutOfVolume";
+		constexpr static rivet::rivet_type_id CancelOutOfVolume_type_id = 0xb95b8abe; 
 
 		explicit BotComboMoveFinaleLaserSweep() = default;
 		explicit BotComboMoveFinaleLaserSweep([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

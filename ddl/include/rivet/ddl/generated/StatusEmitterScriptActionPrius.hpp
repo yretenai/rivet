@@ -17,16 +17,16 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/StatusEmitterBasePrius.hpp>
-#include <rivet/ddl/generated/enums/x10228b34.hpp> 
+#include <rivet/ddl/generated/enums/x10228b34.hpp>
+#include <rivet/ddl/generated/StatusEmitterBasePrius.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED StatusEmitterScriptActionPrius : StatusEmitterBasePrius {
-		constexpr const static std::string_view type_name = "StatusEmitterScriptActionPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xd346fdb2;
+		constexpr static std::string_view type_name = "StatusEmitterScriptActionPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xd346fdb2;
 
-		constexpr const static std::string_view ActionType_type_name = "ActionType";
-		constexpr const static rivet::rivet_type_id ActionType_type_id = 0x874b2194; 
+		constexpr static std::string_view ActionType_type_name = "ActionType";
+		constexpr static rivet::rivet_type_id ActionType_type_id = 0x874b2194; 
 
 		explicit StatusEmitterScriptActionPrius() = default;
 		explicit StatusEmitterScriptActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

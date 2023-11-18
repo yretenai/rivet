@@ -19,11 +19,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ShardDetonationData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "ShardDetonationData";
-		constexpr const static rivet::rivet_type_id type_id = 0xec3e5404;
+		constexpr static std::string_view type_name = "ShardDetonationData";
+		constexpr static rivet::rivet_type_id type_id = 0xec3e5404;
 
-		constexpr const static std::string_view DamagePercent_type_name = "DamagePercent";
-		constexpr const static rivet::rivet_type_id DamagePercent_type_id = 0x7bbba4a0; 
+		constexpr static std::string_view DamagePercent_type_name = "DamagePercent";
+		constexpr static rivet::rivet_type_id DamagePercent_type_id = 0x7bbba4a0; 
 
 		explicit ShardDetonationData() = default;
 		explicit ShardDetonationData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

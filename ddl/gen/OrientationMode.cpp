@@ -3,10 +3,10 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/StaticOrientation.hpp>
-#include <rivet/ddl/generated/FaceVelocityOrientation.hpp>
+#include <rivet/ddl/generated/CompoundRotateWhileMoving.hpp>
 #include <rivet/ddl/generated/RotateWhileMoving.hpp>
-#include <rivet/ddl/generated/CompoundRotateWhileMoving.hpp> 
+#include <rivet/ddl/generated/StaticOrientation.hpp>
+#include <rivet/ddl/generated/FaceVelocityOrientation.hpp> 
 
 #include <rivet/ddl/generated/OrientationMode.hpp>
 

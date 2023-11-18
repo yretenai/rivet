@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct DeviceSpecificLocalization; 
 
 	struct RIVET_DDL_SHARED DeviceSpecificLocalizationConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "DeviceSpecificLocalizationConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xbb5c33a2;
+		constexpr static std::string_view type_name = "DeviceSpecificLocalizationConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xbb5c33a2;
 
-		constexpr const static std::string_view Entries_type_name = "Entries";
-		constexpr const static rivet::rivet_type_id Entries_type_id = 0x2c12d0fd; 
+		constexpr static std::string_view Entries_type_name = "Entries";
+		constexpr static rivet::rivet_type_id Entries_type_id = 0x2c12d0fd; 
 
 		explicit DeviceSpecificLocalizationConfig() = default;
 		explicit DeviceSpecificLocalizationConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

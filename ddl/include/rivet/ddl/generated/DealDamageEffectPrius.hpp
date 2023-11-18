@@ -17,32 +17,32 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/ScriptedShotEffectBasePrius.hpp>
-#include <rivet/ddl/generated/enums/KnockbackLevels.hpp>
+#include <rivet/ddl/generated/bitsets/x65d7dac2.hpp>
 #include <rivet/ddl/generated/enums/x8d7e44cf.hpp>
-#include <rivet/ddl/generated/bitsets/x65d7dac2.hpp> 
+#include <rivet/ddl/generated/enums/KnockbackLevels.hpp>
+#include <rivet/ddl/generated/ScriptedShotEffectBasePrius.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DealDamageEffectPrius : ScriptedShotEffectBasePrius {
-		constexpr const static std::string_view type_name = "DealDamageEffectPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xfccd37b8;
+		constexpr static std::string_view type_name = "DealDamageEffectPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xfccd37b8;
 
-		constexpr const static std::string_view Damage_type_name = "Damage";
-		constexpr const static rivet::rivet_type_id Damage_type_id = 0x2fb01a0b;
-		constexpr const static std::string_view KnockbackLevel_type_name = "KnockbackLevel";
-		constexpr const static rivet::rivet_type_id KnockbackLevel_type_id = 0x2554a262;
-		constexpr const static std::string_view KnockbackAmount_type_name = "KnockbackAmount";
-		constexpr const static rivet::rivet_type_id KnockbackAmount_type_id = 0x7b1e600b;
-		constexpr const static std::string_view StatusAmount_type_name = "StatusAmount";
-		constexpr const static rivet::rivet_type_id StatusAmount_type_id = 0x37e1f098;
-		constexpr const static std::string_view StatusDuration_type_name = "StatusDuration";
-		constexpr const static rivet::rivet_type_id StatusDuration_type_id = 0x51e985ca;
-		constexpr const static std::string_view NoRepeatTime_type_name = "NoRepeatTime";
-		constexpr const static rivet::rivet_type_id NoRepeatTime_type_id = 0x45c731dc;
-		constexpr const static std::string_view Type_type_name = "Type";
-		constexpr const static rivet::rivet_type_id Type_type_id = 0xbc4e9799;
-		constexpr const static std::string_view DamageFlags_type_name = "DamageFlags";
-		constexpr const static rivet::rivet_type_id DamageFlags_type_id = 0x93d0d934; 
+		constexpr static std::string_view Damage_type_name = "Damage";
+		constexpr static rivet::rivet_type_id Damage_type_id = 0x2fb01a0b;
+		constexpr static std::string_view KnockbackLevel_type_name = "KnockbackLevel";
+		constexpr static rivet::rivet_type_id KnockbackLevel_type_id = 0x2554a262;
+		constexpr static std::string_view KnockbackAmount_type_name = "KnockbackAmount";
+		constexpr static rivet::rivet_type_id KnockbackAmount_type_id = 0x7b1e600b;
+		constexpr static std::string_view StatusAmount_type_name = "StatusAmount";
+		constexpr static rivet::rivet_type_id StatusAmount_type_id = 0x37e1f098;
+		constexpr static std::string_view StatusDuration_type_name = "StatusDuration";
+		constexpr static rivet::rivet_type_id StatusDuration_type_id = 0x51e985ca;
+		constexpr static std::string_view NoRepeatTime_type_name = "NoRepeatTime";
+		constexpr static rivet::rivet_type_id NoRepeatTime_type_id = 0x45c731dc;
+		constexpr static std::string_view Type_type_name = "Type";
+		constexpr static rivet::rivet_type_id Type_type_id = 0xbc4e9799;
+		constexpr static std::string_view DamageFlags_type_name = "DamageFlags";
+		constexpr static rivet::rivet_type_id DamageFlags_type_id = 0x93d0d934; 
 
 		explicit DealDamageEffectPrius() = default;
 		explicit DealDamageEffectPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

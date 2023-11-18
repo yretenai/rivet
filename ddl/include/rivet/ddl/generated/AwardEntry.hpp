@@ -21,11 +21,11 @@ namespace rivet::ddl::generated {
 	struct AwardBasePrius; 
 
 	struct RIVET_DDL_SHARED AwardEntry : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "AwardEntry";
-		constexpr const static rivet::rivet_type_id type_id = 0x4a4a9e1f;
+		constexpr static std::string_view type_name = "AwardEntry";
+		constexpr static rivet::rivet_type_id type_id = 0x4a4a9e1f;
 
-		constexpr const static std::string_view Award_type_name = "Award";
-		constexpr const static rivet::rivet_type_id Award_type_id = 0x9308e226; 
+		constexpr static std::string_view Award_type_name = "Award";
+		constexpr static rivet::rivet_type_id Award_type_id = 0x9308e226; 
 
 		explicit AwardEntry() = default;
 		explicit AwardEntry([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ClankPackLoadoutConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "ClankPackLoadoutConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x6798c686;
+		constexpr static std::string_view type_name = "ClankPackLoadoutConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x6798c686;
 
-		constexpr const static std::string_view BackpackConfigForRatchet_type_name = "BackpackConfigForRatchet";
-		constexpr const static rivet::rivet_type_id BackpackConfigForRatchet_type_id = 0xa139fb2a;
-		constexpr const static std::string_view BackpackConfigForRivet_type_name = "BackpackConfigForRivet";
-		constexpr const static rivet::rivet_type_id BackpackConfigForRivet_type_id = 0x54ebe16a; 
+		constexpr static std::string_view BackpackConfigForRatchet_type_name = "BackpackConfigForRatchet";
+		constexpr static rivet::rivet_type_id BackpackConfigForRatchet_type_id = 0xa139fb2a;
+		constexpr static std::string_view BackpackConfigForRivet_type_name = "BackpackConfigForRivet";
+		constexpr static rivet::rivet_type_id BackpackConfigForRivet_type_id = 0x54ebe16a; 
 
 		explicit ClankPackLoadoutConfig() = default;
 		explicit ClankPackLoadoutConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

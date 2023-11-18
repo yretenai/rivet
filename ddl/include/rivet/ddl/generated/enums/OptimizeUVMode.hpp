@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view OptimizeUVMode_type_name = "OptimizeUVMode";
-	constexpr const static rivet::rivet_type_id OptimizeUVMode_type_id = 0x22e01f8d;
+	constexpr static std::string_view OptimizeUVMode_type_name = "OptimizeUVMode";
+	constexpr static rivet::rivet_type_id OptimizeUVMode_type_id = 0x22e01f8d;
 
-	constexpr const static std::array<std::string_view, 4> OptimizeUVMode_values = {
+	constexpr static std::array<std::string_view, 4> OptimizeUVMode_values = {
 		"kNone",
 		"kUv0Only",
 		"kUv1Only",

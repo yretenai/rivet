@@ -20,28 +20,28 @@
 #include <rivet/ddl/generated/ConfigBase.hpp> 
 
 namespace rivet::ddl::generated {
-	struct StateDependentCameraConfigData;
+	struct FollowCameraUserConfig;
 	struct SpeedDependentCameraConfigData;
-	struct FollowCameraUserConfig; 
+	struct StateDependentCameraConfigData; 
 
 	struct RIVET_DDL_SHARED MountCameraConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "MountCameraConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x1bf25fc0;
+		constexpr static std::string_view type_name = "MountCameraConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x1bf25fc0;
 
-		constexpr const static std::string_view StateDependentCameraData_type_name = "StateDependentCameraData";
-		constexpr const static rivet::rivet_type_id StateDependentCameraData_type_id = 0x858c56d7;
-		constexpr const static std::string_view SpeedDependentCameraData_type_name = "SpeedDependentCameraData";
-		constexpr const static rivet::rivet_type_id SpeedDependentCameraData_type_id = 0x6828ce70;
-		constexpr const static std::string_view FollowCameraConfig_type_name = "FollowCameraConfig";
-		constexpr const static rivet::rivet_type_id FollowCameraConfig_type_id = 0x5afbbea3;
-		constexpr const static std::string_view CameraUpIsUserUp_type_name = "CameraUpIsUserUp";
-		constexpr const static rivet::rivet_type_id CameraUpIsUserUp_type_id = 0x5d962a97;
-		constexpr const static std::string_view EnableRotateAroundCollision_type_name = "EnableRotateAroundCollision";
-		constexpr const static rivet::rivet_type_id EnableRotateAroundCollision_type_id = 0x3a72795d;
-		constexpr const static std::string_view AlwaysShowReticle_type_name = "AlwaysShowReticle";
-		constexpr const static rivet::rivet_type_id AlwaysShowReticle_type_id = 0x16fffd51;
-		constexpr const static std::string_view UseMoveStickAsInput_type_name = "UseMoveStickAsInput";
-		constexpr const static rivet::rivet_type_id UseMoveStickAsInput_type_id = 0xefe527a8; 
+		constexpr static std::string_view StateDependentCameraData_type_name = "StateDependentCameraData";
+		constexpr static rivet::rivet_type_id StateDependentCameraData_type_id = 0x858c56d7;
+		constexpr static std::string_view SpeedDependentCameraData_type_name = "SpeedDependentCameraData";
+		constexpr static rivet::rivet_type_id SpeedDependentCameraData_type_id = 0x6828ce70;
+		constexpr static std::string_view FollowCameraConfig_type_name = "FollowCameraConfig";
+		constexpr static rivet::rivet_type_id FollowCameraConfig_type_id = 0x5afbbea3;
+		constexpr static std::string_view CameraUpIsUserUp_type_name = "CameraUpIsUserUp";
+		constexpr static rivet::rivet_type_id CameraUpIsUserUp_type_id = 0x5d962a97;
+		constexpr static std::string_view EnableRotateAroundCollision_type_name = "EnableRotateAroundCollision";
+		constexpr static rivet::rivet_type_id EnableRotateAroundCollision_type_id = 0x3a72795d;
+		constexpr static std::string_view AlwaysShowReticle_type_name = "AlwaysShowReticle";
+		constexpr static rivet::rivet_type_id AlwaysShowReticle_type_id = 0x16fffd51;
+		constexpr static std::string_view UseMoveStickAsInput_type_name = "UseMoveStickAsInput";
+		constexpr static rivet::rivet_type_id UseMoveStickAsInput_type_id = 0xefe527a8; 
 
 		explicit MountCameraConfig() = default;
 		explicit MountCameraConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

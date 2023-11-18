@@ -17,42 +17,42 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/StatusEffectBasePrius.hpp>
-#include <rivet/ddl/generated/enums/x8d7e44cf.hpp>
+#include <rivet/ddl/generated/bitsets/TargetType.hpp>
 #include <rivet/ddl/generated/enums/KnockbackLevels.hpp>
-#include <rivet/ddl/generated/bitsets/TargetType.hpp> 
+#include <rivet/ddl/generated/enums/x8d7e44cf.hpp>
+#include <rivet/ddl/generated/StatusEffectBasePrius.hpp> 
 
 namespace rivet::ddl::generated {
 	struct ExplosiveStatusInnerOuterData; 
 
 	struct RIVET_DDL_SHARED StatusEffectExplosivePrius : StatusEffectBasePrius {
-		constexpr const static std::string_view type_name = "StatusEffectExplosivePrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x938c1f32;
+		constexpr static std::string_view type_name = "StatusEffectExplosivePrius";
+		constexpr static rivet::rivet_type_id type_id = 0x938c1f32;
 
-		constexpr const static std::string_view Damage_type_name = "Damage";
-		constexpr const static rivet::rivet_type_id Damage_type_id = 0x2fb01a0b;
-		constexpr const static std::string_view ExplosionLocator_type_name = "ExplosionLocator";
-		constexpr const static rivet::rivet_type_id ExplosionLocator_type_id = 0x2780aa8f;
-		constexpr const static std::string_view DamageNeedsLOS_type_name = "DamageNeedsLOS";
-		constexpr const static rivet::rivet_type_id DamageNeedsLOS_type_id = 0x9304a0dd;
-		constexpr const static std::string_view ExplodeOnDamage_type_name = "ExplodeOnDamage";
-		constexpr const static rivet::rivet_type_id ExplodeOnDamage_type_id = 0x6a5dcd63;
-		constexpr const static std::string_view ExplodeOnDeath_type_name = "ExplodeOnDeath";
-		constexpr const static rivet::rivet_type_id ExplodeOnDeath_type_id = 0xcc9f04c2;
-		constexpr const static std::string_view ExplodeOnProximity_type_name = "ExplodeOnProximity";
-		constexpr const static rivet::rivet_type_id ExplodeOnProximity_type_id = 0xce4985dd;
-		constexpr const static std::string_view KillSelfOnExplode_type_name = "KillSelfOnExplode";
-		constexpr const static rivet::rivet_type_id KillSelfOnExplode_type_id = 0x4310626a;
-		constexpr const static std::string_view DamageFriends_type_name = "DamageFriends";
-		constexpr const static rivet::rivet_type_id DamageFriends_type_id = 0x3be354f0;
-		constexpr const static std::string_view LastDamagerIsExplosionDamager_type_name = "LastDamagerIsExplosionDamager";
-		constexpr const static rivet::rivet_type_id LastDamagerIsExplosionDamager_type_id = 0xb4a5e44d;
-		constexpr const static std::string_view ExplosionDamageType_type_name = "ExplosionDamageType";
-		constexpr const static rivet::rivet_type_id ExplosionDamageType_type_id = 0x9eca2505;
-		constexpr const static std::string_view ExplosionKnockbackLevel_type_name = "ExplosionKnockbackLevel";
-		constexpr const static rivet::rivet_type_id ExplosionKnockbackLevel_type_id = 0x3f5dbe92;
-		constexpr const static std::string_view ProximityTargetMask_type_name = "ProximityTargetMask";
-		constexpr const static rivet::rivet_type_id ProximityTargetMask_type_id = 0x35cab75a; 
+		constexpr static std::string_view Damage_type_name = "Damage";
+		constexpr static rivet::rivet_type_id Damage_type_id = 0x2fb01a0b;
+		constexpr static std::string_view ExplosionLocator_type_name = "ExplosionLocator";
+		constexpr static rivet::rivet_type_id ExplosionLocator_type_id = 0x2780aa8f;
+		constexpr static std::string_view DamageNeedsLOS_type_name = "DamageNeedsLOS";
+		constexpr static rivet::rivet_type_id DamageNeedsLOS_type_id = 0x9304a0dd;
+		constexpr static std::string_view ExplodeOnDamage_type_name = "ExplodeOnDamage";
+		constexpr static rivet::rivet_type_id ExplodeOnDamage_type_id = 0x6a5dcd63;
+		constexpr static std::string_view ExplodeOnDeath_type_name = "ExplodeOnDeath";
+		constexpr static rivet::rivet_type_id ExplodeOnDeath_type_id = 0xcc9f04c2;
+		constexpr static std::string_view ExplodeOnProximity_type_name = "ExplodeOnProximity";
+		constexpr static rivet::rivet_type_id ExplodeOnProximity_type_id = 0xce4985dd;
+		constexpr static std::string_view KillSelfOnExplode_type_name = "KillSelfOnExplode";
+		constexpr static rivet::rivet_type_id KillSelfOnExplode_type_id = 0x4310626a;
+		constexpr static std::string_view DamageFriends_type_name = "DamageFriends";
+		constexpr static rivet::rivet_type_id DamageFriends_type_id = 0x3be354f0;
+		constexpr static std::string_view LastDamagerIsExplosionDamager_type_name = "LastDamagerIsExplosionDamager";
+		constexpr static rivet::rivet_type_id LastDamagerIsExplosionDamager_type_id = 0xb4a5e44d;
+		constexpr static std::string_view ExplosionDamageType_type_name = "ExplosionDamageType";
+		constexpr static rivet::rivet_type_id ExplosionDamageType_type_id = 0x9eca2505;
+		constexpr static std::string_view ExplosionKnockbackLevel_type_name = "ExplosionKnockbackLevel";
+		constexpr static rivet::rivet_type_id ExplosionKnockbackLevel_type_id = 0x3f5dbe92;
+		constexpr static std::string_view ProximityTargetMask_type_name = "ProximityTargetMask";
+		constexpr static rivet::rivet_type_id ProximityTargetMask_type_id = 0x35cab75a; 
 
 		explicit StatusEffectExplosivePrius() = default;
 		explicit StatusEffectExplosivePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

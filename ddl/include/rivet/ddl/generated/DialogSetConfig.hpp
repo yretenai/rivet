@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct DialogSet; 
 
 	struct RIVET_DDL_SHARED DialogSetConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "DialogSetConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x99cc709b;
+		constexpr static std::string_view type_name = "DialogSetConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x99cc709b;
 
-		constexpr const static std::string_view Set_type_name = "Set";
-		constexpr const static rivet::rivet_type_id Set_type_id = 0xcc410c15; 
+		constexpr static std::string_view Set_type_name = "Set";
+		constexpr static rivet::rivet_type_id Set_type_id = 0xcc410c15; 
 
 		explicit DialogSetConfig() = default;
 		explicit DialogSetConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

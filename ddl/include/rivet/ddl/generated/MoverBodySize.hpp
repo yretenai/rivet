@@ -19,21 +19,21 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED MoverBodySize : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "MoverBodySize";
-		constexpr const static rivet::rivet_type_id type_id = 0xdb4f33bf;
+		constexpr static std::string_view type_name = "MoverBodySize";
+		constexpr static rivet::rivet_type_id type_id = 0xdb4f33bf;
 
-		constexpr const static std::string_view BodyBottom_type_name = "BodyBottom";
-		constexpr const static rivet::rivet_type_id BodyBottom_type_id = 0x7c1441ff;
-		constexpr const static std::string_view BodyTop_type_name = "BodyTop";
-		constexpr const static rivet::rivet_type_id BodyTop_type_id = 0xda5de2a6;
-		constexpr const static std::string_view BodyRadius_type_name = "BodyRadius";
-		constexpr const static rivet::rivet_type_id BodyRadius_type_id = 0xce375d01;
-		constexpr const static std::string_view GroundUp_type_name = "GroundUp";
-		constexpr const static rivet::rivet_type_id GroundUp_type_id = 0xf584e368;
-		constexpr const static std::string_view GroundDown_type_name = "GroundDown";
-		constexpr const static rivet::rivet_type_id GroundDown_type_id = 0xa18cd030;
-		constexpr const static std::string_view GroundRadius_type_name = "GroundRadius";
-		constexpr const static rivet::rivet_type_id GroundRadius_type_id = 0xef8d598d; 
+		constexpr static std::string_view BodyBottom_type_name = "BodyBottom";
+		constexpr static rivet::rivet_type_id BodyBottom_type_id = 0x7c1441ff;
+		constexpr static std::string_view BodyTop_type_name = "BodyTop";
+		constexpr static rivet::rivet_type_id BodyTop_type_id = 0xda5de2a6;
+		constexpr static std::string_view BodyRadius_type_name = "BodyRadius";
+		constexpr static rivet::rivet_type_id BodyRadius_type_id = 0xce375d01;
+		constexpr static std::string_view GroundUp_type_name = "GroundUp";
+		constexpr static rivet::rivet_type_id GroundUp_type_id = 0xf584e368;
+		constexpr static std::string_view GroundDown_type_name = "GroundDown";
+		constexpr static rivet::rivet_type_id GroundDown_type_id = 0xa18cd030;
+		constexpr static std::string_view GroundRadius_type_name = "GroundRadius";
+		constexpr static rivet::rivet_type_id GroundRadius_type_id = 0xef8d598d; 
 
 		explicit MoverBodySize() = default;
 		explicit MoverBodySize([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DummyHurdleShotPrius : BasicBulletPrius {
-		constexpr const static std::string_view type_name = "DummyHurdleShotPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xf7dc481;
+		constexpr static std::string_view type_name = "DummyHurdleShotPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xf7dc481;
 
-		constexpr const static std::string_view ShotIndexForHurdle_type_name = "ShotIndexForHurdle";
-		constexpr const static rivet::rivet_type_id ShotIndexForHurdle_type_id = 0xc9814627;
-		constexpr const static std::string_view WantsLeftOffset_type_name = "WantsLeftOffset";
-		constexpr const static rivet::rivet_type_id WantsLeftOffset_type_id = 0x9f9b2090; 
+		constexpr static std::string_view ShotIndexForHurdle_type_name = "ShotIndexForHurdle";
+		constexpr static rivet::rivet_type_id ShotIndexForHurdle_type_id = 0xc9814627;
+		constexpr static std::string_view WantsLeftOffset_type_name = "WantsLeftOffset";
+		constexpr static rivet::rivet_type_id WantsLeftOffset_type_id = 0x9f9b2090; 
 
 		explicit DummyHurdleShotPrius() = default;
 		explicit DummyHurdleShotPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

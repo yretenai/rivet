@@ -20,17 +20,17 @@
 #include <rivet/ddl/generated/ConfigBase.hpp> 
 
 namespace rivet::ddl::generated {
-	struct AimingBasePrius;
-	struct AimModWrapper; 
+	struct AimModWrapper;
+	struct AimingBasePrius; 
 
 	struct RIVET_DDL_SHARED BotConfigAiming : ConfigBase {
-		constexpr const static std::string_view type_name = "BotConfigAiming";
-		constexpr const static rivet::rivet_type_id type_id = 0x8d73a96b;
+		constexpr static std::string_view type_name = "BotConfigAiming";
+		constexpr static rivet::rivet_type_id type_id = 0x8d73a96b;
 
-		constexpr const static std::string_view Aiming_type_name = "Aiming";
-		constexpr const static rivet::rivet_type_id Aiming_type_id = 0x7ed24ba4;
-		constexpr const static std::string_view AimMods_type_name = "AimMods";
-		constexpr const static rivet::rivet_type_id AimMods_type_id = 0x1d7694a1; 
+		constexpr static std::string_view Aiming_type_name = "Aiming";
+		constexpr static rivet::rivet_type_id Aiming_type_id = 0x7ed24ba4;
+		constexpr static std::string_view AimMods_type_name = "AimMods";
+		constexpr static rivet::rivet_type_id AimMods_type_id = 0x1d7694a1; 
 
 		explicit BotConfigAiming() = default;
 		explicit BotConfigAiming([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -23,27 +23,27 @@ namespace rivet::ddl::generated {
 	struct CameraShakingAxisData; 
 
 	struct RIVET_DDL_SHARED CameraShakingData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "CameraShakingData";
-		constexpr const static rivet::rivet_type_id type_id = 0x263d624f;
+		constexpr static std::string_view type_name = "CameraShakingData";
+		constexpr static rivet::rivet_type_id type_id = 0x263d624f;
 
-		constexpr const static std::string_view FadeinDuration_type_name = "FadeinDuration";
-		constexpr const static rivet::rivet_type_id FadeinDuration_type_id = 0x8d166a59;
-		constexpr const static std::string_view Duration_type_name = "Duration";
-		constexpr const static rivet::rivet_type_id Duration_type_id = 0x7c5e3db0;
-		constexpr const static std::string_view FadeoutDuration_type_name = "FadeoutDuration";
-		constexpr const static rivet::rivet_type_id FadeoutDuration_type_id = 0xbf9d04f0;
-		constexpr const static std::string_view UseRandomBaseOffset_type_name = "UseRandomBaseOffset";
-		constexpr const static rivet::rivet_type_id UseRandomBaseOffset_type_id = 0x96400039;
-		constexpr const static std::string_view OverrideViewportBlocking_type_name = "OverrideViewportBlocking";
-		constexpr const static rivet::rivet_type_id OverrideViewportBlocking_type_id = 0xc631bf22;
-		constexpr const static std::string_view FilterType_type_name = "FilterType";
-		constexpr const static rivet::rivet_type_id FilterType_type_id = 0x5d653e06;
-		constexpr const static std::string_view CurveDataX_type_name = "CurveDataX";
-		constexpr const static rivet::rivet_type_id CurveDataX_type_id = 0xe5ebcff0;
-		constexpr const static std::string_view CurveDataY_type_name = "CurveDataY";
-		constexpr const static rivet::rivet_type_id CurveDataY_type_id = 0x92ecff66;
-		constexpr const static std::string_view CurveDataZ_type_name = "CurveDataZ";
-		constexpr const static rivet::rivet_type_id CurveDataZ_type_id = 0xbe5aedc; 
+		constexpr static std::string_view FadeinDuration_type_name = "FadeinDuration";
+		constexpr static rivet::rivet_type_id FadeinDuration_type_id = 0x8d166a59;
+		constexpr static std::string_view Duration_type_name = "Duration";
+		constexpr static rivet::rivet_type_id Duration_type_id = 0x7c5e3db0;
+		constexpr static std::string_view FadeoutDuration_type_name = "FadeoutDuration";
+		constexpr static rivet::rivet_type_id FadeoutDuration_type_id = 0xbf9d04f0;
+		constexpr static std::string_view UseRandomBaseOffset_type_name = "UseRandomBaseOffset";
+		constexpr static rivet::rivet_type_id UseRandomBaseOffset_type_id = 0x96400039;
+		constexpr static std::string_view OverrideViewportBlocking_type_name = "OverrideViewportBlocking";
+		constexpr static rivet::rivet_type_id OverrideViewportBlocking_type_id = 0xc631bf22;
+		constexpr static std::string_view FilterType_type_name = "FilterType";
+		constexpr static rivet::rivet_type_id FilterType_type_id = 0x5d653e06;
+		constexpr static std::string_view CurveDataX_type_name = "CurveDataX";
+		constexpr static rivet::rivet_type_id CurveDataX_type_id = 0xe5ebcff0;
+		constexpr static std::string_view CurveDataY_type_name = "CurveDataY";
+		constexpr static rivet::rivet_type_id CurveDataY_type_id = 0x92ecff66;
+		constexpr static std::string_view CurveDataZ_type_name = "CurveDataZ";
+		constexpr static rivet::rivet_type_id CurveDataZ_type_id = 0xbe5aedc; 
 
 		explicit CameraShakingData() = default;
 		explicit CameraShakingData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

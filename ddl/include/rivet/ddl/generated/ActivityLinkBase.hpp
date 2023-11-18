@@ -19,8 +19,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ActivityLinkBase : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "ActivityLinkBase";
-		constexpr const static rivet::rivet_type_id type_id = 0xadf2cb95;
+		constexpr static std::string_view type_name = "ActivityLinkBase";
+		constexpr static rivet::rivet_type_id type_id = 0xadf2cb95;
 
 		explicit ActivityLinkBase() = default;
 		explicit ActivityLinkBase([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

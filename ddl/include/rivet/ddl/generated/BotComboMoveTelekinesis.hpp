@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct TelekinesisData; 
 
 	struct RIVET_DDL_SHARED BotComboMoveTelekinesis : BotComboMove {
-		constexpr const static std::string_view type_name = "BotComboMoveTelekinesis";
-		constexpr const static rivet::rivet_type_id type_id = 0x8b57ba8b;
+		constexpr static std::string_view type_name = "BotComboMoveTelekinesis";
+		constexpr static rivet::rivet_type_id type_id = 0x8b57ba8b;
 
-		constexpr const static std::string_view data_type_name = "data";
-		constexpr const static rivet::rivet_type_id data_type_id = 0x3d519ced; 
+		constexpr static std::string_view data_type_name = "data";
+		constexpr static rivet::rivet_type_id data_type_id = 0x3d519ced; 
 
 		explicit BotComboMoveTelekinesis() = default;
 		explicit BotComboMoveTelekinesis([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

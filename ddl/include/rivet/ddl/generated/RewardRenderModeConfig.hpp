@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct RewardRenderModeData; 
 
 	struct RIVET_DDL_SHARED RewardRenderModeConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "RewardRenderModeConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x50681d04;
+		constexpr static std::string_view type_name = "RewardRenderModeConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x50681d04;
 
-		constexpr const static std::string_view RenderModes_type_name = "RenderModes";
-		constexpr const static rivet::rivet_type_id RenderModes_type_id = 0x75c158fb; 
+		constexpr static std::string_view RenderModes_type_name = "RenderModes";
+		constexpr static rivet::rivet_type_id RenderModes_type_id = 0x75c158fb; 
 
 		explicit RewardRenderModeConfig() = default;
 		explicit RewardRenderModeConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

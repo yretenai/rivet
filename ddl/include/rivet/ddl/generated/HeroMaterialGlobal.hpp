@@ -19,15 +19,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED HeroMaterialGlobal : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "HeroMaterialGlobal";
-		constexpr const static rivet::rivet_type_id type_id = 0xd15f62c2;
+		constexpr static std::string_view type_name = "HeroMaterialGlobal";
+		constexpr static rivet::rivet_type_id type_id = 0xd15f62c2;
 
-		constexpr const static std::string_view LocatorName_type_name = "LocatorName";
-		constexpr const static rivet::rivet_type_id LocatorName_type_id = 0x5814524d;
-		constexpr const static std::string_view ConstantName_type_name = "ConstantName";
-		constexpr const static rivet::rivet_type_id ConstantName_type_id = 0xc6991700;
-		constexpr const static std::string_view Radius_type_name = "Radius";
-		constexpr const static rivet::rivet_type_id Radius_type_id = 0x504203d; 
+		constexpr static std::string_view LocatorName_type_name = "LocatorName";
+		constexpr static rivet::rivet_type_id LocatorName_type_id = 0x5814524d;
+		constexpr static std::string_view ConstantName_type_name = "ConstantName";
+		constexpr static rivet::rivet_type_id ConstantName_type_id = 0xc6991700;
+		constexpr static std::string_view Radius_type_name = "Radius";
+		constexpr static rivet::rivet_type_id Radius_type_id = 0x504203d; 
 
 		explicit HeroMaterialGlobal() = default;
 		explicit HeroMaterialGlobal([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

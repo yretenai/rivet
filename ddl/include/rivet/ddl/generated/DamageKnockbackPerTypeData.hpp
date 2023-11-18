@@ -21,15 +21,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DamageKnockbackPerTypeData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "DamageKnockbackPerTypeData";
-		constexpr const static rivet::rivet_type_id type_id = 0x9dffca4d;
+		constexpr static std::string_view type_name = "DamageKnockbackPerTypeData";
+		constexpr static rivet::rivet_type_id type_id = 0x9dffca4d;
 
-		constexpr const static std::string_view DamagePercent_type_name = "DamagePercent";
-		constexpr const static rivet::rivet_type_id DamagePercent_type_id = 0x7bbba4a0;
-		constexpr const static std::string_view Knockback_type_name = "Knockback";
-		constexpr const static rivet::rivet_type_id Knockback_type_id = 0x2e553fdd;
-		constexpr const static std::string_view KnockbackPercent_type_name = "KnockbackPercent";
-		constexpr const static rivet::rivet_type_id KnockbackPercent_type_id = 0xbc412990; 
+		constexpr static std::string_view DamagePercent_type_name = "DamagePercent";
+		constexpr static rivet::rivet_type_id DamagePercent_type_id = 0x7bbba4a0;
+		constexpr static std::string_view Knockback_type_name = "Knockback";
+		constexpr static rivet::rivet_type_id Knockback_type_id = 0x2e553fdd;
+		constexpr static std::string_view KnockbackPercent_type_name = "KnockbackPercent";
+		constexpr static rivet::rivet_type_id KnockbackPercent_type_id = 0xbc412990; 
 
 		explicit DamageKnockbackPerTypeData() = default;
 		explicit DamageKnockbackPerTypeData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

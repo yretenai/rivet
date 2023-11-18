@@ -3,21 +3,21 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/ShotMotionClankPuzzlePrius.hpp>
-#include <rivet/ddl/generated/GrenadeLandMode.hpp>
-#include <rivet/ddl/generated/GrenadeVelocityMode.hpp>
 #include <rivet/ddl/generated/PyrocitorEmberShotMotionPrius.hpp>
-#include <rivet/ddl/generated/ShotMotionVolcanicEruptorPrius.hpp>
-#include <rivet/ddl/generated/ShotMotionFusionGrenadeSubShotPrius.hpp>
-#include <rivet/ddl/generated/ExtermibotSprayShotMotionPrius.hpp>
+#include <rivet/ddl/generated/GrenadeLandMode.hpp>
+#include <rivet/ddl/generated/PirateHeavyMiniBounceBombShotMotionPrius.hpp>
+#include <rivet/ddl/generated/GrenadeVelocityMode.hpp>
 #include <rivet/ddl/generated/GrenadeShotMotionGamePrius.hpp>
 #include <rivet/ddl/generated/ShotMotionCarpetBomberSubShotPrius.hpp>
-#include <rivet/ddl/generated/ShotMotionThumperPrius.hpp>
-#include <rivet/ddl/generated/TargetedGrenadeShotMotionPrius.hpp>
 #include <rivet/ddl/generated/GroovitronShotMotionPrius.hpp>
+#include <rivet/ddl/generated/ShotMotionThumperPrius.hpp>
+#include <rivet/ddl/generated/ShotMotionFusionGrenadeSubShotPrius.hpp>
+#include <rivet/ddl/generated/ShotMotionVolcanicEruptorPrius.hpp>
 #include <rivet/ddl/generated/ShotMotionBouncerMiniBombPrius.hpp>
-#include <rivet/ddl/generated/ShotMotionFusionGrenadePrius.hpp>
-#include <rivet/ddl/generated/PirateHeavyMiniBounceBombShotMotionPrius.hpp> 
+#include <rivet/ddl/generated/ShotMotionClankPuzzlePrius.hpp>
+#include <rivet/ddl/generated/ExtermibotSprayShotMotionPrius.hpp>
+#include <rivet/ddl/generated/TargetedGrenadeShotMotionPrius.hpp>
+#include <rivet/ddl/generated/ShotMotionFusionGrenadePrius.hpp> 
 
 #include <rivet/ddl/generated/GrenadeShotMotionPrius.hpp>
 

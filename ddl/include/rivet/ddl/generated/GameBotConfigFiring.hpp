@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED GameBotConfigFiring : ConfigBase {
-		constexpr const static std::string_view type_name = "GameBotConfigFiring";
-		constexpr const static rivet::rivet_type_id type_id = 0x82ecce9d;
+		constexpr static std::string_view type_name = "GameBotConfigFiring";
+		constexpr static rivet::rivet_type_id type_id = 0x82ecce9d;
 
-		constexpr const static std::string_view WeaponItem_type_name = "WeaponItem";
-		constexpr const static rivet::rivet_type_id WeaponItem_type_id = 0x8b393dd4; 
+		constexpr static std::string_view WeaponItem_type_name = "WeaponItem";
+		constexpr static rivet::rivet_type_id WeaponItem_type_id = 0x8b393dd4; 
 
 		explicit GameBotConfigFiring() = default;
 		explicit GameBotConfigFiring([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

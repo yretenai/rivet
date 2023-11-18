@@ -3,12 +3,12 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/AimAssistDistanceModifier.hpp>
-#include <rivet/ddl/generated/AimAssistRelativeSpeedModifier.hpp>
-#include <rivet/ddl/generated/AimAssistMoveTurnModifier.hpp>
-#include <rivet/ddl/generated/AimAssistTurnMatchModifier.hpp>
+#include <rivet/ddl/generated/AimAssistTraversalModifier.hpp>
 #include <rivet/ddl/generated/AimAssistMultiTargetModifier.hpp>
-#include <rivet/ddl/generated/AimAssistTraversalModifier.hpp> 
+#include <rivet/ddl/generated/AimAssistTurnMatchModifier.hpp>
+#include <rivet/ddl/generated/AimAssistMoveTurnModifier.hpp>
+#include <rivet/ddl/generated/AimAssistRelativeSpeedModifier.hpp>
+#include <rivet/ddl/generated/AimAssistDistanceModifier.hpp> 
 
 #include <rivet/ddl/generated/AimAssistFactorModifiers.hpp>
 

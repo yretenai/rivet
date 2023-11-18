@@ -23,13 +23,13 @@ namespace rivet::ddl::generated {
 	struct DDLVector3; 
 
 	struct RIVET_DDL_SHARED LocalOffsetElevationData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "LocalOffsetElevationData";
-		constexpr const static rivet::rivet_type_id type_id = 0xa4b88be7;
+		constexpr static std::string_view type_name = "LocalOffsetElevationData";
+		constexpr static rivet::rivet_type_id type_id = 0xa4b88be7;
 
-		constexpr const static std::string_view Elevation_type_name = "Elevation";
-		constexpr const static rivet::rivet_type_id Elevation_type_id = 0xbed7d58d;
-		constexpr const static std::string_view Offset_type_name = "Offset";
-		constexpr const static rivet::rivet_type_id Offset_type_id = 0x677284b7; 
+		constexpr static std::string_view Elevation_type_name = "Elevation";
+		constexpr static rivet::rivet_type_id Elevation_type_id = 0xbed7d58d;
+		constexpr static std::string_view Offset_type_name = "Offset";
+		constexpr static rivet::rivet_type_id Offset_type_id = 0x677284b7; 
 
 		explicit LocalOffsetElevationData() = default;
 		explicit LocalOffsetElevationData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

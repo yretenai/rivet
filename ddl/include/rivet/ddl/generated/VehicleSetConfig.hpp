@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct VehicleSetListEntry; 
 
 	struct RIVET_DDL_SHARED VehicleSetConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "VehicleSetConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xfdc40927;
+		constexpr static std::string_view type_name = "VehicleSetConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xfdc40927;
 
-		constexpr const static std::string_view VehicleSetList_type_name = "VehicleSetList";
-		constexpr const static rivet::rivet_type_id VehicleSetList_type_id = 0x1c316b7c; 
+		constexpr static std::string_view VehicleSetList_type_name = "VehicleSetList";
+		constexpr static rivet::rivet_type_id VehicleSetList_type_id = 0x1c316b7c; 
 
 		explicit VehicleSetConfig() = default;
 		explicit VehicleSetConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

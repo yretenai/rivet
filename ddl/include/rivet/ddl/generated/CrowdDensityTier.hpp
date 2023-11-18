@@ -19,13 +19,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED CrowdDensityTier : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "CrowdDensityTier";
-		constexpr const static rivet::rivet_type_id type_id = 0x1decbe42;
+		constexpr static std::string_view type_name = "CrowdDensityTier";
+		constexpr static rivet::rivet_type_id type_id = 0x1decbe42;
 
-		constexpr const static std::string_view Density_type_name = "Density";
-		constexpr const static rivet::rivet_type_id Density_type_id = 0xc14209c2;
-		constexpr const static std::string_view MaxDistance_type_name = "MaxDistance";
-		constexpr const static rivet::rivet_type_id MaxDistance_type_id = 0x88831235; 
+		constexpr static std::string_view Density_type_name = "Density";
+		constexpr static rivet::rivet_type_id Density_type_id = 0xc14209c2;
+		constexpr static std::string_view MaxDistance_type_name = "MaxDistance";
+		constexpr static rivet::rivet_type_id MaxDistance_type_id = 0x88831235; 
 
 		explicit CrowdDensityTier() = default;
 		explicit CrowdDensityTier([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

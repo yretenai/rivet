@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED UIOptionTypePresetList : UIOptionTypeSettingList {
-		constexpr const static std::string_view type_name = "UIOptionTypePresetList";
-		constexpr const static rivet::rivet_type_id type_id = 0x21a1ed42;
+		constexpr static std::string_view type_name = "UIOptionTypePresetList";
+		constexpr static rivet::rivet_type_id type_id = 0x21a1ed42;
 
-		constexpr const static std::string_view DisableChildrenIndex_type_name = "DisableChildrenIndex";
-		constexpr const static rivet::rivet_type_id DisableChildrenIndex_type_id = 0xd7d1fe28; 
+		constexpr static std::string_view DisableChildrenIndex_type_name = "DisableChildrenIndex";
+		constexpr static rivet::rivet_type_id DisableChildrenIndex_type_id = 0xd7d1fe28; 
 
 		explicit UIOptionTypePresetList() = default;
 		explicit UIOptionTypePresetList([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

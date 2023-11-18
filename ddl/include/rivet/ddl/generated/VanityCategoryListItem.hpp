@@ -17,22 +17,22 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/enums/xa3499465.hpp>
-#include <rivet/ddl/generated/enums/xca348341.hpp> 
+#include <rivet/ddl/generated/enums/xca348341.hpp>
+#include <rivet/ddl/generated/enums/xa3499465.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED VanityCategoryListItem : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "VanityCategoryListItem";
-		constexpr const static rivet::rivet_type_id type_id = 0xf07da320;
+		constexpr static std::string_view type_name = "VanityCategoryListItem";
+		constexpr static rivet::rivet_type_id type_id = 0xf07da320;
 
-		constexpr const static std::string_view VanityCategory_type_name = "VanityCategory";
-		constexpr const static rivet::rivet_type_id VanityCategory_type_id = 0x916b9072;
-		constexpr const static std::string_view VanityCategoryLocTag_type_name = "VanityCategoryLocTag";
-		constexpr const static rivet::rivet_type_id VanityCategoryLocTag_type_id = 0x9f47308;
-		constexpr const static std::string_view VanityMenu_type_name = "VanityMenu";
-		constexpr const static rivet::rivet_type_id VanityMenu_type_id = 0xcbbe6a10;
-		constexpr const static std::string_view ShowOnVendorMenu_type_name = "ShowOnVendorMenu";
-		constexpr const static rivet::rivet_type_id ShowOnVendorMenu_type_id = 0x159446ac; 
+		constexpr static std::string_view VanityCategory_type_name = "VanityCategory";
+		constexpr static rivet::rivet_type_id VanityCategory_type_id = 0x916b9072;
+		constexpr static std::string_view VanityCategoryLocTag_type_name = "VanityCategoryLocTag";
+		constexpr static rivet::rivet_type_id VanityCategoryLocTag_type_id = 0x9f47308;
+		constexpr static std::string_view VanityMenu_type_name = "VanityMenu";
+		constexpr static rivet::rivet_type_id VanityMenu_type_id = 0xcbbe6a10;
+		constexpr static std::string_view ShowOnVendorMenu_type_name = "ShowOnVendorMenu";
+		constexpr static rivet::rivet_type_id ShowOnVendorMenu_type_id = 0x159446ac; 
 
 		explicit VanityCategoryListItem() = default;
 		explicit VanityCategoryListItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -17,25 +17,25 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/SimpleShotPrius.hpp>
+#include <rivet/ddl/generated/enums/KnockbackLevels.hpp>
 #include <rivet/ddl/generated/enums/x8d7e44cf.hpp>
-#include <rivet/ddl/generated/enums/KnockbackLevels.hpp> 
+#include <rivet/ddl/generated/SimpleShotPrius.hpp> 
 
 namespace rivet::ddl::generated {
 	struct DDLVector3; 
 
 	struct RIVET_DDL_SHARED SonicShotPrius : SimpleShotPrius {
-		constexpr const static std::string_view type_name = "SonicShotPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x6cbff66e;
+		constexpr static std::string_view type_name = "SonicShotPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x6cbff66e;
 
-		constexpr const static std::string_view DamageType_type_name = "DamageType";
-		constexpr const static rivet::rivet_type_id DamageType_type_id = 0x840c154d;
-		constexpr const static std::string_view KnockbackLevel_type_name = "KnockbackLevel";
-		constexpr const static rivet::rivet_type_id KnockbackLevel_type_id = 0x2554a262;
-		constexpr const static std::string_view StartingSize_type_name = "StartingSize";
-		constexpr const static rivet::rivet_type_id StartingSize_type_id = 0x1c6a0fe4;
-		constexpr const static std::string_view EndingSize_type_name = "EndingSize";
-		constexpr const static rivet::rivet_type_id EndingSize_type_id = 0xbe069505; 
+		constexpr static std::string_view DamageType_type_name = "DamageType";
+		constexpr static rivet::rivet_type_id DamageType_type_id = 0x840c154d;
+		constexpr static std::string_view KnockbackLevel_type_name = "KnockbackLevel";
+		constexpr static rivet::rivet_type_id KnockbackLevel_type_id = 0x2554a262;
+		constexpr static std::string_view StartingSize_type_name = "StartingSize";
+		constexpr static rivet::rivet_type_id StartingSize_type_id = 0x1c6a0fe4;
+		constexpr static std::string_view EndingSize_type_name = "EndingSize";
+		constexpr static rivet::rivet_type_id EndingSize_type_id = 0xbe069505; 
 
 		explicit SonicShotPrius() = default;
 		explicit SonicShotPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

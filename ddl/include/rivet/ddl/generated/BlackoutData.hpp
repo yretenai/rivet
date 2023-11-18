@@ -18,17 +18,17 @@
 #include <rivet/structures/rivet_serialization.hpp>
 
 namespace rivet::ddl::generated {
-	struct AssetReferenceDef;
-	struct BlackoutMaterialItem; 
+	struct BlackoutMaterialItem;
+	struct AssetReferenceDef; 
 
 	struct RIVET_DDL_SHARED BlackoutData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "BlackoutData";
-		constexpr const static rivet::rivet_type_id type_id = 0xf6700375;
+		constexpr static std::string_view type_name = "BlackoutData";
+		constexpr static rivet::rivet_type_id type_id = 0xf6700375;
 
-		constexpr const static std::string_view FilterAsset_type_name = "FilterAsset";
-		constexpr const static rivet::rivet_type_id FilterAsset_type_id = 0x7bad33e1;
-		constexpr const static std::string_view BlackoutMaterials_type_name = "BlackoutMaterials";
-		constexpr const static rivet::rivet_type_id BlackoutMaterials_type_id = 0x8ecfb46b; 
+		constexpr static std::string_view FilterAsset_type_name = "FilterAsset";
+		constexpr static rivet::rivet_type_id FilterAsset_type_id = 0x7bad33e1;
+		constexpr static std::string_view BlackoutMaterials_type_name = "BlackoutMaterials";
+		constexpr static rivet::rivet_type_id BlackoutMaterials_type_id = 0x8ecfb46b; 
 
 		explicit BlackoutData() = default;
 		explicit BlackoutData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -19,13 +19,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED HeadSizeMapping : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "HeadSizeMapping";
-		constexpr const static rivet::rivet_type_id type_id = 0x83df5685;
+		constexpr static std::string_view type_name = "HeadSizeMapping";
+		constexpr static rivet::rivet_type_id type_id = 0x83df5685;
 
-		constexpr const static std::string_view SizeLabel_type_name = "SizeLabel";
-		constexpr const static rivet::rivet_type_id SizeLabel_type_id = 0x7b1b565f;
-		constexpr const static std::string_view Scale_type_name = "Scale";
-		constexpr const static rivet::rivet_type_id Scale_type_id = 0xf515e945; 
+		constexpr static std::string_view SizeLabel_type_name = "SizeLabel";
+		constexpr static rivet::rivet_type_id SizeLabel_type_id = 0x7b1b565f;
+		constexpr static std::string_view Scale_type_name = "Scale";
+		constexpr static rivet::rivet_type_id Scale_type_id = 0xf515e945; 
 
 		explicit HeadSizeMapping() = default;
 		explicit HeadSizeMapping([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

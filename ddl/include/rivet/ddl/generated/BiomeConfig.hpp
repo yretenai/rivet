@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct BiomeDef; 
 
 	struct RIVET_DDL_SHARED BiomeConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "BiomeConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xb04ff3c0;
+		constexpr static std::string_view type_name = "BiomeConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xb04ff3c0;
 
-		constexpr const static std::string_view Biome_type_name = "Biome";
-		constexpr const static rivet::rivet_type_id Biome_type_id = 0xd4adab58; 
+		constexpr static std::string_view Biome_type_name = "Biome";
+		constexpr static rivet::rivet_type_id Biome_type_id = 0xd4adab58; 
 
 		explicit BiomeConfig() = default;
 		explicit BiomeConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

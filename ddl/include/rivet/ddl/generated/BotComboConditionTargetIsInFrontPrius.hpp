@@ -21,17 +21,17 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED BotComboConditionTargetIsInFrontPrius : BotComboConditionBasePrius {
-		constexpr const static std::string_view type_name = "BotComboConditionTargetIsInFrontPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x19fa774d;
+		constexpr static std::string_view type_name = "BotComboConditionTargetIsInFrontPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x19fa774d;
 
-		constexpr const static std::string_view FrontDotTolerance_type_name = "FrontDotTolerance";
-		constexpr const static rivet::rivet_type_id FrontDotTolerance_type_id = 0x2b1a5114;
-		constexpr const static std::string_view XZOnly_type_name = "XZOnly";
-		constexpr const static rivet::rivet_type_id XZOnly_type_id = 0x7bc7f470;
-		constexpr const static std::string_view CheckLeftNotFront_type_name = "CheckLeftNotFront";
-		constexpr const static rivet::rivet_type_id CheckLeftNotFront_type_id = 0xcfc4c150;
-		constexpr const static std::string_view ReverseLogic_type_name = "ReverseLogic";
-		constexpr const static rivet::rivet_type_id ReverseLogic_type_id = 0x49c47cc; 
+		constexpr static std::string_view FrontDotTolerance_type_name = "FrontDotTolerance";
+		constexpr static rivet::rivet_type_id FrontDotTolerance_type_id = 0x2b1a5114;
+		constexpr static std::string_view XZOnly_type_name = "XZOnly";
+		constexpr static rivet::rivet_type_id XZOnly_type_id = 0x7bc7f470;
+		constexpr static std::string_view CheckLeftNotFront_type_name = "CheckLeftNotFront";
+		constexpr static rivet::rivet_type_id CheckLeftNotFront_type_id = 0xcfc4c150;
+		constexpr static std::string_view ReverseLogic_type_name = "ReverseLogic";
+		constexpr static rivet::rivet_type_id ReverseLogic_type_id = 0x49c47cc; 
 
 		explicit BotComboConditionTargetIsInFrontPrius() = default;
 		explicit BotComboConditionTargetIsInFrontPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ColorCorrectionItem : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "ColorCorrectionItem";
-		constexpr const static rivet::rivet_type_id type_id = 0x342a14c4;
+		constexpr static std::string_view type_name = "ColorCorrectionItem";
+		constexpr static rivet::rivet_type_id type_id = 0x342a14c4;
 
-		constexpr const static std::string_view Type_type_name = "Type";
-		constexpr const static rivet::rivet_type_id Type_type_id = 0xbc4e9799;
-		constexpr const static std::string_view ColorCorrectionTexture_type_name = "ColorCorrectionTexture";
-		constexpr const static rivet::rivet_type_id ColorCorrectionTexture_type_id = 0x6aba6325; 
+		constexpr static std::string_view Type_type_name = "Type";
+		constexpr static rivet::rivet_type_id Type_type_id = 0xbc4e9799;
+		constexpr static std::string_view ColorCorrectionTexture_type_name = "ColorCorrectionTexture";
+		constexpr static rivet::rivet_type_id ColorCorrectionTexture_type_id = 0x6aba6325; 
 
 		explicit ColorCorrectionItem() = default;
 		explicit ColorCorrectionItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

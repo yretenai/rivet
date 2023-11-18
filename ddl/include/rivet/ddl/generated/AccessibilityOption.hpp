@@ -23,21 +23,21 @@ namespace rivet::ddl::generated {
 	struct AccessibilityOptionTypeBase; 
 
 	struct RIVET_DDL_SHARED AccessibilityOption : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "AccessibilityOption";
-		constexpr const static rivet::rivet_type_id type_id = 0xfe91b414;
+		constexpr static std::string_view type_name = "AccessibilityOption";
+		constexpr static rivet::rivet_type_id type_id = 0xfe91b414;
 
-		constexpr const static std::string_view Type_type_name = "Type";
-		constexpr const static rivet::rivet_type_id Type_type_id = 0xbc4e9799;
-		constexpr const static std::string_view ID_type_name = "ID";
-		constexpr const static rivet::rivet_type_id ID_type_id = 0xb13f6a45;
-		constexpr const static std::string_view Name_type_name = "Name";
-		constexpr const static rivet::rivet_type_id Name_type_id = 0x6eb3beb6;
-		constexpr const static std::string_view ButtonCombo_type_name = "ButtonCombo";
-		constexpr const static rivet::rivet_type_id ButtonCombo_type_id = 0x820936d4;
-		constexpr const static std::string_view Description_type_name = "Description";
-		constexpr const static rivet::rivet_type_id Description_type_id = 0xe03811fd;
-		constexpr const static std::string_view Icon_type_name = "Icon";
-		constexpr const static rivet::rivet_type_id Icon_type_id = 0x5504e96b; 
+		constexpr static std::string_view Type_type_name = "Type";
+		constexpr static rivet::rivet_type_id Type_type_id = 0xbc4e9799;
+		constexpr static std::string_view ID_type_name = "ID";
+		constexpr static rivet::rivet_type_id ID_type_id = 0xb13f6a45;
+		constexpr static std::string_view Name_type_name = "Name";
+		constexpr static rivet::rivet_type_id Name_type_id = 0x6eb3beb6;
+		constexpr static std::string_view ButtonCombo_type_name = "ButtonCombo";
+		constexpr static rivet::rivet_type_id ButtonCombo_type_id = 0x820936d4;
+		constexpr static std::string_view Description_type_name = "Description";
+		constexpr static rivet::rivet_type_id Description_type_id = 0xe03811fd;
+		constexpr static std::string_view Icon_type_name = "Icon";
+		constexpr static rivet::rivet_type_id Icon_type_id = 0x5504e96b; 
 
 		explicit AccessibilityOption() = default;
 		explicit AccessibilityOption([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

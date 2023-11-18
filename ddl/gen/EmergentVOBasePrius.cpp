@@ -4,8 +4,8 @@
 // SPDX-License-Identifier: MPL-2.0
 
 #include <rivet/ddl/generated/EmergentVODataContainerPrius.hpp>
-#include <rivet/ddl/generated/EmergentVOTagList.hpp>
-#include <rivet/ddl/generated/EmergentVOManagerBasePrius.hpp> 
+#include <rivet/ddl/generated/EmergentVOManagerBasePrius.hpp>
+#include <rivet/ddl/generated/EmergentVOTagList.hpp> 
 
 #include <rivet/ddl/generated/EmergentVOBasePrius.hpp>
 

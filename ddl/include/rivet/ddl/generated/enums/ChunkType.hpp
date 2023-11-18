@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view ChunkType_type_name = "ChunkType";
-	constexpr const static rivet::rivet_type_id ChunkType_type_id = 0x6df07d3c;
+	constexpr static std::string_view ChunkType_type_name = "ChunkType";
+	constexpr static rivet::rivet_type_id ChunkType_type_id = 0x6df07d3c;
 
-	constexpr const static std::array<std::string_view, 3> ChunkType_values = {
+	constexpr static std::array<std::string_view, 3> ChunkType_values = {
 		"kBreakable",
 		"kBot",
 		"kMisc", 

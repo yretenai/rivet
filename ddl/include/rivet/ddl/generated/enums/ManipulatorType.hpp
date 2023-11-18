@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view ManipulatorType_type_name = "ManipulatorType";
-	constexpr const static rivet::rivet_type_id ManipulatorType_type_id = 0x1d5f1904;
+	constexpr static std::string_view ManipulatorType_type_name = "ManipulatorType";
+	constexpr static rivet::rivet_type_id ManipulatorType_type_id = 0x1d5f1904;
 
-	constexpr const static std::array<std::string_view, 7> ManipulatorType_values = {
+	constexpr static std::array<std::string_view, 7> ManipulatorType_values = {
 		"kTranslation",
 		"kTranslationWithSnap",
 		"kRotation",

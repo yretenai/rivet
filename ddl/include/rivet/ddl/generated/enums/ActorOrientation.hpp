@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view ActorOrientation_type_name = "ActorOrientation";
-	constexpr const static rivet::rivet_type_id ActorOrientation_type_id = 0xa073542a;
+	constexpr static std::string_view ActorOrientation_type_name = "ActorOrientation";
+	constexpr static rivet::rivet_type_id ActorOrientation_type_id = 0xa073542a;
 
-	constexpr const static std::array<std::string_view, 3> ActorOrientation_values = {
+	constexpr static std::array<std::string_view, 3> ActorOrientation_values = {
 		"kPredictedVelocityAtImpactIsZAxis",
 		"kCameraToHitIsZAxis",
 		"kCollisionNormalIsZAxis", 

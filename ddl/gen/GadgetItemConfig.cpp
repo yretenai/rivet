@@ -3,16 +3,16 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
+#include <rivet/ddl/generated/SwingshotItemConfig.hpp>
+#include <rivet/ddl/generated/GrindBootItemConfig.hpp>
+#include <rivet/ddl/generated/HelipackItemConfig.hpp>
+#include <rivet/ddl/generated/VersaGloveItemConfig.hpp>
 #include <rivet/ddl/generated/MagBootItemConfig.hpp>
-#include <rivet/ddl/generated/BoxBreakerItemConfig.hpp>
+#include <rivet/ddl/generated/GlitchProjectorItemConfig.hpp>
+#include <rivet/ddl/generated/PortalZipItemConfig.hpp>
 #include <rivet/ddl/generated/MapOMaticItemConfig.hpp>
 #include <rivet/ddl/generated/HoverbootItemConfig.hpp>
-#include <rivet/ddl/generated/SwingshotItemConfig.hpp>
-#include <rivet/ddl/generated/HelipackItemConfig.hpp>
-#include <rivet/ddl/generated/PortalZipItemConfig.hpp>
-#include <rivet/ddl/generated/GrindBootItemConfig.hpp>
-#include <rivet/ddl/generated/GlitchProjectorItemConfig.hpp>
-#include <rivet/ddl/generated/VersaGloveItemConfig.hpp> 
+#include <rivet/ddl/generated/BoxBreakerItemConfig.hpp> 
 
 #include <rivet/ddl/generated/GadgetItemConfig.hpp>
 

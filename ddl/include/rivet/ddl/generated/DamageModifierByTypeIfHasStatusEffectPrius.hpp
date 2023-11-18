@@ -17,24 +17,24 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/DamageModifierIncomingPrius.hpp>
-#include <rivet/ddl/generated/enums/x8d7e44cf.hpp> 
+#include <rivet/ddl/generated/enums/x8d7e44cf.hpp>
+#include <rivet/ddl/generated/DamageModifierIncomingPrius.hpp> 
 
 namespace rivet::ddl::generated {
 	struct DamageModStatusEffectData; 
 
 	struct RIVET_DDL_SHARED DamageModifierByTypeIfHasStatusEffectPrius : DamageModifierIncomingPrius {
-		constexpr const static std::string_view type_name = "DamageModifierByTypeIfHasStatusEffectPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x56d819f9;
+		constexpr static std::string_view type_name = "DamageModifierByTypeIfHasStatusEffectPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x56d819f9;
 
-		constexpr const static std::string_view ValidDamageTypes_type_name = "ValidDamageTypes";
-		constexpr const static rivet::rivet_type_id ValidDamageTypes_type_id = 0x7fb913f8;
-		constexpr const static std::string_view StatusMultiplier_type_name = "StatusMultiplier";
-		constexpr const static rivet::rivet_type_id StatusMultiplier_type_id = 0x6fc67017;
-		constexpr const static std::string_view DamageMultiplier_type_name = "DamageMultiplier";
-		constexpr const static rivet::rivet_type_id DamageMultiplier_type_id = 0x26406e37;
-		constexpr const static std::string_view StatusEffects_type_name = "StatusEffects";
-		constexpr const static rivet::rivet_type_id StatusEffects_type_id = 0xfcb6a86d; 
+		constexpr static std::string_view ValidDamageTypes_type_name = "ValidDamageTypes";
+		constexpr static rivet::rivet_type_id ValidDamageTypes_type_id = 0x7fb913f8;
+		constexpr static std::string_view StatusMultiplier_type_name = "StatusMultiplier";
+		constexpr static rivet::rivet_type_id StatusMultiplier_type_id = 0x6fc67017;
+		constexpr static std::string_view DamageMultiplier_type_name = "DamageMultiplier";
+		constexpr static rivet::rivet_type_id DamageMultiplier_type_id = 0x26406e37;
+		constexpr static std::string_view StatusEffects_type_name = "StatusEffects";
+		constexpr static rivet::rivet_type_id StatusEffects_type_id = 0xfcb6a86d; 
 
 		explicit DamageModifierByTypeIfHasStatusEffectPrius() = default;
 		explicit DamageModifierByTypeIfHasStatusEffectPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

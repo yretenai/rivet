@@ -21,23 +21,23 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED SkinItemColorOverride : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "SkinItemColorOverride";
-		constexpr const static rivet::rivet_type_id type_id = 0x40313556;
+		constexpr static std::string_view type_name = "SkinItemColorOverride";
+		constexpr static rivet::rivet_type_id type_id = 0x40313556;
 
-		constexpr const static std::string_view ColorChannels_type_name = "ColorChannels";
-		constexpr const static rivet::rivet_type_id ColorChannels_type_id = 0x12c50e26;
-		constexpr const static std::string_view ColorConstantName_type_name = "ColorConstantName";
-		constexpr const static rivet::rivet_type_id ColorConstantName_type_id = 0x76c51e4c;
-		constexpr const static std::string_view R_type_name = "R";
-		constexpr const static rivet::rivet_type_id R_type_id = 0xbee6a893;
-		constexpr const static std::string_view G_type_name = "G";
-		constexpr const static rivet::rivet_type_id G_type_id = 0xd33b4c78;
-		constexpr const static std::string_view B_type_name = "B";
-		constexpr const static rivet::rivet_type_id B_type_id = 0xa351b8f7;
-		constexpr const static std::string_view ColorConfig_type_name = "ColorConfig";
-		constexpr const static rivet::rivet_type_id ColorConfig_type_id = 0xa50ec5bf;
-		constexpr const static std::string_view ColorConfigName_type_name = "ColorConfigName";
-		constexpr const static rivet::rivet_type_id ColorConfigName_type_id = 0x351f7eaa; 
+		constexpr static std::string_view ColorChannels_type_name = "ColorChannels";
+		constexpr static rivet::rivet_type_id ColorChannels_type_id = 0x12c50e26;
+		constexpr static std::string_view ColorConstantName_type_name = "ColorConstantName";
+		constexpr static rivet::rivet_type_id ColorConstantName_type_id = 0x76c51e4c;
+		constexpr static std::string_view R_type_name = "R";
+		constexpr static rivet::rivet_type_id R_type_id = 0xbee6a893;
+		constexpr static std::string_view G_type_name = "G";
+		constexpr static rivet::rivet_type_id G_type_id = 0xd33b4c78;
+		constexpr static std::string_view B_type_name = "B";
+		constexpr static rivet::rivet_type_id B_type_id = 0xa351b8f7;
+		constexpr static std::string_view ColorConfig_type_name = "ColorConfig";
+		constexpr static rivet::rivet_type_id ColorConfig_type_id = 0xa50ec5bf;
+		constexpr static std::string_view ColorConfigName_type_name = "ColorConfigName";
+		constexpr static rivet::rivet_type_id ColorConfigName_type_id = 0x351f7eaa; 
 
 		explicit SkinItemColorOverride() = default;
 		explicit SkinItemColorOverride([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

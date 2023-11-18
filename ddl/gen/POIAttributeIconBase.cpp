@@ -3,9 +3,9 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/POIAttributeIconNone.hpp>
+#include <rivet/ddl/generated/POIAttributeIconSingleSVG.hpp>
 #include <rivet/ddl/generated/POIAttributeIconSingle.hpp>
-#include <rivet/ddl/generated/POIAttributeIconSingleSVG.hpp> 
+#include <rivet/ddl/generated/POIAttributeIconNone.hpp> 
 
 #include <rivet/ddl/generated/POIAttributeIconBase.hpp>
 

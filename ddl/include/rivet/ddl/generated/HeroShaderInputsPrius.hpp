@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED HeroShaderInputsPrius : SkinShaderUpdaterPrius {
-		constexpr const static std::string_view type_name = "HeroShaderInputsPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xa7b68df6;
+		constexpr static std::string_view type_name = "HeroShaderInputsPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xa7b68df6;
 
 		explicit HeroShaderInputsPrius() = default;
 		explicit HeroShaderInputsPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

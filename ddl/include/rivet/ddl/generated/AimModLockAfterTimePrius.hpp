@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED AimModLockAfterTimePrius : AimModifierPrius {
-		constexpr const static std::string_view type_name = "AimModLockAfterTimePrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xc5c43516;
+		constexpr static std::string_view type_name = "AimModLockAfterTimePrius";
+		constexpr static rivet::rivet_type_id type_id = 0xc5c43516;
 
-		constexpr const static std::string_view LockTime_type_name = "LockTime";
-		constexpr const static rivet::rivet_type_id LockTime_type_id = 0xebf9382e;
-		constexpr const static std::string_view LockFromBeginningIfOffScreen_type_name = "LockFromBeginningIfOffScreen";
-		constexpr const static rivet::rivet_type_id LockFromBeginningIfOffScreen_type_id = 0x63177930; 
+		constexpr static std::string_view LockTime_type_name = "LockTime";
+		constexpr static rivet::rivet_type_id LockTime_type_id = 0xebf9382e;
+		constexpr static std::string_view LockFromBeginningIfOffScreen_type_name = "LockFromBeginningIfOffScreen";
+		constexpr static rivet::rivet_type_id LockFromBeginningIfOffScreen_type_id = 0x63177930; 
 
 		explicit AimModLockAfterTimePrius() = default;
 		explicit AimModLockAfterTimePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

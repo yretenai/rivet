@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct WeaponListElement; 
 
 	struct RIVET_DDL_SHARED MasterWeaponList : ConfigBase {
-		constexpr const static std::string_view type_name = "MasterWeaponList";
-		constexpr const static rivet::rivet_type_id type_id = 0x3b8a44ab;
+		constexpr static std::string_view type_name = "MasterWeaponList";
+		constexpr static rivet::rivet_type_id type_id = 0x3b8a44ab;
 
-		constexpr const static std::string_view Weapons_type_name = "Weapons";
-		constexpr const static rivet::rivet_type_id Weapons_type_id = 0x53e4d8d9; 
+		constexpr static std::string_view Weapons_type_name = "Weapons";
+		constexpr static rivet::rivet_type_id Weapons_type_id = 0x53e4d8d9; 
 
 		explicit MasterWeaponList() = default;
 		explicit MasterWeaponList([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

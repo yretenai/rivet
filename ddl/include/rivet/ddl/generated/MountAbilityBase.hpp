@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED MountAbilityBase : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "MountAbilityBase";
-		constexpr const static rivet::rivet_type_id type_id = 0xb856920d;
+		constexpr static std::string_view type_name = "MountAbilityBase";
+		constexpr static rivet::rivet_type_id type_id = 0xb856920d;
 
-		constexpr const static std::string_view InputControls_type_name = "InputControls";
-		constexpr const static rivet::rivet_type_id InputControls_type_id = 0x5dbc7441; 
+		constexpr static std::string_view InputControls_type_name = "InputControls";
+		constexpr static rivet::rivet_type_id InputControls_type_id = 0x5dbc7441; 
 
 		explicit MountAbilityBase() = default;
 		explicit MountAbilityBase([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED AimModStrafeTargetPrius : AimModifierPrius {
-		constexpr const static std::string_view type_name = "AimModStrafeTargetPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x9ecdb08f;
+		constexpr static std::string_view type_name = "AimModStrafeTargetPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x9ecdb08f;
 
-		constexpr const static std::string_view StrafeWidthMin_type_name = "StrafeWidthMin";
-		constexpr const static rivet::rivet_type_id StrafeWidthMin_type_id = 0xba994bc4;
-		constexpr const static std::string_view StrafeWidthMax_type_name = "StrafeWidthMax";
-		constexpr const static rivet::rivet_type_id StrafeWidthMax_type_id = 0x8694749d; 
+		constexpr static std::string_view StrafeWidthMin_type_name = "StrafeWidthMin";
+		constexpr static rivet::rivet_type_id StrafeWidthMin_type_id = 0xba994bc4;
+		constexpr static std::string_view StrafeWidthMax_type_name = "StrafeWidthMax";
+		constexpr static rivet::rivet_type_id StrafeWidthMax_type_id = 0x8694749d; 
 
 		explicit AimModStrafeTargetPrius() = default;
 		explicit AimModStrafeTargetPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

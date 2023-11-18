@@ -3,9 +3,9 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/VariableSpeedShotMotionPriusModDef.hpp>
+#include <rivet/ddl/generated/HomingShotMotionPrius.hpp>
 #include <rivet/ddl/generated/VariableSpeedShotMotionGamePrius.hpp>
-#include <rivet/ddl/generated/HomingShotMotionPrius.hpp> 
+#include <rivet/ddl/generated/VariableSpeedShotMotionPriusModDef.hpp> 
 
 #include <rivet/ddl/generated/VariableSpeedShotMotionPrius.hpp>
 

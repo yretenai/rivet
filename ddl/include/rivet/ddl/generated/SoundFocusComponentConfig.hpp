@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct SoundFocusComponentData; 
 
 	struct RIVET_DDL_SHARED SoundFocusComponentConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "SoundFocusComponentConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xe1f3fbe6;
+		constexpr static std::string_view type_name = "SoundFocusComponentConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xe1f3fbe6;
 
-		constexpr const static std::string_view SoundFocusData_type_name = "SoundFocusData";
-		constexpr const static rivet::rivet_type_id SoundFocusData_type_id = 0x8d2ce588; 
+		constexpr static std::string_view SoundFocusData_type_name = "SoundFocusData";
+		constexpr static rivet::rivet_type_id SoundFocusData_type_id = 0x8d2ce588; 
 
 		explicit SoundFocusComponentConfig() = default;
 		explicit SoundFocusComponentConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

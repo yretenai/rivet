@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DamageModifierCordelionNefariousShieldPrius : DamageModifierIncomingPrius {
-		constexpr const static std::string_view type_name = "DamageModifierCordelionNefariousShieldPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xd0ff5d1;
+		constexpr static std::string_view type_name = "DamageModifierCordelionNefariousShieldPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xd0ff5d1;
 
-		constexpr const static std::string_view DamageReductionMultiplier_type_name = "DamageReductionMultiplier";
-		constexpr const static rivet::rivet_type_id DamageReductionMultiplier_type_id = 0x79a857f1; 
+		constexpr static std::string_view DamageReductionMultiplier_type_name = "DamageReductionMultiplier";
+		constexpr static rivet::rivet_type_id DamageReductionMultiplier_type_id = 0x79a857f1; 
 
 		explicit DamageModifierCordelionNefariousShieldPrius() = default;
 		explicit DamageModifierCordelionNefariousShieldPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

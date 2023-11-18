@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view MissionStates_type_name = "MissionStates";
-	constexpr const static rivet::rivet_type_id MissionStates_type_id = 0x13b9234f;
+	constexpr static std::string_view MissionStates_type_name = "MissionStates";
+	constexpr static rivet::rivet_type_id MissionStates_type_id = 0x13b9234f;
 
-	constexpr const static std::array<std::string_view, 6> MissionStates_values = {
+	constexpr static std::array<std::string_view, 6> MissionStates_values = {
 		"kInactive",
 		"kAvailable",
 		"kActive",

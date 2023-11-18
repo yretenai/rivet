@@ -21,25 +21,25 @@ namespace rivet::ddl::generated {
 	struct ActivityReward; 
 
 	struct RIVET_DDL_SHARED ArenaCupActivityData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "ArenaCupActivityData";
-		constexpr const static rivet::rivet_type_id type_id = 0x9646cd17;
+		constexpr static std::string_view type_name = "ArenaCupActivityData";
+		constexpr static rivet::rivet_type_id type_id = 0x9646cd17;
 
-		constexpr const static std::string_view Enabled_type_name = "Enabled";
-		constexpr const static rivet::rivet_type_id Enabled_type_id = 0x5113d8bc;
-		constexpr const static std::string_view ActivityId_type_name = "ActivityId";
-		constexpr const static rivet::rivet_type_id ActivityId_type_id = 0xc803bcc5;
-		constexpr const static std::string_view NameLocTag_type_name = "NameLocTag";
-		constexpr const static rivet::rivet_type_id NameLocTag_type_id = 0xa0041b54;
-		constexpr const static std::string_view DescLocTag_type_name = "DescLocTag";
-		constexpr const static rivet::rivet_type_id DescLocTag_type_id = 0xe02bccb2;
-		constexpr const static std::string_view SmallImage_type_name = "SmallImage";
-		constexpr const static rivet::rivet_type_id SmallImage_type_id = 0x6551fbf4;
-		constexpr const static std::string_view LargeImage_type_name = "LargeImage";
-		constexpr const static rivet::rivet_type_id LargeImage_type_id = 0x82fce17f;
-		constexpr const static std::string_view PlaytimeEstimate_type_name = "PlaytimeEstimate";
-		constexpr const static rivet::rivet_type_id PlaytimeEstimate_type_id = 0x292b559d;
-		constexpr const static std::string_view Reward_type_name = "Reward";
-		constexpr const static rivet::rivet_type_id Reward_type_id = 0x70a93c34; 
+		constexpr static std::string_view Enabled_type_name = "Enabled";
+		constexpr static rivet::rivet_type_id Enabled_type_id = 0x5113d8bc;
+		constexpr static std::string_view ActivityId_type_name = "ActivityId";
+		constexpr static rivet::rivet_type_id ActivityId_type_id = 0xc803bcc5;
+		constexpr static std::string_view NameLocTag_type_name = "NameLocTag";
+		constexpr static rivet::rivet_type_id NameLocTag_type_id = 0xa0041b54;
+		constexpr static std::string_view DescLocTag_type_name = "DescLocTag";
+		constexpr static rivet::rivet_type_id DescLocTag_type_id = 0xe02bccb2;
+		constexpr static std::string_view SmallImage_type_name = "SmallImage";
+		constexpr static rivet::rivet_type_id SmallImage_type_id = 0x6551fbf4;
+		constexpr static std::string_view LargeImage_type_name = "LargeImage";
+		constexpr static rivet::rivet_type_id LargeImage_type_id = 0x82fce17f;
+		constexpr static std::string_view PlaytimeEstimate_type_name = "PlaytimeEstimate";
+		constexpr static rivet::rivet_type_id PlaytimeEstimate_type_id = 0x292b559d;
+		constexpr static std::string_view Reward_type_name = "Reward";
+		constexpr static rivet::rivet_type_id Reward_type_id = 0x70a93c34; 
 
 		explicit ArenaCupActivityData() = default;
 		explicit ArenaCupActivityData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

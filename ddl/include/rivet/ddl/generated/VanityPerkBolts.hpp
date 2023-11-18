@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED VanityPerkBolts : VanityPerkBase {
-		constexpr const static std::string_view type_name = "VanityPerkBolts";
-		constexpr const static rivet::rivet_type_id type_id = 0x957c2f41;
+		constexpr static std::string_view type_name = "VanityPerkBolts";
+		constexpr static rivet::rivet_type_id type_id = 0x957c2f41;
 
-		constexpr const static std::string_view BoltMultSet_type_name = "BoltMultSet";
-		constexpr const static rivet::rivet_type_id BoltMultSet_type_id = 0xbbf6e28b;
-		constexpr const static std::string_view BoltMultPiece_type_name = "BoltMultPiece";
-		constexpr const static rivet::rivet_type_id BoltMultPiece_type_id = 0xf5e9d8be; 
+		constexpr static std::string_view BoltMultSet_type_name = "BoltMultSet";
+		constexpr static rivet::rivet_type_id BoltMultSet_type_id = 0xbbf6e28b;
+		constexpr static std::string_view BoltMultPiece_type_name = "BoltMultPiece";
+		constexpr static rivet::rivet_type_id BoltMultPiece_type_id = 0xf5e9d8be; 
 
 		explicit VanityPerkBolts() = default;
 		explicit VanityPerkBolts([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

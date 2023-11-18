@@ -17,24 +17,24 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/enums/x5d60d87e.hpp>
-#include <rivet/ddl/generated/enums/xa06d5978.hpp> 
+#include <rivet/ddl/generated/enums/xa06d5978.hpp>
+#include <rivet/ddl/generated/enums/x5d60d87e.hpp> 
 
 namespace rivet::ddl::generated {
 	struct AssetReferenceDef; 
 
 	struct RIVET_DDL_SHARED SkinItemModel : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "SkinItemModel";
-		constexpr const static rivet::rivet_type_id type_id = 0x6dfd1f15;
+		constexpr static std::string_view type_name = "SkinItemModel";
+		constexpr static rivet::rivet_type_id type_id = 0x6dfd1f15;
 
-		constexpr const static std::string_view BodyType_type_name = "BodyType";
-		constexpr const static rivet::rivet_type_id BodyType_type_id = 0x1a1c112a;
-		constexpr const static std::string_view HeadType_type_name = "HeadType";
-		constexpr const static rivet::rivet_type_id HeadType_type_id = 0xe711902c;
-		constexpr const static std::string_view Model_type_name = "Model";
-		constexpr const static rivet::rivet_type_id Model_type_id = 0xcec6be18;
-		constexpr const static std::string_view ModelInnerLayer_type_name = "ModelInnerLayer";
-		constexpr const static rivet::rivet_type_id ModelInnerLayer_type_id = 0xdb07822b; 
+		constexpr static std::string_view BodyType_type_name = "BodyType";
+		constexpr static rivet::rivet_type_id BodyType_type_id = 0x1a1c112a;
+		constexpr static std::string_view HeadType_type_name = "HeadType";
+		constexpr static rivet::rivet_type_id HeadType_type_id = 0xe711902c;
+		constexpr static std::string_view Model_type_name = "Model";
+		constexpr static rivet::rivet_type_id Model_type_id = 0xcec6be18;
+		constexpr static std::string_view ModelInnerLayer_type_name = "ModelInnerLayer";
+		constexpr static rivet::rivet_type_id ModelInnerLayer_type_id = 0xdb07822b; 
 
 		explicit SkinItemModel() = default;
 		explicit SkinItemModel([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

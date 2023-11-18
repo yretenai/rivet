@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED StatusEffectFireConfig : StatusEffectConfig {
-		constexpr const static std::string_view type_name = "StatusEffectFireConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xde7439f7;
+		constexpr static std::string_view type_name = "StatusEffectFireConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xde7439f7;
 
-		constexpr const static std::string_view DPS_type_name = "DPS";
-		constexpr const static rivet::rivet_type_id DPS_type_id = 0xd213ce3d;
-		constexpr const static std::string_view PostCompositeShader_type_name = "PostCompositeShader";
-		constexpr const static rivet::rivet_type_id PostCompositeShader_type_id = 0xe2b72d5f; 
+		constexpr static std::string_view DPS_type_name = "DPS";
+		constexpr static rivet::rivet_type_id DPS_type_id = 0xd213ce3d;
+		constexpr static std::string_view PostCompositeShader_type_name = "PostCompositeShader";
+		constexpr static rivet::rivet_type_id PostCompositeShader_type_id = 0xe2b72d5f; 
 
 		explicit StatusEffectFireConfig() = default;
 		explicit StatusEffectFireConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

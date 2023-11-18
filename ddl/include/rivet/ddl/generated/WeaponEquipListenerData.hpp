@@ -21,17 +21,17 @@ namespace rivet::ddl::generated {
 	struct EquipLooksPair; 
 
 	struct RIVET_DDL_SHARED WeaponEquipListenerData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "WeaponEquipListenerData";
-		constexpr const static rivet::rivet_type_id type_id = 0xbc8bd80c;
+		constexpr static std::string_view type_name = "WeaponEquipListenerData";
+		constexpr static rivet::rivet_type_id type_id = 0xbc8bd80c;
 
-		constexpr const static std::string_view Animset_type_name = "Animset";
-		constexpr const static rivet::rivet_type_id Animset_type_id = 0xc7825311;
-		constexpr const static std::string_view StartUnarmedChance_type_name = "StartUnarmedChance";
-		constexpr const static rivet::rivet_type_id StartUnarmedChance_type_id = 0x579e93c1;
-		constexpr const static std::string_view EnableAutoEquip_type_name = "EnableAutoEquip";
-		constexpr const static rivet::rivet_type_id EnableAutoEquip_type_id = 0xa1871282;
-		constexpr const static std::string_view EquipLooksPairs_type_name = "EquipLooksPairs";
-		constexpr const static rivet::rivet_type_id EquipLooksPairs_type_id = 0x1cf95900; 
+		constexpr static std::string_view Animset_type_name = "Animset";
+		constexpr static rivet::rivet_type_id Animset_type_id = 0xc7825311;
+		constexpr static std::string_view StartUnarmedChance_type_name = "StartUnarmedChance";
+		constexpr static rivet::rivet_type_id StartUnarmedChance_type_id = 0x579e93c1;
+		constexpr static std::string_view EnableAutoEquip_type_name = "EnableAutoEquip";
+		constexpr static rivet::rivet_type_id EnableAutoEquip_type_id = 0xa1871282;
+		constexpr static std::string_view EquipLooksPairs_type_name = "EquipLooksPairs";
+		constexpr static rivet::rivet_type_id EquipLooksPairs_type_id = 0x1cf95900; 
 
 		explicit WeaponEquipListenerData() = default;
 		explicit WeaponEquipListenerData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -21,15 +21,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED FactionArmorDataElement : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "FactionArmorDataElement";
-		constexpr const static rivet::rivet_type_id type_id = 0xf1d0b92e;
+		constexpr static std::string_view type_name = "FactionArmorDataElement";
+		constexpr static rivet::rivet_type_id type_id = 0xf1d0b92e;
 
-		constexpr const static std::string_view Allegiance_type_name = "Allegiance";
-		constexpr const static rivet::rivet_type_id Allegiance_type_id = 0xd10c0c26;
-		constexpr const static std::string_view DamageReductionPercentSet_type_name = "DamageReductionPercentSet";
-		constexpr const static rivet::rivet_type_id DamageReductionPercentSet_type_id = 0x3150cd1a;
-		constexpr const static std::string_view DamageReductionPercentPiece_type_name = "DamageReductionPercentPiece";
-		constexpr const static rivet::rivet_type_id DamageReductionPercentPiece_type_id = 0x3662d41a; 
+		constexpr static std::string_view Allegiance_type_name = "Allegiance";
+		constexpr static rivet::rivet_type_id Allegiance_type_id = 0xd10c0c26;
+		constexpr static std::string_view DamageReductionPercentSet_type_name = "DamageReductionPercentSet";
+		constexpr static rivet::rivet_type_id DamageReductionPercentSet_type_id = 0x3150cd1a;
+		constexpr static std::string_view DamageReductionPercentPiece_type_name = "DamageReductionPercentPiece";
+		constexpr static rivet::rivet_type_id DamageReductionPercentPiece_type_id = 0x3662d41a; 
 
 		explicit FactionArmorDataElement() = default;
 		explicit FactionArmorDataElement([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -17,39 +17,39 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/ConfigBase.hpp>
-#include <rivet/ddl/generated/bitsets/xf32dacf0.hpp> 
+#include <rivet/ddl/generated/bitsets/xf32dacf0.hpp>
+#include <rivet/ddl/generated/ConfigBase.hpp> 
 
 namespace rivet::ddl::generated {
-	struct ClankPuzzleTimeData;
-	struct ClankPuzzleTargetColorData; 
+	struct ClankPuzzleTargetColorData;
+	struct ClankPuzzleTimeData; 
 
 	struct RIVET_DDL_SHARED ClankPuzzleTargetBaseConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "ClankPuzzleTargetBaseConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x945c4c28;
+		constexpr static std::string_view type_name = "ClankPuzzleTargetBaseConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x945c4c28;
 
-		constexpr const static std::string_view TargetType_type_name = "TargetType";
-		constexpr const static rivet::rivet_type_id TargetType_type_id = 0x75a19d21;
-		constexpr const static std::string_view CanAbsorb_type_name = "CanAbsorb";
-		constexpr const static rivet::rivet_type_id CanAbsorb_type_id = 0x6590c4d5;
-		constexpr const static std::string_view SpeedUpTime_type_name = "SpeedUpTime";
-		constexpr const static rivet::rivet_type_id SpeedUpTime_type_id = 0xcda7c273;
-		constexpr const static std::string_view SlowDownTime_type_name = "SlowDownTime";
-		constexpr const static rivet::rivet_type_id SlowDownTime_type_id = 0xb81b4dc;
-		constexpr const static std::string_view GravityTime_type_name = "GravityTime";
-		constexpr const static rivet::rivet_type_id GravityTime_type_id = 0xd89217e1;
-		constexpr const static std::string_view EnergyTime_type_name = "EnergyTime";
-		constexpr const static rivet::rivet_type_id EnergyTime_type_id = 0x77fe99ab;
-		constexpr const static std::string_view SpeedUpMaterial_type_name = "SpeedUpMaterial";
-		constexpr const static rivet::rivet_type_id SpeedUpMaterial_type_id = 0x25220166;
-		constexpr const static std::string_view SlowDownMaterial_type_name = "SlowDownMaterial";
-		constexpr const static rivet::rivet_type_id SlowDownMaterial_type_id = 0xd18ff876;
-		constexpr const static std::string_view GravityMaterial_type_name = "GravityMaterial";
-		constexpr const static rivet::rivet_type_id GravityMaterial_type_id = 0x76c5f9cf;
-		constexpr const static std::string_view EnergyMaterial_type_name = "EnergyMaterial";
-		constexpr const static rivet::rivet_type_id EnergyMaterial_type_id = 0xe6e6edce;
-		constexpr const static std::string_view MaterialGraphColoring_type_name = "MaterialGraphColoring";
-		constexpr const static rivet::rivet_type_id MaterialGraphColoring_type_id = 0x5a718a26; 
+		constexpr static std::string_view TargetType_type_name = "TargetType";
+		constexpr static rivet::rivet_type_id TargetType_type_id = 0x75a19d21;
+		constexpr static std::string_view CanAbsorb_type_name = "CanAbsorb";
+		constexpr static rivet::rivet_type_id CanAbsorb_type_id = 0x6590c4d5;
+		constexpr static std::string_view SpeedUpTime_type_name = "SpeedUpTime";
+		constexpr static rivet::rivet_type_id SpeedUpTime_type_id = 0xcda7c273;
+		constexpr static std::string_view SlowDownTime_type_name = "SlowDownTime";
+		constexpr static rivet::rivet_type_id SlowDownTime_type_id = 0xb81b4dc;
+		constexpr static std::string_view GravityTime_type_name = "GravityTime";
+		constexpr static rivet::rivet_type_id GravityTime_type_id = 0xd89217e1;
+		constexpr static std::string_view EnergyTime_type_name = "EnergyTime";
+		constexpr static rivet::rivet_type_id EnergyTime_type_id = 0x77fe99ab;
+		constexpr static std::string_view SpeedUpMaterial_type_name = "SpeedUpMaterial";
+		constexpr static rivet::rivet_type_id SpeedUpMaterial_type_id = 0x25220166;
+		constexpr static std::string_view SlowDownMaterial_type_name = "SlowDownMaterial";
+		constexpr static rivet::rivet_type_id SlowDownMaterial_type_id = 0xd18ff876;
+		constexpr static std::string_view GravityMaterial_type_name = "GravityMaterial";
+		constexpr static rivet::rivet_type_id GravityMaterial_type_id = 0x76c5f9cf;
+		constexpr static std::string_view EnergyMaterial_type_name = "EnergyMaterial";
+		constexpr static rivet::rivet_type_id EnergyMaterial_type_id = 0xe6e6edce;
+		constexpr static std::string_view MaterialGraphColoring_type_name = "MaterialGraphColoring";
+		constexpr static rivet::rivet_type_id MaterialGraphColoring_type_id = 0x5a718a26; 
 
 		explicit ClankPuzzleTargetBaseConfig() = default;
 		explicit ClankPuzzleTargetBaseConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

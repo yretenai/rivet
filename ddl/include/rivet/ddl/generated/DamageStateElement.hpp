@@ -19,23 +19,23 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DamageStateElement : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "DamageStateElement";
-		constexpr const static rivet::rivet_type_id type_id = 0xf39bbc14;
+		constexpr static std::string_view type_name = "DamageStateElement";
+		constexpr static rivet::rivet_type_id type_id = 0xf39bbc14;
 
-		constexpr const static std::string_view HPThreshhold_type_name = "HPThreshhold";
-		constexpr const static rivet::rivet_type_id HPThreshhold_type_id = 0x947e58e4;
-		constexpr const static std::string_view MinLookChunks_type_name = "MinLookChunks";
-		constexpr const static rivet::rivet_type_id MinLookChunks_type_id = 0x388e96e3;
-		constexpr const static std::string_view MaxLookChunks_type_name = "MaxLookChunks";
-		constexpr const static rivet::rivet_type_id MaxLookChunks_type_id = 0x78c1ee95;
-		constexpr const static std::string_view MinGenericChunks_type_name = "MinGenericChunks";
-		constexpr const static rivet::rivet_type_id MinGenericChunks_type_id = 0x715d6f14;
-		constexpr const static std::string_view MaxGenericChunks_type_name = "MaxGenericChunks";
-		constexpr const static rivet::rivet_type_id MaxGenericChunks_type_id = 0x20a4d449;
-		constexpr const static std::string_view MinLookSwaps_type_name = "MinLookSwaps";
-		constexpr const static rivet::rivet_type_id MinLookSwaps_type_id = 0xe2cc5bbf;
-		constexpr const static std::string_view MaxLookSwaps_type_name = "MaxLookSwaps";
-		constexpr const static rivet::rivet_type_id MaxLookSwaps_type_id = 0x72bf4b55; 
+		constexpr static std::string_view HPThreshhold_type_name = "HPThreshhold";
+		constexpr static rivet::rivet_type_id HPThreshhold_type_id = 0x947e58e4;
+		constexpr static std::string_view MinLookChunks_type_name = "MinLookChunks";
+		constexpr static rivet::rivet_type_id MinLookChunks_type_id = 0x388e96e3;
+		constexpr static std::string_view MaxLookChunks_type_name = "MaxLookChunks";
+		constexpr static rivet::rivet_type_id MaxLookChunks_type_id = 0x78c1ee95;
+		constexpr static std::string_view MinGenericChunks_type_name = "MinGenericChunks";
+		constexpr static rivet::rivet_type_id MinGenericChunks_type_id = 0x715d6f14;
+		constexpr static std::string_view MaxGenericChunks_type_name = "MaxGenericChunks";
+		constexpr static rivet::rivet_type_id MaxGenericChunks_type_id = 0x20a4d449;
+		constexpr static std::string_view MinLookSwaps_type_name = "MinLookSwaps";
+		constexpr static rivet::rivet_type_id MinLookSwaps_type_id = 0xe2cc5bbf;
+		constexpr static std::string_view MaxLookSwaps_type_name = "MaxLookSwaps";
+		constexpr static rivet::rivet_type_id MaxLookSwaps_type_id = 0x72bf4b55; 
 
 		explicit DamageStateElement() = default;
 		explicit DamageStateElement([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct Faction; 
 
 	struct RIVET_DDL_SHARED BotDebugSpawnConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "BotDebugSpawnConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xae4e072;
+		constexpr static std::string_view type_name = "BotDebugSpawnConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xae4e072;
 
-		constexpr const static std::string_view Factions_type_name = "Factions";
-		constexpr const static rivet::rivet_type_id Factions_type_id = 0x1183e5b4; 
+		constexpr static std::string_view Factions_type_name = "Factions";
+		constexpr static rivet::rivet_type_id Factions_type_id = 0x1183e5b4; 
 
 		explicit BotDebugSpawnConfig() = default;
 		explicit BotDebugSpawnConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

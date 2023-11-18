@@ -3,12 +3,12 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/LookAtHeroPrius.hpp>
-#include <rivet/ddl/generated/SwappableTargetingAimAnglePrius.hpp>
-#include <rivet/ddl/generated/LookAtCameraPrius.hpp>
-#include <rivet/ddl/generated/TargetingAimAngleGamePrius.hpp>
+#include <rivet/ddl/generated/TargetingAimAngleJointAimPrius.hpp>
 #include <rivet/ddl/generated/LookAtTargetPrius.hpp>
-#include <rivet/ddl/generated/TargetingAimAngleJointAimPrius.hpp> 
+#include <rivet/ddl/generated/LookAtCameraPrius.hpp>
+#include <rivet/ddl/generated/SwappableTargetingAimAnglePrius.hpp>
+#include <rivet/ddl/generated/TargetingAimAngleGamePrius.hpp>
+#include <rivet/ddl/generated/LookAtHeroPrius.hpp> 
 
 #include <rivet/ddl/generated/TargetingAimAnglePrius.hpp>
 

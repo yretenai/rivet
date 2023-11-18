@@ -21,21 +21,21 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED WeaponLightningRodPrius : WeaponGamePrius {
-		constexpr const static std::string_view type_name = "WeaponLightningRodPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x229f2168;
+		constexpr static std::string_view type_name = "WeaponLightningRodPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x229f2168;
 
-		constexpr const static std::string_view MissAngleMin_type_name = "MissAngleMin";
-		constexpr const static rivet::rivet_type_id MissAngleMin_type_id = 0xec6d2f49;
-		constexpr const static std::string_view MissAngleMax_type_name = "MissAngleMax";
-		constexpr const static rivet::rivet_type_id MissAngleMax_type_id = 0xd0601010;
-		constexpr const static std::string_view SoftLockBreakAngleYaw_type_name = "SoftLockBreakAngleYaw";
-		constexpr const static rivet::rivet_type_id SoftLockBreakAngleYaw_type_id = 0x7d013ffe;
-		constexpr const static std::string_view SoftLockBreakAnglePitch_type_name = "SoftLockBreakAnglePitch";
-		constexpr const static rivet::rivet_type_id SoftLockBreakAnglePitch_type_id = 0xfb02b9c6;
-		constexpr const static std::string_view MinChargeForFiringDelay_type_name = "MinChargeForFiringDelay";
-		constexpr const static rivet::rivet_type_id MinChargeForFiringDelay_type_id = 0x5ba3e7d6;
-		constexpr const static std::string_view PostChargedShotFiringDelay_type_name = "PostChargedShotFiringDelay";
-		constexpr const static rivet::rivet_type_id PostChargedShotFiringDelay_type_id = 0x28e25bec; 
+		constexpr static std::string_view MissAngleMin_type_name = "MissAngleMin";
+		constexpr static rivet::rivet_type_id MissAngleMin_type_id = 0xec6d2f49;
+		constexpr static std::string_view MissAngleMax_type_name = "MissAngleMax";
+		constexpr static rivet::rivet_type_id MissAngleMax_type_id = 0xd0601010;
+		constexpr static std::string_view SoftLockBreakAngleYaw_type_name = "SoftLockBreakAngleYaw";
+		constexpr static rivet::rivet_type_id SoftLockBreakAngleYaw_type_id = 0x7d013ffe;
+		constexpr static std::string_view SoftLockBreakAnglePitch_type_name = "SoftLockBreakAnglePitch";
+		constexpr static rivet::rivet_type_id SoftLockBreakAnglePitch_type_id = 0xfb02b9c6;
+		constexpr static std::string_view MinChargeForFiringDelay_type_name = "MinChargeForFiringDelay";
+		constexpr static rivet::rivet_type_id MinChargeForFiringDelay_type_id = 0x5ba3e7d6;
+		constexpr static std::string_view PostChargedShotFiringDelay_type_name = "PostChargedShotFiringDelay";
+		constexpr static rivet::rivet_type_id PostChargedShotFiringDelay_type_id = 0x28e25bec; 
 
 		explicit WeaponLightningRodPrius() = default;
 		explicit WeaponLightningRodPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

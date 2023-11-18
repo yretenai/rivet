@@ -19,8 +19,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED AwarenessBasePrius : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "AwarenessBasePrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xc8c4d8a4;
+		constexpr static std::string_view type_name = "AwarenessBasePrius";
+		constexpr static rivet::rivet_type_id type_id = 0xc8c4d8a4;
 
 		explicit AwarenessBasePrius() = default;
 		explicit AwarenessBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

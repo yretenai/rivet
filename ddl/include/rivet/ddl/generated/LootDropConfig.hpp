@@ -20,20 +20,20 @@
 #include <rivet/ddl/generated/ConfigBase.hpp> 
 
 namespace rivet::ddl::generated {
-	struct CashPickup;
+	struct CardPickup;
 	struct RaritaniumPickup;
-	struct CardPickup; 
+	struct CashPickup; 
 
 	struct RIVET_DDL_SHARED LootDropConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "LootDropConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xd636ee58;
+		constexpr static std::string_view type_name = "LootDropConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xd636ee58;
 
-		constexpr const static std::string_view CashPickups_type_name = "CashPickups";
-		constexpr const static rivet::rivet_type_id CashPickups_type_id = 0x51fa022f;
-		constexpr const static std::string_view RaritaniumPickups_type_name = "RaritaniumPickups";
-		constexpr const static rivet::rivet_type_id RaritaniumPickups_type_id = 0xb69a23fd;
-		constexpr const static std::string_view CardPickups_type_name = "CardPickups";
-		constexpr const static rivet::rivet_type_id CardPickups_type_id = 0x112e0323; 
+		constexpr static std::string_view CashPickups_type_name = "CashPickups";
+		constexpr static rivet::rivet_type_id CashPickups_type_id = 0x51fa022f;
+		constexpr static std::string_view RaritaniumPickups_type_name = "RaritaniumPickups";
+		constexpr static rivet::rivet_type_id RaritaniumPickups_type_id = 0xb69a23fd;
+		constexpr static std::string_view CardPickups_type_name = "CardPickups";
+		constexpr static rivet::rivet_type_id CardPickups_type_id = 0x112e0323; 
 
 		explicit LootDropConfig() = default;
 		explicit LootDropConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

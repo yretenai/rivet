@@ -21,11 +21,11 @@ namespace rivet::ddl::generated {
 	struct AfterimageComponentPrius; 
 
 	struct RIVET_DDL_SHARED HeroPhaseDashData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "HeroPhaseDashData";
-		constexpr const static rivet::rivet_type_id type_id = 0x17d51973;
+		constexpr static std::string_view type_name = "HeroPhaseDashData";
+		constexpr static rivet::rivet_type_id type_id = 0x17d51973;
 
-		constexpr const static std::string_view AfterimageData_type_name = "AfterimageData";
-		constexpr const static rivet::rivet_type_id AfterimageData_type_id = 0x361db7b1; 
+		constexpr static std::string_view AfterimageData_type_name = "AfterimageData";
+		constexpr static rivet::rivet_type_id AfterimageData_type_id = 0x361db7b1; 
 
 		explicit HeroPhaseDashData() = default;
 		explicit HeroPhaseDashData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -21,15 +21,15 @@ namespace rivet::ddl::generated {
 	struct DDLVector3; 
 
 	struct RIVET_DDL_SHARED UIOptionColorData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "UIOptionColorData";
-		constexpr const static rivet::rivet_type_id type_id = 0xa0883596;
+		constexpr static std::string_view type_name = "UIOptionColorData";
+		constexpr static rivet::rivet_type_id type_id = 0xa0883596;
 
-		constexpr const static std::string_view ColorName_type_name = "ColorName";
-		constexpr const static rivet::rivet_type_id ColorName_type_id = 0xe122a241;
-		constexpr const static std::string_view ColorDisplayName_type_name = "ColorDisplayName";
-		constexpr const static rivet::rivet_type_id ColorDisplayName_type_id = 0x66625c39;
-		constexpr const static std::string_view ColorValue_type_name = "ColorValue";
-		constexpr const static rivet::rivet_type_id ColorValue_type_id = 0x27726256; 
+		constexpr static std::string_view ColorName_type_name = "ColorName";
+		constexpr static rivet::rivet_type_id ColorName_type_id = 0xe122a241;
+		constexpr static std::string_view ColorDisplayName_type_name = "ColorDisplayName";
+		constexpr static rivet::rivet_type_id ColorDisplayName_type_id = 0x66625c39;
+		constexpr static std::string_view ColorValue_type_name = "ColorValue";
+		constexpr static rivet::rivet_type_id ColorValue_type_id = 0x27726256; 
 
 		explicit UIOptionColorData() = default;
 		explicit UIOptionColorData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

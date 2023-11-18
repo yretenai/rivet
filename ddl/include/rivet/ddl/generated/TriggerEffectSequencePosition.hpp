@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct TriggerEffectKeyFrameDataPosition; 
 
 	struct RIVET_DDL_SHARED TriggerEffectSequencePosition : TriggerEffectSequenceBase {
-		constexpr const static std::string_view type_name = "TriggerEffectSequencePosition";
-		constexpr const static rivet::rivet_type_id type_id = 0x1ec6596a;
+		constexpr static std::string_view type_name = "TriggerEffectSequencePosition";
+		constexpr static rivet::rivet_type_id type_id = 0x1ec6596a;
 
-		constexpr const static std::string_view KeyFrameData_type_name = "KeyFrameData";
-		constexpr const static rivet::rivet_type_id KeyFrameData_type_id = 0x6d456e08; 
+		constexpr static std::string_view KeyFrameData_type_name = "KeyFrameData";
+		constexpr static rivet::rivet_type_id KeyFrameData_type_id = 0x6d456e08; 
 
 		explicit TriggerEffectSequencePosition() = default;
 		explicit TriggerEffectSequencePosition([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

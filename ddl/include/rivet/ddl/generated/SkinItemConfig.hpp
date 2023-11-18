@@ -18,58 +18,58 @@
 #include <rivet/structures/rivet_serialization.hpp>
 
 #include <rivet/ddl/generated/enums/x3126d105.hpp>
-#include <rivet/ddl/generated/ItemConfig.hpp>
-#include <rivet/ddl/generated/enums/xf28253cd.hpp>
 #include <rivet/ddl/generated/enums/x576d8e6a.hpp>
-#include <rivet/ddl/generated/enums/x7ecfc969.hpp> 
+#include <rivet/ddl/generated/enums/xf28253cd.hpp>
+#include <rivet/ddl/generated/enums/x7ecfc969.hpp>
+#include <rivet/ddl/generated/ItemConfig.hpp> 
 
 namespace rivet::ddl::generated {
-	struct SkinItemModel;
-	struct SkinItemConduitOverrideListElement;
-	struct SkinItemCompositeMaterialOverrideListElement;
-	struct SkinItemLocatorOverrideListElement;
-	struct SkinItemTextureOverrideListElement;
-	struct SkinItemSwitchGroupListElement;
-	struct SkinItemMaterialOverrideListElement;
-	struct SkinItemModelVariantOverrideListElement;
+	struct SkinShaderUpdaterPrius;
 	struct SkinItemCompanionItemListElement;
+	struct SkinItemSwitchGroupListElement;
+	struct SkinItemModelVariantOverrideListElement;
+	struct SkinItemConduitOverrideListElement;
 	struct AssetReferenceDef;
-	struct SkinShaderUpdaterPrius; 
+	struct SkinItemMaterialOverrideListElement;
+	struct SkinItemTextureOverrideListElement;
+	struct SkinItemLocatorOverrideListElement;
+	struct SkinItemCompositeMaterialOverrideListElement;
+	struct SkinItemModel; 
 
 	struct RIVET_DDL_SHARED SkinItemConfig : ItemConfig {
-		constexpr const static std::string_view type_name = "SkinItemConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x94e02607;
+		constexpr static std::string_view type_name = "SkinItemConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x94e02607;
 
-		constexpr const static std::string_view Category_type_name = "Category";
-		constexpr const static rivet::rivet_type_id Category_type_id = 0xfc4da4b1;
-		constexpr const static std::string_view Available_type_name = "Available";
-		constexpr const static rivet::rivet_type_id Available_type_id = 0x27723b89;
-		constexpr const static std::string_view PartType_type_name = "PartType";
-		constexpr const static rivet::rivet_type_id PartType_type_id = 0x59a27916;
-		constexpr const static std::string_view ModelList_type_name = "ModelList";
-		constexpr const static rivet::rivet_type_id ModelList_type_id = 0x7eafbb2f;
-		constexpr const static std::string_view LocatorOverrideList_type_name = "LocatorOverrideList";
-		constexpr const static rivet::rivet_type_id LocatorOverrideList_type_id = 0xa6babbde;
-		constexpr const static std::string_view TextureOverrideList_type_name = "TextureOverrideList";
-		constexpr const static rivet::rivet_type_id TextureOverrideList_type_id = 0x31be016c;
-		constexpr const static std::string_view MaterialOverrideList_type_name = "MaterialOverrideList";
-		constexpr const static rivet::rivet_type_id MaterialOverrideList_type_id = 0xeb47267a;
-		constexpr const static std::string_view CompositeMaterialOverrideList_type_name = "CompositeMaterialOverrideList";
-		constexpr const static rivet::rivet_type_id CompositeMaterialOverrideList_type_id = 0x88bf7983;
-		constexpr const static std::string_view ConduitOverrideList_type_name = "ConduitOverrideList";
-		constexpr const static rivet::rivet_type_id ConduitOverrideList_type_id = 0x6c1e1c97;
-		constexpr const static std::string_view ModelVariantOverrideList_type_name = "ModelVariantOverrideList";
-		constexpr const static rivet::rivet_type_id ModelVariantOverrideList_type_id = 0xdf65d905;
-		constexpr const static std::string_view SwitchGroupList_type_name = "SwitchGroupList";
-		constexpr const static rivet::rivet_type_id SwitchGroupList_type_id = 0xa76c9412;
-		constexpr const static std::string_view CompanionItemList_type_name = "CompanionItemList";
-		constexpr const static rivet::rivet_type_id CompanionItemList_type_id = 0x1c412f8c;
-		constexpr const static std::string_view ColorChannels_type_name = "ColorChannels";
-		constexpr const static rivet::rivet_type_id ColorChannels_type_id = 0x12c50e26;
-		constexpr const static std::string_view SoundBanks_type_name = "SoundBanks";
-		constexpr const static rivet::rivet_type_id SoundBanks_type_id = 0xa6a14c2e;
-		constexpr const static std::string_view ShaderUpdater_type_name = "ShaderUpdater";
-		constexpr const static rivet::rivet_type_id ShaderUpdater_type_id = 0xc824d41b; 
+		constexpr static std::string_view Category_type_name = "Category";
+		constexpr static rivet::rivet_type_id Category_type_id = 0xfc4da4b1;
+		constexpr static std::string_view Available_type_name = "Available";
+		constexpr static rivet::rivet_type_id Available_type_id = 0x27723b89;
+		constexpr static std::string_view PartType_type_name = "PartType";
+		constexpr static rivet::rivet_type_id PartType_type_id = 0x59a27916;
+		constexpr static std::string_view ModelList_type_name = "ModelList";
+		constexpr static rivet::rivet_type_id ModelList_type_id = 0x7eafbb2f;
+		constexpr static std::string_view LocatorOverrideList_type_name = "LocatorOverrideList";
+		constexpr static rivet::rivet_type_id LocatorOverrideList_type_id = 0xa6babbde;
+		constexpr static std::string_view TextureOverrideList_type_name = "TextureOverrideList";
+		constexpr static rivet::rivet_type_id TextureOverrideList_type_id = 0x31be016c;
+		constexpr static std::string_view MaterialOverrideList_type_name = "MaterialOverrideList";
+		constexpr static rivet::rivet_type_id MaterialOverrideList_type_id = 0xeb47267a;
+		constexpr static std::string_view CompositeMaterialOverrideList_type_name = "CompositeMaterialOverrideList";
+		constexpr static rivet::rivet_type_id CompositeMaterialOverrideList_type_id = 0x88bf7983;
+		constexpr static std::string_view ConduitOverrideList_type_name = "ConduitOverrideList";
+		constexpr static rivet::rivet_type_id ConduitOverrideList_type_id = 0x6c1e1c97;
+		constexpr static std::string_view ModelVariantOverrideList_type_name = "ModelVariantOverrideList";
+		constexpr static rivet::rivet_type_id ModelVariantOverrideList_type_id = 0xdf65d905;
+		constexpr static std::string_view SwitchGroupList_type_name = "SwitchGroupList";
+		constexpr static rivet::rivet_type_id SwitchGroupList_type_id = 0xa76c9412;
+		constexpr static std::string_view CompanionItemList_type_name = "CompanionItemList";
+		constexpr static rivet::rivet_type_id CompanionItemList_type_id = 0x1c412f8c;
+		constexpr static std::string_view ColorChannels_type_name = "ColorChannels";
+		constexpr static rivet::rivet_type_id ColorChannels_type_id = 0x12c50e26;
+		constexpr static std::string_view SoundBanks_type_name = "SoundBanks";
+		constexpr static rivet::rivet_type_id SoundBanks_type_id = 0xa6a14c2e;
+		constexpr static std::string_view ShaderUpdater_type_name = "ShaderUpdater";
+		constexpr static rivet::rivet_type_id ShaderUpdater_type_id = 0xc824d41b; 
 
 		explicit SkinItemConfig() = default;
 		explicit SkinItemConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

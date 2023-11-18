@@ -17,45 +17,45 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/enums/x8d7e44cf.hpp>
-#include <rivet/ddl/generated/AnimDamageAttackStyleBase.hpp>
 #include <rivet/ddl/generated/enums/KnockbackLevels.hpp>
-#include <rivet/ddl/generated/bitsets/x65d7dac2.hpp> 
+#include <rivet/ddl/generated/enums/x8d7e44cf.hpp>
+#include <rivet/ddl/generated/bitsets/x65d7dac2.hpp>
+#include <rivet/ddl/generated/AnimDamageAttackStyleBase.hpp> 
 
 namespace rivet::ddl::generated {
-	struct DamagePrimContainer;
-	struct CustomDamageContainer; 
+	struct CustomDamageContainer;
+	struct DamagePrimContainer; 
 
 	struct RIVET_DDL_SHARED AnimDamageAttackStyleMultiPrim : AnimDamageAttackStyleBase {
-		constexpr const static std::string_view type_name = "AnimDamageAttackStyleMultiPrim";
-		constexpr const static rivet::rivet_type_id type_id = 0xc08dd2f1;
+		constexpr static std::string_view type_name = "AnimDamageAttackStyleMultiPrim";
+		constexpr static rivet::rivet_type_id type_id = 0xc08dd2f1;
 
-		constexpr const static std::string_view UsePrimConfig_type_name = "UsePrimConfig";
-		constexpr const static rivet::rivet_type_id UsePrimConfig_type_id = 0xc5e172b9;
-		constexpr const static std::string_view Prims_type_name = "Prims";
-		constexpr const static rivet::rivet_type_id Prims_type_id = 0xb9cc76c7;
-		constexpr const static std::string_view PrimConfig_type_name = "PrimConfig";
-		constexpr const static rivet::rivet_type_id PrimConfig_type_id = 0x578145d8;
-		constexpr const static std::string_view DamageType_type_name = "DamageType";
-		constexpr const static rivet::rivet_type_id DamageType_type_id = 0x840c154d;
-		constexpr const static std::string_view DamageAmount_type_name = "DamageAmount";
-		constexpr const static rivet::rivet_type_id DamageAmount_type_id = 0x563be470;
-		constexpr const static std::string_view StatusAmount_type_name = "StatusAmount";
-		constexpr const static rivet::rivet_type_id StatusAmount_type_id = 0x37e1f098;
-		constexpr const static std::string_view Knockback_type_name = "Knockback";
-		constexpr const static rivet::rivet_type_id Knockback_type_id = 0x2e553fdd;
-		constexpr const static std::string_view KnockbackAmount_type_name = "KnockbackAmount";
-		constexpr const static rivet::rivet_type_id KnockbackAmount_type_id = 0x7b1e600b;
-		constexpr const static std::string_view KnockbackForce_type_name = "KnockbackForce";
-		constexpr const static rivet::rivet_type_id KnockbackForce_type_id = 0x28d6ed59;
-		constexpr const static std::string_view DurationOverride_type_name = "DurationOverride";
-		constexpr const static rivet::rivet_type_id DurationOverride_type_id = 0xbb3cda6;
-		constexpr const static std::string_view HitPauseTime_type_name = "HitPauseTime";
-		constexpr const static rivet::rivet_type_id HitPauseTime_type_id = 0xa0fb18ac;
-		constexpr const static std::string_view RequestFlags_type_name = "RequestFlags";
-		constexpr const static rivet::rivet_type_id RequestFlags_type_id = 0x2bc801df;
-		constexpr const static std::string_view CustomDamageEntries_type_name = "CustomDamageEntries";
-		constexpr const static rivet::rivet_type_id CustomDamageEntries_type_id = 0xd53b4d9; 
+		constexpr static std::string_view UsePrimConfig_type_name = "UsePrimConfig";
+		constexpr static rivet::rivet_type_id UsePrimConfig_type_id = 0xc5e172b9;
+		constexpr static std::string_view Prims_type_name = "Prims";
+		constexpr static rivet::rivet_type_id Prims_type_id = 0xb9cc76c7;
+		constexpr static std::string_view PrimConfig_type_name = "PrimConfig";
+		constexpr static rivet::rivet_type_id PrimConfig_type_id = 0x578145d8;
+		constexpr static std::string_view DamageType_type_name = "DamageType";
+		constexpr static rivet::rivet_type_id DamageType_type_id = 0x840c154d;
+		constexpr static std::string_view DamageAmount_type_name = "DamageAmount";
+		constexpr static rivet::rivet_type_id DamageAmount_type_id = 0x563be470;
+		constexpr static std::string_view StatusAmount_type_name = "StatusAmount";
+		constexpr static rivet::rivet_type_id StatusAmount_type_id = 0x37e1f098;
+		constexpr static std::string_view Knockback_type_name = "Knockback";
+		constexpr static rivet::rivet_type_id Knockback_type_id = 0x2e553fdd;
+		constexpr static std::string_view KnockbackAmount_type_name = "KnockbackAmount";
+		constexpr static rivet::rivet_type_id KnockbackAmount_type_id = 0x7b1e600b;
+		constexpr static std::string_view KnockbackForce_type_name = "KnockbackForce";
+		constexpr static rivet::rivet_type_id KnockbackForce_type_id = 0x28d6ed59;
+		constexpr static std::string_view DurationOverride_type_name = "DurationOverride";
+		constexpr static rivet::rivet_type_id DurationOverride_type_id = 0xbb3cda6;
+		constexpr static std::string_view HitPauseTime_type_name = "HitPauseTime";
+		constexpr static rivet::rivet_type_id HitPauseTime_type_id = 0xa0fb18ac;
+		constexpr static std::string_view RequestFlags_type_name = "RequestFlags";
+		constexpr static rivet::rivet_type_id RequestFlags_type_id = 0x2bc801df;
+		constexpr static std::string_view CustomDamageEntries_type_name = "CustomDamageEntries";
+		constexpr static rivet::rivet_type_id CustomDamageEntries_type_id = 0xd53b4d9; 
 
 		explicit AnimDamageAttackStyleMultiPrim() = default;
 		explicit AnimDamageAttackStyleMultiPrim([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

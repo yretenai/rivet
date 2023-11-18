@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED BoxBreakerItemConfig : GadgetItemConfig {
-		constexpr const static std::string_view type_name = "BoxBreakerItemConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xaa93a886;
+		constexpr static std::string_view type_name = "BoxBreakerItemConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xaa93a886;
 
-		constexpr const static std::string_view BoxBreakRange_type_name = "BoxBreakRange";
-		constexpr const static rivet::rivet_type_id BoxBreakRange_type_id = 0x47022344;
-		constexpr const static std::string_view BoltPickupRange_type_name = "BoltPickupRange";
-		constexpr const static rivet::rivet_type_id BoltPickupRange_type_id = 0xcbf946e6; 
+		constexpr static std::string_view BoxBreakRange_type_name = "BoxBreakRange";
+		constexpr static rivet::rivet_type_id BoxBreakRange_type_id = 0x47022344;
+		constexpr static std::string_view BoltPickupRange_type_name = "BoltPickupRange";
+		constexpr static rivet::rivet_type_id BoltPickupRange_type_id = 0xcbf946e6; 
 
 		explicit BoxBreakerItemConfig() = default;
 		explicit BoxBreakerItemConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

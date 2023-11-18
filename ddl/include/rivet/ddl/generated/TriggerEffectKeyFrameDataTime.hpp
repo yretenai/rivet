@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED TriggerEffectKeyFrameDataTime : TriggerEffectKeyFrameDataBase {
-		constexpr const static std::string_view type_name = "TriggerEffectKeyFrameDataTime";
-		constexpr const static rivet::rivet_type_id type_id = 0x77c48cab;
+		constexpr static std::string_view type_name = "TriggerEffectKeyFrameDataTime";
+		constexpr static rivet::rivet_type_id type_id = 0x77c48cab;
 
-		constexpr const static std::string_view Time_type_name = "Time";
-		constexpr const static rivet::rivet_type_id Time_type_id = 0x5f0458f5; 
+		constexpr static std::string_view Time_type_name = "Time";
+		constexpr static rivet::rivet_type_id Time_type_id = 0x5f0458f5; 
 
 		explicit TriggerEffectKeyFrameDataTime() = default;
 		explicit TriggerEffectKeyFrameDataTime([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

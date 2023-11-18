@@ -19,13 +19,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ModelSplineMaterialExtraHair : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "ModelSplineMaterialExtraHair";
-		constexpr const static rivet::rivet_type_id type_id = 0x50b03308;
+		constexpr static std::string_view type_name = "ModelSplineMaterialExtraHair";
+		constexpr static rivet::rivet_type_id type_id = 0x50b03308;
 
-		constexpr const static std::string_view Transmittance_type_name = "Transmittance";
-		constexpr const static rivet::rivet_type_id Transmittance_type_id = 0x6e91413e;
-		constexpr const static std::string_view SpecShift_type_name = "SpecShift";
-		constexpr const static rivet::rivet_type_id SpecShift_type_id = 0xf48c18c8; 
+		constexpr static std::string_view Transmittance_type_name = "Transmittance";
+		constexpr static rivet::rivet_type_id Transmittance_type_id = 0x6e91413e;
+		constexpr static std::string_view SpecShift_type_name = "SpecShift";
+		constexpr static rivet::rivet_type_id SpecShift_type_id = 0xf48c18c8; 
 
 		explicit ModelSplineMaterialExtraHair() = default;
 		explicit ModelSplineMaterialExtraHair([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

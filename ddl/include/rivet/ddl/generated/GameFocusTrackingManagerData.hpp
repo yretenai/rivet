@@ -18,19 +18,19 @@
 #include <rivet/structures/rivet_serialization.hpp>
 
 namespace rivet::ddl::generated {
-	struct FocusTrackingInstData;
-	struct FocusTrackingSolverData; 
+	struct FocusTrackingSolverData;
+	struct FocusTrackingInstData; 
 
 	struct RIVET_DDL_SHARED GameFocusTrackingManagerData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "GameFocusTrackingManagerData";
-		constexpr const static rivet::rivet_type_id type_id = 0xb0c62690;
+		constexpr static std::string_view type_name = "GameFocusTrackingManagerData";
+		constexpr static rivet::rivet_type_id type_id = 0xb0c62690;
 
-		constexpr const static std::string_view AlwaysEngaged_type_name = "AlwaysEngaged";
-		constexpr const static rivet::rivet_type_id AlwaysEngaged_type_id = 0xca5ba54f;
-		constexpr const static std::string_view DefaultTracking_Engaged_type_name = "DefaultTracking_Engaged";
-		constexpr const static rivet::rivet_type_id DefaultTracking_Engaged_type_id = 0xbe685f74;
-		constexpr const static std::string_view DefaultSolverDefinitions_Engaged_type_name = "DefaultSolverDefinitions_Engaged";
-		constexpr const static rivet::rivet_type_id DefaultSolverDefinitions_Engaged_type_id = 0x54e5e2cf; 
+		constexpr static std::string_view AlwaysEngaged_type_name = "AlwaysEngaged";
+		constexpr static rivet::rivet_type_id AlwaysEngaged_type_id = 0xca5ba54f;
+		constexpr static std::string_view DefaultTracking_Engaged_type_name = "DefaultTracking_Engaged";
+		constexpr static rivet::rivet_type_id DefaultTracking_Engaged_type_id = 0xbe685f74;
+		constexpr static std::string_view DefaultSolverDefinitions_Engaged_type_name = "DefaultSolverDefinitions_Engaged";
+		constexpr static rivet::rivet_type_id DefaultSolverDefinitions_Engaged_type_id = 0x54e5e2cf; 
 
 		explicit GameFocusTrackingManagerData() = default;
 		explicit GameFocusTrackingManagerData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct DDLVector3; 
 
 	struct RIVET_DDL_SHARED AimModFixedOffsetPrius : AimModifierPrius {
-		constexpr const static std::string_view type_name = "AimModFixedOffsetPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xad747eb3;
+		constexpr static std::string_view type_name = "AimModFixedOffsetPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xad747eb3;
 
-		constexpr const static std::string_view Offset_type_name = "Offset";
-		constexpr const static rivet::rivet_type_id Offset_type_id = 0x677284b7; 
+		constexpr static std::string_view Offset_type_name = "Offset";
+		constexpr static rivet::rivet_type_id Offset_type_id = 0x677284b7; 
 
 		explicit AimModFixedOffsetPrius() = default;
 		explicit AimModFixedOffsetPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

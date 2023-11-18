@@ -17,30 +17,30 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/ActivityDefBase.hpp>
+#include <rivet/ddl/generated/enums/xbd8d5c4d.hpp>
 #include <rivet/ddl/generated/enums/xca2817ca.hpp>
-#include <rivet/ddl/generated/enums/xbd8d5c4d.hpp> 
+#include <rivet/ddl/generated/ActivityDefBase.hpp> 
 
 namespace rivet::ddl::generated {
-	struct ActivityReward;
-	struct TaskDef; 
+	struct TaskDef;
+	struct ActivityReward; 
 
 	struct RIVET_DDL_SHARED ActivityDef : ActivityDefBase {
-		constexpr const static std::string_view type_name = "ActivityDef";
-		constexpr const static rivet::rivet_type_id type_id = 0x5ed453fc;
+		constexpr static std::string_view type_name = "ActivityDef";
+		constexpr static rivet::rivet_type_id type_id = 0x5ed453fc;
 
-		constexpr const static std::string_view Category_type_name = "Category";
-		constexpr const static rivet::rivet_type_id Category_type_id = 0xfc4da4b1;
-		constexpr const static std::string_view SubCategory_type_name = "SubCategory";
-		constexpr const static rivet::rivet_type_id SubCategory_type_id = 0x797697c5;
-		constexpr const static std::string_view LargeImagePath_type_name = "LargeImagePath";
-		constexpr const static rivet::rivet_type_id LargeImagePath_type_id = 0xaae1bdcd;
-		constexpr const static std::string_view SmallImagePath_type_name = "SmallImagePath";
-		constexpr const static rivet::rivet_type_id SmallImagePath_type_id = 0xa4cf1f2e;
-		constexpr const static std::string_view Rewards_type_name = "Rewards";
-		constexpr const static rivet::rivet_type_id Rewards_type_id = 0xe8c87d0f;
-		constexpr const static std::string_view Tasks_type_name = "Tasks";
-		constexpr const static rivet::rivet_type_id Tasks_type_id = 0x490ba956; 
+		constexpr static std::string_view Category_type_name = "Category";
+		constexpr static rivet::rivet_type_id Category_type_id = 0xfc4da4b1;
+		constexpr static std::string_view SubCategory_type_name = "SubCategory";
+		constexpr static rivet::rivet_type_id SubCategory_type_id = 0x797697c5;
+		constexpr static std::string_view LargeImagePath_type_name = "LargeImagePath";
+		constexpr static rivet::rivet_type_id LargeImagePath_type_id = 0xaae1bdcd;
+		constexpr static std::string_view SmallImagePath_type_name = "SmallImagePath";
+		constexpr static rivet::rivet_type_id SmallImagePath_type_id = 0xa4cf1f2e;
+		constexpr static std::string_view Rewards_type_name = "Rewards";
+		constexpr static rivet::rivet_type_id Rewards_type_id = 0xe8c87d0f;
+		constexpr static std::string_view Tasks_type_name = "Tasks";
+		constexpr static rivet::rivet_type_id Tasks_type_id = 0x490ba956; 
 
 		explicit ActivityDef() = default;
 		explicit ActivityDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

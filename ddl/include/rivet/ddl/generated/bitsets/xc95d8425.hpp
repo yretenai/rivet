@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view xc95d8425_type_name = "xc95d8425";
-	constexpr const static rivet::rivet_type_id xc95d8425_type_id = 0xc95d8425;
+	constexpr static std::string_view xc95d8425_type_name = "xc95d8425";
+	constexpr static rivet::rivet_type_id xc95d8425_type_id = 0xc95d8425;
 
-	constexpr const static std::array<std::tuple<std::string_view, uint64_t>, 5> xc95d8425_values = {
+	constexpr static std::array<std::tuple<std::string_view, uint64_t>, 5> xc95d8425_values = {
 		std::make_tuple("kDriverFlagsIsLooping", 0x1),
 		std::make_tuple("kDriverFlagsEventPassThrough", 0x2),
 		std::make_tuple("kDriverFlagsNoPhaseMatchOnActivate", 0x4),

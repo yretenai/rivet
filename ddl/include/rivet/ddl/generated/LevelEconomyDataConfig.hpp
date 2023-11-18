@@ -21,25 +21,25 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED LevelEconomyDataConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "LevelEconomyDataConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x6611a854;
+		constexpr static std::string_view type_name = "LevelEconomyDataConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x6611a854;
 
-		constexpr const static std::string_view BoltMultiplier_type_name = "BoltMultiplier";
-		constexpr const static rivet::rivet_type_id BoltMultiplier_type_id = 0xac3d0e89;
-		constexpr const static std::string_view HeroXPMultiplier_type_name = "HeroXPMultiplier";
-		constexpr const static rivet::rivet_type_id HeroXPMultiplier_type_id = 0xfe5e129d;
-		constexpr const static std::string_view WpnXPMultiplier_type_name = "WpnXPMultiplier";
-		constexpr const static rivet::rivet_type_id WpnXPMultiplier_type_id = 0x1d9b505c;
-		constexpr const static std::string_view RaritaniumMultiplier_type_name = "RaritaniumMultiplier";
-		constexpr const static rivet::rivet_type_id RaritaniumMultiplier_type_id = 0x5e9452cc;
-		constexpr const static std::string_view ChallengeBoltMultiplier_type_name = "ChallengeBoltMultiplier";
-		constexpr const static rivet::rivet_type_id ChallengeBoltMultiplier_type_id = 0x28cb98fe;
-		constexpr const static std::string_view ChallengeHeroXPMultiplier_type_name = "ChallengeHeroXPMultiplier";
-		constexpr const static rivet::rivet_type_id ChallengeHeroXPMultiplier_type_id = 0x874c4f2b;
-		constexpr const static std::string_view ChallengeWpnXPMultiplier_type_name = "ChallengeWpnXPMultiplier";
-		constexpr const static rivet::rivet_type_id ChallengeWpnXPMultiplier_type_id = 0xd37e4255;
-		constexpr const static std::string_view ChallengeRaritaniumMultiplier_type_name = "ChallengeRaritaniumMultiplier";
-		constexpr const static rivet::rivet_type_id ChallengeRaritaniumMultiplier_type_id = 0x53c44722; 
+		constexpr static std::string_view BoltMultiplier_type_name = "BoltMultiplier";
+		constexpr static rivet::rivet_type_id BoltMultiplier_type_id = 0xac3d0e89;
+		constexpr static std::string_view HeroXPMultiplier_type_name = "HeroXPMultiplier";
+		constexpr static rivet::rivet_type_id HeroXPMultiplier_type_id = 0xfe5e129d;
+		constexpr static std::string_view WpnXPMultiplier_type_name = "WpnXPMultiplier";
+		constexpr static rivet::rivet_type_id WpnXPMultiplier_type_id = 0x1d9b505c;
+		constexpr static std::string_view RaritaniumMultiplier_type_name = "RaritaniumMultiplier";
+		constexpr static rivet::rivet_type_id RaritaniumMultiplier_type_id = 0x5e9452cc;
+		constexpr static std::string_view ChallengeBoltMultiplier_type_name = "ChallengeBoltMultiplier";
+		constexpr static rivet::rivet_type_id ChallengeBoltMultiplier_type_id = 0x28cb98fe;
+		constexpr static std::string_view ChallengeHeroXPMultiplier_type_name = "ChallengeHeroXPMultiplier";
+		constexpr static rivet::rivet_type_id ChallengeHeroXPMultiplier_type_id = 0x874c4f2b;
+		constexpr static std::string_view ChallengeWpnXPMultiplier_type_name = "ChallengeWpnXPMultiplier";
+		constexpr static rivet::rivet_type_id ChallengeWpnXPMultiplier_type_id = 0xd37e4255;
+		constexpr static std::string_view ChallengeRaritaniumMultiplier_type_name = "ChallengeRaritaniumMultiplier";
+		constexpr static rivet::rivet_type_id ChallengeRaritaniumMultiplier_type_id = 0x53c44722; 
 
 		explicit LevelEconomyDataConfig() = default;
 		explicit LevelEconomyDataConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

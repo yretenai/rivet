@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view CompositeStyle_type_name = "CompositeStyle";
-	constexpr const static rivet::rivet_type_id CompositeStyle_type_id = 0x40250330;
+	constexpr static std::string_view CompositeStyle_type_name = "CompositeStyle";
+	constexpr static rivet::rivet_type_id CompositeStyle_type_id = 0x40250330;
 
-	constexpr const static std::array<std::string_view, 2> CompositeStyle_values = {
+	constexpr static std::array<std::string_view, 2> CompositeStyle_values = {
 		"kFullResolution",
 		"kHalfResolution", 
 	};

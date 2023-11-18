@@ -21,19 +21,19 @@
 
 namespace rivet::ddl::generated {
 	struct VanityCineHelmetTransData;
-	struct VanityAccessoryData;
-	struct VanityUIColor; 
+	struct VanityUIColor;
+	struct VanityAccessoryData; 
 
 	struct RIVET_DDL_SHARED MasterVanityItemList : MasterSkinItemList {
-		constexpr const static std::string_view type_name = "MasterVanityItemList";
-		constexpr const static rivet::rivet_type_id type_id = 0x43c0f6a0;
+		constexpr static std::string_view type_name = "MasterVanityItemList";
+		constexpr static rivet::rivet_type_id type_id = 0x43c0f6a0;
 
-		constexpr const static std::string_view AccessoryData_type_name = "AccessoryData";
-		constexpr const static rivet::rivet_type_id AccessoryData_type_id = 0x4afede63;
-		constexpr const static std::string_view UIColors_type_name = "UIColors";
-		constexpr const static rivet::rivet_type_id UIColors_type_id = 0xded0aa4d;
-		constexpr const static std::string_view CineHelmetTransData_type_name = "CineHelmetTransData";
-		constexpr const static rivet::rivet_type_id CineHelmetTransData_type_id = 0x5624f4ce; 
+		constexpr static std::string_view AccessoryData_type_name = "AccessoryData";
+		constexpr static rivet::rivet_type_id AccessoryData_type_id = 0x4afede63;
+		constexpr static std::string_view UIColors_type_name = "UIColors";
+		constexpr static rivet::rivet_type_id UIColors_type_id = 0xded0aa4d;
+		constexpr static std::string_view CineHelmetTransData_type_name = "CineHelmetTransData";
+		constexpr static rivet::rivet_type_id CineHelmetTransData_type_id = 0x5624f4ce; 
 
 		explicit MasterVanityItemList() = default;
 		explicit MasterVanityItemList([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

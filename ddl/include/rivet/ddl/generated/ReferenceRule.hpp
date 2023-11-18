@@ -18,21 +18,21 @@
 #include <rivet/structures/rivet_serialization.hpp>
 
 namespace rivet::ddl::generated {
-	struct StringFilter;
-	struct References; 
+	struct References;
+	struct StringFilter; 
 
 	struct RIVET_DDL_SHARED ReferenceRule : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "ReferenceRule";
-		constexpr const static rivet::rivet_type_id type_id = 0x5030ce9c;
+		constexpr static std::string_view type_name = "ReferenceRule";
+		constexpr static rivet::rivet_type_id type_id = 0x5030ce9c;
 
-		constexpr const static std::string_view TypeFilters_type_name = "TypeFilters";
-		constexpr const static rivet::rivet_type_id TypeFilters_type_id = 0xe0f28371;
-		constexpr const static std::string_view FieldFilters_type_name = "FieldFilters";
-		constexpr const static rivet::rivet_type_id FieldFilters_type_id = 0xa7330d10;
-		constexpr const static std::string_view ValueFilters_type_name = "ValueFilters";
-		constexpr const static rivet::rivet_type_id ValueFilters_type_id = 0x2134ded7;
-		constexpr const static std::string_view Refs_type_name = "Refs";
-		constexpr const static rivet::rivet_type_id Refs_type_id = 0x645592d7; 
+		constexpr static std::string_view TypeFilters_type_name = "TypeFilters";
+		constexpr static rivet::rivet_type_id TypeFilters_type_id = 0xe0f28371;
+		constexpr static std::string_view FieldFilters_type_name = "FieldFilters";
+		constexpr static rivet::rivet_type_id FieldFilters_type_id = 0xa7330d10;
+		constexpr static std::string_view ValueFilters_type_name = "ValueFilters";
+		constexpr static rivet::rivet_type_id ValueFilters_type_id = 0x2134ded7;
+		constexpr static std::string_view Refs_type_name = "Refs";
+		constexpr static rivet::rivet_type_id Refs_type_id = 0x645592d7; 
 
 		explicit ReferenceRule() = default;
 		explicit ReferenceRule([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

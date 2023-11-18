@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct PerfSpecData; 
 
 	struct RIVET_DDL_SHARED PerfSpecConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "PerfSpecConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xe8719cab;
+		constexpr static std::string_view type_name = "PerfSpecConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xe8719cab;
 
-		constexpr const static std::string_view PerfSpecs_type_name = "PerfSpecs";
-		constexpr const static rivet::rivet_type_id PerfSpecs_type_id = 0x744acf43; 
+		constexpr static std::string_view PerfSpecs_type_name = "PerfSpecs";
+		constexpr static rivet::rivet_type_id PerfSpecs_type_id = 0x744acf43; 
 
 		explicit PerfSpecConfig() = default;
 		explicit PerfSpecConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

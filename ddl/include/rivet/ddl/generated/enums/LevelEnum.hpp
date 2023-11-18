@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view LevelEnum_type_name = "LevelEnum";
-	constexpr const static rivet::rivet_type_id LevelEnum_type_id = 0x4223680a;
+	constexpr static std::string_view LevelEnum_type_name = "LevelEnum";
+	constexpr static rivet::rivet_type_id LevelEnum_type_id = 0x4223680a;
 
-	constexpr const static std::array<std::string_view, 11> LevelEnum_values = {
+	constexpr static std::array<std::string_view, 11> LevelEnum_values = {
 		"kNone",
 		"kMegalopolis",
 		"kNefariousCity",

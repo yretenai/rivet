@@ -21,31 +21,31 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED BreakableVariantDifficultyEntry : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "BreakableVariantDifficultyEntry";
-		constexpr const static rivet::rivet_type_id type_id = 0x33bca11e;
+		constexpr static std::string_view type_name = "BreakableVariantDifficultyEntry";
+		constexpr static rivet::rivet_type_id type_id = 0x33bca11e;
 
-		constexpr const static std::string_view Variant_type_name = "Variant";
-		constexpr const static rivet::rivet_type_id Variant_type_id = 0xf0a9dc95;
-		constexpr const static std::string_view StartMission_type_name = "StartMission";
-		constexpr const static rivet::rivet_type_id StartMission_type_id = 0xafa88333;
-		constexpr const static std::string_view StartObjective_type_name = "StartObjective";
-		constexpr const static rivet::rivet_type_id StartObjective_type_id = 0x58d58154;
-		constexpr const static std::string_view Health_type_name = "Health";
-		constexpr const static rivet::rivet_type_id Health_type_id = 0xf0a26d74;
-		constexpr const static std::string_view EasyMultiplier_type_name = "EasyMultiplier";
-		constexpr const static rivet::rivet_type_id EasyMultiplier_type_id = 0x860e9773;
-		constexpr const static std::string_view MediumMultiplier_type_name = "MediumMultiplier";
-		constexpr const static rivet::rivet_type_id MediumMultiplier_type_id = 0xdff2bb81;
-		constexpr const static std::string_view HardMultiplier_type_name = "HardMultiplier";
-		constexpr const static rivet::rivet_type_id HardMultiplier_type_id = 0xcf33228b;
-		constexpr const static std::string_view HardestMultiplier_type_name = "HardestMultiplier";
-		constexpr const static rivet::rivet_type_id HardestMultiplier_type_id = 0xbf016237;
-		constexpr const static std::string_view ThreeDeathsMultiplier_type_name = "ThreeDeathsMultiplier";
-		constexpr const static rivet::rivet_type_id ThreeDeathsMultiplier_type_id = 0x79745c95;
-		constexpr const static std::string_view FiveDeathsMultiplier_type_name = "FiveDeathsMultiplier";
-		constexpr const static rivet::rivet_type_id FiveDeathsMultiplier_type_id = 0xd742e16f;
-		constexpr const static std::string_view ChallengeModeMultiplier_type_name = "ChallengeModeMultiplier";
-		constexpr const static rivet::rivet_type_id ChallengeModeMultiplier_type_id = 0x172b41fd; 
+		constexpr static std::string_view Variant_type_name = "Variant";
+		constexpr static rivet::rivet_type_id Variant_type_id = 0xf0a9dc95;
+		constexpr static std::string_view StartMission_type_name = "StartMission";
+		constexpr static rivet::rivet_type_id StartMission_type_id = 0xafa88333;
+		constexpr static std::string_view StartObjective_type_name = "StartObjective";
+		constexpr static rivet::rivet_type_id StartObjective_type_id = 0x58d58154;
+		constexpr static std::string_view Health_type_name = "Health";
+		constexpr static rivet::rivet_type_id Health_type_id = 0xf0a26d74;
+		constexpr static std::string_view EasyMultiplier_type_name = "EasyMultiplier";
+		constexpr static rivet::rivet_type_id EasyMultiplier_type_id = 0x860e9773;
+		constexpr static std::string_view MediumMultiplier_type_name = "MediumMultiplier";
+		constexpr static rivet::rivet_type_id MediumMultiplier_type_id = 0xdff2bb81;
+		constexpr static std::string_view HardMultiplier_type_name = "HardMultiplier";
+		constexpr static rivet::rivet_type_id HardMultiplier_type_id = 0xcf33228b;
+		constexpr static std::string_view HardestMultiplier_type_name = "HardestMultiplier";
+		constexpr static rivet::rivet_type_id HardestMultiplier_type_id = 0xbf016237;
+		constexpr static std::string_view ThreeDeathsMultiplier_type_name = "ThreeDeathsMultiplier";
+		constexpr static rivet::rivet_type_id ThreeDeathsMultiplier_type_id = 0x79745c95;
+		constexpr static std::string_view FiveDeathsMultiplier_type_name = "FiveDeathsMultiplier";
+		constexpr static rivet::rivet_type_id FiveDeathsMultiplier_type_id = 0xd742e16f;
+		constexpr static std::string_view ChallengeModeMultiplier_type_name = "ChallengeModeMultiplier";
+		constexpr static rivet::rivet_type_id ChallengeModeMultiplier_type_id = 0x172b41fd; 
 
 		explicit BreakableVariantDifficultyEntry() = default;
 		explicit BreakableVariantDifficultyEntry([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

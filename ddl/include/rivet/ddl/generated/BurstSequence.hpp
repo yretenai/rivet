@@ -18,27 +18,27 @@
 #include <rivet/structures/rivet_serialization.hpp>
 
 namespace rivet::ddl::generated {
-	struct Burst;
-	struct SubBurst; 
+	struct SubBurst;
+	struct Burst; 
 
 	struct RIVET_DDL_SHARED BurstSequence : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "BurstSequence";
-		constexpr const static rivet::rivet_type_id type_id = 0x3ae61082;
+		constexpr static std::string_view type_name = "BurstSequence";
+		constexpr static rivet::rivet_type_id type_id = 0x3ae61082;
 
-		constexpr const static std::string_view PrimaryBurst_type_name = "PrimaryBurst";
-		constexpr const static rivet::rivet_type_id PrimaryBurst_type_id = 0x8bc798e7;
-		constexpr const static std::string_view SubBursts_type_name = "SubBursts";
-		constexpr const static rivet::rivet_type_id SubBursts_type_id = 0x333f5038;
-		constexpr const static std::string_view TotalDuration_type_name = "TotalDuration";
-		constexpr const static rivet::rivet_type_id TotalDuration_type_id = 0xc004400c;
-		constexpr const static std::string_view TotalBurstShots_type_name = "TotalBurstShots";
-		constexpr const static rivet::rivet_type_id TotalBurstShots_type_id = 0xd2ed5de5;
-		constexpr const static std::string_view WaitDurationMin_type_name = "WaitDurationMin";
-		constexpr const static rivet::rivet_type_id WaitDurationMin_type_id = 0xd348255d;
-		constexpr const static std::string_view WaitDurationMax_type_name = "WaitDurationMax";
-		constexpr const static rivet::rivet_type_id WaitDurationMax_type_id = 0xef451a04;
-		constexpr const static std::string_view WaitDuration_type_name = "WaitDuration";
-		constexpr const static rivet::rivet_type_id WaitDuration_type_id = 0xe3655ff0; 
+		constexpr static std::string_view PrimaryBurst_type_name = "PrimaryBurst";
+		constexpr static rivet::rivet_type_id PrimaryBurst_type_id = 0x8bc798e7;
+		constexpr static std::string_view SubBursts_type_name = "SubBursts";
+		constexpr static rivet::rivet_type_id SubBursts_type_id = 0x333f5038;
+		constexpr static std::string_view TotalDuration_type_name = "TotalDuration";
+		constexpr static rivet::rivet_type_id TotalDuration_type_id = 0xc004400c;
+		constexpr static std::string_view TotalBurstShots_type_name = "TotalBurstShots";
+		constexpr static rivet::rivet_type_id TotalBurstShots_type_id = 0xd2ed5de5;
+		constexpr static std::string_view WaitDurationMin_type_name = "WaitDurationMin";
+		constexpr static rivet::rivet_type_id WaitDurationMin_type_id = 0xd348255d;
+		constexpr static std::string_view WaitDurationMax_type_name = "WaitDurationMax";
+		constexpr static rivet::rivet_type_id WaitDurationMax_type_id = 0xef451a04;
+		constexpr static std::string_view WaitDuration_type_name = "WaitDuration";
+		constexpr static rivet::rivet_type_id WaitDuration_type_id = 0xe3655ff0; 
 
 		explicit BurstSequence() = default;
 		explicit BurstSequence([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

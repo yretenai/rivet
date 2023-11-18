@@ -3,13 +3,13 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/HeroForceFieldSource.hpp>
-#include <rivet/ddl/generated/HeroSpeedVFXKeyFrameModifierData.hpp>
-#include <rivet/ddl/generated/HeroWaterSplashSpeedData.hpp>
-#include <rivet/ddl/generated/HeroMaterialGlobal.hpp>
 #include <rivet/ddl/generated/WaterImpulseGeneratorPrius.hpp>
 #include <rivet/ddl/generated/HeroDecalShadowData.hpp>
-#include <rivet/ddl/generated/HeroWetnessConfig.hpp> 
+#include <rivet/ddl/generated/HeroForceFieldSource.hpp>
+#include <rivet/ddl/generated/HeroMaterialGlobal.hpp>
+#include <rivet/ddl/generated/HeroWaterSplashSpeedData.hpp>
+#include <rivet/ddl/generated/HeroWetnessConfig.hpp>
+#include <rivet/ddl/generated/HeroSpeedVFXKeyFrameModifierData.hpp> 
 
 #include <rivet/ddl/generated/HeroEffectsConfig.hpp>
 

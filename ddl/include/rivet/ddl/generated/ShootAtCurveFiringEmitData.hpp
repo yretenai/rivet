@@ -19,15 +19,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ShootAtCurveFiringEmitData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "ShootAtCurveFiringEmitData";
-		constexpr const static rivet::rivet_type_id type_id = 0x1ca189c1;
+		constexpr static std::string_view type_name = "ShootAtCurveFiringEmitData";
+		constexpr static rivet::rivet_type_id type_id = 0x1ca189c1;
 
-		constexpr const static std::string_view PartialDriver_type_name = "PartialDriver";
-		constexpr const static rivet::rivet_type_id PartialDriver_type_id = 0x677d5f23;
-		constexpr const static std::string_view EmitLocator_type_name = "EmitLocator";
-		constexpr const static rivet::rivet_type_id EmitLocator_type_id = 0x138c6595;
-		constexpr const static std::string_view IsFullBodyAnim_type_name = "IsFullBodyAnim";
-		constexpr const static rivet::rivet_type_id IsFullBodyAnim_type_id = 0x10cdb0b8; 
+		constexpr static std::string_view PartialDriver_type_name = "PartialDriver";
+		constexpr static rivet::rivet_type_id PartialDriver_type_id = 0x677d5f23;
+		constexpr static std::string_view EmitLocator_type_name = "EmitLocator";
+		constexpr static rivet::rivet_type_id EmitLocator_type_id = 0x138c6595;
+		constexpr static std::string_view IsFullBodyAnim_type_name = "IsFullBodyAnim";
+		constexpr static rivet::rivet_type_id IsFullBodyAnim_type_id = 0x10cdb0b8; 
 
 		explicit ShootAtCurveFiringEmitData() = default;
 		explicit ShootAtCurveFiringEmitData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

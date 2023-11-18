@@ -19,13 +19,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED VehicleMergeDistance : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "VehicleMergeDistance";
-		constexpr const static rivet::rivet_type_id type_id = 0x824a60d9;
+		constexpr static std::string_view type_name = "VehicleMergeDistance";
+		constexpr static rivet::rivet_type_id type_id = 0x824a60d9;
 
-		constexpr const static std::string_view Speed_type_name = "Speed";
-		constexpr const static rivet::rivet_type_id Speed_type_id = 0x16753237;
-		constexpr const static std::string_view Distance_type_name = "Distance";
-		constexpr const static rivet::rivet_type_id Distance_type_id = 0xe69327f1; 
+		constexpr static std::string_view Speed_type_name = "Speed";
+		constexpr static rivet::rivet_type_id Speed_type_id = 0x16753237;
+		constexpr static std::string_view Distance_type_name = "Distance";
+		constexpr static rivet::rivet_type_id Distance_type_id = 0xe69327f1; 
 
 		explicit VehicleMergeDistance() = default;
 		explicit VehicleMergeDistance([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

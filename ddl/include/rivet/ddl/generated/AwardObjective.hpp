@@ -19,13 +19,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED AwardObjective : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "AwardObjective";
-		constexpr const static rivet::rivet_type_id type_id = 0x456d94b3;
+		constexpr static std::string_view type_name = "AwardObjective";
+		constexpr static rivet::rivet_type_id type_id = 0x456d94b3;
 
-		constexpr const static std::string_view MissionName_type_name = "MissionName";
-		constexpr const static rivet::rivet_type_id MissionName_type_id = 0xa5c30e60;
-		constexpr const static std::string_view ObjectiveName_type_name = "ObjectiveName";
-		constexpr const static rivet::rivet_type_id ObjectiveName_type_id = 0x58746b9b; 
+		constexpr static std::string_view MissionName_type_name = "MissionName";
+		constexpr static rivet::rivet_type_id MissionName_type_id = 0xa5c30e60;
+		constexpr static std::string_view ObjectiveName_type_name = "ObjectiveName";
+		constexpr static rivet::rivet_type_id ObjectiveName_type_id = 0x58746b9b; 
 
 		explicit AwardObjective() = default;
 		explicit AwardObjective([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

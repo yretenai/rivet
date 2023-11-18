@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED BootConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "BootConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x1d7c61b1;
+		constexpr static std::string_view type_name = "BootConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x1d7c61b1;
 
-		constexpr const static std::string_view Assets_type_name = "Assets";
-		constexpr const static rivet::rivet_type_id Assets_type_id = 0x47a933e9; 
+		constexpr static std::string_view Assets_type_name = "Assets";
+		constexpr static rivet::rivet_type_id Assets_type_id = 0x47a933e9; 
 
 		explicit BootConfig() = default;
 		explicit BootConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

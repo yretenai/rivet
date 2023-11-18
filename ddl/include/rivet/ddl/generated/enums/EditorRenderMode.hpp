@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view EditorRenderMode_type_name = "EditorRenderMode";
-	constexpr const static rivet::rivet_type_id EditorRenderMode_type_id = 0x5ebdec9a;
+	constexpr static std::string_view EditorRenderMode_type_name = "EditorRenderMode";
+	constexpr static rivet::rivet_type_id EditorRenderMode_type_id = 0x5ebdec9a;
 
-	constexpr const static std::array<std::string_view, 44> EditorRenderMode_values = {
+	constexpr static std::array<std::string_view, 44> EditorRenderMode_values = {
 		"kSeperatorLighting",
 		"kFullLighting",
 		"kGrayscale",

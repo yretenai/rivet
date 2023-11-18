@@ -19,15 +19,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED RicochetData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "RicochetData";
-		constexpr const static rivet::rivet_type_id type_id = 0x7c6a4642;
+		constexpr static std::string_view type_name = "RicochetData";
+		constexpr static rivet::rivet_type_id type_id = 0x7c6a4642;
 
-		constexpr const static std::string_view BuildUpTime_type_name = "BuildUpTime";
-		constexpr const static rivet::rivet_type_id BuildUpTime_type_id = 0xbd8dfa03;
-		constexpr const static std::string_view SuccessTime_type_name = "SuccessTime";
-		constexpr const static rivet::rivet_type_id SuccessTime_type_id = 0xaed9ee75;
-		constexpr const static std::string_view FailTime_type_name = "FailTime";
-		constexpr const static rivet::rivet_type_id FailTime_type_id = 0x39bda0cd; 
+		constexpr static std::string_view BuildUpTime_type_name = "BuildUpTime";
+		constexpr static rivet::rivet_type_id BuildUpTime_type_id = 0xbd8dfa03;
+		constexpr static std::string_view SuccessTime_type_name = "SuccessTime";
+		constexpr static rivet::rivet_type_id SuccessTime_type_id = 0xaed9ee75;
+		constexpr static std::string_view FailTime_type_name = "FailTime";
+		constexpr static rivet::rivet_type_id FailTime_type_id = 0x39bda0cd; 
 
 		explicit RicochetData() = default;
 		explicit RicochetData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

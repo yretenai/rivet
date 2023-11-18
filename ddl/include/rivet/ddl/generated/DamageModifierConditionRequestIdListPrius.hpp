@@ -17,18 +17,18 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/DamageModifierConditionBasePrius.hpp>
-#include <rivet/ddl/generated/enums/x8423053f.hpp> 
+#include <rivet/ddl/generated/enums/x8423053f.hpp>
+#include <rivet/ddl/generated/DamageModifierConditionBasePrius.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DamageModifierConditionRequestIdListPrius : DamageModifierConditionBasePrius {
-		constexpr const static std::string_view type_name = "DamageModifierConditionRequestIdListPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x11fa6024;
+		constexpr static std::string_view type_name = "DamageModifierConditionRequestIdListPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x11fa6024;
 
-		constexpr const static std::string_view RequestIdEntries_type_name = "RequestIdEntries";
-		constexpr const static rivet::rivet_type_id RequestIdEntries_type_id = 0x255d0411;
-		constexpr const static std::string_view CheckType_type_name = "CheckType";
-		constexpr const static rivet::rivet_type_id CheckType_type_id = 0xb6b0f22c; 
+		constexpr static std::string_view RequestIdEntries_type_name = "RequestIdEntries";
+		constexpr static rivet::rivet_type_id RequestIdEntries_type_id = 0x255d0411;
+		constexpr static std::string_view CheckType_type_name = "CheckType";
+		constexpr static rivet::rivet_type_id CheckType_type_id = 0xb6b0f22c; 
 
 		explicit DamageModifierConditionRequestIdListPrius() = default;
 		explicit DamageModifierConditionRequestIdListPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED GameAccessibilityHighlightComponentPrius : AccessibilityHighlightComponentPrius {
-		constexpr const static std::string_view type_name = "GameAccessibilityHighlightComponentPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x976776bc;
+		constexpr static std::string_view type_name = "GameAccessibilityHighlightComponentPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x976776bc;
 
 		explicit GameAccessibilityHighlightComponentPrius() = default;
 		explicit GameAccessibilityHighlightComponentPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

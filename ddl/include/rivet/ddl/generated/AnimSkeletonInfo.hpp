@@ -19,15 +19,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED AnimSkeletonInfo : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "AnimSkeletonInfo";
-		constexpr const static rivet::rivet_type_id type_id = 0x5e797069;
+		constexpr static std::string_view type_name = "AnimSkeletonInfo";
+		constexpr static rivet::rivet_type_id type_id = 0x5e797069;
 
-		constexpr const static std::string_view MayaNameSpace_type_name = "MayaNameSpace";
-		constexpr const static rivet::rivet_type_id MayaNameSpace_type_id = 0xe7b7ef37;
-		constexpr const static std::string_view BodySkeleton_type_name = "BodySkeleton";
-		constexpr const static rivet::rivet_type_id BodySkeleton_type_id = 0x7a9eab17;
-		constexpr const static std::string_view HeadSkeleton_type_name = "HeadSkeleton";
-		constexpr const static rivet::rivet_type_id HeadSkeleton_type_id = 0xc9a07590; 
+		constexpr static std::string_view MayaNameSpace_type_name = "MayaNameSpace";
+		constexpr static rivet::rivet_type_id MayaNameSpace_type_id = 0xe7b7ef37;
+		constexpr static std::string_view BodySkeleton_type_name = "BodySkeleton";
+		constexpr static rivet::rivet_type_id BodySkeleton_type_id = 0x7a9eab17;
+		constexpr static std::string_view HeadSkeleton_type_name = "HeadSkeleton";
+		constexpr static rivet::rivet_type_id HeadSkeleton_type_id = 0xc9a07590; 
 
 		explicit AnimSkeletonInfo() = default;
 		explicit AnimSkeletonInfo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

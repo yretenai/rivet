@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED AimModLockWhenTargetDodgePrius : AimModifierPrius {
-		constexpr const static std::string_view type_name = "AimModLockWhenTargetDodgePrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x80d1d30c;
+		constexpr static std::string_view type_name = "AimModLockWhenTargetDodgePrius";
+		constexpr static rivet::rivet_type_id type_id = 0x80d1d30c;
 
-		constexpr const static std::string_view AllowLockDelay_type_name = "AllowLockDelay";
-		constexpr const static rivet::rivet_type_id AllowLockDelay_type_id = 0xa0e0eb68;
-		constexpr const static std::string_view PostDodgeTimeToLock_type_name = "PostDodgeTimeToLock";
-		constexpr const static rivet::rivet_type_id PostDodgeTimeToLock_type_id = 0x69603d1f; 
+		constexpr static std::string_view AllowLockDelay_type_name = "AllowLockDelay";
+		constexpr static rivet::rivet_type_id AllowLockDelay_type_id = 0xa0e0eb68;
+		constexpr static std::string_view PostDodgeTimeToLock_type_name = "PostDodgeTimeToLock";
+		constexpr static rivet::rivet_type_id PostDodgeTimeToLock_type_id = 0x69603d1f; 
 
 		explicit AimModLockWhenTargetDodgePrius() = default;
 		explicit AimModLockWhenTargetDodgePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

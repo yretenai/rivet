@@ -17,26 +17,26 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/CameraPrius.hpp>
-#include <rivet/ddl/generated/enums/x73a6f97a.hpp> 
+#include <rivet/ddl/generated/enums/x73a6f97a.hpp>
+#include <rivet/ddl/generated/CameraPrius.hpp> 
 
 namespace rivet::ddl::generated {
 	struct DDLVector3; 
 
 	struct RIVET_DDL_SHARED SplineCameraFlyPrius : CameraPrius {
-		constexpr const static std::string_view type_name = "SplineCameraFlyPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xdb38953a;
+		constexpr static std::string_view type_name = "SplineCameraFlyPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xdb38953a;
 
-		constexpr const static std::string_view MotionSpline_type_name = "MotionSpline";
-		constexpr const static rivet::rivet_type_id MotionSpline_type_id = 0x93329739;
-		constexpr const static std::string_view TargetActor_type_name = "TargetActor";
-		constexpr const static rivet::rivet_type_id TargetActor_type_id = 0x98554e8c;
-		constexpr const static std::string_view LookMode_type_name = "LookMode";
-		constexpr const static rivet::rivet_type_id LookMode_type_id = 0x646527bb;
-		constexpr const static std::string_view StartAtEnd_type_name = "StartAtEnd";
-		constexpr const static rivet::rivet_type_id StartAtEnd_type_id = 0x39b65e8c;
-		constexpr const static std::string_view TargetOffset_type_name = "TargetOffset";
-		constexpr const static rivet::rivet_type_id TargetOffset_type_id = 0xabbb80f6; 
+		constexpr static std::string_view MotionSpline_type_name = "MotionSpline";
+		constexpr static rivet::rivet_type_id MotionSpline_type_id = 0x93329739;
+		constexpr static std::string_view TargetActor_type_name = "TargetActor";
+		constexpr static rivet::rivet_type_id TargetActor_type_id = 0x98554e8c;
+		constexpr static std::string_view LookMode_type_name = "LookMode";
+		constexpr static rivet::rivet_type_id LookMode_type_id = 0x646527bb;
+		constexpr static std::string_view StartAtEnd_type_name = "StartAtEnd";
+		constexpr static rivet::rivet_type_id StartAtEnd_type_id = 0x39b65e8c;
+		constexpr static std::string_view TargetOffset_type_name = "TargetOffset";
+		constexpr static rivet::rivet_type_id TargetOffset_type_id = 0xabbb80f6; 
 
 		explicit SplineCameraFlyPrius() = default;
 		explicit SplineCameraFlyPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -23,13 +23,13 @@ namespace rivet::ddl::generated {
 	struct EmergentVOBasePrius; 
 
 	struct RIVET_DDL_SHARED BotConfigEmergentVO : ConfigBase {
-		constexpr const static std::string_view type_name = "BotConfigEmergentVO";
-		constexpr const static rivet::rivet_type_id type_id = 0x90e20575;
+		constexpr static std::string_view type_name = "BotConfigEmergentVO";
+		constexpr static rivet::rivet_type_id type_id = 0x90e20575;
 
-		constexpr const static std::string_view Prius_type_name = "Prius";
-		constexpr const static rivet::rivet_type_id Prius_type_id = 0x3bd7ee9e;
-		constexpr const static std::string_view EmergentVOConfig_type_name = "EmergentVOConfig";
-		constexpr const static rivet::rivet_type_id EmergentVOConfig_type_id = 0xde8b92bf; 
+		constexpr static std::string_view Prius_type_name = "Prius";
+		constexpr static rivet::rivet_type_id Prius_type_id = 0x3bd7ee9e;
+		constexpr static std::string_view EmergentVOConfig_type_name = "EmergentVOConfig";
+		constexpr static rivet::rivet_type_id EmergentVOConfig_type_id = 0xde8b92bf; 
 
 		explicit BotConfigEmergentVO() = default;
 		explicit BotConfigEmergentVO([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

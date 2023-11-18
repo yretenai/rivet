@@ -21,17 +21,17 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED Icon : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "Icon";
-		constexpr const static rivet::rivet_type_id type_id = 0x5504e96b;
+		constexpr static std::string_view type_name = "Icon";
+		constexpr static rivet::rivet_type_id type_id = 0x5504e96b;
 
-		constexpr const static std::string_view IconId_type_name = "IconId";
-		constexpr const static rivet::rivet_type_id IconId_type_id = 0x34bbecb9;
-		constexpr const static std::string_view Texture_type_name = "Texture";
-		constexpr const static rivet::rivet_type_id Texture_type_id = 0x838c6e4a;
-		constexpr const static std::string_view Width_type_name = "Width";
-		constexpr const static rivet::rivet_type_id Width_type_id = 0x954989ee;
-		constexpr const static std::string_view Height_type_name = "Height";
-		constexpr const static rivet::rivet_type_id Height_type_id = 0xcb35ab68; 
+		constexpr static std::string_view IconId_type_name = "IconId";
+		constexpr static rivet::rivet_type_id IconId_type_id = 0x34bbecb9;
+		constexpr static std::string_view Texture_type_name = "Texture";
+		constexpr static rivet::rivet_type_id Texture_type_id = 0x838c6e4a;
+		constexpr static std::string_view Width_type_name = "Width";
+		constexpr static rivet::rivet_type_id Width_type_id = 0x954989ee;
+		constexpr static std::string_view Height_type_name = "Height";
+		constexpr static rivet::rivet_type_id Height_type_id = 0xcb35ab68; 
 
 		explicit Icon() = default;
 		explicit Icon([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

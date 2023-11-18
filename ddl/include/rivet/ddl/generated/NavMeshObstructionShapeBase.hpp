@@ -21,13 +21,13 @@ namespace rivet::ddl::generated {
 	struct DDLVector3; 
 
 	struct RIVET_DDL_SHARED NavMeshObstructionShapeBase : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "NavMeshObstructionShapeBase";
-		constexpr const static rivet::rivet_type_id type_id = 0xc4164dd0;
+		constexpr static std::string_view type_name = "NavMeshObstructionShapeBase";
+		constexpr static rivet::rivet_type_id type_id = 0xc4164dd0;
 
-		constexpr const static std::string_view CenterOffset_type_name = "CenterOffset";
-		constexpr const static rivet::rivet_type_id CenterOffset_type_id = 0xa8edddef;
-		constexpr const static std::string_view UseBoundingBoxInfo_type_name = "UseBoundingBoxInfo";
-		constexpr const static rivet::rivet_type_id UseBoundingBoxInfo_type_id = 0x6a64db2b; 
+		constexpr static std::string_view CenterOffset_type_name = "CenterOffset";
+		constexpr static rivet::rivet_type_id CenterOffset_type_id = 0xa8edddef;
+		constexpr static std::string_view UseBoundingBoxInfo_type_name = "UseBoundingBoxInfo";
+		constexpr static rivet::rivet_type_id UseBoundingBoxInfo_type_id = 0x6a64db2b; 
 
 		explicit NavMeshObstructionShapeBase() = default;
 		explicit NavMeshObstructionShapeBase([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

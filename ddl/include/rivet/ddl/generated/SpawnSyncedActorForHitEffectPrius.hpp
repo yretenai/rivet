@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED SpawnSyncedActorForHitEffectPrius : ScriptedShotEffectBasePrius {
-		constexpr const static std::string_view type_name = "SpawnSyncedActorForHitEffectPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xbe91dceb;
+		constexpr static std::string_view type_name = "SpawnSyncedActorForHitEffectPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xbe91dceb;
 
-		constexpr const static std::string_view DefaultActorAsset_type_name = "DefaultActorAsset";
-		constexpr const static rivet::rivet_type_id DefaultActorAsset_type_id = 0x7487981c; 
+		constexpr static std::string_view DefaultActorAsset_type_name = "DefaultActorAsset";
+		constexpr static rivet::rivet_type_id DefaultActorAsset_type_id = 0x7487981c; 
 
 		explicit SpawnSyncedActorForHitEffectPrius() = default;
 		explicit SpawnSyncedActorForHitEffectPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

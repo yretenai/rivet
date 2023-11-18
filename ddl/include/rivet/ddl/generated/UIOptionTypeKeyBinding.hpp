@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED UIOptionTypeKeyBinding : UIOptionTypeSettingBase {
-		constexpr const static std::string_view type_name = "UIOptionTypeKeyBinding";
-		constexpr const static rivet::rivet_type_id type_id = 0x5088d72c;
+		constexpr static std::string_view type_name = "UIOptionTypeKeyBinding";
+		constexpr static rivet::rivet_type_id type_id = 0x5088d72c;
 
-		constexpr const static std::string_view ActionName_type_name = "ActionName";
-		constexpr const static rivet::rivet_type_id ActionName_type_id = 0x55b608bb;
-		constexpr const static std::string_view PrimaryLocked_type_name = "PrimaryLocked";
-		constexpr const static rivet::rivet_type_id PrimaryLocked_type_id = 0xcd291a73; 
+		constexpr static std::string_view ActionName_type_name = "ActionName";
+		constexpr static rivet::rivet_type_id ActionName_type_id = 0x55b608bb;
+		constexpr static std::string_view PrimaryLocked_type_name = "PrimaryLocked";
+		constexpr static rivet::rivet_type_id PrimaryLocked_type_id = 0xcd291a73; 
 
 		explicit UIOptionTypeKeyBinding() = default;
 		explicit UIOptionTypeKeyBinding([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

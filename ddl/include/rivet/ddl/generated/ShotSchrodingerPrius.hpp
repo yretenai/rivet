@@ -20,22 +20,22 @@
 #include <rivet/ddl/generated/ShotBasePrius.hpp> 
 
 namespace rivet::ddl::generated {
-	struct ShotDamageData;
+	struct ShotMotionSchrodingerDisappearPrius;
 	struct ShotMotionSchrodingerOrbitPrius;
-	struct ShotMotionSchrodingerDisappearPrius; 
+	struct ShotDamageData; 
 
 	struct RIVET_DDL_SHARED ShotSchrodingerPrius : ShotBasePrius {
-		constexpr const static std::string_view type_name = "ShotSchrodingerPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x984a2d98;
+		constexpr static std::string_view type_name = "ShotSchrodingerPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x984a2d98;
 
-		constexpr const static std::string_view ImpactDamage_type_name = "ImpactDamage";
-		constexpr const static rivet::rivet_type_id ImpactDamage_type_id = 0xca54c0af;
-		constexpr const static std::string_view AttachedDamage_type_name = "AttachedDamage";
-		constexpr const static rivet::rivet_type_id AttachedDamage_type_id = 0xc355a942;
-		constexpr const static std::string_view AttachedData_type_name = "AttachedData";
-		constexpr const static rivet::rivet_type_id AttachedData_type_id = 0xfde2603;
-		constexpr const static std::string_view DisappearData_type_name = "DisappearData";
-		constexpr const static rivet::rivet_type_id DisappearData_type_id = 0xfb1bc4ec; 
+		constexpr static std::string_view ImpactDamage_type_name = "ImpactDamage";
+		constexpr static rivet::rivet_type_id ImpactDamage_type_id = 0xca54c0af;
+		constexpr static std::string_view AttachedDamage_type_name = "AttachedDamage";
+		constexpr static rivet::rivet_type_id AttachedDamage_type_id = 0xc355a942;
+		constexpr static std::string_view AttachedData_type_name = "AttachedData";
+		constexpr static rivet::rivet_type_id AttachedData_type_id = 0xfde2603;
+		constexpr static std::string_view DisappearData_type_name = "DisappearData";
+		constexpr static rivet::rivet_type_id DisappearData_type_id = 0xfb1bc4ec; 
 
 		explicit ShotSchrodingerPrius() = default;
 		explicit ShotSchrodingerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

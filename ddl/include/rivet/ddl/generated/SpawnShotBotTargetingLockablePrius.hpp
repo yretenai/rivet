@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED SpawnShotBotTargetingLockablePrius : SpawnShotBotTargetingPrius {
-		constexpr const static std::string_view type_name = "SpawnShotBotTargetingLockablePrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x60483fa4;
+		constexpr static std::string_view type_name = "SpawnShotBotTargetingLockablePrius";
+		constexpr static rivet::rivet_type_id type_id = 0x60483fa4;
 
-		constexpr const static std::string_view MissVelocityMultiplier_type_name = "MissVelocityMultiplier";
-		constexpr const static rivet::rivet_type_id MissVelocityMultiplier_type_id = 0x179a8ec1;
-		constexpr const static std::string_view MissCap_type_name = "MissCap";
-		constexpr const static rivet::rivet_type_id MissCap_type_id = 0xc0db42df; 
+		constexpr static std::string_view MissVelocityMultiplier_type_name = "MissVelocityMultiplier";
+		constexpr static rivet::rivet_type_id MissVelocityMultiplier_type_id = 0x179a8ec1;
+		constexpr static std::string_view MissCap_type_name = "MissCap";
+		constexpr static rivet::rivet_type_id MissCap_type_id = 0xc0db42df; 
 
 		explicit SpawnShotBotTargetingLockablePrius() = default;
 		explicit SpawnShotBotTargetingLockablePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

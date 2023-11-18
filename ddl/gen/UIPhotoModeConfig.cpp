@@ -3,10 +3,10 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/UIPhotoModeEditMode.hpp>
-#include <rivet/ddl/generated/UIPhotoModeOptionsPage.hpp>
 #include <rivet/ddl/generated/UIPhotoModeOption.hpp>
-#include <rivet/ddl/generated/UIPhotoModeLights.hpp> 
+#include <rivet/ddl/generated/UIPhotoModeEditMode.hpp>
+#include <rivet/ddl/generated/UIPhotoModeLights.hpp>
+#include <rivet/ddl/generated/UIPhotoModeOptionsPage.hpp> 
 
 #include <rivet/ddl/generated/UIPhotoModeConfig.hpp>
 

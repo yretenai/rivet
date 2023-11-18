@@ -17,63 +17,63 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/ConfigBase.hpp>
-#include <rivet/ddl/generated/enums/x13bb0809.hpp> 
+#include <rivet/ddl/generated/enums/x13bb0809.hpp>
+#include <rivet/ddl/generated/ConfigBase.hpp> 
 
 namespace rivet::ddl::generated {
-	struct WwiseSoundEvent;
-	struct SoundSourceComponentPrius; 
+	struct SoundSourceComponentPrius;
+	struct WwiseSoundEvent; 
 
 	struct RIVET_DDL_SHARED FlockConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "FlockConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xa30a2269;
+		constexpr static std::string_view type_name = "FlockConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xa30a2269;
 
-		constexpr const static std::string_view Template_type_name = "Template";
-		constexpr const static rivet::rivet_type_id Template_type_id = 0x6d61a2f3;
-		constexpr const static std::string_view DefaultFlockDensityConfig_type_name = "DefaultFlockDensityConfig";
-		constexpr const static rivet::rivet_type_id DefaultFlockDensityConfig_type_id = 0x31cc9f3b;
-		constexpr const static std::string_view DistFarThresh_type_name = "DistFarThresh";
-		constexpr const static rivet::rivet_type_id DistFarThresh_type_id = 0xefec9c12;
-		constexpr const static std::string_view SpawnDesireDistanceCoeff_type_name = "SpawnDesireDistanceCoeff";
-		constexpr const static rivet::rivet_type_id SpawnDesireDistanceCoeff_type_id = 0xc3df5f7e;
-		constexpr const static std::string_view SpawnDesireAngleCoeff_type_name = "SpawnDesireAngleCoeff";
-		constexpr const static rivet::rivet_type_id SpawnDesireAngleCoeff_type_id = 0x11152dcc;
-		constexpr const static std::string_view FovThresh_type_name = "FovThresh";
-		constexpr const static rivet::rivet_type_id FovThresh_type_id = 0x3bf2f064;
-		constexpr const static std::string_view LowSpeedThreshold_type_name = "LowSpeedThreshold";
-		constexpr const static rivet::rivet_type_id LowSpeedThreshold_type_id = 0x6ba17f1e;
-		constexpr const static std::string_view LowSpeedSpawnPenalty_type_name = "LowSpeedSpawnPenalty";
-		constexpr const static rivet::rivet_type_id LowSpeedSpawnPenalty_type_id = 0x823cec9e;
-		constexpr const static std::string_view LowSpeedFovThreshold_type_name = "LowSpeedFovThreshold";
-		constexpr const static rivet::rivet_type_id LowSpeedFovThreshold_type_id = 0xcde915da;
-		constexpr const static std::string_view FlockBehavior_type_name = "FlockBehavior";
-		constexpr const static rivet::rivet_type_id FlockBehavior_type_id = 0x33765f66;
-		constexpr const static std::string_view SeparationDistance_type_name = "SeparationDistance";
-		constexpr const static rivet::rivet_type_id SeparationDistance_type_id = 0xa76bfbaa;
-		constexpr const static std::string_view MaxSeparationForcePerMember_type_name = "MaxSeparationForcePerMember";
-		constexpr const static rivet::rivet_type_id MaxSeparationForcePerMember_type_id = 0x6c210235;
-		constexpr const static std::string_view MaxNeighborDistance_type_name = "MaxNeighborDistance";
-		constexpr const static rivet::rivet_type_id MaxNeighborDistance_type_id = 0xed38322e;
-		constexpr const static std::string_view MaxAlignmentForce_type_name = "MaxAlignmentForce";
-		constexpr const static rivet::rivet_type_id MaxAlignmentForce_type_id = 0x1a3c55eb;
-		constexpr const static std::string_view MaxBoundaryForce_type_name = "MaxBoundaryForce";
-		constexpr const static rivet::rivet_type_id MaxBoundaryForce_type_id = 0xa298e76f;
-		constexpr const static std::string_view MaxCohesionForce_type_name = "MaxCohesionForce";
-		constexpr const static rivet::rivet_type_id MaxCohesionForce_type_id = 0xe112b7f1;
-		constexpr const static std::string_view MaxSeparationForce_type_name = "MaxSeparationForce";
-		constexpr const static rivet::rivet_type_id MaxSeparationForce_type_id = 0x3093400e;
-		constexpr const static std::string_view DestinationForce_type_name = "DestinationForce";
-		constexpr const static rivet::rivet_type_id DestinationForce_type_id = 0xe925aec6;
-		constexpr const static std::string_view DestinationBoundaryPadding_type_name = "DestinationBoundaryPadding";
-		constexpr const static rivet::rivet_type_id DestinationBoundaryPadding_type_id = 0xd20ddd31;
-		constexpr const static std::string_view DestinationBlendTime_type_name = "DestinationBlendTime";
-		constexpr const static rivet::rivet_type_id DestinationBlendTime_type_id = 0xafe36d2d;
-		constexpr const static std::string_view NearDestinationDistance_type_name = "NearDestinationDistance";
-		constexpr const static rivet::rivet_type_id NearDestinationDistance_type_id = 0x56bec468;
-		constexpr const static std::string_view SpawnSoundEvent_type_name = "SpawnSoundEvent";
-		constexpr const static rivet::rivet_type_id SpawnSoundEvent_type_id = 0xe98b42e4;
-		constexpr const static std::string_view FlockSoundSource_type_name = "FlockSoundSource";
-		constexpr const static rivet::rivet_type_id FlockSoundSource_type_id = 0xd8e09e63; 
+		constexpr static std::string_view Template_type_name = "Template";
+		constexpr static rivet::rivet_type_id Template_type_id = 0x6d61a2f3;
+		constexpr static std::string_view DefaultFlockDensityConfig_type_name = "DefaultFlockDensityConfig";
+		constexpr static rivet::rivet_type_id DefaultFlockDensityConfig_type_id = 0x31cc9f3b;
+		constexpr static std::string_view DistFarThresh_type_name = "DistFarThresh";
+		constexpr static rivet::rivet_type_id DistFarThresh_type_id = 0xefec9c12;
+		constexpr static std::string_view SpawnDesireDistanceCoeff_type_name = "SpawnDesireDistanceCoeff";
+		constexpr static rivet::rivet_type_id SpawnDesireDistanceCoeff_type_id = 0xc3df5f7e;
+		constexpr static std::string_view SpawnDesireAngleCoeff_type_name = "SpawnDesireAngleCoeff";
+		constexpr static rivet::rivet_type_id SpawnDesireAngleCoeff_type_id = 0x11152dcc;
+		constexpr static std::string_view FovThresh_type_name = "FovThresh";
+		constexpr static rivet::rivet_type_id FovThresh_type_id = 0x3bf2f064;
+		constexpr static std::string_view LowSpeedThreshold_type_name = "LowSpeedThreshold";
+		constexpr static rivet::rivet_type_id LowSpeedThreshold_type_id = 0x6ba17f1e;
+		constexpr static std::string_view LowSpeedSpawnPenalty_type_name = "LowSpeedSpawnPenalty";
+		constexpr static rivet::rivet_type_id LowSpeedSpawnPenalty_type_id = 0x823cec9e;
+		constexpr static std::string_view LowSpeedFovThreshold_type_name = "LowSpeedFovThreshold";
+		constexpr static rivet::rivet_type_id LowSpeedFovThreshold_type_id = 0xcde915da;
+		constexpr static std::string_view FlockBehavior_type_name = "FlockBehavior";
+		constexpr static rivet::rivet_type_id FlockBehavior_type_id = 0x33765f66;
+		constexpr static std::string_view SeparationDistance_type_name = "SeparationDistance";
+		constexpr static rivet::rivet_type_id SeparationDistance_type_id = 0xa76bfbaa;
+		constexpr static std::string_view MaxSeparationForcePerMember_type_name = "MaxSeparationForcePerMember";
+		constexpr static rivet::rivet_type_id MaxSeparationForcePerMember_type_id = 0x6c210235;
+		constexpr static std::string_view MaxNeighborDistance_type_name = "MaxNeighborDistance";
+		constexpr static rivet::rivet_type_id MaxNeighborDistance_type_id = 0xed38322e;
+		constexpr static std::string_view MaxAlignmentForce_type_name = "MaxAlignmentForce";
+		constexpr static rivet::rivet_type_id MaxAlignmentForce_type_id = 0x1a3c55eb;
+		constexpr static std::string_view MaxBoundaryForce_type_name = "MaxBoundaryForce";
+		constexpr static rivet::rivet_type_id MaxBoundaryForce_type_id = 0xa298e76f;
+		constexpr static std::string_view MaxCohesionForce_type_name = "MaxCohesionForce";
+		constexpr static rivet::rivet_type_id MaxCohesionForce_type_id = 0xe112b7f1;
+		constexpr static std::string_view MaxSeparationForce_type_name = "MaxSeparationForce";
+		constexpr static rivet::rivet_type_id MaxSeparationForce_type_id = 0x3093400e;
+		constexpr static std::string_view DestinationForce_type_name = "DestinationForce";
+		constexpr static rivet::rivet_type_id DestinationForce_type_id = 0xe925aec6;
+		constexpr static std::string_view DestinationBoundaryPadding_type_name = "DestinationBoundaryPadding";
+		constexpr static rivet::rivet_type_id DestinationBoundaryPadding_type_id = 0xd20ddd31;
+		constexpr static std::string_view DestinationBlendTime_type_name = "DestinationBlendTime";
+		constexpr static rivet::rivet_type_id DestinationBlendTime_type_id = 0xafe36d2d;
+		constexpr static std::string_view NearDestinationDistance_type_name = "NearDestinationDistance";
+		constexpr static rivet::rivet_type_id NearDestinationDistance_type_id = 0x56bec468;
+		constexpr static std::string_view SpawnSoundEvent_type_name = "SpawnSoundEvent";
+		constexpr static rivet::rivet_type_id SpawnSoundEvent_type_id = 0xe98b42e4;
+		constexpr static std::string_view FlockSoundSource_type_name = "FlockSoundSource";
+		constexpr static rivet::rivet_type_id FlockSoundSource_type_id = 0xd8e09e63; 
 
 		explicit FlockConfig() = default;
 		explicit FlockConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

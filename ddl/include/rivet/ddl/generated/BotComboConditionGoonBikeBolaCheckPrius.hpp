@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED BotComboConditionGoonBikeBolaCheckPrius : BotComboConditionDistFromClosestNavPrius {
-		constexpr const static std::string_view type_name = "BotComboConditionGoonBikeBolaCheckPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xc835d74a;
+		constexpr static std::string_view type_name = "BotComboConditionGoonBikeBolaCheckPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xc835d74a;
 
-		constexpr const static std::string_view FeetLocatorForLoS_type_name = "FeetLocatorForLoS";
-		constexpr const static rivet::rivet_type_id FeetLocatorForLoS_type_id = 0xaa386430; 
+		constexpr static std::string_view FeetLocatorForLoS_type_name = "FeetLocatorForLoS";
+		constexpr static rivet::rivet_type_id FeetLocatorForLoS_type_id = 0xaa386430; 
 
 		explicit BotComboConditionGoonBikeBolaCheckPrius() = default;
 		explicit BotComboConditionGoonBikeBolaCheckPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

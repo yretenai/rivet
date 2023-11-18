@@ -20,17 +20,19 @@
 #include <rivet/ddl/generated/TargetingStimulusListenerAddOnPrius.hpp> 
 
 namespace rivet::ddl::generated {
-	struct RIVET_DDL_SHARED TargetingStimulusListenerAddOnGenericPrius : TargetingStimulusListenerAddOnPrius {
-		constexpr const static std::string_view type_name = "TargetingStimulusListenerAddOnGenericPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xe9bacbff;
+	struct EventBase; 
 
-		constexpr const static std::string_view Event_type_name = "Event";
-		constexpr const static rivet::rivet_type_id Event_type_id = 0x22fdc666; 
+	struct RIVET_DDL_SHARED TargetingStimulusListenerAddOnGenericPrius : TargetingStimulusListenerAddOnPrius {
+		constexpr static std::string_view type_name = "TargetingStimulusListenerAddOnGenericPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xe9bacbff;
+
+		constexpr static std::string_view Event_type_name = "Event";
+		constexpr static rivet::rivet_type_id Event_type_id = 0x22fdc666; 
 
 		explicit TargetingStimulusListenerAddOnGenericPrius() = default;
 		explicit TargetingStimulusListenerAddOnGenericPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);
 
-		std::optional<std::vector<rivet::structures::rivet_serialized_value>> Event {}; 
+		std::shared_ptr<rivet::ddl::generated::EventBase> Event {}; 
 
 		[[nodiscard]] auto
 		get_type_name() const noexcept -> std::string_view override;

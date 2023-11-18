@@ -21,15 +21,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED FlockDensityConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "FlockDensityConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xfec78f0d;
+		constexpr static std::string_view type_name = "FlockDensityConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xfec78f0d;
 
-		constexpr const static std::string_view MaxActivatedVolumeNum_type_name = "MaxActivatedVolumeNum";
-		constexpr const static rivet::rivet_type_id MaxActivatedVolumeNum_type_id = 0x140ef916;
-		constexpr const static std::string_view MinFlockSize_type_name = "MinFlockSize";
-		constexpr const static rivet::rivet_type_id MinFlockSize_type_id = 0xab1793e2;
-		constexpr const static std::string_view MaxFlockSize_type_name = "MaxFlockSize";
-		constexpr const static rivet::rivet_type_id MaxFlockSize_type_id = 0x3b648308; 
+		constexpr static std::string_view MaxActivatedVolumeNum_type_name = "MaxActivatedVolumeNum";
+		constexpr static rivet::rivet_type_id MaxActivatedVolumeNum_type_id = 0x140ef916;
+		constexpr static std::string_view MinFlockSize_type_name = "MinFlockSize";
+		constexpr static rivet::rivet_type_id MinFlockSize_type_id = 0xab1793e2;
+		constexpr static std::string_view MaxFlockSize_type_name = "MaxFlockSize";
+		constexpr static rivet::rivet_type_id MaxFlockSize_type_id = 0x3b648308; 
 
 		explicit FlockDensityConfig() = default;
 		explicit FlockDensityConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

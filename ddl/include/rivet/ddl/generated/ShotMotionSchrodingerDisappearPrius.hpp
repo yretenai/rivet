@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ShotMotionSchrodingerDisappearPrius : BasicShotMotionPrius {
-		constexpr const static std::string_view type_name = "ShotMotionSchrodingerDisappearPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xcf5c1df5;
+		constexpr static std::string_view type_name = "ShotMotionSchrodingerDisappearPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xcf5c1df5;
 
-		constexpr const static std::string_view OutroAnim_type_name = "OutroAnim";
-		constexpr const static rivet::rivet_type_id OutroAnim_type_id = 0xa0ecf634;
-		constexpr const static std::string_view RiftActor_type_name = "RiftActor";
-		constexpr const static rivet::rivet_type_id RiftActor_type_id = 0x4e466389; 
+		constexpr static std::string_view OutroAnim_type_name = "OutroAnim";
+		constexpr static rivet::rivet_type_id OutroAnim_type_id = 0xa0ecf634;
+		constexpr static std::string_view RiftActor_type_name = "RiftActor";
+		constexpr static rivet::rivet_type_id RiftActor_type_id = 0x4e466389; 
 
 		explicit ShotMotionSchrodingerDisappearPrius() = default;
 		explicit ShotMotionSchrodingerDisappearPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

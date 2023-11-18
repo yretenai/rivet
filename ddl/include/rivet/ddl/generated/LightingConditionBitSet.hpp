@@ -19,19 +19,19 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED LightingConditionBitSet : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "LightingConditionBitSet";
-		constexpr const static rivet::rivet_type_id type_id = 0x5fea3405;
+		constexpr static std::string_view type_name = "LightingConditionBitSet";
+		constexpr static rivet::rivet_type_id type_id = 0x5fea3405;
 
-		constexpr const static std::string_view Day_type_name = "Day";
-		constexpr const static rivet::rivet_type_id Day_type_id = 0xcff50059;
-		constexpr const static std::string_view Overcast_type_name = "Overcast";
-		constexpr const static rivet::rivet_type_id Overcast_type_id = 0xf1877eb3;
-		constexpr const static std::string_view Sunset_type_name = "Sunset";
-		constexpr const static rivet::rivet_type_id Sunset_type_id = 0xf19283ea;
-		constexpr const static std::string_view Night_type_name = "Night";
-		constexpr const static rivet::rivet_type_id Night_type_id = 0x889c356;
-		constexpr const static std::string_view Blackout_type_name = "Blackout";
-		constexpr const static rivet::rivet_type_id Blackout_type_id = 0xf64df6a5; 
+		constexpr static std::string_view Day_type_name = "Day";
+		constexpr static rivet::rivet_type_id Day_type_id = 0xcff50059;
+		constexpr static std::string_view Overcast_type_name = "Overcast";
+		constexpr static rivet::rivet_type_id Overcast_type_id = 0xf1877eb3;
+		constexpr static std::string_view Sunset_type_name = "Sunset";
+		constexpr static rivet::rivet_type_id Sunset_type_id = 0xf19283ea;
+		constexpr static std::string_view Night_type_name = "Night";
+		constexpr static rivet::rivet_type_id Night_type_id = 0x889c356;
+		constexpr static std::string_view Blackout_type_name = "Blackout";
+		constexpr static rivet::rivet_type_id Blackout_type_id = 0xf64df6a5; 
 
 		explicit LightingConditionBitSet() = default;
 		explicit LightingConditionBitSet([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

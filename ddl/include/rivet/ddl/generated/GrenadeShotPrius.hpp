@@ -18,25 +18,25 @@
 #include <rivet/structures/rivet_serialization.hpp>
 
 #include <rivet/ddl/generated/enums/DamageLOSTypes.hpp>
-#include <rivet/ddl/generated/LobbedShotPrius.hpp>
-#include <rivet/ddl/generated/enums/x8d7e44cf.hpp> 
+#include <rivet/ddl/generated/enums/x8d7e44cf.hpp>
+#include <rivet/ddl/generated/LobbedShotPrius.hpp> 
 
 namespace rivet::ddl::generated {
-	struct GrenadeExplosionMode;
-	struct DamageModifierExplosionPrius; 
+	struct DamageModifierExplosionPrius;
+	struct GrenadeExplosionMode; 
 
 	struct RIVET_DDL_SHARED GrenadeShotPrius : LobbedShotPrius {
-		constexpr const static std::string_view type_name = "GrenadeShotPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xdf75dc39;
+		constexpr static std::string_view type_name = "GrenadeShotPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xdf75dc39;
 
-		constexpr const static std::string_view ExplosionMode_type_name = "ExplosionMode";
-		constexpr const static rivet::rivet_type_id ExplosionMode_type_id = 0x42591e47;
-		constexpr const static std::string_view ExplosionDamageType_type_name = "ExplosionDamageType";
-		constexpr const static rivet::rivet_type_id ExplosionDamageType_type_id = 0x9eca2505;
-		constexpr const static std::string_view ExplosionData_type_name = "ExplosionData";
-		constexpr const static rivet::rivet_type_id ExplosionData_type_id = 0x7860aa8f;
-		constexpr const static std::string_view DamageLOSType_type_name = "DamageLOSType";
-		constexpr const static rivet::rivet_type_id DamageLOSType_type_id = 0x4762f7df; 
+		constexpr static std::string_view ExplosionMode_type_name = "ExplosionMode";
+		constexpr static rivet::rivet_type_id ExplosionMode_type_id = 0x42591e47;
+		constexpr static std::string_view ExplosionDamageType_type_name = "ExplosionDamageType";
+		constexpr static rivet::rivet_type_id ExplosionDamageType_type_id = 0x9eca2505;
+		constexpr static std::string_view ExplosionData_type_name = "ExplosionData";
+		constexpr static rivet::rivet_type_id ExplosionData_type_id = 0x7860aa8f;
+		constexpr static std::string_view DamageLOSType_type_name = "DamageLOSType";
+		constexpr static rivet::rivet_type_id DamageLOSType_type_id = 0x4762f7df; 
 
 		explicit GrenadeShotPrius() = default;
 		explicit GrenadeShotPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

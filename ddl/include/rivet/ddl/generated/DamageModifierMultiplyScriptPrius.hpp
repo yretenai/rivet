@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DamageModifierMultiplyScriptPrius : DamageModifierMultiplyPrius {
-		constexpr const static std::string_view type_name = "DamageModifierMultiplyScriptPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x266832ba;
+		constexpr static std::string_view type_name = "DamageModifierMultiplyScriptPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x266832ba;
 
 		explicit DamageModifierMultiplyScriptPrius() = default;
 		explicit DamageModifierMultiplyScriptPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

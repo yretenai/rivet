@@ -19,21 +19,21 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED OrbitCamData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "OrbitCamData";
-		constexpr const static rivet::rivet_type_id type_id = 0xb27719da;
+		constexpr static std::string_view type_name = "OrbitCamData";
+		constexpr static rivet::rivet_type_id type_id = 0xb27719da;
 
-		constexpr const static std::string_view TetherDistance_type_name = "TetherDistance";
-		constexpr const static rivet::rivet_type_id TetherDistance_type_id = 0xc7fa135f;
-		constexpr const static std::string_view MinDistance_type_name = "MinDistance";
-		constexpr const static rivet::rivet_type_id MinDistance_type_id = 0x448e693a;
-		constexpr const static std::string_view ZoomSpeed_type_name = "ZoomSpeed";
-		constexpr const static rivet::rivet_type_id ZoomSpeed_type_id = 0xc9e37699;
-		constexpr const static std::string_view ZoomAccel_type_name = "ZoomAccel";
-		constexpr const static rivet::rivet_type_id ZoomAccel_type_id = 0x9b39be8a;
-		constexpr const static std::string_view ZoomDecel_type_name = "ZoomDecel";
-		constexpr const static rivet::rivet_type_id ZoomDecel_type_id = 0x76b26e26;
-		constexpr const static std::string_view StickConfig_type_name = "StickConfig";
-		constexpr const static rivet::rivet_type_id StickConfig_type_id = 0x3bc8f276; 
+		constexpr static std::string_view TetherDistance_type_name = "TetherDistance";
+		constexpr static rivet::rivet_type_id TetherDistance_type_id = 0xc7fa135f;
+		constexpr static std::string_view MinDistance_type_name = "MinDistance";
+		constexpr static rivet::rivet_type_id MinDistance_type_id = 0x448e693a;
+		constexpr static std::string_view ZoomSpeed_type_name = "ZoomSpeed";
+		constexpr static rivet::rivet_type_id ZoomSpeed_type_id = 0xc9e37699;
+		constexpr static std::string_view ZoomAccel_type_name = "ZoomAccel";
+		constexpr static rivet::rivet_type_id ZoomAccel_type_id = 0x9b39be8a;
+		constexpr static std::string_view ZoomDecel_type_name = "ZoomDecel";
+		constexpr static rivet::rivet_type_id ZoomDecel_type_id = 0x76b26e26;
+		constexpr static std::string_view StickConfig_type_name = "StickConfig";
+		constexpr static rivet::rivet_type_id StickConfig_type_id = 0x3bc8f276; 
 
 		explicit OrbitCamData() = default;
 		explicit OrbitCamData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

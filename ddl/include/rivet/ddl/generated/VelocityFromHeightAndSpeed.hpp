@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED VelocityFromHeightAndSpeed : GrenadeVelocityMode {
-		constexpr const static std::string_view type_name = "VelocityFromHeightAndSpeed";
-		constexpr const static rivet::rivet_type_id type_id = 0x67daf6ce;
+		constexpr static std::string_view type_name = "VelocityFromHeightAndSpeed";
+		constexpr static rivet::rivet_type_id type_id = 0x67daf6ce;
 
-		constexpr const static std::string_view Height_type_name = "Height";
-		constexpr const static rivet::rivet_type_id Height_type_id = 0xcb35ab68;
-		constexpr const static std::string_view Speed_type_name = "Speed";
-		constexpr const static rivet::rivet_type_id Speed_type_id = 0x16753237; 
+		constexpr static std::string_view Height_type_name = "Height";
+		constexpr static rivet::rivet_type_id Height_type_id = 0xcb35ab68;
+		constexpr static std::string_view Speed_type_name = "Speed";
+		constexpr static rivet::rivet_type_id Speed_type_id = 0x16753237; 
 
 		explicit VelocityFromHeightAndSpeed() = default;
 		explicit VelocityFromHeightAndSpeed([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

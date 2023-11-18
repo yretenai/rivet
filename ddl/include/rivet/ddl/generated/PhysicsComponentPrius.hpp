@@ -23,31 +23,31 @@ namespace rivet::ddl::generated {
 	struct PhysicsCustomizationProperties; 
 
 	struct RIVET_DDL_SHARED PhysicsComponentPrius : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "PhysicsComponentPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xcc30dca6;
+		constexpr static std::string_view type_name = "PhysicsComponentPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xcc30dca6;
 
-		constexpr const static std::string_view CollisionOn_type_name = "CollisionOn";
-		constexpr const static rivet::rivet_type_id CollisionOn_type_id = 0xc9cff538;
-		constexpr const static std::string_view SpawnAs_type_name = "SpawnAs";
-		constexpr const static rivet::rivet_type_id SpawnAs_type_id = 0x7ab90501;
-		constexpr const static std::string_view RemoveFromAllDomains_type_name = "RemoveFromAllDomains";
-		constexpr const static rivet::rivet_type_id RemoveFromAllDomains_type_id = 0x14981a04;
-		constexpr const static std::string_view WantsContactEvent_type_name = "WantsContactEvent";
-		constexpr const static rivet::rivet_type_id WantsContactEvent_type_id = 0xe426c107;
-		constexpr const static std::string_view MatchJointsOnSpawn_type_name = "MatchJointsOnSpawn";
-		constexpr const static rivet::rivet_type_id MatchJointsOnSpawn_type_id = 0x61875ae9;
-		constexpr const static std::string_view ClothTeleportDistance_type_name = "ClothTeleportDistance";
-		constexpr const static rivet::rivet_type_id ClothTeleportDistance_type_id = 0xa3701f0d;
-		constexpr const static std::string_view ClothSettleIterations_type_name = "ClothSettleIterations";
-		constexpr const static rivet::rivet_type_id ClothSettleIterations_type_id = 0x824abbe3;
-		constexpr const static std::string_view ClothSettlingFrameCount_type_name = "ClothSettlingFrameCount";
-		constexpr const static rivet::rivet_type_id ClothSettlingFrameCount_type_id = 0xdd1fea4c;
-		constexpr const static std::string_view ClothSettleOnSpawn_type_name = "ClothSettleOnSpawn";
-		constexpr const static rivet::rivet_type_id ClothSettleOnSpawn_type_id = 0x280c6a7f;
-		constexpr const static std::string_view HandleStateActionEvents_type_name = "HandleStateActionEvents";
-		constexpr const static rivet::rivet_type_id HandleStateActionEvents_type_id = 0x1771dac9;
-		constexpr const static std::string_view CustomProperties_type_name = "CustomProperties";
-		constexpr const static rivet::rivet_type_id CustomProperties_type_id = 0x8e301f6c; 
+		constexpr static std::string_view CollisionOn_type_name = "CollisionOn";
+		constexpr static rivet::rivet_type_id CollisionOn_type_id = 0xc9cff538;
+		constexpr static std::string_view SpawnAs_type_name = "SpawnAs";
+		constexpr static rivet::rivet_type_id SpawnAs_type_id = 0x7ab90501;
+		constexpr static std::string_view RemoveFromAllDomains_type_name = "RemoveFromAllDomains";
+		constexpr static rivet::rivet_type_id RemoveFromAllDomains_type_id = 0x14981a04;
+		constexpr static std::string_view WantsContactEvent_type_name = "WantsContactEvent";
+		constexpr static rivet::rivet_type_id WantsContactEvent_type_id = 0xe426c107;
+		constexpr static std::string_view MatchJointsOnSpawn_type_name = "MatchJointsOnSpawn";
+		constexpr static rivet::rivet_type_id MatchJointsOnSpawn_type_id = 0x61875ae9;
+		constexpr static std::string_view ClothTeleportDistance_type_name = "ClothTeleportDistance";
+		constexpr static rivet::rivet_type_id ClothTeleportDistance_type_id = 0xa3701f0d;
+		constexpr static std::string_view ClothSettleIterations_type_name = "ClothSettleIterations";
+		constexpr static rivet::rivet_type_id ClothSettleIterations_type_id = 0x824abbe3;
+		constexpr static std::string_view ClothSettlingFrameCount_type_name = "ClothSettlingFrameCount";
+		constexpr static rivet::rivet_type_id ClothSettlingFrameCount_type_id = 0xdd1fea4c;
+		constexpr static std::string_view ClothSettleOnSpawn_type_name = "ClothSettleOnSpawn";
+		constexpr static rivet::rivet_type_id ClothSettleOnSpawn_type_id = 0x280c6a7f;
+		constexpr static std::string_view HandleStateActionEvents_type_name = "HandleStateActionEvents";
+		constexpr static rivet::rivet_type_id HandleStateActionEvents_type_id = 0x1771dac9;
+		constexpr static std::string_view CustomProperties_type_name = "CustomProperties";
+		constexpr static rivet::rivet_type_id CustomProperties_type_id = 0x8e301f6c; 
 
 		explicit PhysicsComponentPrius() = default;
 		explicit PhysicsComponentPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

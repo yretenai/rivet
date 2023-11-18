@@ -20,19 +20,19 @@
 #include <rivet/ddl/generated/ConfigBase.hpp> 
 
 namespace rivet::ddl::generated {
-	struct BotComboEntry;
-	struct BotIndexMoveContainer; 
+	struct BotIndexMoveContainer;
+	struct BotComboEntry; 
 
 	struct RIVET_DDL_SHARED BotConfigCombo : ConfigBase {
-		constexpr const static std::string_view type_name = "BotConfigCombo";
-		constexpr const static rivet::rivet_type_id type_id = 0xb0fc7b99;
+		constexpr static std::string_view type_name = "BotConfigCombo";
+		constexpr static rivet::rivet_type_id type_id = 0xb0fc7b99;
 
-		constexpr const static std::string_view Combos_type_name = "Combos";
-		constexpr const static rivet::rivet_type_id Combos_type_id = 0xb3ce15d2;
-		constexpr const static std::string_view IndexMoveList_type_name = "IndexMoveList";
-		constexpr const static rivet::rivet_type_id IndexMoveList_type_id = 0x62c1f51f;
-		constexpr const static std::string_view IndexMoveListProcessed_type_name = "IndexMoveListProcessed";
-		constexpr const static rivet::rivet_type_id IndexMoveListProcessed_type_id = 0xa8a72066; 
+		constexpr static std::string_view Combos_type_name = "Combos";
+		constexpr static rivet::rivet_type_id Combos_type_id = 0xb3ce15d2;
+		constexpr static std::string_view IndexMoveList_type_name = "IndexMoveList";
+		constexpr static rivet::rivet_type_id IndexMoveList_type_id = 0x62c1f51f;
+		constexpr static std::string_view IndexMoveListProcessed_type_name = "IndexMoveListProcessed";
+		constexpr static rivet::rivet_type_id IndexMoveListProcessed_type_id = 0xa8a72066; 
 
 		explicit BotConfigCombo() = default;
 		explicit BotConfigCombo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

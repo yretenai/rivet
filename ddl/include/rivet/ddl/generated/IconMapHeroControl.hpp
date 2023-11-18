@@ -17,16 +17,16 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/IconMapBase.hpp>
-#include <rivet/ddl/generated/enums/HeroControl.hpp> 
+#include <rivet/ddl/generated/enums/HeroControl.hpp>
+#include <rivet/ddl/generated/IconMapBase.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED IconMapHeroControl : IconMapBase {
-		constexpr const static std::string_view type_name = "IconMapHeroControl";
-		constexpr const static rivet::rivet_type_id type_id = 0xd2bbaa8a;
+		constexpr static std::string_view type_name = "IconMapHeroControl";
+		constexpr static rivet::rivet_type_id type_id = 0xd2bbaa8a;
 
-		constexpr const static std::string_view HeroControl_type_name = "HeroControl";
-		constexpr const static rivet::rivet_type_id HeroControl_type_id = 0x5316cb93; 
+		constexpr static std::string_view HeroControl_type_name = "HeroControl";
+		constexpr static rivet::rivet_type_id HeroControl_type_id = 0x5316cb93; 
 
 		explicit IconMapHeroControl() = default;
 		explicit IconMapHeroControl([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

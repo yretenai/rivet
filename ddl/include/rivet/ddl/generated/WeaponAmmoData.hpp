@@ -21,17 +21,17 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED WeaponAmmoData : BaseComponentAmmoPrius {
-		constexpr const static std::string_view type_name = "WeaponAmmoData";
-		constexpr const static rivet::rivet_type_id type_id = 0x6ade1ffb;
+		constexpr static std::string_view type_name = "WeaponAmmoData";
+		constexpr static rivet::rivet_type_id type_id = 0x6ade1ffb;
 
-		constexpr const static std::string_view AmmoItemConfig_type_name = "AmmoItemConfig";
-		constexpr const static rivet::rivet_type_id AmmoItemConfig_type_id = 0x7151e5a4;
-		constexpr const static std::string_view PickupAmmo_type_name = "PickupAmmo";
-		constexpr const static rivet::rivet_type_id PickupAmmo_type_id = 0x252449da;
-		constexpr const static std::string_view SpawnBias_type_name = "SpawnBias";
-		constexpr const static rivet::rivet_type_id SpawnBias_type_id = 0xdf9f4c5f;
-		constexpr const static std::string_view MaxAmmo_type_name = "MaxAmmo";
-		constexpr const static rivet::rivet_type_id MaxAmmo_type_id = 0x1214e89a; 
+		constexpr static std::string_view AmmoItemConfig_type_name = "AmmoItemConfig";
+		constexpr static rivet::rivet_type_id AmmoItemConfig_type_id = 0x7151e5a4;
+		constexpr static std::string_view PickupAmmo_type_name = "PickupAmmo";
+		constexpr static rivet::rivet_type_id PickupAmmo_type_id = 0x252449da;
+		constexpr static std::string_view SpawnBias_type_name = "SpawnBias";
+		constexpr static rivet::rivet_type_id SpawnBias_type_id = 0xdf9f4c5f;
+		constexpr static std::string_view MaxAmmo_type_name = "MaxAmmo";
+		constexpr static rivet::rivet_type_id MaxAmmo_type_id = 0x1214e89a; 
 
 		explicit WeaponAmmoData() = default;
 		explicit WeaponAmmoData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

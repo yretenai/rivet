@@ -20,29 +20,29 @@
 #include <rivet/ddl/generated/enums/x7ecfc969.hpp> 
 
 namespace rivet::ddl::generated {
-	struct SkinItemTextureOverride;
-	struct SkinItemMaterialOverride; 
+	struct SkinItemMaterialOverride;
+	struct SkinItemTextureOverride; 
 
 	struct RIVET_DDL_SHARED SkinItemColor : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "SkinItemColor";
-		constexpr const static rivet::rivet_type_id type_id = 0xdc3e2525;
+		constexpr static std::string_view type_name = "SkinItemColor";
+		constexpr static rivet::rivet_type_id type_id = 0xdc3e2525;
 
-		constexpr const static std::string_view ColorName_type_name = "ColorName";
-		constexpr const static rivet::rivet_type_id ColorName_type_id = 0xe122a241;
-		constexpr const static std::string_view NameLocTag_type_name = "NameLocTag";
-		constexpr const static rivet::rivet_type_id NameLocTag_type_id = 0xa0041b54;
-		constexpr const static std::string_view Available_type_name = "Available";
-		constexpr const static rivet::rivet_type_id Available_type_id = 0x27723b89;
-		constexpr const static std::string_view R_type_name = "R";
-		constexpr const static rivet::rivet_type_id R_type_id = 0xbee6a893;
-		constexpr const static std::string_view G_type_name = "G";
-		constexpr const static rivet::rivet_type_id G_type_id = 0xd33b4c78;
-		constexpr const static std::string_view B_type_name = "B";
-		constexpr const static rivet::rivet_type_id B_type_id = 0xa351b8f7;
-		constexpr const static std::string_view TextureOverrideList_type_name = "TextureOverrideList";
-		constexpr const static rivet::rivet_type_id TextureOverrideList_type_id = 0x31be016c;
-		constexpr const static std::string_view MaterialOverrideList_type_name = "MaterialOverrideList";
-		constexpr const static rivet::rivet_type_id MaterialOverrideList_type_id = 0xeb47267a; 
+		constexpr static std::string_view ColorName_type_name = "ColorName";
+		constexpr static rivet::rivet_type_id ColorName_type_id = 0xe122a241;
+		constexpr static std::string_view NameLocTag_type_name = "NameLocTag";
+		constexpr static rivet::rivet_type_id NameLocTag_type_id = 0xa0041b54;
+		constexpr static std::string_view Available_type_name = "Available";
+		constexpr static rivet::rivet_type_id Available_type_id = 0x27723b89;
+		constexpr static std::string_view R_type_name = "R";
+		constexpr static rivet::rivet_type_id R_type_id = 0xbee6a893;
+		constexpr static std::string_view G_type_name = "G";
+		constexpr static rivet::rivet_type_id G_type_id = 0xd33b4c78;
+		constexpr static std::string_view B_type_name = "B";
+		constexpr static rivet::rivet_type_id B_type_id = 0xa351b8f7;
+		constexpr static std::string_view TextureOverrideList_type_name = "TextureOverrideList";
+		constexpr static rivet::rivet_type_id TextureOverrideList_type_id = 0x31be016c;
+		constexpr static std::string_view MaterialOverrideList_type_name = "MaterialOverrideList";
+		constexpr static rivet::rivet_type_id MaterialOverrideList_type_id = 0xeb47267a; 
 
 		explicit SkinItemColor() = default;
 		explicit SkinItemColor([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

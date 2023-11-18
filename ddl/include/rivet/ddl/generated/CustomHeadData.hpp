@@ -19,13 +19,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED CustomHeadData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "CustomHeadData";
-		constexpr const static rivet::rivet_type_id type_id = 0xe4029254;
+		constexpr static std::string_view type_name = "CustomHeadData";
+		constexpr static rivet::rivet_type_id type_id = 0xe4029254;
 
-		constexpr const static std::string_view HeadID_type_name = "HeadID";
-		constexpr const static rivet::rivet_type_id HeadID_type_id = 0xa6811891;
-		constexpr const static std::string_view HeadModel_type_name = "HeadModel";
-		constexpr const static rivet::rivet_type_id HeadModel_type_id = 0x7596a61c; 
+		constexpr static std::string_view HeadID_type_name = "HeadID";
+		constexpr static rivet::rivet_type_id HeadID_type_id = 0xa6811891;
+		constexpr static std::string_view HeadModel_type_name = "HeadModel";
+		constexpr static rivet::rivet_type_id HeadModel_type_id = 0x7596a61c; 
 
 		explicit CustomHeadData() = default;
 		explicit CustomHeadData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

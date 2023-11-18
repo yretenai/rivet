@@ -21,21 +21,21 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ReqList : ConfigBase {
-		constexpr const static std::string_view type_name = "ReqList";
-		constexpr const static rivet::rivet_type_id type_id = 0xbe44a2e8;
+		constexpr static std::string_view type_name = "ReqList";
+		constexpr static rivet::rivet_type_id type_id = 0xbe44a2e8;
 
-		constexpr const static std::string_view Zones_type_name = "Zones";
-		constexpr const static rivet::rivet_type_id Zones_type_id = 0x9c997da9;
-		constexpr const static std::string_view Actors_type_name = "Actors";
-		constexpr const static rivet::rivet_type_id Actors_type_id = 0xe153be82;
-		constexpr const static std::string_view Conduits_type_name = "Conduits";
-		constexpr const static rivet::rivet_type_id Conduits_type_id = 0x7b4d7a9f;
-		constexpr const static std::string_view Configs_type_name = "Configs";
-		constexpr const static rivet::rivet_type_id Configs_type_id = 0x43831b0b;
-		constexpr const static std::string_view Soundbanks_type_name = "Soundbanks";
-		constexpr const static rivet::rivet_type_id Soundbanks_type_id = 0x6760632a;
-		constexpr const static std::string_view Misc_type_name = "Misc";
-		constexpr const static rivet::rivet_type_id Misc_type_id = 0x4f37da0a; 
+		constexpr static std::string_view Zones_type_name = "Zones";
+		constexpr static rivet::rivet_type_id Zones_type_id = 0x9c997da9;
+		constexpr static std::string_view Actors_type_name = "Actors";
+		constexpr static rivet::rivet_type_id Actors_type_id = 0xe153be82;
+		constexpr static std::string_view Conduits_type_name = "Conduits";
+		constexpr static rivet::rivet_type_id Conduits_type_id = 0x7b4d7a9f;
+		constexpr static std::string_view Configs_type_name = "Configs";
+		constexpr static rivet::rivet_type_id Configs_type_id = 0x43831b0b;
+		constexpr static std::string_view Soundbanks_type_name = "Soundbanks";
+		constexpr static rivet::rivet_type_id Soundbanks_type_id = 0x6760632a;
+		constexpr static std::string_view Misc_type_name = "Misc";
+		constexpr static rivet::rivet_type_id Misc_type_id = 0x4f37da0a; 
 
 		explicit ReqList() = default;
 		explicit ReqList([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

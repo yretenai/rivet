@@ -21,21 +21,21 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED AimModLosTimeContractingSpreadPrius : AimModifierPrius {
-		constexpr const static std::string_view type_name = "AimModLosTimeContractingSpreadPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x32617495;
+		constexpr static std::string_view type_name = "AimModLosTimeContractingSpreadPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x32617495;
 
-		constexpr const static std::string_view InaccuracyMin_type_name = "InaccuracyMin";
-		constexpr const static rivet::rivet_type_id InaccuracyMin_type_id = 0x445162fd;
-		constexpr const static std::string_view InaccuracyMax_type_name = "InaccuracyMax";
-		constexpr const static rivet::rivet_type_id InaccuracyMax_type_id = 0x785c5da4;
-		constexpr const static std::string_view LosTimeToMinInaccuracy_type_name = "LosTimeToMinInaccuracy";
-		constexpr const static rivet::rivet_type_id LosTimeToMinInaccuracy_type_id = 0x72fbf1e8;
-		constexpr const static std::string_view ResetTime_type_name = "ResetTime";
-		constexpr const static rivet::rivet_type_id ResetTime_type_id = 0x45a33419;
-		constexpr const static std::string_view LeashDist_type_name = "LeashDist";
-		constexpr const static rivet::rivet_type_id LeashDist_type_id = 0x4f97f3aa;
-		constexpr const static std::string_view LeashTime_type_name = "LeashTime";
-		constexpr const static rivet::rivet_type_id LeashTime_type_id = 0xa17fbb18; 
+		constexpr static std::string_view InaccuracyMin_type_name = "InaccuracyMin";
+		constexpr static rivet::rivet_type_id InaccuracyMin_type_id = 0x445162fd;
+		constexpr static std::string_view InaccuracyMax_type_name = "InaccuracyMax";
+		constexpr static rivet::rivet_type_id InaccuracyMax_type_id = 0x785c5da4;
+		constexpr static std::string_view LosTimeToMinInaccuracy_type_name = "LosTimeToMinInaccuracy";
+		constexpr static rivet::rivet_type_id LosTimeToMinInaccuracy_type_id = 0x72fbf1e8;
+		constexpr static std::string_view ResetTime_type_name = "ResetTime";
+		constexpr static rivet::rivet_type_id ResetTime_type_id = 0x45a33419;
+		constexpr static std::string_view LeashDist_type_name = "LeashDist";
+		constexpr static rivet::rivet_type_id LeashDist_type_id = 0x4f97f3aa;
+		constexpr static std::string_view LeashTime_type_name = "LeashTime";
+		constexpr static rivet::rivet_type_id LeashTime_type_id = 0xa17fbb18; 
 
 		explicit AimModLosTimeContractingSpreadPrius() = default;
 		explicit AimModLosTimeContractingSpreadPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

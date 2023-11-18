@@ -19,17 +19,17 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED RandomAttachment : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "RandomAttachment";
-		constexpr const static rivet::rivet_type_id type_id = 0x93b248de;
+		constexpr static std::string_view type_name = "RandomAttachment";
+		constexpr static rivet::rivet_type_id type_id = 0x93b248de;
 
-		constexpr const static std::string_view Attachment_type_name = "Attachment";
-		constexpr const static rivet::rivet_type_id Attachment_type_id = 0xa2698782;
-		constexpr const static std::string_view LocatorOnBot_type_name = "LocatorOnBot";
-		constexpr const static rivet::rivet_type_id LocatorOnBot_type_id = 0xf3a04ceb;
-		constexpr const static std::string_view LocatorOnAttachment_type_name = "LocatorOnAttachment";
-		constexpr const static rivet::rivet_type_id LocatorOnAttachment_type_id = 0x79ceaaba;
-		constexpr const static std::string_view AttachmentChance_type_name = "AttachmentChance";
-		constexpr const static rivet::rivet_type_id AttachmentChance_type_id = 0x5e397767; 
+		constexpr static std::string_view Attachment_type_name = "Attachment";
+		constexpr static rivet::rivet_type_id Attachment_type_id = 0xa2698782;
+		constexpr static std::string_view LocatorOnBot_type_name = "LocatorOnBot";
+		constexpr static rivet::rivet_type_id LocatorOnBot_type_id = 0xf3a04ceb;
+		constexpr static std::string_view LocatorOnAttachment_type_name = "LocatorOnAttachment";
+		constexpr static rivet::rivet_type_id LocatorOnAttachment_type_id = 0x79ceaaba;
+		constexpr static std::string_view AttachmentChance_type_name = "AttachmentChance";
+		constexpr static rivet::rivet_type_id AttachmentChance_type_id = 0x5e397767; 
 
 		explicit RandomAttachment() = default;
 		explicit RandomAttachment([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

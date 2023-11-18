@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view SoundLogChannels_type_name = "SoundLogChannels";
-	constexpr const static rivet::rivet_type_id SoundLogChannels_type_id = 0x57da0a80;
+	constexpr static std::string_view SoundLogChannels_type_name = "SoundLogChannels";
+	constexpr static rivet::rivet_type_id SoundLogChannels_type_id = 0x57da0a80;
 
-	constexpr const static std::array<std::string_view, 3> SoundLogChannels_values = {
+	constexpr static std::array<std::string_view, 3> SoundLogChannels_values = {
 		"kSoundLogChannelWwise",
 		"kSoundLogChannelEngine",
 		"kSoundLogChannelAll", 

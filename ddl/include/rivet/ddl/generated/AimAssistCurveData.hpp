@@ -19,11 +19,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED AimAssistCurveData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "AimAssistCurveData";
-		constexpr const static rivet::rivet_type_id type_id = 0xfa4b9780;
+		constexpr static std::string_view type_name = "AimAssistCurveData";
+		constexpr static rivet::rivet_type_id type_id = 0xfa4b9780;
 
-		constexpr const static std::string_view AimAssistCurve_type_name = "AimAssistCurve";
-		constexpr const static rivet::rivet_type_id AimAssistCurve_type_id = 0xbcd1e797; 
+		constexpr static std::string_view AimAssistCurve_type_name = "AimAssistCurve";
+		constexpr static rivet::rivet_type_id AimAssistCurve_type_id = 0xbcd1e797; 
 
 		explicit AimAssistCurveData() = default;
 		explicit AimAssistCurveData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

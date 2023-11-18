@@ -19,15 +19,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DimensionalPulseTargetBasePrius : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "DimensionalPulseTargetBasePrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x7974be86;
+		constexpr static std::string_view type_name = "DimensionalPulseTargetBasePrius";
+		constexpr static rivet::rivet_type_id type_id = 0x7974be86;
 
-		constexpr const static std::string_view StartEnabled_type_name = "StartEnabled";
-		constexpr const static rivet::rivet_type_id StartEnabled_type_id = 0x6f36ca8b;
-		constexpr const static std::string_view OverrideEffectChance_type_name = "OverrideEffectChance";
-		constexpr const static rivet::rivet_type_id OverrideEffectChance_type_id = 0xc9e25dad;
-		constexpr const static std::string_view EffectChance_type_name = "EffectChance";
-		constexpr const static rivet::rivet_type_id EffectChance_type_id = 0xaed0c581; 
+		constexpr static std::string_view StartEnabled_type_name = "StartEnabled";
+		constexpr static rivet::rivet_type_id StartEnabled_type_id = 0x6f36ca8b;
+		constexpr static std::string_view OverrideEffectChance_type_name = "OverrideEffectChance";
+		constexpr static rivet::rivet_type_id OverrideEffectChance_type_id = 0xc9e25dad;
+		constexpr static std::string_view EffectChance_type_name = "EffectChance";
+		constexpr static rivet::rivet_type_id EffectChance_type_id = 0xaed0c581; 
 
 		explicit DimensionalPulseTargetBasePrius() = default;
 		explicit DimensionalPulseTargetBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

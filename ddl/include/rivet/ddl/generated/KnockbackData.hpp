@@ -21,13 +21,13 @@ namespace rivet::ddl::generated {
 	struct ScaleData; 
 
 	struct RIVET_DDL_SHARED KnockbackData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "KnockbackData";
-		constexpr const static rivet::rivet_type_id type_id = 0xcc96e476;
+		constexpr static std::string_view type_name = "KnockbackData";
+		constexpr static rivet::rivet_type_id type_id = 0xcc96e476;
 
-		constexpr const static std::string_view Driver_type_name = "Driver";
-		constexpr const static rivet::rivet_type_id Driver_type_id = 0x2f1e32be;
-		constexpr const static std::string_view ScaleData_type_name = "ScaleData";
-		constexpr const static rivet::rivet_type_id ScaleData_type_id = 0xdc1e20e6; 
+		constexpr static std::string_view Driver_type_name = "Driver";
+		constexpr static rivet::rivet_type_id Driver_type_id = 0x2f1e32be;
+		constexpr static std::string_view ScaleData_type_name = "ScaleData";
+		constexpr static rivet::rivet_type_id ScaleData_type_id = 0xdc1e20e6; 
 
 		explicit KnockbackData() = default;
 		explicit KnockbackData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

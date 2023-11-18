@@ -4,8 +4,8 @@
 // SPDX-License-Identifier: MPL-2.0
 
 #include <rivet/ddl/generated/POIAttributeEdgeModeRing.hpp>
-#include <rivet/ddl/generated/POIAttributeEdgeModeNone.hpp>
-#include <rivet/ddl/generated/POIAttributeEdgeModeScreenEdge.hpp> 
+#include <rivet/ddl/generated/POIAttributeEdgeModeScreenEdge.hpp>
+#include <rivet/ddl/generated/POIAttributeEdgeModeNone.hpp> 
 
 #include <rivet/ddl/generated/POIAttributeEdgeModeBase.hpp>
 

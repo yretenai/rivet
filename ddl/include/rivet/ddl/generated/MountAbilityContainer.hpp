@@ -21,11 +21,11 @@ namespace rivet::ddl::generated {
 	struct MountAbilityBase; 
 
 	struct RIVET_DDL_SHARED MountAbilityContainer : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "MountAbilityContainer";
-		constexpr const static rivet::rivet_type_id type_id = 0x61323ec1;
+		constexpr static std::string_view type_name = "MountAbilityContainer";
+		constexpr static rivet::rivet_type_id type_id = 0x61323ec1;
 
-		constexpr const static std::string_view MountAbilityData_type_name = "MountAbilityData";
-		constexpr const static rivet::rivet_type_id MountAbilityData_type_id = 0xd5119f0f; 
+		constexpr static std::string_view MountAbilityData_type_name = "MountAbilityData";
+		constexpr static rivet::rivet_type_id MountAbilityData_type_id = 0xd5119f0f; 
 
 		explicit MountAbilityContainer() = default;
 		explicit MountAbilityContainer([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

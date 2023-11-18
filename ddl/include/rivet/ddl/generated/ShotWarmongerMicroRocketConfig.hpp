@@ -23,13 +23,13 @@ namespace rivet::ddl::generated {
 	struct ShotWarmongerMicroRocketPrius; 
 
 	struct RIVET_DDL_SHARED ShotWarmongerMicroRocketConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "ShotWarmongerMicroRocketConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x31ea5ae;
+		constexpr static std::string_view type_name = "ShotWarmongerMicroRocketConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x31ea5ae;
 
-		constexpr const static std::string_view MicroRocketActor_type_name = "MicroRocketActor";
-		constexpr const static rivet::rivet_type_id MicroRocketActor_type_id = 0x3bdc2562;
-		constexpr const static std::string_view ShotPrius_type_name = "ShotPrius";
-		constexpr const static rivet::rivet_type_id ShotPrius_type_id = 0x66fe4621; 
+		constexpr static std::string_view MicroRocketActor_type_name = "MicroRocketActor";
+		constexpr static rivet::rivet_type_id MicroRocketActor_type_id = 0x3bdc2562;
+		constexpr static std::string_view ShotPrius_type_name = "ShotPrius";
+		constexpr static rivet::rivet_type_id ShotPrius_type_id = 0x66fe4621; 
 
 		explicit ShotWarmongerMicroRocketConfig() = default;
 		explicit ShotWarmongerMicroRocketConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED PredictableTrajectoryShotMotionPrius : BasicShotMotionPrius {
-		constexpr const static std::string_view type_name = "PredictableTrajectoryShotMotionPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xfaf07b79;
+		constexpr static std::string_view type_name = "PredictableTrajectoryShotMotionPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xfaf07b79;
 
 		explicit PredictableTrajectoryShotMotionPrius() = default;
 		explicit PredictableTrajectoryShotMotionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

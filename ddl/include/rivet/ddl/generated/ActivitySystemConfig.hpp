@@ -20,20 +20,20 @@
 #include <rivet/ddl/generated/ConfigBase.hpp> 
 
 namespace rivet::ddl::generated {
+	struct ActivitySubCategoryInfo;
 	struct UDSZoneData;
-	struct ActivityDef;
-	struct ActivitySubCategoryInfo; 
+	struct ActivityDef; 
 
 	struct RIVET_DDL_SHARED ActivitySystemConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "ActivitySystemConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x62490863;
+		constexpr static std::string_view type_name = "ActivitySystemConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x62490863;
 
-		constexpr const static std::string_view Activities_type_name = "Activities";
-		constexpr const static rivet::rivet_type_id Activities_type_id = 0x6ec7f1dc;
-		constexpr const static std::string_view Zones_type_name = "Zones";
-		constexpr const static rivet::rivet_type_id Zones_type_id = 0x9c997da9;
-		constexpr const static std::string_view SubCategories_type_name = "SubCategories";
-		constexpr const static rivet::rivet_type_id SubCategories_type_id = 0x1546408e; 
+		constexpr static std::string_view Activities_type_name = "Activities";
+		constexpr static rivet::rivet_type_id Activities_type_id = 0x6ec7f1dc;
+		constexpr static std::string_view Zones_type_name = "Zones";
+		constexpr static rivet::rivet_type_id Zones_type_id = 0x9c997da9;
+		constexpr static std::string_view SubCategories_type_name = "SubCategories";
+		constexpr static rivet::rivet_type_id SubCategories_type_id = 0x1546408e; 
 
 		explicit ActivitySystemConfig() = default;
 		explicit ActivitySystemConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

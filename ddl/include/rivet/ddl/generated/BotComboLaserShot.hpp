@@ -23,19 +23,19 @@ namespace rivet::ddl::generated {
 	struct BotComboLaserShotType; 
 
 	struct RIVET_DDL_SHARED BotComboLaserShot : BotComboMove {
-		constexpr const static std::string_view type_name = "BotComboLaserShot";
-		constexpr const static rivet::rivet_type_id type_id = 0x9e55c93c;
+		constexpr static std::string_view type_name = "BotComboLaserShot";
+		constexpr static rivet::rivet_type_id type_id = 0x9e55c93c;
 
-		constexpr const static std::string_view LaserMaxLength_type_name = "LaserMaxLength";
-		constexpr const static rivet::rivet_type_id LaserMaxLength_type_id = 0x2d4d4979;
-		constexpr const static std::string_view CurveActorId_type_name = "CurveActorId";
-		constexpr const static rivet::rivet_type_id CurveActorId_type_id = 0xbef6b0d3;
-		constexpr const static std::string_view DisableHitReactPartialsDuringAttack_type_name = "DisableHitReactPartialsDuringAttack";
-		constexpr const static rivet::rivet_type_id DisableHitReactPartialsDuringAttack_type_id = 0x760d56f1;
-		constexpr const static std::string_view SpawnedShotConfig_type_name = "SpawnedShotConfig";
-		constexpr const static rivet::rivet_type_id SpawnedShotConfig_type_id = 0x7e9e8e66;
-		constexpr const static std::string_view LaserShotType_type_name = "LaserShotType";
-		constexpr const static rivet::rivet_type_id LaserShotType_type_id = 0x240dd6c; 
+		constexpr static std::string_view LaserMaxLength_type_name = "LaserMaxLength";
+		constexpr static rivet::rivet_type_id LaserMaxLength_type_id = 0x2d4d4979;
+		constexpr static std::string_view CurveActorId_type_name = "CurveActorId";
+		constexpr static rivet::rivet_type_id CurveActorId_type_id = 0xbef6b0d3;
+		constexpr static std::string_view DisableHitReactPartialsDuringAttack_type_name = "DisableHitReactPartialsDuringAttack";
+		constexpr static rivet::rivet_type_id DisableHitReactPartialsDuringAttack_type_id = 0x760d56f1;
+		constexpr static std::string_view SpawnedShotConfig_type_name = "SpawnedShotConfig";
+		constexpr static rivet::rivet_type_id SpawnedShotConfig_type_id = 0x7e9e8e66;
+		constexpr static std::string_view LaserShotType_type_name = "LaserShotType";
+		constexpr static rivet::rivet_type_id LaserShotType_type_id = 0x240dd6c; 
 
 		explicit BotComboLaserShot() = default;
 		explicit BotComboLaserShot([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

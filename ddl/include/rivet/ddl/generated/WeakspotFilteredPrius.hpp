@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED WeakspotFilteredPrius : WeakspotPrius {
-		constexpr const static std::string_view type_name = "WeakspotFilteredPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xac3c3aa0;
+		constexpr static std::string_view type_name = "WeakspotFilteredPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xac3c3aa0;
 
 		explicit WeakspotFilteredPrius() = default;
 		explicit WeakspotFilteredPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

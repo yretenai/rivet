@@ -21,15 +21,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DamageModifierShockwaveExpandingRingSheepPrius : DamageModifierShockwaveExpandingRingPrius {
-		constexpr const static std::string_view type_name = "DamageModifierShockwaveExpandingRingSheepPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x6eaff3c0;
+		constexpr static std::string_view type_name = "DamageModifierShockwaveExpandingRingSheepPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x6eaff3c0;
 
-		constexpr const static std::string_view RingActorAssetId_type_name = "RingActorAssetId";
-		constexpr const static rivet::rivet_type_id RingActorAssetId_type_id = 0xe0de891d;
-		constexpr const static std::string_view SheepActorAssetId_type_name = "SheepActorAssetId";
-		constexpr const static rivet::rivet_type_id SheepActorAssetId_type_id = 0x2ba6ce3d;
-		constexpr const static std::string_view SheepStatusMaterialGraphAssetId_type_name = "SheepStatusMaterialGraphAssetId";
-		constexpr const static rivet::rivet_type_id SheepStatusMaterialGraphAssetId_type_id = 0x90d6a54a; 
+		constexpr static std::string_view RingActorAssetId_type_name = "RingActorAssetId";
+		constexpr static rivet::rivet_type_id RingActorAssetId_type_id = 0xe0de891d;
+		constexpr static std::string_view SheepActorAssetId_type_name = "SheepActorAssetId";
+		constexpr static rivet::rivet_type_id SheepActorAssetId_type_id = 0x2ba6ce3d;
+		constexpr static std::string_view SheepStatusMaterialGraphAssetId_type_name = "SheepStatusMaterialGraphAssetId";
+		constexpr static rivet::rivet_type_id SheepStatusMaterialGraphAssetId_type_id = 0x90d6a54a; 
 
 		explicit DamageModifierShockwaveExpandingRingSheepPrius() = default;
 		explicit DamageModifierShockwaveExpandingRingSheepPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

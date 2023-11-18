@@ -21,15 +21,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED LookGroupVoiceOverride : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "LookGroupVoiceOverride";
-		constexpr const static rivet::rivet_type_id type_id = 0xf093a8c9;
+		constexpr static std::string_view type_name = "LookGroupVoiceOverride";
+		constexpr static rivet::rivet_type_id type_id = 0xf093a8c9;
 
-		constexpr const static std::string_view LookGroups_type_name = "LookGroups";
-		constexpr const static rivet::rivet_type_id LookGroups_type_id = 0xb6c4ab29;
-		constexpr const static std::string_view OverrideVoiceMin_type_name = "OverrideVoiceMin";
-		constexpr const static rivet::rivet_type_id OverrideVoiceMin_type_id = 0xb429bb9b;
-		constexpr const static std::string_view OverrideVoiceMax_type_name = "OverrideVoiceMax";
-		constexpr const static rivet::rivet_type_id OverrideVoiceMax_type_id = 0x882484c2; 
+		constexpr static std::string_view LookGroups_type_name = "LookGroups";
+		constexpr static rivet::rivet_type_id LookGroups_type_id = 0xb6c4ab29;
+		constexpr static std::string_view OverrideVoiceMin_type_name = "OverrideVoiceMin";
+		constexpr static rivet::rivet_type_id OverrideVoiceMin_type_id = 0xb429bb9b;
+		constexpr static std::string_view OverrideVoiceMax_type_name = "OverrideVoiceMax";
+		constexpr static rivet::rivet_type_id OverrideVoiceMax_type_id = 0x882484c2; 
 
 		explicit LookGroupVoiceOverride() = default;
 		explicit LookGroupVoiceOverride([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

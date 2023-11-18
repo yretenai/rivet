@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct ScriptMotionBasePrius; 
 
 	struct RIVET_DDL_SHARED MotionActionConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "MotionActionConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xaa2354de;
+		constexpr static std::string_view type_name = "MotionActionConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xaa2354de;
 
-		constexpr const static std::string_view Motion_type_name = "Motion";
-		constexpr const static rivet::rivet_type_id Motion_type_id = 0xcb86ef8f; 
+		constexpr static std::string_view Motion_type_name = "Motion";
+		constexpr static rivet::rivet_type_id Motion_type_id = 0xcb86ef8f; 
 
 		explicit MotionActionConfig() = default;
 		explicit MotionActionConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

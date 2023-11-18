@@ -21,15 +21,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED HeatStateData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "HeatStateData";
-		constexpr const static rivet::rivet_type_id type_id = 0x19144b05;
+		constexpr static std::string_view type_name = "HeatStateData";
+		constexpr static rivet::rivet_type_id type_id = 0x19144b05;
 
-		constexpr const static std::string_view HeatState_type_name = "HeatState";
-		constexpr const static rivet::rivet_type_id HeatState_type_id = 0x24604a5;
-		constexpr const static std::string_view TempThreshold_type_name = "TempThreshold";
-		constexpr const static rivet::rivet_type_id TempThreshold_type_id = 0x183a4b21;
-		constexpr const static std::string_view NumBulletsToSpray_type_name = "NumBulletsToSpray";
-		constexpr const static rivet::rivet_type_id NumBulletsToSpray_type_id = 0x593c7acc; 
+		constexpr static std::string_view HeatState_type_name = "HeatState";
+		constexpr static rivet::rivet_type_id HeatState_type_id = 0x24604a5;
+		constexpr static std::string_view TempThreshold_type_name = "TempThreshold";
+		constexpr static rivet::rivet_type_id TempThreshold_type_id = 0x183a4b21;
+		constexpr static std::string_view NumBulletsToSpray_type_name = "NumBulletsToSpray";
+		constexpr static rivet::rivet_type_id NumBulletsToSpray_type_id = 0x593c7acc; 
 
 		explicit HeatStateData() = default;
 		explicit HeatStateData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

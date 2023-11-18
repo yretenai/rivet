@@ -21,15 +21,15 @@ namespace rivet::ddl::generated {
 	struct DDLVector3; 
 
 	struct RIVET_DDL_SHARED MapElementData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "MapElementData";
-		constexpr const static rivet::rivet_type_id type_id = 0xb5921dca;
+		constexpr static std::string_view type_name = "MapElementData";
+		constexpr static rivet::rivet_type_id type_id = 0xb5921dca;
 
-		constexpr const static std::string_view Name_type_name = "Name";
-		constexpr const static rivet::rivet_type_id Name_type_id = 0x6eb3beb6;
-		constexpr const static std::string_view ActorId_type_name = "ActorId";
-		constexpr const static rivet::rivet_type_id ActorId_type_id = 0x6c21ca8a;
-		constexpr const static std::string_view Position_type_name = "Position";
-		constexpr const static rivet::rivet_type_id Position_type_id = 0xbc2d5985; 
+		constexpr static std::string_view Name_type_name = "Name";
+		constexpr static rivet::rivet_type_id Name_type_id = 0x6eb3beb6;
+		constexpr static std::string_view ActorId_type_name = "ActorId";
+		constexpr static rivet::rivet_type_id ActorId_type_id = 0x6c21ca8a;
+		constexpr static std::string_view Position_type_name = "Position";
+		constexpr static rivet::rivet_type_id Position_type_id = 0xbc2d5985; 
 
 		explicit MapElementData() = default;
 		explicit MapElementData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

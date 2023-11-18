@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view SortStyle_type_name = "SortStyle";
-	constexpr const static rivet::rivet_type_id SortStyle_type_id = 0x7b0b2803;
+	constexpr static std::string_view SortStyle_type_name = "SortStyle";
+	constexpr static rivet::rivet_type_id SortStyle_type_id = 0x7b0b2803;
 
-	constexpr const static std::array<std::string_view, 4> SortStyle_values = {
+	constexpr static std::array<std::string_view, 4> SortStyle_values = {
 		"kNone",
 		"kLast",
 		"kCameraDistance",

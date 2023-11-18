@@ -17,24 +17,24 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/FormationMotionBase.hpp>
-#include <rivet/ddl/generated/enums/xe268370.hpp> 
+#include <rivet/ddl/generated/enums/xe268370.hpp>
+#include <rivet/ddl/generated/FormationMotionBase.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED FormationMotionWaveBase : FormationMotionBase {
-		constexpr const static std::string_view type_name = "FormationMotionWaveBase";
-		constexpr const static rivet::rivet_type_id type_id = 0xc2a43dae;
+		constexpr static std::string_view type_name = "FormationMotionWaveBase";
+		constexpr static rivet::rivet_type_id type_id = 0xc2a43dae;
 
-		constexpr const static std::string_view Amplitude_type_name = "Amplitude";
-		constexpr const static rivet::rivet_type_id Amplitude_type_id = 0xe950071d;
-		constexpr const static std::string_view Frequency_type_name = "Frequency";
-		constexpr const static rivet::rivet_type_id Frequency_type_id = 0xa482271f;
-		constexpr const static std::string_view Period_type_name = "Period";
-		constexpr const static rivet::rivet_type_id Period_type_id = 0xfbc050a9;
-		constexpr const static std::string_view PhaseType_type_name = "PhaseType";
-		constexpr const static rivet::rivet_type_id PhaseType_type_id = 0x6b541471;
-		constexpr const static std::string_view HeightOffset_type_name = "HeightOffset";
-		constexpr const static rivet::rivet_type_id HeightOffset_type_id = 0x563b3cc7; 
+		constexpr static std::string_view Amplitude_type_name = "Amplitude";
+		constexpr static rivet::rivet_type_id Amplitude_type_id = 0xe950071d;
+		constexpr static std::string_view Frequency_type_name = "Frequency";
+		constexpr static rivet::rivet_type_id Frequency_type_id = 0xa482271f;
+		constexpr static std::string_view Period_type_name = "Period";
+		constexpr static rivet::rivet_type_id Period_type_id = 0xfbc050a9;
+		constexpr static std::string_view PhaseType_type_name = "PhaseType";
+		constexpr static rivet::rivet_type_id PhaseType_type_id = 0x6b541471;
+		constexpr static std::string_view HeightOffset_type_name = "HeightOffset";
+		constexpr static rivet::rivet_type_id HeightOffset_type_id = 0x563b3cc7; 
 
 		explicit FormationMotionWaveBase() = default;
 		explicit FormationMotionWaveBase([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED MaterialBuildConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "MaterialBuildConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xcb5e4d47;
+		constexpr static std::string_view type_name = "MaterialBuildConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xcb5e4d47;
 
-		constexpr const static std::string_view Dummy_type_name = "Dummy";
-		constexpr const static rivet::rivet_type_id Dummy_type_id = 0x56a73efe; 
+		constexpr static std::string_view Dummy_type_name = "Dummy";
+		constexpr static rivet::rivet_type_id Dummy_type_id = 0x56a73efe; 
 
 		explicit MaterialBuildConfig() = default;
 		explicit MaterialBuildConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -17,31 +17,31 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/enums/xdbb7aaff.hpp>
+#include <rivet/ddl/generated/enums/x1b1e7614.hpp>
 #include <rivet/ddl/generated/enums/x1c87ac4a.hpp>
-#include <rivet/ddl/generated/enums/x1b1e7614.hpp> 
+#include <rivet/ddl/generated/enums/xdbb7aaff.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED WeaponModData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "WeaponModData";
-		constexpr const static rivet::rivet_type_id type_id = 0xfa9a0eb5;
+		constexpr static std::string_view type_name = "WeaponModData";
+		constexpr static rivet::rivet_type_id type_id = 0xfa9a0eb5;
 
-		constexpr const static std::string_view Type_type_name = "Type";
-		constexpr const static rivet::rivet_type_id Type_type_id = 0xbc4e9799;
-		constexpr const static std::string_view IconType_type_name = "IconType";
-		constexpr const static rivet::rivet_type_id IconType_type_id = 0x38d1dc59;
-		constexpr const static std::string_view IsPercent_type_name = "IsPercent";
-		constexpr const static rivet::rivet_type_id IsPercent_type_id = 0x858c4cf5;
-		constexpr const static std::string_view Value_type_name = "Value";
-		constexpr const static rivet::rivet_type_id Value_type_id = 0x42494f5;
-		constexpr const static std::string_view Cost_type_name = "Cost";
-		constexpr const static rivet::rivet_type_id Cost_type_id = 0x28b6544c;
-		constexpr const static std::string_view NameLocTag_type_name = "NameLocTag";
-		constexpr const static rivet::rivet_type_id NameLocTag_type_id = 0xa0041b54;
-		constexpr const static std::string_view DescLocTag_type_name = "DescLocTag";
-		constexpr const static rivet::rivet_type_id DescLocTag_type_id = 0xe02bccb2;
-		constexpr const static std::string_view TileIndex_type_name = "TileIndex";
-		constexpr const static rivet::rivet_type_id TileIndex_type_id = 0x95a0a58b; 
+		constexpr static std::string_view Type_type_name = "Type";
+		constexpr static rivet::rivet_type_id Type_type_id = 0xbc4e9799;
+		constexpr static std::string_view IconType_type_name = "IconType";
+		constexpr static rivet::rivet_type_id IconType_type_id = 0x38d1dc59;
+		constexpr static std::string_view IsPercent_type_name = "IsPercent";
+		constexpr static rivet::rivet_type_id IsPercent_type_id = 0x858c4cf5;
+		constexpr static std::string_view Value_type_name = "Value";
+		constexpr static rivet::rivet_type_id Value_type_id = 0x42494f5;
+		constexpr static std::string_view Cost_type_name = "Cost";
+		constexpr static rivet::rivet_type_id Cost_type_id = 0x28b6544c;
+		constexpr static std::string_view NameLocTag_type_name = "NameLocTag";
+		constexpr static rivet::rivet_type_id NameLocTag_type_id = 0xa0041b54;
+		constexpr static std::string_view DescLocTag_type_name = "DescLocTag";
+		constexpr static rivet::rivet_type_id DescLocTag_type_id = 0xe02bccb2;
+		constexpr static std::string_view TileIndex_type_name = "TileIndex";
+		constexpr static rivet::rivet_type_id TileIndex_type_id = 0x95a0a58b; 
 
 		explicit WeaponModData() = default;
 		explicit WeaponModData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

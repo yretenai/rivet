@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED SphereTargeting : SpawnShotTargetingMode {
-		constexpr const static std::string_view type_name = "SphereTargeting";
-		constexpr const static rivet::rivet_type_id type_id = 0xdb2f25e3;
+		constexpr static std::string_view type_name = "SphereTargeting";
+		constexpr static rivet::rivet_type_id type_id = 0xdb2f25e3;
 
-		constexpr const static std::string_view SphereRadius_type_name = "SphereRadius";
-		constexpr const static rivet::rivet_type_id SphereRadius_type_id = 0x7b804017; 
+		constexpr static std::string_view SphereRadius_type_name = "SphereRadius";
+		constexpr static rivet::rivet_type_id SphereRadius_type_id = 0x7b804017; 
 
 		explicit SphereTargeting() = default;
 		explicit SphereTargeting([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

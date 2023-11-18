@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view BlendType_type_name = "BlendType";
-	constexpr const static rivet::rivet_type_id BlendType_type_id = 0x1b4f6c9a;
+	constexpr static std::string_view BlendType_type_name = "BlendType";
+	constexpr static rivet::rivet_type_id BlendType_type_id = 0x1b4f6c9a;
 
-	constexpr const static std::array<std::string_view, 5> BlendType_values = {
+	constexpr static std::array<std::string_view, 5> BlendType_values = {
 		"kAdditive",
 		"kBlended",
 		"kModulate",

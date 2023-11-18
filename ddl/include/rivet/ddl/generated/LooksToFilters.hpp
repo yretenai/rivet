@@ -21,13 +21,13 @@ namespace rivet::ddl::generated {
 	struct FilterPair; 
 
 	struct RIVET_DDL_SHARED LooksToFilters : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "LooksToFilters";
-		constexpr const static rivet::rivet_type_id type_id = 0x34d66690;
+		constexpr static std::string_view type_name = "LooksToFilters";
+		constexpr static rivet::rivet_type_id type_id = 0x34d66690;
 
-		constexpr const static std::string_view Looks_type_name = "Looks";
-		constexpr const static rivet::rivet_type_id Looks_type_id = 0xec785832;
-		constexpr const static std::string_view Filters_type_name = "Filters";
-		constexpr const static rivet::rivet_type_id Filters_type_id = 0x799d04b5; 
+		constexpr static std::string_view Looks_type_name = "Looks";
+		constexpr static rivet::rivet_type_id Looks_type_id = 0xec785832;
+		constexpr static std::string_view Filters_type_name = "Filters";
+		constexpr static rivet::rivet_type_id Filters_type_id = 0x799d04b5; 
 
 		explicit LooksToFilters() = default;
 		explicit LooksToFilters([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

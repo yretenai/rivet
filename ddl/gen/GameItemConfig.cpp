@@ -3,26 +3,26 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/MagBootLaunchItemConfig.hpp>
-#include <rivet/ddl/generated/UsableItemConfig.hpp>
-#include <rivet/ddl/generated/WeaponItemConfig.hpp>
-#include <rivet/ddl/generated/GameItemData.hpp>
-#include <rivet/ddl/generated/PlayerXpItemConfig.hpp>
-#include <rivet/ddl/generated/MissionItemConfig.hpp>
-#include <rivet/ddl/generated/HydropackItemConfig.hpp>
-#include <rivet/ddl/generated/ShieldItemConfig.hpp>
-#include <rivet/ddl/generated/TradingCardItemConfig.hpp>
-#include <rivet/ddl/generated/CompassItemConfig.hpp>
-#include <rivet/ddl/generated/GadgetItemConfig.hpp>
-#include <rivet/ddl/generated/BattleBrewItemConfig.hpp>
-#include <rivet/ddl/generated/AmmoItemConfig.hpp>
-#include <rivet/ddl/generated/ProtosuitItemConfig.hpp>
-#include <rivet/ddl/generated/PortalTetherItemConfig.hpp>
-#include <rivet/ddl/generated/TeslablastRocketItemConfig.hpp>
-#include <rivet/ddl/generated/OxygenMaskItemConfig.hpp>
-#include <rivet/ddl/generated/SlingshotItemConfig.hpp>
 #include <rivet/ddl/generated/CurrencyItemConfig.hpp>
-#include <rivet/ddl/generated/PartItemConfig.hpp> 
+#include <rivet/ddl/generated/TeslablastRocketItemConfig.hpp>
+#include <rivet/ddl/generated/PortalTetherItemConfig.hpp>
+#include <rivet/ddl/generated/PlayerXpItemConfig.hpp>
+#include <rivet/ddl/generated/SlingshotItemConfig.hpp>
+#include <rivet/ddl/generated/ShieldItemConfig.hpp>
+#include <rivet/ddl/generated/MagBootLaunchItemConfig.hpp>
+#include <rivet/ddl/generated/MissionItemConfig.hpp>
+#include <rivet/ddl/generated/CompassItemConfig.hpp>
+#include <rivet/ddl/generated/GameItemData.hpp>
+#include <rivet/ddl/generated/HydropackItemConfig.hpp>
+#include <rivet/ddl/generated/PartItemConfig.hpp>
+#include <rivet/ddl/generated/WeaponItemConfig.hpp>
+#include <rivet/ddl/generated/TradingCardItemConfig.hpp>
+#include <rivet/ddl/generated/UsableItemConfig.hpp>
+#include <rivet/ddl/generated/BattleBrewItemConfig.hpp>
+#include <rivet/ddl/generated/OxygenMaskItemConfig.hpp>
+#include <rivet/ddl/generated/GadgetItemConfig.hpp>
+#include <rivet/ddl/generated/ProtosuitItemConfig.hpp>
+#include <rivet/ddl/generated/AmmoItemConfig.hpp> 
 
 #include <rivet/ddl/generated/GameItemConfig.hpp>
 

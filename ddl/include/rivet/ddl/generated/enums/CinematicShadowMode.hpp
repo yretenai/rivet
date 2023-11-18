@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view CinematicShadowMode_type_name = "CinematicShadowMode";
-	constexpr const static rivet::rivet_type_id CinematicShadowMode_type_id = 0x30108ce6;
+	constexpr static std::string_view CinematicShadowMode_type_name = "CinematicShadowMode";
+	constexpr static rivet::rivet_type_id CinematicShadowMode_type_id = 0x30108ce6;
 
-	constexpr const static std::array<std::string_view, 3> CinematicShadowMode_values = {
+	constexpr static std::array<std::string_view, 3> CinematicShadowMode_values = {
 		"kAuto",
 		"kAlways",
 		"kNever", 

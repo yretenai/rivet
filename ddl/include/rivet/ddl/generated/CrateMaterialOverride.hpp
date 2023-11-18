@@ -21,15 +21,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED CrateMaterialOverride : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "CrateMaterialOverride";
-		constexpr const static rivet::rivet_type_id type_id = 0x79d82f88;
+		constexpr static std::string_view type_name = "CrateMaterialOverride";
+		constexpr static rivet::rivet_type_id type_id = 0x79d82f88;
 
-		constexpr const static std::string_view MaterialOverride_type_name = "MaterialOverride";
-		constexpr const static rivet::rivet_type_id MaterialOverride_type_id = 0xffafa5a1;
-		constexpr const static std::string_view MaterialMappingName_type_name = "MaterialMappingName";
-		constexpr const static rivet::rivet_type_id MaterialMappingName_type_id = 0x981e6927;
-		constexpr const static std::string_view MaterialType_type_name = "MaterialType";
-		constexpr const static rivet::rivet_type_id MaterialType_type_id = 0x1433c59b; 
+		constexpr static std::string_view MaterialOverride_type_name = "MaterialOverride";
+		constexpr static rivet::rivet_type_id MaterialOverride_type_id = 0xffafa5a1;
+		constexpr static std::string_view MaterialMappingName_type_name = "MaterialMappingName";
+		constexpr static rivet::rivet_type_id MaterialMappingName_type_id = 0x981e6927;
+		constexpr static std::string_view MaterialType_type_name = "MaterialType";
+		constexpr static rivet::rivet_type_id MaterialType_type_id = 0x1433c59b; 
 
 		explicit CrateMaterialOverride() = default;
 		explicit CrateMaterialOverride([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

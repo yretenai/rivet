@@ -22,11 +22,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED IconMapMkbBinding : IconMapBase {
-		constexpr const static std::string_view type_name = "IconMapMkbBinding";
-		constexpr const static rivet::rivet_type_id type_id = 0x42ad0423;
+		constexpr static std::string_view type_name = "IconMapMkbBinding";
+		constexpr static rivet::rivet_type_id type_id = 0x42ad0423;
 
-		constexpr const static std::string_view Button_type_name = "Button";
-		constexpr const static rivet::rivet_type_id Button_type_id = 0x47ee25a; 
+		constexpr static std::string_view Button_type_name = "Button";
+		constexpr static rivet::rivet_type_id Button_type_id = 0x47ee25a; 
 
 		explicit IconMapMkbBinding() = default;
 		explicit IconMapMkbBinding([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

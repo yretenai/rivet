@@ -21,15 +21,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ItemConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "ItemConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xa88f833f;
+		constexpr static std::string_view type_name = "ItemConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xa88f833f;
 
-		constexpr const static std::string_view Stackable_type_name = "Stackable";
-		constexpr const static rivet::rivet_type_id Stackable_type_id = 0xf4daa975;
-		constexpr const static std::string_view MaxCount_type_name = "MaxCount";
-		constexpr const static rivet::rivet_type_id MaxCount_type_id = 0x9c4783f5;
-		constexpr const static std::string_view ItemActor_type_name = "ItemActor";
-		constexpr const static rivet::rivet_type_id ItemActor_type_id = 0x925cd211; 
+		constexpr static std::string_view Stackable_type_name = "Stackable";
+		constexpr static rivet::rivet_type_id Stackable_type_id = 0xf4daa975;
+		constexpr static std::string_view MaxCount_type_name = "MaxCount";
+		constexpr static rivet::rivet_type_id MaxCount_type_id = 0x9c4783f5;
+		constexpr static std::string_view ItemActor_type_name = "ItemActor";
+		constexpr static rivet::rivet_type_id ItemActor_type_id = 0x925cd211; 
 
 		explicit ItemConfig() = default;
 		explicit ItemConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

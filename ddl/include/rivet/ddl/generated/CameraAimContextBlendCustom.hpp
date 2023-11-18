@@ -17,22 +17,22 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/CameraAimContextBlend.hpp>
-#include <rivet/ddl/generated/enums/xd255d55.hpp> 
+#include <rivet/ddl/generated/enums/xd255d55.hpp>
+#include <rivet/ddl/generated/CameraAimContextBlend.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED CameraAimContextBlendCustom : CameraAimContextBlend {
-		constexpr const static std::string_view type_name = "CameraAimContextBlendCustom";
-		constexpr const static rivet::rivet_type_id type_id = 0x65e94799;
+		constexpr static std::string_view type_name = "CameraAimContextBlendCustom";
+		constexpr static rivet::rivet_type_id type_id = 0x65e94799;
 
-		constexpr const static std::string_view Gain_type_name = "Gain";
-		constexpr const static rivet::rivet_type_id Gain_type_id = 0xe005edb0;
-		constexpr const static std::string_view Damp_type_name = "Damp";
-		constexpr const static rivet::rivet_type_id Damp_type_id = 0x6cd3ba39;
-		constexpr const static std::string_view MaxSpeed_type_name = "MaxSpeed";
-		constexpr const static rivet::rivet_type_id MaxSpeed_type_id = 0x16b83961;
-		constexpr const static std::string_view Priority_type_name = "Priority";
-		constexpr const static rivet::rivet_type_id Priority_type_id = 0x98a76157; 
+		constexpr static std::string_view Gain_type_name = "Gain";
+		constexpr static rivet::rivet_type_id Gain_type_id = 0xe005edb0;
+		constexpr static std::string_view Damp_type_name = "Damp";
+		constexpr static rivet::rivet_type_id Damp_type_id = 0x6cd3ba39;
+		constexpr static std::string_view MaxSpeed_type_name = "MaxSpeed";
+		constexpr static rivet::rivet_type_id MaxSpeed_type_id = 0x16b83961;
+		constexpr static std::string_view Priority_type_name = "Priority";
+		constexpr static rivet::rivet_type_id Priority_type_id = 0x98a76157; 
 
 		explicit CameraAimContextBlendCustom() = default;
 		explicit CameraAimContextBlendCustom([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

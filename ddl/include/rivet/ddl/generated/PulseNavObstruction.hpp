@@ -21,13 +21,13 @@ namespace rivet::ddl::generated {
 	struct NavMeshObstructionShapeBase; 
 
 	struct RIVET_DDL_SHARED PulseNavObstruction : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "PulseNavObstruction";
-		constexpr const static rivet::rivet_type_id type_id = 0x8fdbd163;
+		constexpr static std::string_view type_name = "PulseNavObstruction";
+		constexpr static rivet::rivet_type_id type_id = 0x8fdbd163;
 
-		constexpr const static std::string_view Shape_type_name = "Shape";
-		constexpr const static rivet::rivet_type_id Shape_type_id = 0xc4633319;
-		constexpr const static std::string_view RotationLocator_type_name = "RotationLocator";
-		constexpr const static rivet::rivet_type_id RotationLocator_type_id = 0x6434df47; 
+		constexpr static std::string_view Shape_type_name = "Shape";
+		constexpr static rivet::rivet_type_id Shape_type_id = 0xc4633319;
+		constexpr static std::string_view RotationLocator_type_name = "RotationLocator";
+		constexpr static rivet::rivet_type_id RotationLocator_type_id = 0x6434df47; 
 
 		explicit PulseNavObstruction() = default;
 		explicit PulseNavObstruction([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -17,34 +17,34 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/BeamShotPrius.hpp>
+#include <rivet/ddl/generated/enums/DamageLOSTypes.hpp>
+#include <rivet/ddl/generated/enums/x6f69eca.hpp>
 #include <rivet/ddl/generated/enums/x8d7e44cf.hpp>
 #include <rivet/ddl/generated/bitsets/x65d7dac2.hpp>
-#include <rivet/ddl/generated/enums/x6f69eca.hpp>
-#include <rivet/ddl/generated/enums/DamageLOSTypes.hpp> 
+#include <rivet/ddl/generated/BeamShotPrius.hpp> 
 
 namespace rivet::ddl::generated {
-	struct KnockbackTierData;
-	struct DamageModifierExplosionPrius; 
+	struct DamageModifierExplosionPrius;
+	struct KnockbackTierData; 
 
 	struct RIVET_DDL_SHARED ShotKamehamehaPrius : BeamShotPrius {
-		constexpr const static std::string_view type_name = "ShotKamehamehaPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x9b370a7e;
+		constexpr static std::string_view type_name = "ShotKamehamehaPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x9b370a7e;
 
-		constexpr const static std::string_view DamageType_type_name = "DamageType";
-		constexpr const static rivet::rivet_type_id DamageType_type_id = 0x840c154d;
-		constexpr const static std::string_view KnockbackTiers_type_name = "KnockbackTiers";
-		constexpr const static rivet::rivet_type_id KnockbackTiers_type_id = 0xa9f955d3;
-		constexpr const static std::string_view DamageFlags_type_name = "DamageFlags";
-		constexpr const static rivet::rivet_type_id DamageFlags_type_id = 0x93d0d934;
-		constexpr const static std::string_view AudioFollowerType_type_name = "AudioFollowerType";
-		constexpr const static rivet::rivet_type_id AudioFollowerType_type_id = 0x8987c9e4;
-		constexpr const static std::string_view V5ExplosionDamageType_type_name = "V5ExplosionDamageType";
-		constexpr const static rivet::rivet_type_id V5ExplosionDamageType_type_id = 0x225e550c;
-		constexpr const static std::string_view V5ExplosionData_type_name = "V5ExplosionData";
-		constexpr const static rivet::rivet_type_id V5ExplosionData_type_id = 0x24f8b280;
-		constexpr const static std::string_view V5ExplosionDamageLOSType_type_name = "V5ExplosionDamageLOSType";
-		constexpr const static rivet::rivet_type_id V5ExplosionDamageLOSType_type_id = 0x43266f53; 
+		constexpr static std::string_view DamageType_type_name = "DamageType";
+		constexpr static rivet::rivet_type_id DamageType_type_id = 0x840c154d;
+		constexpr static std::string_view KnockbackTiers_type_name = "KnockbackTiers";
+		constexpr static rivet::rivet_type_id KnockbackTiers_type_id = 0xa9f955d3;
+		constexpr static std::string_view DamageFlags_type_name = "DamageFlags";
+		constexpr static rivet::rivet_type_id DamageFlags_type_id = 0x93d0d934;
+		constexpr static std::string_view AudioFollowerType_type_name = "AudioFollowerType";
+		constexpr static rivet::rivet_type_id AudioFollowerType_type_id = 0x8987c9e4;
+		constexpr static std::string_view V5ExplosionDamageType_type_name = "V5ExplosionDamageType";
+		constexpr static rivet::rivet_type_id V5ExplosionDamageType_type_id = 0x225e550c;
+		constexpr static std::string_view V5ExplosionData_type_name = "V5ExplosionData";
+		constexpr static rivet::rivet_type_id V5ExplosionData_type_id = 0x24f8b280;
+		constexpr static std::string_view V5ExplosionDamageLOSType_type_name = "V5ExplosionDamageLOSType";
+		constexpr static rivet::rivet_type_id V5ExplosionDamageLOSType_type_id = 0x43266f53; 
 
 		explicit ShotKamehamehaPrius() = default;
 		explicit ShotKamehamehaPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

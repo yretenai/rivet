@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct ChargeAttackData; 
 
 	struct RIVET_DDL_SHARED BotComboMoveCharge : BotComboMove {
-		constexpr const static std::string_view type_name = "BotComboMoveCharge";
-		constexpr const static rivet::rivet_type_id type_id = 0x6c0761f5;
+		constexpr static std::string_view type_name = "BotComboMoveCharge";
+		constexpr static rivet::rivet_type_id type_id = 0x6c0761f5;
 
-		constexpr const static std::string_view ChargeAttackData_type_name = "ChargeAttackData";
-		constexpr const static rivet::rivet_type_id ChargeAttackData_type_id = 0x1355867c; 
+		constexpr static std::string_view ChargeAttackData_type_name = "ChargeAttackData";
+		constexpr static rivet::rivet_type_id ChargeAttackData_type_id = 0x1355867c; 
 
 		explicit BotComboMoveCharge() = default;
 		explicit BotComboMoveCharge([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

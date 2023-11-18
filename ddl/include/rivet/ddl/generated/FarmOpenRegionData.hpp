@@ -21,19 +21,19 @@ namespace rivet::ddl::generated {
 	struct FarmExtraTileZoneData; 
 
 	struct RIVET_DDL_SHARED FarmOpenRegionData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "FarmOpenRegionData";
-		constexpr const static rivet::rivet_type_id type_id = 0xbfef7520;
+		constexpr static std::string_view type_name = "FarmOpenRegionData";
+		constexpr static rivet::rivet_type_id type_id = 0xbfef7520;
 
-		constexpr const static std::string_view AtmosphereZone_type_name = "AtmosphereZone";
-		constexpr const static rivet::rivet_type_id AtmosphereZone_type_id = 0x9c553ee6;
-		constexpr const static std::string_view RegionFile_type_name = "RegionFile";
-		constexpr const static rivet::rivet_type_id RegionFile_type_id = 0xcabd3504;
-		constexpr const static std::string_view LevelFile_type_name = "LevelFile";
-		constexpr const static rivet::rivet_type_id LevelFile_type_id = 0xc002f04b;
-		constexpr const static std::string_view GlobalRegions_type_name = "GlobalRegions";
-		constexpr const static rivet::rivet_type_id GlobalRegions_type_id = 0x44015029;
-		constexpr const static std::string_view ExtraZonesPerTile_type_name = "ExtraZonesPerTile";
-		constexpr const static rivet::rivet_type_id ExtraZonesPerTile_type_id = 0x1ed0234c; 
+		constexpr static std::string_view AtmosphereZone_type_name = "AtmosphereZone";
+		constexpr static rivet::rivet_type_id AtmosphereZone_type_id = 0x9c553ee6;
+		constexpr static std::string_view RegionFile_type_name = "RegionFile";
+		constexpr static rivet::rivet_type_id RegionFile_type_id = 0xcabd3504;
+		constexpr static std::string_view LevelFile_type_name = "LevelFile";
+		constexpr static rivet::rivet_type_id LevelFile_type_id = 0xc002f04b;
+		constexpr static std::string_view GlobalRegions_type_name = "GlobalRegions";
+		constexpr static rivet::rivet_type_id GlobalRegions_type_id = 0x44015029;
+		constexpr static std::string_view ExtraZonesPerTile_type_name = "ExtraZonesPerTile";
+		constexpr static rivet::rivet_type_id ExtraZonesPerTile_type_id = 0x1ed0234c; 
 
 		explicit FarmOpenRegionData() = default;
 		explicit FarmOpenRegionData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

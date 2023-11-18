@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view KeyFrameAccessType_type_name = "KeyFrameAccessType";
-	constexpr const static rivet::rivet_type_id KeyFrameAccessType_type_id = 0x521686a5;
+	constexpr static std::string_view KeyFrameAccessType_type_name = "KeyFrameAccessType";
+	constexpr static rivet::rivet_type_id KeyFrameAccessType_type_id = 0x521686a5;
 
-	constexpr const static std::array<std::string_view, 2> KeyFrameAccessType_values = {
+	constexpr static std::array<std::string_view, 2> KeyFrameAccessType_values = {
 		"kDistance",
 		"kAge", 
 	};

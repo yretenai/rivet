@@ -18,23 +18,23 @@
 #include <rivet/structures/rivet_serialization.hpp>
 
 namespace rivet::ddl::generated {
-	struct ShotMotionBasePrius;
-	struct ShotShakeData; 
+	struct ShotShakeData;
+	struct ShotMotionBasePrius; 
 
 	struct RIVET_DDL_SHARED ShotBasePrius : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "ShotBasePrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x6918cc0a;
+		constexpr static std::string_view type_name = "ShotBasePrius";
+		constexpr static rivet::rivet_type_id type_id = 0x6918cc0a;
 
-		constexpr const static std::string_view InitialMotion_type_name = "InitialMotion";
-		constexpr const static rivet::rivet_type_id InitialMotion_type_id = 0x4f34f2de;
-		constexpr const static std::string_view ConduitAsset_type_name = "ConduitAsset";
-		constexpr const static rivet::rivet_type_id ConduitAsset_type_id = 0x857b9dd2;
-		constexpr const static std::string_view FXVariantCount_type_name = "FXVariantCount";
-		constexpr const static rivet::rivet_type_id FXVariantCount_type_id = 0x3154389f;
-		constexpr const static std::string_view FlewByRange_type_name = "FlewByRange";
-		constexpr const static rivet::rivet_type_id FlewByRange_type_id = 0x4e5dbed9;
-		constexpr const static std::string_view ShakeData_type_name = "ShakeData";
-		constexpr const static rivet::rivet_type_id ShakeData_type_id = 0x9c710c08; 
+		constexpr static std::string_view InitialMotion_type_name = "InitialMotion";
+		constexpr static rivet::rivet_type_id InitialMotion_type_id = 0x4f34f2de;
+		constexpr static std::string_view ConduitAsset_type_name = "ConduitAsset";
+		constexpr static rivet::rivet_type_id ConduitAsset_type_id = 0x857b9dd2;
+		constexpr static std::string_view FXVariantCount_type_name = "FXVariantCount";
+		constexpr static rivet::rivet_type_id FXVariantCount_type_id = 0x3154389f;
+		constexpr static std::string_view FlewByRange_type_name = "FlewByRange";
+		constexpr static rivet::rivet_type_id FlewByRange_type_id = 0x4e5dbed9;
+		constexpr static std::string_view ShakeData_type_name = "ShakeData";
+		constexpr static rivet::rivet_type_id ShakeData_type_id = 0x9c710c08; 
 
 		explicit ShotBasePrius() = default;
 		explicit ShotBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

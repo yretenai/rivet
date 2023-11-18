@@ -3,11 +3,11 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/DistanceTargetingPrius.hpp>
-#include <rivet/ddl/generated/ClosestTargetingPrius.hpp>
 #include <rivet/ddl/generated/TieredAggroTargetingPrius.hpp>
+#include <rivet/ddl/generated/DistanceTargetingPrius.hpp>
+#include <rivet/ddl/generated/HeuristicTargetingPrius.hpp>
 #include <rivet/ddl/generated/NullTargetingPrius.hpp>
-#include <rivet/ddl/generated/HeuristicTargetingPrius.hpp> 
+#include <rivet/ddl/generated/ClosestTargetingPrius.hpp> 
 
 #include <rivet/ddl/generated/TargetingBasePrius.hpp>
 

@@ -21,21 +21,21 @@ namespace rivet::ddl::generated {
 	struct FireConeData; 
 
 	struct RIVET_DDL_SHARED ZoomData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "ZoomData";
-		constexpr const static rivet::rivet_type_id type_id = 0x6bc85e7f;
+		constexpr static std::string_view type_name = "ZoomData";
+		constexpr static rivet::rivet_type_id type_id = 0x6bc85e7f;
 
-		constexpr const static std::string_view FireCone_type_name = "FireCone";
-		constexpr const static rivet::rivet_type_id FireCone_type_id = 0x8c3d3ed4;
-		constexpr const static std::string_view CamAimContext_type_name = "CamAimContext";
-		constexpr const static rivet::rivet_type_id CamAimContext_type_id = 0xd1596448;
-		constexpr const static std::string_view CamStickOverride_type_name = "CamStickOverride";
-		constexpr const static rivet::rivet_type_id CamStickOverride_type_id = 0x3ffcbac0;
-		constexpr const static std::string_view AimAssistOverride_type_name = "AimAssistOverride";
-		constexpr const static rivet::rivet_type_id AimAssistOverride_type_id = 0x2322166c;
-		constexpr const static std::string_view AimAssistOverrideCasual_type_name = "AimAssistOverrideCasual";
-		constexpr const static rivet::rivet_type_id AimAssistOverrideCasual_type_id = 0x9e6ac66c;
-		constexpr const static std::string_view DisableViewWidth_type_name = "DisableViewWidth";
-		constexpr const static rivet::rivet_type_id DisableViewWidth_type_id = 0x1231cf61; 
+		constexpr static std::string_view FireCone_type_name = "FireCone";
+		constexpr static rivet::rivet_type_id FireCone_type_id = 0x8c3d3ed4;
+		constexpr static std::string_view CamAimContext_type_name = "CamAimContext";
+		constexpr static rivet::rivet_type_id CamAimContext_type_id = 0xd1596448;
+		constexpr static std::string_view CamStickOverride_type_name = "CamStickOverride";
+		constexpr static rivet::rivet_type_id CamStickOverride_type_id = 0x3ffcbac0;
+		constexpr static std::string_view AimAssistOverride_type_name = "AimAssistOverride";
+		constexpr static rivet::rivet_type_id AimAssistOverride_type_id = 0x2322166c;
+		constexpr static std::string_view AimAssistOverrideCasual_type_name = "AimAssistOverrideCasual";
+		constexpr static rivet::rivet_type_id AimAssistOverrideCasual_type_id = 0x9e6ac66c;
+		constexpr static std::string_view DisableViewWidth_type_name = "DisableViewWidth";
+		constexpr static rivet::rivet_type_id DisableViewWidth_type_id = 0x1231cf61; 
 
 		explicit ZoomData() = default;
 		explicit ZoomData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

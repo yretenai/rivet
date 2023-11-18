@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view RangeStyle_type_name = "RangeStyle";
-	constexpr const static rivet::rivet_type_id RangeStyle_type_id = 0x660fc875;
+	constexpr static std::string_view RangeStyle_type_name = "RangeStyle";
+	constexpr static rivet::rivet_type_id RangeStyle_type_id = 0x660fc875;
 
-	constexpr const static std::array<std::string_view, 4> RangeStyle_values = {
+	constexpr static std::array<std::string_view, 4> RangeStyle_values = {
 		"kNone",
 		"kRandom",
 		"kFlicker",

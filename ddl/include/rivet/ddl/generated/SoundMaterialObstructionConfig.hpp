@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct SoundMaterialbstructionValue; 
 
 	struct RIVET_DDL_SHARED SoundMaterialObstructionConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "SoundMaterialObstructionConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x9a5fd03b;
+		constexpr static std::string_view type_name = "SoundMaterialObstructionConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x9a5fd03b;
 
-		constexpr const static std::string_view ObsValues_type_name = "ObsValues";
-		constexpr const static rivet::rivet_type_id ObsValues_type_id = 0x24a940d4; 
+		constexpr static std::string_view ObsValues_type_name = "ObsValues";
+		constexpr static rivet::rivet_type_id ObsValues_type_id = 0x24a940d4; 
 
 		explicit SoundMaterialObstructionConfig() = default;
 		explicit SoundMaterialObstructionConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

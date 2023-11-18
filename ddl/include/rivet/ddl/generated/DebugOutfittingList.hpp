@@ -19,13 +19,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DebugOutfittingList : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "DebugOutfittingList";
-		constexpr const static rivet::rivet_type_id type_id = 0x5279e77c;
+		constexpr static std::string_view type_name = "DebugOutfittingList";
+		constexpr static rivet::rivet_type_id type_id = 0x5279e77c;
 
-		constexpr const static std::string_view Category_type_name = "Category";
-		constexpr const static rivet::rivet_type_id Category_type_id = 0xfc4da4b1;
-		constexpr const static std::string_view ItemConfig_type_name = "ItemConfig";
-		constexpr const static rivet::rivet_type_id ItemConfig_type_id = 0xa88f833f; 
+		constexpr static std::string_view Category_type_name = "Category";
+		constexpr static rivet::rivet_type_id Category_type_id = 0xfc4da4b1;
+		constexpr static std::string_view ItemConfig_type_name = "ItemConfig";
+		constexpr static rivet::rivet_type_id ItemConfig_type_id = 0xa88f833f; 
 
 		explicit DebugOutfittingList() = default;
 		explicit DebugOutfittingList([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

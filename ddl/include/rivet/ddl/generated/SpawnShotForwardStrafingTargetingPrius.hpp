@@ -23,29 +23,29 @@ namespace rivet::ddl::generated {
 	struct DDLVector3; 
 
 	struct RIVET_DDL_SHARED SpawnShotForwardStrafingTargetingPrius : SpawnShotTargetingPrius {
-		constexpr const static std::string_view type_name = "SpawnShotForwardStrafingTargetingPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x979ef253;
+		constexpr static std::string_view type_name = "SpawnShotForwardStrafingTargetingPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x979ef253;
 
-		constexpr const static std::string_view InitialYaw_type_name = "InitialYaw";
-		constexpr const static rivet::rivet_type_id InitialYaw_type_id = 0x7ddfeff9;
-		constexpr const static std::string_view PerShotYaw_type_name = "PerShotYaw";
-		constexpr const static rivet::rivet_type_id PerShotYaw_type_id = 0xee3be3dd;
-		constexpr const static std::string_view InitialPitch_type_name = "InitialPitch";
-		constexpr const static rivet::rivet_type_id InitialPitch_type_id = 0x3290fd0b;
-		constexpr const static std::string_view PerShotPitch_type_name = "PerShotPitch";
-		constexpr const static rivet::rivet_type_id PerShotPitch_type_id = 0xcacec362;
-		constexpr const static std::string_view AimOffset_type_name = "AimOffset";
-		constexpr const static rivet::rivet_type_id AimOffset_type_id = 0xe54de6b5;
-		constexpr const static std::string_view AimOffsetSmall_type_name = "AimOffsetSmall";
-		constexpr const static rivet::rivet_type_id AimOffsetSmall_type_id = 0x2deb2b0;
-		constexpr const static std::string_view AimOffsetLarge_type_name = "AimOffsetLarge";
-		constexpr const static rivet::rivet_type_id AimOffsetLarge_type_id = 0x2ef0711d;
-		constexpr const static std::string_view AlternateOffsetDir_type_name = "AlternateOffsetDir";
-		constexpr const static rivet::rivet_type_id AlternateOffsetDir_type_id = 0xdc5c0312;
-		constexpr const static std::string_view CentralisePattern_type_name = "CentralisePattern";
-		constexpr const static rivet::rivet_type_id CentralisePattern_type_id = 0x10a60e6;
-		constexpr const static std::string_view UseEmitterDir_type_name = "UseEmitterDir";
-		constexpr const static rivet::rivet_type_id UseEmitterDir_type_id = 0x9a4ddd5e; 
+		constexpr static std::string_view InitialYaw_type_name = "InitialYaw";
+		constexpr static rivet::rivet_type_id InitialYaw_type_id = 0x7ddfeff9;
+		constexpr static std::string_view PerShotYaw_type_name = "PerShotYaw";
+		constexpr static rivet::rivet_type_id PerShotYaw_type_id = 0xee3be3dd;
+		constexpr static std::string_view InitialPitch_type_name = "InitialPitch";
+		constexpr static rivet::rivet_type_id InitialPitch_type_id = 0x3290fd0b;
+		constexpr static std::string_view PerShotPitch_type_name = "PerShotPitch";
+		constexpr static rivet::rivet_type_id PerShotPitch_type_id = 0xcacec362;
+		constexpr static std::string_view AimOffset_type_name = "AimOffset";
+		constexpr static rivet::rivet_type_id AimOffset_type_id = 0xe54de6b5;
+		constexpr static std::string_view AimOffsetSmall_type_name = "AimOffsetSmall";
+		constexpr static rivet::rivet_type_id AimOffsetSmall_type_id = 0x2deb2b0;
+		constexpr static std::string_view AimOffsetLarge_type_name = "AimOffsetLarge";
+		constexpr static rivet::rivet_type_id AimOffsetLarge_type_id = 0x2ef0711d;
+		constexpr static std::string_view AlternateOffsetDir_type_name = "AlternateOffsetDir";
+		constexpr static rivet::rivet_type_id AlternateOffsetDir_type_id = 0xdc5c0312;
+		constexpr static std::string_view CentralisePattern_type_name = "CentralisePattern";
+		constexpr static rivet::rivet_type_id CentralisePattern_type_id = 0x10a60e6;
+		constexpr static std::string_view UseEmitterDir_type_name = "UseEmitterDir";
+		constexpr static rivet::rivet_type_id UseEmitterDir_type_id = 0x9a4ddd5e; 
 
 		explicit SpawnShotForwardStrafingTargetingPrius() = default;
 		explicit SpawnShotForwardStrafingTargetingPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

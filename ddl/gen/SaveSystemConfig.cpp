@@ -3,9 +3,9 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
+#include <rivet/ddl/generated/VanityBundleSaveWeight.hpp>
 #include <rivet/ddl/generated/RYNOPlanSaveWeight.hpp>
-#include <rivet/ddl/generated/GoldBoltSaveWeight.hpp>
-#include <rivet/ddl/generated/VanityBundleSaveWeight.hpp> 
+#include <rivet/ddl/generated/GoldBoltSaveWeight.hpp> 
 
 #include <rivet/ddl/generated/SaveSystemConfig.hpp>
 

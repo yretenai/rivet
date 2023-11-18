@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DestroyShotEffectPrius : ScriptedShotEffectBasePrius {
-		constexpr const static std::string_view type_name = "DestroyShotEffectPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x14cb2f6c;
+		constexpr static std::string_view type_name = "DestroyShotEffectPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x14cb2f6c;
 
-		constexpr const static std::string_view DestroySecondaryActivationActors_type_name = "DestroySecondaryActivationActors";
-		constexpr const static rivet::rivet_type_id DestroySecondaryActivationActors_type_id = 0x9d59943; 
+		constexpr static std::string_view DestroySecondaryActivationActors_type_name = "DestroySecondaryActivationActors";
+		constexpr static rivet::rivet_type_id DestroySecondaryActivationActors_type_id = 0x9d59943; 
 
 		explicit DestroyShotEffectPrius() = default;
 		explicit DestroyShotEffectPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

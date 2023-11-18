@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct ActorAssetReferenceDef; 
 
 	struct RIVET_DDL_SHARED AwardPickupsPrius : AwardBasePrius {
-		constexpr const static std::string_view type_name = "AwardPickupsPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x3b97c23c;
+		constexpr static std::string_view type_name = "AwardPickupsPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x3b97c23c;
 
-		constexpr const static std::string_view PickupConfigAsset_type_name = "PickupConfigAsset";
-		constexpr const static rivet::rivet_type_id PickupConfigAsset_type_id = 0xf0812be4; 
+		constexpr static std::string_view PickupConfigAsset_type_name = "PickupConfigAsset";
+		constexpr static rivet::rivet_type_id PickupConfigAsset_type_id = 0xf0812be4; 
 
 		explicit AwardPickupsPrius() = default;
 		explicit AwardPickupsPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

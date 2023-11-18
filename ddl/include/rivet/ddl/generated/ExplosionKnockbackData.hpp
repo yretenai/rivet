@@ -21,21 +21,21 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ExplosionKnockbackData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "ExplosionKnockbackData";
-		constexpr const static rivet::rivet_type_id type_id = 0x1f5e6962;
+		constexpr static std::string_view type_name = "ExplosionKnockbackData";
+		constexpr static rivet::rivet_type_id type_id = 0x1f5e6962;
 
-		constexpr const static std::string_view KnockbackLevel_type_name = "KnockbackLevel";
-		constexpr const static rivet::rivet_type_id KnockbackLevel_type_id = 0x2554a262;
-		constexpr const static std::string_view KnockbackAmount_type_name = "KnockbackAmount";
-		constexpr const static rivet::rivet_type_id KnockbackAmount_type_id = 0x7b1e600b;
-		constexpr const static std::string_view RangeMin_type_name = "RangeMin";
-		constexpr const static rivet::rivet_type_id RangeMin_type_id = 0x2ff4f3c1;
-		constexpr const static std::string_view RangeMax_type_name = "RangeMax";
-		constexpr const static rivet::rivet_type_id RangeMax_type_id = 0x13f9cc98;
-		constexpr const static std::string_view MaxVictims_type_name = "MaxVictims";
-		constexpr const static rivet::rivet_type_id MaxVictims_type_id = 0x2360dbc7;
-		constexpr const static std::string_view EnableSelfKnockback_type_name = "EnableSelfKnockback";
-		constexpr const static rivet::rivet_type_id EnableSelfKnockback_type_id = 0xe954c43e; 
+		constexpr static std::string_view KnockbackLevel_type_name = "KnockbackLevel";
+		constexpr static rivet::rivet_type_id KnockbackLevel_type_id = 0x2554a262;
+		constexpr static std::string_view KnockbackAmount_type_name = "KnockbackAmount";
+		constexpr static rivet::rivet_type_id KnockbackAmount_type_id = 0x7b1e600b;
+		constexpr static std::string_view RangeMin_type_name = "RangeMin";
+		constexpr static rivet::rivet_type_id RangeMin_type_id = 0x2ff4f3c1;
+		constexpr static std::string_view RangeMax_type_name = "RangeMax";
+		constexpr static rivet::rivet_type_id RangeMax_type_id = 0x13f9cc98;
+		constexpr static std::string_view MaxVictims_type_name = "MaxVictims";
+		constexpr static rivet::rivet_type_id MaxVictims_type_id = 0x2360dbc7;
+		constexpr static std::string_view EnableSelfKnockback_type_name = "EnableSelfKnockback";
+		constexpr static rivet::rivet_type_id EnableSelfKnockback_type_id = 0xe954c43e; 
 
 		explicit ExplosionKnockbackData() = default;
 		explicit ExplosionKnockbackData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

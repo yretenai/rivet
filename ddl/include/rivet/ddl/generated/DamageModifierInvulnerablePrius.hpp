@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DamageModifierInvulnerablePrius : DamageModifierIncomingPrius {
-		constexpr const static std::string_view type_name = "DamageModifierInvulnerablePrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xf2bf1056;
+		constexpr static std::string_view type_name = "DamageModifierInvulnerablePrius";
+		constexpr static rivet::rivet_type_id type_id = 0xf2bf1056;
 
-		constexpr const static std::string_view Lifetime_type_name = "Lifetime";
-		constexpr const static rivet::rivet_type_id Lifetime_type_id = 0xc7e68df8;
-		constexpr const static std::string_view AllowReacts_type_name = "AllowReacts";
-		constexpr const static rivet::rivet_type_id AllowReacts_type_id = 0x7d494b99; 
+		constexpr static std::string_view Lifetime_type_name = "Lifetime";
+		constexpr static rivet::rivet_type_id Lifetime_type_id = 0xc7e68df8;
+		constexpr static std::string_view AllowReacts_type_name = "AllowReacts";
+		constexpr static rivet::rivet_type_id AllowReacts_type_id = 0x7d494b99; 
 
 		explicit DamageModifierInvulnerablePrius() = default;
 		explicit DamageModifierInvulnerablePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

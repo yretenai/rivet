@@ -17,20 +17,20 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/WeaponGamePrius.hpp>
-#include <rivet/ddl/generated/bitsets/x8b303a8b.hpp> 
+#include <rivet/ddl/generated/bitsets/x8b303a8b.hpp>
+#include <rivet/ddl/generated/WeaponGamePrius.hpp> 
 
 namespace rivet::ddl::generated {
 	struct KamehamehaChargeLevel; 
 
 	struct RIVET_DDL_SHARED WeaponKamehamehaPrius : WeaponGamePrius {
-		constexpr const static std::string_view type_name = "WeaponKamehamehaPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x753cf93;
+		constexpr static std::string_view type_name = "WeaponKamehamehaPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x753cf93;
 
-		constexpr const static std::string_view ChargeLevels_type_name = "ChargeLevels";
-		constexpr const static rivet::rivet_type_id ChargeLevels_type_id = 0xc714b91b;
-		constexpr const static std::string_view FiringAllowedKnockbacks_type_name = "FiringAllowedKnockbacks";
-		constexpr const static rivet::rivet_type_id FiringAllowedKnockbacks_type_id = 0xe37d083a; 
+		constexpr static std::string_view ChargeLevels_type_name = "ChargeLevels";
+		constexpr static rivet::rivet_type_id ChargeLevels_type_id = 0xc714b91b;
+		constexpr static std::string_view FiringAllowedKnockbacks_type_name = "FiringAllowedKnockbacks";
+		constexpr static rivet::rivet_type_id FiringAllowedKnockbacks_type_id = 0xe37d083a; 
 
 		explicit WeaponKamehamehaPrius() = default;
 		explicit WeaponKamehamehaPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

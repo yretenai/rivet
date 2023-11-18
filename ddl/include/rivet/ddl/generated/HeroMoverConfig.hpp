@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct MoverIKData; 
 
 	struct RIVET_DDL_SHARED HeroMoverConfig : MoverConfig {
-		constexpr const static std::string_view type_name = "HeroMoverConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xee0ed482;
+		constexpr static std::string_view type_name = "HeroMoverConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xee0ed482;
 
-		constexpr const static std::string_view FootIK_type_name = "FootIK";
-		constexpr const static rivet::rivet_type_id FootIK_type_id = 0xba7da892; 
+		constexpr static std::string_view FootIK_type_name = "FootIK";
+		constexpr static rivet::rivet_type_id FootIK_type_id = 0xba7da892; 
 
 		explicit HeroMoverConfig() = default;
 		explicit HeroMoverConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

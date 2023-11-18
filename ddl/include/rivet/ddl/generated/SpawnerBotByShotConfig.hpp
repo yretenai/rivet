@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED SpawnerBotByShotConfig : SpawnerBotBaseConfig {
-		constexpr const static std::string_view type_name = "SpawnerBotByShotConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x7dbeeb6d;
+		constexpr static std::string_view type_name = "SpawnerBotByShotConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x7dbeeb6d;
 
-		constexpr const static std::string_view NumTotalSpawnedBots_type_name = "NumTotalSpawnedBots";
-		constexpr const static rivet::rivet_type_id NumTotalSpawnedBots_type_id = 0x1c3e6c60; 
+		constexpr static std::string_view NumTotalSpawnedBots_type_name = "NumTotalSpawnedBots";
+		constexpr static rivet::rivet_type_id NumTotalSpawnedBots_type_id = 0x1c3e6c60; 
 
 		explicit SpawnerBotByShotConfig() = default;
 		explicit SpawnerBotByShotConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

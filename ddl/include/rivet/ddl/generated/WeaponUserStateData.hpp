@@ -19,8 +19,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED WeaponUserStateData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "WeaponUserStateData";
-		constexpr const static rivet::rivet_type_id type_id = 0x31cfefeb;
+		constexpr static std::string_view type_name = "WeaponUserStateData";
+		constexpr static rivet::rivet_type_id type_id = 0x31cfefeb;
 
 		explicit WeaponUserStateData() = default;
 		explicit WeaponUserStateData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

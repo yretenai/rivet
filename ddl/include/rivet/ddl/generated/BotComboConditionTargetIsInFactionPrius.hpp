@@ -17,18 +17,18 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/BotComboConditionBasePrius.hpp>
-#include <rivet/ddl/generated/enums/x6bdf4ba1.hpp> 
+#include <rivet/ddl/generated/enums/x6bdf4ba1.hpp>
+#include <rivet/ddl/generated/BotComboConditionBasePrius.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED BotComboConditionTargetIsInFactionPrius : BotComboConditionBasePrius {
-		constexpr const static std::string_view type_name = "BotComboConditionTargetIsInFactionPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xe9e21cfa;
+		constexpr static std::string_view type_name = "BotComboConditionTargetIsInFactionPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xe9e21cfa;
 
-		constexpr const static std::string_view Faction_type_name = "Faction";
-		constexpr const static rivet::rivet_type_id Faction_type_id = 0x82eee8a8;
-		constexpr const static std::string_view FlipFactionCondition_type_name = "FlipFactionCondition";
-		constexpr const static rivet::rivet_type_id FlipFactionCondition_type_id = 0x1f5d97ea; 
+		constexpr static std::string_view Faction_type_name = "Faction";
+		constexpr static rivet::rivet_type_id Faction_type_id = 0x82eee8a8;
+		constexpr static std::string_view FlipFactionCondition_type_name = "FlipFactionCondition";
+		constexpr static rivet::rivet_type_id FlipFactionCondition_type_id = 0x1f5d97ea; 
 
 		explicit BotComboConditionTargetIsInFactionPrius() = default;
 		explicit BotComboConditionTargetIsInFactionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -21,21 +21,21 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED AimAssistSnapLocation : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "AimAssistSnapLocation";
-		constexpr const static rivet::rivet_type_id type_id = 0xa692b37a;
+		constexpr static std::string_view type_name = "AimAssistSnapLocation";
+		constexpr static rivet::rivet_type_id type_id = 0xa692b37a;
 
-		constexpr const static std::string_view AngleNear_type_name = "AngleNear";
-		constexpr const static rivet::rivet_type_id AngleNear_type_id = 0x7d428588;
-		constexpr const static std::string_view AngleFar_type_name = "AngleFar";
-		constexpr const static rivet::rivet_type_id AngleFar_type_id = 0xabdaec9f;
-		constexpr const static std::string_view DistanceNear_type_name = "DistanceNear";
-		constexpr const static rivet::rivet_type_id DistanceNear_type_id = 0xe7e7d300;
-		constexpr const static std::string_view DistanceFar_type_name = "DistanceFar";
-		constexpr const static rivet::rivet_type_id DistanceFar_type_id = 0xb13fd21e;
-		constexpr const static std::string_view FaceAngle_type_name = "FaceAngle";
-		constexpr const static rivet::rivet_type_id FaceAngle_type_id = 0xb2c98628;
-		constexpr const static std::string_view LocationType_type_name = "LocationType";
-		constexpr const static rivet::rivet_type_id LocationType_type_id = 0xc3db52f8; 
+		constexpr static std::string_view AngleNear_type_name = "AngleNear";
+		constexpr static rivet::rivet_type_id AngleNear_type_id = 0x7d428588;
+		constexpr static std::string_view AngleFar_type_name = "AngleFar";
+		constexpr static rivet::rivet_type_id AngleFar_type_id = 0xabdaec9f;
+		constexpr static std::string_view DistanceNear_type_name = "DistanceNear";
+		constexpr static rivet::rivet_type_id DistanceNear_type_id = 0xe7e7d300;
+		constexpr static std::string_view DistanceFar_type_name = "DistanceFar";
+		constexpr static rivet::rivet_type_id DistanceFar_type_id = 0xb13fd21e;
+		constexpr static std::string_view FaceAngle_type_name = "FaceAngle";
+		constexpr static rivet::rivet_type_id FaceAngle_type_id = 0xb2c98628;
+		constexpr static std::string_view LocationType_type_name = "LocationType";
+		constexpr static rivet::rivet_type_id LocationType_type_id = 0xc3db52f8; 
 
 		explicit AimAssistSnapLocation() = default;
 		explicit AimAssistSnapLocation([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

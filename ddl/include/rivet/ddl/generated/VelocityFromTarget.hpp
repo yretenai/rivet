@@ -21,35 +21,35 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED VelocityFromTarget : GrenadeVelocityMode {
-		constexpr const static std::string_view type_name = "VelocityFromTarget";
-		constexpr const static rivet::rivet_type_id type_id = 0x8a7e0f48;
+		constexpr static std::string_view type_name = "VelocityFromTarget";
+		constexpr static rivet::rivet_type_id type_id = 0x8a7e0f48;
 
-		constexpr const static std::string_view FullTiltAngle_type_name = "FullTiltAngle";
-		constexpr const static rivet::rivet_type_id FullTiltAngle_type_id = 0x883ae8cd;
-		constexpr const static std::string_view FullTiltSpeed_type_name = "FullTiltSpeed";
-		constexpr const static rivet::rivet_type_id FullTiltSpeed_type_id = 0x879d5332;
-		constexpr const static std::string_view MaxTargetDist_type_name = "MaxTargetDist";
-		constexpr const static rivet::rivet_type_id MaxTargetDist_type_id = 0x8126a286;
-		constexpr const static std::string_view MaxArcHeight_type_name = "MaxArcHeight";
-		constexpr const static rivet::rivet_type_id MaxArcHeight_type_id = 0xa48389d6;
-		constexpr const static std::string_view MaxHorizontalDist_type_name = "MaxHorizontalDist";
-		constexpr const static rivet::rivet_type_id MaxHorizontalDist_type_id = 0x277380d3;
-		constexpr const static std::string_view PredictionRangeMin_type_name = "PredictionRangeMin";
-		constexpr const static rivet::rivet_type_id PredictionRangeMin_type_id = 0x5566f807;
-		constexpr const static std::string_view PredictionRangeMax_type_name = "PredictionRangeMax";
-		constexpr const static rivet::rivet_type_id PredictionRangeMax_type_id = 0x696bc75e;
-		constexpr const static std::string_view PredictionFactorMin_type_name = "PredictionFactorMin";
-		constexpr const static rivet::rivet_type_id PredictionFactorMin_type_id = 0xb37f3521;
-		constexpr const static std::string_view PredictionFactorMax_type_name = "PredictionFactorMax";
-		constexpr const static rivet::rivet_type_id PredictionFactorMax_type_id = 0x8f720a78;
-		constexpr const static std::string_view PredictionLengthCapMin_type_name = "PredictionLengthCapMin";
-		constexpr const static rivet::rivet_type_id PredictionLengthCapMin_type_id = 0x5fed8a5a;
-		constexpr const static std::string_view PredictionLengthCapMax_type_name = "PredictionLengthCapMax";
-		constexpr const static rivet::rivet_type_id PredictionLengthCapMax_type_id = 0x63e0b503;
-		constexpr const static std::string_view ForceDetonateAtTarget_type_name = "ForceDetonateAtTarget";
-		constexpr const static rivet::rivet_type_id ForceDetonateAtTarget_type_id = 0x7d1e5856;
-		constexpr const static std::string_view UseTargetPosOverAimPos_type_name = "UseTargetPosOverAimPos";
-		constexpr const static rivet::rivet_type_id UseTargetPosOverAimPos_type_id = 0xd8cfdf23; 
+		constexpr static std::string_view FullTiltAngle_type_name = "FullTiltAngle";
+		constexpr static rivet::rivet_type_id FullTiltAngle_type_id = 0x883ae8cd;
+		constexpr static std::string_view FullTiltSpeed_type_name = "FullTiltSpeed";
+		constexpr static rivet::rivet_type_id FullTiltSpeed_type_id = 0x879d5332;
+		constexpr static std::string_view MaxTargetDist_type_name = "MaxTargetDist";
+		constexpr static rivet::rivet_type_id MaxTargetDist_type_id = 0x8126a286;
+		constexpr static std::string_view MaxArcHeight_type_name = "MaxArcHeight";
+		constexpr static rivet::rivet_type_id MaxArcHeight_type_id = 0xa48389d6;
+		constexpr static std::string_view MaxHorizontalDist_type_name = "MaxHorizontalDist";
+		constexpr static rivet::rivet_type_id MaxHorizontalDist_type_id = 0x277380d3;
+		constexpr static std::string_view PredictionRangeMin_type_name = "PredictionRangeMin";
+		constexpr static rivet::rivet_type_id PredictionRangeMin_type_id = 0x5566f807;
+		constexpr static std::string_view PredictionRangeMax_type_name = "PredictionRangeMax";
+		constexpr static rivet::rivet_type_id PredictionRangeMax_type_id = 0x696bc75e;
+		constexpr static std::string_view PredictionFactorMin_type_name = "PredictionFactorMin";
+		constexpr static rivet::rivet_type_id PredictionFactorMin_type_id = 0xb37f3521;
+		constexpr static std::string_view PredictionFactorMax_type_name = "PredictionFactorMax";
+		constexpr static rivet::rivet_type_id PredictionFactorMax_type_id = 0x8f720a78;
+		constexpr static std::string_view PredictionLengthCapMin_type_name = "PredictionLengthCapMin";
+		constexpr static rivet::rivet_type_id PredictionLengthCapMin_type_id = 0x5fed8a5a;
+		constexpr static std::string_view PredictionLengthCapMax_type_name = "PredictionLengthCapMax";
+		constexpr static rivet::rivet_type_id PredictionLengthCapMax_type_id = 0x63e0b503;
+		constexpr static std::string_view ForceDetonateAtTarget_type_name = "ForceDetonateAtTarget";
+		constexpr static rivet::rivet_type_id ForceDetonateAtTarget_type_id = 0x7d1e5856;
+		constexpr static std::string_view UseTargetPosOverAimPos_type_name = "UseTargetPosOverAimPos";
+		constexpr static rivet::rivet_type_id UseTargetPosOverAimPos_type_id = 0xd8cfdf23; 
 
 		explicit VelocityFromTarget() = default;
 		explicit VelocityFromTarget([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

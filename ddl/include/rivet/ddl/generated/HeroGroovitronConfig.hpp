@@ -19,25 +19,25 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED HeroGroovitronConfig : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "HeroGroovitronConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x49657ac9;
+		constexpr static std::string_view type_name = "HeroGroovitronConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x49657ac9;
 
-		constexpr const static std::string_view MoveMaxSpeed_type_name = "MoveMaxSpeed";
-		constexpr const static rivet::rivet_type_id MoveMaxSpeed_type_id = 0x50c4f9ed;
-		constexpr const static std::string_view MoveAccel_type_name = "MoveAccel";
-		constexpr const static rivet::rivet_type_id MoveAccel_type_id = 0x4d8dca42;
-		constexpr const static std::string_view MoveDecel_type_name = "MoveDecel";
-		constexpr const static rivet::rivet_type_id MoveDecel_type_id = 0xa0061aee;
-		constexpr const static std::string_view JumpMinHeight_type_name = "JumpMinHeight";
-		constexpr const static rivet::rivet_type_id JumpMinHeight_type_id = 0xad9299ce;
-		constexpr const static std::string_view JumpMaxHeight_type_name = "JumpMaxHeight";
-		constexpr const static rivet::rivet_type_id JumpMaxHeight_type_id = 0x7a792b8f;
-		constexpr const static std::string_view JumpMaxHoldTime_type_name = "JumpMaxHoldTime";
-		constexpr const static rivet::rivet_type_id JumpMaxHoldTime_type_id = 0xe0324497;
-		constexpr const static std::string_view JumpTerminalVelocity_type_name = "JumpTerminalVelocity";
-		constexpr const static rivet::rivet_type_id JumpTerminalVelocity_type_id = 0x58665743;
-		constexpr const static std::string_view JumpPeakTime_type_name = "JumpPeakTime";
-		constexpr const static rivet::rivet_type_id JumpPeakTime_type_id = 0x6ef12a62; 
+		constexpr static std::string_view MoveMaxSpeed_type_name = "MoveMaxSpeed";
+		constexpr static rivet::rivet_type_id MoveMaxSpeed_type_id = 0x50c4f9ed;
+		constexpr static std::string_view MoveAccel_type_name = "MoveAccel";
+		constexpr static rivet::rivet_type_id MoveAccel_type_id = 0x4d8dca42;
+		constexpr static std::string_view MoveDecel_type_name = "MoveDecel";
+		constexpr static rivet::rivet_type_id MoveDecel_type_id = 0xa0061aee;
+		constexpr static std::string_view JumpMinHeight_type_name = "JumpMinHeight";
+		constexpr static rivet::rivet_type_id JumpMinHeight_type_id = 0xad9299ce;
+		constexpr static std::string_view JumpMaxHeight_type_name = "JumpMaxHeight";
+		constexpr static rivet::rivet_type_id JumpMaxHeight_type_id = 0x7a792b8f;
+		constexpr static std::string_view JumpMaxHoldTime_type_name = "JumpMaxHoldTime";
+		constexpr static rivet::rivet_type_id JumpMaxHoldTime_type_id = 0xe0324497;
+		constexpr static std::string_view JumpTerminalVelocity_type_name = "JumpTerminalVelocity";
+		constexpr static rivet::rivet_type_id JumpTerminalVelocity_type_id = 0x58665743;
+		constexpr static std::string_view JumpPeakTime_type_name = "JumpPeakTime";
+		constexpr static rivet::rivet_type_id JumpPeakTime_type_id = 0x6ef12a62; 
 
 		explicit HeroGroovitronConfig() = default;
 		explicit HeroGroovitronConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

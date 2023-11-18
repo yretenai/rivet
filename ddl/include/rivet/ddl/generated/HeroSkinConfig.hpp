@@ -21,37 +21,37 @@
 
 namespace rivet::ddl::generated {
 	struct CustomHeadData;
-	struct SkinData;
-	struct UnlockableSkinData; 
+	struct UnlockableSkinData;
+	struct SkinData; 
 
 	struct RIVET_DDL_SHARED HeroSkinConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "HeroSkinConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xde3a2857;
+		constexpr static std::string_view type_name = "HeroSkinConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xde3a2857;
 
-		constexpr const static std::string_view BaseSkin_type_name = "BaseSkin";
-		constexpr const static rivet::rivet_type_id BaseSkin_type_id = 0x7f471de0;
-		constexpr const static std::string_view UpgradedSkin_type_name = "UpgradedSkin";
-		constexpr const static rivet::rivet_type_id UpgradedSkin_type_id = 0xc3c23129;
-		constexpr const static std::string_view RebreatherModel_type_name = "RebreatherModel";
-		constexpr const static rivet::rivet_type_id RebreatherModel_type_id = 0x2ab730c6;
-		constexpr const static std::string_view HoverBootsModel_type_name = "HoverBootsModel";
-		constexpr const static rivet::rivet_type_id HoverBootsModel_type_id = 0xdad138ca;
-		constexpr const static std::string_view GrindBootsModel_type_name = "GrindBootsModel";
-		constexpr const static rivet::rivet_type_id GrindBootsModel_type_id = 0xfbb76e09;
-		constexpr const static std::string_view MagBootsModel_type_name = "MagBootsModel";
-		constexpr const static rivet::rivet_type_id MagBootsModel_type_id = 0xe673b783;
-		constexpr const static std::string_view MapOMaticModel_type_name = "MapOMaticModel";
-		constexpr const static rivet::rivet_type_id MapOMaticModel_type_id = 0x42254088;
-		constexpr const static std::string_view SwingshotModel_type_name = "SwingshotModel";
-		constexpr const static rivet::rivet_type_id SwingshotModel_type_id = 0xa1130d8a;
-		constexpr const static std::string_view VersaGloveModel_type_name = "VersaGloveModel";
-		constexpr const static rivet::rivet_type_id VersaGloveModel_type_id = 0x28cbe205;
-		constexpr const static std::string_view PortalZipGloveModel_type_name = "PortalZipGloveModel";
-		constexpr const static rivet::rivet_type_id PortalZipGloveModel_type_id = 0x723c8268;
-		constexpr const static std::string_view UnlockableSkins_type_name = "UnlockableSkins";
-		constexpr const static rivet::rivet_type_id UnlockableSkins_type_id = 0xa3022bc6;
-		constexpr const static std::string_view CustomHeads_type_name = "CustomHeads";
-		constexpr const static rivet::rivet_type_id CustomHeads_type_id = 0xf25e25ab; 
+		constexpr static std::string_view BaseSkin_type_name = "BaseSkin";
+		constexpr static rivet::rivet_type_id BaseSkin_type_id = 0x7f471de0;
+		constexpr static std::string_view UpgradedSkin_type_name = "UpgradedSkin";
+		constexpr static rivet::rivet_type_id UpgradedSkin_type_id = 0xc3c23129;
+		constexpr static std::string_view RebreatherModel_type_name = "RebreatherModel";
+		constexpr static rivet::rivet_type_id RebreatherModel_type_id = 0x2ab730c6;
+		constexpr static std::string_view HoverBootsModel_type_name = "HoverBootsModel";
+		constexpr static rivet::rivet_type_id HoverBootsModel_type_id = 0xdad138ca;
+		constexpr static std::string_view GrindBootsModel_type_name = "GrindBootsModel";
+		constexpr static rivet::rivet_type_id GrindBootsModel_type_id = 0xfbb76e09;
+		constexpr static std::string_view MagBootsModel_type_name = "MagBootsModel";
+		constexpr static rivet::rivet_type_id MagBootsModel_type_id = 0xe673b783;
+		constexpr static std::string_view MapOMaticModel_type_name = "MapOMaticModel";
+		constexpr static rivet::rivet_type_id MapOMaticModel_type_id = 0x42254088;
+		constexpr static std::string_view SwingshotModel_type_name = "SwingshotModel";
+		constexpr static rivet::rivet_type_id SwingshotModel_type_id = 0xa1130d8a;
+		constexpr static std::string_view VersaGloveModel_type_name = "VersaGloveModel";
+		constexpr static rivet::rivet_type_id VersaGloveModel_type_id = 0x28cbe205;
+		constexpr static std::string_view PortalZipGloveModel_type_name = "PortalZipGloveModel";
+		constexpr static rivet::rivet_type_id PortalZipGloveModel_type_id = 0x723c8268;
+		constexpr static std::string_view UnlockableSkins_type_name = "UnlockableSkins";
+		constexpr static rivet::rivet_type_id UnlockableSkins_type_id = 0xa3022bc6;
+		constexpr static std::string_view CustomHeads_type_name = "CustomHeads";
+		constexpr static rivet::rivet_type_id CustomHeads_type_id = 0xf25e25ab; 
 
 		explicit HeroSkinConfig() = default;
 		explicit HeroSkinConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -21,11 +21,11 @@ namespace rivet::ddl::generated {
 	struct UITutorialStepBase; 
 
 	struct RIVET_DDL_SHARED UITutorialStep : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "UITutorialStep";
-		constexpr const static rivet::rivet_type_id type_id = 0xb6b96d2b;
+		constexpr static std::string_view type_name = "UITutorialStep";
+		constexpr static rivet::rivet_type_id type_id = 0xb6b96d2b;
 
-		constexpr const static std::string_view Tutorial_type_name = "Tutorial";
-		constexpr const static rivet::rivet_type_id Tutorial_type_id = 0x3c6a4299; 
+		constexpr static std::string_view Tutorial_type_name = "Tutorial";
+		constexpr static rivet::rivet_type_id Tutorial_type_id = 0x3c6a4299; 
 
 		explicit UITutorialStep() = default;
 		explicit UITutorialStep([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

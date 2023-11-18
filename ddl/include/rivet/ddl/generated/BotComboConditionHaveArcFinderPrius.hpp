@@ -21,25 +21,25 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED BotComboConditionHaveArcFinderPrius : BotComboConditionBasePrius {
-		constexpr const static std::string_view type_name = "BotComboConditionHaveArcFinderPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x92b37285;
+		constexpr static std::string_view type_name = "BotComboConditionHaveArcFinderPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x92b37285;
 
-		constexpr const static std::string_view EmitLocatorName_type_name = "EmitLocatorName";
-		constexpr const static rivet::rivet_type_id EmitLocatorName_type_id = 0x85f80e0;
-		constexpr const static std::string_view DesiredFlightTime_type_name = "DesiredFlightTime";
-		constexpr const static rivet::rivet_type_id DesiredFlightTime_type_id = 0xd292ec09;
-		constexpr const static std::string_view MinSpeed_type_name = "MinSpeed";
-		constexpr const static rivet::rivet_type_id MinSpeed_type_id = 0xf0d89680;
-		constexpr const static std::string_view MaxSpeed_type_name = "MaxSpeed";
-		constexpr const static rivet::rivet_type_id MaxSpeed_type_id = 0x16b83961;
-		constexpr const static std::string_view ArcHeight0_type_name = "ArcHeight0";
-		constexpr const static rivet::rivet_type_id ArcHeight0_type_id = 0xb0e87cbd;
-		constexpr const static std::string_view ArcHeight1_type_name = "ArcHeight1";
-		constexpr const static rivet::rivet_type_id ArcHeight1_type_id = 0xc7ef4c2b;
-		constexpr const static std::string_view ArcHeight2_type_name = "ArcHeight2";
-		constexpr const static rivet::rivet_type_id ArcHeight2_type_id = 0x5ee61d91;
-		constexpr const static std::string_view UseLastNavPosition_type_name = "UseLastNavPosition";
-		constexpr const static rivet::rivet_type_id UseLastNavPosition_type_id = 0xc387f89c; 
+		constexpr static std::string_view EmitLocatorName_type_name = "EmitLocatorName";
+		constexpr static rivet::rivet_type_id EmitLocatorName_type_id = 0x85f80e0;
+		constexpr static std::string_view DesiredFlightTime_type_name = "DesiredFlightTime";
+		constexpr static rivet::rivet_type_id DesiredFlightTime_type_id = 0xd292ec09;
+		constexpr static std::string_view MinSpeed_type_name = "MinSpeed";
+		constexpr static rivet::rivet_type_id MinSpeed_type_id = 0xf0d89680;
+		constexpr static std::string_view MaxSpeed_type_name = "MaxSpeed";
+		constexpr static rivet::rivet_type_id MaxSpeed_type_id = 0x16b83961;
+		constexpr static std::string_view ArcHeight0_type_name = "ArcHeight0";
+		constexpr static rivet::rivet_type_id ArcHeight0_type_id = 0xb0e87cbd;
+		constexpr static std::string_view ArcHeight1_type_name = "ArcHeight1";
+		constexpr static rivet::rivet_type_id ArcHeight1_type_id = 0xc7ef4c2b;
+		constexpr static std::string_view ArcHeight2_type_name = "ArcHeight2";
+		constexpr static rivet::rivet_type_id ArcHeight2_type_id = 0x5ee61d91;
+		constexpr static std::string_view UseLastNavPosition_type_name = "UseLastNavPosition";
+		constexpr static rivet::rivet_type_id UseLastNavPosition_type_id = 0xc387f89c; 
 
 		explicit BotComboConditionHaveArcFinderPrius() = default;
 		explicit BotComboConditionHaveArcFinderPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

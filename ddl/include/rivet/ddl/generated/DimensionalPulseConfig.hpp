@@ -21,23 +21,23 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DimensionalPulseConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "DimensionalPulseConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x412aac32;
+		constexpr static std::string_view type_name = "DimensionalPulseConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x412aac32;
 
-		constexpr const static std::string_view PulseRadius_type_name = "PulseRadius";
-		constexpr const static rivet::rivet_type_id PulseRadius_type_id = 0xc40db156;
-		constexpr const static std::string_view PulseDuration_type_name = "PulseDuration";
-		constexpr const static rivet::rivet_type_id PulseDuration_type_id = 0x7d5fed07;
-		constexpr const static std::string_view EffectChance_type_name = "EffectChance";
-		constexpr const static rivet::rivet_type_id EffectChance_type_id = 0xaed0c581;
-		constexpr const static std::string_view PreCompositeShader_type_name = "PreCompositeShader";
-		constexpr const static rivet::rivet_type_id PreCompositeShader_type_id = 0x76e460d;
-		constexpr const static std::string_view PostCompositeShader_type_name = "PostCompositeShader";
-		constexpr const static rivet::rivet_type_id PostCompositeShader_type_id = 0xe2b72d5f;
-		constexpr const static std::string_view PostHitEffectLifetime_type_name = "PostHitEffectLifetime";
-		constexpr const static rivet::rivet_type_id PostHitEffectLifetime_type_id = 0xd2ab2353;
-		constexpr const static std::string_view DefaultTargetConduit_type_name = "DefaultTargetConduit";
-		constexpr const static rivet::rivet_type_id DefaultTargetConduit_type_id = 0x2e56f1fd; 
+		constexpr static std::string_view PulseRadius_type_name = "PulseRadius";
+		constexpr static rivet::rivet_type_id PulseRadius_type_id = 0xc40db156;
+		constexpr static std::string_view PulseDuration_type_name = "PulseDuration";
+		constexpr static rivet::rivet_type_id PulseDuration_type_id = 0x7d5fed07;
+		constexpr static std::string_view EffectChance_type_name = "EffectChance";
+		constexpr static rivet::rivet_type_id EffectChance_type_id = 0xaed0c581;
+		constexpr static std::string_view PreCompositeShader_type_name = "PreCompositeShader";
+		constexpr static rivet::rivet_type_id PreCompositeShader_type_id = 0x76e460d;
+		constexpr static std::string_view PostCompositeShader_type_name = "PostCompositeShader";
+		constexpr static rivet::rivet_type_id PostCompositeShader_type_id = 0xe2b72d5f;
+		constexpr static std::string_view PostHitEffectLifetime_type_name = "PostHitEffectLifetime";
+		constexpr static rivet::rivet_type_id PostHitEffectLifetime_type_id = 0xd2ab2353;
+		constexpr static std::string_view DefaultTargetConduit_type_name = "DefaultTargetConduit";
+		constexpr static rivet::rivet_type_id DefaultTargetConduit_type_id = 0x2e56f1fd; 
 
 		explicit DimensionalPulseConfig() = default;
 		explicit DimensionalPulseConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

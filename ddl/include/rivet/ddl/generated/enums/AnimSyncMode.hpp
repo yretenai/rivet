@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view AnimSyncMode_type_name = "AnimSyncMode";
-	constexpr const static rivet::rivet_type_id AnimSyncMode_type_id = 0xd1591f1c;
+	constexpr static std::string_view AnimSyncMode_type_name = "AnimSyncMode";
+	constexpr static rivet::rivet_type_id AnimSyncMode_type_id = 0xd1591f1c;
 
-	constexpr const static std::array<std::string_view, 3> AnimSyncMode_values = {
+	constexpr static std::array<std::string_view, 3> AnimSyncMode_values = {
 		"FromBeginning",
 		"NormT",
 		"OneMinusNormT", 

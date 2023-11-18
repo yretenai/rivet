@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct BotAnimFilterSelectorData; 
 
 	struct RIVET_DDL_SHARED BotConfigAnimFilterSelector : ConfigBase {
-		constexpr const static std::string_view type_name = "BotConfigAnimFilterSelector";
-		constexpr const static rivet::rivet_type_id type_id = 0xa36ed144;
+		constexpr static std::string_view type_name = "BotConfigAnimFilterSelector";
+		constexpr static rivet::rivet_type_id type_id = 0xa36ed144;
 
-		constexpr const static std::string_view Data_type_name = "Data";
-		constexpr const static rivet::rivet_type_id Data_type_id = 0x9d6333d3; 
+		constexpr static std::string_view Data_type_name = "Data";
+		constexpr static rivet::rivet_type_id Data_type_id = 0x9d6333d3; 
 
 		explicit BotConfigAnimFilterSelector() = default;
 		explicit BotConfigAnimFilterSelector([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

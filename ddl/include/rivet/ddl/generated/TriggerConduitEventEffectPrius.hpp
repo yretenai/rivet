@@ -17,26 +17,28 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/ScriptedShotEffectBasePrius.hpp>
-#include <rivet/ddl/generated/enums/x4891b54.hpp> 
+#include <rivet/ddl/generated/enums/x4891b54.hpp>
+#include <rivet/ddl/generated/ScriptedShotEffectBasePrius.hpp> 
 
 namespace rivet::ddl::generated {
-	struct RIVET_DDL_SHARED TriggerConduitEventEffectPrius : ScriptedShotEffectBasePrius {
-		constexpr const static std::string_view type_name = "TriggerConduitEventEffectPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x5e0d4b83;
+	struct ScriptedShotGenericEvent; 
 
-		constexpr const static std::string_view ActorType_type_name = "ActorType";
-		constexpr const static rivet::rivet_type_id ActorType_type_id = 0x1eb7640e;
-		constexpr const static std::string_view Event_type_name = "Event";
-		constexpr const static rivet::rivet_type_id Event_type_id = 0x22fdc666;
-		constexpr const static std::string_view Broadcast_type_name = "Broadcast";
-		constexpr const static rivet::rivet_type_id Broadcast_type_id = 0x190ce3f9; 
+	struct RIVET_DDL_SHARED TriggerConduitEventEffectPrius : ScriptedShotEffectBasePrius {
+		constexpr static std::string_view type_name = "TriggerConduitEventEffectPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x5e0d4b83;
+
+		constexpr static std::string_view ActorType_type_name = "ActorType";
+		constexpr static rivet::rivet_type_id ActorType_type_id = 0x1eb7640e;
+		constexpr static std::string_view Event_type_name = "Event";
+		constexpr static rivet::rivet_type_id Event_type_id = 0x22fdc666;
+		constexpr static std::string_view Broadcast_type_name = "Broadcast";
+		constexpr static rivet::rivet_type_id Broadcast_type_id = 0x190ce3f9; 
 
 		explicit TriggerConduitEventEffectPrius() = default;
 		explicit TriggerConduitEventEffectPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);
 
 		rivet::ddl::generated::x4891b54 ActorType {};
-		std::optional<std::vector<rivet::structures::rivet_serialized_value>> Event {};
+		std::shared_ptr<rivet::ddl::generated::ScriptedShotGenericEvent> Event {};
 		bool Broadcast {}; 
 
 		[[nodiscard]] auto

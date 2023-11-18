@@ -19,13 +19,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED HeroSuperMeterDecayData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "HeroSuperMeterDecayData";
-		constexpr const static rivet::rivet_type_id type_id = 0x2cd00fd8;
+		constexpr static std::string_view type_name = "HeroSuperMeterDecayData";
+		constexpr static rivet::rivet_type_id type_id = 0x2cd00fd8;
 
-		constexpr const static std::string_view Rate_type_name = "Rate";
-		constexpr const static rivet::rivet_type_id Rate_type_id = 0xef7cff89;
-		constexpr const static std::string_view Delay_type_name = "Delay";
-		constexpr const static rivet::rivet_type_id Delay_type_id = 0xabc94c5a; 
+		constexpr static std::string_view Rate_type_name = "Rate";
+		constexpr static rivet::rivet_type_id Rate_type_id = 0xef7cff89;
+		constexpr static std::string_view Delay_type_name = "Delay";
+		constexpr static rivet::rivet_type_id Delay_type_id = 0xabc94c5a; 
 
 		explicit HeroSuperMeterDecayData() = default;
 		explicit HeroSuperMeterDecayData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

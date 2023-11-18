@@ -22,27 +22,27 @@
 namespace rivet::ddl::generated {
 	struct SpreadHeuristics;
 	struct DirectionHeuristics;
-	struct DistanceHeuristics;
 	struct AggroHeuristics;
+	struct PlayerHeuristics;
 	struct LosHeuristics;
-	struct PlayerHeuristics; 
+	struct DistanceHeuristics; 
 
 	struct RIVET_DDL_SHARED HeuristicTargetingPrius : TargetingBasePrius {
-		constexpr const static std::string_view type_name = "HeuristicTargetingPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x35f2fdb4;
+		constexpr static std::string_view type_name = "HeuristicTargetingPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x35f2fdb4;
 
-		constexpr const static std::string_view Distance_type_name = "Distance";
-		constexpr const static rivet::rivet_type_id Distance_type_id = 0xe69327f1;
-		constexpr const static std::string_view Los_type_name = "Los";
-		constexpr const static rivet::rivet_type_id Los_type_id = 0xbfb09571;
-		constexpr const static std::string_view Player_type_name = "Player";
-		constexpr const static rivet::rivet_type_id Player_type_id = 0xa6613402;
-		constexpr const static std::string_view Aggro_type_name = "Aggro";
-		constexpr const static rivet::rivet_type_id Aggro_type_id = 0x504e1083;
-		constexpr const static std::string_view Direction_type_name = "Direction";
-		constexpr const static rivet::rivet_type_id Direction_type_id = 0xbcb74ebf;
-		constexpr const static std::string_view Spread_type_name = "Spread";
-		constexpr const static rivet::rivet_type_id Spread_type_id = 0x42cdee1f; 
+		constexpr static std::string_view Distance_type_name = "Distance";
+		constexpr static rivet::rivet_type_id Distance_type_id = 0xe69327f1;
+		constexpr static std::string_view Los_type_name = "Los";
+		constexpr static rivet::rivet_type_id Los_type_id = 0xbfb09571;
+		constexpr static std::string_view Player_type_name = "Player";
+		constexpr static rivet::rivet_type_id Player_type_id = 0xa6613402;
+		constexpr static std::string_view Aggro_type_name = "Aggro";
+		constexpr static rivet::rivet_type_id Aggro_type_id = 0x504e1083;
+		constexpr static std::string_view Direction_type_name = "Direction";
+		constexpr static rivet::rivet_type_id Direction_type_id = 0xbcb74ebf;
+		constexpr static std::string_view Spread_type_name = "Spread";
+		constexpr static rivet::rivet_type_id Spread_type_id = 0x42cdee1f; 
 
 		explicit HeuristicTargetingPrius() = default;
 		explicit HeuristicTargetingPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

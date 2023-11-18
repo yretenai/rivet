@@ -21,23 +21,23 @@ namespace rivet::ddl::generated {
 	struct SwingshotJumpData; 
 
 	struct RIVET_DDL_SHARED HeroSwingshotConfig : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "HeroSwingshotConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x832b070b;
+		constexpr static std::string_view type_name = "HeroSwingshotConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x832b070b;
 
-		constexpr const static std::string_view MinRange_type_name = "MinRange";
-		constexpr const static rivet::rivet_type_id MinRange_type_id = 0x6c79323f;
-		constexpr const static std::string_view MaxRange_type_name = "MaxRange";
-		constexpr const static rivet::rivet_type_id MaxRange_type_id = 0x8a199dde;
-		constexpr const static std::string_view HorizFOV_type_name = "HorizFOV";
-		constexpr const static rivet::rivet_type_id HorizFOV_type_id = 0xb6674a6c;
-		constexpr const static std::string_view VertFOV_type_name = "VertFOV";
-		constexpr const static rivet::rivet_type_id VertFOV_type_id = 0xadb615a3;
-		constexpr const static std::string_view MaxDistBelow_type_name = "MaxDistBelow";
-		constexpr const static rivet::rivet_type_id MaxDistBelow_type_id = 0x3889decc;
-		constexpr const static std::string_view GracePeriod_type_name = "GracePeriod";
-		constexpr const static rivet::rivet_type_id GracePeriod_type_id = 0xd22cdd8f;
-		constexpr const static std::string_view JumpData_type_name = "JumpData";
-		constexpr const static rivet::rivet_type_id JumpData_type_id = 0x1655eec; 
+		constexpr static std::string_view MinRange_type_name = "MinRange";
+		constexpr static rivet::rivet_type_id MinRange_type_id = 0x6c79323f;
+		constexpr static std::string_view MaxRange_type_name = "MaxRange";
+		constexpr static rivet::rivet_type_id MaxRange_type_id = 0x8a199dde;
+		constexpr static std::string_view HorizFOV_type_name = "HorizFOV";
+		constexpr static rivet::rivet_type_id HorizFOV_type_id = 0xb6674a6c;
+		constexpr static std::string_view VertFOV_type_name = "VertFOV";
+		constexpr static rivet::rivet_type_id VertFOV_type_id = 0xadb615a3;
+		constexpr static std::string_view MaxDistBelow_type_name = "MaxDistBelow";
+		constexpr static rivet::rivet_type_id MaxDistBelow_type_id = 0x3889decc;
+		constexpr static std::string_view GracePeriod_type_name = "GracePeriod";
+		constexpr static rivet::rivet_type_id GracePeriod_type_id = 0xd22cdd8f;
+		constexpr static std::string_view JumpData_type_name = "JumpData";
+		constexpr static rivet::rivet_type_id JumpData_type_id = 0x1655eec; 
 
 		explicit HeroSwingshotConfig() = default;
 		explicit HeroSwingshotConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

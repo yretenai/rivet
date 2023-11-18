@@ -21,11 +21,11 @@ namespace rivet::ddl::generated {
 	struct CustomDamageBase; 
 
 	struct RIVET_DDL_SHARED CustomDamageContainer : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "CustomDamageContainer";
-		constexpr const static rivet::rivet_type_id type_id = 0xfe6816b1;
+		constexpr static std::string_view type_name = "CustomDamageContainer";
+		constexpr static rivet::rivet_type_id type_id = 0xfe6816b1;
 
-		constexpr const static std::string_view CustomDamage_type_name = "CustomDamage";
-		constexpr const static rivet::rivet_type_id CustomDamage_type_id = 0x9cdf7d2f; 
+		constexpr static std::string_view CustomDamage_type_name = "CustomDamage";
+		constexpr static rivet::rivet_type_id CustomDamage_type_id = 0x9cdf7d2f; 
 
 		explicit CustomDamageContainer() = default;
 		explicit CustomDamageContainer([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

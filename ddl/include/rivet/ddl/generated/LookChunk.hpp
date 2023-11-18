@@ -19,35 +19,35 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED LookChunk : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "LookChunk";
-		constexpr const static rivet::rivet_type_id type_id = 0x5a4021a7;
+		constexpr static std::string_view type_name = "LookChunk";
+		constexpr static rivet::rivet_type_id type_id = 0x5a4021a7;
 
-		constexpr const static std::string_view UsesFXConduit_type_name = "UsesFXConduit";
-		constexpr const static rivet::rivet_type_id UsesFXConduit_type_id = 0x7cde1af8;
-		constexpr const static std::string_view UsesAudioConduit_type_name = "UsesAudioConduit";
-		constexpr const static rivet::rivet_type_id UsesAudioConduit_type_id = 0xba330fee;
-		constexpr const static std::string_view DeathOnly_type_name = "DeathOnly";
-		constexpr const static rivet::rivet_type_id DeathOnly_type_id = 0x88ef82ad;
-		constexpr const static std::string_view TriggerSpawnEvent_type_name = "TriggerSpawnEvent";
-		constexpr const static rivet::rivet_type_id TriggerSpawnEvent_type_id = 0xee6cfc7e;
-		constexpr const static std::string_view ForceFadeAfterSettled_type_name = "ForceFadeAfterSettled";
-		constexpr const static rivet::rivet_type_id ForceFadeAfterSettled_type_id = 0x3d462c39;
-		constexpr const static std::string_view LookToDisable_type_name = "LookToDisable";
-		constexpr const static rivet::rivet_type_id LookToDisable_type_id = 0x2f48a06c;
-		constexpr const static std::string_view LooksToChunk_type_name = "LooksToChunk";
-		constexpr const static rivet::rivet_type_id LooksToChunk_type_id = 0x36f7b273;
-		constexpr const static std::string_view EventLocator_type_name = "EventLocator";
-		constexpr const static rivet::rivet_type_id EventLocator_type_id = 0xbddfefa2;
-		constexpr const static std::string_view ScaleTestJointName_type_name = "ScaleTestJointName";
-		constexpr const static rivet::rivet_type_id ScaleTestJointName_type_id = 0x5a77c3;
-		constexpr const static std::string_view SetOverrideRenderConstant_type_name = "SetOverrideRenderConstant";
-		constexpr const static rivet::rivet_type_id SetOverrideRenderConstant_type_id = 0x7abeaa63;
-		constexpr const static std::string_view OverrideConstantName_type_name = "OverrideConstantName";
-		constexpr const static rivet::rivet_type_id OverrideConstantName_type_id = 0xa1ab8f2c;
-		constexpr const static std::string_view OverrideConstantTarget_type_name = "OverrideConstantTarget";
-		constexpr const static rivet::rivet_type_id OverrideConstantTarget_type_id = 0xa267cc29;
-		constexpr const static std::string_view OverrideConstantTimeToTarget_type_name = "OverrideConstantTimeToTarget";
-		constexpr const static rivet::rivet_type_id OverrideConstantTimeToTarget_type_id = 0xee641488; 
+		constexpr static std::string_view UsesFXConduit_type_name = "UsesFXConduit";
+		constexpr static rivet::rivet_type_id UsesFXConduit_type_id = 0x7cde1af8;
+		constexpr static std::string_view UsesAudioConduit_type_name = "UsesAudioConduit";
+		constexpr static rivet::rivet_type_id UsesAudioConduit_type_id = 0xba330fee;
+		constexpr static std::string_view DeathOnly_type_name = "DeathOnly";
+		constexpr static rivet::rivet_type_id DeathOnly_type_id = 0x88ef82ad;
+		constexpr static std::string_view TriggerSpawnEvent_type_name = "TriggerSpawnEvent";
+		constexpr static rivet::rivet_type_id TriggerSpawnEvent_type_id = 0xee6cfc7e;
+		constexpr static std::string_view ForceFadeAfterSettled_type_name = "ForceFadeAfterSettled";
+		constexpr static rivet::rivet_type_id ForceFadeAfterSettled_type_id = 0x3d462c39;
+		constexpr static std::string_view LookToDisable_type_name = "LookToDisable";
+		constexpr static rivet::rivet_type_id LookToDisable_type_id = 0x2f48a06c;
+		constexpr static std::string_view LooksToChunk_type_name = "LooksToChunk";
+		constexpr static rivet::rivet_type_id LooksToChunk_type_id = 0x36f7b273;
+		constexpr static std::string_view EventLocator_type_name = "EventLocator";
+		constexpr static rivet::rivet_type_id EventLocator_type_id = 0xbddfefa2;
+		constexpr static std::string_view ScaleTestJointName_type_name = "ScaleTestJointName";
+		constexpr static rivet::rivet_type_id ScaleTestJointName_type_id = 0x5a77c3;
+		constexpr static std::string_view SetOverrideRenderConstant_type_name = "SetOverrideRenderConstant";
+		constexpr static rivet::rivet_type_id SetOverrideRenderConstant_type_id = 0x7abeaa63;
+		constexpr static std::string_view OverrideConstantName_type_name = "OverrideConstantName";
+		constexpr static rivet::rivet_type_id OverrideConstantName_type_id = 0xa1ab8f2c;
+		constexpr static std::string_view OverrideConstantTarget_type_name = "OverrideConstantTarget";
+		constexpr static rivet::rivet_type_id OverrideConstantTarget_type_id = 0xa267cc29;
+		constexpr static std::string_view OverrideConstantTimeToTarget_type_name = "OverrideConstantTimeToTarget";
+		constexpr static rivet::rivet_type_id OverrideConstantTimeToTarget_type_id = 0xee641488; 
 
 		explicit LookChunk() = default;
 		explicit LookChunk([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

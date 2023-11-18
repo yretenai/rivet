@@ -17,54 +17,54 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/enums/x11adfe43.hpp>
-#include <rivet/ddl/generated/enums/x4a11042.hpp> 
+#include <rivet/ddl/generated/enums/x4a11042.hpp>
+#include <rivet/ddl/generated/enums/x11adfe43.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED PerfSpecData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "PerfSpecData";
-		constexpr const static rivet::rivet_type_id type_id = 0xfdb8dcd1;
+		constexpr static std::string_view type_name = "PerfSpecData";
+		constexpr static rivet::rivet_type_id type_id = 0xfdb8dcd1;
 
-		constexpr const static std::string_view Spec_type_name = "Spec";
-		constexpr const static rivet::rivet_type_id Spec_type_id = 0xf09ed78e;
-		constexpr const static std::string_view LodScaleMultiplier_type_name = "LodScaleMultiplier";
-		constexpr const static rivet::rivet_type_id LodScaleMultiplier_type_id = 0xdcd98a8d;
-		constexpr const static std::string_view ModelLodClamp_type_name = "ModelLodClamp";
-		constexpr const static rivet::rivet_type_id ModelLodClamp_type_id = 0x79c9bc71;
-		constexpr const static std::string_view CsmLodCountBias_type_name = "CsmLodCountBias";
-		constexpr const static rivet::rivet_type_id CsmLodCountBias_type_id = 0xdb3aacce;
-		constexpr const static std::string_view ShadowDrawDistMultiplier_type_name = "ShadowDrawDistMultiplier";
-		constexpr const static rivet::rivet_type_id ShadowDrawDistMultiplier_type_id = 0x219f702c;
-		constexpr const static std::string_view VolumetricFarDistanceMultiplier_type_name = "VolumetricFarDistanceMultiplier";
-		constexpr const static rivet::rivet_type_id VolumetricFarDistanceMultiplier_type_id = 0x2d6a35f3;
-		constexpr const static std::string_view VolumetricResolutionMultiplier_type_name = "VolumetricResolutionMultiplier";
-		constexpr const static rivet::rivet_type_id VolumetricResolutionMultiplier_type_id = 0x160fa505;
-		constexpr const static std::string_view AORadiusInMetersMultiplier_type_name = "AORadiusInMetersMultiplier";
-		constexpr const static rivet::rivet_type_id AORadiusInMetersMultiplier_type_id = 0x61d78b16;
-		constexpr const static std::string_view AODistanceInMetersMultiplier_type_name = "AODistanceInMetersMultiplier";
-		constexpr const static rivet::rivet_type_id AODistanceInMetersMultiplier_type_id = 0xf77a1483;
-		constexpr const static std::string_view WeatherVFXSplashRangeMultiplier_type_name = "WeatherVFXSplashRangeMultiplier";
-		constexpr const static rivet::rivet_type_id WeatherVFXSplashRangeMultiplier_type_id = 0x93170dd9;
-		constexpr const static std::string_view WeatherParticlesMaxDrawDistanceMultiplier_type_name = "WeatherParticlesMaxDrawDistanceMultiplier";
-		constexpr const static rivet::rivet_type_id WeatherParticlesMaxDrawDistanceMultiplier_type_id = 0xcfbc9044;
-		constexpr const static std::string_view WeatherParticlesDensityMultiplier_type_name = "WeatherParticlesDensityMultiplier";
-		constexpr const static rivet::rivet_type_id WeatherParticlesDensityMultiplier_type_id = 0xb183b2f6;
-		constexpr const static std::string_view EnabledVolumetricClouds_type_name = "EnabledVolumetricClouds";
-		constexpr const static rivet::rivet_type_id EnabledVolumetricClouds_type_id = 0xa88df77f;
-		constexpr const static std::string_view CloudDownSample_type_name = "CloudDownSample";
-		constexpr const static rivet::rivet_type_id CloudDownSample_type_id = 0x7ac66a09;
-		constexpr const static std::string_view EnabledCloudEdgeBlur_type_name = "EnabledCloudEdgeBlur";
-		constexpr const static rivet::rivet_type_id EnabledCloudEdgeBlur_type_id = 0x3f3301fa;
-		constexpr const static std::string_view EnabledCloudLODDepth_type_name = "EnabledCloudLODDepth";
-		constexpr const static rivet::rivet_type_id EnabledCloudLODDepth_type_id = 0x5cff0333;
-		constexpr const static std::string_view EnabledCloudShadow_type_name = "EnabledCloudShadow";
-		constexpr const static rivet::rivet_type_id EnabledCloudShadow_type_id = 0x4a6caaca;
-		constexpr const static std::string_view EnabledCloudGodray_type_name = "EnabledCloudGodray";
-		constexpr const static rivet::rivet_type_id EnabledCloudGodray_type_id = 0x3645192e;
-		constexpr const static std::string_view EstTimeToRenderEnvProbeFaceCpu_type_name = "EstTimeToRenderEnvProbeFaceCpu";
-		constexpr const static rivet::rivet_type_id EstTimeToRenderEnvProbeFaceCpu_type_id = 0x9577e201;
-		constexpr const static std::string_view EstTimeToRenderEnvProbeFaceGpu_type_name = "EstTimeToRenderEnvProbeFaceGpu";
-		constexpr const static rivet::rivet_type_id EstTimeToRenderEnvProbeFaceGpu_type_id = 0x927e4add; 
+		constexpr static std::string_view Spec_type_name = "Spec";
+		constexpr static rivet::rivet_type_id Spec_type_id = 0xf09ed78e;
+		constexpr static std::string_view LodScaleMultiplier_type_name = "LodScaleMultiplier";
+		constexpr static rivet::rivet_type_id LodScaleMultiplier_type_id = 0xdcd98a8d;
+		constexpr static std::string_view ModelLodClamp_type_name = "ModelLodClamp";
+		constexpr static rivet::rivet_type_id ModelLodClamp_type_id = 0x79c9bc71;
+		constexpr static std::string_view CsmLodCountBias_type_name = "CsmLodCountBias";
+		constexpr static rivet::rivet_type_id CsmLodCountBias_type_id = 0xdb3aacce;
+		constexpr static std::string_view ShadowDrawDistMultiplier_type_name = "ShadowDrawDistMultiplier";
+		constexpr static rivet::rivet_type_id ShadowDrawDistMultiplier_type_id = 0x219f702c;
+		constexpr static std::string_view VolumetricFarDistanceMultiplier_type_name = "VolumetricFarDistanceMultiplier";
+		constexpr static rivet::rivet_type_id VolumetricFarDistanceMultiplier_type_id = 0x2d6a35f3;
+		constexpr static std::string_view VolumetricResolutionMultiplier_type_name = "VolumetricResolutionMultiplier";
+		constexpr static rivet::rivet_type_id VolumetricResolutionMultiplier_type_id = 0x160fa505;
+		constexpr static std::string_view AORadiusInMetersMultiplier_type_name = "AORadiusInMetersMultiplier";
+		constexpr static rivet::rivet_type_id AORadiusInMetersMultiplier_type_id = 0x61d78b16;
+		constexpr static std::string_view AODistanceInMetersMultiplier_type_name = "AODistanceInMetersMultiplier";
+		constexpr static rivet::rivet_type_id AODistanceInMetersMultiplier_type_id = 0xf77a1483;
+		constexpr static std::string_view WeatherVFXSplashRangeMultiplier_type_name = "WeatherVFXSplashRangeMultiplier";
+		constexpr static rivet::rivet_type_id WeatherVFXSplashRangeMultiplier_type_id = 0x93170dd9;
+		constexpr static std::string_view WeatherParticlesMaxDrawDistanceMultiplier_type_name = "WeatherParticlesMaxDrawDistanceMultiplier";
+		constexpr static rivet::rivet_type_id WeatherParticlesMaxDrawDistanceMultiplier_type_id = 0xcfbc9044;
+		constexpr static std::string_view WeatherParticlesDensityMultiplier_type_name = "WeatherParticlesDensityMultiplier";
+		constexpr static rivet::rivet_type_id WeatherParticlesDensityMultiplier_type_id = 0xb183b2f6;
+		constexpr static std::string_view EnabledVolumetricClouds_type_name = "EnabledVolumetricClouds";
+		constexpr static rivet::rivet_type_id EnabledVolumetricClouds_type_id = 0xa88df77f;
+		constexpr static std::string_view CloudDownSample_type_name = "CloudDownSample";
+		constexpr static rivet::rivet_type_id CloudDownSample_type_id = 0x7ac66a09;
+		constexpr static std::string_view EnabledCloudEdgeBlur_type_name = "EnabledCloudEdgeBlur";
+		constexpr static rivet::rivet_type_id EnabledCloudEdgeBlur_type_id = 0x3f3301fa;
+		constexpr static std::string_view EnabledCloudLODDepth_type_name = "EnabledCloudLODDepth";
+		constexpr static rivet::rivet_type_id EnabledCloudLODDepth_type_id = 0x5cff0333;
+		constexpr static std::string_view EnabledCloudShadow_type_name = "EnabledCloudShadow";
+		constexpr static rivet::rivet_type_id EnabledCloudShadow_type_id = 0x4a6caaca;
+		constexpr static std::string_view EnabledCloudGodray_type_name = "EnabledCloudGodray";
+		constexpr static rivet::rivet_type_id EnabledCloudGodray_type_id = 0x3645192e;
+		constexpr static std::string_view EstTimeToRenderEnvProbeFaceCpu_type_name = "EstTimeToRenderEnvProbeFaceCpu";
+		constexpr static rivet::rivet_type_id EstTimeToRenderEnvProbeFaceCpu_type_id = 0x9577e201;
+		constexpr static std::string_view EstTimeToRenderEnvProbeFaceGpu_type_name = "EstTimeToRenderEnvProbeFaceGpu";
+		constexpr static rivet::rivet_type_id EstTimeToRenderEnvProbeFaceGpu_type_id = 0x927e4add; 
 
 		explicit PerfSpecData() = default;
 		explicit PerfSpecData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

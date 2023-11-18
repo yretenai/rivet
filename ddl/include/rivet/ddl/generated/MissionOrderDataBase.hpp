@@ -19,13 +19,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED MissionOrderDataBase : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "MissionOrderDataBase";
-		constexpr const static rivet::rivet_type_id type_id = 0xbf0b1ad;
+		constexpr static std::string_view type_name = "MissionOrderDataBase";
+		constexpr static rivet::rivet_type_id type_id = 0xbf0b1ad;
 
-		constexpr const static std::string_view MissionName_type_name = "MissionName";
-		constexpr const static rivet::rivet_type_id MissionName_type_id = 0xa5c30e60;
-		constexpr const static std::string_view LockedByMission_type_name = "LockedByMission";
-		constexpr const static rivet::rivet_type_id LockedByMission_type_id = 0x9b0151b0; 
+		constexpr static std::string_view MissionName_type_name = "MissionName";
+		constexpr static rivet::rivet_type_id MissionName_type_id = 0xa5c30e60;
+		constexpr static std::string_view LockedByMission_type_name = "LockedByMission";
+		constexpr static rivet::rivet_type_id LockedByMission_type_id = 0x9b0151b0; 
 
 		explicit MissionOrderDataBase() = default;
 		explicit MissionOrderDataBase([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

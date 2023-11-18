@@ -3,8 +3,8 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/NefariousFinaleHeadPrius.hpp>
-#include <rivet/ddl/generated/NefariousFinaleLaserArmPrius.hpp> 
+#include <rivet/ddl/generated/NefariousFinaleLaserArmPrius.hpp>
+#include <rivet/ddl/generated/NefariousFinaleHeadPrius.hpp> 
 
 #include <rivet/ddl/generated/NefariousFinaleWeaponPrius.hpp>
 

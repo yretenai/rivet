@@ -20,21 +20,21 @@
 #include <rivet/ddl/generated/ConfigBase.hpp> 
 
 namespace rivet::ddl::generated {
-	struct FarmOpenRegionData;
-	struct FarmInstanceRegionData; 
+	struct FarmInstanceRegionData;
+	struct FarmOpenRegionData; 
 
 	struct RIVET_DDL_SHARED FarmLightingConfig2 : ConfigBase {
-		constexpr const static std::string_view type_name = "FarmLightingConfig2";
-		constexpr const static rivet::rivet_type_id type_id = 0xff813e44;
+		constexpr static std::string_view type_name = "FarmLightingConfig2";
+		constexpr static rivet::rivet_type_id type_id = 0xff813e44;
 
-		constexpr const static std::string_view OpenRegions_type_name = "OpenRegions";
-		constexpr const static rivet::rivet_type_id OpenRegions_type_id = 0xf01dee22;
-		constexpr const static std::string_view InstanceRegions_type_name = "InstanceRegions";
-		constexpr const static rivet::rivet_type_id InstanceRegions_type_id = 0xd467001a;
-		constexpr const static std::string_view DefaultRegion_type_name = "DefaultRegion";
-		constexpr const static rivet::rivet_type_id DefaultRegion_type_id = 0x54a9ae47;
-		constexpr const static std::string_view DefaultLevelFile_type_name = "DefaultLevelFile";
-		constexpr const static rivet::rivet_type_id DefaultLevelFile_type_id = 0xa982630a; 
+		constexpr static std::string_view OpenRegions_type_name = "OpenRegions";
+		constexpr static rivet::rivet_type_id OpenRegions_type_id = 0xf01dee22;
+		constexpr static std::string_view InstanceRegions_type_name = "InstanceRegions";
+		constexpr static rivet::rivet_type_id InstanceRegions_type_id = 0xd467001a;
+		constexpr static std::string_view DefaultRegion_type_name = "DefaultRegion";
+		constexpr static rivet::rivet_type_id DefaultRegion_type_id = 0x54a9ae47;
+		constexpr static std::string_view DefaultLevelFile_type_name = "DefaultLevelFile";
+		constexpr static rivet::rivet_type_id DefaultLevelFile_type_id = 0xa982630a; 
 
 		explicit FarmLightingConfig2() = default;
 		explicit FarmLightingConfig2([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

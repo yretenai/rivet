@@ -19,21 +19,21 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ScaleData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "ScaleData";
-		constexpr const static rivet::rivet_type_id type_id = 0xdc1e20e6;
+		constexpr static std::string_view type_name = "ScaleData";
+		constexpr static rivet::rivet_type_id type_id = 0xdc1e20e6;
 
-		constexpr const static std::string_view MinYTranslationScale_type_name = "MinYTranslationScale";
-		constexpr const static rivet::rivet_type_id MinYTranslationScale_type_id = 0x7796775c;
-		constexpr const static std::string_view MaxYTranslationScale_type_name = "MaxYTranslationScale";
-		constexpr const static rivet::rivet_type_id MaxYTranslationScale_type_id = 0x5ee88a44;
-		constexpr const static std::string_view MinXZTranslationScale_type_name = "MinXZTranslationScale";
-		constexpr const static rivet::rivet_type_id MinXZTranslationScale_type_id = 0x66d45ba2;
-		constexpr const static std::string_view MaxXZTranslationScale_type_name = "MaxXZTranslationScale";
-		constexpr const static rivet::rivet_type_id MaxXZTranslationScale_type_id = 0x7591bd09;
-		constexpr const static std::string_view MinTimeScale_type_name = "MinTimeScale";
-		constexpr const static rivet::rivet_type_id MinTimeScale_type_id = 0x53f6eacc;
-		constexpr const static std::string_view MaxTimeScale_type_name = "MaxTimeScale";
-		constexpr const static rivet::rivet_type_id MaxTimeScale_type_id = 0xc385fa26; 
+		constexpr static std::string_view MinYTranslationScale_type_name = "MinYTranslationScale";
+		constexpr static rivet::rivet_type_id MinYTranslationScale_type_id = 0x7796775c;
+		constexpr static std::string_view MaxYTranslationScale_type_name = "MaxYTranslationScale";
+		constexpr static rivet::rivet_type_id MaxYTranslationScale_type_id = 0x5ee88a44;
+		constexpr static std::string_view MinXZTranslationScale_type_name = "MinXZTranslationScale";
+		constexpr static rivet::rivet_type_id MinXZTranslationScale_type_id = 0x66d45ba2;
+		constexpr static std::string_view MaxXZTranslationScale_type_name = "MaxXZTranslationScale";
+		constexpr static rivet::rivet_type_id MaxXZTranslationScale_type_id = 0x7591bd09;
+		constexpr static std::string_view MinTimeScale_type_name = "MinTimeScale";
+		constexpr static rivet::rivet_type_id MinTimeScale_type_id = 0x53f6eacc;
+		constexpr static std::string_view MaxTimeScale_type_name = "MaxTimeScale";
+		constexpr static rivet::rivet_type_id MaxTimeScale_type_id = 0xc385fa26; 
 
 		explicit ScaleData() = default;
 		explicit ScaleData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

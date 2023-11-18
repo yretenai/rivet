@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED NefariousFinaleHeadPrius : NefariousFinaleWeaponPrius {
-		constexpr const static std::string_view type_name = "NefariousFinaleHeadPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xf83c8572;
+		constexpr static std::string_view type_name = "NefariousFinaleHeadPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xf83c8572;
 
 		explicit NefariousFinaleHeadPrius() = default;
 		explicit NefariousFinaleHeadPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

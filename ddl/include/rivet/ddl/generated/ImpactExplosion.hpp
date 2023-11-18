@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ImpactExplosion : GrenadeExplosionMode {
-		constexpr const static std::string_view type_name = "ImpactExplosion";
-		constexpr const static rivet::rivet_type_id type_id = 0xf1ab00bd;
+		constexpr static std::string_view type_name = "ImpactExplosion";
+		constexpr static rivet::rivet_type_id type_id = 0xf1ab00bd;
 
 		explicit ImpactExplosion() = default;
 		explicit ImpactExplosion([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

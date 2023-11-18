@@ -3,11 +3,11 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
+#include <rivet/ddl/generated/SubtaskDef.hpp>
 #include <rivet/ddl/generated/ActivityDef.hpp>
 #include <rivet/ddl/generated/TaskDef.hpp>
-#include <rivet/ddl/generated/ActivityLinkBase.hpp>
 #include <rivet/ddl/generated/ActivityHintWithId.hpp>
-#include <rivet/ddl/generated/SubtaskDef.hpp> 
+#include <rivet/ddl/generated/ActivityLinkBase.hpp> 
 
 #include <rivet/ddl/generated/ActivityDefBase.hpp>
 

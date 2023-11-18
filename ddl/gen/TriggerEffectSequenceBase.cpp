@@ -3,9 +3,9 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/TriggerEffectSequenceTime.hpp>
 #include <rivet/ddl/generated/TriggerEffectSequenceCustom.hpp>
-#include <rivet/ddl/generated/TriggerEffectSequencePosition.hpp> 
+#include <rivet/ddl/generated/TriggerEffectSequencePosition.hpp>
+#include <rivet/ddl/generated/TriggerEffectSequenceTime.hpp> 
 
 #include <rivet/ddl/generated/TriggerEffectSequenceBase.hpp>
 

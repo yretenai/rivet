@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED StatusEmitterOnDeathPrius : StatusEmitterBasePrius {
-		constexpr const static std::string_view type_name = "StatusEmitterOnDeathPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x806d5387;
+		constexpr static std::string_view type_name = "StatusEmitterOnDeathPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x806d5387;
 
-		constexpr const static std::string_view ProcPercent_type_name = "ProcPercent";
-		constexpr const static rivet::rivet_type_id ProcPercent_type_id = 0x41c6897; 
+		constexpr static std::string_view ProcPercent_type_name = "ProcPercent";
+		constexpr static rivet::rivet_type_id ProcPercent_type_id = 0x41c6897; 
 
 		explicit StatusEmitterOnDeathPrius() = default;
 		explicit StatusEmitterOnDeathPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

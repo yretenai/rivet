@@ -19,17 +19,17 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED FirepointShootingData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "FirepointShootingData";
-		constexpr const static rivet::rivet_type_id type_id = 0x4e039efb;
+		constexpr static std::string_view type_name = "FirepointShootingData";
+		constexpr static rivet::rivet_type_id type_id = 0x4e039efb;
 
-		constexpr const static std::string_view MinRangedAttacksToReposition_type_name = "MinRangedAttacksToReposition";
-		constexpr const static rivet::rivet_type_id MinRangedAttacksToReposition_type_id = 0x4ac59351;
-		constexpr const static std::string_view MaxRangedAttacksToReposition_type_name = "MaxRangedAttacksToReposition";
-		constexpr const static rivet::rivet_type_id MaxRangedAttacksToReposition_type_id = 0x1dcbc312;
-		constexpr const static std::string_view MinRangedAttacksToReload_type_name = "MinRangedAttacksToReload";
-		constexpr const static rivet::rivet_type_id MinRangedAttacksToReload_type_id = 0xfef12dd9;
-		constexpr const static std::string_view MaxRangedAttacksToReload_type_name = "MaxRangedAttacksToReload";
-		constexpr const static rivet::rivet_type_id MaxRangedAttacksToReload_type_id = 0x254e7e3e; 
+		constexpr static std::string_view MinRangedAttacksToReposition_type_name = "MinRangedAttacksToReposition";
+		constexpr static rivet::rivet_type_id MinRangedAttacksToReposition_type_id = 0x4ac59351;
+		constexpr static std::string_view MaxRangedAttacksToReposition_type_name = "MaxRangedAttacksToReposition";
+		constexpr static rivet::rivet_type_id MaxRangedAttacksToReposition_type_id = 0x1dcbc312;
+		constexpr static std::string_view MinRangedAttacksToReload_type_name = "MinRangedAttacksToReload";
+		constexpr static rivet::rivet_type_id MinRangedAttacksToReload_type_id = 0xfef12dd9;
+		constexpr static std::string_view MaxRangedAttacksToReload_type_name = "MaxRangedAttacksToReload";
+		constexpr static rivet::rivet_type_id MaxRangedAttacksToReload_type_id = 0x254e7e3e; 
 
 		explicit FirepointShootingData() = default;
 		explicit FirepointShootingData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED AwardPlatinumPrius : AwardBasePrius {
-		constexpr const static std::string_view type_name = "AwardPlatinumPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x77bc3d2a;
+		constexpr static std::string_view type_name = "AwardPlatinumPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x77bc3d2a;
 
 		explicit AwardPlatinumPrius() = default;
 		explicit AwardPlatinumPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

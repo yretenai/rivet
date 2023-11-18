@@ -21,15 +21,15 @@ namespace rivet::ddl::generated {
 	struct DDLVector3; 
 
 	struct RIVET_DDL_SHARED UDSZoneData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "UDSZoneData";
-		constexpr const static rivet::rivet_type_id type_id = 0x431102bb;
+		constexpr static std::string_view type_name = "UDSZoneData";
+		constexpr static rivet::rivet_type_id type_id = 0x431102bb;
 
-		constexpr const static std::string_view ZoneId_type_name = "ZoneId";
-		constexpr const static rivet::rivet_type_id ZoneId_type_id = 0xc0e0f909;
-		constexpr const static std::string_view MapBottomLeft_type_name = "MapBottomLeft";
-		constexpr const static rivet::rivet_type_id MapBottomLeft_type_id = 0x7ebe0720;
-		constexpr const static std::string_view MapTopRight_type_name = "MapTopRight";
-		constexpr const static rivet::rivet_type_id MapTopRight_type_id = 0xa704f66f; 
+		constexpr static std::string_view ZoneId_type_name = "ZoneId";
+		constexpr static rivet::rivet_type_id ZoneId_type_id = 0xc0e0f909;
+		constexpr static std::string_view MapBottomLeft_type_name = "MapBottomLeft";
+		constexpr static rivet::rivet_type_id MapBottomLeft_type_id = 0x7ebe0720;
+		constexpr static std::string_view MapTopRight_type_name = "MapTopRight";
+		constexpr static rivet::rivet_type_id MapTopRight_type_id = 0xa704f66f; 
 
 		explicit UDSZoneData() = default;
 		explicit UDSZoneData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

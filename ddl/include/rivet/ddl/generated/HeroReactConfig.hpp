@@ -21,21 +21,21 @@ namespace rivet::ddl::generated {
 	struct HeroReactLevelData; 
 
 	struct RIVET_DDL_SHARED HeroReactConfig : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "HeroReactConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xa93c6743;
+		constexpr static std::string_view type_name = "HeroReactConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xa93c6743;
 
-		constexpr const static std::string_view AlwaysReactToMelee_type_name = "AlwaysReactToMelee";
-		constexpr const static rivet::rivet_type_id AlwaysReactToMelee_type_id = 0xd740c899;
-		constexpr const static std::string_view AlwaysReactToExplosions_type_name = "AlwaysReactToExplosions";
-		constexpr const static rivet::rivet_type_id AlwaysReactToExplosions_type_id = 0x9e632b7;
-		constexpr const static std::string_view TwitchData_type_name = "TwitchData";
-		constexpr const static rivet::rivet_type_id TwitchData_type_id = 0x8ff83020;
-		constexpr const static std::string_view KnockbackData_type_name = "KnockbackData";
-		constexpr const static rivet::rivet_type_id KnockbackData_type_id = 0xcc96e476;
-		constexpr const static std::string_view KnockdownData_type_name = "KnockdownData";
-		constexpr const static rivet::rivet_type_id KnockdownData_type_id = 0xa615951;
-		constexpr const static std::string_view InvulnerabilityPeriod_type_name = "InvulnerabilityPeriod";
-		constexpr const static rivet::rivet_type_id InvulnerabilityPeriod_type_id = 0x5f6c90ec; 
+		constexpr static std::string_view AlwaysReactToMelee_type_name = "AlwaysReactToMelee";
+		constexpr static rivet::rivet_type_id AlwaysReactToMelee_type_id = 0xd740c899;
+		constexpr static std::string_view AlwaysReactToExplosions_type_name = "AlwaysReactToExplosions";
+		constexpr static rivet::rivet_type_id AlwaysReactToExplosions_type_id = 0x9e632b7;
+		constexpr static std::string_view TwitchData_type_name = "TwitchData";
+		constexpr static rivet::rivet_type_id TwitchData_type_id = 0x8ff83020;
+		constexpr static std::string_view KnockbackData_type_name = "KnockbackData";
+		constexpr static rivet::rivet_type_id KnockbackData_type_id = 0xcc96e476;
+		constexpr static std::string_view KnockdownData_type_name = "KnockdownData";
+		constexpr static rivet::rivet_type_id KnockdownData_type_id = 0xa615951;
+		constexpr static std::string_view InvulnerabilityPeriod_type_name = "InvulnerabilityPeriod";
+		constexpr static rivet::rivet_type_id InvulnerabilityPeriod_type_id = 0x5f6c90ec; 
 
 		explicit HeroReactConfig() = default;
 		explicit HeroReactConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

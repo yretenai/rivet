@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED PartialReactStandardPrius : PartialReactBasePrius {
-		constexpr const static std::string_view type_name = "PartialReactStandardPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x90e0f7d0;
+		constexpr static std::string_view type_name = "PartialReactStandardPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x90e0f7d0;
 
-		constexpr const static std::string_view PartialReactDriver_type_name = "PartialReactDriver";
-		constexpr const static rivet::rivet_type_id PartialReactDriver_type_id = 0x4f63a6f1;
-		constexpr const static std::string_view PartialReactCooldown_type_name = "PartialReactCooldown";
-		constexpr const static rivet::rivet_type_id PartialReactCooldown_type_id = 0xa4e1f543; 
+		constexpr static std::string_view PartialReactDriver_type_name = "PartialReactDriver";
+		constexpr static rivet::rivet_type_id PartialReactDriver_type_id = 0x4f63a6f1;
+		constexpr static std::string_view PartialReactCooldown_type_name = "PartialReactCooldown";
+		constexpr static rivet::rivet_type_id PartialReactCooldown_type_id = 0xa4e1f543; 
 
 		explicit PartialReactStandardPrius() = default;
 		explicit PartialReactStandardPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

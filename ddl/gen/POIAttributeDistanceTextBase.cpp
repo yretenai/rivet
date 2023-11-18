@@ -3,10 +3,10 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/POIAttributeDistanceTextOnscreenOnly.hpp>
-#include <rivet/ddl/generated/POIAttributeDistanceTextAlways.hpp>
+#include <rivet/ddl/generated/POIAttributeDistanceTextNone.hpp>
 #include <rivet/ddl/generated/POIAttributeDistanceTextOffscreenOnly.hpp>
-#include <rivet/ddl/generated/POIAttributeDistanceTextNone.hpp> 
+#include <rivet/ddl/generated/POIAttributeDistanceTextAlways.hpp>
+#include <rivet/ddl/generated/POIAttributeDistanceTextOnscreenOnly.hpp> 
 
 #include <rivet/ddl/generated/POIAttributeDistanceTextBase.hpp>
 

@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED POIAttributeOutroTimer : POIAttributeOutroBase {
-		constexpr const static std::string_view type_name = "POIAttributeOutroTimer";
-		constexpr const static rivet::rivet_type_id type_id = 0xe0dfed1e;
+		constexpr static std::string_view type_name = "POIAttributeOutroTimer";
+		constexpr static rivet::rivet_type_id type_id = 0xe0dfed1e;
 
-		constexpr const static std::string_view OutroTime_type_name = "OutroTime";
-		constexpr const static rivet::rivet_type_id OutroTime_type_id = 0xa8d30a2a; 
+		constexpr static std::string_view OutroTime_type_name = "OutroTime";
+		constexpr static rivet::rivet_type_id OutroTime_type_id = 0xa8d30a2a; 
 
 		explicit POIAttributeOutroTimer() = default;
 		explicit POIAttributeOutroTimer([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

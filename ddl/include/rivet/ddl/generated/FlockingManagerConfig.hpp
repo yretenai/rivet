@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED FlockingManagerConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "FlockingManagerConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x3c9e6e67;
+		constexpr static std::string_view type_name = "FlockingManagerConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x3c9e6e67;
 
-		constexpr const static std::string_view RefreshPeriod_type_name = "RefreshPeriod";
-		constexpr const static rivet::rivet_type_id RefreshPeriod_type_id = 0xef2d955f;
-		constexpr const static std::string_view FlockConfigs_type_name = "FlockConfigs";
-		constexpr const static rivet::rivet_type_id FlockConfigs_type_id = 0xfdc1f358; 
+		constexpr static std::string_view RefreshPeriod_type_name = "RefreshPeriod";
+		constexpr static rivet::rivet_type_id RefreshPeriod_type_id = 0xef2d955f;
+		constexpr static std::string_view FlockConfigs_type_name = "FlockConfigs";
+		constexpr static rivet::rivet_type_id FlockConfigs_type_id = 0xfdc1f358; 
 
 		explicit FlockingManagerConfig() = default;
 		explicit FlockingManagerConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

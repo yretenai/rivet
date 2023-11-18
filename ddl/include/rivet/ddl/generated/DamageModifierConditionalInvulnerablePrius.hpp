@@ -22,13 +22,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DamageModifierConditionalInvulnerablePrius : DamageModifierInvulnerablePrius {
-		constexpr const static std::string_view type_name = "DamageModifierConditionalInvulnerablePrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x14670e2e;
+		constexpr static std::string_view type_name = "DamageModifierConditionalInvulnerablePrius";
+		constexpr static rivet::rivet_type_id type_id = 0x14670e2e;
 
-		constexpr const static std::string_view DamageFilter_type_name = "DamageFilter";
-		constexpr const static rivet::rivet_type_id DamageFilter_type_id = 0xa75ecb2f;
-		constexpr const static std::string_view AllegianceFilter_type_name = "AllegianceFilter";
-		constexpr const static rivet::rivet_type_id AllegianceFilter_type_id = 0x1b32101d; 
+		constexpr static std::string_view DamageFilter_type_name = "DamageFilter";
+		constexpr static rivet::rivet_type_id DamageFilter_type_id = 0xa75ecb2f;
+		constexpr static std::string_view AllegianceFilter_type_name = "AllegianceFilter";
+		constexpr static rivet::rivet_type_id AllegianceFilter_type_id = 0x1b32101d; 
 
 		explicit DamageModifierConditionalInvulnerablePrius() = default;
 		explicit DamageModifierConditionalInvulnerablePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

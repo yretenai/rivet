@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct FossilizeHoleTrackerPrius; 
 
 	struct RIVET_DDL_SHARED ShotFossilizerPrius : BasicBulletPrius {
-		constexpr const static std::string_view type_name = "ShotFossilizerPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x29f4f88a;
+		constexpr static std::string_view type_name = "ShotFossilizerPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x29f4f88a;
 
-		constexpr const static std::string_view HoleTrackerPrius_type_name = "HoleTrackerPrius";
-		constexpr const static rivet::rivet_type_id HoleTrackerPrius_type_id = 0xb1d98227; 
+		constexpr static std::string_view HoleTrackerPrius_type_name = "HoleTrackerPrius";
+		constexpr static rivet::rivet_type_id HoleTrackerPrius_type_id = 0xb1d98227; 
 
 		explicit ShotFossilizerPrius() = default;
 		explicit ShotFossilizerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

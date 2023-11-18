@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct LoadURLEntry; 
 
 	struct RIVET_DDL_SHARED LoadCoherentURLConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "LoadCoherentURLConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xeaff167d;
+		constexpr static std::string_view type_name = "LoadCoherentURLConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xeaff167d;
 
-		constexpr const static std::string_view URLs_type_name = "URLs";
-		constexpr const static rivet::rivet_type_id URLs_type_id = 0xb7cd9553; 
+		constexpr static std::string_view URLs_type_name = "URLs";
+		constexpr static rivet::rivet_type_id URLs_type_id = 0xb7cd9553; 
 
 		explicit LoadCoherentURLConfig() = default;
 		explicit LoadCoherentURLConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

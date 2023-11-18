@@ -22,13 +22,13 @@ namespace rivet::ddl::generated {
 	struct ObjSysUnlockOverrideConditionEntry; 
 
 	struct RIVET_DDL_SHARED ObjSysUnlockSequenceOverride : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "ObjSysUnlockSequenceOverride";
-		constexpr const static rivet::rivet_type_id type_id = 0x54c5c89c;
+		constexpr static std::string_view type_name = "ObjSysUnlockSequenceOverride";
+		constexpr static rivet::rivet_type_id type_id = 0x54c5c89c;
 
-		constexpr const static std::string_view OverrideConditions_type_name = "OverrideConditions";
-		constexpr const static rivet::rivet_type_id OverrideConditions_type_id = 0x28a0e6d3;
-		constexpr const static std::string_view Unlocks_type_name = "Unlocks";
-		constexpr const static rivet::rivet_type_id Unlocks_type_id = 0x2a3bb76a; 
+		constexpr static std::string_view OverrideConditions_type_name = "OverrideConditions";
+		constexpr static rivet::rivet_type_id OverrideConditions_type_id = 0x28a0e6d3;
+		constexpr static std::string_view Unlocks_type_name = "Unlocks";
+		constexpr static rivet::rivet_type_id Unlocks_type_id = 0x2a3bb76a; 
 
 		explicit ObjSysUnlockSequenceOverride() = default;
 		explicit ObjSysUnlockSequenceOverride([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

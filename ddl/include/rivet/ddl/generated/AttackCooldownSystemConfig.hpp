@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct AttackCooldownDefault; 
 
 	struct RIVET_DDL_SHARED AttackCooldownSystemConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "AttackCooldownSystemConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xaa40b6c1;
+		constexpr static std::string_view type_name = "AttackCooldownSystemConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xaa40b6c1;
 
-		constexpr const static std::string_view AttackCooldownDefaults_type_name = "AttackCooldownDefaults";
-		constexpr const static rivet::rivet_type_id AttackCooldownDefaults_type_id = 0xbc3c7919; 
+		constexpr static std::string_view AttackCooldownDefaults_type_name = "AttackCooldownDefaults";
+		constexpr static rivet::rivet_type_id AttackCooldownDefaults_type_id = 0xbc3c7919; 
 
 		explicit AttackCooldownSystemConfig() = default;
 		explicit AttackCooldownSystemConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

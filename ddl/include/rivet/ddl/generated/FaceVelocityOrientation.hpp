@@ -21,15 +21,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED FaceVelocityOrientation : OrientationMode {
-		constexpr const static std::string_view type_name = "FaceVelocityOrientation";
-		constexpr const static rivet::rivet_type_id type_id = 0x14f528a1;
+		constexpr static std::string_view type_name = "FaceVelocityOrientation";
+		constexpr static rivet::rivet_type_id type_id = 0x14f528a1;
 
-		constexpr const static std::string_view StayPlanar_type_name = "StayPlanar";
-		constexpr const static rivet::rivet_type_id StayPlanar_type_id = 0xbe4e01d1;
-		constexpr const static std::string_view UpdateOnce_type_name = "UpdateOnce";
-		constexpr const static rivet::rivet_type_id UpdateOnce_type_id = 0x9248e64e;
-		constexpr const static std::string_view SmoothRotation_type_name = "SmoothRotation";
-		constexpr const static rivet::rivet_type_id SmoothRotation_type_id = 0x68e916ca; 
+		constexpr static std::string_view StayPlanar_type_name = "StayPlanar";
+		constexpr static rivet::rivet_type_id StayPlanar_type_id = 0xbe4e01d1;
+		constexpr static std::string_view UpdateOnce_type_name = "UpdateOnce";
+		constexpr static rivet::rivet_type_id UpdateOnce_type_id = 0x9248e64e;
+		constexpr static std::string_view SmoothRotation_type_name = "SmoothRotation";
+		constexpr static rivet::rivet_type_id SmoothRotation_type_id = 0x68e916ca; 
 
 		explicit FaceVelocityOrientation() = default;
 		explicit FaceVelocityOrientation([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

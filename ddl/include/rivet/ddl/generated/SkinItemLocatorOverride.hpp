@@ -19,11 +19,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED SkinItemLocatorOverride : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "SkinItemLocatorOverride";
-		constexpr const static rivet::rivet_type_id type_id = 0xfa42787;
+		constexpr static std::string_view type_name = "SkinItemLocatorOverride";
+		constexpr static rivet::rivet_type_id type_id = 0xfa42787;
 
-		constexpr const static std::string_view LocatorName_type_name = "LocatorName";
-		constexpr const static rivet::rivet_type_id LocatorName_type_id = 0x5814524d; 
+		constexpr static std::string_view LocatorName_type_name = "LocatorName";
+		constexpr static rivet::rivet_type_id LocatorName_type_id = 0x5814524d; 
 
 		explicit SkinItemLocatorOverride() = default;
 		explicit SkinItemLocatorOverride([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

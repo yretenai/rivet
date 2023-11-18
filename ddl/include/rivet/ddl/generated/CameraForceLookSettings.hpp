@@ -19,15 +19,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED CameraForceLookSettings : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "CameraForceLookSettings";
-		constexpr const static rivet::rivet_type_id type_id = 0xd1174a9f;
+		constexpr static std::string_view type_name = "CameraForceLookSettings";
+		constexpr static rivet::rivet_type_id type_id = 0xd1174a9f;
 
-		constexpr const static std::string_view SpeedMax_type_name = "SpeedMax";
-		constexpr const static rivet::rivet_type_id SpeedMax_type_id = 0xb6419fba;
-		constexpr const static std::string_view SpeedAccel_type_name = "SpeedAccel";
-		constexpr const static rivet::rivet_type_id SpeedAccel_type_id = 0x5d9ea52c;
-		constexpr const static std::string_view SpeedDecel_type_name = "SpeedDecel";
-		constexpr const static rivet::rivet_type_id SpeedDecel_type_id = 0xb0157580; 
+		constexpr static std::string_view SpeedMax_type_name = "SpeedMax";
+		constexpr static rivet::rivet_type_id SpeedMax_type_id = 0xb6419fba;
+		constexpr static std::string_view SpeedAccel_type_name = "SpeedAccel";
+		constexpr static rivet::rivet_type_id SpeedAccel_type_id = 0x5d9ea52c;
+		constexpr static std::string_view SpeedDecel_type_name = "SpeedDecel";
+		constexpr static rivet::rivet_type_id SpeedDecel_type_id = 0xb0157580; 
 
 		explicit CameraForceLookSettings() = default;
 		explicit CameraForceLookSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -23,17 +23,17 @@ namespace rivet::ddl::generated {
 	struct ItemLoadoutListElement; 
 
 	struct RIVET_DDL_SHARED ItemLoadoutList : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "ItemLoadoutList";
-		constexpr const static rivet::rivet_type_id type_id = 0xba6c382b;
+		constexpr static std::string_view type_name = "ItemLoadoutList";
+		constexpr static rivet::rivet_type_id type_id = 0xba6c382b;
 
-		constexpr const static std::string_view Name_type_name = "Name";
-		constexpr const static rivet::rivet_type_id Name_type_id = 0x6eb3beb6;
-		constexpr const static std::string_view PostProcessEquip_type_name = "PostProcessEquip";
-		constexpr const static rivet::rivet_type_id PostProcessEquip_type_id = 0x6aba5673;
-		constexpr const static std::string_view SelectType_type_name = "SelectType";
-		constexpr const static rivet::rivet_type_id SelectType_type_id = 0xe2660679;
-		constexpr const static std::string_view Items_type_name = "Items";
-		constexpr const static rivet::rivet_type_id Items_type_id = 0xf84d258c; 
+		constexpr static std::string_view Name_type_name = "Name";
+		constexpr static rivet::rivet_type_id Name_type_id = 0x6eb3beb6;
+		constexpr static std::string_view PostProcessEquip_type_name = "PostProcessEquip";
+		constexpr static rivet::rivet_type_id PostProcessEquip_type_id = 0x6aba5673;
+		constexpr static std::string_view SelectType_type_name = "SelectType";
+		constexpr static rivet::rivet_type_id SelectType_type_id = 0xe2660679;
+		constexpr static std::string_view Items_type_name = "Items";
+		constexpr static rivet::rivet_type_id Items_type_id = 0xf84d258c; 
 
 		explicit ItemLoadoutList() = default;
 		explicit ItemLoadoutList([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

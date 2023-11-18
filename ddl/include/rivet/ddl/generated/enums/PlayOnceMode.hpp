@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view PlayOnceMode_type_name = "PlayOnceMode";
-	constexpr const static rivet::rivet_type_id PlayOnceMode_type_id = 0x46c0349d;
+	constexpr static std::string_view PlayOnceMode_type_name = "PlayOnceMode";
+	constexpr static rivet::rivet_type_id PlayOnceMode_type_id = 0x46c0349d;
 
-	constexpr const static std::array<std::string_view, 3> PlayOnceMode_values = {
+	constexpr static std::array<std::string_view, 3> PlayOnceMode_values = {
 		"Off",
 		"Line",
 		"Rule", 

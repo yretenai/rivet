@@ -19,21 +19,21 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DirectionHeuristics : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "DirectionHeuristics";
-		constexpr const static rivet::rivet_type_id type_id = 0xe39b3409;
+		constexpr static std::string_view type_name = "DirectionHeuristics";
+		constexpr static rivet::rivet_type_id type_id = 0xe39b3409;
 
-		constexpr const static std::string_view PhalanxWeight_type_name = "PhalanxWeight";
-		constexpr const static rivet::rivet_type_id PhalanxWeight_type_id = 0x1e7b2795;
-		constexpr const static std::string_view BattleAxisWeight_type_name = "BattleAxisWeight";
-		constexpr const static rivet::rivet_type_id BattleAxisWeight_type_id = 0xf4463a64;
-		constexpr const static std::string_view BattleAxisSideDistMin_type_name = "BattleAxisSideDistMin";
-		constexpr const static rivet::rivet_type_id BattleAxisSideDistMin_type_id = 0x656102fe;
-		constexpr const static std::string_view BattleAxisSideDistMax_type_name = "BattleAxisSideDistMax";
-		constexpr const static rivet::rivet_type_id BattleAxisSideDistMax_type_id = 0x596c3da7;
-		constexpr const static std::string_view FlankWeight_type_name = "FlankWeight";
-		constexpr const static rivet::rivet_type_id FlankWeight_type_id = 0x238a9617;
-		constexpr const static std::string_view FlankDist_type_name = "FlankDist";
-		constexpr const static rivet::rivet_type_id FlankDist_type_id = 0x3d1e098a; 
+		constexpr static std::string_view PhalanxWeight_type_name = "PhalanxWeight";
+		constexpr static rivet::rivet_type_id PhalanxWeight_type_id = 0x1e7b2795;
+		constexpr static std::string_view BattleAxisWeight_type_name = "BattleAxisWeight";
+		constexpr static rivet::rivet_type_id BattleAxisWeight_type_id = 0xf4463a64;
+		constexpr static std::string_view BattleAxisSideDistMin_type_name = "BattleAxisSideDistMin";
+		constexpr static rivet::rivet_type_id BattleAxisSideDistMin_type_id = 0x656102fe;
+		constexpr static std::string_view BattleAxisSideDistMax_type_name = "BattleAxisSideDistMax";
+		constexpr static rivet::rivet_type_id BattleAxisSideDistMax_type_id = 0x596c3da7;
+		constexpr static std::string_view FlankWeight_type_name = "FlankWeight";
+		constexpr static rivet::rivet_type_id FlankWeight_type_id = 0x238a9617;
+		constexpr static std::string_view FlankDist_type_name = "FlankDist";
+		constexpr static rivet::rivet_type_id FlankDist_type_id = 0x3d1e098a; 
 
 		explicit DirectionHeuristics() = default;
 		explicit DirectionHeuristics([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

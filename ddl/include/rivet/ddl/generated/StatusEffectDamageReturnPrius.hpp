@@ -21,15 +21,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED StatusEffectDamageReturnPrius : StatusEffectBasePrius {
-		constexpr const static std::string_view type_name = "StatusEffectDamageReturnPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xb9d46b12;
+		constexpr static std::string_view type_name = "StatusEffectDamageReturnPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xb9d46b12;
 
-		constexpr const static std::string_view IsPercent_type_name = "IsPercent";
-		constexpr const static rivet::rivet_type_id IsPercent_type_id = 0x858c4cf5;
-		constexpr const static std::string_view ReturnMelee_type_name = "ReturnMelee";
-		constexpr const static rivet::rivet_type_id ReturnMelee_type_id = 0xbf29c58c;
-		constexpr const static std::string_view ReturnRanged_type_name = "ReturnRanged";
-		constexpr const static rivet::rivet_type_id ReturnRanged_type_id = 0xe349e4; 
+		constexpr static std::string_view IsPercent_type_name = "IsPercent";
+		constexpr static rivet::rivet_type_id IsPercent_type_id = 0x858c4cf5;
+		constexpr static std::string_view ReturnMelee_type_name = "ReturnMelee";
+		constexpr static rivet::rivet_type_id ReturnMelee_type_id = 0xbf29c58c;
+		constexpr static std::string_view ReturnRanged_type_name = "ReturnRanged";
+		constexpr static rivet::rivet_type_id ReturnRanged_type_id = 0xe349e4; 
 
 		explicit StatusEffectDamageReturnPrius() = default;
 		explicit StatusEffectDamageReturnPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

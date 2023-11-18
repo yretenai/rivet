@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct WeaponModData; 
 
 	struct RIVET_DDL_SHARED WeaponModConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "WeaponModConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x813d86d2;
+		constexpr static std::string_view type_name = "WeaponModConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x813d86d2;
 
-		constexpr const static std::string_view Mods_type_name = "Mods";
-		constexpr const static rivet::rivet_type_id Mods_type_id = 0x538e324a; 
+		constexpr static std::string_view Mods_type_name = "Mods";
+		constexpr static rivet::rivet_type_id Mods_type_id = 0x538e324a; 
 
 		explicit WeaponModConfig() = default;
 		explicit WeaponModConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

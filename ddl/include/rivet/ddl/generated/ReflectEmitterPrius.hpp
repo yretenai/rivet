@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ReflectEmitterPrius : WeaponEmitterBasePrius {
-		constexpr const static std::string_view type_name = "ReflectEmitterPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xd2e0cd91;
+		constexpr static std::string_view type_name = "ReflectEmitterPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xd2e0cd91;
 
-		constexpr const static std::string_view SkewTowardsNormal_type_name = "SkewTowardsNormal";
-		constexpr const static rivet::rivet_type_id SkewTowardsNormal_type_id = 0x9031c02e;
-		constexpr const static std::string_view NudgeOffHitPosition_type_name = "NudgeOffHitPosition";
-		constexpr const static rivet::rivet_type_id NudgeOffHitPosition_type_id = 0x62e02209; 
+		constexpr static std::string_view SkewTowardsNormal_type_name = "SkewTowardsNormal";
+		constexpr static rivet::rivet_type_id SkewTowardsNormal_type_id = 0x9031c02e;
+		constexpr static std::string_view NudgeOffHitPosition_type_name = "NudgeOffHitPosition";
+		constexpr static rivet::rivet_type_id NudgeOffHitPosition_type_id = 0x62e02209; 
 
 		explicit ReflectEmitterPrius() = default;
 		explicit ReflectEmitterPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

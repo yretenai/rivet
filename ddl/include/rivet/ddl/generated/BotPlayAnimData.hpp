@@ -19,15 +19,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED BotPlayAnimData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "BotPlayAnimData";
-		constexpr const static rivet::rivet_type_id type_id = 0xc676d502;
+		constexpr static std::string_view type_name = "BotPlayAnimData";
+		constexpr static rivet::rivet_type_id type_id = 0xc676d502;
 
-		constexpr const static std::string_view AnimDriver_type_name = "AnimDriver";
-		constexpr const static rivet::rivet_type_id AnimDriver_type_id = 0x10f54dce;
-		constexpr const static std::string_view AnimDuration_type_name = "AnimDuration";
-		constexpr const static rivet::rivet_type_id AnimDuration_type_id = 0x93db1700;
-		constexpr const static std::string_view ApplyGravity_type_name = "ApplyGravity";
-		constexpr const static rivet::rivet_type_id ApplyGravity_type_id = 0x24332ad; 
+		constexpr static std::string_view AnimDriver_type_name = "AnimDriver";
+		constexpr static rivet::rivet_type_id AnimDriver_type_id = 0x10f54dce;
+		constexpr static std::string_view AnimDuration_type_name = "AnimDuration";
+		constexpr static rivet::rivet_type_id AnimDuration_type_id = 0x93db1700;
+		constexpr static std::string_view ApplyGravity_type_name = "ApplyGravity";
+		constexpr static rivet::rivet_type_id ApplyGravity_type_id = 0x24332ad; 
 
 		explicit BotPlayAnimData() = default;
 		explicit BotPlayAnimData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

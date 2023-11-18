@@ -21,40 +21,40 @@
 #include <rivet/ddl/generated/ConfigBase.hpp> 
 
 namespace rivet::ddl::generated {
-	struct VehicleCurveGeneratorInfo;
+	struct VehicleCollisionInfo;
 	struct VehicleCurveFollowerPrius;
-	struct VehicleCollisionInfo; 
+	struct VehicleCurveGeneratorInfo; 
 
 	struct RIVET_DDL_SHARED VehicleSystemConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "VehicleSystemConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x521bb66b;
+		constexpr static std::string_view type_name = "VehicleSystemConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x521bb66b;
 
-		constexpr const static std::string_view LaneWidth_type_name = "LaneWidth";
-		constexpr const static rivet::rivet_type_id LaneWidth_type_id = 0xcaab6d50;
-		constexpr const static std::string_view MaxLaneSpacing_type_name = "MaxLaneSpacing";
-		constexpr const static rivet::rivet_type_id MaxLaneSpacing_type_id = 0x5c4a29c9;
-		constexpr const static std::string_view LaneSwitchPeriod_type_name = "LaneSwitchPeriod";
-		constexpr const static rivet::rivet_type_id LaneSwitchPeriod_type_id = 0x1525ae5b;
-		constexpr const static std::string_view CurveGeneratorInfo_type_name = "CurveGeneratorInfo";
-		constexpr const static rivet::rivet_type_id CurveGeneratorInfo_type_id = 0x81012037;
-		constexpr const static std::string_view MotionPrius_type_name = "MotionPrius";
-		constexpr const static rivet::rivet_type_id MotionPrius_type_id = 0x557be5dc;
-		constexpr const static std::string_view CollisionInfo_type_name = "CollisionInfo";
-		constexpr const static rivet::rivet_type_id CollisionInfo_type_id = 0x11899c93;
-		constexpr const static std::string_view MaxFxUpdateDistance_type_name = "MaxFxUpdateDistance";
-		constexpr const static rivet::rivet_type_id MaxFxUpdateDistance_type_id = 0xe5174b1e;
-		constexpr const static std::string_view MaxCulledFxDistance_type_name = "MaxCulledFxDistance";
-		constexpr const static rivet::rivet_type_id MaxCulledFxDistance_type_id = 0x930657df;
-		constexpr const static std::string_view MaxFxDistance_type_name = "MaxFxDistance";
-		constexpr const static rivet::rivet_type_id MaxFxDistance_type_id = 0xd6ddbc72;
-		constexpr const static std::string_view MaxCulledLightDistance_type_name = "MaxCulledLightDistance";
-		constexpr const static rivet::rivet_type_id MaxCulledLightDistance_type_id = 0xc6faafaf;
-		constexpr const static std::string_view MaxLightDistance_type_name = "MaxLightDistance";
-		constexpr const static rivet::rivet_type_id MaxLightDistance_type_id = 0xbbd140a2;
-		constexpr const static std::string_view SlowSignalDecelCoeff_type_name = "SlowSignalDecelCoeff";
-		constexpr const static rivet::rivet_type_id SlowSignalDecelCoeff_type_id = 0x6b17dac5;
-		constexpr const static std::string_view LightingModesToUseHeadlights_type_name = "LightingModesToUseHeadlights";
-		constexpr const static rivet::rivet_type_id LightingModesToUseHeadlights_type_id = 0xa3f780e1; 
+		constexpr static std::string_view LaneWidth_type_name = "LaneWidth";
+		constexpr static rivet::rivet_type_id LaneWidth_type_id = 0xcaab6d50;
+		constexpr static std::string_view MaxLaneSpacing_type_name = "MaxLaneSpacing";
+		constexpr static rivet::rivet_type_id MaxLaneSpacing_type_id = 0x5c4a29c9;
+		constexpr static std::string_view LaneSwitchPeriod_type_name = "LaneSwitchPeriod";
+		constexpr static rivet::rivet_type_id LaneSwitchPeriod_type_id = 0x1525ae5b;
+		constexpr static std::string_view CurveGeneratorInfo_type_name = "CurveGeneratorInfo";
+		constexpr static rivet::rivet_type_id CurveGeneratorInfo_type_id = 0x81012037;
+		constexpr static std::string_view MotionPrius_type_name = "MotionPrius";
+		constexpr static rivet::rivet_type_id MotionPrius_type_id = 0x557be5dc;
+		constexpr static std::string_view CollisionInfo_type_name = "CollisionInfo";
+		constexpr static rivet::rivet_type_id CollisionInfo_type_id = 0x11899c93;
+		constexpr static std::string_view MaxFxUpdateDistance_type_name = "MaxFxUpdateDistance";
+		constexpr static rivet::rivet_type_id MaxFxUpdateDistance_type_id = 0xe5174b1e;
+		constexpr static std::string_view MaxCulledFxDistance_type_name = "MaxCulledFxDistance";
+		constexpr static rivet::rivet_type_id MaxCulledFxDistance_type_id = 0x930657df;
+		constexpr static std::string_view MaxFxDistance_type_name = "MaxFxDistance";
+		constexpr static rivet::rivet_type_id MaxFxDistance_type_id = 0xd6ddbc72;
+		constexpr static std::string_view MaxCulledLightDistance_type_name = "MaxCulledLightDistance";
+		constexpr static rivet::rivet_type_id MaxCulledLightDistance_type_id = 0xc6faafaf;
+		constexpr static std::string_view MaxLightDistance_type_name = "MaxLightDistance";
+		constexpr static rivet::rivet_type_id MaxLightDistance_type_id = 0xbbd140a2;
+		constexpr static std::string_view SlowSignalDecelCoeff_type_name = "SlowSignalDecelCoeff";
+		constexpr static rivet::rivet_type_id SlowSignalDecelCoeff_type_id = 0x6b17dac5;
+		constexpr static std::string_view LightingModesToUseHeadlights_type_name = "LightingModesToUseHeadlights";
+		constexpr static rivet::rivet_type_id LightingModesToUseHeadlights_type_id = 0xa3f780e1; 
 
 		explicit VehicleSystemConfig() = default;
 		explicit VehicleSystemConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

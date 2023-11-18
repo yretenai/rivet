@@ -17,16 +17,16 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/BotComboConditionBasePrius.hpp>
-#include <rivet/ddl/generated/enums/xc3e5efea.hpp> 
+#include <rivet/ddl/generated/enums/xc3e5efea.hpp>
+#include <rivet/ddl/generated/BotComboConditionBasePrius.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED BotComboConditionVariantCheckPrius : BotComboConditionBasePrius {
-		constexpr const static std::string_view type_name = "BotComboConditionVariantCheckPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x5769825d;
+		constexpr static std::string_view type_name = "BotComboConditionVariantCheckPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x5769825d;
 
-		constexpr const static std::string_view AllowedVariants_type_name = "AllowedVariants";
-		constexpr const static rivet::rivet_type_id AllowedVariants_type_id = 0x89ce758b; 
+		constexpr static std::string_view AllowedVariants_type_name = "AllowedVariants";
+		constexpr static rivet::rivet_type_id AllowedVariants_type_id = 0x89ce758b; 
 
 		explicit BotComboConditionVariantCheckPrius() = default;
 		explicit BotComboConditionVariantCheckPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

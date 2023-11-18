@@ -19,15 +19,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED CineMenuOption : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "CineMenuOption";
-		constexpr const static rivet::rivet_type_id type_id = 0xf0b0d690;
+		constexpr static std::string_view type_name = "CineMenuOption";
+		constexpr static rivet::rivet_type_id type_id = 0xf0b0d690;
 
-		constexpr const static std::string_view Name_type_name = "Name";
-		constexpr const static rivet::rivet_type_id Name_type_id = 0x6eb3beb6;
-		constexpr const static std::string_view Items_type_name = "Items";
-		constexpr const static rivet::rivet_type_id Items_type_id = 0xf84d258c;
-		constexpr const static std::string_view DefaultItem_type_name = "DefaultItem";
-		constexpr const static rivet::rivet_type_id DefaultItem_type_id = 0x51f9b12c; 
+		constexpr static std::string_view Name_type_name = "Name";
+		constexpr static rivet::rivet_type_id Name_type_id = 0x6eb3beb6;
+		constexpr static std::string_view Items_type_name = "Items";
+		constexpr static rivet::rivet_type_id Items_type_id = 0xf84d258c;
+		constexpr static std::string_view DefaultItem_type_name = "DefaultItem";
+		constexpr static rivet::rivet_type_id DefaultItem_type_id = 0x51f9b12c; 
 
 		explicit CineMenuOption() = default;
 		explicit CineMenuOption([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

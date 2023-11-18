@@ -23,27 +23,27 @@ namespace rivet::ddl::generated {
 	struct ProxAggroRange; 
 
 	struct RIVET_DDL_SHARED Tier : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "Tier";
-		constexpr const static rivet::rivet_type_id type_id = 0x140e573a;
+		constexpr static std::string_view type_name = "Tier";
+		constexpr static rivet::rivet_type_id type_id = 0x140e573a;
 
-		constexpr const static std::string_view TargetTypes_type_name = "TargetTypes";
-		constexpr const static rivet::rivet_type_id TargetTypes_type_id = 0x85109145;
-		constexpr const static std::string_view MinRange_type_name = "MinRange";
-		constexpr const static rivet::rivet_type_id MinRange_type_id = 0x6c79323f;
-		constexpr const static std::string_view AdditionalRanges_type_name = "AdditionalRanges";
-		constexpr const static rivet::rivet_type_id AdditionalRanges_type_id = 0xa4f3d83e;
-		constexpr const static std::string_view MaxRange_type_name = "MaxRange";
-		constexpr const static rivet::rivet_type_id MaxRange_type_id = 0x8a199dde;
-		constexpr const static std::string_view ProximityAggroRate_type_name = "ProximityAggroRate";
-		constexpr const static rivet::rivet_type_id ProximityAggroRate_type_id = 0x4058a39;
-		constexpr const static std::string_view ProximityAggroBleedRate_type_name = "ProximityAggroBleedRate";
-		constexpr const static rivet::rivet_type_id ProximityAggroBleedRate_type_id = 0x8836d50b;
-		constexpr const static std::string_view RangedAreaBufferDistance_type_name = "RangedAreaBufferDistance";
-		constexpr const static rivet::rivet_type_id RangedAreaBufferDistance_type_id = 0xf8e82f4f;
-		constexpr const static std::string_view RangedAreaDropoffDistance_type_name = "RangedAreaDropoffDistance";
-		constexpr const static rivet::rivet_type_id RangedAreaDropoffDistance_type_id = 0x8a1076c2;
-		constexpr const static std::string_view IgnoreIfUnreachable_type_name = "IgnoreIfUnreachable";
-		constexpr const static rivet::rivet_type_id IgnoreIfUnreachable_type_id = 0x96c5564e; 
+		constexpr static std::string_view TargetTypes_type_name = "TargetTypes";
+		constexpr static rivet::rivet_type_id TargetTypes_type_id = 0x85109145;
+		constexpr static std::string_view MinRange_type_name = "MinRange";
+		constexpr static rivet::rivet_type_id MinRange_type_id = 0x6c79323f;
+		constexpr static std::string_view AdditionalRanges_type_name = "AdditionalRanges";
+		constexpr static rivet::rivet_type_id AdditionalRanges_type_id = 0xa4f3d83e;
+		constexpr static std::string_view MaxRange_type_name = "MaxRange";
+		constexpr static rivet::rivet_type_id MaxRange_type_id = 0x8a199dde;
+		constexpr static std::string_view ProximityAggroRate_type_name = "ProximityAggroRate";
+		constexpr static rivet::rivet_type_id ProximityAggroRate_type_id = 0x4058a39;
+		constexpr static std::string_view ProximityAggroBleedRate_type_name = "ProximityAggroBleedRate";
+		constexpr static rivet::rivet_type_id ProximityAggroBleedRate_type_id = 0x8836d50b;
+		constexpr static std::string_view RangedAreaBufferDistance_type_name = "RangedAreaBufferDistance";
+		constexpr static rivet::rivet_type_id RangedAreaBufferDistance_type_id = 0xf8e82f4f;
+		constexpr static std::string_view RangedAreaDropoffDistance_type_name = "RangedAreaDropoffDistance";
+		constexpr static rivet::rivet_type_id RangedAreaDropoffDistance_type_id = 0x8a1076c2;
+		constexpr static std::string_view IgnoreIfUnreachable_type_name = "IgnoreIfUnreachable";
+		constexpr static rivet::rivet_type_id IgnoreIfUnreachable_type_id = 0x96c5564e; 
 
 		explicit Tier() = default;
 		explicit Tier([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

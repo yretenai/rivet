@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view ToggleType_type_name = "ToggleType";
-	constexpr const static rivet::rivet_type_id ToggleType_type_id = 0xf3b79606;
+	constexpr static std::string_view ToggleType_type_name = "ToggleType";
+	constexpr static rivet::rivet_type_id ToggleType_type_id = 0xf3b79606;
 
-	constexpr const static std::array<std::string_view, 3> ToggleType_values = {
+	constexpr static std::array<std::string_view, 3> ToggleType_values = {
 		"kTurnOn",
 		"kTurnOff",
 		"kToggle", 

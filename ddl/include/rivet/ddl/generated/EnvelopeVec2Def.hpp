@@ -21,31 +21,31 @@ namespace rivet::ddl::generated {
 	struct EnvelopePointVec2; 
 
 	struct RIVET_DDL_SHARED EnvelopeVec2Def : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "EnvelopeVec2Def";
-		constexpr const static rivet::rivet_type_id type_id = 0xde97da2;
+		constexpr static std::string_view type_name = "EnvelopeVec2Def";
+		constexpr static rivet::rivet_type_id type_id = 0xde97da2;
 
-		constexpr const static std::string_view CanAddOrRemovePoints_type_name = "CanAddOrRemovePoints";
-		constexpr const static rivet::rivet_type_id CanAddOrRemovePoints_type_id = 0xac589b88;
-		constexpr const static std::string_view MinX_type_name = "MinX";
-		constexpr const static rivet::rivet_type_id MinX_type_id = 0x1505f32;
-		constexpr const static std::string_view MinY_type_name = "MinY";
-		constexpr const static rivet::rivet_type_id MinY_type_id = 0x76576fa4;
-		constexpr const static std::string_view MaxX_type_name = "MaxX";
-		constexpr const static rivet::rivet_type_id MaxX_type_id = 0x13dbbb5d;
-		constexpr const static std::string_view MaxY_type_name = "MaxY";
-		constexpr const static rivet::rivet_type_id MaxY_type_id = 0x64dc8bcb;
-		constexpr const static std::string_view VisibleMinX_type_name = "VisibleMinX";
-		constexpr const static rivet::rivet_type_id VisibleMinX_type_id = 0x59cf96cd;
-		constexpr const static std::string_view VisibleMinY_type_name = "VisibleMinY";
-		constexpr const static rivet::rivet_type_id VisibleMinY_type_id = 0x2ec8a65b;
-		constexpr const static std::string_view VisibleMaxX_type_name = "VisibleMaxX";
-		constexpr const static rivet::rivet_type_id VisibleMaxX_type_id = 0x4b4472a2;
-		constexpr const static std::string_view VisibleMaxY_type_name = "VisibleMaxY";
-		constexpr const static rivet::rivet_type_id VisibleMaxY_type_id = 0x3c434234;
-		constexpr const static std::string_view DefaultPoints_type_name = "DefaultPoints";
-		constexpr const static rivet::rivet_type_id DefaultPoints_type_id = 0x7c71d118;
-		constexpr const static std::string_view Points_type_name = "Points";
-		constexpr const static rivet::rivet_type_id Points_type_id = 0x19c2c04e; 
+		constexpr static std::string_view CanAddOrRemovePoints_type_name = "CanAddOrRemovePoints";
+		constexpr static rivet::rivet_type_id CanAddOrRemovePoints_type_id = 0xac589b88;
+		constexpr static std::string_view MinX_type_name = "MinX";
+		constexpr static rivet::rivet_type_id MinX_type_id = 0x1505f32;
+		constexpr static std::string_view MinY_type_name = "MinY";
+		constexpr static rivet::rivet_type_id MinY_type_id = 0x76576fa4;
+		constexpr static std::string_view MaxX_type_name = "MaxX";
+		constexpr static rivet::rivet_type_id MaxX_type_id = 0x13dbbb5d;
+		constexpr static std::string_view MaxY_type_name = "MaxY";
+		constexpr static rivet::rivet_type_id MaxY_type_id = 0x64dc8bcb;
+		constexpr static std::string_view VisibleMinX_type_name = "VisibleMinX";
+		constexpr static rivet::rivet_type_id VisibleMinX_type_id = 0x59cf96cd;
+		constexpr static std::string_view VisibleMinY_type_name = "VisibleMinY";
+		constexpr static rivet::rivet_type_id VisibleMinY_type_id = 0x2ec8a65b;
+		constexpr static std::string_view VisibleMaxX_type_name = "VisibleMaxX";
+		constexpr static rivet::rivet_type_id VisibleMaxX_type_id = 0x4b4472a2;
+		constexpr static std::string_view VisibleMaxY_type_name = "VisibleMaxY";
+		constexpr static rivet::rivet_type_id VisibleMaxY_type_id = 0x3c434234;
+		constexpr static std::string_view DefaultPoints_type_name = "DefaultPoints";
+		constexpr static rivet::rivet_type_id DefaultPoints_type_id = 0x7c71d118;
+		constexpr static std::string_view Points_type_name = "Points";
+		constexpr static rivet::rivet_type_id Points_type_id = 0x19c2c04e; 
 
 		explicit EnvelopeVec2Def() = default;
 		explicit EnvelopeVec2Def([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

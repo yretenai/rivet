@@ -17,24 +17,24 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/DamageModifierIncomingPrius.hpp>
-#include <rivet/ddl/generated/enums/x8d7e44cf.hpp> 
+#include <rivet/ddl/generated/enums/x8d7e44cf.hpp>
+#include <rivet/ddl/generated/DamageModifierIncomingPrius.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DamageModifierAddPrius : DamageModifierIncomingPrius {
-		constexpr const static std::string_view type_name = "DamageModifierAddPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xc1294696;
+		constexpr static std::string_view type_name = "DamageModifierAddPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xc1294696;
 
-		constexpr const static std::string_view Add_type_name = "Add";
-		constexpr const static rivet::rivet_type_id Add_type_id = 0xd74f5a2e;
-		constexpr const static std::string_view AddStatus_type_name = "AddStatus";
-		constexpr const static rivet::rivet_type_id AddStatus_type_id = 0xc9da197b;
-		constexpr const static std::string_view Lifetime_type_name = "Lifetime";
-		constexpr const static rivet::rivet_type_id Lifetime_type_id = 0xc7e68df8;
-		constexpr const static std::string_view ApplyHeal_type_name = "ApplyHeal";
-		constexpr const static rivet::rivet_type_id ApplyHeal_type_id = 0xcc7e1ced;
-		constexpr const static std::string_view DamageFilter_type_name = "DamageFilter";
-		constexpr const static rivet::rivet_type_id DamageFilter_type_id = 0xa75ecb2f; 
+		constexpr static std::string_view Add_type_name = "Add";
+		constexpr static rivet::rivet_type_id Add_type_id = 0xd74f5a2e;
+		constexpr static std::string_view AddStatus_type_name = "AddStatus";
+		constexpr static rivet::rivet_type_id AddStatus_type_id = 0xc9da197b;
+		constexpr static std::string_view Lifetime_type_name = "Lifetime";
+		constexpr static rivet::rivet_type_id Lifetime_type_id = 0xc7e68df8;
+		constexpr static std::string_view ApplyHeal_type_name = "ApplyHeal";
+		constexpr static rivet::rivet_type_id ApplyHeal_type_id = 0xcc7e1ced;
+		constexpr static std::string_view DamageFilter_type_name = "DamageFilter";
+		constexpr static rivet::rivet_type_id DamageFilter_type_id = 0xa75ecb2f; 
 
 		explicit DamageModifierAddPrius() = default;
 		explicit DamageModifierAddPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

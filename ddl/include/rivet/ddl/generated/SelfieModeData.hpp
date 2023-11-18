@@ -18,17 +18,17 @@
 #include <rivet/structures/rivet_serialization.hpp>
 
 namespace rivet::ddl::generated {
-	struct AssetReferenceDef;
-	struct SelfieWeaponData; 
+	struct SelfieWeaponData;
+	struct AssetReferenceDef; 
 
 	struct RIVET_DDL_SHARED SelfieModeData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "SelfieModeData";
-		constexpr const static rivet::rivet_type_id type_id = 0x895a3c13;
+		constexpr static std::string_view type_name = "SelfieModeData";
+		constexpr static rivet::rivet_type_id type_id = 0x895a3c13;
 
-		constexpr const static std::string_view DoppelgangerActor_type_name = "DoppelgangerActor";
-		constexpr const static rivet::rivet_type_id DoppelgangerActor_type_id = 0x308e3123;
-		constexpr const static std::string_view WeaponDatas_type_name = "WeaponDatas";
-		constexpr const static rivet::rivet_type_id WeaponDatas_type_id = 0x663fea21; 
+		constexpr static std::string_view DoppelgangerActor_type_name = "DoppelgangerActor";
+		constexpr static rivet::rivet_type_id DoppelgangerActor_type_id = 0x308e3123;
+		constexpr static std::string_view WeaponDatas_type_name = "WeaponDatas";
+		constexpr static rivet::rivet_type_id WeaponDatas_type_id = 0x663fea21; 
 
 		explicit SelfieModeData() = default;
 		explicit SelfieModeData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

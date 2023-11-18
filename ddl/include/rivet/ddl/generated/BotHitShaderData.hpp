@@ -19,15 +19,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED BotHitShaderData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "BotHitShaderData";
-		constexpr const static rivet::rivet_type_id type_id = 0xcb27ef5c;
+		constexpr static std::string_view type_name = "BotHitShaderData";
+		constexpr static rivet::rivet_type_id type_id = 0xcb27ef5c;
 
-		constexpr const static std::string_view Shader_type_name = "Shader";
-		constexpr const static rivet::rivet_type_id Shader_type_id = 0xc18bd04f;
-		constexpr const static std::string_view Duration_type_name = "Duration";
-		constexpr const static rivet::rivet_type_id Duration_type_id = 0x7c5e3db0;
-		constexpr const static std::string_view UseHitShaderEvenWhenNotTakingDamage_type_name = "UseHitShaderEvenWhenNotTakingDamage";
-		constexpr const static rivet::rivet_type_id UseHitShaderEvenWhenNotTakingDamage_type_id = 0x954340f5; 
+		constexpr static std::string_view Shader_type_name = "Shader";
+		constexpr static rivet::rivet_type_id Shader_type_id = 0xc18bd04f;
+		constexpr static std::string_view Duration_type_name = "Duration";
+		constexpr static rivet::rivet_type_id Duration_type_id = 0x7c5e3db0;
+		constexpr static std::string_view UseHitShaderEvenWhenNotTakingDamage_type_name = "UseHitShaderEvenWhenNotTakingDamage";
+		constexpr static rivet::rivet_type_id UseHitShaderEvenWhenNotTakingDamage_type_id = 0x954340f5; 
 
 		explicit BotHitShaderData() = default;
 		explicit BotHitShaderData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

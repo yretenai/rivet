@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED WeakspotPrius : DamageModifierIncomingPrius {
-		constexpr const static std::string_view type_name = "WeakspotPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x527294b1;
+		constexpr static std::string_view type_name = "WeakspotPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x527294b1;
 
-		constexpr const static std::string_view DamageScale_type_name = "DamageScale";
-		constexpr const static rivet::rivet_type_id DamageScale_type_id = 0x7493bd0a;
-		constexpr const static std::string_view AddTargetLocation_type_name = "AddTargetLocation";
-		constexpr const static rivet::rivet_type_id AddTargetLocation_type_id = 0x55ae1b22; 
+		constexpr static std::string_view DamageScale_type_name = "DamageScale";
+		constexpr static rivet::rivet_type_id DamageScale_type_id = 0x7493bd0a;
+		constexpr static std::string_view AddTargetLocation_type_name = "AddTargetLocation";
+		constexpr static rivet::rivet_type_id AddTargetLocation_type_id = 0x55ae1b22; 
 
 		explicit WeakspotPrius() = default;
 		explicit WeakspotPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

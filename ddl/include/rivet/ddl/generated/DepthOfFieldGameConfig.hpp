@@ -23,15 +23,15 @@ namespace rivet::ddl::generated {
 	struct DepthOfFieldBaseSetup; 
 
 	struct RIVET_DDL_SHARED DepthOfFieldGameConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "DepthOfFieldGameConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xff62e83e;
+		constexpr static std::string_view type_name = "DepthOfFieldGameConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xff62e83e;
 
-		constexpr const static std::string_view BaseGameSetup_type_name = "BaseGameSetup";
-		constexpr const static rivet::rivet_type_id BaseGameSetup_type_id = 0x8b4fe3ad;
-		constexpr const static std::string_view CameraNearMin_type_name = "CameraNearMin";
-		constexpr const static rivet::rivet_type_id CameraNearMin_type_id = 0x11474998;
-		constexpr const static std::string_view CameraNearMax_type_name = "CameraNearMax";
-		constexpr const static rivet::rivet_type_id CameraNearMax_type_id = 0x2d4a76c1; 
+		constexpr static std::string_view BaseGameSetup_type_name = "BaseGameSetup";
+		constexpr static rivet::rivet_type_id BaseGameSetup_type_id = 0x8b4fe3ad;
+		constexpr static std::string_view CameraNearMin_type_name = "CameraNearMin";
+		constexpr static rivet::rivet_type_id CameraNearMin_type_id = 0x11474998;
+		constexpr static std::string_view CameraNearMax_type_name = "CameraNearMax";
+		constexpr static rivet::rivet_type_id CameraNearMax_type_id = 0x2d4a76c1; 
 
 		explicit DepthOfFieldGameConfig() = default;
 		explicit DepthOfFieldGameConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

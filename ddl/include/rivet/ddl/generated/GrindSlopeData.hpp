@@ -19,23 +19,23 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED GrindSlopeData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "GrindSlopeData";
-		constexpr const static rivet::rivet_type_id type_id = 0x181ea91e;
+		constexpr static std::string_view type_name = "GrindSlopeData";
+		constexpr static rivet::rivet_type_id type_id = 0x181ea91e;
 
-		constexpr const static std::string_view Gravity_type_name = "Gravity";
-		constexpr const static rivet::rivet_type_id Gravity_type_id = 0x5bf7469f;
-		constexpr const static std::string_view UphillStartDegrees_type_name = "UphillStartDegrees";
-		constexpr const static rivet::rivet_type_id UphillStartDegrees_type_id = 0x92b96ec5;
-		constexpr const static std::string_view DownhillStartDegrees_type_name = "DownhillStartDegrees";
-		constexpr const static rivet::rivet_type_id DownhillStartDegrees_type_id = 0x67faded3;
-		constexpr const static std::string_view FlatAccel_type_name = "FlatAccel";
-		constexpr const static rivet::rivet_type_id FlatAccel_type_id = 0x2ba42002;
-		constexpr const static std::string_view FlatDecel_type_name = "FlatDecel";
-		constexpr const static rivet::rivet_type_id FlatDecel_type_id = 0xc62ff0ae;
-		constexpr const static std::string_view SpeedMin_type_name = "SpeedMin";
-		constexpr const static rivet::rivet_type_id SpeedMin_type_id = 0x8a4ca0e3;
-		constexpr const static std::string_view SpeedMax_type_name = "SpeedMax";
-		constexpr const static rivet::rivet_type_id SpeedMax_type_id = 0xb6419fba; 
+		constexpr static std::string_view Gravity_type_name = "Gravity";
+		constexpr static rivet::rivet_type_id Gravity_type_id = 0x5bf7469f;
+		constexpr static std::string_view UphillStartDegrees_type_name = "UphillStartDegrees";
+		constexpr static rivet::rivet_type_id UphillStartDegrees_type_id = 0x92b96ec5;
+		constexpr static std::string_view DownhillStartDegrees_type_name = "DownhillStartDegrees";
+		constexpr static rivet::rivet_type_id DownhillStartDegrees_type_id = 0x67faded3;
+		constexpr static std::string_view FlatAccel_type_name = "FlatAccel";
+		constexpr static rivet::rivet_type_id FlatAccel_type_id = 0x2ba42002;
+		constexpr static std::string_view FlatDecel_type_name = "FlatDecel";
+		constexpr static rivet::rivet_type_id FlatDecel_type_id = 0xc62ff0ae;
+		constexpr static std::string_view SpeedMin_type_name = "SpeedMin";
+		constexpr static rivet::rivet_type_id SpeedMin_type_id = 0x8a4ca0e3;
+		constexpr static std::string_view SpeedMax_type_name = "SpeedMax";
+		constexpr static rivet::rivet_type_id SpeedMax_type_id = 0xb6419fba; 
 
 		explicit GrindSlopeData() = default;
 		explicit GrindSlopeData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

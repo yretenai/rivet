@@ -3,8 +3,8 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/TriggerEffectKeyFrameBlendLinear.hpp>
-#include <rivet/ddl/generated/TriggerEffectKeyFrameBlendSnap.hpp> 
+#include <rivet/ddl/generated/TriggerEffectKeyFrameBlendSnap.hpp>
+#include <rivet/ddl/generated/TriggerEffectKeyFrameBlendLinear.hpp> 
 
 #include <rivet/ddl/generated/TriggerEffectKeyFrameBlendBase.hpp>
 

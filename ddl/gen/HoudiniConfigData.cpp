@@ -3,11 +3,11 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/HoudiniConfigDataFileGroup.hpp>
-#include <rivet/ddl/generated/HoudiniConfigDataString.hpp>
 #include <rivet/ddl/generated/HoudiniConfigDataFloat.hpp>
+#include <rivet/ddl/generated/HoudiniConfigDataFile.hpp>
+#include <rivet/ddl/generated/HoudiniConfigDataFileGroup.hpp>
 #include <rivet/ddl/generated/HoudiniConfigDataInteger.hpp>
-#include <rivet/ddl/generated/HoudiniConfigDataFile.hpp> 
+#include <rivet/ddl/generated/HoudiniConfigDataString.hpp> 
 
 #include <rivet/ddl/generated/HoudiniConfigData.hpp>
 

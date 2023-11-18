@@ -21,27 +21,27 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED NefariousFinaleLaserArmPrius : NefariousFinaleWeaponPrius {
-		constexpr const static std::string_view type_name = "NefariousFinaleLaserArmPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x8ab62350;
+		constexpr static std::string_view type_name = "NefariousFinaleLaserArmPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x8ab62350;
 
-		constexpr const static std::string_view AimRefX_type_name = "AimRefX";
-		constexpr const static rivet::rivet_type_id AimRefX_type_id = 0x8611cd7c;
-		constexpr const static std::string_view AimRefY_type_name = "AimRefY";
-		constexpr const static rivet::rivet_type_id AimRefY_type_id = 0xf116fdea;
-		constexpr const static std::string_view AimRefZ_type_name = "AimRefZ";
-		constexpr const static rivet::rivet_type_id AimRefZ_type_id = 0x681fac50;
-		constexpr const static std::string_view AimMinH_type_name = "AimMinH";
-		constexpr const static rivet::rivet_type_id AimMinH_type_id = 0x521fe9bd;
-		constexpr const static std::string_view AimCenterH_type_name = "AimCenterH";
-		constexpr const static rivet::rivet_type_id AimCenterH_type_id = 0x79200f63;
-		constexpr const static std::string_view AimMaxH_type_name = "AimMaxH";
-		constexpr const static rivet::rivet_type_id AimMaxH_type_id = 0x40940dd2;
-		constexpr const static std::string_view AimMinV_type_name = "AimMinV";
-		constexpr const static rivet::rivet_type_id AimMinV_type_id = 0xa810d4de;
-		constexpr const static std::string_view AimCenterV_type_name = "AimCenterV";
-		constexpr const static rivet::rivet_type_id AimCenterV_type_id = 0x832f3200;
-		constexpr const static std::string_view AimMaxV_type_name = "AimMaxV";
-		constexpr const static rivet::rivet_type_id AimMaxV_type_id = 0xba9b30b1; 
+		constexpr static std::string_view AimRefX_type_name = "AimRefX";
+		constexpr static rivet::rivet_type_id AimRefX_type_id = 0x8611cd7c;
+		constexpr static std::string_view AimRefY_type_name = "AimRefY";
+		constexpr static rivet::rivet_type_id AimRefY_type_id = 0xf116fdea;
+		constexpr static std::string_view AimRefZ_type_name = "AimRefZ";
+		constexpr static rivet::rivet_type_id AimRefZ_type_id = 0x681fac50;
+		constexpr static std::string_view AimMinH_type_name = "AimMinH";
+		constexpr static rivet::rivet_type_id AimMinH_type_id = 0x521fe9bd;
+		constexpr static std::string_view AimCenterH_type_name = "AimCenterH";
+		constexpr static rivet::rivet_type_id AimCenterH_type_id = 0x79200f63;
+		constexpr static std::string_view AimMaxH_type_name = "AimMaxH";
+		constexpr static rivet::rivet_type_id AimMaxH_type_id = 0x40940dd2;
+		constexpr static std::string_view AimMinV_type_name = "AimMinV";
+		constexpr static rivet::rivet_type_id AimMinV_type_id = 0xa810d4de;
+		constexpr static std::string_view AimCenterV_type_name = "AimCenterV";
+		constexpr static rivet::rivet_type_id AimCenterV_type_id = 0x832f3200;
+		constexpr static std::string_view AimMaxV_type_name = "AimMaxV";
+		constexpr static rivet::rivet_type_id AimMaxV_type_id = 0xba9b30b1; 
 
 		explicit NefariousFinaleLaserArmPrius() = default;
 		explicit NefariousFinaleLaserArmPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

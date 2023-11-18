@@ -3,9 +3,9 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/FreezeShaderData.hpp>
+#include <rivet/ddl/generated/FreezeSlideData.hpp>
 #include <rivet/ddl/generated/FreezeShatterData.hpp>
-#include <rivet/ddl/generated/FreezeSlideData.hpp> 
+#include <rivet/ddl/generated/FreezeShaderData.hpp> 
 
 #include <rivet/ddl/generated/StatusEffectFreezeConfig.hpp>
 

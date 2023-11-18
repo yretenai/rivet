@@ -19,13 +19,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED WwiseSoundEvent : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "WwiseSoundEvent";
-		constexpr const static rivet::rivet_type_id type_id = 0xcebb3bc3;
+		constexpr static std::string_view type_name = "WwiseSoundEvent";
+		constexpr static rivet::rivet_type_id type_id = 0xcebb3bc3;
 
-		constexpr const static std::string_view SoundEventName_type_name = "SoundEventName";
-		constexpr const static rivet::rivet_type_id SoundEventName_type_id = 0x9c64655a;
-		constexpr const static std::string_view SoundEventId_type_name = "SoundEventId";
-		constexpr const static rivet::rivet_type_id SoundEventId_type_id = 0x813c2830; 
+		constexpr static std::string_view SoundEventName_type_name = "SoundEventName";
+		constexpr static rivet::rivet_type_id SoundEventName_type_id = 0x9c64655a;
+		constexpr static std::string_view SoundEventId_type_name = "SoundEventId";
+		constexpr static rivet::rivet_type_id SoundEventId_type_id = 0x813c2830; 
 
 		explicit WwiseSoundEvent() = default;
 		explicit WwiseSoundEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

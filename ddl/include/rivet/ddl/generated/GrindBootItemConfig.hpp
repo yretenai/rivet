@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED GrindBootItemConfig : GadgetItemConfig {
-		constexpr const static std::string_view type_name = "GrindBootItemConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x21ae0864;
+		constexpr static std::string_view type_name = "GrindBootItemConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x21ae0864;
 
 		explicit GrindBootItemConfig() = default;
 		explicit GrindBootItemConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

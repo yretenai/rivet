@@ -23,15 +23,15 @@ namespace rivet::ddl::generated {
 	struct LocalOffsetElevationData; 
 
 	struct RIVET_DDL_SHARED ComponentEmitterLocalOffsetElevationPrius : ComponentEmitterBasePrius {
-		constexpr const static std::string_view type_name = "ComponentEmitterLocalOffsetElevationPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xf655356e;
+		constexpr static std::string_view type_name = "ComponentEmitterLocalOffsetElevationPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xf655356e;
 
-		constexpr const static std::string_view EmitFromUser_type_name = "EmitFromUser";
-		constexpr const static rivet::rivet_type_id EmitFromUser_type_id = 0x13b721db;
-		constexpr const static std::string_view UseWorldUp_type_name = "UseWorldUp";
-		constexpr const static rivet::rivet_type_id UseWorldUp_type_id = 0x4cdc032f;
-		constexpr const static std::string_view ElevationData_type_name = "ElevationData";
-		constexpr const static rivet::rivet_type_id ElevationData_type_id = 0x5a54d72f; 
+		constexpr static std::string_view EmitFromUser_type_name = "EmitFromUser";
+		constexpr static rivet::rivet_type_id EmitFromUser_type_id = 0x13b721db;
+		constexpr static std::string_view UseWorldUp_type_name = "UseWorldUp";
+		constexpr static rivet::rivet_type_id UseWorldUp_type_id = 0x4cdc032f;
+		constexpr static std::string_view ElevationData_type_name = "ElevationData";
+		constexpr static rivet::rivet_type_id ElevationData_type_id = 0x5a54d72f; 
 
 		explicit ComponentEmitterLocalOffsetElevationPrius() = default;
 		explicit ComponentEmitterLocalOffsetElevationPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED LogoCustomData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "LogoCustomData";
-		constexpr const static rivet::rivet_type_id type_id = 0xd26aab35;
+		constexpr static std::string_view type_name = "LogoCustomData";
+		constexpr static rivet::rivet_type_id type_id = 0xd26aab35;
 
-		constexpr const static std::string_view LogoImage_type_name = "LogoImage";
-		constexpr const static rivet::rivet_type_id LogoImage_type_id = 0xa20558a7;
-		constexpr const static std::string_view Languages_type_name = "Languages";
-		constexpr const static rivet::rivet_type_id Languages_type_id = 0x222ccc75; 
+		constexpr static std::string_view LogoImage_type_name = "LogoImage";
+		constexpr static rivet::rivet_type_id LogoImage_type_id = 0xa20558a7;
+		constexpr static std::string_view Languages_type_name = "Languages";
+		constexpr static rivet::rivet_type_id Languages_type_id = 0x222ccc75; 
 
 		explicit LogoCustomData() = default;
 		explicit LogoCustomData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

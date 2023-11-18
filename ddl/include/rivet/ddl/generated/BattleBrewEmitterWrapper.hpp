@@ -21,11 +21,11 @@ namespace rivet::ddl::generated {
 	struct BattleBrewEmitterBasePrius; 
 
 	struct RIVET_DDL_SHARED BattleBrewEmitterWrapper : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "BattleBrewEmitterWrapper";
-		constexpr const static rivet::rivet_type_id type_id = 0xd6e1b5ce;
+		constexpr static std::string_view type_name = "BattleBrewEmitterWrapper";
+		constexpr static rivet::rivet_type_id type_id = 0xd6e1b5ce;
 
-		constexpr const static std::string_view Emitter_type_name = "Emitter";
-		constexpr const static rivet::rivet_type_id Emitter_type_id = 0x7464ae09; 
+		constexpr static std::string_view Emitter_type_name = "Emitter";
+		constexpr static rivet::rivet_type_id Emitter_type_id = 0x7464ae09; 
 
 		explicit BattleBrewEmitterWrapper() = default;
 		explicit BattleBrewEmitterWrapper([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

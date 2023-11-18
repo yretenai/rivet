@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED Cinematic2BuildConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "Cinematic2BuildConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xc450068;
+		constexpr static std::string_view type_name = "Cinematic2BuildConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xc450068;
 
-		constexpr const static std::string_view MaxNonStreamedSize_type_name = "MaxNonStreamedSize";
-		constexpr const static rivet::rivet_type_id MaxNonStreamedSize_type_id = 0xd79ef716; 
+		constexpr static std::string_view MaxNonStreamedSize_type_name = "MaxNonStreamedSize";
+		constexpr static rivet::rivet_type_id MaxNonStreamedSize_type_id = 0xd79ef716; 
 
 		explicit Cinematic2BuildConfig() = default;
 		explicit Cinematic2BuildConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

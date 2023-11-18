@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED SingleShotFiringPrius : BasicShotFiringPrius {
-		constexpr const static std::string_view type_name = "SingleShotFiringPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xc7f154f5;
+		constexpr static std::string_view type_name = "SingleShotFiringPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xc7f154f5;
 
-		constexpr const static std::string_view CullRemoteShots_type_name = "CullRemoteShots";
-		constexpr const static rivet::rivet_type_id CullRemoteShots_type_id = 0xe3b60c8e; 
+		constexpr static std::string_view CullRemoteShots_type_name = "CullRemoteShots";
+		constexpr static rivet::rivet_type_id CullRemoteShots_type_id = 0xe3b60c8e; 
 
 		explicit SingleShotFiringPrius() = default;
 		explicit SingleShotFiringPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

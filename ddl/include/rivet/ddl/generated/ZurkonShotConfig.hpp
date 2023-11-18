@@ -23,13 +23,13 @@ namespace rivet::ddl::generated {
 	struct BasicBulletPrius; 
 
 	struct RIVET_DDL_SHARED ZurkonShotConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "ZurkonShotConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xcf7252e4;
+		constexpr static std::string_view type_name = "ZurkonShotConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xcf7252e4;
 
-		constexpr const static std::string_view ShotActor_type_name = "ShotActor";
-		constexpr const static rivet::rivet_type_id ShotActor_type_id = 0xf3287;
-		constexpr const static std::string_view ShotPrius_type_name = "ShotPrius";
-		constexpr const static rivet::rivet_type_id ShotPrius_type_id = 0x66fe4621; 
+		constexpr static std::string_view ShotActor_type_name = "ShotActor";
+		constexpr static rivet::rivet_type_id ShotActor_type_id = 0xf3287;
+		constexpr static std::string_view ShotPrius_type_name = "ShotPrius";
+		constexpr static rivet::rivet_type_id ShotPrius_type_id = 0x66fe4621; 
 
 		explicit ZurkonShotConfig() = default;
 		explicit ZurkonShotConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

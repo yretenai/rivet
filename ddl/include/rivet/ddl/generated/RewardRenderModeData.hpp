@@ -21,15 +21,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED RewardRenderModeData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "RewardRenderModeData";
-		constexpr const static rivet::rivet_type_id type_id = 0x8dc86b7;
+		constexpr static std::string_view type_name = "RewardRenderModeData";
+		constexpr static rivet::rivet_type_id type_id = 0x8dc86b7;
 
-		constexpr const static std::string_view Name_type_name = "Name";
-		constexpr const static rivet::rivet_type_id Name_type_id = 0x6eb3beb6;
-		constexpr const static std::string_view Pack_type_name = "Pack";
-		constexpr const static rivet::rivet_type_id Pack_type_id = 0xa74e9e93;
-		constexpr const static std::string_view EnableIn3DUI_type_name = "EnableIn3DUI";
-		constexpr const static rivet::rivet_type_id EnableIn3DUI_type_id = 0x4be6f8ed; 
+		constexpr static std::string_view Name_type_name = "Name";
+		constexpr static rivet::rivet_type_id Name_type_id = 0x6eb3beb6;
+		constexpr static std::string_view Pack_type_name = "Pack";
+		constexpr static rivet::rivet_type_id Pack_type_id = 0xa74e9e93;
+		constexpr static std::string_view EnableIn3DUI_type_name = "EnableIn3DUI";
+		constexpr static rivet::rivet_type_id EnableIn3DUI_type_id = 0x4be6f8ed; 
 
 		explicit RewardRenderModeData() = default;
 		explicit RewardRenderModeData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

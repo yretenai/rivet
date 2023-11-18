@@ -23,13 +23,13 @@ namespace rivet::ddl::generated {
 	struct SkinItemTextureOverride; 
 
 	struct RIVET_DDL_SHARED SkinItemTextureOverrideListElement : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "SkinItemTextureOverrideListElement";
-		constexpr const static rivet::rivet_type_id type_id = 0x499a948d;
+		constexpr static std::string_view type_name = "SkinItemTextureOverrideListElement";
+		constexpr static rivet::rivet_type_id type_id = 0x499a948d;
 
-		constexpr const static std::string_view Available_type_name = "Available";
-		constexpr const static rivet::rivet_type_id Available_type_id = 0x27723b89;
-		constexpr const static std::string_view TextureOverride_type_name = "TextureOverride";
-		constexpr const static rivet::rivet_type_id TextureOverride_type_id = 0xe2b74ca6; 
+		constexpr static std::string_view Available_type_name = "Available";
+		constexpr static rivet::rivet_type_id Available_type_id = 0x27723b89;
+		constexpr static std::string_view TextureOverride_type_name = "TextureOverride";
+		constexpr static rivet::rivet_type_id TextureOverride_type_id = 0xe2b74ca6; 
 
 		explicit SkinItemTextureOverrideListElement() = default;
 		explicit SkinItemTextureOverrideListElement([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

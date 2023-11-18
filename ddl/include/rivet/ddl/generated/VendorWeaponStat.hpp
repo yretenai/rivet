@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED VendorWeaponStat : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "VendorWeaponStat";
-		constexpr const static rivet::rivet_type_id type_id = 0xe602315e;
+		constexpr static std::string_view type_name = "VendorWeaponStat";
+		constexpr static rivet::rivet_type_id type_id = 0xe602315e;
 
-		constexpr const static std::string_view Type_type_name = "Type";
-		constexpr const static rivet::rivet_type_id Type_type_id = 0xbc4e9799;
-		constexpr const static std::string_view Val_type_name = "Val";
-		constexpr const static rivet::rivet_type_id Val_type_id = 0xbd8a93ac; 
+		constexpr static std::string_view Type_type_name = "Type";
+		constexpr static rivet::rivet_type_id Type_type_id = 0xbc4e9799;
+		constexpr static std::string_view Val_type_name = "Val";
+		constexpr static rivet::rivet_type_id Val_type_id = 0xbd8a93ac; 
 
 		explicit VendorWeaponStat() = default;
 		explicit VendorWeaponStat([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

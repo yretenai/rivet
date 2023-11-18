@@ -21,15 +21,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED UIFontMapping : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "UIFontMapping";
-		constexpr const static rivet::rivet_type_id type_id = 0x83816584;
+		constexpr static std::string_view type_name = "UIFontMapping";
+		constexpr static rivet::rivet_type_id type_id = 0x83816584;
 
-		constexpr const static std::string_view Language_type_name = "Language";
-		constexpr const static rivet::rivet_type_id Language_type_id = 0x2edaccc5;
-		constexpr const static std::string_view Font_type_name = "Font";
-		constexpr const static rivet::rivet_type_id Font_type_id = 0xe004c862;
-		constexpr const static std::string_view FontsToReplace_type_name = "FontsToReplace";
-		constexpr const static rivet::rivet_type_id FontsToReplace_type_id = 0x34a083a1; 
+		constexpr static std::string_view Language_type_name = "Language";
+		constexpr static rivet::rivet_type_id Language_type_id = 0x2edaccc5;
+		constexpr static std::string_view Font_type_name = "Font";
+		constexpr static rivet::rivet_type_id Font_type_id = 0xe004c862;
+		constexpr static std::string_view FontsToReplace_type_name = "FontsToReplace";
+		constexpr static rivet::rivet_type_id FontsToReplace_type_id = 0x34a083a1; 
 
 		explicit UIFontMapping() = default;
 		explicit UIFontMapping([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

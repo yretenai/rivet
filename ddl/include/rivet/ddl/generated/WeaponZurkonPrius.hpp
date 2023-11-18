@@ -21,17 +21,17 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED WeaponZurkonPrius : WeaponGamePrius {
-		constexpr const static std::string_view type_name = "WeaponZurkonPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xcd7e9f43;
+		constexpr static std::string_view type_name = "WeaponZurkonPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xcd7e9f43;
 
-		constexpr const static std::string_view ZurkonActor_type_name = "ZurkonActor";
-		constexpr const static rivet::rivet_type_id ZurkonActor_type_id = 0xb5f42fe4;
-		constexpr const static std::string_view ZurkonJrActor_type_name = "ZurkonJrActor";
-		constexpr const static rivet::rivet_type_id ZurkonJrActor_type_id = 0x20baa805;
-		constexpr const static std::string_view ZurkonShotConfig_type_name = "ZurkonShotConfig";
-		constexpr const static rivet::rivet_type_id ZurkonShotConfig_type_id = 0xcf7252e4;
-		constexpr const static std::string_view ZurkonVOConfig_type_name = "ZurkonVOConfig";
-		constexpr const static rivet::rivet_type_id ZurkonVOConfig_type_id = 0x504751ce; 
+		constexpr static std::string_view ZurkonActor_type_name = "ZurkonActor";
+		constexpr static rivet::rivet_type_id ZurkonActor_type_id = 0xb5f42fe4;
+		constexpr static std::string_view ZurkonJrActor_type_name = "ZurkonJrActor";
+		constexpr static rivet::rivet_type_id ZurkonJrActor_type_id = 0x20baa805;
+		constexpr static std::string_view ZurkonShotConfig_type_name = "ZurkonShotConfig";
+		constexpr static rivet::rivet_type_id ZurkonShotConfig_type_id = 0xcf7252e4;
+		constexpr static std::string_view ZurkonVOConfig_type_name = "ZurkonVOConfig";
+		constexpr static rivet::rivet_type_id ZurkonVOConfig_type_id = 0x504751ce; 
 
 		explicit WeaponZurkonPrius() = default;
 		explicit WeaponZurkonPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

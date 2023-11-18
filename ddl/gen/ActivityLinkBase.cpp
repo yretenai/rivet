@@ -3,14 +3,14 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/RYNOPlanLink.hpp>
-#include <rivet/ddl/generated/GoldBoltLink.hpp>
-#include <rivet/ddl/generated/PlanetLink.hpp>
-#include <rivet/ddl/generated/ObjectiveLink.hpp>
-#include <rivet/ddl/generated/MissionLink.hpp>
-#include <rivet/ddl/generated/ParentLink.hpp>
+#include <rivet/ddl/generated/DebugLink.hpp>
 #include <rivet/ddl/generated/DimensionLink.hpp>
-#include <rivet/ddl/generated/DebugLink.hpp> 
+#include <rivet/ddl/generated/ParentLink.hpp>
+#include <rivet/ddl/generated/MissionLink.hpp>
+#include <rivet/ddl/generated/RYNOPlanLink.hpp>
+#include <rivet/ddl/generated/ObjectiveLink.hpp>
+#include <rivet/ddl/generated/PlanetLink.hpp>
+#include <rivet/ddl/generated/GoldBoltLink.hpp> 
 
 #include <rivet/ddl/generated/ActivityLinkBase.hpp>
 

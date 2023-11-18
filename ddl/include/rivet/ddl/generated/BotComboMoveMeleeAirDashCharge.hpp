@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct AirDashChargeData; 
 
 	struct RIVET_DDL_SHARED BotComboMoveMeleeAirDashCharge : BotComboMove {
-		constexpr const static std::string_view type_name = "BotComboMoveMeleeAirDashCharge";
-		constexpr const static rivet::rivet_type_id type_id = 0xec9324aa;
+		constexpr static std::string_view type_name = "BotComboMoveMeleeAirDashCharge";
+		constexpr static rivet::rivet_type_id type_id = 0xec9324aa;
 
-		constexpr const static std::string_view AirDashChargeData_type_name = "AirDashChargeData";
-		constexpr const static rivet::rivet_type_id AirDashChargeData_type_id = 0x91fe45bc; 
+		constexpr static std::string_view AirDashChargeData_type_name = "AirDashChargeData";
+		constexpr static rivet::rivet_type_id AirDashChargeData_type_id = 0x91fe45bc; 
 
 		explicit BotComboMoveMeleeAirDashCharge() = default;
 		explicit BotComboMoveMeleeAirDashCharge([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

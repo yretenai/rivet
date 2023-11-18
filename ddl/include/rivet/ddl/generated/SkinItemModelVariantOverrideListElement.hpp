@@ -17,26 +17,26 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/enums/x7ecfc969.hpp>
-#include <rivet/ddl/generated/enums/x5d60d87e.hpp> 
+#include <rivet/ddl/generated/enums/x5d60d87e.hpp>
+#include <rivet/ddl/generated/enums/x7ecfc969.hpp> 
 
 namespace rivet::ddl::generated {
 	struct SkinItemModelVariantOverride; 
 
 	struct RIVET_DDL_SHARED SkinItemModelVariantOverrideListElement : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "SkinItemModelVariantOverrideListElement";
-		constexpr const static rivet::rivet_type_id type_id = 0xf686ae9;
+		constexpr static std::string_view type_name = "SkinItemModelVariantOverrideListElement";
+		constexpr static rivet::rivet_type_id type_id = 0xf686ae9;
 
-		constexpr const static std::string_view DebugName_type_name = "DebugName";
-		constexpr const static rivet::rivet_type_id DebugName_type_id = 0x4ef19112;
-		constexpr const static std::string_view NameLocTag_type_name = "NameLocTag";
-		constexpr const static rivet::rivet_type_id NameLocTag_type_id = 0xa0041b54;
-		constexpr const static std::string_view Available_type_name = "Available";
-		constexpr const static rivet::rivet_type_id Available_type_id = 0x27723b89;
-		constexpr const static std::string_view BodyType_type_name = "BodyType";
-		constexpr const static rivet::rivet_type_id BodyType_type_id = 0x1a1c112a;
-		constexpr const static std::string_view ModelVariantOverride_type_name = "ModelVariantOverride";
-		constexpr const static rivet::rivet_type_id ModelVariantOverride_type_id = 0x53cc5880; 
+		constexpr static std::string_view DebugName_type_name = "DebugName";
+		constexpr static rivet::rivet_type_id DebugName_type_id = 0x4ef19112;
+		constexpr static std::string_view NameLocTag_type_name = "NameLocTag";
+		constexpr static rivet::rivet_type_id NameLocTag_type_id = 0xa0041b54;
+		constexpr static std::string_view Available_type_name = "Available";
+		constexpr static rivet::rivet_type_id Available_type_id = 0x27723b89;
+		constexpr static std::string_view BodyType_type_name = "BodyType";
+		constexpr static rivet::rivet_type_id BodyType_type_id = 0x1a1c112a;
+		constexpr static std::string_view ModelVariantOverride_type_name = "ModelVariantOverride";
+		constexpr static rivet::rivet_type_id ModelVariantOverride_type_id = 0x53cc5880; 
 
 		explicit SkinItemModelVariantOverrideListElement() = default;
 		explicit SkinItemModelVariantOverrideListElement([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

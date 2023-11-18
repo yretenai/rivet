@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct SteeringPartnerCurveConfig; 
 
 	struct RIVET_DDL_SHARED BotConfigModifyMovement : ConfigBase {
-		constexpr const static std::string_view type_name = "BotConfigModifyMovement";
-		constexpr const static rivet::rivet_type_id type_id = 0x9397a4a2;
+		constexpr static std::string_view type_name = "BotConfigModifyMovement";
+		constexpr static rivet::rivet_type_id type_id = 0x9397a4a2;
 
-		constexpr const static std::string_view SteeringPartnerCurveConfig_type_name = "SteeringPartnerCurveConfig";
-		constexpr const static rivet::rivet_type_id SteeringPartnerCurveConfig_type_id = 0x75fa7dfb; 
+		constexpr static std::string_view SteeringPartnerCurveConfig_type_name = "SteeringPartnerCurveConfig";
+		constexpr static rivet::rivet_type_id SteeringPartnerCurveConfig_type_id = 0x75fa7dfb; 
 
 		explicit BotConfigModifyMovement() = default;
 		explicit BotConfigModifyMovement([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -21,11 +21,11 @@ namespace rivet::ddl::generated {
 	struct ComponentEmitterBasePrius; 
 
 	struct RIVET_DDL_SHARED WeaponEmitterDataListItem : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "WeaponEmitterDataListItem";
-		constexpr const static rivet::rivet_type_id type_id = 0x683c3551;
+		constexpr static std::string_view type_name = "WeaponEmitterDataListItem";
+		constexpr static rivet::rivet_type_id type_id = 0x683c3551;
 
-		constexpr const static std::string_view Emitter_type_name = "Emitter";
-		constexpr const static rivet::rivet_type_id Emitter_type_id = 0x7464ae09; 
+		constexpr static std::string_view Emitter_type_name = "Emitter";
+		constexpr static rivet::rivet_type_id Emitter_type_id = 0x7464ae09; 
 
 		explicit WeaponEmitterDataListItem() = default;
 		explicit WeaponEmitterDataListItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

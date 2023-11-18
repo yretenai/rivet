@@ -19,13 +19,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED SteeringConfig : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "SteeringConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x153a00dc;
+		constexpr static std::string_view type_name = "SteeringConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x153a00dc;
 
-		constexpr const static std::string_view AlwaysUseAccel_type_name = "AlwaysUseAccel";
-		constexpr const static rivet::rivet_type_id AlwaysUseAccel_type_id = 0xc6e2b259;
-		constexpr const static std::string_view UseNavPositionTrackerQueries_type_name = "UseNavPositionTrackerQueries";
-		constexpr const static rivet::rivet_type_id UseNavPositionTrackerQueries_type_id = 0x617c7319; 
+		constexpr static std::string_view AlwaysUseAccel_type_name = "AlwaysUseAccel";
+		constexpr static rivet::rivet_type_id AlwaysUseAccel_type_id = 0xc6e2b259;
+		constexpr static std::string_view UseNavPositionTrackerQueries_type_name = "UseNavPositionTrackerQueries";
+		constexpr static rivet::rivet_type_id UseNavPositionTrackerQueries_type_id = 0x617c7319; 
 
 		explicit SteeringConfig() = default;
 		explicit SteeringConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

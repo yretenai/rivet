@@ -3,10 +3,10 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/ImpactExplosion.hpp>
-#include <rivet/ddl/generated/ProximityExplosion.hpp>
+#include <rivet/ddl/generated/TimedExplosion.hpp>
 #include <rivet/ddl/generated/FuseExplosion.hpp>
-#include <rivet/ddl/generated/TimedExplosion.hpp> 
+#include <rivet/ddl/generated/ProximityExplosion.hpp>
+#include <rivet/ddl/generated/ImpactExplosion.hpp> 
 
 #include <rivet/ddl/generated/GrenadeExplosionMode.hpp>
 

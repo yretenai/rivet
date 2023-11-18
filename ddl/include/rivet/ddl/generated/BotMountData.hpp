@@ -22,17 +22,17 @@ namespace rivet::ddl::generated {
 	struct BotMovementBase; 
 
 	struct RIVET_DDL_SHARED BotMountData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "BotMountData";
-		constexpr const static rivet::rivet_type_id type_id = 0xcad349cb;
+		constexpr static std::string_view type_name = "BotMountData";
+		constexpr static rivet::rivet_type_id type_id = 0xcad349cb;
 
-		constexpr const static std::string_view LocatorAttachName_type_name = "LocatorAttachName";
-		constexpr const static rivet::rivet_type_id LocatorAttachName_type_id = 0x34512725;
-		constexpr const static std::string_view RiderAttachAnimName_type_name = "RiderAttachAnimName";
-		constexpr const static rivet::rivet_type_id RiderAttachAnimName_type_id = 0xd1dc7387;
-		constexpr const static std::string_view MountMovementData_type_name = "MountMovementData";
-		constexpr const static rivet::rivet_type_id MountMovementData_type_id = 0x5ee2fade;
-		constexpr const static std::string_view TouchDamageData_type_name = "TouchDamageData";
-		constexpr const static rivet::rivet_type_id TouchDamageData_type_id = 0x4291d5f0; 
+		constexpr static std::string_view LocatorAttachName_type_name = "LocatorAttachName";
+		constexpr static rivet::rivet_type_id LocatorAttachName_type_id = 0x34512725;
+		constexpr static std::string_view RiderAttachAnimName_type_name = "RiderAttachAnimName";
+		constexpr static rivet::rivet_type_id RiderAttachAnimName_type_id = 0xd1dc7387;
+		constexpr static std::string_view MountMovementData_type_name = "MountMovementData";
+		constexpr static rivet::rivet_type_id MountMovementData_type_id = 0x5ee2fade;
+		constexpr static std::string_view TouchDamageData_type_name = "TouchDamageData";
+		constexpr static rivet::rivet_type_id TouchDamageData_type_id = 0x4291d5f0; 
 
 		explicit BotMountData() = default;
 		explicit BotMountData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

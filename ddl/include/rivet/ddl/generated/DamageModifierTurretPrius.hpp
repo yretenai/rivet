@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DamageModifierTurretPrius : DamageModifierIncomingPrius {
-		constexpr const static std::string_view type_name = "DamageModifierTurretPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x1ea5416d;
+		constexpr static std::string_view type_name = "DamageModifierTurretPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x1ea5416d;
 
 		explicit DamageModifierTurretPrius() = default;
 		explicit DamageModifierTurretPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

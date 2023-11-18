@@ -17,16 +17,16 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/DamageModifierIncomingPrius.hpp>
-#include <rivet/ddl/generated/bitsets/x8b303a8b.hpp> 
+#include <rivet/ddl/generated/bitsets/x8b303a8b.hpp>
+#include <rivet/ddl/generated/DamageModifierIncomingPrius.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DamageModifierIncomingAllowKnockbackPrius : DamageModifierIncomingPrius {
-		constexpr const static std::string_view type_name = "DamageModifierIncomingAllowKnockbackPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xafa63b41;
+		constexpr static std::string_view type_name = "DamageModifierIncomingAllowKnockbackPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xafa63b41;
 
-		constexpr const static std::string_view AllowedKnockbacks_type_name = "AllowedKnockbacks";
-		constexpr const static rivet::rivet_type_id AllowedKnockbacks_type_id = 0xe6b0ab90; 
+		constexpr static std::string_view AllowedKnockbacks_type_name = "AllowedKnockbacks";
+		constexpr static rivet::rivet_type_id AllowedKnockbacks_type_id = 0xe6b0ab90; 
 
 		explicit DamageModifierIncomingAllowKnockbackPrius() = default;
 		explicit DamageModifierIncomingAllowKnockbackPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

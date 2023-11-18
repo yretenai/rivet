@@ -19,17 +19,17 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DebugNewGamePlaytest : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "DebugNewGamePlaytest";
-		constexpr const static rivet::rivet_type_id type_id = 0x7241bb8e;
+		constexpr static std::string_view type_name = "DebugNewGamePlaytest";
+		constexpr static rivet::rivet_type_id type_id = 0x7241bb8e;
 
-		constexpr const static std::string_view PlaytestName_type_name = "PlaytestName";
-		constexpr const static rivet::rivet_type_id PlaytestName_type_id = 0xbdfaa48;
-		constexpr const static std::string_view UseChallengeMode_type_name = "UseChallengeMode";
-		constexpr const static rivet::rivet_type_id UseChallengeMode_type_id = 0xc801de1f;
-		constexpr const static std::string_view IsDemo_type_name = "IsDemo";
-		constexpr const static rivet::rivet_type_id IsDemo_type_id = 0x490784cb;
-		constexpr const static std::string_view DemoName_type_name = "DemoName";
-		constexpr const static rivet::rivet_type_id DemoName_type_id = 0x62515d26; 
+		constexpr static std::string_view PlaytestName_type_name = "PlaytestName";
+		constexpr static rivet::rivet_type_id PlaytestName_type_id = 0xbdfaa48;
+		constexpr static std::string_view UseChallengeMode_type_name = "UseChallengeMode";
+		constexpr static rivet::rivet_type_id UseChallengeMode_type_id = 0xc801de1f;
+		constexpr static std::string_view IsDemo_type_name = "IsDemo";
+		constexpr static rivet::rivet_type_id IsDemo_type_id = 0x490784cb;
+		constexpr static std::string_view DemoName_type_name = "DemoName";
+		constexpr static rivet::rivet_type_id DemoName_type_id = 0x62515d26; 
 
 		explicit DebugNewGamePlaytest() = default;
 		explicit DebugNewGamePlaytest([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

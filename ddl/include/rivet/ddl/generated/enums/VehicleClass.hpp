@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view VehicleClass_type_name = "VehicleClass";
-	constexpr const static rivet::rivet_type_id VehicleClass_type_id = 0xc0bc4d5c;
+	constexpr static std::string_view VehicleClass_type_name = "VehicleClass";
+	constexpr static rivet::rivet_type_id VehicleClass_type_id = 0xc0bc4d5c;
 
-	constexpr const static std::array<std::string_view, 4> VehicleClass_values = {
+	constexpr static std::array<std::string_view, 4> VehicleClass_values = {
 		"kNormalCar",
 		"kTallCar",
 		"kWideCar",

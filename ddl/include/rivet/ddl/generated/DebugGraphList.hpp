@@ -19,11 +19,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DebugGraphList : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "DebugGraphList";
-		constexpr const static rivet::rivet_type_id type_id = 0x63f0f436;
+		constexpr static std::string_view type_name = "DebugGraphList";
+		constexpr static rivet::rivet_type_id type_id = 0x63f0f436;
 
-		constexpr const static std::string_view Graphs_type_name = "Graphs";
-		constexpr const static rivet::rivet_type_id Graphs_type_id = 0xaa1a5a96; 
+		constexpr static std::string_view Graphs_type_name = "Graphs";
+		constexpr static rivet::rivet_type_id Graphs_type_id = 0xaa1a5a96; 
 
 		explicit DebugGraphList() = default;
 		explicit DebugGraphList([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

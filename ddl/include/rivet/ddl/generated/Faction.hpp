@@ -19,13 +19,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED Faction : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "Faction";
-		constexpr const static rivet::rivet_type_id type_id = 0x82eee8a8;
+		constexpr static std::string_view type_name = "Faction";
+		constexpr static rivet::rivet_type_id type_id = 0x82eee8a8;
 
-		constexpr const static std::string_view Name_type_name = "Name";
-		constexpr const static rivet::rivet_type_id Name_type_id = 0x6eb3beb6;
-		constexpr const static std::string_view Spawnable_type_name = "Spawnable";
-		constexpr const static rivet::rivet_type_id Spawnable_type_id = 0x20376872; 
+		constexpr static std::string_view Name_type_name = "Name";
+		constexpr static rivet::rivet_type_id Name_type_id = 0x6eb3beb6;
+		constexpr static std::string_view Spawnable_type_name = "Spawnable";
+		constexpr static rivet::rivet_type_id Spawnable_type_id = 0x20376872; 
 
 		explicit Faction() = default;
 		explicit Faction([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -23,17 +23,17 @@ namespace rivet::ddl::generated {
 	struct DDLVector3; 
 
 	struct RIVET_DDL_SHARED BiomeAsset : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "BiomeAsset";
-		constexpr const static rivet::rivet_type_id type_id = 0xa3b15663;
+		constexpr static std::string_view type_name = "BiomeAsset";
+		constexpr static rivet::rivet_type_id type_id = 0xa3b15663;
 
-		constexpr const static std::string_view ModelAssetPath_type_name = "ModelAssetPath";
-		constexpr const static rivet::rivet_type_id ModelAssetPath_type_id = 0xb8b499c3;
-		constexpr const static std::string_view Weight_type_name = "Weight";
-		constexpr const static rivet::rivet_type_id Weight_type_id = 0x39b51b26;
-		constexpr const static std::string_view HoudiniDebugPrimitive_type_name = "HoudiniDebugPrimitive";
-		constexpr const static rivet::rivet_type_id HoudiniDebugPrimitive_type_id = 0x2ed71583;
-		constexpr const static std::string_view HoudiniDebugColor_type_name = "HoudiniDebugColor";
-		constexpr const static rivet::rivet_type_id HoudiniDebugColor_type_id = 0xb8df1137; 
+		constexpr static std::string_view ModelAssetPath_type_name = "ModelAssetPath";
+		constexpr static rivet::rivet_type_id ModelAssetPath_type_id = 0xb8b499c3;
+		constexpr static std::string_view Weight_type_name = "Weight";
+		constexpr static rivet::rivet_type_id Weight_type_id = 0x39b51b26;
+		constexpr static std::string_view HoudiniDebugPrimitive_type_name = "HoudiniDebugPrimitive";
+		constexpr static rivet::rivet_type_id HoudiniDebugPrimitive_type_id = 0x2ed71583;
+		constexpr static std::string_view HoudiniDebugColor_type_name = "HoudiniDebugColor";
+		constexpr static rivet::rivet_type_id HoudiniDebugColor_type_id = 0xb8df1137; 
 
 		explicit BiomeAsset() = default;
 		explicit BiomeAsset([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

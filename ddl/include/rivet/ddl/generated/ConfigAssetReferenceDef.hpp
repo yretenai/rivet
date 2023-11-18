@@ -19,13 +19,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ConfigAssetReferenceDef : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "ConfigAssetReferenceDef";
-		constexpr const static rivet::rivet_type_id type_id = 0x6603fff7;
+		constexpr static std::string_view type_name = "ConfigAssetReferenceDef";
+		constexpr static rivet::rivet_type_id type_id = 0x6603fff7;
 
-		constexpr const static std::string_view AssetPath_type_name = "AssetPath";
-		constexpr const static rivet::rivet_type_id AssetPath_type_id = 0xefa614b;
-		constexpr const static std::string_view Autoload_type_name = "Autoload";
-		constexpr const static rivet::rivet_type_id Autoload_type_id = 0xb2a1a9fa; 
+		constexpr static std::string_view AssetPath_type_name = "AssetPath";
+		constexpr static rivet::rivet_type_id AssetPath_type_id = 0xefa614b;
+		constexpr static std::string_view Autoload_type_name = "Autoload";
+		constexpr static rivet::rivet_type_id Autoload_type_id = 0xb2a1a9fa; 
 
 		explicit ConfigAssetReferenceDef() = default;
 		explicit ConfigAssetReferenceDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -21,15 +21,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED BotComboConditionDistFromClosestNavPrius : BotComboConditionBasePrius {
-		constexpr const static std::string_view type_name = "BotComboConditionDistFromClosestNavPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x50c447e1;
+		constexpr static std::string_view type_name = "BotComboConditionDistFromClosestNavPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x50c447e1;
 
-		constexpr const static std::string_view NavDistance_type_name = "NavDistance";
-		constexpr const static rivet::rivet_type_id NavDistance_type_id = 0xd9a3afa6;
-		constexpr const static std::string_view FlipLogicToCheckOutsideOfDist_type_name = "FlipLogicToCheckOutsideOfDist";
-		constexpr const static rivet::rivet_type_id FlipLogicToCheckOutsideOfDist_type_id = 0x42e5c0ad;
-		constexpr const static std::string_view CheckFromLastGoodGround_type_name = "CheckFromLastGoodGround";
-		constexpr const static rivet::rivet_type_id CheckFromLastGoodGround_type_id = 0x5a23e669; 
+		constexpr static std::string_view NavDistance_type_name = "NavDistance";
+		constexpr static rivet::rivet_type_id NavDistance_type_id = 0xd9a3afa6;
+		constexpr static std::string_view FlipLogicToCheckOutsideOfDist_type_name = "FlipLogicToCheckOutsideOfDist";
+		constexpr static rivet::rivet_type_id FlipLogicToCheckOutsideOfDist_type_id = 0x42e5c0ad;
+		constexpr static std::string_view CheckFromLastGoodGround_type_name = "CheckFromLastGoodGround";
+		constexpr static rivet::rivet_type_id CheckFromLastGoodGround_type_id = 0x5a23e669; 
 
 		explicit BotComboConditionDistFromClosestNavPrius() = default;
 		explicit BotComboConditionDistFromClosestNavPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

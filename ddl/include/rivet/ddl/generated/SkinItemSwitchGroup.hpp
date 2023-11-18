@@ -19,13 +19,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED SkinItemSwitchGroup : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "SkinItemSwitchGroup";
-		constexpr const static rivet::rivet_type_id type_id = 0x74c39c43;
+		constexpr static std::string_view type_name = "SkinItemSwitchGroup";
+		constexpr static rivet::rivet_type_id type_id = 0x74c39c43;
 
-		constexpr const static std::string_view SwitchGroupName_type_name = "SwitchGroupName";
-		constexpr const static rivet::rivet_type_id SwitchGroupName_type_id = 0xbd87120c;
-		constexpr const static std::string_view SwitchGroupValue_type_name = "SwitchGroupValue";
-		constexpr const static rivet::rivet_type_id SwitchGroupValue_type_id = 0x2f43facb; 
+		constexpr static std::string_view SwitchGroupName_type_name = "SwitchGroupName";
+		constexpr static rivet::rivet_type_id SwitchGroupName_type_id = 0xbd87120c;
+		constexpr static std::string_view SwitchGroupValue_type_name = "SwitchGroupValue";
+		constexpr static rivet::rivet_type_id SwitchGroupValue_type_id = 0x2f43facb; 
 
 		explicit SkinItemSwitchGroup() = default;
 		explicit SkinItemSwitchGroup([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

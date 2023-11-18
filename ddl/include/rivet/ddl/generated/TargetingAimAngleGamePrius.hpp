@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED TargetingAimAngleGamePrius : TargetingAimAnglePrius {
-		constexpr const static std::string_view type_name = "TargetingAimAngleGamePrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xcea0fdb6;
+		constexpr static std::string_view type_name = "TargetingAimAngleGamePrius";
+		constexpr static rivet::rivet_type_id type_id = 0xcea0fdb6;
 
 		explicit TargetingAimAngleGamePrius() = default;
 		explicit TargetingAimAngleGamePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

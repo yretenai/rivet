@@ -21,15 +21,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED LaserShotTypeSweep : BotComboLaserShotType {
-		constexpr const static std::string_view type_name = "LaserShotTypeSweep";
-		constexpr const static rivet::rivet_type_id type_id = 0x4598de61;
+		constexpr static std::string_view type_name = "LaserShotTypeSweep";
+		constexpr static rivet::rivet_type_id type_id = 0x4598de61;
 
-		constexpr const static std::string_view LaserTellTime_type_name = "LaserTellTime";
-		constexpr const static rivet::rivet_type_id LaserTellTime_type_id = 0x5c1cd434;
-		constexpr const static std::string_view LaserSweepTime_type_name = "LaserSweepTime";
-		constexpr const static rivet::rivet_type_id LaserSweepTime_type_id = 0xd88b95e;
-		constexpr const static std::string_view CurveFollowsTarget_type_name = "CurveFollowsTarget";
-		constexpr const static rivet::rivet_type_id CurveFollowsTarget_type_id = 0xf06be4e0; 
+		constexpr static std::string_view LaserTellTime_type_name = "LaserTellTime";
+		constexpr static rivet::rivet_type_id LaserTellTime_type_id = 0x5c1cd434;
+		constexpr static std::string_view LaserSweepTime_type_name = "LaserSweepTime";
+		constexpr static rivet::rivet_type_id LaserSweepTime_type_id = 0xd88b95e;
+		constexpr static std::string_view CurveFollowsTarget_type_name = "CurveFollowsTarget";
+		constexpr static rivet::rivet_type_id CurveFollowsTarget_type_id = 0xf06be4e0; 
 
 		explicit LaserShotTypeSweep() = default;
 		explicit LaserShotTypeSweep([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

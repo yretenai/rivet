@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED SpaceshipHeroConfig : UniqueHeroConfig {
-		constexpr const static std::string_view type_name = "SpaceshipHeroConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x2927e2cf;
+		constexpr static std::string_view type_name = "SpaceshipHeroConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x2927e2cf;
 
 		explicit SpaceshipHeroConfig() = default;
 		explicit SpaceshipHeroConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -23,19 +23,19 @@ namespace rivet::ddl::generated {
 	struct AimModLeadTargetPriusModDef; 
 
 	struct RIVET_DDL_SHARED AimModLeadTargetPrius : AimModifierPrius {
-		constexpr const static std::string_view type_name = "AimModLeadTargetPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x5fdab0a1;
+		constexpr static std::string_view type_name = "AimModLeadTargetPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x5fdab0a1;
 
-		constexpr const static std::string_view MaxPredictiveSpeed_type_name = "MaxPredictiveSpeed";
-		constexpr const static rivet::rivet_type_id MaxPredictiveSpeed_type_id = 0x9af719b0;
-		constexpr const static std::string_view LockOnShotCount_type_name = "LockOnShotCount";
-		constexpr const static rivet::rivet_type_id LockOnShotCount_type_id = 0x4e7b8ad3;
-		constexpr const static std::string_view AdditionalLeadTime_type_name = "AdditionalLeadTime";
-		constexpr const static rivet::rivet_type_id AdditionalLeadTime_type_id = 0x56e81338;
-		constexpr const static std::string_view MaxLeadTime_type_name = "MaxLeadTime";
-		constexpr const static rivet::rivet_type_id MaxLeadTime_type_id = 0xee01647e;
-		constexpr const static std::string_view ConfigModDefs_type_name = "ConfigModDefs";
-		constexpr const static rivet::rivet_type_id ConfigModDefs_type_id = 0x3d4ae417; 
+		constexpr static std::string_view MaxPredictiveSpeed_type_name = "MaxPredictiveSpeed";
+		constexpr static rivet::rivet_type_id MaxPredictiveSpeed_type_id = 0x9af719b0;
+		constexpr static std::string_view LockOnShotCount_type_name = "LockOnShotCount";
+		constexpr static rivet::rivet_type_id LockOnShotCount_type_id = 0x4e7b8ad3;
+		constexpr static std::string_view AdditionalLeadTime_type_name = "AdditionalLeadTime";
+		constexpr static rivet::rivet_type_id AdditionalLeadTime_type_id = 0x56e81338;
+		constexpr static std::string_view MaxLeadTime_type_name = "MaxLeadTime";
+		constexpr static rivet::rivet_type_id MaxLeadTime_type_id = 0xee01647e;
+		constexpr static std::string_view ConfigModDefs_type_name = "ConfigModDefs";
+		constexpr static rivet::rivet_type_id ConfigModDefs_type_id = 0x3d4ae417; 
 
 		explicit AimModLeadTargetPrius() = default;
 		explicit AimModLeadTargetPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

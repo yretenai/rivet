@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED MountAbilityNone : MountAbilityBase {
-		constexpr const static std::string_view type_name = "MountAbilityNone";
-		constexpr const static rivet::rivet_type_id type_id = 0x7726ca3;
+		constexpr static std::string_view type_name = "MountAbilityNone";
+		constexpr static rivet::rivet_type_id type_id = 0x7726ca3;
 
 		explicit MountAbilityNone() = default;
 		explicit MountAbilityNone([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

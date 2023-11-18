@@ -19,21 +19,21 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED HeroWetnessConfig : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "HeroWetnessConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xec24e0dc;
+		constexpr static std::string_view type_name = "HeroWetnessConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xec24e0dc;
 
-		constexpr const static std::string_view FurWetnessConstant_type_name = "FurWetnessConstant";
-		constexpr const static rivet::rivet_type_id FurWetnessConstant_type_id = 0xe219904e;
-		constexpr const static std::string_view FurWindStrengthConstant_type_name = "FurWindStrengthConstant";
-		constexpr const static rivet::rivet_type_id FurWindStrengthConstant_type_id = 0x346666ac;
-		constexpr const static std::string_view StrandStrengthConstant_type_name = "StrandStrengthConstant";
-		constexpr const static rivet::rivet_type_id StrandStrengthConstant_type_id = 0xaecf9af8;
-		constexpr const static std::string_view TimeToWet_type_name = "TimeToWet";
-		constexpr const static rivet::rivet_type_id TimeToWet_type_id = 0x3c808d8b;
-		constexpr const static std::string_view TimeToDry_type_name = "TimeToDry";
-		constexpr const static rivet::rivet_type_id TimeToDry_type_id = 0x59d26889;
-		constexpr const static std::string_view MaxCeilingHeight_type_name = "MaxCeilingHeight";
-		constexpr const static rivet::rivet_type_id MaxCeilingHeight_type_id = 0xd72c508a; 
+		constexpr static std::string_view FurWetnessConstant_type_name = "FurWetnessConstant";
+		constexpr static rivet::rivet_type_id FurWetnessConstant_type_id = 0xe219904e;
+		constexpr static std::string_view FurWindStrengthConstant_type_name = "FurWindStrengthConstant";
+		constexpr static rivet::rivet_type_id FurWindStrengthConstant_type_id = 0x346666ac;
+		constexpr static std::string_view StrandStrengthConstant_type_name = "StrandStrengthConstant";
+		constexpr static rivet::rivet_type_id StrandStrengthConstant_type_id = 0xaecf9af8;
+		constexpr static std::string_view TimeToWet_type_name = "TimeToWet";
+		constexpr static rivet::rivet_type_id TimeToWet_type_id = 0x3c808d8b;
+		constexpr static std::string_view TimeToDry_type_name = "TimeToDry";
+		constexpr static rivet::rivet_type_id TimeToDry_type_id = 0x59d26889;
+		constexpr static std::string_view MaxCeilingHeight_type_name = "MaxCeilingHeight";
+		constexpr static rivet::rivet_type_id MaxCeilingHeight_type_id = 0xd72c508a; 
 
 		explicit HeroWetnessConfig() = default;
 		explicit HeroWetnessConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

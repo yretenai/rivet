@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct SpawnShotTargetingPrius; 
 
 	struct RIVET_DDL_SHARED SpawnedShotTargetingConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "SpawnedShotTargetingConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x99204c55;
+		constexpr static std::string_view type_name = "SpawnedShotTargetingConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x99204c55;
 
-		constexpr const static std::string_view TargetingPrius_type_name = "TargetingPrius";
-		constexpr const static rivet::rivet_type_id TargetingPrius_type_id = 0xace13f57; 
+		constexpr static std::string_view TargetingPrius_type_name = "TargetingPrius";
+		constexpr static rivet::rivet_type_id TargetingPrius_type_id = 0xace13f57; 
 
 		explicit SpawnedShotTargetingConfig() = default;
 		explicit SpawnedShotTargetingConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

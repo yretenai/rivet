@@ -19,19 +19,19 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED AirborneData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "AirborneData";
-		constexpr const static rivet::rivet_type_id type_id = 0x9d89ecf1;
+		constexpr static std::string_view type_name = "AirborneData";
+		constexpr static rivet::rivet_type_id type_id = 0x9d89ecf1;
 
-		constexpr const static std::string_view GroundSpeedMin_type_name = "GroundSpeedMin";
-		constexpr const static rivet::rivet_type_id GroundSpeedMin_type_id = 0x47502d4a;
-		constexpr const static std::string_view GroundSpeedMax_type_name = "GroundSpeedMax";
-		constexpr const static rivet::rivet_type_id GroundSpeedMax_type_id = 0x7b5d1213;
-		constexpr const static std::string_view ApexHeightMin_type_name = "ApexHeightMin";
-		constexpr const static rivet::rivet_type_id ApexHeightMin_type_id = 0xdec9695f;
-		constexpr const static std::string_view ApexHeightMax_type_name = "ApexHeightMax";
-		constexpr const static rivet::rivet_type_id ApexHeightMax_type_id = 0xe2c45606;
-		constexpr const static std::string_view TimeToApex_type_name = "TimeToApex";
-		constexpr const static rivet::rivet_type_id TimeToApex_type_id = 0x18ce69e3; 
+		constexpr static std::string_view GroundSpeedMin_type_name = "GroundSpeedMin";
+		constexpr static rivet::rivet_type_id GroundSpeedMin_type_id = 0x47502d4a;
+		constexpr static std::string_view GroundSpeedMax_type_name = "GroundSpeedMax";
+		constexpr static rivet::rivet_type_id GroundSpeedMax_type_id = 0x7b5d1213;
+		constexpr static std::string_view ApexHeightMin_type_name = "ApexHeightMin";
+		constexpr static rivet::rivet_type_id ApexHeightMin_type_id = 0xdec9695f;
+		constexpr static std::string_view ApexHeightMax_type_name = "ApexHeightMax";
+		constexpr static rivet::rivet_type_id ApexHeightMax_type_id = 0xe2c45606;
+		constexpr static std::string_view TimeToApex_type_name = "TimeToApex";
+		constexpr static rivet::rivet_type_id TimeToApex_type_id = 0x18ce69e3; 
 
 		explicit AirborneData() = default;
 		explicit AirborneData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

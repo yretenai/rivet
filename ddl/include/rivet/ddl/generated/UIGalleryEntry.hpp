@@ -17,38 +17,38 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/enums/xd64fa9b1.hpp>
-#include <rivet/ddl/generated/enums/xf06c6830.hpp> 
+#include <rivet/ddl/generated/enums/xf06c6830.hpp>
+#include <rivet/ddl/generated/enums/xd64fa9b1.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED UIGalleryEntry : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "UIGalleryEntry";
-		constexpr const static rivet::rivet_type_id type_id = 0x9009397c;
+		constexpr static std::string_view type_name = "UIGalleryEntry";
+		constexpr static rivet::rivet_type_id type_id = 0x9009397c;
 
-		constexpr const static std::string_view DisplayName_type_name = "DisplayName";
-		constexpr const static rivet::rivet_type_id DisplayName_type_id = 0xeaf33243;
-		constexpr const static std::string_view DisplayDesc_type_name = "DisplayDesc";
-		constexpr const static rivet::rivet_type_id DisplayDesc_type_id = 0xbf65e011;
-		constexpr const static std::string_view DisplayIcon_type_name = "DisplayIcon";
-		constexpr const static rivet::rivet_type_id DisplayIcon_type_id = 0xd144659e;
-		constexpr const static std::string_view DisplayObject_type_name = "DisplayObject";
-		constexpr const static rivet::rivet_type_id DisplayObject_type_id = 0x1b10bb38;
-		constexpr const static std::string_view MissionUnlock_type_name = "MissionUnlock";
-		constexpr const static rivet::rivet_type_id MissionUnlock_type_id = 0x489fe4ed;
-		constexpr const static std::string_view ObjectiveUnlock_type_name = "ObjectiveUnlock";
-		constexpr const static rivet::rivet_type_id ObjectiveUnlock_type_id = 0x820fb4fb;
-		constexpr const static std::string_view GoldBoltUnlock_type_name = "GoldBoltUnlock";
-		constexpr const static rivet::rivet_type_id GoldBoltUnlock_type_id = 0xd459aa8c;
-		constexpr const static std::string_view HasDescUnlock_type_name = "HasDescUnlock";
-		constexpr const static rivet::rivet_type_id HasDescUnlock_type_id = 0x75640ef1;
-		constexpr const static std::string_view Name2_type_name = "Name2";
-		constexpr const static rivet::rivet_type_id Name2_type_id = 0xeabbf487;
-		constexpr const static std::string_view Desc2_type_name = "Desc2";
-		constexpr const static rivet::rivet_type_id Desc2_type_id = 0x6f8b528d;
-		constexpr const static std::string_view Desc2Mission_type_name = "Desc2Mission";
-		constexpr const static rivet::rivet_type_id Desc2Mission_type_id = 0xcf4250c6;
-		constexpr const static std::string_view Desc2Objective_type_name = "Desc2Objective";
-		constexpr const static rivet::rivet_type_id Desc2Objective_type_id = 0x2ec47728; 
+		constexpr static std::string_view DisplayName_type_name = "DisplayName";
+		constexpr static rivet::rivet_type_id DisplayName_type_id = 0xeaf33243;
+		constexpr static std::string_view DisplayDesc_type_name = "DisplayDesc";
+		constexpr static rivet::rivet_type_id DisplayDesc_type_id = 0xbf65e011;
+		constexpr static std::string_view DisplayIcon_type_name = "DisplayIcon";
+		constexpr static rivet::rivet_type_id DisplayIcon_type_id = 0xd144659e;
+		constexpr static std::string_view DisplayObject_type_name = "DisplayObject";
+		constexpr static rivet::rivet_type_id DisplayObject_type_id = 0x1b10bb38;
+		constexpr static std::string_view MissionUnlock_type_name = "MissionUnlock";
+		constexpr static rivet::rivet_type_id MissionUnlock_type_id = 0x489fe4ed;
+		constexpr static std::string_view ObjectiveUnlock_type_name = "ObjectiveUnlock";
+		constexpr static rivet::rivet_type_id ObjectiveUnlock_type_id = 0x820fb4fb;
+		constexpr static std::string_view GoldBoltUnlock_type_name = "GoldBoltUnlock";
+		constexpr static rivet::rivet_type_id GoldBoltUnlock_type_id = 0xd459aa8c;
+		constexpr static std::string_view HasDescUnlock_type_name = "HasDescUnlock";
+		constexpr static rivet::rivet_type_id HasDescUnlock_type_id = 0x75640ef1;
+		constexpr static std::string_view Name2_type_name = "Name2";
+		constexpr static rivet::rivet_type_id Name2_type_id = 0xeabbf487;
+		constexpr static std::string_view Desc2_type_name = "Desc2";
+		constexpr static rivet::rivet_type_id Desc2_type_id = 0x6f8b528d;
+		constexpr static std::string_view Desc2Mission_type_name = "Desc2Mission";
+		constexpr static rivet::rivet_type_id Desc2Mission_type_id = 0xcf4250c6;
+		constexpr static std::string_view Desc2Objective_type_name = "Desc2Objective";
+		constexpr static rivet::rivet_type_id Desc2Objective_type_id = 0x2ec47728; 
 
 		explicit UIGalleryEntry() = default;
 		explicit UIGalleryEntry([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

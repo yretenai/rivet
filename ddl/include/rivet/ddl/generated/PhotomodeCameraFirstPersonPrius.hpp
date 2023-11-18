@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct FirstPersonCamData; 
 
 	struct RIVET_DDL_SHARED PhotomodeCameraFirstPersonPrius : PhotomodeCameraBasePrius {
-		constexpr const static std::string_view type_name = "PhotomodeCameraFirstPersonPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x29a394eb;
+		constexpr static std::string_view type_name = "PhotomodeCameraFirstPersonPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x29a394eb;
 
-		constexpr const static std::string_view CamData_type_name = "CamData";
-		constexpr const static rivet::rivet_type_id CamData_type_id = 0xa857067c; 
+		constexpr static std::string_view CamData_type_name = "CamData";
+		constexpr static rivet::rivet_type_id CamData_type_id = 0xa857067c; 
 
 		explicit PhotomodeCameraFirstPersonPrius() = default;
 		explicit PhotomodeCameraFirstPersonPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED BotAttackDodgeData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "BotAttackDodgeData";
-		constexpr const static rivet::rivet_type_id type_id = 0xafda3182;
+		constexpr static std::string_view type_name = "BotAttackDodgeData";
+		constexpr static rivet::rivet_type_id type_id = 0xafda3182;
 
-		constexpr const static std::string_view Properties_type_name = "Properties";
-		constexpr const static rivet::rivet_type_id Properties_type_id = 0x5cf56ffe; 
+		constexpr static std::string_view Properties_type_name = "Properties";
+		constexpr static rivet::rivet_type_id Properties_type_id = 0x5cf56ffe; 
 
 		explicit BotAttackDodgeData() = default;
 		explicit BotAttackDodgeData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

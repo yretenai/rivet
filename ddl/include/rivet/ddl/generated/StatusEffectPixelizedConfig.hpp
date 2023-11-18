@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED StatusEffectPixelizedConfig : StatusEffectConfig {
-		constexpr const static std::string_view type_name = "StatusEffectPixelizedConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x16a8f4e3;
+		constexpr static std::string_view type_name = "StatusEffectPixelizedConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x16a8f4e3;
 
-		constexpr const static std::string_view OverrideAtmosphere_type_name = "OverrideAtmosphere";
-		constexpr const static rivet::rivet_type_id OverrideAtmosphere_type_id = 0x7e0d34d9; 
+		constexpr static std::string_view OverrideAtmosphere_type_name = "OverrideAtmosphere";
+		constexpr static rivet::rivet_type_id OverrideAtmosphere_type_id = 0x7e0d34d9; 
 
 		explicit StatusEffectPixelizedConfig() = default;
 		explicit StatusEffectPixelizedConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

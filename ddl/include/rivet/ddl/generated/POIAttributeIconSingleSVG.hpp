@@ -21,15 +21,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED POIAttributeIconSingleSVG : POIAttributeIconBase {
-		constexpr const static std::string_view type_name = "POIAttributeIconSingleSVG";
-		constexpr const static rivet::rivet_type_id type_id = 0xda28b;
+		constexpr static std::string_view type_name = "POIAttributeIconSingleSVG";
+		constexpr static rivet::rivet_type_id type_id = 0xda28b;
 
-		constexpr const static std::string_view SVG_type_name = "SVG";
-		constexpr const static rivet::rivet_type_id SVG_type_id = 0x87fa0833;
-		constexpr const static std::string_view Width_type_name = "Width";
-		constexpr const static rivet::rivet_type_id Width_type_id = 0x954989ee;
-		constexpr const static std::string_view Height_type_name = "Height";
-		constexpr const static rivet::rivet_type_id Height_type_id = 0xcb35ab68; 
+		constexpr static std::string_view SVG_type_name = "SVG";
+		constexpr static rivet::rivet_type_id SVG_type_id = 0x87fa0833;
+		constexpr static std::string_view Width_type_name = "Width";
+		constexpr static rivet::rivet_type_id Width_type_id = 0x954989ee;
+		constexpr static std::string_view Height_type_name = "Height";
+		constexpr static rivet::rivet_type_id Height_type_id = 0xcb35ab68; 
 
 		explicit POIAttributeIconSingleSVG() = default;
 		explicit POIAttributeIconSingleSVG([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

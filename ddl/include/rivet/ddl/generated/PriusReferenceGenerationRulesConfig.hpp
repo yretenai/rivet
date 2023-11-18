@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct ReferenceRuleSet; 
 
 	struct RIVET_DDL_SHARED PriusReferenceGenerationRulesConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "PriusReferenceGenerationRulesConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xb8045d99;
+		constexpr static std::string_view type_name = "PriusReferenceGenerationRulesConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xb8045d99;
 
-		constexpr const static std::string_view ReferenceRuleSets_type_name = "ReferenceRuleSets";
-		constexpr const static rivet::rivet_type_id ReferenceRuleSets_type_id = 0xcd71b7a2; 
+		constexpr static std::string_view ReferenceRuleSets_type_name = "ReferenceRuleSets";
+		constexpr static rivet::rivet_type_id ReferenceRuleSets_type_id = 0xcd71b7a2; 
 
 		explicit PriusReferenceGenerationRulesConfig() = default;
 		explicit PriusReferenceGenerationRulesConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

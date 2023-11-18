@@ -21,15 +21,15 @@ namespace rivet::ddl::generated {
 	struct ItemLoadoutList; 
 
 	struct RIVET_DDL_SHARED ItemLoadout : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "ItemLoadout";
-		constexpr const static rivet::rivet_type_id type_id = 0x43ce3449;
+		constexpr static std::string_view type_name = "ItemLoadout";
+		constexpr static rivet::rivet_type_id type_id = 0x43ce3449;
 
-		constexpr const static std::string_view Name_type_name = "Name";
-		constexpr const static rivet::rivet_type_id Name_type_id = 0x6eb3beb6;
-		constexpr const static std::string_view FillAllOwnedAmmo_type_name = "FillAllOwnedAmmo";
-		constexpr const static rivet::rivet_type_id FillAllOwnedAmmo_type_id = 0xddd842ce;
-		constexpr const static std::string_view ItemLoadoutLists_type_name = "ItemLoadoutLists";
-		constexpr const static rivet::rivet_type_id ItemLoadoutLists_type_id = 0x650ab5fe; 
+		constexpr static std::string_view Name_type_name = "Name";
+		constexpr static rivet::rivet_type_id Name_type_id = 0x6eb3beb6;
+		constexpr static std::string_view FillAllOwnedAmmo_type_name = "FillAllOwnedAmmo";
+		constexpr static rivet::rivet_type_id FillAllOwnedAmmo_type_id = 0xddd842ce;
+		constexpr static std::string_view ItemLoadoutLists_type_name = "ItemLoadoutLists";
+		constexpr static rivet::rivet_type_id ItemLoadoutLists_type_id = 0x650ab5fe; 
 
 		explicit ItemLoadout() = default;
 		explicit ItemLoadout([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

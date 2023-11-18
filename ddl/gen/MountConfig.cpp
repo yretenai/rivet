@@ -3,9 +3,9 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/HeroMountData.hpp>
+#include <rivet/ddl/generated/MountAbilityContainer.hpp>
 #include <rivet/ddl/generated/BotMountData.hpp>
-#include <rivet/ddl/generated/MountAbilityContainer.hpp> 
+#include <rivet/ddl/generated/HeroMountData.hpp> 
 
 #include <rivet/ddl/generated/MountConfig.hpp>
 

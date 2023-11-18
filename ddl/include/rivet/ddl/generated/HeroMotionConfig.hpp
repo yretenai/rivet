@@ -21,13 +21,13 @@ namespace rivet::ddl::generated {
 	struct HeroSpeedConfigCollection; 
 
 	struct RIVET_DDL_SHARED HeroMotionConfig : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "HeroMotionConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x66fee90d;
+		constexpr static std::string_view type_name = "HeroMotionConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x66fee90d;
 
-		constexpr const static std::string_view StandardSpeeds_type_name = "StandardSpeeds";
-		constexpr const static rivet::rivet_type_id StandardSpeeds_type_id = 0x25dc4009;
-		constexpr const static std::string_view MagBootSpeeds_type_name = "MagBootSpeeds";
-		constexpr const static rivet::rivet_type_id MagBootSpeeds_type_id = 0x42027865; 
+		constexpr static std::string_view StandardSpeeds_type_name = "StandardSpeeds";
+		constexpr static rivet::rivet_type_id StandardSpeeds_type_id = 0x25dc4009;
+		constexpr static std::string_view MagBootSpeeds_type_name = "MagBootSpeeds";
+		constexpr static rivet::rivet_type_id MagBootSpeeds_type_id = 0x42027865; 
 
 		explicit HeroMotionConfig() = default;
 		explicit HeroMotionConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

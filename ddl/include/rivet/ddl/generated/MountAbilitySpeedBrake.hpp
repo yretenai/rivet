@@ -21,17 +21,17 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED MountAbilitySpeedBrake : MountAbilityBase {
-		constexpr const static std::string_view type_name = "MountAbilitySpeedBrake";
-		constexpr const static rivet::rivet_type_id type_id = 0x79d4b4ee;
+		constexpr static std::string_view type_name = "MountAbilitySpeedBrake";
+		constexpr static rivet::rivet_type_id type_id = 0x79d4b4ee;
 
-		constexpr const static std::string_view BrakeSpeed_type_name = "BrakeSpeed";
-		constexpr const static rivet::rivet_type_id BrakeSpeed_type_id = 0xf6f7096d;
-		constexpr const static std::string_view BrakeIntro_type_name = "BrakeIntro";
-		constexpr const static rivet::rivet_type_id BrakeIntro_type_id = 0xe3d432bb;
-		constexpr const static std::string_view BrakeLoop_type_name = "BrakeLoop";
-		constexpr const static rivet::rivet_type_id BrakeLoop_type_id = 0xc61d9954;
-		constexpr const static std::string_view BrakeOutro_type_name = "BrakeOutro";
-		constexpr const static rivet::rivet_type_id BrakeOutro_type_id = 0xeb8c1785; 
+		constexpr static std::string_view BrakeSpeed_type_name = "BrakeSpeed";
+		constexpr static rivet::rivet_type_id BrakeSpeed_type_id = 0xf6f7096d;
+		constexpr static std::string_view BrakeIntro_type_name = "BrakeIntro";
+		constexpr static rivet::rivet_type_id BrakeIntro_type_id = 0xe3d432bb;
+		constexpr static std::string_view BrakeLoop_type_name = "BrakeLoop";
+		constexpr static rivet::rivet_type_id BrakeLoop_type_id = 0xc61d9954;
+		constexpr static std::string_view BrakeOutro_type_name = "BrakeOutro";
+		constexpr static rivet::rivet_type_id BrakeOutro_type_id = 0xeb8c1785; 
 
 		explicit MountAbilitySpeedBrake() = default;
 		explicit MountAbilitySpeedBrake([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

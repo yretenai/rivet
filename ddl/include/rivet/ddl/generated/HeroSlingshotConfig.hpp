@@ -23,13 +23,13 @@ namespace rivet::ddl::generated {
 	struct HeroSlingshotSpinData; 
 
 	struct RIVET_DDL_SHARED HeroSlingshotConfig : HeroHookshotConfig {
-		constexpr const static std::string_view type_name = "HeroSlingshotConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xaaa1008a;
+		constexpr static std::string_view type_name = "HeroSlingshotConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xaaa1008a;
 
-		constexpr const static std::string_view StandardSpin_type_name = "StandardSpin";
-		constexpr const static rivet::rivet_type_id StandardSpin_type_id = 0xcfb47918;
-		constexpr const static std::string_view TraversalChainSpin_type_name = "TraversalChainSpin";
-		constexpr const static rivet::rivet_type_id TraversalChainSpin_type_id = 0x8e46b9d5; 
+		constexpr static std::string_view StandardSpin_type_name = "StandardSpin";
+		constexpr static rivet::rivet_type_id StandardSpin_type_id = 0xcfb47918;
+		constexpr static std::string_view TraversalChainSpin_type_name = "TraversalChainSpin";
+		constexpr static rivet::rivet_type_id TraversalChainSpin_type_id = 0x8e46b9d5; 
 
 		explicit HeroSlingshotConfig() = default;
 		explicit HeroSlingshotConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct POILibraryEntry; 
 
 	struct RIVET_DDL_SHARED POIConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "POIConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xd79d2375;
+		constexpr static std::string_view type_name = "POIConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xd79d2375;
 
-		constexpr const static std::string_view POILibrary_type_name = "POILibrary";
-		constexpr const static rivet::rivet_type_id POILibrary_type_id = 0xa5dd899; 
+		constexpr static std::string_view POILibrary_type_name = "POILibrary";
+		constexpr static rivet::rivet_type_id POILibrary_type_id = 0xa5dd899; 
 
 		explicit POIConfig() = default;
 		explicit POIConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

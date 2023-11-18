@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view PhotoModeStatus_type_name = "PhotoModeStatus";
-	constexpr const static rivet::rivet_type_id PhotoModeStatus_type_id = 0x8dc8128;
+	constexpr static std::string_view PhotoModeStatus_type_name = "PhotoModeStatus";
+	constexpr static rivet::rivet_type_id PhotoModeStatus_type_id = 0x8dc8128;
 
-	constexpr const static std::array<std::string_view, 3> PhotoModeStatus_values = {
+	constexpr static std::array<std::string_view, 3> PhotoModeStatus_values = {
 		"kEnabled",
 		"kDisabled",
 		"kExclusive", 

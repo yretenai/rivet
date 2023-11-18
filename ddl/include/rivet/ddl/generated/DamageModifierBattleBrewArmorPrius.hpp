@@ -17,22 +17,22 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/DamageModifierIncomingPrius.hpp>
-#include <rivet/ddl/generated/enums/KnockbackLevels.hpp> 
+#include <rivet/ddl/generated/enums/KnockbackLevels.hpp>
+#include <rivet/ddl/generated/DamageModifierIncomingPrius.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DamageModifierBattleBrewArmorPrius : DamageModifierIncomingPrius {
-		constexpr const static std::string_view type_name = "DamageModifierBattleBrewArmorPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x4e451073;
+		constexpr static std::string_view type_name = "DamageModifierBattleBrewArmorPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x4e451073;
 
-		constexpr const static std::string_view RangedDamageModifier_type_name = "RangedDamageModifier";
-		constexpr const static rivet::rivet_type_id RangedDamageModifier_type_id = 0x9159bfa;
-		constexpr const static std::string_view MeleeDamageModifier_type_name = "MeleeDamageModifier";
-		constexpr const static rivet::rivet_type_id MeleeDamageModifier_type_id = 0x784ce125;
-		constexpr const static std::string_view MaxRangedKnockback_type_name = "MaxRangedKnockback";
-		constexpr const static rivet::rivet_type_id MaxRangedKnockback_type_id = 0x25cc17f9;
-		constexpr const static std::string_view MaxMeleeKnockback_type_name = "MaxMeleeKnockback";
-		constexpr const static rivet::rivet_type_id MaxMeleeKnockback_type_id = 0xa9b526a6; 
+		constexpr static std::string_view RangedDamageModifier_type_name = "RangedDamageModifier";
+		constexpr static rivet::rivet_type_id RangedDamageModifier_type_id = 0x9159bfa;
+		constexpr static std::string_view MeleeDamageModifier_type_name = "MeleeDamageModifier";
+		constexpr static rivet::rivet_type_id MeleeDamageModifier_type_id = 0x784ce125;
+		constexpr static std::string_view MaxRangedKnockback_type_name = "MaxRangedKnockback";
+		constexpr static rivet::rivet_type_id MaxRangedKnockback_type_id = 0x25cc17f9;
+		constexpr static std::string_view MaxMeleeKnockback_type_name = "MaxMeleeKnockback";
+		constexpr static rivet::rivet_type_id MaxMeleeKnockback_type_id = 0xa9b526a6; 
 
 		explicit DamageModifierBattleBrewArmorPrius() = default;
 		explicit DamageModifierBattleBrewArmorPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

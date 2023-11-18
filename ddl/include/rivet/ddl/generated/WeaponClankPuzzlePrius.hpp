@@ -17,18 +17,18 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/WeaponGamePrius.hpp>
-#include <rivet/ddl/generated/enums/x17b935fe.hpp> 
+#include <rivet/ddl/generated/enums/x17b935fe.hpp>
+#include <rivet/ddl/generated/WeaponGamePrius.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED WeaponClankPuzzlePrius : WeaponGamePrius {
-		constexpr const static std::string_view type_name = "WeaponClankPuzzlePrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x4fd7e80a;
+		constexpr static std::string_view type_name = "WeaponClankPuzzlePrius";
+		constexpr static rivet::rivet_type_id type_id = 0x4fd7e80a;
 
-		constexpr const static std::string_view PuzzleVolumeType_type_name = "PuzzleVolumeType";
-		constexpr const static rivet::rivet_type_id PuzzleVolumeType_type_id = 0x15f23e94;
-		constexpr const static std::string_view AmmoPerShot_type_name = "AmmoPerShot";
-		constexpr const static rivet::rivet_type_id AmmoPerShot_type_id = 0x2570ce83; 
+		constexpr static std::string_view PuzzleVolumeType_type_name = "PuzzleVolumeType";
+		constexpr static rivet::rivet_type_id PuzzleVolumeType_type_id = 0x15f23e94;
+		constexpr static std::string_view AmmoPerShot_type_name = "AmmoPerShot";
+		constexpr static rivet::rivet_type_id AmmoPerShot_type_id = 0x2570ce83; 
 
 		explicit WeaponClankPuzzlePrius() = default;
 		explicit WeaponClankPuzzlePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

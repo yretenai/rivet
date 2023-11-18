@@ -19,17 +19,17 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED SwingshotJumpData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "SwingshotJumpData";
-		constexpr const static rivet::rivet_type_id type_id = 0xc6a3e93d;
+		constexpr static std::string_view type_name = "SwingshotJumpData";
+		constexpr static rivet::rivet_type_id type_id = 0xc6a3e93d;
 
-		constexpr const static std::string_view MinInitialHorizontalSpeed_type_name = "MinInitialHorizontalSpeed";
-		constexpr const static rivet::rivet_type_id MinInitialHorizontalSpeed_type_id = 0x771ee838;
-		constexpr const static std::string_view TurnSpeedGain_type_name = "TurnSpeedGain";
-		constexpr const static rivet::rivet_type_id TurnSpeedGain_type_id = 0xc4a00637;
-		constexpr const static std::string_view TurnSpeedDamp_type_name = "TurnSpeedDamp";
-		constexpr const static rivet::rivet_type_id TurnSpeedDamp_type_id = 0x487651be;
-		constexpr const static std::string_view TurnSpeedMax_type_name = "TurnSpeedMax";
-		constexpr const static rivet::rivet_type_id TurnSpeedMax_type_id = 0xa66b2ab3; 
+		constexpr static std::string_view MinInitialHorizontalSpeed_type_name = "MinInitialHorizontalSpeed";
+		constexpr static rivet::rivet_type_id MinInitialHorizontalSpeed_type_id = 0x771ee838;
+		constexpr static std::string_view TurnSpeedGain_type_name = "TurnSpeedGain";
+		constexpr static rivet::rivet_type_id TurnSpeedGain_type_id = 0xc4a00637;
+		constexpr static std::string_view TurnSpeedDamp_type_name = "TurnSpeedDamp";
+		constexpr static rivet::rivet_type_id TurnSpeedDamp_type_id = 0x487651be;
+		constexpr static std::string_view TurnSpeedMax_type_name = "TurnSpeedMax";
+		constexpr static rivet::rivet_type_id TurnSpeedMax_type_id = 0xa66b2ab3; 
 
 		explicit SwingshotJumpData() = default;
 		explicit SwingshotJumpData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

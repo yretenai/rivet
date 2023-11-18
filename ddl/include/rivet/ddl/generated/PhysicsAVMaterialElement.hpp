@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED PhysicsAVMaterialElement : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "PhysicsAVMaterialElement";
-		constexpr const static rivet::rivet_type_id type_id = 0x21dbd213;
+		constexpr static std::string_view type_name = "PhysicsAVMaterialElement";
+		constexpr static rivet::rivet_type_id type_id = 0x21dbd213;
 
-		constexpr const static std::string_view MaterialType_type_name = "MaterialType";
-		constexpr const static rivet::rivet_type_id MaterialType_type_id = 0x1433c59b; 
+		constexpr static std::string_view MaterialType_type_name = "MaterialType";
+		constexpr static rivet::rivet_type_id MaterialType_type_id = 0x1433c59b; 
 
 		explicit PhysicsAVMaterialElement() = default;
 		explicit PhysicsAVMaterialElement([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

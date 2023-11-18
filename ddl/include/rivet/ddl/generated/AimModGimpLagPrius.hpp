@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED AimModGimpLagPrius : AimModGimpPrius {
-		constexpr const static std::string_view type_name = "AimModGimpLagPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x17dd6f3a;
+		constexpr static std::string_view type_name = "AimModGimpLagPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x17dd6f3a;
 
-		constexpr const static std::string_view AimSpeed_type_name = "AimSpeed";
-		constexpr const static rivet::rivet_type_id AimSpeed_type_id = 0x21e3f161; 
+		constexpr static std::string_view AimSpeed_type_name = "AimSpeed";
+		constexpr static rivet::rivet_type_id AimSpeed_type_id = 0x21e3f161; 
 
 		explicit AimModGimpLagPrius() = default;
 		explicit AimModGimpLagPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

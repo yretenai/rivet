@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct TriggerEffectArrayItem; 
 
 	struct RIVET_DDL_SHARED TriggerEffectSystemConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "TriggerEffectSystemConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xf8c4c18d;
+		constexpr static std::string_view type_name = "TriggerEffectSystemConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xf8c4c18d;
 
-		constexpr const static std::string_view TriggerEffectTypeArray_type_name = "TriggerEffectTypeArray";
-		constexpr const static rivet::rivet_type_id TriggerEffectTypeArray_type_id = 0xfce87888; 
+		constexpr static std::string_view TriggerEffectTypeArray_type_name = "TriggerEffectTypeArray";
+		constexpr static rivet::rivet_type_id TriggerEffectTypeArray_type_id = 0xfce87888; 
 
 		explicit TriggerEffectSystemConfig() = default;
 		explicit TriggerEffectSystemConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

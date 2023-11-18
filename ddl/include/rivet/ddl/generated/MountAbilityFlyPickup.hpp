@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED MountAbilityFlyPickup : MountAbilityFlyGoto {
-		constexpr const static std::string_view type_name = "MountAbilityFlyPickup";
-		constexpr const static rivet::rivet_type_id type_id = 0x66a4833e;
+		constexpr static std::string_view type_name = "MountAbilityFlyPickup";
+		constexpr static rivet::rivet_type_id type_id = 0x66a4833e;
 
-		constexpr const static std::string_view CarryDropShotIndex_type_name = "CarryDropShotIndex";
-		constexpr const static rivet::rivet_type_id CarryDropShotIndex_type_id = 0x2e505113; 
+		constexpr static std::string_view CarryDropShotIndex_type_name = "CarryDropShotIndex";
+		constexpr static rivet::rivet_type_id CarryDropShotIndex_type_id = 0x2e505113; 
 
 		explicit MountAbilityFlyPickup() = default;
 		explicit MountAbilityFlyPickup([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ItemLoadoutCategoryList : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "ItemLoadoutCategoryList";
-		constexpr const static rivet::rivet_type_id type_id = 0x5ba74a3e;
+		constexpr static std::string_view type_name = "ItemLoadoutCategoryList";
+		constexpr static rivet::rivet_type_id type_id = 0x5ba74a3e;
 
-		constexpr const static std::string_view Category_type_name = "Category";
-		constexpr const static rivet::rivet_type_id Category_type_id = 0xfc4da4b1;
-		constexpr const static std::string_view ItemLoadoutConfigs_type_name = "ItemLoadoutConfigs";
-		constexpr const static rivet::rivet_type_id ItemLoadoutConfigs_type_id = 0x81444aa9; 
+		constexpr static std::string_view Category_type_name = "Category";
+		constexpr static rivet::rivet_type_id Category_type_id = 0xfc4da4b1;
+		constexpr static std::string_view ItemLoadoutConfigs_type_name = "ItemLoadoutConfigs";
+		constexpr static rivet::rivet_type_id ItemLoadoutConfigs_type_id = 0x81444aa9; 
 
 		explicit ItemLoadoutCategoryList() = default;
 		explicit ItemLoadoutCategoryList([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

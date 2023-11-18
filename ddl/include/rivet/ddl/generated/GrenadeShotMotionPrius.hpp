@@ -20,17 +20,17 @@
 #include <rivet/ddl/generated/BasicShotMotionPrius.hpp> 
 
 namespace rivet::ddl::generated {
-	struct GrenadeLandMode;
-	struct GrenadeVelocityMode; 
+	struct GrenadeVelocityMode;
+	struct GrenadeLandMode; 
 
 	struct RIVET_DDL_SHARED GrenadeShotMotionPrius : BasicShotMotionPrius {
-		constexpr const static std::string_view type_name = "GrenadeShotMotionPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xc30a869e;
+		constexpr static std::string_view type_name = "GrenadeShotMotionPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xc30a869e;
 
-		constexpr const static std::string_view LandMode_type_name = "LandMode";
-		constexpr const static rivet::rivet_type_id LandMode_type_id = 0x7d561892;
-		constexpr const static std::string_view VelocityMode_type_name = "VelocityMode";
-		constexpr const static rivet::rivet_type_id VelocityMode_type_id = 0x28291e84; 
+		constexpr static std::string_view LandMode_type_name = "LandMode";
+		constexpr static rivet::rivet_type_id LandMode_type_id = 0x7d561892;
+		constexpr static std::string_view VelocityMode_type_name = "VelocityMode";
+		constexpr static rivet::rivet_type_id VelocityMode_type_id = 0x28291e84; 
 
 		explicit GrenadeShotMotionPrius() = default;
 		explicit GrenadeShotMotionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

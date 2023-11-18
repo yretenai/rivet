@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED HeroGroundResponseBasePrius : GroundResponseBasePrius {
-		constexpr const static std::string_view type_name = "HeroGroundResponseBasePrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x7ebfd21a;
+		constexpr static std::string_view type_name = "HeroGroundResponseBasePrius";
+		constexpr static rivet::rivet_type_id type_id = 0x7ebfd21a;
 
 		explicit HeroGroundResponseBasePrius() = default;
 		explicit HeroGroundResponseBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

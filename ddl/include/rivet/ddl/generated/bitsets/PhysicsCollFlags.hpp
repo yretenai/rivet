@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view PhysicsCollFlags_type_name = "PhysicsCollFlags";
-	constexpr const static rivet::rivet_type_id PhysicsCollFlags_type_id = 0xcc4b35a;
+	constexpr static std::string_view PhysicsCollFlags_type_name = "PhysicsCollFlags";
+	constexpr static rivet::rivet_type_id PhysicsCollFlags_type_id = 0xcc4b35a;
 
-	constexpr const static std::array<std::tuple<std::string_view, uint64_t>, 14> PhysicsCollFlags_values = {
+	constexpr static std::array<std::tuple<std::string_view, uint64_t>, 14> PhysicsCollFlags_values = {
 		std::make_tuple("kMove", 0x1),
 		std::make_tuple("kHeroMove", 0x2),
 		std::make_tuple("kGround", 0x4),

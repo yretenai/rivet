@@ -21,17 +21,17 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED HoudiniMenuItem : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "HoudiniMenuItem";
-		constexpr const static rivet::rivet_type_id type_id = 0xed89b267;
+		constexpr static std::string_view type_name = "HoudiniMenuItem";
+		constexpr static rivet::rivet_type_id type_id = 0xed89b267;
 
-		constexpr const static std::string_view Title_type_name = "Title";
-		constexpr const static rivet::rivet_type_id Title_type_id = 0x3265b4aa;
-		constexpr const static std::string_view Tooltip_type_name = "Tooltip";
-		constexpr const static rivet::rivet_type_id Tooltip_type_id = 0xa0533c88;
-		constexpr const static std::string_view HythonCode_type_name = "HythonCode";
-		constexpr const static rivet::rivet_type_id HythonCode_type_id = 0x1f0caeb4;
-		constexpr const static std::string_view Behavior_type_name = "Behavior";
-		constexpr const static rivet::rivet_type_id Behavior_type_id = 0xc1aa1dc0; 
+		constexpr static std::string_view Title_type_name = "Title";
+		constexpr static rivet::rivet_type_id Title_type_id = 0x3265b4aa;
+		constexpr static std::string_view Tooltip_type_name = "Tooltip";
+		constexpr static rivet::rivet_type_id Tooltip_type_id = 0xa0533c88;
+		constexpr static std::string_view HythonCode_type_name = "HythonCode";
+		constexpr static rivet::rivet_type_id HythonCode_type_id = 0x1f0caeb4;
+		constexpr static std::string_view Behavior_type_name = "Behavior";
+		constexpr static rivet::rivet_type_id Behavior_type_id = 0xc1aa1dc0; 
 
 		explicit HoudiniMenuItem() = default;
 		explicit HoudiniMenuItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

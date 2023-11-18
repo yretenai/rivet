@@ -17,16 +17,16 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/WeaponUserStateData.hpp>
-#include <rivet/ddl/generated/enums/xff945214.hpp> 
+#include <rivet/ddl/generated/enums/xff945214.hpp>
+#include <rivet/ddl/generated/WeaponUserStateData.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED WeaponUserStateDataGame : WeaponUserStateData {
-		constexpr const static std::string_view type_name = "WeaponUserStateDataGame";
-		constexpr const static rivet::rivet_type_id type_id = 0x1c21dbb1;
+		constexpr static std::string_view type_name = "WeaponUserStateDataGame";
+		constexpr static rivet::rivet_type_id type_id = 0x1c21dbb1;
 
-		constexpr const static std::string_view UserState_type_name = "UserState";
-		constexpr const static rivet::rivet_type_id UserState_type_id = 0xc70b5e21; 
+		constexpr static std::string_view UserState_type_name = "UserState";
+		constexpr static rivet::rivet_type_id UserState_type_id = 0xc70b5e21; 
 
 		explicit WeaponUserStateDataGame() = default;
 		explicit WeaponUserStateDataGame([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

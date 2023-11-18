@@ -23,15 +23,15 @@ namespace rivet::ddl::generated {
 	struct ConfigModListElement; 
 
 	struct RIVET_DDL_SHARED DifficultyModDef : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "DifficultyModDef";
-		constexpr const static rivet::rivet_type_id type_id = 0xfebe95b2;
+		constexpr static std::string_view type_name = "DifficultyModDef";
+		constexpr static rivet::rivet_type_id type_id = 0xfebe95b2;
 
-		constexpr const static std::string_view NameFilter_type_name = "NameFilter";
-		constexpr const static rivet::rivet_type_id NameFilter_type_id = 0xe740bacb;
-		constexpr const static std::string_view Variable_type_name = "Variable";
-		constexpr const static rivet::rivet_type_id Variable_type_id = 0x364c3afd;
-		constexpr const static std::string_view ModList_type_name = "ModList";
-		constexpr const static rivet::rivet_type_id ModList_type_id = 0x2649755b; 
+		constexpr static std::string_view NameFilter_type_name = "NameFilter";
+		constexpr static rivet::rivet_type_id NameFilter_type_id = 0xe740bacb;
+		constexpr static std::string_view Variable_type_name = "Variable";
+		constexpr static rivet::rivet_type_id Variable_type_id = 0x364c3afd;
+		constexpr static std::string_view ModList_type_name = "ModList";
+		constexpr static rivet::rivet_type_id ModList_type_id = 0x2649755b; 
 
 		explicit DifficultyModDef() = default;
 		explicit DifficultyModDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

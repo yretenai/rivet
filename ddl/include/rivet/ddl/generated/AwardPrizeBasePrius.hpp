@@ -19,13 +19,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED AwardPrizeBasePrius : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "AwardPrizeBasePrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x927a2cf2;
+		constexpr static std::string_view type_name = "AwardPrizeBasePrius";
+		constexpr static rivet::rivet_type_id type_id = 0x927a2cf2;
 
-		constexpr const static std::string_view NameLocTag_type_name = "NameLocTag";
-		constexpr const static rivet::rivet_type_id NameLocTag_type_id = 0xa0041b54;
-		constexpr const static std::string_view ImagePath_type_name = "ImagePath";
-		constexpr const static rivet::rivet_type_id ImagePath_type_id = 0x3c1a7294; 
+		constexpr static std::string_view NameLocTag_type_name = "NameLocTag";
+		constexpr static rivet::rivet_type_id NameLocTag_type_id = 0xa0041b54;
+		constexpr static std::string_view ImagePath_type_name = "ImagePath";
+		constexpr static rivet::rivet_type_id ImagePath_type_id = 0x3c1a7294; 
 
 		explicit AwardPrizeBasePrius() = default;
 		explicit AwardPrizeBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

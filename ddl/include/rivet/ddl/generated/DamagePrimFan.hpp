@@ -21,15 +21,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DamagePrimFan : DamagePrimBase {
-		constexpr const static std::string_view type_name = "DamagePrimFan";
-		constexpr const static rivet::rivet_type_id type_id = 0xd2765a2f;
+		constexpr static std::string_view type_name = "DamagePrimFan";
+		constexpr static rivet::rivet_type_id type_id = 0xd2765a2f;
 
-		constexpr const static std::string_view FanSpacing_type_name = "FanSpacing";
-		constexpr const static rivet::rivet_type_id FanSpacing_type_id = 0x914cdf90;
-		constexpr const static std::string_view MaxSubdivide_type_name = "MaxSubdivide";
-		constexpr const static rivet::rivet_type_id MaxSubdivide_type_id = 0xfb78ccfd;
-		constexpr const static std::string_view DamageRadius_type_name = "DamageRadius";
-		constexpr const static rivet::rivet_type_id DamageRadius_type_id = 0xe3e6fa68; 
+		constexpr static std::string_view FanSpacing_type_name = "FanSpacing";
+		constexpr static rivet::rivet_type_id FanSpacing_type_id = 0x914cdf90;
+		constexpr static std::string_view MaxSubdivide_type_name = "MaxSubdivide";
+		constexpr static rivet::rivet_type_id MaxSubdivide_type_id = 0xfb78ccfd;
+		constexpr static std::string_view DamageRadius_type_name = "DamageRadius";
+		constexpr static rivet::rivet_type_id DamageRadius_type_id = 0xe3e6fa68; 
 
 		explicit DamagePrimFan() = default;
 		explicit DamagePrimFan([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

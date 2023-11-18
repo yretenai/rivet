@@ -3,10 +3,10 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/FinaleMechStatusEffectTrackerPixelizedPrius.hpp>
 #include <rivet/ddl/generated/FinaleMechStatusEffectTrackerLightningRodPrius.hpp>
+#include <rivet/ddl/generated/FinaleMechStatusEffectTrackerShrubberyPrius.hpp>
 #include <rivet/ddl/generated/FinaleMechStatusEffectTrackerFreezePrius.hpp>
-#include <rivet/ddl/generated/FinaleMechStatusEffectTrackerShrubberyPrius.hpp> 
+#include <rivet/ddl/generated/FinaleMechStatusEffectTrackerPixelizedPrius.hpp> 
 
 #include <rivet/ddl/generated/FinaleMechConfigStatusEffects.hpp>
 

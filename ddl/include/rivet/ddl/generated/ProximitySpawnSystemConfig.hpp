@@ -21,15 +21,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ProximitySpawnSystemConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "ProximitySpawnSystemConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x76ac4a6b;
+		constexpr static std::string_view type_name = "ProximitySpawnSystemConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x76ac4a6b;
 
-		constexpr const static std::string_view DefaultSpawnConfig_type_name = "DefaultSpawnConfig";
-		constexpr const static rivet::rivet_type_id DefaultSpawnConfig_type_id = 0xa3563558;
-		constexpr const static std::string_view AnimClueGatherRadius_type_name = "AnimClueGatherRadius";
-		constexpr const static rivet::rivet_type_id AnimClueGatherRadius_type_id = 0x3d750059;
-		constexpr const static std::string_view NavClueGatherRadius_type_name = "NavClueGatherRadius";
-		constexpr const static rivet::rivet_type_id NavClueGatherRadius_type_id = 0xa7a613f9; 
+		constexpr static std::string_view DefaultSpawnConfig_type_name = "DefaultSpawnConfig";
+		constexpr static rivet::rivet_type_id DefaultSpawnConfig_type_id = 0xa3563558;
+		constexpr static std::string_view AnimClueGatherRadius_type_name = "AnimClueGatherRadius";
+		constexpr static rivet::rivet_type_id AnimClueGatherRadius_type_id = 0x3d750059;
+		constexpr static std::string_view NavClueGatherRadius_type_name = "NavClueGatherRadius";
+		constexpr static rivet::rivet_type_id NavClueGatherRadius_type_id = 0xa7a613f9; 
 
 		explicit ProximitySpawnSystemConfig() = default;
 		explicit ProximitySpawnSystemConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

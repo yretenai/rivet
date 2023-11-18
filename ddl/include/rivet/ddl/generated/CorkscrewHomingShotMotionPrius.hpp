@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED CorkscrewHomingShotMotionPrius : HomingShotMotionPrius {
-		constexpr const static std::string_view type_name = "CorkscrewHomingShotMotionPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xffdf4f3e;
+		constexpr static std::string_view type_name = "CorkscrewHomingShotMotionPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xffdf4f3e;
 
 		explicit CorkscrewHomingShotMotionPrius() = default;
 		explicit CorkscrewHomingShotMotionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

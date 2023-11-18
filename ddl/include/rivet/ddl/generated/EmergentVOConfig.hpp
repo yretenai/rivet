@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct DialogRuleArray; 
 
 	struct RIVET_DDL_SHARED EmergentVOConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "EmergentVOConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xde8b92bf;
+		constexpr static std::string_view type_name = "EmergentVOConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xde8b92bf;
 
-		constexpr const static std::string_view RuleArray_type_name = "RuleArray";
-		constexpr const static rivet::rivet_type_id RuleArray_type_id = 0xecd171d3; 
+		constexpr static std::string_view RuleArray_type_name = "RuleArray";
+		constexpr static rivet::rivet_type_id RuleArray_type_id = 0xecd171d3; 
 
 		explicit EmergentVOConfig() = default;
 		explicit EmergentVOConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

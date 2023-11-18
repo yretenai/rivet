@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view SpecType_type_name = "SpecType";
-	constexpr const static rivet::rivet_type_id SpecType_type_id = 0xda97903e;
+	constexpr static std::string_view SpecType_type_name = "SpecType";
+	constexpr static rivet::rivet_type_id SpecType_type_id = 0xda97903e;
 
-	constexpr const static std::array<std::string_view, 3> SpecType_values = {
+	constexpr static std::array<std::string_view, 3> SpecType_values = {
 		"kBoth",
 		"kDiffuseOnly",
 		"kSpecOnly", 

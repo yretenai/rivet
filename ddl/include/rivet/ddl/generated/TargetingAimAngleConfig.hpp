@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct TargetingAimAnglePrius; 
 
 	struct RIVET_DDL_SHARED TargetingAimAngleConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "TargetingAimAngleConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x646d6db0;
+		constexpr static std::string_view type_name = "TargetingAimAngleConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x646d6db0;
 
-		constexpr const static std::string_view TargetingAimAngle_type_name = "TargetingAimAngle";
-		constexpr const static rivet::rivet_type_id TargetingAimAngle_type_id = 0xe7a38601; 
+		constexpr static std::string_view TargetingAimAngle_type_name = "TargetingAimAngle";
+		constexpr static rivet::rivet_type_id TargetingAimAngle_type_id = 0xe7a38601; 
 
 		explicit TargetingAimAngleConfig() = default;
 		explicit TargetingAimAngleConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

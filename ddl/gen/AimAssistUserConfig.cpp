@@ -3,15 +3,15 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/AimAssistFrictionData.hpp>
+#include <rivet/ddl/generated/AimAssistTargetSelection.hpp>
+#include <rivet/ddl/generated/AimAssistFactorModifiers.hpp>
+#include <rivet/ddl/generated/AimAssistSettleDecel.hpp>
+#include <rivet/ddl/generated/AimAssistSnagData.hpp>
+#include <rivet/ddl/generated/AimAssistCentering.hpp>
 #include <rivet/ddl/generated/AimAssistBoxProcessData.hpp>
 #include <rivet/ddl/generated/AimAssistMagnetData.hpp>
 #include <rivet/ddl/generated/AimAssistSnapLockData.hpp>
-#include <rivet/ddl/generated/AimAssistCentering.hpp>
-#include <rivet/ddl/generated/AimAssistTargetSelection.hpp>
-#include <rivet/ddl/generated/AimAssistSnagData.hpp>
-#include <rivet/ddl/generated/AimAssistSettleDecel.hpp>
-#include <rivet/ddl/generated/AimAssistFactorModifiers.hpp> 
+#include <rivet/ddl/generated/AimAssistFrictionData.hpp> 
 
 #include <rivet/ddl/generated/AimAssistUserConfig.hpp>
 

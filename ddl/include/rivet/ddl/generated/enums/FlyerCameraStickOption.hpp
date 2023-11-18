@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view FlyerCameraStickOption_type_name = "FlyerCameraStickOption";
-	constexpr const static rivet::rivet_type_id FlyerCameraStickOption_type_id = 0xda2adf7d;
+	constexpr static std::string_view FlyerCameraStickOption_type_name = "FlyerCameraStickOption";
+	constexpr static rivet::rivet_type_id FlyerCameraStickOption_type_id = 0xda2adf7d;
 
-	constexpr const static std::array<std::string_view, 2> FlyerCameraStickOption_values = {
+	constexpr static std::array<std::string_view, 2> FlyerCameraStickOption_values = {
 		"kLeftStick",
 		"kRightStick", 
 	};

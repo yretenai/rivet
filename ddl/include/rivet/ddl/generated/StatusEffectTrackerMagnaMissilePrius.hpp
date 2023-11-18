@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED StatusEffectTrackerMagnaMissilePrius : StatusEffectTrackerBasePrius {
-		constexpr const static std::string_view type_name = "StatusEffectTrackerMagnaMissilePrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x5a0c3bb0;
+		constexpr static std::string_view type_name = "StatusEffectTrackerMagnaMissilePrius";
+		constexpr static rivet::rivet_type_id type_id = 0x5a0c3bb0;
 
 		explicit StatusEffectTrackerMagnaMissilePrius() = default;
 		explicit StatusEffectTrackerMagnaMissilePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

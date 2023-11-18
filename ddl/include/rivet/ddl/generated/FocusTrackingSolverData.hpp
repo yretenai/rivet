@@ -21,31 +21,31 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED FocusTrackingSolverData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "FocusTrackingSolverData";
-		constexpr const static rivet::rivet_type_id type_id = 0x2bd53253;
+		constexpr static std::string_view type_name = "FocusTrackingSolverData";
+		constexpr static rivet::rivet_type_id type_id = 0x2bd53253;
 
-		constexpr const static std::string_view JointChain_type_name = "JointChain";
-		constexpr const static rivet::rivet_type_id JointChain_type_id = 0x4fdcefaf;
-		constexpr const static std::string_view EndEffectorJoint_type_name = "EndEffectorJoint";
-		constexpr const static rivet::rivet_type_id EndEffectorJoint_type_id = 0xd003d36c;
-		constexpr const static std::string_view FocusPositionName_type_name = "FocusPositionName";
-		constexpr const static rivet::rivet_type_id FocusPositionName_type_id = 0xfd2be175;
-		constexpr const static std::string_view PollRefPoseEveryTick_type_name = "PollRefPoseEveryTick";
-		constexpr const static rivet::rivet_type_id PollRefPoseEveryTick_type_id = 0x990982de;
-		constexpr const static std::string_view ReferencePoseTime_type_name = "ReferencePoseTime";
-		constexpr const static rivet::rivet_type_id ReferencePoseTime_type_id = 0x45631e85;
-		constexpr const static std::string_view SetEndEffectorFwdToModelFwd_type_name = "SetEndEffectorFwdToModelFwd";
-		constexpr const static rivet::rivet_type_id SetEndEffectorFwdToModelFwd_type_id = 0x2c5f605b;
-		constexpr const static std::string_view MinYawAngle_type_name = "MinYawAngle";
-		constexpr const static rivet::rivet_type_id MinYawAngle_type_id = 0xb2a54151;
-		constexpr const static std::string_view MaxYawAngle_type_name = "MaxYawAngle";
-		constexpr const static rivet::rivet_type_id MaxYawAngle_type_id = 0x7ea83a5e;
-		constexpr const static std::string_view MinPitchAngle_type_name = "MinPitchAngle";
-		constexpr const static rivet::rivet_type_id MinPitchAngle_type_id = 0xf6de9d12;
-		constexpr const static std::string_view MaxPitchAngle_type_name = "MaxPitchAngle";
-		constexpr const static rivet::rivet_type_id MaxPitchAngle_type_id = 0xb691e564;
-		constexpr const static std::string_view WeightSpreadScheme_type_name = "WeightSpreadScheme";
-		constexpr const static rivet::rivet_type_id WeightSpreadScheme_type_id = 0xab2ca92f; 
+		constexpr static std::string_view JointChain_type_name = "JointChain";
+		constexpr static rivet::rivet_type_id JointChain_type_id = 0x4fdcefaf;
+		constexpr static std::string_view EndEffectorJoint_type_name = "EndEffectorJoint";
+		constexpr static rivet::rivet_type_id EndEffectorJoint_type_id = 0xd003d36c;
+		constexpr static std::string_view FocusPositionName_type_name = "FocusPositionName";
+		constexpr static rivet::rivet_type_id FocusPositionName_type_id = 0xfd2be175;
+		constexpr static std::string_view PollRefPoseEveryTick_type_name = "PollRefPoseEveryTick";
+		constexpr static rivet::rivet_type_id PollRefPoseEveryTick_type_id = 0x990982de;
+		constexpr static std::string_view ReferencePoseTime_type_name = "ReferencePoseTime";
+		constexpr static rivet::rivet_type_id ReferencePoseTime_type_id = 0x45631e85;
+		constexpr static std::string_view SetEndEffectorFwdToModelFwd_type_name = "SetEndEffectorFwdToModelFwd";
+		constexpr static rivet::rivet_type_id SetEndEffectorFwdToModelFwd_type_id = 0x2c5f605b;
+		constexpr static std::string_view MinYawAngle_type_name = "MinYawAngle";
+		constexpr static rivet::rivet_type_id MinYawAngle_type_id = 0xb2a54151;
+		constexpr static std::string_view MaxYawAngle_type_name = "MaxYawAngle";
+		constexpr static rivet::rivet_type_id MaxYawAngle_type_id = 0x7ea83a5e;
+		constexpr static std::string_view MinPitchAngle_type_name = "MinPitchAngle";
+		constexpr static rivet::rivet_type_id MinPitchAngle_type_id = 0xf6de9d12;
+		constexpr static std::string_view MaxPitchAngle_type_name = "MaxPitchAngle";
+		constexpr static rivet::rivet_type_id MaxPitchAngle_type_id = 0xb691e564;
+		constexpr static std::string_view WeightSpreadScheme_type_name = "WeightSpreadScheme";
+		constexpr static rivet::rivet_type_id WeightSpreadScheme_type_id = 0xab2ca92f; 
 
 		explicit FocusTrackingSolverData() = default;
 		explicit FocusTrackingSolverData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

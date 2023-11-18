@@ -17,18 +17,18 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/AwarenessBasePrius.hpp>
-#include <rivet/ddl/generated/enums/AwarenessLos.hpp> 
+#include <rivet/ddl/generated/enums/AwarenessLos.hpp>
+#include <rivet/ddl/generated/AwarenessBasePrius.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED HeroAwarenessPrius : AwarenessBasePrius {
-		constexpr const static std::string_view type_name = "HeroAwarenessPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xbe4b7ef6;
+		constexpr static std::string_view type_name = "HeroAwarenessPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xbe4b7ef6;
 
-		constexpr const static std::string_view AwarenessLos_type_name = "AwarenessLos";
-		constexpr const static rivet::rivet_type_id AwarenessLos_type_id = 0xb26fac4c;
-		constexpr const static std::string_view SourceLocatorName_type_name = "SourceLocatorName";
-		constexpr const static rivet::rivet_type_id SourceLocatorName_type_id = 0x58c28db; 
+		constexpr static std::string_view AwarenessLos_type_name = "AwarenessLos";
+		constexpr static rivet::rivet_type_id AwarenessLos_type_id = 0xb26fac4c;
+		constexpr static std::string_view SourceLocatorName_type_name = "SourceLocatorName";
+		constexpr static rivet::rivet_type_id SourceLocatorName_type_id = 0x58c28db; 
 
 		explicit HeroAwarenessPrius() = default;
 		explicit HeroAwarenessPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

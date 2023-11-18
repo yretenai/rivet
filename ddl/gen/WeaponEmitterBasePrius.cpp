@@ -3,11 +3,11 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/ReflectEmitterPrius.hpp>
+#include <rivet/ddl/generated/LocalOffsetEmitterPrius.hpp>
+#include <rivet/ddl/generated/TargetEmitterPrius.hpp>
 #include <rivet/ddl/generated/BasicEmitterPrius.hpp>
 #include <rivet/ddl/generated/BarrageEmitterPrius.hpp>
-#include <rivet/ddl/generated/TargetEmitterPrius.hpp>
-#include <rivet/ddl/generated/LocalOffsetEmitterPrius.hpp> 
+#include <rivet/ddl/generated/ReflectEmitterPrius.hpp> 
 
 #include <rivet/ddl/generated/WeaponEmitterBasePrius.hpp>
 

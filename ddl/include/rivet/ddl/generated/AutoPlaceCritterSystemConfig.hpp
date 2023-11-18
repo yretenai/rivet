@@ -24,25 +24,25 @@ namespace rivet::ddl::generated {
 	struct CritterTypeData; 
 
 	struct RIVET_DDL_SHARED AutoPlaceCritterSystemConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "AutoPlaceCritterSystemConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xf0d24212;
+		constexpr static std::string_view type_name = "AutoPlaceCritterSystemConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xf0d24212;
 
-		constexpr const static std::string_view CritterTypes_type_name = "CritterTypes";
-		constexpr const static rivet::rivet_type_id CritterTypes_type_id = 0x28c9178d;
-		constexpr const static std::string_view MinSpawnDistance_type_name = "MinSpawnDistance";
-		constexpr const static rivet::rivet_type_id MinSpawnDistance_type_id = 0xef1087b4;
-		constexpr const static std::string_view IdealSpawnDistance_type_name = "IdealSpawnDistance";
-		constexpr const static rivet::rivet_type_id IdealSpawnDistance_type_id = 0xc7256058;
-		constexpr const static std::string_view MaxActiveDistance_type_name = "MaxActiveDistance";
-		constexpr const static rivet::rivet_type_id MaxActiveDistance_type_id = 0xb1508ef1;
-		constexpr const static std::string_view PanicRadius_type_name = "PanicRadius";
-		constexpr const static rivet::rivet_type_id PanicRadius_type_id = 0x4a15a09b;
-		constexpr const static std::string_view CombatPanicRadius_type_name = "CombatPanicRadius";
-		constexpr const static rivet::rivet_type_id CombatPanicRadius_type_id = 0x1a64380c;
-		constexpr const static std::string_view RefreshPeriod_type_name = "RefreshPeriod";
-		constexpr const static rivet::rivet_type_id RefreshPeriod_type_id = 0xef2d955f;
-		constexpr const static std::string_view LocationSelectionHeuristic_type_name = "LocationSelectionHeuristic";
-		constexpr const static rivet::rivet_type_id LocationSelectionHeuristic_type_id = 0xecb3d72a; 
+		constexpr static std::string_view CritterTypes_type_name = "CritterTypes";
+		constexpr static rivet::rivet_type_id CritterTypes_type_id = 0x28c9178d;
+		constexpr static std::string_view MinSpawnDistance_type_name = "MinSpawnDistance";
+		constexpr static rivet::rivet_type_id MinSpawnDistance_type_id = 0xef1087b4;
+		constexpr static std::string_view IdealSpawnDistance_type_name = "IdealSpawnDistance";
+		constexpr static rivet::rivet_type_id IdealSpawnDistance_type_id = 0xc7256058;
+		constexpr static std::string_view MaxActiveDistance_type_name = "MaxActiveDistance";
+		constexpr static rivet::rivet_type_id MaxActiveDistance_type_id = 0xb1508ef1;
+		constexpr static std::string_view PanicRadius_type_name = "PanicRadius";
+		constexpr static rivet::rivet_type_id PanicRadius_type_id = 0x4a15a09b;
+		constexpr static std::string_view CombatPanicRadius_type_name = "CombatPanicRadius";
+		constexpr static rivet::rivet_type_id CombatPanicRadius_type_id = 0x1a64380c;
+		constexpr static std::string_view RefreshPeriod_type_name = "RefreshPeriod";
+		constexpr static rivet::rivet_type_id RefreshPeriod_type_id = 0xef2d955f;
+		constexpr static std::string_view LocationSelectionHeuristic_type_name = "LocationSelectionHeuristic";
+		constexpr static rivet::rivet_type_id LocationSelectionHeuristic_type_id = 0xecb3d72a; 
 
 		explicit AutoPlaceCritterSystemConfig() = default;
 		explicit AutoPlaceCritterSystemConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -21,29 +21,29 @@ namespace rivet::ddl::generated {
 	struct CVCShapeConfig; 
 
 	struct RIVET_DDL_SHARED HeroCVCConfig : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "HeroCVCConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x31ff237d;
+		constexpr static std::string_view type_name = "HeroCVCConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x31ff237d;
 
-		constexpr const static std::string_view CVCMoveStand_type_name = "CVCMoveStand";
-		constexpr const static rivet::rivet_type_id CVCMoveStand_type_id = 0x90dc06c3;
-		constexpr const static std::string_view CVCMoveCrouch_type_name = "CVCMoveCrouch";
-		constexpr const static rivet::rivet_type_id CVCMoveCrouch_type_id = 0x72effc38;
-		constexpr const static std::string_view CVCMoveCoverLow_type_name = "CVCMoveCoverLow";
-		constexpr const static rivet::rivet_type_id CVCMoveCoverLow_type_id = 0x1a4104cd;
-		constexpr const static std::string_view CVCMoveCoverHigh_type_name = "CVCMoveCoverHigh";
-		constexpr const static rivet::rivet_type_id CVCMoveCoverHigh_type_id = 0x678befd7;
-		constexpr const static std::string_view CVCMoveLedge_type_name = "CVCMoveLedge";
-		constexpr const static rivet::rivet_type_id CVCMoveLedge_type_id = 0x3ac77f5e;
-		constexpr const static std::string_view CVCCollStand_type_name = "CVCCollStand";
-		constexpr const static rivet::rivet_type_id CVCCollStand_type_id = 0xbcbf4f19;
-		constexpr const static std::string_view CVCCollCrouch_type_name = "CVCCollCrouch";
-		constexpr const static rivet::rivet_type_id CVCCollCrouch_type_id = 0x14c5a4bb;
-		constexpr const static std::string_view CVCCollCoverLow_type_name = "CVCCollCoverLow";
-		constexpr const static rivet::rivet_type_id CVCCollCoverLow_type_id = 0x6f5f70a9;
-		constexpr const static std::string_view CVCCollCoverHigh_type_name = "CVCCollCoverHigh";
-		constexpr const static rivet::rivet_type_id CVCCollCoverHigh_type_id = 0x2d2154e2;
-		constexpr const static std::string_view CVCCollLedge_type_name = "CVCCollLedge";
-		constexpr const static rivet::rivet_type_id CVCCollLedge_type_id = 0x16a43684; 
+		constexpr static std::string_view CVCMoveStand_type_name = "CVCMoveStand";
+		constexpr static rivet::rivet_type_id CVCMoveStand_type_id = 0x90dc06c3;
+		constexpr static std::string_view CVCMoveCrouch_type_name = "CVCMoveCrouch";
+		constexpr static rivet::rivet_type_id CVCMoveCrouch_type_id = 0x72effc38;
+		constexpr static std::string_view CVCMoveCoverLow_type_name = "CVCMoveCoverLow";
+		constexpr static rivet::rivet_type_id CVCMoveCoverLow_type_id = 0x1a4104cd;
+		constexpr static std::string_view CVCMoveCoverHigh_type_name = "CVCMoveCoverHigh";
+		constexpr static rivet::rivet_type_id CVCMoveCoverHigh_type_id = 0x678befd7;
+		constexpr static std::string_view CVCMoveLedge_type_name = "CVCMoveLedge";
+		constexpr static rivet::rivet_type_id CVCMoveLedge_type_id = 0x3ac77f5e;
+		constexpr static std::string_view CVCCollStand_type_name = "CVCCollStand";
+		constexpr static rivet::rivet_type_id CVCCollStand_type_id = 0xbcbf4f19;
+		constexpr static std::string_view CVCCollCrouch_type_name = "CVCCollCrouch";
+		constexpr static rivet::rivet_type_id CVCCollCrouch_type_id = 0x14c5a4bb;
+		constexpr static std::string_view CVCCollCoverLow_type_name = "CVCCollCoverLow";
+		constexpr static rivet::rivet_type_id CVCCollCoverLow_type_id = 0x6f5f70a9;
+		constexpr static std::string_view CVCCollCoverHigh_type_name = "CVCCollCoverHigh";
+		constexpr static rivet::rivet_type_id CVCCollCoverHigh_type_id = 0x2d2154e2;
+		constexpr static std::string_view CVCCollLedge_type_name = "CVCCollLedge";
+		constexpr static rivet::rivet_type_id CVCCollLedge_type_id = 0x16a43684; 
 
 		explicit HeroCVCConfig() = default;
 		explicit HeroCVCConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

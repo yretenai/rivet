@@ -17,58 +17,58 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/enums/KnockbackLevels.hpp>
-#include <rivet/ddl/generated/enums/x5c2e2f3f.hpp> 
+#include <rivet/ddl/generated/enums/x5c2e2f3f.hpp>
+#include <rivet/ddl/generated/enums/KnockbackLevels.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ShotCarpetBomberData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "ShotCarpetBomberData";
-		constexpr const static rivet::rivet_type_id type_id = 0x2671eb28;
+		constexpr static std::string_view type_name = "ShotCarpetBomberData";
+		constexpr static rivet::rivet_type_id type_id = 0x2671eb28;
 
-		constexpr const static std::string_view IntroIdleAnim_type_name = "IntroIdleAnim";
-		constexpr const static rivet::rivet_type_id IntroIdleAnim_type_id = 0xc6876343;
-		constexpr const static std::string_view StartFlyAnim_type_name = "StartFlyAnim";
-		constexpr const static rivet::rivet_type_id StartFlyAnim_type_id = 0x27ec8e48;
-		constexpr const static std::string_view FlyLoopAnim_type_name = "FlyLoopAnim";
-		constexpr const static rivet::rivet_type_id FlyLoopAnim_type_id = 0x2c808fab;
-		constexpr const static std::string_view ShotsPerDrop_type_name = "ShotsPerDrop";
-		constexpr const static rivet::rivet_type_id ShotsPerDrop_type_id = 0xa7793030;
-		constexpr const static std::string_view ShotsOnDestroy_type_name = "ShotsOnDestroy";
-		constexpr const static rivet::rivet_type_id ShotsOnDestroy_type_id = 0xa28fe59b;
-		constexpr const static std::string_view TargetingConeAxisLength_type_name = "TargetingConeAxisLength";
-		constexpr const static rivet::rivet_type_id TargetingConeAxisLength_type_id = 0x300b9bc6;
-		constexpr const static std::string_view TargetingConeAngle_type_name = "TargetingConeAngle";
-		constexpr const static rivet::rivet_type_id TargetingConeAngle_type_id = 0xec7ad98c;
-		constexpr const static std::string_view ShotIntroTime_type_name = "ShotIntroTime";
-		constexpr const static rivet::rivet_type_id ShotIntroTime_type_id = 0x39febe6b;
-		constexpr const static std::string_view Knockback_type_name = "Knockback";
-		constexpr const static rivet::rivet_type_id Knockback_type_id = 0x2e553fdd;
-		constexpr const static std::string_view KnockbackAmount_type_name = "KnockbackAmount";
-		constexpr const static rivet::rivet_type_id KnockbackAmount_type_id = 0x7b1e600b;
-		constexpr const static std::string_view MaxCrashTime_type_name = "MaxCrashTime";
-		constexpr const static rivet::rivet_type_id MaxCrashTime_type_id = 0x94df5a67;
-		constexpr const static std::string_view TimeUntilFirstDrop_type_name = "TimeUntilFirstDrop";
-		constexpr const static rivet::rivet_type_id TimeUntilFirstDrop_type_id = 0xaf990de2;
-		constexpr const static std::string_view DropSpreadAngle_type_name = "DropSpreadAngle";
-		constexpr const static rivet::rivet_type_id DropSpreadAngle_type_id = 0xf23fe6a1;
-		constexpr const static std::string_view RandomAngleOffset_type_name = "RandomAngleOffset";
-		constexpr const static rivet::rivet_type_id RandomAngleOffset_type_id = 0x536f0f82;
-		constexpr const static std::string_view DropTimeSpan_type_name = "DropTimeSpan";
-		constexpr const static rivet::rivet_type_id DropTimeSpan_type_id = 0x94511094;
-		constexpr const static std::string_view RandomDropTimeOffset_type_name = "RandomDropTimeOffset";
-		constexpr const static rivet::rivet_type_id RandomDropTimeOffset_type_id = 0x7ddf343d;
-		constexpr const static std::string_view LastBombCollIgnoreDist_type_name = "LastBombCollIgnoreDist";
-		constexpr const static rivet::rivet_type_id LastBombCollIgnoreDist_type_id = 0x6f46f335;
-		constexpr const static std::string_view LastBombAngle_type_name = "LastBombAngle";
-		constexpr const static rivet::rivet_type_id LastBombAngle_type_id = 0xde417137;
-		constexpr const static std::string_view LastBombRandomAngleOffset_type_name = "LastBombRandomAngleOffset";
-		constexpr const static rivet::rivet_type_id LastBombRandomAngleOffset_type_id = 0xa04ca5a5;
-		constexpr const static std::string_view AlternateDropSpreadDir_type_name = "AlternateDropSpreadDir";
-		constexpr const static rivet::rivet_type_id AlternateDropSpreadDir_type_id = 0x9223ce19;
-		constexpr const static std::string_view LastBombIgnoreHitActor_type_name = "LastBombIgnoreHitActor";
-		constexpr const static rivet::rivet_type_id LastBombIgnoreHitActor_type_id = 0xb49038ea;
-		constexpr const static std::string_view SpreadAngleDireciton_type_name = "SpreadAngleDireciton";
-		constexpr const static rivet::rivet_type_id SpreadAngleDireciton_type_id = 0xd1207449; 
+		constexpr static std::string_view IntroIdleAnim_type_name = "IntroIdleAnim";
+		constexpr static rivet::rivet_type_id IntroIdleAnim_type_id = 0xc6876343;
+		constexpr static std::string_view StartFlyAnim_type_name = "StartFlyAnim";
+		constexpr static rivet::rivet_type_id StartFlyAnim_type_id = 0x27ec8e48;
+		constexpr static std::string_view FlyLoopAnim_type_name = "FlyLoopAnim";
+		constexpr static rivet::rivet_type_id FlyLoopAnim_type_id = 0x2c808fab;
+		constexpr static std::string_view ShotsPerDrop_type_name = "ShotsPerDrop";
+		constexpr static rivet::rivet_type_id ShotsPerDrop_type_id = 0xa7793030;
+		constexpr static std::string_view ShotsOnDestroy_type_name = "ShotsOnDestroy";
+		constexpr static rivet::rivet_type_id ShotsOnDestroy_type_id = 0xa28fe59b;
+		constexpr static std::string_view TargetingConeAxisLength_type_name = "TargetingConeAxisLength";
+		constexpr static rivet::rivet_type_id TargetingConeAxisLength_type_id = 0x300b9bc6;
+		constexpr static std::string_view TargetingConeAngle_type_name = "TargetingConeAngle";
+		constexpr static rivet::rivet_type_id TargetingConeAngle_type_id = 0xec7ad98c;
+		constexpr static std::string_view ShotIntroTime_type_name = "ShotIntroTime";
+		constexpr static rivet::rivet_type_id ShotIntroTime_type_id = 0x39febe6b;
+		constexpr static std::string_view Knockback_type_name = "Knockback";
+		constexpr static rivet::rivet_type_id Knockback_type_id = 0x2e553fdd;
+		constexpr static std::string_view KnockbackAmount_type_name = "KnockbackAmount";
+		constexpr static rivet::rivet_type_id KnockbackAmount_type_id = 0x7b1e600b;
+		constexpr static std::string_view MaxCrashTime_type_name = "MaxCrashTime";
+		constexpr static rivet::rivet_type_id MaxCrashTime_type_id = 0x94df5a67;
+		constexpr static std::string_view TimeUntilFirstDrop_type_name = "TimeUntilFirstDrop";
+		constexpr static rivet::rivet_type_id TimeUntilFirstDrop_type_id = 0xaf990de2;
+		constexpr static std::string_view DropSpreadAngle_type_name = "DropSpreadAngle";
+		constexpr static rivet::rivet_type_id DropSpreadAngle_type_id = 0xf23fe6a1;
+		constexpr static std::string_view RandomAngleOffset_type_name = "RandomAngleOffset";
+		constexpr static rivet::rivet_type_id RandomAngleOffset_type_id = 0x536f0f82;
+		constexpr static std::string_view DropTimeSpan_type_name = "DropTimeSpan";
+		constexpr static rivet::rivet_type_id DropTimeSpan_type_id = 0x94511094;
+		constexpr static std::string_view RandomDropTimeOffset_type_name = "RandomDropTimeOffset";
+		constexpr static rivet::rivet_type_id RandomDropTimeOffset_type_id = 0x7ddf343d;
+		constexpr static std::string_view LastBombCollIgnoreDist_type_name = "LastBombCollIgnoreDist";
+		constexpr static rivet::rivet_type_id LastBombCollIgnoreDist_type_id = 0x6f46f335;
+		constexpr static std::string_view LastBombAngle_type_name = "LastBombAngle";
+		constexpr static rivet::rivet_type_id LastBombAngle_type_id = 0xde417137;
+		constexpr static std::string_view LastBombRandomAngleOffset_type_name = "LastBombRandomAngleOffset";
+		constexpr static rivet::rivet_type_id LastBombRandomAngleOffset_type_id = 0xa04ca5a5;
+		constexpr static std::string_view AlternateDropSpreadDir_type_name = "AlternateDropSpreadDir";
+		constexpr static rivet::rivet_type_id AlternateDropSpreadDir_type_id = 0x9223ce19;
+		constexpr static std::string_view LastBombIgnoreHitActor_type_name = "LastBombIgnoreHitActor";
+		constexpr static rivet::rivet_type_id LastBombIgnoreHitActor_type_id = 0xb49038ea;
+		constexpr static std::string_view SpreadAngleDireciton_type_name = "SpreadAngleDireciton";
+		constexpr static rivet::rivet_type_id SpreadAngleDireciton_type_id = 0xd1207449; 
 
 		explicit ShotCarpetBomberData() = default;
 		explicit ShotCarpetBomberData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

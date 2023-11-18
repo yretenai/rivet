@@ -3,25 +3,25 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
+#include <rivet/ddl/generated/DamageModifierHitDirectionOutgoingPrius.hpp>
+#include <rivet/ddl/generated/DamageModifierProcOutgoingPrius.hpp>
+#include <rivet/ddl/generated/DamageModifierShockwavePrius.hpp>
+#include <rivet/ddl/generated/DamageModifierExplosionPrius.hpp>
+#include <rivet/ddl/generated/DamageModifierDirectionalOutgoingPrius.hpp>
 #include <rivet/ddl/generated/DamageModifierConditionEntry.hpp>
 #include <rivet/ddl/generated/DamageModifierCentipedeMeleeOutgoingPrius.hpp>
-#include <rivet/ddl/generated/DamageModifierOutgoingBattleBrewScalePrius.hpp>
-#include <rivet/ddl/generated/DamageModifierDirectionalOutgoingPrius.hpp>
 #include <rivet/ddl/generated/DamageModifierIgnoreOutgoingPrius.hpp>
-#include <rivet/ddl/generated/DamageModifierInnerOuterPrius.hpp>
-#include <rivet/ddl/generated/DamageModifierShockwavePrius.hpp>
 #include <rivet/ddl/generated/DamageModMultOutgoingPrius.hpp>
-#include <rivet/ddl/generated/DamageModifierHazardPrius.hpp>
+#include <rivet/ddl/generated/DamageModifierVerticalLimitPrius.hpp>
+#include <rivet/ddl/generated/DamageModifierListPrius.hpp>
+#include <rivet/ddl/generated/DamageModifierInnerOuterPrius.hpp>
+#include <rivet/ddl/generated/DamageModifierPercentOutgoingPrius.hpp>
 #include <rivet/ddl/generated/DamageModAddOutgoingPrius.hpp>
+#include <rivet/ddl/generated/DamageModifierHazardPrius.hpp>
 #include <rivet/ddl/generated/DamageModifierAddFlagsPrius.hpp>
 #include <rivet/ddl/generated/DamageModifierHitDirectionPrius.hpp>
-#include <rivet/ddl/generated/DamageModifierPercentOutgoingPrius.hpp>
-#include <rivet/ddl/generated/DamageModifierOutwardBlastPrius.hpp>
-#include <rivet/ddl/generated/DamageModifierListPrius.hpp>
-#include <rivet/ddl/generated/DamageModifierVerticalLimitPrius.hpp>
-#include <rivet/ddl/generated/DamageModifierExplosionPrius.hpp>
-#include <rivet/ddl/generated/DamageModifierProcOutgoingPrius.hpp>
-#include <rivet/ddl/generated/DamageModifierHitDirectionOutgoingPrius.hpp> 
+#include <rivet/ddl/generated/DamageModifierOutgoingBattleBrewScalePrius.hpp>
+#include <rivet/ddl/generated/DamageModifierOutwardBlastPrius.hpp> 
 
 #include <rivet/ddl/generated/DamageModifierOutgoingPrius.hpp>
 

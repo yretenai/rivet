@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view xa4e99a36_type_name = "xa4e99a36";
-	constexpr const static rivet::rivet_type_id xa4e99a36_type_id = 0xa4e99a36;
+	constexpr static std::string_view xa4e99a36_type_name = "xa4e99a36";
+	constexpr static rivet::rivet_type_id xa4e99a36_type_id = 0xa4e99a36;
 
-	constexpr const static std::array<std::string_view, 26> xa4e99a36_values = {
+	constexpr static std::array<std::string_view, 26> xa4e99a36_values = {
 		"kA8R8G8B8",
 		"kR5G6B5",
 		"kA1R5G5B5",

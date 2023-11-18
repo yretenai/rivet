@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED SoundListenerPriority : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "SoundListenerPriority";
-		constexpr const static rivet::rivet_type_id type_id = 0x944b8ef2;
+		constexpr static std::string_view type_name = "SoundListenerPriority";
+		constexpr static rivet::rivet_type_id type_id = 0x944b8ef2;
 
-		constexpr const static std::string_view Client_type_name = "Client";
-		constexpr const static rivet::rivet_type_id Client_type_id = 0xf93c4a32;
-		constexpr const static std::string_view Priority_type_name = "Priority";
-		constexpr const static rivet::rivet_type_id Priority_type_id = 0x98a76157; 
+		constexpr static std::string_view Client_type_name = "Client";
+		constexpr static rivet::rivet_type_id Client_type_id = 0xf93c4a32;
+		constexpr static std::string_view Priority_type_name = "Priority";
+		constexpr static rivet::rivet_type_id Priority_type_id = 0x98a76157; 
 
 		explicit SoundListenerPriority() = default;
 		explicit SoundListenerPriority([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

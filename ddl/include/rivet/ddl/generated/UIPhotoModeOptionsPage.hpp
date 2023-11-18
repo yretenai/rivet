@@ -21,15 +21,15 @@ namespace rivet::ddl::generated {
 	struct UIPhotoModeOption; 
 
 	struct RIVET_DDL_SHARED UIPhotoModeOptionsPage : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "UIPhotoModeOptionsPage";
-		constexpr const static rivet::rivet_type_id type_id = 0x4cc65e31;
+		constexpr static std::string_view type_name = "UIPhotoModeOptionsPage";
+		constexpr static rivet::rivet_type_id type_id = 0x4cc65e31;
 
-		constexpr const static std::string_view Label_type_name = "Label";
-		constexpr const static rivet::rivet_type_id Label_type_id = 0x17f49c29;
-		constexpr const static std::string_view Icon_type_name = "Icon";
-		constexpr const static rivet::rivet_type_id Icon_type_id = 0x5504e96b;
-		constexpr const static std::string_view Options_type_name = "Options";
-		constexpr const static rivet::rivet_type_id Options_type_id = 0xd1df99bf; 
+		constexpr static std::string_view Label_type_name = "Label";
+		constexpr static rivet::rivet_type_id Label_type_id = 0x17f49c29;
+		constexpr static std::string_view Icon_type_name = "Icon";
+		constexpr static rivet::rivet_type_id Icon_type_id = 0x5504e96b;
+		constexpr static std::string_view Options_type_name = "Options";
+		constexpr static rivet::rivet_type_id Options_type_id = 0xd1df99bf; 
 
 		explicit UIPhotoModeOptionsPage() = default;
 		explicit UIPhotoModeOptionsPage([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

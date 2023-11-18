@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED BotGroundResponseDamagePrius : BotGroundResponseBasePrius {
-		constexpr const static std::string_view type_name = "BotGroundResponseDamagePrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xb02406b9;
+		constexpr static std::string_view type_name = "BotGroundResponseDamagePrius";
+		constexpr static rivet::rivet_type_id type_id = 0xb02406b9;
 
-		constexpr const static std::string_view DPS_type_name = "DPS";
-		constexpr const static rivet::rivet_type_id DPS_type_id = 0xd213ce3d; 
+		constexpr static std::string_view DPS_type_name = "DPS";
+		constexpr static rivet::rivet_type_id DPS_type_id = 0xd213ce3d; 
 
 		explicit BotGroundResponseDamagePrius() = default;
 		explicit BotGroundResponseDamagePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

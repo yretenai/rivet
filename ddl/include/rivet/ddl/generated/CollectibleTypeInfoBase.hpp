@@ -18,17 +18,17 @@
 #include <rivet/structures/rivet_serialization.hpp>
 
 namespace rivet::ddl::generated {
-	struct CollectibleTypeDenum;
-	struct ObjSysUnlockSequence; 
+	struct ObjSysUnlockSequence;
+	struct CollectibleTypeDenum; 
 
 	struct RIVET_DDL_SHARED CollectibleTypeInfoBase : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "CollectibleTypeInfoBase";
-		constexpr const static rivet::rivet_type_id type_id = 0xcfb51fcb;
+		constexpr static std::string_view type_name = "CollectibleTypeInfoBase";
+		constexpr static rivet::rivet_type_id type_id = 0xcfb51fcb;
 
-		constexpr const static std::string_view CollectibleType_type_name = "CollectibleType";
-		constexpr const static rivet::rivet_type_id CollectibleType_type_id = 0xa2fe6498;
-		constexpr const static std::string_view MissionLocks_type_name = "MissionLocks";
-		constexpr const static rivet::rivet_type_id MissionLocks_type_id = 0x8a19a607; 
+		constexpr static std::string_view CollectibleType_type_name = "CollectibleType";
+		constexpr static rivet::rivet_type_id CollectibleType_type_id = 0xa2fe6498;
+		constexpr static std::string_view MissionLocks_type_name = "MissionLocks";
+		constexpr static rivet::rivet_type_id MissionLocks_type_id = 0x8a19a607; 
 
 		explicit CollectibleTypeInfoBase() = default;
 		explicit CollectibleTypeInfoBase([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

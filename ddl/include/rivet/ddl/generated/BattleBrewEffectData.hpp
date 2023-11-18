@@ -21,13 +21,13 @@ namespace rivet::ddl::generated {
 	struct BattleBrewEmitterWrapper; 
 
 	struct RIVET_DDL_SHARED BattleBrewEffectData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "BattleBrewEffectData";
-		constexpr const static rivet::rivet_type_id type_id = 0x608dbe7d;
+		constexpr static std::string_view type_name = "BattleBrewEffectData";
+		constexpr static rivet::rivet_type_id type_id = 0x608dbe7d;
 
-		constexpr const static std::string_view BrewName_type_name = "BrewName";
-		constexpr const static rivet::rivet_type_id BrewName_type_id = 0xba84a8cf;
-		constexpr const static std::string_view Emitters_type_name = "Emitters";
-		constexpr const static rivet::rivet_type_id Emitters_type_id = 0xb0a4fc8c; 
+		constexpr static std::string_view BrewName_type_name = "BrewName";
+		constexpr static rivet::rivet_type_id BrewName_type_id = 0xba84a8cf;
+		constexpr static std::string_view Emitters_type_name = "Emitters";
+		constexpr static rivet::rivet_type_id Emitters_type_id = 0xb0a4fc8c; 
 
 		explicit BattleBrewEffectData() = default;
 		explicit BattleBrewEffectData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

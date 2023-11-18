@@ -21,15 +21,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED WeaponImageData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "WeaponImageData";
-		constexpr const static rivet::rivet_type_id type_id = 0xc68e3073;
+		constexpr static std::string_view type_name = "WeaponImageData";
+		constexpr static rivet::rivet_type_id type_id = 0xc68e3073;
 
-		constexpr const static std::string_view Weapon_type_name = "Weapon";
-		constexpr const static rivet::rivet_type_id Weapon_type_id = 0x574be981;
-		constexpr const static std::string_view Texture_type_name = "Texture";
-		constexpr const static rivet::rivet_type_id Texture_type_id = 0x838c6e4a;
-		constexpr const static std::string_view TextureV5_type_name = "TextureV5";
-		constexpr const static rivet::rivet_type_id TextureV5_type_id = 0x1ace56ad; 
+		constexpr static std::string_view Weapon_type_name = "Weapon";
+		constexpr static rivet::rivet_type_id Weapon_type_id = 0x574be981;
+		constexpr static std::string_view Texture_type_name = "Texture";
+		constexpr static rivet::rivet_type_id Texture_type_id = 0x838c6e4a;
+		constexpr static std::string_view TextureV5_type_name = "TextureV5";
+		constexpr static rivet::rivet_type_id TextureV5_type_id = 0x1ace56ad; 
 
 		explicit WeaponImageData() = default;
 		explicit WeaponImageData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

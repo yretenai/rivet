@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED BotConfigShootingStream : BotConfigShooting {
-		constexpr const static std::string_view type_name = "BotConfigShootingStream";
-		constexpr const static rivet::rivet_type_id type_id = 0xf00f445c;
+		constexpr static std::string_view type_name = "BotConfigShootingStream";
+		constexpr static rivet::rivet_type_id type_id = 0xf00f445c;
 
 		explicit BotConfigShootingStream() = default;
 		explicit BotConfigShootingStream([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

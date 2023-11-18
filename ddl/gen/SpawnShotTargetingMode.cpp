@@ -3,10 +3,10 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/UseOwnerTargetingData.hpp>
-#include <rivet/ddl/generated/DontFindTarget.hpp>
+#include <rivet/ddl/generated/ConeTargeting.hpp>
 #include <rivet/ddl/generated/SphereTargeting.hpp>
-#include <rivet/ddl/generated/ConeTargeting.hpp> 
+#include <rivet/ddl/generated/UseOwnerTargetingData.hpp>
+#include <rivet/ddl/generated/DontFindTarget.hpp> 
 
 #include <rivet/ddl/generated/SpawnShotTargetingMode.hpp>
 

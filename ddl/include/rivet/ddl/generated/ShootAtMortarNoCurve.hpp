@@ -23,19 +23,19 @@ namespace rivet::ddl::generated {
 	struct AimModWrapper; 
 
 	struct RIVET_DDL_SHARED ShootAtMortarNoCurve : ShootAtMortarFiringStyle {
-		constexpr const static std::string_view type_name = "ShootAtMortarNoCurve";
-		constexpr const static rivet::rivet_type_id type_id = 0xe444ce26;
+		constexpr static std::string_view type_name = "ShootAtMortarNoCurve";
+		constexpr static rivet::rivet_type_id type_id = 0xe444ce26;
 
-		constexpr const static std::string_view UseAimingComponent_type_name = "UseAimingComponent";
-		constexpr const static rivet::rivet_type_id UseAimingComponent_type_id = 0x2fc3f981;
-		constexpr const static std::string_view StartAimModOnStateStart_type_name = "StartAimModOnStateStart";
-		constexpr const static rivet::rivet_type_id StartAimModOnStateStart_type_id = 0xceb7741c;
-		constexpr const static std::string_view EndAimModsOnShootEnd_type_name = "EndAimModsOnShootEnd";
-		constexpr const static rivet::rivet_type_id EndAimModsOnShootEnd_type_id = 0x7560b934;
-		constexpr const static std::string_view MimicShotRate_type_name = "MimicShotRate";
-		constexpr const static rivet::rivet_type_id MimicShotRate_type_id = 0xd7ef4376;
-		constexpr const static std::string_view AimMods_type_name = "AimMods";
-		constexpr const static rivet::rivet_type_id AimMods_type_id = 0x1d7694a1; 
+		constexpr static std::string_view UseAimingComponent_type_name = "UseAimingComponent";
+		constexpr static rivet::rivet_type_id UseAimingComponent_type_id = 0x2fc3f981;
+		constexpr static std::string_view StartAimModOnStateStart_type_name = "StartAimModOnStateStart";
+		constexpr static rivet::rivet_type_id StartAimModOnStateStart_type_id = 0xceb7741c;
+		constexpr static std::string_view EndAimModsOnShootEnd_type_name = "EndAimModsOnShootEnd";
+		constexpr static rivet::rivet_type_id EndAimModsOnShootEnd_type_id = 0x7560b934;
+		constexpr static std::string_view MimicShotRate_type_name = "MimicShotRate";
+		constexpr static rivet::rivet_type_id MimicShotRate_type_id = 0xd7ef4376;
+		constexpr static std::string_view AimMods_type_name = "AimMods";
+		constexpr static rivet::rivet_type_id AimMods_type_id = 0x1d7694a1; 
 
 		explicit ShootAtMortarNoCurve() = default;
 		explicit ShootAtMortarNoCurve([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

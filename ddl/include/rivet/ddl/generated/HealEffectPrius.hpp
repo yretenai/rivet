@@ -17,20 +17,20 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/ScriptedShotEffectBasePrius.hpp>
-#include <rivet/ddl/generated/enums/x4891b54.hpp> 
+#include <rivet/ddl/generated/enums/x4891b54.hpp>
+#include <rivet/ddl/generated/ScriptedShotEffectBasePrius.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED HealEffectPrius : ScriptedShotEffectBasePrius {
-		constexpr const static std::string_view type_name = "HealEffectPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x6cd2ed9a;
+		constexpr static std::string_view type_name = "HealEffectPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x6cd2ed9a;
 
-		constexpr const static std::string_view ActorType_type_name = "ActorType";
-		constexpr const static rivet::rivet_type_id ActorType_type_id = 0x1eb7640e;
-		constexpr const static std::string_view Health_type_name = "Health";
-		constexpr const static rivet::rivet_type_id Health_type_id = 0xf0a26d74;
-		constexpr const static std::string_view ContinuousMode_type_name = "ContinuousMode";
-		constexpr const static rivet::rivet_type_id ContinuousMode_type_id = 0x678540d; 
+		constexpr static std::string_view ActorType_type_name = "ActorType";
+		constexpr static rivet::rivet_type_id ActorType_type_id = 0x1eb7640e;
+		constexpr static std::string_view Health_type_name = "Health";
+		constexpr static rivet::rivet_type_id Health_type_id = 0xf0a26d74;
+		constexpr static std::string_view ContinuousMode_type_name = "ContinuousMode";
+		constexpr static rivet::rivet_type_id ContinuousMode_type_id = 0x678540d; 
 
 		explicit HealEffectPrius() = default;
 		explicit HealEffectPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

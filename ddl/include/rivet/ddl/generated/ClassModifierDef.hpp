@@ -19,17 +19,17 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ClassModifierDef : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "ClassModifierDef";
-		constexpr const static rivet::rivet_type_id type_id = 0x9063e12f;
+		constexpr static std::string_view type_name = "ClassModifierDef";
+		constexpr static rivet::rivet_type_id type_id = 0x9063e12f;
 
-		constexpr const static std::string_view ModClassA_type_name = "ModClassA";
-		constexpr const static rivet::rivet_type_id ModClassA_type_id = 0xba00c862;
-		constexpr const static std::string_view ModClassB_type_name = "ModClassB";
-		constexpr const static rivet::rivet_type_id ModClassB_type_id = 0x230999d8;
-		constexpr const static std::string_view ModClassC_type_name = "ModClassC";
-		constexpr const static rivet::rivet_type_id ModClassC_type_id = 0x540ea94e;
-		constexpr const static std::string_view ModClassD_type_name = "ModClassD";
-		constexpr const static rivet::rivet_type_id ModClassD_type_id = 0xca6a3ced; 
+		constexpr static std::string_view ModClassA_type_name = "ModClassA";
+		constexpr static rivet::rivet_type_id ModClassA_type_id = 0xba00c862;
+		constexpr static std::string_view ModClassB_type_name = "ModClassB";
+		constexpr static rivet::rivet_type_id ModClassB_type_id = 0x230999d8;
+		constexpr static std::string_view ModClassC_type_name = "ModClassC";
+		constexpr static rivet::rivet_type_id ModClassC_type_id = 0x540ea94e;
+		constexpr static std::string_view ModClassD_type_name = "ModClassD";
+		constexpr static rivet::rivet_type_id ModClassD_type_id = 0xca6a3ced; 
 
 		explicit ClassModifierDef() = default;
 		explicit ClassModifierDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

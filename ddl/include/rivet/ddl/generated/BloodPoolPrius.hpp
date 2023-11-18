@@ -19,15 +19,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED BloodPoolPrius : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "BloodPoolPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x67c96fc5;
+		constexpr static std::string_view type_name = "BloodPoolPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x67c96fc5;
 
-		constexpr const static std::string_view BloodPoolJoints_type_name = "BloodPoolJoints";
-		constexpr const static rivet::rivet_type_id BloodPoolJoints_type_id = 0x476a774e;
-		constexpr const static std::string_view MaxDist_type_name = "MaxDist";
-		constexpr const static rivet::rivet_type_id MaxDist_type_id = 0x7ce74647;
-		constexpr const static std::string_view MaxPools_type_name = "MaxPools";
-		constexpr const static rivet::rivet_type_id MaxPools_type_id = 0x6e4bf20; 
+		constexpr static std::string_view BloodPoolJoints_type_name = "BloodPoolJoints";
+		constexpr static rivet::rivet_type_id BloodPoolJoints_type_id = 0x476a774e;
+		constexpr static std::string_view MaxDist_type_name = "MaxDist";
+		constexpr static rivet::rivet_type_id MaxDist_type_id = 0x7ce74647;
+		constexpr static std::string_view MaxPools_type_name = "MaxPools";
+		constexpr static rivet::rivet_type_id MaxPools_type_id = 0x6e4bf20; 
 
 		explicit BloodPoolPrius() = default;
 		explicit BloodPoolPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -21,11 +21,11 @@ namespace rivet::ddl::generated {
 	struct BaseComponentAmmoPrius; 
 
 	struct RIVET_DDL_SHARED WeaponAmmoDataListItem : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "WeaponAmmoDataListItem";
-		constexpr const static rivet::rivet_type_id type_id = 0xb7b44440;
+		constexpr static std::string_view type_name = "WeaponAmmoDataListItem";
+		constexpr static rivet::rivet_type_id type_id = 0xb7b44440;
 
-		constexpr const static std::string_view Ammo_type_name = "Ammo";
-		constexpr const static rivet::rivet_type_id Ammo_type_id = 0xdf1fbe9a; 
+		constexpr static std::string_view Ammo_type_name = "Ammo";
+		constexpr static rivet::rivet_type_id Ammo_type_id = 0xdf1fbe9a; 
 
 		explicit WeaponAmmoDataListItem() = default;
 		explicit WeaponAmmoDataListItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

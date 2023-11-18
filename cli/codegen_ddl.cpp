@@ -85,7 +85,7 @@ gather_base_defined_types(const dump_root &root, const uint32_t type_id, std::un
 
 auto
 generate_struct(const dump_root &root, const std::shared_ptr<struct_info> &struct_, const path &include_path, const path &source_path)
-	-> std::tuple<std::string, std::unordered_set<uint32_t>> {
+	-> std::string {
 	auto struct_name = struct_->name.get_name_safe();
 	auto struct_id = struct_->name.get_id_hex();
 	std::cout << "generating struct " << struct_name << '\n';
@@ -417,26 +417,7 @@ generate_struct(const dump_root &root, const std::shared_ptr<struct_info> &struc
 	cpp_file.write(source.data(), static_cast<std::streamsize>(source.size()));
 	cpp_file.close();
 
-	return std::make_tuple(struct_name + ".cpp", referenced_types);
-}
-
-void
-generate_structs(const dump_root &root, const path &include_path, const path &source_path, std::stringstream &meson_build_files, // NOLINT(*-no-recursion)
-				 std::unordered_set<uint32_t> &referenced_types, const std::unordered_set<uint32_t> &lookup_types) {
-	for (auto lookup_id : lookup_types) {
-		if (referenced_types.contains(lookup_id)) {
-			continue;
-		}
-
-		referenced_types.insert(lookup_id);
-
-		auto struct_ = std::get<std::shared_ptr<struct_info>>(root.lookup.at(lookup_id));
-
-		auto [path, referenced] = generate_struct(root, struct_, include_path, source_path);
-		meson_build_files << "\t'gen/" << path << "',\n";
-
-		generate_structs(root, include_path, source_path, meson_build_files, referenced_types, referenced);
-	}
+	return struct_name + ".cpp";
 }
 
 void
@@ -577,14 +558,16 @@ main(const int argc, char **argv) -> int { // NOLINT(*-exception-escape)
 
 	std::stringstream meson_build_files;
 
-	std::unordered_set<uint32_t> lookup_types;
-
-	for (const auto & [name, id] : root.roots) {
-		lookup_types.insert(id);
-	}
-
 	std::unordered_set<uint32_t> referenced_types;
-	generate_structs(root, include_path, source_path, meson_build_files, referenced_types, lookup_types);
+	for (const auto &struct_ : root.structs) {
+		if (referenced_types.contains(struct_->name.id)) {
+			continue;
+		}
+
+		referenced_types.insert(struct_->name.id);
+
+		meson_build_files << "\t'gen/" << generate_struct(root, struct_, include_path, source_path) << "',\n";
+	}
 
 	for (const auto &enum_ : root.enums) {
 		generate_enum(enum_, enum_path);

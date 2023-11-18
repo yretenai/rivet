@@ -18,47 +18,47 @@
 #include <rivet/structures/rivet_serialization.hpp>
 
 namespace rivet::ddl::generated {
-	struct BotComboConditionListEntry;
-	struct BotComboMoveContainer; 
+	struct BotComboMoveContainer;
+	struct BotComboConditionListEntry; 
 
 	struct RIVET_DDL_SHARED BotComboEntry : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "BotComboEntry";
-		constexpr const static rivet::rivet_type_id type_id = 0x3e6ffb9c;
+		constexpr static std::string_view type_name = "BotComboEntry";
+		constexpr static rivet::rivet_type_id type_id = 0x3e6ffb9c;
 
-		constexpr const static std::string_view Name_type_name = "Name";
-		constexpr const static rivet::rivet_type_id Name_type_id = 0x6eb3beb6;
-		constexpr const static std::string_view RandomWeighting_type_name = "RandomWeighting";
-		constexpr const static rivet::rivet_type_id RandomWeighting_type_id = 0xf4124721;
-		constexpr const static std::string_view StartingCooldown_type_name = "StartingCooldown";
-		constexpr const static rivet::rivet_type_id StartingCooldown_type_id = 0xa589f45f;
-		constexpr const static std::string_view Cooldown_type_name = "Cooldown";
-		constexpr const static rivet::rivet_type_id Cooldown_type_id = 0x246291a9;
-		constexpr const static std::string_view SelectDistanceMin_type_name = "SelectDistanceMin";
-		constexpr const static rivet::rivet_type_id SelectDistanceMin_type_id = 0x6e4b941d;
-		constexpr const static std::string_view SelectDistanceMax_type_name = "SelectDistanceMax";
-		constexpr const static rivet::rivet_type_id SelectDistanceMax_type_id = 0x5246ab44;
-		constexpr const static std::string_view SelectHeightMin_type_name = "SelectHeightMin";
-		constexpr const static rivet::rivet_type_id SelectHeightMin_type_id = 0x4bd9fec;
-		constexpr const static std::string_view SelectHeightMax_type_name = "SelectHeightMax";
-		constexpr const static rivet::rivet_type_id SelectHeightMax_type_id = 0x38b0a0b5;
-		constexpr const static std::string_view SelectHeightDiffMin_type_name = "SelectHeightDiffMin";
-		constexpr const static rivet::rivet_type_id SelectHeightDiffMin_type_id = 0xe132314e;
-		constexpr const static std::string_view SelectHeightDiffMax_type_name = "SelectHeightDiffMax";
-		constexpr const static rivet::rivet_type_id SelectHeightDiffMax_type_id = 0xdd3f0e17;
-		constexpr const static std::string_view SelectNavDistanceMax_type_name = "SelectNavDistanceMax";
-		constexpr const static rivet::rivet_type_id SelectNavDistanceMax_type_id = 0x52ba7e01;
-		constexpr const static std::string_view Directional_type_name = "Directional";
-		constexpr const static rivet::rivet_type_id Directional_type_id = 0xcadb15c2;
-		constexpr const static std::string_view FaceTargetAngleTolerance_type_name = "FaceTargetAngleTolerance";
-		constexpr const static rivet::rivet_type_id FaceTargetAngleTolerance_type_id = 0x5f80a8dc;
-		constexpr const static std::string_view CanBeResumed_type_name = "CanBeResumed";
-		constexpr const static rivet::rivet_type_id CanBeResumed_type_id = 0xcd367664;
-		constexpr const static std::string_view IsTopiaryRetaliate_type_name = "IsTopiaryRetaliate";
-		constexpr const static rivet::rivet_type_id IsTopiaryRetaliate_type_id = 0xa3d1645c;
-		constexpr const static std::string_view ComboConditionList_type_name = "ComboConditionList";
-		constexpr const static rivet::rivet_type_id ComboConditionList_type_id = 0x23425be8;
-		constexpr const static std::string_view Moves_type_name = "Moves";
-		constexpr const static rivet::rivet_type_id Moves_type_id = 0x5c6cc4f3; 
+		constexpr static std::string_view Name_type_name = "Name";
+		constexpr static rivet::rivet_type_id Name_type_id = 0x6eb3beb6;
+		constexpr static std::string_view RandomWeighting_type_name = "RandomWeighting";
+		constexpr static rivet::rivet_type_id RandomWeighting_type_id = 0xf4124721;
+		constexpr static std::string_view StartingCooldown_type_name = "StartingCooldown";
+		constexpr static rivet::rivet_type_id StartingCooldown_type_id = 0xa589f45f;
+		constexpr static std::string_view Cooldown_type_name = "Cooldown";
+		constexpr static rivet::rivet_type_id Cooldown_type_id = 0x246291a9;
+		constexpr static std::string_view SelectDistanceMin_type_name = "SelectDistanceMin";
+		constexpr static rivet::rivet_type_id SelectDistanceMin_type_id = 0x6e4b941d;
+		constexpr static std::string_view SelectDistanceMax_type_name = "SelectDistanceMax";
+		constexpr static rivet::rivet_type_id SelectDistanceMax_type_id = 0x5246ab44;
+		constexpr static std::string_view SelectHeightMin_type_name = "SelectHeightMin";
+		constexpr static rivet::rivet_type_id SelectHeightMin_type_id = 0x4bd9fec;
+		constexpr static std::string_view SelectHeightMax_type_name = "SelectHeightMax";
+		constexpr static rivet::rivet_type_id SelectHeightMax_type_id = 0x38b0a0b5;
+		constexpr static std::string_view SelectHeightDiffMin_type_name = "SelectHeightDiffMin";
+		constexpr static rivet::rivet_type_id SelectHeightDiffMin_type_id = 0xe132314e;
+		constexpr static std::string_view SelectHeightDiffMax_type_name = "SelectHeightDiffMax";
+		constexpr static rivet::rivet_type_id SelectHeightDiffMax_type_id = 0xdd3f0e17;
+		constexpr static std::string_view SelectNavDistanceMax_type_name = "SelectNavDistanceMax";
+		constexpr static rivet::rivet_type_id SelectNavDistanceMax_type_id = 0x52ba7e01;
+		constexpr static std::string_view Directional_type_name = "Directional";
+		constexpr static rivet::rivet_type_id Directional_type_id = 0xcadb15c2;
+		constexpr static std::string_view FaceTargetAngleTolerance_type_name = "FaceTargetAngleTolerance";
+		constexpr static rivet::rivet_type_id FaceTargetAngleTolerance_type_id = 0x5f80a8dc;
+		constexpr static std::string_view CanBeResumed_type_name = "CanBeResumed";
+		constexpr static rivet::rivet_type_id CanBeResumed_type_id = 0xcd367664;
+		constexpr static std::string_view IsTopiaryRetaliate_type_name = "IsTopiaryRetaliate";
+		constexpr static rivet::rivet_type_id IsTopiaryRetaliate_type_id = 0xa3d1645c;
+		constexpr static std::string_view ComboConditionList_type_name = "ComboConditionList";
+		constexpr static rivet::rivet_type_id ComboConditionList_type_id = 0x23425be8;
+		constexpr static std::string_view Moves_type_name = "Moves";
+		constexpr static rivet::rivet_type_id Moves_type_id = 0x5c6cc4f3; 
 
 		explicit BotComboEntry() = default;
 		explicit BotComboEntry([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

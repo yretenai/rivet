@@ -17,22 +17,22 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/OrientationMode.hpp>
-#include <rivet/ddl/generated/enums/xea512758.hpp> 
+#include <rivet/ddl/generated/enums/xea512758.hpp>
+#include <rivet/ddl/generated/OrientationMode.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED CompoundRotateWhileMoving : OrientationMode {
-		constexpr const static std::string_view type_name = "CompoundRotateWhileMoving";
-		constexpr const static rivet::rivet_type_id type_id = 0x824c80eb;
+		constexpr static std::string_view type_name = "CompoundRotateWhileMoving";
+		constexpr static rivet::rivet_type_id type_id = 0x824c80eb;
 
-		constexpr const static std::string_view MotionOrientedAxis_type_name = "MotionOrientedAxis";
-		constexpr const static rivet::rivet_type_id MotionOrientedAxis_type_id = 0x451c94cc;
-		constexpr const static std::string_view MotionOrientedRotationalSpeed_type_name = "MotionOrientedRotationalSpeed";
-		constexpr const static rivet::rivet_type_id MotionOrientedRotationalSpeed_type_id = 0x7292613d;
-		constexpr const static std::string_view LocalAxis_type_name = "LocalAxis";
-		constexpr const static rivet::rivet_type_id LocalAxis_type_id = 0xf625ad16;
-		constexpr const static std::string_view LocalRotationalSpeed_type_name = "LocalRotationalSpeed";
-		constexpr const static rivet::rivet_type_id LocalRotationalSpeed_type_id = 0xd16fdf3d; 
+		constexpr static std::string_view MotionOrientedAxis_type_name = "MotionOrientedAxis";
+		constexpr static rivet::rivet_type_id MotionOrientedAxis_type_id = 0x451c94cc;
+		constexpr static std::string_view MotionOrientedRotationalSpeed_type_name = "MotionOrientedRotationalSpeed";
+		constexpr static rivet::rivet_type_id MotionOrientedRotationalSpeed_type_id = 0x7292613d;
+		constexpr static std::string_view LocalAxis_type_name = "LocalAxis";
+		constexpr static rivet::rivet_type_id LocalAxis_type_id = 0xf625ad16;
+		constexpr static std::string_view LocalRotationalSpeed_type_name = "LocalRotationalSpeed";
+		constexpr static rivet::rivet_type_id LocalRotationalSpeed_type_id = 0xd16fdf3d; 
 
 		explicit CompoundRotateWhileMoving() = default;
 		explicit CompoundRotateWhileMoving([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

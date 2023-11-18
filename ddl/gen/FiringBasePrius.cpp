@@ -3,10 +3,10 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/AimingBasePrius.hpp>
-#include <rivet/ddl/generated/BurstSequence.hpp>
+#include <rivet/ddl/generated/FiringPrius.hpp>
 #include <rivet/ddl/generated/AimModWrapper.hpp>
-#include <rivet/ddl/generated/FiringPrius.hpp> 
+#include <rivet/ddl/generated/AimingBasePrius.hpp>
+#include <rivet/ddl/generated/BurstSequence.hpp> 
 
 #include <rivet/ddl/generated/FiringBasePrius.hpp>
 

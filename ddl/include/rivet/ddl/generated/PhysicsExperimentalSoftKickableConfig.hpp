@@ -21,17 +21,17 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED PhysicsExperimentalSoftKickableConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "PhysicsExperimentalSoftKickableConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x72f4bb24;
+		constexpr static std::string_view type_name = "PhysicsExperimentalSoftKickableConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x72f4bb24;
 
-		constexpr const static std::string_view MaxContactImpulseAtLowSpeed_type_name = "MaxContactImpulseAtLowSpeed";
-		constexpr const static rivet::rivet_type_id MaxContactImpulseAtLowSpeed_type_id = 0xd9b004f2;
-		constexpr const static std::string_view LowSpeed_type_name = "LowSpeed";
-		constexpr const static rivet::rivet_type_id LowSpeed_type_id = 0x7b7bf077;
-		constexpr const static std::string_view MaxContactImpulseAtHighSpeed_type_name = "MaxContactImpulseAtHighSpeed";
-		constexpr const static rivet::rivet_type_id MaxContactImpulseAtHighSpeed_type_id = 0x73e87666;
-		constexpr const static std::string_view HighSpeed_type_name = "HighSpeed";
-		constexpr const static rivet::rivet_type_id HighSpeed_type_id = 0xee98ca3d; 
+		constexpr static std::string_view MaxContactImpulseAtLowSpeed_type_name = "MaxContactImpulseAtLowSpeed";
+		constexpr static rivet::rivet_type_id MaxContactImpulseAtLowSpeed_type_id = 0xd9b004f2;
+		constexpr static std::string_view LowSpeed_type_name = "LowSpeed";
+		constexpr static rivet::rivet_type_id LowSpeed_type_id = 0x7b7bf077;
+		constexpr static std::string_view MaxContactImpulseAtHighSpeed_type_name = "MaxContactImpulseAtHighSpeed";
+		constexpr static rivet::rivet_type_id MaxContactImpulseAtHighSpeed_type_id = 0x73e87666;
+		constexpr static std::string_view HighSpeed_type_name = "HighSpeed";
+		constexpr static rivet::rivet_type_id HighSpeed_type_id = 0xee98ca3d; 
 
 		explicit PhysicsExperimentalSoftKickableConfig() = default;
 		explicit PhysicsExperimentalSoftKickableConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

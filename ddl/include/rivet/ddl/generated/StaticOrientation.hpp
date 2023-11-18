@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct DDLVector3; 
 
 	struct RIVET_DDL_SHARED StaticOrientation : OrientationMode {
-		constexpr const static std::string_view type_name = "StaticOrientation";
-		constexpr const static rivet::rivet_type_id type_id = 0xb9868964;
+		constexpr static std::string_view type_name = "StaticOrientation";
+		constexpr static rivet::rivet_type_id type_id = 0xb9868964;
 
-		constexpr const static std::string_view OneTimeRotation_type_name = "OneTimeRotation";
-		constexpr const static rivet::rivet_type_id OneTimeRotation_type_id = 0x53541db; 
+		constexpr static std::string_view OneTimeRotation_type_name = "OneTimeRotation";
+		constexpr static rivet::rivet_type_id OneTimeRotation_type_id = 0x53541db; 
 
 		explicit StaticOrientation() = default;
 		explicit StaticOrientation([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

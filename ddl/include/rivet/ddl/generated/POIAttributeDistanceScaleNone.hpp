@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED POIAttributeDistanceScaleNone : POIAttributeDistanceScaleBase {
-		constexpr const static std::string_view type_name = "POIAttributeDistanceScaleNone";
-		constexpr const static rivet::rivet_type_id type_id = 0x32d4b977;
+		constexpr static std::string_view type_name = "POIAttributeDistanceScaleNone";
+		constexpr static rivet::rivet_type_id type_id = 0x32d4b977;
 
 		explicit POIAttributeDistanceScaleNone() = default;
 		explicit POIAttributeDistanceScaleNone([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -18,17 +18,19 @@
 #include <rivet/structures/rivet_serialization.hpp>
 
 namespace rivet::ddl::generated {
-	struct RIVET_DDL_SHARED DebugActorEventFilterItem : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "DebugActorEventFilterItem";
-		constexpr const static rivet::rivet_type_id type_id = 0x1b5447ac;
+	struct EventBase; 
 
-		constexpr const static std::string_view EventItem_type_name = "EventItem";
-		constexpr const static rivet::rivet_type_id EventItem_type_id = 0x6170c905; 
+	struct RIVET_DDL_SHARED DebugActorEventFilterItem : rivet::structures::rivet_ddl_base {
+		constexpr static std::string_view type_name = "DebugActorEventFilterItem";
+		constexpr static rivet::rivet_type_id type_id = 0x1b5447ac;
+
+		constexpr static std::string_view EventItem_type_name = "EventItem";
+		constexpr static rivet::rivet_type_id EventItem_type_id = 0x6170c905; 
 
 		explicit DebugActorEventFilterItem() = default;
 		explicit DebugActorEventFilterItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);
 
-		std::optional<std::vector<rivet::structures::rivet_serialized_value>> EventItem {}; 
+		std::shared_ptr<rivet::ddl::generated::EventBase> EventItem {}; 
 
 		[[nodiscard]] auto
 		get_type_name() const noexcept -> std::string_view override;

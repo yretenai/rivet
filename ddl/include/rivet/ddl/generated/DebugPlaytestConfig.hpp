@@ -20,17 +20,17 @@
 #include <rivet/ddl/generated/ConfigBase.hpp> 
 
 namespace rivet::ddl::generated {
-	struct DebugNewGamePlaytest;
-	struct DebugPlaytest; 
+	struct DebugPlaytest;
+	struct DebugNewGamePlaytest; 
 
 	struct RIVET_DDL_SHARED DebugPlaytestConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "DebugPlaytestConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x23e907ec;
+		constexpr static std::string_view type_name = "DebugPlaytestConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x23e907ec;
 
-		constexpr const static std::string_view NewGameDemoInfo_type_name = "NewGameDemoInfo";
-		constexpr const static rivet::rivet_type_id NewGameDemoInfo_type_id = 0xc26e5bf0;
-		constexpr const static std::string_view Playtests_type_name = "Playtests";
-		constexpr const static rivet::rivet_type_id Playtests_type_id = 0xc6bded98; 
+		constexpr static std::string_view NewGameDemoInfo_type_name = "NewGameDemoInfo";
+		constexpr static rivet::rivet_type_id NewGameDemoInfo_type_id = 0xc26e5bf0;
+		constexpr static std::string_view Playtests_type_name = "Playtests";
+		constexpr static rivet::rivet_type_id Playtests_type_id = 0xc6bded98; 
 
 		explicit DebugPlaytestConfig() = default;
 		explicit DebugPlaytestConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

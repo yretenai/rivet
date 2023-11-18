@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED StatusEffectBoltiplierPrius : StatusEffectBasePrius {
-		constexpr const static std::string_view type_name = "StatusEffectBoltiplierPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x640a0251;
+		constexpr static std::string_view type_name = "StatusEffectBoltiplierPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x640a0251;
 
 		explicit StatusEffectBoltiplierPrius() = default;
 		explicit StatusEffectBoltiplierPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

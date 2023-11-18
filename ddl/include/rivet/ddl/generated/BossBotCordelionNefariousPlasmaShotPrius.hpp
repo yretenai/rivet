@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct ShockwavePrius; 
 
 	struct RIVET_DDL_SHARED BossBotCordelionNefariousPlasmaShotPrius : BasicBulletPrius {
-		constexpr const static std::string_view type_name = "BossBotCordelionNefariousPlasmaShotPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x5131ea41;
+		constexpr static std::string_view type_name = "BossBotCordelionNefariousPlasmaShotPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x5131ea41;
 
-		constexpr const static std::string_view ShockwaveImpact_type_name = "ShockwaveImpact";
-		constexpr const static rivet::rivet_type_id ShockwaveImpact_type_id = 0xe77cc68e; 
+		constexpr static std::string_view ShockwaveImpact_type_name = "ShockwaveImpact";
+		constexpr static rivet::rivet_type_id ShockwaveImpact_type_id = 0xe77cc68e; 
 
 		explicit BossBotCordelionNefariousPlasmaShotPrius() = default;
 		explicit BossBotCordelionNefariousPlasmaShotPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

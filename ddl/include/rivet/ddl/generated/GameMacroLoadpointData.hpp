@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED GameMacroLoadpointData : MacroLoadpointData {
-		constexpr const static std::string_view type_name = "GameMacroLoadpointData";
-		constexpr const static rivet::rivet_type_id type_id = 0x8c148a7c;
+		constexpr static std::string_view type_name = "GameMacroLoadpointData";
+		constexpr static rivet::rivet_type_id type_id = 0x8c148a7c;
 
 		explicit GameMacroLoadpointData() = default;
 		explicit GameMacroLoadpointData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -19,15 +19,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED AccessibilityMaterial : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "AccessibilityMaterial";
-		constexpr const static rivet::rivet_type_id type_id = 0x3b00cd05;
+		constexpr static std::string_view type_name = "AccessibilityMaterial";
+		constexpr static rivet::rivet_type_id type_id = 0x3b00cd05;
 
-		constexpr const static std::string_view Name_type_name = "Name";
-		constexpr const static rivet::rivet_type_id Name_type_id = 0x6eb3beb6;
-		constexpr const static std::string_view LookupName_type_name = "LookupName";
-		constexpr const static rivet::rivet_type_id LookupName_type_id = 0x8daf4455;
-		constexpr const static std::string_view Material_type_name = "Material";
-		constexpr const static rivet::rivet_type_id Material_type_id = 0x86bfc8e5; 
+		constexpr static std::string_view Name_type_name = "Name";
+		constexpr static rivet::rivet_type_id Name_type_id = 0x6eb3beb6;
+		constexpr static std::string_view LookupName_type_name = "LookupName";
+		constexpr static rivet::rivet_type_id LookupName_type_id = 0x8daf4455;
+		constexpr static std::string_view Material_type_name = "Material";
+		constexpr static rivet::rivet_type_id Material_type_id = 0x86bfc8e5; 
 
 		explicit AccessibilityMaterial() = default;
 		explicit AccessibilityMaterial([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

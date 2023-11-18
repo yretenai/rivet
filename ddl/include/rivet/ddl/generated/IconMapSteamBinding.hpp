@@ -17,22 +17,22 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
+#include <rivet/ddl/generated/enums/xf4ca865e.hpp>
 #include <rivet/ddl/generated/enums/x483aa079.hpp>
 #include <rivet/ddl/generated/enums/x7b87880c.hpp>
-#include <rivet/ddl/generated/IconMapBase.hpp>
-#include <rivet/ddl/generated/enums/xf4ca865e.hpp> 
+#include <rivet/ddl/generated/IconMapBase.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED IconMapSteamBinding : IconMapBase {
-		constexpr const static std::string_view type_name = "IconMapSteamBinding";
-		constexpr const static rivet::rivet_type_id type_id = 0xf721b745;
+		constexpr static std::string_view type_name = "IconMapSteamBinding";
+		constexpr static rivet::rivet_type_id type_id = 0xf721b745;
 
-		constexpr const static std::string_view Button_type_name = "Button";
-		constexpr const static rivet::rivet_type_id Button_type_id = 0x47ee25a;
-		constexpr const static std::string_view ActionSet_type_name = "ActionSet";
-		constexpr const static rivet::rivet_type_id ActionSet_type_id = 0xa7d7c935;
-		constexpr const static std::string_view AnalogDirection_type_name = "AnalogDirection";
-		constexpr const static rivet::rivet_type_id AnalogDirection_type_id = 0x3c238fd3; 
+		constexpr static std::string_view Button_type_name = "Button";
+		constexpr static rivet::rivet_type_id Button_type_id = 0x47ee25a;
+		constexpr static std::string_view ActionSet_type_name = "ActionSet";
+		constexpr static rivet::rivet_type_id ActionSet_type_id = 0xa7d7c935;
+		constexpr static std::string_view AnalogDirection_type_name = "AnalogDirection";
+		constexpr static rivet::rivet_type_id AnalogDirection_type_id = 0x3c238fd3; 
 
 		explicit IconMapSteamBinding() = default;
 		explicit IconMapSteamBinding([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

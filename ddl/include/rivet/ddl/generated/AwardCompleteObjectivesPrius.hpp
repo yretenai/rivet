@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct AwardObjective; 
 
 	struct RIVET_DDL_SHARED AwardCompleteObjectivesPrius : AwardBasePrius {
-		constexpr const static std::string_view type_name = "AwardCompleteObjectivesPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x52088e8a;
+		constexpr static std::string_view type_name = "AwardCompleteObjectivesPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x52088e8a;
 
-		constexpr const static std::string_view Objectives_type_name = "Objectives";
-		constexpr const static rivet::rivet_type_id Objectives_type_id = 0xb7863755; 
+		constexpr static std::string_view Objectives_type_name = "Objectives";
+		constexpr static rivet::rivet_type_id Objectives_type_id = 0xb7863755; 
 
 		explicit AwardCompleteObjectivesPrius() = default;
 		explicit AwardCompleteObjectivesPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

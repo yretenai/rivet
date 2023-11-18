@@ -21,17 +21,17 @@ namespace rivet::ddl::generated {
 	struct CameraShakingData; 
 
 	struct RIVET_DDL_SHARED HeroReactLevelData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "HeroReactLevelData";
-		constexpr const static rivet::rivet_type_id type_id = 0xa9470242;
+		constexpr static std::string_view type_name = "HeroReactLevelData";
+		constexpr static rivet::rivet_type_id type_id = 0xa9470242;
 
-		constexpr const static std::string_view DistanceScale_type_name = "DistanceScale";
-		constexpr const static rivet::rivet_type_id DistanceScale_type_id = 0x54654134;
-		constexpr const static std::string_view AnimRateScale_type_name = "AnimRateScale";
-		constexpr const static rivet::rivet_type_id AnimRateScale_type_id = 0xc6d5613e;
-		constexpr const static std::string_view ReReactCooldown_type_name = "ReReactCooldown";
-		constexpr const static rivet::rivet_type_id ReReactCooldown_type_id = 0xef493585;
-		constexpr const static std::string_view CameraShake_type_name = "CameraShake";
-		constexpr const static rivet::rivet_type_id CameraShake_type_id = 0xefd546ca; 
+		constexpr static std::string_view DistanceScale_type_name = "DistanceScale";
+		constexpr static rivet::rivet_type_id DistanceScale_type_id = 0x54654134;
+		constexpr static std::string_view AnimRateScale_type_name = "AnimRateScale";
+		constexpr static rivet::rivet_type_id AnimRateScale_type_id = 0xc6d5613e;
+		constexpr static std::string_view ReReactCooldown_type_name = "ReReactCooldown";
+		constexpr static rivet::rivet_type_id ReReactCooldown_type_id = 0xef493585;
+		constexpr static std::string_view CameraShake_type_name = "CameraShake";
+		constexpr static rivet::rivet_type_id CameraShake_type_id = 0xefd546ca; 
 
 		explicit HeroReactLevelData() = default;
 		explicit HeroReactLevelData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -21,15 +21,15 @@ namespace rivet::ddl::generated {
 	struct StatusEffectWrapper; 
 
 	struct RIVET_DDL_SHARED StatusEffectsData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "StatusEffectsData";
-		constexpr const static rivet::rivet_type_id type_id = 0x3436174e;
+		constexpr static std::string_view type_name = "StatusEffectsData";
+		constexpr static rivet::rivet_type_id type_id = 0x3436174e;
 
-		constexpr const static std::string_view EmitterName_type_name = "EmitterName";
-		constexpr const static rivet::rivet_type_id EmitterName_type_id = 0x27422a42;
-		constexpr const static std::string_view Shader_type_name = "Shader";
-		constexpr const static rivet::rivet_type_id Shader_type_id = 0xc18bd04f;
-		constexpr const static std::string_view Effects_type_name = "Effects";
-		constexpr const static rivet::rivet_type_id Effects_type_id = 0x49e15f92; 
+		constexpr static std::string_view EmitterName_type_name = "EmitterName";
+		constexpr static rivet::rivet_type_id EmitterName_type_id = 0x27422a42;
+		constexpr static std::string_view Shader_type_name = "Shader";
+		constexpr static rivet::rivet_type_id Shader_type_id = 0xc18bd04f;
+		constexpr static std::string_view Effects_type_name = "Effects";
+		constexpr static rivet::rivet_type_id Effects_type_id = 0x49e15f92; 
 
 		explicit StatusEffectsData() = default;
 		explicit StatusEffectsData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

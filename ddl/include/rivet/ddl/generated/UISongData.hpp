@@ -21,11 +21,11 @@ namespace rivet::ddl::generated {
 	struct UISongLineData; 
 
 	struct RIVET_DDL_SHARED UISongData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "UISongData";
-		constexpr const static rivet::rivet_type_id type_id = 0xc9d343d0;
+		constexpr static std::string_view type_name = "UISongData";
+		constexpr static rivet::rivet_type_id type_id = 0xc9d343d0;
 
-		constexpr const static std::string_view Lines_type_name = "Lines";
-		constexpr const static rivet::rivet_type_id Lines_type_id = 0x56524057; 
+		constexpr static std::string_view Lines_type_name = "Lines";
+		constexpr static rivet::rivet_type_id Lines_type_id = 0x56524057; 
 
 		explicit UISongData() = default;
 		explicit UISongData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

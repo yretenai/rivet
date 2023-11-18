@@ -19,8 +19,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED POIAttributeDistanceTextBase : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "POIAttributeDistanceTextBase";
-		constexpr const static rivet::rivet_type_id type_id = 0x6ed835f5;
+		constexpr static std::string_view type_name = "POIAttributeDistanceTextBase";
+		constexpr static rivet::rivet_type_id type_id = 0x6ed835f5;
 
 		explicit POIAttributeDistanceTextBase() = default;
 		explicit POIAttributeDistanceTextBase([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

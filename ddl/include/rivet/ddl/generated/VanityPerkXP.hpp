@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED VanityPerkXP : VanityPerkBase {
-		constexpr const static std::string_view type_name = "VanityPerkXP";
-		constexpr const static rivet::rivet_type_id type_id = 0x4d93a019;
+		constexpr static std::string_view type_name = "VanityPerkXP";
+		constexpr static rivet::rivet_type_id type_id = 0x4d93a019;
 
-		constexpr const static std::string_view XPMultSet_type_name = "XPMultSet";
-		constexpr const static rivet::rivet_type_id XPMultSet_type_id = 0x9d1d86cb;
-		constexpr const static std::string_view XPMultPiece_type_name = "XPMultPiece";
-		constexpr const static rivet::rivet_type_id XPMultPiece_type_id = 0x4f4f1411; 
+		constexpr static std::string_view XPMultSet_type_name = "XPMultSet";
+		constexpr static rivet::rivet_type_id XPMultSet_type_id = 0x9d1d86cb;
+		constexpr static std::string_view XPMultPiece_type_name = "XPMultPiece";
+		constexpr static rivet::rivet_type_id XPMultPiece_type_id = 0x4f4f1411; 
 
 		explicit VanityPerkXP() = default;
 		explicit VanityPerkXP([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

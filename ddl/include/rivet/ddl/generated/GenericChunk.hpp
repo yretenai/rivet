@@ -19,17 +19,17 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED GenericChunk : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "GenericChunk";
-		constexpr const static rivet::rivet_type_id type_id = 0xf016fa22;
+		constexpr static std::string_view type_name = "GenericChunk";
+		constexpr static rivet::rivet_type_id type_id = 0xf016fa22;
 
-		constexpr const static std::string_view ChunkModel_type_name = "ChunkModel";
-		constexpr const static rivet::rivet_type_id ChunkModel_type_id = 0x68ab5795;
-		constexpr const static std::string_view TriggerSpawnEvent_type_name = "TriggerSpawnEvent";
-		constexpr const static rivet::rivet_type_id TriggerSpawnEvent_type_id = 0xee6cfc7e;
-		constexpr const static std::string_view UsesFXConduit_type_name = "UsesFXConduit";
-		constexpr const static rivet::rivet_type_id UsesFXConduit_type_id = 0x7cde1af8;
-		constexpr const static std::string_view UsesAudioConduit_type_name = "UsesAudioConduit";
-		constexpr const static rivet::rivet_type_id UsesAudioConduit_type_id = 0xba330fee; 
+		constexpr static std::string_view ChunkModel_type_name = "ChunkModel";
+		constexpr static rivet::rivet_type_id ChunkModel_type_id = 0x68ab5795;
+		constexpr static std::string_view TriggerSpawnEvent_type_name = "TriggerSpawnEvent";
+		constexpr static rivet::rivet_type_id TriggerSpawnEvent_type_id = 0xee6cfc7e;
+		constexpr static std::string_view UsesFXConduit_type_name = "UsesFXConduit";
+		constexpr static rivet::rivet_type_id UsesFXConduit_type_id = 0x7cde1af8;
+		constexpr static std::string_view UsesAudioConduit_type_name = "UsesAudioConduit";
+		constexpr static rivet::rivet_type_id UsesAudioConduit_type_id = 0xba330fee; 
 
 		explicit GenericChunk() = default;
 		explicit GenericChunk([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

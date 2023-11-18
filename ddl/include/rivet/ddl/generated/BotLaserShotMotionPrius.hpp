@@ -17,16 +17,16 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/ShotMotionBasePrius.hpp>
-#include <rivet/ddl/generated/enums/x2056dab2.hpp> 
+#include <rivet/ddl/generated/enums/x2056dab2.hpp>
+#include <rivet/ddl/generated/ShotMotionBasePrius.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED BotLaserShotMotionPrius : ShotMotionBasePrius {
-		constexpr const static std::string_view type_name = "BotLaserShotMotionPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xbc4a2b4a;
+		constexpr static std::string_view type_name = "BotLaserShotMotionPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xbc4a2b4a;
 
-		constexpr const static std::string_view BotLaserCollType_type_name = "BotLaserCollType";
-		constexpr const static rivet::rivet_type_id BotLaserCollType_type_id = 0x180c3197; 
+		constexpr static std::string_view BotLaserCollType_type_name = "BotLaserCollType";
+		constexpr static rivet::rivet_type_id BotLaserCollType_type_id = 0x180c3197; 
 
 		explicit BotLaserShotMotionPrius() = default;
 		explicit BotLaserShotMotionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

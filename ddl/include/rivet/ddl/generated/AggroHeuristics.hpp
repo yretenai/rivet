@@ -19,11 +19,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED AggroHeuristics : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "AggroHeuristics";
-		constexpr const static rivet::rivet_type_id type_id = 0xfe00f59;
+		constexpr static std::string_view type_name = "AggroHeuristics";
+		constexpr static rivet::rivet_type_id type_id = 0xfe00f59;
 
-		constexpr const static std::string_view Weight_type_name = "Weight";
-		constexpr const static rivet::rivet_type_id Weight_type_id = 0x39b51b26; 
+		constexpr static std::string_view Weight_type_name = "Weight";
+		constexpr static rivet::rivet_type_id Weight_type_id = 0x39b51b26; 
 
 		explicit AggroHeuristics() = default;
 		explicit AggroHeuristics([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

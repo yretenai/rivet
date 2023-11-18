@@ -22,17 +22,17 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED TriggerEffectArrayItem : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "TriggerEffectArrayItem";
-		constexpr const static rivet::rivet_type_id type_id = 0x879bd1f3;
+		constexpr static std::string_view type_name = "TriggerEffectArrayItem";
+		constexpr static rivet::rivet_type_id type_id = 0x879bd1f3;
 
-		constexpr const static std::string_view EffectType_type_name = "EffectType";
-		constexpr const static rivet::rivet_type_id EffectType_type_id = 0x609bd7db;
-		constexpr const static std::string_view Triggers_type_name = "Triggers";
-		constexpr const static rivet::rivet_type_id Triggers_type_id = 0xf4cf343d;
-		constexpr const static std::string_view Enabled_type_name = "Enabled";
-		constexpr const static rivet::rivet_type_id Enabled_type_id = 0x5113d8bc;
-		constexpr const static std::string_view TriggerEffectConfig_type_name = "TriggerEffectConfig";
-		constexpr const static rivet::rivet_type_id TriggerEffectConfig_type_id = 0x336655ba; 
+		constexpr static std::string_view EffectType_type_name = "EffectType";
+		constexpr static rivet::rivet_type_id EffectType_type_id = 0x609bd7db;
+		constexpr static std::string_view Triggers_type_name = "Triggers";
+		constexpr static rivet::rivet_type_id Triggers_type_id = 0xf4cf343d;
+		constexpr static std::string_view Enabled_type_name = "Enabled";
+		constexpr static rivet::rivet_type_id Enabled_type_id = 0x5113d8bc;
+		constexpr static std::string_view TriggerEffectConfig_type_name = "TriggerEffectConfig";
+		constexpr static rivet::rivet_type_id TriggerEffectConfig_type_id = 0x336655ba; 
 
 		explicit TriggerEffectArrayItem() = default;
 		explicit TriggerEffectArrayItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

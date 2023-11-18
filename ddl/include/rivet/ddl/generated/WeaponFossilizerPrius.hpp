@@ -21,19 +21,19 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED WeaponFossilizerPrius : WeaponGamePrius {
-		constexpr const static std::string_view type_name = "WeaponFossilizerPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xb5903d67;
+		constexpr static std::string_view type_name = "WeaponFossilizerPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xb5903d67;
 
-		constexpr const static std::string_view SlowDownPercent_type_name = "SlowDownPercent";
-		constexpr const static rivet::rivet_type_id SlowDownPercent_type_id = 0x38d95575;
-		constexpr const static std::string_view SlowDownDuration_type_name = "SlowDownDuration";
-		constexpr const static rivet::rivet_type_id SlowDownDuration_type_id = 0x2b6e0d23;
-		constexpr const static std::string_view BonusBulletCount_type_name = "BonusBulletCount";
-		constexpr const static rivet::rivet_type_id BonusBulletCount_type_id = 0xdefd416d;
-		constexpr const static std::string_view TimeToShootBonusBullet_type_name = "TimeToShootBonusBullet";
-		constexpr const static rivet::rivet_type_id TimeToShootBonusBullet_type_id = 0xbcbb4b3e;
-		constexpr const static std::string_view ZoomAlphaMod_type_name = "ZoomAlphaMod";
-		constexpr const static rivet::rivet_type_id ZoomAlphaMod_type_id = 0x60e945f9; 
+		constexpr static std::string_view SlowDownPercent_type_name = "SlowDownPercent";
+		constexpr static rivet::rivet_type_id SlowDownPercent_type_id = 0x38d95575;
+		constexpr static std::string_view SlowDownDuration_type_name = "SlowDownDuration";
+		constexpr static rivet::rivet_type_id SlowDownDuration_type_id = 0x2b6e0d23;
+		constexpr static std::string_view BonusBulletCount_type_name = "BonusBulletCount";
+		constexpr static rivet::rivet_type_id BonusBulletCount_type_id = 0xdefd416d;
+		constexpr static std::string_view TimeToShootBonusBullet_type_name = "TimeToShootBonusBullet";
+		constexpr static rivet::rivet_type_id TimeToShootBonusBullet_type_id = 0xbcbb4b3e;
+		constexpr static std::string_view ZoomAlphaMod_type_name = "ZoomAlphaMod";
+		constexpr static rivet::rivet_type_id ZoomAlphaMod_type_id = 0x60e945f9; 
 
 		explicit WeaponFossilizerPrius() = default;
 		explicit WeaponFossilizerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -19,13 +19,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DebugPlaytestMissionInfo : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "DebugPlaytestMissionInfo";
-		constexpr const static rivet::rivet_type_id type_id = 0xde7b4535;
+		constexpr static std::string_view type_name = "DebugPlaytestMissionInfo";
+		constexpr static rivet::rivet_type_id type_id = 0xde7b4535;
 
-		constexpr const static std::string_view Mission_type_name = "Mission";
-		constexpr const static rivet::rivet_type_id Mission_type_id = 0x918d9104;
-		constexpr const static std::string_view Objective_type_name = "Objective";
-		constexpr const static rivet::rivet_type_id Objective_type_id = 0x3b6b6e0d; 
+		constexpr static std::string_view Mission_type_name = "Mission";
+		constexpr static rivet::rivet_type_id Mission_type_id = 0x918d9104;
+		constexpr static std::string_view Objective_type_name = "Objective";
+		constexpr static rivet::rivet_type_id Objective_type_id = 0x3b6b6e0d; 
 
 		explicit DebugPlaytestMissionInfo() = default;
 		explicit DebugPlaytestMissionInfo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

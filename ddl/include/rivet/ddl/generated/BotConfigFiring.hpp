@@ -23,15 +23,15 @@ namespace rivet::ddl::generated {
 	struct FiringPrius; 
 
 	struct RIVET_DDL_SHARED BotConfigFiring : ConfigBase {
-		constexpr const static std::string_view type_name = "BotConfigFiring";
-		constexpr const static rivet::rivet_type_id type_id = 0x980cde1a;
+		constexpr static std::string_view type_name = "BotConfigFiring";
+		constexpr static rivet::rivet_type_id type_id = 0x980cde1a;
 
-		constexpr const static std::string_view WeaponItem_type_name = "WeaponItem";
-		constexpr const static rivet::rivet_type_id WeaponItem_type_id = 0x8b393dd4;
-		constexpr const static std::string_view Firing_type_name = "Firing";
-		constexpr const static rivet::rivet_type_id Firing_type_id = 0x6bad3cd5;
-		constexpr const static std::string_view CanAggressorRush_type_name = "CanAggressorRush";
-		constexpr const static rivet::rivet_type_id CanAggressorRush_type_id = 0x5165ee36; 
+		constexpr static std::string_view WeaponItem_type_name = "WeaponItem";
+		constexpr static rivet::rivet_type_id WeaponItem_type_id = 0x8b393dd4;
+		constexpr static std::string_view Firing_type_name = "Firing";
+		constexpr static rivet::rivet_type_id Firing_type_id = 0x6bad3cd5;
+		constexpr static std::string_view CanAggressorRush_type_name = "CanAggressorRush";
+		constexpr static rivet::rivet_type_id CanAggressorRush_type_id = 0x5165ee36; 
 
 		explicit BotConfigFiring() = default;
 		explicit BotConfigFiring([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

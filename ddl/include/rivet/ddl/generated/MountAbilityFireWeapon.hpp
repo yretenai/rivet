@@ -21,23 +21,23 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED MountAbilityFireWeapon : MountAbilityBase {
-		constexpr const static std::string_view type_name = "MountAbilityFireWeapon";
-		constexpr const static rivet::rivet_type_id type_id = 0x93b799f7;
+		constexpr static std::string_view type_name = "MountAbilityFireWeapon";
+		constexpr static rivet::rivet_type_id type_id = 0x93b799f7;
 
-		constexpr const static std::string_view EquipIndex_type_name = "EquipIndex";
-		constexpr const static rivet::rivet_type_id EquipIndex_type_id = 0x9e860af6;
-		constexpr const static std::string_view TriggerIndex_type_name = "TriggerIndex";
-		constexpr const static rivet::rivet_type_id TriggerIndex_type_id = 0xee73b5b3;
-		constexpr const static std::string_view ReticleForwardOffsetFromCamera_type_name = "ReticleForwardOffsetFromCamera";
-		constexpr const static rivet::rivet_type_id ReticleForwardOffsetFromCamera_type_id = 0xb185aa3a;
-		constexpr const static std::string_view ReticleUpOffsetFromCamera_type_name = "ReticleUpOffsetFromCamera";
-		constexpr const static rivet::rivet_type_id ReticleUpOffsetFromCamera_type_id = 0x303a78e4;
-		constexpr const static std::string_view ReticleTestDist_type_name = "ReticleTestDist";
-		constexpr const static rivet::rivet_type_id ReticleTestDist_type_id = 0x203fce7f;
-		constexpr const static std::string_view ReticleOn_type_name = "ReticleOn";
-		constexpr const static rivet::rivet_type_id ReticleOn_type_id = 0x29e337fc;
-		constexpr const static std::string_view IDString_type_name = "IDString";
-		constexpr const static rivet::rivet_type_id IDString_type_id = 0xc8139edf; 
+		constexpr static std::string_view EquipIndex_type_name = "EquipIndex";
+		constexpr static rivet::rivet_type_id EquipIndex_type_id = 0x9e860af6;
+		constexpr static std::string_view TriggerIndex_type_name = "TriggerIndex";
+		constexpr static rivet::rivet_type_id TriggerIndex_type_id = 0xee73b5b3;
+		constexpr static std::string_view ReticleForwardOffsetFromCamera_type_name = "ReticleForwardOffsetFromCamera";
+		constexpr static rivet::rivet_type_id ReticleForwardOffsetFromCamera_type_id = 0xb185aa3a;
+		constexpr static std::string_view ReticleUpOffsetFromCamera_type_name = "ReticleUpOffsetFromCamera";
+		constexpr static rivet::rivet_type_id ReticleUpOffsetFromCamera_type_id = 0x303a78e4;
+		constexpr static std::string_view ReticleTestDist_type_name = "ReticleTestDist";
+		constexpr static rivet::rivet_type_id ReticleTestDist_type_id = 0x203fce7f;
+		constexpr static std::string_view ReticleOn_type_name = "ReticleOn";
+		constexpr static rivet::rivet_type_id ReticleOn_type_id = 0x29e337fc;
+		constexpr static std::string_view IDString_type_name = "IDString";
+		constexpr static rivet::rivet_type_id IDString_type_id = 0xc8139edf; 
 
 		explicit MountAbilityFireWeapon() = default;
 		explicit MountAbilityFireWeapon([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

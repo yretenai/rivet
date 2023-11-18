@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ParentLink : ActivityLinkBase {
-		constexpr const static std::string_view type_name = "ParentLink";
-		constexpr const static rivet::rivet_type_id type_id = 0x3b601269;
+		constexpr static std::string_view type_name = "ParentLink";
+		constexpr static rivet::rivet_type_id type_id = 0x3b601269;
 
 		explicit ParentLink() = default;
 		explicit ParentLink([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

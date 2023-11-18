@@ -21,25 +21,25 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED UIDisplayObjectData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "UIDisplayObjectData";
-		constexpr const static rivet::rivet_type_id type_id = 0xf7620dfb;
+		constexpr static std::string_view type_name = "UIDisplayObjectData";
+		constexpr static rivet::rivet_type_id type_id = 0xf7620dfb;
 
-		constexpr const static std::string_view ObjectType_type_name = "ObjectType";
-		constexpr const static rivet::rivet_type_id ObjectType_type_id = 0x7dfa0351;
-		constexpr const static std::string_view ObjectActor_type_name = "ObjectActor";
-		constexpr const static rivet::rivet_type_id ObjectActor_type_id = 0xc858642e;
-		constexpr const static std::string_view Scale_type_name = "Scale";
-		constexpr const static rivet::rivet_type_id Scale_type_id = 0xf515e945;
-		constexpr const static std::string_view RotationSpeed_type_name = "RotationSpeed";
-		constexpr const static rivet::rivet_type_id RotationSpeed_type_id = 0xe5938d1e;
-		constexpr const static std::string_view InitialYaw_type_name = "InitialYaw";
-		constexpr const static rivet::rivet_type_id InitialYaw_type_id = 0x7ddfeff9;
-		constexpr const static std::string_view StaticRoll_type_name = "StaticRoll";
-		constexpr const static rivet::rivet_type_id StaticRoll_type_id = 0xd241dff3;
-		constexpr const static std::string_view CenterToOrigin_type_name = "CenterToOrigin";
-		constexpr const static rivet::rivet_type_id CenterToOrigin_type_id = 0xc28dc267;
-		constexpr const static std::string_view Look_type_name = "Look";
-		constexpr const static rivet::rivet_type_id Look_type_id = 0x1baa14b2; 
+		constexpr static std::string_view ObjectType_type_name = "ObjectType";
+		constexpr static rivet::rivet_type_id ObjectType_type_id = 0x7dfa0351;
+		constexpr static std::string_view ObjectActor_type_name = "ObjectActor";
+		constexpr static rivet::rivet_type_id ObjectActor_type_id = 0xc858642e;
+		constexpr static std::string_view Scale_type_name = "Scale";
+		constexpr static rivet::rivet_type_id Scale_type_id = 0xf515e945;
+		constexpr static std::string_view RotationSpeed_type_name = "RotationSpeed";
+		constexpr static rivet::rivet_type_id RotationSpeed_type_id = 0xe5938d1e;
+		constexpr static std::string_view InitialYaw_type_name = "InitialYaw";
+		constexpr static rivet::rivet_type_id InitialYaw_type_id = 0x7ddfeff9;
+		constexpr static std::string_view StaticRoll_type_name = "StaticRoll";
+		constexpr static rivet::rivet_type_id StaticRoll_type_id = 0xd241dff3;
+		constexpr static std::string_view CenterToOrigin_type_name = "CenterToOrigin";
+		constexpr static rivet::rivet_type_id CenterToOrigin_type_id = 0xc28dc267;
+		constexpr static std::string_view Look_type_name = "Look";
+		constexpr static rivet::rivet_type_id Look_type_id = 0x1baa14b2; 
 
 		explicit UIDisplayObjectData() = default;
 		explicit UIDisplayObjectData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

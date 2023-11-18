@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct MapElementTypeArray; 
 
 	struct RIVET_DDL_SHARED MapDataConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "MapDataConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x8f710d4c;
+		constexpr static std::string_view type_name = "MapDataConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x8f710d4c;
 
-		constexpr const static std::string_view LevelData_type_name = "LevelData";
-		constexpr const static rivet::rivet_type_id LevelData_type_id = 0xe16e3538; 
+		constexpr static std::string_view LevelData_type_name = "LevelData";
+		constexpr static rivet::rivet_type_id LevelData_type_id = 0xe16e3538; 
 
 		explicit MapDataConfig() = default;
 		explicit MapDataConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

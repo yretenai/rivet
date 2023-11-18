@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view LinkModeStates_type_name = "LinkModeStates";
-	constexpr const static rivet::rivet_type_id LinkModeStates_type_id = 0xfc263405;
+	constexpr static std::string_view LinkModeStates_type_name = "LinkModeStates";
+	constexpr static rivet::rivet_type_id LinkModeStates_type_id = 0xfc263405;
 
-	constexpr const static std::array<std::string_view, 3> LinkModeStates_values = {
+	constexpr static std::array<std::string_view, 3> LinkModeStates_values = {
 		"kEnter",
 		"kExitAndSave",
 		"kExitAndCancel", 

@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED CurrencyItemConfig : GameItemConfig {
-		constexpr const static std::string_view type_name = "CurrencyItemConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x55baf96e;
+		constexpr static std::string_view type_name = "CurrencyItemConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x55baf96e;
 
 		explicit CurrencyItemConfig() = default;
 		explicit CurrencyItemConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

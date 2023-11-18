@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ShotTopiarySprinklerPrius : BasicBulletPrius {
-		constexpr const static std::string_view type_name = "ShotTopiarySprinklerPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x235ebfa6;
+		constexpr static std::string_view type_name = "ShotTopiarySprinklerPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x235ebfa6;
 
-		constexpr const static std::string_view NoSoundOnReturn_type_name = "NoSoundOnReturn";
-		constexpr const static rivet::rivet_type_id NoSoundOnReturn_type_id = 0x34aa7b5c; 
+		constexpr static std::string_view NoSoundOnReturn_type_name = "NoSoundOnReturn";
+		constexpr static rivet::rivet_type_id NoSoundOnReturn_type_id = 0x34aa7b5c; 
 
 		explicit ShotTopiarySprinklerPrius() = default;
 		explicit ShotTopiarySprinklerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

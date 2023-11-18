@@ -21,17 +21,17 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED StatusEffectFossilizeConfig : StatusEffectConfig {
-		constexpr const static std::string_view type_name = "StatusEffectFossilizeConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x8dc132d6;
+		constexpr static std::string_view type_name = "StatusEffectFossilizeConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x8dc132d6;
 
-		constexpr const static std::string_view BeardActor_type_name = "BeardActor";
-		constexpr const static rivet::rivet_type_id BeardActor_type_id = 0x4c1f8462;
-		constexpr const static std::string_view BowTieActor_type_name = "BowTieActor";
-		constexpr const static rivet::rivet_type_id BowTieActor_type_id = 0x8e20da2c;
-		constexpr const static std::string_view GlassesActor_type_name = "GlassesActor";
-		constexpr const static rivet::rivet_type_id GlassesActor_type_id = 0x7c25eb77;
-		constexpr const static std::string_view GraveActor_type_name = "GraveActor";
-		constexpr const static rivet::rivet_type_id GraveActor_type_id = 0x5d849728; 
+		constexpr static std::string_view BeardActor_type_name = "BeardActor";
+		constexpr static rivet::rivet_type_id BeardActor_type_id = 0x4c1f8462;
+		constexpr static std::string_view BowTieActor_type_name = "BowTieActor";
+		constexpr static rivet::rivet_type_id BowTieActor_type_id = 0x8e20da2c;
+		constexpr static std::string_view GlassesActor_type_name = "GlassesActor";
+		constexpr static rivet::rivet_type_id GlassesActor_type_id = 0x7c25eb77;
+		constexpr static std::string_view GraveActor_type_name = "GraveActor";
+		constexpr static rivet::rivet_type_id GraveActor_type_id = 0x5d849728; 
 
 		explicit StatusEffectFossilizeConfig() = default;
 		explicit StatusEffectFossilizeConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

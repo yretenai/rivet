@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED HomingShotMotionPrius : VariableSpeedShotMotionPrius {
-		constexpr const static std::string_view type_name = "HomingShotMotionPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x6360a528;
+		constexpr static std::string_view type_name = "HomingShotMotionPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x6360a528;
 
-		constexpr const static std::string_view DefaultJoint_type_name = "DefaultJoint";
-		constexpr const static rivet::rivet_type_id DefaultJoint_type_id = 0x876e209e;
-		constexpr const static std::string_view NearbyCameraShake_type_name = "NearbyCameraShake";
-		constexpr const static rivet::rivet_type_id NearbyCameraShake_type_id = 0x598b3fcb; 
+		constexpr static std::string_view DefaultJoint_type_name = "DefaultJoint";
+		constexpr static rivet::rivet_type_id DefaultJoint_type_id = 0x876e209e;
+		constexpr static std::string_view NearbyCameraShake_type_name = "NearbyCameraShake";
+		constexpr static rivet::rivet_type_id NearbyCameraShake_type_id = 0x598b3fcb; 
 
 		explicit HomingShotMotionPrius() = default;
 		explicit HomingShotMotionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

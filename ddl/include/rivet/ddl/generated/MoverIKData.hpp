@@ -19,13 +19,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED MoverIKData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "MoverIKData";
-		constexpr const static rivet::rivet_type_id type_id = 0x164300ca;
+		constexpr static std::string_view type_name = "MoverIKData";
+		constexpr static rivet::rivet_type_id type_id = 0x164300ca;
 
-		constexpr const static std::string_view MaxHeightAboveAnim_type_name = "MaxHeightAboveAnim";
-		constexpr const static rivet::rivet_type_id MaxHeightAboveAnim_type_id = 0xab908c6;
-		constexpr const static std::string_view MaxHeightBelowAnim_type_name = "MaxHeightBelowAnim";
-		constexpr const static rivet::rivet_type_id MaxHeightBelowAnim_type_id = 0x36e0b036; 
+		constexpr static std::string_view MaxHeightAboveAnim_type_name = "MaxHeightAboveAnim";
+		constexpr static rivet::rivet_type_id MaxHeightAboveAnim_type_id = 0xab908c6;
+		constexpr static std::string_view MaxHeightBelowAnim_type_name = "MaxHeightBelowAnim";
+		constexpr static rivet::rivet_type_id MaxHeightBelowAnim_type_id = 0x36e0b036; 
 
 		explicit MoverIKData() = default;
 		explicit MoverIKData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

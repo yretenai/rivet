@@ -19,21 +19,21 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED PlayerHeuristics : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "PlayerHeuristics";
-		constexpr const static rivet::rivet_type_id type_id = 0xfec2c1d0;
+		constexpr static std::string_view type_name = "PlayerHeuristics";
+		constexpr static rivet::rivet_type_id type_id = 0xfec2c1d0;
 
-		constexpr const static std::string_view HeroBotWeight_type_name = "HeroBotWeight";
-		constexpr const static rivet::rivet_type_id HeroBotWeight_type_id = 0x2859e89;
-		constexpr const static std::string_view HumanWeight_type_name = "HumanWeight";
-		constexpr const static rivet::rivet_type_id HumanWeight_type_id = 0xc76bd92c;
-		constexpr const static std::string_view HumanAimWeight_type_name = "HumanAimWeight";
-		constexpr const static rivet::rivet_type_id HumanAimWeight_type_id = 0x2ebab613;
-		constexpr const static std::string_view MinAimedAtDot_type_name = "MinAimedAtDot";
-		constexpr const static rivet::rivet_type_id MinAimedAtDot_type_id = 0xd6694f6;
-		constexpr const static std::string_view MaxAimedAtDot_type_name = "MaxAimedAtDot";
-		constexpr const static rivet::rivet_type_id MaxAimedAtDot_type_id = 0x4d29ec80;
-		constexpr const static std::string_view OutOfCoverMul_type_name = "OutOfCoverMul";
-		constexpr const static rivet::rivet_type_id OutOfCoverMul_type_id = 0x5229e14d; 
+		constexpr static std::string_view HeroBotWeight_type_name = "HeroBotWeight";
+		constexpr static rivet::rivet_type_id HeroBotWeight_type_id = 0x2859e89;
+		constexpr static std::string_view HumanWeight_type_name = "HumanWeight";
+		constexpr static rivet::rivet_type_id HumanWeight_type_id = 0xc76bd92c;
+		constexpr static std::string_view HumanAimWeight_type_name = "HumanAimWeight";
+		constexpr static rivet::rivet_type_id HumanAimWeight_type_id = 0x2ebab613;
+		constexpr static std::string_view MinAimedAtDot_type_name = "MinAimedAtDot";
+		constexpr static rivet::rivet_type_id MinAimedAtDot_type_id = 0xd6694f6;
+		constexpr static std::string_view MaxAimedAtDot_type_name = "MaxAimedAtDot";
+		constexpr static rivet::rivet_type_id MaxAimedAtDot_type_id = 0x4d29ec80;
+		constexpr static std::string_view OutOfCoverMul_type_name = "OutOfCoverMul";
+		constexpr static rivet::rivet_type_id OutOfCoverMul_type_id = 0x5229e14d; 
 
 		explicit PlayerHeuristics() = default;
 		explicit PlayerHeuristics([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

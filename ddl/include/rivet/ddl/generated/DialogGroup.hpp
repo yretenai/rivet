@@ -19,8 +19,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DialogGroup : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "DialogGroup";
-		constexpr const static rivet::rivet_type_id type_id = 0xe5d49516;
+		constexpr static std::string_view type_name = "DialogGroup";
+		constexpr static rivet::rivet_type_id type_id = 0xe5d49516;
 
 		explicit DialogGroup() = default;
 		explicit DialogGroup([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

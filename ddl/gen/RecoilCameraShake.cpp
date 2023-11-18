@@ -3,9 +3,9 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/RecoilCameraShakeAnimated.hpp>
+#include <rivet/ddl/generated/RecoilCameraShakeProcedural.hpp>
 #include <rivet/ddl/generated/RecoilCameraShakeNone.hpp>
-#include <rivet/ddl/generated/RecoilCameraShakeProcedural.hpp> 
+#include <rivet/ddl/generated/RecoilCameraShakeAnimated.hpp> 
 
 #include <rivet/ddl/generated/RecoilCameraShake.hpp>
 

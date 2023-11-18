@@ -3,9 +3,9 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/PulseNavObstruction.hpp>
+#include <rivet/ddl/generated/DimensionalPulseTargetPortalPrius.hpp>
 #include <rivet/ddl/generated/DimensionalPulseTargetSwapPrius.hpp>
-#include <rivet/ddl/generated/DimensionalPulseTargetPortalPrius.hpp> 
+#include <rivet/ddl/generated/PulseNavObstruction.hpp> 
 
 #include <rivet/ddl/generated/DimensionalPulseTargetPrius.hpp>
 

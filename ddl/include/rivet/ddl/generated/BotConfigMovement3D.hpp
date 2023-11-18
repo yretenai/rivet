@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct Steering3DPrius; 
 
 	struct RIVET_DDL_SHARED BotConfigMovement3D : ConfigBase {
-		constexpr const static std::string_view type_name = "BotConfigMovement3D";
-		constexpr const static rivet::rivet_type_id type_id = 0xd34d9c83;
+		constexpr static std::string_view type_name = "BotConfigMovement3D";
+		constexpr static rivet::rivet_type_id type_id = 0xd34d9c83;
 
-		constexpr const static std::string_view Steering_type_name = "Steering";
-		constexpr const static rivet::rivet_type_id Steering_type_id = 0x2a84cec; 
+		constexpr static std::string_view Steering_type_name = "Steering";
+		constexpr static rivet::rivet_type_id Steering_type_id = 0x2a84cec; 
 
 		explicit BotConfigMovement3D() = default;
 		explicit BotConfigMovement3D([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

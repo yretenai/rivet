@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct HeroCharacterData; 
 
 	struct RIVET_DDL_SHARED HeroCharacterConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "HeroCharacterConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xd381b0f2;
+		constexpr static std::string_view type_name = "HeroCharacterConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xd381b0f2;
 
-		constexpr const static std::string_view CharacterList_type_name = "CharacterList";
-		constexpr const static rivet::rivet_type_id CharacterList_type_id = 0xdd4277d7; 
+		constexpr static std::string_view CharacterList_type_name = "CharacterList";
+		constexpr static rivet::rivet_type_id CharacterList_type_id = 0xdd4277d7; 
 
 		explicit HeroCharacterConfig() = default;
 		explicit HeroCharacterConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

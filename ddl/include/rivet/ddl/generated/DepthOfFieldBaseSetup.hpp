@@ -19,17 +19,17 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DepthOfFieldBaseSetup : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "DepthOfFieldBaseSetup";
-		constexpr const static rivet::rivet_type_id type_id = 0xb9c5470;
+		constexpr static std::string_view type_name = "DepthOfFieldBaseSetup";
+		constexpr static rivet::rivet_type_id type_id = 0xb9c5470;
 
-		constexpr const static std::string_view DistanceFar_type_name = "DistanceFar";
-		constexpr const static rivet::rivet_type_id DistanceFar_type_id = 0xb13fd21e;
-		constexpr const static std::string_view DistanceNear_type_name = "DistanceNear";
-		constexpr const static rivet::rivet_type_id DistanceNear_type_id = 0xe7e7d300;
-		constexpr const static std::string_view AperatureScaleFar_type_name = "AperatureScaleFar";
-		constexpr const static rivet::rivet_type_id AperatureScaleFar_type_id = 0xadef95b;
-		constexpr const static std::string_view AperatureScaleNear_type_name = "AperatureScaleNear";
-		constexpr const static rivet::rivet_type_id AperatureScaleNear_type_id = 0xe1ea8734; 
+		constexpr static std::string_view DistanceFar_type_name = "DistanceFar";
+		constexpr static rivet::rivet_type_id DistanceFar_type_id = 0xb13fd21e;
+		constexpr static std::string_view DistanceNear_type_name = "DistanceNear";
+		constexpr static rivet::rivet_type_id DistanceNear_type_id = 0xe7e7d300;
+		constexpr static std::string_view AperatureScaleFar_type_name = "AperatureScaleFar";
+		constexpr static rivet::rivet_type_id AperatureScaleFar_type_id = 0xadef95b;
+		constexpr static std::string_view AperatureScaleNear_type_name = "AperatureScaleNear";
+		constexpr static rivet::rivet_type_id AperatureScaleNear_type_id = 0xe1ea8734; 
 
 		explicit DepthOfFieldBaseSetup() = default;
 		explicit DepthOfFieldBaseSetup([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

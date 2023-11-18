@@ -20,41 +20,41 @@
 #include <rivet/ddl/generated/enums/x6be956dd.hpp> 
 
 namespace rivet::ddl::generated {
-	struct DEVOFlexibleCriterion;
-	struct Line; 
+	struct Line;
+	struct DEVOFlexibleCriterion; 
 
 	struct RIVET_DDL_SHARED DialogRule : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "DialogRule";
-		constexpr const static rivet::rivet_type_id type_id = 0x5539e932;
+		constexpr static std::string_view type_name = "DialogRule";
+		constexpr static rivet::rivet_type_id type_id = 0x5539e932;
 
-		constexpr const static std::string_view TriggerEvent_type_name = "TriggerEvent";
-		constexpr const static rivet::rivet_type_id TriggerEvent_type_id = 0x55aed815;
-		constexpr const static std::string_view DialogTag_type_name = "DialogTag";
-		constexpr const static rivet::rivet_type_id DialogTag_type_id = 0x813e6fbd;
-		constexpr const static std::string_view Cooldown_type_name = "Cooldown";
-		constexpr const static rivet::rivet_type_id Cooldown_type_id = 0x246291a9;
-		constexpr const static std::string_view CooldownGroup_type_name = "CooldownGroup";
-		constexpr const static rivet::rivet_type_id CooldownGroup_type_id = 0xa8531912;
-		constexpr const static std::string_view GroupCooldownTime_type_name = "GroupCooldownTime";
-		constexpr const static rivet::rivet_type_id GroupCooldownTime_type_id = 0xa005ea5a;
-		constexpr const static std::string_view AnswerTagStart_type_name = "AnswerTagStart";
-		constexpr const static rivet::rivet_type_id AnswerTagStart_type_id = 0x7ab408d8;
-		constexpr const static std::string_view AnswerTagEnd_type_name = "AnswerTagEnd";
-		constexpr const static rivet::rivet_type_id AnswerTagEnd_type_id = 0x3102eb09;
-		constexpr const static std::string_view ObservedTriggerEvent_type_name = "ObservedTriggerEvent";
-		constexpr const static rivet::rivet_type_id ObservedTriggerEvent_type_id = 0x8fd9175b;
-		constexpr const static std::string_view TargetType_type_name = "TargetType";
-		constexpr const static rivet::rivet_type_id TargetType_type_id = 0x75a19d21;
-		constexpr const static std::string_view HeroInRegion_type_name = "HeroInRegion";
-		constexpr const static rivet::rivet_type_id HeroInRegion_type_id = 0x92b77e2e;
-		constexpr const static std::string_view DelayTime_type_name = "DelayTime";
-		constexpr const static rivet::rivet_type_id DelayTime_type_id = 0x68ee6562;
-		constexpr const static std::string_view NoRepeatsUntilAllPlayed_type_name = "NoRepeatsUntilAllPlayed";
-		constexpr const static rivet::rivet_type_id NoRepeatsUntilAllPlayed_type_id = 0xbf65bbf1;
-		constexpr const static std::string_view OtherCriteria_type_name = "OtherCriteria";
-		constexpr const static rivet::rivet_type_id OtherCriteria_type_id = 0x17056453;
-		constexpr const static std::string_view Lines_type_name = "Lines";
-		constexpr const static rivet::rivet_type_id Lines_type_id = 0x56524057; 
+		constexpr static std::string_view TriggerEvent_type_name = "TriggerEvent";
+		constexpr static rivet::rivet_type_id TriggerEvent_type_id = 0x55aed815;
+		constexpr static std::string_view DialogTag_type_name = "DialogTag";
+		constexpr static rivet::rivet_type_id DialogTag_type_id = 0x813e6fbd;
+		constexpr static std::string_view Cooldown_type_name = "Cooldown";
+		constexpr static rivet::rivet_type_id Cooldown_type_id = 0x246291a9;
+		constexpr static std::string_view CooldownGroup_type_name = "CooldownGroup";
+		constexpr static rivet::rivet_type_id CooldownGroup_type_id = 0xa8531912;
+		constexpr static std::string_view GroupCooldownTime_type_name = "GroupCooldownTime";
+		constexpr static rivet::rivet_type_id GroupCooldownTime_type_id = 0xa005ea5a;
+		constexpr static std::string_view AnswerTagStart_type_name = "AnswerTagStart";
+		constexpr static rivet::rivet_type_id AnswerTagStart_type_id = 0x7ab408d8;
+		constexpr static std::string_view AnswerTagEnd_type_name = "AnswerTagEnd";
+		constexpr static rivet::rivet_type_id AnswerTagEnd_type_id = 0x3102eb09;
+		constexpr static std::string_view ObservedTriggerEvent_type_name = "ObservedTriggerEvent";
+		constexpr static rivet::rivet_type_id ObservedTriggerEvent_type_id = 0x8fd9175b;
+		constexpr static std::string_view TargetType_type_name = "TargetType";
+		constexpr static rivet::rivet_type_id TargetType_type_id = 0x75a19d21;
+		constexpr static std::string_view HeroInRegion_type_name = "HeroInRegion";
+		constexpr static rivet::rivet_type_id HeroInRegion_type_id = 0x92b77e2e;
+		constexpr static std::string_view DelayTime_type_name = "DelayTime";
+		constexpr static rivet::rivet_type_id DelayTime_type_id = 0x68ee6562;
+		constexpr static std::string_view NoRepeatsUntilAllPlayed_type_name = "NoRepeatsUntilAllPlayed";
+		constexpr static rivet::rivet_type_id NoRepeatsUntilAllPlayed_type_id = 0xbf65bbf1;
+		constexpr static std::string_view OtherCriteria_type_name = "OtherCriteria";
+		constexpr static rivet::rivet_type_id OtherCriteria_type_id = 0x17056453;
+		constexpr static std::string_view Lines_type_name = "Lines";
+		constexpr static rivet::rivet_type_id Lines_type_id = 0x56524057; 
 
 		explicit DialogRule() = default;
 		explicit DialogRule([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED GameAwardLightningRodChainCountPrius : AwardBasePrius {
-		constexpr const static std::string_view type_name = "GameAwardLightningRodChainCountPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x4db9bc21;
+		constexpr static std::string_view type_name = "GameAwardLightningRodChainCountPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x4db9bc21;
 
 		explicit GameAwardLightningRodChainCountPrius() = default;
 		explicit GameAwardLightningRodChainCountPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -21,15 +21,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED StatusEffectShrubberyPrius : StatusEffectBasePrius {
-		constexpr const static std::string_view type_name = "StatusEffectShrubberyPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x19ca84dd;
+		constexpr static std::string_view type_name = "StatusEffectShrubberyPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x19ca84dd;
 
-		constexpr const static std::string_view ModelId_type_name = "ModelId";
-		constexpr const static rivet::rivet_type_id ModelId_type_id = 0xc5a69919;
-		constexpr const static std::string_view ColorFadeConstant_type_name = "ColorFadeConstant";
-		constexpr const static rivet::rivet_type_id ColorFadeConstant_type_id = 0xc7f47fb5;
-		constexpr const static std::string_view RemoveBotOnDeath_type_name = "RemoveBotOnDeath";
-		constexpr const static rivet::rivet_type_id RemoveBotOnDeath_type_id = 0x2d0a53ff; 
+		constexpr static std::string_view ModelId_type_name = "ModelId";
+		constexpr static rivet::rivet_type_id ModelId_type_id = 0xc5a69919;
+		constexpr static std::string_view ColorFadeConstant_type_name = "ColorFadeConstant";
+		constexpr static rivet::rivet_type_id ColorFadeConstant_type_id = 0xc7f47fb5;
+		constexpr static std::string_view RemoveBotOnDeath_type_name = "RemoveBotOnDeath";
+		constexpr static rivet::rivet_type_id RemoveBotOnDeath_type_id = 0x2d0a53ff; 
 
 		explicit StatusEffectShrubberyPrius() = default;
 		explicit StatusEffectShrubberyPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

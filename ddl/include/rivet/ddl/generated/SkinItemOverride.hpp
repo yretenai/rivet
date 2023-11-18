@@ -18,38 +18,38 @@
 #include <rivet/structures/rivet_serialization.hpp>
 
 namespace rivet::ddl::generated {
+	struct SkinItemDecal;
 	struct SkinItemConduitOverride;
 	struct SkinItemConstantOverride;
-	struct SkinItemCompositeMaterialOverride;
-	struct SkinItemLocatorOverride;
-	struct SkinItemTextureOverride;
 	struct SkinItemColorOverride;
+	struct SkinItemCompositeMaterialOverride;
 	struct SkinItemMaterialOverride;
-	struct SkinItemDecal;
-	struct SkinItemModelVariantOverride; 
+	struct SkinItemTextureOverride;
+	struct SkinItemModelVariantOverride;
+	struct SkinItemLocatorOverride; 
 
 	struct RIVET_DDL_SHARED SkinItemOverride : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "SkinItemOverride";
-		constexpr const static rivet::rivet_type_id type_id = 0x76cd4ce9;
+		constexpr static std::string_view type_name = "SkinItemOverride";
+		constexpr static rivet::rivet_type_id type_id = 0x76cd4ce9;
 
-		constexpr const static std::string_view LocatorOverrideList_type_name = "LocatorOverrideList";
-		constexpr const static rivet::rivet_type_id LocatorOverrideList_type_id = 0xa6babbde;
-		constexpr const static std::string_view TextureOverrideList_type_name = "TextureOverrideList";
-		constexpr const static rivet::rivet_type_id TextureOverrideList_type_id = 0x31be016c;
-		constexpr const static std::string_view MaterialOverrideList_type_name = "MaterialOverrideList";
-		constexpr const static rivet::rivet_type_id MaterialOverrideList_type_id = 0xeb47267a;
-		constexpr const static std::string_view CompositeMaterialOverrideList_type_name = "CompositeMaterialOverrideList";
-		constexpr const static rivet::rivet_type_id CompositeMaterialOverrideList_type_id = 0x88bf7983;
-		constexpr const static std::string_view ColorOverrideList_type_name = "ColorOverrideList";
-		constexpr const static rivet::rivet_type_id ColorOverrideList_type_id = 0x5a9f1a9d;
-		constexpr const static std::string_view ConstantOverrideList_type_name = "ConstantOverrideList";
-		constexpr const static rivet::rivet_type_id ConstantOverrideList_type_id = 0xce09a84b;
-		constexpr const static std::string_view ConduitOverrideList_type_name = "ConduitOverrideList";
-		constexpr const static rivet::rivet_type_id ConduitOverrideList_type_id = 0x6c1e1c97;
-		constexpr const static std::string_view DecalList_type_name = "DecalList";
-		constexpr const static rivet::rivet_type_id DecalList_type_id = 0x1dfa6d24;
-		constexpr const static std::string_view ModelVariantOverrideList_type_name = "ModelVariantOverrideList";
-		constexpr const static rivet::rivet_type_id ModelVariantOverrideList_type_id = 0xdf65d905; 
+		constexpr static std::string_view LocatorOverrideList_type_name = "LocatorOverrideList";
+		constexpr static rivet::rivet_type_id LocatorOverrideList_type_id = 0xa6babbde;
+		constexpr static std::string_view TextureOverrideList_type_name = "TextureOverrideList";
+		constexpr static rivet::rivet_type_id TextureOverrideList_type_id = 0x31be016c;
+		constexpr static std::string_view MaterialOverrideList_type_name = "MaterialOverrideList";
+		constexpr static rivet::rivet_type_id MaterialOverrideList_type_id = 0xeb47267a;
+		constexpr static std::string_view CompositeMaterialOverrideList_type_name = "CompositeMaterialOverrideList";
+		constexpr static rivet::rivet_type_id CompositeMaterialOverrideList_type_id = 0x88bf7983;
+		constexpr static std::string_view ColorOverrideList_type_name = "ColorOverrideList";
+		constexpr static rivet::rivet_type_id ColorOverrideList_type_id = 0x5a9f1a9d;
+		constexpr static std::string_view ConstantOverrideList_type_name = "ConstantOverrideList";
+		constexpr static rivet::rivet_type_id ConstantOverrideList_type_id = 0xce09a84b;
+		constexpr static std::string_view ConduitOverrideList_type_name = "ConduitOverrideList";
+		constexpr static rivet::rivet_type_id ConduitOverrideList_type_id = 0x6c1e1c97;
+		constexpr static std::string_view DecalList_type_name = "DecalList";
+		constexpr static rivet::rivet_type_id DecalList_type_id = 0x1dfa6d24;
+		constexpr static std::string_view ModelVariantOverrideList_type_name = "ModelVariantOverrideList";
+		constexpr static rivet::rivet_type_id ModelVariantOverrideList_type_id = 0xdf65d905; 
 
 		explicit SkinItemOverride() = default;
 		explicit SkinItemOverride([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

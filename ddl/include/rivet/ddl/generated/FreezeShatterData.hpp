@@ -21,17 +21,17 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED FreezeShatterData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "FreezeShatterData";
-		constexpr const static rivet::rivet_type_id type_id = 0xeaa51682;
+		constexpr static std::string_view type_name = "FreezeShatterData";
+		constexpr static rivet::rivet_type_id type_id = 0xeaa51682;
 
-		constexpr const static std::string_view ShotConfig_type_name = "ShotConfig";
-		constexpr const static rivet::rivet_type_id ShotConfig_type_id = 0xb171e6ae;
-		constexpr const static std::string_view DamageRange_type_name = "DamageRange";
-		constexpr const static rivet::rivet_type_id DamageRange_type_id = 0xb52c2c7;
-		constexpr const static std::string_view Knockback_type_name = "Knockback";
-		constexpr const static rivet::rivet_type_id Knockback_type_id = 0x2e553fdd;
-		constexpr const static std::string_view KnockbackAmount_type_name = "KnockbackAmount";
-		constexpr const static rivet::rivet_type_id KnockbackAmount_type_id = 0x7b1e600b; 
+		constexpr static std::string_view ShotConfig_type_name = "ShotConfig";
+		constexpr static rivet::rivet_type_id ShotConfig_type_id = 0xb171e6ae;
+		constexpr static std::string_view DamageRange_type_name = "DamageRange";
+		constexpr static rivet::rivet_type_id DamageRange_type_id = 0xb52c2c7;
+		constexpr static std::string_view Knockback_type_name = "Knockback";
+		constexpr static rivet::rivet_type_id Knockback_type_id = 0x2e553fdd;
+		constexpr static std::string_view KnockbackAmount_type_name = "KnockbackAmount";
+		constexpr static rivet::rivet_type_id KnockbackAmount_type_id = 0x7b1e600b; 
 
 		explicit FreezeShatterData() = default;
 		explicit FreezeShatterData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

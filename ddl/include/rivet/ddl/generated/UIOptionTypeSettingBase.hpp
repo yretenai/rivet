@@ -23,13 +23,13 @@ namespace rivet::ddl::generated {
 	struct UIOption; 
 
 	struct RIVET_DDL_SHARED UIOptionTypeSettingBase : UIOptionTypeBase {
-		constexpr const static std::string_view type_name = "UIOptionTypeSettingBase";
-		constexpr const static rivet::rivet_type_id type_id = 0xbce92b47;
+		constexpr static std::string_view type_name = "UIOptionTypeSettingBase";
+		constexpr static rivet::rivet_type_id type_id = 0xbce92b47;
 
-		constexpr const static std::string_view ChildOptions_type_name = "ChildOptions";
-		constexpr const static rivet::rivet_type_id ChildOptions_type_id = 0x4c60d844;
-		constexpr const static std::string_view PresetValues_type_name = "PresetValues";
-		constexpr const static rivet::rivet_type_id PresetValues_type_id = 0xc85a1699; 
+		constexpr static std::string_view ChildOptions_type_name = "ChildOptions";
+		constexpr static rivet::rivet_type_id ChildOptions_type_id = 0x4c60d844;
+		constexpr static std::string_view PresetValues_type_name = "PresetValues";
+		constexpr static rivet::rivet_type_id PresetValues_type_id = 0xc85a1699; 
 
 		explicit UIOptionTypeSettingBase() = default;
 		explicit UIOptionTypeSettingBase([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

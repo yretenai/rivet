@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view PolylineType_type_name = "PolylineType";
-	constexpr const static rivet::rivet_type_id PolylineType_type_id = 0x3f08814b;
+	constexpr static std::string_view PolylineType_type_name = "PolylineType";
+	constexpr static rivet::rivet_type_id PolylineType_type_id = 0x3f08814b;
 
-	constexpr const static std::array<std::string_view, 6> PolylineType_values = {
+	constexpr static std::array<std::string_view, 6> PolylineType_values = {
 		"kOpenFree",
 		"kOpenPlanar",
 		"kClosedFree",

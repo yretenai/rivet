@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED StatusEffectTrackerFossilizePrius : StatusEffectTrackerBasePrius {
-		constexpr const static std::string_view type_name = "StatusEffectTrackerFossilizePrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x1cb5b6c7;
+		constexpr static std::string_view type_name = "StatusEffectTrackerFossilizePrius";
+		constexpr static rivet::rivet_type_id type_id = 0x1cb5b6c7;
 
-		constexpr const static std::string_view BeardActor_type_name = "BeardActor";
-		constexpr const static rivet::rivet_type_id BeardActor_type_id = 0x4c1f8462;
-		constexpr const static std::string_view Shader_type_name = "Shader";
-		constexpr const static rivet::rivet_type_id Shader_type_id = 0xc18bd04f; 
+		constexpr static std::string_view BeardActor_type_name = "BeardActor";
+		constexpr static rivet::rivet_type_id BeardActor_type_id = 0x4c1f8462;
+		constexpr static std::string_view Shader_type_name = "Shader";
+		constexpr static rivet::rivet_type_id Shader_type_id = 0xc18bd04f; 
 
 		explicit StatusEffectTrackerFossilizePrius() = default;
 		explicit StatusEffectTrackerFossilizePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

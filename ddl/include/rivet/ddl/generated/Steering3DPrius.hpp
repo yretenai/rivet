@@ -19,15 +19,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED Steering3DPrius : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "Steering3DPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x7ee1175b;
+		constexpr static std::string_view type_name = "Steering3DPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x7ee1175b;
 
-		constexpr const static std::string_view IdealSpeed_type_name = "IdealSpeed";
-		constexpr const static rivet::rivet_type_id IdealSpeed_type_id = 0xd6f8c91d;
-		constexpr const static std::string_view Decel_type_name = "Decel";
-		constexpr const static rivet::rivet_type_id Decel_type_id = 0xa9242a88;
-		constexpr const static std::string_view Accel_type_name = "Accel";
-		constexpr const static rivet::rivet_type_id Accel_type_id = 0x44affa24; 
+		constexpr static std::string_view IdealSpeed_type_name = "IdealSpeed";
+		constexpr static rivet::rivet_type_id IdealSpeed_type_id = 0xd6f8c91d;
+		constexpr static std::string_view Decel_type_name = "Decel";
+		constexpr static rivet::rivet_type_id Decel_type_id = 0xa9242a88;
+		constexpr static std::string_view Accel_type_name = "Accel";
+		constexpr static rivet::rivet_type_id Accel_type_id = 0x44affa24; 
 
 		explicit Steering3DPrius() = default;
 		explicit Steering3DPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

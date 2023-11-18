@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED StreamingGameDVRConfig : StreamingVideoBaseConfig {
-		constexpr const static std::string_view type_name = "StreamingGameDVRConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xe9d0bbc3;
+		constexpr static std::string_view type_name = "StreamingGameDVRConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xe9d0bbc3;
 
 		explicit StreamingGameDVRConfig() = default;
 		explicit StreamingGameDVRConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

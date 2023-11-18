@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view Comparison_type_name = "Comparison";
-	constexpr const static rivet::rivet_type_id Comparison_type_id = 0x3e7c98ef;
+	constexpr static std::string_view Comparison_type_name = "Comparison";
+	constexpr static rivet::rivet_type_id Comparison_type_id = 0x3e7c98ef;
 
-	constexpr const static std::array<std::string_view, 5> Comparison_values = {
+	constexpr static std::array<std::string_view, 5> Comparison_values = {
 		"Less",
 		"LessOrEqual",
 		"Equal",

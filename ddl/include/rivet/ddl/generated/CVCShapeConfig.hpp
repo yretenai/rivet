@@ -19,15 +19,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED CVCShapeConfig : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "CVCShapeConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xe283bc40;
+		constexpr static std::string_view type_name = "CVCShapeConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xe283bc40;
 
-		constexpr const static std::string_view Radius_type_name = "Radius";
-		constexpr const static rivet::rivet_type_id Radius_type_id = 0x504203d;
-		constexpr const static std::string_view HeightUp_type_name = "HeightUp";
-		constexpr const static rivet::rivet_type_id HeightUp_type_id = 0x7be988d7;
-		constexpr const static std::string_view HeightDown_type_name = "HeightDown";
-		constexpr const static rivet::rivet_type_id HeightDown_type_id = 0x18b154fa; 
+		constexpr static std::string_view Radius_type_name = "Radius";
+		constexpr static rivet::rivet_type_id Radius_type_id = 0x504203d;
+		constexpr static std::string_view HeightUp_type_name = "HeightUp";
+		constexpr static rivet::rivet_type_id HeightUp_type_id = 0x7be988d7;
+		constexpr static std::string_view HeightDown_type_name = "HeightDown";
+		constexpr static rivet::rivet_type_id HeightDown_type_id = 0x18b154fa; 
 
 		explicit CVCShapeConfig() = default;
 		explicit CVCShapeConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -19,13 +19,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED HitReactPrius : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "HitReactPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x27230b9e;
+		constexpr static std::string_view type_name = "HitReactPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x27230b9e;
 
-		constexpr const static std::string_view ReactToIgnoredDamage_type_name = "ReactToIgnoredDamage";
-		constexpr const static rivet::rivet_type_id ReactToIgnoredDamage_type_id = 0x5fc5e135;
-		constexpr const static std::string_view SlowDownOnHit_type_name = "SlowDownOnHit";
-		constexpr const static rivet::rivet_type_id SlowDownOnHit_type_id = 0xc0d2ff43; 
+		constexpr static std::string_view ReactToIgnoredDamage_type_name = "ReactToIgnoredDamage";
+		constexpr static rivet::rivet_type_id ReactToIgnoredDamage_type_id = 0x5fc5e135;
+		constexpr static std::string_view SlowDownOnHit_type_name = "SlowDownOnHit";
+		constexpr static rivet::rivet_type_id SlowDownOnHit_type_id = 0xc0d2ff43; 
 
 		explicit HitReactPrius() = default;
 		explicit HitReactPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

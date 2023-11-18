@@ -21,15 +21,15 @@ namespace rivet::ddl::generated {
 	struct CameraAimContextConfig; 
 
 	struct RIVET_DDL_SHARED StateDependentCameraConfigData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "StateDependentCameraConfigData";
-		constexpr const static rivet::rivet_type_id type_id = 0xd2b7631c;
+		constexpr static std::string_view type_name = "StateDependentCameraConfigData";
+		constexpr static rivet::rivet_type_id type_id = 0xd2b7631c;
 
-		constexpr const static std::string_view StateString_type_name = "StateString";
-		constexpr const static rivet::rivet_type_id StateString_type_id = 0xec658ed4;
-		constexpr const static std::string_view AimContext_type_name = "AimContext";
-		constexpr const static rivet::rivet_type_id AimContext_type_id = 0xd3bb808;
-		constexpr const static std::string_view AllowCameraInput_type_name = "AllowCameraInput";
-		constexpr const static rivet::rivet_type_id AllowCameraInput_type_id = 0xc114162f; 
+		constexpr static std::string_view StateString_type_name = "StateString";
+		constexpr static rivet::rivet_type_id StateString_type_id = 0xec658ed4;
+		constexpr static std::string_view AimContext_type_name = "AimContext";
+		constexpr static rivet::rivet_type_id AimContext_type_id = 0xd3bb808;
+		constexpr static std::string_view AllowCameraInput_type_name = "AllowCameraInput";
+		constexpr static rivet::rivet_type_id AllowCameraInput_type_id = 0xc114162f; 
 
 		explicit StateDependentCameraConfigData() = default;
 		explicit StateDependentCameraConfigData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

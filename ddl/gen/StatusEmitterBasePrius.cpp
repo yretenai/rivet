@@ -3,15 +3,15 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/StatusEffectsData.hpp>
-#include <rivet/ddl/generated/StatusEmitterOnDamagedPrius.hpp>
-#include <rivet/ddl/generated/StatusEmitterSelfPrius.hpp>
-#include <rivet/ddl/generated/StatusEmitterVolumePrius.hpp>
-#include <rivet/ddl/generated/StatusEmitterRequestPrius.hpp>
+#include <rivet/ddl/generated/StatusEmitterAuraPrius.hpp>
 #include <rivet/ddl/generated/StatusEmitterScriptActionPrius.hpp>
+#include <rivet/ddl/generated/StatusEmitterRequestPrius.hpp>
+#include <rivet/ddl/generated/StatusEmitterVolumePrius.hpp>
 #include <rivet/ddl/generated/StatusEmitterDamagePrius.hpp>
+#include <rivet/ddl/generated/StatusEmitterSelfPrius.hpp>
 #include <rivet/ddl/generated/StatusEmitterOnDeathPrius.hpp>
-#include <rivet/ddl/generated/StatusEmitterAuraPrius.hpp> 
+#include <rivet/ddl/generated/StatusEmitterOnDamagedPrius.hpp>
+#include <rivet/ddl/generated/StatusEffectsData.hpp> 
 
 #include <rivet/ddl/generated/StatusEmitterBasePrius.hpp>
 

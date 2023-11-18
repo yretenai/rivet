@@ -17,37 +17,37 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/enums/LevelEnum.hpp>
-#include <rivet/ddl/generated/DialogRule.hpp>
+#include <rivet/ddl/generated/enums/x48e6c593.hpp>
 #include <rivet/ddl/generated/enums/PlayOnceMode.hpp>
-#include <rivet/ddl/generated/enums/HitLocation.hpp>
+#include <rivet/ddl/generated/enums/LevelEnum.hpp>
 #include <rivet/ddl/generated/enums/x8d7e44cf.hpp>
 #include <rivet/ddl/generated/enums/xca8fba90.hpp>
-#include <rivet/ddl/generated/enums/x48e6c593.hpp> 
+#include <rivet/ddl/generated/enums/HitLocation.hpp>
+#include <rivet/ddl/generated/DialogRule.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DialogRuleGame : DialogRule {
-		constexpr const static std::string_view type_name = "DialogRuleGame";
-		constexpr const static rivet::rivet_type_id type_id = 0x4bc9b26a;
+		constexpr static std::string_view type_name = "DialogRuleGame";
+		constexpr static rivet::rivet_type_id type_id = 0x4bc9b26a;
 
-		constexpr const static std::string_view HitLocation_type_name = "HitLocation";
-		constexpr const static rivet::rivet_type_id HitLocation_type_id = 0x4e3b1edd;
-		constexpr const static std::string_view DamageType_type_name = "DamageType";
-		constexpr const static rivet::rivet_type_id DamageType_type_id = 0x840c154d;
-		constexpr const static std::string_view TargetRelativePos_type_name = "TargetRelativePos";
-		constexpr const static rivet::rivet_type_id TargetRelativePos_type_id = 0xc86e042d;
-		constexpr const static std::string_view CurrentPlanet_type_name = "CurrentPlanet";
-		constexpr const static rivet::rivet_type_id CurrentPlanet_type_id = 0x7ee0169e;
-		constexpr const static std::string_view NotCurrentPlanet_type_name = "NotCurrentPlanet";
-		constexpr const static rivet::rivet_type_id NotCurrentPlanet_type_id = 0xac9688e5;
-		constexpr const static std::string_view EnableAfterPlanetUnlocked_type_name = "EnableAfterPlanetUnlocked";
-		constexpr const static rivet::rivet_type_id EnableAfterPlanetUnlocked_type_id = 0x217f2025;
-		constexpr const static std::string_view DisableAfterPlanetUnlocked_type_name = "DisableAfterPlanetUnlocked";
-		constexpr const static rivet::rivet_type_id DisableAfterPlanetUnlocked_type_id = 0x211f66df;
-		constexpr const static std::string_view SequenceMode_type_name = "SequenceMode";
-		constexpr const static rivet::rivet_type_id SequenceMode_type_id = 0xe33fd48a;
-		constexpr const static std::string_view PlayOnceMode_type_name = "PlayOnceMode";
-		constexpr const static rivet::rivet_type_id PlayOnceMode_type_id = 0x46c0349d; 
+		constexpr static std::string_view HitLocation_type_name = "HitLocation";
+		constexpr static rivet::rivet_type_id HitLocation_type_id = 0x4e3b1edd;
+		constexpr static std::string_view DamageType_type_name = "DamageType";
+		constexpr static rivet::rivet_type_id DamageType_type_id = 0x840c154d;
+		constexpr static std::string_view TargetRelativePos_type_name = "TargetRelativePos";
+		constexpr static rivet::rivet_type_id TargetRelativePos_type_id = 0xc86e042d;
+		constexpr static std::string_view CurrentPlanet_type_name = "CurrentPlanet";
+		constexpr static rivet::rivet_type_id CurrentPlanet_type_id = 0x7ee0169e;
+		constexpr static std::string_view NotCurrentPlanet_type_name = "NotCurrentPlanet";
+		constexpr static rivet::rivet_type_id NotCurrentPlanet_type_id = 0xac9688e5;
+		constexpr static std::string_view EnableAfterPlanetUnlocked_type_name = "EnableAfterPlanetUnlocked";
+		constexpr static rivet::rivet_type_id EnableAfterPlanetUnlocked_type_id = 0x217f2025;
+		constexpr static std::string_view DisableAfterPlanetUnlocked_type_name = "DisableAfterPlanetUnlocked";
+		constexpr static rivet::rivet_type_id DisableAfterPlanetUnlocked_type_id = 0x211f66df;
+		constexpr static std::string_view SequenceMode_type_name = "SequenceMode";
+		constexpr static rivet::rivet_type_id SequenceMode_type_id = 0xe33fd48a;
+		constexpr static std::string_view PlayOnceMode_type_name = "PlayOnceMode";
+		constexpr static rivet::rivet_type_id PlayOnceMode_type_id = 0x46c0349d; 
 
 		explicit DialogRuleGame() = default;
 		explicit DialogRuleGame([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

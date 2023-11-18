@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct GadgetPortalTetherPrius; 
 
 	struct RIVET_DDL_SHARED PortalTetherItemConfig : GameItemConfig {
-		constexpr const static std::string_view type_name = "PortalTetherItemConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x3eec7003;
+		constexpr static std::string_view type_name = "PortalTetherItemConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x3eec7003;
 
-		constexpr const static std::string_view PortalTetherPrius_type_name = "PortalTetherPrius";
-		constexpr const static rivet::rivet_type_id PortalTetherPrius_type_id = 0x1b18f80f; 
+		constexpr static std::string_view PortalTetherPrius_type_name = "PortalTetherPrius";
+		constexpr static rivet::rivet_type_id PortalTetherPrius_type_id = 0x1b18f80f; 
 
 		explicit PortalTetherItemConfig() = default;
 		explicit PortalTetherItemConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

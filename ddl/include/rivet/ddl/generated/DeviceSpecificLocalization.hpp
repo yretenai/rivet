@@ -19,25 +19,25 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DeviceSpecificLocalization : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "DeviceSpecificLocalization";
-		constexpr const static rivet::rivet_type_id type_id = 0xf434dc65;
+		constexpr static std::string_view type_name = "DeviceSpecificLocalization";
+		constexpr static rivet::rivet_type_id type_id = 0xf434dc65;
 
-		constexpr const static std::string_view DefaultLocalizationID_type_name = "DefaultLocalizationID";
-		constexpr const static rivet::rivet_type_id DefaultLocalizationID_type_id = 0x36fa988;
-		constexpr const static std::string_view X360LocalizationID_type_name = "X360LocalizationID";
-		constexpr const static rivet::rivet_type_id X360LocalizationID_type_id = 0xcfac8a1f;
-		constexpr const static std::string_view XOneLocalizationID_type_name = "XOneLocalizationID";
-		constexpr const static rivet::rivet_type_id XOneLocalizationID_type_id = 0x385421af;
-		constexpr const static std::string_view DualShockLocalizationID_type_name = "DualShockLocalizationID";
-		constexpr const static rivet::rivet_type_id DualShockLocalizationID_type_id = 0xe674387;
-		constexpr const static std::string_view DualSenseLocalizationID_type_name = "DualSenseLocalizationID";
-		constexpr const static rivet::rivet_type_id DualSenseLocalizationID_type_id = 0x713e61c4;
-		constexpr const static std::string_view SteamDeckLocalizationID_type_name = "SteamDeckLocalizationID";
-		constexpr const static rivet::rivet_type_id SteamDeckLocalizationID_type_id = 0x18047e58;
-		constexpr const static std::string_view GenericLocalizationID_type_name = "GenericLocalizationID";
-		constexpr const static rivet::rivet_type_id GenericLocalizationID_type_id = 0xffd0d0e0;
-		constexpr const static std::string_view MkbLocalizationID_type_name = "MkbLocalizationID";
-		constexpr const static rivet::rivet_type_id MkbLocalizationID_type_id = 0xba35dfc1; 
+		constexpr static std::string_view DefaultLocalizationID_type_name = "DefaultLocalizationID";
+		constexpr static rivet::rivet_type_id DefaultLocalizationID_type_id = 0x36fa988;
+		constexpr static std::string_view X360LocalizationID_type_name = "X360LocalizationID";
+		constexpr static rivet::rivet_type_id X360LocalizationID_type_id = 0xcfac8a1f;
+		constexpr static std::string_view XOneLocalizationID_type_name = "XOneLocalizationID";
+		constexpr static rivet::rivet_type_id XOneLocalizationID_type_id = 0x385421af;
+		constexpr static std::string_view DualShockLocalizationID_type_name = "DualShockLocalizationID";
+		constexpr static rivet::rivet_type_id DualShockLocalizationID_type_id = 0xe674387;
+		constexpr static std::string_view DualSenseLocalizationID_type_name = "DualSenseLocalizationID";
+		constexpr static rivet::rivet_type_id DualSenseLocalizationID_type_id = 0x713e61c4;
+		constexpr static std::string_view SteamDeckLocalizationID_type_name = "SteamDeckLocalizationID";
+		constexpr static rivet::rivet_type_id SteamDeckLocalizationID_type_id = 0x18047e58;
+		constexpr static std::string_view GenericLocalizationID_type_name = "GenericLocalizationID";
+		constexpr static rivet::rivet_type_id GenericLocalizationID_type_id = 0xffd0d0e0;
+		constexpr static std::string_view MkbLocalizationID_type_name = "MkbLocalizationID";
+		constexpr static rivet::rivet_type_id MkbLocalizationID_type_id = 0xba35dfc1; 
 
 		explicit DeviceSpecificLocalization() = default;
 		explicit DeviceSpecificLocalization([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

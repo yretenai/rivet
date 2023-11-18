@@ -17,16 +17,16 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/DamageModifierOutgoingPrius.hpp>
-#include <rivet/ddl/generated/bitsets/x65d7dac2.hpp> 
+#include <rivet/ddl/generated/bitsets/x65d7dac2.hpp>
+#include <rivet/ddl/generated/DamageModifierOutgoingPrius.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DamageModifierAddFlagsPrius : DamageModifierOutgoingPrius {
-		constexpr const static std::string_view type_name = "DamageModifierAddFlagsPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x4d354a69;
+		constexpr static std::string_view type_name = "DamageModifierAddFlagsPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x4d354a69;
 
-		constexpr const static std::string_view AddFlags_type_name = "AddFlags";
-		constexpr const static rivet::rivet_type_id AddFlags_type_id = 0x63187e25; 
+		constexpr static std::string_view AddFlags_type_name = "AddFlags";
+		constexpr static rivet::rivet_type_id AddFlags_type_id = 0x63187e25; 
 
 		explicit DamageModifierAddFlagsPrius() = default;
 		explicit DamageModifierAddFlagsPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

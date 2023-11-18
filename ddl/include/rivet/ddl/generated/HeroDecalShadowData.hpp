@@ -21,25 +21,25 @@ namespace rivet::ddl::generated {
 	struct DDLVector3; 
 
 	struct RIVET_DDL_SHARED HeroDecalShadowData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "HeroDecalShadowData";
-		constexpr const static rivet::rivet_type_id type_id = 0x71461558;
+		constexpr static std::string_view type_name = "HeroDecalShadowData";
+		constexpr static rivet::rivet_type_id type_id = 0x71461558;
 
-		constexpr const static std::string_view DecalShadowShader_type_name = "DecalShadowShader";
-		constexpr const static rivet::rivet_type_id DecalShadowShader_type_id = 0xe224f023;
-		constexpr const static std::string_view DecalModel_type_name = "DecalModel";
-		constexpr const static rivet::rivet_type_id DecalModel_type_id = 0x2aa1d346;
-		constexpr const static std::string_view MaterialMappingName_type_name = "MaterialMappingName";
-		constexpr const static rivet::rivet_type_id MaterialMappingName_type_id = 0x981e6927;
-		constexpr const static std::string_view AlphaTextureConstantName_type_name = "AlphaTextureConstantName";
-		constexpr const static rivet::rivet_type_id AlphaTextureConstantName_type_id = 0x9c924dec;
-		constexpr const static std::string_view Tint_type_name = "Tint";
-		constexpr const static rivet::rivet_type_id Tint_type_id = 0x1e992bc4;
-		constexpr const static std::string_view BlendTime_type_name = "BlendTime";
-		constexpr const static rivet::rivet_type_id BlendTime_type_id = 0xf805a3f6;
-		constexpr const static std::string_view MinDistance_type_name = "MinDistance";
-		constexpr const static rivet::rivet_type_id MinDistance_type_id = 0x448e693a;
-		constexpr const static std::string_view MaxDistance_type_name = "MaxDistance";
-		constexpr const static rivet::rivet_type_id MaxDistance_type_id = 0x88831235; 
+		constexpr static std::string_view DecalShadowShader_type_name = "DecalShadowShader";
+		constexpr static rivet::rivet_type_id DecalShadowShader_type_id = 0xe224f023;
+		constexpr static std::string_view DecalModel_type_name = "DecalModel";
+		constexpr static rivet::rivet_type_id DecalModel_type_id = 0x2aa1d346;
+		constexpr static std::string_view MaterialMappingName_type_name = "MaterialMappingName";
+		constexpr static rivet::rivet_type_id MaterialMappingName_type_id = 0x981e6927;
+		constexpr static std::string_view AlphaTextureConstantName_type_name = "AlphaTextureConstantName";
+		constexpr static rivet::rivet_type_id AlphaTextureConstantName_type_id = 0x9c924dec;
+		constexpr static std::string_view Tint_type_name = "Tint";
+		constexpr static rivet::rivet_type_id Tint_type_id = 0x1e992bc4;
+		constexpr static std::string_view BlendTime_type_name = "BlendTime";
+		constexpr static rivet::rivet_type_id BlendTime_type_id = 0xf805a3f6;
+		constexpr static std::string_view MinDistance_type_name = "MinDistance";
+		constexpr static rivet::rivet_type_id MinDistance_type_id = 0x448e693a;
+		constexpr static std::string_view MaxDistance_type_name = "MaxDistance";
+		constexpr static rivet::rivet_type_id MaxDistance_type_id = 0x88831235; 
 
 		explicit HeroDecalShadowData() = default;
 		explicit HeroDecalShadowData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

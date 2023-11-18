@@ -19,15 +19,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED CameraShakingCurveData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "CameraShakingCurveData";
-		constexpr const static rivet::rivet_type_id type_id = 0x38252b8a;
+		constexpr static std::string_view type_name = "CameraShakingCurveData";
+		constexpr static rivet::rivet_type_id type_id = 0x38252b8a;
 
-		constexpr const static std::string_view Magnitude_type_name = "Magnitude";
-		constexpr const static rivet::rivet_type_id Magnitude_type_id = 0xb77ae20d;
-		constexpr const static std::string_view Frequency_type_name = "Frequency";
-		constexpr const static rivet::rivet_type_id Frequency_type_id = 0xa482271f;
-		constexpr const static std::string_view Offset_type_name = "Offset";
-		constexpr const static rivet::rivet_type_id Offset_type_id = 0x677284b7; 
+		constexpr static std::string_view Magnitude_type_name = "Magnitude";
+		constexpr static rivet::rivet_type_id Magnitude_type_id = 0xb77ae20d;
+		constexpr static std::string_view Frequency_type_name = "Frequency";
+		constexpr static rivet::rivet_type_id Frequency_type_id = 0xa482271f;
+		constexpr static std::string_view Offset_type_name = "Offset";
+		constexpr static rivet::rivet_type_id Offset_type_id = 0x677284b7; 
 
 		explicit CameraShakingCurveData() = default;
 		explicit CameraShakingCurveData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

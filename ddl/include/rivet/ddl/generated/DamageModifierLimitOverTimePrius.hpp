@@ -17,20 +17,20 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/DamageModifierIncomingPrius.hpp>
-#include <rivet/ddl/generated/enums/x8d7e44cf.hpp> 
+#include <rivet/ddl/generated/enums/x8d7e44cf.hpp>
+#include <rivet/ddl/generated/DamageModifierIncomingPrius.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DamageModifierLimitOverTimePrius : DamageModifierIncomingPrius {
-		constexpr const static std::string_view type_name = "DamageModifierLimitOverTimePrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x34c80fdb;
+		constexpr static std::string_view type_name = "DamageModifierLimitOverTimePrius";
+		constexpr static rivet::rivet_type_id type_id = 0x34c80fdb;
 
-		constexpr const static std::string_view MaxDamagePercent_type_name = "MaxDamagePercent";
-		constexpr const static rivet::rivet_type_id MaxDamagePercent_type_id = 0x47830771;
-		constexpr const static std::string_view Interval_type_name = "Interval";
-		constexpr const static rivet::rivet_type_id Interval_type_id = 0xe3c752bb;
-		constexpr const static std::string_view DamageFilter_type_name = "DamageFilter";
-		constexpr const static rivet::rivet_type_id DamageFilter_type_id = 0xa75ecb2f; 
+		constexpr static std::string_view MaxDamagePercent_type_name = "MaxDamagePercent";
+		constexpr static rivet::rivet_type_id MaxDamagePercent_type_id = 0x47830771;
+		constexpr static std::string_view Interval_type_name = "Interval";
+		constexpr static rivet::rivet_type_id Interval_type_id = 0xe3c752bb;
+		constexpr static std::string_view DamageFilter_type_name = "DamageFilter";
+		constexpr static rivet::rivet_type_id DamageFilter_type_id = 0xa75ecb2f; 
 
 		explicit DamageModifierLimitOverTimePrius() = default;
 		explicit DamageModifierLimitOverTimePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

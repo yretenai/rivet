@@ -21,25 +21,25 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED ThrownWeaponDamageInfo : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "ThrownWeaponDamageInfo";
-		constexpr const static rivet::rivet_type_id type_id = 0x462e6802;
+		constexpr static std::string_view type_name = "ThrownWeaponDamageInfo";
+		constexpr static rivet::rivet_type_id type_id = 0x462e6802;
 
-		constexpr const static std::string_view DamageRadius_type_name = "DamageRadius";
-		constexpr const static rivet::rivet_type_id DamageRadius_type_id = 0xe3e6fa68;
-		constexpr const static std::string_view DamageAmount_type_name = "DamageAmount";
-		constexpr const static rivet::rivet_type_id DamageAmount_type_id = 0x563be470;
-		constexpr const static std::string_view KnockbackLevel_type_name = "KnockbackLevel";
-		constexpr const static rivet::rivet_type_id KnockbackLevel_type_id = 0x2554a262;
-		constexpr const static std::string_view KnockbackAmount_type_name = "KnockbackAmount";
-		constexpr const static rivet::rivet_type_id KnockbackAmount_type_id = 0x7b1e600b;
-		constexpr const static std::string_view HitPauseDuration_type_name = "HitPauseDuration";
-		constexpr const static rivet::rivet_type_id HitPauseDuration_type_id = 0x4e7e2a7;
-		constexpr const static std::string_view HitPauseOnBot_type_name = "HitPauseOnBot";
-		constexpr const static rivet::rivet_type_id HitPauseOnBot_type_id = 0xcbb1d683;
-		constexpr const static std::string_view HitPauseOnWeapon_type_name = "HitPauseOnWeapon";
-		constexpr const static rivet::rivet_type_id HitPauseOnWeapon_type_id = 0xea853bd2;
-		constexpr const static std::string_view ThrowDamageHash_type_name = "ThrowDamageHash";
-		constexpr const static rivet::rivet_type_id ThrowDamageHash_type_id = 0x1e60953f; 
+		constexpr static std::string_view DamageRadius_type_name = "DamageRadius";
+		constexpr static rivet::rivet_type_id DamageRadius_type_id = 0xe3e6fa68;
+		constexpr static std::string_view DamageAmount_type_name = "DamageAmount";
+		constexpr static rivet::rivet_type_id DamageAmount_type_id = 0x563be470;
+		constexpr static std::string_view KnockbackLevel_type_name = "KnockbackLevel";
+		constexpr static rivet::rivet_type_id KnockbackLevel_type_id = 0x2554a262;
+		constexpr static std::string_view KnockbackAmount_type_name = "KnockbackAmount";
+		constexpr static rivet::rivet_type_id KnockbackAmount_type_id = 0x7b1e600b;
+		constexpr static std::string_view HitPauseDuration_type_name = "HitPauseDuration";
+		constexpr static rivet::rivet_type_id HitPauseDuration_type_id = 0x4e7e2a7;
+		constexpr static std::string_view HitPauseOnBot_type_name = "HitPauseOnBot";
+		constexpr static rivet::rivet_type_id HitPauseOnBot_type_id = 0xcbb1d683;
+		constexpr static std::string_view HitPauseOnWeapon_type_name = "HitPauseOnWeapon";
+		constexpr static rivet::rivet_type_id HitPauseOnWeapon_type_id = 0xea853bd2;
+		constexpr static std::string_view ThrowDamageHash_type_name = "ThrowDamageHash";
+		constexpr static rivet::rivet_type_id ThrowDamageHash_type_id = 0x1e60953f; 
 
 		explicit ThrownWeaponDamageInfo() = default;
 		explicit ThrownWeaponDamageInfo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

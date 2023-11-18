@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED VanityPerkRaritanium : VanityPerkBase {
-		constexpr const static std::string_view type_name = "VanityPerkRaritanium";
-		constexpr const static rivet::rivet_type_id type_id = 0x8a82b1b;
+		constexpr static std::string_view type_name = "VanityPerkRaritanium";
+		constexpr static rivet::rivet_type_id type_id = 0x8a82b1b;
 
-		constexpr const static std::string_view RaritaniumMultSet_type_name = "RaritaniumMultSet";
-		constexpr const static rivet::rivet_type_id RaritaniumMultSet_type_id = 0xdbbc85ee;
-		constexpr const static std::string_view RaritaniumMultPiece_type_name = "RaritaniumMultPiece";
-		constexpr const static rivet::rivet_type_id RaritaniumMultPiece_type_id = 0x3eb5d3ed; 
+		constexpr static std::string_view RaritaniumMultSet_type_name = "RaritaniumMultSet";
+		constexpr static rivet::rivet_type_id RaritaniumMultSet_type_id = 0xdbbc85ee;
+		constexpr static std::string_view RaritaniumMultPiece_type_name = "RaritaniumMultPiece";
+		constexpr static rivet::rivet_type_id RaritaniumMultPiece_type_id = 0x3eb5d3ed; 
 
 		explicit VanityPerkRaritanium() = default;
 		explicit VanityPerkRaritanium([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -21,11 +21,11 @@ namespace rivet::ddl::generated {
 	struct RegisterAttackCooldownData; 
 
 	struct RIVET_DDL_SHARED AttackCooldownDefault : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "AttackCooldownDefault";
-		constexpr const static rivet::rivet_type_id type_id = 0x5afa03c2;
+		constexpr static std::string_view type_name = "AttackCooldownDefault";
+		constexpr static rivet::rivet_type_id type_id = 0x5afa03c2;
 
-		constexpr const static std::string_view RegisterData_type_name = "RegisterData";
-		constexpr const static rivet::rivet_type_id RegisterData_type_id = 0x5f043f44; 
+		constexpr static std::string_view RegisterData_type_name = "RegisterData";
+		constexpr static rivet::rivet_type_id RegisterData_type_id = 0x5f043f44; 
 
 		explicit AttackCooldownDefault() = default;
 		explicit AttackCooldownDefault([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

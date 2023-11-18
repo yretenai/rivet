@@ -18,27 +18,27 @@
 #include <rivet/structures/rivet_serialization.hpp>
 
 namespace rivet::ddl::generated {
-	struct PhotoLightData;
-	struct PhotoLightMoveOrbitData; 
+	struct PhotoLightMoveOrbitData;
+	struct PhotoLightData; 
 
 	struct RIVET_DDL_SHARED PhotoLightSettings : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "PhotoLightSettings";
-		constexpr const static rivet::rivet_type_id type_id = 0x8745b4c0;
+		constexpr static std::string_view type_name = "PhotoLightSettings";
+		constexpr static rivet::rivet_type_id type_id = 0x8745b4c0;
 
-		constexpr const static std::string_view MaxNumLights_type_name = "MaxNumLights";
-		constexpr const static rivet::rivet_type_id MaxNumLights_type_id = 0xec3163a4;
-		constexpr const static std::string_view LightSettings_type_name = "LightSettings";
-		constexpr const static rivet::rivet_type_id LightSettings_type_id = 0x7e3ed937;
-		constexpr const static std::string_view Orbit_type_name = "Orbit";
-		constexpr const static rivet::rivet_type_id Orbit_type_id = 0xad21c9d2;
-		constexpr const static std::string_view SpotlightCone_type_name = "SpotlightCone";
-		constexpr const static rivet::rivet_type_id SpotlightCone_type_id = 0xf06caaf6;
-		constexpr const static std::string_view PointLightModel_type_name = "PointLightModel";
-		constexpr const static rivet::rivet_type_id PointLightModel_type_id = 0x5827e22e;
-		constexpr const static std::string_view UseDebugLightRig_type_name = "UseDebugLightRig";
-		constexpr const static rivet::rivet_type_id UseDebugLightRig_type_id = 0xcaefd69c;
-		constexpr const static std::string_view RigModel_type_name = "RigModel";
-		constexpr const static rivet::rivet_type_id RigModel_type_id = 0xaaff68e0; 
+		constexpr static std::string_view MaxNumLights_type_name = "MaxNumLights";
+		constexpr static rivet::rivet_type_id MaxNumLights_type_id = 0xec3163a4;
+		constexpr static std::string_view LightSettings_type_name = "LightSettings";
+		constexpr static rivet::rivet_type_id LightSettings_type_id = 0x7e3ed937;
+		constexpr static std::string_view Orbit_type_name = "Orbit";
+		constexpr static rivet::rivet_type_id Orbit_type_id = 0xad21c9d2;
+		constexpr static std::string_view SpotlightCone_type_name = "SpotlightCone";
+		constexpr static rivet::rivet_type_id SpotlightCone_type_id = 0xf06caaf6;
+		constexpr static std::string_view PointLightModel_type_name = "PointLightModel";
+		constexpr static rivet::rivet_type_id PointLightModel_type_id = 0x5827e22e;
+		constexpr static std::string_view UseDebugLightRig_type_name = "UseDebugLightRig";
+		constexpr static rivet::rivet_type_id UseDebugLightRig_type_id = 0xcaefd69c;
+		constexpr static std::string_view RigModel_type_name = "RigModel";
+		constexpr static rivet::rivet_type_id RigModel_type_id = 0xaaff68e0; 
 
 		explicit PhotoLightSettings() = default;
 		explicit PhotoLightSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

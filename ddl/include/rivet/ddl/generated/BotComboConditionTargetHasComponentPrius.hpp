@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED BotComboConditionTargetHasComponentPrius : BotComboConditionBasePrius {
-		constexpr const static std::string_view type_name = "BotComboConditionTargetHasComponentPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x6cc26e62;
+		constexpr static std::string_view type_name = "BotComboConditionTargetHasComponentPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x6cc26e62;
 
-		constexpr const static std::string_view TargetComponentName_type_name = "TargetComponentName";
-		constexpr const static rivet::rivet_type_id TargetComponentName_type_id = 0x6b44e129;
-		constexpr const static std::string_view MaxRange_type_name = "MaxRange";
-		constexpr const static rivet::rivet_type_id MaxRange_type_id = 0x8a199dde; 
+		constexpr static std::string_view TargetComponentName_type_name = "TargetComponentName";
+		constexpr static rivet::rivet_type_id TargetComponentName_type_id = 0x6b44e129;
+		constexpr static std::string_view MaxRange_type_name = "MaxRange";
+		constexpr static rivet::rivet_type_id MaxRange_type_id = 0x8a199dde; 
 
 		explicit BotComboConditionTargetHasComponentPrius() = default;
 		explicit BotComboConditionTargetHasComponentPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

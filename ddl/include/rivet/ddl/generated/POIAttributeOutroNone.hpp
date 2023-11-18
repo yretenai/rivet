@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED POIAttributeOutroNone : POIAttributeOutroBase {
-		constexpr const static std::string_view type_name = "POIAttributeOutroNone";
-		constexpr const static rivet::rivet_type_id type_id = 0x1a0098f2;
+		constexpr static std::string_view type_name = "POIAttributeOutroNone";
+		constexpr static rivet::rivet_type_id type_id = 0x1a0098f2;
 
 		explicit POIAttributeOutroNone() = default;
 		explicit POIAttributeOutroNone([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

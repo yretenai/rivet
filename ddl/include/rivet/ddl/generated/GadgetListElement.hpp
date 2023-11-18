@@ -19,11 +19,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED GadgetListElement : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "GadgetListElement";
-		constexpr const static rivet::rivet_type_id type_id = 0x525149b4;
+		constexpr static std::string_view type_name = "GadgetListElement";
+		constexpr static rivet::rivet_type_id type_id = 0x525149b4;
 
-		constexpr const static std::string_view ItemConfigFile_type_name = "ItemConfigFile";
-		constexpr const static rivet::rivet_type_id ItemConfigFile_type_id = 0x22c4a442; 
+		constexpr static std::string_view ItemConfigFile_type_name = "ItemConfigFile";
+		constexpr static rivet::rivet_type_id ItemConfigFile_type_id = 0x22c4a442; 
 
 		explicit GadgetListElement() = default;
 		explicit GadgetListElement([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

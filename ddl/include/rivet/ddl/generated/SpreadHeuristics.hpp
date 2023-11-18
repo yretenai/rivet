@@ -19,13 +19,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED SpreadHeuristics : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "SpreadHeuristics";
-		constexpr const static rivet::rivet_type_id type_id = 0xa7b670e8;
+		constexpr static std::string_view type_name = "SpreadHeuristics";
+		constexpr static rivet::rivet_type_id type_id = 0xa7b670e8;
 
-		constexpr const static std::string_view CurrentTargetStickiness_type_name = "CurrentTargetStickiness";
-		constexpr const static rivet::rivet_type_id CurrentTargetStickiness_type_id = 0xae3a0bf5;
-		constexpr const static std::string_view SpreadTargetMul_type_name = "SpreadTargetMul";
-		constexpr const static rivet::rivet_type_id SpreadTargetMul_type_id = 0x8c01d0c5; 
+		constexpr static std::string_view CurrentTargetStickiness_type_name = "CurrentTargetStickiness";
+		constexpr static rivet::rivet_type_id CurrentTargetStickiness_type_id = 0xae3a0bf5;
+		constexpr static std::string_view SpreadTargetMul_type_name = "SpreadTargetMul";
+		constexpr static rivet::rivet_type_id SpreadTargetMul_type_id = 0x8c01d0c5; 
 
 		explicit SpreadHeuristics() = default;
 		explicit SpreadHeuristics([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

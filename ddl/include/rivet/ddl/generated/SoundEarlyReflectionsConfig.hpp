@@ -17,44 +17,44 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/ConfigBase.hpp>
-#include <rivet/ddl/generated/enums/xfc5a3cb7.hpp>
+#include <rivet/ddl/generated/enums/x47d78dec.hpp>
 #include <rivet/ddl/generated/enums/x5d0fe319.hpp>
-#include <rivet/ddl/generated/enums/x47d78dec.hpp> 
+#include <rivet/ddl/generated/enums/xfc5a3cb7.hpp>
+#include <rivet/ddl/generated/ConfigBase.hpp> 
 
 namespace rivet::ddl::generated {
 	struct ReflectionProperty; 
 
 	struct RIVET_DDL_SHARED SoundEarlyReflectionsConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "SoundEarlyReflectionsConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xec3c1742;
+		constexpr static std::string_view type_name = "SoundEarlyReflectionsConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xec3c1742;
 
-		constexpr const static std::string_view NumSamplesSqrt_type_name = "NumSamplesSqrt";
-		constexpr const static rivet::rivet_type_id NumSamplesSqrt_type_id = 0x6731fdae;
-		constexpr const static std::string_view SamplingRadius_type_name = "SamplingRadius";
-		constexpr const static rivet::rivet_type_id SamplingRadius_type_id = 0xb32efb1f;
-		constexpr const static std::string_view RayYawAngle_type_name = "RayYawAngle";
-		constexpr const static rivet::rivet_type_id RayYawAngle_type_id = 0x54dd1e10;
-		constexpr const static std::string_view SamplingPosition_type_name = "SamplingPosition";
-		constexpr const static rivet::rivet_type_id SamplingPosition_type_id = 0xa9ea2d3;
-		constexpr const static std::string_view Orientation_type_name = "Orientation";
-		constexpr const static rivet::rivet_type_id Orientation_type_id = 0xbb5c948d;
-		constexpr const static std::string_view GroundDistance_type_name = "GroundDistance";
-		constexpr const static rivet::rivet_type_id GroundDistance_type_id = 0x2b8faa58;
-		constexpr const static std::string_view VerticalRayOrientation_type_name = "VerticalRayOrientation";
-		constexpr const static rivet::rivet_type_id VerticalRayOrientation_type_id = 0xb8510fcf;
-		constexpr const static std::string_view VerticalRayDistance_type_name = "VerticalRayDistance";
-		constexpr const static rivet::rivet_type_id VerticalRayDistance_type_id = 0xe8751737;
-		constexpr const static std::string_view VerticalRayMaxRadius_type_name = "VerticalRayMaxRadius";
-		constexpr const static rivet::rivet_type_id VerticalRayMaxRadius_type_id = 0xf5059842;
-		constexpr const static std::string_view VerticalRayFilterSize_type_name = "VerticalRayFilterSize";
-		constexpr const static rivet::rivet_type_id VerticalRayFilterSize_type_id = 0x9d0203c7;
-		constexpr const static std::string_view CoefficientPolicy_type_name = "CoefficientPolicy";
-		constexpr const static rivet::rivet_type_id CoefficientPolicy_type_id = 0x6032a2fb;
-		constexpr const static std::string_view DefaultReflectionCoefficient_type_name = "DefaultReflectionCoefficient";
-		constexpr const static rivet::rivet_type_id DefaultReflectionCoefficient_type_id = 0xe3a2959a;
-		constexpr const static std::string_view ReflectionProperties_type_name = "ReflectionProperties";
-		constexpr const static rivet::rivet_type_id ReflectionProperties_type_id = 0x6e813bd5; 
+		constexpr static std::string_view NumSamplesSqrt_type_name = "NumSamplesSqrt";
+		constexpr static rivet::rivet_type_id NumSamplesSqrt_type_id = 0x6731fdae;
+		constexpr static std::string_view SamplingRadius_type_name = "SamplingRadius";
+		constexpr static rivet::rivet_type_id SamplingRadius_type_id = 0xb32efb1f;
+		constexpr static std::string_view RayYawAngle_type_name = "RayYawAngle";
+		constexpr static rivet::rivet_type_id RayYawAngle_type_id = 0x54dd1e10;
+		constexpr static std::string_view SamplingPosition_type_name = "SamplingPosition";
+		constexpr static rivet::rivet_type_id SamplingPosition_type_id = 0xa9ea2d3;
+		constexpr static std::string_view Orientation_type_name = "Orientation";
+		constexpr static rivet::rivet_type_id Orientation_type_id = 0xbb5c948d;
+		constexpr static std::string_view GroundDistance_type_name = "GroundDistance";
+		constexpr static rivet::rivet_type_id GroundDistance_type_id = 0x2b8faa58;
+		constexpr static std::string_view VerticalRayOrientation_type_name = "VerticalRayOrientation";
+		constexpr static rivet::rivet_type_id VerticalRayOrientation_type_id = 0xb8510fcf;
+		constexpr static std::string_view VerticalRayDistance_type_name = "VerticalRayDistance";
+		constexpr static rivet::rivet_type_id VerticalRayDistance_type_id = 0xe8751737;
+		constexpr static std::string_view VerticalRayMaxRadius_type_name = "VerticalRayMaxRadius";
+		constexpr static rivet::rivet_type_id VerticalRayMaxRadius_type_id = 0xf5059842;
+		constexpr static std::string_view VerticalRayFilterSize_type_name = "VerticalRayFilterSize";
+		constexpr static rivet::rivet_type_id VerticalRayFilterSize_type_id = 0x9d0203c7;
+		constexpr static std::string_view CoefficientPolicy_type_name = "CoefficientPolicy";
+		constexpr static rivet::rivet_type_id CoefficientPolicy_type_id = 0x6032a2fb;
+		constexpr static std::string_view DefaultReflectionCoefficient_type_name = "DefaultReflectionCoefficient";
+		constexpr static rivet::rivet_type_id DefaultReflectionCoefficient_type_id = 0xe3a2959a;
+		constexpr static std::string_view ReflectionProperties_type_name = "ReflectionProperties";
+		constexpr static rivet::rivet_type_id ReflectionProperties_type_id = 0x6e813bd5; 
 
 		explicit SoundEarlyReflectionsConfig() = default;
 		explicit SoundEarlyReflectionsConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

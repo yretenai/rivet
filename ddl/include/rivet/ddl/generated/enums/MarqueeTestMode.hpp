@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view MarqueeTestMode_type_name = "MarqueeTestMode";
-	constexpr const static rivet::rivet_type_id MarqueeTestMode_type_id = 0x2f68eb77;
+	constexpr static std::string_view MarqueeTestMode_type_name = "MarqueeTestMode";
+	constexpr static rivet::rivet_type_id MarqueeTestMode_type_id = 0x2f68eb77;
 
-	constexpr const static std::array<std::string_view, 2> MarqueeTestMode_values = {
+	constexpr static std::array<std::string_view, 2> MarqueeTestMode_values = {
 		"kAny",
 		"kAll", 
 	};

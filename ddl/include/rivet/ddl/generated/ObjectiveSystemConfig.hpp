@@ -24,13 +24,13 @@ namespace rivet::ddl::generated {
 	struct ObjectiveSystemDataShared; 
 
 	struct RIVET_DDL_SHARED ObjectiveSystemConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "ObjectiveSystemConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0x775b5d83;
+		constexpr static std::string_view type_name = "ObjectiveSystemConfig";
+		constexpr static rivet::rivet_type_id type_id = 0x775b5d83;
 
-		constexpr const static std::string_view SystemData_type_name = "SystemData";
-		constexpr const static rivet::rivet_type_id SystemData_type_id = 0x5624b145;
-		constexpr const static std::string_view DebugGraphList_type_name = "DebugGraphList";
-		constexpr const static rivet::rivet_type_id DebugGraphList_type_id = 0x63f0f436; 
+		constexpr static std::string_view SystemData_type_name = "SystemData";
+		constexpr static rivet::rivet_type_id SystemData_type_id = 0x5624b145;
+		constexpr static std::string_view DebugGraphList_type_name = "DebugGraphList";
+		constexpr static rivet::rivet_type_id DebugGraphList_type_id = 0x63f0f436; 
 
 		explicit ObjectiveSystemConfig() = default;
 		explicit ObjectiveSystemConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

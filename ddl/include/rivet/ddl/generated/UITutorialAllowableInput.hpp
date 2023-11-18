@@ -17,21 +17,21 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/enums/xba9a3e10.hpp>
+#include <rivet/ddl/generated/enums/x8989c8a.hpp>
 #include <rivet/ddl/generated/enums/xd048db4e.hpp>
-#include <rivet/ddl/generated/enums/x8989c8a.hpp> 
+#include <rivet/ddl/generated/enums/xba9a3e10.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED UITutorialAllowableInput : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "UITutorialAllowableInput";
-		constexpr const static rivet::rivet_type_id type_id = 0x5f55505e;
+		constexpr static std::string_view type_name = "UITutorialAllowableInput";
+		constexpr static rivet::rivet_type_id type_id = 0x5f55505e;
 
-		constexpr const static std::string_view Input_type_name = "Input";
-		constexpr const static rivet::rivet_type_id Input_type_id = 0xc17bfe16;
-		constexpr const static std::string_view Policy_type_name = "Policy";
-		constexpr const static rivet::rivet_type_id Policy_type_id = 0xce054b71;
-		constexpr const static std::string_view Qualifier_type_name = "Qualifier";
-		constexpr const static rivet::rivet_type_id Qualifier_type_id = 0x5e83890e; 
+		constexpr static std::string_view Input_type_name = "Input";
+		constexpr static rivet::rivet_type_id Input_type_id = 0xc17bfe16;
+		constexpr static std::string_view Policy_type_name = "Policy";
+		constexpr static rivet::rivet_type_id Policy_type_id = 0xce054b71;
+		constexpr static std::string_view Qualifier_type_name = "Qualifier";
+		constexpr static rivet::rivet_type_id Qualifier_type_id = 0x5e83890e; 
 
 		explicit UITutorialAllowableInput() = default;
 		explicit UITutorialAllowableInput([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

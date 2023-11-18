@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED JointToBodyFilter : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "JointToBodyFilter";
-		constexpr const static rivet::rivet_type_id type_id = 0x7ed272f2;
+		constexpr static std::string_view type_name = "JointToBodyFilter";
+		constexpr static rivet::rivet_type_id type_id = 0x7ed272f2;
 
-		constexpr const static std::string_view JointName_type_name = "JointName";
-		constexpr const static rivet::rivet_type_id JointName_type_id = 0x5ba51db8;
-		constexpr const static std::string_view BodyPartFilter_type_name = "BodyPartFilter";
-		constexpr const static rivet::rivet_type_id BodyPartFilter_type_id = 0xa41c7d7f; 
+		constexpr static std::string_view JointName_type_name = "JointName";
+		constexpr static rivet::rivet_type_id JointName_type_id = 0x5ba51db8;
+		constexpr static std::string_view BodyPartFilter_type_name = "BodyPartFilter";
+		constexpr static rivet::rivet_type_id BodyPartFilter_type_id = 0xa41c7d7f; 
 
 		explicit JointToBodyFilter() = default;
 		explicit JointToBodyFilter([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view MotionBlur_type_name = "MotionBlur";
-	constexpr const static rivet::rivet_type_id MotionBlur_type_id = 0xea782a54;
+	constexpr static std::string_view MotionBlur_type_name = "MotionBlur";
+	constexpr static rivet::rivet_type_id MotionBlur_type_id = 0xea782a54;
 
-	constexpr const static std::array<std::string_view, 2> MotionBlur_values = {
+	constexpr static std::array<std::string_view, 2> MotionBlur_values = {
 		"kAllow",
 		"kAccuateAlpha", 
 	};

@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct FilterPair; 
 
 	struct RIVET_DDL_SHARED BotComboConditionHaveAnimFilterPrius : BotComboConditionBasePrius {
-		constexpr const static std::string_view type_name = "BotComboConditionHaveAnimFilterPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x20e4f41a;
+		constexpr static std::string_view type_name = "BotComboConditionHaveAnimFilterPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x20e4f41a;
 
-		constexpr const static std::string_view FilterPair_type_name = "FilterPair";
-		constexpr const static rivet::rivet_type_id FilterPair_type_id = 0xd8e17746; 
+		constexpr static std::string_view FilterPair_type_name = "FilterPair";
+		constexpr static rivet::rivet_type_id FilterPair_type_id = 0xd8e17746; 
 
 		explicit BotComboConditionHaveAnimFilterPrius() = default;
 		explicit BotComboConditionHaveAnimFilterPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

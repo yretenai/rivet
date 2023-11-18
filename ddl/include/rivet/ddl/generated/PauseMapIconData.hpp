@@ -17,22 +17,22 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/enums/xf0177ef8.hpp>
-#include <rivet/ddl/generated/enums/x8578b610.hpp> 
+#include <rivet/ddl/generated/enums/x8578b610.hpp>
+#include <rivet/ddl/generated/enums/xf0177ef8.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED PauseMapIconData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "PauseMapIconData";
-		constexpr const static rivet::rivet_type_id type_id = 0xfce0cbd2;
+		constexpr static std::string_view type_name = "PauseMapIconData";
+		constexpr static rivet::rivet_type_id type_id = 0xfce0cbd2;
 
-		constexpr const static std::string_view Type_type_name = "Type";
-		constexpr const static rivet::rivet_type_id Type_type_id = 0xbc4e9799;
-		constexpr const static std::string_view SymbolType_type_name = "SymbolType";
-		constexpr const static rivet::rivet_type_id SymbolType_type_id = 0x86cd9534;
-		constexpr const static std::string_view Texture_type_name = "Texture";
-		constexpr const static rivet::rivet_type_id Texture_type_id = 0x838c6e4a;
-		constexpr const static std::string_view Label_type_name = "Label";
-		constexpr const static rivet::rivet_type_id Label_type_id = 0x17f49c29; 
+		constexpr static std::string_view Type_type_name = "Type";
+		constexpr static rivet::rivet_type_id Type_type_id = 0xbc4e9799;
+		constexpr static std::string_view SymbolType_type_name = "SymbolType";
+		constexpr static rivet::rivet_type_id SymbolType_type_id = 0x86cd9534;
+		constexpr static std::string_view Texture_type_name = "Texture";
+		constexpr static rivet::rivet_type_id Texture_type_id = 0x838c6e4a;
+		constexpr static std::string_view Label_type_name = "Label";
+		constexpr static rivet::rivet_type_id Label_type_id = 0x17f49c29; 
 
 		explicit PauseMapIconData() = default;
 		explicit PauseMapIconData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

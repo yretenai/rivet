@@ -21,11 +21,11 @@ namespace rivet::ddl::generated {
 	struct HeroGroundResponseBasePrius; 
 
 	struct RIVET_DDL_SHARED GroundResponseElement : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "GroundResponseElement";
-		constexpr const static rivet::rivet_type_id type_id = 0x4e74aa67;
+		constexpr static std::string_view type_name = "GroundResponseElement";
+		constexpr static rivet::rivet_type_id type_id = 0x4e74aa67;
 
-		constexpr const static std::string_view Response_type_name = "Response";
-		constexpr const static rivet::rivet_type_id Response_type_id = 0xc47ab68b; 
+		constexpr static std::string_view Response_type_name = "Response";
+		constexpr static rivet::rivet_type_id Response_type_id = 0xc47ab68b; 
 
 		explicit GroundResponseElement() = default;
 		explicit GroundResponseElement([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

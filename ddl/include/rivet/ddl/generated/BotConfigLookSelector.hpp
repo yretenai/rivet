@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct BotLookSelectorData; 
 
 	struct RIVET_DDL_SHARED BotConfigLookSelector : ConfigBase {
-		constexpr const static std::string_view type_name = "BotConfigLookSelector";
-		constexpr const static rivet::rivet_type_id type_id = 0x52cc2949;
+		constexpr static std::string_view type_name = "BotConfigLookSelector";
+		constexpr static rivet::rivet_type_id type_id = 0x52cc2949;
 
-		constexpr const static std::string_view Data_type_name = "Data";
-		constexpr const static rivet::rivet_type_id Data_type_id = 0x9d6333d3; 
+		constexpr static std::string_view Data_type_name = "Data";
+		constexpr static rivet::rivet_type_id Data_type_id = 0x9d6333d3; 
 
 		explicit BotConfigLookSelector() = default;
 		explicit BotConfigLookSelector([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

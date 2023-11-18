@@ -19,15 +19,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED LookSwap : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "LookSwap";
-		constexpr const static rivet::rivet_type_id type_id = 0xd63ce571;
+		constexpr static std::string_view type_name = "LookSwap";
+		constexpr static rivet::rivet_type_id type_id = 0xd63ce571;
 
-		constexpr const static std::string_view DeathOnly_type_name = "DeathOnly";
-		constexpr const static rivet::rivet_type_id DeathOnly_type_id = 0x88ef82ad;
-		constexpr const static std::string_view LookToDisable_type_name = "LookToDisable";
-		constexpr const static rivet::rivet_type_id LookToDisable_type_id = 0x2f48a06c;
-		constexpr const static std::string_view LooksToEnable_type_name = "LooksToEnable";
-		constexpr const static rivet::rivet_type_id LooksToEnable_type_id = 0x34dbfb35; 
+		constexpr static std::string_view DeathOnly_type_name = "DeathOnly";
+		constexpr static rivet::rivet_type_id DeathOnly_type_id = 0x88ef82ad;
+		constexpr static std::string_view LookToDisable_type_name = "LookToDisable";
+		constexpr static rivet::rivet_type_id LookToDisable_type_id = 0x2f48a06c;
+		constexpr static std::string_view LooksToEnable_type_name = "LooksToEnable";
+		constexpr static rivet::rivet_type_id LooksToEnable_type_id = 0x34dbfb35; 
 
 		explicit LookSwap() = default;
 		explicit LookSwap([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

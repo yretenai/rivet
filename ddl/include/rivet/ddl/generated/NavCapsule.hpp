@@ -19,13 +19,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED NavCapsule : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "NavCapsule";
-		constexpr const static rivet::rivet_type_id type_id = 0x460c481d;
+		constexpr static std::string_view type_name = "NavCapsule";
+		constexpr static rivet::rivet_type_id type_id = 0x460c481d;
 
-		constexpr const static std::string_view Radius_type_name = "Radius";
-		constexpr const static rivet::rivet_type_id Radius_type_id = 0x504203d;
-		constexpr const static std::string_view Height_type_name = "Height";
-		constexpr const static rivet::rivet_type_id Height_type_id = 0xcb35ab68; 
+		constexpr static std::string_view Radius_type_name = "Radius";
+		constexpr static rivet::rivet_type_id Radius_type_id = 0x504203d;
+		constexpr static std::string_view Height_type_name = "Height";
+		constexpr static rivet::rivet_type_id Height_type_id = 0xcb35ab68; 
 
 		explicit NavCapsule() = default;
 		explicit NavCapsule([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

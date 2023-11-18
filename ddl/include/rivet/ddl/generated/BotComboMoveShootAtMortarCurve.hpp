@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct ShootAtMortarCurveData; 
 
 	struct RIVET_DDL_SHARED BotComboMoveShootAtMortarCurve : BotComboMove {
-		constexpr const static std::string_view type_name = "BotComboMoveShootAtMortarCurve";
-		constexpr const static rivet::rivet_type_id type_id = 0x1dc46d83;
+		constexpr static std::string_view type_name = "BotComboMoveShootAtMortarCurve";
+		constexpr static rivet::rivet_type_id type_id = 0x1dc46d83;
 
-		constexpr const static std::string_view ShootAtMortarCurveData_type_name = "ShootAtMortarCurveData";
-		constexpr const static rivet::rivet_type_id ShootAtMortarCurveData_type_id = 0xd5bba073; 
+		constexpr static std::string_view ShootAtMortarCurveData_type_name = "ShootAtMortarCurveData";
+		constexpr static rivet::rivet_type_id ShootAtMortarCurveData_type_id = 0xd5bba073; 
 
 		explicit BotComboMoveShootAtMortarCurve() = default;
 		explicit BotComboMoveShootAtMortarCurve([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

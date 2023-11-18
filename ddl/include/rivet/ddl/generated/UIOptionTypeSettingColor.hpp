@@ -21,11 +21,11 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED UIOptionTypeSettingColor : UIOptionTypeSettingBase {
-		constexpr const static std::string_view type_name = "UIOptionTypeSettingColor";
-		constexpr const static rivet::rivet_type_id type_id = 0x66257f4c;
+		constexpr static std::string_view type_name = "UIOptionTypeSettingColor";
+		constexpr static rivet::rivet_type_id type_id = 0x66257f4c;
 
-		constexpr const static std::string_view ColorList_type_name = "ColorList";
-		constexpr const static rivet::rivet_type_id ColorList_type_id = 0xfbc9245f; 
+		constexpr static std::string_view ColorList_type_name = "ColorList";
+		constexpr static rivet::rivet_type_id ColorList_type_id = 0xfbc9245f; 
 
 		explicit UIOptionTypeSettingColor() = default;
 		explicit UIOptionTypeSettingColor([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

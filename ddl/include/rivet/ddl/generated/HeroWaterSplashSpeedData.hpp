@@ -19,25 +19,25 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED HeroWaterSplashSpeedData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "HeroWaterSplashSpeedData";
-		constexpr const static rivet::rivet_type_id type_id = 0x6b22e819;
+		constexpr static std::string_view type_name = "HeroWaterSplashSpeedData";
+		constexpr static rivet::rivet_type_id type_id = 0x6b22e819;
 
-		constexpr const static std::string_view SplashSmallSpeed_type_name = "SplashSmallSpeed";
-		constexpr const static rivet::rivet_type_id SplashSmallSpeed_type_id = 0x496460b6;
-		constexpr const static std::string_view SplashMediumSpeed_type_name = "SplashMediumSpeed";
-		constexpr const static rivet::rivet_type_id SplashMediumSpeed_type_id = 0xb13f4f72;
-		constexpr const static std::string_view SplashLargeSpeed_type_name = "SplashLargeSpeed";
-		constexpr const static rivet::rivet_type_id SplashLargeSpeed_type_id = 0xaec97a3d;
-		constexpr const static std::string_view SplashHugeSpeed_type_name = "SplashHugeSpeed";
-		constexpr const static rivet::rivet_type_id SplashHugeSpeed_type_id = 0x342f17c8;
-		constexpr const static std::string_view SplashExitSmallSpeed_type_name = "SplashExitSmallSpeed";
-		constexpr const static rivet::rivet_type_id SplashExitSmallSpeed_type_id = 0x42c4acab;
-		constexpr const static std::string_view SplashExitMediumSpeed_type_name = "SplashExitMediumSpeed";
-		constexpr const static rivet::rivet_type_id SplashExitMediumSpeed_type_id = 0xd2328367;
-		constexpr const static std::string_view SplashExitLargeSpeed_type_name = "SplashExitLargeSpeed";
-		constexpr const static rivet::rivet_type_id SplashExitLargeSpeed_type_id = 0xa569b620;
-		constexpr const static std::string_view SplashExitHugeSpeed_type_name = "SplashExitHugeSpeed";
-		constexpr const static rivet::rivet_type_id SplashExitHugeSpeed_type_id = 0x4f3c2b07; 
+		constexpr static std::string_view SplashSmallSpeed_type_name = "SplashSmallSpeed";
+		constexpr static rivet::rivet_type_id SplashSmallSpeed_type_id = 0x496460b6;
+		constexpr static std::string_view SplashMediumSpeed_type_name = "SplashMediumSpeed";
+		constexpr static rivet::rivet_type_id SplashMediumSpeed_type_id = 0xb13f4f72;
+		constexpr static std::string_view SplashLargeSpeed_type_name = "SplashLargeSpeed";
+		constexpr static rivet::rivet_type_id SplashLargeSpeed_type_id = 0xaec97a3d;
+		constexpr static std::string_view SplashHugeSpeed_type_name = "SplashHugeSpeed";
+		constexpr static rivet::rivet_type_id SplashHugeSpeed_type_id = 0x342f17c8;
+		constexpr static std::string_view SplashExitSmallSpeed_type_name = "SplashExitSmallSpeed";
+		constexpr static rivet::rivet_type_id SplashExitSmallSpeed_type_id = 0x42c4acab;
+		constexpr static std::string_view SplashExitMediumSpeed_type_name = "SplashExitMediumSpeed";
+		constexpr static rivet::rivet_type_id SplashExitMediumSpeed_type_id = 0xd2328367;
+		constexpr static std::string_view SplashExitLargeSpeed_type_name = "SplashExitLargeSpeed";
+		constexpr static rivet::rivet_type_id SplashExitLargeSpeed_type_id = 0xa569b620;
+		constexpr static std::string_view SplashExitHugeSpeed_type_name = "SplashExitHugeSpeed";
+		constexpr static rivet::rivet_type_id SplashExitHugeSpeed_type_id = 0x4f3c2b07; 
 
 		explicit HeroWaterSplashSpeedData() = default;
 		explicit HeroWaterSplashSpeedData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

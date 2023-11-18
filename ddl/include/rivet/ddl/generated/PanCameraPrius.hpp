@@ -23,17 +23,17 @@ namespace rivet::ddl::generated {
 	struct DDLVector3; 
 
 	struct RIVET_DDL_SHARED PanCameraPrius : PlacedCameraPrius {
-		constexpr const static std::string_view type_name = "PanCameraPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xa21ab8dc;
+		constexpr static std::string_view type_name = "PanCameraPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xa21ab8dc;
 
-		constexpr const static std::string_view SnapOnActivate_type_name = "SnapOnActivate";
-		constexpr const static rivet::rivet_type_id SnapOnActivate_type_id = 0x7d0f050e;
-		constexpr const static std::string_view PanX_type_name = "PanX";
-		constexpr const static rivet::rivet_type_id PanX_type_id = 0xad3081c8;
-		constexpr const static std::string_view PanZ_type_name = "PanZ";
-		constexpr const static rivet::rivet_type_id PanZ_type_id = 0x433ee0e4;
-		constexpr const static std::string_view CameraOffset_type_name = "CameraOffset";
-		constexpr const static rivet::rivet_type_id CameraOffset_type_id = 0x68f0fd3d; 
+		constexpr static std::string_view SnapOnActivate_type_name = "SnapOnActivate";
+		constexpr static rivet::rivet_type_id SnapOnActivate_type_id = 0x7d0f050e;
+		constexpr static std::string_view PanX_type_name = "PanX";
+		constexpr static rivet::rivet_type_id PanX_type_id = 0xad3081c8;
+		constexpr static std::string_view PanZ_type_name = "PanZ";
+		constexpr static rivet::rivet_type_id PanZ_type_id = 0x433ee0e4;
+		constexpr static std::string_view CameraOffset_type_name = "CameraOffset";
+		constexpr static rivet::rivet_type_id CameraOffset_type_id = 0x68f0fd3d; 
 
 		explicit PanCameraPrius() = default;
 		explicit PanCameraPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

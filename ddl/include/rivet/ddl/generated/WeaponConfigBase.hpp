@@ -17,41 +17,41 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/ConfigBase.hpp>
+#include <rivet/ddl/generated/bitsets/x40175545.hpp>
 #include <rivet/ddl/generated/enums/x63d44ada.hpp>
-#include <rivet/ddl/generated/bitsets/x40175545.hpp> 
+#include <rivet/ddl/generated/ConfigBase.hpp> 
 
 namespace rivet::ddl::generated {
-	struct WeaponBasePrius;
+	struct WeaponTriggerDataListItem;
+	struct WeaponAccuracyDataListItem;
+	struct WeaponAmmoDataListItem;
+	struct WeaponUserStateDataListItem;
 	struct WeaponShotDataListItem;
 	struct WeaponEmitterDataListItem;
-	struct WeaponAmmoDataListItem;
-	struct WeaponAccuracyDataListItem;
-	struct WeaponTriggerDataListItem;
-	struct WeaponUserStateDataListItem; 
+	struct WeaponBasePrius; 
 
 	struct RIVET_DDL_SHARED WeaponConfigBase : ConfigBase {
-		constexpr const static std::string_view type_name = "WeaponConfigBase";
-		constexpr const static rivet::rivet_type_id type_id = 0x93ac1e01;
+		constexpr static std::string_view type_name = "WeaponConfigBase";
+		constexpr static rivet::rivet_type_id type_id = 0x93ac1e01;
 
-		constexpr const static std::string_view Prius_type_name = "Prius";
-		constexpr const static rivet::rivet_type_id Prius_type_id = 0x3bd7ee9e;
-		constexpr const static std::string_view MacroType_type_name = "MacroType";
-		constexpr const static rivet::rivet_type_id MacroType_type_id = 0x3fe77051;
-		constexpr const static std::string_view DefFlags_type_name = "DefFlags";
-		constexpr const static rivet::rivet_type_id DefFlags_type_id = 0xc047dafe;
-		constexpr const static std::string_view EmitterList_type_name = "EmitterList";
-		constexpr const static rivet::rivet_type_id EmitterList_type_id = 0x3da9ac5c;
-		constexpr const static std::string_view AmmoList_type_name = "AmmoList";
-		constexpr const static rivet::rivet_type_id AmmoList_type_id = 0x3b59b3b;
-		constexpr const static std::string_view ShotList_type_name = "ShotList";
-		constexpr const static rivet::rivet_type_id ShotList_type_id = 0x35eb8552;
-		constexpr const static std::string_view AccuracyList_type_name = "AccuracyList";
-		constexpr const static rivet::rivet_type_id AccuracyList_type_id = 0x3ed6b194;
-		constexpr const static std::string_view UserStateList_type_name = "UserStateList";
-		constexpr const static rivet::rivet_type_id UserStateList_type_id = 0x5de6cd03;
-		constexpr const static std::string_view TriggerList_type_name = "TriggerList";
-		constexpr const static rivet::rivet_type_id TriggerList_type_id = 0x2076dda9; 
+		constexpr static std::string_view Prius_type_name = "Prius";
+		constexpr static rivet::rivet_type_id Prius_type_id = 0x3bd7ee9e;
+		constexpr static std::string_view MacroType_type_name = "MacroType";
+		constexpr static rivet::rivet_type_id MacroType_type_id = 0x3fe77051;
+		constexpr static std::string_view DefFlags_type_name = "DefFlags";
+		constexpr static rivet::rivet_type_id DefFlags_type_id = 0xc047dafe;
+		constexpr static std::string_view EmitterList_type_name = "EmitterList";
+		constexpr static rivet::rivet_type_id EmitterList_type_id = 0x3da9ac5c;
+		constexpr static std::string_view AmmoList_type_name = "AmmoList";
+		constexpr static rivet::rivet_type_id AmmoList_type_id = 0x3b59b3b;
+		constexpr static std::string_view ShotList_type_name = "ShotList";
+		constexpr static rivet::rivet_type_id ShotList_type_id = 0x35eb8552;
+		constexpr static std::string_view AccuracyList_type_name = "AccuracyList";
+		constexpr static rivet::rivet_type_id AccuracyList_type_id = 0x3ed6b194;
+		constexpr static std::string_view UserStateList_type_name = "UserStateList";
+		constexpr static rivet::rivet_type_id UserStateList_type_id = 0x5de6cd03;
+		constexpr static std::string_view TriggerList_type_name = "TriggerList";
+		constexpr static rivet::rivet_type_id TriggerList_type_id = 0x2076dda9; 
 
 		explicit WeaponConfigBase() = default;
 		explicit WeaponConfigBase([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

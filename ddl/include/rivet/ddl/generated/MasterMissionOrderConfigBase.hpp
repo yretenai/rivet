@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct MissionOrderListIndirect; 
 
 	struct RIVET_DDL_SHARED MasterMissionOrderConfigBase : ConfigBase {
-		constexpr const static std::string_view type_name = "MasterMissionOrderConfigBase";
-		constexpr const static rivet::rivet_type_id type_id = 0xa0b1788e;
+		constexpr static std::string_view type_name = "MasterMissionOrderConfigBase";
+		constexpr static rivet::rivet_type_id type_id = 0xa0b1788e;
 
-		constexpr const static std::string_view MissionOrderLists_type_name = "MissionOrderLists";
-		constexpr const static rivet::rivet_type_id MissionOrderLists_type_id = 0x20608a8f; 
+		constexpr static std::string_view MissionOrderLists_type_name = "MissionOrderLists";
+		constexpr static rivet::rivet_type_id MissionOrderLists_type_id = 0x20608a8f; 
 
 		explicit MasterMissionOrderConfigBase() = default;
 		explicit MasterMissionOrderConfigBase([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -19,17 +19,17 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED References : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "References";
-		constexpr const static rivet::rivet_type_id type_id = 0x442873a5;
+		constexpr static std::string_view type_name = "References";
+		constexpr static rivet::rivet_type_id type_id = 0x442873a5;
 
-		constexpr const static std::string_view AutoLoad_type_name = "AutoLoad";
-		constexpr const static rivet::rivet_type_id AutoLoad_type_id = 0x129306c4;
-		constexpr const static std::string_view ManualLoad_type_name = "ManualLoad";
-		constexpr const static rivet::rivet_type_id ManualLoad_type_id = 0x1796b3e1;
-		constexpr const static std::string_view AutoLoadWwise_type_name = "AutoLoadWwise";
-		constexpr const static rivet::rivet_type_id AutoLoadWwise_type_id = 0xbc48a30e;
-		constexpr const static std::string_view ManualLoadWwise_type_name = "ManualLoadWwise";
-		constexpr const static rivet::rivet_type_id ManualLoadWwise_type_id = 0xe4798b7c; 
+		constexpr static std::string_view AutoLoad_type_name = "AutoLoad";
+		constexpr static rivet::rivet_type_id AutoLoad_type_id = 0x129306c4;
+		constexpr static std::string_view ManualLoad_type_name = "ManualLoad";
+		constexpr static rivet::rivet_type_id ManualLoad_type_id = 0x1796b3e1;
+		constexpr static std::string_view AutoLoadWwise_type_name = "AutoLoadWwise";
+		constexpr static rivet::rivet_type_id AutoLoadWwise_type_id = 0xbc48a30e;
+		constexpr static std::string_view ManualLoadWwise_type_name = "ManualLoadWwise";
+		constexpr static rivet::rivet_type_id ManualLoadWwise_type_id = 0xe4798b7c; 
 
 		explicit References() = default;
 		explicit References([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

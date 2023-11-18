@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED POIAttributeEdgeModeScreenEdge : POIAttributeEdgeModeBase {
-		constexpr const static std::string_view type_name = "POIAttributeEdgeModeScreenEdge";
-		constexpr const static rivet::rivet_type_id type_id = 0xd934ab52;
+		constexpr static std::string_view type_name = "POIAttributeEdgeModeScreenEdge";
+		constexpr static rivet::rivet_type_id type_id = 0xd934ab52;
 
 		explicit POIAttributeEdgeModeScreenEdge() = default;
 		explicit POIAttributeEdgeModeScreenEdge([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

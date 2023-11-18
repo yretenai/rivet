@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct RegionCrateVariants; 
 
 	struct RIVET_DDL_SHARED StackableCrateSystemConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "StackableCrateSystemConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xf2f72342;
+		constexpr static std::string_view type_name = "StackableCrateSystemConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xf2f72342;
 
-		constexpr const static std::string_view ContainerRegionVariants_type_name = "ContainerRegionVariants";
-		constexpr const static rivet::rivet_type_id ContainerRegionVariants_type_id = 0xd4da5664; 
+		constexpr static std::string_view ContainerRegionVariants_type_name = "ContainerRegionVariants";
+		constexpr static rivet::rivet_type_id ContainerRegionVariants_type_id = 0xd4da5664; 
 
 		explicit StackableCrateSystemConfig() = default;
 		explicit StackableCrateSystemConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

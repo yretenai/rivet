@@ -3,13 +3,13 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/GroundImpactHomingShotMotionPrius.hpp>
-#include <rivet/ddl/generated/WarmongerShotMotionPrius.hpp>
 #include <rivet/ddl/generated/HexapodShotMotionPrius.hpp>
-#include <rivet/ddl/generated/FlyerFireballShotMotionPrius.hpp>
+#include <rivet/ddl/generated/DispersingShotMotionPrius.hpp>
 #include <rivet/ddl/generated/CorkscrewHomingShotMotionPrius.hpp>
+#include <rivet/ddl/generated/FlyerFireballShotMotionPrius.hpp>
 #include <rivet/ddl/generated/ShotMotionPredatorLauncherPrius.hpp>
-#include <rivet/ddl/generated/DispersingShotMotionPrius.hpp> 
+#include <rivet/ddl/generated/WarmongerShotMotionPrius.hpp>
+#include <rivet/ddl/generated/GroundImpactHomingShotMotionPrius.hpp> 
 
 #include <rivet/ddl/generated/HomingShotMotionPrius.hpp>
 

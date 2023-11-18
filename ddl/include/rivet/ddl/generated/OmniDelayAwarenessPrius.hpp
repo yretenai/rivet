@@ -21,13 +21,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED OmniDelayAwarenessPrius : OmniAwarenessPrius {
-		constexpr const static std::string_view type_name = "OmniDelayAwarenessPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xf205bdd;
+		constexpr static std::string_view type_name = "OmniDelayAwarenessPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xf205bdd;
 
-		constexpr const static std::string_view ApplyConfirmStagger_type_name = "ApplyConfirmStagger";
-		constexpr const static rivet::rivet_type_id ApplyConfirmStagger_type_id = 0xcaed5a9;
-		constexpr const static std::string_view IgnoreTargetsInWater_type_name = "IgnoreTargetsInWater";
-		constexpr const static rivet::rivet_type_id IgnoreTargetsInWater_type_id = 0x47049076; 
+		constexpr static std::string_view ApplyConfirmStagger_type_name = "ApplyConfirmStagger";
+		constexpr static rivet::rivet_type_id ApplyConfirmStagger_type_id = 0xcaed5a9;
+		constexpr static std::string_view IgnoreTargetsInWater_type_name = "IgnoreTargetsInWater";
+		constexpr static rivet::rivet_type_id IgnoreTargetsInWater_type_id = 0x47049076; 
 
 		explicit OmniDelayAwarenessPrius() = default;
 		explicit OmniDelayAwarenessPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

@@ -17,18 +17,18 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/IconMapBase.hpp>
-#include <rivet/ddl/generated/enums/x445aeabc.hpp> 
+#include <rivet/ddl/generated/enums/x445aeabc.hpp>
+#include <rivet/ddl/generated/IconMapBase.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED IconMapXOSwap : IconMapBase {
-		constexpr const static std::string_view type_name = "IconMapXOSwap";
-		constexpr const static rivet::rivet_type_id type_id = 0xabcab87b;
+		constexpr static std::string_view type_name = "IconMapXOSwap";
+		constexpr static rivet::rivet_type_id type_id = 0xabcab87b;
 
-		constexpr const static std::string_view NormalIconId_type_name = "NormalIconId";
-		constexpr const static rivet::rivet_type_id NormalIconId_type_id = 0x97e90ae;
-		constexpr const static std::string_view SwappedIconId_type_name = "SwappedIconId";
-		constexpr const static rivet::rivet_type_id SwappedIconId_type_id = 0xab0e13f1; 
+		constexpr static std::string_view NormalIconId_type_name = "NormalIconId";
+		constexpr static rivet::rivet_type_id NormalIconId_type_id = 0x97e90ae;
+		constexpr static std::string_view SwappedIconId_type_name = "SwappedIconId";
+		constexpr static rivet::rivet_type_id SwappedIconId_type_id = 0xab0e13f1; 
 
 		explicit IconMapXOSwap() = default;
 		explicit IconMapXOSwap([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

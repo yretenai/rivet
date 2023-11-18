@@ -15,10 +15,10 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl::generated {
-	constexpr const static std::string_view OfferType_type_name = "OfferType";
-	constexpr const static rivet::rivet_type_id OfferType_type_id = 0xcf4f1f79;
+	constexpr static std::string_view OfferType_type_name = "OfferType";
+	constexpr static rivet::rivet_type_id OfferType_type_id = 0xcf4f1f79;
 
-	constexpr const static std::array<std::tuple<std::string_view, uint64_t>, 11> OfferType_values = {
+	constexpr static std::array<std::tuple<std::string_view, uint64_t>, 11> OfferType_values = {
 		std::make_tuple("kGeneral", 0x1),
 		std::make_tuple("kPickupBase", 0x2),
 		std::make_tuple("kPickupCarry", 0x4),

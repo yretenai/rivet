@@ -20,17 +20,17 @@
 #include <rivet/ddl/generated/SimpleShotPrius.hpp> 
 
 namespace rivet::ddl::generated {
-	struct ShotMotionIcicleBombPrius;
-	struct ShotDamageData; 
+	struct ShotDamageData;
+	struct ShotMotionIcicleBombPrius; 
 
 	struct RIVET_DDL_SHARED ShotIcicleBombPrius : SimpleShotPrius {
-		constexpr const static std::string_view type_name = "ShotIcicleBombPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x5c4d6f7f;
+		constexpr static std::string_view type_name = "ShotIcicleBombPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x5c4d6f7f;
 
-		constexpr const static std::string_view ExplosionMotionData_type_name = "ExplosionMotionData";
-		constexpr const static rivet::rivet_type_id ExplosionMotionData_type_id = 0x40a8a60c;
-		constexpr const static std::string_view ExplosionDamage_type_name = "ExplosionDamage";
-		constexpr const static rivet::rivet_type_id ExplosionDamage_type_id = 0xb06dc6b0; 
+		constexpr static std::string_view ExplosionMotionData_type_name = "ExplosionMotionData";
+		constexpr static rivet::rivet_type_id ExplosionMotionData_type_id = 0x40a8a60c;
+		constexpr static std::string_view ExplosionDamage_type_name = "ExplosionDamage";
+		constexpr static rivet::rivet_type_id ExplosionDamage_type_id = 0xb06dc6b0; 
 
 		explicit ShotIcicleBombPrius() = default;
 		explicit ShotIcicleBombPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

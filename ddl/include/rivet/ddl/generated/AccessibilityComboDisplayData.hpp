@@ -21,11 +21,11 @@ namespace rivet::ddl::generated {
 	struct ComboDisplayDataBase; 
 
 	struct RIVET_DDL_SHARED AccessibilityComboDisplayData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "AccessibilityComboDisplayData";
-		constexpr const static rivet::rivet_type_id type_id = 0xf05db85;
+		constexpr static std::string_view type_name = "AccessibilityComboDisplayData";
+		constexpr static rivet::rivet_type_id type_id = 0xf05db85;
 
-		constexpr const static std::string_view Combo_type_name = "Combo";
-		constexpr const static rivet::rivet_type_id Combo_type_id = 0xa86ffc8b; 
+		constexpr static std::string_view Combo_type_name = "Combo";
+		constexpr static rivet::rivet_type_id Combo_type_id = 0xa86ffc8b; 
 
 		explicit AccessibilityComboDisplayData() = default;
 		explicit AccessibilityComboDisplayData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

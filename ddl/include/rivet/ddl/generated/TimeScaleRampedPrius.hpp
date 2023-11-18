@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED TimeScaleRampedPrius : TimeScaleBasePrius {
-		constexpr const static std::string_view type_name = "TimeScaleRampedPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0x783bab7f;
+		constexpr static std::string_view type_name = "TimeScaleRampedPrius";
+		constexpr static rivet::rivet_type_id type_id = 0x783bab7f;
 
 		explicit TimeScaleRampedPrius() = default;
 		explicit TimeScaleRampedPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

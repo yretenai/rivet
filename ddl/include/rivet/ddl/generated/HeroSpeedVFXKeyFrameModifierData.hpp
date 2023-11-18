@@ -21,13 +21,13 @@ namespace rivet::ddl::generated {
 	struct MapRange; 
 
 	struct RIVET_DDL_SHARED HeroSpeedVFXKeyFrameModifierData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "HeroSpeedVFXKeyFrameModifierData";
-		constexpr const static rivet::rivet_type_id type_id = 0xebafaac4;
+		constexpr static std::string_view type_name = "HeroSpeedVFXKeyFrameModifierData";
+		constexpr static rivet::rivet_type_id type_id = 0xebafaac4;
 
-		constexpr const static std::string_view KeyFrameModifierName_type_name = "KeyFrameModifierName";
-		constexpr const static rivet::rivet_type_id KeyFrameModifierName_type_id = 0x6926b521;
-		constexpr const static std::string_view SpeedToValueMapping_type_name = "SpeedToValueMapping";
-		constexpr const static rivet::rivet_type_id SpeedToValueMapping_type_id = 0xf47fb556; 
+		constexpr static std::string_view KeyFrameModifierName_type_name = "KeyFrameModifierName";
+		constexpr static rivet::rivet_type_id KeyFrameModifierName_type_id = 0x6926b521;
+		constexpr static std::string_view SpeedToValueMapping_type_name = "SpeedToValueMapping";
+		constexpr static rivet::rivet_type_id SpeedToValueMapping_type_id = 0xf47fb556; 
 
 		explicit HeroSpeedVFXKeyFrameModifierData() = default;
 		explicit HeroSpeedVFXKeyFrameModifierData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

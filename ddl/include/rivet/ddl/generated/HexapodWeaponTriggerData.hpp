@@ -19,13 +19,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED HexapodWeaponTriggerData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "HexapodWeaponTriggerData";
-		constexpr const static rivet::rivet_type_id type_id = 0x1982236b;
+		constexpr static std::string_view type_name = "HexapodWeaponTriggerData";
+		constexpr static rivet::rivet_type_id type_id = 0x1982236b;
 
-		constexpr const static std::string_view IdealTriggerAnalogValue_type_name = "IdealTriggerAnalogValue";
-		constexpr const static rivet::rivet_type_id IdealTriggerAnalogValue_type_id = 0xa47ca739;
-		constexpr const static std::string_view TriggerAnalogValueBuffer_type_name = "TriggerAnalogValueBuffer";
-		constexpr const static rivet::rivet_type_id TriggerAnalogValueBuffer_type_id = 0x822ab42f; 
+		constexpr static std::string_view IdealTriggerAnalogValue_type_name = "IdealTriggerAnalogValue";
+		constexpr static rivet::rivet_type_id IdealTriggerAnalogValue_type_id = 0xa47ca739;
+		constexpr static std::string_view TriggerAnalogValueBuffer_type_name = "TriggerAnalogValueBuffer";
+		constexpr static rivet::rivet_type_id TriggerAnalogValueBuffer_type_id = 0x822ab42f; 
 
 		explicit HexapodWeaponTriggerData() = default;
 		explicit HexapodWeaponTriggerData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

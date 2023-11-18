@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED POIAttributeDistanceTextOffscreenOnly : POIAttributeDistanceTextBase {
-		constexpr const static std::string_view type_name = "POIAttributeDistanceTextOffscreenOnly";
-		constexpr const static rivet::rivet_type_id type_id = 0x30bab46a;
+		constexpr static std::string_view type_name = "POIAttributeDistanceTextOffscreenOnly";
+		constexpr static rivet::rivet_type_id type_id = 0x30bab46a;
 
 		explicit POIAttributeDistanceTextOffscreenOnly() = default;
 		explicit POIAttributeDistanceTextOffscreenOnly([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

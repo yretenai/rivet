@@ -3,14 +3,14 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
-#include <rivet/ddl/generated/WeaponAccuracyDataListItem.hpp>
-#include <rivet/ddl/generated/WeaponBasePrius.hpp>
-#include <rivet/ddl/generated/WeaponAmmoDataListItem.hpp>
-#include <rivet/ddl/generated/WeaponEmitterDataListItem.hpp>
-#include <rivet/ddl/generated/WeaponShotDataListItem.hpp>
+#include <rivet/ddl/generated/WeaponConfig.hpp>
 #include <rivet/ddl/generated/WeaponTriggerDataListItem.hpp>
+#include <rivet/ddl/generated/WeaponAccuracyDataListItem.hpp>
+#include <rivet/ddl/generated/WeaponShotDataListItem.hpp>
+#include <rivet/ddl/generated/WeaponAmmoDataListItem.hpp>
 #include <rivet/ddl/generated/WeaponUserStateDataListItem.hpp>
-#include <rivet/ddl/generated/WeaponConfig.hpp> 
+#include <rivet/ddl/generated/WeaponEmitterDataListItem.hpp>
+#include <rivet/ddl/generated/WeaponBasePrius.hpp> 
 
 #include <rivet/ddl/generated/WeaponConfigBase.hpp>
 

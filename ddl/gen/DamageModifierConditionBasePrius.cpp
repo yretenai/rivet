@@ -3,20 +3,20 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
+#include <rivet/ddl/generated/DamageModifierConditionDamageHashPrius.hpp>
+#include <rivet/ddl/generated/DamageModifierConditionRequestIdPrius.hpp>
+#include <rivet/ddl/generated/DamageModifierConditionNotPrius.hpp>
 #include <rivet/ddl/generated/DamageModifierConditionAllegiancePrius.hpp>
 #include <rivet/ddl/generated/DamageModifierConditionDamageTypePrius.hpp>
-#include <rivet/ddl/generated/DamageModifierConditionDamageHashPrius.hpp>
-#include <rivet/ddl/generated/DamageModifierConditionNotPrius.hpp>
-#include <rivet/ddl/generated/DamageModifierConditionOrPrius.hpp>
+#include <rivet/ddl/generated/DamageModifierConditionRequestIdListPrius.hpp>
+#include <rivet/ddl/generated/DamageModifierConditionAndPrius.hpp>
 #include <rivet/ddl/generated/DamageModifierConditionHealthThreshholdPrius.hpp>
 #include <rivet/ddl/generated/DamageModifierConditionHasComponentPrius.hpp>
-#include <rivet/ddl/generated/DamageModifierConditionAndPrius.hpp>
+#include <rivet/ddl/generated/DamageModifierConditionDirectionalIncomingPrius.hpp>
 #include <rivet/ddl/generated/DamageModifierConditionOrMultiPrius.hpp>
 #include <rivet/ddl/generated/DamageModifierConditionSelfDamagePrius.hpp>
-#include <rivet/ddl/generated/DamageModifierConditionDamageHashListPrius.hpp>
-#include <rivet/ddl/generated/DamageModifierConditionDirectionalIncomingPrius.hpp>
-#include <rivet/ddl/generated/DamageModifierConditionRequestIdListPrius.hpp>
-#include <rivet/ddl/generated/DamageModifierConditionRequestIdPrius.hpp> 
+#include <rivet/ddl/generated/DamageModifierConditionOrPrius.hpp>
+#include <rivet/ddl/generated/DamageModifierConditionDamageHashListPrius.hpp> 
 
 #include <rivet/ddl/generated/DamageModifierConditionBasePrius.hpp>
 

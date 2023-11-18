@@ -21,15 +21,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED KnockbackTierData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "KnockbackTierData";
-		constexpr const static rivet::rivet_type_id type_id = 0xd96de45a;
+		constexpr static std::string_view type_name = "KnockbackTierData";
+		constexpr static rivet::rivet_type_id type_id = 0xd96de45a;
 
-		constexpr const static std::string_view KnockbackLevel_type_name = "KnockbackLevel";
-		constexpr const static rivet::rivet_type_id KnockbackLevel_type_id = 0x2554a262;
-		constexpr const static std::string_view KnockbackAmount_type_name = "KnockbackAmount";
-		constexpr const static rivet::rivet_type_id KnockbackAmount_type_id = 0x7b1e600b;
-		constexpr const static std::string_view StartAtRange_type_name = "StartAtRange";
-		constexpr const static rivet::rivet_type_id StartAtRange_type_id = 0x8bb524a7; 
+		constexpr static std::string_view KnockbackLevel_type_name = "KnockbackLevel";
+		constexpr static rivet::rivet_type_id KnockbackLevel_type_id = 0x2554a262;
+		constexpr static std::string_view KnockbackAmount_type_name = "KnockbackAmount";
+		constexpr static rivet::rivet_type_id KnockbackAmount_type_id = 0x7b1e600b;
+		constexpr static std::string_view StartAtRange_type_name = "StartAtRange";
+		constexpr static rivet::rivet_type_id StartAtRange_type_id = 0x8bb524a7; 
 
 		explicit KnockbackTierData() = default;
 		explicit KnockbackTierData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

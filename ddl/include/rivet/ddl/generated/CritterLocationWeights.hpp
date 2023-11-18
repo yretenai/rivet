@@ -19,17 +19,17 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED CritterLocationWeights : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "CritterLocationWeights";
-		constexpr const static rivet::rivet_type_id type_id = 0x57c000e8;
+		constexpr static std::string_view type_name = "CritterLocationWeights";
+		constexpr static rivet::rivet_type_id type_id = 0x57c000e8;
 
-		constexpr const static std::string_view DistanceFactor_type_name = "DistanceFactor";
-		constexpr const static rivet::rivet_type_id DistanceFactor_type_id = 0xf4e39365;
-		constexpr const static std::string_view AngleFactor_type_name = "AngleFactor";
-		constexpr const static rivet::rivet_type_id AngleFactor_type_id = 0x85b1ef42;
-		constexpr const static std::string_view VisibleFactor_type_name = "VisibleFactor";
-		constexpr const static rivet::rivet_type_id VisibleFactor_type_id = 0xa2dc7d9e;
-		constexpr const static std::string_view ActiveBias_type_name = "ActiveBias";
-		constexpr const static rivet::rivet_type_id ActiveBias_type_id = 0x1a1b7ea4; 
+		constexpr static std::string_view DistanceFactor_type_name = "DistanceFactor";
+		constexpr static rivet::rivet_type_id DistanceFactor_type_id = 0xf4e39365;
+		constexpr static std::string_view AngleFactor_type_name = "AngleFactor";
+		constexpr static rivet::rivet_type_id AngleFactor_type_id = 0x85b1ef42;
+		constexpr static std::string_view VisibleFactor_type_name = "VisibleFactor";
+		constexpr static rivet::rivet_type_id VisibleFactor_type_id = 0xa2dc7d9e;
+		constexpr static std::string_view ActiveBias_type_name = "ActiveBias";
+		constexpr static rivet::rivet_type_id ActiveBias_type_id = 0x1a1b7ea4; 
 
 		explicit CritterLocationWeights() = default;
 		explicit CritterLocationWeights([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

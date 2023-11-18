@@ -21,15 +21,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED SoundMaterialbstructionValue : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "SoundMaterialbstructionValue";
-		constexpr const static rivet::rivet_type_id type_id = 0x86577329;
+		constexpr static std::string_view type_name = "SoundMaterialbstructionValue";
+		constexpr static rivet::rivet_type_id type_id = 0x86577329;
 
-		constexpr const static std::string_view Material_type_name = "Material";
-		constexpr const static rivet::rivet_type_id Material_type_id = 0x86bfc8e5;
-		constexpr const static std::string_view Opacity_type_name = "Opacity";
-		constexpr const static rivet::rivet_type_id Opacity_type_id = 0x42170e5e;
-		constexpr const static std::string_view LowPass_type_name = "LowPass";
-		constexpr const static rivet::rivet_type_id LowPass_type_id = 0x2dc6bf81; 
+		constexpr static std::string_view Material_type_name = "Material";
+		constexpr static rivet::rivet_type_id Material_type_id = 0x86bfc8e5;
+		constexpr static std::string_view Opacity_type_name = "Opacity";
+		constexpr static rivet::rivet_type_id Opacity_type_id = 0x42170e5e;
+		constexpr static std::string_view LowPass_type_name = "LowPass";
+		constexpr static rivet::rivet_type_id LowPass_type_id = 0x2dc6bf81; 
 
 		explicit SoundMaterialbstructionValue() = default;
 		explicit SoundMaterialbstructionValue([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

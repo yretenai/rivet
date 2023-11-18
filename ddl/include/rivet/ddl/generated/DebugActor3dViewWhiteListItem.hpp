@@ -19,13 +19,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DebugActor3dViewWhiteListItem : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "DebugActor3dViewWhiteListItem";
-		constexpr const static rivet::rivet_type_id type_id = 0x47a33c88;
+		constexpr static std::string_view type_name = "DebugActor3dViewWhiteListItem";
+		constexpr static rivet::rivet_type_id type_id = 0x47a33c88;
 
-		constexpr const static std::string_view WhiteListedComponentName_type_name = "WhiteListedComponentName";
-		constexpr const static rivet::rivet_type_id WhiteListedComponentName_type_id = 0x33ef2cbf;
-		constexpr const static std::string_view WhiteListChildren_type_name = "WhiteListChildren";
-		constexpr const static rivet::rivet_type_id WhiteListChildren_type_id = 0xc9ed811f; 
+		constexpr static std::string_view WhiteListedComponentName_type_name = "WhiteListedComponentName";
+		constexpr static rivet::rivet_type_id WhiteListedComponentName_type_id = 0x33ef2cbf;
+		constexpr static std::string_view WhiteListChildren_type_name = "WhiteListChildren";
+		constexpr static rivet::rivet_type_id WhiteListChildren_type_id = 0xc9ed811f; 
 
 		explicit DebugActor3dViewWhiteListItem() = default;
 		explicit DebugActor3dViewWhiteListItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

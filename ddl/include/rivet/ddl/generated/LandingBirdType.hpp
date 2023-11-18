@@ -19,15 +19,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED LandingBirdType : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "LandingBirdType";
-		constexpr const static rivet::rivet_type_id type_id = 0x93b33652;
+		constexpr static std::string_view type_name = "LandingBirdType";
+		constexpr static rivet::rivet_type_id type_id = 0x93b33652;
 
-		constexpr const static std::string_view TypeName_type_name = "TypeName";
-		constexpr const static rivet::rivet_type_id TypeName_type_id = 0x4b6c9353;
-		constexpr const static std::string_view Config_type_name = "Config";
-		constexpr const static rivet::rivet_type_id Config_type_id = 0xeaf2611b;
-		constexpr const static std::string_view Planets_type_name = "Planets";
-		constexpr const static rivet::rivet_type_id Planets_type_id = 0xbc30e83e; 
+		constexpr static std::string_view TypeName_type_name = "TypeName";
+		constexpr static rivet::rivet_type_id TypeName_type_id = 0x4b6c9353;
+		constexpr static std::string_view Config_type_name = "Config";
+		constexpr static rivet::rivet_type_id Config_type_id = 0xeaf2611b;
+		constexpr static std::string_view Planets_type_name = "Planets";
+		constexpr static rivet::rivet_type_id Planets_type_id = 0xbc30e83e; 
 
 		explicit LandingBirdType() = default;
 		explicit LandingBirdType([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

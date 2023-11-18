@@ -3,12 +3,12 @@
 // Copyright (c) 2023 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
+#include <rivet/ddl/generated/VanityArmorPerk.hpp>
 #include <rivet/ddl/generated/VanityPerkRaritanium.hpp>
-#include <rivet/ddl/generated/VanityPerkXP.hpp>
+#include <rivet/ddl/generated/VanityPerkWrenchDamage.hpp>
 #include <rivet/ddl/generated/VanityPerkNone.hpp>
 #include <rivet/ddl/generated/VanityPerkBolts.hpp>
-#include <rivet/ddl/generated/VanityPerkWrenchDamage.hpp>
-#include <rivet/ddl/generated/VanityArmorPerk.hpp> 
+#include <rivet/ddl/generated/VanityPerkXP.hpp> 
 
 #include <rivet/ddl/generated/VanityPerkBase.hpp>
 

@@ -23,11 +23,11 @@ namespace rivet::ddl::generated {
 	struct DebugOutfittingList; 
 
 	struct RIVET_DDL_SHARED MasterDebugOutfittingConfig : ConfigBase {
-		constexpr const static std::string_view type_name = "MasterDebugOutfittingConfig";
-		constexpr const static rivet::rivet_type_id type_id = 0xbecff62a;
+		constexpr static std::string_view type_name = "MasterDebugOutfittingConfig";
+		constexpr static rivet::rivet_type_id type_id = 0xbecff62a;
 
-		constexpr const static std::string_view Lists_type_name = "Lists";
-		constexpr const static rivet::rivet_type_id Lists_type_id = 0x11755364; 
+		constexpr static std::string_view Lists_type_name = "Lists";
+		constexpr static rivet::rivet_type_id Lists_type_id = 0x11755364; 
 
 		explicit MasterDebugOutfittingConfig() = default;
 		explicit MasterDebugOutfittingConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

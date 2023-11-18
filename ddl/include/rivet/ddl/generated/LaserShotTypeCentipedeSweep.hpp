@@ -21,15 +21,15 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED LaserShotTypeCentipedeSweep : BotComboLaserShotType {
-		constexpr const static std::string_view type_name = "LaserShotTypeCentipedeSweep";
-		constexpr const static rivet::rivet_type_id type_id = 0x6c2539a9;
+		constexpr static std::string_view type_name = "LaserShotTypeCentipedeSweep";
+		constexpr static rivet::rivet_type_id type_id = 0x6c2539a9;
 
-		constexpr const static std::string_view LaserTellTime_type_name = "LaserTellTime";
-		constexpr const static rivet::rivet_type_id LaserTellTime_type_id = 0x5c1cd434;
-		constexpr const static std::string_view LaserHeroCollideTime_type_name = "LaserHeroCollideTime";
-		constexpr const static rivet::rivet_type_id LaserHeroCollideTime_type_id = 0x793ca197;
-		constexpr const static std::string_view LaserSweepTime_type_name = "LaserSweepTime";
-		constexpr const static rivet::rivet_type_id LaserSweepTime_type_id = 0xd88b95e; 
+		constexpr static std::string_view LaserTellTime_type_name = "LaserTellTime";
+		constexpr static rivet::rivet_type_id LaserTellTime_type_id = 0x5c1cd434;
+		constexpr static std::string_view LaserHeroCollideTime_type_name = "LaserHeroCollideTime";
+		constexpr static rivet::rivet_type_id LaserHeroCollideTime_type_id = 0x793ca197;
+		constexpr static std::string_view LaserSweepTime_type_name = "LaserSweepTime";
+		constexpr static rivet::rivet_type_id LaserSweepTime_type_id = 0xd88b95e; 
 
 		explicit LaserShotTypeCentipedeSweep() = default;
 		explicit LaserShotTypeCentipedeSweep([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

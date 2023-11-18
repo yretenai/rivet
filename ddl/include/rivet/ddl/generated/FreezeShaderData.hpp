@@ -19,13 +19,13 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED FreezeShaderData : rivet::structures::rivet_ddl_base {
-		constexpr const static std::string_view type_name = "FreezeShaderData";
-		constexpr const static rivet::rivet_type_id type_id = 0xbc6b9c0e;
+		constexpr static std::string_view type_name = "FreezeShaderData";
+		constexpr static rivet::rivet_type_id type_id = 0xbc6b9c0e;
 
-		constexpr const static std::string_view PostCompositeShader_type_name = "PostCompositeShader";
-		constexpr const static rivet::rivet_type_id PostCompositeShader_type_id = 0xe2b72d5f;
-		constexpr const static std::string_view ShaderDuration_type_name = "ShaderDuration";
-		constexpr const static rivet::rivet_type_id ShaderDuration_type_id = 0xe177cb8b; 
+		constexpr static std::string_view PostCompositeShader_type_name = "PostCompositeShader";
+		constexpr static rivet::rivet_type_id PostCompositeShader_type_id = 0xe2b72d5f;
+		constexpr static std::string_view ShaderDuration_type_name = "ShaderDuration";
+		constexpr static rivet::rivet_type_id ShaderDuration_type_id = 0xe177cb8b; 
 
 		explicit FreezeShaderData() = default;
 		explicit FreezeShaderData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);

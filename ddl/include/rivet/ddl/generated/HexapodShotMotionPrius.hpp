@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED HexapodShotMotionPrius : HomingShotMotionPrius {
-		constexpr const static std::string_view type_name = "HexapodShotMotionPrius";
-		constexpr const static rivet::rivet_type_id type_id = 0xf2885e5e;
+		constexpr static std::string_view type_name = "HexapodShotMotionPrius";
+		constexpr static rivet::rivet_type_id type_id = 0xf2885e5e;
 
 		explicit HexapodShotMotionPrius() = default;
 		explicit HexapodShotMotionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);
