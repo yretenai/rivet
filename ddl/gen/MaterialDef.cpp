@@ -37,6 +37,7 @@ namespace rivet::ddl::generated {
 		SkipLightCapture = serialized->get_bool(SkipLightCapture_type_id);
 		SkipRayTracedShadows = serialized->get_bool(SkipRayTracedShadows_type_id);
 		UseAoOnDecals = serialized->get_bool(UseAoOnDecals_type_id);
+		HasAnimatedTexture = serialized->get_bool(HasAnimatedTexture_type_id);
 		LensFlareOcclusion = serialized->get_bool(LensFlareOcclusion_type_id);
 		SortTriangles = serialized->get_bool(SortTriangles_type_id);
 		SkipImpostorPojection = serialized->get_bool(SkipImpostorPojection_type_id);

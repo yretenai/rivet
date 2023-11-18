@@ -14,7 +14,8 @@ namespace rivet::ddl::generated {
 		AmbientShadows = serialized->get_bool(AmbientShadows_type_id);
 		Reflections = serialized->get_bool(Reflections_type_id);
 		Shadows = serialized->get_bool(Shadows_type_id);
-		Blocker = serialized->get_bool(Blocker_type_id); 
+		Blocker = serialized->get_bool(Blocker_type_id);
+		UpdateEveryFrame = serialized->get_bool(UpdateEveryFrame_type_id); 
 	}
 
 	[[nodiscard]] auto
