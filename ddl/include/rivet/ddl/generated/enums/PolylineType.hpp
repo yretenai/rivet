@@ -27,6 +27,15 @@ namespace rivet::ddl::generated {
 		"kVolumePlanar", 
 	};
 
+	constexpr static std::array<std::string_view, 6> PolylineType_labels = {
+		"Open Freeform",
+		"Open Planar",
+		"Closed Freeform",
+		"Closed Planar",
+		"Polygon",
+		"Volume", 
+	};
+
 	enum class PolylineType : uint64_t {
 		Open_Freeform,
 		Open_Planar,

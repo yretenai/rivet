@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kSubtractive", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x66a27995_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x66a27995 : uint64_t {
 		Additive,
 		Subtractive, 

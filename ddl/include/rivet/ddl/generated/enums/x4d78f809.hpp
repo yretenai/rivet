@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kCurl", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x4d78f809_labels = {
+		"Directional",
+		"Radial",
+		"Curl", 
+	};
+
 	enum class x4d78f809 : uint64_t {
 		Directional,
 		Radial,

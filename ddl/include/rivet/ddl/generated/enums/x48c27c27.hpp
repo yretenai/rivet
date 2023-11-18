@@ -32,6 +32,20 @@ namespace rivet::ddl::generated {
 		"kRotation", 
 	};
 
+	constexpr static std::array<std::string_view, 11> x48c27c27_labels = {
+		"Brush Parameter",
+		"Brush Parameter HLSL X",
+		"Brush Parameter HLSL Y",
+		"Brush Parameter HLSL Z",
+		"Brush Parameter HLSL W",
+		"Falloff",
+		"Falloff Easing Mode",
+		"Radius X",
+		"Radius Y",
+		"Radius Z",
+		"Rotation", 
+	};
+
 	enum class x48c27c27 : uint64_t {
 		Brush_Parameter,
 		Brush_Parameter_HLSL_X,

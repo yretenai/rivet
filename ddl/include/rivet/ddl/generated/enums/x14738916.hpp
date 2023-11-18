@@ -28,6 +28,16 @@ namespace rivet::ddl::generated {
 		"CustomCode", 
 	};
 
+	constexpr static std::array<std::string_view, 7> x14738916_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x14738916 : uint64_t {
 		InOrder,
 		Shuffle,

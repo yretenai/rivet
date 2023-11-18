@@ -17,7 +17,7 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/enums/x8d7e44cf.hpp>
+#include <rivet/ddl/generated/enums/DamageTypes.hpp>
 #include <rivet/ddl/generated/DamageModifierIncomingPrius.hpp> 
 
 namespace rivet::ddl::generated {
@@ -43,7 +43,7 @@ namespace rivet::ddl::generated {
 		float AddStatus {};
 		float Lifetime {};
 		bool ApplyHeal {};
-		std::vector<rivet::ddl::generated::x8d7e44cf> DamageFilter {}; 
+		std::vector<rivet::ddl::generated::DamageTypes> DamageFilter {}; 
 
 		[[nodiscard]] auto
 		get_type_name() const noexcept -> std::string_view override;

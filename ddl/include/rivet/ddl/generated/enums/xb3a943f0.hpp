@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"SpecificPerson", 
 	};
 
+	constexpr static std::array<std::string_view, 4> xb3a943f0_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xb3a943f0 : uint64_t {
 		None,
 		Self,

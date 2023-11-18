@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kHigh", 
 	};
 
+	constexpr static std::array<std::string_view, 4> x12c07e53_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x12c07e53 : uint64_t {
 		Low,
 		Med,

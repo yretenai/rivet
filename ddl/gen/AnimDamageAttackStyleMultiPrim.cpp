@@ -13,7 +13,7 @@ namespace rivet::ddl::generated {
 		UsePrimConfig = serialized->get_bool(UsePrimConfig_type_id);
 		Prims = serialized->unwrap_into_many<rivet::ddl::generated::DamagePrimContainer>(Prims_type_id);
 		PrimConfig = serialized->get_string(PrimConfig_type_id);
-		DamageType = serialized->get_enum<rivet::ddl::generated::x8d7e44cf>(DamageType_type_id, rivet::ddl::generated::x8d7e44cf_values);
+		DamageType = serialized->get_enum<rivet::ddl::generated::DamageTypes>(DamageType_type_id, rivet::ddl::generated::DamageTypes_values);
 		DamageAmount = serialized->get_float(DamageAmount_type_id);
 		StatusAmount = serialized->get_float(StatusAmount_type_id);
 		Knockback = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(Knockback_type_id, rivet::ddl::generated::KnockbackLevels_values);

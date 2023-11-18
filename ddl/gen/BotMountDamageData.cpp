@@ -11,7 +11,7 @@ namespace rivet::ddl::generated {
 		LocatorName = serialized->get_string(LocatorName_type_id);
 		DamageSphereRadius = serialized->get_float(DamageSphereRadius_type_id);
 		DamageAmount = serialized->get_float(DamageAmount_type_id);
-		DamageType = serialized->get_enum<rivet::ddl::generated::x8d7e44cf>(DamageType_type_id, rivet::ddl::generated::x8d7e44cf_values);
+		DamageType = serialized->get_enum<rivet::ddl::generated::DamageTypes>(DamageType_type_id, rivet::ddl::generated::DamageTypes_values);
 		Knockback = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(Knockback_type_id, rivet::ddl::generated::KnockbackLevels_values);
 		DamageStr = serialized->get_string(DamageStr_type_id);
 		KnockbackAmount = serialized->get_float(KnockbackAmount_type_id); 

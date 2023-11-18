@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kFailed", 
 	};
 
+	constexpr static std::array<std::string_view, 4> ObjectiveStates_labels = {
+		"Inactive",
+		"Active",
+		"Complete",
+		"Failed", 
+	};
+
 	enum class ObjectiveStates : uint64_t {
 		Inactive,
 		Active,

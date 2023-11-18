@@ -17,7 +17,7 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/enums/x8d7e44cf.hpp>
+#include <rivet/ddl/generated/enums/DamageTypes.hpp>
 #include <rivet/ddl/generated/enums/x10228b34.hpp> 
 
 namespace rivet::ddl::generated {
@@ -45,7 +45,7 @@ namespace rivet::ddl::generated {
 		bool InitListening {};
 		int32_t SignalMax {};
 		float PercentThreshold {};
-		rivet::ddl::generated::x8d7e44cf Type {};
+		rivet::ddl::generated::DamageTypes Type {};
 		std::string_view DamageName {}; 
 
 		[[nodiscard]] auto

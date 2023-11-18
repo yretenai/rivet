@@ -22,6 +22,10 @@ namespace rivet::ddl::generated {
 		"kPreview", 
 	};
 
+	constexpr static std::array<std::string_view, 1> x8d1d7e8a_labels = {
+		"NONE", 
+	};
+
 	enum class x8d1d7e8a : uint64_t {
 		Preview, 
 	};

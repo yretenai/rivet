@@ -27,6 +27,15 @@ namespace rivet::ddl::generated {
 		"kRenderTextureTypeQuarter", 
 	};
 
+	constexpr static std::array<std::string_view, 6> x8af8ec29_labels = {
+		"None",
+		"Full",
+		"Three quarter",
+		"Two third",
+		"Half",
+		"Quarter", 
+	};
+
 	enum class x8af8ec29 : uint64_t {
 		None,
 		Full,

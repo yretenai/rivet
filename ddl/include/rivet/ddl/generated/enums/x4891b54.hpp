@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kOwnerActor", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x4891b54_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x4891b54 : uint64_t {
 		HitActor,
 		DeliveryActor,

@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kExplode", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x113c2f5c_labels = {
+		"On Spawn",
+		"On Impact",
+		"On Explode", 
+	};
+
 	enum class x113c2f5c : uint64_t {
 		On_Spawn,
 		On_Impact,

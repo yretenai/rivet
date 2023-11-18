@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"kTrigger", 
 	};
 
+	constexpr static std::array<std::string_view, 5> x5f40dd5c_labels = {
+		"Wwise Environment (Global)",
+		"Wwise Paramater (Actor Optional)",
+		"Wwise State (Global)",
+		"Wwise Switch (Requires Actor)",
+		"Wwise Trigger (Requires Actor)", 
+	};
+
 	enum class x5f40dd5c : uint64_t {
 		Environment,
 		Parameter,

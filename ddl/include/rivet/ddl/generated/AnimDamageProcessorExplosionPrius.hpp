@@ -17,8 +17,8 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/enums/x8d7e44cf.hpp>
 #include <rivet/ddl/generated/bitsets/x65d7dac2.hpp>
+#include <rivet/ddl/generated/enums/DamageTypes.hpp>
 #include <rivet/ddl/generated/AnimDamageAttackStyleBase.hpp> 
 
 namespace rivet::ddl::generated {
@@ -44,7 +44,7 @@ namespace rivet::ddl::generated {
 		explicit AnimDamageProcessorExplosionPrius() = default;
 		explicit AnimDamageProcessorExplosionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);
 
-		rivet::ddl::generated::x8d7e44cf DamageType {};
+		rivet::ddl::generated::DamageTypes DamageType {};
 		rivet::ddl::generated::x65d7dac2 DamageFlags {};
 		std::string_view DamageJoint {};
 		std::shared_ptr<rivet::ddl::generated::DamageModifierExplosionPrius> ExplosionData {};

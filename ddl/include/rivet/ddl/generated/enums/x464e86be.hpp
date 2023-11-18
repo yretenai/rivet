@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kDynamicNoProximity", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x464e86be_labels = {
+		"Batched Static",
+		"Dynamic Proximity",
+		"Dynamic No Proximity", 
+	};
+
 	enum class x464e86be : uint64_t {
 		Batched_Static,
 		Dynamic_Proximity,

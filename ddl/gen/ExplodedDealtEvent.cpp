@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	ExplodedDealtEvent::ExplodedDealtEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		LastDamageType = serialized->get_enum<rivet::ddl::generated::x8d7e44cf>(LastDamageType_type_id, rivet::ddl::generated::x8d7e44cf_values);
+		LastDamageType = serialized->get_enum<rivet::ddl::generated::DamageTypes>(LastDamageType_type_id, rivet::ddl::generated::DamageTypes_values);
 		SmokePuff = serialized->get_bool(SmokePuff_type_id);
 		ExplodedActorLocation = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(ExplodedActorLocation_type_id); 
 	}

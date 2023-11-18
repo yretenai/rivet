@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"kDivide", 
 	};
 
+	constexpr static std::array<std::string_view, 5> x2f0b644b_labels = {
+		"=",
+		"+",
+		"-",
+		"x",
+		"/", 
+	};
+
 	enum class x2f0b644b : uint64_t {
 		Replace,
 		Add,

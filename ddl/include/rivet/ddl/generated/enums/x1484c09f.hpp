@@ -27,6 +27,15 @@ namespace rivet::ddl::generated {
 		"kSphere25pc", 
 	};
 
+	constexpr static std::array<std::string_view, 6> x1484c09f_labels = {
+		"Locators",
+		"Bound Box",
+		"Bound Sphere",
+		"Bound Sphere .75",
+		"Bound Sphere .50",
+		"Bound Sphere .25", 
+	};
+
 	enum class x1484c09f : uint64_t {
 		Locators,
 		Bound_Box,

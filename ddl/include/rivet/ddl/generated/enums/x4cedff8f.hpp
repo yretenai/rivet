@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kTypeMusic", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x4cedff8f_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x4cedff8f : uint64_t {
 		TypeSfx,
 		TypeDialogue,

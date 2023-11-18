@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kCinematic", 
 	};
 
+	constexpr static std::array<std::string_view, 4> x49737d1_labels = {
+		"Low",
+		"Medium",
+		"High",
+		"Cinematic", 
+	};
+
 	enum class x49737d1 : uint64_t {
 		Low,
 		Medium,

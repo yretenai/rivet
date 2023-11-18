@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kNone", 
 	};
 
+	constexpr static std::array<std::string_view, 4> xa6a133d1_labels = {
+		"Normal Only",
+		"Color Only",
+		"Full",
+		"None", 
+	};
+
 	enum class xa6a133d1 : uint64_t {
 		Normal_Only,
 		Color_Only,

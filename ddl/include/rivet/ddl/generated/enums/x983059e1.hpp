@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kTerrainOnly", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x983059e1_labels = {
+		"All",
+		"Static Objects Only",
+		"Terrain Only", 
+	};
+
 	enum class x983059e1 : uint64_t {
 		All,
 		Static_Objects_Only,

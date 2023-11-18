@@ -27,6 +27,15 @@ namespace rivet::ddl::generated {
 		"ZYX", 
 	};
 
+	constexpr static std::array<std::string_view, 6> x95ca39fb_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x95ca39fb : uint64_t {
 		XYZ,
 		YZX,

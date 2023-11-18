@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	MovementConfig::MovementConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Style = serialized->get_enum<rivet::ddl::generated::xe8421db7>(Style_type_id, rivet::ddl::generated::xe8421db7_values);
+		Style = serialized->get_enum<rivet::ddl::generated::MovementStyle>(Style_type_id, rivet::ddl::generated::MovementStyle_values);
 		UseAnimNormalSpeed = serialized->get_bool(UseAnimNormalSpeed_type_id);
 		RandomizeSpeed = serialized->get_bool(RandomizeSpeed_type_id);
 		RandomizeSpeedMin = serialized->get_float(RandomizeSpeedMin_type_id);

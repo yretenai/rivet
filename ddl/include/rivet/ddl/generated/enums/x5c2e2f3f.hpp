@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"Up", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x5c2e2f3f_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x5c2e2f3f : uint64_t {
 		Down,
 		Up, 

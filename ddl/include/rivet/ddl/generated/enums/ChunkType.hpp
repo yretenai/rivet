@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kMisc", 
 	};
 
+	constexpr static std::array<std::string_view, 3> ChunkType_labels = {
+		"Breakable",
+		"Bot",
+		"Misc", 
+	};
+
 	enum class ChunkType : uint64_t {
 		Breakable,
 		Bot,

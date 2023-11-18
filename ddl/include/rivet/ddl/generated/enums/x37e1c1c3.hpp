@@ -27,6 +27,15 @@ namespace rivet::ddl::generated {
 		"kStamp", 
 	};
 
+	constexpr static std::array<std::string_view, 6> x37e1c1c3_labels = {
+		"Blur",
+		"Flatten",
+		"Ramp",
+		"Sculpt / Spray",
+		"Sharpen",
+		"Stamp", 
+	};
+
 	enum class x37e1c1c3 : uint64_t {
 		Blur,
 		Flatten,

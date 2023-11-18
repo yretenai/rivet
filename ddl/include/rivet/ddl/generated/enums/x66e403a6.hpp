@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kNone", 
 	};
 
+	constexpr static std::array<std::string_view, 4> x66e403a6_labels = {
+		"Bolt",
+		"Ammo",
+		"Health",
+		"None", 
+	};
+
 	enum class x66e403a6 : uint64_t {
 		Bolt,
 		Ammo,

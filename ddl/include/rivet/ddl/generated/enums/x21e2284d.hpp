@@ -30,6 +30,18 @@ namespace rivet::ddl::generated {
 		"kPostInit", 
 	};
 
+	constexpr static std::array<std::string_view, 9> x21e2284d_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x21e2284d : uint64_t {
 		OnSpawn,
 		OnHitEnemy,

@@ -28,6 +28,16 @@ namespace rivet::ddl::generated {
 		"kAim", 
 	};
 
+	constexpr static std::array<std::string_view, 7> ManipulatorType_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class ManipulatorType : uint64_t {
 		Translation,
 		TranslationWithSnap,

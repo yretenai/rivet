@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"OnAllExit", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x1343dca9_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x1343dca9 : uint64_t {
 		OnAnyExit,
 		OnAllExit, 

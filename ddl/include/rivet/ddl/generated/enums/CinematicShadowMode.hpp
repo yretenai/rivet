@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kNever", 
 	};
 
+	constexpr static std::array<std::string_view, 3> CinematicShadowMode_labels = {
+		"Auto",
+		"Always",
+		"Never ", 
+	};
+
 	enum class CinematicShadowMode : uint64_t {
 		Auto,
 		Always,

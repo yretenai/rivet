@@ -17,7 +17,7 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/enums/x8d474ebb.hpp>
+#include <rivet/ddl/generated/enums/Voice.hpp>
 #include <rivet/ddl/generated/enums/HeroTypes.hpp> 
 
 namespace rivet::ddl::generated {
@@ -44,7 +44,7 @@ namespace rivet::ddl::generated {
 
 		std::string_view DisplayName {};
 		rivet::ddl::generated::HeroTypes HeroType {};
-		rivet::ddl::generated::x8d474ebb Voice {};
+		rivet::ddl::generated::Voice Voice {};
 		std::shared_ptr<rivet::ddl::generated::AssetReferenceDef> ActorAsset {};
 		std::shared_ptr<rivet::ddl::generated::CharacterOptionData> CharacterOptions {}; 
 

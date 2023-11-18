@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kClamp", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x7ada9111_labels = {
+		"Wrap",
+		"Mirror",
+		"Clamp", 
+	};
+
 	enum class x7ada9111 : uint64_t {
 		Wrap,
 		Mirror,

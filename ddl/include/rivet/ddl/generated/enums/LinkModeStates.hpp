@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kExitAndCancel", 
 	};
 
+	constexpr static std::array<std::string_view, 3> LinkModeStates_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class LinkModeStates : uint64_t {
 		Enter,
 		ExitAndSave,

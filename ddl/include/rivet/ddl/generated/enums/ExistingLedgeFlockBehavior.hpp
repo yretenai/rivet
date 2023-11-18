@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kDestroyBirds", 
 	};
 
+	constexpr static std::array<std::string_view, 2> ExistingLedgeFlockBehavior_labels = {
+		"Scatter Birds",
+		"Destroy Birds", 
+	};
+
 	enum class ExistingLedgeFlockBehavior : uint64_t {
 		Scatter_Birds,
 		Destroy_Birds, 

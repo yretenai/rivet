@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kHeroAndBotsOnly", 
 	};
 
+	constexpr static std::array<std::string_view, 4> x2056dab2_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x2056dab2 : uint64_t {
 		Default,
 		HeroOnly,

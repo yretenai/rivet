@@ -18,10 +18,10 @@
 #include <rivet/structures/rivet_serialization.hpp>
 
 #include <rivet/ddl/generated/enums/x257872aa.hpp>
-#include <rivet/ddl/generated/enums/x8d7e44cf.hpp>
 #include <rivet/ddl/generated/enums/KnockbackLevels.hpp>
 #include <rivet/ddl/generated/enums/xaabf8cd7.hpp>
 #include <rivet/ddl/generated/bitsets/x65d7dac2.hpp>
+#include <rivet/ddl/generated/enums/DamageTypes.hpp>
 #include <rivet/ddl/generated/AnimDamageAttackStyleBase.hpp> 
 
 namespace rivet::ddl::generated {
@@ -91,7 +91,7 @@ namespace rivet::ddl::generated {
 		bool LerpRadius {};
 		float DamagePrimLength {};
 		bool LerpLength {};
-		rivet::ddl::generated::x8d7e44cf DamageType {};
+		rivet::ddl::generated::DamageTypes DamageType {};
 		float DamageAmount {};
 		float ArmorPassThroughPercentage {};
 		rivet::ddl::generated::KnockbackLevels Knockback {};

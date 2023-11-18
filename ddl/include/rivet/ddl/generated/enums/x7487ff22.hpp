@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kLaserRightArm", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x7487ff22_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x7487ff22 : uint64_t {
 		LaserLeftArm,
 		LaserRightArm, 

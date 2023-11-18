@@ -11,7 +11,7 @@ namespace rivet::ddl::generated {
 	MeleeAttackData::MeleeAttackData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Index = serialized->get_enum<rivet::ddl::generated::xef932fba>(Index_type_id, rivet::ddl::generated::xef932fba_values);
 		HitAnim = serialized->get_string(HitAnim_type_id);
-		DamageType = serialized->get_enum<rivet::ddl::generated::x8d7e44cf>(DamageType_type_id, rivet::ddl::generated::x8d7e44cf_values);
+		DamageType = serialized->get_enum<rivet::ddl::generated::DamageTypes>(DamageType_type_id, rivet::ddl::generated::DamageTypes_values);
 		Damage = serialized->get_float(Damage_type_id);
 		AOE = serialized->get_float(AOE_type_id);
 		Knockback = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(Knockback_type_id, rivet::ddl::generated::KnockbackLevels_values);

@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kGridNodeTypeCombineAdditive", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x3234dd4a_labels = {
+		"Default",
+		"Combine-additive", 
+	};
+
 	enum class x3234dd4a : uint64_t {
 		Default,
 		GridNodeTypeCombineAdditive, 

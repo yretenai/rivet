@@ -28,6 +28,16 @@ namespace rivet::ddl::generated {
 		"kHidden", 
 	};
 
+	constexpr static std::array<std::string_view, 7> x4a11042_labels = {
+		"Lod 0",
+		"Lod 1",
+		"Lod 2",
+		"Lod 3",
+		"Lod 4",
+		"Lod 5",
+		"Model Hidden", 
+	};
+
 	enum class x4a11042 : uint64_t {
 		Lod_0,
 		Lod_1,

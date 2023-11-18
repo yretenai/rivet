@@ -31,6 +31,19 @@ namespace rivet::ddl::generated {
 		"VendorTab", 
 	};
 
+	constexpr static std::array<std::string_view, 10> xc6f5c0d7_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xc6f5c0d7 : uint64_t {
 		Playthrough,
 		Game,

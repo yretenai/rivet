@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kGameData", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xf02da14_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xf02da14 : uint64_t {
 		Asset,
 		Folder,

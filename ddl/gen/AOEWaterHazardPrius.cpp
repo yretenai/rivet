@@ -14,7 +14,7 @@ namespace rivet::ddl::generated {
 		CooldownTime = serialized->get_float(CooldownTime_type_id);
 		DamageAmount = serialized->get_float(DamageAmount_type_id);
 		DamageIgnoreDuration = serialized->get_float(DamageIgnoreDuration_type_id);
-		DamageType = serialized->get_enum<rivet::ddl::generated::x8d7e44cf>(DamageType_type_id, rivet::ddl::generated::x8d7e44cf_values);
+		DamageType = serialized->get_enum<rivet::ddl::generated::DamageTypes>(DamageType_type_id, rivet::ddl::generated::DamageTypes_values);
 		DamageString = serialized->get_string(DamageString_type_id); 
 	}
 

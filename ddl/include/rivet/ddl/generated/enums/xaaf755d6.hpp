@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"kStatusBreakOutThreshhold", 
 	};
 
+	constexpr static std::array<std::string_view, 5> xaaf755d6_labels = {
+		"Damage",
+		"Kill",
+		"Status Applied",
+		"Status Refreshed",
+		"Status Break Out Threshhold", 
+	};
+
 	enum class xaaf755d6 : uint64_t {
 		Damage,
 		Kill,

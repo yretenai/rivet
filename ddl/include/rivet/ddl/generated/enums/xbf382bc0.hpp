@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kLeave", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xbf382bc0_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xbf382bc0 : uint64_t {
 		Wait,
 		Attack,

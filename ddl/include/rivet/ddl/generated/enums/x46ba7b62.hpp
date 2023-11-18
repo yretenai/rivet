@@ -28,6 +28,16 @@ namespace rivet::ddl::generated {
 		"kZNegative", 
 	};
 
+	constexpr static std::array<std::string_view, 7> x46ba7b62_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x46ba7b62 : uint64_t {
 		None,
 		XPositive,

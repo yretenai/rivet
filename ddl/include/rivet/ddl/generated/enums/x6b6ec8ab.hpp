@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kAxisLeft", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x6b6ec8ab_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x6b6ec8ab : uint64_t {
 		None,
 		AxisUp,

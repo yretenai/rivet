@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kDirection", 
 	};
 
+	constexpr static std::array<std::string_view, 2> xccd3eeab_labels = {
+		"Point",
+		"Direction", 
+	};
+
 	enum class xccd3eeab : uint64_t {
 		Point,
 		Direction, 

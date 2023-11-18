@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"kUseLabel", 
 	};
 
+	constexpr static std::array<std::string_view, 5> x8f7062e6_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x8f7062e6 : uint64_t {
 		Latest,
 		None,

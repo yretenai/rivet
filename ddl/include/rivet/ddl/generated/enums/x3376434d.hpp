@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kCurveStart", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x3376434d_labels = {
+		"Closest Point",
+		"Closest Tangent",
+		"Start of Curve", 
+	};
+
 	enum class x3376434d : uint64_t {
 		Closest_Point,
 		Closest_Tangent,

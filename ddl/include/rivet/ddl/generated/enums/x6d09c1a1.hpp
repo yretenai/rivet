@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kLockTriggeredByEvent", 
 	};
 
+	constexpr static std::array<std::string_view, 4> x6d09c1a1_labels = {
+		"Never Aim Locked (always tracks target)",
+		"Aim Lock at Start of Walk",
+		"Aim Lock at End of Walk",
+		"Aim Lock Triggered by Event (AimModWalkToTargetLockAimEvent)", 
+	};
+
 	enum class x6d09c1a1 : uint64_t {
 		NoLock,
 		Aim_Lock_at_Start_of_Walk,

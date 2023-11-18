@@ -31,6 +31,19 @@ namespace rivet::ddl::generated {
 		"kMatchActor", 
 	};
 
+	constexpr static std::array<std::string_view, 10> x3cdeb00d_labels = {
+		"Path Planar",
+		"Path Full",
+		"As Placed",
+		"Placed Plus Path",
+		"Placed Plus Path Planar",
+		"Stop Match",
+		"Look At Hero",
+		"Look At Actor",
+		"Placed Plus Look At Actor",
+		"Match Actor", 
+	};
+
 	enum class x3cdeb00d : uint64_t {
 		Path_Planar,
 		Path_Full,

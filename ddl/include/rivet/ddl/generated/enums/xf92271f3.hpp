@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kMirrorNodeAxisXY", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xf92271f3_labels = {
+		"y-z axis",
+		"x-z axis",
+		"x-y axis", 
+	};
+
 	enum class xf92271f3 : uint64_t {
 		MirrorNodeAxisYZ,
 		MirrorNodeAxisXZ,

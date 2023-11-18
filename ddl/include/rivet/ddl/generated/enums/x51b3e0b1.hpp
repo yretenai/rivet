@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"DeActivate", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x51b3e0b1_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x51b3e0b1 : uint64_t {
 		Activate,
 		DeActivate, 

@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kDoNotDisable", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xafae1264_labels = {
+		"Disable on trigger",
+		"Disable on untrigger",
+		"Do not auto disable", 
+	};
+
 	enum class xafae1264 : uint64_t {
 		Disable_on_trigger,
 		Disable_on_untrigger,

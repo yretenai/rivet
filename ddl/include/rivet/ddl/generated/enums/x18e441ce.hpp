@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"kWeaponFireOnce", 
 	};
 
+	constexpr static std::array<std::string_view, 5> x18e441ce_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x18e441ce : uint64_t {
 		WeaponHide,
 		WeaponShow,

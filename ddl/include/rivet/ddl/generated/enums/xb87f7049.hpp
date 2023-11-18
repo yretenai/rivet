@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kResponsive", 
 	};
 
+	constexpr static std::array<std::string_view, 2> xb87f7049_labels = {
+		"Non-Responsive",
+		"Responsive", 
+	};
+
 	enum class xb87f7049 : uint64_t {
 		NonResponsive,
 		Responsive, 

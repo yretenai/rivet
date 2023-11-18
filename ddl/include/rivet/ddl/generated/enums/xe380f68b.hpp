@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kAngle", 
 	};
 
+	constexpr static std::array<std::string_view, 2> xe380f68b_labels = {
+		"Speed",
+		"Angle", 
+	};
+
 	enum class xe380f68b : uint64_t {
 		Speed,
 		Angle, 

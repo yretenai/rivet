@@ -27,6 +27,15 @@ namespace rivet::ddl::generated {
 		"kStateChange", 
 	};
 
+	constexpr static std::array<std::string_view, 6> xea0685c5_labels = {
+		"Modify",
+		"Undo",
+		"Redo",
+		"ClearUndoRedo",
+		"Upload",
+		"StateChange", 
+	};
+
 	enum class xea0685c5 : uint64_t {
 		Modify,
 		Undo,

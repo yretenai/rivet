@@ -28,6 +28,16 @@ namespace rivet::ddl::generated {
 		"kLocationNamed", 
 	};
 
+	constexpr static std::array<std::string_view, 7> x457f748b_labels = {
+		"Unknown",
+		"Head",
+		"Torso",
+		"Weak Spot",
+		"Path Test",
+		"LoS Test",
+		"Named", 
+	};
+
 	enum class x457f748b : uint64_t {
 		Unknown,
 		Head,

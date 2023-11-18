@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kFromStart", 
 	};
 
+	constexpr static std::array<std::string_view, 2> xb513de9_labels = {
+		"None",
+		"From Start", 
+	};
+
 	enum class xb513de9 : uint64_t {
 		None,
 		From_Start, 

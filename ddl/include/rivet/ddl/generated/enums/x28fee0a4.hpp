@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kMag", 
 	};
 
+	constexpr static std::array<std::string_view, 4> x28fee0a4_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x28fee0a4 : uint64_t {
 		Default,
 		Hover,

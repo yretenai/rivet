@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"kNone", 
 	};
 
+	constexpr static std::array<std::string_view, 5> xe0e71d6c_labels = {
+		"Additive",
+		"Blended",
+		"Opaque",
+		"Modulate",
+		"None", 
+	};
+
 	enum class xe0e71d6c : uint64_t {
 		Additive,
 		Blended,

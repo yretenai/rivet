@@ -17,7 +17,7 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/enums/xee0945fb.hpp> 
+#include <rivet/ddl/generated/enums/LightingMode.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DebugPlaytestLoadInfo : rivet::structures::rivet_ddl_base {
@@ -48,7 +48,7 @@ namespace rivet::ddl::generated {
 		std::string_view Checkpoint {};
 		std::string_view DimensionCheckpoint {};
 		bool OverrideLightingMode {};
-		rivet::ddl::generated::xee0945fb LightingMode {}; 
+		rivet::ddl::generated::LightingMode LightingMode {}; 
 
 		[[nodiscard]] auto
 		get_type_name() const noexcept -> std::string_view override;

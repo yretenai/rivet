@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"Loop", 
 	};
 
+	constexpr static std::array<std::string_view, 2> xc57b533a_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xc57b533a : uint64_t {
 		Clamp,
 		Loop, 

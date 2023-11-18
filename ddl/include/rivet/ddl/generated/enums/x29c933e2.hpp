@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"kForever", 
 	};
 
+	constexpr static std::array<std::string_view, 5> x29c933e2_labels = {
+		"None",
+		"Custom",
+		"End of Shot",
+		"End of Cinematic",
+		"Forever", 
+	};
+
 	enum class x29c933e2 : uint64_t {
 		None,
 		Custom,

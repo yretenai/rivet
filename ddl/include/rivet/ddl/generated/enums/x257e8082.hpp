@@ -22,6 +22,10 @@ namespace rivet::ddl::generated {
 		"kViewBackpack", 
 	};
 
+	constexpr static std::array<std::string_view, 1> x257e8082_labels = {
+		"NONE", 
+	};
+
 	enum class x257e8082 : uint64_t {
 		ViewBackpack, 
 	};

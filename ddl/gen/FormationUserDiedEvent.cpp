@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	FormationUserDiedEvent::FormationUserDiedEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		DamageType = serialized->get_enum<rivet::ddl::generated::x8d7e44cf>(DamageType_type_id, rivet::ddl::generated::x8d7e44cf_values); 
+		DamageType = serialized->get_enum<rivet::ddl::generated::DamageTypes>(DamageType_type_id, rivet::ddl::generated::DamageTypes_values); 
 	}
 
 	[[nodiscard]] auto

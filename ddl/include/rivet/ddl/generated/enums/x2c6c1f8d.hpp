@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kPressure", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x2c6c1f8d_labels = {
+		"Size",
+		"Pressure", 
+	};
+
 	enum class x2c6c1f8d : uint64_t {
 		Size,
 		Pressure, 

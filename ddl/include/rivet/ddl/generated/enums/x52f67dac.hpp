@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kDownToUp", 
 	};
 
+	constexpr static std::array<std::string_view, 4> x52f67dac_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x52f67dac : uint64_t {
 		LeftToRight,
 		RightToLeft,

@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kPostComposite", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x65877bb6_labels = {
+		"Model",
+		"Pre-Composite",
+		"Post-Composite", 
+	};
+
 	enum class x65877bb6 : uint64_t {
 		Model,
 		PreComposite,

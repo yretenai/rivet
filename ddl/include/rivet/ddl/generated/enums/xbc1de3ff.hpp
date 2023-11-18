@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"Right", 
 	};
 
+	constexpr static std::array<std::string_view, 4> xbc1de3ff_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xbc1de3ff : uint64_t {
 		Up,
 		Down,

@@ -17,7 +17,7 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/enums/xee0945fb.hpp>
+#include <rivet/ddl/generated/enums/LightingMode.hpp>
 #include <rivet/ddl/generated/BaseCustomOverlayTriggerPrius.hpp> 
 
 namespace rivet::ddl::generated {
@@ -31,7 +31,7 @@ namespace rivet::ddl::generated {
 		explicit LightingModeOverlayTriggerPrius() = default;
 		explicit LightingModeOverlayTriggerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);
 
-		std::vector<rivet::ddl::generated::xee0945fb> LightingModes {}; 
+		std::vector<rivet::ddl::generated::LightingMode> LightingModes {}; 
 
 		[[nodiscard]] auto
 		get_type_name() const noexcept -> std::string_view override;

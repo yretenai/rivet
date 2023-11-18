@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kReset", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xf787d865_labels = {
+		"None",
+		"Match Previous",
+		"Reset To Zero", 
+	};
+
 	enum class xf787d865 : uint64_t {
 		None,
 		Match_Previous,

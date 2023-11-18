@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kSubtract", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xea6549e1_labels = {
+		"Add to Above",
+		"And with Above",
+		"Subtract from Above", 
+	};
+
 	enum class xea6549e1 : uint64_t {
 		Add_to_Above,
 		And_with_Above,

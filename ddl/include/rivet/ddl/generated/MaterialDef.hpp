@@ -77,6 +77,8 @@ namespace rivet::ddl::generated {
 		constexpr static rivet::rivet_type_id SkipRayTracedShadows_type_id = 0xe6ce263e;
 		constexpr static std::string_view UseAoOnDecals_type_name = "UseAoOnDecals";
 		constexpr static rivet::rivet_type_id UseAoOnDecals_type_id = 0x99ce8a7c;
+		constexpr static std::string_view HasAnimatedTexture_type_name = "HasAnimatedTexture";
+		constexpr static rivet::rivet_type_id HasAnimatedTexture_type_id = 0xc2e7b7d6;
 		constexpr static std::string_view LensFlareOcclusion_type_name = "LensFlareOcclusion";
 		constexpr static rivet::rivet_type_id LensFlareOcclusion_type_id = 0x677f2340;
 		constexpr static std::string_view SortTriangles_type_name = "SortTriangles";
@@ -129,6 +131,7 @@ namespace rivet::ddl::generated {
 		bool SkipLightCapture {};
 		bool SkipRayTracedShadows {};
 		bool UseAoOnDecals {};
+		bool HasAnimatedTexture {};
 		bool LensFlareOcclusion {};
 		bool SortTriangles {};
 		bool SkipImpostorPojection {};

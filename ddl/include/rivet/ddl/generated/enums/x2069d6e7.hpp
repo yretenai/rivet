@@ -27,6 +27,15 @@ namespace rivet::ddl::generated {
 		"kMission", 
 	};
 
+	constexpr static std::array<std::string_view, 6> x2069d6e7_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x2069d6e7 : uint64_t {
 		InstanceCollection,
 		InstanceUnit,

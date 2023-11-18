@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kVanity", 
 	};
 
+	constexpr static std::array<std::string_view, 4> x2a6b461b_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x2a6b461b : uint64_t {
 		GoldBolt,
 		RynoPlan,

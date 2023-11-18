@@ -17,7 +17,7 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/enums/x8d7e44cf.hpp>
+#include <rivet/ddl/generated/enums/DamageTypes.hpp>
 #include <rivet/ddl/generated/EventBase.hpp> 
 
 namespace rivet::ddl::generated {
@@ -33,7 +33,7 @@ namespace rivet::ddl::generated {
 		explicit InjuredEvent() = default;
 		explicit InjuredEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);
 
-		rivet::ddl::generated::x8d7e44cf Type {};
+		rivet::ddl::generated::DamageTypes Type {};
 		uint16_t Weapon {}; 
 
 		[[nodiscard]] auto

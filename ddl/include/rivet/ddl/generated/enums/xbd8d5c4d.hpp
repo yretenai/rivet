@@ -28,6 +28,16 @@ namespace rivet::ddl::generated {
 		"RYNO_PLANS", 
 	};
 
+	constexpr static std::array<std::string_view, 7> xbd8d5c4d_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xbd8d5c4d : uint64_t {
 		null,
 		GOLDEN_PATH,

@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"kRenderTextureSlotD", 
 	};
 
+	constexpr static std::array<std::string_view, 5> x16517126_labels = {
+		"None",
+		"Render Texture Slot A",
+		"Render Texture Slot B",
+		"Render Texture Slot C",
+		"Render Texture Slot D", 
+	};
+
 	enum class x16517126 : uint64_t {
 		None,
 		Render_Texture_Slot_A,

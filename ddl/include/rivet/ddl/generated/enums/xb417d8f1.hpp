@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kTriBlendNodeTypeCombineAdditive", 
 	};
 
+	constexpr static std::array<std::string_view, 2> xb417d8f1_labels = {
+		"Default",
+		"Combine-additive", 
+	};
+
 	enum class xb417d8f1 : uint64_t {
 		Default,
 		TriBlendNodeTypeCombineAdditive, 

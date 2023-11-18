@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kLocatorFacing", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xfe692fc4_labels = {
+		"Hit Normal",
+		"Inverse Facing",
+		"Locator Facing", 
+	};
+
 	enum class xfe692fc4 : uint64_t {
 		Hit_Normal,
 		Inverse_Facing,

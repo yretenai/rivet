@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kAll", 
 	};
 
+	constexpr static std::array<std::string_view, 2> MarqueeTestMode_labels = {
+		"Any",
+		"All", 
+	};
+
 	enum class MarqueeTestMode : uint64_t {
 		Any,
 		All, 

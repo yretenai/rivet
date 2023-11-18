@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kInactive", 
 	};
 
+	constexpr static std::array<std::string_view, 3> CollisionType_labels = {
+		"Static",
+		"Dynamic",
+		"Inactive", 
+	};
+
 	enum class CollisionType : uint64_t {
 		Static,
 		Dynamic,

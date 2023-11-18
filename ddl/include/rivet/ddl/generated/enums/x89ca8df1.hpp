@@ -28,6 +28,16 @@ namespace rivet::ddl::generated {
 		"kFieldGlobal", 
 	};
 
+	constexpr static std::array<std::string_view, 7> x89ca8df1_labels = {
+		"Effect Response",
+		"Field Stack",
+		"Constant",
+		"Input Event",
+		"Sending Actor",
+		"Receiving Actor",
+		"Global Value", 
+	};
+
 	enum class x89ca8df1 : uint64_t {
 		Effect_Response,
 		Field_Stack,

@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kNone", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x8423053f_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x8423053f : uint64_t {
 		Any,
 		None, 

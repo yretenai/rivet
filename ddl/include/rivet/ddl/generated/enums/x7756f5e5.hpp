@@ -31,6 +31,19 @@ namespace rivet::ddl::generated {
 		"kUpdateCinematic2Def", 
 	};
 
+	constexpr static std::array<std::string_view, 10> x7756f5e5_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x7756f5e5 : uint64_t {
 		ActivateTracks,
 		Load,

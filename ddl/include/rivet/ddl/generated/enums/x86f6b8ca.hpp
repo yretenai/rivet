@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kNone", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x86f6b8ca_labels = {
+		"Round",
+		"Flat",
+		"None", 
+	};
+
 	enum class x86f6b8ca : uint64_t {
 		Round,
 		Flat,

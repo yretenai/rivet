@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kAccuateAlpha", 
 	};
 
+	constexpr static std::array<std::string_view, 2> MotionBlur_labels = {
+		"Opaque Only",
+		"Accurate Alpha", 
+	};
+
 	enum class MotionBlur : uint64_t {
 		Opaque_Only,
 		Accurate_Alpha, 

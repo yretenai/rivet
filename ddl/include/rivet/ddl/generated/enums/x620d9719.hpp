@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kRTPCLogModeAll", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x620d9719_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x620d9719 : uint64_t {
 		RTPCLogModeOff,
 		RTPCLogModeErrors,

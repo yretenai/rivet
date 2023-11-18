@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kAllSessions", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xa5664812_labels = {
+		"Asset",
+		"Session",
+		"AllSessions", 
+	};
+
 	enum class xa5664812 : uint64_t {
 		Asset,
 		Session,

@@ -27,6 +27,15 @@ namespace rivet::ddl::generated {
 		"kDown", 
 	};
 
+	constexpr static std::array<std::string_view, 6> x12f05be0_labels = {
+		"Forward",
+		"Back",
+		"Left",
+		"Right",
+		"Up",
+		"Down", 
+	};
+
 	enum class x12f05be0 : uint64_t {
 		Forward,
 		Back,

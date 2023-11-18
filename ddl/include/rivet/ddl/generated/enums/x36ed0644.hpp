@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"kActor", 
 	};
 
+	constexpr static std::array<std::string_view, 5> x36ed0644_labels = {
+		"Boolean",
+		"Number",
+		"Vector",
+		"String",
+		"Actor", 
+	};
+
 	enum class x36ed0644 : uint64_t {
 		Boolean,
 		Number,

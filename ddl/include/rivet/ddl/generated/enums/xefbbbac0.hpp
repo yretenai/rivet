@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kImpostorOnly", 
 	};
 
+	constexpr static std::array<std::string_view, 2> xefbbbac0_labels = {
+		"Models And Impostors",
+		"Impostors Only", 
+	};
+
 	enum class xefbbbac0 : uint64_t {
 		Models_And_Impostors,
 		Impostors_Only, 

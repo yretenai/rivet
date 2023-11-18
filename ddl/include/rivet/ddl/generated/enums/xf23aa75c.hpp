@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"video", 
 	};
 
+	constexpr static std::array<std::string_view, 2> xf23aa75c_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xf23aa75c : uint64_t {
 		image,
 		video, 

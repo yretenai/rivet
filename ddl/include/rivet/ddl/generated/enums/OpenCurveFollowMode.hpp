@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kOneShot", 
 	};
 
+	constexpr static std::array<std::string_view, 3> OpenCurveFollowMode_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class OpenCurveFollowMode : uint64_t {
 		Loop,
 		Oscillate,

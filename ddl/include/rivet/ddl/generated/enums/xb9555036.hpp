@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kTypeFacialPoses", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xb9555036_labels = {
+		"Standard clip",
+		"Curves clip",
+		"Facial poses clip", 
+	};
+
 	enum class xb9555036 : uint64_t {
 		Standard_clip,
 		Curves_clip,

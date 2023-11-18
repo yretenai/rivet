@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	IconMapStickSwap::IconMapStickSwap([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): IconMapBase(serialized) {
-		NormalIconId = serialized->get_enum<rivet::ddl::generated::x445aeabc>(NormalIconId_type_id, rivet::ddl::generated::x445aeabc_values);
-		SwappedIconId = serialized->get_enum<rivet::ddl::generated::x445aeabc>(SwappedIconId_type_id, rivet::ddl::generated::x445aeabc_values); 
+		NormalIconId = serialized->get_enum<rivet::ddl::generated::IconId>(NormalIconId_type_id, rivet::ddl::generated::IconId_values);
+		SwappedIconId = serialized->get_enum<rivet::ddl::generated::IconId>(SwappedIconId_type_id, rivet::ddl::generated::IconId_values); 
 	}
 
 	[[nodiscard]] auto

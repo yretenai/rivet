@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kNever", 
 	};
 
+	constexpr static std::array<std::string_view, 4> HibernateMode_labels = {
+		"None",
+		"Mid Range",
+		"Far Range",
+		"Never", 
+	};
+
 	enum class HibernateMode : uint64_t {
 		None,
 		Mid_Range,

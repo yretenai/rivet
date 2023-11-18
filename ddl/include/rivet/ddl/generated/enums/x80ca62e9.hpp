@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kImpact_Leg", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x80ca62e9_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x80ca62e9 : uint64_t {
 		Impact_Head,
 		Impact_Torso,

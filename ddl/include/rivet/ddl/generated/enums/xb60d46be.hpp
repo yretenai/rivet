@@ -32,6 +32,20 @@ namespace rivet::ddl::generated {
 		"PauseLorbs", 
 	};
 
+	constexpr static std::array<std::string_view, 11> xb60d46be_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xb60d46be : uint64_t {
 		VendorPurchase,
 		VendorUpgrade,

@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kBlendNodeTypeCombineAdditive", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x53f8509f_labels = {
+		"Default",
+		"Combine-additive", 
+	};
+
 	enum class x53f8509f : uint64_t {
 		Default,
 		BlendNodeTypeCombineAdditive, 

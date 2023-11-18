@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kAccelAngle", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x79dd0c33_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x79dd0c33 : uint64_t {
 		Default,
 		Gain,

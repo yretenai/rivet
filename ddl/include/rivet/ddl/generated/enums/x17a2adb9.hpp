@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kExactNumber", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x17a2adb9_labels = {
+		"Poisson Distribution",
+		"Exact Number", 
+	};
+
 	enum class x17a2adb9 : uint64_t {
 		Poisson_Distribution,
 		Exact_Number, 

@@ -17,7 +17,7 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/enums/xee0945fb.hpp>
+#include <rivet/ddl/generated/enums/LightingMode.hpp>
 #include <rivet/ddl/generated/EventBase.hpp> 
 
 namespace rivet::ddl::generated {
@@ -35,8 +35,8 @@ namespace rivet::ddl::generated {
 		explicit LightingModeTransitionStartedEvent() = default;
 		explicit LightingModeTransitionStartedEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);
 
-		rivet::ddl::generated::xee0945fb CurrMode {};
-		rivet::ddl::generated::xee0945fb NewMode {};
+		rivet::ddl::generated::LightingMode CurrMode {};
+		rivet::ddl::generated::LightingMode NewMode {};
 		bool IsSaved {}; 
 
 		[[nodiscard]] auto

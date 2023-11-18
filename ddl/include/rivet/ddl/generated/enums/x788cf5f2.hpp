@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kCustom", 
 	};
 
+	constexpr static std::array<std::string_view, 4> x788cf5f2_labels = {
+		"Power",
+		"Speed",
+		"Range",
+		"Custom", 
+	};
+
 	enum class x788cf5f2 : uint64_t {
 		Power,
 		Speed,

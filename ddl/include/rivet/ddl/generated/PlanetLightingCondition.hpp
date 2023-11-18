@@ -17,7 +17,7 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/enums/xee0945fb.hpp> 
+#include <rivet/ddl/generated/enums/LightingMode.hpp> 
 
 namespace rivet::ddl::generated {
 	struct ObjSysUnlockSequence; 
@@ -34,7 +34,7 @@ namespace rivet::ddl::generated {
 		explicit PlanetLightingCondition() = default;
 		explicit PlanetLightingCondition([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);
 
-		rivet::ddl::generated::xee0945fb LightingMode {};
+		rivet::ddl::generated::LightingMode LightingMode {};
 		std::shared_ptr<rivet::ddl::generated::ObjSysUnlockSequence> UnlockCondition {}; 
 
 		[[nodiscard]] auto

@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kNoSpawnOnEnd", 
 	};
 
+	constexpr static std::array<std::string_view, 2> xc237fc83_labels = {
+		"None",
+		"Dont Spawn when starting in End mode", 
+	};
+
 	enum class xc237fc83 : uint64_t {
 		None,
 		Dont_Spawn_when_starting_in_End_mode, 

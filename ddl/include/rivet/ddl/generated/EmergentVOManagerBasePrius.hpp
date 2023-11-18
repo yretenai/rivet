@@ -17,7 +17,7 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/enums/x8d474ebb.hpp>
+#include <rivet/ddl/generated/enums/Voice.hpp>
 #include <rivet/ddl/generated/EmergentVOBasePrius.hpp> 
 
 namespace rivet::ddl::generated {
@@ -33,7 +33,7 @@ namespace rivet::ddl::generated {
 		explicit EmergentVOManagerBasePrius() = default;
 		explicit EmergentVOManagerBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);
 
-		rivet::ddl::generated::x8d474ebb Voice {};
+		rivet::ddl::generated::Voice Voice {};
 		bool EnableInMultiplayer {}; 
 
 		[[nodiscard]] auto

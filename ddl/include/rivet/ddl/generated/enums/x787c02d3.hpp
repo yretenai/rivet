@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kRelativeSlerp", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x787c02d3_labels = {
+		"Standard",
+		"Relative", 
+	};
+
 	enum class x787c02d3 : uint64_t {
 		Standard,
 		Relative, 

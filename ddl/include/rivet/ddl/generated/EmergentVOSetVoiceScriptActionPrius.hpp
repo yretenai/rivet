@@ -17,7 +17,7 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/enums/x8d474ebb.hpp>
+#include <rivet/ddl/generated/enums/Voice.hpp>
 #include <rivet/ddl/generated/enums/x10228b34.hpp> 
 
 namespace rivet::ddl::generated {
@@ -34,7 +34,7 @@ namespace rivet::ddl::generated {
 		explicit EmergentVOSetVoiceScriptActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);
 
 		rivet::ddl::generated::x10228b34 ActionType {};
-		rivet::ddl::generated::x8d474ebb Voice {}; 
+		rivet::ddl::generated::Voice Voice {}; 
 
 		[[nodiscard]] auto
 		get_type_name() const noexcept -> std::string_view override;

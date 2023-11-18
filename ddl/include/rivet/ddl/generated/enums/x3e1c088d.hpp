@@ -41,6 +41,29 @@ namespace rivet::ddl::generated {
 		"kPortal", 
 	};
 
+	constexpr static std::array<std::string_view, 20> x3e1c088d_labels = {
+		"Default",
+		"Move",
+		"Character Move",
+		"Hero Move",
+		"Hero Move Only",
+		"Hero Alt Move",
+		"Ground",
+		"Character Ground",
+		"Hero Ground",
+		"Damage",
+		"Target",
+		"Camera",
+		"CameraObstruct",
+		"Projectile",
+		"Projectile Environment",
+		"Wall Run",
+		"Wall Crawl",
+		"Water",
+		"GroundAndWater",
+		"Portal", 
+	};
+
 	enum class x3e1c088d : uint64_t {
 		Default,
 		Move,

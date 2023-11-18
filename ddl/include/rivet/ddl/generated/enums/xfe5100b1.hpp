@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kWorld", 
 	};
 
+	constexpr static std::array<std::string_view, 2> xfe5100b1_labels = {
+		"Local",
+		"World", 
+	};
+
 	enum class xfe5100b1 : uint64_t {
 		Local,
 		World, 

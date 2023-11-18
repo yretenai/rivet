@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kAnimationTime", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x48037d3a_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x48037d3a : uint64_t {
 		GameTime,
 		RealTime,

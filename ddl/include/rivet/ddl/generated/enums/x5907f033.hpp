@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kHead", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x5907f033_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x5907f033 : uint64_t {
 		None,
 		Body,

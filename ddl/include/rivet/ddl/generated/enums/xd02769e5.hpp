@@ -28,6 +28,16 @@ namespace rivet::ddl::generated {
 		"kBuildStatus", 
 	};
 
+	constexpr static std::array<std::string_view, 7> xd02769e5_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xd02769e5 : uint64_t {
 		Test,
 		BuildWorkerProgress,

@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kPhysics", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x8db2fd48_labels = {
+		"Local",
+		"World",
+		"Physics", 
+	};
+
 	enum class x8db2fd48 : uint64_t {
 		Local,
 		World,

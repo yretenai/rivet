@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"Released", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x8989c8a_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x8989c8a : uint64_t {
 		Pressed,
 		Held,

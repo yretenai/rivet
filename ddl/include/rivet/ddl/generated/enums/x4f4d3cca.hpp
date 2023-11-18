@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"TriggerOnLoadAndEvent", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x4f4d3cca_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x4f4d3cca : uint64_t {
 		OnlyTriggerOnEvent,
 		OnlyTriggerOnZoneLoad,

@@ -17,7 +17,7 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/enums/x8d7e44cf.hpp>
+#include <rivet/ddl/generated/enums/DamageTypes.hpp>
 #include <rivet/ddl/generated/enums/KnockbackLevels.hpp>
 #include <rivet/ddl/generated/StatusEffectBasePrius.hpp> 
 
@@ -50,7 +50,7 @@ namespace rivet::ddl::generated {
 		bool DamageFriends {};
 		bool LoS {};
 		rivet::ddl::generated::KnockbackLevels Knockback {};
-		rivet::ddl::generated::x8d7e44cf Type {};
+		rivet::ddl::generated::DamageTypes Type {};
 		bool DamageStartTimeRandom {};
 		std::string_view DamageLocator {};
 		uint64_t IgnoreActor {}; 

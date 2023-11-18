@@ -30,6 +30,18 @@ namespace rivet::ddl::generated {
 		"kObjectivePing", 
 	};
 
+	constexpr static std::array<std::string_view, 9> xf2109875_labels = {
+		"Hero",
+		"Enemy",
+		"Ally",
+		"Boss",
+		"Hazard",
+		"Interact",
+		"Collectable",
+		"Enemy Heavy",
+		"Objective Ping", 
+	};
+
 	enum class xf2109875 : uint64_t {
 		Hero,
 		Enemy,

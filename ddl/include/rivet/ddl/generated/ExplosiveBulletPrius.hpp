@@ -19,7 +19,7 @@
 
 #include <rivet/ddl/generated/enums/DamageLOSTypes.hpp>
 #include <rivet/ddl/generated/bitsets/x65d7dac2.hpp>
-#include <rivet/ddl/generated/enums/x8d7e44cf.hpp>
+#include <rivet/ddl/generated/enums/DamageTypes.hpp>
 #include <rivet/ddl/generated/SimpleShotPrius.hpp> 
 
 namespace rivet::ddl::generated {
@@ -41,7 +41,7 @@ namespace rivet::ddl::generated {
 		explicit ExplosiveBulletPrius() = default;
 		explicit ExplosiveBulletPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);
 
-		rivet::ddl::generated::x8d7e44cf ExplosionDamageType {};
+		rivet::ddl::generated::DamageTypes ExplosionDamageType {};
 		rivet::ddl::generated::x65d7dac2 DamageFlags {};
 		std::shared_ptr<rivet::ddl::generated::DamageModifierExplosionPrius> ExplosionData {};
 		rivet::ddl::generated::DamageLOSTypes DamageLOSType {}; 

@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"Sniper", 
 	};
 
+	constexpr static std::array<std::string_view, 4> BotUsage_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class BotUsage : uint64_t {
 		EnemyGround,
 		EnemyAir,

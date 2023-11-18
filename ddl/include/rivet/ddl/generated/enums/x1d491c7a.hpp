@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kRight", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x1d491c7a_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x1d491c7a : uint64_t {
 		Left,
 		Right, 

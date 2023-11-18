@@ -30,6 +30,18 @@ namespace rivet::ddl::generated {
 		"kVendor", 
 	};
 
+	constexpr static std::array<std::string_view, 9> xa3499465_labels = {
+		"Head",
+		"Torso",
+		"Legs",
+		"Melee Weapon",
+		"Sets",
+		"Body Type",
+		"Face",
+		"Customize Option",
+		"Vendor Option", 
+	};
+
 	enum class xa3499465 : uint64_t {
 		Head,
 		Torso,

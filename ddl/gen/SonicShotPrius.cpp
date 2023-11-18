@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	SonicShotPrius::SonicShotPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): SimpleShotPrius(serialized) {
-		DamageType = serialized->get_enum<rivet::ddl::generated::x8d7e44cf>(DamageType_type_id, rivet::ddl::generated::x8d7e44cf_values);
+		DamageType = serialized->get_enum<rivet::ddl::generated::DamageTypes>(DamageType_type_id, rivet::ddl::generated::DamageTypes_values);
 		KnockbackLevel = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(KnockbackLevel_type_id, rivet::ddl::generated::KnockbackLevels_values);
 		StartingSize = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(StartingSize_type_id);
 		EndingSize = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(EndingSize_type_id); 

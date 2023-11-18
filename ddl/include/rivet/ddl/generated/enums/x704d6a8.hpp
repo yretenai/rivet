@@ -31,6 +31,19 @@ namespace rivet::ddl::generated {
 		"kFiveTwelve", 
 	};
 
+	constexpr static std::array<std::string_view, 10> x704d6a8_labels = {
+		"None",
+		"2 Slices",
+		"4 Slices",
+		"8 Slices",
+		"16 Slices",
+		"32 Slices",
+		"64 Slices",
+		"128 Slices",
+		"256 Slices",
+		"512 Slices", 
+	};
+
 	enum class x704d6a8 : uint64_t {
 		None,
 		Two,

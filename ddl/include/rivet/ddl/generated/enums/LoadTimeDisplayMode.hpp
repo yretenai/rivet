@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kAlways", 
 	};
 
+	constexpr static std::array<std::string_view, 3> LoadTimeDisplayMode_labels = {
+		"None",
+		"Overbudget",
+		"Always", 
+	};
+
 	enum class LoadTimeDisplayMode : uint64_t {
 		None,
 		Overbudget,

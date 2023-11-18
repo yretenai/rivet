@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"NPTitleId", 
 	};
 
+	constexpr static std::array<std::string_view, 2> xe07d4302_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xe07d4302 : uint64_t {
 		NPCommunicationId,
 		NPTitleId, 

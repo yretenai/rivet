@@ -17,7 +17,7 @@ namespace rivet::ddl::generated {
 		IntroIsInterruptibleByAwareness = serialized->get_bool(IntroIsInterruptibleByAwareness_type_id);
 		IntroIsInterruptibleByModeControl = serialized->get_bool(IntroIsInterruptibleByModeControl_type_id);
 		InterruptedIntroCanBeResumed = serialized->get_bool(InterruptedIntroCanBeResumed_type_id);
-		IntroSpeed = serialized->get_enum<rivet::ddl::generated::xe8421db7>(IntroSpeed_type_id, rivet::ddl::generated::xe8421db7_values);
+		IntroSpeed = serialized->get_enum<rivet::ddl::generated::MovementStyle>(IntroSpeed_type_id, rivet::ddl::generated::MovementStyle_values);
 		SkipAlertAnim = serialized->get_bool(SkipAlertAnim_type_id);
 		DisableIdleWander = serialized->get_bool(DisableIdleWander_type_id);
 		AllowRetaliation = serialized->get_bool(AllowRetaliation_type_id);

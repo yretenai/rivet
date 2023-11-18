@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kClass", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xa9c1295e_labels = {
+		"System",
+		"Job",
+		"Class", 
+	};
+
 	enum class xa9c1295e : uint64_t {
 		System,
 		Job,

@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"kQuit", 
 	};
 
+	constexpr static std::array<std::string_view, 5> x33ef665a_labels = {
+		"none",
+		"complete",
+		"failed",
+		"deactivated",
+		"quit", 
+	};
+
 	enum class x33ef665a : uint64_t {
 		none,
 		complete,

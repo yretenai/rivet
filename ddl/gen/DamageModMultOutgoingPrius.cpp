@@ -10,7 +10,7 @@
 namespace rivet::ddl::generated {
 	DamageModMultOutgoingPrius::DamageModMultOutgoingPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): DamageModifierOutgoingPrius(serialized) {
 		Multiplier = serialized->get_float(Multiplier_type_id);
-		DamageFilter = serialized->get_enums<rivet::ddl::generated::x8d7e44cf>(DamageFilter_type_id, rivet::ddl::generated::x8d7e44cf_values);
+		DamageFilter = serialized->get_enums<rivet::ddl::generated::DamageTypes>(DamageFilter_type_id, rivet::ddl::generated::DamageTypes_values);
 		WeaponTypeFilter = serialized->get_uint32(WeaponTypeFilter_type_id);
 		AllegianceFilter = serialized->get_uint32(AllegianceFilter_type_id);
 		ModifiedTag = serialized->get_uint32(ModifiedTag_type_id); 

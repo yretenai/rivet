@@ -29,6 +29,17 @@ namespace rivet::ddl::generated {
 		"Weakpoint", 
 	};
 
+	constexpr static std::array<std::string_view, 8> HitLocation_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class HitLocation : uint64_t {
 		None,
 		Head,

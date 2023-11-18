@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kGlobal", 
 	};
 
+	constexpr static std::array<std::string_view, 2> xe9023c39_labels = {
+		"Local",
+		"Global", 
+	};
+
 	enum class xe9023c39 : uint64_t {
 		Local,
 		Global, 

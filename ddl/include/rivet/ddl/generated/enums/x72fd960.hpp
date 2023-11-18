@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kFire", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x72fd960_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x72fd960 : uint64_t {
 		Jump,
 		Fire, 

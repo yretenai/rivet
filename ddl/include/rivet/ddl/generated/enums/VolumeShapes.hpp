@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kEllipsoid", 
 	};
 
+	constexpr static std::array<std::string_view, 2> VolumeShapes_labels = {
+		"Cuboid",
+		"Ellipsoid", 
+	};
+
 	enum class VolumeShapes : uint64_t {
 		Cuboid,
 		Ellipsoid, 

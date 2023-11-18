@@ -36,6 +36,24 @@ namespace rivet::ddl::generated {
 		"kShadowState", 
 	};
 
+	constexpr static std::array<std::string_view, 15> xf5eea2a0_labels = {
+		"Triggering Event",
+		"Sending Actor",
+		"Receiving Actor",
+		"Globals",
+		"Constant",
+		"Localization Tag",
+		"Physics Material",
+		"Visual Effect Asset",
+		"Wwise Game Sync",
+		"Wwise Sound Event",
+		"Material Asset",
+		"Physics Material List",
+		"Actor Filter Types",
+		"Visual Effect Spawn Mesh",
+		"Shadow State", 
+	};
+
 	enum class xf5eea2a0 : uint64_t {
 		Triggering_Event,
 		Sending_Actor,

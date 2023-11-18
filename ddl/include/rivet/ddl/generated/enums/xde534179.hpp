@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"kMatchMotionPos", 
 	};
 
+	constexpr static std::array<std::string_view, 5> xde534179_labels = {
+		"Independent",
+		"Match Target T",
+		"Match Motion T",
+		"Match Target Position",
+		"Match Motion Position", 
+	};
+
 	enum class xde534179 : uint64_t {
 		Independent,
 		Match_Target_T,

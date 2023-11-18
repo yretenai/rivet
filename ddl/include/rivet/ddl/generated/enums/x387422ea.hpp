@@ -27,6 +27,15 @@ namespace rivet::ddl::generated {
 		"kBlackGold", 
 	};
 
+	constexpr static std::array<std::string_view, 6> x387422ea_labels = {
+		"Default",
+		"Red",
+		"Green",
+		"Yellow",
+		"White / Pink",
+		"Black / Gold", 
+	};
+
 	enum class x387422ea : uint64_t {
 		Default,
 		Red,

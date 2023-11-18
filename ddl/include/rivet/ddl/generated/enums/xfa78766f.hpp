@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kScreenFit", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xfa78766f_labels = {
+		"None",
+		"Screen",
+		"Screen Fit", 
+	};
+
 	enum class xfa78766f : uint64_t {
 		None,
 		Screen,

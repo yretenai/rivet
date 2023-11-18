@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kCombineAvg", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x1c7d74ff_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x1c7d74ff : uint64_t {
 		CombineMin,
 		CombineMax,

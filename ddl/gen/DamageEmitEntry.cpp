@@ -15,7 +15,7 @@ namespace rivet::ddl::generated {
 		SweptSphereRange = serialized->get_float(SweptSphereRange_type_id);
 		DamageAmount = serialized->get_float(DamageAmount_type_id);
 		DamageApplyTime = serialized->get_float(DamageApplyTime_type_id);
-		Type = serialized->get_enum<rivet::ddl::generated::x8d7e44cf>(Type_type_id, rivet::ddl::generated::x8d7e44cf_values);
+		Type = serialized->get_enum<rivet::ddl::generated::DamageTypes>(Type_type_id, rivet::ddl::generated::DamageTypes_values);
 		StatusAmount = serialized->get_float(StatusAmount_type_id);
 		Knockback = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(Knockback_type_id, rivet::ddl::generated::KnockbackLevels_values);
 		KnockbackAmount = serialized->get_float(KnockbackAmount_type_id);

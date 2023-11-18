@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kDefaultWeaponFire", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x60ab12b0_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x60ab12b0 : uint64_t {
 		None,
 		DefaultWeaponAim,

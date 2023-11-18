@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kPipe", 
 	};
 
+	constexpr static std::array<std::string_view, 2> xcfc05fff_labels = {
+		"Ladder",
+		"Pipe", 
+	};
+
 	enum class xcfc05fff : uint64_t {
 		Ladder,
 		Pipe, 

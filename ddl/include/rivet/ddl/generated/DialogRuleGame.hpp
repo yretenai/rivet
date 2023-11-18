@@ -20,7 +20,7 @@
 #include <rivet/ddl/generated/enums/x48e6c593.hpp>
 #include <rivet/ddl/generated/enums/PlayOnceMode.hpp>
 #include <rivet/ddl/generated/enums/LevelEnum.hpp>
-#include <rivet/ddl/generated/enums/x8d7e44cf.hpp>
+#include <rivet/ddl/generated/enums/DamageTypes.hpp>
 #include <rivet/ddl/generated/enums/xca8fba90.hpp>
 #include <rivet/ddl/generated/enums/HitLocation.hpp>
 #include <rivet/ddl/generated/DialogRule.hpp> 
@@ -53,7 +53,7 @@ namespace rivet::ddl::generated {
 		explicit DialogRuleGame([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);
 
 		rivet::ddl::generated::HitLocation HitLocation {};
-		rivet::ddl::generated::x8d7e44cf DamageType {};
+		rivet::ddl::generated::DamageTypes DamageType {};
 		rivet::ddl::generated::xca8fba90 TargetRelativePos {};
 		rivet::ddl::generated::LevelEnum CurrentPlanet {};
 		rivet::ddl::generated::LevelEnum NotCurrentPlanet {};

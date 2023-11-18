@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kWorld", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x9547deb2_labels = {
+		"Write to speaking character's memory",
+		"Write to world memory for all characters", 
+	};
+
 	enum class x9547deb2 : uint64_t {
 		Character,
 		Write_to_world_memory_for_all_characters, 

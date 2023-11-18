@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kToggle", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xe47e5cf7_labels = {
+		"Enable",
+		"Disable",
+		"Toggle", 
+	};
+
 	enum class xe47e5cf7 : uint64_t {
 		Enable,
 		Disable,

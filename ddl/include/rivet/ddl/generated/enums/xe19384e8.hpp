@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"kCapsule", 
 	};
 
+	constexpr static std::array<std::string_view, 5> xe19384e8_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xe19384e8 : uint64_t {
 		Point,
 		Cuboid,

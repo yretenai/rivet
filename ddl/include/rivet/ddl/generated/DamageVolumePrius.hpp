@@ -19,10 +19,10 @@
 
 #include <rivet/ddl/generated/bitsets/TargetType.hpp>
 #include <rivet/ddl/generated/enums/x6bdf4ba1.hpp>
-#include <rivet/ddl/generated/bitsets/x65d7dac2.hpp>
 #include <rivet/ddl/generated/enums/AllegianceRelation.hpp>
 #include <rivet/ddl/generated/enums/KnockbackLevels.hpp>
-#include <rivet/ddl/generated/enums/x8d7e44cf.hpp> 
+#include <rivet/ddl/generated/bitsets/x65d7dac2.hpp>
+#include <rivet/ddl/generated/enums/DamageTypes.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DamageVolumePrius : rivet::structures::rivet_ddl_base {
@@ -84,7 +84,7 @@ namespace rivet::ddl::generated {
 		float DamagePerSecond {};
 		float DamageInterval {};
 		float IgnoreDuration {};
-		rivet::ddl::generated::x8d7e44cf Type {};
+		rivet::ddl::generated::DamageTypes Type {};
 		float StatusAmount {};
 		bool StatusLastsForever {};
 		rivet::ddl::generated::KnockbackLevels Knockback {};

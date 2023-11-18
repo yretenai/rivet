@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kMeleeThrow", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xff945214_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xff945214 : uint64_t {
 		None,
 		Swingshot,

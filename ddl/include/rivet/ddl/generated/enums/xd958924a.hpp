@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kDisable", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xd958924a_labels = {
+		"Opaque Only",
+		"All",
+		"Disable", 
+	};
+
 	enum class xd958924a : uint64_t {
 		Opaque_Only,
 		All,

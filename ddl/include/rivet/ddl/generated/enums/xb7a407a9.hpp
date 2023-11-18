@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kCircle", 
 	};
 
+	constexpr static std::array<std::string_view, 2> xb7a407a9_labels = {
+		"Square",
+		"Circle", 
+	};
+
 	enum class xb7a407a9 : uint64_t {
 		Square,
 		Circle, 

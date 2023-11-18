@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kForceV3", 
 	};
 
+	constexpr static std::array<std::string_view, 4> x363f69e_labels = {
+		"From System",
+		"Force V1",
+		"Force V2",
+		"Force V3", 
+	};
+
 	enum class x363f69e : uint64_t {
 		From_System,
 		Force_V1,

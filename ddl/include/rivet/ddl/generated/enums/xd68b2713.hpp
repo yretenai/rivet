@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kShelved", 
 	};
 
+	constexpr static std::array<std::string_view, 4> xd68b2713_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xd68b2713 : uint64_t {
 		Any,
 		Pending,

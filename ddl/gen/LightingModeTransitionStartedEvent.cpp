@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	LightingModeTransitionStartedEvent::LightingModeTransitionStartedEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		CurrMode = serialized->get_enum<rivet::ddl::generated::xee0945fb>(CurrMode_type_id, rivet::ddl::generated::xee0945fb_values);
-		NewMode = serialized->get_enum<rivet::ddl::generated::xee0945fb>(NewMode_type_id, rivet::ddl::generated::xee0945fb_values);
+		CurrMode = serialized->get_enum<rivet::ddl::generated::LightingMode>(CurrMode_type_id, rivet::ddl::generated::LightingMode_values);
+		NewMode = serialized->get_enum<rivet::ddl::generated::LightingMode>(NewMode_type_id, rivet::ddl::generated::LightingMode_values);
 		IsSaved = serialized->get_bool(IsSaved_type_id); 
 	}
 

@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kWater", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x92dd42a2_labels = {
+		"None",
+		"Fur",
+		"Water", 
+	};
+
 	enum class x92dd42a2 : uint64_t {
 		None,
 		Fur,

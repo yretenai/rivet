@@ -29,6 +29,17 @@ namespace rivet::ddl::generated {
 		"kFluid", 
 	};
 
+	constexpr static std::array<std::string_view, 8> x11c6712d_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x11c6712d : uint64_t {
 		Static,
 		StaticCanBeDisabled,

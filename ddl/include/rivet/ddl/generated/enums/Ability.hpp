@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kFiring", 
 	};
 
+	constexpr static std::array<std::string_view, 2> Ability_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class Ability : uint64_t {
 		Jumping,
 		Firing, 

@@ -36,6 +36,24 @@ namespace rivet::ddl::generated {
 		"kOxygenTank", 
 	};
 
+	constexpr static std::array<std::string_view, 15> x36ceb0b_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x36ceb0b : uint64_t {
 		Body,
 		GloveLeft,

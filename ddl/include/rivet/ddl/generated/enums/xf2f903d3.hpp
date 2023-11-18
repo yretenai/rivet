@@ -34,6 +34,22 @@ namespace rivet::ddl::generated {
 		"kGalacticMap", 
 	};
 
+	constexpr static std::array<std::string_view, 13> xf2f903d3_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xf2f903d3 : uint64_t {
 		None,
 		Gameplay,

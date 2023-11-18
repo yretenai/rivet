@@ -29,6 +29,17 @@ namespace rivet::ddl::generated {
 		"kMeleeHoverboot", 
 	};
 
+	constexpr static std::array<std::string_view, 8> xef932fba_labels = {
+		"None",
+		"Attack 1",
+		"Attack 2",
+		"Attack 3",
+		"Smash Descend",
+		"Smash Slam",
+		"Melee On Grind",
+		"Melee Hoverboot", 
+	};
+
 	enum class xef932fba : uint64_t {
 		None,
 		Attack_1,

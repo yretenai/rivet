@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	Icon::Icon([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		IconId = serialized->get_enum<rivet::ddl::generated::x445aeabc>(IconId_type_id, rivet::ddl::generated::x445aeabc_values);
+		IconId = serialized->get_enum<rivet::ddl::generated::IconId>(IconId_type_id, rivet::ddl::generated::IconId_values);
 		Texture = serialized->get_string(Texture_type_id);
 		Width = serialized->get_int32(Width_type_id);
 		Height = serialized->get_int32(Height_type_id); 

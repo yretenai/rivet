@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kAnimMirrorXY", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x1c49d08a_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x1c49d08a : uint64_t {
 		AnimMirrorYZ,
 		AnimMirrorXZ,

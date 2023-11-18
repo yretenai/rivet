@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kObject", 
 	};
 
+	constexpr static std::array<std::string_view, 2> ManipSpaceMode_labels = {
+		"World",
+		"Object", 
+	};
+
 	enum class ManipSpaceMode : uint64_t {
 		World,
 		Object, 

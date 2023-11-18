@@ -39,7 +39,9 @@ namespace rivet::ddl::generated {
 		constexpr static std::string_view Shadows_type_name = "Shadows";
 		constexpr static rivet::rivet_type_id Shadows_type_id = 0x5f4e86c4;
 		constexpr static std::string_view Blocker_type_name = "Blocker";
-		constexpr static rivet::rivet_type_id Blocker_type_id = 0x2f6b3de9; 
+		constexpr static rivet::rivet_type_id Blocker_type_id = 0x2f6b3de9;
+		constexpr static std::string_view UpdateEveryFrame_type_name = "UpdateEveryFrame";
+		constexpr static rivet::rivet_type_id UpdateEveryFrame_type_id = 0xc8eb2695; 
 
 		explicit RayTracing() = default;
 		explicit RayTracing([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);
@@ -51,7 +53,8 @@ namespace rivet::ddl::generated {
 		bool AmbientShadows {};
 		bool Reflections {};
 		bool Shadows {};
-		bool Blocker {}; 
+		bool Blocker {};
+		bool UpdateEveryFrame {}; 
 
 		[[nodiscard]] auto
 		get_type_name() const noexcept -> std::string_view override;

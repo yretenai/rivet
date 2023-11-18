@@ -31,6 +31,19 @@ namespace rivet::ddl::generated {
 		"kDefault", 
 	};
 
+	constexpr static std::array<std::string_view, 10> x7ecfc969_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x7ecfc969 : uint64_t {
 		Always,
 		Never,

@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kLayerTypePartialAdd", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x7c99d780_labels = {
+		"Base-layer",
+		"Partial-layer",
+		"Partial-additive-layer", 
+	};
+
 	enum class x7c99d780 : uint64_t {
 		LayerTypeBase,
 		LayerTypePartial,

@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kNone", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xd839f866_labels = {
+		"output to TTY",
+		"present dialog and output to TTY",
+		"no special handling of the failure state will be performed by the application", 
+	};
+
 	enum class xd839f866 : uint64_t {
 		output_to_TTY,
 		present_dialog_and_output_to_TTY,

@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kSpotLight", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xc53d61ca_labels = {
+		"Pyramid",
+		"Point",
+		"Spot", 
+	};
+
 	enum class xc53d61ca : uint64_t {
 		Pyramid,
 		Point,

@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"kCapsule", 
 	};
 
+	constexpr static std::array<std::string_view, 5> VolumeNodeShape_labels = {
+		"Point",
+		"Cuboid",
+		"Ellipsoid",
+		"Cylinder",
+		"Capsule", 
+	};
+
 	enum class VolumeNodeShape : uint64_t {
 		Point,
 		Cuboid,

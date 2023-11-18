@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kWorldSpace", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x51c5867_labels = {
+		"Off",
+		"Object Space",
+		"World Space", 
+	};
+
 	enum class x51c5867 : uint64_t {
 		Off,
 		Object_Space,

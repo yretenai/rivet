@@ -50,6 +50,38 @@ namespace rivet::ddl::generated {
 		"kHoudiniStringArray", 
 	};
 
+	constexpr static std::array<std::string_view, 29> xb44e71fc_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xb44e71fc : uint64_t {
 		Boolean,
 		Color,

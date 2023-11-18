@@ -17,9 +17,9 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/bitsets/x65d7dac2.hpp>
 #include <rivet/ddl/generated/enums/KnockbackLevels.hpp>
-#include <rivet/ddl/generated/enums/x8d7e44cf.hpp> 
+#include <rivet/ddl/generated/bitsets/x65d7dac2.hpp>
+#include <rivet/ddl/generated/enums/DamageTypes.hpp> 
 
 namespace rivet::ddl::generated {
 	struct DDLVector3; 
@@ -125,7 +125,7 @@ namespace rivet::ddl::generated {
 		std::string_view StunOutroDriver {};
 		std::string_view StunCompressPartial {};
 		float DamageAmount {};
-		rivet::ddl::generated::x8d7e44cf DamageType {};
+		rivet::ddl::generated::DamageTypes DamageType {};
 		rivet::ddl::generated::KnockbackLevels Knockback {};
 		float KnockbackAmount {};
 		float KnockbackForce {};

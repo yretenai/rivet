@@ -27,6 +27,15 @@ namespace rivet::ddl::generated {
 		"kRotOrderZYX", 
 	};
 
+	constexpr static std::array<std::string_view, 6> x4eda4f54_labels = {
+		"XYZ",
+		"YZX",
+		"ZXY",
+		"XZY",
+		"YXZ",
+		"ZYX", 
+	};
+
 	enum class x4eda4f54 : uint64_t {
 		XYZ,
 		YZX,

@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kWorld", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x45f5c485_labels = {
+		"Off",
+		"Local",
+		"World", 
+	};
+
 	enum class x45f5c485 : uint64_t {
 		Off,
 		Local,

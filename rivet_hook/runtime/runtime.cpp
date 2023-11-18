@@ -171,9 +171,9 @@ namespace rivet_hook {
 							nlohmann::json::array_t bitset_values;
 							for (auto bi = 0u; bi < ex_12->count; ++bi) {
 								nlohmann::json bitset_value;
-								bitset_value["name"] = ex_12->values[bi];
+								bitset_value["value"] = ex_12->values[bi];
 								bitset_value["id"] = ex_12->ids[bi];
-								bitset_value["value"] = ex_12->names[bi];
+								bitset_value["name"] = ex_12->names[bi];
 								bitset_values.emplace_back(bitset_value);
 							}
 
@@ -186,12 +186,13 @@ namespace rivet_hook {
 						if (enum_ids.find(ex_11->select_info->type_id) == enum_ids.end()) {
 							enum_ids.emplace(ex_11->select_info->type_id);
 							nlohmann::json enuminfo;
-							enuminfo["id"] = type_id;
+							enuminfo["id"] = ex_11->select_info->type_id;
+							enuminfo["id2"] = type_id;
 							nlohmann::json::array_t enum_values;
 							for (auto bi = 0u; bi < ex_11->select_info->count; ++bi) {
 								nlohmann::json enum_value;
 								enum_value["id"] = ex_11->select_info->ids[bi];
-								enum_value["value"] = ex_11->select_info->names[bi];
+								enum_value["name"] = ex_11->select_info->names[bi];
 								enum_value["description"] = ex_11->select_info->descriptions[bi];
 								enum_value["label"] = ex_11->select_info->labels[bi];
 								enum_values.emplace_back(enum_value);

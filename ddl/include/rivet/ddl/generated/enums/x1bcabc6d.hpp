@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kHDR", 
 	};
 
+	constexpr static std::array<std::string_view, 4> x1bcabc6d_labels = {
+		"BMP",
+		"DDS",
+		"PNG",
+		"HDR", 
+	};
+
 	enum class x1bcabc6d : uint64_t {
 		BMP,
 		DDS,

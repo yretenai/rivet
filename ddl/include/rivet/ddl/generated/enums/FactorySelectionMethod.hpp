@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"FinishEach", 
 	};
 
+	constexpr static std::array<std::string_view, 2> FactorySelectionMethod_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class FactorySelectionMethod : uint64_t {
 		RoundRobin,
 		FinishEach, 

@@ -22,6 +22,10 @@ namespace rivet::ddl::generated {
 		"OnDestroyedEvent", 
 	};
 
+	constexpr static std::array<std::string_view, 1> x87a08fd4_labels = {
+		"NONE", 
+	};
+
 	enum class x87a08fd4 : uint64_t {
 		OnDestroyedEvent, 
 	};

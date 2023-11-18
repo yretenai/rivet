@@ -34,6 +34,22 @@ namespace rivet::ddl::generated {
 		"kMaroon", 
 	};
 
+	constexpr static std::array<std::string_view, 13> x6898de8f_labels = {
+		"Default",
+		"Blue",
+		"Green",
+		"Cyan",
+		"Red",
+		"Magenta",
+		"Yellow",
+		"White",
+		"Orange",
+		"Purple",
+		"Teal",
+		"Navy",
+		"Maroon", 
+	};
+
 	enum class x6898de8f : uint64_t {
 		Default,
 		Blue,

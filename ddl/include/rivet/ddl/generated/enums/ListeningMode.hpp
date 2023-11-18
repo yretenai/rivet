@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kListeningModeCount", 
 	};
 
+	constexpr static std::array<std::string_view, 4> ListeningMode_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class ListeningMode : uint64_t {
 		ListeningModeSpeakers,
 		ListeningModeHeadphones,

@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kTriggerCount", 
 	};
 
+	constexpr static std::array<std::string_view, 4> x6200f389_labels = {
+		"All",
+		"Any",
+		"At least active",
+		"Trigger count", 
+	};
+
 	enum class x6200f389 : uint64_t {
 		All,
 		Any,

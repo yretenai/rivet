@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kHit", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xc2d17b4c_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xc2d17b4c : uint64_t {
 		Slam,
 		Throw,

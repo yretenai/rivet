@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"platinum", 
 	};
 
+	constexpr static std::array<std::string_view, 4> xfb81cf7c_labels = {
+		"Bronze (15 pts)",
+		"Silver (30 pts)",
+		"Gold (90 pts)",
+		"Platinum", 
+	};
+
 	enum class xfb81cf7c : uint64_t {
 		bronze,
 		silver,

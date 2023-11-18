@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"kRiver", 
 	};
 
+	constexpr static std::array<std::string_view, 5> xd291bf0b_labels = {
+		"Override Ocean",
+		"Local Water",
+		"Ocean",
+		"Hole",
+		"River", 
+	};
+
 	enum class xd291bf0b : uint64_t {
 		Override_Ocean,
 		Local_Water,

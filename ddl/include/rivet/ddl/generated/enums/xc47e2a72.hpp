@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"kEyes", 
 	};
 
+	constexpr static std::array<std::string_view, 5> xc47e2a72_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xc47e2a72 : uint64_t {
 		None,
 		Skin,

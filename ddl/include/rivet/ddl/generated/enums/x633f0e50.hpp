@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kCine", 
 	};
 
+	constexpr static std::array<std::string_view, 4> x633f0e50_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x633f0e50 : uint64_t {
 		None,
 		All,

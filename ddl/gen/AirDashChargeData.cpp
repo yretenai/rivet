@@ -28,7 +28,7 @@ namespace rivet::ddl::generated {
 		MissOutroDriver = serialized->get_string(MissOutroDriver_type_id);
 		DamageName = serialized->get_string(DamageName_type_id);
 		DamageAmount = serialized->get_float(DamageAmount_type_id);
-		DamageType = serialized->get_enum<rivet::ddl::generated::x8d7e44cf>(DamageType_type_id, rivet::ddl::generated::x8d7e44cf_values);
+		DamageType = serialized->get_enum<rivet::ddl::generated::DamageTypes>(DamageType_type_id, rivet::ddl::generated::DamageTypes_values);
 		Knockback = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(Knockback_type_id, rivet::ddl::generated::KnockbackLevels_values);
 		KnockbackAmount = serialized->get_float(KnockbackAmount_type_id);
 		DamageLocator = serialized->get_string(DamageLocator_type_id);

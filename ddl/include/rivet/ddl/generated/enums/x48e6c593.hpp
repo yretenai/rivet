@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"Sequence", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x48e6c593_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x48e6c593 : uint64_t {
 		Random,
 		Sequence, 

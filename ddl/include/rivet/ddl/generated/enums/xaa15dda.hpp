@@ -35,6 +35,23 @@ namespace rivet::ddl::generated {
 		"kVolumes", 
 	};
 
+	constexpr static std::array<std::string_view, 14> xaa15dda_labels = {
+		"Any",
+		"Only Bots",
+		"Exclude Heroes",
+		"Only Heroes",
+		"Targetable",
+		"Curves",
+		"Only Models",
+		"Only Selected Cine Actors",
+		"Has AnimComponent",
+		"Has ConduitComponent",
+		"Has Active Cloth",
+		"Exclude Cameras",
+		"Cameras",
+		"Volumes", 
+	};
+
 	enum class xaa15dda : uint64_t {
 		Any,
 		Only_Bots,

@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kHitNormal", 
 	};
 
+	constexpr static std::array<std::string_view, 4> xf356f148_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xf356f148 : uint64_t {
 		Down,
 		Up,

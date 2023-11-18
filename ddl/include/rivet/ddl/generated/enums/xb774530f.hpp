@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kType4d", 
 	};
 
+	constexpr static std::array<std::string_view, 4> xb774530f_labels = {
+		"1D",
+		"2D",
+		"3D",
+		"4D", 
+	};
+
 	enum class xb774530f : uint64_t {
 		Type1d,
 		Type2d,

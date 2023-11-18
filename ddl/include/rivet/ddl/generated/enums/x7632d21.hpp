@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kUnsaved", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x7632d21_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x7632d21 : uint64_t {
 		Saved,
 		Unsaved, 

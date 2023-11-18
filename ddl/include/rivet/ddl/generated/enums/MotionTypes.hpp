@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kCubic", 
 	};
 
+	constexpr static std::array<std::string_view, 4> MotionTypes_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class MotionTypes : uint64_t {
 		SmoothStep,
 		Linear,

@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kTile", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x99f55b7c_labels = {
+		"Hex",
+		"Tile", 
+	};
+
 	enum class x99f55b7c : uint64_t {
 		Hex,
 		Tile, 

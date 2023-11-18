@@ -27,6 +27,15 @@ namespace rivet::ddl::generated {
 		"kAll", 
 	};
 
+	constexpr static std::array<std::string_view, 6> xc457a124_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xc457a124 : uint64_t {
 		None,
 		Vanity,

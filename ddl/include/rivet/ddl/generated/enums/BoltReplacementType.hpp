@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"kOvercharge", 
 	};
 
+	constexpr static std::array<std::string_view, 5> BoltReplacementType_labels = {
+		"Default",
+		"Coins",
+		"Orbs",
+		"Rubies",
+		"Overcharge", 
+	};
+
 	enum class BoltReplacementType : uint64_t {
 		Default,
 		Coins,

@@ -28,6 +28,16 @@ namespace rivet::ddl::generated {
 		"kVaultId", 
 	};
 
+	constexpr static std::array<std::string_view, 7> xbd1cea43_labels = {
+		"File Name",
+		"Path",
+		"Created By",
+		"Last Modified By",
+		"Collection",
+		"Tags",
+		"Asset ID", 
+	};
+
 	enum class xbd1cea43 : uint64_t {
 		File_Name,
 		Path,

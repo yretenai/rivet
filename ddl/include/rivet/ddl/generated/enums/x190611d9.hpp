@@ -27,6 +27,15 @@ namespace rivet::ddl::generated {
 		"kBomb", 
 	};
 
+	constexpr static std::array<std::string_view, 6> x190611d9_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x190611d9 : uint64_t {
 		Invalid,
 		Base,

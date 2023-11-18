@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kEnabledCine", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xc74f3c1_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xc74f3c1 : uint64_t {
 		Disabled,
 		Enabled,

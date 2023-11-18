@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kIntOutput", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xdf8f8d7a_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xdf8f8d7a : uint64_t {
 		FloatOutput,
 		Vec2Output,

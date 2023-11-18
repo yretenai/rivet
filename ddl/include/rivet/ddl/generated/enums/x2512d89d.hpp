@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kDeath", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x2512d89d_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x2512d89d : uint64_t {
 		Retreat,
 		Death, 

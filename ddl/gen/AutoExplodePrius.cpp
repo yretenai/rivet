@@ -10,7 +10,7 @@ namespace rivet::ddl::generated {
 		Delay = serialized->get_float(Delay_type_id);
 		Amount = serialized->get_float(Amount_type_id);
 		Radius = serialized->get_float(Radius_type_id);
-		Type = serialized->get_enum<rivet::ddl::generated::x8d7e44cf>(Type_type_id, rivet::ddl::generated::x8d7e44cf_values);
+		Type = serialized->get_enum<rivet::ddl::generated::DamageTypes>(Type_type_id, rivet::ddl::generated::DamageTypes_values);
 		KnockbackLevel = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(KnockbackLevel_type_id, rivet::ddl::generated::KnockbackLevels_values);
 		KnockbackAmount = serialized->get_float(KnockbackAmount_type_id);
 		DestroyOnExplode = serialized->get_bool(DestroyOnExplode_type_id);

@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"kLeft", 
 	};
 
+	constexpr static std::array<std::string_view, 5> xb8c27e2a_labels = {
+		"Centered",
+		"Below Curve",
+		"Above Curve",
+		"On Right",
+		"On Left", 
+	};
+
 	enum class xb8c27e2a : uint64_t {
 		Centered,
 		Below_Curve,

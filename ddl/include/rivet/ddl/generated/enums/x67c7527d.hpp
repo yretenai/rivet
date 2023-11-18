@@ -27,6 +27,15 @@ namespace rivet::ddl::generated {
 		"UpdateInterval", 
 	};
 
+	constexpr static std::array<std::string_view, 6> x67c7527d_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x67c7527d : uint64_t {
 		Damage,
 		FlightSpeed,

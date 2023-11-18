@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"kAll", 
 	};
 
+	constexpr static std::array<std::string_view, 5> x3126d105_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x3126d105 : uint64_t {
 		Primary,
 		Secondary,

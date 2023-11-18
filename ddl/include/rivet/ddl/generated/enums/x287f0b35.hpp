@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kMonolithic", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x287f0b35_labels = {
+		"Unit tiles",
+		"Monolithic", 
+	};
+
 	enum class x287f0b35 : uint64_t {
 		Unit_tiles,
 		Monolithic, 

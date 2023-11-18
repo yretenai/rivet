@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"kHeroShipOrTurret", 
 	};
 
+	constexpr static std::array<std::string_view, 5> xa7ea7084_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xa7ea7084 : uint64_t {
 		Everybody,
 		Enemy,

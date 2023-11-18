@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kVehicle", 
 	};
 
+	constexpr static std::array<std::string_view, 4> AmbientShadowType_labels = {
+		"None",
+		"Pedestrian",
+		"Player",
+		"Vehicle", 
+	};
+
 	enum class AmbientShadowType : uint64_t {
 		None,
 		Pedestrian,

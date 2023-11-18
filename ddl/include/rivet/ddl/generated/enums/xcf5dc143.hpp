@@ -22,6 +22,10 @@ namespace rivet::ddl::generated {
 		"PS5", 
 	};
 
+	constexpr static std::array<std::string_view, 1> xcf5dc143_labels = {
+		"NONE", 
+	};
+
 	enum class xcf5dc143 : uint64_t {
 		PS5, 
 	};

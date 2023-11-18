@@ -48,6 +48,36 @@ namespace rivet::ddl::generated {
 		"PageAccessibilityPresets", 
 	};
 
+	constexpr static std::array<std::string_view, 27> x58b2a3a9_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x58b2a3a9 : uint64_t {
 		PageMain,
 		PageManualSave,

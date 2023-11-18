@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kRandomXYZ", 
 	};
 
+	constexpr static std::array<std::string_view, 4> xb717d73b_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xb717d73b : uint64_t {
 		RandomValidNav,
 		Middle,

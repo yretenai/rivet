@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	EmergentVOSetVoiceScriptActionPrius::EmergentVOSetVoiceScriptActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		Voice = serialized->get_enum<rivet::ddl::generated::x8d474ebb>(Voice_type_id, rivet::ddl::generated::x8d474ebb_values); 
+		Voice = serialized->get_enum<rivet::ddl::generated::Voice>(Voice_type_id, rivet::ddl::generated::Voice_values); 
 	}
 
 	[[nodiscard]] auto

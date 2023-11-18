@@ -47,6 +47,35 @@ namespace rivet::ddl::generated {
 		"kGoldWeapons", 
 	};
 
+	constexpr static std::array<std::string_view, 26> xf06c6830_labels = {
+		"None",
+		"Wrench Skins",
+		"Bolt Replacement",
+		"Character Log",
+		"Hammer Skins",
+		"Photo Mode Pack 01",
+		"RPG",
+		"Ship Skins 01",
+		"Render Modes 01",
+		"Music Pack 01",
+		"Photo Mode Pack 02",
+		"Head Size",
+		"Wrench Model Swap 01",
+		"Hammer Model Swap 01",
+		"Home Run Hitter",
+		"Confetti Headshot",
+		"Photo Mode Pack 03",
+		"Music Pack 02",
+		"Render Modes 02",
+		"Mirror Mode",
+		"Wrench Model Swap 02",
+		"Hammer Model Swap 02",
+		"Ship Skins 02",
+		"Infinite Health",
+		"Infinite Ammo",
+		"Gold Weapons", 
+	};
+
 	enum class xf06c6830 : uint64_t {
 		None,
 		Wrench_Skins,

@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"kBlackout", 
 	};
 
+	constexpr static std::array<std::string_view, 5> LightingConditions_labels = {
+		"Day",
+		"Overcast",
+		"Sunset",
+		"Night",
+		"Blackout", 
+	};
+
 	enum class LightingConditions : uint64_t {
 		Day,
 		Overcast,

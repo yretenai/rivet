@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kConstant", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xc34e772f_labels = {
+		"Along Curve",
+		"Perpendicular to Curve",
+		"Constant Instance Rotation", 
+	};
+
 	enum class xc34e772f : uint64_t {
 		Along_Curve,
 		Perpendicular_to_Curve,

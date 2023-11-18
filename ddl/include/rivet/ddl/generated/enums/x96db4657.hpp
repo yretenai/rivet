@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kVeryHigh", 
 	};
 
+	constexpr static std::array<std::string_view, 4> x96db4657_labels = {
+		"Low",
+		"Medium",
+		"High",
+		"Very High", 
+	};
+
 	enum class x96db4657 : uint64_t {
 		Low,
 		Medium,

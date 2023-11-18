@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kSampleRate10Hz", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x865c089e_labels = {
+		"30 Hz",
+		"15 Hz",
+		"10 Hz", 
+	};
+
 	enum class x865c089e : uint64_t {
 		SampleRate30Hz,
 		SampleRate15Hz,

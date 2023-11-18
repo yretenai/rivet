@@ -17,7 +17,7 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/enums/xe8421db7.hpp>
+#include <rivet/ddl/generated/enums/MovementStyle.hpp>
 #include <rivet/ddl/generated/EventBase.hpp> 
 
 namespace rivet::ddl::generated {
@@ -31,7 +31,7 @@ namespace rivet::ddl::generated {
 		explicit BotMoveCueEvent() = default;
 		explicit BotMoveCueEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);
 
-		rivet::ddl::generated::xe8421db7 MoveStyle {}; 
+		rivet::ddl::generated::MovementStyle MoveStyle {}; 
 
 		[[nodiscard]] auto
 		get_type_name() const noexcept -> std::string_view override;

@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kCharacter", 
 	};
 
+	constexpr static std::array<std::string_view, 4> x9b43a852_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x9b43a852 : uint64_t {
 		Camera,
 		Light,

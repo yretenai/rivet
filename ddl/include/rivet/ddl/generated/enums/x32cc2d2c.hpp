@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kCanDissolveShadows", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x32cc2d2c_labels = {
+		"Do not cast shadows",
+		"Always cast shadows",
+		"Dissolve shadows normally", 
+	};
+
 	enum class x32cc2d2c : uint64_t {
 		Do_not_cast_shadows,
 		Always_cast_shadows,

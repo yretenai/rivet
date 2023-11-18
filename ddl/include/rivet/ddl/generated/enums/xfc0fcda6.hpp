@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kMisc", 
 	};
 
+	constexpr static std::array<std::string_view, 4> xfc0fcda6_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xfc0fcda6 : uint64_t {
 		None,
 		Entitlement,

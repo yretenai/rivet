@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kXZPlane", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x5d0fe319_labels = {
+		"Listener",
+		"Ground",
+		"XZ Plane", 
+	};
+
 	enum class x5d0fe319 : uint64_t {
 		Listener,
 		Ground,

@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kCheckNextPlaythrough", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x2e831899_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x2e831899 : uint64_t {
 		CheckLastPlaythrough,
 		CheckNextPlaythrough, 

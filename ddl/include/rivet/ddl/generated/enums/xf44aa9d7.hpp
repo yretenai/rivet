@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"k3d", 
 	};
 
+	constexpr static std::array<std::string_view, 2> xf44aa9d7_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xf44aa9d7 : uint64_t {
 		k2d,
 		k3d, 

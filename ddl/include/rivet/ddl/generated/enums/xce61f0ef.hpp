@@ -29,6 +29,17 @@ namespace rivet::ddl::generated {
 		"kMountAbilityL2", 
 	};
 
+	constexpr static std::array<std::string_view, 8> xce61f0ef_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xce61f0ef : uint64_t {
 		MountAbilitySquare,
 		MountAbilityCircle,

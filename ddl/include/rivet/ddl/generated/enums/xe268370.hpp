@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kNone", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xe268370_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xe268370 : uint64_t {
 		XAxis,
 		YAxis,

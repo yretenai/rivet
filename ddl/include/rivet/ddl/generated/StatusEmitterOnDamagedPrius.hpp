@@ -17,7 +17,7 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/enums/x8d7e44cf.hpp>
+#include <rivet/ddl/generated/enums/DamageTypes.hpp>
 #include <rivet/ddl/generated/StatusEmitterBasePrius.hpp> 
 
 namespace rivet::ddl::generated {
@@ -37,7 +37,7 @@ namespace rivet::ddl::generated {
 
 		float DamageThreshold {};
 		float ProcPercent {};
-		std::vector<rivet::ddl::generated::x8d7e44cf> DamageTypes {}; 
+		std::vector<rivet::ddl::generated::DamageTypes> DamageTypes {}; 
 
 		[[nodiscard]] auto
 		get_type_name() const noexcept -> std::string_view override;

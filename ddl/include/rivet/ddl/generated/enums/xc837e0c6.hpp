@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kHiddenModelBoth", 
 	};
 
+	constexpr static std::array<std::string_view, 4> xc837e0c6_labels = {
+		"Not hidden",
+		"Hidden when using Model Outer Layer",
+		"Hidden when using Model Inner Layer",
+		"Hidden when using Model Outer and Inner Layers", 
+	};
+
 	enum class xc837e0c6 : uint64_t {
 		Not_hidden,
 		Hidden_when_using_Model_Outer_Layer,

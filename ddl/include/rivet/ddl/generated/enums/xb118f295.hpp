@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kForceSubtitle", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xb118f295_labels = {
+		"None",
+		"Not Subtitled",
+		"Force Subtitle", 
+	};
+
 	enum class xb118f295 : uint64_t {
 		None,
 		Not_Subtitled,

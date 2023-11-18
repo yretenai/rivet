@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kPerPointCountUsingSourcePoints", 
 	};
 
+	constexpr static std::array<std::string_view, 4> x4155b3ed_labels = {
+		"By Coverage using Mask Layer",
+		"By Density using Mask Layer",
+		"Total Point Count using Mask Layer",
+		"Per Point Count using Source Points", 
+	};
+
 	enum class x4155b3ed : uint64_t {
 		By_Coverage_using_Mask_Layer,
 		By_Density_using_Mask_Layer,

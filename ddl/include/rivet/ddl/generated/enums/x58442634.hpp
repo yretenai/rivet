@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kDarken", 
 	};
 
+	constexpr static std::array<std::string_view, 4> x58442634_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x58442634 : uint64_t {
 		Multiply,
 		Screen,

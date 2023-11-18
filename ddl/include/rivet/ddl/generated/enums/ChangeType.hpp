@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kAllSessions", 
 	};
 
+	constexpr static std::array<std::string_view, 4> ChangeType_labels = {
+		"Other",
+		"Session",
+		"Asset",
+		"Change applies to all sessions", 
+	};
+
 	enum class ChangeType : uint64_t {
 		Other,
 		Session,

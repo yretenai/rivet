@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kEndAtTarget", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x69c22897_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x69c22897 : uint64_t {
 		ThruTarget,
 		StartingFromTarget,

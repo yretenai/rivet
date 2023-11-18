@@ -28,6 +28,16 @@ namespace rivet::ddl::generated {
 		"Composite", 
 	};
 
+	constexpr static std::array<std::string_view, 7> x940d80bd_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x940d80bd : uint64_t {
 		String,
 		Actor,

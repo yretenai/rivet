@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kExclusive", 
 	};
 
+	constexpr static std::array<std::string_view, 3> PhotoModeStatus_labels = {
+		"Enabled",
+		"Disabled",
+		"Exclusive", 
+	};
+
 	enum class PhotoModeStatus : uint64_t {
 		Enabled,
 		Disabled,

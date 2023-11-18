@@ -41,6 +41,29 @@ namespace rivet::ddl::generated {
 		"kSkipCinematic", 
 	};
 
+	constexpr static std::array<std::string_view, 20> x847316cf_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x847316cf : uint64_t {
 		None,
 		Header,

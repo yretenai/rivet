@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kSet", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x2d67b08a_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x2d67b08a : uint64_t {
 		Multiply,
 		Add,

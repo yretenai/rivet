@@ -33,6 +33,21 @@ namespace rivet::ddl::generated {
 		"kMassiveHeavy", 
 	};
 
+	constexpr static std::array<std::string_view, 12> x2c44a864_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x2c44a864 : uint64_t {
 		None,
 		LowLight,

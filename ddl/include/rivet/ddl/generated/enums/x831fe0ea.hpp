@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kRand", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x831fe0ea_labels = {
+		"Keep",
+		"Invert",
+		"Random", 
+	};
+
 	enum class x831fe0ea : uint64_t {
 		Keep,
 		Invert,

@@ -29,6 +29,17 @@ namespace rivet::ddl::generated {
 		"kLast", 
 	};
 
+	constexpr static std::array<std::string_view, 8> xa8fd47b8_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xa8fd47b8 : uint64_t {
 		None,
 		XAxis,

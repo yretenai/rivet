@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kBiBlendNodeTypeDifference", 
 	};
 
+	constexpr static std::array<std::string_view, 4> x7286b9e9_labels = {
+		"Default",
+		"Additive",
+		"Combine-additive",
+		"Difference", 
+	};
+
 	enum class x7286b9e9 : uint64_t {
 		Default,
 		Additive,

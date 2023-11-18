@@ -22,6 +22,10 @@ namespace rivet::ddl::generated {
 		"PSNObject", 
 	};
 
+	constexpr static std::array<std::string_view, 1> x80ef7527_labels = {
+		"NONE", 
+	};
+
 	enum class x80ef7527 : uint64_t {
 		PSNObject, 
 	};

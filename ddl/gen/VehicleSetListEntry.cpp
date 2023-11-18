@@ -13,7 +13,7 @@
 namespace rivet::ddl::generated {
 	VehicleSetListEntry::VehicleSetListEntry([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		SetName = serialized->get_string(SetName_type_id);
-		RequiredLightingModes = serialized->get_enums<rivet::ddl::generated::xee0945fb>(RequiredLightingModes_type_id, rivet::ddl::generated::xee0945fb_values);
+		RequiredLightingModes = serialized->get_enums<rivet::ddl::generated::LightingMode>(RequiredLightingModes_type_id, rivet::ddl::generated::LightingMode_values);
 		RequiredMissionUnlocks = serialized->unwrap_into<rivet::ddl::generated::ObjSysUnlockSequence>(RequiredMissionUnlocks_type_id);
 		RequiredContainerRegions = serialized->get_strings(RequiredContainerRegions_type_id);
 		SpawnInfo = serialized->unwrap_into<rivet::ddl::generated::VehicleSpawnInfo>(SpawnInfo_type_id);

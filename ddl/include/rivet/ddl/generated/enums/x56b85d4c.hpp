@@ -41,6 +41,29 @@ namespace rivet::ddl::generated {
 		"kSplashExitHuge", 
 	};
 
+	constexpr static std::array<std::string_view, 20> x56b85d4c_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x56b85d4c : uint64_t {
 		SplashSmall,
 		SplashMedium,

@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kLost", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xabe03d0c_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xabe03d0c : uint64_t {
 		None,
 		Gained,

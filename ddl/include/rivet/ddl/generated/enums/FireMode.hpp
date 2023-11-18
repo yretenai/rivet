@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kToggle", 
 	};
 
+	constexpr static std::array<std::string_view, 3> FireMode_labels = {
+		"Default",
+		"Hold",
+		"Toggle", 
+	};
+
 	enum class FireMode : uint64_t {
 		Default,
 		Hold,

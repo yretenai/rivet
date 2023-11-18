@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"kDbExtra", 
 	};
 
+	constexpr static std::array<std::string_view, 5> xec2141ec_labels = {
+		"Db version is Up-to-date with what is on disk",
+		"DB version is behind version on disk",
+		"Db version is ahead of version on disk",
+		"Db entry does not exist",
+		"Db has an extra entry that does not exist on disk", 
+	};
+
 	enum class xec2141ec : uint64_t {
 		DbUpToDate,
 		DB_version_is_behind_version_on_disk,

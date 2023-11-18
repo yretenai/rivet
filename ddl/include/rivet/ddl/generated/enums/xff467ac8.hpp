@@ -27,6 +27,15 @@ namespace rivet::ddl::generated {
 		"kA", 
 	};
 
+	constexpr static std::array<std::string_view, 6> xff467ac8_labels = {
+		"Off",
+		"Color",
+		"Red",
+		"Green",
+		"Blue",
+		"Alpha", 
+	};
+
 	enum class xff467ac8 : uint64_t {
 		Off,
 		Color,

@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kBad", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x21a0df30_labels = {
+		"Good",
+		"Bad", 
+	};
+
 	enum class x21a0df30 : uint64_t {
 		Good,
 		Bad, 

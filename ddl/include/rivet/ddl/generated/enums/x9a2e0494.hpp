@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kOffscreenFull", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x9a2e0494_labels = {
+		"Offscreen Half",
+		"Offscreen Full", 
+	};
+
 	enum class x9a2e0494 : uint64_t {
 		Offscreen_Half,
 		Offscreen_Full, 

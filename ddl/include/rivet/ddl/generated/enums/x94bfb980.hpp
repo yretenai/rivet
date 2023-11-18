@@ -36,6 +36,24 @@ namespace rivet::ddl::generated {
 		"kRSCustom6", 
 	};
 
+	constexpr static std::array<std::string_view, 15> x94bfb980_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x94bfb980 : uint64_t {
 		Enemy,
 		Hero,

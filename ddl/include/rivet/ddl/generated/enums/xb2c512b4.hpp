@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kVerticalSpacer", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xb2c512b4_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xb2c512b4 : uint64_t {
 		BuiltNode,
 		HorizontalSpacer,

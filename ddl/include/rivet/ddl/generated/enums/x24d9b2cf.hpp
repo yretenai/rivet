@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kDontUse", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x24d9b2cf_labels = {
+		"Use Prius Values",
+		"Use Component Defaults", 
+	};
+
 	enum class x24d9b2cf : uint64_t {
 		Use_Prius_Values,
 		Use_Component_Defaults, 

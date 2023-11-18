@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kBlendCurves", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xb02a7b53_labels = {
+		"Intro Curve",
+		"Intro Curve Fixed",
+		"Blend Curves", 
+	};
+
 	enum class xb02a7b53 : uint64_t {
 		Intro_Curve,
 		Intro_Curve_Fixed,

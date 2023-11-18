@@ -30,6 +30,18 @@ namespace rivet::ddl::generated {
 		"kSoftBody", 
 	};
 
+	constexpr static std::array<std::string_view, 9> x9f6b8de9_labels = {
+		"Color (sRGB)",
+		"Custom (Linear)",
+		"Variance Map",
+		"Normal Map",
+		"Gloss Map",
+		"IBL Cube",
+		"IES Light",
+		"Rigid Body Anim",
+		"Soft Body Anim", 
+	};
+
 	enum class x9f6b8de9 : uint64_t {
 		Color,
 		Custom,

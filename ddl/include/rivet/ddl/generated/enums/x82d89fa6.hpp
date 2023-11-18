@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kHitReact", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x82d89fa6_labels = {
+		"None",
+		"Hit React", 
+	};
+
 	enum class x82d89fa6 : uint64_t {
 		None,
 		Hit_React, 

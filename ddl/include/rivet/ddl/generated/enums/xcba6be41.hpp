@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kGeo", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xcba6be41_labels = {
+		"Spline",
+		"Volume",
+		"Models", 
+	};
+
 	enum class xcba6be41 : uint64_t {
 		Spline,
 		Volume,

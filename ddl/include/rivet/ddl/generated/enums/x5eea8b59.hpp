@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"kTypeStepped", 
 	};
 
+	constexpr static std::array<std::string_view, 5> x5eea8b59_labels = {
+		"Smooth",
+		"Linear",
+		"Flat",
+		"Free",
+		"Stepped", 
+	};
+
 	enum class x5eea8b59 : uint64_t {
 		Smooth,
 		Linear,

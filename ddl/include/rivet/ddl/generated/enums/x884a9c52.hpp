@@ -27,6 +27,15 @@ namespace rivet::ddl::generated {
 		"float64", 
 	};
 
+	constexpr static std::array<std::string_view, 6> x884a9c52_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x884a9c52 : uint64_t {
 		int32,
 		int64,

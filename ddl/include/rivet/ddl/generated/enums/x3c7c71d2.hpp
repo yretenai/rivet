@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kRemoteOnly", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x3c7c71d2_labels = {
+		"All Events",
+		"Self Event Only",
+		"Remote Event Only", 
+	};
+
 	enum class x3c7c71d2 : uint64_t {
 		All_Events,
 		Self_Event_Only,

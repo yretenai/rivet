@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kEight", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xbc02c29e_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xbc02c29e : uint64_t {
 		None,
 		Four,

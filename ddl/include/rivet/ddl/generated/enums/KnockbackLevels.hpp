@@ -27,6 +27,15 @@ namespace rivet::ddl::generated {
 		"kFive", 
 	};
 
+	constexpr static std::array<std::string_view, 6> KnockbackLevels_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class KnockbackLevels : uint64_t {
 		None,
 		One,

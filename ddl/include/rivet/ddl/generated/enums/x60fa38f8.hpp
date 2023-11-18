@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kBlendDurationTypeBranchC", 
 	};
 
+	constexpr static std::array<std::string_view, 4> x60fa38f8_labels = {
+		"Interpolate",
+		"Branch A",
+		"Branch B",
+		"Branch C", 
+	};
+
 	enum class x60fa38f8 : uint64_t {
 		Interpolate,
 		Branch_A,

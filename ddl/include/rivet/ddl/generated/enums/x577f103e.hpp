@@ -37,6 +37,25 @@ namespace rivet::ddl::generated {
 		"kReferencedGraphNode", 
 	};
 
+	constexpr static std::array<std::string_view, 16> x577f103e_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x577f103e : uint64_t {
 		Invalid,
 		AssetReferenceNode,

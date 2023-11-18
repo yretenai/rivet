@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kAdd", 
 	};
 
+	constexpr static std::array<std::string_view, 3> KeyFrameModifierOp_labels = {
+		"Multiply",
+		"Replace",
+		"Add", 
+	};
+
 	enum class KeyFrameModifierOp : uint64_t {
 		Multiply,
 		Replace,

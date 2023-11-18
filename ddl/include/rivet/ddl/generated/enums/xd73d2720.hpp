@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kSCurve", 
 	};
 
+	constexpr static std::array<std::string_view, 2> xd73d2720_labels = {
+		"Linear",
+		"SCurve", 
+	};
+
 	enum class xd73d2720 : uint64_t {
 		Linear,
 		SCurve, 

@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kAcceptYours", 
 	};
 
+	constexpr static std::array<std::string_view, 4> x5c9fe7cc_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x5c9fe7cc : uint64_t {
 		Safe,
 		Merge,

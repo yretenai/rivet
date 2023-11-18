@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kFileLink", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x2efb4283_labels = {
+		"Here",
+		"Other Config", 
+	};
+
 	enum class x2efb4283 : uint64_t {
 		Here,
 		Other_Config, 

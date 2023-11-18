@@ -49,6 +49,37 @@ namespace rivet::ddl::generated {
 		"kAll", 
 	};
 
+	constexpr static std::array<std::string_view, 28> xf28253cd_labels = {
+		"None",
+		"Skin Color",
+		"Head Actor",
+		"Head Variant",
+		"Face",
+		"Tattoos",
+		"Leg Tattoos",
+		"Hair",
+		"Facial Hair",
+		"Hair Primary Color",
+		"Hair Secondary Color",
+		"Facial Hair Primary Color",
+		"Eye Color",
+		"Underwear (Top)",
+		"Underwear (Bottom)",
+		"Shirts",
+		"Outerwear",
+		"Pants",
+		"Footwear",
+		"Gloves",
+		"Headwear",
+		"Accessories",
+		"Body Size",
+		"Melee Weapon",
+		"Insomniac Sets",
+		"Player Sets",
+		"Default Item",
+		"All Categories", 
+	};
+
 	enum class xf28253cd : uint64_t {
 		None,
 		Skin_Color,

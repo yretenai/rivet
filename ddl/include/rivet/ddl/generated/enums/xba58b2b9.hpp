@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kVerbose", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xba58b2b9_labels = {
+		"NONE",
+		"Standard (On-screen, plus new high memory usage printed to TTY)",
+		"Verbose (On-screen, plus all new high water marks printed to TTY)", 
+	};
+
 	enum class xba58b2b9 : uint64_t {
 		None,
 		Standard,

@@ -38,6 +38,26 @@ namespace rivet::ddl::generated {
 		"kNone", 
 	};
 
+	constexpr static std::array<std::string_view, 17> x77a4e9ba_labels = {
+		"Emitter 0",
+		"Emitter 1",
+		"Emitter 2",
+		"Emitter 3",
+		"Emitter 4",
+		"Emitter 5",
+		"Emitter 6",
+		"Emitter 7",
+		"Emitter 8",
+		"Emitter 9",
+		"Emitter 10",
+		"Emitter 11",
+		"Emitter 12",
+		"Emitter 13",
+		"Emitter 14",
+		"Emitter 15",
+		"None", 
+	};
+
 	enum class x77a4e9ba : uint64_t {
 		Emitter_0,
 		Emitter_1,

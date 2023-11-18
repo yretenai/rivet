@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kNeverOcclude", 
 	};
 
+	constexpr static std::array<std::string_view, 2> OccluderType_labels = {
+		"Occlude If Static",
+		"Never Occlude", 
+	};
+
 	enum class OccluderType : uint64_t {
 		Occlude_If_Static,
 		Never_Occlude, 

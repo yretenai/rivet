@@ -30,6 +30,18 @@ namespace rivet::ddl::generated {
 		"kOpRandRange", 
 	};
 
+	constexpr static std::array<std::string_view, 9> xd224b8de_labels = {
+		"Multiply",
+		"Divide",
+		"Add",
+		"Subtract",
+		"Modulo",
+		"And",
+		"Or",
+		"Rand Select",
+		"Rand Range", 
+	};
+
 	enum class xd224b8de : uint64_t {
 		Multiply,
 		Divide,

@@ -29,6 +29,17 @@ namespace rivet::ddl::generated {
 		"kTypeCinematicClip", 
 	};
 
+	constexpr static std::array<std::string_view, 8> xc87cc46b_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xc87cc46b : uint64_t {
 		TypeBindPose,
 		TypeClip,

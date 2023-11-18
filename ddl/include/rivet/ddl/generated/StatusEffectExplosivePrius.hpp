@@ -19,7 +19,7 @@
 
 #include <rivet/ddl/generated/bitsets/TargetType.hpp>
 #include <rivet/ddl/generated/enums/KnockbackLevels.hpp>
-#include <rivet/ddl/generated/enums/x8d7e44cf.hpp>
+#include <rivet/ddl/generated/enums/DamageTypes.hpp>
 #include <rivet/ddl/generated/StatusEffectBasePrius.hpp> 
 
 namespace rivet::ddl::generated {
@@ -66,7 +66,7 @@ namespace rivet::ddl::generated {
 		bool KillSelfOnExplode {};
 		bool DamageFriends {};
 		bool LastDamagerIsExplosionDamager {};
-		rivet::ddl::generated::x8d7e44cf ExplosionDamageType {};
+		rivet::ddl::generated::DamageTypes ExplosionDamageType {};
 		rivet::ddl::generated::KnockbackLevels ExplosionKnockbackLevel {};
 		rivet::ddl::generated::TargetType ProximityTargetMask {}; 
 

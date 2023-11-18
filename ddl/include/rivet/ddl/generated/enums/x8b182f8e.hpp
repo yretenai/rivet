@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"debugReboot", 
 	};
 
+	constexpr static std::array<std::string_view, 4> x8b182f8e_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x8b182f8e : uint64_t {
 		boot,
 		liveTile,

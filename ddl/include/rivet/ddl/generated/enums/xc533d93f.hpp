@@ -22,6 +22,10 @@ namespace rivet::ddl::generated {
 		"kHeld", 
 	};
 
+	constexpr static std::array<std::string_view, 1> xc533d93f_labels = {
+		"NONE", 
+	};
+
 	enum class xc533d93f : uint64_t {
 		Held, 
 	};

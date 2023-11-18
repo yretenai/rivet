@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kChargeAttackMaxDamage", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x8da10c81_labels = {
+		"None",
+		"Attack Damage Amount",
+		"Charge Max Damage", 
+	};
+
 	enum class x8da10c81 : uint64_t {
 		None,
 		Attack_Damage_Amount,

@@ -37,6 +37,25 @@ namespace rivet::ddl::generated {
 		"kAttachLocator", 
 	};
 
+	constexpr static std::array<std::string_view, 16> xe76a4768_labels = {
+		"Hide",
+		"Show",
+		"Destroy",
+		"Kill",
+		"Place In World",
+		"Leave In World",
+		"Attach Left",
+		"Attach Right",
+		"Attach Sync",
+		"Attach Matrix",
+		"Hide Weapon",
+		"Show Weapon",
+		"Arm Explosive",
+		"Attach To Interact",
+		"Detach From Interact",
+		"Attach Locator", 
+	};
+
 	enum class xe76a4768 : uint64_t {
 		Hide,
 		Show,

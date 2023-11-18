@@ -28,6 +28,16 @@ namespace rivet::ddl::generated {
 		"kOrthographicZNeg", 
 	};
 
+	constexpr static std::array<std::string_view, 7> CameraProjectionType_labels = {
+		"Perspective",
+		"Left",
+		"Right",
+		"Top",
+		"Bottom",
+		"Front",
+		"Back", 
+	};
+
 	enum class CameraProjectionType : uint64_t {
 		Perspective,
 		Left,

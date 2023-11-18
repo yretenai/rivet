@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"MaxSpacing", 
 	};
 
+	constexpr static std::array<std::string_view, 4> VerticalSpacingMode_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class VerticalSpacingMode : uint64_t {
 		CompactSpacing,
 		StraightenLines,

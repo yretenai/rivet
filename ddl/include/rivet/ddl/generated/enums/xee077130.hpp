@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kEverything", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xee077130_labels = {
+		"Disable",
+		"Vertical",
+		"Everything", 
+	};
+
 	enum class xee077130 : uint64_t {
 		Disable,
 		Vertical,

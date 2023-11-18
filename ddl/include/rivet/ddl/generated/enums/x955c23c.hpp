@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"kDefault", 
 	};
 
+	constexpr static std::array<std::string_view, 5> x955c23c_labels = {
+		"Off",
+		"Aspect Blur",
+		"Vertical Video Blur",
+		"Fade To Black",
+		"Default", 
+	};
+
 	enum class x955c23c : uint64_t {
 		Off,
 		Aspect_Blur,

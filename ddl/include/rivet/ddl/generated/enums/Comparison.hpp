@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"Greater", 
 	};
 
+	constexpr static std::array<std::string_view, 5> Comparison_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class Comparison : uint64_t {
 		Less,
 		LessOrEqual,

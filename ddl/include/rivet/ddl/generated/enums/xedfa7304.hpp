@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kAll", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xedfa7304_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xedfa7304 : uint64_t {
 		None,
 		SlowOnly,

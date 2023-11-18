@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kTriggerBoth", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x626794b4_labels = {
+		"Left",
+		"Right",
+		"Both", 
+	};
+
 	enum class x626794b4 : uint64_t {
 		Left,
 		Right,

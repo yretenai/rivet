@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kPersistent", 
 	};
 
+	constexpr static std::array<std::string_view, 2> FrameGrabStyle_labels = {
+		"Standard",
+		"Persistent", 
+	};
+
 	enum class FrameGrabStyle : uint64_t {
 		Standard,
 		Persistent, 

@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kOff", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x8f9b9ab2_labels = {
+		"Experiential",
+		"Functional",
+		"Off", 
+	};
+
 	enum class x8f9b9ab2 : uint64_t {
 		Experiential,
 		Functional,

@@ -34,6 +34,22 @@ namespace rivet::ddl::generated {
 		"kVirus", 
 	};
 
+	constexpr static std::array<std::string_view, 13> x6bdf4ba1_labels = {
+		"Neutral",
+		"Hero (MP Blue Team)",
+		"MP Red Team",
+		"Indigenous",
+		"Thugs 4 Less",
+		"Neo-Nefarious",
+		"Pirate",
+		"Neo-Nefarious Civilian",
+		"Megalopolis Civilian",
+		"CivilianEnemy",
+		"Ambient Target",
+		"Cordelion Worker",
+		"Virus", 
+	};
+
 	enum class x6bdf4ba1 : uint64_t {
 		Neutral,
 		BlueTeam,

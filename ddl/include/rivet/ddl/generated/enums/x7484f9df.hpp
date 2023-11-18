@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"Platinum", 
 	};
 
+	constexpr static std::array<std::string_view, 5> x7484f9df_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x7484f9df : uint64_t {
 		None,
 		Bronze,

@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kShotPaneD", 
 	};
 
+	constexpr static std::array<std::string_view, 4> xe916d2e3_labels = {
+		"Pane A",
+		"Pane B",
+		"Pane C",
+		"Pane D", 
+	};
+
 	enum class xe916d2e3 : uint64_t {
 		Pane_A,
 		Pane_B,

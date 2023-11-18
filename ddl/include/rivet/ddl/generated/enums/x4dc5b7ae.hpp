@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kExitToLobby", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x4dc5b7ae_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x4dc5b7ae : uint64_t {
 		ExitToPreviousFrontend,
 		ExitToDebugFrontend,

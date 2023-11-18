@@ -19,8 +19,8 @@
 
 #include <rivet/ddl/generated/enums/DamageLOSTypes.hpp>
 #include <rivet/ddl/generated/enums/x6f69eca.hpp>
-#include <rivet/ddl/generated/enums/x8d7e44cf.hpp>
 #include <rivet/ddl/generated/bitsets/x65d7dac2.hpp>
+#include <rivet/ddl/generated/enums/DamageTypes.hpp>
 #include <rivet/ddl/generated/BeamShotPrius.hpp> 
 
 namespace rivet::ddl::generated {
@@ -49,11 +49,11 @@ namespace rivet::ddl::generated {
 		explicit ShotKamehamehaPrius() = default;
 		explicit ShotKamehamehaPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);
 
-		rivet::ddl::generated::x8d7e44cf DamageType {};
+		rivet::ddl::generated::DamageTypes DamageType {};
 		std::vector<std::shared_ptr<rivet::ddl::generated::KnockbackTierData>> KnockbackTiers {};
 		rivet::ddl::generated::x65d7dac2 DamageFlags {};
 		rivet::ddl::generated::x6f69eca AudioFollowerType {};
-		rivet::ddl::generated::x8d7e44cf V5ExplosionDamageType {};
+		rivet::ddl::generated::DamageTypes V5ExplosionDamageType {};
 		std::shared_ptr<rivet::ddl::generated::DamageModifierExplosionPrius> V5ExplosionData {};
 		rivet::ddl::generated::DamageLOSTypes V5ExplosionDamageLOSType {}; 
 

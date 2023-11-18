@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kRatio", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xf12451bd_labels = {
+		"Offset",
+		"Origin",
+		"Ratio", 
+	};
+
 	enum class xf12451bd : uint64_t {
 		Offset,
 		Origin,

@@ -22,6 +22,10 @@ namespace rivet::ddl::generated {
 		"kAcceptOfferPassthrough", 
 	};
 
+	constexpr static std::array<std::string_view, 1> xec7023d4_labels = {
+		"NONE", 
+	};
+
 	enum class xec7023d4 : uint64_t {
 		AcceptOfferPassthrough, 
 	};

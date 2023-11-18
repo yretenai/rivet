@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kEnableCharacterMove", 
 	};
 
+	constexpr static std::array<std::string_view, 4> x1940ab58_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x1940ab58 : uint64_t {
 		CollisionOn,
 		CollisionOff,

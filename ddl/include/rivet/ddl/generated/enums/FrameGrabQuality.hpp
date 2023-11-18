@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"kGBufferDiffuse", 
 	};
 
+	constexpr static std::array<std::string_view, 5> FrameGrabQuality_labels = {
+		"Color Half Size",
+		"Color Full Size",
+		"Bloom",
+		"Ripples",
+		"Color GBuffer", 
+	};
+
 	enum class FrameGrabQuality : uint64_t {
 		Color_Half_Size,
 		Color_Full_Size,

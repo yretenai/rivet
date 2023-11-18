@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kFast", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x9aa61c3c_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x9aa61c3c : uint64_t {
 		Slow,
 		Normal,

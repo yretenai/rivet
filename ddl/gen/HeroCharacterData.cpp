@@ -12,7 +12,7 @@ namespace rivet::ddl::generated {
 	HeroCharacterData::HeroCharacterData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		DisplayName = serialized->get_string(DisplayName_type_id);
 		HeroType = serialized->get_enum<rivet::ddl::generated::HeroTypes>(HeroType_type_id, rivet::ddl::generated::HeroTypes_values);
-		Voice = serialized->get_enum<rivet::ddl::generated::x8d474ebb>(Voice_type_id, rivet::ddl::generated::x8d474ebb_values);
+		Voice = serialized->get_enum<rivet::ddl::generated::Voice>(Voice_type_id, rivet::ddl::generated::Voice_values);
 		ActorAsset = serialized->unwrap_into<rivet::ddl::generated::AssetReferenceDef>(ActorAsset_type_id);
 		CharacterOptions = serialized->unwrap_into<rivet::ddl::generated::CharacterOptionData>(CharacterOptions_type_id); 
 	}

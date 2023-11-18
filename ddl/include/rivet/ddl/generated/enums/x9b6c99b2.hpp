@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kCameraAdjustNone", 
 	};
 
+	constexpr static std::array<std::string_view, 4> x9b6c99b2_labels = {
+		"All",
+		"Rotation",
+		"Position",
+		"None", 
+	};
+
 	enum class x9b6c99b2 : uint64_t {
 		All,
 		Rotation,

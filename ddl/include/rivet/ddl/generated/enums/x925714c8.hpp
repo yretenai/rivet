@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kTrackActor", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x925714c8_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x925714c8 : uint64_t {
 		TrackGround,
 		TrackActor, 

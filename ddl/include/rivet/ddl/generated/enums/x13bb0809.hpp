@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kPlanarFlock", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x13bb0809_labels = {
+		"Swarm (3D)",
+		"Planar (2D)", 
+	};
+
 	enum class x13bb0809 : uint64_t {
 		SwarmFlock,
 		PlanarFlock, 

@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"k30Plus", 
 	};
 
+	constexpr static std::array<std::string_view, 4> x30cc915a_labels = {
+		"Disable",
+		"All FPS",
+		"30 Only",
+		"30+", 
+	};
+
 	enum class x30cc915a : uint64_t {
 		Disable,
 		All_FPS,

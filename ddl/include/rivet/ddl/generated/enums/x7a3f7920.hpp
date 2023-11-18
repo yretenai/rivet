@@ -39,6 +39,27 @@ namespace rivet::ddl::generated {
 		"kBack", 
 	};
 
+	constexpr static std::array<std::string_view, 18> x7a3f7920_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x7a3f7920 : uint64_t {
 		X,
 		Y,

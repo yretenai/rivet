@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kSequenceNodeTypeCombineAdditive", 
 	};
 
+	constexpr static std::array<std::string_view, 2> xe5615bda_labels = {
+		"Default",
+		"Combine-additive", 
+	};
+
 	enum class xe5615bda : uint64_t {
 		Default,
 		SequenceNodeTypeCombineAdditive, 

@@ -18,8 +18,8 @@
 #include <rivet/structures/rivet_serialization.hpp>
 
 #include <rivet/ddl/generated/enums/KnockbackLevels.hpp>
-#include <rivet/ddl/generated/enums/x8d7e44cf.hpp>
 #include <rivet/ddl/generated/bitsets/x65d7dac2.hpp>
+#include <rivet/ddl/generated/enums/DamageTypes.hpp>
 #include <rivet/ddl/generated/AnimDamageAttackStyleBase.hpp> 
 
 namespace rivet::ddl::generated {
@@ -63,7 +63,7 @@ namespace rivet::ddl::generated {
 		bool UsePrimConfig {};
 		std::vector<std::shared_ptr<rivet::ddl::generated::DamagePrimContainer>> Prims {};
 		std::string_view PrimConfig {};
-		rivet::ddl::generated::x8d7e44cf DamageType {};
+		rivet::ddl::generated::DamageTypes DamageType {};
 		float DamageAmount {};
 		float StatusAmount {};
 		rivet::ddl::generated::KnockbackLevels Knockback {};

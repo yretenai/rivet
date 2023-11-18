@@ -19,7 +19,7 @@ namespace rivet::ddl::generated {
 		LerpRadius = serialized->get_bool(LerpRadius_type_id);
 		DamagePrimLength = serialized->get_float(DamagePrimLength_type_id);
 		LerpLength = serialized->get_bool(LerpLength_type_id);
-		DamageType = serialized->get_enum<rivet::ddl::generated::x8d7e44cf>(DamageType_type_id, rivet::ddl::generated::x8d7e44cf_values);
+		DamageType = serialized->get_enum<rivet::ddl::generated::DamageTypes>(DamageType_type_id, rivet::ddl::generated::DamageTypes_values);
 		DamageAmount = serialized->get_float(DamageAmount_type_id);
 		ArmorPassThroughPercentage = serialized->get_float(ArmorPassThroughPercentage_type_id);
 		Knockback = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(Knockback_type_id, rivet::ddl::generated::KnockbackLevels_values);

@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"k2_4", 
 	};
 
+	constexpr static std::array<std::string_view, 5> x30866c77_labels = {
+		"None",
+		"0.82",
+		"1.333",
+		"1.777",
+		"2.4", 
+	};
+
 	enum class x30866c77 : uint64_t {
 		None,
 		k0_82,

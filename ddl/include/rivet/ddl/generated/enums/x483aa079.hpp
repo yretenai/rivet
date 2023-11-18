@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"Right", 
 	};
 
+	constexpr static std::array<std::string_view, 5> x483aa079_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x483aa079 : uint64_t {
 		None,
 		Up,

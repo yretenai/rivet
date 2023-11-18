@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"Large", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x32557ecb_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x32557ecb : uint64_t {
 		Small,
 		Medium,

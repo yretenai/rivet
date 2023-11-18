@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kManufacturer", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x73ee3658_labels = {
+		"Homeworld",
+		"Location",
+		"Manufacturer", 
+	};
+
 	enum class x73ee3658 : uint64_t {
 		Homeworld,
 		Location,

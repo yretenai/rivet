@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kCollisionNormalIsZAxis", 
 	};
 
+	constexpr static std::array<std::string_view, 3> ActorOrientation_labels = {
+		"Predicted Velocity At Impact Is Z-Axis",
+		"Camera To Hit Is Z-Axis",
+		"Collision Normal Is Z-Axis", 
+	};
+
 	enum class ActorOrientation : uint64_t {
 		PredictedVelocityAtImpactIsZAxis,
 		CameraToHitIsZAxis,

@@ -27,6 +27,15 @@ namespace rivet::ddl::generated {
 		"kOverrideVolume", 
 	};
 
+	constexpr static std::array<std::string_view, 6> x803b6ebb_labels = {
+		"None",
+		"Editor",
+		"Camera System",
+		"Listener Component",
+		"Cinematic2",
+		"Override Volume", 
+	};
+
 	enum class x803b6ebb : uint64_t {
 		None,
 		Editor,

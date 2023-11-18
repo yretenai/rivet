@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kGUI", 
 	};
 
+	constexpr static std::array<std::string_view, 2> xf8706507_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xf8706507 : uint64_t {
 		Debug,
 		GUI, 

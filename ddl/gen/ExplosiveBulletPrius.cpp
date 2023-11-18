@@ -14,7 +14,7 @@
 
 namespace rivet::ddl::generated {
 	ExplosiveBulletPrius::ExplosiveBulletPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): SimpleShotPrius(serialized) {
-		ExplosionDamageType = serialized->get_enum<rivet::ddl::generated::x8d7e44cf>(ExplosionDamageType_type_id, rivet::ddl::generated::x8d7e44cf_values);
+		ExplosionDamageType = serialized->get_enum<rivet::ddl::generated::DamageTypes>(ExplosionDamageType_type_id, rivet::ddl::generated::DamageTypes_values);
 		DamageFlags = serialized->get_bitset<rivet::ddl::generated::x65d7dac2>(DamageFlags_type_id, rivet::ddl::generated::x65d7dac2_values);
 		ExplosionData = serialized->unwrap_into<rivet::ddl::generated::DamageModifierExplosionPrius>(ExplosionData_type_id);
 		DamageLOSType = serialized->get_enum<rivet::ddl::generated::DamageLOSTypes>(DamageLOSType_type_id, rivet::ddl::generated::DamageLOSTypes_values); 

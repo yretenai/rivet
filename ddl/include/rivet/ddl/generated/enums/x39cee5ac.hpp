@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kPlayForever", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x39cee5ac_labels = {
+		"Play One",
+		"Play All",
+		"Play Forever", 
+	};
+
 	enum class x39cee5ac : uint64_t {
 		Play_One,
 		Play_All,

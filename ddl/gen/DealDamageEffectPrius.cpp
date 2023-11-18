@@ -13,7 +13,7 @@ namespace rivet::ddl::generated {
 		StatusAmount = serialized->get_float(StatusAmount_type_id);
 		StatusDuration = serialized->get_float(StatusDuration_type_id);
 		NoRepeatTime = serialized->get_float(NoRepeatTime_type_id);
-		Type = serialized->get_enum<rivet::ddl::generated::x8d7e44cf>(Type_type_id, rivet::ddl::generated::x8d7e44cf_values);
+		Type = serialized->get_enum<rivet::ddl::generated::DamageTypes>(Type_type_id, rivet::ddl::generated::DamageTypes_values);
 		DamageFlags = serialized->get_bitset<rivet::ddl::generated::x65d7dac2>(DamageFlags_type_id, rivet::ddl::generated::x65d7dac2_values); 
 	}
 

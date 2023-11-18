@@ -27,6 +27,15 @@ namespace rivet::ddl::generated {
 		"kCryptographyFull", 
 	};
 
+	constexpr static std::array<std::string_view, 6> x27dd4d8e_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x27dd4d8e : uint64_t {
 		CryptographyNone,
 		CryptographyPartial,

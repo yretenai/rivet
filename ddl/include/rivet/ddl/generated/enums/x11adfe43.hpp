@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kPS5_60", 
 	};
 
+	constexpr static std::array<std::string_view, 4> x11adfe43_labels = {
+		"None",
+		"PS5 30-FPS",
+		"PS5 60-FPS w/ RT",
+		"PS5 60-FPS", 
+	};
+
 	enum class x11adfe43 : uint64_t {
 		None,
 		PS5_30,

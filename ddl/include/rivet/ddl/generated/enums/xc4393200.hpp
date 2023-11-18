@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"Flyby", 
 	};
 
+	constexpr static std::array<std::string_view, 4> xc4393200_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xc4393200 : uint64_t {
 		Tree,
 		Bush,

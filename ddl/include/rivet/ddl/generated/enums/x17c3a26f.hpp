@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kVolume", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x17c3a26f_labels = {
+		"Sphere",
+		"Box (object-aligned)",
+		"Volume (linked in the prius)", 
+	};
+
 	enum class x17c3a26f : uint64_t {
 		Sphere,
 		OBB,

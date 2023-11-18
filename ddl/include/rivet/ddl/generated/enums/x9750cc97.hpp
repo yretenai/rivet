@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kLoadMarked", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x9750cc97_labels = {
+		"Load All",
+		"Load None",
+		"Load Marked", 
+	};
+
 	enum class x9750cc97 : uint64_t {
 		Load_All,
 		Load_None,

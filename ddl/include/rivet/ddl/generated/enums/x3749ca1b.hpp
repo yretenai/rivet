@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kMirrorAxisXY", 
 	};
 
+	constexpr static std::array<std::string_view, 4> x3749ca1b_labels = {
+		"none",
+		"y-z axis",
+		"x-z axis",
+		"x-y axis", 
+	};
+
 	enum class x3749ca1b : uint64_t {
 		none,
 		MirrorAxisYZ,

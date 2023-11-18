@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kBlendDissolve", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x2153dc33_labels = {
+		"None",
+		"Fade",
+		"Dissolve", 
+	};
+
 	enum class x2153dc33 : uint64_t {
 		None,
 		Fade,

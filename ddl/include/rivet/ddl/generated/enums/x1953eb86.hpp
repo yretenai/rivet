@@ -28,6 +28,16 @@ namespace rivet::ddl::generated {
 		"kOther", 
 	};
 
+	constexpr static std::array<std::string_view, 7> x1953eb86_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x1953eb86 : uint64_t {
 		GoldenPath,
 		SideQuest,

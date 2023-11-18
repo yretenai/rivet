@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kFlagsPerformanceBody", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x38a2d189_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x38a2d189 : uint64_t {
 		FlagsNone,
 		FlagsPerformanceHead,

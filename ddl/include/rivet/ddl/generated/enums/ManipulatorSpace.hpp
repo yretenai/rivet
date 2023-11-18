@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kObject", 
 	};
 
+	constexpr static std::array<std::string_view, 2> ManipulatorSpace_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class ManipulatorSpace : uint64_t {
 		World,
 		Object, 

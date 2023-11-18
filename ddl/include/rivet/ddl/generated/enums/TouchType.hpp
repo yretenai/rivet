@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kUntouched", 
 	};
 
+	constexpr static std::array<std::string_view, 2> TouchType_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class TouchType : uint64_t {
 		Touched,
 		Untouched, 

@@ -28,6 +28,16 @@ namespace rivet::ddl::generated {
 		"kWWiseEventFail", 
 	};
 
+	constexpr static std::array<std::string_view, 7> x7f6273a0_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x7f6273a0 : uint64_t {
 		NoSoundBank,
 		Stomped,

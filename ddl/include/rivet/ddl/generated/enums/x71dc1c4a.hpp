@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"RemoveFromMissionList", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x71dc1c4a_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x71dc1c4a : uint64_t {
 		PromptReloadMissionState,
 		AutoReloadMissionState,

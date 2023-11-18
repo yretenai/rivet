@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kHigh", 
 	};
 
+	constexpr static std::array<std::string_view, 3> VehicleDensity_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class VehicleDensity : uint64_t {
 		Low,
 		Normal,

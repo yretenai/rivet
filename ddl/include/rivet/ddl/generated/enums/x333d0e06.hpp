@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kOverride", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x333d0e06_labels = {
+		"Scale",
+		"Override", 
+	};
+
 	enum class x333d0e06 : uint64_t {
 		Scale,
 		Override, 

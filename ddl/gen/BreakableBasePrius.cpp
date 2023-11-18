@@ -40,10 +40,10 @@ namespace rivet::ddl::generated {
 		TakeImpactDamage = serialized->get_bool(TakeImpactDamage_type_id);
 		ScriptDamageOnly = serialized->get_bool(ScriptDamageOnly_type_id);
 		AreaDamage = serialized->get_float(AreaDamage_type_id);
-		AreaDamageType = serialized->get_enum<rivet::ddl::generated::x8d7e44cf>(AreaDamageType_type_id, rivet::ddl::generated::x8d7e44cf_values);
+		AreaDamageType = serialized->get_enum<rivet::ddl::generated::DamageTypes>(AreaDamageType_type_id, rivet::ddl::generated::DamageTypes_values);
 		AreaDamageRadius = serialized->get_float(AreaDamageRadius_type_id);
 		AreaDamageKnockback = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(AreaDamageKnockback_type_id, rivet::ddl::generated::KnockbackLevels_values);
-		AreaStatusType = serialized->get_enum<rivet::ddl::generated::x8d7e44cf>(AreaStatusType_type_id, rivet::ddl::generated::x8d7e44cf_values);
+		AreaStatusType = serialized->get_enum<rivet::ddl::generated::DamageTypes>(AreaStatusType_type_id, rivet::ddl::generated::DamageTypes_values);
 		AreaStatusAmount = serialized->get_float(AreaStatusAmount_type_id);
 		DamageAttacker = serialized->get_bool(DamageAttacker_type_id);
 		DamageIsPercent = serialized->get_bool(DamageIsPercent_type_id);

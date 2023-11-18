@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kLastDamager", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x9443909f_labels = {
+		"Actor",
+		"Last Damager", 
+	};
+
 	enum class x9443909f : uint64_t {
 		Actor,
 		Last_Damager, 

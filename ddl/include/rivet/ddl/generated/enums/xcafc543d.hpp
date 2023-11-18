@@ -28,6 +28,16 @@ namespace rivet::ddl::generated {
 		"kOverlay", 
 	};
 
+	constexpr static std::array<std::string_view, 7> xcafc543d_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xcafc543d : uint64_t {
 		Global,
 		Debug,

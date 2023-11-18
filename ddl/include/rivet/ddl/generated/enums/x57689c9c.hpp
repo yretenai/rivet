@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"kRegex", 
 	};
 
+	constexpr static std::array<std::string_view, 5> x57689c9c_labels = {
+		"Equals",
+		"Contains",
+		"Prefix",
+		"Suffix",
+		"Regex", 
+	};
+
 	enum class x57689c9c : uint64_t {
 		Equals,
 		Contains,

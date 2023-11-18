@@ -17,7 +17,7 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/enums/x8d474ebb.hpp> 
+#include <rivet/ddl/generated/enums/Voice.hpp> 
 
 namespace rivet::ddl::generated {
 	struct DEVOFollowup;
@@ -43,7 +43,7 @@ namespace rivet::ddl::generated {
 		explicit Line() = default;
 		explicit Line([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);
 
-		rivet::ddl::generated::x8d474ebb CharacterVoice {};
+		rivet::ddl::generated::Voice CharacterVoice {};
 		std::string_view LineTagStart {};
 		std::string_view LineTagEnd {};
 		float Weight {};

@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"Last", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x5ead2ea5_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x5ead2ea5 : uint64_t {
 		First,
 		Last, 

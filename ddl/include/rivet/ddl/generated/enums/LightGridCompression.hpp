@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"kHighestCompression", 
 	};
 
+	constexpr static std::array<std::string_view, 5> LightGridCompression_labels = {
+		"No Compression",
+		"Low Compression",
+		"Medium Compression",
+		"High Compression",
+		"Highest Compression", 
+	};
+
 	enum class LightGridCompression : uint64_t {
 		No_Compression,
 		Low_Compression,

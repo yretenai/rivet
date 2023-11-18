@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kOverride", 
 	};
 
+	constexpr static std::array<std::string_view, 4> x9c037e6_labels = {
+		"Baked",
+		"Runtime",
+		"Raw",
+		"Override", 
+	};
+
 	enum class x9c037e6 : uint64_t {
 		Baked,
 		Runtime,

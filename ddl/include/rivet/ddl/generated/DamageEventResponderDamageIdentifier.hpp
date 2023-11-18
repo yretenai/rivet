@@ -17,7 +17,7 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/enums/x8d7e44cf.hpp> 
+#include <rivet/ddl/generated/enums/DamageTypes.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DamageEventResponderDamageIdentifier : rivet::structures::rivet_ddl_base {
@@ -32,7 +32,7 @@ namespace rivet::ddl::generated {
 		explicit DamageEventResponderDamageIdentifier() = default;
 		explicit DamageEventResponderDamageIdentifier([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);
 
-		rivet::ddl::generated::x8d7e44cf TypeOfDamage {};
+		rivet::ddl::generated::DamageTypes TypeOfDamage {};
 		std::string_view DamageDescription {}; 
 
 		[[nodiscard]] auto

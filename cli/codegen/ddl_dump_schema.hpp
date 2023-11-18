@@ -85,14 +85,14 @@ struct type_field_info {
 
 	void
 	from_json(const nlohmann::json &json) {
-		name.from_json(json, "serialized_name");
+		name.from_json(json, "name");
 		type_name.from_json(json, "", "type_id");
-		allow_base_type.from_json(json, "clamp_type", "");
+		allow_base_type.from_json(json, "type_restrict_name", "type_restrict_id");
 		type = static_cast<rivet::structures::rivet_serialized_type>(json["type"].get<int32_t>());
 		array_type = static_cast<serialized_array_type>(json["array_type"].get<int32_t>());
 
 		if (type == rivet::structures::rivet_serialized_type::enum_value) {
-			type_name.id = json["enum_id"].get<rivet::rivet_type_id>();
+			type_name.id = json["enum_type_id"].get<rivet::rivet_type_id>();
 		}
 	}
 };
@@ -124,22 +124,26 @@ struct enum_value_info {
 	name_info name {};
 	name_info decl_name {};
 	name_info friendly_name {};
+	name_info label {};
 
 	void
 	from_json(const nlohmann::json &json) {
-		name.from_json(json, "serialized_name", "id");
+		name.from_json(json, "name", "id");
 		decl_name = name;
 		friendly_name.from_json(json, "name", "");
+		label.from_json(json, "label", "");
 	}
 };
 
 struct enum_info {
 	name_info name {};
+	name_info name2 {};
 	std::vector<enum_value_info> values {};
 
 	void
 	from_json(const nlohmann::json &json) {
-		name.from_json(json, "serialized_name", "id");
+		name.from_json(json, "name", "id");
+		name2.from_json(json, "name", "id2");
 		values.reserve(json["values"].size());
 		for (const auto &value : json["values"]) {
 			values.emplace_back();
@@ -155,7 +159,7 @@ struct bitset_value_info {
 
 	void
 	from_json(const nlohmann::json &json) {
-		name.from_json(json, "name", "hash");
+		name.from_json(json, "name", "id");
 		decl_name = name;
 		value = json["value"].get<uint64_t>();
 	}
@@ -260,7 +264,7 @@ struct dump_root {
 				throw std::runtime_error("enum name does not start with a letter");
 			}
 
-			for (auto &[name, decl_name, friendly_name] : enum_->values) {
+			for (auto &[name, decl_name, friendly_name, label] : enum_->values) {
 				if (name.name.empty()) {
 					throw std::runtime_error("enum value name is empty");
 				}
@@ -321,11 +325,11 @@ struct dump_root {
 		for (auto &enum_ : enums) {
 			lookup[enum_->name.id] = enum_;
 
-			for (auto &[name, decl_name, friendly_name] : enum_->values) {
+			for (auto &[name, decl_name, friendly_name, label] : enum_->values) {
 				// check if alphanum and starts with a letter
-				if (!friendly_name.name.empty() && (std::isalpha(friendly_name.name[0]) != 0 || friendly_name.name[0] == '_') &&
-					std::ranges::all_of(friendly_name.name, [](const unsigned char test) { return std::isalnum(test) != 0 || test == '_' || test == ' '; })) {
-					name = friendly_name;
+				if (!label.name.empty() && label.name != "NONE" && (std::isalpha(label.name[0]) != 0 || label.name[0] == '_') &&
+					std::ranges::all_of(label.name, [](const unsigned char test) { return std::isalnum(test) != 0 || test == '_' || test == ' '; })) {
+					name = label;
 					std::ranges::replace(name.name, ' ', '_');
 				} else {
 					// remove leading k
@@ -388,23 +392,24 @@ struct dump_root {
 			const auto &field_names = name_counts[enum_info->name.id];
 
 			const auto target_hash = enum_info->name.id;
+			const auto target_hash2 = enum_info->name2.id;
 
 			for (const auto &field_name : field_names) {
-				if (rivet::hash::hash_type_id(field_name) == target_hash) {
+				if (rivet::hash::hash_type_id(field_name) == target_hash || rivet::hash::hash_type_id(field_name) == target_hash2) {
 					enum_info->name.name = field_name;
 					break;
 				}
 
 				// Platform -> Platforms
 				auto plural = field_name + "s";
-				if (rivet::hash::hash_type_id(plural) == target_hash) {
+				if (rivet::hash::hash_type_id(plural) == target_hash || rivet::hash::hash_type_id(plural) == target_hash2) {
 					enum_info->name.name = plural;
 					break;
 				}
 
 				// Country -> Countries
 				auto plural2 = field_name + "es";
-				if (rivet::hash::hash_type_id(plural2) == target_hash) {
+				if (rivet::hash::hash_type_id(plural2) == target_hash || rivet::hash::hash_type_id(plural2) == target_hash2) {
 					enum_info->name.name = plural2;
 					break;
 				}
@@ -412,7 +417,7 @@ struct dump_root {
 				// Category -> Categories
 				if (field_name.size() > 1) {
 					auto plural3 = field_name.substr(0, field_name.size() - 1) + "ies";
-					if (rivet::hash::hash_type_id(plural3) == target_hash) {
+					if (rivet::hash::hash_type_id(plural3) == target_hash || rivet::hash::hash_type_id(plural3) == target_hash2) {
 						enum_info->name.name = plural3;
 						break;
 					}
@@ -467,8 +472,8 @@ struct dump_root {
 
 	void
 	from_json(const nlohmann::json &json) {
-		roots.reserve(json["root_types"].size());
-		for (const auto &root : json["root_types"]) {
+		roots.reserve(json["roots"].size());
+		for (const auto &root : json["roots"]) {
 			roots.emplace_back();
 			roots.back().from_json(root);
 		}

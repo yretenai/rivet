@@ -27,6 +27,15 @@ namespace rivet::ddl::generated {
 		"kNone", 
 	};
 
+	constexpr static std::array<std::string_view, 6> x8492ce7f_labels = {
+		"Ellipse",
+		"Trapezoid",
+		"Model XY Slice",
+		"2D Profile",
+		"Curve",
+		"None", 
+	};
+
 	enum class x8492ce7f : uint64_t {
 		Ellipse,
 		Trapezoid,

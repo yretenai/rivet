@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kAttackBarrier", 
 	};
 
+	constexpr static std::array<std::string_view, 4> x40742051_labels = {
+		"Attack",
+		"TraversalObjectBlock",
+		"ActiveTraversalBlock",
+		"AttackFortBarrier", 
+	};
+
 	enum class x40742051 : uint64_t {
 		Attack,
 		TraversalObjectBlock,

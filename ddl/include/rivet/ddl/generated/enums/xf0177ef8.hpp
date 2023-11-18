@@ -38,6 +38,26 @@ namespace rivet::ddl::generated {
 		"kTeleporter", 
 	};
 
+	constexpr static std::array<std::string_view, 17> xf0177ef8_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xf0177ef8 : uint64_t {
 		Objective,
 		ObjectiveOptional,

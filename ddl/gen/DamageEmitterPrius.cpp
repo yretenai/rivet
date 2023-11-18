@@ -13,7 +13,7 @@ namespace rivet::ddl::generated {
 		DamageHash = serialized->get_string(DamageHash_type_id);
 		StartActive = serialized->get_bool(StartActive_type_id);
 		DamagePerSecond = serialized->get_float(DamagePerSecond_type_id);
-		Type = serialized->get_enum<rivet::ddl::generated::x8d7e44cf>(Type_type_id, rivet::ddl::generated::x8d7e44cf_values);
+		Type = serialized->get_enum<rivet::ddl::generated::DamageTypes>(Type_type_id, rivet::ddl::generated::DamageTypes_values);
 		StatusAmount = serialized->get_float(StatusAmount_type_id);
 		Knockback = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(Knockback_type_id, rivet::ddl::generated::KnockbackLevels_values);
 		KnockbackAmount = serialized->get_float(KnockbackAmount_type_id);

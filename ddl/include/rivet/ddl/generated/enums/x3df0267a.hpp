@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kBoth", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x3df0267a_labels = {
+		"Out",
+		"In",
+		"Both", 
+	};
+
 	enum class x3df0267a : uint64_t {
 		Out,
 		In,

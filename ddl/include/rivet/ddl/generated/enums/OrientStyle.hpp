@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kBillboard", 
 	};
 
+	constexpr static std::array<std::string_view, 4> OrientStyle_labels = {
+		"Camera",
+		"Local",
+		"World",
+		"Billboard", 
+	};
+
 	enum class OrientStyle : uint64_t {
 		Camera,
 		Local,

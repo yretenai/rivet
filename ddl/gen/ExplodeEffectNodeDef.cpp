@@ -10,7 +10,7 @@
 
 namespace rivet::ddl::generated {
 	ExplodeEffectNodeDef::ExplodeEffectNodeDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): NodalShotEffectNodeBaseDef(serialized) {
-		DamageType = serialized->get_enum<rivet::ddl::generated::x8d7e44cf>(DamageType_type_id, rivet::ddl::generated::x8d7e44cf_values);
+		DamageType = serialized->get_enum<rivet::ddl::generated::DamageTypes>(DamageType_type_id, rivet::ddl::generated::DamageTypes_values);
 		DamageFlags = serialized->get_bitset<rivet::ddl::generated::x65d7dac2>(DamageFlags_type_id, rivet::ddl::generated::x65d7dac2_values);
 		DamageOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(DamageOffset_type_id);
 		OffsetMode = serialized->get_enum<rivet::ddl::generated::xe1cdcd87>(OffsetMode_type_id, rivet::ddl::generated::xe1cdcd87_values);

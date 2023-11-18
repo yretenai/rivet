@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kCameraDepth", 
 	};
 
+	constexpr static std::array<std::string_view, 4> SortStyle_labels = {
+		"Newest Draws Last",
+		"Oldest Draws Last",
+		"Camera Distance",
+		"Camera Depth", 
+	};
+
 	enum class SortStyle : uint64_t {
 		Newest_Draws_Last,
 		Oldest_Draws_Last,

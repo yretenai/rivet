@@ -31,6 +31,19 @@ namespace rivet::ddl::generated {
 		"ShotTagI", 
 	};
 
+	constexpr static std::array<std::string_view, 10> xadae2fa7_labels = {
+		"None",
+		"Script Tag A",
+		"Script Tag B",
+		"Script Tag C",
+		"Script Tag D",
+		"Script Tag E",
+		"Script Tag F",
+		"Script Tag G",
+		"Script Tag H",
+		"Script Tag I", 
+	};
+
 	enum class xadae2fa7 : uint64_t {
 		None,
 		Script_Tag_A,

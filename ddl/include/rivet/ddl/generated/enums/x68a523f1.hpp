@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kHideOriginalActor", 
 	};
 
+	constexpr static std::array<std::string_view, 4> x68a523f1_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x68a523f1 : uint64_t {
 		LeaveOriginal,
 		ToggleStump,

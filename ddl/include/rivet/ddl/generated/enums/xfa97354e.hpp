@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kPivotAtStart", 
 	};
 
+	constexpr static std::array<std::string_view, 2> xfa97354e_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xfa97354e : uint64_t {
 		PivotCentered,
 		PivotAtStart, 

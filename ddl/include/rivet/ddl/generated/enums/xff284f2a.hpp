@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kSkeleton", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xff284f2a_labels = {
+		"Disabled",
+		"Bind to Geometry",
+		"Bind to Skeleton", 
+	};
+
 	enum class xff284f2a : uint64_t {
 		Disabled,
 		Bind_to_Geometry,

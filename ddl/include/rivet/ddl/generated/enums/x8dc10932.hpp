@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kAnimBlendAuxTypeBranchC", 
 	};
 
+	constexpr static std::array<std::string_view, 4> x8dc10932_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x8dc10932 : uint64_t {
 		AnimBlendAuxTypeDominant,
 		AnimBlendAuxTypeBranchA,

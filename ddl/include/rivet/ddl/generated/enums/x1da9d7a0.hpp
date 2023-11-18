@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"ExitToFrontend", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x1da9d7a0_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x1da9d7a0 : uint64_t {
 		ZurkonPreFinale,
 		ExitToFrontend, 

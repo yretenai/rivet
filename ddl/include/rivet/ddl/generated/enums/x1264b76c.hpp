@@ -30,6 +30,18 @@ namespace rivet::ddl::generated {
 		"kPurple", 
 	};
 
+	constexpr static std::array<std::string_view, 9> x1264b76c_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x1264b76c : uint64_t {
 		Gray,
 		Black,

@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kFailed", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x7627517a_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x7627517a : uint64_t {
 		Finished,
 		Stopped,

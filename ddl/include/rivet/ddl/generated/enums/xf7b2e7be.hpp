@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"StumbleWhileMoving", 
 	};
 
+	constexpr static std::array<std::string_view, 4> xf7b2e7be_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xf7b2e7be : uint64_t {
 		None,
 		Knockback,

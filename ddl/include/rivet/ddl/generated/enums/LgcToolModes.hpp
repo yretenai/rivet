@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kLgc2Debug", 
 	};
 
+	constexpr static std::array<std::string_view, 2> LgcToolModes_labels = {
+		"LGC 2",
+		"LGC 2 Debug", 
+	};
+
 	enum class LgcToolModes : uint64_t {
 		LGC_2,
 		LGC_2_Debug, 

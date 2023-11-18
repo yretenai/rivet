@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kAnimDriverOpTypeSmooth", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x9f234d85_labels = {
+		"Multiply-add",
+		"Clamp",
+		"Smooth", 
+	};
+
 	enum class x9f234d85 : uint64_t {
 		AnimDriverOpTypeMultiplyAdd,
 		Clamp,

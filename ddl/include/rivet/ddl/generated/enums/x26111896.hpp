@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kUnCompressed", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x26111896_labels = {
+		"Default Compression. ( i16 )",
+		"Uncompressed. full precision", 
+	};
+
 	enum class x26111896 : uint64_t {
 		DefaultCompressed,
 		UnCompressed, 

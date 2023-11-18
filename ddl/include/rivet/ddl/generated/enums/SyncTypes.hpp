@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kSyncContinuous", 
 	};
 
+	constexpr static std::array<std::string_view, 3> SyncTypes_labels = {
+		"No Sync",
+		"Sync on interact",
+		"Sync continuously", 
+	};
+
 	enum class SyncTypes : uint64_t {
 		No_Sync,
 		Sync_on_interact,

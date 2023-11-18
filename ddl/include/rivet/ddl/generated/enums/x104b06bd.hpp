@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kWindows", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x104b06bd_labels = {
+		"PS4",
+		"PS5",
+		"Windows", 
+	};
+
 	enum class x104b06bd : uint64_t {
 		PS4,
 		PS5,

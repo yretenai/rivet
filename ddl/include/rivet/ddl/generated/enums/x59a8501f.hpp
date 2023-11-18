@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kPerMeter", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x59a8501f_labels = {
+		"Full Length",
+		"Per-Meter", 
+	};
+
 	enum class x59a8501f : uint64_t {
 		Full_Length,
 		PerMeter, 

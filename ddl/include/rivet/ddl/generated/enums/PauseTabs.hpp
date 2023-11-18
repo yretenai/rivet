@@ -27,6 +27,15 @@ namespace rivet::ddl::generated {
 		"kGallery", 
 	};
 
+	constexpr static std::array<std::string_view, 6> PauseTabs_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class PauseTabs : uint64_t {
 		Map,
 		Armor,

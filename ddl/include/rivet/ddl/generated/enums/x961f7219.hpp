@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kZoneLoading", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x961f7219_labels = {
+		"Off",
+		"System Info",
+		"Zone Loading", 
+	};
+
 	enum class x961f7219 : uint64_t {
 		Off,
 		System_Info,

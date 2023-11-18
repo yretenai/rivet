@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kIndexFour", 
 	};
 
+	constexpr static std::array<std::string_view, 4> xa3ea6fcb_labels = {
+		"Index One",
+		"Index Two",
+		"Index Three",
+		"Index Four", 
+	};
+
 	enum class xa3ea6fcb : uint64_t {
 		Index_One,
 		Index_Two,

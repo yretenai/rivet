@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kLight", 
 	};
 
+	constexpr static std::array<std::string_view, 4> x39013cd_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x39013cd : uint64_t {
 		Constant,
 		Color,

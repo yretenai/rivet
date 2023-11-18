@@ -35,6 +35,23 @@ namespace rivet::ddl::generated {
 		"kGrapplegun", 
 	};
 
+	constexpr static std::array<std::string_view, 14> x63d44ada_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x63d44ada : uint64_t {
 		None,
 		Handgun,

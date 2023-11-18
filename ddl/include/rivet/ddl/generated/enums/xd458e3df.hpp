@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kDontMatchAnim", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xd458e3df_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xd458e3df : uint64_t {
 		Default,
 		MatchAnim,

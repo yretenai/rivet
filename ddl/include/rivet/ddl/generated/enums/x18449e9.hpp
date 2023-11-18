@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"kTorus", 
 	};
 
+	constexpr static std::array<std::string_view, 5> x18449e9_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x18449e9 : uint64_t {
 		Cube,
 		Model,

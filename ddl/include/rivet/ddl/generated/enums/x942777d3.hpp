@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"Objective", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x942777d3_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x942777d3 : uint64_t {
 		Generic,
 		Objective, 

@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kPortal", 
 	};
 
+	constexpr static std::array<std::string_view, 4> xcf5ccb68_labels = {
+		"Stand",
+		"Ledge",
+		"Mag Surface",
+		"Portal", 
+	};
+
 	enum class xcf5ccb68 : uint64_t {
 		Stand,
 		Ledge,

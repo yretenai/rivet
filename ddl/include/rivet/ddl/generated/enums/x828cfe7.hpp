@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kFast", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x828cfe7_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x828cfe7 : uint64_t {
 		Slow,
 		Fast, 

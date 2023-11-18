@@ -30,6 +30,18 @@ namespace rivet::ddl::generated {
 		"kScreenSpaceDecal", 
 	};
 
+	constexpr static std::array<std::string_view, 9> x5771f07c_labels = {
+		"Weather Particle",
+		"Model3D Unlit",
+		"Model3D",
+		"Visual FX",
+		"Post FX",
+		"Composite",
+		"Water",
+		"Sky",
+		"Screen Space Decal", 
+	};
+
 	enum class x5771f07c : uint64_t {
 		Weather_Particle,
 		Model3D_Unlit,

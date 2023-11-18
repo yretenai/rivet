@@ -17,7 +17,7 @@ namespace rivet::ddl::generated {
 		Duration = serialized->get_float(Duration_type_id);
 		GrowDuration = serialized->get_float(GrowDuration_type_id);
 		Damage = serialized->get_float(Damage_type_id);
-		DamageType = serialized->get_enum<rivet::ddl::generated::x8d7e44cf>(DamageType_type_id, rivet::ddl::generated::x8d7e44cf_values);
+		DamageType = serialized->get_enum<rivet::ddl::generated::DamageTypes>(DamageType_type_id, rivet::ddl::generated::DamageTypes_values);
 		Knockback = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(Knockback_type_id, rivet::ddl::generated::KnockbackLevels_values);
 		DamageFriends = serialized->get_uint8(DamageFriends_type_id);
 		StatusAmount = serialized->get_float(StatusAmount_type_id);

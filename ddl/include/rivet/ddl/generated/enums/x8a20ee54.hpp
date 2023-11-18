@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"kNests", 
 	};
 
+	constexpr static std::array<std::string_view, 5> x8a20ee54_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x8a20ee54 : uint64_t {
 		Generic,
 		BossHealth,

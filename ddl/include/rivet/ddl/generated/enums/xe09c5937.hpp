@@ -27,6 +27,15 @@ namespace rivet::ddl::generated {
 		"kZAxisLocal", 
 	};
 
+	constexpr static std::array<std::string_view, 6> xe09c5937_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xe09c5937 : uint64_t {
 		YAxisWorld,
 		XAxisWorld,

@@ -22,6 +22,10 @@ namespace rivet::ddl::generated {
 		"kBase", 
 	};
 
+	constexpr static std::array<std::string_view, 1> xb1be5abd_labels = {
+		"NONE", 
+	};
+
 	enum class xb1be5abd : uint64_t {
 		Base, 
 	};

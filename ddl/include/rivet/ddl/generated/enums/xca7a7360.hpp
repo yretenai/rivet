@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kFromCenter", 
 	};
 
+	constexpr static std::array<std::string_view, 2> xca7a7360_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xca7a7360 : uint64_t {
 		NotUsed,
 		FromCenter, 

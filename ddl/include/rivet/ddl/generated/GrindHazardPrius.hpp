@@ -18,7 +18,7 @@
 #include <rivet/structures/rivet_serialization.hpp>
 
 #include <rivet/ddl/generated/enums/KnockbackLevels.hpp>
-#include <rivet/ddl/generated/enums/x8d7e44cf.hpp> 
+#include <rivet/ddl/generated/enums/DamageTypes.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED GrindHazardPrius : rivet::structures::rivet_ddl_base {
@@ -56,7 +56,7 @@ namespace rivet::ddl::generated {
 		uint64_t CurveActor {};
 		float StartTValue {};
 		float EndTValue {};
-		rivet::ddl::generated::x8d7e44cf DamageType {};
+		rivet::ddl::generated::DamageTypes DamageType {};
 		float DamagePercent {};
 		float DamageRadius {};
 		float IgnoreDuration {};

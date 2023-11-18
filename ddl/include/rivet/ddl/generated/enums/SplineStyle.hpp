@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kCenterLoop", 
 	};
 
+	constexpr static std::array<std::string_view, 3> SplineStyle_labels = {
+		"Standard",
+		"Center",
+		"Center Loop", 
+	};
+
 	enum class SplineStyle : uint64_t {
 		Standard,
 		Center,

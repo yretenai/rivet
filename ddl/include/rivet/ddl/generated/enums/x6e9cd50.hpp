@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kOutput", 
 	};
 
+	constexpr static std::array<std::string_view, 4> x6e9cd50_labels = {
+		"Invalid",
+		"None",
+		"Input",
+		"Output", 
+	};
+
 	enum class x6e9cd50 : uint64_t {
 		Invalid,
 		None,

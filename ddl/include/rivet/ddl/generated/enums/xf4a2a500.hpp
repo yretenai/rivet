@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kSystemPause3", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xf4a2a500_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xf4a2a500 : uint64_t {
 		SystemPause,
 		SystemPause2,

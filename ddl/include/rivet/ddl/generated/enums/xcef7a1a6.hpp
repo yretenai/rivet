@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kPartialRampThreeSteps", 
 	};
 
+	constexpr static std::array<std::string_view, 4> xcef7a1a6_labels = {
+		"Zero Step",
+		"One Step",
+		"Two Step",
+		"Three Step", 
+	};
+
 	enum class xcef7a1a6 : uint64_t {
 		Zero_Step,
 		One_Step,

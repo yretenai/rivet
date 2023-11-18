@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kFullMemory", 
 	};
 
+	constexpr static std::array<std::string_view, 4> xb022b3f7_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xb022b3f7 : uint64_t {
 		None,
 		Minidump,

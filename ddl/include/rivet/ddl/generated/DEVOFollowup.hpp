@@ -18,7 +18,7 @@
 #include <rivet/structures/rivet_serialization.hpp>
 
 #include <rivet/ddl/generated/enums/x6be956dd.hpp>
-#include <rivet/ddl/generated/enums/x8d474ebb.hpp>
+#include <rivet/ddl/generated/enums/Voice.hpp>
 #include <rivet/ddl/generated/enums/xb3a943f0.hpp> 
 
 namespace rivet::ddl::generated {
@@ -39,7 +39,7 @@ namespace rivet::ddl::generated {
 		explicit DEVOFollowup([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);
 
 		rivet::ddl::generated::xb3a943f0 ToWhom {};
-		rivet::ddl::generated::x8d474ebb SpecificTargetVoice {};
+		rivet::ddl::generated::Voice SpecificTargetVoice {};
 		float Radius {};
 		rivet::ddl::generated::x6be956dd FollowupTrigger {}; 
 

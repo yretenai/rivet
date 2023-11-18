@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kConfirmNo", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x93d78ad3_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x93d78ad3 : uint64_t {
 		ConfirmYes,
 		ConfirmNo, 

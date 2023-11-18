@@ -11,7 +11,7 @@ namespace rivet::ddl::generated {
 		DamageFriends = serialized->get_bool(DamageFriends_type_id);
 		LoS = serialized->get_bool(LoS_type_id);
 		Knockback = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(Knockback_type_id, rivet::ddl::generated::KnockbackLevels_values);
-		Type = serialized->get_enum<rivet::ddl::generated::x8d7e44cf>(Type_type_id, rivet::ddl::generated::x8d7e44cf_values);
+		Type = serialized->get_enum<rivet::ddl::generated::DamageTypes>(Type_type_id, rivet::ddl::generated::DamageTypes_values);
 		DamageStartTimeRandom = serialized->get_bool(DamageStartTimeRandom_type_id);
 		DamageLocator = serialized->get_string(DamageLocator_type_id);
 		IgnoreActor = serialized->get_uint64(IgnoreActor_type_id); 

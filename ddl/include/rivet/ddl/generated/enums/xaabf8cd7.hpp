@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kSweptSphere", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xaabf8cd7_labels = {
+		"Sphere",
+		"Line",
+		"SweptSphere", 
+	};
+
 	enum class xaabf8cd7 : uint64_t {
 		Sphere,
 		Line,

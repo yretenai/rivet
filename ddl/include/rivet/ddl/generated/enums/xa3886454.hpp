@@ -28,6 +28,16 @@ namespace rivet::ddl::generated {
 		"Six", 
 	};
 
+	constexpr static std::array<std::string_view, 7> xa3886454_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xa3886454 : uint64_t {
 		None,
 		One,

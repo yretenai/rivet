@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kCustom", 
 	};
 
+	constexpr static std::array<std::string_view, 4> x209cdeb2_labels = {
+		"Any Attack",
+		"Melee Only",
+		"Any but Melee",
+		"Custom Damage Type", 
+	};
+
 	enum class x209cdeb2 : uint64_t {
 		Any_Attack,
 		Melee_Only,

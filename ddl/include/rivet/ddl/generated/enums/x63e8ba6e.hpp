@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kLaunchChromeVault", 
 	};
 
+	constexpr static std::array<std::string_view, 4> x63e8ba6e_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x63e8ba6e : uint64_t {
 		ReplaceSceneNodes,
 		LoadAsset,

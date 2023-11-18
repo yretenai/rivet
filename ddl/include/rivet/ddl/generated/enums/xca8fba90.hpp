@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"Below", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xca8fba90_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xca8fba90 : uint64_t {
 		None,
 		Above,

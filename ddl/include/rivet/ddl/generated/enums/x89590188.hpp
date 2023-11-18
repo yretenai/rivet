@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"DisableLaunch", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x89590188_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x89590188 : uint64_t {
 		DisableStandAndLaunch,
 		DisableLaunch, 

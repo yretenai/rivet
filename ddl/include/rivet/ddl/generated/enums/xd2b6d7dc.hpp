@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kFootAngle", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xd2b6d7dc_labels = {
+		"BlendFactorCurve",
+		"Foot locator offset from ground",
+		"Foot angle with respect to flat ground", 
+	};
+
 	enum class xd2b6d7dc : uint64_t {
 		BlendFactorCurve,
 		Foot_locator_offset_from_ground,

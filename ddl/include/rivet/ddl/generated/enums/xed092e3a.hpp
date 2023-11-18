@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kAnimMaya", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xed092e3a_labels = {
+		"kColladaSourcePath",
+		"kAnimateThis",
+		"kAnimMaya", 
+	};
+
 	enum class xed092e3a : uint64_t {
 		kColladaSourcePath,
 		kAnimateThis,

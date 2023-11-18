@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kDownhill", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x6ad2490c_labels = {
+		"Fixed angle",
+		"Face downhill", 
+	};
+
 	enum class x6ad2490c : uint64_t {
 		Fixed_angle,
 		Face_downhill, 

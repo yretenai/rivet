@@ -35,6 +35,23 @@ namespace rivet::ddl::generated {
 		"kPipelineProceduralComposite", 
 	};
 
+	constexpr static std::array<std::string_view, 14> x38a8002d_labels = {
+		"Off",
+		"ClipMap",
+		"ClipMap Tiles",
+		"Current Paint Target",
+		"Gray",
+		"UVs",
+		"Vista Map",
+		"Pipeline (Paint Base)",
+		"Pipeline (Paint Base Offset)",
+		"Pipeline (Paint Brush)",
+		"Pipeline (Paint Brush Accumulated)",
+		"Pipeline (Paint Brush Accumulated Value)",
+		"Pipeline (Paint Composite)",
+		"Pipeline (Procedural Composite)", 
+	};
+
 	enum class x38a8002d : uint64_t {
 		Off,
 		ClipMap,

@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"Square", 
 	};
 
+	constexpr static std::array<std::string_view, 4> x3c1de250_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x3c1de250 : uint64_t {
 		Sine,
 		Cosine,

@@ -27,6 +27,15 @@ namespace rivet::ddl::generated {
 		"kSix", 
 	};
 
+	constexpr static std::array<std::string_view, 6> x85cb9e0e_labels = {
+		"One",
+		"Two",
+		"Three",
+		"Four",
+		"Five",
+		"Six", 
+	};
+
 	enum class x85cb9e0e : uint64_t {
 		One,
 		Two,

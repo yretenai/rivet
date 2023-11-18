@@ -30,6 +30,18 @@ namespace rivet::ddl::generated {
 		"kFaceMenu", 
 	};
 
+	constexpr static std::array<std::string_view, 9> xca348341_labels = {
+		"None",
+		"Body Menu",
+		"Category Menu",
+		"Head Menu",
+		"Torso Menu",
+		"Legs Menu",
+		"Melee Weapons Menu",
+		"Sets Menu",
+		"Face Menu", 
+	};
+
 	enum class xca348341 : uint64_t {
 		None,
 		Body_Menu,

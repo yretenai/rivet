@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	EmergentVOManagerVoiceSwitches::EmergentVOManagerVoiceSwitches([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Voice = serialized->get_enum<rivet::ddl::generated::x8d474ebb>(Voice_type_id, rivet::ddl::generated::x8d474ebb_values);
+		Voice = serialized->get_enum<rivet::ddl::generated::Voice>(Voice_type_id, rivet::ddl::generated::Voice_values);
 		Switches = serialized->unwrap_into_many<rivet::ddl::generated::WwiseSwitch>(Switches_type_id);
 		RemovalSwitches = serialized->unwrap_into_many<rivet::ddl::generated::WwiseSwitch>(RemovalSwitches_type_id); 
 	}

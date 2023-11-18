@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"kReloadStyleShake", 
 	};
 
+	constexpr static std::array<std::string_view, 5> xd3dac94_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xd3dac94 : uint64_t {
 		ReloadStyleNone,
 		ReloadStyleSpin,

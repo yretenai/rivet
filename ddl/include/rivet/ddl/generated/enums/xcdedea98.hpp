@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kPause", 
 	};
 
+	constexpr static std::array<std::string_view, 2> xcdedea98_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xcdedea98 : uint64_t {
 		Run,
 		Pause, 

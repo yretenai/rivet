@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kOutside", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x2726daf1_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x2726daf1 : uint64_t {
 		Inside,
 		Outside, 

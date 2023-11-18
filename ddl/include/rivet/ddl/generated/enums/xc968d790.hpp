@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"kBackRight", 
 	};
 
+	constexpr static std::array<std::string_view, 5> xc968d790_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xc968d790 : uint64_t {
 		None,
 		Hip,

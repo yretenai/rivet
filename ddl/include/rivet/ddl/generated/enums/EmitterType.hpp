@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kGPU", 
 	};
 
+	constexpr static std::array<std::string_view, 2> EmitterType_labels = {
+		"CPU",
+		"GPU", 
+	};
+
 	enum class EmitterType : uint64_t {
 		CPU,
 		GPU, 

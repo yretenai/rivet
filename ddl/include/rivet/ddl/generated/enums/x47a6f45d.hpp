@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kR1_Kick", 
 	};
 
+	constexpr static std::array<std::string_view, 4> x47a6f45d_labels = {
+		"Press L2 to Kick",
+		"Press CIRCLE to Kick",
+		"Press L2 or CIRCLE to Kick",
+		"Press R1 to Kick", 
+	};
+
 	enum class x47a6f45d : uint64_t {
 		Press_L2_to_Kick,
 		Press_CIRCLE_to_Kick,

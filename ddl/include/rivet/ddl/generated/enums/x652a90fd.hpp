@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kPortalBendAggregationRuleMax", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x652a90fd_labels = {
+		"Nearest",
+		"Average",
+		"Max", 
+	};
+
 	enum class x652a90fd : uint64_t {
 		Nearest,
 		Average,

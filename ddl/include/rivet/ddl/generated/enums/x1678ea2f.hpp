@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kResLow", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x1678ea2f_labels = {
+		"High (default)",
+		"Low", 
+	};
+
 	enum class x1678ea2f : uint64_t {
 		ResHigh,
 		Low, 

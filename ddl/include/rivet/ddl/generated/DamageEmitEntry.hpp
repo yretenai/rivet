@@ -18,7 +18,7 @@
 #include <rivet/structures/rivet_serialization.hpp>
 
 #include <rivet/ddl/generated/enums/KnockbackLevels.hpp>
-#include <rivet/ddl/generated/enums/x8d7e44cf.hpp> 
+#include <rivet/ddl/generated/enums/DamageTypes.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DamageEmitEntry : rivet::structures::rivet_ddl_base {
@@ -67,7 +67,7 @@ namespace rivet::ddl::generated {
 		float SweptSphereRange {};
 		float DamageAmount {};
 		float DamageApplyTime {};
-		rivet::ddl::generated::x8d7e44cf Type {};
+		rivet::ddl::generated::DamageTypes Type {};
 		float StatusAmount {};
 		rivet::ddl::generated::KnockbackLevels Knockback {};
 		float KnockbackAmount {};

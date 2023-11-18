@@ -26,7 +26,7 @@ namespace rivet::ddl::generated {
 		TargetSystem = serialized->unwrap_into<rivet::ddl::generated::TargetSystemSettings>(TargetSystem_type_id);
 		GameTcpPort = serialized->get_uint16(GameTcpPort_type_id);
 		GameUdpPort = serialized->get_uint16(GameUdpPort_type_id);
-		GameType = serialized->get_enum<rivet::ddl::generated::x658f8aa>(GameType_type_id, rivet::ddl::generated::x658f8aa_values);
+		GameType = serialized->get_enum<rivet::ddl::generated::GameType>(GameType_type_id, rivet::ddl::generated::GameType_values);
 		ActorSaveUidMax = serialized->get_uint32(ActorSaveUidMax_type_id);
 		ActorSaveLocalUidMax = serialized->get_uint8(ActorSaveLocalUidMax_type_id);
 		SaveTransferTarget = serialized->get_string(SaveTransferTarget_type_id);

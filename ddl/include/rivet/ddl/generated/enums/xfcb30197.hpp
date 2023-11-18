@@ -28,6 +28,16 @@ namespace rivet::ddl::generated {
 		"POITypePing", 
 	};
 
+	constexpr static std::array<std::string_view, 7> xfcb30197_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xfcb30197 : uint64_t {
 		POITypeNone,
 		POITypeObjective,

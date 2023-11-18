@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kClosest", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xb8f8f0e5_labels = {
+		"Start",
+		"End",
+		"Closest", 
+	};
+
 	enum class xb8f8f0e5 : uint64_t {
 		Start,
 		End,

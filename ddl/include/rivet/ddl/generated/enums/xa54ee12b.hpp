@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kKill", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xa54ee12b_labels = {
+		"Continue Effects",
+		"Stop Effects",
+		"Kill Effects", 
+	};
+
 	enum class xa54ee12b : uint64_t {
 		Continue_Effects,
 		Stop_Effects,

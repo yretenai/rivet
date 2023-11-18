@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"kModelDisplayUIType", 
 	};
 
+	constexpr static std::array<std::string_view, 5> xf20c2999_labels = {
+		"None",
+		"List UI Type",
+		"Color Grid UI Type",
+		"Texture Grid UI Type",
+		"Model Display UI Type", 
+	};
+
 	enum class xf20c2999 : uint64_t {
 		None,
 		List_UI_Type,

@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kDisableVolume", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x3947cf7f_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x3947cf7f : uint64_t {
 		FlockingVolume,
 		DisableVolume, 

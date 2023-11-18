@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kDoNotUseEvent", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x993e7bef_labels = {
+		"Use an Event to Delete",
+		"Do Not Use an Event to Delete", 
+	};
+
 	enum class x993e7bef : uint64_t {
 		Use_an_Event_to_Delete,
 		Do_Not_Use_an_Event_to_Delete, 

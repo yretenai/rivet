@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"Relock", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x9aa8a36a_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x9aa8a36a : uint64_t {
 		Unlock,
 		Relock, 

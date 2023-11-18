@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"Z", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x302e143f_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x302e143f : uint64_t {
 		X,
 		Y,

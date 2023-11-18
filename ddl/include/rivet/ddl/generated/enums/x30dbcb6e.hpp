@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kZ", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x30dbcb6e_labels = {
+		"X",
+		"Y",
+		"Z", 
+	};
+
 	enum class x30dbcb6e : uint64_t {
 		X,
 		Y,

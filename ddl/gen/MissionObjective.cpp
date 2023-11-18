@@ -16,7 +16,7 @@ namespace rivet::ddl::generated {
 		LocTagDescription = serialized->get_string(LocTagDescription_type_id);
 		Checkpoint = serialized->get_string(Checkpoint_type_id);
 		OverrideLightingMode = serialized->get_bool(OverrideLightingMode_type_id);
-		LightingMode = serialized->get_enum<rivet::ddl::generated::xee0945fb>(LightingMode_type_id, rivet::ddl::generated::xee0945fb_values);
+		LightingMode = serialized->get_enum<rivet::ddl::generated::LightingMode>(LightingMode_type_id, rivet::ddl::generated::LightingMode_values);
 		HideObjective = serialized->get_bool(HideObjective_type_id);
 		OnlyShowOnLoad = serialized->get_bool(OnlyShowOnLoad_type_id);
 		NoSave = serialized->get_bool(NoSave_type_id);

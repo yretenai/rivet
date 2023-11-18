@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kStart", 
 	};
 
+	constexpr static std::array<std::string_view, 2> xcc761825_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xcc761825 : uint64_t {
 		Available,
 		Start, 

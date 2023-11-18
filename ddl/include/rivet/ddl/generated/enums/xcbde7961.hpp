@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kConstraintTypeLimitedCone", 
 	};
 
+	constexpr static std::array<std::string_view, 4> xcbde7961_labels = {
+		"Simple",
+		"Cone",
+		"Half-Cone",
+		"Limited-Cone", 
+	};
+
 	enum class xcbde7961 : uint64_t {
 		Simple,
 		Cone,

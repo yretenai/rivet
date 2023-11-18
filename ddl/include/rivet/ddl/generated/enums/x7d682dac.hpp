@@ -30,6 +30,18 @@ namespace rivet::ddl::generated {
 		"kCompositeShaderConstant", 
 	};
 
+	constexpr static std::array<std::string_view, 9> x7d682dac_labels = {
+		"VFX KeyFrame Modifier",
+		"Visual Effect",
+		"WWise Game Sync",
+		"Wwise Sound Event",
+		"Decal Effect",
+		"Material Override",
+		"Constant Override",
+		"Composite Shader",
+		"Composite Shader Constant", 
+	};
+
 	enum class x7d682dac : uint64_t {
 		VFX_KeyFrame_Modifier,
 		Visual_Effect,

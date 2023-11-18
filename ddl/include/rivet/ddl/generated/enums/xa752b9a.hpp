@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kModeInverted", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xa752b9a_labels = {
+		"Free",
+		"Level",
+		"Inverted", 
+	};
+
 	enum class xa752b9a : uint64_t {
 		Free,
 		Level,

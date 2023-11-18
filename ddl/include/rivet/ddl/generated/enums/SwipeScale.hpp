@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kCenter", 
 	};
 
+	constexpr static std::array<std::string_view, 2> SwipeScale_labels = {
+		"Origin",
+		"Center", 
+	};
+
 	enum class SwipeScale : uint64_t {
 		Origin,
 		Center, 

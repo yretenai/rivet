@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kMatchPosition", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x944d8042_labels = {
+		"Match Distance T",
+		"Match Position", 
+	};
+
 	enum class x944d8042 : uint64_t {
 		Match_Distance_T,
 		Match_Position, 

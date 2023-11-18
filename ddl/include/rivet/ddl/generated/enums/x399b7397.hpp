@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"ModelSpline", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x399b7397_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x399b7397 : uint64_t {
 		MaterialSpline,
 		ModelSpline, 

@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kNoPrune", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x1e271f24_labels = {
+		"Prune Previous",
+		"Prune But Follow",
+		"No Prune Previous", 
+	};
+
 	enum class x1e271f24 : uint64_t {
 		Prune_Previous,
 		Prune_But_Follow,

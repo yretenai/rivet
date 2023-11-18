@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"None", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xd2478acb_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xd2478acb : uint64_t {
 		Ascending,
 		Descending,

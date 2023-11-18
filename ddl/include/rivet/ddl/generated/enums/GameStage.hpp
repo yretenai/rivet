@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kEndGame", 
 	};
 
+	constexpr static std::array<std::string_view, 3> GameStage_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class GameStage : uint64_t {
 		EarlyGame,
 		MidGame,

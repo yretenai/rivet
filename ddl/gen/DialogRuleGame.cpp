@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	DialogRuleGame::DialogRuleGame([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): DialogRule(serialized) {
 		HitLocation = serialized->get_enum<rivet::ddl::generated::HitLocation>(HitLocation_type_id, rivet::ddl::generated::HitLocation_values);
-		DamageType = serialized->get_enum<rivet::ddl::generated::x8d7e44cf>(DamageType_type_id, rivet::ddl::generated::x8d7e44cf_values);
+		DamageType = serialized->get_enum<rivet::ddl::generated::DamageTypes>(DamageType_type_id, rivet::ddl::generated::DamageTypes_values);
 		TargetRelativePos = serialized->get_enum<rivet::ddl::generated::xca8fba90>(TargetRelativePos_type_id, rivet::ddl::generated::xca8fba90_values);
 		CurrentPlanet = serialized->get_enum<rivet::ddl::generated::LevelEnum>(CurrentPlanet_type_id, rivet::ddl::generated::LevelEnum_values);
 		NotCurrentPlanet = serialized->get_enum<rivet::ddl::generated::LevelEnum>(NotCurrentPlanet_type_id, rivet::ddl::generated::LevelEnum_values);

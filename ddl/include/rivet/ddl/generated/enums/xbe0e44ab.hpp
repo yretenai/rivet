@@ -31,6 +31,19 @@ namespace rivet::ddl::generated {
 		"kArenaReward", 
 	};
 
+	constexpr static std::array<std::string_view, 10> xbe0e44ab_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xbe0e44ab : uint64_t {
 		Generic,
 		Center,

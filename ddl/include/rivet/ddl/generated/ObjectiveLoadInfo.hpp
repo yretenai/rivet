@@ -17,7 +17,7 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/enums/xee0945fb.hpp>
+#include <rivet/ddl/generated/enums/LightingMode.hpp>
 #include <rivet/ddl/generated/enums/HeroTypes.hpp> 
 
 namespace rivet::ddl::generated {
@@ -46,7 +46,7 @@ namespace rivet::ddl::generated {
 		std::string_view SpawnCheckpoint {};
 		std::string_view DimensionCheckpoint {};
 		rivet::ddl::generated::HeroTypes SpawnAsHero {};
-		rivet::ddl::generated::xee0945fb LightingMode {};
+		rivet::ddl::generated::LightingMode LightingMode {};
 		std::string_view SpawnLoadout {};
 		std::string_view ChallengeSpawnLoadout {};
 		std::string_view BackpackLoadout {}; 

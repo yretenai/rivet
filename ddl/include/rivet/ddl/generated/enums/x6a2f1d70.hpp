@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kPlaybackTypeUnknown", 
 	};
 
+	constexpr static std::array<std::string_view, 4> x6a2f1d70_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x6a2f1d70 : uint64_t {
 		PlaybackTypeOneShot,
 		PlaybackTypeLooping,

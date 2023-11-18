@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"kBlendAuxTypeBranchAll", 
 	};
 
+	constexpr static std::array<std::string_view, 5> x7ecb91d5_labels = {
+		"Dominant branch",
+		"Branch A",
+		"Branch B",
+		"Branch C",
+		"All Branches", 
+	};
+
 	enum class x7ecb91d5 : uint64_t {
 		Dominant_branch,
 		Branch_A,

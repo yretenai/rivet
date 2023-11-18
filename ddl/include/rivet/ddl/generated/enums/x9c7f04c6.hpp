@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"Final", 
 	};
 
+	constexpr static std::array<std::string_view, 5> x9c7f04c6_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x9c7f04c6 : uint64_t {
 		Default,
 		Debug,

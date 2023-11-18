@@ -29,6 +29,17 @@ namespace rivet::ddl::generated {
 		"kTransfered", 
 	};
 
+	constexpr static std::array<std::string_view, 8> x5ff284b1_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x5ff284b1 : uint64_t {
 		None,
 		Added,

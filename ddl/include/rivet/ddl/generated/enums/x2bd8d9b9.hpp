@@ -37,6 +37,25 @@ namespace rivet::ddl::generated {
 		"Sync15", 
 	};
 
+	constexpr static std::array<std::string_view, 16> x2bd8d9b9_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x2bd8d9b9 : uint64_t {
 		Sync0,
 		Sync1,

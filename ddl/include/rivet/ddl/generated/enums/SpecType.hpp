@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kSpecOnly", 
 	};
 
+	constexpr static std::array<std::string_view, 3> SpecType_labels = {
+		"Diff + Spec",
+		"Diff Only",
+		"Spec Only", 
+	};
+
 	enum class SpecType : uint64_t {
 		Both,
 		Diff_Only,

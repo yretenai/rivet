@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"Rule", 
 	};
 
+	constexpr static std::array<std::string_view, 3> PlayOnceMode_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class PlayOnceMode : uint64_t {
 		Off,
 		Line,

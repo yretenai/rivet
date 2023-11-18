@@ -31,6 +31,19 @@ namespace rivet::ddl::generated {
 		"kMapOpRandRange", 
 	};
 
+	constexpr static std::array<std::string_view, 10> x48fb1e07_labels = {
+		"=",
+		"*=",
+		"/=",
+		"+=",
+		"-=",
+		"mod=",
+		"&&=",
+		"||=",
+		"RS=",
+		"RR=", 
+	};
+
 	enum class x48fb1e07 : uint64_t {
 		MapOpAssign,
 		MapOpMul,

@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"Action", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x290280c7_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x290280c7 : uint64_t {
 		Button,
 		Action, 

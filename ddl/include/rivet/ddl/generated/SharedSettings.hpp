@@ -18,7 +18,7 @@
 #include <rivet/structures/rivet_serialization.hpp>
 
 #include <rivet/ddl/generated/enums/x11adfe43.hpp>
-#include <rivet/ddl/generated/enums/x658f8aa.hpp> 
+#include <rivet/ddl/generated/enums/GameType.hpp> 
 
 namespace rivet::ddl::generated {
 	struct WaterImpulseSettings;
@@ -204,7 +204,7 @@ namespace rivet::ddl::generated {
 		std::shared_ptr<rivet::ddl::generated::TargetSystemSettings> TargetSystem {};
 		uint16_t GameTcpPort {};
 		uint16_t GameUdpPort {};
-		rivet::ddl::generated::x658f8aa GameType {};
+		rivet::ddl::generated::GameType GameType {};
 		uint32_t ActorSaveUidMax {};
 		uint8_t ActorSaveLocalUidMax {};
 		std::string_view SaveTransferTarget {};

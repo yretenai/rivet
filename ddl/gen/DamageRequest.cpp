@@ -13,8 +13,8 @@
 
 namespace rivet::ddl::generated {
 	DamageRequest::DamageRequest([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Type = serialized->get_enum<rivet::ddl::generated::x8d7e44cf>(Type_type_id, rivet::ddl::generated::x8d7e44cf_values);
-		Category = serialized->get_enum<rivet::ddl::generated::x8d7e44cf>(Category_type_id, rivet::ddl::generated::x8d7e44cf_values);
+		Type = serialized->get_enum<rivet::ddl::generated::DamageTypes>(Type_type_id, rivet::ddl::generated::DamageTypes_values);
+		Category = serialized->get_enum<rivet::ddl::generated::DamageTypes>(Category_type_id, rivet::ddl::generated::DamageTypes_values);
 		Amount = serialized->get_float(Amount_type_id);
 		Duration = serialized->get_float(Duration_type_id);
 		TickInterval = serialized->get_float(TickInterval_type_id);

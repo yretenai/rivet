@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kTypeSphere", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x81ba9424_labels = {
+		"Force Shape - Directional",
+		"Force Shape - Cylinder",
+		"Force Shape - Sphere", 
+	};
+
 	enum class x81ba9424 : uint64_t {
 		TypeDirectional,
 		TypeCylinder,

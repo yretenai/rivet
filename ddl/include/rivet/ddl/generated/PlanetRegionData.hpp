@@ -17,7 +17,7 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/enums/xee0945fb.hpp>
+#include <rivet/ddl/generated/enums/LightingMode.hpp>
 #include <rivet/ddl/generated/enums/xd64fa9b1.hpp>
 #include <rivet/ddl/generated/enums/HeroTypes.hpp>
 #include <rivet/ddl/generated/enums/LevelEnum.hpp> 
@@ -70,7 +70,7 @@ namespace rivet::ddl::generated {
 		std::shared_ptr<rivet::ddl::generated::PlanetActivityData> ActivityData {};
 		rivet::ddl::generated::xd64fa9b1 DefaultMap {};
 		std::vector<std::shared_ptr<rivet::ddl::generated::PlanetMap>> Maps {};
-		rivet::ddl::generated::xee0945fb DefaultLightingMode {};
+		rivet::ddl::generated::LightingMode DefaultLightingMode {};
 		std::vector<std::shared_ptr<rivet::ddl::generated::PlanetLightingCondition>> ConditionalLightingModes {}; 
 
 		[[nodiscard]] auto

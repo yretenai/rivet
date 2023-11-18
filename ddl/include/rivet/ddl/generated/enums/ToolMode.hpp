@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kCustom", 
 	};
 
+	constexpr static std::array<std::string_view, 2> ToolMode_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class ToolMode : uint64_t {
 		Selection,
 		Custom, 

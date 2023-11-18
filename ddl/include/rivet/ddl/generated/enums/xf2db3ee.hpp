@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kLegs", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xf2db3ee_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xf2db3ee : uint64_t {
 		Head,
 		Torso,

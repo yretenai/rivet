@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kSoundListenerPos", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xbb0b7195_labels = {
+		"Hero Position",
+		"Camera Position",
+		"Sound Listener Position", 
+	};
+
 	enum class xbb0b7195 : uint64_t {
 		Hero_Position,
 		Camera_Position,

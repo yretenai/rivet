@@ -15,7 +15,7 @@ namespace rivet::ddl::generated {
 		OscillationRate = serialized->get_float(OscillationRate_type_id);
 		Range = serialized->get_float(Range_type_id);
 		DamagePercent = serialized->get_float(DamagePercent_type_id);
-		DamageType = serialized->get_enum<rivet::ddl::generated::x8d7e44cf>(DamageType_type_id, rivet::ddl::generated::x8d7e44cf_values);
+		DamageType = serialized->get_enum<rivet::ddl::generated::DamageTypes>(DamageType_type_id, rivet::ddl::generated::DamageTypes_values);
 		SingleUse = serialized->get_bool(SingleUse_type_id);
 		ExplodeWhenHit = serialized->get_bool(ExplodeWhenHit_type_id);
 		HitReactVolume = serialized->get_uint64(HitReactVolume_type_id);

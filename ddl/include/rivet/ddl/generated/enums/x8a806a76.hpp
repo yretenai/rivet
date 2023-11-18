@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"kBadBunny", 
 	};
 
+	constexpr static std::array<std::string_view, 5> x8a806a76_labels = {
+		"Default",
+		"Rebellion",
+		"Galactive Ranger",
+		"War Machine",
+		"Bad Bunny", 
+	};
+
 	enum class x8a806a76 : uint64_t {
 		Default,
 		Rebellion,

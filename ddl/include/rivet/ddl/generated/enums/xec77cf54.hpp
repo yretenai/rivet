@@ -28,6 +28,16 @@ namespace rivet::ddl::generated {
 		"kSelOpMABF", 
 	};
 
+	constexpr static std::array<std::string_view, 7> xec77cf54_labels = {
+		"Equal",
+		"Not Equal",
+		"Greater Than",
+		"Greater Or Equal To",
+		"Less Than",
+		"Less Or Equal To",
+		"Matching Any Bit Flags", 
+	};
+
 	enum class xec77cf54 : uint64_t {
 		Equal,
 		Not_Equal,

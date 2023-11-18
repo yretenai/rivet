@@ -22,6 +22,10 @@ namespace rivet::ddl::generated {
 		"kRebreather", 
 	};
 
+	constexpr static std::array<std::string_view, 1> x56bca86c_labels = {
+		"NONE", 
+	};
+
 	enum class x56bca86c : uint64_t {
 		Rebreather, 
 	};

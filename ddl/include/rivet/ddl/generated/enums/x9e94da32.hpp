@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kNever", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x9e94da32_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x9e94da32 : uint64_t {
 		Default,
 		Always,

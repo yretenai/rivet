@@ -27,6 +27,15 @@ namespace rivet::ddl::generated {
 		"kUI", 
 	};
 
+	constexpr static std::array<std::string_view, 6> x51a4a4a4_labels = {
+		"No Alignment, Keep Mips",
+		"Nearest Power Of Two",
+		"Smaller Power Of Two",
+		"Larger Power Of Two",
+		"Pad",
+		"UI - No Align, No Mips", 
+	};
+
 	enum class x51a4a4a4 : uint64_t {
 		Unmodified,
 		Nearest_Power_Of_Two,

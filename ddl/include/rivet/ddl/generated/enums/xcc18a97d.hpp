@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kRightBias", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xcc18a97d_labels = {
+		"None",
+		"Left Bias",
+		"Right Bias", 
+	};
+
 	enum class xcc18a97d : uint64_t {
 		None,
 		Left_Bias,

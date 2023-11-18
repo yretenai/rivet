@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kDeactivateState", 
 	};
 
+	constexpr static std::array<std::string_view, 2> xa857c0d1_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xa857c0d1 : uint64_t {
 		ActivateState,
 		DeactivateState, 

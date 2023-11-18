@@ -38,6 +38,26 @@ namespace rivet::ddl::generated {
 		"kBack", 
 	};
 
+	constexpr static std::array<std::string_view, 17> xe10f705b_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xe10f705b : uint64_t {
 		Any,
 		X,

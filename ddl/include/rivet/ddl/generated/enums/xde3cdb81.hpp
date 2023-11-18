@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kOff", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xde3cdb81_labels = {
+		"On",
+		"Fast",
+		"Off", 
+	};
+
 	enum class xde3cdb81 : uint64_t {
 		On,
 		Fast,

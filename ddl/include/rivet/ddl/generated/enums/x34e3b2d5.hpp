@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kPostProcess", 
 	};
 
+	constexpr static std::array<std::string_view, 4> x34e3b2d5_labels = {
+		"Sky",
+		"Model3D",
+		"Particles",
+		"PostProcess", 
+	};
+
 	enum class x34e3b2d5 : uint64_t {
 		Sky,
 		Model3D,

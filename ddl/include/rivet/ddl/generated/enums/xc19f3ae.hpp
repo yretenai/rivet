@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kDissolve", 
 	};
 
+	constexpr static std::array<std::string_view, 2> xc19f3ae_labels = {
+		"Alpha",
+		"Dissolve", 
+	};
+
 	enum class xc19f3ae : uint64_t {
 		Alpha,
 		Dissolve, 

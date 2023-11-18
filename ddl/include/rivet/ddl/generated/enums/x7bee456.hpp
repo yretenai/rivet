@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kDistance", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x7bee456_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x7bee456 : uint64_t {
 		KeepTarget,
 		Distance, 

@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kJr", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x2c2b51d_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x2c2b51d : uint64_t {
 		Dad,
 		Jr, 

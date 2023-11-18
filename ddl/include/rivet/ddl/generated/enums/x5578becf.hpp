@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kLogSoundInfo", 
 	};
 
+	constexpr static std::array<std::string_view, 4> x5578becf_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x5578becf : uint64_t {
 		LogSystemUnknown,
 		LogSoundSystem,

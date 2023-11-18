@@ -32,6 +32,20 @@ namespace rivet::ddl::generated {
 		"kZordoom", 
 	};
 
+	constexpr static std::array<std::string_view, 11> LevelEnum_labels = {
+		"NONE",
+		"Megalopolis",
+		"Nefarious City",
+		"Sargasso",
+		"Zurkies",
+		"Savali",
+		"Blizar",
+		"Molonoth",
+		"Cordelion",
+		"Ardolis",
+		"Zordoom", 
+	};
+
 	enum class LevelEnum : uint64_t {
 		None,
 		Megalopolis,

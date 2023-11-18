@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kHigh", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xa694530c_labels = {
+		"Disabled",
+		"Low",
+		"High", 
+	};
+
 	enum class xa694530c : uint64_t {
 		Disabled,
 		Low,

@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kMaxPredictiveSpeed", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x68870183_labels = {
+		"None",
+		"MaxPredictiveSpeed", 
+	};
+
 	enum class x68870183 : uint64_t {
 		None,
 		MaxPredictiveSpeed, 

@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kRepeat", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x39725a2d_labels = {
+		"Stop Playing",
+		"Repeat", 
+	};
+
 	enum class x39725a2d : uint64_t {
 		Stop_Playing,
 		Repeat, 

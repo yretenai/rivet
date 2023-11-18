@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"kLayerAttachments", 
 	};
 
+	constexpr static std::array<std::string_view, 5> x5eb34cd6_labels = {
+		"Skin and Clothing Tight",
+		"Tattoo",
+		"Underwear",
+		"Clothing Loose",
+		"Attachments", 
+	};
+
 	enum class x5eb34cd6 : uint64_t {
 		Skin_and_Clothing_Tight,
 		Tattoo,

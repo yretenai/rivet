@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"CustomCode", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x59f4ecd6_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x59f4ecd6 : uint64_t {
 		InOrder,
 		Shuffle,

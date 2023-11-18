@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kGoldBolt", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x3a1207ee_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x3a1207ee : uint64_t {
 		Bolts,
 		Raritanium,

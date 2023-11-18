@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"kNone", 
 	};
 
+	constexpr static std::array<std::string_view, 5> HeroTypes_labels = {
+		"Ratchet",
+		"Clank",
+		"Rivet",
+		"Kit",
+		"None", 
+	};
+
 	enum class HeroTypes : uint64_t {
 		Ratchet,
 		Clank,

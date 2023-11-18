@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kClassD", 
 	};
 
+	constexpr static std::array<std::string_view, 4> x1f61db2e_labels = {
+		"Class A",
+		"Class B",
+		"Class C",
+		"Class D", 
+	};
+
 	enum class x1f61db2e : uint64_t {
 		Class_A,
 		Class_B,

@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"kAll", 
 	};
 
+	constexpr static std::array<std::string_view, 5> x6b4f547f_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x6b4f547f : uint64_t {
 		InitializedZones,
 		VisibleZones,

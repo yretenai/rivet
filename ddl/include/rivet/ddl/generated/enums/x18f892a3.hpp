@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kTexture", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x18f892a3_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x18f892a3 : uint64_t {
 		Constant,
 		Color,

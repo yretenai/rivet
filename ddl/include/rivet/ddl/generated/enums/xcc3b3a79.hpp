@@ -27,6 +27,15 @@ namespace rivet::ddl::generated {
 		"kEngine", 
 	};
 
+	constexpr static std::array<std::string_view, 6> xcc3b3a79_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xcc3b3a79 : uint64_t {
 		Editor,
 		Zone,

@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kExtrapolateRepeat", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x74a6ffcc_labels = {
+		"Constant",
+		"None",
+		"Cycle", 
+	};
+
 	enum class x74a6ffcc : uint64_t {
 		Constant,
 		None,

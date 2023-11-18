@@ -30,6 +30,18 @@ namespace rivet::ddl::generated {
 		"kAnyFaceButton", 
 	};
 
+	constexpr static std::array<std::string_view, 9> xbb5d75a3_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xbb5d75a3 : uint64_t {
 		Interact,
 		MoveX,

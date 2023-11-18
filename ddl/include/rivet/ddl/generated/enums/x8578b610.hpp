@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"Player", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x8578b610_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x8578b610 : uint64_t {
 		Generic,
 		Objective,

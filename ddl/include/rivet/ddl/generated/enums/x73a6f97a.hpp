@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"kSplineFullBack", 
 	};
 
+	constexpr static std::array<std::string_view, 5> x73a6f97a_labels = {
+		"Target",
+		"Spline Planar",
+		"Spline Full",
+		"Spline Planar Back",
+		"Spline Full Back", 
+	};
+
 	enum class x73a6f97a : uint64_t {
 		Target,
 		Spline_Planar,

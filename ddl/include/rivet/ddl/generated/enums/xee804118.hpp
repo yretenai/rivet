@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kPortal", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xee804118_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xee804118 : uint64_t {
 		None,
 		ActorSwap,

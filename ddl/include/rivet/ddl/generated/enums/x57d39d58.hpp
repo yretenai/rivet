@@ -28,6 +28,16 @@ namespace rivet::ddl::generated {
 		"kCompQualityLowest", 
 	};
 
+	constexpr static std::array<std::string_view, 7> x57d39d58_labels = {
+		"Highest",
+		"Higher",
+		"High",
+		"Normal",
+		"Low",
+		"Lower",
+		"Lowest", 
+	};
+
 	enum class x57d39d58 : uint64_t {
 		Highest,
 		Higher,

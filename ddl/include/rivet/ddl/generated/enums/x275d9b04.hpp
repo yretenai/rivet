@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kDash", 
 	};
 
+	constexpr static std::array<std::string_view, 4> x275d9b04_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x275d9b04 : uint64_t {
 		Pickup,
 		Melee,

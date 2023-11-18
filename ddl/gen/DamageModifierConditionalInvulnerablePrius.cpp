@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	DamageModifierConditionalInvulnerablePrius::DamageModifierConditionalInvulnerablePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): DamageModifierInvulnerablePrius(serialized) {
-		DamageFilter = serialized->get_enums<rivet::ddl::generated::x8d7e44cf>(DamageFilter_type_id, rivet::ddl::generated::x8d7e44cf_values);
+		DamageFilter = serialized->get_enums<rivet::ddl::generated::DamageTypes>(DamageFilter_type_id, rivet::ddl::generated::DamageTypes_values);
 		AllegianceFilter = serialized->get_uint32(AllegianceFilter_type_id); 
 	}
 

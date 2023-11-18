@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kRGB", 
 	};
 
+	constexpr static std::array<std::string_view, 4> KeyFrameType_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class KeyFrameType : uint64_t {
 		Float,
 		Float2,

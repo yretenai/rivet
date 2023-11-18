@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"server", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x766ef241_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x766ef241 : uint64_t {
 		console,
 		server, 

@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kShip_Ranger", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x5c4496c6_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x5c4496c6 : uint64_t {
 		Ship_None,
 		Ship_Micron,

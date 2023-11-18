@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"delta", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x7080cd4b_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x7080cd4b : uint64_t {
 		full,
 		delta, 

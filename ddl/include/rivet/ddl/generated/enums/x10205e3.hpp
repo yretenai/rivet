@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kEndOfShot", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x10205e3_labels = {
+		"Beginning Of Shot",
+		"End Of Shot", 
+	};
+
 	enum class x10205e3 : uint64_t {
 		Beginning_Of_Shot,
 		End_Of_Shot, 

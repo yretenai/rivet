@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kSpeaker4", 
 	};
 
+	constexpr static std::array<std::string_view, 4> Speakers_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class Speakers : uint64_t {
 		Speaker1,
 		Speaker2,

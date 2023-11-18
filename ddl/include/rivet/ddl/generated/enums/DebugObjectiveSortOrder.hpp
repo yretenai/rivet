@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kDepthFirst", 
 	};
 
+	constexpr static std::array<std::string_view, 2> DebugObjectiveSortOrder_labels = {
+		"Alphabetical",
+		"Objective Order", 
+	};
+
 	enum class DebugObjectiveSortOrder : uint64_t {
 		Alphabetical,
 		Objective_Order, 

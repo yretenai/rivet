@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kZoneOpLoad", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x39897f27_labels = {
+		"Zone - Hide",
+		"Zone - Show",
+		"Zone - Load", 
+	};
+
 	enum class x39897f27 : uint64_t {
 		ZoneOpHide,
 		ZoneOpShow,

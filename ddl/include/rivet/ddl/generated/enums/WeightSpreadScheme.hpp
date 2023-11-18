@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kFavorEndOfChain", 
 	};
 
+	constexpr static std::array<std::string_view, 3> WeightSpreadScheme_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class WeightSpreadScheme : uint64_t {
 		EvenSpread,
 		FavorBaseOfChain,

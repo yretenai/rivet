@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kTypeLocal", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x6fb523_labels = {
+		"All",
+		"Self", 
+	};
+
 	enum class x6fb523 : uint64_t {
 		All,
 		Self, 

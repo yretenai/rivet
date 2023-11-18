@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kWeakspot", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x80286938_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x80286938 : uint64_t {
 		CenterOfMass,
 		Ground,

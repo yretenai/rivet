@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kAllow", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x3afd25fe_labels = {
+		"30FPS Only",
+		"Disable",
+		"Allow", 
+	};
+
 	enum class x3afd25fe : uint64_t {
 		k30FPSOnly,
 		Disable,

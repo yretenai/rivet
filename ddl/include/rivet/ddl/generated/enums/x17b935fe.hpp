@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"kEnergy", 
 	};
 
+	constexpr static std::array<std::string_view, 5> x17b935fe_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x17b935fe : uint64_t {
 		None,
 		Gravity,

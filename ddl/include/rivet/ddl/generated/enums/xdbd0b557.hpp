@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"Back_CuboidOnly", 
 	};
 
+	constexpr static std::array<std::string_view, 2> xdbd0b557_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xdbd0b557 : uint64_t {
 		Center,
 		Back_CuboidOnly, 

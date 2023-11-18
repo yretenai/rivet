@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"kImpact_Extreme", 
 	};
 
+	constexpr static std::array<std::string_view, 5> x3b1e2e8d_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x3b1e2e8d : uint64_t {
 		Impact_None,
 		Impact_Light,

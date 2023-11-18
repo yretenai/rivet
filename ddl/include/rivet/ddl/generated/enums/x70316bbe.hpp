@@ -28,6 +28,16 @@ namespace rivet::ddl::generated {
 		"kValueGreaterOrEqual", 
 	};
 
+	constexpr static std::array<std::string_view, 7> x70316bbe_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x70316bbe : uint64_t {
 		KeyExists,
 		KeyNotExists,

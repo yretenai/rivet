@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kCurved", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xc8ad99bd_labels = {
+		"None",
+		"Flat",
+		"Curved", 
+	};
+
 	enum class xc8ad99bd : uint64_t {
 		None,
 		Flat,

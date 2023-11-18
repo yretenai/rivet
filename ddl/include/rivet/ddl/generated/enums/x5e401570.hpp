@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"OnComplete", 
 	};
 
+	constexpr static std::array<std::string_view, 4> x5e401570_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x5e401570 : uint64_t {
 		OnAvailable,
 		OnActive,

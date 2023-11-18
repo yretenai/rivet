@@ -18,7 +18,7 @@
 #include <rivet/structures/rivet_serialization.hpp>
 
 #include <rivet/ddl/generated/enums/KnockbackLevels.hpp>
-#include <rivet/ddl/generated/enums/x8d7e44cf.hpp> 
+#include <rivet/ddl/generated/enums/DamageTypes.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED BotMountDamageData : rivet::structures::rivet_ddl_base {
@@ -49,7 +49,7 @@ namespace rivet::ddl::generated {
 		std::string_view LocatorName {};
 		float DamageSphereRadius {};
 		float DamageAmount {};
-		rivet::ddl::generated::x8d7e44cf DamageType {};
+		rivet::ddl::generated::DamageTypes DamageType {};
 		rivet::ddl::generated::KnockbackLevels Knockback {};
 		std::string_view DamageStr {};
 		float KnockbackAmount {}; 

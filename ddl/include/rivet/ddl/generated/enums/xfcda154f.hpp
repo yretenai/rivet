@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"FirstTargetPos", 
 	};
 
+	constexpr static std::array<std::string_view, 5> xfcda154f_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xfcda154f : uint64_t {
 		BSphere,
 		AllTargetingLocs,

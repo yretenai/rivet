@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	IconMapSingle::IconMapSingle([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): IconMapBase(serialized) {
-		IconId = serialized->get_enum<rivet::ddl::generated::x445aeabc>(IconId_type_id, rivet::ddl::generated::x445aeabc_values); 
+		IconId = serialized->get_enum<rivet::ddl::generated::IconId>(IconId_type_id, rivet::ddl::generated::IconId_values); 
 	}
 
 	[[nodiscard]] auto

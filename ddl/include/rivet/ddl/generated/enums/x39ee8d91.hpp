@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"kUnreferencedAssets", 
 	};
 
+	constexpr static std::array<std::string_view, 5> x39ee8d91_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x39ee8d91 : uint64_t {
 		OpenUnit,
 		Global,

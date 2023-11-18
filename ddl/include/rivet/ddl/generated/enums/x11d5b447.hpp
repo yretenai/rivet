@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kAlwaysFacing", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x11d5b447_labels = {
+		"Fixed",
+		"Camera facing", 
+	};
+
 	enum class x11d5b447 : uint64_t {
 		Fixed,
 		Camera_facing, 

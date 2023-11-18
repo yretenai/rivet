@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"kUniform", 
 	};
 
+	constexpr static std::array<std::string_view, 5> SplineTypes_labels = {
+		"Centripetal",
+		"Surface Bound",
+		"Linear",
+		"Catmull-Rom",
+		"Uniform", 
+	};
+
 	enum class SplineTypes : uint64_t {
 		Centripetal,
 		Surface_Bound,

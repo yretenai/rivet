@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"kWindows", 
 	};
 
+	constexpr static std::array<std::string_view, 5> x7271a16e_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x7271a16e : uint64_t {
 		Default,
 		Tlsf,

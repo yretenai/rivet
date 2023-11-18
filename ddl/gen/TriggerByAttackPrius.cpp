@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	TriggerByAttackPrius::TriggerByAttackPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): TriggerByBasePrius(serialized) {
 		AttackType = serialized->get_enum<rivet::ddl::generated::x209cdeb2>(AttackType_type_id, rivet::ddl::generated::x209cdeb2_values);
-		CustomDamageType = serialized->get_enum<rivet::ddl::generated::x8d7e44cf>(CustomDamageType_type_id, rivet::ddl::generated::x8d7e44cf_values); 
+		CustomDamageType = serialized->get_enum<rivet::ddl::generated::DamageTypes>(CustomDamageType_type_id, rivet::ddl::generated::DamageTypes_values); 
 	}
 
 	[[nodiscard]] auto

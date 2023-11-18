@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kCheckpointB", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x2bbd4e7a_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x2bbd4e7a : uint64_t {
 		EitherCheckpoint,
 		CheckpointA,

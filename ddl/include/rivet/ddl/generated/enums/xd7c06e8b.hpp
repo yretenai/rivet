@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"Cylinder", 
 	};
 
+	constexpr static std::array<std::string_view, 2> xd7c06e8b_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xd7c06e8b : uint64_t {
 		Box,
 		Cylinder, 

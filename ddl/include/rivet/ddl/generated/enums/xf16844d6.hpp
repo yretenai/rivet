@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kLookAtSpecificTarget", 
 	};
 
+	constexpr static std::array<std::string_view, 2> xf16844d6_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xf16844d6 : uint64_t {
 		LookAtHero,
 		LookAtSpecificTarget, 

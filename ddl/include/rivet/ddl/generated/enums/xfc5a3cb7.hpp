@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kCamera", 
 	};
 
+	constexpr static std::array<std::string_view, 2> xfc5a3cb7_labels = {
+		"Listener",
+		"Camera", 
+	};
+
 	enum class xfc5a3cb7 : uint64_t {
 		Listener,
 		Camera, 

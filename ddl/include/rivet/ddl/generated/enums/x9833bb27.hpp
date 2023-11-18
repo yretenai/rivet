@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kAllObjects", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x9833bb27_labels = {
+		"Do not warn for excessive collision",
+		"Warn for possibly-moving things",
+		"Warn for static & dynamic things", 
+	};
+
 	enum class x9833bb27 : uint64_t {
 		Do_not_warn_for_excessive_collision,
 		DynamicObjects,

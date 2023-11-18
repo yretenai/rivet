@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kLevelList", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x2eab60c7_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x2eab60c7 : uint64_t {
 		SceneNode,
 		ActorGroup,

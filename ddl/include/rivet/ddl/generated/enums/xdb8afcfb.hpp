@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kThrowExternal", 
 	};
 
+	constexpr static std::array<std::string_view, 2> xdb8afcfb_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xdb8afcfb : uint64_t {
 		DropExternal,
 		ThrowExternal, 

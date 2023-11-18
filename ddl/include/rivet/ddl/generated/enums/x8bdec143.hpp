@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kSolo", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x8bdec143_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x8bdec143 : uint64_t {
 		Active,
 		Mute,

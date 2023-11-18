@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kNone", 
 	};
 
+	constexpr static std::array<std::string_view, 4> x7e4a5355_labels = {
+		"Create Curve Actor",
+		"Make Model Actor",
+		"Override Actor Model",
+		"No Actor", 
+	};
+
 	enum class x7e4a5355 : uint64_t {
 		Create_Curve_Actor,
 		Make_Model_Actor,

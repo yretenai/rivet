@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kDeleteOnEnd", 
 	};
 
+	constexpr static std::array<std::string_view, 2> xa4c61284_labels = {
+		"Persist",
+		"Delete", 
+	};
+
 	enum class xa4c61284 : uint64_t {
 		Persist,
 		Delete, 

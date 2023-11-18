@@ -29,6 +29,17 @@ namespace rivet::ddl::generated {
 		"kNotInAnyCameraView", 
 	};
 
+	constexpr static std::array<std::string_view, 8> x2ac46ab8_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x2ac46ab8 : uint64_t {
 		Random,
 		Index,

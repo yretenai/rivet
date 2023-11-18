@@ -14,7 +14,7 @@ namespace rivet::ddl::generated {
 		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
 		Amount = serialized->get_float(Amount_type_id);
 		AmountAsPercentage = serialized->get_bool(AmountAsPercentage_type_id);
-		Type = serialized->get_enum<rivet::ddl::generated::x8d7e44cf>(Type_type_id, rivet::ddl::generated::x8d7e44cf_values);
+		Type = serialized->get_enum<rivet::ddl::generated::DamageTypes>(Type_type_id, rivet::ddl::generated::DamageTypes_values);
 		Knockback = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(Knockback_type_id, rivet::ddl::generated::KnockbackLevels_values);
 		KnockbackAmount = serialized->get_float(KnockbackAmount_type_id);
 		Flags = serialized->get_bitset<rivet::ddl::generated::x65d7dac2>(Flags_type_id, rivet::ddl::generated::x65d7dac2_values);

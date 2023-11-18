@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kSphere", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x8eddd608_labels = {
+		"Box",
+		"Cylinder",
+		"Sphere", 
+	};
+
 	enum class x8eddd608 : uint64_t {
 		Box,
 		Cylinder,

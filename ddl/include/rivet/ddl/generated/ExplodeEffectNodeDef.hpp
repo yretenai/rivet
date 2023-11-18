@@ -19,7 +19,7 @@
 
 #include <rivet/ddl/generated/enums/xe1cdcd87.hpp>
 #include <rivet/ddl/generated/bitsets/x65d7dac2.hpp>
-#include <rivet/ddl/generated/enums/x8d7e44cf.hpp>
+#include <rivet/ddl/generated/enums/DamageTypes.hpp>
 #include <rivet/ddl/generated/NodalShotEffectNodeBaseDef.hpp> 
 
 namespace rivet::ddl::generated {
@@ -44,7 +44,7 @@ namespace rivet::ddl::generated {
 		explicit ExplodeEffectNodeDef() = default;
 		explicit ExplodeEffectNodeDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);
 
-		rivet::ddl::generated::x8d7e44cf DamageType {};
+		rivet::ddl::generated::DamageTypes DamageType {};
 		rivet::ddl::generated::x65d7dac2 DamageFlags {};
 		std::shared_ptr<rivet::ddl::generated::DDLVector3> DamageOffset {};
 		rivet::ddl::generated::xe1cdcd87 OffsetMode {};

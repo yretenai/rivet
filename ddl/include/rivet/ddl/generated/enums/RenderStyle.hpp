@@ -38,6 +38,26 @@ namespace rivet::ddl::generated {
 		"kSingleDecalTrail", 
 	};
 
+	constexpr static std::array<std::string_view, 17> RenderStyle_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class RenderStyle : uint64_t {
 		SingleQuad,
 		MultiQuads,

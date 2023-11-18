@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kFlightTime", 
 	};
 
+	constexpr static std::array<std::string_view, 4> x387e77cd_labels = {
+		"None",
+		"MinSpeed",
+		"MaxSpeed",
+		"FlightTime", 
+	};
+
 	enum class x387e77cd : uint64_t {
 		None,
 		MinSpeed,

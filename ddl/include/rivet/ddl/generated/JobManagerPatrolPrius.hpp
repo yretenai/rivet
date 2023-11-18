@@ -17,7 +17,7 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/enums/xe8421db7.hpp> 
+#include <rivet/ddl/generated/enums/MovementStyle.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED JobManagerPatrolPrius : rivet::structures::rivet_ddl_base {
@@ -41,7 +41,7 @@ namespace rivet::ddl::generated {
 		explicit JobManagerPatrolPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);
 
 		bool Broadcast {};
-		rivet::ddl::generated::xe8421db7 MovementStyle {};
+		rivet::ddl::generated::MovementStyle MovementStyle {};
 		bool UsableByLargeEnemies {};
 		bool StartAtBeginningOfCurve {};
 		bool DisableBroadcastOnUse {};

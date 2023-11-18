@@ -31,6 +31,19 @@ namespace rivet::ddl::generated {
 		"kBSpline", 
 	};
 
+	constexpr static std::array<std::string_view, 10> xae1208ef_labels = {
+		"NONE",
+		"PointComposite (Sharp)",
+		"Bicubic (Sharp)",
+		"Cubic (Med Sharp)",
+		"Sinc (Med Sharp)",
+		"Box (Med Sharp)",
+		"Mitchell (Med Smooth)",
+		"Triangle (Med Smooth)",
+		"Quadratic (Smooth)",
+		"BSpline (Smooth)", 
+	};
+
 	enum class xae1208ef : uint64_t {
 		None,
 		PointComposite,

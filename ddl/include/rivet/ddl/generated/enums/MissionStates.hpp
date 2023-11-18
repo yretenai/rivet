@@ -27,6 +27,15 @@ namespace rivet::ddl::generated {
 		"kFailed", 
 	};
 
+	constexpr static std::array<std::string_view, 6> MissionStates_labels = {
+		"Inactive",
+		"Available",
+		"Active",
+		"Complete Cleaning",
+		"Complete Finished",
+		"Failed", 
+	};
+
 	enum class MissionStates : uint64_t {
 		Inactive,
 		Available,

@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kAStartToBEnd", 
 	};
 
+	constexpr static std::array<std::string_view, 4> xbabeae30_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xbabeae30 : uint64_t {
 		AEndToBStart,
 		AEndToBEnd,

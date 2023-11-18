@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"kOverheated", 
 	};
 
+	constexpr static std::array<std::string_view, 5> xa6f8b099_labels = {
+		"None",
+		"Cold",
+		"MediumTemp",
+		"HighTemp",
+		"Overheated", 
+	};
+
 	enum class xa6f8b099 : uint64_t {
 		None,
 		Cold,

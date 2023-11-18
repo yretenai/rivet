@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kTargetingBestTarget", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x84a7fecd_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x84a7fecd : uint64_t {
 		HuntingActor,
 		TargetHunterTarget,

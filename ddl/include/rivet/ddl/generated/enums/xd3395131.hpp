@@ -28,6 +28,16 @@ namespace rivet::ddl::generated {
 		"kReZoneToActivator", 
 	};
 
+	constexpr static std::array<std::string_view, 7> xd3395131_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xd3395131 : uint64_t {
 		ConfigDefault,
 		DeleteInstant,

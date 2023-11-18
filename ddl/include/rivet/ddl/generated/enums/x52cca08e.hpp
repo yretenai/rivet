@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"kSceneEditorMesh", 
 	};
 
+	constexpr static std::array<std::string_view, 5> x52cca08e_labels = {
+		"Normal",
+		"Show Detail Displacement",
+		"Show LoD",
+		"Show Tiles",
+		"Scene Editor Mesh", 
+	};
+
 	enum class x52cca08e : uint64_t {
 		Normal,
 		Show_Detail_Displacement,

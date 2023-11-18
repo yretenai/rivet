@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"kApplyMomentum", 
 	};
 
+	constexpr static std::array<std::string_view, 5> xf41a4c2_labels = {
+		"First Contact",
+		"Attach Only",
+		"Always If Over",
+		"Always and in jumps",
+		"Attached Plus Jump Momentum", 
+	};
+
 	enum class xf41a4c2 : uint64_t {
 		First_Contact,
 		Attach_Only,

@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"kComplete", 
 	};
 
+	constexpr static std::array<std::string_view, 5> x97a17b73_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x97a17b73 : uint64_t {
 		None,
 		Available,

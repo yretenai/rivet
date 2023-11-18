@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kSequential", 
 	};
 
+	constexpr static std::array<std::string_view, 2> xd3ac14c9_labels = {
+		"Random",
+		"Sequential", 
+	};
+
 	enum class xd3ac14c9 : uint64_t {
 		Random,
 		Sequential, 

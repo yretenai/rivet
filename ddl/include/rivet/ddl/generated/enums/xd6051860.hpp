@@ -27,6 +27,15 @@ namespace rivet::ddl::generated {
 		"kTravelMapRight", 
 	};
 
+	constexpr static std::array<std::string_view, 6> xd6051860_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xd6051860 : uint64_t {
 		TravelMapSelect,
 		TravelMapBack,

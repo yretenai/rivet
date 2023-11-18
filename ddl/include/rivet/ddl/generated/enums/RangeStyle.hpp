@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kEitherOr", 
 	};
 
+	constexpr static std::array<std::string_view, 4> RangeStyle_labels = {
+		"None",
+		"Random",
+		"Flicker",
+		"Either Or", 
+	};
+
 	enum class RangeStyle : uint64_t {
 		None,
 		Random,

@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kWireframe", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xff5a79fb_labels = {
+		"Wire Overlay",
+		"Solid",
+		"Wireframe", 
+	};
+
 	enum class xff5a79fb : uint64_t {
 		Wire_Overlay,
 		Solid,

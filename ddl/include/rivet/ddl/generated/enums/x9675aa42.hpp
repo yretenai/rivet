@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kTypeBody", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x9675aa42_labels = {
+		"Standard (Head + Body)",
+		"Head",
+		"Body", 
+	};
+
 	enum class x9675aa42 : uint64_t {
 		TypeStandard,
 		Head,

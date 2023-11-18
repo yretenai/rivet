@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"kState", 
 	};
 
+	constexpr static std::array<std::string_view, 5> x38ca42_labels = {
+		"Trigger",
+		"AuxSend",
+		"Parameter",
+		"Switch",
+		"State", 
+	};
+
 	enum class x38ca42 : uint64_t {
 		Trigger,
 		AuxSend,

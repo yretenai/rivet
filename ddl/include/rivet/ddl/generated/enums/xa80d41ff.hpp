@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kRemove", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xa80d41ff_labels = {
+		"Fill with zero",
+		"Fill with color",
+		"Remove data", 
+	};
+
 	enum class xa80d41ff : uint64_t {
 		Fill_with_zero,
 		Fill_with_color,

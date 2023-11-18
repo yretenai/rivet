@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kResponsive", 
 	};
 
+	constexpr static std::array<std::string_view, 3> TemporalAAStyle_labels = {
+		"Inherit Material",
+		"Non-Responsive",
+		"Responsive", 
+	};
+
 	enum class TemporalAAStyle : uint64_t {
 		Inherit_Material,
 		NonResponsive,

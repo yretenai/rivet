@@ -28,6 +28,16 @@ namespace rivet::ddl::generated {
 		"kDefault", 
 	};
 
+	constexpr static std::array<std::string_view, 7> xf94df176_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xf94df176 : uint64_t {
 		Follower,
 		PitchSettle,

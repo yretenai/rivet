@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kTutorialTouchpadYPinch", 
 	};
 
+	constexpr static std::array<std::string_view, 4> xd8ef6541_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xd8ef6541 : uint64_t {
 		TutorialTouchpadX,
 		TutorialTouchpadY,

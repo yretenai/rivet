@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kHardest", 
 	};
 
+	constexpr static std::array<std::string_view, 4> xd2b2d773_labels = {
+		"Easy",
+		"Normal",
+		"Hard",
+		"Hardest", 
+	};
+
 	enum class xd2b2d773 : uint64_t {
 		Easy,
 		Normal,

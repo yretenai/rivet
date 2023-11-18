@@ -28,6 +28,16 @@ namespace rivet::ddl::generated {
 		"Trophy", 
 	};
 
+	constexpr static std::array<std::string_view, 7> x56d897ac_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x56d897ac : uint64_t {
 		Activity,
 		Zone,

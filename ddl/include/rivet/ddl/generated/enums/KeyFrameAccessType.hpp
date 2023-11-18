@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kAge", 
 	};
 
+	constexpr static std::array<std::string_view, 2> KeyFrameAccessType_labels = {
+		"Distance",
+		"Age", 
+	};
+
 	enum class KeyFrameAccessType : uint64_t {
 		Distance,
 		Age, 

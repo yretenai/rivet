@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kOffline", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xc2e0975c_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xc2e0975c : uint64_t {
 		Unknown,
 		Online,

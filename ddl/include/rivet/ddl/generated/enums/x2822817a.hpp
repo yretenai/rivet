@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kWorld", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x2822817a_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x2822817a : uint64_t {
 		TargetLocal,
 		InitialMoverLocal,

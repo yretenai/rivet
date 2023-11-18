@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kBroadcast", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xc67232c_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xc67232c : uint64_t {
 		Self,
 		Targeted,

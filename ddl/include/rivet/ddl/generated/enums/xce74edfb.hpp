@@ -30,6 +30,18 @@ namespace rivet::ddl::generated {
 		"kBoxBreaker", 
 	};
 
+	constexpr static std::array<std::string_view, 9> xce74edfb_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xce74edfb : uint64_t {
 		Omniboots,
 		Grindboots,

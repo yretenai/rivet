@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kRightStick", 
 	};
 
+	constexpr static std::array<std::string_view, 2> FlyerCameraStickOption_labels = {
+		"Left Stick",
+		"Right Stick", 
+	};
+
 	enum class FlyerCameraStickOption : uint64_t {
 		Left_Stick,
 		Right_Stick, 

@@ -37,6 +37,25 @@ namespace rivet::ddl::generated {
 		"kSelectCurrentIndex", 
 	};
 
+	constexpr static std::array<std::string_view, 16> xf23ee100_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xf23ee100 : uint64_t {
 		Invalid,
 		ClipTime,

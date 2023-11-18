@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"kDefaultTorus", 
 	};
 
+	constexpr static std::array<std::string_view, 5> ModelInstType_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class ModelInstType : uint64_t {
 		Model,
 		DefaultCube,

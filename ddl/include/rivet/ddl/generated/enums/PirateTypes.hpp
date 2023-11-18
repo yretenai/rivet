@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"Purple", 
 	};
 
+	constexpr static std::array<std::string_view, 5> PirateTypes_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class PirateTypes : uint64_t {
 		Green,
 		Orange,

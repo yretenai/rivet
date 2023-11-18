@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kInvSqDb", 
 	};
 
+	constexpr static std::array<std::string_view, 4> xcb4c1031_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xcb4c1031 : uint64_t {
 		NoDistancing,
 		LinearGain,

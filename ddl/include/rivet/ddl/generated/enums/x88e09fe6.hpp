@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kShuffleLoop", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x88e09fe6_labels = {
+		"Output in order",
+		"Shuffle outputs once",
+		"Shuffle outputs every cycle", 
+	};
+
 	enum class x88e09fe6 : uint64_t {
 		Output_in_order,
 		Shuffle_outputs_once,

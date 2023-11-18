@@ -28,6 +28,16 @@ namespace rivet::ddl::generated {
 		"kG", 
 	};
 
+	constexpr static std::array<std::string_view, 7> SelB_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class SelB : uint64_t {
 		Q,
 		A,

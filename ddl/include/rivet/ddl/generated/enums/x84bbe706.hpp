@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"Right", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x84bbe706_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x84bbe706 : uint64_t {
 		Left,
 		Center,

@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kGuest2", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x19aa8603_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x19aa8603 : uint64_t {
 		Host,
 		Guest1,

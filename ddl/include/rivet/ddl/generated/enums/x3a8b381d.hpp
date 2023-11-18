@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kTranslationRangeLarge", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x3a8b381d_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x3a8b381d : uint64_t {
 		TranslationRangeStd,
 		TranslationRangeLarge, 

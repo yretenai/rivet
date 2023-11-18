@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"OnFirstEnter", 
 	};
 
+	constexpr static std::array<std::string_view, 2> xda924f99_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xda924f99 : uint64_t {
 		OnAnyEnter,
 		OnFirstEnter, 

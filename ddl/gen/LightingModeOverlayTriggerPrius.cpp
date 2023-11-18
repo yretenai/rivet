@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	LightingModeOverlayTriggerPrius::LightingModeOverlayTriggerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BaseCustomOverlayTriggerPrius(serialized) {
-		LightingModes = serialized->get_enums<rivet::ddl::generated::xee0945fb>(LightingModes_type_id, rivet::ddl::generated::xee0945fb_values); 
+		LightingModes = serialized->get_enums<rivet::ddl::generated::LightingMode>(LightingModes_type_id, rivet::ddl::generated::LightingMode_values); 
 	}
 
 	[[nodiscard]] auto

@@ -34,6 +34,22 @@ namespace rivet::ddl::generated {
 		"kSlotHair", 
 	};
 
+	constexpr static std::array<std::string_view, 13> x1b3f99b5_labels = {
+		"Head actor or variant",
+		"Color (skin, hair primary/secondary, facial hair, eye)",
+		"Feet",
+		"Leg Lower",
+		"Leg Upper",
+		"Torso Lower",
+		"Torso Upper",
+		"Arm Lower",
+		"Arm Upper",
+		"Hands",
+		"Head and Face",
+		"Hats and Helmets",
+		"Hair", 
+	};
+
 	enum class x1b3f99b5 : uint64_t {
 		Head_actor_or_variant,
 		SlotColor,

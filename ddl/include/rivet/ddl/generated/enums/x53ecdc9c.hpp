@@ -27,6 +27,15 @@ namespace rivet::ddl::generated {
 		"kSpecial", 
 	};
 
+	constexpr static std::array<std::string_view, 6> x53ecdc9c_labels = {
+		"None",
+		"Swarmer",
+		"Melee",
+		"Shooter",
+		"Heavy",
+		"Special", 
+	};
+
 	enum class x53ecdc9c : uint64_t {
 		None,
 		Swarmer,

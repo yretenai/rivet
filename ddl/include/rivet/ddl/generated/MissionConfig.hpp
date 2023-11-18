@@ -17,7 +17,7 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/enums/xee0945fb.hpp>
+#include <rivet/ddl/generated/enums/LightingMode.hpp>
 #include <rivet/ddl/generated/RegionGameDataBase.hpp> 
 
 namespace rivet::ddl::generated {
@@ -58,7 +58,7 @@ namespace rivet::ddl::generated {
 		std::string_view LocTagDescription {};
 		std::string_view LocTagDescriptionEnd {};
 		bool OverrideLightingMode {};
-		rivet::ddl::generated::xee0945fb LightingMode {};
+		rivet::ddl::generated::LightingMode LightingMode {};
 		bool VisibleInMissionLog {};
 		std::vector<std::shared_ptr<rivet::ddl::generated::MissionObjectiveArrayData>> Objectives {}; 
 

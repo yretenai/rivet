@@ -22,7 +22,7 @@ namespace rivet::ddl::generated {
 		ActivityData = serialized->unwrap_into<rivet::ddl::generated::PlanetActivityData>(ActivityData_type_id);
 		DefaultMap = serialized->get_enum<rivet::ddl::generated::xd64fa9b1>(DefaultMap_type_id, rivet::ddl::generated::xd64fa9b1_values);
 		Maps = serialized->unwrap_into_many<rivet::ddl::generated::PlanetMap>(Maps_type_id);
-		DefaultLightingMode = serialized->get_enum<rivet::ddl::generated::xee0945fb>(DefaultLightingMode_type_id, rivet::ddl::generated::xee0945fb_values);
+		DefaultLightingMode = serialized->get_enum<rivet::ddl::generated::LightingMode>(DefaultLightingMode_type_id, rivet::ddl::generated::LightingMode_values);
 		ConditionalLightingModes = serialized->unwrap_into_many<rivet::ddl::generated::PlanetLightingCondition>(ConditionalLightingModes_type_id); 
 	}
 

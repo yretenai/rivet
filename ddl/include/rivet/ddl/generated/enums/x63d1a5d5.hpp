@@ -38,6 +38,26 @@ namespace rivet::ddl::generated {
 		"kNone", 
 	};
 
+	constexpr static std::array<std::string_view, 17> x63d1a5d5_labels = {
+		"Shot 0",
+		"Shot 1",
+		"Shot 2",
+		"Shot 3",
+		"Shot 4",
+		"Shot 5",
+		"Shot 6",
+		"Shot 7",
+		"Shot 8",
+		"Shot 9",
+		"Shot 10",
+		"Shot 11",
+		"Shot 12",
+		"Shot 13",
+		"Shot 14",
+		"Shot 15",
+		"None", 
+	};
+
 	enum class x63d1a5d5 : uint64_t {
 		Shot_0,
 		Shot_1,

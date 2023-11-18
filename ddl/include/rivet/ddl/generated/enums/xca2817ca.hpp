@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"openEnded", 
 	};
 
+	constexpr static std::array<std::string_view, 2> xca2817ca_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xca2817ca : uint64_t {
 		progress,
 		openEnded, 

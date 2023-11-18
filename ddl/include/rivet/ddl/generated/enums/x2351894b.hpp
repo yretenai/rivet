@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kPostComposite", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x2351894b_labels = {
+		"Override Base",
+		"Pre-Composite",
+		"Post-Composite", 
+	};
+
 	enum class x2351894b : uint64_t {
 		Override_Base,
 		PreComposite,

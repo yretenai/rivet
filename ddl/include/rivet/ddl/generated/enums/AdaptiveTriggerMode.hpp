@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kOff", 
 	};
 
+	constexpr static std::array<std::string_view, 3> AdaptiveTriggerMode_labels = {
+		"Default",
+		"Light",
+		"Off", 
+	};
+
 	enum class AdaptiveTriggerMode : uint64_t {
 		Default,
 		Light,

@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kFollowMode", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x77402cb9_labels = {
+		"Parent",
+		"Follow", 
+	};
+
 	enum class x77402cb9 : uint64_t {
 		Parent,
 		Follow, 

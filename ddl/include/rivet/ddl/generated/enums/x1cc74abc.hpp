@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kMinimal", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x1cc74abc_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x1cc74abc : uint64_t {
 		Unknown,
 		AllData,

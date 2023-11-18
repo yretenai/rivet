@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kAlways", 
 	};
 
+	constexpr static std::array<std::string_view, 3> SpawnCondition_labels = {
+		"Additional Instances",
+		"Exclusive Instance",
+		"CoolOff / Radius", 
+	};
+
 	enum class SpawnCondition : uint64_t {
 		Additional_Instances,
 		Exclusive_Instance,

@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kPlayer", 
 	};
 
+	constexpr static std::array<std::string_view, 2> xb62b6a7f_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xb62b6a7f : uint64_t {
 		Listener,
 		Player, 

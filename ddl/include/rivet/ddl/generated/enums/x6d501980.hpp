@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kDisableVolume", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x6d501980_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x6d501980 : uint64_t {
 		CritterLocation,
 		DisableVolume, 

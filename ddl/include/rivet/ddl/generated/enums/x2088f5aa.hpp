@@ -27,6 +27,15 @@ namespace rivet::ddl::generated {
 		"kFoliage", 
 	};
 
+	constexpr static std::array<std::string_view, 6> x2088f5aa_labels = {
+		"Standard",
+		"Skin",
+		"Cloth",
+		"Hair",
+		"Dual Aniso",
+		"Foliage", 
+	};
+
 	enum class x2088f5aa : uint64_t {
 		Standard,
 		Skin,

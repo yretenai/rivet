@@ -27,6 +27,15 @@ namespace rivet::ddl::generated {
 		"kLessThanEqualTo", 
 	};
 
+	constexpr static std::array<std::string_view, 6> x21604be_labels = {
+		"=",
+		"!=",
+		">",
+		">=",
+		"<",
+		"<=", 
+	};
+
 	enum class x21604be : uint64_t {
 		Equals,
 		NotEquals,

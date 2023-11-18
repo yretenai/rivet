@@ -28,6 +28,16 @@ namespace rivet::ddl::generated {
 		"kNegZ", 
 	};
 
+	constexpr static std::array<std::string_view, 7> xd0fb54d1_labels = {
+		"None",
+		"X",
+		"Negative X",
+		"Y",
+		"Negative Y",
+		"Z",
+		"Negative Z", 
+	};
+
 	enum class xd0fb54d1 : uint64_t {
 		None,
 		X,

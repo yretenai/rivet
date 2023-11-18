@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kVehicle", 
 	};
 
+	constexpr static std::array<std::string_view, 2> xad01e8be_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xad01e8be : uint64_t {
 		Bot,
 		Vehicle, 

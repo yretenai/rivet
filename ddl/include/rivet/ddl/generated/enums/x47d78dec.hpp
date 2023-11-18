@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kClosest", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x47d78dec_labels = {
+		"Most Common",
+		"Average",
+		"Closest", 
+	};
+
 	enum class x47d78dec : uint64_t {
 		Most_Common,
 		Average,

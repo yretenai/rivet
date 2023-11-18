@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kTypeVec2", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x6c25f7e9_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x6c25f7e9 : uint64_t {
 		TypeInt,
 		TypeFloat,

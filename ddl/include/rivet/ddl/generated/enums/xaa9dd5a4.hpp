@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kRemoveItem", 
 	};
 
+	constexpr static std::array<std::string_view, 2> xaa9dd5a4_labels = {
+		"Keep",
+		"Remove from Inventory", 
+	};
+
 	enum class xaa9dd5a4 : uint64_t {
 		Keep,
 		Remove_from_Inventory, 

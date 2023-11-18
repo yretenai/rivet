@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"kMajorUpdate", 
 	};
 
+	constexpr static std::array<std::string_view, 5> x1eee6c26_labels = {
+		"Main Game (285-1050 pts)",
+		"Paid DLC (0-200 pts)",
+		"Free DLC (0-45 pts)",
+		"Minor Update (0-45 pts)",
+		"Major Update (0-200 pts)", 
+	};
+
 	enum class x1eee6c26 : uint64_t {
 		MainGame,
 		PaidDLC,

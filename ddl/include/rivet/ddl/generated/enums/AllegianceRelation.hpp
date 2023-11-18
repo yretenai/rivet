@@ -28,6 +28,16 @@ namespace rivet::ddl::generated {
 		"kNotEnemies", 
 	};
 
+	constexpr static std::array<std::string_view, 7> AllegianceRelation_labels = {
+		"Any",
+		"Only",
+		"Friends",
+		"Enemies",
+		"Neutral",
+		"Not Friends",
+		"Not Enemies", 
+	};
+
 	enum class AllegianceRelation : uint64_t {
 		Any,
 		Only,

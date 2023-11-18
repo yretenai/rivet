@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	DamageStatusData::DamageStatusData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		StatusType = serialized->get_enum<rivet::ddl::generated::x8d7e44cf>(StatusType_type_id, rivet::ddl::generated::x8d7e44cf_values);
+		StatusType = serialized->get_enum<rivet::ddl::generated::DamageTypes>(StatusType_type_id, rivet::ddl::generated::DamageTypes_values);
 		StatusAmount = serialized->get_float(StatusAmount_type_id);
 		StatusDuration = serialized->get_float(StatusDuration_type_id);
 		StatusActionCount = serialized->get_float(StatusActionCount_type_id); 

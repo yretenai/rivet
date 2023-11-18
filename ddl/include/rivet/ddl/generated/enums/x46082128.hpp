@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kStopVfx", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x46082128_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x46082128 : uint64_t {
 		StartVfx,
 		StopVfx, 

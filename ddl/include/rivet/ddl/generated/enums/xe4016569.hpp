@@ -27,6 +27,15 @@ namespace rivet::ddl::generated {
 		"kNavRam", 
 	};
 
+	constexpr static std::array<std::string_view, 6> xe4016569_labels = {
+		"Tris",
+		"Resident VRAM",
+		"RAM usage",
+		"Instances",
+		"RAM for Collision",
+		"RAM for Navigation", 
+	};
+
 	enum class xe4016569 : uint64_t {
 		Tris,
 		Resident_VRAM,

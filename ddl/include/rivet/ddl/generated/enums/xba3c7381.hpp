@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kEngaged", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xba3c7381_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xba3c7381 : uint64_t {
 		Inactive,
 		Passive,

@@ -40,6 +40,28 @@ namespace rivet::ddl::generated {
 		"kTypeTreeMirror", 
 	};
 
+	constexpr static std::array<std::string_view, 19> x6c8f7f60_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x6c8f7f60 : uint64_t {
 		TypeDriverClip,
 		TypeDriverBiBlend,

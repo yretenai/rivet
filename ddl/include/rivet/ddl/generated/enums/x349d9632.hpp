@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kCuboid", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x349d9632_labels = {
+		"Ellipsoid",
+		"Cuboid", 
+	};
+
 	enum class x349d9632 : uint64_t {
 		Ellipsoid,
 		Cuboid, 

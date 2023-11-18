@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kConfirmed", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xbd2e617d_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xbd2e617d : uint64_t {
 		Spotting,
 		Confirming,

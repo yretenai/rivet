@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kInherited", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x41993474_labels = {
+		"Normal",
+		"Hidden",
+		"Inherited from Parent", 
+	};
+
 	enum class x41993474 : uint64_t {
 		Normal,
 		Hidden,

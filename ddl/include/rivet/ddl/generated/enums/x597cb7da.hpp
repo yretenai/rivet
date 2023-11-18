@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kFireStyleHeavy", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x597cb7da_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x597cb7da : uint64_t {
 		FireStyleLight,
 		FireStyleMedium,

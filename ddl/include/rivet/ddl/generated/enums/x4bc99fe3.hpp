@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kDisableOnUnTrigger", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x4bc99fe3_labels = {
+		"Do Not Auto Disable",
+		"Disable on Trigger",
+		"Disable on UnTrigger", 
+	};
+
 	enum class x4bc99fe3 : uint64_t {
 		Do_Not_Auto_Disable,
 		Disable_on_Trigger,

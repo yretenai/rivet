@@ -10,11 +10,11 @@
 
 namespace rivet::ddl::generated {
 	ShotKamehamehaPrius::ShotKamehamehaPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BeamShotPrius(serialized) {
-		DamageType = serialized->get_enum<rivet::ddl::generated::x8d7e44cf>(DamageType_type_id, rivet::ddl::generated::x8d7e44cf_values);
+		DamageType = serialized->get_enum<rivet::ddl::generated::DamageTypes>(DamageType_type_id, rivet::ddl::generated::DamageTypes_values);
 		KnockbackTiers = serialized->unwrap_into_many<rivet::ddl::generated::KnockbackTierData>(KnockbackTiers_type_id);
 		DamageFlags = serialized->get_bitset<rivet::ddl::generated::x65d7dac2>(DamageFlags_type_id, rivet::ddl::generated::x65d7dac2_values);
 		AudioFollowerType = serialized->get_enum<rivet::ddl::generated::x6f69eca>(AudioFollowerType_type_id, rivet::ddl::generated::x6f69eca_values);
-		V5ExplosionDamageType = serialized->get_enum<rivet::ddl::generated::x8d7e44cf>(V5ExplosionDamageType_type_id, rivet::ddl::generated::x8d7e44cf_values);
+		V5ExplosionDamageType = serialized->get_enum<rivet::ddl::generated::DamageTypes>(V5ExplosionDamageType_type_id, rivet::ddl::generated::DamageTypes_values);
 		V5ExplosionData = serialized->unwrap_into<rivet::ddl::generated::DamageModifierExplosionPrius>(V5ExplosionData_type_id);
 		V5ExplosionDamageLOSType = serialized->get_enum<rivet::ddl::generated::DamageLOSTypes>(V5ExplosionDamageLOSType_type_id, rivet::ddl::generated::DamageLOSTypes_values); 
 	}

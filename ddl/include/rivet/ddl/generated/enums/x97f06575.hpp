@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"Stop", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x97f06575_labels = {
+		"Unresponded Systems",
+		"Continue All",
+		"Stop All", 
+	};
+
 	enum class x97f06575 : uint64_t {
 		Unresponded_Systems,
 		Continue_All,

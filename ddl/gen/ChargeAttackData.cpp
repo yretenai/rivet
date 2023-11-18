@@ -34,7 +34,7 @@ namespace rivet::ddl::generated {
 		StunOutroDriver = serialized->get_string(StunOutroDriver_type_id);
 		StunCompressPartial = serialized->get_string(StunCompressPartial_type_id);
 		DamageAmount = serialized->get_float(DamageAmount_type_id);
-		DamageType = serialized->get_enum<rivet::ddl::generated::x8d7e44cf>(DamageType_type_id, rivet::ddl::generated::x8d7e44cf_values);
+		DamageType = serialized->get_enum<rivet::ddl::generated::DamageTypes>(DamageType_type_id, rivet::ddl::generated::DamageTypes_values);
 		Knockback = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(Knockback_type_id, rivet::ddl::generated::KnockbackLevels_values);
 		KnockbackAmount = serialized->get_float(KnockbackAmount_type_id);
 		KnockbackForce = serialized->get_float(KnockbackForce_type_id);

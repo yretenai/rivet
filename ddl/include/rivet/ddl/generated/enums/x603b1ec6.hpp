@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kZAxis", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x603b1ec6_labels = {
+		"XAxis",
+		"YAxis",
+		"ZAxis", 
+	};
+
 	enum class x603b1ec6 : uint64_t {
 		XAxis,
 		YAxis,

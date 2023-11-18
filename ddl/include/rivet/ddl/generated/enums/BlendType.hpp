@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"kOpaque", 
 	};
 
+	constexpr static std::array<std::string_view, 5> BlendType_labels = {
+		"Additive",
+		"Blended",
+		"Modulate",
+		"Opaque/Blended Hybrid",
+		"Opaque", 
+	};
+
 	enum class BlendType : uint64_t {
 		Additive,
 		Blended,

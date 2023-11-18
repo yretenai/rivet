@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kContainer", 
 	};
 
+	constexpr static std::array<std::string_view, 2> xe41b4b91_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xe41b4b91 : uint64_t {
 		Barrier,
 		Container, 

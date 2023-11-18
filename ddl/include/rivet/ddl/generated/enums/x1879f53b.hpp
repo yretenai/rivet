@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"Nothing", 
 	};
 
+	constexpr static std::array<std::string_view, 4> x1879f53b_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x1879f53b : uint64_t {
 		Anything,
 		DeathOnly,

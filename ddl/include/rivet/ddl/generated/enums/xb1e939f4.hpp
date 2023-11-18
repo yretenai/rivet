@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kFilterByFrame", 
 	};
 
+	constexpr static std::array<std::string_view, 2> xb1e939f4_labels = {
+		"Filter by Time",
+		"Filter by Frame", 
+	};
+
 	enum class xb1e939f4 : uint64_t {
 		Filter_by_Time,
 		Filter_by_Frame, 

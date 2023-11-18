@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"kLinear", 
 	};
 
+	constexpr static std::array<std::string_view, 5> x93b1b93c_labels = {
+		"None",
+		"Ease In",
+		"Ease In/Out",
+		"Ease Out",
+		"Linear", 
+	};
+
 	enum class x93b1b93c : uint64_t {
 		None,
 		Ease_In,

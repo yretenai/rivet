@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kWorld", 
 	};
 
+	constexpr static std::array<std::string_view, 2> FFOrientStyle_labels = {
+		"Local",
+		"World", 
+	};
+
 	enum class FFOrientStyle : uint64_t {
 		Local,
 		World, 

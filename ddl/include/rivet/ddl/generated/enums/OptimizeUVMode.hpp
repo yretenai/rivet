@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kUV0AndUV1", 
 	};
 
+	constexpr static std::array<std::string_view, 4> OptimizeUVMode_labels = {
+		"None",
+		"UV0 Only",
+		"UV1 Only",
+		"UV0 And UV1", 
+	};
+
 	enum class OptimizeUVMode : uint64_t {
 		None,
 		UV0_Only,

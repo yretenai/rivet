@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"Saturation", 
 	};
 
+	constexpr static std::array<std::string_view, 4> xed640b4c_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xed640b4c : uint64_t {
 		None,
 		Default,

@@ -38,6 +38,26 @@ namespace rivet::ddl::generated {
 		"kNone", 
 	};
 
+	constexpr static std::array<std::string_view, 17> x4dd7659a_labels = {
+		"Accuracy 0",
+		"Accuracy 1",
+		"Accuracy 2",
+		"Accuracy 3",
+		"Accuracy 4",
+		"Accuracy 5",
+		"Accuracy 6",
+		"Accuracy 7",
+		"Accuracy 8",
+		"Accuracy 9",
+		"Accuracy 10",
+		"Accuracy 11",
+		"Accuracy 12",
+		"Accuracy 13",
+		"Accuracy 14",
+		"Accuracy 15",
+		"None", 
+	};
+
 	enum class x4dd7659a : uint64_t {
 		Accuracy_0,
 		Accuracy_1,

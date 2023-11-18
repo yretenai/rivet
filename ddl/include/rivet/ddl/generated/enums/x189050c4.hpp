@@ -47,6 +47,35 @@ namespace rivet::ddl::generated {
 		"kLightGrid", 
 	};
 
+	constexpr static std::array<std::string_view, 26> x189050c4_labels = {
+		"Off",
+		"All",
+		"Indoor",
+		"Nav Mesh Gen",
+		"Weather Blocker",
+		"Post Effects",
+		"Fully Indoor",
+		"Valid Extents",
+		"Force Embedded",
+		"Avoid Embedded",
+		"Water",
+		"Indoor Window",
+		"Emissive Blocker",
+		"Light Grid Path Blocker",
+		"Light Grid Force Occluder Plane",
+		"Light Grid Creator",
+		"Light Grid Selector",
+		"Distant Lighting Ground",
+		"Distant Lighting Roof",
+		"Distant Lighting Force Embedded",
+		"Distant Lighting Mid",
+		"Ray-Tracing Blocker",
+		"Translucent Shadow",
+		"Light Grid Sample Avoid",
+		"Env Probe",
+		"Light Grid", 
+	};
+
 	enum class x189050c4 : uint64_t {
 		Off,
 		All,

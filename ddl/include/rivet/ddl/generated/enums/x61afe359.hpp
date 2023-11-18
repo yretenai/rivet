@@ -27,6 +27,15 @@ namespace rivet::ddl::generated {
 		"kWorldPos", 
 	};
 
+	constexpr static std::array<std::string_view, 6> x61afe359_labels = {
+		"Local Offset",
+		"Global Offset",
+		"Joint",
+		"Locator",
+		"BSphere",
+		"World Position", 
+	};
+
 	enum class x61afe359 : uint64_t {
 		Local_Offset,
 		Global_Offset,

@@ -27,6 +27,15 @@ namespace rivet::ddl::generated {
 		"kKillImmediate", 
 	};
 
+	constexpr static std::array<std::string_view, 6> x62abe5d0_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x62abe5d0 : uint64_t {
 		Run,
 		Paused,

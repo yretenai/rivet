@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kJobSystem", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xd8ef7ea5_labels = {
+		"Render Thread",
+		"Memory Thread",
+		"Job System", 
+	};
+
 	enum class xd8ef7ea5 : uint64_t {
 		Render_Thread,
 		Memory_Thread,

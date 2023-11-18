@@ -11,7 +11,7 @@ namespace rivet::ddl::generated {
 		InitListening = serialized->get_bool(InitListening_type_id);
 		SignalMax = serialized->get_int32(SignalMax_type_id);
 		PercentThreshold = serialized->get_float(PercentThreshold_type_id);
-		Type = serialized->get_enum<rivet::ddl::generated::x8d7e44cf>(Type_type_id, rivet::ddl::generated::x8d7e44cf_values);
+		Type = serialized->get_enum<rivet::ddl::generated::DamageTypes>(Type_type_id, rivet::ddl::generated::DamageTypes_values);
 		DamageName = serialized->get_string(DamageName_type_id); 
 	}
 

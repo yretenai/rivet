@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kShots", 
 	};
 
+	constexpr static std::array<std::string_view, 2> xba90f6fd_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xba90f6fd : uint64_t {
 		Time,
 		Shots, 

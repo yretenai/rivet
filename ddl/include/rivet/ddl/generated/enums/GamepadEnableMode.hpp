@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"k3DViewFocus", 
 	};
 
+	constexpr static std::array<std::string_view, 4> GamepadEnableMode_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class GamepadEnableMode : uint64_t {
 		Never,
 		Always,

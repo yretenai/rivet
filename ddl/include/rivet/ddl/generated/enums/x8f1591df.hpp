@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kSkippedActorCreationFailed", 
 	};
 
+	constexpr static std::array<std::string_view, 4> x8f1591df_labels = {
+		"Spawned",
+		"Skipped, radius",
+		"Skipped, asset",
+		"Skipped, no actor", 
+	};
+
 	enum class x8f1591df : uint64_t {
 		Spawned,
 		SkippedRadius,

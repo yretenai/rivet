@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kDetailed", 
 	};
 
+	constexpr static std::array<std::string_view, 3> LoadHistoryDetailLevel_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class LoadHistoryDetailLevel : uint64_t {
 		None,
 		Minimal,

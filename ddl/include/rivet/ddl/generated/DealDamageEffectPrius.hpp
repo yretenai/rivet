@@ -18,7 +18,7 @@
 #include <rivet/structures/rivet_serialization.hpp>
 
 #include <rivet/ddl/generated/bitsets/x65d7dac2.hpp>
-#include <rivet/ddl/generated/enums/x8d7e44cf.hpp>
+#include <rivet/ddl/generated/enums/DamageTypes.hpp>
 #include <rivet/ddl/generated/enums/KnockbackLevels.hpp>
 #include <rivet/ddl/generated/ScriptedShotEffectBasePrius.hpp> 
 
@@ -53,7 +53,7 @@ namespace rivet::ddl::generated {
 		float StatusAmount {};
 		float StatusDuration {};
 		float NoRepeatTime {};
-		rivet::ddl::generated::x8d7e44cf Type {};
+		rivet::ddl::generated::DamageTypes Type {};
 		rivet::ddl::generated::x65d7dac2 DamageFlags {}; 
 
 		[[nodiscard]] auto

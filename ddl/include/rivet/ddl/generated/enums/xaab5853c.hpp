@@ -35,6 +35,23 @@ namespace rivet::ddl::generated {
 		"kSpinUpAutoShot", 
 	};
 
+	constexpr static std::array<std::string_view, 14> xaab5853c_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xaab5853c : uint64_t {
 		None,
 		SingleShot,

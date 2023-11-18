@@ -18,7 +18,7 @@
 #include <rivet/structures/rivet_serialization.hpp>
 
 #include <rivet/ddl/generated/enums/KnockbackLevels.hpp>
-#include <rivet/ddl/generated/enums/x8d7e44cf.hpp>
+#include <rivet/ddl/generated/enums/DamageTypes.hpp>
 #include <rivet/ddl/generated/enums/xef932fba.hpp> 
 
 namespace rivet::ddl::generated {
@@ -56,7 +56,7 @@ namespace rivet::ddl::generated {
 
 		rivet::ddl::generated::xef932fba Index {};
 		std::string_view HitAnim {};
-		rivet::ddl::generated::x8d7e44cf DamageType {};
+		rivet::ddl::generated::DamageTypes DamageType {};
 		float Damage {};
 		float AOE {};
 		rivet::ddl::generated::KnockbackLevels Knockback {};

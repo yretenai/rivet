@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kCameraInputGyroY", 
 	};
 
+	constexpr static std::array<std::string_view, 4> xd38acf04_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xd38acf04 : uint64_t {
 		CameraInputX,
 		CameraInputY,

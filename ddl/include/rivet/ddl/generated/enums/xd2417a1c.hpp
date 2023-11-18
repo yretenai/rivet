@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kMoveDirection", 
 	};
 
+	constexpr static std::array<std::string_view, 2> xd2417a1c_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xd2417a1c : uint64_t {
 		FacingDirection,
 		MoveDirection, 

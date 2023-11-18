@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kAdd", 
 	};
 
+	constexpr static std::array<std::string_view, 4> BlendStyle_labels = {
+		"Modulate",
+		"Opaque",
+		"Alpha",
+		"Add", 
+	};
+
 	enum class BlendStyle : uint64_t {
 		Modulate,
 		Opaque,

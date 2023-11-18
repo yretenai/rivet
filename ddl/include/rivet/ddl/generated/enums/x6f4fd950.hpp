@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kSoundEventActionStop", 
 	};
 
+	constexpr static std::array<std::string_view, 4> x6f4fd950_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x6f4fd950 : uint64_t {
 		SoundEventActionPlay,
 		SoundEventActionPause,

@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kOff", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x7ffe9612_labels = {
+		"On",
+		"Toggle",
+		"Off", 
+	};
+
 	enum class x7ffe9612 : uint64_t {
 		On,
 		Toggle,

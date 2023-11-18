@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kLast", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x4d26e880_labels = {
+		"No More Signals",
+		"Loop to First Signal",
+		"Continue Last Signal", 
+	};
+
 	enum class x4d26e880 : uint64_t {
 		No_More_Signals,
 		Loop_to_First_Signal,

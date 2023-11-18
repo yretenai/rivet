@@ -18,7 +18,7 @@
 #include <rivet/structures/rivet_serialization.hpp>
 
 #include <rivet/ddl/generated/enums/KnockbackLevels.hpp>
-#include <rivet/ddl/generated/enums/x8d7e44cf.hpp> 
+#include <rivet/ddl/generated/enums/DamageTypes.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED AutoExplodePrius : rivet::structures::rivet_ddl_base {
@@ -48,7 +48,7 @@ namespace rivet::ddl::generated {
 		float Delay {};
 		float Amount {};
 		float Radius {};
-		rivet::ddl::generated::x8d7e44cf Type {};
+		rivet::ddl::generated::DamageTypes Type {};
 		rivet::ddl::generated::KnockbackLevels KnockbackLevel {};
 		float KnockbackAmount {};
 		bool DestroyOnExplode {};

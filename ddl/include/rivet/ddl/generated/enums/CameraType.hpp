@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kCameraOrtho", 
 	};
 
+	constexpr static std::array<std::string_view, 2> CameraType_labels = {
+		"Perspective",
+		"Orthographic", 
+	};
+
 	enum class CameraType : uint64_t {
 		Perspective,
 		Orthographic, 

@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kEventStopped", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x32784e2f_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x32784e2f : uint64_t {
 		EventSpawned,
 		EventStopped, 

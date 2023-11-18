@@ -9,7 +9,7 @@ namespace rivet::ddl::generated {
 	StatusEmitterOnDamagedPrius::StatusEmitterOnDamagedPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): StatusEmitterBasePrius(serialized) {
 		DamageThreshold = serialized->get_float(DamageThreshold_type_id);
 		ProcPercent = serialized->get_float(ProcPercent_type_id);
-		DamageTypes = serialized->get_enums<rivet::ddl::generated::x8d7e44cf>(DamageTypes_type_id, rivet::ddl::generated::x8d7e44cf_values); 
+		DamageTypes = serialized->get_enums<rivet::ddl::generated::DamageTypes>(DamageTypes_type_id, rivet::ddl::generated::DamageTypes_values); 
 	}
 
 	[[nodiscard]] auto

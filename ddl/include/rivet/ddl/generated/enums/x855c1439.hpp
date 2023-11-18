@@ -33,6 +33,21 @@ namespace rivet::ddl::generated {
 		"kTriggerHealthEvents", 
 	};
 
+	constexpr static std::array<std::string_view, 12> x855c1439_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x855c1439 : uint64_t {
 		DestroyActor,
 		DestroyActors,

@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kAnnosoftSmoothing", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x16d59d74_labels = {
+		"None",
+		"Annosoft Smoothing", 
+	};
+
 	enum class x16d59d74 : uint64_t {
 		None,
 		Annosoft_Smoothing, 

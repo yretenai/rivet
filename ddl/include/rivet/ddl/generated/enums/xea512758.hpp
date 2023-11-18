@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kRandom", 
 	};
 
+	constexpr static std::array<std::string_view, 4> xea512758_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xea512758 : uint64_t {
 		X,
 		Y,

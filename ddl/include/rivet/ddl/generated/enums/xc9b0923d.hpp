@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kAllowNav", 
 	};
 
+	constexpr static std::array<std::string_view, 2> xc9b0923d_labels = {
+		"Block nav",
+		"Allow nav", 
+	};
+
 	enum class xc9b0923d : uint64_t {
 		Block_nav,
 		Allow_nav, 

@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"Stomp", 
 	};
 
+	constexpr static std::array<std::string_view, 4> x94fdc626_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x94fdc626 : uint64_t {
 		Soft,
 		Normal,

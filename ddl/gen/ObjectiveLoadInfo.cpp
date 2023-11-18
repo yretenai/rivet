@@ -10,7 +10,7 @@ namespace rivet::ddl::generated {
 		SpawnCheckpoint = serialized->get_string(SpawnCheckpoint_type_id);
 		DimensionCheckpoint = serialized->get_string(DimensionCheckpoint_type_id);
 		SpawnAsHero = serialized->get_enum<rivet::ddl::generated::HeroTypes>(SpawnAsHero_type_id, rivet::ddl::generated::HeroTypes_values);
-		LightingMode = serialized->get_enum<rivet::ddl::generated::xee0945fb>(LightingMode_type_id, rivet::ddl::generated::xee0945fb_values);
+		LightingMode = serialized->get_enum<rivet::ddl::generated::LightingMode>(LightingMode_type_id, rivet::ddl::generated::LightingMode_values);
 		SpawnLoadout = serialized->get_string(SpawnLoadout_type_id);
 		ChallengeSpawnLoadout = serialized->get_string(ChallengeSpawnLoadout_type_id);
 		BackpackLoadout = serialized->get_string(BackpackLoadout_type_id); 

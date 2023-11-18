@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kEaseOut", 
 	};
 
+	constexpr static std::array<std::string_view, 4> xfd5aa1cb_labels = {
+		"Linear",
+		"Ease-in, ease-out",
+		"Ease-in",
+		"Ease-out", 
+	};
+
 	enum class xfd5aa1cb : uint64_t {
 		Linear,
 		EaseInOut,

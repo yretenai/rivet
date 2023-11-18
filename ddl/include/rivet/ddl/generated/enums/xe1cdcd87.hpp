@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kLocal", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xe1cdcd87_labels = {
+		"World",
+		"Normal",
+		"Local", 
+	};
+
 	enum class xe1cdcd87 : uint64_t {
 		World,
 		Normal,

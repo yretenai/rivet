@@ -17,7 +17,7 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/enums/xee0945fb.hpp>
+#include <rivet/ddl/generated/enums/LightingMode.hpp>
 #include <rivet/ddl/generated/ConfigBase.hpp> 
 
 namespace rivet::ddl::generated {
@@ -71,7 +71,7 @@ namespace rivet::ddl::generated {
 		float MaxCulledLightDistance {};
 		float MaxLightDistance {};
 		float SlowSignalDecelCoeff {};
-		std::vector<rivet::ddl::generated::xee0945fb> LightingModesToUseHeadlights {}; 
+		std::vector<rivet::ddl::generated::LightingMode> LightingModesToUseHeadlights {}; 
 
 		[[nodiscard]] auto
 		get_type_name() const noexcept -> std::string_view override;

@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kForceSingleSided", 
 	};
 
+	constexpr static std::array<std::string_view, 3> DoubleSidedType_labels = {
+		"Inherit From Material",
+		"Force Single In Lod 1",
+		"Force Single Sided", 
+	};
+
 	enum class DoubleSidedType : uint64_t {
 		Inherit_From_Material,
 		Force_Single_In_Lod_1,

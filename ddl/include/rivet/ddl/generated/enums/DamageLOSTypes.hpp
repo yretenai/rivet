@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kLOSBlocker", 
 	};
 
+	constexpr static std::array<std::string_view, 3> DamageLOSTypes_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class DamageLOSTypes : uint64_t {
 		None,
 		LOS,

@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kDisableLogger", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xc61b70c3_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xc61b70c3 : uint64_t {
 		QueryLoggers,
 		EnableLogger,

@@ -30,6 +30,18 @@ namespace rivet::ddl::generated {
 		"ActorH", 
 	};
 
+	constexpr static std::array<std::string_view, 9> x565e978b_labels = {
+		"None",
+		"Script Input A",
+		"Script Input B",
+		"Script Input C",
+		"Script Input D",
+		"Script Input E",
+		"Script Input F",
+		"Script Input G",
+		"Script Input H", 
+	};
+
 	enum class x565e978b : uint64_t {
 		None,
 		Script_Input_A,

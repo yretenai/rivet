@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kPruneLevelFull", 
 	};
 
+	constexpr static std::array<std::string_view, 2> xb521b086_labels = {
+		"Prune Level None",
+		"Prune Level Full", 
+	};
+
 	enum class xb521b086 : uint64_t {
 		Prune_Level_None,
 		Prune_Level_Full, 

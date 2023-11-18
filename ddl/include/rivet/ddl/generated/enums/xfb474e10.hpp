@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kAuxiliaryDir", 
 	};
 
+	constexpr static std::array<std::string_view, 2> xfb474e10_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xfb474e10 : uint64_t {
 		InitialVelocityDir,
 		AuxiliaryDir, 

@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kModifiedTime", 
 	};
 
+	constexpr static std::array<std::string_view, 4> xee77c9ca_labels = {
+		"File Name",
+		"Path",
+		"Extension",
+		"Modified Time", 
+	};
+
 	enum class xee77c9ca : uint64_t {
 		File_Name,
 		Path,

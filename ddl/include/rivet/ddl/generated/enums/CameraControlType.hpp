@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kFPS", 
 	};
 
+	constexpr static std::array<std::string_view, 2> CameraControlType_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class CameraControlType : uint64_t {
 		Orbit,
 		FPS, 

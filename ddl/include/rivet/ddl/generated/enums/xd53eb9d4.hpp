@@ -22,6 +22,10 @@ namespace rivet::ddl::generated {
 		"kAcceptOffer", 
 	};
 
+	constexpr static std::array<std::string_view, 1> xd53eb9d4_labels = {
+		"NONE", 
+	};
+
 	enum class xd53eb9d4 : uint64_t {
 		AcceptOffer, 
 	};

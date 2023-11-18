@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	BotCommandGotoScriptActionPrius::BotCommandGotoScriptActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		MoveStyle = serialized->get_enum<rivet::ddl::generated::xe8421db7>(MoveStyle_type_id, rivet::ddl::generated::xe8421db7_values);
+		MoveStyle = serialized->get_enum<rivet::ddl::generated::MovementStyle>(MoveStyle_type_id, rivet::ddl::generated::MovementStyle_values);
 		SkipIntro = serialized->get_bool(SkipIntro_type_id);
 		SkipOutro = serialized->get_bool(SkipOutro_type_id);
 		UseDestinationFacing = serialized->get_bool(UseDestinationFacing_type_id);

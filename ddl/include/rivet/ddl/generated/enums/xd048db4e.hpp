@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"RemainInTutorialStep", 
 	};
 
+	constexpr static std::array<std::string_view, 2> xd048db4e_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xd048db4e : uint64_t {
 		AdvanceTutorialStep,
 		RemainInTutorialStep, 

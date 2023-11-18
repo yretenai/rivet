@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kTruck", 
 	};
 
+	constexpr static std::array<std::string_view, 4> VehicleClass_labels = {
+		"Normal Car",
+		"Tall Car",
+		"Wide Car",
+		"Truck", 
+	};
+
 	enum class VehicleClass : uint64_t {
 		Normal_Car,
 		Tall_Car,

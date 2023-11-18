@@ -30,6 +30,18 @@ namespace rivet::ddl::generated {
 		"kAllFemale", 
 	};
 
+	constexpr static std::array<std::string_view, 9> x5d60d87e_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x5d60d87e : uint64_t {
 		HM1,
 		HM2,

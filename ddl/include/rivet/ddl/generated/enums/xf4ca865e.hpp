@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"Menus", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xf4ca865e_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xf4ca865e : uint64_t {
 		Active,
 		InGame,

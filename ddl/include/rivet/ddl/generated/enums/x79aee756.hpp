@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kPersistent", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x79aee756_labels = {
+		"Use Event to activate motion",
+		"Persistent effect", 
+	};
+
 	enum class x79aee756 : uint64_t {
 		Use_Event_to_activate_motion,
 		Persistent_effect, 

@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"NoReload", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xb5e7b894_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xb5e7b894 : uint64_t {
 		Off,
 		On,

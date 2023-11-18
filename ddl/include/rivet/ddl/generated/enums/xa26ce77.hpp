@@ -38,6 +38,26 @@ namespace rivet::ddl::generated {
 		"kNone", 
 	};
 
+	constexpr static std::array<std::string_view, 17> xa26ce77_labels = {
+		"UserState 0",
+		"UserState 1",
+		"UserState 2",
+		"UserState 3",
+		"UserState 4",
+		"UserState 5",
+		"UserState 6",
+		"UserState 7",
+		"UserState 8",
+		"UserState 9",
+		"UserState 10",
+		"UserState 11",
+		"UserState 12",
+		"UserState 13",
+		"UserState 14",
+		"UserState 15",
+		"None", 
+	};
+
 	enum class xa26ce77 : uint64_t {
 		UserState_0,
 		UserState_1,

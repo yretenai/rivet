@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kInvalid", 
 	};
 
+	constexpr static std::array<std::string_view, 3> AuthorityType_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class AuthorityType : uint64_t {
 		Default,
 		Permanent,

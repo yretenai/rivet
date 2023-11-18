@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kNormalized", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x96e13489_labels = {
+		"Degrees",
+		"Radians",
+		"Normalized", 
+	};
+
 	enum class x96e13489 : uint64_t {
 		Degrees,
 		Radians,

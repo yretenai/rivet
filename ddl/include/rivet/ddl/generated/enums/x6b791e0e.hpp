@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kFadeOut", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x6b791e0e_labels = {
+		"Fade In",
+		"Fade Out", 
+	};
+
 	enum class x6b791e0e : uint64_t {
 		Fade_In,
 		Fade_Out, 

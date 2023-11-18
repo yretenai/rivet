@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kOffsetStyleSniper", 
 	};
 
+	constexpr static std::array<std::string_view, 2> xb82a951f_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xb82a951f : uint64_t {
 		OffsetStyleNone,
 		OffsetStyleSniper, 

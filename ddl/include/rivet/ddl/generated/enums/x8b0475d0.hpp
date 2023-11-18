@@ -27,6 +27,15 @@ namespace rivet::ddl::generated {
 		"kPassThrough", 
 	};
 
+	constexpr static std::array<std::string_view, 6> x8b0475d0_labels = {
+		"Script Only",
+		"Pause",
+		"Wait For Rider",
+		"Wait For All Heroes",
+		"Use Interact offer",
+		"Pass Through", 
+	};
+
 	enum class x8b0475d0 : uint64_t {
 		Script_Only,
 		Pause,

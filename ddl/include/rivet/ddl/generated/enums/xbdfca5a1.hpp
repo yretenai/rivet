@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kSelectLeft", 
 	};
 
+	constexpr static std::array<std::string_view, 4> xbdfca5a1_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xbdfca5a1 : uint64_t {
 		SelectUp,
 		SelectRight,

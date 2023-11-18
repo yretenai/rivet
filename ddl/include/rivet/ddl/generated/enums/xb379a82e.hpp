@@ -37,6 +37,25 @@ namespace rivet::ddl::generated {
 		"kPropertyQuery", 
 	};
 
+	constexpr static std::array<std::string_view, 16> xb379a82e_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xb379a82e : uint64_t {
 		DebugNothing,
 		GetGameStatus,

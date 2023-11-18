@@ -30,6 +30,18 @@ namespace rivet::ddl::generated {
 		"kGripStyleHammer", 
 	};
 
+	constexpr static std::array<std::string_view, 9> x8c1c9e5c_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x8c1c9e5c : uint64_t {
 		GripStyleNeutral,
 		GripStylePistol,

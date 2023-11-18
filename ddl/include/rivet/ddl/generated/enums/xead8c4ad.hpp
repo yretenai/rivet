@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kCorrupt", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xead8c4ad_labels = {
+		"Ok",
+		"Not Found",
+		"Corrupt", 
+	};
+
 	enum class xead8c4ad : uint64_t {
 		Ok,
 		Not_Found,

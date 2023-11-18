@@ -29,6 +29,17 @@ namespace rivet::ddl::generated {
 		"kPPR", 
 	};
 
+	constexpr static std::array<std::string_view, 8> x8b211a61_labels = {
+		"PID",
+		"Common",
+		"Windows",
+		"Vulkan (inactive)",
+		"Durango (inactive)",
+		"Orbis",
+		"Nova (inactive)",
+		"PPR", 
+	};
+
 	enum class x8b211a61 : uint64_t {
 		PID,
 		Common,

@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kUpgrade", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x868ac365_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x868ac365 : uint64_t {
 		Purchase,
 		Upgrade, 

@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"OneMinusNormT", 
 	};
 
+	constexpr static std::array<std::string_view, 3> AnimSyncMode_labels = {
+		"From Beginning",
+		"Norm T",
+		"One Minus Norm T", 
+	};
+
 	enum class AnimSyncMode : uint64_t {
 		From_Beginning,
 		Norm_T,

@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kWireframe", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x41c556d2_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x41c556d2 : uint64_t {
 		WiredOverlay,
 		Filled,

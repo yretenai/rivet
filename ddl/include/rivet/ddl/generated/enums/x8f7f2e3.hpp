@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kPercent", 
 	};
 
+	constexpr static std::array<std::string_view, 4> x8f7f2e3_labels = {
+		"Use Toggle",
+		"Complete Toggle",
+		"Use Complete Toggle",
+		"Percent", 
+	};
+
 	enum class x8f7f2e3 : uint64_t {
 		Use_Toggle,
 		Complete_Toggle,

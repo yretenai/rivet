@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kHealth", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x751872e8_labels = {
+		"None",
+		"Health", 
+	};
+
 	enum class x751872e8 : uint64_t {
 		None,
 		Health, 

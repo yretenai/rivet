@@ -434,15 +434,21 @@ generate_enum(const std::shared_ptr<enum_info> &enum_, const path &include_path)
 	replace_string(header, "%enum_count%", std::to_string(enum_->values.size()));
 
 	std::stringstream decl_fields;
+	std::stringstream labels;
 	std::stringstream fields;
 
-	for (const auto & [name, decl_name, friendly_name] : enum_->values) {
+	for (const auto & [name, decl_name, friendly_name, label] : enum_->values) {
 		auto value_name = name.get_name_safe();
 		auto field_decl_name = decl_name.get_name_safe();
+		auto field_label_name = label.get_name_safe();
 
 		auto field_decl = std::string(template_enum_field_decl);
 		replace_string(field_decl, "%field_name%", field_decl_name);
 		decl_fields << field_decl << '\n';
+
+		auto field_label = std::string(template_enum_field_decl);
+		replace_string(field_label, "%field_name%", field_label_name);
+		labels << field_label << '\n';
 
 		auto field = std::string(template_enum_field);
 		replace_string(field, "%field_name%", value_name);
@@ -451,10 +457,13 @@ generate_enum(const std::shared_ptr<enum_info> &enum_, const path &include_path)
 
 	decl_fields.seekp(-1, std::ios_base::end);
 	decl_fields << ' ';
+	labels.seekp(-1, std::ios_base::end);
+	labels << ' ';
 	fields.seekp(-1, std::ios_base::end);
 	fields << ' ';
 
 	replace_string(header, "%decl_fields%", decl_fields.str());
+	replace_string(header, "%labels%", labels.str());
 	replace_string(header, "%fields%", fields.str());
 
 	auto hpp_path = include_path / (enum_name + ".hpp");
@@ -469,7 +478,7 @@ generate_bitset(const std::shared_ptr<bitset_info> &bitset, const path &include_
 	std::cout << "generating bitset " << bitset_name << '\n';
 	auto bitset_id = bitset->name.get_id_hex();
 
-	auto header = std::string(template_enum_hpp);
+	auto header = std::string(template_bitset_hpp);
 
 	replace_string(header, "%enum_name%", bitset_name);
 	replace_string(header, "%enum_id%", bitset_id);

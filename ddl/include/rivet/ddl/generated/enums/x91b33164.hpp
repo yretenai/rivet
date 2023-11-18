@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"kExternalAnchorIsHost", 
 	};
 
+	constexpr static std::array<std::string_view, 5> x91b33164_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x91b33164 : uint64_t {
 		Host,
 		Guest,

@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"Right", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xfa020271_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xfa020271 : uint64_t {
 		Both,
 		Left,

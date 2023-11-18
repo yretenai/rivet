@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kNormalOnly", 
 	};
 
+	constexpr static std::array<std::string_view, 3> OverlapType_labels = {
+		"Full",
+		"Color Only",
+		"Normal Only", 
+	};
+
 	enum class OverlapType : uint64_t {
 		Full,
 		Color_Only,

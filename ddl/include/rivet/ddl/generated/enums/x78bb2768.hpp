@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kCaptureSelectedGrids", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x78bb2768_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x78bb2768 : uint64_t {
 		CaptureAllGrids,
 		CaptureSelectedGrids, 

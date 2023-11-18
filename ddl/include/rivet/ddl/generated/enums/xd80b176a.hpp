@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kAmmo", 
 	};
 
+	constexpr static std::array<std::string_view, 2> xd80b176a_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xd80b176a : uint64_t {
 		Random,
 		Ammo, 

@@ -28,6 +28,16 @@ namespace rivet::ddl::generated {
 		"kInventoryRight", 
 	};
 
+	constexpr static std::array<std::string_view, 7> x6a041ccf_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x6a041ccf : uint64_t {
 		InventorySelect,
 		InventoryRotate,

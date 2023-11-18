@@ -27,6 +27,15 @@ namespace rivet::ddl::generated {
 		"kAnimClipGeomTypeDeltaUncompressed", 
 	};
 
+	constexpr static std::array<std::string_view, 6> x38fb844d_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x38fb844d : uint64_t {
 		AnimClipGeomTypeNone,
 		AnimClipGeomTypeFull,

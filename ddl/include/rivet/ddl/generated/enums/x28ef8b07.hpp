@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kStrong", 
 	};
 
+	constexpr static std::array<std::string_view, 4> x28ef8b07_labels = {
+		"Default",
+		"Wire",
+		"Faint",
+		"Strong", 
+	};
+
 	enum class x28ef8b07 : uint64_t {
 		Default,
 		Wire,

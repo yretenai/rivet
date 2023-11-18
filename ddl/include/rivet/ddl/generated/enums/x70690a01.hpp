@@ -28,6 +28,16 @@ namespace rivet::ddl::generated {
 		"PerfTestNextMission", 
 	};
 
+	constexpr static std::array<std::string_view, 7> x70690a01_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x70690a01 : uint64_t {
 		Complete,
 		Failed,

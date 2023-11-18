@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kTerrain", 
 	};
 
+	constexpr static std::array<std::string_view, 4> x6b1fdfe1_labels = {
+		"HeightField",
+		"Selection Mask",
+		"SplatMask",
+		"Terrain", 
+	};
+
 	enum class x6b1fdfe1 : uint64_t {
 		HeightField,
 		Selection_Mask,

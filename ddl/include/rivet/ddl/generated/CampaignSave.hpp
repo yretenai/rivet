@@ -17,7 +17,7 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/enums/xee0945fb.hpp> 
+#include <rivet/ddl/generated/enums/LightingMode.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED CampaignSave : rivet::structures::rivet_ddl_base {
@@ -43,7 +43,7 @@ namespace rivet::ddl::generated {
 		int32_t CurrentLevel {};
 		uint32_t CurrentCheckpoint {};
 		uint64_t CurrentCheckpointId {};
-		rivet::ddl::generated::xee0945fb CurrentLightingMode {};
+		rivet::ddl::generated::LightingMode CurrentLightingMode {};
 		bool CurrentLightingModeValid {};
 		uint32_t PlaythroughSegmentId {}; 
 

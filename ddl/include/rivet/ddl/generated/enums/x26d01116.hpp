@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kError", 
 	};
 
+	constexpr static std::array<std::string_view, 4> x26d01116_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x26d01116 : uint64_t {
 		UpToDate,
 		OutOfDate,

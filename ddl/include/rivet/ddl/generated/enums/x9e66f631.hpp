@@ -22,6 +22,10 @@ namespace rivet::ddl::generated {
 		"kCancel", 
 	};
 
+	constexpr static std::array<std::string_view, 1> x9e66f631_labels = {
+		"NONE", 
+	};
+
 	enum class x9e66f631 : uint64_t {
 		Cancel, 
 	};

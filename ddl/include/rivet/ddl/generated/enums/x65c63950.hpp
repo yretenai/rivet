@@ -27,6 +27,15 @@ namespace rivet::ddl::generated {
 		"Sphere25pc", 
 	};
 
+	constexpr static std::array<std::string_view, 6> x65c63950_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x65c63950 : uint64_t {
 		Locators,
 		Box,

@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"kWideEnds", 
 	};
 
+	constexpr static std::array<std::string_view, 5> x38953afc_labels = {
+		"Constant Width",
+		"Increading Width",
+		"Decreasing Width",
+		"Wide Center",
+		"Wide Ends", 
+	};
+
 	enum class x38953afc : uint64_t {
 		Constant_Width,
 		Increading_Width,

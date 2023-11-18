@@ -17,7 +17,7 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/enums/xee0945fb.hpp> 
+#include <rivet/ddl/generated/enums/LightingMode.hpp> 
 
 namespace rivet::ddl::generated {
 	struct ObjectiveRewardArray; 
@@ -75,7 +75,7 @@ namespace rivet::ddl::generated {
 		std::string_view LocTagDescription {};
 		std::string_view Checkpoint {};
 		bool OverrideLightingMode {};
-		rivet::ddl::generated::xee0945fb LightingMode {};
+		rivet::ddl::generated::LightingMode LightingMode {};
 		bool HideObjective {};
 		bool OnlyShowOnLoad {};
 		bool NoSave {};

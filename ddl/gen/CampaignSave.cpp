@@ -12,7 +12,7 @@ namespace rivet::ddl::generated {
 		CurrentLevel = serialized->get_int32(CurrentLevel_type_id);
 		CurrentCheckpoint = serialized->get_uint32(CurrentCheckpoint_type_id);
 		CurrentCheckpointId = serialized->get_uint64(CurrentCheckpointId_type_id);
-		CurrentLightingMode = serialized->get_enum<rivet::ddl::generated::xee0945fb>(CurrentLightingMode_type_id, rivet::ddl::generated::xee0945fb_values);
+		CurrentLightingMode = serialized->get_enum<rivet::ddl::generated::LightingMode>(CurrentLightingMode_type_id, rivet::ddl::generated::LightingMode_values);
 		CurrentLightingModeValid = serialized->get_bool(CurrentLightingModeValid_type_id);
 		PlaythroughSegmentId = serialized->get_uint32(PlaythroughSegmentId_type_id); 
 	}

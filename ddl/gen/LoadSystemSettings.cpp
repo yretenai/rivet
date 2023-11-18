@@ -19,7 +19,7 @@ namespace rivet::ddl::generated {
 		DelayStreamingEnabled = serialized->get_bool(DelayStreamingEnabled_type_id);
 		DelayStreamingPaused = serialized->get_bool(DelayStreamingPaused_type_id);
 		LightingZonesEnabled = serialized->get_bool(LightingZonesEnabled_type_id);
-		DefaultLightingMode = serialized->get_enum<rivet::ddl::generated::xee0945fb>(DefaultLightingMode_type_id, rivet::ddl::generated::xee0945fb_values);
+		DefaultLightingMode = serialized->get_enum<rivet::ddl::generated::LightingMode>(DefaultLightingMode_type_id, rivet::ddl::generated::LightingMode_values);
 		DefaultTileRadius = serialized->get_float(DefaultTileRadius_type_id);
 		LargeLoadThresholdBytes = serialized->get_uint32(LargeLoadThresholdBytes_type_id);
 		InstantiationUrgencyStartDist = serialized->get_int32(InstantiationUrgencyStartDist_type_id);

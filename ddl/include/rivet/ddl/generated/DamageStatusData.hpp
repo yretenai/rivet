@@ -17,7 +17,7 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/enums/x8d7e44cf.hpp> 
+#include <rivet/ddl/generated/enums/DamageTypes.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED DamageStatusData : rivet::structures::rivet_ddl_base {
@@ -36,7 +36,7 @@ namespace rivet::ddl::generated {
 		explicit DamageStatusData() = default;
 		explicit DamageStatusData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);
 
-		rivet::ddl::generated::x8d7e44cf StatusType {};
+		rivet::ddl::generated::DamageTypes StatusType {};
 		float StatusAmount {};
 		float StatusDuration {};
 		float StatusActionCount {}; 

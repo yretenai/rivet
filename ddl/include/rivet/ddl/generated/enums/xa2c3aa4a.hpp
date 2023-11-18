@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"Bare", 
 	};
 
+	constexpr static std::array<std::string_view, 5> xa2c3aa4a_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xa2c3aa4a : uint64_t {
 		Small,
 		Medium,

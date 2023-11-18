@@ -18,7 +18,7 @@
 #include <rivet/structures/rivet_serialization.hpp>
 
 #include <rivet/ddl/generated/enums/KnockbackLevels.hpp>
-#include <rivet/ddl/generated/enums/x8d7e44cf.hpp>
+#include <rivet/ddl/generated/enums/DamageTypes.hpp>
 #include <rivet/ddl/generated/enums/x29cc5733.hpp>
 #include <rivet/ddl/generated/enums/x65c63950.hpp> 
 
@@ -164,10 +164,10 @@ namespace rivet::ddl::generated {
 		bool TakeImpactDamage {};
 		bool ScriptDamageOnly {};
 		float AreaDamage {};
-		rivet::ddl::generated::x8d7e44cf AreaDamageType {};
+		rivet::ddl::generated::DamageTypes AreaDamageType {};
 		float AreaDamageRadius {};
 		rivet::ddl::generated::KnockbackLevels AreaDamageKnockback {};
-		rivet::ddl::generated::x8d7e44cf AreaStatusType {};
+		rivet::ddl::generated::DamageTypes AreaStatusType {};
 		float AreaStatusAmount {};
 		bool DamageAttacker {};
 		bool DamageIsPercent {};

@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kC", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x758aa4a7_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x758aa4a7 : uint64_t {
 		A,
 		B,

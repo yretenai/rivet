@@ -27,6 +27,15 @@ namespace rivet::ddl::generated {
 		"kOptical", 
 	};
 
+	constexpr static std::array<std::string_view, 6> x45c7d9d6_labels = {
+		"None",
+		"SATA300",
+		"Fast HDD",
+		"Regular HDD",
+		"Slow HDD",
+		"Optical drive", 
+	};
+
 	enum class x45c7d9d6 : uint64_t {
 		None,
 		SATA300,

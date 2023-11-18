@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kOnWhenActive", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x723e41b3_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x723e41b3 : uint64_t {
 		OffWhenActive,
 		OnWhenActive, 

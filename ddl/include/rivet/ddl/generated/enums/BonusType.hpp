@@ -42,6 +42,30 @@ namespace rivet::ddl::generated {
 		"kBonusRynoSet3", 
 	};
 
+	constexpr static std::array<std::string_view, 21> BonusType_labels = {
+		"None",
+		"Raritanium",
+		"Card Drop Rate",
+		"Bolts",
+		"Omega (Fusion Grenade)",
+		"Omega (Omniblaster)",
+		"Omega (Groovitron)",
+		"Omega (Pyrocitor)",
+		"Omega (Pixelizer)",
+		"Omega (Warmonger)",
+		"Omega (Glove of Doom)",
+		"Omega (Plasma Striker)",
+		"Omega (Mr. Zurkon)",
+		"Omega (Sheepinator)",
+		"Omega (Buzz Blades)",
+		"Omega (Predator Launcher)",
+		"Omega (Thumper)",
+		"Wrench Damage",
+		"Ryno Set",
+		"Ryno Set 2",
+		"Ryno Set 3", 
+	};
+
 	enum class BonusType : uint64_t {
 		None,
 		Raritanium,

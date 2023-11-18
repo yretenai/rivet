@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kDofFollowFixed", 
 	};
 
+	constexpr static std::array<std::string_view, 2> xe542f097_labels = {
+		"BSphere",
+		"Fixed", 
+	};
+
 	enum class xe542f097 : uint64_t {
 		BSphere,
 		Fixed, 

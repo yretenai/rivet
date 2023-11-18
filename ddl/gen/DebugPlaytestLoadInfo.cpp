@@ -13,7 +13,7 @@ namespace rivet::ddl::generated {
 		Checkpoint = serialized->get_string(Checkpoint_type_id);
 		DimensionCheckpoint = serialized->get_string(DimensionCheckpoint_type_id);
 		OverrideLightingMode = serialized->get_bool(OverrideLightingMode_type_id);
-		LightingMode = serialized->get_enum<rivet::ddl::generated::xee0945fb>(LightingMode_type_id, rivet::ddl::generated::xee0945fb_values); 
+		LightingMode = serialized->get_enum<rivet::ddl::generated::LightingMode>(LightingMode_type_id, rivet::ddl::generated::LightingMode_values); 
 	}
 
 	[[nodiscard]] auto

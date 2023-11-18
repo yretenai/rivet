@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kOneShot", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x96b277fe_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x96b277fe : uint64_t {
 		Loop,
 		OneShot, 

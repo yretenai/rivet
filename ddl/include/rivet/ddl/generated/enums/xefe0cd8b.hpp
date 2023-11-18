@@ -29,6 +29,17 @@ namespace rivet::ddl::generated {
 		"trophySet", 
 	};
 
+	constexpr static std::array<std::string_view, 8> xefe0cd8b_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xefe0cd8b : uint64_t {
 		subCategory,
 		activity,

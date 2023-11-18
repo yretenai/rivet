@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"Knockback", 
 	};
 
+	constexpr static std::array<std::string_view, 4> x45b01dd2_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x45b01dd2 : uint64_t {
 		Defend,
 		Block,

@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kScreenSpace", 
 	};
 
+	constexpr static std::array<std::string_view, 2> DecalMode_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class DecalMode : uint64_t {
 		Mesh,
 		ScreenSpace, 

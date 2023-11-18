@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kAutomatic", 
 	};
 
+	constexpr static std::array<std::string_view, 4> xbb647502_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xbb647502 : uint64_t {
 		Cursor,
 		CameraCrosshair,

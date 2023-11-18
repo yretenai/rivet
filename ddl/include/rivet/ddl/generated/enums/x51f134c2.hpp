@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kOn", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x51f134c2_labels = {
+		"Random",
+		"Off",
+		"On", 
+	};
+
 	enum class x51f134c2 : uint64_t {
 		Random,
 		Off,

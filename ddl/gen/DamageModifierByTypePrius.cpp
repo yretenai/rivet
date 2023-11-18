@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	DamageModifierByTypePrius::DamageModifierByTypePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): DamageModifierInvulnerablePrius(serialized) {
-		InvincibleToDamageTypes = serialized->get_enums<rivet::ddl::generated::x8d7e44cf>(InvincibleToDamageTypes_type_id, rivet::ddl::generated::x8d7e44cf_values); 
+		InvincibleToDamageTypes = serialized->get_enums<rivet::ddl::generated::DamageTypes>(InvincibleToDamageTypes_type_id, rivet::ddl::generated::DamageTypes_values); 
 	}
 
 	[[nodiscard]] auto

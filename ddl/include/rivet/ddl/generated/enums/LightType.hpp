@@ -27,6 +27,15 @@ namespace rivet::ddl::generated {
 		"kLightGridMod", 
 	};
 
+	constexpr static std::array<std::string_view, 6> LightType_labels = {
+		"Point",
+		"Spot",
+		"Pyramid",
+		"Shaft",
+		"Modulate",
+		"LightGridMod", 
+	};
+
 	enum class LightType : uint64_t {
 		Point,
 		Spot,

@@ -17,7 +17,7 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/enums/x445aeabc.hpp> 
+#include <rivet/ddl/generated/enums/IconId.hpp> 
 
 namespace rivet::ddl::generated {
 	struct RIVET_DDL_SHARED Icon : rivet::structures::rivet_ddl_base {
@@ -36,7 +36,7 @@ namespace rivet::ddl::generated {
 		explicit Icon() = default;
 		explicit Icon([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);
 
-		rivet::ddl::generated::x445aeabc IconId {};
+		rivet::ddl::generated::IconId IconId {};
 		std::string_view Texture {};
 		int32_t Width {};
 		int32_t Height {}; 

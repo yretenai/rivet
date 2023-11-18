@@ -35,6 +35,23 @@ namespace rivet::ddl::generated {
 		"kCampaignHardestDifficulty2Players", 
 	};
 
+	constexpr static std::array<std::string_view, 14> x756cf95f_labels = {
+		"Campaign Easy Difficulty 1 or more Players",
+		"Campaign Easy Difficulty 2 or more Players",
+		"Campaign Normal Difficulty 1 or more Players",
+		"Campaign Normal Difficulty 2 or more Players",
+		"Campaign Hard Difficulty 1 or more Players",
+		"Campaign Hard Difficulty 2 or more Players",
+		"Challenge Mode mods",
+		"Died 2+ times",
+		"Died 3+ times",
+		"Died 4+ times",
+		"Died 5+ times",
+		"Always used",
+		"Campaign Hardest Difficulty 1 or more Players",
+		"Campaign Hardest Difficulty 2 or more Players", 
+	};
+
 	enum class x756cf95f : uint64_t {
 		Campaign_Easy_Difficulty_1_or_more_Players,
 		Campaign_Easy_Difficulty_2_or_more_Players,

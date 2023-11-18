@@ -31,6 +31,19 @@ namespace rivet::ddl::generated {
 		"kTerrainInst", 
 	};
 
+	constexpr static std::array<std::string_view, 10> xd90ff0f4_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xd90ff0f4 : uint64_t {
 		Invalid,
 		Light,

@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kAbandoned", 
 	};
 
+	constexpr static std::array<std::string_view, 3> MissionResult_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class MissionResult : uint64_t {
 		Failed,
 		Completed,

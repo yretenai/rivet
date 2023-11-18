@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kHalfResolution", 
 	};
 
+	constexpr static std::array<std::string_view, 2> CompositeStyle_labels = {
+		"Full Resolution",
+		"Half Resolution", 
+	};
+
 	enum class CompositeStyle : uint64_t {
 		Full_Resolution,
 		Half_Resolution, 

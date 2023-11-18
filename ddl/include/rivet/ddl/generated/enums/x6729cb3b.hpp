@@ -27,6 +27,15 @@ namespace rivet::ddl::generated {
 		"kCamera", 
 	};
 
+	constexpr static std::array<std::string_view, 6> x6729cb3b_labels = {
+		"BSphere",
+		"Actor Position",
+		"Locator (specify)",
+		"Locator for the Head",
+		"Locator for the Torso",
+		"Camera position", 
+	};
+
 	enum class x6729cb3b : uint64_t {
 		BSphere,
 		Actor_Position,

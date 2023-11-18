@@ -28,6 +28,16 @@ namespace rivet::ddl::generated {
 		"kTransport", 
 	};
 
+	constexpr static std::array<std::string_view, 7> TargetCategory_labels = {
+		"None",
+		"Small",
+		"Medium",
+		"Large",
+		"Tank",
+		"Boss",
+		"Transport", 
+	};
+
 	enum class TargetCategory : uint64_t {
 		None,
 		Small,

@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kFromBottomOnly", 
 	};
 
+	constexpr static std::array<std::string_view, 4> x3e452084_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x3e452084 : uint64_t {
 		None,
 		FromTopAndBottom,

@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"kSending", 
 	};
 
+	constexpr static std::array<std::string_view, 5> xb0ef2921_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xb0ef2921 : uint64_t {
 		NotInitialized,
 		ActorDisabled,

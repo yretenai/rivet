@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kSelectOneOrNone", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xb4920c11_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xb4920c11 : uint64_t {
 		SelectAll,
 		SelectOne,

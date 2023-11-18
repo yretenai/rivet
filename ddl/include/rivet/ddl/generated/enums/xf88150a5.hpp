@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kOmegaWeapons", 
 	};
 
+	constexpr static std::array<std::string_view, 4> xf88150a5_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xf88150a5 : uint64_t {
 		None,
 		PurchaseGrenade,

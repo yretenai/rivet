@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"kLargeRanged", 
 	};
 
+	constexpr static std::array<std::string_view, 5> xee596018_labels = {
+		"None",
+		"Small Melee",
+		"Large Melee",
+		"Standard Ranged",
+		"Large Ranged", 
+	};
+
 	enum class xee596018 : uint64_t {
 		None,
 		Small_Melee,

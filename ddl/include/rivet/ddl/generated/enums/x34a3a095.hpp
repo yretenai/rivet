@@ -28,6 +28,16 @@ namespace rivet::ddl::generated {
 		"k4320", 
 	};
 
+	constexpr static std::array<std::string_view, 7> x34a3a095_labels = {
+		"Current",
+		"256 Square",
+		"512 Square",
+		"1080P",
+		"1440P",
+		"4K",
+		"8K", 
+	};
+
 	enum class x34a3a095 : uint64_t {
 		Current,
 		k256s,

@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kOnlyDynamicModels", 
 	};
 
+	constexpr static std::array<std::string_view, 3> ShadowCastType_labels = {
+		"Cache Static Models",
+		"Only Static Models",
+		"Only Dynamic Models", 
+	};
+
 	enum class ShadowCastType : uint64_t {
 		Cache_Static_Models,
 		Only_Static_Models,

@@ -28,6 +28,16 @@ namespace rivet::ddl::generated {
 		"kLightGridMod", 
 	};
 
+	constexpr static std::array<std::string_view, 7> xc8d9a31c_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xc8d9a31c : uint64_t {
 		All,
 		Point,

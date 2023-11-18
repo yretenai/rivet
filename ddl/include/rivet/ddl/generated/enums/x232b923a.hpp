@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kSmall", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x232b923a_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x232b923a : uint64_t {
 		Large,
 		Medium,

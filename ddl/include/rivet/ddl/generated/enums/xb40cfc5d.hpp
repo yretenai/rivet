@@ -29,6 +29,17 @@ namespace rivet::ddl::generated {
 		"kGuestToGuest2D", 
 	};
 
+	constexpr static std::array<std::string_view, 8> xb40cfc5d_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xb40cfc5d : uint64_t {
 		Host,
 		Guest,

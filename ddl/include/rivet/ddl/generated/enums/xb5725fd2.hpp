@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kVaultMode", 
 	};
 
+	constexpr static std::array<std::string_view, 2> xb5725fd2_labels = {
+		"Scene Mode",
+		"Vault Mode", 
+	};
+
 	enum class xb5725fd2 : uint64_t {
 		Scene_Mode,
 		Vault_Mode, 

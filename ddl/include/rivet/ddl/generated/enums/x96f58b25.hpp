@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kInteractToggle", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x96f58b25_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x96f58b25 : uint64_t {
 		InteractEnable,
 		InteractDisable,

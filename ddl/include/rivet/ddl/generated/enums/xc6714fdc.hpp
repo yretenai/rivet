@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kDensity", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xc6714fdc_labels = {
+		"Radius",
+		"Height",
+		"Density", 
+	};
+
 	enum class xc6714fdc : uint64_t {
 		Radius,
 		Height,

@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kWarpToLastGoodGround", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x7e113f56_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x7e113f56 : uint64_t {
 		Kill,
 		WarpToLastGoodGround, 

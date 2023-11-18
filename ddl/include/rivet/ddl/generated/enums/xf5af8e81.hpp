@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kPurchased", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xf5af8e81_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xf5af8e81 : uint64_t {
 		Locked,
 		Available,

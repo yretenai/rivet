@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kSpeedBoost", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x6310440e_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x6310440e : uint64_t {
 		Health,
 		Shield,

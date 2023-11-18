@@ -32,6 +32,20 @@ namespace rivet::ddl::generated {
 		"kSustainFire", 
 	};
 
+	constexpr static std::array<std::string_view, 11> xbcfeb3f2_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xbcfeb3f2 : uint64_t {
 		None,
 		Fire,

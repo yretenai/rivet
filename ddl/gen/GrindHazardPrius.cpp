@@ -10,7 +10,7 @@ namespace rivet::ddl::generated {
 		CurveActor = serialized->get_uint64(CurveActor_type_id);
 		StartTValue = serialized->get_float(StartTValue_type_id);
 		EndTValue = serialized->get_float(EndTValue_type_id);
-		DamageType = serialized->get_enum<rivet::ddl::generated::x8d7e44cf>(DamageType_type_id, rivet::ddl::generated::x8d7e44cf_values);
+		DamageType = serialized->get_enum<rivet::ddl::generated::DamageTypes>(DamageType_type_id, rivet::ddl::generated::DamageTypes_values);
 		DamagePercent = serialized->get_float(DamagePercent_type_id);
 		DamageRadius = serialized->get_float(DamageRadius_type_id);
 		IgnoreDuration = serialized->get_float(IgnoreDuration_type_id);

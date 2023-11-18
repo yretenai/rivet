@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kHide", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xa1814bf4_labels = {
+		"Keep",
+		"Close",
+		"Hide", 
+	};
+
 	enum class xa1814bf4 : uint64_t {
 		Keep,
 		Close,

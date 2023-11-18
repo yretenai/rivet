@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kReferencesOf", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x49646b18_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x49646b18 : uint64_t {
 		ReferencesTo,
 		ReferencesOf, 

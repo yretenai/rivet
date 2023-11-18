@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kActiveFinisher", 
 	};
 
+	constexpr static std::array<std::string_view, 2> xb1a3ff98_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xb1a3ff98 : uint64_t {
 		Generic,
 		ActiveFinisher, 

@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kBot", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x7b720148_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x7b720148 : uint64_t {
 		Hero,
 		Bot, 

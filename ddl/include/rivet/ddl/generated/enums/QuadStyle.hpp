@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kBeam", 
 	};
 
+	constexpr static std::array<std::string_view, 2> QuadStyle_labels = {
+		"Quad",
+		"Beam", 
+	};
+
 	enum class QuadStyle : uint64_t {
 		Quad,
 		Beam, 

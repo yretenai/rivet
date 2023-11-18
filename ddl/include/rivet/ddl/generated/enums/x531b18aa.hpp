@@ -27,6 +27,15 @@ namespace rivet::ddl::generated {
 		"kStoredPositionToActor", 
 	};
 
+	constexpr static std::array<std::string_view, 6> x531b18aa_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x531b18aa : uint64_t {
 		None,
 		World,

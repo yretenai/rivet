@@ -18,7 +18,7 @@
 #include <rivet/structures/rivet_serialization.hpp>
 
 #include <rivet/ddl/generated/enums/LoadTimeDisplayMode.hpp>
-#include <rivet/ddl/generated/enums/xee0945fb.hpp>
+#include <rivet/ddl/generated/enums/LightingMode.hpp>
 #include <rivet/ddl/generated/enums/x45c7d9d6.hpp>
 #include <rivet/ddl/generated/enums/xa694530c.hpp>
 #include <rivet/ddl/generated/enums/x961f7219.hpp> 
@@ -88,7 +88,7 @@ namespace rivet::ddl::generated {
 		bool DelayStreamingEnabled {};
 		bool DelayStreamingPaused {};
 		bool LightingZonesEnabled {};
-		rivet::ddl::generated::xee0945fb DefaultLightingMode {};
+		rivet::ddl::generated::LightingMode DefaultLightingMode {};
 		float DefaultTileRadius {};
 		uint32_t LargeLoadThresholdBytes {};
 		int32_t InstantiationUrgencyStartDist {};

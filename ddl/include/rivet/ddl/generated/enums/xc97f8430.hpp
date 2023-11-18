@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kTarget", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xc97f8430_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xc97f8430 : uint64_t {
 		Original,
 		Forwarder,

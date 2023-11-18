@@ -28,6 +28,16 @@ namespace rivet::ddl::generated {
 		"kAll", 
 	};
 
+	constexpr static std::array<std::string_view, 7> xc3e5efea_labels = {
+		"V1",
+		"V2",
+		"V3",
+		"V1c",
+		"V2c",
+		"V3c",
+		"All", 
+	};
+
 	enum class xc3e5efea : uint64_t {
 		V1,
 		V2,

@@ -28,6 +28,16 @@ namespace rivet::ddl::generated {
 		"kFirstTargetLocation", 
 	};
 
+	constexpr static std::array<std::string_view, 7> x4f5e74b9_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x4f5e74b9 : uint64_t {
 		BestVisibleLocation,
 		BoundingSphereCenter,

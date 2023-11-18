@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"k2DArray", 
 	};
 
+	constexpr static std::array<std::string_view, 5> x58cf7ca5_labels = {
+		"1D",
+		"2D",
+		"3D",
+		"Cube",
+		"2D Array", 
+	};
+
 	enum class x58cf7ca5 : uint64_t {
 		k1D,
 		k2D,

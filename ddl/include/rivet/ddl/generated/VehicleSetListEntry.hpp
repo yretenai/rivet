@@ -17,7 +17,7 @@
 #include <rivet/rivet_keywords.hpp>
 #include <rivet/structures/rivet_serialization.hpp>
 
-#include <rivet/ddl/generated/enums/xee0945fb.hpp> 
+#include <rivet/ddl/generated/enums/LightingMode.hpp> 
 
 namespace rivet::ddl::generated {
 	struct VehicleSpawnInfo;
@@ -60,7 +60,7 @@ namespace rivet::ddl::generated {
 		explicit VehicleSetListEntry([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);
 
 		std::string_view SetName {};
-		std::vector<rivet::ddl::generated::xee0945fb> RequiredLightingModes {};
+		std::vector<rivet::ddl::generated::LightingMode> RequiredLightingModes {};
 		std::shared_ptr<rivet::ddl::generated::ObjSysUnlockSequence> RequiredMissionUnlocks {};
 		std::vector<std::string_view> RequiredContainerRegions {};
 		std::shared_ptr<rivet::ddl::generated::VehicleSpawnInfo> SpawnInfo {};

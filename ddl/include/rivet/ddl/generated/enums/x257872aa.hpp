@@ -29,6 +29,17 @@ namespace rivet::ddl::generated {
 		"kConditionGrab", 
 	};
 
+	constexpr static std::array<std::string_view, 8> x257872aa_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x257872aa : uint64_t {
 		None,
 		ConditionSnared,

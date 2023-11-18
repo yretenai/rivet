@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kFill", 
 	};
 
+	constexpr static std::array<std::string_view, 2> xcdf4306c_labels = {
+		"On",
+		"Fill", 
+	};
+
 	enum class xcdf4306c : uint64_t {
 		On,
 		Fill, 

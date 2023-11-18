@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"subTask", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x38e4d198_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x38e4d198 : uint64_t {
 		activity,
 		task,

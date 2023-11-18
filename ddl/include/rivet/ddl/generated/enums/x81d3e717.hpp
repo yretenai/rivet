@@ -32,6 +32,20 @@ namespace rivet::ddl::generated {
 		"kNone", 
 	};
 
+	constexpr static std::array<std::string_view, 11> x81d3e717_labels = {
+		"Nefarious City 01",
+		"Sargasso 01",
+		"Zurkon's 01",
+		"Zurkon's 02",
+		"Cordelion 01",
+		"Molonoth 01",
+		"Blizar 01",
+		"Savali 01",
+		"Ardolis 01",
+		"Zordoom 01",
+		"NONE", 
+	};
+
 	enum class x81d3e717 : uint64_t {
 		Nefarious_City_01,
 		Sargasso_01,

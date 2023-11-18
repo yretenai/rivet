@@ -18,7 +18,7 @@
 #include <rivet/structures/rivet_serialization.hpp>
 
 #include <rivet/ddl/generated/enums/DamageLOSTypes.hpp>
-#include <rivet/ddl/generated/enums/x8d7e44cf.hpp>
+#include <rivet/ddl/generated/enums/DamageTypes.hpp>
 #include <rivet/ddl/generated/LobbedShotPrius.hpp> 
 
 namespace rivet::ddl::generated {
@@ -42,7 +42,7 @@ namespace rivet::ddl::generated {
 		explicit GrenadeShotPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);
 
 		std::shared_ptr<rivet::ddl::generated::GrenadeExplosionMode> ExplosionMode {};
-		rivet::ddl::generated::x8d7e44cf ExplosionDamageType {};
+		rivet::ddl::generated::DamageTypes ExplosionDamageType {};
 		std::shared_ptr<rivet::ddl::generated::DamageModifierExplosionPrius> ExplosionData {};
 		rivet::ddl::generated::DamageLOSTypes DamageLOSType {}; 
 

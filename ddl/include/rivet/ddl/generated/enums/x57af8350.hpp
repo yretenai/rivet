@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"abandoned", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x57af8350_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x57af8350 : uint64_t {
 		completed,
 		failed,

@@ -11,7 +11,7 @@
 namespace rivet::ddl::generated {
 	ShotDamageData::ShotDamageData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Damage = serialized->get_float(Damage_type_id);
-		DamageType = serialized->get_enum<rivet::ddl::generated::x8d7e44cf>(DamageType_type_id, rivet::ddl::generated::x8d7e44cf_values);
+		DamageType = serialized->get_enum<rivet::ddl::generated::DamageTypes>(DamageType_type_id, rivet::ddl::generated::DamageTypes_values);
 		KnockbackTiers = serialized->unwrap_into_many<rivet::ddl::generated::KnockbackTierData>(KnockbackTiers_type_id);
 		DamageFlags = serialized->get_bitset<rivet::ddl::generated::x65d7dac2>(DamageFlags_type_id, rivet::ddl::generated::x65d7dac2_values);
 		HeadshotMod = serialized->get_float(HeadshotMod_type_id);

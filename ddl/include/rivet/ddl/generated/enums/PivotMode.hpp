@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kUser", 
 	};
 
+	constexpr static std::array<std::string_view, 2> PivotMode_labels = {
+		"Default",
+		"User", 
+	};
+
 	enum class PivotMode : uint64_t {
 		Default,
 		User, 

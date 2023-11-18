@@ -23,7 +23,7 @@ namespace rivet::ddl::generated {
 		MaxCulledLightDistance = serialized->get_float(MaxCulledLightDistance_type_id);
 		MaxLightDistance = serialized->get_float(MaxLightDistance_type_id);
 		SlowSignalDecelCoeff = serialized->get_float(SlowSignalDecelCoeff_type_id);
-		LightingModesToUseHeadlights = serialized->get_enums<rivet::ddl::generated::xee0945fb>(LightingModesToUseHeadlights_type_id, rivet::ddl::generated::xee0945fb_values); 
+		LightingModesToUseHeadlights = serialized->get_enums<rivet::ddl::generated::LightingMode>(LightingModesToUseHeadlights_type_id, rivet::ddl::generated::LightingMode_values); 
 	}
 
 	[[nodiscard]] auto

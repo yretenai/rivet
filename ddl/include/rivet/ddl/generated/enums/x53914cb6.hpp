@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kSmoothingEaseInOut", 
 	};
 
+	constexpr static std::array<std::string_view, 4> x53914cb6_labels = {
+		"Linear",
+		"Ease In",
+		"Ease Out",
+		"Ease In/Out", 
+	};
+
 	enum class x53914cb6 : uint64_t {
 		Linear,
 		Ease_In,

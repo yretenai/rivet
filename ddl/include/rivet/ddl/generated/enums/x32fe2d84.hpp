@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kPingPong", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x32fe2d84_labels = {
+		"Cycle anti-clockwise",
+		"Cycle clockwise",
+		"PingPong", 
+	};
+
 	enum class x32fe2d84 : uint64_t {
 		CycleAntiClockwise,
 		Cycle_clockwise,

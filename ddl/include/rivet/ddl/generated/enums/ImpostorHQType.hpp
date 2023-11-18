@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kForceImpostorHQOn", 
 	};
 
+	constexpr static std::array<std::string_view, 3> ImpostorHQType_labels = {
+		"Inherit From Material",
+		"Force Impostor HQ Off",
+		"Force Impostor HQ On", 
+	};
+
 	enum class ImpostorHQType : uint64_t {
 		Inherit_From_Material,
 		Force_Impostor_HQ_Off,

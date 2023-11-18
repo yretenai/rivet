@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kWeapon", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x404ff3ae_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x404ff3ae : uint64_t {
 		Collision,
 		User,

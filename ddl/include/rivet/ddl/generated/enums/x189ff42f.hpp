@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kGear", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x189ff42f_labels = {
+		"Weapons",
+		"Armor",
+		"Gear", 
+	};
+
 	enum class x189ff42f : uint64_t {
 		Weapons,
 		Armor,

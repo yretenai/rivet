@@ -40,6 +40,28 @@ namespace rivet::ddl::generated {
 		"Unequipped", 
 	};
 
+	constexpr static std::array<std::string_view, 19> x59a8f068_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x59a8f068 : uint64_t {
 		Walk,
 		Jog,

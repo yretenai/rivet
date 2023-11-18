@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kAllShots", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x632591ba_labels = {
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x632591ba : uint64_t {
 		CycleShots,
 		AllShots, 

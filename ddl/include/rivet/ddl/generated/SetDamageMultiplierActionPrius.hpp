@@ -18,7 +18,7 @@
 #include <rivet/structures/rivet_serialization.hpp>
 
 #include <rivet/ddl/generated/enums/x6bdf4ba1.hpp>
-#include <rivet/ddl/generated/enums/x8d7e44cf.hpp>
+#include <rivet/ddl/generated/enums/DamageTypes.hpp>
 #include <rivet/ddl/generated/enums/x10228b34.hpp> 
 
 namespace rivet::ddl::generated {
@@ -43,7 +43,7 @@ namespace rivet::ddl::generated {
 		explicit SetDamageMultiplierActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized);
 
 		rivet::ddl::generated::x10228b34 ActionType {};
-		std::vector<rivet::ddl::generated::x8d7e44cf> FilterTypes {};
+		std::vector<rivet::ddl::generated::DamageTypes> FilterTypes {};
 		std::vector<rivet::ddl::generated::x6bdf4ba1> AllegianceTypes {};
 		bool FilterIsExclude {};
 		bool ModifyOutgoingDamage {};

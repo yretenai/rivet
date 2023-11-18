@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kBoth", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x545e4076_labels = {
+		"Major",
+		"Minor",
+		"Both", 
+	};
+
 	enum class x545e4076 : uint64_t {
 		Major,
 		Minor,

@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kSoundLogChannelAll", 
 	};
 
+	constexpr static std::array<std::string_view, 3> SoundLogChannels_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class SoundLogChannels : uint64_t {
 		SoundLogChannelWwise,
 		SoundLogChannelEngine,

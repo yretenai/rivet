@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kMeshDeepWater", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xdcbe36a2_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xdcbe36a2 : uint64_t {
 		MeshStandard,
 		MeshLarge,

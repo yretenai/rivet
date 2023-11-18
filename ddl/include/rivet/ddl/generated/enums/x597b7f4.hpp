@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"kHighAniso", 
 	};
 
+	constexpr static std::array<std::string_view, 5> x597b7f4_labels = {
+		"Point",
+		"Linear",
+		"Low Aniso",
+		"Medium Aniso",
+		"High Aniso", 
+	};
+
 	enum class x597b7f4 : uint64_t {
 		Point,
 		Linear,

@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kSubLocation", 
 	};
 
+	constexpr static std::array<std::string_view, 3> xdd0cb528_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xdd0cb528 : uint64_t {
 		Title,
 		Location,

@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kExplicitlyDeleted", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x8eb28adc_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x8eb28adc : uint64_t {
 		NotSpecified,
 		ExplicitlyAdded,

@@ -46,6 +46,34 @@ namespace rivet::ddl::generated {
 		"kLoading", 
 	};
 
+	constexpr static std::array<std::string_view, 25> xd4d128f9_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xd4d128f9 : uint64_t {
 		HeroMelee,
 		QuickSelect,

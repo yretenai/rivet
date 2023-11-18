@@ -22,6 +22,10 @@ namespace rivet::ddl::generated {
 		"POIPriorityNormal", 
 	};
 
+	constexpr static std::array<std::string_view, 1> xfb0b3aad_labels = {
+		"NONE", 
+	};
+
 	enum class xfb0b3aad : uint64_t {
 		POIPriorityNormal, 
 	};

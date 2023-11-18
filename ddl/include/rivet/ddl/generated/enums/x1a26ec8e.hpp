@@ -22,6 +22,10 @@ namespace rivet::ddl::generated {
 		"ge", 
 	};
 
+	constexpr static std::array<std::string_view, 1> x1a26ec8e_labels = {
+		"NONE", 
+	};
+
 	enum class x1a26ec8e : uint64_t {
 		ge, 
 	};

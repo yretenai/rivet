@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"count", 
 	};
 
+	constexpr static std::array<std::string_view, 5> xb2718bea_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xb2718bea : uint64_t {
 		latest,
 		max,

@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kHigh", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x771ceda9_labels = {
+		"Compressed",
+		"Uncompressed", 
+	};
+
 	enum class x771ceda9 : uint64_t {
 		Compressed,
 		Uncompressed, 

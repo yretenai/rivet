@@ -47,6 +47,35 @@ namespace rivet::ddl::generated {
 		"kSlotMelee", 
 	};
 
+	constexpr static std::array<std::string_view, 26> x5793ba5e_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x5793ba5e : uint64_t {
 		Slot01,
 		Slot02,

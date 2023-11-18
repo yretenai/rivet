@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kConfirmation", 
 	};
 
+	constexpr static std::array<std::string_view, 3> x8693007e_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x8693007e : uint64_t {
 		Help,
 		HelpCentered,

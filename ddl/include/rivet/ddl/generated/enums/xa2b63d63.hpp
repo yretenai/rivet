@@ -27,6 +27,15 @@ namespace rivet::ddl::generated {
 		"kFinishing", 
 	};
 
+	constexpr static std::array<std::string_view, 6> xa2b63d63_labels = {
+		"Idle",
+		"Checking Dependencies",
+		"Building",
+		"Generating Dependencies",
+		"Accessing CCS",
+		"Finishing", 
+	};
+
 	enum class xa2b63d63 : uint64_t {
 		Idle,
 		Checking_Dependencies,

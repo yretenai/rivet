@@ -35,6 +35,23 @@ namespace rivet::ddl::generated {
 		"kZone", 
 	};
 
+	constexpr static std::array<std::string_view, 14> AssetTypes_labels = {
+		"Actor",
+		"Conduit",
+		"Config",
+		"Cinematic",
+		"Model",
+		"AnimSet",
+		"Material",
+		"Material Template",
+		"Texture",
+		"Atmosphere",
+		"Visual Effect",
+		"Sound Bank",
+		"Localization",
+		"Zone", 
+	};
+
 	enum class AssetTypes : uint64_t {
 		Actor,
 		Conduit,

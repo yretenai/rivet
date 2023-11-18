@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"kRightStickOrMouseDelta", 
 	};
 
+	constexpr static std::array<std::string_view, 5> x354c1840_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x354c1840 : uint64_t {
 		MoveStick,
 		LookStick,

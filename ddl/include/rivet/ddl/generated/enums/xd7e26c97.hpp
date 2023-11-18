@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kPS5", 
 	};
 
+	constexpr static std::array<std::string_view, 4> xd7e26c97_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xd7e26c97 : uint64_t {
 		None,
 		Windows,

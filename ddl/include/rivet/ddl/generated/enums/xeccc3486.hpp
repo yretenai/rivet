@@ -34,6 +34,22 @@ namespace rivet::ddl::generated {
 		"kNone", 
 	};
 
+	constexpr static std::array<std::string_view, 13> xeccc3486_labels = {
+		"Lorb 01",
+		"Lorb 02",
+		"Lorb 03",
+		"Lorb 04",
+		"Lorb 05",
+		"Lorb 06",
+		"Lorb 07",
+		"Lorb 08",
+		"Lorb 09",
+		"Lorb 10",
+		"Lorb 11",
+		"Lorb 12",
+		"NONE", 
+	};
+
 	enum class xeccc3486 : uint64_t {
 		Lorb_01,
 		Lorb_02,

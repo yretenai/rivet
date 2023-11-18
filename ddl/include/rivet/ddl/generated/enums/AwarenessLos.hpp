@@ -24,6 +24,12 @@ namespace rivet::ddl::generated {
 		"kAllTargets", 
 	};
 
+	constexpr static std::array<std::string_view, 3> AwarenessLos_labels = {
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class AwarenessLos : uint64_t {
 		None,
 		BestTarget,

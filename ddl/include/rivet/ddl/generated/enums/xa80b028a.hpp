@@ -38,6 +38,26 @@ namespace rivet::ddl::generated {
 		"kNone", 
 	};
 
+	constexpr static std::array<std::string_view, 17> xa80b028a_labels = {
+		"Ammo 0",
+		"Ammo 1",
+		"Ammo 2",
+		"Ammo 3",
+		"Ammo 4",
+		"Ammo 5",
+		"Ammo 6",
+		"Ammo 7",
+		"Ammo 8",
+		"Ammo 9",
+		"Ammo 10",
+		"Ammo 11",
+		"Ammo 12",
+		"Ammo 13",
+		"Ammo 14",
+		"Ammo 15",
+		"None", 
+	};
+
 	enum class xa80b028a : uint64_t {
 		Ammo_0,
 		Ammo_1,

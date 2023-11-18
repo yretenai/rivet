@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"DismountedOnly", 
 	};
 
+	constexpr static std::array<std::string_view, 4> x99bafe38_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x99bafe38 : uint64_t {
 		Never,
 		Always,

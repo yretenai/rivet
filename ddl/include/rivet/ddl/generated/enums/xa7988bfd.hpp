@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kThumbnailBuilt", 
 	};
 
+	constexpr static std::array<std::string_view, 4> xa7988bfd_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class xa7988bfd : uint64_t {
 		ChangelogUpdated,
 		GameBuildUpdated,

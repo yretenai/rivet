@@ -26,6 +26,14 @@ namespace rivet::ddl::generated {
 		"kBox", 
 	};
 
+	constexpr static std::array<std::string_view, 5> x81b59607_labels = {
+		"Cone",
+		"Disc",
+		"Plane",
+		"Box",
+		"Box Deprecated", 
+	};
+
 	enum class x81b59607 : uint64_t {
 		Cone,
 		Disc,

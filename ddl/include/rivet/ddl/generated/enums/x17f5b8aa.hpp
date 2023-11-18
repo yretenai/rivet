@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kGuest", 
 	};
 
+	constexpr static std::array<std::string_view, 4> x17f5b8aa_labels = {
+		"NONE",
+		"NONE",
+		"NONE",
+		"NONE", 
+	};
+
 	enum class x17f5b8aa : uint64_t {
 		None,
 		AnchorPos,

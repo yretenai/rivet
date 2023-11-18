@@ -25,6 +25,13 @@ namespace rivet::ddl::generated {
 		"kCinematic", 
 	};
 
+	constexpr static std::array<std::string_view, 4> ShadowRes_labels = {
+		"Low Res",
+		"Normal",
+		"High Res",
+		"Cinematic", 
+	};
+
 	enum class ShadowRes : uint64_t {
 		Low_Res,
 		Normal,

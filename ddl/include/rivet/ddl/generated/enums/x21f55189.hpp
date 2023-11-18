@@ -23,6 +23,11 @@ namespace rivet::ddl::generated {
 		"kParent", 
 	};
 
+	constexpr static std::array<std::string_view, 2> x21f55189_labels = {
+		"Self",
+		"Parent", 
+	};
+
 	enum class x21f55189 : uint64_t {
 		Self,
 		Parent, 
