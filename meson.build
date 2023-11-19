@@ -83,6 +83,8 @@ endif
 
 subdir('rivet_hook')
 
+cmake = import('cmake')
+
 if not get_option('hook_only')
 # public dependencies
 deps = []
@@ -96,6 +98,15 @@ if not compiler.check_header('clipp.h')
     cli_deps += [dependency('clipp', version: '>=1.2.4')]
 endif
 cli_deps += [nlohmann_json_dep]
+
+# gui dependencies
+gui_deps = [] + deps
+sdl3_dep = dependency('sdl3', version: '>=3.0.0', required: false)
+if not sdl3_dep.found()
+    sdl3_subproj = cmake.subproject('sdl3')
+    sdl3_dep = sdl3_subproj.dependency('SDL3-shared')
+endif
+gui_deps += [sdl3_dep]
 
 # rivet dependencies
 rivet_deps = [] + deps

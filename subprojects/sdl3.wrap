@@ -1,0 +1,4 @@
+[wrap-git]
+directory = sdl3
+url = https://github.com/libsdl-org/SDL
+revision = 4722269fb62315640cbdbd8916cfc937ee3603d4

@@ -34,3 +34,7 @@ executable('rivet-codegen-ddl', icon_sources + ['codegen_ddl.cpp'],
 	dependencies: cli_deps,
 	include_directories: ['../include'],
 	install: true)
+
+# executable('rivet', icon_sources + ['gui/gui.cpp'],
+# 	dependencies: cli_deps + gui_deps + libdeps,
+#	instlal: true)
