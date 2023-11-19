@@ -57,7 +57,7 @@ if libgl_dep.found()
   dependencies += libgl_dep
   dependencies += cpp.find_library('dl', required: false)
 endif
-sdl3_renderer_dep = dependency('sdl3', version: '>=3.0.0', required: get_option('sdl_renderer'))
+sdl3_renderer_dep = dependency('sdl3', required: get_option('sdl_renderer'))
 if sdl3_renderer_dep.found()
   sources += 'backends/imgui_impl_sdlrenderer3.cpp'
   dependencies += sdl3_renderer_dep

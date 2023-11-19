@@ -24,7 +24,7 @@
 namespace rivet::sdl {
 	void
 	rivet_sdl_crash(const std::string &message) {
-		SDL_LogError(rivet::to_underlying(rivet_sdl_category::error), "Unexpected error %s", message);
+		SDL_LogError(rivet::to_underlying(rivet_sdl_category::error), "Unexpected error %s", message.c_str());
 		exit(static_cast<int>(0xDEE7CAFE));
 	}
 
