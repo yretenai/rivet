@@ -2,7 +2,7 @@ ddl_codegen_files = []
 
 rivetddllib_includes = [include_directories('include_base/')]
 
-if not get_option('no_ddl')
+if not get_option('rivet_no_ddl')
     rivetddllib_includes += [include_directories('include/')]
     subdir('gen')
     ddl_codegen_files += ['src/rivet_ddl_registration.cpp']
