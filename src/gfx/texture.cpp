@@ -364,7 +364,7 @@ namespace rivet::gfx {
 		const auto height = has_stream ? header.stream_height : header.resident_height;
 		const tmsize_t stride = hdr ? 32 : 4;
 
-		const auto num_dirs = surface_index > -1 ? 1 : header.surface_count;
+		const auto num_dirs = surface_index == rivet_unknown ? 1 : header.surface_count;
 		for (auto page = 0; page < num_dirs; ++page) {
 			TIFFSetField(tiff, TIFFTAG_IMAGEWIDTH, width);											 // NOLINT(*-vararg)
 			TIFFSetField(tiff, TIFFTAG_IMAGELENGTH, height);										 // NOLINT(*-vararg)
@@ -377,7 +377,7 @@ namespace rivet::gfx {
 			TIFFSetField(tiff, TIFFTAG_PHOTOMETRIC, hdr ? PHOTOMETRIC_LOGL : PHOTOMETRIC_RGB);		 // NOLINT(*-vararg)
 			TIFFSetField(tiff, TIFFTAG_COMPRESSION, COMPRESSION_NONE);								 // NOLINT(*-vararg)
 
-			const auto surface = surface_index > -1 ? surface_index : page;
+			const auto surface = surface_index == rivet_unknown ? surface_index : page;
 			const auto array = decompress_compressonator(hdr ? CMP_FORMAT_RGBA_16F : CMP_FORMAT_RGBA_8888, surface);
 			TIFFWriteEncodedStrip(tiff, 0, array->data(), static_cast<tmsize_t>(width) * static_cast<tmsize_t>(height) * stride);
 			TIFFWriteDirectory(tiff);

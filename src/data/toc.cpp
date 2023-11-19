@@ -280,7 +280,7 @@ namespace rivet::data {
 			return {};
 		}
 
-		return groups[static_cast<int32_t>(locale)][static_cast<int32_t>(category)][is_stream ? 1 : 0];
+		return groups[rivet::to_underlying(locale)][rivet::to_underlying(category)][is_stream ? 1 : 0];
 	}
 
 	auto

@@ -80,7 +80,7 @@ namespace rivet::ddl {
 					}
 					break;
 				case rivet_serialized_type::tuid:
-				case rivet_serialized_type::instance_id: RIVET_DEBUG_BREAK; // fallthrough to uint64?
+				case rivet_serialized_type::instance_id: RIVET_DEBUG_BREAK; [[fallthrough]];
 				case rivet_serialized_type::uint64:
 					for (auto index = 0u; index < count; index++) {
 						entry.emplace_back(buffer->get<uint64_t>(cursor));
@@ -126,14 +126,14 @@ namespace rivet::ddl {
 				case rivet_serialized_type::enum_value:
 				case rivet_serialized_type::bitfield:
 				case rivet_serialized_type::json:
-				case rivet_serialized_type::file: RIVET_DEBUG_BREAK; // fallthrough to string?
+				case rivet_serialized_type::file: RIVET_DEBUG_BREAK; [[fallthrough]];
 				case rivet_serialized_type::string:
 					for (auto index = 0u; index < count; index++) {
 						auto [length, hash, checksum] = buffer->get<rivet_serialized_string>(cursor);
 						entry.emplace_back(buffer->to_string_view(cursor + sizeof(rivet_serialized_string), length));
 						cursor += sizeof(rivet_serialized_string) + length + 1; // null byte.
 
-						cursor = cursor + 3 & ~3u; // align to 4 bytes
+						cursor = (cursor + 3) & ~3u; // align to 4 bytes
 					}
 					break;
 				case rivet_serialized_type::object:
@@ -142,7 +142,7 @@ namespace rivet::ddl {
 						entry.emplace_back(object);
 						cursor += sizeof(rivet_serialized_header) + object->header.size;
 
-						cursor = cursor + 3 & ~3u; // align to 4 bytes
+						cursor = (cursor + 3) & ~3u; // align to 4 bytes
 					}
 					break;
 				case rivet_serialized_type::none:

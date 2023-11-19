@@ -119,7 +119,7 @@ dump_dat1(const int argc, char **argv) -> int {
 			}
 		}
 
-		auto idx = 0;
+		auto idx = 0u;
 		for (const auto &buffer : buffers) {
 			const std::string stream_name = "stream_" + std::to_string(++idx);
 
@@ -139,7 +139,7 @@ dump_dat1(const int argc, char **argv) -> int {
 			buffer_file.write(reinterpret_cast<const char *>(buffer->data()), static_cast<std::streamsize>(buffer->size()));
 
 			if (buffer->size() > 4 && buffer->get<uint32_t>(0) == dat1::magic) {
-				for (const auto &[section_id, section] : std::make_shared<dat1>(buffer, idx < buffers.size() ? buffers[idx] : nullptr)->sections) {
+				for (const auto dat = std::make_shared<dat1>(buffer, idx < buffers.size() ? buffers[idx] : nullptr); const auto &[section_id, section] : dat->sections) {
 					if (verbose) {
 						std::cout << "section " << std::setfill('0') << std::setw(8) << std::hex << section_id;
 

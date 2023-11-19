@@ -8,16 +8,17 @@
 
 #include <array>
 #include <cstdint>
+#include <rivet/rivet_keywords.hpp>
 
 namespace rivet::support {
-	static constexpr uint32_t fourcc_dxt1 = '1TXD'; // DXGI_FORMAT_BC1_UNORM, DXT1
-	static constexpr uint32_t fourcc_dxt2 = '2TXD'; // DXGI_FORMAT_BC2_UNORM, DXT2
-	static constexpr uint32_t fourcc_dxt3 = '3TXD'; // DXGI_FORMAT_BC2_UNORM, DXT3
-	static constexpr uint32_t fourcc_dxt4 = '4TXD'; // DXGI_FORMAT_BC3_UNORM, DXT4
-	static constexpr uint32_t fourcc_dxt5 = '5TXD'; // DXGI_FORMAT_BC3_UNORM, DXT5
-	static constexpr uint32_t fourcc_ati1 = '1ITA'; // DXGI_FORMAT_BC4_UNORM, ATI1
-	static constexpr uint32_t fourcc_ati2 = '2ITA'; // DXGI_FORMAT_BC5_UNORM, ATI2
-	static constexpr uint32_t fourcc_dx10 = '01XD'; // dx10_header.format, DX10
+	static constexpr uint32_t fourcc_dxt1 = 0x31545844; // DXGI_FORMAT_BC1_UNORM, DXT1
+	static constexpr uint32_t fourcc_dxt2 = 0x32545844; // DXGI_FORMAT_BC2_UNORM, DXT2
+	static constexpr uint32_t fourcc_dxt3 = 0x33545844; // DXGI_FORMAT_BC2_UNORM, DXT3
+	static constexpr uint32_t fourcc_dxt4 = 0x34545844; // DXGI_FORMAT_BC3_UNORM, DXT4
+	static constexpr uint32_t fourcc_dxt5 = 0x35545844; // DXGI_FORMAT_BC3_UNORM, DXT5
+	static constexpr uint32_t fourcc_ati1 = 0x31495441; // DXGI_FORMAT_BC4_UNORM, ATI1
+	static constexpr uint32_t fourcc_ati2 = 0x32495441; // DXGI_FORMAT_BC5_UNORM, ATI2
+	static constexpr uint32_t fourcc_dx10 = 0x30315844; // dx10_header.format, DX10
 
 	enum class dds_flags : uint32_t {
 		caps = 0x1,
@@ -36,8 +37,8 @@ namespace rivet::support {
 	};
 
 	inline auto
-	operator|(dds_flags lhs, dds_flags rhs) -> dds_flags {
-		return static_cast<dds_flags>(static_cast<uint32_t>(lhs) | static_cast<uint32_t>(rhs));
+	operator|(const dds_flags lhs, const dds_flags rhs) -> dds_flags {
+		return static_cast<dds_flags>(rivet::to_underlying(lhs) | rivet::to_underlying(rhs));
 	}
 
 	enum class dds_caps : uint32_t {
@@ -48,8 +49,8 @@ namespace rivet::support {
 	};
 
 	inline auto
-	operator|(dds_caps lhs, dds_caps rhs) -> dds_caps {
-		return static_cast<dds_caps>(static_cast<uint32_t>(lhs) | static_cast<uint32_t>(rhs));
+	operator|(const dds_caps lhs, const dds_caps rhs) -> dds_caps {
+		return static_cast<dds_caps>(rivet::to_underlying(lhs) | rivet::to_underlying(rhs));
 	}
 
 	enum class dds_caps2 : uint32_t {
@@ -65,8 +66,8 @@ namespace rivet::support {
 	};
 
 	inline auto
-	operator|(dds_caps2 lhs, dds_caps2 rhs) -> dds_caps2 {
-		return static_cast<dds_caps2>(static_cast<uint32_t>(lhs) | static_cast<uint32_t>(rhs));
+	operator|(const dds_caps2 lhs, const dds_caps2 rhs) -> dds_caps2 {
+		return static_cast<dds_caps2>(rivet::to_underlying(lhs) | rivet::to_underlying(rhs));
 	}
 
 	enum class dds_pixel_format_flags : uint32_t {
@@ -80,8 +81,8 @@ namespace rivet::support {
 	};
 
 	inline auto
-	operator|(dds_pixel_format_flags lhs, dds_pixel_format_flags rhs) -> dds_pixel_format_flags {
-		return static_cast<dds_pixel_format_flags>(static_cast<uint32_t>(lhs) | static_cast<uint32_t>(rhs));
+	operator|(const dds_pixel_format_flags lhs, const dds_pixel_format_flags rhs) -> dds_pixel_format_flags {
+		return static_cast<dds_pixel_format_flags>(rivet::to_underlying(lhs) | rivet::to_underlying(rhs));
 	}
 
 	struct dds_header {
@@ -267,8 +268,8 @@ namespace rivet::support {
 	};
 
 	inline auto
-	operator|(dx10_misc_flags lhs, dx10_misc_flags rhs) -> dx10_misc_flags {
-		return static_cast<dx10_misc_flags>(static_cast<uint32_t>(lhs) | static_cast<uint32_t>(rhs));
+	operator|(const dx10_misc_flags lhs, const dx10_misc_flags rhs) -> dx10_misc_flags {
+		return static_cast<dx10_misc_flags>(rivet::to_underlying(lhs) | rivet::to_underlying(rhs));
 	}
 
 	enum class dx10_misc_flags2 : uint32_t {

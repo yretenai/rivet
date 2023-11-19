@@ -44,7 +44,7 @@ enum class analyze_target : uint8_t {
 	max,
 };
 
-const std::array<std::string, static_cast<int>(analyze_target::max)> analyze_target_enum { "none", "header", "texture_header", "dat1_sections", "nested_dat1" };
+const std::array<std::string, rivet::to_underlying(analyze_target::max)> analyze_target_enum { "none", "header", "texture_header", "dat1_sections", "nested_dat1" };
 
 #define LOOP_START                                                          \
 	for (auto locale_id = 0; locale_id < 32; locale_id++) {                 \
@@ -192,7 +192,7 @@ analyze_dat1_sections(const std::shared_ptr<rivet_game> &game) {
 
 	id_map[std::to_string(asset->id)] = asset->name.value_or(std::to_string(asset->id));
 
-	auto asset_type_str = helpers::rivet_asset_type_enum[static_cast<uint32_t>(asset->type)];
+	auto asset_type_str = helpers::rivet_asset_type_enum[rivet::to_underlying(asset->type)];
 	if (dat1_info_map.find(asset_type_str) == dat1_info_map.end()) {
 		dat1_info_map[asset_type_str] = nlohmann::json::object_t();
 	}
@@ -205,7 +205,7 @@ analyze_dat1_sections(const std::shared_ptr<rivet_game> &game) {
 	}
 	auto asset_bundle = data::asset_bundle(asset_data);
 
-	for (auto bundle_index = 0; bundle_index < asset_bundle.header.sizes.size(); ++bundle_index) {
+	for (auto bundle_index = 0u; bundle_index < asset_bundle.header.sizes.size(); ++bundle_index) {
 		auto bundle_data = asset_bundle.get_entry(bundle_index);
 		if (bundle_data == nullptr || bundle_data->size() < sizeof(data::dat1::dat1_header) || bundle_data->get<rivet_type_id>(0) != data::dat1::magic) {
 			continue;
@@ -264,7 +264,7 @@ analyze_nested_dats(const std::shared_ptr<rivet_game> &game) {
 	}
 	auto asset_bundle = data::asset_bundle(asset_data);
 
-	for (auto bundle_index = 0; bundle_index < asset_bundle.header.sizes.size(); ++bundle_index) {
+	for (auto bundle_index = 0u; bundle_index < asset_bundle.header.sizes.size(); ++bundle_index) {
 		auto bundle_data = asset_bundle.get_entry(bundle_index);
 		if (bundle_data == nullptr) {
 			continue;
@@ -318,7 +318,7 @@ analyze(const int argc, char **argv) -> int {
 
 	analyze_target target_enum = analyze_target::none;
 
-	for (int i = 0; i < static_cast<int>(analyze_target::max); i++) {
+	for (int i = 0; i < rivet::to_underlying(analyze_target::max); i++) {
 		if (target == analyze_target_enum[i]) {
 			target_enum = static_cast<analyze_target>(i);
 			break;

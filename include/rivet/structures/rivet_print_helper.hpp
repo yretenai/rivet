@@ -32,7 +32,7 @@ namespace rivet::helpers {
 	//                                                               0     , 1,       2,      1 | 2 = 3,    4,       1 | 4 = 5      2 | 4 = 6,     1 | 2 | 4 = 7
 	inline constexpr std::array<std::string_view, 8> rivet_localization_flag { "NONE", "NONE", "HIDE", "NONE, HIDE", "FORCE", "NONE, FORCE", "HIDE, FORCE", "NONE, HIDE, FORCE" };
 
-	inline constexpr std::array<std::string_view, static_cast<int>(rivet::rivet_asset_category::Max)> rivet_asset_category_enum { "Game", "AudioStream", "AnimationStream", "ZoneLightBin" };
+	inline constexpr std::array<std::string_view, rivet::to_underlying(rivet::rivet_asset_category::Max)> rivet_asset_category_enum { "Game", "AudioStream", "AnimationStream", "ZoneLightBin" };
 
 } // namespace rivet::helpers
 
@@ -48,7 +48,7 @@ operator<<(std::ostream &out, const rivet::structures::rivet_archive &archive) -
 
 inline auto
 operator<<(std::ostream &out, const rivet::rivet_locale &locale) -> std::ostream & {
-	const auto index = static_cast<const uint32_t>(locale);
+	const auto index = static_cast<size_t>(rivet::to_underlying(locale));
 	if (index >= rivet::helpers::rivet_locale_enum.size()) {
 		return out << "UnknownLocale" << index;
 	}
@@ -62,7 +62,7 @@ operator<<(std::ostream &out, const rivet::rivet_locale &locale) -> std::ostream
 
 inline auto
 operator<<(std::ostream &out, const rivet::structures::rivet_asset_type &type) -> std::ostream & {
-	const auto index = static_cast<const uint32_t>(type);
+	const auto index = static_cast<size_t>(rivet::to_underlying(type));
 	if (index >= rivet::helpers::rivet_asset_type_enum.size()) {
 		return out << "UNKNOWN_TYPE_" << index;
 	}
@@ -76,7 +76,7 @@ operator<<(std::ostream &out, const rivet::structures::rivet_asset_type &type) -
 
 inline auto
 operator<<(std::ostream &out, const rivet::structures::rivet_localization_flag &flag) -> std::ostream & {
-	const auto index = static_cast<const uint8_t>(flag);
+	const auto index = static_cast<size_t>(rivet::to_underlying(flag));
 	if (index >= rivet::helpers::rivet_localization_flag.size()) {
 		return out << "UNKNOWN_FLAG_" << index;
 	}
@@ -90,7 +90,7 @@ operator<<(std::ostream &out, const rivet::structures::rivet_localization_flag &
 
 inline auto
 operator<<(std::ostream &out, const rivet::rivet_asset_category &category) -> std::ostream & {
-	const auto index = static_cast<const uint32_t>(category);
+	const auto index = static_cast<size_t>(rivet::to_underlying(category));
 	if (index >= rivet::helpers::rivet_asset_category_enum.size()) {
 		return out << "UnknownCategory" << index;
 	}

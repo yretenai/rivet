@@ -35,7 +35,7 @@ using namespace rivet::structures;
 const std::array<const std::string, 32> localization_enum { "none", "us", "gb", "dk", "nl", "fi", "fr", "de", "it", "jp", "kr", "no", "pl", "pt", "ru", "es",
 															"se",	"br", "ar", "tr", "la", "cs", "ct", "fc", "cz", "hu", "el", "ro", "th", "vi", "id", "hr" };
 
-constexpr std::array<const std::string_view, static_cast<int>(rivet_asset_category::Max)> stream_exts { ".stream", ".wem", ".animstrm", ".lgstream" };
+constexpr std::array<const std::string_view, rivet::to_underlying(rivet_asset_category::Max)> stream_exts { ".stream", ".wem", ".animstrm", ".lgstream" };
 
 void
 process_asset(const std::shared_ptr<rivet_game> &game, const std::shared_ptr<rivet::structures::rivet_asset> &asset, rivet_size locale_id, rivet_size category_id, bool is_stream,

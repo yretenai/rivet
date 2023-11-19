@@ -56,7 +56,7 @@ dump_localization(const int argc, char **argv) -> int {
 
 			for (const auto &val : loc.entries | std::views::values) {
 				const auto &[id, hash, sorting_index, flags, tag, text] = val;
-				auto flag_id = static_cast<uint32_t>(flags);
+				auto flag_id = rivet::to_underlying(flags);
 				std::string flag = "UNKNOWN_FLAG_" + std::to_string(flag_id);
 				if (flag_id < rivet::helpers::rivet_localization_flag.size() && !rivet::helpers::rivet_localization_flag[flag_id].empty()) {
 					flag = rivet::helpers::rivet_localization_flag[flag_id];

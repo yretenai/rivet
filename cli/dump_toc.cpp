@@ -31,9 +31,9 @@ using namespace rivet::structures;
 const std::array<const std::string, 32> localization_enum { "none", "us", "gb", "dk", "nl", "fi", "fr", "de", "it", "jp", "kr", "no", "pl", "pt", "ru", "es",
 															"se",	"br", "ar", "tr", "la", "cs", "ct", "fc", "cz", "hu", "el", "ro", "th", "vi", "id", "hr" };
 
-constexpr std::array<const std::string_view, static_cast<int>(rivet_asset_category::Max)> stream_exts { ".stream", ".wem", ".animstrm", ".lgstream" };
+constexpr std::array<const std::string_view, rivet::to_underlying(rivet_asset_category::Max)> stream_exts { ".stream", ".wem", ".animstrm", ".lgstream" };
 
-constexpr std::array<const std::string_view, static_cast<int>(rivet_asset_category::Max)> category_enum { "none", "sound", "animation", "lightgrid" };
+constexpr std::array<const std::string_view, rivet::to_underlying(rivet_asset_category::Max)> category_enum { "none", "sound", "animation", "lightgrid" };
 
 static auto
 hash_checksum(const std::shared_ptr<rivet_array<uint8_t>> &value, rivet_asset_id hash = rivet::hash::asset_hash_basis) noexcept -> rivet_asset_id {

@@ -193,7 +193,7 @@ namespace rivet::gfx {
 			auto subset = subset_array.emplace_back();
 			subset["center_of_mass"] = center_of_mass;
 			subset["extent"] = extent;
-			subset["flags"] = static_cast<uint32_t>(flags);
+			subset["flags"] = flags;
 			subset["material"] = material_id;
 
 			auto morph_array = subset["morphs"] = nlohmann::json::array();

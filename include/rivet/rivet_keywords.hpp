@@ -147,4 +147,8 @@ namespace rivet {
 
 	static constexpr rivet_index rivet_unknown = UINT32_MAX;
 	static constexpr rivet_index64 rivet_unknown64 = UINT64_MAX;
+
+	template<typename T>
+	constexpr auto
+	to_underlying(T value) -> std::underlying_type_t<T> { return static_cast<std::underlying_type_t<T>>(value); }
 } // namespace rivet
