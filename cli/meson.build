@@ -38,7 +38,5 @@ if not get_option('rivet_no_cli')
 endif
 
 if not get_option('rivet_no_gui')
-# executable('rivet', icon_sources + ['gui/gui.cpp'],
-# 	dependencies: gui_deps + libdeps,
-#	instlal: true)
+	subdir('gui')
 endif

@@ -108,8 +108,11 @@ if not get_option('rivet_no_gui')
     if not sdl3_dep.found()
         sdl3_subproj = cmake.subproject('sdl3')
         sdl3_dep = sdl3_subproj.dependency('SDL3-shared')
+        meson.override_dependency('sdl3', sdl3_dep)
     endif
     gui_deps += [sdl3_dep]
+    gui_deps += [dependency('imgui', version: '>=1.89.9')]
+    gui_deps += [dependency('imguizmo', version: '>=1.83')]
 endif
 
 # rivet dependencies
@@ -118,7 +121,7 @@ rivet_deps += [nlohmann_json_dep]
 if not compiler.check_header('fx/gltf.h')
     rivet_deps += [dependency('fx-gltf', version: '>=2.0.0')]
 endif
-rivet_deps += [dependency('liblz4', version: '>= 1.9.4')]
+rivet_deps += [dependency('liblz4', version: '>=1.9.4')]
 rivet_deps += [dependency('libgdeflate', version: '>=1.8.0')]
 rivet_deps += [dependency('zlib', version: '>=1.3')]
 if not compiler.check_header('compressonator.h')
