@@ -111,8 +111,6 @@ if not get_option('rivet_no_gui')
         meson.override_dependency('sdl3', sdl3_dep)
     endif
     gui_deps += [sdl3_dep]
-    gui_deps += [dependency('imgui', version: '>=1.89.9')]
-    gui_deps += [dependency('imguizmo', version: '>=1.83')]
 endif
 
 # rivet dependencies

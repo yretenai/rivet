@@ -1,7 +1,0 @@
-[wrap-git]
-url = https://github.com/CedricGuillemet/ImGuizmo.git
-revision = ba662b119d64f9ab700bb2cd7b2781f9044f5565
-patch_directory = imguizmo
-
-[provide]
-imguizmo = imguizmo_dep
