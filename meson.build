@@ -83,6 +83,8 @@ endif
 
 subdir('rivet_hook')
 
+subdir('extern')
+
 cmake = import('cmake')
 
 if not get_option('rivet_hook_only')
