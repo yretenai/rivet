@@ -22,7 +22,7 @@ namespace rivet::structures {
 	rivet_serialized_object::rivet_serialized_object(const std::shared_ptr<rivet_data_array> &buffer): host_buffer(buffer) { }
 
 	[[nodiscard]] auto
-	rivet_serialized_object::get_field(const rivet_type_id field_id) const noexcept -> std::optional<std::vector<rivet::structures::rivet_serialized_value>> {
+	rivet_serialized_object::get_field(const rivet_type_id field_id) const noexcept -> std::optional<std::vector<rivet_serialized_value>> {
 		const auto entry = values.find(field_id);
 		if (entry == values.end()) {
 			return std::nullopt;
@@ -32,8 +32,8 @@ namespace rivet::structures {
 	}
 
 	[[nodiscard]] auto
-	rivet_serialized_object::get_field(const std::string_view &name) const noexcept -> std::optional<std::vector<rivet::structures::rivet_serialized_value>> {
-		return get_field(rivet::hash::hash_type_id(name));
+	rivet_serialized_object::get_field(const std::string_view &name) const noexcept -> std::optional<std::vector<rivet_serialized_value>> {
+		return get_field(hash::hash_type_id(name));
 	}
 
 	[[nodiscard]] auto
@@ -43,7 +43,7 @@ namespace rivet::structures {
 
 	[[nodiscard]] auto
 	rivet_serialized_object::has_field(const std::string_view &name) const noexcept -> bool {
-		return has_field(rivet::hash::hash_type_id(name));
+		return has_field(hash::hash_type_id(name));
 	}
 
 	[[nodiscard]] auto
@@ -57,7 +57,7 @@ namespace rivet::structures {
 
 	[[nodiscard]] auto
 	rivet_serialized_object::construct(const std::string_view &name) const noexcept -> std::shared_ptr<rivet_ddl_base> {
-		return construct(rivet::hash::hash_type_id(name));
+		return construct(hash::hash_type_id(name));
 	}
 
 	[[nodiscard]] auto

@@ -40,8 +40,8 @@ namespace rivet::data {
 									const bool is_ephemeral) const {
 		std::vector<std::weak_ptr<rivet_asset>> assets {};
 		auto name_str = std::string(name);
-		rivet::hash::normalize_asset_path(name_str);
-		if (auto asset_id = rivet::hash::hash_asset_id(name_str); toc->asset_lookup.find(asset_id) == toc->asset_lookup.end()) {
+		hash::normalize_asset_path(name_str);
+		if (auto asset_id = hash::hash_asset_id(name_str); toc->asset_lookup.find(asset_id) == toc->asset_lookup.end()) {
 			if (is_ephemeral) {
 				return;
 			}
@@ -90,23 +90,23 @@ namespace rivet::data {
 
 	auto
 	dependency_dag::get_dag_data_buffer(const std::shared_ptr<rivet_data_array> &stream) -> std::shared_ptr<rivet_data_array> {
-		if (stream->size() < sizeof(dependency_dag::dependency_dag_header)) {
+		if (stream->size() < sizeof(dependency_dag_header)) {
 			throw invalid_tag_error("dependency_dag::get_dag_data_buffer: invalid stream");
 		}
 
-		auto [type_id, size, compressed_size] = stream->get<dependency_dag::dependency_dag_header>(0);
+		auto [type_id, size, compressed_size] = stream->get<dependency_dag_header>(0);
 
 		if (type_id == dat1::magic) {
 			return stream;
 		}
 
-		if (type_id == dependency_dag::magic) {
-			return stream->slice(sizeof(dependency_dag::dependency_dag_header));
+		if (type_id == magic) {
+			return stream->slice(sizeof(dependency_dag_header));
 		}
 
-		if (type_id == dependency_dag::magic_compressed) {
+		if (type_id == magic_compressed) {
 			auto buffer = std::make_shared<rivet_data_array>(nullptr, size);
-			const auto slice = stream->slice(sizeof(dependency_dag::dependency_dag_header));
+			const auto slice = stream->slice(sizeof(dependency_dag_header));
 
 			z_stream zstream;
 			zstream.zalloc = nullptr;
@@ -192,7 +192,7 @@ namespace rivet::data {
 					}
 
 					auto dependency_name = buffer->to_cstring_view(dependency_name_offset);
-					auto dependency_id = rivet::hash::hash_asset_id(dependency_name);
+					auto dependency_id = hash::hash_asset_id(dependency_name);
 					group.emplace_back(dependency_name, dependency_id);
 				}
 				groups.emplace_back(group);

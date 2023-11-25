@@ -25,7 +25,7 @@ using namespace rivet::support;
 using namespace rivet::type_id;
 
 namespace rivet::gfx {
-	texture::texture(const rivet::data::asset_bundle &bundle, const rivet_size index) {
+	texture::texture(const asset_bundle &bundle, const rivet_size index) {
 		const auto dat1_stream = bundle.get_entry(index);
 		if (dat1_stream == nullptr) {
 			throw invalid_operation("texture::texture: invalid texture stream");
@@ -41,7 +41,7 @@ namespace rivet::gfx {
 			throw invalid_operation("texture::texture: invalid texture stream");
 		}
 
-		const auto header_stream = data.get_section<texture::texture_header>(texture_header_type_id);
+		const auto header_stream = data.get_section<texture_header>(texture_header_type_id);
 		if (header_stream == nullptr) {
 			throw invalid_operation("texture::texture: invalid texture stream");
 		}
@@ -50,7 +50,7 @@ namespace rivet::gfx {
 			throw invalid_operation("texture::texture: invalid texture stream");
 		}
 
-		header = header_stream->get<texture::texture_header>(0);
+		header = header_stream->get<texture_header>(0);
 		if (resident != nullptr) {
 			provide_resident(resident);
 		}

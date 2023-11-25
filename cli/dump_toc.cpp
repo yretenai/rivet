@@ -31,24 +31,24 @@ using namespace rivet::structures;
 const std::array<const std::string, 32> localization_enum { "none", "us", "gb", "dk", "nl", "fi", "fr", "de", "it", "jp", "kr", "no", "pl", "pt", "ru", "es",
 															"se",	"br", "ar", "tr", "la", "cs", "ct", "fc", "cz", "hu", "el", "ro", "th", "vi", "id", "hr" };
 
-constexpr std::array<const std::string_view, rivet::to_underlying(rivet_asset_category::Max)> stream_exts { ".stream", ".wem", ".animstrm", ".lgstream" };
+constexpr std::array<const std::string_view, to_underlying(rivet_asset_category::Max)> stream_exts { ".stream", ".wem", ".animstrm", ".lgstream" };
 
-constexpr std::array<const std::string_view, rivet::to_underlying(rivet_asset_category::Max)> category_enum { "none", "sound", "animation", "lightgrid" };
+constexpr std::array<const std::string_view, to_underlying(rivet_asset_category::Max)> category_enum { "none", "sound", "animation", "lightgrid" };
 
 static auto
-hash_checksum(const std::shared_ptr<rivet_array<uint8_t>> &value, rivet_asset_id hash = rivet::hash::asset_hash_basis) noexcept -> rivet_asset_id {
+hash_checksum(const std::shared_ptr<rivet_array<uint8_t>> &value, rivet_asset_id hash = hash::asset_hash_basis) noexcept -> rivet_asset_id {
 	for (const uint8_t byte_value : *value) {
-		hash = rivet::hash::crc64_table[(hash ^ byte_value) & 0xffu] ^ hash >> 8u;
+		hash = hash::crc64_table[(hash ^ byte_value) & 0xffu] ^ hash >> 8u;
 	}
 
 	return hash;
 }
 
 void
-process_asset(const std::shared_ptr<rivet::structures::rivet_asset> &asset, const rivet_size locale_id, const rivet_size category_id, const bool is_stream, const std::string &root_prefix, std::ostream &toc_file) {
+process_asset(const std::shared_ptr<rivet_asset> &asset, const rivet_size locale_id, const rivet_size category_id, const bool is_stream, const std::string &root_prefix, std::ostream &toc_file) {
 	std::string name;
 	if (!asset->name.has_value()) {
-		if ((asset->id & rivet::hash::wem_mask) != 0) {
+		if ((asset->id & hash::wem_mask) != 0) {
 			name = "sound/wem/" + std::to_string(asset->id & UINT32_MAX) + std::string(".wem");
 		} else {
 			if (asset->archive->name.find('/') == std::string::npos && asset->archive->name.find('\\') == std::string::npos) {
@@ -59,7 +59,7 @@ process_asset(const std::shared_ptr<rivet::structures::rivet_asset> &asset, cons
 		}
 	} else {
 		name = asset->name.value(); // NOLINT(*-unchecked-optional-access)
-		rivet::hash::normalize_asset_path(name);
+		hash::normalize_asset_path(name);
 	}
 
 	if (name.ends_with("/localization_all.localization")) {
@@ -86,12 +86,12 @@ extract(const int argc, char **argv) -> int {
 	bool version_flag = false;
 	bool help_flag = false;
 
-	if (const auto cli = (clipp::joinable(clipp::option("-h", "--help").set(help_flag, true) % "show help",
-									clipp::option("-v", "--version").set(version_flag, true) % "show version",
-									clipp::option("-H", "--hash").set(hash_data, true) % "hash dta"),
-					clipp::value("game", game_path) % "path to game directory",
-					clipp::option("-o", "--output-dir") & clipp::value("output-dir", output_dir) % "output directory");
-		!clipp::parse(argc, argv, cli) || help_flag || version_flag) {
+	if (const auto cli = (joinable(clipp::option("-h", "--help").set(help_flag, true) % "show help",
+	                               clipp::option("-v", "--version").set(version_flag, true) % "show version",
+	                               clipp::option("-H", "--hash").set(hash_data, true) % "hash dta"),
+	                      clipp::value("game", game_path) % "path to game directory",
+	                      clipp::option("-o", "--output-dir") & clipp::value("output-dir", output_dir) % "output directory");
+		!parse(argc, argv, cli) || help_flag || version_flag) {
 		return handle_exit("rivet-toc-dump", cli, version_flag, help_flag);
 	}
 
@@ -123,8 +123,8 @@ extract(const int argc, char **argv) -> int {
 	const std::string name = file_version_string_u8 + ".txt";
 
 	std::filesystem::path archive_toc_path = std::filesystem::path(output_dir) / file_version_string_u8;
-	if (hash_data && !std::filesystem::exists(archive_toc_path)) {
-		std::filesystem::create_directories(archive_toc_path);
+	if (hash_data && !exists(archive_toc_path)) {
+		create_directories(archive_toc_path);
 	}
 
 	std::ofstream toc_file(output_dir + "/" + name);
@@ -139,7 +139,7 @@ extract(const int argc, char **argv) -> int {
 	toc_file << "id,name,type,locale,category,is_stream,size,archive\n";
 
 	// todo: this really should be in /share/ or something on linux
-	if (auto streamed_files_path = std::filesystem::path("streamed_files.txt"); std::filesystem::exists(streamed_files_path)) {
+	if (auto streamed_files_path = std::filesystem::path("streamed_files.txt"); exists(streamed_files_path)) {
 		game->load_streamed_files_list(streamed_files_path);
 	}
 

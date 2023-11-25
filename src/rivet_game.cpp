@@ -20,13 +20,14 @@ using namespace rivet::hash;
 using namespace rivet::structures;
 
 namespace rivet {
-	rivet_game::rivet_game(const std::filesystem::path &root): root(root) {
-		auto toc_stream = rivet::rivet_data_array::from_file(root / "toc");
+	rivet_game::rivet_game(const std::filesystem::path &root)
+		: root(root) {
+		auto toc_stream = rivet_data_array::from_file(root / "toc");
 		if (toc_stream == nullptr) {
 			throw invalid_operation("rivet_game::rivet_game: failed to load TOC");
 		}
 
-		auto dag_stream = rivet::rivet_data_array::from_file(root / "dag");
+		auto dag_stream = rivet_data_array::from_file(root / "dag");
 		if (dag_stream == nullptr) {
 			throw invalid_operation("rivet_game::rivet_game: failed to load DAG");
 		}
@@ -81,7 +82,7 @@ namespace rivet {
 	}
 
 	auto
-	rivet_game::prepare_archive(const std::shared_ptr<rivet::structures::rivet_asset> &asset) const noexcept -> bool {
+	rivet_game::prepare_archive(const std::shared_ptr<rivet_asset> &asset) const noexcept -> bool {
 		auto archive = asset->archive;
 		if (!archive->data_stream) {
 			archive->data_stream = std::make_shared<data_stream_archive>(root, archive);

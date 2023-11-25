@@ -21,9 +21,9 @@ debug_hash(const int argc, char **argv) -> int {
 	for (auto argi = 1; argi < argc; ++argi) {
 		const auto arg = std::string_view(argv[argi]); // NOLINT(*-pro-bounds-pointer-arithmetic)
 
-		const auto type_id = rivet::hash::hash_type_id(arg);
-		const auto asset_id = rivet::hash::hash_asset_id(arg);
-		const auto checksum = rivet::hash::hash_checksum(arg);
+		const auto type_id = hash::hash_type_id(arg);
+		const auto asset_id = hash::hash_asset_id(arg);
+		const auto checksum = hash::hash_checksum(arg);
 
 		std::cout << arg << ": " << std::hex << std::setfill('0') << std::setw(8) << type_id << ' ' << std::setw(16) << asset_id << ' ' << std::setw(16) << checksum << '\n';
 	}

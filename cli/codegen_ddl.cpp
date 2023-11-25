@@ -528,7 +528,7 @@ main(const int argc, char **argv) -> int { // NOLINT(*-exception-escape)
 	bool version_flag = false;
 	bool help_flag = false;
 
-	if (auto cli = (clipp::joinable(clipp::option("-h", "--help").set(help_flag, true) % "show help", clipp::option("-v", "--version").set(version_flag, true) % "show version"),
+	if (auto cli = (joinable(clipp::option("-h", "--help").set(help_flag, true) % "show help", clipp::option("-v", "--version").set(version_flag, true) % "show version"),
 	                clipp::option("-i", "--input-file") & clipp::value("input-file", input_file) % "type dump file",
 	                clipp::option("-o", "--output-dir") & clipp::value("output_dir", output_dir) % "output directory"); !parse(argc, argv, cli) || help_flag || version_flag) {
 		return handle_exit("rivet-codegen-ddl", cli, version_flag, help_flag);

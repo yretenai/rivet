@@ -33,13 +33,13 @@ dump_localization(const int argc, char **argv) -> int {
 	bool tsv = false;
 	bool json = false;
 
-	if (const auto cli = (clipp::joinable(clipp::option("-h", "--help").set(help_flag, true) % "show help",
-									clipp::option("-v", "--version").set(version_flag, true) % "show version",
-									clipp::option("-r", "--recursive").set(recursive, true) % "find files in directories recursively",
-									clipp::option("-t", "--tsv").set(tsv, true) % "convert to TSV",
-									clipp::option("-j", "--json").set(json, true) % "convert to JSON"),
-					clipp::values("input-files", input_files) % "input files");
-		!clipp::parse(argc, argv, cli) || help_flag || version_flag) {
+	if (const auto cli = (joinable(clipp::option("-h", "--help").set(help_flag, true) % "show help",
+	                               clipp::option("-v", "--version").set(version_flag, true) % "show version",
+	                               clipp::option("-r", "--recursive").set(recursive, true) % "find files in directories recursively",
+	                               clipp::option("-t", "--tsv").set(tsv, true) % "convert to TSV",
+	                               clipp::option("-j", "--json").set(json, true) % "convert to JSON"),
+	                      clipp::values("input-files", input_files) % "input files");
+		!parse(argc, argv, cli) || help_flag || version_flag) {
 		return handle_exit("rivet-localization-dump", cli, version_flag, help_flag);
 	}
 
@@ -56,10 +56,10 @@ dump_localization(const int argc, char **argv) -> int {
 
 			for (const auto &val : loc.entries | std::views::values) {
 				const auto &[id, hash, sorting_index, flags, tag, text] = val;
-				auto flag_id = rivet::to_underlying(flags);
+				auto flag_id = to_underlying(flags);
 				std::string flag = "UNKNOWN_FLAG_" + std::to_string(flag_id);
-				if (flag_id < rivet::helpers::rivet_localization_flag.size() && !rivet::helpers::rivet_localization_flag[flag_id].empty()) {
-					flag = rivet::helpers::rivet_localization_flag[flag_id];
+				if (flag_id < helpers::rivet_localization_flag.size() && !helpers::rivet_localization_flag[flag_id].empty()) {
+					flag = helpers::rivet_localization_flag[flag_id];
 				}
 
 				json_data.emplace_back(nlohmann::json {

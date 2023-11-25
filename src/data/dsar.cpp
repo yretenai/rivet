@@ -14,11 +14,11 @@
 #include <rivet/hash/asset_id.hpp>
 
 namespace rivet::data {
-	rivet::data::data_stream_archive::
-	data_stream_archive(const std::filesystem::path &root, const std::shared_ptr<rivet::structures::rivet_archive> &archive)
+	data_stream_archive::
+	data_stream_archive(const std::filesystem::path &root, const std::shared_ptr<structures::rivet_archive> &archive)
 		: archive(archive), exists(true) {
 		auto archive_name = std::string(archive->name);
-		rivet::hash::normalize_asset_path(archive_name);
+		hash::normalize_asset_path(archive_name);
 
 		auto path = root / archive_name;
 		if (!std::filesystem::exists(path)) {
@@ -51,7 +51,7 @@ namespace rivet::data {
 	}
 
 	auto
-	data_stream_archive::read_file(const std::shared_ptr<rivet::structures::rivet_asset> &asset) const -> std::shared_ptr<rivet_data_array> {
+	data_stream_archive::read_file(const std::shared_ptr<structures::rivet_asset> &asset) const -> std::shared_ptr<rivet_data_array> {
 		if (!exists) {
 			return nullptr;
 		}

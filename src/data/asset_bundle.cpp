@@ -11,27 +11,27 @@
 namespace rivet::data {
 	asset_bundle::asset_bundle(const std::shared_ptr<rivet_data_array> &stream): buffer(stream) {
 		if (stream->size() < 4) {
-			throw rivet::invalid_operation("asset_bundle::asset_bundle: invalid stream");
+			throw invalid_operation("asset_bundle::asset_bundle: invalid stream");
 		}
 
-		if (stream->get<rivet_type_id>(0) == rivet::data::dat1::magic) {
-			const auto [magic, schema, size, section_count, reserved] = stream->get<rivet::data::dat1::dat1_header>(0);
+		if (stream->get<rivet_type_id>(0) == dat1::magic) {
+			const auto [magic, schema, size, section_count, reserved] = stream->get<dat1::dat1_header>(0);
 			header.schema = schema;
 			header.sizes[0] = size;
 			buffer = stream;
 			return;
 		}
 
-		if (stream->size() < sizeof(rivet::structures::rivet_asset_header)) {
-			throw rivet::invalid_operation("asset_bundle::asset_bundle: invalid stream");
+		if (stream->size() < sizeof(structures::rivet_asset_header)) {
+			throw invalid_operation("asset_bundle::asset_bundle: invalid stream");
 		}
 
-		header = stream->get<rivet::structures::rivet_asset_header>(0);
-		auto start_offset = sizeof(rivet::structures::rivet_asset_header);
+		header = stream->get<structures::rivet_asset_header>(0);
+		auto start_offset = sizeof(structures::rivet_asset_header);
 
-		if (header.schema == rivet::gfx::texture::type_id) {
-			texture_header = stream->get<rivet::structures::rivet_asset_texture_header>(start_offset);
-			start_offset += sizeof(rivet::structures::rivet_asset_texture_header);
+		if (header.schema == gfx::texture::type_id) {
+			texture_header = stream->get<structures::rivet_asset_texture_header>(start_offset);
+			start_offset += sizeof(structures::rivet_asset_texture_header);
 		}
 
 		buffer = stream->slice(start_offset);

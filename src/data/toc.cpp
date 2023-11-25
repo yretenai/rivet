@@ -25,23 +25,23 @@ using namespace rivet::type_id;
 namespace rivet::data {
 	auto
 	archive_toc::get_toc_data_buffer(const std::shared_ptr<rivet_data_array> &stream) -> std::shared_ptr<rivet_data_array> {
-		if (stream->size() < sizeof(archive_toc::archive_toc_header)) {
+		if (stream->size() < sizeof(archive_toc_header)) {
 			throw invalid_tag_error("archive_toc::archive_toc: invalid stream");
 		}
 
-		auto [type_id, size] = stream->get<archive_toc::archive_toc_header>(0);
+		auto [type_id, size] = stream->get<archive_toc_header>(0);
 
 		if (type_id == dat1::magic) {
 			return stream;
 		}
 
-		if (type_id == archive_toc::magic) {
-			return stream->slice(sizeof(archive_toc::archive_toc_header));
+		if (type_id == magic) {
+			return stream->slice(sizeof(archive_toc_header));
 		}
 
-		if (type_id == archive_toc::magic_compressed) {
+		if (type_id == magic_compressed) {
 			auto buffer = std::make_shared<rivet_data_array>(nullptr, size);
-			const auto slice = stream->slice(sizeof(archive_toc::archive_toc_header));
+			const auto slice = stream->slice(sizeof(archive_toc_header));
 
 			z_stream zstream;
 			zstream.zalloc = nullptr;
@@ -271,7 +271,7 @@ namespace rivet::data {
 	}
 
 	auto
-	archive_toc::get_group(rivet_locale locale, rivet_asset_category category, const bool is_stream) const -> std::vector<std::shared_ptr<rivet::structures::rivet_asset>> {
+	archive_toc::get_group(rivet_locale locale, rivet_asset_category category, const bool is_stream) const -> std::vector<std::shared_ptr<rivet_asset>> {
 		if (locale >= rivet_locale::Max) {
 			return {};
 		}
@@ -280,11 +280,11 @@ namespace rivet::data {
 			return {};
 		}
 
-		return groups[rivet::to_underlying(locale)][rivet::to_underlying(category)][is_stream ? 1 : 0];
+		return groups[to_underlying(locale)][to_underlying(category)][is_stream ? 1 : 0];
 	}
 
 	auto
-	archive_toc::get_asset(rivet_asset_id asset_id, rivet_locale locale, const rivet_asset_category category, const bool is_stream) const -> std::shared_ptr<rivet::structures::rivet_asset> {
+	archive_toc::get_asset(rivet_asset_id asset_id, rivet_locale locale, const rivet_asset_category category, const bool is_stream) const -> std::shared_ptr<rivet_asset> {
 		if (locale >= rivet_locale::Max) {
 			return nullptr;
 		}
@@ -293,7 +293,7 @@ namespace rivet::data {
 			return nullptr;
 		}
 
-		auto find_check = [asset_id](const std::shared_ptr<rivet::structures::rivet_asset> &asset) {
+		auto find_check = [asset_id](const std::shared_ptr<rivet_asset> &asset) {
 			if (asset == nullptr) {
 				return false;
 			}

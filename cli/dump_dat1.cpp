@@ -43,13 +43,13 @@ dump_dat1(const int argc, char **argv) -> int {
 	bool recursive = false;
 	bool verbose = false;
 
-	if (const auto cli = (clipp::joinable(clipp::option("-h", "--help").set(help_flag, true) % "show help",
-									clipp::option("-v", "--version").set(version_flag, true) % "show version",
-									clipp::option("-r", "--recursive").set(recursive, true) % "find files in directories recursively",
-									clipp::option("-V", "--verbose").set(verbose, true) % "verbose logging"),
-					clipp::option("-o", "--output-dir") & clipp::value("output_dir", output_dir) % "output directory",
-					clipp::values("input-files", input_files) % "input files");
-		!clipp::parse(argc, argv, cli) || help_flag || version_flag) {
+	if (const auto cli = (joinable(clipp::option("-h", "--help").set(help_flag, true) % "show help",
+	                               clipp::option("-v", "--version").set(version_flag, true) % "show version",
+	                               clipp::option("-r", "--recursive").set(recursive, true) % "find files in directories recursively",
+	                               clipp::option("-V", "--verbose").set(verbose, true) % "verbose logging"),
+	                      clipp::option("-o", "--output-dir") & clipp::value("output_dir", output_dir) % "output directory",
+	                      clipp::values("input-files", input_files) % "input files");
+		!parse(argc, argv, cli) || help_flag || version_flag) {
 		return handle_exit("rivet-dat1-dump", cli, version_flag, help_flag);
 	}
 
@@ -74,7 +74,7 @@ dump_dat1(const int argc, char **argv) -> int {
 
 	for (const auto &input_file : normalized_input_files) {
 		auto dat1_path = std::filesystem::path(input_file);
-		if (!std::filesystem::exists(dat1_path)) {
+		if (!exists(dat1_path)) {
 			std::cout << dat1_path << " does not exist\n";
 			continue;
 		}
@@ -92,8 +92,8 @@ dump_dat1(const int argc, char **argv) -> int {
 			output_path.replace_extension(output_path.extension().string() + ".sections");
 		}
 
-		if (!std::filesystem::exists(output_path)) {
-			std::filesystem::create_directories(output_path);
+		if (!exists(output_path)) {
+			create_directories(output_path);
 		}
 
 		auto dat1_buffer = rivet_data_array::from_file(dat1_path);
@@ -112,7 +112,7 @@ dump_dat1(const int argc, char **argv) -> int {
 		} else if (tag == dat1::magic) {
 			buffers.emplace_back(dat1_buffer);
 		} else {
-			auto bundle = std::make_shared<rivet::data::asset_bundle>(dat1_buffer);
+			auto bundle = std::make_shared<asset_bundle>(dat1_buffer);
 			for (rivet_size i = 0; i < bundle->header.sizes.size(); i++) {
 				auto entry = bundle->get_entry(i);
 				buffers.emplace_back(entry);
@@ -157,7 +157,7 @@ dump_dat1(const int argc, char **argv) -> int {
 					}
 					filename_stream << ".bin";
 					auto section_path = output_path / stream_name / filename_stream.str();
-					std::filesystem::create_directories(section_path.parent_path());
+					create_directories(section_path.parent_path());
 
 					std::ofstream section_file(section_path, std::ios::binary);
 					if (!section_file.is_open()) {
@@ -168,9 +168,9 @@ dump_dat1(const int argc, char **argv) -> int {
 					section_file.write(reinterpret_cast<const char *>(section.second->data()), static_cast<std::streamsize>(section.second->size()));
 
 					if(section.second->size() > 8) {
-						if(section.second->get<rivet_type_id>(0) == rivet::ddl::serialized::magic_a &&
-							section.second->get<rivet_type_id>(4) == rivet::ddl::serialized::magic_b) {
-							auto serialized = std::make_shared<rivet::ddl::serialized>(section.second, dat->buffer);
+						if(section.second->get<rivet_type_id>(0) == ddl::serialized::magic_a &&
+							section.second->get<rivet_type_id>(4) == ddl::serialized::magic_b) {
+							auto serialized = std::make_shared<ddl::serialized>(section.second, dat->buffer);
 							auto json = serialized->to_nlohmann_json();
 
 							auto json_path = section_path;

@@ -35,10 +35,10 @@ using namespace rivet::structures;
 const std::array<const std::string, 32> localization_enum { "none", "us", "gb", "dk", "nl", "fi", "fr", "de", "it", "jp", "kr", "no", "pl", "pt", "ru", "es",
 															"se",	"br", "ar", "tr", "la", "cs", "ct", "fc", "cz", "hu", "el", "ro", "th", "vi", "id", "hr" };
 
-constexpr std::array<const std::string_view, rivet::to_underlying(rivet_asset_category::Max)> stream_exts { ".stream", ".wem", ".animstrm", ".lgstream" };
+constexpr std::array<const std::string_view, to_underlying(rivet_asset_category::Max)> stream_exts { ".stream", ".wem", ".animstrm", ".lgstream" };
 
 void
-process_asset(const std::shared_ptr<rivet_game> &game, const std::shared_ptr<rivet::structures::rivet_asset> &asset, rivet_size locale_id, rivet_size category_id, bool is_stream,
+process_asset(const std::shared_ptr<rivet_game> &game, const std::shared_ptr<rivet_asset> &asset, rivet_size locale_id, rivet_size category_id, bool is_stream,
 			  const std::string &root_prefix, const std::filesystem::path &dump, std::ofstream &error_file) {
 	if (!game->prepare_archive(asset)) {
 		return;
@@ -46,7 +46,7 @@ process_asset(const std::shared_ptr<rivet_game> &game, const std::shared_ptr<riv
 
 	std::string name;
 	if (!asset->name.has_value()) {
-		if ((asset->id & rivet::hash::wem_mask) != 0) {
+		if ((asset->id & hash::wem_mask) != 0) {
 			name = "sound/wem/" + std::to_string(asset->id & UINT32_MAX) + std::string(".wem");
 		} else {
 			if (asset->archive->name.find('/') == std::string::npos && asset->archive->name.find('\\') == std::string::npos) {
@@ -54,11 +54,11 @@ process_asset(const std::shared_ptr<rivet_game> &game, const std::shared_ptr<riv
 			} else {
 				name = std::string(asset->archive->name) + "/" + std::to_string(asset->id);
 			}
-			rivet::hash::normalize_asset_path(name);
+			hash::normalize_asset_path(name);
 		}
 	} else {
 		name = asset->name.value();
-		rivet::hash::normalize_asset_path(name);
+		hash::normalize_asset_path(name);
 	}
 
 	if (name.ends_with("/localization_all.localization")) {
@@ -90,7 +90,7 @@ process_asset(const std::shared_ptr<rivet_game> &game, const std::shared_ptr<riv
 		output_path = dump / name;
 	}
 
-	std::filesystem::create_directories(output_path.parent_path());
+	create_directories(output_path.parent_path());
 	auto asset_file = std::fstream(output_path, std::ios::binary | std::ios::out | std::ios::trunc);
 
 	if (!asset_file.is_open()) {
@@ -105,12 +105,12 @@ process_asset(const std::shared_ptr<rivet_game> &game, const std::shared_ptr<riv
 		}
 
 		if (asset->texture_header.has_value()) {
-			if (asset->header.has_value() && asset->header.value().schema != rivet::gfx::texture::type_id) {
+			if (asset->header.has_value() && asset->header.value().schema != gfx::texture::type_id) {
 				std::cout << "ill texture header " << name << '\n';
 				error_file << "ill texture header " << name << '\n';
 			}
 			asset_file.write(reinterpret_cast<const char *>(&asset->texture_header.value()), sizeof(rivet_asset_texture_header));
-		} else if (asset->header.has_value() && asset->header.value().schema == rivet::gfx::texture::type_id) {
+		} else if (asset->header.has_value() && asset->header.value().schema == gfx::texture::type_id) {
 			std::cout << "ill formed texture " << name << '\n';
 			error_file << "ill texture " << name << '\n';
 			auto empty_header = rivet_asset_texture_header {};
@@ -133,12 +133,12 @@ extract(const int argc, char **argv) -> int {
 	bool help_flag = false;
 	bool verbose = false;
 
-	if (const auto cli = (clipp::joinable(clipp::option("-h", "--help").set(help_flag, true) % "show help",
-									clipp::option("-v", "--version").set(version_flag, true) % "show version",
-									clipp::option("-V", "--verbose").set(verbose, true) % "verbose output"),
-					clipp::value("game", game_path) % "path to game directory",
-					clipp::option("-o", "--output-dir") & clipp::value("output-dir", output_dir) % "output directory");
-		!clipp::parse(argc, argv, cli) || help_flag || version_flag) {
+	if (const auto cli = (joinable(clipp::option("-h", "--help").set(help_flag, true) % "show help",
+	                               clipp::option("-v", "--version").set(version_flag, true) % "show version",
+	                               clipp::option("-V", "--verbose").set(verbose, true) % "verbose output"),
+	                      clipp::value("game", game_path) % "path to game directory",
+	                      clipp::option("-o", "--output-dir") & clipp::value("output-dir", output_dir) % "output directory");
+		!parse(argc, argv, cli) || help_flag || version_flag) {
 		return handle_exit("rivet-toc-extract", cli, version_flag, help_flag);
 	}
 
@@ -149,7 +149,7 @@ extract(const int argc, char **argv) -> int {
 	}
 
 	// todo: this really should be in /share/ or something
-	if (auto streamed_files_path = std::filesystem::path("streamed_files.txt"); std::filesystem::exists(streamed_files_path)) {
+	if (auto streamed_files_path = std::filesystem::path("streamed_files.txt"); exists(streamed_files_path)) {
 		game->load_streamed_files_list(streamed_files_path);
 	}
 
@@ -179,7 +179,7 @@ extract(const int argc, char **argv) -> int {
 	error_file.close();
 
 	const std::filesystem::path dag_path = dump / root_prefix / "missing.txt";
-	std::filesystem::create_directories(dag_path.parent_path());
+	create_directories(dag_path.parent_path());
 	std::ofstream dag_file(dag_path, std::ios::out);
 	if (!dag_file.is_open()) {
 		std::cout << "failed to open output file " << dag_path << '\n';

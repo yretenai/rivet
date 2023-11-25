@@ -18,7 +18,7 @@ using namespace rivet::structures::gfx;
 using namespace rivet::type_id;
 
 namespace rivet::gfx {
-	model::model(const rivet::data::asset_bundle &bundle, const rivet::rivet_size index) {
+	model::model(const asset_bundle &bundle, const rivet_size index) {
 		const auto dat1_stream = bundle.get_entry(index);
 		if (dat1_stream == nullptr) {
 			throw invalid_operation("model::model: invalid model stream");
@@ -229,11 +229,11 @@ namespace rivet::gfx {
 		gltf.asset.version = "2.0";
 		gltf.asset.generator = "rivet";
 
-		auto [scene, _scene_id] = rivet::gltf::create_scene(gltf);
-		auto [root_node, root_id] = rivet::gltf::create_node(gltf);
+		auto [scene, _scene_id] = gltf::create_scene(gltf);
+		auto [root_node, root_id] = gltf::create_node(gltf);
 		scene.nodes.push_back(root_id);
 
-		auto [mesh, mesh_id] = rivet::gltf::create_mesh(gltf);
+		auto [mesh, mesh_id] = gltf::create_mesh(gltf);
 		root_node.name = name;
 		root_node.mesh = mesh_id;
 

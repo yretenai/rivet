@@ -20,7 +20,8 @@ namespace rivet {
 		std::shared_ptr<data::archive_toc> toc = nullptr;
 		std::filesystem::path root;
 
-		explicit rivet_game(const std::filesystem::path &root);
+		explicit
+		rivet_game(const std::filesystem::path &root);
 
 		[[nodiscard]] auto
 		open_file(const std::shared_ptr<rivet::structures::rivet_asset> &asset) const -> std::shared_ptr<rivet_data_array>;

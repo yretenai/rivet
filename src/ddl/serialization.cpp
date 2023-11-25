@@ -8,7 +8,8 @@ using namespace rivet;
 using namespace rivet::structures;
 
 namespace rivet::ddl {
-	serialized::serialized(const std::shared_ptr<rivet_data_array> &data, const std::shared_ptr<rivet_data_array> &dat1): rivet::structures::rivet_serialized_object(data) {
+	serialized::serialized(const std::shared_ptr<rivet_data_array> &data, const std::shared_ptr<rivet_data_array> &dat1)
+		: rivet_serialized_object(data) {
 		if (host_buffer->size() < sizeof(rivet_serialized_header)) {
 			throw std::runtime_error("Invalid buffer size");
 		}
@@ -44,81 +45,71 @@ namespace rivet::ddl {
 
 			auto &entry = values[field.type_id];
 
-#ifndef _NDEBUG
+			#ifndef _NDEBUG
 			// ReSharper disable CppDFAUnreadVariable
 			// ReSharper disable CppDFAUnusedValue
 			[[maybe_unused]] auto debug_offset = buffer->offset + cursor;
 			[[maybe_unused]] auto debug_type = field.get_type();
 			// ReSharper restore CppDFAUnreadVariable
 			// ReSharper restore CppDFAUnusedValue
-#endif
+			#endif
 
 			entry.reserve(count);
 			switch (field.get_type()) {
-				case rivet_serialized_type::boolean:
-					for (auto index = 0u; index < count; index++) {
+				case rivet_serialized_type::boolean: for (auto index = 0u; index < count; index++) {
 						entry.emplace_back(buffer->get<uint8_t>(cursor) != 0);
 						cursor += sizeof(uint8_t);
 					}
 					break;
-				case rivet_serialized_type::uint8:
-					for (auto index = 0u; index < count; index++) {
+				case rivet_serialized_type::uint8: for (auto index = 0u; index < count; index++) {
 						entry.emplace_back(static_cast<uint64_t>(buffer->get<uint8_t>(cursor)));
 						cursor += sizeof(uint8_t);
 					}
 					break;
-				case rivet_serialized_type::uint16:
-					for (auto index = 0u; index < count; index++) {
+				case rivet_serialized_type::uint16: for (auto index = 0u; index < count; index++) {
 						entry.emplace_back(static_cast<uint64_t>(buffer->get<uint16_t>(cursor)));
 						cursor += sizeof(uint16_t);
 					}
 					break;
-				case rivet_serialized_type::uint32:
-					for (auto index = 0u; index < count; index++) {
+				case rivet_serialized_type::uint32: for (auto index = 0u; index < count; index++) {
 						entry.emplace_back(static_cast<uint64_t>(buffer->get<uint32_t>(cursor)));
 						cursor += sizeof(uint32_t);
 					}
 					break;
 				case rivet_serialized_type::tuid:
-				case rivet_serialized_type::instance_id: RIVET_DEBUG_BREAK; [[fallthrough]];
-				case rivet_serialized_type::uint64:
-					for (auto index = 0u; index < count; index++) {
+				case rivet_serialized_type::instance_id: RIVET_DEBUG_BREAK;
+					[[fallthrough]];
+				case rivet_serialized_type::uint64: for (auto index = 0u; index < count; index++) {
 						entry.emplace_back(buffer->get<uint64_t>(cursor));
 						cursor += sizeof(uint64_t);
 					}
 					break;
-				case rivet_serialized_type::int8:
-					for (auto index = 0u; index < count; index++) {
+				case rivet_serialized_type::int8: for (auto index = 0u; index < count; index++) {
 						entry.emplace_back(static_cast<int64_t>(buffer->get<int8_t>(cursor)));
 						cursor += sizeof(int8_t);
 					}
 					break;
-				case rivet_serialized_type::int16:
-					for (auto index = 0u; index < count; index++) {
+				case rivet_serialized_type::int16: for (auto index = 0u; index < count; index++) {
 						entry.emplace_back(static_cast<int64_t>(buffer->get<int16_t>(cursor)));
 						cursor += sizeof(int16_t);
 					}
 					break;
-				case rivet_serialized_type::int32:
-					for (auto index = 0u; index < count; index++) {
+				case rivet_serialized_type::int32: for (auto index = 0u; index < count; index++) {
 						entry.emplace_back(static_cast<int64_t>(buffer->get<int32_t>(cursor)));
 						cursor += sizeof(int32_t);
 					}
 					break;
-				case rivet_serialized_type::int64:
-					for (auto index = 0u; index < count; index++) {
+				case rivet_serialized_type::int64: for (auto index = 0u; index < count; index++) {
 						entry.emplace_back(buffer->get<int64_t>(cursor));
 						cursor += sizeof(int64_t);
 					}
 					break;
-				case rivet_serialized_type::float32:
-					for (auto index = 0u; index < count; index++) {
+				case rivet_serialized_type::float32: for (auto index = 0u; index < count; index++) {
 						entry.emplace_back(static_cast<double>(buffer->get<float>(cursor)));
 						cursor += sizeof(float);
 					}
 					break;
-				case rivet_serialized_type::float64:
-					for (auto index = 0u; index < count; index++) {
+				case rivet_serialized_type::float64: for (auto index = 0u; index < count; index++) {
 						entry.emplace_back(buffer->get<double>(cursor));
 						cursor += sizeof(double);
 					}
@@ -126,9 +117,9 @@ namespace rivet::ddl {
 				case rivet_serialized_type::enum_value:
 				case rivet_serialized_type::bitfield:
 				case rivet_serialized_type::json:
-				case rivet_serialized_type::file: RIVET_DEBUG_BREAK; [[fallthrough]];
-				case rivet_serialized_type::string:
-					for (auto index = 0u; index < count; index++) {
+				case rivet_serialized_type::file: RIVET_DEBUG_BREAK;
+					[[fallthrough]];
+				case rivet_serialized_type::string: for (auto index = 0u; index < count; index++) {
 						auto [length, hash, checksum] = buffer->get<rivet_serialized_string>(cursor);
 						entry.emplace_back(buffer->to_string_view(cursor + sizeof(rivet_serialized_string), length));
 						cursor += sizeof(rivet_serialized_string) + length + 1; // null byte.
@@ -136,8 +127,7 @@ namespace rivet::ddl {
 						cursor = (cursor + 3) & ~3u; // align to 4 bytes
 					}
 					break;
-				case rivet_serialized_type::object:
-					for (auto index = 0u; index < count; index++) {
+				case rivet_serialized_type::object: for (auto index = 0u; index < count; index++) {
 						auto object = std::make_shared<serialized>(buffer->slice(cursor), dat1);
 						entry.emplace_back(object);
 						cursor += sizeof(rivet_serialized_header) + object->header.size;
@@ -145,8 +135,8 @@ namespace rivet::ddl {
 						cursor = (cursor + 3) & ~3u; // align to 4 bytes
 					}
 					break;
-				case rivet_serialized_type::none:
-					if (count < 1) { // only happens in save files?
+				case rivet_serialized_type::none: if (count < 1) {
+						// only happens in save files?
 						count = 1;
 					}
 
@@ -157,7 +147,7 @@ namespace rivet::ddl {
 					cursor += count;
 					break;
 				case rivet_serialized_type::unknown14:
-				default: throw rivet::not_implemented_error("serialized::serialized: unknown type");
+				default: throw not_implemented_error("serialized::serialized: unknown type");
 			}
 		}
 	}

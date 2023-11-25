@@ -15,12 +15,12 @@ using namespace rivet::type_id;
 
 namespace rivet::data {
 	localization::localization(const std::shared_ptr<rivet_data_array> &stream): data(stream) {
-		if (data.header.schema != localization::type_id) {
+		if (data.header.schema != type_id) {
 			throw invalid_tag_error("localization::localization: invalid type id");
 		}
 
 		const auto header = data.get_section<rivet_size>(localization_header_type_id);
-		const auto flags = data.get_section<rivet::structures::rivet_localization_flag>(localization_flags_type_id);
+		const auto flags = data.get_section<structures::rivet_localization_flag>(localization_flags_type_id);
 		const auto tags = data.get_section_data(localization_tags_type_id);
 		const auto texts = data.get_section_data(localization_text_type_id);
 		const auto tags_offsets = data.get_section<rivet_off>(localization_tags_offsets_type_id);
@@ -68,7 +68,7 @@ namespace rivet::data {
 			const auto sorting_index = indices->get(index);
 			const auto flag = flags->get(index);
 
-			auto entry = rivet::structures::rivet_localization_entry();
+			auto entry = structures::rivet_localization_entry();
 			entry.tag = tag;
 			entry.text = text;
 			entry.hash = hash;

@@ -44,7 +44,7 @@ enum class analyze_target : uint8_t {
 	max,
 };
 
-const std::array<std::string, rivet::to_underlying(analyze_target::max)> analyze_target_enum { "none", "header", "texture_header", "dat1_sections", "nested_dat1" };
+const std::array<std::string, to_underlying(analyze_target::max)> analyze_target_enum { "none", "header", "texture_header", "dat1_sections", "nested_dat1" };
 
 #define LOOP_START                                                          \
 	for (auto locale_id = 0; locale_id < 32; locale_id++) {                 \
@@ -192,7 +192,7 @@ analyze_dat1_sections(const std::shared_ptr<rivet_game> &game) {
 
 	id_map[std::to_string(asset->id)] = asset->name.value_or(std::to_string(asset->id));
 
-	auto asset_type_str = helpers::rivet_asset_type_enum[rivet::to_underlying(asset->type)];
+	auto asset_type_str = helpers::rivet_asset_type_enum[to_underlying(asset->type)];
 	if (dat1_info_map.find(asset_type_str) == dat1_info_map.end()) {
 		dat1_info_map[asset_type_str] = nlohmann::json::object_t();
 	}
@@ -309,16 +309,16 @@ analyze(const int argc, char **argv) -> int {
 	bool version_flag = false;
 	bool help_flag = false;
 
-	if (const auto cli = (clipp::joinable(clipp::option("-h", "--help").set(help_flag, true) % "show help", clipp::option("-v", "--version").set(version_flag, true) % "show version"),
-					clipp::value("mode", target) % "mode to analyze",
-					clipp::value("game", game_path) % "path to game directory");
-		!clipp::parse(argc, argv, cli) || help_flag || version_flag) {
+	if (const auto cli = (joinable(clipp::option("-h", "--help").set(help_flag, true) % "show help", clipp::option("-v", "--version").set(version_flag, true) % "show version"),
+	                      clipp::value("mode", target) % "mode to analyze",
+	                      clipp::value("game", game_path) % "path to game directory");
+		!parse(argc, argv, cli) || help_flag || version_flag) {
 		return handle_exit("rivet-debug-analyze", cli, version_flag, help_flag);
 	}
 
 	analyze_target target_enum = analyze_target::none;
 
-	for (int i = 0; i < rivet::to_underlying(analyze_target::max); i++) {
+	for (int i = 0; i < to_underlying(analyze_target::max); i++) {
 		if (target == analyze_target_enum[i]) {
 			target_enum = static_cast<analyze_target>(i);
 			break;

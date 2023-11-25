@@ -38,7 +38,7 @@ namespace rivet::gui::ui {
 		return true; // todo.
 	}
 
-	std::mutex g_archive_mutex{};
+	std::mutex g_archive_mutex;
 
 	void
 	load_game(archive_viewer *instance, const std::filesystem::path &path) {
@@ -90,11 +90,6 @@ namespace rivet::gui::ui {
 				                                                          }));
 			}
 
-			if (ImGui::MenuItem("close game", nullptr, false, game != nullptr && !open_archive)) {
-				open_archive = true;
-				std::thread(clear_game, this).detach();
-			}
-
 			ImGui::Separator();
 
 			if (ImGui::MenuItem("view file tree", nullptr, false, game != nullptr)) {
@@ -102,6 +97,11 @@ namespace rivet::gui::ui {
 			}
 
 			ImGui::Separator();
+
+			if (ImGui::MenuItem("close game", nullptr, false, game != nullptr && !open_archive)) {
+				open_archive = true;
+				std::thread(clear_game, this).detach();
+			}
 
 			if (ImGui::MenuItem("exit", nullptr, false, true)) {
 				g_host->exiting = true;

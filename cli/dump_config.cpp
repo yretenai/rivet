@@ -32,11 +32,11 @@ dump_config(const int argc, char **argv) -> int {
 	bool help_flag = false;
 	bool recursive = false;
 
-	if (const auto cli = (clipp::joinable(clipp::option("-h", "--help").set(help_flag, true) % "show help",
-							 clipp::option("-v", "--version").set(version_flag, true) % "show version",
-							 clipp::option("-r", "--recursive").set(recursive, true) % "find files in directories recursively"),
-					clipp::values("input-files", input_files) % "input files");
-		!clipp::parse(argc, argv, cli) || help_flag || version_flag) {
+	if (const auto cli = (joinable(clipp::option("-h", "--help").set(help_flag, true) % "show help",
+	                               clipp::option("-v", "--version").set(version_flag, true) % "show version",
+	                               clipp::option("-r", "--recursive").set(recursive, true) % "find files in directories recursively"),
+	                      clipp::values("input-files", input_files) % "input files");
+		!parse(argc, argv, cli) || help_flag || version_flag) {
 		return handle_exit("rivet-config-dump", cli, version_flag, help_flag);
 	}
 
