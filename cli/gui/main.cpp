@@ -3,6 +3,7 @@
 // SPDX-License-Identifier: MPL-2.0
 
 #include <memory>
+#include <chrono>
 
 #include "gui.hpp"
 #include "ui/archive_viewer.hpp"
@@ -13,9 +14,9 @@
 
 namespace rivet::gui {
 	inline auto
-	cctor_archive() noexcept -> std::shared_ptr<ui::window::archive_viewer> {
+	cctor_archive() noexcept -> std::shared_ptr<ui::archive_viewer> {
 		try {
-			return std::make_shared<ui::window::archive_viewer>();
+			return std::make_shared<ui::archive_viewer>();
 		} catch (std::exception &) {
 			return nullptr;
 		}
@@ -34,7 +35,7 @@ namespace rivet::gui {
 		}
 	}
 
-	const std::shared_ptr<ui::window::archive_viewer> g_archive = cctor_archive();
+	const std::shared_ptr<ui::archive_viewer> g_archive = cctor_archive();
 	const std::shared_ptr<device::rivet_sdl_host> g_host = cctor_host();
 } // namespace rivet::gui
 

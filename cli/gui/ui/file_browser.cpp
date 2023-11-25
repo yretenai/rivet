@@ -37,17 +37,32 @@ namespace rivet::gui::ui {
 			if (const auto is_file = is_regular_file(dir_path); !is_file || options.select_file) {
 				if (is_file && !options.filters.empty()) {
 					const auto &ext = dir_path.extension().string();
+					const auto &filename = dir_path.filename().string();
 					bool found = false;
 					for (const auto &filter : options.filters) {
-						if (filter.ends_with('*')) {
-							if (ext.starts_with(filter.substr(0, filter.size() - 1))) {
-								found = true;
-								break;
+						if (filter.starts_with('.') && dir_path.has_extension()) {
+							if (filter.ends_with('*')) {
+								if (ext.length() >= filter.size() - 1 && ext.starts_with(filter.substr(0, filter.size() - 1))) {
+									found = true;
+									break;
+								}
+							} else {
+								if (ext == filter) {
+									found = true;
+									break;
+								}
 							}
 						} else {
-							if (ext == filter) {
-								found = true;
-								break;
+							if (filter.ends_with('*')) {
+								if (filename.length() >= filter.size() - 1 && filename.starts_with(filter.substr(0, filter.size() - 1))) {
+									found = true;
+									break;
+								}
+							} else {
+								if (filename == filter) {
+									found = true;
+									break;
+								}
 							}
 						}
 					}
@@ -92,7 +107,7 @@ namespace rivet::gui::ui {
 					const auto item_selected = static_cast<size_t>(i) == index;
 					if (ImGui::Selectable(paths[i].label.c_str(), item_selected, ImGuiSelectableFlags_AllowDoubleClick)) {
 						deeper = static_cast<size_t>(i) == index && !is_regular_file(paths[i].path);
-						open = static_cast<size_t>(i) == index && is_regular_file(paths[i].path);
+						open = static_cast<size_t>(i) != index || !is_regular_file(paths[i].path);
 						index = i;
 					}
 
@@ -114,6 +129,8 @@ namespace rivet::gui::ui {
 					if (!is_directory(paths[index].path) || options.select_directory) {
 						selected = paths[index].path;
 					}
+				} else if (options.select_directory) {
+					selected = current_path;
 				}
 			}
 

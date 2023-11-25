@@ -5,6 +5,8 @@
 #include "archive_viewer.hpp"
 
 #include <climits>
+#include <thread>
+#include <mutex>
 #include <imgui.h>
 
 #include <rivet/rivet_game.hpp>
@@ -36,19 +38,43 @@ namespace rivet::gui::ui {
 		return true; // todo.
 	}
 
+	std::mutex g_archive_mutex{};
+
+	void
+	load_game(archive_viewer *instance, const std::filesystem::path &path) {
+		// ReSharper disable once CppDFAUnusedValue
+		const std::lock_guard lock(g_archive_mutex);
+		if (!path.empty()) {
+			try {
+				set_log_message("loading game");
+				instance->game = std::make_shared<rivet_game>(is_regular_file(path) ? path.parent_path() : path);
+				set_log_message("done loading game");
+			} catch (std::exception &exception) {
+				instance->game = nullptr;
+				set_log_message(exception.what());
+			}
+		}
+		open_archive = false;
+	}
+
+	void
+	clear_game(archive_viewer *instance) {
+		// ReSharper disable once CppDFAUnusedValue
+		const std::lock_guard lock(g_archive_mutex);
+		instance->game = nullptr;
+		open_archive = !open_archive;
+	}
+
+
 	void
 	archive_viewer::draw_menu() {
 		if (ImGui::BeginMenu("file", !g_host->exiting)) {
 			if (ImGui::MenuItem("open archive", nullptr, false, !open_archive)) {
 				open_archive = true;
-				file_browser_options opts{ "select game directory", {}, true, false };
+				file_browser_options opts{ "select game directory", { "toc", "dag" }, true, true };
 				g_host->elements.push_back(std::make_shared<file_browser>(opts,
 				                                                          [&](const std::shared_ptr<file_browser> &browser) {
-					                                                          open_archive = !open_archive;
-					                                                          if (!browser->selected.empty()) {
-						                                                          // todo: spawn this in a thread
-						                                                          game = std::make_shared<rivet_game>(browser->selected);
-					                                                          }
+					                                                          std::thread(load_game, this, browser->selected).detach();
 				                                                          }));
 			}
 
@@ -64,14 +90,15 @@ namespace rivet::gui::ui {
 				                                                          }));
 			}
 
+			if (ImGui::MenuItem("close game", nullptr, false, game != nullptr && !open_archive)) {
+				open_archive = true;
+				std::thread(clear_game, this).detach();
+			}
+
 			ImGui::Separator();
 
 			if (ImGui::MenuItem("view file tree", nullptr, false, game != nullptr)) {
 				filetree_open = true;
-			}
-
-			if (ImGui::MenuItem("view log", nullptr, false, true)) {
-				// todo: log_viewer->visible = true;
 			}
 
 			ImGui::Separator();

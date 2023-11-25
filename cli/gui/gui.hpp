@@ -4,16 +4,20 @@
 
 #pragma once
 
+#include <memory>
+#include <string>
+
 #include "device/rivet_sdl_host.hpp"
 
 // all global are here.
 namespace rivet::gui {
-	namespace ui::window {
+	namespace ui {
 		struct archive_viewer;
-		// struct log_viewer;
 	}
 
-	const extern std::shared_ptr<ui::window::archive_viewer> g_archive; // needs to be global to access the archives.
-	// const extern std::shared_ptr<ui::window::log_viewer> g_log; // needs to be global to send log messages
+	// controllers
+	const extern std::shared_ptr<ui::archive_viewer> g_archive; // needs to be global to access the archives.
 	const extern std::shared_ptr<device::rivet_sdl_host> g_host;
+
+	void set_log_message(const std::string &message);
 }
