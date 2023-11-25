@@ -7,14 +7,12 @@
 namespace rivet {
 	auto
 	rivet_version() -> uint64_t {
-		return rivet::local_version;
+		return local_version;
 	}
-
-	static constexpr std::string_view rivet_version_detailed_string = "0.0.6";
 
 	// ReSharper disable once CppDFAConstantFunctionResult
 	auto
 	rivet_version_detailed() -> std::string_view {
-		return rivet_version_detailed_string;
+		return local_version_detailed;
 	}
 } // namespace rivet

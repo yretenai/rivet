@@ -11,6 +11,7 @@
 
 namespace rivet {
 	constexpr uint64_t local_version = 6;
+	constexpr std::string_view local_version_detailed = "0.0.6";
 
 	RIVET_SHARED auto
 	rivet_version() -> uint64_t;

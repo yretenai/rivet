@@ -5,31 +5,36 @@
 #pragma once
 
 #include <memory>
+#include <vector>
 
 #include <SDL3/SDL.h>
 
-namespace rivet::sdl {
-	enum class rivet_sdl_category {
+#include "../ui/imgui_element.hpp"
+
+namespace rivet::gui::device {
+	enum class rivet_sdl_category : uint32_t { // NOLINT(*-enum-size)
 		error = SDL_LOG_CATEGORY_CUSTOM,
 		generic,
 		archive,
 		graphics,
 	};
 
-	void rivet_sdl_crash(const std::string &message = SDL_GetError());
+	void
+	rivet_sdl_crash(const std::string &message = SDL_GetError());
 
-	struct rivet_sdl_host { // NOLINT(*-special-member-functions)
+	struct rivet_sdl_host {
 		rivet_sdl_host();
 		~rivet_sdl_host();
-		rivet_sdl_host(const rivet_sdl_host&) = delete;
-		auto operator=(const rivet_sdl_host&) -> rivet_sdl_host& = delete;
+		rivet_sdl_host(const rivet_sdl_host &) = delete;
+		auto operator=(const rivet_sdl_host &) -> rivet_sdl_host & = delete;
+		rivet_sdl_host(rivet_sdl_host&&) = default;
+		auto operator=(rivet_sdl_host&&) -> rivet_sdl_host& = default;
 		void render();
 
-		SDL_Renderer* renderer;
-		SDL_Window* window;
-		bool exiting;
-		bool show_demo_window;
-	};
+		std::vector<std::shared_ptr<ui::element>> elements;
 
-	extern std::shared_ptr<rivet_sdl_host> host;
-}
+		SDL_Renderer *renderer;
+		SDL_Window *window;
+		bool exiting;
+	};
+} // namespace rivet::gui::device

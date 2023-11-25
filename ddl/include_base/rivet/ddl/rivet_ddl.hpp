@@ -10,7 +10,8 @@
 #include <rivet/rivet_keywords.hpp>
 
 namespace rivet::ddl {
-	constexpr uint64_t local_version = 815;
+	constexpr uint64_t local_ddl_version = 815;
+	constexpr std::string_view local_ddl_version_detailed = "ra815";
 
 	RIVET_DDL_SHARED auto
 	ddl_version() -> uint64_t;
