@@ -131,6 +131,23 @@ namespace rivet_hook {
 				continue;
 			}
 
+			void* ddl_inst_this = malloc(type_ptr->allocation_size + 16);
+			auto type_ctor = reinterpret_cast<rivet_hook::ddl::ddl_call_t*>(type_ptr->constructor_ptr);
+			auto type_dtor = reinterpret_cast<rivet_hook::ddl::ddl_call_t*>(type_ptr->destructor_ptr);
+			auto type_init = reinterpret_cast<rivet_hook::ddl::ddl_call_t*>(type_ptr->init_defaults_ptr);
+			if(type_ctor != nullptr && type_init != nullptr) {
+				auto temp = type_ctor(ddl_inst_this);
+				if(temp != nullptr) {
+					type_init(temp);
+				} else {
+					free(ddl_inst_this);
+					ddl_inst_this = nullptr;
+				}
+			} else {
+				free(ddl_inst_this);
+				ddl_inst_this = nullptr;
+			}
+
 			nlohmann::json type_info;
 			type_info["name"] = type_ptr->name;
 			type_info["type_id"] = type_ptr->type_id;
@@ -153,6 +170,53 @@ namespace rivet_hook {
 				field["tag_type"] = static_cast<uint32_t>(type_ptr->field_tag_types[fi]);
 				field["flags"] = static_cast<uint32_t>(type_ptr->field_mutable_flags[fi]);
 				field["offset"] = type_ptr->field_offsets[fi];
+
+				if(ddl_inst_this != 0) {
+					auto ddl_inst = static_cast<uint8_t*>(ddl_inst_this);
+					switch (type_ptr->field_types[fi]) {
+						case 0: field["default"] = *reinterpret_cast<const uint8_t*>(ddl_inst + type_ptr->field_offsets[fi]); break;
+						case 1: field["default"] = *reinterpret_cast<const uint16_t*>(ddl_inst + type_ptr->field_offsets[fi]); break;
+						case 2: field["default"] = *reinterpret_cast<const uint32_t*>(ddl_inst + type_ptr->field_offsets[fi]); break;
+						case 3: field["default"] = *reinterpret_cast<const uint64_t*>(ddl_inst + type_ptr->field_offsets[fi]); break;
+						case 4: field["default"] = *reinterpret_cast<const int8_t*>(ddl_inst + type_ptr->field_offsets[fi]); break;
+						case 5: field["default"] = *reinterpret_cast<const int16_t*>(ddl_inst + type_ptr->field_offsets[fi]); break;
+						case 6: field["default"] = *reinterpret_cast<const int32_t*>(ddl_inst + type_ptr->field_offsets[fi]); break;
+						case 7: field["default"] = *reinterpret_cast<const int64_t*>(ddl_inst + type_ptr->field_offsets[fi]); break;
+						case 8: field["default"] = *reinterpret_cast<const float*>(ddl_inst + type_ptr->field_offsets[fi]); break;
+						case 9: field["default"] = *reinterpret_cast<const double*>(ddl_inst + type_ptr->field_offsets[fi]); break;
+						case 11: field["default"] = *reinterpret_cast<const uint32_t*>(ddl_inst + type_ptr->field_offsets[fi]); break; // enum
+						case 12: field["default"] = *reinterpret_cast<const uint32_t*>(ddl_inst + type_ptr->field_offsets[fi]); break; // bitset
+						case 15: field["default"] = *reinterpret_cast<const bool*>(ddl_inst + type_ptr->field_offsets[fi]); break;
+						case 17: field["default"] = *reinterpret_cast<const uint64_t*>(ddl_inst + type_ptr->field_offsets[fi]); break; // tuid
+						case 20: field["default"] = *reinterpret_cast<const uint64_t*>(ddl_inst + type_ptr->field_offsets[fi]); break; // instance
+						case 10: // str
+						case 18: { // json
+							auto str = reinterpret_cast<const rivet_hook::ddl::ddl_runtime_str*>(ddl_inst + type_ptr->field_offsets[fi]);
+							if(str->value != nullptr) {
+								nlohmann::json str_default;
+								str_default["value"] = str->value;
+								str_default["id"] = str->hash;
+								field["default"] = str_default;
+							} else {
+								field["default"] = nullptr;
+							}
+							break;
+						}
+						case 16: { // file
+							auto str = reinterpret_cast<const rivet_hook::ddl::ddl_runtime_file*>(ddl_inst + type_ptr->field_offsets[fi]);
+							if(str->value != nullptr) {
+								nlohmann::json str_default;
+								str_default["value"] = str->value;
+								str_default["id"] = str->asset_id;
+								field["default"] = str_default;
+							} else {
+								field["default"] = nullptr;
+							}
+							break;
+						}
+						default: field["default"] = nullptr; break;
+					}
+				}
 
 				const auto *extra = type_ptr->field_ex[fi];
 				if (extra != nullptr) {
@@ -209,6 +273,10 @@ namespace rivet_hook {
 
 			type_info["fields"] = fields;
 			types.push_back(type_info);
+			if(type_dtor != nullptr && ddl_inst_this != nullptr) {
+				type_dtor(ddl_inst_this);
+				free(ddl_inst_this);
+			}
 		}
 
 		nlohmann::json ddl_dump {};

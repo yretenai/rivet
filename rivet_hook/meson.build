@@ -20,7 +20,7 @@ if host_machine.system() == 'windows'
             'trampoline.' + ext,
             'runtime/runtime.cpp'
         ],
-        link_args: ['-static-libgcc', '-static-libstdc++'],
+        link_args: meson.get_compiler('cpp').get_supported_arguments('-static-libgcc', '-static-libstdc++'),
         dependencies: [
             nlohmann_json_dep,
             minhook_dep,

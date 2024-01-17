@@ -10,6 +10,8 @@
 namespace rivet_hook::ddl {
 #pragma pack(push, 1)
 
+	using ddl_call_t = void* (void*);
+
 	struct ddl_type_info {
 		const char *name;
 		uint32_t type_id;
@@ -30,6 +32,17 @@ namespace rivet_hook::ddl {
 		const char **field_descriptions;
 		const char **field_labels;
 		const char **field_names2;
+		uint32_t footer_unknown1;
+		uint32_t footer_unknown2;
+		uint64_t footer_unknown3;
+		uint64_t footer_unknown4;
+		const void* constructor_ptr; // sets vtable
+		const void* copy_ptr; // seems to copy data
+		const void* init_defaults_ptr; // calls allocators
+		const void* reset_defaults_ptr; // also calls deallocators
+		const void* reset_field_ptr; // resets specific index
+		const void* destructor_ptr; // calls deallocators
+		const void* hash_test_ptr; // compares hashes?
 	};
 
 	struct ddl_type_info_ex_type_12 {
@@ -72,6 +85,18 @@ namespace rivet_hook::ddl {
 		const ddl_type_info **values;
 		uint32_t count;
 		uint32_t capacity;
+	};
+
+	struct ddl_runtime_str {
+		const char* value;
+		int32_t length;
+		uint32_t hash;
+	};
+
+	struct ddl_runtime_file {
+		const char* value;
+		int32_t length;
+		uint64_t asset_id;
 	};
 
 #pragma pack(pop)
