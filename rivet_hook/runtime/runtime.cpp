@@ -189,8 +189,7 @@ namespace rivet_hook {
 						case 15: field["default"] = *reinterpret_cast<const bool*>(ddl_inst + type_ptr->field_offsets[fi]); break;
 						case 17: field["default"] = *reinterpret_cast<const uint64_t*>(ddl_inst + type_ptr->field_offsets[fi]); break; // tuid
 						case 20: field["default"] = *reinterpret_cast<const uint64_t*>(ddl_inst + type_ptr->field_offsets[fi]); break; // instance
-						case 10: // str
-						case 18: { // json
+						case 10: { // str
 							auto str = reinterpret_cast<const rivet_hook::ddl::ddl_runtime_str*>(ddl_inst + type_ptr->field_offsets[fi]);
 							if(str->value != nullptr) {
 								nlohmann::json str_default;
