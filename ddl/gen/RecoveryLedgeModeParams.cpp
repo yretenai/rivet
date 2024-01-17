@@ -9,21 +9,21 @@
 
 namespace rivet::ddl::generated {
 	RecoveryLedgeModeParams::RecoveryLedgeModeParams([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		QueryRadius = serialized->get_float(QueryRadius_type_id);
-		RightHandQueryRadius = serialized->get_float(RightHandQueryRadius_type_id);
-		DistanceBetweenHands = serialized->get_float(DistanceBetweenHands_type_id);
-		MinDistanceBetweenHands = serialized->get_float(MinDistanceBetweenHands_type_id);
-		RightHandQueryDepth = serialized->get_float(RightHandQueryDepth_type_id);
-		LedgeOffsetTolerance = serialized->get_float(LedgeOffsetTolerance_type_id);
-		MaxLedgeSearchHeight = serialized->get_float(MaxLedgeSearchHeight_type_id);
-		MinLedgeSearchHeight = serialized->get_float(MinLedgeSearchHeight_type_id);
-		MaxHeightAboveLastGround = serialized->get_float(MaxHeightAboveLastGround_type_id);
-		MaxUpperGroundSlope = serialized->get_float(MaxUpperGroundSlope_type_id);
+		QueryRadius = serialized->get_float(QueryRadius_type_id, 1.200000);
+		RightHandQueryRadius = serialized->get_float(RightHandQueryRadius_type_id, 0.150000);
+		DistanceBetweenHands = serialized->get_float(DistanceBetweenHands_type_id, 1.000000);
+		MinDistanceBetweenHands = serialized->get_float(MinDistanceBetweenHands_type_id, 0.250000);
+		RightHandQueryDepth = serialized->get_float(RightHandQueryDepth_type_id, 0.750000);
+		LedgeOffsetTolerance = serialized->get_float(LedgeOffsetTolerance_type_id, 0.080000);
+		MaxLedgeSearchHeight = serialized->get_float(MaxLedgeSearchHeight_type_id, 0.800000);
+		MinLedgeSearchHeight = serialized->get_float(MinLedgeSearchHeight_type_id, -1.500000);
+		MaxHeightAboveLastGround = serialized->get_float(MaxHeightAboveLastGround_type_id, 3.500000);
+		MaxUpperGroundSlope = serialized->get_float(MaxUpperGroundSlope_type_id, 30.000000);
 		GroundClearance = serialized->unwrap_into<rivet::ddl::generated::RecoveryLedgeLowerClearanceParams>(GroundClearance_type_id);
 		FluidClearance = serialized->unwrap_into<rivet::ddl::generated::RecoveryLedgeLowerClearanceParams>(FluidClearance_type_id);
-		WallCheckVerticalOffset = serialized->get_float(WallCheckVerticalOffset_type_id);
-		UpperClearanceHorizDist = serialized->get_float(UpperClearanceHorizDist_type_id);
-		ClearanceQueryRadius = serialized->get_float(ClearanceQueryRadius_type_id); 
+		WallCheckVerticalOffset = serialized->get_float(WallCheckVerticalOffset_type_id, 0.500000);
+		UpperClearanceHorizDist = serialized->get_float(UpperClearanceHorizDist_type_id, 1.250000);
+		ClearanceQueryRadius = serialized->get_float(ClearanceQueryRadius_type_id, 0.500000); 
 	}
 
 	[[nodiscard]] auto

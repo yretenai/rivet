@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	MPALoadedTypesChangedEvent::MPALoadedTypesChangedEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		SystemType = serialized->get_enum<rivet::ddl::generated::xb1be5abd>(SystemType_type_id, rivet::ddl::generated::xb1be5abd_values); 
+		SystemType = serialized->get_enum<rivet::ddl::generated::xb1be5abd>(SystemType_type_id, rivet::ddl::generated::xb1be5abd_values, rivet::ddl::generated::xb1be5abd::Base); 
 	}
 
 	[[nodiscard]] auto

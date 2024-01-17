@@ -7,13 +7,13 @@
 
 namespace rivet::ddl::generated {
 	RtEnvProbeSettings::RtEnvProbeSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		CsmLodCount = serialized->get_int32(CsmLodCount_type_id);
-		CsmDrawDistance = serialized->get_float(CsmDrawDistance_type_id);
-		DefaultProbeIntensity = serialized->get_float(DefaultProbeIntensity_type_id);
-		FarClip = serialized->get_float(FarClip_type_id);
-		RenderMode = serialized->get_enum<rivet::ddl::generated::xefbbbac0>(RenderMode_type_id, rivet::ddl::generated::xefbbbac0_values);
-		LightSourceNightIntensityScale = serialized->get_float(LightSourceNightIntensityScale_type_id);
-		LightSourceNightRadiusScale = serialized->get_float(LightSourceNightRadiusScale_type_id); 
+		CsmLodCount = serialized->get_int32(CsmLodCount_type_id, 0);
+		CsmDrawDistance = serialized->get_float(CsmDrawDistance_type_id, 750.000000);
+		DefaultProbeIntensity = serialized->get_float(DefaultProbeIntensity_type_id, 0.250000);
+		FarClip = serialized->get_float(FarClip_type_id, 2048.000000);
+		RenderMode = serialized->get_enum<rivet::ddl::generated::xefbbbac0>(RenderMode_type_id, rivet::ddl::generated::xefbbbac0_values, rivet::ddl::generated::xefbbbac0::Impostors_Only);
+		LightSourceNightIntensityScale = serialized->get_float(LightSourceNightIntensityScale_type_id, 1.000000);
+		LightSourceNightRadiusScale = serialized->get_float(LightSourceNightRadiusScale_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

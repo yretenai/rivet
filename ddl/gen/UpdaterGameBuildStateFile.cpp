@@ -7,14 +7,14 @@
 
 namespace rivet::ddl::generated {
 	UpdaterGameBuildStateFile::UpdaterGameBuildStateFile([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		LocalDir = serialized->get_string(LocalDir_type_id);
-		RemoteDir = serialized->get_string(RemoteDir_type_id);
-		ConfigFile = serialized->get_string(ConfigFile_type_id);
-		PackageFile = serialized->get_string(PackageFile_type_id);
-		IsLocalBuild = serialized->get_bool(IsLocalBuild_type_id);
-		IsConfigDownloaded = serialized->get_bool(IsConfigDownloaded_type_id);
-		IsPackageDownloaded = serialized->get_bool(IsPackageDownloaded_type_id);
-		IsPackageUnpacked = serialized->get_bool(IsPackageUnpacked_type_id); 
+		LocalDir = serialized->get_string(LocalDir_type_id, "");
+		RemoteDir = serialized->get_string(RemoteDir_type_id, "");
+		ConfigFile = serialized->get_string(ConfigFile_type_id, "");
+		PackageFile = serialized->get_string(PackageFile_type_id, "");
+		IsLocalBuild = serialized->get_bool(IsLocalBuild_type_id, false);
+		IsConfigDownloaded = serialized->get_bool(IsConfigDownloaded_type_id, false);
+		IsPackageDownloaded = serialized->get_bool(IsPackageDownloaded_type_id, false);
+		IsPackageUnpacked = serialized->get_bool(IsPackageUnpacked_type_id, false); 
 	}
 
 	[[nodiscard]] auto

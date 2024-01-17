@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	BreakableBlockData::BreakableBlockData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ModelAssetPath = serialized->get_string(ModelAssetPath_type_id);
-		LookName = serialized->get_string(LookName_type_id); 
+		ModelAssetPath = serialized->get_string(ModelAssetPath_type_id, {});
+		LookName = serialized->get_string(LookName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

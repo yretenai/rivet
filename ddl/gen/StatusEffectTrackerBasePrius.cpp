@@ -19,16 +19,16 @@
 
 namespace rivet::ddl::generated {
 	StatusEffectTrackerBasePrius::StatusEffectTrackerBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Threshhold = serialized->get_float(Threshhold_type_id);
-		DecayRate = serialized->get_float(DecayRate_type_id);
-		DecayDelay = serialized->get_float(DecayDelay_type_id);
-		Vulnerability = serialized->get_float(Vulnerability_type_id);
-		DurationMod = serialized->get_float(DurationMod_type_id);
-		CooldownMod = serialized->get_float(CooldownMod_type_id);
-		AllowRefresh = serialized->get_bool(AllowRefresh_type_id);
-		AllowProportionalRefresh = serialized->get_bool(AllowProportionalRefresh_type_id);
-		AllowIfDead = serialized->get_bool(AllowIfDead_type_id);
-		OnlyApplyOnDeath = serialized->get_bool(OnlyApplyOnDeath_type_id); 
+		Threshhold = serialized->get_float(Threshhold_type_id, 100.000000);
+		DecayRate = serialized->get_float(DecayRate_type_id, 0.000000);
+		DecayDelay = serialized->get_float(DecayDelay_type_id, -1.000000);
+		Vulnerability = serialized->get_float(Vulnerability_type_id, 1.000000);
+		DurationMod = serialized->get_float(DurationMod_type_id, 1.000000);
+		CooldownMod = serialized->get_float(CooldownMod_type_id, 1.000000);
+		AllowRefresh = serialized->get_bool(AllowRefresh_type_id, true);
+		AllowProportionalRefresh = serialized->get_bool(AllowProportionalRefresh_type_id, false);
+		AllowIfDead = serialized->get_bool(AllowIfDead_type_id, true);
+		OnlyApplyOnDeath = serialized->get_bool(OnlyApplyOnDeath_type_id, false); 
 	}
 
 	[[nodiscard]] auto

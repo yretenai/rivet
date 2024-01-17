@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	SelectionEngineItem::SelectionEngineItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		SelectedNodes = serialized->get_bools(SelectedNodes_type_id);
-		LastSelectedNode = serialized->get_uint64(LastSelectedNode_type_id); 
+		LastSelectedNode = serialized->get_uint64(LastSelectedNode_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

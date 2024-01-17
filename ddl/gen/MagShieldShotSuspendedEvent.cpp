@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	MagShieldShotSuspendedEvent::MagShieldShotSuspendedEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		OriginalShotAsset = serialized->get_uint64(OriginalShotAsset_type_id); 
+		OriginalShotAsset = serialized->get_uint64(OriginalShotAsset_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

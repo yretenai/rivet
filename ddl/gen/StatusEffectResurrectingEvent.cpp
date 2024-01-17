@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	StatusEffectResurrectingEvent::StatusEffectResurrectingEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		TimeUntilResurrect = serialized->get_float(TimeUntilResurrect_type_id); 
+		TimeUntilResurrect = serialized->get_float(TimeUntilResurrect_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

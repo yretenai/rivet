@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	UnitTestSettings::UnitTestSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		LogFile = serialized->get_string(LogFile_type_id);
-		AppendToLogFile = serialized->get_bool(AppendToLogFile_type_id);
-		DebugHeapToUseForJsonBuffer = serialized->get_uint32(DebugHeapToUseForJsonBuffer_type_id); 
+		LogFile = serialized->get_string(LogFile_type_id, "");
+		AppendToLogFile = serialized->get_bool(AppendToLogFile_type_id, false);
+		DebugHeapToUseForJsonBuffer = serialized->get_uint32(DebugHeapToUseForJsonBuffer_type_id, 2097152); 
 	}
 
 	[[nodiscard]] auto

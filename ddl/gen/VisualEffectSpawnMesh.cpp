@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	VisualEffectSpawnMesh::VisualEffectSpawnMesh([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		TargetSpawnStyleNode = serialized->get_string(TargetSpawnStyleNode_type_id);
+		TargetSpawnStyleNode = serialized->get_string(TargetSpawnStyleNode_type_id, {});
 		TargetModelMaterialMappings = serialized->get_strings(TargetModelMaterialMappings_type_id);
 		ExcludeModelMaterialMappings = serialized->get_strings(ExcludeModelMaterialMappings_type_id); 
 	}

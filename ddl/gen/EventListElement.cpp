@@ -10,7 +10,7 @@
 namespace rivet::ddl::generated {
 	EventListElement::EventListElement([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		OutputEvent = serialized->unwrap_into<rivet::ddl::generated::EventBase>(OutputEvent_type_id);
-		PlayOnce = serialized->get_bool(PlayOnce_type_id); 
+		PlayOnce = serialized->get_bool(PlayOnce_type_id, false); 
 	}
 
 	[[nodiscard]] auto

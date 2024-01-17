@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	WeaponPlasmaStrikerPrius::WeaponPlasmaStrikerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): WeaponGamePrius(serialized) {
-		ScopeOverlayActor = serialized->get_string(ScopeOverlayActor_type_id);
-		WeakspotActor = serialized->get_string(WeakspotActor_type_id); 
+		ScopeOverlayActor = serialized->get_string(ScopeOverlayActor_type_id, {});
+		WeakspotActor = serialized->get_string(WeakspotActor_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

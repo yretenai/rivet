@@ -7,16 +7,16 @@
 
 namespace rivet::ddl::generated {
 	HeroWallStickConfig::HeroWallStickConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		WallStickGravity = serialized->get_float(WallStickGravity_type_id);
-		WallStickTerminalVelocity = serialized->get_float(WallStickTerminalVelocity_type_id);
-		WallStickNoSlideTime = serialized->get_float(WallStickNoSlideTime_type_id);
-		WallStickMinGroundHeight = serialized->get_float(WallStickMinGroundHeight_type_id);
-		WallStickFacingIntoWallThreshold = serialized->get_float(WallStickFacingIntoWallThreshold_type_id);
-		WallJumpCameraAccel = serialized->get_float(WallJumpCameraAccel_type_id);
-		WallJumpCameraDecel = serialized->get_float(WallJumpCameraDecel_type_id);
-		WallJumpCameraMaxSpeedYaw = serialized->get_float(WallJumpCameraMaxSpeedYaw_type_id);
-		WallJumpCameraMaxSpeedPitch = serialized->get_float(WallJumpCameraMaxSpeedPitch_type_id);
-		WallJumpUpMinHeightGain = serialized->get_float(WallJumpUpMinHeightGain_type_id); 
+		WallStickGravity = serialized->get_float(WallStickGravity_type_id, -20.000000);
+		WallStickTerminalVelocity = serialized->get_float(WallStickTerminalVelocity_type_id, -40.000000);
+		WallStickNoSlideTime = serialized->get_float(WallStickNoSlideTime_type_id, 0.500000);
+		WallStickMinGroundHeight = serialized->get_float(WallStickMinGroundHeight_type_id, 1.000000);
+		WallStickFacingIntoWallThreshold = serialized->get_float(WallStickFacingIntoWallThreshold_type_id, 70.000000);
+		WallJumpCameraAccel = serialized->get_float(WallJumpCameraAccel_type_id, 1000.000000);
+		WallJumpCameraDecel = serialized->get_float(WallJumpCameraDecel_type_id, 500.000000);
+		WallJumpCameraMaxSpeedYaw = serialized->get_float(WallJumpCameraMaxSpeedYaw_type_id, 230.000000);
+		WallJumpCameraMaxSpeedPitch = serialized->get_float(WallJumpCameraMaxSpeedPitch_type_id, 57.000000);
+		WallJumpUpMinHeightGain = serialized->get_float(WallJumpUpMinHeightGain_type_id, 0.500000); 
 	}
 
 	[[nodiscard]] auto

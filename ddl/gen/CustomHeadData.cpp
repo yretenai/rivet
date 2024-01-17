@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	CustomHeadData::CustomHeadData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		HeadID = serialized->get_int8(HeadID_type_id);
-		HeadModel = serialized->get_string(HeadModel_type_id); 
+		HeadID = serialized->get_int8(HeadID_type_id, -1);
+		HeadModel = serialized->get_string(HeadModel_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

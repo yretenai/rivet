@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	StickersCategoryData::StickersCategoryData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Label = serialized->get_string(Label_type_id);
-		Icon = serialized->get_string(Icon_type_id);
+		Label = serialized->get_string(Label_type_id, {});
+		Icon = serialized->get_string(Icon_type_id, {});
 		Stickers = serialized->unwrap_into_many<rivet::ddl::generated::StickersData>(Stickers_type_id); 
 	}
 

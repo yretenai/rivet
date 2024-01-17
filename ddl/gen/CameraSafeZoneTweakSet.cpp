@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	CameraSafeZoneTweakSet::CameraSafeZoneTweakSet([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): CameraSafeZoneTweak(serialized) {
-		LeftAngleMin = serialized->get_float(LeftAngleMin_type_id);
-		LeftAngleMax = serialized->get_float(LeftAngleMax_type_id);
-		ForwardDistMin = serialized->get_float(ForwardDistMin_type_id);
-		ForwardDistMax = serialized->get_float(ForwardDistMax_type_id);
-		BlendFieldCompletePercent = serialized->get_float(BlendFieldCompletePercent_type_id);
-		BiDirectionalField = serialized->get_bool(BiDirectionalField_type_id); 
+		LeftAngleMin = serialized->get_float(LeftAngleMin_type_id, 0.000000);
+		LeftAngleMax = serialized->get_float(LeftAngleMax_type_id, 0.000000);
+		ForwardDistMin = serialized->get_float(ForwardDistMin_type_id, 0.000000);
+		ForwardDistMax = serialized->get_float(ForwardDistMax_type_id, 0.000000);
+		BlendFieldCompletePercent = serialized->get_float(BlendFieldCompletePercent_type_id, 0.000000);
+		BiDirectionalField = serialized->get_bool(BiDirectionalField_type_id, false); 
 	}
 
 	[[nodiscard]] auto

@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	MaterialBuildConfig::MaterialBuildConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		Dummy = serialized->get_bool(Dummy_type_id); 
+		Dummy = serialized->get_bool(Dummy_type_id, false); 
 	}
 
 	[[nodiscard]] auto

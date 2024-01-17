@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	NewAssetRequest::NewAssetRequest([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AssetPath = serialized->get_string(AssetPath_type_id);
+		AssetPath = serialized->get_string(AssetPath_type_id, "");
 		Asset = serialized->get_field(Asset_type_id);
-		AllowOverwrite = serialized->get_bool(AllowOverwrite_type_id); 
+		AllowOverwrite = serialized->get_bool(AllowOverwrite_type_id, false); 
 	}
 
 	[[nodiscard]] auto

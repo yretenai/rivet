@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	WaterImpulseSettings::WaterImpulseSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MaxDist = serialized->get_float(MaxDist_type_id); 
+		MaxDist = serialized->get_float(MaxDist_type_id, 100.000000); 
 	}
 
 	[[nodiscard]] auto

@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	PickupCollectStartEvent::PickupCollectStartEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		LocalCollector = serialized->get_bool(LocalCollector_type_id); 
+		LocalCollector = serialized->get_bool(LocalCollector_type_id, true); 
 	}
 
 	[[nodiscard]] auto

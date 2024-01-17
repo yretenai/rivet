@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ModelSelectedEvent::ModelSelectedEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		ModelId = serialized->get_uint64(ModelId_type_id); 
+		ModelId = serialized->get_uint64(ModelId_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

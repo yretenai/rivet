@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	HealActionPrius::HealActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		Amount = serialized->get_float(Amount_type_id);
-		Percentage = serialized->get_bool(Percentage_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Health);
+		Amount = serialized->get_float(Amount_type_id, 0.000000);
+		Percentage = serialized->get_bool(Percentage_type_id, false); 
 	}
 
 	[[nodiscard]] auto

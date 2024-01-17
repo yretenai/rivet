@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	SimpleFishPrius::SimpleFishPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): FlockablePrius(serialized) {
-		MaxDesireSpeed = serialized->get_float(MaxDesireSpeed_type_id);
-		MinDesireSpeed = serialized->get_float(MinDesireSpeed_type_id);
-		ArriveRange = serialized->get_float(ArriveRange_type_id);
-		MinScale = serialized->get_float(MinScale_type_id);
-		MaxScale = serialized->get_float(MaxScale_type_id);
-		MaxAccelAngle = serialized->get_float(MaxAccelAngle_type_id); 
+		MaxDesireSpeed = serialized->get_float(MaxDesireSpeed_type_id, 1.000000);
+		MinDesireSpeed = serialized->get_float(MinDesireSpeed_type_id, 1.000000);
+		ArriveRange = serialized->get_float(ArriveRange_type_id, 1.000000);
+		MinScale = serialized->get_float(MinScale_type_id, 0.600000);
+		MaxScale = serialized->get_float(MaxScale_type_id, 1.000000);
+		MaxAccelAngle = serialized->get_float(MaxAccelAngle_type_id, 90.000000); 
 	}
 
 	[[nodiscard]] auto

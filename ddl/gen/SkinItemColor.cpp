@@ -10,12 +10,12 @@
 
 namespace rivet::ddl::generated {
 	SkinItemColor::SkinItemColor([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ColorName = serialized->get_string(ColorName_type_id);
-		NameLocTag = serialized->get_string(NameLocTag_type_id);
-		Available = serialized->get_enum<rivet::ddl::generated::x7ecfc969>(Available_type_id, rivet::ddl::generated::x7ecfc969_values);
-		R = serialized->get_uint8(R_type_id);
-		G = serialized->get_uint8(G_type_id);
-		B = serialized->get_uint8(B_type_id);
+		ColorName = serialized->get_string(ColorName_type_id, {});
+		NameLocTag = serialized->get_string(NameLocTag_type_id, {});
+		Available = serialized->get_enum<rivet::ddl::generated::x7ecfc969>(Available_type_id, rivet::ddl::generated::x7ecfc969_values, rivet::ddl::generated::x7ecfc969::Always);
+		R = serialized->get_uint8(R_type_id, 0);
+		G = serialized->get_uint8(G_type_id, 0);
+		B = serialized->get_uint8(B_type_id, 0);
 		TextureOverrideList = serialized->unwrap_into_many<rivet::ddl::generated::SkinItemTextureOverride>(TextureOverrideList_type_id);
 		MaterialOverrideList = serialized->unwrap_into_many<rivet::ddl::generated::SkinItemMaterialOverride>(MaterialOverrideList_type_id); 
 	}

@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	CameraAttribute::CameraAttribute([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		CameraType = serialized->get_enum<rivet::ddl::generated::CameraType>(CameraType_type_id, rivet::ddl::generated::CameraType_values);
+		CameraType = serialized->get_enum<rivet::ddl::generated::CameraType>(CameraType_type_id, rivet::ddl::generated::CameraType_values, rivet::ddl::generated::CameraType::Perspective);
 		PerspectiveData = serialized->unwrap_into<rivet::ddl::generated::CameraPerspectiveData>(PerspectiveData_type_id); 
 	}
 

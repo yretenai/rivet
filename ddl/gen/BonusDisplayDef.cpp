@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	BonusDisplayDef::BonusDisplayDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Bonus = serialized->get_enum<rivet::ddl::generated::BonusType>(Bonus_type_id, rivet::ddl::generated::BonusType_values);
-		BonusDescLocTag = serialized->get_string(BonusDescLocTag_type_id);
-		InsertNumber = serialized->get_bool(InsertNumber_type_id);
-		StringLocTag = serialized->get_string(StringLocTag_type_id);
-		InsertString = serialized->get_bool(InsertString_type_id); 
+		Bonus = serialized->get_enum<rivet::ddl::generated::BonusType>(Bonus_type_id, rivet::ddl::generated::BonusType_values, rivet::ddl::generated::BonusType::None);
+		BonusDescLocTag = serialized->get_string(BonusDescLocTag_type_id, "INVALID");
+		InsertNumber = serialized->get_bool(InsertNumber_type_id, false);
+		StringLocTag = serialized->get_string(StringLocTag_type_id, "INVALID");
+		InsertString = serialized->get_bool(InsertString_type_id, false); 
 	}
 
 	[[nodiscard]] auto

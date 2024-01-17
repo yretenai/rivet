@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	WeaponClankPuzzlePrius::WeaponClankPuzzlePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): WeaponGamePrius(serialized) {
-		PuzzleVolumeType = serialized->get_enum<rivet::ddl::generated::x17b935fe>(PuzzleVolumeType_type_id, rivet::ddl::generated::x17b935fe_values);
-		AmmoPerShot = serialized->get_float(AmmoPerShot_type_id); 
+		PuzzleVolumeType = serialized->get_enum<rivet::ddl::generated::x17b935fe>(PuzzleVolumeType_type_id, rivet::ddl::generated::x17b935fe_values, rivet::ddl::generated::x17b935fe::None);
+		AmmoPerShot = serialized->get_float(AmmoPerShot_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

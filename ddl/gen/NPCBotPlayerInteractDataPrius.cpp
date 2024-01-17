@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	NPCBotPlayerInteractDataPrius::NPCBotPlayerInteractDataPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MoveForwardRadius = serialized->get_float(MoveForwardRadius_type_id);
-		CloseRadius = serialized->get_float(CloseRadius_type_id);
-		MoveAwayPadding = serialized->get_float(MoveAwayPadding_type_id);
-		MoveForwardPosition = serialized->get_uint64(MoveForwardPosition_type_id);
-		SimplePrompt = serialized->get_uint64(SimplePrompt_type_id);
-		ViewRTT = serialized->get_uint64(ViewRTT_type_id); 
+		MoveForwardRadius = serialized->get_float(MoveForwardRadius_type_id, 0.000000);
+		CloseRadius = serialized->get_float(CloseRadius_type_id, 0.000000);
+		MoveAwayPadding = serialized->get_float(MoveAwayPadding_type_id, 0.000000);
+		MoveForwardPosition = serialized->get_uint64(MoveForwardPosition_type_id, 0);
+		SimplePrompt = serialized->get_uint64(SimplePrompt_type_id, 0);
+		ViewRTT = serialized->get_uint64(ViewRTT_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

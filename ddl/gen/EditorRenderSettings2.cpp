@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	EditorRenderSettings2::EditorRenderSettings2([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DimUnselected = serialized->get_bool(DimUnselected_type_id);
-		LgcToolMode = serialized->get_enum<rivet::ddl::generated::LgcToolModes>(LgcToolMode_type_id, rivet::ddl::generated::LgcToolModes_values);
-		HighQualityLgCapture = serialized->get_bool(HighQualityLgCapture_type_id);
-		LgcBounceCount = serialized->get_int32(LgcBounceCount_type_id);
-		ShowSelectionAABB = serialized->get_bool(ShowSelectionAABB_type_id); 
+		DimUnselected = serialized->get_bool(DimUnselected_type_id, false);
+		LgcToolMode = serialized->get_enum<rivet::ddl::generated::LgcToolModes>(LgcToolMode_type_id, rivet::ddl::generated::LgcToolModes_values, rivet::ddl::generated::LgcToolModes::LGC_2);
+		HighQualityLgCapture = serialized->get_bool(HighQualityLgCapture_type_id, false);
+		LgcBounceCount = serialized->get_int32(LgcBounceCount_type_id, 1);
+		ShowSelectionAABB = serialized->get_bool(ShowSelectionAABB_type_id, false); 
 	}
 
 	[[nodiscard]] auto

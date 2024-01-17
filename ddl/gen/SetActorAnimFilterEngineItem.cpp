@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	SetActorAnimFilterEngineItem::SetActorAnimFilterEngineItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		FilterGroup = serialized->get_string(FilterGroup_type_id);
-		FilterId = serialized->get_string(FilterId_type_id); 
+		FilterGroup = serialized->get_string(FilterGroup_type_id, {});
+		FilterId = serialized->get_string(FilterId_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

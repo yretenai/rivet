@@ -34,7 +34,7 @@ namespace rivet::ddl::generated {
 	NodalShotEffectNodeBaseDef::NodalShotEffectNodeBaseDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): NodeBaseDef(serialized) {
 		Input = serialized->unwrap_into_many<rivet::ddl::generated::InputPlugSignal>(Input_type_id);
 		Output = serialized->unwrap_into<rivet::ddl::generated::OutputPlugSignal>(Output_type_id);
-		EffectName = serialized->get_string(EffectName_type_id); 
+		EffectName = serialized->get_string(EffectName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

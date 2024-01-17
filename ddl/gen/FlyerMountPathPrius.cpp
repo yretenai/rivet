@@ -7,13 +7,13 @@
 
 namespace rivet::ddl::generated {
 	FlyerMountPathPrius::FlyerMountPathPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		HorizontalExtent = serialized->get_float(HorizontalExtent_type_id);
-		VerticalExtent = serialized->get_float(VerticalExtent_type_id);
-		CameraMaxHorizontalOffset = serialized->get_float(CameraMaxHorizontalOffset_type_id);
-		CameraForwardOffset = serialized->get_float(CameraForwardOffset_type_id);
-		CameraPivotHeight = serialized->get_float(CameraPivotHeight_type_id);
-		CameraPitch = serialized->get_float(CameraPitch_type_id);
-		CameraFOV = serialized->get_float(CameraFOV_type_id); 
+		HorizontalExtent = serialized->get_float(HorizontalExtent_type_id, 10.000000);
+		VerticalExtent = serialized->get_float(VerticalExtent_type_id, 5.000000);
+		CameraMaxHorizontalOffset = serialized->get_float(CameraMaxHorizontalOffset_type_id, 2.000000);
+		CameraForwardOffset = serialized->get_float(CameraForwardOffset_type_id, -12.000000);
+		CameraPivotHeight = serialized->get_float(CameraPivotHeight_type_id, 4.000000);
+		CameraPitch = serialized->get_float(CameraPitch_type_id, 0.000000);
+		CameraFOV = serialized->get_float(CameraFOV_type_id, 82.000000); 
 	}
 
 	[[nodiscard]] auto

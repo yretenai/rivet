@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	ScriptActionInputPlug::ScriptActionInputPlug([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		PlugName = serialized->get_string(PlugName_type_id);
-		TargetId = serialized->get_uint64(TargetId_type_id);
-		TargetPlugName = serialized->get_string(TargetPlugName_type_id); 
+		PlugName = serialized->get_string(PlugName_type_id, {});
+		TargetId = serialized->get_uint64(TargetId_type_id, 0);
+		TargetPlugName = serialized->get_string(TargetPlugName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

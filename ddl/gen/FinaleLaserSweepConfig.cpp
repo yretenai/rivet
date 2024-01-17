@@ -9,15 +9,15 @@
 
 namespace rivet::ddl::generated {
 	FinaleLaserSweepConfig::FinaleLaserSweepConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		WeaponActorVol = serialized->get_uint64(WeaponActorVol_type_id);
-		CurveActor = serialized->get_uint64(CurveActor_type_id);
-		GroundBlastTriggerVolume = serialized->get_uint64(GroundBlastTriggerVolume_type_id);
+		WeaponActorVol = serialized->get_uint64(WeaponActorVol_type_id, 0);
+		CurveActor = serialized->get_uint64(CurveActor_type_id, 0);
+		GroundBlastTriggerVolume = serialized->get_uint64(GroundBlastTriggerVolume_type_id, 0);
 		CurveList = serialized->unwrap_into_many<rivet::ddl::generated::FinaleLaserCurve>(CurveList_type_id);
-		DelayTime = serialized->get_float(DelayTime_type_id);
-		InitialSpeed = serialized->get_float(InitialSpeed_type_id);
-		GroundBlastAccel = serialized->get_float(GroundBlastAccel_type_id);
-		GroundBlastMaxSpeed = serialized->get_float(GroundBlastMaxSpeed_type_id);
-		GroundBlastRadius = serialized->get_float(GroundBlastRadius_type_id); 
+		DelayTime = serialized->get_float(DelayTime_type_id, 0.000000);
+		InitialSpeed = serialized->get_float(InitialSpeed_type_id, 10.000000);
+		GroundBlastAccel = serialized->get_float(GroundBlastAccel_type_id, 20.000000);
+		GroundBlastMaxSpeed = serialized->get_float(GroundBlastMaxSpeed_type_id, 20.000000);
+		GroundBlastRadius = serialized->get_float(GroundBlastRadius_type_id, 4.000000); 
 	}
 
 	[[nodiscard]] auto

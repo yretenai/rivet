@@ -11,7 +11,7 @@
 namespace rivet::ddl::generated {
 	WeaponGridConfig::WeaponGridConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
 		Layers = serialized->unwrap_into_many<rivet::ddl::generated::GridLayerData>(Layers_type_id);
-		TransformScale = serialized->get_float(TransformScale_type_id);
+		TransformScale = serialized->get_float(TransformScale_type_id, 1.000000);
 		TransformOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(TransformOffset_type_id); 
 	}
 

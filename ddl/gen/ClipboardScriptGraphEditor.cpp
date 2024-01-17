@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	ClipboardScriptGraphEditor::ClipboardScriptGraphEditor([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		compatibility = serialized->get_string(compatibility_type_id);
+		compatibility = serialized->get_string(compatibility_type_id, {});
 		copyObject = serialized->unwrap_into<rivet::ddl::generated::ClipboardScriptGraphCopyObject>(copyObject_type_id); 
 	}
 

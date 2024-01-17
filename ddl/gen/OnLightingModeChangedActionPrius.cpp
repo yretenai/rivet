@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	OnLightingModeChangedActionPrius::OnLightingModeChangedActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		StartActive = serialized->get_bool(StartActive_type_id);
-		TriggerOnRegionLoad = serialized->get_bool(TriggerOnRegionLoad_type_id);
-		MaxTimesToFire = serialized->get_int32(MaxTimesToFire_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Loading);
+		StartActive = serialized->get_bool(StartActive_type_id, true);
+		TriggerOnRegionLoad = serialized->get_bool(TriggerOnRegionLoad_type_id, true);
+		MaxTimesToFire = serialized->get_int32(MaxTimesToFire_type_id, -1); 
 	}
 
 	[[nodiscard]] auto

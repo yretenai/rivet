@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	NavPositionTrackerPrius::NavPositionTrackerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		TrackedPositions = serialized->get_bitset<rivet::ddl::generated::x68643947>(TrackedPositions_type_id, rivet::ddl::generated::x68643947_values); 
+		TrackedPositions = serialized->get_bitset<rivet::ddl::generated::x68643947>(TrackedPositions_type_id, rivet::ddl::generated::x68643947_values, 0); 
 	}
 
 	[[nodiscard]] auto

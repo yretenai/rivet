@@ -7,19 +7,19 @@
 
 namespace rivet::ddl::generated {
 	SpaceshipHeroFlightConfig::SpaceshipHeroFlightConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		HitCollDmgPercent = serialized->get_float(HitCollDmgPercent_type_id);
-		HitCollDmgMinAmount = serialized->get_float(HitCollDmgMinAmount_type_id);
-		TargetingRange = serialized->get_float(TargetingRange_type_id);
-		DefaultMovementSpeed = serialized->get_float(DefaultMovementSpeed_type_id);
-		FiringMovmentSpeed = serialized->get_float(FiringMovmentSpeed_type_id);
-		ThrustMovementSpeed = serialized->get_float(ThrustMovementSpeed_type_id);
-		AllowBulletsWhenThrusting = serialized->get_bool(AllowBulletsWhenThrusting_type_id);
-		AllowNonDirRoll = serialized->get_bool(AllowNonDirRoll_type_id);
-		CamDefaultFOV = serialized->get_float(CamDefaultFOV_type_id);
-		CamDefaultFollowHeight = serialized->get_float(CamDefaultFollowHeight_type_id);
-		CamDefaultFollowDist = serialized->get_float(CamDefaultFollowDist_type_id);
-		CamDefaultTargetRelYOffset = serialized->get_float(CamDefaultTargetRelYOffset_type_id);
-		CamDefaultBasePitchOffset = serialized->get_float(CamDefaultBasePitchOffset_type_id); 
+		HitCollDmgPercent = serialized->get_float(HitCollDmgPercent_type_id, 0.100000);
+		HitCollDmgMinAmount = serialized->get_float(HitCollDmgMinAmount_type_id, 1.000000);
+		TargetingRange = serialized->get_float(TargetingRange_type_id, 200.000000);
+		DefaultMovementSpeed = serialized->get_float(DefaultMovementSpeed_type_id, 20.000000);
+		FiringMovmentSpeed = serialized->get_float(FiringMovmentSpeed_type_id, 15.000000);
+		ThrustMovementSpeed = serialized->get_float(ThrustMovementSpeed_type_id, 50.000000);
+		AllowBulletsWhenThrusting = serialized->get_bool(AllowBulletsWhenThrusting_type_id, false);
+		AllowNonDirRoll = serialized->get_bool(AllowNonDirRoll_type_id, false);
+		CamDefaultFOV = serialized->get_float(CamDefaultFOV_type_id, 80.389999);
+		CamDefaultFollowHeight = serialized->get_float(CamDefaultFollowHeight_type_id, 6.250000);
+		CamDefaultFollowDist = serialized->get_float(CamDefaultFollowDist_type_id, -18.500000);
+		CamDefaultTargetRelYOffset = serialized->get_float(CamDefaultTargetRelYOffset_type_id, -1.000000);
+		CamDefaultBasePitchOffset = serialized->get_float(CamDefaultBasePitchOffset_type_id, 4.050000); 
 	}
 
 	[[nodiscard]] auto

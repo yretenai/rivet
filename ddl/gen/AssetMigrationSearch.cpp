@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	AssetMigrationSearch::AssetMigrationSearch([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		FileCriteria = serialized->get_string(FileCriteria_type_id);
-		CreatedBy = serialized->get_string(CreatedBy_type_id);
+		FileCriteria = serialized->get_string(FileCriteria_type_id, {});
+		CreatedBy = serialized->get_string(CreatedBy_type_id, {});
 		Suffixes = serialized->get_strings(Suffixes_type_id);
 		Branches = serialized->get_strings(Branches_type_id);
-		UsePath = serialized->get_bool(UsePath_type_id);
-		Limit = serialized->get_int32(Limit_type_id); 
+		UsePath = serialized->get_bool(UsePath_type_id, false);
+		Limit = serialized->get_int32(Limit_type_id, 1000); 
 	}
 
 	[[nodiscard]] auto

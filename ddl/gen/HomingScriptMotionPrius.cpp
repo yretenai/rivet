@@ -7,22 +7,22 @@
 
 namespace rivet::ddl::generated {
 	HomingScriptMotionPrius::HomingScriptMotionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ScriptMotionBasePrius(serialized) {
-		InitialSpeed = serialized->get_float(InitialSpeed_type_id);
-		FlightSpeed = serialized->get_float(FlightSpeed_type_id);
-		FlightAcceleration = serialized->get_float(FlightAcceleration_type_id);
-		HomingSpeed = serialized->get_float(HomingSpeed_type_id);
-		BreakoffAngle = serialized->get_float(BreakoffAngle_type_id);
-		HomingSpeedScaleFactor = serialized->get_float(HomingSpeedScaleFactor_type_id);
-		HomingSpeedScaleTimeStart = serialized->get_float(HomingSpeedScaleTimeStart_type_id);
-		HomingSpeedScaleTimeFull = serialized->get_float(HomingSpeedScaleTimeFull_type_id);
-		HomingSpeedScaleDistStart = serialized->get_float(HomingSpeedScaleDistStart_type_id);
-		HomingSpeedScaleDistFull = serialized->get_float(HomingSpeedScaleDistFull_type_id);
-		InitialArcPitchMin = serialized->get_float(InitialArcPitchMin_type_id);
-		InitialArcPitchMax = serialized->get_float(InitialArcPitchMax_type_id);
-		InitialArcYawMin = serialized->get_float(InitialArcYawMin_type_id);
-		InitialArcYawMax = serialized->get_float(InitialArcYawMax_type_id);
-		ScaleHomingRange = serialized->get_bool(ScaleHomingRange_type_id);
-		StopHomingOnReachDest = serialized->get_bool(StopHomingOnReachDest_type_id); 
+		InitialSpeed = serialized->get_float(InitialSpeed_type_id, 10.000000);
+		FlightSpeed = serialized->get_float(FlightSpeed_type_id, 10.000000);
+		FlightAcceleration = serialized->get_float(FlightAcceleration_type_id, 0.000000);
+		HomingSpeed = serialized->get_float(HomingSpeed_type_id, 45.000000);
+		BreakoffAngle = serialized->get_float(BreakoffAngle_type_id, 30.000000);
+		HomingSpeedScaleFactor = serialized->get_float(HomingSpeedScaleFactor_type_id, 1.000000);
+		HomingSpeedScaleTimeStart = serialized->get_float(HomingSpeedScaleTimeStart_type_id, 0.000000);
+		HomingSpeedScaleTimeFull = serialized->get_float(HomingSpeedScaleTimeFull_type_id, -1.000000);
+		HomingSpeedScaleDistStart = serialized->get_float(HomingSpeedScaleDistStart_type_id, 0.000000);
+		HomingSpeedScaleDistFull = serialized->get_float(HomingSpeedScaleDistFull_type_id, -1.000000);
+		InitialArcPitchMin = serialized->get_float(InitialArcPitchMin_type_id, 0.000000);
+		InitialArcPitchMax = serialized->get_float(InitialArcPitchMax_type_id, 0.000000);
+		InitialArcYawMin = serialized->get_float(InitialArcYawMin_type_id, 0.000000);
+		InitialArcYawMax = serialized->get_float(InitialArcYawMax_type_id, 0.000000);
+		ScaleHomingRange = serialized->get_bool(ScaleHomingRange_type_id, false);
+		StopHomingOnReachDest = serialized->get_bool(StopHomingOnReachDest_type_id, true); 
 	}
 
 	[[nodiscard]] auto

@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	PrefabRenderFlags::PrefabRenderFlags([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Hibernate = serialized->get_bool(Hibernate_type_id); 
+		Hibernate = serialized->get_bool(Hibernate_type_id, false); 
 	}
 
 	[[nodiscard]] auto

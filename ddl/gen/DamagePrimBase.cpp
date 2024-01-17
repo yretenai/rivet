@@ -13,7 +13,7 @@
 
 namespace rivet::ddl::generated {
 	DamagePrimBase::DamagePrimBase([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DamageLocator = serialized->get_string(DamageLocator_type_id);
+		DamageLocator = serialized->get_string(DamageLocator_type_id, {});
 		LocalOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(LocalOffset_type_id); 
 	}
 

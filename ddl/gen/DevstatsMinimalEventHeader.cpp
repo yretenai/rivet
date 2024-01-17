@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	DevstatsMinimalEventHeader::DevstatsMinimalEventHeader([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		user_id = serialized->get_string(user_id_type_id);
-		session_id = serialized->get_string(session_id_type_id);
-		title_id = serialized->get_string(title_id_type_id);
-		client_timestamp = serialized->get_uint64(client_timestamp_type_id); 
+		user_id = serialized->get_string(user_id_type_id, {});
+		session_id = serialized->get_string(session_id_type_id, {});
+		title_id = serialized->get_string(title_id_type_id, {});
+		client_timestamp = serialized->get_uint64(client_timestamp_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

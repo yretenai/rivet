@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	InteractLocationAreaPrius::InteractLocationAreaPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): InteractLocationPrius(serialized) {
-		AreaShape = serialized->get_enum<rivet::ddl::generated::xb7a407a9>(AreaShape_type_id, rivet::ddl::generated::xb7a407a9_values); 
+		AreaShape = serialized->get_enum<rivet::ddl::generated::xb7a407a9>(AreaShape_type_id, rivet::ddl::generated::xb7a407a9_values, rivet::ddl::generated::xb7a407a9::Square); 
 	}
 
 	[[nodiscard]] auto

@@ -10,8 +10,8 @@
 namespace rivet::ddl::generated {
 	LookRandomizerPrius::LookRandomizerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		LookData = serialized->unwrap_into_many<rivet::ddl::generated::LookRandomizerLookData>(LookData_type_id);
-		MinLooks = serialized->get_int32(MinLooks_type_id);
-		MaxLooks = serialized->get_int32(MaxLooks_type_id); 
+		MinLooks = serialized->get_int32(MinLooks_type_id, 0);
+		MaxLooks = serialized->get_int32(MaxLooks_type_id, -1); 
 	}
 
 	[[nodiscard]] auto

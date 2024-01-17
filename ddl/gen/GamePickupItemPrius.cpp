@@ -24,10 +24,10 @@
 
 namespace rivet::ddl::generated {
 	GamePickupItemPrius::GamePickupItemPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): PickupItemPrius(serialized) {
-		CameraActor = serialized->get_uint64(CameraActor_type_id);
-		OptSceneLocVol = serialized->get_uint64(OptSceneLocVol_type_id);
+		CameraActor = serialized->get_uint64(CameraActor_type_id, 0);
+		OptSceneLocVol = serialized->get_uint64(OptSceneLocVol_type_id, 0);
 		PickupAnimOverrides = serialized->unwrap_into_many<rivet::ddl::generated::HeroPickupAnimOverrideData>(PickupAnimOverrides_type_id);
-		Boots = serialized->get_enum<rivet::ddl::generated::x28fee0a4>(Boots_type_id, rivet::ddl::generated::x28fee0a4_values); 
+		Boots = serialized->get_enum<rivet::ddl::generated::x28fee0a4>(Boots_type_id, rivet::ddl::generated::x28fee0a4_values, rivet::ddl::generated::x28fee0a4::Default); 
 	}
 
 	[[nodiscard]] auto

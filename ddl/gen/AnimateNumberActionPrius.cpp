@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	AnimateNumberActionPrius::AnimateNumberActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		ForceIntegerValues = serialized->get_bool(ForceIntegerValues_type_id);
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Math);
+		ForceIntegerValues = serialized->get_bool(ForceIntegerValues_type_id, false);
 		Steps = serialized->unwrap_into_many<rivet::ddl::generated::AnimatedNumberStep>(Steps_type_id); 
 	}
 

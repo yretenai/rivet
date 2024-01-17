@@ -15,7 +15,7 @@
 
 namespace rivet::ddl::generated {
 	ZoneSessionData::ZoneSessionData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		CurrentSelection = serialized->get_enum<rivet::ddl::generated::x2eab60c7>(CurrentSelection_type_id, rivet::ddl::generated::x2eab60c7_values);
+		CurrentSelection = serialized->get_enum<rivet::ddl::generated::x2eab60c7>(CurrentSelection_type_id, rivet::ddl::generated::x2eab60c7_values, rivet::ddl::generated::x2eab60c7::SceneNode);
 		Selection3D = serialized->unwrap_into<rivet::ddl::generated::SelectionData3D>(Selection3D_type_id);
 		SelectionActorGroups = serialized->unwrap_into<rivet::ddl::generated::SelectionDataActorGroups>(SelectionActorGroups_type_id);
 		SelectionActorGroupActors = serialized->unwrap_into_many<rivet::ddl::generated::SelectionDataActorGroups>(SelectionActorGroupActors_type_id);
@@ -23,7 +23,7 @@ namespace rivet::ddl::generated {
 		Hidden3D = serialized->unwrap_into<rivet::ddl::generated::HiddenData3D>(Hidden3D_type_id);
 		TargetSceneNodeStack = serialized->unwrap_into_many<rivet::ddl::generated::TargetSceneNode>(TargetSceneNodeStack_type_id);
 		Regions = serialized->unwrap_into_many<rivet::ddl::generated::RegionDefTemp>(Regions_type_id);
-		ActiveZone = serialized->get_string(ActiveZone_type_id);
+		ActiveZone = serialized->get_string(ActiveZone_type_id, {});
 		ReferenceableZones = serialized->get_strings(ReferenceableZones_type_id);
 		CameraPosition = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(CameraPosition_type_id);
 		CameraRotation = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(CameraRotation_type_id); 

@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	HoverbootHoverEffectData::HoverbootHoverEffectData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		EffectActor = serialized->get_string(EffectActor_type_id);
-		HeightAboveGroundMax = serialized->get_float(HeightAboveGroundMax_type_id);
-		FastSpeedThreshold = serialized->get_float(FastSpeedThreshold_type_id); 
+		EffectActor = serialized->get_string(EffectActor_type_id, {});
+		HeightAboveGroundMax = serialized->get_float(HeightAboveGroundMax_type_id, 1.000000);
+		FastSpeedThreshold = serialized->get_float(FastSpeedThreshold_type_id, 15.000000); 
 	}
 
 	[[nodiscard]] auto

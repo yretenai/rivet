@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	StatusEffectDamageReturnPrius::StatusEffectDamageReturnPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): StatusEffectBasePrius(serialized) {
-		IsPercent = serialized->get_bool(IsPercent_type_id);
-		ReturnMelee = serialized->get_bool(ReturnMelee_type_id);
-		ReturnRanged = serialized->get_bool(ReturnRanged_type_id); 
+		IsPercent = serialized->get_bool(IsPercent_type_id, true);
+		ReturnMelee = serialized->get_bool(ReturnMelee_type_id, true);
+		ReturnRanged = serialized->get_bool(ReturnRanged_type_id, false); 
 	}
 
 	[[nodiscard]] auto

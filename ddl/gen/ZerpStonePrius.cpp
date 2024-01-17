@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	ZerpStonePrius::ZerpStonePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		SaveIDs = serialized->get_int32s(SaveIDs_type_id);
-		ZerpPickupActor = serialized->get_string(ZerpPickupActor_type_id); 
+		ZerpPickupActor = serialized->get_string(ZerpPickupActor_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ShadowDimensionTraversablePrius::ShadowDimensionTraversablePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActivationType = serialized->get_enum<rivet::ddl::generated::x723e41b3>(ActivationType_type_id, rivet::ddl::generated::x723e41b3_values); 
+		ActivationType = serialized->get_enum<rivet::ddl::generated::x723e41b3>(ActivationType_type_id, rivet::ddl::generated::x723e41b3_values, rivet::ddl::generated::x723e41b3::OffWhenActive); 
 	}
 
 	[[nodiscard]] auto

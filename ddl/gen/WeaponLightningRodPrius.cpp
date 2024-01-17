@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	WeaponLightningRodPrius::WeaponLightningRodPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): WeaponGamePrius(serialized) {
-		MissAngleMin = serialized->get_float(MissAngleMin_type_id);
-		MissAngleMax = serialized->get_float(MissAngleMax_type_id);
-		SoftLockBreakAngleYaw = serialized->get_float(SoftLockBreakAngleYaw_type_id);
-		SoftLockBreakAnglePitch = serialized->get_float(SoftLockBreakAnglePitch_type_id);
-		MinChargeForFiringDelay = serialized->get_float(MinChargeForFiringDelay_type_id);
-		PostChargedShotFiringDelay = serialized->get_float(PostChargedShotFiringDelay_type_id); 
+		MissAngleMin = serialized->get_float(MissAngleMin_type_id, 5.000000);
+		MissAngleMax = serialized->get_float(MissAngleMax_type_id, 7.500000);
+		SoftLockBreakAngleYaw = serialized->get_float(SoftLockBreakAngleYaw_type_id, 11.000000);
+		SoftLockBreakAnglePitch = serialized->get_float(SoftLockBreakAnglePitch_type_id, 8.000000);
+		MinChargeForFiringDelay = serialized->get_float(MinChargeForFiringDelay_type_id, 0.400000);
+		PostChargedShotFiringDelay = serialized->get_float(PostChargedShotFiringDelay_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

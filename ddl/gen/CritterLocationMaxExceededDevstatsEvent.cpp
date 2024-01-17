@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	CritterLocationMaxExceededDevstatsEvent::CritterLocationMaxExceededDevstatsEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		EventId = serialized->get_string(EventId_type_id);
-		Level = serialized->get_string(Level_type_id);
-		LocationType = serialized->get_enum<rivet::ddl::generated::x6d501980>(LocationType_type_id, rivet::ddl::generated::x6d501980_values); 
+		EventId = serialized->get_string(EventId_type_id, {});
+		Level = serialized->get_string(Level_type_id, {});
+		LocationType = serialized->get_enum<rivet::ddl::generated::x6d501980>(LocationType_type_id, rivet::ddl::generated::x6d501980_values, rivet::ddl::generated::x6d501980::CritterLocation); 
 	}
 
 	[[nodiscard]] auto

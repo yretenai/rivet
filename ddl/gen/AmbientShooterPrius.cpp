@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	AmbientShooterPrius::AmbientShooterPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ShotSelection = serialized->get_enum<rivet::ddl::generated::x632591ba>(ShotSelection_type_id, rivet::ddl::generated::x632591ba_values);
-		OnlyFireForward = serialized->get_bool(OnlyFireForward_type_id); 
+		ShotSelection = serialized->get_enum<rivet::ddl::generated::x632591ba>(ShotSelection_type_id, rivet::ddl::generated::x632591ba_values, rivet::ddl::generated::x632591ba::CycleShots);
+		OnlyFireForward = serialized->get_bool(OnlyFireForward_type_id, true); 
 	}
 
 	[[nodiscard]] auto

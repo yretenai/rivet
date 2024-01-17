@@ -11,14 +11,14 @@ namespace rivet::ddl::generated {
 	TendrilControllerSpawnData::TendrilControllerSpawnData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ActorSpawnData(serialized) {
 		StartPos = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(StartPos_type_id);
 		BiasDir = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(BiasDir_type_id);
-		MinAngleFromBias = serialized->get_float(MinAngleFromBias_type_id);
-		MaxAngleFromBias = serialized->get_float(MaxAngleFromBias_type_id);
-		DamagePerTendril = serialized->get_float(DamagePerTendril_type_id);
-		TargetingRadius = serialized->get_float(TargetingRadius_type_id);
-		DamageRequestFlags = serialized->get_uint32(DamageRequestFlags_type_id);
-		Owner = serialized->get_uint32(Owner_type_id);
-		RandSeed = serialized->get_uint32(RandSeed_type_id);
-		TendrilCount = serialized->get_uint8(TendrilCount_type_id); 
+		MinAngleFromBias = serialized->get_float(MinAngleFromBias_type_id, 0.000000);
+		MaxAngleFromBias = serialized->get_float(MaxAngleFromBias_type_id, 0.000000);
+		DamagePerTendril = serialized->get_float(DamagePerTendril_type_id, 0.000000);
+		TargetingRadius = serialized->get_float(TargetingRadius_type_id, 0.000000);
+		DamageRequestFlags = serialized->get_uint32(DamageRequestFlags_type_id, 0);
+		Owner = serialized->get_uint32(Owner_type_id, 0);
+		RandSeed = serialized->get_uint32(RandSeed_type_id, 0);
+		TendrilCount = serialized->get_uint8(TendrilCount_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

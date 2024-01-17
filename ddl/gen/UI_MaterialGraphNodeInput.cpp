@@ -12,10 +12,10 @@
 namespace rivet::ddl::generated {
 	UI_MaterialGraphNodeInput::UI_MaterialGraphNodeInput([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Input = serialized->unwrap_into<rivet::ddl::generated::MaterialNodeInputPort>(Input_type_id);
-		IsConnected = serialized->get_bool(IsConnected_type_id);
+		IsConnected = serialized->get_bool(IsConnected_type_id, false);
 		PortUI = serialized->unwrap_into<rivet::ddl::generated::MaterialNodePortUI>(PortUI_type_id);
 		UserInput = serialized->unwrap_into<rivet::ddl::generated::MaterialNodeUserInput>(UserInput_type_id);
-		InternalSortOrder = serialized->get_int32(InternalSortOrder_type_id); 
+		InternalSortOrder = serialized->get_int32(InternalSortOrder_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

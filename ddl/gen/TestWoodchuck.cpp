@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	TestWoodchuck::TestWoodchuck([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Name = serialized->get_string(Name_type_id);
-		CanChuckWood = serialized->get_bool(CanChuckWood_type_id);
-		AmountOfWoodToChuck = serialized->get_int32(AmountOfWoodToChuck_type_id); 
+		Name = serialized->get_string(Name_type_id, {});
+		CanChuckWood = serialized->get_bool(CanChuckWood_type_id, false);
+		AmountOfWoodToChuck = serialized->get_int32(AmountOfWoodToChuck_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

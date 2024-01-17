@@ -10,11 +10,11 @@
 namespace rivet::ddl::generated {
 	AccessibilityOption::AccessibilityOption([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Type = serialized->unwrap_into<rivet::ddl::generated::AccessibilityOptionTypeBase>(Type_type_id);
-		ID = serialized->get_enum<rivet::ddl::generated::x847316cf>(ID_type_id, rivet::ddl::generated::x847316cf_values);
-		Name = serialized->get_string(Name_type_id);
-		ButtonCombo = serialized->get_string(ButtonCombo_type_id);
-		Description = serialized->get_string(Description_type_id);
-		Icon = serialized->get_string(Icon_type_id); 
+		ID = serialized->get_enum<rivet::ddl::generated::x847316cf>(ID_type_id, rivet::ddl::generated::x847316cf_values, rivet::ddl::generated::x847316cf::None);
+		Name = serialized->get_string(Name_type_id, {});
+		ButtonCombo = serialized->get_string(ButtonCombo_type_id, {});
+		Description = serialized->get_string(Description_type_id, {});
+		Icon = serialized->get_string(Icon_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

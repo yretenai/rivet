@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ToggleEvent::ToggleEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		ToggleType = serialized->get_enum<rivet::ddl::generated::ToggleType>(ToggleType_type_id, rivet::ddl::generated::ToggleType_values); 
+		ToggleType = serialized->get_enum<rivet::ddl::generated::ToggleType>(ToggleType_type_id, rivet::ddl::generated::ToggleType_values, rivet::ddl::generated::ToggleType::TurnOn); 
 	}
 
 	[[nodiscard]] auto

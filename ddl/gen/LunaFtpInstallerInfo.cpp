@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	LunaFtpInstallerInfo::LunaFtpInstallerInfo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		FileName = serialized->get_string(FileName_type_id);
-		FileSize = serialized->get_uint64(FileSize_type_id);
-		VersionMajor = serialized->get_int32(VersionMajor_type_id);
-		VersionMinor = serialized->get_int32(VersionMinor_type_id);
-		VersionPatch = serialized->get_int32(VersionPatch_type_id);
-		CompatabilityVersion = serialized->get_string(CompatabilityVersion_type_id); 
+		FileName = serialized->get_string(FileName_type_id, "");
+		FileSize = serialized->get_uint64(FileSize_type_id, 0);
+		VersionMajor = serialized->get_int32(VersionMajor_type_id, 0);
+		VersionMinor = serialized->get_int32(VersionMinor_type_id, 0);
+		VersionPatch = serialized->get_int32(VersionPatch_type_id, 0);
+		CompatabilityVersion = serialized->get_string(CompatabilityVersion_type_id, ""); 
 	}
 
 	[[nodiscard]] auto

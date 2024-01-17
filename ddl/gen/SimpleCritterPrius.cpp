@@ -9,24 +9,24 @@
 
 namespace rivet::ddl::generated {
 	SimpleCritterPrius::SimpleCritterPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MinSpeed = serialized->get_float(MinSpeed_type_id);
-		MaxSpeed = serialized->get_float(MaxSpeed_type_id);
-		Accel = serialized->get_float(Accel_type_id);
-		Decel = serialized->get_float(Decel_type_id);
-		TurnSpeed = serialized->get_float(TurnSpeed_type_id);
-		MinTurnAngle = serialized->get_float(MinTurnAngle_type_id);
-		MinIdleTime = serialized->get_float(MinIdleTime_type_id);
-		MaxIdleTime = serialized->get_float(MaxIdleTime_type_id);
-		MaxSurvivableFallDistance = serialized->get_float(MaxSurvivableFallDistance_type_id);
-		PanicFeelerForwardOffset = serialized->get_float(PanicFeelerForwardOffset_type_id);
-		PanicFeelerStartUpOffset = serialized->get_float(PanicFeelerStartUpOffset_type_id);
-		PanicFeelerSideOffset = serialized->get_float(PanicFeelerSideOffset_type_id);
-		PanicMaxSurfaceAngle = serialized->get_float(PanicMaxSurfaceAngle_type_id);
-		MinPanicMoveSpeedForAnim = serialized->get_float(MinPanicMoveSpeedForAnim_type_id);
-		IdleAnim = serialized->get_string(IdleAnim_type_id);
-		MoveAnim = serialized->get_string(MoveAnim_type_id);
-		TurnRightAnim = serialized->get_string(TurnRightAnim_type_id);
-		TurnLeftAnim = serialized->get_string(TurnLeftAnim_type_id); 
+		MinSpeed = serialized->get_float(MinSpeed_type_id, 4.000000);
+		MaxSpeed = serialized->get_float(MaxSpeed_type_id, 8.000000);
+		Accel = serialized->get_float(Accel_type_id, 8.000000);
+		Decel = serialized->get_float(Decel_type_id, 6.000000);
+		TurnSpeed = serialized->get_float(TurnSpeed_type_id, 150.000000);
+		MinTurnAngle = serialized->get_float(MinTurnAngle_type_id, 30.000000);
+		MinIdleTime = serialized->get_float(MinIdleTime_type_id, 1.000000);
+		MaxIdleTime = serialized->get_float(MaxIdleTime_type_id, 3.000000);
+		MaxSurvivableFallDistance = serialized->get_float(MaxSurvivableFallDistance_type_id, 3.000000);
+		PanicFeelerForwardOffset = serialized->get_float(PanicFeelerForwardOffset_type_id, 3.000000);
+		PanicFeelerStartUpOffset = serialized->get_float(PanicFeelerStartUpOffset_type_id, 0.500000);
+		PanicFeelerSideOffset = serialized->get_float(PanicFeelerSideOffset_type_id, 1.500000);
+		PanicMaxSurfaceAngle = serialized->get_float(PanicMaxSurfaceAngle_type_id, 30.000000);
+		MinPanicMoveSpeedForAnim = serialized->get_float(MinPanicMoveSpeedForAnim_type_id, 0.250000);
+		IdleAnim = serialized->get_string(IdleAnim_type_id, {});
+		MoveAnim = serialized->get_string(MoveAnim_type_id, {});
+		TurnRightAnim = serialized->get_string(TurnRightAnim_type_id, {});
+		TurnLeftAnim = serialized->get_string(TurnLeftAnim_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	AnimClueGamePrius::AnimClueGamePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DelayAfterUse = serialized->get_float(DelayAfterUse_type_id);
-		SkipAlertAnim = serialized->get_bool(SkipAlertAnim_type_id);
-		RandomStart = serialized->get_bool(RandomStart_type_id); 
+		DelayAfterUse = serialized->get_float(DelayAfterUse_type_id, 0.000000);
+		SkipAlertAnim = serialized->get_bool(SkipAlertAnim_type_id, false);
+		RandomStart = serialized->get_bool(RandomStart_type_id, false); 
 	}
 
 	[[nodiscard]] auto

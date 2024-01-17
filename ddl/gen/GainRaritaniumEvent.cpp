@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	GainRaritaniumEvent::GainRaritaniumEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		EventId = serialized->get_string(EventId_type_id);
-		NewRaritanium = serialized->get_float(NewRaritanium_type_id);
-		TotalRaritanium = serialized->get_float(TotalRaritanium_type_id); 
+		EventId = serialized->get_string(EventId_type_id, {});
+		NewRaritanium = serialized->get_float(NewRaritanium_type_id, 0.000000);
+		TotalRaritanium = serialized->get_float(TotalRaritanium_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

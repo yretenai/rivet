@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	ClankPuzzleTimeData::ClankPuzzleTimeData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		FadeInTime = serialized->get_float(FadeInTime_type_id);
-		FadeOutTime = serialized->get_float(FadeOutTime_type_id);
-		HoldTime = serialized->get_float(HoldTime_type_id); 
+		FadeInTime = serialized->get_float(FadeInTime_type_id, 0.000000);
+		FadeOutTime = serialized->get_float(FadeOutTime_type_id, 1.000000);
+		HoldTime = serialized->get_float(HoldTime_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

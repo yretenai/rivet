@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	UI_VisualEffectKeyFrameProperty2::UI_VisualEffectKeyFrameProperty2([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		RangeStyle = serialized->get_enum<rivet::ddl::generated::RangeStyle>(RangeStyle_type_id, rivet::ddl::generated::RangeStyle_values);
-		X = serialized->get_float(X_type_id);
+		RangeStyle = serialized->get_enum<rivet::ddl::generated::RangeStyle>(RangeStyle_type_id, rivet::ddl::generated::RangeStyle_values, rivet::ddl::generated::RangeStyle::Random);
+		X = serialized->get_float(X_type_id, 0.000000);
 		Y = serialized->unwrap_into<rivet::ddl::generated::UI_VisualEffectKeyFrameYValues2>(Y_type_id); 
 	}
 

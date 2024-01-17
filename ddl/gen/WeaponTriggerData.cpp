@@ -7,18 +7,18 @@
 
 namespace rivet::ddl::generated {
 	WeaponTriggerData::WeaponTriggerData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Button = serialized->get_enum<rivet::ddl::generated::x58d054ed>(Button_type_id, rivet::ddl::generated::x58d054ed_values);
-		TriggerType = serialized->get_enum<rivet::ddl::generated::xaab5853c>(TriggerType_type_id, rivet::ddl::generated::xaab5853c_values);
-		ResponseType = serialized->get_enum<rivet::ddl::generated::xbcfeb3f2>(ResponseType_type_id, rivet::ddl::generated::xbcfeb3f2_values);
-		TriggerFlags = serialized->get_bitset<rivet::ddl::generated::xa80df7b6>(TriggerFlags_type_id, rivet::ddl::generated::xa80df7b6_values);
-		EmitterIndex = serialized->get_enum<rivet::ddl::generated::x77a4e9ba>(EmitterIndex_type_id, rivet::ddl::generated::x77a4e9ba_values);
-		AmmoIndex = serialized->get_enum<rivet::ddl::generated::xa80b028a>(AmmoIndex_type_id, rivet::ddl::generated::xa80b028a_values);
-		ShotIndex = serialized->get_enum<rivet::ddl::generated::x63d1a5d5>(ShotIndex_type_id, rivet::ddl::generated::x63d1a5d5_values);
-		AccuracyIndex = serialized->get_enum<rivet::ddl::generated::x4dd7659a>(AccuracyIndex_type_id, rivet::ddl::generated::x4dd7659a_values);
-		UserStateIndex = serialized->get_enum<rivet::ddl::generated::xa26ce77>(UserStateIndex_type_id, rivet::ddl::generated::xa26ce77_values);
-		FireSoundRange = serialized->get_float(FireSoundRange_type_id);
-		RoundsPerSecond = serialized->get_float(RoundsPerSecond_type_id);
-		FireAnimName = serialized->get_string(FireAnimName_type_id); 
+		Button = serialized->get_enum<rivet::ddl::generated::x58d054ed>(Button_type_id, rivet::ddl::generated::x58d054ed_values, rivet::ddl::generated::x58d054ed::InputFire);
+		TriggerType = serialized->get_enum<rivet::ddl::generated::xaab5853c>(TriggerType_type_id, rivet::ddl::generated::xaab5853c_values, rivet::ddl::generated::xaab5853c::None);
+		ResponseType = serialized->get_enum<rivet::ddl::generated::xbcfeb3f2>(ResponseType_type_id, rivet::ddl::generated::xbcfeb3f2_values, rivet::ddl::generated::xbcfeb3f2::Fire);
+		TriggerFlags = serialized->get_bitset<rivet::ddl::generated::xa80df7b6>(TriggerFlags_type_id, rivet::ddl::generated::xa80df7b6_values, 0);
+		EmitterIndex = serialized->get_enum<rivet::ddl::generated::x77a4e9ba>(EmitterIndex_type_id, rivet::ddl::generated::x77a4e9ba_values, rivet::ddl::generated::x77a4e9ba::None);
+		AmmoIndex = serialized->get_enum<rivet::ddl::generated::xa80b028a>(AmmoIndex_type_id, rivet::ddl::generated::xa80b028a_values, rivet::ddl::generated::xa80b028a::None);
+		ShotIndex = serialized->get_enum<rivet::ddl::generated::x63d1a5d5>(ShotIndex_type_id, rivet::ddl::generated::x63d1a5d5_values, rivet::ddl::generated::x63d1a5d5::None);
+		AccuracyIndex = serialized->get_enum<rivet::ddl::generated::x4dd7659a>(AccuracyIndex_type_id, rivet::ddl::generated::x4dd7659a_values, rivet::ddl::generated::x4dd7659a::None);
+		UserStateIndex = serialized->get_enum<rivet::ddl::generated::xa26ce77>(UserStateIndex_type_id, rivet::ddl::generated::xa26ce77_values, rivet::ddl::generated::xa26ce77::None);
+		FireSoundRange = serialized->get_float(FireSoundRange_type_id, 10.000000);
+		RoundsPerSecond = serialized->get_float(RoundsPerSecond_type_id, 1.000000);
+		FireAnimName = serialized->get_string(FireAnimName_type_id, ""); 
 	}
 
 	[[nodiscard]] auto

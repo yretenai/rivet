@@ -23,16 +23,16 @@
 namespace rivet::ddl::generated {
 	ShotMotionBasePrius::ShotMotionBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Orientation = serialized->unwrap_into<rivet::ddl::generated::OrientationMode>(Orientation_type_id);
-		Range = serialized->get_float(Range_type_id);
+		Range = serialized->get_float(Range_type_id, 60.000000);
 		Falloff = serialized->unwrap_into<rivet::ddl::generated::FalloffData>(Falloff_type_id);
 		OffsetMode = serialized->unwrap_into<rivet::ddl::generated::OffsetReductionMode>(OffsetMode_type_id);
-		RespondToProjectiles = serialized->get_bool(RespondToProjectiles_type_id);
-		IgnoreDeadBots = serialized->get_bool(IgnoreDeadBots_type_id);
-		SendSyncMotionEvents = serialized->get_bool(SendSyncMotionEvents_type_id);
-		HitMoveCollision = serialized->get_bool(HitMoveCollision_type_id);
-		HitWaterCollision = serialized->get_bool(HitWaterCollision_type_id);
-		HitThrowables = serialized->get_bool(HitThrowables_type_id);
-		HitCharacterMove = serialized->get_bool(HitCharacterMove_type_id); 
+		RespondToProjectiles = serialized->get_bool(RespondToProjectiles_type_id, false);
+		IgnoreDeadBots = serialized->get_bool(IgnoreDeadBots_type_id, false);
+		SendSyncMotionEvents = serialized->get_bool(SendSyncMotionEvents_type_id, false);
+		HitMoveCollision = serialized->get_bool(HitMoveCollision_type_id, false);
+		HitWaterCollision = serialized->get_bool(HitWaterCollision_type_id, false);
+		HitThrowables = serialized->get_bool(HitThrowables_type_id, true);
+		HitCharacterMove = serialized->get_bool(HitCharacterMove_type_id, true); 
 	}
 
 	[[nodiscard]] auto

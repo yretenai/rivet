@@ -10,8 +10,8 @@
 
 namespace rivet::ddl::generated {
 	RegionAuxOverlay::RegionAuxOverlay([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		OverlayFolderId = serialized->get_uint64(OverlayFolderId_type_id);
-		OverlayType = serialized->get_string(OverlayType_type_id);
+		OverlayFolderId = serialized->get_uint64(OverlayFolderId_type_id, 0);
+		OverlayType = serialized->get_string(OverlayType_type_id, {});
 		ShadowingZones = serialized->unwrap_into_many<rivet::ddl::generated::RegionShadowingZone>(ShadowingZones_type_id);
 		NamedLinks = serialized->unwrap_into_many<rivet::ddl::generated::RegionNamedLink>(NamedLinks_type_id);
 		NamedLinkRegions = serialized->get_strings(NamedLinkRegions_type_id); 

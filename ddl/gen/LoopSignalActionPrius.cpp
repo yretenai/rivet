@@ -7,14 +7,14 @@
 
 namespace rivet::ddl::generated {
 	LoopSignalActionPrius::LoopSignalActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		LoopDelay = serialized->get_float(LoopDelay_type_id);
-		LoopCount = serialized->get_int32(LoopCount_type_id);
-		DoFirstLoopOnStart = serialized->get_bool(DoFirstLoopOnStart_type_id);
-		UseMinFrameDelay = serialized->get_bool(UseMinFrameDelay_type_id);
-		ResetLoopCountOnRestart = serialized->get_bool(ResetLoopCountOnRestart_type_id);
-		OutputLoopCountBeforeLoop = serialized->get_bool(OutputLoopCountBeforeLoop_type_id);
-		PollVarsContinuously = serialized->get_bool(PollVarsContinuously_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Logic);
+		LoopDelay = serialized->get_float(LoopDelay_type_id, 0.250000);
+		LoopCount = serialized->get_int32(LoopCount_type_id, -1);
+		DoFirstLoopOnStart = serialized->get_bool(DoFirstLoopOnStart_type_id, true);
+		UseMinFrameDelay = serialized->get_bool(UseMinFrameDelay_type_id, true);
+		ResetLoopCountOnRestart = serialized->get_bool(ResetLoopCountOnRestart_type_id, true);
+		OutputLoopCountBeforeLoop = serialized->get_bool(OutputLoopCountBeforeLoop_type_id, false);
+		PollVarsContinuously = serialized->get_bool(PollVarsContinuously_type_id, false); 
 	}
 
 	[[nodiscard]] auto

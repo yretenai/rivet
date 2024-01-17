@@ -7,15 +7,15 @@
 
 namespace rivet::ddl::generated {
 	UXAnalyticsSettings::UXAnalyticsSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Enabled = serialized->get_bool(Enabled_type_id);
-		TitleName = serialized->get_string(TitleName_type_id);
-		IssuerId = serialized->get_string(IssuerId_type_id);
-		AppId = serialized->get_string(AppId_type_id);
-		ApiKey = serialized->get_string(ApiKey_type_id);
-		SecretKey = serialized->get_string(SecretKey_type_id);
-		ServerName = serialized->get_string(ServerName_type_id);
-		ConfigServerName = serialized->get_string(ConfigServerName_type_id);
-		DebugEventMode = serialized->get_enum<rivet::ddl::generated::x9c7f04c6>(DebugEventMode_type_id, rivet::ddl::generated::x9c7f04c6_values); 
+		Enabled = serialized->get_bool(Enabled_type_id, false);
+		TitleName = serialized->get_string(TitleName_type_id, {});
+		IssuerId = serialized->get_string(IssuerId_type_id, {});
+		AppId = serialized->get_string(AppId_type_id, {});
+		ApiKey = serialized->get_string(ApiKey_type_id, {});
+		SecretKey = serialized->get_string(SecretKey_type_id, {});
+		ServerName = serialized->get_string(ServerName_type_id, {});
+		ConfigServerName = serialized->get_string(ConfigServerName_type_id, {});
+		DebugEventMode = serialized->get_enum<rivet::ddl::generated::x9c7f04c6>(DebugEventMode_type_id, rivet::ddl::generated::x9c7f04c6_values, rivet::ddl::generated::x9c7f04c6::Default); 
 	}
 
 	[[nodiscard]] auto

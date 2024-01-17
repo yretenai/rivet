@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ClankPuzzleVolumeActivateEvent::ClankPuzzleVolumeActivateEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		GroundedVolume = serialized->get_bool(GroundedVolume_type_id); 
+		GroundedVolume = serialized->get_bool(GroundedVolume_type_id, false); 
 	}
 
 	[[nodiscard]] auto

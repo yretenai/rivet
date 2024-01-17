@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	ScriptedShotEffectListElement::ScriptedShotEffectListElement([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		EventType = serialized->get_enum<rivet::ddl::generated::x21e2284d>(EventType_type_id, rivet::ddl::generated::x21e2284d_values);
+		EventType = serialized->get_enum<rivet::ddl::generated::x21e2284d>(EventType_type_id, rivet::ddl::generated::x21e2284d_values, rivet::ddl::generated::x21e2284d::OnSpawn);
 		Effect = serialized->unwrap_into<rivet::ddl::generated::ScriptedShotEffectBasePrius>(Effect_type_id); 
 	}
 

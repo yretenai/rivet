@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	VariableSpeedShotMotionPriusModDef::VariableSpeedShotMotionPriusModDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Variable = serialized->get_enum<rivet::ddl::generated::x387e77cd>(Variable_type_id, rivet::ddl::generated::x387e77cd_values);
+		Variable = serialized->get_enum<rivet::ddl::generated::x387e77cd>(Variable_type_id, rivet::ddl::generated::x387e77cd_values, rivet::ddl::generated::x387e77cd::None);
 		ModList = serialized->unwrap_into_many<rivet::ddl::generated::ConfigModListElement>(ModList_type_id); 
 	}
 

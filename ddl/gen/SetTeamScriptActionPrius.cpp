@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	SetTeamScriptActionPrius::SetTeamScriptActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		Team = serialized->get_enum<rivet::ddl::generated::xc115d639>(Team_type_id, rivet::ddl::generated::xc115d639_values); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Interact);
+		Team = serialized->get_enum<rivet::ddl::generated::xc115d639>(Team_type_id, rivet::ddl::generated::xc115d639_values, rivet::ddl::generated::xc115d639::None); 
 	}
 
 	[[nodiscard]] auto

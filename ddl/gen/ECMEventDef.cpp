@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	ECMEventDef::ECMEventDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		EventName = serialized->get_string(EventName_type_id);
+		EventName = serialized->get_string(EventName_type_id, {});
 		Filters = serialized->unwrap_into_many<rivet::ddl::generated::ECMFilterDef>(Filters_type_id); 
 	}
 

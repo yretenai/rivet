@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	RegionMacroEconomyEntry::RegionMacroEconomyEntry([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Regions = serialized->get_strings(Regions_type_id);
-		EconConfig = serialized->get_string(EconConfig_type_id); 
+		EconConfig = serialized->get_string(EconConfig_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

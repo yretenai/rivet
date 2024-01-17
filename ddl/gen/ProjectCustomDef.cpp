@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	ProjectCustomDef::ProjectCustomDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Enabled = serialized->get_bool(Enabled_type_id);
-		ValueA = serialized->get_float(ValueA_type_id);
-		ValueB = serialized->get_float(ValueB_type_id);
-		ValueC = serialized->get_float(ValueC_type_id);
-		ValueD = serialized->get_float(ValueD_type_id); 
+		Enabled = serialized->get_bool(Enabled_type_id, false);
+		ValueA = serialized->get_float(ValueA_type_id, 0.000000);
+		ValueB = serialized->get_float(ValueB_type_id, 0.000000);
+		ValueC = serialized->get_float(ValueC_type_id, 0.000000);
+		ValueD = serialized->get_float(ValueD_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

@@ -10,10 +10,10 @@
 
 namespace rivet::ddl::generated {
 	UI_AnimDriverBlendNodeDef::UI_AnimDriverBlendNodeDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DisplayName = serialized->get_string(DisplayName_type_id);
-		Type = serialized->get_enum<rivet::ddl::generated::x53f8509f>(Type_type_id, rivet::ddl::generated::x53f8509f_values);
-		Rate = serialized->get_float(Rate_type_id);
-		CurrentValue = serialized->get_float(CurrentValue_type_id);
+		DisplayName = serialized->get_string(DisplayName_type_id, "");
+		Type = serialized->get_enum<rivet::ddl::generated::x53f8509f>(Type_type_id, rivet::ddl::generated::x53f8509f_values, rivet::ddl::generated::x53f8509f::Default);
+		Rate = serialized->get_float(Rate_type_id, 1.000000);
+		CurrentValue = serialized->get_float(CurrentValue_type_id, 0.000000);
 		Intervals = serialized->unwrap_into_many<rivet::ddl::generated::AnimDriverBlendElemDef>(Intervals_type_id);
 		IntervalsUI = serialized->unwrap_into<rivet::ddl::generated::UI_AnimDriverBlendNodeIntervals>(IntervalsUI_type_id); 
 	}

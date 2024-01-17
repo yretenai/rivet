@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ShotTopiarySprinklerPrius::ShotTopiarySprinklerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BasicBulletPrius(serialized) {
-		NoSoundOnReturn = serialized->get_bool(NoSoundOnReturn_type_id); 
+		NoSoundOnReturn = serialized->get_bool(NoSoundOnReturn_type_id, false); 
 	}
 
 	[[nodiscard]] auto

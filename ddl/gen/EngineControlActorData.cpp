@@ -14,7 +14,7 @@ namespace rivet::ddl::generated {
 		ActiveLooks = serialized->get_bools(ActiveLooks_type_id);
 		ActorDef = serialized->unwrap_into<rivet::ddl::generated::ActorDef>(ActorDef_type_id);
 		AnimInfo = serialized->unwrap_into<rivet::ddl::generated::EngineControlActorAnimInfo>(AnimInfo_type_id);
-		Id = serialized->get_uint64(Id_type_id);
+		Id = serialized->get_uint64(Id_type_id, 0);
 		ObjToWorld = serialized->unwrap_into<rivet::ddl::generated::DDLTransform>(ObjToWorld_type_id); 
 	}
 

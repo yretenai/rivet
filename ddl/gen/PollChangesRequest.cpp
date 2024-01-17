@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	PollChangesRequest::PollChangesRequest([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Token = serialized->get_int64(Token_type_id);
-		Limit = serialized->get_int32(Limit_type_id); 
+		Token = serialized->get_int64(Token_type_id, 0);
+		Limit = serialized->get_int32(Limit_type_id, 50); 
 	}
 
 	[[nodiscard]] auto

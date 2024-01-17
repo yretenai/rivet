@@ -7,14 +7,14 @@
 
 namespace rivet::ddl::generated {
 	AfterimageComponentPrius::AfterimageComponentPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActorMaterial = serialized->get_string(ActorMaterial_type_id);
-		ActorMaterialMappingName = serialized->get_string(ActorMaterialMappingName_type_id);
-		AfterimageMaterial = serialized->get_string(AfterimageMaterial_type_id);
-		AfterimageMaterialMappingName = serialized->get_string(AfterimageMaterialMappingName_type_id);
-		Interval = serialized->get_float(Interval_type_id);
-		NumAfterimages = serialized->get_uint32(NumAfterimages_type_id);
-		MinLoD = serialized->get_uint32(MinLoD_type_id);
-		ExpireDuration = serialized->get_float(ExpireDuration_type_id); 
+		ActorMaterial = serialized->get_string(ActorMaterial_type_id, {});
+		ActorMaterialMappingName = serialized->get_string(ActorMaterialMappingName_type_id, {});
+		AfterimageMaterial = serialized->get_string(AfterimageMaterial_type_id, {});
+		AfterimageMaterialMappingName = serialized->get_string(AfterimageMaterialMappingName_type_id, {});
+		Interval = serialized->get_float(Interval_type_id, 0.066000);
+		NumAfterimages = serialized->get_uint32(NumAfterimages_type_id, 4);
+		MinLoD = serialized->get_uint32(MinLoD_type_id, 0);
+		ExpireDuration = serialized->get_float(ExpireDuration_type_id, 0.500000); 
 	}
 
 	[[nodiscard]] auto

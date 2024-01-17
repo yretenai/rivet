@@ -10,10 +10,10 @@
 namespace rivet::ddl::generated {
 	CodeBranchConfig::CodeBranchConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Branches = serialized->unwrap_into_many<rivet::ddl::generated::CodeBranchRef>(Branches_type_id);
-		SelectedBranchIndex = serialized->get_uint32(SelectedBranchIndex_type_id);
-		Timestamp = serialized->get_uint64(Timestamp_type_id);
-		GameBuildCacheDir = serialized->get_string(GameBuildCacheDir_type_id);
-		GameBuildCacheOrigin = serialized->get_string(GameBuildCacheOrigin_type_id); 
+		SelectedBranchIndex = serialized->get_uint32(SelectedBranchIndex_type_id, 0);
+		Timestamp = serialized->get_uint64(Timestamp_type_id, 0);
+		GameBuildCacheDir = serialized->get_string(GameBuildCacheDir_type_id, "");
+		GameBuildCacheOrigin = serialized->get_string(GameBuildCacheOrigin_type_id, ""); 
 	}
 
 	[[nodiscard]] auto

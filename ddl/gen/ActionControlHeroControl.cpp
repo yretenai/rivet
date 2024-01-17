@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ActionControlHeroControl::ActionControlHeroControl([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Control = serialized->get_enum<rivet::ddl::generated::HeroControl>(Control_type_id, rivet::ddl::generated::HeroControl_values); 
+		Control = serialized->get_enum<rivet::ddl::generated::HeroControl>(Control_type_id, rivet::ddl::generated::HeroControl_values, rivet::ddl::generated::HeroControl::Jump); 
 	}
 
 	[[nodiscard]] auto

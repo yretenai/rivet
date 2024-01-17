@@ -9,9 +9,9 @@
 
 namespace rivet::ddl::generated {
 	UICollectibleCategory::UICollectibleCategory([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DisplayName = serialized->get_string(DisplayName_type_id);
-		DisplayIcon = serialized->get_string(DisplayIcon_type_id);
-		DisplayObject = serialized->get_enum<rivet::ddl::generated::xd64fa9b1>(DisplayObject_type_id, rivet::ddl::generated::xd64fa9b1_values);
+		DisplayName = serialized->get_string(DisplayName_type_id, {});
+		DisplayIcon = serialized->get_string(DisplayIcon_type_id, {});
+		DisplayObject = serialized->get_enum<rivet::ddl::generated::xd64fa9b1>(DisplayObject_type_id, rivet::ddl::generated::xd64fa9b1_values, rivet::ddl::generated::xd64fa9b1::None);
 		Collectibles = serialized->unwrap_into_many<rivet::ddl::generated::UICollectible>(Collectibles_type_id); 
 	}
 

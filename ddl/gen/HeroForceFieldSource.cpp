@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	HeroForceFieldSource::HeroForceFieldSource([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		LocatorName = serialized->get_string(LocatorName_type_id);
-		Strength = serialized->get_float(Strength_type_id);
-		Radius = serialized->get_float(Radius_type_id); 
+		LocatorName = serialized->get_string(LocatorName_type_id, {});
+		Strength = serialized->get_float(Strength_type_id, 1.000000);
+		Radius = serialized->get_float(Radius_type_id, 0.250000); 
 	}
 
 	[[nodiscard]] auto

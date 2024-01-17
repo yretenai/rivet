@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	Region2DMapOverlayLayer::Region2DMapOverlayLayer([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MapLayerImage = serialized->get_string(MapLayerImage_type_id);
-		LayerName = serialized->get_string(LayerName_type_id); 
+		MapLayerImage = serialized->get_string(MapLayerImage_type_id, {});
+		LayerName = serialized->get_string(LayerName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

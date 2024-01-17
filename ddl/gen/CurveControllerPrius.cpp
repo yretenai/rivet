@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	CurveControllerPrius::CurveControllerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		EnableRotation = serialized->get_bool(EnableRotation_type_id);
-		EnableStretch = serialized->get_bool(EnableStretch_type_id);
-		RotationType = serialized->get_enum<rivet::ddl::generated::x603b1ec6>(RotationType_type_id, rivet::ddl::generated::x603b1ec6_values); 
+		EnableRotation = serialized->get_bool(EnableRotation_type_id, true);
+		EnableStretch = serialized->get_bool(EnableStretch_type_id, true);
+		RotationType = serialized->get_enum<rivet::ddl::generated::x603b1ec6>(RotationType_type_id, rivet::ddl::generated::x603b1ec6_values, rivet::ddl::generated::x603b1ec6::YAxis); 
 	}
 
 	[[nodiscard]] auto

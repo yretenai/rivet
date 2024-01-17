@@ -11,7 +11,7 @@
 
 namespace rivet::ddl::generated {
 	ShotGameBulletPrius::ShotGameBulletPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BasicBulletPrius(serialized) {
-		DamageRequestIdFromFiring = serialized->get_bool(DamageRequestIdFromFiring_type_id); 
+		DamageRequestIdFromFiring = serialized->get_bool(DamageRequestIdFromFiring_type_id, true); 
 	}
 
 	[[nodiscard]] auto

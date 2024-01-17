@@ -7,27 +7,27 @@
 
 namespace rivet::ddl::generated {
 	UIBootGameConfig::UIBootGameConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		UIViewInfoConfig = serialized->get_string(UIViewInfoConfig_type_id);
-		UIFontMapConfig = serialized->get_string(UIFontMapConfig_type_id);
-		UIIconsConfig = serialized->get_string(UIIconsConfig_type_id);
-		UIMarkupConfig = serialized->get_string(UIMarkupConfig_type_id);
-		UIModelConfig = serialized->get_string(UIModelConfig_type_id);
-		CoherentDebugMenuConfig = serialized->get_string(CoherentDebugMenuConfig_type_id);
-		POIConfig = serialized->get_string(POIConfig_type_id);
-		UIOptionsConfig = serialized->get_string(UIOptionsConfig_type_id);
-		UIDifficultyConfig = serialized->get_string(UIDifficultyConfig_type_id);
-		UIPhotoModeConfig = serialized->get_string(UIPhotoModeConfig_type_id);
-		UIArenaConfig = serialized->get_string(UIArenaConfig_type_id);
-		UIJukeboxConfig = serialized->get_string(UIJukeboxConfig_type_id);
-		UICollectiblesConfig = serialized->get_string(UICollectiblesConfig_type_id);
-		UIGalleryConfig = serialized->get_string(UIGalleryConfig_type_id);
-		UITutorialsConfig = serialized->get_string(UITutorialsConfig_type_id);
-		UIEndGameOptionConfig = serialized->get_string(UIEndGameOptionConfig_type_id);
-		UICreditsConfig = serialized->get_string(UICreditsConfig_type_id);
-		SoundActor = serialized->get_string(SoundActor_type_id);
-		PlayerHUDRTTActor = serialized->get_string(PlayerHUDRTTActor_type_id);
-		PauseMenuScreenRTTActor = serialized->get_string(PauseMenuScreenRTTActor_type_id);
-		ScopeActor = serialized->get_string(ScopeActor_type_id); 
+		UIViewInfoConfig = serialized->get_string(UIViewInfoConfig_type_id, {});
+		UIFontMapConfig = serialized->get_string(UIFontMapConfig_type_id, {});
+		UIIconsConfig = serialized->get_string(UIIconsConfig_type_id, {});
+		UIMarkupConfig = serialized->get_string(UIMarkupConfig_type_id, {});
+		UIModelConfig = serialized->get_string(UIModelConfig_type_id, {});
+		CoherentDebugMenuConfig = serialized->get_string(CoherentDebugMenuConfig_type_id, {});
+		POIConfig = serialized->get_string(POIConfig_type_id, {});
+		UIOptionsConfig = serialized->get_string(UIOptionsConfig_type_id, {});
+		UIDifficultyConfig = serialized->get_string(UIDifficultyConfig_type_id, {});
+		UIPhotoModeConfig = serialized->get_string(UIPhotoModeConfig_type_id, {});
+		UIArenaConfig = serialized->get_string(UIArenaConfig_type_id, {});
+		UIJukeboxConfig = serialized->get_string(UIJukeboxConfig_type_id, {});
+		UICollectiblesConfig = serialized->get_string(UICollectiblesConfig_type_id, {});
+		UIGalleryConfig = serialized->get_string(UIGalleryConfig_type_id, {});
+		UITutorialsConfig = serialized->get_string(UITutorialsConfig_type_id, {});
+		UIEndGameOptionConfig = serialized->get_string(UIEndGameOptionConfig_type_id, {});
+		UICreditsConfig = serialized->get_string(UICreditsConfig_type_id, {});
+		SoundActor = serialized->get_string(SoundActor_type_id, {});
+		PlayerHUDRTTActor = serialized->get_string(PlayerHUDRTTActor_type_id, {});
+		PauseMenuScreenRTTActor = serialized->get_string(PauseMenuScreenRTTActor_type_id, {});
+		ScopeActor = serialized->get_string(ScopeActor_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

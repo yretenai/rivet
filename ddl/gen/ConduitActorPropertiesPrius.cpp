@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	ConduitActorPropertiesPrius::ConduitActorPropertiesPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Size = serialized->get_string(Size_type_id);
-		CharacterType = serialized->get_string(CharacterType_type_id);
-		DamageTimerDuration = serialized->get_float(DamageTimerDuration_type_id);
-		WeakspotTimerDuration = serialized->get_float(WeakspotTimerDuration_type_id);
-		BlockTimerDuration = serialized->get_float(BlockTimerDuration_type_id); 
+		Size = serialized->get_string(Size_type_id, {});
+		CharacterType = serialized->get_string(CharacterType_type_id, {});
+		DamageTimerDuration = serialized->get_float(DamageTimerDuration_type_id, 0.150000);
+		WeakspotTimerDuration = serialized->get_float(WeakspotTimerDuration_type_id, 0.200000);
+		BlockTimerDuration = serialized->get_float(BlockTimerDuration_type_id, 0.150000); 
 	}
 
 	[[nodiscard]] auto

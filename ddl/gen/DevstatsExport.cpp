@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	DevstatsExport::DevstatsExport([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Name = serialized->get_string(Name_type_id);
-		Path = serialized->get_string(Path_type_id); 
+		Name = serialized->get_string(Name_type_id, {});
+		Path = serialized->get_string(Path_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

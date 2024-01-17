@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	ActorAssetReferenceDef::ActorAssetReferenceDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AssetPath = serialized->get_string(AssetPath_type_id);
-		Autoload = serialized->get_bool(Autoload_type_id); 
+		AssetPath = serialized->get_string(AssetPath_type_id, {});
+		Autoload = serialized->get_bool(Autoload_type_id, true); 
 	}
 
 	[[nodiscard]] auto

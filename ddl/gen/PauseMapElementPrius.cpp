@@ -9,10 +9,10 @@
 
 namespace rivet::ddl::generated {
 	PauseMapElementPrius::PauseMapElementPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Type = serialized->get_enum<rivet::ddl::generated::xf0177ef8>(Type_type_id, rivet::ddl::generated::xf0177ef8_values);
-		Hide = serialized->get_bool(Hide_type_id);
-		ShowRotation = serialized->get_bool(ShowRotation_type_id);
-		AlwaysVisible = serialized->get_bool(AlwaysVisible_type_id);
+		Type = serialized->get_enum<rivet::ddl::generated::xf0177ef8>(Type_type_id, rivet::ddl::generated::xf0177ef8_values, rivet::ddl::generated::xf0177ef8::Objective);
+		Hide = serialized->get_bool(Hide_type_id, false);
+		ShowRotation = serialized->get_bool(ShowRotation_type_id, false);
+		AlwaysVisible = serialized->get_bool(AlwaysVisible_type_id, false);
 		OverridePosition = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(OverridePosition_type_id); 
 	}
 

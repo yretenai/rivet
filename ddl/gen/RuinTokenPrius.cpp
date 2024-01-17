@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	RuinTokenPrius::RuinTokenPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SaveID = serialized->get_enum<rivet::ddl::generated::xeccc3486>(SaveID_type_id, rivet::ddl::generated::xeccc3486_values);
-		RuinPickupActor = serialized->get_string(RuinPickupActor_type_id); 
+		SaveID = serialized->get_enum<rivet::ddl::generated::xeccc3486>(SaveID_type_id, rivet::ddl::generated::xeccc3486_values, rivet::ddl::generated::xeccc3486::None);
+		RuinPickupActor = serialized->get_string(RuinPickupActor_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

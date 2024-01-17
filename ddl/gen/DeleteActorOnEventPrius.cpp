@@ -10,7 +10,7 @@
 namespace rivet::ddl::generated {
 	DeleteActorOnEventPrius::DeleteActorOnEventPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		ListenEvent = serialized->unwrap_into<rivet::ddl::generated::EventBase>(ListenEvent_type_id);
-		Kill = serialized->get_bool(Kill_type_id); 
+		Kill = serialized->get_bool(Kill_type_id, false); 
 	}
 
 	[[nodiscard]] auto

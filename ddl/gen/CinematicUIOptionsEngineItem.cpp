@@ -9,24 +9,24 @@
 
 namespace rivet::ddl::generated {
 	CinematicUIOptionsEngineItem::CinematicUIOptionsEngineItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DOFVisualization = serialized->get_bool(DOFVisualization_type_id);
-		LookAtVisualization = serialized->get_bool(LookAtVisualization_type_id);
-		CameraConeVisualization = serialized->get_bool(CameraConeVisualization_type_id);
-		IgnoreJumpToShot = serialized->get_bool(IgnoreJumpToShot_type_id);
-		AnimControllerActor = serialized->get_uint64(AnimControllerActor_type_id);
-		AnimDynamicsActor = serialized->get_uint64(AnimDynamicsActor_type_id);
-		AutoKeyframe = serialized->get_bool(AutoKeyframe_type_id);
-		ShowAnimDebugHud = serialized->get_bool(ShowAnimDebugHud_type_id);
-		UseFastSeekVFX = serialized->get_bool(UseFastSeekVFX_type_id);
-		ShowSkeletonHud = serialized->get_bool(ShowSkeletonHud_type_id);
-		ShowClothHud = serialized->get_bool(ShowClothHud_type_id);
-		ShowDebugVertHud = serialized->get_bool(ShowDebugVertHud_type_id);
-		ShowAudioListener = serialized->get_bool(ShowAudioListener_type_id);
-		ShowEmptyTracks = serialized->get_bool(ShowEmptyTracks_type_id);
-		Sound = serialized->get_bool(Sound_type_id);
-		Subtitles = serialized->get_bool(Subtitles_type_id);
-		TimecodeMode = serialized->get_enum<rivet::ddl::generated::xe8324e15>(TimecodeMode_type_id, rivet::ddl::generated::xe8324e15_values);
-		PlatformFilter = serialized->get_enum<rivet::ddl::generated::xd7e26c97>(PlatformFilter_type_id, rivet::ddl::generated::xd7e26c97_values);
+		DOFVisualization = serialized->get_bool(DOFVisualization_type_id, false);
+		LookAtVisualization = serialized->get_bool(LookAtVisualization_type_id, false);
+		CameraConeVisualization = serialized->get_bool(CameraConeVisualization_type_id, false);
+		IgnoreJumpToShot = serialized->get_bool(IgnoreJumpToShot_type_id, false);
+		AnimControllerActor = serialized->get_uint64(AnimControllerActor_type_id, 0);
+		AnimDynamicsActor = serialized->get_uint64(AnimDynamicsActor_type_id, 0);
+		AutoKeyframe = serialized->get_bool(AutoKeyframe_type_id, false);
+		ShowAnimDebugHud = serialized->get_bool(ShowAnimDebugHud_type_id, false);
+		UseFastSeekVFX = serialized->get_bool(UseFastSeekVFX_type_id, false);
+		ShowSkeletonHud = serialized->get_bool(ShowSkeletonHud_type_id, false);
+		ShowClothHud = serialized->get_bool(ShowClothHud_type_id, false);
+		ShowDebugVertHud = serialized->get_bool(ShowDebugVertHud_type_id, false);
+		ShowAudioListener = serialized->get_bool(ShowAudioListener_type_id, false);
+		ShowEmptyTracks = serialized->get_bool(ShowEmptyTracks_type_id, true);
+		Sound = serialized->get_bool(Sound_type_id, true);
+		Subtitles = serialized->get_bool(Subtitles_type_id, true);
+		TimecodeMode = serialized->get_enum<rivet::ddl::generated::xe8324e15>(TimecodeMode_type_id, rivet::ddl::generated::xe8324e15_values, rivet::ddl::generated::xe8324e15::Enabled);
+		PlatformFilter = serialized->get_enum<rivet::ddl::generated::xd7e26c97>(PlatformFilter_type_id, rivet::ddl::generated::xd7e26c97_values, rivet::ddl::generated::xd7e26c97::None);
 		DebugCinematicCameraOptions = serialized->unwrap_into<rivet::ddl::generated::CameraOptions>(DebugCinematicCameraOptions_type_id);
 		DebugCameraOptions = serialized->unwrap_into<rivet::ddl::generated::CameraOptions>(DebugCameraOptions_type_id); 
 	}

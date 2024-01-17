@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	StatusEmitterStartEvent::StatusEmitterStartEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		EmitterType = serialized->get_string(EmitterType_type_id);
-		EmitterName = serialized->get_string(EmitterName_type_id); 
+		EmitterType = serialized->get_string(EmitterType_type_id, {});
+		EmitterName = serialized->get_string(EmitterName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

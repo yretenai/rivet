@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	ObjectiveStateChangedEvent::ObjectiveStateChangedEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		MissionName = serialized->get_string(MissionName_type_id);
-		ObjectiveName = serialized->get_string(ObjectiveName_type_id);
-		ObjectiveState = serialized->get_enum<rivet::ddl::generated::ObjectiveStates>(ObjectiveState_type_id, rivet::ddl::generated::ObjectiveStates_values); 
+		MissionName = serialized->get_string(MissionName_type_id, {});
+		ObjectiveName = serialized->get_string(ObjectiveName_type_id, {});
+		ObjectiveState = serialized->get_enum<rivet::ddl::generated::ObjectiveStates>(ObjectiveState_type_id, rivet::ddl::generated::ObjectiveStates_values, rivet::ddl::generated::ObjectiveStates::Inactive); 
 	}
 
 	[[nodiscard]] auto

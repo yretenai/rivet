@@ -11,8 +11,8 @@
 namespace rivet::ddl::generated {
 	BotConfigAwareness::BotConfigAwareness([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
 		Awareness = serialized->unwrap_into<rivet::ddl::generated::AwarenessBasePrius>(Awareness_type_id);
-		StimulusSource = serialized->get_enum<rivet::ddl::generated::x2efb4283>(StimulusSource_type_id, rivet::ddl::generated::x2efb4283_values);
-		StimulusConfig = serialized->get_string(StimulusConfig_type_id);
+		StimulusSource = serialized->get_enum<rivet::ddl::generated::x2efb4283>(StimulusSource_type_id, rivet::ddl::generated::x2efb4283_values, rivet::ddl::generated::x2efb4283::Here);
+		StimulusConfig = serialized->get_string(StimulusConfig_type_id, {});
 		TargetingStimulus = serialized->unwrap_into<rivet::ddl::generated::TargetingStimulusListenerPrius>(TargetingStimulus_type_id); 
 	}
 

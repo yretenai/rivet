@@ -9,11 +9,11 @@
 
 namespace rivet::ddl::generated {
 	ECMResponse::ECMResponse([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		GroupIndex = serialized->get_uint8(GroupIndex_type_id);
-		Name = serialized->get_string(Name_type_id);
-		Type = serialized->get_enum<rivet::ddl::generated::x7d682dac>(Type_type_id, rivet::ddl::generated::x7d682dac_values);
+		GroupIndex = serialized->get_uint8(GroupIndex_type_id, 0);
+		Name = serialized->get_string(Name_type_id, {});
+		Type = serialized->get_enum<rivet::ddl::generated::x7d682dac>(Type_type_id, rivet::ddl::generated::x7d682dac_values, rivet::ddl::generated::x7d682dac::VFX_KeyFrame_Modifier);
 		FieldMap = serialized->unwrap_into_many<rivet::ddl::generated::ECMFieldMap>(FieldMap_type_id);
-		IsValid = serialized->get_bool(IsValid_type_id); 
+		IsValid = serialized->get_bool(IsValid_type_id, true); 
 	}
 
 	[[nodiscard]] auto

@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	HealthDropConfig::HealthDropConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		HealthDropActor = serialized->get_string(HealthDropActor_type_id);
-		InWorldHealthDropScale = serialized->get_float(InWorldHealthDropScale_type_id);
+		HealthDropActor = serialized->get_string(HealthDropActor_type_id, {});
+		InWorldHealthDropScale = serialized->get_float(InWorldHealthDropScale_type_id, 0.500000);
 		DropTiers = serialized->unwrap_into_many<rivet::ddl::generated::HealthDropTier>(DropTiers_type_id); 
 	}
 

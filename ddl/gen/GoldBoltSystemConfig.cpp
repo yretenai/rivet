@@ -10,11 +10,11 @@
 namespace rivet::ddl::generated {
 	GoldBoltSystemConfig::GoldBoltSystemConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
 		Rewards = serialized->unwrap_into_many<rivet::ddl::generated::GoldBoltRewardCost>(Rewards_type_id);
-		HeadSizeConfig = serialized->get_string(HeadSizeConfig_type_id);
-		MeleeModelSwapConfig = serialized->get_string(MeleeModelSwapConfig_type_id);
-		HomeRunHitterConfig = serialized->get_string(HomeRunHitterConfig_type_id);
-		RewardRenderModeConfig = serialized->get_string(RewardRenderModeConfig_type_id);
-		ShipSkinConfig = serialized->get_string(ShipSkinConfig_type_id); 
+		HeadSizeConfig = serialized->get_string(HeadSizeConfig_type_id, {});
+		MeleeModelSwapConfig = serialized->get_string(MeleeModelSwapConfig_type_id, {});
+		HomeRunHitterConfig = serialized->get_string(HomeRunHitterConfig_type_id, {});
+		RewardRenderModeConfig = serialized->get_string(RewardRenderModeConfig_type_id, {});
+		ShipSkinConfig = serialized->get_string(ShipSkinConfig_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

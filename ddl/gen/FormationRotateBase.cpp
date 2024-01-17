@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	FormationRotateBase::FormationRotateBase([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): FormationMotionBase(serialized) {
-		DegreesPerSecond = serialized->get_float(DegreesPerSecond_type_id); 
+		DegreesPerSecond = serialized->get_float(DegreesPerSecond_type_id, 90.000000); 
 	}
 
 	[[nodiscard]] auto

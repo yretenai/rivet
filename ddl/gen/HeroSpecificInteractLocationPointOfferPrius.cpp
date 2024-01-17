@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	HeroSpecificInteractLocationPointOfferPrius::HeroSpecificInteractLocationPointOfferPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): InteractLocationPointOfferPrius(serialized) {
-		HeroType = serialized->get_enum<rivet::ddl::generated::HeroTypes>(HeroType_type_id, rivet::ddl::generated::HeroTypes_values);
-		ControlBinding = serialized->get_enum<rivet::ddl::generated::HeroControl>(ControlBinding_type_id, rivet::ddl::generated::HeroControl_values); 
+		HeroType = serialized->get_enum<rivet::ddl::generated::HeroTypes>(HeroType_type_id, rivet::ddl::generated::HeroTypes_values, rivet::ddl::generated::HeroTypes::Ratchet);
+		ControlBinding = serialized->get_enum<rivet::ddl::generated::HeroControl>(ControlBinding_type_id, rivet::ddl::generated::HeroControl_values, rivet::ddl::generated::HeroControl::Melee); 
 	}
 
 	[[nodiscard]] auto

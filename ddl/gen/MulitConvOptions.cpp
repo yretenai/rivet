@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	MulitConvOptions::MulitConvOptions([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ConverationConfig = serialized->get_string(ConverationConfig_type_id); 
+		ConverationConfig = serialized->get_string(ConverationConfig_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

@@ -7,23 +7,23 @@
 
 namespace rivet::ddl::generated {
 	CameraInputSettings::CameraInputSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ZedQuality = serialized->get_int32(ZedQuality_type_id);
-		ZedResolution = serialized->get_int32(ZedResolution_type_id);
-		ResolutionWidth = serialized->get_int32(ResolutionWidth_type_id);
-		ResolutionHeight = serialized->get_int32(ResolutionHeight_type_id);
-		FrameRate = serialized->get_float(FrameRate_type_id);
-		CameraName = serialized->get_string(CameraName_type_id);
-		FrameBufferCount = serialized->get_int32(FrameBufferCount_type_id);
-		FrameDelayMs = serialized->get_float(FrameDelayMs_type_id);
-		LeftClip = serialized->get_float(LeftClip_type_id);
-		RightClip = serialized->get_float(RightClip_type_id);
-		TopClip = serialized->get_float(TopClip_type_id);
-		BottomClip = serialized->get_float(BottomClip_type_id);
-		ChromaKey = serialized->get_float(ChromaKey_type_id);
-		LinearKey = serialized->get_float(LinearKey_type_id);
-		SpillReduction = serialized->get_float(SpillReduction_type_id);
-		BlueScreen = serialized->get_bool(BlueScreen_type_id);
-		DisplayDebugAxes = serialized->get_bool(DisplayDebugAxes_type_id); 
+		ZedQuality = serialized->get_int32(ZedQuality_type_id, 0);
+		ZedResolution = serialized->get_int32(ZedResolution_type_id, 1);
+		ResolutionWidth = serialized->get_int32(ResolutionWidth_type_id, 0);
+		ResolutionHeight = serialized->get_int32(ResolutionHeight_type_id, 0);
+		FrameRate = serialized->get_float(FrameRate_type_id, 0.000000);
+		CameraName = serialized->get_string(CameraName_type_id, {});
+		FrameBufferCount = serialized->get_int32(FrameBufferCount_type_id, 12);
+		FrameDelayMs = serialized->get_float(FrameDelayMs_type_id, 0.000000);
+		LeftClip = serialized->get_float(LeftClip_type_id, 0.000000);
+		RightClip = serialized->get_float(RightClip_type_id, 0.000000);
+		TopClip = serialized->get_float(TopClip_type_id, 0.000000);
+		BottomClip = serialized->get_float(BottomClip_type_id, 0.000000);
+		ChromaKey = serialized->get_float(ChromaKey_type_id, 0.470000);
+		LinearKey = serialized->get_float(LinearKey_type_id, -0.010000);
+		SpillReduction = serialized->get_float(SpillReduction_type_id, 0.490000);
+		BlueScreen = serialized->get_bool(BlueScreen_type_id, false);
+		DisplayDebugAxes = serialized->get_bool(DisplayDebugAxes_type_id, false); 
 	}
 
 	[[nodiscard]] auto

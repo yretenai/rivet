@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	ChunkSpawnedEvent::ChunkSpawnedEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		LookName = serialized->get_string(LookName_type_id);
-		IsLookGroup = serialized->get_bool(IsLookGroup_type_id);
-		IsSourceActor = serialized->get_bool(IsSourceActor_type_id); 
+		LookName = serialized->get_string(LookName_type_id, {});
+		IsLookGroup = serialized->get_bool(IsLookGroup_type_id, false);
+		IsSourceActor = serialized->get_bool(IsSourceActor_type_id, false); 
 	}
 
 	[[nodiscard]] auto

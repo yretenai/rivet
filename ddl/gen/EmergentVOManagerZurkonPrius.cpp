@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	EmergentVOManagerZurkonPrius::EmergentVOManagerZurkonPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EmergentVOManagerGamePrius(serialized) {
-		EmergentVOConfigAssetId = serialized->get_uint64(EmergentVOConfigAssetId_type_id);
-		HeroHandle = serialized->get_uint32(HeroHandle_type_id); 
+		EmergentVOConfigAssetId = serialized->get_uint64(EmergentVOConfigAssetId_type_id, 0);
+		HeroHandle = serialized->get_uint32(HeroHandle_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

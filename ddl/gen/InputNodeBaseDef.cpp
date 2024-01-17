@@ -21,8 +21,8 @@
 
 namespace rivet::ddl::generated {
 	InputNodeBaseDef::InputNodeBaseDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): NodeBaseDef(serialized) {
-		Name = serialized->get_string(Name_type_id);
-		OldName = serialized->get_string(OldName_type_id); 
+		Name = serialized->get_string(Name_type_id, {});
+		OldName = serialized->get_string(OldName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

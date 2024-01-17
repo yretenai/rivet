@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ChangeWeaponZoomEvent::ChangeWeaponZoomEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		ZoomLevel = serialized->get_int32(ZoomLevel_type_id); 
+		ZoomLevel = serialized->get_int32(ZoomLevel_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

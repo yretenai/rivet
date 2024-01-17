@@ -10,10 +10,10 @@
 namespace rivet::ddl::generated {
 	ProximityDamageableHunterPrius::ProximityDamageableHunterPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		DamageData = serialized->unwrap_into<rivet::ddl::generated::ProximityDamageData>(DamageData_type_id);
-		GatherRadius = serialized->get_float(GatherRadius_type_id);
-		GatherFrameDelay = serialized->get_uint8(GatherFrameDelay_type_id);
-		DamageCheckDelay = serialized->get_uint8(DamageCheckDelay_type_id);
-		IsHero = serialized->get_bool(IsHero_type_id); 
+		GatherRadius = serialized->get_float(GatherRadius_type_id, 50.000000);
+		GatherFrameDelay = serialized->get_uint8(GatherFrameDelay_type_id, 30);
+		DamageCheckDelay = serialized->get_uint8(DamageCheckDelay_type_id, 15);
+		IsHero = serialized->get_bool(IsHero_type_id, false); 
 	}
 
 	[[nodiscard]] auto

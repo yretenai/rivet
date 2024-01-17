@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	VisualEffectAngles::VisualEffectAngles([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Roll = serialized->get_float(Roll_type_id);
-		Pitch = serialized->get_float(Pitch_type_id);
-		Yaw = serialized->get_float(Yaw_type_id); 
+		Roll = serialized->get_float(Roll_type_id, 0.000000);
+		Pitch = serialized->get_float(Pitch_type_id, 0.000000);
+		Yaw = serialized->get_float(Yaw_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

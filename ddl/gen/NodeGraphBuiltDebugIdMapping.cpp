@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	NodeGraphBuiltDebugIdMapping::NodeGraphBuiltDebugIdMapping([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		FlattenedId = serialized->get_uint64(FlattenedId_type_id);
-		OriginalAssetId = serialized->get_uint64(OriginalAssetId_type_id);
-		OriginalId = serialized->get_uint64(OriginalId_type_id);
-		OriginalEmbeddedGraphId = serialized->get_uint64(OriginalEmbeddedGraphId_type_id); 
+		FlattenedId = serialized->get_uint64(FlattenedId_type_id, 0);
+		OriginalAssetId = serialized->get_uint64(OriginalAssetId_type_id, 0);
+		OriginalId = serialized->get_uint64(OriginalId_type_id, 0);
+		OriginalEmbeddedGraphId = serialized->get_uint64(OriginalEmbeddedGraphId_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

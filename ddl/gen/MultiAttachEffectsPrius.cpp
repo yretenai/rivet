@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	MultiAttachEffectsPrius::MultiAttachEffectsPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		LocatorNameTemplate = serialized->get_string(LocatorNameTemplate_type_id);
-		FirstLocatorNumber = serialized->get_uint32(FirstLocatorNumber_type_id);
-		LastLocatorNumber = serialized->get_uint32(LastLocatorNumber_type_id); 
+		LocatorNameTemplate = serialized->get_string(LocatorNameTemplate_type_id, {});
+		FirstLocatorNumber = serialized->get_uint32(FirstLocatorNumber_type_id, 1);
+		LastLocatorNumber = serialized->get_uint32(LastLocatorNumber_type_id, 10); 
 	}
 
 	[[nodiscard]] auto

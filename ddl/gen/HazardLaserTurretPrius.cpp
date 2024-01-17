@@ -7,18 +7,18 @@
 
 namespace rivet::ddl::generated {
 	HazardLaserTurretPrius::HazardLaserTurretPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		LaserStartLocName = serialized->get_string(LaserStartLocName_type_id);
-		LaserEndLocName = serialized->get_string(LaserEndLocName_type_id);
-		YawJointName = serialized->get_string(YawJointName_type_id);
-		PitchJointName = serialized->get_string(PitchJointName_type_id);
-		TurnSpeed = serialized->get_float(TurnSpeed_type_id);
-		FOVAngle = serialized->get_float(FOVAngle_type_id);
-		FireDelay = serialized->get_float(FireDelay_type_id);
-		RangeDist = serialized->get_float(RangeDist_type_id);
-		DPSAmt = serialized->get_float(DPSAmt_type_id);
-		InnerAwareness = serialized->get_uint64(InnerAwareness_type_id);
-		OuterAwareness = serialized->get_uint64(OuterAwareness_type_id);
-		StartActive = serialized->get_bool(StartActive_type_id); 
+		LaserStartLocName = serialized->get_string(LaserStartLocName_type_id, "igLoc_LaserEmit");
+		LaserEndLocName = serialized->get_string(LaserEndLocName_type_id, "igLoc_LaserEnd");
+		YawJointName = serialized->get_string(YawJointName_type_id, "Yaw_Joint");
+		PitchJointName = serialized->get_string(PitchJointName_type_id, "Pitch_Joint");
+		TurnSpeed = serialized->get_float(TurnSpeed_type_id, 30.000000);
+		FOVAngle = serialized->get_float(FOVAngle_type_id, 45.000000);
+		FireDelay = serialized->get_float(FireDelay_type_id, 1.000000);
+		RangeDist = serialized->get_float(RangeDist_type_id, 30.000000);
+		DPSAmt = serialized->get_float(DPSAmt_type_id, 1.000000);
+		InnerAwareness = serialized->get_uint64(InnerAwareness_type_id, 0);
+		OuterAwareness = serialized->get_uint64(OuterAwareness_type_id, 0);
+		StartActive = serialized->get_bool(StartActive_type_id, true); 
 	}
 
 	[[nodiscard]] auto

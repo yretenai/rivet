@@ -7,15 +7,15 @@
 
 namespace rivet::ddl::generated {
 	AOEWaterHazardPrius::AOEWaterHazardPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		TellRadius = serialized->get_float(TellRadius_type_id);
-		TriggerRadius = serialized->get_float(TriggerRadius_type_id);
-		DamageRadius = serialized->get_float(DamageRadius_type_id);
-		DamageDuration = serialized->get_float(DamageDuration_type_id);
-		CooldownTime = serialized->get_float(CooldownTime_type_id);
-		DamageAmount = serialized->get_float(DamageAmount_type_id);
-		DamageIgnoreDuration = serialized->get_float(DamageIgnoreDuration_type_id);
-		DamageType = serialized->get_enum<rivet::ddl::generated::DamageTypes>(DamageType_type_id, rivet::ddl::generated::DamageTypes_values);
-		DamageString = serialized->get_string(DamageString_type_id); 
+		TellRadius = serialized->get_float(TellRadius_type_id, 30.000000);
+		TriggerRadius = serialized->get_float(TriggerRadius_type_id, 5.000000);
+		DamageRadius = serialized->get_float(DamageRadius_type_id, 5.000000);
+		DamageDuration = serialized->get_float(DamageDuration_type_id, 1.000000);
+		CooldownTime = serialized->get_float(CooldownTime_type_id, 5.000000);
+		DamageAmount = serialized->get_float(DamageAmount_type_id, 30.000000);
+		DamageIgnoreDuration = serialized->get_float(DamageIgnoreDuration_type_id, 1.000000);
+		DamageType = serialized->get_enum<rivet::ddl::generated::DamageTypes>(DamageType_type_id, rivet::ddl::generated::DamageTypes_values, rivet::ddl::generated::DamageTypes::Explosion);
+		DamageString = serialized->get_string(DamageString_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

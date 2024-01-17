@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	InteractCannonPrius::InteractCannonPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): SlottedInteractObjectPrius(serialized) {
-		AimType = serialized->get_enum<rivet::ddl::generated::xbb647502>(AimType_type_id, rivet::ddl::generated::xbb647502_values);
-		FireButton = serialized->get_enum<rivet::ddl::generated::x72fd960>(FireButton_type_id, rivet::ddl::generated::x72fd960_values); 
+		AimType = serialized->get_enum<rivet::ddl::generated::xbb647502>(AimType_type_id, rivet::ddl::generated::xbb647502_values, rivet::ddl::generated::xbb647502::Gun);
+		FireButton = serialized->get_enum<rivet::ddl::generated::x72fd960>(FireButton_type_id, rivet::ddl::generated::x72fd960_values, rivet::ddl::generated::x72fd960::Jump); 
 	}
 
 	[[nodiscard]] auto

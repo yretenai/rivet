@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	AnimSetSequenceFilterDef::AnimSetSequenceFilterDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Id = serialized->get_uint64(Id_type_id);
-		Time = serialized->get_float(Time_type_id);
-		FilterGroupName = serialized->get_string(FilterGroupName_type_id);
-		FilterIdName = serialized->get_string(FilterIdName_type_id); 
+		Id = serialized->get_uint64(Id_type_id, 0);
+		Time = serialized->get_float(Time_type_id, 0.000000);
+		FilterGroupName = serialized->get_string(FilterGroupName_type_id, {});
+		FilterIdName = serialized->get_string(FilterIdName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

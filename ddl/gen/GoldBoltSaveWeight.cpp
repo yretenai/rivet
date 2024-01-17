@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	GoldBoltSaveWeight::GoldBoltSaveWeight([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SaveId = serialized->get_enum<rivet::ddl::generated::x7038301>(SaveId_type_id, rivet::ddl::generated::x7038301_values);
-		Weight = serialized->get_float(Weight_type_id); 
+		SaveId = serialized->get_enum<rivet::ddl::generated::x7038301>(SaveId_type_id, rivet::ddl::generated::x7038301_values, rivet::ddl::generated::x7038301::Nefarious_City_1);
+		Weight = serialized->get_float(Weight_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

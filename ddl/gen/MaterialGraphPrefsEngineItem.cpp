@@ -7,13 +7,13 @@
 
 namespace rivet::ddl::generated {
 	MaterialGraphPrefsEngineItem::MaterialGraphPrefsEngineItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AssetPath = serialized->get_string(AssetPath_type_id);
-		AlphaSim = serialized->get_double(AlphaSim_type_id);
-		AlphaSort = serialized->get_bool(AlphaSort_type_id);
-		AnimateLod = serialized->get_bool(AnimateLod_type_id);
-		ColorPicker = serialized->get_bool(ColorPicker_type_id);
-		DoubleSided = serialized->get_bool(DoubleSided_type_id);
-		PreviewSrgb = serialized->get_bool(PreviewSrgb_type_id); 
+		AssetPath = serialized->get_string(AssetPath_type_id, {});
+		AlphaSim = serialized->get_double(AlphaSim_type_id, 1.000000);
+		AlphaSort = serialized->get_bool(AlphaSort_type_id, false);
+		AnimateLod = serialized->get_bool(AnimateLod_type_id, false);
+		ColorPicker = serialized->get_bool(ColorPicker_type_id, false);
+		DoubleSided = serialized->get_bool(DoubleSided_type_id, true);
+		PreviewSrgb = serialized->get_bool(PreviewSrgb_type_id, true); 
 	}
 
 	[[nodiscard]] auto

@@ -9,16 +9,16 @@
 
 namespace rivet::ddl::generated {
 	InteractLocationPromptData::InteractLocationPromptData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		PromptTag = serialized->get_string(PromptTag_type_id);
-		InWorldPrompt = serialized->get_bool(InWorldPrompt_type_id);
-		POISubtype = serialized->get_enum<rivet::ddl::generated::x275d9b04>(POISubtype_type_id, rivet::ddl::generated::x275d9b04_values);
-		POIPreviewSubtype = serialized->get_enum<rivet::ddl::generated::x8d1d7e8a>(POIPreviewSubtype_type_id, rivet::ddl::generated::x8d1d7e8a_values);
-		POILOSCheck = serialized->get_bool(POILOSCheck_type_id);
-		PreviewRange = serialized->get_float(PreviewRange_type_id);
-		PromptFacingMode = serialized->get_enum<rivet::ddl::generated::x11d5b447>(PromptFacingMode_type_id, rivet::ddl::generated::x11d5b447_values);
+		PromptTag = serialized->get_string(PromptTag_type_id, "INVALID");
+		InWorldPrompt = serialized->get_bool(InWorldPrompt_type_id, true);
+		POISubtype = serialized->get_enum<rivet::ddl::generated::x275d9b04>(POISubtype_type_id, rivet::ddl::generated::x275d9b04_values, rivet::ddl::generated::x275d9b04::Pickup);
+		POIPreviewSubtype = serialized->get_enum<rivet::ddl::generated::x8d1d7e8a>(POIPreviewSubtype_type_id, rivet::ddl::generated::x8d1d7e8a_values, rivet::ddl::generated::x8d1d7e8a::Preview);
+		POILOSCheck = serialized->get_bool(POILOSCheck_type_id, false);
+		PreviewRange = serialized->get_float(PreviewRange_type_id, 4.000000);
+		PromptFacingMode = serialized->get_enum<rivet::ddl::generated::x11d5b447>(PromptFacingMode_type_id, rivet::ddl::generated::x11d5b447_values, rivet::ddl::generated::x11d5b447::Camera_facing);
 		FixedPromptForward = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(FixedPromptForward_type_id);
 		POIOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(POIOffset_type_id);
-		POILocator = serialized->get_string(POILocator_type_id); 
+		POILocator = serialized->get_string(POILocator_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

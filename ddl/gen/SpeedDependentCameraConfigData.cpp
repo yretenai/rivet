@@ -10,11 +10,11 @@
 
 namespace rivet::ddl::generated {
 	SpeedDependentCameraConfigData::SpeedDependentCameraConfigData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Speed = serialized->get_float(Speed_type_id);
+		Speed = serialized->get_float(Speed_type_id, 6.000000);
 		AimContext = serialized->unwrap_into<rivet::ddl::generated::CameraAimContextConfig>(AimContext_type_id);
 		FollowCameraConfig = serialized->unwrap_into<rivet::ddl::generated::FollowCameraUserConfig>(FollowCameraConfig_type_id);
-		UseFollowConfigOverride = serialized->get_bool(UseFollowConfigOverride_type_id);
-		AllowCameraInput = serialized->get_bool(AllowCameraInput_type_id); 
+		UseFollowConfigOverride = serialized->get_bool(UseFollowConfigOverride_type_id, false);
+		AllowCameraInput = serialized->get_bool(AllowCameraInput_type_id, true); 
 	}
 
 	[[nodiscard]] auto

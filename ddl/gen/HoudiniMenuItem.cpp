@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	HoudiniMenuItem::HoudiniMenuItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Title = serialized->get_string(Title_type_id);
-		Tooltip = serialized->get_string(Tooltip_type_id);
+		Title = serialized->get_string(Title_type_id, {});
+		Tooltip = serialized->get_string(Tooltip_type_id, {});
 		HythonCode = serialized->get_strings(HythonCode_type_id);
-		Behavior = serialized->get_enum<rivet::ddl::generated::xa1814bf4>(Behavior_type_id, rivet::ddl::generated::xa1814bf4_values); 
+		Behavior = serialized->get_enum<rivet::ddl::generated::xa1814bf4>(Behavior_type_id, rivet::ddl::generated::xa1814bf4_values, rivet::ddl::generated::xa1814bf4::Keep); 
 	}
 
 	[[nodiscard]] auto

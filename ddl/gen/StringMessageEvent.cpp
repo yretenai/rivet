@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	StringMessageEvent::StringMessageEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Message = serialized->get_string(Message_type_id); 
+		Message = serialized->get_string(Message_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

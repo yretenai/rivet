@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	NailGunPlantedShotImpactEvent::NailGunPlantedShotImpactEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		HitCount = serialized->get_int32(HitCount_type_id); 
+		HitCount = serialized->get_int32(HitCount_type_id, 1); 
 	}
 
 	[[nodiscard]] auto

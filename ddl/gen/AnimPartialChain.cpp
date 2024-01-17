@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	AnimPartialChain::AnimPartialChain([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		PartialRootName = serialized->get_string(PartialRootName_type_id);
-		PartialRamp = serialized->get_enum<rivet::ddl::generated::xcef7a1a6>(PartialRamp_type_id, rivet::ddl::generated::xcef7a1a6_values);
-		IncludeChildren = serialized->get_bool(IncludeChildren_type_id); 
+		PartialRootName = serialized->get_string(PartialRootName_type_id, {});
+		PartialRamp = serialized->get_enum<rivet::ddl::generated::xcef7a1a6>(PartialRamp_type_id, rivet::ddl::generated::xcef7a1a6_values, rivet::ddl::generated::xcef7a1a6::Zero_Step);
+		IncludeChildren = serialized->get_bool(IncludeChildren_type_id, true); 
 	}
 
 	[[nodiscard]] auto

@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	BlobDef::BlobDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		TypeName = serialized->get_string(TypeName_type_id);
+		TypeName = serialized->get_string(TypeName_type_id, {});
 		Blob = serialized->get_field(Blob_type_id); 
 	}
 

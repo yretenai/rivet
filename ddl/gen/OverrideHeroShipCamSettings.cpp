@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	OverrideHeroShipCamSettings::OverrideHeroShipCamSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		CamDefaultFOV = serialized->get_float(CamDefaultFOV_type_id);
-		CamDefaultFollowHeight = serialized->get_float(CamDefaultFollowHeight_type_id);
-		CamDefaultFollowDist = serialized->get_float(CamDefaultFollowDist_type_id);
-		CamDefaultTargetRelYOffset = serialized->get_float(CamDefaultTargetRelYOffset_type_id);
-		CamDefaultBasePitchOffset = serialized->get_float(CamDefaultBasePitchOffset_type_id); 
+		CamDefaultFOV = serialized->get_float(CamDefaultFOV_type_id, 80.389999);
+		CamDefaultFollowHeight = serialized->get_float(CamDefaultFollowHeight_type_id, 6.250000);
+		CamDefaultFollowDist = serialized->get_float(CamDefaultFollowDist_type_id, -18.500000);
+		CamDefaultTargetRelYOffset = serialized->get_float(CamDefaultTargetRelYOffset_type_id, -1.000000);
+		CamDefaultBasePitchOffset = serialized->get_float(CamDefaultBasePitchOffset_type_id, 4.050000); 
 	}
 
 	[[nodiscard]] auto

@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	HeroWetnessConfig::HeroWetnessConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		FurWetnessConstant = serialized->get_string(FurWetnessConstant_type_id);
-		FurWindStrengthConstant = serialized->get_string(FurWindStrengthConstant_type_id);
-		StrandStrengthConstant = serialized->get_string(StrandStrengthConstant_type_id);
-		TimeToWet = serialized->get_float(TimeToWet_type_id);
-		TimeToDry = serialized->get_float(TimeToDry_type_id);
-		MaxCeilingHeight = serialized->get_float(MaxCeilingHeight_type_id); 
+		FurWetnessConstant = serialized->get_string(FurWetnessConstant_type_id, "Fur_Wetness");
+		FurWindStrengthConstant = serialized->get_string(FurWindStrengthConstant_type_id, "Fur_WindStrength");
+		StrandStrengthConstant = serialized->get_string(StrandStrengthConstant_type_id, "ModelStrand_SimulationWindStrength");
+		TimeToWet = serialized->get_float(TimeToWet_type_id, 2.000000);
+		TimeToDry = serialized->get_float(TimeToDry_type_id, 5.000000);
+		MaxCeilingHeight = serialized->get_float(MaxCeilingHeight_type_id, 15.000000); 
 	}
 
 	[[nodiscard]] auto

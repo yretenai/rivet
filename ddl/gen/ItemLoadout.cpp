@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	ItemLoadout::ItemLoadout([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Name = serialized->get_string(Name_type_id);
-		FillAllOwnedAmmo = serialized->get_bool(FillAllOwnedAmmo_type_id);
+		Name = serialized->get_string(Name_type_id, "Loadout");
+		FillAllOwnedAmmo = serialized->get_bool(FillAllOwnedAmmo_type_id, false);
 		ItemLoadoutLists = serialized->unwrap_into_many<rivet::ddl::generated::ItemLoadoutList>(ItemLoadoutLists_type_id); 
 	}
 

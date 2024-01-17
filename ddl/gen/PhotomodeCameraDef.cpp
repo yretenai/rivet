@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	PhotomodeCameraDef::PhotomodeCameraDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Name = serialized->get_string(Name_type_id);
-		Description = serialized->get_string(Description_type_id);
+		Name = serialized->get_string(Name_type_id, "");
+		Description = serialized->get_string(Description_type_id, "");
 		CameraType = serialized->unwrap_into<rivet::ddl::generated::PhotomodeCameraBasePrius>(CameraType_type_id); 
 	}
 

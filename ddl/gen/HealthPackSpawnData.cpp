@@ -10,7 +10,7 @@
 namespace rivet::ddl::generated {
 	HealthPackSpawnData::HealthPackSpawnData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ActorSpawnData(serialized) {
 		SpawnPosition = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(SpawnPosition_type_id);
-		ActorAsset = serialized->get_uint64(ActorAsset_type_id); 
+		ActorAsset = serialized->get_uint64(ActorAsset_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

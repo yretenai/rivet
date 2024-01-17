@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	AimModLeadTargetGamePrius::AimModLeadTargetGamePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): AimModLeadTargetPrius(serialized) {
-		FlattenY = serialized->get_bool(FlattenY_type_id);
-		OnlyLeadLaterally = serialized->get_bool(OnlyLeadLaterally_type_id); 
+		FlattenY = serialized->get_bool(FlattenY_type_id, false);
+		OnlyLeadLaterally = serialized->get_bool(OnlyLeadLaterally_type_id, false); 
 	}
 
 	[[nodiscard]] auto

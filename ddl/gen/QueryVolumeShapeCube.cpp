@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	QueryVolumeShapeCube::QueryVolumeShapeCube([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): QueryVolumeShape(serialized) {
-		Length = serialized->get_float(Length_type_id); 
+		Length = serialized->get_float(Length_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

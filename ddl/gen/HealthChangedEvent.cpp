@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	HealthChangedEvent::HealthChangedEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		NewHealthValue = serialized->get_float(NewHealthValue_type_id); 
+		NewHealthValue = serialized->get_float(NewHealthValue_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	DropItem::DropItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DropWeapon = serialized->get_bool(DropWeapon_type_id);
-		DropAsset = serialized->get_string(DropAsset_type_id); 
+		DropWeapon = serialized->get_bool(DropWeapon_type_id, false);
+		DropAsset = serialized->get_string(DropAsset_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

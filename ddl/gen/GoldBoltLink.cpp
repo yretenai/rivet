@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	GoldBoltLink::GoldBoltLink([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ActivityLinkBase(serialized) {
-		SaveID = serialized->get_enum<rivet::ddl::generated::x7038301>(SaveID_type_id, rivet::ddl::generated::x7038301_values); 
+		SaveID = serialized->get_enum<rivet::ddl::generated::x7038301>(SaveID_type_id, rivet::ddl::generated::x7038301_values, rivet::ddl::generated::x7038301::None); 
 	}
 
 	[[nodiscard]] auto

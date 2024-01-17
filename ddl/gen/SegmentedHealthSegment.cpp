@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	SegmentedHealthSegment::SegmentedHealthSegment([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SegmentWeight = serialized->get_float(SegmentWeight_type_id);
-		RegenRateStart = serialized->get_float(RegenRateStart_type_id);
-		RegenRateFinal = serialized->get_float(RegenRateFinal_type_id);
-		RegenRateRamp = serialized->get_float(RegenRateRamp_type_id); 
+		SegmentWeight = serialized->get_float(SegmentWeight_type_id, 1.000000);
+		RegenRateStart = serialized->get_float(RegenRateStart_type_id, 1.000000);
+		RegenRateFinal = serialized->get_float(RegenRateFinal_type_id, 1.000000);
+		RegenRateRamp = serialized->get_float(RegenRateRamp_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	GetLevelIDActionPrius::GetLevelIDActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		LevelEnum = serialized->get_enum<rivet::ddl::generated::LevelEnum>(LevelEnum_type_id, rivet::ddl::generated::LevelEnum_values); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Macro);
+		LevelEnum = serialized->get_enum<rivet::ddl::generated::LevelEnum>(LevelEnum_type_id, rivet::ddl::generated::LevelEnum_values, rivet::ddl::generated::LevelEnum::None); 
 	}
 
 	[[nodiscard]] auto

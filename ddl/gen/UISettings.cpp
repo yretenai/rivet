@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	UISettings::UISettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MultiThreaded = serialized->get_bool(MultiThreaded_type_id);
-		ThreadStackSize = serialized->get_uint32(ThreadStackSize_type_id);
-		ShowViewMenu = serialized->get_bool(ShowViewMenu_type_id);
-		DebugPOIs = serialized->get_bool(DebugPOIs_type_id);
-		DebugSkipAutoLoad = serialized->get_bool(DebugSkipAutoLoad_type_id); 
+		MultiThreaded = serialized->get_bool(MultiThreaded_type_id, false);
+		ThreadStackSize = serialized->get_uint32(ThreadStackSize_type_id, 49152);
+		ShowViewMenu = serialized->get_bool(ShowViewMenu_type_id, false);
+		DebugPOIs = serialized->get_bool(DebugPOIs_type_id, false);
+		DebugSkipAutoLoad = serialized->get_bool(DebugSkipAutoLoad_type_id, false); 
 	}
 
 	[[nodiscard]] auto

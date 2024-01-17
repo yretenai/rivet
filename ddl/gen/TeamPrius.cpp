@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	TeamPrius::TeamPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Team = serialized->get_enum<rivet::ddl::generated::xc115d639>(Team_type_id, rivet::ddl::generated::xc115d639_values); 
+		Team = serialized->get_enum<rivet::ddl::generated::xc115d639>(Team_type_id, rivet::ddl::generated::xc115d639_values, rivet::ddl::generated::xc115d639::None); 
 	}
 
 	[[nodiscard]] auto

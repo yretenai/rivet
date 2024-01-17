@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	IcicleBlastCloudSpawnData::IcicleBlastCloudSpawnData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): AttachableShotSpawnData(serialized) {
-		GasElementActor = serialized->get_uint64(GasElementActor_type_id); 
+		GasElementActor = serialized->get_uint64(GasElementActor_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

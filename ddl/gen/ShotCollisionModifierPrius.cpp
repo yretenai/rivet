@@ -11,7 +11,7 @@
 
 namespace rivet::ddl::generated {
 	ShotCollisionModifierPrius::ShotCollisionModifierPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ResultFlags = serialized->get_bitset<rivet::ddl::generated::xb40c5ac8>(ResultFlags_type_id, rivet::ddl::generated::xb40c5ac8_values); 
+		ResultFlags = serialized->get_bitset<rivet::ddl::generated::xb40c5ac8>(ResultFlags_type_id, rivet::ddl::generated::xb40c5ac8_values, 1); 
 	}
 
 	[[nodiscard]] auto

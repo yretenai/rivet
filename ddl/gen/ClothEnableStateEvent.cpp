@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	ClothEnableStateEvent::ClothEnableStateEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		StateName = serialized->get_string(StateName_type_id);
-		EnableBlending = serialized->get_bool(EnableBlending_type_id); 
+		StateName = serialized->get_string(StateName_type_id, {});
+		EnableBlending = serialized->get_bool(EnableBlending_type_id, true); 
 	}
 
 	[[nodiscard]] auto

@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	FossilizeBeardAttacherPrius::FossilizeBeardAttacherPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		BeardActor = serialized->get_string(BeardActor_type_id); 
+		BeardActor = serialized->get_string(BeardActor_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

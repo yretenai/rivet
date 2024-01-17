@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	CameraRotationInputData::CameraRotationInputData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		YawMin = serialized->get_float(YawMin_type_id);
-		YawMax = serialized->get_float(YawMax_type_id);
-		PitchMin = serialized->get_float(PitchMin_type_id);
-		PitchMax = serialized->get_float(PitchMax_type_id);
-		ZeroSettle = serialized->get_bool(ZeroSettle_type_id);
-		StickConfig = serialized->get_string(StickConfig_type_id); 
+		YawMin = serialized->get_float(YawMin_type_id, 0.000000);
+		YawMax = serialized->get_float(YawMax_type_id, 0.000000);
+		PitchMin = serialized->get_float(PitchMin_type_id, 0.000000);
+		PitchMax = serialized->get_float(PitchMax_type_id, 0.000000);
+		ZeroSettle = serialized->get_bool(ZeroSettle_type_id, true);
+		StickConfig = serialized->get_string(StickConfig_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

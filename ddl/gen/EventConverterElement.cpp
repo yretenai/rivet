@@ -9,10 +9,10 @@
 
 namespace rivet::ddl::generated {
 	EventConverterElement::EventConverterElement([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		InputEventName = serialized->get_string(InputEventName_type_id);
-		onDerivedEvent = serialized->get_bool(onDerivedEvent_type_id);
+		InputEventName = serialized->get_string(InputEventName_type_id, {});
+		onDerivedEvent = serialized->get_bool(onDerivedEvent_type_id, true);
 		Outputs = serialized->unwrap_into_many<rivet::ddl::generated::EventListElement>(Outputs_type_id);
-		PlayedOnce = serialized->get_bool(PlayedOnce_type_id); 
+		PlayedOnce = serialized->get_bool(PlayedOnce_type_id, false); 
 	}
 
 	[[nodiscard]] auto

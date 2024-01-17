@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	KnockdownData::KnockdownData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Driver = serialized->get_string(Driver_type_id);
+		Driver = serialized->get_string(Driver_type_id, "React_Knockdown");
 		Normal = serialized->unwrap_into<rivet::ddl::generated::ScaleData>(Normal_type_id);
 		Blast = serialized->unwrap_into<rivet::ddl::generated::ScaleData>(Blast_type_id); 
 	}

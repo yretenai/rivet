@@ -9,11 +9,11 @@
 
 namespace rivet::ddl::generated {
 	CreatePersistantAOEPrius::CreatePersistantAOEPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ScriptedShotEffectBasePrius(serialized) {
-		RepeatTime = serialized->get_float(RepeatTime_type_id);
-		LifeTime = serialized->get_float(LifeTime_type_id);
-		UpdateInterval = serialized->get_float(UpdateInterval_type_id);
-		Radius = serialized->get_float(Radius_type_id);
-		LOS = serialized->get_bool(LOS_type_id);
+		RepeatTime = serialized->get_float(RepeatTime_type_id, 0.500000);
+		LifeTime = serialized->get_float(LifeTime_type_id, 3.000000);
+		UpdateInterval = serialized->get_float(UpdateInterval_type_id, 0.500000);
+		Radius = serialized->get_float(Radius_type_id, 1.000000);
+		LOS = serialized->get_bool(LOS_type_id, true);
 		AOEEffects = serialized->unwrap_into_many<rivet::ddl::generated::ScriptedShotEffectListElement>(AOEEffects_type_id); 
 	}
 

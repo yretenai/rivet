@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	DecalTrailAttributes::DecalTrailAttributes([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		KeyFrameAccessType = serialized->get_enum<rivet::ddl::generated::KeyFrameAccessType>(KeyFrameAccessType_type_id, rivet::ddl::generated::KeyFrameAccessType_values);
-		DisplayTrailBounds = serialized->get_bool(DisplayTrailBounds_type_id);
-		SkipSkinnedMeshes = serialized->get_bool(SkipSkinnedMeshes_type_id);
-		SegmentLifetime = serialized->get_float(SegmentLifetime_type_id);
-		SegmentSize = serialized->get_float(SegmentSize_type_id);
-		MaxLength = serialized->get_float(MaxLength_type_id); 
+		KeyFrameAccessType = serialized->get_enum<rivet::ddl::generated::KeyFrameAccessType>(KeyFrameAccessType_type_id, rivet::ddl::generated::KeyFrameAccessType_values, rivet::ddl::generated::KeyFrameAccessType::Age);
+		DisplayTrailBounds = serialized->get_bool(DisplayTrailBounds_type_id, true);
+		SkipSkinnedMeshes = serialized->get_bool(SkipSkinnedMeshes_type_id, true);
+		SegmentLifetime = serialized->get_float(SegmentLifetime_type_id, 1.000000);
+		SegmentSize = serialized->get_float(SegmentSize_type_id, 0.100000);
+		MaxLength = serialized->get_float(MaxLength_type_id, 16.000000); 
 	}
 
 	[[nodiscard]] auto

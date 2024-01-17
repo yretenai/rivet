@@ -9,9 +9,9 @@
 
 namespace rivet::ddl::generated {
 	EnterVolumeTriggerPrius::EnterVolumeTriggerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		OnEnterMode = serialized->get_enum<rivet::ddl::generated::xda924f99>(OnEnterMode_type_id, rivet::ddl::generated::xda924f99_values);
+		OnEnterMode = serialized->get_enum<rivet::ddl::generated::xda924f99>(OnEnterMode_type_id, rivet::ddl::generated::xda924f99_values, rivet::ddl::generated::xda924f99::OnAnyEnter);
 		OnEnterEvent = serialized->unwrap_into<rivet::ddl::generated::EventBase>(OnEnterEvent_type_id);
-		OnExitMode = serialized->get_enum<rivet::ddl::generated::x1343dca9>(OnExitMode_type_id, rivet::ddl::generated::x1343dca9_values);
+		OnExitMode = serialized->get_enum<rivet::ddl::generated::x1343dca9>(OnExitMode_type_id, rivet::ddl::generated::x1343dca9_values, rivet::ddl::generated::x1343dca9::OnAnyExit);
 		OnExitEvent = serialized->unwrap_into<rivet::ddl::generated::EventBase>(OnExitEvent_type_id); 
 	}
 

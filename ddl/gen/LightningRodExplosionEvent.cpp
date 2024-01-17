@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	LightningRodExplosionEvent::LightningRodExplosionEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		IsSwarmer = serialized->get_bool(IsSwarmer_type_id); 
+		IsSwarmer = serialized->get_bool(IsSwarmer_type_id, false); 
 	}
 
 	[[nodiscard]] auto

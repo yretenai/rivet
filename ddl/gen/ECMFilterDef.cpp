@@ -12,12 +12,12 @@
 
 namespace rivet::ddl::generated {
 	ECMFilterDef::ECMFilterDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Id = serialized->get_uint64(Id_type_id);
-		Index = serialized->get_int32(Index_type_id);
-		Enabled = serialized->get_bool(Enabled_type_id);
-		Name = serialized->get_string(Name_type_id);
-		ContinueType = serialized->get_enum<rivet::ddl::generated::x97f06575>(ContinueType_type_id, rivet::ddl::generated::x97f06575_values);
-		Scope = serialized->get_enum<rivet::ddl::generated::x3c7c71d2>(Scope_type_id, rivet::ddl::generated::x3c7c71d2_values);
+		Id = serialized->get_uint64(Id_type_id, 0);
+		Index = serialized->get_int32(Index_type_id, 0);
+		Enabled = serialized->get_bool(Enabled_type_id, true);
+		Name = serialized->get_string(Name_type_id, {});
+		ContinueType = serialized->get_enum<rivet::ddl::generated::x97f06575>(ContinueType_type_id, rivet::ddl::generated::x97f06575_values, rivet::ddl::generated::x97f06575::Unresponded_Systems);
+		Scope = serialized->get_enum<rivet::ddl::generated::x3c7c71d2>(Scope_type_id, rivet::ddl::generated::x3c7c71d2_values, rivet::ddl::generated::x3c7c71d2::Self_Event_Only);
 		SelectorNodes = serialized->unwrap_into_many<rivet::ddl::generated::ECMSelectorNodeDef>(SelectorNodes_type_id);
 		InputNodes = serialized->unwrap_into_many<rivet::ddl::generated::ECMInputNodeDef>(InputNodes_type_id);
 		CommentNodes = serialized->unwrap_into_many<rivet::ddl::generated::ECMCommentNodeDef>(CommentNodes_type_id);

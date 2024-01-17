@@ -9,11 +9,11 @@
 
 namespace rivet::ddl::generated {
 	StructuredLogAnimDriverVar::StructuredLogAnimDriverVar([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): StructuredLogStatement(serialized) {
-		Flags = serialized->get_bitset<rivet::ddl::generated::x9bcbd6ed>(Flags_type_id, rivet::ddl::generated::x9bcbd6ed_values);
-		Float = serialized->get_float(Float_type_id);
+		Flags = serialized->get_bitset<rivet::ddl::generated::x9bcbd6ed>(Flags_type_id, rivet::ddl::generated::x9bcbd6ed_values, 0);
+		Float = serialized->get_float(Float_type_id, 0.000000);
 		Vec2 = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(Vec2_type_id);
-		NameHash = serialized->get_uint32(NameHash_type_id);
-		Type = serialized->get_enum<rivet::ddl::generated::x6c25f7e9>(Type_type_id, rivet::ddl::generated::x6c25f7e9_values); 
+		NameHash = serialized->get_uint32(NameHash_type_id, 0);
+		Type = serialized->get_enum<rivet::ddl::generated::x6c25f7e9>(Type_type_id, rivet::ddl::generated::x6c25f7e9_values, rivet::ddl::generated::x6c25f7e9::TypeInt); 
 	}
 
 	[[nodiscard]] auto

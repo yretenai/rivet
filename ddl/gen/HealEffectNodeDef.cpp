@@ -10,7 +10,7 @@
 namespace rivet::ddl::generated {
 	HealEffectNodeDef::HealEffectNodeDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): NodalShotEffectNodeBaseDef(serialized) {
 		HealAmount = serialized->unwrap_into<rivet::ddl::generated::InputPlugFloat>(HealAmount_type_id);
-		ActorType = serialized->get_enum<rivet::ddl::generated::x684c6439>(ActorType_type_id, rivet::ddl::generated::x684c6439_values); 
+		ActorType = serialized->get_enum<rivet::ddl::generated::x684c6439>(ActorType_type_id, rivet::ddl::generated::x684c6439_values, rivet::ddl::generated::x684c6439::HitActor); 
 	}
 
 	[[nodiscard]] auto

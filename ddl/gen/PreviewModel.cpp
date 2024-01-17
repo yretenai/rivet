@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	PreviewModel::PreviewModel([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Model = serialized->get_string(Model_type_id);
-		Outlined = serialized->get_bool(Outlined_type_id);
+		Model = serialized->get_string(Model_type_id, "Sphere");
+		Outlined = serialized->get_bool(Outlined_type_id, false);
 		MaterialMappings = serialized->unwrap_into_many<rivet::ddl::generated::PreviewMaterialMapping>(MaterialMappings_type_id); 
 	}
 

@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	WallRunPrius::WallRunPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		CenteringMode = serialized->get_enum<rivet::ddl::generated::x3e452084>(CenteringMode_type_id, rivet::ddl::generated::x3e452084_values);
-		InitialDirection = serialized->get_enum<rivet::ddl::generated::x46ba7b62>(InitialDirection_type_id, rivet::ddl::generated::x46ba7b62_values);
-		VerticalExtent = serialized->get_float(VerticalExtent_type_id); 
+		CenteringMode = serialized->get_enum<rivet::ddl::generated::x3e452084>(CenteringMode_type_id, rivet::ddl::generated::x3e452084_values, rivet::ddl::generated::x3e452084::None);
+		InitialDirection = serialized->get_enum<rivet::ddl::generated::x46ba7b62>(InitialDirection_type_id, rivet::ddl::generated::x46ba7b62_values, rivet::ddl::generated::x46ba7b62::None);
+		VerticalExtent = serialized->get_float(VerticalExtent_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

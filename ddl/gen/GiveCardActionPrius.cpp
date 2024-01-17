@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	GiveCardActionPrius::GiveCardActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		CardID = serialized->get_enum<rivet::ddl::generated::x507460e6>(CardID_type_id, rivet::ddl::generated::x507460e6_values); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Inventory);
+		CardID = serialized->get_enum<rivet::ddl::generated::x507460e6>(CardID_type_id, rivet::ddl::generated::x507460e6_values, rivet::ddl::generated::x507460e6::Random); 
 	}
 
 	[[nodiscard]] auto

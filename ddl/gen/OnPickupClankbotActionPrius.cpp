@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	OnPickupClankbotActionPrius::OnPickupClankbotActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		Role = serialized->get_enum<rivet::ddl::generated::x190611d9>(Role_type_id, rivet::ddl::generated::x190611d9_values);
-		InitListening = serialized->get_bool(InitListening_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Events);
+		Role = serialized->get_enum<rivet::ddl::generated::x190611d9>(Role_type_id, rivet::ddl::generated::x190611d9_values, rivet::ddl::generated::x190611d9::Base);
+		InitListening = serialized->get_bool(InitListening_type_id, true); 
 	}
 
 	[[nodiscard]] auto

@@ -9,14 +9,14 @@
 
 namespace rivet::ddl::generated {
 	PlanetMap::PlanetMap([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Map = serialized->get_enum<rivet::ddl::generated::xd64fa9b1>(Map_type_id, rivet::ddl::generated::xd64fa9b1_values);
-		MapTexture = serialized->get_string(MapTexture_type_id);
+		Map = serialized->get_enum<rivet::ddl::generated::xd64fa9b1>(Map_type_id, rivet::ddl::generated::xd64fa9b1_values, rivet::ddl::generated::xd64fa9b1::None);
+		MapTexture = serialized->get_string(MapTexture_type_id, {});
 		MapMin = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(MapMin_type_id);
 		MapMax = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(MapMax_type_id);
-		MapZoomMax = serialized->get_float(MapZoomMax_type_id);
-		MapZoomDefault = serialized->get_float(MapZoomDefault_type_id);
-		MapRevealSize = serialized->get_float(MapRevealSize_type_id);
-		MapCellSize = serialized->get_float(MapCellSize_type_id); 
+		MapZoomMax = serialized->get_float(MapZoomMax_type_id, 500.000000);
+		MapZoomDefault = serialized->get_float(MapZoomDefault_type_id, 500.000000);
+		MapRevealSize = serialized->get_float(MapRevealSize_type_id, 20.000000);
+		MapCellSize = serialized->get_float(MapCellSize_type_id, 2.000000); 
 	}
 
 	[[nodiscard]] auto

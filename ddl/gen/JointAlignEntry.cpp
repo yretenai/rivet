@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	JointAlignEntry::JointAlignEntry([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		JointName = serialized->get_string(JointName_type_id);
-		Weight = serialized->get_float(Weight_type_id);
-		ApplyToChildren = serialized->get_bool(ApplyToChildren_type_id); 
+		JointName = serialized->get_string(JointName_type_id, "");
+		Weight = serialized->get_float(Weight_type_id, -1.000000);
+		ApplyToChildren = serialized->get_bool(ApplyToChildren_type_id, false); 
 	}
 
 	[[nodiscard]] auto

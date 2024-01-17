@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	MeleeActivatedButtonPrius::MeleeActivatedButtonPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		InteractionMode = serialized->get_enum<rivet::ddl::generated::xc2d17b4c>(InteractionMode_type_id, rivet::ddl::generated::xc2d17b4c_values);
-		RetriggerDelay = serialized->get_float(RetriggerDelay_type_id);
+		InteractionMode = serialized->get_enum<rivet::ddl::generated::xc2d17b4c>(InteractionMode_type_id, rivet::ddl::generated::xc2d17b4c_values, rivet::ddl::generated::xc2d17b4c::Slam);
+		RetriggerDelay = serialized->get_float(RetriggerDelay_type_id, 1.000000);
 		ButtonPositionOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(ButtonPositionOffset_type_id); 
 	}
 

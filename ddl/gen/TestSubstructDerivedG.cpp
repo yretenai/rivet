@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	TestSubstructDerivedG::TestSubstructDerivedG([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Foo = serialized->get_string(Foo_type_id); 
+		Foo = serialized->get_string(Foo_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

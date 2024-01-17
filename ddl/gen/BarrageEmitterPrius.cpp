@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	BarrageEmitterPrius::BarrageEmitterPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): WeaponEmitterBasePrius(serialized) {
-		EmitFromUser = serialized->get_bool(EmitFromUser_type_id); 
+		EmitFromUser = serialized->get_bool(EmitFromUser_type_id, false); 
 	}
 
 	[[nodiscard]] auto

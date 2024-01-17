@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	SetTeamEvent::SetTeamEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Team = serialized->get_enum<rivet::ddl::generated::xc115d639>(Team_type_id, rivet::ddl::generated::xc115d639_values); 
+		Team = serialized->get_enum<rivet::ddl::generated::xc115d639>(Team_type_id, rivet::ddl::generated::xc115d639_values, rivet::ddl::generated::xc115d639::None); 
 	}
 
 	[[nodiscard]] auto

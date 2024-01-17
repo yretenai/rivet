@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	VaultViewerHighlightMaterial::VaultViewerHighlightMaterial([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MaterialMappingName = serialized->get_string(MaterialMappingName_type_id);
-		LunaName = serialized->get_string(LunaName_type_id);
-		Highlight = serialized->get_bool(Highlight_type_id); 
+		MaterialMappingName = serialized->get_string(MaterialMappingName_type_id, {});
+		LunaName = serialized->get_string(LunaName_type_id, {});
+		Highlight = serialized->get_bool(Highlight_type_id, false); 
 	}
 
 	[[nodiscard]] auto

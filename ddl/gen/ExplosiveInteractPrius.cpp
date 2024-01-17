@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ExplosiveInteractPrius::ExplosiveInteractPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): SlottedInteractObjectPrius(serialized) {
-		SwapTarget = serialized->get_string(SwapTarget_type_id); 
+		SwapTarget = serialized->get_string(SwapTarget_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	OverrideBotComboConfigScriptActionPrius::OverrideBotComboConfigScriptActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		OverrideComboConfig = serialized->get_string(OverrideComboConfig_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Enemy_Bot);
+		OverrideComboConfig = serialized->get_string(OverrideComboConfig_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

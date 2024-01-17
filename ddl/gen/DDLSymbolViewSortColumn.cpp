@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	DDLSymbolViewSortColumn::DDLSymbolViewSortColumn([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Column = serialized->get_string(Column_type_id);
-		IsAscending = serialized->get_bool(IsAscending_type_id); 
+		Column = serialized->get_string(Column_type_id, "Name");
+		IsAscending = serialized->get_bool(IsAscending_type_id, true); 
 	}
 
 	[[nodiscard]] auto

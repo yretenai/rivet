@@ -17,8 +17,8 @@
 namespace rivet::ddl::generated {
 	WeaponConfigBase::WeaponConfigBase([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
 		Prius = serialized->unwrap_into<rivet::ddl::generated::WeaponBasePrius>(Prius_type_id);
-		MacroType = serialized->get_enum<rivet::ddl::generated::x63d44ada>(MacroType_type_id, rivet::ddl::generated::x63d44ada_values);
-		DefFlags = serialized->get_bitset<rivet::ddl::generated::x40175545>(DefFlags_type_id, rivet::ddl::generated::x40175545_values);
+		MacroType = serialized->get_enum<rivet::ddl::generated::x63d44ada>(MacroType_type_id, rivet::ddl::generated::x63d44ada_values, rivet::ddl::generated::x63d44ada::None);
+		DefFlags = serialized->get_bitset<rivet::ddl::generated::x40175545>(DefFlags_type_id, rivet::ddl::generated::x40175545_values, 0);
 		EmitterList = serialized->unwrap_into_many<rivet::ddl::generated::WeaponEmitterDataListItem>(EmitterList_type_id);
 		AmmoList = serialized->unwrap_into_many<rivet::ddl::generated::WeaponAmmoDataListItem>(AmmoList_type_id);
 		ShotList = serialized->unwrap_into_many<rivet::ddl::generated::WeaponShotDataListItem>(ShotList_type_id);

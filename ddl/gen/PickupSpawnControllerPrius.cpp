@@ -9,13 +9,13 @@
 
 namespace rivet::ddl::generated {
 	PickupSpawnControllerPrius::PickupSpawnControllerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SpawnLocationGroup = serialized->get_uint64(SpawnLocationGroup_type_id);
-		PickupActor = serialized->get_string(PickupActor_type_id);
-		StartActive = serialized->get_int32(StartActive_type_id);
-		FillMax = serialized->get_int32(FillMax_type_id);
-		MinHeroDistance = serialized->get_float(MinHeroDistance_type_id);
-		MinSpawnDelay = serialized->get_float(MinSpawnDelay_type_id);
-		MaxSpawnDelay = serialized->get_float(MaxSpawnDelay_type_id); 
+		SpawnLocationGroup = serialized->get_uint64(SpawnLocationGroup_type_id, 0);
+		PickupActor = serialized->get_string(PickupActor_type_id, {});
+		StartActive = serialized->get_int32(StartActive_type_id, -1);
+		FillMax = serialized->get_int32(FillMax_type_id, -1);
+		MinHeroDistance = serialized->get_float(MinHeroDistance_type_id, 0.000000);
+		MinSpawnDelay = serialized->get_float(MinSpawnDelay_type_id, 3.000000);
+		MaxSpawnDelay = serialized->get_float(MaxSpawnDelay_type_id, 6.000000); 
 	}
 
 	[[nodiscard]] auto

@@ -10,7 +10,7 @@
 namespace rivet::ddl::generated {
 	LevelSpecificLooksPrius::LevelSpecificLooksPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		LevelLooks = serialized->unwrap_into_many<rivet::ddl::generated::LevelLookPair>(LevelLooks_type_id);
-		DefaultLookGroupName = serialized->get_string(DefaultLookGroupName_type_id); 
+		DefaultLookGroupName = serialized->get_string(DefaultLookGroupName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

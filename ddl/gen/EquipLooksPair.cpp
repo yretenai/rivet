@@ -9,7 +9,7 @@ namespace rivet::ddl::generated {
 	EquipLooksPair::EquipLooksPair([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		EquippedLooks = serialized->get_strings(EquippedLooks_type_id);
 		UnequippedLooks = serialized->get_strings(UnequippedLooks_type_id);
-		SoundSwitchGroupName = serialized->get_string(SoundSwitchGroupName_type_id); 
+		SoundSwitchGroupName = serialized->get_string(SoundSwitchGroupName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

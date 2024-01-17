@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	UI_WwiseVariantGroup::UI_WwiseVariantGroup([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Action = serialized->get_enum<rivet::ddl::generated::x38ca42>(Action_type_id, rivet::ddl::generated::x38ca42_values);
+		Action = serialized->get_enum<rivet::ddl::generated::x38ca42>(Action_type_id, rivet::ddl::generated::x38ca42_values, rivet::ddl::generated::x38ca42::Trigger);
 		WwiseItem = serialized->unwrap_into<rivet::ddl::generated::UI_WwiseVariant>(WwiseItem_type_id); 
 	}
 

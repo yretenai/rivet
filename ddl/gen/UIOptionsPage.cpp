@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	UIOptionsPage::UIOptionsPage([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		PageID = serialized->get_enum<rivet::ddl::generated::x58b2a3a9>(PageID_type_id, rivet::ddl::generated::x58b2a3a9_values);
-		Label = serialized->get_string(Label_type_id);
+		PageID = serialized->get_enum<rivet::ddl::generated::x58b2a3a9>(PageID_type_id, rivet::ddl::generated::x58b2a3a9_values, rivet::ddl::generated::x58b2a3a9::PageMain);
+		Label = serialized->get_string(Label_type_id, {});
 		Options = serialized->unwrap_into_many<rivet::ddl::generated::UIOption>(Options_type_id); 
 	}
 

@@ -9,9 +9,9 @@
 
 namespace rivet::ddl::generated {
 	HoverbootSurfaceDeformationData::HoverbootSurfaceDeformationData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SurfaceDeformerActor = serialized->get_string(SurfaceDeformerActor_type_id);
-		LeftFootLocator = serialized->get_string(LeftFootLocator_type_id);
-		RightFootLocator = serialized->get_string(RightFootLocator_type_id);
+		SurfaceDeformerActor = serialized->get_string(SurfaceDeformerActor_type_id, {});
+		LeftFootLocator = serialized->get_string(LeftFootLocator_type_id, {});
+		RightFootLocator = serialized->get_string(RightFootLocator_type_id, {});
 		AttachmentOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(AttachmentOffset_type_id); 
 	}
 

@@ -10,7 +10,7 @@
 namespace rivet::ddl::generated {
 	RegionMacroEconomyConfig::RegionMacroEconomyConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
 		EconomyEntries = serialized->unwrap_into_many<rivet::ddl::generated::RegionMacroEconomyEntry>(EconomyEntries_type_id);
-		DefaultEconConfig = serialized->get_string(DefaultEconConfig_type_id); 
+		DefaultEconConfig = serialized->get_string(DefaultEconConfig_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

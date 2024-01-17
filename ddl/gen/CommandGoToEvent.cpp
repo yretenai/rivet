@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	CommandGoToEvent::CommandGoToEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): CommandEvent(serialized) {
-		Attack = serialized->get_bool(Attack_type_id);
-		Run = serialized->get_bool(Run_type_id);
-		FaceDestinationDirectionOnArrival = serialized->get_bool(FaceDestinationDirectionOnArrival_type_id);
-		KeepTrying = serialized->get_bool(KeepTrying_type_id); 
+		Attack = serialized->get_bool(Attack_type_id, false);
+		Run = serialized->get_bool(Run_type_id, false);
+		FaceDestinationDirectionOnArrival = serialized->get_bool(FaceDestinationDirectionOnArrival_type_id, false);
+		KeepTrying = serialized->get_bool(KeepTrying_type_id, true); 
 	}
 
 	[[nodiscard]] auto

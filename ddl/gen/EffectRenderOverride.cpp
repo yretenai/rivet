@@ -10,12 +10,12 @@
 
 namespace rivet::ddl::generated {
 	EffectRenderOverride::EffectRenderOverride([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Name = serialized->get_string(Name_type_id);
-		Type = serialized->get_enum<rivet::ddl::generated::x39013cd>(Type_type_id, rivet::ddl::generated::x39013cd_values);
+		Name = serialized->get_string(Name_type_id, {});
+		Type = serialized->get_enum<rivet::ddl::generated::x39013cd>(Type_type_id, rivet::ddl::generated::x39013cd_values, rivet::ddl::generated::x39013cd::Constant);
 		Constants = serialized->unwrap_into<rivet::ddl::generated::DDLVector4>(Constants_type_id);
 		Color = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Color_type_id);
-		Texture = serialized->get_string(Texture_type_id);
-		LightHandle = serialized->get_uint32(LightHandle_type_id); 
+		Texture = serialized->get_string(Texture_type_id, {});
+		LightHandle = serialized->get_uint32(LightHandle_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

@@ -7,24 +7,24 @@
 
 namespace rivet::ddl::generated {
 	AimAssistTargetSelection::AimAssistTargetSelection([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		PersistenceZoneFactor = serialized->get_float(PersistenceZoneFactor_type_id);
-		PersistenceHoldTime = serialized->get_float(PersistenceHoldTime_type_id);
-		PersistenceInnerTime = serialized->get_float(PersistenceInnerTime_type_id);
-		PersistenceInnerMod = serialized->get_float(PersistenceInnerMod_type_id);
-		SelectPersistScale = serialized->get_float(SelectPersistScale_type_id);
-		SelectCameraOnScale = serialized->get_float(SelectCameraOnScale_type_id);
-		SelectAngleWeight = serialized->get_float(SelectAngleWeight_type_id);
-		SelectDistanceWeight = serialized->get_float(SelectDistanceWeight_type_id);
-		SelectRecentDamageScale = serialized->get_float(SelectRecentDamageScale_type_id);
-		SelectRecentDamageTime = serialized->get_float(SelectRecentDamageTime_type_id);
-		TargetSearchAngle = serialized->get_float(TargetSearchAngle_type_id);
-		TargetSearchAnglePitch = serialized->get_float(TargetSearchAnglePitch_type_id);
-		UseSearchAngleFromUser = serialized->get_bool(UseSearchAngleFromUser_type_id);
-		UseSearchAngleSeparatePitch = serialized->get_bool(UseSearchAngleSeparatePitch_type_id);
-		AutoTargetOuterRange = serialized->get_float(AutoTargetOuterRange_type_id);
-		AutoTargetOuterAngle = serialized->get_float(AutoTargetOuterAngle_type_id);
-		AutoTargetOuterRangeTrav = serialized->get_float(AutoTargetOuterRangeTrav_type_id);
-		AutoTargetOuterAngleTrav = serialized->get_float(AutoTargetOuterAngleTrav_type_id); 
+		PersistenceZoneFactor = serialized->get_float(PersistenceZoneFactor_type_id, 0.500000);
+		PersistenceHoldTime = serialized->get_float(PersistenceHoldTime_type_id, 1.500000);
+		PersistenceInnerTime = serialized->get_float(PersistenceInnerTime_type_id, 0.700000);
+		PersistenceInnerMod = serialized->get_float(PersistenceInnerMod_type_id, 3.000000);
+		SelectPersistScale = serialized->get_float(SelectPersistScale_type_id, 1.020000);
+		SelectCameraOnScale = serialized->get_float(SelectCameraOnScale_type_id, 1.000000);
+		SelectAngleWeight = serialized->get_float(SelectAngleWeight_type_id, 1.000000);
+		SelectDistanceWeight = serialized->get_float(SelectDistanceWeight_type_id, 0.100000);
+		SelectRecentDamageScale = serialized->get_float(SelectRecentDamageScale_type_id, 1.000000);
+		SelectRecentDamageTime = serialized->get_float(SelectRecentDamageTime_type_id, 1.000000);
+		TargetSearchAngle = serialized->get_float(TargetSearchAngle_type_id, 25.000000);
+		TargetSearchAnglePitch = serialized->get_float(TargetSearchAnglePitch_type_id, 25.000000);
+		UseSearchAngleFromUser = serialized->get_bool(UseSearchAngleFromUser_type_id, false);
+		UseSearchAngleSeparatePitch = serialized->get_bool(UseSearchAngleSeparatePitch_type_id, false);
+		AutoTargetOuterRange = serialized->get_float(AutoTargetOuterRange_type_id, 2.000000);
+		AutoTargetOuterAngle = serialized->get_float(AutoTargetOuterAngle_type_id, 2.000000);
+		AutoTargetOuterRangeTrav = serialized->get_float(AutoTargetOuterRangeTrav_type_id, 2.000000);
+		AutoTargetOuterAngleTrav = serialized->get_float(AutoTargetOuterAngleTrav_type_id, 2.000000); 
 	}
 
 	[[nodiscard]] auto

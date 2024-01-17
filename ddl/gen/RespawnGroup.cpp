@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	RespawnGroup::RespawnGroup([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ResettableActors = serialized->get_uint64(ResettableActors_type_id);
-		RespawnAsset = serialized->get_string(RespawnAsset_type_id);
-		RespawnWhenAnyCrateDestroyed = serialized->get_bool(RespawnWhenAnyCrateDestroyed_type_id); 
+		ResettableActors = serialized->get_uint64(ResettableActors_type_id, 0);
+		RespawnAsset = serialized->get_string(RespawnAsset_type_id, {});
+		RespawnWhenAnyCrateDestroyed = serialized->get_bool(RespawnWhenAnyCrateDestroyed_type_id, false); 
 	}
 
 	[[nodiscard]] auto

@@ -9,11 +9,11 @@
 
 namespace rivet::ddl::generated {
 	NavMeshObstructionPrius::NavMeshObstructionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		EnableOnLoad = serialized->get_bool(EnableOnLoad_type_id);
+		EnableOnLoad = serialized->get_bool(EnableOnLoad_type_id, false);
 		Shape = serialized->unwrap_into<rivet::ddl::generated::NavMeshObstructionShapeBase>(Shape_type_id);
-		Mode = serialized->get_enum<rivet::ddl::generated::x464e86be>(Mode_type_id, rivet::ddl::generated::x464e86be_values);
-		CheckStationary = serialized->get_bool(CheckStationary_type_id);
-		RotationLocator = serialized->get_string(RotationLocator_type_id); 
+		Mode = serialized->get_enum<rivet::ddl::generated::x464e86be>(Mode_type_id, rivet::ddl::generated::x464e86be_values, rivet::ddl::generated::x464e86be::Batched_Static);
+		CheckStationary = serialized->get_bool(CheckStationary_type_id, true);
+		RotationLocator = serialized->get_string(RotationLocator_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

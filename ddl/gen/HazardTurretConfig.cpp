@@ -9,10 +9,10 @@
 
 namespace rivet::ddl::generated {
 	HazardTurretConfig::HazardTurretConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		MaxHP = serialized->get_float(MaxHP_type_id);
+		MaxHP = serialized->get_float(MaxHP_type_id, 100.000000);
 		Targeting = serialized->unwrap_into<rivet::ddl::generated::HazardTurretTargeting>(Targeting_type_id);
-		BurstShots = serialized->get_int32(BurstShots_type_id);
-		CooldownDuration = serialized->get_float(CooldownDuration_type_id); 
+		BurstShots = serialized->get_int32(BurstShots_type_id, 10);
+		CooldownDuration = serialized->get_float(CooldownDuration_type_id, 3.000000); 
 	}
 
 	[[nodiscard]] auto

@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	WeakspotModelSwapPrius::WeakspotModelSwapPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): WeakspotDestructiblePrius(serialized) {
-		DefaultModel = serialized->get_string(DefaultModel_type_id);
-		DestroyedModel = serialized->get_string(DestroyedModel_type_id);
+		DefaultModel = serialized->get_string(DefaultModel_type_id, {});
+		DestroyedModel = serialized->get_string(DestroyedModel_type_id, {});
 		IntermediateModels = serialized->unwrap_into_many<rivet::ddl::generated::WeakspotModelData>(IntermediateModels_type_id); 
 	}
 

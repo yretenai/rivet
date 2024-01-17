@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	WeaponSchrodingerPrius::WeaponSchrodingerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): WeaponGamePrius(serialized) {
-		AttachActor = serialized->get_string(AttachActor_type_id);
-		AttachLocator = serialized->get_string(AttachLocator_type_id);
-		AttachActorScale = serialized->get_float(AttachActorScale_type_id); 
+		AttachActor = serialized->get_string(AttachActor_type_id, {});
+		AttachLocator = serialized->get_string(AttachLocator_type_id, "igLoc_bulletEmit");
+		AttachActorScale = serialized->get_float(AttachActorScale_type_id, 0.500000); 
 	}
 
 	[[nodiscard]] auto

@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	LookChunkData::LookChunkData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		LookName = serialized->get_string(LookName_type_id);
-		Required = serialized->get_bool(Required_type_id);
-		Optional = serialized->get_bool(Optional_type_id);
-		HideOnSource = serialized->get_bool(HideOnSource_type_id); 
+		LookName = serialized->get_string(LookName_type_id, {});
+		Required = serialized->get_bool(Required_type_id, false);
+		Optional = serialized->get_bool(Optional_type_id, false);
+		HideOnSource = serialized->get_bool(HideOnSource_type_id, true); 
 	}
 
 	[[nodiscard]] auto

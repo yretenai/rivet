@@ -7,22 +7,22 @@
 
 namespace rivet::ddl::generated {
 	Beam2PointPrius::Beam2PointPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		StartLocator = serialized->get_string(StartLocator_type_id);
-		EndLocator = serialized->get_string(EndLocator_type_id);
-		BeamLength = serialized->get_float(BeamLength_type_id);
-		IsStartLocatorFixed = serialized->get_bool(IsStartLocatorFixed_type_id);
-		StopAtCollision = serialized->get_bool(StopAtCollision_type_id);
-		FX = serialized->get_bool(FX_type_id);
-		TurnOnWhenActivated = serialized->get_bool(TurnOnWhenActivated_type_id);
-		ForceSweptSphere = serialized->get_bool(ForceSweptSphere_type_id);
-		DamageAmount = serialized->get_float(DamageAmount_type_id);
-		DamageRadius = serialized->get_float(DamageRadius_type_id);
-		BeamRadius = serialized->get_float(BeamRadius_type_id);
-		InstantKill = serialized->get_bool(InstantKill_type_id);
-		ApplyDamageToIncludeGroup = serialized->get_bool(ApplyDamageToIncludeGroup_type_id);
-		TurnTargetInvulnerable = serialized->get_bool(TurnTargetInvulnerable_type_id);
-		OnlyDirectDamage = serialized->get_bool(OnlyDirectDamage_type_id);
-		DamageIncludeGroupHandle = serialized->get_uint32(DamageIncludeGroupHandle_type_id); 
+		StartLocator = serialized->get_string(StartLocator_type_id, {});
+		EndLocator = serialized->get_string(EndLocator_type_id, {});
+		BeamLength = serialized->get_float(BeamLength_type_id, -1.000000);
+		IsStartLocatorFixed = serialized->get_bool(IsStartLocatorFixed_type_id, false);
+		StopAtCollision = serialized->get_bool(StopAtCollision_type_id, true);
+		FX = serialized->get_bool(FX_type_id, true);
+		TurnOnWhenActivated = serialized->get_bool(TurnOnWhenActivated_type_id, true);
+		ForceSweptSphere = serialized->get_bool(ForceSweptSphere_type_id, false);
+		DamageAmount = serialized->get_float(DamageAmount_type_id, 0.000000);
+		DamageRadius = serialized->get_float(DamageRadius_type_id, 0.000000);
+		BeamRadius = serialized->get_float(BeamRadius_type_id, 0.000000);
+		InstantKill = serialized->get_bool(InstantKill_type_id, false);
+		ApplyDamageToIncludeGroup = serialized->get_bool(ApplyDamageToIncludeGroup_type_id, true);
+		TurnTargetInvulnerable = serialized->get_bool(TurnTargetInvulnerable_type_id, false);
+		OnlyDirectDamage = serialized->get_bool(OnlyDirectDamage_type_id, false);
+		DamageIncludeGroupHandle = serialized->get_uint32(DamageIncludeGroupHandle_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

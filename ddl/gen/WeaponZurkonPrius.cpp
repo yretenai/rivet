@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	WeaponZurkonPrius::WeaponZurkonPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): WeaponGamePrius(serialized) {
-		ZurkonActor = serialized->get_string(ZurkonActor_type_id);
-		ZurkonJrActor = serialized->get_string(ZurkonJrActor_type_id);
-		ZurkonShotConfig = serialized->get_string(ZurkonShotConfig_type_id);
-		ZurkonVOConfig = serialized->get_string(ZurkonVOConfig_type_id); 
+		ZurkonActor = serialized->get_string(ZurkonActor_type_id, {});
+		ZurkonJrActor = serialized->get_string(ZurkonJrActor_type_id, {});
+		ZurkonShotConfig = serialized->get_string(ZurkonShotConfig_type_id, {});
+		ZurkonVOConfig = serialized->get_string(ZurkonVOConfig_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

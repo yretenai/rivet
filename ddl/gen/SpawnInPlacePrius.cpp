@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	SpawnInPlacePrius::SpawnInPlacePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SpawnActor = serialized->get_string(SpawnActor_type_id);
-		SpawnTime = serialized->get_enum<rivet::ddl::generated::x87a08fd4>(SpawnTime_type_id, rivet::ddl::generated::x87a08fd4_values);
-		LifeTime = serialized->get_float(LifeTime_type_id); 
+		SpawnActor = serialized->get_string(SpawnActor_type_id, {});
+		SpawnTime = serialized->get_enum<rivet::ddl::generated::x87a08fd4>(SpawnTime_type_id, rivet::ddl::generated::x87a08fd4_values, rivet::ddl::generated::x87a08fd4::OnDestroyedEvent);
+		LifeTime = serialized->get_float(LifeTime_type_id, 10.000000); 
 	}
 
 	[[nodiscard]] auto

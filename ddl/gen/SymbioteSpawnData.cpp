@@ -10,7 +10,7 @@
 namespace rivet::ddl::generated {
 	SymbioteSpawnData::SymbioteSpawnData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ActorSpawnData(serialized) {
 		SpawnPosition = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(SpawnPosition_type_id);
-		Leader = serialized->get_uint32(Leader_type_id); 
+		Leader = serialized->get_uint32(Leader_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

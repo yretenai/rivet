@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	BossBotCordelionNefMaterialSwaps::BossBotCordelionNefMaterialSwaps([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		OldMaterial = serialized->get_string(OldMaterial_type_id);
-		SwapToMaterial = serialized->get_string(SwapToMaterial_type_id); 
+		OldMaterial = serialized->get_string(OldMaterial_type_id, {});
+		SwapToMaterial = serialized->get_string(SwapToMaterial_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

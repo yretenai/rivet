@@ -9,12 +9,12 @@
 
 namespace rivet::ddl::generated {
 	ChargeAttackConfig::ChargeAttackConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		UseBelowHPFraction = serialized->get_float(UseBelowHPFraction_type_id);
-		MinIntervalGlobal = serialized->get_float(MinIntervalGlobal_type_id);
-		MinIntervalSelf = serialized->get_float(MinIntervalSelf_type_id);
-		MinStartDist = serialized->get_float(MinStartDist_type_id);
-		MaxStartDist = serialized->get_float(MaxStartDist_type_id);
-		MaxStartAngle = serialized->get_float(MaxStartAngle_type_id);
+		UseBelowHPFraction = serialized->get_float(UseBelowHPFraction_type_id, 0.000000);
+		MinIntervalGlobal = serialized->get_float(MinIntervalGlobal_type_id, 1.000000);
+		MinIntervalSelf = serialized->get_float(MinIntervalSelf_type_id, 5.000000);
+		MinStartDist = serialized->get_float(MinStartDist_type_id, 5.000000);
+		MaxStartDist = serialized->get_float(MaxStartDist_type_id, 30.000000);
+		MaxStartAngle = serialized->get_float(MaxStartAngle_type_id, 30.000000);
 		ChargeAttackData = serialized->unwrap_into<rivet::ddl::generated::ChargeAttackData>(ChargeAttackData_type_id); 
 	}
 

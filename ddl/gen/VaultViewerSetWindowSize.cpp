@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	VaultViewerSetWindowSize::VaultViewerSetWindowSize([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Width = serialized->get_int32(Width_type_id);
-		Height = serialized->get_int32(Height_type_id); 
+		Width = serialized->get_int32(Width_type_id, 0);
+		Height = serialized->get_int32(Height_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

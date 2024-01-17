@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	KnockbackTierData::KnockbackTierData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		KnockbackLevel = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(KnockbackLevel_type_id, rivet::ddl::generated::KnockbackLevels_values);
-		KnockbackAmount = serialized->get_float(KnockbackAmount_type_id);
-		StartAtRange = serialized->get_float(StartAtRange_type_id); 
+		KnockbackLevel = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(KnockbackLevel_type_id, rivet::ddl::generated::KnockbackLevels_values, rivet::ddl::generated::KnockbackLevels::None);
+		KnockbackAmount = serialized->get_float(KnockbackAmount_type_id, 0.000000);
+		StartAtRange = serialized->get_float(StartAtRange_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

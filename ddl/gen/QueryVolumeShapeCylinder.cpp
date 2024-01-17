@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	QueryVolumeShapeCylinder::QueryVolumeShapeCylinder([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): QueryVolumeShape(serialized) {
-		Length = serialized->get_float(Length_type_id);
-		Radius = serialized->get_float(Radius_type_id); 
+		Length = serialized->get_float(Length_type_id, 1.000000);
+		Radius = serialized->get_float(Radius_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

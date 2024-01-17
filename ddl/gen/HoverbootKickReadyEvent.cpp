@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	HoverbootKickReadyEvent::HoverbootKickReadyEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		FootIndex = serialized->get_enum<rivet::ddl::generated::x49df4fee>(FootIndex_type_id, rivet::ddl::generated::x49df4fee_values); 
+		FootIndex = serialized->get_enum<rivet::ddl::generated::x49df4fee>(FootIndex_type_id, rivet::ddl::generated::x49df4fee_values, rivet::ddl::generated::x49df4fee::Left); 
 	}
 
 	[[nodiscard]] auto

@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	AnimPropActionEvent::AnimPropActionEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		PropName = serialized->get_string(PropName_type_id);
-		ActionType = serialized->get_enum<rivet::ddl::generated::xe76a4768>(ActionType_type_id, rivet::ddl::generated::xe76a4768_values);
-		ActionText = serialized->get_string(ActionText_type_id);
-		AutoRemove = serialized->get_bool(AutoRemove_type_id);
-		SpawnForShot = serialized->get_bool(SpawnForShot_type_id);
-		MatchAnimType = serialized->get_enum<rivet::ddl::generated::xd458e3df>(MatchAnimType_type_id, rivet::ddl::generated::xd458e3df_values); 
+		PropName = serialized->get_string(PropName_type_id, {});
+		ActionType = serialized->get_enum<rivet::ddl::generated::xe76a4768>(ActionType_type_id, rivet::ddl::generated::xe76a4768_values, rivet::ddl::generated::xe76a4768::Attach_Right);
+		ActionText = serialized->get_string(ActionText_type_id, {});
+		AutoRemove = serialized->get_bool(AutoRemove_type_id, true);
+		SpawnForShot = serialized->get_bool(SpawnForShot_type_id, false);
+		MatchAnimType = serialized->get_enum<rivet::ddl::generated::xd458e3df>(MatchAnimType_type_id, rivet::ddl::generated::xd458e3df_values, rivet::ddl::generated::xd458e3df::Default); 
 	}
 
 	[[nodiscard]] auto

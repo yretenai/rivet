@@ -20,14 +20,14 @@
 
 namespace rivet::ddl::generated {
 	Cinematic2CameraTrackDef::Cinematic2CameraTrackDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Id = serialized->get_uint64(Id_type_id);
-		Name = serialized->get_string(Name_type_id);
-		PlatformFilter = serialized->get_bitset<rivet::ddl::generated::xb52df7e7>(PlatformFilter_type_id, rivet::ddl::generated::xb52df7e7_values);
+		Id = serialized->get_uint64(Id_type_id, 0);
+		Name = serialized->get_string(Name_type_id, {});
+		PlatformFilter = serialized->get_bitset<rivet::ddl::generated::xb52df7e7>(PlatformFilter_type_id, rivet::ddl::generated::xb52df7e7_values, 7);
 		Tags = serialized->unwrap_into<rivet::ddl::generated::Cinematic2TrackTagsDef>(Tags_type_id);
-		Global = serialized->get_bool(Global_type_id);
+		Global = serialized->get_bool(Global_type_id, false);
 		StartTransform = serialized->unwrap_into<rivet::ddl::generated::DDLTransform>(StartTransform_type_id);
 		DefaultValues = serialized->unwrap_into<rivet::ddl::generated::Cinematic2DefaultCameraValuesDef>(DefaultValues_type_id);
-		InheritGameDof = serialized->get_bool(InheritGameDof_type_id);
+		InheritGameDof = serialized->get_bool(InheritGameDof_type_id, false);
 		PlayAnimActions = serialized->unwrap_into_many<rivet::ddl::generated::Cinematic2BehaviorPlayAnimClipActionDef>(PlayAnimActions_type_id);
 		DofTracks = serialized->unwrap_into_many<rivet::ddl::generated::Cinematic2CameraDofTrackDef>(DofTracks_type_id);
 		Fov = serialized->unwrap_into_many<rivet::ddl::generated::Cinematic2CameraFovCurveDef>(Fov_type_id);

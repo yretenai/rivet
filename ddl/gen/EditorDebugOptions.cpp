@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	EditorDebugOptions::EditorDebugOptions([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DOFVisualization = serialized->get_bool(DOFVisualization_type_id);
-		LookAtVisualization = serialized->get_bool(LookAtVisualization_type_id);
-		CameraConeVisualization = serialized->get_bool(CameraConeVisualization_type_id);
-		IgnoreJumpToShot = serialized->get_bool(IgnoreJumpToShot_type_id);
-		ToggleCineDebugMenu = serialized->get_bool(ToggleCineDebugMenu_type_id);
-		ShowGrid = serialized->get_bool(ShowGrid_type_id); 
+		DOFVisualization = serialized->get_bool(DOFVisualization_type_id, false);
+		LookAtVisualization = serialized->get_bool(LookAtVisualization_type_id, false);
+		CameraConeVisualization = serialized->get_bool(CameraConeVisualization_type_id, false);
+		IgnoreJumpToShot = serialized->get_bool(IgnoreJumpToShot_type_id, false);
+		ToggleCineDebugMenu = serialized->get_bool(ToggleCineDebugMenu_type_id, false);
+		ShowGrid = serialized->get_bool(ShowGrid_type_id, true); 
 	}
 
 	[[nodiscard]] auto

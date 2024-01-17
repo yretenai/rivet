@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	EventFilterOptions::EventFilterOptions([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		FilterAllEvents = serialized->get_bool(FilterAllEvents_type_id);
+		FilterAllEvents = serialized->get_bool(FilterAllEvents_type_id, false);
 		FilterEventsList = serialized->get_strings(FilterEventsList_type_id); 
 	}
 

@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	MoverBumpBreakerPrius::MoverBumpBreakerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		BreakFromBots = serialized->get_bool(BreakFromBots_type_id);
-		BreakFromHeroes = serialized->get_bool(BreakFromHeroes_type_id);
-		BreakFromStanding = serialized->get_bool(BreakFromStanding_type_id); 
+		BreakFromBots = serialized->get_bool(BreakFromBots_type_id, true);
+		BreakFromHeroes = serialized->get_bool(BreakFromHeroes_type_id, false);
+		BreakFromStanding = serialized->get_bool(BreakFromStanding_type_id, false); 
 	}
 
 	[[nodiscard]] auto

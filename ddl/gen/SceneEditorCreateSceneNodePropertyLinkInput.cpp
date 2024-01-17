@@ -8,8 +8,8 @@
 namespace rivet::ddl::generated {
 	SceneEditorCreateSceneNodePropertyLinkInput::SceneEditorCreateSceneNodePropertyLinkInput([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		SourceWorldIds = serialized->get_uint64s(SourceWorldIds_type_id);
-		DestinationWorldId = serialized->get_uint64(DestinationWorldId_type_id);
-		LinkName = serialized->get_string(LinkName_type_id); 
+		DestinationWorldId = serialized->get_uint64(DestinationWorldId_type_id, 0);
+		LinkName = serialized->get_string(LinkName_type_id, ""); 
 	}
 
 	[[nodiscard]] auto

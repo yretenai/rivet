@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	BossMortarTargetCurvePrius::BossMortarTargetCurvePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		TimeBetweenFires = serialized->get_float(TimeBetweenFires_type_id);
-		Stride = serialized->get_int32(Stride_type_id); 
+		TimeBetweenFires = serialized->get_float(TimeBetweenFires_type_id, 0.100000);
+		Stride = serialized->get_int32(Stride_type_id, 1); 
 	}
 
 	[[nodiscard]] auto

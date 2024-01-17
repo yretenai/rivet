@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	FreezeShatterData::FreezeShatterData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ShotConfig = serialized->get_string(ShotConfig_type_id);
-		DamageRange = serialized->get_float(DamageRange_type_id);
-		Knockback = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(Knockback_type_id, rivet::ddl::generated::KnockbackLevels_values);
-		KnockbackAmount = serialized->get_float(KnockbackAmount_type_id); 
+		ShotConfig = serialized->get_string(ShotConfig_type_id, "");
+		DamageRange = serialized->get_float(DamageRange_type_id, 8.000000);
+		Knockback = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(Knockback_type_id, rivet::ddl::generated::KnockbackLevels_values, rivet::ddl::generated::KnockbackLevels::Three);
+		KnockbackAmount = serialized->get_float(KnockbackAmount_type_id, 100.000000); 
 	}
 
 	[[nodiscard]] auto

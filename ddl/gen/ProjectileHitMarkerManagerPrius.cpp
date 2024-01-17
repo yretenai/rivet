@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	ProjectileHitMarkerManagerPrius::ProjectileHitMarkerManagerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MarkerActor = serialized->get_string(MarkerActor_type_id);
-		AppearTime = serialized->get_float(AppearTime_type_id); 
+		MarkerActor = serialized->get_string(MarkerActor_type_id, {});
+		AppearTime = serialized->get_float(AppearTime_type_id, 0.500000); 
 	}
 
 	[[nodiscard]] auto

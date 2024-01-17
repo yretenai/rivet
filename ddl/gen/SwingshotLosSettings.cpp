@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	SwingshotLosSettings::SwingshotLosSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		RaycastsPerFrame = serialized->get_uint8(RaycastsPerFrame_type_id);
-		TargetRefreshPeriodFrames = serialized->get_uint8(TargetRefreshPeriodFrames_type_id); 
+		RaycastsPerFrame = serialized->get_uint8(RaycastsPerFrame_type_id, 4);
+		TargetRefreshPeriodFrames = serialized->get_uint8(TargetRefreshPeriodFrames_type_id, 16); 
 	}
 
 	[[nodiscard]] auto

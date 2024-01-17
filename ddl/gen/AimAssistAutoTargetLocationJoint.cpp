@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	AimAssistAutoTargetLocationJoint::AimAssistAutoTargetLocationJoint([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): AimAssistAutoTargetLocation(serialized) {
-		JointName = serialized->get_string(JointName_type_id); 
+		JointName = serialized->get_string(JointName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

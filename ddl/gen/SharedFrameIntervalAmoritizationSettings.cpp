@@ -7,18 +7,18 @@
 
 namespace rivet::ddl::generated {
 	SharedFrameIntervalAmoritizationSettings::SharedFrameIntervalAmoritizationSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		PerchHunterUpdateInterval = serialized->get_uint32(PerchHunterUpdateInterval_type_id);
-		AwarenessBaseUpdateInterval = serialized->get_uint32(AwarenessBaseUpdateInterval_type_id);
-		OmniAwarenessUpdateInterval = serialized->get_uint32(OmniAwarenessUpdateInterval_type_id);
-		FlightAreaFirepointHunterUpdateInterval = serialized->get_uint32(FlightAreaFirepointHunterUpdateInterval_type_id);
-		MultiHeuristicTargetingUpdateInterval = serialized->get_uint32(MultiHeuristicTargetingUpdateInterval_type_id);
-		TargetingBaseUpdateInterval = serialized->get_uint32(TargetingBaseUpdateInterval_type_id);
-		TieredAggroTargetingUpdateInterval = serialized->get_uint32(TieredAggroTargetingUpdateInterval_type_id);
-		BreakableBusterUpdateInterval = serialized->get_uint32(BreakableBusterUpdateInterval_type_id);
-		LosBlockerHunterUpdateInterval = serialized->get_uint32(LosBlockerHunterUpdateInterval_type_id);
-		NavMeshObstructionUpdateInterval = serialized->get_uint32(NavMeshObstructionUpdateInterval_type_id);
-		TriggerByDistanceUpdateInterval = serialized->get_uint32(TriggerByDistanceUpdateInterval_type_id);
-		FirepointHunterUpdateInterval = serialized->get_uint32(FirepointHunterUpdateInterval_type_id); 
+		PerchHunterUpdateInterval = serialized->get_uint32(PerchHunterUpdateInterval_type_id, 30);
+		AwarenessBaseUpdateInterval = serialized->get_uint32(AwarenessBaseUpdateInterval_type_id, 16);
+		OmniAwarenessUpdateInterval = serialized->get_uint32(OmniAwarenessUpdateInterval_type_id, 16);
+		FlightAreaFirepointHunterUpdateInterval = serialized->get_uint32(FlightAreaFirepointHunterUpdateInterval_type_id, 16);
+		MultiHeuristicTargetingUpdateInterval = serialized->get_uint32(MultiHeuristicTargetingUpdateInterval_type_id, 16);
+		TargetingBaseUpdateInterval = serialized->get_uint32(TargetingBaseUpdateInterval_type_id, 16);
+		TieredAggroTargetingUpdateInterval = serialized->get_uint32(TieredAggroTargetingUpdateInterval_type_id, 16);
+		BreakableBusterUpdateInterval = serialized->get_uint32(BreakableBusterUpdateInterval_type_id, 3);
+		LosBlockerHunterUpdateInterval = serialized->get_uint32(LosBlockerHunterUpdateInterval_type_id, 10);
+		NavMeshObstructionUpdateInterval = serialized->get_uint32(NavMeshObstructionUpdateInterval_type_id, 8);
+		TriggerByDistanceUpdateInterval = serialized->get_uint32(TriggerByDistanceUpdateInterval_type_id, 10);
+		FirepointHunterUpdateInterval = serialized->get_uint32(FirepointHunterUpdateInterval_type_id, 4); 
 	}
 
 	[[nodiscard]] auto

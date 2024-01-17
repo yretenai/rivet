@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	BotComboConditionHealthCheckPrius::BotComboConditionHealthCheckPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BotComboConditionBasePrius(serialized) {
-		HPThreshhold = serialized->get_float(HPThreshhold_type_id); 
+		HPThreshhold = serialized->get_float(HPThreshhold_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

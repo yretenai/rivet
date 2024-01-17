@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	VendorTabOpenedDevstatsEvent::VendorTabOpenedDevstatsEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		EventId = serialized->get_string(EventId_type_id);
-		TabSegmentId = serialized->get_string(TabSegmentId_type_id);
-		OpenedTab = serialized->get_enum<rivet::ddl::generated::x868ac365>(OpenedTab_type_id, rivet::ddl::generated::x868ac365_values); 
+		EventId = serialized->get_string(EventId_type_id, {});
+		TabSegmentId = serialized->get_string(TabSegmentId_type_id, {});
+		OpenedTab = serialized->get_enum<rivet::ddl::generated::x868ac365>(OpenedTab_type_id, rivet::ddl::generated::x868ac365_values, rivet::ddl::generated::x868ac365::Purchase); 
 	}
 
 	[[nodiscard]] auto

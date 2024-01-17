@@ -7,14 +7,14 @@
 
 namespace rivet::ddl::generated {
 	HeroGroovitronConfig::HeroGroovitronConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MoveMaxSpeed = serialized->get_float(MoveMaxSpeed_type_id);
-		MoveAccel = serialized->get_float(MoveAccel_type_id);
-		MoveDecel = serialized->get_float(MoveDecel_type_id);
-		JumpMinHeight = serialized->get_float(JumpMinHeight_type_id);
-		JumpMaxHeight = serialized->get_float(JumpMaxHeight_type_id);
-		JumpMaxHoldTime = serialized->get_float(JumpMaxHoldTime_type_id);
-		JumpTerminalVelocity = serialized->get_float(JumpTerminalVelocity_type_id);
-		JumpPeakTime = serialized->get_float(JumpPeakTime_type_id); 
+		MoveMaxSpeed = serialized->get_float(MoveMaxSpeed_type_id, 4.000000);
+		MoveAccel = serialized->get_float(MoveAccel_type_id, 8.000000);
+		MoveDecel = serialized->get_float(MoveDecel_type_id, 1.000000);
+		JumpMinHeight = serialized->get_float(JumpMinHeight_type_id, 1.500000);
+		JumpMaxHeight = serialized->get_float(JumpMaxHeight_type_id, 2.500000);
+		JumpMaxHoldTime = serialized->get_float(JumpMaxHoldTime_type_id, 0.200000);
+		JumpTerminalVelocity = serialized->get_float(JumpTerminalVelocity_type_id, 50.000000);
+		JumpPeakTime = serialized->get_float(JumpPeakTime_type_id, 0.300000); 
 	}
 
 	[[nodiscard]] auto

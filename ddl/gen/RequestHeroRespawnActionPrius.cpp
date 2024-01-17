@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	RequestHeroRespawnActionPrius::RequestHeroRespawnActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		OldCharacter = serialized->get_enum<rivet::ddl::generated::HeroTypes>(OldCharacter_type_id, rivet::ddl::generated::HeroTypes_values);
-		NewCharacter = serialized->get_enum<rivet::ddl::generated::HeroTypes>(NewCharacter_type_id, rivet::ddl::generated::HeroTypes_values);
-		Delay = serialized->get_float(Delay_type_id);
-		RefillAmmo = serialized->get_bool(RefillAmmo_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Hero);
+		OldCharacter = serialized->get_enum<rivet::ddl::generated::HeroTypes>(OldCharacter_type_id, rivet::ddl::generated::HeroTypes_values, rivet::ddl::generated::HeroTypes::None);
+		NewCharacter = serialized->get_enum<rivet::ddl::generated::HeroTypes>(NewCharacter_type_id, rivet::ddl::generated::HeroTypes_values, rivet::ddl::generated::HeroTypes::None);
+		Delay = serialized->get_float(Delay_type_id, 0.000000);
+		RefillAmmo = serialized->get_bool(RefillAmmo_type_id, false); 
 	}
 
 	[[nodiscard]] auto

@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	POIAttributeOutroTimer::POIAttributeOutroTimer([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): POIAttributeOutroBase(serialized) {
-		OutroTime = serialized->get_float(OutroTime_type_id); 
+		OutroTime = serialized->get_float(OutroTime_type_id, 2.000000); 
 	}
 
 	[[nodiscard]] auto

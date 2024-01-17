@@ -14,32 +14,32 @@
 
 namespace rivet::ddl::generated {
 	TerrainPaintingPref::TerrainPaintingPref([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Mode = serialized->get_enum<rivet::ddl::generated::x37e1c1c3>(Mode_type_id, rivet::ddl::generated::x37e1c1c3_values);
-		ModeClipboard = serialized->get_enum<rivet::ddl::generated::x37e1c1c3>(ModeClipboard_type_id, rivet::ddl::generated::x37e1c1c3_values);
+		Mode = serialized->get_enum<rivet::ddl::generated::x37e1c1c3>(Mode_type_id, rivet::ddl::generated::x37e1c1c3_values, rivet::ddl::generated::x37e1c1c3::SculptSpray);
+		ModeClipboard = serialized->get_enum<rivet::ddl::generated::x37e1c1c3>(ModeClipboard_type_id, rivet::ddl::generated::x37e1c1c3_values, rivet::ddl::generated::x37e1c1c3::Stamp);
 		Target = serialized->unwrap_into<rivet::ddl::generated::TerrainPaintingTarget>(Target_type_id);
 		TargetClipboard = serialized->unwrap_into<rivet::ddl::generated::TerrainPaintingTarget>(TargetClipboard_type_id);
 		Brush = serialized->unwrap_into<rivet::ddl::generated::TerrainPaintingBrush>(Brush_type_id);
-		BrushParamAlpha = serialized->get_float(BrushParamAlpha_type_id);
-		BrushParamAlphaFlow = serialized->get_float(BrushParamAlphaFlow_type_id);
-		BrushParamBlurSpeed = serialized->get_float(BrushParamBlurSpeed_type_id);
-		BrushParamHeight = serialized->get_float(BrushParamHeight_type_id);
-		BrushParamHeightFlow = serialized->get_float(BrushParamHeightFlow_type_id);
-		BrushParamRamp = serialized->get_float(BrushParamRamp_type_id);
-		BrushParamSharpenSpeed = serialized->get_float(BrushParamSharpenSpeed_type_id);
+		BrushParamAlpha = serialized->get_float(BrushParamAlpha_type_id, 1.000000);
+		BrushParamAlphaFlow = serialized->get_float(BrushParamAlphaFlow_type_id, 1.000000);
+		BrushParamBlurSpeed = serialized->get_float(BrushParamBlurSpeed_type_id, 1.000000);
+		BrushParamHeight = serialized->get_float(BrushParamHeight_type_id, 1.000000);
+		BrushParamHeightFlow = serialized->get_float(BrushParamHeightFlow_type_id, 1.000000);
+		BrushParamRamp = serialized->get_float(BrushParamRamp_type_id, 1.000000);
+		BrushParamSharpenSpeed = serialized->get_float(BrushParamSharpenSpeed_type_id, 1.000000);
 		BrushParamHlsl = serialized->unwrap_into<rivet::ddl::generated::DDLVector4>(BrushParamHlsl_type_id);
-		Radius = serialized->get_float(Radius_type_id);
-		RadiusClipboard = serialized->get_float(RadiusClipboard_type_id);
+		Radius = serialized->get_float(Radius_type_id, 1.000000);
+		RadiusClipboard = serialized->get_float(RadiusClipboard_type_id, 1.000000);
 		RadiusVec = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(RadiusVec_type_id);
 		RadiusVecClipboard = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(RadiusVecClipboard_type_id);
-		Falloff = serialized->get_float(Falloff_type_id);
-		FalloffClipboard = serialized->get_float(FalloffClipboard_type_id);
-		FalloffEasingMode = serialized->get_enum<rivet::ddl::generated::x93b1b93c>(FalloffEasingMode_type_id, rivet::ddl::generated::x93b1b93c_values);
-		FalloffEasingModeClipboard = serialized->get_enum<rivet::ddl::generated::x93b1b93c>(FalloffEasingModeClipboard_type_id, rivet::ddl::generated::x93b1b93c_values);
-		RotationDegrees = serialized->get_float(RotationDegrees_type_id);
-		RotationDegreesClipboard = serialized->get_float(RotationDegreesClipboard_type_id);
-		HeightClamp = serialized->get_enum<rivet::ddl::generated::x51c5867>(HeightClamp_type_id, rivet::ddl::generated::x51c5867_values);
-		HeightClampValue = serialized->get_float(HeightClampValue_type_id);
-		WheelControl = serialized->get_enum<rivet::ddl::generated::x48c27c27>(WheelControl_type_id, rivet::ddl::generated::x48c27c27_values);
+		Falloff = serialized->get_float(Falloff_type_id, 0.350000);
+		FalloffClipboard = serialized->get_float(FalloffClipboard_type_id, 0.350000);
+		FalloffEasingMode = serialized->get_enum<rivet::ddl::generated::x93b1b93c>(FalloffEasingMode_type_id, rivet::ddl::generated::x93b1b93c_values, rivet::ddl::generated::x93b1b93c::Linear);
+		FalloffEasingModeClipboard = serialized->get_enum<rivet::ddl::generated::x93b1b93c>(FalloffEasingModeClipboard_type_id, rivet::ddl::generated::x93b1b93c_values, rivet::ddl::generated::x93b1b93c::None);
+		RotationDegrees = serialized->get_float(RotationDegrees_type_id, 0.000000);
+		RotationDegreesClipboard = serialized->get_float(RotationDegreesClipboard_type_id, 0.000000);
+		HeightClamp = serialized->get_enum<rivet::ddl::generated::x51c5867>(HeightClamp_type_id, rivet::ddl::generated::x51c5867_values, rivet::ddl::generated::x51c5867::Off);
+		HeightClampValue = serialized->get_float(HeightClampValue_type_id, 0.000000);
+		WheelControl = serialized->get_enum<rivet::ddl::generated::x48c27c27>(WheelControl_type_id, rivet::ddl::generated::x48c27c27_values, rivet::ddl::generated::x48c27c27::Radius_X);
 		DebugOptions = serialized->unwrap_into<rivet::ddl::generated::TerrainPaintingDebugOptions>(DebugOptions_type_id); 
 	}
 

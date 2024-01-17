@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	ShotWarmongerMicroRocketConfig::ShotWarmongerMicroRocketConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		MicroRocketActor = serialized->get_string(MicroRocketActor_type_id);
+		MicroRocketActor = serialized->get_string(MicroRocketActor_type_id, {});
 		ShotPrius = serialized->unwrap_into<rivet::ddl::generated::ShotWarmongerMicroRocketPrius>(ShotPrius_type_id); 
 	}
 

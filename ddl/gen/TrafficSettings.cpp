@@ -7,13 +7,13 @@
 
 namespace rivet::ddl::generated {
 	TrafficSettings::TrafficSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MaxNodes = serialized->get_int32(MaxNodes_type_id);
-		MaxObstacles = serialized->get_int32(MaxObstacles_type_id);
-		InstantiationBudget = serialized->get_float(InstantiationBudget_type_id);
-		InstantiationBudgetPerfMode = serialized->get_float(InstantiationBudgetPerfMode_type_id);
-		InstantiationBudgetMediumPerfMode = serialized->get_float(InstantiationBudgetMediumPerfMode_type_id);
-		InstantiationBudgetLowPerfMode = serialized->get_float(InstantiationBudgetLowPerfMode_type_id);
-		SpawnsPerFrame = serialized->get_uint32(SpawnsPerFrame_type_id); 
+		MaxNodes = serialized->get_int32(MaxNodes_type_id, 4096);
+		MaxObstacles = serialized->get_int32(MaxObstacles_type_id, 32);
+		InstantiationBudget = serialized->get_float(InstantiationBudget_type_id, 0.000500);
+		InstantiationBudgetPerfMode = serialized->get_float(InstantiationBudgetPerfMode_type_id, 0.000250);
+		InstantiationBudgetMediumPerfMode = serialized->get_float(InstantiationBudgetMediumPerfMode_type_id, 0.000125);
+		InstantiationBudgetLowPerfMode = serialized->get_float(InstantiationBudgetLowPerfMode_type_id, 0.000075);
+		SpawnsPerFrame = serialized->get_uint32(SpawnsPerFrame_type_id, 50); 
 	}
 
 	[[nodiscard]] auto

@@ -10,20 +10,20 @@
 
 namespace rivet::ddl::generated {
 	Cinematic2VfxActionDef::Cinematic2VfxActionDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Id = serialized->get_uint64(Id_type_id);
-		Time = serialized->get_float(Time_type_id);
-		DurationType = serialized->get_enum<rivet::ddl::generated::x29c933e2>(DurationType_type_id, rivet::ddl::generated::x29c933e2_values);
-		Duration = serialized->get_float(Duration_type_id);
-		VfxPath = serialized->get_string(VfxPath_type_id);
+		Id = serialized->get_uint64(Id_type_id, 0);
+		Time = serialized->get_float(Time_type_id, 0.000000);
+		DurationType = serialized->get_enum<rivet::ddl::generated::x29c933e2>(DurationType_type_id, rivet::ddl::generated::x29c933e2_values, rivet::ddl::generated::x29c933e2::None);
+		Duration = serialized->get_float(Duration_type_id, 0.000000);
+		VfxPath = serialized->get_string(VfxPath_type_id, {});
 		OffsetTransform = serialized->unwrap_into<rivet::ddl::generated::DDLTransform>(OffsetTransform_type_id);
-		AttachToJoint = serialized->get_bool(AttachToJoint_type_id);
-		LocatorName = serialized->get_string(LocatorName_type_id);
-		JointName = serialized->get_string(JointName_type_id);
-		SecondaryActorId = serialized->get_uint64(SecondaryActorId_type_id);
-		SecondaryActorLocatorName = serialized->get_string(SecondaryActorLocatorName_type_id);
-		KillImmediate = serialized->get_bool(KillImmediate_type_id);
-		PreserveOnJump = serialized->get_bool(PreserveOnJump_type_id);
-		InstanceCountMax = serialized->get_int32(InstanceCountMax_type_id);
+		AttachToJoint = serialized->get_bool(AttachToJoint_type_id, false);
+		LocatorName = serialized->get_string(LocatorName_type_id, {});
+		JointName = serialized->get_string(JointName_type_id, {});
+		SecondaryActorId = serialized->get_uint64(SecondaryActorId_type_id, 0);
+		SecondaryActorLocatorName = serialized->get_string(SecondaryActorLocatorName_type_id, {});
+		KillImmediate = serialized->get_bool(KillImmediate_type_id, false);
+		PreserveOnJump = serialized->get_bool(PreserveOnJump_type_id, false);
+		InstanceCountMax = serialized->get_int32(InstanceCountMax_type_id, 0);
 		SubActions = serialized->unwrap_into_many<rivet::ddl::generated::Cinematic2VfxSubActionDef>(SubActions_type_id); 
 	}
 

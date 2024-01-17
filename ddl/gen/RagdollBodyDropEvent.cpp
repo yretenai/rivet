@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	RagdollBodyDropEvent::RagdollBodyDropEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Material = serialized->get_enum<rivet::ddl::generated::x10b3c4cf>(Material_type_id, rivet::ddl::generated::x10b3c4cf_values);
-		Velocity = serialized->get_float(Velocity_type_id);
-		IsOutside = serialized->get_bool(IsOutside_type_id); 
+		Material = serialized->get_enum<rivet::ddl::generated::x10b3c4cf>(Material_type_id, rivet::ddl::generated::x10b3c4cf_values, rivet::ddl::generated::x10b3c4cf::None);
+		Velocity = serialized->get_float(Velocity_type_id, 0.000000);
+		IsOutside = serialized->get_bool(IsOutside_type_id, false); 
 	}
 
 	[[nodiscard]] auto

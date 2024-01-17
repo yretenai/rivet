@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	DisablePoolsResponseMessage::DisablePoolsResponseMessage([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		RequestId = serialized->get_uint16(RequestId_type_id);
-		LastMessage = serialized->get_uint8(LastMessage_type_id); 
+		RequestId = serialized->get_uint16(RequestId_type_id, 0);
+		LastMessage = serialized->get_uint8(LastMessage_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

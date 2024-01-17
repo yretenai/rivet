@@ -7,15 +7,15 @@
 
 namespace rivet::ddl::generated {
 	MaterialNodeUserInput::MaterialNodeUserInput([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Id = serialized->get_string(Id_type_id);
-		Values = serialized->get_string(Values_type_id);
-		Minimums = serialized->get_string(Minimums_type_id);
-		Maximums = serialized->get_string(Maximums_type_id);
-		Description = serialized->get_string(Description_type_id);
-		Group = serialized->get_string(Group_type_id);
-		SortOrder = serialized->get_string(SortOrder_type_id);
-		SubGraphAncestors = serialized->get_string(SubGraphAncestors_type_id);
-		Labels = serialized->get_string(Labels_type_id); 
+		Id = serialized->get_string(Id_type_id, {});
+		Values = serialized->get_string(Values_type_id, {});
+		Minimums = serialized->get_string(Minimums_type_id, {});
+		Maximums = serialized->get_string(Maximums_type_id, {});
+		Description = serialized->get_string(Description_type_id, {});
+		Group = serialized->get_string(Group_type_id, {});
+		SortOrder = serialized->get_string(SortOrder_type_id, {});
+		SubGraphAncestors = serialized->get_string(SubGraphAncestors_type_id, {});
+		Labels = serialized->get_string(Labels_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

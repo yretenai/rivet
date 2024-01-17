@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	DuringObjectivesTriggerPrius::DuringObjectivesTriggerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BaseCustomOverlayTriggerPrius(serialized) {
-		StartMissionName = serialized->get_string(StartMissionName_type_id);
-		StartAtAvailable = serialized->get_bool(StartAtAvailable_type_id);
-		StartObjectiveName = serialized->get_string(StartObjectiveName_type_id);
-		EndMissionName = serialized->get_string(EndMissionName_type_id);
-		EndAfterCleanup = serialized->get_bool(EndAfterCleanup_type_id);
-		EndObjectiveName = serialized->get_string(EndObjectiveName_type_id); 
+		StartMissionName = serialized->get_string(StartMissionName_type_id, {});
+		StartAtAvailable = serialized->get_bool(StartAtAvailable_type_id, false);
+		StartObjectiveName = serialized->get_string(StartObjectiveName_type_id, {});
+		EndMissionName = serialized->get_string(EndMissionName_type_id, {});
+		EndAfterCleanup = serialized->get_bool(EndAfterCleanup_type_id, false);
+		EndObjectiveName = serialized->get_string(EndObjectiveName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

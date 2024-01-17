@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	CameraPerspectiveData::CameraPerspectiveData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Aspect = serialized->get_float(Aspect_type_id);
-		Near = serialized->get_float(Near_type_id);
-		Gar = serialized->get_float(Gar_type_id);
-		Fov = serialized->get_float(Fov_type_id); 
+		Aspect = serialized->get_float(Aspect_type_id, 1.333000);
+		Near = serialized->get_float(Near_type_id, 1.000000);
+		Gar = serialized->get_float(Gar_type_id, 100.000000);
+		Fov = serialized->get_float(Fov_type_id, 60.000000); 
 	}
 
 	[[nodiscard]] auto

@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	PerformanceSelectionIndices::PerformanceSelectionIndices([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Index = serialized->get_uint32(Index_type_id);
-		ParentIndex = serialized->get_uint32(ParentIndex_type_id); 
+		Index = serialized->get_uint32(Index_type_id, 0);
+		ParentIndex = serialized->get_uint32(ParentIndex_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

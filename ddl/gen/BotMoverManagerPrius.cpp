@@ -12,14 +12,14 @@
 namespace rivet::ddl::generated {
 	BotMoverManagerPrius::BotMoverManagerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): MoverManagerPrius(serialized) {
 		CVCShape = serialized->unwrap_into<rivet::ddl::generated::CVCShapeConfig>(CVCShape_type_id);
-		UseNavAsGround = serialized->get_bool(UseNavAsGround_type_id);
-		UseSingleMoveSweep = serialized->get_bool(UseSingleMoveSweep_type_id);
-		EnableSpeculativeCollision = serialized->get_bool(EnableSpeculativeCollision_type_id);
-		PushOnEqual = serialized->get_bool(PushOnEqual_type_id);
-		UseFullSpeedDeflection = serialized->get_bool(UseFullSpeedDeflection_type_id);
-		UseSoftCollisions = serialized->get_bool(UseSoftCollisions_type_id);
-		SoftCVCInner = serialized->get_float(SoftCVCInner_type_id);
-		SoftCVCOuter = serialized->get_float(SoftCVCOuter_type_id); 
+		UseNavAsGround = serialized->get_bool(UseNavAsGround_type_id, false);
+		UseSingleMoveSweep = serialized->get_bool(UseSingleMoveSweep_type_id, true);
+		EnableSpeculativeCollision = serialized->get_bool(EnableSpeculativeCollision_type_id, false);
+		PushOnEqual = serialized->get_bool(PushOnEqual_type_id, true);
+		UseFullSpeedDeflection = serialized->get_bool(UseFullSpeedDeflection_type_id, false);
+		UseSoftCollisions = serialized->get_bool(UseSoftCollisions_type_id, false);
+		SoftCVCInner = serialized->get_float(SoftCVCInner_type_id, 0.250000);
+		SoftCVCOuter = serialized->get_float(SoftCVCOuter_type_id, 0.750000); 
 	}
 
 	[[nodiscard]] auto

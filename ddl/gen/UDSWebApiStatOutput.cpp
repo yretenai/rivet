@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	UDSWebApiStatOutput::UDSWebApiStatOutput([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		statName = serialized->get_string(statName_type_id); 
+		statName = serialized->get_string(statName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

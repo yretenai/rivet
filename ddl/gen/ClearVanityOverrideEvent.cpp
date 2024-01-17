@@ -7,13 +7,13 @@
 
 namespace rivet::ddl::generated {
 	ClearVanityOverrideEvent::ClearVanityOverrideEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		ClearHelmet = serialized->get_bool(ClearHelmet_type_id);
-		ClearHead = serialized->get_bool(ClearHead_type_id);
-		ClearTorso = serialized->get_bool(ClearTorso_type_id);
-		ClearLeftGlove = serialized->get_bool(ClearLeftGlove_type_id);
-		ClearRightGlove = serialized->get_bool(ClearRightGlove_type_id);
-		ClearLegs = serialized->get_bool(ClearLegs_type_id);
-		ClearBoots = serialized->get_bool(ClearBoots_type_id); 
+		ClearHelmet = serialized->get_bool(ClearHelmet_type_id, true);
+		ClearHead = serialized->get_bool(ClearHead_type_id, true);
+		ClearTorso = serialized->get_bool(ClearTorso_type_id, true);
+		ClearLeftGlove = serialized->get_bool(ClearLeftGlove_type_id, true);
+		ClearRightGlove = serialized->get_bool(ClearRightGlove_type_id, true);
+		ClearLegs = serialized->get_bool(ClearLegs_type_id, true);
+		ClearBoots = serialized->get_bool(ClearBoots_type_id, true); 
 	}
 
 	[[nodiscard]] auto

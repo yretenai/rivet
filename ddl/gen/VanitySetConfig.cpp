@@ -10,9 +10,9 @@
 namespace rivet::ddl::generated {
 	VanitySetConfig::VanitySetConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
 		VanityBundles = serialized->get_strings(VanityBundles_type_id);
-		DefaultColor = serialized->get_uint8(DefaultColor_type_id);
-		IsDuplicate = serialized->get_bool(IsDuplicate_type_id);
-		OriginalSet = serialized->get_string(OriginalSet_type_id);
+		DefaultColor = serialized->get_uint8(DefaultColor_type_id, 0);
+		IsDuplicate = serialized->get_bool(IsDuplicate_type_id, false);
+		OriginalSet = serialized->get_string(OriginalSet_type_id, {});
 		Perk = serialized->unwrap_into<rivet::ddl::generated::VanityPerkBase>(Perk_type_id); 
 	}
 

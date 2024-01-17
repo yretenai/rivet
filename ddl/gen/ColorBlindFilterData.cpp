@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	ColorBlindFilterData::ColorBlindFilterData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ProtanopiaFilterTexture = serialized->get_string(ProtanopiaFilterTexture_type_id);
-		DeuteranopiaFilterTexture = serialized->get_string(DeuteranopiaFilterTexture_type_id);
-		TritanopiaFilterTexture = serialized->get_string(TritanopiaFilterTexture_type_id); 
+		ProtanopiaFilterTexture = serialized->get_string(ProtanopiaFilterTexture_type_id, {});
+		DeuteranopiaFilterTexture = serialized->get_string(DeuteranopiaFilterTexture_type_id, {});
+		TritanopiaFilterTexture = serialized->get_string(TritanopiaFilterTexture_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	PlanetMenuDialog::PlanetMenuDialog([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Dialog = serialized->get_enum<rivet::ddl::generated::x6be956dd>(Dialog_type_id, rivet::ddl::generated::x6be956dd_values);
-		Mission = serialized->get_string(Mission_type_id);
-		PlayOnAvailable = serialized->get_bool(PlayOnAvailable_type_id);
-		PlayOnActive = serialized->get_bool(PlayOnActive_type_id); 
+		Dialog = serialized->get_enum<rivet::ddl::generated::x6be956dd>(Dialog_type_id, rivet::ddl::generated::x6be956dd_values, rivet::ddl::generated::x6be956dd::None);
+		Mission = serialized->get_string(Mission_type_id, {});
+		PlayOnAvailable = serialized->get_bool(PlayOnAvailable_type_id, false);
+		PlayOnActive = serialized->get_bool(PlayOnActive_type_id, false); 
 	}
 
 	[[nodiscard]] auto

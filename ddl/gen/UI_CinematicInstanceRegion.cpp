@@ -8,8 +8,8 @@
 namespace rivet::ddl::generated {
 	UI_CinematicInstanceRegion::UI_CinematicInstanceRegion([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		ChildZoneAssetPaths = serialized->get_strings(ChildZoneAssetPaths_type_id);
-		ParentLevelAssetPath = serialized->get_string(ParentLevelAssetPath_type_id);
-		RegionAssetPath = serialized->get_string(RegionAssetPath_type_id); 
+		ParentLevelAssetPath = serialized->get_string(ParentLevelAssetPath_type_id, {});
+		RegionAssetPath = serialized->get_string(RegionAssetPath_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

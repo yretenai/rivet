@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	CinematicTrackState::CinematicTrackState([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		State = serialized->get_enum<rivet::ddl::generated::x8bdec143>(State_type_id, rivet::ddl::generated::x8bdec143_values); 
+		State = serialized->get_enum<rivet::ddl::generated::x8bdec143>(State_type_id, rivet::ddl::generated::x8bdec143_values, rivet::ddl::generated::x8bdec143::Active); 
 	}
 
 	[[nodiscard]] auto

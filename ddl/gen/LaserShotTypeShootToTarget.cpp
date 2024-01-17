@@ -9,16 +9,16 @@
 
 namespace rivet::ddl::generated {
 	LaserShotTypeShootToTarget::LaserShotTypeShootToTarget([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BotComboLaserShotType(serialized) {
-		LaserTargetingTime = serialized->get_float(LaserTargetingTime_type_id);
-		LaserWarningTime = serialized->get_float(LaserWarningTime_type_id);
-		LaserShootTime = serialized->get_float(LaserShootTime_type_id);
-		StopOnDamage = serialized->get_bool(StopOnDamage_type_id);
-		FaceTowardsAimPos = serialized->get_bool(FaceTowardsAimPos_type_id);
-		UseAimingComponent = serialized->get_bool(UseAimingComponent_type_id);
-		StartAimModOnTargeting = serialized->get_bool(StartAimModOnTargeting_type_id);
-		EndAimModsOnShootEnd = serialized->get_bool(EndAimModsOnShootEnd_type_id);
-		LockAimWhileFiring = serialized->get_bool(LockAimWhileFiring_type_id);
-		MimicShotRate = serialized->get_float(MimicShotRate_type_id);
+		LaserTargetingTime = serialized->get_float(LaserTargetingTime_type_id, 1.000000);
+		LaserWarningTime = serialized->get_float(LaserWarningTime_type_id, 0.500000);
+		LaserShootTime = serialized->get_float(LaserShootTime_type_id, 2.000000);
+		StopOnDamage = serialized->get_bool(StopOnDamage_type_id, false);
+		FaceTowardsAimPos = serialized->get_bool(FaceTowardsAimPos_type_id, false);
+		UseAimingComponent = serialized->get_bool(UseAimingComponent_type_id, false);
+		StartAimModOnTargeting = serialized->get_bool(StartAimModOnTargeting_type_id, false);
+		EndAimModsOnShootEnd = serialized->get_bool(EndAimModsOnShootEnd_type_id, false);
+		LockAimWhileFiring = serialized->get_bool(LockAimWhileFiring_type_id, false);
+		MimicShotRate = serialized->get_float(MimicShotRate_type_id, 0.250000);
 		AimMods = serialized->unwrap_into_many<rivet::ddl::generated::AimModWrapper>(AimMods_type_id); 
 	}
 

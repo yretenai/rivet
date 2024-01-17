@@ -11,7 +11,7 @@
 namespace rivet::ddl::generated {
 	WeaponWrenchPrius::WeaponWrenchPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): WeaponMeleePrius(serialized) {
 		ThrowDamageInfo = serialized->unwrap_into<rivet::ddl::generated::ThrownWeaponDamageInfo>(ThrowDamageInfo_type_id);
-		ThrowOrientation = serialized->get_enum<rivet::ddl::generated::x3133560c>(ThrowOrientation_type_id, rivet::ddl::generated::x3133560c_values);
+		ThrowOrientation = serialized->get_enum<rivet::ddl::generated::x3133560c>(ThrowOrientation_type_id, rivet::ddl::generated::x3133560c_values, rivet::ddl::generated::x3133560c::XUp);
 		ThrowPickupAttachment = serialized->unwrap_into<rivet::ddl::generated::WeaponPickupAttachment>(ThrowPickupAttachment_type_id); 
 	}
 

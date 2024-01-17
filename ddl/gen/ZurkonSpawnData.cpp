@@ -9,18 +9,18 @@
 
 namespace rivet::ddl::generated {
 	ZurkonSpawnData::ZurkonSpawnData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ActorSpawnData(serialized) {
-		AssetId = serialized->get_uint64(AssetId_type_id);
+		AssetId = serialized->get_uint64(AssetId_type_id, 0);
 		SpawnMtx = serialized->unwrap_into<rivet::ddl::generated::DDLTransform>(SpawnMtx_type_id);
-		FamilyType = serialized->get_enum<rivet::ddl::generated::x2c2b51d>(FamilyType_type_id, rivet::ddl::generated::x2c2b51d_values);
-		NumShots = serialized->get_uint32(NumShots_type_id);
-		HitPoints = serialized->get_float(HitPoints_type_id);
-		Range = serialized->get_float(Range_type_id);
-		FiringInterval = serialized->get_float(FiringInterval_type_id);
-		IsRespawn = serialized->get_bool(IsRespawn_type_id);
-		OwnerHandle = serialized->get_uint32(OwnerHandle_type_id);
-		WeaponId = serialized->get_uint32(WeaponId_type_id);
-		ShotConfigAssetId = serialized->get_uint64(ShotConfigAssetId_type_id);
-		VOConfigAssetId = serialized->get_uint64(VOConfigAssetId_type_id); 
+		FamilyType = serialized->get_enum<rivet::ddl::generated::x2c2b51d>(FamilyType_type_id, rivet::ddl::generated::x2c2b51d_values, rivet::ddl::generated::x2c2b51d::Dad);
+		NumShots = serialized->get_uint32(NumShots_type_id, 0);
+		HitPoints = serialized->get_float(HitPoints_type_id, 0.000000);
+		Range = serialized->get_float(Range_type_id, 0.000000);
+		FiringInterval = serialized->get_float(FiringInterval_type_id, 0.000000);
+		IsRespawn = serialized->get_bool(IsRespawn_type_id, false);
+		OwnerHandle = serialized->get_uint32(OwnerHandle_type_id, 0);
+		WeaponId = serialized->get_uint32(WeaponId_type_id, 0);
+		ShotConfigAssetId = serialized->get_uint64(ShotConfigAssetId_type_id, 0);
+		VOConfigAssetId = serialized->get_uint64(VOConfigAssetId_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

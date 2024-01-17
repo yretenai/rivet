@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	RegionAuxTemp::RegionAuxTemp([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		HighLod = serialized->get_uint64(HighLod_type_id);
-		LowLod = serialized->get_uint64(LowLod_type_id);
-		Units = serialized->get_uint64(Units_type_id);
+		HighLod = serialized->get_uint64(HighLod_type_id, 0);
+		LowLod = serialized->get_uint64(LowLod_type_id, 0);
+		Units = serialized->get_uint64(Units_type_id, 0);
 		Zones = serialized->get_strings(Zones_type_id); 
 	}
 

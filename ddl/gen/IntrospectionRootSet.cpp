@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	IntrospectionRootSet::IntrospectionRootSet([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Name = serialized->get_string(Name_type_id);
-		Type = serialized->get_enum<rivet::ddl::generated::x39ee8d91>(Type_type_id, rivet::ddl::generated::x39ee8d91_values);
+		Name = serialized->get_string(Name_type_id, {});
+		Type = serialized->get_enum<rivet::ddl::generated::x39ee8d91>(Type_type_id, rivet::ddl::generated::x39ee8d91_values, rivet::ddl::generated::x39ee8d91::OpenUnit);
 		Roots = serialized->get_uint64s(Roots_type_id); 
 	}
 

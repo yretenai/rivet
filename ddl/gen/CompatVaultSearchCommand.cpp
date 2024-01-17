@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	CompatVaultSearchCommand::CompatVaultSearchCommand([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SearchText = serialized->get_string(SearchText_type_id);
-		Filters = serialized->get_string(Filters_type_id); 
+		SearchText = serialized->get_string(SearchText_type_id, {});
+		Filters = serialized->get_string(Filters_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

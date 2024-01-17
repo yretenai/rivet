@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	IncinerateEffectPrius::IncinerateEffectPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		IncinerateConfig = serialized->get_string(IncinerateConfig_type_id); 
+		IncinerateConfig = serialized->get_string(IncinerateConfig_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

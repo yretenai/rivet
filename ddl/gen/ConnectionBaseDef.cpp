@@ -10,8 +10,8 @@
 namespace rivet::ddl::generated {
 	ConnectionBaseDef::ConnectionBaseDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): NodeGraphItemDef(serialized) {
 		Pins = serialized->unwrap_into_many<rivet::ddl::generated::ConnectionPinDef>(Pins_type_id);
-		SourcePlug = serialized->get_string(SourcePlug_type_id);
-		TargetPlug = serialized->get_string(TargetPlug_type_id); 
+		SourcePlug = serialized->get_string(SourcePlug_type_id, {});
+		TargetPlug = serialized->get_string(TargetPlug_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

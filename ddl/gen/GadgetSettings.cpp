@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	GadgetSettings::GadgetSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DrawDebugImguiWindow = serialized->get_bool(DrawDebugImguiWindow_type_id); 
+		DrawDebugImguiWindow = serialized->get_bool(DrawDebugImguiWindow_type_id, false); 
 	}
 
 	[[nodiscard]] auto

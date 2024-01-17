@@ -11,13 +11,13 @@
 namespace rivet::ddl::generated {
 	DevstatsPlayerPositionInfo::DevstatsPlayerPositionInfo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		pos = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(pos_type_id);
-		Level = serialized->get_string(Level_type_id);
-		RegionContainer = serialized->get_string(RegionContainer_type_id);
-		RegionUnit = serialized->get_string(RegionUnit_type_id);
-		IsOpenWorld = serialized->get_bool(IsOpenWorld_type_id);
-		PlaythroughTime = serialized->get_float(PlaythroughTime_type_id);
-		PlaythroughSegmentId = serialized->get_string(PlaythroughSegmentId_type_id);
-		LastGoldenPathMission = serialized->get_string(LastGoldenPathMission_type_id);
+		Level = serialized->get_string(Level_type_id, {});
+		RegionContainer = serialized->get_string(RegionContainer_type_id, {});
+		RegionUnit = serialized->get_string(RegionUnit_type_id, {});
+		IsOpenWorld = serialized->get_bool(IsOpenWorld_type_id, false);
+		PlaythroughTime = serialized->get_float(PlaythroughTime_type_id, 0.000000);
+		PlaythroughSegmentId = serialized->get_string(PlaythroughSegmentId_type_id, {});
+		LastGoldenPathMission = serialized->get_string(LastGoldenPathMission_type_id, {});
 		ProjSpecificData = serialized->unwrap_into<rivet::ddl::generated::DevstatsProjSpecificBase>(ProjSpecificData_type_id); 
 	}
 

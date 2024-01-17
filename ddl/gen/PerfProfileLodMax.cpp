@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	PerfProfileLodMax::PerfProfileLodMax([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		PS5_30_Spec = serialized->get_enum<rivet::ddl::generated::x4a11042>(PS5_30_Spec_type_id, rivet::ddl::generated::x4a11042_values);
-		PS5_60_Spec = serialized->get_enum<rivet::ddl::generated::x4a11042>(PS5_60_Spec_type_id, rivet::ddl::generated::x4a11042_values); 
+		PS5_30_Spec = serialized->get_enum<rivet::ddl::generated::x4a11042>(PS5_30_Spec_type_id, rivet::ddl::generated::x4a11042_values, rivet::ddl::generated::x4a11042::Lod_0);
+		PS5_60_Spec = serialized->get_enum<rivet::ddl::generated::x4a11042>(PS5_60_Spec_type_id, rivet::ddl::generated::x4a11042_values, rivet::ddl::generated::x4a11042::Lod_0); 
 	}
 
 	[[nodiscard]] auto

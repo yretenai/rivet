@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	ScriptActionPropertyRequest::ScriptActionPropertyRequest([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ScriptActionName = serialized->get_string(ScriptActionName_type_id);
-		InstanceTuid = serialized->get_uint64(InstanceTuid_type_id); 
+		ScriptActionName = serialized->get_string(ScriptActionName_type_id, {});
+		InstanceTuid = serialized->get_uint64(InstanceTuid_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

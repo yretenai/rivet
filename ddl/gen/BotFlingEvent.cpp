@@ -7,14 +7,14 @@
 
 namespace rivet::ddl::generated {
 	BotFlingEvent::BotFlingEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BotForceMoveBaseEvent(serialized) {
-		TargetLocator = serialized->get_string(TargetLocator_type_id);
-		FlingLocator = serialized->get_string(FlingLocator_type_id);
-		Speed = serialized->get_float(Speed_type_id);
-		OverrideAutoTargetAngle = serialized->get_float(OverrideAutoTargetAngle_type_id);
-		VaryDirection = serialized->get_bool(VaryDirection_type_id);
-		PreserveYVelocity = serialized->get_bool(PreserveYVelocity_type_id);
-		UseSourceActorFacing = serialized->get_bool(UseSourceActorFacing_type_id);
-		UseSourceActorFacingForTargeting = serialized->get_bool(UseSourceActorFacingForTargeting_type_id); 
+		TargetLocator = serialized->get_string(TargetLocator_type_id, {});
+		FlingLocator = serialized->get_string(FlingLocator_type_id, {});
+		Speed = serialized->get_float(Speed_type_id, 10.000000);
+		OverrideAutoTargetAngle = serialized->get_float(OverrideAutoTargetAngle_type_id, -1.000000);
+		VaryDirection = serialized->get_bool(VaryDirection_type_id, true);
+		PreserveYVelocity = serialized->get_bool(PreserveYVelocity_type_id, false);
+		UseSourceActorFacing = serialized->get_bool(UseSourceActorFacing_type_id, false);
+		UseSourceActorFacingForTargeting = serialized->get_bool(UseSourceActorFacingForTargeting_type_id, false); 
 	}
 
 	[[nodiscard]] auto

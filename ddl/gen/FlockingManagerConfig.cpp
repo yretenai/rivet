@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	FlockingManagerConfig::FlockingManagerConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		RefreshPeriod = serialized->get_float(RefreshPeriod_type_id);
+		RefreshPeriod = serialized->get_float(RefreshPeriod_type_id, 1.000000);
 		FlockConfigs = serialized->get_strings(FlockConfigs_type_id); 
 	}
 

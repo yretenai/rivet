@@ -8,9 +8,9 @@
 namespace rivet::ddl::generated {
 	RCSOpenInput::RCSOpenInput([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Views = serialized->get_strings(Views_type_id);
-		AutoAdd = serialized->get_bool(AutoAdd_type_id);
-		AutoSync = serialized->get_bool(AutoSync_type_id);
-		Changelist = serialized->get_uint32(Changelist_type_id); 
+		AutoAdd = serialized->get_bool(AutoAdd_type_id, true);
+		AutoSync = serialized->get_bool(AutoSync_type_id, false);
+		Changelist = serialized->get_uint32(Changelist_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

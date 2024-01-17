@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	EventForwarderPrius::EventForwarderPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		TargetActor = serialized->get_uint64(TargetActor_type_id);
+		TargetActor = serialized->get_uint64(TargetActor_type_id, 0);
 		EventsToForward = serialized->get_strings(EventsToForward_type_id);
-		ForwardedSender = serialized->get_enum<rivet::ddl::generated::xc97f8430>(ForwardedSender_type_id, rivet::ddl::generated::xc97f8430_values);
-		QueueImmediateEvent = serialized->get_bool(QueueImmediateEvent_type_id); 
+		ForwardedSender = serialized->get_enum<rivet::ddl::generated::xc97f8430>(ForwardedSender_type_id, rivet::ddl::generated::xc97f8430_values, rivet::ddl::generated::xc97f8430::Target);
+		QueueImmediateEvent = serialized->get_bool(QueueImmediateEvent_type_id, false); 
 	}
 
 	[[nodiscard]] auto

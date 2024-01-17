@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	Nav3DSettings::Nav3DSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SVOGridMaxElements = serialized->get_uint32(SVOGridMaxElements_type_id);
-		MaxQueries = serialized->get_uint32(MaxQueries_type_id);
-		Enabled = serialized->get_bool(Enabled_type_id); 
+		SVOGridMaxElements = serialized->get_uint32(SVOGridMaxElements_type_id, 13);
+		MaxQueries = serialized->get_uint32(MaxQueries_type_id, 32);
+		Enabled = serialized->get_bool(Enabled_type_id, false); 
 	}
 
 	[[nodiscard]] auto

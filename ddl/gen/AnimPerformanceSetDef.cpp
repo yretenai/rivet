@@ -7,14 +7,14 @@
 
 namespace rivet::ddl::generated {
 	AnimPerformanceSetDef::AnimPerformanceSetDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Name = serialized->get_string(Name_type_id);
-		FacialPosesClip = serialized->get_string(FacialPosesClip_type_id);
-		HeadActorPath = serialized->get_string(HeadActorPath_type_id);
-		PreviewBodyModelPath = serialized->get_string(PreviewBodyModelPath_type_id);
-		BodyActorPath = serialized->get_string(BodyActorPath_type_id);
-		GestureAnimationModelPath = serialized->get_string(GestureAnimationModelPath_type_id);
-		LocalizationPath = serialized->get_string(LocalizationPath_type_id);
-		BodyGestureGroup = serialized->get_string(BodyGestureGroup_type_id);
+		Name = serialized->get_string(Name_type_id, {});
+		FacialPosesClip = serialized->get_string(FacialPosesClip_type_id, {});
+		HeadActorPath = serialized->get_string(HeadActorPath_type_id, {});
+		PreviewBodyModelPath = serialized->get_string(PreviewBodyModelPath_type_id, {});
+		BodyActorPath = serialized->get_string(BodyActorPath_type_id, {});
+		GestureAnimationModelPath = serialized->get_string(GestureAnimationModelPath_type_id, {});
+		LocalizationPath = serialized->get_string(LocalizationPath_type_id, {});
+		BodyGestureGroup = serialized->get_string(BodyGestureGroup_type_id, {});
 		PerformanceClipGroups = serialized->get_strings(PerformanceClipGroups_type_id);
 		CustomPerformanceClipGroups = serialized->get_strings(CustomPerformanceClipGroups_type_id); 
 	}

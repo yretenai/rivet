@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	SyncedLerpedPosPrius::SyncedLerpedPosPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		UpdateInterval = serialized->get_float(UpdateInterval_type_id); 
+		UpdateInterval = serialized->get_float(UpdateInterval_type_id, 0.500000); 
 	}
 
 	[[nodiscard]] auto

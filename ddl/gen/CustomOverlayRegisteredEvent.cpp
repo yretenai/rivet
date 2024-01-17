@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	CustomOverlayRegisteredEvent::CustomOverlayRegisteredEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		RegionAssetId = serialized->get_uint64(RegionAssetId_type_id);
-		ProcessNavMeshObstacles = serialized->get_bool(ProcessNavMeshObstacles_type_id); 
+		RegionAssetId = serialized->get_uint64(RegionAssetId_type_id, 0);
+		ProcessNavMeshObstacles = serialized->get_bool(ProcessNavMeshObstacles_type_id, false); 
 	}
 
 	[[nodiscard]] auto

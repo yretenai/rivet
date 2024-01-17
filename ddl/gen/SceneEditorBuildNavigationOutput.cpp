@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	SceneEditorBuildNavigationOutput::SceneEditorBuildNavigationOutput([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Success = serialized->get_bool(Success_type_id);
-		ErrorMessage = serialized->get_string(ErrorMessage_type_id); 
+		Success = serialized->get_bool(Success_type_id, false);
+		ErrorMessage = serialized->get_string(ErrorMessage_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

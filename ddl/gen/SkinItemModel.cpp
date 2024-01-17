@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	SkinItemModel::SkinItemModel([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		BodyType = serialized->get_enum<rivet::ddl::generated::x5d60d87e>(BodyType_type_id, rivet::ddl::generated::x5d60d87e_values);
-		HeadType = serialized->get_enum<rivet::ddl::generated::xa06d5978>(HeadType_type_id, rivet::ddl::generated::xa06d5978_values);
+		BodyType = serialized->get_enum<rivet::ddl::generated::x5d60d87e>(BodyType_type_id, rivet::ddl::generated::x5d60d87e_values, rivet::ddl::generated::x5d60d87e::All);
+		HeadType = serialized->get_enum<rivet::ddl::generated::xa06d5978>(HeadType_type_id, rivet::ddl::generated::xa06d5978_values, rivet::ddl::generated::xa06d5978::All);
 		Model = serialized->unwrap_into<rivet::ddl::generated::AssetReferenceDef>(Model_type_id);
 		ModelInnerLayer = serialized->unwrap_into<rivet::ddl::generated::AssetReferenceDef>(ModelInnerLayer_type_id); 
 	}

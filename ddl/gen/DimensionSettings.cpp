@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	DimensionSettings::DimensionSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MaxDimensions = serialized->get_int32(MaxDimensions_type_id);
-		MaxCheckpoints = serialized->get_int32(MaxCheckpoints_type_id);
-		MaxPortals = serialized->get_int32(MaxPortals_type_id); 
+		MaxDimensions = serialized->get_int32(MaxDimensions_type_id, 16);
+		MaxCheckpoints = serialized->get_int32(MaxCheckpoints_type_id, 24);
+		MaxPortals = serialized->get_int32(MaxPortals_type_id, 24); 
 	}
 
 	[[nodiscard]] auto

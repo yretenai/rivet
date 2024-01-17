@@ -12,7 +12,7 @@
 
 namespace rivet::ddl::generated {
 	SpawnShotBotTargetingPrius::SpawnShotBotTargetingPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): SpawnShotTargetingPrius(serialized) {
-		TargetHero = serialized->get_bool(TargetHero_type_id); 
+		TargetHero = serialized->get_bool(TargetHero_type_id, false); 
 	}
 
 	[[nodiscard]] auto

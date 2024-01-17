@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	DamageModifierLimitOverTimePrius::DamageModifierLimitOverTimePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): DamageModifierIncomingPrius(serialized) {
-		MaxDamagePercent = serialized->get_float(MaxDamagePercent_type_id);
-		Interval = serialized->get_float(Interval_type_id);
+		MaxDamagePercent = serialized->get_float(MaxDamagePercent_type_id, 1.000000);
+		Interval = serialized->get_float(Interval_type_id, 0.000000);
 		DamageFilter = serialized->get_enums<rivet::ddl::generated::DamageTypes>(DamageFilter_type_id, rivet::ddl::generated::DamageTypes_values); 
 	}
 

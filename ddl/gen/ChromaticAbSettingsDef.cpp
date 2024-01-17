@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	ChromaticAbSettingsDef::ChromaticAbSettingsDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Enabled = serialized->get_bool(Enabled_type_id);
-		InnerRadius = serialized->get_float(InnerRadius_type_id);
-		OuterRadius = serialized->get_float(OuterRadius_type_id);
-		DisplacementInPixels = serialized->get_float(DisplacementInPixels_type_id);
-		BlurInPixels = serialized->get_float(BlurInPixels_type_id); 
+		Enabled = serialized->get_bool(Enabled_type_id, false);
+		InnerRadius = serialized->get_float(InnerRadius_type_id, 0.300000);
+		OuterRadius = serialized->get_float(OuterRadius_type_id, 1.000000);
+		DisplacementInPixels = serialized->get_float(DisplacementInPixels_type_id, 5.000000);
+		BlurInPixels = serialized->get_float(BlurInPixels_type_id, 2.500000); 
 	}
 
 	[[nodiscard]] auto

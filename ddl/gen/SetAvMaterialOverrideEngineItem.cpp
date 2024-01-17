@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	SetAvMaterialOverrideEngineItem::SetAvMaterialOverrideEngineItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AvMaterialOverride = serialized->get_enum<rivet::ddl::generated::x10b3c4cf>(AvMaterialOverride_type_id, rivet::ddl::generated::x10b3c4cf_values); 
+		AvMaterialOverride = serialized->get_enum<rivet::ddl::generated::x10b3c4cf>(AvMaterialOverride_type_id, rivet::ddl::generated::x10b3c4cf_values, rivet::ddl::generated::x10b3c4cf::None); 
 	}
 
 	[[nodiscard]] auto

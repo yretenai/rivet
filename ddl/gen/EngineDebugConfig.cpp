@@ -7,19 +7,19 @@
 
 namespace rivet::ddl::generated {
 	EngineDebugConfig::EngineDebugConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MarketingFov = serialized->get_float(MarketingFov_type_id);
-		MarketingCameraRoll = serialized->get_float(MarketingCameraRoll_type_id);
-		MarketingCameraPitch = serialized->get_float(MarketingCameraPitch_type_id);
-		MarketingCameraYaw = serialized->get_float(MarketingCameraYaw_type_id);
-		MarketingCameraXOffset = serialized->get_float(MarketingCameraXOffset_type_id);
-		MarketingCameraYOffset = serialized->get_float(MarketingCameraYOffset_type_id);
-		MarketingCameraZOffset = serialized->get_float(MarketingCameraZOffset_type_id);
-		MarketingShakeIntensity = serialized->get_float(MarketingShakeIntensity_type_id);
-		MarketingShakeFrequency = serialized->get_float(MarketingShakeFrequency_type_id);
-		MarketingNearFocusDistance = serialized->get_float(MarketingNearFocusDistance_type_id);
-		MarketingNearApertureScale = serialized->get_float(MarketingNearApertureScale_type_id);
-		MarketingFarFocusDistance = serialized->get_float(MarketingFarFocusDistance_type_id);
-		MarketingFarApertureScale = serialized->get_float(MarketingFarApertureScale_type_id); 
+		MarketingFov = serialized->get_float(MarketingFov_type_id, 82.000000);
+		MarketingCameraRoll = serialized->get_float(MarketingCameraRoll_type_id, 0.000000);
+		MarketingCameraPitch = serialized->get_float(MarketingCameraPitch_type_id, 0.000000);
+		MarketingCameraYaw = serialized->get_float(MarketingCameraYaw_type_id, 0.000000);
+		MarketingCameraXOffset = serialized->get_float(MarketingCameraXOffset_type_id, 0.000000);
+		MarketingCameraYOffset = serialized->get_float(MarketingCameraYOffset_type_id, 0.000000);
+		MarketingCameraZOffset = serialized->get_float(MarketingCameraZOffset_type_id, 0.000000);
+		MarketingShakeIntensity = serialized->get_float(MarketingShakeIntensity_type_id, 0.000000);
+		MarketingShakeFrequency = serialized->get_float(MarketingShakeFrequency_type_id, 0.000000);
+		MarketingNearFocusDistance = serialized->get_float(MarketingNearFocusDistance_type_id, 0.000000);
+		MarketingNearApertureScale = serialized->get_float(MarketingNearApertureScale_type_id, 0.000000);
+		MarketingFarFocusDistance = serialized->get_float(MarketingFarFocusDistance_type_id, 0.000000);
+		MarketingFarApertureScale = serialized->get_float(MarketingFarApertureScale_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

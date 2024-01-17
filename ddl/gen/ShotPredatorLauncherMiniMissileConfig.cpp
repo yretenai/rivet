@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	ShotPredatorLauncherMiniMissileConfig::ShotPredatorLauncherMiniMissileConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		MiniMissileActor = serialized->get_string(MiniMissileActor_type_id);
+		MiniMissileActor = serialized->get_string(MiniMissileActor_type_id, {});
 		ShotPrius = serialized->unwrap_into<rivet::ddl::generated::ShotPredatorLauncherMiniMissilePrius>(ShotPrius_type_id); 
 	}
 

@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	GetStickInputActionPrius::GetStickInputActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		Stick = serialized->get_enum<rivet::ddl::generated::x354c1840>(Stick_type_id, rivet::ddl::generated::x354c1840_values);
-		MapInputToWorld = serialized->get_bool(MapInputToWorld_type_id);
-		ApplyInvertYPreference = serialized->get_bool(ApplyInvertYPreference_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Hero);
+		Stick = serialized->get_enum<rivet::ddl::generated::x354c1840>(Stick_type_id, rivet::ddl::generated::x354c1840_values, rivet::ddl::generated::x354c1840::MoveStick);
+		MapInputToWorld = serialized->get_bool(MapInputToWorld_type_id, false);
+		ApplyInvertYPreference = serialized->get_bool(ApplyInvertYPreference_type_id, false); 
 	}
 
 	[[nodiscard]] auto

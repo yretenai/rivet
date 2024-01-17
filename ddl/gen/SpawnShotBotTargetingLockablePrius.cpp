@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	SpawnShotBotTargetingLockablePrius::SpawnShotBotTargetingLockablePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): SpawnShotBotTargetingPrius(serialized) {
-		MissVelocityMultiplier = serialized->get_float(MissVelocityMultiplier_type_id);
-		MissCap = serialized->get_float(MissCap_type_id); 
+		MissVelocityMultiplier = serialized->get_float(MissVelocityMultiplier_type_id, 1.000000);
+		MissCap = serialized->get_float(MissCap_type_id, 3.000000); 
 	}
 
 	[[nodiscard]] auto

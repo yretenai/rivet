@@ -12,9 +12,9 @@ namespace rivet::ddl::generated {
 		ReverbFocusDistanceScale = serialized->unwrap_into<rivet::ddl::generated::SoundPropagation2RangeDef>(ReverbFocusDistanceScale_type_id);
 		ReverbAzimuthDistanceScale = serialized->unwrap_into<rivet::ddl::generated::SoundPropagation2RangeDef>(ReverbAzimuthDistanceScale_type_id);
 		VirtualPositionDistanceScale = serialized->unwrap_into<rivet::ddl::generated::SoundPropagation2RangeDef>(VirtualPositionDistanceScale_type_id);
-		AttenuationFadeScalar = serialized->get_float(AttenuationFadeScalar_type_id);
-		MaxFilteredAttenuationAngle = serialized->get_float(MaxFilteredAttenuationAngle_type_id);
-		MaxFullAttenuationAngle = serialized->get_float(MaxFullAttenuationAngle_type_id); 
+		AttenuationFadeScalar = serialized->get_float(AttenuationFadeScalar_type_id, 2.000000);
+		MaxFilteredAttenuationAngle = serialized->get_float(MaxFilteredAttenuationAngle_type_id, 80.000000);
+		MaxFullAttenuationAngle = serialized->get_float(MaxFullAttenuationAngle_type_id, 170.000000); 
 	}
 
 	[[nodiscard]] auto

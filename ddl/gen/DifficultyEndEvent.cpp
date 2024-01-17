@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	DifficultyEndEvent::DifficultyEndEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		EventId = serialized->get_string(EventId_type_id);
-		SegmentId = serialized->get_string(SegmentId_type_id);
-		Difficulty = serialized->get_string(Difficulty_type_id);
-		Duration = serialized->get_float(Duration_type_id); 
+		EventId = serialized->get_string(EventId_type_id, {});
+		SegmentId = serialized->get_string(SegmentId_type_id, {});
+		Difficulty = serialized->get_string(Difficulty_type_id, {});
+		Duration = serialized->get_float(Duration_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

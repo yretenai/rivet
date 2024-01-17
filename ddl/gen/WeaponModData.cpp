@@ -7,14 +7,14 @@
 
 namespace rivet::ddl::generated {
 	WeaponModData::WeaponModData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Type = serialized->get_enum<rivet::ddl::generated::xdbb7aaff>(Type_type_id, rivet::ddl::generated::xdbb7aaff_values);
-		IconType = serialized->get_enum<rivet::ddl::generated::x1c87ac4a>(IconType_type_id, rivet::ddl::generated::x1c87ac4a_values);
-		IsPercent = serialized->get_bool(IsPercent_type_id);
-		Value = serialized->get_float(Value_type_id);
-		Cost = serialized->get_uint32(Cost_type_id);
-		NameLocTag = serialized->get_string(NameLocTag_type_id);
-		DescLocTag = serialized->get_string(DescLocTag_type_id);
-		TileIndex = serialized->get_enum<rivet::ddl::generated::x1b1e7614>(TileIndex_type_id, rivet::ddl::generated::x1b1e7614_values); 
+		Type = serialized->get_enum<rivet::ddl::generated::xdbb7aaff>(Type_type_id, rivet::ddl::generated::xdbb7aaff_values, rivet::ddl::generated::xdbb7aaff::None);
+		IconType = serialized->get_enum<rivet::ddl::generated::x1c87ac4a>(IconType_type_id, rivet::ddl::generated::x1c87ac4a_values, rivet::ddl::generated::x1c87ac4a::None);
+		IsPercent = serialized->get_bool(IsPercent_type_id, false);
+		Value = serialized->get_float(Value_type_id, 0.000000);
+		Cost = serialized->get_uint32(Cost_type_id, 0);
+		NameLocTag = serialized->get_string(NameLocTag_type_id, {});
+		DescLocTag = serialized->get_string(DescLocTag_type_id, {});
+		TileIndex = serialized->get_enum<rivet::ddl::generated::x1b1e7614>(TileIndex_type_id, rivet::ddl::generated::x1b1e7614_values, rivet::ddl::generated::x1b1e7614::Empty); 
 	}
 
 	[[nodiscard]] auto

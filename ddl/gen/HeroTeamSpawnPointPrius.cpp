@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	HeroTeamSpawnPointPrius::HeroTeamSpawnPointPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Team = serialized->get_enum<rivet::ddl::generated::xc115d639>(Team_type_id, rivet::ddl::generated::xc115d639_values);
-		StartEnabled = serialized->get_bool(StartEnabled_type_id);
+		Team = serialized->get_enum<rivet::ddl::generated::xc115d639>(Team_type_id, rivet::ddl::generated::xc115d639_values, rivet::ddl::generated::xc115d639::None);
+		StartEnabled = serialized->get_bool(StartEnabled_type_id, true);
 		HeroSpawnLocations = serialized->unwrap_into_many<rivet::ddl::generated::HeroSpawnLocationData>(HeroSpawnLocations_type_id); 
 	}
 

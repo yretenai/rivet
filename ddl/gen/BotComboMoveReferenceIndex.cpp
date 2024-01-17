@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	BotComboMoveReferenceIndex::BotComboMoveReferenceIndex([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BotComboMoveBase(serialized) {
-		Index = serialized->get_uint32(Index_type_id); 
+		Index = serialized->get_uint32(Index_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

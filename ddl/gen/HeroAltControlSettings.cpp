@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	HeroAltControlSettings::HeroAltControlSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		JumpToAirDash = serialized->get_bool(JumpToAirDash_type_id);
-		RiftTetherCombatTargeting = serialized->get_bool(RiftTetherCombatTargeting_type_id);
-		HoverbootInputMode = serialized->get_enum<rivet::ddl::generated::x47a6f45d>(HoverbootInputMode_type_id, rivet::ddl::generated::x47a6f45d_values);
-		HoverbootNoKickInputGracePeriod = serialized->get_float(HoverbootNoKickInputGracePeriod_type_id);
-		FlyerCameraResponsivenessOption = serialized->get_enum<rivet::ddl::generated::x8b42b541>(FlyerCameraResponsivenessOption_type_id, rivet::ddl::generated::x8b42b541_values); 
+		JumpToAirDash = serialized->get_bool(JumpToAirDash_type_id, false);
+		RiftTetherCombatTargeting = serialized->get_bool(RiftTetherCombatTargeting_type_id, true);
+		HoverbootInputMode = serialized->get_enum<rivet::ddl::generated::x47a6f45d>(HoverbootInputMode_type_id, rivet::ddl::generated::x47a6f45d_values, rivet::ddl::generated::x47a6f45d::Press_L2_to_Kick);
+		HoverbootNoKickInputGracePeriod = serialized->get_float(HoverbootNoKickInputGracePeriod_type_id, 0.350000);
+		FlyerCameraResponsivenessOption = serialized->get_enum<rivet::ddl::generated::x8b42b541>(FlyerCameraResponsivenessOption_type_id, rivet::ddl::generated::x8b42b541_values, rivet::ddl::generated::x8b42b541::Slow); 
 	}
 
 	[[nodiscard]] auto

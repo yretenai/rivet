@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	ShockwaveStartEvent::ShockwaveStartEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Radius = serialized->get_float(Radius_type_id);
-		Height = serialized->get_float(Height_type_id);
-		GrowDuration = serialized->get_float(GrowDuration_type_id);
-		LifeDuration = serialized->get_float(LifeDuration_type_id); 
+		Radius = serialized->get_float(Radius_type_id, 0.000000);
+		Height = serialized->get_float(Height_type_id, 0.000000);
+		GrowDuration = serialized->get_float(GrowDuration_type_id, 0.000000);
+		LifeDuration = serialized->get_float(LifeDuration_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

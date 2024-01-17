@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	MissionCompleteEvent::MissionCompleteEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		MissionName = serialized->get_string(MissionName_type_id);
-		SilentMode = serialized->get_bool(SilentMode_type_id);
-		IsSkipping = serialized->get_bool(IsSkipping_type_id); 
+		MissionName = serialized->get_string(MissionName_type_id, {});
+		SilentMode = serialized->get_bool(SilentMode_type_id, false);
+		IsSkipping = serialized->get_bool(IsSkipping_type_id, false); 
 	}
 
 	[[nodiscard]] auto

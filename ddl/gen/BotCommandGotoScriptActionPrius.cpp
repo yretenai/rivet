@@ -7,14 +7,14 @@
 
 namespace rivet::ddl::generated {
 	BotCommandGotoScriptActionPrius::BotCommandGotoScriptActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		MoveStyle = serialized->get_enum<rivet::ddl::generated::MovementStyle>(MoveStyle_type_id, rivet::ddl::generated::MovementStyle_values);
-		SkipIntro = serialized->get_bool(SkipIntro_type_id);
-		SkipOutro = serialized->get_bool(SkipOutro_type_id);
-		UseDestinationFacing = serialized->get_bool(UseDestinationFacing_type_id);
-		IgnoreHero = serialized->get_bool(IgnoreHero_type_id);
-		StopForHero = serialized->get_bool(StopForHero_type_id);
-		FollowCurve = serialized->get_bool(FollowCurve_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Enemy_Bot);
+		MoveStyle = serialized->get_enum<rivet::ddl::generated::MovementStyle>(MoveStyle_type_id, rivet::ddl::generated::MovementStyle_values, rivet::ddl::generated::MovementStyle::Run);
+		SkipIntro = serialized->get_bool(SkipIntro_type_id, false);
+		SkipOutro = serialized->get_bool(SkipOutro_type_id, false);
+		UseDestinationFacing = serialized->get_bool(UseDestinationFacing_type_id, false);
+		IgnoreHero = serialized->get_bool(IgnoreHero_type_id, false);
+		StopForHero = serialized->get_bool(StopForHero_type_id, false);
+		FollowCurve = serialized->get_bool(FollowCurve_type_id, false); 
 	}
 
 	[[nodiscard]] auto

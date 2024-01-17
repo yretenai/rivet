@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	PickupTradingCardPrius::PickupTradingCardPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): GamePickupItemPrius(serialized) {
-		CardCount = serialized->get_uint8(CardCount_type_id);
-		CardID = serialized->get_enum<rivet::ddl::generated::x507460e6>(CardID_type_id, rivet::ddl::generated::x507460e6_values); 
+		CardCount = serialized->get_uint8(CardCount_type_id, 1);
+		CardID = serialized->get_enum<rivet::ddl::generated::x507460e6>(CardID_type_id, rivet::ddl::generated::x507460e6_values, rivet::ddl::generated::x507460e6::Random); 
 	}
 
 	[[nodiscard]] auto

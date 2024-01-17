@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	IconMapPadButton::IconMapPadButton([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): IconMapBase(serialized) {
-		Button = serialized->get_enum<rivet::ddl::generated::x7b87880c>(Button_type_id, rivet::ddl::generated::x7b87880c_values); 
+		Button = serialized->get_enum<rivet::ddl::generated::x7b87880c>(Button_type_id, rivet::ddl::generated::x7b87880c_values, rivet::ddl::generated::x7b87880c::None); 
 	}
 
 	[[nodiscard]] auto

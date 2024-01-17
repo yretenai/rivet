@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	POIAttributeIconSingle::POIAttributeIconSingle([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): POIAttributeIconBase(serialized) {
-		Texture = serialized->get_string(Texture_type_id);
-		Width = serialized->get_float(Width_type_id);
-		Height = serialized->get_float(Height_type_id);
-		ApplyWidthHeight = serialized->get_bool(ApplyWidthHeight_type_id); 
+		Texture = serialized->get_string(Texture_type_id, "");
+		Width = serialized->get_float(Width_type_id, 32.000000);
+		Height = serialized->get_float(Height_type_id, 32.000000);
+		ApplyWidthHeight = serialized->get_bool(ApplyWidthHeight_type_id, true); 
 	}
 
 	[[nodiscard]] auto

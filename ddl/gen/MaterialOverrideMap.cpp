@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	MaterialOverrideMap::MaterialOverrideMap([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MaterialMappingName = serialized->get_string(MaterialMappingName_type_id);
-		AssetMaterialName = serialized->get_string(AssetMaterialName_type_id);
-		Type = serialized->get_enum<rivet::ddl::generated::x2351894b>(Type_type_id, rivet::ddl::generated::x2351894b_values); 
+		MaterialMappingName = serialized->get_string(MaterialMappingName_type_id, {});
+		AssetMaterialName = serialized->get_string(AssetMaterialName_type_id, {});
+		Type = serialized->get_enum<rivet::ddl::generated::x2351894b>(Type_type_id, rivet::ddl::generated::x2351894b_values, rivet::ddl::generated::x2351894b::Override_Base); 
 	}
 
 	[[nodiscard]] auto

@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	GameBotDoomPrius::GameBotDoomPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): GameBotMeleeBasePrius(serialized) {
-		V5Bangle = serialized->get_string(V5Bangle_type_id); 
+		V5Bangle = serialized->get_string(V5Bangle_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

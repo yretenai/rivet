@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	DebugOutfittingList::DebugOutfittingList([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Category = serialized->get_string(Category_type_id);
+		Category = serialized->get_string(Category_type_id, {});
 		ItemConfig = serialized->get_strings(ItemConfig_type_id); 
 	}
 

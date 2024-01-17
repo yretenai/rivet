@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	PropAssetElement::PropAssetElement([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		PropAsset = serialized->get_string(PropAsset_type_id);
-		DeleteOnFinish = serialized->get_bool(DeleteOnFinish_type_id); 
+		PropAsset = serialized->get_string(PropAsset_type_id, {});
+		DeleteOnFinish = serialized->get_bool(DeleteOnFinish_type_id, true); 
 	}
 
 	[[nodiscard]] auto

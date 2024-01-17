@@ -9,12 +9,12 @@
 
 namespace rivet::ddl::generated {
 	TriggerResponderChangeMaterialPrius::TriggerResponderChangeMaterialPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): TriggerResponderBasePrius(serialized) {
-		MatConstValueTrig = serialized->get_float(MatConstValueTrig_type_id);
-		MatConstValueNotTrig = serialized->get_float(MatConstValueNotTrig_type_id);
-		MatConstValueDisabled = serialized->get_float(MatConstValueDisabled_type_id);
-		BlendTimeTriggered = serialized->get_float(BlendTimeTriggered_type_id);
-		BlendTimeNotTriggered = serialized->get_float(BlendTimeNotTriggered_type_id);
-		BlendTimeDisabled = serialized->get_float(BlendTimeDisabled_type_id); 
+		MatConstValueTrig = serialized->get_float(MatConstValueTrig_type_id, 1.000000);
+		MatConstValueNotTrig = serialized->get_float(MatConstValueNotTrig_type_id, 0.000000);
+		MatConstValueDisabled = serialized->get_float(MatConstValueDisabled_type_id, 0.000000);
+		BlendTimeTriggered = serialized->get_float(BlendTimeTriggered_type_id, 0.000000);
+		BlendTimeNotTriggered = serialized->get_float(BlendTimeNotTriggered_type_id, 0.000000);
+		BlendTimeDisabled = serialized->get_float(BlendTimeDisabled_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

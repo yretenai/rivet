@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	SessionFileInfo::SessionFileInfo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Path = serialized->get_string(Path_type_id);
-		Writable = serialized->get_bool(Writable_type_id);
-		IsPrimary = serialized->get_bool(IsPrimary_type_id);
-		PromptForCheckout = serialized->get_bool(PromptForCheckout_type_id);
-		PromptForWarnings = serialized->get_bool(PromptForWarnings_type_id); 
+		Path = serialized->get_string(Path_type_id, "");
+		Writable = serialized->get_bool(Writable_type_id, false);
+		IsPrimary = serialized->get_bool(IsPrimary_type_id, false);
+		PromptForCheckout = serialized->get_bool(PromptForCheckout_type_id, true);
+		PromptForWarnings = serialized->get_bool(PromptForWarnings_type_id, false); 
 	}
 
 	[[nodiscard]] auto

@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	CombatLaserSightPrius::CombatLaserSightPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		StartsEnabled = serialized->get_bool(StartsEnabled_type_id);
-		AttachLocator = serialized->get_string(AttachLocator_type_id); 
+		StartsEnabled = serialized->get_bool(StartsEnabled_type_id, false);
+		AttachLocator = serialized->get_string(AttachLocator_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

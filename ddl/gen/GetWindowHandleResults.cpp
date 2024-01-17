@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	GetWindowHandleResults::GetWindowHandleResults([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		WindowHandle = serialized->get_string(WindowHandle_type_id); 
+		WindowHandle = serialized->get_string(WindowHandle_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	ShieldPrius::ShieldPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DamagePassthroughPercent = serialized->get_float(DamagePassthroughPercent_type_id);
-		MaxAngle = serialized->get_float(MaxAngle_type_id); 
+		DamagePassthroughPercent = serialized->get_float(DamagePassthroughPercent_type_id, 0.000000);
+		MaxAngle = serialized->get_float(MaxAngle_type_id, 90.000000); 
 	}
 
 	[[nodiscard]] auto

@@ -14,8 +14,8 @@ namespace rivet::ddl::generated {
 	BotComboMoveMelee::BotComboMoveMelee([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BotComboMove(serialized) {
 		MeleeAttackData = serialized->unwrap_into<rivet::ddl::generated::BotMeleeAttackData>(MeleeAttackData_type_id);
 		AttackDodgeData = serialized->unwrap_into<rivet::ddl::generated::BotAttackDodgeData>(AttackDodgeData_type_id);
-		DisableHitReactPartialsDuringAttack = serialized->get_bool(DisableHitReactPartialsDuringAttack_type_id);
-		PrioritizeMotionScaling = serialized->get_bool(PrioritizeMotionScaling_type_id); 
+		DisableHitReactPartialsDuringAttack = serialized->get_bool(DisableHitReactPartialsDuringAttack_type_id, false);
+		PrioritizeMotionScaling = serialized->get_bool(PrioritizeMotionScaling_type_id, false); 
 	}
 
 	[[nodiscard]] auto

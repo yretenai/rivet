@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	VignetteSettingsDef::VignetteSettingsDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Enabled = serialized->get_bool(Enabled_type_id);
-		Intensity = serialized->get_float(Intensity_type_id);
-		CenterClear = serialized->get_float(CenterClear_type_id); 
+		Enabled = serialized->get_bool(Enabled_type_id, false);
+		Intensity = serialized->get_float(Intensity_type_id, 1.000000);
+		CenterClear = serialized->get_float(CenterClear_type_id, 0.500000); 
 	}
 
 	[[nodiscard]] auto

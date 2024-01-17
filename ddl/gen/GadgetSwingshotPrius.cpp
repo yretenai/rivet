@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	GadgetSwingshotPrius::GadgetSwingshotPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		EmitLocator = serialized->get_string(EmitLocator_type_id);
-		ShotActor = serialized->get_string(ShotActor_type_id); 
+		EmitLocator = serialized->get_string(EmitLocator_type_id, {});
+		ShotActor = serialized->get_string(ShotActor_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

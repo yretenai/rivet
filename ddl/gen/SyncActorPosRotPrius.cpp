@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	SyncActorPosRotPrius::SyncActorPosRotPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MaxUpdateRate = serialized->get_float(MaxUpdateRate_type_id);
-		SyncRot = serialized->get_bool(SyncRot_type_id); 
+		MaxUpdateRate = serialized->get_float(MaxUpdateRate_type_id, 1.000000);
+		SyncRot = serialized->get_bool(SyncRot_type_id, true); 
 	}
 
 	[[nodiscard]] auto

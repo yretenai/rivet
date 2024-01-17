@@ -11,29 +11,29 @@
 namespace rivet::ddl::generated {
 	EnvProbeCache::EnvProbeCache([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		VaultMetaData = serialized->unwrap_into<rivet::ddl::generated::VaultMetaData>(VaultMetaData_type_id);
-		IconPath = serialized->get_string(IconPath_type_id);
+		IconPath = serialized->get_string(IconPath_type_id, "");
 		ProbePos = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(ProbePos_type_id);
 		AxisX = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(AxisX_type_id);
 		AxisY = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(AxisY_type_id);
 		AxisZ = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(AxisZ_type_id);
-		Mip16Index = serialized->get_int32(Mip16Index_type_id);
-		Mip32AssetIndex = serialized->get_int32(Mip32AssetIndex_type_id);
-		Mip32SubIndex = serialized->get_int32(Mip32SubIndex_type_id);
-		VolumeShape = serialized->get_enum<rivet::ddl::generated::VolumeShapes>(VolumeShape_type_id, rivet::ddl::generated::VolumeShapes_values);
-		Weight = serialized->get_float(Weight_type_id);
+		Mip16Index = serialized->get_int32(Mip16Index_type_id, -1);
+		Mip32AssetIndex = serialized->get_int32(Mip32AssetIndex_type_id, -1);
+		Mip32SubIndex = serialized->get_int32(Mip32SubIndex_type_id, -1);
+		VolumeShape = serialized->get_enum<rivet::ddl::generated::VolumeShapes>(VolumeShape_type_id, rivet::ddl::generated::VolumeShapes_values, rivet::ddl::generated::VolumeShapes::Ellipsoid);
+		Weight = serialized->get_float(Weight_type_id, 1.000000);
 		ProbeOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(ProbeOffset_type_id);
-		FalloffDistNegX = serialized->get_float(FalloffDistNegX_type_id);
-		FalloffDistPosX = serialized->get_float(FalloffDistPosX_type_id);
-		FalloffDistNegY = serialized->get_float(FalloffDistNegY_type_id);
-		FalloffDistPosY = serialized->get_float(FalloffDistPosY_type_id);
-		FalloffDistNegZ = serialized->get_float(FalloffDistNegZ_type_id);
-		FalloffDistPosZ = serialized->get_float(FalloffDistPosZ_type_id);
-		ProxyDistNegX = serialized->get_float(ProxyDistNegX_type_id);
-		ProxyDistPosX = serialized->get_float(ProxyDistPosX_type_id);
-		ProxyDistNegY = serialized->get_float(ProxyDistNegY_type_id);
-		ProxyDistPosY = serialized->get_float(ProxyDistPosY_type_id);
-		ProxyDistNegZ = serialized->get_float(ProxyDistNegZ_type_id);
-		ProxyDistPosZ = serialized->get_float(ProxyDistPosZ_type_id); 
+		FalloffDistNegX = serialized->get_float(FalloffDistNegX_type_id, 1.000000);
+		FalloffDistPosX = serialized->get_float(FalloffDistPosX_type_id, 1.000000);
+		FalloffDistNegY = serialized->get_float(FalloffDistNegY_type_id, 1.000000);
+		FalloffDistPosY = serialized->get_float(FalloffDistPosY_type_id, 1.000000);
+		FalloffDistNegZ = serialized->get_float(FalloffDistNegZ_type_id, 1.000000);
+		FalloffDistPosZ = serialized->get_float(FalloffDistPosZ_type_id, 1.000000);
+		ProxyDistNegX = serialized->get_float(ProxyDistNegX_type_id, 1.000000);
+		ProxyDistPosX = serialized->get_float(ProxyDistPosX_type_id, 1.000000);
+		ProxyDistNegY = serialized->get_float(ProxyDistNegY_type_id, 1.000000);
+		ProxyDistPosY = serialized->get_float(ProxyDistPosY_type_id, 1.000000);
+		ProxyDistNegZ = serialized->get_float(ProxyDistNegZ_type_id, 1.000000);
+		ProxyDistPosZ = serialized->get_float(ProxyDistPosZ_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

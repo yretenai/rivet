@@ -14,10 +14,10 @@
 namespace rivet::ddl::generated {
 	MaterialTemplateDef::MaterialTemplateDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		VaultMetaData = serialized->unwrap_into<rivet::ddl::generated::VaultMetaData>(VaultMetaData_type_id);
-		IconPath = serialized->get_string(IconPath_type_id);
-		SourcePath = serialized->get_string(SourcePath_type_id);
+		IconPath = serialized->get_string(IconPath_type_id, "");
+		SourcePath = serialized->get_string(SourcePath_type_id, {});
 		PreviewModel = serialized->unwrap_into<rivet::ddl::generated::PreviewModel>(PreviewModel_type_id);
-		ContentHash = serialized->get_uint32(ContentHash_type_id);
+		ContentHash = serialized->get_uint32(ContentHash_type_id, 0);
 		Variations = serialized->unwrap_into_many<rivet::ddl::generated::ShaderConstant>(Variations_type_id);
 		Constants = serialized->unwrap_into_many<rivet::ddl::generated::ShaderConstant>(Constants_type_id);
 		Globals = serialized->unwrap_into_many<rivet::ddl::generated::ShaderConstant>(Globals_type_id);

@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	ScriptDebugActionProperties::ScriptDebugActionProperties([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionTuid = serialized->get_uint64(ActionTuid_type_id);
-		ZoneId = serialized->get_uint64(ZoneId_type_id);
+		ActionTuid = serialized->get_uint64(ActionTuid_type_id, 0);
+		ZoneId = serialized->get_uint64(ZoneId_type_id, 0);
 		Properties = serialized->unwrap_into_many<rivet::ddl::generated::ScriptDebugActionProperty>(Properties_type_id); 
 	}
 

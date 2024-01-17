@@ -9,21 +9,21 @@
 
 namespace rivet::ddl::generated {
 	ShockwavePrius::ShockwavePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Damage = serialized->get_float(Damage_type_id);
-		StartRadius = serialized->get_float(StartRadius_type_id);
-		Radius = serialized->get_float(Radius_type_id);
-		Height = serialized->get_float(Height_type_id);
-		Thickness = serialized->get_float(Thickness_type_id);
-		GrowDuration = serialized->get_float(GrowDuration_type_id);
-		Duration = serialized->get_float(Duration_type_id);
-		HitPauseTime = serialized->get_float(HitPauseTime_type_id);
-		DamageName = serialized->get_string(DamageName_type_id);
-		DamageIsPercent = serialized->get_bool(DamageIsPercent_type_id);
-		AllowFriendlyDamage = serialized->get_bool(AllowFriendlyDamage_type_id);
+		Damage = serialized->get_float(Damage_type_id, 1.000000);
+		StartRadius = serialized->get_float(StartRadius_type_id, 0.000000);
+		Radius = serialized->get_float(Radius_type_id, 10.000000);
+		Height = serialized->get_float(Height_type_id, 0.500000);
+		Thickness = serialized->get_float(Thickness_type_id, 1.000000);
+		GrowDuration = serialized->get_float(GrowDuration_type_id, -1.000000);
+		Duration = serialized->get_float(Duration_type_id, 1.000000);
+		HitPauseTime = serialized->get_float(HitPauseTime_type_id, 0.000000);
+		DamageName = serialized->get_string(DamageName_type_id, {});
+		DamageIsPercent = serialized->get_bool(DamageIsPercent_type_id, false);
+		AllowFriendlyDamage = serialized->get_bool(AllowFriendlyDamage_type_id, true);
 		Center = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Center_type_id);
 		HitNormal = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(HitNormal_type_id);
-		ParentActorHandle = serialized->get_uint32(ParentActorHandle_type_id);
-		DamageOwnerHandle = serialized->get_uint32(DamageOwnerHandle_type_id); 
+		ParentActorHandle = serialized->get_uint32(ParentActorHandle_type_id, 0);
+		DamageOwnerHandle = serialized->get_uint32(DamageOwnerHandle_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

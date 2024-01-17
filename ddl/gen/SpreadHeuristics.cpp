@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	SpreadHeuristics::SpreadHeuristics([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		CurrentTargetStickiness = serialized->get_float(CurrentTargetStickiness_type_id);
-		SpreadTargetMul = serialized->get_float(SpreadTargetMul_type_id); 
+		CurrentTargetStickiness = serialized->get_float(CurrentTargetStickiness_type_id, 1.250000);
+		SpreadTargetMul = serialized->get_float(SpreadTargetMul_type_id, 0.600000); 
 	}
 
 	[[nodiscard]] auto

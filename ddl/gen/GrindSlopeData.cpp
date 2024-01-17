@@ -7,13 +7,13 @@
 
 namespace rivet::ddl::generated {
 	GrindSlopeData::GrindSlopeData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Gravity = serialized->get_float(Gravity_type_id);
-		UphillStartDegrees = serialized->get_float(UphillStartDegrees_type_id);
-		DownhillStartDegrees = serialized->get_float(DownhillStartDegrees_type_id);
-		FlatAccel = serialized->get_float(FlatAccel_type_id);
-		FlatDecel = serialized->get_float(FlatDecel_type_id);
-		SpeedMin = serialized->get_float(SpeedMin_type_id);
-		SpeedMax = serialized->get_float(SpeedMax_type_id); 
+		Gravity = serialized->get_float(Gravity_type_id, 5.000000);
+		UphillStartDegrees = serialized->get_float(UphillStartDegrees_type_id, 10.000000);
+		DownhillStartDegrees = serialized->get_float(DownhillStartDegrees_type_id, -10.000000);
+		FlatAccel = serialized->get_float(FlatAccel_type_id, 5.000000);
+		FlatDecel = serialized->get_float(FlatDecel_type_id, 1.000000);
+		SpeedMin = serialized->get_float(SpeedMin_type_id, -2.000000);
+		SpeedMax = serialized->get_float(SpeedMax_type_id, 15.000000); 
 	}
 
 	[[nodiscard]] auto

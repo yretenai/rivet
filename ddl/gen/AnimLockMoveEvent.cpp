@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	AnimLockMoveEvent::AnimLockMoveEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		MinFollowDist = serialized->get_float(MinFollowDist_type_id); 
+		MinFollowDist = serialized->get_float(MinFollowDist_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

@@ -10,10 +10,10 @@
 namespace rivet::ddl::generated {
 	GroupDef::GroupDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		VaultMetaData = serialized->unwrap_into<rivet::ddl::generated::VaultMetaData>(VaultMetaData_type_id);
-		IconPath = serialized->get_string(IconPath_type_id);
-		Lock = serialized->get_bool(Lock_type_id);
-		IsHoudiniGenerated = serialized->get_bool(IsHoudiniGenerated_type_id);
-		HoudiniPluginName = serialized->get_string(HoudiniPluginName_type_id); 
+		IconPath = serialized->get_string(IconPath_type_id, "");
+		Lock = serialized->get_bool(Lock_type_id, false);
+		IsHoudiniGenerated = serialized->get_bool(IsHoudiniGenerated_type_id, false);
+		HoudiniPluginName = serialized->get_string(HoudiniPluginName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

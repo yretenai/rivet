@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	RCPS4EconSharedPoolPrius::RCPS4EconSharedPoolPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		RelativeValue = serialized->get_float(RelativeValue_type_id);
-		MinRelativeValue = serialized->get_float(MinRelativeValue_type_id); 
+		RelativeValue = serialized->get_float(RelativeValue_type_id, 1.000000);
+		MinRelativeValue = serialized->get_float(MinRelativeValue_type_id, 0.100000); 
 	}
 
 	[[nodiscard]] auto

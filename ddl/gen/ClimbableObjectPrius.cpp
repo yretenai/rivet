@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	ClimbableObjectPrius::ClimbableObjectPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ClimbType = serialized->get_enum<rivet::ddl::generated::xcfc05fff>(ClimbType_type_id, rivet::ddl::generated::xcfc05fff_values);
-		AttachActor = serialized->get_uint64(AttachActor_type_id);
-		LockoutHigh = serialized->get_bool(LockoutHigh_type_id);
-		LockoutLow = serialized->get_bool(LockoutLow_type_id); 
+		ClimbType = serialized->get_enum<rivet::ddl::generated::xcfc05fff>(ClimbType_type_id, rivet::ddl::generated::xcfc05fff_values, rivet::ddl::generated::xcfc05fff::Ladder);
+		AttachActor = serialized->get_uint64(AttachActor_type_id, 0);
+		LockoutHigh = serialized->get_bool(LockoutHigh_type_id, false);
+		LockoutLow = serialized->get_bool(LockoutLow_type_id, false); 
 	}
 
 	[[nodiscard]] auto

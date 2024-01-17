@@ -10,10 +10,10 @@
 namespace rivet::ddl::generated {
 	PythonMetrics::PythonMetrics([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		RenderStats = serialized->unwrap_into<rivet::ddl::generated::RenderStats>(RenderStats_type_id);
-		FramesPerSecond = serialized->get_float(FramesPerSecond_type_id);
-		ColorMicros = serialized->get_uint32(ColorMicros_type_id);
-		ShadowMicros = serialized->get_uint32(ShadowMicros_type_id);
-		TotalMicros = serialized->get_uint32(TotalMicros_type_id); 
+		FramesPerSecond = serialized->get_float(FramesPerSecond_type_id, 0.000000);
+		ColorMicros = serialized->get_uint32(ColorMicros_type_id, 0);
+		ShadowMicros = serialized->get_uint32(ShadowMicros_type_id, 0);
+		TotalMicros = serialized->get_uint32(TotalMicros_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

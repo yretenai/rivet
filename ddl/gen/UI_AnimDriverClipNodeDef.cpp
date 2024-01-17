@@ -7,13 +7,13 @@
 
 namespace rivet::ddl::generated {
 	UI_AnimDriverClipNodeDef::UI_AnimDriverClipNodeDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Name = serialized->get_string(Name_type_id);
-		x = serialized->get_float(x_type_id);
-		y = serialized->get_float(y_type_id);
-		Flags = serialized->get_bitset<rivet::ddl::generated::x6d701b9>(Flags_type_id, rivet::ddl::generated::x6d701b9_values);
-		ClipName = serialized->get_string(ClipName_type_id);
-		Time = serialized->get_float(Time_type_id);
-		Rate = serialized->get_float(Rate_type_id); 
+		Name = serialized->get_string(Name_type_id, {});
+		x = serialized->get_float(x_type_id, 0.000000);
+		y = serialized->get_float(y_type_id, 0.000000);
+		Flags = serialized->get_bitset<rivet::ddl::generated::x6d701b9>(Flags_type_id, rivet::ddl::generated::x6d701b9_values, 0);
+		ClipName = serialized->get_string(ClipName_type_id, {});
+		Time = serialized->get_float(Time_type_id, 0.000000);
+		Rate = serialized->get_float(Rate_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

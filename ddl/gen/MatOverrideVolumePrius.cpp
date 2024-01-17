@@ -9,7 +9,7 @@ namespace rivet::ddl::generated {
 	MatOverrideVolumePrius::MatOverrideVolumePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		PreserveMaterials = serialized->get_strings(PreserveMaterials_type_id);
 		PreserveComponents = serialized->get_strings(PreserveComponents_type_id);
-		DefaultMaterial = serialized->get_string(DefaultMaterial_type_id); 
+		DefaultMaterial = serialized->get_string(DefaultMaterial_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

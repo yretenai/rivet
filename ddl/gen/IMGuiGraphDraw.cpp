@@ -12,8 +12,8 @@ namespace rivet::ddl::generated {
 	IMGuiGraphDraw::IMGuiGraphDraw([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Columns = serialized->unwrap_into_many<rivet::ddl::generated::IMGuiGraphDrawColumn>(Columns_type_id);
 		QuickNavList = serialized->unwrap_into_many<rivet::ddl::generated::QuickNavItem>(QuickNavList_type_id);
-		FirstDraw = serialized->get_bool(FirstDraw_type_id);
-		MaxRows = serialized->get_uint32(MaxRows_type_id); 
+		FirstDraw = serialized->get_bool(FirstDraw_type_id, false);
+		MaxRows = serialized->get_uint32(MaxRows_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

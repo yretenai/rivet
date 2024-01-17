@@ -7,13 +7,13 @@
 
 namespace rivet::ddl::generated {
 	DebugPlaytestLoadInfo::DebugPlaytestLoadInfo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Level = serialized->get_string(Level_type_id);
-		UseChallengeMode = serialized->get_bool(UseChallengeMode_type_id);
-		OverrideCheckpoints = serialized->get_bool(OverrideCheckpoints_type_id);
-		Checkpoint = serialized->get_string(Checkpoint_type_id);
-		DimensionCheckpoint = serialized->get_string(DimensionCheckpoint_type_id);
-		OverrideLightingMode = serialized->get_bool(OverrideLightingMode_type_id);
-		LightingMode = serialized->get_enum<rivet::ddl::generated::LightingMode>(LightingMode_type_id, rivet::ddl::generated::LightingMode_values); 
+		Level = serialized->get_string(Level_type_id, {});
+		UseChallengeMode = serialized->get_bool(UseChallengeMode_type_id, false);
+		OverrideCheckpoints = serialized->get_bool(OverrideCheckpoints_type_id, false);
+		Checkpoint = serialized->get_string(Checkpoint_type_id, {});
+		DimensionCheckpoint = serialized->get_string(DimensionCheckpoint_type_id, {});
+		OverrideLightingMode = serialized->get_bool(OverrideLightingMode_type_id, false);
+		LightingMode = serialized->get_enum<rivet::ddl::generated::LightingMode>(LightingMode_type_id, rivet::ddl::generated::LightingMode_values, rivet::ddl::generated::LightingMode::Day); 
 	}
 
 	[[nodiscard]] auto

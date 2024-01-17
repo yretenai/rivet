@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	UseLetterboxActionPrius::UseLetterboxActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		ShowTime = serialized->get_float(ShowTime_type_id);
-		HideTime = serialized->get_float(HideTime_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::UI);
+		ShowTime = serialized->get_float(ShowTime_type_id, -1.000000);
+		HideTime = serialized->get_float(HideTime_type_id, -1.000000); 
 	}
 
 	[[nodiscard]] auto

@@ -10,7 +10,7 @@
 
 namespace rivet::ddl::generated {
 	Cinematic2HeroTransitionEventBase::Cinematic2HeroTransitionEventBase([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		CurrentShotOnly = serialized->get_bool(CurrentShotOnly_type_id);
+		CurrentShotOnly = serialized->get_bool(CurrentShotOnly_type_id, false);
 		TransitionData = serialized->unwrap_into<rivet::ddl::generated::HeroCinematicTransitionDataBase>(TransitionData_type_id); 
 	}
 

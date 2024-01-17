@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	UIArenaChallengeRewardGeneric::UIArenaChallengeRewardGeneric([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): UIArenaChallengeReward(serialized) {
-		Name = serialized->get_string(Name_type_id);
-		Icon = serialized->get_string(Icon_type_id); 
+		Name = serialized->get_string(Name_type_id, {});
+		Icon = serialized->get_string(Icon_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

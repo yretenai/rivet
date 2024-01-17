@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	MountAbilityPlayAnim::MountAbilityPlayAnim([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): MountAbilityBase(serialized) {
-		AttackAnimName = serialized->get_string(AttackAnimName_type_id); 
+		AttackAnimName = serialized->get_string(AttackAnimName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	MotionActionPrius::MotionActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		MotionConfig = serialized->get_string(MotionConfig_type_id);
-		OffsetType = serialized->get_enum<rivet::ddl::generated::x2822817a>(OffsetType_type_id, rivet::ddl::generated::x2822817a_values); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Gameplay);
+		MotionConfig = serialized->get_string(MotionConfig_type_id, {});
+		OffsetType = serialized->get_enum<rivet::ddl::generated::x2822817a>(OffsetType_type_id, rivet::ddl::generated::x2822817a_values, rivet::ddl::generated::x2822817a::TargetLocal); 
 	}
 
 	[[nodiscard]] auto

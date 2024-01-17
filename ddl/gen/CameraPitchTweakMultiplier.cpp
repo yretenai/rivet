@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	CameraPitchTweakMultiplier::CameraPitchTweakMultiplier([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): CameraPitchTweak(serialized) {
-		Multiplier = serialized->get_float(Multiplier_type_id); 
+		Multiplier = serialized->get_float(Multiplier_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

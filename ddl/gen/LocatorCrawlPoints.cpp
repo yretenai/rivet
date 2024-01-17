@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	LocatorCrawlPoints::LocatorCrawlPoints([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		From = serialized->get_string(From_type_id);
-		To = serialized->get_string(To_type_id);
-		TimeToReach = serialized->get_float(TimeToReach_type_id); 
+		From = serialized->get_string(From_type_id, {});
+		To = serialized->get_string(To_type_id, {});
+		TimeToReach = serialized->get_float(TimeToReach_type_id, 0.500000); 
 	}
 
 	[[nodiscard]] auto

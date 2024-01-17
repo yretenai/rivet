@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	StartMountSpeedEvent::StartMountSpeedEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		SpeedType = serialized->get_string(SpeedType_type_id); 
+		SpeedType = serialized->get_string(SpeedType_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

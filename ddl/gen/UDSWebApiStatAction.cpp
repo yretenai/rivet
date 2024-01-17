@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	UDSWebApiStatAction::UDSWebApiStatAction([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		input = serialized->get_string(input_type_id);
+		input = serialized->get_string(input_type_id, {});
 		output = serialized->unwrap_into<rivet::ddl::generated::UDSWebApiStatOutput>(output_type_id); 
 	}
 

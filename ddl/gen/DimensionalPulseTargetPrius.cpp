@@ -11,9 +11,9 @@
 
 namespace rivet::ddl::generated {
 	DimensionalPulseTargetPrius::DimensionalPulseTargetPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): DimensionalPulseTargetBasePrius(serialized) {
-		PreCompositeShader = serialized->get_string(PreCompositeShader_type_id);
-		PostCompositeShader = serialized->get_string(PostCompositeShader_type_id);
-		ReactDriver = serialized->get_string(ReactDriver_type_id);
+		PreCompositeShader = serialized->get_string(PreCompositeShader_type_id, {});
+		PostCompositeShader = serialized->get_string(PostCompositeShader_type_id, {});
+		ReactDriver = serialized->get_string(ReactDriver_type_id, {});
 		NavObstruction = serialized->unwrap_into<rivet::ddl::generated::PulseNavObstruction>(NavObstruction_type_id); 
 	}
 

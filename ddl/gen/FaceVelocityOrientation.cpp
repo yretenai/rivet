@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	FaceVelocityOrientation::FaceVelocityOrientation([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): OrientationMode(serialized) {
-		StayPlanar = serialized->get_bool(StayPlanar_type_id);
-		UpdateOnce = serialized->get_bool(UpdateOnce_type_id);
-		SmoothRotation = serialized->get_bool(SmoothRotation_type_id); 
+		StayPlanar = serialized->get_bool(StayPlanar_type_id, false);
+		UpdateOnce = serialized->get_bool(UpdateOnce_type_id, false);
+		SmoothRotation = serialized->get_bool(SmoothRotation_type_id, false); 
 	}
 
 	[[nodiscard]] auto

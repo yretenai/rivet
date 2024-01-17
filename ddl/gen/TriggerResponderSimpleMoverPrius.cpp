@@ -10,11 +10,11 @@
 namespace rivet::ddl::generated {
 	TriggerResponderSimpleMoverPrius::TriggerResponderSimpleMoverPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): TriggerResponderBasePrius(serialized) {
 		PositionOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(PositionOffset_type_id);
-		YawOffset = serialized->get_float(YawOffset_type_id);
-		PitchOffset = serialized->get_float(PitchOffset_type_id);
-		Duration = serialized->get_float(Duration_type_id);
-		PositionActor = serialized->get_uint64(PositionActor_type_id);
-		OverrideMotionType = serialized->get_enum<rivet::ddl::generated::MotionTypes>(OverrideMotionType_type_id, rivet::ddl::generated::MotionTypes_values); 
+		YawOffset = serialized->get_float(YawOffset_type_id, 0.000000);
+		PitchOffset = serialized->get_float(PitchOffset_type_id, 0.000000);
+		Duration = serialized->get_float(Duration_type_id, 0.000000);
+		PositionActor = serialized->get_uint64(PositionActor_type_id, 0);
+		OverrideMotionType = serialized->get_enum<rivet::ddl::generated::MotionTypes>(OverrideMotionType_type_id, rivet::ddl::generated::MotionTypes_values, rivet::ddl::generated::MotionTypes::SmoothStep); 
 	}
 
 	[[nodiscard]] auto

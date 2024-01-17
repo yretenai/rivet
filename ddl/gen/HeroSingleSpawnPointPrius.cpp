@@ -10,9 +10,9 @@
 
 namespace rivet::ddl::generated {
 	HeroSingleSpawnPointPrius::HeroSingleSpawnPointPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AutoCheckpoint = serialized->get_bool(AutoCheckpoint_type_id);
-		AutoCheckpointRadius = serialized->get_float(AutoCheckpointRadius_type_id);
-		HasOpenSpace = serialized->get_bool(HasOpenSpace_type_id); 
+		AutoCheckpoint = serialized->get_bool(AutoCheckpoint_type_id, false);
+		AutoCheckpointRadius = serialized->get_float(AutoCheckpointRadius_type_id, -1.000000);
+		HasOpenSpace = serialized->get_bool(HasOpenSpace_type_id, true); 
 	}
 
 	[[nodiscard]] auto

@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	HoverbootOmniBoostPadPrius::HoverbootOmniBoostPadPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EnabledComponentBasePrius(serialized) {
-		RotationJointName = serialized->get_string(RotationJointName_type_id);
-		DetectRangeMin = serialized->get_float(DetectRangeMin_type_id);
-		DetectRangeMaxSlow = serialized->get_float(DetectRangeMaxSlow_type_id);
-		DetectRangeMaxFast = serialized->get_float(DetectRangeMaxFast_type_id);
-		DetectSlowSpeed = serialized->get_float(DetectSlowSpeed_type_id);
-		DetectFastSpeed = serialized->get_float(DetectFastSpeed_type_id); 
+		RotationJointName = serialized->get_string(RotationJointName_type_id, "inset");
+		DetectRangeMin = serialized->get_float(DetectRangeMin_type_id, 3.000000);
+		DetectRangeMaxSlow = serialized->get_float(DetectRangeMaxSlow_type_id, 10.000000);
+		DetectRangeMaxFast = serialized->get_float(DetectRangeMaxFast_type_id, 20.000000);
+		DetectSlowSpeed = serialized->get_float(DetectSlowSpeed_type_id, 10.000000);
+		DetectFastSpeed = serialized->get_float(DetectFastSpeed_type_id, 18.000000); 
 	}
 
 	[[nodiscard]] auto

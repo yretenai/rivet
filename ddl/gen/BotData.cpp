@@ -9,9 +9,9 @@
 
 namespace rivet::ddl::generated {
 	BotData::BotData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BotSetupData(serialized) {
-		VariantSelectMode = serialized->get_enum<rivet::ddl::generated::x363f69e>(VariantSelectMode_type_id, rivet::ddl::generated::x363f69e_values);
+		VariantSelectMode = serialized->get_enum<rivet::ddl::generated::x363f69e>(VariantSelectMode_type_id, rivet::ddl::generated::x363f69e_values, rivet::ddl::generated::x363f69e::From_System);
 		SoundFocusData = serialized->unwrap_into<rivet::ddl::generated::SoundFocusComponentData>(SoundFocusData_type_id);
-		AttackJobPool = serialized->get_enum<rivet::ddl::generated::x53ecdc9c>(AttackJobPool_type_id, rivet::ddl::generated::x53ecdc9c_values); 
+		AttackJobPool = serialized->get_enum<rivet::ddl::generated::x53ecdc9c>(AttackJobPool_type_id, rivet::ddl::generated::x53ecdc9c_values, rivet::ddl::generated::x53ecdc9c::None); 
 	}
 
 	[[nodiscard]] auto

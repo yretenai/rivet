@@ -9,12 +9,12 @@
 
 namespace rivet::ddl::generated {
 	IMGuiGraphDrawNode::IMGuiGraphDrawNode([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DrawType = serialized->get_enum<rivet::ddl::generated::xb2c512b4>(DrawType_type_id, rivet::ddl::generated::xb2c512b4_values);
-		NodeId = serialized->get_uint64(NodeId_type_id);
-		IsDebugMarker = serialized->get_bool(IsDebugMarker_type_id);
-		SortPriority = serialized->get_int32(SortPriority_type_id);
-		DrawSizeX = serialized->get_float(DrawSizeX_type_id);
-		DrawSizeY = serialized->get_float(DrawSizeY_type_id);
+		DrawType = serialized->get_enum<rivet::ddl::generated::xb2c512b4>(DrawType_type_id, rivet::ddl::generated::xb2c512b4_values, rivet::ddl::generated::xb2c512b4::BuiltNode);
+		NodeId = serialized->get_uint64(NodeId_type_id, 0);
+		IsDebugMarker = serialized->get_bool(IsDebugMarker_type_id, false);
+		SortPriority = serialized->get_int32(SortPriority_type_id, 0);
+		DrawSizeX = serialized->get_float(DrawSizeX_type_id, 0.000000);
+		DrawSizeY = serialized->get_float(DrawSizeY_type_id, 0.000000);
 		ParentConnections = serialized->unwrap_into_many<rivet::ddl::generated::IMGuiConnectionData>(ParentConnections_type_id);
 		ChildConnections = serialized->unwrap_into_many<rivet::ddl::generated::IMGuiConnectionData>(ChildConnections_type_id); 
 	}

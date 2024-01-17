@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	MoverBodySize::MoverBodySize([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		BodyBottom = serialized->get_float(BodyBottom_type_id);
-		BodyTop = serialized->get_float(BodyTop_type_id);
-		BodyRadius = serialized->get_float(BodyRadius_type_id);
-		GroundUp = serialized->get_float(GroundUp_type_id);
-		GroundDown = serialized->get_float(GroundDown_type_id);
-		GroundRadius = serialized->get_float(GroundRadius_type_id); 
+		BodyBottom = serialized->get_float(BodyBottom_type_id, 1.000000);
+		BodyTop = serialized->get_float(BodyTop_type_id, 1.150000);
+		BodyRadius = serialized->get_float(BodyRadius_type_id, 0.450000);
+		GroundUp = serialized->get_float(GroundUp_type_id, 1.000000);
+		GroundDown = serialized->get_float(GroundDown_type_id, 50.000000);
+		GroundRadius = serialized->get_float(GroundRadius_type_id, 0.120000); 
 	}
 
 	[[nodiscard]] auto

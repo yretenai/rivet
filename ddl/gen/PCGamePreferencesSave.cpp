@@ -9,18 +9,18 @@
 
 namespace rivet::ddl::generated {
 	PCGamePreferencesSave::PCGamePreferencesSave([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		BootFlowShown = serialized->get_bool(BootFlowShown_type_id);
-		PSNAccountLinked = serialized->get_bool(PSNAccountLinked_type_id);
-		AcceptedSIEAnalytics = serialized->get_int32(AcceptedSIEAnalytics_type_id);
+		BootFlowShown = serialized->get_bool(BootFlowShown_type_id, false);
+		PSNAccountLinked = serialized->get_bool(PSNAccountLinked_type_id, false);
+		AcceptedSIEAnalytics = serialized->get_int32(AcceptedSIEAnalytics_type_id, -1);
 		MouseControlFlying = serialized->unwrap_into<rivet::ddl::generated::MouseControl>(MouseControlFlying_type_id);
-		SprintToggle = serialized->get_bool(SprintToggle_type_id);
-		ListeningModePC = serialized->get_enum<rivet::ddl::generated::ListeningMode>(ListeningModePC_type_id, rivet::ddl::generated::ListeningMode_values);
-		HudWidescreenScale = serialized->get_int32(HudWidescreenScale_type_id);
-		EnableAudioHaptics = serialized->get_bool(EnableAudioHaptics_type_id);
-		ScePadAudioPathMode = serialized->get_int32(ScePadAudioPathMode_type_id);
-		AimInvertX = serialized->get_bool(AimInvertX_type_id);
-		AimInvertY = serialized->get_bool(AimInvertY_type_id);
-		SoundPerformanceMode = serialized->get_uint32(SoundPerformanceMode_type_id); 
+		SprintToggle = serialized->get_bool(SprintToggle_type_id, false);
+		ListeningModePC = serialized->get_enum<rivet::ddl::generated::ListeningMode>(ListeningModePC_type_id, rivet::ddl::generated::ListeningMode_values, rivet::ddl::generated::ListeningMode::ListeningModeSpeakers);
+		HudWidescreenScale = serialized->get_int32(HudWidescreenScale_type_id, 0);
+		EnableAudioHaptics = serialized->get_bool(EnableAudioHaptics_type_id, true);
+		ScePadAudioPathMode = serialized->get_int32(ScePadAudioPathMode_type_id, 0);
+		AimInvertX = serialized->get_bool(AimInvertX_type_id, false);
+		AimInvertY = serialized->get_bool(AimInvertY_type_id, false);
+		SoundPerformanceMode = serialized->get_uint32(SoundPerformanceMode_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

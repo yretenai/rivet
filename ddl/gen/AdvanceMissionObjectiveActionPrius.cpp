@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	AdvanceMissionObjectiveActionPrius::AdvanceMissionObjectiveActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SaveProgress = serialized->get_bool(SaveProgress_type_id);
-		SetPrimary = serialized->get_bool(SetPrimary_type_id);
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values); 
+		SaveProgress = serialized->get_bool(SaveProgress_type_id, true);
+		SetPrimary = serialized->get_bool(SetPrimary_type_id, true);
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Mission_System); 
 	}
 
 	[[nodiscard]] auto

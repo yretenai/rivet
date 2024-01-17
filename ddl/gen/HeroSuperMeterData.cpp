@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	HeroSuperMeterData::HeroSuperMeterData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		NumSegments = serialized->get_float(NumSegments_type_id);
-		TotalSize = serialized->get_float(TotalSize_type_id); 
+		NumSegments = serialized->get_float(NumSegments_type_id, 3.000000);
+		TotalSize = serialized->get_float(TotalSize_type_id, 100.000000); 
 	}
 
 	[[nodiscard]] auto

@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	ChangeFlockDensityActionPrius::ChangeFlockDensityActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Ambient);
 		FlockTypes = serialized->get_strings(FlockTypes_type_id);
-		FlockDensityConfig = serialized->get_string(FlockDensityConfig_type_id); 
+		FlockDensityConfig = serialized->get_string(FlockDensityConfig_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

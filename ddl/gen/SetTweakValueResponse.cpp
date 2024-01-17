@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	SetTweakValueResponse::SetTweakValueResponse([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Error = serialized->get_string(Error_type_id); 
+		Error = serialized->get_string(Error_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

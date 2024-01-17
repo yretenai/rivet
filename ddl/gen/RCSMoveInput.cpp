@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	RCSMoveInput::RCSMoveInput([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		FromFile = serialized->get_string(FromFile_type_id);
-		ToFile = serialized->get_string(ToFile_type_id);
-		Changelist = serialized->get_uint32(Changelist_type_id);
-		Force = serialized->get_bool(Force_type_id);
-		Preview = serialized->get_bool(Preview_type_id); 
+		FromFile = serialized->get_string(FromFile_type_id, {});
+		ToFile = serialized->get_string(ToFile_type_id, {});
+		Changelist = serialized->get_uint32(Changelist_type_id, 0);
+		Force = serialized->get_bool(Force_type_id, false);
+		Preview = serialized->get_bool(Preview_type_id, false); 
 	}
 
 	[[nodiscard]] auto

@@ -9,10 +9,10 @@
 
 namespace rivet::ddl::generated {
 	SwapDataEntry::SwapDataEntry([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		BoltModelId = serialized->get_enum<rivet::ddl::generated::BoltReplacementType>(BoltModelId_type_id, rivet::ddl::generated::BoltReplacementType_values);
-		BaseModel = serialized->get_string(BaseModel_type_id);
+		BoltModelId = serialized->get_enum<rivet::ddl::generated::BoltReplacementType>(BoltModelId_type_id, rivet::ddl::generated::BoltReplacementType_values, rivet::ddl::generated::BoltReplacementType::Default);
+		BaseModel = serialized->get_string(BaseModel_type_id, {});
 		RndOptModel = serialized->get_strings(RndOptModel_type_id);
-		ForceYUpAndRot = serialized->get_bool(ForceYUpAndRot_type_id);
+		ForceYUpAndRot = serialized->get_bool(ForceYUpAndRot_type_id, false);
 		BronzeSettings = serialized->unwrap_into<rivet::ddl::generated::DenomSettings>(BronzeSettings_type_id);
 		SilverSettings = serialized->unwrap_into<rivet::ddl::generated::DenomSettings>(SilverSettings_type_id);
 		GoldSettings = serialized->unwrap_into<rivet::ddl::generated::DenomSettings>(GoldSettings_type_id);

@@ -9,11 +9,11 @@
 
 namespace rivet::ddl::generated {
 	HarpoonLureSpawnData::HarpoonLureSpawnData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ActorSpawnData(serialized) {
-		ShotOwner = serialized->get_uint32(ShotOwner_type_id);
-		AssetId = serialized->get_uint32(AssetId_type_id);
+		ShotOwner = serialized->get_uint32(ShotOwner_type_id, 0);
+		AssetId = serialized->get_uint32(AssetId_type_id, 0);
 		Position = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Position_type_id);
-		Lifetime = serialized->get_float(Lifetime_type_id);
-		Range = serialized->get_float(Range_type_id); 
+		Lifetime = serialized->get_float(Lifetime_type_id, 10.000000);
+		Range = serialized->get_float(Range_type_id, 8.000000); 
 	}
 
 	[[nodiscard]] auto

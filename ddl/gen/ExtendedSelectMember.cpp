@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ExtendedSelectMember::ExtendedSelectMember([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		s = serialized->get_enum<rivet::ddl::generated::SelB>(s_type_id, rivet::ddl::generated::SelB_values); 
+		s = serialized->get_enum<rivet::ddl::generated::SelB>(s_type_id, rivet::ddl::generated::SelB_values, rivet::ddl::generated::SelB::Q); 
 	}
 
 	[[nodiscard]] auto

@@ -7,25 +7,25 @@
 
 namespace rivet::ddl::generated {
 	StickConfig::StickConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		YawSpeedSlow = serialized->get_float(YawSpeedSlow_type_id);
-		YawSpeedMid = serialized->get_float(YawSpeedMid_type_id);
-		YawSpeedFast = serialized->get_float(YawSpeedFast_type_id);
-		YawRangeSlow = serialized->get_float(YawRangeSlow_type_id);
-		YawRangeFast = serialized->get_float(YawRangeFast_type_id);
-		YawAccel = serialized->get_float(YawAccel_type_id);
-		YawDecel = serialized->get_float(YawDecel_type_id);
-		PitchSpeedSlow = serialized->get_float(PitchSpeedSlow_type_id);
-		PitchSpeedMid = serialized->get_float(PitchSpeedMid_type_id);
-		PitchSpeedFast = serialized->get_float(PitchSpeedFast_type_id);
-		PitchRangeSlow = serialized->get_float(PitchRangeSlow_type_id);
-		PitchRangeFast = serialized->get_float(PitchRangeFast_type_id);
-		PitchAccel = serialized->get_float(PitchAccel_type_id);
-		PitchDecel = serialized->get_float(PitchDecel_type_id);
-		NudgeFactor = serialized->get_float(NudgeFactor_type_id);
-		YawBias = serialized->get_float(YawBias_type_id);
-		CardinalBias = serialized->get_float(CardinalBias_type_id);
-		DeadZoneLow = serialized->get_float(DeadZoneLow_type_id);
-		DeadZoneHigh = serialized->get_float(DeadZoneHigh_type_id); 
+		YawSpeedSlow = serialized->get_float(YawSpeedSlow_type_id, 30.000000);
+		YawSpeedMid = serialized->get_float(YawSpeedMid_type_id, 135.000000);
+		YawSpeedFast = serialized->get_float(YawSpeedFast_type_id, 250.000000);
+		YawRangeSlow = serialized->get_float(YawRangeSlow_type_id, 0.450000);
+		YawRangeFast = serialized->get_float(YawRangeFast_type_id, 0.700000);
+		YawAccel = serialized->get_float(YawAccel_type_id, 720.000000);
+		YawDecel = serialized->get_float(YawDecel_type_id, 1080.000000);
+		PitchSpeedSlow = serialized->get_float(PitchSpeedSlow_type_id, 20.000000);
+		PitchSpeedMid = serialized->get_float(PitchSpeedMid_type_id, 80.000000);
+		PitchSpeedFast = serialized->get_float(PitchSpeedFast_type_id, 180.000000);
+		PitchRangeSlow = serialized->get_float(PitchRangeSlow_type_id, 0.450000);
+		PitchRangeFast = serialized->get_float(PitchRangeFast_type_id, 0.700000);
+		PitchAccel = serialized->get_float(PitchAccel_type_id, 500.000000);
+		PitchDecel = serialized->get_float(PitchDecel_type_id, 1080.000000);
+		NudgeFactor = serialized->get_float(NudgeFactor_type_id, 0.300000);
+		YawBias = serialized->get_float(YawBias_type_id, 1.250000);
+		CardinalBias = serialized->get_float(CardinalBias_type_id, 0.100000);
+		DeadZoneLow = serialized->get_float(DeadZoneLow_type_id, 0.150000);
+		DeadZoneHigh = serialized->get_float(DeadZoneHigh_type_id, 0.850000); 
 	}
 
 	[[nodiscard]] auto

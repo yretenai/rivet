@@ -10,11 +10,11 @@
 
 namespace rivet::ddl::generated {
 	UI_OutsourceModelDef::UI_OutsourceModelDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		GeomLodDist1 = serialized->get_uint16(GeomLodDist1_type_id);
-		GeomLodDist2 = serialized->get_uint16(GeomLodDist2_type_id);
-		GeomLodDist3 = serialized->get_uint16(GeomLodDist3_type_id);
-		GeomLodDist4 = serialized->get_uint16(GeomLodDist4_type_id);
-		GeomLodDist5 = serialized->get_uint16(GeomLodDist5_type_id);
+		GeomLodDist1 = serialized->get_uint16(GeomLodDist1_type_id, 15);
+		GeomLodDist2 = serialized->get_uint16(GeomLodDist2_type_id, 30);
+		GeomLodDist3 = serialized->get_uint16(GeomLodDist3_type_id, 110);
+		GeomLodDist4 = serialized->get_uint16(GeomLodDist4_type_id, 160);
+		GeomLodDist5 = serialized->get_uint16(GeomLodDist5_type_id, 210);
 		Materials = serialized->unwrap_into_many<rivet::ddl::generated::UI_OutsourceMaterialDef>(Materials_type_id);
 		LookGroups = serialized->unwrap_into_many<rivet::ddl::generated::LookGroupDef>(LookGroups_type_id); 
 	}

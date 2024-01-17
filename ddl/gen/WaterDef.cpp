@@ -9,40 +9,40 @@
 
 namespace rivet::ddl::generated {
 	WaterDef::WaterDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Type = serialized->get_enum<rivet::ddl::generated::xd291bf0b>(Type_type_id, rivet::ddl::generated::xd291bf0b_values);
-		ReflectionMap = serialized->get_string(ReflectionMap_type_id);
-		Material = serialized->get_string(Material_type_id);
-		AVMaterial = serialized->get_string(AVMaterial_type_id);
-		AudioMaterial = serialized->get_string(AudioMaterial_type_id);
-		DistanceFactor = serialized->get_float(DistanceFactor_type_id);
+		Type = serialized->get_enum<rivet::ddl::generated::xd291bf0b>(Type_type_id, rivet::ddl::generated::xd291bf0b_values, rivet::ddl::generated::xd291bf0b::Ocean);
+		ReflectionMap = serialized->get_string(ReflectionMap_type_id, {});
+		Material = serialized->get_string(Material_type_id, {});
+		AVMaterial = serialized->get_string(AVMaterial_type_id, {});
+		AudioMaterial = serialized->get_string(AudioMaterial_type_id, {});
+		DistanceFactor = serialized->get_float(DistanceFactor_type_id, 1.000000);
 		FoamColor = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(FoamColor_type_id);
-		WaveAmplitude = serialized->get_float(WaveAmplitude_type_id);
-		ChopScale = serialized->get_float(ChopScale_type_id);
-		WindSpeed = serialized->get_float(WindSpeed_type_id);
-		TimeScale = serialized->get_float(TimeScale_type_id);
-		Darkening = serialized->get_float(Darkening_type_id);
-		Depth = serialized->get_float(Depth_type_id);
+		WaveAmplitude = serialized->get_float(WaveAmplitude_type_id, 4.000000);
+		ChopScale = serialized->get_float(ChopScale_type_id, 1.000000);
+		WindSpeed = serialized->get_float(WindSpeed_type_id, 32.000000);
+		TimeScale = serialized->get_float(TimeScale_type_id, 0.850000);
+		Darkening = serialized->get_float(Darkening_type_id, 0.500000);
+		Depth = serialized->get_float(Depth_type_id, 2.000000);
 		Color = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Color_type_id);
-		WindIndependence = serialized->get_float(WindIndependence_type_id);
-		Normalz = serialized->get_float(Normalz_type_id);
-		FoamAmp = serialized->get_float(FoamAmp_type_id);
-		FoamBias = serialized->get_float(FoamBias_type_id);
-		FoamEmit = serialized->get_float(FoamEmit_type_id);
-		FoamFade = serialized->get_float(FoamFade_type_id);
-		FoamPower = serialized->get_float(FoamPower_type_id);
-		WaveElongate = serialized->get_float(WaveElongate_type_id);
-		Cascade0 = serialized->get_float(Cascade0_type_id);
-		Cascade1 = serialized->get_float(Cascade1_type_id);
-		Cascade2 = serialized->get_float(Cascade2_type_id);
-		Cascade3 = serialized->get_float(Cascade3_type_id);
-		Tile0 = serialized->get_float(Tile0_type_id);
-		Tile1 = serialized->get_float(Tile1_type_id);
-		Tile2 = serialized->get_float(Tile2_type_id);
-		Tile3 = serialized->get_float(Tile3_type_id);
-		Wave0 = serialized->get_float(Wave0_type_id);
-		Wave1 = serialized->get_float(Wave1_type_id);
-		Wave2 = serialized->get_float(Wave2_type_id);
-		Wave3 = serialized->get_float(Wave3_type_id); 
+		WindIndependence = serialized->get_float(WindIndependence_type_id, 0.000000);
+		Normalz = serialized->get_float(Normalz_type_id, 2.000000);
+		FoamAmp = serialized->get_float(FoamAmp_type_id, 0.000000);
+		FoamBias = serialized->get_float(FoamBias_type_id, 3.000000);
+		FoamEmit = serialized->get_float(FoamEmit_type_id, 1.000000);
+		FoamFade = serialized->get_float(FoamFade_type_id, 0.400000);
+		FoamPower = serialized->get_float(FoamPower_type_id, 2.000000);
+		WaveElongate = serialized->get_float(WaveElongate_type_id, 0.000000);
+		Cascade0 = serialized->get_float(Cascade0_type_id, 1024.000000);
+		Cascade1 = serialized->get_float(Cascade1_type_id, 195.789993);
+		Cascade2 = serialized->get_float(Cascade2_type_id, 37.439999);
+		Cascade3 = serialized->get_float(Cascade3_type_id, 35.110001);
+		Tile0 = serialized->get_float(Tile0_type_id, 5.100000);
+		Tile1 = serialized->get_float(Tile1_type_id, 3.500000);
+		Tile2 = serialized->get_float(Tile2_type_id, 3.100000);
+		Tile3 = serialized->get_float(Tile3_type_id, 17.299999);
+		Wave0 = serialized->get_float(Wave0_type_id, 1.000000);
+		Wave1 = serialized->get_float(Wave1_type_id, 2.000000);
+		Wave2 = serialized->get_float(Wave2_type_id, 20.000000);
+		Wave3 = serialized->get_float(Wave3_type_id, 4.000000); 
 	}
 
 	[[nodiscard]] auto

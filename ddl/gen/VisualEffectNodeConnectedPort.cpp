@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	VisualEffectNodeConnectedPort::VisualEffectNodeConnectedPort([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		NodeDisplayName = serialized->get_string(NodeDisplayName_type_id);
-		NodePortId = serialized->get_string(NodePortId_type_id); 
+		NodeDisplayName = serialized->get_string(NodeDisplayName_type_id, {});
+		NodePortId = serialized->get_string(NodePortId_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	SpawnHazardDamageAreaEffectNodeDef::SpawnHazardDamageAreaEffectNodeDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): NodalShotEffectNodeBaseDef(serialized) {
-		ActorAsset = serialized->get_string(ActorAsset_type_id);
-		ConfigAsset = serialized->get_string(ConfigAsset_type_id); 
+		ActorAsset = serialized->get_string(ActorAsset_type_id, {});
+		ConfigAsset = serialized->get_string(ConfigAsset_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

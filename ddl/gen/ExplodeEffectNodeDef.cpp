@@ -10,10 +10,10 @@
 
 namespace rivet::ddl::generated {
 	ExplodeEffectNodeDef::ExplodeEffectNodeDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): NodalShotEffectNodeBaseDef(serialized) {
-		DamageType = serialized->get_enum<rivet::ddl::generated::DamageTypes>(DamageType_type_id, rivet::ddl::generated::DamageTypes_values);
-		DamageFlags = serialized->get_bitset<rivet::ddl::generated::x65d7dac2>(DamageFlags_type_id, rivet::ddl::generated::x65d7dac2_values);
+		DamageType = serialized->get_enum<rivet::ddl::generated::DamageTypes>(DamageType_type_id, rivet::ddl::generated::DamageTypes_values, rivet::ddl::generated::DamageTypes::Explosion);
+		DamageFlags = serialized->get_bitset<rivet::ddl::generated::x65d7dac2>(DamageFlags_type_id, rivet::ddl::generated::x65d7dac2_values, 0);
 		DamageOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(DamageOffset_type_id);
-		OffsetMode = serialized->get_enum<rivet::ddl::generated::xe1cdcd87>(OffsetMode_type_id, rivet::ddl::generated::xe1cdcd87_values);
+		OffsetMode = serialized->get_enum<rivet::ddl::generated::xe1cdcd87>(OffsetMode_type_id, rivet::ddl::generated::xe1cdcd87_values, rivet::ddl::generated::xe1cdcd87::Local);
 		ExplodeData = serialized->unwrap_into<rivet::ddl::generated::DamageModifierExplosionPrius>(ExplodeData_type_id); 
 	}
 

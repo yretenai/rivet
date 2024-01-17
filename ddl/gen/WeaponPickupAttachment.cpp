@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	WeaponPickupAttachment::WeaponPickupAttachment([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Locator = serialized->get_string(Locator_type_id);
+		Locator = serialized->get_string(Locator_type_id, {});
 		OffsetFromLocator = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(OffsetFromLocator_type_id);
 		PickupSpacing = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(PickupSpacing_type_id); 
 	}

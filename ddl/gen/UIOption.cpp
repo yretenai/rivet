@@ -9,16 +9,16 @@
 
 namespace rivet::ddl::generated {
 	UIOption::UIOption([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		OptionID = serialized->get_enum<rivet::ddl::generated::x33afe7f4>(OptionID_type_id, rivet::ddl::generated::x33afe7f4_values);
-		Label = serialized->get_string(Label_type_id);
-		Description = serialized->get_string(Description_type_id);
-		DescriptionAlt = serialized->get_string(DescriptionAlt_type_id);
-		AccessibilityIcon = serialized->get_string(AccessibilityIcon_type_id);
-		InputAnnotationIcon = serialized->get_string(InputAnnotationIcon_type_id);
-		PreviewImage = serialized->get_string(PreviewImage_type_id);
+		OptionID = serialized->get_enum<rivet::ddl::generated::x33afe7f4>(OptionID_type_id, rivet::ddl::generated::x33afe7f4_values, rivet::ddl::generated::x33afe7f4::Resume);
+		Label = serialized->get_string(Label_type_id, {});
+		Description = serialized->get_string(Description_type_id, {});
+		DescriptionAlt = serialized->get_string(DescriptionAlt_type_id, {});
+		AccessibilityIcon = serialized->get_string(AccessibilityIcon_type_id, {});
+		InputAnnotationIcon = serialized->get_string(InputAnnotationIcon_type_id, {});
+		PreviewImage = serialized->get_string(PreviewImage_type_id, {});
 		Type = serialized->unwrap_into<rivet::ddl::generated::UIOptionTypeBase>(Type_type_id);
-		ForGamepad = serialized->get_bool(ForGamepad_type_id);
-		ForMkb = serialized->get_bool(ForMkb_type_id); 
+		ForGamepad = serialized->get_bool(ForGamepad_type_id, true);
+		ForMkb = serialized->get_bool(ForMkb_type_id, true); 
 	}
 
 	[[nodiscard]] auto

@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	EnableParryEvent::EnableParryEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		TargetParryTime = serialized->get_float(TargetParryTime_type_id);
-		NextAnim = serialized->get_string(NextAnim_type_id);
-		NextAnimRate = serialized->get_float(NextAnimRate_type_id); 
+		TargetParryTime = serialized->get_float(TargetParryTime_type_id, 0.250000);
+		NextAnim = serialized->get_string(NextAnim_type_id, {});
+		NextAnimRate = serialized->get_float(NextAnimRate_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	UIOptionTypePage::UIOptionTypePage([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): UIOptionTypeBase(serialized) {
-		PageID = serialized->get_enum<rivet::ddl::generated::x58b2a3a9>(PageID_type_id, rivet::ddl::generated::x58b2a3a9_values); 
+		PageID = serialized->get_enum<rivet::ddl::generated::x58b2a3a9>(PageID_type_id, rivet::ddl::generated::x58b2a3a9_values, rivet::ddl::generated::x58b2a3a9::PageMain); 
 	}
 
 	[[nodiscard]] auto

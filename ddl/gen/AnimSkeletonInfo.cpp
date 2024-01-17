@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	AnimSkeletonInfo::AnimSkeletonInfo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MayaNameSpace = serialized->get_string(MayaNameSpace_type_id);
-		BodySkeleton = serialized->get_string(BodySkeleton_type_id);
-		HeadSkeleton = serialized->get_string(HeadSkeleton_type_id); 
+		MayaNameSpace = serialized->get_string(MayaNameSpace_type_id, {});
+		BodySkeleton = serialized->get_string(BodySkeleton_type_id, {});
+		HeadSkeleton = serialized->get_string(HeadSkeleton_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ShotThumperPrius::ShotThumperPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): LobbedShotPrius(serialized) {
-		DamageLOSType = serialized->get_enum<rivet::ddl::generated::DamageLOSTypes>(DamageLOSType_type_id, rivet::ddl::generated::DamageLOSTypes_values); 
+		DamageLOSType = serialized->get_enum<rivet::ddl::generated::DamageLOSTypes>(DamageLOSType_type_id, rivet::ddl::generated::DamageLOSTypes_values, rivet::ddl::generated::DamageLOSTypes::None); 
 	}
 
 	[[nodiscard]] auto

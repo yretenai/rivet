@@ -9,26 +9,26 @@
 
 namespace rivet::ddl::generated {
 	CameraInputYawAndPitchPrius::CameraInputYawAndPitchPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActivateAction = serialized->get_enum<rivet::ddl::generated::xf787d865>(ActivateAction_type_id, rivet::ddl::generated::xf787d865_values);
-		YawMin = serialized->get_float(YawMin_type_id);
-		YawMax = serialized->get_float(YawMax_type_id);
-		PitchMin = serialized->get_float(PitchMin_type_id);
-		PitchMax = serialized->get_float(PitchMax_type_id);
-		InitialYaw = serialized->get_float(InitialYaw_type_id);
-		InitialPitch = serialized->get_float(InitialPitch_type_id);
-		YawSoftZone = serialized->get_float(YawSoftZone_type_id);
-		PitchSoftZone = serialized->get_float(PitchSoftZone_type_id);
-		SettleGain = serialized->get_float(SettleGain_type_id);
-		SettleDamp = serialized->get_float(SettleDamp_type_id);
-		SettleDelay = serialized->get_float(SettleDelay_type_id);
-		ApplySettle = serialized->get_bool(ApplySettle_type_id);
-		ActorRefMatrix = serialized->get_bool(ActorRefMatrix_type_id);
-		AllowMoveStickInput = serialized->get_bool(AllowMoveStickInput_type_id);
-		AllowMenuMoveStickInput = serialized->get_bool(AllowMenuMoveStickInput_type_id);
-		StickConfig = serialized->get_string(StickConfig_type_id);
-		JitterMaxPush = serialized->get_float(JitterMaxPush_type_id);
-		JitterMinPush = serialized->get_float(JitterMinPush_type_id);
-		JitterRate = serialized->get_float(JitterRate_type_id); 
+		ActivateAction = serialized->get_enum<rivet::ddl::generated::xf787d865>(ActivateAction_type_id, rivet::ddl::generated::xf787d865_values, rivet::ddl::generated::xf787d865::Reset_To_Zero);
+		YawMin = serialized->get_float(YawMin_type_id, 0.000000);
+		YawMax = serialized->get_float(YawMax_type_id, 0.000000);
+		PitchMin = serialized->get_float(PitchMin_type_id, 0.000000);
+		PitchMax = serialized->get_float(PitchMax_type_id, 0.000000);
+		InitialYaw = serialized->get_float(InitialYaw_type_id, 0.000000);
+		InitialPitch = serialized->get_float(InitialPitch_type_id, 0.000000);
+		YawSoftZone = serialized->get_float(YawSoftZone_type_id, 0.000000);
+		PitchSoftZone = serialized->get_float(PitchSoftZone_type_id, 0.000000);
+		SettleGain = serialized->get_float(SettleGain_type_id, -0.800000);
+		SettleDamp = serialized->get_float(SettleDamp_type_id, -1.600000);
+		SettleDelay = serialized->get_float(SettleDelay_type_id, 0.150000);
+		ApplySettle = serialized->get_bool(ApplySettle_type_id, false);
+		ActorRefMatrix = serialized->get_bool(ActorRefMatrix_type_id, true);
+		AllowMoveStickInput = serialized->get_bool(AllowMoveStickInput_type_id, false);
+		AllowMenuMoveStickInput = serialized->get_bool(AllowMenuMoveStickInput_type_id, false);
+		StickConfig = serialized->get_string(StickConfig_type_id, {});
+		JitterMaxPush = serialized->get_float(JitterMaxPush_type_id, 0.000000);
+		JitterMinPush = serialized->get_float(JitterMinPush_type_id, 0.000000);
+		JitterRate = serialized->get_float(JitterRate_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

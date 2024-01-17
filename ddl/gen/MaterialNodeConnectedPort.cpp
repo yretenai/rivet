@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	MaterialNodeConnectedPort::MaterialNodeConnectedPort([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		NodeIdLow = serialized->get_uint32(NodeIdLow_type_id);
-		NodeIdHigh = serialized->get_uint32(NodeIdHigh_type_id);
-		PortInternalName = serialized->get_string(PortInternalName_type_id); 
+		NodeIdLow = serialized->get_uint32(NodeIdLow_type_id, 0);
+		NodeIdHigh = serialized->get_uint32(NodeIdHigh_type_id, 0);
+		PortInternalName = serialized->get_string(PortInternalName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

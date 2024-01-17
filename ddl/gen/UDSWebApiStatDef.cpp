@@ -7,14 +7,14 @@
 
 namespace rivet::ddl::generated {
 	UDSWebApiStatDef::UDSWebApiStatDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		statName = serialized->get_string(statName_type_id);
-		statId = serialized->get_int32(statId_type_id);
-		origin = serialized->get_enum<rivet::ddl::generated::x766ef241>(origin_type_id, rivet::ddl::generated::x766ef241_values);
-		dataType = serialized->get_enum<rivet::ddl::generated::x884a9c52>(dataType_type_id, rivet::ddl::generated::x884a9c52_values);
-		aggregation = serialized->get_enum<rivet::ddl::generated::xb2718bea>(aggregation_type_id, rivet::ddl::generated::xb2718bea_values);
-		minValue = serialized->get_string(minValue_type_id);
-		maxValue = serialized->get_string(maxValue_type_id);
-		initialValue = serialized->get_string(initialValue_type_id); 
+		statName = serialized->get_string(statName_type_id, {});
+		statId = serialized->get_int32(statId_type_id, 0);
+		origin = serialized->get_enum<rivet::ddl::generated::x766ef241>(origin_type_id, rivet::ddl::generated::x766ef241_values, rivet::ddl::generated::x766ef241::console);
+		dataType = serialized->get_enum<rivet::ddl::generated::x884a9c52>(dataType_type_id, rivet::ddl::generated::x884a9c52_values, rivet::ddl::generated::x884a9c52::int32);
+		aggregation = serialized->get_enum<rivet::ddl::generated::xb2718bea>(aggregation_type_id, rivet::ddl::generated::xb2718bea_values, rivet::ddl::generated::xb2718bea::latest);
+		minValue = serialized->get_string(minValue_type_id, {});
+		maxValue = serialized->get_string(maxValue_type_id, {});
+		initialValue = serialized->get_string(initialValue_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

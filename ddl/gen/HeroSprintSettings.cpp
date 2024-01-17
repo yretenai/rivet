@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	HeroSprintSettings::HeroSprintSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SprintMultiplier = serialized->get_float(SprintMultiplier_type_id);
-		SprintAccelTime = serialized->get_float(SprintAccelTime_type_id);
-		AutoSprintStartTime = serialized->get_float(AutoSprintStartTime_type_id); 
+		SprintMultiplier = serialized->get_float(SprintMultiplier_type_id, 1.300000);
+		SprintAccelTime = serialized->get_float(SprintAccelTime_type_id, 0.250000);
+		AutoSprintStartTime = serialized->get_float(AutoSprintStartTime_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

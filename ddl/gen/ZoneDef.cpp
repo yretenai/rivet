@@ -19,27 +19,27 @@
 namespace rivet::ddl::generated {
 	ZoneDef::ZoneDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		VaultMetaData = serialized->unwrap_into<rivet::ddl::generated::VaultMetaData>(VaultMetaData_type_id);
-		IconPath = serialized->get_string(IconPath_type_id);
+		IconPath = serialized->get_string(IconPath_type_id, "");
 		SceneNodes = serialized->unwrap_into_many<rivet::ddl::generated::SceneNode>(SceneNodes_type_id);
 		ActorGroups = serialized->unwrap_into_many<rivet::ddl::generated::ActorGroupNode>(ActorGroups_type_id);
-		MainScriptGraphId = serialized->get_uint64(MainScriptGraphId_type_id);
+		MainScriptGraphId = serialized->get_uint64(MainScriptGraphId_type_id, 18446744073709551615);
 		ScriptGraphs = serialized->unwrap_into_many<rivet::ddl::generated::NodeGraphContents>(ScriptGraphs_type_id);
 		VarNodes = serialized->unwrap_into_many<rivet::ddl::generated::VarNode>(VarNodes_type_id);
 		VertexPaintNodes = serialized->unwrap_into_many<rivet::ddl::generated::VertexPaintNode>(VertexPaintNodes_type_id);
-		Atmosphere = serialized->get_string(Atmosphere_type_id);
+		Atmosphere = serialized->get_string(Atmosphere_type_id, {});
 		LightingConditionAtmospheres = serialized->unwrap_into_many<rivet::ddl::generated::LightingConditionAtmosphere>(LightingConditionAtmospheres_type_id);
 		LevelLights = serialized->unwrap_into_many<rivet::ddl::generated::LightingConditionLL>(LevelLights_type_id);
-		UseSingleLightingCondition = serialized->get_bool(UseSingleLightingCondition_type_id);
-		SingleLightingCondition = serialized->get_enum<rivet::ddl::generated::LightingConditions>(SingleLightingCondition_type_id, rivet::ddl::generated::LightingConditions_values);
-		LongDistanceRayTracing = serialized->get_bool(LongDistanceRayTracing_type_id);
-		SkipLightCapture = serialized->get_bool(SkipLightCapture_type_id);
-		ImpostorLightCapture = serialized->get_bool(ImpostorLightCapture_type_id);
-		SkipHibernation = serialized->get_bool(SkipHibernation_type_id);
-		HibernateDistanceOverride = serialized->get_float(HibernateDistanceOverride_type_id);
-		LightGridPriority = serialized->get_uint8(LightGridPriority_type_id);
-		LightGridCompression = serialized->get_enum<rivet::ddl::generated::LightGridCompression>(LightGridCompression_type_id, rivet::ddl::generated::LightGridCompression_values);
-		LightGridStreaming = serialized->get_bool(LightGridStreaming_type_id);
-		RemoveGridSamplesFarFromGeom = serialized->get_bool(RemoveGridSamplesFarFromGeom_type_id);
+		UseSingleLightingCondition = serialized->get_bool(UseSingleLightingCondition_type_id, false);
+		SingleLightingCondition = serialized->get_enum<rivet::ddl::generated::LightingConditions>(SingleLightingCondition_type_id, rivet::ddl::generated::LightingConditions_values, rivet::ddl::generated::LightingConditions::Day);
+		LongDistanceRayTracing = serialized->get_bool(LongDistanceRayTracing_type_id, false);
+		SkipLightCapture = serialized->get_bool(SkipLightCapture_type_id, false);
+		ImpostorLightCapture = serialized->get_bool(ImpostorLightCapture_type_id, false);
+		SkipHibernation = serialized->get_bool(SkipHibernation_type_id, false);
+		HibernateDistanceOverride = serialized->get_float(HibernateDistanceOverride_type_id, 0.000000);
+		LightGridPriority = serialized->get_uint8(LightGridPriority_type_id, 0);
+		LightGridCompression = serialized->get_enum<rivet::ddl::generated::LightGridCompression>(LightGridCompression_type_id, rivet::ddl::generated::LightGridCompression_values, rivet::ddl::generated::LightGridCompression::Low_Compression);
+		LightGridStreaming = serialized->get_bool(LightGridStreaming_type_id, false);
+		RemoveGridSamplesFarFromGeom = serialized->get_bool(RemoveGridSamplesFarFromGeom_type_id, true);
 		AssetReferences = serialized->unwrap_into_many<rivet::ddl::generated::AssetReferenceDef>(AssetReferences_type_id);
 		GameplayDataReferences = serialized->unwrap_into_many<rivet::ddl::generated::GameplayDataReferenceDef>(GameplayDataReferences_type_id); 
 	}

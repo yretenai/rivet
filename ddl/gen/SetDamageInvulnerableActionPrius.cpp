@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	SetDamageInvulnerableActionPrius::SetDamageInvulnerableActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Health);
 		FilterTypes = serialized->get_enums<rivet::ddl::generated::DamageTypes>(FilterTypes_type_id, rivet::ddl::generated::DamageTypes_values);
 		AllegianceTypes = serialized->get_enums<rivet::ddl::generated::x6bdf4ba1>(AllegianceTypes_type_id, rivet::ddl::generated::x6bdf4ba1_values);
-		FilterIsExclude = serialized->get_bool(FilterIsExclude_type_id);
-		AllowReacts = serialized->get_bool(AllowReacts_type_id); 
+		FilterIsExclude = serialized->get_bool(FilterIsExclude_type_id, false);
+		AllowReacts = serialized->get_bool(AllowReacts_type_id, false); 
 	}
 
 	[[nodiscard]] auto

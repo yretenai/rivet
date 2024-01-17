@@ -9,16 +9,16 @@
 
 namespace rivet::ddl::generated {
 	FilterData::FilterData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Name = serialized->get_string(Name_type_id);
+		Name = serialized->get_string(Name_type_id, {});
 		FilterRef = serialized->unwrap_into<rivet::ddl::generated::AssetReferenceDef>(FilterRef_type_id);
 		FXFilterRef = serialized->unwrap_into<rivet::ddl::generated::AssetReferenceDef>(FXFilterRef_type_id);
 		FilterActorRef = serialized->unwrap_into<rivet::ddl::generated::AssetReferenceDef>(FilterActorRef_type_id);
-		DisableAaMode = serialized->get_bool(DisableAaMode_type_id);
-		ComputeLuminanceEarly = serialized->get_bool(ComputeLuminanceEarly_type_id);
-		BlendMin = serialized->get_float(BlendMin_type_id);
-		BlendMax = serialized->get_float(BlendMax_type_id);
-		ExcludeIndoors = serialized->get_bool(ExcludeIndoors_type_id);
-		ExcludeInGame = serialized->get_bool(ExcludeInGame_type_id); 
+		DisableAaMode = serialized->get_bool(DisableAaMode_type_id, false);
+		ComputeLuminanceEarly = serialized->get_bool(ComputeLuminanceEarly_type_id, false);
+		BlendMin = serialized->get_float(BlendMin_type_id, 0.000000);
+		BlendMax = serialized->get_float(BlendMax_type_id, 1.000000);
+		ExcludeIndoors = serialized->get_bool(ExcludeIndoors_type_id, false);
+		ExcludeInGame = serialized->get_bool(ExcludeInGame_type_id, true); 
 	}
 
 	[[nodiscard]] auto

@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	ForceActorGroundTypeActionPrius::ForceActorGroundTypeActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		GroundType = serialized->get_enum<rivet::ddl::generated::x10b3c4cf>(GroundType_type_id, rivet::ddl::generated::x10b3c4cf_values); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Actor);
+		GroundType = serialized->get_enum<rivet::ddl::generated::x10b3c4cf>(GroundType_type_id, rivet::ddl::generated::x10b3c4cf_values, rivet::ddl::generated::x10b3c4cf::None); 
 	}
 
 	[[nodiscard]] auto

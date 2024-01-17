@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	HeroSwimConfig::HeroSwimConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SwimSurfaceSpeed = serialized->get_float(SwimSurfaceSpeed_type_id);
-		SwimHydropackSpeed = serialized->get_float(SwimHydropackSpeed_type_id); 
+		SwimSurfaceSpeed = serialized->get_float(SwimSurfaceSpeed_type_id, 3.500000);
+		SwimHydropackSpeed = serialized->get_float(SwimHydropackSpeed_type_id, 8.000000); 
 	}
 
 	[[nodiscard]] auto

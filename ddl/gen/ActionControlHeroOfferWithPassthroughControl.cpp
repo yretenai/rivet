@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ActionControlHeroOfferWithPassthroughControl::ActionControlHeroOfferWithPassthroughControl([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Control = serialized->get_enum<rivet::ddl::generated::xec7023d4>(Control_type_id, rivet::ddl::generated::xec7023d4_values); 
+		Control = serialized->get_enum<rivet::ddl::generated::xec7023d4>(Control_type_id, rivet::ddl::generated::xec7023d4_values, rivet::ddl::generated::xec7023d4::AcceptOfferPassthrough); 
 	}
 
 	[[nodiscard]] auto

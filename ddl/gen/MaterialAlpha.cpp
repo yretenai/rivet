@@ -7,15 +7,15 @@
 
 namespace rivet::ddl::generated {
 	MaterialAlpha::MaterialAlpha([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		BlendType = serialized->get_enum<rivet::ddl::generated::BlendType>(BlendType_type_id, rivet::ddl::generated::BlendType_values);
-		Alpha = serialized->get_float(Alpha_type_id);
-		AlphaTest = serialized->get_float(AlphaTest_type_id);
-		Lit = serialized->get_bool(Lit_type_id);
-		DepthPass = serialized->get_bool(DepthPass_type_id);
-		ForceOpaqueLoDs = serialized->get_bool(ForceOpaqueLoDs_type_id);
-		UseRayTracedShadowsAlphaTest = serialized->get_bool(UseRayTracedShadowsAlphaTest_type_id);
-		RayTracedShadowsAlphaTest = serialized->get_float(RayTracedShadowsAlphaTest_type_id);
-		TemporalAA = serialized->get_enum<rivet::ddl::generated::xb87f7049>(TemporalAA_type_id, rivet::ddl::generated::xb87f7049_values); 
+		BlendType = serialized->get_enum<rivet::ddl::generated::BlendType>(BlendType_type_id, rivet::ddl::generated::BlendType_values, rivet::ddl::generated::BlendType::Opaque);
+		Alpha = serialized->get_float(Alpha_type_id, 1.000000);
+		AlphaTest = serialized->get_float(AlphaTest_type_id, 0.000000);
+		Lit = serialized->get_bool(Lit_type_id, true);
+		DepthPass = serialized->get_bool(DepthPass_type_id, false);
+		ForceOpaqueLoDs = serialized->get_bool(ForceOpaqueLoDs_type_id, false);
+		UseRayTracedShadowsAlphaTest = serialized->get_bool(UseRayTracedShadowsAlphaTest_type_id, false);
+		RayTracedShadowsAlphaTest = serialized->get_float(RayTracedShadowsAlphaTest_type_id, 0.000000);
+		TemporalAA = serialized->get_enum<rivet::ddl::generated::xb87f7049>(TemporalAA_type_id, rivet::ddl::generated::xb87f7049_values, rivet::ddl::generated::xb87f7049::NonResponsive); 
 	}
 
 	[[nodiscard]] auto

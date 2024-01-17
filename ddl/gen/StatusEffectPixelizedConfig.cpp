@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	StatusEffectPixelizedConfig::StatusEffectPixelizedConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): StatusEffectConfig(serialized) {
-		OverrideAtmosphere = serialized->get_string(OverrideAtmosphere_type_id); 
+		OverrideAtmosphere = serialized->get_string(OverrideAtmosphere_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

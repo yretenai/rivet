@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	ModelSwapOnEventPrius::ModelSwapOnEventPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AlternateModel = serialized->get_string(AlternateModel_type_id);
+		AlternateModel = serialized->get_string(AlternateModel_type_id, {});
 		ListenEvent = serialized->unwrap_into<rivet::ddl::generated::EventBase>(ListenEvent_type_id); 
 	}
 

@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	FocusTrackingManagerPrius::FocusTrackingManagerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Config = serialized->get_string(Config_type_id); 
+		Config = serialized->get_string(Config_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

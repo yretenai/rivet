@@ -9,11 +9,11 @@
 
 namespace rivet::ddl::generated {
 	PlanetGoldBolt::PlanetGoldBolt([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SaveId = serialized->get_enum<rivet::ddl::generated::x7038301>(SaveId_type_id, rivet::ddl::generated::x7038301_values);
-		HACK_UseOverrideTaskId = serialized->get_bool(HACK_UseOverrideTaskId_type_id);
-		HACK_OverrideTaskId = serialized->get_enum<rivet::ddl::generated::x7038301>(HACK_OverrideTaskId_type_id, rivet::ddl::generated::x7038301_values);
-		NameTag = serialized->get_string(NameTag_type_id);
-		DefaultPlaytimeEstimate = serialized->get_uint32(DefaultPlaytimeEstimate_type_id);
+		SaveId = serialized->get_enum<rivet::ddl::generated::x7038301>(SaveId_type_id, rivet::ddl::generated::x7038301_values, rivet::ddl::generated::x7038301::Nefarious_City_1);
+		HACK_UseOverrideTaskId = serialized->get_bool(HACK_UseOverrideTaskId_type_id, false);
+		HACK_OverrideTaskId = serialized->get_enum<rivet::ddl::generated::x7038301>(HACK_OverrideTaskId_type_id, rivet::ddl::generated::x7038301_values, rivet::ddl::generated::x7038301::Nefarious_City_1);
+		NameTag = serialized->get_string(NameTag_type_id, {});
+		DefaultPlaytimeEstimate = serialized->get_uint32(DefaultPlaytimeEstimate_type_id, 5);
 		Hints = serialized->unwrap_into_many<rivet::ddl::generated::ActivityHint>(Hints_type_id); 
 	}
 

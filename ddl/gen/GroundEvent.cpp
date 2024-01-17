@@ -12,15 +12,15 @@
 
 namespace rivet::ddl::generated {
 	GroundEvent::GroundEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		LocatorName = serialized->get_string(LocatorName_type_id);
-		CheckDistance = serialized->get_float(CheckDistance_type_id);
-		Label = serialized->get_string(Label_type_id);
-		DoCollision = serialized->get_bool(DoCollision_type_id);
-		Material = serialized->get_enum<rivet::ddl::generated::x10b3c4cf>(Material_type_id, rivet::ddl::generated::x10b3c4cf_values);
-		MaterialAsset = serialized->get_uint64(MaterialAsset_type_id);
-		QueryHandle = serialized->get_uint64(QueryHandle_type_id);
-		InWater = serialized->get_bool(InWater_type_id);
-		FoundCollision = serialized->get_bool(FoundCollision_type_id); 
+		LocatorName = serialized->get_string(LocatorName_type_id, {});
+		CheckDistance = serialized->get_float(CheckDistance_type_id, 1.000000);
+		Label = serialized->get_string(Label_type_id, {});
+		DoCollision = serialized->get_bool(DoCollision_type_id, false);
+		Material = serialized->get_enum<rivet::ddl::generated::x10b3c4cf>(Material_type_id, rivet::ddl::generated::x10b3c4cf_values, rivet::ddl::generated::x10b3c4cf::None);
+		MaterialAsset = serialized->get_uint64(MaterialAsset_type_id, 0);
+		QueryHandle = serialized->get_uint64(QueryHandle_type_id, 0);
+		InWater = serialized->get_bool(InWater_type_id, false);
+		FoundCollision = serialized->get_bool(FoundCollision_type_id, false); 
 	}
 
 	[[nodiscard]] auto

@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	RCSConfig::RCSConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Status = serialized->get_enum<rivet::ddl::generated::xc2e0975c>(Status_type_id, rivet::ddl::generated::xc2e0975c_values);
+		Status = serialized->get_enum<rivet::ddl::generated::xc2e0975c>(Status_type_id, rivet::ddl::generated::xc2e0975c_values, rivet::ddl::generated::xc2e0975c::Unknown);
 		SyncRevision = serialized->unwrap_into<rivet::ddl::generated::RCSRevisionOptions>(SyncRevision_type_id); 
 	}
 

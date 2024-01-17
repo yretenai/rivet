@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	AnimMaterialComponentCineTextureDef::AnimMaterialComponentCineTextureDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		TextureSlot = serialized->get_enum<rivet::ddl::generated::xfc5b2547>(TextureSlot_type_id, rivet::ddl::generated::xfc5b2547_values);
-		TextureSamplerName = serialized->get_string(TextureSamplerName_type_id);
-		OriginalMaterialName = serialized->get_string(OriginalMaterialName_type_id); 
+		TextureSlot = serialized->get_enum<rivet::ddl::generated::xfc5b2547>(TextureSlot_type_id, rivet::ddl::generated::xfc5b2547_values, rivet::ddl::generated::xfc5b2547::None);
+		TextureSamplerName = serialized->get_string(TextureSamplerName_type_id, {});
+		OriginalMaterialName = serialized->get_string(OriginalMaterialName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

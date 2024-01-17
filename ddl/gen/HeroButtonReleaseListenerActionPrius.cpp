@@ -9,12 +9,12 @@
 
 namespace rivet::ddl::generated {
 	HeroButtonReleaseListenerActionPrius::HeroButtonReleaseListenerActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		InputType = serialized->get_enum<rivet::ddl::generated::x290280c7>(InputType_type_id, rivet::ddl::generated::x290280c7_values);
-		Button = serialized->get_enum<rivet::ddl::generated::xe50c3252>(Button_type_id, rivet::ddl::generated::xe50c3252_values);
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Hero);
+		InputType = serialized->get_enum<rivet::ddl::generated::x290280c7>(InputType_type_id, rivet::ddl::generated::x290280c7_values, rivet::ddl::generated::x290280c7::Button);
+		Button = serialized->get_enum<rivet::ddl::generated::xe50c3252>(Button_type_id, rivet::ddl::generated::xe50c3252_values, rivet::ddl::generated::xe50c3252::None);
 		Action = serialized->unwrap_into<rivet::ddl::generated::ActionControlBase>(Action_type_id);
-		StartListening = serialized->get_bool(StartListening_type_id);
-		RetriggerDelay = serialized->get_float(RetriggerDelay_type_id); 
+		StartListening = serialized->get_bool(StartListening_type_id, true);
+		RetriggerDelay = serialized->get_float(RetriggerDelay_type_id, -1.000000); 
 	}
 
 	[[nodiscard]] auto

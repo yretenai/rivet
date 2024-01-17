@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	AnimDriverTransitionDataDef::AnimDriverTransitionDataDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Duration = serialized->get_float(Duration_type_id); 
+		Duration = serialized->get_float(Duration_type_id, 0.250000); 
 	}
 
 	[[nodiscard]] auto

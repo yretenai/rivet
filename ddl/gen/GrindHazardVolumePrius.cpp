@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	GrindHazardVolumePrius::GrindHazardVolumePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		KillPlayerOnEnter = serialized->get_bool(KillPlayerOnEnter_type_id);
-		KillPlayerOnCollision = serialized->get_bool(KillPlayerOnCollision_type_id); 
+		KillPlayerOnEnter = serialized->get_bool(KillPlayerOnEnter_type_id, false);
+		KillPlayerOnCollision = serialized->get_bool(KillPlayerOnCollision_type_id, false); 
 	}
 
 	[[nodiscard]] auto

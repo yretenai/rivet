@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	LedgeBirdLedgeControlActionPrius::LedgeBirdLedgeControlActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		ExistingLedgeFlockBehavior = serialized->get_enum<rivet::ddl::generated::ExistingLedgeFlockBehavior>(ExistingLedgeFlockBehavior_type_id, rivet::ddl::generated::ExistingLedgeFlockBehavior_values); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Ambient);
+		ExistingLedgeFlockBehavior = serialized->get_enum<rivet::ddl::generated::ExistingLedgeFlockBehavior>(ExistingLedgeFlockBehavior_type_id, rivet::ddl::generated::ExistingLedgeFlockBehavior_values, rivet::ddl::generated::ExistingLedgeFlockBehavior::Scatter_Birds); 
 	}
 
 	[[nodiscard]] auto

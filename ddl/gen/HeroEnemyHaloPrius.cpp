@@ -7,13 +7,13 @@
 
 namespace rivet::ddl::generated {
 	HeroEnemyHaloPrius::HeroEnemyHaloPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MaxValidRange = serialized->get_float(MaxValidRange_type_id);
-		TargetTypeMask = serialized->get_uint32(TargetTypeMask_type_id);
-		DoStandardLOS = serialized->get_bool(DoStandardLOS_type_id);
-		DoPathTest = serialized->get_bool(DoPathTest_type_id);
-		TargetNeutral = serialized->get_bool(TargetNeutral_type_id);
-		ForceSmallList = serialized->get_bool(ForceSmallList_type_id);
-		TargetAnyAllegiance = serialized->get_bool(TargetAnyAllegiance_type_id); 
+		MaxValidRange = serialized->get_float(MaxValidRange_type_id, 8.000000);
+		TargetTypeMask = serialized->get_uint32(TargetTypeMask_type_id, 4294967295);
+		DoStandardLOS = serialized->get_bool(DoStandardLOS_type_id, true);
+		DoPathTest = serialized->get_bool(DoPathTest_type_id, true);
+		TargetNeutral = serialized->get_bool(TargetNeutral_type_id, false);
+		ForceSmallList = serialized->get_bool(ForceSmallList_type_id, false);
+		TargetAnyAllegiance = serialized->get_bool(TargetAnyAllegiance_type_id, false); 
 	}
 
 	[[nodiscard]] auto

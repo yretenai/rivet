@@ -9,7 +9,7 @@ namespace rivet::ddl::generated {
 	NodeGraphCollectionDef::NodeGraphCollectionDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		MainGraph = serialized->get_field(MainGraph_type_id);
 		SubGraphs = serialized->get_field(SubGraphs_type_id);
-		Type = serialized->get_string(Type_type_id); 
+		Type = serialized->get_string(Type_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

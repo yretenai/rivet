@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	VolumeEngineItem::VolumeEngineItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		VolumeNodeShape = serialized->get_enum<rivet::ddl::generated::VolumeNodeShape>(VolumeNodeShape_type_id, rivet::ddl::generated::VolumeNodeShape_values); 
+		VolumeNodeShape = serialized->get_enum<rivet::ddl::generated::VolumeNodeShape>(VolumeNodeShape_type_id, rivet::ddl::generated::VolumeNodeShape_values, rivet::ddl::generated::VolumeNodeShape::Cuboid); 
 	}
 
 	[[nodiscard]] auto

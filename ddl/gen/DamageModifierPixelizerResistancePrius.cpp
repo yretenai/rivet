@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	DamageModifierPixelizerResistancePrius::DamageModifierPixelizerResistancePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): DamageModifierIncomingPrius(serialized) {
-		StatusAmountMultiplier = serialized->get_float(StatusAmountMultiplier_type_id); 
+		StatusAmountMultiplier = serialized->get_float(StatusAmountMultiplier_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	RYNOScriptPickupEvent::RYNOScriptPickupEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		RynoId = serialized->get_enum<rivet::ddl::generated::x81d3e717>(RynoId_type_id, rivet::ddl::generated::x81d3e717_values); 
+		RynoId = serialized->get_enum<rivet::ddl::generated::x81d3e717>(RynoId_type_id, rivet::ddl::generated::x81d3e717_values, rivet::ddl::generated::x81d3e717::None); 
 	}
 
 	[[nodiscard]] auto

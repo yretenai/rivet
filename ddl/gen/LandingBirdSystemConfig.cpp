@@ -10,16 +10,16 @@
 
 namespace rivet::ddl::generated {
 	LandingBirdSystemConfig::LandingBirdSystemConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		InitialLoadDelay = serialized->get_float(InitialLoadDelay_type_id);
-		PostFleeCooldown = serialized->get_float(PostFleeCooldown_type_id);
-		MaxIdleSpeed = serialized->get_float(MaxIdleSpeed_type_id);
-		IdleSpawnDelay = serialized->get_float(IdleSpawnDelay_type_id);
-		LandCircleOffsetXZ = serialized->get_float(LandCircleOffsetXZ_type_id);
-		LandCircleRadiusXZ = serialized->get_float(LandCircleRadiusXZ_type_id);
-		MaxLandHeightDiff = serialized->get_float(MaxLandHeightDiff_type_id);
-		MaxLandNormalAngle = serialized->get_float(MaxLandNormalAngle_type_id);
-		FleeDestroyOffscreenDelay = serialized->get_float(FleeDestroyOffscreenDelay_type_id);
-		FleeFromPulses = serialized->get_bool(FleeFromPulses_type_id);
+		InitialLoadDelay = serialized->get_float(InitialLoadDelay_type_id, 15.000000);
+		PostFleeCooldown = serialized->get_float(PostFleeCooldown_type_id, 30.000000);
+		MaxIdleSpeed = serialized->get_float(MaxIdleSpeed_type_id, 2.000000);
+		IdleSpawnDelay = serialized->get_float(IdleSpawnDelay_type_id, 5.000000);
+		LandCircleOffsetXZ = serialized->get_float(LandCircleOffsetXZ_type_id, 10.000000);
+		LandCircleRadiusXZ = serialized->get_float(LandCircleRadiusXZ_type_id, 5.000000);
+		MaxLandHeightDiff = serialized->get_float(MaxLandHeightDiff_type_id, 6.000000);
+		MaxLandNormalAngle = serialized->get_float(MaxLandNormalAngle_type_id, 30.000000);
+		FleeDestroyOffscreenDelay = serialized->get_float(FleeDestroyOffscreenDelay_type_id, 1.000000);
+		FleeFromPulses = serialized->get_bool(FleeFromPulses_type_id, true);
 		PulseFlockTargetPrius = serialized->unwrap_into<rivet::ddl::generated::DimensionalPulseTargetFlockPrius>(PulseFlockTargetPrius_type_id);
 		BirdTypes = serialized->unwrap_into_many<rivet::ddl::generated::LandingBirdType>(BirdTypes_type_id); 
 	}

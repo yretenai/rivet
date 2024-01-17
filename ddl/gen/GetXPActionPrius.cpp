@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	GetXPActionPrius::GetXPActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		LevelValue = serialized->get_float(LevelValue_type_id);
-		UseNeededXp = serialized->get_bool(UseNeededXp_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Hero);
+		LevelValue = serialized->get_float(LevelValue_type_id, 1.000000);
+		UseNeededXp = serialized->get_bool(UseNeededXp_type_id, true); 
 	}
 
 	[[nodiscard]] auto

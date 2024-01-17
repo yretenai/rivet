@@ -13,8 +13,8 @@
 namespace rivet::ddl::generated {
 	PickupSpawnerPrius::PickupSpawnerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		DropSetList = serialized->unwrap_into_many<rivet::ddl::generated::DropSet>(DropSetList_type_id);
-		DropChance = serialized->get_float(DropChance_type_id);
-		FixedSpawn = serialized->get_bool(FixedSpawn_type_id);
+		DropChance = serialized->get_float(DropChance_type_id, 1.000000);
+		FixedSpawn = serialized->get_bool(FixedSpawn_type_id, false);
 		SpawnOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(SpawnOffset_type_id); 
 	}
 

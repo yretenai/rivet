@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	ProximityTieredOverrides::ProximityTieredOverrides([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MinPercentOutOfView = serialized->get_float(MinPercentOutOfView_type_id);
-		MaxPercentOutOfView = serialized->get_float(MaxPercentOutOfView_type_id);
-		OverrideMinDelay = serialized->get_float(OverrideMinDelay_type_id);
-		OverrideMaxDelay = serialized->get_float(OverrideMaxDelay_type_id); 
+		MinPercentOutOfView = serialized->get_float(MinPercentOutOfView_type_id, 0.000000);
+		MaxPercentOutOfView = serialized->get_float(MaxPercentOutOfView_type_id, 0.000000);
+		OverrideMinDelay = serialized->get_float(OverrideMinDelay_type_id, -1.000000);
+		OverrideMaxDelay = serialized->get_float(OverrideMaxDelay_type_id, -1.000000); 
 	}
 
 	[[nodiscard]] auto

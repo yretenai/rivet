@@ -9,19 +9,19 @@
 
 namespace rivet::ddl::generated {
 	ConversationActionPrius::ConversationActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		MultiConversationOption = serialized->get_enum<rivet::ddl::generated::MultiConversationOption>(MultiConversationOption_type_id, rivet::ddl::generated::MultiConversationOption_values);
-		ConverationConfig = serialized->get_string(ConverationConfig_type_id);
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Sound);
+		MultiConversationOption = serialized->get_enum<rivet::ddl::generated::MultiConversationOption>(MultiConversationOption_type_id, rivet::ddl::generated::MultiConversationOption_values, rivet::ddl::generated::MultiConversationOption::SingleConversation);
+		ConverationConfig = serialized->get_string(ConverationConfig_type_id, {});
 		MulitConvData = serialized->unwrap_into<rivet::ddl::generated::MulitConvData>(MulitConvData_type_id);
-		Priority = serialized->get_enum<rivet::ddl::generated::x90d1aef7>(Priority_type_id, rivet::ddl::generated::x90d1aef7_values);
-		InterruptSamePriorityLines = serialized->get_bool(InterruptSamePriorityLines_type_id);
-		Queue = serialized->get_bool(Queue_type_id);
-		MaxQueueTime = serialized->get_float(MaxQueueTime_type_id);
-		StopOnHeroDeath = serialized->get_bool(StopOnHeroDeath_type_id);
-		StopOnActorDeath = serialized->get_bool(StopOnActorDeath_type_id);
-		CantBeInterrupted = serialized->get_bool(CantBeInterrupted_type_id);
-		SignalFinishedOnInterrupted = serialized->get_bool(SignalFinishedOnInterrupted_type_id);
-		InhibitEmergentVO = serialized->get_bool(InhibitEmergentVO_type_id); 
+		Priority = serialized->get_enum<rivet::ddl::generated::x90d1aef7>(Priority_type_id, rivet::ddl::generated::x90d1aef7_values, rivet::ddl::generated::x90d1aef7::Medium);
+		InterruptSamePriorityLines = serialized->get_bool(InterruptSamePriorityLines_type_id, true);
+		Queue = serialized->get_bool(Queue_type_id, false);
+		MaxQueueTime = serialized->get_float(MaxQueueTime_type_id, -1.000000);
+		StopOnHeroDeath = serialized->get_bool(StopOnHeroDeath_type_id, true);
+		StopOnActorDeath = serialized->get_bool(StopOnActorDeath_type_id, true);
+		CantBeInterrupted = serialized->get_bool(CantBeInterrupted_type_id, false);
+		SignalFinishedOnInterrupted = serialized->get_bool(SignalFinishedOnInterrupted_type_id, true);
+		InhibitEmergentVO = serialized->get_bool(InhibitEmergentVO_type_id, true); 
 	}
 
 	[[nodiscard]] auto

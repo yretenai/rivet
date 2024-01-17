@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	RicochetData::RicochetData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		BuildUpTime = serialized->get_float(BuildUpTime_type_id);
-		SuccessTime = serialized->get_float(SuccessTime_type_id);
-		FailTime = serialized->get_float(FailTime_type_id); 
+		BuildUpTime = serialized->get_float(BuildUpTime_type_id, 0.700000);
+		SuccessTime = serialized->get_float(SuccessTime_type_id, 0.250000);
+		FailTime = serialized->get_float(FailTime_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

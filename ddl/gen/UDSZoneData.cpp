@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	UDSZoneData::UDSZoneData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ZoneId = serialized->get_string(ZoneId_type_id);
+		ZoneId = serialized->get_string(ZoneId_type_id, {});
 		MapBottomLeft = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(MapBottomLeft_type_id);
 		MapTopRight = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(MapTopRight_type_id); 
 	}

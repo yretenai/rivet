@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	PickupRYNOPlanPrius::PickupRYNOPlanPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): GamePickupItemPrius(serialized) {
-		SaveID = serialized->get_enum<rivet::ddl::generated::x81d3e717>(SaveID_type_id, rivet::ddl::generated::x81d3e717_values);
+		SaveID = serialized->get_enum<rivet::ddl::generated::x81d3e717>(SaveID_type_id, rivet::ddl::generated::x81d3e717_values, rivet::ddl::generated::x81d3e717::None);
 		PreviouslyCollectedMaterialOverride = serialized->unwrap_into<rivet::ddl::generated::PickupMaterialOverride>(PreviouslyCollectedMaterialOverride_type_id); 
 	}
 

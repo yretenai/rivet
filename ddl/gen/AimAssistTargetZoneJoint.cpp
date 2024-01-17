@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	AimAssistTargetZoneJoint::AimAssistTargetZoneJoint([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): AimAssistTargetZone(serialized) {
-		AimBoxJointBottom = serialized->get_string(AimBoxJointBottom_type_id);
-		AimBoxJointTop = serialized->get_string(AimBoxJointTop_type_id); 
+		AimBoxJointBottom = serialized->get_string(AimBoxJointBottom_type_id, "");
+		AimBoxJointTop = serialized->get_string(AimBoxJointTop_type_id, ""); 
 	}
 
 	[[nodiscard]] auto

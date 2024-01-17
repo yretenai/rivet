@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ObjectiveFocusVolumePrius::ObjectiveFocusVolumePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Mission = serialized->get_string(Mission_type_id);
+		Mission = serialized->get_string(Mission_type_id, {});
 		Objectives = serialized->get_strings(Objectives_type_id); 
 	}
 

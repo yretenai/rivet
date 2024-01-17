@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	VariantLookData::VariantLookData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Chance = serialized->get_float(Chance_type_id);
-		LookGroup = serialized->get_string(LookGroup_type_id);
-		PaletteIndexMin = serialized->get_uint32(PaletteIndexMin_type_id);
-		PaletteIndexMax = serialized->get_uint32(PaletteIndexMax_type_id);
-		HSLRangeMin = serialized->get_float(HSLRangeMin_type_id);
-		HSLRangeMax = serialized->get_float(HSLRangeMax_type_id); 
+		Chance = serialized->get_float(Chance_type_id, 1.000000);
+		LookGroup = serialized->get_string(LookGroup_type_id, {});
+		PaletteIndexMin = serialized->get_uint32(PaletteIndexMin_type_id, 0);
+		PaletteIndexMax = serialized->get_uint32(PaletteIndexMax_type_id, 0);
+		HSLRangeMin = serialized->get_float(HSLRangeMin_type_id, 0.000000);
+		HSLRangeMax = serialized->get_float(HSLRangeMax_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

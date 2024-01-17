@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	ProjectileThrowingPrius::ProjectileThrowingPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ProjectileThrowingConfig = serialized->get_string(ProjectileThrowingConfig_type_id);
-		ThrowLocator = serialized->get_string(ThrowLocator_type_id);
-		UseArcFinder = serialized->get_bool(UseArcFinder_type_id);
-		SnapTargetPositionToGround = serialized->get_bool(SnapTargetPositionToGround_type_id); 
+		ProjectileThrowingConfig = serialized->get_string(ProjectileThrowingConfig_type_id, {});
+		ThrowLocator = serialized->get_string(ThrowLocator_type_id, {});
+		UseArcFinder = serialized->get_bool(UseArcFinder_type_id, false);
+		SnapTargetPositionToGround = serialized->get_bool(SnapTargetPositionToGround_type_id, false); 
 	}
 
 	[[nodiscard]] auto

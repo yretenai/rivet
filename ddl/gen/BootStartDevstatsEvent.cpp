@@ -7,15 +7,15 @@
 
 namespace rivet::ddl::generated {
 	BootStartDevstatsEvent::BootStartDevstatsEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		event_type = serialized->get_string(event_type_type_id);
-		title_name = serialized->get_string(title_name_type_id);
-		issuer_id = serialized->get_string(issuer_id_type_id);
-		platform = serialized->get_string(platform_type_id);
-		device_type = serialized->get_string(device_type_type_id);
-		build_version = serialized->get_string(build_version_type_id);
-		build_name = serialized->get_string(build_name_type_id);
-		launch_method = serialized->get_enum<rivet::ddl::generated::x8b182f8e>(launch_method_type_id, rivet::ddl::generated::x8b182f8e_values);
-		owner_id = serialized->get_string(owner_id_type_id); 
+		event_type = serialized->get_string(event_type_type_id, "BootStart");
+		title_name = serialized->get_string(title_name_type_id, {});
+		issuer_id = serialized->get_string(issuer_id_type_id, {});
+		platform = serialized->get_string(platform_type_id, {});
+		device_type = serialized->get_string(device_type_type_id, {});
+		build_version = serialized->get_string(build_version_type_id, {});
+		build_name = serialized->get_string(build_name_type_id, {});
+		launch_method = serialized->get_enum<rivet::ddl::generated::x8b182f8e>(launch_method_type_id, rivet::ddl::generated::x8b182f8e_values, rivet::ddl::generated::x8b182f8e::boot);
+		owner_id = serialized->get_string(owner_id_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

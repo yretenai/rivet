@@ -13,17 +13,17 @@ namespace rivet::ddl::generated {
 	WeaponRYNOPrius::WeaponRYNOPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): WeaponGamePrius(serialized) {
 		PortalPrius = serialized->unwrap_into<rivet::ddl::generated::RYNOPortalPrius>(PortalPrius_type_id);
 		PortalObjectPrius = serialized->unwrap_into<rivet::ddl::generated::RYNOPortalObjectPrius>(PortalObjectPrius_type_id);
-		PreFireTime = serialized->get_float(PreFireTime_type_id);
-		PortalObjectInitialSpeed = serialized->get_float(PortalObjectInitialSpeed_type_id);
-		PortalObjectAccel = serialized->get_float(PortalObjectAccel_type_id);
-		BeamShotSpeed = serialized->get_float(BeamShotSpeed_type_id);
-		PortalActor = serialized->get_string(PortalActor_type_id);
+		PreFireTime = serialized->get_float(PreFireTime_type_id, 0.750000);
+		PortalObjectInitialSpeed = serialized->get_float(PortalObjectInitialSpeed_type_id, 1.500000);
+		PortalObjectAccel = serialized->get_float(PortalObjectAccel_type_id, 30.000000);
+		BeamShotSpeed = serialized->get_float(BeamShotSpeed_type_id, 10.000000);
+		PortalActor = serialized->get_string(PortalActor_type_id, {});
 		SmallPortalObjectRefs = serialized->unwrap_into_many<rivet::ddl::generated::AssertPortalInfo>(SmallPortalObjectRefs_type_id);
 		MediumPortalObjectRefs = serialized->unwrap_into_many<rivet::ddl::generated::AssertPortalInfo>(MediumPortalObjectRefs_type_id);
 		LargePortalObjectRefs = serialized->unwrap_into_many<rivet::ddl::generated::AssertPortalInfo>(LargePortalObjectRefs_type_id);
-		SmallShockwaveCameraShake = serialized->get_string(SmallShockwaveCameraShake_type_id);
-		MediumShockwaveCameraShake = serialized->get_string(MediumShockwaveCameraShake_type_id);
-		LargeShockwaveCameraShake = serialized->get_string(LargeShockwaveCameraShake_type_id); 
+		SmallShockwaveCameraShake = serialized->get_string(SmallShockwaveCameraShake_type_id, {});
+		MediumShockwaveCameraShake = serialized->get_string(MediumShockwaveCameraShake_type_id, {});
+		LargeShockwaveCameraShake = serialized->get_string(LargeShockwaveCameraShake_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

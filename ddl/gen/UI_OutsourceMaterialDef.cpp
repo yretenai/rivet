@@ -9,11 +9,11 @@
 
 namespace rivet::ddl::generated {
 	UI_OutsourceMaterialDef::UI_OutsourceMaterialDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Name = serialized->get_string(Name_type_id);
-		TemplatePath = serialized->get_string(TemplatePath_type_id);
-		AVMaterial = serialized->get_string(AVMaterial_type_id);
-		DoubleSided = serialized->get_bool(DoubleSided_type_id);
-		SortTriangles = serialized->get_bool(SortTriangles_type_id);
+		Name = serialized->get_string(Name_type_id, {});
+		TemplatePath = serialized->get_string(TemplatePath_type_id, "required/materials/basic_normal_gloss.materialgraph");
+		AVMaterial = serialized->get_string(AVMaterial_type_id, {});
+		DoubleSided = serialized->get_bool(DoubleSided_type_id, false);
+		SortTriangles = serialized->get_bool(SortTriangles_type_id, false);
 		AlphaProperties = serialized->unwrap_into<rivet::ddl::generated::MaterialAlpha>(AlphaProperties_type_id);
 		Textures = serialized->get_strings(Textures_type_id); 
 	}

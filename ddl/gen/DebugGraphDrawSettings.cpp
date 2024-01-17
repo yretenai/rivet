@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	DebugGraphDrawSettings::DebugGraphDrawSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ScrollSpeedVertical = serialized->get_float(ScrollSpeedVertical_type_id);
-		ScrollSpeedHorizontal = serialized->get_float(ScrollSpeedHorizontal_type_id);
-		NodeSpacingVertical = serialized->get_float(NodeSpacingVertical_type_id);
-		NodeSpacingHorizontal = serialized->get_float(NodeSpacingHorizontal_type_id);
-		VerticalSpacingMode = serialized->get_enum<rivet::ddl::generated::VerticalSpacingMode>(VerticalSpacingMode_type_id, rivet::ddl::generated::VerticalSpacingMode_values); 
+		ScrollSpeedVertical = serialized->get_float(ScrollSpeedVertical_type_id, 600.000000);
+		ScrollSpeedHorizontal = serialized->get_float(ScrollSpeedHorizontal_type_id, 1200.000000);
+		NodeSpacingVertical = serialized->get_float(NodeSpacingVertical_type_id, 100.000000);
+		NodeSpacingHorizontal = serialized->get_float(NodeSpacingHorizontal_type_id, 400.000000);
+		VerticalSpacingMode = serialized->get_enum<rivet::ddl::generated::VerticalSpacingMode>(VerticalSpacingMode_type_id, rivet::ddl::generated::VerticalSpacingMode_values, rivet::ddl::generated::VerticalSpacingMode::BalancedSpacing); 
 	}
 
 	[[nodiscard]] auto

@@ -9,16 +9,16 @@
 
 namespace rivet::ddl::generated {
 	PhysicsComponentPrius::PhysicsComponentPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		CollisionOn = serialized->get_bool(CollisionOn_type_id);
-		SpawnAs = serialized->get_enum<rivet::ddl::generated::x11c6712d>(SpawnAs_type_id, rivet::ddl::generated::x11c6712d_values);
-		RemoveFromAllDomains = serialized->get_bool(RemoveFromAllDomains_type_id);
-		WantsContactEvent = serialized->get_bool(WantsContactEvent_type_id);
-		MatchJointsOnSpawn = serialized->get_bool(MatchJointsOnSpawn_type_id);
-		ClothTeleportDistance = serialized->get_float(ClothTeleportDistance_type_id);
-		ClothSettleIterations = serialized->get_uint8(ClothSettleIterations_type_id);
-		ClothSettlingFrameCount = serialized->get_uint8(ClothSettlingFrameCount_type_id);
-		ClothSettleOnSpawn = serialized->get_bool(ClothSettleOnSpawn_type_id);
-		HandleStateActionEvents = serialized->get_bool(HandleStateActionEvents_type_id);
+		CollisionOn = serialized->get_bool(CollisionOn_type_id, true);
+		SpawnAs = serialized->get_enum<rivet::ddl::generated::x11c6712d>(SpawnAs_type_id, rivet::ddl::generated::x11c6712d_values, rivet::ddl::generated::x11c6712d::KeyFramedNonInteract);
+		RemoveFromAllDomains = serialized->get_bool(RemoveFromAllDomains_type_id, false);
+		WantsContactEvent = serialized->get_bool(WantsContactEvent_type_id, false);
+		MatchJointsOnSpawn = serialized->get_bool(MatchJointsOnSpawn_type_id, false);
+		ClothTeleportDistance = serialized->get_float(ClothTeleportDistance_type_id, 16.000000);
+		ClothSettleIterations = serialized->get_uint8(ClothSettleIterations_type_id, 8);
+		ClothSettlingFrameCount = serialized->get_uint8(ClothSettlingFrameCount_type_id, 1);
+		ClothSettleOnSpawn = serialized->get_bool(ClothSettleOnSpawn_type_id, false);
+		HandleStateActionEvents = serialized->get_bool(HandleStateActionEvents_type_id, false);
 		CustomProperties = serialized->unwrap_into<rivet::ddl::generated::PhysicsCustomizationProperties>(CustomProperties_type_id); 
 	}
 

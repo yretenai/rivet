@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	DelayAnimsetRemoverPrius::DelayAnimsetRemoverPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AnimSet = serialized->get_uint64(AnimSet_type_id);
-		AnimSetUniqueId = serialized->get_uint32(AnimSetUniqueId_type_id);
-		DriverNameHash = serialized->get_uint32(DriverNameHash_type_id);
-		DelayTime = serialized->get_float(DelayTime_type_id); 
+		AnimSet = serialized->get_uint64(AnimSet_type_id, 0);
+		AnimSetUniqueId = serialized->get_uint32(AnimSetUniqueId_type_id, 0);
+		DriverNameHash = serialized->get_uint32(DriverNameHash_type_id, 0);
+		DelayTime = serialized->get_float(DelayTime_type_id, 0.100000); 
 	}
 
 	[[nodiscard]] auto

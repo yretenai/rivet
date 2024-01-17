@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	SetTargetTypeScriptActionPrius::SetTargetTypeScriptActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		TargetType = serialized->get_bitset<rivet::ddl::generated::TargetType>(TargetType_type_id, rivet::ddl::generated::TargetType_values); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Gameplay);
+		TargetType = serialized->get_bitset<rivet::ddl::generated::TargetType>(TargetType_type_id, rivet::ddl::generated::TargetType_values, 0); 
 	}
 
 	[[nodiscard]] auto

@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	DamageStateDataContainerConfig::DamageStateDataContainerConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): DamageStateDataContainerBase(serialized) {
-		Config = serialized->get_string(Config_type_id); 
+		Config = serialized->get_string(Config_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

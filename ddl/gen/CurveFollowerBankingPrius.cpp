@@ -7,17 +7,17 @@
 
 namespace rivet::ddl::generated {
 	CurveFollowerBankingPrius::CurveFollowerBankingPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		StartEnabled = serialized->get_bool(StartEnabled_type_id);
-		UseBankAnim = serialized->get_bool(UseBankAnim_type_id);
-		UseLeanAnimVar = serialized->get_bool(UseLeanAnimVar_type_id);
-		NormalizeBank = serialized->get_bool(NormalizeBank_type_id);
-		ReverseNormBank = serialized->get_bool(ReverseNormBank_type_id);
-		MaxBankAngle = serialized->get_float(MaxBankAngle_type_id);
-		SpeedForMaxAngle = serialized->get_float(SpeedForMaxAngle_type_id);
-		LookAheadTime = serialized->get_float(LookAheadTime_type_id);
-		TimeToMaxBank = serialized->get_float(TimeToMaxBank_type_id);
-		TimeToExitBank = serialized->get_float(TimeToExitBank_type_id);
-		AccelTime = serialized->get_float(AccelTime_type_id); 
+		StartEnabled = serialized->get_bool(StartEnabled_type_id, true);
+		UseBankAnim = serialized->get_bool(UseBankAnim_type_id, false);
+		UseLeanAnimVar = serialized->get_bool(UseLeanAnimVar_type_id, false);
+		NormalizeBank = serialized->get_bool(NormalizeBank_type_id, false);
+		ReverseNormBank = serialized->get_bool(ReverseNormBank_type_id, false);
+		MaxBankAngle = serialized->get_float(MaxBankAngle_type_id, 45.000000);
+		SpeedForMaxAngle = serialized->get_float(SpeedForMaxAngle_type_id, 20.000000);
+		LookAheadTime = serialized->get_float(LookAheadTime_type_id, 0.500000);
+		TimeToMaxBank = serialized->get_float(TimeToMaxBank_type_id, 1.000000);
+		TimeToExitBank = serialized->get_float(TimeToExitBank_type_id, 0.500000);
+		AccelTime = serialized->get_float(AccelTime_type_id, 0.500000); 
 	}
 
 	[[nodiscard]] auto

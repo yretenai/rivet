@@ -9,11 +9,11 @@
 
 namespace rivet::ddl::generated {
 	CritterQueryMaxExceededDevstatsEvent::CritterQueryMaxExceededDevstatsEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		EventId = serialized->get_string(EventId_type_id);
-		Level = serialized->get_string(Level_type_id);
-		CritterType = serialized->get_string(CritterType_type_id);
+		EventId = serialized->get_string(EventId_type_id, {});
+		Level = serialized->get_string(Level_type_id, {});
+		CritterType = serialized->get_string(CritterType_type_id, {});
 		CameraPosition = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(CameraPosition_type_id);
-		MaxActiveDistance = serialized->get_float(MaxActiveDistance_type_id); 
+		MaxActiveDistance = serialized->get_float(MaxActiveDistance_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

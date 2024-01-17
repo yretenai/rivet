@@ -11,22 +11,22 @@
 namespace rivet::ddl::generated {
 	DecalDef::DecalDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		VaultMetaData = serialized->unwrap_into<rivet::ddl::generated::VaultMetaData>(VaultMetaData_type_id);
-		IconPath = serialized->get_string(IconPath_type_id);
-		Asset = serialized->get_string(Asset_type_id);
-		DecalMode = serialized->get_enum<rivet::ddl::generated::DecalMode>(DecalMode_type_id, rivet::ddl::generated::DecalMode_values);
-		OverlapOverride = serialized->get_enum<rivet::ddl::generated::xa6a133d1>(OverlapOverride_type_id, rivet::ddl::generated::xa6a133d1_values);
-		BlendOverride = serialized->get_enum<rivet::ddl::generated::xe0e71d6c>(BlendOverride_type_id, rivet::ddl::generated::xe0e71d6c_values);
-		Dynamic = serialized->get_bool(Dynamic_type_id);
-		ScreenSpaceTargets = serialized->get_enum<rivet::ddl::generated::x983059e1>(ScreenSpaceTargets_type_id, rivet::ddl::generated::x983059e1_values);
-		RayTracingMode = serialized->get_enum<rivet::ddl::generated::xee077130>(RayTracingMode_type_id, rivet::ddl::generated::xee077130_values);
-		ProjectionLimit = serialized->get_float(ProjectionLimit_type_id);
-		FadeDistance = serialized->get_float(FadeDistance_type_id);
-		LoDDistance = serialized->get_float(LoDDistance_type_id);
+		IconPath = serialized->get_string(IconPath_type_id, "");
+		Asset = serialized->get_string(Asset_type_id, {});
+		DecalMode = serialized->get_enum<rivet::ddl::generated::DecalMode>(DecalMode_type_id, rivet::ddl::generated::DecalMode_values, rivet::ddl::generated::DecalMode::Mesh);
+		OverlapOverride = serialized->get_enum<rivet::ddl::generated::xa6a133d1>(OverlapOverride_type_id, rivet::ddl::generated::xa6a133d1_values, rivet::ddl::generated::xa6a133d1::None);
+		BlendOverride = serialized->get_enum<rivet::ddl::generated::xe0e71d6c>(BlendOverride_type_id, rivet::ddl::generated::xe0e71d6c_values, rivet::ddl::generated::xe0e71d6c::None);
+		Dynamic = serialized->get_bool(Dynamic_type_id, false);
+		ScreenSpaceTargets = serialized->get_enum<rivet::ddl::generated::x983059e1>(ScreenSpaceTargets_type_id, rivet::ddl::generated::x983059e1_values, rivet::ddl::generated::x983059e1::Terrain_Only);
+		RayTracingMode = serialized->get_enum<rivet::ddl::generated::xee077130>(RayTracingMode_type_id, rivet::ddl::generated::xee077130_values, rivet::ddl::generated::xee077130::Vertical);
+		ProjectionLimit = serialized->get_float(ProjectionLimit_type_id, 0.300000);
+		FadeDistance = serialized->get_float(FadeDistance_type_id, 25.000000);
+		LoDDistance = serialized->get_float(LoDDistance_type_id, 15.000000);
 		CustomInput = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(CustomInput_type_id);
 		Color = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Color_type_id);
-		Alpha = serialized->get_float(Alpha_type_id);
-		AlphaTest = serialized->get_float(AlphaTest_type_id);
-		TimeStamp = serialized->get_float(TimeStamp_type_id); 
+		Alpha = serialized->get_float(Alpha_type_id, 1.000000);
+		AlphaTest = serialized->get_float(AlphaTest_type_id, 0.000000);
+		TimeStamp = serialized->get_float(TimeStamp_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

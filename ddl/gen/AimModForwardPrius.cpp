@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	AimModForwardPrius::AimModForwardPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): AimModifierPrius(serialized) {
-		ReferenceLocator = serialized->get_string(ReferenceLocator_type_id); 
+		ReferenceLocator = serialized->get_string(ReferenceLocator_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

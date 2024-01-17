@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	FocusTrackingOverrideFocusScaleEvent::FocusTrackingOverrideFocusScaleEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		FocusScaleTarget = serialized->get_float(FocusScaleTarget_type_id);
-		TimeToTarget = serialized->get_float(TimeToTarget_type_id); 
+		FocusScaleTarget = serialized->get_float(FocusScaleTarget_type_id, 1.000000);
+		TimeToTarget = serialized->get_float(TimeToTarget_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

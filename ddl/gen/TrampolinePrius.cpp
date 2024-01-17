@@ -10,23 +10,23 @@
 
 namespace rivet::ddl::generated {
 	TrampolinePrius::TrampolinePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ReflectionFactor = serialized->get_float(ReflectionFactor_type_id);
-		MinHeight = serialized->get_float(MinHeight_type_id);
-		MaxHeight = serialized->get_float(MaxHeight_type_id);
-		TimeToPeak = serialized->get_float(TimeToPeak_type_id);
-		MinDesiredDistance = serialized->get_float(MinDesiredDistance_type_id);
-		MaxDesiredDistance = serialized->get_float(MaxDesiredDistance_type_id);
-		CameraMode = serialized->get_enum<rivet::ddl::generated::x925714c8>(CameraMode_type_id, rivet::ddl::generated::x925714c8_values);
-		JumpPad = serialized->get_bool(JumpPad_type_id);
-		EnableSuperJump = serialized->get_bool(EnableSuperJump_type_id);
-		DisableOnDestroyed = serialized->get_bool(DisableOnDestroyed_type_id);
-		OverrideMaterial = serialized->get_enum<rivet::ddl::generated::x10b3c4cf>(OverrideMaterial_type_id, rivet::ddl::generated::x10b3c4cf_values);
-		VibrateOnBounce = serialized->get_bool(VibrateOnBounce_type_id);
-		VibratePosConstant = serialized->get_string(VibratePosConstant_type_id);
-		VibrateTConstant = serialized->get_string(VibrateTConstant_type_id);
-		VibrateDuration = serialized->get_float(VibrateDuration_type_id);
-		Enabled = serialized->get_bool(Enabled_type_id);
-		DoesBounceUseMomentum = serialized->get_bool(DoesBounceUseMomentum_type_id); 
+		ReflectionFactor = serialized->get_float(ReflectionFactor_type_id, 1.000000);
+		MinHeight = serialized->get_float(MinHeight_type_id, 0.000000);
+		MaxHeight = serialized->get_float(MaxHeight_type_id, 0.000000);
+		TimeToPeak = serialized->get_float(TimeToPeak_type_id, -1.000000);
+		MinDesiredDistance = serialized->get_float(MinDesiredDistance_type_id, -1.000000);
+		MaxDesiredDistance = serialized->get_float(MaxDesiredDistance_type_id, -1.000000);
+		CameraMode = serialized->get_enum<rivet::ddl::generated::x925714c8>(CameraMode_type_id, rivet::ddl::generated::x925714c8_values, rivet::ddl::generated::x925714c8::TrackActor);
+		JumpPad = serialized->get_bool(JumpPad_type_id, false);
+		EnableSuperJump = serialized->get_bool(EnableSuperJump_type_id, false);
+		DisableOnDestroyed = serialized->get_bool(DisableOnDestroyed_type_id, false);
+		OverrideMaterial = serialized->get_enum<rivet::ddl::generated::x10b3c4cf>(OverrideMaterial_type_id, rivet::ddl::generated::x10b3c4cf_values, rivet::ddl::generated::x10b3c4cf::None);
+		VibrateOnBounce = serialized->get_bool(VibrateOnBounce_type_id, false);
+		VibratePosConstant = serialized->get_string(VibratePosConstant_type_id, "Vibration_Source_Object_Pos");
+		VibrateTConstant = serialized->get_string(VibrateTConstant_type_id, "Vibration_T");
+		VibrateDuration = serialized->get_float(VibrateDuration_type_id, 1.000000);
+		Enabled = serialized->get_bool(Enabled_type_id, true);
+		DoesBounceUseMomentum = serialized->get_bool(DoesBounceUseMomentum_type_id, false); 
 	}
 
 	[[nodiscard]] auto

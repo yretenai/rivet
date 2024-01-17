@@ -9,11 +9,11 @@
 
 namespace rivet::ddl::generated {
 	ECMFieldOpNodeDef::ECMFieldOpNodeDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		NodeId = serialized->get_uint64(NodeId_type_id);
-		XPos = serialized->get_int32(XPos_type_id);
-		YPos = serialized->get_int32(YPos_type_id);
-		Collapsed = serialized->get_bool(Collapsed_type_id);
-		Type = serialized->get_enum<rivet::ddl::generated::xd224b8de>(Type_type_id, rivet::ddl::generated::xd224b8de_values);
+		NodeId = serialized->get_uint64(NodeId_type_id, 0);
+		XPos = serialized->get_int32(XPos_type_id, 0);
+		YPos = serialized->get_int32(YPos_type_id, 0);
+		Collapsed = serialized->get_bool(Collapsed_type_id, false);
+		Type = serialized->get_enum<rivet::ddl::generated::xd224b8de>(Type_type_id, rivet::ddl::generated::xd224b8de_values, rivet::ddl::generated::xd224b8de::Multiply);
 		Connections = serialized->unwrap_into_many<rivet::ddl::generated::ECMNodeConnection>(Connections_type_id); 
 	}
 

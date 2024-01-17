@@ -9,25 +9,25 @@
 
 namespace rivet::ddl::generated {
 	GameBotDoomSpawnData::GameBotDoomSpawnData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ActorSpawnData(serialized) {
-		OwnerHandle = serialized->get_uint32(OwnerHandle_type_id);
-		ShotHandle = serialized->get_uint32(ShotHandle_type_id);
-		AssetId = serialized->get_uint64(AssetId_type_id);
-		ZoneIndex = serialized->get_int32(ZoneIndex_type_id);
-		WeaponId = serialized->get_uint32(WeaponId_type_id);
-		Lifetime = serialized->get_float(Lifetime_type_id);
-		MeleeDamage = serialized->get_float(MeleeDamage_type_id);
-		MaxMeleeDamage = serialized->get_float(MaxMeleeDamage_type_id);
-		ExplodeDamage = serialized->get_float(ExplodeDamage_type_id);
-		ExplodeRadius = serialized->get_float(ExplodeRadius_type_id);
-		Speed = serialized->get_float(Speed_type_id);
-		AwarenessRange = serialized->get_float(AwarenessRange_type_id);
+		OwnerHandle = serialized->get_uint32(OwnerHandle_type_id, 0);
+		ShotHandle = serialized->get_uint32(ShotHandle_type_id, 0);
+		AssetId = serialized->get_uint64(AssetId_type_id, 0);
+		ZoneIndex = serialized->get_int32(ZoneIndex_type_id, 0);
+		WeaponId = serialized->get_uint32(WeaponId_type_id, 0);
+		Lifetime = serialized->get_float(Lifetime_type_id, 0.000000);
+		MeleeDamage = serialized->get_float(MeleeDamage_type_id, 0.000000);
+		MaxMeleeDamage = serialized->get_float(MaxMeleeDamage_type_id, 0.000000);
+		ExplodeDamage = serialized->get_float(ExplodeDamage_type_id, 0.000000);
+		ExplodeRadius = serialized->get_float(ExplodeRadius_type_id, 0.000000);
+		Speed = serialized->get_float(Speed_type_id, 0.000000);
+		AwarenessRange = serialized->get_float(AwarenessRange_type_id, 0.000000);
 		SpawnPos = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(SpawnPos_type_id);
 		Facing = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Facing_type_id);
 		Up = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Up_type_id);
 		LandPos = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(LandPos_type_id);
-		MaxDistanceMod = serialized->get_float(MaxDistanceMod_type_id);
-		MaxHeightMod = serialized->get_float(MaxHeightMod_type_id);
-		IsUpgraded = serialized->get_bool(IsUpgraded_type_id); 
+		MaxDistanceMod = serialized->get_float(MaxDistanceMod_type_id, 0.000000);
+		MaxHeightMod = serialized->get_float(MaxHeightMod_type_id, 0.000000);
+		IsUpgraded = serialized->get_bool(IsUpgraded_type_id, false); 
 	}
 
 	[[nodiscard]] auto

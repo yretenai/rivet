@@ -10,10 +10,10 @@
 namespace rivet::ddl::generated {
 	JumpLandCameraShakeData::JumpLandCameraShakeData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		ShakeWithFallOffData = serialized->unwrap_into<rivet::ddl::generated::CameraShakingWithFallOffData>(ShakeWithFallOffData_type_id);
-		MinShakeLandSpeed = serialized->get_float(MinShakeLandSpeed_type_id);
-		MaxShakeLandSpeed = serialized->get_float(MaxShakeLandSpeed_type_id);
-		MinShakeIntensityScale = serialized->get_float(MinShakeIntensityScale_type_id);
-		MaxShakeIntensityScale = serialized->get_float(MaxShakeIntensityScale_type_id); 
+		MinShakeLandSpeed = serialized->get_float(MinShakeLandSpeed_type_id, 10.000000);
+		MaxShakeLandSpeed = serialized->get_float(MaxShakeLandSpeed_type_id, 50.000000);
+		MinShakeIntensityScale = serialized->get_float(MinShakeIntensityScale_type_id, 0.500000);
+		MaxShakeIntensityScale = serialized->get_float(MaxShakeIntensityScale_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	SwitchLevelActionPrius::SwitchLevelActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		LoadLevelEnum = serialized->get_enum<rivet::ddl::generated::LevelEnum>(LoadLevelEnum_type_id, rivet::ddl::generated::LevelEnum_values);
-		LoadCheckpoint = serialized->get_string(LoadCheckpoint_type_id);
-		SkipShipLand = serialized->get_bool(SkipShipLand_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Macro);
+		LoadLevelEnum = serialized->get_enum<rivet::ddl::generated::LevelEnum>(LoadLevelEnum_type_id, rivet::ddl::generated::LevelEnum_values, rivet::ddl::generated::LevelEnum::None);
+		LoadCheckpoint = serialized->get_string(LoadCheckpoint_type_id, "");
+		SkipShipLand = serialized->get_bool(SkipShipLand_type_id, false); 
 	}
 
 	[[nodiscard]] auto

@@ -9,19 +9,19 @@
 
 namespace rivet::ddl::generated {
 	HazardDamageAreaConfig::HazardDamageAreaConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		HazardLifetime = serialized->get_float(HazardLifetime_type_id);
-		InsideDPS = serialized->get_float(InsideDPS_type_id);
-		DotDPS = serialized->get_float(DotDPS_type_id);
-		DotDuration = serialized->get_float(DotDuration_type_id);
-		ConditionDuration = serialized->get_float(ConditionDuration_type_id);
-		Radius = serialized->get_float(Radius_type_id);
-		Elevation = serialized->get_float(Elevation_type_id);
-		WarmUpTime = serialized->get_float(WarmUpTime_type_id);
-		EffectOffTime = serialized->get_float(EffectOffTime_type_id);
-		DamageSendInterval = serialized->get_float(DamageSendInterval_type_id);
-		Knockback = serialized->get_bool(Knockback_type_id);
-		UseSweptSphere = serialized->get_bool(UseSweptSphere_type_id);
-		DamageFriends = serialized->get_bool(DamageFriends_type_id);
+		HazardLifetime = serialized->get_float(HazardLifetime_type_id, 2.000000);
+		InsideDPS = serialized->get_float(InsideDPS_type_id, 0.000000);
+		DotDPS = serialized->get_float(DotDPS_type_id, 25.000000);
+		DotDuration = serialized->get_float(DotDuration_type_id, 2.000000);
+		ConditionDuration = serialized->get_float(ConditionDuration_type_id, 4.000000);
+		Radius = serialized->get_float(Radius_type_id, 1.000000);
+		Elevation = serialized->get_float(Elevation_type_id, 0.000000);
+		WarmUpTime = serialized->get_float(WarmUpTime_type_id, 0.000000);
+		EffectOffTime = serialized->get_float(EffectOffTime_type_id, 0.000000);
+		DamageSendInterval = serialized->get_float(DamageSendInterval_type_id, 0.500000);
+		Knockback = serialized->get_bool(Knockback_type_id, false);
+		UseSweptSphere = serialized->get_bool(UseSweptSphere_type_id, false);
+		DamageFriends = serialized->get_bool(DamageFriends_type_id, false);
 		SweptSphereEndOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(SweptSphereEndOffset_type_id); 
 	}
 

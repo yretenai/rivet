@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	TessellationSettings::TessellationSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Type = serialized->get_enum<rivet::ddl::generated::xc8ad99bd>(Type_type_id, rivet::ddl::generated::xc8ad99bd_values);
-		TessellationFade = serialized->get_bool(TessellationFade_type_id);
-		TessellationAmount = serialized->get_float(TessellationAmount_type_id); 
+		Type = serialized->get_enum<rivet::ddl::generated::xc8ad99bd>(Type_type_id, rivet::ddl::generated::xc8ad99bd_values, rivet::ddl::generated::xc8ad99bd::None);
+		TessellationFade = serialized->get_bool(TessellationFade_type_id, true);
+		TessellationAmount = serialized->get_float(TessellationAmount_type_id, 4.000000); 
 	}
 
 	[[nodiscard]] auto

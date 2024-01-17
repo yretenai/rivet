@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	BotCommandFaceScriptActionPrius::BotCommandFaceScriptActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		TurnAnim = serialized->get_string(TurnAnim_type_id);
-		IdleAnim = serialized->get_string(IdleAnim_type_id);
-		UseAimPartials = serialized->get_bool(UseAimPartials_type_id);
-		ContinuousFacing = serialized->get_bool(ContinuousFacing_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Enemy_Bot);
+		TurnAnim = serialized->get_string(TurnAnim_type_id, "Turn");
+		IdleAnim = serialized->get_string(IdleAnim_type_id, "Idle");
+		UseAimPartials = serialized->get_bool(UseAimPartials_type_id, true);
+		ContinuousFacing = serialized->get_bool(ContinuousFacing_type_id, false); 
 	}
 
 	[[nodiscard]] auto

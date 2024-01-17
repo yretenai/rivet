@@ -11,10 +11,10 @@ namespace rivet::ddl::generated {
 	HazardLaserPrius::HazardLaserPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		SourceNode = serialized->unwrap_into<rivet::ddl::generated::HazardLaserNodePrius>(SourceNode_type_id);
 		TargetNode = serialized->unwrap_into<rivet::ddl::generated::HazardLaserNodePrius>(TargetNode_type_id);
-		Capped = serialized->get_bool(Capped_type_id);
-		SyncNodes = serialized->get_bool(SyncNodes_type_id);
-		CanBreak = serialized->get_bool(CanBreak_type_id);
-		IgnoreEnvironment = serialized->get_bool(IgnoreEnvironment_type_id); 
+		Capped = serialized->get_bool(Capped_type_id, false);
+		SyncNodes = serialized->get_bool(SyncNodes_type_id, true);
+		CanBreak = serialized->get_bool(CanBreak_type_id, true);
+		IgnoreEnvironment = serialized->get_bool(IgnoreEnvironment_type_id, false); 
 	}
 
 	[[nodiscard]] auto

@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	BetweenMissionObjectivesTriggerPrius::BetweenMissionObjectivesTriggerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BaseCustomOverlayTriggerPrius(serialized) {
-		Mission1Name = serialized->get_string(Mission1Name_type_id);
-		Objective1Name = serialized->get_string(Objective1Name_type_id);
-		Mission2Name = serialized->get_string(Mission2Name_type_id);
-		Objective2Name = serialized->get_string(Objective2Name_type_id); 
+		Mission1Name = serialized->get_string(Mission1Name_type_id, {});
+		Objective1Name = serialized->get_string(Objective1Name_type_id, {});
+		Mission2Name = serialized->get_string(Mission2Name_type_id, {});
+		Objective2Name = serialized->get_string(Objective2Name_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	WeaponManagerEvent::WeaponManagerEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Action = serialized->get_enum<rivet::ddl::generated::x18e441ce>(Action_type_id, rivet::ddl::generated::x18e441ce_values);
-		WeaponType = serialized->get_string(WeaponType_type_id);
-		TriggerIndex = serialized->get_int32(TriggerIndex_type_id); 
+		Action = serialized->get_enum<rivet::ddl::generated::x18e441ce>(Action_type_id, rivet::ddl::generated::x18e441ce_values, rivet::ddl::generated::x18e441ce::WeaponHide);
+		WeaponType = serialized->get_string(WeaponType_type_id, {});
+		TriggerIndex = serialized->get_int32(TriggerIndex_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

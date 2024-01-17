@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ServerChangedEvent::ServerChangedEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		IsServer = serialized->get_bool(IsServer_type_id); 
+		IsServer = serialized->get_bool(IsServer_type_id, false); 
 	}
 
 	[[nodiscard]] auto

@@ -10,17 +10,17 @@
 
 namespace rivet::ddl::generated {
 	SoundSourceComponentPrius::SoundSourceComponentPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Use3dBoom = serialized->get_bool(Use3dBoom_type_id);
-		UsePropagation2 = serialized->get_bool(UsePropagation2_type_id);
-		Propagation2UsePortaling = serialized->get_bool(Propagation2UsePortaling_type_id);
-		Propagation2UseReverb = serialized->get_bool(Propagation2UseReverb_type_id);
-		DirectPathPropagation = serialized->get_bool(DirectPathPropagation_type_id);
-		SourceDependentReverb = serialized->get_bool(SourceDependentReverb_type_id);
-		DirectPathSampleAreaScaleX = serialized->get_float(DirectPathSampleAreaScaleX_type_id);
-		DirectPathSampleAreaScaleY = serialized->get_float(DirectPathSampleAreaScaleY_type_id);
-		DirectPathStickinessIncreasing = serialized->get_float(DirectPathStickinessIncreasing_type_id);
-		DirectPathStickinessDecreasing = serialized->get_float(DirectPathStickinessDecreasing_type_id);
-		SwitchGroupsCountMax = serialized->get_uint32(SwitchGroupsCountMax_type_id);
+		Use3dBoom = serialized->get_bool(Use3dBoom_type_id, true);
+		UsePropagation2 = serialized->get_bool(UsePropagation2_type_id, false);
+		Propagation2UsePortaling = serialized->get_bool(Propagation2UsePortaling_type_id, true);
+		Propagation2UseReverb = serialized->get_bool(Propagation2UseReverb_type_id, false);
+		DirectPathPropagation = serialized->get_bool(DirectPathPropagation_type_id, true);
+		SourceDependentReverb = serialized->get_bool(SourceDependentReverb_type_id, false);
+		DirectPathSampleAreaScaleX = serialized->get_float(DirectPathSampleAreaScaleX_type_id, 1.000000);
+		DirectPathSampleAreaScaleY = serialized->get_float(DirectPathSampleAreaScaleY_type_id, 1.000000);
+		DirectPathStickinessIncreasing = serialized->get_float(DirectPathStickinessIncreasing_type_id, 0.000000);
+		DirectPathStickinessDecreasing = serialized->get_float(DirectPathStickinessDecreasing_type_id, 0.000000);
+		SwitchGroupsCountMax = serialized->get_uint32(SwitchGroupsCountMax_type_id, 8);
 		SwitchGroupList = serialized->unwrap_into_many<rivet::ddl::generated::WwiseSwitch>(SwitchGroupList_type_id);
 		RandomSelectList = serialized->unwrap_into_many<rivet::ddl::generated::WwiseSwitchSelectItem>(RandomSelectList_type_id); 
 	}

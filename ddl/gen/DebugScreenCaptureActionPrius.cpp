@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	DebugScreenCaptureActionPrius::DebugScreenCaptureActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		CaptureDepth = serialized->get_bool(CaptureDepth_type_id);
-		CaptureFormat = serialized->get_enum<rivet::ddl::generated::x1bcabc6d>(CaptureFormat_type_id, rivet::ddl::generated::x1bcabc6d_values);
-		Resolution = serialized->get_enum<rivet::ddl::generated::x34a3a095>(Resolution_type_id, rivet::ddl::generated::x34a3a095_values); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Debug);
+		CaptureDepth = serialized->get_bool(CaptureDepth_type_id, false);
+		CaptureFormat = serialized->get_enum<rivet::ddl::generated::x1bcabc6d>(CaptureFormat_type_id, rivet::ddl::generated::x1bcabc6d_values, rivet::ddl::generated::x1bcabc6d::BMP);
+		Resolution = serialized->get_enum<rivet::ddl::generated::x34a3a095>(Resolution_type_id, rivet::ddl::generated::x34a3a095_values, rivet::ddl::generated::x34a3a095::Current); 
 	}
 
 	[[nodiscard]] auto

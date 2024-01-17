@@ -12,8 +12,8 @@
 namespace rivet::ddl::generated {
 	Branch::Branch([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		CodeBranches = serialized->get_strings(CodeBranches_type_id);
-		MayaVersion = serialized->get_string(MayaVersion_type_id);
-		BranchName = serialized->get_string(BranchName_type_id);
+		MayaVersion = serialized->get_string(MayaVersion_type_id, {});
+		BranchName = serialized->get_string(BranchName_type_id, {});
 		Games = serialized->get_strings(Games_type_id);
 		HoudiniEngine = serialized->unwrap_into<rivet::ddl::generated::HoudiniEngineData>(HoudiniEngine_type_id);
 		Code = serialized->unwrap_into<rivet::ddl::generated::CodeData>(Code_type_id);

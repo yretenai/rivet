@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	ModelSliceAsCrossSection::ModelSliceAsCrossSection([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): CrossSectionChoice(serialized) {
-		Model = serialized->get_string(Model_type_id);
+		Model = serialized->get_string(Model_type_id, {});
 		PreRotation = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(PreRotation_type_id);
 		PreTranslate = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(PreTranslate_type_id); 
 	}

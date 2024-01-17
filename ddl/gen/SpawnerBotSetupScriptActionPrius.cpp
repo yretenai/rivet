@@ -7,17 +7,17 @@
 
 namespace rivet::ddl::generated {
 	SpawnerBotSetupScriptActionPrius::SpawnerBotSetupScriptActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		Notes = serialized->get_string(Notes_type_id);
-		MaxActive = serialized->get_float(MaxActive_type_id);
-		MaxSpawned = serialized->get_float(MaxSpawned_type_id);
-		SpawnDelay = serialized->get_float(SpawnDelay_type_id);
-		TriggerDelay = serialized->get_float(TriggerDelay_type_id);
-		SpawnedTargetAreas = serialized->get_uint64(SpawnedTargetAreas_type_id);
-		SpawnedTemplate = serialized->get_uint64(SpawnedTemplate_type_id);
-		CombatMarkupCollection = serialized->get_uint64(CombatMarkupCollection_type_id);
-		SpawnedGroup = serialized->get_uint64(SpawnedGroup_type_id);
-		ExtraSpawnGroup = serialized->get_uint64(ExtraSpawnGroup_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Spawning);
+		Notes = serialized->get_string(Notes_type_id, "Any values on the properties changed from their default or supplied via plugs on the node will be applied to the supplied SpawnerBot.\nAll other fields are ignored.");
+		MaxActive = serialized->get_float(MaxActive_type_id, 0.000000);
+		MaxSpawned = serialized->get_float(MaxSpawned_type_id, 0.000000);
+		SpawnDelay = serialized->get_float(SpawnDelay_type_id, -1.000000);
+		TriggerDelay = serialized->get_float(TriggerDelay_type_id, -1.000000);
+		SpawnedTargetAreas = serialized->get_uint64(SpawnedTargetAreas_type_id, 0);
+		SpawnedTemplate = serialized->get_uint64(SpawnedTemplate_type_id, 0);
+		CombatMarkupCollection = serialized->get_uint64(CombatMarkupCollection_type_id, 0);
+		SpawnedGroup = serialized->get_uint64(SpawnedGroup_type_id, 0);
+		ExtraSpawnGroup = serialized->get_uint64(ExtraSpawnGroup_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

@@ -10,28 +10,28 @@
 namespace rivet::ddl::generated {
 	SpawnerPrius::SpawnerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		FactoryGroup = serialized->get_uint64s(FactoryGroup_type_id);
-		FactorySelectionMethod = serialized->get_enum<rivet::ddl::generated::FactorySelectionMethod>(FactorySelectionMethod_type_id, rivet::ddl::generated::FactorySelectionMethod_values);
+		FactorySelectionMethod = serialized->get_enum<rivet::ddl::generated::FactorySelectionMethod>(FactorySelectionMethod_type_id, rivet::ddl::generated::FactorySelectionMethod_values, rivet::ddl::generated::FactorySelectionMethod::RoundRobin);
 		Templates = serialized->get_uint64s(Templates_type_id);
-		TemplateSelectionMethod = serialized->get_enum<rivet::ddl::generated::x59f4ecd6>(TemplateSelectionMethod_type_id, rivet::ddl::generated::x59f4ecd6_values);
+		TemplateSelectionMethod = serialized->get_enum<rivet::ddl::generated::x59f4ecd6>(TemplateSelectionMethod_type_id, rivet::ddl::generated::x59f4ecd6_values, rivet::ddl::generated::x59f4ecd6::InOrder);
 		SpawnLocations = serialized->get_uint64s(SpawnLocations_type_id);
-		LocationSelectionMethod = serialized->get_enum<rivet::ddl::generated::x14738916>(LocationSelectionMethod_type_id, rivet::ddl::generated::x14738916_values);
-		InViewValidate = serialized->get_bool(InViewValidate_type_id);
-		CheckNoLOS = serialized->get_bool(CheckNoLOS_type_id);
-		SnapToNav = serialized->get_bool(SnapToNav_type_id);
-		ForceSpawn = serialized->get_bool(ForceSpawn_type_id);
-		RandomizeX = serialized->get_bool(RandomizeX_type_id);
-		RandomizeY = serialized->get_bool(RandomizeY_type_id);
-		RandomizeZ = serialized->get_bool(RandomizeZ_type_id);
-		RandomizeT = serialized->get_bool(RandomizeT_type_id);
-		InitialSpawnDelayMin = serialized->get_float(InitialSpawnDelayMin_type_id);
-		InitialSpawnDelayMax = serialized->get_float(InitialSpawnDelayMax_type_id);
-		SpawnIntervalMin = serialized->get_float(SpawnIntervalMin_type_id);
-		SpawnIntervalMax = serialized->get_float(SpawnIntervalMax_type_id);
-		RespawnDelayMin = serialized->get_float(RespawnDelayMin_type_id);
-		RespawnDelayMax = serialized->get_float(RespawnDelayMax_type_id);
-		NumSpawns = serialized->get_int32(NumSpawns_type_id);
-		MaxSimultaneousSpawns = serialized->get_int32(MaxSimultaneousSpawns_type_id);
-		MinDistanceFromPlayers = serialized->get_float(MinDistanceFromPlayers_type_id); 
+		LocationSelectionMethod = serialized->get_enum<rivet::ddl::generated::x14738916>(LocationSelectionMethod_type_id, rivet::ddl::generated::x14738916_values, rivet::ddl::generated::x14738916::InOrder);
+		InViewValidate = serialized->get_bool(InViewValidate_type_id, false);
+		CheckNoLOS = serialized->get_bool(CheckNoLOS_type_id, false);
+		SnapToNav = serialized->get_bool(SnapToNav_type_id, false);
+		ForceSpawn = serialized->get_bool(ForceSpawn_type_id, false);
+		RandomizeX = serialized->get_bool(RandomizeX_type_id, false);
+		RandomizeY = serialized->get_bool(RandomizeY_type_id, false);
+		RandomizeZ = serialized->get_bool(RandomizeZ_type_id, false);
+		RandomizeT = serialized->get_bool(RandomizeT_type_id, false);
+		InitialSpawnDelayMin = serialized->get_float(InitialSpawnDelayMin_type_id, 0.000000);
+		InitialSpawnDelayMax = serialized->get_float(InitialSpawnDelayMax_type_id, 0.000000);
+		SpawnIntervalMin = serialized->get_float(SpawnIntervalMin_type_id, 0.035000);
+		SpawnIntervalMax = serialized->get_float(SpawnIntervalMax_type_id, 0.035000);
+		RespawnDelayMin = serialized->get_float(RespawnDelayMin_type_id, 0.000000);
+		RespawnDelayMax = serialized->get_float(RespawnDelayMax_type_id, 0.000000);
+		NumSpawns = serialized->get_int32(NumSpawns_type_id, 0);
+		MaxSimultaneousSpawns = serialized->get_int32(MaxSimultaneousSpawns_type_id, -1);
+		MinDistanceFromPlayers = serialized->get_float(MinDistanceFromPlayers_type_id, -1.000000); 
 	}
 
 	[[nodiscard]] auto

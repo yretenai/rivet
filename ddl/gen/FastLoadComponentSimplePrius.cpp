@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	FastLoadComponentSimplePrius::FastLoadComponentSimplePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Alpha = serialized->get_uint32(Alpha_type_id);
-		Bravo = serialized->get_bool(Bravo_type_id);
+		Alpha = serialized->get_uint32(Alpha_type_id, 0);
+		Bravo = serialized->get_bool(Bravo_type_id, false);
 		Charlies = serialized->get_int32s(Charlies_type_id);
-		Echo = serialized->get_uint64(Echo_type_id);
-		Foxtrot = serialized->get_int32(Foxtrot_type_id); 
+		Echo = serialized->get_uint64(Echo_type_id, 0);
+		Foxtrot = serialized->get_int32(Foxtrot_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	CVCShapeConfig::CVCShapeConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Radius = serialized->get_float(Radius_type_id);
-		HeightUp = serialized->get_float(HeightUp_type_id);
-		HeightDown = serialized->get_float(HeightDown_type_id); 
+		Radius = serialized->get_float(Radius_type_id, 0.350000);
+		HeightUp = serialized->get_float(HeightUp_type_id, 2.000000);
+		HeightDown = serialized->get_float(HeightDown_type_id, 0.100000); 
 	}
 
 	[[nodiscard]] auto

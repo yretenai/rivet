@@ -16,13 +16,13 @@
 
 namespace rivet::ddl::generated {
 	InteractLocationPrius::InteractLocationPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		LocIndex = serialized->get_enum<rivet::ddl::generated::xa3ea6fcb>(LocIndex_type_id, rivet::ddl::generated::xa3ea6fcb_values);
-		RequireHold = serialized->get_bool(RequireHold_type_id);
-		HoldTime = serialized->get_float(HoldTime_type_id);
+		LocIndex = serialized->get_enum<rivet::ddl::generated::xa3ea6fcb>(LocIndex_type_id, rivet::ddl::generated::xa3ea6fcb_values, rivet::ddl::generated::xa3ea6fcb::Index_One);
+		RequireHold = serialized->get_bool(RequireHold_type_id, false);
+		HoldTime = serialized->get_float(HoldTime_type_id, 0.400000);
 		PromptData = serialized->unwrap_into<rivet::ddl::generated::InteractLocationPromptData>(PromptData_type_id);
 		ApproachData = serialized->unwrap_into<rivet::ddl::generated::InteractLocationApproachData>(ApproachData_type_id);
-		Allegiance = serialized->get_enum<rivet::ddl::generated::x6bdf4ba1>(Allegiance_type_id, rivet::ddl::generated::x6bdf4ba1_values);
-		AllegianceRelation = serialized->get_enum<rivet::ddl::generated::AllegianceRelation>(AllegianceRelation_type_id, rivet::ddl::generated::AllegianceRelation_values);
+		Allegiance = serialized->get_enum<rivet::ddl::generated::x6bdf4ba1>(Allegiance_type_id, rivet::ddl::generated::x6bdf4ba1_values, rivet::ddl::generated::x6bdf4ba1::Neutral);
+		AllegianceRelation = serialized->get_enum<rivet::ddl::generated::AllegianceRelation>(AllegianceRelation_type_id, rivet::ddl::generated::AllegianceRelation_values, rivet::ddl::generated::AllegianceRelation::Any);
 		CameraSettings = serialized->unwrap_into<rivet::ddl::generated::InteractLocationCameraSettings>(CameraSettings_type_id); 
 	}
 

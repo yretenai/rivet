@@ -8,22 +8,22 @@
 namespace rivet::ddl::generated {
 	GoldBoltSaveData::GoldBoltSaveData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		CollectedBoltHashes = serialized->get_uint32s(CollectedBoltHashes_type_id);
-		InfiniteHealthEnabled = serialized->get_bool(InfiniteHealthEnabled_type_id);
-		InfiniteAmmoEnabled = serialized->get_bool(InfiniteAmmoEnabled_type_id);
-		RPGEnabled = serialized->get_bool(RPGEnabled_type_id);
-		ConfettiHeadshotEnabled = serialized->get_bool(ConfettiHeadshotEnabled_type_id);
-		MirrorModeEnabled = serialized->get_bool(MirrorModeEnabled_type_id);
-		GoldWeaponsEnabled = serialized->get_bool(GoldWeaponsEnabled_type_id);
-		HomeRunHitterEnabled = serialized->get_bool(HomeRunHitterEnabled_type_id);
-		BoltReplacementType = serialized->get_enum<rivet::ddl::generated::BoltReplacementType>(BoltReplacementType_type_id, rivet::ddl::generated::BoltReplacementType_values);
-		RenderModeIndex = serialized->get_uint32(RenderModeIndex_type_id);
-		RenderModeNameHash = serialized->get_uint32(RenderModeNameHash_type_id);
-		HeadSizeIndex = serialized->get_int32(HeadSizeIndex_type_id);
-		WrenchModelSwapIndex = serialized->get_int32(WrenchModelSwapIndex_type_id);
-		HammerModelSwapIndex = serialized->get_int32(HammerModelSwapIndex_type_id);
-		ShipSkin = serialized->get_enum<rivet::ddl::generated::x8a806a76>(ShipSkin_type_id, rivet::ddl::generated::x8a806a76_values);
-		WrenchSkin = serialized->get_enum<rivet::ddl::generated::x387422ea>(WrenchSkin_type_id, rivet::ddl::generated::x387422ea_values);
-		HammerSkin = serialized->get_enum<rivet::ddl::generated::x387422ea>(HammerSkin_type_id, rivet::ddl::generated::x387422ea_values); 
+		InfiniteHealthEnabled = serialized->get_bool(InfiniteHealthEnabled_type_id, false);
+		InfiniteAmmoEnabled = serialized->get_bool(InfiniteAmmoEnabled_type_id, false);
+		RPGEnabled = serialized->get_bool(RPGEnabled_type_id, false);
+		ConfettiHeadshotEnabled = serialized->get_bool(ConfettiHeadshotEnabled_type_id, false);
+		MirrorModeEnabled = serialized->get_bool(MirrorModeEnabled_type_id, false);
+		GoldWeaponsEnabled = serialized->get_bool(GoldWeaponsEnabled_type_id, false);
+		HomeRunHitterEnabled = serialized->get_bool(HomeRunHitterEnabled_type_id, false);
+		BoltReplacementType = serialized->get_enum<rivet::ddl::generated::BoltReplacementType>(BoltReplacementType_type_id, rivet::ddl::generated::BoltReplacementType_values, rivet::ddl::generated::BoltReplacementType::Default);
+		RenderModeIndex = serialized->get_uint32(RenderModeIndex_type_id, 0);
+		RenderModeNameHash = serialized->get_uint32(RenderModeNameHash_type_id, 0);
+		HeadSizeIndex = serialized->get_int32(HeadSizeIndex_type_id, 0);
+		WrenchModelSwapIndex = serialized->get_int32(WrenchModelSwapIndex_type_id, -1);
+		HammerModelSwapIndex = serialized->get_int32(HammerModelSwapIndex_type_id, -1);
+		ShipSkin = serialized->get_enum<rivet::ddl::generated::x8a806a76>(ShipSkin_type_id, rivet::ddl::generated::x8a806a76_values, rivet::ddl::generated::x8a806a76::Default);
+		WrenchSkin = serialized->get_enum<rivet::ddl::generated::x387422ea>(WrenchSkin_type_id, rivet::ddl::generated::x387422ea_values, rivet::ddl::generated::x387422ea::Default);
+		HammerSkin = serialized->get_enum<rivet::ddl::generated::x387422ea>(HammerSkin_type_id, rivet::ddl::generated::x387422ea_values, rivet::ddl::generated::x387422ea::Default); 
 	}
 
 	[[nodiscard]] auto

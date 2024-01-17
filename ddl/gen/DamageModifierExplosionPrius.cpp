@@ -9,30 +9,30 @@
 
 namespace rivet::ddl::generated {
 	DamageModifierExplosionPrius::DamageModifierExplosionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): DamageModifierOutgoingPrius(serialized) {
-		RequestId = serialized->get_uint32(RequestId_type_id);
-		IgnoreActor = serialized->get_uint32(IgnoreActor_type_id);
-		DamageStartRadius = serialized->get_float(DamageStartRadius_type_id);
-		DamageInnerAmount = serialized->get_float(DamageInnerAmount_type_id);
-		DamageInnerRadius = serialized->get_float(DamageInnerRadius_type_id);
-		DamageOuterAmount = serialized->get_float(DamageOuterAmount_type_id);
-		DamageOuterRadius = serialized->get_float(DamageOuterRadius_type_id);
-		DamageOuterHeight = serialized->get_float(DamageOuterHeight_type_id);
-		DamageLOSYPosOffset = serialized->get_float(DamageLOSYPosOffset_type_id);
-		DamageFalloffCurve = serialized->get_float(DamageFalloffCurve_type_id);
-		DamageVictimCountMin = serialized->get_int32(DamageVictimCountMin_type_id);
-		DamageVictimCountMax = serialized->get_int32(DamageVictimCountMax_type_id);
-		StatusStartRadius = serialized->get_float(StatusStartRadius_type_id);
-		StatusInnerAmount = serialized->get_float(StatusInnerAmount_type_id);
-		StatusInnerRadius = serialized->get_float(StatusInnerRadius_type_id);
-		StatusOuterAmount = serialized->get_float(StatusOuterAmount_type_id);
-		StatusOuterRadius = serialized->get_float(StatusOuterRadius_type_id);
-		StatusOuterHeight = serialized->get_float(StatusOuterHeight_type_id);
-		StatusFalloffCurve = serialized->get_float(StatusFalloffCurve_type_id);
-		StatusVictimCountMin = serialized->get_int32(StatusVictimCountMin_type_id);
-		StatusVictimCountMax = serialized->get_int32(StatusVictimCountMax_type_id);
-		StatusDuration = serialized->get_float(StatusDuration_type_id);
-		VictimExploderRadius = serialized->get_float(VictimExploderRadius_type_id);
-		VictimExploderChance = serialized->get_float(VictimExploderChance_type_id);
+		RequestId = serialized->get_uint32(RequestId_type_id, 0);
+		IgnoreActor = serialized->get_uint32(IgnoreActor_type_id, 0);
+		DamageStartRadius = serialized->get_float(DamageStartRadius_type_id, 0.000000);
+		DamageInnerAmount = serialized->get_float(DamageInnerAmount_type_id, 0.000000);
+		DamageInnerRadius = serialized->get_float(DamageInnerRadius_type_id, 1.000000);
+		DamageOuterAmount = serialized->get_float(DamageOuterAmount_type_id, 0.000000);
+		DamageOuterRadius = serialized->get_float(DamageOuterRadius_type_id, 1.000000);
+		DamageOuterHeight = serialized->get_float(DamageOuterHeight_type_id, -1.000000);
+		DamageLOSYPosOffset = serialized->get_float(DamageLOSYPosOffset_type_id, 0.000000);
+		DamageFalloffCurve = serialized->get_float(DamageFalloffCurve_type_id, 1.000000);
+		DamageVictimCountMin = serialized->get_int32(DamageVictimCountMin_type_id, -1);
+		DamageVictimCountMax = serialized->get_int32(DamageVictimCountMax_type_id, -1);
+		StatusStartRadius = serialized->get_float(StatusStartRadius_type_id, 0.000000);
+		StatusInnerAmount = serialized->get_float(StatusInnerAmount_type_id, 0.000000);
+		StatusInnerRadius = serialized->get_float(StatusInnerRadius_type_id, 1.000000);
+		StatusOuterAmount = serialized->get_float(StatusOuterAmount_type_id, 0.000000);
+		StatusOuterRadius = serialized->get_float(StatusOuterRadius_type_id, 1.000000);
+		StatusOuterHeight = serialized->get_float(StatusOuterHeight_type_id, -1.000000);
+		StatusFalloffCurve = serialized->get_float(StatusFalloffCurve_type_id, 1.000000);
+		StatusVictimCountMin = serialized->get_int32(StatusVictimCountMin_type_id, -1);
+		StatusVictimCountMax = serialized->get_int32(StatusVictimCountMax_type_id, -1);
+		StatusDuration = serialized->get_float(StatusDuration_type_id, 0.000000);
+		VictimExploderRadius = serialized->get_float(VictimExploderRadius_type_id, 0.000000);
+		VictimExploderChance = serialized->get_float(VictimExploderChance_type_id, 1.000000);
 		KnockbackData = serialized->unwrap_into_many<rivet::ddl::generated::ExplosionKnockbackData>(KnockbackData_type_id); 
 	}
 

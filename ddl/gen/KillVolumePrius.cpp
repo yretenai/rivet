@@ -7,13 +7,13 @@
 
 namespace rivet::ddl::generated {
 	KillVolumePrius::KillVolumePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		KillHeroes = serialized->get_bool(KillHeroes_type_id);
-		KillBots = serialized->get_bool(KillBots_type_id);
-		FallToDeath = serialized->get_bool(FallToDeath_type_id);
-		CreditLastDamager = serialized->get_bool(CreditLastDamager_type_id);
-		MaxCreditTime = serialized->get_float(MaxCreditTime_type_id);
-		SourceAllegiance = serialized->get_enum<rivet::ddl::generated::x6bdf4ba1>(SourceAllegiance_type_id, rivet::ddl::generated::x6bdf4ba1_values);
-		Relationship = serialized->get_enum<rivet::ddl::generated::AllegianceRelation>(Relationship_type_id, rivet::ddl::generated::AllegianceRelation_values); 
+		KillHeroes = serialized->get_bool(KillHeroes_type_id, true);
+		KillBots = serialized->get_bool(KillBots_type_id, true);
+		FallToDeath = serialized->get_bool(FallToDeath_type_id, false);
+		CreditLastDamager = serialized->get_bool(CreditLastDamager_type_id, true);
+		MaxCreditTime = serialized->get_float(MaxCreditTime_type_id, 2.500000);
+		SourceAllegiance = serialized->get_enum<rivet::ddl::generated::x6bdf4ba1>(SourceAllegiance_type_id, rivet::ddl::generated::x6bdf4ba1_values, rivet::ddl::generated::x6bdf4ba1::Neutral);
+		Relationship = serialized->get_enum<rivet::ddl::generated::AllegianceRelation>(Relationship_type_id, rivet::ddl::generated::AllegianceRelation_values, rivet::ddl::generated::AllegianceRelation::Any); 
 	}
 
 	[[nodiscard]] auto

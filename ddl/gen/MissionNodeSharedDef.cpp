@@ -14,7 +14,7 @@ namespace rivet::ddl::generated {
 	MissionNodeSharedDef::MissionNodeSharedDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): MissionSystemDefaultNodeBaseDef(serialized) {
 		ObjectiveGraph = serialized->unwrap_into<rivet::ddl::generated::ObjectiveGraphContainer>(ObjectiveGraph_type_id);
 		SaveOptions = serialized->unwrap_into<rivet::ddl::generated::MissionSaveOptions>(SaveOptions_type_id);
-		UnlockBehavior = serialized->get_enum<rivet::ddl::generated::xcc761825>(UnlockBehavior_type_id, rivet::ddl::generated::xcc761825_values);
+		UnlockBehavior = serialized->get_enum<rivet::ddl::generated::xcc761825>(UnlockBehavior_type_id, rivet::ddl::generated::xcc761825_values, rivet::ddl::generated::xcc761825::Available);
 		SyncOutput = serialized->unwrap_into_many<rivet::ddl::generated::SyncOutputPlugBoolean>(SyncOutput_type_id); 
 	}
 

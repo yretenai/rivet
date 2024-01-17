@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	VanityAccessoryData::VanityAccessoryData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Type = serialized->get_enum<rivet::ddl::generated::x56bca86c>(Type_type_id, rivet::ddl::generated::x56bca86c_values);
-		BundleType = serialized->get_enum<rivet::ddl::generated::xf2db3ee>(BundleType_type_id, rivet::ddl::generated::xf2db3ee_values);
-		SkinType = serialized->get_enum<rivet::ddl::generated::x36ceb0b>(SkinType_type_id, rivet::ddl::generated::x36ceb0b_values);
-		RatchetModel = serialized->get_string(RatchetModel_type_id);
-		RivetModel = serialized->get_string(RivetModel_type_id);
-		OnForDefault = serialized->get_bool(OnForDefault_type_id); 
+		Type = serialized->get_enum<rivet::ddl::generated::x56bca86c>(Type_type_id, rivet::ddl::generated::x56bca86c_values, rivet::ddl::generated::x56bca86c::Rebreather);
+		BundleType = serialized->get_enum<rivet::ddl::generated::xf2db3ee>(BundleType_type_id, rivet::ddl::generated::xf2db3ee_values, rivet::ddl::generated::xf2db3ee::Head);
+		SkinType = serialized->get_enum<rivet::ddl::generated::x36ceb0b>(SkinType_type_id, rivet::ddl::generated::x36ceb0b_values, rivet::ddl::generated::x36ceb0b::Body);
+		RatchetModel = serialized->get_string(RatchetModel_type_id, {});
+		RivetModel = serialized->get_string(RivetModel_type_id, {});
+		OnForDefault = serialized->get_bool(OnForDefault_type_id, true); 
 	}
 
 	[[nodiscard]] auto

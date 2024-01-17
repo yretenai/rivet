@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	DialogGroupArray::DialogGroupArray([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		OrderType = serialized->get_enum<rivet::ddl::generated::xd3ac14c9>(OrderType_type_id, rivet::ddl::generated::xd3ac14c9_values);
+		OrderType = serialized->get_enum<rivet::ddl::generated::xd3ac14c9>(OrderType_type_id, rivet::ddl::generated::xd3ac14c9_values, rivet::ddl::generated::xd3ac14c9::Random);
 		Lists = serialized->unwrap_into_many<rivet::ddl::generated::DialogListItem>(Lists_type_id); 
 	}
 

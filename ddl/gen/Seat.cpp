@@ -7,13 +7,13 @@
 
 namespace rivet::ddl::generated {
 	Seat::Seat([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		LocatorName = serialized->get_string(LocatorName_type_id);
-		MountAnim = serialized->get_string(MountAnim_type_id);
-		DismountAnim = serialized->get_string(DismountAnim_type_id);
-		JumpAnim = serialized->get_string(JumpAnim_type_id);
-		SeatedAnim = serialized->get_string(SeatedAnim_type_id);
-		AdditiveAnim = serialized->get_string(AdditiveAnim_type_id);
-		AddRidableAnimset = serialized->get_bool(AddRidableAnimset_type_id); 
+		LocatorName = serialized->get_string(LocatorName_type_id, {});
+		MountAnim = serialized->get_string(MountAnim_type_id, {});
+		DismountAnim = serialized->get_string(DismountAnim_type_id, {});
+		JumpAnim = serialized->get_string(JumpAnim_type_id, {});
+		SeatedAnim = serialized->get_string(SeatedAnim_type_id, {});
+		AdditiveAnim = serialized->get_string(AdditiveAnim_type_id, {});
+		AddRidableAnimset = serialized->get_bool(AddRidableAnimset_type_id, true); 
 	}
 
 	[[nodiscard]] auto

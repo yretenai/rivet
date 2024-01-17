@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	BotHexapodPrius::BotHexapodPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BotPrius(serialized) {
-		GunWeapon = serialized->get_string(GunWeapon_type_id);
-		LobWeapon = serialized->get_string(LobWeapon_type_id);
-		CameraShake = serialized->get_string(CameraShake_type_id);
-		CameraPitchAdjustmentUp = serialized->get_float(CameraPitchAdjustmentUp_type_id);
-		CameraPitchAdjustmentDown = serialized->get_float(CameraPitchAdjustmentDown_type_id); 
+		GunWeapon = serialized->get_string(GunWeapon_type_id, {});
+		LobWeapon = serialized->get_string(LobWeapon_type_id, {});
+		CameraShake = serialized->get_string(CameraShake_type_id, {});
+		CameraPitchAdjustmentUp = serialized->get_float(CameraPitchAdjustmentUp_type_id, 1.000000);
+		CameraPitchAdjustmentDown = serialized->get_float(CameraPitchAdjustmentDown_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

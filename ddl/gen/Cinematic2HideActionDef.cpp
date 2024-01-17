@@ -7,15 +7,15 @@
 
 namespace rivet::ddl::generated {
 	Cinematic2HideActionDef::Cinematic2HideActionDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Id = serialized->get_uint64(Id_type_id);
-		Time = serialized->get_float(Time_type_id);
-		DurationType = serialized->get_enum<rivet::ddl::generated::x29c933e2>(DurationType_type_id, rivet::ddl::generated::x29c933e2_values);
-		Duration = serialized->get_float(Duration_type_id);
-		BlendType = serialized->get_enum<rivet::ddl::generated::x2153dc33>(BlendType_type_id, rivet::ddl::generated::x2153dc33_values);
-		BlendInSmoothingType = serialized->get_enum<rivet::ddl::generated::x53914cb6>(BlendInSmoothingType_type_id, rivet::ddl::generated::x53914cb6_values);
-		BlendInDuration = serialized->get_float(BlendInDuration_type_id);
-		BlendOutSmoothingType = serialized->get_enum<rivet::ddl::generated::x53914cb6>(BlendOutSmoothingType_type_id, rivet::ddl::generated::x53914cb6_values);
-		BlendOutDuration = serialized->get_float(BlendOutDuration_type_id); 
+		Id = serialized->get_uint64(Id_type_id, 0);
+		Time = serialized->get_float(Time_type_id, 0.000000);
+		DurationType = serialized->get_enum<rivet::ddl::generated::x29c933e2>(DurationType_type_id, rivet::ddl::generated::x29c933e2_values, rivet::ddl::generated::x29c933e2::None);
+		Duration = serialized->get_float(Duration_type_id, 0.000000);
+		BlendType = serialized->get_enum<rivet::ddl::generated::x2153dc33>(BlendType_type_id, rivet::ddl::generated::x2153dc33_values, rivet::ddl::generated::x2153dc33::None);
+		BlendInSmoothingType = serialized->get_enum<rivet::ddl::generated::x53914cb6>(BlendInSmoothingType_type_id, rivet::ddl::generated::x53914cb6_values, rivet::ddl::generated::x53914cb6::Ease_In);
+		BlendInDuration = serialized->get_float(BlendInDuration_type_id, 0.000000);
+		BlendOutSmoothingType = serialized->get_enum<rivet::ddl::generated::x53914cb6>(BlendOutSmoothingType_type_id, rivet::ddl::generated::x53914cb6_values, rivet::ddl::generated::x53914cb6::Ease_Out);
+		BlendOutDuration = serialized->get_float(BlendOutDuration_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

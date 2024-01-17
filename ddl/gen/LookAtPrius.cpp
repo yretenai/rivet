@@ -9,14 +9,14 @@
 
 namespace rivet::ddl::generated {
 	LookAtPrius::LookAtPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EnabledComponentBasePrius(serialized) {
-		LookAtAwareness = serialized->get_uint64(LookAtAwareness_type_id);
-		LookAtRange = serialized->get_float(LookAtRange_type_id);
-		TargetType = serialized->get_enum<rivet::ddl::generated::xf16844d6>(TargetType_type_id, rivet::ddl::generated::xf16844d6_values);
-		TargetPriority = serialized->get_enum<rivet::ddl::generated::x7bee456>(TargetPriority_type_id, rivet::ddl::generated::x7bee456_values);
-		SpecificTarget = serialized->get_uint64(SpecificTarget_type_id);
-		TargetLocationType = serialized->get_enum<rivet::ddl::generated::x6729cb3b>(TargetLocationType_type_id, rivet::ddl::generated::x6729cb3b_values);
-		TargetLocatorName = serialized->get_string(TargetLocatorName_type_id);
-		TargetLocUpOffset = serialized->get_float(TargetLocUpOffset_type_id); 
+		LookAtAwareness = serialized->get_uint64(LookAtAwareness_type_id, 0);
+		LookAtRange = serialized->get_float(LookAtRange_type_id, 10.000000);
+		TargetType = serialized->get_enum<rivet::ddl::generated::xf16844d6>(TargetType_type_id, rivet::ddl::generated::xf16844d6_values, rivet::ddl::generated::xf16844d6::LookAtHero);
+		TargetPriority = serialized->get_enum<rivet::ddl::generated::x7bee456>(TargetPriority_type_id, rivet::ddl::generated::x7bee456_values, rivet::ddl::generated::x7bee456::KeepTarget);
+		SpecificTarget = serialized->get_uint64(SpecificTarget_type_id, 0);
+		TargetLocationType = serialized->get_enum<rivet::ddl::generated::x6729cb3b>(TargetLocationType_type_id, rivet::ddl::generated::x6729cb3b_values, rivet::ddl::generated::x6729cb3b::BSphere);
+		TargetLocatorName = serialized->get_string(TargetLocatorName_type_id, {});
+		TargetLocUpOffset = serialized->get_float(TargetLocUpOffset_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

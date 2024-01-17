@@ -10,14 +10,14 @@
 
 namespace rivet::ddl::generated {
 	AnimDriverGridNodeDef::AnimDriverGridNodeDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Name = serialized->get_string(Name_type_id);
-		DisplayName = serialized->get_string(DisplayName_type_id);
-		x = serialized->get_float(x_type_id);
-		y = serialized->get_float(y_type_id);
-		Type = serialized->get_enum<rivet::ddl::generated::x3234dd4a>(Type_type_id, rivet::ddl::generated::x3234dd4a_values);
-		Rate = serialized->get_float(Rate_type_id);
-		CountX = serialized->get_uint32(CountX_type_id);
-		CountY = serialized->get_uint32(CountY_type_id);
+		Name = serialized->get_string(Name_type_id, {});
+		DisplayName = serialized->get_string(DisplayName_type_id, "");
+		x = serialized->get_float(x_type_id, 0.000000);
+		y = serialized->get_float(y_type_id, 0.000000);
+		Type = serialized->get_enum<rivet::ddl::generated::x3234dd4a>(Type_type_id, rivet::ddl::generated::x3234dd4a_values, rivet::ddl::generated::x3234dd4a::Default);
+		Rate = serialized->get_float(Rate_type_id, 1.000000);
+		CountX = serialized->get_uint32(CountX_type_id, 0);
+		CountY = serialized->get_uint32(CountY_type_id, 0);
 		GridMin = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(GridMin_type_id);
 		GridMax = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(GridMax_type_id);
 		CurrentPoint = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(CurrentPoint_type_id);

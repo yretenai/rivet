@@ -10,7 +10,7 @@
 namespace rivet::ddl::generated {
 	DialogSet::DialogSet([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Group = serialized->unwrap_into<rivet::ddl::generated::DialogGroup>(Group_type_id);
-		LoopType = serialized->get_enum<rivet::ddl::generated::x39725a2d>(LoopType_type_id, rivet::ddl::generated::x39725a2d_values); 
+		LoopType = serialized->get_enum<rivet::ddl::generated::x39725a2d>(LoopType_type_id, rivet::ddl::generated::x39725a2d_values, rivet::ddl::generated::x39725a2d::Repeat); 
 	}
 
 	[[nodiscard]] auto

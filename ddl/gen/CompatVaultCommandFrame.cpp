@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	CompatVaultCommandFrame::CompatVaultCommandFrame([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		CommandType = serialized->get_string(CommandType_type_id);
+		CommandType = serialized->get_string(CommandType_type_id, {});
 		CommandData = serialized->get_field(CommandData_type_id); 
 	}
 

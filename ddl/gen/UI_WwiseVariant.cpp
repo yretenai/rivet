@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	UI_WwiseVariant::UI_WwiseVariant([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Action = serialized->get_enum<rivet::ddl::generated::x38ca42>(Action_type_id, rivet::ddl::generated::x38ca42_values);
-		Name = serialized->get_string(Name_type_id);
-		ValueName = serialized->get_string(ValueName_type_id);
-		Id = serialized->get_uint32(Id_type_id);
-		ValueId = serialized->get_uint32(ValueId_type_id);
-		Value = serialized->get_float(Value_type_id); 
+		Action = serialized->get_enum<rivet::ddl::generated::x38ca42>(Action_type_id, rivet::ddl::generated::x38ca42_values, rivet::ddl::generated::x38ca42::Trigger);
+		Name = serialized->get_string(Name_type_id, {});
+		ValueName = serialized->get_string(ValueName_type_id, {});
+		Id = serialized->get_uint32(Id_type_id, 0);
+		ValueId = serialized->get_uint32(ValueId_type_id, 0);
+		Value = serialized->get_float(Value_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

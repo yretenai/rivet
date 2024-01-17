@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ABaseClass::ABaseClass([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		BaseField = serialized->get_int32(BaseField_type_id); 
+		BaseField = serialized->get_int32(BaseField_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

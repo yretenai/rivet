@@ -7,19 +7,19 @@
 
 namespace rivet::ddl::generated {
 	LookChunk::LookChunk([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		UsesFXConduit = serialized->get_bool(UsesFXConduit_type_id);
-		UsesAudioConduit = serialized->get_bool(UsesAudioConduit_type_id);
-		DeathOnly = serialized->get_bool(DeathOnly_type_id);
-		TriggerSpawnEvent = serialized->get_bool(TriggerSpawnEvent_type_id);
-		ForceFadeAfterSettled = serialized->get_bool(ForceFadeAfterSettled_type_id);
-		LookToDisable = serialized->get_string(LookToDisable_type_id);
+		UsesFXConduit = serialized->get_bool(UsesFXConduit_type_id, false);
+		UsesAudioConduit = serialized->get_bool(UsesAudioConduit_type_id, false);
+		DeathOnly = serialized->get_bool(DeathOnly_type_id, false);
+		TriggerSpawnEvent = serialized->get_bool(TriggerSpawnEvent_type_id, true);
+		ForceFadeAfterSettled = serialized->get_bool(ForceFadeAfterSettled_type_id, false);
+		LookToDisable = serialized->get_string(LookToDisable_type_id, "");
 		LooksToChunk = serialized->get_strings(LooksToChunk_type_id);
-		EventLocator = serialized->get_string(EventLocator_type_id);
-		ScaleTestJointName = serialized->get_string(ScaleTestJointName_type_id);
-		SetOverrideRenderConstant = serialized->get_bool(SetOverrideRenderConstant_type_id);
-		OverrideConstantName = serialized->get_string(OverrideConstantName_type_id);
-		OverrideConstantTarget = serialized->get_float(OverrideConstantTarget_type_id);
-		OverrideConstantTimeToTarget = serialized->get_float(OverrideConstantTimeToTarget_type_id); 
+		EventLocator = serialized->get_string(EventLocator_type_id, "");
+		ScaleTestJointName = serialized->get_string(ScaleTestJointName_type_id, {});
+		SetOverrideRenderConstant = serialized->get_bool(SetOverrideRenderConstant_type_id, false);
+		OverrideConstantName = serialized->get_string(OverrideConstantName_type_id, "");
+		OverrideConstantTarget = serialized->get_float(OverrideConstantTarget_type_id, 1.000000);
+		OverrideConstantTimeToTarget = serialized->get_float(OverrideConstantTimeToTarget_type_id, 0.500000); 
 	}
 
 	[[nodiscard]] auto

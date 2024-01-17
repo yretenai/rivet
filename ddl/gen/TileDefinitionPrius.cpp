@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	TileDefinitionPrius::TileDefinitionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActorGroup = serialized->get_uint64(ActorGroup_type_id);
-		Length = serialized->get_float(Length_type_id); 
+		ActorGroup = serialized->get_uint64(ActorGroup_type_id, 0);
+		Length = serialized->get_float(Length_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

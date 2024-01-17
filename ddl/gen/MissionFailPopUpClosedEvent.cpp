@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	MissionFailPopUpClosedEvent::MissionFailPopUpClosedEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Abandon = serialized->get_bool(Abandon_type_id); 
+		Abandon = serialized->get_bool(Abandon_type_id, false); 
 	}
 
 	[[nodiscard]] auto

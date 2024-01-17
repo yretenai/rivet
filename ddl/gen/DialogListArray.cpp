@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	DialogListArray::DialogListArray([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		OrderType = serialized->get_enum<rivet::ddl::generated::xd3ac14c9>(OrderType_type_id, rivet::ddl::generated::xd3ac14c9_values);
-		CompleteType = serialized->get_enum<rivet::ddl::generated::x39cee5ac>(CompleteType_type_id, rivet::ddl::generated::x39cee5ac_values);
+		OrderType = serialized->get_enum<rivet::ddl::generated::xd3ac14c9>(OrderType_type_id, rivet::ddl::generated::xd3ac14c9_values, rivet::ddl::generated::xd3ac14c9::Random);
+		CompleteType = serialized->get_enum<rivet::ddl::generated::x39cee5ac>(CompleteType_type_id, rivet::ddl::generated::x39cee5ac_values, rivet::ddl::generated::x39cee5ac::Play_One);
 		LocTags = serialized->get_strings(LocTags_type_id); 
 	}
 

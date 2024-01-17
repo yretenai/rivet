@@ -7,13 +7,13 @@
 
 namespace rivet::ddl::generated {
 	SetRenderConstantActionPrius::SetRenderConstantActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		ConstantName = serialized->get_string(ConstantName_type_id);
-		MaterialMappingName = serialized->get_string(MaterialMappingName_type_id);
-		XValue = serialized->get_float(XValue_type_id);
-		YValue = serialized->get_float(YValue_type_id);
-		ZValue = serialized->get_float(ZValue_type_id);
-		WValue = serialized->get_float(WValue_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Rendering);
+		ConstantName = serialized->get_string(ConstantName_type_id, {});
+		MaterialMappingName = serialized->get_string(MaterialMappingName_type_id, {});
+		XValue = serialized->get_float(XValue_type_id, 0.000000);
+		YValue = serialized->get_float(YValue_type_id, 0.000000);
+		ZValue = serialized->get_float(ZValue_type_id, 0.000000);
+		WValue = serialized->get_float(WValue_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

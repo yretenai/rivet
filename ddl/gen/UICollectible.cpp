@@ -10,9 +10,9 @@
 namespace rivet::ddl::generated {
 	UICollectible::UICollectible([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Type = serialized->unwrap_into<rivet::ddl::generated::UICollectibleTypeBase>(Type_type_id);
-		DisplayName = serialized->get_string(DisplayName_type_id);
-		DisplayDesc = serialized->get_string(DisplayDesc_type_id);
-		DisplayImage = serialized->get_string(DisplayImage_type_id); 
+		DisplayName = serialized->get_string(DisplayName_type_id, {});
+		DisplayDesc = serialized->get_string(DisplayDesc_type_id, {});
+		DisplayImage = serialized->get_string(DisplayImage_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

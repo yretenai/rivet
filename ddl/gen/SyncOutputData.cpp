@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	SyncOutputData::SyncOutputData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		LastCompletedState = serialized->get_bool(LastCompletedState_type_id);
-		ActiveState = serialized->get_bool(ActiveState_type_id); 
+		LastCompletedState = serialized->get_bool(LastCompletedState_type_id, false);
+		ActiveState = serialized->get_bool(ActiveState_type_id, false); 
 	}
 
 	[[nodiscard]] auto

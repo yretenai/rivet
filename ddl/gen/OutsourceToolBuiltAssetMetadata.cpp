@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	OutsourceToolBuiltAssetMetadata::OutsourceToolBuiltAssetMetadata([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		BuiltSuccessfully = serialized->get_bool(BuiltSuccessfully_type_id);
-		BuiltVersionHash = serialized->get_uint32(BuiltVersionHash_type_id);
+		BuiltSuccessfully = serialized->get_bool(BuiltSuccessfully_type_id, false);
+		BuiltVersionHash = serialized->get_uint32(BuiltVersionHash_type_id, 0);
 		Dependencies = serialized->unwrap_into_many<rivet::ddl::generated::OutsourceToolDependencyInfo>(Dependencies_type_id); 
 	}
 

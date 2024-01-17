@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	HeroSuperMeterBuildUpData::HeroSuperMeterBuildUpData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		PerDamageRate = serialized->get_float(PerDamageRate_type_id);
-		CanAccrueWhileUsing = serialized->get_bool(CanAccrueWhileUsing_type_id);
+		PerDamageRate = serialized->get_float(PerDamageRate_type_id, 1.000000);
+		CanAccrueWhileUsing = serialized->get_bool(CanAccrueWhileUsing_type_id, false);
 		InCombat = serialized->unwrap_into<rivet::ddl::generated::HeroSuperMeterDecayData>(InCombat_type_id);
 		OutOfCombat = serialized->unwrap_into<rivet::ddl::generated::HeroSuperMeterDecayData>(OutOfCombat_type_id); 
 	}

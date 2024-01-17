@@ -10,8 +10,8 @@
 namespace rivet::ddl::generated {
 	ECMSelector::ECMSelector([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Value = serialized->unwrap_into_many<rivet::ddl::generated::ECMField>(Value_type_id);
-		Op = serialized->get_enum<rivet::ddl::generated::xec77cf54>(Op_type_id, rivet::ddl::generated::xec77cf54_values);
-		IsValid = serialized->get_bool(IsValid_type_id); 
+		Op = serialized->get_enum<rivet::ddl::generated::xec77cf54>(Op_type_id, rivet::ddl::generated::xec77cf54_values, rivet::ddl::generated::xec77cf54::Equal);
+		IsValid = serialized->get_bool(IsValid_type_id, true); 
 	}
 
 	[[nodiscard]] auto

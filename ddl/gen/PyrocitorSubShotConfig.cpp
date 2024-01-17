@@ -10,9 +10,9 @@
 
 namespace rivet::ddl::generated {
 	PyrocitorSubShotConfig::PyrocitorSubShotConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		ExplosionShotActor = serialized->get_string(ExplosionShotActor_type_id);
+		ExplosionShotActor = serialized->get_string(ExplosionShotActor_type_id, {});
 		ExplosionShotPrius = serialized->unwrap_into<rivet::ddl::generated::PyrocitorExplosionShotPrius>(ExplosionShotPrius_type_id);
-		EmberShotActor = serialized->get_string(EmberShotActor_type_id);
+		EmberShotActor = serialized->get_string(EmberShotActor_type_id, {});
 		EmberShotPrius = serialized->unwrap_into<rivet::ddl::generated::PyrocitorEmberShotPrius>(EmberShotPrius_type_id); 
 	}
 

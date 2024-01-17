@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	StoryMissionData::StoryMissionData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): RegionGameDataBase(serialized) {
-		MissionName = serialized->get_string(MissionName_type_id);
-		Description = serialized->get_string(Description_type_id); 
+		MissionName = serialized->get_string(MissionName_type_id, {});
+		Description = serialized->get_string(Description_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

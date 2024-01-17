@@ -13,15 +13,15 @@ namespace rivet::ddl::generated {
 		Curve = serialized->get_uint64s(Curve_type_id);
 		VertexColor = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(VertexColor_type_id);
 		VertexSpacing = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(VertexSpacing_type_id);
-		ReverseU = serialized->get_bool(ReverseU_type_id);
-		ReverseV = serialized->get_bool(ReverseV_type_id);
+		ReverseU = serialized->get_bool(ReverseU_type_id, false);
+		ReverseV = serialized->get_bool(ReverseV_type_id, false);
 		UVTilingDistance = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(UVTilingDistance_type_id);
 		UVOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(UVOffset_type_id);
-		Material = serialized->get_string(Material_type_id);
-		Collision = serialized->get_bool(Collision_type_id);
-		CollisionFlags = serialized->get_bitset<rivet::ddl::generated::PhysicsCollFlags>(CollisionFlags_type_id, rivet::ddl::generated::PhysicsCollFlags_values);
-		LOD1 = serialized->get_bool(LOD1_type_id);
-		LOD2 = serialized->get_bool(LOD2_type_id); 
+		Material = serialized->get_string(Material_type_id, {});
+		Collision = serialized->get_bool(Collision_type_id, true);
+		CollisionFlags = serialized->get_bitset<rivet::ddl::generated::PhysicsCollFlags>(CollisionFlags_type_id, rivet::ddl::generated::PhysicsCollFlags_values, 1087);
+		LOD1 = serialized->get_bool(LOD1_type_id, false);
+		LOD2 = serialized->get_bool(LOD2_type_id, false); 
 	}
 
 	[[nodiscard]] auto

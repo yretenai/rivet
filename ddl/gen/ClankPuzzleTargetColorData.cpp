@@ -9,9 +9,9 @@
 
 namespace rivet::ddl::generated {
 	ClankPuzzleTargetColorData::ClankPuzzleTargetColorData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ColorConstant = serialized->get_string(ColorConstant_type_id);
-		LerpInValue = serialized->get_float(LerpInValue_type_id);
-		LerpOutValue = serialized->get_float(LerpOutValue_type_id);
+		ColorConstant = serialized->get_string(ColorConstant_type_id, {});
+		LerpInValue = serialized->get_float(LerpInValue_type_id, 0.100000);
+		LerpOutValue = serialized->get_float(LerpOutValue_type_id, 0.100000);
 		DefaultColor = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(DefaultColor_type_id);
 		SpeedUpColor = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(SpeedUpColor_type_id);
 		SlowDownColor = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(SlowDownColor_type_id);

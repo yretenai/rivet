@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	FormationMotionInfo::FormationMotionInfo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Enabled = serialized->get_bool(Enabled_type_id);
-		MotionConfig = serialized->get_string(MotionConfig_type_id); 
+		Enabled = serialized->get_bool(Enabled_type_id, true);
+		MotionConfig = serialized->get_string(MotionConfig_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

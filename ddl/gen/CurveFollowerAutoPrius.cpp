@@ -7,18 +7,18 @@
 
 namespace rivet::ddl::generated {
 	CurveFollowerAutoPrius::CurveFollowerAutoPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Curve = serialized->get_uint64(Curve_type_id);
-		OpenCurveFollowMode = serialized->get_enum<rivet::ddl::generated::OpenCurveFollowMode>(OpenCurveFollowMode_type_id, rivet::ddl::generated::OpenCurveFollowMode_values);
-		Speed = serialized->get_float(Speed_type_id);
-		WaitDuration = serialized->get_float(WaitDuration_type_id);
-		TransitionMinDistFactor = serialized->get_float(TransitionMinDistFactor_type_id);
-		TransitionMaxDistFactor = serialized->get_float(TransitionMaxDistFactor_type_id);
-		TransitionAngleFactor = serialized->get_float(TransitionAngleFactor_type_id);
-		TransitionMaxTurnRate = serialized->get_float(TransitionMaxTurnRate_type_id);
-		StartOnInit = serialized->get_bool(StartOnInit_type_id);
-		StartReversed = serialized->get_bool(StartReversed_type_id);
-		StartOnClosestPoint = serialized->get_bool(StartOnClosestPoint_type_id);
-		DeleteAtEnd = serialized->get_bool(DeleteAtEnd_type_id); 
+		Curve = serialized->get_uint64(Curve_type_id, 0);
+		OpenCurveFollowMode = serialized->get_enum<rivet::ddl::generated::OpenCurveFollowMode>(OpenCurveFollowMode_type_id, rivet::ddl::generated::OpenCurveFollowMode_values, rivet::ddl::generated::OpenCurveFollowMode::OneShot);
+		Speed = serialized->get_float(Speed_type_id, 5.000000);
+		WaitDuration = serialized->get_float(WaitDuration_type_id, 1.000000);
+		TransitionMinDistFactor = serialized->get_float(TransitionMinDistFactor_type_id, 0.200000);
+		TransitionMaxDistFactor = serialized->get_float(TransitionMaxDistFactor_type_id, 0.500000);
+		TransitionAngleFactor = serialized->get_float(TransitionAngleFactor_type_id, 0.250000);
+		TransitionMaxTurnRate = serialized->get_float(TransitionMaxTurnRate_type_id, 45.000000);
+		StartOnInit = serialized->get_bool(StartOnInit_type_id, true);
+		StartReversed = serialized->get_bool(StartReversed_type_id, false);
+		StartOnClosestPoint = serialized->get_bool(StartOnClosestPoint_type_id, false);
+		DeleteAtEnd = serialized->get_bool(DeleteAtEnd_type_id, false); 
 	}
 
 	[[nodiscard]] auto

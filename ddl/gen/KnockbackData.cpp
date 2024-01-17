@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	KnockbackData::KnockbackData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Driver = serialized->get_string(Driver_type_id);
+		Driver = serialized->get_string(Driver_type_id, "React_Knockback");
 		ScaleData = serialized->unwrap_into<rivet::ddl::generated::ScaleData>(ScaleData_type_id); 
 	}
 

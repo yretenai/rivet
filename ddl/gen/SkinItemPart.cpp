@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	SkinItemPart::SkinItemPart([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Slot = serialized->get_enum<rivet::ddl::generated::x1b3f99b5>(Slot_type_id, rivet::ddl::generated::x1b3f99b5_values);
-		Layer = serialized->get_enum<rivet::ddl::generated::x5eb34cd6>(Layer_type_id, rivet::ddl::generated::x5eb34cd6_values);
-		Hidden = serialized->get_enum<rivet::ddl::generated::xc837e0c6>(Hidden_type_id, rivet::ddl::generated::xc837e0c6_values);
-		ExcludeInner = serialized->get_bool(ExcludeInner_type_id); 
+		Slot = serialized->get_enum<rivet::ddl::generated::x1b3f99b5>(Slot_type_id, rivet::ddl::generated::x1b3f99b5_values, rivet::ddl::generated::x1b3f99b5::Torso_Upper);
+		Layer = serialized->get_enum<rivet::ddl::generated::x5eb34cd6>(Layer_type_id, rivet::ddl::generated::x5eb34cd6_values, rivet::ddl::generated::x5eb34cd6::Skin_and_Clothing_Tight);
+		Hidden = serialized->get_enum<rivet::ddl::generated::xc837e0c6>(Hidden_type_id, rivet::ddl::generated::xc837e0c6_values, rivet::ddl::generated::xc837e0c6::Not_hidden);
+		ExcludeInner = serialized->get_bool(ExcludeInner_type_id, false); 
 	}
 
 	[[nodiscard]] auto

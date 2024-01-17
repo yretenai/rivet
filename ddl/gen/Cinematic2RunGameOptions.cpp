@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	Cinematic2RunGameOptions::Cinematic2RunGameOptions([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		LevelPath = serialized->get_string(LevelPath_type_id);
-		AdditionalCineArgs = serialized->get_string(AdditionalCineArgs_type_id);
-		Checkpoint = serialized->get_string(Checkpoint_type_id); 
+		LevelPath = serialized->get_string(LevelPath_type_id, {});
+		AdditionalCineArgs = serialized->get_string(AdditionalCineArgs_type_id, {});
+		Checkpoint = serialized->get_string(Checkpoint_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

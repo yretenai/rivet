@@ -11,12 +11,12 @@
 
 namespace rivet::ddl::generated {
 	WeaponMeleePrius::WeaponMeleePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): WeaponGamePrius(serialized) {
-		SnapRangeEnemy = serialized->get_float(SnapRangeEnemy_type_id);
-		SnapRangeBreak = serialized->get_float(SnapRangeBreak_type_id);
-		EmissiveColorConstantName = serialized->get_string(EmissiveColorConstantName_type_id);
-		EmissiveMaterialMappingName = serialized->get_string(EmissiveMaterialMappingName_type_id);
-		DefaultEmissiveIDValue = serialized->get_float(DefaultEmissiveIDValue_type_id);
-		UpgradeEmissiveIDValue = serialized->get_float(UpgradeEmissiveIDValue_type_id); 
+		SnapRangeEnemy = serialized->get_float(SnapRangeEnemy_type_id, 7.000000);
+		SnapRangeBreak = serialized->get_float(SnapRangeBreak_type_id, 6.000000);
+		EmissiveColorConstantName = serialized->get_string(EmissiveColorConstantName_type_id, "");
+		EmissiveMaterialMappingName = serialized->get_string(EmissiveMaterialMappingName_type_id, "");
+		DefaultEmissiveIDValue = serialized->get_float(DefaultEmissiveIDValue_type_id, 1.000000);
+		UpgradeEmissiveIDValue = serialized->get_float(UpgradeEmissiveIDValue_type_id, 2.000000); 
 	}
 
 	[[nodiscard]] auto

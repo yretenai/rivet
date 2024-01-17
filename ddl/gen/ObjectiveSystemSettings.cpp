@@ -9,15 +9,15 @@
 
 namespace rivet::ddl::generated {
 	ObjectiveSystemSettings::ObjectiveSystemSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		LogCategories = serialized->get_bitset<rivet::ddl::generated::x95fbb203>(LogCategories_type_id, rivet::ddl::generated::x95fbb203_values);
-		ObjectiveSystemSaveSize = serialized->get_int32(ObjectiveSystemSaveSize_type_id);
-		UseObjectiveSystem = serialized->get_bool(UseObjectiveSystem_type_id);
-		DefaultMissionGraph = serialized->get_string(DefaultMissionGraph_type_id);
-		MissionStart = serialized->get_string(MissionStart_type_id);
-		ObjectiveStart = serialized->get_string(ObjectiveStart_type_id);
+		LogCategories = serialized->get_bitset<rivet::ddl::generated::x95fbb203>(LogCategories_type_id, rivet::ddl::generated::x95fbb203_values, 25);
+		ObjectiveSystemSaveSize = serialized->get_int32(ObjectiveSystemSaveSize_type_id, 131072);
+		UseObjectiveSystem = serialized->get_bool(UseObjectiveSystem_type_id, false);
+		DefaultMissionGraph = serialized->get_string(DefaultMissionGraph_type_id, {});
+		MissionStart = serialized->get_string(MissionStart_type_id, {});
+		ObjectiveStart = serialized->get_string(ObjectiveStart_type_id, {});
 		GraphDrawSettings = serialized->unwrap_into<rivet::ddl::generated::DebugGraphDrawSettings>(GraphDrawSettings_type_id);
-		DebugMissionSortOrder = serialized->get_enum<rivet::ddl::generated::DebugMissionSortOrder>(DebugMissionSortOrder_type_id, rivet::ddl::generated::DebugMissionSortOrder_values);
-		DebugObjectiveSortOrder = serialized->get_enum<rivet::ddl::generated::DebugObjectiveSortOrder>(DebugObjectiveSortOrder_type_id, rivet::ddl::generated::DebugObjectiveSortOrder_values); 
+		DebugMissionSortOrder = serialized->get_enum<rivet::ddl::generated::DebugMissionSortOrder>(DebugMissionSortOrder_type_id, rivet::ddl::generated::DebugMissionSortOrder_values, rivet::ddl::generated::DebugMissionSortOrder::Mission_Order);
+		DebugObjectiveSortOrder = serialized->get_enum<rivet::ddl::generated::DebugObjectiveSortOrder>(DebugObjectiveSortOrder_type_id, rivet::ddl::generated::DebugObjectiveSortOrder_values, rivet::ddl::generated::DebugObjectiveSortOrder::Objective_Order); 
 	}
 
 	[[nodiscard]] auto

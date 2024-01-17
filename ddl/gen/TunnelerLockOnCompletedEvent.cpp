@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	TunnelerLockOnCompletedEvent::TunnelerLockOnCompletedEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		LockOnDuration = serialized->get_float(LockOnDuration_type_id); 
+		LockOnDuration = serialized->get_float(LockOnDuration_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

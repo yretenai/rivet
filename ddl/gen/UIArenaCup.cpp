@@ -9,9 +9,9 @@
 
 namespace rivet::ddl::generated {
 	UIArenaCup::UIArenaCup([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Title = serialized->get_string(Title_type_id);
-		Description = serialized->get_string(Description_type_id);
-		MissionUnlock = serialized->get_string(MissionUnlock_type_id);
+		Title = serialized->get_string(Title_type_id, {});
+		Description = serialized->get_string(Description_type_id, {});
+		MissionUnlock = serialized->get_string(MissionUnlock_type_id, {});
 		Challenges = serialized->unwrap_into_many<rivet::ddl::generated::UIArenaChallenge>(Challenges_type_id); 
 	}
 

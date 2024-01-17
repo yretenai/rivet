@@ -17,10 +17,10 @@
 
 namespace rivet::ddl::generated {
 	BounceEvent::BounceEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Material = serialized->get_enum<rivet::ddl::generated::x10b3c4cf>(Material_type_id, rivet::ddl::generated::x10b3c4cf_values);
-		FallHeight = serialized->get_float(FallHeight_type_id);
-		LaunchSpeed = serialized->get_float(LaunchSpeed_type_id);
-		HasBonusFromButtonPress = serialized->get_bool(HasBonusFromButtonPress_type_id); 
+		Material = serialized->get_enum<rivet::ddl::generated::x10b3c4cf>(Material_type_id, rivet::ddl::generated::x10b3c4cf_values, rivet::ddl::generated::x10b3c4cf::None);
+		FallHeight = serialized->get_float(FallHeight_type_id, 0.000000);
+		LaunchSpeed = serialized->get_float(LaunchSpeed_type_id, 0.000000);
+		HasBonusFromButtonPress = serialized->get_bool(HasBonusFromButtonPress_type_id, false); 
 	}
 
 	[[nodiscard]] auto

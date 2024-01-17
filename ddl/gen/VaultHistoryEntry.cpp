@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	VaultHistoryEntry::VaultHistoryEntry([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		RecordId = serialized->get_uint32(RecordId_type_id);
-		SaveType = serialized->get_enum<rivet::ddl::generated::x7632d21>(SaveType_type_id, rivet::ddl::generated::x7632d21_values); 
+		RecordId = serialized->get_uint32(RecordId_type_id, 0);
+		SaveType = serialized->get_enum<rivet::ddl::generated::x7632d21>(SaveType_type_id, rivet::ddl::generated::x7632d21_values, rivet::ddl::generated::x7632d21::Saved); 
 	}
 
 	[[nodiscard]] auto

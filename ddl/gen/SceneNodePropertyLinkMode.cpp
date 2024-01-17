@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	SceneNodePropertyLinkMode::SceneNodePropertyLinkMode([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		LinkModeState = serialized->get_enum<rivet::ddl::generated::LinkModeStates>(LinkModeState_type_id, rivet::ddl::generated::LinkModeStates_values);
-		FieldPath = serialized->get_string(FieldPath_type_id);
+		LinkModeState = serialized->get_enum<rivet::ddl::generated::LinkModeStates>(LinkModeState_type_id, rivet::ddl::generated::LinkModeStates_values, rivet::ddl::generated::LinkModeStates::ExitAndCancel);
+		FieldPath = serialized->get_string(FieldPath_type_id, "");
 		LinkSources = serialized->get_uint64s(LinkSources_type_id);
-		LinkDestination = serialized->get_uint64(LinkDestination_type_id); 
+		LinkDestination = serialized->get_uint64(LinkDestination_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

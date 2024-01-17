@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	ProofOfConcept::ProofOfConcept([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		FirstField = serialized->get_int32(FirstField_type_id);
-		S = serialized->get_string(S_type_id); 
+		FirstField = serialized->get_int32(FirstField_type_id, 9);
+		S = serialized->get_string(S_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

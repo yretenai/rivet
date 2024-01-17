@@ -7,13 +7,13 @@
 
 namespace rivet::ddl::generated {
 	LightIntensityActionPrius::LightIntensityActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		Flags = serialized->get_bitset<rivet::ddl::generated::xa080f5e3>(Flags_type_id, rivet::ddl::generated::xa080f5e3_values);
-		CurveType = serialized->get_enum<rivet::ddl::generated::xd73d2720>(CurveType_type_id, rivet::ddl::generated::xd73d2720_values);
-		StartIntensity = serialized->get_float(StartIntensity_type_id);
-		EndIntensity = serialized->get_float(EndIntensity_type_id);
-		Duration = serialized->get_float(Duration_type_id);
-		MaxTimes = serialized->get_int32(MaxTimes_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Rendering);
+		Flags = serialized->get_bitset<rivet::ddl::generated::xa080f5e3>(Flags_type_id, rivet::ddl::generated::xa080f5e3_values, 0);
+		CurveType = serialized->get_enum<rivet::ddl::generated::xd73d2720>(CurveType_type_id, rivet::ddl::generated::xd73d2720_values, rivet::ddl::generated::xd73d2720::SCurve);
+		StartIntensity = serialized->get_float(StartIntensity_type_id, 100.000000);
+		EndIntensity = serialized->get_float(EndIntensity_type_id, 0.000000);
+		Duration = serialized->get_float(Duration_type_id, 1.000000);
+		MaxTimes = serialized->get_int32(MaxTimes_type_id, -1); 
 	}
 
 	[[nodiscard]] auto

@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	TestFlagStructPrius::TestFlagStructPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		One = serialized->get_bitset<rivet::ddl::generated::x1065ab66>(One_type_id, rivet::ddl::generated::x1065ab66_values);
-		Two = serialized->get_bitset<rivet::ddl::generated::x1065ab66>(Two_type_id, rivet::ddl::generated::x1065ab66_values);
-		Third = serialized->get_string(Third_type_id); 
+		One = serialized->get_bitset<rivet::ddl::generated::x1065ab66>(One_type_id, rivet::ddl::generated::x1065ab66_values, 0);
+		Two = serialized->get_bitset<rivet::ddl::generated::x1065ab66>(Two_type_id, rivet::ddl::generated::x1065ab66_values, 0);
+		Third = serialized->get_string(Third_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

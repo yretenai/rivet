@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	SoundPropagation2InvSqDef::SoundPropagation2InvSqDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		VolumeAtDistance = serialized->get_float(VolumeAtDistance_type_id); 
+		VolumeAtDistance = serialized->get_float(VolumeAtDistance_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

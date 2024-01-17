@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ModelAsCrossSection::ModelAsCrossSection([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): CrossSectionChoice(serialized) {
-		Model = serialized->get_string(Model_type_id); 
+		Model = serialized->get_string(Model_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

@@ -7,13 +7,13 @@
 
 namespace rivet::ddl::generated {
 	AmbientBarrageControllerPrius::AmbientBarrageControllerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AmbientShooterActorGroup = serialized->get_uint64(AmbientShooterActorGroup_type_id);
-		DefaultTargetActorGroup = serialized->get_uint64(DefaultTargetActorGroup_type_id);
-		AmbientBarrageConfig = serialized->get_string(AmbientBarrageConfig_type_id);
-		StartOnActivate = serialized->get_bool(StartOnActivate_type_id);
-		OnScreenShootersOnly = serialized->get_bool(OnScreenShootersOnly_type_id);
-		OnlyBestShooterFires = serialized->get_bool(OnlyBestShooterFires_type_id);
-		MaxDistanceFromTarget = serialized->get_float(MaxDistanceFromTarget_type_id); 
+		AmbientShooterActorGroup = serialized->get_uint64(AmbientShooterActorGroup_type_id, 0);
+		DefaultTargetActorGroup = serialized->get_uint64(DefaultTargetActorGroup_type_id, 0);
+		AmbientBarrageConfig = serialized->get_string(AmbientBarrageConfig_type_id, {});
+		StartOnActivate = serialized->get_bool(StartOnActivate_type_id, false);
+		OnScreenShootersOnly = serialized->get_bool(OnScreenShootersOnly_type_id, true);
+		OnlyBestShooterFires = serialized->get_bool(OnlyBestShooterFires_type_id, false);
+		MaxDistanceFromTarget = serialized->get_float(MaxDistanceFromTarget_type_id, -1.000000); 
 	}
 
 	[[nodiscard]] auto

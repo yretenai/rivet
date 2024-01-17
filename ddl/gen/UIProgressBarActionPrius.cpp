@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	UIProgressBarActionPrius::UIProgressBarActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		BarType = serialized->get_enum<rivet::ddl::generated::x8a20ee54>(BarType_type_id, rivet::ddl::generated::x8a20ee54_values);
-		IsFriend = serialized->get_bool(IsFriend_type_id);
-		Text = serialized->get_string(Text_type_id);
-		StartPercent = serialized->get_float(StartPercent_type_id);
-		EndPercent = serialized->get_float(EndPercent_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::UI);
+		BarType = serialized->get_enum<rivet::ddl::generated::x8a20ee54>(BarType_type_id, rivet::ddl::generated::x8a20ee54_values, rivet::ddl::generated::x8a20ee54::Generic);
+		IsFriend = serialized->get_bool(IsFriend_type_id, false);
+		Text = serialized->get_string(Text_type_id, "");
+		StartPercent = serialized->get_float(StartPercent_type_id, 1.000000);
+		EndPercent = serialized->get_float(EndPercent_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

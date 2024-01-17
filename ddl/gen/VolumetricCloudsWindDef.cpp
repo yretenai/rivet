@@ -7,15 +7,15 @@
 
 namespace rivet::ddl::generated {
 	VolumetricCloudsWindDef::VolumetricCloudsWindDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		WindAzimuth = serialized->get_float(WindAzimuth_type_id);
-		WindIntensity = serialized->get_float(WindIntensity_type_id);
-		EnabledRotation = serialized->get_bool(EnabledRotation_type_id);
-		RotationPivotAzimuth = serialized->get_float(RotationPivotAzimuth_type_id);
-		RotationPivotDistance = serialized->get_float(RotationPivotDistance_type_id);
-		RotationIntensity = serialized->get_float(RotationIntensity_type_id);
-		RisingVaporIntensity = serialized->get_float(RisingVaporIntensity_type_id);
-		NoiseFlowAzimuth = serialized->get_float(NoiseFlowAzimuth_type_id);
-		NoiseFlowIntensity = serialized->get_float(NoiseFlowIntensity_type_id); 
+		WindAzimuth = serialized->get_float(WindAzimuth_type_id, 0.000000);
+		WindIntensity = serialized->get_float(WindIntensity_type_id, 0.000000);
+		EnabledRotation = serialized->get_bool(EnabledRotation_type_id, false);
+		RotationPivotAzimuth = serialized->get_float(RotationPivotAzimuth_type_id, 0.000000);
+		RotationPivotDistance = serialized->get_float(RotationPivotDistance_type_id, 0.000000);
+		RotationIntensity = serialized->get_float(RotationIntensity_type_id, 1.000000);
+		RisingVaporIntensity = serialized->get_float(RisingVaporIntensity_type_id, 0.000000);
+		NoiseFlowAzimuth = serialized->get_float(NoiseFlowAzimuth_type_id, 180.000000);
+		NoiseFlowIntensity = serialized->get_float(NoiseFlowIntensity_type_id, 10.000000); 
 	}
 
 	[[nodiscard]] auto

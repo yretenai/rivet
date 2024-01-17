@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	BossBotZordoomMonsterPrius::BossBotZordoomMonsterPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BotPrius(serialized) {
-		ChaseMeleeMinRange = serialized->get_float(ChaseMeleeMinRange_type_id);
-		ChaseMeleeMaxRange = serialized->get_float(ChaseMeleeMaxRange_type_id);
-		ChaseMoveAnim = serialized->get_string(ChaseMoveAnim_type_id);
-		ChaseMoveIntroAnim = serialized->get_string(ChaseMoveIntroAnim_type_id); 
+		ChaseMeleeMinRange = serialized->get_float(ChaseMeleeMinRange_type_id, 6.000000);
+		ChaseMeleeMaxRange = serialized->get_float(ChaseMeleeMaxRange_type_id, 15.000000);
+		ChaseMoveAnim = serialized->get_string(ChaseMoveAnim_type_id, "Chase_Move");
+		ChaseMoveIntroAnim = serialized->get_string(ChaseMoveIntroAnim_type_id, "Chase_Move_Intro"); 
 	}
 
 	[[nodiscard]] auto

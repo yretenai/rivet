@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	AnimFootstepRemovedEventKey::AnimFootstepRemovedEventKey([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Side = serialized->get_enum<rivet::ddl::generated::x94d69111>(Side_type_id, rivet::ddl::generated::x94d69111_values);
-		AnimPoseKey = serialized->get_uint64(AnimPoseKey_type_id);
-		AutoGenFrame = serialized->get_uint32(AutoGenFrame_type_id); 
+		Side = serialized->get_enum<rivet::ddl::generated::x94d69111>(Side_type_id, rivet::ddl::generated::x94d69111_values, rivet::ddl::generated::x94d69111::Left);
+		AnimPoseKey = serialized->get_uint64(AnimPoseKey_type_id, 0);
+		AutoGenFrame = serialized->get_uint32(AutoGenFrame_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

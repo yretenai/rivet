@@ -17,7 +17,7 @@ namespace rivet::ddl::generated {
 		Min = serialized->unwrap_into<rivet::ddl::generated::InputPlugInt>(Min_type_id);
 		Max = serialized->unwrap_into<rivet::ddl::generated::InputPlugInt>(Max_type_id);
 		Next = serialized->unwrap_into<rivet::ddl::generated::OutputPlugInt>(Next_type_id);
-		Info = serialized->get_string(Info_type_id); 
+		Info = serialized->get_string(Info_type_id, "You must signal this node each time you want a new random number, even for the first number."); 
 	}
 
 	[[nodiscard]] auto

@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	BotVariantDifficultyEntry::BotVariantDifficultyEntry([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Variant = serialized->get_enum<rivet::ddl::generated::xc3e5efea>(Variant_type_id, rivet::ddl::generated::xc3e5efea_values);
+		Variant = serialized->get_enum<rivet::ddl::generated::xc3e5efea>(Variant_type_id, rivet::ddl::generated::xc3e5efea_values, rivet::ddl::generated::xc3e5efea::V1);
 		DifficultyModDefs = serialized->unwrap_into_many<rivet::ddl::generated::DifficultyModDef>(DifficultyModDefs_type_id); 
 	}
 

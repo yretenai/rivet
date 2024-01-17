@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	DebugPlaytestSettings::DebugPlaytestSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Enabled = serialized->get_bool(Enabled_type_id);
-		PlaytestName = serialized->get_string(PlaytestName_type_id);
-		ForceEnableSurveyScreens = serialized->get_bool(ForceEnableSurveyScreens_type_id); 
+		Enabled = serialized->get_bool(Enabled_type_id, false);
+		PlaytestName = serialized->get_string(PlaytestName_type_id, {});
+		ForceEnableSurveyScreens = serialized->get_bool(ForceEnableSurveyScreens_type_id, false); 
 	}
 
 	[[nodiscard]] auto

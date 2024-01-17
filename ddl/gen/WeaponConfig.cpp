@@ -15,29 +15,29 @@ namespace rivet::ddl::generated {
 	WeaponConfig::WeaponConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): WeaponConfigBase(serialized) {
 		LevelList = serialized->unwrap_into_many<rivet::ddl::generated::WeaponLevelDataListItem>(LevelList_type_id);
 		XPSourceList = serialized->unwrap_into_many<rivet::ddl::generated::WeaponEarnedXPData>(XPSourceList_type_id);
-		GripStyle = serialized->get_enum<rivet::ddl::generated::x8c1c9e5c>(GripStyle_type_id, rivet::ddl::generated::x8c1c9e5c_values);
-		HolsterType = serialized->get_enum<rivet::ddl::generated::xc968d790>(HolsterType_type_id, rivet::ddl::generated::xc968d790_values);
-		SlotType = serialized->get_enum<rivet::ddl::generated::xc533d93f>(SlotType_type_id, rivet::ddl::generated::xc533d93f_values);
-		FireStyle = serialized->get_enum<rivet::ddl::generated::x597cb7da>(FireStyle_type_id, rivet::ddl::generated::x597cb7da_values);
-		ReloadStyle = serialized->get_enum<rivet::ddl::generated::xd3dac94>(ReloadStyle_type_id, rivet::ddl::generated::xd3dac94_values);
-		OffsetStyle = serialized->get_enum<rivet::ddl::generated::xb82a951f>(OffsetStyle_type_id, rivet::ddl::generated::xb82a951f_values);
-		HudWeaponTypeEnum = serialized->get_enum<rivet::ddl::generated::xd5643d7e>(HudWeaponTypeEnum_type_id, rivet::ddl::generated::xd5643d7e_values);
-		ZoomConfig = serialized->get_string(ZoomConfig_type_id);
-		BeamInConfig = serialized->get_string(BeamInConfig_type_id);
-		AimTriggerEffectConfigOverride = serialized->get_string(AimTriggerEffectConfigOverride_type_id);
-		LightAimTriggerEffectConfigOverride = serialized->get_string(LightAimTriggerEffectConfigOverride_type_id);
-		FireTriggerEffectConfigOverride = serialized->get_string(FireTriggerEffectConfigOverride_type_id);
-		LightFireTriggerEffectConfigOverride = serialized->get_string(LightFireTriggerEffectConfigOverride_type_id);
+		GripStyle = serialized->get_enum<rivet::ddl::generated::x8c1c9e5c>(GripStyle_type_id, rivet::ddl::generated::x8c1c9e5c_values, rivet::ddl::generated::x8c1c9e5c::GripStyleRifle);
+		HolsterType = serialized->get_enum<rivet::ddl::generated::xc968d790>(HolsterType_type_id, rivet::ddl::generated::xc968d790_values, rivet::ddl::generated::xc968d790::None);
+		SlotType = serialized->get_enum<rivet::ddl::generated::xc533d93f>(SlotType_type_id, rivet::ddl::generated::xc533d93f_values, rivet::ddl::generated::xc533d93f::Held);
+		FireStyle = serialized->get_enum<rivet::ddl::generated::x597cb7da>(FireStyle_type_id, rivet::ddl::generated::x597cb7da_values, rivet::ddl::generated::x597cb7da::FireStyleLight);
+		ReloadStyle = serialized->get_enum<rivet::ddl::generated::xd3dac94>(ReloadStyle_type_id, rivet::ddl::generated::xd3dac94_values, rivet::ddl::generated::xd3dac94::ReloadStyleNone);
+		OffsetStyle = serialized->get_enum<rivet::ddl::generated::xb82a951f>(OffsetStyle_type_id, rivet::ddl::generated::xb82a951f_values, rivet::ddl::generated::xb82a951f::OffsetStyleNone);
+		HudWeaponTypeEnum = serialized->get_enum<rivet::ddl::generated::xd5643d7e>(HudWeaponTypeEnum_type_id, rivet::ddl::generated::xd5643d7e_values, rivet::ddl::generated::xd5643d7e::Blank);
+		ZoomConfig = serialized->get_string(ZoomConfig_type_id, {});
+		BeamInConfig = serialized->get_string(BeamInConfig_type_id, {});
+		AimTriggerEffectConfigOverride = serialized->get_string(AimTriggerEffectConfigOverride_type_id, {});
+		LightAimTriggerEffectConfigOverride = serialized->get_string(LightAimTriggerEffectConfigOverride_type_id, {});
+		FireTriggerEffectConfigOverride = serialized->get_string(FireTriggerEffectConfigOverride_type_id, {});
+		LightFireTriggerEffectConfigOverride = serialized->get_string(LightFireTriggerEffectConfigOverride_type_id, {});
 		TargetingInfo = serialized->unwrap_into<rivet::ddl::generated::WeaponTargetingInfo>(TargetingInfo_type_id);
 		ReticleInfo = serialized->unwrap_into<rivet::ddl::generated::WeaponReticleInfo>(ReticleInfo_type_id);
-		ModConfig = serialized->get_string(ModConfig_type_id);
-		GridConfig = serialized->get_string(GridConfig_type_id);
-		GloveModelOverride = serialized->get_string(GloveModelOverride_type_id);
-		AmmoCost = serialized->get_int32(AmmoCost_type_id);
+		ModConfig = serialized->get_string(ModConfig_type_id, {});
+		GridConfig = serialized->get_string(GridConfig_type_id, {});
+		GloveModelOverride = serialized->get_string(GloveModelOverride_type_id, {});
+		AmmoCost = serialized->get_int32(AmmoCost_type_id, 0);
 		BarrelObstruction = serialized->unwrap_into<rivet::ddl::generated::WeaponObstructionBase>(BarrelObstruction_type_id);
-		WantsTargetLOS = serialized->get_bool(WantsTargetLOS_type_id);
-		UseBeamInEquip = serialized->get_bool(UseBeamInEquip_type_id);
-		ForHeroSkipObstructionChecks = serialized->get_bool(ForHeroSkipObstructionChecks_type_id); 
+		WantsTargetLOS = serialized->get_bool(WantsTargetLOS_type_id, false);
+		UseBeamInEquip = serialized->get_bool(UseBeamInEquip_type_id, true);
+		ForHeroSkipObstructionChecks = serialized->get_bool(ForHeroSkipObstructionChecks_type_id, false); 
 	}
 
 	[[nodiscard]] auto

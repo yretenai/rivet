@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	CameraForwardTweakActorForward::CameraForwardTweakActorForward([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): CameraForwardTweakValid(serialized) {
-		CameraForwardActor = serialized->get_uint64(CameraForwardActor_type_id); 
+		CameraForwardActor = serialized->get_uint64(CameraForwardActor_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

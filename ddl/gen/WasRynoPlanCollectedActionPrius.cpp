@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	WasRynoPlanCollectedActionPrius::WasRynoPlanCollectedActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		SaveID = serialized->get_enum<rivet::ddl::generated::x81d3e717>(SaveID_type_id, rivet::ddl::generated::x81d3e717_values); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Hero);
+		SaveID = serialized->get_enum<rivet::ddl::generated::x81d3e717>(SaveID_type_id, rivet::ddl::generated::x81d3e717_values, rivet::ddl::generated::x81d3e717::None); 
 	}
 
 	[[nodiscard]] auto

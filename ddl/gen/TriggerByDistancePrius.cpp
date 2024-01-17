@@ -7,22 +7,22 @@
 
 namespace rivet::ddl::generated {
 	TriggerByDistancePrius::TriggerByDistancePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): TriggerByBasePrius(serialized) {
-		AutoDisableType = serialized->get_enum<rivet::ddl::generated::xafae1264>(AutoDisableType_type_id, rivet::ddl::generated::xafae1264_values);
-		Shape = serialized->get_enum<rivet::ddl::generated::x17c3a26f>(Shape_type_id, rivet::ddl::generated::x17c3a26f_values);
-		TriggerDist = serialized->get_float(TriggerDist_type_id);
-		TriggerDistPad = serialized->get_float(TriggerDistPad_type_id);
-		OffsetX = serialized->get_float(OffsetX_type_id);
-		OffsetY = serialized->get_float(OffsetY_type_id);
-		OffsetZ = serialized->get_float(OffsetZ_type_id);
-		BoxX = serialized->get_float(BoxX_type_id);
-		BoxY = serialized->get_float(BoxY_type_id);
-		BoxZ = serialized->get_float(BoxZ_type_id);
-		Volume = serialized->get_uint64(Volume_type_id);
-		AngleMin = serialized->get_float(AngleMin_type_id);
-		AngleMax = serialized->get_float(AngleMax_type_id);
-		AnglePad = serialized->get_float(AnglePad_type_id);
-		PollingDelayMin = serialized->get_float(PollingDelayMin_type_id);
-		PollingDelayMax = serialized->get_float(PollingDelayMax_type_id); 
+		AutoDisableType = serialized->get_enum<rivet::ddl::generated::xafae1264>(AutoDisableType_type_id, rivet::ddl::generated::xafae1264_values, rivet::ddl::generated::xafae1264::Do_not_auto_disable);
+		Shape = serialized->get_enum<rivet::ddl::generated::x17c3a26f>(Shape_type_id, rivet::ddl::generated::x17c3a26f_values, rivet::ddl::generated::x17c3a26f::Sphere);
+		TriggerDist = serialized->get_float(TriggerDist_type_id, 10.000000);
+		TriggerDistPad = serialized->get_float(TriggerDistPad_type_id, 5.000000);
+		OffsetX = serialized->get_float(OffsetX_type_id, 0.000000);
+		OffsetY = serialized->get_float(OffsetY_type_id, 0.000000);
+		OffsetZ = serialized->get_float(OffsetZ_type_id, 0.000000);
+		BoxX = serialized->get_float(BoxX_type_id, 1.000000);
+		BoxY = serialized->get_float(BoxY_type_id, 1.000000);
+		BoxZ = serialized->get_float(BoxZ_type_id, 1.000000);
+		Volume = serialized->get_uint64(Volume_type_id, 0);
+		AngleMin = serialized->get_float(AngleMin_type_id, 0.000000);
+		AngleMax = serialized->get_float(AngleMax_type_id, 90.000000);
+		AnglePad = serialized->get_float(AnglePad_type_id, 10.000000);
+		PollingDelayMin = serialized->get_float(PollingDelayMin_type_id, 0.000000);
+		PollingDelayMax = serialized->get_float(PollingDelayMax_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

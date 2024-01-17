@@ -10,7 +10,7 @@
 
 namespace rivet::ddl::generated {
 	CombatTrackerPrius::CombatTrackerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		CombatEndedQuietTime = serialized->get_float(CombatEndedQuietTime_type_id); 
+		CombatEndedQuietTime = serialized->get_float(CombatEndedQuietTime_type_id, 3.000000); 
 	}
 
 	[[nodiscard]] auto

@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	HoverbootBoostVolumePrius::HoverbootBoostVolumePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		IsOmnidirectional = serialized->get_bool(IsOmnidirectional_type_id);
-		IsJump = serialized->get_bool(IsJump_type_id);
-		JumpTargetActor = serialized->get_uint64(JumpTargetActor_type_id); 
+		IsOmnidirectional = serialized->get_bool(IsOmnidirectional_type_id, false);
+		IsJump = serialized->get_bool(IsJump_type_id, false);
+		JumpTargetActor = serialized->get_uint64(JumpTargetActor_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

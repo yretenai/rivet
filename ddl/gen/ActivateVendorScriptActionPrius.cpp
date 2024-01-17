@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	ActivateVendorScriptActionPrius::ActivateVendorScriptActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		BuyText = serialized->get_string(BuyText_type_id);
-		SellText = serialized->get_string(SellText_type_id);
-		CraftText = serialized->get_string(CraftText_type_id);
-		PhotoText = serialized->get_string(PhotoText_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Conversation);
+		BuyText = serialized->get_string(BuyText_type_id, "Buy Items.");
+		SellText = serialized->get_string(SellText_type_id, "Sell Items.");
+		CraftText = serialized->get_string(CraftText_type_id, "Craft Items.");
+		PhotoText = serialized->get_string(PhotoText_type_id, "Sell Photos."); 
 	}
 
 	[[nodiscard]] auto

@@ -14,8 +14,8 @@
 
 namespace rivet::ddl::generated {
 	VanityPerkBase::VanityPerkBase([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DescriptionLoc = serialized->get_string(DescriptionLoc_type_id);
-		DisplayIcon = serialized->get_string(DisplayIcon_type_id); 
+		DescriptionLoc = serialized->get_string(DescriptionLoc_type_id, {});
+		DisplayIcon = serialized->get_string(DisplayIcon_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

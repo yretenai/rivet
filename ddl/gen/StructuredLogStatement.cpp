@@ -15,8 +15,8 @@
 
 namespace rivet::ddl::generated {
 	StructuredLogStatement::StructuredLogStatement([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		TestName = serialized->get_string(TestName_type_id);
-		VariableName = serialized->get_string(VariableName_type_id); 
+		TestName = serialized->get_string(TestName_type_id, {});
+		VariableName = serialized->get_string(VariableName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

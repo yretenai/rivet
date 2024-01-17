@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	CurveFollowerAutoAnimPrius::CurveFollowerAutoAnimPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		StartEnabled = serialized->get_bool(StartEnabled_type_id);
-		StoppedIdle = serialized->get_string(StoppedIdle_type_id);
-		MoveStart = serialized->get_string(MoveStart_type_id);
-		MoveIdle = serialized->get_string(MoveIdle_type_id);
-		StopStart = serialized->get_string(StopStart_type_id); 
+		StartEnabled = serialized->get_bool(StartEnabled_type_id, true);
+		StoppedIdle = serialized->get_string(StoppedIdle_type_id, "Idle");
+		MoveStart = serialized->get_string(MoveStart_type_id, "Idle_to_Move");
+		MoveIdle = serialized->get_string(MoveIdle_type_id, "Move");
+		StopStart = serialized->get_string(StopStart_type_id, "Move_to_Idle"); 
 	}
 
 	[[nodiscard]] auto

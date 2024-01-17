@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	CinePortalZipLineStart::CinePortalZipLineStart([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		PortalLocator = serialized->get_string(PortalLocator_type_id);
-		RecoilDelay = serialized->get_float(RecoilDelay_type_id); 
+		PortalLocator = serialized->get_string(PortalLocator_type_id, {});
+		RecoilDelay = serialized->get_float(RecoilDelay_type_id, 0.300000); 
 	}
 
 	[[nodiscard]] auto

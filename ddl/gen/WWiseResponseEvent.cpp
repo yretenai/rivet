@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	WWiseResponseEvent::WWiseResponseEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ResponseEvent(serialized) {
-		WwiseType = serialized->get_enum<rivet::ddl::generated::x5f40dd5c>(WwiseType_type_id, rivet::ddl::generated::x5f40dd5c_values);
-		WwiseActionName = serialized->get_string(WwiseActionName_type_id);
-		GroupName = serialized->get_string(GroupName_type_id);
-		Value = serialized->get_float(Value_type_id);
-		SwitchValue = serialized->get_string(SwitchValue_type_id); 
+		WwiseType = serialized->get_enum<rivet::ddl::generated::x5f40dd5c>(WwiseType_type_id, rivet::ddl::generated::x5f40dd5c_values, rivet::ddl::generated::x5f40dd5c::Parameter);
+		WwiseActionName = serialized->get_string(WwiseActionName_type_id, {});
+		GroupName = serialized->get_string(GroupName_type_id, {});
+		Value = serialized->get_float(Value_type_id, 0.000000);
+		SwitchValue = serialized->get_string(SwitchValue_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	UI_CinematicActorLocatorPicker::UI_CinematicActorLocatorPicker([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActorId = serialized->get_uint64(ActorId_type_id);
-		LocatorName = serialized->get_string(LocatorName_type_id); 
+		ActorId = serialized->get_uint64(ActorId_type_id, 0);
+		LocatorName = serialized->get_string(LocatorName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

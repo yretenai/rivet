@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	SetVisibilityInput::SetVisibilityInput([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		IsPageVisible = serialized->get_bool(IsPageVisible_type_id);
-		IsViewerHidden = serialized->get_bool(IsViewerHidden_type_id); 
+		IsPageVisible = serialized->get_bool(IsPageVisible_type_id, false);
+		IsViewerHidden = serialized->get_bool(IsViewerHidden_type_id, false); 
 	}
 
 	[[nodiscard]] auto

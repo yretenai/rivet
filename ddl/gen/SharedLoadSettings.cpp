@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	SharedLoadSettings::SharedLoadSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ExpediteLoadStateMachineMode = serialized->get_enum<rivet::ddl::generated::xd76165e>(ExpediteLoadStateMachineMode_type_id, rivet::ddl::generated::xd76165e_values);
-		ExpediteBulkLoader = serialized->get_bool(ExpediteBulkLoader_type_id); 
+		ExpediteLoadStateMachineMode = serialized->get_enum<rivet::ddl::generated::xd76165e>(ExpediteLoadStateMachineMode_type_id, rivet::ddl::generated::xd76165e_values, rivet::ddl::generated::xd76165e::No);
+		ExpediteBulkLoader = serialized->get_bool(ExpediteBulkLoader_type_id, false); 
 	}
 
 	[[nodiscard]] auto

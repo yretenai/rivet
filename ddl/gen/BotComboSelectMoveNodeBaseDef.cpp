@@ -14,7 +14,7 @@ namespace rivet::ddl::generated {
 		Queue = serialized->unwrap_into<rivet::ddl::generated::InputPlugSignal>(Queue_type_id);
 		Weight = serialized->unwrap_into<rivet::ddl::generated::InputPlugFloat>(Weight_type_id);
 		Selected = serialized->unwrap_into<rivet::ddl::generated::OutputPlugSignal>(Selected_type_id);
-		MoveName = serialized->get_string(MoveName_type_id); 
+		MoveName = serialized->get_string(MoveName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

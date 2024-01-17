@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	AmbientFlyByTriggerPrius::AmbientFlyByTriggerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		NearbyRadius = serialized->get_float(NearbyRadius_type_id); 
+		NearbyRadius = serialized->get_float(NearbyRadius_type_id, 200.000000); 
 	}
 
 	[[nodiscard]] auto

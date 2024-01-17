@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	AttachmentListPrius::AttachmentListPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MaxAttachments = serialized->get_uint32(MaxAttachments_type_id); 
+		MaxAttachments = serialized->get_uint32(MaxAttachments_type_id, 4); 
 	}
 
 	[[nodiscard]] auto

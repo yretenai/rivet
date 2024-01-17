@@ -11,12 +11,12 @@
 
 namespace rivet::ddl::generated {
 	RidablePrius::RidablePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		UseLeftSeats = serialized->get_bool(UseLeftSeats_type_id);
-		UseRightSeats = serialized->get_bool(UseRightSeats_type_id);
-		AutoDropoff = serialized->get_bool(AutoDropoff_type_id);
-		MinTimeBetweenDropoffs = serialized->get_float(MinTimeBetweenDropoffs_type_id);
-		MaxTimeBetweenDropoffs = serialized->get_float(MaxTimeBetweenDropoffs_type_id);
-		BotAnimSet = serialized->get_string(BotAnimSet_type_id);
+		UseLeftSeats = serialized->get_bool(UseLeftSeats_type_id, true);
+		UseRightSeats = serialized->get_bool(UseRightSeats_type_id, true);
+		AutoDropoff = serialized->get_bool(AutoDropoff_type_id, true);
+		MinTimeBetweenDropoffs = serialized->get_float(MinTimeBetweenDropoffs_type_id, 0.250000);
+		MaxTimeBetweenDropoffs = serialized->get_float(MaxTimeBetweenDropoffs_type_id, 0.250000);
+		BotAnimSet = serialized->get_string(BotAnimSet_type_id, {});
 		Seats = serialized->unwrap_into_many<rivet::ddl::generated::Seat>(Seats_type_id);
 		GroundSearchData = serialized->unwrap_into<rivet::ddl::generated::RidableGroundSearchData>(GroundSearchData_type_id);
 		JumpData = serialized->unwrap_into<rivet::ddl::generated::RidableJumpData>(JumpData_type_id); 

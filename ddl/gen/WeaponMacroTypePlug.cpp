@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	WeaponMacroTypePlug::WeaponMacroTypePlug([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Value = serialized->get_enum<rivet::ddl::generated::x63d44ada>(Value_type_id, rivet::ddl::generated::x63d44ada_values); 
+		Value = serialized->get_enum<rivet::ddl::generated::x63d44ada>(Value_type_id, rivet::ddl::generated::x63d44ada_values, rivet::ddl::generated::x63d44ada::None); 
 	}
 
 	[[nodiscard]] auto

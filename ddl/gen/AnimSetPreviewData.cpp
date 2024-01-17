@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	AnimSetPreviewData::AnimSetPreviewData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Actor = serialized->get_string(Actor_type_id);
+		Actor = serialized->get_string(Actor_type_id, {});
 		Conduit = serialized->get_strings(Conduit_type_id);
-		Model = serialized->get_string(Model_type_id); 
+		Model = serialized->get_string(Model_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

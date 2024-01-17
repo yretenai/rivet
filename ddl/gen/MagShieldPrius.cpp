@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	MagShieldPrius::MagShieldPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SuspendedShotAsset = serialized->get_string(SuspendedShotAsset_type_id);
-		SuspendedLaserAsset = serialized->get_string(SuspendedLaserAsset_type_id);
-		CameraShakeCollectImpact = serialized->get_string(CameraShakeCollectImpact_type_id);
-		CameraShakeFullImpact = serialized->get_string(CameraShakeFullImpact_type_id);
-		DeployDuration = serialized->get_float(DeployDuration_type_id); 
+		SuspendedShotAsset = serialized->get_string(SuspendedShotAsset_type_id, {});
+		SuspendedLaserAsset = serialized->get_string(SuspendedLaserAsset_type_id, {});
+		CameraShakeCollectImpact = serialized->get_string(CameraShakeCollectImpact_type_id, {});
+		CameraShakeFullImpact = serialized->get_string(CameraShakeFullImpact_type_id, {});
+		DeployDuration = serialized->get_float(DeployDuration_type_id, 0.250000); 
 	}
 
 	[[nodiscard]] auto

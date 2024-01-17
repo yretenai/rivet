@@ -13,7 +13,7 @@
 
 namespace rivet::ddl::generated {
 	BasicShotFiringPrius::BasicShotFiringPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): WeaponFiringBasePrius(serialized) {
-		ShotAsset = serialized->get_string(ShotAsset_type_id);
+		ShotAsset = serialized->get_string(ShotAsset_type_id, {});
 		ShotPrius = serialized->unwrap_into<rivet::ddl::generated::ShotBasePrius>(ShotPrius_type_id); 
 	}
 

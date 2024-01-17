@@ -7,14 +7,14 @@
 
 namespace rivet::ddl::generated {
 	DevstatsPrimarySegmentInfo::DevstatsPrimarySegmentInfo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		PrimarySegmentId = serialized->get_string(PrimarySegmentId_type_id);
-		ParentSegmentId = serialized->get_string(ParentSegmentId_type_id);
-		PrimarySegmentType = serialized->get_enum<rivet::ddl::generated::xc6f5c0d7>(PrimarySegmentType_type_id, rivet::ddl::generated::xc6f5c0d7_values);
-		ParentSegmentType = serialized->get_enum<rivet::ddl::generated::xc6f5c0d7>(ParentSegmentType_type_id, rivet::ddl::generated::xc6f5c0d7_values);
-		PrimarySegmentName = serialized->get_string(PrimarySegmentName_type_id);
-		PrimaryParentSegmentName = serialized->get_string(PrimaryParentSegmentName_type_id);
-		PrimarySegmentTime = serialized->get_float(PrimarySegmentTime_type_id);
-		PrimaryParentSegmentTime = serialized->get_float(PrimaryParentSegmentTime_type_id); 
+		PrimarySegmentId = serialized->get_string(PrimarySegmentId_type_id, {});
+		ParentSegmentId = serialized->get_string(ParentSegmentId_type_id, {});
+		PrimarySegmentType = serialized->get_enum<rivet::ddl::generated::xc6f5c0d7>(PrimarySegmentType_type_id, rivet::ddl::generated::xc6f5c0d7_values, rivet::ddl::generated::xc6f5c0d7::Playthrough);
+		ParentSegmentType = serialized->get_enum<rivet::ddl::generated::xc6f5c0d7>(ParentSegmentType_type_id, rivet::ddl::generated::xc6f5c0d7_values, rivet::ddl::generated::xc6f5c0d7::Playthrough);
+		PrimarySegmentName = serialized->get_string(PrimarySegmentName_type_id, {});
+		PrimaryParentSegmentName = serialized->get_string(PrimaryParentSegmentName_type_id, {});
+		PrimarySegmentTime = serialized->get_float(PrimarySegmentTime_type_id, 0.000000);
+		PrimaryParentSegmentTime = serialized->get_float(PrimaryParentSegmentTime_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

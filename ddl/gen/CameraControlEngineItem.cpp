@@ -10,11 +10,11 @@
 namespace rivet::ddl::generated {
 	CameraControlEngineItem::CameraControlEngineItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Center = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Center_type_id);
-		PitchDegrees = serialized->get_float(PitchDegrees_type_id);
-		YawDegrees = serialized->get_float(YawDegrees_type_id);
-		RollDegrees = serialized->get_float(RollDegrees_type_id);
-		DistanceFromCenter = serialized->get_float(DistanceFromCenter_type_id);
-		ChangedBy = serialized->get_enum<rivet::ddl::generated::xcc3b3a79>(ChangedBy_type_id, rivet::ddl::generated::xcc3b3a79_values); 
+		PitchDegrees = serialized->get_float(PitchDegrees_type_id, 30.000000);
+		YawDegrees = serialized->get_float(YawDegrees_type_id, -135.000000);
+		RollDegrees = serialized->get_float(RollDegrees_type_id, 0.000000);
+		DistanceFromCenter = serialized->get_float(DistanceFromCenter_type_id, 10.000000);
+		ChangedBy = serialized->get_enum<rivet::ddl::generated::xcc3b3a79>(ChangedBy_type_id, rivet::ddl::generated::xcc3b3a79_values, rivet::ddl::generated::xcc3b3a79::Editor); 
 	}
 
 	[[nodiscard]] auto

@@ -8,8 +8,8 @@
 namespace rivet::ddl::generated {
 	PerformanceEditorClipBoardAccessor::PerformanceEditorClipBoardAccessor([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Json = serialized->get_field(Json_type_id);
-		Type = serialized->get_string(Type_type_id);
-		ValuePath = serialized->get_string(ValuePath_type_id); 
+		Type = serialized->get_string(Type_type_id, {});
+		ValuePath = serialized->get_string(ValuePath_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

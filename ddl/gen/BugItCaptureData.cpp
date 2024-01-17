@@ -9,9 +9,9 @@
 
 namespace rivet::ddl::generated {
 	BugItCaptureData::BugItCaptureData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		lvl = serialized->get_string(lvl_type_id);
-		chk = serialized->get_string(chk_type_id);
-		region = serialized->get_string(region_type_id);
+		lvl = serialized->get_string(lvl_type_id, "");
+		chk = serialized->get_string(chk_type_id, "");
+		region = serialized->get_string(region_type_id, "");
 		campos = serialized->get_floats(campos_type_id);
 		camrot = serialized->get_floats(camrot_type_id);
 		camup = serialized->get_floats(camup_type_id);
@@ -20,7 +20,7 @@ namespace rivet::ddl::generated {
 		herofwd = serialized->get_floats(herofwd_type_id);
 		zoneIds = serialized->get_uint64s(zoneIds_type_id);
 		zoneTransforms = serialized->unwrap_into_many<rivet::ddl::generated::DDLMatrix4>(zoneTransforms_type_id);
-		activeZoneId = serialized->get_uint64(activeZoneId_type_id); 
+		activeZoneId = serialized->get_uint64(activeZoneId_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

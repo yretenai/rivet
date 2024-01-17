@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	LaserShotTypeSweep::LaserShotTypeSweep([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BotComboLaserShotType(serialized) {
-		LaserTellTime = serialized->get_float(LaserTellTime_type_id);
-		LaserSweepTime = serialized->get_float(LaserSweepTime_type_id);
-		CurveFollowsTarget = serialized->get_bool(CurveFollowsTarget_type_id); 
+		LaserTellTime = serialized->get_float(LaserTellTime_type_id, 2.000000);
+		LaserSweepTime = serialized->get_float(LaserSweepTime_type_id, 1.500000);
+		CurveFollowsTarget = serialized->get_bool(CurveFollowsTarget_type_id, false); 
 	}
 
 	[[nodiscard]] auto

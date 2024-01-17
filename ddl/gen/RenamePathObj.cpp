@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	RenamePathObj::RenamePathObj([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ResourcePath = serialized->get_string(ResourcePath_type_id);
-		OldPath = serialized->get_string(OldPath_type_id);
-		NewPath = serialized->get_string(NewPath_type_id); 
+		ResourcePath = serialized->get_string(ResourcePath_type_id, {});
+		OldPath = serialized->get_string(OldPath_type_id, {});
+		NewPath = serialized->get_string(NewPath_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

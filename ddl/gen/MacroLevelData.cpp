@@ -12,11 +12,11 @@
 namespace rivet::ddl::generated {
 	MacroLevelData::MacroLevelData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		LevelZone = serialized->unwrap_into<rivet::ddl::generated::AssetReferenceDef>(LevelZone_type_id);
-		LevelAreaConfig = serialized->get_string(LevelAreaConfig_type_id);
-		LevelNameLocTag = serialized->get_string(LevelNameLocTag_type_id);
-		LevelDescLocTag = serialized->get_string(LevelDescLocTag_type_id);
-		LevelNumber = serialized->get_int32(LevelNumber_type_id);
-		LevelInstallGroup = serialized->get_int32(LevelInstallGroup_type_id);
+		LevelAreaConfig = serialized->get_string(LevelAreaConfig_type_id, {});
+		LevelNameLocTag = serialized->get_string(LevelNameLocTag_type_id, {});
+		LevelDescLocTag = serialized->get_string(LevelDescLocTag_type_id, {});
+		LevelNumber = serialized->get_int32(LevelNumber_type_id, -1);
+		LevelInstallGroup = serialized->get_int32(LevelInstallGroup_type_id, 0);
 		Loadpoints = serialized->unwrap_into_many<rivet::ddl::generated::MacroLoadpointListItem>(Loadpoints_type_id); 
 	}
 

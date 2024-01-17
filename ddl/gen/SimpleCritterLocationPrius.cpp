@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	SimpleCritterLocationPrius::SimpleCritterLocationPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		EnabledCritterTypes = serialized->get_strings(EnabledCritterTypes_type_id);
-		MeanderRadius = serialized->get_float(MeanderRadius_type_id); 
+		MeanderRadius = serialized->get_float(MeanderRadius_type_id, -1.000000); 
 	}
 
 	[[nodiscard]] auto

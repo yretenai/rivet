@@ -10,18 +10,18 @@
 
 namespace rivet::ddl::generated {
 	MoverConfig::MoverConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		Gravity = serialized->get_float(Gravity_type_id);
-		TerminalVelocity = serialized->get_float(TerminalVelocity_type_id);
-		TurnGain = serialized->get_float(TurnGain_type_id);
-		TurnDamp = serialized->get_float(TurnDamp_type_id);
-		TurnSpeed = serialized->get_float(TurnSpeed_type_id);
-		StepUpHeight = serialized->get_float(StepUpHeight_type_id);
-		StepDownHeight = serialized->get_float(StepDownHeight_type_id);
-		GoodGroundSlope = serialized->get_float(GoodGroundSlope_type_id);
-		ExternalMotionExtraGroundTime = serialized->get_float(ExternalMotionExtraGroundTime_type_id);
-		MaxHeightFail = serialized->get_float(MaxHeightFail_type_id);
-		OrientGain = serialized->get_float(OrientGain_type_id);
-		OrientDamp = serialized->get_float(OrientDamp_type_id);
+		Gravity = serialized->get_float(Gravity_type_id, -10.000000);
+		TerminalVelocity = serialized->get_float(TerminalVelocity_type_id, -15.000000);
+		TurnGain = serialized->get_float(TurnGain_type_id, -8.000000);
+		TurnDamp = serialized->get_float(TurnDamp_type_id, -6.500000);
+		TurnSpeed = serialized->get_float(TurnSpeed_type_id, 1500.000000);
+		StepUpHeight = serialized->get_float(StepUpHeight_type_id, 0.500000);
+		StepDownHeight = serialized->get_float(StepDownHeight_type_id, -0.500000);
+		GoodGroundSlope = serialized->get_float(GoodGroundSlope_type_id, 50.000000);
+		ExternalMotionExtraGroundTime = serialized->get_float(ExternalMotionExtraGroundTime_type_id, 0.150000);
+		MaxHeightFail = serialized->get_float(MaxHeightFail_type_id, 0.100000);
+		OrientGain = serialized->get_float(OrientGain_type_id, -3.000000);
+		OrientDamp = serialized->get_float(OrientDamp_type_id, -1.500000);
 		DefaultBodySize = serialized->unwrap_into<rivet::ddl::generated::MoverBodySize>(DefaultBodySize_type_id); 
 	}
 

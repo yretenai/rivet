@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	CustomChunkActor::CustomChunkActor([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Actor = serialized->get_string(Actor_type_id);
+		Actor = serialized->get_string(Actor_type_id, {});
 		Offset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Offset_type_id); 
 	}
 

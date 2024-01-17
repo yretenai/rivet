@@ -7,14 +7,14 @@
 
 namespace rivet::ddl::generated {
 	AutoExplodePrius::AutoExplodePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Delay = serialized->get_float(Delay_type_id);
-		Amount = serialized->get_float(Amount_type_id);
-		Radius = serialized->get_float(Radius_type_id);
-		Type = serialized->get_enum<rivet::ddl::generated::DamageTypes>(Type_type_id, rivet::ddl::generated::DamageTypes_values);
-		KnockbackLevel = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(KnockbackLevel_type_id, rivet::ddl::generated::KnockbackLevels_values);
-		KnockbackAmount = serialized->get_float(KnockbackAmount_type_id);
-		DestroyOnExplode = serialized->get_bool(DestroyOnExplode_type_id);
-		LineOfSight = serialized->get_bool(LineOfSight_type_id); 
+		Delay = serialized->get_float(Delay_type_id, 0.000000);
+		Amount = serialized->get_float(Amount_type_id, 0.000000);
+		Radius = serialized->get_float(Radius_type_id, 0.000000);
+		Type = serialized->get_enum<rivet::ddl::generated::DamageTypes>(Type_type_id, rivet::ddl::generated::DamageTypes_values, rivet::ddl::generated::DamageTypes::None);
+		KnockbackLevel = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(KnockbackLevel_type_id, rivet::ddl::generated::KnockbackLevels_values, rivet::ddl::generated::KnockbackLevels::None);
+		KnockbackAmount = serialized->get_float(KnockbackAmount_type_id, 0.000000);
+		DestroyOnExplode = serialized->get_bool(DestroyOnExplode_type_id, true);
+		LineOfSight = serialized->get_bool(LineOfSight_type_id, false); 
 	}
 
 	[[nodiscard]] auto

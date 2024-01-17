@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	SessionAssetError::SessionAssetError([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Path = serialized->get_string(Path_type_id);
-		Message = serialized->get_string(Message_type_id);
-		ShouldReload = serialized->get_bool(ShouldReload_type_id); 
+		Path = serialized->get_string(Path_type_id, "");
+		Message = serialized->get_string(Message_type_id, "");
+		ShouldReload = serialized->get_bool(ShouldReload_type_id, true); 
 	}
 
 	[[nodiscard]] auto

@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	UICountDownActionPrius::UICountDownActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		MessageText = serialized->get_string(MessageText_type_id);
-		StartTime = serialized->get_float(StartTime_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::UI);
+		MessageText = serialized->get_string(MessageText_type_id, {});
+		StartTime = serialized->get_float(StartTime_type_id, 60.000000); 
 	}
 
 	[[nodiscard]] auto

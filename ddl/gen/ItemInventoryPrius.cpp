@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	ItemInventoryPrius::ItemInventoryPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Size = serialized->get_uint32(Size_type_id);
-		SyncType = serialized->get_enum<rivet::ddl::generated::SyncTypes>(SyncType_type_id, rivet::ddl::generated::SyncTypes_values); 
+		Size = serialized->get_uint32(Size_type_id, 16);
+		SyncType = serialized->get_enum<rivet::ddl::generated::SyncTypes>(SyncType_type_id, rivet::ddl::generated::SyncTypes_values, rivet::ddl::generated::SyncTypes::Sync_continuously); 
 	}
 
 	[[nodiscard]] auto

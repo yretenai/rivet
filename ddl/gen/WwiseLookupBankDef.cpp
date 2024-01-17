@@ -9,9 +9,9 @@
 
 namespace rivet::ddl::generated {
 	WwiseLookupBankDef::WwiseLookupBankDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Name = serialized->get_string(Name_type_id);
-		Path = serialized->get_string(Path_type_id);
-		AutoLoadOnRef = serialized->get_bool(AutoLoadOnRef_type_id);
+		Name = serialized->get_string(Name_type_id, {});
+		Path = serialized->get_string(Path_type_id, {});
+		AutoLoadOnRef = serialized->get_bool(AutoLoadOnRef_type_id, false);
 		Events = serialized->unwrap_into_many<rivet::ddl::generated::WwiseLookupEventElemDef>(Events_type_id); 
 	}
 

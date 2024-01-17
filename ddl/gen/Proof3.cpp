@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	Proof3::Proof3([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		A = serialized->get_int32(A_type_id);
-		SelA = serialized->get_enum<rivet::ddl::generated::SelB>(SelA_type_id, rivet::ddl::generated::SelB_values);
-		SelB = serialized->get_enum<rivet::ddl::generated::SelB>(SelB_type_id, rivet::ddl::generated::SelB_values); 
+		A = serialized->get_int32(A_type_id, 0);
+		SelA = serialized->get_enum<rivet::ddl::generated::SelB>(SelA_type_id, rivet::ddl::generated::SelB_values, rivet::ddl::generated::SelB::Q);
+		SelB = serialized->get_enum<rivet::ddl::generated::SelB>(SelB_type_id, rivet::ddl::generated::SelB_values, rivet::ddl::generated::SelB::Q); 
 	}
 
 	[[nodiscard]] auto

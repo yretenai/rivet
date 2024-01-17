@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	Cinematic2BuildConfig::Cinematic2BuildConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		MaxNonStreamedSize = serialized->get_uint32(MaxNonStreamedSize_type_id); 
+		MaxNonStreamedSize = serialized->get_uint32(MaxNonStreamedSize_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

@@ -9,15 +9,15 @@
 
 namespace rivet::ddl::generated {
 	UDSBulkActivityMetadata::UDSBulkActivityMetadata([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		type = serialized->get_enum<rivet::ddl::generated::x38e4d198>(type_type_id, rivet::ddl::generated::x38e4d198_values);
-		category = serialized->get_enum<rivet::ddl::generated::xca2817ca>(category_type_id, rivet::ddl::generated::xca2817ca_values);
+		type = serialized->get_enum<rivet::ddl::generated::x38e4d198>(type_type_id, rivet::ddl::generated::x38e4d198_values, rivet::ddl::generated::x38e4d198::activity);
+		category = serialized->get_enum<rivet::ddl::generated::xca2817ca>(category_type_id, rivet::ddl::generated::xca2817ca_values, rivet::ddl::generated::xca2817ca::progress);
 		name = serialized->get_strings(name_type_id);
 		Description = serialized->get_strings(Description_type_id);
-		availableByDefault = serialized->get_bool(availableByDefault_type_id);
-		isRequiredForCompletion = serialized->get_bool(isRequiredForCompletion_type_id);
-		hidden = serialized->get_bool(hidden_type_id);
-		isOnlineMultiplay = serialized->get_bool(isOnlineMultiplay_type_id);
-		defaultPlaytimeEstimate = serialized->get_uint32(defaultPlaytimeEstimate_type_id);
+		availableByDefault = serialized->get_bool(availableByDefault_type_id, false);
+		isRequiredForCompletion = serialized->get_bool(isRequiredForCompletion_type_id, false);
+		hidden = serialized->get_bool(hidden_type_id, false);
+		isOnlineMultiplay = serialized->get_bool(isOnlineMultiplay_type_id, false);
+		defaultPlaytimeEstimate = serialized->get_uint32(defaultPlaytimeEstimate_type_id, 0);
 		rewards = serialized->unwrap_into_many<rivet::ddl::generated::UDSWebApiReward>(rewards_type_id); 
 	}
 

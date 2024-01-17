@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	SetTrophyProgressEvent::SetTrophyProgressEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): CustomEvent(serialized) {
-		SteamAchievement = serialized->get_string(SteamAchievement_type_id); 
+		SteamAchievement = serialized->get_string(SteamAchievement_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

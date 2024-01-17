@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	LogQueryRuntime::LogQueryRuntime([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Operation = serialized->get_enum<rivet::ddl::generated::xc61b70c3>(Operation_type_id, rivet::ddl::generated::xc61b70c3_values);
-		Data = serialized->get_string(Data_type_id); 
+		Operation = serialized->get_enum<rivet::ddl::generated::xc61b70c3>(Operation_type_id, rivet::ddl::generated::xc61b70c3_values, rivet::ddl::generated::xc61b70c3::QueryLoggers);
+		Data = serialized->get_string(Data_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

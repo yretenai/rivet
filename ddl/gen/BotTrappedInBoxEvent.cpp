@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	BotTrappedInBoxEvent::BotTrappedInBoxEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		BoxWidth = serialized->get_float(BoxWidth_type_id);
-		BoxHeight = serialized->get_float(BoxHeight_type_id);
-		BoxLength = serialized->get_float(BoxLength_type_id); 
+		BoxWidth = serialized->get_float(BoxWidth_type_id, 1.000000);
+		BoxHeight = serialized->get_float(BoxHeight_type_id, 1.000000);
+		BoxLength = serialized->get_float(BoxLength_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

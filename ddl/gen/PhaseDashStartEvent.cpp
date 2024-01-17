@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	PhaseDashStartEvent::PhaseDashStartEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		TriggerTrail = serialized->get_bool(TriggerTrail_type_id); 
+		TriggerTrail = serialized->get_bool(TriggerTrail_type_id, true); 
 	}
 
 	[[nodiscard]] auto

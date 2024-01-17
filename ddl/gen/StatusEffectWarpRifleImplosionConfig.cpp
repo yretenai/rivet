@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	StatusEffectWarpRifleImplosionConfig::StatusEffectWarpRifleImplosionConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): StatusEffectConfig(serialized) {
-		ImplosionConfig = serialized->get_string(ImplosionConfig_type_id); 
+		ImplosionConfig = serialized->get_string(ImplosionConfig_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

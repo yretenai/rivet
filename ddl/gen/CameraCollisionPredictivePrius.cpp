@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	CameraCollisionPredictivePrius::CameraCollisionPredictivePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): CameraCollisionBasePrius(serialized) {
-		PredictionCount = serialized->get_uint32(PredictionCount_type_id);
-		UseTargetUpVector = serialized->get_bool(UseTargetUpVector_type_id); 
+		PredictionCount = serialized->get_uint32(PredictionCount_type_id, 6);
+		UseTargetUpVector = serialized->get_bool(UseTargetUpVector_type_id, false); 
 	}
 
 	[[nodiscard]] auto

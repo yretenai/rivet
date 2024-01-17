@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	HoverEffectOnEvent::HoverEffectOnEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Material = serialized->get_enum<rivet::ddl::generated::x10b3c4cf>(Material_type_id, rivet::ddl::generated::x10b3c4cf_values);
-		SpeedType = serialized->get_enum<rivet::ddl::generated::x828cfe7>(SpeedType_type_id, rivet::ddl::generated::x828cfe7_values); 
+		Material = serialized->get_enum<rivet::ddl::generated::x10b3c4cf>(Material_type_id, rivet::ddl::generated::x10b3c4cf_values, rivet::ddl::generated::x10b3c4cf::None);
+		SpeedType = serialized->get_enum<rivet::ddl::generated::x828cfe7>(SpeedType_type_id, rivet::ddl::generated::x828cfe7_values, rivet::ddl::generated::x828cfe7::Slow); 
 	}
 
 	[[nodiscard]] auto

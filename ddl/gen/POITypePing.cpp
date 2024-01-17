@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	POITypePing::POITypePing([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): POIInstanceDataBase(serialized) {
-		Type = serialized->get_enum<rivet::ddl::generated::xf0177ef8>(Type_type_id, rivet::ddl::generated::xf0177ef8_values); 
+		Type = serialized->get_enum<rivet::ddl::generated::xf0177ef8>(Type_type_id, rivet::ddl::generated::xf0177ef8_values, rivet::ddl::generated::xf0177ef8::Objective); 
 	}
 
 	[[nodiscard]] auto

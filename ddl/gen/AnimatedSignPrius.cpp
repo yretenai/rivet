@@ -9,14 +9,14 @@
 
 namespace rivet::ddl::generated {
 	AnimatedSignPrius::AnimatedSignPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		TriggerVolume = serialized->get_uint64(TriggerVolume_type_id);
-		IdleAnim = serialized->get_string(IdleAnim_type_id);
-		IdleToTriggeredAnim = serialized->get_string(IdleToTriggeredAnim_type_id);
-		TriggeredAnim = serialized->get_string(TriggeredAnim_type_id);
-		TriggeredToIdleAnim = serialized->get_string(TriggeredToIdleAnim_type_id);
+		TriggerVolume = serialized->get_uint64(TriggerVolume_type_id, 0);
+		IdleAnim = serialized->get_string(IdleAnim_type_id, {});
+		IdleToTriggeredAnim = serialized->get_string(IdleToTriggeredAnim_type_id, {});
+		TriggeredAnim = serialized->get_string(TriggeredAnim_type_id, {});
+		TriggeredToIdleAnim = serialized->get_string(TriggeredToIdleAnim_type_id, {});
 		AttachedLights = serialized->unwrap_into_many<rivet::ddl::generated::AttachedLightData>(AttachedLights_type_id);
-		LightTrack = serialized->get_string(LightTrack_type_id);
-		TriggeringTargets = serialized->get_bitset<rivet::ddl::generated::xd86baa4d>(TriggeringTargets_type_id, rivet::ddl::generated::xd86baa4d_values); 
+		LightTrack = serialized->get_string(LightTrack_type_id, {});
+		TriggeringTargets = serialized->get_bitset<rivet::ddl::generated::xd86baa4d>(TriggeringTargets_type_id, rivet::ddl::generated::xd86baa4d_values, 0); 
 	}
 
 	[[nodiscard]] auto

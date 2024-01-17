@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	WwiseParameter::WwiseParameter([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ParameterName = serialized->get_string(ParameterName_type_id);
-		ParameterId = serialized->get_uint32(ParameterId_type_id);
-		ParameterValue = serialized->get_float(ParameterValue_type_id); 
+		ParameterName = serialized->get_string(ParameterName_type_id, {});
+		ParameterId = serialized->get_uint32(ParameterId_type_id, 0);
+		ParameterValue = serialized->get_float(ParameterValue_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

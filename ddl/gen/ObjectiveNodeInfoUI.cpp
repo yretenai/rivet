@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	ObjectiveNodeInfoUI::ObjectiveNodeInfoUI([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		NameLocTag = serialized->get_string(NameLocTag_type_id);
-		DescriptionLocTag = serialized->get_string(DescriptionLocTag_type_id);
-		PlanetName = serialized->get_string(PlanetName_type_id);
-		AlwaysPing = serialized->get_bool(AlwaysPing_type_id); 
+		NameLocTag = serialized->get_string(NameLocTag_type_id, {});
+		DescriptionLocTag = serialized->get_string(DescriptionLocTag_type_id, {});
+		PlanetName = serialized->get_string(PlanetName_type_id, {});
+		AlwaysPing = serialized->get_bool(AlwaysPing_type_id, false); 
 	}
 
 	[[nodiscard]] auto

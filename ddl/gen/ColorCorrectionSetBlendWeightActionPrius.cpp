@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	ColorCorrectionSetBlendWeightActionPrius::ColorCorrectionSetBlendWeightActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		Type = serialized->get_enum<rivet::ddl::generated::xa7ef66f3>(Type_type_id, rivet::ddl::generated::xa7ef66f3_values);
-		BlendWeight = serialized->get_float(BlendWeight_type_id);
-		BlendTime = serialized->get_float(BlendTime_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Rendering);
+		Type = serialized->get_enum<rivet::ddl::generated::xa7ef66f3>(Type_type_id, rivet::ddl::generated::xa7ef66f3_values, rivet::ddl::generated::xa7ef66f3::None);
+		BlendWeight = serialized->get_float(BlendWeight_type_id, 0.000000);
+		BlendTime = serialized->get_float(BlendTime_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

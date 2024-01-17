@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	PilotPrius::PilotPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Dies = serialized->get_bool(Dies_type_id);
-		Horns = serialized->get_string(Horns_type_id); 
+		Dies = serialized->get_bool(Dies_type_id, false);
+		Horns = serialized->get_string(Horns_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

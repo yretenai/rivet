@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	Cinematic2BotReadyEvent::Cinematic2BotReadyEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Successful = serialized->get_bool(Successful_type_id);
-		DeactivateAnimLayerZero = serialized->get_bool(DeactivateAnimLayerZero_type_id); 
+		Successful = serialized->get_bool(Successful_type_id, true);
+		DeactivateAnimLayerZero = serialized->get_bool(DeactivateAnimLayerZero_type_id, false); 
 	}
 
 	[[nodiscard]] auto

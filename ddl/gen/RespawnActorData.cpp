@@ -9,11 +9,11 @@
 
 namespace rivet::ddl::generated {
 	RespawnActorData::RespawnActorData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ActorSpawnData(serialized) {
-		AssetId = serialized->get_uint64(AssetId_type_id);
+		AssetId = serialized->get_uint64(AssetId_type_id, 0);
 		Transform = serialized->unwrap_into<rivet::ddl::generated::DDLTransform>(Transform_type_id);
-		OwnerHandle = serialized->get_uint32(OwnerHandle_type_id);
-		GroupIndex = serialized->get_int32(GroupIndex_type_id);
-		ActorIndex = serialized->get_int32(ActorIndex_type_id); 
+		OwnerHandle = serialized->get_uint32(OwnerHandle_type_id, 0);
+		GroupIndex = serialized->get_int32(GroupIndex_type_id, 0);
+		ActorIndex = serialized->get_int32(ActorIndex_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

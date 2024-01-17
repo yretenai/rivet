@@ -7,15 +7,15 @@
 
 namespace rivet::ddl::generated {
 	DevstatsSegmentSaveData::DevstatsSegmentSaveData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SegmentId = serialized->get_string(SegmentId_type_id);
-		SegmentName = serialized->get_string(SegmentName_type_id);
-		ParentSegmentName = serialized->get_string(ParentSegmentName_type_id);
-		ParentSegmentId = serialized->get_uint32(ParentSegmentId_type_id);
-		UsePauseTime = serialized->get_bool(UsePauseTime_type_id);
-		StartTime = serialized->get_double(StartTime_type_id);
-		Duration = serialized->get_float(Duration_type_id);
-		SegmentType = serialized->get_enum<rivet::ddl::generated::xc6f5c0d7>(SegmentType_type_id, rivet::ddl::generated::xc6f5c0d7_values);
-		SegmentFlags = serialized->get_bitset<rivet::ddl::generated::xc353b5be>(SegmentFlags_type_id, rivet::ddl::generated::xc353b5be_values); 
+		SegmentId = serialized->get_string(SegmentId_type_id, {});
+		SegmentName = serialized->get_string(SegmentName_type_id, {});
+		ParentSegmentName = serialized->get_string(ParentSegmentName_type_id, {});
+		ParentSegmentId = serialized->get_uint32(ParentSegmentId_type_id, 0);
+		UsePauseTime = serialized->get_bool(UsePauseTime_type_id, false);
+		StartTime = serialized->get_double(StartTime_type_id, -1.000000);
+		Duration = serialized->get_float(Duration_type_id, 0.000000);
+		SegmentType = serialized->get_enum<rivet::ddl::generated::xc6f5c0d7>(SegmentType_type_id, rivet::ddl::generated::xc6f5c0d7_values, rivet::ddl::generated::xc6f5c0d7::Playthrough);
+		SegmentFlags = serialized->get_bitset<rivet::ddl::generated::xc353b5be>(SegmentFlags_type_id, rivet::ddl::generated::xc353b5be_values, 0); 
 	}
 
 	[[nodiscard]] auto

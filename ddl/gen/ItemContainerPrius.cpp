@@ -10,8 +10,8 @@
 namespace rivet::ddl::generated {
 	ItemContainerPrius::ItemContainerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Items = serialized->unwrap_into_many<rivet::ddl::generated::ItemListElement>(Items_type_id);
-		DeleteOnSalvage = serialized->get_bool(DeleteOnSalvage_type_id);
-		RespawnItemsTime = serialized->get_float(RespawnItemsTime_type_id); 
+		DeleteOnSalvage = serialized->get_bool(DeleteOnSalvage_type_id, true);
+		RespawnItemsTime = serialized->get_float(RespawnItemsTime_type_id, 300.000000); 
 	}
 
 	[[nodiscard]] auto

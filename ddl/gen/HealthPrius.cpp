@@ -14,9 +14,9 @@
 
 namespace rivet::ddl::generated {
 	HealthPrius::HealthPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MaxHitPoints = serialized->get_float(MaxHitPoints_type_id);
-		InjuredHitPoints = serialized->get_float(InjuredHitPoints_type_id);
-		Flags = serialized->get_bitset<rivet::ddl::generated::x7b898c1>(Flags_type_id, rivet::ddl::generated::x7b898c1_values); 
+		MaxHitPoints = serialized->get_float(MaxHitPoints_type_id, 100.000000);
+		InjuredHitPoints = serialized->get_float(InjuredHitPoints_type_id, 0.000000);
+		Flags = serialized->get_bitset<rivet::ddl::generated::x7b898c1>(Flags_type_id, rivet::ddl::generated::x7b898c1_values, 0); 
 	}
 
 	[[nodiscard]] auto

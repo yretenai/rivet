@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	ArachnodroidWeaponActionPrius::ArachnodroidWeaponActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		WeaponConfig = serialized->get_string(WeaponConfig_type_id);
-		Slot = serialized->get_enum<rivet::ddl::generated::x1d491c7a>(Slot_type_id, rivet::ddl::generated::x1d491c7a_values); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Weapon);
+		WeaponConfig = serialized->get_string(WeaponConfig_type_id, {});
+		Slot = serialized->get_enum<rivet::ddl::generated::x1d491c7a>(Slot_type_id, rivet::ddl::generated::x1d491c7a_values, rivet::ddl::generated::x1d491c7a::Right); 
 	}
 
 	[[nodiscard]] auto

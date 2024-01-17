@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	SetRenderHudEngineCommand::SetRenderHudEngineCommand([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Render = serialized->get_bool(Render_type_id); 
+		Render = serialized->get_bool(Render_type_id, false); 
 	}
 
 	[[nodiscard]] auto

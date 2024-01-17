@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	SetPoolIdResponseMessage::SetPoolIdResponseMessage([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ObjectId = serialized->get_uint16(ObjectId_type_id);
-		PoolId = serialized->get_uint16(PoolId_type_id); 
+		ObjectId = serialized->get_uint16(ObjectId_type_id, 0);
+		PoolId = serialized->get_uint16(PoolId_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

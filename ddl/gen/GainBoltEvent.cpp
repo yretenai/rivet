@@ -9,9 +9,9 @@
 
 namespace rivet::ddl::generated {
 	GainBoltEvent::GainBoltEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		EventId = serialized->get_string(EventId_type_id);
-		NewBolts = serialized->get_int32(NewBolts_type_id);
-		TotalBolts = serialized->get_int32(TotalBolts_type_id);
+		EventId = serialized->get_string(EventId_type_id, {});
+		NewBolts = serialized->get_int32(NewBolts_type_id, 0);
+		TotalBolts = serialized->get_int32(TotalBolts_type_id, 0);
 		PrimarySegmentInfo = serialized->unwrap_into<rivet::ddl::generated::DevstatsPrimarySegmentInfo>(PrimarySegmentInfo_type_id); 
 	}
 

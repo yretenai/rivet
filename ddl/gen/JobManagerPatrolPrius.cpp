@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	JobManagerPatrolPrius::JobManagerPatrolPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Broadcast = serialized->get_bool(Broadcast_type_id);
-		MovementStyle = serialized->get_enum<rivet::ddl::generated::MovementStyle>(MovementStyle_type_id, rivet::ddl::generated::MovementStyle_values);
-		UsableByLargeEnemies = serialized->get_bool(UsableByLargeEnemies_type_id);
-		StartAtBeginningOfCurve = serialized->get_bool(StartAtBeginningOfCurve_type_id);
-		DisableBroadcastOnUse = serialized->get_bool(DisableBroadcastOnUse_type_id);
-		HoveringPatrol = serialized->get_bool(HoveringPatrol_type_id); 
+		Broadcast = serialized->get_bool(Broadcast_type_id, false);
+		MovementStyle = serialized->get_enum<rivet::ddl::generated::MovementStyle>(MovementStyle_type_id, rivet::ddl::generated::MovementStyle_values, rivet::ddl::generated::MovementStyle::Walk);
+		UsableByLargeEnemies = serialized->get_bool(UsableByLargeEnemies_type_id, false);
+		StartAtBeginningOfCurve = serialized->get_bool(StartAtBeginningOfCurve_type_id, false);
+		DisableBroadcastOnUse = serialized->get_bool(DisableBroadcastOnUse_type_id, false);
+		HoveringPatrol = serialized->get_bool(HoveringPatrol_type_id, false); 
 	}
 
 	[[nodiscard]] auto

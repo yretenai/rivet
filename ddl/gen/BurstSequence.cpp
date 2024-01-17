@@ -12,11 +12,11 @@ namespace rivet::ddl::generated {
 	BurstSequence::BurstSequence([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		PrimaryBurst = serialized->unwrap_into<rivet::ddl::generated::Burst>(PrimaryBurst_type_id);
 		SubBursts = serialized->unwrap_into_many<rivet::ddl::generated::SubBurst>(SubBursts_type_id);
-		TotalDuration = serialized->get_float(TotalDuration_type_id);
-		TotalBurstShots = serialized->get_int32(TotalBurstShots_type_id);
-		WaitDurationMin = serialized->get_float(WaitDurationMin_type_id);
-		WaitDurationMax = serialized->get_float(WaitDurationMax_type_id);
-		WaitDuration = serialized->get_float(WaitDuration_type_id); 
+		TotalDuration = serialized->get_float(TotalDuration_type_id, 0.000000);
+		TotalBurstShots = serialized->get_int32(TotalBurstShots_type_id, 0);
+		WaitDurationMin = serialized->get_float(WaitDurationMin_type_id, 1.000000);
+		WaitDurationMax = serialized->get_float(WaitDurationMax_type_id, 2.000000);
+		WaitDuration = serialized->get_float(WaitDuration_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

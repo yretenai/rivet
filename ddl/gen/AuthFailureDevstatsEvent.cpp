@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	AuthFailureDevstatsEvent::AuthFailureDevstatsEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		ID = serialized->get_string(ID_type_id); 
+		ID = serialized->get_string(ID_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

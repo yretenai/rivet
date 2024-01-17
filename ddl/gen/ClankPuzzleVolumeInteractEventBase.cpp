@@ -13,7 +13,7 @@
 
 namespace rivet::ddl::generated {
 	ClankPuzzleVolumeInteractEventBase::ClankPuzzleVolumeInteractEventBase([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		VolumeType = serialized->get_enum<rivet::ddl::generated::x17b935fe>(VolumeType_type_id, rivet::ddl::generated::x17b935fe_values); 
+		VolumeType = serialized->get_enum<rivet::ddl::generated::x17b935fe>(VolumeType_type_id, rivet::ddl::generated::x17b935fe_values, rivet::ddl::generated::x17b935fe::None); 
 	}
 
 	[[nodiscard]] auto

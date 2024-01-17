@@ -12,7 +12,7 @@
 
 namespace rivet::ddl::generated {
 	ComboDisplayDataBase::ComboDisplayDataBase([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DisplayName = serialized->get_string(DisplayName_type_id); 
+		DisplayName = serialized->get_string(DisplayName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

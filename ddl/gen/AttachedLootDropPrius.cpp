@@ -10,8 +10,8 @@
 namespace rivet::ddl::generated {
 	AttachedLootDropPrius::AttachedLootDropPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		LootData = serialized->unwrap_into<rivet::ddl::generated::CommonLootData>(LootData_type_id);
-		LocatorName = serialized->get_string(LocatorName_type_id);
-		DropLootForKillerType = serialized->get_enum<rivet::ddl::generated::xa7ea7084>(DropLootForKillerType_type_id, rivet::ddl::generated::xa7ea7084_values); 
+		LocatorName = serialized->get_string(LocatorName_type_id, {});
+		DropLootForKillerType = serialized->get_enum<rivet::ddl::generated::xa7ea7084>(DropLootForKillerType_type_id, rivet::ddl::generated::xa7ea7084_values, rivet::ddl::generated::xa7ea7084::Everybody); 
 	}
 
 	[[nodiscard]] auto

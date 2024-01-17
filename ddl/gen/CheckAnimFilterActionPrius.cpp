@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	CheckAnimFilterActionPrius::CheckAnimFilterActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		FilterGroup = serialized->get_enum<rivet::ddl::generated::x6571cd70>(FilterGroup_type_id, rivet::ddl::generated::x6571cd70_values);
-		FilterId = serialized->get_enum<rivet::ddl::generated::xfdd79442>(FilterId_type_id, rivet::ddl::generated::xfdd79442_values);
-		QueryCamera = serialized->get_bool(QueryCamera_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Actor);
+		FilterGroup = serialized->get_enum<rivet::ddl::generated::x6571cd70>(FilterGroup_type_id, rivet::ddl::generated::x6571cd70_values, rivet::ddl::generated::x6571cd70::Elevation);
+		FilterId = serialized->get_enum<rivet::ddl::generated::xfdd79442>(FilterId_type_id, rivet::ddl::generated::xfdd79442_values, rivet::ddl::generated::xfdd79442::Any);
+		QueryCamera = serialized->get_bool(QueryCamera_type_id, false); 
 	}
 
 	[[nodiscard]] auto

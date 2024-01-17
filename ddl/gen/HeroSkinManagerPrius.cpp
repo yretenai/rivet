@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	HeroSkinManagerPrius::HeroSkinManagerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): SkinManagerBasePrius(serialized) {
-		HeroType = serialized->get_enum<rivet::ddl::generated::HeroTypes>(HeroType_type_id, rivet::ddl::generated::HeroTypes_values); 
+		HeroType = serialized->get_enum<rivet::ddl::generated::HeroTypes>(HeroType_type_id, rivet::ddl::generated::HeroTypes_values, rivet::ddl::generated::HeroTypes::None); 
 	}
 
 	[[nodiscard]] auto

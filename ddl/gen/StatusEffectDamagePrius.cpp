@@ -7,14 +7,14 @@
 
 namespace rivet::ddl::generated {
 	StatusEffectDamagePrius::StatusEffectDamagePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): StatusEffectBasePrius(serialized) {
-		DamageSelf = serialized->get_bool(DamageSelf_type_id);
-		DamageFriends = serialized->get_bool(DamageFriends_type_id);
-		LoS = serialized->get_bool(LoS_type_id);
-		Knockback = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(Knockback_type_id, rivet::ddl::generated::KnockbackLevels_values);
-		Type = serialized->get_enum<rivet::ddl::generated::DamageTypes>(Type_type_id, rivet::ddl::generated::DamageTypes_values);
-		DamageStartTimeRandom = serialized->get_bool(DamageStartTimeRandom_type_id);
-		DamageLocator = serialized->get_string(DamageLocator_type_id);
-		IgnoreActor = serialized->get_uint64(IgnoreActor_type_id); 
+		DamageSelf = serialized->get_bool(DamageSelf_type_id, true);
+		DamageFriends = serialized->get_bool(DamageFriends_type_id, true);
+		LoS = serialized->get_bool(LoS_type_id, true);
+		Knockback = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(Knockback_type_id, rivet::ddl::generated::KnockbackLevels_values, rivet::ddl::generated::KnockbackLevels::None);
+		Type = serialized->get_enum<rivet::ddl::generated::DamageTypes>(Type_type_id, rivet::ddl::generated::DamageTypes_values, rivet::ddl::generated::DamageTypes::None);
+		DamageStartTimeRandom = serialized->get_bool(DamageStartTimeRandom_type_id, true);
+		DamageLocator = serialized->get_string(DamageLocator_type_id, {});
+		IgnoreActor = serialized->get_uint64(IgnoreActor_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

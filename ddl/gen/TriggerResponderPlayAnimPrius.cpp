@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	TriggerResponderPlayAnimPrius::TriggerResponderPlayAnimPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): TriggerResponderBasePrius(serialized) {
-		AnimSyncMode = serialized->get_enum<rivet::ddl::generated::AnimSyncMode>(AnimSyncMode_type_id, rivet::ddl::generated::AnimSyncMode_values); 
+		AnimSyncMode = serialized->get_enum<rivet::ddl::generated::AnimSyncMode>(AnimSyncMode_type_id, rivet::ddl::generated::AnimSyncMode_values, rivet::ddl::generated::AnimSyncMode::One_Minus_Norm_T); 
 	}
 
 	[[nodiscard]] auto

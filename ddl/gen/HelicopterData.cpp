@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	HelicopterData::HelicopterData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		FlightArea = serialized->get_uint64(FlightArea_type_id);
-		DeathArea = serialized->get_uint64(DeathArea_type_id);
-		RandomizeDeathPosition = serialized->get_bool(RandomizeDeathPosition_type_id);
-		DamagerOffset = serialized->get_float(DamagerOffset_type_id);
-		MoveToBestFirepoint = serialized->get_bool(MoveToBestFirepoint_type_id); 
+		FlightArea = serialized->get_uint64(FlightArea_type_id, 0);
+		DeathArea = serialized->get_uint64(DeathArea_type_id, 0);
+		RandomizeDeathPosition = serialized->get_bool(RandomizeDeathPosition_type_id, false);
+		DamagerOffset = serialized->get_float(DamagerOffset_type_id, 0.000000);
+		MoveToBestFirepoint = serialized->get_bool(MoveToBestFirepoint_type_id, false); 
 	}
 
 	[[nodiscard]] auto

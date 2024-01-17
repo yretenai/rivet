@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	PlanetMapOverrideVolumePrius::PlanetMapOverrideVolumePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Map = serialized->get_enum<rivet::ddl::generated::xd64fa9b1>(Map_type_id, rivet::ddl::generated::xd64fa9b1_values); 
+		Map = serialized->get_enum<rivet::ddl::generated::xd64fa9b1>(Map_type_id, rivet::ddl::generated::xd64fa9b1_values, rivet::ddl::generated::xd64fa9b1::None); 
 	}
 
 	[[nodiscard]] auto

@@ -7,20 +7,20 @@
 
 namespace rivet::ddl::generated {
 	SharedFrameBudgetAmortizationSettings::SharedFrameBudgetAmortizationSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		LosBlockerTargetMaxBlockersPerFrame = serialized->get_int32(LosBlockerTargetMaxBlockersPerFrame_type_id);
-		HeroAwarenessMaxRaycastsPerFrame = serialized->get_uint8(HeroAwarenessMaxRaycastsPerFrame_type_id);
-		ManualAwarenessMaxRaycastsPerFrame = serialized->get_uint8(ManualAwarenessMaxRaycastsPerFrame_type_id);
-		OmniAwarenessMaxRaycastsPerFrame = serialized->get_uint8(OmniAwarenessMaxRaycastsPerFrame_type_id);
-		ShuffleHunterMaxRaycastsPerFrame = serialized->get_uint8(ShuffleHunterMaxRaycastsPerFrame_type_id);
-		FirepointLosCheckerMaxRaycastsPerFrame = serialized->get_uint8(FirepointLosCheckerMaxRaycastsPerFrame_type_id);
-		PerchLOSCheckerMaxRaycastsPerFrame = serialized->get_uint8(PerchLOSCheckerMaxRaycastsPerFrame_type_id);
-		GrenadeShotMaxRaycastsPerFrame = serialized->get_uint8(GrenadeShotMaxRaycastsPerFrame_type_id);
-		ShotActionProximityTestMaxRaycastsPerFrame = serialized->get_uint8(ShotActionProximityTestMaxRaycastsPerFrame_type_id);
-		CorpseManagerMaxRagdollsPerFrame = serialized->get_int32(CorpseManagerMaxRagdollsPerFrame_type_id);
-		CorpseManagerMaxDeletePerFrame = serialized->get_int32(CorpseManagerMaxDeletePerFrame_type_id);
-		FlewByMaxEventsPerFrame = serialized->get_int32(FlewByMaxEventsPerFrame_type_id);
-		ChunkManagerMaxTotalChunks = serialized->get_uint32(ChunkManagerMaxTotalChunks_type_id);
-		ChunkManagerMaxLowPrioritySpawnsPerFrame = serialized->get_uint32(ChunkManagerMaxLowPrioritySpawnsPerFrame_type_id); 
+		LosBlockerTargetMaxBlockersPerFrame = serialized->get_int32(LosBlockerTargetMaxBlockersPerFrame_type_id, 8);
+		HeroAwarenessMaxRaycastsPerFrame = serialized->get_uint8(HeroAwarenessMaxRaycastsPerFrame_type_id, 1);
+		ManualAwarenessMaxRaycastsPerFrame = serialized->get_uint8(ManualAwarenessMaxRaycastsPerFrame_type_id, 2);
+		OmniAwarenessMaxRaycastsPerFrame = serialized->get_uint8(OmniAwarenessMaxRaycastsPerFrame_type_id, 1);
+		ShuffleHunterMaxRaycastsPerFrame = serialized->get_uint8(ShuffleHunterMaxRaycastsPerFrame_type_id, 1);
+		FirepointLosCheckerMaxRaycastsPerFrame = serialized->get_uint8(FirepointLosCheckerMaxRaycastsPerFrame_type_id, 16);
+		PerchLOSCheckerMaxRaycastsPerFrame = serialized->get_uint8(PerchLOSCheckerMaxRaycastsPerFrame_type_id, 16);
+		GrenadeShotMaxRaycastsPerFrame = serialized->get_uint8(GrenadeShotMaxRaycastsPerFrame_type_id, 5);
+		ShotActionProximityTestMaxRaycastsPerFrame = serialized->get_uint8(ShotActionProximityTestMaxRaycastsPerFrame_type_id, 4);
+		CorpseManagerMaxRagdollsPerFrame = serialized->get_int32(CorpseManagerMaxRagdollsPerFrame_type_id, 3);
+		CorpseManagerMaxDeletePerFrame = serialized->get_int32(CorpseManagerMaxDeletePerFrame_type_id, 3);
+		FlewByMaxEventsPerFrame = serialized->get_int32(FlewByMaxEventsPerFrame_type_id, 64);
+		ChunkManagerMaxTotalChunks = serialized->get_uint32(ChunkManagerMaxTotalChunks_type_id, 300);
+		ChunkManagerMaxLowPrioritySpawnsPerFrame = serialized->get_uint32(ChunkManagerMaxLowPrioritySpawnsPerFrame_type_id, 64); 
 	}
 
 	[[nodiscard]] auto

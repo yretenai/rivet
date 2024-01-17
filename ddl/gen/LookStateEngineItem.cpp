@@ -10,7 +10,7 @@
 
 namespace rivet::ddl::generated {
 	LookStateEngineItem::LookStateEngineItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ModelAssetPath = serialized->get_string(ModelAssetPath_type_id);
+		ModelAssetPath = serialized->get_string(ModelAssetPath_type_id, {});
 		Looks = serialized->unwrap_into_many<rivet::ddl::generated::LookEngineItem>(Looks_type_id);
 		LookGroups = serialized->unwrap_into_many<rivet::ddl::generated::LookGroupEngineItem>(LookGroups_type_id); 
 	}

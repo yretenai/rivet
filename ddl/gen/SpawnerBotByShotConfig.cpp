@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	SpawnerBotByShotConfig::SpawnerBotByShotConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): SpawnerBotBaseConfig(serialized) {
-		NumTotalSpawnedBots = serialized->get_int32(NumTotalSpawnedBots_type_id); 
+		NumTotalSpawnedBots = serialized->get_int32(NumTotalSpawnedBots_type_id, -1); 
 	}
 
 	[[nodiscard]] auto

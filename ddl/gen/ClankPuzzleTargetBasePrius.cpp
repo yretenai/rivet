@@ -9,10 +9,10 @@
 
 namespace rivet::ddl::generated {
 	ClankPuzzleTargetBasePrius::ClankPuzzleTargetBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		TargetConfig = serialized->get_string(TargetConfig_type_id);
-		ShowHoverTip = serialized->get_bool(ShowHoverTip_type_id);
-		ActorGroup = serialized->get_uint64(ActorGroup_type_id);
-		VisualActorGroup = serialized->get_uint64(VisualActorGroup_type_id); 
+		TargetConfig = serialized->get_string(TargetConfig_type_id, {});
+		ShowHoverTip = serialized->get_bool(ShowHoverTip_type_id, false);
+		ActorGroup = serialized->get_uint64(ActorGroup_type_id, 0);
+		VisualActorGroup = serialized->get_uint64(VisualActorGroup_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

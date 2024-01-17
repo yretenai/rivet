@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	ContainerShipSpawnData::ContainerShipSpawnData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ActorSpawnData(serialized) {
-		Spawner = serialized->get_uint32(Spawner_type_id);
-		AssetId = serialized->get_uint64(AssetId_type_id); 
+		Spawner = serialized->get_uint32(Spawner_type_id, 0);
+		AssetId = serialized->get_uint64(AssetId_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

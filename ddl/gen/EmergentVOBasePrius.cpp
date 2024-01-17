@@ -11,7 +11,7 @@
 
 namespace rivet::ddl::generated {
 	EmergentVOBasePrius::EmergentVOBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		EntityType = serialized->get_string(EntityType_type_id);
+		EntityType = serialized->get_string(EntityType_type_id, {});
 		DialogTags = serialized->unwrap_into<rivet::ddl::generated::EmergentVOTagList>(DialogTags_type_id); 
 	}
 

@@ -13,29 +13,29 @@
 
 namespace rivet::ddl::generated {
 	WeaponTrajectoryDrawerPrius::WeaponTrajectoryDrawerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ArcStyle = serialized->get_enum<rivet::ddl::generated::x399b7397>(ArcStyle_type_id, rivet::ddl::generated::x399b7397_values);
+		ArcStyle = serialized->get_enum<rivet::ddl::generated::x399b7397>(ArcStyle_type_id, rivet::ddl::generated::x399b7397_values, rivet::ddl::generated::x399b7397::MaterialSpline);
 		KnotData = serialized->unwrap_into<rivet::ddl::generated::TrajectorDrawerKnotData>(KnotData_type_id);
 		Arc = serialized->unwrap_into<rivet::ddl::generated::TrajectoryDrawerArcData>(Arc_type_id);
 		AimArc = serialized->unwrap_into<rivet::ddl::generated::TrajectoryDrawerArcData>(AimArc_type_id);
 		HighlightArc = serialized->unwrap_into<rivet::ddl::generated::TrajectoryDrawerArcData>(HighlightArc_type_id);
-		ArcWidth = serialized->get_float(ArcWidth_type_id);
-		OnlyDrawArcOnCollision = serialized->get_bool(OnlyDrawArcOnCollision_type_id);
-		DecalTexture = serialized->get_string(DecalTexture_type_id);
-		DecalMaterial = serialized->get_string(DecalMaterial_type_id);
-		DecalSize = serialized->get_float(DecalSize_type_id);
-		DecalAlpha = serialized->get_float(DecalAlpha_type_id);
-		CameraOrient = serialized->get_bool(CameraOrient_type_id);
-		PointOfImpactActor = serialized->get_string(PointOfImpactActor_type_id);
-		ScalePointOfImpactActor = serialized->get_bool(ScalePointOfImpactActor_type_id);
-		PointOfImpactSize = serialized->get_float(PointOfImpactSize_type_id);
-		ImpactActorSkipDepth = serialized->get_bool(ImpactActorSkipDepth_type_id);
-		ApplyMaterialToImpactActor = serialized->get_bool(ApplyMaterialToImpactActor_type_id);
-		ActorOrientation = serialized->get_enum<rivet::ddl::generated::ActorOrientation>(ActorOrientation_type_id, rivet::ddl::generated::ActorOrientation_values);
+		ArcWidth = serialized->get_float(ArcWidth_type_id, 0.100000);
+		OnlyDrawArcOnCollision = serialized->get_bool(OnlyDrawArcOnCollision_type_id, false);
+		DecalTexture = serialized->get_string(DecalTexture_type_id, {});
+		DecalMaterial = serialized->get_string(DecalMaterial_type_id, {});
+		DecalSize = serialized->get_float(DecalSize_type_id, 1.000000);
+		DecalAlpha = serialized->get_float(DecalAlpha_type_id, 1.000000);
+		CameraOrient = serialized->get_bool(CameraOrient_type_id, false);
+		PointOfImpactActor = serialized->get_string(PointOfImpactActor_type_id, {});
+		ScalePointOfImpactActor = serialized->get_bool(ScalePointOfImpactActor_type_id, true);
+		PointOfImpactSize = serialized->get_float(PointOfImpactSize_type_id, 0.050000);
+		ImpactActorSkipDepth = serialized->get_bool(ImpactActorSkipDepth_type_id, true);
+		ApplyMaterialToImpactActor = serialized->get_bool(ApplyMaterialToImpactActor_type_id, false);
+		ActorOrientation = serialized->get_enum<rivet::ddl::generated::ActorOrientation>(ActorOrientation_type_id, rivet::ddl::generated::ActorOrientation_values, rivet::ddl::generated::ActorOrientation::CameraToHitIsZAxis);
 		AimPointOfImpactActor = serialized->unwrap_into<rivet::ddl::generated::PointOfImpactActorData>(AimPointOfImpactActor_type_id);
 		AltPointOfImpactActors = serialized->unwrap_into_many<rivet::ddl::generated::PointOfImpactActorData>(AltPointOfImpactActors_type_id);
-		TriggerIndex = serialized->get_uint32(TriggerIndex_type_id);
-		ShotIndex = serialized->get_uint32(ShotIndex_type_id);
-		IgnoreCollDist = serialized->get_float(IgnoreCollDist_type_id); 
+		TriggerIndex = serialized->get_uint32(TriggerIndex_type_id, 0);
+		ShotIndex = serialized->get_uint32(ShotIndex_type_id, 0);
+		IgnoreCollDist = serialized->get_float(IgnoreCollDist_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

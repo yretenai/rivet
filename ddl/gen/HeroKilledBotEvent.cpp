@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	HeroKilledBotEvent::HeroKilledBotEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		VictimSize = serialized->get_string(VictimSize_type_id);
-		VictimCharacterType = serialized->get_string(VictimCharacterType_type_id); 
+		VictimSize = serialized->get_string(VictimSize_type_id, {});
+		VictimCharacterType = serialized->get_string(VictimCharacterType_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	ProximityDamageData::ProximityDamageData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DamageName = serialized->get_string(DamageName_type_id);
-		DamageAmount = serialized->get_float(DamageAmount_type_id);
-		DamageRadius = serialized->get_float(DamageRadius_type_id); 
+		DamageName = serialized->get_string(DamageName_type_id, "ProximityDamage");
+		DamageAmount = serialized->get_float(DamageAmount_type_id, 100.000000);
+		DamageRadius = serialized->get_float(DamageRadius_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

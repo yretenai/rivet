@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	TerrainPaintingTarget::TerrainPaintingTarget([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SplatMaskLayerId = serialized->get_uint8(SplatMaskLayerId_type_id);
-		Type = serialized->get_enum<rivet::ddl::generated::x6b1fdfe1>(Type_type_id, rivet::ddl::generated::x6b1fdfe1_values); 
+		SplatMaskLayerId = serialized->get_uint8(SplatMaskLayerId_type_id, 0);
+		Type = serialized->get_enum<rivet::ddl::generated::x6b1fdfe1>(Type_type_id, rivet::ddl::generated::x6b1fdfe1_values, rivet::ddl::generated::x6b1fdfe1::HeightField); 
 	}
 
 	[[nodiscard]] auto

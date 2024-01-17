@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	SpawnDirections::SpawnDirections([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		PositiveX = serialized->get_bool(PositiveX_type_id);
-		NegativeX = serialized->get_bool(NegativeX_type_id);
-		PositiveY = serialized->get_bool(PositiveY_type_id);
-		NegativeY = serialized->get_bool(NegativeY_type_id);
-		PositiveZ = serialized->get_bool(PositiveZ_type_id);
-		NegativeZ = serialized->get_bool(NegativeZ_type_id); 
+		PositiveX = serialized->get_bool(PositiveX_type_id, true);
+		NegativeX = serialized->get_bool(NegativeX_type_id, true);
+		PositiveY = serialized->get_bool(PositiveY_type_id, true);
+		NegativeY = serialized->get_bool(NegativeY_type_id, true);
+		PositiveZ = serialized->get_bool(PositiveZ_type_id, true);
+		NegativeZ = serialized->get_bool(NegativeZ_type_id, true); 
 	}
 
 	[[nodiscard]] auto

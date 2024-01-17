@@ -9,12 +9,12 @@
 
 namespace rivet::ddl::generated {
 	HideOnEventPrius::HideOnEventPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		StartHidden = serialized->get_bool(StartHidden_type_id);
-		SelfEventsOnly = serialized->get_bool(SelfEventsOnly_type_id);
+		StartHidden = serialized->get_bool(StartHidden_type_id, false);
+		SelfEventsOnly = serialized->get_bool(SelfEventsOnly_type_id, true);
 		HideEvent = serialized->unwrap_into<rivet::ddl::generated::EventBase>(HideEvent_type_id);
-		MaxHideCount = serialized->get_int32(MaxHideCount_type_id);
+		MaxHideCount = serialized->get_int32(MaxHideCount_type_id, 1);
 		UnhideEvent = serialized->unwrap_into<rivet::ddl::generated::EventBase>(UnhideEvent_type_id);
-		MaxUnhideCount = serialized->get_int32(MaxUnhideCount_type_id); 
+		MaxUnhideCount = serialized->get_int32(MaxUnhideCount_type_id, 1); 
 	}
 
 	[[nodiscard]] auto

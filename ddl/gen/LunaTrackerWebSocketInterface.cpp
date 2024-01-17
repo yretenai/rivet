@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	LunaTrackerWebSocketInterface::LunaTrackerWebSocketInterface([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Type = serialized->get_enum<rivet::ddl::generated::xd02769e5>(Type_type_id, rivet::ddl::generated::xd02769e5_values);
+		Type = serialized->get_enum<rivet::ddl::generated::xd02769e5>(Type_type_id, rivet::ddl::generated::xd02769e5_values, rivet::ddl::generated::xd02769e5::Test);
 		Payload = serialized->get_field(Payload_type_id); 
 	}
 

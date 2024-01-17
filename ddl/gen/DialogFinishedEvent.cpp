@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	DialogFinishedEvent::DialogFinishedEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		PlayCountId = serialized->get_uint16(PlayCountId_type_id);
-		SoundEventName = serialized->get_string(SoundEventName_type_id);
-		Status = serialized->get_enum<rivet::ddl::generated::x7627517a>(Status_type_id, rivet::ddl::generated::x7627517a_values); 
+		PlayCountId = serialized->get_uint16(PlayCountId_type_id, 0);
+		SoundEventName = serialized->get_string(SoundEventName_type_id, {});
+		Status = serialized->get_enum<rivet::ddl::generated::x7627517a>(Status_type_id, rivet::ddl::generated::x7627517a_values, rivet::ddl::generated::x7627517a::Finished); 
 	}
 
 	[[nodiscard]] auto

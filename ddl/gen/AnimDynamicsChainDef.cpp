@@ -9,24 +9,24 @@
 
 namespace rivet::ddl::generated {
 	AnimDynamicsChainDef::AnimDynamicsChainDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Name = serialized->get_string(Name_type_id);
-		JointName = serialized->get_string(JointName_type_id);
-		IncludeChildren = serialized->get_bool(IncludeChildren_type_id);
-		JointNameEnd = serialized->get_string(JointNameEnd_type_id);
-		JointNameEndTetheredParent = serialized->get_string(JointNameEndTetheredParent_type_id);
-		ConstraintType = serialized->get_enum<rivet::ddl::generated::xcbde7961>(ConstraintType_type_id, rivet::ddl::generated::xcbde7961_values);
+		Name = serialized->get_string(Name_type_id, {});
+		JointName = serialized->get_string(JointName_type_id, {});
+		IncludeChildren = serialized->get_bool(IncludeChildren_type_id, true);
+		JointNameEnd = serialized->get_string(JointNameEnd_type_id, {});
+		JointNameEndTetheredParent = serialized->get_string(JointNameEndTetheredParent_type_id, {});
+		ConstraintType = serialized->get_enum<rivet::ddl::generated::xcbde7961>(ConstraintType_type_id, rivet::ddl::generated::xcbde7961_values, rivet::ddl::generated::xcbde7961::Simple);
 		Gravity = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Gravity_type_id);
-		Mass = serialized->get_float(Mass_type_id);
-		Damping = serialized->get_float(Damping_type_id);
-		ConeAngleOuter = serialized->get_float(ConeAngleOuter_type_id);
-		ConeAngleOuterEnd = serialized->get_float(ConeAngleOuterEnd_type_id);
-		ConeAngleNegativeYScale = serialized->get_float(ConeAngleNegativeYScale_type_id);
-		ConeAnglePositiveYScale = serialized->get_float(ConeAnglePositiveYScale_type_id);
-		ConeAngleNegativeZScale = serialized->get_float(ConeAngleNegativeZScale_type_id);
-		ConeAnglePositiveZScale = serialized->get_float(ConeAnglePositiveZScale_type_id);
-		MassEnd = serialized->get_float(MassEnd_type_id);
-		DampingEnd = serialized->get_float(DampingEnd_type_id);
-		LengthElasticity = serialized->get_float(LengthElasticity_type_id); 
+		Mass = serialized->get_float(Mass_type_id, 0.100000);
+		Damping = serialized->get_float(Damping_type_id, 0.010000);
+		ConeAngleOuter = serialized->get_float(ConeAngleOuter_type_id, 30.000000);
+		ConeAngleOuterEnd = serialized->get_float(ConeAngleOuterEnd_type_id, 20.000000);
+		ConeAngleNegativeYScale = serialized->get_float(ConeAngleNegativeYScale_type_id, 1.000000);
+		ConeAnglePositiveYScale = serialized->get_float(ConeAnglePositiveYScale_type_id, 1.000000);
+		ConeAngleNegativeZScale = serialized->get_float(ConeAngleNegativeZScale_type_id, 1.000000);
+		ConeAnglePositiveZScale = serialized->get_float(ConeAnglePositiveZScale_type_id, 1.000000);
+		MassEnd = serialized->get_float(MassEnd_type_id, 0.060000);
+		DampingEnd = serialized->get_float(DampingEnd_type_id, 0.010000);
+		LengthElasticity = serialized->get_float(LengthElasticity_type_id, 0.100000); 
 	}
 
 	[[nodiscard]] auto

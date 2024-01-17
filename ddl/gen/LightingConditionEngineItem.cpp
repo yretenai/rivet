@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	LightingConditionEngineItem::LightingConditionEngineItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		LightingCondition = serialized->get_enum<rivet::ddl::generated::LightingConditions>(LightingCondition_type_id, rivet::ddl::generated::LightingConditions_values); 
+		LightingCondition = serialized->get_enum<rivet::ddl::generated::LightingConditions>(LightingCondition_type_id, rivet::ddl::generated::LightingConditions_values, rivet::ddl::generated::LightingConditions::Day); 
 	}
 
 	[[nodiscard]] auto

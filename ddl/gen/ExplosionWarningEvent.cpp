@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ExplosionWarningEvent::ExplosionWarningEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		FuseTime = serialized->get_float(FuseTime_type_id); 
+		FuseTime = serialized->get_float(FuseTime_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

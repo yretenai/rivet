@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	IndexListMessage::IndexListMessage([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MessageType = serialized->get_uint8(MessageType_type_id);
+		MessageType = serialized->get_uint8(MessageType_type_id, 0);
 		Indexes = serialized->get_int16s(Indexes_type_id); 
 	}
 

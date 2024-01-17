@@ -9,32 +9,32 @@
 
 namespace rivet::ddl::generated {
 	EnvLightingDef::EnvLightingDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Enabled = serialized->get_bool(Enabled_type_id);
+		Enabled = serialized->get_bool(Enabled_type_id, true);
 		KeyLightColor = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(KeyLightColor_type_id);
-		KeyLightIntensity = serialized->get_float(KeyLightIntensity_type_id);
-		KeyLightAzimuth = serialized->get_float(KeyLightAzimuth_type_id);
-		KeyLightElevation = serialized->get_float(KeyLightElevation_type_id);
-		SunDiskOffsetAzimuth = serialized->get_float(SunDiskOffsetAzimuth_type_id);
-		SunDiskOffsetElevation = serialized->get_float(SunDiskOffsetElevation_type_id);
-		ShadowDrawDist = serialized->get_float(ShadowDrawDist_type_id);
-		CsmLodCount = serialized->get_int8(CsmLodCount_type_id);
-		FarLodCaching = serialized->get_bool(FarLodCaching_type_id);
-		FarLodTransitionDist = serialized->get_float(FarLodTransitionDist_type_id);
-		FarLodPerfModeOpts = serialized->get_bool(FarLodPerfModeOpts_type_id);
-		TimeOfDay = serialized->get_float(TimeOfDay_type_id);
-		SunDiameter = serialized->get_float(SunDiameter_type_id);
-		FillLightCubeMap = serialized->get_string(FillLightCubeMap_type_id);
-		LightGridIntensity = serialized->get_float(LightGridIntensity_type_id);
-		LightGridSkyMultiplier = serialized->get_float(LightGridSkyMultiplier_type_id);
-		LightGridAORadius = serialized->get_float(LightGridAORadius_type_id);
-		LightGridModConfig = serialized->get_string(LightGridModConfig_type_id);
-		KeylightMaterial = serialized->get_string(KeylightMaterial_type_id);
-		KeylightMaterialScale = serialized->get_float(KeylightMaterialScale_type_id);
-		CasterRangeLower = serialized->get_float(CasterRangeLower_type_id);
-		CasterRangeUpper = serialized->get_float(CasterRangeUpper_type_id);
-		VFXLightMultiplier = serialized->get_float(VFXLightMultiplier_type_id);
+		KeyLightIntensity = serialized->get_float(KeyLightIntensity_type_id, 6.000000);
+		KeyLightAzimuth = serialized->get_float(KeyLightAzimuth_type_id, 135.000000);
+		KeyLightElevation = serialized->get_float(KeyLightElevation_type_id, 55.000000);
+		SunDiskOffsetAzimuth = serialized->get_float(SunDiskOffsetAzimuth_type_id, 0.000000);
+		SunDiskOffsetElevation = serialized->get_float(SunDiskOffsetElevation_type_id, 0.000000);
+		ShadowDrawDist = serialized->get_float(ShadowDrawDist_type_id, 240.000000);
+		CsmLodCount = serialized->get_int8(CsmLodCount_type_id, 6);
+		FarLodCaching = serialized->get_bool(FarLodCaching_type_id, true);
+		FarLodTransitionDist = serialized->get_float(FarLodTransitionDist_type_id, 0.000000);
+		FarLodPerfModeOpts = serialized->get_bool(FarLodPerfModeOpts_type_id, false);
+		TimeOfDay = serialized->get_float(TimeOfDay_type_id, 0.000000);
+		SunDiameter = serialized->get_float(SunDiameter_type_id, 0.500000);
+		FillLightCubeMap = serialized->get_string(FillLightCubeMap_type_id, {});
+		LightGridIntensity = serialized->get_float(LightGridIntensity_type_id, 1.000000);
+		LightGridSkyMultiplier = serialized->get_float(LightGridSkyMultiplier_type_id, 1.000000);
+		LightGridAORadius = serialized->get_float(LightGridAORadius_type_id, 15.000000);
+		LightGridModConfig = serialized->get_string(LightGridModConfig_type_id, {});
+		KeylightMaterial = serialized->get_string(KeylightMaterial_type_id, {});
+		KeylightMaterialScale = serialized->get_float(KeylightMaterialScale_type_id, 100.000000);
+		CasterRangeLower = serialized->get_float(CasterRangeLower_type_id, -10.000000);
+		CasterRangeUpper = serialized->get_float(CasterRangeUpper_type_id, 400.000000);
+		VFXLightMultiplier = serialized->get_float(VFXLightMultiplier_type_id, 1.000000);
 		AmbientFillColor = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(AmbientFillColor_type_id);
-		AmbientFillIntensity = serialized->get_float(AmbientFillIntensity_type_id); 
+		AmbientFillIntensity = serialized->get_float(AmbientFillIntensity_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

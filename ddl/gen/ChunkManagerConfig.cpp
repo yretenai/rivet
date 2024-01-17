@@ -7,15 +7,15 @@
 
 namespace rivet::ddl::generated {
 	ChunkManagerConfig::ChunkManagerConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		CleanUpThreshold = serialized->get_float(CleanUpThreshold_type_id);
-		CleanUpTarget = serialized->get_float(CleanUpTarget_type_id);
-		DefaultLifeTime = serialized->get_float(DefaultLifeTime_type_id);
-		DefaultFadeTime = serialized->get_float(DefaultFadeTime_type_id);
-		DesiredHighPriority = serialized->get_float(DesiredHighPriority_type_id);
-		AutoDeleteDistance = serialized->get_float(AutoDeleteDistance_type_id);
-		AutoDeleteFallDistance = serialized->get_float(AutoDeleteFallDistance_type_id);
-		AutoDeleteWithNoPhysics = serialized->get_bool(AutoDeleteWithNoPhysics_type_id);
-		AutoDeleteFrameDelay = serialized->get_uint32(AutoDeleteFrameDelay_type_id); 
+		CleanUpThreshold = serialized->get_float(CleanUpThreshold_type_id, 0.750000);
+		CleanUpTarget = serialized->get_float(CleanUpTarget_type_id, 0.500000);
+		DefaultLifeTime = serialized->get_float(DefaultLifeTime_type_id, 7.000000);
+		DefaultFadeTime = serialized->get_float(DefaultFadeTime_type_id, 1.000000);
+		DesiredHighPriority = serialized->get_float(DesiredHighPriority_type_id, 0.150000);
+		AutoDeleteDistance = serialized->get_float(AutoDeleteDistance_type_id, -1.000000);
+		AutoDeleteFallDistance = serialized->get_float(AutoDeleteFallDistance_type_id, -1.000000);
+		AutoDeleteWithNoPhysics = serialized->get_bool(AutoDeleteWithNoPhysics_type_id, false);
+		AutoDeleteFrameDelay = serialized->get_uint32(AutoDeleteFrameDelay_type_id, 4); 
 	}
 
 	[[nodiscard]] auto

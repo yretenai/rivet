@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	ConversationCommunicatorHUDPrius::ConversationCommunicatorHUDPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConversationCommunicatorBasePrius(serialized) {
-		SpeakerTexture = serialized->get_string(SpeakerTexture_type_id);
-		SpeakerNameLocTag = serialized->get_string(SpeakerNameLocTag_type_id); 
+		SpeakerTexture = serialized->get_string(SpeakerTexture_type_id, {});
+		SpeakerNameLocTag = serialized->get_string(SpeakerNameLocTag_type_id, "INVALID"); 
 	}
 
 	[[nodiscard]] auto

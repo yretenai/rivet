@@ -9,11 +9,11 @@
 
 namespace rivet::ddl::generated {
 	TargetLocationData::TargetLocationData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		LocationType = serialized->get_enum<rivet::ddl::generated::x61afe359>(LocationType_type_id, rivet::ddl::generated::x61afe359_values);
-		NameHash = serialized->get_string(NameHash_type_id);
+		LocationType = serialized->get_enum<rivet::ddl::generated::x61afe359>(LocationType_type_id, rivet::ddl::generated::x61afe359_values, rivet::ddl::generated::x61afe359::BSphere);
+		NameHash = serialized->get_string(NameHash_type_id, "");
 		Position = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Position_type_id);
-		BodyPart = serialized->get_enum<rivet::ddl::generated::x457f748b>(BodyPart_type_id, rivet::ddl::generated::x457f748b_values);
-		BodyPartName = serialized->get_string(BodyPartName_type_id); 
+		BodyPart = serialized->get_enum<rivet::ddl::generated::x457f748b>(BodyPart_type_id, rivet::ddl::generated::x457f748b_values, rivet::ddl::generated::x457f748b::Unknown);
+		BodyPartName = serialized->get_string(BodyPartName_type_id, ""); 
 	}
 
 	[[nodiscard]] auto

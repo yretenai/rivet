@@ -12,8 +12,8 @@
 
 namespace rivet::ddl::generated {
 	StreamingVideoBaseConfig::StreamingVideoBaseConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		PlayWhenPaused = serialized->get_bool(PlayWhenPaused_type_id);
-		UseSRGBTexture = serialized->get_bool(UseSRGBTexture_type_id); 
+		PlayWhenPaused = serialized->get_bool(PlayWhenPaused_type_id, false);
+		UseSRGBTexture = serialized->get_bool(UseSRGBTexture_type_id, true); 
 	}
 
 	[[nodiscard]] auto

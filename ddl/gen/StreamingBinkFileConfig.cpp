@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	StreamingBinkFileConfig::StreamingBinkFileConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): StreamingBinkConfig(serialized) {
-		FilePath = serialized->get_string(FilePath_type_id);
-		SubtitleConfigFilePath = serialized->get_string(SubtitleConfigFilePath_type_id); 
+		FilePath = serialized->get_string(FilePath_type_id, {});
+		SubtitleConfigFilePath = serialized->get_string(SubtitleConfigFilePath_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

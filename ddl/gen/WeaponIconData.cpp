@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	WeaponIconData::WeaponIconData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Weapon = serialized->get_enum<rivet::ddl::generated::xd5643d7e>(Weapon_type_id, rivet::ddl::generated::xd5643d7e_values);
-		Icon = serialized->get_string(Icon_type_id); 
+		Weapon = serialized->get_enum<rivet::ddl::generated::xd5643d7e>(Weapon_type_id, rivet::ddl::generated::xd5643d7e_values, rivet::ddl::generated::xd5643d7e::Generic);
+		Icon = serialized->get_string(Icon_type_id, "WpnUnknown"); 
 	}
 
 	[[nodiscard]] auto

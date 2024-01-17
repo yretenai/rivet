@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	UITutorialModalButton::UITutorialModalButton([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ShowModalButton = serialized->get_bool(ShowModalButton_type_id);
-		Button = serialized->get_enum<rivet::ddl::generated::xba9a3e10>(Button_type_id, rivet::ddl::generated::xba9a3e10_values);
-		Text = serialized->get_string(Text_type_id);
-		PassthroughInput = serialized->get_bool(PassthroughInput_type_id); 
+		ShowModalButton = serialized->get_bool(ShowModalButton_type_id, false);
+		Button = serialized->get_enum<rivet::ddl::generated::xba9a3e10>(Button_type_id, rivet::ddl::generated::xba9a3e10_values, rivet::ddl::generated::xba9a3e10::GUIKeyStart);
+		Text = serialized->get_string(Text_type_id, {});
+		PassthroughInput = serialized->get_bool(PassthroughInput_type_id, false); 
 	}
 
 	[[nodiscard]] auto

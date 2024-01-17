@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	VisualEffectNewNodeData::VisualEffectNewNodeData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SymbolName = serialized->get_string(SymbolName_type_id);
+		SymbolName = serialized->get_string(SymbolName_type_id, {});
 		InitialValue = serialized->get_field(InitialValue_type_id); 
 	}
 

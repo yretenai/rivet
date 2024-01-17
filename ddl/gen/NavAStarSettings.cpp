@@ -7,13 +7,13 @@
 
 namespace rivet::ddl::generated {
 	NavAStarSettings::NavAStarSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		EdgeMax = serialized->get_uint16(EdgeMax_type_id);
-		QueueMax = serialized->get_uint16(QueueMax_type_id);
-		LinkMax = serialized->get_uint16(LinkMax_type_id);
-		LocalStoreSize = serialized->get_int32(LocalStoreSize_type_id);
-		MaxFindPathDistance = serialized->get_float(MaxFindPathDistance_type_id);
-		ResultMax = serialized->get_uint16(ResultMax_type_id);
-		NodeExpandMax = serialized->get_uint16(NodeExpandMax_type_id); 
+		EdgeMax = serialized->get_uint16(EdgeMax_type_id, 8192);
+		QueueMax = serialized->get_uint16(QueueMax_type_id, 2048);
+		LinkMax = serialized->get_uint16(LinkMax_type_id, 12288);
+		LocalStoreSize = serialized->get_int32(LocalStoreSize_type_id, 1048576);
+		MaxFindPathDistance = serialized->get_float(MaxFindPathDistance_type_id, 100000.000000);
+		ResultMax = serialized->get_uint16(ResultMax_type_id, 512);
+		NodeExpandMax = serialized->get_uint16(NodeExpandMax_type_id, 2048); 
 	}
 
 	[[nodiscard]] auto

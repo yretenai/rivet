@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	RegionActionPrius::RegionActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		RegionName = serialized->get_string(RegionName_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Loading);
+		RegionName = serialized->get_string(RegionName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

@@ -12,7 +12,7 @@ namespace rivet::ddl::generated {
 	PerformanceEditorClipBoardData::PerformanceEditorClipBoardData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		AccessorList = serialized->unwrap_into_many<rivet::ddl::generated::PerformanceEditorClipBoardAccessor>(AccessorList_type_id);
 		AssetInstanceList = serialized->unwrap_into_many<rivet::ddl::generated::PerformanceEditorClipBoardAssetInstance>(AssetInstanceList_type_id);
-		ClipboardType = serialized->get_string(ClipboardType_type_id); 
+		ClipboardType = serialized->get_string(ClipboardType_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

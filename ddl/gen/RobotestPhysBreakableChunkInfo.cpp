@@ -7,13 +7,13 @@
 
 namespace rivet::ddl::generated {
 	RobotestPhysBreakableChunkInfo::RobotestPhysBreakableChunkInfo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ModelName = serialized->get_string(ModelName_type_id);
-		ActorName = serialized->get_string(ActorName_type_id);
-		ActorAssetId = serialized->get_uint64(ActorAssetId_type_id);
-		ModelAssetId = serialized->get_uint64(ModelAssetId_type_id);
-		IsDebris = serialized->get_bool(IsDebris_type_id);
-		Radius = serialized->get_float(Radius_type_id);
-		SpawnStatus = serialized->get_enum<rivet::ddl::generated::x8f1591df>(SpawnStatus_type_id, rivet::ddl::generated::x8f1591df_values); 
+		ModelName = serialized->get_string(ModelName_type_id, {});
+		ActorName = serialized->get_string(ActorName_type_id, {});
+		ActorAssetId = serialized->get_uint64(ActorAssetId_type_id, 0);
+		ModelAssetId = serialized->get_uint64(ModelAssetId_type_id, 0);
+		IsDebris = serialized->get_bool(IsDebris_type_id, false);
+		Radius = serialized->get_float(Radius_type_id, 0.000000);
+		SpawnStatus = serialized->get_enum<rivet::ddl::generated::x8f1591df>(SpawnStatus_type_id, rivet::ddl::generated::x8f1591df_values, rivet::ddl::generated::x8f1591df::Spawned); 
 	}
 
 	[[nodiscard]] auto

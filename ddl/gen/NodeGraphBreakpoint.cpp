@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	NodeGraphBreakpoint::NodeGraphBreakpoint([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		asset_path = serialized->get_string(asset_path_type_id);
-		node_id = serialized->get_uint64(node_id_type_id);
-		node_type = serialized->get_string(node_type_type_id);
-		is_enabled = serialized->get_bool(is_enabled_type_id); 
+		asset_path = serialized->get_string(asset_path_type_id, {});
+		node_id = serialized->get_uint64(node_id_type_id, 0);
+		node_type = serialized->get_string(node_type_type_id, {});
+		is_enabled = serialized->get_bool(is_enabled_type_id, false); 
 	}
 
 	[[nodiscard]] auto

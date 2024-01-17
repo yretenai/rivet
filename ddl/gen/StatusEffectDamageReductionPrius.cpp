@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	StatusEffectDamageReductionPrius::StatusEffectDamageReductionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): StatusEffectBasePrius(serialized) {
-		IsPercent = serialized->get_bool(IsPercent_type_id); 
+		IsPercent = serialized->get_bool(IsPercent_type_id, true); 
 	}
 
 	[[nodiscard]] auto

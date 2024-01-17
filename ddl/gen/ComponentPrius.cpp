@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	ComponentPrius::ComponentPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		PriusName = serialized->get_string(PriusName_type_id);
+		PriusName = serialized->get_string(PriusName_type_id, {});
 		Overrides = serialized->get_field(Overrides_type_id);
-		Status = serialized->get_enum<rivet::ddl::generated::x8eb28adc>(Status_type_id, rivet::ddl::generated::x8eb28adc_values); 
+		Status = serialized->get_enum<rivet::ddl::generated::x8eb28adc>(Status_type_id, rivet::ddl::generated::x8eb28adc_values, rivet::ddl::generated::x8eb28adc::NotSpecified); 
 	}
 
 	[[nodiscard]] auto

@@ -18,8 +18,8 @@
 
 namespace rivet::ddl::generated {
 	DamageEventBase::DamageEventBase([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): DamagePacket(serialized) {
-		FollowAttachActor = serialized->get_bool(FollowAttachActor_type_id);
-		Continuous = serialized->get_bool(Continuous_type_id); 
+		FollowAttachActor = serialized->get_bool(FollowAttachActor_type_id, false);
+		Continuous = serialized->get_bool(Continuous_type_id, false); 
 	}
 
 	[[nodiscard]] auto

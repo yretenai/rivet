@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	NodeGraphBuiltHeaderDef::NodeGraphBuiltHeaderDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ApproximatePlugCount = serialized->get_uint32(ApproximatePlugCount_type_id);
-		GraphTypeHash = serialized->get_uint32(GraphTypeHash_type_id); 
+		ApproximatePlugCount = serialized->get_uint32(ApproximatePlugCount_type_id, 0);
+		GraphTypeHash = serialized->get_uint32(GraphTypeHash_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

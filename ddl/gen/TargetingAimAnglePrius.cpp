@@ -14,24 +14,24 @@
 
 namespace rivet::ddl::generated {
 	TargetingAimAnglePrius::TargetingAimAnglePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		StartEnabled = serialized->get_bool(StartEnabled_type_id);
-		WeaponEquipIndex = serialized->get_uint32(WeaponEquipIndex_type_id);
-		ApplySpeed = serialized->get_float(ApplySpeed_type_id);
-		AimGain = serialized->get_float(AimGain_type_id);
-		YawRangeDegreesMin = serialized->get_float(YawRangeDegreesMin_type_id);
-		YawRangeDegreesMax = serialized->get_float(YawRangeDegreesMax_type_id);
-		PitchRangeDegreesMin = serialized->get_float(PitchRangeDegreesMin_type_id);
-		PitchRangeDegreesMax = serialized->get_float(PitchRangeDegreesMax_type_id);
-		VerticalAnimVarName = serialized->get_string(VerticalAnimVarName_type_id);
-		HorizontalAnimVarName = serialized->get_string(HorizontalAnimVarName_type_id);
-		PartialName = serialized->get_string(PartialName_type_id);
-		AimSourceLocator = serialized->get_string(AimSourceLocator_type_id);
-		AimDestLocator = serialized->get_string(AimDestLocator_type_id);
-		LeftToRight = serialized->get_bool(LeftToRight_type_id);
-		DownToUp = serialized->get_bool(DownToUp_type_id);
-		VarValuesAreInDegrees = serialized->get_bool(VarValuesAreInDegrees_type_id);
-		UseAimSourceReferenceMat = serialized->get_bool(UseAimSourceReferenceMat_type_id);
-		UpdateStandardHeadLookValues = serialized->get_bool(UpdateStandardHeadLookValues_type_id); 
+		StartEnabled = serialized->get_bool(StartEnabled_type_id, false);
+		WeaponEquipIndex = serialized->get_uint32(WeaponEquipIndex_type_id, 0);
+		ApplySpeed = serialized->get_float(ApplySpeed_type_id, 4.000000);
+		AimGain = serialized->get_float(AimGain_type_id, -6.000000);
+		YawRangeDegreesMin = serialized->get_float(YawRangeDegreesMin_type_id, -90.000000);
+		YawRangeDegreesMax = serialized->get_float(YawRangeDegreesMax_type_id, 90.000000);
+		PitchRangeDegreesMin = serialized->get_float(PitchRangeDegreesMin_type_id, -90.000000);
+		PitchRangeDegreesMax = serialized->get_float(PitchRangeDegreesMax_type_id, 90.000000);
+		VerticalAnimVarName = serialized->get_string(VerticalAnimVarName_type_id, "Aim_Vertical");
+		HorizontalAnimVarName = serialized->get_string(HorizontalAnimVarName_type_id, "Aim_Horizontal");
+		PartialName = serialized->get_string(PartialName_type_id, {});
+		AimSourceLocator = serialized->get_string(AimSourceLocator_type_id, "igLoc_head");
+		AimDestLocator = serialized->get_string(AimDestLocator_type_id, "igLoc_head");
+		LeftToRight = serialized->get_bool(LeftToRight_type_id, false);
+		DownToUp = serialized->get_bool(DownToUp_type_id, false);
+		VarValuesAreInDegrees = serialized->get_bool(VarValuesAreInDegrees_type_id, false);
+		UseAimSourceReferenceMat = serialized->get_bool(UseAimSourceReferenceMat_type_id, false);
+		UpdateStandardHeadLookValues = serialized->get_bool(UpdateStandardHeadLookValues_type_id, false); 
 	}
 
 	[[nodiscard]] auto

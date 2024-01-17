@@ -9,16 +9,16 @@
 
 namespace rivet::ddl::generated {
 	PirateChallengeControllerPrius::PirateChallengeControllerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		InactiveAnim = serialized->get_string(InactiveAnim_type_id);
-		ActivateAnim = serialized->get_string(ActivateAnim_type_id);
-		InterruptAnim = serialized->get_string(InterruptAnim_type_id);
-		ReadyOffAnim = serialized->get_string(ReadyOffAnim_type_id);
-		ReadyOnAnim = serialized->get_string(ReadyOnAnim_type_id);
-		PerformAnim = serialized->get_string(PerformAnim_type_id);
-		InstructionAnim = serialized->get_string(InstructionAnim_type_id);
-		CelebrateAnim = serialized->get_string(CelebrateAnim_type_id);
-		TauntAnim = serialized->get_string(TauntAnim_type_id);
-		DeactivateAnim = serialized->get_string(DeactivateAnim_type_id);
+		InactiveAnim = serialized->get_string(InactiveAnim_type_id, "Off");
+		ActivateAnim = serialized->get_string(ActivateAnim_type_id, "Activated");
+		InterruptAnim = serialized->get_string(InterruptAnim_type_id, "Interrupt");
+		ReadyOffAnim = serialized->get_string(ReadyOffAnim_type_id, "Ready_Light_Off");
+		ReadyOnAnim = serialized->get_string(ReadyOnAnim_type_id, "Ready");
+		PerformAnim = serialized->get_string(PerformAnim_type_id, "Sing");
+		InstructionAnim = serialized->get_string(InstructionAnim_type_id, "Instruction");
+		CelebrateAnim = serialized->get_string(CelebrateAnim_type_id, "Celebrate");
+		TauntAnim = serialized->get_string(TauntAnim_type_id, "Taunt");
+		DeactivateAnim = serialized->get_string(DeactivateAnim_type_id, "Deactivated");
 		PirateData = serialized->unwrap_into_many<rivet::ddl::generated::PirateData>(PirateData_type_id); 
 	}
 

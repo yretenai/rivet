@@ -20,16 +20,16 @@
 namespace rivet::ddl::generated {
 	SharedHeroConfig::SharedHeroConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
 		Camera = serialized->unwrap_into<rivet::ddl::generated::HeroCameraConfig>(Camera_type_id);
-		BaseDepthOfFieldConfig = serialized->get_string(BaseDepthOfFieldConfig_type_id);
-		AimAssistUserConfig = serialized->get_string(AimAssistUserConfig_type_id);
-		CasualAimAssistUserConfig = serialized->get_string(CasualAimAssistUserConfig_type_id);
-		HeroMoverConfig = serialized->get_string(HeroMoverConfig_type_id);
-		PropConfig = serialized->get_string(PropConfig_type_id);
-		DefaultZoomConfig = serialized->get_string(DefaultZoomConfig_type_id);
-		DefaultWeaponBeamInConfig = serialized->get_string(DefaultWeaponBeamInConfig_type_id);
-		BeamInConfig = serialized->get_string(BeamInConfig_type_id);
-		BeamOutConfig = serialized->get_string(BeamOutConfig_type_id);
-		ClankPuzzleTargetConfig = serialized->get_string(ClankPuzzleTargetConfig_type_id);
+		BaseDepthOfFieldConfig = serialized->get_string(BaseDepthOfFieldConfig_type_id, {});
+		AimAssistUserConfig = serialized->get_string(AimAssistUserConfig_type_id, {});
+		CasualAimAssistUserConfig = serialized->get_string(CasualAimAssistUserConfig_type_id, {});
+		HeroMoverConfig = serialized->get_string(HeroMoverConfig_type_id, {});
+		PropConfig = serialized->get_string(PropConfig_type_id, {});
+		DefaultZoomConfig = serialized->get_string(DefaultZoomConfig_type_id, {});
+		DefaultWeaponBeamInConfig = serialized->get_string(DefaultWeaponBeamInConfig_type_id, {});
+		BeamInConfig = serialized->get_string(BeamInConfig_type_id, {});
+		BeamOutConfig = serialized->get_string(BeamOutConfig_type_id, {});
+		ClankPuzzleTargetConfig = serialized->get_string(ClankPuzzleTargetConfig_type_id, {});
 		Motion = serialized->unwrap_into<rivet::ddl::generated::HeroMotionConfig>(Motion_type_id);
 		React = serialized->unwrap_into<rivet::ddl::generated::HeroReactConfig>(React_type_id);
 		CVC = serialized->unwrap_into<rivet::ddl::generated::HeroCVCConfig>(CVC_type_id);

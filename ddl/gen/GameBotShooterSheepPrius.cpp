@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	GameBotShooterSheepPrius::GameBotShooterSheepPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): GameBotShooterPrius(serialized) {
-		Horns = serialized->get_string(Horns_type_id); 
+		Horns = serialized->get_string(Horns_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

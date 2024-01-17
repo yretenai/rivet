@@ -9,9 +9,9 @@ namespace rivet::ddl::generated {
 	UDSWebApiTrophySetMetadata::UDSWebApiTrophySetMetadata([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		name = serialized->get_strings(name_type_id);
 		platform = serialized->get_enums<rivet::ddl::generated::xcf5dc143>(platform_type_id, rivet::ddl::generated::xcf5dc143_values);
-		trophySetVersion = serialized->get_string(trophySetVersion_type_id);
-		trophySchemaVersion = serialized->get_string(trophySchemaVersion_type_id);
-		defaultLanguage = serialized->get_string(defaultLanguage_type_id); 
+		trophySetVersion = serialized->get_string(trophySetVersion_type_id, {});
+		trophySchemaVersion = serialized->get_string(trophySchemaVersion_type_id, {});
+		defaultLanguage = serialized->get_string(defaultLanguage_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

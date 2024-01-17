@@ -9,9 +9,9 @@
 
 namespace rivet::ddl::generated {
 	LocTagTableDef::LocTagTableDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Name = serialized->get_string(Name_type_id);
-		GroupName = serialized->get_string(GroupName_type_id);
-		Flags = serialized->get_enum<rivet::ddl::generated::xb118f295>(Flags_type_id, rivet::ddl::generated::xb118f295_values);
+		Name = serialized->get_string(Name_type_id, {});
+		GroupName = serialized->get_string(GroupName_type_id, {});
+		Flags = serialized->get_enum<rivet::ddl::generated::xb118f295>(Flags_type_id, rivet::ddl::generated::xb118f295_values, rivet::ddl::generated::xb118f295::None);
 		LanguageText = serialized->unwrap_into_many<rivet::ddl::generated::LocTagLanguageDef>(LanguageText_type_id); 
 	}
 

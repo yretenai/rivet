@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	AllegianceShotCollModPrius::AllegianceShotCollModPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ShotCollisionModifierPrius(serialized) {
-		Allegiance = serialized->get_enum<rivet::ddl::generated::x6bdf4ba1>(Allegiance_type_id, rivet::ddl::generated::x6bdf4ba1_values);
-		Relation = serialized->get_enum<rivet::ddl::generated::AllegianceRelation>(Relation_type_id, rivet::ddl::generated::AllegianceRelation_values); 
+		Allegiance = serialized->get_enum<rivet::ddl::generated::x6bdf4ba1>(Allegiance_type_id, rivet::ddl::generated::x6bdf4ba1_values, rivet::ddl::generated::x6bdf4ba1::Neutral);
+		Relation = serialized->get_enum<rivet::ddl::generated::AllegianceRelation>(Relation_type_id, rivet::ddl::generated::AllegianceRelation_values, rivet::ddl::generated::AllegianceRelation::Friends); 
 	}
 
 	[[nodiscard]] auto

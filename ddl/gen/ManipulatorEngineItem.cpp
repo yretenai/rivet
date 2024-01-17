@@ -13,11 +13,11 @@ namespace rivet::ddl::generated {
 		WorldMatrix = serialized->unwrap_into<rivet::ddl::generated::DDLMatrix4>(WorldMatrix_type_id);
 		AimPosition = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(AimPosition_type_id);
 		WorldMatrixDragBegin = serialized->unwrap_into<rivet::ddl::generated::DDLMatrix4>(WorldMatrixDragBegin_type_id);
-		ManipulatorType = serialized->get_enum<rivet::ddl::generated::ManipulatorType>(ManipulatorType_type_id, rivet::ddl::generated::ManipulatorType_values);
-		ManipulatorSpace = serialized->get_enum<rivet::ddl::generated::ManipulatorSpace>(ManipulatorSpace_type_id, rivet::ddl::generated::ManipulatorSpace_values);
-		UseLastSelectedNode = serialized->get_bool(UseLastSelectedNode_type_id);
-		MoveSelectedNodes = serialized->get_bool(MoveSelectedNodes_type_id);
-		UseWorldSpace = serialized->get_bool(UseWorldSpace_type_id); 
+		ManipulatorType = serialized->get_enum<rivet::ddl::generated::ManipulatorType>(ManipulatorType_type_id, rivet::ddl::generated::ManipulatorType_values, rivet::ddl::generated::ManipulatorType::Translation);
+		ManipulatorSpace = serialized->get_enum<rivet::ddl::generated::ManipulatorSpace>(ManipulatorSpace_type_id, rivet::ddl::generated::ManipulatorSpace_values, rivet::ddl::generated::ManipulatorSpace::World);
+		UseLastSelectedNode = serialized->get_bool(UseLastSelectedNode_type_id, false);
+		MoveSelectedNodes = serialized->get_bool(MoveSelectedNodes_type_id, false);
+		UseWorldSpace = serialized->get_bool(UseWorldSpace_type_id, false); 
 	}
 
 	[[nodiscard]] auto

@@ -9,11 +9,11 @@
 
 namespace rivet::ddl::generated {
 	UITutorial::UITutorial([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		TutorialID = serialized->get_enum<rivet::ddl::generated::xb60d46be>(TutorialID_type_id, rivet::ddl::generated::xb60d46be_values);
-		Name = serialized->get_string(Name_type_id);
-		Mission = serialized->get_string(Mission_type_id);
-		Objective = serialized->get_string(Objective_type_id);
-		ChallengeMode = serialized->get_bool(ChallengeMode_type_id);
+		TutorialID = serialized->get_enum<rivet::ddl::generated::xb60d46be>(TutorialID_type_id, rivet::ddl::generated::xb60d46be_values, rivet::ddl::generated::xb60d46be::VendorPurchase);
+		Name = serialized->get_string(Name_type_id, {});
+		Mission = serialized->get_string(Mission_type_id, {});
+		Objective = serialized->get_string(Objective_type_id, {});
+		ChallengeMode = serialized->get_bool(ChallengeMode_type_id, false);
 		TutorialSteps = serialized->unwrap_into_many<rivet::ddl::generated::UITutorialStep>(TutorialSteps_type_id); 
 	}
 

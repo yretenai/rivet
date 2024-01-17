@@ -10,14 +10,14 @@
 
 namespace rivet::ddl::generated {
 	RegionAuxOpenContainer::RegionAuxOpenContainer([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		TileRadius = serialized->get_uint32(TileRadius_type_id);
-		LoadDistance = serialized->get_uint32(LoadDistance_type_id);
-		UnloadDistance = serialized->get_uint32(UnloadDistance_type_id);
+		TileRadius = serialized->get_uint32(TileRadius_type_id, 0);
+		LoadDistance = serialized->get_uint32(LoadDistance_type_id, 150);
+		UnloadDistance = serialized->get_uint32(UnloadDistance_type_id, 170);
 		MapOverlay = serialized->unwrap_into<rivet::ddl::generated::Region2DMapOverlay>(MapOverlay_type_id);
 		Folders = serialized->unwrap_into_many<rivet::ddl::generated::RegionFolderNode>(Folders_type_id);
 		ZoneAssetIdToFolder = serialized->get_uint64s(ZoneAssetIdToFolder_type_id);
 		Zones = serialized->get_strings(Zones_type_id);
-		NavFormat = serialized->get_enum<rivet::ddl::generated::x287f0b35>(NavFormat_type_id, rivet::ddl::generated::x287f0b35_values);
+		NavFormat = serialized->get_enum<rivet::ddl::generated::x287f0b35>(NavFormat_type_id, rivet::ddl::generated::x287f0b35_values, rivet::ddl::generated::x287f0b35::Unit_tiles);
 		NavExclusionZones = serialized->get_strings(NavExclusionZones_type_id);
 		NavInclusionZones = serialized->get_strings(NavInclusionZones_type_id);
 		Regions = serialized->get_strings(Regions_type_id); 

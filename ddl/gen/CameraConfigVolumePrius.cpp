@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	CameraConfigVolumePrius::CameraConfigVolumePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		FollowCameraUserConfig = serialized->get_string(FollowCameraUserConfig_type_id);
-		CameraStickConfig = serialized->get_string(CameraStickConfig_type_id);
-		OverrideWeaponStickConfig = serialized->get_bool(OverrideWeaponStickConfig_type_id); 
+		FollowCameraUserConfig = serialized->get_string(FollowCameraUserConfig_type_id, {});
+		CameraStickConfig = serialized->get_string(CameraStickConfig_type_id, {});
+		OverrideWeaponStickConfig = serialized->get_bool(OverrideWeaponStickConfig_type_id, true); 
 	}
 
 	[[nodiscard]] auto

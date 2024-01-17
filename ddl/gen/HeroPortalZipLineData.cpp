@@ -7,22 +7,22 @@
 
 namespace rivet::ddl::generated {
 	HeroPortalZipLineData::HeroPortalZipLineData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		LaunchSpeed = serialized->get_float(LaunchSpeed_type_id);
-		LaunchMaxHeight = serialized->get_float(LaunchMaxHeight_type_id);
-		LaunchDistanceForMaxHeight = serialized->get_float(LaunchDistanceForMaxHeight_type_id);
-		LaunchMinTime = serialized->get_float(LaunchMinTime_type_id);
-		LaunchMaxTime = serialized->get_float(LaunchMaxTime_type_id);
-		TautTime = serialized->get_float(TautTime_type_id);
-		TautMinAmplitude = serialized->get_float(TautMinAmplitude_type_id);
-		TautMaxAmplitude = serialized->get_float(TautMaxAmplitude_type_id);
-		TautFrequency = serialized->get_float(TautFrequency_type_id);
-		RecoilMinWaveLength = serialized->get_float(RecoilMinWaveLength_type_id);
-		RecoilMaxAmplitude = serialized->get_float(RecoilMaxAmplitude_type_id);
-		ProjectileActor = serialized->get_string(ProjectileActor_type_id);
-		ProjectileActorScale = serialized->get_float(ProjectileActorScale_type_id);
-		SplineMaterial = serialized->get_string(SplineMaterial_type_id);
-		SplineWidth = serialized->get_float(SplineWidth_type_id);
-		SplineTilingDistance = serialized->get_float(SplineTilingDistance_type_id); 
+		LaunchSpeed = serialized->get_float(LaunchSpeed_type_id, 75.000000);
+		LaunchMaxHeight = serialized->get_float(LaunchMaxHeight_type_id, 3.000000);
+		LaunchDistanceForMaxHeight = serialized->get_float(LaunchDistanceForMaxHeight_type_id, 20.000000);
+		LaunchMinTime = serialized->get_float(LaunchMinTime_type_id, 0.200000);
+		LaunchMaxTime = serialized->get_float(LaunchMaxTime_type_id, 0.400000);
+		TautTime = serialized->get_float(TautTime_type_id, 0.500000);
+		TautMinAmplitude = serialized->get_float(TautMinAmplitude_type_id, 0.000000);
+		TautMaxAmplitude = serialized->get_float(TautMaxAmplitude_type_id, 0.200000);
+		TautFrequency = serialized->get_float(TautFrequency_type_id, 0.500000);
+		RecoilMinWaveLength = serialized->get_float(RecoilMinWaveLength_type_id, 2.000000);
+		RecoilMaxAmplitude = serialized->get_float(RecoilMaxAmplitude_type_id, 0.500000);
+		ProjectileActor = serialized->get_string(ProjectileActor_type_id, {});
+		ProjectileActorScale = serialized->get_float(ProjectileActorScale_type_id, 1.000000);
+		SplineMaterial = serialized->get_string(SplineMaterial_type_id, {});
+		SplineWidth = serialized->get_float(SplineWidth_type_id, 0.020000);
+		SplineTilingDistance = serialized->get_float(SplineTilingDistance_type_id, -1.000000); 
 	}
 
 	[[nodiscard]] auto

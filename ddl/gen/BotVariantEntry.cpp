@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	BotVariantEntry::BotVariantEntry([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		VariantVersion = serialized->get_enum<rivet::ddl::generated::xc3e5efea>(VariantVersion_type_id, rivet::ddl::generated::xc3e5efea_values);
-		MissionName = serialized->get_string(MissionName_type_id);
-		ObjectiveName = serialized->get_string(ObjectiveName_type_id); 
+		VariantVersion = serialized->get_enum<rivet::ddl::generated::xc3e5efea>(VariantVersion_type_id, rivet::ddl::generated::xc3e5efea_values, rivet::ddl::generated::xc3e5efea::V1);
+		MissionName = serialized->get_string(MissionName_type_id, {});
+		ObjectiveName = serialized->get_string(ObjectiveName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

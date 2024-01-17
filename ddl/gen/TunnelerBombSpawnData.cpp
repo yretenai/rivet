@@ -10,14 +10,14 @@
 
 namespace rivet::ddl::generated {
 	TunnelerBombSpawnData::TunnelerBombSpawnData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ActorSpawnData(serialized) {
-		FiredByHandle = serialized->get_uint64(FiredByHandle_type_id);
-		AttachToHandle = serialized->get_uint64(AttachToHandle_type_id);
-		UnsyncedAttachToHandle = serialized->get_uint32(UnsyncedAttachToHandle_type_id);
-		AttachToJoint = serialized->get_int32(AttachToJoint_type_id);
+		FiredByHandle = serialized->get_uint64(FiredByHandle_type_id, 0);
+		AttachToHandle = serialized->get_uint64(AttachToHandle_type_id, 0);
+		UnsyncedAttachToHandle = serialized->get_uint32(UnsyncedAttachToHandle_type_id, 0);
+		AttachToJoint = serialized->get_int32(AttachToJoint_type_id, 0);
 		SpawnMat = serialized->unwrap_into<rivet::ddl::generated::DDLTransform>(SpawnMat_type_id);
-		ActorAsset = serialized->get_uint64(ActorAsset_type_id);
-		HasParentActor = serialized->get_bool(HasParentActor_type_id);
-		InstantExplode = serialized->get_bool(InstantExplode_type_id);
+		ActorAsset = serialized->get_uint64(ActorAsset_type_id, 0);
+		HasParentActor = serialized->get_bool(HasParentActor_type_id, false);
+		InstantExplode = serialized->get_bool(InstantExplode_type_id, false);
 		BombPrius = serialized->unwrap_into<rivet::ddl::generated::TunnelerBombPrius>(BombPrius_type_id); 
 	}
 

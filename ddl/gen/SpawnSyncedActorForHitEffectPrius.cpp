@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	SpawnSyncedActorForHitEffectPrius::SpawnSyncedActorForHitEffectPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ScriptedShotEffectBasePrius(serialized) {
-		DefaultActorAsset = serialized->get_string(DefaultActorAsset_type_id); 
+		DefaultActorAsset = serialized->get_string(DefaultActorAsset_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

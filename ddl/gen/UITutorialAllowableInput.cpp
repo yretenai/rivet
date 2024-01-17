@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	UITutorialAllowableInput::UITutorialAllowableInput([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Input = serialized->get_enum<rivet::ddl::generated::xba9a3e10>(Input_type_id, rivet::ddl::generated::xba9a3e10_values);
-		Policy = serialized->get_enum<rivet::ddl::generated::xd048db4e>(Policy_type_id, rivet::ddl::generated::xd048db4e_values);
-		Qualifier = serialized->get_enum<rivet::ddl::generated::x8989c8a>(Qualifier_type_id, rivet::ddl::generated::x8989c8a_values); 
+		Input = serialized->get_enum<rivet::ddl::generated::xba9a3e10>(Input_type_id, rivet::ddl::generated::xba9a3e10_values, rivet::ddl::generated::xba9a3e10::GUIKeyStart);
+		Policy = serialized->get_enum<rivet::ddl::generated::xd048db4e>(Policy_type_id, rivet::ddl::generated::xd048db4e_values, rivet::ddl::generated::xd048db4e::AdvanceTutorialStep);
+		Qualifier = serialized->get_enum<rivet::ddl::generated::x8989c8a>(Qualifier_type_id, rivet::ddl::generated::x8989c8a_values, rivet::ddl::generated::x8989c8a::Pressed); 
 	}
 
 	[[nodiscard]] auto

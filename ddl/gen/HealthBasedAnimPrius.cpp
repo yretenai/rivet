@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	HealthBasedAnimPrius::HealthBasedAnimPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DriverName = serialized->get_string(DriverName_type_id);
-		SnapAnim = serialized->get_bool(SnapAnim_type_id); 
+		DriverName = serialized->get_string(DriverName_type_id, "");
+		SnapAnim = serialized->get_bool(SnapAnim_type_id, false); 
 	}
 
 	[[nodiscard]] auto

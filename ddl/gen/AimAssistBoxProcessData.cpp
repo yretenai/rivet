@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	AimAssistBoxProcessData::AimAssistBoxProcessData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): AimAssistCurveData(serialized) {
-		BoxSlideFactor = serialized->get_float(BoxSlideFactor_type_id); 
+		BoxSlideFactor = serialized->get_float(BoxSlideFactor_type_id, 0.500000); 
 	}
 
 	[[nodiscard]] auto

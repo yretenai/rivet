@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	RenderColorOverride::RenderColorOverride([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Name = serialized->get_string(Name_type_id);
-		MaterialMappingName = serialized->get_string(MaterialMappingName_type_id);
+		Name = serialized->get_string(Name_type_id, {});
+		MaterialMappingName = serialized->get_string(MaterialMappingName_type_id, {});
 		Value = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Value_type_id); 
 	}
 

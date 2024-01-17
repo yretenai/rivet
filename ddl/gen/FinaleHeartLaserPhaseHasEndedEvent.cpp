@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	FinaleHeartLaserPhaseHasEndedEvent::FinaleHeartLaserPhaseHasEndedEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		CoreLocator = serialized->get_string(CoreLocator_type_id); 
+		CoreLocator = serialized->get_string(CoreLocator_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

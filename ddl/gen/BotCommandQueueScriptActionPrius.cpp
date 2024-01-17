@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	BotCommandQueueScriptActionPrius::BotCommandQueueScriptActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		ClearTargetsOnExit = serialized->get_bool(ClearTargetsOnExit_type_id);
-		EndOnAwarenessOfHero = serialized->get_bool(EndOnAwarenessOfHero_type_id);
-		CanInvestigate = serialized->get_bool(CanInvestigate_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Enemy_Bot);
+		ClearTargetsOnExit = serialized->get_bool(ClearTargetsOnExit_type_id, false);
+		EndOnAwarenessOfHero = serialized->get_bool(EndOnAwarenessOfHero_type_id, false);
+		CanInvestigate = serialized->get_bool(CanInvestigate_type_id, false); 
 	}
 
 	[[nodiscard]] auto

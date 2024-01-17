@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	ActorStretchActionPrius::ActorStretchActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		ContinuousMode = serialized->get_bool(ContinuousMode_type_id);
-		UseBoundsSize = serialized->get_bool(UseBoundsSize_type_id);
-		OriginMode = serialized->get_enum<rivet::ddl::generated::xfa97354e>(OriginMode_type_id, rivet::ddl::generated::xfa97354e_values);
-		StretchDirection = serialized->get_enum<rivet::ddl::generated::x726217e6>(StretchDirection_type_id, rivet::ddl::generated::x726217e6_values); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Gameplay);
+		ContinuousMode = serialized->get_bool(ContinuousMode_type_id, false);
+		UseBoundsSize = serialized->get_bool(UseBoundsSize_type_id, true);
+		OriginMode = serialized->get_enum<rivet::ddl::generated::xfa97354e>(OriginMode_type_id, rivet::ddl::generated::xfa97354e_values, rivet::ddl::generated::xfa97354e::PivotCentered);
+		StretchDirection = serialized->get_enum<rivet::ddl::generated::x726217e6>(StretchDirection_type_id, rivet::ddl::generated::x726217e6_values, rivet::ddl::generated::x726217e6::ZAxis); 
 	}
 
 	[[nodiscard]] auto

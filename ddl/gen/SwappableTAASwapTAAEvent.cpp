@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	SwappableTAASwapTAAEvent::SwappableTAASwapTAAEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		UseDefaultTaa = serialized->get_bool(UseDefaultTaa_type_id); 
+		UseDefaultTaa = serialized->get_bool(UseDefaultTaa_type_id, false); 
 	}
 
 	[[nodiscard]] auto

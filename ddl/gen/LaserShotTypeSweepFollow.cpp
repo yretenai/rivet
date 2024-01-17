@@ -7,13 +7,13 @@
 
 namespace rivet::ddl::generated {
 	LaserShotTypeSweepFollow::LaserShotTypeSweepFollow([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BotComboLaserShotType(serialized) {
-		LaserSweepTime = serialized->get_float(LaserSweepTime_type_id);
-		LaserFollowTime = serialized->get_float(LaserFollowTime_type_id);
-		InitFollowSpeed = serialized->get_float(InitFollowSpeed_type_id);
-		MaxFollowSpeed = serialized->get_float(MaxFollowSpeed_type_id);
-		FollowAccel = serialized->get_float(FollowAccel_type_id);
-		FollowDecel = serialized->get_float(FollowDecel_type_id);
-		TimeToStopAfterDamageTarget = serialized->get_float(TimeToStopAfterDamageTarget_type_id); 
+		LaserSweepTime = serialized->get_float(LaserSweepTime_type_id, 2.000000);
+		LaserFollowTime = serialized->get_float(LaserFollowTime_type_id, 1.500000);
+		InitFollowSpeed = serialized->get_float(InitFollowSpeed_type_id, 4.000000);
+		MaxFollowSpeed = serialized->get_float(MaxFollowSpeed_type_id, 10.000000);
+		FollowAccel = serialized->get_float(FollowAccel_type_id, 3.000000);
+		FollowDecel = serialized->get_float(FollowDecel_type_id, 2.000000);
+		TimeToStopAfterDamageTarget = serialized->get_float(TimeToStopAfterDamageTarget_type_id, -1.000000); 
 	}
 
 	[[nodiscard]] auto

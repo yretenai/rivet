@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	FactionArmorDataElement::FactionArmorDataElement([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Allegiance = serialized->get_enum<rivet::ddl::generated::x6bdf4ba1>(Allegiance_type_id, rivet::ddl::generated::x6bdf4ba1_values);
-		DamageReductionPercentSet = serialized->get_float(DamageReductionPercentSet_type_id);
-		DamageReductionPercentPiece = serialized->get_float(DamageReductionPercentPiece_type_id); 
+		Allegiance = serialized->get_enum<rivet::ddl::generated::x6bdf4ba1>(Allegiance_type_id, rivet::ddl::generated::x6bdf4ba1_values, rivet::ddl::generated::x6bdf4ba1::Neutral);
+		DamageReductionPercentSet = serialized->get_float(DamageReductionPercentSet_type_id, 0.000000);
+		DamageReductionPercentPiece = serialized->get_float(DamageReductionPercentPiece_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

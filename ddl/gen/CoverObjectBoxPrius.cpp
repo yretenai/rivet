@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	CoverObjectBoxPrius::CoverObjectBoxPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		GenFirepoints = serialized->get_bool(GenFirepoints_type_id);
-		GenerateAIPerches = serialized->get_bool(GenerateAIPerches_type_id); 
+		GenFirepoints = serialized->get_bool(GenFirepoints_type_id, true);
+		GenerateAIPerches = serialized->get_bool(GenerateAIPerches_type_id, true); 
 	}
 
 	[[nodiscard]] auto

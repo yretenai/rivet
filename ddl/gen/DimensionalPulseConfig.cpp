@@ -7,13 +7,13 @@
 
 namespace rivet::ddl::generated {
 	DimensionalPulseConfig::DimensionalPulseConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		PulseRadius = serialized->get_float(PulseRadius_type_id);
-		PulseDuration = serialized->get_float(PulseDuration_type_id);
-		EffectChance = serialized->get_float(EffectChance_type_id);
-		PreCompositeShader = serialized->get_string(PreCompositeShader_type_id);
-		PostCompositeShader = serialized->get_string(PostCompositeShader_type_id);
-		PostHitEffectLifetime = serialized->get_float(PostHitEffectLifetime_type_id);
-		DefaultTargetConduit = serialized->get_string(DefaultTargetConduit_type_id); 
+		PulseRadius = serialized->get_float(PulseRadius_type_id, 25.000000);
+		PulseDuration = serialized->get_float(PulseDuration_type_id, 2.000000);
+		EffectChance = serialized->get_float(EffectChance_type_id, 0.500000);
+		PreCompositeShader = serialized->get_string(PreCompositeShader_type_id, {});
+		PostCompositeShader = serialized->get_string(PostCompositeShader_type_id, {});
+		PostHitEffectLifetime = serialized->get_float(PostHitEffectLifetime_type_id, 1.000000);
+		DefaultTargetConduit = serialized->get_string(DefaultTargetConduit_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

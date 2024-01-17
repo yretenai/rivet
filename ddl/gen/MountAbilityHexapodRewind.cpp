@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	MountAbilityHexapodRewind::MountAbilityHexapodRewind([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): MountAbilityBase(serialized) {
-		Rate = serialized->get_float(Rate_type_id);
-		Accel = serialized->get_float(Accel_type_id);
-		Delay = serialized->get_float(Delay_type_id); 
+		Rate = serialized->get_float(Rate_type_id, 2.000000);
+		Accel = serialized->get_float(Accel_type_id, 2.000000);
+		Delay = serialized->get_float(Delay_type_id, 0.500000); 
 	}
 
 	[[nodiscard]] auto

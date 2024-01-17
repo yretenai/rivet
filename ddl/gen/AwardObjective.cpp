@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	AwardObjective::AwardObjective([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MissionName = serialized->get_string(MissionName_type_id);
-		ObjectiveName = serialized->get_string(ObjectiveName_type_id); 
+		MissionName = serialized->get_string(MissionName_type_id, {});
+		ObjectiveName = serialized->get_string(ObjectiveName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

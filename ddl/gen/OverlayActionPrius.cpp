@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	OverlayActionPrius::OverlayActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		Overlay = serialized->get_string(Overlay_type_id);
-		AutoUnload = serialized->get_bool(AutoUnload_type_id);
-		UseAsListener = serialized->get_bool(UseAsListener_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Loading);
+		Overlay = serialized->get_string(Overlay_type_id, {});
+		AutoUnload = serialized->get_bool(AutoUnload_type_id, false);
+		UseAsListener = serialized->get_bool(UseAsListener_type_id, true); 
 	}
 
 	[[nodiscard]] auto

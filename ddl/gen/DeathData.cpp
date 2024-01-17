@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	DeathData::DeathData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		BlastKnockbackLevel = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(BlastKnockbackLevel_type_id, rivet::ddl::generated::KnockbackLevels_values); 
+		BlastKnockbackLevel = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(BlastKnockbackLevel_type_id, rivet::ddl::generated::KnockbackLevels_values, rivet::ddl::generated::KnockbackLevels::Four); 
 	}
 
 	[[nodiscard]] auto

@@ -7,15 +7,15 @@
 
 namespace rivet::ddl::generated {
 	MountAbilityOverrideScriptActionPrius::MountAbilityOverrideScriptActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		EnableAbilitySquare = serialized->get_bool(EnableAbilitySquare_type_id);
-		EnableAbilityX = serialized->get_bool(EnableAbilityX_type_id);
-		EnableAbilityTriangle = serialized->get_bool(EnableAbilityTriangle_type_id);
-		EnableAbilityCircle = serialized->get_bool(EnableAbilityCircle_type_id);
-		EnableAbilityR1 = serialized->get_bool(EnableAbilityR1_type_id);
-		EnableAbilityL1 = serialized->get_bool(EnableAbilityL1_type_id);
-		EnableAbilityR2 = serialized->get_bool(EnableAbilityR2_type_id);
-		EnableAbilityL2 = serialized->get_bool(EnableAbilityL2_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Interact);
+		EnableAbilitySquare = serialized->get_bool(EnableAbilitySquare_type_id, true);
+		EnableAbilityX = serialized->get_bool(EnableAbilityX_type_id, true);
+		EnableAbilityTriangle = serialized->get_bool(EnableAbilityTriangle_type_id, true);
+		EnableAbilityCircle = serialized->get_bool(EnableAbilityCircle_type_id, true);
+		EnableAbilityR1 = serialized->get_bool(EnableAbilityR1_type_id, true);
+		EnableAbilityL1 = serialized->get_bool(EnableAbilityL1_type_id, true);
+		EnableAbilityR2 = serialized->get_bool(EnableAbilityR2_type_id, true);
+		EnableAbilityL2 = serialized->get_bool(EnableAbilityL2_type_id, true); 
 	}
 
 	[[nodiscard]] auto

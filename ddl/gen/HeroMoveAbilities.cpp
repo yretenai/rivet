@@ -7,27 +7,27 @@
 
 namespace rivet::ddl::generated {
 	HeroMoveAbilities::HeroMoveAbilities([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Move = serialized->get_bool(Move_type_id);
-		Run = serialized->get_bool(Run_type_id);
-		Jump = serialized->get_bool(Jump_type_id);
-		DoubleJump = serialized->get_bool(DoubleJump_type_id);
-		Shoot = serialized->get_bool(Shoot_type_id);
-		Melee = serialized->get_bool(Melee_type_id);
-		Ledge = serialized->get_bool(Ledge_type_id);
-		Interact = serialized->get_bool(Interact_type_id);
-		Grind = serialized->get_bool(Grind_type_id);
-		Glide = serialized->get_bool(Glide_type_id);
-		Mount = serialized->get_bool(Mount_type_id);
-		WallStick = serialized->get_bool(WallStick_type_id);
-		WallRun = serialized->get_bool(WallRun_type_id);
-		Dash = serialized->get_bool(Dash_type_id);
-		AirDash = serialized->get_bool(AirDash_type_id);
-		Hoverboot = serialized->get_bool(Hoverboot_type_id);
-		MagbootLaunch = serialized->get_bool(MagbootLaunch_type_id);
-		PortalZip = serialized->get_bool(PortalZip_type_id);
-		WeaponWheel = serialized->get_bool(WeaponWheel_type_id);
-		WeaponToggle = serialized->get_bool(WeaponToggle_type_id);
-		Sprint = serialized->get_bool(Sprint_type_id); 
+		Move = serialized->get_bool(Move_type_id, true);
+		Run = serialized->get_bool(Run_type_id, true);
+		Jump = serialized->get_bool(Jump_type_id, true);
+		DoubleJump = serialized->get_bool(DoubleJump_type_id, true);
+		Shoot = serialized->get_bool(Shoot_type_id, true);
+		Melee = serialized->get_bool(Melee_type_id, true);
+		Ledge = serialized->get_bool(Ledge_type_id, true);
+		Interact = serialized->get_bool(Interact_type_id, true);
+		Grind = serialized->get_bool(Grind_type_id, true);
+		Glide = serialized->get_bool(Glide_type_id, true);
+		Mount = serialized->get_bool(Mount_type_id, true);
+		WallStick = serialized->get_bool(WallStick_type_id, true);
+		WallRun = serialized->get_bool(WallRun_type_id, true);
+		Dash = serialized->get_bool(Dash_type_id, true);
+		AirDash = serialized->get_bool(AirDash_type_id, true);
+		Hoverboot = serialized->get_bool(Hoverboot_type_id, true);
+		MagbootLaunch = serialized->get_bool(MagbootLaunch_type_id, true);
+		PortalZip = serialized->get_bool(PortalZip_type_id, true);
+		WeaponWheel = serialized->get_bool(WeaponWheel_type_id, true);
+		WeaponToggle = serialized->get_bool(WeaponToggle_type_id, true);
+		Sprint = serialized->get_bool(Sprint_type_id, true); 
 	}
 
 	[[nodiscard]] auto

@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	PSNAuthenticationSettings::PSNAuthenticationSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Host = serialized->get_string(Host_type_id);
-		Path = serialized->get_string(Path_type_id);
-		Token = serialized->get_string(Token_type_id);
-		ConfigID = serialized->get_string(ConfigID_type_id);
-		LinkPlatform = serialized->get_string(LinkPlatform_type_id);
-		Namespace = serialized->get_string(Namespace_type_id); 
+		Host = serialized->get_string(Host_type_id, {});
+		Path = serialized->get_string(Path_type_id, {});
+		Token = serialized->get_string(Token_type_id, {});
+		ConfigID = serialized->get_string(ConfigID_type_id, {});
+		LinkPlatform = serialized->get_string(LinkPlatform_type_id, {});
+		Namespace = serialized->get_string(Namespace_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

@@ -9,13 +9,13 @@
 
 namespace rivet::ddl::generated {
 	ProjectDef::ProjectDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Id = serialized->get_string(Id_type_id);
-		GameExeName = serialized->get_string(GameExeName_type_id);
+		Id = serialized->get_string(Id_type_id, "");
+		GameExeName = serialized->get_string(GameExeName_type_id, "");
 		CodeBranchRef = serialized->unwrap_into<rivet::ddl::generated::CodeBranchRef>(CodeBranchRef_type_id);
-		Timestamp = serialized->get_uint64(Timestamp_type_id);
-		GameBuildCacheDir = serialized->get_string(GameBuildCacheDir_type_id);
-		GameBuildCacheOrigin = serialized->get_string(GameBuildCacheOrigin_type_id);
-		AssetBranchPath = serialized->get_string(AssetBranchPath_type_id);
+		Timestamp = serialized->get_uint64(Timestamp_type_id, 0);
+		GameBuildCacheDir = serialized->get_string(GameBuildCacheDir_type_id, "");
+		GameBuildCacheOrigin = serialized->get_string(GameBuildCacheOrigin_type_id, "");
+		AssetBranchPath = serialized->get_string(AssetBranchPath_type_id, "");
 		AssetBranchChoices = serialized->get_strings(AssetBranchChoices_type_id); 
 	}
 

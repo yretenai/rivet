@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	SkinItemColorConfig::SkinItemColorConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		ColorCategory = serialized->get_enum<rivet::ddl::generated::xc47e2a72>(ColorCategory_type_id, rivet::ddl::generated::xc47e2a72_values);
+		ColorCategory = serialized->get_enum<rivet::ddl::generated::xc47e2a72>(ColorCategory_type_id, rivet::ddl::generated::xc47e2a72_values, rivet::ddl::generated::xc47e2a72::None);
 		ColorList = serialized->unwrap_into_many<rivet::ddl::generated::SkinItemColor>(ColorList_type_id); 
 	}
 

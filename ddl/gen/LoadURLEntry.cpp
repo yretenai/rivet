@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	LoadURLEntry::LoadURLEntry([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DisplayName = serialized->get_string(DisplayName_type_id);
-		URL = serialized->get_string(URL_type_id);
-		FontFolderPath = serialized->get_string(FontFolderPath_type_id);
-		DefaultFontName = serialized->get_string(DefaultFontName_type_id); 
+		DisplayName = serialized->get_string(DisplayName_type_id, {});
+		URL = serialized->get_string(URL_type_id, {});
+		FontFolderPath = serialized->get_string(FontFolderPath_type_id, {});
+		DefaultFontName = serialized->get_string(DefaultFontName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

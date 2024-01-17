@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	CheckpointTriggeredEvent::CheckpointTriggeredEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): CheckpointEventBase(serialized) {
-		Loaded = serialized->get_bool(Loaded_type_id); 
+		Loaded = serialized->get_bool(Loaded_type_id, true); 
 	}
 
 	[[nodiscard]] auto

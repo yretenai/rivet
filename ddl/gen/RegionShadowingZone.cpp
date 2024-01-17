@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	RegionShadowingZone::RegionShadowingZone([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Zone = serialized->get_string(Zone_type_id);
-		ShadowZone = serialized->get_string(ShadowZone_type_id); 
+		Zone = serialized->get_string(Zone_type_id, {});
+		ShadowZone = serialized->get_string(ShadowZone_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

@@ -7,14 +7,14 @@
 
 namespace rivet::ddl::generated {
 	LevelEconomyDataConfig::LevelEconomyDataConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		BoltMultiplier = serialized->get_float(BoltMultiplier_type_id);
-		HeroXPMultiplier = serialized->get_float(HeroXPMultiplier_type_id);
-		WpnXPMultiplier = serialized->get_float(WpnXPMultiplier_type_id);
-		RaritaniumMultiplier = serialized->get_float(RaritaniumMultiplier_type_id);
-		ChallengeBoltMultiplier = serialized->get_float(ChallengeBoltMultiplier_type_id);
-		ChallengeHeroXPMultiplier = serialized->get_float(ChallengeHeroXPMultiplier_type_id);
-		ChallengeWpnXPMultiplier = serialized->get_float(ChallengeWpnXPMultiplier_type_id);
-		ChallengeRaritaniumMultiplier = serialized->get_float(ChallengeRaritaniumMultiplier_type_id); 
+		BoltMultiplier = serialized->get_float(BoltMultiplier_type_id, 1.000000);
+		HeroXPMultiplier = serialized->get_float(HeroXPMultiplier_type_id, 1.000000);
+		WpnXPMultiplier = serialized->get_float(WpnXPMultiplier_type_id, 1.000000);
+		RaritaniumMultiplier = serialized->get_float(RaritaniumMultiplier_type_id, 0.000000);
+		ChallengeBoltMultiplier = serialized->get_float(ChallengeBoltMultiplier_type_id, 1.000000);
+		ChallengeHeroXPMultiplier = serialized->get_float(ChallengeHeroXPMultiplier_type_id, 1.000000);
+		ChallengeWpnXPMultiplier = serialized->get_float(ChallengeWpnXPMultiplier_type_id, 1.000000);
+		ChallengeRaritaniumMultiplier = serialized->get_float(ChallengeRaritaniumMultiplier_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

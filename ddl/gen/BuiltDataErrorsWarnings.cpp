@@ -9,9 +9,9 @@
 
 namespace rivet::ddl::generated {
 	BuiltDataErrorsWarnings::BuiltDataErrorsWarnings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AssetPath = serialized->get_string(AssetPath_type_id);
-		TargetPath = serialized->get_string(TargetPath_type_id);
-		TargetType = serialized->get_enum<rivet::ddl::generated::x8b211a61>(TargetType_type_id, rivet::ddl::generated::x8b211a61_values);
+		AssetPath = serialized->get_string(AssetPath_type_id, {});
+		TargetPath = serialized->get_string(TargetPath_type_id, {});
+		TargetType = serialized->get_enum<rivet::ddl::generated::x8b211a61>(TargetType_type_id, rivet::ddl::generated::x8b211a61_values, rivet::ddl::generated::x8b211a61::PID);
 		BuildOutput = serialized->unwrap_into<rivet::ddl::generated::TargetFileBuildOutput>(BuildOutput_type_id); 
 	}
 

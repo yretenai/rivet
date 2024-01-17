@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	ChunkSpawnItem::ChunkSpawnItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SpawnModel = serialized->get_string(SpawnModel_type_id);
-		CustomLocator = serialized->get_string(CustomLocator_type_id); 
+		SpawnModel = serialized->get_string(SpawnModel_type_id, {});
+		CustomLocator = serialized->get_string(CustomLocator_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

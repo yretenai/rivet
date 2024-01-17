@@ -13,8 +13,8 @@
 
 namespace rivet::ddl::generated {
 	UITutorialStepBase::UITutorialStepBase([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Text = serialized->get_string(Text_type_id);
-		PostStepVO = serialized->get_string(PostStepVO_type_id);
+		Text = serialized->get_string(Text_type_id, {});
+		PostStepVO = serialized->get_string(PostStepVO_type_id, {});
 		AllowableInputs = serialized->unwrap_into_many<rivet::ddl::generated::UITutorialAllowableInput>(AllowableInputs_type_id);
 		ModalButton = serialized->unwrap_into<rivet::ddl::generated::UITutorialModalButton>(ModalButton_type_id);
 		ElementPosition = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(ElementPosition_type_id); 

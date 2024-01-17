@@ -14,9 +14,9 @@
 
 namespace rivet::ddl::generated {
 	TriggerByBasePrius::TriggerByBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		StartEnabled = serialized->get_bool(StartEnabled_type_id);
-		DoUntrigger = serialized->get_bool(DoUntrigger_type_id);
-		GroupName = serialized->get_string(GroupName_type_id);
+		StartEnabled = serialized->get_bool(StartEnabled_type_id, true);
+		DoUntrigger = serialized->get_bool(DoUntrigger_type_id, false);
+		GroupName = serialized->get_string(GroupName_type_id, {});
 		Condition = serialized->unwrap_into<rivet::ddl::generated::TriggerConditionAlwaysPrius>(Condition_type_id); 
 	}
 

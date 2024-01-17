@@ -20,9 +20,9 @@
 namespace rivet::ddl::generated {
 	ShotBasePrius::ShotBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		InitialMotion = serialized->unwrap_into<rivet::ddl::generated::ShotMotionBasePrius>(InitialMotion_type_id);
-		ConduitAsset = serialized->get_string(ConduitAsset_type_id);
-		FXVariantCount = serialized->get_uint8(FXVariantCount_type_id);
-		FlewByRange = serialized->get_float(FlewByRange_type_id);
+		ConduitAsset = serialized->get_string(ConduitAsset_type_id, {});
+		FXVariantCount = serialized->get_uint8(FXVariantCount_type_id, 1);
+		FlewByRange = serialized->get_float(FlewByRange_type_id, 0.000000);
 		ShakeData = serialized->unwrap_into_many<rivet::ddl::generated::ShotShakeData>(ShakeData_type_id); 
 	}
 

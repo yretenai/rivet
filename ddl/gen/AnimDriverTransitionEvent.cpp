@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	AnimDriverTransitionEvent::AnimDriverTransitionEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		PrevDriver = serialized->get_string(PrevDriver_type_id);
-		NextDriver = serialized->get_string(NextDriver_type_id); 
+		PrevDriver = serialized->get_string(PrevDriver_type_id, {});
+		NextDriver = serialized->get_string(NextDriver_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

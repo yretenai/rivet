@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	BirdAnimItem::BirdAnimItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Anim = serialized->get_string(Anim_type_id);
-		AnimWeight = serialized->get_float(AnimWeight_type_id); 
+		Anim = serialized->get_string(Anim_type_id, {});
+		AnimWeight = serialized->get_float(AnimWeight_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

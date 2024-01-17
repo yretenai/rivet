@@ -7,13 +7,13 @@
 
 namespace rivet::ddl::generated {
 	MaterialConstantJointTransformPrius::MaterialConstantJointTransformPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		JointName = serialized->get_string(JointName_type_id);
-		UseModelSpace = serialized->get_bool(UseModelSpace_type_id);
-		XAxisConstantName = serialized->get_string(XAxisConstantName_type_id);
-		YAxisConstantName = serialized->get_string(YAxisConstantName_type_id);
-		ZAxisConstantName = serialized->get_string(ZAxisConstantName_type_id);
-		PositionConstantName = serialized->get_string(PositionConstantName_type_id);
-		MaterialMappingName = serialized->get_string(MaterialMappingName_type_id); 
+		JointName = serialized->get_string(JointName_type_id, {});
+		UseModelSpace = serialized->get_bool(UseModelSpace_type_id, false);
+		XAxisConstantName = serialized->get_string(XAxisConstantName_type_id, {});
+		YAxisConstantName = serialized->get_string(YAxisConstantName_type_id, {});
+		ZAxisConstantName = serialized->get_string(ZAxisConstantName_type_id, {});
+		PositionConstantName = serialized->get_string(PositionConstantName_type_id, {});
+		MaterialMappingName = serialized->get_string(MaterialMappingName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	CameraSplineMotionPathFollowPrius::CameraSplineMotionPathFollowPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): CameraSplineMotionBasePrius(serialized) {
-		TravelForward = serialized->get_bool(TravelForward_type_id); 
+		TravelForward = serialized->get_bool(TravelForward_type_id, true); 
 	}
 
 	[[nodiscard]] auto

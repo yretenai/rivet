@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	WarshipFiringRangeDiffValue::WarshipFiringRangeDiffValue([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		RangeEasy = serialized->get_float(RangeEasy_type_id);
-		RangeNormal = serialized->get_float(RangeNormal_type_id);
-		RangeHard = serialized->get_float(RangeHard_type_id); 
+		RangeEasy = serialized->get_float(RangeEasy_type_id, -1.000000);
+		RangeNormal = serialized->get_float(RangeNormal_type_id, -1.000000);
+		RangeHard = serialized->get_float(RangeHard_type_id, -1.000000); 
 	}
 
 	[[nodiscard]] auto

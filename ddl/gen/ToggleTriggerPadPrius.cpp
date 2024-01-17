@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	ToggleTriggerPadPrius::ToggleTriggerPadPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): TriggerPadPrius(serialized) {
-		MaterialConstant = serialized->get_string(MaterialConstant_type_id); 
+		MaterialConstant = serialized->get_string(MaterialConstant_type_id, "Button_State"); 
 	}
 
 	[[nodiscard]] auto

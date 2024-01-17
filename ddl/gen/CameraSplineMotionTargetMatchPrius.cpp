@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	CameraSplineMotionTargetMatchPrius::CameraSplineMotionTargetMatchPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): CameraSplineMotionBasePrius(serialized) {
-		MatchMode = serialized->get_enum<rivet::ddl::generated::x944d8042>(MatchMode_type_id, rivet::ddl::generated::x944d8042_values);
-		SnapFollow = serialized->get_bool(SnapFollow_type_id);
-		SnapActivate = serialized->get_bool(SnapActivate_type_id); 
+		MatchMode = serialized->get_enum<rivet::ddl::generated::x944d8042>(MatchMode_type_id, rivet::ddl::generated::x944d8042_values, rivet::ddl::generated::x944d8042::Match_Distance_T);
+		SnapFollow = serialized->get_bool(SnapFollow_type_id, false);
+		SnapActivate = serialized->get_bool(SnapActivate_type_id, true); 
 	}
 
 	[[nodiscard]] auto

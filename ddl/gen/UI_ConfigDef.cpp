@@ -12,8 +12,8 @@
 namespace rivet::ddl::generated {
 	UI_ConfigDef::UI_ConfigDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		VaultMetaData = serialized->unwrap_into<rivet::ddl::generated::VaultMetaData>(VaultMetaData_type_id);
-		IconPath = serialized->get_string(IconPath_type_id);
-		LoadType = serialized->get_enum<rivet::ddl::generated::x9750cc97>(LoadType_type_id, rivet::ddl::generated::x9750cc97_values);
+		IconPath = serialized->get_string(IconPath_type_id, "");
+		LoadType = serialized->get_enum<rivet::ddl::generated::x9750cc97>(LoadType_type_id, rivet::ddl::generated::x9750cc97_values, rivet::ddl::generated::x9750cc97::Load_Marked);
 		Type = serialized->unwrap_into<rivet::ddl::generated::ConfigType>(Type_type_id);
 		AssetSwaps = serialized->unwrap_into<rivet::ddl::generated::AssetSwap>(AssetSwaps_type_id);
 		Def = serialized->get_field(Def_type_id); 

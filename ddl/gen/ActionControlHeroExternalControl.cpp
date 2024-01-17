@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ActionControlHeroExternalControl::ActionControlHeroExternalControl([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Control = serialized->get_enum<rivet::ddl::generated::xdb8afcfb>(Control_type_id, rivet::ddl::generated::xdb8afcfb_values); 
+		Control = serialized->get_enum<rivet::ddl::generated::xdb8afcfb>(Control_type_id, rivet::ddl::generated::xdb8afcfb_values, rivet::ddl::generated::xdb8afcfb::DropExternal); 
 	}
 
 	[[nodiscard]] auto

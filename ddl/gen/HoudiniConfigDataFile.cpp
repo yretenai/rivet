@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	HoudiniConfigDataFile::HoudiniConfigDataFile([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): HoudiniConfigData(serialized) {
-		Value = serialized->get_string(Value_type_id); 
+		Value = serialized->get_string(Value_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

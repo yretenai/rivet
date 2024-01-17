@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	UnlockableSkinData::UnlockableSkinData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		UnlockSkinID = serialized->get_int8(UnlockSkinID_type_id);
+		UnlockSkinID = serialized->get_int8(UnlockSkinID_type_id, -1);
 		Skin = serialized->unwrap_into<rivet::ddl::generated::SkinData>(Skin_type_id); 
 	}
 

@@ -9,15 +9,15 @@
 
 namespace rivet::ddl::generated {
 	AnimDriverOpMulAddDef::AnimDriverOpMulAddDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Name = serialized->get_string(Name_type_id);
-		DisplayName = serialized->get_string(DisplayName_type_id);
-		x = serialized->get_float(x_type_id);
-		y = serialized->get_float(y_type_id);
-		OpType = serialized->get_enum<rivet::ddl::generated::x9f234d85>(OpType_type_id, rivet::ddl::generated::x9f234d85_values);
-		Value = serialized->get_float(Value_type_id);
+		Name = serialized->get_string(Name_type_id, {});
+		DisplayName = serialized->get_string(DisplayName_type_id, "");
+		x = serialized->get_float(x_type_id, 0.000000);
+		y = serialized->get_float(y_type_id, 0.000000);
+		OpType = serialized->get_enum<rivet::ddl::generated::x9f234d85>(OpType_type_id, rivet::ddl::generated::x9f234d85_values, rivet::ddl::generated::x9f234d85::AnimDriverOpTypeMultiplyAdd);
+		Value = serialized->get_float(Value_type_id, 0.000000);
 		Connections = serialized->unwrap_into_many<rivet::ddl::generated::AnimDriverOpConnection>(Connections_type_id);
-		Mul = serialized->get_float(Mul_type_id);
-		Add = serialized->get_float(Add_type_id); 
+		Mul = serialized->get_float(Mul_type_id, 0.000000);
+		Add = serialized->get_float(Add_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

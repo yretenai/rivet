@@ -8,16 +8,16 @@
 namespace rivet::ddl::generated {
 	AnimControllerComponentPrius::AnimControllerComponentPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		AnimSets = serialized->get_strings(AnimSets_type_id);
-		PerformanceType = serialized->get_enum<rivet::ddl::generated::x9675aa42>(PerformanceType_type_id, rivet::ddl::generated::x9675aa42_values);
-		PerformanceSet = serialized->get_string(PerformanceSet_type_id);
-		PerformanceSetOverride = serialized->get_string(PerformanceSetOverride_type_id);
+		PerformanceType = serialized->get_enum<rivet::ddl::generated::x9675aa42>(PerformanceType_type_id, rivet::ddl::generated::x9675aa42_values, rivet::ddl::generated::x9675aa42::TypeStandard);
+		PerformanceSet = serialized->get_string(PerformanceSet_type_id, {});
+		PerformanceSetOverride = serialized->get_string(PerformanceSetOverride_type_id, {});
 		PerformanceSetsAux = serialized->get_strings(PerformanceSetsAux_type_id);
-		MaxUpdateDistance = serialized->get_float(MaxUpdateDistance_type_id);
-		AnimDynamicsUpdateMultiplier = serialized->get_float(AnimDynamicsUpdateMultiplier_type_id);
-		NeverCull = serialized->get_bool(NeverCull_type_id);
-		BindAfterAnimEnd = serialized->get_bool(BindAfterAnimEnd_type_id);
-		AutoFreezeSkinning = serialized->get_bool(AutoFreezeSkinning_type_id);
-		MaxAnimTreeSize = serialized->get_uint16(MaxAnimTreeSize_type_id); 
+		MaxUpdateDistance = serialized->get_float(MaxUpdateDistance_type_id, 0.000000);
+		AnimDynamicsUpdateMultiplier = serialized->get_float(AnimDynamicsUpdateMultiplier_type_id, 50.000000);
+		NeverCull = serialized->get_bool(NeverCull_type_id, false);
+		BindAfterAnimEnd = serialized->get_bool(BindAfterAnimEnd_type_id, false);
+		AutoFreezeSkinning = serialized->get_bool(AutoFreezeSkinning_type_id, false);
+		MaxAnimTreeSize = serialized->get_uint16(MaxAnimTreeSize_type_id, 4096); 
 	}
 
 	[[nodiscard]] auto

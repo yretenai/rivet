@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	LevelListSelectionElement::LevelListSelectionElement([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Type = serialized->get_enum<rivet::ddl::generated::xf02da14>(Type_type_id, rivet::ddl::generated::xf02da14_values);
-		AssetPath = serialized->get_string(AssetPath_type_id);
-		Id = serialized->get_uint64(Id_type_id);
-		ItemName = serialized->get_string(ItemName_type_id);
-		ModelItemId = serialized->get_uint64(ModelItemId_type_id); 
+		Type = serialized->get_enum<rivet::ddl::generated::xf02da14>(Type_type_id, rivet::ddl::generated::xf02da14_values, rivet::ddl::generated::xf02da14::Asset);
+		AssetPath = serialized->get_string(AssetPath_type_id, {});
+		Id = serialized->get_uint64(Id_type_id, 0);
+		ItemName = serialized->get_string(ItemName_type_id, {});
+		ModelItemId = serialized->get_uint64(ModelItemId_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

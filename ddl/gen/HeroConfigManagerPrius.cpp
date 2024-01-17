@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	HeroConfigManagerPrius::HeroConfigManagerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SharedConfig = serialized->get_string(SharedConfig_type_id);
-		UniqueConfig = serialized->get_string(UniqueConfig_type_id); 
+		SharedConfig = serialized->get_string(SharedConfig_type_id, {});
+		UniqueConfig = serialized->get_string(UniqueConfig_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

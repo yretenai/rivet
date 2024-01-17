@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	BotComboMoveFinaleWeaponMultiAttack::BotComboMoveFinaleWeaponMultiAttack([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BotComboMoveBase(serialized) {
-		AttackVolumeHead = serialized->get_uint64(AttackVolumeHead_type_id);
-		AttackVolumeArm = serialized->get_uint64(AttackVolumeArm_type_id); 
+		AttackVolumeHead = serialized->get_uint64(AttackVolumeHead_type_id, 0);
+		AttackVolumeArm = serialized->get_uint64(AttackVolumeArm_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

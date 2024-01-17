@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	ActivityClueModuleIndexAnimFilter::ActivityClueModuleIndexAnimFilter([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AnimIndexStart = serialized->get_enum<rivet::ddl::generated::x85cb9e0e>(AnimIndexStart_type_id, rivet::ddl::generated::x85cb9e0e_values);
-		AnimIndexMax = serialized->get_enum<rivet::ddl::generated::x85cb9e0e>(AnimIndexMax_type_id, rivet::ddl::generated::x85cb9e0e_values);
+		AnimIndexStart = serialized->get_enum<rivet::ddl::generated::x85cb9e0e>(AnimIndexStart_type_id, rivet::ddl::generated::x85cb9e0e_values, rivet::ddl::generated::x85cb9e0e::One);
+		AnimIndexMax = serialized->get_enum<rivet::ddl::generated::x85cb9e0e>(AnimIndexMax_type_id, rivet::ddl::generated::x85cb9e0e_values, rivet::ddl::generated::x85cb9e0e::Six);
 		ApplicableDrivers = serialized->get_strings(ApplicableDrivers_type_id); 
 	}
 

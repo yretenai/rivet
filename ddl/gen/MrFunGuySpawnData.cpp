@@ -9,25 +9,25 @@
 
 namespace rivet::ddl::generated {
 	MrFunGuySpawnData::MrFunGuySpawnData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ActorSpawnData(serialized) {
-		OwnerHandle = serialized->get_uint32(OwnerHandle_type_id);
-		ShotHandle = serialized->get_uint32(ShotHandle_type_id);
-		AssetId = serialized->get_uint64(AssetId_type_id);
-		ZoneIndex = serialized->get_int32(ZoneIndex_type_id);
-		TurretShotConfigAssetId = serialized->get_uint64(TurretShotConfigAssetId_type_id);
-		WeaponId = serialized->get_uint32(WeaponId_type_id);
-		WeaponNameHash = serialized->get_uint32(WeaponNameHash_type_id);
-		MaxLifetime = serialized->get_float(MaxLifetime_type_id);
-		TurretShotDamage = serialized->get_float(TurretShotDamage_type_id);
-		TurretFireRate = serialized->get_float(TurretFireRate_type_id);
-		AttackRange = serialized->get_float(AttackRange_type_id);
-		TurretAmmoCapacity = serialized->get_uint8(TurretAmmoCapacity_type_id);
-		PoisonStatusDuration = serialized->get_float(PoisonStatusDuration_type_id);
-		HasAOECloudOnDeathUpgrade = serialized->get_float(HasAOECloudOnDeathUpgrade_type_id);
-		MovementSpeedMultiplier = serialized->get_float(MovementSpeedMultiplier_type_id);
-		AggroBias = serialized->get_float(AggroBias_type_id);
-		GasDamage = serialized->get_float(GasDamage_type_id);
-		SpawnBounceAngleOffset = serialized->get_float(SpawnBounceAngleOffset_type_id);
-		SpawnBounceDistance = serialized->get_float(SpawnBounceDistance_type_id);
+		OwnerHandle = serialized->get_uint32(OwnerHandle_type_id, 0);
+		ShotHandle = serialized->get_uint32(ShotHandle_type_id, 0);
+		AssetId = serialized->get_uint64(AssetId_type_id, 0);
+		ZoneIndex = serialized->get_int32(ZoneIndex_type_id, 0);
+		TurretShotConfigAssetId = serialized->get_uint64(TurretShotConfigAssetId_type_id, 0);
+		WeaponId = serialized->get_uint32(WeaponId_type_id, 0);
+		WeaponNameHash = serialized->get_uint32(WeaponNameHash_type_id, 0);
+		MaxLifetime = serialized->get_float(MaxLifetime_type_id, 0.000000);
+		TurretShotDamage = serialized->get_float(TurretShotDamage_type_id, 0.000000);
+		TurretFireRate = serialized->get_float(TurretFireRate_type_id, 0.000000);
+		AttackRange = serialized->get_float(AttackRange_type_id, 0.000000);
+		TurretAmmoCapacity = serialized->get_uint8(TurretAmmoCapacity_type_id, 0);
+		PoisonStatusDuration = serialized->get_float(PoisonStatusDuration_type_id, 0.000000);
+		HasAOECloudOnDeathUpgrade = serialized->get_float(HasAOECloudOnDeathUpgrade_type_id, 0.000000);
+		MovementSpeedMultiplier = serialized->get_float(MovementSpeedMultiplier_type_id, 0.000000);
+		AggroBias = serialized->get_float(AggroBias_type_id, 0.000000);
+		GasDamage = serialized->get_float(GasDamage_type_id, 0.000000);
+		SpawnBounceAngleOffset = serialized->get_float(SpawnBounceAngleOffset_type_id, 0.000000);
+		SpawnBounceDistance = serialized->get_float(SpawnBounceDistance_type_id, 0.000000);
 		SpawnPos = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(SpawnPos_type_id);
 		Facing = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Facing_type_id);
 		Up = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Up_type_id);

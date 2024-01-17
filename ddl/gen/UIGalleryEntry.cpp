@@ -7,18 +7,18 @@
 
 namespace rivet::ddl::generated {
 	UIGalleryEntry::UIGalleryEntry([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DisplayName = serialized->get_string(DisplayName_type_id);
-		DisplayDesc = serialized->get_string(DisplayDesc_type_id);
-		DisplayIcon = serialized->get_string(DisplayIcon_type_id);
-		DisplayObject = serialized->get_enum<rivet::ddl::generated::xd64fa9b1>(DisplayObject_type_id, rivet::ddl::generated::xd64fa9b1_values);
-		MissionUnlock = serialized->get_string(MissionUnlock_type_id);
-		ObjectiveUnlock = serialized->get_string(ObjectiveUnlock_type_id);
-		GoldBoltUnlock = serialized->get_enum<rivet::ddl::generated::xf06c6830>(GoldBoltUnlock_type_id, rivet::ddl::generated::xf06c6830_values);
-		HasDescUnlock = serialized->get_bool(HasDescUnlock_type_id);
-		Name2 = serialized->get_string(Name2_type_id);
-		Desc2 = serialized->get_string(Desc2_type_id);
-		Desc2Mission = serialized->get_string(Desc2Mission_type_id);
-		Desc2Objective = serialized->get_string(Desc2Objective_type_id); 
+		DisplayName = serialized->get_string(DisplayName_type_id, {});
+		DisplayDesc = serialized->get_string(DisplayDesc_type_id, {});
+		DisplayIcon = serialized->get_string(DisplayIcon_type_id, {});
+		DisplayObject = serialized->get_enum<rivet::ddl::generated::xd64fa9b1>(DisplayObject_type_id, rivet::ddl::generated::xd64fa9b1_values, rivet::ddl::generated::xd64fa9b1::None);
+		MissionUnlock = serialized->get_string(MissionUnlock_type_id, {});
+		ObjectiveUnlock = serialized->get_string(ObjectiveUnlock_type_id, {});
+		GoldBoltUnlock = serialized->get_enum<rivet::ddl::generated::xf06c6830>(GoldBoltUnlock_type_id, rivet::ddl::generated::xf06c6830_values, rivet::ddl::generated::xf06c6830::None);
+		HasDescUnlock = serialized->get_bool(HasDescUnlock_type_id, false);
+		Name2 = serialized->get_string(Name2_type_id, {});
+		Desc2 = serialized->get_string(Desc2_type_id, {});
+		Desc2Mission = serialized->get_string(Desc2Mission_type_id, {});
+		Desc2Objective = serialized->get_string(Desc2Objective_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	NodeGraphBaseDef::NodeGraphBaseDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): NodeGraphItemDef(serialized) {
-		Name = serialized->get_string(Name_type_id); 
+		Name = serialized->get_string(Name_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

@@ -7,27 +7,27 @@
 
 namespace rivet::ddl::generated {
 	FossilizeHoleTrackerPrius::FossilizeHoleTrackerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		PreApplyMaterial = serialized->get_string(PreApplyMaterial_type_id);
-		PostApplyMaterial = serialized->get_string(PostApplyMaterial_type_id);
-		PostAlwaysOn = serialized->get_bool(PostAlwaysOn_type_id);
-		HoleTrackActor = serialized->get_string(HoleTrackActor_type_id);
-		HitFadeTime = serialized->get_float(HitFadeTime_type_id);
-		FadeOutTime = serialized->get_float(FadeOutTime_type_id);
-		CurrentHitScale = serialized->get_float(CurrentHitScale_type_id);
-		LastHitScale = serialized->get_float(LastHitScale_type_id);
-		IdleWaveSpeed = serialized->get_float(IdleWaveSpeed_type_id);
-		IdleWaveScale = serialized->get_float(IdleWaveScale_type_id);
-		MinimumScale = serialized->get_float(MinimumScale_type_id);
-		DeathPreApplyMaterial = serialized->get_string(DeathPreApplyMaterial_type_id);
-		DeathPostApplyMaterial = serialized->get_string(DeathPostApplyMaterial_type_id);
-		DeathPostAlwaysOn = serialized->get_bool(DeathPostAlwaysOn_type_id);
-		DeathDisolveDelay = serialized->get_float(DeathDisolveDelay_type_id);
-		DeathDisolveDuration = serialized->get_float(DeathDisolveDuration_type_id);
-		HoleSize = serialized->get_float(HoleSize_type_id);
-		SmallDeathDisolveDelay = serialized->get_float(SmallDeathDisolveDelay_type_id);
-		SmallDeathDisolveSpeed = serialized->get_float(SmallDeathDisolveSpeed_type_id);
-		SmallHoleSize = serialized->get_float(SmallHoleSize_type_id);
-		DeathUseJointCrawl = serialized->get_bool(DeathUseJointCrawl_type_id); 
+		PreApplyMaterial = serialized->get_string(PreApplyMaterial_type_id, {});
+		PostApplyMaterial = serialized->get_string(PostApplyMaterial_type_id, {});
+		PostAlwaysOn = serialized->get_bool(PostAlwaysOn_type_id, false);
+		HoleTrackActor = serialized->get_string(HoleTrackActor_type_id, {});
+		HitFadeTime = serialized->get_float(HitFadeTime_type_id, 1.000000);
+		FadeOutTime = serialized->get_float(FadeOutTime_type_id, 1.000000);
+		CurrentHitScale = serialized->get_float(CurrentHitScale_type_id, 0.300000);
+		LastHitScale = serialized->get_float(LastHitScale_type_id, 0.400000);
+		IdleWaveSpeed = serialized->get_float(IdleWaveSpeed_type_id, 1.000000);
+		IdleWaveScale = serialized->get_float(IdleWaveScale_type_id, 0.100000);
+		MinimumScale = serialized->get_float(MinimumScale_type_id, 0.200000);
+		DeathPreApplyMaterial = serialized->get_string(DeathPreApplyMaterial_type_id, {});
+		DeathPostApplyMaterial = serialized->get_string(DeathPostApplyMaterial_type_id, {});
+		DeathPostAlwaysOn = serialized->get_bool(DeathPostAlwaysOn_type_id, false);
+		DeathDisolveDelay = serialized->get_float(DeathDisolveDelay_type_id, 0.000000);
+		DeathDisolveDuration = serialized->get_float(DeathDisolveDuration_type_id, 2.500000);
+		HoleSize = serialized->get_float(HoleSize_type_id, 1.000000);
+		SmallDeathDisolveDelay = serialized->get_float(SmallDeathDisolveDelay_type_id, 0.000000);
+		SmallDeathDisolveSpeed = serialized->get_float(SmallDeathDisolveSpeed_type_id, 1.000000);
+		SmallHoleSize = serialized->get_float(SmallHoleSize_type_id, 1.000000);
+		DeathUseJointCrawl = serialized->get_bool(DeathUseJointCrawl_type_id, true); 
 	}
 
 	[[nodiscard]] auto

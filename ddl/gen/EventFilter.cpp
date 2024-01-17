@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	EventFilter::EventFilter([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		FilterName = serialized->get_string(FilterName_type_id);
-		FilterCompare = serialized->get_enum<rivet::ddl::generated::x21604be>(FilterCompare_type_id, rivet::ddl::generated::x21604be_values);
-		FilterOnValue = serialized->get_string(FilterOnValue_type_id);
-		FilterActor = serialized->get_uint64(FilterActor_type_id); 
+		FilterName = serialized->get_string(FilterName_type_id, {});
+		FilterCompare = serialized->get_enum<rivet::ddl::generated::x21604be>(FilterCompare_type_id, rivet::ddl::generated::x21604be_values, rivet::ddl::generated::x21604be::Equals);
+		FilterOnValue = serialized->get_string(FilterOnValue_type_id, {});
+		FilterActor = serialized->get_uint64(FilterActor_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

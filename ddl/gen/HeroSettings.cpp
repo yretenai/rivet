@@ -14,18 +14,18 @@
 
 namespace rivet::ddl::generated {
 	HeroSettings::HeroSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		OverrideDefaultItemLoadout = serialized->get_string(OverrideDefaultItemLoadout_type_id);
-		DebugSwapHeroType = serialized->get_enum<rivet::ddl::generated::HeroTypes>(DebugSwapHeroType_type_id, rivet::ddl::generated::HeroTypes_values);
-		DebugSpawnHeroType = serialized->get_enum<rivet::ddl::generated::HeroTypes>(DebugSpawnHeroType_type_id, rivet::ddl::generated::HeroTypes_values);
+		OverrideDefaultItemLoadout = serialized->get_string(OverrideDefaultItemLoadout_type_id, {});
+		DebugSwapHeroType = serialized->get_enum<rivet::ddl::generated::HeroTypes>(DebugSwapHeroType_type_id, rivet::ddl::generated::HeroTypes_values, rivet::ddl::generated::HeroTypes::None);
+		DebugSpawnHeroType = serialized->get_enum<rivet::ddl::generated::HeroTypes>(DebugSpawnHeroType_type_id, rivet::ddl::generated::HeroTypes_values, rivet::ddl::generated::HeroTypes::None);
 		AltControlSettings = serialized->unwrap_into<rivet::ddl::generated::HeroAltControlSettings>(AltControlSettings_type_id);
 		RunSpeedSettings = serialized->unwrap_into<rivet::ddl::generated::HeroRunSpeedSettings>(RunSpeedSettings_type_id);
 		SprintSettings = serialized->unwrap_into<rivet::ddl::generated::HeroSprintSettings>(SprintSettings_type_id);
 		RecoveryLedgeSettings = serialized->unwrap_into<rivet::ddl::generated::HeroRecoveryLedgeSettings>(RecoveryLedgeSettings_type_id);
 		HoverbootSettings = serialized->unwrap_into<rivet::ddl::generated::HeroHoverbootSettings>(HoverbootSettings_type_id);
 		WallRunSettings = serialized->unwrap_into<rivet::ddl::generated::HeroWallRunSettings>(WallRunSettings_type_id);
-		XpGainMultiplier = serialized->get_float(XpGainMultiplier_type_id);
-		EnablePlatformingShadowDecal = serialized->get_bool(EnablePlatformingShadowDecal_type_id);
-		EnablePhaseDash = serialized->get_bool(EnablePhaseDash_type_id); 
+		XpGainMultiplier = serialized->get_float(XpGainMultiplier_type_id, 1.000000);
+		EnablePlatformingShadowDecal = serialized->get_bool(EnablePlatformingShadowDecal_type_id, true);
+		EnablePhaseDash = serialized->get_bool(EnablePhaseDash_type_id, true); 
 	}
 
 	[[nodiscard]] auto

@@ -10,7 +10,7 @@
 namespace rivet::ddl::generated {
 	SelfieWeaponData::SelfieWeaponData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		WeaponActor = serialized->unwrap_into<rivet::ddl::generated::AssetReferenceDef>(WeaponActor_type_id);
-		GripStyle = serialized->get_enum<rivet::ddl::generated::x8c1c9e5c>(GripStyle_type_id, rivet::ddl::generated::x8c1c9e5c_values); 
+		GripStyle = serialized->get_enum<rivet::ddl::generated::x8c1c9e5c>(GripStyle_type_id, rivet::ddl::generated::x8c1c9e5c_values, rivet::ddl::generated::x8c1c9e5c::GripStyleRifle); 
 	}
 
 	[[nodiscard]] auto

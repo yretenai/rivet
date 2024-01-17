@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	MultiTargetPenalty::MultiTargetPenalty([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		NumTargeters = serialized->get_float(NumTargeters_type_id);
-		Penalty = serialized->get_float(Penalty_type_id); 
+		NumTargeters = serialized->get_float(NumTargeters_type_id, 0.000000);
+		Penalty = serialized->get_float(Penalty_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

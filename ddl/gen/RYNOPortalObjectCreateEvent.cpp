@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	RYNOPortalObjectCreateEvent::RYNOPortalObjectCreateEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		PortalSize = serialized->get_enum<rivet::ddl::generated::xbf5ff3c6>(PortalSize_type_id, rivet::ddl::generated::xbf5ff3c6_values); 
+		PortalSize = serialized->get_enum<rivet::ddl::generated::xbf5ff3c6>(PortalSize_type_id, rivet::ddl::generated::xbf5ff3c6_values, rivet::ddl::generated::xbf5ff3c6::Small); 
 	}
 
 	[[nodiscard]] auto

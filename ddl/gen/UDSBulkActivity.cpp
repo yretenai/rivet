@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	UDSBulkActivity::UDSBulkActivity([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		objectId = serialized->get_string(objectId_type_id);
+		objectId = serialized->get_string(objectId_type_id, {});
 		metadata = serialized->get_field(metadata_type_id);
 		links = serialized->get_field(links_type_id); 
 	}

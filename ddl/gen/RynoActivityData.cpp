@@ -9,12 +9,12 @@
 
 namespace rivet::ddl::generated {
 	RynoActivityData::RynoActivityData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Enabled = serialized->get_bool(Enabled_type_id);
-		CardNameTag = serialized->get_string(CardNameTag_type_id);
-		CardDescTag = serialized->get_string(CardDescTag_type_id);
-		CardSmallImage = serialized->get_string(CardSmallImage_type_id);
-		CardLargeImage = serialized->get_string(CardLargeImage_type_id);
-		PlaytimeEstimate = serialized->get_uint32(PlaytimeEstimate_type_id);
+		Enabled = serialized->get_bool(Enabled_type_id, true);
+		CardNameTag = serialized->get_string(CardNameTag_type_id, {});
+		CardDescTag = serialized->get_string(CardDescTag_type_id, {});
+		CardSmallImage = serialized->get_string(CardSmallImage_type_id, {});
+		CardLargeImage = serialized->get_string(CardLargeImage_type_id, {});
+		PlaytimeEstimate = serialized->get_uint32(PlaytimeEstimate_type_id, 60);
 		Reward = serialized->unwrap_into<rivet::ddl::generated::ActivityReward>(Reward_type_id); 
 	}
 

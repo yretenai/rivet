@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	ClankBotTossCluePrius::ClankBotTossCluePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		UseAllEdges = serialized->get_bool(UseAllEdges_type_id);
-		BridgebotOnly = serialized->get_bool(BridgebotOnly_type_id); 
+		UseAllEdges = serialized->get_bool(UseAllEdges_type_id, false);
+		BridgebotOnly = serialized->get_bool(BridgebotOnly_type_id, false); 
 	}
 
 	[[nodiscard]] auto

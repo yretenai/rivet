@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	CharacterPrereqNodeDef::CharacterPrereqNodeDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): PrereqNodeBaseDef(serialized) {
-		RequiredHeroType = serialized->get_enum<rivet::ddl::generated::HeroTypes>(RequiredHeroType_type_id, rivet::ddl::generated::HeroTypes_values); 
+		RequiredHeroType = serialized->get_enum<rivet::ddl::generated::HeroTypes>(RequiredHeroType_type_id, rivet::ddl::generated::HeroTypes_values, rivet::ddl::generated::HeroTypes::Ratchet); 
 	}
 
 	[[nodiscard]] auto

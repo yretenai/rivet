@@ -11,15 +11,15 @@
 
 namespace rivet::ddl::generated {
 	PlanetDimension::PlanetDimension([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Enabled = serialized->get_bool(Enabled_type_id);
-		CodeName = serialized->get_string(CodeName_type_id);
-		NameTag = serialized->get_string(NameTag_type_id);
-		DescTag = serialized->get_string(DescTag_type_id);
-		CardSmallImage = serialized->get_string(CardSmallImage_type_id);
-		CardLargeImage = serialized->get_string(CardLargeImage_type_id);
+		Enabled = serialized->get_bool(Enabled_type_id, true);
+		CodeName = serialized->get_string(CodeName_type_id, {});
+		NameTag = serialized->get_string(NameTag_type_id, {});
+		DescTag = serialized->get_string(DescTag_type_id, {});
+		CardSmallImage = serialized->get_string(CardSmallImage_type_id, {});
+		CardLargeImage = serialized->get_string(CardLargeImage_type_id, {});
 		UnlockSequence = serialized->unwrap_into<rivet::ddl::generated::ObjSysUnlockSequence>(UnlockSequence_type_id);
-		DefaultPlaytimeEstimate = serialized->get_uint32(DefaultPlaytimeEstimate_type_id);
-		GameIntentCheckpoint = serialized->get_string(GameIntentCheckpoint_type_id);
+		DefaultPlaytimeEstimate = serialized->get_uint32(DefaultPlaytimeEstimate_type_id, 5);
+		GameIntentCheckpoint = serialized->get_string(GameIntentCheckpoint_type_id, {});
 		Reward = serialized->unwrap_into<rivet::ddl::generated::ActivityReward>(Reward_type_id);
 		Hints = serialized->unwrap_into_many<rivet::ddl::generated::ActivityHint>(Hints_type_id);
 		UnlockCondition = serialized->unwrap_into<rivet::ddl::generated::ObjSysUnlockSequence>(UnlockCondition_type_id); 

@@ -20,9 +20,9 @@
 
 namespace rivet::ddl::generated {
 	SkinItemConfig::SkinItemConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ItemConfig(serialized) {
-		Category = serialized->get_enum<rivet::ddl::generated::xf28253cd>(Category_type_id, rivet::ddl::generated::xf28253cd_values);
-		Available = serialized->get_enum<rivet::ddl::generated::x7ecfc969>(Available_type_id, rivet::ddl::generated::x7ecfc969_values);
-		PartType = serialized->get_enum<rivet::ddl::generated::x576d8e6a>(PartType_type_id, rivet::ddl::generated::x576d8e6a_values);
+		Category = serialized->get_enum<rivet::ddl::generated::xf28253cd>(Category_type_id, rivet::ddl::generated::xf28253cd_values, rivet::ddl::generated::xf28253cd::None);
+		Available = serialized->get_enum<rivet::ddl::generated::x7ecfc969>(Available_type_id, rivet::ddl::generated::x7ecfc969_values, rivet::ddl::generated::x7ecfc969::Always);
+		PartType = serialized->get_enum<rivet::ddl::generated::x576d8e6a>(PartType_type_id, rivet::ddl::generated::x576d8e6a_values, rivet::ddl::generated::x576d8e6a::None);
 		ModelList = serialized->unwrap_into_many<rivet::ddl::generated::SkinItemModel>(ModelList_type_id);
 		LocatorOverrideList = serialized->unwrap_into_many<rivet::ddl::generated::SkinItemLocatorOverrideListElement>(LocatorOverrideList_type_id);
 		TextureOverrideList = serialized->unwrap_into_many<rivet::ddl::generated::SkinItemTextureOverrideListElement>(TextureOverrideList_type_id);
@@ -32,7 +32,7 @@ namespace rivet::ddl::generated {
 		ModelVariantOverrideList = serialized->unwrap_into_many<rivet::ddl::generated::SkinItemModelVariantOverrideListElement>(ModelVariantOverrideList_type_id);
 		SwitchGroupList = serialized->unwrap_into_many<rivet::ddl::generated::SkinItemSwitchGroupListElement>(SwitchGroupList_type_id);
 		CompanionItemList = serialized->unwrap_into_many<rivet::ddl::generated::SkinItemCompanionItemListElement>(CompanionItemList_type_id);
-		ColorChannels = serialized->get_enum<rivet::ddl::generated::x3126d105>(ColorChannels_type_id, rivet::ddl::generated::x3126d105_values);
+		ColorChannels = serialized->get_enum<rivet::ddl::generated::x3126d105>(ColorChannels_type_id, rivet::ddl::generated::x3126d105_values, rivet::ddl::generated::x3126d105::All);
 		SoundBanks = serialized->unwrap_into_many<rivet::ddl::generated::AssetReferenceDef>(SoundBanks_type_id);
 		ShaderUpdater = serialized->unwrap_into<rivet::ddl::generated::SkinShaderUpdaterPrius>(ShaderUpdater_type_id); 
 	}

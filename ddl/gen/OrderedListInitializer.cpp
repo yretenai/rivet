@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	OrderedListInitializer::OrderedListInitializer([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		InitTypes = serialized->get_bitset<rivet::ddl::generated::xcd385c63>(InitTypes_type_id, rivet::ddl::generated::xcd385c63_values);
+		InitTypes = serialized->get_bitset<rivet::ddl::generated::xcd385c63>(InitTypes_type_id, rivet::ddl::generated::xcd385c63_values, 31);
 		List = serialized->unwrap_into_many<rivet::ddl::generated::OrderedListInitEntry>(List_type_id); 
 	}
 

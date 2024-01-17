@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	VisualEffectSpawnAttr::VisualEffectSpawnAttr([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SpawnCondition = serialized->get_enum<rivet::ddl::generated::SpawnCondition>(SpawnCondition_type_id, rivet::ddl::generated::SpawnCondition_values);
-		CoolOffTime = serialized->get_float(CoolOffTime_type_id);
-		Radius = serialized->get_float(Radius_type_id); 
+		SpawnCondition = serialized->get_enum<rivet::ddl::generated::SpawnCondition>(SpawnCondition_type_id, rivet::ddl::generated::SpawnCondition_values, rivet::ddl::generated::SpawnCondition::Always);
+		CoolOffTime = serialized->get_float(CoolOffTime_type_id, 0.000000);
+		Radius = serialized->get_float(Radius_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

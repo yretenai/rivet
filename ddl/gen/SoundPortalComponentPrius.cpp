@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	SoundPortalComponentPrius::SoundPortalComponentPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		VolumeA = serialized->get_uint64(VolumeA_type_id);
-		VolumeB = serialized->get_uint64(VolumeB_type_id); 
+		VolumeA = serialized->get_uint64(VolumeA_type_id, 0);
+		VolumeB = serialized->get_uint64(VolumeB_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

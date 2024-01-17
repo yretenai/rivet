@@ -234,8 +234,8 @@
 
 namespace rivet::ddl::generated {
 	ConfigBase::ConfigBase([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ID = serialized->get_uint64(ID_type_id);
-		Comment = serialized->get_string(Comment_type_id); 
+		ID = serialized->get_uint64(ID_type_id, 0);
+		Comment = serialized->get_string(Comment_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

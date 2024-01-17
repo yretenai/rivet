@@ -10,8 +10,8 @@
 namespace rivet::ddl::generated {
 	DamageModifierByTypeIfHasStatusEffectPrius::DamageModifierByTypeIfHasStatusEffectPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): DamageModifierIncomingPrius(serialized) {
 		ValidDamageTypes = serialized->get_enums<rivet::ddl::generated::DamageTypes>(ValidDamageTypes_type_id, rivet::ddl::generated::DamageTypes_values);
-		StatusMultiplier = serialized->get_float(StatusMultiplier_type_id);
-		DamageMultiplier = serialized->get_float(DamageMultiplier_type_id);
+		StatusMultiplier = serialized->get_float(StatusMultiplier_type_id, 1.000000);
+		DamageMultiplier = serialized->get_float(DamageMultiplier_type_id, 1.000000);
 		StatusEffects = serialized->unwrap_into_many<rivet::ddl::generated::DamageModStatusEffectData>(StatusEffects_type_id); 
 	}
 

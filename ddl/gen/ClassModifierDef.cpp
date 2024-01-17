@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	ClassModifierDef::ClassModifierDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ModClassA = serialized->get_float(ModClassA_type_id);
-		ModClassB = serialized->get_float(ModClassB_type_id);
-		ModClassC = serialized->get_float(ModClassC_type_id);
-		ModClassD = serialized->get_float(ModClassD_type_id); 
+		ModClassA = serialized->get_float(ModClassA_type_id, 0.000000);
+		ModClassB = serialized->get_float(ModClassB_type_id, 0.000000);
+		ModClassC = serialized->get_float(ModClassC_type_id, 0.000000);
+		ModClassD = serialized->get_float(ModClassD_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

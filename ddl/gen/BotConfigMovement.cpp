@@ -17,23 +17,23 @@ namespace rivet::ddl::generated {
 	BotConfigMovement::BotConfigMovement([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
 		MovementConfigs = serialized->unwrap_into_many<rivet::ddl::generated::MovementConfig>(MovementConfigs_type_id);
 		MoverConfig = serialized->unwrap_into<rivet::ddl::generated::MoverConfig>(MoverConfig_type_id);
-		EventuallyDiesWhileFalling = serialized->get_bool(EventuallyDiesWhileFalling_type_id);
-		LethalFallTime = serialized->get_float(LethalFallTime_type_id);
-		TakesFallDamage = serialized->get_bool(TakesFallDamage_type_id);
-		MinDamagingHeight = serialized->get_float(MinDamagingHeight_type_id);
-		MaxDamagingHeight = serialized->get_float(MaxDamagingHeight_type_id);
+		EventuallyDiesWhileFalling = serialized->get_bool(EventuallyDiesWhileFalling_type_id, true);
+		LethalFallTime = serialized->get_float(LethalFallTime_type_id, 3.000000);
+		TakesFallDamage = serialized->get_bool(TakesFallDamage_type_id, false);
+		MinDamagingHeight = serialized->get_float(MinDamagingHeight_type_id, 6.000000);
+		MaxDamagingHeight = serialized->get_float(MaxDamagingHeight_type_id, 16.000000);
 		SteeringConfig = serialized->unwrap_into<rivet::ddl::generated::SteeringConfig>(SteeringConfig_type_id);
 		SteeringPartnerCurveConfig = serialized->unwrap_into<rivet::ddl::generated::SteeringPartnerCurveConfig>(SteeringPartnerCurveConfig_type_id);
 		CVCShape = serialized->unwrap_into<rivet::ddl::generated::CVCShapeConfig>(CVCShape_type_id);
-		UseSingleMoveSweep = serialized->get_bool(UseSingleMoveSweep_type_id);
-		PushOnEqual = serialized->get_bool(PushOnEqual_type_id);
-		UseFullSpeedDeflection = serialized->get_bool(UseFullSpeedDeflection_type_id);
-		UseSoftCollisions = serialized->get_bool(UseSoftCollisions_type_id);
-		SoftCVCInner = serialized->get_float(SoftCVCInner_type_id);
-		SoftCVCOuter = serialized->get_float(SoftCVCOuter_type_id);
+		UseSingleMoveSweep = serialized->get_bool(UseSingleMoveSweep_type_id, true);
+		PushOnEqual = serialized->get_bool(PushOnEqual_type_id, true);
+		UseFullSpeedDeflection = serialized->get_bool(UseFullSpeedDeflection_type_id, false);
+		UseSoftCollisions = serialized->get_bool(UseSoftCollisions_type_id, false);
+		SoftCVCInner = serialized->get_float(SoftCVCInner_type_id, 0.250000);
+		SoftCVCOuter = serialized->get_float(SoftCVCOuter_type_id, 0.750000);
 		NavObstacle = serialized->unwrap_into<rivet::ddl::generated::NavCapsule>(NavObstacle_type_id);
-		Weight = serialized->get_float(Weight_type_id);
-		NavMeshLayer = serialized->get_enum<rivet::ddl::generated::xdcbe36a2>(NavMeshLayer_type_id, rivet::ddl::generated::xdcbe36a2_values); 
+		Weight = serialized->get_float(Weight_type_id, 1.000000);
+		NavMeshLayer = serialized->get_enum<rivet::ddl::generated::xdcbe36a2>(NavMeshLayer_type_id, rivet::ddl::generated::xdcbe36a2_values, rivet::ddl::generated::xdcbe36a2::MeshStandard); 
 	}
 
 	[[nodiscard]] auto

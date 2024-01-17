@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	AwardsConfig::AwardsConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		ImagePath = serialized->get_string(ImagePath_type_id);
+		ImagePath = serialized->get_string(ImagePath_type_id, {});
 		AwardGroups = serialized->unwrap_into_many<rivet::ddl::generated::AwardGroup>(AwardGroups_type_id); 
 	}
 

@@ -13,9 +13,9 @@
 
 namespace rivet::ddl::generated {
 	GameBotShooterJetPackPrius::GameBotShooterJetPackPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): GameBotShooterPrius(serialized) {
-		HoverLeanVarMultiplier = serialized->get_float(HoverLeanVarMultiplier_type_id);
-		HoverLeanBlendSpeed = serialized->get_float(HoverLeanBlendSpeed_type_id);
-		HoverSpeedScaleWhenPassive = serialized->get_float(HoverSpeedScaleWhenPassive_type_id);
+		HoverLeanVarMultiplier = serialized->get_float(HoverLeanVarMultiplier_type_id, 1.000000);
+		HoverLeanBlendSpeed = serialized->get_float(HoverLeanBlendSpeed_type_id, 2.000000);
+		HoverSpeedScaleWhenPassive = serialized->get_float(HoverSpeedScaleWhenPassive_type_id, 1.000000);
 		HoverShuffleData = serialized->unwrap_into<rivet::ddl::generated::HoverShuffleData>(HoverShuffleData_type_id); 
 	}
 

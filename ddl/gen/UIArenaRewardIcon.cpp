@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	UIArenaRewardIcon::UIArenaRewardIcon([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Type = serialized->get_enum<rivet::ddl::generated::x3a1207ee>(Type_type_id, rivet::ddl::generated::x3a1207ee_values);
-		Icon = serialized->get_string(Icon_type_id); 
+		Type = serialized->get_enum<rivet::ddl::generated::x3a1207ee>(Type_type_id, rivet::ddl::generated::x3a1207ee_values, rivet::ddl::generated::x3a1207ee::Bolts);
+		Icon = serialized->get_string(Icon_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

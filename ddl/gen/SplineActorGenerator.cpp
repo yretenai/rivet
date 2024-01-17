@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	SplineActorGenerator::SplineActorGenerator([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): SplineGenerator(serialized) {
-		GenActor = serialized->get_enum<rivet::ddl::generated::x7e4a5355>(GenActor_type_id, rivet::ddl::generated::x7e4a5355_values);
-		Actor = serialized->get_string(Actor_type_id); 
+		GenActor = serialized->get_enum<rivet::ddl::generated::x7e4a5355>(GenActor_type_id, rivet::ddl::generated::x7e4a5355_values, rivet::ddl::generated::x7e4a5355::No_Actor);
+		Actor = serialized->get_string(Actor_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

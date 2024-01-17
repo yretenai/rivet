@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	DualSplineCameraFlyPrius::DualSplineCameraFlyPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): CameraPrius(serialized) {
-		MotionSpline = serialized->get_uint64(MotionSpline_type_id);
-		TargetSpline = serialized->get_uint64(TargetSpline_type_id);
-		StartAtEnd = serialized->get_bool(StartAtEnd_type_id);
-		LockMatchT = serialized->get_bool(LockMatchT_type_id); 
+		MotionSpline = serialized->get_uint64(MotionSpline_type_id, 0);
+		TargetSpline = serialized->get_uint64(TargetSpline_type_id, 0);
+		StartAtEnd = serialized->get_bool(StartAtEnd_type_id, false);
+		LockMatchT = serialized->get_bool(LockMatchT_type_id, false); 
 	}
 
 	[[nodiscard]] auto

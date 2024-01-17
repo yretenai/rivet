@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	CrateMaterialOverride::CrateMaterialOverride([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MaterialOverride = serialized->get_string(MaterialOverride_type_id);
-		MaterialMappingName = serialized->get_string(MaterialMappingName_type_id);
-		MaterialType = serialized->get_enum<rivet::ddl::generated::x2351894b>(MaterialType_type_id, rivet::ddl::generated::x2351894b_values); 
+		MaterialOverride = serialized->get_string(MaterialOverride_type_id, {});
+		MaterialMappingName = serialized->get_string(MaterialMappingName_type_id, {});
+		MaterialType = serialized->get_enum<rivet::ddl::generated::x2351894b>(MaterialType_type_id, rivet::ddl::generated::x2351894b_values, rivet::ddl::generated::x2351894b::Override_Base); 
 	}
 
 	[[nodiscard]] auto

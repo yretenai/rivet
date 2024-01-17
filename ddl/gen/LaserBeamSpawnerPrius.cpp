@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	LaserBeamSpawnerPrius::LaserBeamSpawnerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SpawnedShotConfig = serialized->get_string(SpawnedShotConfig_type_id); 
+		SpawnedShotConfig = serialized->get_string(SpawnedShotConfig_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

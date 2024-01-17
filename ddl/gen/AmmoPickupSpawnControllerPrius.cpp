@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	AmmoPickupSpawnControllerPrius::AmmoPickupSpawnControllerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): PickupSpawnControllerPrius(serialized) {
-		ValidateAmmoNeed = serialized->get_bool(ValidateAmmoNeed_type_id); 
+		ValidateAmmoNeed = serialized->get_bool(ValidateAmmoNeed_type_id, true); 
 	}
 
 	[[nodiscard]] auto

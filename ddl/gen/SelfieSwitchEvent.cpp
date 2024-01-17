@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	SelfieSwitchEvent::SelfieSwitchEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		State = serialized->get_enum<rivet::ddl::generated::xa857c0d1>(State_type_id, rivet::ddl::generated::xa857c0d1_values); 
+		State = serialized->get_enum<rivet::ddl::generated::xa857c0d1>(State_type_id, rivet::ddl::generated::xa857c0d1_values, rivet::ddl::generated::xa857c0d1::ActivateState); 
 	}
 
 	[[nodiscard]] auto

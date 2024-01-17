@@ -11,8 +11,8 @@
 
 namespace rivet::ddl::generated {
 	BattleBrewScalePrius::BattleBrewScalePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BattleBrewBasePrius(serialized) {
-		ScaleReactAnimDriver = serialized->get_string(ScaleReactAnimDriver_type_id);
-		ShrunkJumpedOnKnockback = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(ShrunkJumpedOnKnockback_type_id, rivet::ddl::generated::KnockbackLevels_values);
+		ScaleReactAnimDriver = serialized->get_string(ScaleReactAnimDriver_type_id, "React_Knockback");
+		ShrunkJumpedOnKnockback = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(ShrunkJumpedOnKnockback_type_id, rivet::ddl::generated::KnockbackLevels_values, rivet::ddl::generated::KnockbackLevels::Three);
 		IncomingDamageModifier = serialized->unwrap_into<rivet::ddl::generated::DamageModifierIncomingBattleBrewScalePrius>(IncomingDamageModifier_type_id);
 		OutgoingDamageModifier = serialized->unwrap_into<rivet::ddl::generated::DamageModifierOutgoingBattleBrewScalePrius>(OutgoingDamageModifier_type_id);
 		Trampoline = serialized->unwrap_into<rivet::ddl::generated::TrampolinePrius>(Trampoline_type_id); 

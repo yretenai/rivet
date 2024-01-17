@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	ShieldSectionData::ShieldSectionData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DamageJoint = serialized->get_string(DamageJoint_type_id);
-		Locator = serialized->get_string(Locator_type_id);
-		UndamagedLook = serialized->get_string(UndamagedLook_type_id);
-		DamagedLook = serialized->get_string(DamagedLook_type_id);
-		UndamagedLookV3 = serialized->get_string(UndamagedLookV3_type_id);
-		DamagedLookV3 = serialized->get_string(DamagedLookV3_type_id); 
+		DamageJoint = serialized->get_string(DamageJoint_type_id, {});
+		Locator = serialized->get_string(Locator_type_id, {});
+		UndamagedLook = serialized->get_string(UndamagedLook_type_id, {});
+		DamagedLook = serialized->get_string(DamagedLook_type_id, {});
+		UndamagedLookV3 = serialized->get_string(UndamagedLookV3_type_id, {});
+		DamagedLookV3 = serialized->get_string(DamagedLookV3_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	DynamicAnimsetItem::DynamicAnimsetItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AnimSet = serialized->get_string(AnimSet_type_id);
-		UserMask = serialized->get_bitset<rivet::ddl::generated::x805e39ba>(UserMask_type_id, rivet::ddl::generated::x805e39ba_values); 
+		AnimSet = serialized->get_string(AnimSet_type_id, {});
+		UserMask = serialized->get_bitset<rivet::ddl::generated::x805e39ba>(UserMask_type_id, rivet::ddl::generated::x805e39ba_values, 1); 
 	}
 
 	[[nodiscard]] auto

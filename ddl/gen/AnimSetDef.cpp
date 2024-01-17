@@ -18,20 +18,20 @@
 namespace rivet::ddl::generated {
 	AnimSetDef::AnimSetDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		VaultMetaData = serialized->unwrap_into<rivet::ddl::generated::VaultMetaData>(VaultMetaData_type_id);
-		IconPath = serialized->get_string(IconPath_type_id);
+		IconPath = serialized->get_string(IconPath_type_id, "");
 		AnimClips = serialized->get_strings(AnimClips_type_id);
-		ModelAssetPath = serialized->get_string(ModelAssetPath_type_id);
+		ModelAssetPath = serialized->get_string(ModelAssetPath_type_id, {});
 		PreviewData = serialized->unwrap_into<rivet::ddl::generated::AnimSetPreviewData>(PreviewData_type_id);
-		PruneLevel = serialized->get_enum<rivet::ddl::generated::xb521b086>(PruneLevel_type_id, rivet::ddl::generated::xb521b086_values);
-		StreamData = serialized->get_bool(StreamData_type_id);
+		PruneLevel = serialized->get_enum<rivet::ddl::generated::xb521b086>(PruneLevel_type_id, rivet::ddl::generated::xb521b086_values, rivet::ddl::generated::xb521b086::Prune_Level_Full);
+		StreamData = serialized->get_bool(StreamData_type_id, false);
 		AnimClipGroups = serialized->unwrap_into_many<rivet::ddl::generated::AnimClipGroupDef>(AnimClipGroups_type_id);
 		AnimDrivers = serialized->unwrap_into_many<rivet::ddl::generated::AnimDriverDef>(AnimDrivers_type_id);
 		DefaultTransition = serialized->unwrap_into<rivet::ddl::generated::AnimDriverTransitionDataDef>(DefaultTransition_type_id);
 		Transitions = serialized->unwrap_into_many<rivet::ddl::generated::AnimDriverTransitionDef>(Transitions_type_id);
-		AttachmentCollection = serialized->get_string(AttachmentCollection_type_id);
+		AttachmentCollection = serialized->get_string(AttachmentCollection_type_id, {});
 		Attachments = serialized->unwrap_into_many<rivet::ddl::generated::AnimAttachmentDef>(Attachments_type_id);
 		Sequences = serialized->unwrap_into_many<rivet::ddl::generated::AnimSetSequenceDef>(Sequences_type_id);
-		UiTimeStamp = serialized->get_string(UiTimeStamp_type_id);
+		UiTimeStamp = serialized->get_string(UiTimeStamp_type_id, {});
 		Comments = serialized->unwrap_into_many<rivet::ddl::generated::AnimSetCommentDef>(Comments_type_id); 
 	}
 

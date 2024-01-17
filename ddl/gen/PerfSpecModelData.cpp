@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	PerfSpecModelData::PerfSpecModelData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Spec = serialized->get_enum<rivet::ddl::generated::x11adfe43>(Spec_type_id, rivet::ddl::generated::x11adfe43_values);
-		Model = serialized->get_string(Model_type_id); 
+		Spec = serialized->get_enum<rivet::ddl::generated::x11adfe43>(Spec_type_id, rivet::ddl::generated::x11adfe43_values, rivet::ddl::generated::x11adfe43::None);
+		Model = serialized->get_string(Model_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

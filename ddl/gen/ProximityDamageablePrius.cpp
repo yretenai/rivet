@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	ProximityDamageablePrius::ProximityDamageablePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DamageOnce = serialized->get_bool(DamageOnce_type_id);
-		AllowBotDamage = serialized->get_bool(AllowBotDamage_type_id);
-		AllowHeroDamage = serialized->get_bool(AllowHeroDamage_type_id);
-		IsEnabled = serialized->get_bool(IsEnabled_type_id); 
+		DamageOnce = serialized->get_bool(DamageOnce_type_id, true);
+		AllowBotDamage = serialized->get_bool(AllowBotDamage_type_id, true);
+		AllowHeroDamage = serialized->get_bool(AllowHeroDamage_type_id, false);
+		IsEnabled = serialized->get_bool(IsEnabled_type_id, true); 
 	}
 
 	[[nodiscard]] auto

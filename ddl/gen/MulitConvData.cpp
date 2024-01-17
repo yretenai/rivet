@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	MulitConvData::MulitConvData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MinDelay = serialized->get_float(MinDelay_type_id);
-		MaxDelay = serialized->get_float(MaxDelay_type_id);
+		MinDelay = serialized->get_float(MinDelay_type_id, 5.000000);
+		MaxDelay = serialized->get_float(MaxDelay_type_id, 7.000000);
 		ConversationOptions = serialized->unwrap_into_many<rivet::ddl::generated::MulitConvOptions>(ConversationOptions_type_id); 
 	}
 

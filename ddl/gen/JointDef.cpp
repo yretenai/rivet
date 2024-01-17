@@ -10,10 +10,10 @@
 
 namespace rivet::ddl::generated {
 	JointDef::JointDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Name = serialized->get_string(Name_type_id);
-		ParentName = serialized->get_string(ParentName_type_id);
-		ParentScaleCompensate = serialized->get_bool(ParentScaleCompensate_type_id);
-		IsLocator = serialized->get_bool(IsLocator_type_id);
+		Name = serialized->get_string(Name_type_id, {});
+		ParentName = serialized->get_string(ParentName_type_id, {});
+		ParentScaleCompensate = serialized->get_bool(ParentScaleCompensate_type_id, false);
+		IsLocator = serialized->get_bool(IsLocator_type_id, false);
 		Orientation = serialized->unwrap_into<rivet::ddl::generated::DDLQuaternion>(Orientation_type_id);
 		Translation = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Translation_type_id); 
 	}

@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	AssetProfileDataDependency::AssetProfileDataDependency([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Path = serialized->get_string(Path_type_id);
-		Tuid = serialized->get_uint64(Tuid_type_id);
-		RootHash = serialized->get_uint32(RootHash_type_id); 
+		Path = serialized->get_string(Path_type_id, {});
+		Tuid = serialized->get_uint64(Tuid_type_id, 0);
+		RootHash = serialized->get_uint32(RootHash_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

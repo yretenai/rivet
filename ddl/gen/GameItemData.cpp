@@ -9,16 +9,16 @@
 
 namespace rivet::ddl::generated {
 	GameItemData::GameItemData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Icon = serialized->get_string(Icon_type_id);
-		Video = serialized->get_string(Video_type_id);
-		ScrapAmount = serialized->get_uint32(ScrapAmount_type_id);
-		MissionUnlock = serialized->get_string(MissionUnlock_type_id);
-		ChallengeModePrepBehavior = serialized->get_enum<rivet::ddl::generated::xaa9dd5a4>(ChallengeModePrepBehavior_type_id, rivet::ddl::generated::xaa9dd5a4_values);
-		DisplayNameTag = serialized->get_string(DisplayNameTag_type_id);
-		DisplayNameUpperTag = serialized->get_string(DisplayNameUpperTag_type_id);
-		DisplayDescriptionTag = serialized->get_string(DisplayDescriptionTag_type_id);
-		UIDisplayObject = serialized->get_enum<rivet::ddl::generated::xd64fa9b1>(UIDisplayObject_type_id, rivet::ddl::generated::xd64fa9b1_values);
-		IdleAnim = serialized->get_string(IdleAnim_type_id); 
+		Icon = serialized->get_string(Icon_type_id, {});
+		Video = serialized->get_string(Video_type_id, {});
+		ScrapAmount = serialized->get_uint32(ScrapAmount_type_id, 10);
+		MissionUnlock = serialized->get_string(MissionUnlock_type_id, {});
+		ChallengeModePrepBehavior = serialized->get_enum<rivet::ddl::generated::xaa9dd5a4>(ChallengeModePrepBehavior_type_id, rivet::ddl::generated::xaa9dd5a4_values, rivet::ddl::generated::xaa9dd5a4::Keep);
+		DisplayNameTag = serialized->get_string(DisplayNameTag_type_id, "INVALID");
+		DisplayNameUpperTag = serialized->get_string(DisplayNameUpperTag_type_id, "INVALID");
+		DisplayDescriptionTag = serialized->get_string(DisplayDescriptionTag_type_id, "INVALID");
+		UIDisplayObject = serialized->get_enum<rivet::ddl::generated::xd64fa9b1>(UIDisplayObject_type_id, rivet::ddl::generated::xd64fa9b1_values, rivet::ddl::generated::xd64fa9b1::None);
+		IdleAnim = serialized->get_string(IdleAnim_type_id, ""); 
 	}
 
 	[[nodiscard]] auto

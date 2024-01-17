@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	UI_CinematicInstanceZone::UI_CinematicInstanceZone([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		IsCinematicOwner = serialized->get_bool(IsCinematicOwner_type_id);
-		ParentRegionAssetPath = serialized->get_string(ParentRegionAssetPath_type_id);
-		ShadowZoneAssetPath = serialized->get_string(ShadowZoneAssetPath_type_id);
-		ZoneAssetPath = serialized->get_string(ZoneAssetPath_type_id); 
+		IsCinematicOwner = serialized->get_bool(IsCinematicOwner_type_id, false);
+		ParentRegionAssetPath = serialized->get_string(ParentRegionAssetPath_type_id, {});
+		ShadowZoneAssetPath = serialized->get_string(ShadowZoneAssetPath_type_id, {});
+		ZoneAssetPath = serialized->get_string(ZoneAssetPath_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

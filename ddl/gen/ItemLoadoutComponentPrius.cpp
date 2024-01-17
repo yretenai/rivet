@@ -9,11 +9,11 @@
 
 namespace rivet::ddl::generated {
 	ItemLoadoutComponentPrius::ItemLoadoutComponentPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ItemLoadoutConfig = serialized->get_string(ItemLoadoutConfig_type_id);
-		ApplyOnStart = serialized->get_bool(ApplyOnStart_type_id);
-		CanDeferLoadout = serialized->get_bool(CanDeferLoadout_type_id);
-		CheckSaveFile = serialized->get_bool(CheckSaveFile_type_id);
-		ResetInventory = serialized->get_bool(ResetInventory_type_id);
+		ItemLoadoutConfig = serialized->get_string(ItemLoadoutConfig_type_id, {});
+		ApplyOnStart = serialized->get_bool(ApplyOnStart_type_id, false);
+		CanDeferLoadout = serialized->get_bool(CanDeferLoadout_type_id, false);
+		CheckSaveFile = serialized->get_bool(CheckSaveFile_type_id, true);
+		ResetInventory = serialized->get_bool(ResetInventory_type_id, false);
 		RandomConfigArray = serialized->get_strings(RandomConfigArray_type_id);
 		LoadoutOverrideList = serialized->unwrap_into_many<rivet::ddl::generated::ItemLoadoutComponentOverrideListElement>(LoadoutOverrideList_type_id); 
 	}

@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	LODLimiterPrius::LODLimiterPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MinLOD = serialized->get_uint32(MinLOD_type_id);
-		DisableDuringCinematics = serialized->get_bool(DisableDuringCinematics_type_id);
+		MinLOD = serialized->get_uint32(MinLOD_type_id, 1);
+		DisableDuringCinematics = serialized->get_bool(DisableDuringCinematics_type_id, true);
 		MinLODsPerSpec = serialized->unwrap_into_many<rivet::ddl::generated::LODLimiterPerfSpecData>(MinLODsPerSpec_type_id); 
 	}
 

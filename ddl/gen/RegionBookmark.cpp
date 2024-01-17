@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	RegionBookmark::RegionBookmark([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Reference = serialized->get_string(Reference_type_id);
-		Link = serialized->get_string(Link_type_id); 
+		Reference = serialized->get_string(Reference_type_id, {});
+		Link = serialized->get_string(Link_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

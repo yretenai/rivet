@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	MaterialOverrideListEntry::MaterialOverrideListEntry([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MaterialToReplace = serialized->get_string(MaterialToReplace_type_id);
-		NewMaterial = serialized->get_string(NewMaterial_type_id); 
+		MaterialToReplace = serialized->get_string(MaterialToReplace_type_id, {});
+		NewMaterial = serialized->get_string(NewMaterial_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

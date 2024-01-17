@@ -9,9 +9,9 @@
 
 namespace rivet::ddl::generated {
 	ModelSplineSubsetDef::ModelSplineSubsetDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Name = serialized->get_string(Name_type_id);
-		SkinningType = serialized->get_enum<rivet::ddl::generated::xff284f2a>(SkinningType_type_id, rivet::ddl::generated::xff284f2a_values);
-		SplineDescriptionConfigFilePath = serialized->get_string(SplineDescriptionConfigFilePath_type_id);
+		Name = serialized->get_string(Name_type_id, {});
+		SkinningType = serialized->get_enum<rivet::ddl::generated::xff284f2a>(SkinningType_type_id, rivet::ddl::generated::xff284f2a_values, rivet::ddl::generated::xff284f2a::Disabled);
+		SplineDescriptionConfigFilePath = serialized->get_string(SplineDescriptionConfigFilePath_type_id, {});
 		SplineDescription = serialized->unwrap_into<rivet::ddl::generated::ModelSplineDescriptionDef>(SplineDescription_type_id); 
 	}
 

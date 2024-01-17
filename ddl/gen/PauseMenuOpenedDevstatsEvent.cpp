@@ -10,9 +10,9 @@
 
 namespace rivet::ddl::generated {
 	PauseMenuOpenedDevstatsEvent::PauseMenuOpenedDevstatsEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		EventId = serialized->get_string(EventId_type_id);
-		MenuSegmentId = serialized->get_string(MenuSegmentId_type_id);
-		InitialTab = serialized->get_enum<rivet::ddl::generated::PauseTabs>(InitialTab_type_id, rivet::ddl::generated::PauseTabs_values);
+		EventId = serialized->get_string(EventId_type_id, {});
+		MenuSegmentId = serialized->get_string(MenuSegmentId_type_id, {});
+		InitialTab = serialized->get_enum<rivet::ddl::generated::PauseTabs>(InitialTab_type_id, rivet::ddl::generated::PauseTabs_values, rivet::ddl::generated::PauseTabs::Map);
 		PlayerPosInfo = serialized->unwrap_into<rivet::ddl::generated::DevstatsPlayerPositionInfo>(PlayerPosInfo_type_id);
 		PrimarySegmentInfo = serialized->unwrap_into<rivet::ddl::generated::DevstatsPrimarySegmentInfo>(PrimarySegmentInfo_type_id); 
 	}

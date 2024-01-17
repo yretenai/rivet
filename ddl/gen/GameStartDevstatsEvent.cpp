@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	GameStartDevstatsEvent::GameStartDevstatsEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		game_id = serialized->get_string(game_id_type_id);
-		level_id = serialized->get_string(level_id_type_id);
-		mode = serialized->get_string(mode_type_id);
-		player_count = serialized->get_int32(player_count_type_id);
-		player_count_local = serialized->get_int32(player_count_local_type_id);
-		is_online = serialized->get_bool(is_online_type_id); 
+		game_id = serialized->get_string(game_id_type_id, {});
+		level_id = serialized->get_string(level_id_type_id, {});
+		mode = serialized->get_string(mode_type_id, {});
+		player_count = serialized->get_int32(player_count_type_id, 0);
+		player_count_local = serialized->get_int32(player_count_local_type_id, 0);
+		is_online = serialized->get_bool(is_online_type_id, false); 
 	}
 
 	[[nodiscard]] auto

@@ -7,14 +7,14 @@
 
 namespace rivet::ddl::generated {
 	DeviceSpecificLocalization::DeviceSpecificLocalization([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DefaultLocalizationID = serialized->get_string(DefaultLocalizationID_type_id);
-		X360LocalizationID = serialized->get_string(X360LocalizationID_type_id);
-		XOneLocalizationID = serialized->get_string(XOneLocalizationID_type_id);
-		DualShockLocalizationID = serialized->get_string(DualShockLocalizationID_type_id);
-		DualSenseLocalizationID = serialized->get_string(DualSenseLocalizationID_type_id);
-		SteamDeckLocalizationID = serialized->get_string(SteamDeckLocalizationID_type_id);
-		GenericLocalizationID = serialized->get_string(GenericLocalizationID_type_id);
-		MkbLocalizationID = serialized->get_string(MkbLocalizationID_type_id); 
+		DefaultLocalizationID = serialized->get_string(DefaultLocalizationID_type_id, "");
+		X360LocalizationID = serialized->get_string(X360LocalizationID_type_id, "");
+		XOneLocalizationID = serialized->get_string(XOneLocalizationID_type_id, "");
+		DualShockLocalizationID = serialized->get_string(DualShockLocalizationID_type_id, "");
+		DualSenseLocalizationID = serialized->get_string(DualSenseLocalizationID_type_id, "");
+		SteamDeckLocalizationID = serialized->get_string(SteamDeckLocalizationID_type_id, "");
+		GenericLocalizationID = serialized->get_string(GenericLocalizationID_type_id, "");
+		MkbLocalizationID = serialized->get_string(MkbLocalizationID_type_id, ""); 
 	}
 
 	[[nodiscard]] auto

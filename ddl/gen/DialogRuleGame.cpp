@@ -7,15 +7,15 @@
 
 namespace rivet::ddl::generated {
 	DialogRuleGame::DialogRuleGame([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): DialogRule(serialized) {
-		HitLocation = serialized->get_enum<rivet::ddl::generated::HitLocation>(HitLocation_type_id, rivet::ddl::generated::HitLocation_values);
-		DamageType = serialized->get_enum<rivet::ddl::generated::DamageTypes>(DamageType_type_id, rivet::ddl::generated::DamageTypes_values);
-		TargetRelativePos = serialized->get_enum<rivet::ddl::generated::xca8fba90>(TargetRelativePos_type_id, rivet::ddl::generated::xca8fba90_values);
-		CurrentPlanet = serialized->get_enum<rivet::ddl::generated::LevelEnum>(CurrentPlanet_type_id, rivet::ddl::generated::LevelEnum_values);
-		NotCurrentPlanet = serialized->get_enum<rivet::ddl::generated::LevelEnum>(NotCurrentPlanet_type_id, rivet::ddl::generated::LevelEnum_values);
-		EnableAfterPlanetUnlocked = serialized->get_enum<rivet::ddl::generated::LevelEnum>(EnableAfterPlanetUnlocked_type_id, rivet::ddl::generated::LevelEnum_values);
-		DisableAfterPlanetUnlocked = serialized->get_enum<rivet::ddl::generated::LevelEnum>(DisableAfterPlanetUnlocked_type_id, rivet::ddl::generated::LevelEnum_values);
-		SequenceMode = serialized->get_enum<rivet::ddl::generated::x48e6c593>(SequenceMode_type_id, rivet::ddl::generated::x48e6c593_values);
-		PlayOnceMode = serialized->get_enum<rivet::ddl::generated::PlayOnceMode>(PlayOnceMode_type_id, rivet::ddl::generated::PlayOnceMode_values); 
+		HitLocation = serialized->get_enum<rivet::ddl::generated::HitLocation>(HitLocation_type_id, rivet::ddl::generated::HitLocation_values, rivet::ddl::generated::HitLocation::None);
+		DamageType = serialized->get_enum<rivet::ddl::generated::DamageTypes>(DamageType_type_id, rivet::ddl::generated::DamageTypes_values, rivet::ddl::generated::DamageTypes::None);
+		TargetRelativePos = serialized->get_enum<rivet::ddl::generated::xca8fba90>(TargetRelativePos_type_id, rivet::ddl::generated::xca8fba90_values, rivet::ddl::generated::xca8fba90::None);
+		CurrentPlanet = serialized->get_enum<rivet::ddl::generated::LevelEnum>(CurrentPlanet_type_id, rivet::ddl::generated::LevelEnum_values, rivet::ddl::generated::LevelEnum::None);
+		NotCurrentPlanet = serialized->get_enum<rivet::ddl::generated::LevelEnum>(NotCurrentPlanet_type_id, rivet::ddl::generated::LevelEnum_values, rivet::ddl::generated::LevelEnum::None);
+		EnableAfterPlanetUnlocked = serialized->get_enum<rivet::ddl::generated::LevelEnum>(EnableAfterPlanetUnlocked_type_id, rivet::ddl::generated::LevelEnum_values, rivet::ddl::generated::LevelEnum::None);
+		DisableAfterPlanetUnlocked = serialized->get_enum<rivet::ddl::generated::LevelEnum>(DisableAfterPlanetUnlocked_type_id, rivet::ddl::generated::LevelEnum_values, rivet::ddl::generated::LevelEnum::None);
+		SequenceMode = serialized->get_enum<rivet::ddl::generated::x48e6c593>(SequenceMode_type_id, rivet::ddl::generated::x48e6c593_values, rivet::ddl::generated::x48e6c593::Random);
+		PlayOnceMode = serialized->get_enum<rivet::ddl::generated::PlayOnceMode>(PlayOnceMode_type_id, rivet::ddl::generated::PlayOnceMode_values, rivet::ddl::generated::PlayOnceMode::Off); 
 	}
 
 	[[nodiscard]] auto

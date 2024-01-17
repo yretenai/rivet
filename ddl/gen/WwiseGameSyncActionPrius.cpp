@@ -13,7 +13,7 @@
 
 namespace rivet::ddl::generated {
 	WwiseGameSyncActionPrius::WwiseGameSyncActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Sound);
 		WwiseEvent = serialized->unwrap_into<rivet::ddl::generated::WwiseSoundEvent>(WwiseEvent_type_id);
 		WwiseState = serialized->unwrap_into<rivet::ddl::generated::WwiseState>(WwiseState_type_id);
 		WwiseState1 = serialized->unwrap_into<rivet::ddl::generated::WwiseState>(WwiseState1_type_id);

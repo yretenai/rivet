@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	MovingObjectHelperPrius::MovingObjectHelperPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AttachJoint = serialized->get_string(AttachJoint_type_id); 
+		AttachJoint = serialized->get_string(AttachJoint_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

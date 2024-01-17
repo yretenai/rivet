@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	BotComboFinishedEvent::BotComboFinishedEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		ComboName = serialized->get_string(ComboName_type_id);
-		ComboHit = serialized->get_bool(ComboHit_type_id); 
+		ComboName = serialized->get_string(ComboName_type_id, {});
+		ComboHit = serialized->get_bool(ComboHit_type_id, false); 
 	}
 
 	[[nodiscard]] auto

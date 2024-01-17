@@ -7,24 +7,24 @@
 
 namespace rivet::ddl::generated {
 	SteeringPartnerCurveConfig::SteeringPartnerCurveConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		PersonalSpaceRadius = serialized->get_float(PersonalSpaceRadius_type_id);
-		MinRateOfAcceleration = serialized->get_float(MinRateOfAcceleration_type_id);
-		MaxRateOfAcceleration = serialized->get_float(MaxRateOfAcceleration_type_id);
-		MinRateOfDeceleration = serialized->get_float(MinRateOfDeceleration_type_id);
-		MaxRateOfDeceleration = serialized->get_float(MaxRateOfDeceleration_type_id);
-		IdleAccelDecel = serialized->get_float(IdleAccelDecel_type_id);
-		SpeedUpDistance = serialized->get_float(SpeedUpDistance_type_id);
-		SlowDownDistance = serialized->get_float(SlowDownDistance_type_id);
-		MaxSpeedVariance = serialized->get_float(MaxSpeedVariance_type_id);
-		MaxTurningVariance = serialized->get_float(MaxTurningVariance_type_id);
-		MinTimeTillReachDestAccel = serialized->get_float(MinTimeTillReachDestAccel_type_id);
-		MaxTimeTillReachDestAccel = serialized->get_float(MaxTimeTillReachDestAccel_type_id);
-		MinTimeTillReachDestDecel = serialized->get_float(MinTimeTillReachDestDecel_type_id);
-		MaxTimeTillReachDestDecel = serialized->get_float(MaxTimeTillReachDestDecel_type_id);
-		UseCurvePathing = serialized->get_bool(UseCurvePathing_type_id);
-		MaxDistanceFromPath = serialized->get_float(MaxDistanceFromPath_type_id);
-		PartnerSwitchDistance = serialized->get_float(PartnerSwitchDistance_type_id);
-		CurveSwitchDistance = serialized->get_float(CurveSwitchDistance_type_id); 
+		PersonalSpaceRadius = serialized->get_float(PersonalSpaceRadius_type_id, 2.000000);
+		MinRateOfAcceleration = serialized->get_float(MinRateOfAcceleration_type_id, 0.200000);
+		MaxRateOfAcceleration = serialized->get_float(MaxRateOfAcceleration_type_id, 5.000000);
+		MinRateOfDeceleration = serialized->get_float(MinRateOfDeceleration_type_id, 0.200000);
+		MaxRateOfDeceleration = serialized->get_float(MaxRateOfDeceleration_type_id, 5.000000);
+		IdleAccelDecel = serialized->get_float(IdleAccelDecel_type_id, 2.000000);
+		SpeedUpDistance = serialized->get_float(SpeedUpDistance_type_id, 3.000000);
+		SlowDownDistance = serialized->get_float(SlowDownDistance_type_id, 2.000000);
+		MaxSpeedVariance = serialized->get_float(MaxSpeedVariance_type_id, 0.600000);
+		MaxTurningVariance = serialized->get_float(MaxTurningVariance_type_id, 0.450000);
+		MinTimeTillReachDestAccel = serialized->get_float(MinTimeTillReachDestAccel_type_id, 1.000000);
+		MaxTimeTillReachDestAccel = serialized->get_float(MaxTimeTillReachDestAccel_type_id, 3.000000);
+		MinTimeTillReachDestDecel = serialized->get_float(MinTimeTillReachDestDecel_type_id, 0.200000);
+		MaxTimeTillReachDestDecel = serialized->get_float(MaxTimeTillReachDestDecel_type_id, 3.000000);
+		UseCurvePathing = serialized->get_bool(UseCurvePathing_type_id, false);
+		MaxDistanceFromPath = serialized->get_float(MaxDistanceFromPath_type_id, 8.000000);
+		PartnerSwitchDistance = serialized->get_float(PartnerSwitchDistance_type_id, 5.000000);
+		CurveSwitchDistance = serialized->get_float(CurveSwitchDistance_type_id, 7.000000); 
 	}
 
 	[[nodiscard]] auto

@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	LoadedZoneDevstatsEvent::LoadedZoneDevstatsEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		ParentEventId = serialized->get_string(ParentEventId_type_id);
-		ZoneName = serialized->get_string(ZoneName_type_id); 
+		ParentEventId = serialized->get_string(ParentEventId_type_id, {});
+		ZoneName = serialized->get_string(ZoneName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

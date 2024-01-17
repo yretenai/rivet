@@ -9,11 +9,11 @@
 
 namespace rivet::ddl::generated {
 	DevstatsOpenWorldTaskCompletedEvent::DevstatsOpenWorldTaskCompletedEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		EventId = serialized->get_string(EventId_type_id);
-		LastGoldenPathMission = serialized->get_string(LastGoldenPathMission_type_id);
-		TaskType = serialized->get_string(TaskType_type_id);
-		TaskName = serialized->get_string(TaskName_type_id);
-		TaskDuration = serialized->get_float(TaskDuration_type_id);
+		EventId = serialized->get_string(EventId_type_id, {});
+		LastGoldenPathMission = serialized->get_string(LastGoldenPathMission_type_id, {});
+		TaskType = serialized->get_string(TaskType_type_id, {});
+		TaskName = serialized->get_string(TaskName_type_id, {});
+		TaskDuration = serialized->get_float(TaskDuration_type_id, 0.000000);
 		PlayerPosInfo = serialized->unwrap_into<rivet::ddl::generated::DevstatsPlayerPositionInfo>(PlayerPosInfo_type_id); 
 	}
 

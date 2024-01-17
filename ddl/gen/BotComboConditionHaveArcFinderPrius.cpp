@@ -7,14 +7,14 @@
 
 namespace rivet::ddl::generated {
 	BotComboConditionHaveArcFinderPrius::BotComboConditionHaveArcFinderPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BotComboConditionBasePrius(serialized) {
-		EmitLocatorName = serialized->get_string(EmitLocatorName_type_id);
-		DesiredFlightTime = serialized->get_float(DesiredFlightTime_type_id);
-		MinSpeed = serialized->get_float(MinSpeed_type_id);
-		MaxSpeed = serialized->get_float(MaxSpeed_type_id);
-		ArcHeight0 = serialized->get_float(ArcHeight0_type_id);
-		ArcHeight1 = serialized->get_float(ArcHeight1_type_id);
-		ArcHeight2 = serialized->get_float(ArcHeight2_type_id);
-		UseLastNavPosition = serialized->get_bool(UseLastNavPosition_type_id); 
+		EmitLocatorName = serialized->get_string(EmitLocatorName_type_id, "");
+		DesiredFlightTime = serialized->get_float(DesiredFlightTime_type_id, 0.250000);
+		MinSpeed = serialized->get_float(MinSpeed_type_id, 10.000000);
+		MaxSpeed = serialized->get_float(MaxSpeed_type_id, 50.000000);
+		ArcHeight0 = serialized->get_float(ArcHeight0_type_id, 1.000000);
+		ArcHeight1 = serialized->get_float(ArcHeight1_type_id, 2.000000);
+		ArcHeight2 = serialized->get_float(ArcHeight2_type_id, 0.500000);
+		UseLastNavPosition = serialized->get_bool(UseLastNavPosition_type_id, true); 
 	}
 
 	[[nodiscard]] auto

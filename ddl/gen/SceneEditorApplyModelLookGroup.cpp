@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	SceneEditorApplyModelLookGroup::SceneEditorApplyModelLookGroup([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		LookGroup = serialized->get_string(LookGroup_type_id); 
+		LookGroup = serialized->get_string(LookGroup_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

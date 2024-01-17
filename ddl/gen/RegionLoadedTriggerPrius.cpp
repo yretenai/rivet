@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	RegionLoadedTriggerPrius::RegionLoadedTriggerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BaseCustomOverlayTriggerPrius(serialized) {
-		Region = serialized->get_string(Region_type_id); 
+		Region = serialized->get_string(Region_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

@@ -9,10 +9,10 @@
 
 namespace rivet::ddl::generated {
 	NodalShotBasePrius::NodalShotBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ShotBasePrius(serialized) {
-		DelayFirstUpdateInterval = serialized->get_bool(DelayFirstUpdateInterval_type_id);
-		UseActorCollision = serialized->get_bool(UseActorCollision_type_id);
-		LifetimeExpiredOnMaxRange = serialized->get_bool(LifetimeExpiredOnMaxRange_type_id);
-		ShowReticle = serialized->get_bool(ShowReticle_type_id); 
+		DelayFirstUpdateInterval = serialized->get_bool(DelayFirstUpdateInterval_type_id, false);
+		UseActorCollision = serialized->get_bool(UseActorCollision_type_id, false);
+		LifetimeExpiredOnMaxRange = serialized->get_bool(LifetimeExpiredOnMaxRange_type_id, false);
+		ShowReticle = serialized->get_bool(ShowReticle_type_id, true); 
 	}
 
 	[[nodiscard]] auto

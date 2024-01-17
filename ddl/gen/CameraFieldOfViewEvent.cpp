@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	CameraFieldOfViewEvent::CameraFieldOfViewEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		FieldOfView = serialized->get_float(FieldOfView_type_id); 
+		FieldOfView = serialized->get_float(FieldOfView_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

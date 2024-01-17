@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	ModelPhysicsSettings::ModelPhysicsSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		CollisionType = serialized->get_enum<rivet::ddl::generated::CollisionType>(CollisionType_type_id, rivet::ddl::generated::CollisionType_values);
-		CollisionOnly = serialized->get_bool(CollisionOnly_type_id);
-		IsOnlyStatic = serialized->get_bool(IsOnlyStatic_type_id);
-		PhysicsPerformance = serialized->get_enum<rivet::ddl::generated::x21a0df30>(PhysicsPerformance_type_id, rivet::ddl::generated::x21a0df30_values); 
+		CollisionType = serialized->get_enum<rivet::ddl::generated::CollisionType>(CollisionType_type_id, rivet::ddl::generated::CollisionType_values, rivet::ddl::generated::CollisionType::Static);
+		CollisionOnly = serialized->get_bool(CollisionOnly_type_id, false);
+		IsOnlyStatic = serialized->get_bool(IsOnlyStatic_type_id, true);
+		PhysicsPerformance = serialized->get_enum<rivet::ddl::generated::x21a0df30>(PhysicsPerformance_type_id, rivet::ddl::generated::x21a0df30_values, rivet::ddl::generated::x21a0df30::Good); 
 	}
 
 	[[nodiscard]] auto

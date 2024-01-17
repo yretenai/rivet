@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	ImpactDamageContainerPrius::ImpactDamageContainerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Amount = serialized->get_float(Amount_type_id);
-		IsMultiplier = serialized->get_bool(IsMultiplier_type_id);
-		PinDeath = serialized->get_bool(PinDeath_type_id); 
+		Amount = serialized->get_float(Amount_type_id, 100.000000);
+		IsMultiplier = serialized->get_bool(IsMultiplier_type_id, false);
+		PinDeath = serialized->get_bool(PinDeath_type_id, true); 
 	}
 
 	[[nodiscard]] auto

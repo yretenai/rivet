@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	MountOfferPrius::MountOfferPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): GenericOfferPrius(serialized) {
-		MountConfig = serialized->get_string(MountConfig_type_id); 
+		MountConfig = serialized->get_string(MountConfig_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

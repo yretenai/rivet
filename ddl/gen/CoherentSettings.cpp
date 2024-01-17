@@ -7,24 +7,24 @@
 
 namespace rivet::ddl::generated {
 	CoherentSettings::CoherentSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Enabled = serialized->get_bool(Enabled_type_id);
-		RenderEnable = serialized->get_bool(RenderEnable_type_id);
-		ShowMemoryGraph = serialized->get_bool(ShowMemoryGraph_type_id);
-		ShowMemoryMetrics = serialized->get_bool(ShowMemoryMetrics_type_id);
-		ShowFrameGraph = serialized->get_bool(ShowFrameGraph_type_id);
-		ShowGraphicsMemoryGraph = serialized->get_bool(ShowGraphicsMemoryGraph_type_id);
-		ShowBackendTextures = serialized->get_bool(ShowBackendTextures_type_id);
-		Memory = serialized->get_uint32(Memory_type_id);
-		UseSmallBlock = serialized->get_bool(UseSmallBlock_type_id);
-		GraphicsMemoryLarge = serialized->get_uint32(GraphicsMemoryLarge_type_id);
-		GraphicsMemorySmall = serialized->get_uint32(GraphicsMemorySmall_type_id);
-		GraphicsMemoryMetrics = serialized->get_bool(GraphicsMemoryMetrics_type_id);
-		LoggingEnabled = serialized->get_bool(LoggingEnabled_type_id);
-		DebuggingEnabled = serialized->get_bool(DebuggingEnabled_type_id);
-		SoundLoggingEnabled = serialized->get_bool(SoundLoggingEnabled_type_id);
-		DefaultStyleFontFamily = serialized->get_string(DefaultStyleFontFamily_type_id);
-		ReadBuiltFiles = serialized->get_bool(ReadBuiltFiles_type_id);
-		ShowUsabilityInputs = serialized->get_bool(ShowUsabilityInputs_type_id); 
+		Enabled = serialized->get_bool(Enabled_type_id, false);
+		RenderEnable = serialized->get_bool(RenderEnable_type_id, true);
+		ShowMemoryGraph = serialized->get_bool(ShowMemoryGraph_type_id, false);
+		ShowMemoryMetrics = serialized->get_bool(ShowMemoryMetrics_type_id, false);
+		ShowFrameGraph = serialized->get_bool(ShowFrameGraph_type_id, false);
+		ShowGraphicsMemoryGraph = serialized->get_bool(ShowGraphicsMemoryGraph_type_id, false);
+		ShowBackendTextures = serialized->get_bool(ShowBackendTextures_type_id, false);
+		Memory = serialized->get_uint32(Memory_type_id, 20971520);
+		UseSmallBlock = serialized->get_bool(UseSmallBlock_type_id, false);
+		GraphicsMemoryLarge = serialized->get_uint32(GraphicsMemoryLarge_type_id, 255852544);
+		GraphicsMemorySmall = serialized->get_uint32(GraphicsMemorySmall_type_id, 90177536);
+		GraphicsMemoryMetrics = serialized->get_bool(GraphicsMemoryMetrics_type_id, true);
+		LoggingEnabled = serialized->get_bool(LoggingEnabled_type_id, false);
+		DebuggingEnabled = serialized->get_bool(DebuggingEnabled_type_id, false);
+		SoundLoggingEnabled = serialized->get_bool(SoundLoggingEnabled_type_id, false);
+		DefaultStyleFontFamily = serialized->get_string(DefaultStyleFontFamily_type_id, {});
+		ReadBuiltFiles = serialized->get_bool(ReadBuiltFiles_type_id, true);
+		ShowUsabilityInputs = serialized->get_bool(ShowUsabilityInputs_type_id, false); 
 	}
 
 	[[nodiscard]] auto

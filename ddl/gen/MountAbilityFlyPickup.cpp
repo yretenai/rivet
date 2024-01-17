@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	MountAbilityFlyPickup::MountAbilityFlyPickup([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): MountAbilityFlyGoto(serialized) {
-		CarryDropShotIndex = serialized->get_uint32(CarryDropShotIndex_type_id); 
+		CarryDropShotIndex = serialized->get_uint32(CarryDropShotIndex_type_id, 1); 
 	}
 
 	[[nodiscard]] auto

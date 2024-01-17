@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ArachnodroidEnemySpawnData::ArachnodroidEnemySpawnData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): SimpleSpawnData(serialized) {
-		PathIndex = serialized->get_uint8(PathIndex_type_id); 
+		PathIndex = serialized->get_uint8(PathIndex_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

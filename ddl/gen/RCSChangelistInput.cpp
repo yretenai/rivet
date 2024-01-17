@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	RCSChangelistInput::RCSChangelistInput([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Description = serialized->get_string(Description_type_id); 
+		Description = serialized->get_string(Description_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

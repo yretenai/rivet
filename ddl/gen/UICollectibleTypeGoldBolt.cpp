@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	UICollectibleTypeGoldBolt::UICollectibleTypeGoldBolt([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): UICollectibleTypeBase(serialized) {
-		RewardID = serialized->get_enum<rivet::ddl::generated::xf06c6830>(RewardID_type_id, rivet::ddl::generated::xf06c6830_values);
+		RewardID = serialized->get_enum<rivet::ddl::generated::xf06c6830>(RewardID_type_id, rivet::ddl::generated::xf06c6830_values, rivet::ddl::generated::xf06c6830::None);
 		Type = serialized->unwrap_into<rivet::ddl::generated::UIGoldBoltOptionTypeBase>(Type_type_id); 
 	}
 

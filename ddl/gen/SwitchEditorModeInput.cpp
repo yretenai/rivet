@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	SwitchEditorModeInput::SwitchEditorModeInput([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		NewMode = serialized->get_enum<rivet::ddl::generated::xb5725fd2>(NewMode_type_id, rivet::ddl::generated::xb5725fd2_values); 
+		NewMode = serialized->get_enum<rivet::ddl::generated::xb5725fd2>(NewMode_type_id, rivet::ddl::generated::xb5725fd2_values, rivet::ddl::generated::xb5725fd2::Scene_Mode); 
 	}
 
 	[[nodiscard]] auto

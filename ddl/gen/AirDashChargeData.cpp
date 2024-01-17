@@ -9,32 +9,32 @@
 
 namespace rivet::ddl::generated {
 	AirDashChargeData::AirDashChargeData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		IntroDuration = serialized->get_float(IntroDuration_type_id);
-		ChargeTurnRate = serialized->get_float(ChargeTurnRate_type_id);
-		MoveSpeedMin = serialized->get_float(MoveSpeedMin_type_id);
-		MoveSpeedMax = serialized->get_float(MoveSpeedMax_type_id);
-		DesiredMoveTime = serialized->get_float(DesiredMoveTime_type_id);
-		AllowedChargePastDist = serialized->get_float(AllowedChargePastDist_type_id);
-		MaxChargeDuration = serialized->get_float(MaxChargeDuration_type_id);
-		HitOutroDuration = serialized->get_float(HitOutroDuration_type_id);
-		MissOutroDuration = serialized->get_float(MissOutroDuration_type_id);
-		TrackTarget = serialized->get_bool(TrackTarget_type_id);
-		FaceTargetDuringMiss = serialized->get_bool(FaceTargetDuringMiss_type_id);
-		FaceTargetDuringHit = serialized->get_bool(FaceTargetDuringHit_type_id);
-		SyncAnimOutroHit = serialized->get_bool(SyncAnimOutroHit_type_id);
-		IntroDriver = serialized->get_string(IntroDriver_type_id);
-		ChargeDriver = serialized->get_string(ChargeDriver_type_id);
-		HitOutroDriver = serialized->get_string(HitOutroDriver_type_id);
-		MissOutroDriver = serialized->get_string(MissOutroDriver_type_id);
-		DamageName = serialized->get_string(DamageName_type_id);
-		DamageAmount = serialized->get_float(DamageAmount_type_id);
-		DamageType = serialized->get_enum<rivet::ddl::generated::DamageTypes>(DamageType_type_id, rivet::ddl::generated::DamageTypes_values);
-		Knockback = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(Knockback_type_id, rivet::ddl::generated::KnockbackLevels_values);
-		KnockbackAmount = serialized->get_float(KnockbackAmount_type_id);
-		DamageLocator = serialized->get_string(DamageLocator_type_id);
+		IntroDuration = serialized->get_float(IntroDuration_type_id, -1.000000);
+		ChargeTurnRate = serialized->get_float(ChargeTurnRate_type_id, 45.000000);
+		MoveSpeedMin = serialized->get_float(MoveSpeedMin_type_id, 10.000000);
+		MoveSpeedMax = serialized->get_float(MoveSpeedMax_type_id, 45.000000);
+		DesiredMoveTime = serialized->get_float(DesiredMoveTime_type_id, 0.500000);
+		AllowedChargePastDist = serialized->get_float(AllowedChargePastDist_type_id, 6.000000);
+		MaxChargeDuration = serialized->get_float(MaxChargeDuration_type_id, 5.000000);
+		HitOutroDuration = serialized->get_float(HitOutroDuration_type_id, -1.000000);
+		MissOutroDuration = serialized->get_float(MissOutroDuration_type_id, -1.000000);
+		TrackTarget = serialized->get_bool(TrackTarget_type_id, false);
+		FaceTargetDuringMiss = serialized->get_bool(FaceTargetDuringMiss_type_id, false);
+		FaceTargetDuringHit = serialized->get_bool(FaceTargetDuringHit_type_id, false);
+		SyncAnimOutroHit = serialized->get_bool(SyncAnimOutroHit_type_id, false);
+		IntroDriver = serialized->get_string(IntroDriver_type_id, {});
+		ChargeDriver = serialized->get_string(ChargeDriver_type_id, {});
+		HitOutroDriver = serialized->get_string(HitOutroDriver_type_id, {});
+		MissOutroDriver = serialized->get_string(MissOutroDriver_type_id, {});
+		DamageName = serialized->get_string(DamageName_type_id, {});
+		DamageAmount = serialized->get_float(DamageAmount_type_id, 0.000000);
+		DamageType = serialized->get_enum<rivet::ddl::generated::DamageTypes>(DamageType_type_id, rivet::ddl::generated::DamageTypes_values, rivet::ddl::generated::DamageTypes::Melee);
+		Knockback = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(Knockback_type_id, rivet::ddl::generated::KnockbackLevels_values, rivet::ddl::generated::KnockbackLevels::None);
+		KnockbackAmount = serialized->get_float(KnockbackAmount_type_id, 100.000000);
+		DamageLocator = serialized->get_string(DamageLocator_type_id, {});
 		LocalOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(LocalOffset_type_id);
-		DamageRadius = serialized->get_float(DamageRadius_type_id);
-		RequestFlags = serialized->get_bitset<rivet::ddl::generated::x65d7dac2>(RequestFlags_type_id, rivet::ddl::generated::x65d7dac2_values); 
+		DamageRadius = serialized->get_float(DamageRadius_type_id, 0.500000);
+		RequestFlags = serialized->get_bitset<rivet::ddl::generated::x65d7dac2>(RequestFlags_type_id, rivet::ddl::generated::x65d7dac2_values, 0); 
 	}
 
 	[[nodiscard]] auto

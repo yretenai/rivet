@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	AwarenessPartialManagerPrius::AwarenessPartialManagerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		OnPassivePartial = serialized->get_string(OnPassivePartial_type_id);
-		OnEngagedPartial = serialized->get_string(OnEngagedPartial_type_id); 
+		OnPassivePartial = serialized->get_string(OnPassivePartial_type_id, {});
+		OnEngagedPartial = serialized->get_string(OnEngagedPartial_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

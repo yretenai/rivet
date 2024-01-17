@@ -10,7 +10,7 @@
 
 namespace rivet::ddl::generated {
 	DevstatsHighContrastBackgroundDisabledEvent::DevstatsHighContrastBackgroundDisabledEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		EventId = serialized->get_string(EventId_type_id);
+		EventId = serialized->get_string(EventId_type_id, {});
 		PlayerPosInfo = serialized->unwrap_into<rivet::ddl::generated::DevstatsPlayerPositionInfo>(PlayerPosInfo_type_id);
 		PrimarySegmentInfo = serialized->unwrap_into<rivet::ddl::generated::DevstatsPrimarySegmentInfo>(PrimarySegmentInfo_type_id); 
 	}

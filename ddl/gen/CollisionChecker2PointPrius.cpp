@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	CollisionChecker2PointPrius::CollisionChecker2PointPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		StartLocator = serialized->get_string(StartLocator_type_id);
-		EndLocator = serialized->get_string(EndLocator_type_id); 
+		StartLocator = serialized->get_string(StartLocator_type_id, {});
+		EndLocator = serialized->get_string(EndLocator_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

@@ -9,15 +9,15 @@
 
 namespace rivet::ddl::generated {
 	DebugProgressBarActionPrius::DebugProgressBarActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		Label = serialized->get_string(Label_type_id);
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::UI);
+		Label = serialized->get_string(Label_type_id, "");
 		Position = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(Position_type_id);
-		Position3D = serialized->get_bool(Position3D_type_id);
+		Position3D = serialized->get_bool(Position3D_type_id, false);
 		Size = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(Size_type_id);
 		MinMaxValue = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(MinMaxValue_type_id);
-		CurValue = serialized->get_float(CurValue_type_id);
-		DisplayPercent = serialized->get_bool(DisplayPercent_type_id);
-		DisplayCurMax = serialized->get_bool(DisplayCurMax_type_id); 
+		CurValue = serialized->get_float(CurValue_type_id, 0.000000);
+		DisplayPercent = serialized->get_bool(DisplayPercent_type_id, true);
+		DisplayCurMax = serialized->get_bool(DisplayCurMax_type_id, false); 
 	}
 
 	[[nodiscard]] auto

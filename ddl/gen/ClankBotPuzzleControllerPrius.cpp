@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	ClankBotPuzzleControllerPrius::ClankBotPuzzleControllerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		OnlyRespawnOnEmptyPad = serialized->get_bool(OnlyRespawnOnEmptyPad_type_id);
-		ValidRespawnGroup = serialized->get_uint64(ValidRespawnGroup_type_id); 
+		OnlyRespawnOnEmptyPad = serialized->get_bool(OnlyRespawnOnEmptyPad_type_id, false);
+		ValidRespawnGroup = serialized->get_uint64(ValidRespawnGroup_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

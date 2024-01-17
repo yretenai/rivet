@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	TriggerSwitchAutoResetPrius::TriggerSwitchAutoResetPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): TriggerSwitchBasePrius(serialized) {
-		ResetTime = serialized->get_float(ResetTime_type_id); 
+		ResetTime = serialized->get_float(ResetTime_type_id, 10.000000); 
 	}
 
 	[[nodiscard]] auto

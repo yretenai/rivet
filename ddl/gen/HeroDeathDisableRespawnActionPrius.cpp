@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	HeroDeathDisableRespawnActionPrius::HeroDeathDisableRespawnActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		DeathAnimNearlyDoneTime = serialized->get_float(DeathAnimNearlyDoneTime_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Hero);
+		DeathAnimNearlyDoneTime = serialized->get_float(DeathAnimNearlyDoneTime_type_id, 0.050000); 
 	}
 
 	[[nodiscard]] auto

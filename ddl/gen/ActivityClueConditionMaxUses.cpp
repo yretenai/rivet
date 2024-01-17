@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ActivityClueConditionMaxUses::ActivityClueConditionMaxUses([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MaxUses = serialized->get_uint32(MaxUses_type_id); 
+		MaxUses = serialized->get_uint32(MaxUses_type_id, 1); 
 	}
 
 	[[nodiscard]] auto

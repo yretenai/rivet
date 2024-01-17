@@ -7,21 +7,21 @@
 
 namespace rivet::ddl::generated {
 	HeroBounceConfig::HeroBounceConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AssistMaxSurfaceNormalAngle = serialized->get_float(AssistMaxSurfaceNormalAngle_type_id);
-		AssistRadiusHoriz = serialized->get_float(AssistRadiusHoriz_type_id);
-		AssistRadiusVert = serialized->get_float(AssistRadiusVert_type_id);
-		MinAssistDistHoriz = serialized->get_float(MinAssistDistHoriz_type_id);
-		MaxAngleAtMinAssistDist = serialized->get_float(MaxAngleAtMinAssistDist_type_id);
-		MaxAngleAtMaxAssistDist = serialized->get_float(MaxAngleAtMaxAssistDist_type_id);
-		AssistAngleScoreWeight = serialized->get_float(AssistAngleScoreWeight_type_id);
-		AssistDistScoreWeight = serialized->get_float(AssistDistScoreWeight_type_id);
-		AssistInputWeight = serialized->get_float(AssistInputWeight_type_id);
-		BonusHeightForButtonPress = serialized->get_float(BonusHeightForButtonPress_type_id);
-		CameraShakeConfig = serialized->get_string(CameraShakeConfig_type_id);
-		BounceFollowCameraUserConfig = serialized->get_string(BounceFollowCameraUserConfig_type_id);
-		CasualBounceFollowCameraUserConfig = serialized->get_string(CasualBounceFollowCameraUserConfig_type_id);
-		SuperBounceFollowCameraUserConfig = serialized->get_string(SuperBounceFollowCameraUserConfig_type_id);
-		CasualSuperBounceFollowCameraUserConfig = serialized->get_string(CasualSuperBounceFollowCameraUserConfig_type_id); 
+		AssistMaxSurfaceNormalAngle = serialized->get_float(AssistMaxSurfaceNormalAngle_type_id, 45.000000);
+		AssistRadiusHoriz = serialized->get_float(AssistRadiusHoriz_type_id, 2.000000);
+		AssistRadiusVert = serialized->get_float(AssistRadiusVert_type_id, 5.000000);
+		MinAssistDistHoriz = serialized->get_float(MinAssistDistHoriz_type_id, 1.000000);
+		MaxAngleAtMinAssistDist = serialized->get_float(MaxAngleAtMinAssistDist_type_id, 45.000000);
+		MaxAngleAtMaxAssistDist = serialized->get_float(MaxAngleAtMaxAssistDist_type_id, 60.000000);
+		AssistAngleScoreWeight = serialized->get_float(AssistAngleScoreWeight_type_id, 1.000000);
+		AssistDistScoreWeight = serialized->get_float(AssistDistScoreWeight_type_id, 1.000000);
+		AssistInputWeight = serialized->get_float(AssistInputWeight_type_id, 0.500000);
+		BonusHeightForButtonPress = serialized->get_float(BonusHeightForButtonPress_type_id, 2.000000);
+		CameraShakeConfig = serialized->get_string(CameraShakeConfig_type_id, {});
+		BounceFollowCameraUserConfig = serialized->get_string(BounceFollowCameraUserConfig_type_id, {});
+		CasualBounceFollowCameraUserConfig = serialized->get_string(CasualBounceFollowCameraUserConfig_type_id, {});
+		SuperBounceFollowCameraUserConfig = serialized->get_string(SuperBounceFollowCameraUserConfig_type_id, {});
+		CasualSuperBounceFollowCameraUserConfig = serialized->get_string(CasualSuperBounceFollowCameraUserConfig_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

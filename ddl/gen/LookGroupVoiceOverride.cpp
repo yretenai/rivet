@@ -8,8 +8,8 @@
 namespace rivet::ddl::generated {
 	LookGroupVoiceOverride::LookGroupVoiceOverride([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		LookGroups = serialized->get_strings(LookGroups_type_id);
-		OverrideVoiceMin = serialized->get_enum<rivet::ddl::generated::Voice>(OverrideVoiceMin_type_id, rivet::ddl::generated::Voice_values);
-		OverrideVoiceMax = serialized->get_enum<rivet::ddl::generated::Voice>(OverrideVoiceMax_type_id, rivet::ddl::generated::Voice_values); 
+		OverrideVoiceMin = serialized->get_enum<rivet::ddl::generated::Voice>(OverrideVoiceMin_type_id, rivet::ddl::generated::Voice_values, rivet::ddl::generated::Voice::unused);
+		OverrideVoiceMax = serialized->get_enum<rivet::ddl::generated::Voice>(OverrideVoiceMax_type_id, rivet::ddl::generated::Voice_values, rivet::ddl::generated::Voice::unused); 
 	}
 
 	[[nodiscard]] auto

@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	DamageModifierTraversalPrius::DamageModifierTraversalPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): DamageModifierIncomingPrius(serialized) {
-		Lifetime = serialized->get_float(Lifetime_type_id); 
+		Lifetime = serialized->get_float(Lifetime_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

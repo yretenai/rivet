@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	GameBotGrunthorPrius::GameBotGrunthorPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): GameBotMeleeBasePrius(serialized) {
-		ArcFinderHeight0 = serialized->get_float(ArcFinderHeight0_type_id);
-		ArcFinderHeight1 = serialized->get_float(ArcFinderHeight1_type_id);
-		ArcFinderHeight2 = serialized->get_float(ArcFinderHeight2_type_id); 
+		ArcFinderHeight0 = serialized->get_float(ArcFinderHeight0_type_id, 6.000000);
+		ArcFinderHeight1 = serialized->get_float(ArcFinderHeight1_type_id, 8.000000);
+		ArcFinderHeight2 = serialized->get_float(ArcFinderHeight2_type_id, 10.000000); 
 	}
 
 	[[nodiscard]] auto

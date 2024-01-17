@@ -7,17 +7,17 @@
 
 namespace rivet::ddl::generated {
 	FocusTrackingSolverData::FocusTrackingSolverData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		JointChain = serialized->get_string(JointChain_type_id);
-		EndEffectorJoint = serialized->get_string(EndEffectorJoint_type_id);
-		FocusPositionName = serialized->get_string(FocusPositionName_type_id);
-		PollRefPoseEveryTick = serialized->get_bool(PollRefPoseEveryTick_type_id);
-		ReferencePoseTime = serialized->get_float(ReferencePoseTime_type_id);
-		SetEndEffectorFwdToModelFwd = serialized->get_bool(SetEndEffectorFwdToModelFwd_type_id);
-		MinYawAngle = serialized->get_float(MinYawAngle_type_id);
-		MaxYawAngle = serialized->get_float(MaxYawAngle_type_id);
-		MinPitchAngle = serialized->get_float(MinPitchAngle_type_id);
-		MaxPitchAngle = serialized->get_float(MaxPitchAngle_type_id);
-		WeightSpreadScheme = serialized->get_enum<rivet::ddl::generated::WeightSpreadScheme>(WeightSpreadScheme_type_id, rivet::ddl::generated::WeightSpreadScheme_values); 
+		JointChain = serialized->get_string(JointChain_type_id, "");
+		EndEffectorJoint = serialized->get_string(EndEffectorJoint_type_id, "");
+		FocusPositionName = serialized->get_string(FocusPositionName_type_id, "");
+		PollRefPoseEveryTick = serialized->get_bool(PollRefPoseEveryTick_type_id, false);
+		ReferencePoseTime = serialized->get_float(ReferencePoseTime_type_id, 0.000000);
+		SetEndEffectorFwdToModelFwd = serialized->get_bool(SetEndEffectorFwdToModelFwd_type_id, true);
+		MinYawAngle = serialized->get_float(MinYawAngle_type_id, -90.000000);
+		MaxYawAngle = serialized->get_float(MaxYawAngle_type_id, 90.000000);
+		MinPitchAngle = serialized->get_float(MinPitchAngle_type_id, -90.000000);
+		MaxPitchAngle = serialized->get_float(MaxPitchAngle_type_id, 90.000000);
+		WeightSpreadScheme = serialized->get_enum<rivet::ddl::generated::WeightSpreadScheme>(WeightSpreadScheme_type_id, rivet::ddl::generated::WeightSpreadScheme_values, rivet::ddl::generated::WeightSpreadScheme::EvenSpread); 
 	}
 
 	[[nodiscard]] auto

@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	SceneEditorHotkey::SceneEditorHotkey([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ControlName = serialized->get_string(ControlName_type_id);
-		Description = serialized->get_string(Description_type_id);
+		ControlName = serialized->get_string(ControlName_type_id, {});
+		Description = serialized->get_string(Description_type_id, {});
 		Key1 = serialized->get_strings(Key1_type_id);
 		Trigger1 = serialized->get_strings(Trigger1_type_id);
 		Key2 = serialized->get_strings(Key2_type_id);

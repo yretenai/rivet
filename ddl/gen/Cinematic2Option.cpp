@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	Cinematic2Option::Cinematic2Option([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Key = serialized->get_string(Key_type_id);
-		Value = serialized->get_string(Value_type_id); 
+		Key = serialized->get_string(Key_type_id, {});
+		Value = serialized->get_string(Value_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

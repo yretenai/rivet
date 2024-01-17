@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	PSNLinkDevstatsEvent::PSNLinkDevstatsEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		action = serialized->get_string(action_type_id);
-		np_account_id = serialized->get_string(np_account_id_type_id);
-		otg_id = serialized->get_string(otg_id_type_id); 
+		action = serialized->get_string(action_type_id, {});
+		np_account_id = serialized->get_string(np_account_id_type_id, {});
+		otg_id = serialized->get_string(otg_id_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

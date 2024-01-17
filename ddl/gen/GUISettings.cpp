@@ -7,15 +7,15 @@
 
 namespace rivet::ddl::generated {
 	GUISettings::GUISettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		RenderEnable = serialized->get_bool(RenderEnable_type_id);
-		PrintErrorMarkers = serialized->get_bool(PrintErrorMarkers_type_id);
-		EasyDebug = serialized->get_bool(EasyDebug_type_id);
-		UseDebugMenuInput = serialized->get_bool(UseDebugMenuInput_type_id);
-		UseAltDebugMenuInput = serialized->get_bool(UseAltDebugMenuInput_type_id);
-		DebugMenuLeftStickAsDPad = serialized->get_bool(DebugMenuLeftStickAsDPad_type_id);
-		UpdatePhase = serialized->get_uint32(UpdatePhase_type_id);
-		PostActorUpdate = serialized->get_bool(PostActorUpdate_type_id);
-		PrototypeMessageDebug = serialized->get_bool(PrototypeMessageDebug_type_id); 
+		RenderEnable = serialized->get_bool(RenderEnable_type_id, true);
+		PrintErrorMarkers = serialized->get_bool(PrintErrorMarkers_type_id, true);
+		EasyDebug = serialized->get_bool(EasyDebug_type_id, false);
+		UseDebugMenuInput = serialized->get_bool(UseDebugMenuInput_type_id, false);
+		UseAltDebugMenuInput = serialized->get_bool(UseAltDebugMenuInput_type_id, false);
+		DebugMenuLeftStickAsDPad = serialized->get_bool(DebugMenuLeftStickAsDPad_type_id, false);
+		UpdatePhase = serialized->get_uint32(UpdatePhase_type_id, 0);
+		PostActorUpdate = serialized->get_bool(PostActorUpdate_type_id, false);
+		PrototypeMessageDebug = serialized->get_bool(PrototypeMessageDebug_type_id, false); 
 	}
 
 	[[nodiscard]] auto

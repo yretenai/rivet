@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	HeroAwarenessPrius::HeroAwarenessPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): AwarenessBasePrius(serialized) {
-		AwarenessLos = serialized->get_enum<rivet::ddl::generated::AwarenessLos>(AwarenessLos_type_id, rivet::ddl::generated::AwarenessLos_values);
-		SourceLocatorName = serialized->get_string(SourceLocatorName_type_id); 
+		AwarenessLos = serialized->get_enum<rivet::ddl::generated::AwarenessLos>(AwarenessLos_type_id, rivet::ddl::generated::AwarenessLos_values, rivet::ddl::generated::AwarenessLos::AllTargets);
+		SourceLocatorName = serialized->get_string(SourceLocatorName_type_id, "head"); 
 	}
 
 	[[nodiscard]] auto

@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	ExportModelInstanceData::ExportModelInstanceData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DaeFilename = serialized->get_string(DaeFilename_type_id);
+		DaeFilename = serialized->get_string(DaeFilename_type_id, {});
 		WorldTransform = serialized->unwrap_into<rivet::ddl::generated::DDLTransform>(WorldTransform_type_id); 
 	}
 

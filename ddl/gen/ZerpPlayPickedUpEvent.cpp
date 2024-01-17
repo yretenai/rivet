@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ZerpPlayPickedUpEvent::ZerpPlayPickedUpEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		ZerpId = serialized->get_int32(ZerpId_type_id); 
+		ZerpId = serialized->get_int32(ZerpId_type_id, -1); 
 	}
 
 	[[nodiscard]] auto

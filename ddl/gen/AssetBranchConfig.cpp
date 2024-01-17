@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	AssetBranchConfig::AssetBranchConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SourceRoot = serialized->get_string(SourceRoot_type_id);
-		BuiltRoot = serialized->get_string(BuiltRoot_type_id);
-		BranchName = serialized->get_string(BranchName_type_id); 
+		SourceRoot = serialized->get_string(SourceRoot_type_id, {});
+		BuiltRoot = serialized->get_string(BuiltRoot_type_id, {});
+		BranchName = serialized->get_string(BranchName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

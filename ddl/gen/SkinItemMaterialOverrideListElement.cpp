@@ -10,7 +10,7 @@
 
 namespace rivet::ddl::generated {
 	SkinItemMaterialOverrideListElement::SkinItemMaterialOverrideListElement([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Available = serialized->get_enum<rivet::ddl::generated::x7ecfc969>(Available_type_id, rivet::ddl::generated::x7ecfc969_values);
+		Available = serialized->get_enum<rivet::ddl::generated::x7ecfc969>(Available_type_id, rivet::ddl::generated::x7ecfc969_values, rivet::ddl::generated::x7ecfc969::Always);
 		OriginalMaterial = serialized->unwrap_into<rivet::ddl::generated::AssetReferenceDef>(OriginalMaterial_type_id);
 		SecondaryOriginalMaterial = serialized->unwrap_into<rivet::ddl::generated::AssetReferenceDef>(SecondaryOriginalMaterial_type_id);
 		OverrideList = serialized->unwrap_into_many<rivet::ddl::generated::SkinItemMaterialOverrideListEntry>(OverrideList_type_id); 

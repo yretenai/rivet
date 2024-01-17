@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	EyePosesDefaultsData::EyePosesDefaultsData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		PoseSelectIndex = serialized->get_int32(PoseSelectIndex_type_id);
-		PoseLabel = serialized->get_string(PoseLabel_type_id);
-		DefaultStrength = serialized->get_float(DefaultStrength_type_id); 
+		PoseSelectIndex = serialized->get_int32(PoseSelectIndex_type_id, 0);
+		PoseLabel = serialized->get_string(PoseLabel_type_id, {});
+		DefaultStrength = serialized->get_float(DefaultStrength_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

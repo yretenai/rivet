@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	HitReactBeginEvent::HitReactBeginEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Anim = serialized->get_string(Anim_type_id);
-		State = serialized->get_enum<rivet::ddl::generated::x45b01dd2>(State_type_id, rivet::ddl::generated::x45b01dd2_values); 
+		Anim = serialized->get_string(Anim_type_id, {});
+		State = serialized->get_enum<rivet::ddl::generated::x45b01dd2>(State_type_id, rivet::ddl::generated::x45b01dd2_values, rivet::ddl::generated::x45b01dd2::Defend); 
 	}
 
 	[[nodiscard]] auto

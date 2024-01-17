@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	WeaponItemConfig::WeaponItemConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): GameItemConfig(serialized) {
-		PreferredHeldSlot = serialized->get_enum<rivet::ddl::generated::x5793ba5e>(PreferredHeldSlot_type_id, rivet::ddl::generated::x5793ba5e_values); 
+		PreferredHeldSlot = serialized->get_enum<rivet::ddl::generated::x5793ba5e>(PreferredHeldSlot_type_id, rivet::ddl::generated::x5793ba5e_values, rivet::ddl::generated::x5793ba5e::Slot01); 
 	}
 
 	[[nodiscard]] auto

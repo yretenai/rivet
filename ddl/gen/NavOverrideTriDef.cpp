@@ -11,9 +11,9 @@
 namespace rivet::ddl::generated {
 	NavOverrideTriDef::NavOverrideTriDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		VaultMetaData = serialized->unwrap_into<rivet::ddl::generated::VaultMetaData>(VaultMetaData_type_id);
-		IconPath = serialized->get_string(IconPath_type_id);
+		IconPath = serialized->get_string(IconPath_type_id, "");
 		PolyVerts = serialized->unwrap_into_many<rivet::ddl::generated::DDLVector3>(PolyVerts_type_id);
-		EditorFlags = serialized->get_enum<rivet::ddl::generated::x66a27995>(EditorFlags_type_id, rivet::ddl::generated::x66a27995_values); 
+		EditorFlags = serialized->get_enum<rivet::ddl::generated::x66a27995>(EditorFlags_type_id, rivet::ddl::generated::x66a27995_values, rivet::ddl::generated::x66a27995::Additive); 
 	}
 
 	[[nodiscard]] auto

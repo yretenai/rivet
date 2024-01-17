@@ -12,22 +12,22 @@
 namespace rivet::ddl::generated {
 	PerformanceEngineItem::PerformanceEngineItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		ActivePerformanceClipDef = serialized->unwrap_into<rivet::ddl::generated::AnimPerformanceClipDef>(ActivePerformanceClipDef_type_id);
-		ActivePerformanceClipGroupPath = serialized->get_string(ActivePerformanceClipGroupPath_type_id);
-		ActivePerformanceClipPath = serialized->get_string(ActivePerformanceClipPath_type_id);
+		ActivePerformanceClipGroupPath = serialized->get_string(ActivePerformanceClipGroupPath_type_id, {});
+		ActivePerformanceClipPath = serialized->get_string(ActivePerformanceClipPath_type_id, {});
 		AnimSetStack = serialized->get_strings(AnimSetStack_type_id);
-		AssetPath = serialized->get_string(AssetPath_type_id);
-		BodyId = serialized->get_uint64(BodyId_type_id);
-		HeadId = serialized->get_uint64(HeadId_type_id);
+		AssetPath = serialized->get_string(AssetPath_type_id, {});
+		BodyId = serialized->get_uint64(BodyId_type_id, 0);
+		HeadId = serialized->get_uint64(HeadId_type_id, 0);
 		PerformanceSetDef = serialized->unwrap_into<rivet::ddl::generated::AnimPerformanceSetDef>(PerformanceSetDef_type_id);
-		PreviewAnimDriverName = serialized->get_string(PreviewAnimDriverName_type_id);
+		PreviewAnimDriverName = serialized->get_string(PreviewAnimDriverName_type_id, {});
 		Matrix = serialized->unwrap_into<rivet::ddl::generated::DDLMatrix4>(Matrix_type_id);
-		Playing = serialized->get_bool(Playing_type_id);
-		RequestPlay = serialized->get_bool(RequestPlay_type_id);
-		RequestPause = serialized->get_bool(RequestPause_type_id);
-		RequestTime = serialized->get_double(RequestTime_type_id);
-		ShowAnimControllerHud = serialized->get_enum<rivet::ddl::generated::x5907f033>(ShowAnimControllerHud_type_id, rivet::ddl::generated::x5907f033_values);
-		ShowAnimDebugHud = serialized->get_bool(ShowAnimDebugHud_type_id);
-		Time = serialized->get_double(Time_type_id); 
+		Playing = serialized->get_bool(Playing_type_id, false);
+		RequestPlay = serialized->get_bool(RequestPlay_type_id, false);
+		RequestPause = serialized->get_bool(RequestPause_type_id, false);
+		RequestTime = serialized->get_double(RequestTime_type_id, 0.000000);
+		ShowAnimControllerHud = serialized->get_enum<rivet::ddl::generated::x5907f033>(ShowAnimControllerHud_type_id, rivet::ddl::generated::x5907f033_values, rivet::ddl::generated::x5907f033::None);
+		ShowAnimDebugHud = serialized->get_bool(ShowAnimDebugHud_type_id, false);
+		Time = serialized->get_double(Time_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

@@ -23,7 +23,7 @@ namespace rivet::ddl::generated {
 		ExternalForces = serialized->unwrap_into<rivet::ddl::generated::VisualEffectExternalForces>(ExternalForces_type_id);
 		SpeedLifeTimeModifier = serialized->unwrap_into<rivet::ddl::generated::SpeedLifeTimeModifier>(SpeedLifeTimeModifier_type_id);
 		InputPort_PhysicsParam = serialized->unwrap_into<rivet::ddl::generated::VisualEffectPhysicsParam>(InputPort_PhysicsParam_type_id);
-		GlobalForceFields = serialized->get_bool(GlobalForceFields_type_id); 
+		GlobalForceFields = serialized->get_bool(GlobalForceFields_type_id, true); 
 	}
 
 	[[nodiscard]] auto

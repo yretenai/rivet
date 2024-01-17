@@ -12,11 +12,11 @@ namespace rivet::ddl::generated {
 	UDSWebApiTrophyMetadata::UDSWebApiTrophyMetadata([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		name = serialized->get_strings(name_type_id);
 		Description = serialized->get_strings(Description_type_id);
-		grade = serialized->get_enum<rivet::ddl::generated::xfb81cf7c>(grade_type_id, rivet::ddl::generated::xfb81cf7c_values);
-		hidden = serialized->get_bool(hidden_type_id);
-		sortKey = serialized->get_string(sortKey_type_id);
-		platinumTrophyObjectId = serialized->get_string(platinumTrophyObjectId_type_id);
-		hasReward = serialized->get_bool(hasReward_type_id);
+		grade = serialized->get_enum<rivet::ddl::generated::xfb81cf7c>(grade_type_id, rivet::ddl::generated::xfb81cf7c_values, rivet::ddl::generated::xfb81cf7c::bronze);
+		hidden = serialized->get_bool(hidden_type_id, false);
+		sortKey = serialized->get_string(sortKey_type_id, {});
+		platinumTrophyObjectId = serialized->get_string(platinumTrophyObjectId_type_id, {});
+		hasReward = serialized->get_bool(hasReward_type_id, false);
 		reward = serialized->unwrap_into<rivet::ddl::generated::UDSWebApiReward>(reward_type_id);
 		unlockCondition = serialized->unwrap_into<rivet::ddl::generated::UBPTrophyUnlock>(unlockCondition_type_id); 
 	}

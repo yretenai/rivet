@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	MaterialGraphNotes::MaterialGraphNotes([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Notes = serialized->get_string(Notes_type_id); 
+		Notes = serialized->get_string(Notes_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

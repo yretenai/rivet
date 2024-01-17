@@ -12,11 +12,11 @@
 
 namespace rivet::ddl::generated {
 	EngineControlSessionData::EngineControlSessionData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Active = serialized->get_bool(Active_type_id);
+		Active = serialized->get_bool(Active_type_id, false);
 		Actors = serialized->unwrap_into_many<rivet::ddl::generated::EngineControlActorData>(Actors_type_id);
 		AssetOverrides = serialized->unwrap_into_many<rivet::ddl::generated::EngineControlAssetOverride>(AssetOverrides_type_id);
-		Atmosphere = serialized->get_string(Atmosphere_type_id);
-		BrightnessScale = serialized->get_float(BrightnessScale_type_id);
+		Atmosphere = serialized->get_string(Atmosphere_type_id, "required\\atmospheres\\default_atmosphere.atmosphere");
+		BrightnessScale = serialized->get_float(BrightnessScale_type_id, 0.000000);
 		Cameras = serialized->unwrap_into_many<rivet::ddl::generated::EngineControlCamera>(Cameras_type_id);
 		ModelInstances = serialized->unwrap_into_many<rivet::ddl::generated::EngineControlModelInstanceData>(ModelInstances_type_id); 
 	}

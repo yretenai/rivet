@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	EffectToolFPSPrius::EffectToolFPSPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EffectToolBasePrius(serialized) {
-		AllowPan = serialized->get_bool(AllowPan_type_id);
-		AllowZoom = serialized->get_bool(AllowZoom_type_id);
-		AllowRotation = serialized->get_bool(AllowRotation_type_id); 
+		AllowPan = serialized->get_bool(AllowPan_type_id, true);
+		AllowZoom = serialized->get_bool(AllowZoom_type_id, true);
+		AllowRotation = serialized->get_bool(AllowRotation_type_id, true); 
 	}
 
 	[[nodiscard]] auto

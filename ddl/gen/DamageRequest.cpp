@@ -13,22 +13,22 @@
 
 namespace rivet::ddl::generated {
 	DamageRequest::DamageRequest([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Type = serialized->get_enum<rivet::ddl::generated::DamageTypes>(Type_type_id, rivet::ddl::generated::DamageTypes_values);
-		Category = serialized->get_enum<rivet::ddl::generated::DamageTypes>(Category_type_id, rivet::ddl::generated::DamageTypes_values);
-		Amount = serialized->get_float(Amount_type_id);
-		Duration = serialized->get_float(Duration_type_id);
-		TickInterval = serialized->get_float(TickInterval_type_id);
-		Knockback = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(Knockback_type_id, rivet::ddl::generated::KnockbackLevels_values);
-		KnockbackAmount = serialized->get_float(KnockbackAmount_type_id);
-		KineticMultiplier = serialized->get_float(KineticMultiplier_type_id);
-		ConditionDuration = serialized->get_float(ConditionDuration_type_id);
-		RequestFlags = serialized->get_bitset<rivet::ddl::generated::x65d7dac2>(RequestFlags_type_id, rivet::ddl::generated::x65d7dac2_values);
-		IgnoreDuration = serialized->get_float(IgnoreDuration_type_id);
+		Type = serialized->get_enum<rivet::ddl::generated::DamageTypes>(Type_type_id, rivet::ddl::generated::DamageTypes_values, rivet::ddl::generated::DamageTypes::None);
+		Category = serialized->get_enum<rivet::ddl::generated::DamageTypes>(Category_type_id, rivet::ddl::generated::DamageTypes_values, rivet::ddl::generated::DamageTypes::None);
+		Amount = serialized->get_float(Amount_type_id, 0.000000);
+		Duration = serialized->get_float(Duration_type_id, 0.000000);
+		TickInterval = serialized->get_float(TickInterval_type_id, 0.000000);
+		Knockback = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(Knockback_type_id, rivet::ddl::generated::KnockbackLevels_values, rivet::ddl::generated::KnockbackLevels::None);
+		KnockbackAmount = serialized->get_float(KnockbackAmount_type_id, 0.000000);
+		KineticMultiplier = serialized->get_float(KineticMultiplier_type_id, 1.000000);
+		ConditionDuration = serialized->get_float(ConditionDuration_type_id, 0.000000);
+		RequestFlags = serialized->get_bitset<rivet::ddl::generated::x65d7dac2>(RequestFlags_type_id, rivet::ddl::generated::x65d7dac2_values, 16384);
+		IgnoreDuration = serialized->get_float(IgnoreDuration_type_id, 0.000000);
 		StatusData = serialized->unwrap_into_many<rivet::ddl::generated::DamageStatusData>(StatusData_type_id);
 		CustomData = serialized->unwrap_into_many<rivet::ddl::generated::CustomDamageData>(CustomData_type_id);
-		ImpactImpulse = serialized->get_float(ImpactImpulse_type_id);
-		ImpactVelocity = serialized->get_float(ImpactVelocity_type_id);
-		Weapon = serialized->get_uint16(Weapon_type_id); 
+		ImpactImpulse = serialized->get_float(ImpactImpulse_type_id, 0.000000);
+		ImpactVelocity = serialized->get_float(ImpactVelocity_type_id, 1.000000);
+		Weapon = serialized->get_uint16(Weapon_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

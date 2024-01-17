@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	UBPObjectsDef::UBPObjectsDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		schemaVersion = serialized->get_string(schemaVersion_type_id);
-		contextType = serialized->get_enum<rivet::ddl::generated::xe07d4302>(contextType_type_id, rivet::ddl::generated::xe07d4302_values);
-		contextId = serialized->get_string(contextId_type_id);
+		schemaVersion = serialized->get_string(schemaVersion_type_id, {});
+		contextType = serialized->get_enum<rivet::ddl::generated::xe07d4302>(contextType_type_id, rivet::ddl::generated::xe07d4302_values, rivet::ddl::generated::xe07d4302::NPCommunicationId);
+		contextId = serialized->get_string(contextId_type_id, {});
 		entities = serialized->get_field(entities_type_id); 
 	}
 

@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	UIOptionListOptionData::UIOptionListOptionData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Label = serialized->get_string(Label_type_id);
-		Description = serialized->get_string(Description_type_id);
-		DescriptionAlt = serialized->get_string(DescriptionAlt_type_id);
-		AccessibilityIcon = serialized->get_string(AccessibilityIcon_type_id);
-		PreviewImage = serialized->get_string(PreviewImage_type_id);
-		EnumValue = serialized->get_string(EnumValue_type_id); 
+		Label = serialized->get_string(Label_type_id, {});
+		Description = serialized->get_string(Description_type_id, {});
+		DescriptionAlt = serialized->get_string(DescriptionAlt_type_id, {});
+		AccessibilityIcon = serialized->get_string(AccessibilityIcon_type_id, {});
+		PreviewImage = serialized->get_string(PreviewImage_type_id, {});
+		EnumValue = serialized->get_string(EnumValue_type_id, ""); 
 	}
 
 	[[nodiscard]] auto

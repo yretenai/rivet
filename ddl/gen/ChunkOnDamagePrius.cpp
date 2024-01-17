@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	ChunkOnDamagePrius::ChunkOnDamagePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		UseHitPoints = serialized->get_bool(UseHitPoints_type_id);
-		LookChunkingName = serialized->get_string(LookChunkingName_type_id);
+		UseHitPoints = serialized->get_bool(UseHitPoints_type_id, false);
+		LookChunkingName = serialized->get_string(LookChunkingName_type_id, {});
 		ValueData = serialized->unwrap_into_many<rivet::ddl::generated::ChunkOnDamageValueData>(ValueData_type_id); 
 	}
 

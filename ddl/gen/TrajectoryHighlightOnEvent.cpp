@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	TrajectoryHighlightOnEvent::TrajectoryHighlightOnEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		ColorKeyFrameModName = serialized->get_string(ColorKeyFrameModName_type_id);
-		ColorR = serialized->get_float(ColorR_type_id);
-		ColorG = serialized->get_float(ColorG_type_id);
-		ColorB = serialized->get_float(ColorB_type_id);
-		ImpactScale = serialized->get_float(ImpactScale_type_id); 
+		ColorKeyFrameModName = serialized->get_string(ColorKeyFrameModName_type_id, {});
+		ColorR = serialized->get_float(ColorR_type_id, 0.000000);
+		ColorG = serialized->get_float(ColorG_type_id, 0.000000);
+		ColorB = serialized->get_float(ColorB_type_id, 0.000000);
+		ImpactScale = serialized->get_float(ImpactScale_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

@@ -13,7 +13,7 @@ namespace rivet::ddl::generated {
 		HitDirection = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(HitDirection_type_id);
 		HitPosition = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(HitPosition_type_id);
 		HitNormal = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(HitNormal_type_id);
-		ResponseFlags = serialized->get_bitset<rivet::ddl::generated::x677185a8>(ResponseFlags_type_id, rivet::ddl::generated::x677185a8_values); 
+		ResponseFlags = serialized->get_bitset<rivet::ddl::generated::x677185a8>(ResponseFlags_type_id, rivet::ddl::generated::x677185a8_values, 0); 
 	}
 
 	[[nodiscard]] auto

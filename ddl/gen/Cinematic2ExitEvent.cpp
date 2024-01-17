@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	Cinematic2ExitEvent::Cinematic2ExitEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		EarlyExit = serialized->get_bool(EarlyExit_type_id); 
+		EarlyExit = serialized->get_bool(EarlyExit_type_id, false); 
 	}
 
 	[[nodiscard]] auto

@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	AssetMigrationProject::AssetMigrationProject([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Name = serialized->get_string(Name_type_id);
-		Root = serialized->get_string(Root_type_id); 
+		Name = serialized->get_string(Name_type_id, {});
+		Root = serialized->get_string(Root_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

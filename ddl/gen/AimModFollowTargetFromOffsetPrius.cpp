@@ -7,19 +7,19 @@
 
 namespace rivet::ddl::generated {
 	AimModFollowTargetFromOffsetPrius::AimModFollowTargetFromOffsetPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): AimModifierPrius(serialized) {
-		StartOffsetMinX = serialized->get_float(StartOffsetMinX_type_id);
-		StartOffsetMaxX = serialized->get_float(StartOffsetMaxX_type_id);
-		StartOffsetMinY = serialized->get_float(StartOffsetMinY_type_id);
-		StartOffsetMaxY = serialized->get_float(StartOffsetMaxY_type_id);
-		StartOffsetMinZ = serialized->get_float(StartOffsetMinZ_type_id);
-		StartOffsetMaxZ = serialized->get_float(StartOffsetMaxZ_type_id);
-		StartingFollowSpeed = serialized->get_float(StartingFollowSpeed_type_id);
-		MaxFollowSpeed = serialized->get_float(MaxFollowSpeed_type_id);
-		FollowAccel = serialized->get_float(FollowAccel_type_id);
-		FollowDecel = serialized->get_float(FollowDecel_type_id);
-		MovingTargetFollowOffset = serialized->get_float(MovingTargetFollowOffset_type_id);
-		ClampToFrontOfShooter = serialized->get_bool(ClampToFrontOfShooter_type_id);
-		ClampFrontOffset = serialized->get_float(ClampFrontOffset_type_id); 
+		StartOffsetMinX = serialized->get_float(StartOffsetMinX_type_id, -4.000000);
+		StartOffsetMaxX = serialized->get_float(StartOffsetMaxX_type_id, 4.000000);
+		StartOffsetMinY = serialized->get_float(StartOffsetMinY_type_id, -2.000000);
+		StartOffsetMaxY = serialized->get_float(StartOffsetMaxY_type_id, -2.000000);
+		StartOffsetMinZ = serialized->get_float(StartOffsetMinZ_type_id, 4.000000);
+		StartOffsetMaxZ = serialized->get_float(StartOffsetMaxZ_type_id, 6.000000);
+		StartingFollowSpeed = serialized->get_float(StartingFollowSpeed_type_id, 5.000000);
+		MaxFollowSpeed = serialized->get_float(MaxFollowSpeed_type_id, 10.000000);
+		FollowAccel = serialized->get_float(FollowAccel_type_id, 4.000000);
+		FollowDecel = serialized->get_float(FollowDecel_type_id, 2.000000);
+		MovingTargetFollowOffset = serialized->get_float(MovingTargetFollowOffset_type_id, 0.000000);
+		ClampToFrontOfShooter = serialized->get_bool(ClampToFrontOfShooter_type_id, false);
+		ClampFrontOffset = serialized->get_float(ClampFrontOffset_type_id, 2.000000); 
 	}
 
 	[[nodiscard]] auto

@@ -10,7 +10,7 @@
 namespace rivet::ddl::generated {
 	BotConfigEmergentVO::BotConfigEmergentVO([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
 		Prius = serialized->unwrap_into<rivet::ddl::generated::EmergentVOBasePrius>(Prius_type_id);
-		EmergentVOConfig = serialized->get_string(EmergentVOConfig_type_id); 
+		EmergentVOConfig = serialized->get_string(EmergentVOConfig_type_id, "\\configs\\EmergentVO\\bot_EmergentVO.config"); 
 	}
 
 	[[nodiscard]] auto

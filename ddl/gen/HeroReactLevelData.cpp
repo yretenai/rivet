@@ -9,9 +9,9 @@
 
 namespace rivet::ddl::generated {
 	HeroReactLevelData::HeroReactLevelData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DistanceScale = serialized->get_float(DistanceScale_type_id);
-		AnimRateScale = serialized->get_float(AnimRateScale_type_id);
-		ReReactCooldown = serialized->get_float(ReReactCooldown_type_id);
+		DistanceScale = serialized->get_float(DistanceScale_type_id, 1.000000);
+		AnimRateScale = serialized->get_float(AnimRateScale_type_id, 1.000000);
+		ReReactCooldown = serialized->get_float(ReReactCooldown_type_id, 5.000000);
 		CameraShake = serialized->unwrap_into<rivet::ddl::generated::CameraShakingData>(CameraShake_type_id); 
 	}
 

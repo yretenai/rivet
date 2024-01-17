@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	KeyFrameModResponseEvent::KeyFrameModResponseEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ResponseEvent(serialized) {
-		ModifierName = serialized->get_string(ModifierName_type_id);
-		XValue = serialized->get_float(XValue_type_id);
-		YValue = serialized->get_float(YValue_type_id);
-		ZValue = serialized->get_float(ZValue_type_id);
-		SetGlobal = serialized->get_bool(SetGlobal_type_id);
-		ApplyModifier = serialized->get_bool(ApplyModifier_type_id); 
+		ModifierName = serialized->get_string(ModifierName_type_id, {});
+		XValue = serialized->get_float(XValue_type_id, 0.000000);
+		YValue = serialized->get_float(YValue_type_id, 0.000000);
+		ZValue = serialized->get_float(ZValue_type_id, 0.000000);
+		SetGlobal = serialized->get_bool(SetGlobal_type_id, false);
+		ApplyModifier = serialized->get_bool(ApplyModifier_type_id, true); 
 	}
 
 	[[nodiscard]] auto

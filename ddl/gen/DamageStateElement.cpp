@@ -7,13 +7,13 @@
 
 namespace rivet::ddl::generated {
 	DamageStateElement::DamageStateElement([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		HPThreshhold = serialized->get_float(HPThreshhold_type_id);
-		MinLookChunks = serialized->get_uint8(MinLookChunks_type_id);
-		MaxLookChunks = serialized->get_uint8(MaxLookChunks_type_id);
-		MinGenericChunks = serialized->get_uint8(MinGenericChunks_type_id);
-		MaxGenericChunks = serialized->get_uint8(MaxGenericChunks_type_id);
-		MinLookSwaps = serialized->get_uint8(MinLookSwaps_type_id);
-		MaxLookSwaps = serialized->get_uint8(MaxLookSwaps_type_id); 
+		HPThreshhold = serialized->get_float(HPThreshhold_type_id, 0.750000);
+		MinLookChunks = serialized->get_uint8(MinLookChunks_type_id, 1);
+		MaxLookChunks = serialized->get_uint8(MaxLookChunks_type_id, 2);
+		MinGenericChunks = serialized->get_uint8(MinGenericChunks_type_id, 1);
+		MaxGenericChunks = serialized->get_uint8(MaxGenericChunks_type_id, 2);
+		MinLookSwaps = serialized->get_uint8(MinLookSwaps_type_id, 0);
+		MaxLookSwaps = serialized->get_uint8(MaxLookSwaps_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

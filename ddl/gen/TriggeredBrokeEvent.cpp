@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	TriggeredBrokeEvent::TriggeredBrokeEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Destroyed = serialized->get_bool(Destroyed_type_id); 
+		Destroyed = serialized->get_bool(Destroyed_type_id, false); 
 	}
 
 	[[nodiscard]] auto

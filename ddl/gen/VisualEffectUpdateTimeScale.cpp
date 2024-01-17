@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	VisualEffectUpdateTimeScale::VisualEffectUpdateTimeScale([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Type = serialized->get_enum<rivet::ddl::generated::x1ab32e78>(Type_type_id, rivet::ddl::generated::x1ab32e78_values);
-		Scale = serialized->get_float(Scale_type_id); 
+		Type = serialized->get_enum<rivet::ddl::generated::x1ab32e78>(Type_type_id, rivet::ddl::generated::x1ab32e78_values, rivet::ddl::generated::x1ab32e78::Parent);
+		Scale = serialized->get_float(Scale_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

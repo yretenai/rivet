@@ -9,21 +9,21 @@
 
 namespace rivet::ddl::generated {
 	VisualResponseEvent::VisualResponseEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ResponseEvent(serialized) {
-		AttachLocJoint = serialized->get_string(AttachLocJoint_type_id);
-		FollowLocJoint = serialized->get_bool(FollowLocJoint_type_id);
-		FollowActor = serialized->get_bool(FollowActor_type_id);
-		FXPackage = serialized->get_string(FXPackage_type_id);
-		StartEffect = serialized->get_int8(StartEffect_type_id);
-		OnConduitDelete = serialized->get_int8(OnConduitDelete_type_id);
-		StartDelay = serialized->get_float(StartDelay_type_id);
-		FadeOut = serialized->get_float(FadeOut_type_id);
-		FadeIn = serialized->get_float(FadeIn_type_id);
-		RefLocator = serialized->get_string(RefLocator_type_id);
-		SingleViewport = serialized->get_int8(SingleViewport_type_id);
-		ExcludeViewport = serialized->get_int8(ExcludeViewport_type_id);
-		ApplyParentInfluence = serialized->get_bool(ApplyParentInfluence_type_id);
-		TargetModelMaterialMappingHashes = serialized->get_string(TargetModelMaterialMappingHashes_type_id);
-		ExcludeModelMaterialMappingHashes = serialized->get_string(ExcludeModelMaterialMappingHashes_type_id); 
+		AttachLocJoint = serialized->get_string(AttachLocJoint_type_id, {});
+		FollowLocJoint = serialized->get_bool(FollowLocJoint_type_id, true);
+		FollowActor = serialized->get_bool(FollowActor_type_id, true);
+		FXPackage = serialized->get_string(FXPackage_type_id, {});
+		StartEffect = serialized->get_int8(StartEffect_type_id, 1);
+		OnConduitDelete = serialized->get_int8(OnConduitDelete_type_id, -1);
+		StartDelay = serialized->get_float(StartDelay_type_id, 0.000000);
+		FadeOut = serialized->get_float(FadeOut_type_id, -1.000000);
+		FadeIn = serialized->get_float(FadeIn_type_id, -1.000000);
+		RefLocator = serialized->get_string(RefLocator_type_id, {});
+		SingleViewport = serialized->get_int8(SingleViewport_type_id, -1);
+		ExcludeViewport = serialized->get_int8(ExcludeViewport_type_id, -1);
+		ApplyParentInfluence = serialized->get_bool(ApplyParentInfluence_type_id, true);
+		TargetModelMaterialMappingHashes = serialized->get_string(TargetModelMaterialMappingHashes_type_id, {});
+		ExcludeModelMaterialMappingHashes = serialized->get_string(ExcludeModelMaterialMappingHashes_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

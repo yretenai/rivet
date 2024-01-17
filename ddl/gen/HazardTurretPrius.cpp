@@ -7,13 +7,13 @@
 
 namespace rivet::ddl::generated {
 	HazardTurretPrius::HazardTurretPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		FiringLocatorName = serialized->get_string(FiringLocatorName_type_id);
-		CasingEjectLocatorName = serialized->get_string(CasingEjectLocatorName_type_id);
-		YawJointName = serialized->get_string(YawJointName_type_id);
-		PitchJointName = serialized->get_string(PitchJointName_type_id);
-		StartOn = serialized->get_bool(StartOn_type_id);
-		SlerpRotation = serialized->get_bool(SlerpRotation_type_id);
-		HazardTurretConfig = serialized->get_string(HazardTurretConfig_type_id); 
+		FiringLocatorName = serialized->get_string(FiringLocatorName_type_id, "igLoc_bulletEmit");
+		CasingEjectLocatorName = serialized->get_string(CasingEjectLocatorName_type_id, "igLoc_bulletEmit");
+		YawJointName = serialized->get_string(YawJointName_type_id, "yaw");
+		PitchJointName = serialized->get_string(PitchJointName_type_id, "pitch");
+		StartOn = serialized->get_bool(StartOn_type_id, true);
+		SlerpRotation = serialized->get_bool(SlerpRotation_type_id, false);
+		HazardTurretConfig = serialized->get_string(HazardTurretConfig_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

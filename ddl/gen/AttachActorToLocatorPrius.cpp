@@ -9,13 +9,13 @@
 
 namespace rivet::ddl::generated {
 	AttachActorToLocatorPrius::AttachActorToLocatorPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActorToAttach = serialized->get_string(ActorToAttach_type_id);
-		SyncedSpawn = serialized->get_bool(SyncedSpawn_type_id);
-		LocatorName = serialized->get_string(LocatorName_type_id);
-		SpawnOnInit = serialized->get_bool(SpawnOnInit_type_id);
+		ActorToAttach = serialized->get_string(ActorToAttach_type_id, {});
+		SyncedSpawn = serialized->get_bool(SyncedSpawn_type_id, false);
+		LocatorName = serialized->get_string(LocatorName_type_id, {});
+		SpawnOnInit = serialized->get_bool(SpawnOnInit_type_id, true);
 		SpawnOnEvent = serialized->unwrap_into<rivet::ddl::generated::EventBase>(SpawnOnEvent_type_id);
-		Flags = serialized->get_bitset<rivet::ddl::generated::x6d3f730c>(Flags_type_id, rivet::ddl::generated::x6d3f730c_values);
-		DestroyAttachOnDestruction = serialized->get_bool(DestroyAttachOnDestruction_type_id); 
+		Flags = serialized->get_bitset<rivet::ddl::generated::x6d3f730c>(Flags_type_id, rivet::ddl::generated::x6d3f730c_values, 0);
+		DestroyAttachOnDestruction = serialized->get_bool(DestroyAttachOnDestruction_type_id, true); 
 	}
 
 	[[nodiscard]] auto

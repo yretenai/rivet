@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	WeaponMrFunGuyPrius::WeaponMrFunGuyPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): WeaponGamePrius(serialized) {
-		TurretShotConfig = serialized->get_string(TurretShotConfig_type_id); 
+		TurretShotConfig = serialized->get_string(TurretShotConfig_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

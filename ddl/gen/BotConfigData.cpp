@@ -7,18 +7,18 @@
 
 namespace rivet::ddl::generated {
 	BotConfigData::BotConfigData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ComboConfig = serialized->get_string(ComboConfig_type_id);
-		EmergentVOConfig = serialized->get_string(EmergentVOConfig_type_id);
-		StatusEffectsConfig = serialized->get_string(StatusEffectsConfig_type_id);
-		ShootingConfig = serialized->get_string(ShootingConfig_type_id);
-		FiringConfig = serialized->get_string(FiringConfig_type_id);
-		LookSelectorConfig = serialized->get_string(LookSelectorConfig_type_id);
-		AnimFilterSelectorConfig = serialized->get_string(AnimFilterSelectorConfig_type_id);
-		WeaponEquipListenerConfig = serialized->get_string(WeaponEquipListenerConfig_type_id);
-		DifficultyConfig = serialized->get_string(DifficultyConfig_type_id);
-		VariantConfig = serialized->get_string(VariantConfig_type_id);
-		WaterFxConfig = serialized->get_string(WaterFxConfig_type_id);
-		AccessibilityHighlightConfig = serialized->get_string(AccessibilityHighlightConfig_type_id); 
+		ComboConfig = serialized->get_string(ComboConfig_type_id, {});
+		EmergentVOConfig = serialized->get_string(EmergentVOConfig_type_id, {});
+		StatusEffectsConfig = serialized->get_string(StatusEffectsConfig_type_id, {});
+		ShootingConfig = serialized->get_string(ShootingConfig_type_id, {});
+		FiringConfig = serialized->get_string(FiringConfig_type_id, {});
+		LookSelectorConfig = serialized->get_string(LookSelectorConfig_type_id, {});
+		AnimFilterSelectorConfig = serialized->get_string(AnimFilterSelectorConfig_type_id, {});
+		WeaponEquipListenerConfig = serialized->get_string(WeaponEquipListenerConfig_type_id, {});
+		DifficultyConfig = serialized->get_string(DifficultyConfig_type_id, {});
+		VariantConfig = serialized->get_string(VariantConfig_type_id, {});
+		WaterFxConfig = serialized->get_string(WaterFxConfig_type_id, {});
+		AccessibilityHighlightConfig = serialized->get_string(AccessibilityHighlightConfig_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

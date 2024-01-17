@@ -9,11 +9,11 @@
 
 namespace rivet::ddl::generated {
 	TimeScaleBasePrius::TimeScaleBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Channel = serialized->get_enum<rivet::ddl::generated::xd4d128f9>(Channel_type_id, rivet::ddl::generated::xd4d128f9_values);
-		Context = serialized->get_string(Context_type_id);
-		TimeScale = serialized->get_float(TimeScale_type_id);
-		Duration = serialized->get_float(Duration_type_id);
-		DurationUnits = serialized->get_enum<rivet::ddl::generated::x7d9b794e>(DurationUnits_type_id, rivet::ddl::generated::x7d9b794e_values); 
+		Channel = serialized->get_enum<rivet::ddl::generated::xd4d128f9>(Channel_type_id, rivet::ddl::generated::xd4d128f9_values, rivet::ddl::generated::xd4d128f9::HeroMelee);
+		Context = serialized->get_string(Context_type_id, {});
+		TimeScale = serialized->get_float(TimeScale_type_id, 1.000000);
+		Duration = serialized->get_float(Duration_type_id, 1.000000);
+		DurationUnits = serialized->get_enum<rivet::ddl::generated::x7d9b794e>(DurationUnits_type_id, rivet::ddl::generated::x7d9b794e_values, rivet::ddl::generated::x7d9b794e::GameTime); 
 	}
 
 	[[nodiscard]] auto

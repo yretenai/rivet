@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	VisualEffectFrameAttr::VisualEffectFrameAttr([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		FPSPercentageHigh = serialized->get_float(FPSPercentageHigh_type_id);
-		FPSPercentageLow = serialized->get_float(FPSPercentageLow_type_id);
-		SpawnRateScale = serialized->get_float(SpawnRateScale_type_id); 
+		FPSPercentageHigh = serialized->get_float(FPSPercentageHigh_type_id, 0.000000);
+		FPSPercentageLow = serialized->get_float(FPSPercentageLow_type_id, 0.000000);
+		SpawnRateScale = serialized->get_float(SpawnRateScale_type_id, 0.500000); 
 	}
 
 	[[nodiscard]] auto

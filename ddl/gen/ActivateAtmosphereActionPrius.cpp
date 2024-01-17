@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	ActivateAtmosphereActionPrius::ActivateAtmosphereActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		Atmosphere = serialized->get_string(Atmosphere_type_id);
-		DisableOnDestroy = serialized->get_bool(DisableOnDestroy_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Rendering);
+		Atmosphere = serialized->get_string(Atmosphere_type_id, {});
+		DisableOnDestroy = serialized->get_bool(DisableOnDestroy_type_id, false); 
 	}
 
 	[[nodiscard]] auto

@@ -17,7 +17,7 @@
 
 namespace rivet::ddl::generated {
 	AnimBodyMoveBaseEvent::AnimBodyMoveBaseEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Speed = serialized->get_enum<rivet::ddl::generated::x59a8f068>(Speed_type_id, rivet::ddl::generated::x59a8f068_values); 
+		Speed = serialized->get_enum<rivet::ddl::generated::x59a8f068>(Speed_type_id, rivet::ddl::generated::x59a8f068_values, rivet::ddl::generated::x59a8f068::Walk); 
 	}
 
 	[[nodiscard]] auto

@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	TargetAttackShapeOBB::TargetAttackShapeOBB([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): TargetedAttackShape(serialized) {
-		Locator = serialized->get_string(Locator_type_id);
-		SizeX = serialized->get_float(SizeX_type_id);
-		SizeY = serialized->get_float(SizeY_type_id);
-		SizeZ = serialized->get_float(SizeZ_type_id); 
+		Locator = serialized->get_string(Locator_type_id, "");
+		SizeX = serialized->get_float(SizeX_type_id, 1.000000);
+		SizeY = serialized->get_float(SizeY_type_id, 1.000000);
+		SizeZ = serialized->get_float(SizeZ_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	WeaponEquippedFXOffEvent::WeaponEquippedFXOffEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		WeaponTypeName = serialized->get_string(WeaponTypeName_type_id);
-		OwnerIsLocal = serialized->get_bool(OwnerIsLocal_type_id);
-		OwnerIsHero = serialized->get_bool(OwnerIsHero_type_id); 
+		WeaponTypeName = serialized->get_string(WeaponTypeName_type_id, {});
+		OwnerIsLocal = serialized->get_bool(OwnerIsLocal_type_id, false);
+		OwnerIsHero = serialized->get_bool(OwnerIsHero_type_id, false); 
 	}
 
 	[[nodiscard]] auto

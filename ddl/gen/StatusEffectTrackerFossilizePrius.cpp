@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	StatusEffectTrackerFossilizePrius::StatusEffectTrackerFossilizePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): StatusEffectTrackerBasePrius(serialized) {
-		BeardActor = serialized->get_string(BeardActor_type_id);
-		Shader = serialized->get_string(Shader_type_id); 
+		BeardActor = serialized->get_string(BeardActor_type_id, {});
+		Shader = serialized->get_string(Shader_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

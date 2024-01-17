@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	FlockOverrideData::FlockOverrideData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Template = serialized->get_string(Template_type_id); 
+		Template = serialized->get_string(Template_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

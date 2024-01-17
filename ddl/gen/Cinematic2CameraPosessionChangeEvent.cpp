@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	Cinematic2CameraPosessionChangeEvent::Cinematic2CameraPosessionChangeEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		AcquireCamera = serialized->get_bool(AcquireCamera_type_id); 
+		AcquireCamera = serialized->get_bool(AcquireCamera_type_id, false); 
 	}
 
 	[[nodiscard]] auto

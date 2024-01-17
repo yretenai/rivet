@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	PredictiveAccuracyPrius::PredictiveAccuracyPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): WeaponAccuracyBasePrius(serialized) {
-		MaxPredictionTime = serialized->get_float(MaxPredictionTime_type_id); 
+		MaxPredictionTime = serialized->get_float(MaxPredictionTime_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

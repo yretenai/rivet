@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	DebugLink::DebugLink([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ActivityLinkBase(serialized) {
-		ActivityState = serialized->get_enum<rivet::ddl::generated::x97a17b73>(ActivityState_type_id, rivet::ddl::generated::x97a17b73_values); 
+		ActivityState = serialized->get_enum<rivet::ddl::generated::x97a17b73>(ActivityState_type_id, rivet::ddl::generated::x97a17b73_values, rivet::ddl::generated::x97a17b73::ActiveAndAvailable); 
 	}
 
 	[[nodiscard]] auto

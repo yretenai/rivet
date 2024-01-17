@@ -10,7 +10,7 @@
 
 namespace rivet::ddl::generated {
 	WeaponRecoilBasePrius::WeaponRecoilBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		RecoilAnim = serialized->get_string(RecoilAnim_type_id); 
+		RecoilAnim = serialized->get_string(RecoilAnim_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

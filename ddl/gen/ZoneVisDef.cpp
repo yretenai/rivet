@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ZoneVisDef::ZoneVisDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		level = serialized->get_string(level_type_id);
+		level = serialized->get_string(level_type_id, {});
 		zones = serialized->get_strings(zones_type_id); 
 	}
 

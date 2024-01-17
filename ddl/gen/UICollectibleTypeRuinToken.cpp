@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	UICollectibleTypeRuinToken::UICollectibleTypeRuinToken([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): UICollectibleTypeBase(serialized) {
-		DialogueLine = serialized->get_string(DialogueLine_type_id); 
+		DialogueLine = serialized->get_string(DialogueLine_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

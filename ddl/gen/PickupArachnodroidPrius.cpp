@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	PickupArachnodroidPrius::PickupArachnodroidPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): GamePickupItemPrius(serialized) {
-		PickupType = serialized->get_enum<rivet::ddl::generated::x6310440e>(PickupType_type_id, rivet::ddl::generated::x6310440e_values); 
+		PickupType = serialized->get_enum<rivet::ddl::generated::x6310440e>(PickupType_type_id, rivet::ddl::generated::x6310440e_values, rivet::ddl::generated::x6310440e::Health); 
 	}
 
 	[[nodiscard]] auto

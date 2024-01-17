@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	MissionNodeInfoUI::MissionNodeInfoUI([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		NameLocTag = serialized->get_string(NameLocTag_type_id);
-		DescriptionLocTag = serialized->get_string(DescriptionLocTag_type_id);
-		AvailablePlanetName = serialized->get_string(AvailablePlanetName_type_id); 
+		NameLocTag = serialized->get_string(NameLocTag_type_id, {});
+		DescriptionLocTag = serialized->get_string(DescriptionLocTag_type_id, {});
+		AvailablePlanetName = serialized->get_string(AvailablePlanetName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

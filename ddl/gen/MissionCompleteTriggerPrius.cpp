@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	MissionCompleteTriggerPrius::MissionCompleteTriggerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BaseCustomOverlayTriggerPrius(serialized) {
-		MissionName = serialized->get_string(MissionName_type_id); 
+		MissionName = serialized->get_string(MissionName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

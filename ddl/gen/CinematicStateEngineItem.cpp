@@ -11,13 +11,13 @@
 
 namespace rivet::ddl::generated {
 	CinematicStateEngineItem::CinematicStateEngineItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AssetPath = serialized->get_string(AssetPath_type_id);
+		AssetPath = serialized->get_string(AssetPath_type_id, {});
 		Cinematic2Def = serialized->unwrap_into<rivet::ddl::generated::Cinematic2Def>(Cinematic2Def_type_id);
-		Focused = serialized->get_bool(Focused_type_id);
-		Loaded = serialized->get_bool(Loaded_type_id);
+		Focused = serialized->get_bool(Focused_type_id, true);
+		Loaded = serialized->get_bool(Loaded_type_id, false);
 		ObjToWorld = serialized->unwrap_into<rivet::ddl::generated::DDLMatrix4>(ObjToWorld_type_id);
-		Playing = serialized->get_bool(Playing_type_id);
-		Time = serialized->get_double(Time_type_id);
+		Playing = serialized->get_bool(Playing_type_id, false);
+		Time = serialized->get_double(Time_type_id, 0.000000);
 		TracksInactive = serialized->get_uint64s(TracksInactive_type_id);
 		TrackState = serialized->unwrap_into_many<rivet::ddl::generated::CinematicTrackState>(TrackState_type_id); 
 	}

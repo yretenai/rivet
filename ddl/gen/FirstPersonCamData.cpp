@@ -10,7 +10,7 @@
 namespace rivet::ddl::generated {
 	FirstPersonCamData::FirstPersonCamData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		YawAndPitch = serialized->unwrap_into<rivet::ddl::generated::YawAndPitchData>(YawAndPitch_type_id);
-		StickConfig = serialized->get_string(StickConfig_type_id); 
+		StickConfig = serialized->get_string(StickConfig_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	DuringObjectivesTriggerPrius_Tools::DuringObjectivesTriggerPrius_Tools([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): AbstractTriggerPrius_Tools(serialized) {
-		StartMissionName = serialized->get_string(StartMissionName_type_id);
-		StartObjectiveName = serialized->get_string(StartObjectiveName_type_id);
-		EndMissionName = serialized->get_string(EndMissionName_type_id);
-		EndObjectiveName = serialized->get_string(EndObjectiveName_type_id); 
+		StartMissionName = serialized->get_string(StartMissionName_type_id, {});
+		StartObjectiveName = serialized->get_string(StartObjectiveName_type_id, {});
+		EndMissionName = serialized->get_string(EndMissionName_type_id, {});
+		EndObjectiveName = serialized->get_string(EndObjectiveName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

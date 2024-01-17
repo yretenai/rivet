@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	SceneEditorReparentSceneNodesInput::SceneEditorReparentSceneNodesInput([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		NewParent = serialized->get_uint64(NewParent_type_id);
+		NewParent = serialized->get_uint64(NewParent_type_id, 0);
 		Children = serialized->get_uint64s(Children_type_id); 
 	}
 

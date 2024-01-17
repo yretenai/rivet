@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	SkinItemDecalPrius::SkinItemDecalPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MaterialNameHash = serialized->get_uint32(MaterialNameHash_type_id);
-		Scale = serialized->get_float(Scale_type_id); 
+		MaterialNameHash = serialized->get_uint32(MaterialNameHash_type_id, 0);
+		Scale = serialized->get_float(Scale_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

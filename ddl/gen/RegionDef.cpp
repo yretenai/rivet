@@ -12,10 +12,10 @@
 namespace rivet::ddl::generated {
 	RegionDef::RegionDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		VaultMetaData = serialized->unwrap_into<rivet::ddl::generated::VaultMetaData>(VaultMetaData_type_id);
-		IconPath = serialized->get_string(IconPath_type_id);
-		Type = serialized->get_enum<rivet::ddl::generated::xcafc543d>(Type_type_id, rivet::ddl::generated::xcafc543d_values);
-		InstallGroup = serialized->get_int32(InstallGroup_type_id);
-		ParentAsset = serialized->get_string(ParentAsset_type_id);
+		IconPath = serialized->get_string(IconPath_type_id, "");
+		Type = serialized->get_enum<rivet::ddl::generated::xcafc543d>(Type_type_id, rivet::ddl::generated::xcafc543d_values, rivet::ddl::generated::xcafc543d::Global);
+		InstallGroup = serialized->get_int32(InstallGroup_type_id, -1);
+		ParentAsset = serialized->get_string(ParentAsset_type_id, {});
 		Bookmarks = serialized->unwrap_into_many<rivet::ddl::generated::RegionBookmark>(Bookmarks_type_id);
 		Aux = serialized->get_field(Aux_type_id);
 		GameData = serialized->unwrap_into_many<rivet::ddl::generated::DDLStructInst>(GameData_type_id); 

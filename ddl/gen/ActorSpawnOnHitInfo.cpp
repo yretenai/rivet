@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ActorSpawnOnHitInfo::ActorSpawnOnHitInfo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActorAsset = serialized->get_string(ActorAsset_type_id); 
+		ActorAsset = serialized->get_string(ActorAsset_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

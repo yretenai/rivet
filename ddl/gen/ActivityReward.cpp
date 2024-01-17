@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	ActivityReward::ActivityReward([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		RewardTag = serialized->get_string(RewardTag_type_id);
-		RewardImagePath = serialized->get_string(RewardImagePath_type_id); 
+		RewardTag = serialized->get_string(RewardTag_type_id, {});
+		RewardImagePath = serialized->get_string(RewardImagePath_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

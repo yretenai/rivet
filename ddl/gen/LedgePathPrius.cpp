@@ -7,23 +7,23 @@
 
 namespace rivet::ddl::generated {
 	LedgePathPrius::LedgePathPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Hang = serialized->get_bool(Hang_type_id);
-		Grapple = serialized->get_bool(Grapple_type_id);
-		DoubleSided = serialized->get_bool(DoubleSided_type_id);
-		Grind = serialized->get_bool(Grind_type_id);
-		UnderGrind = serialized->get_bool(UnderGrind_type_id);
-		Slide = serialized->get_bool(Slide_type_id);
-		DynamicConnectionsFront = serialized->get_bool(DynamicConnectionsFront_type_id);
-		DynamicConnectionsBack = serialized->get_bool(DynamicConnectionsBack_type_id);
-		DisableLedgeBirds = serialized->get_bool(DisableLedgeBirds_type_id);
-		DisableBodyCollision = serialized->get_bool(DisableBodyCollision_type_id);
-		DisableMount = serialized->get_bool(DisableMount_type_id);
-		DisableDrop = serialized->get_bool(DisableDrop_type_id);
-		DisableToLedge = serialized->get_bool(DisableToLedge_type_id);
-		UseCurveNormalsAsUp = serialized->get_bool(UseCurveNormalsAsUp_type_id);
-		EnforceCurveDirection = serialized->get_bool(EnforceCurveDirection_type_id);
-		Material = serialized->get_enum<rivet::ddl::generated::x10b3c4cf>(Material_type_id, rivet::ddl::generated::x10b3c4cf_values);
-		ModelActor = serialized->get_uint64(ModelActor_type_id); 
+		Hang = serialized->get_bool(Hang_type_id, true);
+		Grapple = serialized->get_bool(Grapple_type_id, true);
+		DoubleSided = serialized->get_bool(DoubleSided_type_id, false);
+		Grind = serialized->get_bool(Grind_type_id, false);
+		UnderGrind = serialized->get_bool(UnderGrind_type_id, false);
+		Slide = serialized->get_bool(Slide_type_id, false);
+		DynamicConnectionsFront = serialized->get_bool(DynamicConnectionsFront_type_id, false);
+		DynamicConnectionsBack = serialized->get_bool(DynamicConnectionsBack_type_id, false);
+		DisableLedgeBirds = serialized->get_bool(DisableLedgeBirds_type_id, false);
+		DisableBodyCollision = serialized->get_bool(DisableBodyCollision_type_id, false);
+		DisableMount = serialized->get_bool(DisableMount_type_id, false);
+		DisableDrop = serialized->get_bool(DisableDrop_type_id, false);
+		DisableToLedge = serialized->get_bool(DisableToLedge_type_id, false);
+		UseCurveNormalsAsUp = serialized->get_bool(UseCurveNormalsAsUp_type_id, false);
+		EnforceCurveDirection = serialized->get_bool(EnforceCurveDirection_type_id, false);
+		Material = serialized->get_enum<rivet::ddl::generated::x10b3c4cf>(Material_type_id, rivet::ddl::generated::x10b3c4cf_values, rivet::ddl::generated::x10b3c4cf::None);
+		ModelActor = serialized->get_uint64(ModelActor_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

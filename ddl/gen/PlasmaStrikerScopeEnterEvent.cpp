@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	PlasmaStrikerScopeEnterEvent::PlasmaStrikerScopeEnterEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		TimeScale = serialized->get_float(TimeScale_type_id); 
+		TimeScale = serialized->get_float(TimeScale_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

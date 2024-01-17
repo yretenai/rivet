@@ -11,7 +11,7 @@ namespace rivet::ddl::generated {
 	SkinItemTextureOverride::SkinItemTextureOverride([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		OriginalMaterial = serialized->unwrap_into<rivet::ddl::generated::AssetReferenceDef>(OriginalMaterial_type_id);
 		OverrideTexture = serialized->unwrap_into<rivet::ddl::generated::AssetReferenceDef>(OverrideTexture_type_id);
-		ConstantName = serialized->get_string(ConstantName_type_id); 
+		ConstantName = serialized->get_string(ConstantName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

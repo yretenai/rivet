@@ -11,10 +11,10 @@
 
 namespace rivet::ddl::generated {
 	CameraSplineMotionBasePrius::CameraSplineMotionBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MotionSpline = serialized->get_uint64(MotionSpline_type_id);
-		SpeedAccel = serialized->get_float(SpeedAccel_type_id);
-		SpeedDecel = serialized->get_float(SpeedDecel_type_id);
-		SpeedMax = serialized->get_float(SpeedMax_type_id); 
+		MotionSpline = serialized->get_uint64(MotionSpline_type_id, 0);
+		SpeedAccel = serialized->get_float(SpeedAccel_type_id, 3.000000);
+		SpeedDecel = serialized->get_float(SpeedDecel_type_id, 3.000000);
+		SpeedMax = serialized->get_float(SpeedMax_type_id, 3.000000); 
 	}
 
 	[[nodiscard]] auto

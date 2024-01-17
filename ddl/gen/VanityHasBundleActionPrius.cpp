@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	VanityHasBundleActionPrius::VanityHasBundleActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		VanityBundleConfig = serialized->get_string(VanityBundleConfig_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Inventory);
+		VanityBundleConfig = serialized->get_string(VanityBundleConfig_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

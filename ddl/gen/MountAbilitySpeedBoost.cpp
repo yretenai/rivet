@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	MountAbilitySpeedBoost::MountAbilitySpeedBoost([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): MountAbilityBase(serialized) {
-		AdditionalBoostSpeed = serialized->get_float(AdditionalBoostSpeed_type_id);
-		BoostDuration = serialized->get_float(BoostDuration_type_id);
-		HoldToBoost = serialized->get_bool(HoldToBoost_type_id);
-		BoostIntroAnim = serialized->get_string(BoostIntroAnim_type_id);
-		BoostLoopingAnim = serialized->get_string(BoostLoopingAnim_type_id);
-		BoostOutroAnim = serialized->get_string(BoostOutroAnim_type_id); 
+		AdditionalBoostSpeed = serialized->get_float(AdditionalBoostSpeed_type_id, 4.000000);
+		BoostDuration = serialized->get_float(BoostDuration_type_id, 2.000000);
+		HoldToBoost = serialized->get_bool(HoldToBoost_type_id, false);
+		BoostIntroAnim = serialized->get_string(BoostIntroAnim_type_id, {});
+		BoostLoopingAnim = serialized->get_string(BoostLoopingAnim_type_id, {});
+		BoostOutroAnim = serialized->get_string(BoostOutroAnim_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

@@ -12,10 +12,10 @@
 
 namespace rivet::ddl::generated {
 	ProjectileFlyingStartEvent::ProjectileFlyingStartEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		WeaponTypeName = serialized->get_string(WeaponTypeName_type_id);
-		PerkName = serialized->get_string(PerkName_type_id);
-		ShowTracers = serialized->get_bool(ShowTracers_type_id);
-		FirstShot = serialized->get_bool(FirstShot_type_id); 
+		WeaponTypeName = serialized->get_string(WeaponTypeName_type_id, {});
+		PerkName = serialized->get_string(PerkName_type_id, {});
+		ShowTracers = serialized->get_bool(ShowTracers_type_id, true);
+		FirstShot = serialized->get_bool(FirstShot_type_id, false); 
 	}
 
 	[[nodiscard]] auto

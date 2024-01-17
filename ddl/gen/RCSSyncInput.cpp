@@ -10,9 +10,9 @@
 namespace rivet::ddl::generated {
 	RCSSyncInput::RCSSyncInput([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Views = serialized->get_strings(Views_type_id);
-		Force = serialized->get_bool(Force_type_id);
-		Preview = serialized->get_bool(Preview_type_id);
-		OverrideRevisionOptions = serialized->get_bool(OverrideRevisionOptions_type_id);
+		Force = serialized->get_bool(Force_type_id, false);
+		Preview = serialized->get_bool(Preview_type_id, false);
+		OverrideRevisionOptions = serialized->get_bool(OverrideRevisionOptions_type_id, false);
 		RevisionOptions = serialized->unwrap_into<rivet::ddl::generated::RCSRevisionOptions>(RevisionOptions_type_id); 
 	}
 

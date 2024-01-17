@@ -9,14 +9,14 @@
 
 namespace rivet::ddl::generated {
 	VendorConfig::VendorConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		Type = serialized->get_enum<rivet::ddl::generated::x189ff42f>(Type_type_id, rivet::ddl::generated::x189ff42f_values);
-		TabChangeDelayDuration = serialized->get_float(TabChangeDelayDuration_type_id);
-		PurchaseWeaponHoldTime = serialized->get_float(PurchaseWeaponHoldTime_type_id);
-		UpgradeCellHoldTime = serialized->get_float(UpgradeCellHoldTime_type_id);
-		UpgradeCellWidth = serialized->get_float(UpgradeCellWidth_type_id);
-		UpgradeCellHeight = serialized->get_float(UpgradeCellHeight_type_id);
-		UpgradeCellYOffset = serialized->get_float(UpgradeCellYOffset_type_id);
-		IdleVOTriggerTime = serialized->get_float(IdleVOTriggerTime_type_id);
+		Type = serialized->get_enum<rivet::ddl::generated::x189ff42f>(Type_type_id, rivet::ddl::generated::x189ff42f_values, rivet::ddl::generated::x189ff42f::Weapons);
+		TabChangeDelayDuration = serialized->get_float(TabChangeDelayDuration_type_id, 0.250000);
+		PurchaseWeaponHoldTime = serialized->get_float(PurchaseWeaponHoldTime_type_id, 1.000000);
+		UpgradeCellHoldTime = serialized->get_float(UpgradeCellHoldTime_type_id, 0.500000);
+		UpgradeCellWidth = serialized->get_float(UpgradeCellWidth_type_id, 53.000000);
+		UpgradeCellHeight = serialized->get_float(UpgradeCellHeight_type_id, 62.000000);
+		UpgradeCellYOffset = serialized->get_float(UpgradeCellYOffset_type_id, 31.000000);
+		IdleVOTriggerTime = serialized->get_float(IdleVOTriggerTime_type_id, 20.000000);
 		ItemDatas = serialized->unwrap_into_many<rivet::ddl::generated::VendorItemData>(ItemDatas_type_id); 
 	}
 

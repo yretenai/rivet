@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	TargetEmitterPrius::TargetEmitterPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): WeaponEmitterBasePrius(serialized) {
-		PreserveFacing = serialized->get_bool(PreserveFacing_type_id); 
+		PreserveFacing = serialized->get_bool(PreserveFacing_type_id, true); 
 	}
 
 	[[nodiscard]] auto

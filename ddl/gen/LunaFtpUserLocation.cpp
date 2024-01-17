@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	LunaFtpUserLocation::LunaFtpUserLocation([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		LocationName = serialized->get_string(LocationName_type_id);
-		GameBuildsDir = serialized->get_string(GameBuildsDir_type_id); 
+		LocationName = serialized->get_string(LocationName_type_id, "");
+		GameBuildsDir = serialized->get_string(GameBuildsDir_type_id, ""); 
 	}
 
 	[[nodiscard]] auto

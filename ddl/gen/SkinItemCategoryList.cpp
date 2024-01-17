@@ -7,15 +7,15 @@
 
 namespace rivet::ddl::generated {
 	SkinItemCategoryList::SkinItemCategoryList([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Category = serialized->get_enum<rivet::ddl::generated::xf28253cd>(Category_type_id, rivet::ddl::generated::xf28253cd_values);
-		CategoryLocTag = serialized->get_string(CategoryLocTag_type_id);
-		Display = serialized->get_bool(Display_type_id);
-		UIType = serialized->get_enum<rivet::ddl::generated::xf20c2999>(UIType_type_id, rivet::ddl::generated::xf20c2999_values);
+		Category = serialized->get_enum<rivet::ddl::generated::xf28253cd>(Category_type_id, rivet::ddl::generated::xf28253cd_values, rivet::ddl::generated::xf28253cd::None);
+		CategoryLocTag = serialized->get_string(CategoryLocTag_type_id, {});
+		Display = serialized->get_bool(Display_type_id, true);
+		UIType = serialized->get_enum<rivet::ddl::generated::xf20c2999>(UIType_type_id, rivet::ddl::generated::xf20c2999_values, rivet::ddl::generated::xf20c2999::None);
 		ItemConfigs = serialized->get_strings(ItemConfigs_type_id);
-		IsBodyCategory = serialized->get_bool(IsBodyCategory_type_id);
-		ShowOnBootup = serialized->get_bool(ShowOnBootup_type_id);
-		SubMenu = serialized->get_enum<rivet::ddl::generated::xca348341>(SubMenu_type_id, rivet::ddl::generated::xca348341_values);
-		MenuPriority = serialized->get_uint32(MenuPriority_type_id); 
+		IsBodyCategory = serialized->get_bool(IsBodyCategory_type_id, false);
+		ShowOnBootup = serialized->get_bool(ShowOnBootup_type_id, false);
+		SubMenu = serialized->get_enum<rivet::ddl::generated::xca348341>(SubMenu_type_id, rivet::ddl::generated::xca348341_values, rivet::ddl::generated::xca348341::None);
+		MenuPriority = serialized->get_uint32(MenuPriority_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	CurveIntroDataPrius::CurveIntroDataPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): IntroDataPrius(serialized) {
-		IntroDriverName = serialized->get_string(IntroDriverName_type_id);
-		DriverName = serialized->get_string(DriverName_type_id);
-		OutroDriverName = serialized->get_string(OutroDriverName_type_id);
-		Speed = serialized->get_float(Speed_type_id);
-		MaintainYUp = serialized->get_bool(MaintainYUp_type_id); 
+		IntroDriverName = serialized->get_string(IntroDriverName_type_id, {});
+		DriverName = serialized->get_string(DriverName_type_id, "Move");
+		OutroDriverName = serialized->get_string(OutroDriverName_type_id, {});
+		Speed = serialized->get_float(Speed_type_id, -1.000000);
+		MaintainYUp = serialized->get_bool(MaintainYUp_type_id, false); 
 	}
 
 	[[nodiscard]] auto

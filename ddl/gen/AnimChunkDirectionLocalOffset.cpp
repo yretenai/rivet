@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	AnimChunkDirectionLocalOffset::AnimChunkDirectionLocalOffset([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): AnimChunkDirection(serialized) {
-		HalfConeAngle = serialized->get_float(HalfConeAngle_type_id);
+		HalfConeAngle = serialized->get_float(HalfConeAngle_type_id, 0.000000);
 		LocalOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(LocalOffset_type_id); 
 	}
 

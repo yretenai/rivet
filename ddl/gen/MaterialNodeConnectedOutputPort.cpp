@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	MaterialNodeConnectedOutputPort::MaterialNodeConnectedOutputPort([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Id = serialized->get_string(Id_type_id);
+		Id = serialized->get_string(Id_type_id, {});
 		Targets = serialized->unwrap_into_many<rivet::ddl::generated::MaterialNodeConnectedPort>(Targets_type_id); 
 	}
 

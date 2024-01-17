@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	GameBotMeleeLargePrius::GameBotMeleeLargePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): GameBotMeleeBasePrius(serialized) {
-		RiposteWrenchImmunityTime = serialized->get_float(RiposteWrenchImmunityTime_type_id); 
+		RiposteWrenchImmunityTime = serialized->get_float(RiposteWrenchImmunityTime_type_id, 2.000000); 
 	}
 
 	[[nodiscard]] auto

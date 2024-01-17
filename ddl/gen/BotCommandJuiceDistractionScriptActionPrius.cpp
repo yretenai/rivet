@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	BotCommandJuiceDistractionScriptActionPrius::BotCommandJuiceDistractionScriptActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		DistractionAlertAnim = serialized->get_string(DistractionAlertAnim_type_id);
-		DistractionIntroAnim = serialized->get_string(DistractionIntroAnim_type_id);
-		DistractionLoopAnim = serialized->get_string(DistractionLoopAnim_type_id);
-		DistractionOutroAnim = serialized->get_string(DistractionOutroAnim_type_id);
-		DistractionTime = serialized->get_float(DistractionTime_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Enemy_Bot);
+		DistractionAlertAnim = serialized->get_string(DistractionAlertAnim_type_id, "Alert_Intro");
+		DistractionIntroAnim = serialized->get_string(DistractionIntroAnim_type_id, {});
+		DistractionLoopAnim = serialized->get_string(DistractionLoopAnim_type_id, "Feeding");
+		DistractionOutroAnim = serialized->get_string(DistractionOutroAnim_type_id, {});
+		DistractionTime = serialized->get_float(DistractionTime_type_id, 8.000000); 
 	}
 
 	[[nodiscard]] auto

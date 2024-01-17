@@ -9,12 +9,12 @@
 
 namespace rivet::ddl::generated {
 	Cinematic2PaneDef::Cinematic2PaneDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Id = serialized->get_uint64(Id_type_id);
-		PaneId = serialized->get_enum<rivet::ddl::generated::xe916d2e3>(PaneId_type_id, rivet::ddl::generated::xe916d2e3_values);
-		NearClipPlane = serialized->get_float(NearClipPlane_type_id);
-		FarClipPlane = serialized->get_float(FarClipPlane_type_id);
-		LodScaleMultiplier = serialized->get_float(LodScaleMultiplier_type_id);
-		ImpostorHQBaseDistance = serialized->get_float(ImpostorHQBaseDistance_type_id);
+		Id = serialized->get_uint64(Id_type_id, 0);
+		PaneId = serialized->get_enum<rivet::ddl::generated::xe916d2e3>(PaneId_type_id, rivet::ddl::generated::xe916d2e3_values, rivet::ddl::generated::xe916d2e3::Pane_A);
+		NearClipPlane = serialized->get_float(NearClipPlane_type_id, 0.100000);
+		FarClipPlane = serialized->get_float(FarClipPlane_type_id, 1000.000000);
+		LodScaleMultiplier = serialized->get_float(LodScaleMultiplier_type_id, 1.000000);
+		ImpostorHQBaseDistance = serialized->get_float(ImpostorHQBaseDistance_type_id, 0.000000);
 		CameraIds = serialized->unwrap_into_many<rivet::ddl::generated::Cinematic2IdMapDef>(CameraIds_type_id);
 		LightGroupIds = serialized->unwrap_into_many<rivet::ddl::generated::Cinematic2IdMapDef>(LightGroupIds_type_id); 
 	}

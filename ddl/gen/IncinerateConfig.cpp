@@ -10,11 +10,11 @@
 
 namespace rivet::ddl::generated {
 	IncinerateConfig::IncinerateConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		PreMaterialGraph = serialized->get_string(PreMaterialGraph_type_id);
-		PostMaterialGraph = serialized->get_string(PostMaterialGraph_type_id);
-		DefaultDuration = serialized->get_float(DefaultDuration_type_id);
-		DefaultDelay = serialized->get_float(DefaultDelay_type_id);
-		UseJointCrawl = serialized->get_bool(UseJointCrawl_type_id); 
+		PreMaterialGraph = serialized->get_string(PreMaterialGraph_type_id, {});
+		PostMaterialGraph = serialized->get_string(PostMaterialGraph_type_id, {});
+		DefaultDuration = serialized->get_float(DefaultDuration_type_id, 1.000000);
+		DefaultDelay = serialized->get_float(DefaultDelay_type_id, 0.200000);
+		UseJointCrawl = serialized->get_bool(UseJointCrawl_type_id, true); 
 	}
 
 	[[nodiscard]] auto

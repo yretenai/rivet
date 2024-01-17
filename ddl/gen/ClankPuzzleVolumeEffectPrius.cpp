@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	ClankPuzzleVolumeEffectPrius::ClankPuzzleVolumeEffectPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		VolumeType = serialized->get_enum<rivet::ddl::generated::x17b935fe>(VolumeType_type_id, rivet::ddl::generated::x17b935fe_values);
-		CanRecall = serialized->get_bool(CanRecall_type_id);
-		ShowOutline = serialized->get_bool(ShowOutline_type_id); 
+		VolumeType = serialized->get_enum<rivet::ddl::generated::x17b935fe>(VolumeType_type_id, rivet::ddl::generated::x17b935fe_values, rivet::ddl::generated::x17b935fe::None);
+		CanRecall = serialized->get_bool(CanRecall_type_id, true);
+		ShowOutline = serialized->get_bool(ShowOutline_type_id, false); 
 	}
 
 	[[nodiscard]] auto

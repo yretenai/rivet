@@ -10,10 +10,10 @@
 
 namespace rivet::ddl::generated {
 	DevstatsPlayerWAMChargeAttackCancelledEvent::DevstatsPlayerWAMChargeAttackCancelledEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		EventId = serialized->get_string(EventId_type_id);
-		DevstatsName = serialized->get_string(DevstatsName_type_id);
-		InputCancel = serialized->get_bool(InputCancel_type_id);
-		ForcedCancel = serialized->get_bool(ForcedCancel_type_id);
+		EventId = serialized->get_string(EventId_type_id, {});
+		DevstatsName = serialized->get_string(DevstatsName_type_id, {});
+		InputCancel = serialized->get_bool(InputCancel_type_id, false);
+		ForcedCancel = serialized->get_bool(ForcedCancel_type_id, false);
 		PlayerPosInfo = serialized->unwrap_into<rivet::ddl::generated::DevstatsPlayerPositionInfo>(PlayerPosInfo_type_id);
 		PrimarySegmentInfo = serialized->unwrap_into<rivet::ddl::generated::DevstatsPrimarySegmentInfo>(PrimarySegmentInfo_type_id); 
 	}

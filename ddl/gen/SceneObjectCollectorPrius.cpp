@@ -7,14 +7,14 @@
 
 namespace rivet::ddl::generated {
 	SceneObjectCollectorPrius::SceneObjectCollectorPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		EncompassingVolume = serialized->get_uint64(EncompassingVolume_type_id);
-		MaxModels = serialized->get_uint32(MaxModels_type_id);
-		MaxLights = serialized->get_uint32(MaxLights_type_id);
-		MaxVolumes = serialized->get_uint32(MaxVolumes_type_id);
-		MaxDecals = serialized->get_uint32(MaxDecals_type_id);
-		MaxCurves = serialized->get_uint32(MaxCurves_type_id);
-		MaxVisualEffects = serialized->get_uint32(MaxVisualEffects_type_id);
-		IncludeEnvProbes = serialized->get_bool(IncludeEnvProbes_type_id);
+		EncompassingVolume = serialized->get_uint64(EncompassingVolume_type_id, 0);
+		MaxModels = serialized->get_uint32(MaxModels_type_id, 0);
+		MaxLights = serialized->get_uint32(MaxLights_type_id, 0);
+		MaxVolumes = serialized->get_uint32(MaxVolumes_type_id, 0);
+		MaxDecals = serialized->get_uint32(MaxDecals_type_id, 0);
+		MaxCurves = serialized->get_uint32(MaxCurves_type_id, 0);
+		MaxVisualEffects = serialized->get_uint32(MaxVisualEffects_type_id, 0);
+		IncludeEnvProbes = serialized->get_bool(IncludeEnvProbes_type_id, true);
 		ExcludeCollectors = serialized->get_uint64s(ExcludeCollectors_type_id);
 		IncludeZones = serialized->get_strings(IncludeZones_type_id); 
 	}

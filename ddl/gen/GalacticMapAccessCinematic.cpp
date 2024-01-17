@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	GalacticMapAccessCinematic::GalacticMapAccessCinematic([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		CinematicAsset = serialized->get_string(CinematicAsset_type_id);
-		IsWorldSpaceCinematic = serialized->get_bool(IsWorldSpaceCinematic_type_id);
-		UseGroundOffset = serialized->get_bool(UseGroundOffset_type_id); 
+		CinematicAsset = serialized->get_string(CinematicAsset_type_id, {});
+		IsWorldSpaceCinematic = serialized->get_bool(IsWorldSpaceCinematic_type_id, false);
+		UseGroundOffset = serialized->get_bool(UseGroundOffset_type_id, true); 
 	}
 
 	[[nodiscard]] auto

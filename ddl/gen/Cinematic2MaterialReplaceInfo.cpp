@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	Cinematic2MaterialReplaceInfo::Cinematic2MaterialReplaceInfo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MaterialMappingName = serialized->get_string(MaterialMappingName_type_id);
-		MaterialAsset = serialized->get_string(MaterialAsset_type_id); 
+		MaterialMappingName = serialized->get_string(MaterialMappingName_type_id, {});
+		MaterialAsset = serialized->get_string(MaterialAsset_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

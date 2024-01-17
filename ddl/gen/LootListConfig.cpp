@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	LootListConfig::LootListConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		SelectType = serialized->get_enum<rivet::ddl::generated::xd80b176a>(SelectType_type_id, rivet::ddl::generated::xd80b176a_values);
+		SelectType = serialized->get_enum<rivet::ddl::generated::xd80b176a>(SelectType_type_id, rivet::ddl::generated::xd80b176a_values, rivet::ddl::generated::xd80b176a::Random);
 		Items = serialized->unwrap_into_many<rivet::ddl::generated::ItemElement>(Items_type_id); 
 	}
 

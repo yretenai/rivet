@@ -7,14 +7,14 @@
 
 namespace rivet::ddl::generated {
 	AnimVisSizeInfo::AnimVisSizeInfo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Name = serialized->get_string(Name_type_id);
-		BuiltAnimSetSize = serialized->get_uint32(BuiltAnimSetSize_type_id);
-		BuiltClipsSize = serialized->get_uint32(BuiltClipsSize_type_id);
-		BuiltClipGroupsSize = serialized->get_uint32(BuiltClipGroupsSize_type_id);
-		BuiltDriversSize = serialized->get_uint32(BuiltDriversSize_type_id);
-		ClipCount = serialized->get_uint32(ClipCount_type_id);
-		ClipGroupCount = serialized->get_uint32(ClipGroupCount_type_id);
-		DriverCount = serialized->get_uint32(DriverCount_type_id); 
+		Name = serialized->get_string(Name_type_id, {});
+		BuiltAnimSetSize = serialized->get_uint32(BuiltAnimSetSize_type_id, 0);
+		BuiltClipsSize = serialized->get_uint32(BuiltClipsSize_type_id, 0);
+		BuiltClipGroupsSize = serialized->get_uint32(BuiltClipGroupsSize_type_id, 0);
+		BuiltDriversSize = serialized->get_uint32(BuiltDriversSize_type_id, 0);
+		ClipCount = serialized->get_uint32(ClipCount_type_id, 0);
+		ClipGroupCount = serialized->get_uint32(ClipGroupCount_type_id, 0);
+		DriverCount = serialized->get_uint32(DriverCount_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

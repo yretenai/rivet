@@ -7,13 +7,13 @@
 
 namespace rivet::ddl::generated {
 	LocationDisplayTriggerPrius::LocationDisplayTriggerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		StartEnabled = serialized->get_bool(StartEnabled_type_id);
-		AllowShipTrigger = serialized->get_bool(AllowShipTrigger_type_id);
-		AllowCineTrigger = serialized->get_bool(AllowCineTrigger_type_id);
-		SaveGaveText = serialized->get_bool(SaveGaveText_type_id);
-		LocationTag = serialized->get_string(LocationTag_type_id);
-		TextDelay = serialized->get_float(TextDelay_type_id);
-		TextDuration = serialized->get_float(TextDuration_type_id); 
+		StartEnabled = serialized->get_bool(StartEnabled_type_id, true);
+		AllowShipTrigger = serialized->get_bool(AllowShipTrigger_type_id, false);
+		AllowCineTrigger = serialized->get_bool(AllowCineTrigger_type_id, false);
+		SaveGaveText = serialized->get_bool(SaveGaveText_type_id, true);
+		LocationTag = serialized->get_string(LocationTag_type_id, "INVALID");
+		TextDelay = serialized->get_float(TextDelay_type_id, 0.000000);
+		TextDuration = serialized->get_float(TextDuration_type_id, 5.000000); 
 	}
 
 	[[nodiscard]] auto

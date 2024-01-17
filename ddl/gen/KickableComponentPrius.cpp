@@ -9,12 +9,12 @@
 
 namespace rivet::ddl::generated {
 	KickableComponentPrius::KickableComponentPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		IsNudgeable = serialized->get_bool(IsNudgeable_type_id);
-		NudgeFactor = serialized->get_float(NudgeFactor_type_id);
-		AutoAllocPhysicsAndAnimController = serialized->get_bool(AutoAllocPhysicsAndAnimController_type_id);
-		StartActivated = serialized->get_bool(StartActivated_type_id);
-		StartInteractable = serialized->get_bool(StartInteractable_type_id);
-		ExtraProp = serialized->get_bool(ExtraProp_type_id);
+		IsNudgeable = serialized->get_bool(IsNudgeable_type_id, false);
+		NudgeFactor = serialized->get_float(NudgeFactor_type_id, 1.000000);
+		AutoAllocPhysicsAndAnimController = serialized->get_bool(AutoAllocPhysicsAndAnimController_type_id, true);
+		StartActivated = serialized->get_bool(StartActivated_type_id, false);
+		StartInteractable = serialized->get_bool(StartInteractable_type_id, true);
+		ExtraProp = serialized->get_bool(ExtraProp_type_id, false);
 		CustomProperties = serialized->unwrap_into<rivet::ddl::generated::PhysicsCustomizationProperties>(CustomProperties_type_id); 
 	}
 

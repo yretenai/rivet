@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	MovingLevelAttachActorsActionPrius::MovingLevelAttachActorsActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		UseStart = serialized->get_bool(UseStart_type_id);
-		UseEnd = serialized->get_bool(UseEnd_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Moving_Levels);
+		UseStart = serialized->get_bool(UseStart_type_id, false);
+		UseEnd = serialized->get_bool(UseEnd_type_id, false); 
 	}
 
 	[[nodiscard]] auto

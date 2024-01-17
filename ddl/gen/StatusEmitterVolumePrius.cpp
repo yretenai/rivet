@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	StatusEmitterVolumePrius::StatusEmitterVolumePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): StatusEmitterBasePrius(serialized) {
-		ValidTargetTypes = serialized->get_bitset<rivet::ddl::generated::TargetType>(ValidTargetTypes_type_id, rivet::ddl::generated::TargetType_values); 
+		ValidTargetTypes = serialized->get_bitset<rivet::ddl::generated::TargetType>(ValidTargetTypes_type_id, rivet::ddl::generated::TargetType_values, 0); 
 	}
 
 	[[nodiscard]] auto

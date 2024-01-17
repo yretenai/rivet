@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	AimModTargetBestGroundPosPrius::AimModTargetBestGroundPosPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): AimModifierPrius(serialized) {
-		UseGroundY = serialized->get_bool(UseGroundY_type_id); 
+		UseGroundY = serialized->get_bool(UseGroundY_type_id, true); 
 	}
 
 	[[nodiscard]] auto

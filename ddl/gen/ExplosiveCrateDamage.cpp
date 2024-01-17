@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	ExplosiveCrateDamage::ExplosiveCrateDamage([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DamageRadius = serialized->get_float(DamageRadius_type_id);
-		DamageAmount = serialized->get_float(DamageAmount_type_id); 
+		DamageRadius = serialized->get_float(DamageRadius_type_id, 2.800000);
+		DamageAmount = serialized->get_float(DamageAmount_type_id, 0.250000); 
 	}
 
 	[[nodiscard]] auto

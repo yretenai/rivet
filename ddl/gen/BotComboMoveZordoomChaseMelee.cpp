@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	BotComboMoveZordoomChaseMelee::BotComboMoveZordoomChaseMelee([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BotComboMoveBase(serialized) {
-		IntroAnim = serialized->get_string(IntroAnim_type_id);
-		ActiveAnim = serialized->get_string(ActiveAnim_type_id);
-		OutroAnim = serialized->get_string(OutroAnim_type_id);
-		IntroDuration = serialized->get_float(IntroDuration_type_id);
-		ActiveDuration = serialized->get_float(ActiveDuration_type_id);
-		OutroDuration = serialized->get_float(OutroDuration_type_id); 
+		IntroAnim = serialized->get_string(IntroAnim_type_id, {});
+		ActiveAnim = serialized->get_string(ActiveAnim_type_id, {});
+		OutroAnim = serialized->get_string(OutroAnim_type_id, {});
+		IntroDuration = serialized->get_float(IntroDuration_type_id, 0.000000);
+		ActiveDuration = serialized->get_float(ActiveDuration_type_id, 0.000000);
+		OutroDuration = serialized->get_float(OutroDuration_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

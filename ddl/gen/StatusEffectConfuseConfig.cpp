@@ -10,8 +10,8 @@
 namespace rivet::ddl::generated {
 	StatusEffectConfuseConfig::StatusEffectConfuseConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): StatusEffectConfig(serialized) {
 		ConfuseTargetingTiers = serialized->unwrap_into<rivet::ddl::generated::TierData>(ConfuseTargetingTiers_type_id);
-		VictimMaterialGraph = serialized->get_string(VictimMaterialGraph_type_id);
-		StandardDuration = serialized->get_float(StandardDuration_type_id); 
+		VictimMaterialGraph = serialized->get_string(VictimMaterialGraph_type_id, {});
+		StandardDuration = serialized->get_float(StandardDuration_type_id, 12.000000); 
 	}
 
 	[[nodiscard]] auto

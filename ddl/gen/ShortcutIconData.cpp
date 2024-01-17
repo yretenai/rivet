@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	ShortcutIconData::ShortcutIconData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Shortcut = serialized->get_enum<rivet::ddl::generated::x847316cf>(Shortcut_type_id, rivet::ddl::generated::x847316cf_values);
-		Icon = serialized->get_string(Icon_type_id); 
+		Shortcut = serialized->get_enum<rivet::ddl::generated::x847316cf>(Shortcut_type_id, rivet::ddl::generated::x847316cf_values, rivet::ddl::generated::x847316cf::None);
+		Icon = serialized->get_string(Icon_type_id, ""); 
 	}
 
 	[[nodiscard]] auto

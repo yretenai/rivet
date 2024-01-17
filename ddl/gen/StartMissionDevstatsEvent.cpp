@@ -9,10 +9,10 @@
 
 namespace rivet::ddl::generated {
 	StartMissionDevstatsEvent::StartMissionDevstatsEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		EventId = serialized->get_string(EventId_type_id);
-		MissionSegmentId = serialized->get_string(MissionSegmentId_type_id);
-		MissionName = serialized->get_string(MissionName_type_id);
-		IsReplay = serialized->get_bool(IsReplay_type_id);
+		EventId = serialized->get_string(EventId_type_id, {});
+		MissionSegmentId = serialized->get_string(MissionSegmentId_type_id, {});
+		MissionName = serialized->get_string(MissionName_type_id, {});
+		IsReplay = serialized->get_bool(IsReplay_type_id, false);
 		PlayerPosInfo = serialized->unwrap_into<rivet::ddl::generated::DevstatsPlayerPositionInfo>(PlayerPosInfo_type_id); 
 	}
 

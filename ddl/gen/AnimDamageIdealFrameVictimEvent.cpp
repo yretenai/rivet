@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	AnimDamageIdealFrameVictimEvent::AnimDamageIdealFrameVictimEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		ImpactLocation = serialized->get_enum<rivet::ddl::generated::x80ca62e9>(ImpactLocation_type_id, rivet::ddl::generated::x80ca62e9_values);
-		ImpactLevel = serialized->get_enum<rivet::ddl::generated::x3b1e2e8d>(ImpactLevel_type_id, rivet::ddl::generated::x3b1e2e8d_values);
-		DamageModApplied = serialized->get_bool(DamageModApplied_type_id); 
+		ImpactLocation = serialized->get_enum<rivet::ddl::generated::x80ca62e9>(ImpactLocation_type_id, rivet::ddl::generated::x80ca62e9_values, rivet::ddl::generated::x80ca62e9::Impact_Torso);
+		ImpactLevel = serialized->get_enum<rivet::ddl::generated::x3b1e2e8d>(ImpactLevel_type_id, rivet::ddl::generated::x3b1e2e8d_values, rivet::ddl::generated::x3b1e2e8d::Impact_Light);
+		DamageModApplied = serialized->get_bool(DamageModApplied_type_id, false); 
 	}
 
 	[[nodiscard]] auto

@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	BotComboConditionGoonBikeBolaCheckPrius::BotComboConditionGoonBikeBolaCheckPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BotComboConditionDistFromClosestNavPrius(serialized) {
-		FeetLocatorForLoS = serialized->get_string(FeetLocatorForLoS_type_id); 
+		FeetLocatorForLoS = serialized->get_string(FeetLocatorForLoS_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

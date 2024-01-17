@@ -7,19 +7,19 @@
 
 namespace rivet::ddl::generated {
 	HoverbootMoveData::HoverbootMoveData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		InitialMinSpeed = serialized->get_float(InitialMinSpeed_type_id);
-		MaxSpeed = serialized->get_float(MaxSpeed_type_id);
-		Accel = serialized->get_float(Accel_type_id);
-		Decel = serialized->get_float(Decel_type_id);
-		LateralDecel = serialized->get_float(LateralDecel_type_id);
-		LateralDecelNoInput = serialized->get_float(LateralDecelNoInput_type_id);
-		TurnGain = serialized->get_float(TurnGain_type_id);
-		TurnDamp = serialized->get_float(TurnDamp_type_id);
-		TurnMinSpeed = serialized->get_float(TurnMinSpeed_type_id);
-		TurnMaxSpeed = serialized->get_float(TurnMaxSpeed_type_id);
-		BreakableSpeedThreshold = serialized->get_float(BreakableSpeedThreshold_type_id);
-		NoGroundFallTime = serialized->get_float(NoGroundFallTime_type_id);
-		DecelToIdealSpeed = serialized->get_float(DecelToIdealSpeed_type_id); 
+		InitialMinSpeed = serialized->get_float(InitialMinSpeed_type_id, 0.000000);
+		MaxSpeed = serialized->get_float(MaxSpeed_type_id, 0.000000);
+		Accel = serialized->get_float(Accel_type_id, 0.000000);
+		Decel = serialized->get_float(Decel_type_id, 0.000000);
+		LateralDecel = serialized->get_float(LateralDecel_type_id, 0.000000);
+		LateralDecelNoInput = serialized->get_float(LateralDecelNoInput_type_id, 0.000000);
+		TurnGain = serialized->get_float(TurnGain_type_id, 0.000000);
+		TurnDamp = serialized->get_float(TurnDamp_type_id, 0.000000);
+		TurnMinSpeed = serialized->get_float(TurnMinSpeed_type_id, 0.000000);
+		TurnMaxSpeed = serialized->get_float(TurnMaxSpeed_type_id, 0.000000);
+		BreakableSpeedThreshold = serialized->get_float(BreakableSpeedThreshold_type_id, 0.000000);
+		NoGroundFallTime = serialized->get_float(NoGroundFallTime_type_id, 0.100000);
+		DecelToIdealSpeed = serialized->get_float(DecelToIdealSpeed_type_id, 3.000000); 
 	}
 
 	[[nodiscard]] auto

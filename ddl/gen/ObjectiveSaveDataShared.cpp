@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	ObjectiveSaveDataShared::ObjectiveSaveDataShared([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ObjSysNodeSaveData(serialized) {
-		ObjectiveState = serialized->get_enum<rivet::ddl::generated::ObjectiveStates>(ObjectiveState_type_id, rivet::ddl::generated::ObjectiveStates_values);
-		ScriptObjectiveVairable = serialized->get_float(ScriptObjectiveVairable_type_id); 
+		ObjectiveState = serialized->get_enum<rivet::ddl::generated::ObjectiveStates>(ObjectiveState_type_id, rivet::ddl::generated::ObjectiveStates_values, rivet::ddl::generated::ObjectiveStates::Inactive);
+		ScriptObjectiveVairable = serialized->get_float(ScriptObjectiveVairable_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

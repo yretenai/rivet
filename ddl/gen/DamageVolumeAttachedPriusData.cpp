@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	DamageVolumeAttachedPriusData::DamageVolumeAttachedPriusData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AttachLocator = serialized->get_string(AttachLocator_type_id);
-		Shape = serialized->get_enum<rivet::ddl::generated::xe19384e8>(Shape_type_id, rivet::ddl::generated::xe19384e8_values);
+		AttachLocator = serialized->get_string(AttachLocator_type_id, {});
+		Shape = serialized->get_enum<rivet::ddl::generated::xe19384e8>(Shape_type_id, rivet::ddl::generated::xe19384e8_values, rivet::ddl::generated::xe19384e8::Cuboid);
 		Extents = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Extents_type_id); 
 	}
 

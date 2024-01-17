@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	RelativeAnimCameraPrius::RelativeAnimCameraPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): CameraPrius(serialized) {
-		RelativeActor = serialized->get_uint64(RelativeActor_type_id);
+		RelativeActor = serialized->get_uint64(RelativeActor_type_id, 0);
 		CameraAnimList = serialized->get_strings(CameraAnimList_type_id);
-		DoCollision = serialized->get_bool(DoCollision_type_id); 
+		DoCollision = serialized->get_bool(DoCollision_type_id, false); 
 	}
 
 	[[nodiscard]] auto

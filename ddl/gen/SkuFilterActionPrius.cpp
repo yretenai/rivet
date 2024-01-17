@@ -7,13 +7,13 @@
 
 namespace rivet::ddl::generated {
 	SkuFilterActionPrius::SkuFilterActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		kSkuNA = serialized->get_bool(kSkuNA_type_id);
-		kSkuUK = serialized->get_bool(kSkuUK_type_id);
-		kSkuEU = serialized->get_bool(kSkuEU_type_id);
-		kSkuJP = serialized->get_bool(kSkuJP_type_id);
-		kSkuAS = serialized->get_bool(kSkuAS_type_id);
-		kSkuCN = serialized->get_bool(kSkuCN_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Logic);
+		kSkuNA = serialized->get_bool(kSkuNA_type_id, false);
+		kSkuUK = serialized->get_bool(kSkuUK_type_id, false);
+		kSkuEU = serialized->get_bool(kSkuEU_type_id, false);
+		kSkuJP = serialized->get_bool(kSkuJP_type_id, false);
+		kSkuAS = serialized->get_bool(kSkuAS_type_id, false);
+		kSkuCN = serialized->get_bool(kSkuCN_type_id, false); 
 	}
 
 	[[nodiscard]] auto

@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	ActiveObjective::ActiveObjective([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MissionHash = serialized->get_uint32(MissionHash_type_id);
-		ObjectiveHash = serialized->get_uint32(ObjectiveHash_type_id); 
+		MissionHash = serialized->get_uint32(MissionHash_type_id, 0);
+		ObjectiveHash = serialized->get_uint32(ObjectiveHash_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

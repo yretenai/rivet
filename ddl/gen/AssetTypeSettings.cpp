@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	AssetTypeSettings::AssetTypeSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MaxCount = serialized->get_int32(MaxCount_type_id);
-		ForceDefault = serialized->get_bool(ForceDefault_type_id);
-		AutoReloadEnable = serialized->get_bool(AutoReloadEnable_type_id); 
+		MaxCount = serialized->get_int32(MaxCount_type_id, 8);
+		ForceDefault = serialized->get_bool(ForceDefault_type_id, false);
+		AutoReloadEnable = serialized->get_bool(AutoReloadEnable_type_id, false); 
 	}
 
 	[[nodiscard]] auto

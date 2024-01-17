@@ -7,15 +7,15 @@
 
 namespace rivet::ddl::generated {
 	AnimSettings::AnimSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MaxJobCount = serialized->get_uint32(MaxJobCount_type_id);
-		MaxDriverUserPoseCount = serialized->get_uint32(MaxDriverUserPoseCount_type_id);
-		CullAllCullable = serialized->get_bool(CullAllCullable_type_id);
+		MaxJobCount = serialized->get_uint32(MaxJobCount_type_id, 1024);
+		MaxDriverUserPoseCount = serialized->get_uint32(MaxDriverUserPoseCount_type_id, 128);
+		CullAllCullable = serialized->get_bool(CullAllCullable_type_id, false);
 		AnimDriverDataAllocBlockSizes = serialized->get_uint16s(AnimDriverDataAllocBlockSizes_type_id);
 		AnimDriverDataAllocBlockCounts = serialized->get_uint16s(AnimDriverDataAllocBlockCounts_type_id);
-		AnimStreamInitAllocSize = serialized->get_uint32(AnimStreamInitAllocSize_type_id);
-		DebugDriverMemoryClearing = serialized->get_bool(DebugDriverMemoryClearing_type_id);
-		DebugDriverMemoryAllocating = serialized->get_bool(DebugDriverMemoryAllocating_type_id);
-		MorphTargetDeltaChannelPrecision = serialized->get_float(MorphTargetDeltaChannelPrecision_type_id); 
+		AnimStreamInitAllocSize = serialized->get_uint32(AnimStreamInitAllocSize_type_id, 18874368);
+		DebugDriverMemoryClearing = serialized->get_bool(DebugDriverMemoryClearing_type_id, false);
+		DebugDriverMemoryAllocating = serialized->get_bool(DebugDriverMemoryAllocating_type_id, false);
+		MorphTargetDeltaChannelPrecision = serialized->get_float(MorphTargetDeltaChannelPrecision_type_id, 0.100000); 
 	}
 
 	[[nodiscard]] auto

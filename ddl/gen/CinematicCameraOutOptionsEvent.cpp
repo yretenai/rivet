@@ -9,9 +9,9 @@
 
 namespace rivet::ddl::generated {
 	CinematicCameraOutOptionsEvent::CinematicCameraOutOptionsEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		UseRelativeBlend = serialized->get_bool(UseRelativeBlend_type_id);
-		UseContextSnapBlend = serialized->get_bool(UseContextSnapBlend_type_id);
-		UpdateReferenceMatrix = serialized->get_bool(UpdateReferenceMatrix_type_id);
+		UseRelativeBlend = serialized->get_bool(UseRelativeBlend_type_id, false);
+		UseContextSnapBlend = serialized->get_bool(UseContextSnapBlend_type_id, false);
+		UpdateReferenceMatrix = serialized->get_bool(UpdateReferenceMatrix_type_id, false);
 		FreezeOptions = serialized->unwrap_into<rivet::ddl::generated::CameraFreezeOptions>(FreezeOptions_type_id); 
 	}
 

@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	ObjSysUnlock::ObjSysUnlock([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		LockType = serialized->get_enum<rivet::ddl::generated::x9aa8a36a>(LockType_type_id, rivet::ddl::generated::x9aa8a36a_values);
-		Trigger = serialized->get_enum<rivet::ddl::generated::x5e401570>(Trigger_type_id, rivet::ddl::generated::x5e401570_values);
-		MissionName = serialized->get_string(MissionName_type_id);
-		ObjectiveName = serialized->get_string(ObjectiveName_type_id); 
+		LockType = serialized->get_enum<rivet::ddl::generated::x9aa8a36a>(LockType_type_id, rivet::ddl::generated::x9aa8a36a_values, rivet::ddl::generated::x9aa8a36a::Unlock);
+		Trigger = serialized->get_enum<rivet::ddl::generated::x5e401570>(Trigger_type_id, rivet::ddl::generated::x5e401570_values, rivet::ddl::generated::x5e401570::OnComplete);
+		MissionName = serialized->get_string(MissionName_type_id, {});
+		ObjectiveName = serialized->get_string(ObjectiveName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

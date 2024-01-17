@@ -9,12 +9,12 @@
 
 namespace rivet::ddl::generated {
 	MagShieldSuspendedShotPrius::MagShieldSuspendedShotPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ReferenceActor = serialized->get_uint32(ReferenceActor_type_id);
+		ReferenceActor = serialized->get_uint32(ReferenceActor_type_id, 0);
 		ReferenceMatrix = serialized->unwrap_into<rivet::ddl::generated::DDLTransform>(ReferenceMatrix_type_id);
-		ReferenceActorOffset = serialized->get_float(ReferenceActorOffset_type_id);
-		ReferenceActorRadius = serialized->get_float(ReferenceActorRadius_type_id);
-		ShotNameHash = serialized->get_uint32(ShotNameHash_type_id);
-		OriginalShotAsset = serialized->get_uint64(OriginalShotAsset_type_id); 
+		ReferenceActorOffset = serialized->get_float(ReferenceActorOffset_type_id, -0.500000);
+		ReferenceActorRadius = serialized->get_float(ReferenceActorRadius_type_id, 1.500000);
+		ShotNameHash = serialized->get_uint32(ShotNameHash_type_id, 0);
+		OriginalShotAsset = serialized->get_uint64(OriginalShotAsset_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

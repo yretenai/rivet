@@ -9,13 +9,13 @@
 
 namespace rivet::ddl::generated {
 	DialogLine::DialogLine([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		LocalizationTag = serialized->get_string(LocalizationTag_type_id);
-		Speaker = serialized->get_enum<rivet::ddl::generated::Speakers>(Speaker_type_id, rivet::ddl::generated::Speakers_values);
-		PreLineDelay = serialized->get_float(PreLineDelay_type_id);
-		InterruptRestorePoint = serialized->get_bool(InterruptRestorePoint_type_id);
-		InterruptLineTag = serialized->get_string(InterruptLineTag_type_id);
-		ResumeLineTag = serialized->get_string(ResumeLineTag_type_id);
-		CompleteOnInterrupt = serialized->get_bool(CompleteOnInterrupt_type_id);
+		LocalizationTag = serialized->get_string(LocalizationTag_type_id, {});
+		Speaker = serialized->get_enum<rivet::ddl::generated::Speakers>(Speaker_type_id, rivet::ddl::generated::Speakers_values, rivet::ddl::generated::Speakers::Speaker1);
+		PreLineDelay = serialized->get_float(PreLineDelay_type_id, 0.000000);
+		InterruptRestorePoint = serialized->get_bool(InterruptRestorePoint_type_id, false);
+		InterruptLineTag = serialized->get_string(InterruptLineTag_type_id, {});
+		ResumeLineTag = serialized->get_string(ResumeLineTag_type_id, {});
+		CompleteOnInterrupt = serialized->get_bool(CompleteOnInterrupt_type_id, false);
 		ConversationCommunicatorData = serialized->unwrap_into<rivet::ddl::generated::ConversationCommunicatorBasePrius>(ConversationCommunicatorData_type_id); 
 	}
 

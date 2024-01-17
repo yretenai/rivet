@@ -9,15 +9,15 @@
 
 namespace rivet::ddl::generated {
 	HeroOpenPocketDimConfig::HeroOpenPocketDimConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		MinTargetDistance = serialized->get_float(MinTargetDistance_type_id);
-		MaxTargetDistance = serialized->get_float(MaxTargetDistance_type_id);
-		MaxAngleStartAutoTarget = serialized->get_float(MaxAngleStartAutoTarget_type_id);
-		MinAngleEndAutoTarget = serialized->get_float(MinAngleEndAutoTarget_type_id);
-		StopMomentumTime = serialized->get_float(StopMomentumTime_type_id);
-		MaxMomentumDistance = serialized->get_float(MaxMomentumDistance_type_id);
+		MinTargetDistance = serialized->get_float(MinTargetDistance_type_id, 10.000000);
+		MaxTargetDistance = serialized->get_float(MaxTargetDistance_type_id, 40.000000);
+		MaxAngleStartAutoTarget = serialized->get_float(MaxAngleStartAutoTarget_type_id, 7.000000);
+		MinAngleEndAutoTarget = serialized->get_float(MinAngleEndAutoTarget_type_id, 14.000000);
+		StopMomentumTime = serialized->get_float(StopMomentumTime_type_id, 0.600000);
+		MaxMomentumDistance = serialized->get_float(MaxMomentumDistance_type_id, 3.000000);
 		LineData = serialized->unwrap_into<rivet::ddl::generated::HeroPortalZipLineData>(LineData_type_id);
-		CameraAimContext = serialized->get_string(CameraAimContext_type_id);
-		PortalAimContext = serialized->get_string(PortalAimContext_type_id); 
+		CameraAimContext = serialized->get_string(CameraAimContext_type_id, {});
+		PortalAimContext = serialized->get_string(PortalAimContext_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

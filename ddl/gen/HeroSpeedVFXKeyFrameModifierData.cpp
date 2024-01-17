@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	HeroSpeedVFXKeyFrameModifierData::HeroSpeedVFXKeyFrameModifierData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		KeyFrameModifierName = serialized->get_string(KeyFrameModifierName_type_id);
+		KeyFrameModifierName = serialized->get_string(KeyFrameModifierName_type_id, {});
 		SpeedToValueMapping = serialized->unwrap_into<rivet::ddl::generated::MapRange>(SpeedToValueMapping_type_id); 
 	}
 

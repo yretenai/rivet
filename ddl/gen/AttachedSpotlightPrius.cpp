@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	AttachedSpotlightPrius::AttachedSpotlightPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SpotlightActor = serialized->get_string(SpotlightActor_type_id);
-		SpotlightAttachLocator = serialized->get_string(SpotlightAttachLocator_type_id); 
+		SpotlightActor = serialized->get_string(SpotlightActor_type_id, {});
+		SpotlightAttachLocator = serialized->get_string(SpotlightAttachLocator_type_id, "igLoc_Gun"); 
 	}
 
 	[[nodiscard]] auto

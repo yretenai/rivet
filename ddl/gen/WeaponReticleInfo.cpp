@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	WeaponReticleInfo::WeaponReticleInfo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SpreadScale = serialized->get_float(SpreadScale_type_id);
-		SpreadReturn = serialized->get_bool(SpreadReturn_type_id);
-		SpreadReturnDuration = serialized->get_float(SpreadReturnDuration_type_id);
-		SpreadReturnDelay = serialized->get_float(SpreadReturnDelay_type_id); 
+		SpreadScale = serialized->get_float(SpreadScale_type_id, 1.000000);
+		SpreadReturn = serialized->get_bool(SpreadReturn_type_id, false);
+		SpreadReturnDuration = serialized->get_float(SpreadReturnDuration_type_id, 0.000000);
+		SpreadReturnDelay = serialized->get_float(SpreadReturnDelay_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

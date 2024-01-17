@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	OnTriggerActionPrius::OnTriggerActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		GroupName = serialized->get_string(GroupName_type_id);
-		InitListening = serialized->get_bool(InitListening_type_id);
-		SignalMax = serialized->get_int32(SignalMax_type_id);
-		ListenForTrigger = serialized->get_bool(ListenForTrigger_type_id);
-		ListenForUntrigger = serialized->get_bool(ListenForUntrigger_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Events);
+		GroupName = serialized->get_string(GroupName_type_id, "");
+		InitListening = serialized->get_bool(InitListening_type_id, true);
+		SignalMax = serialized->get_int32(SignalMax_type_id, 1);
+		ListenForTrigger = serialized->get_bool(ListenForTrigger_type_id, true);
+		ListenForUntrigger = serialized->get_bool(ListenForUntrigger_type_id, true); 
 	}
 
 	[[nodiscard]] auto

@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	SeparateSpaces::SeparateSpaces([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Direction = serialized->get_enum<rivet::ddl::generated::xfe5100b1>(Direction_type_id, rivet::ddl::generated::xfe5100b1_values);
-		Position = serialized->get_enum<rivet::ddl::generated::xfe5100b1>(Position_type_id, rivet::ddl::generated::xfe5100b1_values); 
+		Direction = serialized->get_enum<rivet::ddl::generated::xfe5100b1>(Direction_type_id, rivet::ddl::generated::xfe5100b1_values, rivet::ddl::generated::xfe5100b1::Local);
+		Position = serialized->get_enum<rivet::ddl::generated::xfe5100b1>(Position_type_id, rivet::ddl::generated::xfe5100b1_values, rivet::ddl::generated::xfe5100b1::Local); 
 	}
 
 	[[nodiscard]] auto

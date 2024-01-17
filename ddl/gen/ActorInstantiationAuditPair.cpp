@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	ActorInstantiationAuditPair::ActorInstantiationAuditPair([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Actor = serialized->get_string(Actor_type_id);
-		Count = serialized->get_int32(Count_type_id); 
+		Actor = serialized->get_string(Actor_type_id, {});
+		Count = serialized->get_int32(Count_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

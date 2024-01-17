@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	TweakDef::TweakDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Str = serialized->get_string(Str_type_id);
-		File = serialized->get_string(File_type_id);
-		Line = serialized->get_uint32(Line_type_id);
-		Addr = serialized->get_string(Addr_type_id);
-		Type = serialized->get_string(Type_type_id);
+		Str = serialized->get_string(Str_type_id, {});
+		File = serialized->get_string(File_type_id, {});
+		Line = serialized->get_uint32(Line_type_id, 0);
+		Addr = serialized->get_string(Addr_type_id, {});
+		Type = serialized->get_string(Type_type_id, {});
 		Value = serialized->get_field(Value_type_id); 
 	}
 

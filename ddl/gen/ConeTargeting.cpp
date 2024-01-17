@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	ConeTargeting::ConeTargeting([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): SpawnShotTargetingMode(serialized) {
-		ConeAngle = serialized->get_float(ConeAngle_type_id);
-		ConeDistance = serialized->get_float(ConeDistance_type_id); 
+		ConeAngle = serialized->get_float(ConeAngle_type_id, 90.000000);
+		ConeDistance = serialized->get_float(ConeDistance_type_id, 10.000000); 
 	}
 
 	[[nodiscard]] auto

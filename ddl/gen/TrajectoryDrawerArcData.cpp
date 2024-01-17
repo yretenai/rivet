@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	TrajectoryDrawerArcData::TrajectoryDrawerArcData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Material = serialized->get_string(Material_type_id);
-		MaterialColorName = serialized->get_string(MaterialColorName_type_id);
+		Material = serialized->get_string(Material_type_id, {});
+		MaterialColorName = serialized->get_string(MaterialColorName_type_id, {});
 		Color = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Color_type_id); 
 	}
 

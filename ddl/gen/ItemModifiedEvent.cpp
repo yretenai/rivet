@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	ItemModifiedEvent::ItemModifiedEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		ModifyAction = serialized->get_enum<rivet::ddl::generated::x5ff284b1>(ModifyAction_type_id, rivet::ddl::generated::x5ff284b1_values);
-		ItemHash = serialized->get_uint64(ItemHash_type_id);
-		ItemId = serialized->get_uint16(ItemId_type_id); 
+		ModifyAction = serialized->get_enum<rivet::ddl::generated::x5ff284b1>(ModifyAction_type_id, rivet::ddl::generated::x5ff284b1_values, rivet::ddl::generated::x5ff284b1::None);
+		ItemHash = serialized->get_uint64(ItemHash_type_id, 0);
+		ItemId = serialized->get_uint16(ItemId_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

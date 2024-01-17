@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ProtoGrenadeShardDissolveEvent::ProtoGrenadeShardDissolveEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		IsExploding = serialized->get_bool(IsExploding_type_id); 
+		IsExploding = serialized->get_bool(IsExploding_type_id, false); 
 	}
 
 	[[nodiscard]] auto

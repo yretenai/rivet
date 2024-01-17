@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	AnimSetSequenceDriverDef::AnimSetSequenceDriverDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Id = serialized->get_uint64(Id_type_id);
-		Time = serialized->get_float(Time_type_id);
-		DriverName = serialized->get_string(DriverName_type_id); 
+		Id = serialized->get_uint64(Id_type_id, 0);
+		Time = serialized->get_float(Time_type_id, 0.000000);
+		DriverName = serialized->get_string(DriverName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

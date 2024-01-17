@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	SlottedInteractCompleteEvent::SlottedInteractCompleteEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): InteractOnCompleteEvent(serialized) {
-		UserOneLocation = serialized->get_enum<rivet::ddl::generated::xa3ea6fcb>(UserOneLocation_type_id, rivet::ddl::generated::xa3ea6fcb_values);
-		UserTwoLocation = serialized->get_enum<rivet::ddl::generated::xa3ea6fcb>(UserTwoLocation_type_id, rivet::ddl::generated::xa3ea6fcb_values);
-		UserThreeLocation = serialized->get_enum<rivet::ddl::generated::xa3ea6fcb>(UserThreeLocation_type_id, rivet::ddl::generated::xa3ea6fcb_values);
-		UserFourLocation = serialized->get_enum<rivet::ddl::generated::xa3ea6fcb>(UserFourLocation_type_id, rivet::ddl::generated::xa3ea6fcb_values); 
+		UserOneLocation = serialized->get_enum<rivet::ddl::generated::xa3ea6fcb>(UserOneLocation_type_id, rivet::ddl::generated::xa3ea6fcb_values, rivet::ddl::generated::xa3ea6fcb::Index_One);
+		UserTwoLocation = serialized->get_enum<rivet::ddl::generated::xa3ea6fcb>(UserTwoLocation_type_id, rivet::ddl::generated::xa3ea6fcb_values, rivet::ddl::generated::xa3ea6fcb::Index_One);
+		UserThreeLocation = serialized->get_enum<rivet::ddl::generated::xa3ea6fcb>(UserThreeLocation_type_id, rivet::ddl::generated::xa3ea6fcb_values, rivet::ddl::generated::xa3ea6fcb::Index_One);
+		UserFourLocation = serialized->get_enum<rivet::ddl::generated::xa3ea6fcb>(UserFourLocation_type_id, rivet::ddl::generated::xa3ea6fcb_values, rivet::ddl::generated::xa3ea6fcb::Index_One); 
 	}
 
 	[[nodiscard]] auto

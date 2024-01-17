@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	InjuredEvent::InjuredEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Type = serialized->get_enum<rivet::ddl::generated::DamageTypes>(Type_type_id, rivet::ddl::generated::DamageTypes_values);
-		Weapon = serialized->get_uint16(Weapon_type_id); 
+		Type = serialized->get_enum<rivet::ddl::generated::DamageTypes>(Type_type_id, rivet::ddl::generated::DamageTypes_values, rivet::ddl::generated::DamageTypes::None);
+		Weapon = serialized->get_uint16(Weapon_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

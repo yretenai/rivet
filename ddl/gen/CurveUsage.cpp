@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	CurveUsage::CurveUsage([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Houdini = serialized->get_bool(Houdini_type_id);
-		TerrainRoad = serialized->get_bool(TerrainRoad_type_id); 
+		Houdini = serialized->get_bool(Houdini_type_id, false);
+		TerrainRoad = serialized->get_bool(TerrainRoad_type_id, false); 
 	}
 
 	[[nodiscard]] auto

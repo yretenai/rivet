@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	SimpleMoverPrius::SimpleMoverPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Sync = serialized->get_bool(Sync_type_id);
-		MotionType = serialized->get_enum<rivet::ddl::generated::MotionTypes>(MotionType_type_id, rivet::ddl::generated::MotionTypes_values); 
+		Sync = serialized->get_bool(Sync_type_id, false);
+		MotionType = serialized->get_enum<rivet::ddl::generated::MotionTypes>(MotionType_type_id, rivet::ddl::generated::MotionTypes_values, rivet::ddl::generated::MotionTypes::SmoothStep); 
 	}
 
 	[[nodiscard]] auto

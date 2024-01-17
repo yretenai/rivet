@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ProjectileIdlingStartEvent::ProjectileIdlingStartEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		OnMagshield = serialized->get_bool(OnMagshield_type_id); 
+		OnMagshield = serialized->get_bool(OnMagshield_type_id, false); 
 	}
 
 	[[nodiscard]] auto

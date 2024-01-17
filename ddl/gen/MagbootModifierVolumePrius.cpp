@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	MagbootModifierVolumePrius::MagbootModifierVolumePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MagbootLaunchSpeedModifier = serialized->get_float(MagbootLaunchSpeedModifier_type_id); 
+		MagbootLaunchSpeedModifier = serialized->get_float(MagbootLaunchSpeedModifier_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

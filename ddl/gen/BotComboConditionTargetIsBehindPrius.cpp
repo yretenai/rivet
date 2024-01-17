@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	BotComboConditionTargetIsBehindPrius::BotComboConditionTargetIsBehindPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BotComboConditionBasePrius(serialized) {
-		BehindDotTolerance = serialized->get_float(BehindDotTolerance_type_id); 
+		BehindDotTolerance = serialized->get_float(BehindDotTolerance_type_id, 0.500000); 
 	}
 
 	[[nodiscard]] auto

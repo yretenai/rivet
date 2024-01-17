@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	StatusEffectStartEvent::StatusEffectStartEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		EffectName = serialized->get_string(EffectName_type_id);
-		SourceWeaponId = serialized->get_uint16(SourceWeaponId_type_id); 
+		EffectName = serialized->get_string(EffectName_type_id, {});
+		SourceWeaponId = serialized->get_uint16(SourceWeaponId_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

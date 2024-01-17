@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	CritterTypeConfig::CritterTypeConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		CritterActor = serialized->get_string(CritterActor_type_id);
+		CritterActor = serialized->get_string(CritterActor_type_id, {});
 		DefaultDensity = serialized->unwrap_into<rivet::ddl::generated::CritterDensity>(DefaultDensity_type_id); 
 	}
 

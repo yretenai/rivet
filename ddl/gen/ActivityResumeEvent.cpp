@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ActivityResumeEvent::ActivityResumeEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): UDSEventBase(serialized) {
-		activityId = serialized->get_string(activityId_type_id);
+		activityId = serialized->get_string(activityId_type_id, {});
 		inProgressActivities = serialized->get_strings(inProgressActivities_type_id);
 		completedActivities = serialized->get_strings(completedActivities_type_id); 
 	}

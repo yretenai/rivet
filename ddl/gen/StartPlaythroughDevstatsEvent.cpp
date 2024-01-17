@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	StartPlaythroughDevstatsEvent::StartPlaythroughDevstatsEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		PlaythroughSegmentId = serialized->get_string(PlaythroughSegmentId_type_id);
-		IsNewGamePlus = serialized->get_bool(IsNewGamePlus_type_id); 
+		PlaythroughSegmentId = serialized->get_string(PlaythroughSegmentId_type_id, {});
+		IsNewGamePlus = serialized->get_bool(IsNewGamePlus_type_id, false); 
 	}
 
 	[[nodiscard]] auto

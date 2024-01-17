@@ -51,16 +51,16 @@
 
 namespace rivet::ddl::generated {
 	StatusEffectBasePrius::StatusEffectBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DecayTime = serialized->get_float(DecayTime_type_id);
-		SourceComponent = serialized->get_uint32(SourceComponent_type_id);
-		SourceActor = serialized->get_uint32(SourceActor_type_id);
-		SourceDamageHash = serialized->get_uint32(SourceDamageHash_type_id);
-		SourceWeaponId = serialized->get_uint16(SourceWeaponId_type_id);
-		SourceWeaponMacroType = serialized->get_uint8(SourceWeaponMacroType_type_id);
-		Shader = serialized->get_string(Shader_type_id);
-		ShaderTValRampUpTime = serialized->get_float(ShaderTValRampUpTime_type_id);
-		ShaderTValRampDownTime = serialized->get_float(ShaderTValRampDownTime_type_id);
-		ShaderTValRampDownEndTime = serialized->get_float(ShaderTValRampDownEndTime_type_id); 
+		DecayTime = serialized->get_float(DecayTime_type_id, 5.000000);
+		SourceComponent = serialized->get_uint32(SourceComponent_type_id, 0);
+		SourceActor = serialized->get_uint32(SourceActor_type_id, 0);
+		SourceDamageHash = serialized->get_uint32(SourceDamageHash_type_id, 0);
+		SourceWeaponId = serialized->get_uint16(SourceWeaponId_type_id, 0);
+		SourceWeaponMacroType = serialized->get_uint8(SourceWeaponMacroType_type_id, 0);
+		Shader = serialized->get_string(Shader_type_id, {});
+		ShaderTValRampUpTime = serialized->get_float(ShaderTValRampUpTime_type_id, 0.000000);
+		ShaderTValRampDownTime = serialized->get_float(ShaderTValRampDownTime_type_id, 0.000000);
+		ShaderTValRampDownEndTime = serialized->get_float(ShaderTValRampDownEndTime_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ClankWeaponLockUnTargetedEvent::ClankWeaponLockUnTargetedEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		IsEmpty = serialized->get_bool(IsEmpty_type_id); 
+		IsEmpty = serialized->get_bool(IsEmpty_type_id, false); 
 	}
 
 	[[nodiscard]] auto

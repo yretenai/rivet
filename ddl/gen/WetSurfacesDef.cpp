@@ -7,14 +7,14 @@
 
 namespace rivet::ddl::generated {
 	WetSurfacesDef::WetSurfacesDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Enabled = serialized->get_bool(Enabled_type_id);
-		PorosityTexture = serialized->get_string(PorosityTexture_type_id);
-		StreakTexture = serialized->get_string(StreakTexture_type_id);
-		SplashTexture = serialized->get_string(SplashTexture_type_id);
-		Wetness = serialized->get_float(Wetness_type_id);
-		GlossLimit = serialized->get_float(GlossLimit_type_id);
-		VFXSplashRange = serialized->get_float(VFXSplashRange_type_id);
-		VFXSplashRate = serialized->get_float(VFXSplashRate_type_id); 
+		Enabled = serialized->get_bool(Enabled_type_id, false);
+		PorosityTexture = serialized->get_string(PorosityTexture_type_id, {});
+		StreakTexture = serialized->get_string(StreakTexture_type_id, {});
+		SplashTexture = serialized->get_string(SplashTexture_type_id, {});
+		Wetness = serialized->get_float(Wetness_type_id, 1.000000);
+		GlossLimit = serialized->get_float(GlossLimit_type_id, 0.800000);
+		VFXSplashRange = serialized->get_float(VFXSplashRange_type_id, 12.000000);
+		VFXSplashRate = serialized->get_float(VFXSplashRate_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

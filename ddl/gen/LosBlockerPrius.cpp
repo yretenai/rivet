@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	LosBlockerPrius::LosBlockerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		GenerateAIPerches = serialized->get_bool(GenerateAIPerches_type_id); 
+		GenerateAIPerches = serialized->get_bool(GenerateAIPerches_type_id, true); 
 	}
 
 	[[nodiscard]] auto

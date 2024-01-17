@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	AutoLoadTestSettings::AutoLoadTestSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Enabled = serialized->get_bool(Enabled_type_id);
-		SingleRunMode = serialized->get_bool(SingleRunMode_type_id);
-		ServerIP = serialized->get_string(ServerIP_type_id);
-		ServerPort = serialized->get_uint16(ServerPort_type_id); 
+		Enabled = serialized->get_bool(Enabled_type_id, false);
+		SingleRunMode = serialized->get_bool(SingleRunMode_type_id, false);
+		ServerIP = serialized->get_string(ServerIP_type_id, "0.0.0.0");
+		ServerPort = serialized->get_uint16(ServerPort_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

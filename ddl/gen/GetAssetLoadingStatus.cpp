@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	GetAssetLoadingStatus::GetAssetLoadingStatus([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AssetPath = serialized->get_string(AssetPath_type_id);
-		IsLoading = serialized->get_bool(IsLoading_type_id); 
+		AssetPath = serialized->get_string(AssetPath_type_id, "");
+		IsLoading = serialized->get_bool(IsLoading_type_id, false); 
 	}
 
 	[[nodiscard]] auto

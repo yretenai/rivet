@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	AwardVanityBundleStatusEvent::AwardVanityBundleStatusEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		CurrentHeadBundle = serialized->get_uint64(CurrentHeadBundle_type_id);
-		CurrentTorsoBundle = serialized->get_uint64(CurrentTorsoBundle_type_id);
-		CurrentLegsBundle = serialized->get_uint64(CurrentLegsBundle_type_id); 
+		CurrentHeadBundle = serialized->get_uint64(CurrentHeadBundle_type_id, 0);
+		CurrentTorsoBundle = serialized->get_uint64(CurrentTorsoBundle_type_id, 0);
+		CurrentLegsBundle = serialized->get_uint64(CurrentLegsBundle_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

@@ -12,7 +12,7 @@ namespace rivet::ddl::generated {
 	EngineState::EngineState([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		SceneObjects = serialized->unwrap_into_many<rivet::ddl::generated::EngineSceneObject>(SceneObjects_type_id);
 		ModelInsts = serialized->unwrap_into_many<rivet::ddl::generated::EngineModelInst>(ModelInsts_type_id);
-		Atmosphere = serialized->get_string(Atmosphere_type_id); 
+		Atmosphere = serialized->get_string(Atmosphere_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

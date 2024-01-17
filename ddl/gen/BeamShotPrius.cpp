@@ -12,7 +12,7 @@
 
 namespace rivet::ddl::generated {
 	BeamShotPrius::BeamShotPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ShotBasePrius(serialized) {
-		ImpactJoint = serialized->get_string(ImpactJoint_type_id); 
+		ImpactJoint = serialized->get_string(ImpactJoint_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

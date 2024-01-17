@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	BotDisableFiringEvent::BotDisableFiringEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		DisableAfterCurrentSequence = serialized->get_bool(DisableAfterCurrentSequence_type_id); 
+		DisableAfterCurrentSequence = serialized->get_bool(DisableAfterCurrentSequence_type_id, false); 
 	}
 
 	[[nodiscard]] auto

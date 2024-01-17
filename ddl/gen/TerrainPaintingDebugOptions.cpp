@@ -7,25 +7,25 @@
 
 namespace rivet::ddl::generated {
 	TerrainPaintingDebugOptions::TerrainPaintingDebugOptions([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DebugMode = serialized->get_enum<rivet::ddl::generated::x38a8002d>(DebugMode_type_id, rivet::ddl::generated::x38a8002d_values);
-		WireframeMode = serialized->get_enum<rivet::ddl::generated::x52cca08e>(WireframeMode_type_id, rivet::ddl::generated::x52cca08e_values);
-		BrushAlpha = serialized->get_float(BrushAlpha_type_id);
-		ClipMapFade = serialized->get_float(ClipMapFade_type_id);
-		DetailDisplacementDistance = serialized->get_float(DetailDisplacementDistance_type_id);
-		DetailDisplacementFalloff = serialized->get_float(DetailDisplacementFalloff_type_id);
-		DetailDisplacementLevels = serialized->get_int32(DetailDisplacementLevels_type_id);
-		LodDistanceScale = serialized->get_float(LodDistanceScale_type_id);
-		QuadtreeMinDepth = serialized->get_int32(QuadtreeMinDepth_type_id);
-		QuadtreeMaxDepth = serialized->get_int32(QuadtreeMaxDepth_type_id);
-		TileVertexDensity = serialized->get_int32(TileVertexDensity_type_id);
-		ApplyHeightField = serialized->get_bool(ApplyHeightField_type_id);
-		EnableDetailDisplacement = serialized->get_bool(EnableDetailDisplacement_type_id);
-		EnableTileRotation = serialized->get_bool(EnableTileRotation_type_id);
-		ForceGeneratedVistaMap = serialized->get_bool(ForceGeneratedVistaMap_type_id);
-		FixTJunctions = serialized->get_bool(FixTJunctions_type_id);
-		LockRadiusAxes = serialized->get_bool(LockRadiusAxes_type_id);
-		LodAroundOrigin = serialized->get_bool(LodAroundOrigin_type_id);
-		ShowDebugGrid = serialized->get_bool(ShowDebugGrid_type_id); 
+		DebugMode = serialized->get_enum<rivet::ddl::generated::x38a8002d>(DebugMode_type_id, rivet::ddl::generated::x38a8002d_values, rivet::ddl::generated::x38a8002d::Off);
+		WireframeMode = serialized->get_enum<rivet::ddl::generated::x52cca08e>(WireframeMode_type_id, rivet::ddl::generated::x52cca08e_values, rivet::ddl::generated::x52cca08e::Normal);
+		BrushAlpha = serialized->get_float(BrushAlpha_type_id, 0.600000);
+		ClipMapFade = serialized->get_float(ClipMapFade_type_id, 0.400000);
+		DetailDisplacementDistance = serialized->get_float(DetailDisplacementDistance_type_id, 10.000000);
+		DetailDisplacementFalloff = serialized->get_float(DetailDisplacementFalloff_type_id, 5.000000);
+		DetailDisplacementLevels = serialized->get_int32(DetailDisplacementLevels_type_id, 3);
+		LodDistanceScale = serialized->get_float(LodDistanceScale_type_id, 5.000000);
+		QuadtreeMinDepth = serialized->get_int32(QuadtreeMinDepth_type_id, 0);
+		QuadtreeMaxDepth = serialized->get_int32(QuadtreeMaxDepth_type_id, 10);
+		TileVertexDensity = serialized->get_int32(TileVertexDensity_type_id, 5);
+		ApplyHeightField = serialized->get_bool(ApplyHeightField_type_id, true);
+		EnableDetailDisplacement = serialized->get_bool(EnableDetailDisplacement_type_id, true);
+		EnableTileRotation = serialized->get_bool(EnableTileRotation_type_id, true);
+		ForceGeneratedVistaMap = serialized->get_bool(ForceGeneratedVistaMap_type_id, false);
+		FixTJunctions = serialized->get_bool(FixTJunctions_type_id, true);
+		LockRadiusAxes = serialized->get_bool(LockRadiusAxes_type_id, true);
+		LodAroundOrigin = serialized->get_bool(LodAroundOrigin_type_id, false);
+		ShowDebugGrid = serialized->get_bool(ShowDebugGrid_type_id, false); 
 	}
 
 	[[nodiscard]] auto

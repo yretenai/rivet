@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	SSRSettingsDef::SSRSettingsDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Enabled = serialized->get_bool(Enabled_type_id);
-		Strength = serialized->get_float(Strength_type_id);
-		RayTracingDistance = serialized->get_float(RayTracingDistance_type_id); 
+		Enabled = serialized->get_bool(Enabled_type_id, true);
+		Strength = serialized->get_float(Strength_type_id, 1.000000);
+		RayTracingDistance = serialized->get_float(RayTracingDistance_type_id, 64.000000); 
 	}
 
 	[[nodiscard]] auto

@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	VanityBundleConfig::VanityBundleConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		BundleType = serialized->get_enum<rivet::ddl::generated::xf2db3ee>(BundleType_type_id, rivet::ddl::generated::xf2db3ee_values);
-		SaveID = serialized->get_enum<rivet::ddl::generated::xd230f155>(SaveID_type_id, rivet::ddl::generated::xd230f155_values);
-		DisplayImage = serialized->get_string(DisplayImage_type_id);
+		BundleType = serialized->get_enum<rivet::ddl::generated::xf2db3ee>(BundleType_type_id, rivet::ddl::generated::xf2db3ee_values, rivet::ddl::generated::xf2db3ee::Head);
+		SaveID = serialized->get_enum<rivet::ddl::generated::xd230f155>(SaveID_type_id, rivet::ddl::generated::xd230f155_values, rivet::ddl::generated::xd230f155::None);
+		DisplayImage = serialized->get_string(DisplayImage_type_id, {});
 		VanityItems = serialized->get_strings(VanityItems_type_id);
 		Accessories = serialized->get_enums<rivet::ddl::generated::x56bca86c>(Accessories_type_id, rivet::ddl::generated::x56bca86c_values);
-		CoversVoice = serialized->get_bool(CoversVoice_type_id); 
+		CoversVoice = serialized->get_bool(CoversVoice_type_id, false); 
 	}
 
 	[[nodiscard]] auto

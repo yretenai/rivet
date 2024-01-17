@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	WeaponUpgradeListItem::WeaponUpgradeListItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ModType = serialized->get_enum<rivet::ddl::generated::xdbb7aaff>(ModType_type_id, rivet::ddl::generated::xdbb7aaff_values);
-		ModValue = serialized->get_float(ModValue_type_id); 
+		ModType = serialized->get_enum<rivet::ddl::generated::xdbb7aaff>(ModType_type_id, rivet::ddl::generated::xdbb7aaff_values, rivet::ddl::generated::xdbb7aaff::None);
+		ModValue = serialized->get_float(ModValue_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

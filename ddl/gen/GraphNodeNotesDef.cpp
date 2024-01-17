@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	GraphNodeNotesDef::GraphNodeNotesDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		GlobalNotes = serialized->get_string(GlobalNotes_type_id);
-		NodeNotes = serialized->get_string(NodeNotes_type_id); 
+		GlobalNotes = serialized->get_string(GlobalNotes_type_id, {});
+		NodeNotes = serialized->get_string(NodeNotes_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

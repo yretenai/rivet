@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	TriggerSwitchSimplePrius::TriggerSwitchSimplePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): TriggerSwitchBasePrius(serialized) {
-		AutoDisableType = serialized->get_enum<rivet::ddl::generated::x4bc99fe3>(AutoDisableType_type_id, rivet::ddl::generated::x4bc99fe3_values); 
+		AutoDisableType = serialized->get_enum<rivet::ddl::generated::x4bc99fe3>(AutoDisableType_type_id, rivet::ddl::generated::x4bc99fe3_values, rivet::ddl::generated::x4bc99fe3::Do_Not_Auto_Disable); 
 	}
 
 	[[nodiscard]] auto

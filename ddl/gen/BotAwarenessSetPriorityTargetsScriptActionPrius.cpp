@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	BotAwarenessSetPriorityTargetsScriptActionPrius::BotAwarenessSetPriorityTargetsScriptActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		IgnoreBotAreaLimitations = serialized->get_bool(IgnoreBotAreaLimitations_type_id);
-		RoundRobinTargetVictims = serialized->get_bool(RoundRobinTargetVictims_type_id);
-		RoundRobinSwitchTimer = serialized->get_float(RoundRobinSwitchTimer_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Enemy_Bot);
+		IgnoreBotAreaLimitations = serialized->get_bool(IgnoreBotAreaLimitations_type_id, false);
+		RoundRobinTargetVictims = serialized->get_bool(RoundRobinTargetVictims_type_id, false);
+		RoundRobinSwitchTimer = serialized->get_float(RoundRobinSwitchTimer_type_id, 2.000000); 
 	}
 
 	[[nodiscard]] auto

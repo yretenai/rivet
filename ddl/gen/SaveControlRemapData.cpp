@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	SaveControlRemapData::SaveControlRemapData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		CurrentPresetID = serialized->get_int32(CurrentPresetID_type_id);
-		CurrentCustomRemapSlot = serialized->get_int32(CurrentCustomRemapSlot_type_id);
+		CurrentPresetID = serialized->get_int32(CurrentPresetID_type_id, -1);
+		CurrentCustomRemapSlot = serialized->get_int32(CurrentCustomRemapSlot_type_id, -1);
 		CustomRemaps = serialized->unwrap_into_many<rivet::ddl::generated::CustomRemapData>(CustomRemaps_type_id); 
 	}
 

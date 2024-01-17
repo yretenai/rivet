@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	IconMapHeroControl::IconMapHeroControl([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): IconMapBase(serialized) {
-		HeroControl = serialized->get_enum<rivet::ddl::generated::HeroControl>(HeroControl_type_id, rivet::ddl::generated::HeroControl_values); 
+		HeroControl = serialized->get_enum<rivet::ddl::generated::HeroControl>(HeroControl_type_id, rivet::ddl::generated::HeroControl_values, rivet::ddl::generated::HeroControl::Jump); 
 	}
 
 	[[nodiscard]] auto

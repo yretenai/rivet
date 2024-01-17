@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	EventExplosionEventBase::EventExplosionEventBase([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		AngleOfIncidence = serialized->get_float(AngleOfIncidence_type_id);
-		Distance = serialized->get_float(Distance_type_id); 
+		AngleOfIncidence = serialized->get_float(AngleOfIncidence_type_id, 0.000000);
+		Distance = serialized->get_float(Distance_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

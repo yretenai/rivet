@@ -9,11 +9,11 @@
 
 namespace rivet::ddl::generated {
 	RenderClipComponentPrius::RenderClipComponentPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ClipMaterial = serialized->get_string(ClipMaterial_type_id);
-		PositionVariableName = serialized->get_string(PositionVariableName_type_id);
-		DirectionVariableName = serialized->get_string(DirectionVariableName_type_id);
-		SkipBoundingSphereChecks = serialized->get_bool(SkipBoundingSphereChecks_type_id);
-		ClipAxis = serialized->get_enum<rivet::ddl::generated::x6a9f4317>(ClipAxis_type_id, rivet::ddl::generated::x6a9f4317_values);
+		ClipMaterial = serialized->get_string(ClipMaterial_type_id, {});
+		PositionVariableName = serialized->get_string(PositionVariableName_type_id, {});
+		DirectionVariableName = serialized->get_string(DirectionVariableName_type_id, {});
+		SkipBoundingSphereChecks = serialized->get_bool(SkipBoundingSphereChecks_type_id, false);
+		ClipAxis = serialized->get_enum<rivet::ddl::generated::x6a9f4317>(ClipAxis_type_id, rivet::ddl::generated::x6a9f4317_values, rivet::ddl::generated::x6a9f4317::ZPositive);
 		ClipActors = serialized->get_uint64s(ClipActors_type_id); 
 	}
 

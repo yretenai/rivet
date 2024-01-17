@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	SpawnShotForwardConeRandomTargetingPrius::SpawnShotForwardConeRandomTargetingPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): SpawnShotForwardConeTargetingPrius(serialized) {
-		FireAtGroundPos = serialized->get_bool(FireAtGroundPos_type_id); 
+		FireAtGroundPos = serialized->get_bool(FireAtGroundPos_type_id, true); 
 	}
 
 	[[nodiscard]] auto

@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	Cinematic2CameraPaneEvent::Cinematic2CameraPaneEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		EventType = serialized->get_enum<rivet::ddl::generated::x51b3e0b1>(EventType_type_id, rivet::ddl::generated::x51b3e0b1_values);
-		TransitionDuration = serialized->get_float(TransitionDuration_type_id);
-		DebugId = serialized->get_uint64(DebugId_type_id);
-		DebugTime = serialized->get_float(DebugTime_type_id); 
+		EventType = serialized->get_enum<rivet::ddl::generated::x51b3e0b1>(EventType_type_id, rivet::ddl::generated::x51b3e0b1_values, rivet::ddl::generated::x51b3e0b1::Activate);
+		TransitionDuration = serialized->get_float(TransitionDuration_type_id, 0.000000);
+		DebugId = serialized->get_uint64(DebugId_type_id, 0);
+		DebugTime = serialized->get_float(DebugTime_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

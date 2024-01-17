@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	LightingModeTransitionFinishedEvent::LightingModeTransitionFinishedEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		PrevMode = serialized->get_enum<rivet::ddl::generated::LightingMode>(PrevMode_type_id, rivet::ddl::generated::LightingMode_values);
-		CurrMode = serialized->get_enum<rivet::ddl::generated::LightingMode>(CurrMode_type_id, rivet::ddl::generated::LightingMode_values); 
+		PrevMode = serialized->get_enum<rivet::ddl::generated::LightingMode>(PrevMode_type_id, rivet::ddl::generated::LightingMode_values, rivet::ddl::generated::LightingMode::Day);
+		CurrMode = serialized->get_enum<rivet::ddl::generated::LightingMode>(CurrMode_type_id, rivet::ddl::generated::LightingMode_values, rivet::ddl::generated::LightingMode::Day); 
 	}
 
 	[[nodiscard]] auto

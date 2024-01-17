@@ -14,7 +14,7 @@ namespace rivet::ddl::generated {
 		In = serialized->unwrap_into<rivet::ddl::generated::InputPlugInt>(In_type_id);
 		Name = serialized->unwrap_into<rivet::ddl::generated::InputPlugString>(Name_type_id);
 		Out = serialized->unwrap_into<rivet::ddl::generated::OutputPlugInt>(Out_type_id);
-		DebugName = serialized->get_string(DebugName_type_id); 
+		DebugName = serialized->get_string(DebugName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

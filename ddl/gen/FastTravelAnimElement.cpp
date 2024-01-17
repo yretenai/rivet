@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	FastTravelAnimElement::FastTravelAnimElement([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Weight = serialized->get_float(Weight_type_id);
-		AnimDriverName = serialized->get_string(AnimDriverName_type_id);
-		UseCameraAnimation = serialized->get_bool(UseCameraAnimation_type_id); 
+		Weight = serialized->get_float(Weight_type_id, 1.000000);
+		AnimDriverName = serialized->get_string(AnimDriverName_type_id, {});
+		UseCameraAnimation = serialized->get_bool(UseCameraAnimation_type_id, true); 
 	}
 
 	[[nodiscard]] auto

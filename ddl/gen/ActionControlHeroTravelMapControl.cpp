@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ActionControlHeroTravelMapControl::ActionControlHeroTravelMapControl([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Control = serialized->get_enum<rivet::ddl::generated::xd6051860>(Control_type_id, rivet::ddl::generated::xd6051860_values); 
+		Control = serialized->get_enum<rivet::ddl::generated::xd6051860>(Control_type_id, rivet::ddl::generated::xd6051860_values, rivet::ddl::generated::xd6051860::TravelMapSelect); 
 	}
 
 	[[nodiscard]] auto

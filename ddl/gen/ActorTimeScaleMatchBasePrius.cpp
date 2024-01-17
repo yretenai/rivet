@@ -10,8 +10,8 @@
 
 namespace rivet::ddl::generated {
 	ActorTimeScaleMatchBasePrius::ActorTimeScaleMatchBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MaxTime = serialized->get_float(MaxTime_type_id);
-		BlendOutTime = serialized->get_float(BlendOutTime_type_id); 
+		MaxTime = serialized->get_float(MaxTime_type_id, -1.000000);
+		BlendOutTime = serialized->get_float(BlendOutTime_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

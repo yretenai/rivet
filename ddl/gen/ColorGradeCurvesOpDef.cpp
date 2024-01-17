@@ -9,10 +9,10 @@
 
 namespace rivet::ddl::generated {
 	ColorGradeCurvesOpDef::ColorGradeCurvesOpDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Id = serialized->get_uint64(Id_type_id);
-		Name = serialized->get_string(Name_type_id);
-		Weight = serialized->get_float(Weight_type_id);
-		Enabled = serialized->get_bool(Enabled_type_id);
+		Id = serialized->get_uint64(Id_type_id, 0);
+		Name = serialized->get_string(Name_type_id, {});
+		Weight = serialized->get_float(Weight_type_id, 100.000000);
+		Enabled = serialized->get_bool(Enabled_type_id, true);
 		Curve = serialized->unwrap_into<rivet::ddl::generated::BezierCurveDef>(Curve_type_id); 
 	}
 

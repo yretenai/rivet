@@ -10,7 +10,7 @@
 
 namespace rivet::ddl::generated {
 	DamageTunerBasePrius::DamageTunerBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		LifeTime = serialized->get_float(LifeTime_type_id); 
+		LifeTime = serialized->get_float(LifeTime_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

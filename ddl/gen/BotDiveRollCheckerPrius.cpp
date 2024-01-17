@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	BotDiveRollCheckerPrius::BotDiveRollCheckerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AnimDriver = serialized->get_string(AnimDriver_type_id);
-		MinDistance = serialized->get_float(MinDistance_type_id);
-		OverrideAnimTime = serialized->get_float(OverrideAnimTime_type_id);
-		SideStepAnimDriver = serialized->get_string(SideStepAnimDriver_type_id);
-		SideStepMinDistance = serialized->get_float(SideStepMinDistance_type_id);
-		OverrideSideStepAnimTime = serialized->get_float(OverrideSideStepAnimTime_type_id); 
+		AnimDriver = serialized->get_string(AnimDriver_type_id, "Aim_Roll");
+		MinDistance = serialized->get_float(MinDistance_type_id, 5.000000);
+		OverrideAnimTime = serialized->get_float(OverrideAnimTime_type_id, -1.000000);
+		SideStepAnimDriver = serialized->get_string(SideStepAnimDriver_type_id, "Aim_Shuffle");
+		SideStepMinDistance = serialized->get_float(SideStepMinDistance_type_id, 1.000000);
+		OverrideSideStepAnimTime = serialized->get_float(OverrideSideStepAnimTime_type_id, -1.000000); 
 	}
 
 	[[nodiscard]] auto

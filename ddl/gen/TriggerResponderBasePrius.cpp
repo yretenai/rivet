@@ -25,8 +25,8 @@
 
 namespace rivet::ddl::generated {
 	TriggerResponderBasePrius::TriggerResponderBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		StartEnabled = serialized->get_bool(StartEnabled_type_id);
-		GroupName = serialized->get_string(GroupName_type_id); 
+		StartEnabled = serialized->get_bool(StartEnabled_type_id, true);
+		GroupName = serialized->get_string(GroupName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

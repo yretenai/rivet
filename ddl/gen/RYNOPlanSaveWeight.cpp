@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	RYNOPlanSaveWeight::RYNOPlanSaveWeight([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SaveId = serialized->get_enum<rivet::ddl::generated::x81d3e717>(SaveId_type_id, rivet::ddl::generated::x81d3e717_values);
-		Weight = serialized->get_float(Weight_type_id); 
+		SaveId = serialized->get_enum<rivet::ddl::generated::x81d3e717>(SaveId_type_id, rivet::ddl::generated::x81d3e717_values, rivet::ddl::generated::x81d3e717::Nefarious_City_01);
+		Weight = serialized->get_float(Weight_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

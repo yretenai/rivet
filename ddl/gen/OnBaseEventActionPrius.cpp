@@ -11,11 +11,11 @@
 
 namespace rivet::ddl::generated {
 	OnBaseEventActionPrius::OnBaseEventActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		SignalMax = serialized->get_int32(SignalMax_type_id);
-		ResetOnListen = serialized->get_bool(ResetOnListen_type_id);
-		OnlySelfEvents = serialized->get_bool(OnlySelfEvents_type_id);
-		InitialListen = serialized->get_bool(InitialListen_type_id);
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Events);
+		SignalMax = serialized->get_int32(SignalMax_type_id, 1);
+		ResetOnListen = serialized->get_bool(ResetOnListen_type_id, true);
+		OnlySelfEvents = serialized->get_bool(OnlySelfEvents_type_id, false);
+		InitialListen = serialized->get_bool(InitialListen_type_id, false);
 		FieldFilters = serialized->unwrap_into_many<rivet::ddl::generated::EventFilter>(FieldFilters_type_id); 
 	}
 

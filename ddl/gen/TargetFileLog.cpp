@@ -12,7 +12,7 @@ namespace rivet::ddl::generated {
 	TargetFileLog::TargetFileLog([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Logs = serialized->unwrap_into_many<rivet::ddl::generated::TargetFileSessionLog>(Logs_type_id);
 		BuilderOut = serialized->unwrap_into_many<rivet::ddl::generated::TargetFileBuildOutput>(BuilderOut_type_id);
-		IsTargetFromCache = serialized->get_bool(IsTargetFromCache_type_id); 
+		IsTargetFromCache = serialized->get_bool(IsTargetFromCache_type_id, false); 
 	}
 
 	[[nodiscard]] auto

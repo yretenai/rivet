@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	AutoHideOnViewWhenHeroInCinematicPrius::AutoHideOnViewWhenHeroInCinematicPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		IsActive = serialized->get_bool(IsActive_type_id);
-		PickupOnlyHideCollect = serialized->get_bool(PickupOnlyHideCollect_type_id);
-		DoNotHideIfCreatedInCine = serialized->get_bool(DoNotHideIfCreatedInCine_type_id); 
+		IsActive = serialized->get_bool(IsActive_type_id, true);
+		PickupOnlyHideCollect = serialized->get_bool(PickupOnlyHideCollect_type_id, false);
+		DoNotHideIfCreatedInCine = serialized->get_bool(DoNotHideIfCreatedInCine_type_id, false); 
 	}
 
 	[[nodiscard]] auto

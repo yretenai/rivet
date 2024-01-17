@@ -8,10 +8,10 @@
 namespace rivet::ddl::generated {
 	ActorLinkExample::ActorLinkExample([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Volumes = serialized->get_uint64s(Volumes_type_id);
-		AnyActor = serialized->get_uint64(AnyActor_type_id);
-		AnyModelOrVolumeActor = serialized->get_uint64(AnyModelOrVolumeActor_type_id);
-		AnyKindOfModel = serialized->get_uint64(AnyKindOfModel_type_id);
-		AnyKindOfSceneNode = serialized->get_uint64(AnyKindOfSceneNode_type_id); 
+		AnyActor = serialized->get_uint64(AnyActor_type_id, 0);
+		AnyModelOrVolumeActor = serialized->get_uint64(AnyModelOrVolumeActor_type_id, 0);
+		AnyKindOfModel = serialized->get_uint64(AnyKindOfModel_type_id, 0);
+		AnyKindOfSceneNode = serialized->get_uint64(AnyKindOfSceneNode_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

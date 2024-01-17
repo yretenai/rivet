@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	OnEnterVolumeActionPrius::OnEnterVolumeActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		StartActive = serialized->get_bool(StartActive_type_id);
-		SignalMax = serialized->get_int32(SignalMax_type_id);
-		ResetOnActivate = serialized->get_bool(ResetOnActivate_type_id);
-		IncludeDead = serialized->get_bool(IncludeDead_type_id);
-		SignalEmptyOnActivate = serialized->get_bool(SignalEmptyOnActivate_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Events);
+		StartActive = serialized->get_bool(StartActive_type_id, true);
+		SignalMax = serialized->get_int32(SignalMax_type_id, 1);
+		ResetOnActivate = serialized->get_bool(ResetOnActivate_type_id, false);
+		IncludeDead = serialized->get_bool(IncludeDead_type_id, true);
+		SignalEmptyOnActivate = serialized->get_bool(SignalEmptyOnActivate_type_id, true); 
 	}
 
 	[[nodiscard]] auto

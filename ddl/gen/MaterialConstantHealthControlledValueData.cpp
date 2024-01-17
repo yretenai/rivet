@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	MaterialConstantHealthControlledValueData::MaterialConstantHealthControlledValueData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		HealthAmount = serialized->get_float(HealthAmount_type_id);
-		ConstantValue = serialized->get_float(ConstantValue_type_id); 
+		HealthAmount = serialized->get_float(HealthAmount_type_id, 0.500000);
+		ConstantValue = serialized->get_float(ConstantValue_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

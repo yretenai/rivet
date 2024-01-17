@@ -9,9 +9,9 @@
 
 namespace rivet::ddl::generated {
 	AnimDamageHandlerPrius::AnimDamageHandlerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DeferAnimDamageWarning = serialized->get_string(DeferAnimDamageWarning_type_id);
-		DeferAnimDamage = serialized->get_bool(DeferAnimDamage_type_id);
-		ApplyActorScale = serialized->get_bool(ApplyActorScale_type_id);
+		DeferAnimDamageWarning = serialized->get_string(DeferAnimDamageWarning_type_id, "Must Use Multi Prim To Defer Anim Damage");
+		DeferAnimDamage = serialized->get_bool(DeferAnimDamage_type_id, false);
+		ApplyActorScale = serialized->get_bool(ApplyActorScale_type_id, true);
 		AttackIndices = serialized->unwrap_into_many<rivet::ddl::generated::AnimDamageAttack>(AttackIndices_type_id); 
 	}
 

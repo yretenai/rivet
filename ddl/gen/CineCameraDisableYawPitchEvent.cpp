@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	CineCameraDisableYawPitchEvent::CineCameraDisableYawPitchEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		DoRecenter = serialized->get_bool(DoRecenter_type_id); 
+		DoRecenter = serialized->get_bool(DoRecenter_type_id, true); 
 	}
 
 	[[nodiscard]] auto

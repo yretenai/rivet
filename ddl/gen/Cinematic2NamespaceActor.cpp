@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	Cinematic2NamespaceActor::Cinematic2NamespaceActor([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MayaNamespace = serialized->get_string(MayaNamespace_type_id);
-		Actor = serialized->get_string(Actor_type_id); 
+		MayaNamespace = serialized->get_string(MayaNamespace_type_id, {});
+		Actor = serialized->get_string(Actor_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

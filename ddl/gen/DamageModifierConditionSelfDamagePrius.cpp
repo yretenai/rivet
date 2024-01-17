@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	DamageModifierConditionSelfDamagePrius::DamageModifierConditionSelfDamagePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): DamageModifierConditionBasePrius(serialized) {
-		IsInclude = serialized->get_bool(IsInclude_type_id); 
+		IsInclude = serialized->get_bool(IsInclude_type_id, false); 
 	}
 
 	[[nodiscard]] auto

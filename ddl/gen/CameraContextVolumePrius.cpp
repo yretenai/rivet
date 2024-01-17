@@ -9,10 +9,10 @@
 
 namespace rivet::ddl::generated {
 	CameraContextVolumePrius::CameraContextVolumePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		CameraContextConfig = serialized->get_string(CameraContextConfig_type_id);
-		CameraContextAimConfig = serialized->get_string(CameraContextAimConfig_type_id);
-		ApplyGround = serialized->get_bool(ApplyGround_type_id);
-		ApplyTraversal = serialized->get_bool(ApplyTraversal_type_id); 
+		CameraContextConfig = serialized->get_string(CameraContextConfig_type_id, {});
+		CameraContextAimConfig = serialized->get_string(CameraContextAimConfig_type_id, {});
+		ApplyGround = serialized->get_bool(ApplyGround_type_id, true);
+		ApplyTraversal = serialized->get_bool(ApplyTraversal_type_id, true); 
 	}
 
 	[[nodiscard]] auto

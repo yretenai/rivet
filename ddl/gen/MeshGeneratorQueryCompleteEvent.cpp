@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	MeshGeneratorQueryCompleteEvent::MeshGeneratorQueryCompleteEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Count = serialized->get_int32(Count_type_id); 
+		Count = serialized->get_int32(Count_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

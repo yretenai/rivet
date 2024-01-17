@@ -10,10 +10,10 @@
 
 namespace rivet::ddl::generated {
 	BotAreaAwarenessPrius::BotAreaAwarenessPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): AwarenessBasePrius(serialized) {
-		SourceLocatorName = serialized->get_string(SourceLocatorName_type_id);
-		NearbyAlertRange = serialized->get_float(NearbyAlertRange_type_id);
-		NearbyShotAlertRange = serialized->get_float(NearbyShotAlertRange_type_id);
-		UseRandomConfirmTime = serialized->get_bool(UseRandomConfirmTime_type_id); 
+		SourceLocatorName = serialized->get_string(SourceLocatorName_type_id, "head");
+		NearbyAlertRange = serialized->get_float(NearbyAlertRange_type_id, 3.000000);
+		NearbyShotAlertRange = serialized->get_float(NearbyShotAlertRange_type_id, 10.000000);
+		UseRandomConfirmTime = serialized->get_bool(UseRandomConfirmTime_type_id, false); 
 	}
 
 	[[nodiscard]] auto

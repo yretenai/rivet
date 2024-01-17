@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	PushBackData::PushBackData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SpeedMin = serialized->get_float(SpeedMin_type_id);
-		SpeedMax = serialized->get_float(SpeedMax_type_id);
-		Time = serialized->get_float(Time_type_id); 
+		SpeedMin = serialized->get_float(SpeedMin_type_id, 5.000000);
+		SpeedMax = serialized->get_float(SpeedMax_type_id, 5.000000);
+		Time = serialized->get_float(Time_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

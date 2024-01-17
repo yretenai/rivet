@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	SetHighContrastShaderActionPrius::SetHighContrastShaderActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		HighlightConfig = serialized->get_string(HighlightConfig_type_id);
-		HighlightType = serialized->get_enum<rivet::ddl::generated::xf2109875>(HighlightType_type_id, rivet::ddl::generated::xf2109875_values); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Accessibility);
+		HighlightConfig = serialized->get_string(HighlightConfig_type_id, {});
+		HighlightType = serialized->get_enum<rivet::ddl::generated::xf2109875>(HighlightType_type_id, rivet::ddl::generated::xf2109875_values, rivet::ddl::generated::xf2109875::Enemy); 
 	}
 
 	[[nodiscard]] auto

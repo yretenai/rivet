@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	VisibilitySkyEngineItem::VisibilitySkyEngineItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Visibility = serialized->get_double(Visibility_type_id); 
+		Visibility = serialized->get_double(Visibility_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

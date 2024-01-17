@@ -9,10 +9,10 @@
 
 namespace rivet::ddl::generated {
 	ScriptedFlockingVolumePrius::ScriptedFlockingVolumePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		CreatureType = serialized->get_string(CreatureType_type_id);
-		FlockSize = serialized->get_int32(FlockSize_type_id);
-		ManualDestination = serialized->get_bool(ManualDestination_type_id);
-		OverrideTypeData = serialized->get_bool(OverrideTypeData_type_id);
+		CreatureType = serialized->get_string(CreatureType_type_id, {});
+		FlockSize = serialized->get_int32(FlockSize_type_id, 16);
+		ManualDestination = serialized->get_bool(ManualDestination_type_id, true);
+		OverrideTypeData = serialized->get_bool(OverrideTypeData_type_id, false);
 		OverrideData = serialized->unwrap_into<rivet::ddl::generated::FlockOverrideData>(OverrideData_type_id); 
 	}
 

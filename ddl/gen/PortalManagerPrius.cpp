@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	PortalManagerPrius::PortalManagerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AllowPlayers = serialized->get_bool(AllowPlayers_type_id);
-		AllowBots = serialized->get_bool(AllowBots_type_id);
-		AllowProjectiles = serialized->get_bool(AllowProjectiles_type_id); 
+		AllowPlayers = serialized->get_bool(AllowPlayers_type_id, true);
+		AllowBots = serialized->get_bool(AllowBots_type_id, false);
+		AllowProjectiles = serialized->get_bool(AllowProjectiles_type_id, false); 
 	}
 
 	[[nodiscard]] auto

@@ -10,13 +10,13 @@
 
 namespace rivet::ddl::generated {
 	MountAbilityFlyGoto::MountAbilityFlyGoto([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): MountAbilityBase(serialized) {
-		AnimOutroName = serialized->get_string(AnimOutroName_type_id);
-		AnimIntroName = serialized->get_string(AnimIntroName_type_id);
-		FlyerGotoLocator = serialized->get_string(FlyerGotoLocator_type_id);
-		GotoActorLocator = serialized->get_string(GotoActorLocator_type_id);
-		GotoSpeed = serialized->get_float(GotoSpeed_type_id);
-		MinOutroSpeed = serialized->get_float(MinOutroSpeed_type_id);
-		MaxOutroSpeed = serialized->get_float(MaxOutroSpeed_type_id); 
+		AnimOutroName = serialized->get_string(AnimOutroName_type_id, {});
+		AnimIntroName = serialized->get_string(AnimIntroName_type_id, {});
+		FlyerGotoLocator = serialized->get_string(FlyerGotoLocator_type_id, {});
+		GotoActorLocator = serialized->get_string(GotoActorLocator_type_id, {});
+		GotoSpeed = serialized->get_float(GotoSpeed_type_id, 20.000000);
+		MinOutroSpeed = serialized->get_float(MinOutroSpeed_type_id, 5.000000);
+		MaxOutroSpeed = serialized->get_float(MaxOutroSpeed_type_id, 15.000000); 
 	}
 
 	[[nodiscard]] auto

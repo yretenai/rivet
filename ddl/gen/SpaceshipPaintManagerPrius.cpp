@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	SpaceshipPaintManagerPrius::SpaceshipPaintManagerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		OriginalModel = serialized->get_string(OriginalModel_type_id);
-		BlackModel = serialized->get_string(BlackModel_type_id);
-		ChromeModel = serialized->get_string(ChromeModel_type_id);
-		FlamesModel = serialized->get_string(FlamesModel_type_id); 
+		OriginalModel = serialized->get_string(OriginalModel_type_id, {});
+		BlackModel = serialized->get_string(BlackModel_type_id, {});
+		ChromeModel = serialized->get_string(ChromeModel_type_id, {});
+		FlamesModel = serialized->get_string(FlamesModel_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

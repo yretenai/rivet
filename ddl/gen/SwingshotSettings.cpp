@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	SwingshotSettings::SwingshotSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MaxTargets = serialized->get_int32(MaxTargets_type_id);
-		MaxQueryResults = serialized->get_int32(MaxQueryResults_type_id);
+		MaxTargets = serialized->get_int32(MaxTargets_type_id, 64);
+		MaxQueryResults = serialized->get_int32(MaxQueryResults_type_id, 16);
 		Los = serialized->unwrap_into<rivet::ddl::generated::SwingshotLosSettings>(Los_type_id); 
 	}
 

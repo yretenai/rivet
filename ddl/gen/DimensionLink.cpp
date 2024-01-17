@@ -9,9 +9,9 @@
 
 namespace rivet::ddl::generated {
 	DimensionLink::DimensionLink([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ActivityLinkBase(serialized) {
-		PlanetName = serialized->get_string(PlanetName_type_id);
-		DimensionCodeName = serialized->get_string(DimensionCodeName_type_id);
-		Checkpoint = serialized->get_string(Checkpoint_type_id);
+		PlanetName = serialized->get_string(PlanetName_type_id, {});
+		DimensionCodeName = serialized->get_string(DimensionCodeName_type_id, {});
+		Checkpoint = serialized->get_string(Checkpoint_type_id, {});
 		UnlockSequence = serialized->unwrap_into<rivet::ddl::generated::ObjSysUnlockSequence>(UnlockSequence_type_id); 
 	}
 

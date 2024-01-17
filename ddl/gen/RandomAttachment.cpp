@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	RandomAttachment::RandomAttachment([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Attachment = serialized->get_string(Attachment_type_id);
-		LocatorOnBot = serialized->get_string(LocatorOnBot_type_id);
-		LocatorOnAttachment = serialized->get_string(LocatorOnAttachment_type_id);
-		AttachmentChance = serialized->get_float(AttachmentChance_type_id); 
+		Attachment = serialized->get_string(Attachment_type_id, {});
+		LocatorOnBot = serialized->get_string(LocatorOnBot_type_id, {});
+		LocatorOnAttachment = serialized->get_string(LocatorOnAttachment_type_id, {});
+		AttachmentChance = serialized->get_float(AttachmentChance_type_id, 0.500000); 
 	}
 
 	[[nodiscard]] auto

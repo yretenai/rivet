@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	MapElementPrius::MapElementPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Type = serialized->get_enum<rivet::ddl::generated::x94bfb980>(Type_type_id, rivet::ddl::generated::x94bfb980_values);
-		RadiusOfInterest = serialized->get_float(RadiusOfInterest_type_id);
+		Type = serialized->get_enum<rivet::ddl::generated::x94bfb980>(Type_type_id, rivet::ddl::generated::x94bfb980_values, rivet::ddl::generated::x94bfb980::Enemy);
+		RadiusOfInterest = serialized->get_float(RadiusOfInterest_type_id, 1.000000);
 		OverridePosition = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(OverridePosition_type_id); 
 	}
 

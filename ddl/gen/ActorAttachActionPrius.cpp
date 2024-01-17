@@ -7,13 +7,13 @@
 
 namespace rivet::ddl::generated {
 	ActorAttachActionPrius::ActorAttachActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		AttachPoint = serialized->get_string(AttachPoint_type_id);
-		AttachCurveT = serialized->get_float(AttachCurveT_type_id);
-		AttachClosestCurvePos = serialized->get_bool(AttachClosestCurvePos_type_id);
-		AttachRelative = serialized->get_bool(AttachRelative_type_id);
-		AttachPositionOnly = serialized->get_bool(AttachPositionOnly_type_id);
-		AttachFixedPosition = serialized->get_bool(AttachFixedPosition_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Actor);
+		AttachPoint = serialized->get_string(AttachPoint_type_id, {});
+		AttachCurveT = serialized->get_float(AttachCurveT_type_id, -1.000000);
+		AttachClosestCurvePos = serialized->get_bool(AttachClosestCurvePos_type_id, false);
+		AttachRelative = serialized->get_bool(AttachRelative_type_id, false);
+		AttachPositionOnly = serialized->get_bool(AttachPositionOnly_type_id, false);
+		AttachFixedPosition = serialized->get_bool(AttachFixedPosition_type_id, false); 
 	}
 
 	[[nodiscard]] auto

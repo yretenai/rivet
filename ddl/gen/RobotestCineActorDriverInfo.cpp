@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	RobotestCineActorDriverInfo::RobotestCineActorDriverInfo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Name = serialized->get_string(Name_type_id);
-		Layer = serialized->get_uint32(Layer_type_id);
-		TimeNorm = serialized->get_float(TimeNorm_type_id);
-		Duration = serialized->get_float(Duration_type_id); 
+		Name = serialized->get_string(Name_type_id, {});
+		Layer = serialized->get_uint32(Layer_type_id, 0);
+		TimeNorm = serialized->get_float(TimeNorm_type_id, 0.000000);
+		Duration = serialized->get_float(Duration_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

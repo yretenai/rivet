@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	SetEmergentVOTriggerEnabledEvent::SetEmergentVOTriggerEnabledEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Trigger = serialized->get_enum<rivet::ddl::generated::x6be956dd>(Trigger_type_id, rivet::ddl::generated::x6be956dd_values);
-		Enabled = serialized->get_bool(Enabled_type_id); 
+		Trigger = serialized->get_enum<rivet::ddl::generated::x6be956dd>(Trigger_type_id, rivet::ddl::generated::x6be956dd_values, rivet::ddl::generated::x6be956dd::None);
+		Enabled = serialized->get_bool(Enabled_type_id, false); 
 	}
 
 	[[nodiscard]] auto

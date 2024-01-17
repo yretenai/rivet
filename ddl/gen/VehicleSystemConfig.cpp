@@ -11,18 +11,18 @@
 
 namespace rivet::ddl::generated {
 	VehicleSystemConfig::VehicleSystemConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		LaneWidth = serialized->get_float(LaneWidth_type_id);
-		MaxLaneSpacing = serialized->get_float(MaxLaneSpacing_type_id);
-		LaneSwitchPeriod = serialized->get_float(LaneSwitchPeriod_type_id);
+		LaneWidth = serialized->get_float(LaneWidth_type_id, 14.000000);
+		MaxLaneSpacing = serialized->get_float(MaxLaneSpacing_type_id, 5.000000);
+		LaneSwitchPeriod = serialized->get_float(LaneSwitchPeriod_type_id, 3.000000);
 		CurveGeneratorInfo = serialized->unwrap_into<rivet::ddl::generated::VehicleCurveGeneratorInfo>(CurveGeneratorInfo_type_id);
 		MotionPrius = serialized->unwrap_into<rivet::ddl::generated::VehicleCurveFollowerPrius>(MotionPrius_type_id);
 		CollisionInfo = serialized->unwrap_into<rivet::ddl::generated::VehicleCollisionInfo>(CollisionInfo_type_id);
-		MaxFxUpdateDistance = serialized->get_float(MaxFxUpdateDistance_type_id);
-		MaxCulledFxDistance = serialized->get_float(MaxCulledFxDistance_type_id);
-		MaxFxDistance = serialized->get_float(MaxFxDistance_type_id);
-		MaxCulledLightDistance = serialized->get_float(MaxCulledLightDistance_type_id);
-		MaxLightDistance = serialized->get_float(MaxLightDistance_type_id);
-		SlowSignalDecelCoeff = serialized->get_float(SlowSignalDecelCoeff_type_id);
+		MaxFxUpdateDistance = serialized->get_float(MaxFxUpdateDistance_type_id, 120.000000);
+		MaxCulledFxDistance = serialized->get_float(MaxCulledFxDistance_type_id, 40.000000);
+		MaxFxDistance = serialized->get_float(MaxFxDistance_type_id, 200.000000);
+		MaxCulledLightDistance = serialized->get_float(MaxCulledLightDistance_type_id, 40.000000);
+		MaxLightDistance = serialized->get_float(MaxLightDistance_type_id, 300.000000);
+		SlowSignalDecelCoeff = serialized->get_float(SlowSignalDecelCoeff_type_id, 0.500000);
 		LightingModesToUseHeadlights = serialized->get_enums<rivet::ddl::generated::LightingMode>(LightingModesToUseHeadlights_type_id, rivet::ddl::generated::LightingMode_values); 
 	}
 

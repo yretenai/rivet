@@ -7,14 +7,14 @@
 
 namespace rivet::ddl::generated {
 	LightCaptureSettings::LightCaptureSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		PullBackDist = serialized->get_float(PullBackDist_type_id);
-		MaxResampleDist = serialized->get_float(MaxResampleDist_type_id);
-		ResampleUseClosestThreshold = serialized->get_float(ResampleUseClosestThreshold_type_id);
-		GBufferReadMax = serialized->get_int32(GBufferReadMax_type_id);
-		EmbeddedModelInstQuerys = serialized->get_int32(EmbeddedModelInstQuerys_type_id);
-		EmbeddedSampleDebugging = serialized->get_bool(EmbeddedSampleDebugging_type_id);
-		AvoidEmbeddedSamples = serialized->get_bool(AvoidEmbeddedSamples_type_id);
-		IrradianceAdjustmentHack = serialized->get_float(IrradianceAdjustmentHack_type_id); 
+		PullBackDist = serialized->get_float(PullBackDist_type_id, 0.200000);
+		MaxResampleDist = serialized->get_float(MaxResampleDist_type_id, 0.600000);
+		ResampleUseClosestThreshold = serialized->get_float(ResampleUseClosestThreshold_type_id, 0.600000);
+		GBufferReadMax = serialized->get_int32(GBufferReadMax_type_id, 134217728);
+		EmbeddedModelInstQuerys = serialized->get_int32(EmbeddedModelInstQuerys_type_id, 16000);
+		EmbeddedSampleDebugging = serialized->get_bool(EmbeddedSampleDebugging_type_id, false);
+		AvoidEmbeddedSamples = serialized->get_bool(AvoidEmbeddedSamples_type_id, false);
+		IrradianceAdjustmentHack = serialized->get_float(IrradianceAdjustmentHack_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

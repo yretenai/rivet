@@ -12,12 +12,12 @@
 namespace rivet::ddl::generated {
 	PlanetActivityData::PlanetActivityData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		PocketDimensions = serialized->unwrap_into_many<rivet::ddl::generated::PlanetDimension>(PocketDimensions_type_id);
-		GoldBoltsCardEnabled = serialized->get_bool(GoldBoltsCardEnabled_type_id);
-		GoldBoltsCardNameTag = serialized->get_string(GoldBoltsCardNameTag_type_id);
-		GoldBoltsCardDescTag = serialized->get_string(GoldBoltsCardDescTag_type_id);
-		GoldBoltsCardSmallImage = serialized->get_string(GoldBoltsCardSmallImage_type_id);
-		GoldBoltsCardLargeImage = serialized->get_string(GoldBoltsCardLargeImage_type_id);
-		GoldBoltsPlaytimeEstimate = serialized->get_uint32(GoldBoltsPlaytimeEstimate_type_id);
+		GoldBoltsCardEnabled = serialized->get_bool(GoldBoltsCardEnabled_type_id, true);
+		GoldBoltsCardNameTag = serialized->get_string(GoldBoltsCardNameTag_type_id, {});
+		GoldBoltsCardDescTag = serialized->get_string(GoldBoltsCardDescTag_type_id, {});
+		GoldBoltsCardSmallImage = serialized->get_string(GoldBoltsCardSmallImage_type_id, {});
+		GoldBoltsCardLargeImage = serialized->get_string(GoldBoltsCardLargeImage_type_id, {});
+		GoldBoltsPlaytimeEstimate = serialized->get_uint32(GoldBoltsPlaytimeEstimate_type_id, 15);
 		GoldBolts = serialized->unwrap_into_many<rivet::ddl::generated::PlanetGoldBolt>(GoldBolts_type_id);
 		RYNOPlans = serialized->unwrap_into_many<rivet::ddl::generated::PlanetRYNOPlan>(RYNOPlans_type_id); 
 	}

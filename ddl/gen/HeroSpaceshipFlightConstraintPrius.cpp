@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	HeroSpaceshipFlightConstraintPrius::HeroSpaceshipFlightConstraintPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		OffsetUp = serialized->get_float(OffsetUp_type_id);
-		OffsetDown = serialized->get_float(OffsetDown_type_id);
-		Radius = serialized->get_float(Radius_type_id); 
+		OffsetUp = serialized->get_float(OffsetUp_type_id, 0.000000);
+		OffsetDown = serialized->get_float(OffsetDown_type_id, 0.000000);
+		Radius = serialized->get_float(Radius_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

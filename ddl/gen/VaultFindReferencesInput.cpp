@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	VaultFindReferencesInput::VaultFindReferencesInput([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Direction = serialized->get_enum<rivet::ddl::generated::x49646b18>(Direction_type_id, rivet::ddl::generated::x49646b18_values);
+		Direction = serialized->get_enum<rivet::ddl::generated::x49646b18>(Direction_type_id, rivet::ddl::generated::x49646b18_values, rivet::ddl::generated::x49646b18::ReferencesTo);
 		VaultIds = serialized->get_uint64s(VaultIds_type_id);
-		Recursive = serialized->get_bool(Recursive_type_id); 
+		Recursive = serialized->get_bool(Recursive_type_id, false); 
 	}
 
 	[[nodiscard]] auto

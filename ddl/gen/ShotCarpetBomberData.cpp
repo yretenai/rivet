@@ -7,28 +7,28 @@
 
 namespace rivet::ddl::generated {
 	ShotCarpetBomberData::ShotCarpetBomberData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		IntroIdleAnim = serialized->get_string(IntroIdleAnim_type_id);
-		StartFlyAnim = serialized->get_string(StartFlyAnim_type_id);
-		FlyLoopAnim = serialized->get_string(FlyLoopAnim_type_id);
-		ShotsPerDrop = serialized->get_uint8(ShotsPerDrop_type_id);
-		ShotsOnDestroy = serialized->get_uint8(ShotsOnDestroy_type_id);
-		TargetingConeAxisLength = serialized->get_float(TargetingConeAxisLength_type_id);
-		TargetingConeAngle = serialized->get_float(TargetingConeAngle_type_id);
-		ShotIntroTime = serialized->get_float(ShotIntroTime_type_id);
-		Knockback = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(Knockback_type_id, rivet::ddl::generated::KnockbackLevels_values);
-		KnockbackAmount = serialized->get_float(KnockbackAmount_type_id);
-		MaxCrashTime = serialized->get_float(MaxCrashTime_type_id);
-		TimeUntilFirstDrop = serialized->get_float(TimeUntilFirstDrop_type_id);
-		DropSpreadAngle = serialized->get_float(DropSpreadAngle_type_id);
-		RandomAngleOffset = serialized->get_float(RandomAngleOffset_type_id);
-		DropTimeSpan = serialized->get_float(DropTimeSpan_type_id);
-		RandomDropTimeOffset = serialized->get_float(RandomDropTimeOffset_type_id);
-		LastBombCollIgnoreDist = serialized->get_float(LastBombCollIgnoreDist_type_id);
-		LastBombAngle = serialized->get_float(LastBombAngle_type_id);
-		LastBombRandomAngleOffset = serialized->get_float(LastBombRandomAngleOffset_type_id);
-		AlternateDropSpreadDir = serialized->get_bool(AlternateDropSpreadDir_type_id);
-		LastBombIgnoreHitActor = serialized->get_bool(LastBombIgnoreHitActor_type_id);
-		SpreadAngleDireciton = serialized->get_enum<rivet::ddl::generated::x5c2e2f3f>(SpreadAngleDireciton_type_id, rivet::ddl::generated::x5c2e2f3f_values); 
+		IntroIdleAnim = serialized->get_string(IntroIdleAnim_type_id, {});
+		StartFlyAnim = serialized->get_string(StartFlyAnim_type_id, {});
+		FlyLoopAnim = serialized->get_string(FlyLoopAnim_type_id, {});
+		ShotsPerDrop = serialized->get_uint8(ShotsPerDrop_type_id, 9);
+		ShotsOnDestroy = serialized->get_uint8(ShotsOnDestroy_type_id, 10);
+		TargetingConeAxisLength = serialized->get_float(TargetingConeAxisLength_type_id, 15.000000);
+		TargetingConeAngle = serialized->get_float(TargetingConeAngle_type_id, 50.000000);
+		ShotIntroTime = serialized->get_float(ShotIntroTime_type_id, 1.000000);
+		Knockback = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(Knockback_type_id, rivet::ddl::generated::KnockbackLevels_values, rivet::ddl::generated::KnockbackLevels::Three);
+		KnockbackAmount = serialized->get_float(KnockbackAmount_type_id, 100.000000);
+		MaxCrashTime = serialized->get_float(MaxCrashTime_type_id, 5.000000);
+		TimeUntilFirstDrop = serialized->get_float(TimeUntilFirstDrop_type_id, 0.100000);
+		DropSpreadAngle = serialized->get_float(DropSpreadAngle_type_id, 75.000000);
+		RandomAngleOffset = serialized->get_float(RandomAngleOffset_type_id, 0.000000);
+		DropTimeSpan = serialized->get_float(DropTimeSpan_type_id, 0.300000);
+		RandomDropTimeOffset = serialized->get_float(RandomDropTimeOffset_type_id, 0.000000);
+		LastBombCollIgnoreDist = serialized->get_float(LastBombCollIgnoreDist_type_id, 0.100000);
+		LastBombAngle = serialized->get_float(LastBombAngle_type_id, 15.000000);
+		LastBombRandomAngleOffset = serialized->get_float(LastBombRandomAngleOffset_type_id, 0.000000);
+		AlternateDropSpreadDir = serialized->get_bool(AlternateDropSpreadDir_type_id, true);
+		LastBombIgnoreHitActor = serialized->get_bool(LastBombIgnoreHitActor_type_id, true);
+		SpreadAngleDireciton = serialized->get_enum<rivet::ddl::generated::x5c2e2f3f>(SpreadAngleDireciton_type_id, rivet::ddl::generated::x5c2e2f3f_values, rivet::ddl::generated::x5c2e2f3f::Down); 
 	}
 
 	[[nodiscard]] auto

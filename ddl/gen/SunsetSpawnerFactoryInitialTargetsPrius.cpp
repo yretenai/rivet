@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	SunsetSpawnerFactoryInitialTargetsPrius::SunsetSpawnerFactoryInitialTargetsPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		TargetGroupHandle = serialized->get_uint32(TargetGroupHandle_type_id);
-		TargetTime = serialized->get_float(TargetTime_type_id);
-		Aggro = serialized->get_float(Aggro_type_id);
-		WaitForIntro = serialized->get_bool(WaitForIntro_type_id);
-		WaitForTargetsTargetable = serialized->get_bool(WaitForTargetsTargetable_type_id);
-		TargetsUnlosable = serialized->get_bool(TargetsUnlosable_type_id); 
+		TargetGroupHandle = serialized->get_uint32(TargetGroupHandle_type_id, 0);
+		TargetTime = serialized->get_float(TargetTime_type_id, 5.000000);
+		Aggro = serialized->get_float(Aggro_type_id, 100.000000);
+		WaitForIntro = serialized->get_bool(WaitForIntro_type_id, true);
+		WaitForTargetsTargetable = serialized->get_bool(WaitForTargetsTargetable_type_id, true);
+		TargetsUnlosable = serialized->get_bool(TargetsUnlosable_type_id, false); 
 	}
 
 	[[nodiscard]] auto

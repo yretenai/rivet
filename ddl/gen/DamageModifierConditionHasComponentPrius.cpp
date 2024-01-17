@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	DamageModifierConditionHasComponentPrius::DamageModifierConditionHasComponentPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): DamageModifierConditionBasePrius(serialized) {
-		CheckComponentHash = serialized->get_uint32(CheckComponentHash_type_id);
-		IsInclude = serialized->get_bool(IsInclude_type_id);
-		CheckComponentOnDamager = serialized->get_bool(CheckComponentOnDamager_type_id); 
+		CheckComponentHash = serialized->get_uint32(CheckComponentHash_type_id, 0);
+		IsInclude = serialized->get_bool(IsInclude_type_id, true);
+		CheckComponentOnDamager = serialized->get_bool(CheckComponentOnDamager_type_id, false); 
 	}
 
 	[[nodiscard]] auto

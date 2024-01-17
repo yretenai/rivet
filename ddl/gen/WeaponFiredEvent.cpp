@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	WeaponFiredEvent::WeaponFiredEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): WeaponTriggeredEvent(serialized) {
-		EmitLocatorName = serialized->get_string(EmitLocatorName_type_id);
-		WeaponTypeName = serialized->get_string(WeaponTypeName_type_id);
-		PerkName = serialized->get_string(PerkName_type_id); 
+		EmitLocatorName = serialized->get_string(EmitLocatorName_type_id, {});
+		WeaponTypeName = serialized->get_string(WeaponTypeName_type_id, {});
+		PerkName = serialized->get_string(PerkName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

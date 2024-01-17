@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ZurkieArenaSelectAcceptEvent::ZurkieArenaSelectAcceptEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		ChallengeMissionName = serialized->get_string(ChallengeMissionName_type_id); 
+		ChallengeMissionName = serialized->get_string(ChallengeMissionName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

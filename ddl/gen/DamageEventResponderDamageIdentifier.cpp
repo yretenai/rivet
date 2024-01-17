@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	DamageEventResponderDamageIdentifier::DamageEventResponderDamageIdentifier([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		TypeOfDamage = serialized->get_enum<rivet::ddl::generated::DamageTypes>(TypeOfDamage_type_id, rivet::ddl::generated::DamageTypes_values);
-		DamageDescription = serialized->get_string(DamageDescription_type_id); 
+		TypeOfDamage = serialized->get_enum<rivet::ddl::generated::DamageTypes>(TypeOfDamage_type_id, rivet::ddl::generated::DamageTypes_values, rivet::ddl::generated::DamageTypes::None);
+		DamageDescription = serialized->get_string(DamageDescription_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

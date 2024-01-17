@@ -10,12 +10,12 @@
 namespace rivet::ddl::generated {
 	BossBotNefariousFinalePrius::BossBotNefariousFinalePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BotPrius(serialized) {
 		HoverShuffleData = serialized->unwrap_into<rivet::ddl::generated::HoverShuffleData>(HoverShuffleData_type_id);
-		EmpNefariousPilotAsset = serialized->get_string(EmpNefariousPilotAsset_type_id);
-		DocNefariousPilotAsset = serialized->get_string(DocNefariousPilotAsset_type_id);
-		DamageStates_Eye_LF = serialized->get_string(DamageStates_Eye_LF_type_id);
-		DamageStates_Eye_RT = serialized->get_string(DamageStates_Eye_RT_type_id);
-		DamageStates_Arm_LF = serialized->get_string(DamageStates_Arm_LF_type_id);
-		DamageStates_Arm_RT = serialized->get_string(DamageStates_Arm_RT_type_id); 
+		EmpNefariousPilotAsset = serialized->get_string(EmpNefariousPilotAsset_type_id, {});
+		DocNefariousPilotAsset = serialized->get_string(DocNefariousPilotAsset_type_id, {});
+		DamageStates_Eye_LF = serialized->get_string(DamageStates_Eye_LF_type_id, {});
+		DamageStates_Eye_RT = serialized->get_string(DamageStates_Eye_RT_type_id, {});
+		DamageStates_Arm_LF = serialized->get_string(DamageStates_Arm_LF_type_id, {});
+		DamageStates_Arm_RT = serialized->get_string(DamageStates_Arm_RT_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

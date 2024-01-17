@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	PlanetLightingCondition::PlanetLightingCondition([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		LightingMode = serialized->get_enum<rivet::ddl::generated::LightingMode>(LightingMode_type_id, rivet::ddl::generated::LightingMode_values);
+		LightingMode = serialized->get_enum<rivet::ddl::generated::LightingMode>(LightingMode_type_id, rivet::ddl::generated::LightingMode_values, rivet::ddl::generated::LightingMode::Day);
 		UnlockCondition = serialized->unwrap_into<rivet::ddl::generated::ObjSysUnlockSequence>(UnlockCondition_type_id); 
 	}
 

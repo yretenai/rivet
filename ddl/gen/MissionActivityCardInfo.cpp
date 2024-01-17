@@ -9,10 +9,10 @@
 
 namespace rivet::ddl::generated {
 	MissionActivityCardInfo::MissionActivityCardInfo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Enabled = serialized->get_bool(Enabled_type_id);
-		ActivityDescTagOverride = serialized->get_string(ActivityDescTagOverride_type_id);
-		ActivitySmallImage = serialized->get_string(ActivitySmallImage_type_id);
-		ActivityLargeImage = serialized->get_string(ActivityLargeImage_type_id);
+		Enabled = serialized->get_bool(Enabled_type_id, true);
+		ActivityDescTagOverride = serialized->get_string(ActivityDescTagOverride_type_id, {});
+		ActivitySmallImage = serialized->get_string(ActivitySmallImage_type_id, {});
+		ActivityLargeImage = serialized->get_string(ActivityLargeImage_type_id, {});
 		Reward = serialized->unwrap_into<rivet::ddl::generated::ActivityReward>(Reward_type_id); 
 	}
 

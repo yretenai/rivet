@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	GenericChunk::GenericChunk([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ChunkModel = serialized->get_string(ChunkModel_type_id);
-		TriggerSpawnEvent = serialized->get_bool(TriggerSpawnEvent_type_id);
-		UsesFXConduit = serialized->get_bool(UsesFXConduit_type_id);
-		UsesAudioConduit = serialized->get_bool(UsesAudioConduit_type_id); 
+		ChunkModel = serialized->get_string(ChunkModel_type_id, {});
+		TriggerSpawnEvent = serialized->get_bool(TriggerSpawnEvent_type_id, true);
+		UsesFXConduit = serialized->get_bool(UsesFXConduit_type_id, false);
+		UsesAudioConduit = serialized->get_bool(UsesAudioConduit_type_id, false); 
 	}
 
 	[[nodiscard]] auto

@@ -12,8 +12,8 @@ namespace rivet::ddl::generated {
 	FarmLightingConfig2::FarmLightingConfig2([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
 		OpenRegions = serialized->unwrap_into_many<rivet::ddl::generated::FarmOpenRegionData>(OpenRegions_type_id);
 		InstanceRegions = serialized->unwrap_into_many<rivet::ddl::generated::FarmInstanceRegionData>(InstanceRegions_type_id);
-		DefaultRegion = serialized->get_string(DefaultRegion_type_id);
-		DefaultLevelFile = serialized->get_string(DefaultLevelFile_type_id); 
+		DefaultRegion = serialized->get_string(DefaultRegion_type_id, {});
+		DefaultLevelFile = serialized->get_string(DefaultLevelFile_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

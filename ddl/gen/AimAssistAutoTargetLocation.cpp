@@ -10,14 +10,14 @@
 
 namespace rivet::ddl::generated {
 	AimAssistAutoTargetLocation::AimAssistAutoTargetLocation([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AssistZoneParent = serialized->get_int32(AssistZoneParent_type_id);
-		FaceAngle = serialized->get_float(FaceAngle_type_id);
-		OverrideRange = serialized->get_float(OverrideRange_type_id);
-		OverrideAngle = serialized->get_float(OverrideAngle_type_id);
-		RequireBodyVisible = serialized->get_bool(RequireBodyVisible_type_id);
-		RequireHeadVisible = serialized->get_bool(RequireHeadVisible_type_id);
-		OnlyAsFallback = serialized->get_bool(OnlyAsFallback_type_id);
-		LocationType = serialized->get_enum<rivet::ddl::generated::x80286938>(LocationType_type_id, rivet::ddl::generated::x80286938_values); 
+		AssistZoneParent = serialized->get_int32(AssistZoneParent_type_id, -1);
+		FaceAngle = serialized->get_float(FaceAngle_type_id, 180.000000);
+		OverrideRange = serialized->get_float(OverrideRange_type_id, -1.000000);
+		OverrideAngle = serialized->get_float(OverrideAngle_type_id, -1.000000);
+		RequireBodyVisible = serialized->get_bool(RequireBodyVisible_type_id, false);
+		RequireHeadVisible = serialized->get_bool(RequireHeadVisible_type_id, false);
+		OnlyAsFallback = serialized->get_bool(OnlyAsFallback_type_id, false);
+		LocationType = serialized->get_enum<rivet::ddl::generated::x80286938>(LocationType_type_id, rivet::ddl::generated::x80286938_values, rivet::ddl::generated::x80286938::CenterOfMass); 
 	}
 
 	[[nodiscard]] auto

@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	SlingshotSpinEndEvent::SlingshotSpinEndEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Launched = serialized->get_bool(Launched_type_id); 
+		Launched = serialized->get_bool(Launched_type_id, false); 
 	}
 
 	[[nodiscard]] auto

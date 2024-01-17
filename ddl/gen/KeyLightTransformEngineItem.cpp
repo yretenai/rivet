@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	KeyLightTransformEngineItem::KeyLightTransformEngineItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		PitchDegrees = serialized->get_float(PitchDegrees_type_id);
-		YawDegrees = serialized->get_float(YawDegrees_type_id); 
+		PitchDegrees = serialized->get_float(PitchDegrees_type_id, 0.000000);
+		YawDegrees = serialized->get_float(YawDegrees_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

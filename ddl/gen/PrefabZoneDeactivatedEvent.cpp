@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	PrefabZoneDeactivatedEvent::PrefabZoneDeactivatedEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		ZoneId = serialized->get_uint64(ZoneId_type_id); 
+		ZoneId = serialized->get_uint64(ZoneId_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

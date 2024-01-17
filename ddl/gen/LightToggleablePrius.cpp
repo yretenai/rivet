@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	LightToggleablePrius::LightToggleablePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		OnByDefault = serialized->get_bool(OnByDefault_type_id); 
+		OnByDefault = serialized->get_bool(OnByDefault_type_id, true); 
 	}
 
 	[[nodiscard]] auto

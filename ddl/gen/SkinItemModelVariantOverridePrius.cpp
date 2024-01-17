@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	SkinItemModelVariantOverridePrius::SkinItemModelVariantOverridePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ModelVariantHash = serialized->get_uint64(ModelVariantHash_type_id);
-		VariantNameHash = serialized->get_uint32(VariantNameHash_type_id); 
+		ModelVariantHash = serialized->get_uint64(ModelVariantHash_type_id, 0);
+		VariantNameHash = serialized->get_uint32(VariantNameHash_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

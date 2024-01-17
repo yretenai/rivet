@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	VaultControl::VaultControl([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		_id = serialized->get_int32(_id_type_id);
-		DatabaseVersion = serialized->get_uint32(DatabaseVersion_type_id);
+		_id = serialized->get_int32(_id_type_id, 0);
+		DatabaseVersion = serialized->get_uint32(DatabaseVersion_type_id, 0);
 		ValidExtensions = serialized->get_strings(ValidExtensions_type_id); 
 	}
 

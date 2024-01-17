@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	RecoilCameraShakeProcedural::RecoilCameraShakeProcedural([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): RecoilCameraShake(serialized) {
-		CamShakeAttackTime = serialized->get_float(CamShakeAttackTime_type_id);
-		CamShakeSustainTime = serialized->get_float(CamShakeSustainTime_type_id);
-		CamShakeDecayTime = serialized->get_float(CamShakeDecayTime_type_id);
-		CamShakeStrength = serialized->get_float(CamShakeStrength_type_id);
-		CamShakeFrequency = serialized->get_float(CamShakeFrequency_type_id);
-		CameraShakeData = serialized->get_string(CameraShakeData_type_id); 
+		CamShakeAttackTime = serialized->get_float(CamShakeAttackTime_type_id, 0.050000);
+		CamShakeSustainTime = serialized->get_float(CamShakeSustainTime_type_id, 0.150000);
+		CamShakeDecayTime = serialized->get_float(CamShakeDecayTime_type_id, 0.050000);
+		CamShakeStrength = serialized->get_float(CamShakeStrength_type_id, 1.000000);
+		CamShakeFrequency = serialized->get_float(CamShakeFrequency_type_id, 1.000000);
+		CameraShakeData = serialized->get_string(CameraShakeData_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

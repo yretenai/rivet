@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	CameraForceLookSettings::CameraForceLookSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SpeedMax = serialized->get_float(SpeedMax_type_id);
-		SpeedAccel = serialized->get_float(SpeedAccel_type_id);
-		SpeedDecel = serialized->get_float(SpeedDecel_type_id); 
+		SpeedMax = serialized->get_float(SpeedMax_type_id, 480.000000);
+		SpeedAccel = serialized->get_float(SpeedAccel_type_id, 9000.000000);
+		SpeedDecel = serialized->get_float(SpeedDecel_type_id, 9000.000000); 
 	}
 
 	[[nodiscard]] auto

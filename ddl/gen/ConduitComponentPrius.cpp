@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	ConduitComponentPrius::ConduitComponentPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DestroyBehavior = serialized->get_enum<rivet::ddl::generated::xa54ee12b>(DestroyBehavior_type_id, rivet::ddl::generated::xa54ee12b_values);
-		StopAllSoundsOnDestroy = serialized->get_bool(StopAllSoundsOnDestroy_type_id);
-		SkipDeactivateOnDestroy = serialized->get_bool(SkipDeactivateOnDestroy_type_id);
-		ShareSoundSource = serialized->get_bool(ShareSoundSource_type_id);
-		SoundSourceLocator = serialized->get_string(SoundSourceLocator_type_id);
-		MaxActivateEventDelay = serialized->get_uint32(MaxActivateEventDelay_type_id);
+		DestroyBehavior = serialized->get_enum<rivet::ddl::generated::xa54ee12b>(DestroyBehavior_type_id, rivet::ddl::generated::xa54ee12b_values, rivet::ddl::generated::xa54ee12b::Stop_Effects);
+		StopAllSoundsOnDestroy = serialized->get_bool(StopAllSoundsOnDestroy_type_id, false);
+		SkipDeactivateOnDestroy = serialized->get_bool(SkipDeactivateOnDestroy_type_id, false);
+		ShareSoundSource = serialized->get_bool(ShareSoundSource_type_id, false);
+		SoundSourceLocator = serialized->get_string(SoundSourceLocator_type_id, {});
+		MaxActivateEventDelay = serialized->get_uint32(MaxActivateEventDelay_type_id, 0);
 		Mappings = serialized->get_strings(Mappings_type_id); 
 	}
 

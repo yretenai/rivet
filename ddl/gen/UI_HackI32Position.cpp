@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	UI_HackI32Position::UI_HackI32Position([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		XPos = serialized->get_float(XPos_type_id);
-		YPos = serialized->get_float(YPos_type_id); 
+		XPos = serialized->get_float(XPos_type_id, 0.000000);
+		YPos = serialized->get_float(YPos_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

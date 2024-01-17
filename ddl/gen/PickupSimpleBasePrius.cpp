@@ -11,17 +11,17 @@
 namespace rivet::ddl::generated {
 	PickupSimpleBasePrius::PickupSimpleBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Velocity = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Velocity_type_id);
-		DecayTimer = serialized->get_float(DecayTimer_type_id);
-		NoPickupTime = serialized->get_float(NoPickupTime_type_id);
-		PickupRange = serialized->get_float(PickupRange_type_id);
-		AutoCollectTime = serialized->get_float(AutoCollectTime_type_id);
-		IdealCollectTime = serialized->get_float(IdealCollectTime_type_id);
-		StartFixed = serialized->get_bool(StartFixed_type_id);
-		DoBob = serialized->get_bool(DoBob_type_id);
-		DoSpin = serialized->get_bool(DoSpin_type_id);
-		AutoCollectOnFallOut = serialized->get_bool(AutoCollectOnFallOut_type_id);
-		AutoCollectOnSpawn = serialized->get_bool(AutoCollectOnSpawn_type_id);
-		DoSwarm = serialized->get_bool(DoSwarm_type_id); 
+		DecayTimer = serialized->get_float(DecayTimer_type_id, 0.000000);
+		NoPickupTime = serialized->get_float(NoPickupTime_type_id, 0.000000);
+		PickupRange = serialized->get_float(PickupRange_type_id, 3.000000);
+		AutoCollectTime = serialized->get_float(AutoCollectTime_type_id, -1.000000);
+		IdealCollectTime = serialized->get_float(IdealCollectTime_type_id, -1.000000);
+		StartFixed = serialized->get_bool(StartFixed_type_id, false);
+		DoBob = serialized->get_bool(DoBob_type_id, true);
+		DoSpin = serialized->get_bool(DoSpin_type_id, true);
+		AutoCollectOnFallOut = serialized->get_bool(AutoCollectOnFallOut_type_id, false);
+		AutoCollectOnSpawn = serialized->get_bool(AutoCollectOnSpawn_type_id, false);
+		DoSwarm = serialized->get_bool(DoSwarm_type_id, true); 
 	}
 
 	[[nodiscard]] auto

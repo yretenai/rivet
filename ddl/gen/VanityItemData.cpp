@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	VanityItemData::VanityItemData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): GameItemData(serialized) {
-		SkinType = serialized->get_enum<rivet::ddl::generated::x36ceb0b>(SkinType_type_id, rivet::ddl::generated::x36ceb0b_values); 
+		SkinType = serialized->get_enum<rivet::ddl::generated::x36ceb0b>(SkinType_type_id, rivet::ddl::generated::x36ceb0b_values, rivet::ddl::generated::x36ceb0b::Body); 
 	}
 
 	[[nodiscard]] auto

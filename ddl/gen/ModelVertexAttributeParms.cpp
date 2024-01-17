@@ -11,10 +11,10 @@
 namespace rivet::ddl::generated {
 	ModelVertexAttributeParms::ModelVertexAttributeParms([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		VertexColor = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(VertexColor_type_id);
-		VertexAlpha = serialized->get_float(VertexAlpha_type_id);
+		VertexAlpha = serialized->get_float(VertexAlpha_type_id, 1.000000);
 		VertexSpacing = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(VertexSpacing_type_id);
-		ReverseU = serialized->get_bool(ReverseU_type_id);
-		ReverseV = serialized->get_bool(ReverseV_type_id);
+		ReverseU = serialized->get_bool(ReverseU_type_id, false);
+		ReverseV = serialized->get_bool(ReverseV_type_id, false);
 		UVTilingDistance = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(UVTilingDistance_type_id);
 		UVOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(UVOffset_type_id); 
 	}

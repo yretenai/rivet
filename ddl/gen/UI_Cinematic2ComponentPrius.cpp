@@ -7,14 +7,14 @@
 
 namespace rivet::ddl::generated {
 	UI_Cinematic2ComponentPrius::UI_Cinematic2ComponentPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		CinematicAsset = serialized->get_string(CinematicAsset_type_id);
-		CinematicAssetId = serialized->get_uint64(CinematicAssetId_type_id);
-		PlayBackShot = serialized->get_string(PlayBackShot_type_id);
-		ScriptDriven = serialized->get_bool(ScriptDriven_type_id);
-		CodeDriven = serialized->get_bool(CodeDriven_type_id);
-		IsWorldSpaceCinematic = serialized->get_bool(IsWorldSpaceCinematic_type_id);
-		EditorSpawned = serialized->get_bool(EditorSpawned_type_id);
-		ViewerSpawned = serialized->get_bool(ViewerSpawned_type_id); 
+		CinematicAsset = serialized->get_string(CinematicAsset_type_id, {});
+		CinematicAssetId = serialized->get_uint64(CinematicAssetId_type_id, 0);
+		PlayBackShot = serialized->get_string(PlayBackShot_type_id, {});
+		ScriptDriven = serialized->get_bool(ScriptDriven_type_id, true);
+		CodeDriven = serialized->get_bool(CodeDriven_type_id, false);
+		IsWorldSpaceCinematic = serialized->get_bool(IsWorldSpaceCinematic_type_id, false);
+		EditorSpawned = serialized->get_bool(EditorSpawned_type_id, false);
+		ViewerSpawned = serialized->get_bool(ViewerSpawned_type_id, false); 
 	}
 
 	[[nodiscard]] auto

@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	NodalShotUIntData::NodalShotUIntData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): NodalShotVariableDataBase(serialized) {
-		Value = serialized->get_uint32(Value_type_id); 
+		Value = serialized->get_uint32(Value_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

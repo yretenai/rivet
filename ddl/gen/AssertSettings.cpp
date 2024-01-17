@@ -7,18 +7,18 @@
 
 namespace rivet::ddl::generated {
 	AssertSettings::AssertSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		CallStackEnable = serialized->get_bool(CallStackEnable_type_id);
-		ProfilerStackEnable = serialized->get_bool(ProfilerStackEnable_type_id);
-		CallStackDeferredInitialization = serialized->get_bool(CallStackDeferredInitialization_type_id);
-		UnhandledExceptionMode = serialized->get_enum<rivet::ddl::generated::xd839f866>(UnhandledExceptionMode_type_id, rivet::ddl::generated::xd839f866_values);
-		FatalAssertMode = serialized->get_enum<rivet::ddl::generated::xd839f866>(FatalAssertMode_type_id, rivet::ddl::generated::xd839f866_values);
-		AssertMode = serialized->get_enum<rivet::ddl::generated::xd839f866>(AssertMode_type_id, rivet::ddl::generated::xd839f866_values);
-		WarningFilter = serialized->get_string(WarningFilter_type_id);
-		LogFile = serialized->get_string(LogFile_type_id);
-		AppendToLogFile = serialized->get_bool(AppendToLogFile_type_id);
-		CrashDumpMode = serialized->get_enum<rivet::ddl::generated::xb022b3f7>(CrashDumpMode_type_id, rivet::ddl::generated::xb022b3f7_values);
-		UseToolTransmitter = serialized->get_bool(UseToolTransmitter_type_id);
-		EveryAssertIsFatal = serialized->get_bool(EveryAssertIsFatal_type_id); 
+		CallStackEnable = serialized->get_bool(CallStackEnable_type_id, true);
+		ProfilerStackEnable = serialized->get_bool(ProfilerStackEnable_type_id, true);
+		CallStackDeferredInitialization = serialized->get_bool(CallStackDeferredInitialization_type_id, false);
+		UnhandledExceptionMode = serialized->get_enum<rivet::ddl::generated::xd839f866>(UnhandledExceptionMode_type_id, rivet::ddl::generated::xd839f866_values, rivet::ddl::generated::xd839f866::output_to_TTY);
+		FatalAssertMode = serialized->get_enum<rivet::ddl::generated::xd839f866>(FatalAssertMode_type_id, rivet::ddl::generated::xd839f866_values, rivet::ddl::generated::xd839f866::output_to_TTY);
+		AssertMode = serialized->get_enum<rivet::ddl::generated::xd839f866>(AssertMode_type_id, rivet::ddl::generated::xd839f866_values, rivet::ddl::generated::xd839f866::output_to_TTY);
+		WarningFilter = serialized->get_string(WarningFilter_type_id, "");
+		LogFile = serialized->get_string(LogFile_type_id, "");
+		AppendToLogFile = serialized->get_bool(AppendToLogFile_type_id, false);
+		CrashDumpMode = serialized->get_enum<rivet::ddl::generated::xb022b3f7>(CrashDumpMode_type_id, rivet::ddl::generated::xb022b3f7_values, rivet::ddl::generated::xb022b3f7::Minidump);
+		UseToolTransmitter = serialized->get_bool(UseToolTransmitter_type_id, false);
+		EveryAssertIsFatal = serialized->get_bool(EveryAssertIsFatal_type_id, false); 
 	}
 
 	[[nodiscard]] auto

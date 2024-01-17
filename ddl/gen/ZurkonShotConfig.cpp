@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	ZurkonShotConfig::ZurkonShotConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		ShotActor = serialized->get_string(ShotActor_type_id);
+		ShotActor = serialized->get_string(ShotActor_type_id, {});
 		ShotPrius = serialized->unwrap_into<rivet::ddl::generated::BasicBulletPrius>(ShotPrius_type_id); 
 	}
 

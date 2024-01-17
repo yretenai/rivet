@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	ShootAtCurveFiringEmitData::ShootAtCurveFiringEmitData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		PartialDriver = serialized->get_string(PartialDriver_type_id);
-		EmitLocator = serialized->get_string(EmitLocator_type_id);
-		IsFullBodyAnim = serialized->get_bool(IsFullBodyAnim_type_id); 
+		PartialDriver = serialized->get_string(PartialDriver_type_id, {});
+		EmitLocator = serialized->get_string(EmitLocator_type_id, {});
+		IsFullBodyAnim = serialized->get_bool(IsFullBodyAnim_type_id, false); 
 	}
 
 	[[nodiscard]] auto

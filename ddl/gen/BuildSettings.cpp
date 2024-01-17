@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	BuildSettings::BuildSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AssetBranch = serialized->get_string(AssetBranch_type_id);
-		VersionTag = serialized->get_string(VersionTag_type_id);
-		ArchiveAssetsChangelist = serialized->get_int32(ArchiveAssetsChangelist_type_id);
-		TimeZone = serialized->get_string(TimeZone_type_id); 
+		AssetBranch = serialized->get_string(AssetBranch_type_id, "");
+		VersionTag = serialized->get_string(VersionTag_type_id, "");
+		ArchiveAssetsChangelist = serialized->get_int32(ArchiveAssetsChangelist_type_id, -1);
+		TimeZone = serialized->get_string(TimeZone_type_id, ""); 
 	}
 
 	[[nodiscard]] auto

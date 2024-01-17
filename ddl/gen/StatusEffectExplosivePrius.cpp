@@ -10,17 +10,17 @@
 namespace rivet::ddl::generated {
 	StatusEffectExplosivePrius::StatusEffectExplosivePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): StatusEffectBasePrius(serialized) {
 		Damage = serialized->unwrap_into<rivet::ddl::generated::ExplosiveStatusInnerOuterData>(Damage_type_id);
-		ExplosionLocator = serialized->get_string(ExplosionLocator_type_id);
-		DamageNeedsLOS = serialized->get_bool(DamageNeedsLOS_type_id);
-		ExplodeOnDamage = serialized->get_bool(ExplodeOnDamage_type_id);
-		ExplodeOnDeath = serialized->get_bool(ExplodeOnDeath_type_id);
-		ExplodeOnProximity = serialized->get_bool(ExplodeOnProximity_type_id);
-		KillSelfOnExplode = serialized->get_bool(KillSelfOnExplode_type_id);
-		DamageFriends = serialized->get_bool(DamageFriends_type_id);
-		LastDamagerIsExplosionDamager = serialized->get_bool(LastDamagerIsExplosionDamager_type_id);
-		ExplosionDamageType = serialized->get_enum<rivet::ddl::generated::DamageTypes>(ExplosionDamageType_type_id, rivet::ddl::generated::DamageTypes_values);
-		ExplosionKnockbackLevel = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(ExplosionKnockbackLevel_type_id, rivet::ddl::generated::KnockbackLevels_values);
-		ProximityTargetMask = serialized->get_bitset<rivet::ddl::generated::TargetType>(ProximityTargetMask_type_id, rivet::ddl::generated::TargetType_values); 
+		ExplosionLocator = serialized->get_string(ExplosionLocator_type_id, {});
+		DamageNeedsLOS = serialized->get_bool(DamageNeedsLOS_type_id, true);
+		ExplodeOnDamage = serialized->get_bool(ExplodeOnDamage_type_id, false);
+		ExplodeOnDeath = serialized->get_bool(ExplodeOnDeath_type_id, true);
+		ExplodeOnProximity = serialized->get_bool(ExplodeOnProximity_type_id, false);
+		KillSelfOnExplode = serialized->get_bool(KillSelfOnExplode_type_id, false);
+		DamageFriends = serialized->get_bool(DamageFriends_type_id, true);
+		LastDamagerIsExplosionDamager = serialized->get_bool(LastDamagerIsExplosionDamager_type_id, false);
+		ExplosionDamageType = serialized->get_enum<rivet::ddl::generated::DamageTypes>(ExplosionDamageType_type_id, rivet::ddl::generated::DamageTypes_values, rivet::ddl::generated::DamageTypes::None);
+		ExplosionKnockbackLevel = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(ExplosionKnockbackLevel_type_id, rivet::ddl::generated::KnockbackLevels_values, rivet::ddl::generated::KnockbackLevels::None);
+		ProximityTargetMask = serialized->get_bitset<rivet::ddl::generated::TargetType>(ProximityTargetMask_type_id, rivet::ddl::generated::TargetType_values, 7); 
 	}
 
 	[[nodiscard]] auto

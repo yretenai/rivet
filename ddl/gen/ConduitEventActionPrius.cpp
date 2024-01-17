@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	ConduitEventActionPrius::ConduitEventActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		Label = serialized->get_string(Label_type_id);
-		Param = serialized->get_uint32(Param_type_id);
-		Reference = serialized->get_uint64(Reference_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Conduit);
+		Label = serialized->get_string(Label_type_id, {});
+		Param = serialized->get_uint32(Param_type_id, 0);
+		Reference = serialized->get_uint64(Reference_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

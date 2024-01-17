@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	AnimPropForwardEvent::AnimPropForwardEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		PropName = serialized->get_string(PropName_type_id);
+		PropName = serialized->get_string(PropName_type_id, {});
 		ForwardEvent = serialized->unwrap_into<rivet::ddl::generated::EventBase>(ForwardEvent_type_id); 
 	}
 

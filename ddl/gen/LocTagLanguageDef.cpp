@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	LocTagLanguageDef::LocTagLanguageDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Language = serialized->get_enum<rivet::ddl::generated::xb4653862>(Language_type_id, rivet::ddl::generated::xb4653862_values);
-		Text = serialized->get_string(Text_type_id); 
+		Language = serialized->get_enum<rivet::ddl::generated::xb4653862>(Language_type_id, rivet::ddl::generated::xb4653862_values, rivet::ddl::generated::xb4653862::Danish);
+		Text = serialized->get_string(Text_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

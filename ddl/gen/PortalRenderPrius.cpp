@@ -9,15 +9,15 @@
 
 namespace rivet::ddl::generated {
 	PortalRenderPrius::PortalRenderPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		OverrideMaterial = serialized->get_string(OverrideMaterial_type_id);
-		OverrideMaterialName = serialized->get_string(OverrideMaterialName_type_id);
-		OverrideTextureName = serialized->get_string(OverrideTextureName_type_id);
-		TimeToOpenConstantName = serialized->get_string(TimeToOpenConstantName_type_id);
-		TimeToOpen = serialized->get_float(TimeToOpen_type_id);
-		ResolutionMultiplier = serialized->get_float(ResolutionMultiplier_type_id);
-		LuminanceScaleConstantName = serialized->get_string(LuminanceScaleConstantName_type_id);
-		LuminanceScale = serialized->get_float(LuminanceScale_type_id);
-		EnableToneMapping = serialized->get_bool(EnableToneMapping_type_id);
+		OverrideMaterial = serialized->get_string(OverrideMaterial_type_id, {});
+		OverrideMaterialName = serialized->get_string(OverrideMaterialName_type_id, {});
+		OverrideTextureName = serialized->get_string(OverrideTextureName_type_id, {});
+		TimeToOpenConstantName = serialized->get_string(TimeToOpenConstantName_type_id, {});
+		TimeToOpen = serialized->get_float(TimeToOpen_type_id, 0.000000);
+		ResolutionMultiplier = serialized->get_float(ResolutionMultiplier_type_id, 1.000000);
+		LuminanceScaleConstantName = serialized->get_string(LuminanceScaleConstantName_type_id, {});
+		LuminanceScale = serialized->get_float(LuminanceScale_type_id, 1.000000);
+		EnableToneMapping = serialized->get_bool(EnableToneMapping_type_id, true);
 		ThresholdClipExtents = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(ThresholdClipExtents_type_id); 
 	}
 

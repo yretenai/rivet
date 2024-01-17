@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ActionControlMountInputControl::ActionControlMountInputControl([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Control = serialized->get_enum<rivet::ddl::generated::xce61f0ef>(Control_type_id, rivet::ddl::generated::xce61f0ef_values); 
+		Control = serialized->get_enum<rivet::ddl::generated::xce61f0ef>(Control_type_id, rivet::ddl::generated::xce61f0ef_values, rivet::ddl::generated::xce61f0ef::MountAbilitySquare); 
 	}
 
 	[[nodiscard]] auto

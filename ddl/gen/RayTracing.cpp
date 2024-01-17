@@ -7,15 +7,15 @@
 
 namespace rivet::ddl::generated {
 	RayTracing::RayTracing([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Enabled = serialized->get_bool(Enabled_type_id);
-		Quality = serialized->get_enum<rivet::ddl::generated::x49737d1>(Quality_type_id, rivet::ddl::generated::x49737d1_values);
-		SkipIfImpostored = serialized->get_bool(SkipIfImpostored_type_id);
-		AmbientOcclusion = serialized->get_bool(AmbientOcclusion_type_id);
-		AmbientShadows = serialized->get_bool(AmbientShadows_type_id);
-		Reflections = serialized->get_bool(Reflections_type_id);
-		Shadows = serialized->get_bool(Shadows_type_id);
-		Blocker = serialized->get_bool(Blocker_type_id);
-		UpdateEveryFrame = serialized->get_bool(UpdateEveryFrame_type_id); 
+		Enabled = serialized->get_bool(Enabled_type_id, true);
+		Quality = serialized->get_enum<rivet::ddl::generated::x49737d1>(Quality_type_id, rivet::ddl::generated::x49737d1_values, rivet::ddl::generated::x49737d1::Low);
+		SkipIfImpostored = serialized->get_bool(SkipIfImpostored_type_id, true);
+		AmbientOcclusion = serialized->get_bool(AmbientOcclusion_type_id, true);
+		AmbientShadows = serialized->get_bool(AmbientShadows_type_id, true);
+		Reflections = serialized->get_bool(Reflections_type_id, true);
+		Shadows = serialized->get_bool(Shadows_type_id, true);
+		Blocker = serialized->get_bool(Blocker_type_id, false);
+		UpdateEveryFrame = serialized->get_bool(UpdateEveryFrame_type_id, false); 
 	}
 
 	[[nodiscard]] auto

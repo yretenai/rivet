@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	BossFocusCameraManagerPrius::BossFocusCameraManagerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		BossFocusLFCameraAimContextConfig_Close = serialized->get_string(BossFocusLFCameraAimContextConfig_Close_type_id);
-		BossFocusRTCameraAimContextConfig_Close = serialized->get_string(BossFocusRTCameraAimContextConfig_Close_type_id);
-		BossFocusLFCameraAimContextConfig_Far = serialized->get_string(BossFocusLFCameraAimContextConfig_Far_type_id);
-		BossFocusRTCameraAimContextConfig_Far = serialized->get_string(BossFocusRTCameraAimContextConfig_Far_type_id); 
+		BossFocusLFCameraAimContextConfig_Close = serialized->get_string(BossFocusLFCameraAimContextConfig_Close_type_id, {});
+		BossFocusRTCameraAimContextConfig_Close = serialized->get_string(BossFocusRTCameraAimContextConfig_Close_type_id, {});
+		BossFocusLFCameraAimContextConfig_Far = serialized->get_string(BossFocusLFCameraAimContextConfig_Far_type_id, {});
+		BossFocusRTCameraAimContextConfig_Far = serialized->get_string(BossFocusRTCameraAimContextConfig_Far_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

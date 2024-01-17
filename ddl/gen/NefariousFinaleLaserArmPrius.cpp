@@ -7,15 +7,15 @@
 
 namespace rivet::ddl::generated {
 	NefariousFinaleLaserArmPrius::NefariousFinaleLaserArmPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): NefariousFinaleWeaponPrius(serialized) {
-		AimRefX = serialized->get_float(AimRefX_type_id);
-		AimRefY = serialized->get_float(AimRefY_type_id);
-		AimRefZ = serialized->get_float(AimRefZ_type_id);
-		AimMinH = serialized->get_float(AimMinH_type_id);
-		AimCenterH = serialized->get_float(AimCenterH_type_id);
-		AimMaxH = serialized->get_float(AimMaxH_type_id);
-		AimMinV = serialized->get_float(AimMinV_type_id);
-		AimCenterV = serialized->get_float(AimCenterV_type_id);
-		AimMaxV = serialized->get_float(AimMaxV_type_id); 
+		AimRefX = serialized->get_float(AimRefX_type_id, 0.000000);
+		AimRefY = serialized->get_float(AimRefY_type_id, 15.000000);
+		AimRefZ = serialized->get_float(AimRefZ_type_id, 36.000000);
+		AimMinH = serialized->get_float(AimMinH_type_id, -110.000000);
+		AimCenterH = serialized->get_float(AimCenterH_type_id, 0.000000);
+		AimMaxH = serialized->get_float(AimMaxH_type_id, 110.000000);
+		AimMinV = serialized->get_float(AimMinV_type_id, -45.000000);
+		AimCenterV = serialized->get_float(AimCenterV_type_id, 0.000000);
+		AimMaxV = serialized->get_float(AimMaxV_type_id, 45.000000); 
 	}
 
 	[[nodiscard]] auto

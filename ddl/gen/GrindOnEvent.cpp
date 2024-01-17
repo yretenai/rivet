@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	GrindOnEvent::GrindOnEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Material = serialized->get_enum<rivet::ddl::generated::x10b3c4cf>(Material_type_id, rivet::ddl::generated::x10b3c4cf_values);
-		IsDoubleJumpLand = serialized->get_bool(IsDoubleJumpLand_type_id);
-		IsTransferLand = serialized->get_bool(IsTransferLand_type_id); 
+		Material = serialized->get_enum<rivet::ddl::generated::x10b3c4cf>(Material_type_id, rivet::ddl::generated::x10b3c4cf_values, rivet::ddl::generated::x10b3c4cf::None);
+		IsDoubleJumpLand = serialized->get_bool(IsDoubleJumpLand_type_id, false);
+		IsTransferLand = serialized->get_bool(IsTransferLand_type_id, false); 
 	}
 
 	[[nodiscard]] auto

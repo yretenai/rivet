@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	BotMovementEventsPrius::BotMovementEventsPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MovementSpeedThreshold = serialized->get_float(MovementSpeedThreshold_type_id);
-		DurationThreshold = serialized->get_float(DurationThreshold_type_id); 
+		MovementSpeedThreshold = serialized->get_float(MovementSpeedThreshold_type_id, 0.500000);
+		DurationThreshold = serialized->get_float(DurationThreshold_type_id, 0.500000); 
 	}
 
 	[[nodiscard]] auto

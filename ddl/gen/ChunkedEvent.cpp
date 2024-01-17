@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	ChunkedEvent::ChunkedEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		ChunkingComponentName = serialized->get_string(ChunkingComponentName_type_id);
-		ConfigurationName = serialized->get_string(ConfigurationName_type_id);
+		ChunkingComponentName = serialized->get_string(ChunkingComponentName_type_id, {});
+		ConfigurationName = serialized->get_string(ConfigurationName_type_id, {});
 		HitDirection = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(HitDirection_type_id); 
 	}
 

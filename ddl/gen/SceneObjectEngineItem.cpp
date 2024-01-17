@@ -10,12 +10,12 @@
 
 namespace rivet::ddl::generated {
 	SceneObjectEngineItem::SceneObjectEngineItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SceneObjectType = serialized->get_enum<rivet::ddl::generated::xd90ff0f4>(SceneObjectType_type_id, rivet::ddl::generated::xd90ff0f4_values);
+		SceneObjectType = serialized->get_enum<rivet::ddl::generated::xd90ff0f4>(SceneObjectType_type_id, rivet::ddl::generated::xd90ff0f4_values, rivet::ddl::generated::xd90ff0f4::Invalid);
 		WorldMatrix = serialized->unwrap_into<rivet::ddl::generated::DDLMatrix4>(WorldMatrix_type_id);
 		ObjSpaceBounds = serialized->unwrap_into<rivet::ddl::generated::DDLAABB>(ObjSpaceBounds_type_id);
-		CreatedBy = serialized->get_enum<rivet::ddl::generated::xcc3b3a79>(CreatedBy_type_id, rivet::ddl::generated::xcc3b3a79_values);
-		ChangedBy = serialized->get_enum<rivet::ddl::generated::xcc3b3a79>(ChangedBy_type_id, rivet::ddl::generated::xcc3b3a79_values);
-		EngineId = serialized->get_uint64(EngineId_type_id); 
+		CreatedBy = serialized->get_enum<rivet::ddl::generated::xcc3b3a79>(CreatedBy_type_id, rivet::ddl::generated::xcc3b3a79_values, rivet::ddl::generated::xcc3b3a79::Editor);
+		ChangedBy = serialized->get_enum<rivet::ddl::generated::xcc3b3a79>(ChangedBy_type_id, rivet::ddl::generated::xcc3b3a79_values, rivet::ddl::generated::xcc3b3a79::Editor);
+		EngineId = serialized->get_uint64(EngineId_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

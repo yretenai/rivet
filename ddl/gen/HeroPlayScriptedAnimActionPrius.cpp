@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	HeroPlayScriptedAnimActionPrius::HeroPlayScriptedAnimActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		AllowOffers = serialized->get_bool(AllowOffers_type_id);
-		AsOverlapPartial = serialized->get_bool(AsOverlapPartial_type_id);
-		StopOnPlayerInput = serialized->get_bool(StopOnPlayerInput_type_id);
-		ExitToRelaxedIdle = serialized->get_bool(ExitToRelaxedIdle_type_id);
-		AllowEarlyTransition = serialized->get_bool(AllowEarlyTransition_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Hero);
+		AllowOffers = serialized->get_bool(AllowOffers_type_id, false);
+		AsOverlapPartial = serialized->get_bool(AsOverlapPartial_type_id, false);
+		StopOnPlayerInput = serialized->get_bool(StopOnPlayerInput_type_id, false);
+		ExitToRelaxedIdle = serialized->get_bool(ExitToRelaxedIdle_type_id, false);
+		AllowEarlyTransition = serialized->get_bool(AllowEarlyTransition_type_id, false); 
 	}
 
 	[[nodiscard]] auto

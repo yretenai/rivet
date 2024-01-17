@@ -7,13 +7,13 @@
 
 namespace rivet::ddl::generated {
 	AnimListElement::AnimListElement([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AnimationName = serialized->get_string(AnimationName_type_id);
-		Priority = serialized->get_uint32(Priority_type_id);
-		PlayOnce = serialized->get_bool(PlayOnce_type_id);
-		OverrideAlways = serialized->get_bool(OverrideAlways_type_id);
-		OverrideByPriority = serialized->get_bool(OverrideByPriority_type_id);
-		OverrideSameAnim = serialized->get_bool(OverrideSameAnim_type_id);
-		OverrideAnimNotInMap = serialized->get_bool(OverrideAnimNotInMap_type_id); 
+		AnimationName = serialized->get_string(AnimationName_type_id, {});
+		Priority = serialized->get_uint32(Priority_type_id, 0);
+		PlayOnce = serialized->get_bool(PlayOnce_type_id, false);
+		OverrideAlways = serialized->get_bool(OverrideAlways_type_id, false);
+		OverrideByPriority = serialized->get_bool(OverrideByPriority_type_id, true);
+		OverrideSameAnim = serialized->get_bool(OverrideSameAnim_type_id, true);
+		OverrideAnimNotInMap = serialized->get_bool(OverrideAnimNotInMap_type_id, false); 
 	}
 
 	[[nodiscard]] auto

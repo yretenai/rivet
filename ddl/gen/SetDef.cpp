@@ -7,14 +7,14 @@
 
 namespace rivet::ddl::generated {
 	SetDef::SetDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SetID = serialized->get_enum<rivet::ddl::generated::xa57aac73>(SetID_type_id, rivet::ddl::generated::xa57aac73_values);
-		SetNameLocTag = serialized->get_string(SetNameLocTag_type_id);
-		TempSetName = serialized->get_string(TempSetName_type_id);
-		SetDescLocTag = serialized->get_string(SetDescLocTag_type_id);
-		TempSetDesc = serialized->get_string(TempSetDesc_type_id);
+		SetID = serialized->get_enum<rivet::ddl::generated::xa57aac73>(SetID_type_id, rivet::ddl::generated::xa57aac73_values, rivet::ddl::generated::xa57aac73::Veldin);
+		SetNameLocTag = serialized->get_string(SetNameLocTag_type_id, "INVALID");
+		TempSetName = serialized->get_string(TempSetName_type_id, "temp name");
+		SetDescLocTag = serialized->get_string(SetDescLocTag_type_id, "INVALID");
+		TempSetDesc = serialized->get_string(TempSetDesc_type_id, "temp desc");
 		CardIDs = serialized->get_enums<rivet::ddl::generated::x507460e6>(CardIDs_type_id, rivet::ddl::generated::x507460e6_values);
-		Bonus = serialized->get_enum<rivet::ddl::generated::BonusType>(Bonus_type_id, rivet::ddl::generated::BonusType_values);
-		BonusAmount = serialized->get_float(BonusAmount_type_id); 
+		Bonus = serialized->get_enum<rivet::ddl::generated::BonusType>(Bonus_type_id, rivet::ddl::generated::BonusType_values, rivet::ddl::generated::BonusType::None);
+		BonusAmount = serialized->get_float(BonusAmount_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

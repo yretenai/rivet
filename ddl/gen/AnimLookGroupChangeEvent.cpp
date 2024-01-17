@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	AnimLookGroupChangeEvent::AnimLookGroupChangeEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		DisableLookGroup = serialized->get_string(DisableLookGroup_type_id);
-		EnableLookGroup = serialized->get_string(EnableLookGroup_type_id);
-		ApplyLookGroup = serialized->get_string(ApplyLookGroup_type_id); 
+		DisableLookGroup = serialized->get_string(DisableLookGroup_type_id, {});
+		EnableLookGroup = serialized->get_string(EnableLookGroup_type_id, {});
+		ApplyLookGroup = serialized->get_string(ApplyLookGroup_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

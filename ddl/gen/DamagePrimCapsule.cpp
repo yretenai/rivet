@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	DamagePrimCapsule::DamagePrimCapsule([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): DamagePrimBase(serialized) {
-		DamageRadius = serialized->get_float(DamageRadius_type_id); 
+		DamageRadius = serialized->get_float(DamageRadius_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

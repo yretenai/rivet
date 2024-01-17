@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	FollowCurveActionPrius::FollowCurveActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		DoSmoothTransition = serialized->get_bool(DoSmoothTransition_type_id);
-		UseClosestPoint = serialized->get_bool(UseClosestPoint_type_id);
-		AddUnsyncedComponents = serialized->get_bool(AddUnsyncedComponents_type_id);
-		StopListeningAtEnd = serialized->get_bool(StopListeningAtEnd_type_id);
-		SkipIntroPath = serialized->get_bool(SkipIntroPath_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Curve_Follower);
+		DoSmoothTransition = serialized->get_bool(DoSmoothTransition_type_id, false);
+		UseClosestPoint = serialized->get_bool(UseClosestPoint_type_id, false);
+		AddUnsyncedComponents = serialized->get_bool(AddUnsyncedComponents_type_id, false);
+		StopListeningAtEnd = serialized->get_bool(StopListeningAtEnd_type_id, true);
+		SkipIntroPath = serialized->get_bool(SkipIntroPath_type_id, false); 
 	}
 
 	[[nodiscard]] auto

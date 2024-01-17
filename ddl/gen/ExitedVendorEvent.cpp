@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	ExitedVendorEvent::ExitedVendorEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		PurchasedItem = serialized->get_string(PurchasedItem_type_id);
-		AnimName = serialized->get_string(AnimName_type_id); 
+		PurchasedItem = serialized->get_string(PurchasedItem_type_id, {});
+		AnimName = serialized->get_string(AnimName_type_id, "Pickup_Item"); 
 	}
 
 	[[nodiscard]] auto

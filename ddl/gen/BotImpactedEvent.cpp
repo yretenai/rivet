@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	BotImpactedEvent::BotImpactedEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Material = serialized->get_enum<rivet::ddl::generated::x10b3c4cf>(Material_type_id, rivet::ddl::generated::x10b3c4cf_values);
-		Stationary = serialized->get_bool(Stationary_type_id); 
+		Material = serialized->get_enum<rivet::ddl::generated::x10b3c4cf>(Material_type_id, rivet::ddl::generated::x10b3c4cf_values, rivet::ddl::generated::x10b3c4cf::None);
+		Stationary = serialized->get_bool(Stationary_type_id, true); 
 	}
 
 	[[nodiscard]] auto

@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	AutoShadowZoneOverlayData::AutoShadowZoneOverlayData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): RegionGameDataBase(serialized) {
-		Zone = serialized->get_string(Zone_type_id); 
+		Zone = serialized->get_string(Zone_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

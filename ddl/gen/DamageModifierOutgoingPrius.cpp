@@ -27,7 +27,7 @@
 
 namespace rivet::ddl::generated {
 	DamageModifierOutgoingPrius::DamageModifierOutgoingPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ModifierName = serialized->get_string(ModifierName_type_id);
+		ModifierName = serialized->get_string(ModifierName_type_id, {});
 		Conditions = serialized->unwrap_into_many<rivet::ddl::generated::DamageModifierConditionEntry>(Conditions_type_id); 
 	}
 

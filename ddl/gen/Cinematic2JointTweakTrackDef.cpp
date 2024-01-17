@@ -12,12 +12,12 @@
 
 namespace rivet::ddl::generated {
 	Cinematic2JointTweakTrackDef::Cinematic2JointTweakTrackDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Id = serialized->get_uint64(Id_type_id);
-		Name = serialized->get_string(Name_type_id);
-		PlatformFilter = serialized->get_bitset<rivet::ddl::generated::xb52df7e7>(PlatformFilter_type_id, rivet::ddl::generated::xb52df7e7_values);
+		Id = serialized->get_uint64(Id_type_id, 0);
+		Name = serialized->get_string(Name_type_id, {});
+		PlatformFilter = serialized->get_bitset<rivet::ddl::generated::xb52df7e7>(PlatformFilter_type_id, rivet::ddl::generated::xb52df7e7_values, 7);
 		Tags = serialized->unwrap_into<rivet::ddl::generated::Cinematic2TrackTagsDef>(Tags_type_id);
-		Global = serialized->get_bool(Global_type_id);
-		JointName = serialized->get_string(JointName_type_id);
+		Global = serialized->get_bool(Global_type_id, false);
+		JointName = serialized->get_string(JointName_type_id, {});
 		Rotation = serialized->unwrap_into<rivet::ddl::generated::Cinematic2RotationCurveTrackDef>(Rotation_type_id);
 		Scale = serialized->unwrap_into<rivet::ddl::generated::Cinematic2ScaleCurveTrackDef>(Scale_type_id);
 		Translation = serialized->unwrap_into<rivet::ddl::generated::Cinematic2TranslationCurveTrackDef>(Translation_type_id); 

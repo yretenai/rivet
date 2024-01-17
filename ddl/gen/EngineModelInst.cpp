@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	EngineModelInst::EngineModelInst([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Path = serialized->get_string(Path_type_id);
-		Type = serialized->get_enum<rivet::ddl::generated::ModelInstType>(Type_type_id, rivet::ddl::generated::ModelInstType_values); 
+		Path = serialized->get_string(Path_type_id, {});
+		Type = serialized->get_enum<rivet::ddl::generated::ModelInstType>(Type_type_id, rivet::ddl::generated::ModelInstType_values, rivet::ddl::generated::ModelInstType::Model); 
 	}
 
 	[[nodiscard]] auto

@@ -9,13 +9,13 @@
 
 namespace rivet::ddl::generated {
 	PlaceDecalOnActivatePrius::PlaceDecalOnActivatePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Delay = serialized->get_float(Delay_type_id);
-		DecalMaterial = serialized->get_string(DecalMaterial_type_id);
-		DecalLifetime = serialized->get_float(DecalLifetime_type_id);
-		DecalFadeDist = serialized->get_float(DecalFadeDist_type_id);
-		DecalFadeTime = serialized->get_float(DecalFadeTime_type_id);
-		DecalAlpha = serialized->get_float(DecalAlpha_type_id);
-		SkipBots = serialized->get_bool(SkipBots_type_id);
+		Delay = serialized->get_float(Delay_type_id, 0.000000);
+		DecalMaterial = serialized->get_string(DecalMaterial_type_id, {});
+		DecalLifetime = serialized->get_float(DecalLifetime_type_id, -1.000000);
+		DecalFadeDist = serialized->get_float(DecalFadeDist_type_id, -1.000000);
+		DecalFadeTime = serialized->get_float(DecalFadeTime_type_id, -1.000000);
+		DecalAlpha = serialized->get_float(DecalAlpha_type_id, 1.000000);
+		SkipBots = serialized->get_bool(SkipBots_type_id, false);
 		DecalOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(DecalOffset_type_id); 
 	}
 

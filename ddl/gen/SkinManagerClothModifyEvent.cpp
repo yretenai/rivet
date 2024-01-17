@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	SkinManagerClothModifyEvent::SkinManagerClothModifyEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Damping = serialized->get_float(Damping_type_id);
+		Damping = serialized->get_float(Damping_type_id, 0.200000);
 		Gravity = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Gravity_type_id); 
 	}
 

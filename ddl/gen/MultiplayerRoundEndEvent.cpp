@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	MultiplayerRoundEndEvent::MultiplayerRoundEndEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Reason = serialized->get_enum<rivet::ddl::generated::x33ef665a>(Reason_type_id, rivet::ddl::generated::x33ef665a_values); 
+		Reason = serialized->get_enum<rivet::ddl::generated::x33ef665a>(Reason_type_id, rivet::ddl::generated::x33ef665a_values, rivet::ddl::generated::x33ef665a::none); 
 	}
 
 	[[nodiscard]] auto

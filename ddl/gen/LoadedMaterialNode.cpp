@@ -9,11 +9,11 @@
 
 namespace rivet::ddl::generated {
 	LoadedMaterialNode::LoadedMaterialNode([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SourceFileFullPath = serialized->get_string(SourceFileFullPath_type_id);
-		LibraryName = serialized->get_string(LibraryName_type_id);
-		FromLibraryFile = serialized->get_bool(FromLibraryFile_type_id);
-		Id = serialized->get_uint32(Id_type_id);
-		Name = serialized->get_string(Name_type_id);
+		SourceFileFullPath = serialized->get_string(SourceFileFullPath_type_id, {});
+		LibraryName = serialized->get_string(LibraryName_type_id, {});
+		FromLibraryFile = serialized->get_bool(FromLibraryFile_type_id, false);
+		Id = serialized->get_uint32(Id_type_id, 0);
+		Name = serialized->get_string(Name_type_id, {});
 		Node = serialized->unwrap_into<rivet::ddl::generated::MaterialNode>(Node_type_id); 
 	}
 

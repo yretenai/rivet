@@ -9,11 +9,11 @@
 
 namespace rivet::ddl::generated {
 	ProjectileWarnedEvent::ProjectileWarnedEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		TimeLeft = serialized->get_float(TimeLeft_type_id);
-		Radius = serialized->get_float(Radius_type_id);
-		UseWarnPosition = serialized->get_bool(UseWarnPosition_type_id);
+		TimeLeft = serialized->get_float(TimeLeft_type_id, 1.000000);
+		Radius = serialized->get_float(Radius_type_id, 1.000000);
+		UseWarnPosition = serialized->get_bool(UseWarnPosition_type_id, false);
 		WarnPosition = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(WarnPosition_type_id);
-		WarnFriends = serialized->get_bool(WarnFriends_type_id); 
+		WarnFriends = serialized->get_bool(WarnFriends_type_id, true); 
 	}
 
 	[[nodiscard]] auto

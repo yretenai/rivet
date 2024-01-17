@@ -10,8 +10,8 @@
 
 namespace rivet::ddl::generated {
 	PickupItemPrius::PickupItemPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): PickupSharedPrius(serialized) {
-		ItemConfig = serialized->get_string(ItemConfig_type_id);
-		Count = serialized->get_uint32(Count_type_id); 
+		ItemConfig = serialized->get_string(ItemConfig_type_id, {});
+		Count = serialized->get_uint32(Count_type_id, 1); 
 	}
 
 	[[nodiscard]] auto

@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	GetScreenCoordinateActionPrius::GetScreenCoordinateActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::UI);
 		ScreenSize = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(ScreenSize_type_id); 
 	}
 

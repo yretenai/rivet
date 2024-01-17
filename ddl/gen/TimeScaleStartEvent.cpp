@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	TimeScaleStartEvent::TimeScaleStartEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		IsEnabled = serialized->get_bool(IsEnabled_type_id);
+		IsEnabled = serialized->get_bool(IsEnabled_type_id, true);
 		Data = serialized->unwrap_into<rivet::ddl::generated::TimeScaleBasePrius>(Data_type_id); 
 	}
 

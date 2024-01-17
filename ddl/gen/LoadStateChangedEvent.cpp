@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	LoadStateChangedEvent::LoadStateChangedEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		ChangeType = serialized->get_enum<rivet::ddl::generated::x6b4f547f>(ChangeType_type_id, rivet::ddl::generated::x6b4f547f_values); 
+		ChangeType = serialized->get_enum<rivet::ddl::generated::x6b4f547f>(ChangeType_type_id, rivet::ddl::generated::x6b4f547f_values, rivet::ddl::generated::x6b4f547f::InitializedZones); 
 	}
 
 	[[nodiscard]] auto

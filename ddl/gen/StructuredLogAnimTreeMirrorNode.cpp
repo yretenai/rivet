@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	StructuredLogAnimTreeMirrorNode::StructuredLogAnimTreeMirrorNode([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): StructuredLogAnimTreeNode(serialized) {
-		Axis = serialized->get_enum<rivet::ddl::generated::x1c49d08a>(Axis_type_id, rivet::ddl::generated::x1c49d08a_values); 
+		Axis = serialized->get_enum<rivet::ddl::generated::x1c49d08a>(Axis_type_id, rivet::ddl::generated::x1c49d08a_values, rivet::ddl::generated::x1c49d08a::AnimMirrorYZ); 
 	}
 
 	[[nodiscard]] auto

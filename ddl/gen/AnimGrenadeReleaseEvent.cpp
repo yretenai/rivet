@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	AnimGrenadeReleaseEvent::AnimGrenadeReleaseEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		EmitLocatorOverride = serialized->get_string(EmitLocatorOverride_type_id); 
+		EmitLocatorOverride = serialized->get_string(EmitLocatorOverride_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

@@ -10,8 +10,8 @@
 
 namespace rivet::ddl::generated {
 	TestAnimalSubstruct2::TestAnimalSubstruct2([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		HiddenField = serialized->get_string(HiddenField_type_id);
-		Owner = serialized->get_string(Owner_type_id);
+		HiddenField = serialized->get_string(HiddenField_type_id, {});
+		Owner = serialized->get_string(Owner_type_id, {});
 		Pet = serialized->unwrap_into<rivet::ddl::generated::TestAnimal>(Pet_type_id);
 		Proof = serialized->unwrap_into<rivet::ddl::generated::Proof4>(Proof_type_id); 
 	}

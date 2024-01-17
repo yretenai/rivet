@@ -11,11 +11,11 @@
 
 namespace rivet::ddl::generated {
 	ShellCasingData::ShellCasingData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ShellAsset = serialized->get_string(ShellAsset_type_id);
-		LifetimeMin = serialized->get_float(LifetimeMin_type_id);
-		LifetimeMax = serialized->get_float(LifetimeMax_type_id);
-		EjectSpeedMin = serialized->get_float(EjectSpeedMin_type_id);
-		EjectSpeedMax = serialized->get_float(EjectSpeedMax_type_id);
+		ShellAsset = serialized->get_string(ShellAsset_type_id, {});
+		LifetimeMin = serialized->get_float(LifetimeMin_type_id, 20.000000);
+		LifetimeMax = serialized->get_float(LifetimeMax_type_id, 40.000000);
+		EjectSpeedMin = serialized->get_float(EjectSpeedMin_type_id, 10.000000);
+		EjectSpeedMax = serialized->get_float(EjectSpeedMax_type_id, 25.000000);
 		EjectSpinMin = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(EjectSpinMin_type_id);
 		EjectSpinMax = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(EjectSpinMax_type_id); 
 	}

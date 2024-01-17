@@ -10,7 +10,7 @@
 namespace rivet::ddl::generated {
 	DoorSlidePrius::DoorSlidePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): DoorPrius(serialized) {
 		OpenOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(OpenOffset_type_id);
-		SlideTime = serialized->get_float(SlideTime_type_id); 
+		SlideTime = serialized->get_float(SlideTime_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

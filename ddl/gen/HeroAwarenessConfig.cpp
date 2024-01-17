@@ -7,26 +7,26 @@
 
 namespace rivet::ddl::generated {
 	HeroAwarenessConfig::HeroAwarenessConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		HeadTurnActivateMaxSpeed = serialized->get_float(HeadTurnActivateMaxSpeed_type_id);
-		HeadTurnActivateAccel = serialized->get_float(HeadTurnActivateAccel_type_id);
-		HeadTurnActivateDecel = serialized->get_float(HeadTurnActivateDecel_type_id);
-		HeadTurnRecoveryMaxSpeed = serialized->get_float(HeadTurnRecoveryMaxSpeed_type_id);
-		HeadTurnRecoveryAccel = serialized->get_float(HeadTurnRecoveryAccel_type_id);
-		HeadTurnRecoveryDecel = serialized->get_float(HeadTurnRecoveryDecel_type_id);
-		HeadTurnMaxYaw = serialized->get_float(HeadTurnMaxYaw_type_id);
-		HeadTurnMaxPitch = serialized->get_float(HeadTurnMaxPitch_type_id);
-		HeadLookDriverCooldown = serialized->get_float(HeadLookDriverCooldown_type_id);
-		AimAssistTargetRange = serialized->get_float(AimAssistTargetRange_type_id);
-		AimAssistTargetDecayTime = serialized->get_float(AimAssistTargetDecayTime_type_id);
-		RecentAttackerRange = serialized->get_float(RecentAttackerRange_type_id);
-		RecentAttackerMaxAge = serialized->get_float(RecentAttackerMaxAge_type_id);
-		PointOfInterestRange = serialized->get_float(PointOfInterestRange_type_id);
-		NPCRange = serialized->get_float(NPCRange_type_id);
-		NPCKeepTargetDuration = serialized->get_float(NPCKeepTargetDuration_type_id);
-		EnemyRange = serialized->get_float(EnemyRange_type_id);
-		EnemyCheckInterval = serialized->get_float(EnemyCheckInterval_type_id);
-		TraversalRange = serialized->get_float(TraversalRange_type_id);
-		TraversalMaxAge = serialized->get_float(TraversalMaxAge_type_id); 
+		HeadTurnActivateMaxSpeed = serialized->get_float(HeadTurnActivateMaxSpeed_type_id, 225.000000);
+		HeadTurnActivateAccel = serialized->get_float(HeadTurnActivateAccel_type_id, 450.000000);
+		HeadTurnActivateDecel = serialized->get_float(HeadTurnActivateDecel_type_id, 450.000000);
+		HeadTurnRecoveryMaxSpeed = serialized->get_float(HeadTurnRecoveryMaxSpeed_type_id, 225.000000);
+		HeadTurnRecoveryAccel = serialized->get_float(HeadTurnRecoveryAccel_type_id, 450.000000);
+		HeadTurnRecoveryDecel = serialized->get_float(HeadTurnRecoveryDecel_type_id, 450.000000);
+		HeadTurnMaxYaw = serialized->get_float(HeadTurnMaxYaw_type_id, 90.000000);
+		HeadTurnMaxPitch = serialized->get_float(HeadTurnMaxPitch_type_id, 40.000000);
+		HeadLookDriverCooldown = serialized->get_float(HeadLookDriverCooldown_type_id, 0.500000);
+		AimAssistTargetRange = serialized->get_float(AimAssistTargetRange_type_id, 10.000000);
+		AimAssistTargetDecayTime = serialized->get_float(AimAssistTargetDecayTime_type_id, 5.000000);
+		RecentAttackerRange = serialized->get_float(RecentAttackerRange_type_id, 30.000000);
+		RecentAttackerMaxAge = serialized->get_float(RecentAttackerMaxAge_type_id, 5.000000);
+		PointOfInterestRange = serialized->get_float(PointOfInterestRange_type_id, 10.000000);
+		NPCRange = serialized->get_float(NPCRange_type_id, 15.000000);
+		NPCKeepTargetDuration = serialized->get_float(NPCKeepTargetDuration_type_id, 5.000000);
+		EnemyRange = serialized->get_float(EnemyRange_type_id, 20.000000);
+		EnemyCheckInterval = serialized->get_float(EnemyCheckInterval_type_id, 10.000000);
+		TraversalRange = serialized->get_float(TraversalRange_type_id, 10.000000);
+		TraversalMaxAge = serialized->get_float(TraversalMaxAge_type_id, 7.500000); 
 	}
 
 	[[nodiscard]] auto

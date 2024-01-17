@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	EmergentVOManagerBasePrius::EmergentVOManagerBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EmergentVOBasePrius(serialized) {
-		Voice = serialized->get_enum<rivet::ddl::generated::Voice>(Voice_type_id, rivet::ddl::generated::Voice_values);
-		EnableInMultiplayer = serialized->get_bool(EnableInMultiplayer_type_id); 
+		Voice = serialized->get_enum<rivet::ddl::generated::Voice>(Voice_type_id, rivet::ddl::generated::Voice_values, rivet::ddl::generated::Voice::unused);
+		EnableInMultiplayer = serialized->get_bool(EnableInMultiplayer_type_id, true); 
 	}
 
 	[[nodiscard]] auto

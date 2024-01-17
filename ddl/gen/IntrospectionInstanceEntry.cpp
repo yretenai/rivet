@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	IntrospectionInstanceEntry::IntrospectionInstanceEntry([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AssetId = serialized->get_uint64(AssetId_type_id);
+		AssetId = serialized->get_uint64(AssetId_type_id, 0);
 		BSphere = serialized->unwrap_into<rivet::ddl::generated::DDLVector4>(BSphere_type_id); 
 	}
 

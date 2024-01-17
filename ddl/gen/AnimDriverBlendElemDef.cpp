@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	AnimDriverBlendElemDef::AnimDriverBlendElemDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		RefNodeName = serialized->get_string(RefNodeName_type_id);
-		OutputIndex = serialized->get_uint32(OutputIndex_type_id);
-		SmoothType = serialized->get_enum<rivet::ddl::generated::xfd5aa1cb>(SmoothType_type_id, rivet::ddl::generated::xfd5aa1cb_values);
-		Start = serialized->get_float(Start_type_id);
-		End = serialized->get_float(End_type_id); 
+		RefNodeName = serialized->get_string(RefNodeName_type_id, "");
+		OutputIndex = serialized->get_uint32(OutputIndex_type_id, 0);
+		SmoothType = serialized->get_enum<rivet::ddl::generated::xfd5aa1cb>(SmoothType_type_id, rivet::ddl::generated::xfd5aa1cb_values, rivet::ddl::generated::xfd5aa1cb::Linear);
+		Start = serialized->get_float(Start_type_id, 0.000000);
+		End = serialized->get_float(End_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

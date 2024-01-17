@@ -9,13 +9,13 @@
 
 namespace rivet::ddl::generated {
 	ECMEffectNodeDef::ECMEffectNodeDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		NodeId = serialized->get_uint64(NodeId_type_id);
-		XPos = serialized->get_int32(XPos_type_id);
-		YPos = serialized->get_int32(YPos_type_id);
-		Collapsed = serialized->get_bool(Collapsed_type_id);
-		Type = serialized->get_enum<rivet::ddl::generated::x7d682dac>(Type_type_id, rivet::ddl::generated::x7d682dac_values);
+		NodeId = serialized->get_uint64(NodeId_type_id, 0);
+		XPos = serialized->get_int32(XPos_type_id, 0);
+		YPos = serialized->get_int32(YPos_type_id, 0);
+		Collapsed = serialized->get_bool(Collapsed_type_id, false);
+		Type = serialized->get_enum<rivet::ddl::generated::x7d682dac>(Type_type_id, rivet::ddl::generated::x7d682dac_values, rivet::ddl::generated::x7d682dac::VFX_KeyFrame_Modifier);
 		Connections = serialized->unwrap_into_many<rivet::ddl::generated::ECMNodeConnection>(Connections_type_id);
-		Enabled = serialized->get_bool(Enabled_type_id);
+		Enabled = serialized->get_bool(Enabled_type_id, true);
 		ResponseEventFields = serialized->get_field(ResponseEventFields_type_id); 
 	}
 

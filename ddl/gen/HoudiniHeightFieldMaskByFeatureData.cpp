@@ -9,16 +9,16 @@
 
 namespace rivet::ddl::generated {
 	HoudiniHeightFieldMaskByFeatureData::HoudiniHeightFieldMaskByFeatureData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MaskByCurvature = serialized->get_bool(MaskByCurvature_type_id);
-		ParamCurvatureMax = serialized->get_float(ParamCurvatureMax_type_id);
-		MaskByDirection = serialized->get_bool(MaskByDirection_type_id);
-		ParamDirectionAngle = serialized->get_float(ParamDirectionAngle_type_id);
-		ParamDirectionSpread = serialized->get_float(ParamDirectionSpread_type_id);
-		MaskByHeight = serialized->get_bool(MaskByHeight_type_id);
+		MaskByCurvature = serialized->get_bool(MaskByCurvature_type_id, false);
+		ParamCurvatureMax = serialized->get_float(ParamCurvatureMax_type_id, 20.000000);
+		MaskByDirection = serialized->get_bool(MaskByDirection_type_id, false);
+		ParamDirectionAngle = serialized->get_float(ParamDirectionAngle_type_id, 0.000000);
+		ParamDirectionSpread = serialized->get_float(ParamDirectionSpread_type_id, 30.000000);
+		MaskByHeight = serialized->get_bool(MaskByHeight_type_id, false);
 		ParamHeightRange = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(ParamHeightRange_type_id);
-		MaskByOcclusion = serialized->get_bool(MaskByOcclusion_type_id);
+		MaskByOcclusion = serialized->get_bool(MaskByOcclusion_type_id, false);
 		ParamOcclusionRange = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(ParamOcclusionRange_type_id);
-		MaskBySlope = serialized->get_bool(MaskBySlope_type_id);
+		MaskBySlope = serialized->get_bool(MaskBySlope_type_id, false);
 		ParamSlopeRange = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(ParamSlopeRange_type_id); 
 	}
 

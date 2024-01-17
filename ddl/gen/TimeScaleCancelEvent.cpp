@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	TimeScaleCancelEvent::TimeScaleCancelEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Channel = serialized->get_enum<rivet::ddl::generated::xd4d128f9>(Channel_type_id, rivet::ddl::generated::xd4d128f9_values); 
+		Channel = serialized->get_enum<rivet::ddl::generated::xd4d128f9>(Channel_type_id, rivet::ddl::generated::xd4d128f9_values, rivet::ddl::generated::xd4d128f9::HeroMelee); 
 	}
 
 	[[nodiscard]] auto

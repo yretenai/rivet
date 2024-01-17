@@ -9,35 +9,35 @@
 
 namespace rivet::ddl::generated {
 	ThrowProjectileData::ThrowProjectileData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ShotConfig = serialized->get_string(ShotConfig_type_id);
-		DamageRequestId = serialized->get_string(DamageRequestId_type_id);
-		IntroDriver = serialized->get_string(IntroDriver_type_id);
-		ThrowDriver = serialized->get_string(ThrowDriver_type_id);
-		EmitLocator = serialized->get_string(EmitLocator_type_id);
-		IntroDuration = serialized->get_float(IntroDuration_type_id);
-		WindUpDuration = serialized->get_float(WindUpDuration_type_id);
-		ActiveDuration = serialized->get_float(ActiveDuration_type_id);
-		RecoveryDuration = serialized->get_float(RecoveryDuration_type_id);
-		EnableTrackingDuringThrow = serialized->get_bool(EnableTrackingDuringThrow_type_id);
-		EnableTrackingWhenRotationIsDisabled = serialized->get_bool(EnableTrackingWhenRotationIsDisabled_type_id);
-		AimInXZ = serialized->get_bool(AimInXZ_type_id);
-		CanDropProjectile = serialized->get_bool(CanDropProjectile_type_id);
-		UseTargetDataForAim = serialized->get_bool(UseTargetDataForAim_type_id);
-		AimIsEmitForward = serialized->get_bool(AimIsEmitForward_type_id);
-		UseLastNavPosition = serialized->get_bool(UseLastNavPosition_type_id);
-		RequireClearArc = serialized->get_bool(RequireClearArc_type_id);
+		ShotConfig = serialized->get_string(ShotConfig_type_id, {});
+		DamageRequestId = serialized->get_string(DamageRequestId_type_id, {});
+		IntroDriver = serialized->get_string(IntroDriver_type_id, {});
+		ThrowDriver = serialized->get_string(ThrowDriver_type_id, {});
+		EmitLocator = serialized->get_string(EmitLocator_type_id, {});
+		IntroDuration = serialized->get_float(IntroDuration_type_id, -1.000000);
+		WindUpDuration = serialized->get_float(WindUpDuration_type_id, -1.000000);
+		ActiveDuration = serialized->get_float(ActiveDuration_type_id, -1.000000);
+		RecoveryDuration = serialized->get_float(RecoveryDuration_type_id, -1.000000);
+		EnableTrackingDuringThrow = serialized->get_bool(EnableTrackingDuringThrow_type_id, true);
+		EnableTrackingWhenRotationIsDisabled = serialized->get_bool(EnableTrackingWhenRotationIsDisabled_type_id, true);
+		AimInXZ = serialized->get_bool(AimInXZ_type_id, true);
+		CanDropProjectile = serialized->get_bool(CanDropProjectile_type_id, true);
+		UseTargetDataForAim = serialized->get_bool(UseTargetDataForAim_type_id, false);
+		AimIsEmitForward = serialized->get_bool(AimIsEmitForward_type_id, false);
+		UseLastNavPosition = serialized->get_bool(UseLastNavPosition_type_id, true);
+		RequireClearArc = serialized->get_bool(RequireClearArc_type_id, true);
 		DropOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(DropOffset_type_id);
-		OnDodgeWindUpMult = serialized->get_float(OnDodgeWindUpMult_type_id);
-		DesiredLandOffset = serialized->get_float(DesiredLandOffset_type_id);
-		OffScreenLandOffset = serialized->get_float(OffScreenLandOffset_type_id);
-		MaxRotation = serialized->get_float(MaxRotation_type_id);
-		CollIgnoreDist = serialized->get_float(CollIgnoreDist_type_id);
-		ShotCount = serialized->get_int32(ShotCount_type_id);
-		ShotOffsetSide = serialized->get_float(ShotOffsetSide_type_id);
-		ShotWarningActorAsset = serialized->get_string(ShotWarningActorAsset_type_id);
-		ShotWarningInterval = serialized->get_float(ShotWarningInterval_type_id);
-		TargetPredictionAddTime = serialized->get_float(TargetPredictionAddTime_type_id);
-		TargetPredictionMaxTime = serialized->get_float(TargetPredictionMaxTime_type_id); 
+		OnDodgeWindUpMult = serialized->get_float(OnDodgeWindUpMult_type_id, 1.000000);
+		DesiredLandOffset = serialized->get_float(DesiredLandOffset_type_id, 2.500000);
+		OffScreenLandOffset = serialized->get_float(OffScreenLandOffset_type_id, 3.500000);
+		MaxRotation = serialized->get_float(MaxRotation_type_id, 180.000000);
+		CollIgnoreDist = serialized->get_float(CollIgnoreDist_type_id, 0.000000);
+		ShotCount = serialized->get_int32(ShotCount_type_id, 1);
+		ShotOffsetSide = serialized->get_float(ShotOffsetSide_type_id, 0.000000);
+		ShotWarningActorAsset = serialized->get_string(ShotWarningActorAsset_type_id, {});
+		ShotWarningInterval = serialized->get_float(ShotWarningInterval_type_id, 0.375000);
+		TargetPredictionAddTime = serialized->get_float(TargetPredictionAddTime_type_id, 0.000000);
+		TargetPredictionMaxTime = serialized->get_float(TargetPredictionMaxTime_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

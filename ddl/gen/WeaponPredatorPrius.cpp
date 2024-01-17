@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	WeaponPredatorPrius::WeaponPredatorPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): WeaponGamePrius(serialized) {
-		TargetMaterialGraph = serialized->get_string(TargetMaterialGraph_type_id); 
+		TargetMaterialGraph = serialized->get_string(TargetMaterialGraph_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

@@ -10,10 +10,10 @@
 namespace rivet::ddl::generated {
 	HeroPingDevstatsEvent::HeroPingDevstatsEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
 		PlayerPosInfo = serialized->unwrap_into<rivet::ddl::generated::DevstatsPlayerPositionInfo>(PlayerPosInfo_type_id);
-		CurrentHealth = serialized->get_float(CurrentHealth_type_id);
-		MaxHealth = serialized->get_float(MaxHealth_type_id);
-		PlayerState = serialized->get_string(PlayerState_type_id);
-		InCombat = serialized->get_bool(InCombat_type_id); 
+		CurrentHealth = serialized->get_float(CurrentHealth_type_id, -1.000000);
+		MaxHealth = serialized->get_float(MaxHealth_type_id, -1.000000);
+		PlayerState = serialized->get_string(PlayerState_type_id, {});
+		InCombat = serialized->get_bool(InCombat_type_id, false); 
 	}
 
 	[[nodiscard]] auto

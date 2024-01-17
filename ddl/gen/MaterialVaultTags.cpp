@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	MaterialVaultTags::MaterialVaultTags([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Slot = serialized->get_enum<rivet::ddl::generated::x34e3b2d5>(Slot_type_id, rivet::ddl::generated::x34e3b2d5_values); 
+		Slot = serialized->get_enum<rivet::ddl::generated::x34e3b2d5>(Slot_type_id, rivet::ddl::generated::x34e3b2d5_values, rivet::ddl::generated::x34e3b2d5::Model3D); 
 	}
 
 	[[nodiscard]] auto

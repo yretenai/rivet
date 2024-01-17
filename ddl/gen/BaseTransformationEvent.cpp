@@ -11,8 +11,8 @@
 
 namespace rivet::ddl::generated {
 	BaseTransformationEvent::BaseTransformationEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		TransformationState = serialized->get_int32(TransformationState_type_id);
-		InAir = serialized->get_bool(InAir_type_id); 
+		TransformationState = serialized->get_int32(TransformationState_type_id, -1);
+		InAir = serialized->get_bool(InAir_type_id, false); 
 	}
 
 	[[nodiscard]] auto

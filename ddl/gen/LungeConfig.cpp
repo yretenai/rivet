@@ -9,10 +9,10 @@
 
 namespace rivet::ddl::generated {
 	LungeConfig::LungeConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		LungeMinDistance = serialized->get_float(LungeMinDistance_type_id);
-		LungeStartDistance = serialized->get_float(LungeStartDistance_type_id);
-		LungeStartAngle = serialized->get_float(LungeStartAngle_type_id);
-		Cooldown = serialized->get_float(Cooldown_type_id);
+		LungeMinDistance = serialized->get_float(LungeMinDistance_type_id, 1.000000);
+		LungeStartDistance = serialized->get_float(LungeStartDistance_type_id, 5.000000);
+		LungeStartAngle = serialized->get_float(LungeStartAngle_type_id, 45.000000);
+		Cooldown = serialized->get_float(Cooldown_type_id, 0.000000);
 		StateData = serialized->unwrap_into<rivet::ddl::generated::LungeAttackData>(StateData_type_id); 
 	}
 

@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	ConsoleSettings::ConsoleSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Enable = serialized->get_bool(Enable_type_id);
-		Font = serialized->get_string(Font_type_id);
+		Enable = serialized->get_bool(Enable_type_id, false);
+		Font = serialized->get_string(Font_type_id, {});
 		ForegroundColor = serialized->get_uint8s(ForegroundColor_type_id);
 		BackgroundColor = serialized->get_uint8s(BackgroundColor_type_id); 
 	}

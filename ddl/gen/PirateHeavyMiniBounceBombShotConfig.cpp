@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	PirateHeavyMiniBounceBombShotConfig::PirateHeavyMiniBounceBombShotConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		MiniBombActor = serialized->get_string(MiniBombActor_type_id);
+		MiniBombActor = serialized->get_string(MiniBombActor_type_id, {});
 		ShotPrius = serialized->unwrap_into<rivet::ddl::generated::PirateHeavyMiniBounceBombShotPrius>(ShotPrius_type_id); 
 	}
 

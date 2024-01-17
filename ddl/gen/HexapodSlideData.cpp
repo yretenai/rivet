@@ -7,16 +7,16 @@
 
 namespace rivet::ddl::generated {
 	HexapodSlideData::HexapodSlideData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MaxSpeed = serialized->get_float(MaxSpeed_type_id);
-		GravityAccel = serialized->get_float(GravityAccel_type_id);
-		SlidePastTime = serialized->get_float(SlidePastTime_type_id);
-		WalkSpeedHorizontal = serialized->get_float(WalkSpeedHorizontal_type_id);
-		WalkSpeedVertical = serialized->get_float(WalkSpeedVertical_type_id);
-		DashSpeedHorizontal = serialized->get_float(DashSpeedHorizontal_type_id);
-		DashSpeedVertical = serialized->get_float(DashSpeedVertical_type_id);
-		MoveAccel = serialized->get_float(MoveAccel_type_id);
-		SlopeMinDot = serialized->get_float(SlopeMinDot_type_id);
-		SlopeMaxDot = serialized->get_float(SlopeMaxDot_type_id); 
+		MaxSpeed = serialized->get_float(MaxSpeed_type_id, 4.000000);
+		GravityAccel = serialized->get_float(GravityAccel_type_id, 10.000000);
+		SlidePastTime = serialized->get_float(SlidePastTime_type_id, 0.250000);
+		WalkSpeedHorizontal = serialized->get_float(WalkSpeedHorizontal_type_id, 1.000000);
+		WalkSpeedVertical = serialized->get_float(WalkSpeedVertical_type_id, 1.000000);
+		DashSpeedHorizontal = serialized->get_float(DashSpeedHorizontal_type_id, 2.000000);
+		DashSpeedVertical = serialized->get_float(DashSpeedVertical_type_id, 2.000000);
+		MoveAccel = serialized->get_float(MoveAccel_type_id, 10.000000);
+		SlopeMinDot = serialized->get_float(SlopeMinDot_type_id, -0.100000);
+		SlopeMaxDot = serialized->get_float(SlopeMaxDot_type_id, 0.707000); 
 	}
 
 	[[nodiscard]] auto

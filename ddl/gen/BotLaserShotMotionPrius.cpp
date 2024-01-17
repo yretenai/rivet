@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	BotLaserShotMotionPrius::BotLaserShotMotionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ShotMotionBasePrius(serialized) {
-		BotLaserCollType = serialized->get_enum<rivet::ddl::generated::x2056dab2>(BotLaserCollType_type_id, rivet::ddl::generated::x2056dab2_values); 
+		BotLaserCollType = serialized->get_enum<rivet::ddl::generated::x2056dab2>(BotLaserCollType_type_id, rivet::ddl::generated::x2056dab2_values, rivet::ddl::generated::x2056dab2::Default); 
 	}
 
 	[[nodiscard]] auto

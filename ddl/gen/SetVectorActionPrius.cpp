@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	SetVectorActionPrius::SetVectorActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		X = serialized->get_float(X_type_id);
-		Y = serialized->get_float(Y_type_id);
-		Z = serialized->get_float(Z_type_id);
-		UseDefaultsForUnconnectedInputs = serialized->get_bool(UseDefaultsForUnconnectedInputs_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Math);
+		X = serialized->get_float(X_type_id, 0.000000);
+		Y = serialized->get_float(Y_type_id, 0.000000);
+		Z = serialized->get_float(Z_type_id, 0.000000);
+		UseDefaultsForUnconnectedInputs = serialized->get_bool(UseDefaultsForUnconnectedInputs_type_id, true); 
 	}
 
 	[[nodiscard]] auto

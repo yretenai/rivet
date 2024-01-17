@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	AnimVisLinkDataDef::AnimVisLinkDataDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Type = serialized->get_uint16(Type_type_id);
-		Id = serialized->get_uint64(Id_type_id);
-		DataLength = serialized->get_uint32(DataLength_type_id);
-		Data = serialized->get_string(Data_type_id); 
+		Type = serialized->get_uint16(Type_type_id, 0);
+		Id = serialized->get_uint64(Id_type_id, 0);
+		DataLength = serialized->get_uint32(DataLength_type_id, 0);
+		Data = serialized->get_string(Data_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

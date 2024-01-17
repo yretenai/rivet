@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	AddToInventoryActionPrius::AddToInventoryActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		ItemConfig = serialized->get_string(ItemConfig_type_id);
-		Count = serialized->get_uint32(Count_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Inventory);
+		ItemConfig = serialized->get_string(ItemConfig_type_id, {});
+		Count = serialized->get_uint32(Count_type_id, 1); 
 	}
 
 	[[nodiscard]] auto

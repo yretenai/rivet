@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	RobotestBasicActorInfo::RobotestBasicActorInfo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActorTuid = serialized->get_uint64(ActorTuid_type_id);
-		ActorName = serialized->get_string(ActorName_type_id);
-		ModelName = serialized->get_string(ModelName_type_id); 
+		ActorTuid = serialized->get_uint64(ActorTuid_type_id, 0);
+		ActorName = serialized->get_string(ActorName_type_id, {});
+		ModelName = serialized->get_string(ModelName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

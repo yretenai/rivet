@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	PortalIntroSourcePrius::PortalIntroSourcePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Portal = serialized->get_uint64(Portal_type_id);
+		Portal = serialized->get_uint64(Portal_type_id, 0);
 		AdditionalSpawnOffsets = serialized->unwrap_into_many<rivet::ddl::generated::DDLVector3>(AdditionalSpawnOffsets_type_id); 
 	}
 

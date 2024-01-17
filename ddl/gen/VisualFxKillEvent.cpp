@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	VisualFxKillEvent::VisualFxKillEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		TrackedEventName = serialized->get_string(TrackedEventName_type_id);
-		KillImmediate = serialized->get_bool(KillImmediate_type_id); 
+		TrackedEventName = serialized->get_string(TrackedEventName_type_id, {});
+		KillImmediate = serialized->get_bool(KillImmediate_type_id, true); 
 	}
 
 	[[nodiscard]] auto

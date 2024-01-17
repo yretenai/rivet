@@ -13,9 +13,9 @@ namespace rivet::ddl::generated {
 	MountConfig::MountConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
 		HeroData = serialized->unwrap_into<rivet::ddl::generated::HeroMountData>(HeroData_type_id);
 		BotData = serialized->unwrap_into<rivet::ddl::generated::BotMountData>(BotData_type_id);
-		MountCameraConfig = serialized->get_string(MountCameraConfig_type_id);
-		CameraStickConfig = serialized->get_string(CameraStickConfig_type_id);
-		CameraStickAltConfig = serialized->get_string(CameraStickAltConfig_type_id);
+		MountCameraConfig = serialized->get_string(MountCameraConfig_type_id, {});
+		CameraStickConfig = serialized->get_string(CameraStickConfig_type_id, {});
+		CameraStickAltConfig = serialized->get_string(CameraStickAltConfig_type_id, {});
 		Abilities = serialized->unwrap_into_many<rivet::ddl::generated::MountAbilityContainer>(Abilities_type_id); 
 	}
 

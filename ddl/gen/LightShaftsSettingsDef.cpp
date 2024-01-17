@@ -9,11 +9,11 @@
 
 namespace rivet::ddl::generated {
 	LightShaftsSettingsDef::LightShaftsSettingsDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Enabled = serialized->get_bool(Enabled_type_id);
-		Range = serialized->get_float(Range_type_id);
-		Weight = serialized->get_float(Weight_type_id);
-		ConeAngle = serialized->get_float(ConeAngle_type_id);
-		SortDistance = serialized->get_float(SortDistance_type_id);
+		Enabled = serialized->get_bool(Enabled_type_id, false);
+		Range = serialized->get_float(Range_type_id, 15.000000);
+		Weight = serialized->get_float(Weight_type_id, 1.000000);
+		ConeAngle = serialized->get_float(ConeAngle_type_id, 60.000000);
+		SortDistance = serialized->get_float(SortDistance_type_id, 0.000000);
 		Color = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Color_type_id); 
 	}
 

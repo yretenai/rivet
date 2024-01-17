@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	HoudiniIntegrationPlugin::HoudiniIntegrationPlugin([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Plugin = serialized->get_string(Plugin_type_id); 
+		Plugin = serialized->get_string(Plugin_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

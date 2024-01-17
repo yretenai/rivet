@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	ChangeOpenCurveFollowModeActionPrius::ChangeOpenCurveFollowModeActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		OpenCurveFollowMode = serialized->get_enum<rivet::ddl::generated::OpenCurveFollowMode>(OpenCurveFollowMode_type_id, rivet::ddl::generated::OpenCurveFollowMode_values); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Curve_Follower);
+		OpenCurveFollowMode = serialized->get_enum<rivet::ddl::generated::OpenCurveFollowMode>(OpenCurveFollowMode_type_id, rivet::ddl::generated::OpenCurveFollowMode_values, rivet::ddl::generated::OpenCurveFollowMode::OneShot); 
 	}
 
 	[[nodiscard]] auto

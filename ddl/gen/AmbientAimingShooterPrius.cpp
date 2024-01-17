@@ -7,17 +7,17 @@
 
 namespace rivet::ddl::generated {
 	AmbientAimingShooterPrius::AmbientAimingShooterPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): AmbientShooterPrius(serialized) {
-		AimAnimName = serialized->get_string(AimAnimName_type_id);
-		FireAnimName = serialized->get_string(FireAnimName_type_id);
-		AimLocatorName = serialized->get_string(AimLocatorName_type_id);
-		DegYawMin = serialized->get_float(DegYawMin_type_id);
-		DegYawMax = serialized->get_float(DegYawMax_type_id);
-		DegPitchMin = serialized->get_float(DegPitchMin_type_id);
-		DegPitchMax = serialized->get_float(DegPitchMax_type_id);
-		GameplayDegYawMin = serialized->get_float(GameplayDegYawMin_type_id);
-		GameplayDegYawMax = serialized->get_float(GameplayDegYawMax_type_id);
-		GameplayDegPitchMin = serialized->get_float(GameplayDegPitchMin_type_id);
-		GameplayDegPitchMax = serialized->get_float(GameplayDegPitchMax_type_id); 
+		AimAnimName = serialized->get_string(AimAnimName_type_id, "Aim_Move");
+		FireAnimName = serialized->get_string(FireAnimName_type_id, "");
+		AimLocatorName = serialized->get_string(AimLocatorName_type_id, "");
+		DegYawMin = serialized->get_float(DegYawMin_type_id, -90.000000);
+		DegYawMax = serialized->get_float(DegYawMax_type_id, 90.000000);
+		DegPitchMin = serialized->get_float(DegPitchMin_type_id, -90.000000);
+		DegPitchMax = serialized->get_float(DegPitchMax_type_id, 90.000000);
+		GameplayDegYawMin = serialized->get_float(GameplayDegYawMin_type_id, -180.000000);
+		GameplayDegYawMax = serialized->get_float(GameplayDegYawMax_type_id, 180.000000);
+		GameplayDegPitchMin = serialized->get_float(GameplayDegPitchMin_type_id, -180.000000);
+		GameplayDegPitchMax = serialized->get_float(GameplayDegPitchMax_type_id, 180.000000); 
 	}
 
 	[[nodiscard]] auto

@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	Cinematic2CameraShakeTrackDefaultValues::Cinematic2CameraShakeTrackDefaultValues([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MagnitudeShake = serialized->get_float(MagnitudeShake_type_id);
-		MagnitudeWave = serialized->get_float(MagnitudeWave_type_id);
-		MagnitudeJitter = serialized->get_float(MagnitudeJitter_type_id); 
+		MagnitudeShake = serialized->get_float(MagnitudeShake_type_id, 0.000000);
+		MagnitudeWave = serialized->get_float(MagnitudeWave_type_id, 0.400000);
+		MagnitudeJitter = serialized->get_float(MagnitudeJitter_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

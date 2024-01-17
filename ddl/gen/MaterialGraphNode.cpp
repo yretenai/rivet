@@ -12,20 +12,20 @@
 
 namespace rivet::ddl::generated {
 	MaterialGraphNode::MaterialGraphNode([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		XPos = serialized->get_int32(XPos_type_id);
-		YPos = serialized->get_int32(YPos_type_id);
-		IdLow = serialized->get_uint32(IdLow_type_id);
-		IdHigh = serialized->get_uint32(IdHigh_type_id);
-		Name = serialized->get_string(Name_type_id);
-		VariableName = serialized->get_string(VariableName_type_id);
+		XPos = serialized->get_int32(XPos_type_id, 0);
+		YPos = serialized->get_int32(YPos_type_id, 0);
+		IdLow = serialized->get_uint32(IdLow_type_id, 0);
+		IdHigh = serialized->get_uint32(IdHigh_type_id, 0);
+		Name = serialized->get_string(Name_type_id, {});
+		VariableName = serialized->get_string(VariableName_type_id, {});
 		PortUIs = serialized->unwrap_into_many<rivet::ddl::generated::MaterialNodePortUI>(PortUIs_type_id);
 		UserInputs = serialized->unwrap_into_many<rivet::ddl::generated::MaterialNodeUserInput>(UserInputs_type_id);
 		ConnectedInputs = serialized->unwrap_into_many<rivet::ddl::generated::MaterialNodeConnectedInputPort>(ConnectedInputs_type_id);
 		ConnectedOutputs = serialized->unwrap_into_many<rivet::ddl::generated::MaterialNodeConnectedOutputPort>(ConnectedOutputs_type_id);
-		PrependNodeName = serialized->get_bool(PrependNodeName_type_id);
-		IsSubGraph = serialized->get_bool(IsSubGraph_type_id);
-		AssetPath = serialized->get_string(AssetPath_type_id);
-		SortOrder = serialized->get_int32(SortOrder_type_id); 
+		PrependNodeName = serialized->get_bool(PrependNodeName_type_id, true);
+		IsSubGraph = serialized->get_bool(IsSubGraph_type_id, false);
+		AssetPath = serialized->get_string(AssetPath_type_id, {});
+		SortOrder = serialized->get_int32(SortOrder_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

@@ -11,8 +11,8 @@
 
 namespace rivet::ddl::generated {
 	PlayerTargetingStickControlPrius::PlayerTargetingStickControlPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): PlayerTargetingBasePrius(serialized) {
-		UseLeftStick = serialized->get_bool(UseLeftStick_type_id);
-		UseRightStick = serialized->get_bool(UseRightStick_type_id); 
+		UseLeftStick = serialized->get_bool(UseLeftStick_type_id, false);
+		UseRightStick = serialized->get_bool(UseRightStick_type_id, true); 
 	}
 
 	[[nodiscard]] auto

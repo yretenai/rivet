@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	ColorCorrectionSettingsDef::ColorCorrectionSettingsDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Enabled = serialized->get_bool(Enabled_type_id);
-		SourcePath = serialized->get_string(SourcePath_type_id); 
+		Enabled = serialized->get_bool(Enabled_type_id, false);
+		SourcePath = serialized->get_string(SourcePath_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

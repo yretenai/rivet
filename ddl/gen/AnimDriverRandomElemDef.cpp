@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	AnimDriverRandomElemDef::AnimDriverRandomElemDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		RefNodeName = serialized->get_string(RefNodeName_type_id);
-		OutputIndex = serialized->get_uint32(OutputIndex_type_id);
-		Weight = serialized->get_float(Weight_type_id); 
+		RefNodeName = serialized->get_string(RefNodeName_type_id, "");
+		OutputIndex = serialized->get_uint32(OutputIndex_type_id, 0);
+		Weight = serialized->get_float(Weight_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

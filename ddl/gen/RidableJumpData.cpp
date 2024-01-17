@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	RidableJumpData::RidableJumpData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		OverrideHeight = serialized->get_float(OverrideHeight_type_id);
-		MinJumpSpeed = serialized->get_float(MinJumpSpeed_type_id);
-		MaxJumpSpeed = serialized->get_float(MaxJumpSpeed_type_id);
-		MinJumpDist = serialized->get_float(MinJumpDist_type_id);
-		MaxJumpDist = serialized->get_float(MaxJumpDist_type_id); 
+		OverrideHeight = serialized->get_float(OverrideHeight_type_id, 1.250000);
+		MinJumpSpeed = serialized->get_float(MinJumpSpeed_type_id, 12.000000);
+		MaxJumpSpeed = serialized->get_float(MaxJumpSpeed_type_id, 35.000000);
+		MinJumpDist = serialized->get_float(MinJumpDist_type_id, 5.000000);
+		MaxJumpDist = serialized->get_float(MaxJumpDist_type_id, 20.000000); 
 	}
 
 	[[nodiscard]] auto

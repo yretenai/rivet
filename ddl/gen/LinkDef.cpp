@@ -10,9 +10,9 @@
 namespace rivet::ddl::generated {
 	LinkDef::LinkDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		VaultMetaData = serialized->unwrap_into<rivet::ddl::generated::VaultMetaData>(VaultMetaData_type_id);
-		IconPath = serialized->get_string(IconPath_type_id);
-		SourceObject = serialized->get_uint64(SourceObject_type_id);
-		DestinationObject = serialized->get_uint64(DestinationObject_type_id); 
+		IconPath = serialized->get_string(IconPath_type_id, "");
+		SourceObject = serialized->get_uint64(SourceObject_type_id, 0);
+		DestinationObject = serialized->get_uint64(DestinationObject_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

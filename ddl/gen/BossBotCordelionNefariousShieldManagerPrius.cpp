@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	BossBotCordelionNefariousShieldManagerPrius::BossBotCordelionNefariousShieldManagerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ShieldedMaterial = serialized->get_string(ShieldedMaterial_type_id);
-		TimeToExpire = serialized->get_float(TimeToExpire_type_id);
-		DamageToExpire = serialized->get_float(DamageToExpire_type_id); 
+		ShieldedMaterial = serialized->get_string(ShieldedMaterial_type_id, {});
+		TimeToExpire = serialized->get_float(TimeToExpire_type_id, -1.000000);
+		DamageToExpire = serialized->get_float(DamageToExpire_type_id, 600.000000); 
 	}
 
 	[[nodiscard]] auto

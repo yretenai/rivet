@@ -9,15 +9,15 @@
 
 namespace rivet::ddl::generated {
 	IKchain::IKchain([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		IKName = serialized->get_string(IKName_type_id);
-		StartJointName = serialized->get_string(StartJointName_type_id);
-		EndJointName = serialized->get_string(EndJointName_type_id);
-		GoalLocatorName = serialized->get_string(GoalLocatorName_type_id);
-		SolverErrorPercentage = serialized->get_float(SolverErrorPercentage_type_id);
-		MaxSolverIterations = serialized->get_uint8(MaxSolverIterations_type_id);
-		AnimPosePreConditioning = serialized->get_bool(AnimPosePreConditioning_type_id);
-		AnimStickSolverBendConstraint = serialized->get_bool(AnimStickSolverBendConstraint_type_id);
-		CurvePreConditioning = serialized->get_bool(CurvePreConditioning_type_id);
+		IKName = serialized->get_string(IKName_type_id, "PleaseNameMeForInGameUSage");
+		StartJointName = serialized->get_string(StartJointName_type_id, {});
+		EndJointName = serialized->get_string(EndJointName_type_id, {});
+		GoalLocatorName = serialized->get_string(GoalLocatorName_type_id, {});
+		SolverErrorPercentage = serialized->get_float(SolverErrorPercentage_type_id, 0.500000);
+		MaxSolverIterations = serialized->get_uint8(MaxSolverIterations_type_id, 40);
+		AnimPosePreConditioning = serialized->get_bool(AnimPosePreConditioning_type_id, true);
+		AnimStickSolverBendConstraint = serialized->get_bool(AnimStickSolverBendConstraint_type_id, true);
+		CurvePreConditioning = serialized->get_bool(CurvePreConditioning_type_id, false);
 		CurvePreConditioningDir = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(CurvePreConditioningDir_type_id); 
 	}
 

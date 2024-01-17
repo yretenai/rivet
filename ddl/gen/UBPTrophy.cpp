@@ -9,9 +9,9 @@
 
 namespace rivet::ddl::generated {
 	UBPTrophy::UBPTrophy([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		entityId = serialized->get_string(entityId_type_id);
-		entityType = serialized->get_enum<rivet::ddl::generated::x80ef7527>(entityType_type_id, rivet::ddl::generated::x80ef7527_values);
-		entitySubtype = serialized->get_enum<rivet::ddl::generated::x56d897ac>(entitySubtype_type_id, rivet::ddl::generated::x56d897ac_values);
+		entityId = serialized->get_string(entityId_type_id, {});
+		entityType = serialized->get_enum<rivet::ddl::generated::x80ef7527>(entityType_type_id, rivet::ddl::generated::x80ef7527_values, rivet::ddl::generated::x80ef7527::PSNObject);
+		entitySubtype = serialized->get_enum<rivet::ddl::generated::x56d897ac>(entitySubtype_type_id, rivet::ddl::generated::x56d897ac_values, rivet::ddl::generated::x56d897ac::Activity);
 		images = serialized->unwrap_into_many<rivet::ddl::generated::UBPImage>(images_type_id);
 		reward_images = serialized->unwrap_into_many<rivet::ddl::generated::UBPImage>(reward_images_type_id); 
 	}

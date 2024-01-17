@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	DimensionPortalTargetPrius::DimensionPortalTargetPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		InitialDimensionCheckpoint = serialized->get_string(InitialDimensionCheckpoint_type_id);
-		AutoClearDimensionCheckpoint = serialized->get_bool(AutoClearDimensionCheckpoint_type_id); 
+		InitialDimensionCheckpoint = serialized->get_string(InitialDimensionCheckpoint_type_id, {});
+		AutoClearDimensionCheckpoint = serialized->get_bool(AutoClearDimensionCheckpoint_type_id, true); 
 	}
 
 	[[nodiscard]] auto

@@ -12,11 +12,11 @@
 
 namespace rivet::ddl::generated {
 	AmbientCurveFacingBase::AmbientCurveFacingBase([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		TurnSpeed = serialized->get_float(TurnSpeed_type_id);
-		TurnAccel = serialized->get_float(TurnAccel_type_id);
-		TurnDecel = serialized->get_float(TurnDecel_type_id);
-		MinSlowDownAngle = serialized->get_float(MinSlowDownAngle_type_id);
-		MaxSlowDownAngle = serialized->get_float(MaxSlowDownAngle_type_id); 
+		TurnSpeed = serialized->get_float(TurnSpeed_type_id, -1.000000);
+		TurnAccel = serialized->get_float(TurnAccel_type_id, 90.000000);
+		TurnDecel = serialized->get_float(TurnDecel_type_id, 90.000000);
+		MinSlowDownAngle = serialized->get_float(MinSlowDownAngle_type_id, 180.000000);
+		MaxSlowDownAngle = serialized->get_float(MaxSlowDownAngle_type_id, 180.000000); 
 	}
 
 	[[nodiscard]] auto

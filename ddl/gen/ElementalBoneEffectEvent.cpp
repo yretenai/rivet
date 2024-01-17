@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	ElementalBoneEffectEvent::ElementalBoneEffectEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		ParentLocator = serialized->get_string(ParentLocator_type_id);
-		ChildLocator = serialized->get_string(ChildLocator_type_id);
-		CustomTag = serialized->get_string(CustomTag_type_id); 
+		ParentLocator = serialized->get_string(ParentLocator_type_id, {});
+		ChildLocator = serialized->get_string(ChildLocator_type_id, {});
+		CustomTag = serialized->get_string(CustomTag_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

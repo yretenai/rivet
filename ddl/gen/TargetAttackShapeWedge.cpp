@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	TargetAttackShapeWedge::TargetAttackShapeWedge([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): TargetedAttackShape(serialized) {
-		Locator = serialized->get_string(Locator_type_id);
-		Radius = serialized->get_float(Radius_type_id);
-		HalfAngle = serialized->get_float(HalfAngle_type_id);
-		HeightUp = serialized->get_float(HeightUp_type_id);
-		HeightDown = serialized->get_float(HeightDown_type_id); 
+		Locator = serialized->get_string(Locator_type_id, "");
+		Radius = serialized->get_float(Radius_type_id, 1.000000);
+		HalfAngle = serialized->get_float(HalfAngle_type_id, 45.000000);
+		HeightUp = serialized->get_float(HeightUp_type_id, 1.000000);
+		HeightDown = serialized->get_float(HeightDown_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

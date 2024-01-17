@@ -12,10 +12,10 @@
 namespace rivet::ddl::generated {
 	WeaponFiringBasePrius::WeaponFiringBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Emitter = serialized->unwrap_into<rivet::ddl::generated::WeaponEmitterBasePrius>(Emitter_type_id);
-		FireSoundRange = serialized->get_float(FireSoundRange_type_id);
-		NoiseMultiplier = serialized->get_float(NoiseMultiplier_type_id);
-		ScentMultiplier = serialized->get_float(ScentMultiplier_type_id);
-		FireEventFxId = serialized->get_uint8(FireEventFxId_type_id); 
+		FireSoundRange = serialized->get_float(FireSoundRange_type_id, 10.000000);
+		NoiseMultiplier = serialized->get_float(NoiseMultiplier_type_id, 1.000000);
+		ScentMultiplier = serialized->get_float(ScentMultiplier_type_id, 1.000000);
+		FireEventFxId = serialized->get_uint8(FireEventFxId_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

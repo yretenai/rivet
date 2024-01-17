@@ -7,15 +7,15 @@
 
 namespace rivet::ddl::generated {
 	Burst::Burst([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Type = serialized->get_enum<rivet::ddl::generated::xba90f6fd>(Type_type_id, rivet::ddl::generated::xba90f6fd_values);
-		BurstShotsMin = serialized->get_int32(BurstShotsMin_type_id);
-		BurstShotsMax = serialized->get_int32(BurstShotsMax_type_id);
-		BurstShots = serialized->get_int32(BurstShots_type_id);
-		BurstDurationMin = serialized->get_float(BurstDurationMin_type_id);
-		BurstDurationMax = serialized->get_float(BurstDurationMax_type_id);
-		BurstDuration = serialized->get_float(BurstDuration_type_id);
-		BurstRateOfFire = serialized->get_float(BurstRateOfFire_type_id);
-		BurstTimeBetweenShots = serialized->get_float(BurstTimeBetweenShots_type_id); 
+		Type = serialized->get_enum<rivet::ddl::generated::xba90f6fd>(Type_type_id, rivet::ddl::generated::xba90f6fd_values, rivet::ddl::generated::xba90f6fd::Shots);
+		BurstShotsMin = serialized->get_int32(BurstShotsMin_type_id, 3);
+		BurstShotsMax = serialized->get_int32(BurstShotsMax_type_id, 5);
+		BurstShots = serialized->get_int32(BurstShots_type_id, 0);
+		BurstDurationMin = serialized->get_float(BurstDurationMin_type_id, 0.500000);
+		BurstDurationMax = serialized->get_float(BurstDurationMax_type_id, 1.000000);
+		BurstDuration = serialized->get_float(BurstDuration_type_id, 0.000000);
+		BurstRateOfFire = serialized->get_float(BurstRateOfFire_type_id, 30.000000);
+		BurstTimeBetweenShots = serialized->get_float(BurstTimeBetweenShots_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

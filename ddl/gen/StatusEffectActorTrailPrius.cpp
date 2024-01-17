@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	StatusEffectActorTrailPrius::StatusEffectActorTrailPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): StatusEffectBasePrius(serialized) {
-		DropOnGround = serialized->get_bool(DropOnGround_type_id); 
+		DropOnGround = serialized->get_bool(DropOnGround_type_id, true); 
 	}
 
 	[[nodiscard]] auto

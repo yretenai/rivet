@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	ClankPuzzleTargetConfig::ClankPuzzleTargetConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ClankPuzzleTargetBaseConfig(serialized) {
-		SlowDownMult = serialized->get_float(SlowDownMult_type_id);
-		MaxSlowDown = serialized->get_float(MaxSlowDown_type_id);
-		SpeedUpMult = serialized->get_float(SpeedUpMult_type_id);
-		MaxSpeedUp = serialized->get_float(MaxSpeedUp_type_id);
-		WorldTimeManipulationPercent = serialized->get_float(WorldTimeManipulationPercent_type_id);
-		HeavyDangerMaterial = serialized->get_enum<rivet::ddl::generated::x10b3c4cf>(HeavyDangerMaterial_type_id, rivet::ddl::generated::x10b3c4cf_values); 
+		SlowDownMult = serialized->get_float(SlowDownMult_type_id, 0.250000);
+		MaxSlowDown = serialized->get_float(MaxSlowDown_type_id, 0.156000);
+		SpeedUpMult = serialized->get_float(SpeedUpMult_type_id, 4.000000);
+		MaxSpeedUp = serialized->get_float(MaxSpeedUp_type_id, 64.000000);
+		WorldTimeManipulationPercent = serialized->get_float(WorldTimeManipulationPercent_type_id, 0.000000);
+		HeavyDangerMaterial = serialized->get_enum<rivet::ddl::generated::x10b3c4cf>(HeavyDangerMaterial_type_id, rivet::ddl::generated::x10b3c4cf_values, rivet::ddl::generated::x10b3c4cf::None); 
 	}
 
 	[[nodiscard]] auto

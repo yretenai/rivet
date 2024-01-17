@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	WeaponEquipListenerPrius::WeaponEquipListenerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		WeaponEquipListenerConfigAssetId = serialized->get_uint64(WeaponEquipListenerConfigAssetId_type_id); 
+		WeaponEquipListenerConfigAssetId = serialized->get_uint64(WeaponEquipListenerConfigAssetId_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

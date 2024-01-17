@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ShotMotionSchrodingerOrbitPrius::ShotMotionSchrodingerOrbitPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ShotMotionBasePrius(serialized) {
-		NomNomAnim = serialized->get_string(NomNomAnim_type_id); 
+		NomNomAnim = serialized->get_string(NomNomAnim_type_id, "Melee_Attack"); 
 	}
 
 	[[nodiscard]] auto

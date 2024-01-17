@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	VisualEffectExternalForces::VisualEffectExternalForces([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ForceFieldInfluence = serialized->get_float(ForceFieldInfluence_type_id);
-		ForceFieldRadius = serialized->get_float(ForceFieldRadius_type_id);
-		InheritSpeed = serialized->get_float(InheritSpeed_type_id);
-		Gravity = serialized->get_float(Gravity_type_id);
-		Damp = serialized->get_float(Damp_type_id);
-		Wind = serialized->get_float(Wind_type_id); 
+		ForceFieldInfluence = serialized->get_float(ForceFieldInfluence_type_id, 1.000000);
+		ForceFieldRadius = serialized->get_float(ForceFieldRadius_type_id, 0.000000);
+		InheritSpeed = serialized->get_float(InheritSpeed_type_id, 0.000000);
+		Gravity = serialized->get_float(Gravity_type_id, 0.000000);
+		Damp = serialized->get_float(Damp_type_id, 0.000000);
+		Wind = serialized->get_float(Wind_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

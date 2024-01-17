@@ -10,7 +10,7 @@
 namespace rivet::ddl::generated {
 	TurbulenceAttributes::TurbulenceAttributes([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Scales = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Scales_type_id);
-		Freq = serialized->get_float(Freq_type_id); 
+		Freq = serialized->get_float(Freq_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

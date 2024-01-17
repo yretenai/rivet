@@ -9,18 +9,18 @@
 
 namespace rivet::ddl::generated {
 	FoundationSettings::FoundationSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ProfilingEnable = serialized->get_bool(ProfilingEnable_type_id);
-		ProfilingMemorySize = serialized->get_uint32(ProfilingMemorySize_type_id);
-		MemAuditEnable = serialized->get_bool(MemAuditEnable_type_id);
-		MemAuditOnShutdown = serialized->get_bool(MemAuditOnShutdown_type_id);
-		MuteDdlJsonParseWarnings = serialized->get_bool(MuteDdlJsonParseWarnings_type_id);
-		DevHttpServerIp = serialized->get_string(DevHttpServerIp_type_id);
-		DevHttpServerBindPort = serialized->get_uint16(DevHttpServerBindPort_type_id);
-		TtyEnable = serialized->get_bool(TtyEnable_type_id);
-		DdlThreadMax = serialized->get_uint32(DdlThreadMax_type_id);
+		ProfilingEnable = serialized->get_bool(ProfilingEnable_type_id, false);
+		ProfilingMemorySize = serialized->get_uint32(ProfilingMemorySize_type_id, 4194304);
+		MemAuditEnable = serialized->get_bool(MemAuditEnable_type_id, false);
+		MemAuditOnShutdown = serialized->get_bool(MemAuditOnShutdown_type_id, false);
+		MuteDdlJsonParseWarnings = serialized->get_bool(MuteDdlJsonParseWarnings_type_id, false);
+		DevHttpServerIp = serialized->get_string(DevHttpServerIp_type_id, "0.0.0.0");
+		DevHttpServerBindPort = serialized->get_uint16(DevHttpServerBindPort_type_id, 0);
+		TtyEnable = serialized->get_bool(TtyEnable_type_id, false);
+		DdlThreadMax = serialized->get_uint32(DdlThreadMax_type_id, 64);
 		DdlDefaultFallbackHeapInfo = serialized->unwrap_into<rivet::ddl::generated::DdlDefaultFallbackHeapInfo>(DdlDefaultFallbackHeapInfo_type_id);
-		BuildName = serialized->get_string(BuildName_type_id);
-		UnbufferedHttpSend = serialized->get_bool(UnbufferedHttpSend_type_id); 
+		BuildName = serialized->get_string(BuildName_type_id, {});
+		UnbufferedHttpSend = serialized->get_bool(UnbufferedHttpSend_type_id, true); 
 	}
 
 	[[nodiscard]] auto

@@ -8,8 +8,8 @@
 namespace rivet::ddl::generated {
 	BloodPoolPrius::BloodPoolPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		BloodPoolJoints = serialized->get_strings(BloodPoolJoints_type_id);
-		MaxDist = serialized->get_float(MaxDist_type_id);
-		MaxPools = serialized->get_uint32(MaxPools_type_id); 
+		MaxDist = serialized->get_float(MaxDist_type_id, 0.200000);
+		MaxPools = serialized->get_uint32(MaxPools_type_id, 1); 
 	}
 
 	[[nodiscard]] auto

@@ -10,8 +10,8 @@
 
 namespace rivet::ddl::generated {
 	VisualEffectPerfAttrOverride::VisualEffectPerfAttrOverride([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Enable = serialized->get_bool(Enable_type_id);
-		Source = serialized->get_enum<rivet::ddl::generated::x21f55189>(Source_type_id, rivet::ddl::generated::x21f55189_values);
+		Enable = serialized->get_bool(Enable_type_id, false);
+		Source = serialized->get_enum<rivet::ddl::generated::x21f55189>(Source_type_id, rivet::ddl::generated::x21f55189_values, rivet::ddl::generated::x21f55189::Self);
 		Spawn = serialized->unwrap_into<rivet::ddl::generated::VisualEffectSpawnAttr>(Spawn_type_id);
 		Frame = serialized->unwrap_into<rivet::ddl::generated::VisualEffectFrameAttr>(Frame_type_id); 
 	}

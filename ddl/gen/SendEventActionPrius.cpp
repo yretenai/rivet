@@ -9,11 +9,11 @@
 
 namespace rivet::ddl::generated {
 	SendEventActionPrius::SendEventActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Events);
 		Event = serialized->unwrap_into<rivet::ddl::generated::EventBase>(Event_type_id);
-		SendToSelfOnly = serialized->get_bool(SendToSelfOnly_type_id);
-		RequireActivated = serialized->get_bool(RequireActivated_type_id);
-		Synced = serialized->get_bool(Synced_type_id); 
+		SendToSelfOnly = serialized->get_bool(SendToSelfOnly_type_id, false);
+		RequireActivated = serialized->get_bool(RequireActivated_type_id, true);
+		Synced = serialized->get_bool(Synced_type_id, false); 
 	}
 
 	[[nodiscard]] auto

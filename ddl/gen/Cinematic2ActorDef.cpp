@@ -28,28 +28,28 @@
 
 namespace rivet::ddl::generated {
 	Cinematic2ActorDef::Cinematic2ActorDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Id = serialized->get_uint64(Id_type_id);
-		Name = serialized->get_string(Name_type_id);
+		Id = serialized->get_uint64(Id_type_id, 0);
+		Name = serialized->get_string(Name_type_id, {});
 		StartTransform = serialized->unwrap_into<rivet::ddl::generated::DDLTransform>(StartTransform_type_id);
 		EventTracks = serialized->unwrap_into_many<rivet::ddl::generated::Cinematic2PlacedInstanceEventTrackDef>(EventTracks_type_id);
 		HideTrack = serialized->unwrap_into<rivet::ddl::generated::Cinematic2PlacedInstanceHideTrackDef>(HideTrack_type_id);
 		PosRotScaleTrack = serialized->unwrap_into<rivet::ddl::generated::Cinematic2PlacedInstancePosRotScaleTrackDef>(PosRotScaleTrack_type_id);
 		OrphanTracks = serialized->unwrap_into_many<rivet::ddl::generated::Cinematic2PlacedInstanceOrphanTrackDef>(OrphanTracks_type_id);
-		PlatformFilter = serialized->get_bitset<rivet::ddl::generated::xb52df7e7>(PlatformFilter_type_id, rivet::ddl::generated::xb52df7e7_values);
-		DefaultActorPath = serialized->get_string(DefaultActorPath_type_id);
-		EditorOnly = serialized->get_bool(EditorOnly_type_id);
-		AnimSetCustomPath = serialized->get_string(AnimSetCustomPath_type_id);
+		PlatformFilter = serialized->get_bitset<rivet::ddl::generated::xb52df7e7>(PlatformFilter_type_id, rivet::ddl::generated::xb52df7e7_values, 7);
+		DefaultActorPath = serialized->get_string(DefaultActorPath_type_id, {});
+		EditorOnly = serialized->get_bool(EditorOnly_type_id, false);
+		AnimSetCustomPath = serialized->get_string(AnimSetCustomPath_type_id, {});
 		Tags = serialized->unwrap_into<rivet::ddl::generated::Cinematic2ActorTagsDef>(Tags_type_id);
-		ScriptTarget = serialized->get_enum<rivet::ddl::generated::x565e978b>(ScriptTarget_type_id, rivet::ddl::generated::x565e978b_values);
-		StartMode = serialized->get_enum<rivet::ddl::generated::xc237fc83>(StartMode_type_id, rivet::ddl::generated::xc237fc83_values);
-		EndMode = serialized->get_enum<rivet::ddl::generated::xa4c61284>(EndMode_type_id, rivet::ddl::generated::xa4c61284_values);
-		DoNotSpawnIfScriptTargetIsNull = serialized->get_bool(DoNotSpawnIfScriptTargetIsNull_type_id);
+		ScriptTarget = serialized->get_enum<rivet::ddl::generated::x565e978b>(ScriptTarget_type_id, rivet::ddl::generated::x565e978b_values, rivet::ddl::generated::x565e978b::None);
+		StartMode = serialized->get_enum<rivet::ddl::generated::xc237fc83>(StartMode_type_id, rivet::ddl::generated::xc237fc83_values, rivet::ddl::generated::xc237fc83::None);
+		EndMode = serialized->get_enum<rivet::ddl::generated::xa4c61284>(EndMode_type_id, rivet::ddl::generated::xa4c61284_values, rivet::ddl::generated::xa4c61284::Persist);
+		DoNotSpawnIfScriptTargetIsNull = serialized->get_bool(DoNotSpawnIfScriptTargetIsNull_type_id, false);
 		ClothSettings = serialized->unwrap_into<rivet::ddl::generated::Cinematic2ActorClothSettingsDef>(ClothSettings_type_id);
 		ModelSettings = serialized->unwrap_into<rivet::ddl::generated::Cinematic2ActorModelSettingsDef>(ModelSettings_type_id);
 		MayaExportInfo = serialized->unwrap_into<rivet::ddl::generated::Cinematic2MayaExportInfo>(MayaExportInfo_type_id);
-		BlendOutNonCineDrivers = serialized->get_bool(BlendOutNonCineDrivers_type_id);
-		UseSpawnedHead = serialized->get_bool(UseSpawnedHead_type_id);
-		BlendOutDuration = serialized->get_float(BlendOutDuration_type_id);
+		BlendOutNonCineDrivers = serialized->get_bool(BlendOutNonCineDrivers_type_id, false);
+		UseSpawnedHead = serialized->get_bool(UseSpawnedHead_type_id, false);
+		BlendOutDuration = serialized->get_float(BlendOutDuration_type_id, 0.000000);
 		AudioTracks = serialized->unwrap_into_many<rivet::ddl::generated::Cinematic2ActorAudioTrackDef>(AudioTracks_type_id);
 		BehaviorTracks = serialized->unwrap_into_many<rivet::ddl::generated::Cinematic2ActorBehaviorTrackDef>(BehaviorTracks_type_id);
 		JointTweakTracks = serialized->unwrap_into_many<rivet::ddl::generated::Cinematic2ActorJointTweakTrackDef>(JointTweakTracks_type_id);

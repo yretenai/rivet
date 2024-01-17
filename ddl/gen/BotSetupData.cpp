@@ -9,22 +9,22 @@
 
 namespace rivet::ddl::generated {
 	BotSetupData::BotSetupData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SpawnEngagedWithHero = serialized->get_bool(SpawnEngagedWithHero_type_id);
-		ForceHoverPathIntro = serialized->get_bool(ForceHoverPathIntro_type_id);
-		IntroIsInterruptibleByDamage = serialized->get_bool(IntroIsInterruptibleByDamage_type_id);
-		IntroIsInterruptibleByDamageOnLand = serialized->get_bool(IntroIsInterruptibleByDamageOnLand_type_id);
-		IntroIsInterruptibleByMeleeRange = serialized->get_bool(IntroIsInterruptibleByMeleeRange_type_id);
-		IntroIsInterruptibleByAwareness = serialized->get_bool(IntroIsInterruptibleByAwareness_type_id);
-		IntroIsInterruptibleByModeControl = serialized->get_bool(IntroIsInterruptibleByModeControl_type_id);
-		InterruptedIntroCanBeResumed = serialized->get_bool(InterruptedIntroCanBeResumed_type_id);
-		IntroSpeed = serialized->get_enum<rivet::ddl::generated::MovementStyle>(IntroSpeed_type_id, rivet::ddl::generated::MovementStyle_values);
-		SkipAlertAnim = serialized->get_bool(SkipAlertAnim_type_id);
-		DisableIdleWander = serialized->get_bool(DisableIdleWander_type_id);
-		AllowRetaliation = serialized->get_bool(AllowRetaliation_type_id);
-		IdleWanderMinCooldown = serialized->get_float(IdleWanderMinCooldown_type_id);
-		IdleWanderMaxCooldown = serialized->get_float(IdleWanderMaxCooldown_type_id);
-		AllowHibernationBasedOnLoadedRegion = serialized->get_bool(AllowHibernationBasedOnLoadedRegion_type_id);
-		HomeContainerRegion = serialized->get_string(HomeContainerRegion_type_id); 
+		SpawnEngagedWithHero = serialized->get_bool(SpawnEngagedWithHero_type_id, false);
+		ForceHoverPathIntro = serialized->get_bool(ForceHoverPathIntro_type_id, false);
+		IntroIsInterruptibleByDamage = serialized->get_bool(IntroIsInterruptibleByDamage_type_id, false);
+		IntroIsInterruptibleByDamageOnLand = serialized->get_bool(IntroIsInterruptibleByDamageOnLand_type_id, true);
+		IntroIsInterruptibleByMeleeRange = serialized->get_bool(IntroIsInterruptibleByMeleeRange_type_id, true);
+		IntroIsInterruptibleByAwareness = serialized->get_bool(IntroIsInterruptibleByAwareness_type_id, false);
+		IntroIsInterruptibleByModeControl = serialized->get_bool(IntroIsInterruptibleByModeControl_type_id, true);
+		InterruptedIntroCanBeResumed = serialized->get_bool(InterruptedIntroCanBeResumed_type_id, false);
+		IntroSpeed = serialized->get_enum<rivet::ddl::generated::MovementStyle>(IntroSpeed_type_id, rivet::ddl::generated::MovementStyle_values, rivet::ddl::generated::MovementStyle::Run);
+		SkipAlertAnim = serialized->get_bool(SkipAlertAnim_type_id, false);
+		DisableIdleWander = serialized->get_bool(DisableIdleWander_type_id, false);
+		AllowRetaliation = serialized->get_bool(AllowRetaliation_type_id, true);
+		IdleWanderMinCooldown = serialized->get_float(IdleWanderMinCooldown_type_id, 2.000000);
+		IdleWanderMaxCooldown = serialized->get_float(IdleWanderMaxCooldown_type_id, 6.000000);
+		AllowHibernationBasedOnLoadedRegion = serialized->get_bool(AllowHibernationBasedOnLoadedRegion_type_id, true);
+		HomeContainerRegion = serialized->get_string(HomeContainerRegion_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

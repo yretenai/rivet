@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	HeroWallRunSettings::HeroWallRunSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DebugCollisionChecks = serialized->get_bool(DebugCollisionChecks_type_id);
-		DebugNonActorWallRuns = serialized->get_bool(DebugNonActorWallRuns_type_id); 
+		DebugCollisionChecks = serialized->get_bool(DebugCollisionChecks_type_id, false);
+		DebugNonActorWallRuns = serialized->get_bool(DebugNonActorWallRuns_type_id, false); 
 	}
 
 	[[nodiscard]] auto

@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	DepthOfFieldActionPrius::DepthOfFieldActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		NearFocusDistance = serialized->get_float(NearFocusDistance_type_id);
-		NearApertureScale = serialized->get_float(NearApertureScale_type_id);
-		FarFocusDistance = serialized->get_float(FarFocusDistance_type_id);
-		FarApertureScale = serialized->get_float(FarApertureScale_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Camera);
+		NearFocusDistance = serialized->get_float(NearFocusDistance_type_id, 0.000000);
+		NearApertureScale = serialized->get_float(NearApertureScale_type_id, 10.000000);
+		FarFocusDistance = serialized->get_float(FarFocusDistance_type_id, 5.000000);
+		FarApertureScale = serialized->get_float(FarApertureScale_type_id, 10.000000); 
 	}
 
 	[[nodiscard]] auto

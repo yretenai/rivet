@@ -9,9 +9,9 @@
 
 namespace rivet::ddl::generated {
 	HurdleShotSecondaryShotSpawnData::HurdleShotSecondaryShotSpawnData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ActorSpawnData(serialized) {
-		ShotActorAsset = serialized->get_uint64(ShotActorAsset_type_id);
+		ShotActorAsset = serialized->get_uint64(ShotActorAsset_type_id, 0);
 		SpawnMat = serialized->unwrap_into<rivet::ddl::generated::DDLTransform>(SpawnMat_type_id);
-		ParentActorHandleData = serialized->get_uint32(ParentActorHandleData_type_id); 
+		ParentActorHandleData = serialized->get_uint32(ParentActorHandleData_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

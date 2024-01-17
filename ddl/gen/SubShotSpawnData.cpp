@@ -9,15 +9,15 @@
 
 namespace rivet::ddl::generated {
 	SubShotSpawnData::SubShotSpawnData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ActorSpawnData(serialized) {
-		AssetId = serialized->get_uint64(AssetId_type_id);
-		ZoneIndex = serialized->get_int32(ZoneIndex_type_id);
+		AssetId = serialized->get_uint64(AssetId_type_id, 0);
+		ZoneIndex = serialized->get_int32(ZoneIndex_type_id, 0);
 		Position = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Position_type_id);
 		Facing = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Facing_type_id);
 		Up = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Up_type_id);
-		Scale = serialized->get_float(Scale_type_id);
-		ParentHandle = serialized->get_uint32(ParentHandle_type_id);
-		ParentAttackId = serialized->get_uint32(ParentAttackId_type_id);
-		AttackId = serialized->get_uint32(AttackId_type_id); 
+		Scale = serialized->get_float(Scale_type_id, 1.000000);
+		ParentHandle = serialized->get_uint32(ParentHandle_type_id, 0);
+		ParentAttackId = serialized->get_uint32(ParentAttackId_type_id, 0);
+		AttackId = serialized->get_uint32(AttackId_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

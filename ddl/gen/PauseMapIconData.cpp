@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	PauseMapIconData::PauseMapIconData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Type = serialized->get_enum<rivet::ddl::generated::xf0177ef8>(Type_type_id, rivet::ddl::generated::xf0177ef8_values);
-		SymbolType = serialized->get_enum<rivet::ddl::generated::x8578b610>(SymbolType_type_id, rivet::ddl::generated::x8578b610_values);
-		Texture = serialized->get_string(Texture_type_id);
-		Label = serialized->get_string(Label_type_id); 
+		Type = serialized->get_enum<rivet::ddl::generated::xf0177ef8>(Type_type_id, rivet::ddl::generated::xf0177ef8_values, rivet::ddl::generated::xf0177ef8::Objective);
+		SymbolType = serialized->get_enum<rivet::ddl::generated::x8578b610>(SymbolType_type_id, rivet::ddl::generated::x8578b610_values, rivet::ddl::generated::x8578b610::Generic);
+		Texture = serialized->get_string(Texture_type_id, "");
+		Label = serialized->get_string(Label_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

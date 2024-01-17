@@ -9,14 +9,14 @@
 
 namespace rivet::ddl::generated {
 	DebugPlotLinesActionPrius::DebugPlotLinesActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		MaxValues = serialized->get_uint32(MaxValues_type_id);
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::UI);
+		MaxValues = serialized->get_uint32(MaxValues_type_id, 16);
 		ScaleMinMax = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(ScaleMinMax_type_id);
-		Animate = serialized->get_bool(Animate_type_id);
-		Label = serialized->get_string(Label_type_id);
-		OverlayText = serialized->get_string(OverlayText_type_id);
+		Animate = serialized->get_bool(Animate_type_id, true);
+		Label = serialized->get_string(Label_type_id, "");
+		OverlayText = serialized->get_string(OverlayText_type_id, "");
 		Position = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(Position_type_id);
-		Position3D = serialized->get_bool(Position3D_type_id);
+		Position3D = serialized->get_bool(Position3D_type_id, false);
 		Size = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(Size_type_id); 
 	}
 

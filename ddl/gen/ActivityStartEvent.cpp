@@ -10,13 +10,13 @@
 
 namespace rivet::ddl::generated {
 	ActivityStartEvent::ActivityStartEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): UDSEventBase(serialized) {
-		activityId = serialized->get_string(activityId_type_id);
-		primaryActor = serialized->get_string(primaryActor_type_id);
+		activityId = serialized->get_string(activityId_type_id, {});
+		primaryActor = serialized->get_string(primaryActor_type_id, {});
 		secondaryActors = serialized->get_strings(secondaryActors_type_id);
 		equippedMechanics = serialized->get_strings(equippedMechanics_type_id);
-		zoneId = serialized->get_string(zoneId_type_id);
+		zoneId = serialized->get_string(zoneId_type_id, {});
 		mapPosition = serialized->get_floats(mapPosition_type_id);
-		difficultySetting = serialized->get_int32(difficultySetting_type_id); 
+		difficultySetting = serialized->get_int32(difficultySetting_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

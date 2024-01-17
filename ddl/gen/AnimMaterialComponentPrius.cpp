@@ -14,7 +14,7 @@ namespace rivet::ddl::generated {
 		MaterialMapList = serialized->unwrap_into_many<rivet::ddl::generated::AnimMaterialComponentMapDef>(MaterialMapList_type_id);
 		MorphOverrides = serialized->unwrap_into_many<rivet::ddl::generated::AnimMaterialComponentMorphOverrideDef>(MorphOverrides_type_id);
 		CinematicTexture = serialized->unwrap_into<rivet::ddl::generated::AnimMaterialComponentCineTextureDef>(CinematicTexture_type_id);
-		AlwaysUpdate = serialized->get_bool(AlwaysUpdate_type_id); 
+		AlwaysUpdate = serialized->get_bool(AlwaysUpdate_type_id, false); 
 	}
 
 	[[nodiscard]] auto

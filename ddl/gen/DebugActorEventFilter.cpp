@@ -9,9 +9,9 @@
 
 namespace rivet::ddl::generated {
 	DebugActorEventFilter::DebugActorEventFilter([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		FilterName = serialized->get_string(FilterName_type_id);
-		DefaultOn = serialized->get_bool(DefaultOn_type_id);
-		IsInclude = serialized->get_bool(IsInclude_type_id);
+		FilterName = serialized->get_string(FilterName_type_id, {});
+		DefaultOn = serialized->get_bool(DefaultOn_type_id, true);
+		IsInclude = serialized->get_bool(IsInclude_type_id, false);
 		EventList = serialized->unwrap_into_many<rivet::ddl::generated::DebugActorEventFilterItem>(EventList_type_id); 
 	}
 

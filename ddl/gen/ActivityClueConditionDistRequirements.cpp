@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	ActivityClueConditionDistRequirements::ActivityClueConditionDistRequirements([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MinDistance = serialized->get_float(MinDistance_type_id);
-		MaxDistance = serialized->get_float(MaxDistance_type_id); 
+		MinDistance = serialized->get_float(MinDistance_type_id, 0.000000);
+		MaxDistance = serialized->get_float(MaxDistance_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	MayaExportAnimClipData::MayaExportAnimClipData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		MayaPaths = serialized->get_strings(MayaPaths_type_id);
-		ScriptCmd = serialized->get_string(ScriptCmd_type_id); 
+		ScriptCmd = serialized->get_string(ScriptCmd_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

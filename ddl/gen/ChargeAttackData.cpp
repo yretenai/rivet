@@ -9,40 +9,40 @@
 
 namespace rivet::ddl::generated {
 	ChargeAttackData::ChargeAttackData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Name = serialized->get_string(Name_type_id);
-		TellTime = serialized->get_float(TellTime_type_id);
-		TurnRate = serialized->get_float(TurnRate_type_id);
-		TurnRateTell = serialized->get_float(TurnRateTell_type_id);
-		MinDistToTurn = serialized->get_float(MinDistToTurn_type_id);
-		MoveSpeed = serialized->get_float(MoveSpeed_type_id);
-		RunPastDistance = serialized->get_float(RunPastDistance_type_id);
-		StunDuration = serialized->get_float(StunDuration_type_id);
-		HitDuration = serialized->get_float(HitDuration_type_id);
-		MissDuration = serialized->get_float(MissDuration_type_id);
-		TargetLeftOffset = serialized->get_float(TargetLeftOffset_type_id);
-		TrackTarget = serialized->get_bool(TrackTarget_type_id);
-		FaceTargetDuringMiss = serialized->get_bool(FaceTargetDuringMiss_type_id);
-		FaceTargetDuringHit = serialized->get_bool(FaceTargetDuringHit_type_id);
-		TriggerHitOutroOnClose = serialized->get_bool(TriggerHitOutroOnClose_type_id);
-		AlsoDamageInHitOutro = serialized->get_bool(AlsoDamageInHitOutro_type_id);
-		PreventDeflection = serialized->get_bool(PreventDeflection_type_id);
-		TellDriver = serialized->get_string(TellDriver_type_id);
-		IntroDriver = serialized->get_string(IntroDriver_type_id);
-		MoveDriver = serialized->get_string(MoveDriver_type_id);
-		HitOutroDriver = serialized->get_string(HitOutroDriver_type_id);
-		MissOutroDriver = serialized->get_string(MissOutroDriver_type_id);
-		StunOutroDriver = serialized->get_string(StunOutroDriver_type_id);
-		StunCompressPartial = serialized->get_string(StunCompressPartial_type_id);
-		DamageAmount = serialized->get_float(DamageAmount_type_id);
-		DamageType = serialized->get_enum<rivet::ddl::generated::DamageTypes>(DamageType_type_id, rivet::ddl::generated::DamageTypes_values);
-		Knockback = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(Knockback_type_id, rivet::ddl::generated::KnockbackLevels_values);
-		KnockbackAmount = serialized->get_float(KnockbackAmount_type_id);
-		KnockbackForce = serialized->get_float(KnockbackForce_type_id);
-		HitPauseTime = serialized->get_float(HitPauseTime_type_id);
-		DamageLocator = serialized->get_string(DamageLocator_type_id);
+		Name = serialized->get_string(Name_type_id, "Charge");
+		TellTime = serialized->get_float(TellTime_type_id, 2.000000);
+		TurnRate = serialized->get_float(TurnRate_type_id, 45.000000);
+		TurnRateTell = serialized->get_float(TurnRateTell_type_id, -1.000000);
+		MinDistToTurn = serialized->get_float(MinDistToTurn_type_id, 0.000000);
+		MoveSpeed = serialized->get_float(MoveSpeed_type_id, 10.000000);
+		RunPastDistance = serialized->get_float(RunPastDistance_type_id, 8.000000);
+		StunDuration = serialized->get_float(StunDuration_type_id, 2.000000);
+		HitDuration = serialized->get_float(HitDuration_type_id, 1.000000);
+		MissDuration = serialized->get_float(MissDuration_type_id, 2.000000);
+		TargetLeftOffset = serialized->get_float(TargetLeftOffset_type_id, 0.000000);
+		TrackTarget = serialized->get_bool(TrackTarget_type_id, false);
+		FaceTargetDuringMiss = serialized->get_bool(FaceTargetDuringMiss_type_id, false);
+		FaceTargetDuringHit = serialized->get_bool(FaceTargetDuringHit_type_id, false);
+		TriggerHitOutroOnClose = serialized->get_bool(TriggerHitOutroOnClose_type_id, false);
+		AlsoDamageInHitOutro = serialized->get_bool(AlsoDamageInHitOutro_type_id, false);
+		PreventDeflection = serialized->get_bool(PreventDeflection_type_id, false);
+		TellDriver = serialized->get_string(TellDriver_type_id, "ChargeAttack_Tell");
+		IntroDriver = serialized->get_string(IntroDriver_type_id, "ChargeAttack_Intro");
+		MoveDriver = serialized->get_string(MoveDriver_type_id, "ChargeAttack_Loop");
+		HitOutroDriver = serialized->get_string(HitOutroDriver_type_id, "ChargeAttack_Hit");
+		MissOutroDriver = serialized->get_string(MissOutroDriver_type_id, "ChargeAttack_Miss");
+		StunOutroDriver = serialized->get_string(StunOutroDriver_type_id, "ChargeAttack_Stun");
+		StunCompressPartial = serialized->get_string(StunCompressPartial_type_id, "");
+		DamageAmount = serialized->get_float(DamageAmount_type_id, 0.000000);
+		DamageType = serialized->get_enum<rivet::ddl::generated::DamageTypes>(DamageType_type_id, rivet::ddl::generated::DamageTypes_values, rivet::ddl::generated::DamageTypes::Melee);
+		Knockback = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(Knockback_type_id, rivet::ddl::generated::KnockbackLevels_values, rivet::ddl::generated::KnockbackLevels::None);
+		KnockbackAmount = serialized->get_float(KnockbackAmount_type_id, 100.000000);
+		KnockbackForce = serialized->get_float(KnockbackForce_type_id, -1.000000);
+		HitPauseTime = serialized->get_float(HitPauseTime_type_id, 0.000000);
+		DamageLocator = serialized->get_string(DamageLocator_type_id, {});
 		LocalOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(LocalOffset_type_id);
-		DamageRadius = serialized->get_float(DamageRadius_type_id);
-		RequestFlags = serialized->get_bitset<rivet::ddl::generated::x65d7dac2>(RequestFlags_type_id, rivet::ddl::generated::x65d7dac2_values); 
+		DamageRadius = serialized->get_float(DamageRadius_type_id, 0.500000);
+		RequestFlags = serialized->get_bitset<rivet::ddl::generated::x65d7dac2>(RequestFlags_type_id, rivet::ddl::generated::x65d7dac2_values, 0); 
 	}
 
 	[[nodiscard]] auto

@@ -12,7 +12,7 @@
 namespace rivet::ddl::generated {
 	SimpleLocatorFXCrawlPrius::SimpleLocatorFXCrawlPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		CrawlFX = serialized->unwrap_into<rivet::ddl::generated::AssetReferenceDef>(CrawlFX_type_id);
-		TimeScale = serialized->get_enum<rivet::ddl::generated::x48037d3a>(TimeScale_type_id, rivet::ddl::generated::x48037d3a_values);
+		TimeScale = serialized->get_enum<rivet::ddl::generated::x48037d3a>(TimeScale_type_id, rivet::ddl::generated::x48037d3a_values, rivet::ddl::generated::x48037d3a::GameTime);
 		CrawlPoints = serialized->unwrap_into_many<rivet::ddl::generated::LocatorCrawlPoints>(CrawlPoints_type_id);
 		CancelEvents = serialized->unwrap_into_many<rivet::ddl::generated::EventStyleSpecified>(CancelEvents_type_id); 
 	}

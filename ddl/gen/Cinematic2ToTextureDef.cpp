@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	Cinematic2ToTextureDef::Cinematic2ToTextureDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		TextureSlot = serialized->get_enum<rivet::ddl::generated::x16517126>(TextureSlot_type_id, rivet::ddl::generated::x16517126_values);
-		TextureType = serialized->get_enum<rivet::ddl::generated::x8af8ec29>(TextureType_type_id, rivet::ddl::generated::x8af8ec29_values); 
+		TextureSlot = serialized->get_enum<rivet::ddl::generated::x16517126>(TextureSlot_type_id, rivet::ddl::generated::x16517126_values, rivet::ddl::generated::x16517126::None);
+		TextureType = serialized->get_enum<rivet::ddl::generated::x8af8ec29>(TextureType_type_id, rivet::ddl::generated::x8af8ec29_values, rivet::ddl::generated::x8af8ec29::None); 
 	}
 
 	[[nodiscard]] auto

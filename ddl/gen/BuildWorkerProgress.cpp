@@ -7,13 +7,13 @@
 
 namespace rivet::ddl::generated {
 	BuildWorkerProgress::BuildWorkerProgress([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AssetPath = serialized->get_string(AssetPath_type_id);
-		TargetId = serialized->get_string(TargetId_type_id);
-		TargetType = serialized->get_enum<rivet::ddl::generated::x8b211a61>(TargetType_type_id, rivet::ddl::generated::x8b211a61_values);
-		State = serialized->get_enum<rivet::ddl::generated::xa2b63d63>(State_type_id, rivet::ddl::generated::xa2b63d63_values);
-		BuildRuleHash = serialized->get_uint32(BuildRuleHash_type_id);
-		BuildStartTime = serialized->get_uint64(BuildStartTime_type_id);
-		BuildEstimatedTime = serialized->get_uint64(BuildEstimatedTime_type_id); 
+		AssetPath = serialized->get_string(AssetPath_type_id, {});
+		TargetId = serialized->get_string(TargetId_type_id, {});
+		TargetType = serialized->get_enum<rivet::ddl::generated::x8b211a61>(TargetType_type_id, rivet::ddl::generated::x8b211a61_values, rivet::ddl::generated::x8b211a61::PID);
+		State = serialized->get_enum<rivet::ddl::generated::xa2b63d63>(State_type_id, rivet::ddl::generated::xa2b63d63_values, rivet::ddl::generated::xa2b63d63::Idle);
+		BuildRuleHash = serialized->get_uint32(BuildRuleHash_type_id, 0);
+		BuildStartTime = serialized->get_uint64(BuildStartTime_type_id, 0);
+		BuildEstimatedTime = serialized->get_uint64(BuildEstimatedTime_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

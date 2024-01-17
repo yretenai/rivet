@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	HeroCrouchVolumePrius::HeroCrouchVolumePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		UseProneCamera = serialized->get_bool(UseProneCamera_type_id);
-		StandOnExit = serialized->get_bool(StandOnExit_type_id);
-		ForceWalk = serialized->get_bool(ForceWalk_type_id); 
+		UseProneCamera = serialized->get_bool(UseProneCamera_type_id, true);
+		StandOnExit = serialized->get_bool(StandOnExit_type_id, true);
+		ForceWalk = serialized->get_bool(ForceWalk_type_id, false); 
 	}
 
 	[[nodiscard]] auto

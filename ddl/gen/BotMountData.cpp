@@ -10,8 +10,8 @@
 
 namespace rivet::ddl::generated {
 	BotMountData::BotMountData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		LocatorAttachName = serialized->get_string(LocatorAttachName_type_id);
-		RiderAttachAnimName = serialized->get_string(RiderAttachAnimName_type_id);
+		LocatorAttachName = serialized->get_string(LocatorAttachName_type_id, {});
+		RiderAttachAnimName = serialized->get_string(RiderAttachAnimName_type_id, {});
 		MountMovementData = serialized->unwrap_into<rivet::ddl::generated::BotMovementBase>(MountMovementData_type_id);
 		TouchDamageData = serialized->unwrap_into<rivet::ddl::generated::BotMountDamageData>(TouchDamageData_type_id); 
 	}

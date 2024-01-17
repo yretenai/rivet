@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	PixelizerBlastEvent::PixelizerBlastEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Range = serialized->get_float(Range_type_id);
-		AOE = serialized->get_float(AOE_type_id); 
+		Range = serialized->get_float(Range_type_id, 0.000000);
+		AOE = serialized->get_float(AOE_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

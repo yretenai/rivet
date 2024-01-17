@@ -7,13 +7,13 @@
 
 namespace rivet::ddl::generated {
 	DrawStats::DrawStats([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		TextureCount = serialized->get_uint32(TextureCount_type_id);
-		MaterialCount = serialized->get_uint32(MaterialCount_type_id);
-		IndexCount = serialized->get_uint32(IndexCount_type_id);
-		IndexedVertexCount = serialized->get_uint32(IndexedVertexCount_type_id);
-		UnindexedVertexCount = serialized->get_uint32(UnindexedVertexCount_type_id);
-		InstanceCount = serialized->get_uint32(InstanceCount_type_id);
-		DrawCount = serialized->get_uint32(DrawCount_type_id); 
+		TextureCount = serialized->get_uint32(TextureCount_type_id, 0);
+		MaterialCount = serialized->get_uint32(MaterialCount_type_id, 0);
+		IndexCount = serialized->get_uint32(IndexCount_type_id, 0);
+		IndexedVertexCount = serialized->get_uint32(IndexedVertexCount_type_id, 0);
+		UnindexedVertexCount = serialized->get_uint32(UnindexedVertexCount_type_id, 0);
+		InstanceCount = serialized->get_uint32(InstanceCount_type_id, 0);
+		DrawCount = serialized->get_uint32(DrawCount_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

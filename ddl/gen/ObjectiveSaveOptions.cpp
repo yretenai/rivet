@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	ObjectiveSaveOptions::ObjectiveSaveOptions([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SaveSnapshot = serialized->get_bool(SaveSnapshot_type_id);
-		SaveReplaySnapshot = serialized->get_bool(SaveReplaySnapshot_type_id); 
+		SaveSnapshot = serialized->get_bool(SaveSnapshot_type_id, false);
+		SaveReplaySnapshot = serialized->get_bool(SaveReplaySnapshot_type_id, false); 
 	}
 
 	[[nodiscard]] auto

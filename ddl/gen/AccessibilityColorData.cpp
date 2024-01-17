@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	AccessibilityColorData::AccessibilityColorData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ColorName = serialized->get_string(ColorName_type_id);
+		ColorName = serialized->get_string(ColorName_type_id, "-NotSet-");
 		ColorValue = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(ColorValue_type_id); 
 	}
 

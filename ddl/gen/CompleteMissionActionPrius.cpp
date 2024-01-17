@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	CompleteMissionActionPrius::CompleteMissionActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		GotoCleanupState = serialized->get_bool(GotoCleanupState_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Mission_System);
+		GotoCleanupState = serialized->get_bool(GotoCleanupState_type_id, false); 
 	}
 
 	[[nodiscard]] auto

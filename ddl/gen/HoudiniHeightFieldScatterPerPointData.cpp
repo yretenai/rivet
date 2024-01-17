@@ -9,11 +9,11 @@
 
 namespace rivet::ddl::generated {
 	HoudiniHeightFieldScatterPerPointData::HoudiniHeightFieldScatterPerPointData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		PerPointCountMethod = serialized->get_enum<rivet::ddl::generated::x17a2adb9>(PerPointCountMethod_type_id, rivet::ddl::generated::x17a2adb9_values);
-		ParamExactNumber = serialized->get_int32(ParamExactNumber_type_id);
+		PerPointCountMethod = serialized->get_enum<rivet::ddl::generated::x17a2adb9>(PerPointCountMethod_type_id, rivet::ddl::generated::x17a2adb9_values, rivet::ddl::generated::x17a2adb9::Exact_Number);
+		ParamExactNumber = serialized->get_int32(ParamExactNumber_type_id, 10);
 		ParamPoissonRange = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(ParamPoissonRange_type_id);
-		PositioningMethod = serialized->get_enum<rivet::ddl::generated::xf12451bd>(PositioningMethod_type_id, rivet::ddl::generated::xf12451bd_values);
-		SourceLayerName = serialized->get_string(SourceLayerName_type_id); 
+		PositioningMethod = serialized->get_enum<rivet::ddl::generated::xf12451bd>(PositioningMethod_type_id, rivet::ddl::generated::xf12451bd_values, rivet::ddl::generated::xf12451bd::Offset);
+		SourceLayerName = serialized->get_string(SourceLayerName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ScriptNodesModelMimeData::ScriptNodesModelMimeData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Comment = serialized->get_bool(Comment_type_id);
+		Comment = serialized->get_bool(Comment_type_id, false);
 		EmbeddedScriptGraphIds = serialized->get_uint64s(EmbeddedScriptGraphIds_type_id);
 		ScriptActionNames = serialized->get_strings(ScriptActionNames_type_id);
 		ScriptGlobalVariableNames = serialized->get_strings(ScriptGlobalVariableNames_type_id);

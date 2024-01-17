@@ -10,9 +10,9 @@
 
 namespace rivet::ddl::generated {
 	BaseMountGroundMoveEvent::BaseMountGroundMoveEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		EventType = serialized->get_string(EventType_type_id);
-		SpeedType = serialized->get_string(SpeedType_type_id);
-		AVMaterialType = serialized->get_enum<rivet::ddl::generated::x10b3c4cf>(AVMaterialType_type_id, rivet::ddl::generated::x10b3c4cf_values); 
+		EventType = serialized->get_string(EventType_type_id, {});
+		SpeedType = serialized->get_string(SpeedType_type_id, {});
+		AVMaterialType = serialized->get_enum<rivet::ddl::generated::x10b3c4cf>(AVMaterialType_type_id, rivet::ddl::generated::x10b3c4cf_values, rivet::ddl::generated::x10b3c4cf::None); 
 	}
 
 	[[nodiscard]] auto

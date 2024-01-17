@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	ConduitActionPrius::ConduitActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		ConduitAsset = serialized->get_string(ConduitAsset_type_id);
-		Priority = serialized->get_enum<rivet::ddl::generated::x5ead2ea5>(Priority_type_id, rivet::ddl::generated::x5ead2ea5_values); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Conduit);
+		ConduitAsset = serialized->get_string(ConduitAsset_type_id, {});
+		Priority = serialized->get_enum<rivet::ddl::generated::x5ead2ea5>(Priority_type_id, rivet::ddl::generated::x5ead2ea5_values, rivet::ddl::generated::x5ead2ea5::First); 
 	}
 
 	[[nodiscard]] auto

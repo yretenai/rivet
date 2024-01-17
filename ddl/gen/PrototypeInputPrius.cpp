@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	PrototypeInputPrius::PrototypeInputPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Button = serialized->get_enum<rivet::ddl::generated::x7a3f7920>(Button_type_id, rivet::ddl::generated::x7a3f7920_values);
-		TriggerCount = serialized->get_uint32(TriggerCount_type_id);
-		RetriggerDelay = serialized->get_float(RetriggerDelay_type_id);
-		UseRange = serialized->get_float(UseRange_type_id);
-		VolumeRange = serialized->get_bool(VolumeRange_type_id); 
+		Button = serialized->get_enum<rivet::ddl::generated::x7a3f7920>(Button_type_id, rivet::ddl::generated::x7a3f7920_values, rivet::ddl::generated::x7a3f7920::X);
+		TriggerCount = serialized->get_uint32(TriggerCount_type_id, 0);
+		RetriggerDelay = serialized->get_float(RetriggerDelay_type_id, 1.000000);
+		UseRange = serialized->get_float(UseRange_type_id, 3.000000);
+		VolumeRange = serialized->get_bool(VolumeRange_type_id, true); 
 	}
 
 	[[nodiscard]] auto

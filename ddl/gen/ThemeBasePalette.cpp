@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	ThemeBasePalette::ThemeBasePalette([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Button = serialized->get_string(Button_type_id);
-		Window = serialized->get_string(Window_type_id); 
+		Button = serialized->get_string(Button_type_id, {});
+		Window = serialized->get_string(Window_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

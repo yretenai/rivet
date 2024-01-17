@@ -9,16 +9,16 @@
 
 namespace rivet::ddl::generated {
 	ClankBotPrius::ClankBotPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Role = serialized->get_enum<rivet::ddl::generated::x190611d9>(Role_type_id, rivet::ddl::generated::x190611d9_values);
-		ClankBot = serialized->get_string(ClankBot_type_id);
-		PowerBot = serialized->get_string(PowerBot_type_id);
-		SpringBot = serialized->get_string(SpringBot_type_id);
-		StretchBot = serialized->get_string(StretchBot_type_id);
-		StretchPieces = serialized->get_string(StretchPieces_type_id);
-		StretchPieceVis = serialized->get_string(StretchPieceVis_type_id);
-		ArcHeight = serialized->get_float(ArcHeight_type_id);
-		GravMultiplier = serialized->get_float(GravMultiplier_type_id);
-		SpringRadius = serialized->get_float(SpringRadius_type_id);
+		Role = serialized->get_enum<rivet::ddl::generated::x190611d9>(Role_type_id, rivet::ddl::generated::x190611d9_values, rivet::ddl::generated::x190611d9::Base);
+		ClankBot = serialized->get_string(ClankBot_type_id, {});
+		PowerBot = serialized->get_string(PowerBot_type_id, {});
+		SpringBot = serialized->get_string(SpringBot_type_id, {});
+		StretchBot = serialized->get_string(StretchBot_type_id, {});
+		StretchPieces = serialized->get_string(StretchPieces_type_id, {});
+		StretchPieceVis = serialized->get_string(StretchPieceVis_type_id, {});
+		ArcHeight = serialized->get_float(ArcHeight_type_id, 0.500000);
+		GravMultiplier = serialized->get_float(GravMultiplier_type_id, 2.000000);
+		SpringRadius = serialized->get_float(SpringRadius_type_id, 0.750000);
 		ShakeData = serialized->unwrap_into<rivet::ddl::generated::CameraShakingWithFallOffData>(ShakeData_type_id); 
 	}
 

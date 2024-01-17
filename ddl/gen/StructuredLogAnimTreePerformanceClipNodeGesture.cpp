@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	StructuredLogAnimTreePerformanceClipNodeGesture::StructuredLogAnimTreePerformanceClipNodeGesture([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ClipName = serialized->get_string(ClipName_type_id);
-		ModelFrom = serialized->get_string(ModelFrom_type_id);
-		ModelTo = serialized->get_string(ModelTo_type_id);
-		ClipTime = serialized->get_float(ClipTime_type_id);
-		ClipWeight = serialized->get_float(ClipWeight_type_id);
-		Flags = serialized->get_bitset<rivet::ddl::generated::x442dee57>(Flags_type_id, rivet::ddl::generated::x442dee57_values); 
+		ClipName = serialized->get_string(ClipName_type_id, {});
+		ModelFrom = serialized->get_string(ModelFrom_type_id, {});
+		ModelTo = serialized->get_string(ModelTo_type_id, {});
+		ClipTime = serialized->get_float(ClipTime_type_id, 0.000000);
+		ClipWeight = serialized->get_float(ClipWeight_type_id, 0.000000);
+		Flags = serialized->get_bitset<rivet::ddl::generated::x442dee57>(Flags_type_id, rivet::ddl::generated::x442dee57_values, 0); 
 	}
 
 	[[nodiscard]] auto

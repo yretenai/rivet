@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	LoadSetUnloadedEvent::LoadSetUnloadedEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		LoadSetIndex = serialized->get_int32(LoadSetIndex_type_id); 
+		LoadSetIndex = serialized->get_int32(LoadSetIndex_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

@@ -9,9 +9,9 @@
 
 namespace rivet::ddl::generated {
 	FormationAttackPointPrius::FormationAttackPointPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): FormationPointBasePrius(serialized) {
-		MotionOverridesCoordinator = serialized->get_bool(MotionOverridesCoordinator_type_id);
+		MotionOverridesCoordinator = serialized->get_bool(MotionOverridesCoordinator_type_id, true);
 		MotionInfo = serialized->unwrap_into_many<rivet::ddl::generated::FormationMotionInfo>(MotionInfo_type_id);
-		MotionPivotActor = serialized->get_uint64(MotionPivotActor_type_id); 
+		MotionPivotActor = serialized->get_uint64(MotionPivotActor_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

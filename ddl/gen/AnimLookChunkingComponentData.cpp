@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	AnimLookChunkingComponentData::AnimLookChunkingComponentData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): AnimChunkData(serialized) {
-		ChunkingComponentName = serialized->get_string(ChunkingComponentName_type_id);
-		ConfigurationName = serialized->get_string(ConfigurationName_type_id); 
+		ChunkingComponentName = serialized->get_string(ChunkingComponentName_type_id, {});
+		ConfigurationName = serialized->get_string(ConfigurationName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

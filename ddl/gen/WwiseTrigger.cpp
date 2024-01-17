@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	WwiseTrigger::WwiseTrigger([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		TriggerName = serialized->get_string(TriggerName_type_id);
-		TriggerId = serialized->get_uint32(TriggerId_type_id); 
+		TriggerName = serialized->get_string(TriggerName_type_id, {});
+		TriggerId = serialized->get_uint32(TriggerId_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

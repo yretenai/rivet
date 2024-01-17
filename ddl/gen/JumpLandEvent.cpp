@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	JumpLandEvent::JumpLandEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		SpeedAlongNormal = serialized->get_float(SpeedAlongNormal_type_id);
-		Material = serialized->get_enum<rivet::ddl::generated::x10b3c4cf>(Material_type_id, rivet::ddl::generated::x10b3c4cf_values); 
+		SpeedAlongNormal = serialized->get_float(SpeedAlongNormal_type_id, 0.000000);
+		Material = serialized->get_enum<rivet::ddl::generated::x10b3c4cf>(Material_type_id, rivet::ddl::generated::x10b3c4cf_values, rivet::ddl::generated::x10b3c4cf::None); 
 	}
 
 	[[nodiscard]] auto

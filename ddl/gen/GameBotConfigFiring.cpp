@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	GameBotConfigFiring::GameBotConfigFiring([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		WeaponItem = serialized->get_string(WeaponItem_type_id); 
+		WeaponItem = serialized->get_string(WeaponItem_type_id, "Base:  WeaponItemConfig"); 
 	}
 
 	[[nodiscard]] auto

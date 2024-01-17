@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	GrindMoveData::GrindMoveData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SpeedDefault = serialized->get_float(SpeedDefault_type_id);
-		Accel = serialized->get_float(Accel_type_id);
-		Decel = serialized->get_float(Decel_type_id); 
+		SpeedDefault = serialized->get_float(SpeedDefault_type_id, 12.000000);
+		Accel = serialized->get_float(Accel_type_id, 5.000000);
+		Decel = serialized->get_float(Decel_type_id, 5.000000); 
 	}
 
 	[[nodiscard]] auto

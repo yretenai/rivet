@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	FirepointSetPrius::FirepointSetPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		BotUsage = serialized->get_enum<rivet::ddl::generated::BotUsage>(BotUsage_type_id, rivet::ddl::generated::BotUsage_values);
+		BotUsage = serialized->get_enum<rivet::ddl::generated::BotUsage>(BotUsage_type_id, rivet::ddl::generated::BotUsage_values, rivet::ddl::generated::BotUsage::EnemyGround);
 		Firepoints = serialized->get_uint64s(Firepoints_type_id); 
 	}
 

@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	NamedSize::NamedSize([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Name = serialized->get_string(Name_type_id);
-		Size = serialized->get_uint32(Size_type_id); 
+		Name = serialized->get_string(Name_type_id, {});
+		Size = serialized->get_uint32(Size_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

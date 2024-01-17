@@ -26,11 +26,11 @@
 
 namespace rivet::ddl::generated {
 	HeroTraversalConfig::HeroTraversalConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		WallInteractionMinHeight = serialized->get_float(WallInteractionMinHeight_type_id);
-		BounceInteractMinWallHeight = serialized->get_float(BounceInteractMinWallHeight_type_id);
-		ZeroGJumpTimeScaleModifier = serialized->get_float(ZeroGJumpTimeScaleModifier_type_id);
-		ZeroGJumpMinHeightModifier = serialized->get_float(ZeroGJumpMinHeightModifier_type_id);
-		ZeroGJumpMaxHeightModifier = serialized->get_float(ZeroGJumpMaxHeightModifier_type_id);
+		WallInteractionMinHeight = serialized->get_float(WallInteractionMinHeight_type_id, 0.800000);
+		BounceInteractMinWallHeight = serialized->get_float(BounceInteractMinWallHeight_type_id, 2.000000);
+		ZeroGJumpTimeScaleModifier = serialized->get_float(ZeroGJumpTimeScaleModifier_type_id, 0.750000);
+		ZeroGJumpMinHeightModifier = serialized->get_float(ZeroGJumpMinHeightModifier_type_id, 1.000000);
+		ZeroGJumpMaxHeightModifier = serialized->get_float(ZeroGJumpMaxHeightModifier_type_id, 1.500000);
 		WallJumpSpeeds = serialized->unwrap_into<rivet::ddl::generated::HeroSpeedConfig>(WallJumpSpeeds_type_id);
 		WallStickConfig = serialized->unwrap_into<rivet::ddl::generated::HeroWallStickConfig>(WallStickConfig_type_id);
 		WallRunConfig = serialized->unwrap_into<rivet::ddl::generated::HeroWallRunConfig>(WallRunConfig_type_id);
@@ -50,24 +50,24 @@ namespace rivet::ddl::generated {
 		SkyDiveConfig = serialized->unwrap_into<rivet::ddl::generated::HeroSkyDiveConfig>(SkyDiveConfig_type_id);
 		GroovyConfig = serialized->unwrap_into<rivet::ddl::generated::HeroGroovitronConfig>(GroovyConfig_type_id);
 		RespawnConfig = serialized->unwrap_into<rivet::ddl::generated::HeroRespawnConfig>(RespawnConfig_type_id);
-		PortalZipConfig = serialized->get_string(PortalZipConfig_type_id);
-		OpenPocketDimConfig = serialized->get_string(OpenPocketDimConfig_type_id);
+		PortalZipConfig = serialized->get_string(PortalZipConfig_type_id, {});
+		OpenPocketDimConfig = serialized->get_string(OpenPocketDimConfig_type_id, {});
 		ShadowDimensionConfig = serialized->unwrap_into<rivet::ddl::generated::HeroShadowDimensionConfig>(ShadowDimensionConfig_type_id);
-		DropoffForwardTol = serialized->get_float(DropoffForwardTol_type_id);
-		DropoffBackTol = serialized->get_float(DropoffBackTol_type_id);
-		DropoffLeftRightTol = serialized->get_float(DropoffLeftRightTol_type_id);
-		DropoffInitiatedForwardTol = serialized->get_float(DropoffInitiatedForwardTol_type_id);
-		DropoffInitiatedLeftRightTol = serialized->get_float(DropoffInitiatedLeftRightTol_type_id);
-		DropoffUpTol = serialized->get_float(DropoffUpTol_type_id);
-		DropoffDownTol = serialized->get_float(DropoffDownTol_type_id);
-		DropoffDropDistanceMax = serialized->get_float(DropoffDropDistanceMax_type_id);
-		DropoffDropDistanceMin = serialized->get_float(DropoffDropDistanceMin_type_id);
-		MaximumMidairJumps = serialized->get_uint32(MaximumMidairJumps_type_id);
+		DropoffForwardTol = serialized->get_float(DropoffForwardTol_type_id, 0.330000);
+		DropoffBackTol = serialized->get_float(DropoffBackTol_type_id, -0.500000);
+		DropoffLeftRightTol = serialized->get_float(DropoffLeftRightTol_type_id, 0.400000);
+		DropoffInitiatedForwardTol = serialized->get_float(DropoffInitiatedForwardTol_type_id, 1.250000);
+		DropoffInitiatedLeftRightTol = serialized->get_float(DropoffInitiatedLeftRightTol_type_id, 1.200000);
+		DropoffUpTol = serialized->get_float(DropoffUpTol_type_id, 0.200000);
+		DropoffDownTol = serialized->get_float(DropoffDownTol_type_id, -0.200000);
+		DropoffDropDistanceMax = serialized->get_float(DropoffDropDistanceMax_type_id, 2.100000);
+		DropoffDropDistanceMin = serialized->get_float(DropoffDropDistanceMin_type_id, 1.600000);
+		MaximumMidairJumps = serialized->get_uint32(MaximumMidairJumps_type_id, 1);
 		JumpConfigs = serialized->unwrap_into<rivet::ddl::generated::HeroJumpConfigCollection>(JumpConfigs_type_id);
 		GroundResponse = serialized->unwrap_into_many<rivet::ddl::generated::GroundResponseElement>(GroundResponse_type_id);
-		GrindConfig = serialized->get_string(GrindConfig_type_id);
-		HoverbootConfig = serialized->get_string(HoverbootConfig_type_id);
-		SlideConfig = serialized->get_string(SlideConfig_type_id); 
+		GrindConfig = serialized->get_string(GrindConfig_type_id, {});
+		HoverbootConfig = serialized->get_string(HoverbootConfig_type_id, {});
+		SlideConfig = serialized->get_string(SlideConfig_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	WeaponTunnelerPrius::WeaponTunnelerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): WeaponGamePrius(serialized) {
-		InitialLockOnDuration = serialized->get_float(InitialLockOnDuration_type_id); 
+		InitialLockOnDuration = serialized->get_float(InitialLockOnDuration_type_id, 0.050000); 
 	}
 
 	[[nodiscard]] auto

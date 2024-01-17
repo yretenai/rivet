@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	QueuedMessage::QueuedMessage([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		TempText = serialized->get_string(TempText_type_id);
-		LocTag = serialized->get_string(LocTag_type_id); 
+		TempText = serialized->get_string(TempText_type_id, {});
+		LocTag = serialized->get_string(LocTag_type_id, "INVALID"); 
 	}
 
 	[[nodiscard]] auto

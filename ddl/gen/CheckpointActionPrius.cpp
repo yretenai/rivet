@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	CheckpointActionPrius::CheckpointActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		CheckpointName = serialized->get_string(CheckpointName_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Checkpoint);
+		CheckpointName = serialized->get_string(CheckpointName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

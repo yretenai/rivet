@@ -11,14 +11,14 @@
 namespace rivet::ddl::generated {
 	HitReactMeteredPrius::HitReactMeteredPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): HitReactPrius(serialized) {
 		MeterData = serialized->unwrap_into<rivet::ddl::generated::HitReactMeters>(MeterData_type_id);
-		FullbodyCooldown = serialized->get_float(FullbodyCooldown_type_id);
-		PartialReactDriver = serialized->get_string(PartialReactDriver_type_id);
-		PartialReactCooldown = serialized->get_float(PartialReactCooldown_type_id);
-		BodypartToFilterConfig = serialized->get_string(BodypartToFilterConfig_type_id);
-		OverrideKnockbackLength = serialized->get_float(OverrideKnockbackLength_type_id);
-		OverrideKnockdownLength = serialized->get_float(OverrideKnockdownLength_type_id);
-		ContinousPartialTime = serialized->get_float(ContinousPartialTime_type_id);
-		KineticResistance = serialized->get_float(KineticResistance_type_id);
+		FullbodyCooldown = serialized->get_float(FullbodyCooldown_type_id, 0.000000);
+		PartialReactDriver = serialized->get_string(PartialReactDriver_type_id, "React_TwitchIdle");
+		PartialReactCooldown = serialized->get_float(PartialReactCooldown_type_id, 0.250000);
+		BodypartToFilterConfig = serialized->get_string(BodypartToFilterConfig_type_id, {});
+		OverrideKnockbackLength = serialized->get_float(OverrideKnockbackLength_type_id, -1.000000);
+		OverrideKnockdownLength = serialized->get_float(OverrideKnockdownLength_type_id, -1.000000);
+		ContinousPartialTime = serialized->get_float(ContinousPartialTime_type_id, 1.000000);
+		KineticResistance = serialized->get_float(KineticResistance_type_id, 1.000000);
 		ReactionMods = serialized->unwrap_into_many<rivet::ddl::generated::KnockbackReactionModifier>(ReactionMods_type_id); 
 	}
 

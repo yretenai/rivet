@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	SetHeroBackpackActionPrius::SetHeroBackpackActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		AffectedCharacters = serialized->get_bitset<rivet::ddl::generated::x76b84f53>(AffectedCharacters_type_id, rivet::ddl::generated::x76b84f53_values);
-		HasBackpack = serialized->get_bool(HasBackpack_type_id);
-		OverrideBackpackConfig = serialized->get_string(OverrideBackpackConfig_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Hero);
+		AffectedCharacters = serialized->get_bitset<rivet::ddl::generated::x76b84f53>(AffectedCharacters_type_id, rivet::ddl::generated::x76b84f53_values, 5);
+		HasBackpack = serialized->get_bool(HasBackpack_type_id, true);
+		OverrideBackpackConfig = serialized->get_string(OverrideBackpackConfig_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

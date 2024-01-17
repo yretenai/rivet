@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	DDLVector2::DDLVector2([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		X = serialized->get_float(X_type_id);
-		Y = serialized->get_float(Y_type_id); 
+		X = serialized->get_float(X_type_id, 0.000000);
+		Y = serialized->get_float(Y_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

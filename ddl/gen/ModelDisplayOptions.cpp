@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	ModelDisplayOptions::ModelDisplayOptions([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ShowModel = serialized->get_bool(ShowModel_type_id);
-		ShowSkeleton = serialized->get_bool(ShowSkeleton_type_id);
-		ShowAnimDynamicsHud = serialized->get_bool(ShowAnimDynamicsHud_type_id);
-		ShowBounds = serialized->get_bool(ShowBounds_type_id); 
+		ShowModel = serialized->get_bool(ShowModel_type_id, true);
+		ShowSkeleton = serialized->get_bool(ShowSkeleton_type_id, false);
+		ShowAnimDynamicsHud = serialized->get_bool(ShowAnimDynamicsHud_type_id, false);
+		ShowBounds = serialized->get_bool(ShowBounds_type_id, false); 
 	}
 
 	[[nodiscard]] auto

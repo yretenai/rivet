@@ -7,17 +7,17 @@
 
 namespace rivet::ddl::generated {
 	GameUISettings::GameUISettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ForceNoUnload = serialized->get_bool(ForceNoUnload_type_id);
-		EnableHUD = serialized->get_bool(EnableHUD_type_id);
-		EnablePauseMenu = serialized->get_bool(EnablePauseMenu_type_id);
-		EnableOverlay = serialized->get_bool(EnableOverlay_type_id);
-		Enable3DText = serialized->get_bool(Enable3DText_type_id);
-		EnablePlanetMenu = serialized->get_bool(EnablePlanetMenu_type_id);
-		EnableVendor = serialized->get_bool(EnableVendor_type_id);
-		EnableZurkie = serialized->get_bool(EnableZurkie_type_id);
-		EnableMessages = serialized->get_bool(EnableMessages_type_id);
-		EnableLobby = serialized->get_bool(EnableLobby_type_id);
-		EnableDisplayGraphicsPC = serialized->get_bool(EnableDisplayGraphicsPC_type_id); 
+		ForceNoUnload = serialized->get_bool(ForceNoUnload_type_id, false);
+		EnableHUD = serialized->get_bool(EnableHUD_type_id, true);
+		EnablePauseMenu = serialized->get_bool(EnablePauseMenu_type_id, true);
+		EnableOverlay = serialized->get_bool(EnableOverlay_type_id, true);
+		Enable3DText = serialized->get_bool(Enable3DText_type_id, true);
+		EnablePlanetMenu = serialized->get_bool(EnablePlanetMenu_type_id, true);
+		EnableVendor = serialized->get_bool(EnableVendor_type_id, true);
+		EnableZurkie = serialized->get_bool(EnableZurkie_type_id, true);
+		EnableMessages = serialized->get_bool(EnableMessages_type_id, true);
+		EnableLobby = serialized->get_bool(EnableLobby_type_id, true);
+		EnableDisplayGraphicsPC = serialized->get_bool(EnableDisplayGraphicsPC_type_id, true); 
 	}
 
 	[[nodiscard]] auto

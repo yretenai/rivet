@@ -9,10 +9,10 @@
 
 namespace rivet::ddl::generated {
 	AnimSetSequenceVarDef::AnimSetSequenceVarDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Id = serialized->get_uint64(Id_type_id);
-		Time = serialized->get_float(Time_type_id);
-		VarName = serialized->get_string(VarName_type_id);
-		VarType = serialized->get_enum<rivet::ddl::generated::xdf8f8d7a>(VarType_type_id, rivet::ddl::generated::xdf8f8d7a_values);
+		Id = serialized->get_uint64(Id_type_id, 0);
+		Time = serialized->get_float(Time_type_id, 0.000000);
+		VarName = serialized->get_string(VarName_type_id, {});
+		VarType = serialized->get_enum<rivet::ddl::generated::xdf8f8d7a>(VarType_type_id, rivet::ddl::generated::xdf8f8d7a_values, rivet::ddl::generated::xdf8f8d7a::FloatOutput);
 		VarValue = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(VarValue_type_id); 
 	}
 

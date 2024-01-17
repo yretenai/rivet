@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	HealedEvent::HealedEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Amount = serialized->get_float(Amount_type_id); 
+		Amount = serialized->get_float(Amount_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

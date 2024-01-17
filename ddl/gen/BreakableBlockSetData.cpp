@@ -10,7 +10,7 @@
 namespace rivet::ddl::generated {
 	BreakableBlockSetData::BreakableBlockSetData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Blocks = serialized->unwrap_into_many<rivet::ddl::generated::BreakableBlockData>(Blocks_type_id);
-		CollectionAssetPath = serialized->get_string(CollectionAssetPath_type_id); 
+		CollectionAssetPath = serialized->get_string(CollectionAssetPath_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

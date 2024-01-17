@@ -9,15 +9,15 @@
 
 namespace rivet::ddl::generated {
 	MaterialNodeLibrary::MaterialNodeLibrary([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		LibraryDirectory = serialized->get_string(LibraryDirectory_type_id);
-		LibraryFullPath = serialized->get_string(LibraryFullPath_type_id);
-		Name = serialized->get_string(Name_type_id);
+		LibraryDirectory = serialized->get_string(LibraryDirectory_type_id, {});
+		LibraryFullPath = serialized->get_string(LibraryFullPath_type_id, {});
+		Name = serialized->get_string(Name_type_id, {});
 		Nodes = serialized->unwrap_into_many<rivet::ddl::generated::LoadedMaterialNode>(Nodes_type_id);
-		Color = serialized->get_uint32(Color_type_id);
-		FixedWidth = serialized->get_uint32(FixedWidth_type_id);
-		TimeStampLow = serialized->get_uint32(TimeStampLow_type_id);
-		TimeStampHigh = serialized->get_uint32(TimeStampHigh_type_id);
-		Hidden = serialized->get_bool(Hidden_type_id); 
+		Color = serialized->get_uint32(Color_type_id, 0);
+		FixedWidth = serialized->get_uint32(FixedWidth_type_id, 0);
+		TimeStampLow = serialized->get_uint32(TimeStampLow_type_id, 0);
+		TimeStampHigh = serialized->get_uint32(TimeStampHigh_type_id, 0);
+		Hidden = serialized->get_bool(Hidden_type_id, false); 
 	}
 
 	[[nodiscard]] auto

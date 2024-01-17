@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	DamageStateConfigDataHeartChamber::DamageStateConfigDataHeartChamber([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ChamberConfig = serialized->get_string(ChamberConfig_type_id);
-		NodeAConfig = serialized->get_string(NodeAConfig_type_id);
-		NodeBConfig = serialized->get_string(NodeBConfig_type_id); 
+		ChamberConfig = serialized->get_string(ChamberConfig_type_id, {});
+		NodeAConfig = serialized->get_string(NodeAConfig_type_id, {});
+		NodeBConfig = serialized->get_string(NodeBConfig_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	CameraDistanceScalePrius::CameraDistanceScalePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MinScaleDistance = serialized->get_float(MinScaleDistance_type_id);
-		MaxScale = serialized->get_float(MaxScale_type_id); 
+		MinScaleDistance = serialized->get_float(MinScaleDistance_type_id, 10.000000);
+		MaxScale = serialized->get_float(MaxScale_type_id, 3.000000); 
 	}
 
 	[[nodiscard]] auto

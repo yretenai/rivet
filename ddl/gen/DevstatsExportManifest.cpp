@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	DevstatsExportManifest::DevstatsExportManifest([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Service = serialized->get_string(Service_type_id);
+		Service = serialized->get_string(Service_type_id, "generic");
 		Files = serialized->unwrap_into_many<rivet::ddl::generated::DevstatsExport>(Files_type_id); 
 	}
 

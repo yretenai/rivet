@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	SetMaterialDefEngineCommand::SetMaterialDefEngineCommand([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Id = serialized->get_uint64(Id_type_id);
+		Id = serialized->get_uint64(Id_type_id, 0);
 		Def = serialized->unwrap_into<rivet::ddl::generated::MaterialDef>(Def_type_id); 
 	}
 

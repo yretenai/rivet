@@ -11,7 +11,7 @@ namespace rivet::ddl::generated {
 	ECMFieldMap::ECMFieldMap([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Source = serialized->unwrap_into<rivet::ddl::generated::ECMField>(Source_type_id);
 		Dest = serialized->unwrap_into<rivet::ddl::generated::ECMField>(Dest_type_id);
-		Op = serialized->get_enum<rivet::ddl::generated::x48fb1e07>(Op_type_id, rivet::ddl::generated::x48fb1e07_values); 
+		Op = serialized->get_enum<rivet::ddl::generated::x48fb1e07>(Op_type_id, rivet::ddl::generated::x48fb1e07_values, rivet::ddl::generated::x48fb1e07::MapOpAssign); 
 	}
 
 	[[nodiscard]] auto

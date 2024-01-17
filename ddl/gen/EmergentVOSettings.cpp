@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	EmergentVOSettings::EmergentVOSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DEVOIsDriving = serialized->get_bool(DEVOIsDriving_type_id);
-		EnableEVODevstats = serialized->get_bool(EnableEVODevstats_type_id); 
+		DEVOIsDriving = serialized->get_bool(DEVOIsDriving_type_id, false);
+		EnableEVODevstats = serialized->get_bool(EnableEVODevstats_type_id, true); 
 	}
 
 	[[nodiscard]] auto

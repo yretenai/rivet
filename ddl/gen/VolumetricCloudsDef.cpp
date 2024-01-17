@@ -14,8 +14,8 @@
 
 namespace rivet::ddl::generated {
 	VolumetricCloudsDef::VolumetricCloudsDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Enabled = serialized->get_bool(Enabled_type_id);
-		EarthRadiusScale = serialized->get_float(EarthRadiusScale_type_id);
+		Enabled = serialized->get_bool(Enabled_type_id, false);
+		EarthRadiusScale = serialized->get_float(EarthRadiusScale_type_id, 10.000000);
 		VolumetricCloudsRayMarching = serialized->unwrap_into<rivet::ddl::generated::VolumetricCloudsRayMarchingDef>(VolumetricCloudsRayMarching_type_id);
 		VolumetricCloudsModeling = serialized->unwrap_into<rivet::ddl::generated::VolumetricCloudsModelingDef>(VolumetricCloudsModeling_type_id);
 		VolumetricCloudsWind = serialized->unwrap_into<rivet::ddl::generated::VolumetricCloudsWindDef>(VolumetricCloudsWind_type_id);

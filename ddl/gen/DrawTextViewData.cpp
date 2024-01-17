@@ -9,12 +9,12 @@
 
 namespace rivet::ddl::generated {
 	DrawTextViewData::DrawTextViewData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): UIAtlasBaseData(serialized) {
-		Text = serialized->get_string(Text_type_id);
+		Text = serialized->get_string(Text_type_id, {});
 		TextColor = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(TextColor_type_id);
 		BackgroundColor = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(BackgroundColor_type_id);
-		SizeCSSClass = serialized->get_string(SizeCSSClass_type_id);
-		Alignment = serialized->get_enum<rivet::ddl::generated::x84bbe706>(Alignment_type_id, rivet::ddl::generated::x84bbe706_values);
-		FontSize = serialized->get_uint32(FontSize_type_id); 
+		SizeCSSClass = serialized->get_string(SizeCSSClass_type_id, "fullSize");
+		Alignment = serialized->get_enum<rivet::ddl::generated::x84bbe706>(Alignment_type_id, rivet::ddl::generated::x84bbe706_values, rivet::ddl::generated::x84bbe706::Center);
+		FontSize = serialized->get_uint32(FontSize_type_id, 32); 
 	}
 
 	[[nodiscard]] auto

@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	LedgePathAttachActionPrius::LedgePathAttachActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		AttachType = serialized->get_enum<rivet::ddl::generated::xbabeae30>(AttachType_type_id, rivet::ddl::generated::xbabeae30_values); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Hero);
+		AttachType = serialized->get_enum<rivet::ddl::generated::xbabeae30>(AttachType_type_id, rivet::ddl::generated::xbabeae30_values, rivet::ddl::generated::xbabeae30::AEndToBStart); 
 	}
 
 	[[nodiscard]] auto

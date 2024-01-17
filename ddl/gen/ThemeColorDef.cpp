@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	ThemeColorDef::ThemeColorDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Symbol = serialized->get_enum<rivet::ddl::generated::x278835c9>(Symbol_type_id, rivet::ddl::generated::x278835c9_values);
-		ColorSpec = serialized->get_string(ColorSpec_type_id);
-		Groups = serialized->get_bitset<rivet::ddl::generated::x3b2d3a40>(Groups_type_id, rivet::ddl::generated::x3b2d3a40_values); 
+		Symbol = serialized->get_enum<rivet::ddl::generated::x278835c9>(Symbol_type_id, rivet::ddl::generated::x278835c9_values, rivet::ddl::generated::x278835c9::AlternateBase);
+		ColorSpec = serialized->get_string(ColorSpec_type_id, {});
+		Groups = serialized->get_bitset<rivet::ddl::generated::x3b2d3a40>(Groups_type_id, rivet::ddl::generated::x3b2d3a40_values, 7); 
 	}
 
 	[[nodiscard]] auto

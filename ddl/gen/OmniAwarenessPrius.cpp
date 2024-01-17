@@ -13,9 +13,9 @@
 
 namespace rivet::ddl::generated {
 	OmniAwarenessPrius::OmniAwarenessPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): AwarenessBasePrius(serialized) {
-		Range = serialized->get_float(Range_type_id);
-		OmniAwarenessLos = serialized->get_enum<rivet::ddl::generated::OmniAwarenessLos>(OmniAwarenessLos_type_id, rivet::ddl::generated::OmniAwarenessLos_values);
-		SourceLocatorName = serialized->get_string(SourceLocatorName_type_id); 
+		Range = serialized->get_float(Range_type_id, 100.000000);
+		OmniAwarenessLos = serialized->get_enum<rivet::ddl::generated::OmniAwarenessLos>(OmniAwarenessLos_type_id, rivet::ddl::generated::OmniAwarenessLos_values, rivet::ddl::generated::OmniAwarenessLos::BestTarget);
+		SourceLocatorName = serialized->get_string(SourceLocatorName_type_id, "head"); 
 	}
 
 	[[nodiscard]] auto

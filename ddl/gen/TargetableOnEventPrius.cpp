@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	TargetableOnEventPrius::TargetableOnEventPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		TargetableEvent = serialized->get_string(TargetableEvent_type_id);
-		UntargetableEvent = serialized->get_string(UntargetableEvent_type_id); 
+		TargetableEvent = serialized->get_string(TargetableEvent_type_id, {});
+		UntargetableEvent = serialized->get_string(UntargetableEvent_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	AASettingsDef::AASettingsDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Enabled = serialized->get_bool(Enabled_type_id);
-		TemporalBlendStrength = serialized->get_float(TemporalBlendStrength_type_id);
-		TemporalSharpenStrength = serialized->get_float(TemporalSharpenStrength_type_id); 
+		Enabled = serialized->get_bool(Enabled_type_id, true);
+		TemporalBlendStrength = serialized->get_float(TemporalBlendStrength_type_id, 0.040000);
+		TemporalSharpenStrength = serialized->get_float(TemporalSharpenStrength_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

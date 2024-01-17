@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	QueryError::QueryError([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Message = serialized->get_string(Message_type_id); 
+		Message = serialized->get_string(Message_type_id, ""); 
 	}
 
 	[[nodiscard]] auto

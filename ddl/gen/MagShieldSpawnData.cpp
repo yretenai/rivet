@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	MagShieldSpawnData::MagShieldSpawnData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): AttachableShotSpawnData(serialized) {
-		ReturnShots = serialized->get_bool(ReturnShots_type_id); 
+		ReturnShots = serialized->get_bool(ReturnShots_type_id, false); 
 	}
 
 	[[nodiscard]] auto

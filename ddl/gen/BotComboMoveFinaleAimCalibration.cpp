@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	BotComboMoveFinaleAimCalibration::BotComboMoveFinaleAimCalibration([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BotComboMoveBase(serialized) {
-		PortalActorAsset = serialized->get_string(PortalActorAsset_type_id);
-		WeaponActorAsset = serialized->get_string(WeaponActorAsset_type_id);
-		WeaponActorVol = serialized->get_uint64(WeaponActorVol_type_id); 
+		PortalActorAsset = serialized->get_string(PortalActorAsset_type_id, {});
+		WeaponActorAsset = serialized->get_string(WeaponActorAsset_type_id, {});
+		WeaponActorVol = serialized->get_uint64(WeaponActorVol_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	PlayerTargetingOnScreenListPrius::PlayerTargetingOnScreenListPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): PlayerTargetingStickControlPrius(serialized) {
-		TargetTypes = serialized->get_bitset<rivet::ddl::generated::TargetType>(TargetTypes_type_id, rivet::ddl::generated::TargetType_values);
-		TargetRange = serialized->get_float(TargetRange_type_id); 
+		TargetTypes = serialized->get_bitset<rivet::ddl::generated::TargetType>(TargetTypes_type_id, rivet::ddl::generated::TargetType_values, 0);
+		TargetRange = serialized->get_float(TargetRange_type_id, 50.000000); 
 	}
 
 	[[nodiscard]] auto

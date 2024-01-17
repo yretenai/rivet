@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	InteractLocationLocatorPrius::InteractLocationLocatorPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): InteractLocationPrius(serialized) {
-		Locator = serialized->get_string(Locator_type_id);
-		AnimLocator = serialized->get_string(AnimLocator_type_id);
-		ExitLocator = serialized->get_string(ExitLocator_type_id); 
+		Locator = serialized->get_string(Locator_type_id, {});
+		AnimLocator = serialized->get_string(AnimLocator_type_id, {});
+		ExitLocator = serialized->get_string(ExitLocator_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

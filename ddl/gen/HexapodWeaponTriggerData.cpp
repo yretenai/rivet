@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	HexapodWeaponTriggerData::HexapodWeaponTriggerData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		IdealTriggerAnalogValue = serialized->get_float(IdealTriggerAnalogValue_type_id);
-		TriggerAnalogValueBuffer = serialized->get_float(TriggerAnalogValueBuffer_type_id); 
+		IdealTriggerAnalogValue = serialized->get_float(IdealTriggerAnalogValue_type_id, 0.500000);
+		TriggerAnalogValueBuffer = serialized->get_float(TriggerAnalogValueBuffer_type_id, 0.250000); 
 	}
 
 	[[nodiscard]] auto

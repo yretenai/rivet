@@ -7,13 +7,13 @@
 
 namespace rivet::ddl::generated {
 	AssetCacheEntry::AssetCacheEntry([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AssetPath = serialized->get_string(AssetPath_type_id);
-		ErrorCode = serialized->get_int32(ErrorCode_type_id);
-		LastError = serialized->get_string(LastError_type_id);
-		Size = serialized->get_int64(Size_type_id);
-		LastAccessed = serialized->get_int64(LastAccessed_type_id);
-		LastModified = serialized->get_int64(LastModified_type_id);
-		LastSaved = serialized->get_int64(LastSaved_type_id); 
+		AssetPath = serialized->get_string(AssetPath_type_id, {});
+		ErrorCode = serialized->get_int32(ErrorCode_type_id, 0);
+		LastError = serialized->get_string(LastError_type_id, {});
+		Size = serialized->get_int64(Size_type_id, 0);
+		LastAccessed = serialized->get_int64(LastAccessed_type_id, 0);
+		LastModified = serialized->get_int64(LastModified_type_id, 0);
+		LastSaved = serialized->get_int64(LastSaved_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

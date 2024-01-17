@@ -10,7 +10,7 @@
 namespace rivet::ddl::generated {
 	WeaponKamehamehaPrius::WeaponKamehamehaPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): WeaponGamePrius(serialized) {
 		ChargeLevels = serialized->unwrap_into_many<rivet::ddl::generated::KamehamehaChargeLevel>(ChargeLevels_type_id);
-		FiringAllowedKnockbacks = serialized->get_bitset<rivet::ddl::generated::x8b303a8b>(FiringAllowedKnockbacks_type_id, rivet::ddl::generated::x8b303a8b_values); 
+		FiringAllowedKnockbacks = serialized->get_bitset<rivet::ddl::generated::x8b303a8b>(FiringAllowedKnockbacks_type_id, rivet::ddl::generated::x8b303a8b_values, 1); 
 	}
 
 	[[nodiscard]] auto

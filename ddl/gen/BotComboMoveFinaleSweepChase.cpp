@@ -7,13 +7,13 @@
 
 namespace rivet::ddl::generated {
 	BotComboMoveFinaleSweepChase::BotComboMoveFinaleSweepChase([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BotComboMoveBase(serialized) {
-		AnimDriver = serialized->get_string(AnimDriver_type_id);
-		PlaneActorAsset = serialized->get_string(PlaneActorAsset_type_id);
-		PlaneSpawnPos = serialized->get_uint64(PlaneSpawnPos_type_id);
-		PlaneStartPos = serialized->get_uint64(PlaneStartPos_type_id);
-		PlaneEndPos = serialized->get_uint64(PlaneEndPos_type_id);
-		TurnRateMin = serialized->get_float(TurnRateMin_type_id);
-		TurnRateMax = serialized->get_float(TurnRateMax_type_id); 
+		AnimDriver = serialized->get_string(AnimDriver_type_id, {});
+		PlaneActorAsset = serialized->get_string(PlaneActorAsset_type_id, {});
+		PlaneSpawnPos = serialized->get_uint64(PlaneSpawnPos_type_id, 0);
+		PlaneStartPos = serialized->get_uint64(PlaneStartPos_type_id, 0);
+		PlaneEndPos = serialized->get_uint64(PlaneEndPos_type_id, 0);
+		TurnRateMin = serialized->get_float(TurnRateMin_type_id, 0.000000);
+		TurnRateMax = serialized->get_float(TurnRateMax_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

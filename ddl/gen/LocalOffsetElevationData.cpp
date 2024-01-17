@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	LocalOffsetElevationData::LocalOffsetElevationData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Elevation = serialized->get_enum<rivet::ddl::generated::xfdd79442>(Elevation_type_id, rivet::ddl::generated::xfdd79442_values);
+		Elevation = serialized->get_enum<rivet::ddl::generated::xfdd79442>(Elevation_type_id, rivet::ddl::generated::xfdd79442_values, rivet::ddl::generated::xfdd79442::Any);
 		Offset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Offset_type_id); 
 	}
 

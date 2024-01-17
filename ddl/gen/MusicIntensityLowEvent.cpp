@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	MusicIntensityLowEvent::MusicIntensityLowEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Raw = serialized->get_float(Raw_type_id);
-		Blended = serialized->get_float(Blended_type_id); 
+		Raw = serialized->get_float(Raw_type_id, 0.000000);
+		Blended = serialized->get_float(Blended_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

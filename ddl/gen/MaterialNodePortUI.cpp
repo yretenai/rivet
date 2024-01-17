@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	MaterialNodePortUI::MaterialNodePortUI([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Id = serialized->get_string(Id_type_id);
-		Global = serialized->get_bool(Global_type_id);
-		Exposed = serialized->get_bool(Exposed_type_id);
-		LinearFilter = serialized->get_bool(LinearFilter_type_id); 
+		Id = serialized->get_string(Id_type_id, {});
+		Global = serialized->get_bool(Global_type_id, false);
+		Exposed = serialized->get_bool(Exposed_type_id, false);
+		LinearFilter = serialized->get_bool(LinearFilter_type_id, false); 
 	}
 
 	[[nodiscard]] auto

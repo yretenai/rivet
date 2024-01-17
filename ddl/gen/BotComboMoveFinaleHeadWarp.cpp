@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	BotComboMoveFinaleHeadWarp::BotComboMoveFinaleHeadWarp([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BotComboMoveBase(serialized) {
-		PortalActorAsset = serialized->get_string(PortalActorAsset_type_id);
-		HeadActorAsset = serialized->get_string(HeadActorAsset_type_id);
-		HeadActorVol = serialized->get_uint64(HeadActorVol_type_id); 
+		PortalActorAsset = serialized->get_string(PortalActorAsset_type_id, {});
+		HeadActorAsset = serialized->get_string(HeadActorAsset_type_id, {});
+		HeadActorVol = serialized->get_uint64(HeadActorVol_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

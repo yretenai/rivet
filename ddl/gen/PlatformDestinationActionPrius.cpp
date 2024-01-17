@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	PlatformDestinationActionPrius::PlatformDestinationActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		ArriveTriggerMax = serialized->get_uint32(ArriveTriggerMax_type_id);
-		LeaveTriggerMax = serialized->get_uint32(LeaveTriggerMax_type_id);
-		Loop = serialized->get_bool(Loop_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Interact);
+		ArriveTriggerMax = serialized->get_uint32(ArriveTriggerMax_type_id, 0);
+		LeaveTriggerMax = serialized->get_uint32(LeaveTriggerMax_type_id, 0);
+		Loop = serialized->get_bool(Loop_type_id, false); 
 	}
 
 	[[nodiscard]] auto

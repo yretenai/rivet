@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	SkinItemSwitchGroup::SkinItemSwitchGroup([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SwitchGroupName = serialized->get_string(SwitchGroupName_type_id);
-		SwitchGroupValue = serialized->get_string(SwitchGroupValue_type_id); 
+		SwitchGroupName = serialized->get_string(SwitchGroupName_type_id, {});
+		SwitchGroupValue = serialized->get_string(SwitchGroupValue_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

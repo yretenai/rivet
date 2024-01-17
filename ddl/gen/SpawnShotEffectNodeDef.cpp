@@ -11,7 +11,7 @@
 
 namespace rivet::ddl::generated {
 	SpawnShotEffectNodeDef::SpawnShotEffectNodeDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): NodalShotEffectNodeBaseDef(serialized) {
-		SpawnFromActor = serialized->get_enum<rivet::ddl::generated::x684c6439>(SpawnFromActor_type_id, rivet::ddl::generated::x684c6439_values);
+		SpawnFromActor = serialized->get_enum<rivet::ddl::generated::x684c6439>(SpawnFromActor_type_id, rivet::ddl::generated::x684c6439_values, rivet::ddl::generated::x684c6439::ShotActor);
 		TargetMode = serialized->unwrap_into<rivet::ddl::generated::SpawnShotTargetingMode>(TargetMode_type_id);
 		AccuracyPrius = serialized->unwrap_into<rivet::ddl::generated::WeaponAccuracyBasePrius>(AccuracyPrius_type_id);
 		FiringPrius = serialized->unwrap_into<rivet::ddl::generated::WeaponFiringBasePrius>(FiringPrius_type_id); 

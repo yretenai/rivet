@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	PrefabZoneActorSpawnData::PrefabZoneActorSpawnData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ActorSpawnData(serialized) {
-		ActorUid = serialized->get_uint64(ActorUid_type_id);
-		PrefabActorUid = serialized->get_uint64(PrefabActorUid_type_id); 
+		ActorUid = serialized->get_uint64(ActorUid_type_id, 0);
+		PrefabActorUid = serialized->get_uint64(PrefabActorUid_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

@@ -11,8 +11,8 @@
 namespace rivet::ddl::generated {
 	ChunkSpawnerPrius::ChunkSpawnerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		SpawnParams = serialized->unwrap_into<rivet::ddl::generated::ChunkSpawnParams>(SpawnParams_type_id);
-		SpawnOnDeath = serialized->get_bool(SpawnOnDeath_type_id);
-		HitDirectionBias = serialized->get_float(HitDirectionBias_type_id);
+		SpawnOnDeath = serialized->get_bool(SpawnOnDeath_type_id, true);
+		HitDirectionBias = serialized->get_float(HitDirectionBias_type_id, 0.000000);
 		SpawnItems = serialized->unwrap_into_many<rivet::ddl::generated::ChunkSpawnItem>(SpawnItems_type_id); 
 	}
 

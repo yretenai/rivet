@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	DamageModifierFrozenPrius::DamageModifierFrozenPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): DamageModifierIncomingPrius(serialized) {
-		MeleeModifier = serialized->get_float(MeleeModifier_type_id); 
+		MeleeModifier = serialized->get_float(MeleeModifier_type_id, 2.000000); 
 	}
 
 	[[nodiscard]] auto

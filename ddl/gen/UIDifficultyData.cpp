@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	UIDifficultyData::UIDifficultyData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DifficultyID = serialized->get_enum<rivet::ddl::generated::xd2b2d773>(DifficultyID_type_id, rivet::ddl::generated::xd2b2d773_values);
-		Name = serialized->get_string(Name_type_id);
-		Desc = serialized->get_string(Desc_type_id);
-		EnemyAggressiveness = serialized->get_float(EnemyAggressiveness_type_id);
-		EnemyDamage = serialized->get_float(EnemyDamage_type_id);
-		EnemyHealth = serialized->get_float(EnemyHealth_type_id); 
+		DifficultyID = serialized->get_enum<rivet::ddl::generated::xd2b2d773>(DifficultyID_type_id, rivet::ddl::generated::xd2b2d773_values, rivet::ddl::generated::xd2b2d773::Easy);
+		Name = serialized->get_string(Name_type_id, {});
+		Desc = serialized->get_string(Desc_type_id, {});
+		EnemyAggressiveness = serialized->get_float(EnemyAggressiveness_type_id, 1.000000);
+		EnemyDamage = serialized->get_float(EnemyDamage_type_id, 1.000000);
+		EnemyHealth = serialized->get_float(EnemyHealth_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

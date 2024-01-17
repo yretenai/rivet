@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	SkinData::SkinData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		BodyLookGroup = serialized->get_string(BodyLookGroup_type_id);
-		GloveLookGroup = serialized->get_string(GloveLookGroup_type_id);
-		BootsLookGroup = serialized->get_string(BootsLookGroup_type_id);
-		CapLookGroup = serialized->get_string(CapLookGroup_type_id);
-		HelmetModel = serialized->get_string(HelmetModel_type_id);
-		OxygenTankModel = serialized->get_string(OxygenTankModel_type_id); 
+		BodyLookGroup = serialized->get_string(BodyLookGroup_type_id, {});
+		GloveLookGroup = serialized->get_string(GloveLookGroup_type_id, {});
+		BootsLookGroup = serialized->get_string(BootsLookGroup_type_id, {});
+		CapLookGroup = serialized->get_string(CapLookGroup_type_id, {});
+		HelmetModel = serialized->get_string(HelmetModel_type_id, {});
+		OxygenTankModel = serialized->get_string(OxygenTankModel_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

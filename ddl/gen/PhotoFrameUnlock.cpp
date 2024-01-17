@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	PhotoFrameUnlock::PhotoFrameUnlock([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		UnlockType = serialized->get_enum<rivet::ddl::generated::xfc0fcda6>(UnlockType_type_id, rivet::ddl::generated::xfc0fcda6_values);
-		UnlockId = serialized->get_string(UnlockId_type_id); 
+		UnlockType = serialized->get_enum<rivet::ddl::generated::xfc0fcda6>(UnlockType_type_id, rivet::ddl::generated::xfc0fcda6_values, rivet::ddl::generated::xfc0fcda6::None);
+		UnlockId = serialized->get_string(UnlockId_type_id, ""); 
 	}
 
 	[[nodiscard]] auto

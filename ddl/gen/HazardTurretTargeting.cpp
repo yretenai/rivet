@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	HazardTurretTargeting::HazardTurretTargeting([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		FOVAngle = serialized->get_float(FOVAngle_type_id);
-		Range = serialized->get_float(Range_type_id);
-		WarningTime = serialized->get_float(WarningTime_type_id);
-		CooldownTime = serialized->get_float(CooldownTime_type_id);
-		TurnSpeed = serialized->get_float(TurnSpeed_type_id); 
+		FOVAngle = serialized->get_float(FOVAngle_type_id, 15.000000);
+		Range = serialized->get_float(Range_type_id, 15.000000);
+		WarningTime = serialized->get_float(WarningTime_type_id, 0.000000);
+		CooldownTime = serialized->get_float(CooldownTime_type_id, 0.000000);
+		TurnSpeed = serialized->get_float(TurnSpeed_type_id, 90.000000); 
 	}
 
 	[[nodiscard]] auto

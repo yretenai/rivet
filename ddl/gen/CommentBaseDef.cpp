@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	CommentBaseDef::CommentBaseDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): NodeGraphItemDef(serialized) {
-		Text = serialized->get_string(Text_type_id);
-		X = serialized->get_float(X_type_id);
-		Y = serialized->get_float(Y_type_id);
-		Width = serialized->get_float(Width_type_id);
-		Height = serialized->get_float(Height_type_id); 
+		Text = serialized->get_string(Text_type_id, {});
+		X = serialized->get_float(X_type_id, 0.000000);
+		Y = serialized->get_float(Y_type_id, 0.000000);
+		Width = serialized->get_float(Width_type_id, 0.000000);
+		Height = serialized->get_float(Height_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

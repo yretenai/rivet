@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	AudioBusMaterialUpdaterPrius::AudioBusMaterialUpdaterPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MaterialConstantName = serialized->get_string(MaterialConstantName_type_id);
-		MaterialMapName = serialized->get_string(MaterialMapName_type_id);
-		AudioBus = serialized->get_string(AudioBus_type_id);
-		MinBusValue = serialized->get_float(MinBusValue_type_id);
-		MaxBusValue = serialized->get_float(MaxBusValue_type_id);
-		RandomBonusValue = serialized->get_float(RandomBonusValue_type_id); 
+		MaterialConstantName = serialized->get_string(MaterialConstantName_type_id, {});
+		MaterialMapName = serialized->get_string(MaterialMapName_type_id, {});
+		AudioBus = serialized->get_string(AudioBus_type_id, {});
+		MinBusValue = serialized->get_float(MinBusValue_type_id, 0.000000);
+		MaxBusValue = serialized->get_float(MaxBusValue_type_id, 1.000000);
+		RandomBonusValue = serialized->get_float(RandomBonusValue_type_id, 0.020000); 
 	}
 
 	[[nodiscard]] auto

@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	BotGroundResponseSpeedMultiplierPrius::BotGroundResponseSpeedMultiplierPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BotGroundResponseBasePrius(serialized) {
-		SpeedMultiplier = serialized->get_float(SpeedMultiplier_type_id); 
+		SpeedMultiplier = serialized->get_float(SpeedMultiplier_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

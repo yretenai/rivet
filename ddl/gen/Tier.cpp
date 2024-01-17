@@ -9,15 +9,15 @@
 
 namespace rivet::ddl::generated {
 	Tier::Tier([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		TargetTypes = serialized->get_bitset<rivet::ddl::generated::TargetType>(TargetTypes_type_id, rivet::ddl::generated::TargetType_values);
+		TargetTypes = serialized->get_bitset<rivet::ddl::generated::TargetType>(TargetTypes_type_id, rivet::ddl::generated::TargetType_values, 0);
 		MinRange = serialized->unwrap_into<rivet::ddl::generated::ProxAggroRange>(MinRange_type_id);
 		AdditionalRanges = serialized->unwrap_into_many<rivet::ddl::generated::ProxAggroRange>(AdditionalRanges_type_id);
 		MaxRange = serialized->unwrap_into<rivet::ddl::generated::ProxAggroRange>(MaxRange_type_id);
-		ProximityAggroRate = serialized->get_float(ProximityAggroRate_type_id);
-		ProximityAggroBleedRate = serialized->get_float(ProximityAggroBleedRate_type_id);
-		RangedAreaBufferDistance = serialized->get_float(RangedAreaBufferDistance_type_id);
-		RangedAreaDropoffDistance = serialized->get_float(RangedAreaDropoffDistance_type_id);
-		IgnoreIfUnreachable = serialized->get_bool(IgnoreIfUnreachable_type_id); 
+		ProximityAggroRate = serialized->get_float(ProximityAggroRate_type_id, 25.000000);
+		ProximityAggroBleedRate = serialized->get_float(ProximityAggroBleedRate_type_id, 5.000000);
+		RangedAreaBufferDistance = serialized->get_float(RangedAreaBufferDistance_type_id, 30.000000);
+		RangedAreaDropoffDistance = serialized->get_float(RangedAreaDropoffDistance_type_id, 40.000000);
+		IgnoreIfUnreachable = serialized->get_bool(IgnoreIfUnreachable_type_id, false); 
 	}
 
 	[[nodiscard]] auto

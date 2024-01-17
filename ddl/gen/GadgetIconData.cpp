@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	GadgetIconData::GadgetIconData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Gadget = serialized->get_enum<rivet::ddl::generated::xce74edfb>(Gadget_type_id, rivet::ddl::generated::xce74edfb_values);
-		Icon = serialized->get_string(Icon_type_id); 
+		Gadget = serialized->get_enum<rivet::ddl::generated::xce74edfb>(Gadget_type_id, rivet::ddl::generated::xce74edfb_values, rivet::ddl::generated::xce74edfb::Omniboots);
+		Icon = serialized->get_string(Icon_type_id, "WpnUnknown"); 
 	}
 
 	[[nodiscard]] auto

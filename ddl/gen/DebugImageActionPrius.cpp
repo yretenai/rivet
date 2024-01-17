@@ -10,17 +10,17 @@
 
 namespace rivet::ddl::generated {
 	DebugImageActionPrius::DebugImageActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		Image = serialized->get_string(Image_type_id);
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::UI);
+		Image = serialized->get_string(Image_type_id, {});
 		Size = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(Size_type_id);
 		UVMin = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(UVMin_type_id);
 		UVMax = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(UVMax_type_id);
 		TintColor = serialized->unwrap_into<rivet::ddl::generated::DDLVector4>(TintColor_type_id);
 		Position = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(Position_type_id);
-		Position3D = serialized->get_bool(Position3D_type_id);
-		CenterOnPoint = serialized->get_bool(CenterOnPoint_type_id);
-		ShowWindowBG = serialized->get_bool(ShowWindowBG_type_id);
-		RenderLayer = serialized->get_enum<rivet::ddl::generated::xf8706507>(RenderLayer_type_id, rivet::ddl::generated::xf8706507_values); 
+		Position3D = serialized->get_bool(Position3D_type_id, false);
+		CenterOnPoint = serialized->get_bool(CenterOnPoint_type_id, false);
+		ShowWindowBG = serialized->get_bool(ShowWindowBG_type_id, false);
+		RenderLayer = serialized->get_enum<rivet::ddl::generated::xf8706507>(RenderLayer_type_id, rivet::ddl::generated::xf8706507_values, rivet::ddl::generated::xf8706507::Debug); 
 	}
 
 	[[nodiscard]] auto

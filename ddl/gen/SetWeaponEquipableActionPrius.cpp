@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	SetWeaponEquipableActionPrius::SetWeaponEquipableActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		Weapon = serialized->get_enum<rivet::ddl::generated::x63d44ada>(Weapon_type_id, rivet::ddl::generated::x63d44ada_values);
-		Equipable = serialized->get_bool(Equipable_type_id);
-		ForceUnequipIfNowUnequipable = serialized->get_bool(ForceUnequipIfNowUnequipable_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Boss);
+		Weapon = serialized->get_enum<rivet::ddl::generated::x63d44ada>(Weapon_type_id, rivet::ddl::generated::x63d44ada_values, rivet::ddl::generated::x63d44ada::None);
+		Equipable = serialized->get_bool(Equipable_type_id, false);
+		ForceUnequipIfNowUnequipable = serialized->get_bool(ForceUnequipIfNowUnequipable_type_id, true); 
 	}
 
 	[[nodiscard]] auto

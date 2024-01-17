@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	GridItemPrius::GridItemPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ItemPrius(serialized) {
-		Rotated = serialized->get_uint8(Rotated_type_id); 
+		Rotated = serialized->get_uint8(Rotated_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

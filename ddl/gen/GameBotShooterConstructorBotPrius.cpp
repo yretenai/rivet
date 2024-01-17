@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	GameBotShooterConstructorBotPrius::GameBotShooterConstructorBotPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): GameBotShooterPrius(serialized) {
-		AttachLocator = serialized->get_string(AttachLocator_type_id);
-		FiringConfig = serialized->get_string(FiringConfig_type_id); 
+		AttachLocator = serialized->get_string(AttachLocator_type_id, "igLoc_bulletEmit");
+		FiringConfig = serialized->get_string(FiringConfig_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

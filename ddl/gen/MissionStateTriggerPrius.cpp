@@ -7,13 +7,13 @@
 
 namespace rivet::ddl::generated {
 	MissionStateTriggerPrius::MissionStateTriggerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BaseCustomOverlayTriggerPrius(serialized) {
-		MissionName = serialized->get_string(MissionName_type_id);
-		Inactive = serialized->get_bool(Inactive_type_id);
-		Available = serialized->get_bool(Available_type_id);
-		Active = serialized->get_bool(Active_type_id);
-		Cleanup = serialized->get_bool(Cleanup_type_id);
-		Complete = serialized->get_bool(Complete_type_id);
-		Failed = serialized->get_bool(Failed_type_id); 
+		MissionName = serialized->get_string(MissionName_type_id, {});
+		Inactive = serialized->get_bool(Inactive_type_id, false);
+		Available = serialized->get_bool(Available_type_id, false);
+		Active = serialized->get_bool(Active_type_id, false);
+		Cleanup = serialized->get_bool(Cleanup_type_id, false);
+		Complete = serialized->get_bool(Complete_type_id, false);
+		Failed = serialized->get_bool(Failed_type_id, false); 
 	}
 
 	[[nodiscard]] auto

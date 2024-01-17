@@ -10,7 +10,7 @@
 
 namespace rivet::ddl::generated {
 	AnimVisEngineItem::AnimVisEngineItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Name = serialized->get_string(Name_type_id);
+		Name = serialized->get_string(Name_type_id, {});
 		SizeInfo = serialized->unwrap_into_many<rivet::ddl::generated::AnimVisSizeInfo>(SizeInfo_type_id);
 		VisNodes = serialized->unwrap_into_many<rivet::ddl::generated::AnimVisNodeDef>(VisNodes_type_id); 
 	}

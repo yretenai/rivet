@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	SkinItemConstantOverride::SkinItemConstantOverride([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ConstantName = serialized->get_string(ConstantName_type_id);
-		ConstantValue = serialized->get_float(ConstantValue_type_id); 
+		ConstantName = serialized->get_string(ConstantName_type_id, {});
+		ConstantValue = serialized->get_float(ConstantValue_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

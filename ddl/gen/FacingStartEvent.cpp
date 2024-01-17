@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	FacingStartEvent::FacingStartEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Direction = serialized->get_enum<rivet::ddl::generated::xfa020271>(Direction_type_id, rivet::ddl::generated::xfa020271_values); 
+		Direction = serialized->get_enum<rivet::ddl::generated::xfa020271>(Direction_type_id, rivet::ddl::generated::xfa020271_values, rivet::ddl::generated::xfa020271::Both); 
 	}
 
 	[[nodiscard]] auto

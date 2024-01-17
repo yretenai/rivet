@@ -10,7 +10,7 @@ namespace rivet::ddl::generated {
 		Functions = serialized->get_strings(Functions_type_id);
 		Selects = serialized->get_strings(Selects_type_id);
 		Structs = serialized->get_strings(Structs_type_id);
-		Type = serialized->get_string(Type_type_id); 
+		Type = serialized->get_string(Type_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

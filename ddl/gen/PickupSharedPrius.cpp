@@ -12,7 +12,7 @@
 
 namespace rivet::ddl::generated {
 	PickupSharedPrius::PickupSharedPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): PickupBasePrius(serialized) {
-		DeleteOnEvent = serialized->get_enum<rivet::ddl::generated::x993e7bef>(DeleteOnEvent_type_id, rivet::ddl::generated::x993e7bef_values);
+		DeleteOnEvent = serialized->get_enum<rivet::ddl::generated::x993e7bef>(DeleteOnEvent_type_id, rivet::ddl::generated::x993e7bef_values, rivet::ddl::generated::x993e7bef::Do_Not_Use_an_Event_to_Delete);
 		DeleteEvent = serialized->unwrap_into<rivet::ddl::generated::EventBase>(DeleteEvent_type_id); 
 	}
 

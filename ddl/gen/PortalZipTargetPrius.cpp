@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	PortalZipTargetPrius::PortalZipTargetPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MinActivationVolumeOverride = serialized->get_uint64(MinActivationVolumeOverride_type_id);
-		ExcludeActivationVolume = serialized->get_uint64(ExcludeActivationVolume_type_id);
-		MaxActivationRadiusOverride = serialized->get_float(MaxActivationRadiusOverride_type_id);
-		TraceTargetNumber = serialized->get_uint8(TraceTargetNumber_type_id); 
+		MinActivationVolumeOverride = serialized->get_uint64(MinActivationVolumeOverride_type_id, 0);
+		ExcludeActivationVolume = serialized->get_uint64(ExcludeActivationVolume_type_id, 0);
+		MaxActivationRadiusOverride = serialized->get_float(MaxActivationRadiusOverride_type_id, -1.000000);
+		TraceTargetNumber = serialized->get_uint8(TraceTargetNumber_type_id, 1); 
 	}
 
 	[[nodiscard]] auto

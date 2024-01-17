@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	LevelLookPair::LevelLookPair([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Level = serialized->get_string(Level_type_id);
-		LookGroupName = serialized->get_string(LookGroupName_type_id); 
+		Level = serialized->get_string(Level_type_id, {});
+		LookGroupName = serialized->get_string(LookGroupName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

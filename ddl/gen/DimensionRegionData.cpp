@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	DimensionRegionData::DimensionRegionData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		CodeName = serialized->get_string(CodeName_type_id);
+		CodeName = serialized->get_string(CodeName_type_id, {});
 		Checkpoints = serialized->unwrap_into_many<rivet::ddl::generated::DimensionActorData>(Checkpoints_type_id);
 		Portals = serialized->unwrap_into_many<rivet::ddl::generated::DimensionActorData>(Portals_type_id); 
 	}

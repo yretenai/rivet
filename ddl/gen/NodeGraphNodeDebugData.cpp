@@ -9,10 +9,10 @@
 
 namespace rivet::ddl::generated {
 	NodeGraphNodeDebugData::NodeGraphNodeDebugData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AssetId = serialized->get_uint64(AssetId_type_id);
-		FlattenedId = serialized->get_uint64(FlattenedId_type_id);
-		GraphId = serialized->get_uint64(GraphId_type_id);
-		Id = serialized->get_uint64(Id_type_id);
+		AssetId = serialized->get_uint64(AssetId_type_id, 0);
+		FlattenedId = serialized->get_uint64(FlattenedId_type_id, 0);
+		GraphId = serialized->get_uint64(GraphId_type_id, 0);
+		Id = serialized->get_uint64(Id_type_id, 0);
 		Data = serialized->unwrap_into<rivet::ddl::generated::NodeGraphDebugDataBase>(Data_type_id); 
 	}
 

@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	SceneEditorLightingCaptureInput::SceneEditorLightingCaptureInput([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		CaptureType = serialized->get_enum<rivet::ddl::generated::x78bb2768>(CaptureType_type_id, rivet::ddl::generated::x78bb2768_values); 
+		CaptureType = serialized->get_enum<rivet::ddl::generated::x78bb2768>(CaptureType_type_id, rivet::ddl::generated::x78bb2768_values, rivet::ddl::generated::x78bb2768::CaptureAllGrids); 
 	}
 
 	[[nodiscard]] auto

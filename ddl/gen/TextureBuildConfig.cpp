@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	TextureBuildConfig::TextureBuildConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		PreferDXT1 = serialized->get_bool(PreferDXT1_type_id);
-		SizeCap = serialized->get_uint32(SizeCap_type_id);
-		LegacyPreferDXT1 = serialized->get_bool(LegacyPreferDXT1_type_id);
-		LegacySizeCap = serialized->get_uint32(LegacySizeCap_type_id); 
+		PreferDXT1 = serialized->get_bool(PreferDXT1_type_id, true);
+		SizeCap = serialized->get_uint32(SizeCap_type_id, 2048);
+		LegacyPreferDXT1 = serialized->get_bool(LegacyPreferDXT1_type_id, true);
+		LegacySizeCap = serialized->get_uint32(LegacySizeCap_type_id, 2048); 
 	}
 
 	[[nodiscard]] auto

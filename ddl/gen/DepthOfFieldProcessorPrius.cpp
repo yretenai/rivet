@@ -7,13 +7,13 @@
 
 namespace rivet::ddl::generated {
 	DepthOfFieldProcessorPrius::DepthOfFieldProcessorPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ViewportIndex = serialized->get_int32(ViewportIndex_type_id);
-		HUDDOFDistance = serialized->get_float(HUDDOFDistance_type_id);
-		HUDAperatureScale = serialized->get_float(HUDAperatureScale_type_id);
-		HUDBlendTime = serialized->get_float(HUDBlendTime_type_id);
-		DefaultBlendTime = serialized->get_float(DefaultBlendTime_type_id);
-		AimBlendTime = serialized->get_float(AimBlendTime_type_id);
-		DeactivateTime = serialized->get_float(DeactivateTime_type_id); 
+		ViewportIndex = serialized->get_int32(ViewportIndex_type_id, 0);
+		HUDDOFDistance = serialized->get_float(HUDDOFDistance_type_id, 1.000000);
+		HUDAperatureScale = serialized->get_float(HUDAperatureScale_type_id, 20.500000);
+		HUDBlendTime = serialized->get_float(HUDBlendTime_type_id, 0.010000);
+		DefaultBlendTime = serialized->get_float(DefaultBlendTime_type_id, 0.010000);
+		AimBlendTime = serialized->get_float(AimBlendTime_type_id, 0.200000);
+		DeactivateTime = serialized->get_float(DeactivateTime_type_id, 0.250000); 
 	}
 
 	[[nodiscard]] auto

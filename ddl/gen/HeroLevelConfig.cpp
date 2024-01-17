@@ -9,19 +9,19 @@
 
 namespace rivet::ddl::generated {
 	HeroLevelConfig::HeroLevelConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		ExplosionDelayTime = serialized->get_float(ExplosionDelayTime_type_id);
-		DamageRadius = serialized->get_float(DamageRadius_type_id);
-		BaseDamageAmount = serialized->get_float(BaseDamageAmount_type_id);
-		BonusPerLevelDamage = serialized->get_float(BonusPerLevelDamage_type_id);
-		KnockbackLevel = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(KnockbackLevel_type_id, rivet::ddl::generated::KnockbackLevels_values);
-		KnockbackAmount = serialized->get_float(KnockbackAmount_type_id);
-		SlowDownPercent = serialized->get_float(SlowDownPercent_type_id);
-		RatchetCompositeMaterial = serialized->get_string(RatchetCompositeMaterial_type_id);
-		RivetCompositeMaterial = serialized->get_string(RivetCompositeMaterial_type_id);
-		MaterialFadeOutTime = serialized->get_float(MaterialFadeOutTime_type_id);
-		RampUpCameraShake = serialized->get_string(RampUpCameraShake_type_id);
-		ExplosionCameraShake = serialized->get_string(ExplosionCameraShake_type_id);
-		NormalModeLevelCap = serialized->get_uint32(NormalModeLevelCap_type_id);
+		ExplosionDelayTime = serialized->get_float(ExplosionDelayTime_type_id, 2.000000);
+		DamageRadius = serialized->get_float(DamageRadius_type_id, 30.000000);
+		BaseDamageAmount = serialized->get_float(BaseDamageAmount_type_id, 100.000000);
+		BonusPerLevelDamage = serialized->get_float(BonusPerLevelDamage_type_id, 25.000000);
+		KnockbackLevel = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(KnockbackLevel_type_id, rivet::ddl::generated::KnockbackLevels_values, rivet::ddl::generated::KnockbackLevels::None);
+		KnockbackAmount = serialized->get_float(KnockbackAmount_type_id, 100.000000);
+		SlowDownPercent = serialized->get_float(SlowDownPercent_type_id, 1.000000);
+		RatchetCompositeMaterial = serialized->get_string(RatchetCompositeMaterial_type_id, {});
+		RivetCompositeMaterial = serialized->get_string(RivetCompositeMaterial_type_id, {});
+		MaterialFadeOutTime = serialized->get_float(MaterialFadeOutTime_type_id, 1.000000);
+		RampUpCameraShake = serialized->get_string(RampUpCameraShake_type_id, {});
+		ExplosionCameraShake = serialized->get_string(ExplosionCameraShake_type_id, {});
+		NormalModeLevelCap = serialized->get_uint32(NormalModeLevelCap_type_id, 0);
 		Levels = serialized->unwrap_into_many<rivet::ddl::generated::HeroLevelData>(Levels_type_id); 
 	}
 

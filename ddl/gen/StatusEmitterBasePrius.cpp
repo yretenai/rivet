@@ -18,7 +18,7 @@
 namespace rivet::ddl::generated {
 	StatusEmitterBasePrius::StatusEmitterBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		StatusEffectsData = serialized->unwrap_into<rivet::ddl::generated::StatusEffectsData>(StatusEffectsData_type_id);
-		ApplyEffectsWhileDead = serialized->get_bool(ApplyEffectsWhileDead_type_id); 
+		ApplyEffectsWhileDead = serialized->get_bool(ApplyEffectsWhileDead_type_id, false); 
 	}
 
 	[[nodiscard]] auto

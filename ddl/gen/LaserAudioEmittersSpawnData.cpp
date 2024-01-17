@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	LaserAudioEmittersSpawnData::LaserAudioEmittersSpawnData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ActorSpawnData(serialized) {
-		LaserAudioCurveAsset = serialized->get_uint64(LaserAudioCurveAsset_type_id);
-		LaserAudioCurveEmitterAsset = serialized->get_uint64(LaserAudioCurveEmitterAsset_type_id);
-		LaserAudioImpactEmitterAsset = serialized->get_uint64(LaserAudioImpactEmitterAsset_type_id);
-		ParentActorHandleData = serialized->get_uint32(ParentActorHandleData_type_id); 
+		LaserAudioCurveAsset = serialized->get_uint64(LaserAudioCurveAsset_type_id, 0);
+		LaserAudioCurveEmitterAsset = serialized->get_uint64(LaserAudioCurveEmitterAsset_type_id, 0);
+		LaserAudioImpactEmitterAsset = serialized->get_uint64(LaserAudioImpactEmitterAsset_type_id, 0);
+		ParentActorHandleData = serialized->get_uint32(ParentActorHandleData_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

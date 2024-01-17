@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	OnCustomDesignEventActionPrius::OnCustomDesignEventActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): OnBaseEventActionPrius(serialized) {
-		ListenEventName = serialized->get_string(ListenEventName_type_id); 
+		ListenEventName = serialized->get_string(ListenEventName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

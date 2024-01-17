@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	GameBotMountKitPrius::GameBotMountKitPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BotPrius(serialized) {
-		GunWeapon = serialized->get_string(GunWeapon_type_id); 
+		GunWeapon = serialized->get_string(GunWeapon_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

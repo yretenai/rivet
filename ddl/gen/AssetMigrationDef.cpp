@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	AssetMigrationDef::AssetMigrationDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Host = serialized->get_string(Host_type_id);
-		Port = serialized->get_string(Port_type_id);
+		Host = serialized->get_string(Host_type_id, {});
+		Port = serialized->get_string(Port_type_id, {});
 		Extensions = serialized->get_strings(Extensions_type_id);
 		Projects = serialized->unwrap_into_many<rivet::ddl::generated::AssetMigrationProject>(Projects_type_id); 
 	}

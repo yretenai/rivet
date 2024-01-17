@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	BoltShowerPrius::BoltShowerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Duration = serialized->get_float(Duration_type_id);
-		SpawnCount = serialized->get_uint32(SpawnCount_type_id); 
+		Duration = serialized->get_float(Duration_type_id, 5.000000);
+		SpawnCount = serialized->get_uint32(SpawnCount_type_id, 250); 
 	}
 
 	[[nodiscard]] auto

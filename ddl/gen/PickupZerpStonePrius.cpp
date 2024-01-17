@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	PickupZerpStonePrius::PickupZerpStonePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): GamePickupItemPrius(serialized) {
-		SaveID = serialized->get_int32(SaveID_type_id); 
+		SaveID = serialized->get_int32(SaveID_type_id, -1); 
 	}
 
 	[[nodiscard]] auto

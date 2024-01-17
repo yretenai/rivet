@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	LaunchChromeVault::LaunchChromeVault([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Type = serialized->get_enum<rivet::ddl::generated::x63e8ba6e>(Type_type_id, rivet::ddl::generated::x63e8ba6e_values);
+		Type = serialized->get_enum<rivet::ddl::generated::x63e8ba6e>(Type_type_id, rivet::ddl::generated::x63e8ba6e_values, rivet::ddl::generated::x63e8ba6e::ReplaceSceneNodes);
 		Search = serialized->unwrap_into<rivet::ddl::generated::CompatVaultSearchCommand>(Search_type_id); 
 	}
 

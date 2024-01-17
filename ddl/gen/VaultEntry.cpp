@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	VaultEntry::VaultEntry([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		VaultId = serialized->get_uint64(VaultId_type_id);
-		Path = serialized->get_string(Path_type_id);
-		CreatedBy = serialized->get_string(CreatedBy_type_id);
-		ModifiedBy = serialized->get_string(ModifiedBy_type_id);
-		Status = serialized->get_enum<rivet::ddl::generated::x26d01116>(Status_type_id, rivet::ddl::generated::x26d01116_values);
-		Error = serialized->get_enum<rivet::ddl::generated::xead8c4ad>(Error_type_id, rivet::ddl::generated::xead8c4ad_values); 
+		VaultId = serialized->get_uint64(VaultId_type_id, 0);
+		Path = serialized->get_string(Path_type_id, {});
+		CreatedBy = serialized->get_string(CreatedBy_type_id, {});
+		ModifiedBy = serialized->get_string(ModifiedBy_type_id, {});
+		Status = serialized->get_enum<rivet::ddl::generated::x26d01116>(Status_type_id, rivet::ddl::generated::x26d01116_values, rivet::ddl::generated::x26d01116::UpToDate);
+		Error = serialized->get_enum<rivet::ddl::generated::xead8c4ad>(Error_type_id, rivet::ddl::generated::xead8c4ad_values, rivet::ddl::generated::xead8c4ad::Ok); 
 	}
 
 	[[nodiscard]] auto

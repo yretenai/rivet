@@ -7,13 +7,13 @@
 
 namespace rivet::ddl::generated {
 	WeatherSettings::WeatherSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		WeatherCellSize = serialized->get_float(WeatherCellSize_type_id);
-		WeatherGSplashAge = serialized->get_float(WeatherGSplashAge_type_id);
-		WeatherGSplashScale = serialized->get_float(WeatherGSplashScale_type_id);
-		WeatherGSplashColor = serialized->get_float(WeatherGSplashColor_type_id);
-		WeatherGSplashAlpha = serialized->get_float(WeatherGSplashAlpha_type_id);
-		WeatherGSplashNearFade = serialized->get_float(WeatherGSplashNearFade_type_id);
-		WeatherRippleThreshold = serialized->get_float(WeatherRippleThreshold_type_id); 
+		WeatherCellSize = serialized->get_float(WeatherCellSize_type_id, 5.000000);
+		WeatherGSplashAge = serialized->get_float(WeatherGSplashAge_type_id, 0.100000);
+		WeatherGSplashScale = serialized->get_float(WeatherGSplashScale_type_id, 1.000000);
+		WeatherGSplashColor = serialized->get_float(WeatherGSplashColor_type_id, 1.000000);
+		WeatherGSplashAlpha = serialized->get_float(WeatherGSplashAlpha_type_id, 0.500000);
+		WeatherGSplashNearFade = serialized->get_float(WeatherGSplashNearFade_type_id, 0.500000);
+		WeatherRippleThreshold = serialized->get_float(WeatherRippleThreshold_type_id, 0.100000); 
 	}
 
 	[[nodiscard]] auto

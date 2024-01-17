@@ -7,16 +7,16 @@
 
 namespace rivet::ddl::generated {
 	Cinematic2MayaShotExportInfo::Cinematic2MayaShotExportInfo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		File = serialized->get_string(File_type_id);
-		LastExportTime = serialized->get_string(LastExportTime_type_id);
-		ExportedFrom = serialized->get_string(ExportedFrom_type_id);
-		Notes = serialized->get_string(Notes_type_id);
-		UpdateFromMaya = serialized->get_bool(UpdateFromMaya_type_id);
-		MayaStartFrame = serialized->get_int32(MayaStartFrame_type_id);
-		MayaEndFrame = serialized->get_int32(MayaEndFrame_type_id);
-		Muid0 = serialized->get_uint64(Muid0_type_id);
-		Muid1 = serialized->get_uint64(Muid1_type_id);
-		MayaShotSplitOrder = serialized->get_uint16(MayaShotSplitOrder_type_id); 
+		File = serialized->get_string(File_type_id, {});
+		LastExportTime = serialized->get_string(LastExportTime_type_id, {});
+		ExportedFrom = serialized->get_string(ExportedFrom_type_id, {});
+		Notes = serialized->get_string(Notes_type_id, {});
+		UpdateFromMaya = serialized->get_bool(UpdateFromMaya_type_id, false);
+		MayaStartFrame = serialized->get_int32(MayaStartFrame_type_id, -1);
+		MayaEndFrame = serialized->get_int32(MayaEndFrame_type_id, -1);
+		Muid0 = serialized->get_uint64(Muid0_type_id, 0);
+		Muid1 = serialized->get_uint64(Muid1_type_id, 0);
+		MayaShotSplitOrder = serialized->get_uint16(MayaShotSplitOrder_type_id, 65535); 
 	}
 
 	[[nodiscard]] auto

@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	PickupBoltPrius::PickupBoltPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): PickupSimplePrius(serialized) {
-		BoltTier = serialized->get_enum<rivet::ddl::generated::x7484f9df>(BoltTier_type_id, rivet::ddl::generated::x7484f9df_values); 
+		BoltTier = serialized->get_enum<rivet::ddl::generated::x7484f9df>(BoltTier_type_id, rivet::ddl::generated::x7484f9df_values, rivet::ddl::generated::x7484f9df::None); 
 	}
 
 	[[nodiscard]] auto

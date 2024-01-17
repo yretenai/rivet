@@ -9,10 +9,10 @@
 
 namespace rivet::ddl::generated {
 	TriggerResponderSpawnActorPrius::TriggerResponderSpawnActorPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): TriggerResponderBasePrius(serialized) {
-		ActorToSpawn = serialized->get_string(ActorToSpawn_type_id);
+		ActorToSpawn = serialized->get_string(ActorToSpawn_type_id, {});
 		SpawnOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(SpawnOffset_type_id);
 		SpawnVelocity = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(SpawnVelocity_type_id);
-		BreakableHitVel = serialized->get_float(BreakableHitVel_type_id); 
+		BreakableHitVel = serialized->get_float(BreakableHitVel_type_id, 10.000000); 
 	}
 
 	[[nodiscard]] auto

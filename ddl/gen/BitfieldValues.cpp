@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	BitfieldValues::BitfieldValues([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		NoDefault = serialized->get_bitset<rivet::ddl::generated::BitsB>(NoDefault_type_id, rivet::ddl::generated::BitsB_values);
-		SingleDefault = serialized->get_bitset<rivet::ddl::generated::x1ea7317b>(SingleDefault_type_id, rivet::ddl::generated::x1ea7317b_values);
-		MultiValue = serialized->get_bitset<rivet::ddl::generated::x2c9c3cc7>(MultiValue_type_id, rivet::ddl::generated::x2c9c3cc7_values); 
+		NoDefault = serialized->get_bitset<rivet::ddl::generated::BitsB>(NoDefault_type_id, rivet::ddl::generated::BitsB_values, 0);
+		SingleDefault = serialized->get_bitset<rivet::ddl::generated::x1ea7317b>(SingleDefault_type_id, rivet::ddl::generated::x1ea7317b_values, 2);
+		MultiValue = serialized->get_bitset<rivet::ddl::generated::x2c9c3cc7>(MultiValue_type_id, rivet::ddl::generated::x2c9c3cc7_values, 3); 
 	}
 
 	[[nodiscard]] auto

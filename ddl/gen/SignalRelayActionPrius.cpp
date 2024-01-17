@@ -9,11 +9,11 @@
 
 namespace rivet::ddl::generated {
 	SignalRelayActionPrius::SignalRelayActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		Name = serialized->get_string(Name_type_id);
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Logic);
+		Name = serialized->get_string(Name_type_id, {});
 		Notes = serialized->unwrap_into<rivet::ddl::generated::GraphNodeNotesDef>(Notes_type_id);
-		IsGlobal = serialized->get_bool(IsGlobal_type_id);
-		DebugMsg = serialized->get_bool(DebugMsg_type_id); 
+		IsGlobal = serialized->get_bool(IsGlobal_type_id, false);
+		DebugMsg = serialized->get_bool(DebugMsg_type_id, false); 
 	}
 
 	[[nodiscard]] auto

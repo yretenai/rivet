@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	VanityAccessoryEquipEvent::VanityAccessoryEquipEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Type = serialized->get_enum<rivet::ddl::generated::x56bca86c>(Type_type_id, rivet::ddl::generated::x56bca86c_values);
-		Equip = serialized->get_bool(Equip_type_id); 
+		Type = serialized->get_enum<rivet::ddl::generated::x56bca86c>(Type_type_id, rivet::ddl::generated::x56bca86c_values, rivet::ddl::generated::x56bca86c::Rebreather);
+		Equip = serialized->get_bool(Equip_type_id, true); 
 	}
 
 	[[nodiscard]] auto

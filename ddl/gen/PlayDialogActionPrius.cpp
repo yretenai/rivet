@@ -7,22 +7,22 @@
 
 namespace rivet::ddl::generated {
 	PlayDialogActionPrius::PlayDialogActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		Tag = serialized->get_string(Tag_type_id);
-		Priority = serialized->get_enum<rivet::ddl::generated::x90d1aef7>(Priority_type_id, rivet::ddl::generated::x90d1aef7_values);
-		InterruptSamePriorityLines = serialized->get_bool(InterruptSamePriorityLines_type_id);
-		Queue = serialized->get_bool(Queue_type_id);
-		MaxQueueTime = serialized->get_float(MaxQueueTime_type_id);
-		TempText = serialized->get_string(TempText_type_id);
-		TempTextDuration = serialized->get_float(TempTextDuration_type_id);
-		StopOnHeroDeath = serialized->get_bool(StopOnHeroDeath_type_id);
-		StopForCinematics = serialized->get_bool(StopForCinematics_type_id);
-		StopAllSoundsOnSpeaker = serialized->get_bool(StopAllSoundsOnSpeaker_type_id);
-		CantBeInterrupted = serialized->get_bool(CantBeInterrupted_type_id);
-		StopOnEngaged = serialized->get_bool(StopOnEngaged_type_id);
-		StopOnDeath = serialized->get_bool(StopOnDeath_type_id);
-		SignalFinishedOnInterrupted = serialized->get_bool(SignalFinishedOnInterrupted_type_id);
-		PlayAsAnOverlap = serialized->get_bool(PlayAsAnOverlap_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Sound);
+		Tag = serialized->get_string(Tag_type_id, "INVALID");
+		Priority = serialized->get_enum<rivet::ddl::generated::x90d1aef7>(Priority_type_id, rivet::ddl::generated::x90d1aef7_values, rivet::ddl::generated::x90d1aef7::Medium);
+		InterruptSamePriorityLines = serialized->get_bool(InterruptSamePriorityLines_type_id, true);
+		Queue = serialized->get_bool(Queue_type_id, false);
+		MaxQueueTime = serialized->get_float(MaxQueueTime_type_id, -1.000000);
+		TempText = serialized->get_string(TempText_type_id, {});
+		TempTextDuration = serialized->get_float(TempTextDuration_type_id, 6.000000);
+		StopOnHeroDeath = serialized->get_bool(StopOnHeroDeath_type_id, true);
+		StopForCinematics = serialized->get_bool(StopForCinematics_type_id, false);
+		StopAllSoundsOnSpeaker = serialized->get_bool(StopAllSoundsOnSpeaker_type_id, false);
+		CantBeInterrupted = serialized->get_bool(CantBeInterrupted_type_id, false);
+		StopOnEngaged = serialized->get_bool(StopOnEngaged_type_id, false);
+		StopOnDeath = serialized->get_bool(StopOnDeath_type_id, true);
+		SignalFinishedOnInterrupted = serialized->get_bool(SignalFinishedOnInterrupted_type_id, true);
+		PlayAsAnOverlap = serialized->get_bool(PlayAsAnOverlap_type_id, false); 
 	}
 
 	[[nodiscard]] auto

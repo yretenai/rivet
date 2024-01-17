@@ -9,10 +9,10 @@
 
 namespace rivet::ddl::generated {
 	WeaponHexapodChargingPrius::WeaponHexapodChargingPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): WeaponBlasterPrius(serialized) {
-		ChargeTimeMax = serialized->get_float(ChargeTimeMax_type_id);
-		ChargedDamageMultiplier = serialized->get_float(ChargedDamageMultiplier_type_id);
+		ChargeTimeMax = serialized->get_float(ChargeTimeMax_type_id, 2.000000);
+		ChargedDamageMultiplier = serialized->get_float(ChargedDamageMultiplier_type_id, 5.000000);
 		ChargingTriggerData = serialized->unwrap_into<rivet::ddl::generated::HexapodWeaponTriggerData>(ChargingTriggerData_type_id);
-		BeamActor = serialized->get_string(BeamActor_type_id); 
+		BeamActor = serialized->get_string(BeamActor_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	GrindLeanStartEvent::GrindLeanStartEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		IsLeft = serialized->get_bool(IsLeft_type_id); 
+		IsLeft = serialized->get_bool(IsLeft_type_id, false); 
 	}
 
 	[[nodiscard]] auto

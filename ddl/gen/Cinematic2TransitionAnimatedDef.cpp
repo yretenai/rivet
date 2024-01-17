@@ -7,14 +7,14 @@
 
 namespace rivet::ddl::generated {
 	Cinematic2TransitionAnimatedDef::Cinematic2TransitionAnimatedDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Id = serialized->get_uint64(Id_type_id);
-		ShotId = serialized->get_uint64(ShotId_type_id);
-		Duration = serialized->get_float(Duration_type_id);
-		StartType = serialized->get_enum<rivet::ddl::generated::x10205e3>(StartType_type_id, rivet::ddl::generated::x10205e3_values);
-		SmoothingType = serialized->get_enum<rivet::ddl::generated::x53914cb6>(SmoothingType_type_id, rivet::ddl::generated::x53914cb6_values);
-		ActorPath = serialized->get_string(ActorPath_type_id);
-		AnimClipName = serialized->get_string(AnimClipName_type_id);
-		TextureName = serialized->get_string(TextureName_type_id); 
+		Id = serialized->get_uint64(Id_type_id, 0);
+		ShotId = serialized->get_uint64(ShotId_type_id, 0);
+		Duration = serialized->get_float(Duration_type_id, 0.500000);
+		StartType = serialized->get_enum<rivet::ddl::generated::x10205e3>(StartType_type_id, rivet::ddl::generated::x10205e3_values, rivet::ddl::generated::x10205e3::Beginning_Of_Shot);
+		SmoothingType = serialized->get_enum<rivet::ddl::generated::x53914cb6>(SmoothingType_type_id, rivet::ddl::generated::x53914cb6_values, rivet::ddl::generated::x53914cb6::Linear);
+		ActorPath = serialized->get_string(ActorPath_type_id, {});
+		AnimClipName = serialized->get_string(AnimClipName_type_id, {});
+		TextureName = serialized->get_string(TextureName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

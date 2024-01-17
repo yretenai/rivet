@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	LunaFtpProjectConfigFile::LunaFtpProjectConfigFile([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ProjectId = serialized->get_string(ProjectId_type_id);
-		IgProject = serialized->get_string(IgProject_type_id);
-		CodeName = serialized->get_string(CodeName_type_id);
-		TitleName = serialized->get_string(TitleName_type_id);
-		ProductionBranch = serialized->get_string(ProductionBranch_type_id);
-		Platforms = serialized->get_bitset<rivet::ddl::generated::x5753f3c8>(Platforms_type_id, rivet::ddl::generated::x5753f3c8_values); 
+		ProjectId = serialized->get_string(ProjectId_type_id, "");
+		IgProject = serialized->get_string(IgProject_type_id, "");
+		CodeName = serialized->get_string(CodeName_type_id, "");
+		TitleName = serialized->get_string(TitleName_type_id, "");
+		ProductionBranch = serialized->get_string(ProductionBranch_type_id, {});
+		Platforms = serialized->get_bitset<rivet::ddl::generated::x5753f3c8>(Platforms_type_id, rivet::ddl::generated::x5753f3c8_values, 7); 
 	}
 
 	[[nodiscard]] auto

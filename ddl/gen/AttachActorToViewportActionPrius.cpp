@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	AttachActorToViewportActionPrius::AttachActorToViewportActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		OffsetIsScreenSpace = serialized->get_bool(OffsetIsScreenSpace_type_id);
-		ObjectIgnoresZ = serialized->get_bool(ObjectIgnoresZ_type_id);
-		AutoChangeOffsets = serialized->get_bool(AutoChangeOffsets_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Camera);
+		OffsetIsScreenSpace = serialized->get_bool(OffsetIsScreenSpace_type_id, false);
+		ObjectIgnoresZ = serialized->get_bool(ObjectIgnoresZ_type_id, false);
+		AutoChangeOffsets = serialized->get_bool(AutoChangeOffsets_type_id, false); 
 	}
 
 	[[nodiscard]] auto

@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	CheckInventoryActionPrius::CheckInventoryActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Inventory);
 		Items = serialized->unwrap_into_many<rivet::ddl::generated::CheckInventoryArrayElement>(Items_type_id); 
 	}
 

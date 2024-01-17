@@ -7,21 +7,21 @@
 
 namespace rivet::ddl::generated {
 	SceneUIEngineItem::SceneUIEngineItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ToolMode = serialized->get_enum<rivet::ddl::generated::ToolMode>(ToolMode_type_id, rivet::ddl::generated::ToolMode_values);
-		EnableSelection = serialized->get_bool(EnableSelection_type_id);
-		EnableManipulator = serialized->get_bool(EnableManipulator_type_id);
-		EnableMarquee = serialized->get_bool(EnableMarquee_type_id);
-		RenderHud = serialized->get_bool(RenderHud_type_id);
-		RenderLights = serialized->get_bool(RenderLights_type_id);
-		RenderVolumes = serialized->get_bool(RenderVolumes_type_id);
-		RenderCameras = serialized->get_bool(RenderCameras_type_id);
-		PointVolumeSize = serialized->get_float(PointVolumeSize_type_id);
-		LightSize = serialized->get_float(LightSize_type_id);
-		CameraSize = serialized->get_float(CameraSize_type_id);
-		ActiveCameraId = serialized->get_uint64(ActiveCameraId_type_id);
-		DebugCameraId = serialized->get_uint64(DebugCameraId_type_id);
-		CameraControlType = serialized->get_enum<rivet::ddl::generated::CameraControlType>(CameraControlType_type_id, rivet::ddl::generated::CameraControlType_values);
-		GamepadEnableMode = serialized->get_enum<rivet::ddl::generated::GamepadEnableMode>(GamepadEnableMode_type_id, rivet::ddl::generated::GamepadEnableMode_values);
+		ToolMode = serialized->get_enum<rivet::ddl::generated::ToolMode>(ToolMode_type_id, rivet::ddl::generated::ToolMode_values, rivet::ddl::generated::ToolMode::Selection);
+		EnableSelection = serialized->get_bool(EnableSelection_type_id, false);
+		EnableManipulator = serialized->get_bool(EnableManipulator_type_id, false);
+		EnableMarquee = serialized->get_bool(EnableMarquee_type_id, false);
+		RenderHud = serialized->get_bool(RenderHud_type_id, false);
+		RenderLights = serialized->get_bool(RenderLights_type_id, false);
+		RenderVolumes = serialized->get_bool(RenderVolumes_type_id, false);
+		RenderCameras = serialized->get_bool(RenderCameras_type_id, false);
+		PointVolumeSize = serialized->get_float(PointVolumeSize_type_id, 0.200000);
+		LightSize = serialized->get_float(LightSize_type_id, 0.050000);
+		CameraSize = serialized->get_float(CameraSize_type_id, 0.200000);
+		ActiveCameraId = serialized->get_uint64(ActiveCameraId_type_id, 0);
+		DebugCameraId = serialized->get_uint64(DebugCameraId_type_id, 0);
+		CameraControlType = serialized->get_enum<rivet::ddl::generated::CameraControlType>(CameraControlType_type_id, rivet::ddl::generated::CameraControlType_values, rivet::ddl::generated::CameraControlType::Orbit);
+		GamepadEnableMode = serialized->get_enum<rivet::ddl::generated::GamepadEnableMode>(GamepadEnableMode_type_id, rivet::ddl::generated::GamepadEnableMode_values, rivet::ddl::generated::GamepadEnableMode::Always);
 		SelectableNodes = serialized->get_bools(SelectableNodes_type_id); 
 	}
 

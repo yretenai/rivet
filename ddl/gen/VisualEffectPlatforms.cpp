@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	VisualEffectPlatforms::VisualEffectPlatforms([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		PS4Pro = serialized->get_enum<rivet::ddl::generated::x3d49dc75>(PS4Pro_type_id, rivet::ddl::generated::x3d49dc75_values);
-		PS4 = serialized->get_enum<rivet::ddl::generated::x3d49dc75>(PS4_type_id, rivet::ddl::generated::x3d49dc75_values);
-		PS5 = serialized->get_enum<rivet::ddl::generated::x3d49dc75>(PS5_type_id, rivet::ddl::generated::x3d49dc75_values);
-		PC = serialized->get_enum<rivet::ddl::generated::x3d49dc75>(PC_type_id, rivet::ddl::generated::x3d49dc75_values); 
+		PS4Pro = serialized->get_enum<rivet::ddl::generated::x3d49dc75>(PS4Pro_type_id, rivet::ddl::generated::x3d49dc75_values, rivet::ddl::generated::x3d49dc75::All_FPS);
+		PS4 = serialized->get_enum<rivet::ddl::generated::x3d49dc75>(PS4_type_id, rivet::ddl::generated::x3d49dc75_values, rivet::ddl::generated::x3d49dc75::All_FPS);
+		PS5 = serialized->get_enum<rivet::ddl::generated::x3d49dc75>(PS5_type_id, rivet::ddl::generated::x3d49dc75_values, rivet::ddl::generated::x3d49dc75::All_FPS);
+		PC = serialized->get_enum<rivet::ddl::generated::x3d49dc75>(PC_type_id, rivet::ddl::generated::x3d49dc75_values, rivet::ddl::generated::x3d49dc75::All_FPS); 
 	}
 
 	[[nodiscard]] auto

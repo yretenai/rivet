@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	IconMapOverride::IconMapOverride([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		OverrideDefault = serialized->get_bool(OverrideDefault_type_id);
+		OverrideDefault = serialized->get_bool(OverrideDefault_type_id, false);
 		IconMap = serialized->unwrap_into<rivet::ddl::generated::IconMapBase>(IconMap_type_id); 
 	}
 

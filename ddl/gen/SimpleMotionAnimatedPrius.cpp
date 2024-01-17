@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	SimpleMotionAnimatedPrius::SimpleMotionAnimatedPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AnimName = serialized->get_string(AnimName_type_id);
-		MotionType = serialized->get_enum<rivet::ddl::generated::xb513de9>(MotionType_type_id, rivet::ddl::generated::xb513de9_values);
-		StartActive = serialized->get_bool(StartActive_type_id);
-		StartOnRndFrame = serialized->get_bool(StartOnRndFrame_type_id); 
+		AnimName = serialized->get_string(AnimName_type_id, "Object_Idle");
+		MotionType = serialized->get_enum<rivet::ddl::generated::xb513de9>(MotionType_type_id, rivet::ddl::generated::xb513de9_values, rivet::ddl::generated::xb513de9::From_Start);
+		StartActive = serialized->get_bool(StartActive_type_id, true);
+		StartOnRndFrame = serialized->get_bool(StartOnRndFrame_type_id, false); 
 	}
 
 	[[nodiscard]] auto

@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	Cinematic2ActionPrius::Cinematic2ActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		EndCameraDelay = serialized->get_int32(EndCameraDelay_type_id);
-		ResetFollowCam = serialized->get_bool(ResetFollowCam_type_id);
-		ApplyCameraTranslationOnEnter = serialized->get_bool(ApplyCameraTranslationOnEnter_type_id);
-		SkipIntermediateShotsOnJump = serialized->get_bool(SkipIntermediateShotsOnJump_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Cinematic);
+		EndCameraDelay = serialized->get_int32(EndCameraDelay_type_id, 0);
+		ResetFollowCam = serialized->get_bool(ResetFollowCam_type_id, true);
+		ApplyCameraTranslationOnEnter = serialized->get_bool(ApplyCameraTranslationOnEnter_type_id, false);
+		SkipIntermediateShotsOnJump = serialized->get_bool(SkipIntermediateShotsOnJump_type_id, false); 
 	}
 
 	[[nodiscard]] auto

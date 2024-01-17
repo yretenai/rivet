@@ -7,13 +7,13 @@
 
 namespace rivet::ddl::generated {
 	HUDMessageActionPrius::HUDMessageActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		LocTag = serialized->get_string(LocTag_type_id);
-		LocTag2 = serialized->get_string(LocTag2_type_id);
-		Duration = serialized->get_float(Duration_type_id);
-		MessageType = serialized->get_enum<rivet::ddl::generated::xbe0e44ab>(MessageType_type_id, rivet::ddl::generated::xbe0e44ab_values);
-		PauseTab = serialized->get_enum<rivet::ddl::generated::PauseTabs>(PauseTab_type_id, rivet::ddl::generated::PauseTabs_values);
-		Texture = serialized->get_string(Texture_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::UI);
+		LocTag = serialized->get_string(LocTag_type_id, "INVALID");
+		LocTag2 = serialized->get_string(LocTag2_type_id, "INVALID");
+		Duration = serialized->get_float(Duration_type_id, 6.000000);
+		MessageType = serialized->get_enum<rivet::ddl::generated::xbe0e44ab>(MessageType_type_id, rivet::ddl::generated::xbe0e44ab_values, rivet::ddl::generated::xbe0e44ab::Generic);
+		PauseTab = serialized->get_enum<rivet::ddl::generated::PauseTabs>(PauseTab_type_id, rivet::ddl::generated::PauseTabs_values, rivet::ddl::generated::PauseTabs::Map);
+		Texture = serialized->get_string(Texture_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

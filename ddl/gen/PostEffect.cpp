@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	PostEffect::PostEffect([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SortOffset = serialized->get_int8(SortOffset_type_id);
-		Style = serialized->get_enum<rivet::ddl::generated::xfa78766f>(Style_type_id, rivet::ddl::generated::xfa78766f_values);
-		Accessibility = serialized->get_bool(Accessibility_type_id);
-		LinkToFov = serialized->get_bool(LinkToFov_type_id);
-		Fade = serialized->get_bool(Fade_type_id); 
+		SortOffset = serialized->get_int8(SortOffset_type_id, 0);
+		Style = serialized->get_enum<rivet::ddl::generated::xfa78766f>(Style_type_id, rivet::ddl::generated::xfa78766f_values, rivet::ddl::generated::xfa78766f::None);
+		Accessibility = serialized->get_bool(Accessibility_type_id, false);
+		LinkToFov = serialized->get_bool(LinkToFov_type_id, false);
+		Fade = serialized->get_bool(Fade_type_id, false); 
 	}
 
 	[[nodiscard]] auto

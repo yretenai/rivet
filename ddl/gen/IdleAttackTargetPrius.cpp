@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	IdleAttackTargetPrius::IdleAttackTargetPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DropOnAlert = serialized->get_bool(DropOnAlert_type_id); 
+		DropOnAlert = serialized->get_bool(DropOnAlert_type_id, false); 
 	}
 
 	[[nodiscard]] auto

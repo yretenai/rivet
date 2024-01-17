@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	SoundGroupNameDef::SoundGroupNameDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		GroupName = serialized->get_string(GroupName_type_id);
+		GroupName = serialized->get_string(GroupName_type_id, {});
 		Names = serialized->get_strings(Names_type_id); 
 	}
 

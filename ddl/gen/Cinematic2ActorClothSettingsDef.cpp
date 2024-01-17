@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	Cinematic2ActorClothSettingsDef::Cinematic2ActorClothSettingsDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Enable = serialized->get_bool(Enable_type_id);
-		OnMovingPlatform = serialized->get_bool(OnMovingPlatform_type_id);
-		Settle = serialized->get_bool(Settle_type_id);
-		Teleport = serialized->get_bool(Teleport_type_id); 
+		Enable = serialized->get_bool(Enable_type_id, true);
+		OnMovingPlatform = serialized->get_bool(OnMovingPlatform_type_id, false);
+		Settle = serialized->get_bool(Settle_type_id, true);
+		Teleport = serialized->get_bool(Teleport_type_id, true); 
 	}
 
 	[[nodiscard]] auto

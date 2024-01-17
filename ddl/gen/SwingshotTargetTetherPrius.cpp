@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	SwingshotTargetTetherPrius::SwingshotTargetTetherPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): SwingshotTargetHookPrius(serialized) {
-		AimContextOverride = serialized->get_string(AimContextOverride_type_id); 
+		AimContextOverride = serialized->get_string(AimContextOverride_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

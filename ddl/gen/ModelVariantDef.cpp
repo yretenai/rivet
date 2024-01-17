@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	ModelVariantDef::ModelVariantDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		EditorModel = serialized->get_string(EditorModel_type_id);
+		EditorModel = serialized->get_string(EditorModel_type_id, {});
 		Variants = serialized->unwrap_into_many<rivet::ddl::generated::ModelVariantSingle>(Variants_type_id); 
 	}
 

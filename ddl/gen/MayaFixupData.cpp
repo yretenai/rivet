@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	MayaFixupData::MayaFixupData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Op = serialized->get_enum<rivet::ddl::generated::xed092e3a>(Op_type_id, rivet::ddl::generated::xed092e3a_values);
-		ReplaceElementChars = serialized->get_string(ReplaceElementChars_type_id);
-		AssetPath = serialized->get_string(AssetPath_type_id);
-		OldMayaPath = serialized->get_string(OldMayaPath_type_id);
-		NewMayaPath = serialized->get_string(NewMayaPath_type_id);
-		ScriptCmd = serialized->get_string(ScriptCmd_type_id); 
+		Op = serialized->get_enum<rivet::ddl::generated::xed092e3a>(Op_type_id, rivet::ddl::generated::xed092e3a_values, rivet::ddl::generated::xed092e3a::kColladaSourcePath);
+		ReplaceElementChars = serialized->get_string(ReplaceElementChars_type_id, {});
+		AssetPath = serialized->get_string(AssetPath_type_id, {});
+		OldMayaPath = serialized->get_string(OldMayaPath_type_id, {});
+		NewMayaPath = serialized->get_string(NewMayaPath_type_id, {});
+		ScriptCmd = serialized->get_string(ScriptCmd_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	RadTelemetrySetings::RadTelemetrySetings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ZoneThreshold = serialized->get_uint32(ZoneThreshold_type_id);
-		UseLogging = serialized->get_bool(UseLogging_type_id);
-		UsePrintf = serialized->get_bool(UsePrintf_type_id);
-		UseProfiling = serialized->get_bool(UseProfiling_type_id);
-		Host = serialized->get_string(Host_type_id);
-		EnableCaptureContextSwitches = serialized->get_bool(EnableCaptureContextSwitches_type_id); 
+		ZoneThreshold = serialized->get_uint32(ZoneThreshold_type_id, 50);
+		UseLogging = serialized->get_bool(UseLogging_type_id, false);
+		UsePrintf = serialized->get_bool(UsePrintf_type_id, false);
+		UseProfiling = serialized->get_bool(UseProfiling_type_id, false);
+		Host = serialized->get_string(Host_type_id, "");
+		EnableCaptureContextSwitches = serialized->get_bool(EnableCaptureContextSwitches_type_id, false); 
 	}
 
 	[[nodiscard]] auto

@@ -7,18 +7,18 @@
 
 namespace rivet::ddl::generated {
 	PlayAnimActionPrius::PlayAnimActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		AnimName = serialized->get_string(AnimName_type_id);
-		WorldSpace = serialized->get_bool(WorldSpace_type_id);
-		PreserveScale = serialized->get_bool(PreserveScale_type_id);
-		SkipToEnd = serialized->get_bool(SkipToEnd_type_id);
-		StartOnRndFrame = serialized->get_bool(StartOnRndFrame_type_id);
-		StartAtSpecificTime = serialized->get_float(StartAtSpecificTime_type_id);
-		SpecificTimeIsNormalized = serialized->get_bool(SpecificTimeIsNormalized_type_id);
-		RemoveDriverOnDone = serialized->get_bool(RemoveDriverOnDone_type_id);
-		RestartAnimOnCinematicEnd = serialized->get_bool(RestartAnimOnCinematicEnd_type_id);
-		ApplyMotion = serialized->get_bool(ApplyMotion_type_id);
-		DeactivateBaseLayer = serialized->get_bool(DeactivateBaseLayer_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Actor);
+		AnimName = serialized->get_string(AnimName_type_id, {});
+		WorldSpace = serialized->get_bool(WorldSpace_type_id, false);
+		PreserveScale = serialized->get_bool(PreserveScale_type_id, false);
+		SkipToEnd = serialized->get_bool(SkipToEnd_type_id, false);
+		StartOnRndFrame = serialized->get_bool(StartOnRndFrame_type_id, false);
+		StartAtSpecificTime = serialized->get_float(StartAtSpecificTime_type_id, -1.000000);
+		SpecificTimeIsNormalized = serialized->get_bool(SpecificTimeIsNormalized_type_id, false);
+		RemoveDriverOnDone = serialized->get_bool(RemoveDriverOnDone_type_id, true);
+		RestartAnimOnCinematicEnd = serialized->get_bool(RestartAnimOnCinematicEnd_type_id, false);
+		ApplyMotion = serialized->get_bool(ApplyMotion_type_id, true);
+		DeactivateBaseLayer = serialized->get_bool(DeactivateBaseLayer_type_id, false); 
 	}
 
 	[[nodiscard]] auto

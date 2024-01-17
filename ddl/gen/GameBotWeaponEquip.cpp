@@ -9,9 +9,9 @@
 
 namespace rivet::ddl::generated {
 	GameBotWeaponEquip::GameBotWeaponEquip([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): GameBotWeaponType(serialized) {
-		AttachLocator = serialized->get_string(AttachLocator_type_id);
-		FiringConfig = serialized->get_string(FiringConfig_type_id);
-		ShootingConfig = serialized->get_string(ShootingConfig_type_id); 
+		AttachLocator = serialized->get_string(AttachLocator_type_id, "igLoc_gunAttach");
+		FiringConfig = serialized->get_string(FiringConfig_type_id, {});
+		ShootingConfig = serialized->get_string(ShootingConfig_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

@@ -11,9 +11,9 @@
 
 namespace rivet::ddl::generated {
 	ItemConfig::ItemConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		Stackable = serialized->get_bool(Stackable_type_id);
-		MaxCount = serialized->get_uint32(MaxCount_type_id);
-		ItemActor = serialized->get_string(ItemActor_type_id); 
+		Stackable = serialized->get_bool(Stackable_type_id, true);
+		MaxCount = serialized->get_uint32(MaxCount_type_id, 0);
+		ItemActor = serialized->get_string(ItemActor_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

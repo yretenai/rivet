@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	Cinematic2FromTextureDef::Cinematic2FromTextureDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		TextureSlot = serialized->get_enum<rivet::ddl::generated::x16517126>(TextureSlot_type_id, rivet::ddl::generated::x16517126_values);
-		ActorId = serialized->get_uint64(ActorId_type_id);
-		TextureSamplerName = serialized->get_string(TextureSamplerName_type_id);
-		MaterialMappingName = serialized->get_string(MaterialMappingName_type_id);
-		TransferVelocityDepth = serialized->get_bool(TransferVelocityDepth_type_id); 
+		TextureSlot = serialized->get_enum<rivet::ddl::generated::x16517126>(TextureSlot_type_id, rivet::ddl::generated::x16517126_values, rivet::ddl::generated::x16517126::None);
+		ActorId = serialized->get_uint64(ActorId_type_id, 0);
+		TextureSamplerName = serialized->get_string(TextureSamplerName_type_id, {});
+		MaterialMappingName = serialized->get_string(MaterialMappingName_type_id, {});
+		TransferVelocityDepth = serialized->get_bool(TransferVelocityDepth_type_id, false); 
 	}
 
 	[[nodiscard]] auto

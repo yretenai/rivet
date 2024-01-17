@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	CodeData::CodeData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DefaultPublishedDirectory = serialized->get_string(DefaultPublishedDirectory_type_id);
+		DefaultPublishedDirectory = serialized->get_string(DefaultPublishedDirectory_type_id, {});
 		Paths = serialized->unwrap_into_many<rivet::ddl::generated::CodePaths>(Paths_type_id); 
 	}
 

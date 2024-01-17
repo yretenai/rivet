@@ -10,13 +10,13 @@
 
 namespace rivet::ddl::generated {
 	Cinematic2GlobalRateTrackDef::Cinematic2GlobalRateTrackDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Id = serialized->get_uint64(Id_type_id);
-		Name = serialized->get_string(Name_type_id);
-		PlatformFilter = serialized->get_bitset<rivet::ddl::generated::xb52df7e7>(PlatformFilter_type_id, rivet::ddl::generated::xb52df7e7_values);
+		Id = serialized->get_uint64(Id_type_id, 0);
+		Name = serialized->get_string(Name_type_id, {});
+		PlatformFilter = serialized->get_bitset<rivet::ddl::generated::xb52df7e7>(PlatformFilter_type_id, rivet::ddl::generated::xb52df7e7_values, 7);
 		Tags = serialized->unwrap_into<rivet::ddl::generated::Cinematic2TrackTagsDef>(Tags_type_id);
-		Global = serialized->get_bool(Global_type_id);
+		Global = serialized->get_bool(Global_type_id, false);
 		Curve = serialized->unwrap_into<rivet::ddl::generated::BezierCurveDef>(Curve_type_id);
-		AffectWorldClock = serialized->get_bool(AffectWorldClock_type_id); 
+		AffectWorldClock = serialized->get_bool(AffectWorldClock_type_id, true); 
 	}
 
 	[[nodiscard]] auto

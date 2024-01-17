@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	MaterialNodeInputVisibilityCondition::MaterialNodeInputVisibilityCondition([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		InternalName = serialized->get_string(InternalName_type_id);
+		InternalName = serialized->get_string(InternalName_type_id, {});
 		Values = serialized->get_strings(Values_type_id); 
 	}
 

@@ -9,15 +9,15 @@
 
 namespace rivet::ddl::generated {
 	BreakableBusterPrius::BreakableBusterPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Locator = serialized->get_string(Locator_type_id);
+		Locator = serialized->get_string(Locator_type_id, {});
 		LocalOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(LocalOffset_type_id);
-		Radius = serialized->get_float(Radius_type_id);
-		SpeedThreshold = serialized->get_float(SpeedThreshold_type_id);
-		DamagePerSpeed = serialized->get_float(DamagePerSpeed_type_id);
-		DamageHash = serialized->get_string(DamageHash_type_id);
-		ActorType = serialized->get_enum<rivet::ddl::generated::xad01e8be>(ActorType_type_id, rivet::ddl::generated::xad01e8be_values);
-		RequireEngaged = serialized->get_bool(RequireEngaged_type_id);
-		DamageInXZPlane = serialized->get_bool(DamageInXZPlane_type_id); 
+		Radius = serialized->get_float(Radius_type_id, 1.000000);
+		SpeedThreshold = serialized->get_float(SpeedThreshold_type_id, 5.000000);
+		DamagePerSpeed = serialized->get_float(DamagePerSpeed_type_id, 5.000000);
+		DamageHash = serialized->get_string(DamageHash_type_id, "BreakableBuster");
+		ActorType = serialized->get_enum<rivet::ddl::generated::xad01e8be>(ActorType_type_id, rivet::ddl::generated::xad01e8be_values, rivet::ddl::generated::xad01e8be::Bot);
+		RequireEngaged = serialized->get_bool(RequireEngaged_type_id, false);
+		DamageInXZPlane = serialized->get_bool(DamageInXZPlane_type_id, true); 
 	}
 
 	[[nodiscard]] auto

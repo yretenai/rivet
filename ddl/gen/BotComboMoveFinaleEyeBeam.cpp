@@ -9,12 +9,12 @@
 
 namespace rivet::ddl::generated {
 	BotComboMoveFinaleEyeBeam::BotComboMoveFinaleEyeBeam([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BotComboMoveBase(serialized) {
-		PortalActorAsset = serialized->get_string(PortalActorAsset_type_id);
-		HeadActorAsset = serialized->get_string(HeadActorAsset_type_id);
-		HeadActorVol = serialized->get_uint64(HeadActorVol_type_id);
-		SpawnedShotConfig = serialized->get_string(SpawnedShotConfig_type_id);
-		RemainAfterAttack = serialized->get_bool(RemainAfterAttack_type_id);
-		CancelOutOfVolume = serialized->get_bool(CancelOutOfVolume_type_id);
+		PortalActorAsset = serialized->get_string(PortalActorAsset_type_id, {});
+		HeadActorAsset = serialized->get_string(HeadActorAsset_type_id, {});
+		HeadActorVol = serialized->get_uint64(HeadActorVol_type_id, 0);
+		SpawnedShotConfig = serialized->get_string(SpawnedShotConfig_type_id, {});
+		RemainAfterAttack = serialized->get_bool(RemainAfterAttack_type_id, false);
+		CancelOutOfVolume = serialized->get_bool(CancelOutOfVolume_type_id, false);
 		FiringPatterns = serialized->unwrap_into_many<rivet::ddl::generated::EyeBeamFiringPattern>(FiringPatterns_type_id); 
 	}
 

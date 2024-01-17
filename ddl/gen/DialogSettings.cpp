@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	DialogSettings::DialogSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DebugDisplayActiveDialogs = serialized->get_bool(DebugDisplayActiveDialogs_type_id);
-		DebugHighlightSpeakingActors = serialized->get_bool(DebugHighlightSpeakingActors_type_id);
-		DebugLogSubtitles = serialized->get_bool(DebugLogSubtitles_type_id); 
+		DebugDisplayActiveDialogs = serialized->get_bool(DebugDisplayActiveDialogs_type_id, false);
+		DebugHighlightSpeakingActors = serialized->get_bool(DebugHighlightSpeakingActors_type_id, false);
+		DebugLogSubtitles = serialized->get_bool(DebugLogSubtitles_type_id, false); 
 	}
 
 	[[nodiscard]] auto

@@ -10,7 +10,7 @@
 namespace rivet::ddl::generated {
 	ObjectiveNodeBuiltGame::ObjectiveNodeBuiltGame([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ObjectiveNodeBuiltShared(serialized) {
 		DebugLoadInfo = serialized->unwrap_into<rivet::ddl::generated::ObjectiveLoadInfo>(DebugLoadInfo_type_id);
-		ContributesToProgress = serialized->get_bool(ContributesToProgress_type_id); 
+		ContributesToProgress = serialized->get_bool(ContributesToProgress_type_id, false); 
 	}
 
 	[[nodiscard]] auto

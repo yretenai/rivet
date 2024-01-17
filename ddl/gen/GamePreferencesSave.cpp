@@ -7,40 +7,40 @@
 
 namespace rivet::ddl::generated {
 	GamePreferencesSave::GamePreferencesSave([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): PreferencesSave(serialized) {
-		PerfSpec = serialized->get_enum<rivet::ddl::generated::x11adfe43>(PerfSpec_type_id, rivet::ddl::generated::x11adfe43_values);
-		FlyerStickOption = serialized->get_enum<rivet::ddl::generated::FlyerCameraStickOption>(FlyerStickOption_type_id, rivet::ddl::generated::FlyerCameraStickOption_values);
-		SubtitleSizeIndex = serialized->get_uint32(SubtitleSizeIndex_type_id);
-		SubtitleSpeakerColor = serialized->get_string(SubtitleSpeakerColor_type_id);
-		SubtitleTextColor = serialized->get_string(SubtitleTextColor_type_id);
-		SubtitleBackgroundColor = serialized->get_string(SubtitleBackgroundColor_type_id);
-		EmphasisColor = serialized->get_string(EmphasisColor_type_id);
-		AimArcColor = serialized->get_string(AimArcColor_type_id);
-		TargetArcColor = serialized->get_string(TargetArcColor_type_id);
-		ControllerSpeakerMode = serialized->get_enum<rivet::ddl::generated::x477e8a6a>(ControllerSpeakerMode_type_id, rivet::ddl::generated::x477e8a6a_values);
-		RumbleMode = serialized->get_enum<rivet::ddl::generated::x8f9b9ab2>(RumbleMode_type_id, rivet::ddl::generated::x8f9b9ab2_values);
-		FollowCameraMode = serialized->get_enum<rivet::ddl::generated::xde3cdb81>(FollowCameraMode_type_id, rivet::ddl::generated::xde3cdb81_values);
-		FireMode = serialized->get_enum<rivet::ddl::generated::FireMode>(FireMode_type_id, rivet::ddl::generated::FireMode_values);
-		AdaptiveTriggerMode = serialized->get_enum<rivet::ddl::generated::AdaptiveTriggerMode>(AdaptiveTriggerMode_type_id, rivet::ddl::generated::AdaptiveTriggerMode_values);
-		AccessibilityShadersOutline = serialized->get_string(AccessibilityShadersOutline_type_id);
-		HeroAccessibilityShader = serialized->get_string(HeroAccessibilityShader_type_id);
-		AllyAccessibilityShader = serialized->get_string(AllyAccessibilityShader_type_id);
-		EnemyAccessibilityShader = serialized->get_string(EnemyAccessibilityShader_type_id);
-		BossAccessibilityShader = serialized->get_string(BossAccessibilityShader_type_id);
-		HazardAccessibilityShader = serialized->get_string(HazardAccessibilityShader_type_id);
-		InteractAccessibilityShader = serialized->get_string(InteractAccessibilityShader_type_id);
-		CollectableAccessibilityShader = serialized->get_string(CollectableAccessibilityShader_type_id);
-		HeroAccessibilityShaderCustom = serialized->get_string(HeroAccessibilityShaderCustom_type_id);
-		AllyAccessibilityShaderCustom = serialized->get_string(AllyAccessibilityShaderCustom_type_id);
-		EnemyAccessibilityShaderCustom = serialized->get_string(EnemyAccessibilityShaderCustom_type_id);
-		BossAccessibilityShaderCustom = serialized->get_string(BossAccessibilityShaderCustom_type_id);
-		HazardAccessibilityShaderCustom = serialized->get_string(HazardAccessibilityShaderCustom_type_id);
-		InteractAccessibilityShaderCustom = serialized->get_string(InteractAccessibilityShaderCustom_type_id);
-		CollectableAccessibilityShaderCustom = serialized->get_string(CollectableAccessibilityShaderCustom_type_id);
-		AccessibilityContrastOptions = serialized->get_uint32(AccessibilityContrastOptions_type_id);
-		AccessibilityButtonActionUp = serialized->get_enum<rivet::ddl::generated::x847316cf>(AccessibilityButtonActionUp_type_id, rivet::ddl::generated::x847316cf_values);
-		AccessibilityButtonActionRight = serialized->get_enum<rivet::ddl::generated::x847316cf>(AccessibilityButtonActionRight_type_id, rivet::ddl::generated::x847316cf_values);
-		AccessibilityButtonActionDown = serialized->get_enum<rivet::ddl::generated::x847316cf>(AccessibilityButtonActionDown_type_id, rivet::ddl::generated::x847316cf_values);
-		AccessibilityButtonActionLeft = serialized->get_enum<rivet::ddl::generated::x847316cf>(AccessibilityButtonActionLeft_type_id, rivet::ddl::generated::x847316cf_values); 
+		PerfSpec = serialized->get_enum<rivet::ddl::generated::x11adfe43>(PerfSpec_type_id, rivet::ddl::generated::x11adfe43_values, rivet::ddl::generated::x11adfe43::None);
+		FlyerStickOption = serialized->get_enum<rivet::ddl::generated::FlyerCameraStickOption>(FlyerStickOption_type_id, rivet::ddl::generated::FlyerCameraStickOption_values, rivet::ddl::generated::FlyerCameraStickOption::Right_Stick);
+		SubtitleSizeIndex = serialized->get_uint32(SubtitleSizeIndex_type_id, 0);
+		SubtitleSpeakerColor = serialized->get_string(SubtitleSpeakerColor_type_id, "light_green");
+		SubtitleTextColor = serialized->get_string(SubtitleTextColor_type_id, "white");
+		SubtitleBackgroundColor = serialized->get_string(SubtitleBackgroundColor_type_id, "black");
+		EmphasisColor = serialized->get_string(EmphasisColor_type_id, "orange");
+		AimArcColor = serialized->get_string(AimArcColor_type_id, "aimarc_blue");
+		TargetArcColor = serialized->get_string(TargetArcColor_type_id, "red");
+		ControllerSpeakerMode = serialized->get_enum<rivet::ddl::generated::x477e8a6a>(ControllerSpeakerMode_type_id, rivet::ddl::generated::x477e8a6a_values, rivet::ddl::generated::x477e8a6a::Experiential);
+		RumbleMode = serialized->get_enum<rivet::ddl::generated::x8f9b9ab2>(RumbleMode_type_id, rivet::ddl::generated::x8f9b9ab2_values, rivet::ddl::generated::x8f9b9ab2::Experiential);
+		FollowCameraMode = serialized->get_enum<rivet::ddl::generated::xde3cdb81>(FollowCameraMode_type_id, rivet::ddl::generated::xde3cdb81_values, rivet::ddl::generated::xde3cdb81::On);
+		FireMode = serialized->get_enum<rivet::ddl::generated::FireMode>(FireMode_type_id, rivet::ddl::generated::FireMode_values, rivet::ddl::generated::FireMode::Default);
+		AdaptiveTriggerMode = serialized->get_enum<rivet::ddl::generated::AdaptiveTriggerMode>(AdaptiveTriggerMode_type_id, rivet::ddl::generated::AdaptiveTriggerMode_values, rivet::ddl::generated::AdaptiveTriggerMode::Default);
+		AccessibilityShadersOutline = serialized->get_string(AccessibilityShadersOutline_type_id, "none");
+		HeroAccessibilityShader = serialized->get_string(HeroAccessibilityShader_type_id, "none");
+		AllyAccessibilityShader = serialized->get_string(AllyAccessibilityShader_type_id, "none");
+		EnemyAccessibilityShader = serialized->get_string(EnemyAccessibilityShader_type_id, "none");
+		BossAccessibilityShader = serialized->get_string(BossAccessibilityShader_type_id, "none");
+		HazardAccessibilityShader = serialized->get_string(HazardAccessibilityShader_type_id, "none");
+		InteractAccessibilityShader = serialized->get_string(InteractAccessibilityShader_type_id, "none");
+		CollectableAccessibilityShader = serialized->get_string(CollectableAccessibilityShader_type_id, "none");
+		HeroAccessibilityShaderCustom = serialized->get_string(HeroAccessibilityShaderCustom_type_id, "none");
+		AllyAccessibilityShaderCustom = serialized->get_string(AllyAccessibilityShaderCustom_type_id, "none");
+		EnemyAccessibilityShaderCustom = serialized->get_string(EnemyAccessibilityShaderCustom_type_id, "none");
+		BossAccessibilityShaderCustom = serialized->get_string(BossAccessibilityShaderCustom_type_id, "none");
+		HazardAccessibilityShaderCustom = serialized->get_string(HazardAccessibilityShaderCustom_type_id, "none");
+		InteractAccessibilityShaderCustom = serialized->get_string(InteractAccessibilityShaderCustom_type_id, "none");
+		CollectableAccessibilityShaderCustom = serialized->get_string(CollectableAccessibilityShaderCustom_type_id, "none");
+		AccessibilityContrastOptions = serialized->get_uint32(AccessibilityContrastOptions_type_id, 0);
+		AccessibilityButtonActionUp = serialized->get_enum<rivet::ddl::generated::x847316cf>(AccessibilityButtonActionUp_type_id, rivet::ddl::generated::x847316cf_values, rivet::ddl::generated::x847316cf::None);
+		AccessibilityButtonActionRight = serialized->get_enum<rivet::ddl::generated::x847316cf>(AccessibilityButtonActionRight_type_id, rivet::ddl::generated::x847316cf_values, rivet::ddl::generated::x847316cf::None);
+		AccessibilityButtonActionDown = serialized->get_enum<rivet::ddl::generated::x847316cf>(AccessibilityButtonActionDown_type_id, rivet::ddl::generated::x847316cf_values, rivet::ddl::generated::x847316cf::None);
+		AccessibilityButtonActionLeft = serialized->get_enum<rivet::ddl::generated::x847316cf>(AccessibilityButtonActionLeft_type_id, rivet::ddl::generated::x847316cf_values, rivet::ddl::generated::x847316cf::None); 
 	}
 
 	[[nodiscard]] auto

@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	ActorFadePrius::ActorFadePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		FadeInTime = serialized->get_float(FadeInTime_type_id);
-		FadeOutTime = serialized->get_float(FadeOutTime_type_id);
-		DestroyWhenFadedOut = serialized->get_bool(DestroyWhenFadedOut_type_id);
-		SkipWhenOccluded = serialized->get_bool(SkipWhenOccluded_type_id);
-		MaxVisiblePixelPercent = serialized->get_float(MaxVisiblePixelPercent_type_id);
-		FadeEffect = serialized->get_enum<rivet::ddl::generated::xc19f3ae>(FadeEffect_type_id, rivet::ddl::generated::xc19f3ae_values); 
+		FadeInTime = serialized->get_float(FadeInTime_type_id, 1.000000);
+		FadeOutTime = serialized->get_float(FadeOutTime_type_id, 1.000000);
+		DestroyWhenFadedOut = serialized->get_bool(DestroyWhenFadedOut_type_id, true);
+		SkipWhenOccluded = serialized->get_bool(SkipWhenOccluded_type_id, true);
+		MaxVisiblePixelPercent = serialized->get_float(MaxVisiblePixelPercent_type_id, 0.050000);
+		FadeEffect = serialized->get_enum<rivet::ddl::generated::xc19f3ae>(FadeEffect_type_id, rivet::ddl::generated::xc19f3ae_values, rivet::ddl::generated::xc19f3ae::Alpha); 
 	}
 
 	[[nodiscard]] auto

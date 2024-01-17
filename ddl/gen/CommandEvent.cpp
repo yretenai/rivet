@@ -21,7 +21,7 @@
 
 namespace rivet::ddl::generated {
 	CommandEvent::CommandEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Time = serialized->get_float(Time_type_id); 
+		Time = serialized->get_float(Time_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

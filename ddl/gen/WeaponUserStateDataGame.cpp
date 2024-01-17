@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	WeaponUserStateDataGame::WeaponUserStateDataGame([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): WeaponUserStateData(serialized) {
-		UserState = serialized->get_enum<rivet::ddl::generated::xff945214>(UserState_type_id, rivet::ddl::generated::xff945214_values); 
+		UserState = serialized->get_enum<rivet::ddl::generated::xff945214>(UserState_type_id, rivet::ddl::generated::xff945214_values, rivet::ddl::generated::xff945214::None); 
 	}
 
 	[[nodiscard]] auto

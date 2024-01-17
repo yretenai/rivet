@@ -11,13 +11,13 @@
 
 namespace rivet::ddl::generated {
 	CinematicCommandEngineItem::CinematicCommandEngineItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Command = serialized->get_enum<rivet::ddl::generated::x7756f5e5>(Command_type_id, rivet::ddl::generated::x7756f5e5_values);
-		ValueBool = serialized->get_bool(ValueBool_type_id);
+		Command = serialized->get_enum<rivet::ddl::generated::x7756f5e5>(Command_type_id, rivet::ddl::generated::x7756f5e5_values, rivet::ddl::generated::x7756f5e5::ActivateTracks);
+		ValueBool = serialized->get_bool(ValueBool_type_id, false);
 		ValueCinematic2Def = serialized->unwrap_into<rivet::ddl::generated::Cinematic2Def>(ValueCinematic2Def_type_id);
 		ValueCinematic2Options = serialized->unwrap_into<rivet::ddl::generated::Cinematic2Options>(ValueCinematic2Options_type_id);
-		ValueDouble = serialized->get_double(ValueDouble_type_id);
+		ValueDouble = serialized->get_double(ValueDouble_type_id, 0.000000);
 		ValueMatrix = serialized->unwrap_into<rivet::ddl::generated::DDLMatrix4>(ValueMatrix_type_id);
-		ValueString = serialized->get_string(ValueString_type_id);
+		ValueString = serialized->get_string(ValueString_type_id, {});
 		ValueTuidSet = serialized->get_uint64s(ValueTuidSet_type_id); 
 	}
 

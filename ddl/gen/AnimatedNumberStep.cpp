@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	AnimatedNumberStep::AnimatedNumberStep([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		StartValue = serialized->get_float(StartValue_type_id);
-		EndValue = serialized->get_float(EndValue_type_id);
-		Time = serialized->get_float(Time_type_id);
-		EaseIn = serialized->get_float(EaseIn_type_id);
-		EaseOut = serialized->get_float(EaseOut_type_id); 
+		StartValue = serialized->get_float(StartValue_type_id, 0.000000);
+		EndValue = serialized->get_float(EndValue_type_id, 0.000000);
+		Time = serialized->get_float(Time_type_id, 0.000000);
+		EaseIn = serialized->get_float(EaseIn_type_id, 0.000000);
+		EaseOut = serialized->get_float(EaseOut_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

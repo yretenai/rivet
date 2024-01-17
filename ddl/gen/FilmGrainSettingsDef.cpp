@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	FilmGrainSettingsDef::FilmGrainSettingsDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Enabled = serialized->get_bool(Enabled_type_id);
-		Size = serialized->get_float(Size_type_id);
-		Strength = serialized->get_float(Strength_type_id);
-		SizeAt4K = serialized->get_float(SizeAt4K_type_id);
-		StrengthAt4K = serialized->get_float(StrengthAt4K_type_id);
-		NoiseTexture = serialized->get_string(NoiseTexture_type_id); 
+		Enabled = serialized->get_bool(Enabled_type_id, false);
+		Size = serialized->get_float(Size_type_id, 1.000000);
+		Strength = serialized->get_float(Strength_type_id, 0.500000);
+		SizeAt4K = serialized->get_float(SizeAt4K_type_id, 0.000000);
+		StrengthAt4K = serialized->get_float(StrengthAt4K_type_id, 0.000000);
+		NoiseTexture = serialized->get_string(NoiseTexture_type_id, "required\\textures\\Noise.texture"); 
 	}
 
 	[[nodiscard]] auto

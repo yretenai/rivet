@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	RaritaniumPickup::RaritaniumPickup([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Actor = serialized->get_string(Actor_type_id);
-		Chance = serialized->get_float(Chance_type_id); 
+		Actor = serialized->get_string(Actor_type_id, {});
+		Chance = serialized->get_float(Chance_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

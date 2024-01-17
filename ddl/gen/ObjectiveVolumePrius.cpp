@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	ObjectiveVolumePrius::ObjectiveVolumePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Mission = serialized->get_string(Mission_type_id);
-		Objective = serialized->get_string(Objective_type_id); 
+		Mission = serialized->get_string(Mission_type_id, {});
+		Objective = serialized->get_string(Objective_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

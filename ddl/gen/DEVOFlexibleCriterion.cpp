@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	DEVOFlexibleCriterion::DEVOFlexibleCriterion([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		FactName = serialized->get_string(FactName_type_id);
-		AsString = serialized->get_string(AsString_type_id);
-		NumericLow = serialized->get_float(NumericLow_type_id);
-		NumericHigh = serialized->get_float(NumericHigh_type_id);
-		IncludeNumericLow = serialized->get_bool(IncludeNumericLow_type_id);
-		IncludeNumericHigh = serialized->get_bool(IncludeNumericHigh_type_id); 
+		FactName = serialized->get_string(FactName_type_id, {});
+		AsString = serialized->get_string(AsString_type_id, {});
+		NumericLow = serialized->get_float(NumericLow_type_id, -999999986991104.000000);
+		NumericHigh = serialized->get_float(NumericHigh_type_id, 999999986991104.000000);
+		IncludeNumericLow = serialized->get_bool(IncludeNumericLow_type_id, true);
+		IncludeNumericHigh = serialized->get_bool(IncludeNumericHigh_type_id, true); 
 	}
 
 	[[nodiscard]] auto

@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	BotImpaleEvent::BotImpaleEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		ImpaleLocator = serialized->get_string(ImpaleLocator_type_id);
-		ImpaleDuration = serialized->get_float(ImpaleDuration_type_id); 
+		ImpaleLocator = serialized->get_string(ImpaleLocator_type_id, {});
+		ImpaleDuration = serialized->get_float(ImpaleDuration_type_id, 5.000000); 
 	}
 
 	[[nodiscard]] auto

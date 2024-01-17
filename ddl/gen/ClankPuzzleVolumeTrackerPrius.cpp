@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ClankPuzzleVolumeTrackerPrius::ClankPuzzleVolumeTrackerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		TargetVolumeType = serialized->get_enum<rivet::ddl::generated::x17b935fe>(TargetVolumeType_type_id, rivet::ddl::generated::x17b935fe_values); 
+		TargetVolumeType = serialized->get_enum<rivet::ddl::generated::x17b935fe>(TargetVolumeType_type_id, rivet::ddl::generated::x17b935fe_values, rivet::ddl::generated::x17b935fe::None); 
 	}
 
 	[[nodiscard]] auto

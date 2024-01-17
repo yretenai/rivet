@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	EngineConcurrentZoneInstantiationSettings::EngineConcurrentZoneInstantiationSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		UseConcurrentInitialization = serialized->get_bool(UseConcurrentInitialization_type_id);
-		TasksPerQueue = serialized->get_int16(TasksPerQueue_type_id);
-		StagingHeapPerThreadKB = serialized->get_int16(StagingHeapPerThreadKB_type_id);
-		OutboxPerThreadKB = serialized->get_int16(OutboxPerThreadKB_type_id); 
+		UseConcurrentInitialization = serialized->get_bool(UseConcurrentInitialization_type_id, false);
+		TasksPerQueue = serialized->get_int16(TasksPerQueue_type_id, 6144);
+		StagingHeapPerThreadKB = serialized->get_int16(StagingHeapPerThreadKB_type_id, 8);
+		OutboxPerThreadKB = serialized->get_int16(OutboxPerThreadKB_type_id, 1024); 
 	}
 
 	[[nodiscard]] auto

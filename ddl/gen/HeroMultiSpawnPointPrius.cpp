@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	HeroMultiSpawnPointPrius::HeroMultiSpawnPointPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): HeroSingleSpawnPointPrius(serialized) {
-		AdditionalLocationsGroup = serialized->get_uint64(AdditionalLocationsGroup_type_id); 
+		AdditionalLocationsGroup = serialized->get_uint64(AdditionalLocationsGroup_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

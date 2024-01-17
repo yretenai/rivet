@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	BuiltMissionEntry::BuiltMissionEntry([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MissionName = serialized->get_string(MissionName_type_id);
-		MissionGraph = serialized->get_string(MissionGraph_type_id);
-		ObjectiveGraph = serialized->get_string(ObjectiveGraph_type_id); 
+		MissionName = serialized->get_string(MissionName_type_id, {});
+		MissionGraph = serialized->get_string(MissionGraph_type_id, {});
+		ObjectiveGraph = serialized->get_string(ObjectiveGraph_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

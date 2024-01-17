@@ -10,11 +10,11 @@
 namespace rivet::ddl::generated {
 	ZoomData::ZoomData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		FireCone = serialized->unwrap_into<rivet::ddl::generated::FireConeData>(FireCone_type_id);
-		CamAimContext = serialized->get_string(CamAimContext_type_id);
-		CamStickOverride = serialized->get_string(CamStickOverride_type_id);
-		AimAssistOverride = serialized->get_string(AimAssistOverride_type_id);
-		AimAssistOverrideCasual = serialized->get_string(AimAssistOverrideCasual_type_id);
-		DisableViewWidth = serialized->get_bool(DisableViewWidth_type_id); 
+		CamAimContext = serialized->get_string(CamAimContext_type_id, {});
+		CamStickOverride = serialized->get_string(CamStickOverride_type_id, {});
+		AimAssistOverride = serialized->get_string(AimAssistOverride_type_id, {});
+		AimAssistOverrideCasual = serialized->get_string(AimAssistOverrideCasual_type_id, {});
+		DisableViewWidth = serialized->get_bool(DisableViewWidth_type_id, false); 
 	}
 
 	[[nodiscard]] auto

@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	AlembicActor::AlembicActor([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MayaNameSpace = serialized->get_string(MayaNameSpace_type_id);
-		FilterNodeName = serialized->get_string(FilterNodeName_type_id);
-		MayaPath = serialized->get_string(MayaPath_type_id); 
+		MayaNameSpace = serialized->get_string(MayaNameSpace_type_id, {});
+		FilterNodeName = serialized->get_string(FilterNodeName_type_id, {});
+		MayaPath = serialized->get_string(MayaPath_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

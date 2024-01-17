@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	NodeGraphActorContextInfo::NodeGraphActorContextInfo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Id = serialized->get_uint32(Id_type_id);
-		Name = serialized->get_string(Name_type_id);
+		Id = serialized->get_uint32(Id_type_id, 0);
+		Name = serialized->get_string(Name_type_id, {});
 		Assets = serialized->get_uint64s(Assets_type_id); 
 	}
 

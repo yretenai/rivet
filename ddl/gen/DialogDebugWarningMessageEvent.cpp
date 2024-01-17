@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	DialogDebugWarningMessageEvent::DialogDebugWarningMessageEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Message = serialized->get_enum<rivet::ddl::generated::x7f6273a0>(Message_type_id, rivet::ddl::generated::x7f6273a0_values); 
+		Message = serialized->get_enum<rivet::ddl::generated::x7f6273a0>(Message_type_id, rivet::ddl::generated::x7f6273a0_values, rivet::ddl::generated::x7f6273a0::NoSoundBank); 
 	}
 
 	[[nodiscard]] auto

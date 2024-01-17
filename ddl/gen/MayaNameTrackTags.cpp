@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	MayaNameTrackTags::MayaNameTrackTags([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MayaName = serialized->get_string(MayaName_type_id);
+		MayaName = serialized->get_string(MayaName_type_id, {});
 		TrackTagsDef = serialized->get_strings(TrackTagsDef_type_id); 
 	}
 

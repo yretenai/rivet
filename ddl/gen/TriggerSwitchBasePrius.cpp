@@ -12,7 +12,7 @@
 
 namespace rivet::ddl::generated {
 	TriggerSwitchBasePrius::TriggerSwitchBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EnabledComponentBasePrius(serialized) {
-		GroupName = serialized->get_string(GroupName_type_id);
+		GroupName = serialized->get_string(GroupName_type_id, {});
 		Responses = serialized->unwrap_into_many<rivet::ddl::generated::TriggerSwitchResponseEntry>(Responses_type_id); 
 	}
 

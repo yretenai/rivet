@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	LootSetupElement::LootSetupElement([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		LootTableConfig = serialized->get_string(LootTableConfig_type_id);
-		LootMode = serialized->get_string(LootMode_type_id); 
+		LootTableConfig = serialized->get_string(LootTableConfig_type_id, {});
+		LootMode = serialized->get_string(LootMode_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	PreDecideLootEntry::PreDecideLootEntry([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		LootActor = serialized->get_string(LootActor_type_id);
-		PickChance = serialized->get_float(PickChance_type_id);
-		ChangeMaterialConst = serialized->get_bool(ChangeMaterialConst_type_id);
-		MaterialConstName = serialized->get_string(MaterialConstName_type_id);
-		MaterialConstValue = serialized->get_float(MaterialConstValue_type_id);
-		LootIdNum = serialized->get_uint8(LootIdNum_type_id); 
+		LootActor = serialized->get_string(LootActor_type_id, {});
+		PickChance = serialized->get_float(PickChance_type_id, 1.000000);
+		ChangeMaterialConst = serialized->get_bool(ChangeMaterialConst_type_id, true);
+		MaterialConstName = serialized->get_string(MaterialConstName_type_id, "colorPicker");
+		MaterialConstValue = serialized->get_float(MaterialConstValue_type_id, 1.000000);
+		LootIdNum = serialized->get_uint8(LootIdNum_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

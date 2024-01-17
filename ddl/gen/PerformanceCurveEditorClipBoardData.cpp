@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	PerformanceCurveEditorClipBoardData::PerformanceCurveEditorClipBoardData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ClipboardType = serialized->get_string(ClipboardType_type_id);
-		Type = serialized->get_string(Type_type_id);
+		ClipboardType = serialized->get_string(ClipboardType_type_id, {});
+		Type = serialized->get_string(Type_type_id, {});
 		Value = serialized->unwrap_into_many<rivet::ddl::generated::PerformanceCurveEditorClipBoardValue>(Value_type_id); 
 	}
 

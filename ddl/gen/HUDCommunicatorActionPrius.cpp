@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	HUDCommunicatorActionPrius::HUDCommunicatorActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		SpeakerTexture = serialized->get_string(SpeakerTexture_type_id);
-		SpeakerNameLocTag = serialized->get_string(SpeakerNameLocTag_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::UI);
+		SpeakerTexture = serialized->get_string(SpeakerTexture_type_id, {});
+		SpeakerNameLocTag = serialized->get_string(SpeakerNameLocTag_type_id, "INVALID"); 
 	}
 
 	[[nodiscard]] auto

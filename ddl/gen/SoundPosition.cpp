@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	SoundPosition::SoundPosition([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Actor = serialized->get_uint64(Actor_type_id);
-		LocatorName = serialized->get_string(LocatorName_type_id); 
+		Actor = serialized->get_uint64(Actor_type_id, 0);
+		LocatorName = serialized->get_string(LocatorName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

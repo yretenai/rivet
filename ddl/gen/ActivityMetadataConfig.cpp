@@ -16,8 +16,8 @@ namespace rivet::ddl::generated {
 		SilverCup = serialized->unwrap_into<rivet::ddl::generated::ArenaCupActivityData>(SilverCup_type_id);
 		GoldenCup = serialized->unwrap_into<rivet::ddl::generated::ArenaCupActivityData>(GoldenCup_type_id);
 		RynoActivityData = serialized->unwrap_into<rivet::ddl::generated::RynoActivityData>(RynoActivityData_type_id);
-		FallbackSmallImage = serialized->get_string(FallbackSmallImage_type_id);
-		FallbackLargeImage = serialized->get_string(FallbackLargeImage_type_id); 
+		FallbackSmallImage = serialized->get_string(FallbackSmallImage_type_id, {});
+		FallbackLargeImage = serialized->get_string(FallbackLargeImage_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

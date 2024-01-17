@@ -50,11 +50,11 @@
 
 namespace rivet::ddl::generated {
 	WeaponGamePrius::WeaponGamePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): WeaponBasePrius(serialized) {
-		DebugColorEnabled = serialized->get_bool(DebugColorEnabled_type_id);
+		DebugColorEnabled = serialized->get_bool(DebugColorEnabled_type_id, false);
 		DebugColor = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(DebugColor_type_id);
-		IgnoreCameraContextVolumesForAiming = serialized->get_bool(IgnoreCameraContextVolumesForAiming_type_id);
-		SupportsToggleFire = serialized->get_bool(SupportsToggleFire_type_id);
-		SupportsHoldFire = serialized->get_bool(SupportsHoldFire_type_id);
+		IgnoreCameraContextVolumesForAiming = serialized->get_bool(IgnoreCameraContextVolumesForAiming_type_id, false);
+		SupportsToggleFire = serialized->get_bool(SupportsToggleFire_type_id, true);
+		SupportsHoldFire = serialized->get_bool(SupportsHoldFire_type_id, true);
 		Recoil = serialized->unwrap_into_many<rivet::ddl::generated::BasicRecoilPrius>(Recoil_type_id); 
 	}
 

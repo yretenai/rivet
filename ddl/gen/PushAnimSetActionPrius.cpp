@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	PushAnimSetActionPrius::PushAnimSetActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		AnimSet = serialized->get_string(AnimSet_type_id);
-		RemoveAnimSetOnScriptUnload = serialized->get_bool(RemoveAnimSetOnScriptUnload_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Actor);
+		AnimSet = serialized->get_string(AnimSet_type_id, {});
+		RemoveAnimSetOnScriptUnload = serialized->get_bool(RemoveAnimSetOnScriptUnload_type_id, true); 
 	}
 
 	[[nodiscard]] auto

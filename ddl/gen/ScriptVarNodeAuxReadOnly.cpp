@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	ScriptVarNodeAuxReadOnly::ScriptVarNodeAuxReadOnly([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		VarType = serialized->get_string(VarType_type_id);
-		GlobalName = serialized->get_string(GlobalName_type_id);
+		VarType = serialized->get_string(VarType_type_id, {});
+		GlobalName = serialized->get_string(GlobalName_type_id, {});
 		Notes = serialized->unwrap_into<rivet::ddl::generated::GraphNodeNotesDef>(Notes_type_id); 
 	}
 

@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	JointToBodyFilter::JointToBodyFilter([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		JointName = serialized->get_string(JointName_type_id);
-		BodyPartFilter = serialized->get_enum<rivet::ddl::generated::xfdd79442>(BodyPartFilter_type_id, rivet::ddl::generated::xfdd79442_values); 
+		JointName = serialized->get_string(JointName_type_id, "head");
+		BodyPartFilter = serialized->get_enum<rivet::ddl::generated::xfdd79442>(BodyPartFilter_type_id, rivet::ddl::generated::xfdd79442_values, rivet::ddl::generated::xfdd79442::HitLocationHead); 
 	}
 
 	[[nodiscard]] auto

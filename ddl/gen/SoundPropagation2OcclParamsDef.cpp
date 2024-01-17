@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	SoundPropagation2OcclParamsDef::SoundPropagation2OcclParamsDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ApplyOcclusion = serialized->get_bool(ApplyOcclusion_type_id);
-		DirectMaxAttenuationdB = serialized->get_float(DirectMaxAttenuationdB_type_id);
-		FilterMaxAttenuationdB = serialized->get_float(FilterMaxAttenuationdB_type_id); 
+		ApplyOcclusion = serialized->get_bool(ApplyOcclusion_type_id, true);
+		DirectMaxAttenuationdB = serialized->get_float(DirectMaxAttenuationdB_type_id, -40.000000);
+		FilterMaxAttenuationdB = serialized->get_float(FilterMaxAttenuationdB_type_id, -30.000000); 
 	}
 
 	[[nodiscard]] auto

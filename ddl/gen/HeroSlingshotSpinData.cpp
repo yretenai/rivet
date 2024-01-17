@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	HeroSlingshotSpinData::HeroSlingshotSpinData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MinRotationSpeed = serialized->get_float(MinRotationSpeed_type_id);
-		MaxRotationSpeed = serialized->get_float(MaxRotationSpeed_type_id);
-		TimeToReachMaxRotationSpeed = serialized->get_float(TimeToReachMaxRotationSpeed_type_id); 
+		MinRotationSpeed = serialized->get_float(MinRotationSpeed_type_id, 720.000000);
+		MaxRotationSpeed = serialized->get_float(MaxRotationSpeed_type_id, 2160.000000);
+		TimeToReachMaxRotationSpeed = serialized->get_float(TimeToReachMaxRotationSpeed_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

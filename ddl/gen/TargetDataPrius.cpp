@@ -9,13 +9,13 @@
 
 namespace rivet::ddl::generated {
 	TargetDataPrius::TargetDataPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Allegiance = serialized->get_enum<rivet::ddl::generated::x6bdf4ba1>(Allegiance_type_id, rivet::ddl::generated::x6bdf4ba1_values);
-		TargetTypes = serialized->get_bitset<rivet::ddl::generated::TargetType>(TargetTypes_type_id, rivet::ddl::generated::TargetType_values);
-		TargetCategory = serialized->get_enum<rivet::ddl::generated::TargetCategory>(TargetCategory_type_id, rivet::ddl::generated::TargetCategory_values);
-		AimAssistConfig = serialized->get_string(AimAssistConfig_type_id);
-		DesiredMaxTargeters = serialized->get_int32(DesiredMaxTargeters_type_id);
-		StartStatic = serialized->get_bool(StartStatic_type_id);
-		StartTargetable = serialized->get_bool(StartTargetable_type_id);
+		Allegiance = serialized->get_enum<rivet::ddl::generated::x6bdf4ba1>(Allegiance_type_id, rivet::ddl::generated::x6bdf4ba1_values, rivet::ddl::generated::x6bdf4ba1::Neutral);
+		TargetTypes = serialized->get_bitset<rivet::ddl::generated::TargetType>(TargetTypes_type_id, rivet::ddl::generated::TargetType_values, 0);
+		TargetCategory = serialized->get_enum<rivet::ddl::generated::TargetCategory>(TargetCategory_type_id, rivet::ddl::generated::TargetCategory_values, rivet::ddl::generated::TargetCategory::None);
+		AimAssistConfig = serialized->get_string(AimAssistConfig_type_id, {});
+		DesiredMaxTargeters = serialized->get_int32(DesiredMaxTargeters_type_id, -1);
+		StartStatic = serialized->get_bool(StartStatic_type_id, true);
+		StartTargetable = serialized->get_bool(StartTargetable_type_id, true);
 		LocationData = serialized->unwrap_into_many<rivet::ddl::generated::TargetLocationData>(LocationData_type_id); 
 	}
 

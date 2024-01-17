@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	BotRelativeAnimGroundSnapEvent::BotRelativeAnimGroundSnapEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		GroundSnapOn = serialized->get_bool(GroundSnapOn_type_id); 
+		GroundSnapOn = serialized->get_bool(GroundSnapOn_type_id, true); 
 	}
 
 	[[nodiscard]] auto

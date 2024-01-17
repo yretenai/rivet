@@ -14,10 +14,10 @@ namespace rivet::ddl::generated {
 		StateDependentCameraData = serialized->unwrap_into_many<rivet::ddl::generated::StateDependentCameraConfigData>(StateDependentCameraData_type_id);
 		SpeedDependentCameraData = serialized->unwrap_into_many<rivet::ddl::generated::SpeedDependentCameraConfigData>(SpeedDependentCameraData_type_id);
 		FollowCameraConfig = serialized->unwrap_into<rivet::ddl::generated::FollowCameraUserConfig>(FollowCameraConfig_type_id);
-		CameraUpIsUserUp = serialized->get_bool(CameraUpIsUserUp_type_id);
-		EnableRotateAroundCollision = serialized->get_bool(EnableRotateAroundCollision_type_id);
-		AlwaysShowReticle = serialized->get_bool(AlwaysShowReticle_type_id);
-		UseMoveStickAsInput = serialized->get_bool(UseMoveStickAsInput_type_id); 
+		CameraUpIsUserUp = serialized->get_bool(CameraUpIsUserUp_type_id, false);
+		EnableRotateAroundCollision = serialized->get_bool(EnableRotateAroundCollision_type_id, true);
+		AlwaysShowReticle = serialized->get_bool(AlwaysShowReticle_type_id, false);
+		UseMoveStickAsInput = serialized->get_bool(UseMoveStickAsInput_type_id, false); 
 	}
 
 	[[nodiscard]] auto

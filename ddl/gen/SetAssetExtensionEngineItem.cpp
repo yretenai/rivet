@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	SetAssetExtensionEngineItem::SetAssetExtensionEngineItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AssetExtension = serialized->get_enum<rivet::ddl::generated::AssetExtensions>(AssetExtension_type_id, rivet::ddl::generated::AssetExtensions_values); 
+		AssetExtension = serialized->get_enum<rivet::ddl::generated::AssetExtensions>(AssetExtension_type_id, rivet::ddl::generated::AssetExtensions_values, rivet::ddl::generated::AssetExtensions::actor); 
 	}
 
 	[[nodiscard]] auto

@@ -9,10 +9,10 @@
 
 namespace rivet::ddl::generated {
 	TargetCheckProjectileArcPrius::TargetCheckProjectileArcPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): TargetCheckBasePrius(serialized) {
-		UseTargetRadius = serialized->get_bool(UseTargetRadius_type_id);
-		CheckRadius = serialized->get_float(CheckRadius_type_id);
-		StartType = serialized->get_enum<rivet::ddl::generated::x84a7fecd>(StartType_type_id, rivet::ddl::generated::x84a7fecd_values);
-		EndType = serialized->get_enum<rivet::ddl::generated::x84a7fecd>(EndType_type_id, rivet::ddl::generated::x84a7fecd_values);
+		UseTargetRadius = serialized->get_bool(UseTargetRadius_type_id, false);
+		CheckRadius = serialized->get_float(CheckRadius_type_id, 0.200000);
+		StartType = serialized->get_enum<rivet::ddl::generated::x84a7fecd>(StartType_type_id, rivet::ddl::generated::x84a7fecd_values, rivet::ddl::generated::x84a7fecd::HuntingActor);
+		EndType = serialized->get_enum<rivet::ddl::generated::x84a7fecd>(EndType_type_id, rivet::ddl::generated::x84a7fecd_values, rivet::ddl::generated::x84a7fecd::TargetHunterTarget);
 		StartOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(StartOffset_type_id);
 		EndOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(EndOffset_type_id); 
 	}

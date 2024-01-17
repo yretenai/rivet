@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	DoorAutomaticPrius::DoorAutomaticPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActivationDistance = serialized->get_float(ActivationDistance_type_id);
-		StartActive = serialized->get_bool(StartActive_type_id); 
+		ActivationDistance = serialized->get_float(ActivationDistance_type_id, 4.000000);
+		StartActive = serialized->get_bool(StartActive_type_id, true); 
 	}
 
 	[[nodiscard]] auto

@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	RYNOPlanLink::RYNOPlanLink([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ActivityLinkBase(serialized) {
-		PlanetName = serialized->get_string(PlanetName_type_id);
-		SaveID = serialized->get_enum<rivet::ddl::generated::x81d3e717>(SaveID_type_id, rivet::ddl::generated::x81d3e717_values); 
+		PlanetName = serialized->get_string(PlanetName_type_id, {});
+		SaveID = serialized->get_enum<rivet::ddl::generated::x81d3e717>(SaveID_type_id, rivet::ddl::generated::x81d3e717_values, rivet::ddl::generated::x81d3e717::None); 
 	}
 
 	[[nodiscard]] auto

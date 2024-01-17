@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	SkinItemCompositeMaterialOverridePrius::SkinItemCompositeMaterialOverridePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		PreMaterialNameHash = serialized->get_uint32(PreMaterialNameHash_type_id);
-		PostMaterialNameHash = serialized->get_uint32(PostMaterialNameHash_type_id); 
+		PreMaterialNameHash = serialized->get_uint32(PreMaterialNameHash_type_id, 0);
+		PostMaterialNameHash = serialized->get_uint32(PostMaterialNameHash_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

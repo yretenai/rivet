@@ -7,26 +7,26 @@
 
 namespace rivet::ddl::generated {
 	AnimFlagsEngineItem::AnimFlagsEngineItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AlwaysLoop = serialized->get_bool(AlwaysLoop_type_id);
-		AnimationCompleted = serialized->get_bool(AnimationCompleted_type_id);
-		AnimClipHasPhaseData = serialized->get_bool(AnimClipHasPhaseData_type_id);
-		ApplyRotation = serialized->get_bool(ApplyRotation_type_id);
-		ApplyTranslation = serialized->get_bool(ApplyTranslation_type_id);
-		ClothEnabled = serialized->get_bool(ClothEnabled_type_id);
-		LinkCameraToActor = serialized->get_bool(LinkCameraToActor_type_id);
-		PlayingAnimClip = serialized->get_bool(PlayingAnimClip_type_id);
-		PlayingAnimDriver = serialized->get_bool(PlayingAnimDriver_type_id);
-		RenderMotionArrow = serialized->get_bool(RenderMotionArrow_type_id);
-		RenderMotionData = serialized->get_bool(RenderMotionData_type_id);
-		RenderPhaseData = serialized->get_bool(RenderPhaseData_type_id);
-		Rewind = serialized->get_bool(Rewind_type_id);
-		SendUpdateData = serialized->get_bool(SendUpdateData_type_id);
-		ShowDebugControllerHud = serialized->get_bool(ShowDebugControllerHud_type_id);
-		ShowDebugHud = serialized->get_bool(ShowDebugHud_type_id);
-		ShowDebugMorphHud = serialized->get_bool(ShowDebugMorphHud_type_id);
-		ShowDebugDynamicsHud = serialized->get_bool(ShowDebugDynamicsHud_type_id);
-		ShowVisData = serialized->get_bool(ShowVisData_type_id);
-		TriggerEvents = serialized->get_bool(TriggerEvents_type_id); 
+		AlwaysLoop = serialized->get_bool(AlwaysLoop_type_id, false);
+		AnimationCompleted = serialized->get_bool(AnimationCompleted_type_id, false);
+		AnimClipHasPhaseData = serialized->get_bool(AnimClipHasPhaseData_type_id, false);
+		ApplyRotation = serialized->get_bool(ApplyRotation_type_id, true);
+		ApplyTranslation = serialized->get_bool(ApplyTranslation_type_id, true);
+		ClothEnabled = serialized->get_bool(ClothEnabled_type_id, true);
+		LinkCameraToActor = serialized->get_bool(LinkCameraToActor_type_id, false);
+		PlayingAnimClip = serialized->get_bool(PlayingAnimClip_type_id, false);
+		PlayingAnimDriver = serialized->get_bool(PlayingAnimDriver_type_id, false);
+		RenderMotionArrow = serialized->get_bool(RenderMotionArrow_type_id, false);
+		RenderMotionData = serialized->get_bool(RenderMotionData_type_id, false);
+		RenderPhaseData = serialized->get_bool(RenderPhaseData_type_id, false);
+		Rewind = serialized->get_bool(Rewind_type_id, false);
+		SendUpdateData = serialized->get_bool(SendUpdateData_type_id, false);
+		ShowDebugControllerHud = serialized->get_bool(ShowDebugControllerHud_type_id, false);
+		ShowDebugHud = serialized->get_bool(ShowDebugHud_type_id, false);
+		ShowDebugMorphHud = serialized->get_bool(ShowDebugMorphHud_type_id, false);
+		ShowDebugDynamicsHud = serialized->get_bool(ShowDebugDynamicsHud_type_id, false);
+		ShowVisData = serialized->get_bool(ShowVisData_type_id, false);
+		TriggerEvents = serialized->get_bool(TriggerEvents_type_id, false); 
 	}
 
 	[[nodiscard]] auto

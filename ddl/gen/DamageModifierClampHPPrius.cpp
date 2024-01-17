@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	DamageModifierClampHPPrius::DamageModifierClampHPPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): DamageModifierIncomingPrius(serialized) {
-		ClampHPAt = serialized->get_float(ClampHPAt_type_id); 
+		ClampHPAt = serialized->get_float(ClampHPAt_type_id, 10.000000); 
 	}
 
 	[[nodiscard]] auto

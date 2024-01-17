@@ -12,7 +12,7 @@
 namespace rivet::ddl::generated {
 	MeshExportDef::MeshExportDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		VaultMetaData = serialized->unwrap_into<rivet::ddl::generated::VaultMetaData>(VaultMetaData_type_id);
-		IconPath = serialized->get_string(IconPath_type_id);
+		IconPath = serialized->get_string(IconPath_type_id, "");
 		Skeletons = serialized->unwrap_into_many<rivet::ddl::generated::SkeletonDef>(Skeletons_type_id);
 		Meshes = serialized->unwrap_into_many<rivet::ddl::generated::MeshDef>(Meshes_type_id); 
 	}

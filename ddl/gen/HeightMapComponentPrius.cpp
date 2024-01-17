@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	HeightMapComponentPrius::HeightMapComponentPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Resolution = serialized->get_float(Resolution_type_id);
-		HeightCheckUp = serialized->get_float(HeightCheckUp_type_id);
-		HeightCheckDown = serialized->get_float(HeightCheckDown_type_id);
-		GridHalfSize = serialized->get_uint32(GridHalfSize_type_id); 
+		Resolution = serialized->get_float(Resolution_type_id, 1.000000);
+		HeightCheckUp = serialized->get_float(HeightCheckUp_type_id, 2.000000);
+		HeightCheckDown = serialized->get_float(HeightCheckDown_type_id, 10.000000);
+		GridHalfSize = serialized->get_uint32(GridHalfSize_type_id, 5); 
 	}
 
 	[[nodiscard]] auto

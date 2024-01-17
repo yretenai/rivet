@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	RYNOPortalObjectSpawnData::RYNOPortalObjectSpawnData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): SpawnDataBase(serialized) {
-		Size = serialized->get_enum<rivet::ddl::generated::xbf5ff3c6>(Size_type_id, rivet::ddl::generated::xbf5ff3c6_values); 
+		Size = serialized->get_enum<rivet::ddl::generated::xbf5ff3c6>(Size_type_id, rivet::ddl::generated::xbf5ff3c6_values, rivet::ddl::generated::xbf5ff3c6::Small); 
 	}
 
 	[[nodiscard]] auto

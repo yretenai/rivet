@@ -9,18 +9,18 @@
 
 namespace rivet::ddl::generated {
 	Region2DMapOverlay::Region2DMapOverlay([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MapImage = serialized->get_string(MapImage_type_id);
+		MapImage = serialized->get_string(MapImage_type_id, {});
 		OptionalMapLayers = serialized->unwrap_into_many<rivet::ddl::generated::Region2DMapOverlayLayer>(OptionalMapLayers_type_id);
-		Left = serialized->get_float(Left_type_id);
-		Top = serialized->get_float(Top_type_id);
-		Width = serialized->get_float(Width_type_id);
-		Height = serialized->get_float(Height_type_id);
-		AutoGenerateMap = serialized->get_bool(AutoGenerateMap_type_id);
-		AutoMapCameraY = serialized->get_float(AutoMapCameraY_type_id);
-		AutoMapMinX = serialized->get_float(AutoMapMinX_type_id);
-		AutoMapMaxX = serialized->get_float(AutoMapMaxX_type_id);
-		AutoMapMinZ = serialized->get_float(AutoMapMinZ_type_id);
-		AutoMapMaxZ = serialized->get_float(AutoMapMaxZ_type_id); 
+		Left = serialized->get_float(Left_type_id, 0.000000);
+		Top = serialized->get_float(Top_type_id, 0.000000);
+		Width = serialized->get_float(Width_type_id, 0.000000);
+		Height = serialized->get_float(Height_type_id, 0.000000);
+		AutoGenerateMap = serialized->get_bool(AutoGenerateMap_type_id, false);
+		AutoMapCameraY = serialized->get_float(AutoMapCameraY_type_id, 500.000000);
+		AutoMapMinX = serialized->get_float(AutoMapMinX_type_id, -1000.000000);
+		AutoMapMaxX = serialized->get_float(AutoMapMaxX_type_id, 1000.000000);
+		AutoMapMinZ = serialized->get_float(AutoMapMinZ_type_id, -1000.000000);
+		AutoMapMaxZ = serialized->get_float(AutoMapMaxZ_type_id, 1000.000000); 
 	}
 
 	[[nodiscard]] auto

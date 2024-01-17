@@ -7,15 +7,15 @@
 
 namespace rivet::ddl::generated {
 	HealthSettings::HealthSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		HeroesDoNotTakeDamage = serialized->get_bool(HeroesDoNotTakeDamage_type_id);
-		HeroesDoNotDie = serialized->get_bool(HeroesDoNotDie_type_id);
-		EnemyBotsDoNotDie = serialized->get_bool(EnemyBotsDoNotDie_type_id);
-		DisplayHealthValues = serialized->get_bool(DisplayHealthValues_type_id);
-		DisplayHeroHealthBar = serialized->get_bool(DisplayHeroHealthBar_type_id);
-		DisplayEnemyHealthBars = serialized->get_bool(DisplayEnemyHealthBars_type_id);
-		DebugHealthDrops = serialized->get_bool(DebugHealthDrops_type_id);
-		DrawHazardAreas = serialized->get_bool(DrawHazardAreas_type_id);
-		DisableHitPause = serialized->get_bool(DisableHitPause_type_id); 
+		HeroesDoNotTakeDamage = serialized->get_bool(HeroesDoNotTakeDamage_type_id, false);
+		HeroesDoNotDie = serialized->get_bool(HeroesDoNotDie_type_id, false);
+		EnemyBotsDoNotDie = serialized->get_bool(EnemyBotsDoNotDie_type_id, false);
+		DisplayHealthValues = serialized->get_bool(DisplayHealthValues_type_id, false);
+		DisplayHeroHealthBar = serialized->get_bool(DisplayHeroHealthBar_type_id, false);
+		DisplayEnemyHealthBars = serialized->get_bool(DisplayEnemyHealthBars_type_id, false);
+		DebugHealthDrops = serialized->get_bool(DebugHealthDrops_type_id, false);
+		DrawHazardAreas = serialized->get_bool(DrawHazardAreas_type_id, false);
+		DisableHitPause = serialized->get_bool(DisableHitPause_type_id, false); 
 	}
 
 	[[nodiscard]] auto

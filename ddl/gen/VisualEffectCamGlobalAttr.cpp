@@ -7,14 +7,14 @@
 
 namespace rivet::ddl::generated {
 	VisualEffectCamGlobalAttr::VisualEffectCamGlobalAttr([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		KillCulled = serialized->get_bool(KillCulled_type_id);
-		SpawnCulled = serialized->get_bool(SpawnCulled_type_id);
-		Source = serialized->get_enum<rivet::ddl::generated::x21f55189>(Source_type_id, rivet::ddl::generated::x21f55189_values);
-		MaterialLoDDistance = serialized->get_float(MaterialLoDDistance_type_id);
-		FarClip = serialized->get_float(FarClip_type_id);
-		FarFadeStart = serialized->get_float(FarFadeStart_type_id);
-		NearFadeStart = serialized->get_float(NearFadeStart_type_id);
-		NearClip = serialized->get_float(NearClip_type_id); 
+		KillCulled = serialized->get_bool(KillCulled_type_id, false);
+		SpawnCulled = serialized->get_bool(SpawnCulled_type_id, true);
+		Source = serialized->get_enum<rivet::ddl::generated::x21f55189>(Source_type_id, rivet::ddl::generated::x21f55189_values, rivet::ddl::generated::x21f55189::Self);
+		MaterialLoDDistance = serialized->get_float(MaterialLoDDistance_type_id, 40.000000);
+		FarClip = serialized->get_float(FarClip_type_id, 60.000000);
+		FarFadeStart = serialized->get_float(FarFadeStart_type_id, 40.000000);
+		NearFadeStart = serialized->get_float(NearFadeStart_type_id, 1.000000);
+		NearClip = serialized->get_float(NearClip_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

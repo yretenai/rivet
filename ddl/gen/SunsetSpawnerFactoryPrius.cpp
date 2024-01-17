@@ -10,7 +10,7 @@
 
 namespace rivet::ddl::generated {
 	SunsetSpawnerFactoryPrius::SunsetSpawnerFactoryPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): SpawnerFactoryPrius(serialized) {
-		NumForcedHealthDrops = serialized->get_int32(NumForcedHealthDrops_type_id);
+		NumForcedHealthDrops = serialized->get_int32(NumForcedHealthDrops_type_id, -1);
 		BotSetupData = serialized->unwrap_into<rivet::ddl::generated::BotSetupData>(BotSetupData_type_id);
 		SetupControllerData = serialized->unwrap_into<rivet::ddl::generated::SetUpControllerData>(SetupControllerData_type_id); 
 	}

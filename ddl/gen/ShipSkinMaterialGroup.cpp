@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	ShipSkinMaterialGroup::ShipSkinMaterialGroup([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SkinType = serialized->get_enum<rivet::ddl::generated::x8a806a76>(SkinType_type_id, rivet::ddl::generated::x8a806a76_values);
-		Pack = serialized->get_enum<rivet::ddl::generated::x84053194>(Pack_type_id, rivet::ddl::generated::x84053194_values);
+		SkinType = serialized->get_enum<rivet::ddl::generated::x8a806a76>(SkinType_type_id, rivet::ddl::generated::x8a806a76_values, rivet::ddl::generated::x8a806a76::Default);
+		Pack = serialized->get_enum<rivet::ddl::generated::x84053194>(Pack_type_id, rivet::ddl::generated::x84053194_values, rivet::ddl::generated::x84053194::One);
 		Material = serialized->get_strings(Material_type_id); 
 	}
 

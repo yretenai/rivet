@@ -7,18 +7,18 @@
 
 namespace rivet::ddl::generated {
 	MovementConfig::MovementConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Style = serialized->get_enum<rivet::ddl::generated::MovementStyle>(Style_type_id, rivet::ddl::generated::MovementStyle_values);
-		UseAnimNormalSpeed = serialized->get_bool(UseAnimNormalSpeed_type_id);
-		RandomizeSpeed = serialized->get_bool(RandomizeSpeed_type_id);
-		RandomizeSpeedMin = serialized->get_float(RandomizeSpeedMin_type_id);
-		RandomizeSpeedMax = serialized->get_float(RandomizeSpeedMax_type_id);
-		MinSpeed = serialized->get_float(MinSpeed_type_id);
-		NormalSpeed = serialized->get_float(NormalSpeed_type_id);
-		MaxSpeed = serialized->get_float(MaxSpeed_type_id);
-		Accel = serialized->get_float(Accel_type_id);
-		Decel = serialized->get_float(Decel_type_id);
-		NormalTurnSpeed = serialized->get_float(NormalTurnSpeed_type_id);
-		MaxTurnSpeed = serialized->get_float(MaxTurnSpeed_type_id); 
+		Style = serialized->get_enum<rivet::ddl::generated::MovementStyle>(Style_type_id, rivet::ddl::generated::MovementStyle_values, rivet::ddl::generated::MovementStyle::Run);
+		UseAnimNormalSpeed = serialized->get_bool(UseAnimNormalSpeed_type_id, false);
+		RandomizeSpeed = serialized->get_bool(RandomizeSpeed_type_id, false);
+		RandomizeSpeedMin = serialized->get_float(RandomizeSpeedMin_type_id, 0.000000);
+		RandomizeSpeedMax = serialized->get_float(RandomizeSpeedMax_type_id, 1.000000);
+		MinSpeed = serialized->get_float(MinSpeed_type_id, 2.000000);
+		NormalSpeed = serialized->get_float(NormalSpeed_type_id, 5.000000);
+		MaxSpeed = serialized->get_float(MaxSpeed_type_id, 7.000000);
+		Accel = serialized->get_float(Accel_type_id, 7.000000);
+		Decel = serialized->get_float(Decel_type_id, 4.000000);
+		NormalTurnSpeed = serialized->get_float(NormalTurnSpeed_type_id, 300.000000);
+		MaxTurnSpeed = serialized->get_float(MaxTurnSpeed_type_id, 500.000000); 
 	}
 
 	[[nodiscard]] auto

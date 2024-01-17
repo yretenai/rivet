@@ -7,24 +7,24 @@
 
 namespace rivet::ddl::generated {
 	TopiarySprinklerPrius::TopiarySprinklerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Owner = serialized->get_uint32(Owner_type_id);
-		Weapon = serialized->get_uint32(Weapon_type_id);
-		WeaponId = serialized->get_uint32(WeaponId_type_id);
-		WeaponNameHash = serialized->get_uint32(WeaponNameHash_type_id);
-		UpgradeVersion = serialized->get_uint8(UpgradeVersion_type_id);
-		MaxActiveSprinklers = serialized->get_int8(MaxActiveSprinklers_type_id);
-		Duration = serialized->get_float(Duration_type_id);
-		SearchRadius = serialized->get_float(SearchRadius_type_id);
-		StatusAmount = serialized->get_float(StatusAmount_type_id);
-		TargetDuration = serialized->get_float(TargetDuration_type_id);
-		TimeBetweenDamage = serialized->get_float(TimeBetweenDamage_type_id);
-		TimeToRotate180 = serialized->get_float(TimeToRotate180_type_id);
-		EveryNthWaterShotFlagged = serialized->get_uint32(EveryNthWaterShotFlagged_type_id);
-		HealthDropConfig = serialized->get_string(HealthDropConfig_type_id);
-		DropHealthOnBotDeath = serialized->get_bool(DropHealthOnBotDeath_type_id);
-		StatusDamageAmount = serialized->get_float(StatusDamageAmount_type_id);
-		IncomingDamageMultiplier = serialized->get_float(IncomingDamageMultiplier_type_id);
-		OwnerAllegiance = serialized->get_enum<rivet::ddl::generated::x6bdf4ba1>(OwnerAllegiance_type_id, rivet::ddl::generated::x6bdf4ba1_values); 
+		Owner = serialized->get_uint32(Owner_type_id, 0);
+		Weapon = serialized->get_uint32(Weapon_type_id, 0);
+		WeaponId = serialized->get_uint32(WeaponId_type_id, 0);
+		WeaponNameHash = serialized->get_uint32(WeaponNameHash_type_id, 0);
+		UpgradeVersion = serialized->get_uint8(UpgradeVersion_type_id, 0);
+		MaxActiveSprinklers = serialized->get_int8(MaxActiveSprinklers_type_id, 2);
+		Duration = serialized->get_float(Duration_type_id, 10.000000);
+		SearchRadius = serialized->get_float(SearchRadius_type_id, 30.000000);
+		StatusAmount = serialized->get_float(StatusAmount_type_id, 10.000000);
+		TargetDuration = serialized->get_float(TargetDuration_type_id, 2.000000);
+		TimeBetweenDamage = serialized->get_float(TimeBetweenDamage_type_id, 0.200000);
+		TimeToRotate180 = serialized->get_float(TimeToRotate180_type_id, 3.000000);
+		EveryNthWaterShotFlagged = serialized->get_uint32(EveryNthWaterShotFlagged_type_id, 3);
+		HealthDropConfig = serialized->get_string(HealthDropConfig_type_id, {});
+		DropHealthOnBotDeath = serialized->get_bool(DropHealthOnBotDeath_type_id, false);
+		StatusDamageAmount = serialized->get_float(StatusDamageAmount_type_id, 0.000000);
+		IncomingDamageMultiplier = serialized->get_float(IncomingDamageMultiplier_type_id, 1.000000);
+		OwnerAllegiance = serialized->get_enum<rivet::ddl::generated::x6bdf4ba1>(OwnerAllegiance_type_id, rivet::ddl::generated::x6bdf4ba1_values, rivet::ddl::generated::x6bdf4ba1::Neutral); 
 	}
 
 	[[nodiscard]] auto

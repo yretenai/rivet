@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	ClankPackLoadoutConfig::ClankPackLoadoutConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		BackpackConfigForRatchet = serialized->get_string(BackpackConfigForRatchet_type_id);
-		BackpackConfigForRivet = serialized->get_string(BackpackConfigForRivet_type_id); 
+		BackpackConfigForRatchet = serialized->get_string(BackpackConfigForRatchet_type_id, {});
+		BackpackConfigForRivet = serialized->get_string(BackpackConfigForRivet_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

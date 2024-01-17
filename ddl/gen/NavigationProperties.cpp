@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	NavigationProperties::NavigationProperties([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SkipNavGeneration = serialized->get_bool(SkipNavGeneration_type_id);
-		WalkableArea = serialized->get_bool(WalkableArea_type_id); 
+		SkipNavGeneration = serialized->get_bool(SkipNavGeneration_type_id, false);
+		WalkableArea = serialized->get_bool(WalkableArea_type_id, true); 
 	}
 
 	[[nodiscard]] auto

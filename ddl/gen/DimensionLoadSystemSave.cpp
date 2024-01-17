@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	DimensionLoadSystemSave::DimensionLoadSystemSave([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DimensionCheckpointHash = serialized->get_uint32(DimensionCheckpointHash_type_id);
+		DimensionCheckpointHash = serialized->get_uint32(DimensionCheckpointHash_type_id, 0);
 		DimensionSaves = serialized->unwrap_into_many<rivet::ddl::generated::DimensionSaveData>(DimensionSaves_type_id); 
 	}
 

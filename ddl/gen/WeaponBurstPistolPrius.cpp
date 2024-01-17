@@ -10,7 +10,7 @@
 
 namespace rivet::ddl::generated {
 	WeaponBurstPistolPrius::WeaponBurstPistolPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): WeaponGamePrius(serialized) {
-		NumShotsSlowToFast = serialized->get_uint32(NumShotsSlowToFast_type_id);
+		NumShotsSlowToFast = serialized->get_uint32(NumShotsSlowToFast_type_id, 3);
 		SlowInaccuracyData = serialized->unwrap_into<rivet::ddl::generated::BurstPistolInaccuracyData>(SlowInaccuracyData_type_id);
 		InaccuracyData = serialized->unwrap_into<rivet::ddl::generated::BurstPistolInaccuracyData>(InaccuracyData_type_id);
 		ShellCasingData = serialized->unwrap_into<rivet::ddl::generated::ShellCasingDataSingleEmit>(ShellCasingData_type_id); 

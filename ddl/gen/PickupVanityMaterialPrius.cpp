@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	PickupVanityMaterialPrius::PickupVanityMaterialPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		VanityBundleConfig = serialized->get_string(VanityBundleConfig_type_id);
+		VanityBundleConfig = serialized->get_string(VanityBundleConfig_type_id, {});
 		PreviouslyCollectedMaterialOverride = serialized->unwrap_into<rivet::ddl::generated::PickupMaterialOverride>(PreviouslyCollectedMaterialOverride_type_id); 
 	}
 

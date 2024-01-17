@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	OmniDelayAwarenessPrius::OmniDelayAwarenessPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): OmniAwarenessPrius(serialized) {
-		ApplyConfirmStagger = serialized->get_bool(ApplyConfirmStagger_type_id);
-		IgnoreTargetsInWater = serialized->get_bool(IgnoreTargetsInWater_type_id); 
+		ApplyConfirmStagger = serialized->get_bool(ApplyConfirmStagger_type_id, true);
+		IgnoreTargetsInWater = serialized->get_bool(IgnoreTargetsInWater_type_id, false); 
 	}
 
 	[[nodiscard]] auto

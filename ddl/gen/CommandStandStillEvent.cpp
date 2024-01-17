@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	CommandStandStillEvent::CommandStandStillEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): CommandEvent(serialized) {
-		AimAtPrimaryTarget = serialized->get_bool(AimAtPrimaryTarget_type_id); 
+		AimAtPrimaryTarget = serialized->get_bool(AimAtPrimaryTarget_type_id, false); 
 	}
 
 	[[nodiscard]] auto

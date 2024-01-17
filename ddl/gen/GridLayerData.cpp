@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	GridLayerData::GridLayerData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		LayerName = serialized->get_string(LayerName_type_id);
+		LayerName = serialized->get_string(LayerName_type_id, {});
 		Tiles = serialized->unwrap_into_many<rivet::ddl::generated::GridTileData>(Tiles_type_id); 
 	}
 

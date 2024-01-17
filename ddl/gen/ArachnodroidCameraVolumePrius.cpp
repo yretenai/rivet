@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ArachnodroidCameraVolumePrius::ArachnodroidCameraVolumePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		CameraMode = serialized->get_enum<rivet::ddl::generated::xa752b9a>(CameraMode_type_id, rivet::ddl::generated::xa752b9a_values); 
+		CameraMode = serialized->get_enum<rivet::ddl::generated::xa752b9a>(CameraMode_type_id, rivet::ddl::generated::xa752b9a_values, rivet::ddl::generated::xa752b9a::Level); 
 	}
 
 	[[nodiscard]] auto

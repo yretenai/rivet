@@ -19,13 +19,13 @@
 
 namespace rivet::ddl::generated {
 	LobbedShotPrius::LobbedShotPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BasicBulletPrius(serialized) {
-		DealDamageOnFirstImpact = serialized->get_bool(DealDamageOnFirstImpact_type_id);
-		DealDamageOnAllImpacts = serialized->get_bool(DealDamageOnAllImpacts_type_id);
-		SendHitEventsOnFirstImpact = serialized->get_bool(SendHitEventsOnFirstImpact_type_id);
-		SendHitEventsOnAllImpacts = serialized->get_bool(SendHitEventsOnAllImpacts_type_id);
-		DestroyOnHit = serialized->get_bool(DestroyOnHit_type_id);
-		DestroyOnLanded = serialized->get_bool(DestroyOnLanded_type_id);
-		DestroyOnHitEnemy = serialized->get_bool(DestroyOnHitEnemy_type_id); 
+		DealDamageOnFirstImpact = serialized->get_bool(DealDamageOnFirstImpact_type_id, true);
+		DealDamageOnAllImpacts = serialized->get_bool(DealDamageOnAllImpacts_type_id, false);
+		SendHitEventsOnFirstImpact = serialized->get_bool(SendHitEventsOnFirstImpact_type_id, true);
+		SendHitEventsOnAllImpacts = serialized->get_bool(SendHitEventsOnAllImpacts_type_id, true);
+		DestroyOnHit = serialized->get_bool(DestroyOnHit_type_id, false);
+		DestroyOnLanded = serialized->get_bool(DestroyOnLanded_type_id, false);
+		DestroyOnHitEnemy = serialized->get_bool(DestroyOnHitEnemy_type_id, false); 
 	}
 
 	[[nodiscard]] auto

@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	CameraContextBlendVolumePrius::CameraContextBlendVolumePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): CameraContextVolumePrius(serialized) {
-		InnerRadius = serialized->get_float(InnerRadius_type_id);
-		BlendBehavior = serialized->get_enum<rivet::ddl::generated::xdbd0b557>(BlendBehavior_type_id, rivet::ddl::generated::xdbd0b557_values); 
+		InnerRadius = serialized->get_float(InnerRadius_type_id, 0.000000);
+		BlendBehavior = serialized->get_enum<rivet::ddl::generated::xdbd0b557>(BlendBehavior_type_id, rivet::ddl::generated::xdbd0b557_values, rivet::ddl::generated::xdbd0b557::Center); 
 	}
 
 	[[nodiscard]] auto

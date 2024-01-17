@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	Cinematic2LightGroupDef::Cinematic2LightGroupDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Id = serialized->get_uint64(Id_type_id);
-		Name = serialized->get_string(Name_type_id);
-		Active = serialized->get_bool(Active_type_id);
+		Id = serialized->get_uint64(Id_type_id, 0);
+		Name = serialized->get_string(Name_type_id, {});
+		Active = serialized->get_bool(Active_type_id, true);
 		LightIds = serialized->get_uint64s(LightIds_type_id); 
 	}
 

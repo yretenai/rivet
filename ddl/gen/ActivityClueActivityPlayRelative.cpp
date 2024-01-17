@@ -7,14 +7,14 @@
 
 namespace rivet::ddl::generated {
 	ActivityClueActivityPlayRelative::ActivityClueActivityPlayRelative([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		IntroAnim = serialized->get_string(IntroAnim_type_id);
-		UseAnim = serialized->get_string(UseAnim_type_id);
-		OutroAnim = serialized->get_string(OutroAnim_type_id);
-		FastOutroAnim = serialized->get_string(FastOutroAnim_type_id);
-		LoopCount = serialized->get_int32(LoopCount_type_id);
-		UseMayaAnimOffset = serialized->get_bool(UseMayaAnimOffset_type_id);
-		MatchClueHeight = serialized->get_bool(MatchClueHeight_type_id);
-		RandomUseAnimFrame = serialized->get_bool(RandomUseAnimFrame_type_id); 
+		IntroAnim = serialized->get_string(IntroAnim_type_id, {});
+		UseAnim = serialized->get_string(UseAnim_type_id, {});
+		OutroAnim = serialized->get_string(OutroAnim_type_id, {});
+		FastOutroAnim = serialized->get_string(FastOutroAnim_type_id, {});
+		LoopCount = serialized->get_int32(LoopCount_type_id, -1);
+		UseMayaAnimOffset = serialized->get_bool(UseMayaAnimOffset_type_id, false);
+		MatchClueHeight = serialized->get_bool(MatchClueHeight_type_id, false);
+		RandomUseAnimFrame = serialized->get_bool(RandomUseAnimFrame_type_id, false); 
 	}
 
 	[[nodiscard]] auto

@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	StatusEffectPreExplodeEvent::StatusEffectPreExplodeEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		TimeUntilExplosion = serialized->get_float(TimeUntilExplosion_type_id); 
+		TimeUntilExplosion = serialized->get_float(TimeUntilExplosion_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

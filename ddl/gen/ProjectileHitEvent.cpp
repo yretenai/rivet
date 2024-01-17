@@ -16,10 +16,10 @@
 
 namespace rivet::ddl::generated {
 	ProjectileHitEvent::ProjectileHitEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		HitSpeed = serialized->get_float(HitSpeed_type_id);
-		Material = serialized->get_enum<rivet::ddl::generated::x10b3c4cf>(Material_type_id, rivet::ddl::generated::x10b3c4cf_values);
-		PerkName = serialized->get_string(PerkName_type_id);
-		EdgeImpact = serialized->get_bool(EdgeImpact_type_id); 
+		HitSpeed = serialized->get_float(HitSpeed_type_id, 0.000000);
+		Material = serialized->get_enum<rivet::ddl::generated::x10b3c4cf>(Material_type_id, rivet::ddl::generated::x10b3c4cf_values, rivet::ddl::generated::x10b3c4cf::None);
+		PerkName = serialized->get_string(PerkName_type_id, {});
+		EdgeImpact = serialized->get_bool(EdgeImpact_type_id, false); 
 	}
 
 	[[nodiscard]] auto

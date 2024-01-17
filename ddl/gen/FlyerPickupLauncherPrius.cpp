@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	FlyerPickupLauncherPrius::FlyerPickupLauncherPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		CapsuleHeight = serialized->get_float(CapsuleHeight_type_id);
-		CapsuleRadius = serialized->get_float(CapsuleRadius_type_id);
-		CapsuleUpOffset = serialized->get_float(CapsuleUpOffset_type_id);
-		DrawDebugDetection = serialized->get_bool(DrawDebugDetection_type_id);
-		PickupActor = serialized->get_string(PickupActor_type_id);
-		ShotConfig = serialized->get_string(ShotConfig_type_id); 
+		CapsuleHeight = serialized->get_float(CapsuleHeight_type_id, 0.000000);
+		CapsuleRadius = serialized->get_float(CapsuleRadius_type_id, 0.000000);
+		CapsuleUpOffset = serialized->get_float(CapsuleUpOffset_type_id, 0.000000);
+		DrawDebugDetection = serialized->get_bool(DrawDebugDetection_type_id, false);
+		PickupActor = serialized->get_string(PickupActor_type_id, {});
+		ShotConfig = serialized->get_string(ShotConfig_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

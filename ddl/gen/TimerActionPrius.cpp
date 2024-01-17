@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	TimerActionPrius::TimerActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		StartActive = serialized->get_bool(StartActive_type_id);
-		ResetTimeOnStop = serialized->get_bool(ResetTimeOnStop_type_id);
-		ResetTimeOnTimeOut = serialized->get_bool(ResetTimeOnTimeOut_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Logic);
+		StartActive = serialized->get_bool(StartActive_type_id, false);
+		ResetTimeOnStop = serialized->get_bool(ResetTimeOnStop_type_id, false);
+		ResetTimeOnTimeOut = serialized->get_bool(ResetTimeOnTimeOut_type_id, false); 
 	}
 
 	[[nodiscard]] auto

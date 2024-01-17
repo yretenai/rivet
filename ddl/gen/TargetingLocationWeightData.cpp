@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	TargetingLocationWeightData::TargetingLocationWeightData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		BodyPart = serialized->get_enum<rivet::ddl::generated::x457f748b>(BodyPart_type_id, rivet::ddl::generated::x457f748b_values);
-		BodyPartName = serialized->get_string(BodyPartName_type_id);
-		Weight = serialized->get_float(Weight_type_id); 
+		BodyPart = serialized->get_enum<rivet::ddl::generated::x457f748b>(BodyPart_type_id, rivet::ddl::generated::x457f748b_values, rivet::ddl::generated::x457f748b::Unknown);
+		BodyPartName = serialized->get_string(BodyPartName_type_id, "");
+		Weight = serialized->get_float(Weight_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

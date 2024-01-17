@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	ModelAssetEngineItem::ModelAssetEngineItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AssetPath = serialized->get_string(AssetPath_type_id);
+		AssetPath = serialized->get_string(AssetPath_type_id, {});
 		ModelDef = serialized->unwrap_into<rivet::ddl::generated::ModelDef>(ModelDef_type_id); 
 	}
 

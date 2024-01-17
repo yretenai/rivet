@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	CineActorVoiceCoveredEvent::CineActorVoiceCoveredEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		IsCovered = serialized->get_bool(IsCovered_type_id); 
+		IsCovered = serialized->get_bool(IsCovered_type_id, false); 
 	}
 
 	[[nodiscard]] auto

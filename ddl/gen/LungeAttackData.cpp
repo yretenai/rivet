@@ -7,20 +7,20 @@
 
 namespace rivet::ddl::generated {
 	LungeAttackData::LungeAttackData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DoTell = serialized->get_bool(DoTell_type_id);
-		TellTime = serialized->get_float(TellTime_type_id);
-		TellPredictiveT = serialized->get_float(TellPredictiveT_type_id);
-		TellMaxRotationSpeed = serialized->get_float(TellMaxRotationSpeed_type_id);
-		LungeDistance = serialized->get_float(LungeDistance_type_id);
-		LungeTime = serialized->get_float(LungeTime_type_id);
-		LungeLandingOffset = serialized->get_float(LungeLandingOffset_type_id);
-		DoRecover = serialized->get_bool(DoRecover_type_id);
-		RecoveryTime = serialized->get_float(RecoveryTime_type_id);
-		StickToPlayer = serialized->get_bool(StickToPlayer_type_id);
-		DisableFriendlyCVC = serialized->get_bool(DisableFriendlyCVC_type_id);
-		BailIfOffscreenAfterTell = serialized->get_bool(BailIfOffscreenAfterTell_type_id);
-		BailIfCloserThanAfterTell = serialized->get_float(BailIfCloserThanAfterTell_type_id);
-		NumLungeVariations = serialized->get_int32(NumLungeVariations_type_id); 
+		DoTell = serialized->get_bool(DoTell_type_id, true);
+		TellTime = serialized->get_float(TellTime_type_id, -1.000000);
+		TellPredictiveT = serialized->get_float(TellPredictiveT_type_id, 0.000000);
+		TellMaxRotationSpeed = serialized->get_float(TellMaxRotationSpeed_type_id, 2000.000000);
+		LungeDistance = serialized->get_float(LungeDistance_type_id, -1.000000);
+		LungeTime = serialized->get_float(LungeTime_type_id, -1.000000);
+		LungeLandingOffset = serialized->get_float(LungeLandingOffset_type_id, 0.000000);
+		DoRecover = serialized->get_bool(DoRecover_type_id, true);
+		RecoveryTime = serialized->get_float(RecoveryTime_type_id, -1.000000);
+		StickToPlayer = serialized->get_bool(StickToPlayer_type_id, false);
+		DisableFriendlyCVC = serialized->get_bool(DisableFriendlyCVC_type_id, true);
+		BailIfOffscreenAfterTell = serialized->get_bool(BailIfOffscreenAfterTell_type_id, false);
+		BailIfCloserThanAfterTell = serialized->get_float(BailIfCloserThanAfterTell_type_id, 1.500000);
+		NumLungeVariations = serialized->get_int32(NumLungeVariations_type_id, 1); 
 	}
 
 	[[nodiscard]] auto

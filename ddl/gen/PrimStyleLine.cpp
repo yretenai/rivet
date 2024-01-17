@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	PrimStyleLine::PrimStyleLine([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): PrimStyleBase(serialized) {
-		LocatorA = serialized->get_string(LocatorA_type_id);
-		LocatorB = serialized->get_string(LocatorB_type_id); 
+		LocatorA = serialized->get_string(LocatorA_type_id, {});
+		LocatorB = serialized->get_string(LocatorB_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

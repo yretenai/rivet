@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	RecoveryLedgeDisablerSettings::RecoveryLedgeDisablerSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MaxDisablerVolumes = serialized->get_int32(MaxDisablerVolumes_type_id); 
+		MaxDisablerVolumes = serialized->get_int32(MaxDisablerVolumes_type_id, 64); 
 	}
 
 	[[nodiscard]] auto

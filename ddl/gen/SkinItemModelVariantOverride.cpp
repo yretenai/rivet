@@ -10,7 +10,7 @@
 namespace rivet::ddl::generated {
 	SkinItemModelVariantOverride::SkinItemModelVariantOverride([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		ModelVariant = serialized->unwrap_into<rivet::ddl::generated::AssetReferenceDef>(ModelVariant_type_id);
-		VariantName = serialized->get_string(VariantName_type_id); 
+		VariantName = serialized->get_string(VariantName_type_id, "Default"); 
 	}
 
 	[[nodiscard]] auto

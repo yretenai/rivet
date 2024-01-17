@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	AwardHeroHoverbootDoubleJumpedEvent::AwardHeroHoverbootDoubleJumpedEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		HasTriggeredKickHighSpeedStart = serialized->get_bool(HasTriggeredKickHighSpeedStart_type_id); 
+		HasTriggeredKickHighSpeedStart = serialized->get_bool(HasTriggeredKickHighSpeedStart_type_id, false); 
 	}
 
 	[[nodiscard]] auto

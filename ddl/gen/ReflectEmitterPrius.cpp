@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	ReflectEmitterPrius::ReflectEmitterPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): WeaponEmitterBasePrius(serialized) {
-		SkewTowardsNormal = serialized->get_float(SkewTowardsNormal_type_id);
-		NudgeOffHitPosition = serialized->get_float(NudgeOffHitPosition_type_id); 
+		SkewTowardsNormal = serialized->get_float(SkewTowardsNormal_type_id, 0.000000);
+		NudgeOffHitPosition = serialized->get_float(NudgeOffHitPosition_type_id, 0.100000); 
 	}
 
 	[[nodiscard]] auto

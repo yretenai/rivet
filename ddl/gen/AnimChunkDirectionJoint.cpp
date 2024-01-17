@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	AnimChunkDirectionJoint::AnimChunkDirectionJoint([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): AnimChunkDirection(serialized) {
-		JointName = serialized->get_string(JointName_type_id);
-		Axis = serialized->get_enum<rivet::ddl::generated::x302e143f>(Axis_type_id, rivet::ddl::generated::x302e143f_values);
-		MirrorAxis = serialized->get_bool(MirrorAxis_type_id);
-		HalfConeAngle = serialized->get_float(HalfConeAngle_type_id); 
+		JointName = serialized->get_string(JointName_type_id, {});
+		Axis = serialized->get_enum<rivet::ddl::generated::x302e143f>(Axis_type_id, rivet::ddl::generated::x302e143f_values, rivet::ddl::generated::x302e143f::Z);
+		MirrorAxis = serialized->get_bool(MirrorAxis_type_id, false);
+		HalfConeAngle = serialized->get_float(HalfConeAngle_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

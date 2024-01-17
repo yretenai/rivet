@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	FireFromLookData::FireFromLookData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		PerformAdditionalTestsAlongEmitPath = serialized->get_bool(PerformAdditionalTestsAlongEmitPath_type_id);
-		CollideWithNonActors = serialized->get_bool(CollideWithNonActors_type_id);
-		CollideWithNonTargets = serialized->get_bool(CollideWithNonTargets_type_id);
-		CollideWithTargetTypes = serialized->get_bitset<rivet::ddl::generated::TargetType>(CollideWithTargetTypes_type_id, rivet::ddl::generated::TargetType_values); 
+		PerformAdditionalTestsAlongEmitPath = serialized->get_bool(PerformAdditionalTestsAlongEmitPath_type_id, false);
+		CollideWithNonActors = serialized->get_bool(CollideWithNonActors_type_id, false);
+		CollideWithNonTargets = serialized->get_bool(CollideWithNonTargets_type_id, false);
+		CollideWithTargetTypes = serialized->get_bitset<rivet::ddl::generated::TargetType>(CollideWithTargetTypes_type_id, rivet::ddl::generated::TargetType_values, 0); 
 	}
 
 	[[nodiscard]] auto

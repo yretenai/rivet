@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	ShowMovieLocationTextActionPrius::ShowMovieLocationTextActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		LocTag = serialized->get_string(LocTag_type_id);
-		SecondLocTag = serialized->get_string(SecondLocTag_type_id);
-		Delay = serialized->get_float(Delay_type_id);
-		Duration = serialized->get_float(Duration_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::UI);
+		LocTag = serialized->get_string(LocTag_type_id, "INVALID");
+		SecondLocTag = serialized->get_string(SecondLocTag_type_id, "INVALID");
+		Delay = serialized->get_float(Delay_type_id, -1.000000);
+		Duration = serialized->get_float(Duration_type_id, 4.000000); 
 	}
 
 	[[nodiscard]] auto

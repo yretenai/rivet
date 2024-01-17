@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	LightingConditionBitSet::LightingConditionBitSet([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Day = serialized->get_bool(Day_type_id);
-		Overcast = serialized->get_bool(Overcast_type_id);
-		Sunset = serialized->get_bool(Sunset_type_id);
-		Night = serialized->get_bool(Night_type_id);
-		Blackout = serialized->get_bool(Blackout_type_id); 
+		Day = serialized->get_bool(Day_type_id, true);
+		Overcast = serialized->get_bool(Overcast_type_id, true);
+		Sunset = serialized->get_bool(Sunset_type_id, true);
+		Night = serialized->get_bool(Night_type_id, true);
+		Blackout = serialized->get_bool(Blackout_type_id, true); 
 	}
 
 	[[nodiscard]] auto

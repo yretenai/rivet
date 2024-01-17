@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	DebugPlaytestHeroInfo::DebugPlaytestHeroInfo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SpawnAsHero = serialized->get_enum<rivet::ddl::generated::HeroTypes>(SpawnAsHero_type_id, rivet::ddl::generated::HeroTypes_values);
-		SpawnLoadout = serialized->get_string(SpawnLoadout_type_id);
-		BackpackLoadout = serialized->get_string(BackpackLoadout_type_id); 
+		SpawnAsHero = serialized->get_enum<rivet::ddl::generated::HeroTypes>(SpawnAsHero_type_id, rivet::ddl::generated::HeroTypes_values, rivet::ddl::generated::HeroTypes::None);
+		SpawnLoadout = serialized->get_string(SpawnLoadout_type_id, {});
+		BackpackLoadout = serialized->get_string(BackpackLoadout_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

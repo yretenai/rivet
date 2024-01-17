@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	BataliaCannonTargetPrius::BataliaCannonTargetPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		FrontY = serialized->get_float(FrontY_type_id);
-		FrontZ = serialized->get_float(FrontZ_type_id);
-		BackY = serialized->get_float(BackY_type_id);
-		BackZ = serialized->get_float(BackZ_type_id);
-		Radius = serialized->get_float(Radius_type_id); 
+		FrontY = serialized->get_float(FrontY_type_id, 0.000000);
+		FrontZ = serialized->get_float(FrontZ_type_id, 0.000000);
+		BackY = serialized->get_float(BackY_type_id, 0.000000);
+		BackZ = serialized->get_float(BackZ_type_id, 0.000000);
+		Radius = serialized->get_float(Radius_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

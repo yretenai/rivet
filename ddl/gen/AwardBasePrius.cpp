@@ -28,14 +28,14 @@
 
 namespace rivet::ddl::generated {
 	AwardBasePrius::AwardBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		CodeName = serialized->get_string(CodeName_type_id);
-		NameLocTag = serialized->get_string(NameLocTag_type_id);
-		DescLocTag = serialized->get_string(DescLocTag_type_id);
-		ImagePath = serialized->get_string(ImagePath_type_id);
-		Level = serialized->get_enum<rivet::ddl::generated::xfb81cf7c>(Level_type_id, rivet::ddl::generated::xfb81cf7c_values);
-		Hidden = serialized->get_bool(Hidden_type_id);
-		Progressive = serialized->get_bool(Progressive_type_id);
-		TargetValue = serialized->get_uint32(TargetValue_type_id);
+		CodeName = serialized->get_string(CodeName_type_id, {});
+		NameLocTag = serialized->get_string(NameLocTag_type_id, {});
+		DescLocTag = serialized->get_string(DescLocTag_type_id, {});
+		ImagePath = serialized->get_string(ImagePath_type_id, {});
+		Level = serialized->get_enum<rivet::ddl::generated::xfb81cf7c>(Level_type_id, rivet::ddl::generated::xfb81cf7c_values, rivet::ddl::generated::xfb81cf7c::bronze);
+		Hidden = serialized->get_bool(Hidden_type_id, false);
+		Progressive = serialized->get_bool(Progressive_type_id, false);
+		TargetValue = serialized->get_uint32(TargetValue_type_id, 1);
 		Prize = serialized->unwrap_into<rivet::ddl::generated::AwardPrizeBasePrius>(Prize_type_id); 
 	}
 

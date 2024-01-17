@@ -11,11 +11,11 @@
 
 namespace rivet::ddl::generated {
 	BotConfigDeath::BotConfigDeath([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		CorpseCleanup = serialized->get_bool(CorpseCleanup_type_id);
-		DeleteOnDeath = serialized->get_bool(DeleteOnDeath_type_id);
-		CanRagdoll = serialized->get_bool(CanRagdoll_type_id);
+		CorpseCleanup = serialized->get_bool(CorpseCleanup_type_id, true);
+		DeleteOnDeath = serialized->get_bool(DeleteOnDeath_type_id, false);
+		CanRagdoll = serialized->get_bool(CanRagdoll_type_id, true);
 		BloodPool = serialized->unwrap_into<rivet::ddl::generated::BloodPoolPrius>(BloodPool_type_id);
-		SkeletonActor = serialized->get_string(SkeletonActor_type_id);
+		SkeletonActor = serialized->get_string(SkeletonActor_type_id, {});
 		DeathReactionMods = serialized->unwrap_into_many<rivet::ddl::generated::DeathReactionModifier>(DeathReactionMods_type_id); 
 	}
 

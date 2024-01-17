@@ -7,19 +7,19 @@
 
 namespace rivet::ddl::generated {
 	MaterialMap::MaterialMap([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MaterialMappingName = serialized->get_string(MaterialMappingName_type_id);
-		AssetMaterialName = serialized->get_string(AssetMaterialName_type_id);
-		MaterialLodDist = serialized->get_float(MaterialLodDist_type_id);
-		FadeOutDist = serialized->get_float(FadeOutDist_type_id);
-		TextureStreamBias = serialized->get_float(TextureStreamBias_type_id);
-		DoubleSidedType = serialized->get_enum<rivet::ddl::generated::DoubleSidedType>(DoubleSidedType_type_id, rivet::ddl::generated::DoubleSidedType_values);
-		ImpostorHQType = serialized->get_enum<rivet::ddl::generated::ImpostorHQType>(ImpostorHQType_type_id, rivet::ddl::generated::ImpostorHQType_values);
-		Disable = serialized->get_bool(Disable_type_id);
-		PolySort = serialized->get_bool(PolySort_type_id);
-		LensFlareOccluder = serialized->get_bool(LensFlareOccluder_type_id);
-		OverrideCollisionMtl = serialized->get_bool(OverrideCollisionMtl_type_id);
-		SkipRayTracing = serialized->get_bool(SkipRayTracing_type_id);
-		NoAvResponse = serialized->get_bool(NoAvResponse_type_id); 
+		MaterialMappingName = serialized->get_string(MaterialMappingName_type_id, {});
+		AssetMaterialName = serialized->get_string(AssetMaterialName_type_id, {});
+		MaterialLodDist = serialized->get_float(MaterialLodDist_type_id, 0.000000);
+		FadeOutDist = serialized->get_float(FadeOutDist_type_id, 0.000000);
+		TextureStreamBias = serialized->get_float(TextureStreamBias_type_id, 0.000000);
+		DoubleSidedType = serialized->get_enum<rivet::ddl::generated::DoubleSidedType>(DoubleSidedType_type_id, rivet::ddl::generated::DoubleSidedType_values, rivet::ddl::generated::DoubleSidedType::Inherit_From_Material);
+		ImpostorHQType = serialized->get_enum<rivet::ddl::generated::ImpostorHQType>(ImpostorHQType_type_id, rivet::ddl::generated::ImpostorHQType_values, rivet::ddl::generated::ImpostorHQType::Inherit_From_Material);
+		Disable = serialized->get_bool(Disable_type_id, false);
+		PolySort = serialized->get_bool(PolySort_type_id, false);
+		LensFlareOccluder = serialized->get_bool(LensFlareOccluder_type_id, false);
+		OverrideCollisionMtl = serialized->get_bool(OverrideCollisionMtl_type_id, false);
+		SkipRayTracing = serialized->get_bool(SkipRayTracing_type_id, false);
+		NoAvResponse = serialized->get_bool(NoAvResponse_type_id, false); 
 	}
 
 	[[nodiscard]] auto

@@ -11,18 +11,18 @@
 
 namespace rivet::ddl::generated {
 	Cinematic2CameraShakeTrackDef::Cinematic2CameraShakeTrackDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Id = serialized->get_uint64(Id_type_id);
-		Name = serialized->get_string(Name_type_id);
-		PlatformFilter = serialized->get_bitset<rivet::ddl::generated::xb52df7e7>(PlatformFilter_type_id, rivet::ddl::generated::xb52df7e7_values);
+		Id = serialized->get_uint64(Id_type_id, 0);
+		Name = serialized->get_string(Name_type_id, {});
+		PlatformFilter = serialized->get_bitset<rivet::ddl::generated::xb52df7e7>(PlatformFilter_type_id, rivet::ddl::generated::xb52df7e7_values, 7);
 		Tags = serialized->unwrap_into<rivet::ddl::generated::Cinematic2TrackTagsDef>(Tags_type_id);
-		Global = serialized->get_bool(Global_type_id);
-		PredefinedShakeAnimClip = serialized->get_string(PredefinedShakeAnimClip_type_id);
+		Global = serialized->get_bool(Global_type_id, false);
+		PredefinedShakeAnimClip = serialized->get_string(PredefinedShakeAnimClip_type_id, "required\\cinematics\\predefined_camera_shake.animclip");
 		DefaultValues = serialized->unwrap_into<rivet::ddl::generated::Cinematic2CameraShakeTrackDefaultValues>(DefaultValues_type_id);
 		Magnitude = serialized->unwrap_into<rivet::ddl::generated::Cinematic2CameraMagnitudeCurveTrackDef>(Magnitude_type_id);
-		FadeOutDuration = serialized->get_float(FadeOutDuration_type_id);
-		GameplayShakeConfig = serialized->get_string(GameplayShakeConfig_type_id);
-		OverrideViewportBlocking = serialized->get_bool(OverrideViewportBlocking_type_id);
-		UseGameplayShake = serialized->get_bool(UseGameplayShake_type_id); 
+		FadeOutDuration = serialized->get_float(FadeOutDuration_type_id, 0.000000);
+		GameplayShakeConfig = serialized->get_string(GameplayShakeConfig_type_id, {});
+		OverrideViewportBlocking = serialized->get_bool(OverrideViewportBlocking_type_id, false);
+		UseGameplayShake = serialized->get_bool(UseGameplayShake_type_id, false); 
 	}
 
 	[[nodiscard]] auto

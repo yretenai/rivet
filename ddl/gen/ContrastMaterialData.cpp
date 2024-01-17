@@ -10,7 +10,7 @@
 namespace rivet::ddl::generated {
 	ContrastMaterialData::ContrastMaterialData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Entries = serialized->unwrap_into_many<rivet::ddl::generated::ContrastMaterialEntry>(Entries_type_id);
-		FallbackMaterial = serialized->get_string(FallbackMaterial_type_id); 
+		FallbackMaterial = serialized->get_string(FallbackMaterial_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

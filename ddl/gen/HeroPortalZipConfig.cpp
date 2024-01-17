@@ -9,27 +9,27 @@
 
 namespace rivet::ddl::generated {
 	HeroPortalZipConfig::HeroPortalZipConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		MinTargetDistance = serialized->get_float(MinTargetDistance_type_id);
-		MaxTargetDistance = serialized->get_float(MaxTargetDistance_type_id);
-		MaxAngleStartAutoTarget = serialized->get_float(MaxAngleStartAutoTarget_type_id);
-		MinAngleEndAutoTarget = serialized->get_float(MinAngleEndAutoTarget_type_id);
-		CombatMaxAngleStartAutoTarget = serialized->get_float(CombatMaxAngleStartAutoTarget_type_id);
-		CombatMinAngleEndAutoTarget = serialized->get_float(CombatMinAngleEndAutoTarget_type_id);
-		StopMomentumTime = serialized->get_float(StopMomentumTime_type_id);
-		MaxMomentumDistance = serialized->get_float(MaxMomentumDistance_type_id);
-		PortalInitialScale = serialized->get_float(PortalInitialScale_type_id);
-		PortalPreReturnScale = serialized->get_float(PortalPreReturnScale_type_id);
-		PortalPostReturnScale = serialized->get_float(PortalPostReturnScale_type_id);
-		PortalFinalScale = serialized->get_float(PortalFinalScale_type_id);
-		PreWarpTime = serialized->get_float(PreWarpTime_type_id);
+		MinTargetDistance = serialized->get_float(MinTargetDistance_type_id, 10.000000);
+		MaxTargetDistance = serialized->get_float(MaxTargetDistance_type_id, 40.000000);
+		MaxAngleStartAutoTarget = serialized->get_float(MaxAngleStartAutoTarget_type_id, 7.000000);
+		MinAngleEndAutoTarget = serialized->get_float(MinAngleEndAutoTarget_type_id, 14.000000);
+		CombatMaxAngleStartAutoTarget = serialized->get_float(CombatMaxAngleStartAutoTarget_type_id, 7.000000);
+		CombatMinAngleEndAutoTarget = serialized->get_float(CombatMinAngleEndAutoTarget_type_id, 14.000000);
+		StopMomentumTime = serialized->get_float(StopMomentumTime_type_id, 0.600000);
+		MaxMomentumDistance = serialized->get_float(MaxMomentumDistance_type_id, 3.000000);
+		PortalInitialScale = serialized->get_float(PortalInitialScale_type_id, 0.010000);
+		PortalPreReturnScale = serialized->get_float(PortalPreReturnScale_type_id, 1.000000);
+		PortalPostReturnScale = serialized->get_float(PortalPostReturnScale_type_id, 1.000000);
+		PortalFinalScale = serialized->get_float(PortalFinalScale_type_id, 3.000000);
+		PreWarpTime = serialized->get_float(PreWarpTime_type_id, 0.200000);
 		LineData = serialized->unwrap_into<rivet::ddl::generated::HeroPortalZipLineData>(LineData_type_id);
-		PortalActor = serialized->get_string(PortalActor_type_id);
-		PortalVFXActor = serialized->get_string(PortalVFXActor_type_id);
-		CameraAimContext = serialized->get_string(CameraAimContext_type_id);
-		PortalRightAimContext = serialized->get_string(PortalRightAimContext_type_id);
-		PortalLeftAimContext = serialized->get_string(PortalLeftAimContext_type_id);
-		MaxPortalSpeed = serialized->get_float(MaxPortalSpeed_type_id);
-		PortalAccel = serialized->get_float(PortalAccel_type_id); 
+		PortalActor = serialized->get_string(PortalActor_type_id, {});
+		PortalVFXActor = serialized->get_string(PortalVFXActor_type_id, {});
+		CameraAimContext = serialized->get_string(CameraAimContext_type_id, {});
+		PortalRightAimContext = serialized->get_string(PortalRightAimContext_type_id, {});
+		PortalLeftAimContext = serialized->get_string(PortalLeftAimContext_type_id, {});
+		MaxPortalSpeed = serialized->get_float(MaxPortalSpeed_type_id, 40.000000);
+		PortalAccel = serialized->get_float(PortalAccel_type_id, 70.000000); 
 	}
 
 	[[nodiscard]] auto

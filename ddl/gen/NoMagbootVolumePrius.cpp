@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	NoMagbootVolumePrius::NoMagbootVolumePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EnabledComponentBasePrius(serialized) {
-		Mode = serialized->get_enum<rivet::ddl::generated::x89590188>(Mode_type_id, rivet::ddl::generated::x89590188_values); 
+		Mode = serialized->get_enum<rivet::ddl::generated::x89590188>(Mode_type_id, rivet::ddl::generated::x89590188_values, rivet::ddl::generated::x89590188::DisableStandAndLaunch); 
 	}
 
 	[[nodiscard]] auto

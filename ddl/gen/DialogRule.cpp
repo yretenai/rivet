@@ -11,18 +11,18 @@
 
 namespace rivet::ddl::generated {
 	DialogRule::DialogRule([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		TriggerEvent = serialized->get_enum<rivet::ddl::generated::x6be956dd>(TriggerEvent_type_id, rivet::ddl::generated::x6be956dd_values);
-		DialogTag = serialized->get_string(DialogTag_type_id);
-		Cooldown = serialized->get_float(Cooldown_type_id);
-		CooldownGroup = serialized->get_string(CooldownGroup_type_id);
-		GroupCooldownTime = serialized->get_float(GroupCooldownTime_type_id);
-		AnswerTagStart = serialized->get_string(AnswerTagStart_type_id);
-		AnswerTagEnd = serialized->get_string(AnswerTagEnd_type_id);
-		ObservedTriggerEvent = serialized->get_enum<rivet::ddl::generated::x6be956dd>(ObservedTriggerEvent_type_id, rivet::ddl::generated::x6be956dd_values);
-		TargetType = serialized->get_string(TargetType_type_id);
-		HeroInRegion = serialized->get_string(HeroInRegion_type_id);
-		DelayTime = serialized->get_float(DelayTime_type_id);
-		NoRepeatsUntilAllPlayed = serialized->get_bool(NoRepeatsUntilAllPlayed_type_id);
+		TriggerEvent = serialized->get_enum<rivet::ddl::generated::x6be956dd>(TriggerEvent_type_id, rivet::ddl::generated::x6be956dd_values, rivet::ddl::generated::x6be956dd::None);
+		DialogTag = serialized->get_string(DialogTag_type_id, {});
+		Cooldown = serialized->get_float(Cooldown_type_id, 30.000000);
+		CooldownGroup = serialized->get_string(CooldownGroup_type_id, {});
+		GroupCooldownTime = serialized->get_float(GroupCooldownTime_type_id, 5.000000);
+		AnswerTagStart = serialized->get_string(AnswerTagStart_type_id, {});
+		AnswerTagEnd = serialized->get_string(AnswerTagEnd_type_id, {});
+		ObservedTriggerEvent = serialized->get_enum<rivet::ddl::generated::x6be956dd>(ObservedTriggerEvent_type_id, rivet::ddl::generated::x6be956dd_values, rivet::ddl::generated::x6be956dd::None);
+		TargetType = serialized->get_string(TargetType_type_id, {});
+		HeroInRegion = serialized->get_string(HeroInRegion_type_id, {});
+		DelayTime = serialized->get_float(DelayTime_type_id, 0.000000);
+		NoRepeatsUntilAllPlayed = serialized->get_bool(NoRepeatsUntilAllPlayed_type_id, false);
 		OtherCriteria = serialized->unwrap_into_many<rivet::ddl::generated::DEVOFlexibleCriterion>(OtherCriteria_type_id);
 		Lines = serialized->unwrap_into<rivet::ddl::generated::Line>(Lines_type_id); 
 	}

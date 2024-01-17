@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	SyncedAnimImpactEvent::SyncedAnimImpactEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Participant = serialized->get_enum<rivet::ddl::generated::x19aa8603>(Participant_type_id, rivet::ddl::generated::x19aa8603_values);
+		Participant = serialized->get_enum<rivet::ddl::generated::x19aa8603>(Participant_type_id, rivet::ddl::generated::x19aa8603_values, rivet::ddl::generated::x19aa8603::Guest1);
 		ImpactData = serialized->unwrap_into<rivet::ddl::generated::SyncedAnimImpactDataBase>(ImpactData_type_id); 
 	}
 

@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	VehicleFXPrius::VehicleFXPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		VehicleId = serialized->get_uint32(VehicleId_type_id);
-		HeadLightsRenderOverride = serialized->get_string(HeadLightsRenderOverride_type_id);
-		SoundComponentDestroyTimer = serialized->get_float(SoundComponentDestroyTimer_type_id);
-		MaxHoverSpeed = serialized->get_float(MaxHoverSpeed_type_id); 
+		VehicleId = serialized->get_uint32(VehicleId_type_id, 0);
+		HeadLightsRenderOverride = serialized->get_string(HeadLightsRenderOverride_type_id, "Lights_Head_ON");
+		SoundComponentDestroyTimer = serialized->get_float(SoundComponentDestroyTimer_type_id, 0.500000);
+		MaxHoverSpeed = serialized->get_float(MaxHoverSpeed_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

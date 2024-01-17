@@ -7,22 +7,22 @@
 
 namespace rivet::ddl::generated {
 	ProtonSeekerFiringPattern::ProtonSeekerFiringPattern([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Weight = serialized->get_float(Weight_type_id);
-		AttackDelay = serialized->get_float(AttackDelay_type_id);
-		ShotDelay = serialized->get_float(ShotDelay_type_id);
-		AttackCount = serialized->get_uint8(AttackCount_type_id);
-		ShotCount = serialized->get_uint8(ShotCount_type_id);
-		ExtraShotCount = serialized->get_uint8(ExtraShotCount_type_id);
-		ExplosiveShotCount = serialized->get_uint8(ExplosiveShotCount_type_id);
-		Scatter = serialized->get_bool(Scatter_type_id);
-		Concurrent = serialized->get_bool(Concurrent_type_id);
-		TimeToCenterOfCurve = serialized->get_float(TimeToCenterOfCurve_type_id);
-		ShotDuration = serialized->get_float(ShotDuration_type_id);
-		ExplosiveShotFuseMin = serialized->get_float(ExplosiveShotFuseMin_type_id);
-		ExplosiveShotFuseMax = serialized->get_float(ExplosiveShotFuseMax_type_id);
-		CurveActor = serialized->get_uint64(CurveActor_type_id);
-		AttachCurveToTarget = serialized->get_bool(AttachCurveToTarget_type_id);
-		AttachCurveTargetVol = serialized->get_uint64(AttachCurveTargetVol_type_id); 
+		Weight = serialized->get_float(Weight_type_id, 1.000000);
+		AttackDelay = serialized->get_float(AttackDelay_type_id, 1.000000);
+		ShotDelay = serialized->get_float(ShotDelay_type_id, 0.200000);
+		AttackCount = serialized->get_uint8(AttackCount_type_id, 1);
+		ShotCount = serialized->get_uint8(ShotCount_type_id, 1);
+		ExtraShotCount = serialized->get_uint8(ExtraShotCount_type_id, 0);
+		ExplosiveShotCount = serialized->get_uint8(ExplosiveShotCount_type_id, 0);
+		Scatter = serialized->get_bool(Scatter_type_id, false);
+		Concurrent = serialized->get_bool(Concurrent_type_id, false);
+		TimeToCenterOfCurve = serialized->get_float(TimeToCenterOfCurve_type_id, -1.000000);
+		ShotDuration = serialized->get_float(ShotDuration_type_id, -1.000000);
+		ExplosiveShotFuseMin = serialized->get_float(ExplosiveShotFuseMin_type_id, 2.000000);
+		ExplosiveShotFuseMax = serialized->get_float(ExplosiveShotFuseMax_type_id, 5.000000);
+		CurveActor = serialized->get_uint64(CurveActor_type_id, 0);
+		AttachCurveToTarget = serialized->get_bool(AttachCurveToTarget_type_id, false);
+		AttachCurveTargetVol = serialized->get_uint64(AttachCurveTargetVol_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

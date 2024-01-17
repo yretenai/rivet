@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	DevstatsSegmentMappingEvent::DevstatsSegmentMappingEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		EventId = serialized->get_string(EventId_type_id);
-		SegmentId = serialized->get_string(SegmentId_type_id);
-		SegmentType = serialized->get_enum<rivet::ddl::generated::xc6f5c0d7>(SegmentType_type_id, rivet::ddl::generated::xc6f5c0d7_values);
-		SegmentTime = serialized->get_float(SegmentTime_type_id); 
+		EventId = serialized->get_string(EventId_type_id, {});
+		SegmentId = serialized->get_string(SegmentId_type_id, {});
+		SegmentType = serialized->get_enum<rivet::ddl::generated::xc6f5c0d7>(SegmentType_type_id, rivet::ddl::generated::xc6f5c0d7_values, rivet::ddl::generated::xc6f5c0d7::Playthrough);
+		SegmentTime = serialized->get_float(SegmentTime_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

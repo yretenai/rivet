@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	OnMissionStateChangeEventActionPrius::OnMissionStateChangeEventActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		ChangeOption = serialized->get_enum<rivet::ddl::generated::x4f4d3cca>(ChangeOption_type_id, rivet::ddl::generated::x4f4d3cca_values); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Mission_System);
+		ChangeOption = serialized->get_enum<rivet::ddl::generated::x4f4d3cca>(ChangeOption_type_id, rivet::ddl::generated::x4f4d3cca_values, rivet::ddl::generated::x4f4d3cca::TriggerOnLoadAndEvent); 
 	}
 
 	[[nodiscard]] auto

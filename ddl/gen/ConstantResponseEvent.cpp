@@ -7,18 +7,18 @@
 
 namespace rivet::ddl::generated {
 	ConstantResponseEvent::ConstantResponseEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ResponseEvent(serialized) {
-		ConstantName = serialized->get_string(ConstantName_type_id);
-		MaterialMappingName = serialized->get_string(MaterialMappingName_type_id);
-		XStartValue = serialized->get_float(XStartValue_type_id);
-		YStartValue = serialized->get_float(YStartValue_type_id);
-		ZStartValue = serialized->get_float(ZStartValue_type_id);
-		WStartValue = serialized->get_float(WStartValue_type_id);
-		XEndValue = serialized->get_float(XEndValue_type_id);
-		YEndValue = serialized->get_float(YEndValue_type_id);
-		ZEndValue = serialized->get_float(ZEndValue_type_id);
-		WEndValue = serialized->get_float(WEndValue_type_id);
-		TransitionTime = serialized->get_float(TransitionTime_type_id);
-		Reset = serialized->get_bool(Reset_type_id); 
+		ConstantName = serialized->get_string(ConstantName_type_id, {});
+		MaterialMappingName = serialized->get_string(MaterialMappingName_type_id, {});
+		XStartValue = serialized->get_float(XStartValue_type_id, 0.000000);
+		YStartValue = serialized->get_float(YStartValue_type_id, 0.000000);
+		ZStartValue = serialized->get_float(ZStartValue_type_id, 0.000000);
+		WStartValue = serialized->get_float(WStartValue_type_id, 0.000000);
+		XEndValue = serialized->get_float(XEndValue_type_id, 0.000000);
+		YEndValue = serialized->get_float(YEndValue_type_id, 0.000000);
+		ZEndValue = serialized->get_float(ZEndValue_type_id, 0.000000);
+		WEndValue = serialized->get_float(WEndValue_type_id, 0.000000);
+		TransitionTime = serialized->get_float(TransitionTime_type_id, 0.000000);
+		Reset = serialized->get_bool(Reset_type_id, false); 
 	}
 
 	[[nodiscard]] auto

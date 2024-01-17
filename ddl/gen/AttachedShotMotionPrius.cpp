@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	AttachedShotMotionPrius::AttachedShotMotionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ShotMotionBasePrius(serialized) {
-		AttachmentType = serialized->get_enum<rivet::ddl::generated::x404ff3ae>(AttachmentType_type_id, rivet::ddl::generated::x404ff3ae_values);
-		AttachToJoint = serialized->get_string(AttachToJoint_type_id); 
+		AttachmentType = serialized->get_enum<rivet::ddl::generated::x404ff3ae>(AttachmentType_type_id, rivet::ddl::generated::x404ff3ae_values, rivet::ddl::generated::x404ff3ae::Collision);
+		AttachToJoint = serialized->get_string(AttachToJoint_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

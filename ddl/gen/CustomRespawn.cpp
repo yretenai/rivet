@@ -9,10 +9,10 @@
 
 namespace rivet::ddl::generated {
 	CustomRespawn::CustomRespawn([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		FrequencyWeight = serialized->get_float(FrequencyWeight_type_id);
-		AnimDriverName = serialized->get_string(AnimDriverName_type_id);
+		FrequencyWeight = serialized->get_float(FrequencyWeight_type_id, 1.000000);
+		AnimDriverName = serialized->get_string(AnimDriverName_type_id, {});
 		PropAssets = serialized->unwrap_into_many<rivet::ddl::generated::PropAssetElement>(PropAssets_type_id);
-		UseCameraAnimation = serialized->get_bool(UseCameraAnimation_type_id); 
+		UseCameraAnimation = serialized->get_bool(UseCameraAnimation_type_id, true); 
 	}
 
 	[[nodiscard]] auto

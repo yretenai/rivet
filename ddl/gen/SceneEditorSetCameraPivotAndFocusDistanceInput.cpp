@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	SceneEditorSetCameraPivotAndFocusDistanceInput::SceneEditorSetCameraPivotAndFocusDistanceInput([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		FocusDistance = serialized->get_float(FocusDistance_type_id);
+		FocusDistance = serialized->get_float(FocusDistance_type_id, 0.000000);
 		Pivot = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Pivot_type_id); 
 	}
 

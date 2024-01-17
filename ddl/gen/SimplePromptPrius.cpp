@@ -9,21 +9,21 @@
 
 namespace rivet::ddl::generated {
 	SimplePromptPrius::SimplePromptPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		TriggerCount = serialized->get_uint32(TriggerCount_type_id);
-		RetriggerDelay = serialized->get_float(RetriggerDelay_type_id);
-		PromptText = serialized->get_string(PromptText_type_id);
-		Tag = serialized->get_string(Tag_type_id);
-		UseRange = serialized->get_float(UseRange_type_id);
-		VolumeRange = serialized->get_bool(VolumeRange_type_id);
-		AltPromptVolume = serialized->get_uint64(AltPromptVolume_type_id);
+		TriggerCount = serialized->get_uint32(TriggerCount_type_id, 0);
+		RetriggerDelay = serialized->get_float(RetriggerDelay_type_id, 1.000000);
+		PromptText = serialized->get_string(PromptText_type_id, "Use");
+		Tag = serialized->get_string(Tag_type_id, "INVALID");
+		UseRange = serialized->get_float(UseRange_type_id, 3.000000);
+		VolumeRange = serialized->get_bool(VolumeRange_type_id, true);
+		AltPromptVolume = serialized->get_uint64(AltPromptVolume_type_id, 0);
 		PromptOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(PromptOffset_type_id);
-		PromptAngleMin = serialized->get_float(PromptAngleMin_type_id);
-		PromptAngleMax = serialized->get_float(PromptAngleMax_type_id);
-		UsePOI = serialized->get_bool(UsePOI_type_id);
-		POISubtype = serialized->get_enum<rivet::ddl::generated::x275d9b04>(POISubtype_type_id, rivet::ddl::generated::x275d9b04_values);
-		PreviewRange = serialized->get_float(PreviewRange_type_id);
-		StartActive = serialized->get_bool(StartActive_type_id);
-		Priority = serialized->get_float(Priority_type_id); 
+		PromptAngleMin = serialized->get_float(PromptAngleMin_type_id, -180.000000);
+		PromptAngleMax = serialized->get_float(PromptAngleMax_type_id, 180.000000);
+		UsePOI = serialized->get_bool(UsePOI_type_id, true);
+		POISubtype = serialized->get_enum<rivet::ddl::generated::x275d9b04>(POISubtype_type_id, rivet::ddl::generated::x275d9b04_values, rivet::ddl::generated::x275d9b04::Pickup);
+		PreviewRange = serialized->get_float(PreviewRange_type_id, 0.000000);
+		StartActive = serialized->get_bool(StartActive_type_id, true);
+		Priority = serialized->get_float(Priority_type_id, 2.000000); 
 	}
 
 	[[nodiscard]] auto

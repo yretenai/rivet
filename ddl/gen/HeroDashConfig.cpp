@@ -9,14 +9,14 @@
 
 namespace rivet::ddl::generated {
 	HeroDashConfig::HeroDashConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		GroundDashLockoutTime = serialized->get_float(GroundDashLockoutTime_type_id);
-		GroundDashImmunityWindow = serialized->get_float(GroundDashImmunityWindow_type_id);
-		AirDashMaxSpeed = serialized->get_float(AirDashMaxSpeed_type_id);
-		AirDashAcceleration = serialized->get_float(AirDashAcceleration_type_id);
-		Distance = serialized->get_float(Distance_type_id);
-		TurnSpeedGain = serialized->get_float(TurnSpeedGain_type_id);
-		TurnSpeedDamp = serialized->get_float(TurnSpeedDamp_type_id);
-		TurnSpeedMax = serialized->get_float(TurnSpeedMax_type_id);
+		GroundDashLockoutTime = serialized->get_float(GroundDashLockoutTime_type_id, 0.250000);
+		GroundDashImmunityWindow = serialized->get_float(GroundDashImmunityWindow_type_id, 0.250000);
+		AirDashMaxSpeed = serialized->get_float(AirDashMaxSpeed_type_id, 12.000000);
+		AirDashAcceleration = serialized->get_float(AirDashAcceleration_type_id, 100.000000);
+		Distance = serialized->get_float(Distance_type_id, 7.000000);
+		TurnSpeedGain = serialized->get_float(TurnSpeedGain_type_id, -15.000000);
+		TurnSpeedDamp = serialized->get_float(TurnSpeedDamp_type_id, -8.000000);
+		TurnSpeedMax = serialized->get_float(TurnSpeedMax_type_id, 180.000000);
 		PhaseDash = serialized->unwrap_into<rivet::ddl::generated::HeroPhaseDashData>(PhaseDash_type_id); 
 	}
 

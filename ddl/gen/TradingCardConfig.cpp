@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	TradingCardConfig::TradingCardConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		DuplicateTradeCount = serialized->get_uint32(DuplicateTradeCount_type_id);
+		DuplicateTradeCount = serialized->get_uint32(DuplicateTradeCount_type_id, 5);
 		CardList = serialized->unwrap_into_many<rivet::ddl::generated::CardDef>(CardList_type_id); 
 	}
 

@@ -7,14 +7,14 @@
 
 namespace rivet::ddl::generated {
 	VanityOverrideEvent::VanityOverrideEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		HelmetModel = serialized->get_string(HelmetModel_type_id);
-		HeadModel = serialized->get_string(HeadModel_type_id);
-		TorsoModel = serialized->get_string(TorsoModel_type_id);
-		LeftGloveModel = serialized->get_string(LeftGloveModel_type_id);
-		RightGloveModel = serialized->get_string(RightGloveModel_type_id);
-		LegsModel = serialized->get_string(LegsModel_type_id);
-		BootsModel = serialized->get_string(BootsModel_type_id);
-		GloveOverrideReset = serialized->get_bool(GloveOverrideReset_type_id); 
+		HelmetModel = serialized->get_string(HelmetModel_type_id, {});
+		HeadModel = serialized->get_string(HeadModel_type_id, {});
+		TorsoModel = serialized->get_string(TorsoModel_type_id, {});
+		LeftGloveModel = serialized->get_string(LeftGloveModel_type_id, {});
+		RightGloveModel = serialized->get_string(RightGloveModel_type_id, {});
+		LegsModel = serialized->get_string(LegsModel_type_id, {});
+		BootsModel = serialized->get_string(BootsModel_type_id, {});
+		GloveOverrideReset = serialized->get_bool(GloveOverrideReset_type_id, false); 
 	}
 
 	[[nodiscard]] auto

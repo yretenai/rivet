@@ -9,9 +9,9 @@
 
 namespace rivet::ddl::generated {
 	StateDependentCameraConfigData::StateDependentCameraConfigData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		StateString = serialized->get_string(StateString_type_id);
+		StateString = serialized->get_string(StateString_type_id, "");
 		AimContext = serialized->unwrap_into<rivet::ddl::generated::CameraAimContextConfig>(AimContext_type_id);
-		AllowCameraInput = serialized->get_bool(AllowCameraInput_type_id); 
+		AllowCameraInput = serialized->get_bool(AllowCameraInput_type_id, true); 
 	}
 
 	[[nodiscard]] auto

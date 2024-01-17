@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	MoverBodyContactEvent::MoverBodyContactEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		HitMaterial = serialized->get_enum<rivet::ddl::generated::x10b3c4cf>(HitMaterial_type_id, rivet::ddl::generated::x10b3c4cf_values); 
+		HitMaterial = serialized->get_enum<rivet::ddl::generated::x10b3c4cf>(HitMaterial_type_id, rivet::ddl::generated::x10b3c4cf_values, rivet::ddl::generated::x10b3c4cf::None); 
 	}
 
 	[[nodiscard]] auto

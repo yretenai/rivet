@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	TurretDualPivot::TurretDualPivot([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): TurretPivotBase(serialized) {
-		YawJoint = serialized->get_string(YawJoint_type_id);
-		PitchJoint = serialized->get_string(PitchJoint_type_id); 
+		YawJoint = serialized->get_string(YawJoint_type_id, {});
+		PitchJoint = serialized->get_string(PitchJoint_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

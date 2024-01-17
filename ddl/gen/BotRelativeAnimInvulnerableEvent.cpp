@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	BotRelativeAnimInvulnerableEvent::BotRelativeAnimInvulnerableEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		SetInvulnerable = serialized->get_bool(SetInvulnerable_type_id); 
+		SetInvulnerable = serialized->get_bool(SetInvulnerable_type_id, true); 
 	}
 
 	[[nodiscard]] auto

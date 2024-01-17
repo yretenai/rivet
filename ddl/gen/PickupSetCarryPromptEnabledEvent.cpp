@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	PickupSetCarryPromptEnabledEvent::PickupSetCarryPromptEnabledEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		SetEnabled = serialized->get_bool(SetEnabled_type_id); 
+		SetEnabled = serialized->get_bool(SetEnabled_type_id, true); 
 	}
 
 	[[nodiscard]] auto

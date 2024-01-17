@@ -10,8 +10,8 @@
 
 namespace rivet::ddl::generated {
 	DamageModifierInvulnerablePrius::DamageModifierInvulnerablePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): DamageModifierIncomingPrius(serialized) {
-		Lifetime = serialized->get_float(Lifetime_type_id);
-		AllowReacts = serialized->get_bool(AllowReacts_type_id); 
+		Lifetime = serialized->get_float(Lifetime_type_id, -1.000000);
+		AllowReacts = serialized->get_bool(AllowReacts_type_id, false); 
 	}
 
 	[[nodiscard]] auto

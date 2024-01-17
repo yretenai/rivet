@@ -12,8 +12,8 @@
 
 namespace rivet::ddl::generated {
 	SpawnShotTargetingMode::SpawnShotTargetingMode([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		VectorMode = serialized->get_enum<rivet::ddl::generated::xfe692fc4>(VectorMode_type_id, rivet::ddl::generated::xfe692fc4_values);
-		VectorSource = serialized->get_string(VectorSource_type_id); 
+		VectorMode = serialized->get_enum<rivet::ddl::generated::xfe692fc4>(VectorMode_type_id, rivet::ddl::generated::xfe692fc4_values, rivet::ddl::generated::xfe692fc4::Hit_Normal);
+		VectorSource = serialized->get_string(VectorSource_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

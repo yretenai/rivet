@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	GroundResponseSlipperyPrius::GroundResponseSlipperyPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): GroundResponseSpeedModifierPrius(serialized) {
-		MomentumWeightWalk = serialized->get_float(MomentumWeightWalk_type_id);
-		MomentumWeightRun = serialized->get_float(MomentumWeightRun_type_id); 
+		MomentumWeightWalk = serialized->get_float(MomentumWeightWalk_type_id, 0.000000);
+		MomentumWeightRun = serialized->get_float(MomentumWeightRun_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

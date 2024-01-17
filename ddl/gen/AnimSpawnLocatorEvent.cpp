@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	AnimSpawnLocatorEvent::AnimSpawnLocatorEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): AnimSpawnEvent(serialized) {
-		Locator = serialized->get_string(Locator_type_id); 
+		Locator = serialized->get_string(Locator_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

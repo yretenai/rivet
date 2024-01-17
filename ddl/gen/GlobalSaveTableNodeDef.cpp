@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	GlobalSaveTableNodeDef::GlobalSaveTableNodeDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): PrereqNodeBaseDef(serialized) {
-		CheckType = serialized->get_enum<rivet::ddl::generated::x70316bbe>(CheckType_type_id, rivet::ddl::generated::x70316bbe_values); 
+		CheckType = serialized->get_enum<rivet::ddl::generated::x70316bbe>(CheckType_type_id, rivet::ddl::generated::x70316bbe_values, rivet::ddl::generated::x70316bbe::KeyExists); 
 	}
 
 	[[nodiscard]] auto

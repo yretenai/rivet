@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	StackableCrateLandEvent::StackableCrateLandEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		FinalFallSpeed = serialized->get_float(FinalFallSpeed_type_id); 
+		FinalFallSpeed = serialized->get_float(FinalFallSpeed_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

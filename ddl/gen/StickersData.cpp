@@ -9,12 +9,12 @@
 
 namespace rivet::ddl::generated {
 	StickersData::StickersData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Name = serialized->get_string(Name_type_id);
-		MissionLock = serialized->get_string(MissionLock_type_id);
-		ObjectiveLock = serialized->get_string(ObjectiveLock_type_id);
-		SuitLock = serialized->get_string(SuitLock_type_id);
-		UnlockedByProgression = serialized->get_bool(UnlockedByProgression_type_id);
-		UnlockedByEntitlement = serialized->get_bool(UnlockedByEntitlement_type_id);
+		Name = serialized->get_string(Name_type_id, {});
+		MissionLock = serialized->get_string(MissionLock_type_id, {});
+		ObjectiveLock = serialized->get_string(ObjectiveLock_type_id, {});
+		SuitLock = serialized->get_string(SuitLock_type_id, {});
+		UnlockedByProgression = serialized->get_bool(UnlockedByProgression_type_id, false);
+		UnlockedByEntitlement = serialized->get_bool(UnlockedByEntitlement_type_id, false);
 		StickerRef = serialized->unwrap_into<rivet::ddl::generated::AssetReferenceDef>(StickerRef_type_id);
 		ThumbnailRef = serialized->unwrap_into<rivet::ddl::generated::AssetReferenceDef>(ThumbnailRef_type_id); 
 	}

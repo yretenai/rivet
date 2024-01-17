@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	PlayGoSettings::PlayGoSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		LocalizedAudioChunkIndexBase = serialized->get_int32(LocalizedAudioChunkIndexBase_type_id);
-		SKUChunkIndexBase = serialized->get_int32(SKUChunkIndexBase_type_id); 
+		LocalizedAudioChunkIndexBase = serialized->get_int32(LocalizedAudioChunkIndexBase_type_id, 0);
+		SKUChunkIndexBase = serialized->get_int32(SKUChunkIndexBase_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

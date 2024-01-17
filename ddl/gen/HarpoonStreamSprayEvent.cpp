@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	HarpoonStreamSprayEvent::HarpoonStreamSprayEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		ShortSpray = serialized->get_bool(ShortSpray_type_id);
-		DistanceFail = serialized->get_bool(DistanceFail_type_id); 
+		ShortSpray = serialized->get_bool(ShortSpray_type_id, false);
+		DistanceFail = serialized->get_bool(DistanceFail_type_id, false); 
 	}
 
 	[[nodiscard]] auto

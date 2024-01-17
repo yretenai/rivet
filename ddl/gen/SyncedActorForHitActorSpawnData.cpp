@@ -9,14 +9,14 @@
 
 namespace rivet::ddl::generated {
 	SyncedActorForHitActorSpawnData::SyncedActorForHitActorSpawnData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ActorSpawnData(serialized) {
-		ShotOwner = serialized->get_uint32(ShotOwner_type_id);
-		HitActor = serialized->get_uint32(HitActor_type_id);
-		AssetId = serialized->get_uint64(AssetId_type_id);
+		ShotOwner = serialized->get_uint32(ShotOwner_type_id, 0);
+		HitActor = serialized->get_uint32(HitActor_type_id, 0);
+		AssetId = serialized->get_uint64(AssetId_type_id, 0);
 		Pos = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Pos_type_id);
 		Facing = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Facing_type_id);
 		Up = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Up_type_id);
-		MatchCreatorZone = serialized->get_bool(MatchCreatorZone_type_id);
-		MatchCreatorAllegiance = serialized->get_bool(MatchCreatorAllegiance_type_id); 
+		MatchCreatorZone = serialized->get_bool(MatchCreatorZone_type_id, true);
+		MatchCreatorAllegiance = serialized->get_bool(MatchCreatorAllegiance_type_id, true); 
 	}
 
 	[[nodiscard]] auto

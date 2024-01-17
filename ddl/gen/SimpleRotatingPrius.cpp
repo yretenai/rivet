@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	SimpleRotatingPrius::SimpleRotatingPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		RotationAxis = serialized->get_enum<rivet::ddl::generated::xf93e2b39>(RotationAxis_type_id, rivet::ddl::generated::xf93e2b39_values);
-		RotationSpeed = serialized->get_float(RotationSpeed_type_id); 
+		RotationAxis = serialized->get_enum<rivet::ddl::generated::xf93e2b39>(RotationAxis_type_id, rivet::ddl::generated::xf93e2b39_values, rivet::ddl::generated::xf93e2b39::ZAxisLocal);
+		RotationSpeed = serialized->get_float(RotationSpeed_type_id, 360.000000); 
 	}
 
 	[[nodiscard]] auto

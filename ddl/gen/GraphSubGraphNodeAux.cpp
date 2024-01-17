@@ -10,10 +10,10 @@
 
 namespace rivet::ddl::generated {
 	GraphSubGraphNodeAux::GraphSubGraphNodeAux([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		NameCache = serialized->get_string(NameCache_type_id);
+		NameCache = serialized->get_string(NameCache_type_id, {});
 		Notes = serialized->unwrap_into<rivet::ddl::generated::GraphNodeNotesDef>(Notes_type_id);
-		GraphId = serialized->get_uint64(GraphId_type_id);
-		Asset = serialized->get_string(Asset_type_id);
+		GraphId = serialized->get_uint64(GraphId_type_id, 0);
+		Asset = serialized->get_string(Asset_type_id, {});
 		IOCache = serialized->unwrap_into_many<rivet::ddl::generated::GraphIOMeta>(IOCache_type_id); 
 	}
 

@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	FirepointCluePrius::FirepointCluePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		CoverProvided = serialized->get_bitset<rivet::ddl::generated::xec8eef95>(CoverProvided_type_id, rivet::ddl::generated::xec8eef95_values);
-		BotUsage = serialized->get_enum<rivet::ddl::generated::BotUsage>(BotUsage_type_id, rivet::ddl::generated::BotUsage_values);
-		SearchAreas = serialized->get_uint64(SearchAreas_type_id); 
+		CoverProvided = serialized->get_bitset<rivet::ddl::generated::xec8eef95>(CoverProvided_type_id, rivet::ddl::generated::xec8eef95_values, 32);
+		BotUsage = serialized->get_enum<rivet::ddl::generated::BotUsage>(BotUsage_type_id, rivet::ddl::generated::BotUsage_values, rivet::ddl::generated::BotUsage::EnemyGround);
+		SearchAreas = serialized->get_uint64(SearchAreas_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

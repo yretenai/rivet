@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	GraphIOMeta::GraphIOMeta([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Type = serialized->get_string(Type_type_id);
-		SubType = serialized->get_string(SubType_type_id);
-		Dir = serialized->get_enum<rivet::ddl::generated::x6e9cd50>(Dir_type_id, rivet::ddl::generated::x6e9cd50_values);
-		Id = serialized->get_uint64(Id_type_id);
-		Name = serialized->get_string(Name_type_id);
-		Tooltip = serialized->get_string(Tooltip_type_id); 
+		Type = serialized->get_string(Type_type_id, {});
+		SubType = serialized->get_string(SubType_type_id, {});
+		Dir = serialized->get_enum<rivet::ddl::generated::x6e9cd50>(Dir_type_id, rivet::ddl::generated::x6e9cd50_values, rivet::ddl::generated::x6e9cd50::Invalid);
+		Id = serialized->get_uint64(Id_type_id, 0);
+		Name = serialized->get_string(Name_type_id, {});
+		Tooltip = serialized->get_string(Tooltip_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

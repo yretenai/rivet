@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	GainGoldBoltEvent::GainGoldBoltEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		EventId = serialized->get_string(EventId_type_id);
-		BoltName = serialized->get_string(BoltName_type_id);
-		TotalBolts = serialized->get_int32(TotalBolts_type_id); 
+		EventId = serialized->get_string(EventId_type_id, {});
+		BoltName = serialized->get_string(BoltName_type_id, {});
+		TotalBolts = serialized->get_int32(TotalBolts_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

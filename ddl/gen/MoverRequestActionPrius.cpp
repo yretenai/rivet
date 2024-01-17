@@ -7,15 +7,15 @@
 
 namespace rivet::ddl::generated {
 	MoverRequestActionPrius::MoverRequestActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		BodyBottomHeight = serialized->get_float(BodyBottomHeight_type_id);
-		BodyTopHeight = serialized->get_float(BodyTopHeight_type_id);
-		UseExistingBodySize = serialized->get_bool(UseExistingBodySize_type_id);
-		PlanarDeflection = serialized->get_bool(PlanarDeflection_type_id);
-		RequestIsOffset = serialized->get_bool(RequestIsOffset_type_id);
-		DisableGravity = serialized->get_bool(DisableGravity_type_id);
-		DisableGravityPersistent = serialized->get_bool(DisableGravityPersistent_type_id);
-		DisableGround = serialized->get_bool(DisableGround_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Gameplay);
+		BodyBottomHeight = serialized->get_float(BodyBottomHeight_type_id, 0.000000);
+		BodyTopHeight = serialized->get_float(BodyTopHeight_type_id, 0.000000);
+		UseExistingBodySize = serialized->get_bool(UseExistingBodySize_type_id, true);
+		PlanarDeflection = serialized->get_bool(PlanarDeflection_type_id, false);
+		RequestIsOffset = serialized->get_bool(RequestIsOffset_type_id, false);
+		DisableGravity = serialized->get_bool(DisableGravity_type_id, true);
+		DisableGravityPersistent = serialized->get_bool(DisableGravityPersistent_type_id, false);
+		DisableGround = serialized->get_bool(DisableGround_type_id, true); 
 	}
 
 	[[nodiscard]] auto

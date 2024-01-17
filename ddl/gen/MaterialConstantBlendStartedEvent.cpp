@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	MaterialConstantBlendStartedEvent::MaterialConstantBlendStartedEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		TargetValue = serialized->get_float(TargetValue_type_id); 
+		TargetValue = serialized->get_float(TargetValue_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

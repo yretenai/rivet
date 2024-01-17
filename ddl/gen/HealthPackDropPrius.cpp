@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	HealthPackDropPrius::HealthPackDropPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		HealthDropConfig = serialized->get_string(HealthDropConfig_type_id);
-		DoGroundCheck = serialized->get_bool(DoGroundCheck_type_id);
-		GroundCheckDistance = serialized->get_float(GroundCheckDistance_type_id); 
+		HealthDropConfig = serialized->get_string(HealthDropConfig_type_id, {});
+		DoGroundCheck = serialized->get_bool(DoGroundCheck_type_id, false);
+		GroundCheckDistance = serialized->get_float(GroundCheckDistance_type_id, 30.000000); 
 	}
 
 	[[nodiscard]] auto

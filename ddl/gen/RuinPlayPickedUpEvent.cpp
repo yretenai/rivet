@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	RuinPlayPickedUpEvent::RuinPlayPickedUpEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		RuinId = serialized->get_enum<rivet::ddl::generated::xeccc3486>(RuinId_type_id, rivet::ddl::generated::xeccc3486_values); 
+		RuinId = serialized->get_enum<rivet::ddl::generated::xeccc3486>(RuinId_type_id, rivet::ddl::generated::xeccc3486_values, rivet::ddl::generated::xeccc3486::None); 
 	}
 
 	[[nodiscard]] auto

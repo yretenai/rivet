@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	OverlayTextActionPrius::OverlayTextActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		UseTempText = serialized->get_bool(UseTempText_type_id);
-		LocTag = serialized->get_string(LocTag_type_id);
-		Duration = serialized->get_float(Duration_type_id);
-		TextType = serialized->get_enum<rivet::ddl::generated::xdd0cb528>(TextType_type_id, rivet::ddl::generated::xdd0cb528_values); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::UI);
+		UseTempText = serialized->get_bool(UseTempText_type_id, false);
+		LocTag = serialized->get_string(LocTag_type_id, "INVALID");
+		Duration = serialized->get_float(Duration_type_id, 6.000000);
+		TextType = serialized->get_enum<rivet::ddl::generated::xdd0cb528>(TextType_type_id, rivet::ddl::generated::xdd0cb528_values, rivet::ddl::generated::xdd0cb528::Location); 
 	}
 
 	[[nodiscard]] auto

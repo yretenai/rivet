@@ -10,11 +10,11 @@
 
 namespace rivet::ddl::generated {
 	ChemicalRenderOverride::ChemicalRenderOverride([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Name = serialized->get_string(Name_type_id);
-		Type = serialized->get_enum<rivet::ddl::generated::x18f892a3>(Type_type_id, rivet::ddl::generated::x18f892a3_values);
+		Name = serialized->get_string(Name_type_id, {});
+		Type = serialized->get_enum<rivet::ddl::generated::x18f892a3>(Type_type_id, rivet::ddl::generated::x18f892a3_values, rivet::ddl::generated::x18f892a3::Constant);
 		Constants = serialized->unwrap_into<rivet::ddl::generated::DDLVector4>(Constants_type_id);
 		Color = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Color_type_id);
-		Texture = serialized->get_string(Texture_type_id); 
+		Texture = serialized->get_string(Texture_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

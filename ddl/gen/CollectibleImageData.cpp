@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	CollectibleImageData::CollectibleImageData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Type = serialized->get_enum<rivet::ddl::generated::x2a6b461b>(Type_type_id, rivet::ddl::generated::x2a6b461b_values);
-		Texture = serialized->get_string(Texture_type_id);
-		Label = serialized->get_string(Label_type_id); 
+		Type = serialized->get_enum<rivet::ddl::generated::x2a6b461b>(Type_type_id, rivet::ddl::generated::x2a6b461b_values, rivet::ddl::generated::x2a6b461b::GoldBolt);
+		Texture = serialized->get_string(Texture_type_id, "");
+		Label = serialized->get_string(Label_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

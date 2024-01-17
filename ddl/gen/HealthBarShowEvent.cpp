@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	HealthBarShowEvent::HealthBarShowEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		IsFriendly = serialized->get_bool(IsFriendly_type_id); 
+		IsFriendly = serialized->get_bool(IsFriendly_type_id, false); 
 	}
 
 	[[nodiscard]] auto

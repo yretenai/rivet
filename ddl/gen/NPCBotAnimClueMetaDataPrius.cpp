@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	NPCBotAnimClueMetaDataPrius::NPCBotAnimClueMetaDataPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		PrimaryClue = serialized->get_uint64(PrimaryClue_type_id);
+		PrimaryClue = serialized->get_uint64(PrimaryClue_type_id, 0);
 		AnimClues = serialized->get_uint64s(AnimClues_type_id); 
 	}
 

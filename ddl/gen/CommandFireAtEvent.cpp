@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	CommandFireAtEvent::CommandFireAtEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): CommandEvent(serialized) {
-		AltFire = serialized->get_bool(AltFire_type_id); 
+		AltFire = serialized->get_bool(AltFire_type_id, false); 
 	}
 
 	[[nodiscard]] auto

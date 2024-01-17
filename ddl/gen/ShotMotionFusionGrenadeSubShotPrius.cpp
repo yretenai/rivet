@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ShotMotionFusionGrenadeSubShotPrius::ShotMotionFusionGrenadeSubShotPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): GrenadeShotMotionPrius(serialized) {
-		MaxBounces = serialized->get_uint32(MaxBounces_type_id); 
+		MaxBounces = serialized->get_uint32(MaxBounces_type_id, 5); 
 	}
 
 	[[nodiscard]] auto

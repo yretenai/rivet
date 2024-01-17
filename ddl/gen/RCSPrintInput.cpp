@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	RCSPrintInput::RCSPrintInput([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		KeepAliveTimeout = serialized->get_float(KeepAliveTimeout_type_id);
-		Revision = serialized->get_int32(Revision_type_id);
-		Path = serialized->get_string(Path_type_id);
-		OutputPath = serialized->get_string(OutputPath_type_id); 
+		KeepAliveTimeout = serialized->get_float(KeepAliveTimeout_type_id, 600.000000);
+		Revision = serialized->get_int32(Revision_type_id, -1);
+		Path = serialized->get_string(Path_type_id, {});
+		OutputPath = serialized->get_string(OutputPath_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

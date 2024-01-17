@@ -9,9 +9,9 @@
 
 namespace rivet::ddl::generated {
 	SunsetSpawnerFactoryScriptActionPrius::SunsetSpawnerFactoryScriptActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Spawning);
 		Factory = serialized->unwrap_into<rivet::ddl::generated::SunsetSpawnerFactoryPrius>(Factory_type_id);
-		UseSegChk = serialized->get_bool(UseSegChk_type_id); 
+		UseSegChk = serialized->get_bool(UseSegChk_type_id, true); 
 	}
 
 	[[nodiscard]] auto

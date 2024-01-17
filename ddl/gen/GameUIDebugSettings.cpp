@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	GameUIDebugSettings::GameUIDebugSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AllowPause = serialized->get_bool(AllowPause_type_id);
-		AllowHUD = serialized->get_bool(AllowHUD_type_id);
-		UnlockVendorWeapons = serialized->get_bool(UnlockVendorWeapons_type_id);
-		UnlockGalleryEntries = serialized->get_bool(UnlockGalleryEntries_type_id);
-		UnlockAudioLogs = serialized->get_bool(UnlockAudioLogs_type_id); 
+		AllowPause = serialized->get_bool(AllowPause_type_id, true);
+		AllowHUD = serialized->get_bool(AllowHUD_type_id, true);
+		UnlockVendorWeapons = serialized->get_bool(UnlockVendorWeapons_type_id, false);
+		UnlockGalleryEntries = serialized->get_bool(UnlockGalleryEntries_type_id, false);
+		UnlockAudioLogs = serialized->get_bool(UnlockAudioLogs_type_id, false); 
 	}
 
 	[[nodiscard]] auto

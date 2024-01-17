@@ -10,7 +10,7 @@
 namespace rivet::ddl::generated {
 	AttackTargeterPrius::AttackTargeterPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Attacks = serialized->unwrap_into_many<rivet::ddl::generated::TargetedAttack>(Attacks_type_id);
-		TargetedLayer = serialized->get_uint32(TargetedLayer_type_id); 
+		TargetedLayer = serialized->get_uint32(TargetedLayer_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

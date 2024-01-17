@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	GameBotShooterTurretPrius::GameBotShooterTurretPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): GameBotShooterBasePrius(serialized) {
-		Pilot = serialized->get_string(Pilot_type_id);
-		ShieldCollisionActor = serialized->get_string(ShieldCollisionActor_type_id); 
+		Pilot = serialized->get_string(Pilot_type_id, {});
+		ShieldCollisionActor = serialized->get_string(ShieldCollisionActor_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

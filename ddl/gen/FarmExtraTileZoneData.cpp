@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	FarmExtraTileZoneData::FarmExtraTileZoneData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		TileName = serialized->get_string(TileName_type_id);
+		TileName = serialized->get_string(TileName_type_id, {});
 		Zones = serialized->get_strings(Zones_type_id);
 		LightingConditions = serialized->unwrap_into<rivet::ddl::generated::LightingConditionBitSet>(LightingConditions_type_id); 
 	}

@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	FailMissionActionPrius::FailMissionActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		FailureAction = serialized->get_enum<rivet::ddl::generated::x71dc1c4a>(FailureAction_type_id, rivet::ddl::generated::x71dc1c4a_values);
-		FailureReason = serialized->get_string(FailureReason_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Mission_System);
+		FailureAction = serialized->get_enum<rivet::ddl::generated::x71dc1c4a>(FailureAction_type_id, rivet::ddl::generated::x71dc1c4a_values, rivet::ddl::generated::x71dc1c4a::AutoReloadMissionState);
+		FailureReason = serialized->get_string(FailureReason_type_id, "INVALID"); 
 	}
 
 	[[nodiscard]] auto

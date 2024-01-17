@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	AnimMaterialComponentMapDef::AnimMaterialComponentMapDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Type = serialized->get_enum<rivet::ddl::generated::xb774530f>(Type_type_id, rivet::ddl::generated::xb774530f_values);
-		MaterialInputName = serialized->get_string(MaterialInputName_type_id);
-		MaterialMappingName = serialized->get_string(MaterialMappingName_type_id);
+		Type = serialized->get_enum<rivet::ddl::generated::xb774530f>(Type_type_id, rivet::ddl::generated::xb774530f_values, rivet::ddl::generated::xb774530f::Type1d);
+		MaterialInputName = serialized->get_string(MaterialInputName_type_id, {});
+		MaterialMappingName = serialized->get_string(MaterialMappingName_type_id, {});
 		AnimTrackName = serialized->get_strings(AnimTrackName_type_id);
-		ClampMin = serialized->get_float(ClampMin_type_id);
-		ClampMax = serialized->get_float(ClampMax_type_id); 
+		ClampMin = serialized->get_float(ClampMin_type_id, -1.000000);
+		ClampMax = serialized->get_float(ClampMax_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

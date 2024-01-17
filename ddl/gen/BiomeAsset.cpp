@@ -9,9 +9,9 @@
 
 namespace rivet::ddl::generated {
 	BiomeAsset::BiomeAsset([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ModelAssetPath = serialized->get_string(ModelAssetPath_type_id);
-		Weight = serialized->get_float(Weight_type_id);
-		HoudiniDebugPrimitive = serialized->get_enum<rivet::ddl::generated::x8eddd608>(HoudiniDebugPrimitive_type_id, rivet::ddl::generated::x8eddd608_values);
+		ModelAssetPath = serialized->get_string(ModelAssetPath_type_id, {});
+		Weight = serialized->get_float(Weight_type_id, 1.000000);
+		HoudiniDebugPrimitive = serialized->get_enum<rivet::ddl::generated::x8eddd608>(HoudiniDebugPrimitive_type_id, rivet::ddl::generated::x8eddd608_values, rivet::ddl::generated::x8eddd608::Cylinder);
 		HoudiniDebugColor = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(HoudiniDebugColor_type_id); 
 	}
 

@@ -9,9 +9,9 @@
 
 namespace rivet::ddl::generated {
 	UDSBulkImportDef::UDSBulkImportDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		schemaVersion = serialized->get_string(schemaVersion_type_id);
-		contextType = serialized->get_string(contextType_type_id);
-		contextId = serialized->get_string(contextId_type_id);
+		schemaVersion = serialized->get_string(schemaVersion_type_id, {});
+		contextType = serialized->get_string(contextType_type_id, {});
+		contextId = serialized->get_string(contextId_type_id, {});
 		entities = serialized->unwrap_into<rivet::ddl::generated::UDSBulkEntities>(entities_type_id); 
 	}
 

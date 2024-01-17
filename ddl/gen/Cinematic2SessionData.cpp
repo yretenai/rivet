@@ -10,7 +10,7 @@
 namespace rivet::ddl::generated {
 	Cinematic2SessionData::Cinematic2SessionData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Selection = serialized->get_uint64s(Selection_type_id);
-		RenderMode = serialized->get_enum<rivet::ddl::generated::EditorRenderMode>(RenderMode_type_id, rivet::ddl::generated::EditorRenderMode_values);
+		RenderMode = serialized->get_enum<rivet::ddl::generated::EditorRenderMode>(RenderMode_type_id, rivet::ddl::generated::EditorRenderMode_values, rivet::ddl::generated::EditorRenderMode::Full_Lighting);
 		DebugOptions = serialized->unwrap_into<rivet::ddl::generated::EditorDebugOptions>(DebugOptions_type_id); 
 	}
 

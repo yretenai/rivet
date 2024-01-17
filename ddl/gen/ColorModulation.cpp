@@ -10,7 +10,7 @@
 namespace rivet::ddl::generated {
 	ColorModulation::ColorModulation([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Modulation = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Modulation_type_id);
-		Height = serialized->get_float(Height_type_id); 
+		Height = serialized->get_float(Height_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

@@ -10,16 +10,16 @@
 
 namespace rivet::ddl::generated {
 	ScriptVarNodeAux::ScriptVarNodeAux([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		VarType = serialized->get_string(VarType_type_id);
-		ReadOnly = serialized->get_bool(ReadOnly_type_id);
-		GlobalName = serialized->get_string(GlobalName_type_id);
+		VarType = serialized->get_string(VarType_type_id, {});
+		ReadOnly = serialized->get_bool(ReadOnly_type_id, false);
+		GlobalName = serialized->get_string(GlobalName_type_id, {});
 		Notes = serialized->unwrap_into<rivet::ddl::generated::GraphNodeNotesDef>(Notes_type_id);
-		IsGlobal = serialized->get_bool(IsGlobal_type_id);
-		BoolValue = serialized->get_bool(BoolValue_type_id);
-		FloatValue = serialized->get_float(FloatValue_type_id);
+		IsGlobal = serialized->get_bool(IsGlobal_type_id, false);
+		BoolValue = serialized->get_bool(BoolValue_type_id, false);
+		FloatValue = serialized->get_float(FloatValue_type_id, 0.000000);
 		VecValue = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(VecValue_type_id);
-		StringValue = serialized->get_string(StringValue_type_id);
-		ActorValue = serialized->get_uint64(ActorValue_type_id); 
+		StringValue = serialized->get_string(StringValue_type_id, {});
+		ActorValue = serialized->get_uint64(ActorValue_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

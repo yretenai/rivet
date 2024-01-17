@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	Cinematic2MaterialConstOverrideInfo::Cinematic2MaterialConstOverrideInfo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MaterialMappingName = serialized->get_string(MaterialMappingName_type_id);
-		ConstName = serialized->get_string(ConstName_type_id);
+		MaterialMappingName = serialized->get_string(MaterialMappingName_type_id, {});
+		ConstName = serialized->get_string(ConstName_type_id, {});
 		ConstValue = serialized->unwrap_into<rivet::ddl::generated::DDLVector4>(ConstValue_type_id); 
 	}
 

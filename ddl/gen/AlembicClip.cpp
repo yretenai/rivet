@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	AlembicClip::AlembicClip([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Name = serialized->get_string(Name_type_id);
-		ClipPath = serialized->get_string(ClipPath_type_id);
-		StartFrame = serialized->get_int32(StartFrame_type_id);
-		EndFrame = serialized->get_int32(EndFrame_type_id);
+		Name = serialized->get_string(Name_type_id, {});
+		ClipPath = serialized->get_string(ClipPath_type_id, "");
+		StartFrame = serialized->get_int32(StartFrame_type_id, 0);
+		EndFrame = serialized->get_int32(EndFrame_type_id, 0);
 		AnimatingLooks = serialized->get_strings(AnimatingLooks_type_id); 
 	}
 

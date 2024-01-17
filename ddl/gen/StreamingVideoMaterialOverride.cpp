@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	StreamingVideoMaterialOverride::StreamingVideoMaterialOverride([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MaterialName = serialized->get_string(MaterialName_type_id);
-		TextureName = serialized->get_string(TextureName_type_id);
-		OverrideMaterialAsset = serialized->get_string(OverrideMaterialAsset_type_id); 
+		MaterialName = serialized->get_string(MaterialName_type_id, {});
+		TextureName = serialized->get_string(TextureName_type_id, {});
+		OverrideMaterialAsset = serialized->get_string(OverrideMaterialAsset_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

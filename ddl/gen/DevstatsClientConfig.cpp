@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	DevstatsClientConfig::DevstatsClientConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		dataCollectionEnabled = serialized->get_bool(dataCollectionEnabled_type_id);
+		dataCollectionEnabled = serialized->get_bool(dataCollectionEnabled_type_id, false);
 		disabledEvents = serialized->get_strings(disabledEvents_type_id); 
 	}
 

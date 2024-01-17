@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	InputSettingsData::InputSettingsData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SelectionHeldInputIgnoreDuration = serialized->get_float(SelectionHeldInputIgnoreDuration_type_id);
-		SelectionDoubleSpeed = serialized->get_float(SelectionDoubleSpeed_type_id); 
+		SelectionHeldInputIgnoreDuration = serialized->get_float(SelectionHeldInputIgnoreDuration_type_id, 0.300000);
+		SelectionDoubleSpeed = serialized->get_float(SelectionDoubleSpeed_type_id, 0.600000); 
 	}
 
 	[[nodiscard]] auto

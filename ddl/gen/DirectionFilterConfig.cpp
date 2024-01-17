@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	DirectionFilterConfig::DirectionFilterConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DriverName = serialized->get_string(DriverName_type_id);
-		IndexCount = serialized->get_uint8(IndexCount_type_id);
-		Front = serialized->get_bool(Front_type_id);
-		Back = serialized->get_bool(Back_type_id);
-		Left = serialized->get_bool(Left_type_id);
-		Right = serialized->get_bool(Right_type_id); 
+		DriverName = serialized->get_string(DriverName_type_id, "React_Knockback");
+		IndexCount = serialized->get_uint8(IndexCount_type_id, 3);
+		Front = serialized->get_bool(Front_type_id, true);
+		Back = serialized->get_bool(Back_type_id, false);
+		Left = serialized->get_bool(Left_type_id, false);
+		Right = serialized->get_bool(Right_type_id, false); 
 	}
 
 	[[nodiscard]] auto

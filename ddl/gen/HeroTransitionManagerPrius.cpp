@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	HeroTransitionManagerPrius::HeroTransitionManagerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		FirstSpawn = serialized->get_bool(FirstSpawn_type_id); 
+		FirstSpawn = serialized->get_bool(FirstSpawn_type_id, true); 
 	}
 
 	[[nodiscard]] auto

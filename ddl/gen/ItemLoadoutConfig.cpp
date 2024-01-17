@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	ItemLoadoutConfig::ItemLoadoutConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		Preload = serialized->get_bool(Preload_type_id);
+		Preload = serialized->get_bool(Preload_type_id, false);
 		Loadout = serialized->unwrap_into<rivet::ddl::generated::ItemLoadout>(Loadout_type_id); 
 	}
 

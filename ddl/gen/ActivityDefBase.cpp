@@ -13,10 +13,10 @@
 
 namespace rivet::ddl::generated {
 	ActivityDefBase::ActivityDefBase([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActivityId = serialized->get_string(ActivityId_type_id);
+		ActivityId = serialized->get_string(ActivityId_type_id, {});
 		ActivityLink = serialized->unwrap_into<rivet::ddl::generated::ActivityLinkBase>(ActivityLink_type_id);
-		SendLocationOnEnd = serialized->get_bool(SendLocationOnEnd_type_id);
-		DefaultPlaytimeEstimate = serialized->get_uint32(DefaultPlaytimeEstimate_type_id);
+		SendLocationOnEnd = serialized->get_bool(SendLocationOnEnd_type_id, false);
+		DefaultPlaytimeEstimate = serialized->get_uint32(DefaultPlaytimeEstimate_type_id, 5);
 		Hints = serialized->unwrap_into_many<rivet::ddl::generated::ActivityHintWithId>(Hints_type_id); 
 	}
 

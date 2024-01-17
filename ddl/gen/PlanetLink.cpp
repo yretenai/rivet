@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	PlanetLink::PlanetLink([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ActivityLinkBase(serialized) {
-		PlanetName = serialized->get_string(PlanetName_type_id); 
+		PlanetName = serialized->get_string(PlanetName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

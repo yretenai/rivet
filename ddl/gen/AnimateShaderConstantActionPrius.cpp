@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	AnimateShaderConstantActionPrius::AnimateShaderConstantActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		Shader = serialized->get_string(Shader_type_id);
-		ConstantName = serialized->get_string(ConstantName_type_id);
-		StartValue = serialized->get_float(StartValue_type_id);
-		EndValue = serialized->get_float(EndValue_type_id);
-		Duration = serialized->get_float(Duration_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Rendering);
+		Shader = serialized->get_string(Shader_type_id, {});
+		ConstantName = serialized->get_string(ConstantName_type_id, {});
+		StartValue = serialized->get_float(StartValue_type_id, 0.000000);
+		EndValue = serialized->get_float(EndValue_type_id, 1.000000);
+		Duration = serialized->get_float(Duration_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

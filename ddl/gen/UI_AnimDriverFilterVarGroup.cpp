@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	UI_AnimDriverFilterVarGroup::UI_AnimDriverFilterVarGroup([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Group = serialized->get_string(Group_type_id); 
+		Group = serialized->get_string(Group_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

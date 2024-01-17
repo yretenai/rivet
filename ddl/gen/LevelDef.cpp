@@ -13,16 +13,16 @@
 namespace rivet::ddl::generated {
 	LevelDef::LevelDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		VaultMetaData = serialized->unwrap_into<rivet::ddl::generated::VaultMetaData>(VaultMetaData_type_id);
-		IconPath = serialized->get_string(IconPath_type_id);
-		DefaultNamedLink = serialized->get_string(DefaultNamedLink_type_id);
-		InstallGroup = serialized->get_int32(InstallGroup_type_id);
-		GlobalRegion = serialized->get_string(GlobalRegion_type_id);
+		IconPath = serialized->get_string(IconPath_type_id, "");
+		DefaultNamedLink = serialized->get_string(DefaultNamedLink_type_id, {});
+		InstallGroup = serialized->get_int32(InstallGroup_type_id, 0);
+		GlobalRegion = serialized->get_string(GlobalRegion_type_id, {});
 		Regions = serialized->get_strings(Regions_type_id);
 		WorldMapAABB = serialized->unwrap_into<rivet::ddl::generated::DDLAABB>(WorldMapAABB_type_id);
 		GridSettings = serialized->unwrap_into<rivet::ddl::generated::LevelGridSettings>(GridSettings_type_id);
 		Aux = serialized->unwrap_into<rivet::ddl::generated::LevelDefAux>(Aux_type_id);
-		HibernateSet = serialized->get_string(HibernateSet_type_id);
-		AssetSwapPlatSpec = serialized->get_string(AssetSwapPlatSpec_type_id); 
+		HibernateSet = serialized->get_string(HibernateSet_type_id, {});
+		AssetSwapPlatSpec = serialized->get_string(AssetSwapPlatSpec_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

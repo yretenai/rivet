@@ -9,13 +9,13 @@
 
 namespace rivet::ddl::generated {
 	DebugDrawCurveActionPrius::DebugDrawCurveActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Debug);
 		Color = serialized->unwrap_into<rivet::ddl::generated::DebugDrawColor>(Color_type_id);
-		YOffset = serialized->get_float(YOffset_type_id);
-		LineWidth = serialized->get_float(LineWidth_type_id);
-		DrawPoints = serialized->get_bool(DrawPoints_type_id);
-		DrawTangents = serialized->get_bool(DrawTangents_type_id);
-		DrawMatrix = serialized->get_bool(DrawMatrix_type_id); 
+		YOffset = serialized->get_float(YOffset_type_id, 0.000000);
+		LineWidth = serialized->get_float(LineWidth_type_id, 1.000000);
+		DrawPoints = serialized->get_bool(DrawPoints_type_id, true);
+		DrawTangents = serialized->get_bool(DrawTangents_type_id, false);
+		DrawMatrix = serialized->get_bool(DrawMatrix_type_id, false); 
 	}
 
 	[[nodiscard]] auto

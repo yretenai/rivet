@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	AnimVarMonitorElement::AnimVarMonitorElement([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AnimVar = serialized->get_string(AnimVar_type_id);
-		RTPC = serialized->get_string(RTPC_type_id); 
+		AnimVar = serialized->get_string(AnimVar_type_id, {});
+		RTPC = serialized->get_string(RTPC_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

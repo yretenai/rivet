@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	DuckTarget::DuckTarget([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ControllerActorTuid = serialized->get_uint64(ControllerActorTuid_type_id);
-		DuckAmount = serialized->get_float(DuckAmount_type_id);
-		DuckTime = serialized->get_float(DuckTime_type_id); 
+		ControllerActorTuid = serialized->get_uint64(ControllerActorTuid_type_id, 0);
+		DuckAmount = serialized->get_float(DuckAmount_type_id, 0.000000);
+		DuckTime = serialized->get_float(DuckTime_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

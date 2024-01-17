@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	GlobalSaveTableChangedEvent::GlobalSaveTableChangedEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Reason = serialized->get_enum<rivet::ddl::generated::x5d051641>(Reason_type_id, rivet::ddl::generated::x5d051641_values); 
+		Reason = serialized->get_enum<rivet::ddl::generated::x5d051641>(Reason_type_id, rivet::ddl::generated::x5d051641_values, rivet::ddl::generated::x5d051641::Load); 
 	}
 
 	[[nodiscard]] auto

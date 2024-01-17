@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	CameraShakeActionPrius::CameraShakeActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		InnerRadius = serialized->get_float(InnerRadius_type_id);
-		OuterRadius = serialized->get_float(OuterRadius_type_id);
-		FollowPositionActor = serialized->get_bool(FollowPositionActor_type_id);
-		CameraShakeConfig = serialized->get_string(CameraShakeConfig_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Camera);
+		InnerRadius = serialized->get_float(InnerRadius_type_id, 10.000000);
+		OuterRadius = serialized->get_float(OuterRadius_type_id, 20.000000);
+		FollowPositionActor = serialized->get_bool(FollowPositionActor_type_id, false);
+		CameraShakeConfig = serialized->get_string(CameraShakeConfig_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

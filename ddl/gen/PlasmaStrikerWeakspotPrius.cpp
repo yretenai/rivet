@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	PlasmaStrikerWeakspotPrius::PlasmaStrikerWeakspotPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		WeakspotDisabledOnDamageState = serialized->get_bool(WeakspotDisabledOnDamageState_type_id);
+		WeakspotDisabledOnDamageState = serialized->get_bool(WeakspotDisabledOnDamageState_type_id, false);
 		WeakspotList = serialized->unwrap_into_many<rivet::ddl::generated::PlasmaStrikerWeakspotData>(WeakspotList_type_id); 
 	}
 

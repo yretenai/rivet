@@ -13,7 +13,7 @@
 namespace rivet::ddl::generated {
 	NavMeshObstructionShapeBase::NavMeshObstructionShapeBase([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		CenterOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(CenterOffset_type_id);
-		UseBoundingBoxInfo = serialized->get_bool(UseBoundingBoxInfo_type_id); 
+		UseBoundingBoxInfo = serialized->get_bool(UseBoundingBoxInfo_type_id, true); 
 	}
 
 	[[nodiscard]] auto

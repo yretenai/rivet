@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	ActivityClueAnimSetData::ActivityClueAnimSetData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AnimSet = serialized->get_string(AnimSet_type_id);
+		AnimSet = serialized->get_string(AnimSet_type_id, {});
 		UserFilter = serialized->unwrap_into<rivet::ddl::generated::ActivityClueAnimSetFilterBase>(UserFilter_type_id); 
 	}
 

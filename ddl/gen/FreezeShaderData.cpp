@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	FreezeShaderData::FreezeShaderData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		PostCompositeShader = serialized->get_string(PostCompositeShader_type_id);
-		ShaderDuration = serialized->get_float(ShaderDuration_type_id); 
+		PostCompositeShader = serialized->get_string(PostCompositeShader_type_id, "");
+		ShaderDuration = serialized->get_float(ShaderDuration_type_id, 8.000000); 
 	}
 
 	[[nodiscard]] auto

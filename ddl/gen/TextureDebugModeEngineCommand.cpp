@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	TextureDebugModeEngineCommand::TextureDebugModeEngineCommand([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Id = serialized->get_uint64(Id_type_id);
-		Next = serialized->get_bool(Next_type_id); 
+		Id = serialized->get_uint64(Id_type_id, 0);
+		Next = serialized->get_bool(Next_type_id, false); 
 	}
 
 	[[nodiscard]] auto

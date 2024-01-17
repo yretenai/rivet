@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	DamageModifierConditionHealthThreshholdPrius::DamageModifierConditionHealthThreshholdPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): DamageModifierConditionBasePrius(serialized) {
-		HealthAmount = serialized->get_float(HealthAmount_type_id);
-		CompareTotalHealth = serialized->get_bool(CompareTotalHealth_type_id);
-		IsMax = serialized->get_bool(IsMax_type_id);
-		IsPercent = serialized->get_bool(IsPercent_type_id);
-		TestDamagerHealth = serialized->get_bool(TestDamagerHealth_type_id); 
+		HealthAmount = serialized->get_float(HealthAmount_type_id, 0.000000);
+		CompareTotalHealth = serialized->get_bool(CompareTotalHealth_type_id, false);
+		IsMax = serialized->get_bool(IsMax_type_id, true);
+		IsPercent = serialized->get_bool(IsPercent_type_id, false);
+		TestDamagerHealth = serialized->get_bool(TestDamagerHealth_type_id, false); 
 	}
 
 	[[nodiscard]] auto

@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	UIFontMapping::UIFontMapping([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Language = serialized->get_enum<rivet::ddl::generated::x572515d>(Language_type_id, rivet::ddl::generated::x572515d_values);
-		Font = serialized->get_string(Font_type_id);
+		Language = serialized->get_enum<rivet::ddl::generated::x572515d>(Language_type_id, rivet::ddl::generated::x572515d_values, rivet::ddl::generated::x572515d::English);
+		Font = serialized->get_string(Font_type_id, "ui/MyPath/MyFont.ttf");
 		FontsToReplace = serialized->get_strings(FontsToReplace_type_id); 
 	}
 

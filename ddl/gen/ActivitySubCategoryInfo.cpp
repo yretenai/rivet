@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	ActivitySubCategoryInfo::ActivitySubCategoryInfo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SubCategory = serialized->get_enum<rivet::ddl::generated::xbd8d5c4d>(SubCategory_type_id, rivet::ddl::generated::xbd8d5c4d_values);
-		NameTag = serialized->get_string(NameTag_type_id); 
+		SubCategory = serialized->get_enum<rivet::ddl::generated::xbd8d5c4d>(SubCategory_type_id, rivet::ddl::generated::xbd8d5c4d_values, rivet::ddl::generated::xbd8d5c4d::null);
+		NameTag = serialized->get_string(NameTag_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	SpaceshipTargetingModPrius::SpaceshipTargetingModPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		BoundsRadiusMultiplier = serialized->get_float(BoundsRadiusMultiplier_type_id);
-		AutoHitAngle = serialized->get_float(AutoHitAngle_type_id);
-		Priority = serialized->get_enum<rivet::ddl::generated::x12c07e53>(Priority_type_id, rivet::ddl::generated::x12c07e53_values); 
+		BoundsRadiusMultiplier = serialized->get_float(BoundsRadiusMultiplier_type_id, 1.000000);
+		AutoHitAngle = serialized->get_float(AutoHitAngle_type_id, 0.000000);
+		Priority = serialized->get_enum<rivet::ddl::generated::x12c07e53>(Priority_type_id, rivet::ddl::generated::x12c07e53_values, rivet::ddl::generated::x12c07e53::Low); 
 	}
 
 	[[nodiscard]] auto

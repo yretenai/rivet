@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	MeleeWeaponSkinData::MeleeWeaponSkinData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SkinType = serialized->get_enum<rivet::ddl::generated::x387422ea>(SkinType_type_id, rivet::ddl::generated::x387422ea_values);
-		SkinIdValue = serialized->get_float(SkinIdValue_type_id); 
+		SkinType = serialized->get_enum<rivet::ddl::generated::x387422ea>(SkinType_type_id, rivet::ddl::generated::x387422ea_values, rivet::ddl::generated::x387422ea::Default);
+		SkinIdValue = serialized->get_float(SkinIdValue_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

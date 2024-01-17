@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	DEVOLineMemoryWriteback::DEVOLineMemoryWriteback([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		FactKey = serialized->get_string(FactKey_type_id);
-		ValueString = serialized->get_string(ValueString_type_id);
-		ValueNumeric = serialized->get_float(ValueNumeric_type_id);
-		Duration = serialized->get_float(Duration_type_id);
-		Whom = serialized->get_enum<rivet::ddl::generated::x9547deb2>(Whom_type_id, rivet::ddl::generated::x9547deb2_values);
-		IsDelta = serialized->get_bool(IsDelta_type_id); 
+		FactKey = serialized->get_string(FactKey_type_id, {});
+		ValueString = serialized->get_string(ValueString_type_id, {});
+		ValueNumeric = serialized->get_float(ValueNumeric_type_id, 0.000000);
+		Duration = serialized->get_float(Duration_type_id, 65536.000000);
+		Whom = serialized->get_enum<rivet::ddl::generated::x9547deb2>(Whom_type_id, rivet::ddl::generated::x9547deb2_values, rivet::ddl::generated::x9547deb2::Character);
+		IsDelta = serialized->get_bool(IsDelta_type_id, false); 
 	}
 
 	[[nodiscard]] auto

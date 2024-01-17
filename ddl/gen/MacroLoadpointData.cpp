@@ -11,10 +11,10 @@
 namespace rivet::ddl::generated {
 	MacroLoadpointData::MacroLoadpointData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		MissionGraph = serialized->unwrap_into<rivet::ddl::generated::AssetReferenceDef>(MissionGraph_type_id);
-		MissionName = serialized->get_string(MissionName_type_id);
-		ObjectiveName = serialized->get_string(ObjectiveName_type_id);
-		LoadpointNameLocTag = serialized->get_string(LoadpointNameLocTag_type_id);
-		CheckpointName = serialized->get_string(CheckpointName_type_id); 
+		MissionName = serialized->get_string(MissionName_type_id, {});
+		ObjectiveName = serialized->get_string(ObjectiveName_type_id, {});
+		LoadpointNameLocTag = serialized->get_string(LoadpointNameLocTag_type_id, {});
+		CheckpointName = serialized->get_string(CheckpointName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

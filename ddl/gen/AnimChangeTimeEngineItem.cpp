@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	AnimChangeTimeEngineItem::AnimChangeTimeEngineItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		NewTime = serialized->get_double(NewTime_type_id); 
+		NewTime = serialized->get_double(NewTime_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

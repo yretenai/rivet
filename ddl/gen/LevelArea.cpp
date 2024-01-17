@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	LevelArea::LevelArea([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AreaName = serialized->get_string(AreaName_type_id);
+		AreaName = serialized->get_string(AreaName_type_id, {});
 		Regions = serialized->unwrap_into_many<rivet::ddl::generated::RegionData>(Regions_type_id); 
 	}
 

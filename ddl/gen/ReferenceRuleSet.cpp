@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	ReferenceRuleSet::ReferenceRuleSet([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Name = serialized->get_string(Name_type_id);
+		Name = serialized->get_string(Name_type_id, {});
 		Rules = serialized->unwrap_into_many<rivet::ddl::generated::ReferenceRule>(Rules_type_id); 
 	}
 

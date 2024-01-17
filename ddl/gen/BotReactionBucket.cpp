@@ -7,15 +7,15 @@
 
 namespace rivet::ddl::generated {
 	BotReactionBucket::BotReactionBucket([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Comment = serialized->get_string(Comment_type_id);
-		MinKnockbackLevel = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(MinKnockbackLevel_type_id, rivet::ddl::generated::KnockbackLevels_values);
-		MaxKnockbackLevel = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(MaxKnockbackLevel_type_id, rivet::ddl::generated::KnockbackLevels_values);
-		KnockbackFillThreshhold = serialized->get_float(KnockbackFillThreshhold_type_id);
-		InitialFill = serialized->get_float(InitialFill_type_id);
-		ReactCooldown = serialized->get_float(ReactCooldown_type_id);
-		RefillRate = serialized->get_float(RefillRate_type_id);
-		EmptyLowerBucketsOnReact = serialized->get_bool(EmptyLowerBucketsOnReact_type_id);
-		Reaction = serialized->get_enum<rivet::ddl::generated::xf7b2e7be>(Reaction_type_id, rivet::ddl::generated::xf7b2e7be_values); 
+		Comment = serialized->get_string(Comment_type_id, {});
+		MinKnockbackLevel = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(MinKnockbackLevel_type_id, rivet::ddl::generated::KnockbackLevels_values, rivet::ddl::generated::KnockbackLevels::None);
+		MaxKnockbackLevel = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(MaxKnockbackLevel_type_id, rivet::ddl::generated::KnockbackLevels_values, rivet::ddl::generated::KnockbackLevels::None);
+		KnockbackFillThreshhold = serialized->get_float(KnockbackFillThreshhold_type_id, 100.000000);
+		InitialFill = serialized->get_float(InitialFill_type_id, 99.000000);
+		ReactCooldown = serialized->get_float(ReactCooldown_type_id, -1.000000);
+		RefillRate = serialized->get_float(RefillRate_type_id, 6.250000);
+		EmptyLowerBucketsOnReact = serialized->get_bool(EmptyLowerBucketsOnReact_type_id, true);
+		Reaction = serialized->get_enum<rivet::ddl::generated::xf7b2e7be>(Reaction_type_id, rivet::ddl::generated::xf7b2e7be_values, rivet::ddl::generated::xf7b2e7be::Knockback); 
 	}
 
 	[[nodiscard]] auto

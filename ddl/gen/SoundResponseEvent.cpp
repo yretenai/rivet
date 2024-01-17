@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	SoundResponseEvent::SoundResponseEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ResponseEvent(serialized) {
-		SoundEventName = serialized->get_string(SoundEventName_type_id);
-		AttachLocator = serialized->get_string(AttachLocator_type_id);
-		Material = serialized->get_string(Material_type_id);
-		StopOnSourceDestroyed = serialized->get_bool(StopOnSourceDestroyed_type_id); 
+		SoundEventName = serialized->get_string(SoundEventName_type_id, {});
+		AttachLocator = serialized->get_string(AttachLocator_type_id, {});
+		Material = serialized->get_string(Material_type_id, {});
+		StopOnSourceDestroyed = serialized->get_bool(StopOnSourceDestroyed_type_id, false); 
 	}
 
 	[[nodiscard]] auto

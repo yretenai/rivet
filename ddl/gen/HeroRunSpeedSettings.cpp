@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	HeroRunSpeedSettings::HeroRunSpeedSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		RunSpeedMultiplier = serialized->get_float(RunSpeedMultiplier_type_id);
-		RunAnimSpeedMultiplier = serialized->get_float(RunAnimSpeedMultiplier_type_id);
-		DoJumpScaling = serialized->get_bool(DoJumpScaling_type_id); 
+		RunSpeedMultiplier = serialized->get_float(RunSpeedMultiplier_type_id, 1.200000);
+		RunAnimSpeedMultiplier = serialized->get_float(RunAnimSpeedMultiplier_type_id, 1.150000);
+		DoJumpScaling = serialized->get_bool(DoJumpScaling_type_id, true); 
 	}
 
 	[[nodiscard]] auto

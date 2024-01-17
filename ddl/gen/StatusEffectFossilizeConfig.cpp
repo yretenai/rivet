@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	StatusEffectFossilizeConfig::StatusEffectFossilizeConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): StatusEffectConfig(serialized) {
-		BeardActor = serialized->get_string(BeardActor_type_id);
-		BowTieActor = serialized->get_string(BowTieActor_type_id);
-		GlassesActor = serialized->get_string(GlassesActor_type_id);
-		GraveActor = serialized->get_string(GraveActor_type_id); 
+		BeardActor = serialized->get_string(BeardActor_type_id, {});
+		BowTieActor = serialized->get_string(BowTieActor_type_id, {});
+		GlassesActor = serialized->get_string(GlassesActor_type_id, {});
+		GraveActor = serialized->get_string(GraveActor_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	CombatStateChangedEvent::CombatStateChangedEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		PreviousState = serialized->get_enum<rivet::ddl::generated::xba3c7381>(PreviousState_type_id, rivet::ddl::generated::xba3c7381_values);
-		NextState = serialized->get_enum<rivet::ddl::generated::xba3c7381>(NextState_type_id, rivet::ddl::generated::xba3c7381_values); 
+		PreviousState = serialized->get_enum<rivet::ddl::generated::xba3c7381>(PreviousState_type_id, rivet::ddl::generated::xba3c7381_values, rivet::ddl::generated::xba3c7381::Inactive);
+		NextState = serialized->get_enum<rivet::ddl::generated::xba3c7381>(NextState_type_id, rivet::ddl::generated::xba3c7381_values, rivet::ddl::generated::xba3c7381::Inactive); 
 	}
 
 	[[nodiscard]] auto

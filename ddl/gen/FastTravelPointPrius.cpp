@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	FastTravelPointPrius::FastTravelPointPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MapPointName = serialized->get_string(MapPointName_type_id);
-		CheckpointName = serialized->get_string(CheckpointName_type_id);
+		MapPointName = serialized->get_string(MapPointName_type_id, {});
+		CheckpointName = serialized->get_string(CheckpointName_type_id, {});
 		Props = serialized->unwrap_into_many<rivet::ddl::generated::FastTravelPointPropElement>(Props_type_id); 
 	}
 

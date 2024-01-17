@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	ProximitySpawnSystemConfig::ProximitySpawnSystemConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		DefaultSpawnConfig = serialized->get_string(DefaultSpawnConfig_type_id);
-		AnimClueGatherRadius = serialized->get_float(AnimClueGatherRadius_type_id);
-		NavClueGatherRadius = serialized->get_float(NavClueGatherRadius_type_id); 
+		DefaultSpawnConfig = serialized->get_string(DefaultSpawnConfig_type_id, {});
+		AnimClueGatherRadius = serialized->get_float(AnimClueGatherRadius_type_id, 50.000000);
+		NavClueGatherRadius = serialized->get_float(NavClueGatherRadius_type_id, 70.000000); 
 	}
 
 	[[nodiscard]] auto

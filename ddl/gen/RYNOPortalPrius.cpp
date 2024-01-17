@@ -7,20 +7,20 @@
 
 namespace rivet::ddl::generated {
 	RYNOPortalPrius::RYNOPortalPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ShotConfig = serialized->get_string(ShotConfig_type_id);
-		Owner = serialized->get_uint32(Owner_type_id);
-		Weapon = serialized->get_uint32(Weapon_type_id);
-		ShotRYNO = serialized->get_uint32(ShotRYNO_type_id);
-		Target = serialized->get_uint32(Target_type_id);
-		WeaponId = serialized->get_uint32(WeaponId_type_id);
-		AOE = serialized->get_float(AOE_type_id);
-		DamageAmount = serialized->get_float(DamageAmount_type_id);
-		KnockbackLevel = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(KnockbackLevel_type_id, rivet::ddl::generated::KnockbackLevels_values);
-		KnockbackAmount = serialized->get_float(KnockbackAmount_type_id);
-		RangeFromShot = serialized->get_float(RangeFromShot_type_id);
-		ObjectAssetId = serialized->get_uint64(ObjectAssetId_type_id);
-		Size = serialized->get_enum<rivet::ddl::generated::xbf5ff3c6>(Size_type_id, rivet::ddl::generated::xbf5ff3c6_values);
-		OverrideFallRangeForShockwave = serialized->get_float(OverrideFallRangeForShockwave_type_id); 
+		ShotConfig = serialized->get_string(ShotConfig_type_id, {});
+		Owner = serialized->get_uint32(Owner_type_id, 0);
+		Weapon = serialized->get_uint32(Weapon_type_id, 0);
+		ShotRYNO = serialized->get_uint32(ShotRYNO_type_id, 0);
+		Target = serialized->get_uint32(Target_type_id, 0);
+		WeaponId = serialized->get_uint32(WeaponId_type_id, 0);
+		AOE = serialized->get_float(AOE_type_id, 1.000000);
+		DamageAmount = serialized->get_float(DamageAmount_type_id, 1.000000);
+		KnockbackLevel = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(KnockbackLevel_type_id, rivet::ddl::generated::KnockbackLevels_values, rivet::ddl::generated::KnockbackLevels::One);
+		KnockbackAmount = serialized->get_float(KnockbackAmount_type_id, 1.000000);
+		RangeFromShot = serialized->get_float(RangeFromShot_type_id, 0.000000);
+		ObjectAssetId = serialized->get_uint64(ObjectAssetId_type_id, 0);
+		Size = serialized->get_enum<rivet::ddl::generated::xbf5ff3c6>(Size_type_id, rivet::ddl::generated::xbf5ff3c6_values, rivet::ddl::generated::xbf5ff3c6::Small);
+		OverrideFallRangeForShockwave = serialized->get_float(OverrideFallRangeForShockwave_type_id, -1.000000); 
 	}
 
 	[[nodiscard]] auto

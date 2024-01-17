@@ -11,9 +11,9 @@
 namespace rivet::ddl::generated {
 	DynamicEnumDef::DynamicEnumDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		VaultMetaData = serialized->unwrap_into<rivet::ddl::generated::VaultMetaData>(VaultMetaData_type_id);
-		IconPath = serialized->get_string(IconPath_type_id);
-		Name = serialized->get_string(Name_type_id);
-		Select = serialized->get_string(Select_type_id);
+		IconPath = serialized->get_string(IconPath_type_id, "");
+		Name = serialized->get_string(Name_type_id, {});
+		Select = serialized->get_string(Select_type_id, {});
 		Values = serialized->unwrap_into_many<rivet::ddl::generated::DynamicEnumValue>(Values_type_id); 
 	}
 

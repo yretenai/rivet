@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	PlanetChangedEvent::PlanetChangedEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		OldPlanetName = serialized->get_string(OldPlanetName_type_id);
-		NewPlanetName = serialized->get_string(NewPlanetName_type_id);
+		OldPlanetName = serialized->get_string(OldPlanetName_type_id, {});
+		NewPlanetName = serialized->get_string(NewPlanetName_type_id, {});
 		PrimarySegmentInfo = serialized->unwrap_into<rivet::ddl::generated::DevstatsPrimarySegmentInfo>(PrimarySegmentInfo_type_id); 
 	}
 

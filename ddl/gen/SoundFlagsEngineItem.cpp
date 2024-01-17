@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	SoundFlagsEngineItem::SoundFlagsEngineItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ShowDebugHud = serialized->get_bool(ShowDebugHud_type_id); 
+		ShowDebugHud = serialized->get_bool(ShowDebugHud_type_id, false); 
 	}
 
 	[[nodiscard]] auto

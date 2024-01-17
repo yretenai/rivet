@@ -7,16 +7,16 @@
 
 namespace rivet::ddl::generated {
 	PerformWarpEvent::PerformWarpEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		ResetType = serialized->get_enum<rivet::ddl::generated::xcf5ccb68>(ResetType_type_id, rivet::ddl::generated::xcf5ccb68_values);
-		ResetState = serialized->get_bool(ResetState_type_id);
-		ResetCamera = serialized->get_bool(ResetCamera_type_id);
-		RelativeCamera = serialized->get_bool(RelativeCamera_type_id);
-		RequireAuthority = serialized->get_bool(RequireAuthority_type_id);
-		ResetWeapons = serialized->get_bool(ResetWeapons_type_id);
-		ForceLoadScren = serialized->get_bool(ForceLoadScren_type_id);
-		Cloaked = serialized->get_bool(Cloaked_type_id);
-		UseDestinationActorMatrix = serialized->get_bool(UseDestinationActorMatrix_type_id);
-		ForceMoveZero = serialized->get_bool(ForceMoveZero_type_id); 
+		ResetType = serialized->get_enum<rivet::ddl::generated::xcf5ccb68>(ResetType_type_id, rivet::ddl::generated::xcf5ccb68_values, rivet::ddl::generated::xcf5ccb68::Stand);
+		ResetState = serialized->get_bool(ResetState_type_id, true);
+		ResetCamera = serialized->get_bool(ResetCamera_type_id, true);
+		RelativeCamera = serialized->get_bool(RelativeCamera_type_id, false);
+		RequireAuthority = serialized->get_bool(RequireAuthority_type_id, true);
+		ResetWeapons = serialized->get_bool(ResetWeapons_type_id, false);
+		ForceLoadScren = serialized->get_bool(ForceLoadScren_type_id, false);
+		Cloaked = serialized->get_bool(Cloaked_type_id, false);
+		UseDestinationActorMatrix = serialized->get_bool(UseDestinationActorMatrix_type_id, true);
+		ForceMoveZero = serialized->get_bool(ForceMoveZero_type_id, true); 
 	}
 
 	[[nodiscard]] auto

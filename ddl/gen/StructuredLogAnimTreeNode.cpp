@@ -15,10 +15,10 @@
 
 namespace rivet::ddl::generated {
 	StructuredLogAnimTreeNode::StructuredLogAnimTreeNode([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): StructuredLogStatement(serialized) {
-		Type = serialized->get_enum<rivet::ddl::generated::xc87cc46b>(Type_type_id, rivet::ddl::generated::xc87cc46b_values);
-		LayerId = serialized->get_uint8(LayerId_type_id);
-		DebugFlags = serialized->get_bitset<rivet::ddl::generated::xedfe550a>(DebugFlags_type_id, rivet::ddl::generated::xedfe550a_values);
-		Flags = serialized->get_bitset<rivet::ddl::generated::x41912c18>(Flags_type_id, rivet::ddl::generated::x41912c18_values); 
+		Type = serialized->get_enum<rivet::ddl::generated::xc87cc46b>(Type_type_id, rivet::ddl::generated::xc87cc46b_values, rivet::ddl::generated::xc87cc46b::TypeBindPose);
+		LayerId = serialized->get_uint8(LayerId_type_id, 0);
+		DebugFlags = serialized->get_bitset<rivet::ddl::generated::xedfe550a>(DebugFlags_type_id, rivet::ddl::generated::xedfe550a_values, 0);
+		Flags = serialized->get_bitset<rivet::ddl::generated::x41912c18>(Flags_type_id, rivet::ddl::generated::x41912c18_values, 0); 
 	}
 
 	[[nodiscard]] auto

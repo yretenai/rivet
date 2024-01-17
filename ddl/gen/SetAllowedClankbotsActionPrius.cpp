@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	SetAllowedClankbotsActionPrius::SetAllowedClankbotsActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		AllowClankbot = serialized->get_bool(AllowClankbot_type_id);
-		AllowPowerbot = serialized->get_bool(AllowPowerbot_type_id);
-		AllowSpringbot = serialized->get_bool(AllowSpringbot_type_id);
-		AllowStretchbot = serialized->get_bool(AllowStretchbot_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Puzzle);
+		AllowClankbot = serialized->get_bool(AllowClankbot_type_id, true);
+		AllowPowerbot = serialized->get_bool(AllowPowerbot_type_id, true);
+		AllowSpringbot = serialized->get_bool(AllowSpringbot_type_id, true);
+		AllowStretchbot = serialized->get_bool(AllowStretchbot_type_id, true); 
 	}
 
 	[[nodiscard]] auto

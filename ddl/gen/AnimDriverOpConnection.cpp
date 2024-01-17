@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	AnimDriverOpConnection::AnimDriverOpConnection([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		RefNodeName = serialized->get_string(RefNodeName_type_id);
-		Index = serialized->get_uint32(Index_type_id); 
+		RefNodeName = serialized->get_string(RefNodeName_type_id, "");
+		Index = serialized->get_uint32(Index_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

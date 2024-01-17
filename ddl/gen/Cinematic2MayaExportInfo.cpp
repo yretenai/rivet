@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	Cinematic2MayaExportInfo::Cinematic2MayaExportInfo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		File = serialized->get_string(File_type_id);
-		LastExportTime = serialized->get_string(LastExportTime_type_id);
-		ExportedFrom = serialized->get_string(ExportedFrom_type_id);
-		Notes = serialized->get_string(Notes_type_id);
-		UpdateFromMaya = serialized->get_bool(UpdateFromMaya_type_id); 
+		File = serialized->get_string(File_type_id, {});
+		LastExportTime = serialized->get_string(LastExportTime_type_id, {});
+		ExportedFrom = serialized->get_string(ExportedFrom_type_id, {});
+		Notes = serialized->get_string(Notes_type_id, {});
+		UpdateFromMaya = serialized->get_bool(UpdateFromMaya_type_id, false); 
 	}
 
 	[[nodiscard]] auto

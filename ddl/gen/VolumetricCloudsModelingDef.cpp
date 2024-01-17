@@ -7,24 +7,24 @@
 
 namespace rivet::ddl::generated {
 	VolumetricCloudsModelingDef::VolumetricCloudsModelingDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		CloudsLayerStart = serialized->get_float(CloudsLayerStart_type_id);
-		LayerThickness = serialized->get_float(LayerThickness_type_id);
-		BaseTile = serialized->get_float(BaseTile_type_id);
-		DetailTile = serialized->get_float(DetailTile_type_id);
-		DetailStrength = serialized->get_float(DetailStrength_type_id);
-		CurlNoiseTexture = serialized->get_string(CurlNoiseTexture_type_id);
-		CurlTile = serialized->get_float(CurlTile_type_id);
-		CurlStrength = serialized->get_float(CurlStrength_type_id);
-		CloudTopOffset = serialized->get_float(CloudTopOffset_type_id);
-		CloudSize = serialized->get_float(CloudSize_type_id);
-		CloudDensity = serialized->get_float(CloudDensity_type_id);
-		CloudCoverageModifier = serialized->get_float(CloudCoverageModifier_type_id);
-		CloudTypeModifier = serialized->get_float(CloudTypeModifier_type_id);
-		AnvilBias = serialized->get_float(AnvilBias_type_id);
-		WeatherTexSize = serialized->get_float(WeatherTexSize_type_id);
-		WeatherTexOffsetAzimuth = serialized->get_float(WeatherTexOffsetAzimuth_type_id);
-		WeatherTexOffsetDistance = serialized->get_float(WeatherTexOffsetDistance_type_id);
-		WeatherMap = serialized->get_string(WeatherMap_type_id); 
+		CloudsLayerStart = serialized->get_float(CloudsLayerStart_type_id, 15000.000000);
+		LayerThickness = serialized->get_float(LayerThickness_type_id, 85000.000000);
+		BaseTile = serialized->get_float(BaseTile_type_id, 0.621000);
+		DetailTile = serialized->get_float(DetailTile_type_id, 5.781000);
+		DetailStrength = serialized->get_float(DetailStrength_type_id, 0.250000);
+		CurlNoiseTexture = serialized->get_string(CurlNoiseTexture_type_id, "textures\\volumetricCloudsNoises\\CurlNoiseFBM.texture");
+		CurlTile = serialized->get_float(CurlTile_type_id, 0.100000);
+		CurlStrength = serialized->get_float(CurlStrength_type_id, 2000.000000);
+		CloudTopOffset = serialized->get_float(CloudTopOffset_type_id, 500.000000);
+		CloudSize = serialized->get_float(CloudSize_type_id, 100000.000000);
+		CloudDensity = serialized->get_float(CloudDensity_type_id, 3.000000);
+		CloudCoverageModifier = serialized->get_float(CloudCoverageModifier_type_id, 0.000000);
+		CloudTypeModifier = serialized->get_float(CloudTypeModifier_type_id, 0.000000);
+		AnvilBias = serialized->get_float(AnvilBias_type_id, 1.000000);
+		WeatherTexSize = serialized->get_float(WeatherTexSize_type_id, 1000000.000000);
+		WeatherTexOffsetAzimuth = serialized->get_float(WeatherTexOffsetAzimuth_type_id, 0.000000);
+		WeatherTexOffsetDistance = serialized->get_float(WeatherTexOffsetDistance_type_id, 0.000000);
+		WeatherMap = serialized->get_string(WeatherMap_type_id, "textures\\volumetricCloudsNoises\\WeatherMap.texture"); 
 	}
 
 	[[nodiscard]] auto

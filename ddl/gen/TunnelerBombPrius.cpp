@@ -9,20 +9,20 @@
 
 namespace rivet::ddl::generated {
 	TunnelerBombPrius::TunnelerBombPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Owner = serialized->get_uint32(Owner_type_id);
-		TargetHandle = serialized->get_uint32(TargetHandle_type_id);
-		WeaponId = serialized->get_uint32(WeaponId_type_id);
-		Damage = serialized->get_float(Damage_type_id);
-		Knockback = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(Knockback_type_id, rivet::ddl::generated::KnockbackLevels_values);
-		KnockbackAmount = serialized->get_float(KnockbackAmount_type_id);
-		TriggerRadius = serialized->get_float(TriggerRadius_type_id);
-		RiseUpDuration = serialized->get_float(RiseUpDuration_type_id);
-		RiseUpDistance = serialized->get_float(RiseUpDistance_type_id);
-		ExplodeDelay = serialized->get_float(ExplodeDelay_type_id);
-		ExplodeRadius = serialized->get_float(ExplodeRadius_type_id);
-		ExplodeAngle = serialized->get_float(ExplodeAngle_type_id);
-		ExplodeUseLOS = serialized->get_bool(ExplodeUseLOS_type_id);
-		AdditionalExplosion = serialized->get_bool(AdditionalExplosion_type_id);
+		Owner = serialized->get_uint32(Owner_type_id, 0);
+		TargetHandle = serialized->get_uint32(TargetHandle_type_id, 0);
+		WeaponId = serialized->get_uint32(WeaponId_type_id, 0);
+		Damage = serialized->get_float(Damage_type_id, 0.000000);
+		Knockback = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(Knockback_type_id, rivet::ddl::generated::KnockbackLevels_values, rivet::ddl::generated::KnockbackLevels::None);
+		KnockbackAmount = serialized->get_float(KnockbackAmount_type_id, 0.000000);
+		TriggerRadius = serialized->get_float(TriggerRadius_type_id, 2.000000);
+		RiseUpDuration = serialized->get_float(RiseUpDuration_type_id, 0.200000);
+		RiseUpDistance = serialized->get_float(RiseUpDistance_type_id, 1.500000);
+		ExplodeDelay = serialized->get_float(ExplodeDelay_type_id, 0.050000);
+		ExplodeRadius = serialized->get_float(ExplodeRadius_type_id, 2.500000);
+		ExplodeAngle = serialized->get_float(ExplodeAngle_type_id, 110.000000);
+		ExplodeUseLOS = serialized->get_bool(ExplodeUseLOS_type_id, true);
+		AdditionalExplosion = serialized->get_bool(AdditionalExplosion_type_id, false);
 		JumpParams = serialized->unwrap_into<rivet::ddl::generated::TunnelerJumpParams>(JumpParams_type_id); 
 	}
 

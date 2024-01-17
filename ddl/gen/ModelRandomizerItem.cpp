@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	ModelRandomizerItem::ModelRandomizerItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ModelItem = serialized->get_string(ModelItem_type_id);
-		ChooseWeight = serialized->get_float(ChooseWeight_type_id); 
+		ModelItem = serialized->get_string(ModelItem_type_id, {});
+		ChooseWeight = serialized->get_float(ChooseWeight_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

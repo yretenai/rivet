@@ -7,18 +7,18 @@
 
 namespace rivet::ddl::generated {
 	TestSignedPrius::TestSignedPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Signed = serialized->get_float(Signed_type_id);
-		Signed2 = serialized->get_int32(Signed2_type_id);
-		Signed3 = serialized->get_int32(Signed3_type_id);
-		Signed4 = serialized->get_float(Signed4_type_id);
-		Signed5 = serialized->get_int64(Signed5_type_id);
-		Signed6 = serialized->get_int64(Signed6_type_id);
-		Signed7 = serialized->get_int64(Signed7_type_id);
-		Signed8 = serialized->get_int64(Signed8_type_id);
-		Signed9 = serialized->get_int64(Signed9_type_id);
-		Signed9a = serialized->get_int64(Signed9a_type_id);
-		Signed9b = serialized->get_int64(Signed9b_type_id);
-		Signed9c = serialized->get_int64(Signed9c_type_id); 
+		Signed = serialized->get_float(Signed_type_id, 0.000000);
+		Signed2 = serialized->get_int32(Signed2_type_id, 0);
+		Signed3 = serialized->get_int32(Signed3_type_id, 0);
+		Signed4 = serialized->get_float(Signed4_type_id, 0.000000);
+		Signed5 = serialized->get_int64(Signed5_type_id, 0);
+		Signed6 = serialized->get_int64(Signed6_type_id, 0);
+		Signed7 = serialized->get_int64(Signed7_type_id, 0);
+		Signed8 = serialized->get_int64(Signed8_type_id, 0);
+		Signed9 = serialized->get_int64(Signed9_type_id, 0);
+		Signed9a = serialized->get_int64(Signed9a_type_id, 0);
+		Signed9b = serialized->get_int64(Signed9b_type_id, 0);
+		Signed9c = serialized->get_int64(Signed9c_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

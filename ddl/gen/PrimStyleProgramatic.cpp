@@ -9,10 +9,10 @@
 
 namespace rivet::ddl::generated {
 	PrimStyleProgramatic::PrimStyleProgramatic([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): PrimStyleBase(serialized) {
-		Style = serialized->get_uint32(Style_type_id);
+		Style = serialized->get_uint32(Style_type_id, 0);
 		PosA = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(PosA_type_id);
 		PosB = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(PosB_type_id);
-		Radius = serialized->get_float(Radius_type_id); 
+		Radius = serialized->get_float(Radius_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

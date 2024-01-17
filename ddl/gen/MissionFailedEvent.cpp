@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	MissionFailedEvent::MissionFailedEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		MissionName = serialized->get_string(MissionName_type_id);
-		Reason = serialized->get_string(Reason_type_id); 
+		MissionName = serialized->get_string(MissionName_type_id, {});
+		Reason = serialized->get_string(Reason_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

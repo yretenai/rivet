@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	FinaleBossSpawnData::FinaleBossSpawnData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): SimpleSpawnData(serialized) {
-		PortalIndex = serialized->get_uint8(PortalIndex_type_id); 
+		PortalIndex = serialized->get_uint8(PortalIndex_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

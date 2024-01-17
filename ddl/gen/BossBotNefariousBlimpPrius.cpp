@@ -10,9 +10,9 @@
 namespace rivet::ddl::generated {
 	BossBotNefariousBlimpPrius::BossBotNefariousBlimpPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BotPrius(serialized) {
 		HoverShuffleData = serialized->unwrap_into<rivet::ddl::generated::HoverShuffleData>(HoverShuffleData_type_id);
-		NefariousPilotAsset = serialized->get_string(NefariousPilotAsset_type_id);
-		LocatorToAttachPilot = serialized->get_string(LocatorToAttachPilot_type_id);
-		NefariousPilotScale = serialized->get_float(NefariousPilotScale_type_id); 
+		NefariousPilotAsset = serialized->get_string(NefariousPilotAsset_type_id, {});
+		LocatorToAttachPilot = serialized->get_string(LocatorToAttachPilot_type_id, "igLoc_nefarious_attach");
+		NefariousPilotScale = serialized->get_float(NefariousPilotScale_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

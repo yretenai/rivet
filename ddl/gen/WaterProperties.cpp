@@ -10,20 +10,20 @@
 namespace rivet::ddl::generated {
 	WaterProperties::WaterProperties([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		WaterColor = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(WaterColor_type_id);
-		WaterColorScale = serialized->get_float(WaterColorScale_type_id);
-		WaterScale = serialized->get_float(WaterScale_type_id);
+		WaterColorScale = serialized->get_float(WaterColorScale_type_id, 0.000100);
+		WaterScale = serialized->get_float(WaterScale_type_id, 1.000000);
 		FoamColor = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(FoamColor_type_id);
-		FoamAmp = serialized->get_float(FoamAmp_type_id);
-		FoamPower = serialized->get_float(FoamPower_type_id);
-		WaterDepth = serialized->get_float(WaterDepth_type_id);
-		WaterGloss = serialized->get_float(WaterGloss_type_id);
-		Darkening = serialized->get_float(Darkening_type_id);
-		FlowRate = serialized->get_float(FlowRate_type_id);
-		FlowPhase = serialized->get_float(FlowPhase_type_id);
-		FlowNoise = serialized->get_float(FlowNoise_type_id);
-		CausticsIntensity = serialized->get_float(CausticsIntensity_type_id);
-		CausticsDepthBias = serialized->get_float(CausticsDepthBias_type_id);
-		FlowMapPath = serialized->get_string(FlowMapPath_type_id); 
+		FoamAmp = serialized->get_float(FoamAmp_type_id, 0.000000);
+		FoamPower = serialized->get_float(FoamPower_type_id, 1.000000);
+		WaterDepth = serialized->get_float(WaterDepth_type_id, 2.000000);
+		WaterGloss = serialized->get_float(WaterGloss_type_id, 0.700000);
+		Darkening = serialized->get_float(Darkening_type_id, 0.500000);
+		FlowRate = serialized->get_float(FlowRate_type_id, 0.500000);
+		FlowPhase = serialized->get_float(FlowPhase_type_id, 0.050000);
+		FlowNoise = serialized->get_float(FlowNoise_type_id, 0.100000);
+		CausticsIntensity = serialized->get_float(CausticsIntensity_type_id, 0.000000);
+		CausticsDepthBias = serialized->get_float(CausticsDepthBias_type_id, 0.000000);
+		FlowMapPath = serialized->get_string(FlowMapPath_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

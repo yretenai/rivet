@@ -10,28 +10,28 @@
 
 namespace rivet::ddl::generated {
 	FollowModifierTargetFacingPrius::FollowModifierTargetFacingPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Priority = serialized->get_enum<rivet::ddl::generated::xf94df176>(Priority_type_id, rivet::ddl::generated::xf94df176_values);
-		VectorMode = serialized->get_enum<rivet::ddl::generated::x531b18aa>(VectorMode_type_id, rivet::ddl::generated::x531b18aa_values);
+		Priority = serialized->get_enum<rivet::ddl::generated::xf94df176>(Priority_type_id, rivet::ddl::generated::xf94df176_values, rivet::ddl::generated::xf94df176::Default);
+		VectorMode = serialized->get_enum<rivet::ddl::generated::x531b18aa>(VectorMode_type_id, rivet::ddl::generated::x531b18aa_values, rivet::ddl::generated::x531b18aa::None);
 		TargetVector = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(TargetVector_type_id);
-		TargetActorHandle = serialized->get_uint32(TargetActorHandle_type_id);
-		TargetYaw = serialized->get_float(TargetYaw_type_id);
-		TargetPitch = serialized->get_float(TargetPitch_type_id);
-		TargetTolerance = serialized->get_float(TargetTolerance_type_id);
-		AccelOrGain = serialized->get_float(AccelOrGain_type_id);
-		DecelOrDamp = serialized->get_float(DecelOrDamp_type_id);
-		SpeedMaxYaw = serialized->get_float(SpeedMaxYaw_type_id);
-		SpeedMaxPitch = serialized->get_float(SpeedMaxPitch_type_id);
-		ApplyDelay = serialized->get_float(ApplyDelay_type_id);
-		LockBlendTime = serialized->get_float(LockBlendTime_type_id);
-		PeakAngle = serialized->get_float(PeakAngle_type_id);
-		BackDeadAngle = serialized->get_float(BackDeadAngle_type_id);
-		DestroyOnBlock = serialized->get_bool(DestroyOnBlock_type_id);
-		DestroyOnInput = serialized->get_bool(DestroyOnInput_type_id);
-		DestroyOnComplete = serialized->get_bool(DestroyOnComplete_type_id);
-		UseYawInput = serialized->get_bool(UseYawInput_type_id);
-		UsePitchInput = serialized->get_bool(UsePitchInput_type_id);
-		ApplyWithInput = serialized->get_bool(ApplyWithInput_type_id);
-		MotionMode = serialized->get_enum<rivet::ddl::generated::x79dd0c33>(MotionMode_type_id, rivet::ddl::generated::x79dd0c33_values); 
+		TargetActorHandle = serialized->get_uint32(TargetActorHandle_type_id, 0);
+		TargetYaw = serialized->get_float(TargetYaw_type_id, 9999.000000);
+		TargetPitch = serialized->get_float(TargetPitch_type_id, 9999.000000);
+		TargetTolerance = serialized->get_float(TargetTolerance_type_id, 0.000000);
+		AccelOrGain = serialized->get_float(AccelOrGain_type_id, 30.000000);
+		DecelOrDamp = serialized->get_float(DecelOrDamp_type_id, 8.000000);
+		SpeedMaxYaw = serialized->get_float(SpeedMaxYaw_type_id, 230.000000);
+		SpeedMaxPitch = serialized->get_float(SpeedMaxPitch_type_id, 57.000000);
+		ApplyDelay = serialized->get_float(ApplyDelay_type_id, 0.000000);
+		LockBlendTime = serialized->get_float(LockBlendTime_type_id, 0.000000);
+		PeakAngle = serialized->get_float(PeakAngle_type_id, 3.141593);
+		BackDeadAngle = serialized->get_float(BackDeadAngle_type_id, 31.512678);
+		DestroyOnBlock = serialized->get_bool(DestroyOnBlock_type_id, true);
+		DestroyOnInput = serialized->get_bool(DestroyOnInput_type_id, false);
+		DestroyOnComplete = serialized->get_bool(DestroyOnComplete_type_id, false);
+		UseYawInput = serialized->get_bool(UseYawInput_type_id, false);
+		UsePitchInput = serialized->get_bool(UsePitchInput_type_id, false);
+		ApplyWithInput = serialized->get_bool(ApplyWithInput_type_id, true);
+		MotionMode = serialized->get_enum<rivet::ddl::generated::x79dd0c33>(MotionMode_type_id, rivet::ddl::generated::x79dd0c33_values, rivet::ddl::generated::x79dd0c33::Default); 
 	}
 
 	[[nodiscard]] auto

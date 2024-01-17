@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	ProjectileThrowingManagerEntry::ProjectileThrowingManagerEntry([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ThrowType = serialized->get_enum<rivet::ddl::generated::x40742051>(ThrowType_type_id, rivet::ddl::generated::x40742051_values);
+		ThrowType = serialized->get_enum<rivet::ddl::generated::x40742051>(ThrowType_type_id, rivet::ddl::generated::x40742051_values, rivet::ddl::generated::x40742051::Attack);
 		ThrowingComponent = serialized->unwrap_into<rivet::ddl::generated::ProjectileThrowingPrius>(ThrowingComponent_type_id); 
 	}
 

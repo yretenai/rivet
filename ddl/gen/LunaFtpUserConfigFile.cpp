@@ -9,9 +9,9 @@
 
 namespace rivet::ddl::generated {
 	LunaFtpUserConfigFile::LunaFtpUserConfigFile([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		UserName = serialized->get_string(UserName_type_id);
-		DefaultLocation = serialized->get_string(DefaultLocation_type_id);
-		DefaultProjectId = serialized->get_string(DefaultProjectId_type_id);
+		UserName = serialized->get_string(UserName_type_id, "");
+		DefaultLocation = serialized->get_string(DefaultLocation_type_id, "");
+		DefaultProjectId = serialized->get_string(DefaultProjectId_type_id, "");
 		Locations = serialized->unwrap_into_many<rivet::ddl::generated::LunaFtpUserLocation>(Locations_type_id); 
 	}
 

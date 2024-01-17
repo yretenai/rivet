@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	MaterialGraphSessionData::MaterialGraphSessionData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ReloadLibrary = serialized->get_bool(ReloadLibrary_type_id); 
+		ReloadLibrary = serialized->get_bool(ReloadLibrary_type_id, false); 
 	}
 
 	[[nodiscard]] auto

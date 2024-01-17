@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	MechanicMitigateEvent::MechanicMitigateEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): UDSEventBase(serialized) {
 		usedMechanics = serialized->get_strings(usedMechanics_type_id);
-		initiatorActor = serialized->get_string(initiatorActor_type_id);
+		initiatorActor = serialized->get_string(initiatorActor_type_id, {});
 		targetActors = serialized->get_strings(targetActors_type_id); 
 	}
 

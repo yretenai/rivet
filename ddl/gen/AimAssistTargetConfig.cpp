@@ -14,10 +14,10 @@ namespace rivet::ddl::generated {
 		AssistZones = serialized->unwrap_into_many<rivet::ddl::generated::AimAssistTargetZoneListItem>(AssistZones_type_id);
 		SnapLocations = serialized->unwrap_into_many<rivet::ddl::generated::AimAssistSnapLocationListItem>(SnapLocations_type_id);
 		AutoTargetLocations = serialized->unwrap_into_many<rivet::ddl::generated::AimAssistAutoTargetLocationListItem>(AutoTargetLocations_type_id);
-		TargetPriority = serialized->get_float(TargetPriority_type_id);
-		StrafeCenteringScale = serialized->get_float(StrafeCenteringScale_type_id);
-		Enabled = serialized->get_bool(Enabled_type_id);
-		BSphereInclusion = serialized->get_bool(BSphereInclusion_type_id); 
+		TargetPriority = serialized->get_float(TargetPriority_type_id, 1.000000);
+		StrafeCenteringScale = serialized->get_float(StrafeCenteringScale_type_id, 1.000000);
+		Enabled = serialized->get_bool(Enabled_type_id, true);
+		BSphereInclusion = serialized->get_bool(BSphereInclusion_type_id, true); 
 	}
 
 	[[nodiscard]] auto

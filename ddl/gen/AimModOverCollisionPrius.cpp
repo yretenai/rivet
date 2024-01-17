@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	AimModOverCollisionPrius::AimModOverCollisionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): AimModifierPrius(serialized) {
-		SourceLocator = serialized->get_string(SourceLocator_type_id);
-		CollRadius = serialized->get_float(CollRadius_type_id);
-		MaxTargetOffset = serialized->get_float(MaxTargetOffset_type_id);
-		BaseOffset = serialized->get_float(BaseOffset_type_id); 
+		SourceLocator = serialized->get_string(SourceLocator_type_id, {});
+		CollRadius = serialized->get_float(CollRadius_type_id, 0.100000);
+		MaxTargetOffset = serialized->get_float(MaxTargetOffset_type_id, 0.500000);
+		BaseOffset = serialized->get_float(BaseOffset_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

@@ -9,10 +9,10 @@
 
 namespace rivet::ddl::generated {
 	DropPodPrius::DropPodPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): IntroDataPrius(serialized) {
-		DropHeight = serialized->get_float(DropHeight_type_id);
-		DropDuration = serialized->get_float(DropDuration_type_id);
-		PostDropDelay = serialized->get_float(PostDropDelay_type_id);
-		ResetDelay = serialized->get_float(ResetDelay_type_id);
+		DropHeight = serialized->get_float(DropHeight_type_id, 50.000000);
+		DropDuration = serialized->get_float(DropDuration_type_id, 2.000000);
+		PostDropDelay = serialized->get_float(PostDropDelay_type_id, 1.500000);
+		ResetDelay = serialized->get_float(ResetDelay_type_id, 10.000000);
 		CamShake = serialized->unwrap_into<rivet::ddl::generated::CameraShakingWithFallOffData>(CamShake_type_id); 
 	}
 

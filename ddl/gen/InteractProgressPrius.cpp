@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	InteractProgressPrius::InteractProgressPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		InputNodeName = serialized->get_string(InputNodeName_type_id); 
+		InputNodeName = serialized->get_string(InputNodeName_type_id, "Hack_Progress"); 
 	}
 
 	[[nodiscard]] auto

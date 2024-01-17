@@ -11,16 +11,16 @@
 
 namespace rivet::ddl::generated {
 	AnimPerformanceClipDef::AnimPerformanceClipDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Name = serialized->get_string(Name_type_id);
-		LipsyncModified = serialized->get_bool(LipsyncModified_type_id);
-		DefaultPerformanceClip = serialized->get_string(DefaultPerformanceClip_type_id);
-		LocalizationPath = serialized->get_string(LocalizationPath_type_id);
-		PreBlendMs = serialized->get_int32(PreBlendMs_type_id);
-		PhonemeOffsetMs = serialized->get_int32(PhonemeOffsetMs_type_id);
-		PhonemeSmoothing = serialized->get_enum<rivet::ddl::generated::x16d59d74>(PhonemeSmoothing_type_id, rivet::ddl::generated::x16d59d74_values);
+		Name = serialized->get_string(Name_type_id, {});
+		LipsyncModified = serialized->get_bool(LipsyncModified_type_id, false);
+		DefaultPerformanceClip = serialized->get_string(DefaultPerformanceClip_type_id, {});
+		LocalizationPath = serialized->get_string(LocalizationPath_type_id, {});
+		PreBlendMs = serialized->get_int32(PreBlendMs_type_id, 66);
+		PhonemeOffsetMs = serialized->get_int32(PhonemeOffsetMs_type_id, -50);
+		PhonemeSmoothing = serialized->get_enum<rivet::ddl::generated::x16d59d74>(PhonemeSmoothing_type_id, rivet::ddl::generated::x16d59d74_values, rivet::ddl::generated::x16d59d74::Annosoft_Smoothing);
 		FacialPhonemes = serialized->unwrap_into_many<rivet::ddl::generated::AnimFacialPhonemeDef>(FacialPhonemes_type_id);
 		FacialExpressions = serialized->unwrap_into_many<rivet::ddl::generated::AnimFacialExpressionDef>(FacialExpressions_type_id);
-		FacialClipName = serialized->get_string(FacialClipName_type_id);
+		FacialClipName = serialized->get_string(FacialClipName_type_id, {});
 		BodyGestures = serialized->unwrap_into_many<rivet::ddl::generated::AnimGestureDef>(BodyGestures_type_id); 
 	}
 

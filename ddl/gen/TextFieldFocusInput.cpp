@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	TextFieldFocusInput::TextFieldFocusInput([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		TextFieldHasFocus = serialized->get_bool(TextFieldHasFocus_type_id); 
+		TextFieldHasFocus = serialized->get_bool(TextFieldHasFocus_type_id, false); 
 	}
 
 	[[nodiscard]] auto

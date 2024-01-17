@@ -12,12 +12,12 @@
 
 namespace rivet::ddl::generated {
 	MovingSurfacePrius::MovingSurfacePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MotionStyle = serialized->get_enum<rivet::ddl::generated::x77402cb9>(MotionStyle_type_id, rivet::ddl::generated::x77402cb9_values);
-		ApplyStyle = serialized->get_enum<rivet::ddl::generated::xf41a4c2>(ApplyStyle_type_id, rivet::ddl::generated::xf41a4c2_values);
-		CameraStyle = serialized->get_enum<rivet::ddl::generated::x9b6c99b2>(CameraStyle_type_id, rivet::ddl::generated::x9b6c99b2_values);
-		ReferenceJoint = serialized->get_string(ReferenceJoint_type_id);
-		UpdateRiderGravity = serialized->get_bool(UpdateRiderGravity_type_id);
-		NavDataZoneFile = serialized->get_string(NavDataZoneFile_type_id);
+		MotionStyle = serialized->get_enum<rivet::ddl::generated::x77402cb9>(MotionStyle_type_id, rivet::ddl::generated::x77402cb9_values, rivet::ddl::generated::x77402cb9::Parent);
+		ApplyStyle = serialized->get_enum<rivet::ddl::generated::xf41a4c2>(ApplyStyle_type_id, rivet::ddl::generated::xf41a4c2_values, rivet::ddl::generated::xf41a4c2::Always_If_Over);
+		CameraStyle = serialized->get_enum<rivet::ddl::generated::x9b6c99b2>(CameraStyle_type_id, rivet::ddl::generated::x9b6c99b2_values, rivet::ddl::generated::x9b6c99b2::All);
+		ReferenceJoint = serialized->get_string(ReferenceJoint_type_id, {});
+		UpdateRiderGravity = serialized->get_bool(UpdateRiderGravity_type_id, false);
+		NavDataZoneFile = serialized->get_string(NavDataZoneFile_type_id, {});
 		SoundEmitterIDs = serialized->get_uint64s(SoundEmitterIDs_type_id); 
 	}
 

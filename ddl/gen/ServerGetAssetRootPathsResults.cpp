@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	ServerGetAssetRootPathsResults::ServerGetAssetRootPathsResults([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		BuiltFolder = serialized->get_string(BuiltFolder_type_id);
-		SourceFolder = serialized->get_string(SourceFolder_type_id); 
+		BuiltFolder = serialized->get_string(BuiltFolder_type_id, {});
+		SourceFolder = serialized->get_string(SourceFolder_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

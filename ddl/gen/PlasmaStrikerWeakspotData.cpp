@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	PlasmaStrikerWeakspotData::PlasmaStrikerWeakspotData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		JointName = serialized->get_string(JointName_type_id); 
+		JointName = serialized->get_string(JointName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

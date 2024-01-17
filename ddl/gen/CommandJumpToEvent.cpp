@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	CommandJumpToEvent::CommandJumpToEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): CommandEvent(serialized) {
-		PickBestLandSpot = serialized->get_bool(PickBestLandSpot_type_id);
-		TrajectoryName = serialized->get_string(TrajectoryName_type_id); 
+		PickBestLandSpot = serialized->get_bool(PickBestLandSpot_type_id, false);
+		TrajectoryName = serialized->get_string(TrajectoryName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

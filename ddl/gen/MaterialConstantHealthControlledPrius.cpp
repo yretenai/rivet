@@ -9,10 +9,10 @@
 
 namespace rivet::ddl::generated {
 	MaterialConstantHealthControlledPrius::MaterialConstantHealthControlledPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ConstantName = serialized->get_string(ConstantName_type_id);
-		MaterialMappingName = serialized->get_string(MaterialMappingName_type_id);
-		UseHitPoints = serialized->get_bool(UseHitPoints_type_id);
-		Continuous = serialized->get_bool(Continuous_type_id);
+		ConstantName = serialized->get_string(ConstantName_type_id, "TValue");
+		MaterialMappingName = serialized->get_string(MaterialMappingName_type_id, {});
+		UseHitPoints = serialized->get_bool(UseHitPoints_type_id, false);
+		Continuous = serialized->get_bool(Continuous_type_id, false);
 		ValueData = serialized->unwrap_into_many<rivet::ddl::generated::MaterialConstantHealthControlledValueData>(ValueData_type_id); 
 	}
 

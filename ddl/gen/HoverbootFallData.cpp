@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	HoverbootFallData::HoverbootFallData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		JumpInputGracePeriod = serialized->get_float(JumpInputGracePeriod_type_id); 
+		JumpInputGracePeriod = serialized->get_float(JumpInputGracePeriod_type_id, 0.200000); 
 	}
 
 	[[nodiscard]] auto

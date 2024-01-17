@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	PirateChallengeElement::PirateChallengeElement([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		PirateType = serialized->get_enum<rivet::ddl::generated::PirateTypes>(PirateType_type_id, rivet::ddl::generated::PirateTypes_values);
-		Line = serialized->get_string(Line_type_id); 
+		PirateType = serialized->get_enum<rivet::ddl::generated::PirateTypes>(PirateType_type_id, rivet::ddl::generated::PirateTypes_values, rivet::ddl::generated::PirateTypes::Green);
+		Line = serialized->get_string(Line_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

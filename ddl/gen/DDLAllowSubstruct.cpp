@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	DDLAllowSubstruct::DDLAllowSubstruct([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Type = serialized->get_string(Type_type_id);
+		Type = serialized->get_string(Type_type_id, {});
 		Obj = serialized->get_field(Obj_type_id); 
 	}
 

@@ -7,20 +7,20 @@
 
 namespace rivet::ddl::generated {
 	GeyserFlowData::GeyserFlowData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		FlowVel = serialized->get_float(FlowVel_type_id);
-		FlowDuration = serialized->get_float(FlowDuration_type_id);
-		TaperVel = serialized->get_float(TaperVel_type_id);
-		TaperDuration = serialized->get_float(TaperDuration_type_id);
-		PostTaperDuration = serialized->get_float(PostTaperDuration_type_id);
-		ChecksPerSecond = serialized->get_float(ChecksPerSecond_type_id);
-		Gravity = serialized->get_float(Gravity_type_id);
-		Damage = serialized->get_float(Damage_type_id);
-		Knockback = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(Knockback_type_id, rivet::ddl::generated::KnockbackLevels_values);
-		KnockbackAmount = serialized->get_float(KnockbackAmount_type_id);
-		MaterialInner = serialized->get_string(MaterialInner_type_id);
-		RadiusInner = serialized->get_float(RadiusInner_type_id);
-		MaterialOuter = serialized->get_string(MaterialOuter_type_id);
-		RadiusOuter = serialized->get_float(RadiusOuter_type_id); 
+		FlowVel = serialized->get_float(FlowVel_type_id, 20.000000);
+		FlowDuration = serialized->get_float(FlowDuration_type_id, 4.000000);
+		TaperVel = serialized->get_float(TaperVel_type_id, 5.000000);
+		TaperDuration = serialized->get_float(TaperDuration_type_id, 2.000000);
+		PostTaperDuration = serialized->get_float(PostTaperDuration_type_id, 1.000000);
+		ChecksPerSecond = serialized->get_float(ChecksPerSecond_type_id, 2.000000);
+		Gravity = serialized->get_float(Gravity_type_id, 9.800000);
+		Damage = serialized->get_float(Damage_type_id, 5.000000);
+		Knockback = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(Knockback_type_id, rivet::ddl::generated::KnockbackLevels_values, rivet::ddl::generated::KnockbackLevels::One);
+		KnockbackAmount = serialized->get_float(KnockbackAmount_type_id, 10.000000);
+		MaterialInner = serialized->get_string(MaterialInner_type_id, {});
+		RadiusInner = serialized->get_float(RadiusInner_type_id, 0.400000);
+		MaterialOuter = serialized->get_string(MaterialOuter_type_id, {});
+		RadiusOuter = serialized->get_float(RadiusOuter_type_id, 0.750000); 
 	}
 
 	[[nodiscard]] auto

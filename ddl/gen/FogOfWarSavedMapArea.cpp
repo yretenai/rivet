@@ -12,8 +12,8 @@ namespace rivet::ddl::generated {
 		TopLeft = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(TopLeft_type_id);
 		BotRight = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(BotRight_type_id);
 		CellDimensions = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(CellDimensions_type_id);
-		ColumnCount = serialized->get_uint32(ColumnCount_type_id);
-		RowCount = serialized->get_uint32(RowCount_type_id);
+		ColumnCount = serialized->get_uint32(ColumnCount_type_id, 0);
+		RowCount = serialized->get_uint32(RowCount_type_id, 0);
 		RevealedCellsBitSet = serialized->get_uint8s(RevealedCellsBitSet_type_id); 
 	}
 

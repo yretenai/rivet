@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	AnimControllerStructuredTrace::AnimControllerStructuredTrace([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		WorldTimeFrameIndex = serialized->get_int32(WorldTimeFrameIndex_type_id);
-		DebugName = serialized->get_string(DebugName_type_id);
-		Message = serialized->get_string(Message_type_id); 
+		WorldTimeFrameIndex = serialized->get_int32(WorldTimeFrameIndex_type_id, 0);
+		DebugName = serialized->get_string(DebugName_type_id, {});
+		Message = serialized->get_string(Message_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

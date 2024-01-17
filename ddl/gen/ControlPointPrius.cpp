@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	ControlPointPrius::ControlPointPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Radius = serialized->get_float(Radius_type_id);
-		TimeToCap = serialized->get_float(TimeToCap_type_id);
-		RatePerTeamMember = serialized->get_float(RatePerTeamMember_type_id); 
+		Radius = serialized->get_float(Radius_type_id, 10.000000);
+		TimeToCap = serialized->get_float(TimeToCap_type_id, 60.000000);
+		RatePerTeamMember = serialized->get_float(RatePerTeamMember_type_id, 0.100000); 
 	}
 
 	[[nodiscard]] auto

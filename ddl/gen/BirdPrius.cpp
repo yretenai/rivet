@@ -9,26 +9,26 @@
 
 namespace rivet::ddl::generated {
 	BirdPrius::BirdPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): FlockablePrius(serialized) {
-		MinSpeed = serialized->get_float(MinSpeed_type_id);
-		MaxSpeed = serialized->get_float(MaxSpeed_type_id);
-		MinAccel = serialized->get_float(MinAccel_type_id);
-		MaxAccel = serialized->get_float(MaxAccel_type_id);
-		MinScale = serialized->get_float(MinScale_type_id);
-		MaxScale = serialized->get_float(MaxScale_type_id);
-		MinAnimRate = serialized->get_float(MinAnimRate_type_id);
-		MaxAnimRate = serialized->get_float(MaxAnimRate_type_id);
-		FlutterRange = serialized->get_float(FlutterRange_type_id);
-		MaxFlutterRate = serialized->get_float(MaxFlutterRate_type_id);
-		MinFleeReactionTime = serialized->get_float(MinFleeReactionTime_type_id);
-		FleeReactionTime = serialized->get_float(FleeReactionTime_type_id);
-		FleeDesperationTime = serialized->get_float(FleeDesperationTime_type_id);
-		FleeFailureTime = serialized->get_float(FleeFailureTime_type_id);
-		FleeAngle = serialized->get_float(FleeAngle_type_id);
-		MinFleeDistance = serialized->get_float(MinFleeDistance_type_id);
-		FleeFadeDelay = serialized->get_float(FleeFadeDelay_type_id);
+		MinSpeed = serialized->get_float(MinSpeed_type_id, 5.000000);
+		MaxSpeed = serialized->get_float(MaxSpeed_type_id, 10.000000);
+		MinAccel = serialized->get_float(MinAccel_type_id, 1.000000);
+		MaxAccel = serialized->get_float(MaxAccel_type_id, 2.500000);
+		MinScale = serialized->get_float(MinScale_type_id, 0.900000);
+		MaxScale = serialized->get_float(MaxScale_type_id, 1.100000);
+		MinAnimRate = serialized->get_float(MinAnimRate_type_id, 0.900000);
+		MaxAnimRate = serialized->get_float(MaxAnimRate_type_id, 1.100000);
+		FlutterRange = serialized->get_float(FlutterRange_type_id, 4.000000);
+		MaxFlutterRate = serialized->get_float(MaxFlutterRate_type_id, 2.000000);
+		MinFleeReactionTime = serialized->get_float(MinFleeReactionTime_type_id, 0.100000);
+		FleeReactionTime = serialized->get_float(FleeReactionTime_type_id, 0.250000);
+		FleeDesperationTime = serialized->get_float(FleeDesperationTime_type_id, 0.500000);
+		FleeFailureTime = serialized->get_float(FleeFailureTime_type_id, 0.750000);
+		FleeAngle = serialized->get_float(FleeAngle_type_id, 60.000000);
+		MinFleeDistance = serialized->get_float(MinFleeDistance_type_id, 20.000000);
+		FleeFadeDelay = serialized->get_float(FleeFadeDelay_type_id, 5.000000);
 		FlyAnims = serialized->unwrap_into_many<rivet::ddl::generated::BirdAnimItem>(FlyAnims_type_id);
 		LandedAnims = serialized->unwrap_into_many<rivet::ddl::generated::BirdAnimItem>(LandedAnims_type_id);
-		TakeOffAnim = serialized->get_string(TakeOffAnim_type_id); 
+		TakeOffAnim = serialized->get_string(TakeOffAnim_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

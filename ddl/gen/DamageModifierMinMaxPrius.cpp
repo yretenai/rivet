@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	DamageModifierMinMaxPrius::DamageModifierMinMaxPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): DamageModifierIncomingPrius(serialized) {
-		Min = serialized->get_float(Min_type_id);
-		Max = serialized->get_float(Max_type_id); 
+		Min = serialized->get_float(Min_type_id, 0.000000);
+		Max = serialized->get_float(Max_type_id, 1000.000000); 
 	}
 
 	[[nodiscard]] auto

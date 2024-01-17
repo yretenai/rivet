@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	ClothToggleEvent::ClothToggleEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Enable = serialized->get_bool(Enable_type_id);
-		EnableBlending = serialized->get_bool(EnableBlending_type_id); 
+		Enable = serialized->get_bool(Enable_type_id, true);
+		EnableBlending = serialized->get_bool(EnableBlending_type_id, true); 
 	}
 
 	[[nodiscard]] auto

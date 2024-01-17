@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	SceneEditorRelocateFileInput::SceneEditorRelocateFileInput([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SrcPath = serialized->get_string(SrcPath_type_id);
-		DstPath = serialized->get_string(DstPath_type_id); 
+		SrcPath = serialized->get_string(SrcPath_type_id, "");
+		DstPath = serialized->get_string(DstPath_type_id, ""); 
 	}
 
 	[[nodiscard]] auto

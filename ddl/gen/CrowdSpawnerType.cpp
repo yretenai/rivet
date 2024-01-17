@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	CrowdSpawnerType::CrowdSpawnerType([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		TypeConfig = serialized->get_string(TypeConfig_type_id);
+		TypeConfig = serialized->get_string(TypeConfig_type_id, {});
 		EnabledContainerRegions = serialized->get_strings(EnabledContainerRegions_type_id);
 		MissionUnlocks = serialized->unwrap_into<rivet::ddl::generated::ObjSysUnlockSequence>(MissionUnlocks_type_id); 
 	}

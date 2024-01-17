@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	PhysicsExperimentalSoftKickableConfig::PhysicsExperimentalSoftKickableConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		MaxContactImpulseAtLowSpeed = serialized->get_float(MaxContactImpulseAtLowSpeed_type_id);
-		LowSpeed = serialized->get_float(LowSpeed_type_id);
-		MaxContactImpulseAtHighSpeed = serialized->get_float(MaxContactImpulseAtHighSpeed_type_id);
-		HighSpeed = serialized->get_float(HighSpeed_type_id); 
+		MaxContactImpulseAtLowSpeed = serialized->get_float(MaxContactImpulseAtLowSpeed_type_id, 100.000000);
+		LowSpeed = serialized->get_float(LowSpeed_type_id, 0.000000);
+		MaxContactImpulseAtHighSpeed = serialized->get_float(MaxContactImpulseAtHighSpeed_type_id, 100.000000);
+		HighSpeed = serialized->get_float(HighSpeed_type_id, 100.000000); 
 	}
 
 	[[nodiscard]] auto

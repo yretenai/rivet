@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	AmbientCurveFacingActor::AmbientCurveFacingActor([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): AmbientCurveFacingBase(serialized) {
-		TargetActor = serialized->get_uint64(TargetActor_type_id); 
+		TargetActor = serialized->get_uint64(TargetActor_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

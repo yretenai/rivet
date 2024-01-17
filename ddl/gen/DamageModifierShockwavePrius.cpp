@@ -10,12 +10,12 @@
 
 namespace rivet::ddl::generated {
 	DamageModifierShockwavePrius::DamageModifierShockwavePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): DamageModifierOutgoingPrius(serialized) {
-		RequestId = serialized->get_uint32(RequestId_type_id);
+		RequestId = serialized->get_uint32(RequestId_type_id, 0);
 		CenterPosition = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(CenterPosition_type_id);
 		UpVector = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(UpVector_type_id);
-		Height = serialized->get_float(Height_type_id);
-		InnerRadius = serialized->get_float(InnerRadius_type_id);
-		OuterRadius = serialized->get_float(OuterRadius_type_id); 
+		Height = serialized->get_float(Height_type_id, 0.100000);
+		InnerRadius = serialized->get_float(InnerRadius_type_id, 0.000000);
+		OuterRadius = serialized->get_float(OuterRadius_type_id, 5.000000); 
 	}
 
 	[[nodiscard]] auto

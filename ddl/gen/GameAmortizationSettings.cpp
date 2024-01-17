@@ -12,9 +12,9 @@ namespace rivet::ddl::generated {
 	GameAmortizationSettings::GameAmortizationSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		FrameIntervalSettings = serialized->unwrap_into<rivet::ddl::generated::GameFrameIntervalAmoritizationSettings>(FrameIntervalSettings_type_id);
 		FrameBudgetSettings = serialized->unwrap_into<rivet::ddl::generated::GameFrameBudgetAmortizationSettings>(FrameBudgetSettings_type_id);
-		DoDamageStateAmortization = serialized->get_bool(DoDamageStateAmortization_type_id);
-		DoLootSystemSimpleSpawnPickupAmortization = serialized->get_bool(DoLootSystemSimpleSpawnPickupAmortization_type_id);
-		DoIncreasedProtoGrenadeQueryReduction = serialized->get_bool(DoIncreasedProtoGrenadeQueryReduction_type_id); 
+		DoDamageStateAmortization = serialized->get_bool(DoDamageStateAmortization_type_id, true);
+		DoLootSystemSimpleSpawnPickupAmortization = serialized->get_bool(DoLootSystemSimpleSpawnPickupAmortization_type_id, true);
+		DoIncreasedProtoGrenadeQueryReduction = serialized->get_bool(DoIncreasedProtoGrenadeQueryReduction_type_id, true); 
 	}
 
 	[[nodiscard]] auto

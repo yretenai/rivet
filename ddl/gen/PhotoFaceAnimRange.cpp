@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	PhotoFaceAnimRange::PhotoFaceAnimRange([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Min = serialized->get_float(Min_type_id);
-		Max = serialized->get_float(Max_type_id);
-		Speed = serialized->get_float(Speed_type_id); 
+		Min = serialized->get_float(Min_type_id, -1.000000);
+		Max = serialized->get_float(Max_type_id, 1.000000);
+		Speed = serialized->get_float(Speed_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

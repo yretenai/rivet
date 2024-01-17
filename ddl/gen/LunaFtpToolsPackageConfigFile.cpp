@@ -7,26 +7,26 @@
 
 namespace rivet::ddl::generated {
 	LunaFtpToolsPackageConfigFile::LunaFtpToolsPackageConfigFile([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		PackageName = serialized->get_string(PackageName_type_id);
-		ProjectId = serialized->get_string(ProjectId_type_id);
-		Branch = serialized->get_string(Branch_type_id);
-		VersionMajor = serialized->get_int32(VersionMajor_type_id);
-		VersionMinor = serialized->get_int32(VersionMinor_type_id);
-		VersionPatch = serialized->get_int32(VersionPatch_type_id);
-		BetaId = serialized->get_int32(BetaId_type_id);
-		Released = serialized->get_bool(Released_type_id);
-		PreReleasePackage = serialized->get_string(PreReleasePackage_type_id);
-		CreatedBy = serialized->get_string(CreatedBy_type_id);
-		CreationDate = serialized->get_string(CreationDate_type_id);
-		BuildType = serialized->get_string(BuildType_type_id);
-		ToolUiType = serialized->get_string(ToolUiType_type_id);
-		SyncedToCL = serialized->get_string(SyncedToCL_type_id);
-		CompatibleUpdaterVersion = serialized->get_string(CompatibleUpdaterVersion_type_id);
-		CompatibleHavokVersion = serialized->get_string(CompatibleHavokVersion_type_id);
-		CompatibleWinExtVersion = serialized->get_string(CompatibleWinExtVersion_type_id);
-		CompatibleMaya2018Version = serialized->get_string(CompatibleMaya2018Version_type_id);
-		CompatibleMaya2020Version = serialized->get_string(CompatibleMaya2020Version_type_id);
-		PythonDir = serialized->get_string(PythonDir_type_id); 
+		PackageName = serialized->get_string(PackageName_type_id, "");
+		ProjectId = serialized->get_string(ProjectId_type_id, "");
+		Branch = serialized->get_string(Branch_type_id, "");
+		VersionMajor = serialized->get_int32(VersionMajor_type_id, 0);
+		VersionMinor = serialized->get_int32(VersionMinor_type_id, 0);
+		VersionPatch = serialized->get_int32(VersionPatch_type_id, 0);
+		BetaId = serialized->get_int32(BetaId_type_id, -1);
+		Released = serialized->get_bool(Released_type_id, false);
+		PreReleasePackage = serialized->get_string(PreReleasePackage_type_id, "");
+		CreatedBy = serialized->get_string(CreatedBy_type_id, "");
+		CreationDate = serialized->get_string(CreationDate_type_id, "");
+		BuildType = serialized->get_string(BuildType_type_id, "");
+		ToolUiType = serialized->get_string(ToolUiType_type_id, "");
+		SyncedToCL = serialized->get_string(SyncedToCL_type_id, "");
+		CompatibleUpdaterVersion = serialized->get_string(CompatibleUpdaterVersion_type_id, "");
+		CompatibleHavokVersion = serialized->get_string(CompatibleHavokVersion_type_id, "");
+		CompatibleWinExtVersion = serialized->get_string(CompatibleWinExtVersion_type_id, "");
+		CompatibleMaya2018Version = serialized->get_string(CompatibleMaya2018Version_type_id, "");
+		CompatibleMaya2020Version = serialized->get_string(CompatibleMaya2020Version_type_id, "");
+		PythonDir = serialized->get_string(PythonDir_type_id, ""); 
 	}
 
 	[[nodiscard]] auto

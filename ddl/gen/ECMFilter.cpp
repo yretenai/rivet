@@ -10,12 +10,12 @@
 
 namespace rivet::ddl::generated {
 	ECMFilter::ECMFilter([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Name = serialized->get_string(Name_type_id);
-		ContinueType = serialized->get_enum<rivet::ddl::generated::x97f06575>(ContinueType_type_id, rivet::ddl::generated::x97f06575_values);
-		Scope = serialized->get_enum<rivet::ddl::generated::x3c7c71d2>(Scope_type_id, rivet::ddl::generated::x3c7c71d2_values);
+		Name = serialized->get_string(Name_type_id, {});
+		ContinueType = serialized->get_enum<rivet::ddl::generated::x97f06575>(ContinueType_type_id, rivet::ddl::generated::x97f06575_values, rivet::ddl::generated::x97f06575::Unresponded_Systems);
+		Scope = serialized->get_enum<rivet::ddl::generated::x3c7c71d2>(Scope_type_id, rivet::ddl::generated::x3c7c71d2_values, rivet::ddl::generated::x3c7c71d2::Self_Event_Only);
 		Selector = serialized->unwrap_into_many<rivet::ddl::generated::ECMSelector>(Selector_type_id);
 		Response = serialized->unwrap_into_many<rivet::ddl::generated::ECMResponse>(Response_type_id);
-		IsValid = serialized->get_bool(IsValid_type_id); 
+		IsValid = serialized->get_bool(IsValid_type_id, true); 
 	}
 
 	[[nodiscard]] auto

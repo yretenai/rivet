@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ApplyRandomMaterialInfo::ApplyRandomMaterialInfo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Material = serialized->get_string(Material_type_id); 
+		Material = serialized->get_string(Material_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

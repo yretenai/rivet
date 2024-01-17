@@ -9,10 +9,10 @@
 
 namespace rivet::ddl::generated {
 	UI_SoundEvent::UI_SoundEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Action = serialized->get_enum<rivet::ddl::generated::x6f4fd950>(Action_type_id, rivet::ddl::generated::x6f4fd950_values);
+		Action = serialized->get_enum<rivet::ddl::generated::x6f4fd950>(Action_type_id, rivet::ddl::generated::x6f4fd950_values, rivet::ddl::generated::x6f4fd950::SoundEventActionPlay);
 		WwiseEvent = serialized->unwrap_into<rivet::ddl::generated::WwiseSoundEvent>(WwiseEvent_type_id);
-		EventInitiator = serialized->get_string(EventInitiator_type_id);
-		TriggerLocator = serialized->get_string(TriggerLocator_type_id); 
+		EventInitiator = serialized->get_string(EventInitiator_type_id, {});
+		TriggerLocator = serialized->get_string(TriggerLocator_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

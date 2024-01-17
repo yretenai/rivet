@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	AimModLeadTargetPriusModDef::AimModLeadTargetPriusModDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Variable = serialized->get_enum<rivet::ddl::generated::x68870183>(Variable_type_id, rivet::ddl::generated::x68870183_values);
+		Variable = serialized->get_enum<rivet::ddl::generated::x68870183>(Variable_type_id, rivet::ddl::generated::x68870183_values, rivet::ddl::generated::x68870183::None);
 		ModList = serialized->unwrap_into_many<rivet::ddl::generated::ConfigModListElement>(ModList_type_id); 
 	}
 

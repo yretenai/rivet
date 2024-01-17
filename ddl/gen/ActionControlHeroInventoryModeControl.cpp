@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ActionControlHeroInventoryModeControl::ActionControlHeroInventoryModeControl([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Control = serialized->get_enum<rivet::ddl::generated::x6a041ccf>(Control_type_id, rivet::ddl::generated::x6a041ccf_values); 
+		Control = serialized->get_enum<rivet::ddl::generated::x6a041ccf>(Control_type_id, rivet::ddl::generated::x6a041ccf_values, rivet::ddl::generated::x6a041ccf::InventorySelect); 
 	}
 
 	[[nodiscard]] auto

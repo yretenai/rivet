@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	DiveAttackLandedEvent::DiveAttackLandedEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		SuperDive = serialized->get_bool(SuperDive_type_id); 
+		SuperDive = serialized->get_bool(SuperDive_type_id, false); 
 	}
 
 	[[nodiscard]] auto

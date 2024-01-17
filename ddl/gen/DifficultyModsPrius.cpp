@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	DifficultyModsPrius::DifficultyModsPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DifficultyModConfig = serialized->get_string(DifficultyModConfig_type_id);
-		DifficultyModProgressionBonusConfig = serialized->get_string(DifficultyModProgressionBonusConfig_type_id); 
+		DifficultyModConfig = serialized->get_string(DifficultyModConfig_type_id, {});
+		DifficultyModProgressionBonusConfig = serialized->get_string(DifficultyModProgressionBonusConfig_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

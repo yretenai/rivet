@@ -7,13 +7,13 @@
 
 namespace rivet::ddl::generated {
 	AutoDoorTrigger::AutoDoorTrigger([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		OpenVolume = serialized->get_uint64(OpenVolume_type_id);
-		CloseVolume = serialized->get_uint64(CloseVolume_type_id);
-		OpenRange = serialized->get_float(OpenRange_type_id);
-		CloseRange = serialized->get_float(CloseRange_type_id);
-		AllegianceChoice = serialized->get_enum<rivet::ddl::generated::x6bdf4ba1>(AllegianceChoice_type_id, rivet::ddl::generated::x6bdf4ba1_values);
-		AlleginaceRelation = serialized->get_enum<rivet::ddl::generated::AllegianceRelation>(AlleginaceRelation_type_id, rivet::ddl::generated::AllegianceRelation_values);
-		AllowBots = serialized->get_bool(AllowBots_type_id); 
+		OpenVolume = serialized->get_uint64(OpenVolume_type_id, 0);
+		CloseVolume = serialized->get_uint64(CloseVolume_type_id, 0);
+		OpenRange = serialized->get_float(OpenRange_type_id, 3.000000);
+		CloseRange = serialized->get_float(CloseRange_type_id, 4.500000);
+		AllegianceChoice = serialized->get_enum<rivet::ddl::generated::x6bdf4ba1>(AllegianceChoice_type_id, rivet::ddl::generated::x6bdf4ba1_values, rivet::ddl::generated::x6bdf4ba1::Neutral);
+		AlleginaceRelation = serialized->get_enum<rivet::ddl::generated::AllegianceRelation>(AlleginaceRelation_type_id, rivet::ddl::generated::AllegianceRelation_values, rivet::ddl::generated::AllegianceRelation::Any);
+		AllowBots = serialized->get_bool(AllowBots_type_id, false); 
 	}
 
 	[[nodiscard]] auto

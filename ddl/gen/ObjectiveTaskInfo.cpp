@@ -9,9 +9,9 @@
 
 namespace rivet::ddl::generated {
 	ObjectiveTaskInfo::ObjectiveTaskInfo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AlternateID = serialized->get_string(AlternateID_type_id);
-		NameTagOverride = serialized->get_string(NameTagOverride_type_id);
-		PlaytimeEstimate = serialized->get_uint32(PlaytimeEstimate_type_id);
+		AlternateID = serialized->get_string(AlternateID_type_id, {});
+		NameTagOverride = serialized->get_string(NameTagOverride_type_id, {});
+		PlaytimeEstimate = serialized->get_uint32(PlaytimeEstimate_type_id, 5);
 		Hints = serialized->unwrap_into_many<rivet::ddl::generated::ActivityHint>(Hints_type_id); 
 	}
 

@@ -9,12 +9,12 @@
 
 namespace rivet::ddl::generated {
 	CameraShakingData::CameraShakingData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		FadeinDuration = serialized->get_float(FadeinDuration_type_id);
-		Duration = serialized->get_float(Duration_type_id);
-		FadeoutDuration = serialized->get_float(FadeoutDuration_type_id);
-		UseRandomBaseOffset = serialized->get_bool(UseRandomBaseOffset_type_id);
-		OverrideViewportBlocking = serialized->get_bool(OverrideViewportBlocking_type_id);
-		FilterType = serialized->get_enum<rivet::ddl::generated::x82d89fa6>(FilterType_type_id, rivet::ddl::generated::x82d89fa6_values);
+		FadeinDuration = serialized->get_float(FadeinDuration_type_id, 0.000000);
+		Duration = serialized->get_float(Duration_type_id, 1.000000);
+		FadeoutDuration = serialized->get_float(FadeoutDuration_type_id, 2.000000);
+		UseRandomBaseOffset = serialized->get_bool(UseRandomBaseOffset_type_id, true);
+		OverrideViewportBlocking = serialized->get_bool(OverrideViewportBlocking_type_id, false);
+		FilterType = serialized->get_enum<rivet::ddl::generated::x82d89fa6>(FilterType_type_id, rivet::ddl::generated::x82d89fa6_values, rivet::ddl::generated::x82d89fa6::None);
 		CurveDataX = serialized->unwrap_into<rivet::ddl::generated::CameraShakingAxisData>(CurveDataX_type_id);
 		CurveDataY = serialized->unwrap_into<rivet::ddl::generated::CameraShakingAxisData>(CurveDataY_type_id);
 		CurveDataZ = serialized->unwrap_into<rivet::ddl::generated::CameraShakingAxisData>(CurveDataZ_type_id); 

@@ -9,11 +9,11 @@
 
 namespace rivet::ddl::generated {
 	CommandFollowCurveEvent::CommandFollowCurveEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): CommandEvent(serialized) {
-		CurveUid = serialized->get_uint64(CurveUid_type_id);
+		CurveUid = serialized->get_uint64(CurveUid_type_id, 0);
 		Destination = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Destination_type_id);
-		DoSmoothTransition = serialized->get_bool(DoSmoothTransition_type_id);
-		SmoothTransitionType = serialized->get_enum<rivet::ddl::generated::x3376434d>(SmoothTransitionType_type_id, rivet::ddl::generated::x3376434d_values);
-		FaceTarget = serialized->get_bool(FaceTarget_type_id); 
+		DoSmoothTransition = serialized->get_bool(DoSmoothTransition_type_id, false);
+		SmoothTransitionType = serialized->get_enum<rivet::ddl::generated::x3376434d>(SmoothTransitionType_type_id, rivet::ddl::generated::x3376434d_values, rivet::ddl::generated::x3376434d::Closest_Point);
+		FaceTarget = serialized->get_bool(FaceTarget_type_id, false); 
 	}
 
 	[[nodiscard]] auto

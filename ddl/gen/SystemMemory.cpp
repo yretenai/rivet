@@ -10,10 +10,10 @@
 namespace rivet::ddl::generated {
 	SystemMemory::SystemMemory([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Limits = serialized->unwrap_into_many<rivet::ddl::generated::AllocationLimit>(Limits_type_id);
-		SystemMemorySize = serialized->get_uint64(SystemMemorySize_type_id);
-		ExtraFlexibleMemory = serialized->get_uint64(ExtraFlexibleMemory_type_id);
-		EnforceLimits = serialized->get_bool(EnforceLimits_type_id);
-		TrackThreadStackSizes = serialized->get_bool(TrackThreadStackSizes_type_id); 
+		SystemMemorySize = serialized->get_uint64(SystemMemorySize_type_id, 0);
+		ExtraFlexibleMemory = serialized->get_uint64(ExtraFlexibleMemory_type_id, 0);
+		EnforceLimits = serialized->get_bool(EnforceLimits_type_id, false);
+		TrackThreadStackSizes = serialized->get_bool(TrackThreadStackSizes_type_id, false); 
 	}
 
 	[[nodiscard]] auto

@@ -10,8 +10,8 @@
 namespace rivet::ddl::generated {
 	MaterialNodeLibraryList::MaterialNodeLibraryList([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Libraries = serialized->unwrap_into_many<rivet::ddl::generated::MaterialNodeLibrary>(Libraries_type_id);
-		TimeStampLow = serialized->get_uint32(TimeStampLow_type_id);
-		TimeStampHigh = serialized->get_uint32(TimeStampHigh_type_id); 
+		TimeStampLow = serialized->get_uint32(TimeStampLow_type_id, 0);
+		TimeStampHigh = serialized->get_uint32(TimeStampHigh_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

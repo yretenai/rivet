@@ -12,7 +12,7 @@
 
 namespace rivet::ddl::generated {
 	DebugMenuOptionActionPrius::DebugMenuOptionActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		StartEnabled = serialized->get_bool(StartEnabled_type_id); 
+		StartEnabled = serialized->get_bool(StartEnabled_type_id, true); 
 	}
 
 	[[nodiscard]] auto

@@ -7,13 +7,13 @@
 
 namespace rivet::ddl::generated {
 	MaterialGraphComment::MaterialGraphComment([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		CommentId = serialized->get_uint64(CommentId_type_id);
-		XPos = serialized->get_int32(XPos_type_id);
-		YPos = serialized->get_int32(YPos_type_id);
-		Width = serialized->get_uint32(Width_type_id);
-		Height = serialized->get_uint32(Height_type_id);
-		Comment = serialized->get_string(Comment_type_id);
-		Description = serialized->get_string(Description_type_id); 
+		CommentId = serialized->get_uint64(CommentId_type_id, 0);
+		XPos = serialized->get_int32(XPos_type_id, 0);
+		YPos = serialized->get_int32(YPos_type_id, 0);
+		Width = serialized->get_uint32(Width_type_id, 32);
+		Height = serialized->get_uint32(Height_type_id, 32);
+		Comment = serialized->get_string(Comment_type_id, {});
+		Description = serialized->get_string(Description_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

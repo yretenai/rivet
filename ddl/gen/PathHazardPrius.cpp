@@ -7,17 +7,17 @@
 
 namespace rivet::ddl::generated {
 	PathHazardPrius::PathHazardPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		TrackingDistance = serialized->get_float(TrackingDistance_type_id);
-		TrackingSpeed = serialized->get_float(TrackingSpeed_type_id);
-		TrackingAccel = serialized->get_float(TrackingAccel_type_id);
-		TrackingDecel = serialized->get_float(TrackingDecel_type_id);
-		TelegraphTime = serialized->get_float(TelegraphTime_type_id);
-		RetreatTime = serialized->get_float(RetreatTime_type_id);
-		MovementCurve = serialized->get_uint64(MovementCurve_type_id);
-		CurveYPosOffset = serialized->get_float(CurveYPosOffset_type_id);
-		IdleSpeed = serialized->get_float(IdleSpeed_type_id);
-		IdleAccel = serialized->get_float(IdleAccel_type_id);
-		IdleDecel = serialized->get_float(IdleDecel_type_id); 
+		TrackingDistance = serialized->get_float(TrackingDistance_type_id, 6.000000);
+		TrackingSpeed = serialized->get_float(TrackingSpeed_type_id, 3.000000);
+		TrackingAccel = serialized->get_float(TrackingAccel_type_id, 1.000000);
+		TrackingDecel = serialized->get_float(TrackingDecel_type_id, 2.000000);
+		TelegraphTime = serialized->get_float(TelegraphTime_type_id, 2.000000);
+		RetreatTime = serialized->get_float(RetreatTime_type_id, 10.000000);
+		MovementCurve = serialized->get_uint64(MovementCurve_type_id, 0);
+		CurveYPosOffset = serialized->get_float(CurveYPosOffset_type_id, 0.000000);
+		IdleSpeed = serialized->get_float(IdleSpeed_type_id, 2.000000);
+		IdleAccel = serialized->get_float(IdleAccel_type_id, 2.000000);
+		IdleDecel = serialized->get_float(IdleDecel_type_id, 2.000000); 
 	}
 
 	[[nodiscard]] auto

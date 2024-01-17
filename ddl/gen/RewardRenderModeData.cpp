@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	RewardRenderModeData::RewardRenderModeData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Name = serialized->get_string(Name_type_id);
-		Pack = serialized->get_enum<rivet::ddl::generated::x84053194>(Pack_type_id, rivet::ddl::generated::x84053194_values);
-		EnableIn3DUI = serialized->get_bool(EnableIn3DUI_type_id); 
+		Name = serialized->get_string(Name_type_id, {});
+		Pack = serialized->get_enum<rivet::ddl::generated::x84053194>(Pack_type_id, rivet::ddl::generated::x84053194_values, rivet::ddl::generated::x84053194::One);
+		EnableIn3DUI = serialized->get_bool(EnableIn3DUI_type_id, true); 
 	}
 
 	[[nodiscard]] auto

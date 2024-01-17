@@ -7,27 +7,27 @@
 
 namespace rivet::ddl::generated {
 	SaveSettings::SaveSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		NumUsers = serialized->get_int32(NumUsers_type_id);
+		NumUsers = serialized->get_int32(NumUsers_type_id, 4);
 		SaveVersion = serialized->get_uint32s(SaveVersion_type_id);
 		SaveTypeNames = serialized->get_strings(SaveTypeNames_type_id);
 		SaveTypeSizes = serialized->get_uint32s(SaveTypeSizes_type_id);
 		NewTypeSizes = serialized->get_uint32s(NewTypeSizes_type_id);
-		CRCWriterHeapSize = serialized->get_uint32(CRCWriterHeapSize_type_id);
+		CRCWriterHeapSize = serialized->get_uint32(CRCWriterHeapSize_type_id, 2097152);
 		SaveTypeSlots = serialized->get_bools(SaveTypeSlots_type_id);
-		Title = serialized->get_string(Title_type_id);
-		UseCRC = serialized->get_bool(UseCRC_type_id);
-		ShowMessages = serialized->get_bool(ShowMessages_type_id);
-		CaptureSaveIcons = serialized->get_bool(CaptureSaveIcons_type_id);
-		MaxSnapshotsPerSlot = serialized->get_int32(MaxSnapshotsPerSlot_type_id);
-		MaxSavesPerSlot = serialized->get_int32(MaxSavesPerSlot_type_id);
-		DebugVerbosity = serialized->get_int32(DebugVerbosity_type_id);
-		DebugUI = serialized->get_int32(DebugUI_type_id);
-		ExtSaveEnable = serialized->get_bool(ExtSaveEnable_type_id);
-		ExtLoadEnable = serialized->get_bool(ExtLoadEnable_type_id);
-		ShowSaveIcon = serialized->get_bool(ShowSaveIcon_type_id);
-		MinSaveIconTime = serialized->get_float(MinSaveIconTime_type_id);
-		FatalAssertOnSaveBufferOverflow = serialized->get_bool(FatalAssertOnSaveBufferOverflow_type_id);
-		FatalAssertOnSaveIconDeadlock = serialized->get_bool(FatalAssertOnSaveIconDeadlock_type_id); 
+		Title = serialized->get_string(Title_type_id, "GameName");
+		UseCRC = serialized->get_bool(UseCRC_type_id, false);
+		ShowMessages = serialized->get_bool(ShowMessages_type_id, true);
+		CaptureSaveIcons = serialized->get_bool(CaptureSaveIcons_type_id, false);
+		MaxSnapshotsPerSlot = serialized->get_int32(MaxSnapshotsPerSlot_type_id, 16);
+		MaxSavesPerSlot = serialized->get_int32(MaxSavesPerSlot_type_id, 4);
+		DebugVerbosity = serialized->get_int32(DebugVerbosity_type_id, 0);
+		DebugUI = serialized->get_int32(DebugUI_type_id, 0);
+		ExtSaveEnable = serialized->get_bool(ExtSaveEnable_type_id, true);
+		ExtLoadEnable = serialized->get_bool(ExtLoadEnable_type_id, true);
+		ShowSaveIcon = serialized->get_bool(ShowSaveIcon_type_id, true);
+		MinSaveIconTime = serialized->get_float(MinSaveIconTime_type_id, 3.000000);
+		FatalAssertOnSaveBufferOverflow = serialized->get_bool(FatalAssertOnSaveBufferOverflow_type_id, false);
+		FatalAssertOnSaveIconDeadlock = serialized->get_bool(FatalAssertOnSaveIconDeadlock_type_id, false); 
 	}
 
 	[[nodiscard]] auto

@@ -9,13 +9,13 @@
 
 namespace rivet::ddl::generated {
 	Cinematic2CharacterLookActionDef::Cinematic2CharacterLookActionDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Id = serialized->get_uint64(Id_type_id);
-		Time = serialized->get_float(Time_type_id);
-		DurationType = serialized->get_enum<rivet::ddl::generated::x29c933e2>(DurationType_type_id, rivet::ddl::generated::x29c933e2_values);
-		Duration = serialized->get_float(Duration_type_id);
+		Id = serialized->get_uint64(Id_type_id, 0);
+		Time = serialized->get_float(Time_type_id, 0.000000);
+		DurationType = serialized->get_enum<rivet::ddl::generated::x29c933e2>(DurationType_type_id, rivet::ddl::generated::x29c933e2_values, rivet::ddl::generated::x29c933e2::None);
+		Duration = serialized->get_float(Duration_type_id, 0.000000);
 		BodyInfo = serialized->unwrap_into<rivet::ddl::generated::Cinematic2CharacterLookInfo>(BodyInfo_type_id);
 		HeadInfo = serialized->unwrap_into<rivet::ddl::generated::Cinematic2CharacterLookInfo>(HeadInfo_type_id);
-		HeadModel = serialized->get_string(HeadModel_type_id); 
+		HeadModel = serialized->get_string(HeadModel_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

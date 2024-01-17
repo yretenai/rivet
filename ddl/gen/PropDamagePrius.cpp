@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	PropDamagePrius::PropDamagePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DamageLocation1 = serialized->get_string(DamageLocation1_type_id);
-		DamageLocation2 = serialized->get_string(DamageLocation2_type_id); 
+		DamageLocation1 = serialized->get_string(DamageLocation1_type_id, {});
+		DamageLocation2 = serialized->get_string(DamageLocation2_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

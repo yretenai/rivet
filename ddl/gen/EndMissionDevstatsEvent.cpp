@@ -9,12 +9,12 @@
 
 namespace rivet::ddl::generated {
 	EndMissionDevstatsEvent::EndMissionDevstatsEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		EventId = serialized->get_string(EventId_type_id);
-		MissionSegmentId = serialized->get_string(MissionSegmentId_type_id);
-		MissionName = serialized->get_string(MissionName_type_id);
-		IsReplay = serialized->get_bool(IsReplay_type_id);
-		EndReason = serialized->get_enum<rivet::ddl::generated::x70690a01>(EndReason_type_id, rivet::ddl::generated::x70690a01_values);
-		MissionDuration = serialized->get_float(MissionDuration_type_id);
+		EventId = serialized->get_string(EventId_type_id, {});
+		MissionSegmentId = serialized->get_string(MissionSegmentId_type_id, {});
+		MissionName = serialized->get_string(MissionName_type_id, {});
+		IsReplay = serialized->get_bool(IsReplay_type_id, false);
+		EndReason = serialized->get_enum<rivet::ddl::generated::x70690a01>(EndReason_type_id, rivet::ddl::generated::x70690a01_values, rivet::ddl::generated::x70690a01::Complete);
+		MissionDuration = serialized->get_float(MissionDuration_type_id, 0.000000);
 		PlayerPosInfo = serialized->unwrap_into<rivet::ddl::generated::DevstatsPlayerPositionInfo>(PlayerPosInfo_type_id); 
 	}
 

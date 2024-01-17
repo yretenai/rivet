@@ -9,12 +9,12 @@
 
 namespace rivet::ddl::generated {
 	FreeMoveCamData::FreeMoveCamData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		TetherDistance = serialized->get_float(TetherDistance_type_id);
-		MoveSpeed = serialized->get_float(MoveSpeed_type_id);
-		RiseSpeed = serialized->get_float(RiseSpeed_type_id);
-		Acceleration = serialized->get_float(Acceleration_type_id);
+		TetherDistance = serialized->get_float(TetherDistance_type_id, 15.000000);
+		MoveSpeed = serialized->get_float(MoveSpeed_type_id, 4.000000);
+		RiseSpeed = serialized->get_float(RiseSpeed_type_id, 3.000000);
+		Acceleration = serialized->get_float(Acceleration_type_id, 20.000000);
 		YawAndPitch = serialized->unwrap_into<rivet::ddl::generated::YawAndPitchData>(YawAndPitch_type_id);
-		StickConfig = serialized->get_string(StickConfig_type_id); 
+		StickConfig = serialized->get_string(StickConfig_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

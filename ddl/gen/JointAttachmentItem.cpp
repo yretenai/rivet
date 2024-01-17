@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	JointAttachmentItem::JointAttachmentItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AttachedActor = serialized->get_uint64(AttachedActor_type_id);
-		AttachPoint = serialized->get_string(AttachPoint_type_id);
-		AttachRelative = serialized->get_bool(AttachRelative_type_id);
-		AttachPositionOnly = serialized->get_bool(AttachPositionOnly_type_id); 
+		AttachedActor = serialized->get_uint64(AttachedActor_type_id, 0);
+		AttachPoint = serialized->get_string(AttachPoint_type_id, {});
+		AttachRelative = serialized->get_bool(AttachRelative_type_id, false);
+		AttachPositionOnly = serialized->get_bool(AttachPositionOnly_type_id, false); 
 	}
 
 	[[nodiscard]] auto

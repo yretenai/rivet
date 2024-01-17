@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	WeaponImageData::WeaponImageData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Weapon = serialized->get_enum<rivet::ddl::generated::xd5643d7e>(Weapon_type_id, rivet::ddl::generated::xd5643d7e_values);
-		Texture = serialized->get_string(Texture_type_id);
-		TextureV5 = serialized->get_string(TextureV5_type_id); 
+		Weapon = serialized->get_enum<rivet::ddl::generated::xd5643d7e>(Weapon_type_id, rivet::ddl::generated::xd5643d7e_values, rivet::ddl::generated::xd5643d7e::Generic);
+		Texture = serialized->get_string(Texture_type_id, "");
+		TextureV5 = serialized->get_string(TextureV5_type_id, ""); 
 	}
 
 	[[nodiscard]] auto

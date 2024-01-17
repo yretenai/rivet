@@ -9,17 +9,17 @@
 
 namespace rivet::ddl::generated {
 	BotComboMoveFinaleProtonSeeker::BotComboMoveFinaleProtonSeeker([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BotComboMoveBase(serialized) {
-		SpawnedShotConfigTargeted = serialized->get_string(SpawnedShotConfigTargeted_type_id);
-		SpawnedShotConfigScatter = serialized->get_string(SpawnedShotConfigScatter_type_id);
-		SpawnedShotConfigExplosive = serialized->get_string(SpawnedShotConfigExplosive_type_id);
-		PortalActorAsset = serialized->get_string(PortalActorAsset_type_id);
-		WeaponActorAsset = serialized->get_string(WeaponActorAsset_type_id);
-		WeaponActorId = serialized->get_uint64(WeaponActorId_type_id);
-		WeaponActorVol = serialized->get_uint64(WeaponActorVol_type_id);
-		WeaponActorEmitLocator = serialized->get_string(WeaponActorEmitLocator_type_id);
-		CancelOutOfVolume = serialized->get_bool(CancelOutOfVolume_type_id);
-		RemainAfterAttack = serialized->get_bool(RemainAfterAttack_type_id);
-		GoThruEachFiringPattern = serialized->get_bool(GoThruEachFiringPattern_type_id);
+		SpawnedShotConfigTargeted = serialized->get_string(SpawnedShotConfigTargeted_type_id, {});
+		SpawnedShotConfigScatter = serialized->get_string(SpawnedShotConfigScatter_type_id, {});
+		SpawnedShotConfigExplosive = serialized->get_string(SpawnedShotConfigExplosive_type_id, {});
+		PortalActorAsset = serialized->get_string(PortalActorAsset_type_id, {});
+		WeaponActorAsset = serialized->get_string(WeaponActorAsset_type_id, {});
+		WeaponActorId = serialized->get_uint64(WeaponActorId_type_id, 0);
+		WeaponActorVol = serialized->get_uint64(WeaponActorVol_type_id, 0);
+		WeaponActorEmitLocator = serialized->get_string(WeaponActorEmitLocator_type_id, {});
+		CancelOutOfVolume = serialized->get_bool(CancelOutOfVolume_type_id, false);
+		RemainAfterAttack = serialized->get_bool(RemainAfterAttack_type_id, false);
+		GoThruEachFiringPattern = serialized->get_bool(GoThruEachFiringPattern_type_id, false);
 		FiringPatterns = serialized->unwrap_into_many<rivet::ddl::generated::ProtonSeekerFiringPattern>(FiringPatterns_type_id); 
 	}
 

@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	SingleShotFiringPrius::SingleShotFiringPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BasicShotFiringPrius(serialized) {
-		CullRemoteShots = serialized->get_bool(CullRemoteShots_type_id); 
+		CullRemoteShots = serialized->get_bool(CullRemoteShots_type_id, false); 
 	}
 
 	[[nodiscard]] auto

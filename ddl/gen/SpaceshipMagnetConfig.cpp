@@ -10,37 +10,37 @@
 
 namespace rivet::ddl::generated {
 	SpaceshipMagnetConfig::SpaceshipMagnetConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		AllowBullets = serialized->get_bool(AllowBullets_type_id);
-		RestrictTarget = serialized->get_bool(RestrictTarget_type_id);
-		FireOnlyOnValidTargets = serialized->get_bool(FireOnlyOnValidTargets_type_id);
-		TowedActorDamage = serialized->get_float(TowedActorDamage_type_id);
+		AllowBullets = serialized->get_bool(AllowBullets_type_id, false);
+		RestrictTarget = serialized->get_bool(RestrictTarget_type_id, false);
+		FireOnlyOnValidTargets = serialized->get_bool(FireOnlyOnValidTargets_type_id, false);
+		TowedActorDamage = serialized->get_float(TowedActorDamage_type_id, 10.000000);
 		WarshipFiringRange = serialized->unwrap_into<rivet::ddl::generated::WarshipFiringRangeDiffValue>(WarshipFiringRange_type_id);
-		MagnetShipSpeed = serialized->get_float(MagnetShipSpeed_type_id);
-		MagnetPitch = serialized->get_float(MagnetPitch_type_id);
-		MagnetFixed = serialized->get_bool(MagnetFixed_type_id);
-		MagnetRangeEasy = serialized->get_float(MagnetRangeEasy_type_id);
-		MagnetRadiusEasy = serialized->get_float(MagnetRadiusEasy_type_id);
-		MagnetRange = serialized->get_float(MagnetRange_type_id);
-		MagnetRadius = serialized->get_float(MagnetRadius_type_id);
-		MagnetRangeHard = serialized->get_float(MagnetRangeHard_type_id);
-		MagnetRadiusHard = serialized->get_float(MagnetRadiusHard_type_id);
-		EnergyInit = serialized->get_float(EnergyInit_type_id);
-		EnergyMinThreshold = serialized->get_float(EnergyMinThreshold_type_id);
-		EnergyMaxRegen = serialized->get_float(EnergyMaxRegen_type_id);
-		RegenTime = serialized->get_float(RegenTime_type_id);
-		TowMax = serialized->get_uint8(TowMax_type_id);
-		MaxAttackRuns = serialized->get_uint8(MaxAttackRuns_type_id);
-		AutoDestroyOnMaxRuns = serialized->get_bool(AutoDestroyOnMaxRuns_type_id);
-		TargetRadius = serialized->get_float(TargetRadius_type_id);
+		MagnetShipSpeed = serialized->get_float(MagnetShipSpeed_type_id, 10.000000);
+		MagnetPitch = serialized->get_float(MagnetPitch_type_id, 0.000000);
+		MagnetFixed = serialized->get_bool(MagnetFixed_type_id, false);
+		MagnetRangeEasy = serialized->get_float(MagnetRangeEasy_type_id, 35.000000);
+		MagnetRadiusEasy = serialized->get_float(MagnetRadiusEasy_type_id, 10.000000);
+		MagnetRange = serialized->get_float(MagnetRange_type_id, 20.000000);
+		MagnetRadius = serialized->get_float(MagnetRadius_type_id, 6.000000);
+		MagnetRangeHard = serialized->get_float(MagnetRangeHard_type_id, 20.000000);
+		MagnetRadiusHard = serialized->get_float(MagnetRadiusHard_type_id, 4.000000);
+		EnergyInit = serialized->get_float(EnergyInit_type_id, 0.000000);
+		EnergyMinThreshold = serialized->get_float(EnergyMinThreshold_type_id, 0.250000);
+		EnergyMaxRegen = serialized->get_float(EnergyMaxRegen_type_id, 0.500000);
+		RegenTime = serialized->get_float(RegenTime_type_id, 10.000000);
+		TowMax = serialized->get_uint8(TowMax_type_id, 20);
+		MaxAttackRuns = serialized->get_uint8(MaxAttackRuns_type_id, 5);
+		AutoDestroyOnMaxRuns = serialized->get_bool(AutoDestroyOnMaxRuns_type_id, true);
+		TargetRadius = serialized->get_float(TargetRadius_type_id, 12.000000);
 		UseMagCamInfoEasy = serialized->unwrap_into<rivet::ddl::generated::UseMagCamInfo>(UseMagCamInfoEasy_type_id);
 		UseMagCamInfoNormal = serialized->unwrap_into<rivet::ddl::generated::UseMagCamInfo>(UseMagCamInfoNormal_type_id);
 		UseMagCamInfoHard = serialized->unwrap_into<rivet::ddl::generated::UseMagCamInfo>(UseMagCamInfoHard_type_id);
-		UseMagTransInCamTimeMin = serialized->get_float(UseMagTransInCamTimeMin_type_id);
-		UseMagTransInCamTimeMax = serialized->get_float(UseMagTransInCamTimeMax_type_id);
-		UseMagTransOutCamTimeMin = serialized->get_float(UseMagTransOutCamTimeMin_type_id);
-		UseMagTransOutCamTimeMax = serialized->get_float(UseMagTransOutCamTimeMax_type_id);
-		TowCamCurveConfig = serialized->get_string(TowCamCurveConfig_type_id);
-		TowCamMaxOffset = serialized->get_float(TowCamMaxOffset_type_id); 
+		UseMagTransInCamTimeMin = serialized->get_float(UseMagTransInCamTimeMin_type_id, 0.500000);
+		UseMagTransInCamTimeMax = serialized->get_float(UseMagTransInCamTimeMax_type_id, 0.750000);
+		UseMagTransOutCamTimeMin = serialized->get_float(UseMagTransOutCamTimeMin_type_id, 0.600000);
+		UseMagTransOutCamTimeMax = serialized->get_float(UseMagTransOutCamTimeMax_type_id, 1.000000);
+		TowCamCurveConfig = serialized->get_string(TowCamCurveConfig_type_id, {});
+		TowCamMaxOffset = serialized->get_float(TowCamMaxOffset_type_id, -30.000000); 
 	}
 
 	[[nodiscard]] auto

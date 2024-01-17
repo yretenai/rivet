@@ -9,14 +9,14 @@
 
 namespace rivet::ddl::generated {
 	StreamingVideoPrius::StreamingVideoPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Config = serialized->get_string(Config_type_id);
-		PreloadVideo = serialized->get_bool(PreloadVideo_type_id);
-		PlayOnActivation = serialized->get_bool(PlayOnActivation_type_id);
-		ActivationDelay = serialized->get_float(ActivationDelay_type_id);
+		Config = serialized->get_string(Config_type_id, {});
+		PreloadVideo = serialized->get_bool(PreloadVideo_type_id, false);
+		PlayOnActivation = serialized->get_bool(PlayOnActivation_type_id, true);
+		ActivationDelay = serialized->get_float(ActivationDelay_type_id, -1.000000);
 		MaterialOverride = serialized->unwrap_into<rivet::ddl::generated::StreamingVideoMaterialOverride>(MaterialOverride_type_id);
 		ExtraMaterialOverrides = serialized->unwrap_into_many<rivet::ddl::generated::StreamingVideoMaterialOverride>(ExtraMaterialOverrides_type_id);
-		TextureToReplace = serialized->get_string(TextureToReplace_type_id);
-		MaterialTexture = serialized->get_string(MaterialTexture_type_id); 
+		TextureToReplace = serialized->get_string(TextureToReplace_type_id, {});
+		MaterialTexture = serialized->get_string(MaterialTexture_type_id, "BaseMap2D_Texture"); 
 	}
 
 	[[nodiscard]] auto

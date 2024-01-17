@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	GiveItemEffectNodeDef::GiveItemEffectNodeDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): NodalShotEffectNodeBaseDef(serialized) {
-		ActorType = serialized->get_enum<rivet::ddl::generated::x684c6439>(ActorType_type_id, rivet::ddl::generated::x684c6439_values);
-		ConfigAsset = serialized->get_string(ConfigAsset_type_id); 
+		ActorType = serialized->get_enum<rivet::ddl::generated::x684c6439>(ActorType_type_id, rivet::ddl::generated::x684c6439_values, rivet::ddl::generated::x684c6439::HitActor);
+		ConfigAsset = serialized->get_string(ConfigAsset_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

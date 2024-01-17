@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ArenaLink::ArenaLink([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ParentLink(serialized) {
-		Checkpoint = serialized->get_string(Checkpoint_type_id); 
+		Checkpoint = serialized->get_string(Checkpoint_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

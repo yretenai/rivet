@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	ClockControlEngineItem::ClockControlEngineItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		State = serialized->get_enum<rivet::ddl::generated::xcdedea98>(State_type_id, rivet::ddl::generated::xcdedea98_values);
-		Rate = serialized->get_float(Rate_type_id); 
+		State = serialized->get_enum<rivet::ddl::generated::xcdedea98>(State_type_id, rivet::ddl::generated::xcdedea98_values, rivet::ddl::generated::xcdedea98::Run);
+		Rate = serialized->get_float(Rate_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

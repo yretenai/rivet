@@ -9,13 +9,13 @@
 
 namespace rivet::ddl::generated {
 	AttachedHealthBarPrius::AttachedHealthBarPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		HealthBarActor = serialized->get_string(HealthBarActor_type_id);
-		AttachToJoint = serialized->get_string(AttachToJoint_type_id);
+		HealthBarActor = serialized->get_string(HealthBarActor_type_id, {});
+		AttachToJoint = serialized->get_string(AttachToJoint_type_id, "");
 		AttachOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(AttachOffset_type_id);
-		Scale = serialized->get_float(Scale_type_id);
-		HideAfterTime = serialized->get_bool(HideAfterTime_type_id);
-		ShowOnHealthGain = serialized->get_bool(ShowOnHealthGain_type_id);
-		AttachWorldOffset = serialized->get_bool(AttachWorldOffset_type_id); 
+		Scale = serialized->get_float(Scale_type_id, 1.000000);
+		HideAfterTime = serialized->get_bool(HideAfterTime_type_id, true);
+		ShowOnHealthGain = serialized->get_bool(ShowOnHealthGain_type_id, true);
+		AttachWorldOffset = serialized->get_bool(AttachWorldOffset_type_id, true); 
 	}
 
 	[[nodiscard]] auto

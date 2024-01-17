@@ -10,10 +10,10 @@
 namespace rivet::ddl::generated {
 	UIJukeboxSong::UIJukeboxSong([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		WwiseState = serialized->unwrap_into<rivet::ddl::generated::WwiseState>(WwiseState_type_id);
-		Title = serialized->get_string(Title_type_id);
-		Artist = serialized->get_string(Artist_type_id);
-		GoldBoltUnlock = serialized->get_enum<rivet::ddl::generated::xf06c6830>(GoldBoltUnlock_type_id, rivet::ddl::generated::xf06c6830_values);
-		MissionUnlock = serialized->get_string(MissionUnlock_type_id); 
+		Title = serialized->get_string(Title_type_id, {});
+		Artist = serialized->get_string(Artist_type_id, {});
+		GoldBoltUnlock = serialized->get_enum<rivet::ddl::generated::xf06c6830>(GoldBoltUnlock_type_id, rivet::ddl::generated::xf06c6830_values, rivet::ddl::generated::xf06c6830::None);
+		MissionUnlock = serialized->get_string(MissionUnlock_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	AddToActorGroupPrius::AddToActorGroupPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		GlobalActorGroupName = serialized->get_string(GlobalActorGroupName_type_id); 
+		GlobalActorGroupName = serialized->get_string(GlobalActorGroupName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

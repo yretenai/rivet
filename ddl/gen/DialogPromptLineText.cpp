@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	DialogPromptLineText::DialogPromptLineText([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): DialogPromptLine(serialized) {
-		LocalizationTag = serialized->get_string(LocalizationTag_type_id); 
+		LocalizationTag = serialized->get_string(LocalizationTag_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

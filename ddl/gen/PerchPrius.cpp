@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	PerchPrius::PerchPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AddToDBOnActivate = serialized->get_bool(AddToDBOnActivate_type_id);
-		RopeAttachLocation = serialized->get_uint64(RopeAttachLocation_type_id); 
+		AddToDBOnActivate = serialized->get_bool(AddToDBOnActivate_type_id, false);
+		RopeAttachLocation = serialized->get_uint64(RopeAttachLocation_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

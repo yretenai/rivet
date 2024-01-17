@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	FossilizeTimeSlowStartEvent::FossilizeTimeSlowStartEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		NewSlow = serialized->get_bool(NewSlow_type_id); 
+		NewSlow = serialized->get_bool(NewSlow_type_id, true); 
 	}
 
 	[[nodiscard]] auto

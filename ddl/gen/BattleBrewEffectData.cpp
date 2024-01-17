@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	BattleBrewEffectData::BattleBrewEffectData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		BrewName = serialized->get_string(BrewName_type_id);
+		BrewName = serialized->get_string(BrewName_type_id, {});
 		Emitters = serialized->unwrap_into_many<rivet::ddl::generated::BattleBrewEmitterWrapper>(Emitters_type_id); 
 	}
 

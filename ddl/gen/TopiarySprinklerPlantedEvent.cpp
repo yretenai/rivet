@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	TopiarySprinklerPlantedEvent::TopiarySprinklerPlantedEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		SurfaceIsMostlyVertical = serialized->get_bool(SurfaceIsMostlyVertical_type_id); 
+		SurfaceIsMostlyVertical = serialized->get_bool(SurfaceIsMostlyVertical_type_id, false); 
 	}
 
 	[[nodiscard]] auto

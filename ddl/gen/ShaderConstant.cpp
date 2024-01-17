@@ -10,22 +10,22 @@
 
 namespace rivet::ddl::generated {
 	ShaderConstant::ShaderConstant([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Name = serialized->get_string(Name_type_id);
-		DisplayName = serialized->get_string(DisplayName_type_id);
-		InputInternalName = serialized->get_string(InputInternalName_type_id);
-		Description = serialized->get_string(Description_type_id);
-		UIType = serialized->get_string(UIType_type_id);
-		Labels = serialized->get_string(Labels_type_id);
-		Group = serialized->get_string(Group_type_id);
-		SortOrder = serialized->get_string(SortOrder_type_id);
-		SubGraphAncestors = serialized->get_string(SubGraphAncestors_type_id);
-		Offset = serialized->get_uint16(Offset_type_id);
-		Size = serialized->get_uint16(Size_type_id);
+		Name = serialized->get_string(Name_type_id, {});
+		DisplayName = serialized->get_string(DisplayName_type_id, {});
+		InputInternalName = serialized->get_string(InputInternalName_type_id, {});
+		Description = serialized->get_string(Description_type_id, {});
+		UIType = serialized->get_string(UIType_type_id, {});
+		Labels = serialized->get_string(Labels_type_id, {});
+		Group = serialized->get_string(Group_type_id, {});
+		SortOrder = serialized->get_string(SortOrder_type_id, {});
+		SubGraphAncestors = serialized->get_string(SubGraphAncestors_type_id, {});
+		Offset = serialized->get_uint16(Offset_type_id, 0);
+		Size = serialized->get_uint16(Size_type_id, 0);
 		MinRange = serialized->get_floats(MinRange_type_id);
 		MaxRange = serialized->get_floats(MaxRange_type_id);
 		Content = serialized->get_floats(Content_type_id);
 		SelectItems = serialized->unwrap_into_many<rivet::ddl::generated::MaterialNodeInputSelectItem>(SelectItems_type_id);
-		DeveloperMode = serialized->get_bool(DeveloperMode_type_id);
+		DeveloperMode = serialized->get_bool(DeveloperMode_type_id, false);
 		VisibilityCondition = serialized->unwrap_into<rivet::ddl::generated::MaterialNodeInputVisibilityCondition>(VisibilityCondition_type_id); 
 	}
 

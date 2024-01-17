@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	CelebrateDifficultyData::CelebrateDifficultyData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Difficulty = serialized->get_enum<rivet::ddl::generated::xd2b2d773>(Difficulty_type_id, rivet::ddl::generated::xd2b2d773_values);
-		Cooldown = serialized->get_float(Cooldown_type_id); 
+		Difficulty = serialized->get_enum<rivet::ddl::generated::xd2b2d773>(Difficulty_type_id, rivet::ddl::generated::xd2b2d773_values, rivet::ddl::generated::xd2b2d773::Easy);
+		Cooldown = serialized->get_float(Cooldown_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

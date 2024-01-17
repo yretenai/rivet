@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	AimModLockOnAimingAtCoverPrius::AimModLockOnAimingAtCoverPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): AimModifierPrius(serialized) {
-		SourceLocator = serialized->get_string(SourceLocator_type_id);
-		CollRadius = serialized->get_float(CollRadius_type_id);
-		LockRangeFromTargetToCover = serialized->get_float(LockRangeFromTargetToCover_type_id);
-		LockDelay = serialized->get_float(LockDelay_type_id); 
+		SourceLocator = serialized->get_string(SourceLocator_type_id, {});
+		CollRadius = serialized->get_float(CollRadius_type_id, 0.100000);
+		LockRangeFromTargetToCover = serialized->get_float(LockRangeFromTargetToCover_type_id, 5.000000);
+		LockDelay = serialized->get_float(LockDelay_type_id, 0.100000); 
 	}
 
 	[[nodiscard]] auto

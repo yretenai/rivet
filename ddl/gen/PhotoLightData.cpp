@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	PhotoLightData::PhotoLightData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MinIntensity = serialized->get_float(MinIntensity_type_id);
-		MaxIntensity = serialized->get_float(MaxIntensity_type_id); 
+		MinIntensity = serialized->get_float(MinIntensity_type_id, 0.100000);
+		MaxIntensity = serialized->get_float(MaxIntensity_type_id, 20.000000); 
 	}
 
 	[[nodiscard]] auto

@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	WeaponRefireBurstBeginEvent::WeaponRefireBurstBeginEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		OwnerIsHero = serialized->get_bool(OwnerIsHero_type_id);
-		OwnerIsLocal = serialized->get_bool(OwnerIsLocal_type_id); 
+		OwnerIsHero = serialized->get_bool(OwnerIsHero_type_id, false);
+		OwnerIsLocal = serialized->get_bool(OwnerIsLocal_type_id, false); 
 	}
 
 	[[nodiscard]] auto

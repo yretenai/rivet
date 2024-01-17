@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	GameCheckpointTriggerPrius::GameCheckpointTriggerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		StartEnabled = serialized->get_bool(StartEnabled_type_id);
-		CheckpointName = serialized->get_string(CheckpointName_type_id);
-		IsReusable = serialized->get_bool(IsReusable_type_id);
-		AddlArea = serialized->get_uint64(AddlArea_type_id);
-		NonVolRange = serialized->get_float(NonVolRange_type_id); 
+		StartEnabled = serialized->get_bool(StartEnabled_type_id, true);
+		CheckpointName = serialized->get_string(CheckpointName_type_id, "default");
+		IsReusable = serialized->get_bool(IsReusable_type_id, false);
+		AddlArea = serialized->get_uint64(AddlArea_type_id, 0);
+		NonVolRange = serialized->get_float(NonVolRange_type_id, 10.000000); 
 	}
 
 	[[nodiscard]] auto

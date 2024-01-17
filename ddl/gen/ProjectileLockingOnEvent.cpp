@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ProjectileLockingOnEvent::ProjectileLockingOnEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		VictimLocator = serialized->get_string(VictimLocator_type_id); 
+		VictimLocator = serialized->get_string(VictimLocator_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

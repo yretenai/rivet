@@ -9,10 +9,10 @@
 
 namespace rivet::ddl::generated {
 	BotComboLaserShot::BotComboLaserShot([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BotComboMove(serialized) {
-		LaserMaxLength = serialized->get_float(LaserMaxLength_type_id);
-		CurveActorId = serialized->get_uint64(CurveActorId_type_id);
-		DisableHitReactPartialsDuringAttack = serialized->get_bool(DisableHitReactPartialsDuringAttack_type_id);
-		SpawnedShotConfig = serialized->get_string(SpawnedShotConfig_type_id);
+		LaserMaxLength = serialized->get_float(LaserMaxLength_type_id, 100.000000);
+		CurveActorId = serialized->get_uint64(CurveActorId_type_id, 0);
+		DisableHitReactPartialsDuringAttack = serialized->get_bool(DisableHitReactPartialsDuringAttack_type_id, false);
+		SpawnedShotConfig = serialized->get_string(SpawnedShotConfig_type_id, {});
 		LaserShotType = serialized->unwrap_into<rivet::ddl::generated::BotComboLaserShotType>(LaserShotType_type_id); 
 	}
 

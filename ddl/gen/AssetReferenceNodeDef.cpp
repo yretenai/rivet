@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	AssetReferenceNodeDef::AssetReferenceNodeDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): NodeBaseDef(serialized) {
-		Name = serialized->get_string(Name_type_id);
-		AssetPath = serialized->get_string(AssetPath_type_id); 
+		Name = serialized->get_string(Name_type_id, {});
+		AssetPath = serialized->get_string(AssetPath_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

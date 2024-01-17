@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	GrindVolumeApproachData::GrindVolumeApproachData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ApproachStartDistance = serialized->get_float(ApproachStartDistance_type_id);
-		ApproachDoneDistance = serialized->get_float(ApproachDoneDistance_type_id); 
+		ApproachStartDistance = serialized->get_float(ApproachStartDistance_type_id, 30.000000);
+		ApproachDoneDistance = serialized->get_float(ApproachDoneDistance_type_id, 5.000000); 
 	}
 
 	[[nodiscard]] auto

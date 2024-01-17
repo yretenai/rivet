@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	VehicleCollisionInfo::VehicleCollisionInfo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ObstacleStopDist = serialized->get_float(ObstacleStopDist_type_id);
-		ObstacleNoteDist = serialized->get_float(ObstacleNoteDist_type_id);
-		MinDistanceToObstacle = serialized->get_float(MinDistanceToObstacle_type_id);
-		ObstacleSampleCount = serialized->get_uint32(ObstacleSampleCount_type_id); 
+		ObstacleStopDist = serialized->get_float(ObstacleStopDist_type_id, 15.000000);
+		ObstacleNoteDist = serialized->get_float(ObstacleNoteDist_type_id, 30.000000);
+		MinDistanceToObstacle = serialized->get_float(MinDistanceToObstacle_type_id, 5.000000);
+		ObstacleSampleCount = serialized->get_uint32(ObstacleSampleCount_type_id, 10); 
 	}
 
 	[[nodiscard]] auto

@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	VaultViewerSetAsset::VaultViewerSetAsset([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AssetName = serialized->get_string(AssetName_type_id);
+		AssetName = serialized->get_string(AssetName_type_id, {});
 		AnimSetStack = serialized->get_strings(AnimSetStack_type_id);
-		AnimSetActorAssetPath = serialized->get_string(AnimSetActorAssetPath_type_id);
-		AnimSetModelAssetPath = serialized->get_string(AnimSetModelAssetPath_type_id); 
+		AnimSetActorAssetPath = serialized->get_string(AnimSetActorAssetPath_type_id, {});
+		AnimSetModelAssetPath = serialized->get_string(AnimSetModelAssetPath_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

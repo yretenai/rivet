@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	CameraAutoDepthOfFieldPrius::CameraAutoDepthOfFieldPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Enabled = serialized->get_bool(Enabled_type_id);
-		NearFocusDistance = serialized->get_float(NearFocusDistance_type_id);
-		NearApertureScale = serialized->get_float(NearApertureScale_type_id);
-		FocusDistance = serialized->get_float(FocusDistance_type_id);
-		ApertureScale = serialized->get_float(ApertureScale_type_id); 
+		Enabled = serialized->get_bool(Enabled_type_id, false);
+		NearFocusDistance = serialized->get_float(NearFocusDistance_type_id, 0.000000);
+		NearApertureScale = serialized->get_float(NearApertureScale_type_id, 0.000000);
+		FocusDistance = serialized->get_float(FocusDistance_type_id, 100.000000);
+		ApertureScale = serialized->get_float(ApertureScale_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

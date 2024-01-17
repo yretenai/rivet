@@ -15,7 +15,7 @@
 
 namespace rivet::ddl::generated {
 	MissionSystemNodeBaseDef::MissionSystemNodeBaseDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): NodeBaseDef(serialized) {
-		DebugName = serialized->get_string(DebugName_type_id); 
+		DebugName = serialized->get_string(DebugName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

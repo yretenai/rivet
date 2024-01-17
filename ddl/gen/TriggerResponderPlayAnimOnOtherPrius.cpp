@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	TriggerResponderPlayAnimOnOtherPrius::TriggerResponderPlayAnimOnOtherPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): TriggerResponderBasePrius(serialized) {
-		AnimActorGroup = serialized->get_uint64(AnimActorGroup_type_id); 
+		AnimActorGroup = serialized->get_uint64(AnimActorGroup_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

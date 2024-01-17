@@ -7,15 +7,15 @@
 
 namespace rivet::ddl::generated {
 	NPCInfobotPrius::NPCInfobotPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		FullMovieFile = serialized->get_string(FullMovieFile_type_id);
-		SubtitleConfig = serialized->get_string(SubtitleConfig_type_id);
-		FadeSoundAtEnd = serialized->get_bool(FadeSoundAtEnd_type_id);
-		FadeInToMovie = serialized->get_bool(FadeInToMovie_type_id);
-		FadeOutFromMovie = serialized->get_bool(FadeOutFromMovie_type_id);
-		CamBlendInTime = serialized->get_float(CamBlendInTime_type_id);
-		CamBlendOutTime = serialized->get_float(CamBlendOutTime_type_id);
-		LockOutHero = serialized->get_bool(LockOutHero_type_id);
-		AutoCollectAtEnd = serialized->get_bool(AutoCollectAtEnd_type_id); 
+		FullMovieFile = serialized->get_string(FullMovieFile_type_id, {});
+		SubtitleConfig = serialized->get_string(SubtitleConfig_type_id, {});
+		FadeSoundAtEnd = serialized->get_bool(FadeSoundAtEnd_type_id, true);
+		FadeInToMovie = serialized->get_bool(FadeInToMovie_type_id, true);
+		FadeOutFromMovie = serialized->get_bool(FadeOutFromMovie_type_id, true);
+		CamBlendInTime = serialized->get_float(CamBlendInTime_type_id, 2.000000);
+		CamBlendOutTime = serialized->get_float(CamBlendOutTime_type_id, 2.000000);
+		LockOutHero = serialized->get_bool(LockOutHero_type_id, true);
+		AutoCollectAtEnd = serialized->get_bool(AutoCollectAtEnd_type_id, true); 
 	}
 
 	[[nodiscard]] auto

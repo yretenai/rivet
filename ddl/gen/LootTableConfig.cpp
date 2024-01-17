@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	LootTableConfig::LootTableConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		MinCash = serialized->get_uint32(MinCash_type_id);
-		MaxCash = serialized->get_uint32(MaxCash_type_id);
+		MinCash = serialized->get_uint32(MinCash_type_id, 0);
+		MaxCash = serialized->get_uint32(MaxCash_type_id, 0);
 		LootLists = serialized->unwrap_into_many<rivet::ddl::generated::LootTableElement>(LootLists_type_id); 
 	}
 

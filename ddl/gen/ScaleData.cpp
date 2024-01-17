@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	ScaleData::ScaleData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MinYTranslationScale = serialized->get_float(MinYTranslationScale_type_id);
-		MaxYTranslationScale = serialized->get_float(MaxYTranslationScale_type_id);
-		MinXZTranslationScale = serialized->get_float(MinXZTranslationScale_type_id);
-		MaxXZTranslationScale = serialized->get_float(MaxXZTranslationScale_type_id);
-		MinTimeScale = serialized->get_float(MinTimeScale_type_id);
-		MaxTimeScale = serialized->get_float(MaxTimeScale_type_id); 
+		MinYTranslationScale = serialized->get_float(MinYTranslationScale_type_id, 1.000000);
+		MaxYTranslationScale = serialized->get_float(MaxYTranslationScale_type_id, 1.000000);
+		MinXZTranslationScale = serialized->get_float(MinXZTranslationScale_type_id, 1.000000);
+		MaxXZTranslationScale = serialized->get_float(MaxXZTranslationScale_type_id, 1.000000);
+		MinTimeScale = serialized->get_float(MinTimeScale_type_id, 1.000000);
+		MaxTimeScale = serialized->get_float(MaxTimeScale_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

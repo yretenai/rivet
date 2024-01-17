@@ -7,30 +7,30 @@
 
 namespace rivet::ddl::generated {
 	DecalResponseEvent::DecalResponseEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ResponseEvent(serialized) {
-		Material = serialized->get_string(Material_type_id);
-		Alpha = serialized->get_float(Alpha_type_id);
-		StartDelay = serialized->get_float(StartDelay_type_id);
-		Lifetime = serialized->get_float(Lifetime_type_id);
-		InfiniteLifetimeChance = serialized->get_float(InfiniteLifetimeChance_type_id);
-		Size = serialized->get_float(Size_type_id);
-		WhRatio = serialized->get_float(WhRatio_type_id);
-		DepthRatio = serialized->get_float(DepthRatio_type_id);
-		LodDistance = serialized->get_float(LodDistance_type_id);
-		FadeDistance = serialized->get_float(FadeDistance_type_id);
-		FadeDuration = serialized->get_float(FadeDuration_type_id);
-		ConduitDeleteFadeOut = serialized->get_float(ConduitDeleteFadeOut_type_id);
-		MaxAngle = serialized->get_float(MaxAngle_type_id);
-		IsImportant = serialized->get_bool(IsImportant_type_id);
-		IsRequired = serialized->get_bool(IsRequired_type_id);
-		RandOrient = serialized->get_bool(RandOrient_type_id);
-		ApplyToBots = serialized->get_bool(ApplyToBots_type_id);
-		SwapForwardAndUp = serialized->get_bool(SwapForwardAndUp_type_id);
-		AllowSingleOverlap = serialized->get_bool(AllowSingleOverlap_type_id);
-		ReplaceOverlapping = serialized->get_bool(ReplaceOverlapping_type_id);
-		UpdateOverlapping = serialized->get_bool(UpdateOverlapping_type_id);
-		CoveredMaterialArray = serialized->get_uint64(CoveredMaterialArray_type_id);
-		CoveredMaterialArray0 = serialized->get_uint64(CoveredMaterialArray0_type_id);
-		CoveredMaterialArray1 = serialized->get_uint64(CoveredMaterialArray1_type_id); 
+		Material = serialized->get_string(Material_type_id, {});
+		Alpha = serialized->get_float(Alpha_type_id, 1.000000);
+		StartDelay = serialized->get_float(StartDelay_type_id, 0.000000);
+		Lifetime = serialized->get_float(Lifetime_type_id, 10.000000);
+		InfiniteLifetimeChance = serialized->get_float(InfiniteLifetimeChance_type_id, 0.000000);
+		Size = serialized->get_float(Size_type_id, 1.000000);
+		WhRatio = serialized->get_float(WhRatio_type_id, 1.000000);
+		DepthRatio = serialized->get_float(DepthRatio_type_id, 1.000000);
+		LodDistance = serialized->get_float(LodDistance_type_id, 100.000000);
+		FadeDistance = serialized->get_float(FadeDistance_type_id, 25.000000);
+		FadeDuration = serialized->get_float(FadeDuration_type_id, -1.000000);
+		ConduitDeleteFadeOut = serialized->get_float(ConduitDeleteFadeOut_type_id, -1.000000);
+		MaxAngle = serialized->get_float(MaxAngle_type_id, 72.000000);
+		IsImportant = serialized->get_bool(IsImportant_type_id, false);
+		IsRequired = serialized->get_bool(IsRequired_type_id, false);
+		RandOrient = serialized->get_bool(RandOrient_type_id, true);
+		ApplyToBots = serialized->get_bool(ApplyToBots_type_id, false);
+		SwapForwardAndUp = serialized->get_bool(SwapForwardAndUp_type_id, false);
+		AllowSingleOverlap = serialized->get_bool(AllowSingleOverlap_type_id, false);
+		ReplaceOverlapping = serialized->get_bool(ReplaceOverlapping_type_id, false);
+		UpdateOverlapping = serialized->get_bool(UpdateOverlapping_type_id, false);
+		CoveredMaterialArray = serialized->get_uint64(CoveredMaterialArray_type_id, 0);
+		CoveredMaterialArray0 = serialized->get_uint64(CoveredMaterialArray0_type_id, 18446744073709551615);
+		CoveredMaterialArray1 = serialized->get_uint64(CoveredMaterialArray1_type_id, 18446744073709551615); 
 	}
 
 	[[nodiscard]] auto

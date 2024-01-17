@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	IsMissionReplayActionPrius::IsMissionReplayActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		CheckTypeIfComplete = serialized->get_enum<rivet::ddl::generated::x2e831899>(CheckTypeIfComplete_type_id, rivet::ddl::generated::x2e831899_values); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Mission_System);
+		CheckTypeIfComplete = serialized->get_enum<rivet::ddl::generated::x2e831899>(CheckTypeIfComplete_type_id, rivet::ddl::generated::x2e831899_values, rivet::ddl::generated::x2e831899::CheckLastPlaythrough); 
 	}
 
 	[[nodiscard]] auto

@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	DialogPromptLineEmergent::DialogPromptLineEmergent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): DialogPromptLine(serialized) {
-		Trigger = serialized->get_enum<rivet::ddl::generated::x6be956dd>(Trigger_type_id, rivet::ddl::generated::x6be956dd_values); 
+		Trigger = serialized->get_enum<rivet::ddl::generated::x6be956dd>(Trigger_type_id, rivet::ddl::generated::x6be956dd_values, rivet::ddl::generated::x6be956dd::None); 
 	}
 
 	[[nodiscard]] auto

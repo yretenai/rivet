@@ -9,9 +9,9 @@
 
 namespace rivet::ddl::generated {
 	PlatformSetCurveActionPrius::PlatformSetCurveActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Interact);
 		NewPrius = serialized->unwrap_into<rivet::ddl::generated::PlatformMovingPrius>(NewPrius_type_id);
-		UseClosestPt = serialized->get_bool(UseClosestPt_type_id); 
+		UseClosestPt = serialized->get_bool(UseClosestPt_type_id, false); 
 	}
 
 	[[nodiscard]] auto

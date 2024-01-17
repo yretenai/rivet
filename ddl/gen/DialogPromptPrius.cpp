@@ -11,9 +11,9 @@
 namespace rivet::ddl::generated {
 	DialogPromptPrius::DialogPromptPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		TalkOffer = serialized->unwrap_into<rivet::ddl::generated::GenericOfferPrius>(TalkOffer_type_id);
-		TalkOfferText = serialized->get_string(TalkOfferText_type_id);
+		TalkOfferText = serialized->get_string(TalkOfferText_type_id, {});
 		Lines = serialized->unwrap_into_many<rivet::ddl::generated::DialogPromptEntry>(Lines_type_id);
-		LastLineCount = serialized->get_int32(LastLineCount_type_id); 
+		LastLineCount = serialized->get_int32(LastLineCount_type_id, 1); 
 	}
 
 	[[nodiscard]] auto

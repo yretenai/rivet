@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ChainLightningExplosionEvent::ChainLightningExplosionEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		ArcCount = serialized->get_int32(ArcCount_type_id); 
+		ArcCount = serialized->get_int32(ArcCount_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

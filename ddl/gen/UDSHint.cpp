@@ -10,7 +10,7 @@
 
 namespace rivet::ddl::generated {
 	UDSHint::UDSHint([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		objectId = serialized->get_string(objectId_type_id);
+		objectId = serialized->get_string(objectId_type_id, {});
 		name = serialized->get_strings(name_type_id);
 		Description = serialized->get_strings(Description_type_id);
 		activeStatus = serialized->unwrap_into<rivet::ddl::generated::UDSHintStatus>(activeStatus_type_id);

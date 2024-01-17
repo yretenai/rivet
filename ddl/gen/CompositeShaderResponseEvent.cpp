@@ -7,16 +7,16 @@
 
 namespace rivet::ddl::generated {
 	CompositeShaderResponseEvent::CompositeShaderResponseEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ResponseEvent(serialized) {
-		PreShader = serialized->get_string(PreShader_type_id);
-		PostShader = serialized->get_string(PostShader_type_id);
-		AffectSelf = serialized->get_bool(AffectSelf_type_id);
-		AffectAttachments = serialized->get_bool(AffectAttachments_type_id);
-		AffectHead = serialized->get_bool(AffectHead_type_id);
-		AffectHair = serialized->get_bool(AffectHair_type_id);
-		UseHeadAsMaterialMapping = serialized->get_bool(UseHeadAsMaterialMapping_type_id);
-		DesiredShadowState = serialized->get_enum<rivet::ddl::generated::x32cc2d2c>(DesiredShadowState_type_id, rivet::ddl::generated::x32cc2d2c_values);
-		MaterialMappingName = serialized->get_string(MaterialMappingName_type_id);
-		Remove = serialized->get_bool(Remove_type_id); 
+		PreShader = serialized->get_string(PreShader_type_id, {});
+		PostShader = serialized->get_string(PostShader_type_id, {});
+		AffectSelf = serialized->get_bool(AffectSelf_type_id, true);
+		AffectAttachments = serialized->get_bool(AffectAttachments_type_id, false);
+		AffectHead = serialized->get_bool(AffectHead_type_id, false);
+		AffectHair = serialized->get_bool(AffectHair_type_id, false);
+		UseHeadAsMaterialMapping = serialized->get_bool(UseHeadAsMaterialMapping_type_id, false);
+		DesiredShadowState = serialized->get_enum<rivet::ddl::generated::x32cc2d2c>(DesiredShadowState_type_id, rivet::ddl::generated::x32cc2d2c_values, rivet::ddl::generated::x32cc2d2c::Dissolve_shadows_normally);
+		MaterialMappingName = serialized->get_string(MaterialMappingName_type_id, {});
+		Remove = serialized->get_bool(Remove_type_id, false); 
 	}
 
 	[[nodiscard]] auto

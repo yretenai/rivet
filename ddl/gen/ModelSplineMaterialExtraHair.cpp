@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	ModelSplineMaterialExtraHair::ModelSplineMaterialExtraHair([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Transmittance = serialized->get_float(Transmittance_type_id);
-		SpecShift = serialized->get_float(SpecShift_type_id); 
+		Transmittance = serialized->get_float(Transmittance_type_id, 0.500000);
+		SpecShift = serialized->get_float(SpecShift_type_id, 0.500000); 
 	}
 
 	[[nodiscard]] auto

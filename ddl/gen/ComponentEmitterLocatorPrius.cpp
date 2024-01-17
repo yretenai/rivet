@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	ComponentEmitterLocatorPrius::ComponentEmitterLocatorPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ComponentEmitterBasePrius(serialized) {
-		EmitFromUser = serialized->get_bool(EmitFromUser_type_id);
-		UseWorldUp = serialized->get_bool(UseWorldUp_type_id);
-		Locator = serialized->get_string(Locator_type_id); 
+		EmitFromUser = serialized->get_bool(EmitFromUser_type_id, false);
+		UseWorldUp = serialized->get_bool(UseWorldUp_type_id, false);
+		Locator = serialized->get_string(Locator_type_id, "igLoc_bulletEmit"); 
 	}
 
 	[[nodiscard]] auto

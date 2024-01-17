@@ -10,8 +10,8 @@
 
 namespace rivet::ddl::generated {
 	CameraForwardTweakValid::CameraForwardTweakValid([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): CameraForwardTweak(serialized) {
-		CancelOnInput = serialized->get_bool(CancelOnInput_type_id);
-		OnlyApplyOnFollow = serialized->get_bool(OnlyApplyOnFollow_type_id); 
+		CancelOnInput = serialized->get_bool(CancelOnInput_type_id, true);
+		OnlyApplyOnFollow = serialized->get_bool(OnlyApplyOnFollow_type_id, false); 
 	}
 
 	[[nodiscard]] auto

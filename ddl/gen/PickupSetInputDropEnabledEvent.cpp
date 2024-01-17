@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	PickupSetInputDropEnabledEvent::PickupSetInputDropEnabledEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		AllowInputDrop = serialized->get_bool(AllowInputDrop_type_id); 
+		AllowInputDrop = serialized->get_bool(AllowInputDrop_type_id, true); 
 	}
 
 	[[nodiscard]] auto

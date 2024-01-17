@@ -9,11 +9,11 @@
 
 namespace rivet::ddl::generated {
 	VisualEffectRotationKeyFrames::VisualEffectRotationKeyFrames([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		EnableLooping = serialized->get_bool(EnableLooping_type_id);
-		UseEmitterAge = serialized->get_bool(UseEmitterAge_type_id);
-		LifeTimeOverride = serialized->get_float(LifeTimeOverride_type_id);
-		Direction = serialized->get_enum<rivet::ddl::generated::x831fe0ea>(Direction_type_id, rivet::ddl::generated::x831fe0ea_values);
-		Type = serialized->get_enum<rivet::ddl::generated::xe380f68b>(Type_type_id, rivet::ddl::generated::xe380f68b_values);
+		EnableLooping = serialized->get_bool(EnableLooping_type_id, true);
+		UseEmitterAge = serialized->get_bool(UseEmitterAge_type_id, false);
+		LifeTimeOverride = serialized->get_float(LifeTimeOverride_type_id, 0.000000);
+		Direction = serialized->get_enum<rivet::ddl::generated::x831fe0ea>(Direction_type_id, rivet::ddl::generated::x831fe0ea_values, rivet::ddl::generated::x831fe0ea::Random);
+		Type = serialized->get_enum<rivet::ddl::generated::xe380f68b>(Type_type_id, rivet::ddl::generated::xe380f68b_values, rivet::ddl::generated::xe380f68b::Speed);
 		SpawnAnglesMin = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(SpawnAnglesMin_type_id);
 		SpawnAnglesMax = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(SpawnAnglesMax_type_id);
 		Value = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Value_type_id); 

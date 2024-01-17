@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	DdlDefaultFallbackHeapInfo::DdlDefaultFallbackHeapInfo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AllowHeap = serialized->get_bool(AllowHeap_type_id);
-		InitialMaxAllocs = serialized->get_uint64(InitialMaxAllocs_type_id); 
+		AllowHeap = serialized->get_bool(AllowHeap_type_id, true);
+		InitialMaxAllocs = serialized->get_uint64(InitialMaxAllocs_type_id, 4096); 
 	}
 
 	[[nodiscard]] auto

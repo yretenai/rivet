@@ -17,14 +17,14 @@ namespace rivet::ddl::generated {
 		SoundBanksHeapTemplate = serialized->unwrap_into<rivet::ddl::generated::HeapTemplate>(SoundBanksHeapTemplate_type_id);
 		SoundHeapTemplate = serialized->unwrap_into<rivet::ddl::generated::HeapTemplate>(SoundHeapTemplate_type_id);
 		ZoneAssetHeapTemplate = serialized->unwrap_into<rivet::ddl::generated::HeapTemplate>(ZoneAssetHeapTemplate_type_id);
-		DebugScratch = serialized->get_bool(DebugScratch_type_id);
-		PrintAllocSummaryAfterInit = serialized->get_bool(PrintAllocSummaryAfterInit_type_id);
-		ShowLiveStats = serialized->get_enum<rivet::ddl::generated::xba58b2b9>(ShowLiveStats_type_id, rivet::ddl::generated::xba58b2b9_values);
-		ManagedHeapWarningThresholdPercentage = serialized->get_int32(ManagedHeapWarningThresholdPercentage_type_id);
-		ManagedHeapErrorThresholdPercentage = serialized->get_int32(ManagedHeapErrorThresholdPercentage_type_id);
-		AssetHeapWarningThresholdPercentage = serialized->get_int32(AssetHeapWarningThresholdPercentage_type_id);
-		AssetHeapErrorThresholdPercentage = serialized->get_int32(AssetHeapErrorThresholdPercentage_type_id);
-		TextureHeapErrorThresholdPercentage = serialized->get_int32(TextureHeapErrorThresholdPercentage_type_id); 
+		DebugScratch = serialized->get_bool(DebugScratch_type_id, false);
+		PrintAllocSummaryAfterInit = serialized->get_bool(PrintAllocSummaryAfterInit_type_id, true);
+		ShowLiveStats = serialized->get_enum<rivet::ddl::generated::xba58b2b9>(ShowLiveStats_type_id, rivet::ddl::generated::xba58b2b9_values, rivet::ddl::generated::xba58b2b9::None);
+		ManagedHeapWarningThresholdPercentage = serialized->get_int32(ManagedHeapWarningThresholdPercentage_type_id, 75);
+		ManagedHeapErrorThresholdPercentage = serialized->get_int32(ManagedHeapErrorThresholdPercentage_type_id, 90);
+		AssetHeapWarningThresholdPercentage = serialized->get_int32(AssetHeapWarningThresholdPercentage_type_id, 75);
+		AssetHeapErrorThresholdPercentage = serialized->get_int32(AssetHeapErrorThresholdPercentage_type_id, 92);
+		TextureHeapErrorThresholdPercentage = serialized->get_int32(TextureHeapErrorThresholdPercentage_type_id, 85); 
 	}
 
 	[[nodiscard]] auto

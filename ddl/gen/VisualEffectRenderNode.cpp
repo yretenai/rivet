@@ -40,18 +40,18 @@
 
 namespace rivet::ddl::generated {
 	VisualEffectRenderNode::VisualEffectRenderNode([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		NodeId = serialized->get_uint64(NodeId_type_id);
-		XPos = serialized->get_int32(XPos_type_id);
-		YPos = serialized->get_int32(YPos_type_id);
-		DisplayName = serialized->get_string(DisplayName_type_id);
+		NodeId = serialized->get_uint64(NodeId_type_id, 0);
+		XPos = serialized->get_int32(XPos_type_id, 0);
+		YPos = serialized->get_int32(YPos_type_id, 0);
+		DisplayName = serialized->get_string(DisplayName_type_id, {});
 		ConnectedInputs = serialized->unwrap_into_many<rivet::ddl::generated::VisualEffectNodeConnectedInputPort>(ConnectedInputs_type_id);
 		ConnectedOutputs = serialized->unwrap_into_many<rivet::ddl::generated::VisualEffectNodeConnectedOutputPort>(ConnectedOutputs_type_id);
-		Collapsed = serialized->get_bool(Collapsed_type_id);
-		Type = serialized->get_string(Type_type_id);
-		RenderStyle = serialized->get_enum<rivet::ddl::generated::RenderStyle>(RenderStyle_type_id, rivet::ddl::generated::RenderStyle_values);
+		Collapsed = serialized->get_bool(Collapsed_type_id, true);
+		Type = serialized->get_string(Type_type_id, {});
+		RenderStyle = serialized->get_enum<rivet::ddl::generated::RenderStyle>(RenderStyle_type_id, rivet::ddl::generated::RenderStyle_values, rivet::ddl::generated::RenderStyle::SingleQuad);
 		Platforms = serialized->unwrap_into<rivet::ddl::generated::VisualEffectPlatforms>(Platforms_type_id);
-		EditorOnly = serialized->get_bool(EditorOnly_type_id);
-		Space = serialized->get_enum<rivet::ddl::generated::xfe5100b1>(Space_type_id, rivet::ddl::generated::xfe5100b1_values);
+		EditorOnly = serialized->get_bool(EditorOnly_type_id, false);
+		Space = serialized->get_enum<rivet::ddl::generated::xfe5100b1>(Space_type_id, rivet::ddl::generated::xfe5100b1_values, rivet::ddl::generated::xfe5100b1::Local);
 		RenderAttributes = serialized->unwrap_into<rivet::ddl::generated::RenderAttributes>(RenderAttributes_type_id);
 		ConduitAttributes = serialized->unwrap_into<rivet::ddl::generated::ConduitAttributes>(ConduitAttributes_type_id);
 		DecalTrailAttributes = serialized->unwrap_into<rivet::ddl::generated::DecalTrailAttributes>(DecalTrailAttributes_type_id);
@@ -65,10 +65,10 @@ namespace rivet::ddl::generated {
 		InputPort_Width = serialized->unwrap_into<rivet::ddl::generated::VisualEffectFloat>(InputPort_Width_type_id);
 		InputPort_Depth = serialized->unwrap_into<rivet::ddl::generated::VisualEffectFloat>(InputPort_Depth_type_id);
 		PostEffect = serialized->unwrap_into<rivet::ddl::generated::PostEffect>(PostEffect_type_id);
-		SplineStyle = serialized->get_enum<rivet::ddl::generated::SplineStyle>(SplineStyle_type_id, rivet::ddl::generated::SplineStyle_values);
+		SplineStyle = serialized->get_enum<rivet::ddl::generated::SplineStyle>(SplineStyle_type_id, rivet::ddl::generated::SplineStyle_values, rivet::ddl::generated::SplineStyle::Standard);
 		BeamOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(BeamOffset_type_id);
 		TrailAttributes = serialized->unwrap_into<rivet::ddl::generated::TrailAttributes>(TrailAttributes_type_id);
-		SwipeScale = serialized->get_enum<rivet::ddl::generated::SwipeScale>(SwipeScale_type_id, rivet::ddl::generated::SwipeScale_values);
+		SwipeScale = serialized->get_enum<rivet::ddl::generated::SwipeScale>(SwipeScale_type_id, rivet::ddl::generated::SwipeScale_values, rivet::ddl::generated::SwipeScale::Origin);
 		SwipeOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(SwipeOffset_type_id);
 		InputPort_LightAttr = serialized->unwrap_into<rivet::ddl::generated::VisualEffectLightAttr>(InputPort_LightAttr_type_id);
 		InputPort_LifeTime = serialized->unwrap_into<rivet::ddl::generated::VisualEffectMinMax>(InputPort_LifeTime_type_id);

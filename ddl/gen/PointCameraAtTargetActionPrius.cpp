@@ -9,13 +9,13 @@
 
 namespace rivet::ddl::generated {
 	PointCameraAtTargetActionPrius::PointCameraAtTargetActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		TurnAccel = serialized->get_float(TurnAccel_type_id);
-		TurnDecel = serialized->get_float(TurnDecel_type_id);
-		TurnSpeedMax = serialized->get_float(TurnSpeedMax_type_id);
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Camera);
+		TurnAccel = serialized->get_float(TurnAccel_type_id, 540.000000);
+		TurnDecel = serialized->get_float(TurnDecel_type_id, 120.000000);
+		TurnSpeedMax = serialized->get_float(TurnSpeedMax_type_id, 540.000000);
 		LocalOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(LocalOffset_type_id);
-		StopOnComplete = serialized->get_bool(StopOnComplete_type_id);
-		StopOnInput = serialized->get_bool(StopOnInput_type_id); 
+		StopOnComplete = serialized->get_bool(StopOnComplete_type_id, true);
+		StopOnInput = serialized->get_bool(StopOnInput_type_id, false); 
 	}
 
 	[[nodiscard]] auto

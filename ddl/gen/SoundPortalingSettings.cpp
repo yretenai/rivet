@@ -7,15 +7,15 @@
 
 namespace rivet::ddl::generated {
 	SoundPortalingSettings::SoundPortalingSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Enabled = serialized->get_bool(Enabled_type_id);
-		MaxPortals = serialized->get_uint8(MaxPortals_type_id);
-		MaxPortalsBetweenTwoVolumes = serialized->get_uint8(MaxPortalsBetweenTwoVolumes_type_id);
-		MaxPortaledPositionsPerSource = serialized->get_uint8(MaxPortaledPositionsPerSource_type_id);
-		MaxFadingPositionsPerSource = serialized->get_uint8(MaxFadingPositionsPerSource_type_id);
-		MaxVolumes = serialized->get_uint32(MaxVolumes_type_id);
-		PortalInterpolationSpeed = serialized->get_float(PortalInterpolationSpeed_type_id);
-		PortalInterpolationMode = serialized->get_enum<rivet::ddl::generated::x652a90fd>(PortalInterpolationMode_type_id, rivet::ddl::generated::x652a90fd_values);
-		PortalRTPC = serialized->get_string(PortalRTPC_type_id); 
+		Enabled = serialized->get_bool(Enabled_type_id, false);
+		MaxPortals = serialized->get_uint8(MaxPortals_type_id, 64);
+		MaxPortalsBetweenTwoVolumes = serialized->get_uint8(MaxPortalsBetweenTwoVolumes_type_id, 4);
+		MaxPortaledPositionsPerSource = serialized->get_uint8(MaxPortaledPositionsPerSource_type_id, 4);
+		MaxFadingPositionsPerSource = serialized->get_uint8(MaxFadingPositionsPerSource_type_id, 8);
+		MaxVolumes = serialized->get_uint32(MaxVolumes_type_id, 128);
+		PortalInterpolationSpeed = serialized->get_float(PortalInterpolationSpeed_type_id, 3.000000);
+		PortalInterpolationMode = serialized->get_enum<rivet::ddl::generated::x652a90fd>(PortalInterpolationMode_type_id, rivet::ddl::generated::x652a90fd_values, rivet::ddl::generated::x652a90fd::Average);
+		PortalRTPC = serialized->get_string(PortalRTPC_type_id, "PortalPower"); 
 	}
 
 	[[nodiscard]] auto

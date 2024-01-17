@@ -9,14 +9,14 @@
 
 namespace rivet::ddl::generated {
 	HeroDecalShadowData::HeroDecalShadowData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DecalShadowShader = serialized->get_string(DecalShadowShader_type_id);
-		DecalModel = serialized->get_string(DecalModel_type_id);
-		MaterialMappingName = serialized->get_string(MaterialMappingName_type_id);
-		AlphaTextureConstantName = serialized->get_string(AlphaTextureConstantName_type_id);
+		DecalShadowShader = serialized->get_string(DecalShadowShader_type_id, {});
+		DecalModel = serialized->get_string(DecalModel_type_id, {});
+		MaterialMappingName = serialized->get_string(MaterialMappingName_type_id, {});
+		AlphaTextureConstantName = serialized->get_string(AlphaTextureConstantName_type_id, {});
 		Tint = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Tint_type_id);
-		BlendTime = serialized->get_float(BlendTime_type_id);
-		MinDistance = serialized->get_float(MinDistance_type_id);
-		MaxDistance = serialized->get_float(MaxDistance_type_id); 
+		BlendTime = serialized->get_float(BlendTime_type_id, 0.250000);
+		MinDistance = serialized->get_float(MinDistance_type_id, 1.000000);
+		MaxDistance = serialized->get_float(MaxDistance_type_id, 20.000000); 
 	}
 
 	[[nodiscard]] auto

@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	SpawnShotElement::SpawnShotElement([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Description = serialized->get_string(Description_type_id);
-		ShotConfig = serialized->get_string(ShotConfig_type_id);
-		EmitterConfig = serialized->get_string(EmitterConfig_type_id);
-		TargetingConfig = serialized->get_string(TargetingConfig_type_id);
-		MaxShotsPerSecond = serialized->get_float(MaxShotsPerSecond_type_id); 
+		Description = serialized->get_string(Description_type_id, {});
+		ShotConfig = serialized->get_string(ShotConfig_type_id, {});
+		EmitterConfig = serialized->get_string(EmitterConfig_type_id, {});
+		TargetingConfig = serialized->get_string(TargetingConfig_type_id, {});
+		MaxShotsPerSecond = serialized->get_float(MaxShotsPerSecond_type_id, 10.000000); 
 	}
 
 	[[nodiscard]] auto

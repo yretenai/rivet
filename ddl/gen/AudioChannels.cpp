@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	AudioChannels::AudioChannels([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Left = serialized->get_string(Left_type_id);
-		Center = serialized->get_string(Center_type_id);
-		Right = serialized->get_string(Right_type_id);
-		LeftSurround = serialized->get_string(LeftSurround_type_id);
-		RightSurround = serialized->get_string(RightSurround_type_id);
-		LowFrequency = serialized->get_string(LowFrequency_type_id); 
+		Left = serialized->get_string(Left_type_id, {});
+		Center = serialized->get_string(Center_type_id, {});
+		Right = serialized->get_string(Right_type_id, {});
+		LeftSurround = serialized->get_string(LeftSurround_type_id, {});
+		RightSurround = serialized->get_string(RightSurround_type_id, {});
+		LowFrequency = serialized->get_string(LowFrequency_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

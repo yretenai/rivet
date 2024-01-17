@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	Cinematic2EnterEvent::Cinematic2EnterEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Invulnerable = serialized->get_bool(Invulnerable_type_id); 
+		Invulnerable = serialized->get_bool(Invulnerable_type_id, false); 
 	}
 
 	[[nodiscard]] auto

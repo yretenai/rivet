@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	AnimListenerToEventConverterPrius::AnimListenerToEventConverterPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		EnabledEvents = serialized->get_bitset<rivet::ddl::generated::x481aa65a>(EnabledEvents_type_id, rivet::ddl::generated::x481aa65a_values); 
+		EnabledEvents = serialized->get_bitset<rivet::ddl::generated::x481aa65a>(EnabledEvents_type_id, rivet::ddl::generated::x481aa65a_values, 1); 
 	}
 
 	[[nodiscard]] auto

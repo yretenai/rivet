@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	SessionSoundData::SessionSoundData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SoundBankPath = serialized->get_string(SoundBankPath_type_id);
-		SoundEventName = serialized->get_string(SoundEventName_type_id); 
+		SoundBankPath = serialized->get_string(SoundBankPath_type_id, {});
+		SoundEventName = serialized->get_string(SoundEventName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

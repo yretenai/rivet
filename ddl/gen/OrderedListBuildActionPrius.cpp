@@ -9,9 +9,9 @@
 
 namespace rivet::ddl::generated {
 	OrderedListBuildActionPrius::OrderedListBuildActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		ConvertGroupsToActors = serialized->get_bool(ConvertGroupsToActors_type_id);
-		StoreByVarName = serialized->get_bool(StoreByVarName_type_id);
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Lists);
+		ConvertGroupsToActors = serialized->get_bool(ConvertGroupsToActors_type_id, false);
+		StoreByVarName = serialized->get_bool(StoreByVarName_type_id, false);
 		Initialization = serialized->unwrap_into<rivet::ddl::generated::OrderedListInitializer>(Initialization_type_id); 
 	}
 

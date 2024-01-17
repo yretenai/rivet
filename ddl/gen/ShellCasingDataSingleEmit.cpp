@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ShellCasingDataSingleEmit::ShellCasingDataSingleEmit([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ShellCasingData(serialized) {
-		SpawnLocator = serialized->get_string(SpawnLocator_type_id); 
+		SpawnLocator = serialized->get_string(SpawnLocator_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

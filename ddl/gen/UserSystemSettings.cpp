@@ -7,18 +7,18 @@
 
 namespace rivet::ddl::generated {
 	UserSystemSettings::UserSystemSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MaxPerUserBindingsConfigCount = serialized->get_int32(MaxPerUserBindingsConfigCount_type_id);
-		MaxPerUserControlGroupCount = serialized->get_int32(MaxPerUserControlGroupCount_type_id);
-		MaxPerUserControlCount = serialized->get_int32(MaxPerUserControlCount_type_id);
-		MaxPerUserFinalizeStepCount = serialized->get_int32(MaxPerUserFinalizeStepCount_type_id);
-		MaxPlayingUsers = serialized->get_uint8(MaxPlayingUsers_type_id);
-		UsePureUserName = serialized->get_bool(UsePureUserName_type_id);
-		SetSignedInAsPlaying = serialized->get_bool(SetSignedInAsPlaying_type_id);
-		GuestsEnabled = serialized->get_bool(GuestsEnabled_type_id);
-		AllocInstanceId = serialized->get_bool(AllocInstanceId_type_id);
-		FinalUseKeyboard = serialized->get_bool(FinalUseKeyboard_type_id);
-		FinalUseMouse = serialized->get_bool(FinalUseMouse_type_id);
-		UseDefaultUserName = serialized->get_bool(UseDefaultUserName_type_id); 
+		MaxPerUserBindingsConfigCount = serialized->get_int32(MaxPerUserBindingsConfigCount_type_id, 8);
+		MaxPerUserControlGroupCount = serialized->get_int32(MaxPerUserControlGroupCount_type_id, 16);
+		MaxPerUserControlCount = serialized->get_int32(MaxPerUserControlCount_type_id, 256);
+		MaxPerUserFinalizeStepCount = serialized->get_int32(MaxPerUserFinalizeStepCount_type_id, 8);
+		MaxPlayingUsers = serialized->get_uint8(MaxPlayingUsers_type_id, 2);
+		UsePureUserName = serialized->get_bool(UsePureUserName_type_id, false);
+		SetSignedInAsPlaying = serialized->get_bool(SetSignedInAsPlaying_type_id, true);
+		GuestsEnabled = serialized->get_bool(GuestsEnabled_type_id, true);
+		AllocInstanceId = serialized->get_bool(AllocInstanceId_type_id, false);
+		FinalUseKeyboard = serialized->get_bool(FinalUseKeyboard_type_id, true);
+		FinalUseMouse = serialized->get_bool(FinalUseMouse_type_id, true);
+		UseDefaultUserName = serialized->get_bool(UseDefaultUserName_type_id, false); 
 	}
 
 	[[nodiscard]] auto

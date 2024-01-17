@@ -20,7 +20,7 @@
 
 namespace rivet::ddl::generated {
 	BotComboMove::BotComboMove([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BotComboMoveBase(serialized) {
-		Name = serialized->get_string(Name_type_id); 
+		Name = serialized->get_string(Name_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

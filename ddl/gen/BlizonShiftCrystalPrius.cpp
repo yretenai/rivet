@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	BlizonShiftCrystalPrius::BlizonShiftCrystalPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		CheckpointA = serialized->get_string(CheckpointA_type_id);
-		CheckpointB = serialized->get_string(CheckpointB_type_id);
-		VisibilityMode = serialized->get_enum<rivet::ddl::generated::x2bbd4e7a>(VisibilityMode_type_id, rivet::ddl::generated::x2bbd4e7a_values);
-		AllowMeleeThrowTrigger = serialized->get_bool(AllowMeleeThrowTrigger_type_id); 
+		CheckpointA = serialized->get_string(CheckpointA_type_id, {});
+		CheckpointB = serialized->get_string(CheckpointB_type_id, {});
+		VisibilityMode = serialized->get_enum<rivet::ddl::generated::x2bbd4e7a>(VisibilityMode_type_id, rivet::ddl::generated::x2bbd4e7a_values, rivet::ddl::generated::x2bbd4e7a::EitherCheckpoint);
+		AllowMeleeThrowTrigger = serialized->get_bool(AllowMeleeThrowTrigger_type_id, false); 
 	}
 
 	[[nodiscard]] auto

@@ -12,7 +12,7 @@ namespace rivet::ddl::generated {
 	BotConfigHitReact::BotConfigHitReact([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
 		HitReact = serialized->unwrap_into<rivet::ddl::generated::HitReactPrius>(HitReact_type_id);
 		PartialReact = serialized->unwrap_into<rivet::ddl::generated::PartialReactNonePrius>(PartialReact_type_id);
-		BodyPartToFilterConfig = serialized->get_string(BodyPartToFilterConfig_type_id); 
+		BodyPartToFilterConfig = serialized->get_string(BodyPartToFilterConfig_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

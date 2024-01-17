@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	VehicleObstaclePrius::VehicleObstaclePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		RemoveVehicles = serialized->get_bool(RemoveVehicles_type_id); 
+		RemoveVehicles = serialized->get_bool(RemoveVehicles_type_id, false); 
 	}
 
 	[[nodiscard]] auto

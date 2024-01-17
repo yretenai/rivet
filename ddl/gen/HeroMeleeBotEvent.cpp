@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	HeroMeleeBotEvent::HeroMeleeBotEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		VictimMaterial = serialized->get_enum<rivet::ddl::generated::x10b3c4cf>(VictimMaterial_type_id, rivet::ddl::generated::x10b3c4cf_values);
-		VictimSize = serialized->get_string(VictimSize_type_id);
-		VictimCharacterType = serialized->get_string(VictimCharacterType_type_id); 
+		VictimMaterial = serialized->get_enum<rivet::ddl::generated::x10b3c4cf>(VictimMaterial_type_id, rivet::ddl::generated::x10b3c4cf_values, rivet::ddl::generated::x10b3c4cf::None);
+		VictimSize = serialized->get_string(VictimSize_type_id, {});
+		VictimCharacterType = serialized->get_string(VictimCharacterType_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

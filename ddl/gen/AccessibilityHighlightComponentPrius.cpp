@@ -12,12 +12,12 @@
 
 namespace rivet::ddl::generated {
 	AccessibilityHighlightComponentPrius::AccessibilityHighlightComponentPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Type = serialized->get_enum<rivet::ddl::generated::xf2109875>(Type_type_id, rivet::ddl::generated::xf2109875_values);
-		RemoveHighlightOnDeath = serialized->get_bool(RemoveHighlightOnDeath_type_id);
-		DisableHighlights = serialized->get_bool(DisableHighlights_type_id);
-		ToggleHair = serialized->get_bool(ToggleHair_type_id);
-		SkipLookToggleOnOrbis = serialized->get_bool(SkipLookToggleOnOrbis_type_id);
-		ForceKeepOnNPCBot = serialized->get_bool(ForceKeepOnNPCBot_type_id);
+		Type = serialized->get_enum<rivet::ddl::generated::xf2109875>(Type_type_id, rivet::ddl::generated::xf2109875_values, rivet::ddl::generated::xf2109875::Enemy);
+		RemoveHighlightOnDeath = serialized->get_bool(RemoveHighlightOnDeath_type_id, true);
+		DisableHighlights = serialized->get_bool(DisableHighlights_type_id, false);
+		ToggleHair = serialized->get_bool(ToggleHair_type_id, false);
+		SkipLookToggleOnOrbis = serialized->get_bool(SkipLookToggleOnOrbis_type_id, true);
+		ForceKeepOnNPCBot = serialized->get_bool(ForceKeepOnNPCBot_type_id, false);
 		LookEnableList = serialized->get_strings(LookEnableList_type_id);
 		LookDisableList = serialized->get_strings(LookDisableList_type_id);
 		SkipMaterialList = serialized->get_strings(SkipMaterialList_type_id);

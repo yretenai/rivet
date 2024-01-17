@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	BlendAtmospheresActionPrius::BlendAtmospheresActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		EndAtmosphere = serialized->get_string(EndAtmosphere_type_id);
-		MakeActiveOnBlendComplete = serialized->get_bool(MakeActiveOnBlendComplete_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Rendering);
+		EndAtmosphere = serialized->get_string(EndAtmosphere_type_id, {});
+		MakeActiveOnBlendComplete = serialized->get_bool(MakeActiveOnBlendComplete_type_id, false); 
 	}
 
 	[[nodiscard]] auto

@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	WeaponPyrocitorPrius::WeaponPyrocitorPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): WeaponGamePrius(serialized) {
-		PyrocitorSubShotConfig = serialized->get_string(PyrocitorSubShotConfig_type_id); 
+		PyrocitorSubShotConfig = serialized->get_string(PyrocitorSubShotConfig_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

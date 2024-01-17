@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ChangeSessionIdInput::ChangeSessionIdInput([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SessionId = serialized->get_uint64(SessionId_type_id); 
+		SessionId = serialized->get_uint64(SessionId_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	UISongLineData::UISongLineData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		LineName = serialized->get_string(LineName_type_id);
-		StartTime = serialized->get_float(StartTime_type_id);
-		EndTime = serialized->get_float(EndTime_type_id);
-		IsSecondary = serialized->get_bool(IsSecondary_type_id); 
+		LineName = serialized->get_string(LineName_type_id, {});
+		StartTime = serialized->get_float(StartTime_type_id, 0.000000);
+		EndTime = serialized->get_float(EndTime_type_id, 0.000000);
+		IsSecondary = serialized->get_bool(IsSecondary_type_id, false); 
 	}
 
 	[[nodiscard]] auto

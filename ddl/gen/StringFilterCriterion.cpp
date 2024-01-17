@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	StringFilterCriterion::StringFilterCriterion([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Test = serialized->get_enum<rivet::ddl::generated::x57689c9c>(Test_type_id, rivet::ddl::generated::x57689c9c_values);
-		Argument = serialized->get_string(Argument_type_id); 
+		Test = serialized->get_enum<rivet::ddl::generated::x57689c9c>(Test_type_id, rivet::ddl::generated::x57689c9c_values, rivet::ddl::generated::x57689c9c::Contains);
+		Argument = serialized->get_string(Argument_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

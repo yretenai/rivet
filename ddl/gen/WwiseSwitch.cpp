@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	WwiseSwitch::WwiseSwitch([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SwitchGroupName = serialized->get_string(SwitchGroupName_type_id);
-		SwitchName = serialized->get_string(SwitchName_type_id);
-		SwitchGroupId = serialized->get_uint32(SwitchGroupId_type_id);
-		SwitchId = serialized->get_uint32(SwitchId_type_id); 
+		SwitchGroupName = serialized->get_string(SwitchGroupName_type_id, {});
+		SwitchName = serialized->get_string(SwitchName_type_id, {});
+		SwitchGroupId = serialized->get_uint32(SwitchGroupId_type_id, 0);
+		SwitchId = serialized->get_uint32(SwitchId_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

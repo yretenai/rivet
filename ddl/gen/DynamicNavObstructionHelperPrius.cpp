@@ -10,7 +10,7 @@
 namespace rivet::ddl::generated {
 	DynamicNavObstructionHelperPrius::DynamicNavObstructionHelperPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		NavMeshObstructionPriusData = serialized->unwrap_into<rivet::ddl::generated::NavMeshObstructionPrius>(NavMeshObstructionPriusData_type_id);
-		ThisActorDoesNotMove = serialized->get_bool(ThisActorDoesNotMove_type_id); 
+		ThisActorDoesNotMove = serialized->get_bool(ThisActorDoesNotMove_type_id, true); 
 	}
 
 	[[nodiscard]] auto

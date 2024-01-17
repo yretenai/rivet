@@ -9,9 +9,9 @@
 
 namespace rivet::ddl::generated {
 	TriggerConduitEventEffectPrius::TriggerConduitEventEffectPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ScriptedShotEffectBasePrius(serialized) {
-		ActorType = serialized->get_enum<rivet::ddl::generated::x4891b54>(ActorType_type_id, rivet::ddl::generated::x4891b54_values);
+		ActorType = serialized->get_enum<rivet::ddl::generated::x4891b54>(ActorType_type_id, rivet::ddl::generated::x4891b54_values, rivet::ddl::generated::x4891b54::HitActor);
 		Event = serialized->unwrap_into<rivet::ddl::generated::ScriptedShotGenericEvent>(Event_type_id);
-		Broadcast = serialized->get_bool(Broadcast_type_id); 
+		Broadcast = serialized->get_bool(Broadcast_type_id, false); 
 	}
 
 	[[nodiscard]] auto

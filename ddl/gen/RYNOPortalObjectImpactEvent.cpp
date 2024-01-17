@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	RYNOPortalObjectImpactEvent::RYNOPortalObjectImpactEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		InAir = serialized->get_bool(InAir_type_id);
-		DoesLanding = serialized->get_bool(DoesLanding_type_id);
-		PortalSize = serialized->get_enum<rivet::ddl::generated::xbf5ff3c6>(PortalSize_type_id, rivet::ddl::generated::xbf5ff3c6_values); 
+		InAir = serialized->get_bool(InAir_type_id, false);
+		DoesLanding = serialized->get_bool(DoesLanding_type_id, false);
+		PortalSize = serialized->get_enum<rivet::ddl::generated::xbf5ff3c6>(PortalSize_type_id, rivet::ddl::generated::xbf5ff3c6_values, rivet::ddl::generated::xbf5ff3c6::Small); 
 	}
 
 	[[nodiscard]] auto

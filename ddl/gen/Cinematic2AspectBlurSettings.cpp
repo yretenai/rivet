@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	Cinematic2AspectBlurSettings::Cinematic2AspectBlurSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AspectVisible = serialized->get_float(AspectVisible_type_id);
-		AspectStart = serialized->get_float(AspectStart_type_id);
-		AspectEnd = serialized->get_float(AspectEnd_type_id);
-		BlurRadius = serialized->get_float(BlurRadius_type_id); 
+		AspectVisible = serialized->get_float(AspectVisible_type_id, 3.667000);
+		AspectStart = serialized->get_float(AspectStart_type_id, 2.778000);
+		AspectEnd = serialized->get_float(AspectEnd_type_id, 3.556000);
+		BlurRadius = serialized->get_float(BlurRadius_type_id, 100.000000); 
 	}
 
 	[[nodiscard]] auto

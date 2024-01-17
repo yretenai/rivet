@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	CompatVaultJsCommand::CompatVaultJsCommand([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Type = serialized->get_enum<rivet::ddl::generated::x63e8ba6e>(Type_type_id, rivet::ddl::generated::x63e8ba6e_values); 
+		Type = serialized->get_enum<rivet::ddl::generated::x63e8ba6e>(Type_type_id, rivet::ddl::generated::x63e8ba6e_values, rivet::ddl::generated::x63e8ba6e::ReplaceSceneNodes); 
 	}
 
 	[[nodiscard]] auto

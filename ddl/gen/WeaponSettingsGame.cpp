@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	WeaponSettingsGame::WeaponSettingsGame([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		XpGainMultiplier = serialized->get_float(XpGainMultiplier_type_id); 
+		XpGainMultiplier = serialized->get_float(XpGainMultiplier_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

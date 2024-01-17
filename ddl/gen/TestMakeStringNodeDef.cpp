@@ -12,7 +12,7 @@ namespace rivet::ddl::generated {
 	TestMakeStringNodeDef::TestMakeStringNodeDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): NodeBaseDef(serialized) {
 		Index = serialized->unwrap_into<rivet::ddl::generated::InputPlugInt>(Index_type_id);
 		String = serialized->unwrap_into<rivet::ddl::generated::OutputPlugString>(String_type_id);
-		DebugName = serialized->get_string(DebugName_type_id);
+		DebugName = serialized->get_string(DebugName_type_id, {});
 		PossibleValues = serialized->get_strings(PossibleValues_type_id); 
 	}
 

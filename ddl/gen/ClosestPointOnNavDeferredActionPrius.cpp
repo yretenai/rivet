@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	ClosestPointOnNavDeferredActionPrius::ClosestPointOnNavDeferredActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		NavType = serialized->get_enum<rivet::ddl::generated::xdcbe36a2>(NavType_type_id, rivet::ddl::generated::xdcbe36a2_values);
-		IncludeFlags = serialized->get_bitset<rivet::ddl::generated::xd0e37317>(IncludeFlags_type_id, rivet::ddl::generated::xd0e37317_values);
-		ExcludeFlags = serialized->get_bitset<rivet::ddl::generated::xd0e37317>(ExcludeFlags_type_id, rivet::ddl::generated::xd0e37317_values); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Nav);
+		NavType = serialized->get_enum<rivet::ddl::generated::xdcbe36a2>(NavType_type_id, rivet::ddl::generated::xdcbe36a2_values, rivet::ddl::generated::xdcbe36a2::MeshStandard);
+		IncludeFlags = serialized->get_bitset<rivet::ddl::generated::xd0e37317>(IncludeFlags_type_id, rivet::ddl::generated::xd0e37317_values, 1);
+		ExcludeFlags = serialized->get_bitset<rivet::ddl::generated::xd0e37317>(ExcludeFlags_type_id, rivet::ddl::generated::xd0e37317_values, 0); 
 	}
 
 	[[nodiscard]] auto

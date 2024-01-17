@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	MissionEndedDevstatsEventBase::MissionEndedDevstatsEventBase([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		MissionName = serialized->get_string(MissionName_type_id);
-		MissionResult = serialized->get_enum<rivet::ddl::generated::MissionResult>(MissionResult_type_id, rivet::ddl::generated::MissionResult_values);
-		MissionTime = serialized->get_float(MissionTime_type_id);
-		TimeInMenu = serialized->get_float(TimeInMenu_type_id); 
+		MissionName = serialized->get_string(MissionName_type_id, {});
+		MissionResult = serialized->get_enum<rivet::ddl::generated::MissionResult>(MissionResult_type_id, rivet::ddl::generated::MissionResult_values, rivet::ddl::generated::MissionResult::Failed);
+		MissionTime = serialized->get_float(MissionTime_type_id, -1.000000);
+		TimeInMenu = serialized->get_float(TimeInMenu_type_id, -1.000000); 
 	}
 
 	[[nodiscard]] auto

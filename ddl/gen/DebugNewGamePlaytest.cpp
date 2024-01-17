@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	DebugNewGamePlaytest::DebugNewGamePlaytest([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		PlaytestName = serialized->get_string(PlaytestName_type_id);
-		UseChallengeMode = serialized->get_bool(UseChallengeMode_type_id);
-		IsDemo = serialized->get_bool(IsDemo_type_id);
-		DemoName = serialized->get_string(DemoName_type_id); 
+		PlaytestName = serialized->get_string(PlaytestName_type_id, "NewGameWithSurveyScreens");
+		UseChallengeMode = serialized->get_bool(UseChallengeMode_type_id, false);
+		IsDemo = serialized->get_bool(IsDemo_type_id, false);
+		DemoName = serialized->get_string(DemoName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

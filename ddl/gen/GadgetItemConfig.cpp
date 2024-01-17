@@ -18,7 +18,7 @@
 
 namespace rivet::ddl::generated {
 	GadgetItemConfig::GadgetItemConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): GameItemConfig(serialized) {
-		GadgetType = serialized->get_enum<rivet::ddl::generated::xce74edfb>(GadgetType_type_id, rivet::ddl::generated::xce74edfb_values); 
+		GadgetType = serialized->get_enum<rivet::ddl::generated::xce74edfb>(GadgetType_type_id, rivet::ddl::generated::xce74edfb_values, rivet::ddl::generated::xce74edfb::Omniboots); 
 	}
 
 	[[nodiscard]] auto

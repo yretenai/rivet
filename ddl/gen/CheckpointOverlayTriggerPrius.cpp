@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	CheckpointOverlayTriggerPrius::CheckpointOverlayTriggerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BaseCustomOverlayTriggerPrius(serialized) {
-		Checkpoint = serialized->get_string(Checkpoint_type_id);
-		UnloadOnCheckpointChange = serialized->get_bool(UnloadOnCheckpointChange_type_id); 
+		Checkpoint = serialized->get_string(Checkpoint_type_id, {});
+		UnloadOnCheckpointChange = serialized->get_bool(UnloadOnCheckpointChange_type_id, true); 
 	}
 
 	[[nodiscard]] auto

@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	TrigRespSelfEnableCompEntry::TrigRespSelfEnableCompEntry([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		EnableOnTrigger = serialized->get_bool(EnableOnTrigger_type_id);
-		RespondToUnTrigger = serialized->get_bool(RespondToUnTrigger_type_id);
-		ComponentName = serialized->get_string(ComponentName_type_id); 
+		EnableOnTrigger = serialized->get_bool(EnableOnTrigger_type_id, true);
+		RespondToUnTrigger = serialized->get_bool(RespondToUnTrigger_type_id, true);
+		ComponentName = serialized->get_string(ComponentName_type_id, "INVALID"); 
 	}
 
 	[[nodiscard]] auto

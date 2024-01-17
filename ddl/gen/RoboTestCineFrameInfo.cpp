@@ -12,10 +12,10 @@
 
 namespace rivet::ddl::generated {
 	RoboTestCineFrameInfo::RoboTestCineFrameInfo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		TestName = serialized->get_string(TestName_type_id);
-		CurrentCineTime = serialized->get_float(CurrentCineTime_type_id);
-		Status = serialized->get_string(Status_type_id);
-		CinematicAsset = serialized->get_string(CinematicAsset_type_id);
+		TestName = serialized->get_string(TestName_type_id, {});
+		CurrentCineTime = serialized->get_float(CurrentCineTime_type_id, 0.000000);
+		Status = serialized->get_string(Status_type_id, {});
+		CinematicAsset = serialized->get_string(CinematicAsset_type_id, {});
 		Transform = serialized->unwrap_into<rivet::ddl::generated::DDLTransform>(Transform_type_id);
 		EnabledShotActors = serialized->unwrap_into_many<rivet::ddl::generated::RobotTestCineEnableShotActor>(EnabledShotActors_type_id);
 		ActorInfos = serialized->unwrap_into_many<rivet::ddl::generated::RobotestCineFrameActorInfo>(ActorInfos_type_id);

@@ -7,13 +7,13 @@
 
 namespace rivet::ddl::generated {
 	PlayerHUDFollowerPrius::PlayerHUDFollowerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Distance = serialized->get_float(Distance_type_id);
-		ZScale = serialized->get_float(ZScale_type_id);
-		ModelHeight = serialized->get_float(ModelHeight_type_id);
-		XRotationDistance = serialized->get_float(XRotationDistance_type_id);
-		YRotationDistance = serialized->get_float(YRotationDistance_type_id);
-		TweenSpeed = serialized->get_float(TweenSpeed_type_id);
-		LevelUpLerpTime = serialized->get_float(LevelUpLerpTime_type_id); 
+		Distance = serialized->get_float(Distance_type_id, 1.000000);
+		ZScale = serialized->get_float(ZScale_type_id, 0.100000);
+		ModelHeight = serialized->get_float(ModelHeight_type_id, 100.000000);
+		XRotationDistance = serialized->get_float(XRotationDistance_type_id, 1.000000);
+		YRotationDistance = serialized->get_float(YRotationDistance_type_id, 1.000000);
+		TweenSpeed = serialized->get_float(TweenSpeed_type_id, 0.500000);
+		LevelUpLerpTime = serialized->get_float(LevelUpLerpTime_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

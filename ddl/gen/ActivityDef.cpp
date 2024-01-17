@@ -10,10 +10,10 @@
 
 namespace rivet::ddl::generated {
 	ActivityDef::ActivityDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ActivityDefBase(serialized) {
-		Category = serialized->get_enum<rivet::ddl::generated::xca2817ca>(Category_type_id, rivet::ddl::generated::xca2817ca_values);
-		SubCategory = serialized->get_enum<rivet::ddl::generated::xbd8d5c4d>(SubCategory_type_id, rivet::ddl::generated::xbd8d5c4d_values);
-		LargeImagePath = serialized->get_string(LargeImagePath_type_id);
-		SmallImagePath = serialized->get_string(SmallImagePath_type_id);
+		Category = serialized->get_enum<rivet::ddl::generated::xca2817ca>(Category_type_id, rivet::ddl::generated::xca2817ca_values, rivet::ddl::generated::xca2817ca::progress);
+		SubCategory = serialized->get_enum<rivet::ddl::generated::xbd8d5c4d>(SubCategory_type_id, rivet::ddl::generated::xbd8d5c4d_values, rivet::ddl::generated::xbd8d5c4d::null);
+		LargeImagePath = serialized->get_string(LargeImagePath_type_id, {});
+		SmallImagePath = serialized->get_string(SmallImagePath_type_id, {});
 		Rewards = serialized->unwrap_into_many<rivet::ddl::generated::ActivityReward>(Rewards_type_id);
 		Tasks = serialized->unwrap_into_many<rivet::ddl::generated::TaskDef>(Tasks_type_id); 
 	}

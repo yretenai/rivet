@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	MultiHeuristicTargetingPrius::MultiHeuristicTargetingPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): HeuristicTargetingPrius(serialized) {
-		MaxTrackedTargets = serialized->get_int32(MaxTrackedTargets_type_id); 
+		MaxTrackedTargets = serialized->get_int32(MaxTrackedTargets_type_id, 1); 
 	}
 
 	[[nodiscard]] auto

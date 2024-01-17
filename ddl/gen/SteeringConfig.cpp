@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	SteeringConfig::SteeringConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AlwaysUseAccel = serialized->get_bool(AlwaysUseAccel_type_id);
-		UseNavPositionTrackerQueries = serialized->get_bool(UseNavPositionTrackerQueries_type_id); 
+		AlwaysUseAccel = serialized->get_bool(AlwaysUseAccel_type_id, false);
+		UseNavPositionTrackerQueries = serialized->get_bool(UseNavPositionTrackerQueries_type_id, false); 
 	}
 
 	[[nodiscard]] auto

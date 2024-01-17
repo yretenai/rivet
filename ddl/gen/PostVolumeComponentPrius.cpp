@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	PostVolumeComponentPrius::PostVolumeComponentPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		FadeInTime = serialized->get_float(FadeInTime_type_id); 
+		FadeInTime = serialized->get_float(FadeInTime_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

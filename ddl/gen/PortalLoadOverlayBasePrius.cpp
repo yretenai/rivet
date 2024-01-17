@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	PortalLoadOverlayBasePrius::PortalLoadOverlayBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): PortalLoadPrius(serialized) {
-		Overlay = serialized->get_string(Overlay_type_id);
-		AutoUnload = serialized->get_bool(AutoUnload_type_id); 
+		Overlay = serialized->get_string(Overlay_type_id, {});
+		AutoUnload = serialized->get_bool(AutoUnload_type_id, true); 
 	}
 
 	[[nodiscard]] auto

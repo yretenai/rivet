@@ -10,11 +10,11 @@
 
 namespace rivet::ddl::generated {
 	DevstatsSystemMenuOptionChangedEvent::DevstatsSystemMenuOptionChangedEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		EventId = serialized->get_string(EventId_type_id);
-		OptionName = serialized->get_string(OptionName_type_id);
-		StringValue = serialized->get_string(StringValue_type_id);
-		FloatValue = serialized->get_float(FloatValue_type_id);
-		IsPreset = serialized->get_bool(IsPreset_type_id);
+		EventId = serialized->get_string(EventId_type_id, {});
+		OptionName = serialized->get_string(OptionName_type_id, {});
+		StringValue = serialized->get_string(StringValue_type_id, {});
+		FloatValue = serialized->get_float(FloatValue_type_id, 0.000000);
+		IsPreset = serialized->get_bool(IsPreset_type_id, false);
 		PlayerPosInfo = serialized->unwrap_into<rivet::ddl::generated::DevstatsPlayerPositionInfo>(PlayerPosInfo_type_id);
 		PrimarySegmentInfo = serialized->unwrap_into<rivet::ddl::generated::DevstatsPrimarySegmentInfo>(PrimarySegmentInfo_type_id); 
 	}

@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	MayaReplaceAnimateThisRef::MayaReplaceAnimateThisRef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MayaPath = serialized->get_string(MayaPath_type_id);
-		OldReferencePath = serialized->get_string(OldReferencePath_type_id);
-		NewReferencePath = serialized->get_string(NewReferencePath_type_id); 
+		MayaPath = serialized->get_string(MayaPath_type_id, {});
+		OldReferencePath = serialized->get_string(OldReferencePath_type_id, {});
+		NewReferencePath = serialized->get_string(NewReferencePath_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

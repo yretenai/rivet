@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	HeroEconomySnapshotDevstatsEvent::HeroEconomySnapshotDevstatsEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		ParentEventId = serialized->get_string(ParentEventId_type_id);
-		CareerRaritanium = serialized->get_float(CareerRaritanium_type_id); 
+		ParentEventId = serialized->get_string(ParentEventId_type_id, {});
+		CareerRaritanium = serialized->get_float(CareerRaritanium_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

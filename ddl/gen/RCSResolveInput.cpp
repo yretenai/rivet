@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	RCSResolveInput::RCSResolveInput([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AutoResolve = serialized->get_enum<rivet::ddl::generated::x5c9fe7cc>(AutoResolve_type_id, rivet::ddl::generated::x5c9fe7cc_values);
-		Changelist = serialized->get_int32(Changelist_type_id);
+		AutoResolve = serialized->get_enum<rivet::ddl::generated::x5c9fe7cc>(AutoResolve_type_id, rivet::ddl::generated::x5c9fe7cc_values, rivet::ddl::generated::x5c9fe7cc::Safe);
+		Changelist = serialized->get_int32(Changelist_type_id, 0);
 		Files = serialized->get_strings(Files_type_id);
-		Preview = serialized->get_bool(Preview_type_id); 
+		Preview = serialized->get_bool(Preview_type_id, false); 
 	}
 
 	[[nodiscard]] auto

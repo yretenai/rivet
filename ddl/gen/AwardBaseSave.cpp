@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	AwardBaseSave::AwardBaseSave([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		CurrentValue = serialized->get_uint32(CurrentValue_type_id);
-		PrizeGiven = serialized->get_bool(PrizeGiven_type_id); 
+		CurrentValue = serialized->get_uint32(CurrentValue_type_id, 0);
+		PrizeGiven = serialized->get_bool(PrizeGiven_type_id, false); 
 	}
 
 	[[nodiscard]] auto

@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	RCSDeleteInput::RCSDeleteInput([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Views = serialized->get_strings(Views_type_id);
-		Changelist = serialized->get_uint32(Changelist_type_id); 
+		Changelist = serialized->get_uint32(Changelist_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

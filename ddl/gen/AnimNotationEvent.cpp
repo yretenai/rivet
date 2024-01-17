@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	AnimNotationEvent::AnimNotationEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Comment = serialized->get_string(Comment_type_id); 
+		Comment = serialized->get_string(Comment_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

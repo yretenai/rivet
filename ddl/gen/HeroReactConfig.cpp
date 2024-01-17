@@ -9,12 +9,12 @@
 
 namespace rivet::ddl::generated {
 	HeroReactConfig::HeroReactConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AlwaysReactToMelee = serialized->get_bool(AlwaysReactToMelee_type_id);
-		AlwaysReactToExplosions = serialized->get_bool(AlwaysReactToExplosions_type_id);
+		AlwaysReactToMelee = serialized->get_bool(AlwaysReactToMelee_type_id, true);
+		AlwaysReactToExplosions = serialized->get_bool(AlwaysReactToExplosions_type_id, false);
 		TwitchData = serialized->unwrap_into<rivet::ddl::generated::HeroReactLevelData>(TwitchData_type_id);
 		KnockbackData = serialized->unwrap_into<rivet::ddl::generated::HeroReactLevelData>(KnockbackData_type_id);
 		KnockdownData = serialized->unwrap_into<rivet::ddl::generated::HeroReactLevelData>(KnockdownData_type_id);
-		InvulnerabilityPeriod = serialized->get_float(InvulnerabilityPeriod_type_id); 
+		InvulnerabilityPeriod = serialized->get_float(InvulnerabilityPeriod_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

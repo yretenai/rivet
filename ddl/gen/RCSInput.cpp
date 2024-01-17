@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	RCSInput::RCSInput([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		KeepAliveTimeout = serialized->get_float(KeepAliveTimeout_type_id); 
+		KeepAliveTimeout = serialized->get_float(KeepAliveTimeout_type_id, 600.000000); 
 	}
 
 	[[nodiscard]] auto

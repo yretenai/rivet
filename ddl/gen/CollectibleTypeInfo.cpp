@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	CollectibleTypeInfo::CollectibleTypeInfo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): CollectibleTypeInfoBase(serialized) {
-		AutoSequential = serialized->get_bool(AutoSequential_type_id);
+		AutoSequential = serialized->get_bool(AutoSequential_type_id, false);
 		PreRegisteredInstances = serialized->unwrap_into_many<rivet::ddl::generated::CollectibleInstanceEntry>(PreRegisteredInstances_type_id); 
 	}
 

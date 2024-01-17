@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ScriptedShotGenericEvent::ScriptedShotGenericEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		EventName = serialized->get_string(EventName_type_id); 
+		EventName = serialized->get_string(EventName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

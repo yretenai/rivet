@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	TriggerEffectArrayItem::TriggerEffectArrayItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		EffectType = serialized->get_enum<rivet::ddl::generated::x60ab12b0>(EffectType_type_id, rivet::ddl::generated::x60ab12b0_values);
-		Triggers = serialized->get_enum<rivet::ddl::generated::x626794b4>(Triggers_type_id, rivet::ddl::generated::x626794b4_values);
-		Enabled = serialized->get_bool(Enabled_type_id);
-		TriggerEffectConfig = serialized->get_string(TriggerEffectConfig_type_id); 
+		EffectType = serialized->get_enum<rivet::ddl::generated::x60ab12b0>(EffectType_type_id, rivet::ddl::generated::x60ab12b0_values, rivet::ddl::generated::x60ab12b0::None);
+		Triggers = serialized->get_enum<rivet::ddl::generated::x626794b4>(Triggers_type_id, rivet::ddl::generated::x626794b4_values, rivet::ddl::generated::x626794b4::Left);
+		Enabled = serialized->get_bool(Enabled_type_id, true);
+		TriggerEffectConfig = serialized->get_string(TriggerEffectConfig_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

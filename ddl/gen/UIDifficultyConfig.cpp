@@ -11,7 +11,7 @@ namespace rivet::ddl::generated {
 	UIDifficultyConfig::UIDifficultyConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
 		DifficultyLevelData = serialized->unwrap_into_many<rivet::ddl::generated::UIDifficultyData>(DifficultyLevelData_type_id);
 		SuperEasyDifficultyData = serialized->unwrap_into<rivet::ddl::generated::UIDifficultyData>(SuperEasyDifficultyData_type_id);
-		DefaultDifficultyID = serialized->get_enum<rivet::ddl::generated::xd2b2d773>(DefaultDifficultyID_type_id, rivet::ddl::generated::xd2b2d773_values); 
+		DefaultDifficultyID = serialized->get_enum<rivet::ddl::generated::xd2b2d773>(DefaultDifficultyID_type_id, rivet::ddl::generated::xd2b2d773_values, rivet::ddl::generated::xd2b2d773::Normal); 
 	}
 
 	[[nodiscard]] auto

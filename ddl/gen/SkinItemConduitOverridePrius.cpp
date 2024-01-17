@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	SkinItemConduitOverridePrius::SkinItemConduitOverridePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ConduitAssetId = serialized->get_uint64(ConduitAssetId_type_id); 
+		ConduitAssetId = serialized->get_uint64(ConduitAssetId_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

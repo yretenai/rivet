@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	AimModWalkToTargetGamePrius::AimModWalkToTargetGamePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): AimModWalkToTargetPrius(serialized) {
-		AimLockType = serialized->get_enum<rivet::ddl::generated::x6d09c1a1>(AimLockType_type_id, rivet::ddl::generated::x6d09c1a1_values); 
+		AimLockType = serialized->get_enum<rivet::ddl::generated::x6d09c1a1>(AimLockType_type_id, rivet::ddl::generated::x6d09c1a1_values, rivet::ddl::generated::x6d09c1a1::NoLock); 
 	}
 
 	[[nodiscard]] auto

@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	ConfigModListElement::ConfigModListElement([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ModType = serialized->get_enum<rivet::ddl::generated::x756cf95f>(ModType_type_id, rivet::ddl::generated::x756cf95f_values);
-		Op = serialized->get_enum<rivet::ddl::generated::x2d67b08a>(Op_type_id, rivet::ddl::generated::x2d67b08a_values);
-		Value = serialized->get_float(Value_type_id);
-		ClassId = serialized->get_int32(ClassId_type_id); 
+		ModType = serialized->get_enum<rivet::ddl::generated::x756cf95f>(ModType_type_id, rivet::ddl::generated::x756cf95f_values, rivet::ddl::generated::x756cf95f::Always_used);
+		Op = serialized->get_enum<rivet::ddl::generated::x2d67b08a>(Op_type_id, rivet::ddl::generated::x2d67b08a_values, rivet::ddl::generated::x2d67b08a::Set);
+		Value = serialized->get_float(Value_type_id, 0.000000);
+		ClassId = serialized->get_int32(ClassId_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

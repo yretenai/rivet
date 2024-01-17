@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	SwingshotCameraPitchOverrides::SwingshotCameraPitchOverrides([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DefaultPitchStart = serialized->get_float(DefaultPitchStart_type_id);
-		DefaultPitchEnd = serialized->get_float(DefaultPitchEnd_type_id);
-		OverrideFollowConfig = serialized->get_string(OverrideFollowConfig_type_id);
-		OverrideAimContextConfig = serialized->get_string(OverrideAimContextConfig_type_id); 
+		DefaultPitchStart = serialized->get_float(DefaultPitchStart_type_id, 15.000000);
+		DefaultPitchEnd = serialized->get_float(DefaultPitchEnd_type_id, 15.000000);
+		OverrideFollowConfig = serialized->get_string(OverrideFollowConfig_type_id, {});
+		OverrideAimContextConfig = serialized->get_string(OverrideAimContextConfig_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

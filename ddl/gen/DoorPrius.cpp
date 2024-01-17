@@ -13,14 +13,14 @@
 
 namespace rivet::ddl::generated {
 	DoorPrius::DoorPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SaveOpenedState = serialized->get_bool(SaveOpenedState_type_id);
-		Region = serialized->get_string(Region_type_id);
+		SaveOpenedState = serialized->get_bool(SaveOpenedState_type_id, false);
+		Region = serialized->get_string(Region_type_id, {});
 		TriggerList = serialized->unwrap_into_many<rivet::ddl::generated::AutoDoorTrigger>(TriggerList_type_id);
 		RequiredItems = serialized->unwrap_into_many<rivet::ddl::generated::RequiredItemEntry>(RequiredItems_type_id);
-		StartOpen = serialized->get_bool(StartOpen_type_id);
-		StartLocked = serialized->get_bool(StartLocked_type_id);
-		SquashVolume = serialized->get_uint64(SquashVolume_type_id);
-		CreateDoorOffer = serialized->get_bool(CreateDoorOffer_type_id);
+		StartOpen = serialized->get_bool(StartOpen_type_id, false);
+		StartLocked = serialized->get_bool(StartLocked_type_id, false);
+		SquashVolume = serialized->get_uint64(SquashVolume_type_id, 0);
+		CreateDoorOffer = serialized->get_bool(CreateDoorOffer_type_id, false);
 		DoorOfferPrius = serialized->unwrap_into<rivet::ddl::generated::DoorOfferPrius>(DoorOfferPrius_type_id); 
 	}
 

@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	BeetleTrailStartEvent::BeetleTrailStartEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		AVMaterialType = serialized->get_enum<rivet::ddl::generated::x10b3c4cf>(AVMaterialType_type_id, rivet::ddl::generated::x10b3c4cf_values); 
+		AVMaterialType = serialized->get_enum<rivet::ddl::generated::x10b3c4cf>(AVMaterialType_type_id, rivet::ddl::generated::x10b3c4cf_values, rivet::ddl::generated::x10b3c4cf::None); 
 	}
 
 	[[nodiscard]] auto

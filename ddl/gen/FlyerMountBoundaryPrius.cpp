@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	FlyerMountBoundaryPrius::FlyerMountBoundaryPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		BoundaryType = serialized->get_enum<rivet::ddl::generated::xe41b4b91>(BoundaryType_type_id, rivet::ddl::generated::xe41b4b91_values); 
+		BoundaryType = serialized->get_enum<rivet::ddl::generated::xe41b4b91>(BoundaryType_type_id, rivet::ddl::generated::xe41b4b91_values, rivet::ddl::generated::xe41b4b91::Barrier); 
 	}
 
 	[[nodiscard]] auto

@@ -9,9 +9,9 @@
 
 namespace rivet::ddl::generated {
 	DebugSphereComponentPrius::DebugSphereComponentPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Radius = serialized->get_float(Radius_type_id);
+		Radius = serialized->get_float(Radius_type_id, 1.000000);
 		Color = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Color_type_id);
-		Enabled = serialized->get_bool(Enabled_type_id); 
+		Enabled = serialized->get_bool(Enabled_type_id, true); 
 	}
 
 	[[nodiscard]] auto

@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	MmInner::MmInner([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Scalar = serialized->get_string(Scalar_type_id);
+		Scalar = serialized->get_string(Scalar_type_id, {});
 		Array = serialized->get_strings(Array_type_id);
 		Hash = serialized->unwrap_into_many<rivet::ddl::generated::MmLeaf>(Hash_type_id); 
 	}

@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	LevelListGameDataClipboard::LevelListGameDataClipboard([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		compatability = serialized->get_string(compatability_type_id);
+		compatability = serialized->get_string(compatability_type_id, {});
 		data = serialized->unwrap_into<rivet::ddl::generated::DDLStructInst>(data_type_id); 
 	}
 

@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	LightPlatforms::LightPlatforms([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		PS5 = serialized->get_enum<rivet::ddl::generated::x30cc915a>(PS5_type_id, rivet::ddl::generated::x30cc915a_values);
-		PC = serialized->get_enum<rivet::ddl::generated::x30cc915a>(PC_type_id, rivet::ddl::generated::x30cc915a_values); 
+		PS5 = serialized->get_enum<rivet::ddl::generated::x30cc915a>(PS5_type_id, rivet::ddl::generated::x30cc915a_values, rivet::ddl::generated::x30cc915a::All_FPS);
+		PC = serialized->get_enum<rivet::ddl::generated::x30cc915a>(PC_type_id, rivet::ddl::generated::x30cc915a_values, rivet::ddl::generated::x30cc915a::All_FPS); 
 	}
 
 	[[nodiscard]] auto

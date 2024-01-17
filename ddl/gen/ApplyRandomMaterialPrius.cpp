@@ -9,10 +9,10 @@
 
 namespace rivet::ddl::generated {
 	ApplyRandomMaterialPrius::ApplyRandomMaterialPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ReplaceBaseMaterial = serialized->get_bool(ReplaceBaseMaterial_type_id);
-		MaterialToReplace = serialized->get_string(MaterialToReplace_type_id);
+		ReplaceBaseMaterial = serialized->get_bool(ReplaceBaseMaterial_type_id, true);
+		MaterialToReplace = serialized->get_string(MaterialToReplace_type_id, {});
 		MaterialList = serialized->unwrap_into_many<rivet::ddl::generated::ApplyRandomMaterialInfo>(MaterialList_type_id);
-		MaterialIsSynced = serialized->get_bool(MaterialIsSynced_type_id); 
+		MaterialIsSynced = serialized->get_bool(MaterialIsSynced_type_id, true); 
 	}
 
 	[[nodiscard]] auto

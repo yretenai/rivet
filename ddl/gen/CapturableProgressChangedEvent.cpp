@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	CapturableProgressChangedEvent::CapturableProgressChangedEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		CaptureProgress = serialized->get_float(CaptureProgress_type_id); 
+		CaptureProgress = serialized->get_float(CaptureProgress_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	SoundWwiseMapDef::SoundWwiseMapDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Name = serialized->get_string(Name_type_id);
-		WwiseId = serialized->get_uint32(WwiseId_type_id);
-		PlatformMask = serialized->get_uint32(PlatformMask_type_id);
-		LanguageMask = serialized->get_uint32(LanguageMask_type_id); 
+		Name = serialized->get_string(Name_type_id, {});
+		WwiseId = serialized->get_uint32(WwiseId_type_id, 0);
+		PlatformMask = serialized->get_uint32(PlatformMask_type_id, 0);
+		LanguageMask = serialized->get_uint32(LanguageMask_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

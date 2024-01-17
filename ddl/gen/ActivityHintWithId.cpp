@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	ActivityHintWithId::ActivityHintWithId([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		NameTag = serialized->get_string(NameTag_type_id);
-		DescTag = serialized->get_string(DescTag_type_id);
-		MediaFile = serialized->get_string(MediaFile_type_id);
-		HintId = serialized->get_string(HintId_type_id); 
+		NameTag = serialized->get_string(NameTag_type_id, {});
+		DescTag = serialized->get_string(DescTag_type_id, {});
+		MediaFile = serialized->get_string(MediaFile_type_id, {});
+		HintId = serialized->get_string(HintId_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

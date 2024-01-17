@@ -9,12 +9,12 @@
 
 namespace rivet::ddl::generated {
 	AnimDamageProcessorExplosionPrius::AnimDamageProcessorExplosionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): AnimDamageAttackStyleBase(serialized) {
-		DamageType = serialized->get_enum<rivet::ddl::generated::DamageTypes>(DamageType_type_id, rivet::ddl::generated::DamageTypes_values);
-		DamageFlags = serialized->get_bitset<rivet::ddl::generated::x65d7dac2>(DamageFlags_type_id, rivet::ddl::generated::x65d7dac2_values);
-		DamageJoint = serialized->get_string(DamageJoint_type_id);
+		DamageType = serialized->get_enum<rivet::ddl::generated::DamageTypes>(DamageType_type_id, rivet::ddl::generated::DamageTypes_values, rivet::ddl::generated::DamageTypes::Explosion);
+		DamageFlags = serialized->get_bitset<rivet::ddl::generated::x65d7dac2>(DamageFlags_type_id, rivet::ddl::generated::x65d7dac2_values, 0);
+		DamageJoint = serialized->get_string(DamageJoint_type_id, {});
 		ExplosionData = serialized->unwrap_into<rivet::ddl::generated::DamageModifierExplosionPrius>(ExplosionData_type_id);
-		UseLineOfSight = serialized->get_bool(UseLineOfSight_type_id);
-		Duration = serialized->get_float(Duration_type_id); 
+		UseLineOfSight = serialized->get_bool(UseLineOfSight_type_id, true);
+		Duration = serialized->get_float(Duration_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

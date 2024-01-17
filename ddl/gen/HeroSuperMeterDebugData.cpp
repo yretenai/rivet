@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	HeroSuperMeterDebugData::HeroSuperMeterDebugData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DrawMeter = serialized->get_bool(DrawMeter_type_id);
-		DrawControls = serialized->get_bool(DrawControls_type_id);
+		DrawMeter = serialized->get_bool(DrawMeter_type_id, true);
+		DrawControls = serialized->get_bool(DrawControls_type_id, true);
 		MeterPos = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(MeterPos_type_id);
 		MeterSize = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(MeterSize_type_id);
 		ControlsPos = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(ControlsPos_type_id);

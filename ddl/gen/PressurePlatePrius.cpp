@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	PressurePlatePrius::PressurePlatePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		TimeToPress = serialized->get_float(TimeToPress_type_id);
-		TimeToReset = serialized->get_float(TimeToReset_type_id);
-		StayPressed = serialized->get_bool(StayPressed_type_id); 
+		TimeToPress = serialized->get_float(TimeToPress_type_id, 1.000000);
+		TimeToReset = serialized->get_float(TimeToReset_type_id, 1.000000);
+		StayPressed = serialized->get_bool(StayPressed_type_id, true); 
 	}
 
 	[[nodiscard]] auto

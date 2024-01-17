@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	SeparateUVFlips::SeparateUVFlips([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		U = serialized->get_enum<rivet::ddl::generated::x51f134c2>(U_type_id, rivet::ddl::generated::x51f134c2_values);
-		V = serialized->get_enum<rivet::ddl::generated::x51f134c2>(V_type_id, rivet::ddl::generated::x51f134c2_values); 
+		U = serialized->get_enum<rivet::ddl::generated::x51f134c2>(U_type_id, rivet::ddl::generated::x51f134c2_values, rivet::ddl::generated::x51f134c2::Random);
+		V = serialized->get_enum<rivet::ddl::generated::x51f134c2>(V_type_id, rivet::ddl::generated::x51f134c2_values, rivet::ddl::generated::x51f134c2::Random); 
 	}
 
 	[[nodiscard]] auto

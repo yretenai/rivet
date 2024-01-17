@@ -7,13 +7,13 @@
 
 namespace rivet::ddl::generated {
 	IntrospectionEngineInstance::IntrospectionEngineInstance([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Port = serialized->get_int32(Port_type_id);
-		Ip = serialized->get_string(Ip_type_id);
-		HostName = serialized->get_string(HostName_type_id);
-		AppName = serialized->get_string(AppName_type_id);
-		Platform = serialized->get_string(Platform_type_id);
-		IsTool = serialized->get_bool(IsTool_type_id);
-		DebugMem = serialized->get_bool(DebugMem_type_id); 
+		Port = serialized->get_int32(Port_type_id, 0);
+		Ip = serialized->get_string(Ip_type_id, {});
+		HostName = serialized->get_string(HostName_type_id, {});
+		AppName = serialized->get_string(AppName_type_id, {});
+		Platform = serialized->get_string(Platform_type_id, {});
+		IsTool = serialized->get_bool(IsTool_type_id, false);
+		DebugMem = serialized->get_bool(DebugMem_type_id, false); 
 	}
 
 	[[nodiscard]] auto

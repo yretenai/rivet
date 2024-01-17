@@ -9,14 +9,14 @@
 
 namespace rivet::ddl::generated {
 	DebugMessageActionPrius::DebugMessageActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		MessageText = serialized->get_string(MessageText_type_id);
-		Duration = serialized->get_float(Duration_type_id);
-		ClearAllMsgs = serialized->get_bool(ClearAllMsgs_type_id);
-		PosX = serialized->get_int32(PosX_type_id);
-		PosY = serialized->get_int32(PosY_type_id);
-		ColorPick = serialized->get_enum<rivet::ddl::generated::x3604158a>(ColorPick_type_id, rivet::ddl::generated::x3604158a_values);
-		FormatAsInt = serialized->get_bool(FormatAsInt_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Debug);
+		MessageText = serialized->get_string(MessageText_type_id, {});
+		Duration = serialized->get_float(Duration_type_id, 6.000000);
+		ClearAllMsgs = serialized->get_bool(ClearAllMsgs_type_id, false);
+		PosX = serialized->get_int32(PosX_type_id, 715);
+		PosY = serialized->get_int32(PosY_type_id, 60);
+		ColorPick = serialized->get_enum<rivet::ddl::generated::x3604158a>(ColorPick_type_id, rivet::ddl::generated::x3604158a_values, rivet::ddl::generated::x3604158a::White);
+		FormatAsInt = serialized->get_bool(FormatAsInt_type_id, false); 
 	}
 
 	[[nodiscard]] auto

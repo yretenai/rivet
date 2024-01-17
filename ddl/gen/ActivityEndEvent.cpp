@@ -10,12 +10,12 @@
 
 namespace rivet::ddl::generated {
 	ActivityEndEvent::ActivityEndEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): UDSEventBase(serialized) {
-		activityId = serialized->get_string(activityId_type_id);
-		outcome = serialized->get_enum<rivet::ddl::generated::x57af8350>(outcome_type_id, rivet::ddl::generated::x57af8350_values);
-		score = serialized->get_int32(score_type_id);
-		zoneId = serialized->get_string(zoneId_type_id);
+		activityId = serialized->get_string(activityId_type_id, {});
+		outcome = serialized->get_enum<rivet::ddl::generated::x57af8350>(outcome_type_id, rivet::ddl::generated::x57af8350_values, rivet::ddl::generated::x57af8350::completed);
+		score = serialized->get_int32(score_type_id, 0);
+		zoneId = serialized->get_string(zoneId_type_id, {});
 		mapPosition = serialized->get_floats(mapPosition_type_id);
-		difficultySetting = serialized->get_int32(difficultySetting_type_id); 
+		difficultySetting = serialized->get_int32(difficultySetting_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	VanityAccessoryToggleEvent::VanityAccessoryToggleEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Type = serialized->get_enum<rivet::ddl::generated::x56bca86c>(Type_type_id, rivet::ddl::generated::x56bca86c_values); 
+		Type = serialized->get_enum<rivet::ddl::generated::x56bca86c>(Type_type_id, rivet::ddl::generated::x56bca86c_values, rivet::ddl::generated::x56bca86c::Rebreather); 
 	}
 
 	[[nodiscard]] auto

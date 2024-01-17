@@ -7,13 +7,13 @@
 
 namespace rivet::ddl::generated {
 	SelfieDefaultsData::SelfieDefaultsData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Driver = serialized->get_string(Driver_type_id);
-		DriverCat = serialized->get_string(DriverCat_type_id);
-		FOV = serialized->get_float(FOV_type_id);
-		RangeNear = serialized->get_float(RangeNear_type_id);
-		APNear = serialized->get_float(APNear_type_id);
-		RangeFar = serialized->get_float(RangeFar_type_id);
-		APFar = serialized->get_float(APFar_type_id); 
+		Driver = serialized->get_string(Driver_type_id, {});
+		DriverCat = serialized->get_string(DriverCat_type_id, {});
+		FOV = serialized->get_float(FOV_type_id, 73.000000);
+		RangeNear = serialized->get_float(RangeNear_type_id, 0.000000);
+		APNear = serialized->get_float(APNear_type_id, 10.000000);
+		RangeFar = serialized->get_float(RangeFar_type_id, 1.800000);
+		APFar = serialized->get_float(APFar_type_id, 1.300000); 
 	}
 
 	[[nodiscard]] auto

@@ -7,16 +7,16 @@
 
 namespace rivet::ddl::generated {
 	PhotoLightMoveOrbitData::PhotoLightMoveOrbitData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MinDistance = serialized->get_float(MinDistance_type_id);
-		MaxDistance = serialized->get_float(MaxDistance_type_id);
-		MinHeight = serialized->get_float(MinHeight_type_id);
-		MaxHeight = serialized->get_float(MaxHeight_type_id);
-		OrbitRateScale = serialized->get_float(OrbitRateScale_type_id);
-		UpDownScale = serialized->get_float(UpDownScale_type_id);
-		NearFarScale = serialized->get_float(NearFarScale_type_id);
-		StartMoveScale = serialized->get_float(StartMoveScale_type_id);
-		FinalMoveScale = serialized->get_float(FinalMoveScale_type_id);
-		MoveScaleTime = serialized->get_float(MoveScaleTime_type_id); 
+		MinDistance = serialized->get_float(MinDistance_type_id, 0.200000);
+		MaxDistance = serialized->get_float(MaxDistance_type_id, 20.000000);
+		MinHeight = serialized->get_float(MinHeight_type_id, -20.000000);
+		MaxHeight = serialized->get_float(MaxHeight_type_id, 20.000000);
+		OrbitRateScale = serialized->get_float(OrbitRateScale_type_id, 1.000000);
+		UpDownScale = serialized->get_float(UpDownScale_type_id, 1.000000);
+		NearFarScale = serialized->get_float(NearFarScale_type_id, 1.000000);
+		StartMoveScale = serialized->get_float(StartMoveScale_type_id, 0.500000);
+		FinalMoveScale = serialized->get_float(FinalMoveScale_type_id, 3.000000);
+		MoveScaleTime = serialized->get_float(MoveScaleTime_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

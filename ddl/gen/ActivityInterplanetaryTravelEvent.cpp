@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	ActivityInterplanetaryTravelEvent::ActivityInterplanetaryTravelEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		InterplanetaryCheckpointName = serialized->get_string(InterplanetaryCheckpointName_type_id);
-		DestinationCheckpointName = serialized->get_string(DestinationCheckpointName_type_id); 
+		InterplanetaryCheckpointName = serialized->get_string(InterplanetaryCheckpointName_type_id, {});
+		DestinationCheckpointName = serialized->get_string(DestinationCheckpointName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

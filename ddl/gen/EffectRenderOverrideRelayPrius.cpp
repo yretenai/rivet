@@ -11,7 +11,7 @@
 namespace rivet::ddl::generated {
 	EffectRenderOverrideRelayPrius::EffectRenderOverrideRelayPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		TriggeringEvent = serialized->unwrap_into<rivet::ddl::generated::EventBase>(TriggeringEvent_type_id);
-		MaxTriggeringEvents = serialized->get_int32(MaxTriggeringEvents_type_id);
+		MaxTriggeringEvents = serialized->get_int32(MaxTriggeringEvents_type_id, 1);
 		RenderOverrides = serialized->unwrap_into_many<rivet::ddl::generated::EffectRenderOverride>(RenderOverrides_type_id); 
 	}
 

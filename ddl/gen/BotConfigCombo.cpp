@@ -12,7 +12,7 @@ namespace rivet::ddl::generated {
 	BotConfigCombo::BotConfigCombo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
 		Combos = serialized->unwrap_into_many<rivet::ddl::generated::BotComboEntry>(Combos_type_id);
 		IndexMoveList = serialized->unwrap_into_many<rivet::ddl::generated::BotIndexMoveContainer>(IndexMoveList_type_id);
-		IndexMoveListProcessed = serialized->get_bool(IndexMoveListProcessed_type_id); 
+		IndexMoveListProcessed = serialized->get_bool(IndexMoveListProcessed_type_id, false); 
 	}
 
 	[[nodiscard]] auto

@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	StatusEffectFireConfig::StatusEffectFireConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): StatusEffectConfig(serialized) {
-		DPS = serialized->get_float(DPS_type_id);
-		PostCompositeShader = serialized->get_string(PostCompositeShader_type_id); 
+		DPS = serialized->get_float(DPS_type_id, 10.000000);
+		PostCompositeShader = serialized->get_string(PostCompositeShader_type_id, ""); 
 	}
 
 	[[nodiscard]] auto

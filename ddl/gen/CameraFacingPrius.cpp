@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	CameraFacingPrius::CameraFacingPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		XZOnly = serialized->get_bool(XZOnly_type_id);
-		UseCameraForward = serialized->get_bool(UseCameraForward_type_id); 
+		XZOnly = serialized->get_bool(XZOnly_type_id, true);
+		UseCameraForward = serialized->get_bool(UseCameraForward_type_id, false); 
 	}
 
 	[[nodiscard]] auto

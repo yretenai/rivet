@@ -7,14 +7,14 @@
 
 namespace rivet::ddl::generated {
 	PhysicsMaterialPropertiesParam::PhysicsMaterialPropertiesParam([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DynamicFriction = serialized->get_float(DynamicFriction_type_id);
-		DynFrictionCombinePolicy = serialized->get_enum<rivet::ddl::generated::x1c7d74ff>(DynFrictionCombinePolicy_type_id, rivet::ddl::generated::x1c7d74ff_values);
-		StaticFriction = serialized->get_float(StaticFriction_type_id);
-		Restitution = serialized->get_float(Restitution_type_id);
-		RestitutionCombinePolicy = serialized->get_enum<rivet::ddl::generated::x1c7d74ff>(RestitutionCombinePolicy_type_id, rivet::ddl::generated::x1c7d74ff_values);
-		SoftContactForceFactor = serialized->get_float(SoftContactForceFactor_type_id);
-		SoftContactDampFactor = serialized->get_float(SoftContactDampFactor_type_id);
-		SoftContactSepVelocity = serialized->get_float(SoftContactSepVelocity_type_id); 
+		DynamicFriction = serialized->get_float(DynamicFriction_type_id, 0.500000);
+		DynFrictionCombinePolicy = serialized->get_enum<rivet::ddl::generated::x1c7d74ff>(DynFrictionCombinePolicy_type_id, rivet::ddl::generated::x1c7d74ff_values, rivet::ddl::generated::x1c7d74ff::CombineMin);
+		StaticFriction = serialized->get_float(StaticFriction_type_id, 0.500000);
+		Restitution = serialized->get_float(Restitution_type_id, 0.100000);
+		RestitutionCombinePolicy = serialized->get_enum<rivet::ddl::generated::x1c7d74ff>(RestitutionCombinePolicy_type_id, rivet::ddl::generated::x1c7d74ff_values, rivet::ddl::generated::x1c7d74ff::CombineMax);
+		SoftContactForceFactor = serialized->get_float(SoftContactForceFactor_type_id, 0.000000);
+		SoftContactDampFactor = serialized->get_float(SoftContactDampFactor_type_id, 0.000000);
+		SoftContactSepVelocity = serialized->get_float(SoftContactSepVelocity_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

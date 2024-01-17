@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	LightGridModConfig::LightGridModConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		AoStength = serialized->get_float(AoStength_type_id);
-		AoVerticality = serialized->get_float(AoVerticality_type_id);
+		AoStength = serialized->get_float(AoStength_type_id, 1.000000);
+		AoVerticality = serialized->get_float(AoVerticality_type_id, 1.000000);
 		ColorMods = serialized->unwrap_into_many<rivet::ddl::generated::ColorModulation>(ColorMods_type_id); 
 	}
 

@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	GameplayDataReferenceDef::GameplayDataReferenceDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AssetPath = serialized->get_string(AssetPath_type_id);
-		DataType = serialized->get_string(DataType_type_id); 
+		AssetPath = serialized->get_string(AssetPath_type_id, {});
+		DataType = serialized->get_string(DataType_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

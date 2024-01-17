@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	SoundPropagation2BezierDef::SoundPropagation2BezierDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Slope = serialized->get_float(Slope_type_id); 
+		Slope = serialized->get_float(Slope_type_id, 0.500000); 
 	}
 
 	[[nodiscard]] auto

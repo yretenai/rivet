@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	SoundListenerBoomProperties::SoundListenerBoomProperties([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		RangeMin = serialized->get_float(RangeMin_type_id);
-		RangeMax = serialized->get_float(RangeMax_type_id);
-		BoomLength = serialized->get_float(BoomLength_type_id);
-		TargetUpOffset = serialized->get_float(TargetUpOffset_type_id);
-		TargetLocator = serialized->get_string(TargetLocator_type_id); 
+		RangeMin = serialized->get_float(RangeMin_type_id, 0.000000);
+		RangeMax = serialized->get_float(RangeMax_type_id, 1024.000000);
+		BoomLength = serialized->get_float(BoomLength_type_id, 0.000000);
+		TargetUpOffset = serialized->get_float(TargetUpOffset_type_id, 0.000000);
+		TargetLocator = serialized->get_string(TargetLocator_type_id, ""); 
 	}
 
 	[[nodiscard]] auto

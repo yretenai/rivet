@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	UDSWebApiTaskMetadata::UDSWebApiTaskMetadata([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		type = serialized->get_enum<rivet::ddl::generated::x38e4d198>(type_type_id, rivet::ddl::generated::x38e4d198_values);
+		type = serialized->get_enum<rivet::ddl::generated::x38e4d198>(type_type_id, rivet::ddl::generated::x38e4d198_values, rivet::ddl::generated::x38e4d198::activity);
 		name = serialized->get_strings(name_type_id);
-		isRequiredForCompletion = serialized->get_bool(isRequiredForCompletion_type_id);
-		hidden = serialized->get_bool(hidden_type_id); 
+		isRequiredForCompletion = serialized->get_bool(isRequiredForCompletion_type_id, false);
+		hidden = serialized->get_bool(hidden_type_id, false); 
 	}
 
 	[[nodiscard]] auto

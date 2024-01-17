@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	HazardLaserNodePrius::HazardLaserNodePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Path = serialized->get_uint64(Path_type_id);
-		SpeedMax = serialized->get_float(SpeedMax_type_id);
-		SpeedAccel = serialized->get_float(SpeedAccel_type_id);
-		PauseTime = serialized->get_float(PauseTime_type_id);
-		TimeOffset = serialized->get_float(TimeOffset_type_id); 
+		Path = serialized->get_uint64(Path_type_id, 0);
+		SpeedMax = serialized->get_float(SpeedMax_type_id, 1.000000);
+		SpeedAccel = serialized->get_float(SpeedAccel_type_id, 1.000000);
+		PauseTime = serialized->get_float(PauseTime_type_id, 0.000000);
+		TimeOffset = serialized->get_float(TimeOffset_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

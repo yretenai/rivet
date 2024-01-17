@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	UDSWebApiStatCondition::UDSWebApiStatCondition([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		eventName = serialized->get_string(eventName_type_id);
+		eventName = serialized->get_string(eventName_type_id, {});
 		property = serialized->unwrap_into<rivet::ddl::generated::UDSWebApiStatProperty>(property_type_id); 
 	}
 

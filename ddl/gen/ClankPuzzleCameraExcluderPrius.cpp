@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ClankPuzzleCameraExcluderPrius::ClankPuzzleCameraExcluderPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		RemoveCameraCollision = serialized->get_bool(RemoveCameraCollision_type_id); 
+		RemoveCameraCollision = serialized->get_bool(RemoveCameraCollision_type_id, false); 
 	}
 
 	[[nodiscard]] auto

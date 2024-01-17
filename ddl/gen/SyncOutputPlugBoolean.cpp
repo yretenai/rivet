@@ -10,8 +10,8 @@
 namespace rivet::ddl::generated {
 	SyncOutputPlugBoolean::SyncOutputPlugBoolean([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): OutputPlugBaseDef(serialized) {
 		Value = serialized->unwrap_into<rivet::ddl::generated::BooleanPlug>(Value_type_id);
-		SyncLabel = serialized->get_string(SyncLabel_type_id);
-		SyncOutputFlags = serialized->get_bitset<rivet::ddl::generated::x3611f38d>(SyncOutputFlags_type_id, rivet::ddl::generated::x3611f38d_values); 
+		SyncLabel = serialized->get_string(SyncLabel_type_id, {});
+		SyncOutputFlags = serialized->get_bitset<rivet::ddl::generated::x3611f38d>(SyncOutputFlags_type_id, rivet::ddl::generated::x3611f38d_values, 1); 
 	}
 
 	[[nodiscard]] auto

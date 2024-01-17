@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	GraphConMeta::GraphConMeta([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Type = serialized->get_string(Type_type_id);
-		SubType = serialized->get_string(SubType_type_id);
-		Dir = serialized->get_enum<rivet::ddl::generated::x6e9cd50>(Dir_type_id, rivet::ddl::generated::x6e9cd50_values); 
+		Type = serialized->get_string(Type_type_id, {});
+		SubType = serialized->get_string(SubType_type_id, {});
+		Dir = serialized->get_enum<rivet::ddl::generated::x6e9cd50>(Dir_type_id, rivet::ddl::generated::x6e9cd50_values, rivet::ddl::generated::x6e9cd50::Invalid); 
 	}
 
 	[[nodiscard]] auto

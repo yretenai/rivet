@@ -11,8 +11,8 @@
 
 namespace rivet::ddl::generated {
 	NodeGraphContents::NodeGraphContents([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Name = serialized->get_string(Name_type_id);
-		Id = serialized->get_uint64(Id_type_id);
+		Name = serialized->get_string(Name_type_id, {});
+		Id = serialized->get_uint64(Id_type_id, 0);
 		Nodes = serialized->unwrap_into_many<rivet::ddl::generated::GraphNode>(Nodes_type_id);
 		Connections = serialized->unwrap_into_many<rivet::ddl::generated::GraphConnection>(Connections_type_id);
 		IO = serialized->unwrap_into_many<rivet::ddl::generated::GraphIOMeta>(IO_type_id);

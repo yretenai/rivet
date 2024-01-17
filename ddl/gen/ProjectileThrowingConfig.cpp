@@ -7,14 +7,14 @@
 
 namespace rivet::ddl::generated {
 	ProjectileThrowingConfig::ProjectileThrowingConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		DesiredFlightTime = serialized->get_float(DesiredFlightTime_type_id);
-		MinSpeed = serialized->get_float(MinSpeed_type_id);
-		MaxSpeed = serialized->get_float(MaxSpeed_type_id);
+		DesiredFlightTime = serialized->get_float(DesiredFlightTime_type_id, 1.000000);
+		MinSpeed = serialized->get_float(MinSpeed_type_id, 10.000000);
+		MaxSpeed = serialized->get_float(MaxSpeed_type_id, 50.000000);
 		ArcHeights = serialized->get_floats(ArcHeights_type_id);
-		CollCheckWidth = serialized->get_float(CollCheckWidth_type_id);
-		MaxPredictionSpeed = serialized->get_float(MaxPredictionSpeed_type_id);
-		MaxPredictionSpeedTraversal = serialized->get_float(MaxPredictionSpeedTraversal_type_id);
-		CameraFacingOffset = serialized->get_float(CameraFacingOffset_type_id); 
+		CollCheckWidth = serialized->get_float(CollCheckWidth_type_id, 0.100000);
+		MaxPredictionSpeed = serialized->get_float(MaxPredictionSpeed_type_id, 5.000000);
+		MaxPredictionSpeedTraversal = serialized->get_float(MaxPredictionSpeedTraversal_type_id, 7.000000);
+		CameraFacingOffset = serialized->get_float(CameraFacingOffset_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

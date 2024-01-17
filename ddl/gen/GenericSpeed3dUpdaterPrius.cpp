@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	GenericSpeed3dUpdaterPrius::GenericSpeed3dUpdaterPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ForceFramePositionForSpeed = serialized->get_bool(ForceFramePositionForSpeed_type_id);
-		UseCustomRTPCName = serialized->get_bool(UseCustomRTPCName_type_id);
-		CustomRTPCName = serialized->get_string(CustomRTPCName_type_id); 
+		ForceFramePositionForSpeed = serialized->get_bool(ForceFramePositionForSpeed_type_id, false);
+		UseCustomRTPCName = serialized->get_bool(UseCustomRTPCName_type_id, false);
+		CustomRTPCName = serialized->get_string(CustomRTPCName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

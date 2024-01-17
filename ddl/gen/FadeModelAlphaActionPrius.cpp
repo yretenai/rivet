@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	FadeModelAlphaActionPrius::FadeModelAlphaActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		Dissolve = serialized->get_bool(Dissolve_type_id);
-		HighQualityAlpha = serialized->get_bool(HighQualityAlpha_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Rendering);
+		Dissolve = serialized->get_bool(Dissolve_type_id, false);
+		HighQualityAlpha = serialized->get_bool(HighQualityAlpha_type_id, false); 
 	}
 
 	[[nodiscard]] auto

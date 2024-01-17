@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	GameBotMeleeSwarmerBurrowerPrius::GameBotMeleeSwarmerBurrowerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): GameBotMeleeSwarmerPrius(serialized) {
-		ChanceToBurrow = serialized->get_float(ChanceToBurrow_type_id);
-		PreBurrowDelayMin = serialized->get_float(PreBurrowDelayMin_type_id);
-		PreBurrowDelayMax = serialized->get_float(PreBurrowDelayMax_type_id); 
+		ChanceToBurrow = serialized->get_float(ChanceToBurrow_type_id, 1.000000);
+		PreBurrowDelayMin = serialized->get_float(PreBurrowDelayMin_type_id, 1.000000);
+		PreBurrowDelayMax = serialized->get_float(PreBurrowDelayMax_type_id, 3.000000); 
 	}
 
 	[[nodiscard]] auto

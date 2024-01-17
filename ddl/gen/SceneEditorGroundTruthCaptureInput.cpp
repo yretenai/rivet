@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	SceneEditorGroundTruthCaptureInput::SceneEditorGroundTruthCaptureInput([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ZonePath = serialized->get_string(ZonePath_type_id);
-		SamplesPerPixel = serialized->get_int32(SamplesPerPixel_type_id);
-		CPUCoresToUse = serialized->get_int32(CPUCoresToUse_type_id);
-		MaxBounces = serialized->get_int32(MaxBounces_type_id);
-		UseMaterials = serialized->get_bool(UseMaterials_type_id);
-		CaptureSunDisc = serialized->get_bool(CaptureSunDisc_type_id); 
+		ZonePath = serialized->get_string(ZonePath_type_id, "");
+		SamplesPerPixel = serialized->get_int32(SamplesPerPixel_type_id, 50);
+		CPUCoresToUse = serialized->get_int32(CPUCoresToUse_type_id, 20);
+		MaxBounces = serialized->get_int32(MaxBounces_type_id, 1);
+		UseMaterials = serialized->get_bool(UseMaterials_type_id, true);
+		CaptureSunDisc = serialized->get_bool(CaptureSunDisc_type_id, true); 
 	}
 
 	[[nodiscard]] auto

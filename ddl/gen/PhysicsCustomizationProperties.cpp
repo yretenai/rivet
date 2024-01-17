@@ -10,9 +10,9 @@
 
 namespace rivet::ddl::generated {
 	PhysicsCustomizationProperties::PhysicsCustomizationProperties([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		WantsOverrideMotionProperties = serialized->get_bool(WantsOverrideMotionProperties_type_id);
+		WantsOverrideMotionProperties = serialized->get_bool(WantsOverrideMotionProperties_type_id, false);
 		MotionPropertiesOverrideValues = serialized->unwrap_into<rivet::ddl::generated::PhysicsMotionPropertiesParam>(MotionPropertiesOverrideValues_type_id);
-		WantsOverrideMaterial = serialized->get_bool(WantsOverrideMaterial_type_id);
+		WantsOverrideMaterial = serialized->get_bool(WantsOverrideMaterial_type_id, false);
 		MaterialPropertiesOverrideValues = serialized->unwrap_into<rivet::ddl::generated::PhysicsMaterialPropertiesParam>(MaterialPropertiesOverrideValues_type_id); 
 	}
 

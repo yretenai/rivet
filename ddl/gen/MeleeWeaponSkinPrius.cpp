@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	MeleeWeaponSkinPrius::MeleeWeaponSkinPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MeleeWeaponSkinConfig = serialized->get_string(MeleeWeaponSkinConfig_type_id);
-		IsWrench = serialized->get_bool(IsWrench_type_id); 
+		MeleeWeaponSkinConfig = serialized->get_string(MeleeWeaponSkinConfig_type_id, {});
+		IsWrench = serialized->get_bool(IsWrench_type_id, true); 
 	}
 
 	[[nodiscard]] auto

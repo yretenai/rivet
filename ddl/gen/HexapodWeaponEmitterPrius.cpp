@@ -8,8 +8,8 @@
 namespace rivet::ddl::generated {
 	HexapodWeaponEmitterPrius::HexapodWeaponEmitterPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ComponentEmitterBasePrius(serialized) {
 		Locators = serialized->get_strings(Locators_type_id);
-		ZOffset = serialized->get_float(ZOffset_type_id);
-		EmitFromUser = serialized->get_bool(EmitFromUser_type_id); 
+		ZOffset = serialized->get_float(ZOffset_type_id, 0.000000);
+		EmitFromUser = serialized->get_bool(EmitFromUser_type_id, false); 
 	}
 
 	[[nodiscard]] auto

@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	CheckpointWarpActionPrius::CheckpointWarpActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		CheckpointName = serialized->get_string(CheckpointName_type_id);
-		DimensionCheckpointName = serialized->get_string(DimensionCheckpointName_type_id);
-		DesiredHero = serialized->get_enum<rivet::ddl::generated::HeroTypes>(DesiredHero_type_id, rivet::ddl::generated::HeroTypes_values);
-		ImmediatelySaveCheckpoint = serialized->get_bool(ImmediatelySaveCheckpoint_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Hero);
+		CheckpointName = serialized->get_string(CheckpointName_type_id, {});
+		DimensionCheckpointName = serialized->get_string(DimensionCheckpointName_type_id, {});
+		DesiredHero = serialized->get_enum<rivet::ddl::generated::HeroTypes>(DesiredHero_type_id, rivet::ddl::generated::HeroTypes_values, rivet::ddl::generated::HeroTypes::None);
+		ImmediatelySaveCheckpoint = serialized->get_bool(ImmediatelySaveCheckpoint_type_id, false); 
 	}
 
 	[[nodiscard]] auto

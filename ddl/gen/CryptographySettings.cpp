@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	CryptographySettings::CryptographySettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Level = serialized->get_enum<rivet::ddl::generated::x27dd4d8e>(Level_type_id, rivet::ddl::generated::x27dd4d8e_values);
-		CrcMessages = serialized->get_bool(CrcMessages_type_id);
-		WrapMessages = serialized->get_bool(WrapMessages_type_id); 
+		Level = serialized->get_enum<rivet::ddl::generated::x27dd4d8e>(Level_type_id, rivet::ddl::generated::x27dd4d8e_values, rivet::ddl::generated::x27dd4d8e::CryptographyFull);
+		CrcMessages = serialized->get_bool(CrcMessages_type_id, true);
+		WrapMessages = serialized->get_bool(WrapMessages_type_id, true); 
 	}
 
 	[[nodiscard]] auto

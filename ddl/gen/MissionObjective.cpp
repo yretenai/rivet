@@ -9,24 +9,24 @@
 
 namespace rivet::ddl::generated {
 	MissionObjective::MissionObjective([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ObjectiveName = serialized->get_string(ObjectiveName_type_id);
-		ObjectiveDisplayName = serialized->get_string(ObjectiveDisplayName_type_id);
-		LocTagObjectiveDisplayName = serialized->get_string(LocTagObjectiveDisplayName_type_id);
-		Description = serialized->get_string(Description_type_id);
-		LocTagDescription = serialized->get_string(LocTagDescription_type_id);
-		Checkpoint = serialized->get_string(Checkpoint_type_id);
-		OverrideLightingMode = serialized->get_bool(OverrideLightingMode_type_id);
-		LightingMode = serialized->get_enum<rivet::ddl::generated::LightingMode>(LightingMode_type_id, rivet::ddl::generated::LightingMode_values);
-		HideObjective = serialized->get_bool(HideObjective_type_id);
-		OnlyShowOnLoad = serialized->get_bool(OnlyShowOnLoad_type_id);
-		NoSave = serialized->get_bool(NoSave_type_id);
-		NoSaveMission = serialized->get_bool(NoSaveMission_type_id);
-		NoReload = serialized->get_bool(NoReload_type_id);
-		ShowAsMissionComplete = serialized->get_bool(ShowAsMissionComplete_type_id);
-		ObjectiveDisplayNameCharacter2 = serialized->get_string(ObjectiveDisplayNameCharacter2_type_id);
-		LocTagObjectiveDisplayNameCharacter2 = serialized->get_string(LocTagObjectiveDisplayNameCharacter2_type_id);
-		DescriptionCharacter2 = serialized->get_string(DescriptionCharacter2_type_id);
-		LocTagDescriptionCharacter2 = serialized->get_string(LocTagDescriptionCharacter2_type_id);
+		ObjectiveName = serialized->get_string(ObjectiveName_type_id, "Objective");
+		ObjectiveDisplayName = serialized->get_string(ObjectiveDisplayName_type_id, {});
+		LocTagObjectiveDisplayName = serialized->get_string(LocTagObjectiveDisplayName_type_id, "INVALID");
+		Description = serialized->get_string(Description_type_id, {});
+		LocTagDescription = serialized->get_string(LocTagDescription_type_id, "INVALID");
+		Checkpoint = serialized->get_string(Checkpoint_type_id, {});
+		OverrideLightingMode = serialized->get_bool(OverrideLightingMode_type_id, false);
+		LightingMode = serialized->get_enum<rivet::ddl::generated::LightingMode>(LightingMode_type_id, rivet::ddl::generated::LightingMode_values, rivet::ddl::generated::LightingMode::Day);
+		HideObjective = serialized->get_bool(HideObjective_type_id, false);
+		OnlyShowOnLoad = serialized->get_bool(OnlyShowOnLoad_type_id, false);
+		NoSave = serialized->get_bool(NoSave_type_id, false);
+		NoSaveMission = serialized->get_bool(NoSaveMission_type_id, false);
+		NoReload = serialized->get_bool(NoReload_type_id, false);
+		ShowAsMissionComplete = serialized->get_bool(ShowAsMissionComplete_type_id, false);
+		ObjectiveDisplayNameCharacter2 = serialized->get_string(ObjectiveDisplayNameCharacter2_type_id, {});
+		LocTagObjectiveDisplayNameCharacter2 = serialized->get_string(LocTagObjectiveDisplayNameCharacter2_type_id, "INVALID");
+		DescriptionCharacter2 = serialized->get_string(DescriptionCharacter2_type_id, {});
+		LocTagDescriptionCharacter2 = serialized->get_string(LocTagDescriptionCharacter2_type_id, "INVALID");
 		ObjectiveRewards = serialized->unwrap_into_many<rivet::ddl::generated::ObjectiveRewardArray>(ObjectiveRewards_type_id); 
 	}
 

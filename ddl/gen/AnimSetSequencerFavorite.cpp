@@ -10,7 +10,7 @@
 
 namespace rivet::ddl::generated {
 	AnimSetSequencerFavorite::AnimSetSequencerFavorite([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Name = serialized->get_string(Name_type_id);
+		Name = serialized->get_string(Name_type_id, {});
 		Filters = serialized->unwrap_into_many<rivet::ddl::generated::AnimSetSequencerFavoriteFilter>(Filters_type_id);
 		Vars = serialized->unwrap_into_many<rivet::ddl::generated::AnimSetSequencerFavoriteVar>(Vars_type_id); 
 	}

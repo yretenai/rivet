@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	UIArenaChallengeRewardVanity::UIArenaChallengeRewardVanity([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): UIArenaChallengeReward(serialized) {
-		VanityBundleConfig = serialized->get_string(VanityBundleConfig_type_id);
-		Icon = serialized->get_string(Icon_type_id); 
+		VanityBundleConfig = serialized->get_string(VanityBundleConfig_type_id, {});
+		Icon = serialized->get_string(Icon_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

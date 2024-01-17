@@ -10,9 +10,9 @@
 namespace rivet::ddl::generated {
 	FiringDesiredAimPosChangedEvent::FiringDesiredAimPosChangedEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
 		OldPos = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(OldPos_type_id);
-		OldPosValid = serialized->get_bool(OldPosValid_type_id);
+		OldPosValid = serialized->get_bool(OldPosValid_type_id, false);
 		NewPos = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(NewPos_type_id);
-		NewPosValid = serialized->get_bool(NewPosValid_type_id); 
+		NewPosValid = serialized->get_bool(NewPosValid_type_id, false); 
 	}
 
 	[[nodiscard]] auto

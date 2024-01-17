@@ -9,9 +9,9 @@
 
 namespace rivet::ddl::generated {
 	SkinItemDecalListElement::SkinItemDecalListElement([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DebugName = serialized->get_string(DebugName_type_id);
-		NameLocTag = serialized->get_string(NameLocTag_type_id);
-		Available = serialized->get_enum<rivet::ddl::generated::x7ecfc969>(Available_type_id, rivet::ddl::generated::x7ecfc969_values);
+		DebugName = serialized->get_string(DebugName_type_id, {});
+		NameLocTag = serialized->get_string(NameLocTag_type_id, {});
+		Available = serialized->get_enum<rivet::ddl::generated::x7ecfc969>(Available_type_id, rivet::ddl::generated::x7ecfc969_values, rivet::ddl::generated::x7ecfc969::Always);
 		Decal = serialized->unwrap_into<rivet::ddl::generated::SkinItemDecal>(Decal_type_id); 
 	}
 

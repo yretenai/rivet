@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	Cinematic2UserRegionDef::Cinematic2UserRegionDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Id = serialized->get_uint64(Id_type_id);
-		Name = serialized->get_string(Name_type_id);
+		Id = serialized->get_uint64(Id_type_id, 0);
+		Name = serialized->get_string(Name_type_id, {});
 		UserZones = serialized->unwrap_into_many<rivet::ddl::generated::Cinematic2UserZoneDef>(UserZones_type_id); 
 	}
 

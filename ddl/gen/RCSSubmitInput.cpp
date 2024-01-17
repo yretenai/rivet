@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	RCSSubmitInput::RCSSubmitInput([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Changelist = serialized->get_uint32(Changelist_type_id);
-		Description = serialized->get_string(Description_type_id);
-		Reopen = serialized->get_bool(Reopen_type_id); 
+		Changelist = serialized->get_uint32(Changelist_type_id, 0);
+		Description = serialized->get_string(Description_type_id, "");
+		Reopen = serialized->get_bool(Reopen_type_id, false); 
 	}
 
 	[[nodiscard]] auto

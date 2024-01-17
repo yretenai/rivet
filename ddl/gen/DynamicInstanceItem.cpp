@@ -9,17 +9,17 @@
 
 namespace rivet::ddl::generated {
 	DynamicInstanceItem::DynamicInstanceItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		InstanceAsset = serialized->get_string(InstanceAsset_type_id);
-		InstanceOnEndpoints = serialized->get_bool(InstanceOnEndpoints_type_id);
-		InstanceProbability = serialized->get_float(InstanceProbability_type_id);
-		InstanceScaleVariation = serialized->get_float(InstanceScaleVariation_type_id);
-		InstanceDistance = serialized->get_float(InstanceDistance_type_id);
+		InstanceAsset = serialized->get_string(InstanceAsset_type_id, {});
+		InstanceOnEndpoints = serialized->get_bool(InstanceOnEndpoints_type_id, false);
+		InstanceProbability = serialized->get_float(InstanceProbability_type_id, 1.000000);
+		InstanceScaleVariation = serialized->get_float(InstanceScaleVariation_type_id, 0.000000);
+		InstanceDistance = serialized->get_float(InstanceDistance_type_id, 0.000000);
 		InstanceOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(InstanceOffset_type_id);
 		InstanceOffsetVariation = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(InstanceOffsetVariation_type_id);
 		InstanceRotation = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(InstanceRotation_type_id);
 		InstanceRotationVariation = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(InstanceRotationVariation_type_id);
-		InstanceRandomRotation = serialized->get_bool(InstanceRandomRotation_type_id);
-		InstanceOrientation = serialized->get_enum<rivet::ddl::generated::xc34e772f>(InstanceOrientation_type_id, rivet::ddl::generated::xc34e772f_values); 
+		InstanceRandomRotation = serialized->get_bool(InstanceRandomRotation_type_id, false);
+		InstanceOrientation = serialized->get_enum<rivet::ddl::generated::xc34e772f>(InstanceOrientation_type_id, rivet::ddl::generated::xc34e772f_values, rivet::ddl::generated::xc34e772f::Along_Curve); 
 	}
 
 	[[nodiscard]] auto

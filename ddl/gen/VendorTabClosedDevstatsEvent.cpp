@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	VendorTabClosedDevstatsEvent::VendorTabClosedDevstatsEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		EventId = serialized->get_string(EventId_type_id);
-		TabSegmentId = serialized->get_string(TabSegmentId_type_id);
-		ClosedTab = serialized->get_enum<rivet::ddl::generated::x868ac365>(ClosedTab_type_id, rivet::ddl::generated::x868ac365_values);
-		Duration = serialized->get_float(Duration_type_id); 
+		EventId = serialized->get_string(EventId_type_id, {});
+		TabSegmentId = serialized->get_string(TabSegmentId_type_id, {});
+		ClosedTab = serialized->get_enum<rivet::ddl::generated::x868ac365>(ClosedTab_type_id, rivet::ddl::generated::x868ac365_values, rivet::ddl::generated::x868ac365::Purchase);
+		Duration = serialized->get_float(Duration_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

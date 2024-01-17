@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	ShotMotionSchrodingerDisappearPrius::ShotMotionSchrodingerDisappearPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BasicShotMotionPrius(serialized) {
-		OutroAnim = serialized->get_string(OutroAnim_type_id);
-		RiftActor = serialized->get_string(RiftActor_type_id); 
+		OutroAnim = serialized->get_string(OutroAnim_type_id, "Outro");
+		RiftActor = serialized->get_string(RiftActor_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

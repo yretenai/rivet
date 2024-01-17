@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	SkyDiveVolumePrius::SkyDiveVolumePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		TargetVolume = serialized->get_uint64(TargetVolume_type_id);
-		DiveTime = serialized->get_float(DiveTime_type_id);
-		CameraDistance = serialized->get_float(CameraDistance_type_id);
-		CameraOrientation = serialized->get_enum<rivet::ddl::generated::xd2417a1c>(CameraOrientation_type_id, rivet::ddl::generated::xd2417a1c_values);
-		UseDiveCameraOffset = serialized->get_bool(UseDiveCameraOffset_type_id); 
+		TargetVolume = serialized->get_uint64(TargetVolume_type_id, 0);
+		DiveTime = serialized->get_float(DiveTime_type_id, 10.000000);
+		CameraDistance = serialized->get_float(CameraDistance_type_id, 8.000000);
+		CameraOrientation = serialized->get_enum<rivet::ddl::generated::xd2417a1c>(CameraOrientation_type_id, rivet::ddl::generated::xd2417a1c_values, rivet::ddl::generated::xd2417a1c::FacingDirection);
+		UseDiveCameraOffset = serialized->get_bool(UseDiveCameraOffset_type_id, true); 
 	}
 
 	[[nodiscard]] auto

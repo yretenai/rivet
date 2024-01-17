@@ -7,18 +7,18 @@
 
 namespace rivet::ddl::generated {
 	SlottedInteractAnimData::SlottedInteractAnimData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ObjectPreIdle = serialized->get_string(ObjectPreIdle_type_id);
-		ObjectIntro = serialized->get_string(ObjectIntro_type_id);
-		ObjectUse = serialized->get_string(ObjectUse_type_id);
-		ObjectOutro = serialized->get_string(ObjectOutro_type_id);
-		ObjectOutroFail = serialized->get_string(ObjectOutroFail_type_id);
-		ObjectPostIdle = serialized->get_string(ObjectPostIdle_type_id);
-		UserIntro = serialized->get_string(UserIntro_type_id);
-		UserIdle = serialized->get_string(UserIdle_type_id);
-		UserFidget = serialized->get_string(UserFidget_type_id);
-		UserUse = serialized->get_string(UserUse_type_id);
-		UserRelease = serialized->get_string(UserRelease_type_id);
-		UserReleaseFail = serialized->get_string(UserReleaseFail_type_id); 
+		ObjectPreIdle = serialized->get_string(ObjectPreIdle_type_id, {});
+		ObjectIntro = serialized->get_string(ObjectIntro_type_id, {});
+		ObjectUse = serialized->get_string(ObjectUse_type_id, {});
+		ObjectOutro = serialized->get_string(ObjectOutro_type_id, {});
+		ObjectOutroFail = serialized->get_string(ObjectOutroFail_type_id, {});
+		ObjectPostIdle = serialized->get_string(ObjectPostIdle_type_id, {});
+		UserIntro = serialized->get_string(UserIntro_type_id, {});
+		UserIdle = serialized->get_string(UserIdle_type_id, {});
+		UserFidget = serialized->get_string(UserFidget_type_id, {});
+		UserUse = serialized->get_string(UserUse_type_id, {});
+		UserRelease = serialized->get_string(UserRelease_type_id, {});
+		UserReleaseFail = serialized->get_string(UserReleaseFail_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

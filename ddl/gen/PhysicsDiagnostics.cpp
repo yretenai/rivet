@@ -7,14 +7,14 @@
 
 namespace rivet::ddl::generated {
 	PhysicsDiagnostics::PhysicsDiagnostics([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		BreakablesVerbose = serialized->get_bool(BreakablesVerbose_type_id);
-		WarnOnThisManyCollisions = serialized->get_int8(WarnOnThisManyCollisions_type_id);
-		WarnWhenRemovingThisManyObjects = serialized->get_int16(WarnWhenRemovingThisManyObjects_type_id);
-		ManifoldModifierLogLength = serialized->get_int16(ManifoldModifierLogLength_type_id);
-		WarnOnThisManyManifoldsGloballyInOneFrame = serialized->get_int16(WarnOnThisManyManifoldsGloballyInOneFrame_type_id);
-		WarnOnThisManyBodyActivationsGloballyInOneFrame = serialized->get_int16(WarnOnThisManyBodyActivationsGloballyInOneFrame_type_id);
-		MinimumSecondsBetweenExcessiveManifoldReports = serialized->get_float(MinimumSecondsBetweenExcessiveManifoldReports_type_id);
-		FailsafeMaximumVelocity = serialized->get_float(FailsafeMaximumVelocity_type_id); 
+		BreakablesVerbose = serialized->get_bool(BreakablesVerbose_type_id, false);
+		WarnOnThisManyCollisions = serialized->get_int8(WarnOnThisManyCollisions_type_id, 9);
+		WarnWhenRemovingThisManyObjects = serialized->get_int16(WarnWhenRemovingThisManyObjects_type_id, 0);
+		ManifoldModifierLogLength = serialized->get_int16(ManifoldModifierLogLength_type_id, 0);
+		WarnOnThisManyManifoldsGloballyInOneFrame = serialized->get_int16(WarnOnThisManyManifoldsGloballyInOneFrame_type_id, 32767);
+		WarnOnThisManyBodyActivationsGloballyInOneFrame = serialized->get_int16(WarnOnThisManyBodyActivationsGloballyInOneFrame_type_id, 32767);
+		MinimumSecondsBetweenExcessiveManifoldReports = serialized->get_float(MinimumSecondsBetweenExcessiveManifoldReports_type_id, 5.000000);
+		FailsafeMaximumVelocity = serialized->get_float(FailsafeMaximumVelocity_type_id, 1000.000000); 
 	}
 
 	[[nodiscard]] auto

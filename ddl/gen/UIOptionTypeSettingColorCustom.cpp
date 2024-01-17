@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	UIOptionTypeSettingColorCustom::UIOptionTypeSettingColorCustom([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): UIOptionTypeSettingColor(serialized) {
-		CustomColorOptionID = serialized->get_enum<rivet::ddl::generated::x33afe7f4>(CustomColorOptionID_type_id, rivet::ddl::generated::x33afe7f4_values); 
+		CustomColorOptionID = serialized->get_enum<rivet::ddl::generated::x33afe7f4>(CustomColorOptionID_type_id, rivet::ddl::generated::x33afe7f4_values, rivet::ddl::generated::x33afe7f4::Resume); 
 	}
 
 	[[nodiscard]] auto

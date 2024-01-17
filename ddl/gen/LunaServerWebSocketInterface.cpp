@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	LunaServerWebSocketInterface::LunaServerWebSocketInterface([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Type = serialized->get_enum<rivet::ddl::generated::xa7988bfd>(Type_type_id, rivet::ddl::generated::xa7988bfd_values);
+		Type = serialized->get_enum<rivet::ddl::generated::xa7988bfd>(Type_type_id, rivet::ddl::generated::xa7988bfd_values, rivet::ddl::generated::xa7988bfd::ChangelogUpdated);
 		Payload = serialized->get_field(Payload_type_id); 
 	}
 

@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	ToggleLightsEffectPrius::ToggleLightsEffectPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ScriptedShotEffectBasePrius(serialized) {
-		Distance = serialized->get_float(Distance_type_id);
-		OffTime = serialized->get_float(OffTime_type_id); 
+		Distance = serialized->get_float(Distance_type_id, 5.000000);
+		OffTime = serialized->get_float(OffTime_type_id, 5.000000); 
 	}
 
 	[[nodiscard]] auto

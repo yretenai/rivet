@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	VanityCategoryListItem::VanityCategoryListItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		VanityCategory = serialized->get_enum<rivet::ddl::generated::xa3499465>(VanityCategory_type_id, rivet::ddl::generated::xa3499465_values);
-		VanityCategoryLocTag = serialized->get_string(VanityCategoryLocTag_type_id);
-		VanityMenu = serialized->get_enum<rivet::ddl::generated::xca348341>(VanityMenu_type_id, rivet::ddl::generated::xca348341_values);
-		ShowOnVendorMenu = serialized->get_bool(ShowOnVendorMenu_type_id); 
+		VanityCategory = serialized->get_enum<rivet::ddl::generated::xa3499465>(VanityCategory_type_id, rivet::ddl::generated::xa3499465_values, rivet::ddl::generated::xa3499465::Head);
+		VanityCategoryLocTag = serialized->get_string(VanityCategoryLocTag_type_id, {});
+		VanityMenu = serialized->get_enum<rivet::ddl::generated::xca348341>(VanityMenu_type_id, rivet::ddl::generated::xca348341_values, rivet::ddl::generated::xca348341::None);
+		ShowOnVendorMenu = serialized->get_bool(ShowOnVendorMenu_type_id, true); 
 	}
 
 	[[nodiscard]] auto

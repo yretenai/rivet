@@ -10,23 +10,23 @@
 
 namespace rivet::ddl::generated {
 	DamageEmitterPrius::DamageEmitterPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DamageHash = serialized->get_string(DamageHash_type_id);
-		StartActive = serialized->get_bool(StartActive_type_id);
-		DamagePerSecond = serialized->get_float(DamagePerSecond_type_id);
-		Type = serialized->get_enum<rivet::ddl::generated::DamageTypes>(Type_type_id, rivet::ddl::generated::DamageTypes_values);
-		StatusAmount = serialized->get_float(StatusAmount_type_id);
-		Knockback = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(Knockback_type_id, rivet::ddl::generated::KnockbackLevels_values);
-		KnockbackAmount = serialized->get_float(KnockbackAmount_type_id);
-		Radius = serialized->get_float(Radius_type_id);
-		DamageFriends = serialized->get_bool(DamageFriends_type_id);
-		SingleShotDamage = serialized->get_bool(SingleShotDamage_type_id);
-		ExcludeHeroes = serialized->get_bool(ExcludeHeroes_type_id);
-		ExcludeAttachments = serialized->get_bool(ExcludeAttachments_type_id);
-		NoIgnore = serialized->get_bool(NoIgnore_type_id);
-		UseSweptSphere = serialized->get_bool(UseSweptSphere_type_id);
-		StartLocator = serialized->get_string(StartLocator_type_id);
-		SweptSphereRange = serialized->get_float(SweptSphereRange_type_id);
-		DebugDraw = serialized->get_bool(DebugDraw_type_id); 
+		DamageHash = serialized->get_string(DamageHash_type_id, "");
+		StartActive = serialized->get_bool(StartActive_type_id, true);
+		DamagePerSecond = serialized->get_float(DamagePerSecond_type_id, 1.000000);
+		Type = serialized->get_enum<rivet::ddl::generated::DamageTypes>(Type_type_id, rivet::ddl::generated::DamageTypes_values, rivet::ddl::generated::DamageTypes::None);
+		StatusAmount = serialized->get_float(StatusAmount_type_id, 0.000000);
+		Knockback = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(Knockback_type_id, rivet::ddl::generated::KnockbackLevels_values, rivet::ddl::generated::KnockbackLevels::None);
+		KnockbackAmount = serialized->get_float(KnockbackAmount_type_id, 0.000000);
+		Radius = serialized->get_float(Radius_type_id, 1.000000);
+		DamageFriends = serialized->get_bool(DamageFriends_type_id, false);
+		SingleShotDamage = serialized->get_bool(SingleShotDamage_type_id, false);
+		ExcludeHeroes = serialized->get_bool(ExcludeHeroes_type_id, false);
+		ExcludeAttachments = serialized->get_bool(ExcludeAttachments_type_id, false);
+		NoIgnore = serialized->get_bool(NoIgnore_type_id, false);
+		UseSweptSphere = serialized->get_bool(UseSweptSphere_type_id, false);
+		StartLocator = serialized->get_string(StartLocator_type_id, "");
+		SweptSphereRange = serialized->get_float(SweptSphereRange_type_id, 5.000000);
+		DebugDraw = serialized->get_bool(DebugDraw_type_id, false); 
 	}
 
 	[[nodiscard]] auto

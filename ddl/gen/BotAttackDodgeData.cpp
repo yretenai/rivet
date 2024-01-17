@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	BotAttackDodgeData::BotAttackDodgeData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Properties = serialized->get_bitset<rivet::ddl::generated::xa672d722>(Properties_type_id, rivet::ddl::generated::xa672d722_values); 
+		Properties = serialized->get_bitset<rivet::ddl::generated::xa672d722>(Properties_type_id, rivet::ddl::generated::xa672d722_values, 0); 
 	}
 
 	[[nodiscard]] auto

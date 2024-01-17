@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	UIOptionTypePresetList::UIOptionTypePresetList([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): UIOptionTypeSettingList(serialized) {
-		DisableChildrenIndex = serialized->get_int32(DisableChildrenIndex_type_id); 
+		DisableChildrenIndex = serialized->get_int32(DisableChildrenIndex_type_id, -1); 
 	}
 
 	[[nodiscard]] auto

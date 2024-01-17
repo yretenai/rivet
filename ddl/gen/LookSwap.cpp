@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	LookSwap::LookSwap([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DeathOnly = serialized->get_bool(DeathOnly_type_id);
-		LookToDisable = serialized->get_string(LookToDisable_type_id);
+		DeathOnly = serialized->get_bool(DeathOnly_type_id, false);
+		LookToDisable = serialized->get_string(LookToDisable_type_id, {});
 		LooksToEnable = serialized->get_strings(LooksToEnable_type_id); 
 	}
 

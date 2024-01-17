@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	FormationAttackAction::FormationAttackAction([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Action = serialized->get_enum<rivet::ddl::generated::xbf382bc0>(Action_type_id, rivet::ddl::generated::xbf382bc0_values);
-		Value = serialized->get_float(Value_type_id); 
+		Action = serialized->get_enum<rivet::ddl::generated::xbf382bc0>(Action_type_id, rivet::ddl::generated::xbf382bc0_values, rivet::ddl::generated::xbf382bc0::Wait);
+		Value = serialized->get_float(Value_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

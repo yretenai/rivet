@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	FullScreenMovieSyncedActionPrius::FullScreenMovieSyncedActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		MovieFile = serialized->get_string(MovieFile_type_id);
-		SubtitleConfig = serialized->get_string(SubtitleConfig_type_id);
-		PauseGame = serialized->get_bool(PauseGame_type_id);
-		FadeAudio = serialized->get_bool(FadeAudio_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Cinematic);
+		MovieFile = serialized->get_string(MovieFile_type_id, {});
+		SubtitleConfig = serialized->get_string(SubtitleConfig_type_id, {});
+		PauseGame = serialized->get_bool(PauseGame_type_id, true);
+		FadeAudio = serialized->get_bool(FadeAudio_type_id, true); 
 	}
 
 	[[nodiscard]] auto

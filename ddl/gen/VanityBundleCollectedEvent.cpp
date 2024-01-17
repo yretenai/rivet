@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	VanityBundleCollectedEvent::VanityBundleCollectedEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		EventId = serialized->get_string(EventId_type_id);
-		BundleName = serialized->get_string(BundleName_type_id); 
+		EventId = serialized->get_string(EventId_type_id, {});
+		BundleName = serialized->get_string(BundleName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

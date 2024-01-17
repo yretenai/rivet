@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	VolumeIntroDataPrius::VolumeIntroDataPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): IntroDataPrius(serialized) {
-		Volume = serialized->get_uint64(Volume_type_id);
-		Position = serialized->get_enum<rivet::ddl::generated::xb717d73b>(Position_type_id, rivet::ddl::generated::xb717d73b_values);
-		WantsFlank = serialized->get_bool(WantsFlank_type_id);
-		FaceVolumeOrientation = serialized->get_bool(FaceVolumeOrientation_type_id); 
+		Volume = serialized->get_uint64(Volume_type_id, 0);
+		Position = serialized->get_enum<rivet::ddl::generated::xb717d73b>(Position_type_id, rivet::ddl::generated::xb717d73b_values, rivet::ddl::generated::xb717d73b::RandomValidNav);
+		WantsFlank = serialized->get_bool(WantsFlank_type_id, false);
+		FaceVolumeOrientation = serialized->get_bool(FaceVolumeOrientation_type_id, false); 
 	}
 
 	[[nodiscard]] auto

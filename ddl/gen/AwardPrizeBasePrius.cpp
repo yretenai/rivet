@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	AwardPrizeBasePrius::AwardPrizeBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		NameLocTag = serialized->get_string(NameLocTag_type_id);
-		ImagePath = serialized->get_string(ImagePath_type_id); 
+		NameLocTag = serialized->get_string(NameLocTag_type_id, {});
+		ImagePath = serialized->get_string(ImagePath_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

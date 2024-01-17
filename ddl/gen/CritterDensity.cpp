@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	CritterDensity::CritterDensity([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MaxActive = serialized->get_int32(MaxActive_type_id); 
+		MaxActive = serialized->get_int32(MaxActive_type_id, 4); 
 	}
 
 	[[nodiscard]] auto

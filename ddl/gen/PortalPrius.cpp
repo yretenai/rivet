@@ -10,10 +10,10 @@
 
 namespace rivet::ddl::generated {
 	PortalPrius::PortalPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		TargetPortal = serialized->get_uint64(TargetPortal_type_id);
-		StartActive = serialized->get_bool(StartActive_type_id);
-		StartActiveIfLoaded = serialized->get_bool(StartActiveIfLoaded_type_id);
-		SyncWithTargetPortal = serialized->get_bool(SyncWithTargetPortal_type_id);
+		TargetPortal = serialized->get_uint64(TargetPortal_type_id, 0);
+		StartActive = serialized->get_bool(StartActive_type_id, false);
+		StartActiveIfLoaded = serialized->get_bool(StartActiveIfLoaded_type_id, false);
+		SyncWithTargetPortal = serialized->get_bool(SyncWithTargetPortal_type_id, true);
 		PortalLoad = serialized->unwrap_into<rivet::ddl::generated::PortalLoadPrius>(PortalLoad_type_id); 
 	}
 

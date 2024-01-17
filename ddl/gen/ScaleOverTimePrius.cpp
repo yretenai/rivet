@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	ScaleOverTimePrius::ScaleOverTimePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		InitialScale = serialized->get_float(InitialScale_type_id);
-		FinalScale = serialized->get_float(FinalScale_type_id);
-		Duration = serialized->get_float(Duration_type_id);
-		AccountForDynamicPhysics = serialized->get_bool(AccountForDynamicPhysics_type_id); 
+		InitialScale = serialized->get_float(InitialScale_type_id, 1.000000);
+		FinalScale = serialized->get_float(FinalScale_type_id, 1.000000);
+		Duration = serialized->get_float(Duration_type_id, 1.000000);
+		AccountForDynamicPhysics = serialized->get_bool(AccountForDynamicPhysics_type_id, false); 
 	}
 
 	[[nodiscard]] auto

@@ -10,16 +10,16 @@
 
 namespace rivet::ddl::generated {
 	UI_VisualEffectKeyFrameYValues::UI_VisualEffectKeyFrameYValues([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		IsFloat = serialized->get_bool(IsFloat_type_id);
-		IsFloatRange = serialized->get_bool(IsFloatRange_type_id);
-		IsVec2 = serialized->get_bool(IsVec2_type_id);
-		IsVec2Range = serialized->get_bool(IsVec2Range_type_id);
-		IsVec3 = serialized->get_bool(IsVec3_type_id);
-		IsVec3Range = serialized->get_bool(IsVec3Range_type_id);
-		IsColor = serialized->get_bool(IsColor_type_id);
-		IsColorRange = serialized->get_bool(IsColorRange_type_id);
-		FloatA = serialized->get_float(FloatA_type_id);
-		FloatB = serialized->get_float(FloatB_type_id);
+		IsFloat = serialized->get_bool(IsFloat_type_id, false);
+		IsFloatRange = serialized->get_bool(IsFloatRange_type_id, false);
+		IsVec2 = serialized->get_bool(IsVec2_type_id, false);
+		IsVec2Range = serialized->get_bool(IsVec2Range_type_id, false);
+		IsVec3 = serialized->get_bool(IsVec3_type_id, false);
+		IsVec3Range = serialized->get_bool(IsVec3Range_type_id, false);
+		IsColor = serialized->get_bool(IsColor_type_id, false);
+		IsColorRange = serialized->get_bool(IsColorRange_type_id, false);
+		FloatA = serialized->get_float(FloatA_type_id, 0.000000);
+		FloatB = serialized->get_float(FloatB_type_id, 0.000000);
 		Vec2A = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(Vec2A_type_id);
 		Vec2B = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(Vec2B_type_id);
 		Vec3A = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Vec3A_type_id);

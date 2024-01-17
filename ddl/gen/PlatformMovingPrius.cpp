@@ -11,19 +11,19 @@
 
 namespace rivet::ddl::generated {
 	PlatformMovingPrius::PlatformMovingPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		InitPosition = serialized->get_enum<rivet::ddl::generated::xb8f8f0e5>(InitPosition_type_id, rivet::ddl::generated::xb8f8f0e5_values);
-		Orientation = serialized->get_enum<rivet::ddl::generated::x3cdeb00d>(Orientation_type_id, rivet::ddl::generated::x3cdeb00d_values);
+		InitPosition = serialized->get_enum<rivet::ddl::generated::xb8f8f0e5>(InitPosition_type_id, rivet::ddl::generated::xb8f8f0e5_values, rivet::ddl::generated::xb8f8f0e5::Start);
+		Orientation = serialized->get_enum<rivet::ddl::generated::x3cdeb00d>(Orientation_type_id, rivet::ddl::generated::x3cdeb00d_values, rivet::ddl::generated::x3cdeb00d::As_Placed);
 		StopList = serialized->unwrap_into_many<rivet::ddl::generated::PlatformMovingStopItem>(StopList_type_id);
-		MotionPath = serialized->get_uint64(MotionPath_type_id);
-		SpeedAccel = serialized->get_float(SpeedAccel_type_id);
-		SpeedDecel = serialized->get_float(SpeedDecel_type_id);
-		SpeedMax = serialized->get_float(SpeedMax_type_id);
-		LookAtActor = serialized->get_uint64(LookAtActor_type_id);
-		AllowCallWhenMoving = serialized->get_bool(AllowCallWhenMoving_type_id);
-		LockRiders = serialized->get_bool(LockRiders_type_id);
-		OfferLocator = serialized->get_string(OfferLocator_type_id);
+		MotionPath = serialized->get_uint64(MotionPath_type_id, 0);
+		SpeedAccel = serialized->get_float(SpeedAccel_type_id, 3.000000);
+		SpeedDecel = serialized->get_float(SpeedDecel_type_id, 3.000000);
+		SpeedMax = serialized->get_float(SpeedMax_type_id, 4.000000);
+		LookAtActor = serialized->get_uint64(LookAtActor_type_id, 0);
+		AllowCallWhenMoving = serialized->get_bool(AllowCallWhenMoving_type_id, false);
+		LockRiders = serialized->get_bool(LockRiders_type_id, false);
+		OfferLocator = serialized->get_string(OfferLocator_type_id, {});
 		OfferOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(OfferOffset_type_id);
-		ApproachStopTime = serialized->get_float(ApproachStopTime_type_id); 
+		ApproachStopTime = serialized->get_float(ApproachStopTime_type_id, 2.500000); 
 	}
 
 	[[nodiscard]] auto

@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	RCSDate::RCSDate([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Month = serialized->get_uint8(Month_type_id);
-		Day = serialized->get_uint8(Day_type_id);
-		Year = serialized->get_uint8(Year_type_id);
-		Hours = serialized->get_uint8(Hours_type_id);
-		Minutes = serialized->get_uint8(Minutes_type_id);
-		Seconds = serialized->get_uint8(Seconds_type_id); 
+		Month = serialized->get_uint8(Month_type_id, 0);
+		Day = serialized->get_uint8(Day_type_id, 0);
+		Year = serialized->get_uint8(Year_type_id, 0);
+		Hours = serialized->get_uint8(Hours_type_id, 0);
+		Minutes = serialized->get_uint8(Minutes_type_id, 0);
+		Seconds = serialized->get_uint8(Seconds_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

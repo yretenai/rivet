@@ -9,9 +9,9 @@
 
 namespace rivet::ddl::generated {
 	CustomOverlayRegionData::CustomOverlayRegionData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): RegionGameDataBase(serialized) {
-		ProcessNavMeshObstactles = serialized->get_bool(ProcessNavMeshObstactles_type_id);
+		ProcessNavMeshObstactles = serialized->get_bool(ProcessNavMeshObstactles_type_id, false);
 		OverlayTrigger = serialized->unwrap_into<rivet::ddl::generated::OverlayTrigger>(OverlayTrigger_type_id);
-		Unsynced = serialized->get_bool(Unsynced_type_id); 
+		Unsynced = serialized->get_bool(Unsynced_type_id, false); 
 	}
 
 	[[nodiscard]] auto

@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	VehicleSpawnInfo::VehicleSpawnInfo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MinDistance = serialized->get_float(MinDistance_type_id);
-		MaxDistance = serialized->get_float(MaxDistance_type_id);
-		MaxDistanceOffScreen = serialized->get_float(MaxDistanceOffScreen_type_id); 
+		MinDistance = serialized->get_float(MinDistance_type_id, 50.000000);
+		MaxDistance = serialized->get_float(MaxDistance_type_id, 2000.000000);
+		MaxDistanceOffScreen = serialized->get_float(MaxDistanceOffScreen_type_id, 1000.000000); 
 	}
 
 	[[nodiscard]] auto

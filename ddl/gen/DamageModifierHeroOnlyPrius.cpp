@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	DamageModifierHeroOnlyPrius::DamageModifierHeroOnlyPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): DamageModifierIncomingPrius(serialized) {
-		DisableKnockbacks = serialized->get_bool(DisableKnockbacks_type_id); 
+		DisableKnockbacks = serialized->get_bool(DisableKnockbacks_type_id, false); 
 	}
 
 	[[nodiscard]] auto

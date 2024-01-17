@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	BlockModifierInputPlugSignal::BlockModifierInputPlugSignal([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Id = serialized->get_uint64(Id_type_id);
-		Type = serialized->get_enum<rivet::ddl::generated::x577f103e>(Type_type_id, rivet::ddl::generated::x577f103e_values);
+		Id = serialized->get_uint64(Id_type_id, 0);
+		Type = serialized->get_enum<rivet::ddl::generated::x577f103e>(Type_type_id, rivet::ddl::generated::x577f103e_values, rivet::ddl::generated::x577f103e::Invalid);
 		Value = serialized->unwrap_into<rivet::ddl::generated::SignalPlug>(Value_type_id); 
 	}
 

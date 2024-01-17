@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	DodgeConfig::DodgeConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DamageForDodge = serialized->get_float(DamageForDodge_type_id);
-		Cooldown = serialized->get_float(Cooldown_type_id); 
+		DamageForDodge = serialized->get_float(DamageForDodge_type_id, 10.000000);
+		Cooldown = serialized->get_float(Cooldown_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

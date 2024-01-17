@@ -7,17 +7,17 @@
 
 namespace rivet::ddl::generated {
 	BreakableVariantDifficultyEntry::BreakableVariantDifficultyEntry([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Variant = serialized->get_enum<rivet::ddl::generated::xc3e5efea>(Variant_type_id, rivet::ddl::generated::xc3e5efea_values);
-		StartMission = serialized->get_string(StartMission_type_id);
-		StartObjective = serialized->get_string(StartObjective_type_id);
-		Health = serialized->get_float(Health_type_id);
-		EasyMultiplier = serialized->get_float(EasyMultiplier_type_id);
-		MediumMultiplier = serialized->get_float(MediumMultiplier_type_id);
-		HardMultiplier = serialized->get_float(HardMultiplier_type_id);
-		HardestMultiplier = serialized->get_float(HardestMultiplier_type_id);
-		ThreeDeathsMultiplier = serialized->get_float(ThreeDeathsMultiplier_type_id);
-		FiveDeathsMultiplier = serialized->get_float(FiveDeathsMultiplier_type_id);
-		ChallengeModeMultiplier = serialized->get_float(ChallengeModeMultiplier_type_id); 
+		Variant = serialized->get_enum<rivet::ddl::generated::xc3e5efea>(Variant_type_id, rivet::ddl::generated::xc3e5efea_values, rivet::ddl::generated::xc3e5efea::V1);
+		StartMission = serialized->get_string(StartMission_type_id, "");
+		StartObjective = serialized->get_string(StartObjective_type_id, "");
+		Health = serialized->get_float(Health_type_id, 1.000000);
+		EasyMultiplier = serialized->get_float(EasyMultiplier_type_id, 1.000000);
+		MediumMultiplier = serialized->get_float(MediumMultiplier_type_id, 1.000000);
+		HardMultiplier = serialized->get_float(HardMultiplier_type_id, 1.000000);
+		HardestMultiplier = serialized->get_float(HardestMultiplier_type_id, 1.000000);
+		ThreeDeathsMultiplier = serialized->get_float(ThreeDeathsMultiplier_type_id, 1.000000);
+		FiveDeathsMultiplier = serialized->get_float(FiveDeathsMultiplier_type_id, 1.000000);
+		ChallengeModeMultiplier = serialized->get_float(ChallengeModeMultiplier_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

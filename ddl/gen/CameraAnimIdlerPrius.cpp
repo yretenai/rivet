@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	CameraAnimIdlerPrius::CameraAnimIdlerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		IdleAnim = serialized->get_enum<rivet::ddl::generated::x2c44a864>(IdleAnim_type_id, rivet::ddl::generated::x2c44a864_values);
-		CameraAnimName = serialized->get_string(CameraAnimName_type_id); 
+		IdleAnim = serialized->get_enum<rivet::ddl::generated::x2c44a864>(IdleAnim_type_id, rivet::ddl::generated::x2c44a864_values, rivet::ddl::generated::x2c44a864::None);
+		CameraAnimName = serialized->get_string(CameraAnimName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

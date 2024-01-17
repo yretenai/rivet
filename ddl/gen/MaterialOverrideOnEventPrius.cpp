@@ -10,9 +10,9 @@
 namespace rivet::ddl::generated {
 	MaterialOverrideOnEventPrius::MaterialOverrideOnEventPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Event = serialized->unwrap_into<rivet::ddl::generated::EventBase>(Event_type_id);
-		ListenToSelfEventsOnly = serialized->get_bool(ListenToSelfEventsOnly_type_id);
-		MaterialMappingName = serialized->get_string(MaterialMappingName_type_id);
-		OverrideMaterial = serialized->get_string(OverrideMaterial_type_id); 
+		ListenToSelfEventsOnly = serialized->get_bool(ListenToSelfEventsOnly_type_id, true);
+		MaterialMappingName = serialized->get_string(MaterialMappingName_type_id, {});
+		OverrideMaterial = serialized->get_string(OverrideMaterial_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

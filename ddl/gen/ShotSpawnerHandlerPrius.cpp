@@ -11,7 +11,7 @@
 
 namespace rivet::ddl::generated {
 	ShotSpawnerHandlerPrius::ShotSpawnerHandlerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		OwnerMode = serialized->get_enum<rivet::ddl::generated::x9443909f>(OwnerMode_type_id, rivet::ddl::generated::x9443909f_values);
+		OwnerMode = serialized->get_enum<rivet::ddl::generated::x9443909f>(OwnerMode_type_id, rivet::ddl::generated::x9443909f_values, rivet::ddl::generated::x9443909f::Actor);
 		Shots = serialized->unwrap_into_many<rivet::ddl::generated::SpawnShotElement>(Shots_type_id); 
 	}
 

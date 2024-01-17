@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	ECMField::ECMField([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Type = serialized->get_enum<rivet::ddl::generated::x89ca8df1>(Type_type_id, rivet::ddl::generated::x89ca8df1_values);
-		Value = serialized->get_string(Value_type_id); 
+		Type = serialized->get_enum<rivet::ddl::generated::x89ca8df1>(Type_type_id, rivet::ddl::generated::x89ca8df1_values, rivet::ddl::generated::x89ca8df1::Effect_Response);
+		Value = serialized->get_string(Value_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

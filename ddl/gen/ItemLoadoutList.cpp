@@ -9,9 +9,9 @@
 
 namespace rivet::ddl::generated {
 	ItemLoadoutList::ItemLoadoutList([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Name = serialized->get_string(Name_type_id);
-		PostProcessEquip = serialized->get_bool(PostProcessEquip_type_id);
-		SelectType = serialized->get_enum<rivet::ddl::generated::xb4920c11>(SelectType_type_id, rivet::ddl::generated::xb4920c11_values);
+		Name = serialized->get_string(Name_type_id, {});
+		PostProcessEquip = serialized->get_bool(PostProcessEquip_type_id, false);
+		SelectType = serialized->get_enum<rivet::ddl::generated::xb4920c11>(SelectType_type_id, rivet::ddl::generated::xb4920c11_values, rivet::ddl::generated::xb4920c11::SelectAll);
 		Items = serialized->unwrap_into_many<rivet::ddl::generated::ItemLoadoutListElement>(Items_type_id); 
 	}
 

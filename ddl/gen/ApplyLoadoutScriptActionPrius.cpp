@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	ApplyLoadoutScriptActionPrius::ApplyLoadoutScriptActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		RatchetLoadout = serialized->get_string(RatchetLoadout_type_id);
-		RachetteLoadout = serialized->get_string(RachetteLoadout_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Inventory);
+		RatchetLoadout = serialized->get_string(RatchetLoadout_type_id, {});
+		RachetteLoadout = serialized->get_string(RachetteLoadout_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

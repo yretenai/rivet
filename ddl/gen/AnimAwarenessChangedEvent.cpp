@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	AnimAwarenessChangedEvent::AnimAwarenessChangedEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		IsEngaged = serialized->get_bool(IsEngaged_type_id); 
+		IsEngaged = serialized->get_bool(IsEngaged_type_id, false); 
 	}
 
 	[[nodiscard]] auto

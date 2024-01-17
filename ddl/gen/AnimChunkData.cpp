@@ -12,7 +12,7 @@
 
 namespace rivet::ddl::generated {
 	AnimChunkData::AnimChunkData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ChunkType = serialized->get_enum<rivet::ddl::generated::ChunkType>(ChunkType_type_id, rivet::ddl::generated::ChunkType_values); 
+		ChunkType = serialized->get_enum<rivet::ddl::generated::ChunkType>(ChunkType_type_id, rivet::ddl::generated::ChunkType_values, rivet::ddl::generated::ChunkType::Misc); 
 	}
 
 	[[nodiscard]] auto

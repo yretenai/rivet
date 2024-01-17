@@ -13,17 +13,17 @@ namespace rivet::ddl::generated {
 		JobInfo = serialized->unwrap_into<rivet::ddl::generated::CaptureJobInfo>(JobInfo_type_id);
 		GridInfo = serialized->unwrap_into_many<rivet::ddl::generated::CaptureGridInfo>(GridInfo_type_id);
 		Zones = serialized->get_strings(Zones_type_id);
-		Atmosphere = serialized->get_string(Atmosphere_type_id);
-		CaptureDirectOnly = serialized->get_bool(CaptureDirectOnly_type_id);
-		CaptureGBufferOnly = serialized->get_bool(CaptureGBufferOnly_type_id);
-		CaptureFromGBuffer = serialized->get_bool(CaptureFromGBuffer_type_id);
-		UseGBufferEmissive = serialized->get_bool(UseGBufferEmissive_type_id);
-		DebugEmbeddedSamples = serialized->get_bool(DebugEmbeddedSamples_type_id);
-		WriteLightBinsToServer = serialized->get_bool(WriteLightBinsToServer_type_id);
-		LightingCondition = serialized->get_enum<rivet::ddl::generated::LightingConditions>(LightingCondition_type_id, rivet::ddl::generated::LightingConditions_values);
-		GBufferServerAddress = serialized->get_string(GBufferServerAddress_type_id);
-		GBufferServerPort = serialized->get_uint32(GBufferServerPort_type_id);
-		LogUrl = serialized->get_string(LogUrl_type_id); 
+		Atmosphere = serialized->get_string(Atmosphere_type_id, {});
+		CaptureDirectOnly = serialized->get_bool(CaptureDirectOnly_type_id, false);
+		CaptureGBufferOnly = serialized->get_bool(CaptureGBufferOnly_type_id, false);
+		CaptureFromGBuffer = serialized->get_bool(CaptureFromGBuffer_type_id, false);
+		UseGBufferEmissive = serialized->get_bool(UseGBufferEmissive_type_id, false);
+		DebugEmbeddedSamples = serialized->get_bool(DebugEmbeddedSamples_type_id, false);
+		WriteLightBinsToServer = serialized->get_bool(WriteLightBinsToServer_type_id, true);
+		LightingCondition = serialized->get_enum<rivet::ddl::generated::LightingConditions>(LightingCondition_type_id, rivet::ddl::generated::LightingConditions_values, rivet::ddl::generated::LightingConditions::Day);
+		GBufferServerAddress = serialized->get_string(GBufferServerAddress_type_id, {});
+		GBufferServerPort = serialized->get_uint32(GBufferServerPort_type_id, 0);
+		LogUrl = serialized->get_string(LogUrl_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

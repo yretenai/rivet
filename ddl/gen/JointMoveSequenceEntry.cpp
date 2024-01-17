@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	JointMoveSequenceEntry::JointMoveSequenceEntry([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Location = serialized->get_uint64(Location_type_id);
-		Duration = serialized->get_float(Duration_type_id); 
+		Location = serialized->get_uint64(Location_type_id, 0);
+		Duration = serialized->get_float(Duration_type_id, 3.000000); 
 	}
 
 	[[nodiscard]] auto

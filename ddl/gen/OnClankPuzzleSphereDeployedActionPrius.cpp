@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	OnClankPuzzleSphereDeployedActionPrius::OnClankPuzzleSphereDeployedActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		StartListening = serialized->get_bool(StartListening_type_id);
-		VolumeType = serialized->get_enum<rivet::ddl::generated::x17b935fe>(VolumeType_type_id, rivet::ddl::generated::x17b935fe_values); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Puzzle);
+		StartListening = serialized->get_bool(StartListening_type_id, true);
+		VolumeType = serialized->get_enum<rivet::ddl::generated::x17b935fe>(VolumeType_type_id, rivet::ddl::generated::x17b935fe_values, rivet::ddl::generated::x17b935fe::None); 
 	}
 
 	[[nodiscard]] auto

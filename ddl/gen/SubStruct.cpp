@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	SubStruct::SubStruct([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Str = serialized->get_string(Str_type_id);
-		Val = serialized->get_int32(Val_type_id); 
+		Str = serialized->get_string(Str_type_id, "ClassSubStructDefault");
+		Val = serialized->get_int32(Val_type_id, 4); 
 	}
 
 	[[nodiscard]] auto

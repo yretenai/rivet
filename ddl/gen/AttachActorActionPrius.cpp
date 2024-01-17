@@ -9,12 +9,12 @@
 
 namespace rivet::ddl::generated {
 	AttachActorActionPrius::AttachActorActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		Actor = serialized->get_string(Actor_type_id);
-		AttachRelative = serialized->get_bool(AttachRelative_type_id);
-		Joint = serialized->get_string(Joint_type_id);
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Debug);
+		Actor = serialized->get_string(Actor_type_id, {});
+		AttachRelative = serialized->get_bool(AttachRelative_type_id, false);
+		Joint = serialized->get_string(Joint_type_id, "head");
 		Offset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Offset_type_id);
-		UpdateRotation = serialized->get_bool(UpdateRotation_type_id); 
+		UpdateRotation = serialized->get_bool(UpdateRotation_type_id, true); 
 	}
 
 	[[nodiscard]] auto

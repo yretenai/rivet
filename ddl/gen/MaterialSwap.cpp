@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	MaterialSwap::MaterialSwap([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Original = serialized->get_string(Original_type_id);
-		Replacement = serialized->get_string(Replacement_type_id); 
+		Original = serialized->get_string(Original_type_id, {});
+		Replacement = serialized->get_string(Replacement_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

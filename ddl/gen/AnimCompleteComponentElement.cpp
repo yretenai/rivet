@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	AnimCompleteComponentElement::AnimCompleteComponentElement([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		CompleteAnimDriverName = serialized->get_string(CompleteAnimDriverName_type_id);
-		GotoAnimDriverName = serialized->get_string(GotoAnimDriverName_type_id); 
+		CompleteAnimDriverName = serialized->get_string(CompleteAnimDriverName_type_id, "AnimDriver");
+		GotoAnimDriverName = serialized->get_string(GotoAnimDriverName_type_id, "GotoAnimDriver"); 
 	}
 
 	[[nodiscard]] auto

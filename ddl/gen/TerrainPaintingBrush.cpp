@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	TerrainPaintingBrush::TerrainPaintingBrush([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		BrushPath = serialized->get_string(BrushPath_type_id); 
+		BrushPath = serialized->get_string(BrushPath_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

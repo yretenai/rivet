@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	MagShieldFullImpactEvent::MagShieldFullImpactEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		DeductAmmo = serialized->get_bool(DeductAmmo_type_id); 
+		DeductAmmo = serialized->get_bool(DeductAmmo_type_id, true); 
 	}
 
 	[[nodiscard]] auto

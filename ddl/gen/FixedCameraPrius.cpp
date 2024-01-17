@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	FixedCameraPrius::FixedCameraPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): PlacedCameraPrius(serialized) {
-		ZeroSettle = serialized->get_bool(ZeroSettle_type_id);
-		LockPosition = serialized->get_bool(LockPosition_type_id);
-		ResetOnActivate = serialized->get_bool(ResetOnActivate_type_id);
-		StickConfig = serialized->get_string(StickConfig_type_id); 
+		ZeroSettle = serialized->get_bool(ZeroSettle_type_id, true);
+		LockPosition = serialized->get_bool(LockPosition_type_id, true);
+		ResetOnActivate = serialized->get_bool(ResetOnActivate_type_id, true);
+		StickConfig = serialized->get_string(StickConfig_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

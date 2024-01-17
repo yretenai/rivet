@@ -7,13 +7,13 @@
 
 namespace rivet::ddl::generated {
 	DoorAnimatedPrius::DoorAnimatedPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): DoorPrius(serialized) {
-		AnimRate = serialized->get_float(AnimRate_type_id);
-		OpenAnim = serialized->get_string(OpenAnim_type_id);
-		OpenIdleAnim = serialized->get_string(OpenIdleAnim_type_id);
-		CloseAnim = serialized->get_string(CloseAnim_type_id);
-		CloseIdleAnim = serialized->get_string(CloseIdleAnim_type_id);
-		ReverseOpenAnim = serialized->get_string(ReverseOpenAnim_type_id);
-		ReverseCloseAnim = serialized->get_string(ReverseCloseAnim_type_id); 
+		AnimRate = serialized->get_float(AnimRate_type_id, 1.000000);
+		OpenAnim = serialized->get_string(OpenAnim_type_id, "Door_Open");
+		OpenIdleAnim = serialized->get_string(OpenIdleAnim_type_id, "Door_OpenIdle");
+		CloseAnim = serialized->get_string(CloseAnim_type_id, "Door_Close");
+		CloseIdleAnim = serialized->get_string(CloseIdleAnim_type_id, "Door_CloseIdle");
+		ReverseOpenAnim = serialized->get_string(ReverseOpenAnim_type_id, {});
+		ReverseCloseAnim = serialized->get_string(ReverseCloseAnim_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

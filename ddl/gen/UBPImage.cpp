@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	UBPImage::UBPImage([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		url = serialized->get_string(url_type_id);
-		type = serialized->get_string(type_type_id); 
+		url = serialized->get_string(url_type_id, {});
+		type = serialized->get_string(type_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

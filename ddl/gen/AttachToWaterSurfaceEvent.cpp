@@ -7,13 +7,13 @@
 
 namespace rivet::ddl::generated {
 	AttachToWaterSurfaceEvent::AttachToWaterSurfaceEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		LerpToWaterPosDuration = serialized->get_float(LerpToWaterPosDuration_type_id);
-		EventDuration = serialized->get_float(EventDuration_type_id);
-		BobGain = serialized->get_float(BobGain_type_id);
-		BobDamp = serialized->get_float(BobDamp_type_id);
-		BobMaxSpeed = serialized->get_float(BobMaxSpeed_type_id);
-		MotionDepth = serialized->get_float(MotionDepth_type_id);
-		UpdateOffscreen = serialized->get_bool(UpdateOffscreen_type_id); 
+		LerpToWaterPosDuration = serialized->get_float(LerpToWaterPosDuration_type_id, 0.000000);
+		EventDuration = serialized->get_float(EventDuration_type_id, -1.000000);
+		BobGain = serialized->get_float(BobGain_type_id, -1.000000);
+		BobDamp = serialized->get_float(BobDamp_type_id, -8.000000);
+		BobMaxSpeed = serialized->get_float(BobMaxSpeed_type_id, 1.000000);
+		MotionDepth = serialized->get_float(MotionDepth_type_id, 0.100000);
+		UpdateOffscreen = serialized->get_bool(UpdateOffscreen_type_id, false); 
 	}
 
 	[[nodiscard]] auto

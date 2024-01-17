@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	TestGameMissionObjective::TestGameMissionObjective([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Toggle = serialized->get_bool(Toggle_type_id);
-		AllowVignettes = serialized->get_bool(AllowVignettes_type_id); 
+		Toggle = serialized->get_bool(Toggle_type_id, true);
+		AllowVignettes = serialized->get_bool(AllowVignettes_type_id, true); 
 	}
 
 	[[nodiscard]] auto

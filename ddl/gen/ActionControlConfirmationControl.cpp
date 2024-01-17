@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ActionControlConfirmationControl::ActionControlConfirmationControl([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Control = serialized->get_enum<rivet::ddl::generated::x93d78ad3>(Control_type_id, rivet::ddl::generated::x93d78ad3_values); 
+		Control = serialized->get_enum<rivet::ddl::generated::x93d78ad3>(Control_type_id, rivet::ddl::generated::x93d78ad3_values, rivet::ddl::generated::x93d78ad3::ConfirmYes); 
 	}
 
 	[[nodiscard]] auto

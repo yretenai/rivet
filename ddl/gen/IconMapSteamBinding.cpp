@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	IconMapSteamBinding::IconMapSteamBinding([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): IconMapBase(serialized) {
-		Button = serialized->get_enum<rivet::ddl::generated::x7b87880c>(Button_type_id, rivet::ddl::generated::x7b87880c_values);
-		ActionSet = serialized->get_enum<rivet::ddl::generated::xf4ca865e>(ActionSet_type_id, rivet::ddl::generated::xf4ca865e_values);
-		AnalogDirection = serialized->get_enum<rivet::ddl::generated::x483aa079>(AnalogDirection_type_id, rivet::ddl::generated::x483aa079_values); 
+		Button = serialized->get_enum<rivet::ddl::generated::x7b87880c>(Button_type_id, rivet::ddl::generated::x7b87880c_values, rivet::ddl::generated::x7b87880c::None);
+		ActionSet = serialized->get_enum<rivet::ddl::generated::xf4ca865e>(ActionSet_type_id, rivet::ddl::generated::xf4ca865e_values, rivet::ddl::generated::xf4ca865e::Active);
+		AnalogDirection = serialized->get_enum<rivet::ddl::generated::x483aa079>(AnalogDirection_type_id, rivet::ddl::generated::x483aa079_values, rivet::ddl::generated::x483aa079::None); 
 	}
 
 	[[nodiscard]] auto

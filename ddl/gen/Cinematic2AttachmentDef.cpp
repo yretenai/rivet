@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	Cinematic2AttachmentDef::Cinematic2AttachmentDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AttachToJoint = serialized->get_bool(AttachToJoint_type_id);
-		LocatorName = serialized->get_string(LocatorName_type_id);
-		JointName = serialized->get_string(JointName_type_id); 
+		AttachToJoint = serialized->get_bool(AttachToJoint_type_id, false);
+		LocatorName = serialized->get_string(LocatorName_type_id, {});
+		JointName = serialized->get_string(JointName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

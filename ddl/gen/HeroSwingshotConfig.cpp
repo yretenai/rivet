@@ -9,12 +9,12 @@
 
 namespace rivet::ddl::generated {
 	HeroSwingshotConfig::HeroSwingshotConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MinRange = serialized->get_float(MinRange_type_id);
-		MaxRange = serialized->get_float(MaxRange_type_id);
-		HorizFOV = serialized->get_float(HorizFOV_type_id);
-		VertFOV = serialized->get_float(VertFOV_type_id);
-		MaxDistBelow = serialized->get_float(MaxDistBelow_type_id);
-		GracePeriod = serialized->get_float(GracePeriod_type_id);
+		MinRange = serialized->get_float(MinRange_type_id, 3.000000);
+		MaxRange = serialized->get_float(MaxRange_type_id, 30.000000);
+		HorizFOV = serialized->get_float(HorizFOV_type_id, 80.000000);
+		VertFOV = serialized->get_float(VertFOV_type_id, 51.000000);
+		MaxDistBelow = serialized->get_float(MaxDistBelow_type_id, 4.000000);
+		GracePeriod = serialized->get_float(GracePeriod_type_id, 0.250000);
 		JumpData = serialized->unwrap_into<rivet::ddl::generated::SwingshotJumpData>(JumpData_type_id); 
 	}
 

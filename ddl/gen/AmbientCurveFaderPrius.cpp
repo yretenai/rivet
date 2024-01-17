@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	AmbientCurveFaderPrius::AmbientCurveFaderPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		FadeDuration = serialized->get_float(FadeDuration_type_id);
-		DeleteOnFade = serialized->get_bool(DeleteOnFade_type_id); 
+		FadeDuration = serialized->get_float(FadeDuration_type_id, 0.050000);
+		DeleteOnFade = serialized->get_bool(DeleteOnFade_type_id, true); 
 	}
 
 	[[nodiscard]] auto

@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	StatusEffectBuildupEvent::StatusEffectBuildupEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		DamageType = serialized->get_enum<rivet::ddl::generated::DamageTypes>(DamageType_type_id, rivet::ddl::generated::DamageTypes_values);
-		PercentFull = serialized->get_float(PercentFull_type_id);
-		StatusAmount = serialized->get_float(StatusAmount_type_id); 
+		DamageType = serialized->get_enum<rivet::ddl::generated::DamageTypes>(DamageType_type_id, rivet::ddl::generated::DamageTypes_values, rivet::ddl::generated::DamageTypes::None);
+		PercentFull = serialized->get_float(PercentFull_type_id, 0.000000);
+		StatusAmount = serialized->get_float(StatusAmount_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

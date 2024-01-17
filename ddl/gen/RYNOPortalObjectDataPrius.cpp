@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	RYNOPortalObjectDataPrius::RYNOPortalObjectDataPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ShouldFall = serialized->get_bool(ShouldFall_type_id);
-		ShouldRotate = serialized->get_bool(ShouldRotate_type_id);
-		ShouldStartUpsideDown = serialized->get_bool(ShouldStartUpsideDown_type_id); 
+		ShouldFall = serialized->get_bool(ShouldFall_type_id, true);
+		ShouldRotate = serialized->get_bool(ShouldRotate_type_id, true);
+		ShouldStartUpsideDown = serialized->get_bool(ShouldStartUpsideDown_type_id, false); 
 	}
 
 	[[nodiscard]] auto

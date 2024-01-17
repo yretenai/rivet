@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	SystemSaveDataContainer::SystemSaveDataContainer([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SaveName = serialized->get_string(SaveName_type_id);
+		SaveName = serialized->get_string(SaveName_type_id, {});
 		SaveData = serialized->unwrap_into<rivet::ddl::generated::SaveDataBase>(SaveData_type_id); 
 	}
 

@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	CodePaths::CodePaths([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		CodePath = serialized->get_string(CodePath_type_id);
-		PublishedDirectory = serialized->get_string(PublishedDirectory_type_id); 
+		CodePath = serialized->get_string(CodePath_type_id, {});
+		PublishedDirectory = serialized->get_string(PublishedDirectory_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

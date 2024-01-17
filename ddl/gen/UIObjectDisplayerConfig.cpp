@@ -9,13 +9,13 @@
 
 namespace rivet::ddl::generated {
 	UIObjectDisplayerConfig::UIObjectDisplayerConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		VendorWeaponZone = serialized->get_string(VendorWeaponZone_type_id);
-		VendorWeaponAtmosphere = serialized->get_string(VendorWeaponAtmosphere_type_id);
-		PauseMenuZone = serialized->get_string(PauseMenuZone_type_id);
-		PauseMenuAtmosphere = serialized->get_string(PauseMenuAtmosphere_type_id);
-		PauseMapZone = serialized->get_string(PauseMapZone_type_id);
-		PauseMapAtmosphere = serialized->get_string(PauseMapAtmosphere_type_id);
-		PauseMenuCameraTransition = serialized->get_float(PauseMenuCameraTransition_type_id);
+		VendorWeaponZone = serialized->get_string(VendorWeaponZone_type_id, {});
+		VendorWeaponAtmosphere = serialized->get_string(VendorWeaponAtmosphere_type_id, {});
+		PauseMenuZone = serialized->get_string(PauseMenuZone_type_id, {});
+		PauseMenuAtmosphere = serialized->get_string(PauseMenuAtmosphere_type_id, {});
+		PauseMapZone = serialized->get_string(PauseMapZone_type_id, {});
+		PauseMapAtmosphere = serialized->get_string(PauseMapAtmosphere_type_id, {});
+		PauseMenuCameraTransition = serialized->get_float(PauseMenuCameraTransition_type_id, 0.000000);
 		UIDisplayObjectData = serialized->unwrap_into_many<rivet::ddl::generated::UIDisplayObjectData>(UIDisplayObjectData_type_id); 
 	}
 

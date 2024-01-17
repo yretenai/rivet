@@ -7,18 +7,18 @@
 
 namespace rivet::ddl::generated {
 	ClankPuzzleSettings::ClankPuzzleSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SpawnVolumeOnAim = serialized->get_bool(SpawnVolumeOnAim_type_id);
-		CanSlapBots = serialized->get_bool(CanSlapBots_type_id);
-		SlapBotsTurn90 = serialized->get_bool(SlapBotsTurn90_type_id);
-		CharactersWorldSpeed = serialized->get_bool(CharactersWorldSpeed_type_id);
-		PortalSpeedStack = serialized->get_bool(PortalSpeedStack_type_id);
-		WireRideSpeed = serialized->get_int32(WireRideSpeed_type_id);
-		CanRecallShots = serialized->get_bool(CanRecallShots_type_id);
-		CanTargetsAbsorb = serialized->get_bool(CanTargetsAbsorb_type_id);
-		DeathOnBigMove = serialized->get_bool(DeathOnBigMove_type_id);
-		ShowDebugDraw = serialized->get_bool(ShowDebugDraw_type_id);
-		Logging = serialized->get_bool(Logging_type_id);
-		ShowLockOnScores = serialized->get_bool(ShowLockOnScores_type_id); 
+		SpawnVolumeOnAim = serialized->get_bool(SpawnVolumeOnAim_type_id, false);
+		CanSlapBots = serialized->get_bool(CanSlapBots_type_id, false);
+		SlapBotsTurn90 = serialized->get_bool(SlapBotsTurn90_type_id, false);
+		CharactersWorldSpeed = serialized->get_bool(CharactersWorldSpeed_type_id, true);
+		PortalSpeedStack = serialized->get_bool(PortalSpeedStack_type_id, false);
+		WireRideSpeed = serialized->get_int32(WireRideSpeed_type_id, 12);
+		CanRecallShots = serialized->get_bool(CanRecallShots_type_id, true);
+		CanTargetsAbsorb = serialized->get_bool(CanTargetsAbsorb_type_id, false);
+		DeathOnBigMove = serialized->get_bool(DeathOnBigMove_type_id, true);
+		ShowDebugDraw = serialized->get_bool(ShowDebugDraw_type_id, false);
+		Logging = serialized->get_bool(Logging_type_id, false);
+		ShowLockOnScores = serialized->get_bool(ShowLockOnScores_type_id, false); 
 	}
 
 	[[nodiscard]] auto

@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	BotCommandHoverFollowCurveToTargetScriptActionPrius::BotCommandHoverFollowCurveToTargetScriptActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		BLineDist = serialized->get_float(BLineDist_type_id);
-		AllowShootingWhileGoto = serialized->get_bool(AllowShootingWhileGoto_type_id);
-		SetDestActorAsOverrideParentIfMovingSurface = serialized->get_bool(SetDestActorAsOverrideParentIfMovingSurface_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Enemy_Bot);
+		BLineDist = serialized->get_float(BLineDist_type_id, 30.000000);
+		AllowShootingWhileGoto = serialized->get_bool(AllowShootingWhileGoto_type_id, false);
+		SetDestActorAsOverrideParentIfMovingSurface = serialized->get_bool(SetDestActorAsOverrideParentIfMovingSurface_type_id, false); 
 	}
 
 	[[nodiscard]] auto

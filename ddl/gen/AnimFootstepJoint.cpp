@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	AnimFootstepJoint::AnimFootstepJoint([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Side = serialized->get_enum<rivet::ddl::generated::x94d69111>(Side_type_id, rivet::ddl::generated::x94d69111_values);
-		JointName = serialized->get_string(JointName_type_id);
-		LocatorName = serialized->get_string(LocatorName_type_id); 
+		Side = serialized->get_enum<rivet::ddl::generated::x94d69111>(Side_type_id, rivet::ddl::generated::x94d69111_values, rivet::ddl::generated::x94d69111::Left);
+		JointName = serialized->get_string(JointName_type_id, "LF_ball");
+		LocatorName = serialized->get_string(LocatorName_type_id, "igLoc_ball_l"); 
 	}
 
 	[[nodiscard]] auto

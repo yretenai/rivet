@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	DisableBirdsCineEvent::DisableBirdsCineEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		FadeOutTime = serialized->get_float(FadeOutTime_type_id); 
+		FadeOutTime = serialized->get_float(FadeOutTime_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

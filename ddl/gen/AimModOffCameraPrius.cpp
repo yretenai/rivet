@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	AimModOffCameraPrius::AimModOffCameraPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): AimModifierPrius(serialized) {
-		MissTime = serialized->get_float(MissTime_type_id);
-		MissDist = serialized->get_float(MissDist_type_id); 
+		MissTime = serialized->get_float(MissTime_type_id, 2.000000);
+		MissDist = serialized->get_float(MissDist_type_id, 2.000000); 
 	}
 
 	[[nodiscard]] auto

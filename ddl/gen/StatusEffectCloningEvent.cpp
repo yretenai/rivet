@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	StatusEffectCloningEvent::StatusEffectCloningEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		IsOriginal = serialized->get_bool(IsOriginal_type_id); 
+		IsOriginal = serialized->get_bool(IsOriginal_type_id, false); 
 	}
 
 	[[nodiscard]] auto

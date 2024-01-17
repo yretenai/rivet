@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	MissionOrderDataBase::MissionOrderDataBase([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MissionName = serialized->get_string(MissionName_type_id);
+		MissionName = serialized->get_string(MissionName_type_id, {});
 		LockedByMission = serialized->get_strings(LockedByMission_type_id); 
 	}
 

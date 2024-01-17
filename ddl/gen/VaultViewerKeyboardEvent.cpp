@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	VaultViewerKeyboardEvent::VaultViewerKeyboardEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Key = serialized->get_uint32(Key_type_id);
-		Down = serialized->get_bool(Down_type_id);
-		AltKey = serialized->get_bool(AltKey_type_id);
-		CtrlKey = serialized->get_bool(CtrlKey_type_id);
-		ShiftKey = serialized->get_bool(ShiftKey_type_id); 
+		Key = serialized->get_uint32(Key_type_id, 0);
+		Down = serialized->get_bool(Down_type_id, false);
+		AltKey = serialized->get_bool(AltKey_type_id, false);
+		CtrlKey = serialized->get_bool(CtrlKey_type_id, false);
+		ShiftKey = serialized->get_bool(ShiftKey_type_id, false); 
 	}
 
 	[[nodiscard]] auto

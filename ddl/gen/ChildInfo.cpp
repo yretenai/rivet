@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	ChildInfo::ChildInfo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		NodeId = serialized->get_uint64(NodeId_type_id);
-		ConnectionId = serialized->get_uint64(ConnectionId_type_id); 
+		NodeId = serialized->get_uint64(NodeId_type_id, 0);
+		ConnectionId = serialized->get_uint64(ConnectionId_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

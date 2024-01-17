@@ -25,7 +25,7 @@ namespace rivet::ddl::generated {
 		FallData = serialized->unwrap_into<rivet::ddl::generated::HoverbootFallData>(FallData_type_id);
 		HoverEffectData = serialized->unwrap_into<rivet::ddl::generated::HoverbootHoverEffectData>(HoverEffectData_type_id);
 		BoostJumpConfig = serialized->unwrap_into<rivet::ddl::generated::HeroSpeedConfig>(BoostJumpConfig_type_id);
-		HoverbootFastCameraShakeConfig = serialized->get_string(HoverbootFastCameraShakeConfig_type_id); 
+		HoverbootFastCameraShakeConfig = serialized->get_string(HoverbootFastCameraShakeConfig_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

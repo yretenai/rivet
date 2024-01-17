@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	AnimMorphDef::AnimMorphDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MorphDeltaPrecision = serialized->get_float(MorphDeltaPrecision_type_id);
-		MorphDeltaPrecisionFacial = serialized->get_float(MorphDeltaPrecisionFacial_type_id);
-		IsFacialModelDebug = serialized->get_bool(IsFacialModelDebug_type_id); 
+		MorphDeltaPrecision = serialized->get_float(MorphDeltaPrecision_type_id, 0.100000);
+		MorphDeltaPrecisionFacial = serialized->get_float(MorphDeltaPrecisionFacial_type_id, 0.100000);
+		IsFacialModelDebug = serialized->get_bool(IsFacialModelDebug_type_id, false); 
 	}
 
 	[[nodiscard]] auto

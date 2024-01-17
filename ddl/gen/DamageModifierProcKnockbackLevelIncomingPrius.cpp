@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	DamageModifierProcKnockbackLevelIncomingPrius::DamageModifierProcKnockbackLevelIncomingPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): DamageModifierProcIncomingPrius(serialized) {
-		KnockbackLevel = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(KnockbackLevel_type_id, rivet::ddl::generated::KnockbackLevels_values);
-		AllowKnockbackDowngrade = serialized->get_bool(AllowKnockbackDowngrade_type_id); 
+		KnockbackLevel = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(KnockbackLevel_type_id, rivet::ddl::generated::KnockbackLevels_values, rivet::ddl::generated::KnockbackLevels::None);
+		AllowKnockbackDowngrade = serialized->get_bool(AllowKnockbackDowngrade_type_id, false); 
 	}
 
 	[[nodiscard]] auto

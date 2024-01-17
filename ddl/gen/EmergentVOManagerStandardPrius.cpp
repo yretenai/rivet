@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	EmergentVOManagerStandardPrius::EmergentVOManagerStandardPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EmergentVOManagerGamePrius(serialized) {
-		EmergentVOConfig = serialized->get_string(EmergentVOConfig_type_id);
-		TriggerRadius = serialized->get_float(TriggerRadius_type_id); 
+		EmergentVOConfig = serialized->get_string(EmergentVOConfig_type_id, {});
+		TriggerRadius = serialized->get_float(TriggerRadius_type_id, 30.000000); 
 	}
 
 	[[nodiscard]] auto

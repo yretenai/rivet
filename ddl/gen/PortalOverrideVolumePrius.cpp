@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	PortalOverrideVolumePrius::PortalOverrideVolumePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Atmosphere = serialized->get_string(Atmosphere_type_id);
-		ClipExteriorGeometry = serialized->get_bool(ClipExteriorGeometry_type_id);
+		Atmosphere = serialized->get_string(Atmosphere_type_id, {});
+		ClipExteriorGeometry = serialized->get_bool(ClipExteriorGeometry_type_id, true);
 		ExitPortals = serialized->get_uint64s(ExitPortals_type_id); 
 	}
 

@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	ConfigModActionPrius::ConfigModActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		ConfigAsset = serialized->get_string(ConfigAsset_type_id);
-		ModType = serialized->get_enum<rivet::ddl::generated::x2f0b644b>(ModType_type_id, rivet::ddl::generated::x2f0b644b_values); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Config);
+		ConfigAsset = serialized->get_string(ConfigAsset_type_id, {});
+		ModType = serialized->get_enum<rivet::ddl::generated::x2f0b644b>(ModType_type_id, rivet::ddl::generated::x2f0b644b_values, rivet::ddl::generated::x2f0b644b::Replace); 
 	}
 
 	[[nodiscard]] auto

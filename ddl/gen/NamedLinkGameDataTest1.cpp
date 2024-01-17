@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	NamedLinkGameDataTest1::NamedLinkGameDataTest1([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): NamedLinkGameDataBase(serialized) {
-		testValue1 = serialized->get_int32(testValue1_type_id); 
+		testValue1 = serialized->get_int32(testValue1_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

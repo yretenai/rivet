@@ -7,13 +7,13 @@
 
 namespace rivet::ddl::generated {
 	IconMapData::IconMapData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Icon = serialized->get_string(Icon_type_id);
-		MarkupText = serialized->get_string(MarkupText_type_id);
-		Width = serialized->get_int32(Width_type_id);
-		Height = serialized->get_int32(Height_type_id);
-		MinHeight = serialized->get_int32(MinHeight_type_id);
-		MaxHeight = serialized->get_int32(MaxHeight_type_id);
-		Vspace = serialized->get_int32(Vspace_type_id); 
+		Icon = serialized->get_string(Icon_type_id, "");
+		MarkupText = serialized->get_string(MarkupText_type_id, "");
+		Width = serialized->get_int32(Width_type_id, 64);
+		Height = serialized->get_int32(Height_type_id, 64);
+		MinHeight = serialized->get_int32(MinHeight_type_id, -1);
+		MaxHeight = serialized->get_int32(MaxHeight_type_id, -1);
+		Vspace = serialized->get_int32(Vspace_type_id, -16); 
 	}
 
 	[[nodiscard]] auto

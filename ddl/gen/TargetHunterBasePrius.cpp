@@ -11,15 +11,15 @@
 
 namespace rivet::ddl::generated {
 	TargetHunterBasePrius::TargetHunterBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		TargetHunterName = serialized->get_string(TargetHunterName_type_id);
-		StartOnInit = serialized->get_bool(StartOnInit_type_id);
-		MinRange = serialized->get_float(MinRange_type_id);
-		MaxRange = serialized->get_float(MaxRange_type_id);
-		TestNav = serialized->get_bool(TestNav_type_id);
-		TestGround = serialized->get_bool(TestGround_type_id);
-		MustBeInHomeArea = serialized->get_bool(MustBeInHomeArea_type_id);
-		TargetTimeout = serialized->get_float(TargetTimeout_type_id);
-		RecheckTime = serialized->get_float(RecheckTime_type_id);
+		TargetHunterName = serialized->get_string(TargetHunterName_type_id, "");
+		StartOnInit = serialized->get_bool(StartOnInit_type_id, true);
+		MinRange = serialized->get_float(MinRange_type_id, 0.000000);
+		MaxRange = serialized->get_float(MaxRange_type_id, 1000.000000);
+		TestNav = serialized->get_bool(TestNav_type_id, true);
+		TestGround = serialized->get_bool(TestGround_type_id, false);
+		MustBeInHomeArea = serialized->get_bool(MustBeInHomeArea_type_id, true);
+		TargetTimeout = serialized->get_float(TargetTimeout_type_id, -1.000000);
+		RecheckTime = serialized->get_float(RecheckTime_type_id, 2.000000);
 		Checks = serialized->unwrap_into_many<rivet::ddl::generated::TargetHunterCustomCheck>(Checks_type_id); 
 	}
 

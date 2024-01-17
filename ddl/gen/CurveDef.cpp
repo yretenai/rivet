@@ -14,12 +14,12 @@
 namespace rivet::ddl::generated {
 	CurveDef::CurveDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		VaultMetaData = serialized->unwrap_into<rivet::ddl::generated::VaultMetaData>(VaultMetaData_type_id);
-		IconPath = serialized->get_string(IconPath_type_id);
+		IconPath = serialized->get_string(IconPath_type_id, "");
 		Points = serialized->unwrap_into_many<rivet::ddl::generated::SceneNode>(Points_type_id);
-		IsLooped = serialized->get_bool(IsLooped_type_id);
-		LoopStartPointIndex = serialized->get_uint16(LoopStartPointIndex_type_id);
-		IsReversed = serialized->get_bool(IsReversed_type_id);
-		SplineType = serialized->get_enum<rivet::ddl::generated::SplineTypes>(SplineType_type_id, rivet::ddl::generated::SplineTypes_values);
+		IsLooped = serialized->get_bool(IsLooped_type_id, false);
+		LoopStartPointIndex = serialized->get_uint16(LoopStartPointIndex_type_id, 0);
+		IsReversed = serialized->get_bool(IsReversed_type_id, false);
+		SplineType = serialized->get_enum<rivet::ddl::generated::SplineTypes>(SplineType_type_id, rivet::ddl::generated::SplineTypes_values, rivet::ddl::generated::SplineTypes::Centripetal);
 		Usage = serialized->unwrap_into<rivet::ddl::generated::CurveUsage>(Usage_type_id);
 		HoudiniData = serialized->unwrap_into<rivet::ddl::generated::CurveHoudiniData>(HoudiniData_type_id);
 		TerrainRoadData = serialized->unwrap_into<rivet::ddl::generated::TerrainRoadCurveData>(TerrainRoadData_type_id); 

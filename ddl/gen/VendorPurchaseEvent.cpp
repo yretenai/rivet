@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	VendorPurchaseEvent::VendorPurchaseEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		WeaponName = serialized->get_string(WeaponName_type_id);
-		ShowRemapTutorial = serialized->get_bool(ShowRemapTutorial_type_id); 
+		WeaponName = serialized->get_string(WeaponName_type_id, {});
+		ShowRemapTutorial = serialized->get_bool(ShowRemapTutorial_type_id, false); 
 	}
 
 	[[nodiscard]] auto

@@ -10,10 +10,10 @@
 
 namespace rivet::ddl::generated {
 	DevstatsHighContrastMaterialsEnabledEvent::DevstatsHighContrastMaterialsEnabledEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		EventId = serialized->get_string(EventId_type_id);
+		EventId = serialized->get_string(EventId_type_id, {});
 		PlayerPosInfo = serialized->unwrap_into<rivet::ddl::generated::DevstatsPlayerPositionInfo>(PlayerPosInfo_type_id);
 		PrimarySegmentInfo = serialized->unwrap_into<rivet::ddl::generated::DevstatsPrimarySegmentInfo>(PrimarySegmentInfo_type_id);
-		HighlightType = serialized->get_enum<rivet::ddl::generated::xf2109875>(HighlightType_type_id, rivet::ddl::generated::xf2109875_values); 
+		HighlightType = serialized->get_enum<rivet::ddl::generated::xf2109875>(HighlightType_type_id, rivet::ddl::generated::xf2109875_values, rivet::ddl::generated::xf2109875::Enemy); 
 	}
 
 	[[nodiscard]] auto

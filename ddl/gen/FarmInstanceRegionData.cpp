@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	FarmInstanceRegionData::FarmInstanceRegionData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AtmosphereZone = serialized->get_string(AtmosphereZone_type_id);
-		RegionFile = serialized->get_string(RegionFile_type_id);
-		LevelFile = serialized->get_string(LevelFile_type_id);
+		AtmosphereZone = serialized->get_string(AtmosphereZone_type_id, {});
+		RegionFile = serialized->get_string(RegionFile_type_id, {});
+		LevelFile = serialized->get_string(LevelFile_type_id, {});
 		ExtraZones = serialized->get_strings(ExtraZones_type_id); 
 	}
 

@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	GameCameraPrius::GameCameraPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): CameraPrius(serialized) {
-		ForceCamDirAim = serialized->get_bool(ForceCamDirAim_type_id);
-		ForceCamAimOnCasual = serialized->get_bool(ForceCamAimOnCasual_type_id); 
+		ForceCamDirAim = serialized->get_bool(ForceCamDirAim_type_id, false);
+		ForceCamAimOnCasual = serialized->get_bool(ForceCamAimOnCasual_type_id, false); 
 	}
 
 	[[nodiscard]] auto

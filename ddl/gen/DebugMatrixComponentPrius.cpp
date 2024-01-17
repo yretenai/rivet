@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	DebugMatrixComponentPrius::DebugMatrixComponentPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AxisLength = serialized->get_float(AxisLength_type_id);
-		Enabled = serialized->get_bool(Enabled_type_id); 
+		AxisLength = serialized->get_float(AxisLength_type_id, 1.000000);
+		Enabled = serialized->get_bool(Enabled_type_id, true); 
 	}
 
 	[[nodiscard]] auto

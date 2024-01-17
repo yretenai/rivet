@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	BreakableChunkCleanupActionPrius::BreakableChunkCleanupActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		CleanupChunkTypes = serialized->get_bitset<rivet::ddl::generated::x531f6c08>(CleanupChunkTypes_type_id, rivet::ddl::generated::x531f6c08_values);
-		FadeOutChunks = serialized->get_bool(FadeOutChunks_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Breakable);
+		CleanupChunkTypes = serialized->get_bitset<rivet::ddl::generated::x531f6c08>(CleanupChunkTypes_type_id, rivet::ddl::generated::x531f6c08_values, 1);
+		FadeOutChunks = serialized->get_bool(FadeOutChunks_type_id, false); 
 	}
 
 	[[nodiscard]] auto

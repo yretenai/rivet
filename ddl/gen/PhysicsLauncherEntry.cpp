@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	PhysicsLauncherEntry::PhysicsLauncherEntry([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		TargetVolume = serialized->get_uint64(TargetVolume_type_id);
-		ArcHeight = serialized->get_float(ArcHeight_type_id);
-		TargetId = serialized->get_string(TargetId_type_id); 
+		TargetVolume = serialized->get_uint64(TargetVolume_type_id, 0);
+		ArcHeight = serialized->get_float(ArcHeight_type_id, 0.000000);
+		TargetId = serialized->get_string(TargetId_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

@@ -7,18 +7,18 @@
 
 namespace rivet::ddl::generated {
 	GrindHazardPrius::GrindHazardPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		CurveActor = serialized->get_uint64(CurveActor_type_id);
-		StartTValue = serialized->get_float(StartTValue_type_id);
-		EndTValue = serialized->get_float(EndTValue_type_id);
-		DamageType = serialized->get_enum<rivet::ddl::generated::DamageTypes>(DamageType_type_id, rivet::ddl::generated::DamageTypes_values);
-		DamagePercent = serialized->get_float(DamagePercent_type_id);
-		DamageRadius = serialized->get_float(DamageRadius_type_id);
-		IgnoreDuration = serialized->get_float(IgnoreDuration_type_id);
-		KnockbackLevel = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(KnockbackLevel_type_id, rivet::ddl::generated::KnockbackLevels_values);
-		KnockbackAmount = serialized->get_float(KnockbackAmount_type_id);
-		HazardActor = serialized->get_string(HazardActor_type_id);
-		HazardSpacing = serialized->get_float(HazardSpacing_type_id);
-		HazardStretchPercent = serialized->get_float(HazardStretchPercent_type_id); 
+		CurveActor = serialized->get_uint64(CurveActor_type_id, 0);
+		StartTValue = serialized->get_float(StartTValue_type_id, 0.000000);
+		EndTValue = serialized->get_float(EndTValue_type_id, 1.000000);
+		DamageType = serialized->get_enum<rivet::ddl::generated::DamageTypes>(DamageType_type_id, rivet::ddl::generated::DamageTypes_values, rivet::ddl::generated::DamageTypes::Explosion);
+		DamagePercent = serialized->get_float(DamagePercent_type_id, 0.100000);
+		DamageRadius = serialized->get_float(DamageRadius_type_id, 0.200000);
+		IgnoreDuration = serialized->get_float(IgnoreDuration_type_id, 0.100000);
+		KnockbackLevel = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(KnockbackLevel_type_id, rivet::ddl::generated::KnockbackLevels_values, rivet::ddl::generated::KnockbackLevels::None);
+		KnockbackAmount = serialized->get_float(KnockbackAmount_type_id, 0.000000);
+		HazardActor = serialized->get_string(HazardActor_type_id, {});
+		HazardSpacing = serialized->get_float(HazardSpacing_type_id, 2.000000);
+		HazardStretchPercent = serialized->get_float(HazardStretchPercent_type_id, 0.200000); 
 	}
 
 	[[nodiscard]] auto

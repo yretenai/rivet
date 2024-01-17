@@ -10,8 +10,8 @@
 
 namespace rivet::ddl::generated {
 	ControlRemapPresetData::ControlRemapPresetData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Id = serialized->get_enum<rivet::ddl::generated::xcc18a97d>(Id_type_id, rivet::ddl::generated::xcc18a97d_values);
-		DisplayName = serialized->get_string(DisplayName_type_id);
+		Id = serialized->get_enum<rivet::ddl::generated::xcc18a97d>(Id_type_id, rivet::ddl::generated::xcc18a97d_values, rivet::ddl::generated::xcc18a97d::None);
+		DisplayName = serialized->get_string(DisplayName_type_id, {});
 		RemapSet = serialized->unwrap_into<rivet::ddl::generated::ControlRemapSet>(RemapSet_type_id); 
 	}
 

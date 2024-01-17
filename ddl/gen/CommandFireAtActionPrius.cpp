@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	CommandFireAtActionPrius::CommandFireAtActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		AltFire = serialized->get_bool(AltFire_type_id);
-		Duration = serialized->get_float(Duration_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Boss);
+		AltFire = serialized->get_bool(AltFire_type_id, false);
+		Duration = serialized->get_float(Duration_type_id, -1.000000); 
 	}
 
 	[[nodiscard]] auto

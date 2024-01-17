@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	SetModelAmbientAnimationActionPrius::SetModelAmbientAnimationActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		AmbientAnimation = serialized->get_float(AmbientAnimation_type_id);
-		MaxDisplacement = serialized->get_float(MaxDisplacement_type_id);
-		MaxDynamicForce = serialized->get_float(MaxDynamicForce_type_id);
-		MinDynamicForce = serialized->get_float(MinDynamicForce_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Rendering);
+		AmbientAnimation = serialized->get_float(AmbientAnimation_type_id, 0.000000);
+		MaxDisplacement = serialized->get_float(MaxDisplacement_type_id, 2.000000);
+		MaxDynamicForce = serialized->get_float(MaxDynamicForce_type_id, 8.000000);
+		MinDynamicForce = serialized->get_float(MinDynamicForce_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

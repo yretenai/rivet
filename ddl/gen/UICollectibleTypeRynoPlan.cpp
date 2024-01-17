@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	UICollectibleTypeRynoPlan::UICollectibleTypeRynoPlan([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): UICollectibleTypeBase(serialized) {
-		SaveID = serialized->get_enum<rivet::ddl::generated::x81d3e717>(SaveID_type_id, rivet::ddl::generated::x81d3e717_values);
-		DialogueLine = serialized->get_string(DialogueLine_type_id);
-		RYNOSchematic = serialized->get_string(RYNOSchematic_type_id); 
+		SaveID = serialized->get_enum<rivet::ddl::generated::x81d3e717>(SaveID_type_id, rivet::ddl::generated::x81d3e717_values, rivet::ddl::generated::x81d3e717::None);
+		DialogueLine = serialized->get_string(DialogueLine_type_id, {});
+		RYNOSchematic = serialized->get_string(RYNOSchematic_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

@@ -7,21 +7,21 @@
 
 namespace rivet::ddl::generated {
 	ViewFlagsEngineItem::ViewFlagsEngineItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		WorldAxesEnabled = serialized->get_bool(WorldAxesEnabled_type_id);
-		WorldGridEnabled = serialized->get_bool(WorldGridEnabled_type_id);
-		KeyLightArrowEnabled = serialized->get_bool(KeyLightArrowEnabled_type_id);
-		UVMapEnabled = serialized->get_bool(UVMapEnabled_type_id);
-		MotionBlurEnabled = serialized->get_bool(MotionBlurEnabled_type_id);
-		TemporalAntiAliasingEnabled = serialized->get_bool(TemporalAntiAliasingEnabled_type_id);
-		ScreenSpaceReflectionEnabled = serialized->get_bool(ScreenSpaceReflectionEnabled_type_id);
-		ScreenSpaceAmbientOcclusionEnabled = serialized->get_bool(ScreenSpaceAmbientOcclusionEnabled_type_id);
-		ColorCorrectionEnabled = serialized->get_bool(ColorCorrectionEnabled_type_id);
-		DepthOfFieldEnabled = serialized->get_bool(DepthOfFieldEnabled_type_id);
-		DepthOfFieldMarkerEnabled = serialized->get_bool(DepthOfFieldMarkerEnabled_type_id);
-		ChromaticAberrationEnabled = serialized->get_bool(ChromaticAberrationEnabled_type_id);
-		WeatherEffectsEnabled = serialized->get_bool(WeatherEffectsEnabled_type_id);
-		PostProcessEnabled = serialized->get_bool(PostProcessEnabled_type_id);
-		ScreenFadeEnabled = serialized->get_bool(ScreenFadeEnabled_type_id); 
+		WorldAxesEnabled = serialized->get_bool(WorldAxesEnabled_type_id, false);
+		WorldGridEnabled = serialized->get_bool(WorldGridEnabled_type_id, false);
+		KeyLightArrowEnabled = serialized->get_bool(KeyLightArrowEnabled_type_id, false);
+		UVMapEnabled = serialized->get_bool(UVMapEnabled_type_id, false);
+		MotionBlurEnabled = serialized->get_bool(MotionBlurEnabled_type_id, false);
+		TemporalAntiAliasingEnabled = serialized->get_bool(TemporalAntiAliasingEnabled_type_id, true);
+		ScreenSpaceReflectionEnabled = serialized->get_bool(ScreenSpaceReflectionEnabled_type_id, true);
+		ScreenSpaceAmbientOcclusionEnabled = serialized->get_bool(ScreenSpaceAmbientOcclusionEnabled_type_id, true);
+		ColorCorrectionEnabled = serialized->get_bool(ColorCorrectionEnabled_type_id, true);
+		DepthOfFieldEnabled = serialized->get_bool(DepthOfFieldEnabled_type_id, true);
+		DepthOfFieldMarkerEnabled = serialized->get_bool(DepthOfFieldMarkerEnabled_type_id, false);
+		ChromaticAberrationEnabled = serialized->get_bool(ChromaticAberrationEnabled_type_id, true);
+		WeatherEffectsEnabled = serialized->get_bool(WeatherEffectsEnabled_type_id, true);
+		PostProcessEnabled = serialized->get_bool(PostProcessEnabled_type_id, true);
+		ScreenFadeEnabled = serialized->get_bool(ScreenFadeEnabled_type_id, true); 
 	}
 
 	[[nodiscard]] auto

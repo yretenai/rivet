@@ -9,10 +9,10 @@
 
 namespace rivet::ddl::generated {
 	GraphNodesBuilt::GraphNodesBuilt([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		GraphName = serialized->get_string(GraphName_type_id);
+		GraphName = serialized->get_string(GraphName_type_id, {});
 		Nodes = serialized->unwrap_into_many<rivet::ddl::generated::BuiltNodeInfo>(Nodes_type_id);
 		SortedNodes = serialized->get_uint64s(SortedNodes_type_id);
-		MaxDepth = serialized->get_uint32(MaxDepth_type_id); 
+		MaxDepth = serialized->get_uint32(MaxDepth_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

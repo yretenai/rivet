@@ -9,12 +9,12 @@
 
 namespace rivet::ddl::generated {
 	InteractEnablePrius::InteractEnablePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		StartActive = serialized->get_bool(StartActive_type_id);
-		AnimDriverInactive = serialized->get_string(AnimDriverInactive_type_id);
-		AnimDriverActive = serialized->get_string(AnimDriverActive_type_id);
-		AnimDriverUse = serialized->get_string(AnimDriverUse_type_id);
-		EnableType = serialized->get_enum<rivet::ddl::generated::x96f58b25>(EnableType_type_id, rivet::ddl::generated::x96f58b25_values);
-		EnableActorGroup = serialized->get_uint64(EnableActorGroup_type_id);
+		StartActive = serialized->get_bool(StartActive_type_id, true);
+		AnimDriverInactive = serialized->get_string(AnimDriverInactive_type_id, "Interact_Unavail");
+		AnimDriverActive = serialized->get_string(AnimDriverActive_type_id, "Interact_Avail");
+		AnimDriverUse = serialized->get_string(AnimDriverUse_type_id, "Interact_Use");
+		EnableType = serialized->get_enum<rivet::ddl::generated::x96f58b25>(EnableType_type_id, rivet::ddl::generated::x96f58b25_values, rivet::ddl::generated::x96f58b25::InteractEnable);
+		EnableActorGroup = serialized->get_uint64(EnableActorGroup_type_id, 0);
 		InteractOfferPrius = serialized->unwrap_into<rivet::ddl::generated::InteractGeneralOfferPrius>(InteractOfferPrius_type_id); 
 	}
 

@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	SkinItemLocatorOverrideListElement::SkinItemLocatorOverrideListElement([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Available = serialized->get_enum<rivet::ddl::generated::x7ecfc969>(Available_type_id, rivet::ddl::generated::x7ecfc969_values);
+		Available = serialized->get_enum<rivet::ddl::generated::x7ecfc969>(Available_type_id, rivet::ddl::generated::x7ecfc969_values, rivet::ddl::generated::x7ecfc969::Always);
 		LocatorOverride = serialized->unwrap_into<rivet::ddl::generated::SkinItemLocatorOverride>(LocatorOverride_type_id); 
 	}
 

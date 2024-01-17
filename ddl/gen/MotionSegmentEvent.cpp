@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	MotionSegmentEvent::MotionSegmentEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		m_SegmentName = serialized->get_string(m_SegmentName_type_id); 
+		m_SegmentName = serialized->get_string(m_SegmentName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

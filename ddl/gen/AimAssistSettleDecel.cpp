@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	AimAssistSettleDecel::AimAssistSettleDecel([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MaxTimeToStop = serialized->get_float(MaxTimeToStop_type_id); 
+		MaxTimeToStop = serialized->get_float(MaxTimeToStop_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

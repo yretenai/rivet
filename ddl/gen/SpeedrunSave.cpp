@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	SpeedrunSave::SpeedrunSave([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SpeedrunTime = serialized->get_double(SpeedrunTime_type_id);
-		TimerStarted = serialized->get_bool(TimerStarted_type_id); 
+		SpeedrunTime = serialized->get_double(SpeedrunTime_type_id, 0.000000);
+		TimerStarted = serialized->get_bool(TimerStarted_type_id, false); 
 	}
 
 	[[nodiscard]] auto

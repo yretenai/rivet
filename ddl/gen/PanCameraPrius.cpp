@@ -9,9 +9,9 @@
 
 namespace rivet::ddl::generated {
 	PanCameraPrius::PanCameraPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): PlacedCameraPrius(serialized) {
-		SnapOnActivate = serialized->get_bool(SnapOnActivate_type_id);
-		PanX = serialized->get_bool(PanX_type_id);
-		PanZ = serialized->get_bool(PanZ_type_id);
+		SnapOnActivate = serialized->get_bool(SnapOnActivate_type_id, true);
+		PanX = serialized->get_bool(PanX_type_id, false);
+		PanZ = serialized->get_bool(PanZ_type_id, true);
 		CameraOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(CameraOffset_type_id); 
 	}
 

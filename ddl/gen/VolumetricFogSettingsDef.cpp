@@ -9,19 +9,19 @@
 
 namespace rivet::ddl::generated {
 	VolumetricFogSettingsDef::VolumetricFogSettingsDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Enabled = serialized->get_bool(Enabled_type_id);
+		Enabled = serialized->get_bool(Enabled_type_id, false);
 		Color = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Color_type_id);
-		Opacity = serialized->get_float(Opacity_type_id);
-		BottomHeight = serialized->get_float(BottomHeight_type_id);
-		TopHeight = serialized->get_float(TopHeight_type_id);
-		NearDistance = serialized->get_float(NearDistance_type_id);
-		FarDistance = serialized->get_float(FarDistance_type_id);
-		SunLightScale = serialized->get_float(SunLightScale_type_id);
-		LightsScale = serialized->get_float(LightsScale_type_id);
-		GIScale = serialized->get_float(GIScale_type_id);
-		NoiseVSpeed = serialized->get_float(NoiseVSpeed_type_id);
-		NoiseSpeed = serialized->get_float(NoiseSpeed_type_id);
-		NoiseScale = serialized->get_float(NoiseScale_type_id); 
+		Opacity = serialized->get_float(Opacity_type_id, 0.500000);
+		BottomHeight = serialized->get_float(BottomHeight_type_id, -100.000000);
+		TopHeight = serialized->get_float(TopHeight_type_id, 100.000000);
+		NearDistance = serialized->get_float(NearDistance_type_id, 0.000000);
+		FarDistance = serialized->get_float(FarDistance_type_id, 64.000000);
+		SunLightScale = serialized->get_float(SunLightScale_type_id, 0.500000);
+		LightsScale = serialized->get_float(LightsScale_type_id, 0.500000);
+		GIScale = serialized->get_float(GIScale_type_id, 0.250000);
+		NoiseVSpeed = serialized->get_float(NoiseVSpeed_type_id, 0.000000);
+		NoiseSpeed = serialized->get_float(NoiseSpeed_type_id, 0.500000);
+		NoiseScale = serialized->get_float(NoiseScale_type_id, 0.500000); 
 	}
 
 	[[nodiscard]] auto

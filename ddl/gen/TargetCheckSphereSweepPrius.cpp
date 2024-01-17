@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	TargetCheckSphereSweepPrius::TargetCheckSphereSweepPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): TargetCheckBasePrius(serialized) {
-		TargetLocator = serialized->get_string(TargetLocator_type_id);
-		OwnerLocator = serialized->get_string(OwnerLocator_type_id); 
+		TargetLocator = serialized->get_string(TargetLocator_type_id, {});
+		OwnerLocator = serialized->get_string(OwnerLocator_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

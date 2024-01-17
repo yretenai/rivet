@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	AnimatedLightPrius::AnimatedLightPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AttachJointHash = serialized->get_uint32(AttachJointHash_type_id);
-		DriverJointHash = serialized->get_uint32(DriverJointHash_type_id);
-		ColorR = serialized->get_float(ColorR_type_id);
-		ColorG = serialized->get_float(ColorG_type_id);
-		ColorB = serialized->get_float(ColorB_type_id); 
+		AttachJointHash = serialized->get_uint32(AttachJointHash_type_id, 0);
+		DriverJointHash = serialized->get_uint32(DriverJointHash_type_id, 0);
+		ColorR = serialized->get_float(ColorR_type_id, 0.000000);
+		ColorG = serialized->get_float(ColorG_type_id, 0.000000);
+		ColorB = serialized->get_float(ColorB_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

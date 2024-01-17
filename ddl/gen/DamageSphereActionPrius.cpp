@@ -10,17 +10,17 @@
 
 namespace rivet::ddl::generated {
 	DamageSphereActionPrius::DamageSphereActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		Radius = serialized->get_float(Radius_type_id);
-		Amount = serialized->get_float(Amount_type_id);
-		Type = serialized->get_enum<rivet::ddl::generated::DamageTypes>(Type_type_id, rivet::ddl::generated::DamageTypes_values);
-		Knockback = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(Knockback_type_id, rivet::ddl::generated::KnockbackLevels_values);
-		KnockbackAmount = serialized->get_float(KnockbackAmount_type_id);
-		Flags = serialized->get_bitset<rivet::ddl::generated::x65d7dac2>(Flags_type_id, rivet::ddl::generated::x65d7dac2_values);
-		Duration = serialized->get_float(Duration_type_id);
-		ConditionDuration = serialized->get_float(ConditionDuration_type_id);
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Health);
+		Radius = serialized->get_float(Radius_type_id, 1.000000);
+		Amount = serialized->get_float(Amount_type_id, 1.000000);
+		Type = serialized->get_enum<rivet::ddl::generated::DamageTypes>(Type_type_id, rivet::ddl::generated::DamageTypes_values, rivet::ddl::generated::DamageTypes::Bullet);
+		Knockback = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(Knockback_type_id, rivet::ddl::generated::KnockbackLevels_values, rivet::ddl::generated::KnockbackLevels::None);
+		KnockbackAmount = serialized->get_float(KnockbackAmount_type_id, -1.000000);
+		Flags = serialized->get_bitset<rivet::ddl::generated::x65d7dac2>(Flags_type_id, rivet::ddl::generated::x65d7dac2_values, 0);
+		Duration = serialized->get_float(Duration_type_id, 0.000000);
+		ConditionDuration = serialized->get_float(ConditionDuration_type_id, 0.000000);
 		DamageStatus = serialized->unwrap_into_many<rivet::ddl::generated::DamageStatusData>(DamageStatus_type_id);
-		DamageHash = serialized->get_string(DamageHash_type_id);
+		DamageHash = serialized->get_string(DamageHash_type_id, {});
 		CustomDamageEntries = serialized->unwrap_into_many<rivet::ddl::generated::CustomDamageContainer>(CustomDamageEntries_type_id); 
 	}
 

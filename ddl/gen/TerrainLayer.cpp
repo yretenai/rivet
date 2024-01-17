@@ -11,22 +11,22 @@
 
 namespace rivet::ddl::generated {
 	TerrainLayer::TerrainLayer([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Name = serialized->get_string(Name_type_id);
-		Id = serialized->get_uint8(Id_type_id);
-		Material = serialized->get_string(Material_type_id);
-		TileSize = serialized->get_float(TileSize_type_id);
+		Name = serialized->get_string(Name_type_id, "Unnamed Layer");
+		Id = serialized->get_uint8(Id_type_id, 0);
+		Material = serialized->get_string(Material_type_id, {});
+		TileSize = serialized->get_float(TileSize_type_id, 2.000000);
 		BlendOpacityThreshold = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(BlendOpacityThreshold_type_id);
-		MaxRotationDegrees = serialized->get_float(MaxRotationDegrees_type_id);
+		MaxRotationDegrees = serialized->get_float(MaxRotationDegrees_type_id, 180.000000);
 		VistaMapColor = serialized->unwrap_into<rivet::ddl::generated::EnvelopeColorDef>(VistaMapColor_type_id);
 		DefaultVistaMapNormalDetail = serialized->unwrap_into_many<rivet::ddl::generated::DDLVector3>(DefaultVistaMapNormalDetail_type_id);
-		VistaMapNormalDetail = serialized->get_bool(VistaMapNormalDetail_type_id);
+		VistaMapNormalDetail = serialized->get_bool(VistaMapNormalDetail_type_id, true);
 		DefaultVistaMapSpecular = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(DefaultVistaMapSpecular_type_id);
 		VistaMapSpecular = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(VistaMapSpecular_type_id);
-		DefaultVistaMapGlossiness = serialized->get_float(DefaultVistaMapGlossiness_type_id);
-		VistaMapGlossiness = serialized->get_float(VistaMapGlossiness_type_id);
-		VistaMapNoise = serialized->get_float(VistaMapNoise_type_id);
-		VistaMapPeakValleySharpness = serialized->get_float(VistaMapPeakValleySharpness_type_id);
-		VistaMapPeakValleyStrength = serialized->get_float(VistaMapPeakValleyStrength_type_id); 
+		DefaultVistaMapGlossiness = serialized->get_float(DefaultVistaMapGlossiness_type_id, 0.100000);
+		VistaMapGlossiness = serialized->get_float(VistaMapGlossiness_type_id, 0.000000);
+		VistaMapNoise = serialized->get_float(VistaMapNoise_type_id, 0.250000);
+		VistaMapPeakValleySharpness = serialized->get_float(VistaMapPeakValleySharpness_type_id, 0.500000);
+		VistaMapPeakValleyStrength = serialized->get_float(VistaMapPeakValleyStrength_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

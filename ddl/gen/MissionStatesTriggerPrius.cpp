@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	MissionStatesTriggerPrius::MissionStatesTriggerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BaseCustomOverlayTriggerPrius(serialized) {
-		MissionName = serialized->get_string(MissionName_type_id);
-		MissionStates = serialized->get_bitset<rivet::ddl::generated::x6c9f6d9b>(MissionStates_type_id, rivet::ddl::generated::x6c9f6d9b_values);
-		AvailableCoversActiveLoading = serialized->get_bool(AvailableCoversActiveLoading_type_id); 
+		MissionName = serialized->get_string(MissionName_type_id, {});
+		MissionStates = serialized->get_bitset<rivet::ddl::generated::x6c9f6d9b>(MissionStates_type_id, rivet::ddl::generated::x6c9f6d9b_values, 12);
+		AvailableCoversActiveLoading = serialized->get_bool(AvailableCoversActiveLoading_type_id, true); 
 	}
 
 	[[nodiscard]] auto

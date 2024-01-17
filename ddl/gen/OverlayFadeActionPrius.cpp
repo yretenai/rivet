@@ -7,13 +7,13 @@
 
 namespace rivet::ddl::generated {
 	OverlayFadeActionPrius::OverlayFadeActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		Duration = serialized->get_float(Duration_type_id);
-		Delay = serialized->get_float(Delay_type_id);
-		Fade = serialized->get_enum<rivet::ddl::generated::x6b791e0e>(Fade_type_id, rivet::ddl::generated::x6b791e0e_values);
-		IsWhite = serialized->get_bool(IsWhite_type_id);
-		ClearOnZoneUnload = serialized->get_bool(ClearOnZoneUnload_type_id);
-		ShowLoadIcon = serialized->get_bool(ShowLoadIcon_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::UI);
+		Duration = serialized->get_float(Duration_type_id, 3.000000);
+		Delay = serialized->get_float(Delay_type_id, 0.000000);
+		Fade = serialized->get_enum<rivet::ddl::generated::x6b791e0e>(Fade_type_id, rivet::ddl::generated::x6b791e0e_values, rivet::ddl::generated::x6b791e0e::Fade_In);
+		IsWhite = serialized->get_bool(IsWhite_type_id, false);
+		ClearOnZoneUnload = serialized->get_bool(ClearOnZoneUnload_type_id, false);
+		ShowLoadIcon = serialized->get_bool(ShowLoadIcon_type_id, false); 
 	}
 
 	[[nodiscard]] auto

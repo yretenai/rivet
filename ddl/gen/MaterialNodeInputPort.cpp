@@ -10,27 +10,27 @@
 
 namespace rivet::ddl::generated {
 	MaterialNodeInputPort::MaterialNodeInputPort([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		InternalName = serialized->get_string(InternalName_type_id);
-		DisplayName = serialized->get_string(DisplayName_type_id);
-		Minimums = serialized->get_string(Minimums_type_id);
-		Maximums = serialized->get_string(Maximums_type_id);
-		Values = serialized->get_string(Values_type_id);
-		Type = serialized->get_string(Type_type_id);
-		Description = serialized->get_string(Description_type_id);
-		Documentation = serialized->get_string(Documentation_type_id);
-		UIType = serialized->get_string(UIType_type_id);
-		Group = serialized->get_string(Group_type_id);
-		SortOrder = serialized->get_string(SortOrder_type_id);
-		Labels = serialized->get_string(Labels_type_id);
-		Global = serialized->get_bool(Global_type_id);
-		Visible = serialized->get_bool(Visible_type_id);
-		Exposed = serialized->get_bool(Exposed_type_id);
-		TestingOnly = serialized->get_bool(TestingOnly_type_id);
-		InheritName = serialized->get_bool(InheritName_type_id);
-		LinearFilter = serialized->get_bool(LinearFilter_type_id);
-		ShowPreview = serialized->get_bool(ShowPreview_type_id);
-		DeveloperMode = serialized->get_bool(DeveloperMode_type_id);
-		UserDefinedLabels = serialized->get_bool(UserDefinedLabels_type_id);
+		InternalName = serialized->get_string(InternalName_type_id, {});
+		DisplayName = serialized->get_string(DisplayName_type_id, {});
+		Minimums = serialized->get_string(Minimums_type_id, {});
+		Maximums = serialized->get_string(Maximums_type_id, {});
+		Values = serialized->get_string(Values_type_id, {});
+		Type = serialized->get_string(Type_type_id, "float4");
+		Description = serialized->get_string(Description_type_id, {});
+		Documentation = serialized->get_string(Documentation_type_id, {});
+		UIType = serialized->get_string(UIType_type_id, {});
+		Group = serialized->get_string(Group_type_id, {});
+		SortOrder = serialized->get_string(SortOrder_type_id, {});
+		Labels = serialized->get_string(Labels_type_id, {});
+		Global = serialized->get_bool(Global_type_id, false);
+		Visible = serialized->get_bool(Visible_type_id, true);
+		Exposed = serialized->get_bool(Exposed_type_id, false);
+		TestingOnly = serialized->get_bool(TestingOnly_type_id, false);
+		InheritName = serialized->get_bool(InheritName_type_id, false);
+		LinearFilter = serialized->get_bool(LinearFilter_type_id, false);
+		ShowPreview = serialized->get_bool(ShowPreview_type_id, true);
+		DeveloperMode = serialized->get_bool(DeveloperMode_type_id, false);
+		UserDefinedLabels = serialized->get_bool(UserDefinedLabels_type_id, false);
 		SelectItems = serialized->unwrap_into_many<rivet::ddl::generated::MaterialNodeInputSelectItem>(SelectItems_type_id);
 		VisibilityCondition = serialized->unwrap_into<rivet::ddl::generated::MaterialNodeInputVisibilityCondition>(VisibilityCondition_type_id); 
 	}

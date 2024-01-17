@@ -9,19 +9,19 @@
 
 namespace rivet::ddl::generated {
 	HeroMountData::HeroMountData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		CanRatchetMount = serialized->get_bool(CanRatchetMount_type_id);
-		CanRatchetteMount = serialized->get_bool(CanRatchetteMount_type_id);
-		DrawWhileMounted = serialized->get_bool(DrawWhileMounted_type_id);
-		AutoMountDist = serialized->get_float(AutoMountDist_type_id);
-		TimeToMountFromAir = serialized->get_float(TimeToMountFromAir_type_id);
-		FallAnimName = serialized->get_string(FallAnimName_type_id);
-		TimeToMountFromGround = serialized->get_float(TimeToMountFromGround_type_id);
-		LocatorAttachName = serialized->get_string(LocatorAttachName_type_id);
-		IntroStartAnimName = serialized->get_string(IntroStartAnimName_type_id);
-		MiddleStartAnimName = serialized->get_string(MiddleStartAnimName_type_id);
-		OutroStartAnimName = serialized->get_string(OutroStartAnimName_type_id);
-		AnimatedDismountAnim = serialized->get_string(AnimatedDismountAnim_type_id);
-		IdleAnimName = serialized->get_string(IdleAnimName_type_id);
+		CanRatchetMount = serialized->get_bool(CanRatchetMount_type_id, false);
+		CanRatchetteMount = serialized->get_bool(CanRatchetteMount_type_id, true);
+		DrawWhileMounted = serialized->get_bool(DrawWhileMounted_type_id, true);
+		AutoMountDist = serialized->get_float(AutoMountDist_type_id, 1.000000);
+		TimeToMountFromAir = serialized->get_float(TimeToMountFromAir_type_id, 0.450000);
+		FallAnimName = serialized->get_string(FallAnimName_type_id, {});
+		TimeToMountFromGround = serialized->get_float(TimeToMountFromGround_type_id, 0.800000);
+		LocatorAttachName = serialized->get_string(LocatorAttachName_type_id, {});
+		IntroStartAnimName = serialized->get_string(IntroStartAnimName_type_id, {});
+		MiddleStartAnimName = serialized->get_string(MiddleStartAnimName_type_id, {});
+		OutroStartAnimName = serialized->get_string(OutroStartAnimName_type_id, {});
+		AnimatedDismountAnim = serialized->get_string(AnimatedDismountAnim_type_id, {});
+		IdleAnimName = serialized->get_string(IdleAnimName_type_id, {});
 		HeroAnimMap = serialized->unwrap_into_many<rivet::ddl::generated::HeroAnimMapElement>(HeroAnimMap_type_id); 
 	}
 

@@ -9,21 +9,21 @@
 
 namespace rivet::ddl::generated {
 	ParticlesDef::ParticlesDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Enabled = serialized->get_bool(Enabled_type_id);
-		Texture = serialized->get_string(Texture_type_id);
-		NearFadeDistance = serialized->get_float(NearFadeDistance_type_id);
-		MaxDrawDistance = serialized->get_float(MaxDrawDistance_type_id);
-		WindInfluence = serialized->get_float(WindInfluence_type_id);
-		Turbulence = serialized->get_float(Turbulence_type_id);
-		Density = serialized->get_float(Density_type_id);
-		Speed = serialized->get_float(Speed_type_id);
-		Size = serialized->get_float(Size_type_id);
-		Alpha = serialized->get_float(Alpha_type_id);
+		Enabled = serialized->get_bool(Enabled_type_id, false);
+		Texture = serialized->get_string(Texture_type_id, {});
+		NearFadeDistance = serialized->get_float(NearFadeDistance_type_id, 1.000000);
+		MaxDrawDistance = serialized->get_float(MaxDrawDistance_type_id, 24.000000);
+		WindInfluence = serialized->get_float(WindInfluence_type_id, 1.500000);
+		Turbulence = serialized->get_float(Turbulence_type_id, 0.300000);
+		Density = serialized->get_float(Density_type_id, 0.700000);
+		Speed = serialized->get_float(Speed_type_id, -2.000000);
+		Size = serialized->get_float(Size_type_id, 0.010000);
+		Alpha = serialized->get_float(Alpha_type_id, 1.000000);
 		Color = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Color_type_id);
-		ExposureDuration = serialized->get_float(ExposureDuration_type_id);
-		MotionStretchMax = serialized->get_float(MotionStretchMax_type_id);
-		MotionStretchMaxFar = serialized->get_float(MotionStretchMaxFar_type_id);
-		RainBloomInfluence = serialized->get_float(RainBloomInfluence_type_id); 
+		ExposureDuration = serialized->get_float(ExposureDuration_type_id, 0.400000);
+		MotionStretchMax = serialized->get_float(MotionStretchMax_type_id, 25.000000);
+		MotionStretchMaxFar = serialized->get_float(MotionStretchMaxFar_type_id, 25.000000);
+		RainBloomInfluence = serialized->get_float(RainBloomInfluence_type_id, 4.000000); 
 	}
 
 	[[nodiscard]] auto

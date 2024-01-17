@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	OffsetReductionGain::OffsetReductionGain([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): OffsetReductionMode(serialized) {
-		Gain = serialized->get_float(Gain_type_id);
-		Damp = serialized->get_float(Damp_type_id);
-		Speed = serialized->get_float(Speed_type_id); 
+		Gain = serialized->get_float(Gain_type_id, -2.000000);
+		Damp = serialized->get_float(Damp_type_id, -40.000000);
+		Speed = serialized->get_float(Speed_type_id, 7.000000); 
 	}
 
 	[[nodiscard]] auto

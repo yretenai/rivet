@@ -10,10 +10,10 @@
 
 namespace rivet::ddl::generated {
 	GetActorsInVolumeScriptActionPrius::GetActorsInVolumeScriptActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Actor);
 		Shape = serialized->unwrap_into<rivet::ddl::generated::QueryVolumeShape>(Shape_type_id);
-		DebugDrawShape = serialized->get_bool(DebugDrawShape_type_id);
-		DebugShapeDuration = serialized->get_float(DebugShapeDuration_type_id);
+		DebugDrawShape = serialized->get_bool(DebugDrawShape_type_id, false);
+		DebugShapeDuration = serialized->get_float(DebugShapeDuration_type_id, 1.000000);
 		DebugShapeColor = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(DebugShapeColor_type_id); 
 	}
 

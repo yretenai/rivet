@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	CameraShakeListenerPrius::CameraShakeListenerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MagnitudeMultiplier = serialized->get_float(MagnitudeMultiplier_type_id);
-		RadiusMultiplier = serialized->get_float(RadiusMultiplier_type_id); 
+		MagnitudeMultiplier = serialized->get_float(MagnitudeMultiplier_type_id, 1.000000);
+		RadiusMultiplier = serialized->get_float(RadiusMultiplier_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

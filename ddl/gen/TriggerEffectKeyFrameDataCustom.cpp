@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	TriggerEffectKeyFrameDataCustom::TriggerEffectKeyFrameDataCustom([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): TriggerEffectKeyFrameDataBase(serialized) {
-		CustomValue = serialized->get_float(CustomValue_type_id); 
+		CustomValue = serialized->get_float(CustomValue_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

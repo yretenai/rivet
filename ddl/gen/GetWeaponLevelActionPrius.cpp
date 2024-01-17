@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	GetWeaponLevelActionPrius::GetWeaponLevelActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		WeaponConfig = serialized->get_string(WeaponConfig_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Weapon);
+		WeaponConfig = serialized->get_string(WeaponConfig_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

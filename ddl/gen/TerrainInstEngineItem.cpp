@@ -10,7 +10,7 @@
 
 namespace rivet::ddl::generated {
 	TerrainInstEngineItem::TerrainInstEngineItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AssetPath = serialized->get_string(AssetPath_type_id);
+		AssetPath = serialized->get_string(AssetPath_type_id, {});
 		SplatMaskMaterialDefs = serialized->unwrap_into_many<rivet::ddl::generated::MaterialDef>(SplatMaskMaterialDefs_type_id);
 		VistaMapMaterialDef = serialized->unwrap_into<rivet::ddl::generated::MaterialDef>(VistaMapMaterialDef_type_id);
 		TerrainDef = serialized->unwrap_into<rivet::ddl::generated::TerrainDef>(TerrainDef_type_id); 

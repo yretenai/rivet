@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	AlembicCineActor::AlembicCineActor([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		FilterNodeName = serialized->get_string(FilterNodeName_type_id);
+		FilterNodeName = serialized->get_string(FilterNodeName_type_id, {});
 		Clips = serialized->unwrap_into_many<rivet::ddl::generated::AlembicClip>(Clips_type_id); 
 	}
 

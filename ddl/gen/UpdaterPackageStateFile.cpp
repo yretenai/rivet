@@ -7,14 +7,14 @@
 
 namespace rivet::ddl::generated {
 	UpdaterPackageStateFile::UpdaterPackageStateFile([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		PackageRootDir = serialized->get_string(PackageRootDir_type_id);
-		PackageFolder = serialized->get_string(PackageFolder_type_id);
-		PackageConfigFile = serialized->get_string(PackageConfigFile_type_id);
-		MainPackageFile = serialized->get_string(MainPackageFile_type_id);
-		IsCodeFolder = serialized->get_bool(IsCodeFolder_type_id);
-		IsConfigDownloaded = serialized->get_bool(IsConfigDownloaded_type_id);
-		IsPackageDownloaded = serialized->get_bool(IsPackageDownloaded_type_id);
-		IsPackageUnpacked = serialized->get_bool(IsPackageUnpacked_type_id); 
+		PackageRootDir = serialized->get_string(PackageRootDir_type_id, "");
+		PackageFolder = serialized->get_string(PackageFolder_type_id, "");
+		PackageConfigFile = serialized->get_string(PackageConfigFile_type_id, "");
+		MainPackageFile = serialized->get_string(MainPackageFile_type_id, "");
+		IsCodeFolder = serialized->get_bool(IsCodeFolder_type_id, false);
+		IsConfigDownloaded = serialized->get_bool(IsConfigDownloaded_type_id, false);
+		IsPackageDownloaded = serialized->get_bool(IsPackageDownloaded_type_id, false);
+		IsPackageUnpacked = serialized->get_bool(IsPackageUnpacked_type_id, false); 
 	}
 
 	[[nodiscard]] auto

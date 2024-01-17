@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	TriggerSwitchRandomEnabledPrius::TriggerSwitchRandomEnabledPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): TriggerSwitchSimplePrius(serialized) {
-		ChanceToBeEnabled = serialized->get_float(ChanceToBeEnabled_type_id); 
+		ChanceToBeEnabled = serialized->get_float(ChanceToBeEnabled_type_id, 0.500000); 
 	}
 
 	[[nodiscard]] auto

@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	HeroPickupAnimOverrideData::HeroPickupAnimOverrideData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		HeroType = serialized->get_enum<rivet::ddl::generated::HeroTypes>(HeroType_type_id, rivet::ddl::generated::HeroTypes_values);
-		OverridePickupAnim = serialized->get_string(OverridePickupAnim_type_id); 
+		HeroType = serialized->get_enum<rivet::ddl::generated::HeroTypes>(HeroType_type_id, rivet::ddl::generated::HeroTypes_values, rivet::ddl::generated::HeroTypes::None);
+		OverridePickupAnim = serialized->get_string(OverridePickupAnim_type_id, ""); 
 	}
 
 	[[nodiscard]] auto

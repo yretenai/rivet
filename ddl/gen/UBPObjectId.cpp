@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	UBPObjectId::UBPObjectId([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		objectId = serialized->get_string(objectId_type_id); 
+		objectId = serialized->get_string(objectId_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

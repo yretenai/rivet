@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	RegionLoadedEvent::RegionLoadedEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		RegionIndex = serialized->get_int32(RegionIndex_type_id);
-		AlreadyLoaded = serialized->get_bool(AlreadyLoaded_type_id); 
+		RegionIndex = serialized->get_int32(RegionIndex_type_id, -1);
+		AlreadyLoaded = serialized->get_bool(AlreadyLoaded_type_id, false); 
 	}
 
 	[[nodiscard]] auto

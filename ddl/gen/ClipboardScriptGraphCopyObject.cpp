@@ -12,12 +12,12 @@
 
 namespace rivet::ddl::generated {
 	ClipboardScriptGraphCopyObject::ClipboardScriptGraphCopyObject([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AssetId = serialized->get_uint64(AssetId_type_id);
+		AssetId = serialized->get_uint64(AssetId_type_id, 0);
 		Center = serialized->unwrap_into<rivet::ddl::generated::ClipboardScriptGraphCenter>(Center_type_id);
-		ClipboardId = serialized->get_uint64(ClipboardId_type_id);
+		ClipboardId = serialized->get_uint64(ClipboardId_type_id, 0);
 		Connections = serialized->unwrap_into_many<rivet::ddl::generated::GraphConnection>(Connections_type_id);
 		EmbeddedSubGraphs = serialized->unwrap_into_many<rivet::ddl::generated::NodeGraphContents>(EmbeddedSubGraphs_type_id);
-		GraphId = serialized->get_uint64(GraphId_type_id);
+		GraphId = serialized->get_uint64(GraphId_type_id, 0);
 		Nodes = serialized->unwrap_into_many<rivet::ddl::generated::GraphNode>(Nodes_type_id); 
 	}
 

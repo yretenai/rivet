@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	StringPlug::StringPlug([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Text = serialized->get_string(Text_type_id); 
+		Text = serialized->get_string(Text_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

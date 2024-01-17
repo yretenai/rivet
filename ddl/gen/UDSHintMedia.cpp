@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	UDSHintMedia::UDSHintMedia([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		fileName = serialized->get_string(fileName_type_id);
-		type = serialized->get_enum<rivet::ddl::generated::xf23aa75c>(type_type_id, rivet::ddl::generated::xf23aa75c_values); 
+		fileName = serialized->get_string(fileName_type_id, {});
+		type = serialized->get_enum<rivet::ddl::generated::xf23aa75c>(type_type_id, rivet::ddl::generated::xf23aa75c_values, rivet::ddl::generated::xf23aa75c::image); 
 	}
 
 	[[nodiscard]] auto

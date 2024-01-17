@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	AimModLockWhenTargetDodgePrius::AimModLockWhenTargetDodgePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): AimModifierPrius(serialized) {
-		AllowLockDelay = serialized->get_float(AllowLockDelay_type_id);
-		PostDodgeTimeToLock = serialized->get_float(PostDodgeTimeToLock_type_id); 
+		AllowLockDelay = serialized->get_float(AllowLockDelay_type_id, 0.000000);
+		PostDodgeTimeToLock = serialized->get_float(PostDodgeTimeToLock_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

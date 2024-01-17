@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	AimModGimpLagPrius::AimModGimpLagPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): AimModGimpPrius(serialized) {
-		AimSpeed = serialized->get_float(AimSpeed_type_id); 
+		AimSpeed = serialized->get_float(AimSpeed_type_id, 0.500000); 
 	}
 
 	[[nodiscard]] auto

@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	SyncedAnimOrientationHintEvent::SyncedAnimOrientationHintEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		OrientTargetsInFront = serialized->get_bool(OrientTargetsInFront_type_id); 
+		OrientTargetsInFront = serialized->get_bool(OrientTargetsInFront_type_id, false); 
 	}
 
 	[[nodiscard]] auto

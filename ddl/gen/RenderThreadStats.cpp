@@ -9,12 +9,12 @@
 
 namespace rivet::ddl::generated {
 	RenderThreadStats::RenderThreadStats([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		FrameIndex = serialized->get_uint32(FrameIndex_type_id);
-		IsDebugMode = serialized->get_uint32(IsDebugMode_type_id);
-		CpuFrameMicros = serialized->get_uint32(CpuFrameMicros_type_id);
-		CpuPresentMicros = serialized->get_uint32(CpuPresentMicros_type_id);
-		GpuFrameMicros = serialized->get_uint32(GpuFrameMicros_type_id);
-		GpuBusyMicros = serialized->get_uint32(GpuBusyMicros_type_id);
+		FrameIndex = serialized->get_uint32(FrameIndex_type_id, 0);
+		IsDebugMode = serialized->get_uint32(IsDebugMode_type_id, 0);
+		CpuFrameMicros = serialized->get_uint32(CpuFrameMicros_type_id, 0);
+		CpuPresentMicros = serialized->get_uint32(CpuPresentMicros_type_id, 0);
+		GpuFrameMicros = serialized->get_uint32(GpuFrameMicros_type_id, 0);
+		GpuBusyMicros = serialized->get_uint32(GpuBusyMicros_type_id, 0);
 		CpuLayerMicros = serialized->get_uint32s(CpuLayerMicros_type_id);
 		GpuLayerMicros = serialized->get_uint32s(GpuLayerMicros_type_id);
 		ModelGBuffer = serialized->unwrap_into<rivet::ddl::generated::DrawStats>(ModelGBuffer_type_id);
@@ -24,23 +24,23 @@ namespace rivet::ddl::generated {
 		ModelVelocityDepth = serialized->unwrap_into<rivet::ddl::generated::DrawStats>(ModelVelocityDepth_type_id);
 		ModelDebug = serialized->unwrap_into<rivet::ddl::generated::DrawStats>(ModelDebug_type_id);
 		Decals = serialized->unwrap_into<rivet::ddl::generated::DrawStats>(Decals_type_id);
-		ModelTessMaterialCount = serialized->get_uint32(ModelTessMaterialCount_type_id);
-		ModelSortedTriangleCount = serialized->get_uint32(ModelSortedTriangleCount_type_id);
-		ModelSkinnedVertexCount = serialized->get_uint32(ModelSkinnedVertexCount_type_id);
-		ModelSkinnedEntryCount = serialized->get_uint32(ModelSkinnedEntryCount_type_id);
-		DecalSkinnedVertexCount = serialized->get_uint32(DecalSkinnedVertexCount_type_id);
-		DecalSkinnedEntryCount = serialized->get_uint32(DecalSkinnedEntryCount_type_id);
+		ModelTessMaterialCount = serialized->get_uint32(ModelTessMaterialCount_type_id, 0);
+		ModelSortedTriangleCount = serialized->get_uint32(ModelSortedTriangleCount_type_id, 0);
+		ModelSkinnedVertexCount = serialized->get_uint32(ModelSkinnedVertexCount_type_id, 0);
+		ModelSkinnedEntryCount = serialized->get_uint32(ModelSkinnedEntryCount_type_id, 0);
+		DecalSkinnedVertexCount = serialized->get_uint32(DecalSkinnedVertexCount_type_id, 0);
+		DecalSkinnedEntryCount = serialized->get_uint32(DecalSkinnedEntryCount_type_id, 0);
 		VfxModels = serialized->unwrap_into<rivet::ddl::generated::DrawStats>(VfxModels_type_id);
 		VfxQuads = serialized->unwrap_into<rivet::ddl::generated::DrawStats>(VfxQuads_type_id);
 		VfxTrails = serialized->unwrap_into<rivet::ddl::generated::DrawStats>(VfxTrails_type_id);
 		VfxSwipes = serialized->unwrap_into<rivet::ddl::generated::DrawStats>(VfxSwipes_type_id);
 		VfxSplines = serialized->unwrap_into<rivet::ddl::generated::DrawStats>(VfxSplines_type_id);
-		VfxFrameGrabCount = serialized->get_uint32(VfxFrameGrabCount_type_id);
-		VfxStartCompositeCount = serialized->get_uint32(VfxStartCompositeCount_type_id);
-		UIHandlerMicros = serialized->get_uint32(UIHandlerMicros_type_id);
-		UIRenderUpdateMicros = serialized->get_uint32(UIRenderUpdateMicros_type_id);
+		VfxFrameGrabCount = serialized->get_uint32(VfxFrameGrabCount_type_id, 0);
+		VfxStartCompositeCount = serialized->get_uint32(VfxStartCompositeCount_type_id, 0);
+		UIHandlerMicros = serialized->get_uint32(UIHandlerMicros_type_id, 0);
+		UIRenderUpdateMicros = serialized->get_uint32(UIRenderUpdateMicros_type_id, 0);
 		GpuDeptMicros = serialized->get_uint32s(GpuDeptMicros_type_id);
-		GpuStarvationMicros = serialized->get_uint32(GpuStarvationMicros_type_id); 
+		GpuStarvationMicros = serialized->get_uint32(GpuStarvationMicros_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

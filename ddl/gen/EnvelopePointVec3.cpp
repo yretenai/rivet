@@ -9,10 +9,10 @@
 
 namespace rivet::ddl::generated {
 	EnvelopePointVec3::EnvelopePointVec3([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		CanModifyX = serialized->get_bool(CanModifyX_type_id);
-		CanModifyY = serialized->get_bool(CanModifyY_type_id);
-		HoudiniInterpolationType = serialized->get_int32(HoudiniInterpolationType_type_id);
-		X = serialized->get_float(X_type_id);
+		CanModifyX = serialized->get_bool(CanModifyX_type_id, true);
+		CanModifyY = serialized->get_bool(CanModifyY_type_id, true);
+		HoudiniInterpolationType = serialized->get_int32(HoudiniInterpolationType_type_id, 0);
+		X = serialized->get_float(X_type_id, 0.000000);
 		Y = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Y_type_id); 
 	}
 

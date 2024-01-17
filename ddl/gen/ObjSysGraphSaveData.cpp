@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	ObjSysGraphSaveData::ObjSysGraphSaveData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		GraphAsset = serialized->get_uint64(GraphAsset_type_id);
+		GraphAsset = serialized->get_uint64(GraphAsset_type_id, 0);
 		NodeDataTable = serialized->unwrap_into_many<rivet::ddl::generated::ObjSysNodeSaveDataTableEntry>(NodeDataTable_type_id); 
 	}
 

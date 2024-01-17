@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	ManagedPrefabActorSettings::ManagedPrefabActorSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AllSystemsEnabled = serialized->get_bool(AllSystemsEnabled_type_id);
-		MaxSpawnedAllSystemsTotal = serialized->get_int32(MaxSpawnedAllSystemsTotal_type_id); 
+		AllSystemsEnabled = serialized->get_bool(AllSystemsEnabled_type_id, true);
+		MaxSpawnedAllSystemsTotal = serialized->get_int32(MaxSpawnedAllSystemsTotal_type_id, -1); 
 	}
 
 	[[nodiscard]] auto

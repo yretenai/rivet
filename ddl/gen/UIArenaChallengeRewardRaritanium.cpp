@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	UIArenaChallengeRewardRaritanium::UIArenaChallengeRewardRaritanium([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): UIArenaChallengeReward(serialized) {
-		Amount = serialized->get_uint32(Amount_type_id); 
+		Amount = serialized->get_uint32(Amount_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

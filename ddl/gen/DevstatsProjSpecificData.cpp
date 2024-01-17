@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	DevstatsProjSpecificData::DevstatsProjSpecificData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): DevstatsProjSpecificBase(serialized) {
-		Difficulty = serialized->get_string(Difficulty_type_id); 
+		Difficulty = serialized->get_string(Difficulty_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

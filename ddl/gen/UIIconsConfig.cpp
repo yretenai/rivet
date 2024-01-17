@@ -23,7 +23,7 @@ namespace rivet::ddl::generated {
 		VanityIcons = serialized->unwrap_into_many<rivet::ddl::generated::VanityIconData>(VanityIcons_type_id);
 		WeaponImages = serialized->unwrap_into_many<rivet::ddl::generated::WeaponImageData>(WeaponImages_type_id);
 		CollectibleImages = serialized->unwrap_into_many<rivet::ddl::generated::CollectibleImageData>(CollectibleImages_type_id);
-		LogoImage = serialized->get_string(LogoImage_type_id);
+		LogoImage = serialized->get_string(LogoImage_type_id, "");
 		CustomLogos = serialized->unwrap_into_many<rivet::ddl::generated::LogoCustomData>(CustomLogos_type_id); 
 	}
 

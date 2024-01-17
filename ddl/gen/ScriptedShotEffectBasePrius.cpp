@@ -31,7 +31,7 @@
 
 namespace rivet::ddl::generated {
 	ScriptedShotEffectBasePrius::ScriptedShotEffectBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		EffectName = serialized->get_string(EffectName_type_id);
+		EffectName = serialized->get_string(EffectName_type_id, {});
 		Condition = serialized->unwrap_into<rivet::ddl::generated::ScriptedShotConditionalBasePrius>(Condition_type_id); 
 	}
 

@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	BodypartToFilterConfig::BodypartToFilterConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		DefaultBodyPartFilter = serialized->get_enum<rivet::ddl::generated::xfdd79442>(DefaultBodyPartFilter_type_id, rivet::ddl::generated::xfdd79442_values);
+		DefaultBodyPartFilter = serialized->get_enum<rivet::ddl::generated::xfdd79442>(DefaultBodyPartFilter_type_id, rivet::ddl::generated::xfdd79442_values, rivet::ddl::generated::xfdd79442::Any);
 		JointMap = serialized->unwrap_into_many<rivet::ddl::generated::JointToBodyFilter>(JointMap_type_id); 
 	}
 

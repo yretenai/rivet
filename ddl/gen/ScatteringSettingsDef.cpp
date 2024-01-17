@@ -9,9 +9,9 @@
 
 namespace rivet::ddl::generated {
 	ScatteringSettingsDef::ScatteringSettingsDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Enabled = serialized->get_bool(Enabled_type_id);
-		RayleighDensity = serialized->get_float(RayleighDensity_type_id);
-		MieDensity = serialized->get_float(MieDensity_type_id);
+		Enabled = serialized->get_bool(Enabled_type_id, false);
+		RayleighDensity = serialized->get_float(RayleighDensity_type_id, 1.000000);
+		MieDensity = serialized->get_float(MieDensity_type_id, 1.000000);
 		MieAlbedo = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(MieAlbedo_type_id); 
 	}
 

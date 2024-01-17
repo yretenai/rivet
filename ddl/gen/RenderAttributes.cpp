@@ -7,36 +7,36 @@
 
 namespace rivet::ddl::generated {
 	RenderAttributes::RenderAttributes([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActivationChance = serialized->get_float(ActivationChance_type_id);
-		PhotoModeStatus = serialized->get_enum<rivet::ddl::generated::PhotoModeStatus>(PhotoModeStatus_type_id, rivet::ddl::generated::PhotoModeStatus_values);
-		Roundness = serialized->get_uint32(Roundness_type_id);
-		RandomizeInstance = serialized->get_bool(RandomizeInstance_type_id);
-		RandomizeSubsets = serialized->get_bool(RandomizeSubsets_type_id);
-		OrientOverride = serialized->get_bool(OrientOverride_type_id);
-		TrackParticle = serialized->get_bool(TrackParticle_type_id);
-		SunDistance2D = serialized->get_float(SunDistance2D_type_id);
-		TemporalAAStyle = serialized->get_enum<rivet::ddl::generated::TemporalAAStyle>(TemporalAAStyle_type_id, rivet::ddl::generated::TemporalAAStyle_values);
-		FrameGrabStyle = serialized->get_enum<rivet::ddl::generated::FrameGrabStyle>(FrameGrabStyle_type_id, rivet::ddl::generated::FrameGrabStyle_values);
-		CompositeStyle = serialized->get_enum<rivet::ddl::generated::CompositeStyle>(CompositeStyle_type_id, rivet::ddl::generated::CompositeStyle_values);
-		BlendStyle = serialized->get_enum<rivet::ddl::generated::BlendStyle>(BlendStyle_type_id, rivet::ddl::generated::BlendStyle_values);
-		QuadStyle = serialized->get_enum<rivet::ddl::generated::QuadStyle>(QuadStyle_type_id, rivet::ddl::generated::QuadStyle_values);
-		SortStyle = serialized->get_enum<rivet::ddl::generated::SortStyle>(SortStyle_type_id, rivet::ddl::generated::SortStyle_values);
-		FFOrientStyle = serialized->get_enum<rivet::ddl::generated::FFOrientStyle>(FFOrientStyle_type_id, rivet::ddl::generated::FFOrientStyle_values);
-		OrientStyle = serialized->get_enum<rivet::ddl::generated::OrientStyle>(OrientStyle_type_id, rivet::ddl::generated::OrientStyle_values);
-		OffsetStyle = serialized->get_enum<rivet::ddl::generated::xfe5100b1>(OffsetStyle_type_id, rivet::ddl::generated::xfe5100b1_values);
-		ShadowCastingDistance = serialized->get_float(ShadowCastingDistance_type_id);
-		SunLensFlareOccluder = serialized->get_bool(SunLensFlareOccluder_type_id);
-		DimensionsAsRatios = serialized->get_bool(DimensionsAsRatios_type_id);
-		AttachBeamEnds = serialized->get_bool(AttachBeamEnds_type_id);
-		DynamicScaling = serialized->get_bool(DynamicScaling_type_id);
-		IgnoreHighContrast = serialized->get_bool(IgnoreHighContrast_type_id);
-		IgnorePost = serialized->get_bool(IgnorePost_type_id);
-		WaterFoam = serialized->get_bool(WaterFoam_type_id);
-		ApplyAlpha = serialized->get_bool(ApplyAlpha_type_id);
-		ApplyTint = serialized->get_bool(ApplyTint_type_id);
-		Lit = serialized->get_bool(Lit_type_id);
-		BaseScale = serialized->get_float(BaseScale_type_id);
-		AssetName = serialized->get_string(AssetName_type_id); 
+		ActivationChance = serialized->get_float(ActivationChance_type_id, 1.000000);
+		PhotoModeStatus = serialized->get_enum<rivet::ddl::generated::PhotoModeStatus>(PhotoModeStatus_type_id, rivet::ddl::generated::PhotoModeStatus_values, rivet::ddl::generated::PhotoModeStatus::Enabled);
+		Roundness = serialized->get_uint32(Roundness_type_id, 8);
+		RandomizeInstance = serialized->get_bool(RandomizeInstance_type_id, true);
+		RandomizeSubsets = serialized->get_bool(RandomizeSubsets_type_id, false);
+		OrientOverride = serialized->get_bool(OrientOverride_type_id, false);
+		TrackParticle = serialized->get_bool(TrackParticle_type_id, true);
+		SunDistance2D = serialized->get_float(SunDistance2D_type_id, 0.000000);
+		TemporalAAStyle = serialized->get_enum<rivet::ddl::generated::TemporalAAStyle>(TemporalAAStyle_type_id, rivet::ddl::generated::TemporalAAStyle_values, rivet::ddl::generated::TemporalAAStyle::Inherit_Material);
+		FrameGrabStyle = serialized->get_enum<rivet::ddl::generated::FrameGrabStyle>(FrameGrabStyle_type_id, rivet::ddl::generated::FrameGrabStyle_values, rivet::ddl::generated::FrameGrabStyle::Standard);
+		CompositeStyle = serialized->get_enum<rivet::ddl::generated::CompositeStyle>(CompositeStyle_type_id, rivet::ddl::generated::CompositeStyle_values, rivet::ddl::generated::CompositeStyle::Full_Resolution);
+		BlendStyle = serialized->get_enum<rivet::ddl::generated::BlendStyle>(BlendStyle_type_id, rivet::ddl::generated::BlendStyle_values, rivet::ddl::generated::BlendStyle::Alpha);
+		QuadStyle = serialized->get_enum<rivet::ddl::generated::QuadStyle>(QuadStyle_type_id, rivet::ddl::generated::QuadStyle_values, rivet::ddl::generated::QuadStyle::Quad);
+		SortStyle = serialized->get_enum<rivet::ddl::generated::SortStyle>(SortStyle_type_id, rivet::ddl::generated::SortStyle_values, rivet::ddl::generated::SortStyle::Newest_Draws_Last);
+		FFOrientStyle = serialized->get_enum<rivet::ddl::generated::FFOrientStyle>(FFOrientStyle_type_id, rivet::ddl::generated::FFOrientStyle_values, rivet::ddl::generated::FFOrientStyle::Local);
+		OrientStyle = serialized->get_enum<rivet::ddl::generated::OrientStyle>(OrientStyle_type_id, rivet::ddl::generated::OrientStyle_values, rivet::ddl::generated::OrientStyle::Camera);
+		OffsetStyle = serialized->get_enum<rivet::ddl::generated::xfe5100b1>(OffsetStyle_type_id, rivet::ddl::generated::xfe5100b1_values, rivet::ddl::generated::xfe5100b1::World);
+		ShadowCastingDistance = serialized->get_float(ShadowCastingDistance_type_id, 0.000000);
+		SunLensFlareOccluder = serialized->get_bool(SunLensFlareOccluder_type_id, false);
+		DimensionsAsRatios = serialized->get_bool(DimensionsAsRatios_type_id, false);
+		AttachBeamEnds = serialized->get_bool(AttachBeamEnds_type_id, false);
+		DynamicScaling = serialized->get_bool(DynamicScaling_type_id, false);
+		IgnoreHighContrast = serialized->get_bool(IgnoreHighContrast_type_id, false);
+		IgnorePost = serialized->get_bool(IgnorePost_type_id, false);
+		WaterFoam = serialized->get_bool(WaterFoam_type_id, false);
+		ApplyAlpha = serialized->get_bool(ApplyAlpha_type_id, true);
+		ApplyTint = serialized->get_bool(ApplyTint_type_id, true);
+		Lit = serialized->get_bool(Lit_type_id, false);
+		BaseScale = serialized->get_float(BaseScale_type_id, 1.000000);
+		AssetName = serialized->get_string(AssetName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

@@ -10,11 +10,11 @@
 namespace rivet::ddl::generated {
 	DamageModifierPirateShieldPrius::DamageModifierPirateShieldPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		ShieldSection = serialized->unwrap_into_many<rivet::ddl::generated::ShieldSectionData>(ShieldSection_type_id);
-		FrameLook = serialized->get_string(FrameLook_type_id);
-		ShieldSectionHealth = serialized->get_float(ShieldSectionHealth_type_id);
-		ShieldedAnimset = serialized->get_string(ShieldedAnimset_type_id);
+		FrameLook = serialized->get_string(FrameLook_type_id, {});
+		ShieldSectionHealth = serialized->get_float(ShieldSectionHealth_type_id, 1.000000);
+		ShieldedAnimset = serialized->get_string(ShieldedAnimset_type_id, {});
 		ShieldChunkLooks = serialized->get_strings(ShieldChunkLooks_type_id);
-		StartEnabled = serialized->get_bool(StartEnabled_type_id); 
+		StartEnabled = serialized->get_bool(StartEnabled_type_id, true); 
 	}
 
 	[[nodiscard]] auto

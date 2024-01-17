@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	SetTweakValueRequest::SetTweakValueRequest([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Session = serialized->get_string(Session_type_id);
-		Type = serialized->get_string(Type_type_id);
-		Addr = serialized->get_string(Addr_type_id);
+		Session = serialized->get_string(Session_type_id, {});
+		Type = serialized->get_string(Type_type_id, {});
+		Addr = serialized->get_string(Addr_type_id, {});
 		Value = serialized->get_field(Value_type_id); 
 	}
 

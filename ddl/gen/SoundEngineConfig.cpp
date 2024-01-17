@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	SoundEngineConfig::SoundEngineConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		InitBank = serialized->get_string(InitBank_type_id);
-		ExternalSourceBank = serialized->get_string(ExternalSourceBank_type_id);
+		InitBank = serialized->get_string(InitBank_type_id, {});
+		ExternalSourceBank = serialized->get_string(ExternalSourceBank_type_id, {});
 		VolumeOffsets71 = serialized->unwrap_into<rivet::ddl::generated::SoundVolumeOffsets71>(VolumeOffsets71_type_id); 
 	}
 

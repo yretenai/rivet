@@ -9,10 +9,10 @@
 
 namespace rivet::ddl::generated {
 	NefariousFinaleMechHeartPrius::NefariousFinaleMechHeartPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): DamageModifierIncomingPrius(serialized) {
-		HeartBaseHealth = serialized->get_float(HeartBaseHealth_type_id);
-		HeartLaserPhaseHealth = serialized->get_float(HeartLaserPhaseHealth_type_id);
-		HitShader = serialized->get_string(HitShader_type_id);
-		HitShaderDuration = serialized->get_float(HitShaderDuration_type_id);
+		HeartBaseHealth = serialized->get_float(HeartBaseHealth_type_id, 100.000000);
+		HeartLaserPhaseHealth = serialized->get_float(HeartLaserPhaseHealth_type_id, 100.000000);
+		HitShader = serialized->get_string(HitShader_type_id, {});
+		HitShaderDuration = serialized->get_float(HitShaderDuration_type_id, 0.250000);
 		Chamber1_NodeA_Data = serialized->unwrap_into<rivet::ddl::generated::NefariousFinaleMechHeartWeakspotData>(Chamber1_NodeA_Data_type_id);
 		Chamber1_NodeB_Data = serialized->unwrap_into<rivet::ddl::generated::NefariousFinaleMechHeartWeakspotData>(Chamber1_NodeB_Data_type_id);
 		Chamber2_NodeA_Data = serialized->unwrap_into<rivet::ddl::generated::NefariousFinaleMechHeartWeakspotData>(Chamber2_NodeA_Data_type_id);
@@ -20,7 +20,7 @@ namespace rivet::ddl::generated {
 		Chamber3_NodeA_Data = serialized->unwrap_into<rivet::ddl::generated::NefariousFinaleMechHeartWeakspotData>(Chamber3_NodeA_Data_type_id);
 		Chamber3_NodeB_Data = serialized->unwrap_into<rivet::ddl::generated::NefariousFinaleMechHeartWeakspotData>(Chamber3_NodeB_Data_type_id);
 		HeartCore_Data = serialized->unwrap_into<rivet::ddl::generated::NefariousFinaleMechHeartWeakspotData>(HeartCore_Data_type_id);
-		WeakSpotDummyActor = serialized->get_string(WeakSpotDummyActor_type_id); 
+		WeakSpotDummyActor = serialized->get_string(WeakSpotDummyActor_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

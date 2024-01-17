@@ -9,9 +9,9 @@
 
 namespace rivet::ddl::generated {
 	BotConfigFiring::BotConfigFiring([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		WeaponItem = serialized->get_string(WeaponItem_type_id);
+		WeaponItem = serialized->get_string(WeaponItem_type_id, "");
 		Firing = serialized->unwrap_into<rivet::ddl::generated::FiringPrius>(Firing_type_id);
-		CanAggressorRush = serialized->get_bool(CanAggressorRush_type_id); 
+		CanAggressorRush = serialized->get_bool(CanAggressorRush_type_id, false); 
 	}
 
 	[[nodiscard]] auto

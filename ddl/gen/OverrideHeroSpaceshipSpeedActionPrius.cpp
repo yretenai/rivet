@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	OverrideHeroSpaceshipSpeedActionPrius::OverrideHeroSpaceshipSpeedActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		NonFireSpeed = serialized->get_float(NonFireSpeed_type_id);
-		FireSpeed = serialized->get_float(FireSpeed_type_id);
-		ThrustSpeed = serialized->get_float(ThrustSpeed_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Hero);
+		NonFireSpeed = serialized->get_float(NonFireSpeed_type_id, 28.000000);
+		FireSpeed = serialized->get_float(FireSpeed_type_id, -1.000000);
+		ThrustSpeed = serialized->get_float(ThrustSpeed_type_id, 40.000000); 
 	}
 
 	[[nodiscard]] auto

@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	MusicCueListenerActionPrius::MusicCueListenerActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		CueString = serialized->get_string(CueString_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Sound);
+		CueString = serialized->get_string(CueString_type_id, "end_of_song"); 
 	}
 
 	[[nodiscard]] auto

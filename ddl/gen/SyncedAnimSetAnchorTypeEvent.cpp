@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	SyncedAnimSetAnchorTypeEvent::SyncedAnimSetAnchorTypeEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		AnchorPosType = serialized->get_enum<rivet::ddl::generated::x91b33164>(AnchorPosType_type_id, rivet::ddl::generated::x91b33164_values);
-		AnchorRotType = serialized->get_enum<rivet::ddl::generated::xb40cfc5d>(AnchorRotType_type_id, rivet::ddl::generated::xb40cfc5d_values);
-		GuestAnchor = serialized->get_enum<rivet::ddl::generated::x19aa8603>(GuestAnchor_type_id, rivet::ddl::generated::x19aa8603_values);
-		ForcePosBlendTime = serialized->get_float(ForcePosBlendTime_type_id);
-		ForceRotBlendTime = serialized->get_float(ForceRotBlendTime_type_id); 
+		AnchorPosType = serialized->get_enum<rivet::ddl::generated::x91b33164>(AnchorPosType_type_id, rivet::ddl::generated::x91b33164_values, rivet::ddl::generated::x91b33164::Guest);
+		AnchorRotType = serialized->get_enum<rivet::ddl::generated::xb40cfc5d>(AnchorRotType_type_id, rivet::ddl::generated::xb40cfc5d_values, rivet::ddl::generated::xb40cfc5d::HostToGuest2D);
+		GuestAnchor = serialized->get_enum<rivet::ddl::generated::x19aa8603>(GuestAnchor_type_id, rivet::ddl::generated::x19aa8603_values, rivet::ddl::generated::x19aa8603::Guest1);
+		ForcePosBlendTime = serialized->get_float(ForcePosBlendTime_type_id, -1.000000);
+		ForceRotBlendTime = serialized->get_float(ForceRotBlendTime_type_id, -1.000000); 
 	}
 
 	[[nodiscard]] auto

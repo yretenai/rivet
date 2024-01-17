@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	TerrainSystem03EditingTerrain0415::TerrainSystem03EditingTerrain0415([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		line00 = serialized->get_string(line00_type_id);
-		line01 = serialized->get_string(line01_type_id);
-		line02 = serialized->get_string(line02_type_id);
-		line03 = serialized->get_string(line03_type_id);
-		line04 = serialized->get_string(line04_type_id);
-		line05 = serialized->get_string(line05_type_id); 
+		line00 = serialized->get_string(line00_type_id, {});
+		line01 = serialized->get_string(line01_type_id, {});
+		line02 = serialized->get_string(line02_type_id, {});
+		line03 = serialized->get_string(line03_type_id, {});
+		line04 = serialized->get_string(line04_type_id, {});
+		line05 = serialized->get_string(line05_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

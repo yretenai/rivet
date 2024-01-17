@@ -19,11 +19,11 @@
 
 namespace rivet::ddl::generated {
 	WeaponTriggeredEvent::WeaponTriggeredEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		ZoomLevel = serialized->get_int8(ZoomLevel_type_id);
-		SoundRange = serialized->get_float(SoundRange_type_id);
-		FiredFromMovingSurface = serialized->get_bool(FiredFromMovingSurface_type_id);
-		OwnerIsHero = serialized->get_bool(OwnerIsHero_type_id);
-		OwnerIsLocal = serialized->get_bool(OwnerIsLocal_type_id); 
+		ZoomLevel = serialized->get_int8(ZoomLevel_type_id, 0);
+		SoundRange = serialized->get_float(SoundRange_type_id, 0.000000);
+		FiredFromMovingSurface = serialized->get_bool(FiredFromMovingSurface_type_id, false);
+		OwnerIsHero = serialized->get_bool(OwnerIsHero_type_id, false);
+		OwnerIsLocal = serialized->get_bool(OwnerIsLocal_type_id, false); 
 	}
 
 	[[nodiscard]] auto

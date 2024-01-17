@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	RequiredChestKey::RequiredChestKey([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ItemConfig = serialized->get_string(ItemConfig_type_id);
-		RemoveWhenUnlocked = serialized->get_bool(RemoveWhenUnlocked_type_id);
-		NumRequired = serialized->get_uint16(NumRequired_type_id); 
+		ItemConfig = serialized->get_string(ItemConfig_type_id, {});
+		RemoveWhenUnlocked = serialized->get_bool(RemoveWhenUnlocked_type_id, true);
+		NumRequired = serialized->get_uint16(NumRequired_type_id, 1); 
 	}
 
 	[[nodiscard]] auto

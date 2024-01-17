@@ -9,11 +9,11 @@
 
 namespace rivet::ddl::generated {
 	AnimDriverMirrorNodeDef::AnimDriverMirrorNodeDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Name = serialized->get_string(Name_type_id);
-		DisplayName = serialized->get_string(DisplayName_type_id);
-		x = serialized->get_float(x_type_id);
-		y = serialized->get_float(y_type_id);
-		Axis = serialized->get_enum<rivet::ddl::generated::xf92271f3>(Axis_type_id, rivet::ddl::generated::xf92271f3_values);
+		Name = serialized->get_string(Name_type_id, {});
+		DisplayName = serialized->get_string(DisplayName_type_id, "");
+		x = serialized->get_float(x_type_id, 0.000000);
+		y = serialized->get_float(y_type_id, 0.000000);
+		Axis = serialized->get_enum<rivet::ddl::generated::xf92271f3>(Axis_type_id, rivet::ddl::generated::xf92271f3_values, rivet::ddl::generated::xf92271f3::MirrorNodeAxisYZ);
 		Connection = serialized->unwrap_into<rivet::ddl::generated::AnimDriverConnectionDef>(Connection_type_id); 
 	}
 

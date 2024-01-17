@@ -9,10 +9,10 @@
 
 namespace rivet::ddl::generated {
 	SkinItemModelVariantOverrideListElement::SkinItemModelVariantOverrideListElement([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DebugName = serialized->get_string(DebugName_type_id);
-		NameLocTag = serialized->get_string(NameLocTag_type_id);
-		Available = serialized->get_enum<rivet::ddl::generated::x7ecfc969>(Available_type_id, rivet::ddl::generated::x7ecfc969_values);
-		BodyType = serialized->get_enum<rivet::ddl::generated::x5d60d87e>(BodyType_type_id, rivet::ddl::generated::x5d60d87e_values);
+		DebugName = serialized->get_string(DebugName_type_id, {});
+		NameLocTag = serialized->get_string(NameLocTag_type_id, {});
+		Available = serialized->get_enum<rivet::ddl::generated::x7ecfc969>(Available_type_id, rivet::ddl::generated::x7ecfc969_values, rivet::ddl::generated::x7ecfc969::Always);
+		BodyType = serialized->get_enum<rivet::ddl::generated::x5d60d87e>(BodyType_type_id, rivet::ddl::generated::x5d60d87e_values, rivet::ddl::generated::x5d60d87e::All);
 		ModelVariantOverride = serialized->unwrap_into<rivet::ddl::generated::SkinItemModelVariantOverride>(ModelVariantOverride_type_id); 
 	}
 

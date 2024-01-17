@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	AnimFacialPoseDef::AnimFacialPoseDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Id = serialized->get_uint64(Id_type_id);
-		PoseFrame = serialized->get_int32(PoseFrame_type_id);
-		PoseName = serialized->get_string(PoseName_type_id); 
+		Id = serialized->get_uint64(Id_type_id, 0);
+		PoseFrame = serialized->get_int32(PoseFrame_type_id, 0);
+		PoseName = serialized->get_string(PoseName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

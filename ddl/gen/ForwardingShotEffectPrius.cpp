@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ForwardingShotEffectPrius::ForwardingShotEffectPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ScriptedShotEffectBasePrius(serialized) {
-		ForwardingIndex = serialized->get_int32(ForwardingIndex_type_id); 
+		ForwardingIndex = serialized->get_int32(ForwardingIndex_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

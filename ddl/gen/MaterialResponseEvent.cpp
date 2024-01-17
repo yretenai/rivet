@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	MaterialResponseEvent::MaterialResponseEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ResponseEvent(serialized) {
-		MaterialMappingName = serialized->get_string(MaterialMappingName_type_id);
-		Material = serialized->get_string(Material_type_id);
-		Reset = serialized->get_bool(Reset_type_id); 
+		MaterialMappingName = serialized->get_string(MaterialMappingName_type_id, {});
+		Material = serialized->get_string(Material_type_id, {});
+		Reset = serialized->get_bool(Reset_type_id, false); 
 	}
 
 	[[nodiscard]] auto

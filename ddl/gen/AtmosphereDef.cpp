@@ -33,11 +33,11 @@
 namespace rivet::ddl::generated {
 	AtmosphereDef::AtmosphereDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		VaultMetaData = serialized->unwrap_into<rivet::ddl::generated::VaultMetaData>(VaultMetaData_type_id);
-		IconPath = serialized->get_string(IconPath_type_id);
-		PreviewModel = serialized->get_string(PreviewModel_type_id);
-		LightGridAtmosphere = serialized->get_string(LightGridAtmosphere_type_id);
-		LightGridSharedDir = serialized->get_string(LightGridSharedDir_type_id);
-		LightGridSharedFilter = serialized->get_string(LightGridSharedFilter_type_id);
+		IconPath = serialized->get_string(IconPath_type_id, "");
+		PreviewModel = serialized->get_string(PreviewModel_type_id, {});
+		LightGridAtmosphere = serialized->get_string(LightGridAtmosphere_type_id, {});
+		LightGridSharedDir = serialized->get_string(LightGridSharedDir_type_id, {});
+		LightGridSharedFilter = serialized->get_string(LightGridSharedFilter_type_id, {});
 		SkySettings = serialized->unwrap_into<rivet::ddl::generated::SkySettingsDef>(SkySettings_type_id);
 		AssetSwap = serialized->unwrap_into<rivet::ddl::generated::AssetSwap>(AssetSwap_type_id);
 		EnvLighting = serialized->unwrap_into<rivet::ddl::generated::EnvLightingDef>(EnvLighting_type_id);

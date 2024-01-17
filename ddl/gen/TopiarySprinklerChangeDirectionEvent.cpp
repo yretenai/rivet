@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	TopiarySprinklerChangeDirectionEvent::TopiarySprinklerChangeDirectionEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		IsClockwise = serialized->get_bool(IsClockwise_type_id); 
+		IsClockwise = serialized->get_bool(IsClockwise_type_id, false); 
 	}
 
 	[[nodiscard]] auto

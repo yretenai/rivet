@@ -12,17 +12,17 @@
 
 namespace rivet::ddl::generated {
 	PlanetRegionData::PlanetRegionData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		PlanetName = serialized->get_string(PlanetName_type_id);
-		IsMainRegion = serialized->get_bool(IsMainRegion_type_id);
-		LevelEnum = serialized->get_enum<rivet::ddl::generated::LevelEnum>(LevelEnum_type_id, rivet::ddl::generated::LevelEnum_values);
-		InterplanetaryCheckpoint = serialized->get_string(InterplanetaryCheckpoint_type_id);
-		Checkpoint = serialized->get_string(Checkpoint_type_id);
-		HeroTypes = serialized->get_enum<rivet::ddl::generated::HeroTypes>(HeroTypes_type_id, rivet::ddl::generated::HeroTypes_values);
+		PlanetName = serialized->get_string(PlanetName_type_id, {});
+		IsMainRegion = serialized->get_bool(IsMainRegion_type_id, true);
+		LevelEnum = serialized->get_enum<rivet::ddl::generated::LevelEnum>(LevelEnum_type_id, rivet::ddl::generated::LevelEnum_values, rivet::ddl::generated::LevelEnum::None);
+		InterplanetaryCheckpoint = serialized->get_string(InterplanetaryCheckpoint_type_id, {});
+		Checkpoint = serialized->get_string(Checkpoint_type_id, {});
+		HeroTypes = serialized->get_enum<rivet::ddl::generated::HeroTypes>(HeroTypes_type_id, rivet::ddl::generated::HeroTypes_values, rivet::ddl::generated::HeroTypes::None);
 		MenuData = serialized->unwrap_into<rivet::ddl::generated::PlanetMenuData>(MenuData_type_id);
 		ActivityData = serialized->unwrap_into<rivet::ddl::generated::PlanetActivityData>(ActivityData_type_id);
-		DefaultMap = serialized->get_enum<rivet::ddl::generated::xd64fa9b1>(DefaultMap_type_id, rivet::ddl::generated::xd64fa9b1_values);
+		DefaultMap = serialized->get_enum<rivet::ddl::generated::xd64fa9b1>(DefaultMap_type_id, rivet::ddl::generated::xd64fa9b1_values, rivet::ddl::generated::xd64fa9b1::None);
 		Maps = serialized->unwrap_into_many<rivet::ddl::generated::PlanetMap>(Maps_type_id);
-		DefaultLightingMode = serialized->get_enum<rivet::ddl::generated::LightingMode>(DefaultLightingMode_type_id, rivet::ddl::generated::LightingMode_values);
+		DefaultLightingMode = serialized->get_enum<rivet::ddl::generated::LightingMode>(DefaultLightingMode_type_id, rivet::ddl::generated::LightingMode_values, rivet::ddl::generated::LightingMode::Day);
 		ConditionalLightingModes = serialized->unwrap_into_many<rivet::ddl::generated::PlanetLightingCondition>(ConditionalLightingModes_type_id); 
 	}
 

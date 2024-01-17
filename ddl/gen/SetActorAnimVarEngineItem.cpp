@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	SetActorAnimVarEngineItem::SetActorAnimVarEngineItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		VarName = serialized->get_string(VarName_type_id);
-		VarType = serialized->get_enum<rivet::ddl::generated::xdf8f8d7a>(VarType_type_id, rivet::ddl::generated::xdf8f8d7a_values);
+		VarName = serialized->get_string(VarName_type_id, {});
+		VarType = serialized->get_enum<rivet::ddl::generated::xdf8f8d7a>(VarType_type_id, rivet::ddl::generated::xdf8f8d7a_values, rivet::ddl::generated::xdf8f8d7a::FloatOutput);
 		VarValue = serialized->unwrap_into<rivet::ddl::generated::DDLVector4>(VarValue_type_id); 
 	}
 

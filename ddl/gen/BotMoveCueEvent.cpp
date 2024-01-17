@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	BotMoveCueEvent::BotMoveCueEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		MoveStyle = serialized->get_enum<rivet::ddl::generated::MovementStyle>(MoveStyle_type_id, rivet::ddl::generated::MovementStyle_values); 
+		MoveStyle = serialized->get_enum<rivet::ddl::generated::MovementStyle>(MoveStyle_type_id, rivet::ddl::generated::MovementStyle_values, rivet::ddl::generated::MovementStyle::Run); 
 	}
 
 	[[nodiscard]] auto

@@ -36,8 +36,8 @@ namespace rivet::ddl::generated {
 		BotConfigData = serialized->unwrap_into<rivet::ddl::generated::BotConfigData>(BotConfigData_type_id);
 		BotData = serialized->unwrap_into<rivet::ddl::generated::BotData>(BotData_type_id);
 		ActorBotData = serialized->unwrap_into<rivet::ddl::generated::ActorBotData>(ActorBotData_type_id);
-		AccessibilityHighlightAllyForNeutralAllegiance = serialized->get_bool(AccessibilityHighlightAllyForNeutralAllegiance_type_id);
-		AccessibilityMonitorAllegiance = serialized->get_bool(AccessibilityMonitorAllegiance_type_id); 
+		AccessibilityHighlightAllyForNeutralAllegiance = serialized->get_bool(AccessibilityHighlightAllyForNeutralAllegiance_type_id, true);
+		AccessibilityMonitorAllegiance = serialized->get_bool(AccessibilityMonitorAllegiance_type_id, false); 
 	}
 
 	[[nodiscard]] auto

@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	ShieldWithHealthPrius::ShieldWithHealthPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): DamageModifierIncomingPrius(serialized) {
-		ShieldHealth = serialized->get_float(ShieldHealth_type_id);
-		PercentDamageMitigation = serialized->get_float(PercentDamageMitigation_type_id);
-		MaterialID = serialized->get_string(MaterialID_type_id); 
+		ShieldHealth = serialized->get_float(ShieldHealth_type_id, 100.000000);
+		PercentDamageMitigation = serialized->get_float(PercentDamageMitigation_type_id, 95.000000);
+		MaterialID = serialized->get_string(MaterialID_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

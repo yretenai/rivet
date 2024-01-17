@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	TestTriggerNodeDef::TestTriggerNodeDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): NodeBaseDef(serialized) {
-		DebugName = serialized->get_string(DebugName_type_id);
+		DebugName = serialized->get_string(DebugName_type_id, {});
 		Out = serialized->unwrap_into<rivet::ddl::generated::OutputPlugInt>(Out_type_id); 
 	}
 

@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	ExitToFrontendActionPrius::ExitToFrontendActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		Mode = serialized->get_enum<rivet::ddl::generated::x4dc5b7ae>(Mode_type_id, rivet::ddl::generated::x4dc5b7ae_values); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Loading);
+		Mode = serialized->get_enum<rivet::ddl::generated::x4dc5b7ae>(Mode_type_id, rivet::ddl::generated::x4dc5b7ae_values, rivet::ddl::generated::x4dc5b7ae::ExitToPreviousFrontend); 
 	}
 
 	[[nodiscard]] auto

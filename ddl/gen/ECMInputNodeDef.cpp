@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	ECMInputNodeDef::ECMInputNodeDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		NodeId = serialized->get_uint64(NodeId_type_id);
-		XPos = serialized->get_int32(XPos_type_id);
-		YPos = serialized->get_int32(YPos_type_id);
-		Collapsed = serialized->get_bool(Collapsed_type_id);
-		Type = serialized->get_enum<rivet::ddl::generated::xf5eea2a0>(Type_type_id, rivet::ddl::generated::xf5eea2a0_values);
-		Value = serialized->get_string(Value_type_id);
+		NodeId = serialized->get_uint64(NodeId_type_id, 0);
+		XPos = serialized->get_int32(XPos_type_id, 0);
+		YPos = serialized->get_int32(YPos_type_id, 0);
+		Collapsed = serialized->get_bool(Collapsed_type_id, false);
+		Type = serialized->get_enum<rivet::ddl::generated::xf5eea2a0>(Type_type_id, rivet::ddl::generated::xf5eea2a0_values, rivet::ddl::generated::xf5eea2a0::Triggering_Event);
+		Value = serialized->get_string(Value_type_id, {});
 		ValueArray = serialized->get_strings(ValueArray_type_id);
 		ValueArrayAux = serialized->get_strings(ValueArrayAux_type_id); 
 	}

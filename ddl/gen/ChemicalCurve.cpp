@@ -9,9 +9,9 @@
 
 namespace rivet::ddl::generated {
 	ChemicalCurve::ChemicalCurve([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Material = serialized->get_string(Material_type_id);
-		CurveRadius = serialized->get_float(CurveRadius_type_id);
-		TileDistance = serialized->get_float(TileDistance_type_id);
+		Material = serialized->get_string(Material_type_id, {});
+		CurveRadius = serialized->get_float(CurveRadius_type_id, 0.250000);
+		TileDistance = serialized->get_float(TileDistance_type_id, 1.000000);
 		RenderOverrides = serialized->unwrap_into_many<rivet::ddl::generated::ChemicalRenderOverride>(RenderOverrides_type_id); 
 	}
 

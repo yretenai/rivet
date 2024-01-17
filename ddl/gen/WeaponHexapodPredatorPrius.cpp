@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	WeaponHexapodPredatorPrius::WeaponHexapodPredatorPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): WeaponPredatorPrius(serialized) {
-		TargetScoreSwarmer = serialized->get_float(TargetScoreSwarmer_type_id);
-		TargetScoreFlyer = serialized->get_float(TargetScoreFlyer_type_id);
-		TargetScoreNest = serialized->get_float(TargetScoreNest_type_id);
-		LaunchCooldown = serialized->get_float(LaunchCooldown_type_id);
-		InitialLaunchCooldown = serialized->get_float(InitialLaunchCooldown_type_id);
-		RocketDelay = serialized->get_float(RocketDelay_type_id); 
+		TargetScoreSwarmer = serialized->get_float(TargetScoreSwarmer_type_id, 1.000000);
+		TargetScoreFlyer = serialized->get_float(TargetScoreFlyer_type_id, 1.000000);
+		TargetScoreNest = serialized->get_float(TargetScoreNest_type_id, 1.000000);
+		LaunchCooldown = serialized->get_float(LaunchCooldown_type_id, 3.000000);
+		InitialLaunchCooldown = serialized->get_float(InitialLaunchCooldown_type_id, 2.000000);
+		RocketDelay = serialized->get_float(RocketDelay_type_id, 0.100000); 
 	}
 
 	[[nodiscard]] auto

@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	WwiseState::WwiseState([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		StateGroupName = serialized->get_string(StateGroupName_type_id);
-		StateName = serialized->get_string(StateName_type_id);
-		StateGroupId = serialized->get_uint32(StateGroupId_type_id);
-		StateId = serialized->get_uint32(StateId_type_id); 
+		StateGroupName = serialized->get_string(StateGroupName_type_id, {});
+		StateName = serialized->get_string(StateName_type_id, {});
+		StateGroupId = serialized->get_uint32(StateGroupId_type_id, 0);
+		StateId = serialized->get_uint32(StateId_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

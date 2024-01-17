@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	DamageModifierAddFlagsPrius::DamageModifierAddFlagsPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): DamageModifierOutgoingPrius(serialized) {
-		AddFlags = serialized->get_bitset<rivet::ddl::generated::x65d7dac2>(AddFlags_type_id, rivet::ddl::generated::x65d7dac2_values); 
+		AddFlags = serialized->get_bitset<rivet::ddl::generated::x65d7dac2>(AddFlags_type_id, rivet::ddl::generated::x65d7dac2_values, 0); 
 	}
 
 	[[nodiscard]] auto

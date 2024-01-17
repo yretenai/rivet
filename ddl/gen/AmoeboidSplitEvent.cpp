@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	AmoeboidSplitEvent::AmoeboidSplitEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		WasFrozen = serialized->get_bool(WasFrozen_type_id); 
+		WasFrozen = serialized->get_bool(WasFrozen_type_id, false); 
 	}
 
 	[[nodiscard]] auto

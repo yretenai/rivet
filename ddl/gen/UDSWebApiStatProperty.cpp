@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	UDSWebApiStatProperty::UDSWebApiStatProperty([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		path = serialized->get_string(path_type_id);
-		comparator = serialized->get_string(comparator_type_id);
-		Value = serialized->get_string(Value_type_id); 
+		path = serialized->get_string(path_type_id, {});
+		comparator = serialized->get_string(comparator_type_id, {});
+		Value = serialized->get_string(Value_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

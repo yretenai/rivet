@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	ModifyNavActionPrius::ModifyNavActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		MeshTemplate = serialized->get_uint32(MeshTemplate_type_id);
-		PolyFlags = serialized->get_bitset<rivet::ddl::generated::xc204b456>(PolyFlags_type_id, rivet::ddl::generated::xc204b456_values); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Enemy_Bot);
+		MeshTemplate = serialized->get_uint32(MeshTemplate_type_id, 0);
+		PolyFlags = serialized->get_bitset<rivet::ddl::generated::xc204b456>(PolyFlags_type_id, rivet::ddl::generated::xc204b456_values, 1); 
 	}
 
 	[[nodiscard]] auto

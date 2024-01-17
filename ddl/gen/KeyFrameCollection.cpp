@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	KeyFrameCollection::KeyFrameCollection([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		KeyFrameType = serialized->get_enum<rivet::ddl::generated::KeyFrameType>(KeyFrameType_type_id, rivet::ddl::generated::KeyFrameType_values);
+		KeyFrameType = serialized->get_enum<rivet::ddl::generated::KeyFrameType>(KeyFrameType_type_id, rivet::ddl::generated::KeyFrameType_values, rivet::ddl::generated::KeyFrameType::Float);
 		KeyFrames = serialized->unwrap_into_many<rivet::ddl::generated::KeyFrame>(KeyFrames_type_id); 
 	}
 

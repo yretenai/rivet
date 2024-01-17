@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	SetUpControllerData::SetUpControllerData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		UniqueSetupName = serialized->get_string(UniqueSetupName_type_id);
-		CheckpointName = serialized->get_string(CheckpointName_type_id);
-		InitialCount = serialized->get_uint8(InitialCount_type_id);
-		SetupType = serialized->get_enum<rivet::ddl::generated::x545e4076>(SetupType_type_id, rivet::ddl::generated::x545e4076_values);
-		DebugLogging = serialized->get_bool(DebugLogging_type_id); 
+		UniqueSetupName = serialized->get_string(UniqueSetupName_type_id, "");
+		CheckpointName = serialized->get_string(CheckpointName_type_id, "");
+		InitialCount = serialized->get_uint8(InitialCount_type_id, 1);
+		SetupType = serialized->get_enum<rivet::ddl::generated::x545e4076>(SetupType_type_id, rivet::ddl::generated::x545e4076_values, rivet::ddl::generated::x545e4076::Major);
+		DebugLogging = serialized->get_bool(DebugLogging_type_id, false); 
 	}
 
 	[[nodiscard]] auto

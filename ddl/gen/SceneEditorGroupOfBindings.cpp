@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	SceneEditorGroupOfBindings::SceneEditorGroupOfBindings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		GroupName = serialized->get_string(GroupName_type_id);
+		GroupName = serialized->get_string(GroupName_type_id, {});
 		HotKeys = serialized->unwrap_into_many<rivet::ddl::generated::SceneEditorHotkey>(HotKeys_type_id); 
 	}
 

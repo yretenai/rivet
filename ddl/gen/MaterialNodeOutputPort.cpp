@@ -7,14 +7,14 @@
 
 namespace rivet::ddl::generated {
 	MaterialNodeOutputPort::MaterialNodeOutputPort([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		InternalName = serialized->get_string(InternalName_type_id);
-		DisplayName = serialized->get_string(DisplayName_type_id);
-		Minimums = serialized->get_string(Minimums_type_id);
-		Maximums = serialized->get_string(Maximums_type_id);
-		Values = serialized->get_string(Values_type_id);
-		Type = serialized->get_string(Type_type_id);
-		Description = serialized->get_string(Description_type_id);
-		Documentation = serialized->get_string(Documentation_type_id); 
+		InternalName = serialized->get_string(InternalName_type_id, {});
+		DisplayName = serialized->get_string(DisplayName_type_id, {});
+		Minimums = serialized->get_string(Minimums_type_id, {});
+		Maximums = serialized->get_string(Maximums_type_id, {});
+		Values = serialized->get_string(Values_type_id, {});
+		Type = serialized->get_string(Type_type_id, "float4");
+		Description = serialized->get_string(Description_type_id, {});
+		Documentation = serialized->get_string(Documentation_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	CinematicCurveEditorClipBoardValue::CinematicCurveEditorClipBoardValue([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Dimension = serialized->get_int32(Dimension_type_id);
-		KeyListName = serialized->get_string(KeyListName_type_id);
+		Dimension = serialized->get_int32(Dimension_type_id, 0);
+		KeyListName = serialized->get_string(KeyListName_type_id, {});
 		Value = serialized->unwrap_into<rivet::ddl::generated::BezierCurveKeyDef>(Value_type_id); 
 	}
 

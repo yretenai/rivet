@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	RYNOPortalObjectPrius::RYNOPortalObjectPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		PostCompositeShader = serialized->get_string(PostCompositeShader_type_id);
-		PreCompositeShader = serialized->get_string(PreCompositeShader_type_id);
-		Conduit = serialized->get_string(Conduit_type_id);
-		PortalActor = serialized->get_uint32(PortalActor_type_id);
-		Size = serialized->get_enum<rivet::ddl::generated::xbf5ff3c6>(Size_type_id, rivet::ddl::generated::xbf5ff3c6_values);
-		VersionIndex = serialized->get_uint8(VersionIndex_type_id); 
+		PostCompositeShader = serialized->get_string(PostCompositeShader_type_id, {});
+		PreCompositeShader = serialized->get_string(PreCompositeShader_type_id, {});
+		Conduit = serialized->get_string(Conduit_type_id, {});
+		PortalActor = serialized->get_uint32(PortalActor_type_id, 0);
+		Size = serialized->get_enum<rivet::ddl::generated::xbf5ff3c6>(Size_type_id, rivet::ddl::generated::xbf5ff3c6_values, rivet::ddl::generated::xbf5ff3c6::Small);
+		VersionIndex = serialized->get_uint8(VersionIndex_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

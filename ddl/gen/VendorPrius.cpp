@@ -8,11 +8,11 @@
 namespace rivet::ddl::generated {
 	VendorPrius::VendorPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		VendorConfigs = serialized->get_strings(VendorConfigs_type_id);
-		StartActive = serialized->get_bool(StartActive_type_id);
-		AllowUpgrades = serialized->get_bool(AllowUpgrades_type_id);
-		TutorialType = serialized->get_enum<rivet::ddl::generated::xf88150a5>(TutorialType_type_id, rivet::ddl::generated::xf88150a5_values);
-		PurchaseVolumeActor = serialized->get_uint64(PurchaseVolumeActor_type_id);
-		PurchaseCameraActor = serialized->get_uint64(PurchaseCameraActor_type_id); 
+		StartActive = serialized->get_bool(StartActive_type_id, true);
+		AllowUpgrades = serialized->get_bool(AllowUpgrades_type_id, true);
+		TutorialType = serialized->get_enum<rivet::ddl::generated::xf88150a5>(TutorialType_type_id, rivet::ddl::generated::xf88150a5_values, rivet::ddl::generated::xf88150a5::None);
+		PurchaseVolumeActor = serialized->get_uint64(PurchaseVolumeActor_type_id, 0);
+		PurchaseCameraActor = serialized->get_uint64(PurchaseCameraActor_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

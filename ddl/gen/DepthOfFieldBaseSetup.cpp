@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	DepthOfFieldBaseSetup::DepthOfFieldBaseSetup([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DistanceFar = serialized->get_float(DistanceFar_type_id);
-		DistanceNear = serialized->get_float(DistanceNear_type_id);
-		AperatureScaleFar = serialized->get_float(AperatureScaleFar_type_id);
-		AperatureScaleNear = serialized->get_float(AperatureScaleNear_type_id); 
+		DistanceFar = serialized->get_float(DistanceFar_type_id, 128.000000);
+		DistanceNear = serialized->get_float(DistanceNear_type_id, 0.000000);
+		AperatureScaleFar = serialized->get_float(AperatureScaleFar_type_id, 1.350000);
+		AperatureScaleNear = serialized->get_float(AperatureScaleNear_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

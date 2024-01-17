@@ -10,17 +10,17 @@
 
 namespace rivet::ddl::generated {
 	ProximitySpawnerConfig::ProximitySpawnerConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		DefaultCleanUpType = serialized->get_enum<rivet::ddl::generated::xd3395131>(DefaultCleanUpType_type_id, rivet::ddl::generated::xd3395131_values);
-		MaxAlive = serialized->get_int32(MaxAlive_type_id);
-		MinSpawnRadius = serialized->get_float(MinSpawnRadius_type_id);
-		MaxSpawnRadius = serialized->get_float(MaxSpawnRadius_type_id);
-		MinDeleteRadius = serialized->get_float(MinDeleteRadius_type_id);
-		MinDelayBetweenSpawns = serialized->get_float(MinDelayBetweenSpawns_type_id);
-		MaxDelayBetweenSpawns = serialized->get_float(MaxDelayBetweenSpawns_type_id);
-		StartAggressive = serialized->get_bool(StartAggressive_type_id);
-		EncourageIdleWandering = serialized->get_bool(EncourageIdleWandering_type_id);
-		CleanupDeleteRadius = serialized->get_float(CleanupDeleteRadius_type_id);
-		MaxRelativeReward = serialized->get_float(MaxRelativeReward_type_id);
+		DefaultCleanUpType = serialized->get_enum<rivet::ddl::generated::xd3395131>(DefaultCleanUpType_type_id, rivet::ddl::generated::xd3395131_values, rivet::ddl::generated::xd3395131::DeleteOffCamera);
+		MaxAlive = serialized->get_int32(MaxAlive_type_id, 20);
+		MinSpawnRadius = serialized->get_float(MinSpawnRadius_type_id, 3.000000);
+		MaxSpawnRadius = serialized->get_float(MaxSpawnRadius_type_id, 0.000000);
+		MinDeleteRadius = serialized->get_float(MinDeleteRadius_type_id, 25.000000);
+		MinDelayBetweenSpawns = serialized->get_float(MinDelayBetweenSpawns_type_id, 0.000000);
+		MaxDelayBetweenSpawns = serialized->get_float(MaxDelayBetweenSpawns_type_id, 0.000000);
+		StartAggressive = serialized->get_bool(StartAggressive_type_id, true);
+		EncourageIdleWandering = serialized->get_bool(EncourageIdleWandering_type_id, true);
+		CleanupDeleteRadius = serialized->get_float(CleanupDeleteRadius_type_id, -1.000000);
+		MaxRelativeReward = serialized->get_float(MaxRelativeReward_type_id, -1.000000);
 		TieredOverrides = serialized->unwrap_into_many<rivet::ddl::generated::ProximityTieredOverrides>(TieredOverrides_type_id);
 		SpawnInfos = serialized->unwrap_into_many<rivet::ddl::generated::ProximitySpawnInfo>(SpawnInfos_type_id); 
 	}

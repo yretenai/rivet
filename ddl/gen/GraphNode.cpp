@@ -9,15 +9,15 @@
 
 namespace rivet::ddl::generated {
 	GraphNode::GraphNode([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Id = serialized->get_uint64(Id_type_id);
-		XPos = serialized->get_float(XPos_type_id);
-		YPos = serialized->get_float(YPos_type_id);
-		Collapsed = serialized->get_bool(Collapsed_type_id);
-		Disabled = serialized->get_bool(Disabled_type_id);
+		Id = serialized->get_uint64(Id_type_id, 0);
+		XPos = serialized->get_float(XPos_type_id, 0.000000);
+		YPos = serialized->get_float(YPos_type_id, 0.000000);
+		Collapsed = serialized->get_bool(Collapsed_type_id, false);
+		Disabled = serialized->get_bool(Disabled_type_id, false);
 		ConMeta = serialized->unwrap_into_many<rivet::ddl::generated::GraphConMeta>(ConMeta_type_id);
-		Comment = serialized->get_string(Comment_type_id);
-		Type = serialized->get_string(Type_type_id);
-		SubType = serialized->get_string(SubType_type_id);
+		Comment = serialized->get_string(Comment_type_id, {});
+		Type = serialized->get_string(Type_type_id, "kNodeTypeInvalid");
+		SubType = serialized->get_string(SubType_type_id, "kNodeTypeInvalid");
 		Aux = serialized->get_field(Aux_type_id); 
 	}
 

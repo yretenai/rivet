@@ -11,10 +11,10 @@
 
 namespace rivet::ddl::generated {
 	SwingshotTargetBasePrius::SwingshotTargetBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EnabledComponentBasePrius(serialized) {
-		CableAttachLocator = serialized->get_string(CableAttachLocator_type_id);
-		MinRangeOverride = serialized->get_float(MinRangeOverride_type_id);
-		MaxRangeOverride = serialized->get_float(MaxRangeOverride_type_id);
-		DisallowGroup = serialized->get_uint64(DisallowGroup_type_id); 
+		CableAttachLocator = serialized->get_string(CableAttachLocator_type_id, {});
+		MinRangeOverride = serialized->get_float(MinRangeOverride_type_id, 0.000000);
+		MaxRangeOverride = serialized->get_float(MaxRangeOverride_type_id, -1.000000);
+		DisallowGroup = serialized->get_uint64(DisallowGroup_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

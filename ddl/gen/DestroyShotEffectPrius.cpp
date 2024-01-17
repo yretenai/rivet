@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	DestroyShotEffectPrius::DestroyShotEffectPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ScriptedShotEffectBasePrius(serialized) {
-		DestroySecondaryActivationActors = serialized->get_bool(DestroySecondaryActivationActors_type_id); 
+		DestroySecondaryActivationActors = serialized->get_bool(DestroySecondaryActivationActors_type_id, false); 
 	}
 
 	[[nodiscard]] auto

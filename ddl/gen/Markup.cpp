@@ -9,10 +9,10 @@
 
 namespace rivet::ddl::generated {
 	Markup::Markup([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MarkupText = serialized->get_string(MarkupText_type_id);
+		MarkupText = serialized->get_string(MarkupText_type_id, "");
 		IconMapping = serialized->unwrap_into<rivet::ddl::generated::IconMapBase>(IconMapping_type_id);
-		Clone = serialized->get_bool(Clone_type_id);
-		SourceMarkup = serialized->get_string(SourceMarkup_type_id); 
+		Clone = serialized->get_bool(Clone_type_id, false);
+		SourceMarkup = serialized->get_string(SourceMarkup_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

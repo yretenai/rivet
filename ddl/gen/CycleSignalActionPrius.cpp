@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	CycleSignalActionPrius::CycleSignalActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		LoopType = serialized->get_enum<rivet::ddl::generated::x4d26e880>(LoopType_type_id, rivet::ddl::generated::x4d26e880_values);
-		Order = serialized->get_enum<rivet::ddl::generated::x88e09fe6>(Order_type_id, rivet::ddl::generated::x88e09fe6_values);
-		AllowRepeat = serialized->get_bool(AllowRepeat_type_id);
-		ForceOutNewLoc = serialized->get_bool(ForceOutNewLoc_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Logic);
+		LoopType = serialized->get_enum<rivet::ddl::generated::x4d26e880>(LoopType_type_id, rivet::ddl::generated::x4d26e880_values, rivet::ddl::generated::x4d26e880::Loop_to_First_Signal);
+		Order = serialized->get_enum<rivet::ddl::generated::x88e09fe6>(Order_type_id, rivet::ddl::generated::x88e09fe6_values, rivet::ddl::generated::x88e09fe6::Output_in_order);
+		AllowRepeat = serialized->get_bool(AllowRepeat_type_id, false);
+		ForceOutNewLoc = serialized->get_bool(ForceOutNewLoc_type_id, false); 
 	}
 
 	[[nodiscard]] auto

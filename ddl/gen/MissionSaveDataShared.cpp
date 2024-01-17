@@ -10,8 +10,8 @@
 
 namespace rivet::ddl::generated {
 	MissionSaveDataShared::MissionSaveDataShared([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ObjSysNodeSaveData(serialized) {
-		MissionState = serialized->get_enum<rivet::ddl::generated::MissionStates>(MissionState_type_id, rivet::ddl::generated::MissionStates_values);
-		MissionFlagsShared = serialized->get_bitset<rivet::ddl::generated::x62de2618>(MissionFlagsShared_type_id, rivet::ddl::generated::x62de2618_values);
+		MissionState = serialized->get_enum<rivet::ddl::generated::MissionStates>(MissionState_type_id, rivet::ddl::generated::MissionStates_values, rivet::ddl::generated::MissionStates::Inactive);
+		MissionFlagsShared = serialized->get_bitset<rivet::ddl::generated::x62de2618>(MissionFlagsShared_type_id, rivet::ddl::generated::x62de2618_values, 0);
 		MissionDataStore = serialized->get_bools(MissionDataStore_type_id);
 		SyncOutputState = serialized->unwrap_into_many<rivet::ddl::generated::SyncOutputData>(SyncOutputState_type_id); 
 	}

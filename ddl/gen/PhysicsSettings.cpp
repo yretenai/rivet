@@ -7,38 +7,38 @@
 
 namespace rivet::ddl::generated {
 	PhysicsSettings::PhysicsSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ClothEnable = serialized->get_bool(ClothEnable_type_id);
-		RagdollAnimPoseJointsEnable = serialized->get_bool(RagdollAnimPoseJointsEnable_type_id);
-		KickablesAndRagdollsEnable = serialized->get_bool(KickablesAndRagdollsEnable_type_id);
-		RagdollSelfCollision = serialized->get_bool(RagdollSelfCollision_type_id);
-		FatalThreadConcurrencyAsserts = serialized->get_bool(FatalThreadConcurrencyAsserts_type_id);
-		SingleThreadedInPlaceLoads = serialized->get_bool(SingleThreadedInPlaceLoads_type_id);
-		RagdollUpdateSkipUnmovedObjects = serialized->get_bool(RagdollUpdateSkipUnmovedObjects_type_id);
-		RayCastQueryCount = serialized->get_int32(RayCastQueryCount_type_id);
-		SweptSphereQueryCount = serialized->get_int32(SweptSphereQueryCount_type_id);
-		SweptCapsuleQueryCount = serialized->get_int32(SweptCapsuleQueryCount_type_id);
-		ClosestPointsQueryCount = serialized->get_int32(ClosestPointsQueryCount_type_id);
-		MaxDeferredLoads = serialized->get_int32(MaxDeferredLoads_type_id);
-		MaxTrackedSceneObjects = serialized->get_int32(MaxTrackedSceneObjects_type_id);
-		MaxIgnoredSceneObjects = serialized->get_int32(MaxIgnoredSceneObjects_type_id);
-		MaxProcrastinatedIgnoreListAdds = serialized->get_int32(MaxProcrastinatedIgnoreListAdds_type_id);
-		PhysicsQueryAllocSize = serialized->get_int32(PhysicsQueryAllocSize_type_id);
+		ClothEnable = serialized->get_bool(ClothEnable_type_id, true);
+		RagdollAnimPoseJointsEnable = serialized->get_bool(RagdollAnimPoseJointsEnable_type_id, true);
+		KickablesAndRagdollsEnable = serialized->get_bool(KickablesAndRagdollsEnable_type_id, true);
+		RagdollSelfCollision = serialized->get_bool(RagdollSelfCollision_type_id, true);
+		FatalThreadConcurrencyAsserts = serialized->get_bool(FatalThreadConcurrencyAsserts_type_id, true);
+		SingleThreadedInPlaceLoads = serialized->get_bool(SingleThreadedInPlaceLoads_type_id, false);
+		RagdollUpdateSkipUnmovedObjects = serialized->get_bool(RagdollUpdateSkipUnmovedObjects_type_id, true);
+		RayCastQueryCount = serialized->get_int32(RayCastQueryCount_type_id, 4096);
+		SweptSphereQueryCount = serialized->get_int32(SweptSphereQueryCount_type_id, 4096);
+		SweptCapsuleQueryCount = serialized->get_int32(SweptCapsuleQueryCount_type_id, 256);
+		ClosestPointsQueryCount = serialized->get_int32(ClosestPointsQueryCount_type_id, 512);
+		MaxDeferredLoads = serialized->get_int32(MaxDeferredLoads_type_id, 512);
+		MaxTrackedSceneObjects = serialized->get_int32(MaxTrackedSceneObjects_type_id, 4096);
+		MaxIgnoredSceneObjects = serialized->get_int32(MaxIgnoredSceneObjects_type_id, 2048);
+		MaxProcrastinatedIgnoreListAdds = serialized->get_int32(MaxProcrastinatedIgnoreListAdds_type_id, 1230);
+		PhysicsQueryAllocSize = serialized->get_int32(PhysicsQueryAllocSize_type_id, 5242880);
 		PhysicsQuerySmallBlockSizes = serialized->get_uint16s(PhysicsQuerySmallBlockSizes_type_id);
-		PhysicsStepLocalStreamAllocSize = serialized->get_int32(PhysicsStepLocalStreamAllocSize_type_id);
-		PhysicsPersistentStreamAllocSize = serialized->get_int32(PhysicsPersistentStreamAllocSize_type_id);
-		PhysicsBroadphaseRadiusX = serialized->get_float(PhysicsBroadphaseRadiusX_type_id);
-		PhysicsBroadphaseRadiusY = serialized->get_float(PhysicsBroadphaseRadiusY_type_id);
-		PhysicsBroadphaseRadiusZ = serialized->get_float(PhysicsBroadphaseRadiusZ_type_id);
-		GravityMagnitude = serialized->get_float(GravityMagnitude_type_id);
-		UnderSampleUpdatingRagdollsAnimFurtherThanThisFromCamera = serialized->get_float(UnderSampleUpdatingRagdollsAnimFurtherThanThisFromCamera_type_id);
-		UnderSampleCullFractionFrames = serialized->get_uint16(UnderSampleCullFractionFrames_type_id);
-		EnableUnderSampleUpdatingRagdolls = serialized->get_bool(EnableUnderSampleUpdatingRagdolls_type_id);
-		SkipAnimUserPoseSetupOnRagdollActivate = serialized->get_bool(SkipAnimUserPoseSetupOnRagdollActivate_type_id);
-		ChunkedBodyOptimizationAggression = serialized->get_int32(ChunkedBodyOptimizationAggression_type_id);
-		VisualDebuggerPort = serialized->get_uint16(VisualDebuggerPort_type_id);
-		DebugHeapSize = serialized->get_uint32(DebugHeapSize_type_id);
-		OverrideBodyMaterialsComingFromMaya = serialized->get_bool(OverrideBodyMaterialsComingFromMaya_type_id);
-		PhysicsEnable = serialized->get_bool(PhysicsEnable_type_id); 
+		PhysicsStepLocalStreamAllocSize = serialized->get_int32(PhysicsStepLocalStreamAllocSize_type_id, 30408704);
+		PhysicsPersistentStreamAllocSize = serialized->get_int32(PhysicsPersistentStreamAllocSize_type_id, 30408704);
+		PhysicsBroadphaseRadiusX = serialized->get_float(PhysicsBroadphaseRadiusX_type_id, 4096.000000);
+		PhysicsBroadphaseRadiusY = serialized->get_float(PhysicsBroadphaseRadiusY_type_id, 4096.000000);
+		PhysicsBroadphaseRadiusZ = serialized->get_float(PhysicsBroadphaseRadiusZ_type_id, 4096.000000);
+		GravityMagnitude = serialized->get_float(GravityMagnitude_type_id, 9.800000);
+		UnderSampleUpdatingRagdollsAnimFurtherThanThisFromCamera = serialized->get_float(UnderSampleUpdatingRagdollsAnimFurtherThanThisFromCamera_type_id, 30.000000);
+		UnderSampleCullFractionFrames = serialized->get_uint16(UnderSampleCullFractionFrames_type_id, 4);
+		EnableUnderSampleUpdatingRagdolls = serialized->get_bool(EnableUnderSampleUpdatingRagdolls_type_id, true);
+		SkipAnimUserPoseSetupOnRagdollActivate = serialized->get_bool(SkipAnimUserPoseSetupOnRagdollActivate_type_id, true);
+		ChunkedBodyOptimizationAggression = serialized->get_int32(ChunkedBodyOptimizationAggression_type_id, 2);
+		VisualDebuggerPort = serialized->get_uint16(VisualDebuggerPort_type_id, 45001);
+		DebugHeapSize = serialized->get_uint32(DebugHeapSize_type_id, 0);
+		OverrideBodyMaterialsComingFromMaya = serialized->get_bool(OverrideBodyMaterialsComingFromMaya_type_id, true);
+		PhysicsEnable = serialized->get_bool(PhysicsEnable_type_id, true); 
 	}
 
 	[[nodiscard]] auto

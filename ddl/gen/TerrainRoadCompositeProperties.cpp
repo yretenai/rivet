@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	TerrainRoadCompositeProperties::TerrainRoadCompositeProperties([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Strength = serialized->get_float(Strength_type_id);
-		FadeIn = serialized->get_float(FadeIn_type_id);
-		FadeOut = serialized->get_float(FadeOut_type_id);
-		Falloff = serialized->get_float(Falloff_type_id);
-		FalloffEasingMode = serialized->get_enum<rivet::ddl::generated::x93b1b93c>(FalloffEasingMode_type_id, rivet::ddl::generated::x93b1b93c_values); 
+		Strength = serialized->get_float(Strength_type_id, 1.000000);
+		FadeIn = serialized->get_float(FadeIn_type_id, 0.000000);
+		FadeOut = serialized->get_float(FadeOut_type_id, 0.000000);
+		Falloff = serialized->get_float(Falloff_type_id, 0.350000);
+		FalloffEasingMode = serialized->get_enum<rivet::ddl::generated::x93b1b93c>(FalloffEasingMode_type_id, rivet::ddl::generated::x93b1b93c_values, rivet::ddl::generated::x93b1b93c::EaseInOut); 
 	}
 
 	[[nodiscard]] auto

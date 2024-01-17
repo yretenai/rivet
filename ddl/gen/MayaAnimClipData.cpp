@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	MayaAnimClipData::MayaAnimClipData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		OldName = serialized->get_string(OldName_type_id);
-		NewName = serialized->get_string(NewName_type_id); 
+		OldName = serialized->get_string(OldName_type_id, {});
+		NewName = serialized->get_string(NewName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	LogoCustomData::LogoCustomData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		LogoImage = serialized->get_string(LogoImage_type_id);
+		LogoImage = serialized->get_string(LogoImage_type_id, "");
 		Languages = serialized->get_enums<rivet::ddl::generated::x572515d>(Languages_type_id, rivet::ddl::generated::x572515d_values); 
 	}
 

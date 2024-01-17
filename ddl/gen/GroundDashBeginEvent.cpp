@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	GroundDashBeginEvent::GroundDashBeginEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		IsPhaseDash = serialized->get_bool(IsPhaseDash_type_id); 
+		IsPhaseDash = serialized->get_bool(IsPhaseDash_type_id, false); 
 	}
 
 	[[nodiscard]] auto

@@ -12,15 +12,15 @@
 namespace rivet::ddl::generated {
 	ActorDef::ActorDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		VaultMetaData = serialized->unwrap_into<rivet::ddl::generated::VaultMetaData>(VaultMetaData_type_id);
-		IconPath = serialized->get_string(IconPath_type_id);
-		AssetType = serialized->get_enum<rivet::ddl::generated::AssetExtensions>(AssetType_type_id, rivet::ddl::generated::AssetExtensions_values);
-		AssetPath = serialized->get_string(AssetPath_type_id);
-		Template = serialized->get_bool(Template_type_id);
-		StartActive = serialized->get_bool(StartActive_type_id);
-		BuilderOnly = serialized->get_bool(BuilderOnly_type_id);
-		LookGroup = serialized->get_string(LookGroup_type_id);
-		UIColor = serialized->get_enum<rivet::ddl::generated::x6898de8f>(UIColor_type_id, rivet::ddl::generated::x6898de8f_values);
-		UIOpacity = serialized->get_enum<rivet::ddl::generated::x28ef8b07>(UIOpacity_type_id, rivet::ddl::generated::x28ef8b07_values);
+		IconPath = serialized->get_string(IconPath_type_id, "");
+		AssetType = serialized->get_enum<rivet::ddl::generated::AssetExtensions>(AssetType_type_id, rivet::ddl::generated::AssetExtensions_values, rivet::ddl::generated::AssetExtensions::volume);
+		AssetPath = serialized->get_string(AssetPath_type_id, "");
+		Template = serialized->get_bool(Template_type_id, false);
+		StartActive = serialized->get_bool(StartActive_type_id, true);
+		BuilderOnly = serialized->get_bool(BuilderOnly_type_id, false);
+		LookGroup = serialized->get_string(LookGroup_type_id, "Default");
+		UIColor = serialized->get_enum<rivet::ddl::generated::x6898de8f>(UIColor_type_id, rivet::ddl::generated::x6898de8f_values, rivet::ddl::generated::x6898de8f::Default);
+		UIOpacity = serialized->get_enum<rivet::ddl::generated::x28ef8b07>(UIOpacity_type_id, rivet::ddl::generated::x28ef8b07_values, rivet::ddl::generated::x28ef8b07::Default);
 		Components = serialized->unwrap_into_many<rivet::ddl::generated::ComponentPrius>(Components_type_id);
 		AssetRefs = serialized->unwrap_into_many<rivet::ddl::generated::AssetReferenceDef>(AssetRefs_type_id);
 		OldAssetData = serialized->get_field(OldAssetData_type_id); 

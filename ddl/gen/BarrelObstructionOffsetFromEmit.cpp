@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	BarrelObstructionOffsetFromEmit::BarrelObstructionOffsetFromEmit([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BarrelObstructionBase(serialized) {
-		EmitterIndex = serialized->get_enum<rivet::ddl::generated::x77a4e9ba>(EmitterIndex_type_id, rivet::ddl::generated::x77a4e9ba_values);
+		EmitterIndex = serialized->get_enum<rivet::ddl::generated::x77a4e9ba>(EmitterIndex_type_id, rivet::ddl::generated::x77a4e9ba_values, rivet::ddl::generated::x77a4e9ba::None);
 		LocalSpaceOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(LocalSpaceOffset_type_id); 
 	}
 

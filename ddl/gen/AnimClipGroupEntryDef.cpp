@@ -10,8 +10,8 @@
 
 namespace rivet::ddl::generated {
 	AnimClipGroupEntryDef::AnimClipGroupEntryDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Id = serialized->get_uint64(Id_type_id);
-		Default = serialized->get_bool(Default_type_id);
+		Id = serialized->get_uint64(Id_type_id, 0);
+		Default = serialized->get_bool(Default_type_id, false);
 		FilterIds = serialized->unwrap_into_many<rivet::ddl::generated::AnimClipGroupIdDef>(FilterIds_type_id);
 		Clips = serialized->unwrap_into_many<rivet::ddl::generated::AnimClipGroupElemDef>(Clips_type_id); 
 	}

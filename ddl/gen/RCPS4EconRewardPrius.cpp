@@ -7,20 +7,20 @@
 
 namespace rivet::ddl::generated {
 	RCPS4EconRewardPrius::RCPS4EconRewardPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		RelativeValue = serialized->get_float(RelativeValue_type_id);
-		MinRelativeValue = serialized->get_float(MinRelativeValue_type_id);
-		GrantsBolts = serialized->get_bool(GrantsBolts_type_id);
-		GrantsHeroXP = serialized->get_bool(GrantsHeroXP_type_id);
-		GrantsWpnXP = serialized->get_bool(GrantsWpnXP_type_id);
-		GrantsRaritanium = serialized->get_bool(GrantsRaritanium_type_id);
-		CanGrantCard = serialized->get_bool(CanGrantCard_type_id);
-		AutoCollect = serialized->get_bool(AutoCollect_type_id);
-		FixedReward = serialized->get_bool(FixedReward_type_id);
-		NoSpawn = serialized->get_bool(NoSpawn_type_id);
-		OnlyDropForHeroKill = serialized->get_bool(OnlyDropForHeroKill_type_id);
-		ScraperSkip = serialized->get_bool(ScraperSkip_type_id);
-		SpawnLoc = serialized->get_string(SpawnLoc_type_id);
-		GroovitronType = serialized->get_enum<rivet::ddl::generated::x307af5f>(GroovitronType_type_id, rivet::ddl::generated::x307af5f_values); 
+		RelativeValue = serialized->get_float(RelativeValue_type_id, 1.000000);
+		MinRelativeValue = serialized->get_float(MinRelativeValue_type_id, 0.100000);
+		GrantsBolts = serialized->get_bool(GrantsBolts_type_id, true);
+		GrantsHeroXP = serialized->get_bool(GrantsHeroXP_type_id, true);
+		GrantsWpnXP = serialized->get_bool(GrantsWpnXP_type_id, true);
+		GrantsRaritanium = serialized->get_bool(GrantsRaritanium_type_id, true);
+		CanGrantCard = serialized->get_bool(CanGrantCard_type_id, true);
+		AutoCollect = serialized->get_bool(AutoCollect_type_id, false);
+		FixedReward = serialized->get_bool(FixedReward_type_id, false);
+		NoSpawn = serialized->get_bool(NoSpawn_type_id, false);
+		OnlyDropForHeroKill = serialized->get_bool(OnlyDropForHeroKill_type_id, false);
+		ScraperSkip = serialized->get_bool(ScraperSkip_type_id, false);
+		SpawnLoc = serialized->get_string(SpawnLoc_type_id, "None");
+		GroovitronType = serialized->get_enum<rivet::ddl::generated::x307af5f>(GroovitronType_type_id, rivet::ddl::generated::x307af5f_values, rivet::ddl::generated::x307af5f::None); 
 	}
 
 	[[nodiscard]] auto

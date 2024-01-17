@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	DispersingShotMotionPrius::DispersingShotMotionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): HomingShotMotionPrius(serialized) {
-		DispersionType = serialized->get_enum<rivet::ddl::generated::xfb474e10>(DispersionType_type_id, rivet::ddl::generated::xfb474e10_values); 
+		DispersionType = serialized->get_enum<rivet::ddl::generated::xfb474e10>(DispersionType_type_id, rivet::ddl::generated::xfb474e10_values, rivet::ddl::generated::xfb474e10::InitialVelocityDir); 
 	}
 
 	[[nodiscard]] auto

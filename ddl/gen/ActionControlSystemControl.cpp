@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ActionControlSystemControl::ActionControlSystemControl([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Control = serialized->get_enum<rivet::ddl::generated::xf4a2a500>(Control_type_id, rivet::ddl::generated::xf4a2a500_values); 
+		Control = serialized->get_enum<rivet::ddl::generated::xf4a2a500>(Control_type_id, rivet::ddl::generated::xf4a2a500_values, rivet::ddl::generated::xf4a2a500::SystemPause); 
 	}
 
 	[[nodiscard]] auto

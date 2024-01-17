@@ -12,13 +12,13 @@
 
 namespace rivet::ddl::generated {
 	LunaUpdaterConfigFile::LunaUpdaterConfigFile([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AutoDownloadLatest = serialized->get_bool(AutoDownloadLatest_type_id);
-		AutoStartTools = serialized->get_bool(AutoStartTools_type_id);
-		AllowBetaTools = serialized->get_bool(AllowBetaTools_type_id);
-		NumPreviousVersionsToKeep = serialized->get_int32(NumPreviousVersionsToKeep_type_id);
-		UpdaterVersion = serialized->get_string(UpdaterVersion_type_id);
-		FtpUserId = serialized->get_string(FtpUserId_type_id);
-		FtpUserPass = serialized->get_string(FtpUserPass_type_id);
+		AutoDownloadLatest = serialized->get_bool(AutoDownloadLatest_type_id, true);
+		AutoStartTools = serialized->get_bool(AutoStartTools_type_id, true);
+		AllowBetaTools = serialized->get_bool(AllowBetaTools_type_id, false);
+		NumPreviousVersionsToKeep = serialized->get_int32(NumPreviousVersionsToKeep_type_id, 3);
+		UpdaterVersion = serialized->get_string(UpdaterVersion_type_id, "");
+		FtpUserId = serialized->get_string(FtpUserId_type_id, "");
+		FtpUserPass = serialized->get_string(FtpUserPass_type_id, "");
 		FtpUpdaterInstallers = serialized->unwrap_into_many<rivet::ddl::generated::LunaFtpInstallerInfo>(FtpUpdaterInstallers_type_id);
 		FtpHavokInstallers = serialized->unwrap_into_many<rivet::ddl::generated::LunaFtpInstallerInfo>(FtpHavokInstallers_type_id);
 		FtpWinExtInstallers = serialized->unwrap_into_many<rivet::ddl::generated::LunaFtpInstallerInfo>(FtpWinExtInstallers_type_id);
@@ -28,7 +28,7 @@ namespace rivet::ddl::generated {
 		FtpProjects = serialized->unwrap_into_many<rivet::ddl::generated::LunaFtpProjectConfigFile>(FtpProjects_type_id);
 		FtpBranches = serialized->get_strings(FtpBranches_type_id);
 		FtpToolsPackages = serialized->unwrap_into_many<rivet::ddl::generated::LunaFtpToolsPackageConfigFile>(FtpToolsPackages_type_id);
-		FtpLatestToolsPackage = serialized->get_int32(FtpLatestToolsPackage_type_id); 
+		FtpLatestToolsPackage = serialized->get_int32(FtpLatestToolsPackage_type_id, -1); 
 	}
 
 	[[nodiscard]] auto

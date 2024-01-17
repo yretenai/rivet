@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ShrubberyRampUpStartEvent::ShrubberyRampUpStartEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		ApplyInstantly = serialized->get_bool(ApplyInstantly_type_id); 
+		ApplyInstantly = serialized->get_bool(ApplyInstantly_type_id, false); 
 	}
 
 	[[nodiscard]] auto

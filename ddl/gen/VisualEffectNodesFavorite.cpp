@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	VisualEffectNodesFavorite::VisualEffectNodesFavorite([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		KeyFrameType = serialized->get_enum<rivet::ddl::generated::KeyFrameType>(KeyFrameType_type_id, rivet::ddl::generated::KeyFrameType_values);
-		RenderStyle = serialized->get_enum<rivet::ddl::generated::RenderStyle>(RenderStyle_type_id, rivet::ddl::generated::RenderStyle_values);
-		SymbolName = serialized->get_string(SymbolName_type_id);
-		TransformDirection = serialized->get_int32(TransformDirection_type_id); 
+		KeyFrameType = serialized->get_enum<rivet::ddl::generated::KeyFrameType>(KeyFrameType_type_id, rivet::ddl::generated::KeyFrameType_values, rivet::ddl::generated::KeyFrameType::Float);
+		RenderStyle = serialized->get_enum<rivet::ddl::generated::RenderStyle>(RenderStyle_type_id, rivet::ddl::generated::RenderStyle_values, rivet::ddl::generated::RenderStyle::SingleQuad);
+		SymbolName = serialized->get_string(SymbolName_type_id, {});
+		TransformDirection = serialized->get_int32(TransformDirection_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

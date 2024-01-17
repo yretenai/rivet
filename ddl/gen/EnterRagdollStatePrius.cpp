@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	EnterRagdollStatePrius::EnterRagdollStatePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ScriptedShotEffectBasePrius(serialized) {
-		Impulse = serialized->get_float(Impulse_type_id);
-		LifeTime = serialized->get_float(LifeTime_type_id); 
+		Impulse = serialized->get_float(Impulse_type_id, 15.000000);
+		LifeTime = serialized->get_float(LifeTime_type_id, 2.000000); 
 	}
 
 	[[nodiscard]] auto

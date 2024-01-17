@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	UseTurretOfferPrius::UseTurretOfferPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ProximityOfferPrius(serialized) {
-		ItemConfig = serialized->get_string(ItemConfig_type_id); 
+		ItemConfig = serialized->get_string(ItemConfig_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

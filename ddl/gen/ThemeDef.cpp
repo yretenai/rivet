@@ -12,16 +12,16 @@
 
 namespace rivet::ddl::generated {
 	ThemeDef::ThemeDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		FontName = serialized->get_string(FontName_type_id);
-		FontSize = serialized->get_float(FontSize_type_id);
-		UseSingleIconColor = serialized->get_bool(UseSingleIconColor_type_id);
-		RemapIconColors = serialized->get_bool(RemapIconColors_type_id);
-		IconColorSpec = serialized->get_string(IconColorSpec_type_id);
+		FontName = serialized->get_string(FontName_type_id, {});
+		FontSize = serialized->get_float(FontSize_type_id, 0.000000);
+		UseSingleIconColor = serialized->get_bool(UseSingleIconColor_type_id, false);
+		RemapIconColors = serialized->get_bool(RemapIconColors_type_id, false);
+		IconColorSpec = serialized->get_string(IconColorSpec_type_id, {});
 		BasePalette = serialized->unwrap_into<rivet::ddl::generated::ThemeBasePalette>(BasePalette_type_id);
 		CustomColors = serialized->unwrap_into_many<rivet::ddl::generated::ThemeCustomColor>(CustomColors_type_id);
 		CustomPalette = serialized->unwrap_into_many<rivet::ddl::generated::ThemeCustomColor>(CustomPalette_type_id);
 		ColorDefs = serialized->unwrap_into_many<rivet::ddl::generated::ThemeColorDef>(ColorDefs_type_id);
-		IsHighContrast = serialized->get_bool(IsHighContrast_type_id);
+		IsHighContrast = serialized->get_bool(IsHighContrast_type_id, false);
 		WidgetPalettes = serialized->unwrap_into_many<rivet::ddl::generated::ThemeWidgetPalette>(WidgetPalettes_type_id); 
 	}
 

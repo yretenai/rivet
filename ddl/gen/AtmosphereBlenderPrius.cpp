@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	AtmosphereBlenderPrius::AtmosphereBlenderPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		StartActive = serialized->get_bool(StartActive_type_id);
-		SourceAtmosphere = serialized->get_string(SourceAtmosphere_type_id);
-		DestinationAtmosphere = serialized->get_string(DestinationAtmosphere_type_id);
-		BlendFieldCompletePercent = serialized->get_float(BlendFieldCompletePercent_type_id);
-		ForceSourceAtmosphere = serialized->get_bool(ForceSourceAtmosphere_type_id); 
+		StartActive = serialized->get_bool(StartActive_type_id, true);
+		SourceAtmosphere = serialized->get_string(SourceAtmosphere_type_id, {});
+		DestinationAtmosphere = serialized->get_string(DestinationAtmosphere_type_id, {});
+		BlendFieldCompletePercent = serialized->get_float(BlendFieldCompletePercent_type_id, 0.000000);
+		ForceSourceAtmosphere = serialized->get_bool(ForceSourceAtmosphere_type_id, false); 
 	}
 
 	[[nodiscard]] auto

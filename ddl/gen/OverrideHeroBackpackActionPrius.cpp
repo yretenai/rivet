@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	OverrideHeroBackpackActionPrius::OverrideHeroBackpackActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		HasBackpack = serialized->get_bool(HasBackpack_type_id);
-		OverrideBackpackConfig = serialized->get_string(OverrideBackpackConfig_type_id);
-		ClearOnZoneUnload = serialized->get_bool(ClearOnZoneUnload_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Hero);
+		HasBackpack = serialized->get_bool(HasBackpack_type_id, true);
+		OverrideBackpackConfig = serialized->get_string(OverrideBackpackConfig_type_id, {});
+		ClearOnZoneUnload = serialized->get_bool(ClearOnZoneUnload_type_id, true); 
 	}
 
 	[[nodiscard]] auto

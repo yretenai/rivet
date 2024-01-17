@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	CaptureGridInfo::CaptureGridInfo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		LightbinFullPath = serialized->get_string(LightbinFullPath_type_id);
-		GBufferPath = serialized->get_string(GBufferPath_type_id);
+		LightbinFullPath = serialized->get_string(LightbinFullPath_type_id, {});
+		GBufferPath = serialized->get_string(GBufferPath_type_id, {});
 		Position = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Position_type_id); 
 	}
 

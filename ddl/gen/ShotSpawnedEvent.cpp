@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ShotSpawnedEvent::ShotSpawnedEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		ShowReticle = serialized->get_bool(ShowReticle_type_id); 
+		ShowReticle = serialized->get_bool(ShowReticle_type_id, true); 
 	}
 
 	[[nodiscard]] auto

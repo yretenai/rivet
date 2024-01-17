@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	HoverbootStartEvent::HoverbootStartEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		IsForHoverbootState = serialized->get_bool(IsForHoverbootState_type_id); 
+		IsForHoverbootState = serialized->get_bool(IsForHoverbootState_type_id, false); 
 	}
 
 	[[nodiscard]] auto

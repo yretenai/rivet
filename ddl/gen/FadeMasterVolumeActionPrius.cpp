@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	FadeMasterVolumeActionPrius::FadeMasterVolumeActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		FadeTime = serialized->get_float(FadeTime_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Sound);
+		FadeTime = serialized->get_float(FadeTime_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

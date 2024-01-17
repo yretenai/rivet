@@ -9,12 +9,12 @@
 
 namespace rivet::ddl::generated {
 	MovingLevelPrius::MovingLevelPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		InitialTile = serialized->get_uint64(InitialTile_type_id);
-		FinalTile = serialized->get_uint64(FinalTile_type_id);
+		InitialTile = serialized->get_uint64(InitialTile_type_id, 0);
+		FinalTile = serialized->get_uint64(FinalTile_type_id, 0);
 		TileLists = serialized->unwrap_into_many<rivet::ddl::generated::MovingLevelTileList>(TileLists_type_id);
-		MaxSpeed = serialized->get_float(MaxSpeed_type_id);
-		Accel = serialized->get_float(Accel_type_id);
-		Decel = serialized->get_float(Decel_type_id); 
+		MaxSpeed = serialized->get_float(MaxSpeed_type_id, 0.000000);
+		Accel = serialized->get_float(Accel_type_id, 0.000000);
+		Decel = serialized->get_float(Decel_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	GameAudioStateChangedEvent::GameAudioStateChangedEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		OldState = serialized->get_enum<rivet::ddl::generated::xf2f903d3>(OldState_type_id, rivet::ddl::generated::xf2f903d3_values);
-		NewState = serialized->get_enum<rivet::ddl::generated::xf2f903d3>(NewState_type_id, rivet::ddl::generated::xf2f903d3_values); 
+		OldState = serialized->get_enum<rivet::ddl::generated::xf2f903d3>(OldState_type_id, rivet::ddl::generated::xf2f903d3_values, rivet::ddl::generated::xf2f903d3::None);
+		NewState = serialized->get_enum<rivet::ddl::generated::xf2f903d3>(NewState_type_id, rivet::ddl::generated::xf2f903d3_values, rivet::ddl::generated::xf2f903d3::None); 
 	}
 
 	[[nodiscard]] auto

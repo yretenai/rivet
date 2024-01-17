@@ -10,13 +10,13 @@
 
 namespace rivet::ddl::generated {
 	AnimActorChunkData::AnimActorChunkData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): AnimChunkData(serialized) {
-		ActorAsset = serialized->get_string(ActorAsset_type_id);
-		LookName = serialized->get_string(LookName_type_id);
-		SpawnJointName = serialized->get_string(SpawnJointName_type_id);
-		Lifetime = serialized->get_float(Lifetime_type_id);
-		MinSpeed = serialized->get_float(MinSpeed_type_id);
-		MaxSpeed = serialized->get_float(MaxSpeed_type_id);
-		ConduitAsset = serialized->get_string(ConduitAsset_type_id);
+		ActorAsset = serialized->get_string(ActorAsset_type_id, {});
+		LookName = serialized->get_string(LookName_type_id, {});
+		SpawnJointName = serialized->get_string(SpawnJointName_type_id, {});
+		Lifetime = serialized->get_float(Lifetime_type_id, 3.000000);
+		MinSpeed = serialized->get_float(MinSpeed_type_id, 5.000000);
+		MaxSpeed = serialized->get_float(MaxSpeed_type_id, 5.000000);
+		ConduitAsset = serialized->get_string(ConduitAsset_type_id, {});
 		RotationalSpeedX = serialized->unwrap_into<rivet::ddl::generated::AnimChunkRange>(RotationalSpeedX_type_id);
 		RotationalSpeedY = serialized->unwrap_into<rivet::ddl::generated::AnimChunkRange>(RotationalSpeedY_type_id);
 		RotationalSpeedZ = serialized->unwrap_into<rivet::ddl::generated::AnimChunkRange>(RotationalSpeedZ_type_id);

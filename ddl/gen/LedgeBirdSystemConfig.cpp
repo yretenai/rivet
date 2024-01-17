@@ -11,20 +11,20 @@
 
 namespace rivet::ddl::generated {
 	LedgeBirdSystemConfig::LedgeBirdSystemConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		MaxHeroSpeed = serialized->get_float(MaxHeroSpeed_type_id);
-		StopSpawnDistance = serialized->get_float(StopSpawnDistance_type_id);
-		MinSpawnDistance = serialized->get_float(MinSpawnDistance_type_id);
-		MaxSpawnDistance = serialized->get_float(MaxSpawnDistance_type_id);
-		LedgeSpawnCooldown = serialized->get_float(LedgeSpawnCooldown_type_id);
-		MaxSpawnedFlocks = serialized->get_int32(MaxSpawnedFlocks_type_id);
+		MaxHeroSpeed = serialized->get_float(MaxHeroSpeed_type_id, 30.000000);
+		StopSpawnDistance = serialized->get_float(StopSpawnDistance_type_id, 30.000000);
+		MinSpawnDistance = serialized->get_float(MinSpawnDistance_type_id, 40.000000);
+		MaxSpawnDistance = serialized->get_float(MaxSpawnDistance_type_id, 90.000000);
+		LedgeSpawnCooldown = serialized->get_float(LedgeSpawnCooldown_type_id, 0.500000);
+		MaxSpawnedFlocks = serialized->get_int32(MaxSpawnedFlocks_type_id, 5);
 		SpawnQueryDimensions = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(SpawnQueryDimensions_type_id);
-		CulledLedgeDespawnTime = serialized->get_float(CulledLedgeDespawnTime_type_id);
-		OffscreenFleeDespawnTime = serialized->get_float(OffscreenFleeDespawnTime_type_id);
-		FleeDistance = serialized->get_float(FleeDistance_type_id);
-		FleeDistanceCoeffY = serialized->get_float(FleeDistanceCoeffY_type_id);
-		InitialLoadDelay = serialized->get_float(InitialLoadDelay_type_id);
-		MinLedgeRespawnTime = serialized->get_float(MinLedgeRespawnTime_type_id);
-		FleeFromPulses = serialized->get_bool(FleeFromPulses_type_id);
+		CulledLedgeDespawnTime = serialized->get_float(CulledLedgeDespawnTime_type_id, 3.000000);
+		OffscreenFleeDespawnTime = serialized->get_float(OffscreenFleeDespawnTime_type_id, 1.000000);
+		FleeDistance = serialized->get_float(FleeDistance_type_id, 15.000000);
+		FleeDistanceCoeffY = serialized->get_float(FleeDistanceCoeffY_type_id, 2.000000);
+		InitialLoadDelay = serialized->get_float(InitialLoadDelay_type_id, 10.000000);
+		MinLedgeRespawnTime = serialized->get_float(MinLedgeRespawnTime_type_id, 10.000000);
+		FleeFromPulses = serialized->get_bool(FleeFromPulses_type_id, true);
 		PulseFlockTargetPrius = serialized->unwrap_into<rivet::ddl::generated::DimensionalPulseTargetFlockPrius>(PulseFlockTargetPrius_type_id);
 		BirdTypes = serialized->unwrap_into_many<rivet::ddl::generated::LedgeBirdType>(BirdTypes_type_id); 
 	}

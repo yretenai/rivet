@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	MoverLandedEvent::MoverLandedEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		GroundMaterial = serialized->get_enum<rivet::ddl::generated::x10b3c4cf>(GroundMaterial_type_id, rivet::ddl::generated::x10b3c4cf_values); 
+		GroundMaterial = serialized->get_enum<rivet::ddl::generated::x10b3c4cf>(GroundMaterial_type_id, rivet::ddl::generated::x10b3c4cf_values, rivet::ddl::generated::x10b3c4cf::None); 
 	}
 
 	[[nodiscard]] auto

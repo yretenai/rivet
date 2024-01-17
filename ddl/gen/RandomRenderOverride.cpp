@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	RandomRenderOverride::RandomRenderOverride([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Name = serialized->get_string(Name_type_id);
-		MinValue = serialized->get_float(MinValue_type_id);
-		MaxValue = serialized->get_float(MaxValue_type_id); 
+		Name = serialized->get_string(Name_type_id, {});
+		MinValue = serialized->get_float(MinValue_type_id, 0.000000);
+		MaxValue = serialized->get_float(MaxValue_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

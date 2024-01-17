@@ -12,8 +12,8 @@
 
 namespace rivet::ddl::generated {
 	WeakspotPrius::WeakspotPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): DamageModifierIncomingPrius(serialized) {
-		DamageScale = serialized->get_float(DamageScale_type_id);
-		AddTargetLocation = serialized->get_bool(AddTargetLocation_type_id); 
+		DamageScale = serialized->get_float(DamageScale_type_id, 1.000000);
+		AddTargetLocation = serialized->get_bool(AddTargetLocation_type_id, false); 
 	}
 
 	[[nodiscard]] auto

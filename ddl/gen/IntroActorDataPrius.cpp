@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	IntroActorDataPrius::IntroActorDataPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): IntroDataPrius(serialized) {
-		IntroActor = serialized->get_uint64(IntroActor_type_id); 
+		IntroActor = serialized->get_uint64(IntroActor_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

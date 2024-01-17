@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ShotNailGunPrius::ShotNailGunPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BasicBulletPrius(serialized) {
-		MaxHitCount = serialized->get_int32(MaxHitCount_type_id); 
+		MaxHitCount = serialized->get_int32(MaxHitCount_type_id, 5); 
 	}
 
 	[[nodiscard]] auto

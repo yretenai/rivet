@@ -9,19 +9,19 @@
 
 namespace rivet::ddl::generated {
 	OrderedListUIActionPrius::OrderedListUIActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Lists);
 		WindowPosition = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(WindowPosition_type_id);
-		WindowPosition3D = serialized->get_bool(WindowPosition3D_type_id);
+		WindowPosition3D = serialized->get_bool(WindowPosition3D_type_id, false);
 		WindowSize = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(WindowSize_type_id);
-		NumColumns = serialized->get_int32(NumColumns_type_id);
-		ItemWidth = serialized->get_int32(ItemWidth_type_id);
-		ItemHeight = serialized->get_int32(ItemHeight_type_id);
-		IndexNumbers = serialized->get_bool(IndexNumbers_type_id);
-		LabelType = serialized->get_enum<rivet::ddl::generated::x940d80bd>(LabelType_type_id, rivet::ddl::generated::x940d80bd_values);
-		AutoFocus = serialized->get_bool(AutoFocus_type_id);
-		ShowTitlebar = serialized->get_bool(ShowTitlebar_type_id);
-		AllowResize = serialized->get_bool(AllowResize_type_id);
-		AllowReposition = serialized->get_bool(AllowReposition_type_id); 
+		NumColumns = serialized->get_int32(NumColumns_type_id, 1);
+		ItemWidth = serialized->get_int32(ItemWidth_type_id, 0);
+		ItemHeight = serialized->get_int32(ItemHeight_type_id, 0);
+		IndexNumbers = serialized->get_bool(IndexNumbers_type_id, false);
+		LabelType = serialized->get_enum<rivet::ddl::generated::x940d80bd>(LabelType_type_id, rivet::ddl::generated::x940d80bd_values, rivet::ddl::generated::x940d80bd::String);
+		AutoFocus = serialized->get_bool(AutoFocus_type_id, false);
+		ShowTitlebar = serialized->get_bool(ShowTitlebar_type_id, true);
+		AllowResize = serialized->get_bool(AllowResize_type_id, true);
+		AllowReposition = serialized->get_bool(AllowReposition_type_id, true); 
 	}
 
 	[[nodiscard]] auto

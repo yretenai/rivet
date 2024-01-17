@@ -10,12 +10,12 @@
 
 namespace rivet::ddl::generated {
 	ScriptedDevstatsEvent::ScriptedDevstatsEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		EventId = serialized->get_string(EventId_type_id);
-		ScriptedEventType = serialized->get_string(ScriptedEventType_type_id);
-		String1 = serialized->get_string(String1_type_id);
-		String2 = serialized->get_string(String2_type_id);
-		Num1 = serialized->get_float(Num1_type_id);
-		Num2 = serialized->get_float(Num2_type_id);
+		EventId = serialized->get_string(EventId_type_id, {});
+		ScriptedEventType = serialized->get_string(ScriptedEventType_type_id, {});
+		String1 = serialized->get_string(String1_type_id, {});
+		String2 = serialized->get_string(String2_type_id, {});
+		Num1 = serialized->get_float(Num1_type_id, 0.000000);
+		Num2 = serialized->get_float(Num2_type_id, 0.000000);
 		PlayerPosInfo = serialized->unwrap_into<rivet::ddl::generated::DevstatsPlayerPositionInfo>(PlayerPosInfo_type_id);
 		PrimarySegmentInfo = serialized->unwrap_into<rivet::ddl::generated::DevstatsPrimarySegmentInfo>(PrimarySegmentInfo_type_id); 
 	}

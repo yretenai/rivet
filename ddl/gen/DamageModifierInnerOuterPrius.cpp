@@ -11,7 +11,7 @@
 namespace rivet::ddl::generated {
 	DamageModifierInnerOuterPrius::DamageModifierInnerOuterPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): DamageModifierOutgoingPrius(serialized) {
 		DamageData = serialized->unwrap_into<rivet::ddl::generated::DamageInnerOuterData>(DamageData_type_id);
-		RequestID = serialized->get_uint32(RequestID_type_id); 
+		RequestID = serialized->get_uint32(RequestID_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

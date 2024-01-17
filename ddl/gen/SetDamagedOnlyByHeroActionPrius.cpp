@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	SetDamagedOnlyByHeroActionPrius::SetDamagedOnlyByHeroActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		DisableKnockbacks = serialized->get_bool(DisableKnockbacks_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Health);
+		DisableKnockbacks = serialized->get_bool(DisableKnockbacks_type_id, false); 
 	}
 
 	[[nodiscard]] auto

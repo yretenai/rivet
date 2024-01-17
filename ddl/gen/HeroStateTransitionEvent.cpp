@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	HeroStateTransitionEvent::HeroStateTransitionEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		PreviousState = serialized->get_string(PreviousState_type_id);
-		NextState = serialized->get_string(NextState_type_id); 
+		PreviousState = serialized->get_string(PreviousState_type_id, {});
+		NextState = serialized->get_string(NextState_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	AreaLoadedTriggerPrius::AreaLoadedTriggerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BaseCustomOverlayTriggerPrius(serialized) {
-		AreaName = serialized->get_string(AreaName_type_id);
-		ExclusivelyLoaded = serialized->get_bool(ExclusivelyLoaded_type_id); 
+		AreaName = serialized->get_string(AreaName_type_id, {});
+		ExclusivelyLoaded = serialized->get_bool(ExclusivelyLoaded_type_id, true); 
 	}
 
 	[[nodiscard]] auto

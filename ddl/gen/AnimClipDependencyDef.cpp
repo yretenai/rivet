@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	AnimClipDependencyDef::AnimClipDependencyDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AnimSetVersionHash = serialized->get_uint32(AnimSetVersionHash_type_id);
-		AnimClipContentHash = serialized->get_uint32(AnimClipContentHash_type_id);
-		AnimClipSourceFilePath = serialized->get_string(AnimClipSourceFilePath_type_id);
-		AnimClipSourceTimeStamp = serialized->get_uint64(AnimClipSourceTimeStamp_type_id); 
+		AnimSetVersionHash = serialized->get_uint32(AnimSetVersionHash_type_id, 0);
+		AnimClipContentHash = serialized->get_uint32(AnimClipContentHash_type_id, 0);
+		AnimClipSourceFilePath = serialized->get_string(AnimClipSourceFilePath_type_id, {});
+		AnimClipSourceTimeStamp = serialized->get_uint64(AnimClipSourceTimeStamp_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

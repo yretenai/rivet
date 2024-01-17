@@ -10,8 +10,8 @@
 namespace rivet::ddl::generated {
 	CollectionDef::CollectionDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		VaultMetaData = serialized->unwrap_into<rivet::ddl::generated::VaultMetaData>(VaultMetaData_type_id);
-		IconPath = serialized->get_string(IconPath_type_id);
-		Type = serialized->get_enum<rivet::ddl::generated::x9b56bf2d>(Type_type_id, rivet::ddl::generated::x9b56bf2d_values);
+		IconPath = serialized->get_string(IconPath_type_id, "");
+		Type = serialized->get_enum<rivet::ddl::generated::x9b56bf2d>(Type_type_id, rivet::ddl::generated::x9b56bf2d_values, rivet::ddl::generated::x9b56bf2d::Collection);
 		Paths = serialized->get_strings(Paths_type_id);
 		CustomSearch = serialized->get_field(CustomSearch_type_id); 
 	}

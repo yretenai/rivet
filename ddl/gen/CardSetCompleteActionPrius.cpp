@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	CardSetCompleteActionPrius::CardSetCompleteActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		CardSet = serialized->get_enum<rivet::ddl::generated::xa57aac73>(CardSet_type_id, rivet::ddl::generated::xa57aac73_values); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Inventory);
+		CardSet = serialized->get_enum<rivet::ddl::generated::xa57aac73>(CardSet_type_id, rivet::ddl::generated::xa57aac73_values, rivet::ddl::generated::xa57aac73::Veldin); 
 	}
 
 	[[nodiscard]] auto

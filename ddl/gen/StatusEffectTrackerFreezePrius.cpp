@@ -9,12 +9,12 @@
 
 namespace rivet::ddl::generated {
 	StatusEffectTrackerFreezePrius::StatusEffectTrackerFreezePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): StatusEffectTrackerBasePrius(serialized) {
-		IntroAnim = serialized->get_string(IntroAnim_type_id);
-		LoopAnim = serialized->get_string(LoopAnim_type_id);
-		BreakOutAnim = serialized->get_string(BreakOutAnim_type_id);
-		DeathAnim = serialized->get_string(DeathAnim_type_id);
-		IceActor = serialized->get_string(IceActor_type_id);
-		IceAttachLocator = serialized->get_string(IceAttachLocator_type_id); 
+		IntroAnim = serialized->get_string(IntroAnim_type_id, "Frozen_Intro");
+		LoopAnim = serialized->get_string(LoopAnim_type_id, "Frozen_Loop");
+		BreakOutAnim = serialized->get_string(BreakOutAnim_type_id, "Frozen_Breakout");
+		DeathAnim = serialized->get_string(DeathAnim_type_id, "Death_Ice");
+		IceActor = serialized->get_string(IceActor_type_id, {});
+		IceAttachLocator = serialized->get_string(IceAttachLocator_type_id, "igLoc_body_prop"); 
 	}
 
 	[[nodiscard]] auto

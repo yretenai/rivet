@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	AimAssistCurveData::AimAssistCurveData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AimAssistCurve = serialized->get_string(AimAssistCurve_type_id); 
+		AimAssistCurve = serialized->get_string(AimAssistCurve_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

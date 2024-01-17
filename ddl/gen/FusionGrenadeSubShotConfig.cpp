@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	FusionGrenadeSubShotConfig::FusionGrenadeSubShotConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		SubShotActor = serialized->get_string(SubShotActor_type_id);
+		SubShotActor = serialized->get_string(SubShotActor_type_id, {});
 		ShotPrius = serialized->unwrap_into<rivet::ddl::generated::FusionGrenadeSubShotPrius>(ShotPrius_type_id); 
 	}
 

@@ -12,9 +12,9 @@
 namespace rivet::ddl::generated {
 	PirateChallengeSquence::PirateChallengeSquence([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Welcome = serialized->unwrap_into_many<rivet::ddl::generated::PirateChallengeWelcomeElement>(Welcome_type_id);
-		PostWelcomeDelay = serialized->get_float(PostWelcomeDelay_type_id);
+		PostWelcomeDelay = serialized->get_float(PostWelcomeDelay_type_id, 3.000000);
 		Explanation = serialized->unwrap_into<rivet::ddl::generated::PirateChallengeElement>(Explanation_type_id);
-		PostExplanationDelay = serialized->get_float(PostExplanationDelay_type_id);
+		PostExplanationDelay = serialized->get_float(PostExplanationDelay_type_id, 3.000000);
 		Lines = serialized->unwrap_into_many<rivet::ddl::generated::PirateChallengeSongElement>(Lines_type_id);
 		Success = serialized->unwrap_into<rivet::ddl::generated::PirateChallengeElement>(Success_type_id);
 		Failure = serialized->unwrap_into<rivet::ddl::generated::PirateChallengeElement>(Failure_type_id); 

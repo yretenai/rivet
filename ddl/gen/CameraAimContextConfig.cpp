@@ -11,17 +11,17 @@
 
 namespace rivet::ddl::generated {
 	CameraAimContextConfig::CameraAimContextConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		FieldOfViewStand = serialized->get_float(FieldOfViewStand_type_id);
-		StandPivotHeight = serialized->get_float(StandPivotHeight_type_id);
-		TargetSpeedFactorDist = serialized->get_float(TargetSpeedFactorDist_type_id);
-		TargetSpeedFactorMinSpeed = serialized->get_float(TargetSpeedFactorMinSpeed_type_id);
-		TargetSpeedFactorMaxSpeed = serialized->get_float(TargetSpeedFactorMaxSpeed_type_id);
+		FieldOfViewStand = serialized->get_float(FieldOfViewStand_type_id, 75.900002);
+		StandPivotHeight = serialized->get_float(StandPivotHeight_type_id, 1.600000);
+		TargetSpeedFactorDist = serialized->get_float(TargetSpeedFactorDist_type_id, 0.000000);
+		TargetSpeedFactorMinSpeed = serialized->get_float(TargetSpeedFactorMinSpeed_type_id, 0.000000);
+		TargetSpeedFactorMaxSpeed = serialized->get_float(TargetSpeedFactorMaxSpeed_type_id, 0.000000);
 		StandOffsetLevel = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(StandOffsetLevel_type_id);
 		StandOffsetDown = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(StandOffsetDown_type_id);
 		StandOffsetUp = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(StandOffsetUp_type_id);
 		BlendIn = serialized->unwrap_into<rivet::ddl::generated::CameraAimContextBlend>(BlendIn_type_id);
 		BlendOut = serialized->unwrap_into<rivet::ddl::generated::CameraAimContextBlend>(BlendOut_type_id);
-		OverridesHeroConfig = serialized->get_bool(OverridesHeroConfig_type_id); 
+		OverridesHeroConfig = serialized->get_bool(OverridesHeroConfig_type_id, false); 
 	}
 
 	[[nodiscard]] auto

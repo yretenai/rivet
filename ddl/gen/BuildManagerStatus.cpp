@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	BuildManagerStatus::BuildManagerStatus([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		PausedByUser = serialized->get_bool(PausedByUser_type_id);
-		PausedUpdatingBuilders = serialized->get_bool(PausedUpdatingBuilders_type_id);
-		BackgroundBuildPausedForTracker = serialized->get_bool(BackgroundBuildPausedForTracker_type_id);
+		PausedByUser = serialized->get_bool(PausedByUser_type_id, false);
+		PausedUpdatingBuilders = serialized->get_bool(PausedUpdatingBuilders_type_id, false);
+		BackgroundBuildPausedForTracker = serialized->get_bool(BackgroundBuildPausedForTracker_type_id, false);
 		BackgroundPlatforms = serialized->get_strings(BackgroundPlatforms_type_id); 
 	}
 

@@ -10,17 +10,17 @@
 
 namespace rivet::ddl::generated {
 	BreakableComponentPrius::BreakableComponentPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BreakableBasePrius(serialized) {
-		BrokenModel = serialized->get_string(BrokenModel_type_id);
-		BrokenAnimSet = serialized->get_string(BrokenAnimSet_type_id);
+		BrokenModel = serialized->get_string(BrokenModel_type_id, {});
+		BrokenAnimSet = serialized->get_string(BrokenAnimSet_type_id, {});
 		BrokenNoncollidingChunkModels = serialized->unwrap_into_many<rivet::ddl::generated::SpawnableChunk>(BrokenNoncollidingChunkModels_type_id);
 		BrokenChunkModels = serialized->get_strings(BrokenChunkModels_type_id);
 		BrokenDebrisModels = serialized->get_strings(BrokenDebrisModels_type_id);
-		DestroyedModel = serialized->get_string(DestroyedModel_type_id);
-		DestroyedAnimSet = serialized->get_string(DestroyedAnimSet_type_id);
+		DestroyedModel = serialized->get_string(DestroyedModel_type_id, {});
+		DestroyedAnimSet = serialized->get_string(DestroyedAnimSet_type_id, {});
 		DestroyedNoncollidingChunkModels = serialized->unwrap_into_many<rivet::ddl::generated::SpawnableChunk>(DestroyedNoncollidingChunkModels_type_id);
 		DestroyedChunkModels = serialized->get_strings(DestroyedChunkModels_type_id);
 		DestroyedDebrisModels = serialized->get_strings(DestroyedDebrisModels_type_id);
-		DestroyedChunkConduit = serialized->get_string(DestroyedChunkConduit_type_id); 
+		DestroyedChunkConduit = serialized->get_string(DestroyedChunkConduit_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

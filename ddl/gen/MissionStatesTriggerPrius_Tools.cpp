@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	MissionStatesTriggerPrius_Tools::MissionStatesTriggerPrius_Tools([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): AbstractTriggerPrius_Tools(serialized) {
-		MissionName = serialized->get_string(MissionName_type_id);
-		MissionStates = serialized->get_bitset<rivet::ddl::generated::xa22c2a86>(MissionStates_type_id, rivet::ddl::generated::xa22c2a86_values); 
+		MissionName = serialized->get_string(MissionName_type_id, {});
+		MissionStates = serialized->get_bitset<rivet::ddl::generated::xa22c2a86>(MissionStates_type_id, rivet::ddl::generated::xa22c2a86_values, 12); 
 	}
 
 	[[nodiscard]] auto

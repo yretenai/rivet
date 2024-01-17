@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	FlockingVolumesMaxExceededDevstatsEvent::FlockingVolumesMaxExceededDevstatsEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		EventId = serialized->get_string(EventId_type_id);
-		Level = serialized->get_string(Level_type_id);
-		LocationType = serialized->get_enum<rivet::ddl::generated::x3947cf7f>(LocationType_type_id, rivet::ddl::generated::x3947cf7f_values);
-		RequiredMax = serialized->get_int32(RequiredMax_type_id); 
+		EventId = serialized->get_string(EventId_type_id, {});
+		Level = serialized->get_string(Level_type_id, {});
+		LocationType = serialized->get_enum<rivet::ddl::generated::x3947cf7f>(LocationType_type_id, rivet::ddl::generated::x3947cf7f_values, rivet::ddl::generated::x3947cf7f::FlockingVolume);
+		RequiredMax = serialized->get_int32(RequiredMax_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

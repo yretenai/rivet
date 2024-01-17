@@ -10,8 +10,8 @@
 namespace rivet::ddl::generated {
 	AssertPortalInfo::AssertPortalInfo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		PortalObjectActor = serialized->unwrap_into<rivet::ddl::generated::AssetReferenceDef>(PortalObjectActor_type_id);
-		IsOtherIP = serialized->get_bool(IsOtherIP_type_id);
-		WasUsed = serialized->get_bool(WasUsed_type_id); 
+		IsOtherIP = serialized->get_bool(IsOtherIP_type_id, false);
+		WasUsed = serialized->get_bool(WasUsed_type_id, false); 
 	}
 
 	[[nodiscard]] auto

@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	FocusJointChainDef::FocusJointChainDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		JointChainName = serialized->get_string(JointChainName_type_id);
-		StartJointName = serialized->get_string(StartJointName_type_id);
-		EndJointName = serialized->get_string(EndJointName_type_id); 
+		JointChainName = serialized->get_string(JointChainName_type_id, "");
+		StartJointName = serialized->get_string(StartJointName_type_id, "");
+		EndJointName = serialized->get_string(EndJointName_type_id, ""); 
 	}
 
 	[[nodiscard]] auto

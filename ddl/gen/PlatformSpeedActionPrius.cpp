@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	PlatformSpeedActionPrius::PlatformSpeedActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		Accel = serialized->get_float(Accel_type_id);
-		Decel = serialized->get_float(Decel_type_id);
-		Speed = serialized->get_float(Speed_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Interact);
+		Accel = serialized->get_float(Accel_type_id, -1.000000);
+		Decel = serialized->get_float(Decel_type_id, -1.000000);
+		Speed = serialized->get_float(Speed_type_id, -1.000000); 
 	}
 
 	[[nodiscard]] auto

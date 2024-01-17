@@ -9,21 +9,21 @@
 
 namespace rivet::ddl::generated {
 	VertexPaintingPref::VertexPaintingPref([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Red = serialized->get_float(Red_type_id);
-		Green = serialized->get_float(Green_type_id);
-		Blue = serialized->get_float(Blue_type_id);
-		Alpha = serialized->get_float(Alpha_type_id);
-		EnableRed = serialized->get_bool(EnableRed_type_id);
-		EnableGreen = serialized->get_bool(EnableGreen_type_id);
-		EnableBlue = serialized->get_bool(EnableBlue_type_id);
-		EnableAlpha = serialized->get_bool(EnableAlpha_type_id);
-		Radius = serialized->get_float(Radius_type_id);
-		FallOff = serialized->get_float(FallOff_type_id);
-		Pressure = serialized->get_float(Pressure_type_id);
-		ChannelDebug = serialized->get_enum<rivet::ddl::generated::xff467ac8>(ChannelDebug_type_id, rivet::ddl::generated::xff467ac8_values);
-		WheelControl = serialized->get_enum<rivet::ddl::generated::x2c6c1f8d>(WheelControl_type_id, rivet::ddl::generated::x2c6c1f8d_values);
-		MiddleClick = serialized->get_enum<rivet::ddl::generated::xa80d41ff>(MiddleClick_type_id, rivet::ddl::generated::xa80d41ff_values);
-		Resolution = serialized->get_enum<rivet::ddl::generated::x1678ea2f>(Resolution_type_id, rivet::ddl::generated::x1678ea2f_values);
+		Red = serialized->get_float(Red_type_id, 1.000000);
+		Green = serialized->get_float(Green_type_id, 1.000000);
+		Blue = serialized->get_float(Blue_type_id, 1.000000);
+		Alpha = serialized->get_float(Alpha_type_id, 1.000000);
+		EnableRed = serialized->get_bool(EnableRed_type_id, true);
+		EnableGreen = serialized->get_bool(EnableGreen_type_id, true);
+		EnableBlue = serialized->get_bool(EnableBlue_type_id, true);
+		EnableAlpha = serialized->get_bool(EnableAlpha_type_id, true);
+		Radius = serialized->get_float(Radius_type_id, 0.750000);
+		FallOff = serialized->get_float(FallOff_type_id, 0.350000);
+		Pressure = serialized->get_float(Pressure_type_id, 0.350000);
+		ChannelDebug = serialized->get_enum<rivet::ddl::generated::xff467ac8>(ChannelDebug_type_id, rivet::ddl::generated::xff467ac8_values, rivet::ddl::generated::xff467ac8::Off);
+		WheelControl = serialized->get_enum<rivet::ddl::generated::x2c6c1f8d>(WheelControl_type_id, rivet::ddl::generated::x2c6c1f8d_values, rivet::ddl::generated::x2c6c1f8d::Size);
+		MiddleClick = serialized->get_enum<rivet::ddl::generated::xa80d41ff>(MiddleClick_type_id, rivet::ddl::generated::xa80d41ff_values, rivet::ddl::generated::xa80d41ff::Fill_with_zero);
+		Resolution = serialized->get_enum<rivet::ddl::generated::x1678ea2f>(Resolution_type_id, rivet::ddl::generated::x1678ea2f_values, rivet::ddl::generated::x1678ea2f::ResHigh);
 		TerrainPaintingPref = serialized->unwrap_into<rivet::ddl::generated::TerrainPaintingPref>(TerrainPaintingPref_type_id); 
 	}
 

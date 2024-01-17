@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	HomingShotMotionGamePrius::HomingShotMotionGamePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): VariableSpeedShotMotionGamePrius(serialized) {
-		DefaultJoint = serialized->get_string(DefaultJoint_type_id);
-		NearbyCameraShake = serialized->get_string(NearbyCameraShake_type_id); 
+		DefaultJoint = serialized->get_string(DefaultJoint_type_id, "igLoc_spine");
+		NearbyCameraShake = serialized->get_string(NearbyCameraShake_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

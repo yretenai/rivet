@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	SetWeaponModCountActionPrius::SetWeaponModCountActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		WeaponConfig = serialized->get_string(WeaponConfig_type_id);
-		ModTileIndex = serialized->get_enum<rivet::ddl::generated::x1b1e7614>(ModTileIndex_type_id, rivet::ddl::generated::x1b1e7614_values);
-		ModCount = serialized->get_uint32(ModCount_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Weapon);
+		WeaponConfig = serialized->get_string(WeaponConfig_type_id, {});
+		ModTileIndex = serialized->get_enum<rivet::ddl::generated::x1b1e7614>(ModTileIndex_type_id, rivet::ddl::generated::x1b1e7614_values, rivet::ddl::generated::x1b1e7614::Empty);
+		ModCount = serialized->get_uint32(ModCount_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

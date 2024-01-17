@@ -13,7 +13,7 @@ namespace rivet::ddl::generated {
 		AttachedList = serialized->get_uint64s(AttachedList_type_id);
 		JointAttachList = serialized->unwrap_into_many<rivet::ddl::generated::JointAttachmentItem>(JointAttachList_type_id);
 		CurveAttachList = serialized->unwrap_into_many<rivet::ddl::generated::CurveAttachmentItem>(CurveAttachList_type_id);
-		DestroyAttachmentsOnDestroy = serialized->get_bool(DestroyAttachmentsOnDestroy_type_id); 
+		DestroyAttachmentsOnDestroy = serialized->get_bool(DestroyAttachmentsOnDestroy_type_id, false); 
 	}
 
 	[[nodiscard]] auto

@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	DecalExploderPrius::DecalExploderPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		CheckDistance = serialized->get_float(CheckDistance_type_id);
-		MaxAngle = serialized->get_float(MaxAngle_type_id);
-		UseDirection = serialized->get_enum<rivet::ddl::generated::xf356f148>(UseDirection_type_id, rivet::ddl::generated::xf356f148_values);
-		MaxDecals = serialized->get_uint8(MaxDecals_type_id);
-		DeathEventMustBeExplosive = serialized->get_bool(DeathEventMustBeExplosive_type_id);
-		DriverEvents = serialized->get_bitset<rivet::ddl::generated::x27b34de0>(DriverEvents_type_id, rivet::ddl::generated::x27b34de0_values); 
+		CheckDistance = serialized->get_float(CheckDistance_type_id, 1.000000);
+		MaxAngle = serialized->get_float(MaxAngle_type_id, 180.000000);
+		UseDirection = serialized->get_enum<rivet::ddl::generated::xf356f148>(UseDirection_type_id, rivet::ddl::generated::xf356f148_values, rivet::ddl::generated::xf356f148::Down);
+		MaxDecals = serialized->get_uint8(MaxDecals_type_id, 8);
+		DeathEventMustBeExplosive = serialized->get_bool(DeathEventMustBeExplosive_type_id, false);
+		DriverEvents = serialized->get_bitset<rivet::ddl::generated::x27b34de0>(DriverEvents_type_id, rivet::ddl::generated::x27b34de0_values, 5); 
 	}
 
 	[[nodiscard]] auto

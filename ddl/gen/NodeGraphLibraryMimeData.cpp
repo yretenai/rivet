@@ -11,7 +11,7 @@ namespace rivet::ddl::generated {
 	NodeGraphLibraryMimeData::NodeGraphLibraryMimeData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		FieldNames = serialized->get_strings(FieldNames_type_id);
 		GraphData = serialized->unwrap_into_many<rivet::ddl::generated::NodeGraphLibrarySubGraphData>(GraphData_type_id);
-		NodeGraphSymbolName = serialized->get_string(NodeGraphSymbolName_type_id); 
+		NodeGraphSymbolName = serialized->get_string(NodeGraphSymbolName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

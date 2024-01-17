@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	ModifyResult::ModifyResult([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Token = serialized->get_uint64(Token_type_id);
+		Token = serialized->get_uint64(Token_type_id, 0);
 		Error = serialized->get_field(Error_type_id);
-		LastChanged = serialized->get_string(LastChanged_type_id); 
+		LastChanged = serialized->get_string(LastChanged_type_id, ""); 
 	}
 
 	[[nodiscard]] auto

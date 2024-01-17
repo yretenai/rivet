@@ -13,13 +13,13 @@
 
 namespace rivet::ddl::generated {
 	POIConfigData::POIConfigData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		CoherentPOI = serialized->get_bool(CoherentPOI_type_id);
+		CoherentPOI = serialized->get_bool(CoherentPOI_type_id, true);
 		Icon = serialized->unwrap_into<rivet::ddl::generated::POIAttributeIconBase>(Icon_type_id);
-		Priority = serialized->get_enum<rivet::ddl::generated::xfb0b3aad>(Priority_type_id, rivet::ddl::generated::xfb0b3aad_values);
+		Priority = serialized->get_enum<rivet::ddl::generated::xfb0b3aad>(Priority_type_id, rivet::ddl::generated::xfb0b3aad_values, rivet::ddl::generated::xfb0b3aad::POIPriorityNormal);
 		EdgeMode = serialized->unwrap_into<rivet::ddl::generated::POIAttributeEdgeModeBase>(EdgeMode_type_id);
-		OffscreenIndicator = serialized->get_bool(OffscreenIndicator_type_id);
+		OffscreenIndicator = serialized->get_bool(OffscreenIndicator_type_id, false);
 		DistanceScaleMode = serialized->unwrap_into<rivet::ddl::generated::POIAttributeDistanceScaleBase>(DistanceScaleMode_type_id);
-		DistanceText = serialized->get_bool(DistanceText_type_id);
+		DistanceText = serialized->get_bool(DistanceText_type_id, false);
 		DistanceTextMode = serialized->unwrap_into<rivet::ddl::generated::POIAttributeDistanceTextBase>(DistanceTextMode_type_id); 
 	}
 

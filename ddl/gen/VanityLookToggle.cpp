@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	VanityLookToggle::VanityLookToggle([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Look = serialized->get_string(Look_type_id);
-		Toggle = serialized->get_bool(Toggle_type_id); 
+		Look = serialized->get_string(Look_type_id, {});
+		Toggle = serialized->get_bool(Toggle_type_id, true); 
 	}
 
 	[[nodiscard]] auto

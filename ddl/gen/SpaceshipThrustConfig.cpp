@@ -9,10 +9,10 @@
 
 namespace rivet::ddl::generated {
 	SpaceshipThrustConfig::SpaceshipThrustConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		ThrustFOV = serialized->get_float(ThrustFOV_type_id);
-		ThrustCameraOffset = serialized->get_float(ThrustCameraOffset_type_id);
-		ThrustOffsetDuration = serialized->get_float(ThrustOffsetDuration_type_id);
-		ThrustOffsetCurve = serialized->get_string(ThrustOffsetCurve_type_id);
+		ThrustFOV = serialized->get_float(ThrustFOV_type_id, 85.000000);
+		ThrustCameraOffset = serialized->get_float(ThrustCameraOffset_type_id, 0.000000);
+		ThrustOffsetDuration = serialized->get_float(ThrustOffsetDuration_type_id, 2.000000);
+		ThrustOffsetCurve = serialized->get_string(ThrustOffsetCurve_type_id, {});
 		ThrustCameraShake = serialized->unwrap_into<rivet::ddl::generated::CameraShakingData>(ThrustCameraShake_type_id); 
 	}
 

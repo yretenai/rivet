@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	SetWindowSizeInput::SetWindowSizeInput([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		X = serialized->get_int32(X_type_id);
-		Y = serialized->get_int32(Y_type_id);
-		Width = serialized->get_int32(Width_type_id);
-		Height = serialized->get_int32(Height_type_id); 
+		X = serialized->get_int32(X_type_id, 0);
+		Y = serialized->get_int32(Y_type_id, 0);
+		Width = serialized->get_int32(Width_type_id, 0);
+		Height = serialized->get_int32(Height_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

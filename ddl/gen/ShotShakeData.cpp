@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	ShotShakeData::ShotShakeData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ShakeEvent = serialized->get_enum<rivet::ddl::generated::x113c2f5c>(ShakeEvent_type_id, rivet::ddl::generated::x113c2f5c_values);
-		ShakeConfig = serialized->get_string(ShakeConfig_type_id);
-		InnerRadius = serialized->get_float(InnerRadius_type_id);
-		OuterRadius = serialized->get_float(OuterRadius_type_id);
-		LocalOnly = serialized->get_bool(LocalOnly_type_id); 
+		ShakeEvent = serialized->get_enum<rivet::ddl::generated::x113c2f5c>(ShakeEvent_type_id, rivet::ddl::generated::x113c2f5c_values, rivet::ddl::generated::x113c2f5c::On_Impact);
+		ShakeConfig = serialized->get_string(ShakeConfig_type_id, {});
+		InnerRadius = serialized->get_float(InnerRadius_type_id, -1.000000);
+		OuterRadius = serialized->get_float(OuterRadius_type_id, -1.000000);
+		LocalOnly = serialized->get_bool(LocalOnly_type_id, false); 
 	}
 
 	[[nodiscard]] auto

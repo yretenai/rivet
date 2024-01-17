@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	UBPTrophyUnlock::UBPTrophyUnlock([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		comparator = serialized->get_enum<rivet::ddl::generated::x1a26ec8e>(comparator_type_id, rivet::ddl::generated::x1a26ec8e_values);
-		targetValue = serialized->get_string(targetValue_type_id);
-		udsStatName = serialized->get_string(udsStatName_type_id);
-		isProgressive = serialized->get_bool(isProgressive_type_id); 
+		comparator = serialized->get_enum<rivet::ddl::generated::x1a26ec8e>(comparator_type_id, rivet::ddl::generated::x1a26ec8e_values, rivet::ddl::generated::x1a26ec8e::ge);
+		targetValue = serialized->get_string(targetValue_type_id, {});
+		udsStatName = serialized->get_string(udsStatName_type_id, {});
+		isProgressive = serialized->get_bool(isProgressive_type_id, false); 
 	}
 
 	[[nodiscard]] auto

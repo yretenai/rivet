@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	UserEquippedWeaponEvent::UserEquippedWeaponEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		WeaponName = serialized->get_string(WeaponName_type_id);
-		PrevWeaponName = serialized->get_string(PrevWeaponName_type_id); 
+		WeaponName = serialized->get_string(WeaponName_type_id, {});
+		PrevWeaponName = serialized->get_string(PrevWeaponName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

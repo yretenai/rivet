@@ -9,10 +9,10 @@
 
 namespace rivet::ddl::generated {
 	VendorWeaponInfo::VendorWeaponInfo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Class = serialized->get_string(Class_type_id);
-		Special = serialized->get_string(Special_type_id);
+		Class = serialized->get_string(Class_type_id, "UI_VENDOR_AUTOMATIC");
+		Special = serialized->get_string(Special_type_id, "none");
 		Stats = serialized->unwrap_into_many<rivet::ddl::generated::VendorWeaponStat>(Stats_type_id);
-		CustomStatName = serialized->get_string(CustomStatName_type_id); 
+		CustomStatName = serialized->get_string(CustomStatName_type_id, "UI_VENDOR_KNOCKBACK"); 
 	}
 
 	[[nodiscard]] auto

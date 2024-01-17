@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	HeroMeleeSmashConfig::HeroMeleeSmashConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MeleeSmashMinHeight = serialized->get_float(MeleeSmashMinHeight_type_id);
-		MeleeSmashDescendGravity = serialized->get_float(MeleeSmashDescendGravity_type_id);
-		MeleeSmashCameraShakeConfig = serialized->get_string(MeleeSmashCameraShakeConfig_type_id); 
+		MeleeSmashMinHeight = serialized->get_float(MeleeSmashMinHeight_type_id, 3.000000);
+		MeleeSmashDescendGravity = serialized->get_float(MeleeSmashDescendGravity_type_id, 200.000000);
+		MeleeSmashCameraShakeConfig = serialized->get_string(MeleeSmashCameraShakeConfig_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

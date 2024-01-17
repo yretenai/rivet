@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	EffectConduitMapping::EffectConduitMapping([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		BuiltValueStackSize = serialized->get_int32(BuiltValueStackSize_type_id);
-		AssetId64 = serialized->get_uint64(AssetId64_type_id);
+		BuiltValueStackSize = serialized->get_int32(BuiltValueStackSize_type_id, 0);
+		AssetId64 = serialized->get_uint64(AssetId64_type_id, 0);
 		Events = serialized->unwrap_into_many<rivet::ddl::generated::ECMEvent>(Events_type_id); 
 	}
 

@@ -10,11 +10,11 @@
 
 namespace rivet::ddl::generated {
 	MaterialInstEngineItem::MaterialInstEngineItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AssetPath = serialized->get_string(AssetPath_type_id);
+		AssetPath = serialized->get_string(AssetPath_type_id, {});
 		MaterialDef = serialized->unwrap_into<rivet::ddl::generated::MaterialDef>(MaterialDef_type_id);
 		Matrix = serialized->unwrap_into<rivet::ddl::generated::DDLMatrix4>(Matrix_type_id);
-		LiveUpdate = serialized->get_bool(LiveUpdate_type_id);
-		PreviewModelOverride = serialized->get_enum<rivet::ddl::generated::ModelInstType>(PreviewModelOverride_type_id, rivet::ddl::generated::ModelInstType_values); 
+		LiveUpdate = serialized->get_bool(LiveUpdate_type_id, false);
+		PreviewModelOverride = serialized->get_enum<rivet::ddl::generated::ModelInstType>(PreviewModelOverride_type_id, rivet::ddl::generated::ModelInstType_values, rivet::ddl::generated::ModelInstType::Model); 
 	}
 
 	[[nodiscard]] auto

@@ -10,16 +10,16 @@
 
 namespace rivet::ddl::generated {
 	BotLootDropPrius::BotLootDropPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Enabled = serialized->get_bool(Enabled_type_id);
-		DropLootForKillerType = serialized->get_enum<rivet::ddl::generated::xa7ea7084>(DropLootForKillerType_type_id, rivet::ddl::generated::xa7ea7084_values);
+		Enabled = serialized->get_bool(Enabled_type_id, true);
+		DropLootForKillerType = serialized->get_enum<rivet::ddl::generated::xa7ea7084>(DropLootForKillerType_type_id, rivet::ddl::generated::xa7ea7084_values, rivet::ddl::generated::xa7ea7084::Everybody);
 		LootData = serialized->unwrap_into<rivet::ddl::generated::CommonLootData>(LootData_type_id);
-		TypeOfOffset = serialized->get_enum<rivet::ddl::generated::xca7a7360>(TypeOfOffset_type_id, rivet::ddl::generated::xca7a7360_values);
+		TypeOfOffset = serialized->get_enum<rivet::ddl::generated::xca7a7360>(TypeOfOffset_type_id, rivet::ddl::generated::xca7a7360_values, rivet::ddl::generated::xca7a7360::NotUsed);
 		Offset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Offset_type_id);
-		MaxNumSpawns = serialized->get_int32(MaxNumSpawns_type_id);
-		LootBlossom = serialized->get_bool(LootBlossom_type_id);
-		MinLootSpeed = serialized->get_float(MinLootSpeed_type_id);
-		MaxLootSpeed = serialized->get_float(MaxLootSpeed_type_id);
-		NoPickupTime = serialized->get_float(NoPickupTime_type_id); 
+		MaxNumSpawns = serialized->get_int32(MaxNumSpawns_type_id, -1);
+		LootBlossom = serialized->get_bool(LootBlossom_type_id, true);
+		MinLootSpeed = serialized->get_float(MinLootSpeed_type_id, 8.000000);
+		MaxLootSpeed = serialized->get_float(MaxLootSpeed_type_id, 8.000000);
+		NoPickupTime = serialized->get_float(NoPickupTime_type_id, -1.000000); 
 	}
 
 	[[nodiscard]] auto

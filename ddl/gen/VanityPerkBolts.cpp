@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	VanityPerkBolts::VanityPerkBolts([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): VanityPerkBase(serialized) {
-		BoltMultSet = serialized->get_float(BoltMultSet_type_id);
-		BoltMultPiece = serialized->get_float(BoltMultPiece_type_id); 
+		BoltMultSet = serialized->get_float(BoltMultSet_type_id, 0.000000);
+		BoltMultPiece = serialized->get_float(BoltMultPiece_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

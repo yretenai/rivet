@@ -10,7 +10,7 @@
 namespace rivet::ddl::generated {
 	POIGameConfigData::POIGameConfigData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): POIConfigData(serialized) {
 		Outro = serialized->unwrap_into<rivet::ddl::generated::POIAttributeOutroBase>(Outro_type_id);
-		SymbolType = serialized->get_enum<rivet::ddl::generated::x942777d3>(SymbolType_type_id, rivet::ddl::generated::x942777d3_values); 
+		SymbolType = serialized->get_enum<rivet::ddl::generated::x942777d3>(SymbolType_type_id, rivet::ddl::generated::x942777d3_values, rivet::ddl::generated::x942777d3::Generic); 
 	}
 
 	[[nodiscard]] auto

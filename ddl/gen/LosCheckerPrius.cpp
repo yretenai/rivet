@@ -10,10 +10,10 @@
 
 namespace rivet::ddl::generated {
 	LosCheckerPrius::LosCheckerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Mode = serialized->get_enum<rivet::ddl::generated::xfcda154f>(Mode_type_id, rivet::ddl::generated::xfcda154f_values);
-		MaxRaycastsPerFrame = serialized->get_uint8(MaxRaycastsPerFrame_type_id);
-		RemoveIfInactive = serialized->get_bool(RemoveIfInactive_type_id);
-		InactiveAutoRemoveTime = serialized->get_float(InactiveAutoRemoveTime_type_id); 
+		Mode = serialized->get_enum<rivet::ddl::generated::xfcda154f>(Mode_type_id, rivet::ddl::generated::xfcda154f_values, rivet::ddl::generated::xfcda154f::BSphere);
+		MaxRaycastsPerFrame = serialized->get_uint8(MaxRaycastsPerFrame_type_id, 1);
+		RemoveIfInactive = serialized->get_bool(RemoveIfInactive_type_id, false);
+		InactiveAutoRemoveTime = serialized->get_float(InactiveAutoRemoveTime_type_id, 10.000000); 
 	}
 
 	[[nodiscard]] auto

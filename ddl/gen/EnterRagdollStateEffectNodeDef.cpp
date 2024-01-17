@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	EnterRagdollStateEffectNodeDef::EnterRagdollStateEffectNodeDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): NodalShotEffectNodeBaseDef(serialized) {
-		ActorType = serialized->get_enum<rivet::ddl::generated::x684c6439>(ActorType_type_id, rivet::ddl::generated::x684c6439_values);
+		ActorType = serialized->get_enum<rivet::ddl::generated::x684c6439>(ActorType_type_id, rivet::ddl::generated::x684c6439_values, rivet::ddl::generated::x684c6439::HitActor);
 		Impulse = serialized->unwrap_into<rivet::ddl::generated::InputPlugFloat>(Impulse_type_id);
 		Lifetime = serialized->unwrap_into<rivet::ddl::generated::InputPlugFloat>(Lifetime_type_id); 
 	}

@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	IconMapAccessibilityControl::IconMapAccessibilityControl([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): IconMapBase(serialized) {
-		AccessibilityControl = serialized->get_enum<rivet::ddl::generated::xbdfca5a1>(AccessibilityControl_type_id, rivet::ddl::generated::xbdfca5a1_values); 
+		AccessibilityControl = serialized->get_enum<rivet::ddl::generated::xbdfca5a1>(AccessibilityControl_type_id, rivet::ddl::generated::xbdfca5a1_values, rivet::ddl::generated::xbdfca5a1::SelectUp); 
 	}
 
 	[[nodiscard]] auto

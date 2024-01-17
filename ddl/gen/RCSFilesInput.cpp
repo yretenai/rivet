@@ -8,8 +8,8 @@
 namespace rivet::ddl::generated {
 	RCSFilesInput::RCSFilesInput([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Views = serialized->get_strings(Views_type_id);
-		MaxStats = serialized->get_int32(MaxStats_type_id);
-		ShowDeleted = serialized->get_bool(ShowDeleted_type_id); 
+		MaxStats = serialized->get_int32(MaxStats_type_id, -1);
+		ShowDeleted = serialized->get_bool(ShowDeleted_type_id, false); 
 	}
 
 	[[nodiscard]] auto

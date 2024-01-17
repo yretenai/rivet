@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	GameBotPoolSharkPrius::GameBotPoolSharkPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BotPrius(serialized) {
-		WaterYPos = serialized->get_float(WaterYPos_type_id);
-		IdleSwimPaths = serialized->get_uint64(IdleSwimPaths_type_id);
-		DesiredPathYOffset = serialized->get_float(DesiredPathYOffset_type_id); 
+		WaterYPos = serialized->get_float(WaterYPos_type_id, 0.000000);
+		IdleSwimPaths = serialized->get_uint64(IdleSwimPaths_type_id, 0);
+		DesiredPathYOffset = serialized->get_float(DesiredPathYOffset_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

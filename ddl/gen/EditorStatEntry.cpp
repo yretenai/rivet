@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	EditorStatEntry::EditorStatEntry([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		_id = serialized->get_uint64(_id_type_id);
-		RequestTime = serialized->get_string(RequestTime_type_id);
-		RequestSource = serialized->get_string(RequestSource_type_id);
-		RequestMarker = serialized->get_string(RequestMarker_type_id);
-		AssetPath = serialized->get_string(AssetPath_type_id); 
+		_id = serialized->get_uint64(_id_type_id, 0);
+		RequestTime = serialized->get_string(RequestTime_type_id, {});
+		RequestSource = serialized->get_string(RequestSource_type_id, {});
+		RequestMarker = serialized->get_string(RequestMarker_type_id, {});
+		AssetPath = serialized->get_string(AssetPath_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

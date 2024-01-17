@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	BotRelativeAnimSetInterruptTypeEvent::BotRelativeAnimSetInterruptTypeEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		InterruptType = serialized->get_enum<rivet::ddl::generated::x1879f53b>(InterruptType_type_id, rivet::ddl::generated::x1879f53b_values); 
+		InterruptType = serialized->get_enum<rivet::ddl::generated::x1879f53b>(InterruptType_type_id, rivet::ddl::generated::x1879f53b_values, rivet::ddl::generated::x1879f53b::Anything); 
 	}
 
 	[[nodiscard]] auto

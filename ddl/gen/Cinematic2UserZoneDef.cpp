@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	Cinematic2UserZoneDef::Cinematic2UserZoneDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Id = serialized->get_uint64(Id_type_id);
-		ZonePath = serialized->get_string(ZonePath_type_id); 
+		Id = serialized->get_uint64(Id_type_id, 0);
+		ZonePath = serialized->get_string(ZonePath_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

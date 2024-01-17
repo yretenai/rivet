@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	UIOptionTypeReference::UIOptionTypeReference([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): UIOptionTypeBase(serialized) {
-		ReferencePageID = serialized->get_enum<rivet::ddl::generated::x58b2a3a9>(ReferencePageID_type_id, rivet::ddl::generated::x58b2a3a9_values); 
+		ReferencePageID = serialized->get_enum<rivet::ddl::generated::x58b2a3a9>(ReferencePageID_type_id, rivet::ddl::generated::x58b2a3a9_values, rivet::ddl::generated::x58b2a3a9::PageMain); 
 	}
 
 	[[nodiscard]] auto

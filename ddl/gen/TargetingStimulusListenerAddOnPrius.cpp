@@ -9,9 +9,9 @@
 
 namespace rivet::ddl::generated {
 	TargetingStimulusListenerAddOnPrius::TargetingStimulusListenerAddOnPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		BonusConfirmTime = serialized->get_float(BonusConfirmTime_type_id);
-		Aggro = serialized->get_float(Aggro_type_id);
-		ListenRadius = serialized->get_float(ListenRadius_type_id); 
+		BonusConfirmTime = serialized->get_float(BonusConfirmTime_type_id, 0.000000);
+		Aggro = serialized->get_float(Aggro_type_id, 15.000000);
+		ListenRadius = serialized->get_float(ListenRadius_type_id, 30.000000); 
 	}
 
 	[[nodiscard]] auto

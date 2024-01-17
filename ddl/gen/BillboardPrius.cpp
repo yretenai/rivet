@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	BillboardPrius::BillboardPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Constraint = serialized->get_enum<rivet::ddl::generated::x6b6ec8ab>(Constraint_type_id, rivet::ddl::generated::x6b6ec8ab_values);
-		PreserveScale = serialized->get_bool(PreserveScale_type_id); 
+		Constraint = serialized->get_enum<rivet::ddl::generated::x6b6ec8ab>(Constraint_type_id, rivet::ddl::generated::x6b6ec8ab_values, rivet::ddl::generated::x6b6ec8ab::AxisUp);
+		PreserveScale = serialized->get_bool(PreserveScale_type_id, false); 
 	}
 
 	[[nodiscard]] auto

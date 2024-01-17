@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	AwardSaveEntry::AwardSaveEntry([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		CodeName = serialized->get_string(CodeName_type_id);
+		CodeName = serialized->get_string(CodeName_type_id, {});
 		AwardSave = serialized->unwrap_into<rivet::ddl::generated::AwardBaseSave>(AwardSave_type_id); 
 	}
 

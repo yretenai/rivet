@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	SoundListenerComponentPrius::SoundListenerComponentPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Type = serialized->get_bitset<rivet::ddl::generated::x9baa48b3>(Type_type_id, rivet::ddl::generated::x9baa48b3_values);
-		LocatorName = serialized->get_string(LocatorName_type_id); 
+		Type = serialized->get_bitset<rivet::ddl::generated::x9baa48b3>(Type_type_id, rivet::ddl::generated::x9baa48b3_values, 3);
+		LocatorName = serialized->get_string(LocatorName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

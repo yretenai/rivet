@@ -10,34 +10,34 @@
 
 namespace rivet::ddl::generated {
 	NavSettings::NavSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		NavFindPathMemoryBudget = serialized->get_uint32(NavFindPathMemoryBudget_type_id);
-		NavFindPathSlotCount = serialized->get_uint16(NavFindPathSlotCount_type_id);
-		PolyLookupHeaderSize = serialized->get_uint16(PolyLookupHeaderSize_type_id);
-		PolyLookupEntrySize = serialized->get_uint16(PolyLookupEntrySize_type_id);
-		MaximumActiveClueCount = serialized->get_int32(MaximumActiveClueCount_type_id);
-		MeshCount = serialized->get_uint32(MeshCount_type_id);
-		FindPathQueryTypeCnt = serialized->get_uint16(FindPathQueryTypeCnt_type_id);
-		FindPathQueryTypeLimit = serialized->get_uint16(FindPathQueryTypeLimit_type_id);
-		ClosestPtOnNavQueryTypeCnt = serialized->get_uint16(ClosestPtOnNavQueryTypeCnt_type_id);
-		ClosestPtOnNavQueryTypeLimit = serialized->get_uint16(ClosestPtOnNavQueryTypeLimit_type_id);
-		FindPolysQueryTypeCnt = serialized->get_uint16(FindPolysQueryTypeCnt_type_id);
-		FindPolysQueryTypeLimit = serialized->get_uint16(FindPolysQueryTypeLimit_type_id);
-		RandPtInVolumesQueryTypeCnt = serialized->get_uint16(RandPtInVolumesQueryTypeCnt_type_id);
-		RandPtInVolumesQueryTypeLimit = serialized->get_uint16(RandPtInVolumesQueryTypeLimit_type_id);
-		ClosestCustomCluesQueryTypeCnt = serialized->get_uint16(ClosestCustomCluesQueryTypeCnt_type_id);
-		ClosestCustomCluesQueryTypeLimit = serialized->get_uint16(ClosestCustomCluesQueryTypeLimit_type_id);
-		MeshGeneratorQueryTypeCnt = serialized->get_uint16(MeshGeneratorQueryTypeCnt_type_id);
-		MeshGeneratorQueryTypeLimit = serialized->get_uint16(MeshGeneratorQueryTypeLimit_type_id);
+		NavFindPathMemoryBudget = serialized->get_uint32(NavFindPathMemoryBudget_type_id, 3145728);
+		NavFindPathSlotCount = serialized->get_uint16(NavFindPathSlotCount_type_id, 1024);
+		PolyLookupHeaderSize = serialized->get_uint16(PolyLookupHeaderSize_type_id, 2048);
+		PolyLookupEntrySize = serialized->get_uint16(PolyLookupEntrySize_type_id, 8192);
+		MaximumActiveClueCount = serialized->get_int32(MaximumActiveClueCount_type_id, 0);
+		MeshCount = serialized->get_uint32(MeshCount_type_id, 2);
+		FindPathQueryTypeCnt = serialized->get_uint16(FindPathQueryTypeCnt_type_id, 512);
+		FindPathQueryTypeLimit = serialized->get_uint16(FindPathQueryTypeLimit_type_id, 12);
+		ClosestPtOnNavQueryTypeCnt = serialized->get_uint16(ClosestPtOnNavQueryTypeCnt_type_id, 1152);
+		ClosestPtOnNavQueryTypeLimit = serialized->get_uint16(ClosestPtOnNavQueryTypeLimit_type_id, 1152);
+		FindPolysQueryTypeCnt = serialized->get_uint16(FindPolysQueryTypeCnt_type_id, 512);
+		FindPolysQueryTypeLimit = serialized->get_uint16(FindPolysQueryTypeLimit_type_id, 512);
+		RandPtInVolumesQueryTypeCnt = serialized->get_uint16(RandPtInVolumesQueryTypeCnt_type_id, 512);
+		RandPtInVolumesQueryTypeLimit = serialized->get_uint16(RandPtInVolumesQueryTypeLimit_type_id, 512);
+		ClosestCustomCluesQueryTypeCnt = serialized->get_uint16(ClosestCustomCluesQueryTypeCnt_type_id, 512);
+		ClosestCustomCluesQueryTypeLimit = serialized->get_uint16(ClosestCustomCluesQueryTypeLimit_type_id, 512);
+		MeshGeneratorQueryTypeCnt = serialized->get_uint16(MeshGeneratorQueryTypeCnt_type_id, 64);
+		MeshGeneratorQueryTypeLimit = serialized->get_uint16(MeshGeneratorQueryTypeLimit_type_id, 4);
 		AStarSettings = serialized->unwrap_into<rivet::ddl::generated::NavAStarSettings>(AStarSettings_type_id);
-		ModifyNavDbSize = serialized->get_int32(ModifyNavDbSize_type_id);
-		DebugMeshDrawDistance = serialized->get_float(DebugMeshDrawDistance_type_id);
-		DebugDetailDrawDistanceMin = serialized->get_float(DebugDetailDrawDistanceMin_type_id);
-		DebugDetailDrawDistanceMax = serialized->get_float(DebugDetailDrawDistanceMax_type_id);
-		MaxObstructionCount = serialized->get_int32(MaxObstructionCount_type_id);
-		NavMeshGeneratorTileAllocSize = serialized->get_uint32(NavMeshGeneratorTileAllocSize_type_id);
-		ObbObstructionPaddingEnable = serialized->get_bool(ObbObstructionPaddingEnable_type_id);
-		MaxLoadedContainers = serialized->get_int32(MaxLoadedContainers_type_id);
-		EnableDebugTracing = serialized->get_bool(EnableDebugTracing_type_id);
+		ModifyNavDbSize = serialized->get_int32(ModifyNavDbSize_type_id, 4096);
+		DebugMeshDrawDistance = serialized->get_float(DebugMeshDrawDistance_type_id, 200.000000);
+		DebugDetailDrawDistanceMin = serialized->get_float(DebugDetailDrawDistanceMin_type_id, 5.000000);
+		DebugDetailDrawDistanceMax = serialized->get_float(DebugDetailDrawDistanceMax_type_id, 50.000000);
+		MaxObstructionCount = serialized->get_int32(MaxObstructionCount_type_id, 256);
+		NavMeshGeneratorTileAllocSize = serialized->get_uint32(NavMeshGeneratorTileAllocSize_type_id, 49152);
+		ObbObstructionPaddingEnable = serialized->get_bool(ObbObstructionPaddingEnable_type_id, true);
+		MaxLoadedContainers = serialized->get_int32(MaxLoadedContainers_type_id, -1);
+		EnableDebugTracing = serialized->get_bool(EnableDebugTracing_type_id, true);
 		Navigation3DSettings = serialized->unwrap_into<rivet::ddl::generated::Nav3DSettings>(Navigation3DSettings_type_id); 
 	}
 

@@ -11,9 +11,9 @@
 
 namespace rivet::ddl::generated {
 	MissionNodeGameDef_Tools::MissionNodeGameDef_Tools([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): NodeBaseDef(serialized) {
-		MissionName = serialized->get_string(MissionName_type_id);
+		MissionName = serialized->get_string(MissionName_type_id, {});
 		ObjectiveGraph = serialized->unwrap_into<rivet::ddl::generated::AssetReferenceDef>(ObjectiveGraph_type_id);
-		UnlockBehavior = serialized->get_enum<rivet::ddl::generated::xc1d164ee>(UnlockBehavior_type_id, rivet::ddl::generated::xc1d164ee_values);
+		UnlockBehavior = serialized->get_enum<rivet::ddl::generated::xc1d164ee>(UnlockBehavior_type_id, rivet::ddl::generated::xc1d164ee_values, rivet::ddl::generated::xc1d164ee::Available);
 		Inputs = serialized->unwrap_into_many<rivet::ddl::generated::InputPlugBoolean>(Inputs_type_id);
 		Output = serialized->unwrap_into<rivet::ddl::generated::OutputPlugBoolean>(Output_type_id); 
 	}

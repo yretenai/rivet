@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	GoldBoltRewardCost::GoldBoltRewardCost([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Reward = serialized->get_enum<rivet::ddl::generated::xf06c6830>(Reward_type_id, rivet::ddl::generated::xf06c6830_values);
-		Cost = serialized->get_uint32(Cost_type_id); 
+		Reward = serialized->get_enum<rivet::ddl::generated::xf06c6830>(Reward_type_id, rivet::ddl::generated::xf06c6830_values, rivet::ddl::generated::xf06c6830::None);
+		Cost = serialized->get_uint32(Cost_type_id, 1); 
 	}
 
 	[[nodiscard]] auto

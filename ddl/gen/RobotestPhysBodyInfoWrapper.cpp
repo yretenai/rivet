@@ -10,7 +10,7 @@
 
 namespace rivet::ddl::generated {
 	RobotestPhysBodyInfoWrapper::RobotestPhysBodyInfoWrapper([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		BatchId = serialized->get_uint64(BatchId_type_id);
+		BatchId = serialized->get_uint64(BatchId_type_id, 0);
 		Actor = serialized->unwrap_into<rivet::ddl::generated::RobotestBasicActorInfo>(Actor_type_id);
 		Body = serialized->unwrap_into<rivet::ddl::generated::RobotestPhysBodyInfo>(Body_type_id); 
 	}

@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	DamageModifierVolleyPrius::DamageModifierVolleyPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): DamageModifierIncomingPrius(serialized) {
-		PerHitReduction = serialized->get_float(PerHitReduction_type_id);
-		MinReduction = serialized->get_float(MinReduction_type_id);
-		RechargeRate = serialized->get_float(RechargeRate_type_id); 
+		PerHitReduction = serialized->get_float(PerHitReduction_type_id, 0.000000);
+		MinReduction = serialized->get_float(MinReduction_type_id, 0.000000);
+		RechargeRate = serialized->get_float(RechargeRate_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

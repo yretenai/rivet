@@ -10,7 +10,7 @@
 namespace rivet::ddl::generated {
 	CameraShakeAnimEvent::CameraShakeAnimEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
 		Shake = serialized->unwrap_into<rivet::ddl::generated::CameraShakingWithFallOffData>(Shake_type_id);
-		FollowActor = serialized->get_bool(FollowActor_type_id); 
+		FollowActor = serialized->get_bool(FollowActor_type_id, false); 
 	}
 
 	[[nodiscard]] auto

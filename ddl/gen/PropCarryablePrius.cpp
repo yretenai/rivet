@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	PropCarryablePrius::PropCarryablePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): PropBasePrius(serialized) {
-		CreateOffer = serialized->get_bool(CreateOffer_type_id);
-		MimicHolderAnims = serialized->get_bool(MimicHolderAnims_type_id);
-		AttachActor = serialized->get_uint64(AttachActor_type_id);
-		AttachPoint = serialized->get_string(AttachPoint_type_id); 
+		CreateOffer = serialized->get_bool(CreateOffer_type_id, true);
+		MimicHolderAnims = serialized->get_bool(MimicHolderAnims_type_id, true);
+		AttachActor = serialized->get_uint64(AttachActor_type_id, 0);
+		AttachPoint = serialized->get_string(AttachPoint_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

@@ -9,12 +9,12 @@
 
 namespace rivet::ddl::generated {
 	GraphCommentBoxAux::GraphCommentBoxAux([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Comment = serialized->get_string(Comment_type_id);
-		Description = serialized->get_string(Description_type_id);
+		Comment = serialized->get_string(Comment_type_id, {});
+		Description = serialized->get_string(Description_type_id, {});
 		Color = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Color_type_id);
-		Alpha = serialized->get_float(Alpha_type_id);
-		Width = serialized->get_float(Width_type_id);
-		Height = serialized->get_float(Height_type_id); 
+		Alpha = serialized->get_float(Alpha_type_id, 0.000000);
+		Width = serialized->get_float(Width_type_id, 0.000000);
+		Height = serialized->get_float(Height_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

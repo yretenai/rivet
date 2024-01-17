@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	VaultSearchRecord::VaultSearchRecord([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SearchOption = serialized->get_enum<rivet::ddl::generated::xbd1cea43>(SearchOption_type_id, rivet::ddl::generated::xbd1cea43_values);
-		SortOption = serialized->get_enum<rivet::ddl::generated::xee77c9ca>(SortOption_type_id, rivet::ddl::generated::xee77c9ca_values);
-		SearchText = serialized->get_string(SearchText_type_id);
+		SearchOption = serialized->get_enum<rivet::ddl::generated::xbd1cea43>(SearchOption_type_id, rivet::ddl::generated::xbd1cea43_values, rivet::ddl::generated::xbd1cea43::File_Name);
+		SortOption = serialized->get_enum<rivet::ddl::generated::xee77c9ca>(SortOption_type_id, rivet::ddl::generated::xee77c9ca_values, rivet::ddl::generated::xee77c9ca::File_Name);
+		SearchText = serialized->get_string(SearchText_type_id, {});
 		ExtensionFilters = serialized->get_strings(ExtensionFilters_type_id); 
 	}
 

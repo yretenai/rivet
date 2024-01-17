@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ActorChangeEvent::ActorChangeEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): UDSEventBase(serialized) {
-		primaryActor = serialized->get_string(primaryActor_type_id);
+		primaryActor = serialized->get_string(primaryActor_type_id, {});
 		secondaryActors = serialized->get_strings(secondaryActors_type_id); 
 	}
 

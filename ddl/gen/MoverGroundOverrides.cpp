@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	MoverGroundOverrides::MoverGroundOverrides([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		StepUpHeight = serialized->get_float(StepUpHeight_type_id);
-		StepDownHeight = serialized->get_float(StepDownHeight_type_id);
-		GoodGroundSlope = serialized->get_float(GoodGroundSlope_type_id);
-		MaxHeightFail = serialized->get_float(MaxHeightFail_type_id);
-		OrientGain = serialized->get_float(OrientGain_type_id);
-		OrientDamp = serialized->get_float(OrientDamp_type_id); 
+		StepUpHeight = serialized->get_float(StepUpHeight_type_id, -100.000000);
+		StepDownHeight = serialized->get_float(StepDownHeight_type_id, -100.000000);
+		GoodGroundSlope = serialized->get_float(GoodGroundSlope_type_id, -100.000000);
+		MaxHeightFail = serialized->get_float(MaxHeightFail_type_id, -100.000000);
+		OrientGain = serialized->get_float(OrientGain_type_id, 0.000000);
+		OrientDamp = serialized->get_float(OrientDamp_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

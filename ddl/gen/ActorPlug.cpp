@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ActorPlug::ActorPlug([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Handle = serialized->get_uint32(Handle_type_id); 
+		Handle = serialized->get_uint32(Handle_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

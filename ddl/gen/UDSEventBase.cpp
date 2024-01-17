@@ -22,7 +22,7 @@
 
 namespace rivet::ddl::generated {
 	UDSEventBase::UDSEventBase([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Critical = serialized->get_bool(Critical_type_id); 
+		Critical = serialized->get_bool(Critical_type_id, false); 
 	}
 
 	[[nodiscard]] auto

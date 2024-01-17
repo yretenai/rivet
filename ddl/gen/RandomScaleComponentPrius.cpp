@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	RandomScaleComponentPrius::RandomScaleComponentPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MinScale = serialized->get_float(MinScale_type_id);
-		MaxScale = serialized->get_float(MaxScale_type_id); 
+		MinScale = serialized->get_float(MinScale_type_id, 0.900000);
+		MaxScale = serialized->get_float(MaxScale_type_id, 1.100000); 
 	}
 
 	[[nodiscard]] auto

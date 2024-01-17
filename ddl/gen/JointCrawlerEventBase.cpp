@@ -10,8 +10,8 @@
 
 namespace rivet::ddl::generated {
 	JointCrawlerEventBase::JointCrawlerEventBase([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Locator = serialized->get_string(Locator_type_id);
-		Stop = serialized->get_bool(Stop_type_id); 
+		Locator = serialized->get_string(Locator_type_id, {});
+		Stop = serialized->get_bool(Stop_type_id, false); 
 	}
 
 	[[nodiscard]] auto

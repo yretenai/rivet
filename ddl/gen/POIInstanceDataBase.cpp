@@ -16,7 +16,7 @@
 namespace rivet::ddl::generated {
 	POIInstanceDataBase::POIInstanceDataBase([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Offset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Offset_type_id);
-		LOSChecks = serialized->get_bool(LOSChecks_type_id); 
+		LOSChecks = serialized->get_bool(LOSChecks_type_id, false); 
 	}
 
 	[[nodiscard]] auto

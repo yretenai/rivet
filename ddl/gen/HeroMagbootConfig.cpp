@@ -7,13 +7,13 @@
 
 namespace rivet::ddl::generated {
 	HeroMagbootConfig::HeroMagbootConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MagbootLaunchMinDistance = serialized->get_float(MagbootLaunchMinDistance_type_id);
-		MagbootLaunchMaxDistance = serialized->get_float(MagbootLaunchMaxDistance_type_id);
-		MagbootLaunchTurnSpeedGain = serialized->get_float(MagbootLaunchTurnSpeedGain_type_id);
-		MagbootLaunchTurnSpeedDamp = serialized->get_float(MagbootLaunchTurnSpeedDamp_type_id);
-		MagbootLaunchTurnSpeedMax = serialized->get_float(MagbootLaunchTurnSpeedMax_type_id);
-		MagbootDiveAccel = serialized->get_float(MagbootDiveAccel_type_id);
-		MagbootDiveMaxSpeed = serialized->get_float(MagbootDiveMaxSpeed_type_id); 
+		MagbootLaunchMinDistance = serialized->get_float(MagbootLaunchMinDistance_type_id, 5.000000);
+		MagbootLaunchMaxDistance = serialized->get_float(MagbootLaunchMaxDistance_type_id, 30.000000);
+		MagbootLaunchTurnSpeedGain = serialized->get_float(MagbootLaunchTurnSpeedGain_type_id, -15.000000);
+		MagbootLaunchTurnSpeedDamp = serialized->get_float(MagbootLaunchTurnSpeedDamp_type_id, -8.000000);
+		MagbootLaunchTurnSpeedMax = serialized->get_float(MagbootLaunchTurnSpeedMax_type_id, 90.000000);
+		MagbootDiveAccel = serialized->get_float(MagbootDiveAccel_type_id, 80.000000);
+		MagbootDiveMaxSpeed = serialized->get_float(MagbootDiveMaxSpeed_type_id, 40.000000); 
 	}
 
 	[[nodiscard]] auto

@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	AnimMotionQueryStartEvent::AnimMotionQueryStartEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		QueryName = serialized->get_string(QueryName_type_id); 
+		QueryName = serialized->get_string(QueryName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

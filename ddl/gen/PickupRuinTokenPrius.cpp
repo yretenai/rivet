@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	PickupRuinTokenPrius::PickupRuinTokenPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): GamePickupItemPrius(serialized) {
-		SaveID = serialized->get_enum<rivet::ddl::generated::xeccc3486>(SaveID_type_id, rivet::ddl::generated::xeccc3486_values); 
+		SaveID = serialized->get_enum<rivet::ddl::generated::xeccc3486>(SaveID_type_id, rivet::ddl::generated::xeccc3486_values, rivet::ddl::generated::xeccc3486::None); 
 	}
 
 	[[nodiscard]] auto

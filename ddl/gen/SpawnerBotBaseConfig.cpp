@@ -10,10 +10,10 @@
 
 namespace rivet::ddl::generated {
 	SpawnerBotBaseConfig::SpawnerBotBaseConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		NumActiveSpawnedBots = serialized->get_uint8(NumActiveSpawnedBots_type_id);
-		SpawnDelay = serialized->get_float(SpawnDelay_type_id);
-		SpawnTriggerDelay = serialized->get_float(SpawnTriggerDelay_type_id);
-		DefaultSpawn = serialized->get_string(DefaultSpawn_type_id);
+		NumActiveSpawnedBots = serialized->get_uint8(NumActiveSpawnedBots_type_id, 4);
+		SpawnDelay = serialized->get_float(SpawnDelay_type_id, 1.000000);
+		SpawnTriggerDelay = serialized->get_float(SpawnTriggerDelay_type_id, 2.000000);
+		DefaultSpawn = serialized->get_string(DefaultSpawn_type_id, {});
 		ThrowData = serialized->unwrap_into<rivet::ddl::generated::SpawnerBotThrowData>(ThrowData_type_id); 
 	}
 

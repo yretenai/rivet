@@ -8,12 +8,12 @@
 namespace rivet::ddl::generated {
 	DimensionPortalSourcePrius::DimensionPortalSourcePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		PossibleTargets = serialized->get_strings(PossibleTargets_type_id);
-		ActivateWhenTargetLoaded = serialized->get_bool(ActivateWhenTargetLoaded_type_id);
-		ActivateOnThrownMeleeHit = serialized->get_bool(ActivateOnThrownMeleeHit_type_id);
-		MutuallyExclusive = serialized->get_bool(MutuallyExclusive_type_id);
-		UseAsHexStreamingSource = serialized->get_bool(UseAsHexStreamingSource_type_id);
-		AutoDeactivateOutOfRangeDelay = serialized->get_float(AutoDeactivateOutOfRangeDelay_type_id);
-		AutoDeactivateRange = serialized->get_float(AutoDeactivateRange_type_id); 
+		ActivateWhenTargetLoaded = serialized->get_bool(ActivateWhenTargetLoaded_type_id, true);
+		ActivateOnThrownMeleeHit = serialized->get_bool(ActivateOnThrownMeleeHit_type_id, true);
+		MutuallyExclusive = serialized->get_bool(MutuallyExclusive_type_id, true);
+		UseAsHexStreamingSource = serialized->get_bool(UseAsHexStreamingSource_type_id, true);
+		AutoDeactivateOutOfRangeDelay = serialized->get_float(AutoDeactivateOutOfRangeDelay_type_id, 1.000000);
+		AutoDeactivateRange = serialized->get_float(AutoDeactivateRange_type_id, 50.000000); 
 	}
 
 	[[nodiscard]] auto

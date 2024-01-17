@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	WaterSplashEvent::WaterSplashEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Size = serialized->get_enum<rivet::ddl::generated::x56b85d4c>(Size_type_id, rivet::ddl::generated::x56b85d4c_values);
-		Material = serialized->get_enum<rivet::ddl::generated::x10b3c4cf>(Material_type_id, rivet::ddl::generated::x10b3c4cf_values); 
+		Size = serialized->get_enum<rivet::ddl::generated::x56b85d4c>(Size_type_id, rivet::ddl::generated::x56b85d4c_values, rivet::ddl::generated::x56b85d4c::SplashSmall);
+		Material = serialized->get_enum<rivet::ddl::generated::x10b3c4cf>(Material_type_id, rivet::ddl::generated::x10b3c4cf_values, rivet::ddl::generated::x10b3c4cf::None); 
 	}
 
 	[[nodiscard]] auto

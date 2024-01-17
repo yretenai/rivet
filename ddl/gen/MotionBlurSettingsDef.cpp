@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	MotionBlurSettingsDef::MotionBlurSettingsDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Enabled = serialized->get_bool(Enabled_type_id);
-		ExposureDuration = serialized->get_float(ExposureDuration_type_id); 
+		Enabled = serialized->get_bool(Enabled_type_id, true);
+		ExposureDuration = serialized->get_float(ExposureDuration_type_id, 0.333000); 
 	}
 
 	[[nodiscard]] auto

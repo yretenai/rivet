@@ -11,9 +11,9 @@
 namespace rivet::ddl::generated {
 	BotLaserShotPrius::BotLaserShotPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ShotBasePrius(serialized) {
 		DamageData = serialized->unwrap_into<rivet::ddl::generated::ShotDamageData>(DamageData_type_id);
-		AudioFollowerType = serialized->get_enum<rivet::ddl::generated::x6f69eca>(AudioFollowerType_type_id, rivet::ddl::generated::x6f69eca_values);
-		AudioFollowerJoint = serialized->get_string(AudioFollowerJoint_type_id);
-		ImpactJoint = serialized->get_string(ImpactJoint_type_id); 
+		AudioFollowerType = serialized->get_enum<rivet::ddl::generated::x6f69eca>(AudioFollowerType_type_id, rivet::ddl::generated::x6f69eca_values, rivet::ddl::generated::x6f69eca::Sound_Listener_Position);
+		AudioFollowerJoint = serialized->get_string(AudioFollowerJoint_type_id, "follower");
+		ImpactJoint = serialized->get_string(ImpactJoint_type_id, "impact"); 
 	}
 
 	[[nodiscard]] auto

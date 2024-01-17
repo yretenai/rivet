@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	UITutorialStepArrow::UITutorialStepArrow([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): UITutorialStepBase(serialized) {
-		ArrowDirection = serialized->get_enum<rivet::ddl::generated::xbc1de3ff>(ArrowDirection_type_id, rivet::ddl::generated::xbc1de3ff_values); 
+		ArrowDirection = serialized->get_enum<rivet::ddl::generated::xbc1de3ff>(ArrowDirection_type_id, rivet::ddl::generated::xbc1de3ff_values, rivet::ddl::generated::xbc1de3ff::Right); 
 	}
 
 	[[nodiscard]] auto

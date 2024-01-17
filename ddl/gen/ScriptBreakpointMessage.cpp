@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	ScriptBreakpointMessage::ScriptBreakpointMessage([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Action = serialized->get_enum<rivet::ddl::generated::xb379a82e>(Action_type_id, rivet::ddl::generated::xb379a82e_values);
-		ScriptId = serialized->get_uint64(ScriptId_type_id); 
+		Action = serialized->get_enum<rivet::ddl::generated::xb379a82e>(Action_type_id, rivet::ddl::generated::xb379a82e_values, rivet::ddl::generated::xb379a82e::DebugNothing);
+		ScriptId = serialized->get_uint64(ScriptId_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

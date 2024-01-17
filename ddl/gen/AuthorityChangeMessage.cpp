@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	AuthorityChangeMessage::AuthorityChangeMessage([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ObjectId = serialized->get_uint16(ObjectId_type_id);
-		Authority = serialized->get_int8(Authority_type_id);
-		AuthorityType = serialized->get_enum<rivet::ddl::generated::AuthorityType>(AuthorityType_type_id, rivet::ddl::generated::AuthorityType_values);
-		ChangeType = serialized->get_enum<rivet::ddl::generated::xabe03d0c>(ChangeType_type_id, rivet::ddl::generated::xabe03d0c_values); 
+		ObjectId = serialized->get_uint16(ObjectId_type_id, 65535);
+		Authority = serialized->get_int8(Authority_type_id, -1);
+		AuthorityType = serialized->get_enum<rivet::ddl::generated::AuthorityType>(AuthorityType_type_id, rivet::ddl::generated::AuthorityType_values, rivet::ddl::generated::AuthorityType::Invalid);
+		ChangeType = serialized->get_enum<rivet::ddl::generated::xabe03d0c>(ChangeType_type_id, rivet::ddl::generated::xabe03d0c_values, rivet::ddl::generated::xabe03d0c::None); 
 	}
 
 	[[nodiscard]] auto

@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	TakedownVictimEvent::TakedownVictimEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Delayed = serialized->get_bool(Delayed_type_id); 
+		Delayed = serialized->get_bool(Delayed_type_id, false); 
 	}
 
 	[[nodiscard]] auto

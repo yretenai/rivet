@@ -7,17 +7,17 @@
 
 namespace rivet::ddl::generated {
 	SargassoCentipedeAODPrius::SargassoCentipedeAODPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Radius = serialized->get_float(Radius_type_id);
-		Height = serialized->get_float(Height_type_id);
-		OnSpawnDamage = serialized->get_float(OnSpawnDamage_type_id);
-		OnSpawnKnockback = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(OnSpawnKnockback_type_id, rivet::ddl::generated::KnockbackLevels_values);
-		Damage = serialized->get_float(Damage_type_id);
-		Knockback = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(Knockback_type_id, rivet::ddl::generated::KnockbackLevels_values);
-		IgnoreDuration = serialized->get_float(IgnoreDuration_type_id);
-		LifeTime = serialized->get_float(LifeTime_type_id);
-		DamageType = serialized->get_enum<rivet::ddl::generated::DamageTypes>(DamageType_type_id, rivet::ddl::generated::DamageTypes_values);
-		DamageString = serialized->get_string(DamageString_type_id);
-		AODCVCActor = serialized->get_string(AODCVCActor_type_id); 
+		Radius = serialized->get_float(Radius_type_id, 4.000000);
+		Height = serialized->get_float(Height_type_id, 3.000000);
+		OnSpawnDamage = serialized->get_float(OnSpawnDamage_type_id, 1.000000);
+		OnSpawnKnockback = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(OnSpawnKnockback_type_id, rivet::ddl::generated::KnockbackLevels_values, rivet::ddl::generated::KnockbackLevels::Three);
+		Damage = serialized->get_float(Damage_type_id, 1.000000);
+		Knockback = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(Knockback_type_id, rivet::ddl::generated::KnockbackLevels_values, rivet::ddl::generated::KnockbackLevels::One);
+		IgnoreDuration = serialized->get_float(IgnoreDuration_type_id, 1.000000);
+		LifeTime = serialized->get_float(LifeTime_type_id, 10.000000);
+		DamageType = serialized->get_enum<rivet::ddl::generated::DamageTypes>(DamageType_type_id, rivet::ddl::generated::DamageTypes_values, rivet::ddl::generated::DamageTypes::Poison);
+		DamageString = serialized->get_string(DamageString_type_id, "Boss_AOD");
+		AODCVCActor = serialized->get_string(AODCVCActor_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

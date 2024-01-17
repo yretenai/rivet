@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	InteractLocationVolumePrius::InteractLocationVolumePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): InteractLocationPrius(serialized) {
-		InteractVolume = serialized->get_uint64(InteractVolume_type_id);
-		ExitVolume = serialized->get_uint64(ExitVolume_type_id); 
+		InteractVolume = serialized->get_uint64(InteractVolume_type_id, 0);
+		ExitVolume = serialized->get_uint64(ExitVolume_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ItemLoadoutCategoryList::ItemLoadoutCategoryList([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Category = serialized->get_enum<rivet::ddl::generated::xc457a124>(Category_type_id, rivet::ddl::generated::xc457a124_values);
+		Category = serialized->get_enum<rivet::ddl::generated::xc457a124>(Category_type_id, rivet::ddl::generated::xc457a124_values, rivet::ddl::generated::xc457a124::None);
 		ItemLoadoutConfigs = serialized->get_strings(ItemLoadoutConfigs_type_id); 
 	}
 

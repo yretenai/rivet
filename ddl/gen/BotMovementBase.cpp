@@ -12,21 +12,21 @@
 
 namespace rivet::ddl::generated {
 	BotMovementBase::BotMovementBase([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MoveSpeed = serialized->get_float(MoveSpeed_type_id);
-		MoveAnimName = serialized->get_string(MoveAnimName_type_id);
-		MoverTurnSpeed = serialized->get_float(MoverTurnSpeed_type_id);
-		TurnRate = serialized->get_float(TurnRate_type_id);
-		TurnGain = serialized->get_float(TurnGain_type_id);
-		TurnDamp = serialized->get_float(TurnDamp_type_id);
-		UseDefaultAnimRate = serialized->get_bool(UseDefaultAnimRate_type_id);
-		IsLevelWithGround = serialized->get_bool(IsLevelWithGround_type_id);
-		LevelWithGroundRotSpeed = serialized->get_float(LevelWithGroundRotSpeed_type_id);
-		MaxHeightForGroundContact = serialized->get_float(MaxHeightForGroundContact_type_id);
-		UseHeroStateFallDeath = serialized->get_bool(UseHeroStateFallDeath_type_id);
-		HeroFallDeathCustomAnim = serialized->get_string(HeroFallDeathCustomAnim_type_id);
-		DeathAnim = serialized->get_string(DeathAnim_type_id);
-		AnimatedDismountAnim = serialized->get_string(AnimatedDismountAnim_type_id);
-		UseStrafeMove = serialized->get_bool(UseStrafeMove_type_id); 
+		MoveSpeed = serialized->get_float(MoveSpeed_type_id, 6.000000);
+		MoveAnimName = serialized->get_string(MoveAnimName_type_id, {});
+		MoverTurnSpeed = serialized->get_float(MoverTurnSpeed_type_id, 570.000000);
+		TurnRate = serialized->get_float(TurnRate_type_id, 26.000000);
+		TurnGain = serialized->get_float(TurnGain_type_id, -8.000000);
+		TurnDamp = serialized->get_float(TurnDamp_type_id, -6.500000);
+		UseDefaultAnimRate = serialized->get_bool(UseDefaultAnimRate_type_id, false);
+		IsLevelWithGround = serialized->get_bool(IsLevelWithGround_type_id, false);
+		LevelWithGroundRotSpeed = serialized->get_float(LevelWithGroundRotSpeed_type_id, 2.500000);
+		MaxHeightForGroundContact = serialized->get_float(MaxHeightForGroundContact_type_id, 0.200000);
+		UseHeroStateFallDeath = serialized->get_bool(UseHeroStateFallDeath_type_id, false);
+		HeroFallDeathCustomAnim = serialized->get_string(HeroFallDeathCustomAnim_type_id, {});
+		DeathAnim = serialized->get_string(DeathAnim_type_id, {});
+		AnimatedDismountAnim = serialized->get_string(AnimatedDismountAnim_type_id, {});
+		UseStrafeMove = serialized->get_bool(UseStrafeMove_type_id, false); 
 	}
 
 	[[nodiscard]] auto

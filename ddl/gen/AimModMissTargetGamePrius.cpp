@@ -7,17 +7,17 @@
 
 namespace rivet::ddl::generated {
 	AimModMissTargetGamePrius::AimModMissTargetGamePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): AimModifierPrius(serialized) {
-		MissOffsetXZMin = serialized->get_float(MissOffsetXZMin_type_id);
-		MissOffsetXZMax = serialized->get_float(MissOffsetXZMax_type_id);
-		MissOffsetYMin = serialized->get_float(MissOffsetYMin_type_id);
-		MissOffsetYMax = serialized->get_float(MissOffsetYMax_type_id);
-		MissOffsetXZMinFromScreen = serialized->get_float(MissOffsetXZMinFromScreen_type_id);
-		MissOffsetXZMaxFromScreen = serialized->get_float(MissOffsetXZMaxFromScreen_type_id);
-		MissWhenOffScreen = serialized->get_bool(MissWhenOffScreen_type_id);
-		AttacksUntilAccurate_OffScreen = serialized->get_int32(AttacksUntilAccurate_OffScreen_type_id);
-		MissAtRange = serialized->get_bool(MissAtRange_type_id);
-		MissRange = serialized->get_float(MissRange_type_id);
-		AttacksUntilAccurate_Range = serialized->get_int32(AttacksUntilAccurate_Range_type_id); 
+		MissOffsetXZMin = serialized->get_float(MissOffsetXZMin_type_id, 2.000000);
+		MissOffsetXZMax = serialized->get_float(MissOffsetXZMax_type_id, 2.500000);
+		MissOffsetYMin = serialized->get_float(MissOffsetYMin_type_id, -1.000000);
+		MissOffsetYMax = serialized->get_float(MissOffsetYMax_type_id, 0.500000);
+		MissOffsetXZMinFromScreen = serialized->get_float(MissOffsetXZMinFromScreen_type_id, 1.000000);
+		MissOffsetXZMaxFromScreen = serialized->get_float(MissOffsetXZMaxFromScreen_type_id, 2.000000);
+		MissWhenOffScreen = serialized->get_bool(MissWhenOffScreen_type_id, true);
+		AttacksUntilAccurate_OffScreen = serialized->get_int32(AttacksUntilAccurate_OffScreen_type_id, -1);
+		MissAtRange = serialized->get_bool(MissAtRange_type_id, true);
+		MissRange = serialized->get_float(MissRange_type_id, 50.000000);
+		AttacksUntilAccurate_Range = serialized->get_int32(AttacksUntilAccurate_Range_type_id, -1); 
 	}
 
 	[[nodiscard]] auto

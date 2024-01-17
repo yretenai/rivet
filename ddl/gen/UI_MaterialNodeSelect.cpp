@@ -10,7 +10,7 @@
 namespace rivet::ddl::generated {
 	UI_MaterialNodeSelect::UI_MaterialNodeSelect([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Items = serialized->unwrap_into_many<rivet::ddl::generated::MaterialNodeInputSelectItem>(Items_type_id);
-		Value = serialized->get_string(Value_type_id); 
+		Value = serialized->get_string(Value_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

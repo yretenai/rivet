@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	HoudiniEngineData::HoudiniEngineData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		InstallerLocation = serialized->get_string(InstallerLocation_type_id);
-		InstallerFileName = serialized->get_string(InstallerFileName_type_id); 
+		InstallerLocation = serialized->get_string(InstallerLocation_type_id, {});
+		InstallerFileName = serialized->get_string(InstallerFileName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

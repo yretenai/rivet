@@ -9,22 +9,22 @@
 
 namespace rivet::ddl::generated {
 	VisualEffectInstEngineItem::VisualEffectInstEngineItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AssetPath = serialized->get_string(AssetPath_type_id);
-		Azimuth = serialized->get_double(Azimuth_type_id);
-		DisplayDebugStats = serialized->get_bool(DisplayDebugStats_type_id);
-		DisplayLightShells = serialized->get_bool(DisplayLightShells_type_id);
-		DisplayOverdraw = serialized->get_bool(DisplayOverdraw_type_id);
-		Inclination = serialized->get_double(Inclination_type_id);
-		Loop = serialized->get_bool(Loop_type_id);
-		MotionType = serialized->get_enum<rivet::ddl::generated::xa8fd47b8>(MotionType_type_id, rivet::ddl::generated::xa8fd47b8_values);
-		State = serialized->get_enum<rivet::ddl::generated::x62abe5d0>(State_type_id, rivet::ddl::generated::x62abe5d0_values);
+		AssetPath = serialized->get_string(AssetPath_type_id, {});
+		Azimuth = serialized->get_double(Azimuth_type_id, 0.000000);
+		DisplayDebugStats = serialized->get_bool(DisplayDebugStats_type_id, false);
+		DisplayLightShells = serialized->get_bool(DisplayLightShells_type_id, false);
+		DisplayOverdraw = serialized->get_bool(DisplayOverdraw_type_id, false);
+		Inclination = serialized->get_double(Inclination_type_id, 0.000000);
+		Loop = serialized->get_bool(Loop_type_id, false);
+		MotionType = serialized->get_enum<rivet::ddl::generated::xa8fd47b8>(MotionType_type_id, rivet::ddl::generated::xa8fd47b8_values, rivet::ddl::generated::xa8fd47b8::None);
+		State = serialized->get_enum<rivet::ddl::generated::x62abe5d0>(State_type_id, rivet::ddl::generated::x62abe5d0_values, rivet::ddl::generated::x62abe5d0::Run);
 		VisualEffectDef = serialized->unwrap_into<rivet::ddl::generated::VisualEffectDef>(VisualEffectDef_type_id);
-		VisualEffectEditor = serialized->get_bool(VisualEffectEditor_type_id);
-		Counter = serialized->get_int32(Counter_type_id);
-		Speed = serialized->get_float(Speed_type_id);
-		Radius = serialized->get_float(Radius_type_id);
-		DynamicScaling = serialized->get_float(DynamicScaling_type_id);
-		FpsSimulation = serialized->get_float(FpsSimulation_type_id); 
+		VisualEffectEditor = serialized->get_bool(VisualEffectEditor_type_id, false);
+		Counter = serialized->get_int32(Counter_type_id, 0);
+		Speed = serialized->get_float(Speed_type_id, 1.000000);
+		Radius = serialized->get_float(Radius_type_id, 4.000000);
+		DynamicScaling = serialized->get_float(DynamicScaling_type_id, 1.000000);
+		FpsSimulation = serialized->get_float(FpsSimulation_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

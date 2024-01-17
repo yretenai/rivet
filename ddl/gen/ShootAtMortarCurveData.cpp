@@ -10,25 +10,25 @@
 
 namespace rivet::ddl::generated {
 	ShootAtMortarCurveData::ShootAtMortarCurveData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ShotConfig = serialized->get_string(ShotConfig_type_id);
-		ShotTimeToTarget = serialized->get_float(ShotTimeToTarget_type_id);
-		DamageHash = serialized->get_string(DamageHash_type_id);
-		IntroDriver = serialized->get_string(IntroDriver_type_id);
-		TargetingLoopDriver = serialized->get_string(TargetingLoopDriver_type_id);
-		ShootingLoopDriver = serialized->get_string(ShootingLoopDriver_type_id);
-		OutroDriver = serialized->get_string(OutroDriver_type_id);
+		ShotConfig = serialized->get_string(ShotConfig_type_id, {});
+		ShotTimeToTarget = serialized->get_float(ShotTimeToTarget_type_id, -1.000000);
+		DamageHash = serialized->get_string(DamageHash_type_id, {});
+		IntroDriver = serialized->get_string(IntroDriver_type_id, {});
+		TargetingLoopDriver = serialized->get_string(TargetingLoopDriver_type_id, {});
+		ShootingLoopDriver = serialized->get_string(ShootingLoopDriver_type_id, {});
+		OutroDriver = serialized->get_string(OutroDriver_type_id, {});
 		FiringEmitData = serialized->unwrap_into_many<rivet::ddl::generated::ShootAtCurveFiringEmitData>(FiringEmitData_type_id);
-		FiringCurveActor = serialized->get_uint64(FiringCurveActor_type_id);
-		FiringRate = serialized->get_float(FiringRate_type_id);
-		FiringCurveStride = serialized->get_uint32(FiringCurveStride_type_id);
-		FaceTargetWhenFiring = serialized->get_bool(FaceTargetWhenFiring_type_id);
-		TargetingDuration = serialized->get_float(TargetingDuration_type_id);
-		FiringDuration = serialized->get_float(FiringDuration_type_id);
-		EarlyOutroAtRange = serialized->get_float(EarlyOutroAtRange_type_id);
-		ShotTargetWarningRadius = serialized->get_float(ShotTargetWarningRadius_type_id);
-		ShowShotWarningIndicators = serialized->get_bool(ShowShotWarningIndicators_type_id);
-		StopFiringOnDamage = serialized->get_bool(StopFiringOnDamage_type_id);
-		TargetingEmitLocator = serialized->get_string(TargetingEmitLocator_type_id);
+		FiringCurveActor = serialized->get_uint64(FiringCurveActor_type_id, 0);
+		FiringRate = serialized->get_float(FiringRate_type_id, 1.500000);
+		FiringCurveStride = serialized->get_uint32(FiringCurveStride_type_id, 1);
+		FaceTargetWhenFiring = serialized->get_bool(FaceTargetWhenFiring_type_id, false);
+		TargetingDuration = serialized->get_float(TargetingDuration_type_id, -1.000000);
+		FiringDuration = serialized->get_float(FiringDuration_type_id, -1.000000);
+		EarlyOutroAtRange = serialized->get_float(EarlyOutroAtRange_type_id, -1.000000);
+		ShotTargetWarningRadius = serialized->get_float(ShotTargetWarningRadius_type_id, 5.000000);
+		ShowShotWarningIndicators = serialized->get_bool(ShowShotWarningIndicators_type_id, true);
+		StopFiringOnDamage = serialized->get_bool(StopFiringOnDamage_type_id, false);
+		TargetingEmitLocator = serialized->get_string(TargetingEmitLocator_type_id, {});
 		MortarFiringStyle = serialized->unwrap_into<rivet::ddl::generated::ShootAtMortarFiringStyle>(MortarFiringStyle_type_id); 
 	}
 

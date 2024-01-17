@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	PlatformActivitySystemSaveGame::PlatformActivitySystemSaveGame([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ScriptedGameIntentDisabled = serialized->get_bool(ScriptedGameIntentDisabled_type_id); 
+		ScriptedGameIntentDisabled = serialized->get_bool(ScriptedGameIntentDisabled_type_id, false); 
 	}
 
 	[[nodiscard]] auto

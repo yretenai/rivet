@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ButtonPressedEvent::ButtonPressedEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		ButtonIndex = serialized->get_int32(ButtonIndex_type_id); 
+		ButtonIndex = serialized->get_int32(ButtonIndex_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	DDLDoubleVector4::DDLDoubleVector4([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		X = serialized->get_double(X_type_id);
-		Y = serialized->get_double(Y_type_id);
-		Z = serialized->get_double(Z_type_id);
-		W = serialized->get_double(W_type_id); 
+		X = serialized->get_double(X_type_id, 0.000000);
+		Y = serialized->get_double(Y_type_id, 0.000000);
+		Z = serialized->get_double(Z_type_id, 0.000000);
+		W = serialized->get_double(W_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	LogQueryRuntimeResult::LogQueryRuntimeResult([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Success = serialized->get_bool(Success_type_id);
-		ErrorMsg = serialized->get_string(ErrorMsg_type_id);
-		Data = serialized->get_string(Data_type_id); 
+		Success = serialized->get_bool(Success_type_id, false);
+		ErrorMsg = serialized->get_string(ErrorMsg_type_id, {});
+		Data = serialized->get_string(Data_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

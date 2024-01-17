@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	SetActorAnimDriverEngineItem::SetActorAnimDriverEngineItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AddLayer = serialized->get_bool(AddLayer_type_id);
-		AnimDriverName = serialized->get_string(AnimDriverName_type_id); 
+		AddLayer = serialized->get_bool(AddLayer_type_id, false);
+		AnimDriverName = serialized->get_string(AnimDriverName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

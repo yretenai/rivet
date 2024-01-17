@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	RootNodeSaveDataShared::RootNodeSaveDataShared([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ObjSysNodeSaveData(serialized) {
-		WasStarted = serialized->get_bool(WasStarted_type_id); 
+		WasStarted = serialized->get_bool(WasStarted_type_id, false); 
 	}
 
 	[[nodiscard]] auto

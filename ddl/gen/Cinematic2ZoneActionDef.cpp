@@ -7,13 +7,13 @@
 
 namespace rivet::ddl::generated {
 	Cinematic2ZoneActionDef::Cinematic2ZoneActionDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Id = serialized->get_uint64(Id_type_id);
-		Time = serialized->get_float(Time_type_id);
-		DurationType = serialized->get_enum<rivet::ddl::generated::x29c933e2>(DurationType_type_id, rivet::ddl::generated::x29c933e2_values);
-		Duration = serialized->get_float(Duration_type_id);
+		Id = serialized->get_uint64(Id_type_id, 0);
+		Time = serialized->get_float(Time_type_id, 0.000000);
+		DurationType = serialized->get_enum<rivet::ddl::generated::x29c933e2>(DurationType_type_id, rivet::ddl::generated::x29c933e2_values, rivet::ddl::generated::x29c933e2::None);
+		Duration = serialized->get_float(Duration_type_id, 0.000000);
 		ZonePaths = serialized->get_strings(ZonePaths_type_id);
-		ZoneOp = serialized->get_enum<rivet::ddl::generated::x39897f27>(ZoneOp_type_id, rivet::ddl::generated::x39897f27_values);
-		VisibleTypes = serialized->get_bitset<rivet::ddl::generated::xcc20fb0>(VisibleTypes_type_id, rivet::ddl::generated::xcc20fb0_values); 
+		ZoneOp = serialized->get_enum<rivet::ddl::generated::x39897f27>(ZoneOp_type_id, rivet::ddl::generated::x39897f27_values, rivet::ddl::generated::x39897f27::ZoneOpHide);
+		VisibleTypes = serialized->get_bitset<rivet::ddl::generated::xcc20fb0>(VisibleTypes_type_id, rivet::ddl::generated::xcc20fb0_values, 1023); 
 	}
 
 	[[nodiscard]] auto

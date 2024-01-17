@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	WalkingArchivesAnimListenerPrius::WalkingArchivesAnimListenerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Archives = serialized->get_uint64(Archives_type_id);
+		Archives = serialized->get_uint64(Archives_type_id, 0);
 		AnimEventTimes = serialized->get_floats(AnimEventTimes_type_id); 
 	}
 

@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ShotMotionIcicleBombPrius::ShotMotionIcicleBombPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ShotMotionBasePrius(serialized) {
-		SoundEmitter = serialized->get_string(SoundEmitter_type_id); 
+		SoundEmitter = serialized->get_string(SoundEmitter_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

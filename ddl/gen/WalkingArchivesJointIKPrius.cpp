@@ -9,11 +9,11 @@ namespace rivet::ddl::generated {
 	WalkingArchivesJointIKPrius::WalkingArchivesJointIKPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		FootJoint = serialized->get_strings(FootJoint_type_id);
 		IKChainID = serialized->get_strings(IKChainID_type_id);
-		MoveDriver = serialized->get_string(MoveDriver_type_id);
-		CameraShake = serialized->get_string(CameraShake_type_id);
-		CameraShakeInnerRadius = serialized->get_float(CameraShakeInnerRadius_type_id);
-		CameraShakeOuterRadius = serialized->get_float(CameraShakeOuterRadius_type_id);
-		FootDamageRadius = serialized->get_float(FootDamageRadius_type_id); 
+		MoveDriver = serialized->get_string(MoveDriver_type_id, {});
+		CameraShake = serialized->get_string(CameraShake_type_id, {});
+		CameraShakeInnerRadius = serialized->get_float(CameraShakeInnerRadius_type_id, 5.000000);
+		CameraShakeOuterRadius = serialized->get_float(CameraShakeOuterRadius_type_id, 20.000000);
+		FootDamageRadius = serialized->get_float(FootDamageRadius_type_id, 3.000000); 
 	}
 
 	[[nodiscard]] auto

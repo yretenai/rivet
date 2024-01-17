@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	ManualAwarenessPrius::ManualAwarenessPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): AwarenessBasePrius(serialized) {
-		UpdateVisionShapes = serialized->get_bool(UpdateVisionShapes_type_id);
-		Force = serialized->get_bool(Force_type_id);
-		PerformLOSTests = serialized->get_bool(PerformLOSTests_type_id); 
+		UpdateVisionShapes = serialized->get_bool(UpdateVisionShapes_type_id, false);
+		Force = serialized->get_bool(Force_type_id, true);
+		PerformLOSTests = serialized->get_bool(PerformLOSTests_type_id, false); 
 	}
 
 	[[nodiscard]] auto

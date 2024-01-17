@@ -10,7 +10,7 @@
 namespace rivet::ddl::generated {
 	GameTweakList::GameTweakList([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Tweaks = serialized->unwrap_into_many<rivet::ddl::generated::TweakDef>(Tweaks_type_id);
-		SessionId = serialized->get_string(SessionId_type_id); 
+		SessionId = serialized->get_string(SessionId_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

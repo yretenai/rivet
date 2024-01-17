@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	ObjectiveNodeBuiltShared::ObjectiveNodeBuiltShared([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ObjectiveName = serialized->get_string(ObjectiveName_type_id); 
+		ObjectiveName = serialized->get_string(ObjectiveName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

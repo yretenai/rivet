@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	DevstatsLimits::DevstatsLimits([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		CommandQueueSize = serialized->get_uint64(CommandQueueSize_type_id);
-		MaxRequestSize = serialized->get_uint64(MaxRequestSize_type_id);
-		BatchWaitSeconds = serialized->get_float(BatchWaitSeconds_type_id); 
+		CommandQueueSize = serialized->get_uint64(CommandQueueSize_type_id, 8092);
+		MaxRequestSize = serialized->get_uint64(MaxRequestSize_type_id, 4096);
+		BatchWaitSeconds = serialized->get_float(BatchWaitSeconds_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

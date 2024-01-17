@@ -10,10 +10,10 @@
 
 namespace rivet::ddl::generated {
 	ProceduralJointAlignPrius::ProceduralJointAlignPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MaxNumJoints = serialized->get_int32(MaxNumJoints_type_id);
-		DoPositionalAdjustmentOnly = serialized->get_bool(DoPositionalAdjustmentOnly_type_id);
-		AutoWeightJointStart = serialized->get_string(AutoWeightJointStart_type_id);
-		AutoWeightJointEnd = serialized->get_string(AutoWeightJointEnd_type_id);
+		MaxNumJoints = serialized->get_int32(MaxNumJoints_type_id, -1);
+		DoPositionalAdjustmentOnly = serialized->get_bool(DoPositionalAdjustmentOnly_type_id, false);
+		AutoWeightJointStart = serialized->get_string(AutoWeightJointStart_type_id, {});
+		AutoWeightJointEnd = serialized->get_string(AutoWeightJointEnd_type_id, {});
 		JointData = serialized->unwrap_into_many<rivet::ddl::generated::JointAlignEntry>(JointData_type_id); 
 	}
 

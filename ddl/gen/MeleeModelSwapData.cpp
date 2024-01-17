@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	MeleeModelSwapData::MeleeModelSwapData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ModelLabel = serialized->get_string(ModelLabel_type_id);
-		Pack = serialized->get_enum<rivet::ddl::generated::x84053194>(Pack_type_id, rivet::ddl::generated::x84053194_values);
-		Model = serialized->get_string(Model_type_id);
-		AudioSwitchValue = serialized->get_string(AudioSwitchValue_type_id);
-		SpecificHero = serialized->get_enum<rivet::ddl::generated::HeroTypes>(SpecificHero_type_id, rivet::ddl::generated::HeroTypes_values); 
+		ModelLabel = serialized->get_string(ModelLabel_type_id, {});
+		Pack = serialized->get_enum<rivet::ddl::generated::x84053194>(Pack_type_id, rivet::ddl::generated::x84053194_values, rivet::ddl::generated::x84053194::One);
+		Model = serialized->get_string(Model_type_id, {});
+		AudioSwitchValue = serialized->get_string(AudioSwitchValue_type_id, "");
+		SpecificHero = serialized->get_enum<rivet::ddl::generated::HeroTypes>(SpecificHero_type_id, rivet::ddl::generated::HeroTypes_values, rivet::ddl::generated::HeroTypes::None); 
 	}
 
 	[[nodiscard]] auto

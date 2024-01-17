@@ -10,13 +10,13 @@
 
 namespace rivet::ddl::generated {
 	WeaponWarpRiflePrius::WeaponWarpRiflePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): WeaponGamePrius(serialized) {
-		SpreadToAddPerSecond = serialized->get_float(SpreadToAddPerSecond_type_id);
-		BaseBulletSpreadAngle = serialized->get_float(BaseBulletSpreadAngle_type_id);
-		MaxBulletSpreadAngle = serialized->get_float(MaxBulletSpreadAngle_type_id);
-		SpinUpDuration = serialized->get_float(SpinUpDuration_type_id);
-		SpinDownDuration = serialized->get_float(SpinDownDuration_type_id);
-		SpinUpSustainDuration = serialized->get_float(SpinUpSustainDuration_type_id);
-		FiringAllowedKnockbacks = serialized->get_bitset<rivet::ddl::generated::x8b303a8b>(FiringAllowedKnockbacks_type_id, rivet::ddl::generated::x8b303a8b_values);
+		SpreadToAddPerSecond = serialized->get_float(SpreadToAddPerSecond_type_id, 2.000000);
+		BaseBulletSpreadAngle = serialized->get_float(BaseBulletSpreadAngle_type_id, 1.000000);
+		MaxBulletSpreadAngle = serialized->get_float(MaxBulletSpreadAngle_type_id, 10.000000);
+		SpinUpDuration = serialized->get_float(SpinUpDuration_type_id, 0.400000);
+		SpinDownDuration = serialized->get_float(SpinDownDuration_type_id, 1.500000);
+		SpinUpSustainDuration = serialized->get_float(SpinUpSustainDuration_type_id, 0.600000);
+		FiringAllowedKnockbacks = serialized->get_bitset<rivet::ddl::generated::x8b303a8b>(FiringAllowedKnockbacks_type_id, rivet::ddl::generated::x8b303a8b_values, 1);
 		FiringDisabledStates = serialized->get_enums<rivet::ddl::generated::x41032d7a>(FiringDisabledStates_type_id, rivet::ddl::generated::x41032d7a_values);
 		HeatStates = serialized->unwrap_into_many<rivet::ddl::generated::HeatStateData>(HeatStates_type_id);
 		ShellCasingData = serialized->unwrap_into<rivet::ddl::generated::ShellCasingDataSingleEmit>(ShellCasingData_type_id); 

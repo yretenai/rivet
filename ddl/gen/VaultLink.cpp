@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	VaultLink::VaultLink([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		_id = serialized->get_int64(_id_type_id);
-		A = serialized->get_uint64(A_type_id);
-		B = serialized->get_uint64(B_type_id);
+		_id = serialized->get_int64(_id_type_id, 0);
+		A = serialized->get_uint64(A_type_id, 0);
+		B = serialized->get_uint64(B_type_id, 0);
 		M = serialized->get_field(M_type_id); 
 	}
 

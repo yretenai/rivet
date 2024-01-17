@@ -7,14 +7,14 @@
 
 namespace rivet::ddl::generated {
 	UIDisplayObjectData::UIDisplayObjectData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ObjectType = serialized->get_enum<rivet::ddl::generated::xd64fa9b1>(ObjectType_type_id, rivet::ddl::generated::xd64fa9b1_values);
-		ObjectActor = serialized->get_string(ObjectActor_type_id);
-		Scale = serialized->get_float(Scale_type_id);
-		RotationSpeed = serialized->get_float(RotationSpeed_type_id);
-		InitialYaw = serialized->get_float(InitialYaw_type_id);
-		StaticRoll = serialized->get_float(StaticRoll_type_id);
-		CenterToOrigin = serialized->get_bool(CenterToOrigin_type_id);
-		Look = serialized->get_string(Look_type_id); 
+		ObjectType = serialized->get_enum<rivet::ddl::generated::xd64fa9b1>(ObjectType_type_id, rivet::ddl::generated::xd64fa9b1_values, rivet::ddl::generated::xd64fa9b1::None);
+		ObjectActor = serialized->get_string(ObjectActor_type_id, {});
+		Scale = serialized->get_float(Scale_type_id, 1.000000);
+		RotationSpeed = serialized->get_float(RotationSpeed_type_id, 15.000000);
+		InitialYaw = serialized->get_float(InitialYaw_type_id, 0.000000);
+		StaticRoll = serialized->get_float(StaticRoll_type_id, 0.000000);
+		CenterToOrigin = serialized->get_bool(CenterToOrigin_type_id, false);
+		Look = serialized->get_string(Look_type_id, ""); 
 	}
 
 	[[nodiscard]] auto

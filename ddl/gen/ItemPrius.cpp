@@ -11,10 +11,10 @@
 
 namespace rivet::ddl::generated {
 	ItemPrius::ItemPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ItemGuid = serialized->get_uint64(ItemGuid_type_id);
-		ItemConfigHash = serialized->get_uint64(ItemConfigHash_type_id);
-		ItemCount = serialized->get_uint32(ItemCount_type_id);
-		ItemId = serialized->get_uint16(ItemId_type_id); 
+		ItemGuid = serialized->get_uint64(ItemGuid_type_id, 0);
+		ItemConfigHash = serialized->get_uint64(ItemConfigHash_type_id, 0);
+		ItemCount = serialized->get_uint32(ItemCount_type_id, 1);
+		ItemId = serialized->get_uint16(ItemId_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

@@ -7,13 +7,13 @@
 
 namespace rivet::ddl::generated {
 	ActorWarpActionPrius::ActorWarpActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		ForceRelative = serialized->get_bool(ForceRelative_type_id);
-		Reset = serialized->get_bool(Reset_type_id);
-		ResetType = serialized->get_enum<rivet::ddl::generated::xcf5ccb68>(ResetType_type_id, rivet::ddl::generated::xcf5ccb68_values);
-		ResetCamera = serialized->get_bool(ResetCamera_type_id);
-		ForceLoadScreen = serialized->get_bool(ForceLoadScreen_type_id);
-		UniqueLoadScreenName = serialized->get_string(UniqueLoadScreenName_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Actor);
+		ForceRelative = serialized->get_bool(ForceRelative_type_id, false);
+		Reset = serialized->get_bool(Reset_type_id, true);
+		ResetType = serialized->get_enum<rivet::ddl::generated::xcf5ccb68>(ResetType_type_id, rivet::ddl::generated::xcf5ccb68_values, rivet::ddl::generated::xcf5ccb68::Stand);
+		ResetCamera = serialized->get_bool(ResetCamera_type_id, true);
+		ForceLoadScreen = serialized->get_bool(ForceLoadScreen_type_id, false);
+		UniqueLoadScreenName = serialized->get_string(UniqueLoadScreenName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

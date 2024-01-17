@@ -9,11 +9,11 @@
 
 namespace rivet::ddl::generated {
 	WeaponItemPrius::WeaponItemPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): GameItemPrius(serialized) {
-		LastCheckpointAmmo = serialized->get_float(LastCheckpointAmmo_type_id);
-		LoadedAmmo = serialized->get_float(LoadedAmmo_type_id);
+		LastCheckpointAmmo = serialized->get_float(LastCheckpointAmmo_type_id, 0.000000);
+		LoadedAmmo = serialized->get_float(LoadedAmmo_type_id, 0.000000);
 		ModCount = serialized->get_uint8s(ModCount_type_id);
-		SelectedCell = serialized->get_uint8(SelectedCell_type_id);
-		Omega = serialized->get_bool(Omega_type_id); 
+		SelectedCell = serialized->get_uint8(SelectedCell_type_id, 0);
+		Omega = serialized->get_bool(Omega_type_id, false); 
 	}
 
 	[[nodiscard]] auto

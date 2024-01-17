@@ -9,12 +9,12 @@
 
 namespace rivet::ddl::generated {
 	MouseOverEngineItem::MouseOverEngineItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Valid = serialized->get_bool(Valid_type_id);
-		NodeId = serialized->get_uint64(NodeId_type_id);
+		Valid = serialized->get_bool(Valid_type_id, false);
+		NodeId = serialized->get_uint64(NodeId_type_id, 0);
 		WorldPosition = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(WorldPosition_type_id);
 		WorldNormal = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(WorldNormal_type_id);
-		SubsetIndex = serialized->get_int32(SubsetIndex_type_id);
-		TriangleIndex = serialized->get_int32(TriangleIndex_type_id); 
+		SubsetIndex = serialized->get_int32(SubsetIndex_type_id, 0);
+		TriangleIndex = serialized->get_int32(TriangleIndex_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

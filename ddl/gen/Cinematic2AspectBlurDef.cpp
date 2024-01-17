@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	Cinematic2AspectBlurDef::Cinematic2AspectBlurDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Visible = serialized->get_float(Visible_type_id);
-		Start = serialized->get_float(Start_type_id);
-		End = serialized->get_float(End_type_id);
-		Radius = serialized->get_float(Radius_type_id);
-		Mode = serialized->get_enum<rivet::ddl::generated::x955c23c>(Mode_type_id, rivet::ddl::generated::x955c23c_values);
-		Immediate = serialized->get_bool(Immediate_type_id); 
+		Visible = serialized->get_float(Visible_type_id, -1.000000);
+		Start = serialized->get_float(Start_type_id, -1.000000);
+		End = serialized->get_float(End_type_id, -1.000000);
+		Radius = serialized->get_float(Radius_type_id, -1.000000);
+		Mode = serialized->get_enum<rivet::ddl::generated::x955c23c>(Mode_type_id, rivet::ddl::generated::x955c23c_values, rivet::ddl::generated::x955c23c::Default);
+		Immediate = serialized->get_bool(Immediate_type_id, false); 
 	}
 
 	[[nodiscard]] auto

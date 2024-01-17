@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	ProjectileBeamStartEvent::ProjectileBeamStartEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		ScaleMultiplier = serialized->get_float(ScaleMultiplier_type_id);
-		IsTargetingPlayer = serialized->get_bool(IsTargetingPlayer_type_id); 
+		ScaleMultiplier = serialized->get_float(ScaleMultiplier_type_id, 1.000000);
+		IsTargetingPlayer = serialized->get_bool(IsTargetingPlayer_type_id, false); 
 	}
 
 	[[nodiscard]] auto

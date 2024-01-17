@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	DbVerifyAssetItem::DbVerifyAssetItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		State = serialized->get_enum<rivet::ddl::generated::xec2141ec>(State_type_id, rivet::ddl::generated::xec2141ec_values);
-		LastSavedTime = serialized->get_string(LastSavedTime_type_id);
-		AssetPath = serialized->get_string(AssetPath_type_id); 
+		State = serialized->get_enum<rivet::ddl::generated::xec2141ec>(State_type_id, rivet::ddl::generated::xec2141ec_values, rivet::ddl::generated::xec2141ec::DbUpToDate);
+		LastSavedTime = serialized->get_string(LastSavedTime_type_id, "");
+		AssetPath = serialized->get_string(AssetPath_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

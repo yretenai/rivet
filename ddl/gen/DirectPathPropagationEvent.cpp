@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	DirectPathPropagationEvent::DirectPathPropagationEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		TurnOn = serialized->get_bool(TurnOn_type_id); 
+		TurnOn = serialized->get_bool(TurnOn_type_id, true); 
 	}
 
 	[[nodiscard]] auto

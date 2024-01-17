@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	LocationChangeEvent::LocationChangeEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): UDSEventBase(serialized) {
-		zoneId = serialized->get_string(zoneId_type_id);
+		zoneId = serialized->get_string(zoneId_type_id, {});
 		mapPosition = serialized->get_floats(mapPosition_type_id); 
 	}
 

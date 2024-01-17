@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	AssetMigrationPingResult::AssetMigrationPingResult([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Status = serialized->get_string(Status_type_id);
-		LocalFormattedTime = serialized->get_string(LocalFormattedTime_type_id); 
+		Status = serialized->get_string(Status_type_id, {});
+		LocalFormattedTime = serialized->get_string(LocalFormattedTime_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

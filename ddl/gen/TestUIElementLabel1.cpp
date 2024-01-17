@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	TestUIElementLabel1::TestUIElementLabel1([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		LastName = serialized->get_string(LastName_type_id);
-		Id = serialized->get_int32(Id_type_id); 
+		LastName = serialized->get_string(LastName_type_id, {});
+		Id = serialized->get_int32(Id_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

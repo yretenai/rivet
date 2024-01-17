@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	FrozenShatterEvent::FrozenShatterEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		IsDead = serialized->get_bool(IsDead_type_id);
-		IsUpgraded = serialized->get_bool(IsUpgraded_type_id); 
+		IsDead = serialized->get_bool(IsDead_type_id, false);
+		IsUpgraded = serialized->get_bool(IsUpgraded_type_id, false); 
 	}
 
 	[[nodiscard]] auto

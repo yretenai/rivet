@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	SimpleTargetStoragePrius::SimpleTargetStoragePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MaxItems = serialized->get_uint32(MaxItems_type_id); 
+		MaxItems = serialized->get_uint32(MaxItems_type_id, 32); 
 	}
 
 	[[nodiscard]] auto

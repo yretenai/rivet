@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	GameBotShooterMrsZurkonMinionPrius::GameBotShooterMrsZurkonMinionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): GameBotShooterJetPackPrius(serialized) {
-		ShieldActor = serialized->get_string(ShieldActor_type_id); 
+		ShieldActor = serialized->get_string(ShieldActor_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

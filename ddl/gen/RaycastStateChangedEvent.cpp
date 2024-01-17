@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	RaycastStateChangedEvent::RaycastStateChangedEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Blocked = serialized->get_bool(Blocked_type_id);
+		Blocked = serialized->get_bool(Blocked_type_id, false);
 		HitPos = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(HitPos_type_id); 
 	}
 

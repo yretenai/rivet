@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	FocusTrackingAddSolverByNameEvent::FocusTrackingAddSolverByNameEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Name = serialized->get_string(Name_type_id);
-		ReferencePoseTime = serialized->get_float(ReferencePoseTime_type_id); 
+		Name = serialized->get_string(Name_type_id, {});
+		ReferencePoseTime = serialized->get_float(ReferencePoseTime_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

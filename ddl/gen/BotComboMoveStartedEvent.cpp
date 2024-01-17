@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	BotComboMoveStartedEvent::BotComboMoveStartedEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		MoveName = serialized->get_string(MoveName_type_id); 
+		MoveName = serialized->get_string(MoveName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	HeroFootIKOnEvent::HeroFootIKOnEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Chain = serialized->get_string(Chain_type_id);
-		SlopeMatch = serialized->get_bool(SlopeMatch_type_id);
-		EnableGroundOffset = serialized->get_bool(EnableGroundOffset_type_id); 
+		Chain = serialized->get_string(Chain_type_id, {});
+		SlopeMatch = serialized->get_bool(SlopeMatch_type_id, true);
+		EnableGroundOffset = serialized->get_bool(EnableGroundOffset_type_id, true); 
 	}
 
 	[[nodiscard]] auto

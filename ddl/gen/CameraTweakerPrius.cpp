@@ -13,8 +13,8 @@
 
 namespace rivet::ddl::generated {
 	CameraTweakerPrius::CameraTweakerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		StartActive = serialized->get_bool(StartActive_type_id);
-		CasualModeOnly = serialized->get_bool(CasualModeOnly_type_id);
+		StartActive = serialized->get_bool(StartActive_type_id, true);
+		CasualModeOnly = serialized->get_bool(CasualModeOnly_type_id, false);
 		DistanceTweak = serialized->unwrap_into<rivet::ddl::generated::CameraDistanceTweak>(DistanceTweak_type_id);
 		HeightTweak = serialized->unwrap_into<rivet::ddl::generated::CameraHeightTweak>(HeightTweak_type_id);
 		PitchTweak = serialized->unwrap_into<rivet::ddl::generated::CameraPitchTweak>(PitchTweak_type_id);

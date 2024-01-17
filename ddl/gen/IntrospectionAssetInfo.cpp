@@ -11,7 +11,7 @@
 
 namespace rivet::ddl::generated {
 	IntrospectionAssetInfo::IntrospectionAssetInfo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Platform = serialized->get_string(Platform_type_id);
+		Platform = serialized->get_string(Platform_type_id, {});
 		AssetEntries = serialized->unwrap_into_many<rivet::ddl::generated::IntrospectionAssetEntry>(AssetEntries_type_id);
 		AlwaysLoadedSet = serialized->unwrap_into<rivet::ddl::generated::IntrospectionRootSet>(AlwaysLoadedSet_type_id);
 		RootSets = serialized->unwrap_into_many<rivet::ddl::generated::IntrospectionRootSet>(RootSets_type_id);

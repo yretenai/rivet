@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	HorizontalAngleOffsetEmitterPrius::HorizontalAngleOffsetEmitterPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): LocalOffsetEmitterPrius(serialized) {
-		OffsetDegrees = serialized->get_float(OffsetDegrees_type_id); 
+		OffsetDegrees = serialized->get_float(OffsetDegrees_type_id, 90.000000); 
 	}
 
 	[[nodiscard]] auto

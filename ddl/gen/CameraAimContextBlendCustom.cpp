@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	CameraAimContextBlendCustom::CameraAimContextBlendCustom([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): CameraAimContextBlend(serialized) {
-		Gain = serialized->get_float(Gain_type_id);
-		Damp = serialized->get_float(Damp_type_id);
-		MaxSpeed = serialized->get_float(MaxSpeed_type_id);
-		Priority = serialized->get_enum<rivet::ddl::generated::xd255d55>(Priority_type_id, rivet::ddl::generated::xd255d55_values); 
+		Gain = serialized->get_float(Gain_type_id, -5.000000);
+		Damp = serialized->get_float(Damp_type_id, -150.000000);
+		MaxSpeed = serialized->get_float(MaxSpeed_type_id, 3.600000);
+		Priority = serialized->get_enum<rivet::ddl::generated::xd255d55>(Priority_type_id, rivet::ddl::generated::xd255d55_values, rivet::ddl::generated::xd255d55::Low); 
 	}
 
 	[[nodiscard]] auto

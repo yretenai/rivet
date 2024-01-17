@@ -7,13 +7,13 @@
 
 namespace rivet::ddl::generated {
 	EnvProbeJob::EnvProbeJob([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Changelist = serialized->get_uint32(Changelist_type_id);
-		CaptureDirectOnly = serialized->get_bool(CaptureDirectOnly_type_id);
-		UpdateProbeProxy = serialized->get_bool(UpdateProbeProxy_type_id);
+		Changelist = serialized->get_uint32(Changelist_type_id, 0);
+		CaptureDirectOnly = serialized->get_bool(CaptureDirectOnly_type_id, false);
+		UpdateProbeProxy = serialized->get_bool(UpdateProbeProxy_type_id, false);
 		ProbeZones = serialized->get_strings(ProbeZones_type_id);
 		Zones = serialized->get_strings(Zones_type_id);
-		Atmosphere = serialized->get_string(Atmosphere_type_id);
-		LightingCondition = serialized->get_enum<rivet::ddl::generated::LightingConditions>(LightingCondition_type_id, rivet::ddl::generated::LightingConditions_values); 
+		Atmosphere = serialized->get_string(Atmosphere_type_id, {});
+		LightingCondition = serialized->get_enum<rivet::ddl::generated::LightingConditions>(LightingCondition_type_id, rivet::ddl::generated::LightingConditions_values, rivet::ddl::generated::LightingConditions::Day); 
 	}
 
 	[[nodiscard]] auto

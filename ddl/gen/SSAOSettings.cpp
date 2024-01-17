@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	SSAOSettings::SSAOSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		RTContribution = serialized->get_float(RTContribution_type_id);
-		RTRadiusScale = serialized->get_float(RTRadiusScale_type_id);
-		ThinOcclAdjust = serialized->get_float(ThinOcclAdjust_type_id);
-		MinRadius = serialized->get_float(MinRadius_type_id); 
+		RTContribution = serialized->get_float(RTContribution_type_id, 0.700000);
+		RTRadiusScale = serialized->get_float(RTRadiusScale_type_id, 0.500000);
+		ThinOcclAdjust = serialized->get_float(ThinOcclAdjust_type_id, 1.250000);
+		MinRadius = serialized->get_float(MinRadius_type_id, 1.500000); 
 	}
 
 	[[nodiscard]] auto

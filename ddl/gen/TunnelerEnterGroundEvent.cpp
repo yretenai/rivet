@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	TunnelerEnterGroundEvent::TunnelerEnterGroundEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		IsFirstEnter = serialized->get_bool(IsFirstEnter_type_id);
-		IsPuppy = serialized->get_bool(IsPuppy_type_id);
-		GroundMaterial = serialized->get_enum<rivet::ddl::generated::x10b3c4cf>(GroundMaterial_type_id, rivet::ddl::generated::x10b3c4cf_values);
-		AudioMaterial = serialized->get_enum<rivet::ddl::generated::x10b3c4cf>(AudioMaterial_type_id, rivet::ddl::generated::x10b3c4cf_values); 
+		IsFirstEnter = serialized->get_bool(IsFirstEnter_type_id, false);
+		IsPuppy = serialized->get_bool(IsPuppy_type_id, false);
+		GroundMaterial = serialized->get_enum<rivet::ddl::generated::x10b3c4cf>(GroundMaterial_type_id, rivet::ddl::generated::x10b3c4cf_values, rivet::ddl::generated::x10b3c4cf::None);
+		AudioMaterial = serialized->get_enum<rivet::ddl::generated::x10b3c4cf>(AudioMaterial_type_id, rivet::ddl::generated::x10b3c4cf_values, rivet::ddl::generated::x10b3c4cf::None); 
 	}
 
 	[[nodiscard]] auto

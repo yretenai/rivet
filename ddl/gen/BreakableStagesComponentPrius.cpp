@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	BreakableStagesComponentPrius::BreakableStagesComponentPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BreakableBasePrius(serialized) {
-		DestroyedChunkConduit = serialized->get_string(DestroyedChunkConduit_type_id);
+		DestroyedChunkConduit = serialized->get_string(DestroyedChunkConduit_type_id, {});
 		Stages = serialized->unwrap_into_many<rivet::ddl::generated::BreakableStageData>(Stages_type_id); 
 	}
 

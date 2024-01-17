@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	WeakSpotBrokenEvent::WeakSpotBrokenEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		LocatorName = serialized->get_string(LocatorName_type_id); 
+		LocatorName = serialized->get_string(LocatorName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

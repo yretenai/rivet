@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	ShotTunnelerPrius::ShotTunnelerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ExplosiveBulletPrius(serialized) {
-		IsPuppy = serialized->get_bool(IsPuppy_type_id);
+		IsPuppy = serialized->get_bool(IsPuppy_type_id, false);
 		BombData = serialized->unwrap_into<rivet::ddl::generated::TunnelerBombPrius>(BombData_type_id); 
 	}
 

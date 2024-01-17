@@ -11,9 +11,9 @@
 
 namespace rivet::ddl::generated {
 	SaveSystemConfig::SaveSystemConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		GoldenPathCategoryWeight = serialized->get_float(GoldenPathCategoryWeight_type_id);
-		OptionalMissionCategoryWeight = serialized->get_float(OptionalMissionCategoryWeight_type_id);
-		CollectiblesCategoryWeight = serialized->get_float(CollectiblesCategoryWeight_type_id);
+		GoldenPathCategoryWeight = serialized->get_float(GoldenPathCategoryWeight_type_id, 60.000000);
+		OptionalMissionCategoryWeight = serialized->get_float(OptionalMissionCategoryWeight_type_id, 25.000000);
+		CollectiblesCategoryWeight = serialized->get_float(CollectiblesCategoryWeight_type_id, 15.000000);
 		GoldBoltWeights = serialized->unwrap_into_many<rivet::ddl::generated::GoldBoltSaveWeight>(GoldBoltWeights_type_id);
 		RYNOPlanWeights = serialized->unwrap_into_many<rivet::ddl::generated::RYNOPlanSaveWeight>(RYNOPlanWeights_type_id);
 		VanityBundleWeights = serialized->unwrap_into_many<rivet::ddl::generated::VanityBundleSaveWeight>(VanityBundleWeights_type_id); 

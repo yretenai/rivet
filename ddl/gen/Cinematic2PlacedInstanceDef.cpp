@@ -13,8 +13,8 @@
 
 namespace rivet::ddl::generated {
 	Cinematic2PlacedInstanceDef::Cinematic2PlacedInstanceDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Id = serialized->get_uint64(Id_type_id);
-		Name = serialized->get_string(Name_type_id);
+		Id = serialized->get_uint64(Id_type_id, 0);
+		Name = serialized->get_string(Name_type_id, {});
 		StartTransform = serialized->unwrap_into<rivet::ddl::generated::DDLTransform>(StartTransform_type_id);
 		EventTracks = serialized->unwrap_into_many<rivet::ddl::generated::Cinematic2PlacedInstanceEventTrackDef>(EventTracks_type_id);
 		HideTrack = serialized->unwrap_into<rivet::ddl::generated::Cinematic2PlacedInstanceHideTrackDef>(HideTrack_type_id);

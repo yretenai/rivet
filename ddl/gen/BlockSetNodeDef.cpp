@@ -11,14 +11,14 @@
 
 namespace rivet::ddl::generated {
 	BlockSetNodeDef::BlockSetNodeDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Id = serialized->get_uint64(Id_type_id);
-		Type = serialized->get_enum<rivet::ddl::generated::x577f103e>(Type_type_id, rivet::ddl::generated::x577f103e_values);
-		Collapsed = serialized->get_bool(Collapsed_type_id);
-		Disabled = serialized->get_bool(Disabled_type_id);
-		X = serialized->get_float(X_type_id);
-		Y = serialized->get_float(Y_type_id);
+		Id = serialized->get_uint64(Id_type_id, 0);
+		Type = serialized->get_enum<rivet::ddl::generated::x577f103e>(Type_type_id, rivet::ddl::generated::x577f103e_values, rivet::ddl::generated::x577f103e::Invalid);
+		Collapsed = serialized->get_bool(Collapsed_type_id, false);
+		Disabled = serialized->get_bool(Disabled_type_id, false);
+		X = serialized->get_float(X_type_id, 0.000000);
+		Y = serialized->get_float(Y_type_id, 0.000000);
 		Blocks = serialized->unwrap_into_many<rivet::ddl::generated::BlockNodeDef>(Blocks_type_id);
-		BlockSetAssetPath = serialized->get_string(BlockSetAssetPath_type_id);
+		BlockSetAssetPath = serialized->get_string(BlockSetAssetPath_type_id, {});
 		Input = serialized->unwrap_into<rivet::ddl::generated::BlockModifierInputPlugSignal>(Input_type_id);
 		Output = serialized->unwrap_into<rivet::ddl::generated::BlockOutputPlugSignal>(Output_type_id); 
 	}

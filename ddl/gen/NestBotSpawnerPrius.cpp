@@ -9,9 +9,9 @@
 
 namespace rivet::ddl::generated {
 	NestBotSpawnerPrius::NestBotSpawnerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): NestBotBasePrius(serialized) {
-		SpawnCountMax = serialized->get_uint32(SpawnCountMax_type_id);
-		GlobalSpawnCountMax = serialized->get_uint32(GlobalSpawnCountMax_type_id);
-		SimultaneousSpawnCount = serialized->get_uint32(SimultaneousSpawnCount_type_id); 
+		SpawnCountMax = serialized->get_uint32(SpawnCountMax_type_id, 7);
+		GlobalSpawnCountMax = serialized->get_uint32(GlobalSpawnCountMax_type_id, 30);
+		SimultaneousSpawnCount = serialized->get_uint32(SimultaneousSpawnCount_type_id, 1); 
 	}
 
 	[[nodiscard]] auto

@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	TriggerResponderAnimDamageEventPrius::TriggerResponderAnimDamageEventPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): TriggerResponderBasePrius(serialized) {
-		AttackIndex = serialized->get_uint32(AttackIndex_type_id);
-		DamageDuration = serialized->get_float(DamageDuration_type_id); 
+		AttackIndex = serialized->get_uint32(AttackIndex_type_id, 0);
+		DamageDuration = serialized->get_float(DamageDuration_type_id, 0.250000); 
 	}
 
 	[[nodiscard]] auto

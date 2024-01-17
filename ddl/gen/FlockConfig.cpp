@@ -10,27 +10,27 @@
 
 namespace rivet::ddl::generated {
 	FlockConfig::FlockConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		Template = serialized->get_string(Template_type_id);
-		DefaultFlockDensityConfig = serialized->get_string(DefaultFlockDensityConfig_type_id);
-		DistFarThresh = serialized->get_float(DistFarThresh_type_id);
-		SpawnDesireDistanceCoeff = serialized->get_float(SpawnDesireDistanceCoeff_type_id);
-		SpawnDesireAngleCoeff = serialized->get_float(SpawnDesireAngleCoeff_type_id);
-		FovThresh = serialized->get_float(FovThresh_type_id);
-		LowSpeedThreshold = serialized->get_float(LowSpeedThreshold_type_id);
-		LowSpeedSpawnPenalty = serialized->get_float(LowSpeedSpawnPenalty_type_id);
-		LowSpeedFovThreshold = serialized->get_float(LowSpeedFovThreshold_type_id);
-		FlockBehavior = serialized->get_enum<rivet::ddl::generated::x13bb0809>(FlockBehavior_type_id, rivet::ddl::generated::x13bb0809_values);
-		SeparationDistance = serialized->get_float(SeparationDistance_type_id);
-		MaxSeparationForcePerMember = serialized->get_float(MaxSeparationForcePerMember_type_id);
-		MaxNeighborDistance = serialized->get_float(MaxNeighborDistance_type_id);
-		MaxAlignmentForce = serialized->get_float(MaxAlignmentForce_type_id);
-		MaxBoundaryForce = serialized->get_float(MaxBoundaryForce_type_id);
-		MaxCohesionForce = serialized->get_float(MaxCohesionForce_type_id);
-		MaxSeparationForce = serialized->get_float(MaxSeparationForce_type_id);
-		DestinationForce = serialized->get_float(DestinationForce_type_id);
-		DestinationBoundaryPadding = serialized->get_float(DestinationBoundaryPadding_type_id);
-		DestinationBlendTime = serialized->get_float(DestinationBlendTime_type_id);
-		NearDestinationDistance = serialized->get_float(NearDestinationDistance_type_id);
+		Template = serialized->get_string(Template_type_id, {});
+		DefaultFlockDensityConfig = serialized->get_string(DefaultFlockDensityConfig_type_id, {});
+		DistFarThresh = serialized->get_float(DistFarThresh_type_id, 500.000000);
+		SpawnDesireDistanceCoeff = serialized->get_float(SpawnDesireDistanceCoeff_type_id, 0.100000);
+		SpawnDesireAngleCoeff = serialized->get_float(SpawnDesireAngleCoeff_type_id, 20.000000);
+		FovThresh = serialized->get_float(FovThresh_type_id, 5.000000);
+		LowSpeedThreshold = serialized->get_float(LowSpeedThreshold_type_id, 7.000000);
+		LowSpeedSpawnPenalty = serialized->get_float(LowSpeedSpawnPenalty_type_id, 5.000000);
+		LowSpeedFovThreshold = serialized->get_float(LowSpeedFovThreshold_type_id, 30.000000);
+		FlockBehavior = serialized->get_enum<rivet::ddl::generated::x13bb0809>(FlockBehavior_type_id, rivet::ddl::generated::x13bb0809_values, rivet::ddl::generated::x13bb0809::SwarmFlock);
+		SeparationDistance = serialized->get_float(SeparationDistance_type_id, 3.000000);
+		MaxSeparationForcePerMember = serialized->get_float(MaxSeparationForcePerMember_type_id, 3.000000);
+		MaxNeighborDistance = serialized->get_float(MaxNeighborDistance_type_id, 6.000000);
+		MaxAlignmentForce = serialized->get_float(MaxAlignmentForce_type_id, 2.000000);
+		MaxBoundaryForce = serialized->get_float(MaxBoundaryForce_type_id, 10.000000);
+		MaxCohesionForce = serialized->get_float(MaxCohesionForce_type_id, 3.000000);
+		MaxSeparationForce = serialized->get_float(MaxSeparationForce_type_id, 5.000000);
+		DestinationForce = serialized->get_float(DestinationForce_type_id, 3.000000);
+		DestinationBoundaryPadding = serialized->get_float(DestinationBoundaryPadding_type_id, 1.250000);
+		DestinationBlendTime = serialized->get_float(DestinationBlendTime_type_id, 0.500000);
+		NearDestinationDistance = serialized->get_float(NearDestinationDistance_type_id, 1.000000);
 		SpawnSoundEvent = serialized->unwrap_into<rivet::ddl::generated::WwiseSoundEvent>(SpawnSoundEvent_type_id);
 		FlockSoundSource = serialized->unwrap_into<rivet::ddl::generated::SoundSourceComponentPrius>(FlockSoundSource_type_id); 
 	}

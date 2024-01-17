@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	AnimEquipBeamStartEvent::AnimEquipBeamStartEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Weapon = serialized->get_enum<rivet::ddl::generated::x63d44ada>(Weapon_type_id, rivet::ddl::generated::x63d44ada_values); 
+		Weapon = serialized->get_enum<rivet::ddl::generated::x63d44ada>(Weapon_type_id, rivet::ddl::generated::x63d44ada_values, rivet::ddl::generated::x63d44ada::None); 
 	}
 
 	[[nodiscard]] auto

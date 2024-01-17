@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	ActorBotData::ActorBotData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ShouldFaceDuringAlert = serialized->get_bool(ShouldFaceDuringAlert_type_id);
-		Use180TurnDuringAlert = serialized->get_bool(Use180TurnDuringAlert_type_id);
-		Use180PatrolMoveIntro = serialized->get_bool(Use180PatrolMoveIntro_type_id); 
+		ShouldFaceDuringAlert = serialized->get_bool(ShouldFaceDuringAlert_type_id, true);
+		Use180TurnDuringAlert = serialized->get_bool(Use180TurnDuringAlert_type_id, false);
+		Use180PatrolMoveIntro = serialized->get_bool(Use180PatrolMoveIntro_type_id, false); 
 	}
 
 	[[nodiscard]] auto

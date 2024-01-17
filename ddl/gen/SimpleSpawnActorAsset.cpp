@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	SimpleSpawnActorAsset::SimpleSpawnActorAsset([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActorFile = serialized->get_string(ActorFile_type_id); 
+		ActorFile = serialized->get_string(ActorFile_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

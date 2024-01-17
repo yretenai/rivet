@@ -7,20 +7,20 @@
 
 namespace rivet::ddl::generated {
 	VanityCineHelmetTransData::VanityCineHelmetTransData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		HelmetDissolvePreMat = serialized->get_string(HelmetDissolvePreMat_type_id);
-		HelmetDissolvePostMat = serialized->get_string(HelmetDissolvePostMat_type_id);
-		GrowAnimName = serialized->get_string(GrowAnimName_type_id);
-		ShrinkAnimName = serialized->get_string(ShrinkAnimName_type_id);
-		DissolveOffDuration = serialized->get_float(DissolveOffDuration_type_id);
-		DissolveOffStartTime = serialized->get_float(DissolveOffStartTime_type_id);
-		ScaleOffDuration = serialized->get_float(ScaleOffDuration_type_id);
-		ScaleOffStartTime = serialized->get_float(ScaleOffStartTime_type_id);
-		SwapOffTime = serialized->get_float(SwapOffTime_type_id);
-		DissolveOnDuration = serialized->get_float(DissolveOnDuration_type_id);
-		DissolveOnStartTime = serialized->get_float(DissolveOnStartTime_type_id);
-		ScaleOnDuration = serialized->get_float(ScaleOnDuration_type_id);
-		ScaleOnStartTime = serialized->get_float(ScaleOnStartTime_type_id);
-		SwapOnTime = serialized->get_float(SwapOnTime_type_id); 
+		HelmetDissolvePreMat = serialized->get_string(HelmetDissolvePreMat_type_id, {});
+		HelmetDissolvePostMat = serialized->get_string(HelmetDissolvePostMat_type_id, {});
+		GrowAnimName = serialized->get_string(GrowAnimName_type_id, "Helmet_Dissolve_On");
+		ShrinkAnimName = serialized->get_string(ShrinkAnimName_type_id, "Helmet_Dissolve_Off");
+		DissolveOffDuration = serialized->get_float(DissolveOffDuration_type_id, 1.000000);
+		DissolveOffStartTime = serialized->get_float(DissolveOffStartTime_type_id, 1.000000);
+		ScaleOffDuration = serialized->get_float(ScaleOffDuration_type_id, 1.000000);
+		ScaleOffStartTime = serialized->get_float(ScaleOffStartTime_type_id, 0.000000);
+		SwapOffTime = serialized->get_float(SwapOffTime_type_id, 2.000000);
+		DissolveOnDuration = serialized->get_float(DissolveOnDuration_type_id, 1.000000);
+		DissolveOnStartTime = serialized->get_float(DissolveOnStartTime_type_id, 0.000000);
+		ScaleOnDuration = serialized->get_float(ScaleOnDuration_type_id, 1.000000);
+		ScaleOnStartTime = serialized->get_float(ScaleOnStartTime_type_id, 1.000000);
+		SwapOnTime = serialized->get_float(SwapOnTime_type_id, 2.000000); 
 	}
 
 	[[nodiscard]] auto

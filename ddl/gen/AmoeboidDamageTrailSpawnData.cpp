@@ -9,14 +9,14 @@
 
 namespace rivet::ddl::generated {
 	AmoeboidDamageTrailSpawnData::AmoeboidDamageTrailSpawnData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ActorSpawnData(serialized) {
-		OwnerHandle = serialized->get_uint32(OwnerHandle_type_id);
-		AssetId = serialized->get_uint64(AssetId_type_id);
-		ZoneIndex = serialized->get_int32(ZoneIndex_type_id);
+		OwnerHandle = serialized->get_uint32(OwnerHandle_type_id, 0);
+		AssetId = serialized->get_uint64(AssetId_type_id, 0);
+		ZoneIndex = serialized->get_int32(ZoneIndex_type_id, 0);
 		SpawnPos = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(SpawnPos_type_id);
 		SpawnUp = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(SpawnUp_type_id);
 		SpawnFwd = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(SpawnFwd_type_id);
 		SpawnExtents = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(SpawnExtents_type_id);
-		Lifetime = serialized->get_float(Lifetime_type_id); 
+		Lifetime = serialized->get_float(Lifetime_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

@@ -9,14 +9,14 @@
 
 namespace rivet::ddl::generated {
 	CoherentDrawTextActionPrius::CoherentDrawTextActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		Text = serialized->get_string(Text_type_id);
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::UI);
+		Text = serialized->get_string(Text_type_id, {});
 		TextColor = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(TextColor_type_id);
-		TextAlpha = serialized->get_float(TextAlpha_type_id);
+		TextAlpha = serialized->get_float(TextAlpha_type_id, 1.000000);
 		BackgroundColor = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(BackgroundColor_type_id);
-		BackgroundAlpha = serialized->get_float(BackgroundAlpha_type_id);
-		Alignment = serialized->get_enum<rivet::ddl::generated::x84bbe706>(Alignment_type_id, rivet::ddl::generated::x84bbe706_values);
-		FontSize = serialized->get_uint32(FontSize_type_id); 
+		BackgroundAlpha = serialized->get_float(BackgroundAlpha_type_id, 1.000000);
+		Alignment = serialized->get_enum<rivet::ddl::generated::x84bbe706>(Alignment_type_id, rivet::ddl::generated::x84bbe706_values, rivet::ddl::generated::x84bbe706::Center);
+		FontSize = serialized->get_uint32(FontSize_type_id, 32); 
 	}
 
 	[[nodiscard]] auto

@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	AssetMigrationResult::AssetMigrationResult([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Branch = serialized->get_string(Branch_type_id);
-		RelativePath = serialized->get_string(RelativePath_type_id);
-		CreatedBy = serialized->get_string(CreatedBy_type_id); 
+		Branch = serialized->get_string(Branch_type_id, {});
+		RelativePath = serialized->get_string(RelativePath_type_id, {});
+		CreatedBy = serialized->get_string(CreatedBy_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

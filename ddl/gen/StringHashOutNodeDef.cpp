@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	StringHashOutNodeDef::StringHashOutNodeDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): NodeBaseDef(serialized) {
-		Value = serialized->get_string(Value_type_id);
+		Value = serialized->get_string(Value_type_id, {});
 		Out = serialized->unwrap_into<rivet::ddl::generated::OutputPlugStringHash>(Out_type_id); 
 	}
 

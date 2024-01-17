@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	GrindrailBladeBotPrius::GrindrailBladeBotPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AnticipateRange = serialized->get_float(AnticipateRange_type_id);
-		AttackRange = serialized->get_float(AttackRange_type_id);
-		DamagePercent = serialized->get_float(DamagePercent_type_id); 
+		AnticipateRange = serialized->get_float(AnticipateRange_type_id, 10.000000);
+		AttackRange = serialized->get_float(AttackRange_type_id, 3.000000);
+		DamagePercent = serialized->get_float(DamagePercent_type_id, 0.200000); 
 	}
 
 	[[nodiscard]] auto

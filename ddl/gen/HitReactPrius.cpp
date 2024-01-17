@@ -10,8 +10,8 @@
 
 namespace rivet::ddl::generated {
 	HitReactPrius::HitReactPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ReactToIgnoredDamage = serialized->get_bool(ReactToIgnoredDamage_type_id);
-		SlowDownOnHit = serialized->get_bool(SlowDownOnHit_type_id); 
+		ReactToIgnoredDamage = serialized->get_bool(ReactToIgnoredDamage_type_id, true);
+		SlowDownOnHit = serialized->get_bool(SlowDownOnHit_type_id, false); 
 	}
 
 	[[nodiscard]] auto

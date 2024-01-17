@@ -10,22 +10,22 @@
 
 namespace rivet::ddl::generated {
 	HoudiniHeightFieldScatterData::HoudiniHeightFieldScatterData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ScatterMethod = serialized->get_enum<rivet::ddl::generated::x4155b3ed>(ScatterMethod_type_id, rivet::ddl::generated::x4155b3ed_values);
-		ParamCoverage = serialized->get_float(ParamCoverage_type_id);
-		ParamDensity = serialized->get_float(ParamDensity_type_id);
+		ScatterMethod = serialized->get_enum<rivet::ddl::generated::x4155b3ed>(ScatterMethod_type_id, rivet::ddl::generated::x4155b3ed_values, rivet::ddl::generated::x4155b3ed::By_Coverage_using_Mask_Layer);
+		ParamCoverage = serialized->get_float(ParamCoverage_type_id, 1.000000);
+		ParamDensity = serialized->get_float(ParamDensity_type_id, 1.000000);
 		ParamPerPointData = serialized->unwrap_into<rivet::ddl::generated::HoudiniHeightFieldScatterPerPointData>(ParamPerPointData_type_id);
-		ParamTotalPointCount = serialized->get_int32(ParamTotalPointCount_type_id);
-		OuterRadius = serialized->get_float(OuterRadius_type_id);
-		Falloff = serialized->get_float(Falloff_type_id);
+		ParamTotalPointCount = serialized->get_int32(ParamTotalPointCount_type_id, 100);
+		OuterRadius = serialized->get_float(OuterRadius_type_id, 10.000000);
+		Falloff = serialized->get_float(Falloff_type_id, 0.150000);
 		ScaleRange = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(ScaleRange_type_id);
-		RelaxPoints = serialized->get_bool(RelaxPoints_type_id);
-		RelaxParamIterations = serialized->get_int32(RelaxParamIterations_type_id);
-		RelaxParamAvoidLayerName = serialized->get_string(RelaxParamAvoidLayerName_type_id);
-		SelfOverlap = serialized->get_bool(SelfOverlap_type_id);
-		MatchDirectionWithSlope = serialized->get_bool(MatchDirectionWithSlope_type_id);
-		MatchNormalsWithTerrain = serialized->get_bool(MatchNormalsWithTerrain_type_id);
-		RandomizeYaw = serialized->get_float(RandomizeYaw_type_id);
-		RandomizeUp = serialized->get_float(RandomizeUp_type_id); 
+		RelaxPoints = serialized->get_bool(RelaxPoints_type_id, true);
+		RelaxParamIterations = serialized->get_int32(RelaxParamIterations_type_id, 5);
+		RelaxParamAvoidLayerName = serialized->get_string(RelaxParamAvoidLayerName_type_id, {});
+		SelfOverlap = serialized->get_bool(SelfOverlap_type_id, false);
+		MatchDirectionWithSlope = serialized->get_bool(MatchDirectionWithSlope_type_id, true);
+		MatchNormalsWithTerrain = serialized->get_bool(MatchNormalsWithTerrain_type_id, true);
+		RandomizeYaw = serialized->get_float(RandomizeYaw_type_id, 180.000000);
+		RandomizeUp = serialized->get_float(RandomizeUp_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

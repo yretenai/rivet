@@ -38,20 +38,20 @@
 namespace rivet::ddl::generated {
 	VisualEffectDef::VisualEffectDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		VaultMetaData = serialized->unwrap_into<rivet::ddl::generated::VaultMetaData>(VaultMetaData_type_id);
-		IconPath = serialized->get_string(IconPath_type_id);
-		PreviewModel = serialized->get_string(PreviewModel_type_id);
-		ShowPreviewModel = serialized->get_bool(ShowPreviewModel_type_id);
+		IconPath = serialized->get_string(IconPath_type_id, "");
+		PreviewModel = serialized->get_string(PreviewModel_type_id, {});
+		ShowPreviewModel = serialized->get_bool(ShowPreviewModel_type_id, true);
 		PreSimulation = serialized->unwrap_into<rivet::ddl::generated::VisualEffectPreSim>(PreSimulation_type_id);
 		UpdateTimeScale = serialized->unwrap_into<rivet::ddl::generated::VisualEffectUpdateTimeScale>(UpdateTimeScale_type_id);
 		PerfAttributes = serialized->unwrap_into<rivet::ddl::generated::VisualEffectPerformanceAttr>(PerfAttributes_type_id);
 		LuminanceAttributes = serialized->unwrap_into<rivet::ddl::generated::VisualEffectLumAttr>(LuminanceAttributes_type_id);
 		CameraAttributes = serialized->unwrap_into<rivet::ddl::generated::VisualEffectCamGlobalAttr>(CameraAttributes_type_id);
-		SortDistanceBias = serialized->get_float(SortDistanceBias_type_id);
+		SortDistanceBias = serialized->get_float(SortDistanceBias_type_id, 0.000000);
 		LightingConditions = serialized->unwrap_into<rivet::ddl::generated::LightingConditionBitSet>(LightingConditions_type_id);
 		RenderOrder = serialized->unwrap_into_many<rivet::ddl::generated::VisualEffectRenderOrder>(RenderOrder_type_id);
 		PreviewNames = serialized->get_strings(PreviewNames_type_id);
-		CullEditorOnlyNodes = serialized->get_bool(CullEditorOnlyNodes_type_id);
-		OverrideLightingCondition = serialized->get_bool(OverrideLightingCondition_type_id);
+		CullEditorOnlyNodes = serialized->get_bool(CullEditorOnlyNodes_type_id, false);
+		OverrideLightingCondition = serialized->get_bool(OverrideLightingCondition_type_id, false);
 		SharedAssets = serialized->unwrap_into_many<rivet::ddl::generated::VisualEffectSharedAssetNode>(SharedAssets_type_id);
 		Materials = serialized->unwrap_into_many<rivet::ddl::generated::VisualEffectMaterialNode>(Materials_type_id);
 		Groups = serialized->unwrap_into_many<rivet::ddl::generated::VisualEffectGroupNode>(Groups_type_id);
@@ -73,9 +73,9 @@ namespace rivet::ddl::generated {
 		PhysicsParams = serialized->unwrap_into_many<rivet::ddl::generated::VisualEffectPhysicsParamNode>(PhysicsParams_type_id);
 		OnCollisions = serialized->unwrap_into_many<rivet::ddl::generated::VisualEffectOnCollisionNode>(OnCollisions_type_id);
 		Tint = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Tint_type_id);
-		Hibernate = serialized->get_bool(Hibernate_type_id);
-		Alpha = serialized->get_float(Alpha_type_id);
-		WindMultiplier = serialized->get_float(WindMultiplier_type_id); 
+		Hibernate = serialized->get_bool(Hibernate_type_id, false);
+		Alpha = serialized->get_float(Alpha_type_id, 1.000000);
+		WindMultiplier = serialized->get_float(WindMultiplier_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

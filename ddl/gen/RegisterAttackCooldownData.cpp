@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	RegisterAttackCooldownData::RegisterAttackCooldownData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		CooldownType = serialized->get_enum<rivet::ddl::generated::x942b54f2>(CooldownType_type_id, rivet::ddl::generated::x942b54f2_values);
+		CooldownType = serialized->get_enum<rivet::ddl::generated::x942b54f2>(CooldownType_type_id, rivet::ddl::generated::x942b54f2_values, rivet::ddl::generated::x942b54f2::Leap);
 		GlobalCooldown = serialized->unwrap_into_many<rivet::ddl::generated::CooldownPerDifficultyData>(GlobalCooldown_type_id);
 		PersonalCooldown = serialized->unwrap_into_many<rivet::ddl::generated::CooldownPerDifficultyData>(PersonalCooldown_type_id); 
 	}

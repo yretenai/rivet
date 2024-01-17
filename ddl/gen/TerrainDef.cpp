@@ -13,22 +13,22 @@
 namespace rivet::ddl::generated {
 	TerrainDef::TerrainDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		VaultMetaData = serialized->unwrap_into<rivet::ddl::generated::VaultMetaData>(VaultMetaData_type_id);
-		IconPath = serialized->get_string(IconPath_type_id);
-		HeightField = serialized->get_string(HeightField_type_id);
-		HeightFieldPaint = serialized->get_string(HeightFieldPaint_type_id);
-		SplatMask1 = serialized->get_string(SplatMask1_type_id);
-		SplatMask2 = serialized->get_string(SplatMask2_type_id);
-		SplatMaskPaint1 = serialized->get_string(SplatMaskPaint1_type_id);
-		SplatMaskPaint2 = serialized->get_string(SplatMaskPaint2_type_id);
-		SplatMaskPaintDcc = serialized->get_string(SplatMaskPaintDcc_type_id);
-		VistaMap = serialized->get_string(VistaMap_type_id);
-		Material = serialized->get_string(Material_type_id);
-		Height = serialized->get_float(Height_type_id);
-		EnableDetailDisplacement = serialized->get_bool(EnableDetailDisplacement_type_id);
+		IconPath = serialized->get_string(IconPath_type_id, "");
+		HeightField = serialized->get_string(HeightField_type_id, {});
+		HeightFieldPaint = serialized->get_string(HeightFieldPaint_type_id, {});
+		SplatMask1 = serialized->get_string(SplatMask1_type_id, {});
+		SplatMask2 = serialized->get_string(SplatMask2_type_id, {});
+		SplatMaskPaint1 = serialized->get_string(SplatMaskPaint1_type_id, {});
+		SplatMaskPaint2 = serialized->get_string(SplatMaskPaint2_type_id, {});
+		SplatMaskPaintDcc = serialized->get_string(SplatMaskPaintDcc_type_id, {});
+		VistaMap = serialized->get_string(VistaMap_type_id, {});
+		Material = serialized->get_string(Material_type_id, "required\\materials\\basic_terrain.material");
+		Height = serialized->get_float(Height_type_id, 1000.000000);
+		EnableDetailDisplacement = serialized->get_bool(EnableDetailDisplacement_type_id, false);
 		Layers = serialized->unwrap_into_many<rivet::ddl::generated::TerrainLayer>(Layers_type_id);
 		NavProperties = serialized->unwrap_into<rivet::ddl::generated::NavigationProperties>(NavProperties_type_id);
 		RenderOverrides = serialized->unwrap_into<rivet::ddl::generated::RenderOverrides>(RenderOverrides_type_id);
-		ScatterNodeId = serialized->get_uint64(ScatterNodeId_type_id); 
+		ScatterNodeId = serialized->get_uint64(ScatterNodeId_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

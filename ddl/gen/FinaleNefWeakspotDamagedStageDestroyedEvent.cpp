@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	FinaleNefWeakspotDamagedStageDestroyedEvent::FinaleNefWeakspotDamagedStageDestroyedEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		WeakspotName = serialized->get_string(WeakspotName_type_id);
-		Is_Triggered_Once = serialized->get_bool(Is_Triggered_Once_type_id);
-		Triggered_On_Main_Mech = serialized->get_bool(Triggered_On_Main_Mech_type_id);
-		Is_Claw_Weakspot = serialized->get_bool(Is_Claw_Weakspot_type_id); 
+		WeakspotName = serialized->get_string(WeakspotName_type_id, {});
+		Is_Triggered_Once = serialized->get_bool(Is_Triggered_Once_type_id, false);
+		Triggered_On_Main_Mech = serialized->get_bool(Triggered_On_Main_Mech_type_id, false);
+		Is_Claw_Weakspot = serialized->get_bool(Is_Claw_Weakspot_type_id, false); 
 	}
 
 	[[nodiscard]] auto

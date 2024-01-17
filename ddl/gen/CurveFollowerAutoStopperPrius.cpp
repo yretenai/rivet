@@ -9,14 +9,14 @@
 
 namespace rivet::ddl::generated {
 	CurveFollowerAutoStopperPrius::CurveFollowerAutoStopperPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		StartEnabled = serialized->get_bool(StartEnabled_type_id);
-		StopDist = serialized->get_float(StopDist_type_id);
-		LookAheadDist = serialized->get_float(LookAheadDist_type_id);
-		OverrideAccel = serialized->get_bool(OverrideAccel_type_id);
-		ResumeAccel = serialized->get_float(ResumeAccel_type_id);
-		OneCollCheck = serialized->get_bool(OneCollCheck_type_id);
-		StopCollCheckTime = serialized->get_float(StopCollCheckTime_type_id);
-		ResumeDist = serialized->get_float(ResumeDist_type_id); 
+		StartEnabled = serialized->get_bool(StartEnabled_type_id, true);
+		StopDist = serialized->get_float(StopDist_type_id, 3.000000);
+		LookAheadDist = serialized->get_float(LookAheadDist_type_id, 10.000000);
+		OverrideAccel = serialized->get_bool(OverrideAccel_type_id, false);
+		ResumeAccel = serialized->get_float(ResumeAccel_type_id, 5.000000);
+		OneCollCheck = serialized->get_bool(OneCollCheck_type_id, true);
+		StopCollCheckTime = serialized->get_float(StopCollCheckTime_type_id, 0.250000);
+		ResumeDist = serialized->get_float(ResumeDist_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

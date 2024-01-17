@@ -17,11 +17,11 @@
 
 namespace rivet::ddl::generated {
 	RicochetBaseEvent::RicochetBaseEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		HitCount = serialized->get_float(HitCount_type_id);
-		MaxHitCount = serialized->get_float(MaxHitCount_type_id);
-		Red = serialized->get_float(Red_type_id);
-		Green = serialized->get_float(Green_type_id);
-		Blue = serialized->get_float(Blue_type_id); 
+		HitCount = serialized->get_float(HitCount_type_id, 0.000000);
+		MaxHitCount = serialized->get_float(MaxHitCount_type_id, 10.000000);
+		Red = serialized->get_float(Red_type_id, 0.000000);
+		Green = serialized->get_float(Green_type_id, 0.000000);
+		Blue = serialized->get_float(Blue_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

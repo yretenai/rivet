@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	IncomingDamageModifierActionPrius::IncomingDamageModifierActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Health);
 		DamageModifierPriusType = serialized->unwrap_into<rivet::ddl::generated::DamageModifierIncomingPrius>(DamageModifierPriusType_type_id); 
 	}
 

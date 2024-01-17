@@ -7,14 +7,14 @@
 
 namespace rivet::ddl::generated {
 	JobManagerAttackPrius::JobManagerAttackPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AttackJobPool = serialized->get_enum<rivet::ddl::generated::x53ecdc9c>(AttackJobPool_type_id, rivet::ddl::generated::x53ecdc9c_values);
-		ConfigModHash = serialized->get_uint32(ConfigModHash_type_id);
-		MaxAttackers = serialized->get_uint32(MaxAttackers_type_id);
-		JobRepostTime = serialized->get_float(JobRepostTime_type_id);
-		AttackCycleHotTime = serialized->get_float(AttackCycleHotTime_type_id);
-		AttackCycleHotMaxRepeat = serialized->get_uint32(AttackCycleHotMaxRepeat_type_id);
-		AttackCycleColdTime = serialized->get_float(AttackCycleColdTime_type_id);
-		AttackCycleColdChance = serialized->get_float(AttackCycleColdChance_type_id); 
+		AttackJobPool = serialized->get_enum<rivet::ddl::generated::x53ecdc9c>(AttackJobPool_type_id, rivet::ddl::generated::x53ecdc9c_values, rivet::ddl::generated::x53ecdc9c::None);
+		ConfigModHash = serialized->get_uint32(ConfigModHash_type_id, 0);
+		MaxAttackers = serialized->get_uint32(MaxAttackers_type_id, 2);
+		JobRepostTime = serialized->get_float(JobRepostTime_type_id, 0.500000);
+		AttackCycleHotTime = serialized->get_float(AttackCycleHotTime_type_id, 6.000000);
+		AttackCycleHotMaxRepeat = serialized->get_uint32(AttackCycleHotMaxRepeat_type_id, 2);
+		AttackCycleColdTime = serialized->get_float(AttackCycleColdTime_type_id, 6.000000);
+		AttackCycleColdChance = serialized->get_float(AttackCycleColdChance_type_id, 0.500000); 
 	}
 
 	[[nodiscard]] auto

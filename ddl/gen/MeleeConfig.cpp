@@ -10,7 +10,7 @@
 
 namespace rivet::ddl::generated {
 	MeleeConfig::MeleeConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		StreakConfig = serialized->get_string(StreakConfig_type_id);
+		StreakConfig = serialized->get_string(StreakConfig_type_id, {});
 		ThrownOverrideData = serialized->unwrap_into<rivet::ddl::generated::DamageKnockbackOverrideData>(ThrownOverrideData_type_id);
 		MeleeAttackList = serialized->unwrap_into_many<rivet::ddl::generated::MeleeAttackData>(MeleeAttackList_type_id); 
 	}

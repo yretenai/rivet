@@ -10,14 +10,14 @@
 namespace rivet::ddl::generated {
 	GrindCameraOverrideVolumePrius::GrindCameraOverrideVolumePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		HeroOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(HeroOffset_type_id);
-		IsHeroOffsetAdditive = serialized->get_bool(IsHeroOffsetAdditive_type_id);
-		CurveLookAheadDistance = serialized->get_float(CurveLookAheadDistance_type_id);
-		IsCurveLookAheadDistanceAdditive = serialized->get_bool(IsCurveLookAheadDistanceAdditive_type_id);
-		LookAtActor = serialized->get_uint64(LookAtActor_type_id);
+		IsHeroOffsetAdditive = serialized->get_bool(IsHeroOffsetAdditive_type_id, true);
+		CurveLookAheadDistance = serialized->get_float(CurveLookAheadDistance_type_id, 0.000000);
+		IsCurveLookAheadDistanceAdditive = serialized->get_bool(IsCurveLookAheadDistanceAdditive_type_id, true);
+		LookAtActor = serialized->get_uint64(LookAtActor_type_id, 0);
 		TargetOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(TargetOffset_type_id);
-		IsTargetOffsetRelative = serialized->get_bool(IsTargetOffsetRelative_type_id);
-		BlendInTime = serialized->get_float(BlendInTime_type_id);
-		BlendOutTime = serialized->get_float(BlendOutTime_type_id); 
+		IsTargetOffsetRelative = serialized->get_bool(IsTargetOffsetRelative_type_id, true);
+		BlendInTime = serialized->get_float(BlendInTime_type_id, 0.250000);
+		BlendOutTime = serialized->get_float(BlendOutTime_type_id, 0.250000); 
 	}
 
 	[[nodiscard]] auto

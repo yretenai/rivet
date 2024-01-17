@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	StatusEffectTrackerLightningRodPrius::StatusEffectTrackerLightningRodPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): StatusEffectTrackerBasePrius(serialized) {
-		SkeletonModel = serialized->get_string(SkeletonModel_type_id); 
+		SkeletonModel = serialized->get_string(SkeletonModel_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	SimpleEnterVolumePrius::SimpleEnterVolumePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SimpleEnterVolType = serialized->get_enum<rivet::ddl::generated::xc4393200>(SimpleEnterVolType_type_id, rivet::ddl::generated::xc4393200_values);
-		TreeSubType = serialized->get_enum<rivet::ddl::generated::xa2c3aa4a>(TreeSubType_type_id, rivet::ddl::generated::xa2c3aa4a_values);
-		FlybySubType = serialized->get_enum<rivet::ddl::generated::x32557ecb>(FlybySubType_type_id, rivet::ddl::generated::x32557ecb_values); 
+		SimpleEnterVolType = serialized->get_enum<rivet::ddl::generated::xc4393200>(SimpleEnterVolType_type_id, rivet::ddl::generated::xc4393200_values, rivet::ddl::generated::xc4393200::Tree);
+		TreeSubType = serialized->get_enum<rivet::ddl::generated::xa2c3aa4a>(TreeSubType_type_id, rivet::ddl::generated::xa2c3aa4a_values, rivet::ddl::generated::xa2c3aa4a::Small);
+		FlybySubType = serialized->get_enum<rivet::ddl::generated::x32557ecb>(FlybySubType_type_id, rivet::ddl::generated::x32557ecb_values, rivet::ddl::generated::x32557ecb::Small); 
 	}
 
 	[[nodiscard]] auto

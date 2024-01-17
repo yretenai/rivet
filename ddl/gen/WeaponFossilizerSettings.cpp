@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	WeaponFossilizerSettings::WeaponFossilizerSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		UnlockAllFeatures = serialized->get_bool(UnlockAllFeatures_type_id);
-		SlowTimeOnTriggerPulls = serialized->get_bool(SlowTimeOnTriggerPulls_type_id);
-		ShowDebugUI = serialized->get_bool(ShowDebugUI_type_id);
-		AllowSlowWhileReloading = serialized->get_bool(AllowSlowWhileReloading_type_id); 
+		UnlockAllFeatures = serialized->get_bool(UnlockAllFeatures_type_id, false);
+		SlowTimeOnTriggerPulls = serialized->get_bool(SlowTimeOnTriggerPulls_type_id, true);
+		ShowDebugUI = serialized->get_bool(ShowDebugUI_type_id, false);
+		AllowSlowWhileReloading = serialized->get_bool(AllowSlowWhileReloading_type_id, false); 
 	}
 
 	[[nodiscard]] auto

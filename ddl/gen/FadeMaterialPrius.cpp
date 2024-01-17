@@ -7,16 +7,16 @@
 
 namespace rivet::ddl::generated {
 	FadeMaterialPrius::FadeMaterialPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Material = serialized->get_string(Material_type_id);
-		AddMaterial = serialized->get_bool(AddMaterial_type_id);
-		FadeInVariableName = serialized->get_string(FadeInVariableName_type_id);
-		FadeInDuration = serialized->get_float(FadeInDuration_type_id);
-		FadeOutVariableName = serialized->get_string(FadeOutVariableName_type_id);
-		FadeOutDuration = serialized->get_float(FadeOutDuration_type_id);
-		DestroyActorOnFadeOut = serialized->get_bool(DestroyActorOnFadeOut_type_id);
-		StartFadedIn = serialized->get_bool(StartFadedIn_type_id);
-		PreApply = serialized->get_bool(PreApply_type_id);
-		FadeOutHidesShadows = serialized->get_bool(FadeOutHidesShadows_type_id); 
+		Material = serialized->get_string(Material_type_id, {});
+		AddMaterial = serialized->get_bool(AddMaterial_type_id, true);
+		FadeInVariableName = serialized->get_string(FadeInVariableName_type_id, {});
+		FadeInDuration = serialized->get_float(FadeInDuration_type_id, 1.000000);
+		FadeOutVariableName = serialized->get_string(FadeOutVariableName_type_id, {});
+		FadeOutDuration = serialized->get_float(FadeOutDuration_type_id, 1.000000);
+		DestroyActorOnFadeOut = serialized->get_bool(DestroyActorOnFadeOut_type_id, false);
+		StartFadedIn = serialized->get_bool(StartFadedIn_type_id, false);
+		PreApply = serialized->get_bool(PreApply_type_id, false);
+		FadeOutHidesShadows = serialized->get_bool(FadeOutHidesShadows_type_id, false); 
 	}
 
 	[[nodiscard]] auto

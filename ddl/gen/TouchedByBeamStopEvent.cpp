@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	TouchedByBeamStopEvent::TouchedByBeamStopEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		JointIndex = serialized->get_int32(JointIndex_type_id); 
+		JointIndex = serialized->get_int32(JointIndex_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

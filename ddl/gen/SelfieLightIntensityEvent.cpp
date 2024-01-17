@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	SelfieLightIntensityEvent::SelfieLightIntensityEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Intensity = serialized->get_float(Intensity_type_id); 
+		Intensity = serialized->get_float(Intensity_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

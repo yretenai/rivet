@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	MouseControl::MouseControl([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		InvertX = serialized->get_bool(InvertX_type_id);
-		InvertY = serialized->get_bool(InvertY_type_id);
-		SensitivityFactorX = serialized->get_float(SensitivityFactorX_type_id);
-		SensitivityFactorY = serialized->get_float(SensitivityFactorY_type_id); 
+		InvertX = serialized->get_bool(InvertX_type_id, false);
+		InvertY = serialized->get_bool(InvertY_type_id, false);
+		SensitivityFactorX = serialized->get_float(SensitivityFactorX_type_id, 0.500000);
+		SensitivityFactorY = serialized->get_float(SensitivityFactorY_type_id, 0.500000); 
 	}
 
 	[[nodiscard]] auto

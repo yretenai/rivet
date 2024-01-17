@@ -10,10 +10,10 @@
 namespace rivet::ddl::generated {
 	RegionDefTemp::RegionDefTemp([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		VaultMetaData = serialized->unwrap_into<rivet::ddl::generated::VaultMetaData>(VaultMetaData_type_id);
-		IconPath = serialized->get_string(IconPath_type_id);
-		Name = serialized->get_string(Name_type_id);
-		Type = serialized->get_enum<rivet::ddl::generated::x2069d6e7>(Type_type_id, rivet::ddl::generated::x2069d6e7_values);
-		ParentAsset = serialized->get_uint64(ParentAsset_type_id);
+		IconPath = serialized->get_string(IconPath_type_id, "");
+		Name = serialized->get_string(Name_type_id, {});
+		Type = serialized->get_enum<rivet::ddl::generated::x2069d6e7>(Type_type_id, rivet::ddl::generated::x2069d6e7_values, rivet::ddl::generated::x2069d6e7::InstanceCollection);
+		ParentAsset = serialized->get_uint64(ParentAsset_type_id, 0);
 		Aux = serialized->get_field(Aux_type_id); 
 	}
 

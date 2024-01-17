@@ -10,8 +10,8 @@
 namespace rivet::ddl::generated {
 	LightGridDef::LightGridDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		VaultMetaData = serialized->unwrap_into<rivet::ddl::generated::VaultMetaData>(VaultMetaData_type_id);
-		IconPath = serialized->get_string(IconPath_type_id);
-		ExcludeFromPS4 = serialized->get_bool(ExcludeFromPS4_type_id); 
+		IconPath = serialized->get_string(IconPath_type_id, "");
+		ExcludeFromPS4 = serialized->get_bool(ExcludeFromPS4_type_id, false); 
 	}
 
 	[[nodiscard]] auto

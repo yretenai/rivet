@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	SpaceshipMagnetPrius::SpaceshipMagnetPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MagnetConfig = serialized->get_string(MagnetConfig_type_id); 
+		MagnetConfig = serialized->get_string(MagnetConfig_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

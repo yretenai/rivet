@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	PixelArtCreatorPrius::PixelArtCreatorPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		TextureWidth = serialized->get_uint32(TextureWidth_type_id);
-		TextureHeight = serialized->get_uint32(TextureHeight_type_id);
-		PixelShiftUp = serialized->get_uint32(PixelShiftUp_type_id);
-		PixelsPerWorldUnit = serialized->get_float(PixelsPerWorldUnit_type_id); 
+		TextureWidth = serialized->get_uint32(TextureWidth_type_id, 64);
+		TextureHeight = serialized->get_uint32(TextureHeight_type_id, 64);
+		PixelShiftUp = serialized->get_uint32(PixelShiftUp_type_id, 0);
+		PixelsPerWorldUnit = serialized->get_float(PixelsPerWorldUnit_type_id, 8.000000); 
 	}
 
 	[[nodiscard]] auto

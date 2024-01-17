@@ -7,18 +7,18 @@
 
 namespace rivet::ddl::generated {
 	RenderFlags::RenderFlags([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Hibernate = serialized->get_bool(Hibernate_type_id);
-		SkipDecals = serialized->get_bool(SkipDecals_type_id);
-		SkipStaticDecals = serialized->get_bool(SkipStaticDecals_type_id);
-		SkipEnvProbe = serialized->get_bool(SkipEnvProbe_type_id);
-		OnlyLightCapture = serialized->get_bool(OnlyLightCapture_type_id);
-		NoEmbeddedSamples = serialized->get_bool(NoEmbeddedSamples_type_id);
-		SkipImpostor = serialized->get_bool(SkipImpostor_type_id);
-		SkipShadowCast = serialized->get_bool(SkipShadowCast_type_id);
-		IgnoreDepth = serialized->get_bool(IgnoreDepth_type_id);
-		ReverseIndoorStatus = serialized->get_bool(ReverseIndoorStatus_type_id);
-		NeverOcclude = serialized->get_bool(NeverOcclude_type_id);
-		RenderAsWireframe = serialized->get_bool(RenderAsWireframe_type_id); 
+		Hibernate = serialized->get_bool(Hibernate_type_id, false);
+		SkipDecals = serialized->get_bool(SkipDecals_type_id, false);
+		SkipStaticDecals = serialized->get_bool(SkipStaticDecals_type_id, false);
+		SkipEnvProbe = serialized->get_bool(SkipEnvProbe_type_id, false);
+		OnlyLightCapture = serialized->get_bool(OnlyLightCapture_type_id, false);
+		NoEmbeddedSamples = serialized->get_bool(NoEmbeddedSamples_type_id, false);
+		SkipImpostor = serialized->get_bool(SkipImpostor_type_id, false);
+		SkipShadowCast = serialized->get_bool(SkipShadowCast_type_id, false);
+		IgnoreDepth = serialized->get_bool(IgnoreDepth_type_id, false);
+		ReverseIndoorStatus = serialized->get_bool(ReverseIndoorStatus_type_id, false);
+		NeverOcclude = serialized->get_bool(NeverOcclude_type_id, false);
+		RenderAsWireframe = serialized->get_bool(RenderAsWireframe_type_id, false); 
 	}
 
 	[[nodiscard]] auto

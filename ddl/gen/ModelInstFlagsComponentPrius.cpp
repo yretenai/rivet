@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	ModelInstFlagsComponentPrius::ModelInstFlagsComponentPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		IsBot = serialized->get_bool(IsBot_type_id);
-		IsHero = serialized->get_bool(IsHero_type_id);
-		ForceOcclusion = serialized->get_bool(ForceOcclusion_type_id); 
+		IsBot = serialized->get_bool(IsBot_type_id, false);
+		IsHero = serialized->get_bool(IsHero_type_id, false);
+		ForceOcclusion = serialized->get_bool(ForceOcclusion_type_id, false); 
 	}
 
 	[[nodiscard]] auto

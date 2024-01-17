@@ -10,7 +10,7 @@
 namespace rivet::ddl::generated {
 	AnimMatcherPrius::AnimMatcherPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		MatchEntries = serialized->unwrap_into_many<rivet::ddl::generated::AnimMatchEntry>(MatchEntries_type_id);
-		FallbackDriver = serialized->get_string(FallbackDriver_type_id); 
+		FallbackDriver = serialized->get_string(FallbackDriver_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

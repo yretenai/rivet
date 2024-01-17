@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	UIPhotoModeEditMode::UIPhotoModeEditMode([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		EditModeType = serialized->get_enum<rivet::ddl::generated::x9b43a852>(EditModeType_type_id, rivet::ddl::generated::x9b43a852_values);
-		Name = serialized->get_string(Name_type_id);
-		Icon = serialized->get_string(Icon_type_id); 
+		EditModeType = serialized->get_enum<rivet::ddl::generated::x9b43a852>(EditModeType_type_id, rivet::ddl::generated::x9b43a852_values, rivet::ddl::generated::x9b43a852::Camera);
+		Name = serialized->get_string(Name_type_id, {});
+		Icon = serialized->get_string(Icon_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

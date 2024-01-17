@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	HeroCinematicTransitionDataMount::HeroCinematicTransitionDataMount([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): HeroCinematicTransitionDataBase(serialized) {
-		CanDismount = serialized->get_bool(CanDismount_type_id); 
+		CanDismount = serialized->get_bool(CanDismount_type_id, false); 
 	}
 
 	[[nodiscard]] auto

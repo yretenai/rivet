@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	ShotTrajectoryDrawPrius::ShotTrajectoryDrawPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ArcMaterial = serialized->get_string(ArcMaterial_type_id);
-		ArcWidth = serialized->get_float(ArcWidth_type_id);
-		DecalTexture = serialized->get_string(DecalTexture_type_id);
-		DecalSize = serialized->get_float(DecalSize_type_id);
-		PointOfImpact = serialized->get_string(PointOfImpact_type_id); 
+		ArcMaterial = serialized->get_string(ArcMaterial_type_id, {});
+		ArcWidth = serialized->get_float(ArcWidth_type_id, 0.100000);
+		DecalTexture = serialized->get_string(DecalTexture_type_id, {});
+		DecalSize = serialized->get_float(DecalSize_type_id, 1.000000);
+		PointOfImpact = serialized->get_string(PointOfImpact_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

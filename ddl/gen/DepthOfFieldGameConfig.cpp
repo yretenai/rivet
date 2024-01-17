@@ -10,8 +10,8 @@
 namespace rivet::ddl::generated {
 	DepthOfFieldGameConfig::DepthOfFieldGameConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
 		BaseGameSetup = serialized->unwrap_into<rivet::ddl::generated::DepthOfFieldBaseSetup>(BaseGameSetup_type_id);
-		CameraNearMin = serialized->get_float(CameraNearMin_type_id);
-		CameraNearMax = serialized->get_float(CameraNearMax_type_id); 
+		CameraNearMin = serialized->get_float(CameraNearMin_type_id, 1.000000);
+		CameraNearMax = serialized->get_float(CameraNearMax_type_id, 3.000000); 
 	}
 
 	[[nodiscard]] auto

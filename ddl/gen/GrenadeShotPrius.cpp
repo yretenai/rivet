@@ -26,9 +26,9 @@
 namespace rivet::ddl::generated {
 	GrenadeShotPrius::GrenadeShotPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): LobbedShotPrius(serialized) {
 		ExplosionMode = serialized->unwrap_into<rivet::ddl::generated::GrenadeExplosionMode>(ExplosionMode_type_id);
-		ExplosionDamageType = serialized->get_enum<rivet::ddl::generated::DamageTypes>(ExplosionDamageType_type_id, rivet::ddl::generated::DamageTypes_values);
+		ExplosionDamageType = serialized->get_enum<rivet::ddl::generated::DamageTypes>(ExplosionDamageType_type_id, rivet::ddl::generated::DamageTypes_values, rivet::ddl::generated::DamageTypes::Explosion);
 		ExplosionData = serialized->unwrap_into<rivet::ddl::generated::DamageModifierExplosionPrius>(ExplosionData_type_id);
-		DamageLOSType = serialized->get_enum<rivet::ddl::generated::DamageLOSTypes>(DamageLOSType_type_id, rivet::ddl::generated::DamageLOSTypes_values); 
+		DamageLOSType = serialized->get_enum<rivet::ddl::generated::DamageLOSTypes>(DamageLOSType_type_id, rivet::ddl::generated::DamageLOSTypes_values, rivet::ddl::generated::DamageLOSTypes::LOS); 
 	}
 
 	[[nodiscard]] auto

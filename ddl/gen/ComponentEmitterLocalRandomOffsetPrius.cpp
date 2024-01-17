@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	ComponentEmitterLocalRandomOffsetPrius::ComponentEmitterLocalRandomOffsetPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ComponentEmitterBasePrius(serialized) {
-		EmitFromUser = serialized->get_bool(EmitFromUser_type_id);
-		UseWorldUp = serialized->get_bool(UseWorldUp_type_id);
+		EmitFromUser = serialized->get_bool(EmitFromUser_type_id, false);
+		UseWorldUp = serialized->get_bool(UseWorldUp_type_id, false);
 		MinOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(MinOffset_type_id);
 		MaxOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(MaxOffset_type_id); 
 	}

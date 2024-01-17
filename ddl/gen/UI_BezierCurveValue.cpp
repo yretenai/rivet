@@ -10,7 +10,7 @@
 namespace rivet::ddl::generated {
 	UI_BezierCurveValue::UI_BezierCurveValue([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		CurrentValue = serialized->unwrap_into<rivet::ddl::generated::DDLVector4>(CurrentValue_type_id);
-		NumDimensions = serialized->get_int16(NumDimensions_type_id); 
+		NumDimensions = serialized->get_int16(NumDimensions_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

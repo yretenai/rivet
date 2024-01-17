@@ -12,7 +12,7 @@
 
 namespace rivet::ddl::generated {
 	BattleBrewEvent::BattleBrewEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		BrewName = serialized->get_string(BrewName_type_id); 
+		BrewName = serialized->get_string(BrewName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

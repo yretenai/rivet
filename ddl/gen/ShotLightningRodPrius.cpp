@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	ShotLightningRodPrius::ShotLightningRodPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BasicBulletPrius(serialized) {
-		MaxArcs = serialized->get_uint32(MaxArcs_type_id);
-		ExplosionKnockbackLevel = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(ExplosionKnockbackLevel_type_id, rivet::ddl::generated::KnockbackLevels_values);
-		ArcKnockbackLevel = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(ArcKnockbackLevel_type_id, rivet::ddl::generated::KnockbackLevels_values);
-		ArcEndJoint = serialized->get_string(ArcEndJoint_type_id); 
+		MaxArcs = serialized->get_uint32(MaxArcs_type_id, 3);
+		ExplosionKnockbackLevel = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(ExplosionKnockbackLevel_type_id, rivet::ddl::generated::KnockbackLevels_values, rivet::ddl::generated::KnockbackLevels::None);
+		ArcKnockbackLevel = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(ArcKnockbackLevel_type_id, rivet::ddl::generated::KnockbackLevels_values, rivet::ddl::generated::KnockbackLevels::None);
+		ArcEndJoint = serialized->get_string(ArcEndJoint_type_id, ""); 
 	}
 
 	[[nodiscard]] auto

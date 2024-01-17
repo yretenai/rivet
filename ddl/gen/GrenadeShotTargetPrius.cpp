@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	GrenadeShotTargetPrius::GrenadeShotTargetPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		TargetAngleMax = serialized->get_float(TargetAngleMax_type_id);
-		DisablePhysics = serialized->get_bool(DisablePhysics_type_id); 
+		TargetAngleMax = serialized->get_float(TargetAngleMax_type_id, 30.000000);
+		DisablePhysics = serialized->get_bool(DisablePhysics_type_id, false); 
 	}
 
 	[[nodiscard]] auto

@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	RandomizationSettings::RandomizationSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ScaleAmount = serialized->get_float(ScaleAmount_type_id);
-		AngleAmount = serialized->get_float(AngleAmount_type_id);
-		RandomAsset = serialized->get_bool(RandomAsset_type_id);
-		Enable = serialized->get_bool(Enable_type_id); 
+		ScaleAmount = serialized->get_float(ScaleAmount_type_id, 0.000000);
+		AngleAmount = serialized->get_float(AngleAmount_type_id, 1.000000);
+		RandomAsset = serialized->get_bool(RandomAsset_type_id, true);
+		Enable = serialized->get_bool(Enable_type_id, false); 
 	}
 
 	[[nodiscard]] auto

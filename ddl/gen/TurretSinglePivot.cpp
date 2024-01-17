@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	TurretSinglePivot::TurretSinglePivot([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): TurretPivotBase(serialized) {
-		PivotJoint = serialized->get_string(PivotJoint_type_id); 
+		PivotJoint = serialized->get_string(PivotJoint_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

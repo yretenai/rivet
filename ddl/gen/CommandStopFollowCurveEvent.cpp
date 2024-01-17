@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	CommandStopFollowCurveEvent::CommandStopFollowCurveEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): CommandEvent(serialized) {
-		Sync = serialized->get_bool(Sync_type_id); 
+		Sync = serialized->get_bool(Sync_type_id, false); 
 	}
 
 	[[nodiscard]] auto

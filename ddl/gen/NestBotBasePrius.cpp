@@ -12,17 +12,17 @@
 
 namespace rivet::ddl::generated {
 	NestBotBasePrius::NestBotBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BotPrius(serialized) {
-		ShieldActor = serialized->get_string(ShieldActor_type_id);
-		ExplosionRadius = serialized->get_float(ExplosionRadius_type_id);
-		ExplosionDamage = serialized->get_float(ExplosionDamage_type_id);
-		ShieldHealth = serialized->get_float(ShieldHealth_type_id);
-		ShieldRespawnDelay = serialized->get_float(ShieldRespawnDelay_type_id);
+		ShieldActor = serialized->get_string(ShieldActor_type_id, {});
+		ExplosionRadius = serialized->get_float(ExplosionRadius_type_id, 6.000000);
+		ExplosionDamage = serialized->get_float(ExplosionDamage_type_id, 2.000000);
+		ShieldHealth = serialized->get_float(ShieldHealth_type_id, 100.000000);
+		ShieldRespawnDelay = serialized->get_float(ShieldRespawnDelay_type_id, 2.000000);
 		InstanceData = serialized->unwrap_into<rivet::ddl::generated::POIInstanceDataBase>(InstanceData_type_id);
-		ShieldLink = serialized->get_uint64(ShieldLink_type_id);
-		WireGroup = serialized->get_uint64(WireGroup_type_id);
-		RedWireMaterial = serialized->get_string(RedWireMaterial_type_id);
-		GreenWireMaterial = serialized->get_string(GreenWireMaterial_type_id);
-		LookTest = serialized->get_string(LookTest_type_id); 
+		ShieldLink = serialized->get_uint64(ShieldLink_type_id, 0);
+		WireGroup = serialized->get_uint64(WireGroup_type_id, 0);
+		RedWireMaterial = serialized->get_string(RedWireMaterial_type_id, "materials\\gl_default_grid\\gl_default_red_glow.material");
+		GreenWireMaterial = serialized->get_string(GreenWireMaterial_type_id, "materials\\gl_default_grid\\gbl_gp_pressure_pad_cable_on.material");
+		LookTest = serialized->get_string(LookTest_type_id, "Default"); 
 	}
 
 	[[nodiscard]] auto

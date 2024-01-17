@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	CustomDamageData::CustomDamageData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DataNameHash = serialized->get_uint32(DataNameHash_type_id);
+		DataNameHash = serialized->get_uint32(DataNameHash_type_id, 0);
 		DataBuffer = serialized->get_uint8s(DataBuffer_type_id); 
 	}
 

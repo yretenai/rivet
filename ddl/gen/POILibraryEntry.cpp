@@ -10,7 +10,7 @@
 
 namespace rivet::ddl::generated {
 	POILibraryEntry::POILibraryEntry([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		POIType = serialized->get_enum<rivet::ddl::generated::xfcb30197>(POIType_type_id, rivet::ddl::generated::xfcb30197_values);
+		POIType = serialized->get_enum<rivet::ddl::generated::xfcb30197>(POIType_type_id, rivet::ddl::generated::xfcb30197_values, rivet::ddl::generated::xfcb30197::POITypeNone);
 		POIConfigData = serialized->unwrap_into<rivet::ddl::generated::POIConfigData>(POIConfigData_type_id);
 		POIPriusType = serialized->unwrap_into<rivet::ddl::generated::POIPriusBase>(POIPriusType_type_id); 
 	}

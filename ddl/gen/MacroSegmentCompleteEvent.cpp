@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	MacroSegmentCompleteEvent::MacroSegmentCompleteEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Segment = serialized->get_enum<rivet::ddl::generated::xad53d7e2>(Segment_type_id, rivet::ddl::generated::xad53d7e2_values); 
+		Segment = serialized->get_enum<rivet::ddl::generated::xad53d7e2>(Segment_type_id, rivet::ddl::generated::xad53d7e2_values, rivet::ddl::generated::xad53d7e2::kNone); 
 	}
 
 	[[nodiscard]] auto

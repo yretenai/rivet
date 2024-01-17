@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	AimModStrafeTargetGamePrius::AimModStrafeTargetGamePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): AimModStrafeTargetPrius(serialized) {
-		StrafeAlongForward = serialized->get_bool(StrafeAlongForward_type_id);
-		ReverseStrafeDir = serialized->get_bool(ReverseStrafeDir_type_id);
-		RandomizeStrafeDir = serialized->get_bool(RandomizeStrafeDir_type_id);
-		FanFromCenter = serialized->get_bool(FanFromCenter_type_id); 
+		StrafeAlongForward = serialized->get_bool(StrafeAlongForward_type_id, false);
+		ReverseStrafeDir = serialized->get_bool(ReverseStrafeDir_type_id, false);
+		RandomizeStrafeDir = serialized->get_bool(RandomizeStrafeDir_type_id, false);
+		FanFromCenter = serialized->get_bool(FanFromCenter_type_id, false); 
 	}
 
 	[[nodiscard]] auto

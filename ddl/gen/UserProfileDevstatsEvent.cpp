@@ -7,14 +7,14 @@
 
 namespace rivet::ddl::generated {
 	UserProfileDevstatsEvent::UserProfileDevstatsEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		psn_account = serialized->get_string(psn_account_type_id);
-		np_account_id = serialized->get_uint64(np_account_id_type_id);
-		language = serialized->get_string(language_type_id);
-		region = serialized->get_string(region_type_id);
-		is_guest = serialized->get_bool(is_guest_type_id);
-		age = serialized->get_int32(age_type_id);
-		restrict_chat = serialized->get_bool(restrict_chat_type_id);
-		restrict_ugm = serialized->get_bool(restrict_ugm_type_id); 
+		psn_account = serialized->get_string(psn_account_type_id, {});
+		np_account_id = serialized->get_uint64(np_account_id_type_id, 0);
+		language = serialized->get_string(language_type_id, {});
+		region = serialized->get_string(region_type_id, {});
+		is_guest = serialized->get_bool(is_guest_type_id, false);
+		age = serialized->get_int32(age_type_id, 0);
+		restrict_chat = serialized->get_bool(restrict_chat_type_id, false);
+		restrict_ugm = serialized->get_bool(restrict_ugm_type_id, false); 
 	}
 
 	[[nodiscard]] auto

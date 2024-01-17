@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	EmergentDialogTriggerDisableScriptActionPrius::EmergentDialogTriggerDisableScriptActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		Event = serialized->get_enum<rivet::ddl::generated::x6be956dd>(Event_type_id, rivet::ddl::generated::x6be956dd_values); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Sound);
+		Event = serialized->get_enum<rivet::ddl::generated::x6be956dd>(Event_type_id, rivet::ddl::generated::x6be956dd_values, rivet::ddl::generated::x6be956dd::None); 
 	}
 
 	[[nodiscard]] auto

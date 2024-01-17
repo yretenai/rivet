@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ReferencedGraphNodeBaseDef::ReferencedGraphNodeBaseDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EmbeddedGraphNodeBaseDef(serialized) {
-		AssetPath = serialized->get_string(AssetPath_type_id); 
+		AssetPath = serialized->get_string(AssetPath_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

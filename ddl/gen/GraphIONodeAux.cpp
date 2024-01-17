@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	GraphIONodeAux::GraphIONodeAux([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Type = serialized->get_string(Type_type_id);
-		SubType = serialized->get_string(SubType_type_id);
-		Dir = serialized->get_enum<rivet::ddl::generated::x6e9cd50>(Dir_type_id, rivet::ddl::generated::x6e9cd50_values);
-		Name = serialized->get_string(Name_type_id);
-		Tooltip = serialized->get_string(Tooltip_type_id); 
+		Type = serialized->get_string(Type_type_id, {});
+		SubType = serialized->get_string(SubType_type_id, {});
+		Dir = serialized->get_enum<rivet::ddl::generated::x6e9cd50>(Dir_type_id, rivet::ddl::generated::x6e9cd50_values, rivet::ddl::generated::x6e9cd50::Invalid);
+		Name = serialized->get_string(Name_type_id, {});
+		Tooltip = serialized->get_string(Tooltip_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

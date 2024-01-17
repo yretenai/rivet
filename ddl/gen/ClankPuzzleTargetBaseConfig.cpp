@@ -11,16 +11,16 @@
 
 namespace rivet::ddl::generated {
 	ClankPuzzleTargetBaseConfig::ClankPuzzleTargetBaseConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		TargetType = serialized->get_bitset<rivet::ddl::generated::xf32dacf0>(TargetType_type_id, rivet::ddl::generated::xf32dacf0_values);
-		CanAbsorb = serialized->get_bool(CanAbsorb_type_id);
+		TargetType = serialized->get_bitset<rivet::ddl::generated::xf32dacf0>(TargetType_type_id, rivet::ddl::generated::xf32dacf0_values, 0);
+		CanAbsorb = serialized->get_bool(CanAbsorb_type_id, false);
 		SpeedUpTime = serialized->unwrap_into<rivet::ddl::generated::ClankPuzzleTimeData>(SpeedUpTime_type_id);
 		SlowDownTime = serialized->unwrap_into<rivet::ddl::generated::ClankPuzzleTimeData>(SlowDownTime_type_id);
 		GravityTime = serialized->unwrap_into<rivet::ddl::generated::ClankPuzzleTimeData>(GravityTime_type_id);
 		EnergyTime = serialized->unwrap_into<rivet::ddl::generated::ClankPuzzleTimeData>(EnergyTime_type_id);
-		SpeedUpMaterial = serialized->get_string(SpeedUpMaterial_type_id);
-		SlowDownMaterial = serialized->get_string(SlowDownMaterial_type_id);
-		GravityMaterial = serialized->get_string(GravityMaterial_type_id);
-		EnergyMaterial = serialized->get_string(EnergyMaterial_type_id);
+		SpeedUpMaterial = serialized->get_string(SpeedUpMaterial_type_id, {});
+		SlowDownMaterial = serialized->get_string(SlowDownMaterial_type_id, {});
+		GravityMaterial = serialized->get_string(GravityMaterial_type_id, {});
+		EnergyMaterial = serialized->get_string(EnergyMaterial_type_id, {});
 		MaterialGraphColoring = serialized->unwrap_into<rivet::ddl::generated::ClankPuzzleTargetColorData>(MaterialGraphColoring_type_id); 
 	}
 

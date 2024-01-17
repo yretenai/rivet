@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	StatusEffectArmorPrius::StatusEffectArmorPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): StatusEffectBasePrius(serialized) {
-		IsPercent = serialized->get_bool(IsPercent_type_id);
-		ReboundOnMelee = serialized->get_bool(ReboundOnMelee_type_id); 
+		IsPercent = serialized->get_bool(IsPercent_type_id, true);
+		ReboundOnMelee = serialized->get_bool(ReboundOnMelee_type_id, false); 
 	}
 
 	[[nodiscard]] auto

@@ -9,15 +9,15 @@
 
 namespace rivet::ddl::generated {
 	MissionConfig::MissionConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): RegionGameDataBase(serialized) {
-		MissionName = serialized->get_string(MissionName_type_id);
-		MissionTitle = serialized->get_string(MissionTitle_type_id);
-		Description = serialized->get_string(Description_type_id);
-		LocTagMissionTitle = serialized->get_string(LocTagMissionTitle_type_id);
-		LocTagDescription = serialized->get_string(LocTagDescription_type_id);
-		LocTagDescriptionEnd = serialized->get_string(LocTagDescriptionEnd_type_id);
-		OverrideLightingMode = serialized->get_bool(OverrideLightingMode_type_id);
-		LightingMode = serialized->get_enum<rivet::ddl::generated::LightingMode>(LightingMode_type_id, rivet::ddl::generated::LightingMode_values);
-		VisibleInMissionLog = serialized->get_bool(VisibleInMissionLog_type_id);
+		MissionName = serialized->get_string(MissionName_type_id, {});
+		MissionTitle = serialized->get_string(MissionTitle_type_id, {});
+		Description = serialized->get_string(Description_type_id, {});
+		LocTagMissionTitle = serialized->get_string(LocTagMissionTitle_type_id, "INVALID");
+		LocTagDescription = serialized->get_string(LocTagDescription_type_id, "INVALID");
+		LocTagDescriptionEnd = serialized->get_string(LocTagDescriptionEnd_type_id, "INVALID");
+		OverrideLightingMode = serialized->get_bool(OverrideLightingMode_type_id, false);
+		LightingMode = serialized->get_enum<rivet::ddl::generated::LightingMode>(LightingMode_type_id, rivet::ddl::generated::LightingMode_values, rivet::ddl::generated::LightingMode::Day);
+		VisibleInMissionLog = serialized->get_bool(VisibleInMissionLog_type_id, true);
 		Objectives = serialized->unwrap_into_many<rivet::ddl::generated::MissionObjectiveArrayData>(Objectives_type_id); 
 	}
 

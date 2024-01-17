@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	IntrospectionAssetEntry::IntrospectionAssetEntry([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AssetId = serialized->get_uint64(AssetId_type_id);
-		Language = serialized->get_enum<rivet::ddl::generated::x572515d>(Language_type_id, rivet::ddl::generated::x572515d_values); 
+		AssetId = serialized->get_uint64(AssetId_type_id, 0);
+		Language = serialized->get_enum<rivet::ddl::generated::x572515d>(Language_type_id, rivet::ddl::generated::x572515d_values, rivet::ddl::generated::x572515d::None); 
 	}
 
 	[[nodiscard]] auto

@@ -9,26 +9,26 @@
 
 namespace rivet::ddl::generated {
 	CVCCollDataPrius::CVCCollDataPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		PushValue = serialized->get_float(PushValue_type_id);
-		PushOnEqual = serialized->get_bool(PushOnEqual_type_id);
-		AlwaysPushVertical = serialized->get_bool(AlwaysPushVertical_type_id);
-		AllowSoftCollisions = serialized->get_bool(AllowSoftCollisions_type_id);
-		UpdateExtents = serialized->get_bool(UpdateExtents_type_id);
-		ManualUpdateShape = serialized->get_bool(ManualUpdateShape_type_id);
-		Crucial = serialized->get_bool(Crucial_type_id);
-		ApplyActorScale = serialized->get_bool(ApplyActorScale_type_id);
-		MovingEnvironment = serialized->get_bool(MovingEnvironment_type_id);
-		LocatorOrJointName = serialized->get_string(LocatorOrJointName_type_id);
-		Type = serialized->get_enum<rivet::ddl::generated::x14f7ad69>(Type_type_id, rivet::ddl::generated::x14f7ad69_values);
-		Radius = serialized->get_float(Radius_type_id);
-		SoftRadiusInner = serialized->get_float(SoftRadiusInner_type_id);
-		SoftRadiusOuter = serialized->get_float(SoftRadiusOuter_type_id);
-		HeightUp = serialized->get_float(HeightUp_type_id);
-		HeightDown = serialized->get_float(HeightDown_type_id);
-		UseModelOBB = serialized->get_bool(UseModelOBB_type_id);
-		BoxExtentsX = serialized->get_float(BoxExtentsX_type_id);
-		BoxExtentsY = serialized->get_float(BoxExtentsY_type_id);
-		BoxExtentsZ = serialized->get_float(BoxExtentsZ_type_id);
+		PushValue = serialized->get_float(PushValue_type_id, 1.000000);
+		PushOnEqual = serialized->get_bool(PushOnEqual_type_id, false);
+		AlwaysPushVertical = serialized->get_bool(AlwaysPushVertical_type_id, false);
+		AllowSoftCollisions = serialized->get_bool(AllowSoftCollisions_type_id, false);
+		UpdateExtents = serialized->get_bool(UpdateExtents_type_id, false);
+		ManualUpdateShape = serialized->get_bool(ManualUpdateShape_type_id, false);
+		Crucial = serialized->get_bool(Crucial_type_id, false);
+		ApplyActorScale = serialized->get_bool(ApplyActorScale_type_id, false);
+		MovingEnvironment = serialized->get_bool(MovingEnvironment_type_id, false);
+		LocatorOrJointName = serialized->get_string(LocatorOrJointName_type_id, {});
+		Type = serialized->get_enum<rivet::ddl::generated::x14f7ad69>(Type_type_id, rivet::ddl::generated::x14f7ad69_values, rivet::ddl::generated::x14f7ad69::Cylinder);
+		Radius = serialized->get_float(Radius_type_id, 0.500000);
+		SoftRadiusInner = serialized->get_float(SoftRadiusInner_type_id, 0.250000);
+		SoftRadiusOuter = serialized->get_float(SoftRadiusOuter_type_id, 0.750000);
+		HeightUp = serialized->get_float(HeightUp_type_id, 2.000000);
+		HeightDown = serialized->get_float(HeightDown_type_id, 0.000000);
+		UseModelOBB = serialized->get_bool(UseModelOBB_type_id, true);
+		BoxExtentsX = serialized->get_float(BoxExtentsX_type_id, 1.000000);
+		BoxExtentsY = serialized->get_float(BoxExtentsY_type_id, 1.000000);
+		BoxExtentsZ = serialized->get_float(BoxExtentsZ_type_id, 1.000000);
 		BoxOBBCenter = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(BoxOBBCenter_type_id); 
 	}
 

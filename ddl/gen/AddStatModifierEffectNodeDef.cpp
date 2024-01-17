@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	AddStatModifierEffectNodeDef::AddStatModifierEffectNodeDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): NodalShotEffectNodeBaseDef(serialized) {
-		Stat = serialized->get_enum<rivet::ddl::generated::xac99cbe7>(Stat_type_id, rivet::ddl::generated::xac99cbe7_values);
-		Op = serialized->get_enum<rivet::ddl::generated::x2d67b08a>(Op_type_id, rivet::ddl::generated::x2d67b08a_values);
+		Stat = serialized->get_enum<rivet::ddl::generated::xac99cbe7>(Stat_type_id, rivet::ddl::generated::xac99cbe7_values, rivet::ddl::generated::xac99cbe7::Damage);
+		Op = serialized->get_enum<rivet::ddl::generated::x2d67b08a>(Op_type_id, rivet::ddl::generated::x2d67b08a_values, rivet::ddl::generated::x2d67b08a::Multiply);
 		Value = serialized->unwrap_into<rivet::ddl::generated::InputPlugFloat>(Value_type_id); 
 	}
 

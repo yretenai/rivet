@@ -12,12 +12,12 @@
 
 namespace rivet::ddl::generated {
 	AssetProfileData::AssetProfileData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		_id = serialized->get_string(_id_type_id);
-		Platform = serialized->get_string(Platform_type_id);
-		Extension = serialized->get_string(Extension_type_id);
-		Language = serialized->get_string(Language_type_id);
-		AssetPath = serialized->get_string(AssetPath_type_id);
-		FileSize = serialized->get_uint32(FileSize_type_id);
+		_id = serialized->get_string(_id_type_id, {});
+		Platform = serialized->get_string(Platform_type_id, {});
+		Extension = serialized->get_string(Extension_type_id, {});
+		Language = serialized->get_string(Language_type_id, {});
+		AssetPath = serialized->get_string(AssetPath_type_id, {});
+		FileSize = serialized->get_uint32(FileSize_type_id, 0);
 		BlockSizes = serialized->unwrap_into_many<rivet::ddl::generated::NamedSize>(BlockSizes_type_id);
 		SourceDeps = serialized->unwrap_into_many<rivet::ddl::generated::AssetProfileDataDependency>(SourceDeps_type_id);
 		ManualLoadDeps = serialized->unwrap_into_many<rivet::ddl::generated::AssetProfileDataDependency>(ManualLoadDeps_type_id);
@@ -26,26 +26,26 @@ namespace rivet::ddl::generated {
 		HibernatedAssets = serialized->get_strings(HibernatedAssets_type_id);
 		DelayStreamAssets = serialized->get_strings(DelayStreamAssets_type_id);
 		LightingConditionReferences = serialized->unwrap_into_many<rivet::ddl::generated::AssetProfileDataReferenceArray>(LightingConditionReferences_type_id);
-		RuntimeZoneTotalModelInstCount = serialized->get_uint32(RuntimeZoneTotalModelInstCount_type_id);
-		RuntimeZoneDelayModelInstCount = serialized->get_uint32(RuntimeZoneDelayModelInstCount_type_id);
+		RuntimeZoneTotalModelInstCount = serialized->get_uint32(RuntimeZoneTotalModelInstCount_type_id, 0);
+		RuntimeZoneDelayModelInstCount = serialized->get_uint32(RuntimeZoneDelayModelInstCount_type_id, 0);
 		AnimClipSizes = serialized->unwrap_into_many<rivet::ddl::generated::NamedSize>(AnimClipSizes_type_id);
 		AnimDriverSizes = serialized->unwrap_into_many<rivet::ddl::generated::NamedSize>(AnimDriverSizes_type_id);
-		SoundSize = serialized->get_uint32(SoundSize_type_id);
-		IndexCount = serialized->get_uint32(IndexCount_type_id);
-		SkinBatchCount = serialized->get_uint32(SkinBatchCount_type_id);
-		MorphBatchCount = serialized->get_uint32(MorphBatchCount_type_id);
-		VertexCount = serialized->get_uint32(VertexCount_type_id);
-		PhysicsAVMaterialsCount = serialized->get_uint32(PhysicsAVMaterialsCount_type_id);
-		ClothJointCount = serialized->get_uint32(ClothJointCount_type_id);
-		LocatorCount = serialized->get_uint32(LocatorCount_type_id);
-		JointCount = serialized->get_uint32(JointCount_type_id);
-		ResidentTextureSize = serialized->get_uint32(ResidentTextureSize_type_id);
-		TextureFormat = serialized->get_string(TextureFormat_type_id);
-		TextureType = serialized->get_string(TextureType_type_id);
-		Width = serialized->get_uint32(Width_type_id);
-		Height = serialized->get_uint32(Height_type_id);
-		CannotStreamMips = serialized->get_bool(CannotStreamMips_type_id);
-		Duration = serialized->get_float(Duration_type_id);
+		SoundSize = serialized->get_uint32(SoundSize_type_id, 0);
+		IndexCount = serialized->get_uint32(IndexCount_type_id, 0);
+		SkinBatchCount = serialized->get_uint32(SkinBatchCount_type_id, 0);
+		MorphBatchCount = serialized->get_uint32(MorphBatchCount_type_id, 0);
+		VertexCount = serialized->get_uint32(VertexCount_type_id, 0);
+		PhysicsAVMaterialsCount = serialized->get_uint32(PhysicsAVMaterialsCount_type_id, 0);
+		ClothJointCount = serialized->get_uint32(ClothJointCount_type_id, 0);
+		LocatorCount = serialized->get_uint32(LocatorCount_type_id, 0);
+		JointCount = serialized->get_uint32(JointCount_type_id, 0);
+		ResidentTextureSize = serialized->get_uint32(ResidentTextureSize_type_id, 0);
+		TextureFormat = serialized->get_string(TextureFormat_type_id, {});
+		TextureType = serialized->get_string(TextureType_type_id, {});
+		Width = serialized->get_uint32(Width_type_id, 0);
+		Height = serialized->get_uint32(Height_type_id, 0);
+		CannotStreamMips = serialized->get_bool(CannotStreamMips_type_id, false);
+		Duration = serialized->get_float(Duration_type_id, 0.000000);
 		Components = serialized->get_strings(Components_type_id); 
 	}
 

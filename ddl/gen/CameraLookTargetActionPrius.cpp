@@ -9,14 +9,14 @@
 
 namespace rivet::ddl::generated {
 	CameraLookTargetActionPrius::CameraLookTargetActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		FieldOfView = serialized->get_float(FieldOfView_type_id);
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Camera);
+		FieldOfView = serialized->get_float(FieldOfView_type_id, 65.000000);
 		TargetOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(TargetOffset_type_id);
-		SettleGain = serialized->get_float(SettleGain_type_id);
-		SettleDamp = serialized->get_float(SettleDamp_type_id);
-		SettleSpeedMaxYaw = serialized->get_float(SettleSpeedMaxYaw_type_id);
-		SettleSpeedMaxPitch = serialized->get_float(SettleSpeedMaxPitch_type_id);
-		SettleInputDelay = serialized->get_float(SettleInputDelay_type_id); 
+		SettleGain = serialized->get_float(SettleGain_type_id, -30.000000);
+		SettleDamp = serialized->get_float(SettleDamp_type_id, -300.000000);
+		SettleSpeedMaxYaw = serialized->get_float(SettleSpeedMaxYaw_type_id, 90.000000);
+		SettleSpeedMaxPitch = serialized->get_float(SettleSpeedMaxPitch_type_id, 45.000000);
+		SettleInputDelay = serialized->get_float(SettleInputDelay_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

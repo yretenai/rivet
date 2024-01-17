@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	SpawnShotForwardRandomAimTargetingPrius::SpawnShotForwardRandomAimTargetingPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): SpawnShotTargetingPrius(serialized) {
-		MaxAimAngle = serialized->get_float(MaxAimAngle_type_id); 
+		MaxAimAngle = serialized->get_float(MaxAimAngle_type_id, 30.000000); 
 	}
 
 	[[nodiscard]] auto

@@ -7,16 +7,16 @@
 
 namespace rivet::ddl::generated {
 	VolumetricCloudsRayMarchingDef::VolumetricCloudsRayMarchingDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		HighFrequencyNoiseTex = serialized->get_string(HighFrequencyNoiseTex_type_id);
-		LowFrequencyNoiseTex = serialized->get_string(LowFrequencyNoiseTex_type_id);
-		DownSampling = serialized->get_int8(DownSampling_type_id);
-		MinSampleCount = serialized->get_int16(MinSampleCount_type_id);
-		MaxSampleCount = serialized->get_int16(MaxSampleCount_type_id);
-		MinStepSize = serialized->get_float(MinStepSize_type_id);
-		MaxStepSize = serialized->get_float(MaxStepSize_type_id);
-		MaxSampleDistance = serialized->get_float(MaxSampleDistance_type_id);
-		EnabledTemporalRayOffset = serialized->get_bool(EnabledTemporalRayOffset_type_id);
-		EnabledEdgeBlur = serialized->get_bool(EnabledEdgeBlur_type_id); 
+		HighFrequencyNoiseTex = serialized->get_string(HighFrequencyNoiseTex_type_id, "textures\\volumetricCloudsNoises\\hiResClouds.texture");
+		LowFrequencyNoiseTex = serialized->get_string(LowFrequencyNoiseTex_type_id, "textures\\volumetricCloudsNoises\\lowResClouds.texture");
+		DownSampling = serialized->get_int8(DownSampling_type_id, 2);
+		MinSampleCount = serialized->get_int16(MinSampleCount_type_id, 54);
+		MaxSampleCount = serialized->get_int16(MaxSampleCount_type_id, 224);
+		MinStepSize = serialized->get_float(MinStepSize_type_id, 1024.000000);
+		MaxStepSize = serialized->get_float(MaxStepSize_type_id, 2048.000000);
+		MaxSampleDistance = serialized->get_float(MaxSampleDistance_type_id, 200000.000000);
+		EnabledTemporalRayOffset = serialized->get_bool(EnabledTemporalRayOffset_type_id, false);
+		EnabledEdgeBlur = serialized->get_bool(EnabledEdgeBlur_type_id, true); 
 	}
 
 	[[nodiscard]] auto

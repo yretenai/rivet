@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	UseMagCamInfo::UseMagCamInfo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		UseMagCamFOV = serialized->get_float(UseMagCamFOV_type_id);
-		UseMagCamFollowHeight = serialized->get_float(UseMagCamFollowHeight_type_id);
-		UseMagCamFollowDist = serialized->get_float(UseMagCamFollowDist_type_id);
-		UseMagCamTargYOffset = serialized->get_float(UseMagCamTargYOffset_type_id);
-		UseMagCamPitchOffet = serialized->get_float(UseMagCamPitchOffet_type_id); 
+		UseMagCamFOV = serialized->get_float(UseMagCamFOV_type_id, -90.000000);
+		UseMagCamFollowHeight = serialized->get_float(UseMagCamFollowHeight_type_id, 2.000000);
+		UseMagCamFollowDist = serialized->get_float(UseMagCamFollowDist_type_id, -40.000000);
+		UseMagCamTargYOffset = serialized->get_float(UseMagCamTargYOffset_type_id, -10.000000);
+		UseMagCamPitchOffet = serialized->get_float(UseMagCamPitchOffet_type_id, 5.000000); 
 	}
 
 	[[nodiscard]] auto

@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	ShotMotionTunnelerPuppyPrius::ShotMotionTunnelerPuppyPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BasicShotMotionPrius(serialized) {
-		ParentComponentHandle = serialized->get_uint32(ParentComponentHandle_type_id);
-		HistoryOffset = serialized->get_int32(HistoryOffset_type_id); 
+		ParentComponentHandle = serialized->get_uint32(ParentComponentHandle_type_id, 0);
+		HistoryOffset = serialized->get_int32(HistoryOffset_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

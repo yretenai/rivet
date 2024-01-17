@@ -8,8 +8,8 @@
 namespace rivet::ddl::generated {
 	CameraFocusOnNodesEngineItem::CameraFocusOnNodesEngineItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Nodes = serialized->get_bools(Nodes_type_id);
-		UseClusters = serialized->get_bool(UseClusters_type_id);
-		DistanceFactor = serialized->get_float(DistanceFactor_type_id); 
+		UseClusters = serialized->get_bool(UseClusters_type_id, false);
+		DistanceFactor = serialized->get_float(DistanceFactor_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	DifficultyModDef::DifficultyModDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		NameFilter = serialized->get_string(NameFilter_type_id);
-		Variable = serialized->get_enum<rivet::ddl::generated::x3f2aac2e>(Variable_type_id, rivet::ddl::generated::x3f2aac2e_values);
+		NameFilter = serialized->get_string(NameFilter_type_id, {});
+		Variable = serialized->get_enum<rivet::ddl::generated::x3f2aac2e>(Variable_type_id, rivet::ddl::generated::x3f2aac2e_values, rivet::ddl::generated::x3f2aac2e::None);
 		ModList = serialized->unwrap_into_many<rivet::ddl::generated::ConfigModListElement>(ModList_type_id); 
 	}
 

@@ -10,9 +10,9 @@
 
 namespace rivet::ddl::generated {
 	MaterialGraphEngineItem::MaterialGraphEngineItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AssetPath = serialized->get_string(AssetPath_type_id);
-		Force = serialized->get_bool(Force_type_id);
-		ForceCounter = serialized->get_int32(ForceCounter_type_id);
+		AssetPath = serialized->get_string(AssetPath_type_id, {});
+		Force = serialized->get_bool(Force_type_id, false);
+		ForceCounter = serialized->get_int32(ForceCounter_type_id, 0);
 		MaterialNodeLibraryList = serialized->unwrap_into<rivet::ddl::generated::MaterialNodeLibraryList>(MaterialNodeLibraryList_type_id);
 		MaterialGraphDef = serialized->unwrap_into<rivet::ddl::generated::MaterialGraphDef>(MaterialGraphDef_type_id); 
 	}

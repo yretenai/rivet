@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	UDSWebApiObject::UDSWebApiObject([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		objectId = serialized->get_string(objectId_type_id);
-		objectType = serialized->get_enum<rivet::ddl::generated::xefe0cd8b>(objectType_type_id, rivet::ddl::generated::xefe0cd8b_values);
+		objectId = serialized->get_string(objectId_type_id, {});
+		objectType = serialized->get_enum<rivet::ddl::generated::xefe0cd8b>(objectType_type_id, rivet::ddl::generated::xefe0cd8b_values, rivet::ddl::generated::xefe0cd8b::subCategory);
 		metadata = serialized->get_field(metadata_type_id);
 		links = serialized->get_field(links_type_id); 
 	}

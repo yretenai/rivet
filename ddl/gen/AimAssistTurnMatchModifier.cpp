@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	AimAssistTurnMatchModifier::AimAssistTurnMatchModifier([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Enable = serialized->get_bool(Enable_type_id);
-		MatchTolerance = serialized->get_float(MatchTolerance_type_id);
-		FrictionMod = serialized->get_float(FrictionMod_type_id);
-		MagnetMod = serialized->get_float(MagnetMod_type_id);
-		CenterMod = serialized->get_float(CenterMod_type_id); 
+		Enable = serialized->get_bool(Enable_type_id, true);
+		MatchTolerance = serialized->get_float(MatchTolerance_type_id, 10.000000);
+		FrictionMod = serialized->get_float(FrictionMod_type_id, 1.000000);
+		MagnetMod = serialized->get_float(MagnetMod_type_id, 1.000000);
+		CenterMod = serialized->get_float(CenterMod_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

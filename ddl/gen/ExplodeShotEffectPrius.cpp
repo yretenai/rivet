@@ -11,12 +11,12 @@
 namespace rivet::ddl::generated {
 	ExplodeShotEffectPrius::ExplodeShotEffectPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ScriptedShotEffectBasePrius(serialized) {
 		ExplodeData = serialized->unwrap_into<rivet::ddl::generated::DamageModifierExplosionPrius>(ExplodeData_type_id);
-		DamageType = serialized->get_enum<rivet::ddl::generated::DamageTypes>(DamageType_type_id, rivet::ddl::generated::DamageTypes_values);
-		DamageFlags = serialized->get_bitset<rivet::ddl::generated::x65d7dac2>(DamageFlags_type_id, rivet::ddl::generated::x65d7dac2_values);
+		DamageType = serialized->get_enum<rivet::ddl::generated::DamageTypes>(DamageType_type_id, rivet::ddl::generated::DamageTypes_values, rivet::ddl::generated::DamageTypes::Explosion);
+		DamageFlags = serialized->get_bitset<rivet::ddl::generated::x65d7dac2>(DamageFlags_type_id, rivet::ddl::generated::x65d7dac2_values, 0);
 		DamageOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(DamageOffset_type_id);
-		OffsetMode = serialized->get_enum<rivet::ddl::generated::xe1cdcd87>(OffsetMode_type_id, rivet::ddl::generated::xe1cdcd87_values);
-		Impulse = serialized->get_float(Impulse_type_id);
-		TriggerEvent = serialized->get_bool(TriggerEvent_type_id); 
+		OffsetMode = serialized->get_enum<rivet::ddl::generated::xe1cdcd87>(OffsetMode_type_id, rivet::ddl::generated::xe1cdcd87_values, rivet::ddl::generated::xe1cdcd87::Local);
+		Impulse = serialized->get_float(Impulse_type_id, 0.000000);
+		TriggerEvent = serialized->get_bool(TriggerEvent_type_id, true); 
 	}
 
 	[[nodiscard]] auto

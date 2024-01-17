@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	BotConfigPhysics::BotConfigPhysics([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		CollisionEnabled = serialized->get_bool(CollisionEnabled_type_id);
-		DisableCharacterMoveCollision = serialized->get_bool(DisableCharacterMoveCollision_type_id);
+		CollisionEnabled = serialized->get_bool(CollisionEnabled_type_id, true);
+		DisableCharacterMoveCollision = serialized->get_bool(DisableCharacterMoveCollision_type_id, true);
 		PhysicsComponentPrius = serialized->unwrap_into<rivet::ddl::generated::PhysicsComponentPrius>(PhysicsComponentPrius_type_id); 
 	}
 

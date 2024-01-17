@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	SetCurveActionPrius::SetCurveActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		UseClosestPt = serialized->get_bool(UseClosestPt_type_id);
-		DoSmoothTrans = serialized->get_bool(DoSmoothTrans_type_id);
-		SmoothingType = serialized->get_enum<rivet::ddl::generated::xb02a7b53>(SmoothingType_type_id, rivet::ddl::generated::xb02a7b53_values);
-		SmoothingStartType = serialized->get_enum<rivet::ddl::generated::x3376434d>(SmoothingStartType_type_id, rivet::ddl::generated::x3376434d_values); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Curve_Follower);
+		UseClosestPt = serialized->get_bool(UseClosestPt_type_id, false);
+		DoSmoothTrans = serialized->get_bool(DoSmoothTrans_type_id, false);
+		SmoothingType = serialized->get_enum<rivet::ddl::generated::xb02a7b53>(SmoothingType_type_id, rivet::ddl::generated::xb02a7b53_values, rivet::ddl::generated::xb02a7b53::Intro_Curve);
+		SmoothingStartType = serialized->get_enum<rivet::ddl::generated::x3376434d>(SmoothingStartType_type_id, rivet::ddl::generated::x3376434d_values, rivet::ddl::generated::x3376434d::Closest_Point); 
 	}
 
 	[[nodiscard]] auto

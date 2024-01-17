@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	AnimAttachmentDef::AnimAttachmentDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Locator = serialized->get_enum<rivet::ddl::generated::xfffc3f38>(Locator_type_id, rivet::ddl::generated::xfffc3f38_values);
-		Asset = serialized->get_enum<rivet::ddl::generated::xc5efdc34>(Asset_type_id, rivet::ddl::generated::xc5efdc34_values);
-		LocatorString = serialized->get_string(LocatorString_type_id);
-		AssetString = serialized->get_string(AssetString_type_id);
-		AssetLocatorString = serialized->get_string(AssetLocatorString_type_id);
-		Scale = serialized->get_float(Scale_type_id); 
+		Locator = serialized->get_enum<rivet::ddl::generated::xfffc3f38>(Locator_type_id, rivet::ddl::generated::xfffc3f38_values, rivet::ddl::generated::xfffc3f38::None);
+		Asset = serialized->get_enum<rivet::ddl::generated::xc5efdc34>(Asset_type_id, rivet::ddl::generated::xc5efdc34_values, rivet::ddl::generated::xc5efdc34::None);
+		LocatorString = serialized->get_string(LocatorString_type_id, {});
+		AssetString = serialized->get_string(AssetString_type_id, {});
+		AssetLocatorString = serialized->get_string(AssetLocatorString_type_id, {});
+		Scale = serialized->get_float(Scale_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	CaptureJobInfo::CaptureJobInfo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		LightingZoneFullPath = serialized->get_string(LightingZoneFullPath_type_id);
-		LightbinSrcDir = serialized->get_string(LightbinSrcDir_type_id);
-		ZoneLightbinFullPath = serialized->get_string(ZoneLightbinFullPath_type_id);
-		Bounce = serialized->get_uint32(Bounce_type_id); 
+		LightingZoneFullPath = serialized->get_string(LightingZoneFullPath_type_id, {});
+		LightbinSrcDir = serialized->get_string(LightbinSrcDir_type_id, {});
+		ZoneLightbinFullPath = serialized->get_string(ZoneLightbinFullPath_type_id, {});
+		Bounce = serialized->get_uint32(Bounce_type_id, 1); 
 	}
 
 	[[nodiscard]] auto

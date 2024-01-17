@@ -11,9 +11,9 @@ namespace rivet::ddl::generated {
 	SyncedPhysicsFreebodyPrius::SyncedPhysicsFreebodyPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		InitialLinearVel = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(InitialLinearVel_type_id);
 		InitialAngularVel = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(InitialAngularVel_type_id);
-		Gravity = serialized->get_float(Gravity_type_id);
-		LinearDamp = serialized->get_float(LinearDamp_type_id);
-		AngularDamp = serialized->get_float(AngularDamp_type_id); 
+		Gravity = serialized->get_float(Gravity_type_id, 9.800000);
+		LinearDamp = serialized->get_float(LinearDamp_type_id, 0.001000);
+		AngularDamp = serialized->get_float(AngularDamp_type_id, 0.100000); 
 	}
 
 	[[nodiscard]] auto

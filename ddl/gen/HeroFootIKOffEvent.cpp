@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	HeroFootIKOffEvent::HeroFootIKOffEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Chain = serialized->get_string(Chain_type_id);
-		DisableGroundOffset = serialized->get_bool(DisableGroundOffset_type_id); 
+		Chain = serialized->get_string(Chain_type_id, {});
+		DisableGroundOffset = serialized->get_bool(DisableGroundOffset_type_id, true); 
 	}
 
 	[[nodiscard]] auto

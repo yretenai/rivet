@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ShotMagShieldPrius::ShotMagShieldPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BasicBulletPrius(serialized) {
-		MaxCapturedShots = serialized->get_uint32(MaxCapturedShots_type_id); 
+		MaxCapturedShots = serialized->get_uint32(MaxCapturedShots_type_id, 12); 
 	}
 
 	[[nodiscard]] auto

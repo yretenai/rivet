@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	HeroCinematicFurSettingsEvent::HeroCinematicFurSettingsEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		FurWetnessEnabled = serialized->get_bool(FurWetnessEnabled_type_id);
-		FurWindEnabled = serialized->get_bool(FurWindEnabled_type_id);
-		FurWetnessUpdateEnabled = serialized->get_bool(FurWetnessUpdateEnabled_type_id);
-		FurWindUpdateEnabled = serialized->get_bool(FurWindUpdateEnabled_type_id); 
+		FurWetnessEnabled = serialized->get_bool(FurWetnessEnabled_type_id, true);
+		FurWindEnabled = serialized->get_bool(FurWindEnabled_type_id, true);
+		FurWetnessUpdateEnabled = serialized->get_bool(FurWetnessUpdateEnabled_type_id, true);
+		FurWindUpdateEnabled = serialized->get_bool(FurWindUpdateEnabled_type_id, true); 
 	}
 
 	[[nodiscard]] auto

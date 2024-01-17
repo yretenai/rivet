@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	PrefabZoneComponentPrius::PrefabZoneComponentPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		PrefabZone = serialized->get_string(PrefabZone_type_id);
-		Autoload = serialized->get_bool(Autoload_type_id); 
+		PrefabZone = serialized->get_string(PrefabZone_type_id, {});
+		Autoload = serialized->get_bool(Autoload_type_id, true); 
 	}
 
 	[[nodiscard]] auto

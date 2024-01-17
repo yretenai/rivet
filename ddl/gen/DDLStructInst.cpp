@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	DDLStructInst::DDLStructInst([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DdlStructName = serialized->get_string(DdlStructName_type_id);
+		DdlStructName = serialized->get_string(DdlStructName_type_id, {});
 		Overrides = serialized->get_field(Overrides_type_id); 
 	}
 

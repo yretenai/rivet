@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	MapElementData::MapElementData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Name = serialized->get_string(Name_type_id);
-		ActorId = serialized->get_uint64(ActorId_type_id);
+		Name = serialized->get_string(Name_type_id, {});
+		ActorId = serialized->get_uint64(ActorId_type_id, 0);
 		Position = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Position_type_id); 
 	}
 

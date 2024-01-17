@@ -10,7 +10,7 @@
 namespace rivet::ddl::generated {
 	SpawnerThrowSpawnEvent::SpawnerThrowSpawnEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
 		ThrowToPosition = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(ThrowToPosition_type_id);
-		ThrowHeight = serialized->get_float(ThrowHeight_type_id); 
+		ThrowHeight = serialized->get_float(ThrowHeight_type_id, 2.000000); 
 	}
 
 	[[nodiscard]] auto

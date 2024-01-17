@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	BossBasePrius::BossBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		TargetingConfig = serialized->get_string(TargetingConfig_type_id);
-		AwarenessConfig = serialized->get_string(AwarenessConfig_type_id);
+		TargetingConfig = serialized->get_string(TargetingConfig_type_id, {});
+		AwarenessConfig = serialized->get_string(AwarenessConfig_type_id, {});
 		ConfigModDefs = serialized->unwrap_into_many<rivet::ddl::generated::BotBaseDataModDef>(ConfigModDefs_type_id); 
 	}
 

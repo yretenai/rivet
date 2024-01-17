@@ -9,15 +9,15 @@
 
 namespace rivet::ddl::generated {
 	HeadManagerPrius::HeadManagerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		HeadActor = serialized->get_string(HeadActor_type_id);
-		HeadModel = serialized->get_string(HeadModel_type_id);
-		AutoMatchJoints = serialized->get_bool(AutoMatchJoints_type_id);
-		UseModelVariant = serialized->get_bool(UseModelVariant_type_id);
-		AllowUpdateAsync = serialized->get_bool(AllowUpdateAsync_type_id);
-		AllowFastBSphere = serialized->get_bool(AllowFastBSphere_type_id);
-		DriveAnimMaterialComponent = serialized->get_bool(DriveAnimMaterialComponent_type_id);
-		ModelVariant = serialized->get_string(ModelVariant_type_id);
-		VariantName = serialized->get_string(VariantName_type_id);
+		HeadActor = serialized->get_string(HeadActor_type_id, {});
+		HeadModel = serialized->get_string(HeadModel_type_id, {});
+		AutoMatchJoints = serialized->get_bool(AutoMatchJoints_type_id, true);
+		UseModelVariant = serialized->get_bool(UseModelVariant_type_id, false);
+		AllowUpdateAsync = serialized->get_bool(AllowUpdateAsync_type_id, true);
+		AllowFastBSphere = serialized->get_bool(AllowFastBSphere_type_id, false);
+		DriveAnimMaterialComponent = serialized->get_bool(DriveAnimMaterialComponent_type_id, false);
+		ModelVariant = serialized->get_string(ModelVariant_type_id, {});
+		VariantName = serialized->get_string(VariantName_type_id, {});
 		CustomJointMap = serialized->unwrap_into_many<rivet::ddl::generated::CustomJointMapEntry>(CustomJointMap_type_id); 
 	}
 

@@ -9,10 +9,10 @@
 
 namespace rivet::ddl::generated {
 	SplineCameraFlyPrius::SplineCameraFlyPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): CameraPrius(serialized) {
-		MotionSpline = serialized->get_uint64(MotionSpline_type_id);
-		TargetActor = serialized->get_uint64(TargetActor_type_id);
-		LookMode = serialized->get_enum<rivet::ddl::generated::x73a6f97a>(LookMode_type_id, rivet::ddl::generated::x73a6f97a_values);
-		StartAtEnd = serialized->get_bool(StartAtEnd_type_id);
+		MotionSpline = serialized->get_uint64(MotionSpline_type_id, 0);
+		TargetActor = serialized->get_uint64(TargetActor_type_id, 0);
+		LookMode = serialized->get_enum<rivet::ddl::generated::x73a6f97a>(LookMode_type_id, rivet::ddl::generated::x73a6f97a_values, rivet::ddl::generated::x73a6f97a::Target);
+		StartAtEnd = serialized->get_bool(StartAtEnd_type_id, false);
 		TargetOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(TargetOffset_type_id); 
 	}
 

@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	IntersectionFadeData::IntersectionFadeData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		FadeOutDistance = serialized->get_float(FadeOutDistance_type_id);
-		HeadFadeOutDistance = serialized->get_float(HeadFadeOutDistance_type_id);
-		FadeTime = serialized->get_float(FadeTime_type_id); 
+		FadeOutDistance = serialized->get_float(FadeOutDistance_type_id, 0.900000);
+		HeadFadeOutDistance = serialized->get_float(HeadFadeOutDistance_type_id, 0.500000);
+		FadeTime = serialized->get_float(FadeTime_type_id, 0.500000); 
 	}
 
 	[[nodiscard]] auto

@@ -10,7 +10,7 @@
 namespace rivet::ddl::generated {
 	BotLookSelectorData::BotLookSelectorData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Variants = serialized->unwrap_into_many<rivet::ddl::generated::VariantConfiguration>(Variants_type_id);
-		LockPhysicsOnSpawn = serialized->get_bool(LockPhysicsOnSpawn_type_id); 
+		LockPhysicsOnSpawn = serialized->get_bool(LockPhysicsOnSpawn_type_id, true); 
 	}
 
 	[[nodiscard]] auto

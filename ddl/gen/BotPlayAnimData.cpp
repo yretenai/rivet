@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	BotPlayAnimData::BotPlayAnimData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AnimDriver = serialized->get_string(AnimDriver_type_id);
-		AnimDuration = serialized->get_float(AnimDuration_type_id);
-		ApplyGravity = serialized->get_bool(ApplyGravity_type_id); 
+		AnimDriver = serialized->get_string(AnimDriver_type_id, {});
+		AnimDuration = serialized->get_float(AnimDuration_type_id, -1.000000);
+		ApplyGravity = serialized->get_bool(ApplyGravity_type_id, true); 
 	}
 
 	[[nodiscard]] auto

@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	ConfigModEvent::ConfigModEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Config = serialized->get_string(Config_type_id);
-		Effect = serialized->get_enum<rivet::ddl::generated::x2f0b644b>(Effect_type_id, rivet::ddl::generated::x2f0b644b_values); 
+		Config = serialized->get_string(Config_type_id, {});
+		Effect = serialized->get_enum<rivet::ddl::generated::x2f0b644b>(Effect_type_id, rivet::ddl::generated::x2f0b644b_values, rivet::ddl::generated::x2f0b644b::Replace); 
 	}
 
 	[[nodiscard]] auto

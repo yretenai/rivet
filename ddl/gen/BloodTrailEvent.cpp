@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	BloodTrailEvent::BloodTrailEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Moving = serialized->get_bool(Moving_type_id); 
+		Moving = serialized->get_bool(Moving_type_id, false); 
 	}
 
 	[[nodiscard]] auto

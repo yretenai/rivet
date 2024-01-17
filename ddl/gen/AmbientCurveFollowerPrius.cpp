@@ -9,20 +9,20 @@
 
 namespace rivet::ddl::generated {
 	AmbientCurveFollowerPrius::AmbientCurveFollowerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		OpenCurveFollowType = serialized->get_enum<rivet::ddl::generated::xd93fd23f>(OpenCurveFollowType_type_id, rivet::ddl::generated::xd93fd23f_values);
-		DoOpenCurveStop = serialized->get_bool(DoOpenCurveStop_type_id);
-		Acceleration = serialized->get_float(Acceleration_type_id);
-		Deceleration = serialized->get_float(Deceleration_type_id);
-		MaxSpeed = serialized->get_float(MaxSpeed_type_id);
-		ForceYUp = serialized->get_bool(ForceYUp_type_id);
-		IntroCurveMinDistFactor = serialized->get_float(IntroCurveMinDistFactor_type_id);
-		IntroCurveMaxDistFactor = serialized->get_float(IntroCurveMaxDistFactor_type_id);
-		IntroCurveAngleFactor = serialized->get_float(IntroCurveAngleFactor_type_id);
-		IntroCurveMaxTurnRate = serialized->get_float(IntroCurveMaxTurnRate_type_id);
-		IntroCurveLockToOrientation = serialized->get_bool(IntroCurveLockToOrientation_type_id);
-		SyncUpdate = serialized->get_bool(SyncUpdate_type_id);
-		DeleteAtEnd = serialized->get_bool(DeleteAtEnd_type_id);
-		ApplyFacing = serialized->get_bool(ApplyFacing_type_id);
+		OpenCurveFollowType = serialized->get_enum<rivet::ddl::generated::xd93fd23f>(OpenCurveFollowType_type_id, rivet::ddl::generated::xd93fd23f_values, rivet::ddl::generated::xd93fd23f::OneShot);
+		DoOpenCurveStop = serialized->get_bool(DoOpenCurveStop_type_id, true);
+		Acceleration = serialized->get_float(Acceleration_type_id, 5.000000);
+		Deceleration = serialized->get_float(Deceleration_type_id, 5.000000);
+		MaxSpeed = serialized->get_float(MaxSpeed_type_id, 20.000000);
+		ForceYUp = serialized->get_bool(ForceYUp_type_id, false);
+		IntroCurveMinDistFactor = serialized->get_float(IntroCurveMinDistFactor_type_id, 0.200000);
+		IntroCurveMaxDistFactor = serialized->get_float(IntroCurveMaxDistFactor_type_id, 0.500000);
+		IntroCurveAngleFactor = serialized->get_float(IntroCurveAngleFactor_type_id, 0.250000);
+		IntroCurveMaxTurnRate = serialized->get_float(IntroCurveMaxTurnRate_type_id, 45.000000);
+		IntroCurveLockToOrientation = serialized->get_bool(IntroCurveLockToOrientation_type_id, true);
+		SyncUpdate = serialized->get_bool(SyncUpdate_type_id, true);
+		DeleteAtEnd = serialized->get_bool(DeleteAtEnd_type_id, false);
+		ApplyFacing = serialized->get_bool(ApplyFacing_type_id, true);
 		FacingData = serialized->unwrap_into<rivet::ddl::generated::AmbientCurveFacingBase>(FacingData_type_id); 
 	}
 

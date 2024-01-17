@@ -10,15 +10,15 @@
 namespace rivet::ddl::generated {
 	UIViewRTTPrius::UIViewRTTPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		ViewType = serialized->unwrap_into<rivet::ddl::generated::UIViewBaseData>(ViewType_type_id);
-		AutoLoadViewOnActivate = serialized->get_bool(AutoLoadViewOnActivate_type_id);
-		Material = serialized->get_string(Material_type_id);
-		TextureToReplace = serialized->get_string(TextureToReplace_type_id);
-		MaintainAspectRatio = serialized->get_bool(MaintainAspectRatio_type_id);
-		MaterialScaleVar = serialized->get_string(MaterialScaleVar_type_id);
-		MaterialOffsetXVar = serialized->get_string(MaterialOffsetXVar_type_id);
-		MaterialOffsetYVar = serialized->get_string(MaterialOffsetYVar_type_id);
-		Apply3DUIElementFlag = serialized->get_bool(Apply3DUIElementFlag_type_id);
-		DrawInDebugCam = serialized->get_bool(DrawInDebugCam_type_id); 
+		AutoLoadViewOnActivate = serialized->get_bool(AutoLoadViewOnActivate_type_id, true);
+		Material = serialized->get_string(Material_type_id, "lambert1");
+		TextureToReplace = serialized->get_string(TextureToReplace_type_id, "scaleform_Texture");
+		MaintainAspectRatio = serialized->get_bool(MaintainAspectRatio_type_id, false);
+		MaterialScaleVar = serialized->get_string(MaterialScaleVar_type_id, "uv_scale");
+		MaterialOffsetXVar = serialized->get_string(MaterialOffsetXVar_type_id, "offset_u");
+		MaterialOffsetYVar = serialized->get_string(MaterialOffsetYVar_type_id, "offset_v");
+		Apply3DUIElementFlag = serialized->get_bool(Apply3DUIElementFlag_type_id, true);
+		DrawInDebugCam = serialized->get_bool(DrawInDebugCam_type_id, false); 
 	}
 
 	[[nodiscard]] auto

@@ -10,7 +10,7 @@
 
 namespace rivet::ddl::generated {
 	BotMovementSteerable::BotMovementSteerable([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BotMovementBase(serialized) {
-		DamageHeroKamikaze = serialized->get_enum<rivet::ddl::generated::x99bafe38>(DamageHeroKamikaze_type_id, rivet::ddl::generated::x99bafe38_values);
+		DamageHeroKamikaze = serialized->get_enum<rivet::ddl::generated::x99bafe38>(DamageHeroKamikaze_type_id, rivet::ddl::generated::x99bafe38_values, rivet::ddl::generated::x99bafe38::MountedOnly);
 		BotKamikazeDamageData = serialized->unwrap_into<rivet::ddl::generated::BotMountDamageData>(BotKamikazeDamageData_type_id);
 		BotImpactDamageData = serialized->unwrap_into<rivet::ddl::generated::BotMountDamageData>(BotImpactDamageData_type_id);
 		BreakableBusterLocalOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(BreakableBusterLocalOffset_type_id); 

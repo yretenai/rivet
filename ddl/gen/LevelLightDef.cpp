@@ -11,8 +11,8 @@
 namespace rivet::ddl::generated {
 	LevelLightDef::LevelLightDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		VaultMetaData = serialized->unwrap_into<rivet::ddl::generated::VaultMetaData>(VaultMetaData_type_id);
-		IconPath = serialized->get_string(IconPath_type_id);
-		MipData16 = serialized->get_string(MipData16_type_id);
+		IconPath = serialized->get_string(IconPath_type_id, "");
+		MipData16 = serialized->get_string(MipData16_type_id, {});
 		MipData32 = serialized->get_strings(MipData32_type_id);
 		EnvProbes = serialized->unwrap_into_many<rivet::ddl::generated::EnvProbeCache>(EnvProbes_type_id); 
 	}

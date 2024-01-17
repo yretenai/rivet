@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	ClankPackConfig::ClankPackConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		ClankPackActor = serialized->get_string(ClankPackActor_type_id);
-		BrokenClank = serialized->get_bool(BrokenClank_type_id);
-		HasHelipack = serialized->get_bool(HasHelipack_type_id); 
+		ClankPackActor = serialized->get_string(ClankPackActor_type_id, {});
+		BrokenClank = serialized->get_bool(BrokenClank_type_id, false);
+		HasHelipack = serialized->get_bool(HasHelipack_type_id, true); 
 	}
 
 	[[nodiscard]] auto

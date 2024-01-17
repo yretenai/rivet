@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	GameBotShooterHeliPrius::GameBotShooterHeliPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): GameBotShooterBasePrius(serialized) {
-		Pilot = serialized->get_string(Pilot_type_id);
-		ExitPath = serialized->get_uint64(ExitPath_type_id);
-		ExitPathTriggerArea = serialized->get_uint64(ExitPathTriggerArea_type_id); 
+		Pilot = serialized->get_string(Pilot_type_id, {});
+		ExitPath = serialized->get_uint64(ExitPath_type_id, 0);
+		ExitPathTriggerArea = serialized->get_uint64(ExitPathTriggerArea_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	TextureSliceEngineCommand::TextureSliceEngineCommand([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Id = serialized->get_uint64(Id_type_id);
-		Increment = serialized->get_bool(Increment_type_id); 
+		Id = serialized->get_uint64(Id_type_id, 0);
+		Increment = serialized->get_bool(Increment_type_id, false); 
 	}
 
 	[[nodiscard]] auto

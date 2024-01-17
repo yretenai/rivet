@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	SetAbilityEnabledActionPrius::SetAbilityEnabledActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		Ability = serialized->get_enum<rivet::ddl::generated::Ability>(Ability_type_id, rivet::ddl::generated::Ability_values);
-		Enabled = serialized->get_bool(Enabled_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Boss);
+		Ability = serialized->get_enum<rivet::ddl::generated::Ability>(Ability_type_id, rivet::ddl::generated::Ability_values, rivet::ddl::generated::Ability::Jumping);
+		Enabled = serialized->get_bool(Enabled_type_id, false); 
 	}
 
 	[[nodiscard]] auto

@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	StatusEffectsData::StatusEffectsData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		EmitterName = serialized->get_string(EmitterName_type_id);
-		Shader = serialized->get_string(Shader_type_id);
+		EmitterName = serialized->get_string(EmitterName_type_id, {});
+		Shader = serialized->get_string(Shader_type_id, {});
 		Effects = serialized->unwrap_into_many<rivet::ddl::generated::StatusEffectWrapper>(Effects_type_id); 
 	}
 

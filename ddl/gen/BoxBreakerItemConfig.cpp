@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	BoxBreakerItemConfig::BoxBreakerItemConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): GadgetItemConfig(serialized) {
-		BoxBreakRange = serialized->get_float(BoxBreakRange_type_id);
-		BoltPickupRange = serialized->get_float(BoltPickupRange_type_id); 
+		BoxBreakRange = serialized->get_float(BoxBreakRange_type_id, 10.000000);
+		BoltPickupRange = serialized->get_float(BoltPickupRange_type_id, 10.000000); 
 	}
 
 	[[nodiscard]] auto

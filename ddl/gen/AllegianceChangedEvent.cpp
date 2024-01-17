@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	AllegianceChangedEvent::AllegianceChangedEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		OldAllegiance = serialized->get_enum<rivet::ddl::generated::x6bdf4ba1>(OldAllegiance_type_id, rivet::ddl::generated::x6bdf4ba1_values);
-		NewAllegiance = serialized->get_enum<rivet::ddl::generated::x6bdf4ba1>(NewAllegiance_type_id, rivet::ddl::generated::x6bdf4ba1_values); 
+		OldAllegiance = serialized->get_enum<rivet::ddl::generated::x6bdf4ba1>(OldAllegiance_type_id, rivet::ddl::generated::x6bdf4ba1_values, rivet::ddl::generated::x6bdf4ba1::Neutral);
+		NewAllegiance = serialized->get_enum<rivet::ddl::generated::x6bdf4ba1>(NewAllegiance_type_id, rivet::ddl::generated::x6bdf4ba1_values, rivet::ddl::generated::x6bdf4ba1::Neutral); 
 	}
 
 	[[nodiscard]] auto

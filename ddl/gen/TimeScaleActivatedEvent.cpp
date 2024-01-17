@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	TimeScaleActivatedEvent::TimeScaleActivatedEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Context = serialized->get_string(Context_type_id); 
+		Context = serialized->get_string(Context_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

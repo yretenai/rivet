@@ -11,10 +11,10 @@
 namespace rivet::ddl::generated {
 	PolylineDef::PolylineDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		VaultMetaData = serialized->unwrap_into<rivet::ddl::generated::VaultMetaData>(VaultMetaData_type_id);
-		IconPath = serialized->get_string(IconPath_type_id);
+		IconPath = serialized->get_string(IconPath_type_id, "");
 		Points = serialized->unwrap_into_many<rivet::ddl::generated::SceneNode>(Points_type_id);
-		PolylineType = serialized->get_enum<rivet::ddl::generated::PolylineType>(PolylineType_type_id, rivet::ddl::generated::PolylineType_values);
-		Height = serialized->get_float(Height_type_id); 
+		PolylineType = serialized->get_enum<rivet::ddl::generated::PolylineType>(PolylineType_type_id, rivet::ddl::generated::PolylineType_values, rivet::ddl::generated::PolylineType::Closed_Planar);
+		Height = serialized->get_float(Height_type_id, 4.000000); 
 	}
 
 	[[nodiscard]] auto

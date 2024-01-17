@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	TrailAgeKeyframe::TrailAgeKeyframe([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Luminance = serialized->get_bool(Luminance_type_id);
-		Color = serialized->get_bool(Color_type_id);
-		Alpha = serialized->get_bool(Alpha_type_id);
-		Scales = serialized->get_bool(Scales_type_id);
-		Custom = serialized->get_bool(Custom_type_id); 
+		Luminance = serialized->get_bool(Luminance_type_id, false);
+		Color = serialized->get_bool(Color_type_id, false);
+		Alpha = serialized->get_bool(Alpha_type_id, false);
+		Scales = serialized->get_bool(Scales_type_id, false);
+		Custom = serialized->get_bool(Custom_type_id, false); 
 	}
 
 	[[nodiscard]] auto

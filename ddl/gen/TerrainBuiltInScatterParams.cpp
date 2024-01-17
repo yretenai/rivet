@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	TerrainBuiltInScatterParams::TerrainBuiltInScatterParams([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		BiomeConfig = serialized->get_string(BiomeConfig_type_id); 
+		BiomeConfig = serialized->get_string(BiomeConfig_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

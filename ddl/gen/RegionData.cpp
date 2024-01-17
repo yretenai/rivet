@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	RegionData::RegionData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Region = serialized->get_string(Region_type_id);
-		IsBorderRegion = serialized->get_bool(IsBorderRegion_type_id); 
+		Region = serialized->get_string(Region_type_id, {});
+		IsBorderRegion = serialized->get_bool(IsBorderRegion_type_id, false); 
 	}
 
 	[[nodiscard]] auto

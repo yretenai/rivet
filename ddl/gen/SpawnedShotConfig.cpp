@@ -9,9 +9,9 @@
 
 namespace rivet::ddl::generated {
 	SpawnedShotConfig::SpawnedShotConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		ShotAsset = serialized->get_string(ShotAsset_type_id);
+		ShotAsset = serialized->get_string(ShotAsset_type_id, {});
 		ShotPrius = serialized->unwrap_into<rivet::ddl::generated::ShotBasePrius>(ShotPrius_type_id);
-		MacroWeapon = serialized->get_enum<rivet::ddl::generated::x63d44ada>(MacroWeapon_type_id, rivet::ddl::generated::x63d44ada_values); 
+		MacroWeapon = serialized->get_enum<rivet::ddl::generated::x63d44ada>(MacroWeapon_type_id, rivet::ddl::generated::x63d44ada_values, rivet::ddl::generated::x63d44ada::None); 
 	}
 
 	[[nodiscard]] auto

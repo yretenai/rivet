@@ -7,14 +7,14 @@
 
 namespace rivet::ddl::generated {
 	DeactivateCameraActionPrius::DeactivateCameraActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		TransitionType = serialized->get_enum<rivet::ddl::generated::x787c02d3>(TransitionType_type_id, rivet::ddl::generated::x787c02d3_values);
-		BlendTime = serialized->get_float(BlendTime_type_id);
-		BlendEaseIn = serialized->get_float(BlendEaseIn_type_id);
-		BlendEaseOut = serialized->get_float(BlendEaseOut_type_id);
-		PruneType = serialized->get_enum<rivet::ddl::generated::x1e271f24>(PruneType_type_id, rivet::ddl::generated::x1e271f24_values);
-		ResetNext = serialized->get_bool(ResetNext_type_id);
-		DeactivateLocal = serialized->get_bool(DeactivateLocal_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Camera);
+		TransitionType = serialized->get_enum<rivet::ddl::generated::x787c02d3>(TransitionType_type_id, rivet::ddl::generated::x787c02d3_values, rivet::ddl::generated::x787c02d3::Standard);
+		BlendTime = serialized->get_float(BlendTime_type_id, 1.000000);
+		BlendEaseIn = serialized->get_float(BlendEaseIn_type_id, 0.200000);
+		BlendEaseOut = serialized->get_float(BlendEaseOut_type_id, 0.200000);
+		PruneType = serialized->get_enum<rivet::ddl::generated::x1e271f24>(PruneType_type_id, rivet::ddl::generated::x1e271f24_values, rivet::ddl::generated::x1e271f24::Prune_Previous);
+		ResetNext = serialized->get_bool(ResetNext_type_id, false);
+		DeactivateLocal = serialized->get_bool(DeactivateLocal_type_id, true); 
 	}
 
 	[[nodiscard]] auto

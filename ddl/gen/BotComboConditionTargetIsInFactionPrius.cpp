@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	BotComboConditionTargetIsInFactionPrius::BotComboConditionTargetIsInFactionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BotComboConditionBasePrius(serialized) {
-		Faction = serialized->get_enum<rivet::ddl::generated::x6bdf4ba1>(Faction_type_id, rivet::ddl::generated::x6bdf4ba1_values);
-		FlipFactionCondition = serialized->get_bool(FlipFactionCondition_type_id); 
+		Faction = serialized->get_enum<rivet::ddl::generated::x6bdf4ba1>(Faction_type_id, rivet::ddl::generated::x6bdf4ba1_values, rivet::ddl::generated::x6bdf4ba1::Neutral);
+		FlipFactionCondition = serialized->get_bool(FlipFactionCondition_type_id, false); 
 	}
 
 	[[nodiscard]] auto

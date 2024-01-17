@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	CollectibleInstanceInfo::CollectibleInstanceInfo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		InstanceId = serialized->get_string(InstanceId_type_id); 
+		InstanceId = serialized->get_string(InstanceId_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

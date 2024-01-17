@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	HeroAnimMapElement::HeroAnimMapElement([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MountAnim = serialized->get_string(MountAnim_type_id);
-		HeroAnim = serialized->get_string(HeroAnim_type_id); 
+		MountAnim = serialized->get_string(MountAnim_type_id, {});
+		HeroAnim = serialized->get_string(HeroAnim_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

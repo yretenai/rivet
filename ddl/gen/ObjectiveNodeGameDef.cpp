@@ -12,9 +12,9 @@
 namespace rivet::ddl::generated {
 	ObjectiveNodeGameDef::ObjectiveNodeGameDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ObjectiveNodeSharedDef(serialized) {
 		DebugLoadInfo = serialized->unwrap_into<rivet::ddl::generated::ObjectiveLoadInfo>(DebugLoadInfo_type_id);
-		UIMode = serialized->get_enum<rivet::ddl::generated::x41993474>(UIMode_type_id, rivet::ddl::generated::x41993474_values);
+		UIMode = serialized->get_enum<rivet::ddl::generated::x41993474>(UIMode_type_id, rivet::ddl::generated::x41993474_values, rivet::ddl::generated::x41993474::Normal);
 		InfoUI = serialized->unwrap_into<rivet::ddl::generated::ObjectiveNodeInfoUI>(InfoUI_type_id);
-		TaskMode = serialized->get_enum<rivet::ddl::generated::x41993474>(TaskMode_type_id, rivet::ddl::generated::x41993474_values);
+		TaskMode = serialized->get_enum<rivet::ddl::generated::x41993474>(TaskMode_type_id, rivet::ddl::generated::x41993474_values, rivet::ddl::generated::x41993474::Normal);
 		TaskInfo = serialized->unwrap_into<rivet::ddl::generated::ObjectiveTaskInfo>(TaskInfo_type_id); 
 	}
 

@@ -9,16 +9,16 @@
 
 namespace rivet::ddl::generated {
 	SpawnShotForwardStrafingTargetingPrius::SpawnShotForwardStrafingTargetingPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): SpawnShotTargetingPrius(serialized) {
-		InitialYaw = serialized->get_float(InitialYaw_type_id);
-		PerShotYaw = serialized->get_float(PerShotYaw_type_id);
-		InitialPitch = serialized->get_float(InitialPitch_type_id);
-		PerShotPitch = serialized->get_float(PerShotPitch_type_id);
+		InitialYaw = serialized->get_float(InitialYaw_type_id, 0.000000);
+		PerShotYaw = serialized->get_float(PerShotYaw_type_id, 0.000000);
+		InitialPitch = serialized->get_float(InitialPitch_type_id, -20.000000);
+		PerShotPitch = serialized->get_float(PerShotPitch_type_id, 5.000000);
 		AimOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(AimOffset_type_id);
 		AimOffsetSmall = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(AimOffsetSmall_type_id);
 		AimOffsetLarge = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(AimOffsetLarge_type_id);
-		AlternateOffsetDir = serialized->get_bool(AlternateOffsetDir_type_id);
-		CentralisePattern = serialized->get_bool(CentralisePattern_type_id);
-		UseEmitterDir = serialized->get_bool(UseEmitterDir_type_id); 
+		AlternateOffsetDir = serialized->get_bool(AlternateOffsetDir_type_id, false);
+		CentralisePattern = serialized->get_bool(CentralisePattern_type_id, false);
+		UseEmitterDir = serialized->get_bool(UseEmitterDir_type_id, true); 
 	}
 
 	[[nodiscard]] auto

@@ -7,18 +7,18 @@
 
 namespace rivet::ddl::generated {
 	CameraOptions::CameraOptions([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		RenderObjects = serialized->get_bool(RenderObjects_type_id);
-		RenderCameras = serialized->get_bool(RenderCameras_type_id);
-		RenderLights = serialized->get_bool(RenderLights_type_id);
-		RenderLocators = serialized->get_bool(RenderLocators_type_id);
-		RenderModelOutlines = serialized->get_bool(RenderModelOutlines_type_id);
-		RenderLightShells = serialized->get_bool(RenderLightShells_type_id);
-		ShellMode = serialized->get_enum<rivet::ddl::generated::x41c556d2>(ShellMode_type_id, rivet::ddl::generated::x41c556d2_values);
-		FilterType = serialized->get_enum<rivet::ddl::generated::xc8d9a31c>(FilterType_type_id, rivet::ddl::generated::xc8d9a31c_values);
-		Group = serialized->get_enum<rivet::ddl::generated::x633f0e50>(Group_type_id, rivet::ddl::generated::x633f0e50_values);
-		RenderInnerShells = serialized->get_bool(RenderInnerShells_type_id);
-		EnableLightsOnlyFromGroup = serialized->get_bool(EnableLightsOnlyFromGroup_type_id);
-		RenderLightsOnlyFromSelection = serialized->get_bool(RenderLightsOnlyFromSelection_type_id); 
+		RenderObjects = serialized->get_bool(RenderObjects_type_id, false);
+		RenderCameras = serialized->get_bool(RenderCameras_type_id, true);
+		RenderLights = serialized->get_bool(RenderLights_type_id, true);
+		RenderLocators = serialized->get_bool(RenderLocators_type_id, true);
+		RenderModelOutlines = serialized->get_bool(RenderModelOutlines_type_id, true);
+		RenderLightShells = serialized->get_bool(RenderLightShells_type_id, true);
+		ShellMode = serialized->get_enum<rivet::ddl::generated::x41c556d2>(ShellMode_type_id, rivet::ddl::generated::x41c556d2_values, rivet::ddl::generated::x41c556d2::Wireframe);
+		FilterType = serialized->get_enum<rivet::ddl::generated::xc8d9a31c>(FilterType_type_id, rivet::ddl::generated::xc8d9a31c_values, rivet::ddl::generated::xc8d9a31c::All);
+		Group = serialized->get_enum<rivet::ddl::generated::x633f0e50>(Group_type_id, rivet::ddl::generated::x633f0e50_values, rivet::ddl::generated::x633f0e50::Cine);
+		RenderInnerShells = serialized->get_bool(RenderInnerShells_type_id, false);
+		EnableLightsOnlyFromGroup = serialized->get_bool(EnableLightsOnlyFromGroup_type_id, false);
+		RenderLightsOnlyFromSelection = serialized->get_bool(RenderLightsOnlyFromSelection_type_id, false); 
 	}
 
 	[[nodiscard]] auto

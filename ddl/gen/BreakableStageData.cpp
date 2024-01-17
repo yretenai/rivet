@@ -9,14 +9,14 @@
 
 namespace rivet::ddl::generated {
 	BreakableStageData::BreakableStageData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Model = serialized->get_string(Model_type_id);
-		AnimSet = serialized->get_string(AnimSet_type_id);
-		AnimDriver = serialized->get_string(AnimDriver_type_id);
+		Model = serialized->get_string(Model_type_id, {});
+		AnimSet = serialized->get_string(AnimSet_type_id, {});
+		AnimDriver = serialized->get_string(AnimDriver_type_id, {});
 		ChunkModels = serialized->get_strings(ChunkModels_type_id);
 		NoncollidingChunkModels = serialized->unwrap_into_many<rivet::ddl::generated::SpawnableChunk>(NoncollidingChunkModels_type_id);
 		DebrisModels = serialized->get_strings(DebrisModels_type_id);
-		BrokenAtHealth = serialized->get_float(BrokenAtHealth_type_id);
-		ManualBreak = serialized->get_bool(ManualBreak_type_id); 
+		BrokenAtHealth = serialized->get_float(BrokenAtHealth_type_id, 0.000000);
+		ManualBreak = serialized->get_bool(ManualBreak_type_id, false); 
 	}
 
 	[[nodiscard]] auto

@@ -12,7 +12,7 @@ namespace rivet::ddl::generated {
 		CloseRangeDamage = serialized->unwrap_into<rivet::ddl::generated::ProtoShotgunDamageRange>(CloseRangeDamage_type_id);
 		MidRangeDamage = serialized->unwrap_into<rivet::ddl::generated::ProtoShotgunDamageRange>(MidRangeDamage_type_id);
 		LongRangeDamage = serialized->unwrap_into<rivet::ddl::generated::ProtoShotgunDamageRange>(LongRangeDamage_type_id);
-		DamageHashString = serialized->get_string(DamageHashString_type_id); 
+		DamageHashString = serialized->get_string(DamageHashString_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

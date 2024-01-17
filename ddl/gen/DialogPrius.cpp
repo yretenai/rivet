@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	DialogPrius::DialogPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		PauseSubtitles = serialized->get_bool(PauseSubtitles_type_id);
-		WantsFlashCallbacks = serialized->get_bool(WantsFlashCallbacks_type_id);
-		LocatorName = serialized->get_string(LocatorName_type_id); 
+		PauseSubtitles = serialized->get_bool(PauseSubtitles_type_id, true);
+		WantsFlashCallbacks = serialized->get_bool(WantsFlashCallbacks_type_id, false);
+		LocatorName = serialized->get_string(LocatorName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

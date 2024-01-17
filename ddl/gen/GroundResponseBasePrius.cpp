@@ -11,7 +11,7 @@
 
 namespace rivet::ddl::generated {
 	GroundResponseBasePrius::GroundResponseBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ResponseName = serialized->get_string(ResponseName_type_id);
+		ResponseName = serialized->get_string(ResponseName_type_id, {});
 		Material = serialized->unwrap_into_many<rivet::ddl::generated::PhysicsAVMaterialElement>(Material_type_id); 
 	}
 

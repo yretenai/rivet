@@ -10,8 +10,8 @@
 namespace rivet::ddl::generated {
 	UIOptionsPresetData::UIOptionsPresetData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Options = serialized->unwrap_into_many<rivet::ddl::generated::UIPresetOption>(Options_type_id);
-		Description = serialized->get_string(Description_type_id);
-		DescriptionAlt = serialized->get_string(DescriptionAlt_type_id); 
+		Description = serialized->get_string(Description_type_id, {});
+		DescriptionAlt = serialized->get_string(DescriptionAlt_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

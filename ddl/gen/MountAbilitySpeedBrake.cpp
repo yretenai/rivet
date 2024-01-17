@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	MountAbilitySpeedBrake::MountAbilitySpeedBrake([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): MountAbilityBase(serialized) {
-		BrakeSpeed = serialized->get_float(BrakeSpeed_type_id);
-		BrakeIntro = serialized->get_string(BrakeIntro_type_id);
-		BrakeLoop = serialized->get_string(BrakeLoop_type_id);
-		BrakeOutro = serialized->get_string(BrakeOutro_type_id); 
+		BrakeSpeed = serialized->get_float(BrakeSpeed_type_id, 7.000000);
+		BrakeIntro = serialized->get_string(BrakeIntro_type_id, "BrakeIntro");
+		BrakeLoop = serialized->get_string(BrakeLoop_type_id, "BrakeLoop");
+		BrakeOutro = serialized->get_string(BrakeOutro_type_id, "BrakeOutro"); 
 	}
 
 	[[nodiscard]] auto

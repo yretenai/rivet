@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	SharedPlayerSettings::SharedPlayerSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DefaultSubtitlesEnabled = serialized->get_bool(DefaultSubtitlesEnabled_type_id); 
+		DefaultSubtitlesEnabled = serialized->get_bool(DefaultSubtitlesEnabled_type_id, false); 
 	}
 
 	[[nodiscard]] auto

@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	DamageModifierDamageHashPrius::DamageModifierDamageHashPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): DamageModifierIncomingPrius(serialized) {
-		HashList = serialized->get_string(HashList_type_id);
-		Exclude = serialized->get_bool(Exclude_type_id); 
+		HashList = serialized->get_string(HashList_type_id, {});
+		Exclude = serialized->get_bool(Exclude_type_id, false); 
 	}
 
 	[[nodiscard]] auto

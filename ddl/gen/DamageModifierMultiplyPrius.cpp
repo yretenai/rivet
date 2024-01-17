@@ -10,15 +10,15 @@
 
 namespace rivet::ddl::generated {
 	DamageModifierMultiplyPrius::DamageModifierMultiplyPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): DamageModifierIncomingPrius(serialized) {
-		Multiplier = serialized->get_float(Multiplier_type_id);
-		StatusMultiplier = serialized->get_float(StatusMultiplier_type_id);
-		Lifetime = serialized->get_float(Lifetime_type_id);
-		ApplyHeal = serialized->get_bool(ApplyHeal_type_id);
-		ApplyToKnockdown = serialized->get_bool(ApplyToKnockdown_type_id);
-		DamageFiltersAreExclude = serialized->get_bool(DamageFiltersAreExclude_type_id);
+		Multiplier = serialized->get_float(Multiplier_type_id, 1.000000);
+		StatusMultiplier = serialized->get_float(StatusMultiplier_type_id, 1.000000);
+		Lifetime = serialized->get_float(Lifetime_type_id, -1.000000);
+		ApplyHeal = serialized->get_bool(ApplyHeal_type_id, false);
+		ApplyToKnockdown = serialized->get_bool(ApplyToKnockdown_type_id, false);
+		DamageFiltersAreExclude = serialized->get_bool(DamageFiltersAreExclude_type_id, false);
 		DamageFilter = serialized->get_enums<rivet::ddl::generated::DamageTypes>(DamageFilter_type_id, rivet::ddl::generated::DamageTypes_values);
-		AllegianceFilter = serialized->get_uint32(AllegianceFilter_type_id);
-		ModifiedTag = serialized->get_uint32(ModifiedTag_type_id); 
+		AllegianceFilter = serialized->get_uint32(AllegianceFilter_type_id, 0);
+		ModifiedTag = serialized->get_uint32(ModifiedTag_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

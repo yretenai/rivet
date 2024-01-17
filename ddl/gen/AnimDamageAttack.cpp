@@ -11,8 +11,8 @@
 
 namespace rivet::ddl::generated {
 	AnimDamageAttack::AnimDamageAttack([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Description = serialized->get_string(Description_type_id);
-		SpecializedReact = serialized->get_string(SpecializedReact_type_id);
+		Description = serialized->get_string(Description_type_id, {});
+		SpecializedReact = serialized->get_string(SpecializedReact_type_id, {});
 		AttackStyle = serialized->unwrap_into<rivet::ddl::generated::AnimDamageAttackStyleBase>(AttackStyle_type_id);
 		ChargeAttack = serialized->unwrap_into<rivet::ddl::generated::ChargeAttackParams>(ChargeAttack_type_id);
 		ConfigModDefs = serialized->unwrap_into_many<rivet::ddl::generated::AnimDamageAttackModDef>(ConfigModDefs_type_id); 

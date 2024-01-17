@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	SkinItemPartList::SkinItemPartList([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		PartType = serialized->get_enum<rivet::ddl::generated::x576d8e6a>(PartType_type_id, rivet::ddl::generated::x576d8e6a_values);
+		PartType = serialized->get_enum<rivet::ddl::generated::x576d8e6a>(PartType_type_id, rivet::ddl::generated::x576d8e6a_values, rivet::ddl::generated::x576d8e6a::None);
 		PartList = serialized->unwrap_into_many<rivet::ddl::generated::SkinItemPart>(PartList_type_id);
 		SkipPartTypeList = serialized->get_enums<rivet::ddl::generated::x576d8e6a>(SkipPartTypeList_type_id, rivet::ddl::generated::x576d8e6a_values); 
 	}

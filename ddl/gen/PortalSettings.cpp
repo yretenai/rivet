@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	PortalSettings::PortalSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DebugDraw = serialized->get_bool(DebugDraw_type_id);
-		RenderPortals = serialized->get_bool(RenderPortals_type_id);
-		UpdatePortalRendering = serialized->get_bool(UpdatePortalRendering_type_id);
-		ResolutionMultiplier = serialized->get_float(ResolutionMultiplier_type_id);
-		CastUserDataCount = serialized->get_uint32(CastUserDataCount_type_id);
-		MaxPortalsToWarn = serialized->get_uint32(MaxPortalsToWarn_type_id); 
+		DebugDraw = serialized->get_bool(DebugDraw_type_id, false);
+		RenderPortals = serialized->get_bool(RenderPortals_type_id, true);
+		UpdatePortalRendering = serialized->get_bool(UpdatePortalRendering_type_id, true);
+		ResolutionMultiplier = serialized->get_float(ResolutionMultiplier_type_id, 1.000000);
+		CastUserDataCount = serialized->get_uint32(CastUserDataCount_type_id, 1024);
+		MaxPortalsToWarn = serialized->get_uint32(MaxPortalsToWarn_type_id, 0); 
 	}
 
 	[[nodiscard]] auto

@@ -12,7 +12,7 @@
 
 namespace rivet::ddl::generated {
 	ChangeModeEvent::ChangeModeEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): UDSEventBase(serialized) {
-		mode = serialized->get_enum<rivet::ddl::generated::x7080cd4b>(mode_type_id, rivet::ddl::generated::x7080cd4b_values); 
+		mode = serialized->get_enum<rivet::ddl::generated::x7080cd4b>(mode_type_id, rivet::ddl::generated::x7080cd4b_values, rivet::ddl::generated::x7080cd4b::full); 
 	}
 
 	[[nodiscard]] auto

@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	AnimClipIKEvent::AnimClipIKEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		CurveType = serialized->get_enum<rivet::ddl::generated::xd2b6d7dc>(CurveType_type_id, rivet::ddl::generated::xd2b6d7dc_values);
-		Value = serialized->get_float(Value_type_id);
-		BlendTime = serialized->get_float(BlendTime_type_id);
-		IKName = serialized->get_string(IKName_type_id); 
+		CurveType = serialized->get_enum<rivet::ddl::generated::xd2b6d7dc>(CurveType_type_id, rivet::ddl::generated::xd2b6d7dc_values, rivet::ddl::generated::xd2b6d7dc::BlendFactorCurve);
+		Value = serialized->get_float(Value_type_id, 0.000000);
+		BlendTime = serialized->get_float(BlendTime_type_id, 0.500000);
+		IKName = serialized->get_string(IKName_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

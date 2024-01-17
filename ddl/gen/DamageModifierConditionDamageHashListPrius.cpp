@@ -10,7 +10,7 @@
 namespace rivet::ddl::generated {
 	DamageModifierConditionDamageHashListPrius::DamageModifierConditionDamageHashListPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): DamageModifierConditionBasePrius(serialized) {
 		DamageHashEntries = serialized->unwrap_into_many<rivet::ddl::generated::DamageHashEntry>(DamageHashEntries_type_id);
-		CheckType = serialized->get_enum<rivet::ddl::generated::x8423053f>(CheckType_type_id, rivet::ddl::generated::x8423053f_values); 
+		CheckType = serialized->get_enum<rivet::ddl::generated::x8423053f>(CheckType_type_id, rivet::ddl::generated::x8423053f_values, rivet::ddl::generated::x8423053f::Any); 
 	}
 
 	[[nodiscard]] auto

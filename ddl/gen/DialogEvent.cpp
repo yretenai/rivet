@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	DialogEvent::DialogEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): SoundEvent(serialized) {
-		SeekOffset = serialized->get_float(SeekOffset_type_id);
-		StartTime = serialized->get_float(StartTime_type_id);
-		TickSubtitlesOnPause = serialized->get_bool(TickSubtitlesOnPause_type_id);
-		IgnoreAnimPerformance = serialized->get_bool(IgnoreAnimPerformance_type_id);
-		PlayOnlyOnAuthority = serialized->get_bool(PlayOnlyOnAuthority_type_id); 
+		SeekOffset = serialized->get_float(SeekOffset_type_id, 0.000000);
+		StartTime = serialized->get_float(StartTime_type_id, 0.000000);
+		TickSubtitlesOnPause = serialized->get_bool(TickSubtitlesOnPause_type_id, false);
+		IgnoreAnimPerformance = serialized->get_bool(IgnoreAnimPerformance_type_id, false);
+		PlayOnlyOnAuthority = serialized->get_bool(PlayOnlyOnAuthority_type_id, false); 
 	}
 
 	[[nodiscard]] auto

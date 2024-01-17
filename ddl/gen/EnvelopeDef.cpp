@@ -7,15 +7,15 @@
 
 namespace rivet::ddl::generated {
 	EnvelopeDef::EnvelopeDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		CanAddOrRemovePoints = serialized->get_bool(CanAddOrRemovePoints_type_id);
-		MinX = serialized->get_float(MinX_type_id);
-		MinY = serialized->get_float(MinY_type_id);
-		MaxX = serialized->get_float(MaxX_type_id);
-		MaxY = serialized->get_float(MaxY_type_id);
-		VisibleMinX = serialized->get_float(VisibleMinX_type_id);
-		VisibleMinY = serialized->get_float(VisibleMinY_type_id);
-		VisibleMaxX = serialized->get_float(VisibleMaxX_type_id);
-		VisibleMaxY = serialized->get_float(VisibleMaxY_type_id); 
+		CanAddOrRemovePoints = serialized->get_bool(CanAddOrRemovePoints_type_id, false);
+		MinX = serialized->get_float(MinX_type_id, -1000000.000000);
+		MinY = serialized->get_float(MinY_type_id, -1000000.000000);
+		MaxX = serialized->get_float(MaxX_type_id, 1000000.000000);
+		MaxY = serialized->get_float(MaxY_type_id, 1000000.000000);
+		VisibleMinX = serialized->get_float(VisibleMinX_type_id, -1000000.000000);
+		VisibleMinY = serialized->get_float(VisibleMinY_type_id, -1000000.000000);
+		VisibleMaxX = serialized->get_float(VisibleMaxX_type_id, 1000000.000000);
+		VisibleMaxY = serialized->get_float(VisibleMaxY_type_id, 1000000.000000); 
 	}
 
 	[[nodiscard]] auto

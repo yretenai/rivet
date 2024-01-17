@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	VehicleTypeListEntry::VehicleTypeListEntry([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		VehicleClass = serialized->get_enum<rivet::ddl::generated::VehicleClass>(VehicleClass_type_id, rivet::ddl::generated::VehicleClass_values);
-		Actor = serialized->get_string(Actor_type_id);
-		Frequency = serialized->get_uint32(Frequency_type_id); 
+		VehicleClass = serialized->get_enum<rivet::ddl::generated::VehicleClass>(VehicleClass_type_id, rivet::ddl::generated::VehicleClass_values, rivet::ddl::generated::VehicleClass::Normal_Car);
+		Actor = serialized->get_string(Actor_type_id, {});
+		Frequency = serialized->get_uint32(Frequency_type_id, 1); 
 	}
 
 	[[nodiscard]] auto

@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	FetchAssetError::FetchAssetError([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AssetId = serialized->get_uint64(AssetId_type_id);
-		AssetPath = serialized->get_string(AssetPath_type_id);
-		Revision = serialized->get_int32(Revision_type_id);
-		Error = serialized->get_string(Error_type_id); 
+		AssetId = serialized->get_uint64(AssetId_type_id, 0);
+		AssetPath = serialized->get_string(AssetPath_type_id, {});
+		Revision = serialized->get_int32(Revision_type_id, -1);
+		Error = serialized->get_string(Error_type_id, ""); 
 	}
 
 	[[nodiscard]] auto

@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	StatusEffectClonePrius::StatusEffectClonePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): StatusEffectBasePrius(serialized) {
-		IsPercent = serialized->get_bool(IsPercent_type_id);
-		MaxClones = serialized->get_int32(MaxClones_type_id);
-		IsMaxHPPercent = serialized->get_bool(IsMaxHPPercent_type_id); 
+		IsPercent = serialized->get_bool(IsPercent_type_id, true);
+		MaxClones = serialized->get_int32(MaxClones_type_id, -1);
+		IsMaxHPPercent = serialized->get_bool(IsMaxHPPercent_type_id, true); 
 	}
 
 	[[nodiscard]] auto

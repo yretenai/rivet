@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	DebugActor3dViewWhiteListItem::DebugActor3dViewWhiteListItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		WhiteListedComponentName = serialized->get_string(WhiteListedComponentName_type_id);
-		WhiteListChildren = serialized->get_bool(WhiteListChildren_type_id); 
+		WhiteListedComponentName = serialized->get_string(WhiteListedComponentName_type_id, {});
+		WhiteListChildren = serialized->get_bool(WhiteListChildren_type_id, false); 
 	}
 
 	[[nodiscard]] auto

@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	GameBotShooterBlargBomberPrius::GameBotShooterBlargBomberPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): GameBotShooterPrius(serialized) {
-		MinTimeBetweenHiding = serialized->get_float(MinTimeBetweenHiding_type_id);
-		MinHideTime = serialized->get_float(MinHideTime_type_id);
-		MaxHideTime = serialized->get_float(MaxHideTime_type_id);
-		MinUnhideTargetDist = serialized->get_float(MinUnhideTargetDist_type_id); 
+		MinTimeBetweenHiding = serialized->get_float(MinTimeBetweenHiding_type_id, 5.000000);
+		MinHideTime = serialized->get_float(MinHideTime_type_id, 3.000000);
+		MaxHideTime = serialized->get_float(MaxHideTime_type_id, 5.000000);
+		MinUnhideTargetDist = serialized->get_float(MinUnhideTargetDist_type_id, 3.000000); 
 	}
 
 	[[nodiscard]] auto

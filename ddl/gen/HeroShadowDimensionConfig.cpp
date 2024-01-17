@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	HeroShadowDimensionConfig::HeroShadowDimensionConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ShadowDimensionAtmosphere = serialized->get_string(ShadowDimensionAtmosphere_type_id);
-		CoolDownTime = serialized->get_float(CoolDownTime_type_id);
-		Duration = serialized->get_float(Duration_type_id);
-		WorldTimeScale = serialized->get_float(WorldTimeScale_type_id);
-		HeroTimeScale = serialized->get_float(HeroTimeScale_type_id); 
+		ShadowDimensionAtmosphere = serialized->get_string(ShadowDimensionAtmosphere_type_id, {});
+		CoolDownTime = serialized->get_float(CoolDownTime_type_id, 3.000000);
+		Duration = serialized->get_float(Duration_type_id, 10.000000);
+		WorldTimeScale = serialized->get_float(WorldTimeScale_type_id, 0.250000);
+		HeroTimeScale = serialized->get_float(HeroTimeScale_type_id, 0.500000); 
 	}
 
 	[[nodiscard]] auto

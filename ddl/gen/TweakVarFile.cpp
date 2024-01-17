@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	TweakVarFile::TweakVarFile([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		FileName = serialized->get_string(FileName_type_id);
-		FilePath = serialized->get_string(FilePath_type_id);
+		FileName = serialized->get_string(FileName_type_id, {});
+		FilePath = serialized->get_string(FilePath_type_id, {});
 		Variables = serialized->unwrap_into_many<rivet::ddl::generated::TweakVarVariable>(Variables_type_id); 
 	}
 

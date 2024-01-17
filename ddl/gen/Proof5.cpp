@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	Proof5::Proof5([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		StrAsSel = serialized->get_string(StrAsSel_type_id);
-		StrAsSelOverride = serialized->get_string(StrAsSelOverride_type_id); 
+		StrAsSel = serialized->get_string(StrAsSel_type_id, {});
+		StrAsSelOverride = serialized->get_string(StrAsSelOverride_type_id, "kC"); 
 	}
 
 	[[nodiscard]] auto

@@ -10,13 +10,13 @@
 
 namespace rivet::ddl::generated {
 	HeroCharacterPrius::HeroCharacterPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		HeroType = serialized->get_enum<rivet::ddl::generated::HeroTypes>(HeroType_type_id, rivet::ddl::generated::HeroTypes_values);
-		DisplayName = serialized->get_string(DisplayName_type_id);
-		Voice = serialized->get_enum<rivet::ddl::generated::Voice>(Voice_type_id, rivet::ddl::generated::Voice_values);
+		HeroType = serialized->get_enum<rivet::ddl::generated::HeroTypes>(HeroType_type_id, rivet::ddl::generated::HeroTypes_values, rivet::ddl::generated::HeroTypes::None);
+		DisplayName = serialized->get_string(DisplayName_type_id, {});
+		Voice = serialized->get_enum<rivet::ddl::generated::Voice>(Voice_type_id, rivet::ddl::generated::Voice_values, rivet::ddl::generated::Voice::unused);
 		MoveAbilities = serialized->unwrap_into<rivet::ddl::generated::HeroMoveAbilities>(MoveAbilities_type_id);
-		StartElevation = serialized->get_int32(StartElevation_type_id);
-		FirstSpawn = serialized->get_bool(FirstSpawn_type_id);
-		OrientGravityToUp = serialized->get_bool(OrientGravityToUp_type_id); 
+		StartElevation = serialized->get_int32(StartElevation_type_id, -1);
+		FirstSpawn = serialized->get_bool(FirstSpawn_type_id, true);
+		OrientGravityToUp = serialized->get_bool(OrientGravityToUp_type_id, false); 
 	}
 
 	[[nodiscard]] auto

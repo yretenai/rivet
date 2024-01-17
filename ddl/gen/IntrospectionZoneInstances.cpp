@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	IntrospectionZoneInstances::IntrospectionZoneInstances([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ZoneId = serialized->get_uint64(ZoneId_type_id);
+		ZoneId = serialized->get_uint64(ZoneId_type_id, 0);
 		Instances = serialized->unwrap_into_many<rivet::ddl::generated::IntrospectionInstanceEntry>(Instances_type_id); 
 	}
 

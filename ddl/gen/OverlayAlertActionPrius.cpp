@@ -7,13 +7,13 @@
 
 namespace rivet::ddl::generated {
 	OverlayAlertActionPrius::OverlayAlertActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		TempTextHeader = serialized->get_string(TempTextHeader_type_id);
-		LocTagHeader = serialized->get_string(LocTagHeader_type_id);
-		TempTextMessage = serialized->get_string(TempTextMessage_type_id);
-		LocTagMessage = serialized->get_string(LocTagMessage_type_id);
-		ConfirmText = serialized->get_string(ConfirmText_type_id);
-		CancelText = serialized->get_string(CancelText_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::UI);
+		TempTextHeader = serialized->get_string(TempTextHeader_type_id, {});
+		LocTagHeader = serialized->get_string(LocTagHeader_type_id, "INVALID");
+		TempTextMessage = serialized->get_string(TempTextMessage_type_id, {});
+		LocTagMessage = serialized->get_string(LocTagMessage_type_id, "INVALID");
+		ConfirmText = serialized->get_string(ConfirmText_type_id, "UI_MENU_CONFIRM");
+		CancelText = serialized->get_string(CancelText_type_id, "UI_MENU_CANCEL"); 
 	}
 
 	[[nodiscard]] auto

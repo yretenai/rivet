@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	PauseTabClosedDevstatsEvent::PauseTabClosedDevstatsEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		EventId = serialized->get_string(EventId_type_id);
-		TabSegmentId = serialized->get_string(TabSegmentId_type_id);
-		ClosedTab = serialized->get_enum<rivet::ddl::generated::PauseTabs>(ClosedTab_type_id, rivet::ddl::generated::PauseTabs_values);
-		Duration = serialized->get_float(Duration_type_id); 
+		EventId = serialized->get_string(EventId_type_id, {});
+		TabSegmentId = serialized->get_string(TabSegmentId_type_id, {});
+		ClosedTab = serialized->get_enum<rivet::ddl::generated::PauseTabs>(ClosedTab_type_id, rivet::ddl::generated::PauseTabs_values, rivet::ddl::generated::PauseTabs::Map);
+		Duration = serialized->get_float(Duration_type_id, 0.000000); 
 	}
 
 	[[nodiscard]] auto

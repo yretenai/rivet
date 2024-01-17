@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	WeaponGroovitronPrius::WeaponGroovitronPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): WeaponGamePrius(serialized) {
-		DanceTrophyConfig = serialized->get_string(DanceTrophyConfig_type_id); 
+		DanceTrophyConfig = serialized->get_string(DanceTrophyConfig_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

@@ -7,14 +7,14 @@
 
 namespace rivet::ddl::generated {
 	PythonFunctionDocumentation::PythonFunctionDocumentation([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Description = serialized->get_string(Description_type_id);
-		Label = serialized->get_string(Label_type_id);
-		Name = serialized->get_string(Name_type_id);
-		Type = serialized->get_string(Type_type_id);
+		Description = serialized->get_string(Description_type_id, {});
+		Label = serialized->get_string(Label_type_id, {});
+		Name = serialized->get_string(Name_type_id, {});
+		Type = serialized->get_string(Type_type_id, {});
 		ParameterNames = serialized->get_strings(ParameterNames_type_id);
-		ParametersSignature = serialized->get_string(ParametersSignature_type_id);
+		ParametersSignature = serialized->get_string(ParametersSignature_type_id, {});
 		ParameterTypes = serialized->get_strings(ParameterTypes_type_id);
-		ReturnType = serialized->get_string(ReturnType_type_id); 
+		ReturnType = serialized->get_string(ReturnType_type_id, {}); 
 	}
 
 	[[nodiscard]] auto

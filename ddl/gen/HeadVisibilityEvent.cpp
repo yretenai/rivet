@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	HeadVisibilityEvent::HeadVisibilityEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Hide = serialized->get_bool(Hide_type_id);
-		FromCine = serialized->get_bool(FromCine_type_id); 
+		Hide = serialized->get_bool(Hide_type_id, false);
+		FromCine = serialized->get_bool(FromCine_type_id, false); 
 	}
 
 	[[nodiscard]] auto

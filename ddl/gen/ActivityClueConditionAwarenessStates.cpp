@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	ActivityClueConditionAwarenessStates::ActivityClueConditionAwarenessStates([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Passive = serialized->get_bool(Passive_type_id);
-		Confirming = serialized->get_bool(Confirming_type_id);
-		Engaged = serialized->get_bool(Engaged_type_id);
-		Searching = serialized->get_bool(Searching_type_id); 
+		Passive = serialized->get_bool(Passive_type_id, false);
+		Confirming = serialized->get_bool(Confirming_type_id, false);
+		Engaged = serialized->get_bool(Engaged_type_id, false);
+		Searching = serialized->get_bool(Searching_type_id, false); 
 	}
 
 	[[nodiscard]] auto

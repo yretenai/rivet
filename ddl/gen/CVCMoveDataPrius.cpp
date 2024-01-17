@@ -7,16 +7,16 @@
 
 namespace rivet::ddl::generated {
 	CVCMoveDataPrius::CVCMoveDataPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Radius = serialized->get_float(Radius_type_id);
-		HeightUp = serialized->get_float(HeightUp_type_id);
-		HeightDown = serialized->get_float(HeightDown_type_id);
-		PushValue = serialized->get_float(PushValue_type_id);
-		PushOnEqual = serialized->get_bool(PushOnEqual_type_id);
-		FullSpeedDeflection = serialized->get_bool(FullSpeedDeflection_type_id);
-		SoftRadiusInner = serialized->get_float(SoftRadiusInner_type_id);
-		SoftRadiusOuter = serialized->get_float(SoftRadiusOuter_type_id);
-		AllowSoftCollisions = serialized->get_bool(AllowSoftCollisions_type_id);
-		ApplyActorScale = serialized->get_bool(ApplyActorScale_type_id); 
+		Radius = serialized->get_float(Radius_type_id, 0.500000);
+		HeightUp = serialized->get_float(HeightUp_type_id, 2.000000);
+		HeightDown = serialized->get_float(HeightDown_type_id, 0.000000);
+		PushValue = serialized->get_float(PushValue_type_id, 1.000000);
+		PushOnEqual = serialized->get_bool(PushOnEqual_type_id, false);
+		FullSpeedDeflection = serialized->get_bool(FullSpeedDeflection_type_id, false);
+		SoftRadiusInner = serialized->get_float(SoftRadiusInner_type_id, 0.250000);
+		SoftRadiusOuter = serialized->get_float(SoftRadiusOuter_type_id, 0.750000);
+		AllowSoftCollisions = serialized->get_bool(AllowSoftCollisions_type_id, false);
+		ApplyActorScale = serialized->get_bool(ApplyActorScale_type_id, false); 
 	}
 
 	[[nodiscard]] auto

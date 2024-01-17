@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	ShotSpawnerFireEvent::ShotSpawnerFireEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		LocatorOverride = serialized->get_string(LocatorOverride_type_id);
-		SkipInitialExternalMotion = serialized->get_bool(SkipInitialExternalMotion_type_id); 
+		LocatorOverride = serialized->get_string(LocatorOverride_type_id, {});
+		SkipInitialExternalMotion = serialized->get_bool(SkipInitialExternalMotion_type_id, false); 
 	}
 
 	[[nodiscard]] auto

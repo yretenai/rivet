@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	PreDecideForMaterialChangeLootDropPrius::PreDecideForMaterialChangeLootDropPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Enabled = serialized->get_bool(Enabled_type_id);
-		DropLootForKillerType = serialized->get_enum<rivet::ddl::generated::xa7ea7084>(DropLootForKillerType_type_id, rivet::ddl::generated::xa7ea7084_values);
+		Enabled = serialized->get_bool(Enabled_type_id, true);
+		DropLootForKillerType = serialized->get_enum<rivet::ddl::generated::xa7ea7084>(DropLootForKillerType_type_id, rivet::ddl::generated::xa7ea7084_values, rivet::ddl::generated::xa7ea7084::Everybody);
 		LootList = serialized->unwrap_into_many<rivet::ddl::generated::PreDecideLootEntry>(LootList_type_id); 
 	}
 

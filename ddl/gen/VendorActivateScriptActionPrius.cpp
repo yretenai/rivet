@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	VendorActivateScriptActionPrius::VendorActivateScriptActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values);
-		Activate = serialized->get_bool(Activate_type_id); 
+		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Inventory);
+		Activate = serialized->get_bool(Activate_type_id, true); 
 	}
 
 	[[nodiscard]] auto

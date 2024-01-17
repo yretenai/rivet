@@ -7,20 +7,20 @@
 
 namespace rivet::ddl::generated {
 	RayTracingSettings::RayTracingSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		HibernateBaseDistance = serialized->get_float(HibernateBaseDistance_type_id);
-		NormalBaseDistance = serialized->get_float(NormalBaseDistance_type_id);
-		ModelRadiusScale = serialized->get_float(ModelRadiusScale_type_id);
-		PrioritizeImpostors = serialized->get_bool(PrioritizeImpostors_type_id);
-		DisableCheckerboard = serialized->get_bool(DisableCheckerboard_type_id);
-		SkinningBaseDistance = serialized->get_float(SkinningBaseDistance_type_id);
-		SkinningRadiusScale = serialized->get_float(SkinningRadiusScale_type_id);
-		LightingCenterBias = serialized->get_float(LightingCenterBias_type_id);
-		MaxUniqueMaterials = serialized->get_uint32(MaxUniqueMaterials_type_id);
-		MaxRuntimeBVHs = serialized->get_uint32(MaxRuntimeBVHs_type_id);
-		MaxBVHSubsets = serialized->get_uint32(MaxBVHSubsets_type_id);
-		ScratchSize = serialized->get_uint32(ScratchSize_type_id);
-		GlossReflInterval = serialized->get_float(GlossReflInterval_type_id);
-		GlossThreshold = serialized->get_float(GlossThreshold_type_id); 
+		HibernateBaseDistance = serialized->get_float(HibernateBaseDistance_type_id, 384.000000);
+		NormalBaseDistance = serialized->get_float(NormalBaseDistance_type_id, 128.000000);
+		ModelRadiusScale = serialized->get_float(ModelRadiusScale_type_id, 96.000000);
+		PrioritizeImpostors = serialized->get_bool(PrioritizeImpostors_type_id, true);
+		DisableCheckerboard = serialized->get_bool(DisableCheckerboard_type_id, false);
+		SkinningBaseDistance = serialized->get_float(SkinningBaseDistance_type_id, 56.000000);
+		SkinningRadiusScale = serialized->get_float(SkinningRadiusScale_type_id, 8.000000);
+		LightingCenterBias = serialized->get_float(LightingCenterBias_type_id, 8.000000);
+		MaxUniqueMaterials = serialized->get_uint32(MaxUniqueMaterials_type_id, 20480);
+		MaxRuntimeBVHs = serialized->get_uint32(MaxRuntimeBVHs_type_id, 4096);
+		MaxBVHSubsets = serialized->get_uint32(MaxBVHSubsets_type_id, 3);
+		ScratchSize = serialized->get_uint32(ScratchSize_type_id, 10485760);
+		GlossReflInterval = serialized->get_float(GlossReflInterval_type_id, 0.333300);
+		GlossThreshold = serialized->get_float(GlossThreshold_type_id, 0.333300); 
 	}
 
 	[[nodiscard]] auto

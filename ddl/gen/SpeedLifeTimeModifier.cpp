@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	SpeedLifeTimeModifier::SpeedLifeTimeModifier([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SpeedMin = serialized->get_float(SpeedMin_type_id);
-		SpeedMax = serialized->get_float(SpeedMax_type_id);
-		Scale = serialized->get_float(Scale_type_id); 
+		SpeedMin = serialized->get_float(SpeedMin_type_id, 1.000000);
+		SpeedMax = serialized->get_float(SpeedMax_type_id, 2.000000);
+		Scale = serialized->get_float(Scale_type_id, 1.000000); 
 	}
 
 	[[nodiscard]] auto

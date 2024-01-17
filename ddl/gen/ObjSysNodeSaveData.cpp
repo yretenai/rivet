@@ -11,7 +11,7 @@
 
 namespace rivet::ddl::generated {
 	ObjSysNodeSaveData::ObjSysNodeSaveData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SaveHash = serialized->get_uint32(SaveHash_type_id); 
+		SaveHash = serialized->get_uint32(SaveHash_type_id, 0); 
 	}
 
 	[[nodiscard]] auto
