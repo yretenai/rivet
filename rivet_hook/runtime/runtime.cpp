@@ -332,7 +332,7 @@ namespace rivet_hook {
 			version["hash"] = str_stream.str();
 			version["version"] = version_str;
 			versions.emplace_back(version);
-			g_output << "[ver] " << version << ' = ' << str_stream.str() << '\n';
+			g_output << "[ver] " << version << " = " << str_stream.str() << '\n';
 		}
 
 		std::ofstream json_data;

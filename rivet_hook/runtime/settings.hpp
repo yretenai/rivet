@@ -16,9 +16,9 @@ namespace rivet_hook {
 
 #define LOAD_SETTING_BOOL(name) (settings.name = GetPrivateProfileIntA(settings_namespace, #name, static_cast<int>(settings.name), settings_name) != 0)
 #define LOAD_SETTING_INT(name) (settings.name = GetPrivateProfileIntA(settings_namespace, #name, settings.name, settings_name))
-#define LOAD_SETTING(name)                                                                                                                                  \
-	if (GetPrivateProfileStringA(settings_namespace, #name, NULL, settings.name.data(), static_cast<DWORD>(settings.name.size()), settings_name) == NULL) { \
-		settings.name[0] = '\0';                                                                                                                            \
+#define LOAD_SETTING(name) \
+	if (GetPrivateProfileStringA(settings_namespace, #name, nullptr, settings.name.data(), static_cast<DWORD>(settings.name.size()), settings_name) == 0) { \
+		settings.name[0] = '\0'; \
 	}
 
 #define SAVE_SETTING_BOOL(name) WritePrivateProfileStringA(settings_namespace, #name, name ? "1" : "0", settings_name)
