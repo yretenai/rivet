@@ -191,9 +191,9 @@ inline constexpr std::string_view template_bitset_field = R"(		%field_name% = 0x
 inline constexpr std::string_view template_bitset_field_decl = R"(		std::make_tuple("%field_name%", 0x%field_value%),)";
 inline constexpr std::string_view template_bitset_field_value_type = R"(std::array<std::tuple<std::string_view, uint64_t>, %enum_count%>)";
 
-inline constexpr std::string_view template_struct_field_value = R"(serialized->get_%field_type%(%field_name%_type_id))";
-inline constexpr std::string_view template_struct_field_enum = R"(serialized->get_enum<%field_type%>(%field_name%_type_id, %field_type%_values))";
-inline constexpr std::string_view template_struct_field_bitset = R"(serialized->get_bitset<%field_type%>(%field_name%_type_id, %field_type%_values))";
+inline constexpr std::string_view template_struct_field_value = R"(serialized->get_%field_type%(%field_name%_type_id, %default%))";
+inline constexpr std::string_view template_struct_field_enum = R"(serialized->get_enum<%field_type%>(%field_name%_type_id, %field_type%_values, %default%))";
+inline constexpr std::string_view template_struct_field_bitset = R"(serialized->get_bitset<%field_type%>(%field_name%_type_id, %field_type%_values, %default%))";
 inline constexpr std::string_view template_struct_field_array = R"(serialized->get_%field_type%s(%field_name%_type_id))";
 inline constexpr std::string_view template_struct_field_enum_array = R"(serialized->get_enums<%field_type%>(%field_name%_type_id, %field_type%_values))";
 // todo: inline constexpr std::string_view template_struct_field_bitset_array = R"(serialized->get_bitsets<%field_type%>(%field_name%_type_id, %field_type%_values))";

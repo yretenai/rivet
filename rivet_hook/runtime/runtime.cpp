@@ -171,7 +171,7 @@ namespace rivet_hook {
 				field["flags"] = static_cast<uint32_t>(type_ptr->field_mutable_flags[fi]);
 				field["offset"] = type_ptr->field_offsets[fi];
 
-				if(ddl_inst_this != 0) {
+				if(ddl_inst_this != 0 && type_ptr->field_array_types[fi] == 0) { // arrays are unsupported
 					auto ddl_inst = static_cast<uint8_t*>(ddl_inst_this);
 					switch (type_ptr->field_types[fi]) {
 						case 0: field["default"] = *reinterpret_cast<const uint8_t*>(ddl_inst + type_ptr->field_offsets[fi]); break;

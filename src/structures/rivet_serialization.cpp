@@ -61,63 +61,63 @@ namespace rivet::structures {
 	}
 
 	[[nodiscard]] auto
-	rivet_serialized_object::get_uint64(const rivet_type_id field_id) const noexcept -> uint64_t {
-		return get_field<uint64_t>(field_id);
+	rivet_serialized_object::get_uint64(const rivet_type_id field_id, const uint64_t default_value) const noexcept -> uint64_t {
+		return get_field<uint64_t>(field_id, default_value);
 	}
 
 	[[nodiscard]] auto
-	rivet_serialized_object::get_uint32(const rivet_type_id field_id) const noexcept -> uint32_t {
-		return get_field<int64_t, uint32_t>(field_id);
+	rivet_serialized_object::get_uint32(const rivet_type_id field_id, const uint32_t default_value) const noexcept -> uint32_t {
+		return get_field<int64_t, uint32_t>(field_id, default_value);
 	}
 
 	[[nodiscard]] auto
-	rivet_serialized_object::get_uint16(const rivet_type_id field_id) const noexcept -> uint16_t {
-		return get_field<int64_t, uint16_t>(field_id);
+	rivet_serialized_object::get_uint16(const rivet_type_id field_id, const uint16_t default_value) const noexcept -> uint16_t {
+		return get_field<int64_t, uint16_t>(field_id, default_value);
 	}
 
 	[[nodiscard]] auto
-	rivet_serialized_object::get_uint8(const rivet_type_id field_id) const noexcept -> uint8_t {
-		return get_field<int64_t, uint8_t>(field_id);
+	rivet_serialized_object::get_uint8(const rivet_type_id field_id, const uint8_t default_value) const noexcept -> uint8_t {
+		return get_field<int64_t, uint8_t>(field_id, default_value);
 	}
 
 	[[nodiscard]] auto
-	rivet_serialized_object::get_int64(const rivet_type_id field_id) const noexcept -> int64_t {
-		return get_field<int64_t>(field_id);
+	rivet_serialized_object::get_int64(const rivet_type_id field_id, const int64_t default_value) const noexcept -> int64_t {
+		return get_field<int64_t>(field_id, default_value);
 	}
 
 	[[nodiscard]] auto
-	rivet_serialized_object::get_int32(const rivet_type_id field_id) const noexcept -> int32_t {
-		return get_field<int64_t, int32_t>(field_id);
+	rivet_serialized_object::get_int32(const rivet_type_id field_id, const int32_t default_value) const noexcept -> int32_t {
+		return get_field<int64_t, int32_t>(field_id, default_value);
 	}
 
 	[[nodiscard]] auto
-	rivet_serialized_object::get_int16(const rivet_type_id field_id) const noexcept -> int16_t {
-		return get_field<int64_t, int16_t>(field_id);
+	rivet_serialized_object::get_int16(const rivet_type_id field_id, const int16_t default_value) const noexcept -> int16_t {
+		return get_field<int64_t, int16_t>(field_id, default_value);
 	}
 
 	[[nodiscard]] auto
-	rivet_serialized_object::get_int8(const rivet_type_id field_id) const noexcept -> int8_t {
-		return get_field<int64_t, int8_t>(field_id);
+	rivet_serialized_object::get_int8(const rivet_type_id field_id, const int8_t default_value) const noexcept -> int8_t {
+		return get_field<int64_t, int8_t>(field_id, default_value);
 	}
 
 	[[nodiscard]] auto
-	rivet_serialized_object::get_double(const rivet_type_id field_id) const noexcept -> double {
-		return get_field<double>(field_id);
+	rivet_serialized_object::get_double(const rivet_type_id field_id, const double default_value) const noexcept -> double {
+		return get_field<double>(field_id, default_value);
 	}
 
 	[[nodiscard]] auto
-	rivet_serialized_object::get_float(const rivet_type_id field_id) const noexcept -> float {
-		return get_field<double, float>(field_id);
+	rivet_serialized_object::get_float(const rivet_type_id field_id, const float default_value) const noexcept -> float {
+		return get_field<double, float>(field_id, default_value);
 	}
 
 	[[nodiscard]] auto
-	rivet_serialized_object::get_bool(const rivet_type_id field_id) const noexcept -> bool {
-		return get_field<bool>(field_id);
+	rivet_serialized_object::get_bool(const rivet_type_id field_id, const bool default_value) const noexcept -> bool {
+		return get_field<bool>(field_id, default_value);
 	}
 
 	[[nodiscard]] auto
-	rivet_serialized_object::get_string(const rivet_type_id field_id) const noexcept -> std::string_view {
-		return get_field<std::string_view>(field_id);
+	rivet_serialized_object::get_string(const rivet_type_id field_id, const std::string_view default_value) const noexcept -> std::string_view {
+		return get_field<std::string_view>(field_id, default_value);
 	}
 
 	[[nodiscard]] auto

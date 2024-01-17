@@ -117,19 +117,19 @@ namespace rivet::structures {
 			requires(std::is_same_v<T, uint64_t> || std::is_same_v<T, int64_t> || std::is_same_v<T, double> || std::is_same_v<T, bool> || std::is_same_v<T, bool> ||
 					 std::is_same_v<T, std::string_view> || std::is_same_v<T, std::shared_ptr<rivet_serialized_object>> || std::is_same_v<T, std::shared_ptr<rivet_data_array>>)
 		auto
-		get_field(rivet_type_id field_id) const noexcept -> TCast {
+		get_field(rivet_type_id field_id, const TCast default_value = {}) const noexcept -> TCast {
 			auto entry = values.find(field_id);
 			if (entry == values.end()) {
-				return {};
+				return default_value;
 			}
 
 			if (entry->second.empty()) {
-				return {};
+				return default_value;
 			}
 
 			auto variant = entry->second.at(0);
 			if (!std::holds_alternative<T>(variant)) {
-				return {};
+				return default_value;
 			}
 
 			return static_cast<TCast>(std::get<T>(variant));
@@ -139,8 +139,8 @@ namespace rivet::structures {
 			requires(std::is_same_v<T, uint64_t> || std::is_same_v<T, int64_t> || std::is_same_v<T, double> || std::is_same_v<T, bool> || std::is_same_v<T, bool> ||
 					 std::is_same_v<T, std::string_view> || std::is_same_v<T, std::shared_ptr<rivet_serialized_object>> || std::is_same_v<T, std::shared_ptr<rivet_data_array>>)
 		auto
-		get_field(const std::string_view &name) const noexcept -> TCast {
-			return get_field<T, TCast>(rivet::hash::hash_type_id(name));
+		get_field(const std::string_view &name, const TCast default_value = {}) const noexcept -> TCast {
+			return get_field<T, TCast>(rivet::hash::hash_type_id(name), default_value);
 		}
 
 		template <typename T, typename TCast = T>
@@ -171,17 +171,17 @@ namespace rivet::structures {
 			return get_fields<T, TCast>(rivet::hash::hash_type_id(name));
 		}
 
-		template <typename T, size_t N>
+		template <typename T, size_t N, typename TCast = T>
 			requires(std::is_enum_v<T>)
 		auto
-		get_enum(rivet_type_id field_id, const std::array<std::string_view, N> &enum_values) const noexcept -> T {
+		get_enum(rivet_type_id field_id, const std::array<std::string_view, N> &enum_values, const TCast default_value = {}) const noexcept -> T {
 			auto value = values.find(field_id);
 			if (value == values.end()) {
-				return {};
+				return static_cast<T>(default_value);
 			}
 
 			if (value->second.empty()) {
-				return {};
+				return static_cast<T>(default_value);
 			}
 
 			auto variant = value->second.at(0);
@@ -202,14 +202,14 @@ namespace rivet::structures {
 				}
 			}
 
-			return {};
+			return static_cast<T>(default_value);
 		}
 
 		template <typename T, size_t N, typename TCast = T>
 			requires(std::is_enum_v<T>)
 		auto
-		get_enum(const std::string_view &name, const std::array<std::string_view, N> &enum_values) const noexcept -> T {
-			return get_enum<T, N, TCast>(rivet::hash::hash_type_id(name), enum_values);
+		get_enum(const std::string_view &name, const std::array<std::string_view, N> &enum_values, const TCast default_value = {}) const noexcept -> TCast {
+			return static_cast<TCast>(get_enum<T, N>(rivet::hash::hash_type_id(name), enum_values, static_cast<T>(default_value)));
 		}
 
 		template <typename T, size_t N>
@@ -252,17 +252,17 @@ namespace rivet::structures {
 			return get_enums<T, N, TCast>(rivet::hash::hash_type_id(name), enum_values);
 		}
 
-		template <typename T, size_t N>
+		template <typename T, size_t N, typename TCast = T>
 			requires(std::is_enum_v<T>)
 		auto
-		get_bitset(rivet_type_id field_id, const std::array<std::tuple<std::string_view, uint64_t>, N> &bitset_values) const noexcept -> T {
+		get_bitset(rivet_type_id field_id, const std::array<std::tuple<std::string_view, uint64_t>, N> &bitset_values, const TCast default_value = {}) const noexcept -> T {
 			auto value = values.find(field_id);
 			if (value == values.end()) {
-				return {};
+				return static_cast<T>(default_value);
 			}
 
 			if (value->second.empty()) {
-				return {};
+				return static_cast<T>(default_value);
 			}
 
 			uint64_t result {};
@@ -289,8 +289,8 @@ namespace rivet::structures {
 		template <typename T, size_t N, typename TCast = T>
 			requires(std::is_enum_v<T>)
 		auto
-		get_bitset(const std::string_view &name, const std::array<std::tuple<std::string_view, uint64_t>, N> &bitset_values) const noexcept -> T {
-			return get_bitset<T, N, TCast>(rivet::hash::hash_type_id(name), bitset_values);
+		get_bitset(const std::string_view &name, const std::array<std::tuple<std::string_view, uint64_t>, N> &bitset_values, const TCast default_value = {}) const noexcept -> TCast {
+			return static_cast<TCast>(get_bitset<T, N>(rivet::hash::hash_type_id(name), bitset_values), static_cast<T>(default_value));
 		}
 
 		template <typename T = rivet_ddl_base>
@@ -372,40 +372,40 @@ namespace rivet::structures {
 		construct(const std::string_view &type_id) const noexcept -> std::shared_ptr<rivet_ddl_base>;
 
 		[[nodiscard]] auto
-		get_uint64(rivet_type_id field_id) const noexcept -> uint64_t;
+		get_uint64(rivet_type_id field_id, const uint64_t default_value = 0) const noexcept -> uint64_t;
 
 		[[nodiscard]] auto
-		get_uint32(rivet_type_id field_id) const noexcept -> uint32_t;
+		get_uint32(rivet_type_id field_id, const uint32_t default_value = 0) const noexcept -> uint32_t;
 
 		[[nodiscard]] auto
-		get_uint16(rivet_type_id field_id) const noexcept -> uint16_t;
+		get_uint16(rivet_type_id field_id, const uint16_t default_value = 0) const noexcept -> uint16_t;
 
 		[[nodiscard]] auto
-		get_uint8(rivet_type_id field_id) const noexcept -> uint8_t;
+		get_uint8(rivet_type_id field_id, const uint8_t default_value = 0) const noexcept -> uint8_t;
 
 		[[nodiscard]] auto
-		get_int64(rivet_type_id field_id) const noexcept -> int64_t;
+		get_int64(rivet_type_id field_id, const int64_t default_value = 0) const noexcept -> int64_t;
 
 		[[nodiscard]] auto
-		get_int32(rivet_type_id field_id) const noexcept -> int32_t;
+		get_int32(rivet_type_id field_id, const int32_t default_value = 0) const noexcept -> int32_t;
 
 		[[nodiscard]] auto
-		get_int16(rivet_type_id field_id) const noexcept -> int16_t;
+		get_int16(rivet_type_id field_id, const int16_t default_value = 0) const noexcept -> int16_t;
 
 		[[nodiscard]] auto
-		get_int8(rivet_type_id field_id) const noexcept -> int8_t;
+		get_int8(rivet_type_id field_id, const int8_t default_value = 0) const noexcept -> int8_t;
 
 		[[nodiscard]] auto
-		get_double(rivet_type_id field_id) const noexcept -> double;
+		get_double(rivet_type_id field_id, const double default_value = 0.0) const noexcept -> double;
 
 		[[nodiscard]] auto
-		get_float(rivet_type_id field_id) const noexcept -> float;
+		get_float(rivet_type_id field_id, const float default_value = 0.0f) const noexcept -> float;
 
 		[[nodiscard]] auto
-		get_bool(rivet_type_id field_id) const noexcept -> bool;
+		get_bool(rivet_type_id field_id, const bool default_value = false) const noexcept -> bool;
 
 		[[nodiscard]] auto
-		get_string(rivet_type_id field_id) const noexcept -> std::string_view;
+		get_string(rivet_type_id field_id, const std::string_view default_value = {}) const noexcept -> std::string_view;
 
 		[[nodiscard]] auto
 		get_uint64s(rivet_type_id field_id) const noexcept -> std::vector<uint64_t>;

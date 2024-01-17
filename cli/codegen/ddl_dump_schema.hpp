@@ -49,6 +49,15 @@ get_optional_json(const nlohmann::json &json, const char *property) -> std::opti
 	return std::nullopt;
 }
 
+template <typename T>
+auto
+get_optional_json_raw(const nlohmann::json &json, const char *property) -> std::optional<nlohmann::json> {
+	if (const auto iterator = json.find(property); iterator != json.end() && !iterator->is_null()) {
+		return json.at(property);
+	}
+	return std::nullopt;
+}
+
 struct name_info {
 	std::string name {};
 	rivet::rivet_type_id id {};
@@ -82,6 +91,7 @@ struct type_field_info {
 	name_info allow_base_type {};
 	rivet::structures::rivet_serialized_type type {};
 	serialized_array_type array_type {};
+	std::optional<nlohmann::json> default_value;
 
 	void
 	from_json(const nlohmann::json &json) {
@@ -90,6 +100,7 @@ struct type_field_info {
 		allow_base_type.from_json(json, "type_restrict_name", "type_restrict_id");
 		type = static_cast<rivet::structures::rivet_serialized_type>(json["type"].get<int32_t>());
 		array_type = static_cast<serialized_array_type>(json["array_type"].get<int32_t>());
+		default_value = get_optional_json_raw<nlohmann::json>(json, "default");
 
 		if (type == rivet::structures::rivet_serialized_type::enum_value) {
 			type_name.id = json["enum_type_id"].get<rivet::rivet_type_id>();
@@ -223,7 +234,7 @@ struct dump_root {
 				throw std::runtime_error("struct name is not alphanumeric");
 			}
 
-			for (auto &[name, type_name, allow_base_type, type, array_type] : struct_->fields) {
+			for (auto &[name, type_name, allow_base_type, type, array_type, default_value] : struct_->fields) {
 				if (name.name.empty()) {
 					throw std::runtime_error("field name is empty");
 				}
@@ -379,7 +390,7 @@ struct dump_root {
 	guess() const {
 		ankerl::unordered_dense::map<uint32_t, std::unordered_set<std::string>> name_counts {};
 		for (const auto &struct_ : structs) {
-			for (auto &[name, type_name, allow_base_type, type, array_type] : struct_->fields) {
+			for (auto &[name, type_name, allow_base_type, type, array_type, default_value] : struct_->fields) {
 				name_counts[type_name.id].insert(name.name);
 			}
 		}
