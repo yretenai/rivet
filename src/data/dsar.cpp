@@ -88,7 +88,7 @@ namespace rivet::data {
 		// main decompression loop
 		rivet_size local_offset = 0;
 		while (local_offset < asset_size) {
-			if (chunk_index > chunks->size()) {
+			if (chunk_index >= chunks->size()) {
 				throw unreachable_error("dsar::read_file: chunk index is greater than chunk count, goodbye");
 			}
 

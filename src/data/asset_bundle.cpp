@@ -53,7 +53,7 @@ namespace rivet::data {
 
 	auto
 	asset_bundle::get_entry(const rivet_index index) const -> std::shared_ptr<rivet_data_array> {
-		if (index > header.sizes.size()) {
+		if (index >= header.sizes.size()) {
 			return nullptr;
 		}
 

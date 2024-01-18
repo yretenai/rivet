@@ -346,7 +346,7 @@ generate_struct(const dump_root &root, const std::shared_ptr<struct_info> &struc
 				if (type == structures::rivet_serialized_type::enum_value) {
 					auto enum_values = enum_list[type_name.id];
 					if (auto n = default_value_json.get<uint64_t>(); n >= enum_values.size()) {
-						replace_stringview(field_ctor, "%default%", std::to_string(n));
+						replace_stringview(field_ctor, "%default%", std::to_string(n) + (type == structures::rivet_serialized_type::uint64 ? "ull" : "u"));
 					} else {
 						replace_stringview(field_ctor, "%default%", enum_values[n]);
 					}

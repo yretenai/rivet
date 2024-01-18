@@ -260,7 +260,7 @@ namespace rivet::data {
 			asset->type = rivet_asset_type::NONE;
 
 			if (group_id != rivet_unknown) {
-				groups[group_id / 8][(group_id / 2) % 4][is_stream ? 1 : 0].emplace_back(asset);
+				groups.at(group_id / 8).at(group_id / 2 % 4).at(is_stream ? 1 : 0).emplace_back(asset);
 			}
 
 			if (asset_lookup.find(generic_id) == asset_lookup.end()) {
@@ -280,7 +280,7 @@ namespace rivet::data {
 			return {};
 		}
 
-		return groups[rivet::to_underlying(locale)][rivet::to_underlying(category)][is_stream ? 1 : 0];
+		return groups.at(rivet::to_underlying(locale)).at(rivet::to_underlying(category)).at(is_stream ? 1 : 0);
 	}
 
 	auto

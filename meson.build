@@ -72,6 +72,12 @@ cpp_args = compiler.get_supported_arguments(
     '-faddrsig',
     '-faligned-new',
     '-Wno-unknown-pragmas',
+    '-Wall',
+    '-Wextra',
+    '-pedantic',
+    '-Werror',
+    '-Wno-unused-variable',
+    '-Wno-unused-parameter',
 )
 
 add_project_arguments(cpp_args, language: 'cpp')
