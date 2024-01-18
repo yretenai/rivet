@@ -8,8 +8,8 @@
 namespace rivet::ddl::generated {
 	SoundMaterialbstructionValue::SoundMaterialbstructionValue([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Material = serialized->get_enum<rivet::ddl::generated::x10b3c4cf>(Material_type_id, rivet::ddl::generated::x10b3c4cf_values, rivet::ddl::generated::x10b3c4cf::None);
-		Opacity = serialized->get_float(Opacity_type_id, 1.000000);
-		LowPass = serialized->get_float(LowPass_type_id, 1.000000); 
+		Opacity = serialized->get_float(Opacity_type_id, 1.000000f);
+		LowPass = serialized->get_float(LowPass_type_id, 1.000000f); 
 	}
 
 	[[nodiscard]] auto

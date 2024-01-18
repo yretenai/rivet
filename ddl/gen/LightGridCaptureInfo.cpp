@@ -22,7 +22,7 @@ namespace rivet::ddl::generated {
 		WriteLightBinsToServer = serialized->get_bool(WriteLightBinsToServer_type_id, true);
 		LightingCondition = serialized->get_enum<rivet::ddl::generated::LightingConditions>(LightingCondition_type_id, rivet::ddl::generated::LightingConditions_values, rivet::ddl::generated::LightingConditions::Day);
 		GBufferServerAddress = serialized->get_string(GBufferServerAddress_type_id, {});
-		GBufferServerPort = serialized->get_uint32(GBufferServerPort_type_id, 0);
+		GBufferServerPort = serialized->get_uint32(GBufferServerPort_type_id, 0u);
 		LogUrl = serialized->get_string(LogUrl_type_id, {}); 
 	}
 

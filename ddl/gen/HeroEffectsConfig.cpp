@@ -15,9 +15,9 @@
 
 namespace rivet::ddl::generated {
 	HeroEffectsConfig::HeroEffectsConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		WetToDryTime = serialized->get_float(WetToDryTime_type_id, 30.000000);
-		InAirHeight = serialized->get_float(InAirHeight_type_id, 0.100000);
-		InWaterDepth = serialized->get_float(InWaterDepth_type_id, 0.010000);
+		WetToDryTime = serialized->get_float(WetToDryTime_type_id, 30.000000f);
+		InAirHeight = serialized->get_float(InAirHeight_type_id, 0.100000f);
+		InWaterDepth = serialized->get_float(InWaterDepth_type_id, 0.010000f);
 		SpeedVFXKeyFrameModifiers = serialized->unwrap_into_many<rivet::ddl::generated::HeroSpeedVFXKeyFrameModifierData>(SpeedVFXKeyFrameModifiers_type_id);
 		WaterSplashSpeeds = serialized->unwrap_into<rivet::ddl::generated::HeroWaterSplashSpeedData>(WaterSplashSpeeds_type_id);
 		MaterialGlobals = serialized->unwrap_into_many<rivet::ddl::generated::HeroMaterialGlobal>(MaterialGlobals_type_id);

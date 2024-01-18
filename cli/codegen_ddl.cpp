@@ -346,17 +346,17 @@ generate_struct(const dump_root &root, const std::shared_ptr<struct_info> &struc
 				if (type == structures::rivet_serialized_type::enum_value) {
 					auto enum_values = enum_list[type_name.id];
 					if (auto n = default_value_json.get<uint64_t>(); n >= enum_values.size()) {
-						replace_stringview(field_ctor, "%default%", std::to_string(n) + (type == structures::rivet_serialized_type::uint64 ? "ull" : "u"));
+						replace_stringview(field_ctor, "%default%", std::to_string(n) + "u");
 					} else {
 						replace_stringview(field_ctor, "%default%", enum_values[n]);
 					}
 				} else {
-					replace_stringview(field_ctor, "%default%", std::to_string(default_value_json.get<uint64_t>()));
+					replace_stringview(field_ctor, "%default%", std::to_string(default_value_json.get<uint64_t>()) + (type == structures::rivet_serialized_type::uint64 || type == structures::rivet_serialized_type::tuid || type == structures::rivet_serialized_type::instance_id ? "ull" : "u"));
 				}
 			} else if (default_value_json.is_number_integer()) {
 				replace_stringview(field_ctor, "%default%", std::to_string(default_value_json.get<int64_t>()));
 			} else if (default_value_json.is_number_float()) {
-				replace_stringview(field_ctor, "%default%", std::to_string(default_value_json.get<double>()));
+				replace_stringview(field_ctor, "%default%", std::to_string(default_value_json.get<double>()) + (type == structures::rivet_serialized_type::float32 ? "f" : ""));
 			} else {
 				replace_stringview(field_ctor, "%default%", "{}");
 			}

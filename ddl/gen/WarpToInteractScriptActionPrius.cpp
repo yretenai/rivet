@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	WarpToInteractScriptActionPrius::WarpToInteractScriptActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Interact);
-		InteractLocation = serialized->get_float(InteractLocation_type_id, 0.000000);
+		InteractLocation = serialized->get_float(InteractLocation_type_id, 0.000000f);
 		StartActive = serialized->get_bool(StartActive_type_id, false); 
 	}
 

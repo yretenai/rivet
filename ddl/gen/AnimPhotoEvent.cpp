@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	AnimPhotoEvent::AnimPhotoEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
 		AnimDescription = serialized->get_string(AnimDescription_type_id, "PHOTO_EVENT");
-		ValueMultiplier = serialized->get_float(ValueMultiplier_type_id, 1.000000); 
+		ValueMultiplier = serialized->get_float(ValueMultiplier_type_id, 1.000000f); 
 	}
 
 	[[nodiscard]] auto

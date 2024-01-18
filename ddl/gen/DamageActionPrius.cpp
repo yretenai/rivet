@@ -12,14 +12,14 @@
 namespace rivet::ddl::generated {
 	DamageActionPrius::DamageActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Health);
-		Amount = serialized->get_float(Amount_type_id, 1.000000);
+		Amount = serialized->get_float(Amount_type_id, 1.000000f);
 		AmountAsPercentage = serialized->get_bool(AmountAsPercentage_type_id, false);
 		Type = serialized->get_enum<rivet::ddl::generated::DamageTypes>(Type_type_id, rivet::ddl::generated::DamageTypes_values, rivet::ddl::generated::DamageTypes::Bullet);
 		Knockback = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(Knockback_type_id, rivet::ddl::generated::KnockbackLevels_values, rivet::ddl::generated::KnockbackLevels::None);
-		KnockbackAmount = serialized->get_float(KnockbackAmount_type_id, -1.000000);
-		Flags = serialized->get_bitset<rivet::ddl::generated::x65d7dac2>(Flags_type_id, rivet::ddl::generated::x65d7dac2_values, 0);
-		Duration = serialized->get_float(Duration_type_id, 0.000000);
-		ConditionDuration = serialized->get_float(ConditionDuration_type_id, 0.000000);
+		KnockbackAmount = serialized->get_float(KnockbackAmount_type_id, -1.000000f);
+		Flags = serialized->get_bitset<rivet::ddl::generated::x65d7dac2>(Flags_type_id, rivet::ddl::generated::x65d7dac2_values, 0u);
+		Duration = serialized->get_float(Duration_type_id, 0.000000f);
+		ConditionDuration = serialized->get_float(ConditionDuration_type_id, 0.000000f);
 		DamageStatus = serialized->unwrap_into_many<rivet::ddl::generated::DamageStatusData>(DamageStatus_type_id);
 		LocalHitPos = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(LocalHitPos_type_id);
 		LocalHitDir = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(LocalHitDir_type_id);

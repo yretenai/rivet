@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	ConduitLocatorTransformEvent::ConduitLocatorTransformEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
 		Label = serialized->get_string(Label_type_id, {});
-		Value = serialized->get_float(Value_type_id, 0.000000);
+		Value = serialized->get_float(Value_type_id, 0.000000f);
 		LocatorName = serialized->get_string(LocatorName_type_id, {}); 
 	}
 

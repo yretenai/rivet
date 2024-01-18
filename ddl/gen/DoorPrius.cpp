@@ -19,7 +19,7 @@ namespace rivet::ddl::generated {
 		RequiredItems = serialized->unwrap_into_many<rivet::ddl::generated::RequiredItemEntry>(RequiredItems_type_id);
 		StartOpen = serialized->get_bool(StartOpen_type_id, false);
 		StartLocked = serialized->get_bool(StartLocked_type_id, false);
-		SquashVolume = serialized->get_uint64(SquashVolume_type_id, 0);
+		SquashVolume = serialized->get_uint64(SquashVolume_type_id, 0ull);
 		CreateDoorOffer = serialized->get_bool(CreateDoorOffer_type_id, false);
 		DoorOfferPrius = serialized->unwrap_into<rivet::ddl::generated::DoorOfferPrius>(DoorOfferPrius_type_id); 
 	}

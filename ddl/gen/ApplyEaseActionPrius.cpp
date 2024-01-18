@@ -9,8 +9,8 @@ namespace rivet::ddl::generated {
 	ApplyEaseActionPrius::ApplyEaseActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Math);
 		EaseBlendType = serialized->get_enum<rivet::ddl::generated::xfb252bce>(EaseBlendType_type_id, rivet::ddl::generated::xfb252bce_values, rivet::ddl::generated::xfb252bce::Ease_In_Out);
-		EaseBlendIn = serialized->get_float(EaseBlendIn_type_id, 0.200000);
-		EaseBlendOut = serialized->get_float(EaseBlendOut_type_id, 0.200000); 
+		EaseBlendIn = serialized->get_float(EaseBlendIn_type_id, 0.200000f);
+		EaseBlendOut = serialized->get_float(EaseBlendOut_type_id, 0.200000f); 
 	}
 
 	[[nodiscard]] auto

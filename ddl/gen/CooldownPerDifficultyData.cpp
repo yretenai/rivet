@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	CooldownPerDifficultyData::CooldownPerDifficultyData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MinCooldown = serialized->get_float(MinCooldown_type_id, -1.000000);
-		MaxCooldown = serialized->get_float(MaxCooldown_type_id, -1.000000); 
+		MinCooldown = serialized->get_float(MinCooldown_type_id, -1.000000f);
+		MaxCooldown = serialized->get_float(MaxCooldown_type_id, -1.000000f); 
 	}
 
 	[[nodiscard]] auto

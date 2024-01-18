@@ -9,8 +9,8 @@ namespace rivet::ddl::generated {
 	BotComboMoveFinaleHeadAnimation::BotComboMoveFinaleHeadAnimation([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BotComboMoveBase(serialized) {
 		PortalActorAsset = serialized->get_string(PortalActorAsset_type_id, {});
 		HeadActorAsset = serialized->get_string(HeadActorAsset_type_id, {});
-		HeadActorVol = serialized->get_uint64(HeadActorVol_type_id, 0);
-		LookAtActor = serialized->get_uint64(LookAtActor_type_id, 0);
+		HeadActorVol = serialized->get_uint64(HeadActorVol_type_id, 0ull);
+		LookAtActor = serialized->get_uint64(LookAtActor_type_id, 0ull);
 		AnimDriver = serialized->get_string(AnimDriver_type_id, {});
 		RemainAfterAttack = serialized->get_bool(RemainAfterAttack_type_id, false); 
 	}

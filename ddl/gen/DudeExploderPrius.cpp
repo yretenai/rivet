@@ -10,15 +10,15 @@
 
 namespace rivet::ddl::generated {
 	DudeExploderPrius::DudeExploderPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ExplodeDelay = serialized->get_float(ExplodeDelay_type_id, 0.000000);
-		ExplodeDelayMin = serialized->get_float(ExplodeDelayMin_type_id, -1.000000);
-		HideDelay = serialized->get_float(HideDelay_type_id, 0.000000);
+		ExplodeDelay = serialized->get_float(ExplodeDelay_type_id, 0.000000f);
+		ExplodeDelayMin = serialized->get_float(ExplodeDelayMin_type_id, -1.000000f);
+		HideDelay = serialized->get_float(HideDelay_type_id, 0.000000f);
 		AlwaysExplodeOnDeath = serialized->get_bool(AlwaysExplodeOnDeath_type_id, false);
-		MinSpeed = serialized->get_float(MinSpeed_type_id, 7.000000);
-		MaxSpeed = serialized->get_float(MaxSpeed_type_id, 10.000000);
+		MinSpeed = serialized->get_float(MinSpeed_type_id, 7.000000f);
+		MaxSpeed = serialized->get_float(MaxSpeed_type_id, 10.000000f);
 		MaxSpecificChunks = serialized->get_int32(MaxSpecificChunks_type_id, -1);
 		MaxTotalChunks = serialized->get_int32(MaxTotalChunks_type_id, -1);
-		ChunkLifetime = serialized->get_float(ChunkLifetime_type_id, -1.000000);
+		ChunkLifetime = serialized->get_float(ChunkLifetime_type_id, -1.000000f);
 		SpecificChunks = serialized->unwrap_into_many<rivet::ddl::generated::SpecificChunk>(SpecificChunks_type_id);
 		GenericChunks = serialized->unwrap_into<rivet::ddl::generated::GenericChunks>(GenericChunks_type_id); 
 	}

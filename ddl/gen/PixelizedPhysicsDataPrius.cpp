@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	PixelizedPhysicsDataPrius::PixelizedPhysicsDataPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MaxDebrisPhysics = serialized->get_uint32(MaxDebrisPhysics_type_id, 64);
-		MaxPhysics = serialized->get_uint32(MaxPhysics_type_id, 512); 
+		MaxDebrisPhysics = serialized->get_uint32(MaxDebrisPhysics_type_id, 64u);
+		MaxPhysics = serialized->get_uint32(MaxPhysics_type_id, 512u); 
 	}
 
 	[[nodiscard]] auto

@@ -10,7 +10,7 @@
 namespace rivet::ddl::generated {
 	CentipedeChaseMineFiringPrius::CentipedeChaseMineFiringPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		FiringData = serialized->unwrap_into_many<rivet::ddl::generated::MineFiringData>(FiringData_type_id);
-		FireRate = serialized->get_float(FireRate_type_id, 1.000000); 
+		FireRate = serialized->get_float(FireRate_type_id, 1.000000f); 
 	}
 
 	[[nodiscard]] auto

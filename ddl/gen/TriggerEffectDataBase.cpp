@@ -11,7 +11,7 @@
 
 namespace rivet::ddl::generated {
 	TriggerEffectDataBase::TriggerEffectDataBase([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Strength = serialized->get_uint32(Strength_type_id, 0); 
+		Strength = serialized->get_uint32(Strength_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

@@ -15,7 +15,7 @@ namespace rivet::ddl::generated {
 		MissionName = serialized->get_string(MissionName_type_id, {});
 		ObjectiveName = serialized->get_string(ObjectiveName_type_id, {});
 		EndReason = serialized->get_enum<rivet::ddl::generated::x70690a01>(EndReason_type_id, rivet::ddl::generated::x70690a01_values, rivet::ddl::generated::x70690a01::Complete);
-		ObjectiveDuration = serialized->get_float(ObjectiveDuration_type_id, 0.000000);
+		ObjectiveDuration = serialized->get_float(ObjectiveDuration_type_id, 0.000000f);
 		PlayerPosInfo = serialized->unwrap_into<rivet::ddl::generated::DevstatsPlayerPositionInfo>(PlayerPosInfo_type_id); 
 	}
 

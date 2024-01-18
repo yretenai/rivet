@@ -13,7 +13,7 @@ namespace rivet::ddl::generated {
 		PreserveScale = serialized->get_bool(PreserveScale_type_id, false);
 		SkipToEnd = serialized->get_bool(SkipToEnd_type_id, false);
 		StartOnRndFrame = serialized->get_bool(StartOnRndFrame_type_id, false);
-		StartAtSpecificTime = serialized->get_float(StartAtSpecificTime_type_id, -1.000000);
+		StartAtSpecificTime = serialized->get_float(StartAtSpecificTime_type_id, -1.000000f);
 		SpecificTimeIsNormalized = serialized->get_bool(SpecificTimeIsNormalized_type_id, false);
 		RemoveDriverOnDone = serialized->get_bool(RemoveDriverOnDone_type_id, true);
 		RestartAnimOnCinematicEnd = serialized->get_bool(RestartAnimOnCinematicEnd_type_id, false);

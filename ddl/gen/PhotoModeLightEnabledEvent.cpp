@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	PhotoModeLightEnabledEvent::PhotoModeLightEnabledEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		LightIndex = serialized->get_int32(LightIndex_type_id, 0);
+		LightIndex = serialized->get_int32(LightIndex_type_id, 0u);
 		EnableState = serialized->get_bool(EnableState_type_id, false); 
 	}
 

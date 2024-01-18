@@ -8,8 +8,8 @@
 namespace rivet::ddl::generated {
 	ConduitAttributes::ConduitAttributes([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Label = serialized->get_string(Label_type_id, {});
-		Value = serialized->get_float(Value_type_id, 0.000000);
-		Param = serialized->get_uint32(Param_type_id, 0); 
+		Value = serialized->get_float(Value_type_id, 0.000000f);
+		Param = serialized->get_uint32(Param_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

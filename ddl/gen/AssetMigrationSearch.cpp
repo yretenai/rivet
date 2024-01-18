@@ -12,7 +12,7 @@ namespace rivet::ddl::generated {
 		Suffixes = serialized->get_strings(Suffixes_type_id);
 		Branches = serialized->get_strings(Branches_type_id);
 		UsePath = serialized->get_bool(UsePath_type_id, false);
-		Limit = serialized->get_int32(Limit_type_id, 1000); 
+		Limit = serialized->get_int32(Limit_type_id, 1000u); 
 	}
 
 	[[nodiscard]] auto

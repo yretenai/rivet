@@ -11,9 +11,9 @@ namespace rivet::ddl::generated {
 	TargetedAttack::TargetedAttack([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		AttackAnim = serialized->get_string(AttackAnim_type_id, {});
 		Shape = serialized->unwrap_into<rivet::ddl::generated::TargetedAttackShape>(Shape_type_id);
-		Cooldown = serialized->get_float(Cooldown_type_id, 0.000000);
-		Layer = serialized->get_uint32(Layer_type_id, 0);
-		LastPlayedTime = serialized->get_float(LastPlayedTime_type_id, -1000.000000); 
+		Cooldown = serialized->get_float(Cooldown_type_id, 0.000000f);
+		Layer = serialized->get_uint32(Layer_type_id, 0u);
+		LastPlayedTime = serialized->get_float(LastPlayedTime_type_id, -1000.000000f); 
 	}
 
 	[[nodiscard]] auto

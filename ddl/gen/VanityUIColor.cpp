@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	VanityUIColor::VanityUIColor([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ColorIndex = serialized->get_uint8(ColorIndex_type_id, 0);
+		ColorIndex = serialized->get_uint8(ColorIndex_type_id, 0u);
 		UIColorPrimary = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(UIColorPrimary_type_id);
 		UIColorSecondary = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(UIColorSecondary_type_id); 
 	}

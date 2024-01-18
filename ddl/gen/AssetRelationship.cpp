@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	AssetRelationship::AssetRelationship([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Parent = serialized->get_uint32(Parent_type_id, 0);
-		Child = serialized->get_uint32(Child_type_id, 0); 
+		Parent = serialized->get_uint32(Parent_type_id, 0u);
+		Child = serialized->get_uint32(Child_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

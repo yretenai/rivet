@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	PerfSpecOverlayTriggerPrius::PerfSpecOverlayTriggerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BaseCustomOverlayTriggerPrius(serialized) {
-		PerformanceSpec = serialized->get_bitset<rivet::ddl::generated::xd4311277>(PerformanceSpec_type_id, rivet::ddl::generated::xd4311277_values, 0); 
+		PerformanceSpec = serialized->get_bitset<rivet::ddl::generated::xd4311277>(PerformanceSpec_type_id, rivet::ddl::generated::xd4311277_values, 0u); 
 	}
 
 	[[nodiscard]] auto

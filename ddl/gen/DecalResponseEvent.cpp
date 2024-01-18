@@ -8,18 +8,18 @@
 namespace rivet::ddl::generated {
 	DecalResponseEvent::DecalResponseEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ResponseEvent(serialized) {
 		Material = serialized->get_string(Material_type_id, {});
-		Alpha = serialized->get_float(Alpha_type_id, 1.000000);
-		StartDelay = serialized->get_float(StartDelay_type_id, 0.000000);
-		Lifetime = serialized->get_float(Lifetime_type_id, 10.000000);
-		InfiniteLifetimeChance = serialized->get_float(InfiniteLifetimeChance_type_id, 0.000000);
-		Size = serialized->get_float(Size_type_id, 1.000000);
-		WhRatio = serialized->get_float(WhRatio_type_id, 1.000000);
-		DepthRatio = serialized->get_float(DepthRatio_type_id, 1.000000);
-		LodDistance = serialized->get_float(LodDistance_type_id, 100.000000);
-		FadeDistance = serialized->get_float(FadeDistance_type_id, 25.000000);
-		FadeDuration = serialized->get_float(FadeDuration_type_id, -1.000000);
-		ConduitDeleteFadeOut = serialized->get_float(ConduitDeleteFadeOut_type_id, -1.000000);
-		MaxAngle = serialized->get_float(MaxAngle_type_id, 72.000000);
+		Alpha = serialized->get_float(Alpha_type_id, 1.000000f);
+		StartDelay = serialized->get_float(StartDelay_type_id, 0.000000f);
+		Lifetime = serialized->get_float(Lifetime_type_id, 10.000000f);
+		InfiniteLifetimeChance = serialized->get_float(InfiniteLifetimeChance_type_id, 0.000000f);
+		Size = serialized->get_float(Size_type_id, 1.000000f);
+		WhRatio = serialized->get_float(WhRatio_type_id, 1.000000f);
+		DepthRatio = serialized->get_float(DepthRatio_type_id, 1.000000f);
+		LodDistance = serialized->get_float(LodDistance_type_id, 100.000000f);
+		FadeDistance = serialized->get_float(FadeDistance_type_id, 25.000000f);
+		FadeDuration = serialized->get_float(FadeDuration_type_id, -1.000000f);
+		ConduitDeleteFadeOut = serialized->get_float(ConduitDeleteFadeOut_type_id, -1.000000f);
+		MaxAngle = serialized->get_float(MaxAngle_type_id, 72.000000f);
 		IsImportant = serialized->get_bool(IsImportant_type_id, false);
 		IsRequired = serialized->get_bool(IsRequired_type_id, false);
 		RandOrient = serialized->get_bool(RandOrient_type_id, true);
@@ -28,9 +28,9 @@ namespace rivet::ddl::generated {
 		AllowSingleOverlap = serialized->get_bool(AllowSingleOverlap_type_id, false);
 		ReplaceOverlapping = serialized->get_bool(ReplaceOverlapping_type_id, false);
 		UpdateOverlapping = serialized->get_bool(UpdateOverlapping_type_id, false);
-		CoveredMaterialArray = serialized->get_uint64(CoveredMaterialArray_type_id, 0);
-		CoveredMaterialArray0 = serialized->get_uint64(CoveredMaterialArray0_type_id, 18446744073709551615);
-		CoveredMaterialArray1 = serialized->get_uint64(CoveredMaterialArray1_type_id, 18446744073709551615); 
+		CoveredMaterialArray = serialized->get_uint64(CoveredMaterialArray_type_id, 0ull);
+		CoveredMaterialArray0 = serialized->get_uint64(CoveredMaterialArray0_type_id, 18446744073709551615ull);
+		CoveredMaterialArray1 = serialized->get_uint64(CoveredMaterialArray1_type_id, 18446744073709551615ull); 
 	}
 
 	[[nodiscard]] auto

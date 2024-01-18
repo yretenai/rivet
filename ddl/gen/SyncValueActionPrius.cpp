@@ -9,7 +9,7 @@ namespace rivet::ddl::generated {
 	SyncValueActionPrius::SyncValueActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Gameplay);
 		Name = serialized->get_string(Name_type_id, "Score");
-		ValueIn = serialized->get_float(ValueIn_type_id, 0.000000); 
+		ValueIn = serialized->get_float(ValueIn_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

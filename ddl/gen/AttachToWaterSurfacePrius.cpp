@@ -8,11 +8,11 @@
 namespace rivet::ddl::generated {
 	AttachToWaterSurfacePrius::AttachToWaterSurfacePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		BobValuesSource = serialized->get_enum<rivet::ddl::generated::x24d9b2cf>(BobValuesSource_type_id, rivet::ddl::generated::x24d9b2cf_values, rivet::ddl::generated::x24d9b2cf::Use_Component_Defaults);
-		BobGain = serialized->get_float(BobGain_type_id, -1.000000);
-		BobDamp = serialized->get_float(BobDamp_type_id, -8.000000);
-		BobMaxSpeed = serialized->get_float(BobMaxSpeed_type_id, 1.000000);
+		BobGain = serialized->get_float(BobGain_type_id, -1.000000f);
+		BobDamp = serialized->get_float(BobDamp_type_id, -8.000000f);
+		BobMaxSpeed = serialized->get_float(BobMaxSpeed_type_id, 1.000000f);
 		Activation = serialized->get_enum<rivet::ddl::generated::x79aee756>(Activation_type_id, rivet::ddl::generated::x79aee756_values, rivet::ddl::generated::x79aee756::Use_Event_to_activate_motion);
-		MotionDepth = serialized->get_float(MotionDepth_type_id, 0.100000);
+		MotionDepth = serialized->get_float(MotionDepth_type_id, 0.100000f);
 		UpdateOffscreen = serialized->get_bool(UpdateOffscreen_type_id, false); 
 	}
 

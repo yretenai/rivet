@@ -7,14 +7,14 @@
 
 namespace rivet::ddl::generated {
 	SyncSettings::SyncSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MaxComponents = serialized->get_uint32(MaxComponents_type_id, 22000);
-		HeapSize = serialized->get_uint32(HeapSize_type_id, 131072);
-		HeapFixedBlockFraction = serialized->get_float(HeapFixedBlockFraction_type_id, 0.000000);
-		HeapFixedBlockSize = serialized->get_uint32(HeapFixedBlockSize_type_id, 0);
-		OutputQueueSize = serialized->get_uint32(OutputQueueSize_type_id, 32768);
-		BroadcastQueueSize = serialized->get_uint32(BroadcastQueueSize_type_id, 32768);
-		ServerHeapSize = serialized->get_uint32(ServerHeapSize_type_id, 1048576);
-		ServerMessageQueueSize = serialized->get_uint32(ServerMessageQueueSize_type_id, 262144);
+		MaxComponents = serialized->get_uint32(MaxComponents_type_id, 22000u);
+		HeapSize = serialized->get_uint32(HeapSize_type_id, 131072u);
+		HeapFixedBlockFraction = serialized->get_float(HeapFixedBlockFraction_type_id, 0.000000f);
+		HeapFixedBlockSize = serialized->get_uint32(HeapFixedBlockSize_type_id, 0u);
+		OutputQueueSize = serialized->get_uint32(OutputQueueSize_type_id, 32768u);
+		BroadcastQueueSize = serialized->get_uint32(BroadcastQueueSize_type_id, 32768u);
+		ServerHeapSize = serialized->get_uint32(ServerHeapSize_type_id, 1048576u);
+		ServerMessageQueueSize = serialized->get_uint32(ServerMessageQueueSize_type_id, 262144u);
 		Enabled = serialized->get_bool(Enabled_type_id, false); 
 	}
 

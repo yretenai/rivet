@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	MountAbilityHexapodDash::MountAbilityHexapodDash([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): MountAbilityBase(serialized) {
-		DashSpeed = serialized->get_float(DashSpeed_type_id, 0.000000); 
+		DashSpeed = serialized->get_float(DashSpeed_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

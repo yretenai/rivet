@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	DamageModifierPassiveWeakspotPrius::DamageModifierPassiveWeakspotPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): DamageModifierIncomingPrius(serialized) {
-		PassiveMultiplier = serialized->get_float(PassiveMultiplier_type_id, 5.000000); 
+		PassiveMultiplier = serialized->get_float(PassiveMultiplier_type_id, 5.000000f); 
 	}
 
 	[[nodiscard]] auto

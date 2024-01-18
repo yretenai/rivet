@@ -10,8 +10,8 @@ namespace rivet::ddl::generated {
 		GunWeapon = serialized->get_string(GunWeapon_type_id, {});
 		LobWeapon = serialized->get_string(LobWeapon_type_id, {});
 		CameraShake = serialized->get_string(CameraShake_type_id, {});
-		CameraPitchAdjustmentUp = serialized->get_float(CameraPitchAdjustmentUp_type_id, 1.000000);
-		CameraPitchAdjustmentDown = serialized->get_float(CameraPitchAdjustmentDown_type_id, 1.000000); 
+		CameraPitchAdjustmentUp = serialized->get_float(CameraPitchAdjustmentUp_type_id, 1.000000f);
+		CameraPitchAdjustmentDown = serialized->get_float(CameraPitchAdjustmentDown_type_id, 1.000000f); 
 	}
 
 	[[nodiscard]] auto

@@ -9,12 +9,12 @@
 
 namespace rivet::ddl::generated {
 	StructuredLogAnimTreePerformanceClipNode::StructuredLogAnimTreePerformanceClipNode([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): StructuredLogAnimTreeNode(serialized) {
-		Time = serialized->get_float(Time_type_id, 0.000000);
-		ClipDuration = serialized->get_float(ClipDuration_type_id, 0.000000);
-		Rate = serialized->get_float(Rate_type_id, 0.000000);
+		Time = serialized->get_float(Time_type_id, 0.000000f);
+		ClipDuration = serialized->get_float(ClipDuration_type_id, 0.000000f);
+		Rate = serialized->get_float(Rate_type_id, 0.000000f);
 		ClipNodeFlags = serialized->get_enum<rivet::ddl::generated::x38a2d189>(ClipNodeFlags_type_id, rivet::ddl::generated::x38a2d189_values, rivet::ddl::generated::x38a2d189::FlagsNone);
 		Gestures = serialized->unwrap_into_many<rivet::ddl::generated::StructuredLogAnimTreePerformanceClipNodeGesture>(Gestures_type_id);
-		FacialPosesScale = serialized->get_float(FacialPosesScale_type_id, 0.000000); 
+		FacialPosesScale = serialized->get_float(FacialPosesScale_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

@@ -8,12 +8,12 @@
 namespace rivet::ddl::generated {
 	OverrideHeroSpaceshipTurnRateActionPrius::OverrideHeroSpaceshipTurnRateActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Hero);
-		NonFireTurnAccel = serialized->get_float(NonFireTurnAccel_type_id, 5.000000);
-		NonFireTurnDecel = serialized->get_float(NonFireTurnDecel_type_id, 5.000000);
-		NonFireTurnSpeed = serialized->get_float(NonFireTurnSpeed_type_id, 1.500000);
-		FireTurnAccel = serialized->get_float(FireTurnAccel_type_id, 2.000000);
-		FireTurnDecel = serialized->get_float(FireTurnDecel_type_id, 3.000000);
-		FireTurnSpeed = serialized->get_float(FireTurnSpeed_type_id, 1.250000); 
+		NonFireTurnAccel = serialized->get_float(NonFireTurnAccel_type_id, 5.000000f);
+		NonFireTurnDecel = serialized->get_float(NonFireTurnDecel_type_id, 5.000000f);
+		NonFireTurnSpeed = serialized->get_float(NonFireTurnSpeed_type_id, 1.500000f);
+		FireTurnAccel = serialized->get_float(FireTurnAccel_type_id, 2.000000f);
+		FireTurnDecel = serialized->get_float(FireTurnDecel_type_id, 3.000000f);
+		FireTurnSpeed = serialized->get_float(FireTurnSpeed_type_id, 1.250000f); 
 	}
 
 	[[nodiscard]] auto

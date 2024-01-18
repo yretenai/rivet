@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	FirepointLosCheckerPrius::FirepointLosCheckerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): LosCheckerPrius(serialized) {
-		FPHandle = serialized->get_uint32(FPHandle_type_id, 0); 
+		FPHandle = serialized->get_uint32(FPHandle_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

@@ -11,17 +11,17 @@ namespace rivet::ddl::generated {
 	GameBotSargassoCentipedeBossPrius::GameBotSargassoCentipedeBossPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BotPrius(serialized) {
 		IntroAnimName = serialized->get_string(IntroAnimName_type_id, "Arena_Intro");
 		FlyoverOutroAnimName = serialized->get_string(FlyoverOutroAnimName_type_id, "Tail_Reentry");
-		FlyOverMinHealthPercentThreshold = serialized->get_float(FlyOverMinHealthPercentThreshold_type_id, 0.000000);
+		FlyOverMinHealthPercentThreshold = serialized->get_float(FlyOverMinHealthPercentThreshold_type_id, 0.000000f);
 		DeathType = serialized->get_enum<rivet::ddl::generated::x2512d89d>(DeathType_type_id, rivet::ddl::generated::x2512d89d_values, rivet::ddl::generated::x2512d89d::Retreat);
 		RetreatAnim = serialized->get_string(RetreatAnim_type_id, "Retract");
 		DeathAnim = serialized->get_string(DeathAnim_type_id, "Arena_Death");
 		PilotActor = serialized->get_string(PilotActor_type_id, {});
-		PilotScale = serialized->get_float(PilotScale_type_id, 1.000000);
+		PilotScale = serialized->get_float(PilotScale_type_id, 1.000000f);
 		LocatorToAttachPilot = serialized->get_string(LocatorToAttachPilot_type_id, "igLoc_chair_swivel");
 		DamageReactionThresholds = serialized->get_floats(DamageReactionThresholds_type_id);
 		DamageReactionAnim = serialized->get_string(DamageReactionAnim_type_id, "Damage");
 		CelebrateAnim = serialized->get_string(CelebrateAnim_type_id, "Celebrate");
-		DefaultCelebrateCooldown = serialized->get_float(DefaultCelebrateCooldown_type_id, 30.000000);
+		DefaultCelebrateCooldown = serialized->get_float(DefaultCelebrateCooldown_type_id, 30.000000f);
 		DifficultyCelebrateCooldowns = serialized->unwrap_into_many<rivet::ddl::generated::CelebrateDifficultyData>(DifficultyCelebrateCooldowns_type_id);
 		DamageStateBotVariantExlusionList = serialized->get_enums<rivet::ddl::generated::xc3e5efea>(DamageStateBotVariantExlusionList_type_id, rivet::ddl::generated::xc3e5efea_values); 
 	}

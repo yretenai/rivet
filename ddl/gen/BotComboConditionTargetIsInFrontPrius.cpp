@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	BotComboConditionTargetIsInFrontPrius::BotComboConditionTargetIsInFrontPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BotComboConditionBasePrius(serialized) {
-		FrontDotTolerance = serialized->get_float(FrontDotTolerance_type_id, 0.500000);
+		FrontDotTolerance = serialized->get_float(FrontDotTolerance_type_id, 0.500000f);
 		XZOnly = serialized->get_bool(XZOnly_type_id, true);
 		CheckLeftNotFront = serialized->get_bool(CheckLeftNotFront_type_id, false);
 		ReverseLogic = serialized->get_bool(ReverseLogic_type_id, false); 

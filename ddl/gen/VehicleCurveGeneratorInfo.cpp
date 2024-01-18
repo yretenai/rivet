@@ -9,15 +9,15 @@
 
 namespace rivet::ddl::generated {
 	VehicleCurveGeneratorInfo::VehicleCurveGeneratorInfo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MaxPositionHistoryPoints = serialized->get_uint16(MaxPositionHistoryPoints_type_id, 3);
-		PositionHistorySegmentLength = serialized->get_float(PositionHistorySegmentLength_type_id, 1.000000);
-		MaxBlendPoints = serialized->get_uint16(MaxBlendPoints_type_id, 3);
-		BlendSegmentLength = serialized->get_float(BlendSegmentLength_type_id, 1.000000);
-		MaxDestinationNodes = serialized->get_uint16(MaxDestinationNodes_type_id, 8);
-		CurveRegenMinT = serialized->get_float(CurveRegenMinT_type_id, 0.500000);
-		MergeBezierPoints = serialized->get_uint16(MergeBezierPoints_type_id, 8);
-		MergeBezierSpeedCoeff = serialized->get_float(MergeBezierSpeedCoeff_type_id, 0.250000);
-		MinPostMergeDistance = serialized->get_float(MinPostMergeDistance_type_id, 1.000000);
+		MaxPositionHistoryPoints = serialized->get_uint16(MaxPositionHistoryPoints_type_id, 3u);
+		PositionHistorySegmentLength = serialized->get_float(PositionHistorySegmentLength_type_id, 1.000000f);
+		MaxBlendPoints = serialized->get_uint16(MaxBlendPoints_type_id, 3u);
+		BlendSegmentLength = serialized->get_float(BlendSegmentLength_type_id, 1.000000f);
+		MaxDestinationNodes = serialized->get_uint16(MaxDestinationNodes_type_id, 8u);
+		CurveRegenMinT = serialized->get_float(CurveRegenMinT_type_id, 0.500000f);
+		MergeBezierPoints = serialized->get_uint16(MergeBezierPoints_type_id, 8u);
+		MergeBezierSpeedCoeff = serialized->get_float(MergeBezierSpeedCoeff_type_id, 0.250000f);
+		MinPostMergeDistance = serialized->get_float(MinPostMergeDistance_type_id, 1.000000f);
 		BezierMergeDistances = serialized->unwrap_into_many<rivet::ddl::generated::VehicleMergeDistance>(BezierMergeDistances_type_id); 
 	}
 

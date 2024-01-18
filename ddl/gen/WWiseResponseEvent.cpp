@@ -10,7 +10,7 @@ namespace rivet::ddl::generated {
 		WwiseType = serialized->get_enum<rivet::ddl::generated::x5f40dd5c>(WwiseType_type_id, rivet::ddl::generated::x5f40dd5c_values, rivet::ddl::generated::x5f40dd5c::Parameter);
 		WwiseActionName = serialized->get_string(WwiseActionName_type_id, {});
 		GroupName = serialized->get_string(GroupName_type_id, {});
-		Value = serialized->get_float(Value_type_id, 0.000000);
+		Value = serialized->get_float(Value_type_id, 0.000000f);
 		SwitchValue = serialized->get_string(SwitchValue_type_id, {}); 
 	}
 

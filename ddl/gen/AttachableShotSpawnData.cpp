@@ -24,16 +24,16 @@
 
 namespace rivet::ddl::generated {
 	AttachableShotSpawnData::AttachableShotSpawnData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ActorSpawnData(serialized) {
-		ShotOwner = serialized->get_uint32(ShotOwner_type_id, 0);
-		AssetId = serialized->get_uint64(AssetId_type_id, 0);
-		WeaponId = serialized->get_uint32(WeaponId_type_id, 0);
-		SpawnTime = serialized->get_float(SpawnTime_type_id, 0.000000);
-		VersionIndex = serialized->get_uint8(VersionIndex_type_id, 0);
-		AttachActor = serialized->get_uint32(AttachActor_type_id, 0);
+		ShotOwner = serialized->get_uint32(ShotOwner_type_id, 0u);
+		AssetId = serialized->get_uint64(AssetId_type_id, 0ull);
+		WeaponId = serialized->get_uint32(WeaponId_type_id, 0u);
+		SpawnTime = serialized->get_float(SpawnTime_type_id, 0.000000f);
+		VersionIndex = serialized->get_uint8(VersionIndex_type_id, 0u);
+		AttachActor = serialized->get_uint32(AttachActor_type_id, 0u);
 		AttachJoint = serialized->get_int32(AttachJoint_type_id, -1);
 		RelativeMatrix = serialized->unwrap_into<rivet::ddl::generated::DDLTransform>(RelativeMatrix_type_id);
 		RelativeNormal = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(RelativeNormal_type_id);
-		AttachMaterial = serialized->get_int32(AttachMaterial_type_id, 0); 
+		AttachMaterial = serialized->get_int32(AttachMaterial_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

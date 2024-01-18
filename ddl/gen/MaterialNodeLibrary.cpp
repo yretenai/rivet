@@ -13,10 +13,10 @@ namespace rivet::ddl::generated {
 		LibraryFullPath = serialized->get_string(LibraryFullPath_type_id, {});
 		Name = serialized->get_string(Name_type_id, {});
 		Nodes = serialized->unwrap_into_many<rivet::ddl::generated::LoadedMaterialNode>(Nodes_type_id);
-		Color = serialized->get_uint32(Color_type_id, 0);
-		FixedWidth = serialized->get_uint32(FixedWidth_type_id, 0);
-		TimeStampLow = serialized->get_uint32(TimeStampLow_type_id, 0);
-		TimeStampHigh = serialized->get_uint32(TimeStampHigh_type_id, 0);
+		Color = serialized->get_uint32(Color_type_id, 0u);
+		FixedWidth = serialized->get_uint32(FixedWidth_type_id, 0u);
+		TimeStampLow = serialized->get_uint32(TimeStampLow_type_id, 0u);
+		TimeStampHigh = serialized->get_uint32(TimeStampHigh_type_id, 0u);
 		Hidden = serialized->get_bool(Hidden_type_id, false); 
 	}
 

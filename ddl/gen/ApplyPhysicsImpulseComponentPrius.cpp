@@ -10,8 +10,8 @@
 namespace rivet::ddl::generated {
 	ApplyPhysicsImpulseComponentPrius::ApplyPhysicsImpulseComponentPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Velocity = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Velocity_type_id);
-		Mass = serialized->get_float(Mass_type_id, 1.000000);
-		Radius = serialized->get_float(Radius_type_id, 1.000000); 
+		Mass = serialized->get_float(Mass_type_id, 1.000000f);
+		Radius = serialized->get_float(Radius_type_id, 1.000000f); 
 	}
 
 	[[nodiscard]] auto

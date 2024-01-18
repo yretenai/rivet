@@ -7,14 +7,14 @@
 
 namespace rivet::ddl::generated {
 	SoundVolumeOffsets71::SoundVolumeOffsets71([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		FrontLeft = serialized->get_float(FrontLeft_type_id, 0.000000);
-		FrontRight = serialized->get_float(FrontRight_type_id, 0.000000);
-		Center = serialized->get_float(Center_type_id, 0.000000);
-		RearLeft = serialized->get_float(RearLeft_type_id, 0.000000);
-		RearRight = serialized->get_float(RearRight_type_id, 0.000000);
-		SideLeft = serialized->get_float(SideLeft_type_id, 0.000000);
-		SideRight = serialized->get_float(SideRight_type_id, 0.000000);
-		LFE = serialized->get_float(LFE_type_id, 0.000000); 
+		FrontLeft = serialized->get_float(FrontLeft_type_id, 0.000000f);
+		FrontRight = serialized->get_float(FrontRight_type_id, 0.000000f);
+		Center = serialized->get_float(Center_type_id, 0.000000f);
+		RearLeft = serialized->get_float(RearLeft_type_id, 0.000000f);
+		RearRight = serialized->get_float(RearRight_type_id, 0.000000f);
+		SideLeft = serialized->get_float(SideLeft_type_id, 0.000000f);
+		SideRight = serialized->get_float(SideRight_type_id, 0.000000f);
+		LFE = serialized->get_float(LFE_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

@@ -15,7 +15,7 @@ namespace rivet::ddl::generated {
 		Position3D = serialized->get_bool(Position3D_type_id, false);
 		Size = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(Size_type_id);
 		MinMaxValue = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(MinMaxValue_type_id);
-		CurValue = serialized->get_float(CurValue_type_id, 0.000000);
+		CurValue = serialized->get_float(CurValue_type_id, 0.000000f);
 		DisplayPercent = serialized->get_bool(DisplayPercent_type_id, true);
 		DisplayCurMax = serialized->get_bool(DisplayCurMax_type_id, false); 
 	}

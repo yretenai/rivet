@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	CameraRotatorSplinePrius::CameraRotatorSplinePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): CameraRotatorBasePrius(serialized) {
-		GuideSpline = serialized->get_uint64(GuideSpline_type_id, 0);
+		GuideSpline = serialized->get_uint64(GuideSpline_type_id, 0ull);
 		InvertFacing = serialized->get_bool(InvertFacing_type_id, false);
 		PlanarFacing = serialized->get_bool(PlanarFacing_type_id, false); 
 	}

@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	MissingDevstatsEvent::MissingDevstatsEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		event_type = serialized->get_string(event_type_type_id, "MissingEvents");
-		MissingEventCount = serialized->get_uint32(MissingEventCount_type_id, 0); 
+		MissingEventCount = serialized->get_uint32(MissingEventCount_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

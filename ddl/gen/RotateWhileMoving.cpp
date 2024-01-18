@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	RotateWhileMoving::RotateWhileMoving([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): OrientationMode(serialized) {
 		Axis = serialized->get_enum<rivet::ddl::generated::xea512758>(Axis_type_id, rivet::ddl::generated::xea512758_values, rivet::ddl::generated::xea512758::X);
-		RotationalSpeed = serialized->get_float(RotationalSpeed_type_id, 0.000000);
+		RotationalSpeed = serialized->get_float(RotationalSpeed_type_id, 0.000000f);
 		RotationJoint = serialized->get_string(RotationJoint_type_id, {});
 		LocalToVelocity = serialized->get_bool(LocalToVelocity_type_id, true);
 		TiltWithVelocity = serialized->get_bool(TiltWithVelocity_type_id, false);

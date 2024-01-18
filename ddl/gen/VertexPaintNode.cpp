@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	VertexPaintNode::VertexPaintNode([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Id = serialized->get_uint64(Id_type_id, 0);
+		Id = serialized->get_uint64(Id_type_id, 0ull);
 		IsDeleted = serialized->get_bool(IsDeleted_type_id, false);
 		ColorMap = serialized->get_uint32s(ColorMap_type_id);
-		DefaultColor = serialized->get_uint32(DefaultColor_type_id, 0);
-		MetersPerVoxel = serialized->get_float(MetersPerVoxel_type_id, 0.100000); 
+		DefaultColor = serialized->get_uint32(DefaultColor_type_id, 0u);
+		MetersPerVoxel = serialized->get_float(MetersPerVoxel_type_id, 0.100000f); 
 	}
 
 	[[nodiscard]] auto

@@ -11,7 +11,7 @@
 
 namespace rivet::ddl::generated {
 	PlayerTargetingBasePrius::PlayerTargetingBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AttackIndex = serialized->get_int32(AttackIndex_type_id, 0); 
+		AttackIndex = serialized->get_int32(AttackIndex_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

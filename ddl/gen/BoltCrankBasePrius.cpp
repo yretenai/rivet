@@ -9,18 +9,18 @@ namespace rivet::ddl::generated {
 	BoltCrankBasePrius::BoltCrankBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		SaveUsedState = serialized->get_bool(SaveUsedState_type_id, true);
 		HeroType = serialized->get_enum<rivet::ddl::generated::HeroTypes>(HeroType_type_id, rivet::ddl::generated::HeroTypes_values, rivet::ddl::generated::HeroTypes::Ratchet);
-		Camera = serialized->get_uint64(Camera_type_id, 0);
-		CameraBlendInTime = serialized->get_float(CameraBlendInTime_type_id, 1.000000);
-		CameraBlendOutTime = serialized->get_float(CameraBlendOutTime_type_id, 1.000000);
-		ButtonDisplayRange = serialized->get_float(ButtonDisplayRange_type_id, 5.000000);
+		Camera = serialized->get_uint64(Camera_type_id, 0ull);
+		CameraBlendInTime = serialized->get_float(CameraBlendInTime_type_id, 1.000000f);
+		CameraBlendOutTime = serialized->get_float(CameraBlendOutTime_type_id, 1.000000f);
+		ButtonDisplayRange = serialized->get_float(ButtonDisplayRange_type_id, 5.000000f);
 		BoltDynJoint = serialized->get_string(BoltDynJoint_type_id, {});
 		SecondaryJoint = serialized->get_string(SecondaryJoint_type_id, {});
 		IdleDriver = serialized->get_string(IdleDriver_type_id, {});
 		InUseDriver = serialized->get_string(InUseDriver_type_id, {});
 		CompleteDriver = serialized->get_string(CompleteDriver_type_id, {});
-		CrankTimeMax = serialized->get_float(CrankTimeMax_type_id, 5.000000);
-		MemoryResetSpeed = serialized->get_float(MemoryResetSpeed_type_id, 5.000000);
-		MemoryResetWait = serialized->get_float(MemoryResetWait_type_id, 0.000000);
+		CrankTimeMax = serialized->get_float(CrankTimeMax_type_id, 5.000000f);
+		MemoryResetSpeed = serialized->get_float(MemoryResetSpeed_type_id, 5.000000f);
+		MemoryResetWait = serialized->get_float(MemoryResetWait_type_id, 0.000000f);
 		DoShimmer = serialized->get_bool(DoShimmer_type_id, true); 
 	}
 

@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	SkinItemTextureOverridePrius::SkinItemTextureOverridePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		OriginalMaterialNameHash = serialized->get_uint64(OriginalMaterialNameHash_type_id, 0);
-		OverrideTextureNameHash = serialized->get_uint64(OverrideTextureNameHash_type_id, 0);
-		ConstantNameHash = serialized->get_uint32(ConstantNameHash_type_id, 0); 
+		OriginalMaterialNameHash = serialized->get_uint64(OriginalMaterialNameHash_type_id, 0ull);
+		OverrideTextureNameHash = serialized->get_uint64(OverrideTextureNameHash_type_id, 0ull);
+		ConstantNameHash = serialized->get_uint32(ConstantNameHash_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

@@ -10,7 +10,7 @@
 namespace rivet::ddl::generated {
 	PixelizedDataPrius::PixelizedDataPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): PixelizedPhysicsDataPrius(serialized) {
 		ObjSpaceBoundsExtents = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(ObjSpaceBoundsExtents_type_id);
-		PixelShiftUp = serialized->get_int32(PixelShiftUp_type_id, 0); 
+		PixelShiftUp = serialized->get_int32(PixelShiftUp_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

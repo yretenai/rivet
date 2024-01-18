@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	MeleeHitTakenEvent::MeleeHitTakenEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
 		WeaponType = serialized->get_string(WeaponType_type_id, "kNone");
-		HealthPercent = serialized->get_float(HealthPercent_type_id, 0.000000); 
+		HealthPercent = serialized->get_float(HealthPercent_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

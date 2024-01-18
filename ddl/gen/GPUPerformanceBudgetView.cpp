@@ -8,24 +8,24 @@
 namespace rivet::ddl::generated {
 	GPUPerformanceBudgetView::GPUPerformanceBudgetView([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Name = serialized->get_string(Name_type_id, "DefaultBudget");
-		All = serialized->get_float(All_type_id, 0.000000);
-		Unknown = serialized->get_float(Unknown_type_id, 0.000000);
-		Animation = serialized->get_float(Animation_type_id, 0.000000);
-		Audio = serialized->get_float(Audio_type_id, 0.000000);
-		Character = serialized->get_float(Character_type_id, 0.000000);
-		Core = serialized->get_float(Core_type_id, 0.000000);
-		Creative = serialized->get_float(Creative_type_id, 0.000000);
-		Design = serialized->get_float(Design_type_id, 0.000000);
-		Environment = serialized->get_float(Environment_type_id, 0.000000);
-		FX = serialized->get_float(FX_type_id, 0.000000);
-		Gameplay = serialized->get_float(Gameplay_type_id, 0.000000);
-		Lighting = serialized->get_float(Lighting_type_id, 0.000000);
-		Rigging = serialized->get_float(Rigging_type_id, 0.000000);
-		UIArt = serialized->get_float(UIArt_type_id, 0.000000);
-		Shared = serialized->get_float(Shared_type_id, 0.000000);
-		Trash = serialized->get_float(Trash_type_id, 0.000000);
-		Unowned = serialized->get_float(Unowned_type_id, 0.000000);
-		Starvation = serialized->get_float(Starvation_type_id, 0.000000); 
+		All = serialized->get_float(All_type_id, 0.000000f);
+		Unknown = serialized->get_float(Unknown_type_id, 0.000000f);
+		Animation = serialized->get_float(Animation_type_id, 0.000000f);
+		Audio = serialized->get_float(Audio_type_id, 0.000000f);
+		Character = serialized->get_float(Character_type_id, 0.000000f);
+		Core = serialized->get_float(Core_type_id, 0.000000f);
+		Creative = serialized->get_float(Creative_type_id, 0.000000f);
+		Design = serialized->get_float(Design_type_id, 0.000000f);
+		Environment = serialized->get_float(Environment_type_id, 0.000000f);
+		FX = serialized->get_float(FX_type_id, 0.000000f);
+		Gameplay = serialized->get_float(Gameplay_type_id, 0.000000f);
+		Lighting = serialized->get_float(Lighting_type_id, 0.000000f);
+		Rigging = serialized->get_float(Rigging_type_id, 0.000000f);
+		UIArt = serialized->get_float(UIArt_type_id, 0.000000f);
+		Shared = serialized->get_float(Shared_type_id, 0.000000f);
+		Trash = serialized->get_float(Trash_type_id, 0.000000f);
+		Unowned = serialized->get_float(Unowned_type_id, 0.000000f);
+		Starvation = serialized->get_float(Starvation_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

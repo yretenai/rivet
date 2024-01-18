@@ -7,17 +7,17 @@
 
 namespace rivet::ddl::generated {
 	FreezeSlideData::FreezeSlideData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DirectHitSpeed = serialized->get_float(DirectHitSpeed_type_id, 10.000000);
-		MinSpeed = serialized->get_float(MinSpeed_type_id, 5.000000);
-		HitDistanceForMinSpeed = serialized->get_float(HitDistanceForMinSpeed_type_id, 0.000000);
-		MaxSpeed = serialized->get_float(MaxSpeed_type_id, 8.000000);
-		HitDistanceForMaxSpeed = serialized->get_float(HitDistanceForMaxSpeed_type_id, 2.000000);
-		SpeedFallOffPower = serialized->get_float(SpeedFallOffPower_type_id, 2.000000);
-		FrictionlessDuration = serialized->get_float(FrictionlessDuration_type_id, 1.000000);
-		Decel = serialized->get_float(Decel_type_id, 12.000000);
-		MinRotation = serialized->get_float(MinRotation_type_id, 10.000000);
-		MaxRotation = serialized->get_float(MaxRotation_type_id, 10.000000);
-		RotationDecel = serialized->get_float(RotationDecel_type_id, 10.000000); 
+		DirectHitSpeed = serialized->get_float(DirectHitSpeed_type_id, 10.000000f);
+		MinSpeed = serialized->get_float(MinSpeed_type_id, 5.000000f);
+		HitDistanceForMinSpeed = serialized->get_float(HitDistanceForMinSpeed_type_id, 0.000000f);
+		MaxSpeed = serialized->get_float(MaxSpeed_type_id, 8.000000f);
+		HitDistanceForMaxSpeed = serialized->get_float(HitDistanceForMaxSpeed_type_id, 2.000000f);
+		SpeedFallOffPower = serialized->get_float(SpeedFallOffPower_type_id, 2.000000f);
+		FrictionlessDuration = serialized->get_float(FrictionlessDuration_type_id, 1.000000f);
+		Decel = serialized->get_float(Decel_type_id, 12.000000f);
+		MinRotation = serialized->get_float(MinRotation_type_id, 10.000000f);
+		MaxRotation = serialized->get_float(MaxRotation_type_id, 10.000000f);
+		RotationDecel = serialized->get_float(RotationDecel_type_id, 10.000000f); 
 	}
 
 	[[nodiscard]] auto

@@ -9,13 +9,13 @@ namespace rivet::ddl::generated {
 	HeapTemplate::HeapTemplate([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Name = serialized->get_string(Name_type_id, "");
 		Type = serialized->get_enum<rivet::ddl::generated::x7271a16e>(Type_type_id, rivet::ddl::generated::x7271a16e_values, rivet::ddl::generated::x7271a16e::Default);
-		Flags = serialized->get_bitset<rivet::ddl::generated::x3141d5f2>(Flags_type_id, rivet::ddl::generated::x3141d5f2_values, 0);
-		Alignment = serialized->get_uint64(Alignment_type_id, 8);
-		SoftAlignment = serialized->get_uint64(SoftAlignment_type_id, 8);
-		MaxAllocs = serialized->get_int32(MaxAllocs_type_id, 4096);
-		SmallBlockFraction = serialized->get_float(SmallBlockFraction_type_id, 0.000000);
+		Flags = serialized->get_bitset<rivet::ddl::generated::x3141d5f2>(Flags_type_id, rivet::ddl::generated::x3141d5f2_values, 0u);
+		Alignment = serialized->get_uint64(Alignment_type_id, 8ull);
+		SoftAlignment = serialized->get_uint64(SoftAlignment_type_id, 8ull);
+		MaxAllocs = serialized->get_int32(MaxAllocs_type_id, 4096u);
+		SmallBlockFraction = serialized->get_float(SmallBlockFraction_type_id, 0.000000f);
 		SmallBlockSizes = serialized->get_uint16s(SmallBlockSizes_type_id);
-		MaxDeferredFrees = serialized->get_uint32(MaxDeferredFrees_type_id, 0); 
+		MaxDeferredFrees = serialized->get_uint32(MaxDeferredFrees_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

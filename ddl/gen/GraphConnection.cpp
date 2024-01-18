@@ -9,11 +9,11 @@
 
 namespace rivet::ddl::generated {
 	GraphConnection::GraphConnection([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Id = serialized->get_uint64(Id_type_id, 0);
+		Id = serialized->get_uint64(Id_type_id, 0ull);
 		Disabled = serialized->get_bool(Disabled_type_id, false);
-		SourceId = serialized->get_uint64(SourceId_type_id, 0);
+		SourceId = serialized->get_uint64(SourceId_type_id, 0ull);
 		SourceCon = serialized->get_string(SourceCon_type_id, {});
-		TargetId = serialized->get_uint64(TargetId_type_id, 0);
+		TargetId = serialized->get_uint64(TargetId_type_id, 0ull);
 		TargetCon = serialized->get_string(TargetCon_type_id, {});
 		Pins = serialized->unwrap_into_many<rivet::ddl::generated::DDLVector2>(Pins_type_id); 
 	}

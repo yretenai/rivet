@@ -12,12 +12,12 @@ namespace rivet::ddl::generated {
 		PerformanceSet = serialized->get_string(PerformanceSet_type_id, {});
 		PerformanceSetOverride = serialized->get_string(PerformanceSetOverride_type_id, {});
 		PerformanceSetsAux = serialized->get_strings(PerformanceSetsAux_type_id);
-		MaxUpdateDistance = serialized->get_float(MaxUpdateDistance_type_id, 0.000000);
-		AnimDynamicsUpdateMultiplier = serialized->get_float(AnimDynamicsUpdateMultiplier_type_id, 50.000000);
+		MaxUpdateDistance = serialized->get_float(MaxUpdateDistance_type_id, 0.000000f);
+		AnimDynamicsUpdateMultiplier = serialized->get_float(AnimDynamicsUpdateMultiplier_type_id, 50.000000f);
 		NeverCull = serialized->get_bool(NeverCull_type_id, false);
 		BindAfterAnimEnd = serialized->get_bool(BindAfterAnimEnd_type_id, false);
 		AutoFreezeSkinning = serialized->get_bool(AutoFreezeSkinning_type_id, false);
-		MaxAnimTreeSize = serialized->get_uint16(MaxAnimTreeSize_type_id, 4096); 
+		MaxAnimTreeSize = serialized->get_uint16(MaxAnimTreeSize_type_id, 4096u); 
 	}
 
 	[[nodiscard]] auto

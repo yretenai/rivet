@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ModelBuildConfig::ModelBuildConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		MaximumCollisionPolysPerNonstaticMesh = serialized->get_int32(MaximumCollisionPolysPerNonstaticMesh_type_id, 999);
+		MaximumCollisionPolysPerNonstaticMesh = serialized->get_int32(MaximumCollisionPolysPerNonstaticMesh_type_id, 999u);
 		WarnOnMoreThanMaxCollisionPolys = serialized->get_enum<rivet::ddl::generated::x9833bb27>(WarnOnMoreThanMaxCollisionPolys_type_id, rivet::ddl::generated::x9833bb27_values, rivet::ddl::generated::x9833bb27::DynamicObjects); 
 	}
 

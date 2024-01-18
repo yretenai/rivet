@@ -26,11 +26,11 @@
 
 namespace rivet::ddl::generated {
 	HeroTraversalConfig::HeroTraversalConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		WallInteractionMinHeight = serialized->get_float(WallInteractionMinHeight_type_id, 0.800000);
-		BounceInteractMinWallHeight = serialized->get_float(BounceInteractMinWallHeight_type_id, 2.000000);
-		ZeroGJumpTimeScaleModifier = serialized->get_float(ZeroGJumpTimeScaleModifier_type_id, 0.750000);
-		ZeroGJumpMinHeightModifier = serialized->get_float(ZeroGJumpMinHeightModifier_type_id, 1.000000);
-		ZeroGJumpMaxHeightModifier = serialized->get_float(ZeroGJumpMaxHeightModifier_type_id, 1.500000);
+		WallInteractionMinHeight = serialized->get_float(WallInteractionMinHeight_type_id, 0.800000f);
+		BounceInteractMinWallHeight = serialized->get_float(BounceInteractMinWallHeight_type_id, 2.000000f);
+		ZeroGJumpTimeScaleModifier = serialized->get_float(ZeroGJumpTimeScaleModifier_type_id, 0.750000f);
+		ZeroGJumpMinHeightModifier = serialized->get_float(ZeroGJumpMinHeightModifier_type_id, 1.000000f);
+		ZeroGJumpMaxHeightModifier = serialized->get_float(ZeroGJumpMaxHeightModifier_type_id, 1.500000f);
 		WallJumpSpeeds = serialized->unwrap_into<rivet::ddl::generated::HeroSpeedConfig>(WallJumpSpeeds_type_id);
 		WallStickConfig = serialized->unwrap_into<rivet::ddl::generated::HeroWallStickConfig>(WallStickConfig_type_id);
 		WallRunConfig = serialized->unwrap_into<rivet::ddl::generated::HeroWallRunConfig>(WallRunConfig_type_id);
@@ -53,16 +53,16 @@ namespace rivet::ddl::generated {
 		PortalZipConfig = serialized->get_string(PortalZipConfig_type_id, {});
 		OpenPocketDimConfig = serialized->get_string(OpenPocketDimConfig_type_id, {});
 		ShadowDimensionConfig = serialized->unwrap_into<rivet::ddl::generated::HeroShadowDimensionConfig>(ShadowDimensionConfig_type_id);
-		DropoffForwardTol = serialized->get_float(DropoffForwardTol_type_id, 0.330000);
-		DropoffBackTol = serialized->get_float(DropoffBackTol_type_id, -0.500000);
-		DropoffLeftRightTol = serialized->get_float(DropoffLeftRightTol_type_id, 0.400000);
-		DropoffInitiatedForwardTol = serialized->get_float(DropoffInitiatedForwardTol_type_id, 1.250000);
-		DropoffInitiatedLeftRightTol = serialized->get_float(DropoffInitiatedLeftRightTol_type_id, 1.200000);
-		DropoffUpTol = serialized->get_float(DropoffUpTol_type_id, 0.200000);
-		DropoffDownTol = serialized->get_float(DropoffDownTol_type_id, -0.200000);
-		DropoffDropDistanceMax = serialized->get_float(DropoffDropDistanceMax_type_id, 2.100000);
-		DropoffDropDistanceMin = serialized->get_float(DropoffDropDistanceMin_type_id, 1.600000);
-		MaximumMidairJumps = serialized->get_uint32(MaximumMidairJumps_type_id, 1);
+		DropoffForwardTol = serialized->get_float(DropoffForwardTol_type_id, 0.330000f);
+		DropoffBackTol = serialized->get_float(DropoffBackTol_type_id, -0.500000f);
+		DropoffLeftRightTol = serialized->get_float(DropoffLeftRightTol_type_id, 0.400000f);
+		DropoffInitiatedForwardTol = serialized->get_float(DropoffInitiatedForwardTol_type_id, 1.250000f);
+		DropoffInitiatedLeftRightTol = serialized->get_float(DropoffInitiatedLeftRightTol_type_id, 1.200000f);
+		DropoffUpTol = serialized->get_float(DropoffUpTol_type_id, 0.200000f);
+		DropoffDownTol = serialized->get_float(DropoffDownTol_type_id, -0.200000f);
+		DropoffDropDistanceMax = serialized->get_float(DropoffDropDistanceMax_type_id, 2.100000f);
+		DropoffDropDistanceMin = serialized->get_float(DropoffDropDistanceMin_type_id, 1.600000f);
+		MaximumMidairJumps = serialized->get_uint32(MaximumMidairJumps_type_id, 1u);
 		JumpConfigs = serialized->unwrap_into<rivet::ddl::generated::HeroJumpConfigCollection>(JumpConfigs_type_id);
 		GroundResponse = serialized->unwrap_into_many<rivet::ddl::generated::GroundResponseElement>(GroundResponse_type_id);
 		GrindConfig = serialized->get_string(GrindConfig_type_id, {});

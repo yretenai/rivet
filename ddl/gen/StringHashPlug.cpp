@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	StringHashPlug::StringHashPlug([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Value = serialized->get_uint32(Value_type_id, 0); 
+		Value = serialized->get_uint32(Value_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

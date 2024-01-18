@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	WeaponFossilizerPrius::WeaponFossilizerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): WeaponGamePrius(serialized) {
-		SlowDownPercent = serialized->get_float(SlowDownPercent_type_id, 0.500000);
-		SlowDownDuration = serialized->get_float(SlowDownDuration_type_id, 5.000000);
-		BonusBulletCount = serialized->get_uint32(BonusBulletCount_type_id, 2);
-		TimeToShootBonusBullet = serialized->get_float(TimeToShootBonusBullet_type_id, 0.050000);
-		ZoomAlphaMod = serialized->get_float(ZoomAlphaMod_type_id, 0.700000); 
+		SlowDownPercent = serialized->get_float(SlowDownPercent_type_id, 0.500000f);
+		SlowDownDuration = serialized->get_float(SlowDownDuration_type_id, 5.000000f);
+		BonusBulletCount = serialized->get_uint32(BonusBulletCount_type_id, 2u);
+		TimeToShootBonusBullet = serialized->get_float(TimeToShootBonusBullet_type_id, 0.050000f);
+		ZoomAlphaMod = serialized->get_float(ZoomAlphaMod_type_id, 0.700000f); 
 	}
 
 	[[nodiscard]] auto

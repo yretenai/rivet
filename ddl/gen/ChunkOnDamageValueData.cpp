@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ChunkOnDamageValueData::ChunkOnDamageValueData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		HealthThreshold = serialized->get_float(HealthThreshold_type_id, 0.500000);
+		HealthThreshold = serialized->get_float(HealthThreshold_type_id, 0.500000f);
 		ConfigurationName = serialized->get_string(ConfigurationName_type_id, {});
 		HideLookGroup = serialized->get_string(HideLookGroup_type_id, {}); 
 	}

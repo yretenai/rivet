@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	SwingingMotionHitEvent::SwingingMotionHitEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		ImpactSpeed = serialized->get_float(ImpactSpeed_type_id, 0.000000);
+		ImpactSpeed = serialized->get_float(ImpactSpeed_type_id, 0.000000f);
 		OwnerIsHero = serialized->get_bool(OwnerIsHero_type_id, false); 
 	}
 

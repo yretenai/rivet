@@ -7,16 +7,16 @@
 
 namespace rivet::ddl::generated {
 	HeroBounceConfig::HeroBounceConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AssistMaxSurfaceNormalAngle = serialized->get_float(AssistMaxSurfaceNormalAngle_type_id, 45.000000);
-		AssistRadiusHoriz = serialized->get_float(AssistRadiusHoriz_type_id, 2.000000);
-		AssistRadiusVert = serialized->get_float(AssistRadiusVert_type_id, 5.000000);
-		MinAssistDistHoriz = serialized->get_float(MinAssistDistHoriz_type_id, 1.000000);
-		MaxAngleAtMinAssistDist = serialized->get_float(MaxAngleAtMinAssistDist_type_id, 45.000000);
-		MaxAngleAtMaxAssistDist = serialized->get_float(MaxAngleAtMaxAssistDist_type_id, 60.000000);
-		AssistAngleScoreWeight = serialized->get_float(AssistAngleScoreWeight_type_id, 1.000000);
-		AssistDistScoreWeight = serialized->get_float(AssistDistScoreWeight_type_id, 1.000000);
-		AssistInputWeight = serialized->get_float(AssistInputWeight_type_id, 0.500000);
-		BonusHeightForButtonPress = serialized->get_float(BonusHeightForButtonPress_type_id, 2.000000);
+		AssistMaxSurfaceNormalAngle = serialized->get_float(AssistMaxSurfaceNormalAngle_type_id, 45.000000f);
+		AssistRadiusHoriz = serialized->get_float(AssistRadiusHoriz_type_id, 2.000000f);
+		AssistRadiusVert = serialized->get_float(AssistRadiusVert_type_id, 5.000000f);
+		MinAssistDistHoriz = serialized->get_float(MinAssistDistHoriz_type_id, 1.000000f);
+		MaxAngleAtMinAssistDist = serialized->get_float(MaxAngleAtMinAssistDist_type_id, 45.000000f);
+		MaxAngleAtMaxAssistDist = serialized->get_float(MaxAngleAtMaxAssistDist_type_id, 60.000000f);
+		AssistAngleScoreWeight = serialized->get_float(AssistAngleScoreWeight_type_id, 1.000000f);
+		AssistDistScoreWeight = serialized->get_float(AssistDistScoreWeight_type_id, 1.000000f);
+		AssistInputWeight = serialized->get_float(AssistInputWeight_type_id, 0.500000f);
+		BonusHeightForButtonPress = serialized->get_float(BonusHeightForButtonPress_type_id, 2.000000f);
 		CameraShakeConfig = serialized->get_string(CameraShakeConfig_type_id, {});
 		BounceFollowCameraUserConfig = serialized->get_string(BounceFollowCameraUserConfig_type_id, {});
 		CasualBounceFollowCameraUserConfig = serialized->get_string(CasualBounceFollowCameraUserConfig_type_id, {});

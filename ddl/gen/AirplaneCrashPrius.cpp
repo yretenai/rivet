@@ -7,14 +7,14 @@
 
 namespace rivet::ddl::generated {
 	AirplaneCrashPrius::AirplaneCrashPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		PercentChance = serialized->get_float(PercentChance_type_id, 1.000000);
-		CollisionRadius = serialized->get_float(CollisionRadius_type_id, 0.000000);
-		Gravity = serialized->get_float(Gravity_type_id, -9.800000);
-		MinRollRate = serialized->get_float(MinRollRate_type_id, 90.000000);
-		MaxRollRate = serialized->get_float(MaxRollRate_type_id, 180.000000);
-		MinTurnRate = serialized->get_float(MinTurnRate_type_id, 0.000000);
-		MaxTurnRate = serialized->get_float(MaxTurnRate_type_id, 10.000000);
-		MaxTime = serialized->get_float(MaxTime_type_id, 2.000000); 
+		PercentChance = serialized->get_float(PercentChance_type_id, 1.000000f);
+		CollisionRadius = serialized->get_float(CollisionRadius_type_id, 0.000000f);
+		Gravity = serialized->get_float(Gravity_type_id, -9.800000f);
+		MinRollRate = serialized->get_float(MinRollRate_type_id, 90.000000f);
+		MaxRollRate = serialized->get_float(MaxRollRate_type_id, 180.000000f);
+		MinTurnRate = serialized->get_float(MinTurnRate_type_id, 0.000000f);
+		MaxTurnRate = serialized->get_float(MaxTurnRate_type_id, 10.000000f);
+		MaxTime = serialized->get_float(MaxTime_type_id, 2.000000f); 
 	}
 
 	[[nodiscard]] auto

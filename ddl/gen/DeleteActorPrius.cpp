@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	DeleteActorPrius::DeleteActorPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DeleteTimer = serialized->get_float(DeleteTimer_type_id, 5.000000);
-		RandomOffset = serialized->get_float(RandomOffset_type_id, 0.000000);
+		DeleteTimer = serialized->get_float(DeleteTimer_type_id, 5.000000f);
+		RandomOffset = serialized->get_float(RandomOffset_type_id, 0.000000f);
 		Kill = serialized->get_bool(Kill_type_id, false);
 		DrawOff = serialized->get_bool(DrawOff_type_id, false); 
 	}

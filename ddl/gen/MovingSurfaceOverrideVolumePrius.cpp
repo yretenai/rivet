@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	MovingSurfaceOverrideVolumePrius::MovingSurfaceOverrideVolumePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SurfaceActor = serialized->get_uint64(SurfaceActor_type_id, 0); 
+		SurfaceActor = serialized->get_uint64(SurfaceActor_type_id, 0ull); 
 	}
 
 	[[nodiscard]] auto

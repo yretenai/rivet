@@ -13,7 +13,7 @@ namespace rivet::ddl::generated {
 		UseDebugMenuInput = serialized->get_bool(UseDebugMenuInput_type_id, false);
 		UseAltDebugMenuInput = serialized->get_bool(UseAltDebugMenuInput_type_id, false);
 		DebugMenuLeftStickAsDPad = serialized->get_bool(DebugMenuLeftStickAsDPad_type_id, false);
-		UpdatePhase = serialized->get_uint32(UpdatePhase_type_id, 0);
+		UpdatePhase = serialized->get_uint32(UpdatePhase_type_id, 0u);
 		PostActorUpdate = serialized->get_bool(PostActorUpdate_type_id, false);
 		PrototypeMessageDebug = serialized->get_bool(PrototypeMessageDebug_type_id, false); 
 	}

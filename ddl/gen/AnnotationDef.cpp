@@ -9,7 +9,7 @@ namespace rivet::ddl::generated {
 	AnnotationDef::AnnotationDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Text = serialized->get_strings(Text_type_id);
 		Color = serialized->get_enum<rivet::ddl::generated::x6898de8f>(Color_type_id, rivet::ddl::generated::x6898de8f_values, rivet::ddl::generated::x6898de8f::White);
-		VisibleDistance = serialized->get_float(VisibleDistance_type_id, 50.000000); 
+		VisibleDistance = serialized->get_float(VisibleDistance_type_id, 50.000000f); 
 	}
 
 	[[nodiscard]] auto

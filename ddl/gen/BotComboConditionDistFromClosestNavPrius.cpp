@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	BotComboConditionDistFromClosestNavPrius::BotComboConditionDistFromClosestNavPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BotComboConditionBasePrius(serialized) {
-		NavDistance = serialized->get_float(NavDistance_type_id, 6.000000);
+		NavDistance = serialized->get_float(NavDistance_type_id, 6.000000f);
 		FlipLogicToCheckOutsideOfDist = serialized->get_bool(FlipLogicToCheckOutsideOfDist_type_id, false);
 		CheckFromLastGoodGround = serialized->get_bool(CheckFromLastGoodGround_type_id, true); 
 	}

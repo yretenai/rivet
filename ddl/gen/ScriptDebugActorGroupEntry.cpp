@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	ScriptDebugActorGroupEntry::ScriptDebugActorGroupEntry([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActorTuid = serialized->get_uint64(ActorTuid_type_id, 0);
-		TemplateTuid = serialized->get_uint64(TemplateTuid_type_id, 0);
+		ActorTuid = serialized->get_uint64(ActorTuid_type_id, 0ull);
+		TemplateTuid = serialized->get_uint64(TemplateTuid_type_id, 0ull);
 		ActorName = serialized->get_string(ActorName_type_id, {});
 		Position = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Position_type_id); 
 	}

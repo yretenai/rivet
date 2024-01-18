@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	RCSChangelistsInput::RCSChangelistsInput([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Status = serialized->get_enum<rivet::ddl::generated::xd68b2713>(Status_type_id, rivet::ddl::generated::xd68b2713_values, rivet::ddl::generated::xd68b2713::Any);
-		Max = serialized->get_uint32(Max_type_id, 100); 
+		Max = serialized->get_uint32(Max_type_id, 100u); 
 	}
 
 	[[nodiscard]] auto

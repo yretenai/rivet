@@ -9,12 +9,12 @@
 
 namespace rivet::ddl::generated {
 	SpaceDebrisMotionPrius::SpaceDebrisMotionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MinRotationRate = serialized->get_float(MinRotationRate_type_id, 0.000000);
-		MaxRotationRate = serialized->get_float(MaxRotationRate_type_id, 360.000000);
+		MinRotationRate = serialized->get_float(MinRotationRate_type_id, 0.000000f);
+		MaxRotationRate = serialized->get_float(MaxRotationRate_type_id, 360.000000f);
 		RotateAxis = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(RotateAxis_type_id);
 		UseRandomRotateAxis = serialized->get_bool(UseRandomRotateAxis_type_id, true);
-		MinSpeed = serialized->get_float(MinSpeed_type_id, 0.000000);
-		MaxSpeed = serialized->get_float(MaxSpeed_type_id, 0.000000);
+		MinSpeed = serialized->get_float(MinSpeed_type_id, 0.000000f);
+		MaxSpeed = serialized->get_float(MaxSpeed_type_id, 0.000000f);
 		MoveDir = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(MoveDir_type_id);
 		UseRandomMoveDir = serialized->get_bool(UseRandomMoveDir_type_id, true); 
 	}

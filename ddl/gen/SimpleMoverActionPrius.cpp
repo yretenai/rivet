@@ -8,8 +8,8 @@
 namespace rivet::ddl::generated {
 	SimpleMoverActionPrius::SimpleMoverActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Debug);
-		Flags = serialized->get_bitset<rivet::ddl::generated::xf37a71ae>(Flags_type_id, rivet::ddl::generated::xf37a71ae_values, 1);
-		Duration = serialized->get_float(Duration_type_id, 1.000000);
+		Flags = serialized->get_bitset<rivet::ddl::generated::xf37a71ae>(Flags_type_id, rivet::ddl::generated::xf37a71ae_values, 1u);
+		Duration = serialized->get_float(Duration_type_id, 1.000000f);
 		MaxTimes = serialized->get_int32(MaxTimes_type_id, -1);
 		UseOverrideMotionType = serialized->get_bool(UseOverrideMotionType_type_id, false);
 		OverrideMotionType = serialized->get_enum<rivet::ddl::generated::MotionTypes>(OverrideMotionType_type_id, rivet::ddl::generated::MotionTypes_values, rivet::ddl::generated::MotionTypes::SmoothStep); 

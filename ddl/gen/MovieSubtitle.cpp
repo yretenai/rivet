@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	MovieSubtitle::MovieSubtitle([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		FrameStart = serialized->get_uint32(FrameStart_type_id, 0);
-		FrameEnd = serialized->get_uint32(FrameEnd_type_id, 0);
+		FrameStart = serialized->get_uint32(FrameStart_type_id, 0u);
+		FrameEnd = serialized->get_uint32(FrameEnd_type_id, 0u);
 		LocTag = serialized->get_string(LocTag_type_id, {}); 
 	}
 

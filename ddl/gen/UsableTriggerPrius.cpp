@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	UsableTriggerPrius::UsableTriggerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		TriggerGroup = serialized->get_uint64(TriggerGroup_type_id, 0);
-		Distance = serialized->get_float(Distance_type_id, 3.000000);
+		TriggerGroup = serialized->get_uint64(TriggerGroup_type_id, 0ull);
+		Distance = serialized->get_float(Distance_type_id, 3.000000f);
 		RequireInFront = serialized->get_bool(RequireInFront_type_id, true);
 		RequireFacing = serialized->get_bool(RequireFacing_type_id, true); 
 	}

@@ -10,10 +10,10 @@
 namespace rivet::ddl::generated {
 	CustomDesignEvent::CustomDesignEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
 		EventName = serialized->get_string(EventName_type_id, {});
-		Number = serialized->get_float(Number_type_id, 0.000000);
+		Number = serialized->get_float(Number_type_id, 0.000000f);
 		Vector = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Vector_type_id);
 		String = serialized->get_string(String_type_id, {});
-		Actor = serialized->get_uint64(Actor_type_id, 0);
+		Actor = serialized->get_uint64(Actor_type_id, 0ull);
 		Bool = serialized->get_bool(Bool_type_id, false); 
 	}
 

@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	AnimFacialPhonemeElemDef::AnimFacialPhonemeElemDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Id = serialized->get_uint64(Id_type_id, 0);
+		Id = serialized->get_uint64(Id_type_id, 0ull);
 		PhonemeId = serialized->get_enum<rivet::ddl::generated::x9c9e2a0a>(PhonemeId_type_id, rivet::ddl::generated::x9c9e2a0a_values, rivet::ddl::generated::x9c9e2a0a::x);
-		StartTime = serialized->get_float(StartTime_type_id, 0.000000);
-		EndTime = serialized->get_float(EndTime_type_id, 0.000000);
-		Weight = serialized->get_float(Weight_type_id, 0.000000); 
+		StartTime = serialized->get_float(StartTime_type_id, 0.000000f);
+		EndTime = serialized->get_float(EndTime_type_id, 0.000000f);
+		Weight = serialized->get_float(Weight_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

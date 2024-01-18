@@ -10,13 +10,13 @@ namespace rivet::ddl::generated {
 		OptimizedGenerationEnable = serialized->get_bool(OptimizedGenerationEnable_type_id, true);
 		MultiThreadingEnable = serialized->get_bool(MultiThreadingEnable_type_id, true);
 		IgnoreFailedAllocations = serialized->get_bool(IgnoreFailedAllocations_type_id, false);
-		JobTimeBudget = serialized->get_float(JobTimeBudget_type_id, 0.015000);
-		MaxRuntimeDecalModels = serialized->get_int32(MaxRuntimeDecalModels_type_id, 128);
-		MaxRuntimeDecalVertices = serialized->get_int32(MaxRuntimeDecalVertices_type_id, 24576);
-		SkinnedModelBiasMeters = serialized->get_float(SkinnedModelBiasMeters_type_id, 0.010000);
-		MaxDecalsPerFrame = serialized->get_int32(MaxDecalsPerFrame_type_id, 8);
-		MaxDecalModels = serialized->get_int32(MaxDecalModels_type_id, 256);
-		MaxDecalJobs = serialized->get_int32(MaxDecalJobs_type_id, 1024);
+		JobTimeBudget = serialized->get_float(JobTimeBudget_type_id, 0.015000f);
+		MaxRuntimeDecalModels = serialized->get_int32(MaxRuntimeDecalModels_type_id, 128u);
+		MaxRuntimeDecalVertices = serialized->get_int32(MaxRuntimeDecalVertices_type_id, 24576u);
+		SkinnedModelBiasMeters = serialized->get_float(SkinnedModelBiasMeters_type_id, 0.010000f);
+		MaxDecalsPerFrame = serialized->get_int32(MaxDecalsPerFrame_type_id, 8u);
+		MaxDecalModels = serialized->get_int32(MaxDecalModels_type_id, 256u);
+		MaxDecalJobs = serialized->get_int32(MaxDecalJobs_type_id, 1024u);
 		DecalEnable = serialized->get_bool(DecalEnable_type_id, true); 
 	}
 

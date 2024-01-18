@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	SphereTargeting::SphereTargeting([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): SpawnShotTargetingMode(serialized) {
-		SphereRadius = serialized->get_float(SphereRadius_type_id, 5.000000); 
+		SphereRadius = serialized->get_float(SphereRadius_type_id, 5.000000f); 
 	}
 
 	[[nodiscard]] auto

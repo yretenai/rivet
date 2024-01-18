@@ -8,14 +8,14 @@
 namespace rivet::ddl::generated {
 	ToneMapSettingsDef::ToneMapSettingsDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Enabled = serialized->get_bool(Enabled_type_id, true);
-		LuminanceKeyValue = serialized->get_float(LuminanceKeyValue_type_id, 0.500000);
-		ExposureBias = serialized->get_float(ExposureBias_type_id, 0.000000);
-		AdaptationStrength = serialized->get_float(AdaptationStrength_type_id, 0.500000);
-		AdaptationStops = serialized->get_float(AdaptationStops_type_id, 6.000000);
-		AdaptationAnchor = serialized->get_float(AdaptationAnchor_type_id, 11.000000);
-		AdaptationRange = serialized->get_float(AdaptationRange_type_id, 3.000000);
-		AdaptationBias = serialized->get_float(AdaptationBias_type_id, 0.000000);
-		AutoAdjustTime = serialized->get_float(AutoAdjustTime_type_id, 0.500000); 
+		LuminanceKeyValue = serialized->get_float(LuminanceKeyValue_type_id, 0.500000f);
+		ExposureBias = serialized->get_float(ExposureBias_type_id, 0.000000f);
+		AdaptationStrength = serialized->get_float(AdaptationStrength_type_id, 0.500000f);
+		AdaptationStops = serialized->get_float(AdaptationStops_type_id, 6.000000f);
+		AdaptationAnchor = serialized->get_float(AdaptationAnchor_type_id, 11.000000f);
+		AdaptationRange = serialized->get_float(AdaptationRange_type_id, 3.000000f);
+		AdaptationBias = serialized->get_float(AdaptationBias_type_id, 0.000000f);
+		AutoAdjustTime = serialized->get_float(AutoAdjustTime_type_id, 0.500000f); 
 	}
 
 	[[nodiscard]] auto

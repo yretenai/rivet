@@ -10,7 +10,7 @@
 namespace rivet::ddl::generated {
 	TriggerSwitchResponseEntry::TriggerSwitchResponseEntry([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Response = serialized->unwrap_into<rivet::ddl::generated::TriggerResponderBasePrius>(Response_type_id);
-		Delay = serialized->get_float(Delay_type_id, 0.000000); 
+		Delay = serialized->get_float(Delay_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

@@ -23,7 +23,7 @@ namespace rivet::ddl::generated {
 		EffectNodes = serialized->unwrap_into_many<rivet::ddl::generated::ECMEffectNodeDef>(EffectNodes_type_id);
 		FieldOpNodes = serialized->unwrap_into_many<rivet::ddl::generated::ECMFieldOpNodeDef>(FieldOpNodes_type_id);
 		SelectorNodes = serialized->unwrap_into_many<rivet::ddl::generated::ECMSelectorNodeDef>(SelectorNodes_type_id);
-		GraphId = serialized->get_uint64(GraphId_type_id, 0);
+		GraphId = serialized->get_uint64(GraphId_type_id, 0ull);
 		Events = serialized->unwrap_into_many<rivet::ddl::generated::ECMEventDef>(Events_type_id);
 		Filters = serialized->unwrap_into_many<rivet::ddl::generated::ECMFilterDef>(Filters_type_id);
 		Responses = serialized->unwrap_into_many<rivet::ddl::generated::ECMResponseDef>(Responses_type_id); 

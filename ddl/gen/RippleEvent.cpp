@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	RippleEvent::RippleEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Strength = serialized->get_float(Strength_type_id, 1.000000); 
+		Strength = serialized->get_float(Strength_type_id, 1.000000f); 
 	}
 
 	[[nodiscard]] auto

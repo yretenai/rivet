@@ -8,9 +8,9 @@
 namespace rivet::ddl::generated {
 	CompoundRotateWhileMoving::CompoundRotateWhileMoving([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): OrientationMode(serialized) {
 		MotionOrientedAxis = serialized->get_enum<rivet::ddl::generated::xea512758>(MotionOrientedAxis_type_id, rivet::ddl::generated::xea512758_values, rivet::ddl::generated::xea512758::X);
-		MotionOrientedRotationalSpeed = serialized->get_float(MotionOrientedRotationalSpeed_type_id, 0.000000);
+		MotionOrientedRotationalSpeed = serialized->get_float(MotionOrientedRotationalSpeed_type_id, 0.000000f);
 		LocalAxis = serialized->get_enum<rivet::ddl::generated::xea512758>(LocalAxis_type_id, rivet::ddl::generated::xea512758_values, rivet::ddl::generated::xea512758::X);
-		LocalRotationalSpeed = serialized->get_float(LocalRotationalSpeed_type_id, 0.000000); 
+		LocalRotationalSpeed = serialized->get_float(LocalRotationalSpeed_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

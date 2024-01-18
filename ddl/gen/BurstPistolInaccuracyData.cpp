@@ -7,13 +7,13 @@
 
 namespace rivet::ddl::generated {
 	BurstPistolInaccuracyData::BurstPistolInaccuracyData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		InitialAngle = serialized->get_float(InitialAngle_type_id, 0.500000);
-		MinShotsToIncrease = serialized->get_uint32(MinShotsToIncrease_type_id, 3);
-		AngleMax = serialized->get_float(AngleMax_type_id, 4.000000);
-		IncreaseAnglePerShot = serialized->get_float(IncreaseAnglePerShot_type_id, 0.100000);
-		IncreaseAngleMax = serialized->get_float(IncreaseAngleMax_type_id, 0.500000);
-		DecreaseDelay = serialized->get_float(DecreaseDelay_type_id, 0.200000);
-		DecreaseAnglePerSec = serialized->get_float(DecreaseAnglePerSec_type_id, 5.000000); 
+		InitialAngle = serialized->get_float(InitialAngle_type_id, 0.500000f);
+		MinShotsToIncrease = serialized->get_uint32(MinShotsToIncrease_type_id, 3u);
+		AngleMax = serialized->get_float(AngleMax_type_id, 4.000000f);
+		IncreaseAnglePerShot = serialized->get_float(IncreaseAnglePerShot_type_id, 0.100000f);
+		IncreaseAngleMax = serialized->get_float(IncreaseAngleMax_type_id, 0.500000f);
+		DecreaseDelay = serialized->get_float(DecreaseDelay_type_id, 0.200000f);
+		DecreaseAnglePerSec = serialized->get_float(DecreaseAnglePerSec_type_id, 5.000000f); 
 	}
 
 	[[nodiscard]] auto

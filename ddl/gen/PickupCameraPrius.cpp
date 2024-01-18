@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	PickupCameraPrius::PickupCameraPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		CameraActor = serialized->get_uint64(CameraActor_type_id, 0);
+		CameraActor = serialized->get_uint64(CameraActor_type_id, 0ull);
 		PickupAnim = serialized->get_string(PickupAnim_type_id, "Pickup_Item"); 
 	}
 

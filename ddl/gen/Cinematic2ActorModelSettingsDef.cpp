@@ -7,13 +7,13 @@
 
 namespace rivet::ddl::generated {
 	Cinematic2ActorModelSettingsDef::Cinematic2ActorModelSettingsDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		GeomLodDist1 = serialized->get_uint16(GeomLodDist1_type_id, 0);
-		GeomLodDist2 = serialized->get_uint16(GeomLodDist2_type_id, 0);
-		GeomLodDist3 = serialized->get_uint16(GeomLodDist3_type_id, 0);
-		GeomLodDist4 = serialized->get_uint16(GeomLodDist4_type_id, 0);
-		GeomLodDist5 = serialized->get_uint16(GeomLodDist5_type_id, 0);
+		GeomLodDist1 = serialized->get_uint16(GeomLodDist1_type_id, 0u);
+		GeomLodDist2 = serialized->get_uint16(GeomLodDist2_type_id, 0u);
+		GeomLodDist3 = serialized->get_uint16(GeomLodDist3_type_id, 0u);
+		GeomLodDist4 = serialized->get_uint16(GeomLodDist4_type_id, 0u);
+		GeomLodDist5 = serialized->get_uint16(GeomLodDist5_type_id, 0u);
 		EnableAlphaSortBias = serialized->get_bool(EnableAlphaSortBias_type_id, false);
-		AlphaSortBias = serialized->get_float(AlphaSortBias_type_id, 0.000000); 
+		AlphaSortBias = serialized->get_float(AlphaSortBias_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

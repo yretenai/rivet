@@ -8,10 +8,10 @@
 namespace rivet::ddl::generated {
 	FlewByComponentPrius::FlewByComponentPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		StartEnabled = serialized->get_bool(StartEnabled_type_id, true);
-		FlewByDistStart = serialized->get_float(FlewByDistStart_type_id, 50.000000);
-		FlewByDistStop = serialized->get_float(FlewByDistStop_type_id, 50.000000);
-		MinSpeedStart = serialized->get_float(MinSpeedStart_type_id, -1.000000);
-		MinSpeedStop = serialized->get_float(MinSpeedStop_type_id, -1.000000); 
+		FlewByDistStart = serialized->get_float(FlewByDistStart_type_id, 50.000000f);
+		FlewByDistStop = serialized->get_float(FlewByDistStop_type_id, 50.000000f);
+		MinSpeedStart = serialized->get_float(MinSpeedStart_type_id, -1.000000f);
+		MinSpeedStop = serialized->get_float(MinSpeedStop_type_id, -1.000000f); 
 	}
 
 	[[nodiscard]] auto

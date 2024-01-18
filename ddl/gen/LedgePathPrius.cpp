@@ -23,7 +23,7 @@ namespace rivet::ddl::generated {
 		UseCurveNormalsAsUp = serialized->get_bool(UseCurveNormalsAsUp_type_id, false);
 		EnforceCurveDirection = serialized->get_bool(EnforceCurveDirection_type_id, false);
 		Material = serialized->get_enum<rivet::ddl::generated::x10b3c4cf>(Material_type_id, rivet::ddl::generated::x10b3c4cf_values, rivet::ddl::generated::x10b3c4cf::None);
-		ModelActor = serialized->get_uint64(ModelActor_type_id, 0); 
+		ModelActor = serialized->get_uint64(ModelActor_type_id, 0ull); 
 	}
 
 	[[nodiscard]] auto

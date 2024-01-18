@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	TargetTypeDamage::TargetTypeDamage([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		TargetType = serialized->get_bitset<rivet::ddl::generated::TargetType>(TargetType_type_id, rivet::ddl::generated::TargetType_values, 0);
-		ExplosionInnerDamage = serialized->get_float(ExplosionInnerDamage_type_id, 30.000000); 
+		TargetType = serialized->get_bitset<rivet::ddl::generated::TargetType>(TargetType_type_id, rivet::ddl::generated::TargetType_values, 0u);
+		ExplosionInnerDamage = serialized->get_float(ExplosionInnerDamage_type_id, 30.000000f); 
 	}
 
 	[[nodiscard]] auto

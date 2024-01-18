@@ -7,14 +7,14 @@
 
 namespace rivet::ddl::generated {
 	BreakableCommandEngineItem::BreakableCommandEngineItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActorInstEngineItemId = serialized->get_uint64(ActorInstEngineItemId_type_id, 0);
+		ActorInstEngineItemId = serialized->get_uint64(ActorInstEngineItemId_type_id, 0ull);
 		ActorHandleList = serialized->get_uint32s(ActorHandleList_type_id);
-		BreakableAssetId = serialized->get_uint64(BreakableAssetId_type_id, 0);
+		BreakableAssetId = serialized->get_uint64(BreakableAssetId_type_id, 0ull);
 		Command = serialized->get_enum<rivet::ddl::generated::x855c1439>(Command_type_id, rivet::ddl::generated::x855c1439_values, rivet::ddl::generated::x855c1439::DestroyActor);
 		AnimationDriverName = serialized->get_string(AnimationDriverName_type_id, {});
 		GameEventName = serialized->get_string(GameEventName_type_id, {});
-		HealthAfter = serialized->get_float(HealthAfter_type_id, 0.000000);
-		HealthBefore = serialized->get_float(HealthBefore_type_id, 0.000000);
+		HealthAfter = serialized->get_float(HealthAfter_type_id, 0.000000f);
+		HealthBefore = serialized->get_float(HealthBefore_type_id, 0.000000f);
 		LookName = serialized->get_string(LookName_type_id, {});
 		ReplaceActorAssetPath = serialized->get_string(ReplaceActorAssetPath_type_id, {}); 
 	}

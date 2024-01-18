@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	ProximityExplosion::ProximityExplosion([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): GrenadeExplosionMode(serialized) {
-		InFlightProximityRadius = serialized->get_float(InFlightProximityRadius_type_id, 0.000000);
-		ProximityRadius = serialized->get_float(ProximityRadius_type_id, 0.000000);
-		FuseTime = serialized->get_float(FuseTime_type_id, -1.000000);
-		MaxInFlightSpeed = serialized->get_float(MaxInFlightSpeed_type_id, -1.000000); 
+		InFlightProximityRadius = serialized->get_float(InFlightProximityRadius_type_id, 0.000000f);
+		ProximityRadius = serialized->get_float(ProximityRadius_type_id, 0.000000f);
+		FuseTime = serialized->get_float(FuseTime_type_id, -1.000000f);
+		MaxInFlightSpeed = serialized->get_float(MaxInFlightSpeed_type_id, -1.000000f); 
 	}
 
 	[[nodiscard]] auto

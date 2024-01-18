@@ -13,10 +13,10 @@ namespace rivet::ddl::generated {
 		MapTexture = serialized->get_string(MapTexture_type_id, {});
 		MapMin = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(MapMin_type_id);
 		MapMax = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(MapMax_type_id);
-		MapZoomMax = serialized->get_float(MapZoomMax_type_id, 500.000000);
-		MapZoomDefault = serialized->get_float(MapZoomDefault_type_id, 500.000000);
-		MapRevealSize = serialized->get_float(MapRevealSize_type_id, 20.000000);
-		MapCellSize = serialized->get_float(MapCellSize_type_id, 2.000000); 
+		MapZoomMax = serialized->get_float(MapZoomMax_type_id, 500.000000f);
+		MapZoomDefault = serialized->get_float(MapZoomDefault_type_id, 500.000000f);
+		MapRevealSize = serialized->get_float(MapRevealSize_type_id, 20.000000f);
+		MapCellSize = serialized->get_float(MapCellSize_type_id, 2.000000f); 
 	}
 
 	[[nodiscard]] auto

@@ -8,9 +8,9 @@
 namespace rivet::ddl::generated {
 	DamageVolumeScriptActionPrius::DamageVolumeScriptActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Interact);
-		WarmUpTime = serialized->get_float(WarmUpTime_type_id, 0.500000);
-		DamageOnTime = serialized->get_float(DamageOnTime_type_id, 3.000000);
-		DamageOffTime = serialized->get_float(DamageOffTime_type_id, 2.500000); 
+		WarmUpTime = serialized->get_float(WarmUpTime_type_id, 0.500000f);
+		DamageOnTime = serialized->get_float(DamageOnTime_type_id, 3.000000f);
+		DamageOffTime = serialized->get_float(DamageOffTime_type_id, 2.500000f); 
 	}
 
 	[[nodiscard]] auto

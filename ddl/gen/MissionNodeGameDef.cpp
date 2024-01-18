@@ -15,7 +15,7 @@ namespace rivet::ddl::generated {
 		AvailableDebugLoadInfo = serialized->unwrap_into<rivet::ddl::generated::ObjectiveLoadInfo>(AvailableDebugLoadInfo_type_id);
 		InfoUI = serialized->unwrap_into<rivet::ddl::generated::MissionNodeInfoUI>(InfoUI_type_id);
 		MissionType = serialized->get_enum<rivet::ddl::generated::x1953eb86>(MissionType_type_id, rivet::ddl::generated::x1953eb86_values, rivet::ddl::generated::x1953eb86::GoldenPath);
-		ActivityPlaytimeEstimate = serialized->get_uint32(ActivityPlaytimeEstimate_type_id, 5);
+		ActivityPlaytimeEstimate = serialized->get_uint32(ActivityPlaytimeEstimate_type_id, 5u);
 		ActivityCard = serialized->unwrap_into<rivet::ddl::generated::MissionActivityCardInfo>(ActivityCard_type_id);
 		Hints = serialized->unwrap_into_many<rivet::ddl::generated::ActivityHint>(Hints_type_id); 
 	}

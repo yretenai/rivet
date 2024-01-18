@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	GameBotTankBasePrius::GameBotTankBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BotPrius(serialized) {
-		TimeBetweenVolleys = serialized->get_float(TimeBetweenVolleys_type_id, 3.000000);
+		TimeBetweenVolleys = serialized->get_float(TimeBetweenVolleys_type_id, 3.000000f);
 		DamageVolumeExtents = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(DamageVolumeExtents_type_id); 
 	}
 

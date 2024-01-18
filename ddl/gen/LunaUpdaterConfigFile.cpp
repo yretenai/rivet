@@ -15,7 +15,7 @@ namespace rivet::ddl::generated {
 		AutoDownloadLatest = serialized->get_bool(AutoDownloadLatest_type_id, true);
 		AutoStartTools = serialized->get_bool(AutoStartTools_type_id, true);
 		AllowBetaTools = serialized->get_bool(AllowBetaTools_type_id, false);
-		NumPreviousVersionsToKeep = serialized->get_int32(NumPreviousVersionsToKeep_type_id, 3);
+		NumPreviousVersionsToKeep = serialized->get_int32(NumPreviousVersionsToKeep_type_id, 3u);
 		UpdaterVersion = serialized->get_string(UpdaterVersion_type_id, "");
 		FtpUserId = serialized->get_string(FtpUserId_type_id, "");
 		FtpUserPass = serialized->get_string(FtpUserPass_type_id, "");

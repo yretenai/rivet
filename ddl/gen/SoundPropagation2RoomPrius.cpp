@@ -10,7 +10,7 @@
 namespace rivet::ddl::generated {
 	SoundPropagation2RoomPrius::SoundPropagation2RoomPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		EffectName = serialized->get_string(EffectName_type_id, {});
-		Priority = serialized->get_float(Priority_type_id, 100.000000);
+		Priority = serialized->get_float(Priority_type_id, 100.000000f);
 		Params = serialized->unwrap_into<rivet::ddl::generated::SoundPropagation2RoomParamsDef>(Params_type_id);
 		Shapes = serialized->get_uint64s(Shapes_type_id); 
 	}

@@ -11,11 +11,11 @@ namespace rivet::ddl::generated {
 		ReferenceJoint = serialized->get_string(ReferenceJoint_type_id, {});
 		Constraint = serialized->get_enum<rivet::ddl::generated::xd0fb54d1>(Constraint_type_id, rivet::ddl::generated::xd0fb54d1_values, rivet::ddl::generated::xd0fb54d1::Negative_Y);
 		SwingPlane = serialized->get_enum<rivet::ddl::generated::x30dbcb6e>(SwingPlane_type_id, rivet::ddl::generated::x30dbcb6e_values, rivet::ddl::generated::x30dbcb6e::Z);
-		CenterOfMassDistance = serialized->get_float(CenterOfMassDistance_type_id, 1.000000);
-		AngleLimit = serialized->get_float(AngleLimit_type_id, 90.000000);
-		PosAngleLimit = serialized->get_float(PosAngleLimit_type_id, 90.000000);
-		NegAngleLimit = serialized->get_float(NegAngleLimit_type_id, 90.000000);
-		Gravity = serialized->get_float(Gravity_type_id, 9.800000);
+		CenterOfMassDistance = serialized->get_float(CenterOfMassDistance_type_id, 1.000000f);
+		AngleLimit = serialized->get_float(AngleLimit_type_id, 90.000000f);
+		PosAngleLimit = serialized->get_float(PosAngleLimit_type_id, 90.000000f);
+		NegAngleLimit = serialized->get_float(NegAngleLimit_type_id, 90.000000f);
+		Gravity = serialized->get_float(Gravity_type_id, 9.800000f);
 		ConstrainToPlane = serialized->get_bool(ConstrainToPlane_type_id, false);
 		ReversePivotJoint = serialized->get_bool(ReversePivotJoint_type_id, false);
 		EnableSoundEvents = serialized->get_bool(EnableSoundEvents_type_id, true); 

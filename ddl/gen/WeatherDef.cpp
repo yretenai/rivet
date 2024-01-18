@@ -11,7 +11,7 @@
 
 namespace rivet::ddl::generated {
 	WeatherDef::WeatherDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		WeatherConstant = serialized->get_float(WeatherConstant_type_id, 0.000000);
+		WeatherConstant = serialized->get_float(WeatherConstant_type_id, 0.000000f);
 		WetSurfaces = serialized->unwrap_into<rivet::ddl::generated::WetSurfacesDef>(WetSurfaces_type_id);
 		Particles = serialized->unwrap_into<rivet::ddl::generated::ParticlesDef>(Particles_type_id);
 		Wind = serialized->unwrap_into<rivet::ddl::generated::WindDef>(Wind_type_id); 

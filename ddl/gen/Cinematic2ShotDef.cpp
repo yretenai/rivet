@@ -11,20 +11,20 @@
 
 namespace rivet::ddl::generated {
 	Cinematic2ShotDef::Cinematic2ShotDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Id = serialized->get_uint64(Id_type_id, 0);
+		Id = serialized->get_uint64(Id_type_id, 0ull);
 		Name = serialized->get_string(Name_type_id, {});
-		Duration = serialized->get_float(Duration_type_id, 5.000000);
-		JumpToShotId = serialized->get_uint64(JumpToShotId_type_id, 0);
+		Duration = serialized->get_float(Duration_type_id, 5.000000f);
+		JumpToShotId = serialized->get_uint64(JumpToShotId_type_id, 0ull);
 		ScriptShotTag = serialized->get_enum<rivet::ddl::generated::xadae2fa7>(ScriptShotTag_type_id, rivet::ddl::generated::xadae2fa7_values, rivet::ddl::generated::xadae2fa7::None);
 		MayaExportInfo = serialized->unwrap_into<rivet::ddl::generated::Cinematic2MayaShotExportInfo>(MayaExportInfo_type_id);
 		Panes = serialized->unwrap_into_many<rivet::ddl::generated::Cinematic2PaneDef>(Panes_type_id);
 		DepthOnlyFrameAtStart = serialized->get_bool(DepthOnlyFrameAtStart_type_id, true);
 		IsTransitionTarget = serialized->get_bool(IsTransitionTarget_type_id, false);
-		StartRelativeActor = serialized->get_uint64(StartRelativeActor_type_id, 0);
-		CameraConeParent = serialized->get_uint64(CameraConeParent_type_id, 0);
-		CameraConeStartAngle = serialized->get_float(CameraConeStartAngle_type_id, 0.000000);
-		CameraConeRadius = serialized->get_float(CameraConeRadius_type_id, 0.000000);
-		CameraConeHeight = serialized->get_float(CameraConeHeight_type_id, 10.000000);
+		StartRelativeActor = serialized->get_uint64(StartRelativeActor_type_id, 0ull);
+		CameraConeParent = serialized->get_uint64(CameraConeParent_type_id, 0ull);
+		CameraConeStartAngle = serialized->get_float(CameraConeStartAngle_type_id, 0.000000f);
+		CameraConeRadius = serialized->get_float(CameraConeRadius_type_id, 0.000000f);
+		CameraConeHeight = serialized->get_float(CameraConeHeight_type_id, 10.000000f);
 		AspectBlurOverride = serialized->unwrap_into<rivet::ddl::generated::Cinematic2AspectBlurDef>(AspectBlurOverride_type_id); 
 	}
 

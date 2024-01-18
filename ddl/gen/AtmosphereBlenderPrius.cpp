@@ -10,7 +10,7 @@ namespace rivet::ddl::generated {
 		StartActive = serialized->get_bool(StartActive_type_id, true);
 		SourceAtmosphere = serialized->get_string(SourceAtmosphere_type_id, {});
 		DestinationAtmosphere = serialized->get_string(DestinationAtmosphere_type_id, {});
-		BlendFieldCompletePercent = serialized->get_float(BlendFieldCompletePercent_type_id, 0.000000);
+		BlendFieldCompletePercent = serialized->get_float(BlendFieldCompletePercent_type_id, 0.000000f);
 		ForceSourceAtmosphere = serialized->get_bool(ForceSourceAtmosphere_type_id, false); 
 	}
 

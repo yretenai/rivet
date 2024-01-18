@@ -11,7 +11,7 @@ namespace rivet::ddl::generated {
 		KillBots = serialized->get_bool(KillBots_type_id, true);
 		FallToDeath = serialized->get_bool(FallToDeath_type_id, false);
 		CreditLastDamager = serialized->get_bool(CreditLastDamager_type_id, true);
-		MaxCreditTime = serialized->get_float(MaxCreditTime_type_id, 2.500000);
+		MaxCreditTime = serialized->get_float(MaxCreditTime_type_id, 2.500000f);
 		SourceAllegiance = serialized->get_enum<rivet::ddl::generated::x6bdf4ba1>(SourceAllegiance_type_id, rivet::ddl::generated::x6bdf4ba1_values, rivet::ddl::generated::x6bdf4ba1::Neutral);
 		Relationship = serialized->get_enum<rivet::ddl::generated::AllegianceRelation>(Relationship_type_id, rivet::ddl::generated::AllegianceRelation_values, rivet::ddl::generated::AllegianceRelation::Any); 
 	}

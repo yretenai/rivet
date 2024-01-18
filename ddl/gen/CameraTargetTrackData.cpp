@@ -7,20 +7,20 @@
 
 namespace rivet::ddl::generated {
 	CameraTargetTrackData::CameraTargetTrackData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		TrackForwardGain = serialized->get_float(TrackForwardGain_type_id, -7.000000);
-		TrackForwardDamp = serialized->get_float(TrackForwardDamp_type_id, -11.000000);
-		TrackBackGain = serialized->get_float(TrackBackGain_type_id, -80.000000);
-		TrackBackDamp = serialized->get_float(TrackBackDamp_type_id, -45.000000);
-		TrackLeftGain = serialized->get_float(TrackLeftGain_type_id, -50.000000);
-		TrackLeftDamp = serialized->get_float(TrackLeftDamp_type_id, -30.000000);
-		TrackUpGain = serialized->get_float(TrackUpGain_type_id, -5.000000);
-		TrackUpDamp = serialized->get_float(TrackUpDamp_type_id, -3.000000);
+		TrackForwardGain = serialized->get_float(TrackForwardGain_type_id, -7.000000f);
+		TrackForwardDamp = serialized->get_float(TrackForwardDamp_type_id, -11.000000f);
+		TrackBackGain = serialized->get_float(TrackBackGain_type_id, -80.000000f);
+		TrackBackDamp = serialized->get_float(TrackBackDamp_type_id, -45.000000f);
+		TrackLeftGain = serialized->get_float(TrackLeftGain_type_id, -50.000000f);
+		TrackLeftDamp = serialized->get_float(TrackLeftDamp_type_id, -30.000000f);
+		TrackUpGain = serialized->get_float(TrackUpGain_type_id, -5.000000f);
+		TrackUpDamp = serialized->get_float(TrackUpDamp_type_id, -3.000000f);
 		SafeZoneLeftEnabled = serialized->get_bool(SafeZoneLeftEnabled_type_id, false);
-		SafeZoneLeftAngleMin = serialized->get_float(SafeZoneLeftAngleMin_type_id, 0.000000);
-		SafeZoneLeftAngleMax = serialized->get_float(SafeZoneLeftAngleMax_type_id, 0.000000);
+		SafeZoneLeftAngleMin = serialized->get_float(SafeZoneLeftAngleMin_type_id, 0.000000f);
+		SafeZoneLeftAngleMax = serialized->get_float(SafeZoneLeftAngleMax_type_id, 0.000000f);
 		SafeZoneForwardEnabled = serialized->get_bool(SafeZoneForwardEnabled_type_id, false);
-		SafeZoneForwardDistMin = serialized->get_float(SafeZoneForwardDistMin_type_id, 0.000000);
-		SafeZoneForwardDistMax = serialized->get_float(SafeZoneForwardDistMax_type_id, 0.000000); 
+		SafeZoneForwardDistMin = serialized->get_float(SafeZoneForwardDistMin_type_id, 0.000000f);
+		SafeZoneForwardDistMax = serialized->get_float(SafeZoneForwardDistMax_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

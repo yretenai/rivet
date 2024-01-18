@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	MirrorPrius::MirrorPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		VisibilityRange = serialized->get_float(VisibilityRange_type_id, 12.000000);
+		VisibilityRange = serialized->get_float(VisibilityRange_type_id, 12.000000f);
 		MaterialOverride = serialized->get_string(MaterialOverride_type_id, "");
 		TextureOverride = serialized->get_string(TextureOverride_type_id, ""); 
 	}

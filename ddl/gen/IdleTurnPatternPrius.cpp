@@ -8,10 +8,10 @@
 namespace rivet::ddl::generated {
 	IdleTurnPatternPrius::IdleTurnPatternPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Enabled = serialized->get_bool(Enabled_type_id, false);
-		Directions = serialized->get_bitset<rivet::ddl::generated::x81884035>(Directions_type_id, rivet::ddl::generated::x81884035_values, 0);
+		Directions = serialized->get_bitset<rivet::ddl::generated::x81884035>(Directions_type_id, rivet::ddl::generated::x81884035_values, 0u);
 		TurnType = serialized->get_enum<rivet::ddl::generated::x32fe2d84>(TurnType_type_id, rivet::ddl::generated::x32fe2d84_values, rivet::ddl::generated::x32fe2d84::CycleAntiClockwise);
-		MinTurnDelay = serialized->get_float(MinTurnDelay_type_id, 1.000000);
-		MaxTurnDelay = serialized->get_float(MaxTurnDelay_type_id, 1.000000); 
+		MinTurnDelay = serialized->get_float(MinTurnDelay_type_id, 1.000000f);
+		MaxTurnDelay = serialized->get_float(MaxTurnDelay_type_id, 1.000000f); 
 	}
 
 	[[nodiscard]] auto

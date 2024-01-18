@@ -14,7 +14,7 @@ namespace rivet::ddl::generated {
 		BackgroundColor = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(BackgroundColor_type_id);
 		SizeCSSClass = serialized->get_string(SizeCSSClass_type_id, "fullSize");
 		Alignment = serialized->get_enum<rivet::ddl::generated::x84bbe706>(Alignment_type_id, rivet::ddl::generated::x84bbe706_values, rivet::ddl::generated::x84bbe706::Center);
-		FontSize = serialized->get_uint32(FontSize_type_id, 32); 
+		FontSize = serialized->get_uint32(FontSize_type_id, 32u); 
 	}
 
 	[[nodiscard]] auto

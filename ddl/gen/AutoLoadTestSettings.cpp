@@ -10,7 +10,7 @@ namespace rivet::ddl::generated {
 		Enabled = serialized->get_bool(Enabled_type_id, false);
 		SingleRunMode = serialized->get_bool(SingleRunMode_type_id, false);
 		ServerIP = serialized->get_string(ServerIP_type_id, "0.0.0.0");
-		ServerPort = serialized->get_uint16(ServerPort_type_id, 0); 
+		ServerPort = serialized->get_uint16(ServerPort_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

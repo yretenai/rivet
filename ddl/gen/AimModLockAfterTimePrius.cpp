@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	AimModLockAfterTimePrius::AimModLockAfterTimePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): AimModifierPrius(serialized) {
-		LockTime = serialized->get_float(LockTime_type_id, 1.000000);
+		LockTime = serialized->get_float(LockTime_type_id, 1.000000f);
 		LockFromBeginningIfOffScreen = serialized->get_bool(LockFromBeginningIfOffScreen_type_id, true); 
 	}
 

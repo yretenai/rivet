@@ -9,9 +9,9 @@
 
 namespace rivet::ddl::generated {
 	UICreditsConfig::UICreditsConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		CreditsStartIndex = serialized->get_int32(CreditsStartIndex_type_id, 3);
-		PostInsomnaicCreditsStartIndex = serialized->get_int32(PostInsomnaicCreditsStartIndex_type_id, 403);
-		CreditsEnableSkipIndex = serialized->get_int32(CreditsEnableSkipIndex_type_id, 0);
+		CreditsStartIndex = serialized->get_int32(CreditsStartIndex_type_id, 3u);
+		PostInsomnaicCreditsStartIndex = serialized->get_int32(PostInsomnaicCreditsStartIndex_type_id, 403u);
+		CreditsEnableSkipIndex = serialized->get_int32(CreditsEnableSkipIndex_type_id, 0u);
 		CreditsSongData = serialized->unwrap_into<rivet::ddl::generated::UISongData>(CreditsSongData_type_id); 
 	}
 

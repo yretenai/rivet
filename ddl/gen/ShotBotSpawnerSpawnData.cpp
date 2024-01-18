@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	ShotBotSpawnerSpawnData::ShotBotSpawnerSpawnData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ShotSpawnData(serialized) {
-		ZoneIndex = serialized->get_int32(ZoneIndex_type_id, 0);
-		AssetId = serialized->get_uint64(AssetId_type_id, 0);
+		ZoneIndex = serialized->get_int32(ZoneIndex_type_id, 0u);
+		AssetId = serialized->get_uint64(AssetId_type_id, 0ull);
 		Position = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Position_type_id);
 		Facing = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Facing_type_id); 
 	}

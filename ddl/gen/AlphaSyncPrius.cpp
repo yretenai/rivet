@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	AlphaSyncPrius::AlphaSyncPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		InitialAlpha = serialized->get_float(InitialAlpha_type_id, 1.000000);
+		InitialAlpha = serialized->get_float(InitialAlpha_type_id, 1.000000f);
 		HighQualityAlpha = serialized->get_bool(HighQualityAlpha_type_id, false); 
 	}
 

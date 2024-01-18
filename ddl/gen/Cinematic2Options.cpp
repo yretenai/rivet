@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	Cinematic2Options::Cinematic2Options([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ComponentId = serialized->get_uint64(ComponentId_type_id, 0);
+		ComponentId = serialized->get_uint64(ComponentId_type_id, 0ull);
 		Options = serialized->unwrap_into_many<rivet::ddl::generated::Cinematic2Option>(Options_type_id); 
 	}
 

@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	NeedCurrencyOfferPrius::NeedCurrencyOfferPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): HoldOfferPrius(serialized) {
-		RequiredCurrency = serialized->get_int32(RequiredCurrency_type_id, 0); 
+		RequiredCurrency = serialized->get_int32(RequiredCurrency_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

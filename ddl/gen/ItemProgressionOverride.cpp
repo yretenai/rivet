@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ItemProgressionOverride::ItemProgressionOverride([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ProgressLevel = serialized->get_float(ProgressLevel_type_id, 0.000000); 
+		ProgressLevel = serialized->get_float(ProgressLevel_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

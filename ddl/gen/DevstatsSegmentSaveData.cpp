@@ -10,12 +10,12 @@ namespace rivet::ddl::generated {
 		SegmentId = serialized->get_string(SegmentId_type_id, {});
 		SegmentName = serialized->get_string(SegmentName_type_id, {});
 		ParentSegmentName = serialized->get_string(ParentSegmentName_type_id, {});
-		ParentSegmentId = serialized->get_uint32(ParentSegmentId_type_id, 0);
+		ParentSegmentId = serialized->get_uint32(ParentSegmentId_type_id, 0u);
 		UsePauseTime = serialized->get_bool(UsePauseTime_type_id, false);
 		StartTime = serialized->get_double(StartTime_type_id, -1.000000);
-		Duration = serialized->get_float(Duration_type_id, 0.000000);
+		Duration = serialized->get_float(Duration_type_id, 0.000000f);
 		SegmentType = serialized->get_enum<rivet::ddl::generated::xc6f5c0d7>(SegmentType_type_id, rivet::ddl::generated::xc6f5c0d7_values, rivet::ddl::generated::xc6f5c0d7::Playthrough);
-		SegmentFlags = serialized->get_bitset<rivet::ddl::generated::xc353b5be>(SegmentFlags_type_id, rivet::ddl::generated::xc353b5be_values, 0); 
+		SegmentFlags = serialized->get_bitset<rivet::ddl::generated::xc353b5be>(SegmentFlags_type_id, rivet::ddl::generated::xc353b5be_values, 0u); 
 	}
 
 	[[nodiscard]] auto

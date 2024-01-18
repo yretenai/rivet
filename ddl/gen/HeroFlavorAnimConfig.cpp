@@ -10,16 +10,16 @@
 
 namespace rivet::ddl::generated {
 	HeroFlavorAnimConfig::HeroFlavorAnimConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		FidgetIntervalMin = serialized->get_float(FidgetIntervalMin_type_id, 3.000000);
-		FidgetIntervalMax = serialized->get_float(FidgetIntervalMax_type_id, 5.000000);
-		JumpLandHeightRangeShort = serialized->get_float(JumpLandHeightRangeShort_type_id, 5.000000);
-		JumpLandHeightRangeLong = serialized->get_float(JumpLandHeightRangeLong_type_id, 10.000000);
-		FallHeightRangeShort = serialized->get_float(FallHeightRangeShort_type_id, 10.000000);
-		FallHeightRangeMid = serialized->get_float(FallHeightRangeMid_type_id, 20.000000);
-		FallHeightRangeLong = serialized->get_float(FallHeightRangeLong_type_id, 30.000000);
-		SlopeVarLerpSpeed = serialized->get_float(SlopeVarLerpSpeed_type_id, 180.000000);
-		TurbulenceMinSpeed = serialized->get_float(TurbulenceMinSpeed_type_id, 55.000000);
-		TurbulenceMaxSpeed = serialized->get_float(TurbulenceMaxSpeed_type_id, 75.000000);
+		FidgetIntervalMin = serialized->get_float(FidgetIntervalMin_type_id, 3.000000f);
+		FidgetIntervalMax = serialized->get_float(FidgetIntervalMax_type_id, 5.000000f);
+		JumpLandHeightRangeShort = serialized->get_float(JumpLandHeightRangeShort_type_id, 5.000000f);
+		JumpLandHeightRangeLong = serialized->get_float(JumpLandHeightRangeLong_type_id, 10.000000f);
+		FallHeightRangeShort = serialized->get_float(FallHeightRangeShort_type_id, 10.000000f);
+		FallHeightRangeMid = serialized->get_float(FallHeightRangeMid_type_id, 20.000000f);
+		FallHeightRangeLong = serialized->get_float(FallHeightRangeLong_type_id, 30.000000f);
+		SlopeVarLerpSpeed = serialized->get_float(SlopeVarLerpSpeed_type_id, 180.000000f);
+		TurbulenceMinSpeed = serialized->get_float(TurbulenceMinSpeed_type_id, 55.000000f);
+		TurbulenceMaxSpeed = serialized->get_float(TurbulenceMaxSpeed_type_id, 75.000000f);
 		RunCycles = serialized->unwrap_into<rivet::ddl::generated::FlavorCycleConfig>(RunCycles_type_id);
 		GrindCycles = serialized->unwrap_into<rivet::ddl::generated::FlavorCycleConfig>(GrindCycles_type_id);
 		GrindSlideCycles = serialized->unwrap_into<rivet::ddl::generated::FlavorCycleConfig>(GrindSlideCycles_type_id);

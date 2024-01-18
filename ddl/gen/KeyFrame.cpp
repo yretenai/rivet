@@ -11,7 +11,7 @@ namespace rivet::ddl::generated {
 	KeyFrame::KeyFrame([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Pair = serialized->unwrap_into<rivet::ddl::generated::KeyFrameValuePair>(Pair_type_id);
 		RangeStyle = serialized->get_enum<rivet::ddl::generated::RangeStyle>(RangeStyle_type_id, rivet::ddl::generated::RangeStyle_values, rivet::ddl::generated::RangeStyle::Random);
-		Position = serialized->get_float(Position_type_id, 0.000000); 
+		Position = serialized->get_float(Position_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

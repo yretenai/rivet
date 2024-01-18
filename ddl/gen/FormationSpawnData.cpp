@@ -9,9 +9,9 @@
 
 namespace rivet::ddl::generated {
 	FormationSpawnData::FormationSpawnData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ActorSpawnData(serialized) {
-		FormationCoordinator = serialized->get_uint32(FormationCoordinator_type_id, 0);
-		TemplateActor = serialized->get_uint32(TemplateActor_type_id, 0);
-		FormationIndex = serialized->get_uint32(FormationIndex_type_id, 0);
+		FormationCoordinator = serialized->get_uint32(FormationCoordinator_type_id, 0u);
+		TemplateActor = serialized->get_uint32(TemplateActor_type_id, 0u);
+		FormationIndex = serialized->get_uint32(FormationIndex_type_id, 0u);
 		Position = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Position_type_id);
 		Facing = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Facing_type_id); 
 	}

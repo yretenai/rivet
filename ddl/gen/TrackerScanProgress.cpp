@@ -9,7 +9,7 @@ namespace rivet::ddl::generated {
 	TrackerScanProgress::TrackerScanProgress([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Scanning = serialized->get_bool(Scanning_type_id, false);
 		Directory = serialized->get_string(Directory_type_id, {});
-		CountScannedFiles = serialized->get_uint32(CountScannedFiles_type_id, 0); 
+		CountScannedFiles = serialized->get_uint32(CountScannedFiles_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

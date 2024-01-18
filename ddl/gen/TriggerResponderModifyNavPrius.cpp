@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	TriggerResponderModifyNavPrius::TriggerResponderModifyNavPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): TriggerResponderBasePrius(serialized) {
-		PolyFlags = serialized->get_bitset<rivet::ddl::generated::xc204b456>(PolyFlags_type_id, rivet::ddl::generated::xc204b456_values, 31);
+		PolyFlags = serialized->get_bitset<rivet::ddl::generated::xc204b456>(PolyFlags_type_id, rivet::ddl::generated::xc204b456_values, 31u);
 		Triggered = serialized->unwrap_into_many<rivet::ddl::generated::TriggerResponderNavModGrp>(Triggered_type_id);
 		Untriggered = serialized->unwrap_into_many<rivet::ddl::generated::TriggerResponderNavModGrp>(Untriggered_type_id); 
 	}

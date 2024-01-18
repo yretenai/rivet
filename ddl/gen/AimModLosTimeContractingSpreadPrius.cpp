@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	AimModLosTimeContractingSpreadPrius::AimModLosTimeContractingSpreadPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): AimModifierPrius(serialized) {
-		InaccuracyMin = serialized->get_float(InaccuracyMin_type_id, 0.000000);
-		InaccuracyMax = serialized->get_float(InaccuracyMax_type_id, 0.000000);
-		LosTimeToMinInaccuracy = serialized->get_float(LosTimeToMinInaccuracy_type_id, 0.000000);
-		ResetTime = serialized->get_float(ResetTime_type_id, 0.000000);
-		LeashDist = serialized->get_float(LeashDist_type_id, 0.000000);
-		LeashTime = serialized->get_float(LeashTime_type_id, 0.000000); 
+		InaccuracyMin = serialized->get_float(InaccuracyMin_type_id, 0.000000f);
+		InaccuracyMax = serialized->get_float(InaccuracyMax_type_id, 0.000000f);
+		LosTimeToMinInaccuracy = serialized->get_float(LosTimeToMinInaccuracy_type_id, 0.000000f);
+		ResetTime = serialized->get_float(ResetTime_type_id, 0.000000f);
+		LeashDist = serialized->get_float(LeashDist_type_id, 0.000000f);
+		LeashTime = serialized->get_float(LeashTime_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

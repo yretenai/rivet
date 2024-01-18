@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	CameraFollowNodeEngineItem::CameraFollowNodeEngineItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Node = serialized->get_uint64(Node_type_id, 0); 
+		Node = serialized->get_uint64(Node_type_id, 0ull); 
 	}
 
 	[[nodiscard]] auto

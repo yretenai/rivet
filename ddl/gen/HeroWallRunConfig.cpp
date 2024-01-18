@@ -7,24 +7,24 @@
 
 namespace rivet::ddl::generated {
 	HeroWallRunConfig::HeroWallRunConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		WallRunEntrySpeed = serialized->get_float(WallRunEntrySpeed_type_id, 3.500000);
-		WallRunMaxInputAngle = serialized->get_float(WallRunMaxInputAngle_type_id, 70.000000);
-		WallRunSpeed = serialized->get_float(WallRunSpeed_type_id, 10.000000);
-		WallRunDecel = serialized->get_float(WallRunDecel_type_id, 5.000000);
-		WallRunCenteringSpeed = serialized->get_float(WallRunCenteringSpeed_type_id, 2.000000);
-		WallRunCurvatureTolerance = serialized->get_float(WallRunCurvatureTolerance_type_id, 30.000000);
-		WallRunMinInputCornerAngle = serialized->get_float(WallRunMinInputCornerAngle_type_id, 45.000000);
-		WallRunMaxTime = serialized->get_float(WallRunMaxTime_type_id, 0.000000);
-		WallRunForwardJumpAngle = serialized->get_float(WallRunForwardJumpAngle_type_id, 45.000000);
-		WallRunForwardJumpInputAngle = serialized->get_float(WallRunForwardJumpInputAngle_type_id, 45.000000);
+		WallRunEntrySpeed = serialized->get_float(WallRunEntrySpeed_type_id, 3.500000f);
+		WallRunMaxInputAngle = serialized->get_float(WallRunMaxInputAngle_type_id, 70.000000f);
+		WallRunSpeed = serialized->get_float(WallRunSpeed_type_id, 10.000000f);
+		WallRunDecel = serialized->get_float(WallRunDecel_type_id, 5.000000f);
+		WallRunCenteringSpeed = serialized->get_float(WallRunCenteringSpeed_type_id, 2.000000f);
+		WallRunCurvatureTolerance = serialized->get_float(WallRunCurvatureTolerance_type_id, 30.000000f);
+		WallRunMinInputCornerAngle = serialized->get_float(WallRunMinInputCornerAngle_type_id, 45.000000f);
+		WallRunMaxTime = serialized->get_float(WallRunMaxTime_type_id, 0.000000f);
+		WallRunForwardJumpAngle = serialized->get_float(WallRunForwardJumpAngle_type_id, 45.000000f);
+		WallRunForwardJumpInputAngle = serialized->get_float(WallRunForwardJumpInputAngle_type_id, 45.000000f);
 		WallRunNoInputForwardJump = serialized->get_bool(WallRunNoInputForwardJump_type_id, true);
-		CamAdjustInputDelay = serialized->get_float(CamAdjustInputDelay_type_id, 0.500000);
-		CamAdjustSpeedMax = serialized->get_float(CamAdjustSpeedMax_type_id, 200.000000);
-		CamAdjustAccel = serialized->get_float(CamAdjustAccel_type_id, 50.000000);
-		CamAdjustDecel = serialized->get_float(CamAdjustDecel_type_id, 50.000000);
-		CamAdjustRelativeVertAngle = serialized->get_float(CamAdjustRelativeVertAngle_type_id, 0.000000);
-		CamAdjustRelativeHorzAngle = serialized->get_float(CamAdjustRelativeHorzAngle_type_id, 0.000000);
-		CamAdjustAngleTolerance = serialized->get_float(CamAdjustAngleTolerance_type_id, 0.500000); 
+		CamAdjustInputDelay = serialized->get_float(CamAdjustInputDelay_type_id, 0.500000f);
+		CamAdjustSpeedMax = serialized->get_float(CamAdjustSpeedMax_type_id, 200.000000f);
+		CamAdjustAccel = serialized->get_float(CamAdjustAccel_type_id, 50.000000f);
+		CamAdjustDecel = serialized->get_float(CamAdjustDecel_type_id, 50.000000f);
+		CamAdjustRelativeVertAngle = serialized->get_float(CamAdjustRelativeVertAngle_type_id, 0.000000f);
+		CamAdjustRelativeHorzAngle = serialized->get_float(CamAdjustRelativeHorzAngle_type_id, 0.000000f);
+		CamAdjustAngleTolerance = serialized->get_float(CamAdjustAngleTolerance_type_id, 0.500000f); 
 	}
 
 	[[nodiscard]] auto

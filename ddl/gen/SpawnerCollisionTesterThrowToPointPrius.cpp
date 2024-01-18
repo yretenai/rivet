@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	SpawnerCollisionTesterThrowToPointPrius::SpawnerCollisionTesterThrowToPointPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DistanceTolerance = serialized->get_float(DistanceTolerance_type_id, 2.000000);
+		DistanceTolerance = serialized->get_float(DistanceTolerance_type_id, 2.000000f);
 		DoArcCheck = serialized->get_bool(DoArcCheck_type_id, false);
-		ThrowHeight = serialized->get_float(ThrowHeight_type_id, 3.000000); 
+		ThrowHeight = serialized->get_float(ThrowHeight_type_id, 3.000000f); 
 	}
 
 	[[nodiscard]] auto

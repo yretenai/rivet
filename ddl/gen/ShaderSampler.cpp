@@ -17,8 +17,8 @@ namespace rivet::ddl::generated {
 		Group = serialized->get_string(Group_type_id, {});
 		SortOrder = serialized->get_string(SortOrder_type_id, {});
 		SubGraphAncestors = serialized->get_string(SubGraphAncestors_type_id, {});
-		HWRegister = serialized->get_uint32(HWRegister_type_id, 0);
-		Type = serialized->get_uint32(Type_type_id, 0);
+		HWRegister = serialized->get_uint32(HWRegister_type_id, 0u);
+		Type = serialized->get_uint32(Type_type_id, 0u);
 		Exposed = serialized->get_bool(Exposed_type_id, true);
 		DeveloperMode = serialized->get_bool(DeveloperMode_type_id, false);
 		VisibilityCondition = serialized->unwrap_into<rivet::ddl::generated::MaterialNodeInputVisibilityCondition>(VisibilityCondition_type_id); 

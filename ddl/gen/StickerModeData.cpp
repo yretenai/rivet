@@ -10,11 +10,11 @@
 
 namespace rivet::ddl::generated {
 	StickerModeData::StickerModeData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		StickerSpeed = serialized->get_float(StickerSpeed_type_id, 300.000000);
-		RotationSpeed = serialized->get_float(RotationSpeed_type_id, 45.000000);
-		StickerSpeed4k = serialized->get_float(StickerSpeed4k_type_id, 600.000000);
-		ScaleRate = serialized->get_float(ScaleRate_type_id, 0.020000);
-		ScaleRate4k = serialized->get_float(ScaleRate4k_type_id, 0.040000);
+		StickerSpeed = serialized->get_float(StickerSpeed_type_id, 300.000000f);
+		RotationSpeed = serialized->get_float(RotationSpeed_type_id, 45.000000f);
+		StickerSpeed4k = serialized->get_float(StickerSpeed4k_type_id, 600.000000f);
+		ScaleRate = serialized->get_float(ScaleRate_type_id, 0.020000f);
+		ScaleRate4k = serialized->get_float(ScaleRate4k_type_id, 0.040000f);
 		EmptyLayer = serialized->unwrap_into<rivet::ddl::generated::StickersData>(EmptyLayer_type_id);
 		LockedLayer = serialized->unwrap_into<rivet::ddl::generated::StickersData>(LockedLayer_type_id);
 		Categories = serialized->unwrap_into_many<rivet::ddl::generated::StickersCategoryData>(Categories_type_id); 

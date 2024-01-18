@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	NodeGraphActorContextAttachmentDebugMessage::NodeGraphActorContextAttachmentDebugMessage([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AssetId = serialized->get_uint64(AssetId_type_id, 0);
-		ActorContextId = serialized->get_uint32(ActorContextId_type_id, 0); 
+		AssetId = serialized->get_uint64(AssetId_type_id, 0ull);
+		ActorContextId = serialized->get_uint32(ActorContextId_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

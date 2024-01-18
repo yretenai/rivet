@@ -10,7 +10,7 @@ namespace rivet::ddl::generated {
 		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Game_Mode);
 		Level = serialized->get_string(Level_type_id, {});
 		CheckpointName = serialized->get_string(CheckpointName_type_id, {});
-		DelayTime = serialized->get_float(DelayTime_type_id, 0.000000); 
+		DelayTime = serialized->get_float(DelayTime_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

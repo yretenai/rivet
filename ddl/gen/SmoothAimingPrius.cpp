@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	SmoothAimingPrius::SmoothAimingPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): FocusTrackingAimingPrius(serialized) {
-		AimPosAccel = serialized->get_float(AimPosAccel_type_id, 100.000000);
-		AimPosDecel = serialized->get_float(AimPosDecel_type_id, 100.000000);
-		AimPosMaxSpeed = serialized->get_float(AimPosMaxSpeed_type_id, 100.000000); 
+		AimPosAccel = serialized->get_float(AimPosAccel_type_id, 100.000000f);
+		AimPosDecel = serialized->get_float(AimPosDecel_type_id, 100.000000f);
+		AimPosMaxSpeed = serialized->get_float(AimPosMaxSpeed_type_id, 100.000000f); 
 	}
 
 	[[nodiscard]] auto

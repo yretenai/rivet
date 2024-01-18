@@ -8,21 +8,21 @@
 namespace rivet::ddl::generated {
 	DamageIntelConfig::DamageIntelConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
 		DigitActor = serialized->get_string(DigitActor_type_id, {});
-		Spacing = serialized->get_float(Spacing_type_id, 0.500000);
-		MinDist = serialized->get_float(MinDist_type_id, 2.000000);
-		StartScale = serialized->get_float(StartScale_type_id, 0.500000);
-		EndScale = serialized->get_float(EndScale_type_id, 1.000000);
-		PathEndSide = serialized->get_float(PathEndSide_type_id, 0.500000);
-		PathEndForward = serialized->get_float(PathEndForward_type_id, 1.500000);
-		PathEndUp = serialized->get_float(PathEndUp_type_id, 2.000000);
-		PathSpeed = serialized->get_float(PathSpeed_type_id, 2.000000);
-		ScaleDistance = serialized->get_float(ScaleDistance_type_id, 2.000000);
-		ScaleExponent = serialized->get_float(ScaleExponent_type_id, 0.500000);
-		GroupingDist = serialized->get_float(GroupingDist_type_id, 1.000000);
-		GroupingTime = serialized->get_float(GroupingTime_type_id, 1.500000);
-		NormalScale = serialized->get_float(NormalScale_type_id, 1.000000);
-		WeakspotScale = serialized->get_float(WeakspotScale_type_id, 1.500000);
-		SpawnOffsetY = serialized->get_float(SpawnOffsetY_type_id, 0.000000); 
+		Spacing = serialized->get_float(Spacing_type_id, 0.500000f);
+		MinDist = serialized->get_float(MinDist_type_id, 2.000000f);
+		StartScale = serialized->get_float(StartScale_type_id, 0.500000f);
+		EndScale = serialized->get_float(EndScale_type_id, 1.000000f);
+		PathEndSide = serialized->get_float(PathEndSide_type_id, 0.500000f);
+		PathEndForward = serialized->get_float(PathEndForward_type_id, 1.500000f);
+		PathEndUp = serialized->get_float(PathEndUp_type_id, 2.000000f);
+		PathSpeed = serialized->get_float(PathSpeed_type_id, 2.000000f);
+		ScaleDistance = serialized->get_float(ScaleDistance_type_id, 2.000000f);
+		ScaleExponent = serialized->get_float(ScaleExponent_type_id, 0.500000f);
+		GroupingDist = serialized->get_float(GroupingDist_type_id, 1.000000f);
+		GroupingTime = serialized->get_float(GroupingTime_type_id, 1.500000f);
+		NormalScale = serialized->get_float(NormalScale_type_id, 1.000000f);
+		WeakspotScale = serialized->get_float(WeakspotScale_type_id, 1.500000f);
+		SpawnOffsetY = serialized->get_float(SpawnOffsetY_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

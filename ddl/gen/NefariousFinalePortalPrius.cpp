@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	NefariousFinalePortalPrius::NefariousFinalePortalPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DesiredOpenTime = serialized->get_float(DesiredOpenTime_type_id, 0.500000);
-		DesiredCloseTime = serialized->get_float(DesiredCloseTime_type_id, 0.500000);
-		DestroyDelayAfterClose = serialized->get_float(DestroyDelayAfterClose_type_id, 0.100000); 
+		DesiredOpenTime = serialized->get_float(DesiredOpenTime_type_id, 0.500000f);
+		DesiredCloseTime = serialized->get_float(DesiredCloseTime_type_id, 0.500000f);
+		DestroyDelayAfterClose = serialized->get_float(DestroyDelayAfterClose_type_id, 0.100000f); 
 	}
 
 	[[nodiscard]] auto

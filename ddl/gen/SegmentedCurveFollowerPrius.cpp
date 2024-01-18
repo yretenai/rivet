@@ -8,10 +8,10 @@
 namespace rivet::ddl::generated {
 	SegmentedCurveFollowerPrius::SegmentedCurveFollowerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		JointNames = serialized->get_strings(JointNames_type_id);
-		Acceleration = serialized->get_float(Acceleration_type_id, 2.000000);
-		Deceleration = serialized->get_float(Deceleration_type_id, 2.000000);
-		MaxSpeed = serialized->get_float(MaxSpeed_type_id, 2.000000);
-		InitialCurve = serialized->get_uint64(InitialCurve_type_id, 0);
+		Acceleration = serialized->get_float(Acceleration_type_id, 2.000000f);
+		Deceleration = serialized->get_float(Deceleration_type_id, 2.000000f);
+		MaxSpeed = serialized->get_float(MaxSpeed_type_id, 2.000000f);
+		InitialCurve = serialized->get_uint64(InitialCurve_type_id, 0ull);
 		InitialCurveAutoStart = serialized->get_bool(InitialCurveAutoStart_type_id, true);
 		DeleteAtEnd = serialized->get_bool(DeleteAtEnd_type_id, false);
 		IgnoreDecelAtEnd = serialized->get_bool(IgnoreDecelAtEnd_type_id, false);

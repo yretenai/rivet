@@ -7,16 +7,16 @@
 
 namespace rivet::ddl::generated {
 	SimpleAimInterpPrius::SimpleAimInterpPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		TotalTime = serialized->get_float(TotalTime_type_id, 2.000000);
+		TotalTime = serialized->get_float(TotalTime_type_id, 2.000000f);
 		StartOn = serialized->get_bool(StartOn_type_id, true);
-		ClampedYawMinDeg = serialized->get_float(ClampedYawMinDeg_type_id, -45.000000);
-		ClampedYawMaxDeg = serialized->get_float(ClampedYawMaxDeg_type_id, 45.000000);
-		ClampedPitchMinDeg = serialized->get_float(ClampedPitchMinDeg_type_id, 0.000000);
-		ClampedPitchMaxDeg = serialized->get_float(ClampedPitchMaxDeg_type_id, 0.000000);
-		AnimYawMinDeg = serialized->get_float(AnimYawMinDeg_type_id, -90.000000);
-		AnimYawMaxDeg = serialized->get_float(AnimYawMaxDeg_type_id, 90.000000);
-		AnimPitchMinDeg = serialized->get_float(AnimPitchMinDeg_type_id, -90.000000);
-		AnimPitchMaxDeg = serialized->get_float(AnimPitchMaxDeg_type_id, 90.000000); 
+		ClampedYawMinDeg = serialized->get_float(ClampedYawMinDeg_type_id, -45.000000f);
+		ClampedYawMaxDeg = serialized->get_float(ClampedYawMaxDeg_type_id, 45.000000f);
+		ClampedPitchMinDeg = serialized->get_float(ClampedPitchMinDeg_type_id, 0.000000f);
+		ClampedPitchMaxDeg = serialized->get_float(ClampedPitchMaxDeg_type_id, 0.000000f);
+		AnimYawMinDeg = serialized->get_float(AnimYawMinDeg_type_id, -90.000000f);
+		AnimYawMaxDeg = serialized->get_float(AnimYawMaxDeg_type_id, 90.000000f);
+		AnimPitchMinDeg = serialized->get_float(AnimPitchMinDeg_type_id, -90.000000f);
+		AnimPitchMaxDeg = serialized->get_float(AnimPitchMaxDeg_type_id, 90.000000f); 
 	}
 
 	[[nodiscard]] auto

@@ -12,7 +12,7 @@ namespace rivet::ddl::generated {
 		HealthBarActor = serialized->get_string(HealthBarActor_type_id, {});
 		AttachToJoint = serialized->get_string(AttachToJoint_type_id, "");
 		AttachOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(AttachOffset_type_id);
-		Scale = serialized->get_float(Scale_type_id, 1.000000);
+		Scale = serialized->get_float(Scale_type_id, 1.000000f);
 		HideAfterTime = serialized->get_bool(HideAfterTime_type_id, true);
 		ShowOnHealthGain = serialized->get_bool(ShowOnHealthGain_type_id, true);
 		AttachWorldOffset = serialized->get_bool(AttachWorldOffset_type_id, true); 

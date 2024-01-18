@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	JobManagerOfferPrius::JobManagerOfferPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		OfferHandle = serialized->get_uint32(OfferHandle_type_id, 0); 
+		OfferHandle = serialized->get_uint32(OfferHandle_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

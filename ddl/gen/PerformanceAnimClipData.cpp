@@ -8,8 +8,8 @@
 namespace rivet::ddl::generated {
 	PerformanceAnimClipData::PerformanceAnimClipData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		AnimClipPath = serialized->get_string(AnimClipPath_type_id, {});
-		DurationChecked = serialized->get_uint8(DurationChecked_type_id, 0);
-		Duration = serialized->get_float(Duration_type_id, 0.000000); 
+		DurationChecked = serialized->get_uint8(DurationChecked_type_id, 0u);
+		Duration = serialized->get_float(Duration_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

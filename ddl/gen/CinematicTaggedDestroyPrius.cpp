@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	CinematicTaggedDestroyPrius::CinematicTaggedDestroyPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DestroyCategory = serialized->get_bitset<rivet::ddl::generated::xb54ab3f1>(DestroyCategory_type_id, rivet::ddl::generated::xb54ab3f1_values, 1); 
+		DestroyCategory = serialized->get_bitset<rivet::ddl::generated::xb54ab3f1>(DestroyCategory_type_id, rivet::ddl::generated::xb54ab3f1_values, 1u); 
 	}
 
 	[[nodiscard]] auto

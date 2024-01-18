@@ -11,7 +11,7 @@ namespace rivet::ddl::generated {
 	MissionNodeBuiltGame::MissionNodeBuiltGame([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): MissionNodeBuiltShared(serialized) {
 		AvailableDebugLoadInfo = serialized->unwrap_into<rivet::ddl::generated::ObjectiveLoadInfo>(AvailableDebugLoadInfo_type_id);
 		MissionType = serialized->get_enum<rivet::ddl::generated::x1953eb86>(MissionType_type_id, rivet::ddl::generated::x1953eb86_values, rivet::ddl::generated::x1953eb86::GoldenPath);
-		MissionSaveWeight = serialized->get_float(MissionSaveWeight_type_id, 0.000000); 
+		MissionSaveWeight = serialized->get_float(MissionSaveWeight_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

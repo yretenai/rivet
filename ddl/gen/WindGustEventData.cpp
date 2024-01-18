@@ -9,18 +9,18 @@
 
 namespace rivet::ddl::generated {
 	WindGustEventData::WindGustEventData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Attack = serialized->get_float(Attack_type_id, 0.000000);
-		Sustain = serialized->get_float(Sustain_type_id, 1.000000);
-		Decay = serialized->get_float(Decay_type_id, 0.000000);
+		Attack = serialized->get_float(Attack_type_id, 0.000000f);
+		Sustain = serialized->get_float(Sustain_type_id, 1.000000f);
+		Decay = serialized->get_float(Decay_type_id, 0.000000f);
 		Position = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Position_type_id);
 		Direction = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Direction_type_id);
-		Speed = serialized->get_float(Speed_type_id, 10.000000);
-		Drag = serialized->get_float(Drag_type_id, 10.000000);
-		Radius = serialized->get_float(Radius_type_id, 1.000000);
-		Height = serialized->get_float(Height_type_id, 0.000000);
-		RadialFalloff = serialized->get_float(RadialFalloff_type_id, 1.000000);
-		HeightFalloff = serialized->get_float(HeightFalloff_type_id, 1.000000);
-		Type = serialized->get_uint32(Type_type_id, 2); 
+		Speed = serialized->get_float(Speed_type_id, 10.000000f);
+		Drag = serialized->get_float(Drag_type_id, 10.000000f);
+		Radius = serialized->get_float(Radius_type_id, 1.000000f);
+		Height = serialized->get_float(Height_type_id, 0.000000f);
+		RadialFalloff = serialized->get_float(RadialFalloff_type_id, 1.000000f);
+		HeightFalloff = serialized->get_float(HeightFalloff_type_id, 1.000000f);
+		Type = serialized->get_uint32(Type_type_id, 2u); 
 	}
 
 	[[nodiscard]] auto

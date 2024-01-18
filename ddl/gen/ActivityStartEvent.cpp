@@ -16,7 +16,7 @@ namespace rivet::ddl::generated {
 		equippedMechanics = serialized->get_strings(equippedMechanics_type_id);
 		zoneId = serialized->get_string(zoneId_type_id, {});
 		mapPosition = serialized->get_floats(mapPosition_type_id);
-		difficultySetting = serialized->get_int32(difficultySetting_type_id, 0); 
+		difficultySetting = serialized->get_int32(difficultySetting_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

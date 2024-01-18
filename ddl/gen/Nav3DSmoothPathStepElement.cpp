@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	Nav3DSmoothPathStepElement::Nav3DSmoothPathStepElement([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		StepIndex = serialized->get_uint64(StepIndex_type_id, 0);
+		StepIndex = serialized->get_uint64(StepIndex_type_id, 0ull);
 		Step = serialized->unwrap_into<rivet::ddl::generated::Nav3DSmoothPathStepBase>(Step_type_id); 
 	}
 

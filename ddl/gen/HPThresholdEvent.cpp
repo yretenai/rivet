@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	HPThresholdEvent::HPThresholdEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		HPFraction = serialized->get_float(HPFraction_type_id, 0.000000); 
+		HPFraction = serialized->get_float(HPFraction_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

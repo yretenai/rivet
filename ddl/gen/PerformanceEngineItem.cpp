@@ -16,8 +16,8 @@ namespace rivet::ddl::generated {
 		ActivePerformanceClipPath = serialized->get_string(ActivePerformanceClipPath_type_id, {});
 		AnimSetStack = serialized->get_strings(AnimSetStack_type_id);
 		AssetPath = serialized->get_string(AssetPath_type_id, {});
-		BodyId = serialized->get_uint64(BodyId_type_id, 0);
-		HeadId = serialized->get_uint64(HeadId_type_id, 0);
+		BodyId = serialized->get_uint64(BodyId_type_id, 0ull);
+		HeadId = serialized->get_uint64(HeadId_type_id, 0ull);
 		PerformanceSetDef = serialized->unwrap_into<rivet::ddl::generated::AnimPerformanceSetDef>(PerformanceSetDef_type_id);
 		PreviewAnimDriverName = serialized->get_string(PreviewAnimDriverName_type_id, {});
 		Matrix = serialized->unwrap_into<rivet::ddl::generated::DDLMatrix4>(Matrix_type_id);

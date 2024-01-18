@@ -14,7 +14,7 @@ namespace rivet::ddl::generated {
 		DArr = serialized->get_int32s(DArr_type_id);
 		Str = serialized->get_string(Str_type_id, "asd");
 		S = serialized->get_enum<rivet::ddl::generated::x758aa4a7>(S_type_id, rivet::ddl::generated::x758aa4a7_values, rivet::ddl::generated::x758aa4a7::C);
-		B = serialized->get_bitset<rivet::ddl::generated::x1ea7317b>(B_type_id, rivet::ddl::generated::x1ea7317b_values, 3);
+		B = serialized->get_bitset<rivet::ddl::generated::x1ea7317b>(B_type_id, rivet::ddl::generated::x1ea7317b_values, 3u);
 		PrimArray = serialized->unwrap_into_many<rivet::ddl::generated::Prims>(PrimArray_type_id);
 		PrimFixedArray = serialized->unwrap_into_many<rivet::ddl::generated::Prims>(PrimFixedArray_type_id);
 		HM = serialized->get_int32s(HM_type_id);

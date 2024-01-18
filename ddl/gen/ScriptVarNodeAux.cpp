@@ -16,10 +16,10 @@ namespace rivet::ddl::generated {
 		Notes = serialized->unwrap_into<rivet::ddl::generated::GraphNodeNotesDef>(Notes_type_id);
 		IsGlobal = serialized->get_bool(IsGlobal_type_id, false);
 		BoolValue = serialized->get_bool(BoolValue_type_id, false);
-		FloatValue = serialized->get_float(FloatValue_type_id, 0.000000);
+		FloatValue = serialized->get_float(FloatValue_type_id, 0.000000f);
 		VecValue = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(VecValue_type_id);
 		StringValue = serialized->get_string(StringValue_type_id, {});
-		ActorValue = serialized->get_uint64(ActorValue_type_id, 0); 
+		ActorValue = serialized->get_uint64(ActorValue_type_id, 0ull); 
 	}
 
 	[[nodiscard]] auto

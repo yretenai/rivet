@@ -14,7 +14,7 @@ namespace rivet::ddl::generated {
 		TempSetDesc = serialized->get_string(TempSetDesc_type_id, "temp desc");
 		CardIDs = serialized->get_enums<rivet::ddl::generated::x507460e6>(CardIDs_type_id, rivet::ddl::generated::x507460e6_values);
 		Bonus = serialized->get_enum<rivet::ddl::generated::BonusType>(Bonus_type_id, rivet::ddl::generated::BonusType_values, rivet::ddl::generated::BonusType::None);
-		BonusAmount = serialized->get_float(BonusAmount_type_id, 0.000000); 
+		BonusAmount = serialized->get_float(BonusAmount_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

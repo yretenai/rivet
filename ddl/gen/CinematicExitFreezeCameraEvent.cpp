@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	CinematicExitFreezeCameraEvent::CinematicExitFreezeCameraEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		FreezeTime = serialized->get_float(FreezeTime_type_id, 0.250000);
-		FreezeMoveDistance = serialized->get_float(FreezeMoveDistance_type_id, 0.000000);
+		FreezeTime = serialized->get_float(FreezeTime_type_id, 0.250000f);
+		FreezeMoveDistance = serialized->get_float(FreezeMoveDistance_type_id, 0.000000f);
 		AllowInputBreak = serialized->get_bool(AllowInputBreak_type_id, false); 
 	}
 

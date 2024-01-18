@@ -11,18 +11,18 @@ namespace rivet::ddl::generated {
 	LaserShotTypeAnimEventDriven::LaserShotTypeAnimEventDriven([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BotComboLaserShotType(serialized) {
 		AllowUseWhileMoving = serialized->get_bool(AllowUseWhileMoving_type_id, false);
 		StrafeShootPartialAnim = serialized->get_string(StrafeShootPartialAnim_type_id, {});
-		ScaleTellTime = serialized->get_float(ScaleTellTime_type_id, -1.000000);
-		ScaleShootTime = serialized->get_float(ScaleShootTime_type_id, -1.000000);
-		ScaleRecoveryTime = serialized->get_float(ScaleRecoveryTime_type_id, -1.000000);
+		ScaleTellTime = serialized->get_float(ScaleTellTime_type_id, -1.000000f);
+		ScaleShootTime = serialized->get_float(ScaleShootTime_type_id, -1.000000f);
+		ScaleRecoveryTime = serialized->get_float(ScaleRecoveryTime_type_id, -1.000000f);
 		TweakHeadingTowardsTarget = serialized->get_bool(TweakHeadingTowardsTarget_type_id, false);
-		TweakHeadingTime = serialized->get_float(TweakHeadingTime_type_id, -1.000000);
+		TweakHeadingTime = serialized->get_float(TweakHeadingTime_type_id, -1.000000f);
 		UseAimingComponent = serialized->get_bool(UseAimingComponent_type_id, false);
 		StartAimModOnStateStart = serialized->get_bool(StartAimModOnStateStart_type_id, false);
 		EndAimModsOnShootEnd = serialized->get_bool(EndAimModsOnShootEnd_type_id, false);
-		MimicShotRate = serialized->get_float(MimicShotRate_type_id, 0.250000);
+		MimicShotRate = serialized->get_float(MimicShotRate_type_id, 0.250000f);
 		LimitRange = serialized->get_bool(LimitRange_type_id, false);
-		MinRange = serialized->get_float(MinRange_type_id, 1.000000);
-		MaxRange = serialized->get_float(MaxRange_type_id, 10.000000);
+		MinRange = serialized->get_float(MinRange_type_id, 1.000000f);
+		MaxRange = serialized->get_float(MaxRange_type_id, 10.000000f);
 		AimMods = serialized->unwrap_into_many<rivet::ddl::generated::AimModWrapper>(AimMods_type_id); 
 	}
 

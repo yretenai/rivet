@@ -10,12 +10,12 @@
 namespace rivet::ddl::generated {
 	LedgeBirdTypeConfig::LedgeBirdTypeConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
 		BirdAsset = serialized->get_string(BirdAsset_type_id, {});
-		BirdPhysicsSize = serialized->get_float(BirdPhysicsSize_type_id, 0.200000);
-		BirdPhysicsOffsetY = serialized->get_float(BirdPhysicsOffsetY_type_id, 0.250000);
-		MinBirdSpacing = serialized->get_float(MinBirdSpacing_type_id, 0.300000);
-		MaxBirdSpacing = serialized->get_float(MaxBirdSpacing_type_id, 0.650000);
-		FlockRadius = serialized->get_float(FlockRadius_type_id, 4.000000);
-		MaxBirdsPerLedge = serialized->get_int32(MaxBirdsPerLedge_type_id, 5);
+		BirdPhysicsSize = serialized->get_float(BirdPhysicsSize_type_id, 0.200000f);
+		BirdPhysicsOffsetY = serialized->get_float(BirdPhysicsOffsetY_type_id, 0.250000f);
+		MinBirdSpacing = serialized->get_float(MinBirdSpacing_type_id, 0.300000f);
+		MaxBirdSpacing = serialized->get_float(MaxBirdSpacing_type_id, 0.650000f);
+		FlockRadius = serialized->get_float(FlockRadius_type_id, 4.000000f);
+		MaxBirdsPerLedge = serialized->get_int32(MaxBirdsPerLedge_type_id, 5u);
 		FlockSoundSource = serialized->unwrap_into<rivet::ddl::generated::SoundSourceComponentPrius>(FlockSoundSource_type_id); 
 	}
 

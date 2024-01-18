@@ -10,10 +10,10 @@
 namespace rivet::ddl::generated {
 	TextureFillLight::TextureFillLight([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		FillLightColor = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(FillLightColor_type_id);
-		FillLightIntensity = serialized->get_float(FillLightIntensity_type_id, 0.000000);
-		FillLightSpecIntensity = serialized->get_float(FillLightSpecIntensity_type_id, 1.000000);
-		FillLightAzimuth = serialized->get_float(FillLightAzimuth_type_id, 0.000000);
-		FillLightElevation = serialized->get_float(FillLightElevation_type_id, 45.000000); 
+		FillLightIntensity = serialized->get_float(FillLightIntensity_type_id, 0.000000f);
+		FillLightSpecIntensity = serialized->get_float(FillLightSpecIntensity_type_id, 1.000000f);
+		FillLightAzimuth = serialized->get_float(FillLightAzimuth_type_id, 0.000000f);
+		FillLightElevation = serialized->get_float(FillLightElevation_type_id, 45.000000f); 
 	}
 
 	[[nodiscard]] auto

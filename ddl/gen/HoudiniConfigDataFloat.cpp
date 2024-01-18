@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	HoudiniConfigDataFloat::HoudiniConfigDataFloat([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): HoudiniConfigData(serialized) {
-		Value = serialized->get_float(Value_type_id, 0.000000); 
+		Value = serialized->get_float(Value_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

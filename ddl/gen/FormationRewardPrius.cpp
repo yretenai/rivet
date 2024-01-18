@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	FormationRewardPrius::FormationRewardPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		NumRewards = serialized->get_int32(NumRewards_type_id, 1);
+		NumRewards = serialized->get_int32(NumRewards_type_id, 1u);
 		HealthPickup = serialized->get_string(HealthPickup_type_id, {});
 		AmmoPickup = serialized->get_string(AmmoPickup_type_id, {}); 
 	}

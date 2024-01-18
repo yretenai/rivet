@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	WeaponMagShieldPrius::WeaponMagShieldPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): WeaponGamePrius(serialized) {
-		BlastWaveMinTime = serialized->get_float(BlastWaveMinTime_type_id, 1.000000); 
+		BlastWaveMinTime = serialized->get_float(BlastWaveMinTime_type_id, 1.000000f); 
 	}
 
 	[[nodiscard]] auto

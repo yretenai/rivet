@@ -8,8 +8,8 @@
 namespace rivet::ddl::generated {
 	ItemListElement::ItemListElement([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Item = serialized->get_string(Item_type_id, {});
-		Quantity = serialized->get_uint32(Quantity_type_id, 1);
-		ContainChance = serialized->get_float(ContainChance_type_id, 1.000000); 
+		Quantity = serialized->get_uint32(Quantity_type_id, 1u);
+		ContainChance = serialized->get_float(ContainChance_type_id, 1.000000f); 
 	}
 
 	[[nodiscard]] auto

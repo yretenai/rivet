@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	SpawnSyncedActorEffectNodeDef::SpawnSyncedActorEffectNodeDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): NodalShotEffectNodeBaseDef(serialized) {
 		ActorAsset = serialized->get_string(ActorAsset_type_id, {});
-		NumToSpawn = serialized->get_int32(NumToSpawn_type_id, 1); 
+		NumToSpawn = serialized->get_int32(NumToSpawn_type_id, 1u); 
 	}
 
 	[[nodiscard]] auto

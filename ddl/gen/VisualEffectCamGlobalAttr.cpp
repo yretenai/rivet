@@ -10,11 +10,11 @@ namespace rivet::ddl::generated {
 		KillCulled = serialized->get_bool(KillCulled_type_id, false);
 		SpawnCulled = serialized->get_bool(SpawnCulled_type_id, true);
 		Source = serialized->get_enum<rivet::ddl::generated::x21f55189>(Source_type_id, rivet::ddl::generated::x21f55189_values, rivet::ddl::generated::x21f55189::Self);
-		MaterialLoDDistance = serialized->get_float(MaterialLoDDistance_type_id, 40.000000);
-		FarClip = serialized->get_float(FarClip_type_id, 60.000000);
-		FarFadeStart = serialized->get_float(FarFadeStart_type_id, 40.000000);
-		NearFadeStart = serialized->get_float(NearFadeStart_type_id, 1.000000);
-		NearClip = serialized->get_float(NearClip_type_id, 0.000000); 
+		MaterialLoDDistance = serialized->get_float(MaterialLoDDistance_type_id, 40.000000f);
+		FarClip = serialized->get_float(FarClip_type_id, 60.000000f);
+		FarFadeStart = serialized->get_float(FarFadeStart_type_id, 40.000000f);
+		NearFadeStart = serialized->get_float(NearFadeStart_type_id, 1.000000f);
+		NearClip = serialized->get_float(NearClip_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

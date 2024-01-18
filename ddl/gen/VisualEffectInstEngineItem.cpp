@@ -20,11 +20,11 @@ namespace rivet::ddl::generated {
 		State = serialized->get_enum<rivet::ddl::generated::x62abe5d0>(State_type_id, rivet::ddl::generated::x62abe5d0_values, rivet::ddl::generated::x62abe5d0::Run);
 		VisualEffectDef = serialized->unwrap_into<rivet::ddl::generated::VisualEffectDef>(VisualEffectDef_type_id);
 		VisualEffectEditor = serialized->get_bool(VisualEffectEditor_type_id, false);
-		Counter = serialized->get_int32(Counter_type_id, 0);
-		Speed = serialized->get_float(Speed_type_id, 1.000000);
-		Radius = serialized->get_float(Radius_type_id, 4.000000);
-		DynamicScaling = serialized->get_float(DynamicScaling_type_id, 1.000000);
-		FpsSimulation = serialized->get_float(FpsSimulation_type_id, 1.000000); 
+		Counter = serialized->get_int32(Counter_type_id, 0u);
+		Speed = serialized->get_float(Speed_type_id, 1.000000f);
+		Radius = serialized->get_float(Radius_type_id, 4.000000f);
+		DynamicScaling = serialized->get_float(DynamicScaling_type_id, 1.000000f);
+		FpsSimulation = serialized->get_float(FpsSimulation_type_id, 1.000000f); 
 	}
 
 	[[nodiscard]] auto

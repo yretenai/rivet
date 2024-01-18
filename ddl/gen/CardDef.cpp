@@ -21,7 +21,7 @@ namespace rivet::ddl::generated {
 		HLMType = serialized->get_enum<rivet::ddl::generated::x73ee3658>(HLMType_type_id, rivet::ddl::generated::x73ee3658_values, rivet::ddl::generated::x73ee3658::Homeworld);
 		JSCType = serialized->get_enum<rivet::ddl::generated::xa9c1295e>(JSCType_type_id, rivet::ddl::generated::xa9c1295e_values, rivet::ddl::generated::xa9c1295e::System);
 		OverrideDuplicateTradeCount = serialized->get_bool(OverrideDuplicateTradeCount_type_id, false);
-		DuplicateTradeCount = serialized->get_uint32(DuplicateTradeCount_type_id, 10); 
+		DuplicateTradeCount = serialized->get_uint32(DuplicateTradeCount_type_id, 10u); 
 	}
 
 	[[nodiscard]] auto

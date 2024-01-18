@@ -8,8 +8,8 @@
 namespace rivet::ddl::generated {
 	DebugDrawSettings::DebugDrawSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		DebugDrawEnable = serialized->get_bool(DebugDrawEnable_type_id, true);
-		DebugDrawEntryCount = serialized->get_uint32(DebugDrawEntryCount_type_id, 8192);
-		DebugDrawStringMemSize = serialized->get_uint32(DebugDrawStringMemSize_type_id, 12288); 
+		DebugDrawEntryCount = serialized->get_uint32(DebugDrawEntryCount_type_id, 8192u);
+		DebugDrawStringMemSize = serialized->get_uint32(DebugDrawStringMemSize_type_id, 12288u); 
 	}
 
 	[[nodiscard]] auto

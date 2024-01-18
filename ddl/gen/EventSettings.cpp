@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	EventSettings::EventSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		InstanceMax = serialized->get_int32(InstanceMax_type_id, 5120);
-		DelayInstanceMax = serialized->get_int32(DelayInstanceMax_type_id, 1024);
-		BucketedInstanceMax = serialized->get_int32(BucketedInstanceMax_type_id, 1024);
-		ThreadInstanceMax = serialized->get_int32(ThreadInstanceMax_type_id, 512);
-		ThreadEventHeapSize = serialized->get_int32(ThreadEventHeapSize_type_id, 65536); 
+		InstanceMax = serialized->get_int32(InstanceMax_type_id, 5120u);
+		DelayInstanceMax = serialized->get_int32(DelayInstanceMax_type_id, 1024u);
+		BucketedInstanceMax = serialized->get_int32(BucketedInstanceMax_type_id, 1024u);
+		ThreadInstanceMax = serialized->get_int32(ThreadInstanceMax_type_id, 512u);
+		ThreadEventHeapSize = serialized->get_int32(ThreadEventHeapSize_type_id, 65536u); 
 	}
 
 	[[nodiscard]] auto

@@ -9,7 +9,7 @@ namespace rivet::ddl::generated {
 	HeroMaterialGlobal::HeroMaterialGlobal([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		LocatorName = serialized->get_string(LocatorName_type_id, {});
 		ConstantName = serialized->get_string(ConstantName_type_id, {});
-		Radius = serialized->get_float(Radius_type_id, 0.000000); 
+		Radius = serialized->get_float(Radius_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

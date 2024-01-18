@@ -9,8 +9,8 @@ namespace rivet::ddl::generated {
 	DevstatsPlayerPosInfoGame::DevstatsPlayerPosInfoGame([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): DevstatsProjSpecificBase(serialized) {
 		MountAsset = serialized->get_string(MountAsset_type_id, {});
 		Difficulty = serialized->get_string(Difficulty_type_id, {});
-		CurrentHealth = serialized->get_float(CurrentHealth_type_id, -1.000000);
-		MaxHealth = serialized->get_float(MaxHealth_type_id, -1.000000); 
+		CurrentHealth = serialized->get_float(CurrentHealth_type_id, -1.000000f);
+		MaxHealth = serialized->get_float(MaxHealth_type_id, -1.000000f); 
 	}
 
 	[[nodiscard]] auto

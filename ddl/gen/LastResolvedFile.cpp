@@ -8,8 +8,8 @@
 namespace rivet::ddl::generated {
 	LastResolvedFile::LastResolvedFile([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		FileToResolve = serialized->get_string(FileToResolve_type_id, {});
-		BaseRevisionNumber = serialized->get_int32(BaseRevisionNumber_type_id, 0);
-		LatestRevisionNumber = serialized->get_int32(LatestRevisionNumber_type_id, 0);
+		BaseRevisionNumber = serialized->get_int32(BaseRevisionNumber_type_id, 0u);
+		LatestRevisionNumber = serialized->get_int32(LatestRevisionNumber_type_id, 0u);
 		TheirChanges = serialized->get_field(TheirChanges_type_id);
 		YourChanges = serialized->get_field(YourChanges_type_id);
 		MergedResult = serialized->get_field(MergedResult_type_id); 

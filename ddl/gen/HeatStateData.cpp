@@ -8,8 +8,8 @@
 namespace rivet::ddl::generated {
 	HeatStateData::HeatStateData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		HeatState = serialized->get_enum<rivet::ddl::generated::xa6f8b099>(HeatState_type_id, rivet::ddl::generated::xa6f8b099_values, rivet::ddl::generated::xa6f8b099::None);
-		TempThreshold = serialized->get_float(TempThreshold_type_id, 0.000000);
-		NumBulletsToSpray = serialized->get_uint32(NumBulletsToSpray_type_id, 1); 
+		TempThreshold = serialized->get_float(TempThreshold_type_id, 0.000000f);
+		NumBulletsToSpray = serialized->get_uint32(NumBulletsToSpray_type_id, 1u); 
 	}
 
 	[[nodiscard]] auto

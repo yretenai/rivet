@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	HeroLevelData::HeroLevelData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		XPForLevel = serialized->get_uint32(XPForLevel_type_id, 0);
-		Health = serialized->get_float(Health_type_id, 10.000000); 
+		XPForLevel = serialized->get_uint32(XPForLevel_type_id, 0u);
+		Health = serialized->get_float(Health_type_id, 10.000000f); 
 	}
 
 	[[nodiscard]] auto

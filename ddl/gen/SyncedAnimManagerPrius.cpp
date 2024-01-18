@@ -9,14 +9,14 @@
 
 namespace rivet::ddl::generated {
 	SyncedAnimManagerPrius::SyncedAnimManagerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AnimHash = serialized->get_uint32(AnimHash_type_id, 0);
+		AnimHash = serialized->get_uint32(AnimHash_type_id, 0u);
 		GuestEntries = serialized->unwrap_into_many<rivet::ddl::generated::SyncedAnimGuestEntry>(GuestEntries_type_id);
 		AnchorPosType = serialized->get_enum<rivet::ddl::generated::x91b33164>(AnchorPosType_type_id, rivet::ddl::generated::x91b33164_values, rivet::ddl::generated::x91b33164::Guest);
 		AnchorRotType = serialized->get_enum<rivet::ddl::generated::xb40cfc5d>(AnchorRotType_type_id, rivet::ddl::generated::xb40cfc5d_values, rivet::ddl::generated::xb40cfc5d::HostToGuest2D);
 		VertAlignType = serialized->get_enum<rivet::ddl::generated::x17f5b8aa>(VertAlignType_type_id, rivet::ddl::generated::x17f5b8aa_values, rivet::ddl::generated::x17f5b8aa::AnchorPos);
 		TagType = serialized->get_enum<rivet::ddl::generated::xb1a3ff98>(TagType_type_id, rivet::ddl::generated::xb1a3ff98_values, rivet::ddl::generated::xb1a3ff98::Generic);
 		SnapToImpactFrames = serialized->get_bool(SnapToImpactFrames_type_id, true);
-		EarliestGuestEngageTime = serialized->get_float(EarliestGuestEngageTime_type_id, -1.000000);
+		EarliestGuestEngageTime = serialized->get_float(EarliestGuestEngageTime_type_id, -1.000000f);
 		AllowGuestReordering = serialized->get_bool(AllowGuestReordering_type_id, true); 
 	}
 

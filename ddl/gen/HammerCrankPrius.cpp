@@ -9,13 +9,13 @@ namespace rivet::ddl::generated {
 	HammerCrankPrius::HammerCrankPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		SaveUsedState = serialized->get_bool(SaveUsedState_type_id, true);
 		HeroType = serialized->get_enum<rivet::ddl::generated::HeroTypes>(HeroType_type_id, rivet::ddl::generated::HeroTypes_values, rivet::ddl::generated::HeroTypes::Rivet);
-		Camera = serialized->get_uint64(Camera_type_id, 0);
-		CameraBlendInTime = serialized->get_float(CameraBlendInTime_type_id, 1.000000);
-		CameraBlendOutTime = serialized->get_float(CameraBlendOutTime_type_id, 1.000000);
-		ButtonDisplayRange = serialized->get_float(ButtonDisplayRange_type_id, 5.000000);
-		CrankSpeedMultiplier = serialized->get_float(CrankSpeedMultiplier_type_id, 2.000000);
+		Camera = serialized->get_uint64(Camera_type_id, 0ull);
+		CameraBlendInTime = serialized->get_float(CameraBlendInTime_type_id, 1.000000f);
+		CameraBlendOutTime = serialized->get_float(CameraBlendOutTime_type_id, 1.000000f);
+		ButtonDisplayRange = serialized->get_float(ButtonDisplayRange_type_id, 5.000000f);
+		CrankSpeedMultiplier = serialized->get_float(CrankSpeedMultiplier_type_id, 2.000000f);
 		UseCrankTimeOverride = serialized->get_bool(UseCrankTimeOverride_type_id, false);
-		CrankTimeOverride = serialized->get_float(CrankTimeOverride_type_id, 1.000000); 
+		CrankTimeOverride = serialized->get_float(CrankTimeOverride_type_id, 1.000000f); 
 	}
 
 	[[nodiscard]] auto

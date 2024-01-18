@@ -11,7 +11,7 @@ namespace rivet::ddl::generated {
 	ConnectionEffectPrius::ConnectionEffectPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		MainLocator = serialized->get_string(MainLocator_type_id, {});
 		MainOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(MainOffset_type_id);
-		ConnectedActor = serialized->get_uint64(ConnectedActor_type_id, 0);
+		ConnectedActor = serialized->get_uint64(ConnectedActor_type_id, 0ull);
 		ConnectedLocator = serialized->get_string(ConnectedLocator_type_id, {});
 		ConnectedOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(ConnectedOffset_type_id); 
 	}

@@ -7,14 +7,14 @@
 
 namespace rivet::ddl::generated {
 	AmbientBarrageConfig::AmbientBarrageConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		MinNumBursts = serialized->get_int32(MinNumBursts_type_id, 1);
-		MaxNumBursts = serialized->get_int32(MaxNumBursts_type_id, 1);
-		MinBurstDuration = serialized->get_float(MinBurstDuration_type_id, 0.000000);
-		MaxBurstDuration = serialized->get_float(MaxBurstDuration_type_id, 0.000000);
-		MinBurstDelay = serialized->get_float(MinBurstDelay_type_id, 0.500000);
-		MaxBurstDelay = serialized->get_float(MaxBurstDelay_type_id, 0.500000);
-		MinCooldownDuration = serialized->get_float(MinCooldownDuration_type_id, 5.000000);
-		MaxCooldownDuration = serialized->get_float(MaxCooldownDuration_type_id, 5.000000); 
+		MinNumBursts = serialized->get_int32(MinNumBursts_type_id, 1u);
+		MaxNumBursts = serialized->get_int32(MaxNumBursts_type_id, 1u);
+		MinBurstDuration = serialized->get_float(MinBurstDuration_type_id, 0.000000f);
+		MaxBurstDuration = serialized->get_float(MaxBurstDuration_type_id, 0.000000f);
+		MinBurstDelay = serialized->get_float(MinBurstDelay_type_id, 0.500000f);
+		MaxBurstDelay = serialized->get_float(MaxBurstDelay_type_id, 0.500000f);
+		MinCooldownDuration = serialized->get_float(MinCooldownDuration_type_id, 5.000000f);
+		MaxCooldownDuration = serialized->get_float(MaxCooldownDuration_type_id, 5.000000f); 
 	}
 
 	[[nodiscard]] auto

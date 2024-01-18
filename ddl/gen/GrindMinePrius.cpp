@@ -7,22 +7,22 @@
 
 namespace rivet::ddl::generated {
 	GrindMinePrius::GrindMinePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActivateVolume = serialized->get_uint64(ActivateVolume_type_id, 0);
-		IntroCurve = serialized->get_uint64(IntroCurve_type_id, 0);
-		IntroTime = serialized->get_float(IntroTime_type_id, 1.000000);
-		TransitionPercent = serialized->get_float(TransitionPercent_type_id, 0.500000);
-		OscillateCurve = serialized->get_uint64(OscillateCurve_type_id, 0);
-		OscillationRate = serialized->get_float(OscillationRate_type_id, 1.000000);
-		Range = serialized->get_float(Range_type_id, 2.000000);
-		DamagePercent = serialized->get_float(DamagePercent_type_id, 0.200000);
+		ActivateVolume = serialized->get_uint64(ActivateVolume_type_id, 0ull);
+		IntroCurve = serialized->get_uint64(IntroCurve_type_id, 0ull);
+		IntroTime = serialized->get_float(IntroTime_type_id, 1.000000f);
+		TransitionPercent = serialized->get_float(TransitionPercent_type_id, 0.500000f);
+		OscillateCurve = serialized->get_uint64(OscillateCurve_type_id, 0ull);
+		OscillationRate = serialized->get_float(OscillationRate_type_id, 1.000000f);
+		Range = serialized->get_float(Range_type_id, 2.000000f);
+		DamagePercent = serialized->get_float(DamagePercent_type_id, 0.200000f);
 		DamageType = serialized->get_enum<rivet::ddl::generated::DamageTypes>(DamageType_type_id, rivet::ddl::generated::DamageTypes_values, rivet::ddl::generated::DamageTypes::Explosion);
 		SingleUse = serialized->get_bool(SingleUse_type_id, true);
 		ExplodeWhenHit = serialized->get_bool(ExplodeWhenHit_type_id, false);
-		HitReactVolume = serialized->get_uint64(HitReactVolume_type_id, 0);
-		BobFrequencyMin = serialized->get_float(BobFrequencyMin_type_id, 2.000000);
-		BobFrequencyMax = serialized->get_float(BobFrequencyMax_type_id, 3.000000);
-		BobAmplitudeMin = serialized->get_float(BobAmplitudeMin_type_id, 0.100000);
-		BobAmplitudeMax = serialized->get_float(BobAmplitudeMax_type_id, 0.250000); 
+		HitReactVolume = serialized->get_uint64(HitReactVolume_type_id, 0ull);
+		BobFrequencyMin = serialized->get_float(BobFrequencyMin_type_id, 2.000000f);
+		BobFrequencyMax = serialized->get_float(BobFrequencyMax_type_id, 3.000000f);
+		BobAmplitudeMin = serialized->get_float(BobAmplitudeMin_type_id, 0.100000f);
+		BobAmplitudeMax = serialized->get_float(BobAmplitudeMax_type_id, 0.250000f); 
 	}
 
 	[[nodiscard]] auto

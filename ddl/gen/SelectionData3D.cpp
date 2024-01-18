@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	SelectionData3D::SelectionData3D([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		SelectedObjects = serialized->get_uint64s(SelectedObjects_type_id);
-		LastSelectedObject = serialized->get_uint64(LastSelectedObject_type_id, 0); 
+		LastSelectedObject = serialized->get_uint64(LastSelectedObject_type_id, 0ull); 
 	}
 
 	[[nodiscard]] auto

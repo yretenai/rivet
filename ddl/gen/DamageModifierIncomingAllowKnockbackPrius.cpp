@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	DamageModifierIncomingAllowKnockbackPrius::DamageModifierIncomingAllowKnockbackPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): DamageModifierIncomingPrius(serialized) {
-		AllowedKnockbacks = serialized->get_bitset<rivet::ddl::generated::x8b303a8b>(AllowedKnockbacks_type_id, rivet::ddl::generated::x8b303a8b_values, 1); 
+		AllowedKnockbacks = serialized->get_bitset<rivet::ddl::generated::x8b303a8b>(AllowedKnockbacks_type_id, rivet::ddl::generated::x8b303a8b_values, 1u); 
 	}
 
 	[[nodiscard]] auto

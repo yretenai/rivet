@@ -10,7 +10,7 @@ namespace rivet::ddl::generated {
 		BlendEventsType = serialized->get_enum<rivet::ddl::generated::x8dc10932>(BlendEventsType_type_id, rivet::ddl::generated::x8dc10932_values, rivet::ddl::generated::x8dc10932::AnimBlendAuxTypeDominant);
 		BlendCustomTrackType = serialized->get_enum<rivet::ddl::generated::x8dc10932>(BlendCustomTrackType_type_id, rivet::ddl::generated::x8dc10932_values, rivet::ddl::generated::x8dc10932::AnimBlendAuxTypeDominant);
 		BlendMorphType = serialized->get_enum<rivet::ddl::generated::x8dc10932>(BlendMorphType_type_id, rivet::ddl::generated::x8dc10932_values, rivet::ddl::generated::x8dc10932::AnimBlendAuxTypeDominant);
-		Factor = serialized->get_float(Factor_type_id, 0.000000); 
+		Factor = serialized->get_float(Factor_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

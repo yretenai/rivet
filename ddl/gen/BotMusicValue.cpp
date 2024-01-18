@@ -8,8 +8,8 @@
 namespace rivet::ddl::generated {
 	BotMusicValue::BotMusicValue([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Category = serialized->get_string(Category_type_id, {});
-		Value = serialized->get_float(Value_type_id, 0.000000);
-		Radius = serialized->get_float(Radius_type_id, 0.000000);
+		Value = serialized->get_float(Value_type_id, 0.000000f);
+		Radius = serialized->get_float(Radius_type_id, 0.000000f);
 		Bots = serialized->get_strings(Bots_type_id); 
 	}
 

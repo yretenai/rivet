@@ -10,7 +10,7 @@ namespace rivet::ddl::generated {
 		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Events);
 		GroupName = serialized->get_string(GroupName_type_id, "");
 		InitListening = serialized->get_bool(InitListening_type_id, true);
-		SignalMax = serialized->get_int32(SignalMax_type_id, 1);
+		SignalMax = serialized->get_int32(SignalMax_type_id, 1u);
 		ListenForTrigger = serialized->get_bool(ListenForTrigger_type_id, true);
 		ListenForUntrigger = serialized->get_bool(ListenForUntrigger_type_id, true); 
 	}

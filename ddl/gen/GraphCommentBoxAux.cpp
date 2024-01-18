@@ -12,9 +12,9 @@ namespace rivet::ddl::generated {
 		Comment = serialized->get_string(Comment_type_id, {});
 		Description = serialized->get_string(Description_type_id, {});
 		Color = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Color_type_id);
-		Alpha = serialized->get_float(Alpha_type_id, 0.000000);
-		Width = serialized->get_float(Width_type_id, 0.000000);
-		Height = serialized->get_float(Height_type_id, 0.000000); 
+		Alpha = serialized->get_float(Alpha_type_id, 0.000000f);
+		Width = serialized->get_float(Width_type_id, 0.000000f);
+		Height = serialized->get_float(Height_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

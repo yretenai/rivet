@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	DamageModifierAddPrius::DamageModifierAddPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): DamageModifierIncomingPrius(serialized) {
-		Add = serialized->get_float(Add_type_id, 0.000000);
-		AddStatus = serialized->get_float(AddStatus_type_id, 0.000000);
-		Lifetime = serialized->get_float(Lifetime_type_id, -1.000000);
+		Add = serialized->get_float(Add_type_id, 0.000000f);
+		AddStatus = serialized->get_float(AddStatus_type_id, 0.000000f);
+		Lifetime = serialized->get_float(Lifetime_type_id, -1.000000f);
 		ApplyHeal = serialized->get_bool(ApplyHeal_type_id, false);
 		DamageFilter = serialized->get_enums<rivet::ddl::generated::DamageTypes>(DamageFilter_type_id, rivet::ddl::generated::DamageTypes_values); 
 	}

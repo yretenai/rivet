@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	ClankBotSpawnData::ClankBotSpawnData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ActorSpawnData(serialized) {
-		AssetId = serialized->get_uint64(AssetId_type_id, 0);
-		Spawner = serialized->get_uint32(Spawner_type_id, 0);
-		Role = serialized->get_uint32(Role_type_id, 0); 
+		AssetId = serialized->get_uint64(AssetId_type_id, 0ull);
+		Spawner = serialized->get_uint32(Spawner_type_id, 0u);
+		Role = serialized->get_uint32(Role_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

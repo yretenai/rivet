@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	ModelSplineEnvelopeFloatDef::ModelSplineEnvelopeFloatDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		BaseValue = serialized->get_float(BaseValue_type_id, 1.000000);
+		BaseValue = serialized->get_float(BaseValue_type_id, 1.000000f);
 		Envelope = serialized->unwrap_into<rivet::ddl::generated::EnvelopeFloatDef>(Envelope_type_id); 
 	}
 

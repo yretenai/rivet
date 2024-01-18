@@ -11,12 +11,12 @@ namespace rivet::ddl::generated {
 	AimAssistFrictionData::AimAssistFrictionData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Enable = serialized->get_bool(Enable_type_id, true);
 		BoxProcessing = serialized->unwrap_into<rivet::ddl::generated::AimAssistCurveData>(BoxProcessing_type_id);
-		StickMin = serialized->get_float(StickMin_type_id, 0.200000);
-		StickMax = serialized->get_float(StickMax_type_id, 0.850000);
-		FactorMin = serialized->get_float(FactorMin_type_id, 1.000000);
-		FactorMax = serialized->get_float(FactorMax_type_id, 1.000000);
-		FactorCurve = serialized->get_float(FactorCurve_type_id, 1.000000);
-		SpeedScale = serialized->get_float(SpeedScale_type_id, 0.900000); 
+		StickMin = serialized->get_float(StickMin_type_id, 0.200000f);
+		StickMax = serialized->get_float(StickMax_type_id, 0.850000f);
+		FactorMin = serialized->get_float(FactorMin_type_id, 1.000000f);
+		FactorMax = serialized->get_float(FactorMax_type_id, 1.000000f);
+		FactorCurve = serialized->get_float(FactorCurve_type_id, 1.000000f);
+		SpeedScale = serialized->get_float(SpeedScale_type_id, 0.900000f); 
 	}
 
 	[[nodiscard]] auto

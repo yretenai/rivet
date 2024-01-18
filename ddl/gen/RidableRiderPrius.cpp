@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	RidableRiderPrius::RidableRiderPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		RidableHandle = serialized->get_uint32(RidableHandle_type_id, 0);
-		AnimSetId = serialized->get_uint64(AnimSetId_type_id, 0);
-		SeatIndex = serialized->get_int32(SeatIndex_type_id, 0); 
+		RidableHandle = serialized->get_uint32(RidableHandle_type_id, 0u);
+		AnimSetId = serialized->get_uint64(AnimSetId_type_id, 0ull);
+		SeatIndex = serialized->get_int32(SeatIndex_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	UVTiling::UVTiling([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Type = serialized->get_enum<rivet::ddl::generated::x59a8501f>(Type_type_id, rivet::ddl::generated::x59a8501f_values, rivet::ddl::generated::x59a8501f::Full_Length);
-		Value = serialized->get_float(Value_type_id, 1.000000); 
+		Value = serialized->get_float(Value_type_id, 1.000000f); 
 	}
 
 	[[nodiscard]] auto

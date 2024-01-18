@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	CineCameraEnableYawPitchEvent::CineCameraEnableYawPitchEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		YawMin = serialized->get_float(YawMin_type_id, -10.000000);
-		YawMax = serialized->get_float(YawMax_type_id, 10.000000);
-		YawSoftZone = serialized->get_float(YawSoftZone_type_id, 3.000000);
-		PitchMin = serialized->get_float(PitchMin_type_id, -5.000000);
-		PitchMax = serialized->get_float(PitchMax_type_id, 5.000000);
-		PitchSoftZone = serialized->get_float(PitchSoftZone_type_id, 3.000000);
+		YawMin = serialized->get_float(YawMin_type_id, -10.000000f);
+		YawMax = serialized->get_float(YawMax_type_id, 10.000000f);
+		YawSoftZone = serialized->get_float(YawSoftZone_type_id, 3.000000f);
+		PitchMin = serialized->get_float(PitchMin_type_id, -5.000000f);
+		PitchMax = serialized->get_float(PitchMax_type_id, 5.000000f);
+		PitchSoftZone = serialized->get_float(PitchSoftZone_type_id, 3.000000f);
 		StickConfig = serialized->get_string(StickConfig_type_id, {}); 
 	}
 

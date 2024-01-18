@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	VaultEntry::VaultEntry([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		VaultId = serialized->get_uint64(VaultId_type_id, 0);
+		VaultId = serialized->get_uint64(VaultId_type_id, 0ull);
 		Path = serialized->get_string(Path_type_id, {});
 		CreatedBy = serialized->get_string(CreatedBy_type_id, {});
 		ModifiedBy = serialized->get_string(ModifiedBy_type_id, {});

@@ -9,11 +9,11 @@
 
 namespace rivet::ddl::generated {
 	FromMrsZurkonSpawnData::FromMrsZurkonSpawnData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ActorSpawnData(serialized) {
-		Parent = serialized->get_uint32(Parent_type_id, 0);
-		AssetId = serialized->get_uint64(AssetId_type_id, 0);
+		Parent = serialized->get_uint32(Parent_type_id, 0u);
+		AssetId = serialized->get_uint64(AssetId_type_id, 0ull);
 		Pos = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Pos_type_id);
 		Facing = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Facing_type_id);
-		WantsIntro = serialized->get_uint8(WantsIntro_type_id, 0); 
+		WantsIntro = serialized->get_uint8(WantsIntro_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

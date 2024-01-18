@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ChompBarPrius::ChompBarPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ChompDistance = serialized->get_float(ChompDistance_type_id, 15.000000); 
+		ChompDistance = serialized->get_float(ChompDistance_type_id, 15.000000f); 
 	}
 
 	[[nodiscard]] auto

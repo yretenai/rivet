@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	GridTileData::GridTileData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		GridIndex = serialized->get_uint32(GridIndex_type_id, 0);
-		TileIndex = serialized->get_uint32(TileIndex_type_id, 0); 
+		GridIndex = serialized->get_uint32(GridIndex_type_id, 0u);
+		TileIndex = serialized->get_uint32(TileIndex_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

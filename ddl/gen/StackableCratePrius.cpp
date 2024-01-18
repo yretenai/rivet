@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	StackableCratePrius::StackableCratePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Radius = serialized->get_float(Radius_type_id, 0.500000);
+		Radius = serialized->get_float(Radius_type_id, 0.500000f);
 		SaveDestroy = serialized->get_bool(SaveDestroy_type_id, true);
 		Indestructible = serialized->get_bool(Indestructible_type_id, false);
 		CrateMaterialType = serialized->get_enum<rivet::ddl::generated::x66e403a6>(CrateMaterialType_type_id, rivet::ddl::generated::x66e403a6_values, rivet::ddl::generated::x66e403a6::None); 

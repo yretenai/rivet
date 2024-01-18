@@ -11,8 +11,8 @@ namespace rivet::ddl::generated {
 		MaterialInputName = serialized->get_string(MaterialInputName_type_id, {});
 		MaterialMappingName = serialized->get_string(MaterialMappingName_type_id, {});
 		AnimTrackName = serialized->get_strings(AnimTrackName_type_id);
-		ClampMin = serialized->get_float(ClampMin_type_id, -1.000000);
-		ClampMax = serialized->get_float(ClampMax_type_id, 1.000000); 
+		ClampMin = serialized->get_float(ClampMin_type_id, -1.000000f);
+		ClampMax = serialized->get_float(ClampMax_type_id, 1.000000f); 
 	}
 
 	[[nodiscard]] auto

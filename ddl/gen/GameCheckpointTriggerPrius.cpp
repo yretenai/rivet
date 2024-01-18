@@ -10,8 +10,8 @@ namespace rivet::ddl::generated {
 		StartEnabled = serialized->get_bool(StartEnabled_type_id, true);
 		CheckpointName = serialized->get_string(CheckpointName_type_id, "default");
 		IsReusable = serialized->get_bool(IsReusable_type_id, false);
-		AddlArea = serialized->get_uint64(AddlArea_type_id, 0);
-		NonVolRange = serialized->get_float(NonVolRange_type_id, 10.000000); 
+		AddlArea = serialized->get_uint64(AddlArea_type_id, 0ull);
+		NonVolRange = serialized->get_float(NonVolRange_type_id, 10.000000f); 
 	}
 
 	[[nodiscard]] auto

@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	ModifyRequest::ModifyRequest([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SessionId = serialized->get_uint64(SessionId_type_id, 0);
+		SessionId = serialized->get_uint64(SessionId_type_id, 0ull);
 		Replayable = serialized->get_bool(Replayable_type_id, true);
 		Batch = serialized->unwrap_into<rivet::ddl::generated::ChangeBatch>(Batch_type_id);
 		MergeJson = serialized->get_field(MergeJson_type_id);

@@ -18,8 +18,8 @@ namespace rivet::ddl::generated {
 		IsVec3Range = serialized->get_bool(IsVec3Range_type_id, false);
 		IsColor = serialized->get_bool(IsColor_type_id, false);
 		IsColorRange = serialized->get_bool(IsColorRange_type_id, false);
-		FloatA = serialized->get_float(FloatA_type_id, 0.000000);
-		FloatB = serialized->get_float(FloatB_type_id, 0.000000);
+		FloatA = serialized->get_float(FloatA_type_id, 0.000000f);
+		FloatB = serialized->get_float(FloatB_type_id, 0.000000f);
 		Vec2A = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(Vec2A_type_id);
 		Vec2B = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(Vec2B_type_id);
 		Vec3A = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Vec3A_type_id);

@@ -10,7 +10,7 @@
 namespace rivet::ddl::generated {
 	FootstepEvent::FootstepEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): GroundEvent(serialized) {
 		Foot = serialized->get_enum<rivet::ddl::generated::x94d69111>(Foot_type_id, rivet::ddl::generated::x94d69111_values, rivet::ddl::generated::x94d69111::Left);
-		FootIndex = serialized->get_int32(FootIndex_type_id, 0);
+		FootIndex = serialized->get_int32(FootIndex_type_id, 0u);
 		Strength = serialized->get_enum<rivet::ddl::generated::x94fdc626>(Strength_type_id, rivet::ddl::generated::x94fdc626_values, rivet::ddl::generated::x94fdc626::Soft);
 		Speed = serialized->get_enum<rivet::ddl::generated::x59a8f068>(Speed_type_id, rivet::ddl::generated::x59a8f068_values, rivet::ddl::generated::x59a8f068::Walk); 
 	}

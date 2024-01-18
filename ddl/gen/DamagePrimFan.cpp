@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	DamagePrimFan::DamagePrimFan([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): DamagePrimBase(serialized) {
-		FanSpacing = serialized->get_float(FanSpacing_type_id, 0.500000);
-		MaxSubdivide = serialized->get_int32(MaxSubdivide_type_id, 10);
-		DamageRadius = serialized->get_float(DamageRadius_type_id, 1.000000); 
+		FanSpacing = serialized->get_float(FanSpacing_type_id, 0.500000f);
+		MaxSubdivide = serialized->get_int32(MaxSubdivide_type_id, 10u);
+		DamageRadius = serialized->get_float(DamageRadius_type_id, 1.000000f); 
 	}
 
 	[[nodiscard]] auto

@@ -9,7 +9,7 @@ namespace rivet::ddl::generated {
 	AddStatModifierEffectPrius::AddStatModifierEffectPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ScriptedShotEffectBasePrius(serialized) {
 		Stat = serialized->get_enum<rivet::ddl::generated::x67c7527d>(Stat_type_id, rivet::ddl::generated::x67c7527d_values, rivet::ddl::generated::x67c7527d::Damage);
 		Op = serialized->get_enum<rivet::ddl::generated::x2d67b08a>(Op_type_id, rivet::ddl::generated::x2d67b08a_values, rivet::ddl::generated::x2d67b08a::Multiply);
-		Value = serialized->get_float(Value_type_id, 0.000000); 
+		Value = serialized->get_float(Value_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

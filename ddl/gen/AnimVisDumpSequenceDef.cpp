@@ -10,10 +10,10 @@
 
 namespace rivet::ddl::generated {
 	AnimVisDumpSequenceDef::AnimVisDumpSequenceDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		FrameCount = serialized->get_uint32(FrameCount_type_id, 0);
-		TimeStart = serialized->get_float(TimeStart_type_id, 0.000000);
-		TimeEnd = serialized->get_float(TimeEnd_type_id, 0.000000);
-		SampleRate = serialized->get_float(SampleRate_type_id, 0.000000);
+		FrameCount = serialized->get_uint32(FrameCount_type_id, 0u);
+		TimeStart = serialized->get_float(TimeStart_type_id, 0.000000f);
+		TimeEnd = serialized->get_float(TimeEnd_type_id, 0.000000f);
+		SampleRate = serialized->get_float(SampleRate_type_id, 0.000000f);
 		JointNames = serialized->get_strings(JointNames_type_id);
 		MorphTargetNames = serialized->get_strings(MorphTargetNames_type_id);
 		Joints = serialized->unwrap_into_many<rivet::ddl::generated::AnimVisDumpJointDef>(Joints_type_id);

@@ -8,8 +8,8 @@
 namespace rivet::ddl::generated {
 	TargetAttackShapeCone::TargetAttackShapeCone([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): TargetedAttackShape(serialized) {
 		Locator = serialized->get_string(Locator_type_id, "");
-		Length = serialized->get_float(Length_type_id, 15.000000);
-		HalfAngle = serialized->get_float(HalfAngle_type_id, 45.000000); 
+		Length = serialized->get_float(Length_type_id, 15.000000f);
+		HalfAngle = serialized->get_float(HalfAngle_type_id, 45.000000f); 
 	}
 
 	[[nodiscard]] auto

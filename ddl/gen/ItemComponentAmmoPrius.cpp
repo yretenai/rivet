@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	ItemComponentAmmoPrius::ItemComponentAmmoPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BaseComponentAmmoPrius(serialized) {
 		AmmoItemConfig = serialized->get_string(AmmoItemConfig_type_id, {});
-		ClipMax = serialized->get_float(ClipMax_type_id, 0.000000); 
+		ClipMax = serialized->get_float(ClipMax_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

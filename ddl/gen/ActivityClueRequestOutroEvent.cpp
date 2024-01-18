@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ActivityClueRequestOutroEvent::ActivityClueRequestOutroEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		OutroSpeed = serialized->get_int32(OutroSpeed_type_id, 0); 
+		OutroSpeed = serialized->get_int32(OutroSpeed_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

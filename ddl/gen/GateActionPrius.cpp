@@ -9,7 +9,7 @@ namespace rivet::ddl::generated {
 	GateActionPrius::GateActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Logic);
 		StartOpen = serialized->get_bool(StartOpen_type_id, true);
-		AutoClose = serialized->get_uint32(AutoClose_type_id, 0); 
+		AutoClose = serialized->get_uint32(AutoClose_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	MaterialProfilingSettings::MaterialProfilingSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		GBufferBaseline = serialized->get_float(GBufferBaseline_type_id, 400.000000);
-		ForwardBaseline = serialized->get_float(ForwardBaseline_type_id, 1600.000000); 
+		GBufferBaseline = serialized->get_float(GBufferBaseline_type_id, 400.000000f);
+		ForwardBaseline = serialized->get_float(ForwardBaseline_type_id, 1600.000000f); 
 	}
 
 	[[nodiscard]] auto

@@ -11,7 +11,7 @@ namespace rivet::ddl::generated {
 	HurdleShotPrius::HurdleShotPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): GroundWaveShotPrius(serialized) {
 		DamageFromBeginning = serialized->get_bool(DamageFromBeginning_type_id, false);
 		DisableGroundCrawlMotion = serialized->get_bool(DisableGroundCrawlMotion_type_id, false);
-		NumShotsInHurdle = serialized->get_uint32(NumShotsInHurdle_type_id, 5);
+		NumShotsInHurdle = serialized->get_uint32(NumShotsInHurdle_type_id, 5u);
 		SecondaryShotSpawnEmit = serialized->get_string(SecondaryShotSpawnEmit_type_id, {});
 		SecondaryShotPrius = serialized->unwrap_into<rivet::ddl::generated::ShotBasePrius>(SecondaryShotPrius_type_id); 
 	}

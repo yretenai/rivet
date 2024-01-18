@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	AnimDamageEvent::AnimDamageEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		DamageDuration = serialized->get_float(DamageDuration_type_id, 0.250000);
+		DamageDuration = serialized->get_float(DamageDuration_type_id, 0.250000f);
 		OverrideLocator = serialized->get_string(OverrideLocator_type_id, {}); 
 	}
 

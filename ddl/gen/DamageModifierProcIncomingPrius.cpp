@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	DamageModifierProcIncomingPrius::DamageModifierProcIncomingPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): DamageModifierIncomingPrius(serialized) {
-		ProcChance = serialized->get_float(ProcChance_type_id, 1.000000);
-		RequestId = serialized->get_uint32(RequestId_type_id, 0); 
+		ProcChance = serialized->get_float(ProcChance_type_id, 1.000000f);
+		RequestId = serialized->get_uint32(RequestId_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

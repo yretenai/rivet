@@ -8,8 +8,8 @@
 namespace rivet::ddl::generated {
 	LookEngineItem::LookEngineItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Name = serialized->get_string(Name_type_id, {});
-		Hash = serialized->get_uint32(Hash_type_id, 0);
-		HashLower = serialized->get_uint32(HashLower_type_id, 0);
+		Hash = serialized->get_uint32(Hash_type_id, 0u);
+		HashLower = serialized->get_uint32(HashLower_type_id, 0u);
 		EnabledByDefault = serialized->get_bool(EnabledByDefault_type_id, false);
 		Enabled = serialized->get_bool(Enabled_type_id, false); 
 	}

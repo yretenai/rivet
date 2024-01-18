@@ -13,9 +13,9 @@ namespace rivet::ddl::generated {
 		WindowPosition = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(WindowPosition_type_id);
 		WindowPosition3D = serialized->get_bool(WindowPosition3D_type_id, false);
 		WindowSize = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(WindowSize_type_id);
-		NumColumns = serialized->get_int32(NumColumns_type_id, 1);
-		ItemWidth = serialized->get_int32(ItemWidth_type_id, 0);
-		ItemHeight = serialized->get_int32(ItemHeight_type_id, 0);
+		NumColumns = serialized->get_int32(NumColumns_type_id, 1u);
+		ItemWidth = serialized->get_int32(ItemWidth_type_id, 0u);
+		ItemHeight = serialized->get_int32(ItemHeight_type_id, 0u);
 		IndexNumbers = serialized->get_bool(IndexNumbers_type_id, false);
 		LabelType = serialized->get_enum<rivet::ddl::generated::x940d80bd>(LabelType_type_id, rivet::ddl::generated::x940d80bd_values, rivet::ddl::generated::x940d80bd::String);
 		AutoFocus = serialized->get_bool(AutoFocus_type_id, false);

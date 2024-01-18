@@ -21,12 +21,12 @@ namespace rivet::ddl::generated {
 		TestingOnly = serialized->get_bool(TestingOnly_type_id, false);
 		NoPreview = serialized->get_bool(NoPreview_type_id, false);
 		CustomBRDF = serialized->get_string(CustomBRDF_type_id, {});
-		ShaderLoD = serialized->get_uint32(ShaderLoD_type_id, 0);
+		ShaderLoD = serialized->get_uint32(ShaderLoD_type_id, 0u);
 		Code = serialized->get_string(Code_type_id, {});
 		Description = serialized->get_string(Description_type_id, {});
 		DisplayName = serialized->get_string(DisplayName_type_id, {});
 		Documentation = serialized->get_string(Documentation_type_id, {});
-		TexturePriority = serialized->get_uint8(TexturePriority_type_id, 0);
+		TexturePriority = serialized->get_uint8(TexturePriority_type_id, 0u);
 		Hidden = serialized->get_bool(Hidden_type_id, false); 
 	}
 

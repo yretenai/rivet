@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	MagShieldShotImpactEvent::MagShieldShotImpactEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		ImpactingShotAsset = serialized->get_uint64(ImpactingShotAsset_type_id, 0); 
+		ImpactingShotAsset = serialized->get_uint64(ImpactingShotAsset_type_id, 0ull); 
 	}
 
 	[[nodiscard]] auto

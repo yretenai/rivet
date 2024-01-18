@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	MinionSpawnLocationPrius::MinionSpawnLocationPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EnabledComponentBasePrius(serialized) {
-		MasterSpawnLoc = serialized->get_uint64(MasterSpawnLoc_type_id, 0); 
+		MasterSpawnLoc = serialized->get_uint64(MasterSpawnLoc_type_id, 0ull); 
 	}
 
 	[[nodiscard]] auto

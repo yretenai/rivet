@@ -14,7 +14,7 @@ namespace rivet::ddl::generated {
 		LocatorName = serialized->get_string(LocatorName_type_id, {});
 		SpawnOnInit = serialized->get_bool(SpawnOnInit_type_id, true);
 		SpawnOnEvent = serialized->unwrap_into<rivet::ddl::generated::EventBase>(SpawnOnEvent_type_id);
-		Flags = serialized->get_bitset<rivet::ddl::generated::x6d3f730c>(Flags_type_id, rivet::ddl::generated::x6d3f730c_values, 0);
+		Flags = serialized->get_bitset<rivet::ddl::generated::x6d3f730c>(Flags_type_id, rivet::ddl::generated::x6d3f730c_values, 0u);
 		DestroyAttachOnDestruction = serialized->get_bool(DestroyAttachOnDestruction_type_id, true); 
 	}
 

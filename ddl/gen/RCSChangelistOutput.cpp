@@ -13,7 +13,7 @@ namespace rivet::ddl::generated {
 		Warnings = serialized->unwrap_into<rivet::ddl::generated::RCSMessage>(Warnings_type_id);
 		Errors = serialized->unwrap_into<rivet::ddl::generated::RCSMessage>(Errors_type_id);
 		Stats = serialized->unwrap_into_many<rivet::ddl::generated::RCSDictionary>(Stats_type_id);
-		Changelist = serialized->get_uint32(Changelist_type_id, 0); 
+		Changelist = serialized->get_uint32(Changelist_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

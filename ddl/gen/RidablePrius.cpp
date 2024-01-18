@@ -14,8 +14,8 @@ namespace rivet::ddl::generated {
 		UseLeftSeats = serialized->get_bool(UseLeftSeats_type_id, true);
 		UseRightSeats = serialized->get_bool(UseRightSeats_type_id, true);
 		AutoDropoff = serialized->get_bool(AutoDropoff_type_id, true);
-		MinTimeBetweenDropoffs = serialized->get_float(MinTimeBetweenDropoffs_type_id, 0.250000);
-		MaxTimeBetweenDropoffs = serialized->get_float(MaxTimeBetweenDropoffs_type_id, 0.250000);
+		MinTimeBetweenDropoffs = serialized->get_float(MinTimeBetweenDropoffs_type_id, 0.250000f);
+		MaxTimeBetweenDropoffs = serialized->get_float(MaxTimeBetweenDropoffs_type_id, 0.250000f);
 		BotAnimSet = serialized->get_string(BotAnimSet_type_id, {});
 		Seats = serialized->unwrap_into_many<rivet::ddl::generated::Seat>(Seats_type_id);
 		GroundSearchData = serialized->unwrap_into<rivet::ddl::generated::RidableGroundSearchData>(GroundSearchData_type_id);

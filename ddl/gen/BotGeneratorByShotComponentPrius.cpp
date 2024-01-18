@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	BotGeneratorByShotComponentPrius::BotGeneratorByShotComponentPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BotGeneratorComponentPrius(serialized) {
-		ShotConfig = serialized->get_uint64(ShotConfig_type_id, 0);
-		EmitLocatorHash = serialized->get_uint32(EmitLocatorHash_type_id, 0); 
+		ShotConfig = serialized->get_uint64(ShotConfig_type_id, 0ull);
+		EmitLocatorHash = serialized->get_uint32(EmitLocatorHash_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

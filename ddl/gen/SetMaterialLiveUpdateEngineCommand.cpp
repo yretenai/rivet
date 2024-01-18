@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	SetMaterialLiveUpdateEngineCommand::SetMaterialLiveUpdateEngineCommand([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Id = serialized->get_uint64(Id_type_id, 0);
+		Id = serialized->get_uint64(Id_type_id, 0ull);
 		LiveUpdate = serialized->get_bool(LiveUpdate_type_id, false); 
 	}
 

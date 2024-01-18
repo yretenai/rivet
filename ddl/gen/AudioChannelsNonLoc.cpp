@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	AudioChannelsNonLoc::AudioChannelsNonLoc([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Compression = serialized->get_uint32(Compression_type_id, 3);
+		Compression = serialized->get_uint32(Compression_type_id, 3u);
 		Channels = serialized->unwrap_into<rivet::ddl::generated::AudioChannels>(Channels_type_id); 
 	}
 

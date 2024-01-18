@@ -10,7 +10,7 @@
 namespace rivet::ddl::generated {
 	TriggerResponderBroadcastEventPrius::TriggerResponderBroadcastEventPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): TriggerResponderBasePrius(serialized) {
 		Event = serialized->unwrap_into<rivet::ddl::generated::EventBase>(Event_type_id);
-		Radius = serialized->get_float(Radius_type_id, 5.000000); 
+		Radius = serialized->get_float(Radius_type_id, 5.000000f); 
 	}
 
 	[[nodiscard]] auto

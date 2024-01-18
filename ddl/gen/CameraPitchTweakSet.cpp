@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	CameraPitchTweakSet::CameraPitchTweakSet([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): CameraPitchTweak(serialized) {
-		Pitch = serialized->get_float(Pitch_type_id, 10.000000); 
+		Pitch = serialized->get_float(Pitch_type_id, 10.000000f); 
 	}
 
 	[[nodiscard]] auto

@@ -8,10 +8,10 @@
 namespace rivet::ddl::generated {
 	DropshipAnimVarHelperPrius::DropshipAnimVarHelperPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		AnimVar = serialized->get_string(AnimVar_type_id, "Accel");
-		IntroDuration = serialized->get_float(IntroDuration_type_id, 1.000000);
-		OutroGain = serialized->get_float(OutroGain_type_id, -4.000000);
-		OutroDamp = serialized->get_float(OutroDamp_type_id, -6.000000);
-		OutroSpeed = serialized->get_float(OutroSpeed_type_id, 4.000000); 
+		IntroDuration = serialized->get_float(IntroDuration_type_id, 1.000000f);
+		OutroGain = serialized->get_float(OutroGain_type_id, -4.000000f);
+		OutroDamp = serialized->get_float(OutroDamp_type_id, -6.000000f);
+		OutroSpeed = serialized->get_float(OutroSpeed_type_id, 4.000000f); 
 	}
 
 	[[nodiscard]] auto

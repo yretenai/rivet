@@ -10,17 +10,17 @@
 namespace rivet::ddl::generated {
 	BotMeleeAttackData::BotMeleeAttackData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		AnimDriver = serialized->get_string(AnimDriver_type_id, "Melee_Attack");
-		WindUpDuration = serialized->get_float(WindUpDuration_type_id, -1.000000);
-		ActiveDuration = serialized->get_float(ActiveDuration_type_id, -1.000000);
-		RecoveryDuration = serialized->get_float(RecoveryDuration_type_id, -1.000000);
-		IdealDistance = serialized->get_float(IdealDistance_type_id, 0.300000);
-		SuckDistance = serialized->get_float(SuckDistance_type_id, 2.000000);
-		PushbackDistance = serialized->get_float(PushbackDistance_type_id, 0.100000);
+		WindUpDuration = serialized->get_float(WindUpDuration_type_id, -1.000000f);
+		ActiveDuration = serialized->get_float(ActiveDuration_type_id, -1.000000f);
+		RecoveryDuration = serialized->get_float(RecoveryDuration_type_id, -1.000000f);
+		IdealDistance = serialized->get_float(IdealDistance_type_id, 0.300000f);
+		SuckDistance = serialized->get_float(SuckDistance_type_id, 2.000000f);
+		PushbackDistance = serialized->get_float(PushbackDistance_type_id, 0.100000f);
 		MaxTranslationScale = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(MaxTranslationScale_type_id);
 		MaxTranslationRate = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(MaxTranslationRate_type_id);
-		MaxTurnScale = serialized->get_float(MaxTurnScale_type_id, -1.000000);
-		MaxTurnRate = serialized->get_float(MaxTurnRate_type_id, -1.000000);
-		MaxTurnAdjust = serialized->get_float(MaxTurnAdjust_type_id, 180.000000);
+		MaxTurnScale = serialized->get_float(MaxTurnScale_type_id, -1.000000f);
+		MaxTurnRate = serialized->get_float(MaxTurnRate_type_id, -1.000000f);
+		MaxTurnAdjust = serialized->get_float(MaxTurnAdjust_type_id, 180.000000f);
 		DisableFriendlyCVC = serialized->get_bool(DisableFriendlyCVC_type_id, false);
 		EnableGravity = serialized->get_bool(EnableGravity_type_id, true);
 		YAdjustType = serialized->get_enum<rivet::ddl::generated::x9e94da32>(YAdjustType_type_id, rivet::ddl::generated::x9e94da32_values, rivet::ddl::generated::x9e94da32::Default); 

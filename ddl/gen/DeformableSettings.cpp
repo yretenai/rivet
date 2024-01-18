@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	DeformableSettings::DeformableSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DrawDistance = serialized->get_float(DrawDistance_type_id, 28.000000);
-		FadeInterval = serialized->get_float(FadeInterval_type_id, 2.000000);
-		MinUserBias = serialized->get_float(MinUserBias_type_id, 0.175000);
-		Resolution = serialized->get_uint32(Resolution_type_id, 2560);
-		Height = serialized->get_float(Height_type_id, 0.025000);
-		MinLoD = serialized->get_uint32(MinLoD_type_id, 2); 
+		DrawDistance = serialized->get_float(DrawDistance_type_id, 28.000000f);
+		FadeInterval = serialized->get_float(FadeInterval_type_id, 2.000000f);
+		MinUserBias = serialized->get_float(MinUserBias_type_id, 0.175000f);
+		Resolution = serialized->get_uint32(Resolution_type_id, 2560u);
+		Height = serialized->get_float(Height_type_id, 0.025000f);
+		MinLoD = serialized->get_uint32(MinLoD_type_id, 2u); 
 	}
 
 	[[nodiscard]] auto

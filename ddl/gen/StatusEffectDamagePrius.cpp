@@ -14,7 +14,7 @@ namespace rivet::ddl::generated {
 		Type = serialized->get_enum<rivet::ddl::generated::DamageTypes>(Type_type_id, rivet::ddl::generated::DamageTypes_values, rivet::ddl::generated::DamageTypes::None);
 		DamageStartTimeRandom = serialized->get_bool(DamageStartTimeRandom_type_id, true);
 		DamageLocator = serialized->get_string(DamageLocator_type_id, {});
-		IgnoreActor = serialized->get_uint64(IgnoreActor_type_id, 0); 
+		IgnoreActor = serialized->get_uint64(IgnoreActor_type_id, 0ull); 
 	}
 
 	[[nodiscard]] auto

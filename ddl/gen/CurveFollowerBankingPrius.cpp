@@ -12,12 +12,12 @@ namespace rivet::ddl::generated {
 		UseLeanAnimVar = serialized->get_bool(UseLeanAnimVar_type_id, false);
 		NormalizeBank = serialized->get_bool(NormalizeBank_type_id, false);
 		ReverseNormBank = serialized->get_bool(ReverseNormBank_type_id, false);
-		MaxBankAngle = serialized->get_float(MaxBankAngle_type_id, 45.000000);
-		SpeedForMaxAngle = serialized->get_float(SpeedForMaxAngle_type_id, 20.000000);
-		LookAheadTime = serialized->get_float(LookAheadTime_type_id, 0.500000);
-		TimeToMaxBank = serialized->get_float(TimeToMaxBank_type_id, 1.000000);
-		TimeToExitBank = serialized->get_float(TimeToExitBank_type_id, 0.500000);
-		AccelTime = serialized->get_float(AccelTime_type_id, 0.500000); 
+		MaxBankAngle = serialized->get_float(MaxBankAngle_type_id, 45.000000f);
+		SpeedForMaxAngle = serialized->get_float(SpeedForMaxAngle_type_id, 20.000000f);
+		LookAheadTime = serialized->get_float(LookAheadTime_type_id, 0.500000f);
+		TimeToMaxBank = serialized->get_float(TimeToMaxBank_type_id, 1.000000f);
+		TimeToExitBank = serialized->get_float(TimeToExitBank_type_id, 0.500000f);
+		AccelTime = serialized->get_float(AccelTime_type_id, 0.500000f); 
 	}
 
 	[[nodiscard]] auto

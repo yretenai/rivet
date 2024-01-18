@@ -7,16 +7,16 @@
 
 namespace rivet::ddl::generated {
 	AmbientFlyerStraightPrius::AmbientFlyerStraightPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		StartHeightMin = serialized->get_float(StartHeightMin_type_id, 50.000000);
-		StartHeightMax = serialized->get_float(StartHeightMax_type_id, 75.000000);
+		StartHeightMin = serialized->get_float(StartHeightMin_type_id, 50.000000f);
+		StartHeightMax = serialized->get_float(StartHeightMax_type_id, 75.000000f);
 		AngleOffCamForward = serialized->get_bool(AngleOffCamForward_type_id, false);
-		YawAngleMin = serialized->get_float(YawAngleMin_type_id, -60.000000);
-		YawAngleMax = serialized->get_float(YawAngleMax_type_id, 60.000000);
-		PitchAngleMin = serialized->get_float(PitchAngleMin_type_id, 0.000000);
-		PitchAngleMax = serialized->get_float(PitchAngleMax_type_id, 0.000000);
-		SpeedMin = serialized->get_float(SpeedMin_type_id, 6.000000);
-		SpeedMax = serialized->get_float(SpeedMax_type_id, 12.000000);
-		DistToDelete = serialized->get_float(DistToDelete_type_id, 500.000000); 
+		YawAngleMin = serialized->get_float(YawAngleMin_type_id, -60.000000f);
+		YawAngleMax = serialized->get_float(YawAngleMax_type_id, 60.000000f);
+		PitchAngleMin = serialized->get_float(PitchAngleMin_type_id, 0.000000f);
+		PitchAngleMax = serialized->get_float(PitchAngleMax_type_id, 0.000000f);
+		SpeedMin = serialized->get_float(SpeedMin_type_id, 6.000000f);
+		SpeedMax = serialized->get_float(SpeedMax_type_id, 12.000000f);
+		DistToDelete = serialized->get_float(DistToDelete_type_id, 500.000000f); 
 	}
 
 	[[nodiscard]] auto

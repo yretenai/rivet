@@ -26,7 +26,7 @@ namespace rivet::ddl::generated {
 		SnapLockData = serialized->unwrap_into<rivet::ddl::generated::AimAssistSnapLockData>(SnapLockData_type_id);
 		TargetSelection = serialized->unwrap_into<rivet::ddl::generated::AimAssistTargetSelection>(TargetSelection_type_id);
 		FactorModifiers = serialized->unwrap_into<rivet::ddl::generated::AimAssistFactorModifiers>(FactorModifiers_type_id);
-		AimAssistAngle = serialized->get_float(AimAssistAngle_type_id, 5.000000); 
+		AimAssistAngle = serialized->get_float(AimAssistAngle_type_id, 5.000000f); 
 	}
 
 	[[nodiscard]] auto

@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	DebugMenuSpawnData::DebugMenuSpawnData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ActorSpawnData(serialized) {
-		AssetId = serialized->get_uint64(AssetId_type_id, 0);
+		AssetId = serialized->get_uint64(AssetId_type_id, 0ull);
 		Pos = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Pos_type_id);
 		Facing = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Facing_type_id); 
 	}

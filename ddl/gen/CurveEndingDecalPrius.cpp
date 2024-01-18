@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	CurveEndingDecalPrius::CurveEndingDecalPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		TargetTexture = serialized->get_string(TargetTexture_type_id, {});
-		TargetScale = serialized->get_float(TargetScale_type_id, 1.000000);
+		TargetScale = serialized->get_float(TargetScale_type_id, 1.000000f);
 		RandomOrientation = serialized->get_bool(RandomOrientation_type_id, false);
 		CollCheckOnStart = serialized->get_bool(CollCheckOnStart_type_id, false); 
 	}

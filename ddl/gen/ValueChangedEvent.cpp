@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ValueChangedEvent::ValueChangedEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		NewValue = serialized->get_float(NewValue_type_id, 0.000000); 
+		NewValue = serialized->get_float(NewValue_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

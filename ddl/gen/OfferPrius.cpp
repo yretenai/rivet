@@ -15,17 +15,17 @@
 
 namespace rivet::ddl::generated {
 	OfferPrius::OfferPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Priority = serialized->get_float(Priority_type_id, 1.000000);
+		Priority = serialized->get_float(Priority_type_id, 1.000000f);
 		Team = serialized->get_enum<rivet::ddl::generated::xc115d639>(Team_type_id, rivet::ddl::generated::xc115d639_values, rivet::ddl::generated::xc115d639::None);
-		LocTagIndex = serialized->get_uint32(LocTagIndex_type_id, 0);
-		OfferType = serialized->get_bitset<rivet::ddl::generated::OfferType>(OfferType_type_id, rivet::ddl::generated::OfferType_values, 1);
+		LocTagIndex = serialized->get_uint32(LocTagIndex_type_id, 0u);
+		OfferType = serialized->get_bitset<rivet::ddl::generated::OfferType>(OfferType_type_id, rivet::ddl::generated::OfferType_values, 1u);
 		ShouldCreateJob = serialized->get_bool(ShouldCreateJob_type_id, false);
 		ShouldCreatePOI = serialized->get_bool(ShouldCreatePOI_type_id, false);
 		UseInWorldPrompt = serialized->get_bool(UseInWorldPrompt_type_id, false);
 		POISubtype = serialized->get_enum<rivet::ddl::generated::x275d9b04>(POISubtype_type_id, rivet::ddl::generated::x275d9b04_values, rivet::ddl::generated::x275d9b04::Pickup);
 		POIPreviewSubtype = serialized->get_enum<rivet::ddl::generated::x8d1d7e8a>(POIPreviewSubtype_type_id, rivet::ddl::generated::x8d1d7e8a_values, rivet::ddl::generated::x8d1d7e8a::Preview);
 		POILOSCheck = serialized->get_bool(POILOSCheck_type_id, false);
-		PreviewRange = serialized->get_float(PreviewRange_type_id, 0.000000);
+		PreviewRange = serialized->get_float(PreviewRange_type_id, 0.000000f);
 		POIOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(POIOffset_type_id);
 		POILocator = serialized->get_string(POILocator_type_id, {});
 		UseOfferPosForPOIPos = serialized->get_bool(UseOfferPosForPOIPos_type_id, true); 

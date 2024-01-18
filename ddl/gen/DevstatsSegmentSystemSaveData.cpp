@@ -10,7 +10,7 @@
 namespace rivet::ddl::generated {
 	DevstatsSegmentSystemSaveData::DevstatsSegmentSystemSaveData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Segments = serialized->unwrap_into_many<rivet::ddl::generated::DevstatsSegmentSaveData>(Segments_type_id);
-		PrimarySegment = serialized->get_uint32(PrimarySegment_type_id, 0); 
+		PrimarySegment = serialized->get_uint32(PrimarySegment_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

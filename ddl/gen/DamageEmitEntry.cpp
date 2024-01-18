@@ -9,16 +9,16 @@ namespace rivet::ddl::generated {
 	DamageEmitEntry::DamageEmitEntry([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		DamageDesc = serialized->get_string(DamageDesc_type_id, "");
 		SourceLocatorName = serialized->get_string(SourceLocatorName_type_id, "");
-		DamageRadius = serialized->get_float(DamageRadius_type_id, 1.000000);
+		DamageRadius = serialized->get_float(DamageRadius_type_id, 1.000000f);
 		UseSweptSphere = serialized->get_bool(UseSweptSphere_type_id, false);
 		EndLocatorName = serialized->get_string(EndLocatorName_type_id, "");
-		SweptSphereRange = serialized->get_float(SweptSphereRange_type_id, 5.000000);
-		DamageAmount = serialized->get_float(DamageAmount_type_id, 1.000000);
-		DamageApplyTime = serialized->get_float(DamageApplyTime_type_id, 1.000000);
+		SweptSphereRange = serialized->get_float(SweptSphereRange_type_id, 5.000000f);
+		DamageAmount = serialized->get_float(DamageAmount_type_id, 1.000000f);
+		DamageApplyTime = serialized->get_float(DamageApplyTime_type_id, 1.000000f);
 		Type = serialized->get_enum<rivet::ddl::generated::DamageTypes>(Type_type_id, rivet::ddl::generated::DamageTypes_values, rivet::ddl::generated::DamageTypes::None);
-		StatusAmount = serialized->get_float(StatusAmount_type_id, 0.000000);
+		StatusAmount = serialized->get_float(StatusAmount_type_id, 0.000000f);
 		Knockback = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(Knockback_type_id, rivet::ddl::generated::KnockbackLevels_values, rivet::ddl::generated::KnockbackLevels::None);
-		KnockbackAmount = serialized->get_float(KnockbackAmount_type_id, 0.000000);
+		KnockbackAmount = serialized->get_float(KnockbackAmount_type_id, 0.000000f);
 		DamageFriends = serialized->get_bool(DamageFriends_type_id, false);
 		SingleShotDamage = serialized->get_bool(SingleShotDamage_type_id, false);
 		ExcludeHeroes = serialized->get_bool(ExcludeHeroes_type_id, false); 

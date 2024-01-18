@@ -9,8 +9,8 @@ namespace rivet::ddl::generated {
 	SimpleAnimatedPrius::SimpleAnimatedPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		AnimName = serialized->get_string(AnimName_type_id, "Object_Idle");
 		StartOnRndFrame = serialized->get_bool(StartOnRndFrame_type_id, false);
-		RndRateMin = serialized->get_float(RndRateMin_type_id, -1.000000);
-		RndRateMax = serialized->get_float(RndRateMax_type_id, -1.000000); 
+		RndRateMin = serialized->get_float(RndRateMin_type_id, -1.000000f);
+		RndRateMax = serialized->get_float(RndRateMax_type_id, -1.000000f); 
 	}
 
 	[[nodiscard]] auto

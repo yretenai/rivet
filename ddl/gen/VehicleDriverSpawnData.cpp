@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	VehicleDriverSpawnData::VehicleDriverSpawnData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ActorSpawnData(serialized) {
-		VehicleHandle = serialized->get_uint32(VehicleHandle_type_id, 0);
-		UserHandle = serialized->get_uint32(UserHandle_type_id, 0);
-		ComponentTypeHash = serialized->get_uint32(ComponentTypeHash_type_id, 0); 
+		VehicleHandle = serialized->get_uint32(VehicleHandle_type_id, 0u);
+		UserHandle = serialized->get_uint32(UserHandle_type_id, 0u);
+		ComponentTypeHash = serialized->get_uint32(ComponentTypeHash_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

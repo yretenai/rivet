@@ -9,7 +9,7 @@ namespace rivet::ddl::generated {
 	AnimDriverVarConnection::AnimDriverVarConnection([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Type = serialized->get_enum<rivet::ddl::generated::xf23ee100>(Type_type_id, rivet::ddl::generated::xf23ee100_values, rivet::ddl::generated::xf23ee100::Invalid);
 		RefNodeName = serialized->get_string(RefNodeName_type_id, "");
-		Index = serialized->get_uint32(Index_type_id, 0); 
+		Index = serialized->get_uint32(Index_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

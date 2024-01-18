@@ -10,13 +10,13 @@
 namespace rivet::ddl::generated {
 	LandingBirdTypeConfig::LandingBirdTypeConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
 		BirdAsset = serialized->get_string(BirdAsset_type_id, {});
-		MinSpawnPeriod = serialized->get_float(MinSpawnPeriod_type_id, 0.250000);
-		MaxSpawnPeriod = serialized->get_float(MaxSpawnPeriod_type_id, 2.000000);
-		MinBirdSeparation = serialized->get_float(MinBirdSeparation_type_id, 0.150000);
-		MaxSpawnCount = serialized->get_int32(MaxSpawnCount_type_id, 25);
-		SpawnHeight = serialized->get_float(SpawnHeight_type_id, 20.000000);
-		SpawnRadius = serialized->get_float(SpawnRadius_type_id, 5.000000);
-		LandPhysicsRadius = serialized->get_float(LandPhysicsRadius_type_id, 0.100000);
+		MinSpawnPeriod = serialized->get_float(MinSpawnPeriod_type_id, 0.250000f);
+		MaxSpawnPeriod = serialized->get_float(MaxSpawnPeriod_type_id, 2.000000f);
+		MinBirdSeparation = serialized->get_float(MinBirdSeparation_type_id, 0.150000f);
+		MaxSpawnCount = serialized->get_int32(MaxSpawnCount_type_id, 25u);
+		SpawnHeight = serialized->get_float(SpawnHeight_type_id, 20.000000f);
+		SpawnRadius = serialized->get_float(SpawnRadius_type_id, 5.000000f);
+		LandPhysicsRadius = serialized->get_float(LandPhysicsRadius_type_id, 0.100000f);
 		FlockSoundSource = serialized->unwrap_into<rivet::ddl::generated::SoundSourceComponentPrius>(FlockSoundSource_type_id); 
 	}
 

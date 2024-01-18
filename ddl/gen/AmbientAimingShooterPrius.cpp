@@ -10,14 +10,14 @@ namespace rivet::ddl::generated {
 		AimAnimName = serialized->get_string(AimAnimName_type_id, "Aim_Move");
 		FireAnimName = serialized->get_string(FireAnimName_type_id, "");
 		AimLocatorName = serialized->get_string(AimLocatorName_type_id, "");
-		DegYawMin = serialized->get_float(DegYawMin_type_id, -90.000000);
-		DegYawMax = serialized->get_float(DegYawMax_type_id, 90.000000);
-		DegPitchMin = serialized->get_float(DegPitchMin_type_id, -90.000000);
-		DegPitchMax = serialized->get_float(DegPitchMax_type_id, 90.000000);
-		GameplayDegYawMin = serialized->get_float(GameplayDegYawMin_type_id, -180.000000);
-		GameplayDegYawMax = serialized->get_float(GameplayDegYawMax_type_id, 180.000000);
-		GameplayDegPitchMin = serialized->get_float(GameplayDegPitchMin_type_id, -180.000000);
-		GameplayDegPitchMax = serialized->get_float(GameplayDegPitchMax_type_id, 180.000000); 
+		DegYawMin = serialized->get_float(DegYawMin_type_id, -90.000000f);
+		DegYawMax = serialized->get_float(DegYawMax_type_id, 90.000000f);
+		DegPitchMin = serialized->get_float(DegPitchMin_type_id, -90.000000f);
+		DegPitchMax = serialized->get_float(DegPitchMax_type_id, 90.000000f);
+		GameplayDegYawMin = serialized->get_float(GameplayDegYawMin_type_id, -180.000000f);
+		GameplayDegYawMax = serialized->get_float(GameplayDegYawMax_type_id, 180.000000f);
+		GameplayDegPitchMin = serialized->get_float(GameplayDegPitchMin_type_id, -180.000000f);
+		GameplayDegPitchMax = serialized->get_float(GameplayDegPitchMax_type_id, 180.000000f); 
 	}
 
 	[[nodiscard]] auto

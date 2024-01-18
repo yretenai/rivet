@@ -11,16 +11,16 @@
 namespace rivet::ddl::generated {
 	BotComboMoveFinaleLaserSweep::BotComboMoveFinaleLaserSweep([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BotComboMove(serialized) {
 		LaserShotType = serialized->unwrap_into<rivet::ddl::generated::BotComboLaserShotType>(LaserShotType_type_id);
-		LaserMaxLength = serialized->get_float(LaserMaxLength_type_id, 100.000000);
+		LaserMaxLength = serialized->get_float(LaserMaxLength_type_id, 100.000000f);
 		SpawnedShotConfig = serialized->get_string(SpawnedShotConfig_type_id, {});
-		CurveActorId = serialized->get_uint64(CurveActorId_type_id, 0);
+		CurveActorId = serialized->get_uint64(CurveActorId_type_id, 0ull);
 		MultiLaserSweepData = serialized->unwrap_into_many<rivet::ddl::generated::FinaleLaserSweepConfig>(MultiLaserSweepData_type_id);
 		PortalActorAsset = serialized->get_string(PortalActorAsset_type_id, {});
 		WeaponActorAsset = serialized->get_string(WeaponActorAsset_type_id, {});
 		AttachCurveToTarget = serialized->get_bool(AttachCurveToTarget_type_id, false);
-		AttachCurveTargetVol = serialized->get_uint64(AttachCurveTargetVol_type_id, 0);
+		AttachCurveTargetVol = serialized->get_uint64(AttachCurveTargetVol_type_id, 0ull);
 		PredictTarget = serialized->get_bool(PredictTarget_type_id, false);
-		SweepCount = serialized->get_uint32(SweepCount_type_id, 1);
+		SweepCount = serialized->get_uint32(SweepCount_type_id, 1u);
 		CancelOutOfVolume = serialized->get_bool(CancelOutOfVolume_type_id, false); 
 	}
 

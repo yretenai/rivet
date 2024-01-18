@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	EngineControlActorAnimInfo::EngineControlActorAnimInfo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AnimationDuration = serialized->get_float(AnimationDuration_type_id, 0.000000);
-		AnimationTime = serialized->get_float(AnimationTime_type_id, 0.000000);
+		AnimationDuration = serialized->get_float(AnimationDuration_type_id, 0.000000f);
+		AnimationTime = serialized->get_float(AnimationTime_type_id, 0.000000f);
 		AnimLayers = serialized->get_strings(AnimLayers_type_id);
 		AnimPlaying = serialized->get_bool(AnimPlaying_type_id, false); 
 	}

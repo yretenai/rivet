@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	HapticsSettings::HapticsSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		LowPassFilterCutoffPercent = serialized->get_float(LowPassFilterCutoffPercent_type_id, 0.000000);
+		LowPassFilterCutoffPercent = serialized->get_float(LowPassFilterCutoffPercent_type_id, 0.000000f);
 		DisplayAnalogValues = serialized->get_bool(DisplayAnalogValues_type_id, false);
 		DrawDebugImguiWindow = serialized->get_bool(DrawDebugImguiWindow_type_id, false); 
 	}

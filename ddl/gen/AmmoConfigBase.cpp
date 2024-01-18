@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	AmmoConfigBase::AmmoConfigBase([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		MaxReserveAmmo = serialized->get_uint32(MaxReserveAmmo_type_id, 100); 
+		MaxReserveAmmo = serialized->get_uint32(MaxReserveAmmo_type_id, 100u); 
 	}
 
 	[[nodiscard]] auto

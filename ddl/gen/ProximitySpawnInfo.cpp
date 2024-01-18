@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ProximitySpawnInfo::ProximitySpawnInfo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MaxAlive = serialized->get_int32(MaxAlive_type_id, 0);
+		MaxAlive = serialized->get_int32(MaxAlive_type_id, 0u);
 		ActorType = serialized->get_string(ActorType_type_id, {}); 
 	}
 

@@ -16,7 +16,7 @@ namespace rivet::ddl::generated {
 		Actors = serialized->unwrap_into_many<rivet::ddl::generated::EngineControlActorData>(Actors_type_id);
 		AssetOverrides = serialized->unwrap_into_many<rivet::ddl::generated::EngineControlAssetOverride>(AssetOverrides_type_id);
 		Atmosphere = serialized->get_string(Atmosphere_type_id, "required\\atmospheres\\default_atmosphere.atmosphere");
-		BrightnessScale = serialized->get_float(BrightnessScale_type_id, 0.000000);
+		BrightnessScale = serialized->get_float(BrightnessScale_type_id, 0.000000f);
 		Cameras = serialized->unwrap_into_many<rivet::ddl::generated::EngineControlCamera>(Cameras_type_id);
 		ModelInstances = serialized->unwrap_into_many<rivet::ddl::generated::EngineControlModelInstanceData>(ModelInstances_type_id); 
 	}

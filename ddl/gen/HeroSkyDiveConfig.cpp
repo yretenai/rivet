@@ -7,14 +7,14 @@
 
 namespace rivet::ddl::generated {
 	HeroSkyDiveConfig::HeroSkyDiveConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MinLeftRightSpeed = serialized->get_float(MinLeftRightSpeed_type_id, 8.000000);
-		MinForwardBackSpeed = serialized->get_float(MinForwardBackSpeed_type_id, 8.000000);
-		MinLeftRightAccel = serialized->get_float(MinLeftRightAccel_type_id, 14.000000);
-		MinForwardBackAccel = serialized->get_float(MinForwardBackAccel_type_id, 14.000000);
-		LeftRightTravelTime = serialized->get_float(LeftRightTravelTime_type_id, 2.500000);
-		ForwardBackTravelTime = serialized->get_float(ForwardBackTravelTime_type_id, 2.500000);
-		LeftRightTimeToMaxSpeed = serialized->get_float(LeftRightTimeToMaxSpeed_type_id, 1.000000);
-		ForwardBackTimeToMaxSpeed = serialized->get_float(ForwardBackTimeToMaxSpeed_type_id, 1.000000);
+		MinLeftRightSpeed = serialized->get_float(MinLeftRightSpeed_type_id, 8.000000f);
+		MinForwardBackSpeed = serialized->get_float(MinForwardBackSpeed_type_id, 8.000000f);
+		MinLeftRightAccel = serialized->get_float(MinLeftRightAccel_type_id, 14.000000f);
+		MinForwardBackAccel = serialized->get_float(MinForwardBackAccel_type_id, 14.000000f);
+		LeftRightTravelTime = serialized->get_float(LeftRightTravelTime_type_id, 2.500000f);
+		ForwardBackTravelTime = serialized->get_float(ForwardBackTravelTime_type_id, 2.500000f);
+		LeftRightTimeToMaxSpeed = serialized->get_float(LeftRightTimeToMaxSpeed_type_id, 1.000000f);
+		ForwardBackTimeToMaxSpeed = serialized->get_float(ForwardBackTimeToMaxSpeed_type_id, 1.000000f);
 		CameraShakeConfig = serialized->get_string(CameraShakeConfig_type_id, {}); 
 	}
 

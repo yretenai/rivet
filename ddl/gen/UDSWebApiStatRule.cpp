@@ -10,7 +10,7 @@
 
 namespace rivet::ddl::generated {
 	UDSWebApiStatRule::UDSWebApiStatRule([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ruleId = serialized->get_int32(ruleId_type_id, 0);
+		ruleId = serialized->get_int32(ruleId_type_id, 0u);
 		condition = serialized->unwrap_into<rivet::ddl::generated::UDSWebApiStatCondition>(condition_type_id);
 		action = serialized->unwrap_into<rivet::ddl::generated::UDSWebApiStatAction>(action_type_id); 
 	}

@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	PowerReceptorPrius::PowerReceptorPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		PowerDistance = serialized->get_float(PowerDistance_type_id, 3.000000);
-		SnapDistance = serialized->get_float(SnapDistance_type_id, 6.000000); 
+		PowerDistance = serialized->get_float(PowerDistance_type_id, 3.000000f);
+		SnapDistance = serialized->get_float(SnapDistance_type_id, 6.000000f); 
 	}
 
 	[[nodiscard]] auto

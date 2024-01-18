@@ -7,17 +7,17 @@
 
 namespace rivet::ddl::generated {
 	VelocityFromTarget::VelocityFromTarget([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): GrenadeVelocityMode(serialized) {
-		FullTiltAngle = serialized->get_float(FullTiltAngle_type_id, 22.000000);
-		FullTiltSpeed = serialized->get_float(FullTiltSpeed_type_id, 8.000000);
-		MaxTargetDist = serialized->get_float(MaxTargetDist_type_id, 30.000000);
-		MaxArcHeight = serialized->get_float(MaxArcHeight_type_id, -1.000000);
-		MaxHorizontalDist = serialized->get_float(MaxHorizontalDist_type_id, -1.000000);
-		PredictionRangeMin = serialized->get_float(PredictionRangeMin_type_id, 0.000000);
-		PredictionRangeMax = serialized->get_float(PredictionRangeMax_type_id, 0.000000);
-		PredictionFactorMin = serialized->get_float(PredictionFactorMin_type_id, 0.000000);
-		PredictionFactorMax = serialized->get_float(PredictionFactorMax_type_id, 0.000000);
-		PredictionLengthCapMin = serialized->get_float(PredictionLengthCapMin_type_id, 0.000000);
-		PredictionLengthCapMax = serialized->get_float(PredictionLengthCapMax_type_id, 0.000000);
+		FullTiltAngle = serialized->get_float(FullTiltAngle_type_id, 22.000000f);
+		FullTiltSpeed = serialized->get_float(FullTiltSpeed_type_id, 8.000000f);
+		MaxTargetDist = serialized->get_float(MaxTargetDist_type_id, 30.000000f);
+		MaxArcHeight = serialized->get_float(MaxArcHeight_type_id, -1.000000f);
+		MaxHorizontalDist = serialized->get_float(MaxHorizontalDist_type_id, -1.000000f);
+		PredictionRangeMin = serialized->get_float(PredictionRangeMin_type_id, 0.000000f);
+		PredictionRangeMax = serialized->get_float(PredictionRangeMax_type_id, 0.000000f);
+		PredictionFactorMin = serialized->get_float(PredictionFactorMin_type_id, 0.000000f);
+		PredictionFactorMax = serialized->get_float(PredictionFactorMax_type_id, 0.000000f);
+		PredictionLengthCapMin = serialized->get_float(PredictionLengthCapMin_type_id, 0.000000f);
+		PredictionLengthCapMax = serialized->get_float(PredictionLengthCapMax_type_id, 0.000000f);
 		ForceDetonateAtTarget = serialized->get_bool(ForceDetonateAtTarget_type_id, false);
 		UseTargetPosOverAimPos = serialized->get_bool(UseTargetPosOverAimPos_type_id, false); 
 	}

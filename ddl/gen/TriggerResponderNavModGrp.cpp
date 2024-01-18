@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	TriggerResponderNavModGrp::TriggerResponderNavModGrp([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Actors = serialized->get_uint64(Actors_type_id, 0);
+		Actors = serialized->get_uint64(Actors_type_id, 0ull);
 		Action = serialized->get_enum<rivet::ddl::generated::xc9b0923d>(Action_type_id, rivet::ddl::generated::xc9b0923d_values, rivet::ddl::generated::xc9b0923d::Allow_nav);
-		NavLayer = serialized->get_uint32(NavLayer_type_id, 0); 
+		NavLayer = serialized->get_uint32(NavLayer_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

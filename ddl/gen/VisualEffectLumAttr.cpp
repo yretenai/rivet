@@ -8,8 +8,8 @@
 namespace rivet::ddl::generated {
 	VisualEffectLumAttr::VisualEffectLumAttr([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Enable = serialized->get_bool(Enable_type_id, false);
-		AdaptationAnchor = serialized->get_float(AdaptationAnchor_type_id, -1.000000);
-		AdaptationResponse = serialized->get_float(AdaptationResponse_type_id, -1.000000);
+		AdaptationAnchor = serialized->get_float(AdaptationAnchor_type_id, -1.000000f);
+		AdaptationResponse = serialized->get_float(AdaptationResponse_type_id, -1.000000f);
 		UseActualLuminance = serialized->get_bool(UseActualLuminance_type_id, true); 
 	}
 

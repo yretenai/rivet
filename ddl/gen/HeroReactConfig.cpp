@@ -14,7 +14,7 @@ namespace rivet::ddl::generated {
 		TwitchData = serialized->unwrap_into<rivet::ddl::generated::HeroReactLevelData>(TwitchData_type_id);
 		KnockbackData = serialized->unwrap_into<rivet::ddl::generated::HeroReactLevelData>(KnockbackData_type_id);
 		KnockdownData = serialized->unwrap_into<rivet::ddl::generated::HeroReactLevelData>(KnockdownData_type_id);
-		InvulnerabilityPeriod = serialized->get_float(InvulnerabilityPeriod_type_id, 0.000000); 
+		InvulnerabilityPeriod = serialized->get_float(InvulnerabilityPeriod_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

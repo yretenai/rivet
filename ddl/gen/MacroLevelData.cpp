@@ -16,7 +16,7 @@ namespace rivet::ddl::generated {
 		LevelNameLocTag = serialized->get_string(LevelNameLocTag_type_id, {});
 		LevelDescLocTag = serialized->get_string(LevelDescLocTag_type_id, {});
 		LevelNumber = serialized->get_int32(LevelNumber_type_id, -1);
-		LevelInstallGroup = serialized->get_int32(LevelInstallGroup_type_id, 0);
+		LevelInstallGroup = serialized->get_int32(LevelInstallGroup_type_id, 0u);
 		Loadpoints = serialized->unwrap_into_many<rivet::ddl::generated::MacroLoadpointListItem>(Loadpoints_type_id); 
 	}
 

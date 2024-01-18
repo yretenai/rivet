@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	AwarenessLevelChangedEvent::AwarenessLevelChangedEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		TimeInPreviousAwareness = serialized->get_float(TimeInPreviousAwareness_type_id, 0.000000); 
+		TimeInPreviousAwareness = serialized->get_float(TimeInPreviousAwareness_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

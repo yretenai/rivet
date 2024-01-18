@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	DevstatsTimeConfig::DevstatsTimeConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		IdleTimeout = serialized->get_float(IdleTimeout_type_id, 30.000000); 
+		IdleTimeout = serialized->get_float(IdleTimeout_type_id, 30.000000f); 
 	}
 
 	[[nodiscard]] auto

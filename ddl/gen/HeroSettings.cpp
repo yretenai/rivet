@@ -23,7 +23,7 @@ namespace rivet::ddl::generated {
 		RecoveryLedgeSettings = serialized->unwrap_into<rivet::ddl::generated::HeroRecoveryLedgeSettings>(RecoveryLedgeSettings_type_id);
 		HoverbootSettings = serialized->unwrap_into<rivet::ddl::generated::HeroHoverbootSettings>(HoverbootSettings_type_id);
 		WallRunSettings = serialized->unwrap_into<rivet::ddl::generated::HeroWallRunSettings>(WallRunSettings_type_id);
-		XpGainMultiplier = serialized->get_float(XpGainMultiplier_type_id, 1.000000);
+		XpGainMultiplier = serialized->get_float(XpGainMultiplier_type_id, 1.000000f);
 		EnablePlatformingShadowDecal = serialized->get_bool(EnablePlatformingShadowDecal_type_id, true);
 		EnablePhaseDash = serialized->get_bool(EnablePhaseDash_type_id, true); 
 	}

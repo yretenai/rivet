@@ -12,7 +12,7 @@ namespace rivet::ddl::generated {
 	OnEventActionPrius::OnEventActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Events);
 		InitListening = serialized->get_bool(InitListening_type_id, true);
-		SignalMax = serialized->get_int32(SignalMax_type_id, 1);
+		SignalMax = serialized->get_int32(SignalMax_type_id, 1u);
 		ResetSignalMaxOnListen = serialized->get_bool(ResetSignalMaxOnListen_type_id, true);
 		ListenEvent = serialized->unwrap_into<rivet::ddl::generated::EventBase>(ListenEvent_type_id);
 		TrackBroadcast = serialized->get_bool(TrackBroadcast_type_id, false);

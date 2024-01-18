@@ -10,7 +10,7 @@
 namespace rivet::ddl::generated {
 	AudioChannelsLoc::AudioChannelsLoc([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Language = serialized->get_enum<rivet::ddl::generated::x572515d>(Language_type_id, rivet::ddl::generated::x572515d_values, rivet::ddl::generated::x572515d::English);
-		Compression = serialized->get_uint32(Compression_type_id, 2);
+		Compression = serialized->get_uint32(Compression_type_id, 2u);
 		Channels = serialized->unwrap_into<rivet::ddl::generated::AudioChannels>(Channels_type_id); 
 	}
 

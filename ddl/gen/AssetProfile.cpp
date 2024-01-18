@@ -9,9 +9,9 @@
 
 namespace rivet::ddl::generated {
 	AssetProfile::AssetProfile([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AssetId = serialized->get_uint32(AssetId_type_id, 0);
+		AssetId = serialized->get_uint32(AssetId_type_id, 0u);
 		AssetType = serialized->get_enum<rivet::ddl::generated::AssetTypes>(AssetType_type_id, rivet::ddl::generated::AssetTypes_values, rivet::ddl::generated::AssetTypes::Actor);
-		ChildrenCount = serialized->get_uint32(ChildrenCount_type_id, 0);
+		ChildrenCount = serialized->get_uint32(ChildrenCount_type_id, 0u);
 		Fields = serialized->unwrap_into_many<rivet::ddl::generated::AssetField>(Fields_type_id); 
 	}
 

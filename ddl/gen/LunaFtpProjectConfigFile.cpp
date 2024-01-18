@@ -12,7 +12,7 @@ namespace rivet::ddl::generated {
 		CodeName = serialized->get_string(CodeName_type_id, "");
 		TitleName = serialized->get_string(TitleName_type_id, "");
 		ProductionBranch = serialized->get_string(ProductionBranch_type_id, {});
-		Platforms = serialized->get_bitset<rivet::ddl::generated::x5753f3c8>(Platforms_type_id, rivet::ddl::generated::x5753f3c8_values, 7); 
+		Platforms = serialized->get_bitset<rivet::ddl::generated::x5753f3c8>(Platforms_type_id, rivet::ddl::generated::x5753f3c8_values, 7u); 
 	}
 
 	[[nodiscard]] auto

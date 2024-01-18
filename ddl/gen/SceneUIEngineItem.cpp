@@ -15,11 +15,11 @@ namespace rivet::ddl::generated {
 		RenderLights = serialized->get_bool(RenderLights_type_id, false);
 		RenderVolumes = serialized->get_bool(RenderVolumes_type_id, false);
 		RenderCameras = serialized->get_bool(RenderCameras_type_id, false);
-		PointVolumeSize = serialized->get_float(PointVolumeSize_type_id, 0.200000);
-		LightSize = serialized->get_float(LightSize_type_id, 0.050000);
-		CameraSize = serialized->get_float(CameraSize_type_id, 0.200000);
-		ActiveCameraId = serialized->get_uint64(ActiveCameraId_type_id, 0);
-		DebugCameraId = serialized->get_uint64(DebugCameraId_type_id, 0);
+		PointVolumeSize = serialized->get_float(PointVolumeSize_type_id, 0.200000f);
+		LightSize = serialized->get_float(LightSize_type_id, 0.050000f);
+		CameraSize = serialized->get_float(CameraSize_type_id, 0.200000f);
+		ActiveCameraId = serialized->get_uint64(ActiveCameraId_type_id, 0ull);
+		DebugCameraId = serialized->get_uint64(DebugCameraId_type_id, 0ull);
 		CameraControlType = serialized->get_enum<rivet::ddl::generated::CameraControlType>(CameraControlType_type_id, rivet::ddl::generated::CameraControlType_values, rivet::ddl::generated::CameraControlType::Orbit);
 		GamepadEnableMode = serialized->get_enum<rivet::ddl::generated::GamepadEnableMode>(GamepadEnableMode_type_id, rivet::ddl::generated::GamepadEnableMode_values, rivet::ddl::generated::GamepadEnableMode::Always);
 		SelectableNodes = serialized->get_bools(SelectableNodes_type_id); 

@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	BotComboConditionClearSpacePrius::BotComboConditionClearSpacePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BotComboConditionBasePrius(serialized) {
-		DistanceForward = serialized->get_float(DistanceForward_type_id, 10.000000);
-		Height = serialized->get_float(Height_type_id, 5.000000);
-		Radius = serialized->get_float(Radius_type_id, 3.000000);
+		DistanceForward = serialized->get_float(DistanceForward_type_id, 10.000000f);
+		Height = serialized->get_float(Height_type_id, 5.000000f);
+		Radius = serialized->get_float(Radius_type_id, 3.000000f);
 		CheckTargetDirection = serialized->get_bool(CheckTargetDirection_type_id, false);
 		CheckNavMesh = serialized->get_bool(CheckNavMesh_type_id, false); 
 	}

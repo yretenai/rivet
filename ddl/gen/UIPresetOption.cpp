@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	UIPresetOption::UIPresetOption([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		OptionID = serialized->get_enum<rivet::ddl::generated::x33afe7f4>(OptionID_type_id, rivet::ddl::generated::x33afe7f4_values, rivet::ddl::generated::x33afe7f4::Resume);
-		NumberValue = serialized->get_float(NumberValue_type_id, 1.000000);
+		NumberValue = serialized->get_float(NumberValue_type_id, 1.000000f);
 		StringValue = serialized->get_string(StringValue_type_id, ""); 
 	}
 

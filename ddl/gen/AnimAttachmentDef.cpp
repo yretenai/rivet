@@ -12,7 +12,7 @@ namespace rivet::ddl::generated {
 		LocatorString = serialized->get_string(LocatorString_type_id, {});
 		AssetString = serialized->get_string(AssetString_type_id, {});
 		AssetLocatorString = serialized->get_string(AssetLocatorString_type_id, {});
-		Scale = serialized->get_float(Scale_type_id, 1.000000); 
+		Scale = serialized->get_float(Scale_type_id, 1.000000f); 
 	}
 
 	[[nodiscard]] auto

@@ -11,7 +11,7 @@ namespace rivet::ddl::generated {
 		SuspendedLaserAsset = serialized->get_string(SuspendedLaserAsset_type_id, {});
 		CameraShakeCollectImpact = serialized->get_string(CameraShakeCollectImpact_type_id, {});
 		CameraShakeFullImpact = serialized->get_string(CameraShakeFullImpact_type_id, {});
-		DeployDuration = serialized->get_float(DeployDuration_type_id, 0.250000); 
+		DeployDuration = serialized->get_float(DeployDuration_type_id, 0.250000f); 
 	}
 
 	[[nodiscard]] auto

@@ -12,10 +12,10 @@ namespace rivet::ddl::generated {
 		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Movement);
 		UseRealTime = serialized->get_bool(UseRealTime_type_id, false);
 		Frequency = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Frequency_type_id);
-		StartBlendTime = serialized->get_float(StartBlendTime_type_id, 0.000000);
-		ChangeBlendTime = serialized->get_float(ChangeBlendTime_type_id, 0.000000);
+		StartBlendTime = serialized->get_float(StartBlendTime_type_id, 0.000000f);
+		ChangeBlendTime = serialized->get_float(ChangeBlendTime_type_id, 0.000000f);
 		StopOnUnload = serialized->get_bool(StopOnUnload_type_id, true);
-		BlendOutTime = serialized->get_float(BlendOutTime_type_id, 0.000000); 
+		BlendOutTime = serialized->get_float(BlendOutTime_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

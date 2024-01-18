@@ -10,14 +10,14 @@
 
 namespace rivet::ddl::generated {
 	UI_BezierCurveDef::UI_BezierCurveDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Id = serialized->get_uint64(Id_type_id, 0);
+		Id = serialized->get_uint64(Id_type_id, 0ull);
 		Name = serialized->get_string(Name_type_id, {});
 		DimensionOrder = serialized->get_uint64s(DimensionOrder_type_id);
 		Dimensions = serialized->unwrap_into_many<rivet::ddl::generated::BezierCurveDimensionDef>(Dimensions_type_id);
 		ExtrapolateModeIn = serialized->get_enum<rivet::ddl::generated::x74a6ffcc>(ExtrapolateModeIn_type_id, rivet::ddl::generated::x74a6ffcc_values, rivet::ddl::generated::x74a6ffcc::Constant);
 		ExtrapolateModeOut = serialized->get_enum<rivet::ddl::generated::x74a6ffcc>(ExtrapolateModeOut_type_id, rivet::ddl::generated::x74a6ffcc_values, rivet::ddl::generated::x74a6ffcc::Constant);
 		RotationOrder = serialized->get_enum<rivet::ddl::generated::x4eda4f54>(RotationOrder_type_id, rivet::ddl::generated::x4eda4f54_values, rivet::ddl::generated::x4eda4f54::XYZ);
-		Flags = serialized->get_bitset<rivet::ddl::generated::x3fc1e4d4>(Flags_type_id, rivet::ddl::generated::x3fc1e4d4_values, 0);
+		Flags = serialized->get_bitset<rivet::ddl::generated::x3fc1e4d4>(Flags_type_id, rivet::ddl::generated::x3fc1e4d4_values, 0u);
 		uiCurrentValue = serialized->unwrap_into<rivet::ddl::generated::UI_BezierCurveValue>(uiCurrentValue_type_id); 
 	}
 

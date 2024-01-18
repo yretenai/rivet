@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	HeroDamageScreenFXEvent::HeroDamageScreenFXEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		ScreenAngle = serialized->get_float(ScreenAngle_type_id, 0.000000);
-		ScreenSegment = serialized->get_int32(ScreenSegment_type_id, 0); 
+		ScreenAngle = serialized->get_float(ScreenAngle_type_id, 0.000000f);
+		ScreenSegment = serialized->get_int32(ScreenSegment_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

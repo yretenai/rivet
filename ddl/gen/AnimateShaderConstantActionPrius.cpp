@@ -10,9 +10,9 @@ namespace rivet::ddl::generated {
 		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Rendering);
 		Shader = serialized->get_string(Shader_type_id, {});
 		ConstantName = serialized->get_string(ConstantName_type_id, {});
-		StartValue = serialized->get_float(StartValue_type_id, 0.000000);
-		EndValue = serialized->get_float(EndValue_type_id, 1.000000);
-		Duration = serialized->get_float(Duration_type_id, 1.000000); 
+		StartValue = serialized->get_float(StartValue_type_id, 0.000000f);
+		EndValue = serialized->get_float(EndValue_type_id, 1.000000f);
+		Duration = serialized->get_float(Duration_type_id, 1.000000f); 
 	}
 
 	[[nodiscard]] auto

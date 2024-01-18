@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	AttackTransitionEvent::AttackTransitionEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
 		NextAnim = serialized->get_string(NextAnim_type_id, {});
-		NextAnimRate = serialized->get_float(NextAnimRate_type_id, 1.000000); 
+		NextAnimRate = serialized->get_float(NextAnimRate_type_id, 1.000000f); 
 	}
 
 	[[nodiscard]] auto

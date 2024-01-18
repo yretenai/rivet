@@ -9,21 +9,21 @@
 
 namespace rivet::ddl::generated {
 	HeroJumpConfig::HeroJumpConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		HeightMin = serialized->get_float(HeightMin_type_id, 0.750000);
-		HeightMax = serialized->get_float(HeightMax_type_id, 1.500000);
-		TimeToPeak = serialized->get_float(TimeToPeak_type_id, 0.500000);
-		ButtonMinHoldTime = serialized->get_float(ButtonMinHoldTime_type_id, 0.200000);
-		ButtonMaxHoldTime = serialized->get_float(ButtonMaxHoldTime_type_id, 0.400000);
-		MomentumWeightMin = serialized->get_float(MomentumWeightMin_type_id, 0.000000);
-		MomentumWeightMax = serialized->get_float(MomentumWeightMax_type_id, 0.500000);
-		MomentumMinTime = serialized->get_float(MomentumMinTime_type_id, 0.200000);
-		MomentumTransitionTime = serialized->get_float(MomentumTransitionTime_type_id, 0.200000);
-		NoInputTime = serialized->get_float(NoInputTime_type_id, 0.000000);
-		NoGlideTime = serialized->get_float(NoGlideTime_type_id, 0.000000);
-		NoFallTime = serialized->get_float(NoFallTime_type_id, 0.000000);
-		DoubleJumpTimeStart = serialized->get_float(DoubleJumpTimeStart_type_id, 0.200000);
-		DoubleJumpHeightMin = serialized->get_float(DoubleJumpHeightMin_type_id, 1.300000);
-		TerminalVelocity = serialized->get_float(TerminalVelocity_type_id, 50.000000);
+		HeightMin = serialized->get_float(HeightMin_type_id, 0.750000f);
+		HeightMax = serialized->get_float(HeightMax_type_id, 1.500000f);
+		TimeToPeak = serialized->get_float(TimeToPeak_type_id, 0.500000f);
+		ButtonMinHoldTime = serialized->get_float(ButtonMinHoldTime_type_id, 0.200000f);
+		ButtonMaxHoldTime = serialized->get_float(ButtonMaxHoldTime_type_id, 0.400000f);
+		MomentumWeightMin = serialized->get_float(MomentumWeightMin_type_id, 0.000000f);
+		MomentumWeightMax = serialized->get_float(MomentumWeightMax_type_id, 0.500000f);
+		MomentumMinTime = serialized->get_float(MomentumMinTime_type_id, 0.200000f);
+		MomentumTransitionTime = serialized->get_float(MomentumTransitionTime_type_id, 0.200000f);
+		NoInputTime = serialized->get_float(NoInputTime_type_id, 0.000000f);
+		NoGlideTime = serialized->get_float(NoGlideTime_type_id, 0.000000f);
+		NoFallTime = serialized->get_float(NoFallTime_type_id, 0.000000f);
+		DoubleJumpTimeStart = serialized->get_float(DoubleJumpTimeStart_type_id, 0.200000f);
+		DoubleJumpHeightMin = serialized->get_float(DoubleJumpHeightMin_type_id, 1.300000f);
+		TerminalVelocity = serialized->get_float(TerminalVelocity_type_id, 50.000000f);
 		TimeToPeakIsGravity = serialized->get_bool(TimeToPeakIsGravity_type_id, false); 
 	}
 

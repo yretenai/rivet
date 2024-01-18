@@ -12,8 +12,8 @@
 
 namespace rivet::ddl::generated {
 	ECMFilterDef::ECMFilterDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Id = serialized->get_uint64(Id_type_id, 0);
-		Index = serialized->get_int32(Index_type_id, 0);
+		Id = serialized->get_uint64(Id_type_id, 0ull);
+		Index = serialized->get_int32(Index_type_id, 0u);
 		Enabled = serialized->get_bool(Enabled_type_id, true);
 		Name = serialized->get_string(Name_type_id, {});
 		ContinueType = serialized->get_enum<rivet::ddl::generated::x97f06575>(ContinueType_type_id, rivet::ddl::generated::x97f06575_values, rivet::ddl::generated::x97f06575::Unresponded_Systems);

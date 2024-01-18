@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	AnimAimOffEvent::AnimAimOffEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Duration = serialized->get_float(Duration_type_id, 0.250000); 
+		Duration = serialized->get_float(Duration_type_id, 0.250000f); 
 	}
 
 	[[nodiscard]] auto

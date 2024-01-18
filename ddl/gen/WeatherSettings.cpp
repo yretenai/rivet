@@ -7,13 +7,13 @@
 
 namespace rivet::ddl::generated {
 	WeatherSettings::WeatherSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		WeatherCellSize = serialized->get_float(WeatherCellSize_type_id, 5.000000);
-		WeatherGSplashAge = serialized->get_float(WeatherGSplashAge_type_id, 0.100000);
-		WeatherGSplashScale = serialized->get_float(WeatherGSplashScale_type_id, 1.000000);
-		WeatherGSplashColor = serialized->get_float(WeatherGSplashColor_type_id, 1.000000);
-		WeatherGSplashAlpha = serialized->get_float(WeatherGSplashAlpha_type_id, 0.500000);
-		WeatherGSplashNearFade = serialized->get_float(WeatherGSplashNearFade_type_id, 0.500000);
-		WeatherRippleThreshold = serialized->get_float(WeatherRippleThreshold_type_id, 0.100000); 
+		WeatherCellSize = serialized->get_float(WeatherCellSize_type_id, 5.000000f);
+		WeatherGSplashAge = serialized->get_float(WeatherGSplashAge_type_id, 0.100000f);
+		WeatherGSplashScale = serialized->get_float(WeatherGSplashScale_type_id, 1.000000f);
+		WeatherGSplashColor = serialized->get_float(WeatherGSplashColor_type_id, 1.000000f);
+		WeatherGSplashAlpha = serialized->get_float(WeatherGSplashAlpha_type_id, 0.500000f);
+		WeatherGSplashNearFade = serialized->get_float(WeatherGSplashNearFade_type_id, 0.500000f);
+		WeatherRippleThreshold = serialized->get_float(WeatherRippleThreshold_type_id, 0.100000f); 
 	}
 
 	[[nodiscard]] auto

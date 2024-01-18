@@ -8,10 +8,10 @@
 namespace rivet::ddl::generated {
 	AttachToHitSurfaceEffectPrius::AttachToHitSurfaceEffectPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ScriptedShotEffectBasePrius(serialized) {
 		ResetScriptedShotLifeTime = serialized->get_bool(ResetScriptedShotLifeTime_type_id, true);
-		AttachOffset = serialized->get_float(AttachOffset_type_id, 0.100000);
-		AttachOffsetVelocity = serialized->get_float(AttachOffsetVelocity_type_id, 0.000000);
-		NewLifeTime = serialized->get_float(NewLifeTime_type_id, 3.000000);
-		NewLifeTimeEnemy = serialized->get_float(NewLifeTimeEnemy_type_id, -1.000000);
+		AttachOffset = serialized->get_float(AttachOffset_type_id, 0.100000f);
+		AttachOffsetVelocity = serialized->get_float(AttachOffsetVelocity_type_id, 0.000000f);
+		NewLifeTime = serialized->get_float(NewLifeTime_type_id, 3.000000f);
+		NewLifeTimeEnemy = serialized->get_float(NewLifeTimeEnemy_type_id, -1.000000f);
 		DestroyOnBotDeath = serialized->get_bool(DestroyOnBotDeath_type_id, false);
 		DestroyOnNonBotDeath = serialized->get_bool(DestroyOnNonBotDeath_type_id, false);
 		MatchDestroy = serialized->get_bool(MatchDestroy_type_id, true);

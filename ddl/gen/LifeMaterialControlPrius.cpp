@@ -9,7 +9,7 @@ namespace rivet::ddl::generated {
 	LifeMaterialControlPrius::LifeMaterialControlPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		VarName = serialized->get_string(VarName_type_id, "LifeValue");
 		InvertValue = serialized->get_bool(InvertValue_type_id, false);
-		FadeTime = serialized->get_float(FadeTime_type_id, 2.000000); 
+		FadeTime = serialized->get_float(FadeTime_type_id, 2.000000f); 
 	}
 
 	[[nodiscard]] auto

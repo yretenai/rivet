@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	TunnelerJumpParams::TunnelerJumpParams([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		IdealJumpAngle = serialized->get_float(IdealJumpAngle_type_id, 20.000000);
-		MinimumJumpDistance = serialized->get_float(MinimumJumpDistance_type_id, 10.000000);
-		TargetSearchDistance = serialized->get_float(TargetSearchDistance_type_id, 40.000000);
-		TargetSearchHalfAngle = serialized->get_float(TargetSearchHalfAngle_type_id, 10.000000);
-		TargetSearchHeight = serialized->get_float(TargetSearchHeight_type_id, 25.000000); 
+		IdealJumpAngle = serialized->get_float(IdealJumpAngle_type_id, 20.000000f);
+		MinimumJumpDistance = serialized->get_float(MinimumJumpDistance_type_id, 10.000000f);
+		TargetSearchDistance = serialized->get_float(TargetSearchDistance_type_id, 40.000000f);
+		TargetSearchHalfAngle = serialized->get_float(TargetSearchHalfAngle_type_id, 10.000000f);
+		TargetSearchHeight = serialized->get_float(TargetSearchHeight_type_id, 25.000000f); 
 	}
 
 	[[nodiscard]] auto

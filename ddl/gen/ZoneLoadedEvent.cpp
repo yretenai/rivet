@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ZoneLoadedEvent::ZoneLoadedEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		AssetId = serialized->get_uint64(AssetId_type_id, 0); 
+		AssetId = serialized->get_uint64(AssetId_type_id, 0ull); 
 	}
 
 	[[nodiscard]] auto

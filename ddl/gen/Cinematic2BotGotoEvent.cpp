@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	Cinematic2BotGotoEvent::Cinematic2BotGotoEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		ArrivalWorldTime = serialized->get_float(ArrivalWorldTime_type_id, 0.000000);
-		Spline = serialized->get_uint64(Spline_type_id, 0); 
+		ArrivalWorldTime = serialized->get_float(ArrivalWorldTime_type_id, 0.000000f);
+		Spline = serialized->get_uint64(Spline_type_id, 0ull); 
 	}
 
 	[[nodiscard]] auto

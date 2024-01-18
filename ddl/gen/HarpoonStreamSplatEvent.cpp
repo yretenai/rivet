@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	HarpoonStreamSplatEvent::HarpoonStreamSplatEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		StreamLength = serialized->get_float(StreamLength_type_id, 1.000000);
+		StreamLength = serialized->get_float(StreamLength_type_id, 1.000000f);
 		WithPuddle = serialized->get_bool(WithPuddle_type_id, false);
 		FromBot = serialized->get_bool(FromBot_type_id, false); 
 	}

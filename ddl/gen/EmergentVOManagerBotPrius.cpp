@@ -13,8 +13,8 @@ namespace rivet::ddl::generated {
 	EmergentVOManagerBotPrius::EmergentVOManagerBotPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EmergentVOManagerGamePrius(serialized) {
 		LookGroupVoiceOverrideData = serialized->unwrap_into<rivet::ddl::generated::LookGroupVoiceOverrideData>(LookGroupVoiceOverrideData_type_id);
 		VoiceSwitches = serialized->unwrap_into_many<rivet::ddl::generated::EmergentVOManagerVoiceSwitches>(VoiceSwitches_type_id);
-		MaxDistance = serialized->get_float(MaxDistance_type_id, 70.000000);
-		OffScreenApproachingTaunt = serialized->get_float(OffScreenApproachingTaunt_type_id, 0.000000); 
+		MaxDistance = serialized->get_float(MaxDistance_type_id, 70.000000f);
+		OffScreenApproachingTaunt = serialized->get_float(OffScreenApproachingTaunt_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

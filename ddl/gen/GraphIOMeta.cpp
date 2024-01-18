@@ -10,7 +10,7 @@ namespace rivet::ddl::generated {
 		Type = serialized->get_string(Type_type_id, {});
 		SubType = serialized->get_string(SubType_type_id, {});
 		Dir = serialized->get_enum<rivet::ddl::generated::x6e9cd50>(Dir_type_id, rivet::ddl::generated::x6e9cd50_values, rivet::ddl::generated::x6e9cd50::Invalid);
-		Id = serialized->get_uint64(Id_type_id, 0);
+		Id = serialized->get_uint64(Id_type_id, 0ull);
 		Name = serialized->get_string(Name_type_id, {});
 		Tooltip = serialized->get_string(Tooltip_type_id, {}); 
 	}

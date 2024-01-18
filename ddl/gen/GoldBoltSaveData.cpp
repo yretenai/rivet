@@ -16,9 +16,9 @@ namespace rivet::ddl::generated {
 		GoldWeaponsEnabled = serialized->get_bool(GoldWeaponsEnabled_type_id, false);
 		HomeRunHitterEnabled = serialized->get_bool(HomeRunHitterEnabled_type_id, false);
 		BoltReplacementType = serialized->get_enum<rivet::ddl::generated::BoltReplacementType>(BoltReplacementType_type_id, rivet::ddl::generated::BoltReplacementType_values, rivet::ddl::generated::BoltReplacementType::Default);
-		RenderModeIndex = serialized->get_uint32(RenderModeIndex_type_id, 0);
-		RenderModeNameHash = serialized->get_uint32(RenderModeNameHash_type_id, 0);
-		HeadSizeIndex = serialized->get_int32(HeadSizeIndex_type_id, 0);
+		RenderModeIndex = serialized->get_uint32(RenderModeIndex_type_id, 0u);
+		RenderModeNameHash = serialized->get_uint32(RenderModeNameHash_type_id, 0u);
+		HeadSizeIndex = serialized->get_int32(HeadSizeIndex_type_id, 0u);
 		WrenchModelSwapIndex = serialized->get_int32(WrenchModelSwapIndex_type_id, -1);
 		HammerModelSwapIndex = serialized->get_int32(HammerModelSwapIndex_type_id, -1);
 		ShipSkin = serialized->get_enum<rivet::ddl::generated::x8a806a76>(ShipSkin_type_id, rivet::ddl::generated::x8a806a76_values, rivet::ddl::generated::x8a806a76::Default);

@@ -9,9 +9,9 @@ namespace rivet::ddl::generated {
 	VaultBuildStatusOutput::VaultBuildStatusOutput([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		IsBuildingToC = serialized->get_bool(IsBuildingToC_type_id, false);
 		IsUpdatingEntries = serialized->get_bool(IsUpdatingEntries_type_id, false);
-		CurrentEntryCount = serialized->get_int32(CurrentEntryCount_type_id, 0);
-		TotalEntryCount = serialized->get_int32(TotalEntryCount_type_id, 0);
-		OutdatedEntryCount = serialized->get_int32(OutdatedEntryCount_type_id, 0); 
+		CurrentEntryCount = serialized->get_int32(CurrentEntryCount_type_id, 0u);
+		TotalEntryCount = serialized->get_int32(TotalEntryCount_type_id, 0u);
+		OutdatedEntryCount = serialized->get_int32(OutdatedEntryCount_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

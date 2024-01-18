@@ -10,10 +10,10 @@ namespace rivet::ddl::generated {
 		Type = serialized->get_enum<rivet::ddl::generated::x6c8f7f60>(Type_type_id, rivet::ddl::generated::x6c8f7f60_values, rivet::ddl::generated::x6c8f7f60::TypeDriverClip);
 		DriverName = serialized->get_string(DriverName_type_id, {});
 		Name = serialized->get_string(Name_type_id, {});
-		Duration = serialized->get_float(Duration_type_id, 0.000000);
-		LocalTime = serialized->get_float(LocalTime_type_id, 0.000000);
-		LocalWeight = serialized->get_float(LocalWeight_type_id, 0.000000);
-		Weight = serialized->get_float(Weight_type_id, 0.000000);
+		Duration = serialized->get_float(Duration_type_id, 0.000000f);
+		LocalTime = serialized->get_float(LocalTime_type_id, 0.000000f);
+		LocalWeight = serialized->get_float(LocalWeight_type_id, 0.000000f);
+		Weight = serialized->get_float(Weight_type_id, 0.000000f);
 		RefNames = serialized->get_strings(RefNames_type_id); 
 	}
 

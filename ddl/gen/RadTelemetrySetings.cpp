@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	RadTelemetrySetings::RadTelemetrySetings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ZoneThreshold = serialized->get_uint32(ZoneThreshold_type_id, 50);
+		ZoneThreshold = serialized->get_uint32(ZoneThreshold_type_id, 50u);
 		UseLogging = serialized->get_bool(UseLogging_type_id, false);
 		UsePrintf = serialized->get_bool(UsePrintf_type_id, false);
 		UseProfiling = serialized->get_bool(UseProfiling_type_id, false);

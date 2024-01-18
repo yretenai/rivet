@@ -9,10 +9,10 @@
 
 namespace rivet::ddl::generated {
 	Cinematic2AudioActionDef::Cinematic2AudioActionDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Id = serialized->get_uint64(Id_type_id, 0);
-		Time = serialized->get_float(Time_type_id, 0.000000);
+		Id = serialized->get_uint64(Id_type_id, 0ull);
+		Time = serialized->get_float(Time_type_id, 0.000000f);
 		DurationType = serialized->get_enum<rivet::ddl::generated::x29c933e2>(DurationType_type_id, rivet::ddl::generated::x29c933e2_values, rivet::ddl::generated::x29c933e2::None);
-		Duration = serialized->get_float(Duration_type_id, 0.000000);
+		Duration = serialized->get_float(Duration_type_id, 0.000000f);
 		Event = serialized->unwrap_into<rivet::ddl::generated::WwiseSoundEvent>(Event_type_id);
 		LocatorName = serialized->get_string(LocatorName_type_id, {});
 		PlayOnce = serialized->get_bool(PlayOnce_type_id, false); 

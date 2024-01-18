@@ -10,10 +10,10 @@
 
 namespace rivet::ddl::generated {
 	FollowCameraUserConfig::FollowCameraUserConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		PitchMin = serialized->get_float(PitchMin_type_id, -70.000000);
-		PitchMax = serialized->get_float(PitchMax_type_id, 70.000000);
-		NearClipOverride = serialized->get_float(NearClipOverride_type_id, -1.000000);
-		FarClipOverride = serialized->get_float(FarClipOverride_type_id, -1.000000);
+		PitchMin = serialized->get_float(PitchMin_type_id, -70.000000f);
+		PitchMax = serialized->get_float(PitchMax_type_id, 70.000000f);
+		NearClipOverride = serialized->get_float(NearClipOverride_type_id, -1.000000f);
+		FarClipOverride = serialized->get_float(FarClipOverride_type_id, -1.000000f);
 		TargetTrackingData = serialized->unwrap_into<rivet::ddl::generated::CameraTargetTrackData>(TargetTrackingData_type_id);
 		VelocityFollowData = serialized->unwrap_into<rivet::ddl::generated::VelocityFollowerData>(VelocityFollowData_type_id); 
 	}

@@ -10,7 +10,7 @@ namespace rivet::ddl::generated {
 		JointName = serialized->get_string(JointName_type_id, {});
 		Axis = serialized->get_enum<rivet::ddl::generated::x302e143f>(Axis_type_id, rivet::ddl::generated::x302e143f_values, rivet::ddl::generated::x302e143f::Z);
 		MirrorAxis = serialized->get_bool(MirrorAxis_type_id, false);
-		HalfConeAngle = serialized->get_float(HalfConeAngle_type_id, 0.000000); 
+		HalfConeAngle = serialized->get_float(HalfConeAngle_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

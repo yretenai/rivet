@@ -9,7 +9,7 @@ namespace rivet::ddl::generated {
 	BeamOutEffectPrius::BeamOutEffectPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		DeleteAfterBeamOut = serialized->get_bool(DeleteAfterBeamOut_type_id, false);
 		BeamOutConfig = serialized->get_string(BeamOutConfig_type_id, {});
-		BeamOutConfigOverride = serialized->get_uint64(BeamOutConfigOverride_type_id, 0); 
+		BeamOutConfigOverride = serialized->get_uint64(BeamOutConfigOverride_type_id, 0ull); 
 	}
 
 	[[nodiscard]] auto

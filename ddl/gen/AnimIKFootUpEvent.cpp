@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	AnimIKFootUpEvent::AnimIKFootUpEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Duration = serialized->get_float(Duration_type_id, 0.500000);
+		Duration = serialized->get_float(Duration_type_id, 0.500000f);
 		Locator = serialized->get_string(Locator_type_id, {}); 
 	}
 

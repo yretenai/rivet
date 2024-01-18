@@ -11,14 +11,14 @@ namespace rivet::ddl::generated {
 		AutoHost = serialized->get_bool(AutoHost_type_id, false);
 		AutoJoin = serialized->get_bool(AutoJoin_type_id, false);
 		AutoJoinServerName = serialized->get_string(AutoJoinServerName_type_id, {});
-		FrontendRepeatDelay = serialized->get_float(FrontendRepeatDelay_type_id, 0.250000);
-		FrontendRepeatRate = serialized->get_float(FrontendRepeatRate_type_id, 0.075000);
+		FrontendRepeatDelay = serialized->get_float(FrontendRepeatDelay_type_id, 0.250000f);
+		FrontendRepeatRate = serialized->get_float(FrontendRepeatRate_type_id, 0.075000f);
 		FrontendRequireLockCode = serialized->get_bool(FrontendRequireLockCode_type_id, false);
 		SpawnSubprocess = serialized->get_bool(SpawnSubprocess_type_id, false);
 		LoadWithMultiplePlayers = serialized->get_bool(LoadWithMultiplePlayers_type_id, false);
 		AutoMatchmake = serialized->get_bool(AutoMatchmake_type_id, false);
 		OverrideServerName = serialized->get_string(OverrideServerName_type_id, {});
-		DayOffset = serialized->get_int32(DayOffset_type_id, 0);
+		DayOffset = serialized->get_int32(DayOffset_type_id, 0u);
 		DebugServerInfoEnable = serialized->get_bool(DebugServerInfoEnable_type_id, false);
 		DebugCurrentLocalTimeEnable = serialized->get_bool(DebugCurrentLocalTimeEnable_type_id, false);
 		SaveToDisk = serialized->get_bool(SaveToDisk_type_id, true);
@@ -29,7 +29,7 @@ namespace rivet::ddl::generated {
 		CrimeMemTest = serialized->get_bool(CrimeMemTest_type_id, false);
 		CollectiblesMemTest = serialized->get_bool(CollectiblesMemTest_type_id, false);
 		FullscreenMaterialName = serialized->get_string(FullscreenMaterialName_type_id, {});
-		StagingMemoryLimit = serialized->get_uint64(StagingMemoryLimit_type_id, 256);
+		StagingMemoryLimit = serialized->get_uint64(StagingMemoryLimit_type_id, 256ull);
 		EnableDPadQuickSelect = serialized->get_bool(EnableDPadQuickSelect_type_id, false);
 		DoWeaponTriggerEffects = serialized->get_bool(DoWeaponTriggerEffects_type_id, true);
 		DoHoverbootSurfaceDeformation = serialized->get_bool(DoHoverbootSurfaceDeformation_type_id, false);

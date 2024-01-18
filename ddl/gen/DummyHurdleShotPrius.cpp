@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	DummyHurdleShotPrius::DummyHurdleShotPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BasicBulletPrius(serialized) {
-		ShotIndexForHurdle = serialized->get_uint32(ShotIndexForHurdle_type_id, 0);
+		ShotIndexForHurdle = serialized->get_uint32(ShotIndexForHurdle_type_id, 0u);
 		WantsLeftOffset = serialized->get_bool(WantsLeftOffset_type_id, false); 
 	}
 

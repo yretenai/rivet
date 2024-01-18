@@ -15,8 +15,8 @@ namespace rivet::ddl::generated {
 		FilterActorRef = serialized->unwrap_into<rivet::ddl::generated::AssetReferenceDef>(FilterActorRef_type_id);
 		DisableAaMode = serialized->get_bool(DisableAaMode_type_id, false);
 		ComputeLuminanceEarly = serialized->get_bool(ComputeLuminanceEarly_type_id, false);
-		BlendMin = serialized->get_float(BlendMin_type_id, 0.000000);
-		BlendMax = serialized->get_float(BlendMax_type_id, 1.000000);
+		BlendMin = serialized->get_float(BlendMin_type_id, 0.000000f);
+		BlendMax = serialized->get_float(BlendMax_type_id, 1.000000f);
 		ExcludeIndoors = serialized->get_bool(ExcludeIndoors_type_id, false);
 		ExcludeInGame = serialized->get_bool(ExcludeInGame_type_id, true); 
 	}

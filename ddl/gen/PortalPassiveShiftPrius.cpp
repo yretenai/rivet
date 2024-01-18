@@ -10,8 +10,8 @@
 namespace rivet::ddl::generated {
 	PortalPassiveShiftPrius::PortalPassiveShiftPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): PortalPrius(serialized) {
 		GrindOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(GrindOffset_type_id);
-		GravityWellRange = serialized->get_float(GravityWellRange_type_id, 10.000000);
-		GravityWellTargetingAngle = serialized->get_float(GravityWellTargetingAngle_type_id, 180.000000); 
+		GravityWellRange = serialized->get_float(GravityWellRange_type_id, 10.000000f);
+		GravityWellTargetingAngle = serialized->get_float(GravityWellTargetingAngle_type_id, 180.000000f); 
 	}
 
 	[[nodiscard]] auto

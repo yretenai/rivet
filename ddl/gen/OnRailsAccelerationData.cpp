@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	OnRailsAccelerationData::OnRailsAccelerationData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		HorizontalJerk = serialized->get_float(HorizontalJerk_type_id, 60.000000);
-		NegativeHorizontalJerk = serialized->get_float(NegativeHorizontalJerk_type_id, 20.000000);
-		MaxHorizontalAccel = serialized->get_float(MaxHorizontalAccel_type_id, 50.000000);
-		VerticalJerk = serialized->get_float(VerticalJerk_type_id, 60.000000);
-		NegativeVerticalJerk = serialized->get_float(NegativeVerticalJerk_type_id, 20.000000);
-		MaxVerticalAccel = serialized->get_float(MaxVerticalAccel_type_id, 50.000000); 
+		HorizontalJerk = serialized->get_float(HorizontalJerk_type_id, 60.000000f);
+		NegativeHorizontalJerk = serialized->get_float(NegativeHorizontalJerk_type_id, 20.000000f);
+		MaxHorizontalAccel = serialized->get_float(MaxHorizontalAccel_type_id, 50.000000f);
+		VerticalJerk = serialized->get_float(VerticalJerk_type_id, 60.000000f);
+		NegativeVerticalJerk = serialized->get_float(NegativeVerticalJerk_type_id, 20.000000f);
+		MaxVerticalAccel = serialized->get_float(MaxVerticalAccel_type_id, 50.000000f); 
 	}
 
 	[[nodiscard]] auto

@@ -13,7 +13,7 @@
 namespace rivet::ddl::generated {
 	ThemeDef::ThemeDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		FontName = serialized->get_string(FontName_type_id, {});
-		FontSize = serialized->get_float(FontSize_type_id, 0.000000);
+		FontSize = serialized->get_float(FontSize_type_id, 0.000000f);
 		UseSingleIconColor = serialized->get_bool(UseSingleIconColor_type_id, false);
 		RemapIconColors = serialized->get_bool(RemapIconColors_type_id, false);
 		IconColorSpec = serialized->get_string(IconColorSpec_type_id, {});

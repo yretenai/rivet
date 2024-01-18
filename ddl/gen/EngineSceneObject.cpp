@@ -11,7 +11,7 @@ namespace rivet::ddl::generated {
 	EngineSceneObject::EngineSceneObject([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Type = serialized->get_enum<rivet::ddl::generated::xd90ff0f4>(Type_type_id, rivet::ddl::generated::xd90ff0f4_values, rivet::ddl::generated::xd90ff0f4::Invalid);
 		WorldMatrix = serialized->unwrap_into<rivet::ddl::generated::DDLMatrix4>(WorldMatrix_type_id);
-		EngineId = serialized->get_uint64(EngineId_type_id, 0); 
+		EngineId = serialized->get_uint64(EngineId_type_id, 0ull); 
 	}
 
 	[[nodiscard]] auto

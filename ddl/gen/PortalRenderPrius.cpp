@@ -13,10 +13,10 @@ namespace rivet::ddl::generated {
 		OverrideMaterialName = serialized->get_string(OverrideMaterialName_type_id, {});
 		OverrideTextureName = serialized->get_string(OverrideTextureName_type_id, {});
 		TimeToOpenConstantName = serialized->get_string(TimeToOpenConstantName_type_id, {});
-		TimeToOpen = serialized->get_float(TimeToOpen_type_id, 0.000000);
-		ResolutionMultiplier = serialized->get_float(ResolutionMultiplier_type_id, 1.000000);
+		TimeToOpen = serialized->get_float(TimeToOpen_type_id, 0.000000f);
+		ResolutionMultiplier = serialized->get_float(ResolutionMultiplier_type_id, 1.000000f);
 		LuminanceScaleConstantName = serialized->get_string(LuminanceScaleConstantName_type_id, {});
-		LuminanceScale = serialized->get_float(LuminanceScale_type_id, 1.000000);
+		LuminanceScale = serialized->get_float(LuminanceScale_type_id, 1.000000f);
 		EnableToneMapping = serialized->get_bool(EnableToneMapping_type_id, true);
 		ThresholdClipExtents = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(ThresholdClipExtents_type_id); 
 	}

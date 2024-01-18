@@ -7,16 +7,16 @@
 
 namespace rivet::ddl::generated {
 	FurProperties::FurProperties([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		LayerCount = serialized->get_uint32(LayerCount_type_id, 32);
-		LoDReduction = serialized->get_float(LoDReduction_type_id, 0.250000);
-		Length = serialized->get_float(Length_type_id, 0.020000);
-		Density = serialized->get_float(Density_type_id, 8.000000);
-		OffsetScale = serialized->get_float(OffsetScale_type_id, 2.000000);
-		GlossScale = serialized->get_float(GlossScale_type_id, 1.000000);
-		SpecularScale = serialized->get_float(SpecularScale_type_id, 1.000000);
-		TransmittanceScale = serialized->get_float(TransmittanceScale_type_id, 0.050000);
-		LightWrap = serialized->get_float(LightWrap_type_id, 0.200000);
-		Wetness = serialized->get_float(Wetness_type_id, 0.000000);
+		LayerCount = serialized->get_uint32(LayerCount_type_id, 32u);
+		LoDReduction = serialized->get_float(LoDReduction_type_id, 0.250000f);
+		Length = serialized->get_float(Length_type_id, 0.020000f);
+		Density = serialized->get_float(Density_type_id, 8.000000f);
+		OffsetScale = serialized->get_float(OffsetScale_type_id, 2.000000f);
+		GlossScale = serialized->get_float(GlossScale_type_id, 1.000000f);
+		SpecularScale = serialized->get_float(SpecularScale_type_id, 1.000000f);
+		TransmittanceScale = serialized->get_float(TransmittanceScale_type_id, 0.050000f);
+		LightWrap = serialized->get_float(LightWrap_type_id, 0.200000f);
+		Wetness = serialized->get_float(Wetness_type_id, 0.000000f);
 		BaseMapPath = serialized->get_string(BaseMapPath_type_id, {});
 		NormalMapPath = serialized->get_string(NormalMapPath_type_id, {});
 		GlossMapPath = serialized->get_string(GlossMapPath_type_id, {});

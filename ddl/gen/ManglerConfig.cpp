@@ -7,16 +7,16 @@
 
 namespace rivet::ddl::generated {
 	ManglerConfig::ManglerConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		TimeBetweenAttacksMin = serialized->get_float(TimeBetweenAttacksMin_type_id, 0.000000);
-		TimeBetweenAttacksMax = serialized->get_float(TimeBetweenAttacksMax_type_id, 0.000000);
-		PreMoveTime = serialized->get_float(PreMoveTime_type_id, 0.000000);
-		MoveSpeed = serialized->get_float(MoveSpeed_type_id, 0.000000);
-		ShockwaveTellDuration = serialized->get_float(ShockwaveTellDuration_type_id, 1.000000);
-		ShockwaveDuration = serialized->get_float(ShockwaveDuration_type_id, 1.850000);
-		ShockwaveRadius = serialized->get_float(ShockwaveRadius_type_id, 50.000000);
-		ShockwaveThiccness = serialized->get_float(ShockwaveThiccness_type_id, 3.000000);
+		TimeBetweenAttacksMin = serialized->get_float(TimeBetweenAttacksMin_type_id, 0.000000f);
+		TimeBetweenAttacksMax = serialized->get_float(TimeBetweenAttacksMax_type_id, 0.000000f);
+		PreMoveTime = serialized->get_float(PreMoveTime_type_id, 0.000000f);
+		MoveSpeed = serialized->get_float(MoveSpeed_type_id, 0.000000f);
+		ShockwaveTellDuration = serialized->get_float(ShockwaveTellDuration_type_id, 1.000000f);
+		ShockwaveDuration = serialized->get_float(ShockwaveDuration_type_id, 1.850000f);
+		ShockwaveRadius = serialized->get_float(ShockwaveRadius_type_id, 50.000000f);
+		ShockwaveThiccness = serialized->get_float(ShockwaveThiccness_type_id, 3.000000f);
 		ShockwaveUnlocked = serialized->get_bool(ShockwaveUnlocked_type_id, false);
-		OverloadLevel = serialized->get_uint32(OverloadLevel_type_id, 0); 
+		OverloadLevel = serialized->get_uint32(OverloadLevel_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

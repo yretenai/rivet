@@ -9,7 +9,7 @@ namespace rivet::ddl::generated {
 	WeaponSettings::WeaponSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		OneHitKill = serialized->get_bool(OneHitKill_type_id, false);
 		InfiniteAmmo = serialized->get_enum<rivet::ddl::generated::xb5e7b894>(InfiniteAmmo_type_id, rivet::ddl::generated::xb5e7b894_values, rivet::ddl::generated::xb5e7b894::Off);
-		TapMaxHoldTime = serialized->get_float(TapMaxHoldTime_type_id, 0.300000);
+		TapMaxHoldTime = serialized->get_float(TapMaxHoldTime_type_id, 0.300000f);
 		DrawDebugImguiWindow = serialized->get_bool(DrawDebugImguiWindow_type_id, false); 
 	}
 

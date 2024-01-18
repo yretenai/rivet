@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	DirectionHeuristics::DirectionHeuristics([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		PhalanxWeight = serialized->get_float(PhalanxWeight_type_id, 5.000000);
-		BattleAxisWeight = serialized->get_float(BattleAxisWeight_type_id, 0.000000);
-		BattleAxisSideDistMin = serialized->get_float(BattleAxisSideDistMin_type_id, 0.000000);
-		BattleAxisSideDistMax = serialized->get_float(BattleAxisSideDistMax_type_id, 5.000000);
-		FlankWeight = serialized->get_float(FlankWeight_type_id, 0.000000);
-		FlankDist = serialized->get_float(FlankDist_type_id, 5.000000); 
+		PhalanxWeight = serialized->get_float(PhalanxWeight_type_id, 5.000000f);
+		BattleAxisWeight = serialized->get_float(BattleAxisWeight_type_id, 0.000000f);
+		BattleAxisSideDistMin = serialized->get_float(BattleAxisSideDistMin_type_id, 0.000000f);
+		BattleAxisSideDistMax = serialized->get_float(BattleAxisSideDistMax_type_id, 5.000000f);
+		FlankWeight = serialized->get_float(FlankWeight_type_id, 0.000000f);
+		FlankDist = serialized->get_float(FlankDist_type_id, 5.000000f); 
 	}
 
 	[[nodiscard]] auto

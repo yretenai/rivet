@@ -10,9 +10,9 @@
 
 namespace rivet::ddl::generated {
 	RegionAuxOpenContainer::RegionAuxOpenContainer([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		TileRadius = serialized->get_uint32(TileRadius_type_id, 0);
-		LoadDistance = serialized->get_uint32(LoadDistance_type_id, 150);
-		UnloadDistance = serialized->get_uint32(UnloadDistance_type_id, 170);
+		TileRadius = serialized->get_uint32(TileRadius_type_id, 0u);
+		LoadDistance = serialized->get_uint32(LoadDistance_type_id, 150u);
+		UnloadDistance = serialized->get_uint32(UnloadDistance_type_id, 170u);
 		MapOverlay = serialized->unwrap_into<rivet::ddl::generated::Region2DMapOverlay>(MapOverlay_type_id);
 		Folders = serialized->unwrap_into_many<rivet::ddl::generated::RegionFolderNode>(Folders_type_id);
 		ZoneAssetIdToFolder = serialized->get_uint64s(ZoneAssetIdToFolder_type_id);

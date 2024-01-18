@@ -9,7 +9,7 @@ namespace rivet::ddl::generated {
 	VisualEffectKeyFrameBase::VisualEffectKeyFrameBase([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		EnableLooping = serialized->get_bool(EnableLooping_type_id, true);
 		UseEmitterAge = serialized->get_bool(UseEmitterAge_type_id, false);
-		LifeTimeOverride = serialized->get_float(LifeTimeOverride_type_id, 0.000000); 
+		LifeTimeOverride = serialized->get_float(LifeTimeOverride_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

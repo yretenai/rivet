@@ -9,9 +9,9 @@ namespace rivet::ddl::generated {
 	ConfigMod::ConfigMod([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Variable = serialized->get_string(Variable_type_id, {});
 		Op = serialized->get_enum<rivet::ddl::generated::x2d67b08a>(Op_type_id, rivet::ddl::generated::x2d67b08a_values, rivet::ddl::generated::x2d67b08a::Multiply);
-		Value = serialized->get_float(Value_type_id, 0.000000);
-		GroupId = serialized->get_int32(GroupId_type_id, 0);
-		ClassFlags = serialized->get_uint32(ClassFlags_type_id, 0); 
+		Value = serialized->get_float(Value_type_id, 0.000000f);
+		GroupId = serialized->get_int32(GroupId_type_id, 0u);
+		ClassFlags = serialized->get_uint32(ClassFlags_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

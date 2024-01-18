@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	UIInputSettings::UIInputSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		FirstKeyRepeatTime = serialized->get_float(FirstKeyRepeatTime_type_id, 0.500000);
-		KeyRepeatTime = serialized->get_float(KeyRepeatTime_type_id, 0.125000); 
+		FirstKeyRepeatTime = serialized->get_float(FirstKeyRepeatTime_type_id, 0.500000f);
+		KeyRepeatTime = serialized->get_float(KeyRepeatTime_type_id, 0.125000f); 
 	}
 
 	[[nodiscard]] auto

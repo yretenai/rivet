@@ -10,7 +10,7 @@ namespace rivet::ddl::generated {
 		IntroDriverName = serialized->get_string(IntroDriverName_type_id, {});
 		DriverName = serialized->get_string(DriverName_type_id, "Move");
 		OutroDriverName = serialized->get_string(OutroDriverName_type_id, {});
-		Speed = serialized->get_float(Speed_type_id, -1.000000);
+		Speed = serialized->get_float(Speed_type_id, -1.000000f);
 		MaintainYUp = serialized->get_bool(MaintainYUp_type_id, false); 
 	}
 

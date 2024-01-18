@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	POITypeInteract::POITypeInteract([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): POIInstanceDataBase(serialized) {
-		ControlHash = serialized->get_uint32(ControlHash_type_id, 0);
+		ControlHash = serialized->get_uint32(ControlHash_type_id, 0u);
 		Button = serialized->get_enum<rivet::ddl::generated::x7b87880c>(Button_type_id, rivet::ddl::generated::x7b87880c_values, rivet::ddl::generated::x7b87880c::None);
 		Text = serialized->get_string(Text_type_id, {}); 
 	}

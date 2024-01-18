@@ -22,11 +22,11 @@ namespace rivet::ddl::generated {
 		TakeOffCinematic = serialized->unwrap_into<rivet::ddl::generated::GalacticMapAccessCinematic>(TakeOffCinematic_type_id);
 		CineOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(CineOffset_type_id);
 		GetOutHeroOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(GetOutHeroOffset_type_id);
-		DoorActor = serialized->get_uint64(DoorActor_type_id, 0);
-		LandHeroWarpVol = serialized->get_uint64(LandHeroWarpVol_type_id, 0);
+		DoorActor = serialized->get_uint64(DoorActor_type_id, 0ull);
+		LandHeroWarpVol = serialized->get_uint64(LandHeroWarpVol_type_id, 0ull);
 		LocationText = serialized->get_string(LocationText_type_id, "INVALID");
-		LocTextDuration = serialized->get_float(LocTextDuration_type_id, 3.000000);
-		LocTextDelay = serialized->get_float(LocTextDelay_type_id, 0.000000); 
+		LocTextDuration = serialized->get_float(LocTextDuration_type_id, 3.000000f);
+		LocTextDelay = serialized->get_float(LocTextDelay_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

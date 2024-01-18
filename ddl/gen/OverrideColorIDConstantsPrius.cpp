@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	OverrideColorIDConstantsPrius::OverrideColorIDConstantsPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ColorID = serialized->get_float(ColorID_type_id, 0.000000); 
+		ColorID = serialized->get_float(ColorID_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

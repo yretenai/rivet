@@ -11,9 +11,9 @@ namespace rivet::ddl::generated {
 	ScriptDebugListEntry::ScriptDebugListEntry([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Vector_Value = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Vector_Value_type_id);
 		ActorName = serialized->get_string(ActorName_type_id, {});
-		ActorTuid = serialized->get_uint64(ActorTuid_type_id, 0);
+		ActorTuid = serialized->get_uint64(ActorTuid_type_id, 0ull);
 		String_Value = serialized->get_string(String_Value_type_id, {});
-		Number_Value = serialized->get_float(Number_Value_type_id, 0.000000);
+		Number_Value = serialized->get_float(Number_Value_type_id, 0.000000f);
 		Boolean_Value = serialized->get_bool(Boolean_Value_type_id, false); 
 	}
 

@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	BotBaseData::BotBaseData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Health = serialized->get_float(Health_type_id, 100.000000);
-		HealthFlags = serialized->get_bitset<rivet::ddl::generated::x87e08126>(HealthFlags_type_id, rivet::ddl::generated::x87e08126_values, 0);
+		Health = serialized->get_float(Health_type_id, 100.000000f);
+		HealthFlags = serialized->get_bitset<rivet::ddl::generated::x87e08126>(HealthFlags_type_id, rivet::ddl::generated::x87e08126_values, 0u);
 		MovementConfig = serialized->get_string(MovementConfig_type_id, {});
 		Movement3DConfig = serialized->get_string(Movement3DConfig_type_id, {});
 		MeleeConfig = serialized->get_string(MeleeConfig_type_id, {});

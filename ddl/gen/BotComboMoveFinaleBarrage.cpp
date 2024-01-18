@@ -8,13 +8,13 @@
 namespace rivet::ddl::generated {
 	BotComboMoveFinaleBarrage::BotComboMoveFinaleBarrage([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BotComboMoveBase(serialized) {
 		PortalActorAsset = serialized->get_string(PortalActorAsset_type_id, {});
-		PortalSpawnArea = serialized->get_uint64(PortalSpawnArea_type_id, 0);
+		PortalSpawnArea = serialized->get_uint64(PortalSpawnArea_type_id, 0ull);
 		ProjectileShotConfig = serialized->get_string(ProjectileShotConfig_type_id, {});
 		ProjectileActor = serialized->get_strings(ProjectileActor_type_id);
-		MinInterval = serialized->get_float(MinInterval_type_id, 0.500000);
-		MaxInterval = serialized->get_float(MaxInterval_type_id, 1.000000);
-		MinDuration = serialized->get_float(MinDuration_type_id, 5.000000);
-		MaxDuration = serialized->get_float(MaxDuration_type_id, 10.000000); 
+		MinInterval = serialized->get_float(MinInterval_type_id, 0.500000f);
+		MaxInterval = serialized->get_float(MaxInterval_type_id, 1.000000f);
+		MinDuration = serialized->get_float(MinDuration_type_id, 5.000000f);
+		MaxDuration = serialized->get_float(MaxDuration_type_id, 10.000000f); 
 	}
 
 	[[nodiscard]] auto

@@ -10,7 +10,7 @@
 
 namespace rivet::ddl::generated {
 	PlacedCameraPrius::PlacedCameraPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): CameraPrius(serialized) {
-		ActivationVolume = serialized->get_uint64(ActivationVolume_type_id, 0); 
+		ActivationVolume = serialized->get_uint64(ActivationVolume_type_id, 0ull); 
 	}
 
 	[[nodiscard]] auto

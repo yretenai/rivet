@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	ClankPuzzleFanBlowVolumePrius::ClankPuzzleFanBlowVolumePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		LocalZMotion = serialized->get_float(LocalZMotion_type_id, 1.000000);
-		LocalXMotion = serialized->get_float(LocalXMotion_type_id, 0.000000);
+		LocalZMotion = serialized->get_float(LocalZMotion_type_id, 1.000000f);
+		LocalXMotion = serialized->get_float(LocalXMotion_type_id, 0.000000f);
 		SetBotRunDirection = serialized->get_bool(SetBotRunDirection_type_id, true); 
 	}
 

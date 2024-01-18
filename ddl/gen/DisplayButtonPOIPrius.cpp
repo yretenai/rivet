@@ -11,8 +11,8 @@ namespace rivet::ddl::generated {
 	DisplayButtonPOIPrius::DisplayButtonPOIPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EnabledComponentBasePrius(serialized) {
 		Button = serialized->get_enum<rivet::ddl::generated::x89e6bc43>(Button_type_id, rivet::ddl::generated::x89e6bc43_values, rivet::ddl::generated::x89e6bc43::Interact);
 		POIOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(POIOffset_type_id);
-		Range = serialized->get_float(Range_type_id, 15.000000);
-		PreviewRange = serialized->get_float(PreviewRange_type_id, 0.000000);
+		Range = serialized->get_float(Range_type_id, 15.000000f);
+		PreviewRange = serialized->get_float(PreviewRange_type_id, 0.000000f);
 		RequiredHeroType = serialized->get_enum<rivet::ddl::generated::HeroTypes>(RequiredHeroType_type_id, rivet::ddl::generated::HeroTypes_values, rivet::ddl::generated::HeroTypes::None); 
 	}
 

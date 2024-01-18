@@ -11,9 +11,9 @@ namespace rivet::ddl::generated {
 	VisualEffectTurbulenceKeyFrames::VisualEffectTurbulenceKeyFrames([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		EnableLooping = serialized->get_bool(EnableLooping_type_id, true);
 		UseEmitterAge = serialized->get_bool(UseEmitterAge_type_id, false);
-		LifeTimeOverride = serialized->get_float(LifeTimeOverride_type_id, 0.000000);
+		LifeTimeOverride = serialized->get_float(LifeTimeOverride_type_id, 0.000000f);
 		Value = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Value_type_id);
-		Frequency = serialized->get_float(Frequency_type_id, 1.000000); 
+		Frequency = serialized->get_float(Frequency_type_id, 1.000000f); 
 	}
 
 	[[nodiscard]] auto

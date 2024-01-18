@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	AnimComponentStructuredTrace::AnimComponentStructuredTrace([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MTime = serialized->get_int32(MTime_type_id, 0);
-		STime = serialized->get_int32(STime_type_id, 0);
+		MTime = serialized->get_int32(MTime_type_id, 0u);
+		STime = serialized->get_int32(STime_type_id, 0u);
 		ActorName = serialized->get_string(ActorName_type_id, {});
 		Message = serialized->get_string(Message_type_id, {}); 
 	}

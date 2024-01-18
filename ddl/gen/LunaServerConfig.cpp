@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	LunaServerConfig::LunaServerConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		DbProfilingLevel = serialized->get_enum<rivet::ddl::generated::xedfa7304>(DbProfilingLevel_type_id, rivet::ddl::generated::xedfa7304_values, rivet::ddl::generated::xedfa7304::None);
-		SlowDbProfilingThreshold = serialized->get_int32(SlowDbProfilingThreshold_type_id, 100); 
+		SlowDbProfilingThreshold = serialized->get_int32(SlowDbProfilingThreshold_type_id, 100u); 
 	}
 
 	[[nodiscard]] auto

@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	SessionDocument::SessionDocument([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		_id = serialized->get_uint64(_id_type_id, 0);
+		_id = serialized->get_uint64(_id_type_id, 0ull);
 		LastChanged = serialized->get_string(LastChanged_type_id, {});
-		StartToken = serialized->get_int64(StartToken_type_id, 0);
+		StartToken = serialized->get_int64(StartToken_type_id, 0u);
 		Session = serialized->get_field(Session_type_id); 
 	}
 

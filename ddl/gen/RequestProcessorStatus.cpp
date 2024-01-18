@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	RequestProcessorStatus::RequestProcessorStatus([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		CountFileSessions = serialized->get_int32(CountFileSessions_type_id, 0);
-		CountLoadListSessions = serialized->get_int32(CountLoadListSessions_type_id, 0); 
+		CountFileSessions = serialized->get_int32(CountFileSessions_type_id, 0u);
+		CountLoadListSessions = serialized->get_int32(CountLoadListSessions_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	VanityPerkWrenchDamage::VanityPerkWrenchDamage([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): VanityPerkBase(serialized) {
-		WrenchDamageMultSet = serialized->get_float(WrenchDamageMultSet_type_id, 0.000000);
-		WrenchDamageMultPiece = serialized->get_float(WrenchDamageMultPiece_type_id, 0.000000); 
+		WrenchDamageMultSet = serialized->get_float(WrenchDamageMultSet_type_id, 0.000000f);
+		WrenchDamageMultPiece = serialized->get_float(WrenchDamageMultPiece_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

@@ -14,7 +14,7 @@ namespace rivet::ddl::generated {
 		Button = serialized->get_enum<rivet::ddl::generated::xe50c3252>(Button_type_id, rivet::ddl::generated::xe50c3252_values, rivet::ddl::generated::xe50c3252::None);
 		Action = serialized->unwrap_into<rivet::ddl::generated::ActionControlBase>(Action_type_id);
 		StartListening = serialized->get_bool(StartListening_type_id, true);
-		RetriggerDelay = serialized->get_float(RetriggerDelay_type_id, -1.000000); 
+		RetriggerDelay = serialized->get_float(RetriggerDelay_type_id, -1.000000f); 
 	}
 
 	[[nodiscard]] auto

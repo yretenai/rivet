@@ -8,8 +8,8 @@
 namespace rivet::ddl::generated {
 	SimpleBreakablePrius::SimpleBreakablePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		SaveDestroyedState = serialized->get_bool(SaveDestroyedState_type_id, false);
-		MaxHealth = serialized->get_float(MaxHealth_type_id, 1.000000);
-		DestroyDelay = serialized->get_float(DestroyDelay_type_id, 0.000000);
+		MaxHealth = serialized->get_float(MaxHealth_type_id, 1.000000f);
+		DestroyDelay = serialized->get_float(DestroyDelay_type_id, 0.000000f);
 		HideOnDeath = serialized->get_bool(HideOnDeath_type_id, true);
 		StumpModel = serialized->get_string(StumpModel_type_id, {});
 		StumpCollision = serialized->get_bool(StumpCollision_type_id, true); 

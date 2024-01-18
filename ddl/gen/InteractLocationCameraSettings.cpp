@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	InteractLocationCameraSettings::InteractLocationCameraSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		UserCamera = serialized->get_uint64(UserCamera_type_id, 0);
-		CameraOnDelay = serialized->get_float(CameraOnDelay_type_id, 0.000000);
-		CameraOffDelay = serialized->get_float(CameraOffDelay_type_id, 0.000000);
-		CameraOffDistance = serialized->get_float(CameraOffDistance_type_id, 0.000000);
-		CameraBlendInTime = serialized->get_float(CameraBlendInTime_type_id, 0.500000);
-		CameraBlendTime = serialized->get_float(CameraBlendTime_type_id, 0.500000);
+		UserCamera = serialized->get_uint64(UserCamera_type_id, 0ull);
+		CameraOnDelay = serialized->get_float(CameraOnDelay_type_id, 0.000000f);
+		CameraOffDelay = serialized->get_float(CameraOffDelay_type_id, 0.000000f);
+		CameraOffDistance = serialized->get_float(CameraOffDistance_type_id, 0.000000f);
+		CameraBlendInTime = serialized->get_float(CameraBlendInTime_type_id, 0.500000f);
+		CameraBlendTime = serialized->get_float(CameraBlendTime_type_id, 0.500000f);
 		ActivateOnStart = serialized->get_bool(ActivateOnStart_type_id, false);
 		UseAnimatedCamera = serialized->get_bool(UseAnimatedCamera_type_id, false);
 		AnimatedCameraAnchor = serialized->get_string(AnimatedCameraAnchor_type_id, {}); 

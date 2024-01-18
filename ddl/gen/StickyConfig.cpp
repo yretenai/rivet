@@ -9,8 +9,8 @@ namespace rivet::ddl::generated {
 	StickyConfig::StickyConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		WindowX = serialized->get_int32(WindowX_type_id, -1);
 		WindowY = serialized->get_int32(WindowY_type_id, -1);
-		WindowWidth = serialized->get_int32(WindowWidth_type_id, 0);
-		WindowHeight = serialized->get_int32(WindowHeight_type_id, 0);
+		WindowWidth = serialized->get_int32(WindowWidth_type_id, 0u);
+		WindowHeight = serialized->get_int32(WindowHeight_type_id, 0u);
 		WindowMaximized = serialized->get_bool(WindowMaximized_type_id, false); 
 	}
 

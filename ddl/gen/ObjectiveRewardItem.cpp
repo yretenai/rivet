@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	ObjectiveRewardItem::ObjectiveRewardItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ObjectiveRewardBase(serialized) {
 		ItemConfig = serialized->get_string(ItemConfig_type_id, {});
-		Count = serialized->get_uint32(Count_type_id, 1);
+		Count = serialized->get_uint32(Count_type_id, 1u);
 		AutoEquip = serialized->get_bool(AutoEquip_type_id, false);
 		ShowOnMisisonComplete = serialized->get_bool(ShowOnMisisonComplete_type_id, true); 
 	}

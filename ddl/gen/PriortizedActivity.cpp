@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	PriortizedActivity::PriortizedActivity([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		activityId = serialized->get_string(activityId_type_id, {});
-		priority = serialized->get_int32(priority_type_id, 0); 
+		priority = serialized->get_int32(priority_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

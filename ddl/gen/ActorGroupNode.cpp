@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	ActorGroupNode::ActorGroupNode([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Name = serialized->get_string(Name_type_id, {});
-		Id = serialized->get_uint64(Id_type_id, 0);
+		Id = serialized->get_uint64(Id_type_id, 0ull);
 		IsGlobal = serialized->get_bool(IsGlobal_type_id, false);
 		Actors = serialized->get_uint64s(Actors_type_id); 
 	}

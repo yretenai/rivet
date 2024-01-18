@@ -10,7 +10,7 @@
 namespace rivet::ddl::generated {
 	DebugPlotLinesActionPrius::DebugPlotLinesActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::UI);
-		MaxValues = serialized->get_uint32(MaxValues_type_id, 16);
+		MaxValues = serialized->get_uint32(MaxValues_type_id, 16u);
 		ScaleMinMax = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(ScaleMinMax_type_id);
 		Animate = serialized->get_bool(Animate_type_id, true);
 		Label = serialized->get_string(Label_type_id, "");

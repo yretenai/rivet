@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	RegionFolderNode::RegionFolderNode([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Id = serialized->get_uint64(Id_type_id, 0);
-		ParentId = serialized->get_uint64(ParentId_type_id, 0);
+		Id = serialized->get_uint64(Id_type_id, 0ull);
+		ParentId = serialized->get_uint64(ParentId_type_id, 0ull);
 		Name = serialized->get_string(Name_type_id, {});
 		Color = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Color_type_id);
 		ChildIds = serialized->get_uint64s(ChildIds_type_id); 

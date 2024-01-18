@@ -10,7 +10,7 @@ namespace rivet::ddl::generated {
 		LightingZoneFullPath = serialized->get_string(LightingZoneFullPath_type_id, {});
 		LightbinSrcDir = serialized->get_string(LightbinSrcDir_type_id, {});
 		ZoneLightbinFullPath = serialized->get_string(ZoneLightbinFullPath_type_id, {});
-		Bounce = serialized->get_uint32(Bounce_type_id, 1); 
+		Bounce = serialized->get_uint32(Bounce_type_id, 1u); 
 	}
 
 	[[nodiscard]] auto

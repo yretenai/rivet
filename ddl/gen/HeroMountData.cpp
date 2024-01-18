@@ -12,10 +12,10 @@ namespace rivet::ddl::generated {
 		CanRatchetMount = serialized->get_bool(CanRatchetMount_type_id, false);
 		CanRatchetteMount = serialized->get_bool(CanRatchetteMount_type_id, true);
 		DrawWhileMounted = serialized->get_bool(DrawWhileMounted_type_id, true);
-		AutoMountDist = serialized->get_float(AutoMountDist_type_id, 1.000000);
-		TimeToMountFromAir = serialized->get_float(TimeToMountFromAir_type_id, 0.450000);
+		AutoMountDist = serialized->get_float(AutoMountDist_type_id, 1.000000f);
+		TimeToMountFromAir = serialized->get_float(TimeToMountFromAir_type_id, 0.450000f);
 		FallAnimName = serialized->get_string(FallAnimName_type_id, {});
-		TimeToMountFromGround = serialized->get_float(TimeToMountFromGround_type_id, 0.800000);
+		TimeToMountFromGround = serialized->get_float(TimeToMountFromGround_type_id, 0.800000f);
 		LocatorAttachName = serialized->get_string(LocatorAttachName_type_id, {});
 		IntroStartAnimName = serialized->get_string(IntroStartAnimName_type_id, {});
 		MiddleStartAnimName = serialized->get_string(MiddleStartAnimName_type_id, {});

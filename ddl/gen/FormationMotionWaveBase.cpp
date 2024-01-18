@@ -10,11 +10,11 @@
 
 namespace rivet::ddl::generated {
 	FormationMotionWaveBase::FormationMotionWaveBase([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): FormationMotionBase(serialized) {
-		Amplitude = serialized->get_float(Amplitude_type_id, 4.000000);
-		Frequency = serialized->get_float(Frequency_type_id, 180.000000);
-		Period = serialized->get_float(Period_type_id, 0.000000);
+		Amplitude = serialized->get_float(Amplitude_type_id, 4.000000f);
+		Frequency = serialized->get_float(Frequency_type_id, 180.000000f);
+		Period = serialized->get_float(Period_type_id, 0.000000f);
 		PhaseType = serialized->get_enum<rivet::ddl::generated::xe268370>(PhaseType_type_id, rivet::ddl::generated::xe268370_values, rivet::ddl::generated::xe268370::XAxis);
-		HeightOffset = serialized->get_float(HeightOffset_type_id, 0.000000); 
+		HeightOffset = serialized->get_float(HeightOffset_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

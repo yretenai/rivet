@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	ScriptGraphLibraryData::ScriptGraphLibraryData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		AssetPath = serialized->get_string(AssetPath_type_id, {});
-		Tuid = serialized->get_uint64(Tuid_type_id, 0); 
+		Tuid = serialized->get_uint64(Tuid_type_id, 0ull); 
 	}
 
 	[[nodiscard]] auto

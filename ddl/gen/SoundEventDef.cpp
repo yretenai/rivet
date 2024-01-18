@@ -8,16 +8,16 @@
 namespace rivet::ddl::generated {
 	SoundEventDef::SoundEventDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Name = serialized->get_string(Name_type_id, {});
-		WwiseId = serialized->get_uint32(WwiseId_type_id, 0);
-		PlatformMask = serialized->get_uint32(PlatformMask_type_id, 0);
-		LanguageMask = serialized->get_uint32(LanguageMask_type_id, 0);
+		WwiseId = serialized->get_uint32(WwiseId_type_id, 0u);
+		PlatformMask = serialized->get_uint32(PlatformMask_type_id, 0u);
+		LanguageMask = serialized->get_uint32(LanguageMask_type_id, 0u);
 		Type = serialized->get_enum<rivet::ddl::generated::x4cedff8f>(Type_type_id, rivet::ddl::generated::x4cedff8f_values, rivet::ddl::generated::x4cedff8f::TypeSfx);
 		Dimension = serialized->get_enum<rivet::ddl::generated::xf44aa9d7>(Dimension_type_id, rivet::ddl::generated::xf44aa9d7_values, rivet::ddl::generated::xf44aa9d7::k3d);
 		Playback = serialized->get_enum<rivet::ddl::generated::x6a2f1d70>(Playback_type_id, rivet::ddl::generated::x6a2f1d70_values, rivet::ddl::generated::x6a2f1d70::PlaybackTypeOneShot);
 		ExternalSource = serialized->get_bool(ExternalSource_type_id, false);
-		MaxAttenuation = serialized->get_float(MaxAttenuation_type_id, 0.000000);
-		MaxDuration = serialized->get_float(MaxDuration_type_id, 0.000000);
-		MinDuration = serialized->get_float(MinDuration_type_id, 0.000000); 
+		MaxAttenuation = serialized->get_float(MaxAttenuation_type_id, 0.000000f);
+		MaxDuration = serialized->get_float(MaxDuration_type_id, 0.000000f);
+		MinDuration = serialized->get_float(MinDuration_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

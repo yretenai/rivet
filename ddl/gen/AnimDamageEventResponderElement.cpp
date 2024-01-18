@@ -12,7 +12,7 @@ namespace rivet::ddl::generated {
 	AnimDamageEventResponderElement::AnimDamageEventResponderElement([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		DamageId = serialized->unwrap_into_many<rivet::ddl::generated::DamageEventResponderDamageIdentifier>(DamageId_type_id);
 		AnimationName = serialized->get_string(AnimationName_type_id, {});
-		Priority = serialized->get_uint32(Priority_type_id, 0);
+		Priority = serialized->get_uint32(Priority_type_id, 0u);
 		PlayOnce = serialized->get_bool(PlayOnce_type_id, false);
 		RemoveDriverOnDone = serialized->get_bool(RemoveDriverOnDone_type_id, true);
 		OverrideAlways = serialized->get_bool(OverrideAlways_type_id, false);
@@ -20,11 +20,11 @@ namespace rivet::ddl::generated {
 		OverrideSameAnim = serialized->get_bool(OverrideSameAnim_type_id, false);
 		OverrideAnimNotInMap = serialized->get_bool(OverrideAnimNotInMap_type_id, false);
 		RespondOnIgnoredDamage = serialized->get_bool(RespondOnIgnoredDamage_type_id, true);
-		DamageEventCountThreshold = serialized->get_uint32(DamageEventCountThreshold_type_id, 0);
+		DamageEventCountThreshold = serialized->get_uint32(DamageEventCountThreshold_type_id, 0u);
 		DamageEventCountThresholdMax = serialized->get_int32(DamageEventCountThresholdMax_type_id, -1);
-		DamageAmountThreshold = serialized->get_float(DamageAmountThreshold_type_id, 0.000000);
-		DamageTotalThreshold = serialized->get_float(DamageTotalThreshold_type_id, 0.000000);
-		DamageTotalThresholdMax = serialized->get_float(DamageTotalThresholdMax_type_id, 0.000000); 
+		DamageAmountThreshold = serialized->get_float(DamageAmountThreshold_type_id, 0.000000f);
+		DamageTotalThreshold = serialized->get_float(DamageTotalThreshold_type_id, 0.000000f);
+		DamageTotalThresholdMax = serialized->get_float(DamageTotalThresholdMax_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

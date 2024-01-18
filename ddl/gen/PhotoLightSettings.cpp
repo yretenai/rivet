@@ -10,7 +10,7 @@
 
 namespace rivet::ddl::generated {
 	PhotoLightSettings::PhotoLightSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MaxNumLights = serialized->get_uint8(MaxNumLights_type_id, 3);
+		MaxNumLights = serialized->get_uint8(MaxNumLights_type_id, 3u);
 		LightSettings = serialized->unwrap_into<rivet::ddl::generated::PhotoLightData>(LightSettings_type_id);
 		Orbit = serialized->unwrap_into<rivet::ddl::generated::PhotoLightMoveOrbitData>(Orbit_type_id);
 		SpotlightCone = serialized->get_string(SpotlightCone_type_id, {});

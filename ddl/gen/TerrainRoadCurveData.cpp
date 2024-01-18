@@ -10,8 +10,8 @@
 
 namespace rivet::ddl::generated {
 	TerrainRoadCurveData::TerrainRoadCurveData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		WidthMeters = serialized->get_float(WidthMeters_type_id, 2.000000);
-		SortValue = serialized->get_float(SortValue_type_id, 0.000000);
+		WidthMeters = serialized->get_float(WidthMeters_type_id, 2.000000f);
+		SortValue = serialized->get_float(SortValue_type_id, 0.000000f);
 		MaterialProperties = serialized->unwrap_into<rivet::ddl::generated::TerrainRoadMaterialCompositeProperties>(MaterialProperties_type_id);
 		HeightProperties = serialized->unwrap_into<rivet::ddl::generated::TerrainRoadCompositeProperties>(HeightProperties_type_id); 
 	}

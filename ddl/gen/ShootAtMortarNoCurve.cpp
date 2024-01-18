@@ -12,7 +12,7 @@ namespace rivet::ddl::generated {
 		UseAimingComponent = serialized->get_bool(UseAimingComponent_type_id, false);
 		StartAimModOnStateStart = serialized->get_bool(StartAimModOnStateStart_type_id, false);
 		EndAimModsOnShootEnd = serialized->get_bool(EndAimModsOnShootEnd_type_id, false);
-		MimicShotRate = serialized->get_float(MimicShotRate_type_id, 0.250000);
+		MimicShotRate = serialized->get_float(MimicShotRate_type_id, 0.250000f);
 		AimMods = serialized->unwrap_into_many<rivet::ddl::generated::AimModWrapper>(AimMods_type_id); 
 	}
 

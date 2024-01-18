@@ -7,32 +7,32 @@
 
 namespace rivet::ddl::generated {
 	SceneSettings::SceneSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ModelInstMax = serialized->get_int32(ModelInstMax_type_id, 98304);
-		ModelSkinMax = serialized->get_int32(ModelSkinMax_type_id, 5120);
-		ModelSkinSubsetMax = serialized->get_int32(ModelSkinSubsetMax_type_id, 16384);
-		ModelSkinPrevSubsetMax = serialized->get_int32(ModelSkinPrevSubsetMax_type_id, 10240);
-		GpuRegistryStaticObjMax = serialized->get_int32(GpuRegistryStaticObjMax_type_id, 204800);
-		GpuRegistryPerFrameObjMax = serialized->get_int32(GpuRegistryPerFrameObjMax_type_id, 4096);
-		LightMax = serialized->get_int32(LightMax_type_id, 4096);
-		VolumeMax = serialized->get_int32(VolumeMax_type_id, 4096);
-		DynamicDecalMax = serialized->get_int32(DynamicDecalMax_type_id, 1024);
-		StaticDecalMax = serialized->get_int32(StaticDecalMax_type_id, 2048);
-		CurveMax = serialized->get_int32(CurveMax_type_id, 4096);
-		VisualEffectInstMax = serialized->get_int32(VisualEffectInstMax_type_id, 4096);
-		ImpostorMax = serialized->get_int32(ImpostorMax_type_id, 4096);
-		TerrainMax = serialized->get_int32(TerrainMax_type_id, 128);
-		ComponentMax = serialized->get_int32(ComponentMax_type_id, 16384);
-		ComponentEntryMax = serialized->get_int32(ComponentEntryMax_type_id, 16384);
-		ComponentBlockSizeMax = serialized->get_int32(ComponentBlockSizeMax_type_id, 262144);
-		ActorMax = serialized->get_int32(ActorMax_type_id, 16384);
-		ActorGroupMax = serialized->get_int32(ActorGroupMax_type_id, 2048);
-		ScriptVarMax = serialized->get_int32(ScriptVarMax_type_id, 2048);
-		SignalRelayMax = serialized->get_int32(SignalRelayMax_type_id, 512);
-		DecalHeapMax = serialized->get_int32(DecalHeapMax_type_id, 1572864);
-		DeferredEventHandlerMax = serialized->get_int32(DeferredEventHandlerMax_type_id, 256);
-		ModelRenderInfoRatio = serialized->get_float(ModelRenderInfoRatio_type_id, 0.125000);
-		ModelCompositeMatRatio = serialized->get_float(ModelCompositeMatRatio_type_id, 0.025000);
-		ModelSubsetSortJobsMax = serialized->get_int32(ModelSubsetSortJobsMax_type_id, 255);
+		ModelInstMax = serialized->get_int32(ModelInstMax_type_id, 98304u);
+		ModelSkinMax = serialized->get_int32(ModelSkinMax_type_id, 5120u);
+		ModelSkinSubsetMax = serialized->get_int32(ModelSkinSubsetMax_type_id, 16384u);
+		ModelSkinPrevSubsetMax = serialized->get_int32(ModelSkinPrevSubsetMax_type_id, 10240u);
+		GpuRegistryStaticObjMax = serialized->get_int32(GpuRegistryStaticObjMax_type_id, 204800u);
+		GpuRegistryPerFrameObjMax = serialized->get_int32(GpuRegistryPerFrameObjMax_type_id, 4096u);
+		LightMax = serialized->get_int32(LightMax_type_id, 4096u);
+		VolumeMax = serialized->get_int32(VolumeMax_type_id, 4096u);
+		DynamicDecalMax = serialized->get_int32(DynamicDecalMax_type_id, 1024u);
+		StaticDecalMax = serialized->get_int32(StaticDecalMax_type_id, 2048u);
+		CurveMax = serialized->get_int32(CurveMax_type_id, 4096u);
+		VisualEffectInstMax = serialized->get_int32(VisualEffectInstMax_type_id, 4096u);
+		ImpostorMax = serialized->get_int32(ImpostorMax_type_id, 4096u);
+		TerrainMax = serialized->get_int32(TerrainMax_type_id, 128u);
+		ComponentMax = serialized->get_int32(ComponentMax_type_id, 16384u);
+		ComponentEntryMax = serialized->get_int32(ComponentEntryMax_type_id, 16384u);
+		ComponentBlockSizeMax = serialized->get_int32(ComponentBlockSizeMax_type_id, 262144u);
+		ActorMax = serialized->get_int32(ActorMax_type_id, 16384u);
+		ActorGroupMax = serialized->get_int32(ActorGroupMax_type_id, 2048u);
+		ScriptVarMax = serialized->get_int32(ScriptVarMax_type_id, 2048u);
+		SignalRelayMax = serialized->get_int32(SignalRelayMax_type_id, 512u);
+		DecalHeapMax = serialized->get_int32(DecalHeapMax_type_id, 1572864u);
+		DeferredEventHandlerMax = serialized->get_int32(DeferredEventHandlerMax_type_id, 256u);
+		ModelRenderInfoRatio = serialized->get_float(ModelRenderInfoRatio_type_id, 0.125000f);
+		ModelCompositeMatRatio = serialized->get_float(ModelCompositeMatRatio_type_id, 0.025000f);
+		ModelSubsetSortJobsMax = serialized->get_int32(ModelSubsetSortJobsMax_type_id, 255u);
 		IncludeCurvesInSceneDatabase = serialized->get_bool(IncludeCurvesInSceneDatabase_type_id, false); 
 	}
 

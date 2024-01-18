@@ -7,16 +7,16 @@
 
 namespace rivet::ddl::generated {
 	AnimGestureDef::AnimGestureDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Id = serialized->get_uint64(Id_type_id, 0);
+		Id = serialized->get_uint64(Id_type_id, 0ull);
 		Name = serialized->get_string(Name_type_id, {});
 		ClipPath = serialized->get_string(ClipPath_type_id, {});
 		MirrorAxis = serialized->get_enum<rivet::ddl::generated::x3749ca1b>(MirrorAxis_type_id, rivet::ddl::generated::x3749ca1b_values, rivet::ddl::generated::x3749ca1b::none);
-		StartTime = serialized->get_float(StartTime_type_id, 0.000000);
-		StartOffset = serialized->get_float(StartOffset_type_id, 0.000000);
-		BlendInDuration = serialized->get_float(BlendInDuration_type_id, 0.250000);
-		EndOffset = serialized->get_float(EndOffset_type_id, 0.000000);
-		BlendOutDuration = serialized->get_float(BlendOutDuration_type_id, 0.250000);
-		Weight = serialized->get_float(Weight_type_id, 1.000000); 
+		StartTime = serialized->get_float(StartTime_type_id, 0.000000f);
+		StartOffset = serialized->get_float(StartOffset_type_id, 0.000000f);
+		BlendInDuration = serialized->get_float(BlendInDuration_type_id, 0.250000f);
+		EndOffset = serialized->get_float(EndOffset_type_id, 0.000000f);
+		BlendOutDuration = serialized->get_float(BlendOutDuration_type_id, 0.250000f);
+		Weight = serialized->get_float(Weight_type_id, 1.000000f); 
 	}
 
 	[[nodiscard]] auto

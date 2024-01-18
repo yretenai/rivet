@@ -9,8 +9,8 @@ namespace rivet::ddl::generated {
 	OnDamagedActionPrius::OnDamagedActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Events);
 		InitListening = serialized->get_bool(InitListening_type_id, true);
-		SignalMax = serialized->get_int32(SignalMax_type_id, 1);
-		PercentThreshold = serialized->get_float(PercentThreshold_type_id, 0.000000);
+		SignalMax = serialized->get_int32(SignalMax_type_id, 1u);
+		PercentThreshold = serialized->get_float(PercentThreshold_type_id, 0.000000f);
 		Type = serialized->get_enum<rivet::ddl::generated::DamageTypes>(Type_type_id, rivet::ddl::generated::DamageTypes_values, rivet::ddl::generated::DamageTypes::None);
 		DamageName = serialized->get_string(DamageName_type_id, ""); 
 	}

@@ -10,20 +10,20 @@ namespace rivet::ddl::generated {
 		Variable = serialized->get_enum<rivet::ddl::generated::x3f2aac2e>(Variable_type_id, rivet::ddl::generated::x3f2aac2e_values, rivet::ddl::generated::x3f2aac2e::None);
 		MidEarlyStartMission = serialized->get_string(MidEarlyStartMission_type_id, "");
 		MidEarlyStartObjective = serialized->get_string(MidEarlyStartObjective_type_id, "");
-		MidEarlyValue = serialized->get_float(MidEarlyValue_type_id, 0.000000);
+		MidEarlyValue = serialized->get_float(MidEarlyValue_type_id, 0.000000f);
 		MidLateStartMission = serialized->get_string(MidLateStartMission_type_id, "");
 		MidLateStartObjective = serialized->get_string(MidLateStartObjective_type_id, "");
-		MidLateValue = serialized->get_float(MidLateValue_type_id, 0.000000);
+		MidLateValue = serialized->get_float(MidLateValue_type_id, 0.000000f);
 		LateStartMission = serialized->get_string(LateStartMission_type_id, "");
 		LateStartObjective = serialized->get_string(LateStartObjective_type_id, "");
-		LateValue = serialized->get_float(LateValue_type_id, 0.000000);
-		EasyMultiplier = serialized->get_float(EasyMultiplier_type_id, 1.000000);
-		MediumMultiplier = serialized->get_float(MediumMultiplier_type_id, 1.000000);
-		HardMultiplier = serialized->get_float(HardMultiplier_type_id, 1.000000);
-		HardestMultiplier = serialized->get_float(HardestMultiplier_type_id, 1.000000);
-		ThreeDeathsMultiplier = serialized->get_float(ThreeDeathsMultiplier_type_id, 1.000000);
-		FiveDeathsMultiplier = serialized->get_float(FiveDeathsMultiplier_type_id, 1.000000);
-		ChallengeModeMultiplier = serialized->get_float(ChallengeModeMultiplier_type_id, 1.000000); 
+		LateValue = serialized->get_float(LateValue_type_id, 0.000000f);
+		EasyMultiplier = serialized->get_float(EasyMultiplier_type_id, 1.000000f);
+		MediumMultiplier = serialized->get_float(MediumMultiplier_type_id, 1.000000f);
+		HardMultiplier = serialized->get_float(HardMultiplier_type_id, 1.000000f);
+		HardestMultiplier = serialized->get_float(HardestMultiplier_type_id, 1.000000f);
+		ThreeDeathsMultiplier = serialized->get_float(ThreeDeathsMultiplier_type_id, 1.000000f);
+		FiveDeathsMultiplier = serialized->get_float(FiveDeathsMultiplier_type_id, 1.000000f);
+		ChallengeModeMultiplier = serialized->get_float(ChallengeModeMultiplier_type_id, 1.000000f); 
 	}
 
 	[[nodiscard]] auto

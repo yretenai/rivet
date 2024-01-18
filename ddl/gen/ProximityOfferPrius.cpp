@@ -17,7 +17,7 @@ namespace rivet::ddl::generated {
 	ProximityOfferPrius::ProximityOfferPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): OfferPrius(serialized) {
 		UserFaceMode = serialized->get_enum<rivet::ddl::generated::xccd3eeab>(UserFaceMode_type_id, rivet::ddl::generated::xccd3eeab_values, rivet::ddl::generated::xccd3eeab::Point);
 		OfferShape = serialized->get_enum<rivet::ddl::generated::xd7c06e8b>(OfferShape_type_id, rivet::ddl::generated::xd7c06e8b_values, rivet::ddl::generated::xd7c06e8b::Box);
-		OfferVolume = serialized->get_uint64(OfferVolume_type_id, 0);
+		OfferVolume = serialized->get_uint64(OfferVolume_type_id, 0ull);
 		PromptFacingMode = serialized->get_enum<rivet::ddl::generated::x11d5b447>(PromptFacingMode_type_id, rivet::ddl::generated::x11d5b447_values, rivet::ddl::generated::x11d5b447::Camera_facing); 
 	}
 

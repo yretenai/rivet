@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	AimAssistAutoTargetLocationTargetLocation::AimAssistAutoTargetLocationTargetLocation([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): AimAssistAutoTargetLocation(serialized) {
-		TargetIndex = serialized->get_uint8(TargetIndex_type_id, 0); 
+		TargetIndex = serialized->get_uint8(TargetIndex_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

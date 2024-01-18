@@ -23,12 +23,12 @@ namespace rivet::ddl::generated {
 		SplatMaskPaintDcc = serialized->get_string(SplatMaskPaintDcc_type_id, {});
 		VistaMap = serialized->get_string(VistaMap_type_id, {});
 		Material = serialized->get_string(Material_type_id, "required\\materials\\basic_terrain.material");
-		Height = serialized->get_float(Height_type_id, 1000.000000);
+		Height = serialized->get_float(Height_type_id, 1000.000000f);
 		EnableDetailDisplacement = serialized->get_bool(EnableDetailDisplacement_type_id, false);
 		Layers = serialized->unwrap_into_many<rivet::ddl::generated::TerrainLayer>(Layers_type_id);
 		NavProperties = serialized->unwrap_into<rivet::ddl::generated::NavigationProperties>(NavProperties_type_id);
 		RenderOverrides = serialized->unwrap_into<rivet::ddl::generated::RenderOverrides>(RenderOverrides_type_id);
-		ScatterNodeId = serialized->get_uint64(ScatterNodeId_type_id, 0); 
+		ScatterNodeId = serialized->get_uint64(ScatterNodeId_type_id, 0ull); 
 	}
 
 	[[nodiscard]] auto

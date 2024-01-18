@@ -20,16 +20,16 @@ namespace rivet::ddl::generated {
 	PhotomodeSystemConfig::PhotomodeSystemConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): PhotomodeSystemSharedConfig(serialized) {
 		ModeUnavailable = serialized->unwrap_into<rivet::ddl::generated::ModeUnavailableData>(ModeUnavailable_type_id);
 		SelfieModeUnavailable = serialized->unwrap_into<rivet::ddl::generated::ModeUnavailableData>(SelfieModeUnavailable_type_id);
-		CamCollisRad = serialized->get_float(CamCollisRad_type_id, 0.200000);
-		SavePauseTime = serialized->get_float(SavePauseTime_type_id, 2.000000);
-		DofRangeNear = serialized->get_float(DofRangeNear_type_id, 0.200000);
-		FacePoseMax = serialized->get_int32(FacePoseMax_type_id, 5);
-		BodyPoseNeutralMax = serialized->get_int32(BodyPoseNeutralMax_type_id, 5);
-		BodyPoseMeleeMax = serialized->get_int32(BodyPoseMeleeMax_type_id, 5);
-		BodyPosePistolMax = serialized->get_int32(BodyPosePistolMax_type_id, 5);
-		BodyPoseRifleMax = serialized->get_int32(BodyPoseRifleMax_type_id, 5);
-		BodyPoseThrownMax = serialized->get_int32(BodyPoseThrownMax_type_id, 5);
-		BodyPoseHeavyMax = serialized->get_int32(BodyPoseHeavyMax_type_id, 5);
+		CamCollisRad = serialized->get_float(CamCollisRad_type_id, 0.200000f);
+		SavePauseTime = serialized->get_float(SavePauseTime_type_id, 2.000000f);
+		DofRangeNear = serialized->get_float(DofRangeNear_type_id, 0.200000f);
+		FacePoseMax = serialized->get_int32(FacePoseMax_type_id, 5u);
+		BodyPoseNeutralMax = serialized->get_int32(BodyPoseNeutralMax_type_id, 5u);
+		BodyPoseMeleeMax = serialized->get_int32(BodyPoseMeleeMax_type_id, 5u);
+		BodyPosePistolMax = serialized->get_int32(BodyPosePistolMax_type_id, 5u);
+		BodyPoseRifleMax = serialized->get_int32(BodyPoseRifleMax_type_id, 5u);
+		BodyPoseThrownMax = serialized->get_int32(BodyPoseThrownMax_type_id, 5u);
+		BodyPoseHeavyMax = serialized->get_int32(BodyPoseHeavyMax_type_id, 5u);
 		LoadoutConfig = serialized->get_string(LoadoutConfig_type_id, {});
 		SelfieMode = serialized->unwrap_into<rivet::ddl::generated::SelfieModeData>(SelfieMode_type_id);
 		SelfieModeRivet = serialized->unwrap_into<rivet::ddl::generated::SelfieModeData>(SelfieModeRivet_type_id);

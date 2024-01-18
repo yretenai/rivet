@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	PoolSharkSpawnKillVolumePrius::PoolSharkSpawnKillVolumePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		TimeInVolumeToSpawnShark = serialized->get_float(TimeInVolumeToSpawnShark_type_id, 1.500000);
-		ResetTime = serialized->get_float(ResetTime_type_id, 4.000000);
+		TimeInVolumeToSpawnShark = serialized->get_float(TimeInVolumeToSpawnShark_type_id, 1.500000f);
+		ResetTime = serialized->get_float(ResetTime_type_id, 4.000000f);
 		PoolSharkActor = serialized->get_string(PoolSharkActor_type_id, {});
 		OtherVolumesToUse = serialized->get_uint64s(OtherVolumesToUse_type_id); 
 	}

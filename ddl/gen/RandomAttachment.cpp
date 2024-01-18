@@ -10,7 +10,7 @@ namespace rivet::ddl::generated {
 		Attachment = serialized->get_string(Attachment_type_id, {});
 		LocatorOnBot = serialized->get_string(LocatorOnBot_type_id, {});
 		LocatorOnAttachment = serialized->get_string(LocatorOnAttachment_type_id, {});
-		AttachmentChance = serialized->get_float(AttachmentChance_type_id, 0.500000); 
+		AttachmentChance = serialized->get_float(AttachmentChance_type_id, 0.500000f); 
 	}
 
 	[[nodiscard]] auto

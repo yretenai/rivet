@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	CinematicAllowEarlyTransitionEvent::CinematicAllowEarlyTransitionEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		AnimBlendOutTime = serialized->get_float(AnimBlendOutTime_type_id, 0.500000);
+		AnimBlendOutTime = serialized->get_float(AnimBlendOutTime_type_id, 0.500000f);
 		AllowStickInput = serialized->get_bool(AllowStickInput_type_id, true);
 		AllowJumpInput = serialized->get_bool(AllowJumpInput_type_id, false);
 		CurrentShotOnly = serialized->get_bool(CurrentShotOnly_type_id, false); 

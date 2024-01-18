@@ -11,9 +11,9 @@ namespace rivet::ddl::generated {
 	SpawnScriptedBirdActionPrius::SpawnScriptedBirdActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Gameplay);
 		WaitAllSpawned = serialized->get_bool(WaitAllSpawned_type_id, false);
-		MinSeparation = serialized->get_float(MinSeparation_type_id, 0.250000);
-		FlockSize = serialized->get_int32(FlockSize_type_id, 16);
-		FleeDistance = serialized->get_float(FleeDistance_type_id, -1.000000);
+		MinSeparation = serialized->get_float(MinSeparation_type_id, 0.250000f);
+		FlockSize = serialized->get_int32(FlockSize_type_id, 16u);
+		FleeDistance = serialized->get_float(FleeDistance_type_id, -1.000000f);
 		FleeOnNearbyCombat = serialized->get_bool(FleeOnNearbyCombat_type_id, false);
 		FlockSoundSource = serialized->unwrap_into<rivet::ddl::generated::SoundSourceComponentPrius>(FlockSoundSource_type_id); 
 	}

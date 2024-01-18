@@ -12,8 +12,8 @@ namespace rivet::ddl::generated {
 		FadeSoundAtEnd = serialized->get_bool(FadeSoundAtEnd_type_id, true);
 		FadeInToMovie = serialized->get_bool(FadeInToMovie_type_id, true);
 		FadeOutFromMovie = serialized->get_bool(FadeOutFromMovie_type_id, true);
-		CamBlendInTime = serialized->get_float(CamBlendInTime_type_id, 2.000000);
-		CamBlendOutTime = serialized->get_float(CamBlendOutTime_type_id, 2.000000);
+		CamBlendInTime = serialized->get_float(CamBlendInTime_type_id, 2.000000f);
+		CamBlendOutTime = serialized->get_float(CamBlendOutTime_type_id, 2.000000f);
 		LockOutHero = serialized->get_bool(LockOutHero_type_id, true);
 		AutoCollectAtEnd = serialized->get_bool(AutoCollectAtEnd_type_id, true); 
 	}

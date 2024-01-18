@@ -11,9 +11,9 @@ namespace rivet::ddl::generated {
 		TargetId = serialized->get_string(TargetId_type_id, {});
 		TargetType = serialized->get_enum<rivet::ddl::generated::x8b211a61>(TargetType_type_id, rivet::ddl::generated::x8b211a61_values, rivet::ddl::generated::x8b211a61::PID);
 		State = serialized->get_enum<rivet::ddl::generated::xa2b63d63>(State_type_id, rivet::ddl::generated::xa2b63d63_values, rivet::ddl::generated::xa2b63d63::Idle);
-		BuildRuleHash = serialized->get_uint32(BuildRuleHash_type_id, 0);
-		BuildStartTime = serialized->get_uint64(BuildStartTime_type_id, 0);
-		BuildEstimatedTime = serialized->get_uint64(BuildEstimatedTime_type_id, 0); 
+		BuildRuleHash = serialized->get_uint32(BuildRuleHash_type_id, 0u);
+		BuildStartTime = serialized->get_uint64(BuildStartTime_type_id, 0ull);
+		BuildEstimatedTime = serialized->get_uint64(BuildEstimatedTime_type_id, 0ull); 
 	}
 
 	[[nodiscard]] auto

@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	TriggerOtherEntry::TriggerOtherEntry([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		GroupToTrigger = serialized->get_string(GroupToTrigger_type_id, "");
-		ActorToTrigger = serialized->get_uint64(ActorToTrigger_type_id, 0); 
+		ActorToTrigger = serialized->get_uint64(ActorToTrigger_type_id, 0ull); 
 	}
 
 	[[nodiscard]] auto

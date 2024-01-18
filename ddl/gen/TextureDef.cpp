@@ -26,33 +26,33 @@ namespace rivet::ddl::generated {
 		AddressModeV = serialized->get_enum<rivet::ddl::generated::x7ada9111>(AddressModeV_type_id, rivet::ddl::generated::x7ada9111_values, rivet::ddl::generated::x7ada9111::Wrap);
 		AddressModeW = serialized->get_enum<rivet::ddl::generated::x7ada9111>(AddressModeW_type_id, rivet::ddl::generated::x7ada9111_values, rivet::ddl::generated::x7ada9111::Wrap);
 		UseGPUCompressor = serialized->get_bool(UseGPUCompressor_type_id, false);
-		MipBias = serialized->get_float(MipBias_type_id, 0.000000);
+		MipBias = serialized->get_float(MipBias_type_id, 0.000000f);
 		NoUpscalerBias = serialized->get_bool(NoUpscalerBias_type_id, false);
-		MipMaxCount = serialized->get_uint32(MipMaxCount_type_id, 11);
-		MipMinSize = serialized->get_uint32(MipMinSize_type_id, 8);
+		MipMaxCount = serialized->get_uint32(MipMaxCount_type_id, 11u);
+		MipMinSize = serialized->get_uint32(MipMinSize_type_id, 8u);
 		MipGen = serialized->unwrap_into<rivet::ddl::generated::TextureMipGen>(MipGen_type_id);
 		MipGenAlpha = serialized->unwrap_into<rivet::ddl::generated::TextureMipGenAlpha>(MipGenAlpha_type_id);
 		SourcePathRotation = serialized->get_string(SourcePathRotation_type_id, {});
 		SourcePathNormal = serialized->get_string(SourcePathNormal_type_id, {});
 		TextureArray = serialized->unwrap_into<rivet::ddl::generated::TextureArray>(TextureArray_type_id);
 		NonPowerOfTwo = serialized->get_enum<rivet::ddl::generated::x51a4a4a4>(NonPowerOfTwo_type_id, rivet::ddl::generated::x51a4a4a4_values, rivet::ddl::generated::x51a4a4a4::Smaller_Power_Of_Two);
-		SizeClamp = serialized->get_uint32(SizeClamp_type_id, 0);
-		SizeReduction = serialized->get_uint32(SizeReduction_type_id, 0);
+		SizeClamp = serialized->get_uint32(SizeClamp_type_id, 0u);
+		SizeReduction = serialized->get_uint32(SizeReduction_type_id, 0u);
 		DisableStreaming = serialized->get_bool(DisableStreaming_type_id, false);
 		DisableMidMips = serialized->get_bool(DisableMidMips_type_id, false);
 		DisableSizeCap = serialized->get_bool(DisableSizeCap_type_id, false);
-		ExposureBias = serialized->get_float(ExposureBias_type_id, 0.000000);
+		ExposureBias = serialized->get_float(ExposureBias_type_id, 0.000000f);
 		PreMultiplyAlpha = serialized->get_bool(PreMultiplyAlpha_type_id, false);
 		Deprecated = serialized->get_bool(Deprecated_type_id, false);
 		FlipNormalsX = serialized->get_bool(FlipNormalsX_type_id, false);
 		FlipNormalsY = serialized->get_bool(FlipNormalsY_type_id, false);
 		GlossNormalMap = serialized->get_string(GlossNormalMap_type_id, {});
-		ToksvigScale = serialized->get_float(ToksvigScale_type_id, 1.000000);
+		ToksvigScale = serialized->get_float(ToksvigScale_type_id, 1.000000f);
 		HighResDefaultIBL = serialized->get_bool(HighResDefaultIBL_type_id, false);
 		IBLLightMask = serialized->get_string(IBLLightMask_type_id, {});
 		AutomateIBLLights = serialized->get_bool(AutomateIBLLights_type_id, true);
 		Clamp = serialized->get_enum<rivet::ddl::generated::x96db4657>(Clamp_type_id, rivet::ddl::generated::x96db4657_values, rivet::ddl::generated::x96db4657::Low);
-		Shift = serialized->get_uint32(Shift_type_id, 0); 
+		Shift = serialized->get_uint32(Shift_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

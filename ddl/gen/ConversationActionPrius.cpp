@@ -16,7 +16,7 @@ namespace rivet::ddl::generated {
 		Priority = serialized->get_enum<rivet::ddl::generated::x90d1aef7>(Priority_type_id, rivet::ddl::generated::x90d1aef7_values, rivet::ddl::generated::x90d1aef7::Medium);
 		InterruptSamePriorityLines = serialized->get_bool(InterruptSamePriorityLines_type_id, true);
 		Queue = serialized->get_bool(Queue_type_id, false);
-		MaxQueueTime = serialized->get_float(MaxQueueTime_type_id, -1.000000);
+		MaxQueueTime = serialized->get_float(MaxQueueTime_type_id, -1.000000f);
 		StopOnHeroDeath = serialized->get_bool(StopOnHeroDeath_type_id, true);
 		StopOnActorDeath = serialized->get_bool(StopOnActorDeath_type_id, true);
 		CantBeInterrupted = serialized->get_bool(CantBeInterrupted_type_id, false);

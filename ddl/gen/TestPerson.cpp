@@ -9,12 +9,12 @@ namespace rivet::ddl::generated {
 	TestPerson::TestPerson([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		FirstName = serialized->get_string(FirstName_type_id, {});
 		LastName = serialized->get_string(LastName_type_id, {});
-		Age = serialized->get_int32(Age_type_id, 0);
-		Height = serialized->get_int32(Height_type_id, 0);
+		Age = serialized->get_int32(Age_type_id, 0u);
+		Height = serialized->get_int32(Height_type_id, 0u);
 		EyeColor = serialized->get_string(EyeColor_type_id, {});
 		Address = serialized->get_string(Address_type_id, {});
 		Phone = serialized->get_string(Phone_type_id, {});
-		Id = serialized->get_int32(Id_type_id, 0); 
+		Id = serialized->get_int32(Id_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

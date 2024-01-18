@@ -10,15 +10,15 @@
 
 namespace rivet::ddl::generated {
 	LandingBirdSystemConfig::LandingBirdSystemConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		InitialLoadDelay = serialized->get_float(InitialLoadDelay_type_id, 15.000000);
-		PostFleeCooldown = serialized->get_float(PostFleeCooldown_type_id, 30.000000);
-		MaxIdleSpeed = serialized->get_float(MaxIdleSpeed_type_id, 2.000000);
-		IdleSpawnDelay = serialized->get_float(IdleSpawnDelay_type_id, 5.000000);
-		LandCircleOffsetXZ = serialized->get_float(LandCircleOffsetXZ_type_id, 10.000000);
-		LandCircleRadiusXZ = serialized->get_float(LandCircleRadiusXZ_type_id, 5.000000);
-		MaxLandHeightDiff = serialized->get_float(MaxLandHeightDiff_type_id, 6.000000);
-		MaxLandNormalAngle = serialized->get_float(MaxLandNormalAngle_type_id, 30.000000);
-		FleeDestroyOffscreenDelay = serialized->get_float(FleeDestroyOffscreenDelay_type_id, 1.000000);
+		InitialLoadDelay = serialized->get_float(InitialLoadDelay_type_id, 15.000000f);
+		PostFleeCooldown = serialized->get_float(PostFleeCooldown_type_id, 30.000000f);
+		MaxIdleSpeed = serialized->get_float(MaxIdleSpeed_type_id, 2.000000f);
+		IdleSpawnDelay = serialized->get_float(IdleSpawnDelay_type_id, 5.000000f);
+		LandCircleOffsetXZ = serialized->get_float(LandCircleOffsetXZ_type_id, 10.000000f);
+		LandCircleRadiusXZ = serialized->get_float(LandCircleRadiusXZ_type_id, 5.000000f);
+		MaxLandHeightDiff = serialized->get_float(MaxLandHeightDiff_type_id, 6.000000f);
+		MaxLandNormalAngle = serialized->get_float(MaxLandNormalAngle_type_id, 30.000000f);
+		FleeDestroyOffscreenDelay = serialized->get_float(FleeDestroyOffscreenDelay_type_id, 1.000000f);
 		FleeFromPulses = serialized->get_bool(FleeFromPulses_type_id, true);
 		PulseFlockTargetPrius = serialized->unwrap_into<rivet::ddl::generated::DimensionalPulseTargetFlockPrius>(PulseFlockTargetPrius_type_id);
 		BirdTypes = serialized->unwrap_into_many<rivet::ddl::generated::LandingBirdType>(BirdTypes_type_id); 

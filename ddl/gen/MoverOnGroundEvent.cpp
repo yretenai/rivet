@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	MoverOnGroundEvent::MoverOnGroundEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Weight = serialized->get_float(Weight_type_id, 1.000000); 
+		Weight = serialized->get_float(Weight_type_id, 1.000000f); 
 	}
 
 	[[nodiscard]] auto

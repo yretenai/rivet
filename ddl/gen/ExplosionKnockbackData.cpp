@@ -8,9 +8,9 @@
 namespace rivet::ddl::generated {
 	ExplosionKnockbackData::ExplosionKnockbackData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		KnockbackLevel = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(KnockbackLevel_type_id, rivet::ddl::generated::KnockbackLevels_values, rivet::ddl::generated::KnockbackLevels::None);
-		KnockbackAmount = serialized->get_float(KnockbackAmount_type_id, 0.000000);
-		RangeMin = serialized->get_float(RangeMin_type_id, 0.000000);
-		RangeMax = serialized->get_float(RangeMax_type_id, 0.000000);
+		KnockbackAmount = serialized->get_float(KnockbackAmount_type_id, 0.000000f);
+		RangeMin = serialized->get_float(RangeMin_type_id, 0.000000f);
+		RangeMax = serialized->get_float(RangeMax_type_id, 0.000000f);
 		MaxVictims = serialized->get_int32(MaxVictims_type_id, -1);
 		EnableSelfKnockback = serialized->get_bool(EnableSelfKnockback_type_id, false); 
 	}

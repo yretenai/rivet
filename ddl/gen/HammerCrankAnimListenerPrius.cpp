@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	HammerCrankAnimListenerPrius::HammerCrankAnimListenerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		HammerCrank = serialized->get_uint64(HammerCrank_type_id, 0);
+		HammerCrank = serialized->get_uint64(HammerCrank_type_id, 0ull);
 		AnimDriverName = serialized->get_string(AnimDriverName_type_id, {});
 		TriggerAnimEvents = serialized->get_bool(TriggerAnimEvents_type_id, false); 
 	}

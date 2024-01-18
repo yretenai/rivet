@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	TriggerResponderDamageSelfPrius::TriggerResponderDamageSelfPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): TriggerResponderBasePrius(serialized) {
-		Amount = serialized->get_float(Amount_type_id, 100.000000);
+		Amount = serialized->get_float(Amount_type_id, 100.000000f);
 		DamageType = serialized->get_enum<rivet::ddl::generated::DamageTypes>(DamageType_type_id, rivet::ddl::generated::DamageTypes_values, rivet::ddl::generated::DamageTypes::Melee); 
 	}
 

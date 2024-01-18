@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	SimpleSplasherPrius::SimpleSplasherPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		CollisionRadius = serialized->get_float(CollisionRadius_type_id, 0.250000); 
+		CollisionRadius = serialized->get_float(CollisionRadius_type_id, 0.250000f); 
 	}
 
 	[[nodiscard]] auto

@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	HeroBreakableHaloPrius::HeroBreakableHaloPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MaxValidRange = serialized->get_float(MaxValidRange_type_id, 8.000000);
-		TargetTypeMask = serialized->get_uint32(TargetTypeMask_type_id, 4294967295); 
+		MaxValidRange = serialized->get_float(MaxValidRange_type_id, 8.000000f);
+		TargetTypeMask = serialized->get_uint32(TargetTypeMask_type_id, 4294967295u); 
 	}
 
 	[[nodiscard]] auto

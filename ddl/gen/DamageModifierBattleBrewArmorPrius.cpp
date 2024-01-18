@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	DamageModifierBattleBrewArmorPrius::DamageModifierBattleBrewArmorPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): DamageModifierIncomingPrius(serialized) {
-		RangedDamageModifier = serialized->get_float(RangedDamageModifier_type_id, 0.100000);
-		MeleeDamageModifier = serialized->get_float(MeleeDamageModifier_type_id, 0.250000);
+		RangedDamageModifier = serialized->get_float(RangedDamageModifier_type_id, 0.100000f);
+		MeleeDamageModifier = serialized->get_float(MeleeDamageModifier_type_id, 0.250000f);
 		MaxRangedKnockback = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(MaxRangedKnockback_type_id, rivet::ddl::generated::KnockbackLevels_values, rivet::ddl::generated::KnockbackLevels::One);
 		MaxMeleeKnockback = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(MaxMeleeKnockback_type_id, rivet::ddl::generated::KnockbackLevels_values, rivet::ddl::generated::KnockbackLevels::Two); 
 	}

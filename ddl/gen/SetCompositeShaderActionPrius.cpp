@@ -18,7 +18,7 @@ namespace rivet::ddl::generated {
 		DesiredShadowState = serialized->get_enum<rivet::ddl::generated::x32cc2d2c>(DesiredShadowState_type_id, rivet::ddl::generated::x32cc2d2c_values, rivet::ddl::generated::x32cc2d2c::Dissolve_shadows_normally);
 		MaterialMappingName = serialized->get_string(MaterialMappingName_type_id, {});
 		VarName = serialized->get_string(VarName_type_id, {});
-		VarValue = serialized->get_float(VarValue_type_id, 0.000000); 
+		VarValue = serialized->get_float(VarValue_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

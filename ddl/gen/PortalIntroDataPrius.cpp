@@ -8,20 +8,20 @@
 namespace rivet::ddl::generated {
 	PortalIntroDataPrius::PortalIntroDataPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): IntroDataPrius(serialized) {
 		PortalAsset = serialized->get_string(PortalAsset_type_id, {});
-		DestDist = serialized->get_float(DestDist_type_id, 0.000000);
+		DestDist = serialized->get_float(DestDist_type_id, 0.000000f);
 		WaitAnim = serialized->get_string(WaitAnim_type_id, "Idle");
 		JumpAnim = serialized->get_string(JumpAnim_type_id, "Jump");
 		InAirAnim = serialized->get_string(InAirAnim_type_id, "Jump_In_Air");
 		LandAnim = serialized->get_string(LandAnim_type_id, "Land");
 		HoverIntroAnim = serialized->get_string(HoverIntroAnim_type_id, "Hover_Intro");
 		HoverAnim = serialized->get_string(HoverAnim_type_id, "Hover_Move");
-		HoverYOffset = serialized->get_float(HoverYOffset_type_id, 1.500000);
+		HoverYOffset = serialized->get_float(HoverYOffset_type_id, 1.500000f);
 		PreShader = serialized->get_string(PreShader_type_id, {});
 		PostShader = serialized->get_string(PostShader_type_id, {});
-		OpenTime = serialized->get_float(OpenTime_type_id, 1.000000);
-		CloseTime = serialized->get_float(CloseTime_type_id, 2.000000);
-		TimeBetweenIntros = serialized->get_float(TimeBetweenIntros_type_id, 1.000000);
-		DropShipBonusDist = serialized->get_float(DropShipBonusDist_type_id, 8.000000); 
+		OpenTime = serialized->get_float(OpenTime_type_id, 1.000000f);
+		CloseTime = serialized->get_float(CloseTime_type_id, 2.000000f);
+		TimeBetweenIntros = serialized->get_float(TimeBetweenIntros_type_id, 1.000000f);
+		DropShipBonusDist = serialized->get_float(DropShipBonusDist_type_id, 8.000000f); 
 	}
 
 	[[nodiscard]] auto

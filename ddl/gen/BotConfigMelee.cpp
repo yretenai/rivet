@@ -11,14 +11,14 @@
 
 namespace rivet::ddl::generated {
 	BotConfigMelee::BotConfigMelee([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		AttackRange = serialized->get_float(AttackRange_type_id, 2.000000);
-		IdealRange = serialized->get_float(IdealRange_type_id, 0.300000);
-		MaxSuckDist = serialized->get_float(MaxSuckDist_type_id, 0.500000);
+		AttackRange = serialized->get_float(AttackRange_type_id, 2.000000f);
+		IdealRange = serialized->get_float(IdealRange_type_id, 0.300000f);
+		MaxSuckDist = serialized->get_float(MaxSuckDist_type_id, 0.500000f);
 		CanFlank = serialized->get_bool(CanFlank_type_id, false);
-		FlankPercent = serialized->get_float(FlankPercent_type_id, 50.000000);
+		FlankPercent = serialized->get_float(FlankPercent_type_id, 50.000000f);
 		DoDelayAttacks = serialized->get_bool(DoDelayAttacks_type_id, false);
-		MinTimeBetweenAttacks = serialized->get_float(MinTimeBetweenAttacks_type_id, 1.000000);
-		PreMeleeDuration = serialized->get_float(PreMeleeDuration_type_id, 0.500000);
+		MinTimeBetweenAttacks = serialized->get_float(MinTimeBetweenAttacks_type_id, 1.000000f);
+		PreMeleeDuration = serialized->get_float(PreMeleeDuration_type_id, 0.500000f);
 		MeleeAttackData = serialized->unwrap_into<rivet::ddl::generated::BotMeleeAttackData>(MeleeAttackData_type_id);
 		AnimDamage = serialized->unwrap_into<rivet::ddl::generated::AnimDamageHandlerPrius>(AnimDamage_type_id); 
 	}

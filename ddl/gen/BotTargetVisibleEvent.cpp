@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	BotTargetVisibleEvent::BotTargetVisibleEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		TargetState = serialized->get_int32(TargetState_type_id, 0);
+		TargetState = serialized->get_int32(TargetState_type_id, 0u);
 		LastKnownPos = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(LastKnownPos_type_id);
 		TargetLosable = serialized->get_bool(TargetLosable_type_id, true); 
 	}

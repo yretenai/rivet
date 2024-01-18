@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	PerfSpecRegionData::PerfSpecRegionData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): RegionGameDataBase(serialized) {
-		ImpostorDrawDistance30Hz = serialized->get_float(ImpostorDrawDistance30Hz_type_id, -1.000000); 
+		ImpostorDrawDistance30Hz = serialized->get_float(ImpostorDrawDistance30Hz_type_id, -1.000000f); 
 	}
 
 	[[nodiscard]] auto

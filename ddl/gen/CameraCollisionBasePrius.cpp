@@ -12,14 +12,14 @@
 
 namespace rivet::ddl::generated {
 	CameraCollisionBasePrius::CameraCollisionBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		WallClearance = serialized->get_float(WallClearance_type_id, 0.000000);
-		GainOut = serialized->get_float(GainOut_type_id, 0.000000);
-		GainOutBlend = serialized->get_float(GainOutBlend_type_id, 0.000000);
-		GainInMin = serialized->get_float(GainInMin_type_id, 0.000000);
-		GainInMax = serialized->get_float(GainInMax_type_id, 0.000000);
-		DistInMin = serialized->get_float(DistInMin_type_id, 0.000000);
-		DistInMax = serialized->get_float(DistInMax_type_id, 0.000000);
-		DistInPower = serialized->get_float(DistInPower_type_id, 0.000000); 
+		WallClearance = serialized->get_float(WallClearance_type_id, 0.000000f);
+		GainOut = serialized->get_float(GainOut_type_id, 0.000000f);
+		GainOutBlend = serialized->get_float(GainOutBlend_type_id, 0.000000f);
+		GainInMin = serialized->get_float(GainInMin_type_id, 0.000000f);
+		GainInMax = serialized->get_float(GainInMax_type_id, 0.000000f);
+		DistInMin = serialized->get_float(DistInMin_type_id, 0.000000f);
+		DistInMax = serialized->get_float(DistInMax_type_id, 0.000000f);
+		DistInPower = serialized->get_float(DistInPower_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

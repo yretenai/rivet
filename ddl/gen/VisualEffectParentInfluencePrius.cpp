@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	VisualEffectParentInfluencePrius::VisualEffectParentInfluencePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ParentActor = serialized->get_uint64(ParentActor_type_id, 0);
-		ParentInfluenceBirth = serialized->get_float(ParentInfluenceBirth_type_id, 0.000000);
-		ParentInfluenceDeath = serialized->get_float(ParentInfluenceDeath_type_id, 0.000000); 
+		ParentActor = serialized->get_uint64(ParentActor_type_id, 0ull);
+		ParentInfluenceBirth = serialized->get_float(ParentInfluenceBirth_type_id, 0.000000f);
+		ParentInfluenceDeath = serialized->get_float(ParentInfluenceDeath_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

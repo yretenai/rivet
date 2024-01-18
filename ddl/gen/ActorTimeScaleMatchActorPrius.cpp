@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ActorTimeScaleMatchActorPrius::ActorTimeScaleMatchActorPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ActorTimeScaleMatchBasePrius(serialized) {
-		TargetActor = serialized->get_uint32(TargetActor_type_id, 0); 
+		TargetActor = serialized->get_uint32(TargetActor_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

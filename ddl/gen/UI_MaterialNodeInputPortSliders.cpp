@@ -11,13 +11,13 @@ namespace rivet::ddl::generated {
 		Values = serialized->get_string(Values_type_id, {});
 		TestingOnly = serialized->get_bool(TestingOnly_type_id, false);
 		IsConnected = serialized->get_bool(IsConnected_type_id, false);
-		InternalSortOrder = serialized->get_int32(InternalSortOrder_type_id, 0);
+		InternalSortOrder = serialized->get_int32(InternalSortOrder_type_id, 0u);
 		UserDefinedLabels = serialized->get_bool(UserDefinedLabels_type_id, false);
 		LinearFilter = serialized->get_bool(LinearFilter_type_id, false);
 		Exposed = serialized->get_bool(Exposed_type_id, false);
 		Global = serialized->get_bool(Global_type_id, false);
 		Group = serialized->get_string(Group_type_id, {});
-		SortOrder = serialized->get_int32(SortOrder_type_id, 0);
+		SortOrder = serialized->get_int32(SortOrder_type_id, 0u);
 		Description = serialized->get_string(Description_type_id, {});
 		Labels = serialized->get_string(Labels_type_id, {});
 		ShowExposed = serialized->get_bool(ShowExposed_type_id, true);

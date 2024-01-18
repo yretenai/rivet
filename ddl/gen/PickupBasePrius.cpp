@@ -14,19 +14,19 @@
 namespace rivet::ddl::generated {
 	PickupBasePrius::PickupBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Velocity = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Velocity_type_id);
-		DecayTimer = serialized->get_float(DecayTimer_type_id, 0.000000);
-		NoPickupTime = serialized->get_float(NoPickupTime_type_id, 0.000000);
-		PickupRange = serialized->get_float(PickupRange_type_id, 3.000000);
-		CollectThreshold = serialized->get_float(CollectThreshold_type_id, 0.500000);
-		CollisionRadius = serialized->get_float(CollisionRadius_type_id, 0.150000);
-		Gravity = serialized->get_float(Gravity_type_id, -12.000000);
-		MaxRandomAngle = serialized->get_float(MaxRandomAngle_type_id, 0.000000);
-		MinAngularSpeed = serialized->get_float(MinAngularSpeed_type_id, 0.000000);
-		MaxAngularSpeed = serialized->get_float(MaxAngularSpeed_type_id, 0.000000);
-		MinCollectSpeed = serialized->get_float(MinCollectSpeed_type_id, 9.000000);
-		MaxCollectSpeed = serialized->get_float(MaxCollectSpeed_type_id, 12.000000);
-		SwarmSpread = serialized->get_float(SwarmSpread_type_id, 0.850000);
-		MaxSwarmOffset = serialized->get_float(MaxSwarmOffset_type_id, -1.000000);
+		DecayTimer = serialized->get_float(DecayTimer_type_id, 0.000000f);
+		NoPickupTime = serialized->get_float(NoPickupTime_type_id, 0.000000f);
+		PickupRange = serialized->get_float(PickupRange_type_id, 3.000000f);
+		CollectThreshold = serialized->get_float(CollectThreshold_type_id, 0.500000f);
+		CollisionRadius = serialized->get_float(CollisionRadius_type_id, 0.150000f);
+		Gravity = serialized->get_float(Gravity_type_id, -12.000000f);
+		MaxRandomAngle = serialized->get_float(MaxRandomAngle_type_id, 0.000000f);
+		MinAngularSpeed = serialized->get_float(MinAngularSpeed_type_id, 0.000000f);
+		MaxAngularSpeed = serialized->get_float(MaxAngularSpeed_type_id, 0.000000f);
+		MinCollectSpeed = serialized->get_float(MinCollectSpeed_type_id, 9.000000f);
+		MaxCollectSpeed = serialized->get_float(MaxCollectSpeed_type_id, 12.000000f);
+		SwarmSpread = serialized->get_float(SwarmSpread_type_id, 0.850000f);
+		MaxSwarmOffset = serialized->get_float(MaxSwarmOffset_type_id, -1.000000f);
 		StartFixed = serialized->get_bool(StartFixed_type_id, true);
 		CanBePickedUp = serialized->get_bool(CanBePickedUp_type_id, true);
 		StartFalling = serialized->get_bool(StartFalling_type_id, false);

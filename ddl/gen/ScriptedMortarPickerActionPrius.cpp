@@ -8,8 +8,8 @@
 namespace rivet::ddl::generated {
 	ScriptedMortarPickerActionPrius::ScriptedMortarPickerActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::World);
-		NearCutOff = serialized->get_float(NearCutOff_type_id, 5.000000);
-		FarCutOff = serialized->get_float(FarCutOff_type_id, 100.000000); 
+		NearCutOff = serialized->get_float(NearCutOff_type_id, 5.000000f);
+		FarCutOff = serialized->get_float(FarCutOff_type_id, 100.000000f); 
 	}
 
 	[[nodiscard]] auto

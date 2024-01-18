@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	UserSigninCanceledEvent::UserSigninCanceledEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		UserIndex = serialized->get_int32(UserIndex_type_id, 0);
+		UserIndex = serialized->get_int32(UserIndex_type_id, 0u);
 		OnlineSignin = serialized->get_bool(OnlineSignin_type_id, false); 
 	}
 

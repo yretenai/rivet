@@ -8,12 +8,12 @@
 namespace rivet::ddl::generated {
 	StaggerMeter::StaggerMeter([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		DebugName = serialized->get_string(DebugName_type_id, {});
-		Types = serialized->get_bitset<rivet::ddl::generated::x7f7c56aa>(Types_type_id, rivet::ddl::generated::x7f7c56aa_values, 1);
-		Threshhold = serialized->get_float(Threshhold_type_id, 25.000000);
-		Decay = serialized->get_float(Decay_type_id, 0.000000);
-		DecayDelay = serialized->get_float(DecayDelay_type_id, 0.000000);
-		StartingValue = serialized->get_float(StartingValue_type_id, 0.000000);
-		Cooldown = serialized->get_float(Cooldown_type_id, 0.000000); 
+		Types = serialized->get_bitset<rivet::ddl::generated::x7f7c56aa>(Types_type_id, rivet::ddl::generated::x7f7c56aa_values, 1u);
+		Threshhold = serialized->get_float(Threshhold_type_id, 25.000000f);
+		Decay = serialized->get_float(Decay_type_id, 0.000000f);
+		DecayDelay = serialized->get_float(DecayDelay_type_id, 0.000000f);
+		StartingValue = serialized->get_float(StartingValue_type_id, 0.000000f);
+		Cooldown = serialized->get_float(Cooldown_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

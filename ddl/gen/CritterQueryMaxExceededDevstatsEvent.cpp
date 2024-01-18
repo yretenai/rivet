@@ -13,7 +13,7 @@ namespace rivet::ddl::generated {
 		Level = serialized->get_string(Level_type_id, {});
 		CritterType = serialized->get_string(CritterType_type_id, {});
 		CameraPosition = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(CameraPosition_type_id);
-		MaxActiveDistance = serialized->get_float(MaxActiveDistance_type_id, 0.000000); 
+		MaxActiveDistance = serialized->get_float(MaxActiveDistance_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

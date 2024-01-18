@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	FalloffData::FalloffData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		FalloffStart = serialized->get_float(FalloffStart_type_id, -1.000000);
-		FalloffEnd = serialized->get_float(FalloffEnd_type_id, -1.000000);
-		FalloffCurve = serialized->get_float(FalloffCurve_type_id, 1.000000);
-		FalloffFactor = serialized->get_float(FalloffFactor_type_id, 1.000000);
+		FalloffStart = serialized->get_float(FalloffStart_type_id, -1.000000f);
+		FalloffEnd = serialized->get_float(FalloffEnd_type_id, -1.000000f);
+		FalloffCurve = serialized->get_float(FalloffCurve_type_id, 1.000000f);
+		FalloffFactor = serialized->get_float(FalloffFactor_type_id, 1.000000f);
 		ApplyToStatus = serialized->get_bool(ApplyToStatus_type_id, false); 
 	}
 

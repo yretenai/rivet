@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	HeroHealthConfig::HeroHealthConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		PostCinematicImmunity = serialized->get_float(PostCinematicImmunity_type_id, 0.500000);
-		PostFadeInImmunity = serialized->get_float(PostFadeInImmunity_type_id, 0.500000);
-		PostHitReactImmunity = serialized->get_float(PostHitReactImmunity_type_id, 0.500000); 
+		PostCinematicImmunity = serialized->get_float(PostCinematicImmunity_type_id, 0.500000f);
+		PostFadeInImmunity = serialized->get_float(PostFadeInImmunity_type_id, 0.500000f);
+		PostHitReactImmunity = serialized->get_float(PostHitReactImmunity_type_id, 0.500000f); 
 	}
 
 	[[nodiscard]] auto

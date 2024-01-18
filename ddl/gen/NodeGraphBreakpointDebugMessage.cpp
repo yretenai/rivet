@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	NodeGraphBreakpointDebugMessage::NodeGraphBreakpointDebugMessage([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AssetId = serialized->get_uint64(AssetId_type_id, 0);
-		NodeId = serialized->get_uint64(NodeId_type_id, 0); 
+		AssetId = serialized->get_uint64(AssetId_type_id, 0ull);
+		NodeId = serialized->get_uint64(NodeId_type_id, 0ull); 
 	}
 
 	[[nodiscard]] auto

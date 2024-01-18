@@ -11,13 +11,13 @@ namespace rivet::ddl::generated {
 		LaserEndLocName = serialized->get_string(LaserEndLocName_type_id, "igLoc_LaserEnd");
 		YawJointName = serialized->get_string(YawJointName_type_id, "Yaw_Joint");
 		PitchJointName = serialized->get_string(PitchJointName_type_id, "Pitch_Joint");
-		TurnSpeed = serialized->get_float(TurnSpeed_type_id, 30.000000);
-		FOVAngle = serialized->get_float(FOVAngle_type_id, 45.000000);
-		FireDelay = serialized->get_float(FireDelay_type_id, 1.000000);
-		RangeDist = serialized->get_float(RangeDist_type_id, 30.000000);
-		DPSAmt = serialized->get_float(DPSAmt_type_id, 1.000000);
-		InnerAwareness = serialized->get_uint64(InnerAwareness_type_id, 0);
-		OuterAwareness = serialized->get_uint64(OuterAwareness_type_id, 0);
+		TurnSpeed = serialized->get_float(TurnSpeed_type_id, 30.000000f);
+		FOVAngle = serialized->get_float(FOVAngle_type_id, 45.000000f);
+		FireDelay = serialized->get_float(FireDelay_type_id, 1.000000f);
+		RangeDist = serialized->get_float(RangeDist_type_id, 30.000000f);
+		DPSAmt = serialized->get_float(DPSAmt_type_id, 1.000000f);
+		InnerAwareness = serialized->get_uint64(InnerAwareness_type_id, 0ull);
+		OuterAwareness = serialized->get_uint64(OuterAwareness_type_id, 0ull);
 		StartActive = serialized->get_bool(StartActive_type_id, true); 
 	}
 

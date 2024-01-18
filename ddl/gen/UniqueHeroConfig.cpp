@@ -10,7 +10,7 @@
 
 namespace rivet::ddl::generated {
 	UniqueHeroConfig::UniqueHeroConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		BodyScale = serialized->get_float(BodyScale_type_id, 1.000000);
+		BodyScale = serialized->get_float(BodyScale_type_id, 1.000000f);
 		AimSourceOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(AimSourceOffset_type_id);
 		ItemLoadoutConfig = serialized->get_string(ItemLoadoutConfig_type_id, {});
 		HeroSkinConfig = serialized->get_string(HeroSkinConfig_type_id, {});
@@ -19,14 +19,14 @@ namespace rivet::ddl::generated {
 		EmergentVOConfig = serialized->get_string(EmergentVOConfig_type_id, {});
 		VendorConfig = serialized->get_string(VendorConfig_type_id, {});
 		TraversalConfig = serialized->get_string(TraversalConfig_type_id, {});
-		LavaDamage = serialized->get_float(LavaDamage_type_id, 1.000000);
-		TurretDamageFactor = serialized->get_float(TurretDamageFactor_type_id, 1.000000);
-		QuicksandDeathTime = serialized->get_float(QuicksandDeathTime_type_id, 2.000000);
-		ClankBotTossDist = serialized->get_float(ClankBotTossDist_type_id, 4.000000);
-		PowerBotTossDist = serialized->get_float(PowerBotTossDist_type_id, 4.000000);
-		SpringBotTossDist = serialized->get_float(SpringBotTossDist_type_id, 4.000000);
-		StretchBotTossDist = serialized->get_float(StretchBotTossDist_type_id, 4.000000);
-		BombBotTossDist = serialized->get_float(BombBotTossDist_type_id, 4.000000); 
+		LavaDamage = serialized->get_float(LavaDamage_type_id, 1.000000f);
+		TurretDamageFactor = serialized->get_float(TurretDamageFactor_type_id, 1.000000f);
+		QuicksandDeathTime = serialized->get_float(QuicksandDeathTime_type_id, 2.000000f);
+		ClankBotTossDist = serialized->get_float(ClankBotTossDist_type_id, 4.000000f);
+		PowerBotTossDist = serialized->get_float(PowerBotTossDist_type_id, 4.000000f);
+		SpringBotTossDist = serialized->get_float(SpringBotTossDist_type_id, 4.000000f);
+		StretchBotTossDist = serialized->get_float(StretchBotTossDist_type_id, 4.000000f);
+		BombBotTossDist = serialized->get_float(BombBotTossDist_type_id, 4.000000f); 
 	}
 
 	[[nodiscard]] auto

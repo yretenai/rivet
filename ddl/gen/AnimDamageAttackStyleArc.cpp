@@ -7,13 +7,13 @@
 
 namespace rivet::ddl::generated {
 	AnimDamageAttackStyleArc::AnimDamageAttackStyleArc([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): AnimDamageAttackStyleBase(serialized) {
-		ArcCenterHeight = serialized->get_float(ArcCenterHeight_type_id, 1.000000);
+		ArcCenterHeight = serialized->get_float(ArcCenterHeight_type_id, 1.000000f);
 		DamageJoint = serialized->get_string(DamageJoint_type_id, {});
-		DamageRadius = serialized->get_float(DamageRadius_type_id, 1.000000);
+		DamageRadius = serialized->get_float(DamageRadius_type_id, 1.000000f);
 		DamageType = serialized->get_enum<rivet::ddl::generated::DamageTypes>(DamageType_type_id, rivet::ddl::generated::DamageTypes_values, rivet::ddl::generated::DamageTypes::Melee);
-		DamageAmount = serialized->get_float(DamageAmount_type_id, 1.000000);
+		DamageAmount = serialized->get_float(DamageAmount_type_id, 1.000000f);
 		Knockback = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(Knockback_type_id, rivet::ddl::generated::KnockbackLevels_values, rivet::ddl::generated::KnockbackLevels::None);
-		KnockbackAmount = serialized->get_float(KnockbackAmount_type_id, -1.000000); 
+		KnockbackAmount = serialized->get_float(KnockbackAmount_type_id, -1.000000f); 
 	}
 
 	[[nodiscard]] auto

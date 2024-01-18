@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	DamageModifierShockwaveExpandingRingSheepPrius::DamageModifierShockwaveExpandingRingSheepPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): DamageModifierShockwaveExpandingRingPrius(serialized) {
-		RingActorAssetId = serialized->get_uint64(RingActorAssetId_type_id, 0);
-		SheepActorAssetId = serialized->get_uint64(SheepActorAssetId_type_id, 0);
-		SheepStatusMaterialGraphAssetId = serialized->get_uint64(SheepStatusMaterialGraphAssetId_type_id, 0); 
+		RingActorAssetId = serialized->get_uint64(RingActorAssetId_type_id, 0ull);
+		SheepActorAssetId = serialized->get_uint64(SheepActorAssetId_type_id, 0ull);
+		SheepStatusMaterialGraphAssetId = serialized->get_uint64(SheepStatusMaterialGraphAssetId_type_id, 0ull); 
 	}
 
 	[[nodiscard]] auto

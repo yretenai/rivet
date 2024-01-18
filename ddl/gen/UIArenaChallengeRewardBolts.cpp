@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	UIArenaChallengeRewardBolts::UIArenaChallengeRewardBolts([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): UIArenaChallengeReward(serialized) {
-		Amount = serialized->get_uint32(Amount_type_id, 0); 
+		Amount = serialized->get_uint32(Amount_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

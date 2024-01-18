@@ -8,16 +8,16 @@
 namespace rivet::ddl::generated {
 	Prims::Prims([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		BOOL = serialized->get_bool(BOOL_type_id, true);
-		F32 = serialized->get_float(F32_type_id, 9.000000);
+		F32 = serialized->get_float(F32_type_id, 9.000000f);
 		F64 = serialized->get_double(F64_type_id, 102.400000);
 		I8 = serialized->get_int8(I8_type_id, -8);
-		I16 = serialized->get_int16(I16_type_id, 0);
-		I32 = serialized->get_int32(I32_type_id, 0);
-		I64 = serialized->get_int64(I64_type_id, 1099511627775);
-		U8 = serialized->get_uint8(U8_type_id, 250);
-		U16 = serialized->get_uint16(U16_type_id, 0);
-		U32 = serialized->get_uint32(U32_type_id, 1048575);
-		U64 = serialized->get_uint64(U64_type_id, 0); 
+		I16 = serialized->get_int16(I16_type_id, 0u);
+		I32 = serialized->get_int32(I32_type_id, 0u);
+		I64 = serialized->get_int64(I64_type_id, 1099511627775u);
+		U8 = serialized->get_uint8(U8_type_id, 250u);
+		U16 = serialized->get_uint16(U16_type_id, 0u);
+		U32 = serialized->get_uint32(U32_type_id, 1048575u);
+		U64 = serialized->get_uint64(U64_type_id, 0ull); 
 	}
 
 	[[nodiscard]] auto

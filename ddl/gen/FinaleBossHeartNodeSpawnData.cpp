@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	FinaleBossHeartNodeSpawnData::FinaleBossHeartNodeSpawnData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): SimpleSpawnData(serialized) {
-		NodeIndex = serialized->get_uint8(NodeIndex_type_id, 0); 
+		NodeIndex = serialized->get_uint8(NodeIndex_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

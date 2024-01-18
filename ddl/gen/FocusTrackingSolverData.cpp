@@ -11,12 +11,12 @@ namespace rivet::ddl::generated {
 		EndEffectorJoint = serialized->get_string(EndEffectorJoint_type_id, "");
 		FocusPositionName = serialized->get_string(FocusPositionName_type_id, "");
 		PollRefPoseEveryTick = serialized->get_bool(PollRefPoseEveryTick_type_id, false);
-		ReferencePoseTime = serialized->get_float(ReferencePoseTime_type_id, 0.000000);
+		ReferencePoseTime = serialized->get_float(ReferencePoseTime_type_id, 0.000000f);
 		SetEndEffectorFwdToModelFwd = serialized->get_bool(SetEndEffectorFwdToModelFwd_type_id, true);
-		MinYawAngle = serialized->get_float(MinYawAngle_type_id, -90.000000);
-		MaxYawAngle = serialized->get_float(MaxYawAngle_type_id, 90.000000);
-		MinPitchAngle = serialized->get_float(MinPitchAngle_type_id, -90.000000);
-		MaxPitchAngle = serialized->get_float(MaxPitchAngle_type_id, 90.000000);
+		MinYawAngle = serialized->get_float(MinYawAngle_type_id, -90.000000f);
+		MaxYawAngle = serialized->get_float(MaxYawAngle_type_id, 90.000000f);
+		MinPitchAngle = serialized->get_float(MinPitchAngle_type_id, -90.000000f);
+		MaxPitchAngle = serialized->get_float(MaxPitchAngle_type_id, 90.000000f);
 		WeightSpreadScheme = serialized->get_enum<rivet::ddl::generated::WeightSpreadScheme>(WeightSpreadScheme_type_id, rivet::ddl::generated::WeightSpreadScheme_values, rivet::ddl::generated::WeightSpreadScheme::EvenSpread); 
 	}
 

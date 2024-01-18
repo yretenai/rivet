@@ -9,7 +9,7 @@ namespace rivet::ddl::generated {
 	DEVOFollowup::DEVOFollowup([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		ToWhom = serialized->get_enum<rivet::ddl::generated::xb3a943f0>(ToWhom_type_id, rivet::ddl::generated::xb3a943f0_values, rivet::ddl::generated::xb3a943f0::Any);
 		SpecificTargetVoice = serialized->get_enum<rivet::ddl::generated::Voice>(SpecificTargetVoice_type_id, rivet::ddl::generated::Voice_values, rivet::ddl::generated::Voice::unused);
-		Radius = serialized->get_float(Radius_type_id, 0.000000);
+		Radius = serialized->get_float(Radius_type_id, 0.000000f);
 		FollowupTrigger = serialized->get_enum<rivet::ddl::generated::x6be956dd>(FollowupTrigger_type_id, rivet::ddl::generated::x6be956dd_values, rivet::ddl::generated::x6be956dd::OnAnswer); 
 	}
 

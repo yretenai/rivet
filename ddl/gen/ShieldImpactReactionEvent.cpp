@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ShieldImpactReactionEvent::ShieldImpactReactionEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Intensity = serialized->get_float(Intensity_type_id, 0.000000); 
+		Intensity = serialized->get_float(Intensity_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

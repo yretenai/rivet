@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	TargetSystemSettings::TargetSystemSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		TargetMax = serialized->get_int32(TargetMax_type_id, 2048);
-		QueryMax = serialized->get_int32(QueryMax_type_id, 512); 
+		TargetMax = serialized->get_int32(TargetMax_type_id, 2048u);
+		QueryMax = serialized->get_int32(QueryMax_type_id, 512u); 
 	}
 
 	[[nodiscard]] auto

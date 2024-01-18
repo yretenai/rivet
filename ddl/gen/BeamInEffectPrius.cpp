@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	BeamInEffectPrius::BeamInEffectPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		BeamInConfig = serialized->get_string(BeamInConfig_type_id, {});
-		BeamInConfigOverride = serialized->get_uint64(BeamInConfigOverride_type_id, 0); 
+		BeamInConfigOverride = serialized->get_uint64(BeamInConfigOverride_type_id, 0ull); 
 	}
 
 	[[nodiscard]] auto

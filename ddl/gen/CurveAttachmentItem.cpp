@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	CurveAttachmentItem::CurveAttachmentItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AttachedActor = serialized->get_uint64(AttachedActor_type_id, 0);
-		AttachCurveT = serialized->get_float(AttachCurveT_type_id, -1.000000);
+		AttachedActor = serialized->get_uint64(AttachedActor_type_id, 0ull);
+		AttachCurveT = serialized->get_float(AttachCurveT_type_id, -1.000000f);
 		AttachClosestCurvePos = serialized->get_bool(AttachClosestCurvePos_type_id, false);
 		AttachRelative = serialized->get_bool(AttachRelative_type_id, false);
 		AttachPositionOnly = serialized->get_bool(AttachPositionOnly_type_id, false); 

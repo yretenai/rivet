@@ -7,34 +7,34 @@
 
 namespace rivet::ddl::generated {
 	HeroSlideConfig::HeroSlideConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		SlopeMinDegrees = serialized->get_float(SlopeMinDegrees_type_id, 0.500000);
-		SlopeMaxDegrees = serialized->get_float(SlopeMaxDegrees_type_id, 59.000000);
-		SlideGravity = serialized->get_float(SlideGravity_type_id, 50.000000);
-		SlideAirGravity = serialized->get_float(SlideAirGravity_type_id, 30.000000);
-		SlideFriction = serialized->get_float(SlideFriction_type_id, 0.050000);
-		SlideOffFriction = serialized->get_float(SlideOffFriction_type_id, 0.250000);
-		SlideTerminalSpeed = serialized->get_float(SlideTerminalSpeed_type_id, 30.000000);
-		LateralSpeedBrakeFactor = serialized->get_float(LateralSpeedBrakeFactor_type_id, 0.750000);
-		MinSlideSpeed = serialized->get_float(MinSlideSpeed_type_id, 5.000000);
-		InputLateralSpeed = serialized->get_float(InputLateralSpeed_type_id, 4.000000);
-		InputLateralAccel = serialized->get_float(InputLateralAccel_type_id, 8.000000);
-		PathPullLateralSpeed = serialized->get_float(PathPullLateralSpeed_type_id, 20.000000);
-		PathPullLateralAccel = serialized->get_float(PathPullLateralAccel_type_id, 8.000000);
-		SlidePathDistanceForward = serialized->get_float(SlidePathDistanceForward_type_id, 3.000000);
-		SlidePathDistanceSide = serialized->get_float(SlidePathDistanceSide_type_id, 5.000000);
-		SlidePathHeightMin = serialized->get_float(SlidePathHeightMin_type_id, 3.000000);
-		SlidePathHeightMax = serialized->get_float(SlidePathHeightMax_type_id, 3.000000);
-		HopLaunchSpeed = serialized->get_float(HopLaunchSpeed_type_id, 1.500000);
-		HopGravity = serialized->get_float(HopGravity_type_id, 10.000000);
-		AnimVarLeanDirBlendSpeed = serialized->get_float(AnimVarLeanDirBlendSpeed_type_id, 5.000000);
-		AnimVarSlideDirBlendSpeed = serialized->get_float(AnimVarSlideDirBlendSpeed_type_id, 1.000000);
-		AnimVarSlideSlopeBlendSpeed = serialized->get_float(AnimVarSlideSlopeBlendSpeed_type_id, 1.000000);
-		AnimVarSlideSlopeMinPitchDegrees = serialized->get_float(AnimVarSlideSlopeMinPitchDegrees_type_id, 10.000000);
-		AnimVarSlideSlopeMaxPitchDegrees = serialized->get_float(AnimVarSlideSlopeMaxPitchDegrees_type_id, 50.000000);
-		AnimImpactDriverMinAngleDiffDegrees = serialized->get_float(AnimImpactDriverMinAngleDiffDegrees_type_id, 5.000000);
+		SlopeMinDegrees = serialized->get_float(SlopeMinDegrees_type_id, 0.500000f);
+		SlopeMaxDegrees = serialized->get_float(SlopeMaxDegrees_type_id, 59.000000f);
+		SlideGravity = serialized->get_float(SlideGravity_type_id, 50.000000f);
+		SlideAirGravity = serialized->get_float(SlideAirGravity_type_id, 30.000000f);
+		SlideFriction = serialized->get_float(SlideFriction_type_id, 0.050000f);
+		SlideOffFriction = serialized->get_float(SlideOffFriction_type_id, 0.250000f);
+		SlideTerminalSpeed = serialized->get_float(SlideTerminalSpeed_type_id, 30.000000f);
+		LateralSpeedBrakeFactor = serialized->get_float(LateralSpeedBrakeFactor_type_id, 0.750000f);
+		MinSlideSpeed = serialized->get_float(MinSlideSpeed_type_id, 5.000000f);
+		InputLateralSpeed = serialized->get_float(InputLateralSpeed_type_id, 4.000000f);
+		InputLateralAccel = serialized->get_float(InputLateralAccel_type_id, 8.000000f);
+		PathPullLateralSpeed = serialized->get_float(PathPullLateralSpeed_type_id, 20.000000f);
+		PathPullLateralAccel = serialized->get_float(PathPullLateralAccel_type_id, 8.000000f);
+		SlidePathDistanceForward = serialized->get_float(SlidePathDistanceForward_type_id, 3.000000f);
+		SlidePathDistanceSide = serialized->get_float(SlidePathDistanceSide_type_id, 5.000000f);
+		SlidePathHeightMin = serialized->get_float(SlidePathHeightMin_type_id, 3.000000f);
+		SlidePathHeightMax = serialized->get_float(SlidePathHeightMax_type_id, 3.000000f);
+		HopLaunchSpeed = serialized->get_float(HopLaunchSpeed_type_id, 1.500000f);
+		HopGravity = serialized->get_float(HopGravity_type_id, 10.000000f);
+		AnimVarLeanDirBlendSpeed = serialized->get_float(AnimVarLeanDirBlendSpeed_type_id, 5.000000f);
+		AnimVarSlideDirBlendSpeed = serialized->get_float(AnimVarSlideDirBlendSpeed_type_id, 1.000000f);
+		AnimVarSlideSlopeBlendSpeed = serialized->get_float(AnimVarSlideSlopeBlendSpeed_type_id, 1.000000f);
+		AnimVarSlideSlopeMinPitchDegrees = serialized->get_float(AnimVarSlideSlopeMinPitchDegrees_type_id, 10.000000f);
+		AnimVarSlideSlopeMaxPitchDegrees = serialized->get_float(AnimVarSlideSlopeMaxPitchDegrees_type_id, 50.000000f);
+		AnimImpactDriverMinAngleDiffDegrees = serialized->get_float(AnimImpactDriverMinAngleDiffDegrees_type_id, 5.000000f);
 		SlideMaterials = serialized->get_enums<rivet::ddl::generated::x10b3c4cf>(SlideMaterials_type_id, rivet::ddl::generated::x10b3c4cf_values);
 		CameraShakeConfig = serialized->get_string(CameraShakeConfig_type_id, {});
-		CameraForwardHorizontalBlendT = serialized->get_float(CameraForwardHorizontalBlendT_type_id, 0.000000); 
+		CameraForwardHorizontalBlendT = serialized->get_float(CameraForwardHorizontalBlendT_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

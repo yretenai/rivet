@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ThrowProjectileSpawnData::ThrowProjectileSpawnData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ShotSpawnData(serialized) {
-		SpawnedShotConfig = serialized->get_uint64(SpawnedShotConfig_type_id, 0); 
+		SpawnedShotConfig = serialized->get_uint64(SpawnedShotConfig_type_id, 0ull); 
 	}
 
 	[[nodiscard]] auto

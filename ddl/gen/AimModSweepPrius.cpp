@@ -7,13 +7,13 @@
 
 namespace rivet::ddl::generated {
 	AimModSweepPrius::AimModSweepPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): AimModifierPrius(serialized) {
-		SweepHalfAngle = serialized->get_float(SweepHalfAngle_type_id, 30.000000);
+		SweepHalfAngle = serialized->get_float(SweepHalfAngle_type_id, 30.000000f);
 		SweepTimeIsBurstTime = serialized->get_bool(SweepTimeIsBurstTime_type_id, false);
-		TotalSweepTime = serialized->get_float(TotalSweepTime_type_id, 1.000000);
-		StartDelay = serialized->get_float(StartDelay_type_id, 0.200000);
+		TotalSweepTime = serialized->get_float(TotalSweepTime_type_id, 1.000000f);
+		StartDelay = serialized->get_float(StartDelay_type_id, 0.200000f);
 		SweepType = serialized->get_enum<rivet::ddl::generated::x69c22897>(SweepType_type_id, rivet::ddl::generated::x69c22897_values, rivet::ddl::generated::x69c22897::ThruTarget);
 		SweepDirection = serialized->get_enum<rivet::ddl::generated::x52f67dac>(SweepDirection_type_id, rivet::ddl::generated::x52f67dac_values, rivet::ddl::generated::x52f67dac::LeftToRight);
-		EndClamp = serialized->get_float(EndClamp_type_id, 1.000000); 
+		EndClamp = serialized->get_float(EndClamp_type_id, 1.000000f); 
 	}
 
 	[[nodiscard]] auto

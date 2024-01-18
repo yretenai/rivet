@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	BuzzBladesShotMotionPrius::BuzzBladesShotMotionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BasicShotMotionPrius(serialized) {
-		MaxBounces = serialized->get_uint32(MaxBounces_type_id, 5);
+		MaxBounces = serialized->get_uint32(MaxBounces_type_id, 5u);
 		SpinJoint = serialized->get_string(SpinJoint_type_id, {}); 
 	}
 

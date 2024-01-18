@@ -8,18 +8,18 @@
 namespace rivet::ddl::generated {
 	FloatingMotionPrius::FloatingMotionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Enabled = serialized->get_bool(Enabled_type_id, true);
-		RockFrequency = serialized->get_float(RockFrequency_type_id, 0.300000);
-		RockAmplitude = serialized->get_float(RockAmplitude_type_id, 0.500000);
-		RockFrequencyTurning = serialized->get_float(RockFrequencyTurning_type_id, 0.400000);
-		RockAmplitudeTurning = serialized->get_float(RockAmplitudeTurning_type_id, 1.000000);
-		RollFrequency = serialized->get_float(RollFrequency_type_id, 0.500000);
-		RollAmplitude = serialized->get_float(RollAmplitude_type_id, 1.500000);
-		RollFrequencyTurning = serialized->get_float(RollFrequencyTurning_type_id, 0.600000);
-		RollAmplitudeTurning = serialized->get_float(RollAmplitudeTurning_type_id, 4.000000);
-		BankFactor = serialized->get_float(BankFactor_type_id, 0.040000);
-		BankAngleMax = serialized->get_float(BankAngleMax_type_id, 5.000000);
-		SmoothTurnRate = serialized->get_float(SmoothTurnRate_type_id, 1.000000);
-		SmoothTurnInertia = serialized->get_float(SmoothTurnInertia_type_id, 1.500000);
+		RockFrequency = serialized->get_float(RockFrequency_type_id, 0.300000f);
+		RockAmplitude = serialized->get_float(RockAmplitude_type_id, 0.500000f);
+		RockFrequencyTurning = serialized->get_float(RockFrequencyTurning_type_id, 0.400000f);
+		RockAmplitudeTurning = serialized->get_float(RockAmplitudeTurning_type_id, 1.000000f);
+		RollFrequency = serialized->get_float(RollFrequency_type_id, 0.500000f);
+		RollAmplitude = serialized->get_float(RollAmplitude_type_id, 1.500000f);
+		RollFrequencyTurning = serialized->get_float(RollFrequencyTurning_type_id, 0.600000f);
+		RollAmplitudeTurning = serialized->get_float(RollAmplitudeTurning_type_id, 4.000000f);
+		BankFactor = serialized->get_float(BankFactor_type_id, 0.040000f);
+		BankAngleMax = serialized->get_float(BankAngleMax_type_id, 5.000000f);
+		SmoothTurnRate = serialized->get_float(SmoothTurnRate_type_id, 1.000000f);
+		SmoothTurnInertia = serialized->get_float(SmoothTurnInertia_type_id, 1.500000f);
 		TweakSortBias = serialized->get_bool(TweakSortBias_type_id, false);
 		SmoothTurning = serialized->get_bool(SmoothTurning_type_id, false);
 		UpdateAsync = serialized->get_bool(UpdateAsync_type_id, true); 

@@ -11,13 +11,13 @@ namespace rivet::ddl::generated {
 	SkinManagerPrius::SkinManagerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): SkinManagerBasePrius(serialized) {
 		Type = serialized->get_enum<rivet::ddl::generated::x7b720148>(Type_type_id, rivet::ddl::generated::x7b720148_values, rivet::ddl::generated::x7b720148::Bot);
 		BodyType = serialized->get_enum<rivet::ddl::generated::x5d60d87e>(BodyType_type_id, rivet::ddl::generated::x5d60d87e_values, rivet::ddl::generated::x5d60d87e::HM1);
-		MaxLayersOverride = serialized->get_uint32(MaxLayersOverride_type_id, 0);
+		MaxLayersOverride = serialized->get_uint32(MaxLayersOverride_type_id, 0u);
 		AddedDynamically = serialized->get_bool(AddedDynamically_type_id, false);
 		ApplySkinTint = serialized->get_bool(ApplySkinTint_type_id, false);
 		ColorConstantName = serialized->get_string(ColorConstantName_type_id, "Skin_Tint");
-		R = serialized->get_uint8(R_type_id, 0);
-		G = serialized->get_uint8(G_type_id, 0);
-		B = serialized->get_uint8(B_type_id, 0);
+		R = serialized->get_uint8(R_type_id, 0u);
+		G = serialized->get_uint8(G_type_id, 0u);
+		B = serialized->get_uint8(B_type_id, 0u);
 		ColorConfig = serialized->get_string(ColorConfig_type_id, {});
 		ColorConfigName = serialized->get_string(ColorConfigName_type_id, {});
 		ColorList = serialized->unwrap_into_many<rivet::ddl::generated::SkinManagerColorPrius>(ColorList_type_id);

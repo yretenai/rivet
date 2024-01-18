@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	FlyerODShotSpawnData::FlyerODShotSpawnData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ActorSpawnData(serialized) {
-		FlyerOD = serialized->get_uint64(FlyerOD_type_id, 0);
-		AssetID = serialized->get_uint64(AssetID_type_id, 0);
+		FlyerOD = serialized->get_uint64(FlyerOD_type_id, 0ull);
+		AssetID = serialized->get_uint64(AssetID_type_id, 0ull);
 		Pos = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Pos_type_id);
 		Facing = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Facing_type_id); 
 	}

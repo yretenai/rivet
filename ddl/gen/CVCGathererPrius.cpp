@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	CVCGathererPrius::CVCGathererPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Radius = serialized->get_float(Radius_type_id, 3.000000);
-		HeightUp = serialized->get_float(HeightUp_type_id, 3.000000);
-		HeightDown = serialized->get_float(HeightDown_type_id, 3.000000); 
+		Radius = serialized->get_float(Radius_type_id, 3.000000f);
+		HeightUp = serialized->get_float(HeightUp_type_id, 3.000000f);
+		HeightDown = serialized->get_float(HeightDown_type_id, 3.000000f); 
 	}
 
 	[[nodiscard]] auto

@@ -10,18 +10,18 @@
 
 namespace rivet::ddl::generated {
 	Cinematic2WindActionDef::Cinematic2WindActionDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Id = serialized->get_uint64(Id_type_id, 0);
-		Time = serialized->get_float(Time_type_id, 0.000000);
+		Id = serialized->get_uint64(Id_type_id, 0ull);
+		Time = serialized->get_float(Time_type_id, 0.000000f);
 		DurationType = serialized->get_enum<rivet::ddl::generated::x29c933e2>(DurationType_type_id, rivet::ddl::generated::x29c933e2_values, rivet::ddl::generated::x29c933e2::None);
-		Duration = serialized->get_float(Duration_type_id, 0.000000);
-		Attack = serialized->get_float(Attack_type_id, 0.125000);
-		Decay = serialized->get_float(Decay_type_id, 0.400000);
-		Speed = serialized->get_float(Speed_type_id, 50.000000);
-		Drag = serialized->get_float(Drag_type_id, 5.000000);
-		Radius = serialized->get_float(Radius_type_id, 10.000000);
-		Height = serialized->get_float(Height_type_id, 10.000000);
-		RadialFalloff = serialized->get_float(RadialFalloff_type_id, 10.000000);
-		HeightFalloff = serialized->get_float(HeightFalloff_type_id, 10.000000);
+		Duration = serialized->get_float(Duration_type_id, 0.000000f);
+		Attack = serialized->get_float(Attack_type_id, 0.125000f);
+		Decay = serialized->get_float(Decay_type_id, 0.400000f);
+		Speed = serialized->get_float(Speed_type_id, 50.000000f);
+		Drag = serialized->get_float(Drag_type_id, 5.000000f);
+		Radius = serialized->get_float(Radius_type_id, 10.000000f);
+		Height = serialized->get_float(Height_type_id, 10.000000f);
+		RadialFalloff = serialized->get_float(RadialFalloff_type_id, 10.000000f);
+		HeightFalloff = serialized->get_float(HeightFalloff_type_id, 10.000000f);
 		Type = serialized->get_enum<rivet::ddl::generated::x81ba9424>(Type_type_id, rivet::ddl::generated::x81ba9424_values, rivet::ddl::generated::x81ba9424::TypeDirectional);
 		OffsetPos = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(OffsetPos_type_id);
 		OffsetRot = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(OffsetRot_type_id);

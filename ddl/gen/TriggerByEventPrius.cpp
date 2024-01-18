@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	TriggerByEventPrius::TriggerByEventPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): TriggerByBasePrius(serialized) {
-		EventSender = serialized->get_uint64(EventSender_type_id, 0);
-		Range = serialized->get_float(Range_type_id, -1.000000);
+		EventSender = serialized->get_uint64(EventSender_type_id, 0ull);
+		Range = serialized->get_float(Range_type_id, -1.000000f);
 		TriggeringEvent = serialized->unwrap_into<rivet::ddl::generated::EventBase>(TriggeringEvent_type_id); 
 	}
 

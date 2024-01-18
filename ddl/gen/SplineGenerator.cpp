@@ -12,7 +12,7 @@
 
 namespace rivet::ddl::generated {
 	SplineGenerator::SplineGenerator([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		CurveFidelity = serialized->get_float(CurveFidelity_type_id, 0.010000); 
+		CurveFidelity = serialized->get_float(CurveFidelity_type_id, 0.010000f); 
 	}
 
 	[[nodiscard]] auto

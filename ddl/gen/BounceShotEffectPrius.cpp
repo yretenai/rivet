@@ -9,12 +9,12 @@
 
 namespace rivet::ddl::generated {
 	BounceShotEffectPrius::BounceShotEffectPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ScriptedShotEffectBasePrius(serialized) {
-		RollBounceScale = serialized->get_float(RollBounceScale_type_id, 0.000000);
-		FlatHitBounceScale = serialized->get_float(FlatHitBounceScale_type_id, 0.000000);
-		ActorRollBounceScale = serialized->get_float(ActorRollBounceScale_type_id, 0.000000);
-		ActorFlatHitBounceScale = serialized->get_float(ActorFlatHitBounceScale_type_id, 0.000000);
-		ActorBounceGravity = serialized->get_float(ActorBounceGravity_type_id, 0.000000);
-		MinVelocity = serialized->get_float(MinVelocity_type_id, 0.000000); 
+		RollBounceScale = serialized->get_float(RollBounceScale_type_id, 0.000000f);
+		FlatHitBounceScale = serialized->get_float(FlatHitBounceScale_type_id, 0.000000f);
+		ActorRollBounceScale = serialized->get_float(ActorRollBounceScale_type_id, 0.000000f);
+		ActorFlatHitBounceScale = serialized->get_float(ActorFlatHitBounceScale_type_id, 0.000000f);
+		ActorBounceGravity = serialized->get_float(ActorBounceGravity_type_id, 0.000000f);
+		MinVelocity = serialized->get_float(MinVelocity_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

@@ -9,8 +9,8 @@ namespace rivet::ddl::generated {
 	CinematicSessionData::CinematicSessionData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		FreeCam = serialized->get_bool(FreeCam_type_id, false);
 		CameraFilterIndex = serialized->get_int32(CameraFilterIndex_type_id, -1);
-		CameraMaxFilters = serialized->get_int32(CameraMaxFilters_type_id, 0);
-		DebugFlags = serialized->get_bitset<rivet::ddl::generated::xac616886>(DebugFlags_type_id, rivet::ddl::generated::xac616886_values, 0); 
+		CameraMaxFilters = serialized->get_int32(CameraMaxFilters_type_id, 0u);
+		DebugFlags = serialized->get_bitset<rivet::ddl::generated::xac616886>(DebugFlags_type_id, rivet::ddl::generated::xac616886_values, 0u); 
 	}
 
 	[[nodiscard]] auto

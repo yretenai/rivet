@@ -13,27 +13,27 @@ namespace rivet::ddl::generated {
 	SpawnerObjectPrius::SpawnerObjectPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		StartEnabled = serialized->get_bool(StartEnabled_type_id, true);
 		ObjSpawnAnim = serialized->get_string(ObjSpawnAnim_type_id, "Spawn");
-		NumActive = serialized->get_uint8(NumActive_type_id, 2);
+		NumActive = serialized->get_uint8(NumActive_type_id, 2u);
 		NumToSpawn = serialized->get_int32(NumToSpawn_type_id, -1);
-		AutoDeleteDist = serialized->get_float(AutoDeleteDist_type_id, -1.000000);
-		TriggerDelay = serialized->get_float(TriggerDelay_type_id, 0.000000);
-		SpawnDelay = serialized->get_float(SpawnDelay_type_id, 0.250000);
-		TriggerArea = serialized->get_uint64(TriggerArea_type_id, 0);
-		TriggerRange = serialized->get_float(TriggerRange_type_id, 50.000000);
-		SpawnArea = serialized->get_uint64(SpawnArea_type_id, 0);
+		AutoDeleteDist = serialized->get_float(AutoDeleteDist_type_id, -1.000000f);
+		TriggerDelay = serialized->get_float(TriggerDelay_type_id, 0.000000f);
+		SpawnDelay = serialized->get_float(SpawnDelay_type_id, 0.250000f);
+		TriggerArea = serialized->get_uint64(TriggerArea_type_id, 0ull);
+		TriggerRange = serialized->get_float(TriggerRange_type_id, 50.000000f);
+		SpawnArea = serialized->get_uint64(SpawnArea_type_id, 0ull);
 		RandSpawnNavLoc = serialized->get_bool(RandSpawnNavLoc_type_id, false);
 		ThrowSpawn = serialized->get_bool(ThrowSpawn_type_id, true);
 		BeamInSpawn = serialized->get_bool(BeamInSpawn_type_id, false);
-		SpawneeTemplate = serialized->get_uint64(SpawneeTemplate_type_id, 0);
+		SpawneeTemplate = serialized->get_uint64(SpawneeTemplate_type_id, 0ull);
 		SpawneeVaultActor = serialized->get_string(SpawneeVaultActor_type_id, {});
 		SpawnJoint = serialized->get_string(SpawnJoint_type_id, "");
 		SpawnOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(SpawnOffset_type_id);
-		SpawnedGroup = serialized->get_uint64(SpawnedGroup_type_id, 0);
-		ExtraAddToGroup = serialized->get_uint64(ExtraAddToGroup_type_id, 0);
+		SpawnedGroup = serialized->get_uint64(SpawnedGroup_type_id, 0ull);
+		ExtraAddToGroup = serialized->get_uint64(ExtraAddToGroup_type_id, 0ull);
 		CheckHeroTooClose = serialized->get_bool(CheckHeroTooClose_type_id, false);
 		CreateNavObstacle = serialized->get_bool(CreateNavObstacle_type_id, true);
 		AttachOnSpawn = serialized->get_bool(AttachOnSpawn_type_id, false);
-		MinDistanceFromPlayers = serialized->get_float(MinDistanceFromPlayers_type_id, 1.000000); 
+		MinDistanceFromPlayers = serialized->get_float(MinDistanceFromPlayers_type_id, 1.000000f); 
 	}
 
 	[[nodiscard]] auto

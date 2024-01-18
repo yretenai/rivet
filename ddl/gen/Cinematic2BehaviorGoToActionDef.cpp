@@ -9,11 +9,11 @@
 
 namespace rivet::ddl::generated {
 	Cinematic2BehaviorGoToActionDef::Cinematic2BehaviorGoToActionDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Id = serialized->get_uint64(Id_type_id, 0);
-		Time = serialized->get_float(Time_type_id, 0.000000);
+		Id = serialized->get_uint64(Id_type_id, 0ull);
+		Time = serialized->get_float(Time_type_id, 0.000000f);
 		DurationType = serialized->get_enum<rivet::ddl::generated::x29c933e2>(DurationType_type_id, rivet::ddl::generated::x29c933e2_values, rivet::ddl::generated::x29c933e2::None);
-		Duration = serialized->get_float(Duration_type_id, 0.000000);
-		BlendInDuration = serialized->get_float(BlendInDuration_type_id, 0.000000);
+		Duration = serialized->get_float(Duration_type_id, 0.000000f);
+		BlendInDuration = serialized->get_float(BlendInDuration_type_id, 0.000000f);
 		StartPosition = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(StartPosition_type_id);
 		StartEulerRotation = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(StartEulerRotation_type_id);
 		EndPosition = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(EndPosition_type_id);

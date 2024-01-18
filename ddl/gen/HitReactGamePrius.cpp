@@ -18,8 +18,8 @@ namespace rivet::ddl::generated {
 		KnockdownData = serialized->unwrap_into<rivet::ddl::generated::KnockdownData>(KnockdownData_type_id);
 		DeathData = serialized->unwrap_into<rivet::ddl::generated::DeathData>(DeathData_type_id);
 		HitShaderData = serialized->unwrap_into<rivet::ddl::generated::BotHitShaderData>(HitShaderData_type_id);
-		CollisionTestHeight = serialized->get_float(CollisionTestHeight_type_id, 1.500000);
-		CollisionTestRadius = serialized->get_float(CollisionTestRadius_type_id, 1.000000); 
+		CollisionTestHeight = serialized->get_float(CollisionTestHeight_type_id, 1.500000f);
+		CollisionTestRadius = serialized->get_float(CollisionTestRadius_type_id, 1.000000f); 
 	}
 
 	[[nodiscard]] auto

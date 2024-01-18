@@ -10,8 +10,8 @@
 
 namespace rivet::ddl::generated {
 	SoundPropagation2RoomParamsDef::SoundPropagation2RoomParamsDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DesignerOutputBusLeveldB = serialized->get_float(DesignerOutputBusLeveldB_type_id, 80.000000);
-		AuxSendScalar = serialized->get_float(AuxSendScalar_type_id, 1.000000);
+		DesignerOutputBusLeveldB = serialized->get_float(DesignerOutputBusLeveldB_type_id, 80.000000f);
+		AuxSendScalar = serialized->get_float(AuxSendScalar_type_id, 1.000000f);
 		DistanceModel = serialized->unwrap_into<rivet::ddl::generated::SoundPropagation2DistModelDef>(DistanceModel_type_id);
 		DirectPathOcclusion = serialized->unwrap_into<rivet::ddl::generated::SoundPropagation2OcclParamsDef>(DirectPathOcclusion_type_id);
 		RoomPathOcclusion = serialized->unwrap_into<rivet::ddl::generated::SoundPropagation2OcclParamsDef>(RoomPathOcclusion_type_id); 

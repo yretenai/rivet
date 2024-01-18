@@ -9,18 +9,18 @@
 
 namespace rivet::ddl::generated {
 	VisualEffectPhysicsParam::VisualEffectPhysicsParam([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		CollisionRotationSpeedDecay = serialized->get_float(CollisionRotationSpeedDecay_type_id, 1.000000);
-		CollisionBeamClamp = serialized->get_float(CollisionBeamClamp_type_id, 0.000000);
-		CollisionBeamScale = serialized->get_float(CollisionBeamScale_type_id, 1.000000);
-		CollisionLifeScale = serialized->get_float(CollisionLifeScale_type_id, 1.000000);
-		CollisionDistance = serialized->get_float(CollisionDistance_type_id, 32.000000);
-		CollisionRadius = serialized->get_float(CollisionRadius_type_id, 1.000000);
-		CollisionMass = serialized->get_float(CollisionMass_type_id, 0.000000);
-		CollisionRestitution = serialized->get_float(CollisionRestitution_type_id, 0.000000);
-		CollisionFriction = serialized->get_float(CollisionFriction_type_id, 0.500000);
-		CollisionLinearDamping = serialized->get_float(CollisionLinearDamping_type_id, 0.000000);
-		CollisionGravityMultiplier = serialized->get_float(CollisionGravityMultiplier_type_id, 1.000000);
-		CollisionStartTime = serialized->get_float(CollisionStartTime_type_id, 0.000000);
+		CollisionRotationSpeedDecay = serialized->get_float(CollisionRotationSpeedDecay_type_id, 1.000000f);
+		CollisionBeamClamp = serialized->get_float(CollisionBeamClamp_type_id, 0.000000f);
+		CollisionBeamScale = serialized->get_float(CollisionBeamScale_type_id, 1.000000f);
+		CollisionLifeScale = serialized->get_float(CollisionLifeScale_type_id, 1.000000f);
+		CollisionDistance = serialized->get_float(CollisionDistance_type_id, 32.000000f);
+		CollisionRadius = serialized->get_float(CollisionRadius_type_id, 1.000000f);
+		CollisionMass = serialized->get_float(CollisionMass_type_id, 0.000000f);
+		CollisionRestitution = serialized->get_float(CollisionRestitution_type_id, 0.000000f);
+		CollisionFriction = serialized->get_float(CollisionFriction_type_id, 0.500000f);
+		CollisionLinearDamping = serialized->get_float(CollisionLinearDamping_type_id, 0.000000f);
+		CollisionGravityMultiplier = serialized->get_float(CollisionGravityMultiplier_type_id, 1.000000f);
+		CollisionStartTime = serialized->get_float(CollisionStartTime_type_id, 0.000000f);
 		CollisionModel = serialized->get_string(CollisionModel_type_id, {});
 		CollisionAngularVelocity = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(CollisionAngularVelocity_type_id); 
 	}

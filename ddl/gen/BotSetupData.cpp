@@ -21,8 +21,8 @@ namespace rivet::ddl::generated {
 		SkipAlertAnim = serialized->get_bool(SkipAlertAnim_type_id, false);
 		DisableIdleWander = serialized->get_bool(DisableIdleWander_type_id, false);
 		AllowRetaliation = serialized->get_bool(AllowRetaliation_type_id, true);
-		IdleWanderMinCooldown = serialized->get_float(IdleWanderMinCooldown_type_id, 2.000000);
-		IdleWanderMaxCooldown = serialized->get_float(IdleWanderMaxCooldown_type_id, 6.000000);
+		IdleWanderMinCooldown = serialized->get_float(IdleWanderMinCooldown_type_id, 2.000000f);
+		IdleWanderMaxCooldown = serialized->get_float(IdleWanderMaxCooldown_type_id, 6.000000f);
 		AllowHibernationBasedOnLoadedRegion = serialized->get_bool(AllowHibernationBasedOnLoadedRegion_type_id, true);
 		HomeContainerRegion = serialized->get_string(HomeContainerRegion_type_id, {}); 
 	}

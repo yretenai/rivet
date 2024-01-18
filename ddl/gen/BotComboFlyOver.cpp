@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	BotComboFlyOver::BotComboFlyOver([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BotComboMove(serialized) {
-		FirepointSetActorId = serialized->get_uint64(FirepointSetActorId_type_id, 0);
-		FlyOverAnimRate = serialized->get_float(FlyOverAnimRate_type_id, 1.000000);
-		FlyOverOutroAnimRate = serialized->get_float(FlyOverOutroAnimRate_type_id, 1.000000); 
+		FirepointSetActorId = serialized->get_uint64(FirepointSetActorId_type_id, 0ull);
+		FlyOverAnimRate = serialized->get_float(FlyOverAnimRate_type_id, 1.000000f);
+		FlyOverOutroAnimRate = serialized->get_float(FlyOverOutroAnimRate_type_id, 1.000000f); 
 	}
 
 	[[nodiscard]] auto

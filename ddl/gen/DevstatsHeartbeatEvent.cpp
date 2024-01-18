@@ -13,7 +13,7 @@ namespace rivet::ddl::generated {
 		PlayerPosInfo = serialized->unwrap_into<rivet::ddl::generated::DevstatsPlayerPositionInfo>(PlayerPosInfo_type_id);
 		PrimarySegmentInfo = serialized->unwrap_into<rivet::ddl::generated::DevstatsPrimarySegmentInfo>(PrimarySegmentInfo_type_id);
 		PlayerState = serialized->get_string(PlayerState_type_id, {});
-		PlayerHealth = serialized->get_float(PlayerHealth_type_id, 0.000000);
+		PlayerHealth = serialized->get_float(PlayerHealth_type_id, 0.000000f);
 		InCombat = serialized->get_bool(InCombat_type_id, false);
 		Invisible = serialized->get_bool(Invisible_type_id, false); 
 	}

@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	TextureMipGen::TextureMipGen([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Filter = serialized->get_enum<rivet::ddl::generated::xae1208ef>(Filter_type_id, rivet::ddl::generated::xae1208ef_values, rivet::ddl::generated::xae1208ef::Cubic);
-		PostSharpen = serialized->get_float(PostSharpen_type_id, 0.000000); 
+		PostSharpen = serialized->get_float(PostSharpen_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

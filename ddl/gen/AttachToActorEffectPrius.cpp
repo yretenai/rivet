@@ -9,7 +9,7 @@ namespace rivet::ddl::generated {
 	AttachToActorEffectPrius::AttachToActorEffectPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ScriptedShotEffectBasePrius(serialized) {
 		ActorType = serialized->get_enum<rivet::ddl::generated::x4891b54>(ActorType_type_id, rivet::ddl::generated::x4891b54_values, rivet::ddl::generated::x4891b54::HitActor);
 		ResetScriptedShotLifeTime = serialized->get_bool(ResetScriptedShotLifeTime_type_id, true);
-		NewLifeTime = serialized->get_float(NewLifeTime_type_id, 3.000000);
+		NewLifeTime = serialized->get_float(NewLifeTime_type_id, 3.000000f);
 		DestroyOnBotDeath = serialized->get_bool(DestroyOnBotDeath_type_id, false);
 		DestroyOnNonBotDeath = serialized->get_bool(DestroyOnNonBotDeath_type_id, false);
 		MatchDestroy = serialized->get_bool(MatchDestroy_type_id, true);

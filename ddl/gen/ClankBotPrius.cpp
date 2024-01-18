@@ -16,9 +16,9 @@ namespace rivet::ddl::generated {
 		StretchBot = serialized->get_string(StretchBot_type_id, {});
 		StretchPieces = serialized->get_string(StretchPieces_type_id, {});
 		StretchPieceVis = serialized->get_string(StretchPieceVis_type_id, {});
-		ArcHeight = serialized->get_float(ArcHeight_type_id, 0.500000);
-		GravMultiplier = serialized->get_float(GravMultiplier_type_id, 2.000000);
-		SpringRadius = serialized->get_float(SpringRadius_type_id, 0.750000);
+		ArcHeight = serialized->get_float(ArcHeight_type_id, 0.500000f);
+		GravMultiplier = serialized->get_float(GravMultiplier_type_id, 2.000000f);
+		SpringRadius = serialized->get_float(SpringRadius_type_id, 0.750000f);
 		ShakeData = serialized->unwrap_into<rivet::ddl::generated::CameraShakingWithFallOffData>(ShakeData_type_id); 
 	}
 

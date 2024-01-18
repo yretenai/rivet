@@ -9,13 +9,13 @@
 
 namespace rivet::ddl::generated {
 	AnimTriggerEventDef::AnimTriggerEventDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Id = serialized->get_uint64(Id_type_id, 0);
-		Flags = serialized->get_bitset<rivet::ddl::generated::x3bec8d43>(Flags_type_id, rivet::ddl::generated::x3bec8d43_values, 0);
-		Time = serialized->get_float(Time_type_id, 0.000000);
+		Id = serialized->get_uint64(Id_type_id, 0ull);
+		Flags = serialized->get_bitset<rivet::ddl::generated::x3bec8d43>(Flags_type_id, rivet::ddl::generated::x3bec8d43_values, 0u);
+		Time = serialized->get_float(Time_type_id, 0.000000f);
 		ActorName = serialized->get_string(ActorName_type_id, {});
 		LocatorName = serialized->get_string(LocatorName_type_id, {});
 		BroadcastFlag = serialized->get_bool(BroadcastFlag_type_id, false);
-		BroadcastRadius = serialized->get_float(BroadcastRadius_type_id, 0.000000);
+		BroadcastRadius = serialized->get_float(BroadcastRadius_type_id, 0.000000f);
 		Event = serialized->unwrap_into<rivet::ddl::generated::BlobDef>(Event_type_id); 
 	}
 

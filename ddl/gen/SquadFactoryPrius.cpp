@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	SquadFactoryPrius::SquadFactoryPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): SpawnerFactoryPrius(serialized) {
-		SquadMembers = serialized->get_uint32(SquadMembers_type_id, 0); 
+		SquadMembers = serialized->get_uint32(SquadMembers_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

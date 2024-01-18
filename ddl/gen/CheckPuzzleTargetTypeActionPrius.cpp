@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	CheckPuzzleTargetTypeActionPrius::CheckPuzzleTargetTypeActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Puzzle);
-		TargetType = serialized->get_bitset<rivet::ddl::generated::xf32dacf0>(TargetType_type_id, rivet::ddl::generated::xf32dacf0_values, 0); 
+		TargetType = serialized->get_bitset<rivet::ddl::generated::xf32dacf0>(TargetType_type_id, rivet::ddl::generated::xf32dacf0_values, 0u); 
 	}
 
 	[[nodiscard]] auto

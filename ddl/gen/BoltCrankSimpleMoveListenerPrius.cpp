@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	BoltCrankSimpleMoveListenerPrius::BoltCrankSimpleMoveListenerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Crank = serialized->get_uint64(Crank_type_id, 0);
-		StartVol = serialized->get_uint64(StartVol_type_id, 0);
-		EndVol = serialized->get_uint64(EndVol_type_id, 0);
-		DirectionVol = serialized->get_uint64(DirectionVol_type_id, 0); 
+		Crank = serialized->get_uint64(Crank_type_id, 0ull);
+		StartVol = serialized->get_uint64(StartVol_type_id, 0ull);
+		EndVol = serialized->get_uint64(EndVol_type_id, 0ull);
+		DirectionVol = serialized->get_uint64(DirectionVol_type_id, 0ull); 
 	}
 
 	[[nodiscard]] auto

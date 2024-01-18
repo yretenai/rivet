@@ -14,9 +14,9 @@ namespace rivet::ddl::generated {
 		MaterialMappingName = serialized->get_string(MaterialMappingName_type_id, {});
 		AlphaTextureConstantName = serialized->get_string(AlphaTextureConstantName_type_id, {});
 		Tint = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Tint_type_id);
-		BlendTime = serialized->get_float(BlendTime_type_id, 0.250000);
-		MinDistance = serialized->get_float(MinDistance_type_id, 1.000000);
-		MaxDistance = serialized->get_float(MaxDistance_type_id, 20.000000); 
+		BlendTime = serialized->get_float(BlendTime_type_id, 0.250000f);
+		MinDistance = serialized->get_float(MinDistance_type_id, 1.000000f);
+		MaxDistance = serialized->get_float(MaxDistance_type_id, 20.000000f); 
 	}
 
 	[[nodiscard]] auto

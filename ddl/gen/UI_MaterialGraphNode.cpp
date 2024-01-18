@@ -9,12 +9,12 @@
 
 namespace rivet::ddl::generated {
 	UI_MaterialGraphNode::UI_MaterialGraphNode([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		IdLow = serialized->get_int32(IdLow_type_id, 0);
+		IdLow = serialized->get_int32(IdLow_type_id, 0u);
 		Name = serialized->get_string(Name_type_id, {});
 		VariableName = serialized->get_string(VariableName_type_id, {});
 		MaterialNode = serialized->get_string(MaterialNode_type_id, {});
 		PrependNodeName = serialized->get_bool(PrependNodeName_type_id, false);
-		SortOrder = serialized->get_int32(SortOrder_type_id, 0);
+		SortOrder = serialized->get_int32(SortOrder_type_id, 0u);
 		IsSubGraph = serialized->get_bool(IsSubGraph_type_id, false);
 		InputList = serialized->unwrap_into_many<rivet::ddl::generated::UI_MaterialGraphNodeInput>(InputList_type_id); 
 	}

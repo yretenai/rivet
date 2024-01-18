@@ -8,8 +8,8 @@
 namespace rivet::ddl::generated {
 	AnimClueSpotlightPrius::AnimClueSpotlightPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		AimTargets = serialized->get_uint64s(AimTargets_type_id);
-		AimDurationMin = serialized->get_float(AimDurationMin_type_id, 2.000000);
-		AimDurationMax = serialized->get_float(AimDurationMax_type_id, 3.000000); 
+		AimDurationMin = serialized->get_float(AimDurationMin_type_id, 2.000000f);
+		AimDurationMax = serialized->get_float(AimDurationMax_type_id, 3.000000f); 
 	}
 
 	[[nodiscard]] auto

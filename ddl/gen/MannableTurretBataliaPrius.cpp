@@ -13,20 +13,20 @@ namespace rivet::ddl::generated {
 		CameraOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(CameraOffset_type_id);
 		PitchJoint = serialized->get_string(PitchJoint_type_id, "pitch_pivot");
 		YawJoint = serialized->get_string(YawJoint_type_id, "yaw_pivot");
-		YawLimitMin = serialized->get_float(YawLimitMin_type_id, 90.000000);
-		YawLimitMax = serialized->get_float(YawLimitMax_type_id, 90.000000);
-		PitchLimitMin = serialized->get_float(PitchLimitMin_type_id, 45.000000);
-		PitchLimitMax = serialized->get_float(PitchLimitMax_type_id, 30.000000);
-		MaxYawSpeed = serialized->get_float(MaxYawSpeed_type_id, 720.000000);
-		MaxPitchSpeed = serialized->get_float(MaxPitchSpeed_type_id, 360.000000);
+		YawLimitMin = serialized->get_float(YawLimitMin_type_id, 90.000000f);
+		YawLimitMax = serialized->get_float(YawLimitMax_type_id, 90.000000f);
+		PitchLimitMin = serialized->get_float(PitchLimitMin_type_id, 45.000000f);
+		PitchLimitMax = serialized->get_float(PitchLimitMax_type_id, 30.000000f);
+		MaxYawSpeed = serialized->get_float(MaxYawSpeed_type_id, 720.000000f);
+		MaxPitchSpeed = serialized->get_float(MaxPitchSpeed_type_id, 360.000000f);
 		ShotConfigMachineGun = serialized->get_string(ShotConfigMachineGun_type_id, {});
-		MachineGunFireDelay = serialized->get_float(MachineGunFireDelay_type_id, 0.250000);
+		MachineGunFireDelay = serialized->get_float(MachineGunFireDelay_type_id, 0.250000f);
 		ShotConfigIonCannon = serialized->get_string(ShotConfigIonCannon_type_id, {});
-		MaxIonCannonDamageMultiplier = serialized->get_float(MaxIonCannonDamageMultiplier_type_id, 5.000000);
-		MaxIonCannonEnergy = serialized->get_float(MaxIonCannonEnergy_type_id, 10.000000);
-		OfferVolume = serialized->get_uint64(OfferVolume_type_id, 0);
-		ExternalActor = serialized->get_uint64(ExternalActor_type_id, 0);
-		DamageActor = serialized->get_uint64(DamageActor_type_id, 0);
+		MaxIonCannonDamageMultiplier = serialized->get_float(MaxIonCannonDamageMultiplier_type_id, 5.000000f);
+		MaxIonCannonEnergy = serialized->get_float(MaxIonCannonEnergy_type_id, 10.000000f);
+		OfferVolume = serialized->get_uint64(OfferVolume_type_id, 0ull);
+		ExternalActor = serialized->get_uint64(ExternalActor_type_id, 0ull);
+		DamageActor = serialized->get_uint64(DamageActor_type_id, 0ull);
 		TurretOfferPrius = serialized->unwrap_into<rivet::ddl::generated::UseTurretOfferPrius>(TurretOfferPrius_type_id); 
 	}
 

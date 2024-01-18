@@ -11,13 +11,13 @@ namespace rivet::ddl::generated {
 	DimensionalPulseTargetEndEvent::DimensionalPulseTargetEndEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
 		ExtraBehavior = serialized->get_enum<rivet::ddl::generated::xee804118>(ExtraBehavior_type_id, rivet::ddl::generated::xee804118_values, rivet::ddl::generated::xee804118::None);
 		CurrentSize = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(CurrentSize_type_id);
-		CurrentSizeX = serialized->get_float(CurrentSizeX_type_id, 0.000000);
-		CurrentSizeY = serialized->get_float(CurrentSizeY_type_id, 0.000000);
-		CurrentSizeZ = serialized->get_float(CurrentSizeZ_type_id, 0.000000);
+		CurrentSizeX = serialized->get_float(CurrentSizeX_type_id, 0.000000f);
+		CurrentSizeY = serialized->get_float(CurrentSizeY_type_id, 0.000000f);
+		CurrentSizeZ = serialized->get_float(CurrentSizeZ_type_id, 0.000000f);
 		NextSize = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(NextSize_type_id);
-		NextSizeX = serialized->get_float(NextSizeX_type_id, 0.000000);
-		NextSizeY = serialized->get_float(NextSizeY_type_id, 0.000000);
-		NextSizeZ = serialized->get_float(NextSizeZ_type_id, 0.000000); 
+		NextSizeX = serialized->get_float(NextSizeX_type_id, 0.000000f);
+		NextSizeY = serialized->get_float(NextSizeY_type_id, 0.000000f);
+		NextSizeZ = serialized->get_float(NextSizeZ_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

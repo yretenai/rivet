@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	HeadLookAtEvent::HeadLookAtEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		ActorToLookAt = serialized->get_uint64(ActorToLookAt_type_id, 0); 
+		ActorToLookAt = serialized->get_uint64(ActorToLookAt_type_id, 0ull); 
 	}
 
 	[[nodiscard]] auto

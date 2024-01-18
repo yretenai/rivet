@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	SkySettingsDef::SkySettingsDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SkyObjectsScale = serialized->get_float(SkyObjectsScale_type_id, 1.000000);
+		SkyObjectsScale = serialized->get_float(SkyObjectsScale_type_id, 1.000000f);
 		SkyObjects = serialized->get_strings(SkyObjects_type_id);
 		SkyBoxCubeMap = serialized->get_string(SkyBoxCubeMap_type_id, {});
-		SkyBoxSunThreshold = serialized->get_float(SkyBoxSunThreshold_type_id, 10.000000); 
+		SkyBoxSunThreshold = serialized->get_float(SkyBoxSunThreshold_type_id, 10.000000f); 
 	}
 
 	[[nodiscard]] auto

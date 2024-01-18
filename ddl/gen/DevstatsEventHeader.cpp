@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	DevstatsEventHeader::DevstatsEventHeader([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		client_timestamp = serialized->get_uint64(client_timestamp_type_id, 0);
-		client_timezone = serialized->get_int64(client_timezone_type_id, 0);
+		client_timestamp = serialized->get_uint64(client_timestamp_type_id, 0ull);
+		client_timezone = serialized->get_int64(client_timezone_type_id, 0u);
 		session_id = serialized->get_string(session_id_type_id, {});
 		user_id = serialized->get_string(user_id_type_id, {});
 		psn_account = serialized->get_string(psn_account_type_id, {});

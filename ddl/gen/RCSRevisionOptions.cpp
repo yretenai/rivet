@@ -11,7 +11,7 @@ namespace rivet::ddl::generated {
 	RCSRevisionOptions::RCSRevisionOptions([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Revision = serialized->get_enum<rivet::ddl::generated::x8f7062e6>(Revision_type_id, rivet::ddl::generated::x8f7062e6_values, rivet::ddl::generated::x8f7062e6::Latest);
 		Date = serialized->unwrap_into<rivet::ddl::generated::RCSDate>(Date_type_id);
-		Changelist = serialized->get_uint32(Changelist_type_id, 0);
+		Changelist = serialized->get_uint32(Changelist_type_id, 0u);
 		Label = serialized->get_string(Label_type_id, ""); 
 	}
 

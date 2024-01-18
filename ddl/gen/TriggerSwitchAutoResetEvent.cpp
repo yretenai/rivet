@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	TriggerSwitchAutoResetEvent::TriggerSwitchAutoResetEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		SequenceNumber = serialized->get_int16(SequenceNumber_type_id, 0); 
+		SequenceNumber = serialized->get_int16(SequenceNumber_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

@@ -8,12 +8,12 @@
 namespace rivet::ddl::generated {
 	RecoilCameraShakeAnimated::RecoilCameraShakeAnimated([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): RecoilCameraShake(serialized) {
 		AnimDriverName = serialized->get_string(AnimDriverName_type_id, {});
-		AnimLoopTime = serialized->get_float(AnimLoopTime_type_id, 0.000000);
-		AnimMotionScaleX = serialized->get_float(AnimMotionScaleX_type_id, 1.000000);
-		AnimMotionScaleY = serialized->get_float(AnimMotionScaleY_type_id, 1.000000);
-		AnimMotionScaleZ = serialized->get_float(AnimMotionScaleZ_type_id, 1.000000);
-		AnimRotationScale = serialized->get_float(AnimRotationScale_type_id, 1.000000);
-		AnimTimeScale = serialized->get_float(AnimTimeScale_type_id, 1.000000); 
+		AnimLoopTime = serialized->get_float(AnimLoopTime_type_id, 0.000000f);
+		AnimMotionScaleX = serialized->get_float(AnimMotionScaleX_type_id, 1.000000f);
+		AnimMotionScaleY = serialized->get_float(AnimMotionScaleY_type_id, 1.000000f);
+		AnimMotionScaleZ = serialized->get_float(AnimMotionScaleZ_type_id, 1.000000f);
+		AnimRotationScale = serialized->get_float(AnimRotationScale_type_id, 1.000000f);
+		AnimTimeScale = serialized->get_float(AnimTimeScale_type_id, 1.000000f); 
 	}
 
 	[[nodiscard]] auto

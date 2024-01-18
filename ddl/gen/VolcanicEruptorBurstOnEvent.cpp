@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	VolcanicEruptorBurstOnEvent::VolcanicEruptorBurstOnEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Height = serialized->get_float(Height_type_id, 0.000000);
-		Radius = serialized->get_float(Radius_type_id, 0.000000); 
+		Height = serialized->get_float(Height_type_id, 0.000000f);
+		Radius = serialized->get_float(Radius_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

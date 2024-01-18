@@ -14,14 +14,14 @@ namespace rivet::ddl::generated {
 		Prims = serialized->unwrap_into_many<rivet::ddl::generated::DamagePrimContainer>(Prims_type_id);
 		PrimConfig = serialized->get_string(PrimConfig_type_id, {});
 		DamageType = serialized->get_enum<rivet::ddl::generated::DamageTypes>(DamageType_type_id, rivet::ddl::generated::DamageTypes_values, rivet::ddl::generated::DamageTypes::Melee);
-		DamageAmount = serialized->get_float(DamageAmount_type_id, 1.000000);
-		StatusAmount = serialized->get_float(StatusAmount_type_id, 0.000000);
+		DamageAmount = serialized->get_float(DamageAmount_type_id, 1.000000f);
+		StatusAmount = serialized->get_float(StatusAmount_type_id, 0.000000f);
 		Knockback = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(Knockback_type_id, rivet::ddl::generated::KnockbackLevels_values, rivet::ddl::generated::KnockbackLevels::None);
-		KnockbackAmount = serialized->get_float(KnockbackAmount_type_id, -1.000000);
-		KnockbackForce = serialized->get_float(KnockbackForce_type_id, -1.000000);
-		DurationOverride = serialized->get_float(DurationOverride_type_id, 0.000000);
-		HitPauseTime = serialized->get_float(HitPauseTime_type_id, -1.000000);
-		RequestFlags = serialized->get_bitset<rivet::ddl::generated::x65d7dac2>(RequestFlags_type_id, rivet::ddl::generated::x65d7dac2_values, 0);
+		KnockbackAmount = serialized->get_float(KnockbackAmount_type_id, -1.000000f);
+		KnockbackForce = serialized->get_float(KnockbackForce_type_id, -1.000000f);
+		DurationOverride = serialized->get_float(DurationOverride_type_id, 0.000000f);
+		HitPauseTime = serialized->get_float(HitPauseTime_type_id, -1.000000f);
+		RequestFlags = serialized->get_bitset<rivet::ddl::generated::x65d7dac2>(RequestFlags_type_id, rivet::ddl::generated::x65d7dac2_values, 0u);
 		CustomDamageEntries = serialized->unwrap_into_many<rivet::ddl::generated::CustomDamageContainer>(CustomDamageEntries_type_id); 
 	}
 

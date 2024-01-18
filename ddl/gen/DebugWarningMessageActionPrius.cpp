@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	DebugWarningMessageActionPrius::DebugWarningMessageActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): DebugMessageActionPrius(serialized) {
-		WarnFlags = serialized->get_bitset<rivet::ddl::generated::x184da46c>(WarnFlags_type_id, rivet::ddl::generated::x184da46c_values, 2); 
+		WarnFlags = serialized->get_bitset<rivet::ddl::generated::x184da46c>(WarnFlags_type_id, rivet::ddl::generated::x184da46c_values, 2u); 
 	}
 
 	[[nodiscard]] auto

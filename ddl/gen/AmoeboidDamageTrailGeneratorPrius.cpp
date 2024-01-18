@@ -8,11 +8,11 @@
 namespace rivet::ddl::generated {
 	AmoeboidDamageTrailGeneratorPrius::AmoeboidDamageTrailGeneratorPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		TrailActor = serialized->get_string(TrailActor_type_id, {});
-		TimeDelayInitialSpawn = serialized->get_float(TimeDelayInitialSpawn_type_id, 0.000000);
-		DistanceForInitialSpawn = serialized->get_float(DistanceForInitialSpawn_type_id, 0.000000);
-		TimeBetweenSpawns = serialized->get_float(TimeBetweenSpawns_type_id, 0.250000);
-		DistanceBetweenSpawns = serialized->get_float(DistanceBetweenSpawns_type_id, 0.500000);
-		SpawnLifetime = serialized->get_float(SpawnLifetime_type_id, -1.000000); 
+		TimeDelayInitialSpawn = serialized->get_float(TimeDelayInitialSpawn_type_id, 0.000000f);
+		DistanceForInitialSpawn = serialized->get_float(DistanceForInitialSpawn_type_id, 0.000000f);
+		TimeBetweenSpawns = serialized->get_float(TimeBetweenSpawns_type_id, 0.250000f);
+		DistanceBetweenSpawns = serialized->get_float(DistanceBetweenSpawns_type_id, 0.500000f);
+		SpawnLifetime = serialized->get_float(SpawnLifetime_type_id, -1.000000f); 
 	}
 
 	[[nodiscard]] auto

@@ -9,8 +9,8 @@ namespace rivet::ddl::generated {
 	WeaponEconomySnapshotDevstatsEvent::WeaponEconomySnapshotDevstatsEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
 		ParentEventId = serialized->get_string(ParentEventId_type_id, {});
 		WeaponName = serialized->get_string(WeaponName_type_id, {});
-		CurrentAmmo = serialized->get_float(CurrentAmmo_type_id, 0.000000);
-		MaxAmmo = serialized->get_float(MaxAmmo_type_id, 0.000000);
+		CurrentAmmo = serialized->get_float(CurrentAmmo_type_id, 0.000000f);
+		MaxAmmo = serialized->get_float(MaxAmmo_type_id, 0.000000f);
 		PurchaseState = serialized->get_enum<rivet::ddl::generated::xf5af8e81>(PurchaseState_type_id, rivet::ddl::generated::xf5af8e81_values, rivet::ddl::generated::xf5af8e81::Locked); 
 	}
 

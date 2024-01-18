@@ -7,16 +7,16 @@
 
 namespace rivet::ddl::generated {
 	HeroWallStickConfig::HeroWallStickConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		WallStickGravity = serialized->get_float(WallStickGravity_type_id, -20.000000);
-		WallStickTerminalVelocity = serialized->get_float(WallStickTerminalVelocity_type_id, -40.000000);
-		WallStickNoSlideTime = serialized->get_float(WallStickNoSlideTime_type_id, 0.500000);
-		WallStickMinGroundHeight = serialized->get_float(WallStickMinGroundHeight_type_id, 1.000000);
-		WallStickFacingIntoWallThreshold = serialized->get_float(WallStickFacingIntoWallThreshold_type_id, 70.000000);
-		WallJumpCameraAccel = serialized->get_float(WallJumpCameraAccel_type_id, 1000.000000);
-		WallJumpCameraDecel = serialized->get_float(WallJumpCameraDecel_type_id, 500.000000);
-		WallJumpCameraMaxSpeedYaw = serialized->get_float(WallJumpCameraMaxSpeedYaw_type_id, 230.000000);
-		WallJumpCameraMaxSpeedPitch = serialized->get_float(WallJumpCameraMaxSpeedPitch_type_id, 57.000000);
-		WallJumpUpMinHeightGain = serialized->get_float(WallJumpUpMinHeightGain_type_id, 0.500000); 
+		WallStickGravity = serialized->get_float(WallStickGravity_type_id, -20.000000f);
+		WallStickTerminalVelocity = serialized->get_float(WallStickTerminalVelocity_type_id, -40.000000f);
+		WallStickNoSlideTime = serialized->get_float(WallStickNoSlideTime_type_id, 0.500000f);
+		WallStickMinGroundHeight = serialized->get_float(WallStickMinGroundHeight_type_id, 1.000000f);
+		WallStickFacingIntoWallThreshold = serialized->get_float(WallStickFacingIntoWallThreshold_type_id, 70.000000f);
+		WallJumpCameraAccel = serialized->get_float(WallJumpCameraAccel_type_id, 1000.000000f);
+		WallJumpCameraDecel = serialized->get_float(WallJumpCameraDecel_type_id, 500.000000f);
+		WallJumpCameraMaxSpeedYaw = serialized->get_float(WallJumpCameraMaxSpeedYaw_type_id, 230.000000f);
+		WallJumpCameraMaxSpeedPitch = serialized->get_float(WallJumpCameraMaxSpeedPitch_type_id, 57.000000f);
+		WallJumpUpMinHeightGain = serialized->get_float(WallJumpUpMinHeightGain_type_id, 0.500000f); 
 	}
 
 	[[nodiscard]] auto

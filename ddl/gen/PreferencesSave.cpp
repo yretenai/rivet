@@ -10,8 +10,8 @@
 
 namespace rivet::ddl::generated {
 	PreferencesSave::PreferencesSave([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		LookSensitivity = serialized->get_float(LookSensitivity_type_id, 1.000000);
-		GammaCorrection = serialized->get_float(GammaCorrection_type_id, 0.000000);
+		LookSensitivity = serialized->get_float(LookSensitivity_type_id, 1.000000f);
+		GammaCorrection = serialized->get_float(GammaCorrection_type_id, 0.000000f);
 		CameraInvertX = serialized->get_bool(CameraInvertX_type_id, false);
 		CameraInvertY = serialized->get_bool(CameraInvertY_type_id, false);
 		RumbleEnabled = serialized->get_bool(RumbleEnabled_type_id, true);
@@ -22,19 +22,19 @@ namespace rivet::ddl::generated {
 		ProfanityEnabled = serialized->get_bool(ProfanityEnabled_type_id, true);
 		OutlinesEnabled = serialized->get_bool(OutlinesEnabled_type_id, true);
 		VoiceChatEnabled = serialized->get_bool(VoiceChatEnabled_type_id, true);
-		MasterVolume = serialized->get_float(MasterVolume_type_id, 1.000000);
-		MusicVolume = serialized->get_float(MusicVolume_type_id, 1.000000);
-		DialogVolume = serialized->get_float(DialogVolume_type_id, 1.000000);
-		SFXVolume = serialized->get_float(SFXVolume_type_id, 1.000000);
-		UIVolume = serialized->get_float(UIVolume_type_id, 1.000000);
-		HitConfirmVolume = serialized->get_float(HitConfirmVolume_type_id, 0.500000);
-		ControllerSpeakerVolume = serialized->get_float(ControllerSpeakerVolume_type_id, 1.000000);
-		ListeningMode = serialized->get_int32(ListeningMode_type_id, 0);
-		HeadphonesListeningMode = serialized->get_int32(HeadphonesListeningMode_type_id, 3);
-		UIAdjustX = serialized->get_int32(UIAdjustX_type_id, 128);
-		UIAdjustY = serialized->get_int32(UIAdjustY_type_id, 72);
-		UIAdjustW = serialized->get_int32(UIAdjustW_type_id, 0);
-		UIAdjustH = serialized->get_int32(UIAdjustH_type_id, 0);
+		MasterVolume = serialized->get_float(MasterVolume_type_id, 1.000000f);
+		MusicVolume = serialized->get_float(MusicVolume_type_id, 1.000000f);
+		DialogVolume = serialized->get_float(DialogVolume_type_id, 1.000000f);
+		SFXVolume = serialized->get_float(SFXVolume_type_id, 1.000000f);
+		UIVolume = serialized->get_float(UIVolume_type_id, 1.000000f);
+		HitConfirmVolume = serialized->get_float(HitConfirmVolume_type_id, 0.500000f);
+		ControllerSpeakerVolume = serialized->get_float(ControllerSpeakerVolume_type_id, 1.000000f);
+		ListeningMode = serialized->get_int32(ListeningMode_type_id, 0u);
+		HeadphonesListeningMode = serialized->get_int32(HeadphonesListeningMode_type_id, 3u);
+		UIAdjustX = serialized->get_int32(UIAdjustX_type_id, 128u);
+		UIAdjustY = serialized->get_int32(UIAdjustY_type_id, 72u);
+		UIAdjustW = serialized->get_int32(UIAdjustW_type_id, 0u);
+		UIAdjustH = serialized->get_int32(UIAdjustH_type_id, 0u);
 		MouseControlNormal = serialized->unwrap_into<rivet::ddl::generated::MouseControl>(MouseControlNormal_type_id);
 		MouseControlAiming = serialized->unwrap_into<rivet::ddl::generated::MouseControl>(MouseControlAiming_type_id); 
 	}

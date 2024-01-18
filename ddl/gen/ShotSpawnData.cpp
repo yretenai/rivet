@@ -10,8 +10,8 @@
 
 namespace rivet::ddl::generated {
 	ShotSpawnData::ShotSpawnData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ActorSpawnData(serialized) {
-		Owner = serialized->get_uint64(Owner_type_id, 0);
-		AttackId = serialized->get_uint32(AttackId_type_id, 0); 
+		Owner = serialized->get_uint64(Owner_type_id, 0ull);
+		AttackId = serialized->get_uint32(AttackId_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

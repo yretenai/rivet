@@ -28,7 +28,7 @@ namespace rivet::ddl::generated {
 		NewspaperConfig = serialized->get_string(NewspaperConfig_type_id, "configs\\system\\system_newspaper.config");
 		UnlockTechWeb = serialized->get_bool(UnlockTechWeb_type_id, false);
 		AFKDisconnectEnable = serialized->get_bool(AFKDisconnectEnable_type_id, false);
-		AFKDisconnectTime = serialized->get_float(AFKDisconnectTime_type_id, 300.000000);
+		AFKDisconnectTime = serialized->get_float(AFKDisconnectTime_type_id, 300.000000f);
 		ContinueGameLoad = serialized->get_bool(ContinueGameLoad_type_id, false); 
 	}
 

@@ -8,15 +8,15 @@
 namespace rivet::ddl::generated {
 	TrajectorDrawerKnotData::TrajectorDrawerKnotData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		KnotModel = serialized->get_string(KnotModel_type_id, {});
-		MinInterval = serialized->get_float(MinInterval_type_id, 0.100000);
-		MaxInterval = serialized->get_float(MaxInterval_type_id, 0.140000);
-		FadeDistance = serialized->get_float(FadeDistance_type_id, 35.000000);
-		MinScaleXY = serialized->get_float(MinScaleXY_type_id, 2.250000);
-		MaxScaleXY = serialized->get_float(MaxScaleXY_type_id, 3.500000);
-		MinScaleZ = serialized->get_float(MinScaleZ_type_id, 1.250000);
-		MaxScaleZ = serialized->get_float(MaxScaleZ_type_id, 2.250000);
-		StartOffset = serialized->get_float(StartOffset_type_id, 0.500000);
-		EndOffset = serialized->get_float(EndOffset_type_id, 0.000000); 
+		MinInterval = serialized->get_float(MinInterval_type_id, 0.100000f);
+		MaxInterval = serialized->get_float(MaxInterval_type_id, 0.140000f);
+		FadeDistance = serialized->get_float(FadeDistance_type_id, 35.000000f);
+		MinScaleXY = serialized->get_float(MinScaleXY_type_id, 2.250000f);
+		MaxScaleXY = serialized->get_float(MaxScaleXY_type_id, 3.500000f);
+		MinScaleZ = serialized->get_float(MinScaleZ_type_id, 1.250000f);
+		MaxScaleZ = serialized->get_float(MaxScaleZ_type_id, 2.250000f);
+		StartOffset = serialized->get_float(StartOffset_type_id, 0.500000f);
+		EndOffset = serialized->get_float(EndOffset_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

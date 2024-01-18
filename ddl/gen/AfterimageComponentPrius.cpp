@@ -11,10 +11,10 @@ namespace rivet::ddl::generated {
 		ActorMaterialMappingName = serialized->get_string(ActorMaterialMappingName_type_id, {});
 		AfterimageMaterial = serialized->get_string(AfterimageMaterial_type_id, {});
 		AfterimageMaterialMappingName = serialized->get_string(AfterimageMaterialMappingName_type_id, {});
-		Interval = serialized->get_float(Interval_type_id, 0.066000);
-		NumAfterimages = serialized->get_uint32(NumAfterimages_type_id, 4);
-		MinLoD = serialized->get_uint32(MinLoD_type_id, 0);
-		ExpireDuration = serialized->get_float(ExpireDuration_type_id, 0.500000); 
+		Interval = serialized->get_float(Interval_type_id, 0.066000f);
+		NumAfterimages = serialized->get_uint32(NumAfterimages_type_id, 4u);
+		MinLoD = serialized->get_uint32(MinLoD_type_id, 0u);
+		ExpireDuration = serialized->get_float(ExpireDuration_type_id, 0.500000f); 
 	}
 
 	[[nodiscard]] auto

@@ -9,21 +9,21 @@
 
 namespace rivet::ddl::generated {
 	HeroLedgeConfig::HeroLedgeConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		FromGroundDistanceForward = serialized->get_float(FromGroundDistanceForward_type_id, 1.000000);
-		FromGroundDistanceSide = serialized->get_float(FromGroundDistanceSide_type_id, 1.000000);
-		FromGroundHeightMax = serialized->get_float(FromGroundHeightMax_type_id, 2.000000);
-		FromGroundHeightMin = serialized->get_float(FromGroundHeightMin_type_id, 1.600000);
-		FromGroundInputAngleTol = serialized->get_float(FromGroundInputAngleTol_type_id, 50.000000);
-		FromAirDistanceForward = serialized->get_float(FromAirDistanceForward_type_id, 1.000000);
-		FromAirDistanceSide = serialized->get_float(FromAirDistanceSide_type_id, 1.000000);
-		FromAirHeightMax = serialized->get_float(FromAirHeightMax_type_id, 2.000000);
-		FromAirHeightMin = serialized->get_float(FromAirHeightMin_type_id, 1.600000);
-		FromAirInputAngleTol = serialized->get_float(FromAirInputAngleTol_type_id, 50.000000);
-		FromLedgeDistanceForward = serialized->get_float(FromLedgeDistanceForward_type_id, 1.000000);
-		FromLedgeDistanceSide = serialized->get_float(FromLedgeDistanceSide_type_id, 1.000000);
-		FromLedgeHeightMax = serialized->get_float(FromLedgeHeightMax_type_id, 2.000000);
-		FromLedgeHeightMin = serialized->get_float(FromLedgeHeightMin_type_id, 1.600000);
-		FromLedgeInputAngleTol = serialized->get_float(FromLedgeInputAngleTol_type_id, 50.000000);
+		FromGroundDistanceForward = serialized->get_float(FromGroundDistanceForward_type_id, 1.000000f);
+		FromGroundDistanceSide = serialized->get_float(FromGroundDistanceSide_type_id, 1.000000f);
+		FromGroundHeightMax = serialized->get_float(FromGroundHeightMax_type_id, 2.000000f);
+		FromGroundHeightMin = serialized->get_float(FromGroundHeightMin_type_id, 1.600000f);
+		FromGroundInputAngleTol = serialized->get_float(FromGroundInputAngleTol_type_id, 50.000000f);
+		FromAirDistanceForward = serialized->get_float(FromAirDistanceForward_type_id, 1.000000f);
+		FromAirDistanceSide = serialized->get_float(FromAirDistanceSide_type_id, 1.000000f);
+		FromAirHeightMax = serialized->get_float(FromAirHeightMax_type_id, 2.000000f);
+		FromAirHeightMin = serialized->get_float(FromAirHeightMin_type_id, 1.600000f);
+		FromAirInputAngleTol = serialized->get_float(FromAirInputAngleTol_type_id, 50.000000f);
+		FromLedgeDistanceForward = serialized->get_float(FromLedgeDistanceForward_type_id, 1.000000f);
+		FromLedgeDistanceSide = serialized->get_float(FromLedgeDistanceSide_type_id, 1.000000f);
+		FromLedgeHeightMax = serialized->get_float(FromLedgeHeightMax_type_id, 2.000000f);
+		FromLedgeHeightMin = serialized->get_float(FromLedgeHeightMin_type_id, 1.600000f);
+		FromLedgeInputAngleTol = serialized->get_float(FromLedgeInputAngleTol_type_id, 50.000000f);
 		RecoveryFrontJumpParams = serialized->unwrap_into<rivet::ddl::generated::RecoveryLedgeModeParams>(RecoveryFrontJumpParams_type_id);
 		RecoveryRunOffParams = serialized->unwrap_into<rivet::ddl::generated::RecoveryLedgeModeParams>(RecoveryRunOffParams_type_id);
 		RecoveryKnockOffParams = serialized->unwrap_into<rivet::ddl::generated::RecoveryLedgeModeParams>(RecoveryKnockOffParams_type_id);
@@ -33,9 +33,9 @@ namespace rivet::ddl::generated {
 		RecoveryLetGoDriver = serialized->get_string(RecoveryLetGoDriver_type_id, {});
 		RecoveryHandsLocator = serialized->get_string(RecoveryHandsLocator_type_id, {});
 		RecoveryIKHandLocator = serialized->get_string(RecoveryIKHandLocator_type_id, {});
-		RecoveryIKHandQueryMaxOffsetY = serialized->get_float(RecoveryIKHandQueryMaxOffsetY_type_id, 0.150000);
-		RecoveryIKHandQueryMinOffsetY = serialized->get_float(RecoveryIKHandQueryMinOffsetY_type_id, -0.250000);
-		RecoveryIKHandRadius = serialized->get_float(RecoveryIKHandRadius_type_id, 0.250000); 
+		RecoveryIKHandQueryMaxOffsetY = serialized->get_float(RecoveryIKHandQueryMaxOffsetY_type_id, 0.150000f);
+		RecoveryIKHandQueryMinOffsetY = serialized->get_float(RecoveryIKHandQueryMinOffsetY_type_id, -0.250000f);
+		RecoveryIKHandRadius = serialized->get_float(RecoveryIKHandRadius_type_id, 0.250000f); 
 	}
 
 	[[nodiscard]] auto

@@ -7,14 +7,14 @@
 
 namespace rivet::ddl::generated {
 	GPUProgramDesc::GPUProgramDesc([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		PSTextureMask = serialized->get_uint32(PSTextureMask_type_id, 0);
-		PSInterpMask = serialized->get_uint32(PSInterpMask_type_id, 0);
-		DSTextureMask = serialized->get_uint32(DSTextureMask_type_id, 0);
-		DSInterpMask = serialized->get_uint32(DSInterpMask_type_id, 0);
-		HSTextureMask = serialized->get_uint32(HSTextureMask_type_id, 0);
-		HSInterpMask = serialized->get_uint32(HSInterpMask_type_id, 0);
-		VSTextureMask = serialized->get_uint32(VSTextureMask_type_id, 0);
-		VSInterpMask = serialized->get_uint32(VSInterpMask_type_id, 0); 
+		PSTextureMask = serialized->get_uint32(PSTextureMask_type_id, 0u);
+		PSInterpMask = serialized->get_uint32(PSInterpMask_type_id, 0u);
+		DSTextureMask = serialized->get_uint32(DSTextureMask_type_id, 0u);
+		DSInterpMask = serialized->get_uint32(DSInterpMask_type_id, 0u);
+		HSTextureMask = serialized->get_uint32(HSTextureMask_type_id, 0u);
+		HSInterpMask = serialized->get_uint32(HSInterpMask_type_id, 0u);
+		VSTextureMask = serialized->get_uint32(VSTextureMask_type_id, 0u);
+		VSInterpMask = serialized->get_uint32(VSInterpMask_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

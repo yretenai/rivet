@@ -14,7 +14,7 @@ namespace rivet::ddl::generated {
 	DimensionalPulseTargetBasePrius::DimensionalPulseTargetBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		StartEnabled = serialized->get_bool(StartEnabled_type_id, true);
 		OverrideEffectChance = serialized->get_bool(OverrideEffectChance_type_id, false);
-		EffectChance = serialized->get_float(EffectChance_type_id, 0.500000); 
+		EffectChance = serialized->get_float(EffectChance_type_id, 0.500000f); 
 	}
 
 	[[nodiscard]] auto

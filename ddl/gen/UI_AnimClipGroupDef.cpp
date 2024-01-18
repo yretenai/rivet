@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	UI_AnimClipGroupDef::UI_AnimClipGroupDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Id = serialized->get_uint64(Id_type_id, 0);
+		Id = serialized->get_uint64(Id_type_id, 0ull);
 		Name = serialized->get_string(Name_type_id, {});
 		Entries = serialized->unwrap_into_many<rivet::ddl::generated::UI_AnimClipGroupEntryDef>(Entries_type_id); 
 	}

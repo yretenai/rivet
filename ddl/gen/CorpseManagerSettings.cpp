@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	CorpseManagerSettings::CorpseManagerSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DesiredNumCorpses = serialized->get_int32(DesiredNumCorpses_type_id, 16);
-		MaxNumCorpses = serialized->get_int32(MaxNumCorpses_type_id, 32); 
+		DesiredNumCorpses = serialized->get_int32(DesiredNumCorpses_type_id, 16u);
+		MaxNumCorpses = serialized->get_int32(MaxNumCorpses_type_id, 32u); 
 	}
 
 	[[nodiscard]] auto

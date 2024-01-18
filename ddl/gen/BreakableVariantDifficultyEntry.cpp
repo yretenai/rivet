@@ -10,14 +10,14 @@ namespace rivet::ddl::generated {
 		Variant = serialized->get_enum<rivet::ddl::generated::xc3e5efea>(Variant_type_id, rivet::ddl::generated::xc3e5efea_values, rivet::ddl::generated::xc3e5efea::V1);
 		StartMission = serialized->get_string(StartMission_type_id, "");
 		StartObjective = serialized->get_string(StartObjective_type_id, "");
-		Health = serialized->get_float(Health_type_id, 1.000000);
-		EasyMultiplier = serialized->get_float(EasyMultiplier_type_id, 1.000000);
-		MediumMultiplier = serialized->get_float(MediumMultiplier_type_id, 1.000000);
-		HardMultiplier = serialized->get_float(HardMultiplier_type_id, 1.000000);
-		HardestMultiplier = serialized->get_float(HardestMultiplier_type_id, 1.000000);
-		ThreeDeathsMultiplier = serialized->get_float(ThreeDeathsMultiplier_type_id, 1.000000);
-		FiveDeathsMultiplier = serialized->get_float(FiveDeathsMultiplier_type_id, 1.000000);
-		ChallengeModeMultiplier = serialized->get_float(ChallengeModeMultiplier_type_id, 1.000000); 
+		Health = serialized->get_float(Health_type_id, 1.000000f);
+		EasyMultiplier = serialized->get_float(EasyMultiplier_type_id, 1.000000f);
+		MediumMultiplier = serialized->get_float(MediumMultiplier_type_id, 1.000000f);
+		HardMultiplier = serialized->get_float(HardMultiplier_type_id, 1.000000f);
+		HardestMultiplier = serialized->get_float(HardestMultiplier_type_id, 1.000000f);
+		ThreeDeathsMultiplier = serialized->get_float(ThreeDeathsMultiplier_type_id, 1.000000f);
+		FiveDeathsMultiplier = serialized->get_float(FiveDeathsMultiplier_type_id, 1.000000f);
+		ChallengeModeMultiplier = serialized->get_float(ChallengeModeMultiplier_type_id, 1.000000f); 
 	}
 
 	[[nodiscard]] auto

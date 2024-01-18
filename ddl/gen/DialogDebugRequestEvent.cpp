@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	DialogDebugRequestEvent::DialogDebugRequestEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		PlayCountId = serialized->get_uint16(PlayCountId_type_id, 0);
-		StartTime = serialized->get_float(StartTime_type_id, 0.000000);
+		PlayCountId = serialized->get_uint16(PlayCountId_type_id, 0u);
+		StartTime = serialized->get_float(StartTime_type_id, 0.000000f);
 		PlayOnlyOnAuthority = serialized->get_bool(PlayOnlyOnAuthority_type_id, false);
-		SoundBankAssetId = serialized->get_uint64(SoundBankAssetId_type_id, 0); 
+		SoundBankAssetId = serialized->get_uint64(SoundBankAssetId_type_id, 0ull); 
 	}
 
 	[[nodiscard]] auto

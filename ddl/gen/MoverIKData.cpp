@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	MoverIKData::MoverIKData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MaxHeightAboveAnim = serialized->get_float(MaxHeightAboveAnim_type_id, 0.210000);
-		MaxHeightBelowAnim = serialized->get_float(MaxHeightBelowAnim_type_id, 0.210000); 
+		MaxHeightAboveAnim = serialized->get_float(MaxHeightAboveAnim_type_id, 0.210000f);
+		MaxHeightBelowAnim = serialized->get_float(MaxHeightBelowAnim_type_id, 0.210000f); 
 	}
 
 	[[nodiscard]] auto

@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	AnimMaterialComponentMorphOverrideDef::AnimMaterialComponentMorphOverrideDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		TargetName = serialized->get_string(TargetName_type_id, {});
-		TargetWeight = serialized->get_float(TargetWeight_type_id, 0.000000); 
+		TargetWeight = serialized->get_float(TargetWeight_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

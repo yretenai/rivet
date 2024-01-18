@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	RobotTestActionEventInfo::RobotTestActionEventInfo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		UniqueId = serialized->get_uint32(UniqueId_type_id, 0);
-		ShotPlayCount = serialized->get_uint32(ShotPlayCount_type_id, 0);
+		UniqueId = serialized->get_uint32(UniqueId_type_id, 0u);
+		ShotPlayCount = serialized->get_uint32(ShotPlayCount_type_id, 0u);
 		EventType = serialized->get_enum<rivet::ddl::generated::x32784e2f>(EventType_type_id, rivet::ddl::generated::x32784e2f_values, rivet::ddl::generated::x32784e2f::EventSpawned);
 		ActorName = serialized->get_string(ActorName_type_id, {});
 		ActionType = serialized->get_string(ActionType_type_id, {});

@@ -10,7 +10,7 @@
 namespace rivet::ddl::generated {
 	ShipEvadeEvent::ShipEvadeEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
 		EvadeDirection = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(EvadeDirection_type_id);
-		EvasionStartTime = serialized->get_float(EvasionStartTime_type_id, 0.000000); 
+		EvasionStartTime = serialized->get_float(EvasionStartTime_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

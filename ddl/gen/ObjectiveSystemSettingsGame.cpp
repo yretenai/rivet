@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ObjectiveSystemSettingsGame::ObjectiveSystemSettingsGame([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MaxObjectiveVolumes = serialized->get_int32(MaxObjectiveVolumes_type_id, 64); 
+		MaxObjectiveVolumes = serialized->get_int32(MaxObjectiveVolumes_type_id, 64u); 
 	}
 
 	[[nodiscard]] auto

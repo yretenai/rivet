@@ -16,7 +16,7 @@ namespace rivet::ddl::generated {
 		LocTag = serialized->get_string(LocTag_type_id, {});
 		PhysicsMaterial = serialized->get_string(PhysicsMaterial_type_id, {});
 		PhysicsMaterials = serialized->get_strings(PhysicsMaterials_type_id);
-		ActorFilterTypes = serialized->get_bitset<rivet::ddl::generated::ActorFilterTypes>(ActorFilterTypes_type_id, rivet::ddl::generated::ActorFilterTypes_values, 0);
+		ActorFilterTypes = serialized->get_bitset<rivet::ddl::generated::ActorFilterTypes>(ActorFilterTypes_type_id, rivet::ddl::generated::ActorFilterTypes_values, 0u);
 		VisualEffect = serialized->get_string(VisualEffect_type_id, {});
 		VisualEffectSpawnMesh = serialized->unwrap_into<rivet::ddl::generated::VisualEffectSpawnMesh>(VisualEffectSpawnMesh_type_id);
 		MaterialAsset = serialized->get_string(MaterialAsset_type_id, {});

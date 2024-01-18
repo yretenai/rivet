@@ -11,7 +11,7 @@ namespace rivet::ddl::generated {
 	AwardGroup::AwardGroup([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		GroupType = serialized->get_enum<rivet::ddl::generated::x1eee6c26>(GroupType_type_id, rivet::ddl::generated::x1eee6c26_values, rivet::ddl::generated::x1eee6c26::MainGame);
 		CodeName = serialized->get_string(CodeName_type_id, {});
-		Platform = serialized->get_bitset<rivet::ddl::generated::x74d56eb6>(Platform_type_id, rivet::ddl::generated::x74d56eb6_values, 3);
+		Platform = serialized->get_bitset<rivet::ddl::generated::x74d56eb6>(Platform_type_id, rivet::ddl::generated::x74d56eb6_values, 3u);
 		NameLocTag = serialized->get_string(NameLocTag_type_id, {});
 		DescLocTag = serialized->get_string(DescLocTag_type_id, {});
 		ImagePath = serialized->get_string(ImagePath_type_id, {});

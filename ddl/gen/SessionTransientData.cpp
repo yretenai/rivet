@@ -15,8 +15,8 @@ namespace rivet::ddl::generated {
 		CameraRotation = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(CameraRotation_type_id);
 		ToolMode = serialized->get_string(ToolMode_type_id, "unknown");
 		PlatformFilter = serialized->get_string(PlatformFilter_type_id, {});
-		RequestBrightness = serialized->get_float(RequestBrightness_type_id, 0.000000);
-		CurrentBrightness = serialized->get_float(CurrentBrightness_type_id, 0.000000);
+		RequestBrightness = serialized->get_float(RequestBrightness_type_id, 0.000000f);
+		CurrentBrightness = serialized->get_float(CurrentBrightness_type_id, 0.000000f);
 		LinkMode = serialized->unwrap_into<rivet::ddl::generated::SceneNodePropertyLinkMode>(LinkMode_type_id);
 		UserMessages = serialized->get_strings(UserMessages_type_id);
 		DebugLog = serialized->get_strings(DebugLog_type_id);

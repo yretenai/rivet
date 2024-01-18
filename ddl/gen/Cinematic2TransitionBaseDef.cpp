@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	Cinematic2TransitionBaseDef::Cinematic2TransitionBaseDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Id = serialized->get_uint64(Id_type_id, 0);
-		ShotId = serialized->get_uint64(ShotId_type_id, 0);
-		Duration = serialized->get_float(Duration_type_id, 0.500000);
+		Id = serialized->get_uint64(Id_type_id, 0ull);
+		ShotId = serialized->get_uint64(ShotId_type_id, 0ull);
+		Duration = serialized->get_float(Duration_type_id, 0.500000f);
 		StartType = serialized->get_enum<rivet::ddl::generated::x10205e3>(StartType_type_id, rivet::ddl::generated::x10205e3_values, rivet::ddl::generated::x10205e3::Beginning_Of_Shot);
 		SmoothingType = serialized->get_enum<rivet::ddl::generated::x53914cb6>(SmoothingType_type_id, rivet::ddl::generated::x53914cb6_values, rivet::ddl::generated::x53914cb6::Linear); 
 	}

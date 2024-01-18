@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	CameraShakingWithFallOffData::CameraShakingWithFallOffData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		InnerRadius = serialized->get_float(InnerRadius_type_id, -1.000000);
-		OuterRadius = serialized->get_float(OuterRadius_type_id, -1.000000);
+		InnerRadius = serialized->get_float(InnerRadius_type_id, -1.000000f);
+		OuterRadius = serialized->get_float(OuterRadius_type_id, -1.000000f);
 		FollowActor = serialized->get_bool(FollowActor_type_id, false);
 		ShakeDataConfig = serialized->get_string(ShakeDataConfig_type_id, {}); 
 	}

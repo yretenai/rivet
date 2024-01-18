@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	HazardNestTargetBeamStartEvent::HazardNestTargetBeamStartEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		BeamDuration = serialized->get_float(BeamDuration_type_id, 1.000000); 
+		BeamDuration = serialized->get_float(BeamDuration_type_id, 1.000000f); 
 	}
 
 	[[nodiscard]] auto

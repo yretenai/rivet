@@ -10,23 +10,23 @@
 
 namespace rivet::ddl::generated {
 	BotComboMoveContainer::BotComboMoveContainer([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		StartDistanceMin = serialized->get_float(StartDistanceMin_type_id, 0.000000);
-		StartDistanceMax = serialized->get_float(StartDistanceMax_type_id, 2.000000);
-		StartDistanceOffScreen = serialized->get_float(StartDistanceOffScreen_type_id, -1.000000);
-		StartHeightMin = serialized->get_float(StartHeightMin_type_id, -2.000000);
-		StartHeightMax = serialized->get_float(StartHeightMax_type_id, 2.000000);
+		StartDistanceMin = serialized->get_float(StartDistanceMin_type_id, 0.000000f);
+		StartDistanceMax = serialized->get_float(StartDistanceMax_type_id, 2.000000f);
+		StartDistanceOffScreen = serialized->get_float(StartDistanceOffScreen_type_id, -1.000000f);
+		StartHeightMin = serialized->get_float(StartHeightMin_type_id, -2.000000f);
+		StartHeightMax = serialized->get_float(StartHeightMax_type_id, 2.000000f);
 		RequireClearNavPath = serialized->get_bool(RequireClearNavPath_type_id, true);
-		DistToForceAttackIfNoNav = serialized->get_float(DistToForceAttackIfNoNav_type_id, -1.000000);
+		DistToForceAttackIfNoNav = serialized->get_float(DistToForceAttackIfNoNav_type_id, -1.000000f);
 		RequireLOS = serialized->get_bool(RequireLOS_type_id, true);
 		FailOnNoLOS = serialized->get_bool(FailOnNoLOS_type_id, false);
 		RequireOnScreen = serialized->get_bool(RequireOnScreen_type_id, false);
 		CanReposition = serialized->get_bool(CanReposition_type_id, false);
 		StopComboIfFailed = serialized->get_bool(StopComboIfFailed_type_id, false);
 		StopComboIfSuccess = serialized->get_bool(StopComboIfSuccess_type_id, false);
-		AbortDistMin = serialized->get_float(AbortDistMin_type_id, -1.000000);
-		AbortDistMax = serialized->get_float(AbortDistMax_type_id, -1.000000);
-		MaxGotoDuration = serialized->get_float(MaxGotoDuration_type_id, -1.000000);
-		MaxWaitDuration = serialized->get_float(MaxWaitDuration_type_id, -1.000000);
+		AbortDistMin = serialized->get_float(AbortDistMin_type_id, -1.000000f);
+		AbortDistMax = serialized->get_float(AbortDistMax_type_id, -1.000000f);
+		MaxGotoDuration = serialized->get_float(MaxGotoDuration_type_id, -1.000000f);
+		MaxWaitDuration = serialized->get_float(MaxWaitDuration_type_id, -1.000000f);
 		AbortIfOffScreen = serialized->get_bool(AbortIfOffScreen_type_id, false);
 		BotComboMoveCooldowns = serialized->unwrap_into_many<rivet::ddl::generated::RegisterAttackCooldownData>(BotComboMoveCooldowns_type_id);
 		Move = serialized->unwrap_into<rivet::ddl::generated::BotComboMoveBase>(Move_type_id); 

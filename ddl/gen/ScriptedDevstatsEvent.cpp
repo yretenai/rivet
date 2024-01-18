@@ -14,8 +14,8 @@ namespace rivet::ddl::generated {
 		ScriptedEventType = serialized->get_string(ScriptedEventType_type_id, {});
 		String1 = serialized->get_string(String1_type_id, {});
 		String2 = serialized->get_string(String2_type_id, {});
-		Num1 = serialized->get_float(Num1_type_id, 0.000000);
-		Num2 = serialized->get_float(Num2_type_id, 0.000000);
+		Num1 = serialized->get_float(Num1_type_id, 0.000000f);
+		Num2 = serialized->get_float(Num2_type_id, 0.000000f);
 		PlayerPosInfo = serialized->unwrap_into<rivet::ddl::generated::DevstatsPlayerPositionInfo>(PlayerPosInfo_type_id);
 		PrimarySegmentInfo = serialized->unwrap_into<rivet::ddl::generated::DevstatsPrimarySegmentInfo>(PrimarySegmentInfo_type_id); 
 	}

@@ -9,14 +9,14 @@
 
 namespace rivet::ddl::generated {
 	TargetSceneNode::TargetSceneNode([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Id = serialized->get_uint64(Id_type_id, 0);
+		Id = serialized->get_uint64(Id_type_id, 0ull);
 		AssetPath = serialized->get_string(AssetPath_type_id, {});
 		AdjustCamera = serialized->get_bool(AdjustCamera_type_id, false);
 		OldCameraPosition = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(OldCameraPosition_type_id);
 		OldCameraForward = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(OldCameraForward_type_id);
 		NewCameraPosition = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(NewCameraPosition_type_id);
 		NewCameraForward = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(NewCameraForward_type_id);
-		PreviousSelection = serialized->get_uint64(PreviousSelection_type_id, 0); 
+		PreviousSelection = serialized->get_uint64(PreviousSelection_type_id, 0ull); 
 	}
 
 	[[nodiscard]] auto

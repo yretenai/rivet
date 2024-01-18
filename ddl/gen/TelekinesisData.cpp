@@ -12,10 +12,10 @@ namespace rivet::ddl::generated {
 		ThrowAnim = serialized->get_string(ThrowAnim_type_id, {});
 		ThrowWithOutroAnim = serialized->get_string(ThrowWithOutroAnim_type_id, {});
 		HoldLocator = serialized->get_string(HoldLocator_type_id, {});
-		NumTelekinesisObjectsWanted = serialized->get_int32(NumTelekinesisObjectsWanted_type_id, 1);
-		TimeToGatherAndOrbit = serialized->get_float(TimeToGatherAndOrbit_type_id, 1.500000);
-		TimeToFirstObjectThrow = serialized->get_float(TimeToFirstObjectThrow_type_id, 2.000000);
-		TimeBetweenThrows = serialized->get_float(TimeBetweenThrows_type_id, 1.000000);
+		NumTelekinesisObjectsWanted = serialized->get_int32(NumTelekinesisObjectsWanted_type_id, 1u);
+		TimeToGatherAndOrbit = serialized->get_float(TimeToGatherAndOrbit_type_id, 1.500000f);
+		TimeToFirstObjectThrow = serialized->get_float(TimeToFirstObjectThrow_type_id, 2.000000f);
+		TimeBetweenThrows = serialized->get_float(TimeBetweenThrows_type_id, 1.000000f);
 		StunOnAllOrbitDestroyed = serialized->get_bool(StunOnAllOrbitDestroyed_type_id, true);
 		ShotConfig = serialized->get_string(ShotConfig_type_id, {});
 		Conduit = serialized->get_string(Conduit_type_id, {});

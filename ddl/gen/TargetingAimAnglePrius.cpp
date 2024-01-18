@@ -15,13 +15,13 @@
 namespace rivet::ddl::generated {
 	TargetingAimAnglePrius::TargetingAimAnglePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		StartEnabled = serialized->get_bool(StartEnabled_type_id, false);
-		WeaponEquipIndex = serialized->get_uint32(WeaponEquipIndex_type_id, 0);
-		ApplySpeed = serialized->get_float(ApplySpeed_type_id, 4.000000);
-		AimGain = serialized->get_float(AimGain_type_id, -6.000000);
-		YawRangeDegreesMin = serialized->get_float(YawRangeDegreesMin_type_id, -90.000000);
-		YawRangeDegreesMax = serialized->get_float(YawRangeDegreesMax_type_id, 90.000000);
-		PitchRangeDegreesMin = serialized->get_float(PitchRangeDegreesMin_type_id, -90.000000);
-		PitchRangeDegreesMax = serialized->get_float(PitchRangeDegreesMax_type_id, 90.000000);
+		WeaponEquipIndex = serialized->get_uint32(WeaponEquipIndex_type_id, 0u);
+		ApplySpeed = serialized->get_float(ApplySpeed_type_id, 4.000000f);
+		AimGain = serialized->get_float(AimGain_type_id, -6.000000f);
+		YawRangeDegreesMin = serialized->get_float(YawRangeDegreesMin_type_id, -90.000000f);
+		YawRangeDegreesMax = serialized->get_float(YawRangeDegreesMax_type_id, 90.000000f);
+		PitchRangeDegreesMin = serialized->get_float(PitchRangeDegreesMin_type_id, -90.000000f);
+		PitchRangeDegreesMax = serialized->get_float(PitchRangeDegreesMax_type_id, 90.000000f);
 		VerticalAnimVarName = serialized->get_string(VerticalAnimVarName_type_id, "Aim_Vertical");
 		HorizontalAnimVarName = serialized->get_string(HorizontalAnimVarName_type_id, "Aim_Horizontal");
 		PartialName = serialized->get_string(PartialName_type_id, {});

@@ -9,8 +9,8 @@ namespace rivet::ddl::generated {
 	MissionObjectiveDevstatsEventBase::MissionObjectiveDevstatsEventBase([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
 		MissionName = serialized->get_string(MissionName_type_id, {});
 		ObjectiveName = serialized->get_string(ObjectiveName_type_id, {});
-		ObjectiveTime = serialized->get_float(ObjectiveTime_type_id, -1.000000);
-		TimeInMenu = serialized->get_float(TimeInMenu_type_id, -1.000000); 
+		ObjectiveTime = serialized->get_float(ObjectiveTime_type_id, -1.000000f);
+		TimeInMenu = serialized->get_float(TimeInMenu_type_id, -1.000000f); 
 	}
 
 	[[nodiscard]] auto

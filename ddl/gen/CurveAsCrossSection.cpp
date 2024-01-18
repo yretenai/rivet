@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	CurveAsCrossSection::CurveAsCrossSection([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): CrossSectionChoice(serialized) {
-		CurveXSection = serialized->get_uint64(CurveXSection_type_id, 0); 
+		CurveXSection = serialized->get_uint64(CurveXSection_type_id, 0ull); 
 	}
 
 	[[nodiscard]] auto

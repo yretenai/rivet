@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	StructuredLogStatementNumber::StructuredLogStatementNumber([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): StructuredLogStatement(serialized) {
-		Number = serialized->get_float(Number_type_id, 0.000000); 
+		Number = serialized->get_float(Number_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

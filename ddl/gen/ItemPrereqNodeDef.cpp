@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	ItemPrereqNodeDef::ItemPrereqNodeDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): PrereqNodeBaseDef(serialized) {
 		RequiredItemConfig = serialized->get_string(RequiredItemConfig_type_id, {});
-		RequiredItemCount = serialized->get_uint32(RequiredItemCount_type_id, 1); 
+		RequiredItemCount = serialized->get_uint32(RequiredItemCount_type_id, 1u); 
 	}
 
 	[[nodiscard]] auto

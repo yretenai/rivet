@@ -10,9 +10,9 @@ namespace rivet::ddl::generated {
 		PackageName = serialized->get_string(PackageName_type_id, "");
 		ProjectId = serialized->get_string(ProjectId_type_id, "");
 		Branch = serialized->get_string(Branch_type_id, "");
-		VersionMajor = serialized->get_int32(VersionMajor_type_id, 0);
-		VersionMinor = serialized->get_int32(VersionMinor_type_id, 0);
-		VersionPatch = serialized->get_int32(VersionPatch_type_id, 0);
+		VersionMajor = serialized->get_int32(VersionMajor_type_id, 0u);
+		VersionMinor = serialized->get_int32(VersionMinor_type_id, 0u);
+		VersionPatch = serialized->get_int32(VersionPatch_type_id, 0u);
 		BetaId = serialized->get_int32(BetaId_type_id, -1);
 		Released = serialized->get_bool(Released_type_id, false);
 		PreReleasePackage = serialized->get_string(PreReleasePackage_type_id, "");

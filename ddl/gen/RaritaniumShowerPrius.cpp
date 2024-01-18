@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	RaritaniumShowerPrius::RaritaniumShowerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Duration = serialized->get_float(Duration_type_id, 3.000000);
-		SpawnCount = serialized->get_uint32(SpawnCount_type_id, 5); 
+		Duration = serialized->get_float(Duration_type_id, 3.000000f);
+		SpawnCount = serialized->get_uint32(SpawnCount_type_id, 5u); 
 	}
 
 	[[nodiscard]] auto

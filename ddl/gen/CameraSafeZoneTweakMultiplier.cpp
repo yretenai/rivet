@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	CameraSafeZoneTweakMultiplier::CameraSafeZoneTweakMultiplier([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): CameraSafeZoneTweak(serialized) {
-		LeftAngleMultiplier = serialized->get_float(LeftAngleMultiplier_type_id, 1.000000);
-		ForwardDistMultiplier = serialized->get_float(ForwardDistMultiplier_type_id, 1.000000);
-		BlendFieldCompletePercent = serialized->get_float(BlendFieldCompletePercent_type_id, 0.000000);
+		LeftAngleMultiplier = serialized->get_float(LeftAngleMultiplier_type_id, 1.000000f);
+		ForwardDistMultiplier = serialized->get_float(ForwardDistMultiplier_type_id, 1.000000f);
+		BlendFieldCompletePercent = serialized->get_float(BlendFieldCompletePercent_type_id, 0.000000f);
 		BiDirectionalField = serialized->get_bool(BiDirectionalField_type_id, false); 
 	}
 

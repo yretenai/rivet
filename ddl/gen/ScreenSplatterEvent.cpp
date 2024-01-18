@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ScreenSplatterEvent::ScreenSplatterEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		ViewContextIndex = serialized->get_int32(ViewContextIndex_type_id, 0); 
+		ViewContextIndex = serialized->get_int32(ViewContextIndex_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

@@ -13,7 +13,7 @@ namespace rivet::ddl::generated {
 		TalkOffer = serialized->unwrap_into<rivet::ddl::generated::GenericOfferPrius>(TalkOffer_type_id);
 		TalkOfferText = serialized->get_string(TalkOfferText_type_id, {});
 		Lines = serialized->unwrap_into_many<rivet::ddl::generated::DialogPromptEntry>(Lines_type_id);
-		LastLineCount = serialized->get_int32(LastLineCount_type_id, 1); 
+		LastLineCount = serialized->get_int32(LastLineCount_type_id, 1u); 
 	}
 
 	[[nodiscard]] auto

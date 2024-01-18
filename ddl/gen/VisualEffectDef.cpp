@@ -46,7 +46,7 @@ namespace rivet::ddl::generated {
 		PerfAttributes = serialized->unwrap_into<rivet::ddl::generated::VisualEffectPerformanceAttr>(PerfAttributes_type_id);
 		LuminanceAttributes = serialized->unwrap_into<rivet::ddl::generated::VisualEffectLumAttr>(LuminanceAttributes_type_id);
 		CameraAttributes = serialized->unwrap_into<rivet::ddl::generated::VisualEffectCamGlobalAttr>(CameraAttributes_type_id);
-		SortDistanceBias = serialized->get_float(SortDistanceBias_type_id, 0.000000);
+		SortDistanceBias = serialized->get_float(SortDistanceBias_type_id, 0.000000f);
 		LightingConditions = serialized->unwrap_into<rivet::ddl::generated::LightingConditionBitSet>(LightingConditions_type_id);
 		RenderOrder = serialized->unwrap_into_many<rivet::ddl::generated::VisualEffectRenderOrder>(RenderOrder_type_id);
 		PreviewNames = serialized->get_strings(PreviewNames_type_id);
@@ -74,8 +74,8 @@ namespace rivet::ddl::generated {
 		OnCollisions = serialized->unwrap_into_many<rivet::ddl::generated::VisualEffectOnCollisionNode>(OnCollisions_type_id);
 		Tint = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Tint_type_id);
 		Hibernate = serialized->get_bool(Hibernate_type_id, false);
-		Alpha = serialized->get_float(Alpha_type_id, 1.000000);
-		WindMultiplier = serialized->get_float(WindMultiplier_type_id, 1.000000); 
+		Alpha = serialized->get_float(Alpha_type_id, 1.000000f);
+		WindMultiplier = serialized->get_float(WindMultiplier_type_id, 1.000000f); 
 	}
 
 	[[nodiscard]] auto

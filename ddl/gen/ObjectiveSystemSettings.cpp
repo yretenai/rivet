@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	ObjectiveSystemSettings::ObjectiveSystemSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		LogCategories = serialized->get_bitset<rivet::ddl::generated::x95fbb203>(LogCategories_type_id, rivet::ddl::generated::x95fbb203_values, 25);
-		ObjectiveSystemSaveSize = serialized->get_int32(ObjectiveSystemSaveSize_type_id, 131072);
+		LogCategories = serialized->get_bitset<rivet::ddl::generated::x95fbb203>(LogCategories_type_id, rivet::ddl::generated::x95fbb203_values, 25u);
+		ObjectiveSystemSaveSize = serialized->get_int32(ObjectiveSystemSaveSize_type_id, 131072u);
 		UseObjectiveSystem = serialized->get_bool(UseObjectiveSystem_type_id, false);
 		DefaultMissionGraph = serialized->get_string(DefaultMissionGraph_type_id, {});
 		MissionStart = serialized->get_string(MissionStart_type_id, {});

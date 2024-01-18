@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	AimModPredictTargetPrius::AimModPredictTargetPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): AimModifierPrius(serialized) {
-		TimeToFullAccuracy = serialized->get_float(TimeToFullAccuracy_type_id, 1.000000);
-		MaxPredictiveSpeed = serialized->get_float(MaxPredictiveSpeed_type_id, 0.000000);
-		AdditionalLeadTime = serialized->get_float(AdditionalLeadTime_type_id, 0.000000);
-		AimAccel = serialized->get_float(AimAccel_type_id, 50.000000);
-		AimSpeedMax = serialized->get_float(AimSpeedMax_type_id, 50.000000);
+		TimeToFullAccuracy = serialized->get_float(TimeToFullAccuracy_type_id, 1.000000f);
+		MaxPredictiveSpeed = serialized->get_float(MaxPredictiveSpeed_type_id, 0.000000f);
+		AdditionalLeadTime = serialized->get_float(AdditionalLeadTime_type_id, 0.000000f);
+		AimAccel = serialized->get_float(AimAccel_type_id, 50.000000f);
+		AimSpeedMax = serialized->get_float(AimSpeedMax_type_id, 50.000000f);
 		FollowGround = serialized->get_bool(FollowGround_type_id, false); 
 	}
 

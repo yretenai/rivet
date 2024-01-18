@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	ScriptBreakpointStatus::ScriptBreakpointStatus([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SourceId = serialized->get_uint64(SourceId_type_id, 0);
-		ScriptId = serialized->get_uint64(ScriptId_type_id, 0);
-		SourcePlug = serialized->get_uint32(SourcePlug_type_id, 0);
-		ScriptPlug = serialized->get_uint32(ScriptPlug_type_id, 0);
+		SourceId = serialized->get_uint64(SourceId_type_id, 0ull);
+		ScriptId = serialized->get_uint64(ScriptId_type_id, 0ull);
+		SourcePlug = serialized->get_uint32(SourcePlug_type_id, 0u);
+		ScriptPlug = serialized->get_uint32(ScriptPlug_type_id, 0u);
 		Status = serialized->get_string(Status_type_id, {}); 
 	}
 

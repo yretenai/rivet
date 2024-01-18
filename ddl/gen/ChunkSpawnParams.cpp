@@ -11,17 +11,17 @@ namespace rivet::ddl::generated {
 	ChunkSpawnParams::ChunkSpawnParams([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		PosMode = serialized->get_enum<rivet::ddl::generated::x1484c09f>(PosMode_type_id, rivet::ddl::generated::x1484c09f_values, rivet::ddl::generated::x1484c09f::Locators);
 		ChunkType = serialized->get_enum<rivet::ddl::generated::ChunkType>(ChunkType_type_id, rivet::ddl::generated::ChunkType_values, rivet::ddl::generated::ChunkType::Misc);
-		LinearVelocityMin = serialized->get_float(LinearVelocityMin_type_id, 5.000000);
-		LinearVelocityMax = serialized->get_float(LinearVelocityMax_type_id, 10.000000);
+		LinearVelocityMin = serialized->get_float(LinearVelocityMin_type_id, 5.000000f);
+		LinearVelocityMax = serialized->get_float(LinearVelocityMax_type_id, 10.000000f);
 		ForceUpwardVelocity = serialized->get_bool(ForceUpwardVelocity_type_id, true);
-		UpwardBias = serialized->get_float(UpwardBias_type_id, 0.000000);
-		AngularVelocityMin = serialized->get_float(AngularVelocityMin_type_id, 30.000000);
-		AngularVelocityMax = serialized->get_float(AngularVelocityMax_type_id, 90.000000);
-		LifetimeMin = serialized->get_float(LifetimeMin_type_id, 4.000000);
-		LifetimeMax = serialized->get_float(LifetimeMax_type_id, 8.000000);
-		FastDebrisPercent = serialized->get_float(FastDebrisPercent_type_id, 0.700000);
+		UpwardBias = serialized->get_float(UpwardBias_type_id, 0.000000f);
+		AngularVelocityMin = serialized->get_float(AngularVelocityMin_type_id, 30.000000f);
+		AngularVelocityMax = serialized->get_float(AngularVelocityMax_type_id, 90.000000f);
+		LifetimeMin = serialized->get_float(LifetimeMin_type_id, 4.000000f);
+		LifetimeMax = serialized->get_float(LifetimeMax_type_id, 8.000000f);
+		FastDebrisPercent = serialized->get_float(FastDebrisPercent_type_id, 0.700000f);
 		BiasVector = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(BiasVector_type_id);
-		BiasVectorStrength = serialized->get_float(BiasVectorStrength_type_id, 0.000000);
+		BiasVectorStrength = serialized->get_float(BiasVectorStrength_type_id, 0.000000f);
 		EnforceBiasVectorPlane = serialized->get_bool(EnforceBiasVectorPlane_type_id, false); 
 	}
 

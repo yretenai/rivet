@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	HeadSizeMapping::HeadSizeMapping([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		SizeLabel = serialized->get_string(SizeLabel_type_id, {});
-		Scale = serialized->get_float(Scale_type_id, 1.000000); 
+		Scale = serialized->get_float(Scale_type_id, 1.000000f); 
 	}
 
 	[[nodiscard]] auto

@@ -8,8 +8,8 @@
 namespace rivet::ddl::generated {
 	SimpleAnimComponentPrius::SimpleAnimComponentPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		AnimSet = serialized->get_string(AnimSet_type_id, {});
-		MaxUpdateDistance = serialized->get_float(MaxUpdateDistance_type_id, 0.000000);
-		MaxCulledUpdateDistance = serialized->get_float(MaxCulledUpdateDistance_type_id, 0.000000);
+		MaxUpdateDistance = serialized->get_float(MaxUpdateDistance_type_id, 0.000000f);
+		MaxCulledUpdateDistance = serialized->get_float(MaxCulledUpdateDistance_type_id, 0.000000f);
 		SmallTreeDepth = serialized->get_bool(SmallTreeDepth_type_id, false);
 		PartialCount = serialized->get_enum<rivet::ddl::generated::xbc02c29e>(PartialCount_type_id, rivet::ddl::generated::xbc02c29e_values, rivet::ddl::generated::xbc02c29e::None); 
 	}

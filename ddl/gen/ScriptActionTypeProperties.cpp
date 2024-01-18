@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	ScriptActionTypeProperties::ScriptActionTypeProperties([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Type = serialized->get_enum<rivet::ddl::generated::x10228b34>(Type_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Unsorted);
-		Color = serialized->get_uint32(Color_type_id, 0); 
+		Color = serialized->get_uint32(Color_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

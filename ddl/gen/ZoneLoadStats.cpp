@@ -12,7 +12,7 @@ namespace rivet::ddl::generated {
 		LoadFinished = serialized->get_floats(LoadFinished_type_id);
 		Initialized = serialized->get_floats(Initialized_type_id);
 		Instantiated = serialized->get_floats(Instantiated_type_id);
-		InitOverhead = serialized->get_float(InitOverhead_type_id, 0.000000);
+		InitOverhead = serialized->get_float(InitOverhead_type_id, 0.000000f);
 		ZoneIds = serialized->get_uint64s(ZoneIds_type_id); 
 	}
 

@@ -20,10 +20,10 @@
 
 namespace rivet::ddl::generated {
 	CameraPrius::CameraPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		HorizontalFOV = serialized->get_float(HorizontalFOV_type_id, 65.000000);
-		NearClip = serialized->get_float(NearClip_type_id, 0.100000);
-		FarClip = serialized->get_float(FarClip_type_id, 1000.000000);
-		HorizontalLength = serialized->get_float(HorizontalLength_type_id, 64.000000); 
+		HorizontalFOV = serialized->get_float(HorizontalFOV_type_id, 65.000000f);
+		NearClip = serialized->get_float(NearClip_type_id, 0.100000f);
+		FarClip = serialized->get_float(FarClip_type_id, 1000.000000f);
+		HorizontalLength = serialized->get_float(HorizontalLength_type_id, 64.000000f); 
 	}
 
 	[[nodiscard]] auto

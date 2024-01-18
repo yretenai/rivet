@@ -8,8 +8,8 @@
 namespace rivet::ddl::generated {
 	ScriptDebugMessage::ScriptDebugMessage([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Action = serialized->get_enum<rivet::ddl::generated::xb379a82e>(Action_type_id, rivet::ddl::generated::xb379a82e_values, rivet::ddl::generated::xb379a82e::DebugNothing);
-		Tuid = serialized->get_uint64(Tuid_type_id, 0);
-		PropertyId = serialized->get_uint32(PropertyId_type_id, 0); 
+		Tuid = serialized->get_uint64(Tuid_type_id, 0ull);
+		PropertyId = serialized->get_uint32(PropertyId_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

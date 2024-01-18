@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	CritterSettings::CritterSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MaxDisableVolumes = serialized->get_int32(MaxDisableVolumes_type_id, 8);
-		MaxRegisteredVolumes = serialized->get_uint32(MaxRegisteredVolumes_type_id, 128);
-		MaxTrackedPanicAreas = serialized->get_int32(MaxTrackedPanicAreas_type_id, 128); 
+		MaxDisableVolumes = serialized->get_int32(MaxDisableVolumes_type_id, 8u);
+		MaxRegisteredVolumes = serialized->get_uint32(MaxRegisteredVolumes_type_id, 128u);
+		MaxTrackedPanicAreas = serialized->get_int32(MaxTrackedPanicAreas_type_id, 128u); 
 	}
 
 	[[nodiscard]] auto

@@ -10,7 +10,7 @@
 namespace rivet::ddl::generated {
 	RespawnableGroupManagerPrius::RespawnableGroupManagerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EnabledComponentBasePrius(serialized) {
 		RespawnGroup = serialized->unwrap_into_many<rivet::ddl::generated::RespawnGroup>(RespawnGroup_type_id);
-		RespawnDelay = serialized->get_float(RespawnDelay_type_id, 0.000000); 
+		RespawnDelay = serialized->get_float(RespawnDelay_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

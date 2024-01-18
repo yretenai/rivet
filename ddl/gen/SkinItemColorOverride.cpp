@@ -9,9 +9,9 @@ namespace rivet::ddl::generated {
 	SkinItemColorOverride::SkinItemColorOverride([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		ColorChannels = serialized->get_enum<rivet::ddl::generated::x3126d105>(ColorChannels_type_id, rivet::ddl::generated::x3126d105_values, rivet::ddl::generated::x3126d105::All);
 		ColorConstantName = serialized->get_string(ColorConstantName_type_id, {});
-		R = serialized->get_uint8(R_type_id, 0);
-		G = serialized->get_uint8(G_type_id, 0);
-		B = serialized->get_uint8(B_type_id, 0);
+		R = serialized->get_uint8(R_type_id, 0u);
+		G = serialized->get_uint8(G_type_id, 0u);
+		B = serialized->get_uint8(B_type_id, 0u);
 		ColorConfig = serialized->get_string(ColorConfig_type_id, {});
 		ColorConfigName = serialized->get_string(ColorConfigName_type_id, {}); 
 	}

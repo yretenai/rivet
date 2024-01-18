@@ -11,7 +11,7 @@ namespace rivet::ddl::generated {
 	MoverBumpEvent::MoverBumpEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
 		ContactPoint = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(ContactPoint_type_id);
 		Direction = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Direction_type_id);
-		Magnitude = serialized->get_float(Magnitude_type_id, 0.000000); 
+		Magnitude = serialized->get_float(Magnitude_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

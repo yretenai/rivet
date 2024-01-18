@@ -13,7 +13,7 @@ namespace rivet::ddl::generated {
 		Columns = serialized->unwrap_into_many<rivet::ddl::generated::IMGuiGraphDrawColumn>(Columns_type_id);
 		QuickNavList = serialized->unwrap_into_many<rivet::ddl::generated::QuickNavItem>(QuickNavList_type_id);
 		FirstDraw = serialized->get_bool(FirstDraw_type_id, false);
-		MaxRows = serialized->get_uint32(MaxRows_type_id, 0); 
+		MaxRows = serialized->get_uint32(MaxRows_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

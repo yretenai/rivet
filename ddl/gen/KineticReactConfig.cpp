@@ -15,10 +15,10 @@ namespace rivet::ddl::generated {
 		FlyBack = serialized->unwrap_into<rivet::ddl::generated::FlyBackData>(FlyBack_type_id);
 		Airborne = serialized->unwrap_into<rivet::ddl::generated::AirborneData>(Airborne_type_id);
 		PopUp = serialized->unwrap_into<rivet::ddl::generated::AirborneData>(PopUp_type_id);
-		BaseCollisionDamage = serialized->get_float(BaseCollisionDamage_type_id, 5.000000);
-		MinCollisionSpeed = serialized->get_float(MinCollisionSpeed_type_id, 5.000000);
-		AutoKillFallDistance = serialized->get_float(AutoKillFallDistance_type_id, 25.000000);
-		AutoTargetCone = serialized->get_float(AutoTargetCone_type_id, 20.000000); 
+		BaseCollisionDamage = serialized->get_float(BaseCollisionDamage_type_id, 5.000000f);
+		MinCollisionSpeed = serialized->get_float(MinCollisionSpeed_type_id, 5.000000f);
+		AutoKillFallDistance = serialized->get_float(AutoKillFallDistance_type_id, 25.000000f);
+		AutoTargetCone = serialized->get_float(AutoTargetCone_type_id, 20.000000f); 
 	}
 
 	[[nodiscard]] auto

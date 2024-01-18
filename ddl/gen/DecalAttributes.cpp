@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	DecalAttributes::DecalAttributes([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ZFadeThreshold = serialized->get_float(ZFadeThreshold_type_id, 1.000000);
-		ZFadePower = serialized->get_float(ZFadePower_type_id, 2.000000);
+		ZFadeThreshold = serialized->get_float(ZFadeThreshold_type_id, 1.000000f);
+		ZFadePower = serialized->get_float(ZFadePower_type_id, 2.000000f);
 		DisplayBounds = serialized->get_bool(DisplayBounds_type_id, true); 
 	}
 

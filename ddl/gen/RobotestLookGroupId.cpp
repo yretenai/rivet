@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	RobotestLookGroupId::RobotestLookGroupId([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Name = serialized->get_string(Name_type_id, {});
-		Hash = serialized->get_uint32(Hash_type_id, 0); 
+		Hash = serialized->get_uint32(Hash_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

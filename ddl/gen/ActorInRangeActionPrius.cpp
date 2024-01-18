@@ -8,13 +8,13 @@
 namespace rivet::ddl::generated {
 	ActorInRangeActionPrius::ActorInRangeActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Actor);
-		AngleDegreesMin = serialized->get_float(AngleDegreesMin_type_id, -180.000000);
-		AngleDegreesMax = serialized->get_float(AngleDegreesMax_type_id, 180.000000);
+		AngleDegreesMin = serialized->get_float(AngleDegreesMin_type_id, -180.000000f);
+		AngleDegreesMax = serialized->get_float(AngleDegreesMax_type_id, 180.000000f);
 		IsOutsideAngleRange = serialized->get_bool(IsOutsideAngleRange_type_id, false);
-		DistanceMin = serialized->get_float(DistanceMin_type_id, 0.000000);
-		DistanceMax = serialized->get_float(DistanceMax_type_id, 50.000000);
-		YMin = serialized->get_float(YMin_type_id, -3.000000);
-		YMax = serialized->get_float(YMax_type_id, 3.000000); 
+		DistanceMin = serialized->get_float(DistanceMin_type_id, 0.000000f);
+		DistanceMax = serialized->get_float(DistanceMax_type_id, 50.000000f);
+		YMin = serialized->get_float(YMin_type_id, -3.000000f);
+		YMax = serialized->get_float(YMax_type_id, 3.000000f); 
 	}
 
 	[[nodiscard]] auto

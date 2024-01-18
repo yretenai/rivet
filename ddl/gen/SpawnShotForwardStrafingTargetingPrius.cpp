@@ -9,10 +9,10 @@
 
 namespace rivet::ddl::generated {
 	SpawnShotForwardStrafingTargetingPrius::SpawnShotForwardStrafingTargetingPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): SpawnShotTargetingPrius(serialized) {
-		InitialYaw = serialized->get_float(InitialYaw_type_id, 0.000000);
-		PerShotYaw = serialized->get_float(PerShotYaw_type_id, 0.000000);
-		InitialPitch = serialized->get_float(InitialPitch_type_id, -20.000000);
-		PerShotPitch = serialized->get_float(PerShotPitch_type_id, 5.000000);
+		InitialYaw = serialized->get_float(InitialYaw_type_id, 0.000000f);
+		PerShotYaw = serialized->get_float(PerShotYaw_type_id, 0.000000f);
+		InitialPitch = serialized->get_float(InitialPitch_type_id, -20.000000f);
+		PerShotPitch = serialized->get_float(PerShotPitch_type_id, 5.000000f);
 		AimOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(AimOffset_type_id);
 		AimOffsetSmall = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(AimOffsetSmall_type_id);
 		AimOffsetLarge = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(AimOffsetLarge_type_id);

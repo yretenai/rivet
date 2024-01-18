@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	AimModAlignedOffsetPrius::AimModAlignedOffsetPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): AimModifierPrius(serialized) {
-		OffsetAmountForward = serialized->get_float(OffsetAmountForward_type_id, 0.000000);
-		OffsetAmountLeft = serialized->get_float(OffsetAmountLeft_type_id, 0.000000);
-		OffsetAmountUp = serialized->get_float(OffsetAmountUp_type_id, 0.000000);
+		OffsetAmountForward = serialized->get_float(OffsetAmountForward_type_id, 0.000000f);
+		OffsetAmountLeft = serialized->get_float(OffsetAmountLeft_type_id, 0.000000f);
+		OffsetAmountUp = serialized->get_float(OffsetAmountUp_type_id, 0.000000f);
 		ClampToFrontOfShooter = serialized->get_bool(ClampToFrontOfShooter_type_id, false);
-		ClampFrontOffset = serialized->get_float(ClampFrontOffset_type_id, 2.000000); 
+		ClampFrontOffset = serialized->get_float(ClampFrontOffset_type_id, 2.000000f); 
 	}
 
 	[[nodiscard]] auto

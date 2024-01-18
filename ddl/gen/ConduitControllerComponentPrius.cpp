@@ -9,12 +9,12 @@ namespace rivet::ddl::generated {
 	ConduitControllerComponentPrius::ConduitControllerComponentPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		StartOnFlag = serialized->get_bool(StartOnFlag_type_id, true);
 		RandomActivateFlag = serialized->get_bool(RandomActivateFlag_type_id, true);
-		RandomActivateDelayMin = serialized->get_float(RandomActivateDelayMin_type_id, 2.000000);
-		RandomActivateDelayMax = serialized->get_float(RandomActivateDelayMax_type_id, 4.000000);
+		RandomActivateDelayMin = serialized->get_float(RandomActivateDelayMin_type_id, 2.000000f);
+		RandomActivateDelayMax = serialized->get_float(RandomActivateDelayMax_type_id, 4.000000f);
 		RandomActivateOnceFlag = serialized->get_bool(RandomActivateOnceFlag_type_id, false);
 		ActiveDurationFlag = serialized->get_bool(ActiveDurationFlag_type_id, false);
-		ActiveDurationMin = serialized->get_float(ActiveDurationMin_type_id, 1.000000);
-		ActiveDurationMax = serialized->get_float(ActiveDurationMax_type_id, 2.000000); 
+		ActiveDurationMin = serialized->get_float(ActiveDurationMin_type_id, 1.000000f);
+		ActiveDurationMax = serialized->get_float(ActiveDurationMax_type_id, 2.000000f); 
 	}
 
 	[[nodiscard]] auto

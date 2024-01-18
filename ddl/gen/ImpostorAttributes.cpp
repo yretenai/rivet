@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	ImpostorAttributes::ImpostorAttributes([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		LegacyPixelsPerMeter = serialized->get_uint32(LegacyPixelsPerMeter_type_id, 8);
-		PixelsPerMeter = serialized->get_uint32(PixelsPerMeter_type_id, 8);
+		LegacyPixelsPerMeter = serialized->get_uint32(LegacyPixelsPerMeter_type_id, 8u);
+		PixelsPerMeter = serialized->get_uint32(PixelsPerMeter_type_id, 8u);
 		SkipRayTracing = serialized->get_bool(SkipRayTracing_type_id, false);
 		SkipNormals = serialized->get_bool(SkipNormals_type_id, false);
 		Skip = serialized->get_bool(Skip_type_id, false);

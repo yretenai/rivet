@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	VehicleCurveFollowerPrius::VehicleCurveFollowerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Accel = serialized->get_float(Accel_type_id, 100.000000);
-		Decel = serialized->get_float(Decel_type_id, 30.000000);
-		BankAccel = serialized->get_float(BankAccel_type_id, 60.000000);
-		MaxBankSpeed = serialized->get_float(MaxBankSpeed_type_id, 30.000000);
-		BankLookaheadTime = serialized->get_float(BankLookaheadTime_type_id, 1.000000);
-		MaxBankAngle = serialized->get_float(MaxBankAngle_type_id, 90.000000); 
+		Accel = serialized->get_float(Accel_type_id, 100.000000f);
+		Decel = serialized->get_float(Decel_type_id, 30.000000f);
+		BankAccel = serialized->get_float(BankAccel_type_id, 60.000000f);
+		MaxBankSpeed = serialized->get_float(MaxBankSpeed_type_id, 30.000000f);
+		BankLookaheadTime = serialized->get_float(BankLookaheadTime_type_id, 1.000000f);
+		MaxBankAngle = serialized->get_float(MaxBankAngle_type_id, 90.000000f); 
 	}
 
 	[[nodiscard]] auto

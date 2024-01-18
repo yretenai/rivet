@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	NodeGraphOptionsDebugMessage::NodeGraphOptionsDebugMessage([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AssetId = serialized->get_uint64(AssetId_type_id, 0);
+		AssetId = serialized->get_uint64(AssetId_type_id, 0ull);
 		WantsAutoAttach = serialized->get_bool(WantsAutoAttach_type_id, false); 
 	}
 

@@ -10,7 +10,7 @@
 namespace rivet::ddl::generated {
 	TrapezoidCrossSection::TrapezoidCrossSection([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): CrossSectionChoice(serialized) {
 		Width = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(Width_type_id);
-		Height = serialized->get_float(Height_type_id, 0.500000); 
+		Height = serialized->get_float(Height_type_id, 0.500000f); 
 	}
 
 	[[nodiscard]] auto

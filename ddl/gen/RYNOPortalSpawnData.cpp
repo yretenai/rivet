@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	RYNOPortalSpawnData::RYNOPortalSpawnData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): SpawnDataBase(serialized) {
-		Scale = serialized->get_float(Scale_type_id, 1.000000);
+		Scale = serialized->get_float(Scale_type_id, 1.000000f);
 		PortalPrius = serialized->unwrap_into<rivet::ddl::generated::RYNOPortalPrius>(PortalPrius_type_id);
 		OtherIp = serialized->get_bool(OtherIp_type_id, false); 
 	}

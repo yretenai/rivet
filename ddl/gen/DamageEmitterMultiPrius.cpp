@@ -10,7 +10,7 @@
 namespace rivet::ddl::generated {
 	DamageEmitterMultiPrius::DamageEmitterMultiPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EnabledComponentBasePrius(serialized) {
 		DamageSources = serialized->unwrap_into_many<rivet::ddl::generated::DamageEmitEntry>(DamageSources_type_id);
-		HeroCloseDist = serialized->get_float(HeroCloseDist_type_id, 20.000000); 
+		HeroCloseDist = serialized->get_float(HeroCloseDist_type_id, 20.000000f); 
 	}
 
 	[[nodiscard]] auto

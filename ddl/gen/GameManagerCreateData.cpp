@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	GameManagerCreateData::GameManagerCreateData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ActorSpawnData(serialized) {
-		GameType = serialized->get_uint8(GameType_type_id, 0); 
+		GameType = serialized->get_uint8(GameType_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

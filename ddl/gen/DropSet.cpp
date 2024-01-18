@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	DropSet::DropSet([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DropWeightStandard = serialized->get_float(DropWeightStandard_type_id, 1.000000);
-		DropWeightShielded = serialized->get_float(DropWeightShielded_type_id, 1.000000);
+		DropWeightStandard = serialized->get_float(DropWeightStandard_type_id, 1.000000f);
+		DropWeightShielded = serialized->get_float(DropWeightShielded_type_id, 1.000000f);
 		DropList = serialized->unwrap_into_many<rivet::ddl::generated::DropItem>(DropList_type_id); 
 	}
 

@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	MissionStateChangeEvent::MissionStateChangeEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
 		MissionName = serialized->get_string(MissionName_type_id, {});
-		MissionState = serialized->get_int32(MissionState_type_id, 0); 
+		MissionState = serialized->get_int32(MissionState_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

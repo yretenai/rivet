@@ -13,7 +13,7 @@ namespace rivet::ddl::generated {
 		EventId = serialized->get_string(EventId_type_id, {});
 		OptionName = serialized->get_string(OptionName_type_id, {});
 		StringValue = serialized->get_string(StringValue_type_id, {});
-		FloatValue = serialized->get_float(FloatValue_type_id, 0.000000);
+		FloatValue = serialized->get_float(FloatValue_type_id, 0.000000f);
 		IsPreset = serialized->get_bool(IsPreset_type_id, false);
 		PlayerPosInfo = serialized->unwrap_into<rivet::ddl::generated::DevstatsPlayerPositionInfo>(PlayerPosInfo_type_id);
 		PrimarySegmentInfo = serialized->unwrap_into<rivet::ddl::generated::DevstatsPrimarySegmentInfo>(PrimarySegmentInfo_type_id); 

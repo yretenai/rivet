@@ -10,7 +10,7 @@ namespace rivet::ddl::generated {
 		Views = serialized->get_strings(Views_type_id);
 		AutoAdd = serialized->get_bool(AutoAdd_type_id, true);
 		AutoSync = serialized->get_bool(AutoSync_type_id, false);
-		Changelist = serialized->get_uint32(Changelist_type_id, 0); 
+		Changelist = serialized->get_uint32(Changelist_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

@@ -7,13 +7,13 @@
 
 namespace rivet::ddl::generated {
 	TagsTest::TagsTest([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Single = serialized->get_int32(Single_type_id, 0);
-		Multi = serialized->get_int32(Multi_type_id, 0);
-		SelectPlusA = serialized->get_int32(SelectPlusA_type_id, 0);
-		SelectPlusB = serialized->get_int32(SelectPlusB_type_id, 0);
-		PropertyDisplayNone = serialized->get_int32(PropertyDisplayNone_type_id, 0);
-		PropertyDisplayAssetOnly = serialized->get_int32(PropertyDisplayAssetOnly_type_id, 0);
-		PropertyDisplayInstanceOnly = serialized->get_int32(PropertyDisplayInstanceOnly_type_id, 0); 
+		Single = serialized->get_int32(Single_type_id, 0u);
+		Multi = serialized->get_int32(Multi_type_id, 0u);
+		SelectPlusA = serialized->get_int32(SelectPlusA_type_id, 0u);
+		SelectPlusB = serialized->get_int32(SelectPlusB_type_id, 0u);
+		PropertyDisplayNone = serialized->get_int32(PropertyDisplayNone_type_id, 0u);
+		PropertyDisplayAssetOnly = serialized->get_int32(PropertyDisplayAssetOnly_type_id, 0u);
+		PropertyDisplayInstanceOnly = serialized->get_int32(PropertyDisplayInstanceOnly_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

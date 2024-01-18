@@ -11,12 +11,12 @@
 namespace rivet::ddl::generated {
 	LookChunkingPrius::LookChunkingPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Name = serialized->get_string(Name_type_id, {});
-		MinSpeed = serialized->get_float(MinSpeed_type_id, 7.000000);
-		MaxSpeed = serialized->get_float(MaxSpeed_type_id, 10.000000);
-		BlendFromHitDirection = serialized->get_float(BlendFromHitDirection_type_id, 1.000000);
+		MinSpeed = serialized->get_float(MinSpeed_type_id, 7.000000f);
+		MaxSpeed = serialized->get_float(MaxSpeed_type_id, 10.000000f);
+		BlendFromHitDirection = serialized->get_float(BlendFromHitDirection_type_id, 1.000000f);
 		RandomizeChunkVelocity = serialized->get_bool(RandomizeChunkVelocity_type_id, false);
 		SpawnChunksAsDebrisFast = serialized->get_bool(SpawnChunksAsDebrisFast_type_id, false);
-		ChunkLifetime = serialized->get_float(ChunkLifetime_type_id, -1.000000);
+		ChunkLifetime = serialized->get_float(ChunkLifetime_type_id, -1.000000f);
 		ChunkActor = serialized->get_string(ChunkActor_type_id, {});
 		ChunkConduit = serialized->get_string(ChunkConduit_type_id, {});
 		ChunkType = serialized->get_enum<rivet::ddl::generated::ChunkType>(ChunkType_type_id, rivet::ddl::generated::ChunkType_values, rivet::ddl::generated::ChunkType::Misc);

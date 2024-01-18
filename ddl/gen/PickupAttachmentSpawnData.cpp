@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	PickupAttachmentSpawnData::PickupAttachmentSpawnData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ActorSpawnData(serialized) {
-		PickupAsset = serialized->get_uint64(PickupAsset_type_id, 0);
-		AttachActor = serialized->get_uint32(AttachActor_type_id, 0);
-		TrackerComponent = serialized->get_uint32(TrackerComponent_type_id, 0);
-		LocatorHash = serialized->get_uint32(LocatorHash_type_id, 0); 
+		PickupAsset = serialized->get_uint64(PickupAsset_type_id, 0ull);
+		AttachActor = serialized->get_uint32(AttachActor_type_id, 0u);
+		TrackerComponent = serialized->get_uint32(TrackerComponent_type_id, 0u);
+		LocatorHash = serialized->get_uint32(LocatorHash_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

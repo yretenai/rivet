@@ -9,7 +9,7 @@ namespace rivet::ddl::generated {
 	UIArenaRewardActionPrius::UIArenaRewardActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::UI);
 		Type = serialized->get_enum<rivet::ddl::generated::x3a1207ee>(Type_type_id, rivet::ddl::generated::x3a1207ee_values, rivet::ddl::generated::x3a1207ee::Bolts);
-		Amount = serialized->get_uint32(Amount_type_id, 0); 
+		Amount = serialized->get_uint32(Amount_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

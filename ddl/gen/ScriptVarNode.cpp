@@ -7,18 +7,18 @@
 
 namespace rivet::ddl::generated {
 	ScriptVarNode::ScriptVarNode([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Id = serialized->get_uint64(Id_type_id, 0);
+		Id = serialized->get_uint64(Id_type_id, 0ull);
 		Name = serialized->get_string(Name_type_id, {});
-		XPos = serialized->get_int32(XPos_type_id, 0);
-		YPos = serialized->get_int32(YPos_type_id, 0);
+		XPos = serialized->get_int32(XPos_type_id, 0u);
+		YPos = serialized->get_int32(YPos_type_id, 0u);
 		Editable = serialized->get_bool(Editable_type_id, true);
 		GlobalName = serialized->get_string(GlobalName_type_id, {});
 		Type = serialized->get_enum<rivet::ddl::generated::x36ed0644>(Type_type_id, rivet::ddl::generated::x36ed0644_values, rivet::ddl::generated::x36ed0644::Boolean);
 		BoolValue = serialized->get_bool(BoolValue_type_id, false);
-		FloatValue = serialized->get_float(FloatValue_type_id, 0.000000);
+		FloatValue = serialized->get_float(FloatValue_type_id, 0.000000f);
 		VecValue = serialized->get_floats(VecValue_type_id);
 		StringValue = serialized->get_string(StringValue_type_id, {});
-		ActorValue = serialized->get_uint64(ActorValue_type_id, 0); 
+		ActorValue = serialized->get_uint64(ActorValue_type_id, 0ull); 
 	}
 
 	[[nodiscard]] auto

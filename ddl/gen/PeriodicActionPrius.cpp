@@ -10,7 +10,7 @@ namespace rivet::ddl::generated {
 		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Logic);
 		StartActive = serialized->get_bool(StartActive_type_id, false);
 		StopOnTime = serialized->get_bool(StopOnTime_type_id, false);
-		Timer = serialized->get_float(Timer_type_id, 1.000000); 
+		Timer = serialized->get_float(Timer_type_id, 1.000000f); 
 	}
 
 	[[nodiscard]] auto

@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	SelfieDoppelgangerSpawnData::SelfieDoppelgangerSpawnData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ActorSpawnData(serialized) {
-		ActorAssetId = serialized->get_uint64(ActorAssetId_type_id, 0);
+		ActorAssetId = serialized->get_uint64(ActorAssetId_type_id, 0ull);
 		SpawnTransform = serialized->unwrap_into<rivet::ddl::generated::DDLTransform>(SpawnTransform_type_id); 
 	}
 

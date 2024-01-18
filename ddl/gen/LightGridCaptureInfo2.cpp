@@ -21,7 +21,7 @@ namespace rivet::ddl::generated {
 		CaptureDirectOnly = serialized->get_bool(CaptureDirectOnly_type_id, false);
 		HighQualityCapture = serialized->get_bool(HighQualityCapture_type_id, false);
 		LightingCondition = serialized->get_enum<rivet::ddl::generated::LightingConditions>(LightingCondition_type_id, rivet::ddl::generated::LightingConditions_values, rivet::ddl::generated::LightingConditions::Day);
-		BounceCount = serialized->get_int32(BounceCount_type_id, 0); 
+		BounceCount = serialized->get_int32(BounceCount_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

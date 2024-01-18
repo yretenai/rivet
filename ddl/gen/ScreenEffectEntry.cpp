@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ScreenEffectEntry::ScreenEffectEntry([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		EffectId = serialized->get_uint8(EffectId_type_id, 0);
+		EffectId = serialized->get_uint8(EffectId_type_id, 0u);
 		EffectAtmosphere = serialized->get_string(EffectAtmosphere_type_id, {}); 
 	}
 

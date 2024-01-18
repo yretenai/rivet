@@ -9,10 +9,10 @@ namespace rivet::ddl::generated {
 	UIPhotoModeOption::UIPhotoModeOption([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		ID = serialized->get_enum<rivet::ddl::generated::x4f56b709>(ID_type_id, rivet::ddl::generated::x4f56b709_values, rivet::ddl::generated::x4f56b709::FOV);
 		Label = serialized->get_string(Label_type_id, {});
-		ValueMin = serialized->get_float(ValueMin_type_id, 0.000000);
-		ValueMax = serialized->get_float(ValueMax_type_id, 1.000000);
-		Fidelity = serialized->get_int32(Fidelity_type_id, 100);
-		FastFidelity = serialized->get_int32(FastFidelity_type_id, 25);
+		ValueMin = serialized->get_float(ValueMin_type_id, 0.000000f);
+		ValueMax = serialized->get_float(ValueMax_type_id, 1.000000f);
+		Fidelity = serialized->get_int32(Fidelity_type_id, 100u);
+		FastFidelity = serialized->get_int32(FastFidelity_type_id, 25u);
 		SliderType = serialized->get_enum<rivet::ddl::generated::xed640b4c>(SliderType_type_id, rivet::ddl::generated::xed640b4c_values, rivet::ddl::generated::xed640b4c::Default);
 		ClampType = serialized->get_enum<rivet::ddl::generated::xc57b533a>(ClampType_type_id, rivet::ddl::generated::xc57b533a_values, rivet::ddl::generated::xc57b533a::Clamp);
 		Settings = serialized->get_strings(Settings_type_id); 

@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	FinaleBossChaseUseLaserScriptActionPrius::FinaleBossChaseUseLaserScriptActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Boss);
-		LaserShootTime = serialized->get_float(LaserShootTime_type_id, 1.000000);
+		LaserShootTime = serialized->get_float(LaserShootTime_type_id, 1.000000f);
 		LaserArm = serialized->get_enum<rivet::ddl::generated::x7487ff22>(LaserArm_type_id, rivet::ddl::generated::x7487ff22_values, rivet::ddl::generated::x7487ff22::LaserLeftArm);
 		ShootDuringIntro = serialized->get_bool(ShootDuringIntro_type_id, false); 
 	}

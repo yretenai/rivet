@@ -9,7 +9,7 @@ namespace rivet::ddl::generated {
 	PrimStyleCapsule::PrimStyleCapsule([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): PrimStyleBase(serialized) {
 		LocatorA = serialized->get_string(LocatorA_type_id, {});
 		LocatorB = serialized->get_string(LocatorB_type_id, {});
-		Radius = serialized->get_float(Radius_type_id, 0.000000); 
+		Radius = serialized->get_float(Radius_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

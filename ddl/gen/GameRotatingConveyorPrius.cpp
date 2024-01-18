@@ -10,7 +10,7 @@
 namespace rivet::ddl::generated {
 	GameRotatingConveyorPrius::GameRotatingConveyorPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): MovingSurfacePrius(serialized) {
 		LocalOrigin = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(LocalOrigin_type_id);
-		RotationRate = serialized->get_float(RotationRate_type_id, 1.000000); 
+		RotationRate = serialized->get_float(RotationRate_type_id, 1.000000f); 
 	}
 
 	[[nodiscard]] auto

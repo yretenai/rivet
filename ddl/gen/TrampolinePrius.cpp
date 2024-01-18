@@ -10,12 +10,12 @@
 
 namespace rivet::ddl::generated {
 	TrampolinePrius::TrampolinePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ReflectionFactor = serialized->get_float(ReflectionFactor_type_id, 1.000000);
-		MinHeight = serialized->get_float(MinHeight_type_id, 0.000000);
-		MaxHeight = serialized->get_float(MaxHeight_type_id, 0.000000);
-		TimeToPeak = serialized->get_float(TimeToPeak_type_id, -1.000000);
-		MinDesiredDistance = serialized->get_float(MinDesiredDistance_type_id, -1.000000);
-		MaxDesiredDistance = serialized->get_float(MaxDesiredDistance_type_id, -1.000000);
+		ReflectionFactor = serialized->get_float(ReflectionFactor_type_id, 1.000000f);
+		MinHeight = serialized->get_float(MinHeight_type_id, 0.000000f);
+		MaxHeight = serialized->get_float(MaxHeight_type_id, 0.000000f);
+		TimeToPeak = serialized->get_float(TimeToPeak_type_id, -1.000000f);
+		MinDesiredDistance = serialized->get_float(MinDesiredDistance_type_id, -1.000000f);
+		MaxDesiredDistance = serialized->get_float(MaxDesiredDistance_type_id, -1.000000f);
 		CameraMode = serialized->get_enum<rivet::ddl::generated::x925714c8>(CameraMode_type_id, rivet::ddl::generated::x925714c8_values, rivet::ddl::generated::x925714c8::TrackActor);
 		JumpPad = serialized->get_bool(JumpPad_type_id, false);
 		EnableSuperJump = serialized->get_bool(EnableSuperJump_type_id, false);
@@ -24,7 +24,7 @@ namespace rivet::ddl::generated {
 		VibrateOnBounce = serialized->get_bool(VibrateOnBounce_type_id, false);
 		VibratePosConstant = serialized->get_string(VibratePosConstant_type_id, "Vibration_Source_Object_Pos");
 		VibrateTConstant = serialized->get_string(VibrateTConstant_type_id, "Vibration_T");
-		VibrateDuration = serialized->get_float(VibrateDuration_type_id, 1.000000);
+		VibrateDuration = serialized->get_float(VibrateDuration_type_id, 1.000000f);
 		Enabled = serialized->get_bool(Enabled_type_id, true);
 		DoesBounceUseMomentum = serialized->get_bool(DoesBounceUseMomentum_type_id, false); 
 	}

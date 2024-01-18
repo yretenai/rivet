@@ -12,8 +12,8 @@ namespace rivet::ddl::generated {
 		AllowCineTrigger = serialized->get_bool(AllowCineTrigger_type_id, false);
 		SaveGaveText = serialized->get_bool(SaveGaveText_type_id, true);
 		LocationTag = serialized->get_string(LocationTag_type_id, "INVALID");
-		TextDelay = serialized->get_float(TextDelay_type_id, 0.000000);
-		TextDuration = serialized->get_float(TextDuration_type_id, 5.000000); 
+		TextDelay = serialized->get_float(TextDelay_type_id, 0.000000f);
+		TextDuration = serialized->get_float(TextDuration_type_id, 5.000000f); 
 	}
 
 	[[nodiscard]] auto

@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	UrlDispatch::UrlDispatch([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SessionId = serialized->get_uint64(SessionId_type_id, 0);
-		AssetId = serialized->get_uint64(AssetId_type_id, 0);
+		SessionId = serialized->get_uint64(SessionId_type_id, 0ull);
+		AssetId = serialized->get_uint64(AssetId_type_id, 0ull);
 		DispatchType = serialized->get_enum<rivet::ddl::generated::xa5664812>(DispatchType_type_id, rivet::ddl::generated::xa5664812_values, rivet::ddl::generated::xa5664812::Asset);
 		CollectionName = serialized->get_string(CollectionName_type_id, {});
 		Action = serialized->get_string(Action_type_id, {});

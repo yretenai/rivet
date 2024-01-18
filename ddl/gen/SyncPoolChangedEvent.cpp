@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	SyncPoolChangedEvent::SyncPoolChangedEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		PoolId = serialized->get_uint16(PoolId_type_id, 0); 
+		PoolId = serialized->get_uint16(PoolId_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

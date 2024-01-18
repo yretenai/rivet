@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	AimModStrafeTargetPrius::AimModStrafeTargetPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): AimModifierPrius(serialized) {
-		StrafeWidthMin = serialized->get_float(StrafeWidthMin_type_id, 0.000000);
-		StrafeWidthMax = serialized->get_float(StrafeWidthMax_type_id, 0.000000); 
+		StrafeWidthMin = serialized->get_float(StrafeWidthMin_type_id, 0.000000f);
+		StrafeWidthMax = serialized->get_float(StrafeWidthMax_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

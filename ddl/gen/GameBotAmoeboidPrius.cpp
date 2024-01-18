@@ -12,7 +12,7 @@ namespace rivet::ddl::generated {
 		DeathSpawnData = serialized->unwrap_into<rivet::ddl::generated::AmoeboidDeathSpawnData>(DeathSpawnData_type_id);
 		AmoeboidType = serialized->get_enum<rivet::ddl::generated::x232b923a>(AmoeboidType_type_id, rivet::ddl::generated::x232b923a_values, rivet::ddl::generated::x232b923a::Large);
 		CombineSpawnActor = serialized->get_string(CombineSpawnActor_type_id, {});
-		MaxCombinesAllowed = serialized->get_uint32(MaxCombinesAllowed_type_id, 3); 
+		MaxCombinesAllowed = serialized->get_uint32(MaxCombinesAllowed_type_id, 3u); 
 	}
 
 	[[nodiscard]] auto

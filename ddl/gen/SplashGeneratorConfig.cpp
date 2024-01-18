@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	SplashGeneratorConfig::SplashGeneratorConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		LocatorHash = serialized->get_string(LocatorHash_type_id, {});
-		YOffset = serialized->get_float(YOffset_type_id, 0.000000);
+		YOffset = serialized->get_float(YOffset_type_id, 0.000000f);
 		Splash = serialized->get_enum<rivet::ddl::generated::x56b85d4c>(Splash_type_id, rivet::ddl::generated::x56b85d4c_values, rivet::ddl::generated::x56b85d4c::SplashSmall); 
 	}
 

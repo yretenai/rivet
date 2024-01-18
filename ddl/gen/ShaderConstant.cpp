@@ -19,8 +19,8 @@ namespace rivet::ddl::generated {
 		Group = serialized->get_string(Group_type_id, {});
 		SortOrder = serialized->get_string(SortOrder_type_id, {});
 		SubGraphAncestors = serialized->get_string(SubGraphAncestors_type_id, {});
-		Offset = serialized->get_uint16(Offset_type_id, 0);
-		Size = serialized->get_uint16(Size_type_id, 0);
+		Offset = serialized->get_uint16(Offset_type_id, 0u);
+		Size = serialized->get_uint16(Size_type_id, 0u);
 		MinRange = serialized->get_floats(MinRange_type_id);
 		MaxRange = serialized->get_floats(MaxRange_type_id);
 		Content = serialized->get_floats(Content_type_id);

@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	GeyserBurstData::GeyserBurstData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Height = serialized->get_float(Height_type_id, 5.000000);
-		RiseTime = serialized->get_float(RiseTime_type_id, 0.100000);
-		HoldTime = serialized->get_float(HoldTime_type_id, 0.100000);
-		Damage = serialized->get_float(Damage_type_id, 10.000000);
+		Height = serialized->get_float(Height_type_id, 5.000000f);
+		RiseTime = serialized->get_float(RiseTime_type_id, 0.100000f);
+		HoldTime = serialized->get_float(HoldTime_type_id, 0.100000f);
+		Damage = serialized->get_float(Damage_type_id, 10.000000f);
 		Knockback = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(Knockback_type_id, rivet::ddl::generated::KnockbackLevels_values, rivet::ddl::generated::KnockbackLevels::Three);
-		KnockbackAmount = serialized->get_float(KnockbackAmount_type_id, 10.000000); 
+		KnockbackAmount = serialized->get_float(KnockbackAmount_type_id, 10.000000f); 
 	}
 
 	[[nodiscard]] auto

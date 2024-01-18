@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	CameraRaycastPositionActionPrius::CameraRaycastPositionActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Camera);
-		Distance = serialized->get_float(Distance_type_id, 20.000000);
+		Distance = serialized->get_float(Distance_type_id, 20.000000f);
 		PhysCollProfile = serialized->get_enum<rivet::ddl::generated::x3e1c088d>(PhysCollProfile_type_id, rivet::ddl::generated::x3e1c088d_values, rivet::ddl::generated::x3e1c088d::Hero_Ground); 
 	}
 

@@ -8,14 +8,14 @@
 namespace rivet::ddl::generated {
 	RetargetWalk::RetargetWalk([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Enabled = serialized->get_bool(Enabled_type_id, false);
-		MinHideTime = serialized->get_float(MinHideTime_type_id, 1.000000);
-		DelayBeforeWalk = serialized->get_float(DelayBeforeWalk_type_id, 0.750000);
-		WalkTime = serialized->get_float(WalkTime_type_id, 0.500000);
-		WaitingAimMul = serialized->get_float(WaitingAimMul_type_id, 0.300000);
-		LowCoverOffsetY = serialized->get_float(LowCoverOffsetY_type_id, 0.800000);
-		LowCoverOffsetZ = serialized->get_float(LowCoverOffsetZ_type_id, 0.500000);
-		HighCoverOffsetY = serialized->get_float(HighCoverOffsetY_type_id, 1.600000);
-		HighCoverOffsetZ = serialized->get_float(HighCoverOffsetZ_type_id, 0.600000); 
+		MinHideTime = serialized->get_float(MinHideTime_type_id, 1.000000f);
+		DelayBeforeWalk = serialized->get_float(DelayBeforeWalk_type_id, 0.750000f);
+		WalkTime = serialized->get_float(WalkTime_type_id, 0.500000f);
+		WaitingAimMul = serialized->get_float(WaitingAimMul_type_id, 0.300000f);
+		LowCoverOffsetY = serialized->get_float(LowCoverOffsetY_type_id, 0.800000f);
+		LowCoverOffsetZ = serialized->get_float(LowCoverOffsetZ_type_id, 0.500000f);
+		HighCoverOffsetY = serialized->get_float(HighCoverOffsetY_type_id, 1.600000f);
+		HighCoverOffsetZ = serialized->get_float(HighCoverOffsetZ_type_id, 0.600000f); 
 	}
 
 	[[nodiscard]] auto

@@ -13,8 +13,8 @@ namespace rivet::ddl::generated {
 		LookAtVisualization = serialized->get_bool(LookAtVisualization_type_id, false);
 		CameraConeVisualization = serialized->get_bool(CameraConeVisualization_type_id, false);
 		IgnoreJumpToShot = serialized->get_bool(IgnoreJumpToShot_type_id, false);
-		AnimControllerActor = serialized->get_uint64(AnimControllerActor_type_id, 0);
-		AnimDynamicsActor = serialized->get_uint64(AnimDynamicsActor_type_id, 0);
+		AnimControllerActor = serialized->get_uint64(AnimControllerActor_type_id, 0ull);
+		AnimDynamicsActor = serialized->get_uint64(AnimDynamicsActor_type_id, 0ull);
 		AutoKeyframe = serialized->get_bool(AutoKeyframe_type_id, false);
 		ShowAnimDebugHud = serialized->get_bool(ShowAnimDebugHud_type_id, false);
 		UseFastSeekVFX = serialized->get_bool(UseFastSeekVFX_type_id, false);

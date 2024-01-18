@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	PlayerHeuristics::PlayerHeuristics([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		HeroBotWeight = serialized->get_float(HeroBotWeight_type_id, 3.000000);
-		HumanWeight = serialized->get_float(HumanWeight_type_id, 0.000000);
-		HumanAimWeight = serialized->get_float(HumanAimWeight_type_id, 8.000000);
-		MinAimedAtDot = serialized->get_float(MinAimedAtDot_type_id, 0.800000);
-		MaxAimedAtDot = serialized->get_float(MaxAimedAtDot_type_id, 0.980000);
-		OutOfCoverMul = serialized->get_float(OutOfCoverMul_type_id, 3.000000); 
+		HeroBotWeight = serialized->get_float(HeroBotWeight_type_id, 3.000000f);
+		HumanWeight = serialized->get_float(HumanWeight_type_id, 0.000000f);
+		HumanAimWeight = serialized->get_float(HumanAimWeight_type_id, 8.000000f);
+		MinAimedAtDot = serialized->get_float(MinAimedAtDot_type_id, 0.800000f);
+		MaxAimedAtDot = serialized->get_float(MaxAimedAtDot_type_id, 0.980000f);
+		OutOfCoverMul = serialized->get_float(OutOfCoverMul_type_id, 3.000000f); 
 	}
 
 	[[nodiscard]] auto

@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	DevstatsEventEntry::DevstatsEventEntry([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		EventCodeName = serialized->get_string(EventCodeName_type_id, {});
-		EnabledConfigurations = serialized->get_bitset<rivet::ddl::generated::xe5616699>(EnabledConfigurations_type_id, rivet::ddl::generated::xe5616699_values, 7); 
+		EnabledConfigurations = serialized->get_bitset<rivet::ddl::generated::xe5616699>(EnabledConfigurations_type_id, rivet::ddl::generated::xe5616699_values, 7u); 
 	}
 
 	[[nodiscard]] auto

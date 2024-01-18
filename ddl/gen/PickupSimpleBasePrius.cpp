@@ -11,11 +11,11 @@
 namespace rivet::ddl::generated {
 	PickupSimpleBasePrius::PickupSimpleBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Velocity = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Velocity_type_id);
-		DecayTimer = serialized->get_float(DecayTimer_type_id, 0.000000);
-		NoPickupTime = serialized->get_float(NoPickupTime_type_id, 0.000000);
-		PickupRange = serialized->get_float(PickupRange_type_id, 3.000000);
-		AutoCollectTime = serialized->get_float(AutoCollectTime_type_id, -1.000000);
-		IdealCollectTime = serialized->get_float(IdealCollectTime_type_id, -1.000000);
+		DecayTimer = serialized->get_float(DecayTimer_type_id, 0.000000f);
+		NoPickupTime = serialized->get_float(NoPickupTime_type_id, 0.000000f);
+		PickupRange = serialized->get_float(PickupRange_type_id, 3.000000f);
+		AutoCollectTime = serialized->get_float(AutoCollectTime_type_id, -1.000000f);
+		IdealCollectTime = serialized->get_float(IdealCollectTime_type_id, -1.000000f);
 		StartFixed = serialized->get_bool(StartFixed_type_id, false);
 		DoBob = serialized->get_bool(DoBob_type_id, true);
 		DoSpin = serialized->get_bool(DoSpin_type_id, true);

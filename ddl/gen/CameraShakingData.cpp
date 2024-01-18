@@ -9,9 +9,9 @@
 
 namespace rivet::ddl::generated {
 	CameraShakingData::CameraShakingData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		FadeinDuration = serialized->get_float(FadeinDuration_type_id, 0.000000);
-		Duration = serialized->get_float(Duration_type_id, 1.000000);
-		FadeoutDuration = serialized->get_float(FadeoutDuration_type_id, 2.000000);
+		FadeinDuration = serialized->get_float(FadeinDuration_type_id, 0.000000f);
+		Duration = serialized->get_float(Duration_type_id, 1.000000f);
+		FadeoutDuration = serialized->get_float(FadeoutDuration_type_id, 2.000000f);
 		UseRandomBaseOffset = serialized->get_bool(UseRandomBaseOffset_type_id, true);
 		OverrideViewportBlocking = serialized->get_bool(OverrideViewportBlocking_type_id, false);
 		FilterType = serialized->get_enum<rivet::ddl::generated::x82d89fa6>(FilterType_type_id, rivet::ddl::generated::x82d89fa6_values, rivet::ddl::generated::x82d89fa6::None);

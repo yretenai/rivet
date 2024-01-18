@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	ConduitParticleCollisionEvent::ConduitParticleCollisionEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
 		Label = serialized->get_string(Label_type_id, {});
-		ParticleScale = serialized->get_float(ParticleScale_type_id, 1.000000); 
+		ParticleScale = serialized->get_float(ParticleScale_type_id, 1.000000f); 
 	}
 
 	[[nodiscard]] auto

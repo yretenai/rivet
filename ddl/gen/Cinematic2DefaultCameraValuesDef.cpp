@@ -7,13 +7,13 @@
 
 namespace rivet::ddl::generated {
 	Cinematic2DefaultCameraValuesDef::Cinematic2DefaultCameraValuesDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		CameraFov = serialized->get_float(CameraFov_type_id, 65.000000);
-		CameraDofNearFocusDistance = serialized->get_float(CameraDofNearFocusDistance_type_id, 0.000000);
-		CameraDofNearBlurStrength = serialized->get_float(CameraDofNearBlurStrength_type_id, 0.000000);
-		CameraDofFarFocusDistance = serialized->get_float(CameraDofFarFocusDistance_type_id, 100.000000);
-		CameraDofFarBlurStrength = serialized->get_float(CameraDofFarBlurStrength_type_id, 0.000000);
-		CameraFilmApertureHorizontal = serialized->get_float(CameraFilmApertureHorizontal_type_id, 1.000000);
-		CameraLensSqueezeRatio = serialized->get_float(CameraLensSqueezeRatio_type_id, 1.000000); 
+		CameraFov = serialized->get_float(CameraFov_type_id, 65.000000f);
+		CameraDofNearFocusDistance = serialized->get_float(CameraDofNearFocusDistance_type_id, 0.000000f);
+		CameraDofNearBlurStrength = serialized->get_float(CameraDofNearBlurStrength_type_id, 0.000000f);
+		CameraDofFarFocusDistance = serialized->get_float(CameraDofFarFocusDistance_type_id, 100.000000f);
+		CameraDofFarBlurStrength = serialized->get_float(CameraDofFarBlurStrength_type_id, 0.000000f);
+		CameraFilmApertureHorizontal = serialized->get_float(CameraFilmApertureHorizontal_type_id, 1.000000f);
+		CameraLensSqueezeRatio = serialized->get_float(CameraLensSqueezeRatio_type_id, 1.000000f); 
 	}
 
 	[[nodiscard]] auto

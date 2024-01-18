@@ -7,13 +7,13 @@
 
 namespace rivet::ddl::generated {
 	TrailAttributes::TrailAttributes([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DistanceThreshold = serialized->get_float(DistanceThreshold_type_id, 0.100000);
-		ParticleLifetime = serialized->get_float(ParticleLifetime_type_id, 1.000000);
+		DistanceThreshold = serialized->get_float(DistanceThreshold_type_id, 0.100000f);
+		ParticleLifetime = serialized->get_float(ParticleLifetime_type_id, 1.000000f);
 		CreaseFading = serialized->get_bool(CreaseFading_type_id, true);
-		Subdivision = serialized->get_float(Subdivision_type_id, 1.000000);
-		MaxLength = serialized->get_float(MaxLength_type_id, 0.000000);
-		UV0Tiling = serialized->get_float(UV0Tiling_type_id, 0.000000);
-		UV1Tiling = serialized->get_float(UV1Tiling_type_id, 0.000000); 
+		Subdivision = serialized->get_float(Subdivision_type_id, 1.000000f);
+		MaxLength = serialized->get_float(MaxLength_type_id, 0.000000f);
+		UV0Tiling = serialized->get_float(UV0Tiling_type_id, 0.000000f);
+		UV1Tiling = serialized->get_float(UV1Tiling_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

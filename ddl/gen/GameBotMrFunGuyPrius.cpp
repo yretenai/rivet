@@ -18,11 +18,11 @@ namespace rivet::ddl::generated {
 		DanceAnimHash = serialized->get_string(DanceAnimHash_type_id, {});
 		LeftEmitLocator = serialized->get_string(LeftEmitLocator_type_id, {});
 		RightEmitLocator = serialized->get_string(RightEmitLocator_type_id, {});
-		MaxLifetime = serialized->get_float(MaxLifetime_type_id, 8.000000);
-		GasLifetime = serialized->get_float(GasLifetime_type_id, 5.000000);
-		HoverHeight = serialized->get_float(HoverHeight_type_id, 0.850000);
-		ModelScale = serialized->get_float(ModelScale_type_id, 1.000000);
-		GasTargetingRadius = serialized->get_float(GasTargetingRadius_type_id, 10.000000); 
+		MaxLifetime = serialized->get_float(MaxLifetime_type_id, 8.000000f);
+		GasLifetime = serialized->get_float(GasLifetime_type_id, 5.000000f);
+		HoverHeight = serialized->get_float(HoverHeight_type_id, 0.850000f);
+		ModelScale = serialized->get_float(ModelScale_type_id, 1.000000f);
+		GasTargetingRadius = serialized->get_float(GasTargetingRadius_type_id, 10.000000f); 
 	}
 
 	[[nodiscard]] auto

@@ -8,8 +8,8 @@
 namespace rivet::ddl::generated {
 	POIAttributeIconSingleSVG::POIAttributeIconSingleSVG([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): POIAttributeIconBase(serialized) {
 		SVG = serialized->get_string(SVG_type_id, "");
-		Width = serialized->get_float(Width_type_id, 32.000000);
-		Height = serialized->get_float(Height_type_id, 32.000000); 
+		Width = serialized->get_float(Width_type_id, 32.000000f);
+		Height = serialized->get_float(Height_type_id, 32.000000f); 
 	}
 
 	[[nodiscard]] auto

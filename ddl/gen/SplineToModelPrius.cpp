@@ -12,24 +12,24 @@
 namespace rivet::ddl::generated {
 	SplineToModelPrius::SplineToModelPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		CreatePrefab = serialized->get_bool(CreatePrefab_type_id, true);
-		CurveFidelity = serialized->get_float(CurveFidelity_type_id, 0.010000);
+		CurveFidelity = serialized->get_float(CurveFidelity_type_id, 0.010000f);
 		CrossSection = serialized->get_enum<rivet::ddl::generated::x8492ce7f>(CrossSection_type_id, rivet::ddl::generated::x8492ce7f_values, rivet::ddl::generated::x8492ce7f::Ellipse);
 		Model = serialized->get_string(Model_type_id, {});
 		PreRotation = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(PreRotation_type_id);
 		PreTranslate = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(PreTranslate_type_id);
-		CurveProfile = serialized->get_uint64(CurveProfile_type_id, 0);
+		CurveProfile = serialized->get_uint64(CurveProfile_type_id, 0ull);
 		Width = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(Width_type_id);
-		Height = serialized->get_float(Height_type_id, 0.500000);
-		Scale = serialized->get_float(Scale_type_id, 1.000000);
+		Height = serialized->get_float(Height_type_id, 0.500000f);
+		Scale = serialized->get_float(Scale_type_id, 1.000000f);
 		Taper = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(Taper_type_id);
 		Placement = serialized->get_enum<rivet::ddl::generated::xb8c27e2a>(Placement_type_id, rivet::ddl::generated::xb8c27e2a_values, rivet::ddl::generated::xb8c27e2a::Centered);
 		Offset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Offset_type_id);
-		BankScale = serialized->get_float(BankScale_type_id, 0.000000);
+		BankScale = serialized->get_float(BankScale_type_id, 0.000000f);
 		EndCap = serialized->get_enum<rivet::ddl::generated::x86f6b8ca>(EndCap_type_id, rivet::ddl::generated::x86f6b8ca_values, rivet::ddl::generated::x86f6b8ca::Round);
 		SurfaceNoise = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(SurfaceNoise_type_id);
 		ReverseFaces = serialized->get_bool(ReverseFaces_type_id, false);
 		VertexColor = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(VertexColor_type_id);
-		VertexAlpha = serialized->get_float(VertexAlpha_type_id, 1.000000);
+		VertexAlpha = serialized->get_float(VertexAlpha_type_id, 1.000000f);
 		VertexSpacing = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(VertexSpacing_type_id);
 		ReverseU = serialized->get_bool(ReverseU_type_id, false);
 		ReverseV = serialized->get_bool(ReverseV_type_id, false);
@@ -41,7 +41,7 @@ namespace rivet::ddl::generated {
 		Material = serialized->get_string(Material_type_id, {});
 		Collision = serialized->get_bool(Collision_type_id, true);
 		LOD1 = serialized->get_bool(LOD1_type_id, false);
-		GeomLodDist1 = serialized->get_float(GeomLodDist1_type_id, 40.000000);
+		GeomLodDist1 = serialized->get_float(GeomLodDist1_type_id, 40.000000f);
 		GenActor = serialized->get_enum<rivet::ddl::generated::x7e4a5355>(GenActor_type_id, rivet::ddl::generated::x7e4a5355_values, rivet::ddl::generated::x7e4a5355::No_Actor);
 		Actor = serialized->get_string(Actor_type_id, {});
 		ADDINSTANCES = serialized->get_string(ADDINSTANCES_type_id, "Option to add instances along curve");

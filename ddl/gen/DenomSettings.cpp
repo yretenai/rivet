@@ -9,7 +9,7 @@ namespace rivet::ddl::generated {
 	DenomSettings::DenomSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		ModelOverride = serialized->get_strings(ModelOverride_type_id);
 		MaterialOverride = serialized->get_string(MaterialOverride_type_id, {});
-		Scale = serialized->get_float(Scale_type_id, 1.000000); 
+		Scale = serialized->get_float(Scale_type_id, 1.000000f); 
 	}
 
 	[[nodiscard]] auto

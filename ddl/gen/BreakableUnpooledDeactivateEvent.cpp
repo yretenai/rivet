@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	BreakableUnpooledDeactivateEvent::BreakableUnpooledDeactivateEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		BreakableAssetId = serialized->get_uint64(BreakableAssetId_type_id, 0); 
+		BreakableAssetId = serialized->get_uint64(BreakableAssetId_type_id, 0ull); 
 	}
 
 	[[nodiscard]] auto

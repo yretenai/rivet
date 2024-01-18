@@ -11,9 +11,9 @@
 namespace rivet::ddl::generated {
 	HoudiniDestructionInputPrius::HoudiniDestructionInputPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		ObjToWorld = serialized->unwrap_into<rivet::ddl::generated::DDLTransform>(ObjToWorld_type_id);
-		Velocity = serialized->get_float(Velocity_type_id, 2.000000);
+		Velocity = serialized->get_float(Velocity_type_id, 2.000000f);
 		RevolutionsPerSecond = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(RevolutionsPerSecond_type_id);
-		Falloff = serialized->get_float(Falloff_type_id, 0.350000); 
+		Falloff = serialized->get_float(Falloff_type_id, 0.350000f); 
 	}
 
 	[[nodiscard]] auto

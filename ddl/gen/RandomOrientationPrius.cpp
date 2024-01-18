@@ -8,12 +8,12 @@
 namespace rivet::ddl::generated {
 	RandomOrientationPrius::RandomOrientationPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		StartEnabled = serialized->get_bool(StartEnabled_type_id, true);
-		XAngleMin = serialized->get_float(XAngleMin_type_id, 0.000000);
-		XAngleMax = serialized->get_float(XAngleMax_type_id, 360.000000);
-		YAngleMin = serialized->get_float(YAngleMin_type_id, 0.000000);
-		YAngleMax = serialized->get_float(YAngleMax_type_id, 360.000000);
-		ZAngleMin = serialized->get_float(ZAngleMin_type_id, 0.000000);
-		ZAngleMax = serialized->get_float(ZAngleMax_type_id, 360.000000); 
+		XAngleMin = serialized->get_float(XAngleMin_type_id, 0.000000f);
+		XAngleMax = serialized->get_float(XAngleMax_type_id, 360.000000f);
+		YAngleMin = serialized->get_float(YAngleMin_type_id, 0.000000f);
+		YAngleMax = serialized->get_float(YAngleMax_type_id, 360.000000f);
+		ZAngleMin = serialized->get_float(ZAngleMin_type_id, 0.000000f);
+		ZAngleMax = serialized->get_float(ZAngleMax_type_id, 360.000000f); 
 	}
 
 	[[nodiscard]] auto

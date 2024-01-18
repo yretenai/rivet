@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	WindReceiverPrius::WindReceiverPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		EventRadius = serialized->get_float(EventRadius_type_id, 10.000000); 
+		EventRadius = serialized->get_float(EventRadius_type_id, 10.000000f); 
 	}
 
 	[[nodiscard]] auto

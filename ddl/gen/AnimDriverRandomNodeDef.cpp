@@ -11,10 +11,10 @@ namespace rivet::ddl::generated {
 	AnimDriverRandomNodeDef::AnimDriverRandomNodeDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Name = serialized->get_string(Name_type_id, {});
 		DisplayName = serialized->get_string(DisplayName_type_id, "");
-		x = serialized->get_float(x_type_id, 0.000000);
-		y = serialized->get_float(y_type_id, 0.000000);
-		Flags = serialized->get_bitset<rivet::ddl::generated::x9829f4d8>(Flags_type_id, rivet::ddl::generated::x9829f4d8_values, 1);
-		Rate = serialized->get_float(Rate_type_id, 1.000000);
+		x = serialized->get_float(x_type_id, 0.000000f);
+		y = serialized->get_float(y_type_id, 0.000000f);
+		Flags = serialized->get_bitset<rivet::ddl::generated::x9829f4d8>(Flags_type_id, rivet::ddl::generated::x9829f4d8_values, 1u);
+		Rate = serialized->get_float(Rate_type_id, 1.000000f);
 		Elems = serialized->unwrap_into_many<rivet::ddl::generated::AnimDriverRandomElemDef>(Elems_type_id); 
 	}
 

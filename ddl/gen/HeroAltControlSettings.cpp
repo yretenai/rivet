@@ -10,7 +10,7 @@ namespace rivet::ddl::generated {
 		JumpToAirDash = serialized->get_bool(JumpToAirDash_type_id, false);
 		RiftTetherCombatTargeting = serialized->get_bool(RiftTetherCombatTargeting_type_id, true);
 		HoverbootInputMode = serialized->get_enum<rivet::ddl::generated::x47a6f45d>(HoverbootInputMode_type_id, rivet::ddl::generated::x47a6f45d_values, rivet::ddl::generated::x47a6f45d::Press_L2_to_Kick);
-		HoverbootNoKickInputGracePeriod = serialized->get_float(HoverbootNoKickInputGracePeriod_type_id, 0.350000);
+		HoverbootNoKickInputGracePeriod = serialized->get_float(HoverbootNoKickInputGracePeriod_type_id, 0.350000f);
 		FlyerCameraResponsivenessOption = serialized->get_enum<rivet::ddl::generated::x8b42b541>(FlyerCameraResponsivenessOption_type_id, rivet::ddl::generated::x8b42b541_values, rivet::ddl::generated::x8b42b541::Slow); 
 	}
 

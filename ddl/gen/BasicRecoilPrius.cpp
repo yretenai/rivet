@@ -9,21 +9,21 @@
 
 namespace rivet::ddl::generated {
 	BasicRecoilPrius::BasicRecoilPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): WeaponRecoilBasePrius(serialized) {
-		ShotsToMin = serialized->get_float(ShotsToMin_type_id, 0.000000);
-		ShotsToMax = serialized->get_float(ShotsToMax_type_id, 0.000000);
-		BumpRamp = serialized->get_float(BumpRamp_type_id, 1.000000);
-		BumpAngleMin = serialized->get_float(BumpAngleMin_type_id, 0.000000);
-		BumpAngleMax = serialized->get_float(BumpAngleMax_type_id, 0.000000);
-		BumpOffsetMin = serialized->get_float(BumpOffsetMin_type_id, 0.000000);
-		BumpOffsetMax = serialized->get_float(BumpOffsetMax_type_id, 0.000000);
-		BumpSpeedMin = serialized->get_float(BumpSpeedMin_type_id, 1.000000);
-		BumpSpeedMax = serialized->get_float(BumpSpeedMax_type_id, 1.000000);
-		CooldownStart = serialized->get_float(CooldownStart_type_id, 0.000000);
-		CooldownComplete = serialized->get_float(CooldownComplete_type_id, 0.000000);
-		SettleDelay = serialized->get_float(SettleDelay_type_id, 0.150000);
-		SettleGain = serialized->get_float(SettleGain_type_id, -8.000000);
-		SettleDamp = serialized->get_float(SettleDamp_type_id, -13.000000);
-		SettlePercent = serialized->get_float(SettlePercent_type_id, 1.000000);
+		ShotsToMin = serialized->get_float(ShotsToMin_type_id, 0.000000f);
+		ShotsToMax = serialized->get_float(ShotsToMax_type_id, 0.000000f);
+		BumpRamp = serialized->get_float(BumpRamp_type_id, 1.000000f);
+		BumpAngleMin = serialized->get_float(BumpAngleMin_type_id, 0.000000f);
+		BumpAngleMax = serialized->get_float(BumpAngleMax_type_id, 0.000000f);
+		BumpOffsetMin = serialized->get_float(BumpOffsetMin_type_id, 0.000000f);
+		BumpOffsetMax = serialized->get_float(BumpOffsetMax_type_id, 0.000000f);
+		BumpSpeedMin = serialized->get_float(BumpSpeedMin_type_id, 1.000000f);
+		BumpSpeedMax = serialized->get_float(BumpSpeedMax_type_id, 1.000000f);
+		CooldownStart = serialized->get_float(CooldownStart_type_id, 0.000000f);
+		CooldownComplete = serialized->get_float(CooldownComplete_type_id, 0.000000f);
+		SettleDelay = serialized->get_float(SettleDelay_type_id, 0.150000f);
+		SettleGain = serialized->get_float(SettleGain_type_id, -8.000000f);
+		SettleDamp = serialized->get_float(SettleDamp_type_id, -13.000000f);
+		SettlePercent = serialized->get_float(SettlePercent_type_id, 1.000000f);
 		CameraShake = serialized->unwrap_into<rivet::ddl::generated::RecoilCameraShakeItem>(CameraShake_type_id); 
 	}
 

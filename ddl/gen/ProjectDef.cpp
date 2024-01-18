@@ -12,7 +12,7 @@ namespace rivet::ddl::generated {
 		Id = serialized->get_string(Id_type_id, "");
 		GameExeName = serialized->get_string(GameExeName_type_id, "");
 		CodeBranchRef = serialized->unwrap_into<rivet::ddl::generated::CodeBranchRef>(CodeBranchRef_type_id);
-		Timestamp = serialized->get_uint64(Timestamp_type_id, 0);
+		Timestamp = serialized->get_uint64(Timestamp_type_id, 0ull);
 		GameBuildCacheDir = serialized->get_string(GameBuildCacheDir_type_id, "");
 		GameBuildCacheOrigin = serialized->get_string(GameBuildCacheOrigin_type_id, "");
 		AssetBranchPath = serialized->get_string(AssetBranchPath_type_id, "");

@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	ExplosionCountdownStage::ExplosionCountdownStage([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		TimeUntilNextStage = serialized->get_float(TimeUntilNextStage_type_id, 0.000000);
-		FlashFadeInDuration = serialized->get_float(FlashFadeInDuration_type_id, 0.250000);
-		FlashFadeOutDuration = serialized->get_float(FlashFadeOutDuration_type_id, 0.250000);
+		TimeUntilNextStage = serialized->get_float(TimeUntilNextStage_type_id, 0.000000f);
+		FlashFadeInDuration = serialized->get_float(FlashFadeInDuration_type_id, 0.250000f);
+		FlashFadeOutDuration = serialized->get_float(FlashFadeOutDuration_type_id, 0.250000f);
 		ShouldPlayBeepAudio = serialized->get_bool(ShouldPlayBeepAudio_type_id, false);
 		IsLastBeep = serialized->get_bool(IsLastBeep_type_id, false); 
 	}

@@ -7,16 +7,16 @@
 
 namespace rivet::ddl::generated {
 	BezierCurveKeyDef::BezierCurveKeyDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Id = serialized->get_uint64(Id_type_id, 0);
-		Time = serialized->get_float(Time_type_id, 0.000000);
-		Value = serialized->get_float(Value_type_id, 0.000000);
+		Id = serialized->get_uint64(Id_type_id, 0ull);
+		Time = serialized->get_float(Time_type_id, 0.000000f);
+		Value = serialized->get_float(Value_type_id, 0.000000f);
 		TangentLocked = serialized->get_bool(TangentLocked_type_id, true);
 		TangentTypeIn = serialized->get_enum<rivet::ddl::generated::x5eea8b59>(TangentTypeIn_type_id, rivet::ddl::generated::x5eea8b59_values, rivet::ddl::generated::x5eea8b59::Smooth);
-		TangentTimeIn = serialized->get_float(TangentTimeIn_type_id, 0.000000);
-		TangentValueIn = serialized->get_float(TangentValueIn_type_id, 0.000000);
+		TangentTimeIn = serialized->get_float(TangentTimeIn_type_id, 0.000000f);
+		TangentValueIn = serialized->get_float(TangentValueIn_type_id, 0.000000f);
 		TangentTypeOut = serialized->get_enum<rivet::ddl::generated::x5eea8b59>(TangentTypeOut_type_id, rivet::ddl::generated::x5eea8b59_values, rivet::ddl::generated::x5eea8b59::Smooth);
-		TangentTimeOut = serialized->get_float(TangentTimeOut_type_id, 0.000000);
-		TangentValueOut = serialized->get_float(TangentValueOut_type_id, 0.000000); 
+		TangentTimeOut = serialized->get_float(TangentTimeOut_type_id, 0.000000f);
+		TangentValueOut = serialized->get_float(TangentValueOut_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

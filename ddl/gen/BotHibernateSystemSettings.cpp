@@ -9,9 +9,9 @@ namespace rivet::ddl::generated {
 	BotHibernateSystemSettings::BotHibernateSystemSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		DebugInterface = serialized->get_bool(DebugInterface_type_id, false);
 		EnableDistantBotPerf = serialized->get_bool(EnableDistantBotPerf_type_id, true);
-		FarEnemyDistance = serialized->get_float(FarEnemyDistance_type_id, 220.000000);
-		FarNPCDistance = serialized->get_float(FarNPCDistance_type_id, 100.000000);
-		MaxCountDistantBots = serialized->get_int32(MaxCountDistantBots_type_id, 200); 
+		FarEnemyDistance = serialized->get_float(FarEnemyDistance_type_id, 220.000000f);
+		FarNPCDistance = serialized->get_float(FarNPCDistance_type_id, 100.000000f);
+		MaxCountDistantBots = serialized->get_int32(MaxCountDistantBots_type_id, 200u); 
 	}
 
 	[[nodiscard]] auto

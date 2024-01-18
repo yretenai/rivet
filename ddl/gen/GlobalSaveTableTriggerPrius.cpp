@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	GlobalSaveTableTriggerPrius::GlobalSaveTableTriggerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BaseCustomOverlayTriggerPrius(serialized) {
 		Key = serialized->get_string(Key_type_id, {});
-		Value = serialized->get_float(Value_type_id, 1.000000);
+		Value = serialized->get_float(Value_type_id, 1.000000f);
 		CheckType = serialized->get_enum<rivet::ddl::generated::x70316bbe>(CheckType_type_id, rivet::ddl::generated::x70316bbe_values, rivet::ddl::generated::x70316bbe::KeyExists); 
 	}
 

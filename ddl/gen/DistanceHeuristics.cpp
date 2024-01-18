@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	DistanceHeuristics::DistanceHeuristics([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Weight = serialized->get_float(Weight_type_id, 3.000000);
-		BoostRange = serialized->get_float(BoostRange_type_id, 8.000000);
-		BoostMul = serialized->get_float(BoostMul_type_id, 4.000000); 
+		Weight = serialized->get_float(Weight_type_id, 3.000000f);
+		BoostRange = serialized->get_float(BoostRange_type_id, 8.000000f);
+		BoostMul = serialized->get_float(BoostMul_type_id, 4.000000f); 
 	}
 
 	[[nodiscard]] auto

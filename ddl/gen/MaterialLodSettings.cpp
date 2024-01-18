@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	MaterialLodSettings::MaterialLodSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		TessellationDist = serialized->get_float(TessellationDist_type_id, 10.000000);
-		DisplacementDist = serialized->get_float(DisplacementDist_type_id, 20.000000);
-		DefaultDist = serialized->get_float(DefaultDist_type_id, 20.000000); 
+		TessellationDist = serialized->get_float(TessellationDist_type_id, 10.000000f);
+		DisplacementDist = serialized->get_float(DisplacementDist_type_id, 20.000000f);
+		DefaultDist = serialized->get_float(DefaultDist_type_id, 20.000000f); 
 	}
 
 	[[nodiscard]] auto

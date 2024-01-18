@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	InteractLocationApproachData::InteractLocationApproachData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		UseGotoRange = serialized->get_float(UseGotoRange_type_id, 0.250000);
-		GotoStopRange = serialized->get_float(GotoStopRange_type_id, 0.100000);
+		UseGotoRange = serialized->get_float(UseGotoRange_type_id, 0.250000f);
+		GotoStopRange = serialized->get_float(GotoStopRange_type_id, 0.100000f);
 		ForceWalk = serialized->get_bool(ForceWalk_type_id, true); 
 	}
 

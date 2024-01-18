@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	GameBotPufferFishPrius::GameBotPufferFishPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): GameBotMeleeSwarmerPrius(serialized) {
-		SwimVolumes = serialized->get_uint64(SwimVolumes_type_id, 0);
-		BreachAnimClues = serialized->get_uint64(BreachAnimClues_type_id, 0);
-		EngagedSwimSpeedMult = serialized->get_float(EngagedSwimSpeedMult_type_id, 2.000000); 
+		SwimVolumes = serialized->get_uint64(SwimVolumes_type_id, 0ull);
+		BreachAnimClues = serialized->get_uint64(BreachAnimClues_type_id, 0ull);
+		EngagedSwimSpeedMult = serialized->get_float(EngagedSwimSpeedMult_type_id, 2.000000f); 
 	}
 
 	[[nodiscard]] auto

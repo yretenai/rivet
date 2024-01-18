@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	AimModContractingSpreadPrius::AimModContractingSpreadPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): AimModifierPrius(serialized) {
-		InaccuracyMin = serialized->get_float(InaccuracyMin_type_id, 0.000000);
-		InaccuracyMax = serialized->get_float(InaccuracyMax_type_id, 0.000000);
-		ShotsToMinAccuracy = serialized->get_float(ShotsToMinAccuracy_type_id, 0.000000); 
+		InaccuracyMin = serialized->get_float(InaccuracyMin_type_id, 0.000000f);
+		InaccuracyMax = serialized->get_float(InaccuracyMax_type_id, 0.000000f);
+		ShotsToMinAccuracy = serialized->get_float(ShotsToMinAccuracy_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

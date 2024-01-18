@@ -14,7 +14,7 @@ namespace rivet::ddl::generated {
 		AnimDriverActive = serialized->get_string(AnimDriverActive_type_id, "Interact_Avail");
 		AnimDriverUse = serialized->get_string(AnimDriverUse_type_id, "Interact_Use");
 		EnableType = serialized->get_enum<rivet::ddl::generated::x96f58b25>(EnableType_type_id, rivet::ddl::generated::x96f58b25_values, rivet::ddl::generated::x96f58b25::InteractEnable);
-		EnableActorGroup = serialized->get_uint64(EnableActorGroup_type_id, 0);
+		EnableActorGroup = serialized->get_uint64(EnableActorGroup_type_id, 0ull);
 		InteractOfferPrius = serialized->unwrap_into<rivet::ddl::generated::InteractGeneralOfferPrius>(InteractOfferPrius_type_id); 
 	}
 

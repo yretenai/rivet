@@ -10,7 +10,7 @@ namespace rivet::ddl::generated {
 		FilterName = serialized->get_string(FilterName_type_id, {});
 		FilterCompare = serialized->get_enum<rivet::ddl::generated::x21604be>(FilterCompare_type_id, rivet::ddl::generated::x21604be_values, rivet::ddl::generated::x21604be::Equals);
 		FilterOnValue = serialized->get_string(FilterOnValue_type_id, {});
-		FilterActor = serialized->get_uint64(FilterActor_type_id, 0); 
+		FilterActor = serialized->get_uint64(FilterActor_type_id, 0ull); 
 	}
 
 	[[nodiscard]] auto

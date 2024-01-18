@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	CameraDistanceTweakSet::CameraDistanceTweakSet([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): CameraDistanceTweak(serialized) {
-		Distance = serialized->get_float(Distance_type_id, 4.650000);
-		BlendFieldCompletePercent = serialized->get_float(BlendFieldCompletePercent_type_id, 0.000000);
+		Distance = serialized->get_float(Distance_type_id, 4.650000f);
+		BlendFieldCompletePercent = serialized->get_float(BlendFieldCompletePercent_type_id, 0.000000f);
 		BiDirectionalField = serialized->get_bool(BiDirectionalField_type_id, false); 
 	}
 

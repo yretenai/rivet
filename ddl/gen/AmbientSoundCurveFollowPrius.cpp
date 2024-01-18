@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	AmbientSoundCurveFollowPrius::AmbientSoundCurveFollowPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		CurveObjectHandle = serialized->get_uint32(CurveObjectHandle_type_id, 0);
-		Curve = serialized->get_uint64(Curve_type_id, 0);
+		CurveObjectHandle = serialized->get_uint32(CurveObjectHandle_type_id, 0u);
+		Curve = serialized->get_uint64(Curve_type_id, 0ull);
 		PosOption = serialized->get_enum<rivet::ddl::generated::xbb0b7195>(PosOption_type_id, rivet::ddl::generated::xbb0b7195_values, rivet::ddl::generated::xbb0b7195::Sound_Listener_Position); 
 	}
 

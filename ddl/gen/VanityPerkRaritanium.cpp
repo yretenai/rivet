@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	VanityPerkRaritanium::VanityPerkRaritanium([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): VanityPerkBase(serialized) {
-		RaritaniumMultSet = serialized->get_float(RaritaniumMultSet_type_id, 0.000000);
-		RaritaniumMultPiece = serialized->get_float(RaritaniumMultPiece_type_id, 0.000000); 
+		RaritaniumMultSet = serialized->get_float(RaritaniumMultSet_type_id, 0.000000f);
+		RaritaniumMultPiece = serialized->get_float(RaritaniumMultPiece_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

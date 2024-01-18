@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	SyncedAnimGuestEntry::SyncedAnimGuestEntry([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		GuestActor = serialized->get_uint32(GuestActor_type_id, 0);
-		GuestAnimHash = serialized->get_uint32(GuestAnimHash_type_id, 0);
-		SyncOffsetJointHash = serialized->get_uint32(SyncOffsetJointHash_type_id, 0); 
+		GuestActor = serialized->get_uint32(GuestActor_type_id, 0u);
+		GuestAnimHash = serialized->get_uint32(GuestAnimHash_type_id, 0u);
+		SyncOffsetJointHash = serialized->get_uint32(SyncOffsetJointHash_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

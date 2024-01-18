@@ -18,12 +18,12 @@ namespace rivet::ddl::generated {
 		RequiredContainerRegions = serialized->get_strings(RequiredContainerRegions_type_id);
 		SpawnInfo = serialized->unwrap_into<rivet::ddl::generated::VehicleSpawnInfo>(SpawnInfo_type_id);
 		NodeParams = serialized->unwrap_into<rivet::ddl::generated::VehicleNodeParams>(NodeParams_type_id);
-		MaxVehicles = serialized->get_int32(MaxVehicles_type_id, 0);
-		MaxVehiclesPerfMode = serialized->get_int32(MaxVehiclesPerfMode_type_id, 0);
-		MaxVehiclesMediumPerfMode = serialized->get_int32(MaxVehiclesMediumPerfMode_type_id, 0);
-		MaxVehiclesLowPerfMode = serialized->get_int32(MaxVehiclesLowPerfMode_type_id, 0);
-		SoundEnableRange = serialized->get_float(SoundEnableRange_type_id, 30.000000);
-		SoundDisableRange = serialized->get_float(SoundDisableRange_type_id, 38.000000);
+		MaxVehicles = serialized->get_int32(MaxVehicles_type_id, 0u);
+		MaxVehiclesPerfMode = serialized->get_int32(MaxVehiclesPerfMode_type_id, 0u);
+		MaxVehiclesMediumPerfMode = serialized->get_int32(MaxVehiclesMediumPerfMode_type_id, 0u);
+		MaxVehiclesLowPerfMode = serialized->get_int32(MaxVehiclesLowPerfMode_type_id, 0u);
+		SoundEnableRange = serialized->get_float(SoundEnableRange_type_id, 30.000000f);
+		SoundDisableRange = serialized->get_float(SoundDisableRange_type_id, 38.000000f);
 		VehicleTypeList = serialized->unwrap_into_many<rivet::ddl::generated::VehicleTypeListEntry>(VehicleTypeList_type_id); 
 	}
 

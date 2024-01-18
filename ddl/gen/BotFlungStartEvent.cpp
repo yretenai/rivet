@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	BotFlungStartEvent::BotFlungStartEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
 		StatusEffectName = serialized->get_string(StatusEffectName_type_id, {});
-		Distance = serialized->get_float(Distance_type_id, 0.000000);
+		Distance = serialized->get_float(Distance_type_id, 0.000000f);
 		ByHero = serialized->get_bool(ByHero_type_id, false); 
 	}
 

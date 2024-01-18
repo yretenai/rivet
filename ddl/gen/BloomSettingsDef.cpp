@@ -8,28 +8,28 @@
 namespace rivet::ddl::generated {
 	BloomSettingsDef::BloomSettingsDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Enabled = serialized->get_bool(Enabled_type_id, true);
-		Intensity = serialized->get_float(Intensity_type_id, 0.100000);
-		Threshold = serialized->get_float(Threshold_type_id, 3.000000);
-		GaussianStrength0 = serialized->get_float(GaussianStrength0_type_id, 0.400000);
-		GaussianStrength1 = serialized->get_float(GaussianStrength1_type_id, 0.500000);
-		GaussianStrength2 = serialized->get_float(GaussianStrength2_type_id, 0.600000);
-		GaussianStrength3 = serialized->get_float(GaussianStrength3_type_id, 0.800000);
-		GaussianStrength4 = serialized->get_float(GaussianStrength4_type_id, 1.000000);
-		BloomDirtiness = serialized->get_float(BloomDirtiness_type_id, 0.000000);
+		Intensity = serialized->get_float(Intensity_type_id, 0.100000f);
+		Threshold = serialized->get_float(Threshold_type_id, 3.000000f);
+		GaussianStrength0 = serialized->get_float(GaussianStrength0_type_id, 0.400000f);
+		GaussianStrength1 = serialized->get_float(GaussianStrength1_type_id, 0.500000f);
+		GaussianStrength2 = serialized->get_float(GaussianStrength2_type_id, 0.600000f);
+		GaussianStrength3 = serialized->get_float(GaussianStrength3_type_id, 0.800000f);
+		GaussianStrength4 = serialized->get_float(GaussianStrength4_type_id, 1.000000f);
+		BloomDirtiness = serialized->get_float(BloomDirtiness_type_id, 0.000000f);
 		BloomDirtinessAsset = serialized->get_string(BloomDirtinessAsset_type_id, {});
-		LensFlareLumMin = serialized->get_float(LensFlareLumMin_type_id, 4.000000);
-		LensFlareLumMax = serialized->get_float(LensFlareLumMax_type_id, 20.000000);
-		LensFlareLumIntensity = serialized->get_float(LensFlareLumIntensity_type_id, 1.000000);
-		LensFlareGhosts = serialized->get_float(LensFlareGhosts_type_id, 6.000000);
-		LensFlareFallOff = serialized->get_float(LensFlareFallOff_type_id, 8.000000);
-		LensFlareIntensity = serialized->get_float(LensFlareIntensity_type_id, 0.000000);
-		LensFlareDistortion = serialized->get_float(LensFlareDistortion_type_id, 1.500000);
-		LensFlareHaloRadius = serialized->get_float(LensFlareHaloRadius_type_id, 0.650000);
-		LensFlareHaloIntensity = serialized->get_float(LensFlareHaloIntensity_type_id, 0.750000);
-		LensFlareGhostDispersal = serialized->get_float(LensFlareGhostDispersal_type_id, 0.300000);
-		AnamorphicLensFlareIntensity = serialized->get_float(AnamorphicLensFlareIntensity_type_id, 0.000000);
-		AnamorphicLensFlareValueThreshold = serialized->get_float(AnamorphicLensFlareValueThreshold_type_id, 2.000000);
-		AnamorphicLensFlareSaturationThreshold = serialized->get_float(AnamorphicLensFlareSaturationThreshold_type_id, 0.800000); 
+		LensFlareLumMin = serialized->get_float(LensFlareLumMin_type_id, 4.000000f);
+		LensFlareLumMax = serialized->get_float(LensFlareLumMax_type_id, 20.000000f);
+		LensFlareLumIntensity = serialized->get_float(LensFlareLumIntensity_type_id, 1.000000f);
+		LensFlareGhosts = serialized->get_float(LensFlareGhosts_type_id, 6.000000f);
+		LensFlareFallOff = serialized->get_float(LensFlareFallOff_type_id, 8.000000f);
+		LensFlareIntensity = serialized->get_float(LensFlareIntensity_type_id, 0.000000f);
+		LensFlareDistortion = serialized->get_float(LensFlareDistortion_type_id, 1.500000f);
+		LensFlareHaloRadius = serialized->get_float(LensFlareHaloRadius_type_id, 0.650000f);
+		LensFlareHaloIntensity = serialized->get_float(LensFlareHaloIntensity_type_id, 0.750000f);
+		LensFlareGhostDispersal = serialized->get_float(LensFlareGhostDispersal_type_id, 0.300000f);
+		AnamorphicLensFlareIntensity = serialized->get_float(AnamorphicLensFlareIntensity_type_id, 0.000000f);
+		AnamorphicLensFlareValueThreshold = serialized->get_float(AnamorphicLensFlareValueThreshold_type_id, 2.000000f);
+		AnamorphicLensFlareSaturationThreshold = serialized->get_float(AnamorphicLensFlareSaturationThreshold_type_id, 0.800000f); 
 	}
 
 	[[nodiscard]] auto

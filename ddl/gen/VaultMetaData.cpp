@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	VaultMetaData::VaultMetaData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Hash = serialized->get_uint32(Hash_type_id, 0);
+		Hash = serialized->get_uint32(Hash_type_id, 0u);
 		CreatedBy = serialized->get_string(CreatedBy_type_id, "UNKNOWN");
 		LastModifiedBy = serialized->get_string(LastModifiedBy_type_id, "UNKNOWN");
 		Tags = serialized->get_string(Tags_type_id, "{}");

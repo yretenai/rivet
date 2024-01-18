@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	CVCCollDataPrius::CVCCollDataPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		PushValue = serialized->get_float(PushValue_type_id, 1.000000);
+		PushValue = serialized->get_float(PushValue_type_id, 1.000000f);
 		PushOnEqual = serialized->get_bool(PushOnEqual_type_id, false);
 		AlwaysPushVertical = serialized->get_bool(AlwaysPushVertical_type_id, false);
 		AllowSoftCollisions = serialized->get_bool(AllowSoftCollisions_type_id, false);
@@ -20,15 +20,15 @@ namespace rivet::ddl::generated {
 		MovingEnvironment = serialized->get_bool(MovingEnvironment_type_id, false);
 		LocatorOrJointName = serialized->get_string(LocatorOrJointName_type_id, {});
 		Type = serialized->get_enum<rivet::ddl::generated::x14f7ad69>(Type_type_id, rivet::ddl::generated::x14f7ad69_values, rivet::ddl::generated::x14f7ad69::Cylinder);
-		Radius = serialized->get_float(Radius_type_id, 0.500000);
-		SoftRadiusInner = serialized->get_float(SoftRadiusInner_type_id, 0.250000);
-		SoftRadiusOuter = serialized->get_float(SoftRadiusOuter_type_id, 0.750000);
-		HeightUp = serialized->get_float(HeightUp_type_id, 2.000000);
-		HeightDown = serialized->get_float(HeightDown_type_id, 0.000000);
+		Radius = serialized->get_float(Radius_type_id, 0.500000f);
+		SoftRadiusInner = serialized->get_float(SoftRadiusInner_type_id, 0.250000f);
+		SoftRadiusOuter = serialized->get_float(SoftRadiusOuter_type_id, 0.750000f);
+		HeightUp = serialized->get_float(HeightUp_type_id, 2.000000f);
+		HeightDown = serialized->get_float(HeightDown_type_id, 0.000000f);
 		UseModelOBB = serialized->get_bool(UseModelOBB_type_id, true);
-		BoxExtentsX = serialized->get_float(BoxExtentsX_type_id, 1.000000);
-		BoxExtentsY = serialized->get_float(BoxExtentsY_type_id, 1.000000);
-		BoxExtentsZ = serialized->get_float(BoxExtentsZ_type_id, 1.000000);
+		BoxExtentsX = serialized->get_float(BoxExtentsX_type_id, 1.000000f);
+		BoxExtentsY = serialized->get_float(BoxExtentsY_type_id, 1.000000f);
+		BoxExtentsZ = serialized->get_float(BoxExtentsZ_type_id, 1.000000f);
 		BoxOBBCenter = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(BoxOBBCenter_type_id); 
 	}
 

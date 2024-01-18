@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	EditorRenderSettings::EditorRenderSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		VisibilitySky = serialized->get_float(VisibilitySky_type_id, 1.000000);
+		VisibilitySky = serialized->get_float(VisibilitySky_type_id, 1.000000f);
 		VisibilityToggle = serialized->get_bool(VisibilityToggle_type_id, true);
 		ColorPickerToggle = serialized->get_bool(ColorPickerToggle_type_id, false);
 		AtmosphereOverrideUIToggle = serialized->get_bool(AtmosphereOverrideUIToggle_type_id, false);
@@ -70,7 +70,7 @@ namespace rivet::ddl::generated {
 		VisNavVolumes = serialized->get_enum<rivet::ddl::generated::x7ffe9612>(VisNavVolumes_type_id, rivet::ddl::generated::x7ffe9612_values, rivet::ddl::generated::x7ffe9612::On);
 		VisNavOverridePolys = serialized->get_enum<rivet::ddl::generated::x7ffe9612>(VisNavOverridePolys_type_id, rivet::ddl::generated::x7ffe9612_values, rivet::ddl::generated::x7ffe9612::On);
 		VisNavMesh = serialized->get_enum<rivet::ddl::generated::x7ffe9612>(VisNavMesh_type_id, rivet::ddl::generated::x7ffe9612_values, rivet::ddl::generated::x7ffe9612::Off);
-		NavMeshLayer = serialized->get_int32(NavMeshLayer_type_id, 0); 
+		NavMeshLayer = serialized->get_int32(NavMeshLayer_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

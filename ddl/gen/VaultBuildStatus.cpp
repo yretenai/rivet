@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	VaultBuildStatus::VaultBuildStatus([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		_id = serialized->get_uint64(_id_type_id, 0);
+		_id = serialized->get_uint64(_id_type_id, 0ull);
 		IsBuildingToC = serialized->get_bool(IsBuildingToC_type_id, false);
-		LastToCCount = serialized->get_int32(LastToCCount_type_id, 0); 
+		LastToCCount = serialized->get_int32(LastToCCount_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

@@ -17,7 +17,7 @@ namespace rivet::ddl::generated {
 		IconPath = serialized->get_string(IconPath_type_id, "");
 		Points = serialized->unwrap_into_many<rivet::ddl::generated::SceneNode>(Points_type_id);
 		IsLooped = serialized->get_bool(IsLooped_type_id, false);
-		LoopStartPointIndex = serialized->get_uint16(LoopStartPointIndex_type_id, 0);
+		LoopStartPointIndex = serialized->get_uint16(LoopStartPointIndex_type_id, 0u);
 		IsReversed = serialized->get_bool(IsReversed_type_id, false);
 		SplineType = serialized->get_enum<rivet::ddl::generated::SplineTypes>(SplineType_type_id, rivet::ddl::generated::SplineTypes_values, rivet::ddl::generated::SplineTypes::Centripetal);
 		Usage = serialized->unwrap_into<rivet::ddl::generated::CurveUsage>(Usage_type_id);

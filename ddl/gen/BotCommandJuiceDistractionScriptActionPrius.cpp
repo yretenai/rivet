@@ -12,7 +12,7 @@ namespace rivet::ddl::generated {
 		DistractionIntroAnim = serialized->get_string(DistractionIntroAnim_type_id, {});
 		DistractionLoopAnim = serialized->get_string(DistractionLoopAnim_type_id, "Feeding");
 		DistractionOutroAnim = serialized->get_string(DistractionOutroAnim_type_id, {});
-		DistractionTime = serialized->get_float(DistractionTime_type_id, 8.000000); 
+		DistractionTime = serialized->get_float(DistractionTime_type_id, 8.000000f); 
 	}
 
 	[[nodiscard]] auto

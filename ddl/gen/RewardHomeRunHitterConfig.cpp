@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	RewardHomeRunHitterConfig::RewardHomeRunHitterConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		DeathAnimScaleXZ = serialized->get_float(DeathAnimScaleXZ_type_id, 5.000000);
-		DeathAnimScaleY = serialized->get_float(DeathAnimScaleY_type_id, 2.000000); 
+		DeathAnimScaleXZ = serialized->get_float(DeathAnimScaleXZ_type_id, 5.000000f);
+		DeathAnimScaleY = serialized->get_float(DeathAnimScaleY_type_id, 2.000000f); 
 	}
 
 	[[nodiscard]] auto

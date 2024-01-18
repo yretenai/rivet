@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	FlightAreaPrius::FlightAreaPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActorGroup = serialized->get_uint64(ActorGroup_type_id, 0); 
+		ActorGroup = serialized->get_uint64(ActorGroup_type_id, 0ull); 
 	}
 
 	[[nodiscard]] auto

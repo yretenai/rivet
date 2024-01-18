@@ -10,11 +10,11 @@
 namespace rivet::ddl::generated {
 	CampaignSave::CampaignSave([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		CurrentLevel = serialized->get_int32(CurrentLevel_type_id, -1);
-		CurrentCheckpoint = serialized->get_uint32(CurrentCheckpoint_type_id, 0);
-		CurrentCheckpointId = serialized->get_uint64(CurrentCheckpointId_type_id, 0);
+		CurrentCheckpoint = serialized->get_uint32(CurrentCheckpoint_type_id, 0u);
+		CurrentCheckpointId = serialized->get_uint64(CurrentCheckpointId_type_id, 0ull);
 		CurrentLightingMode = serialized->get_enum<rivet::ddl::generated::LightingMode>(CurrentLightingMode_type_id, rivet::ddl::generated::LightingMode_values, rivet::ddl::generated::LightingMode::Day);
 		CurrentLightingModeValid = serialized->get_bool(CurrentLightingModeValid_type_id, false);
-		PlaythroughSegmentId = serialized->get_uint32(PlaythroughSegmentId_type_id, 0); 
+		PlaythroughSegmentId = serialized->get_uint32(PlaythroughSegmentId_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

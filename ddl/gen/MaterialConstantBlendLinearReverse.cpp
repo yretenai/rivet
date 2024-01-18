@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	MaterialConstantBlendLinearReverse::MaterialConstantBlendLinearReverse([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): MaterialConstantBlendBase(serialized) {
-		Time = serialized->get_float(Time_type_id, 1.000000); 
+		Time = serialized->get_float(Time_type_id, 1.000000f); 
 	}
 
 	[[nodiscard]] auto

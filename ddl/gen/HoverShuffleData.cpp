@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	HoverShuffleData::HoverShuffleData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		HoverShuffleMinRange = serialized->get_float(HoverShuffleMinRange_type_id, 6.000000);
-		HoverShuffleMaxRange = serialized->get_float(HoverShuffleMaxRange_type_id, 20.000000);
-		HoverShuffleDistShortThreshold = serialized->get_float(HoverShuffleDistShortThreshold_type_id, 13.000000);
-		HoverShuffleDistMediumThreshold = serialized->get_float(HoverShuffleDistMediumThreshold_type_id, 13.000000);
-		HoverShuffleDesiredMoveSpeed = serialized->get_float(HoverShuffleDesiredMoveSpeed_type_id, -1.000000); 
+		HoverShuffleMinRange = serialized->get_float(HoverShuffleMinRange_type_id, 6.000000f);
+		HoverShuffleMaxRange = serialized->get_float(HoverShuffleMaxRange_type_id, 20.000000f);
+		HoverShuffleDistShortThreshold = serialized->get_float(HoverShuffleDistShortThreshold_type_id, 13.000000f);
+		HoverShuffleDistMediumThreshold = serialized->get_float(HoverShuffleDistMediumThreshold_type_id, 13.000000f);
+		HoverShuffleDesiredMoveSpeed = serialized->get_float(HoverShuffleDesiredMoveSpeed_type_id, -1.000000f); 
 	}
 
 	[[nodiscard]] auto

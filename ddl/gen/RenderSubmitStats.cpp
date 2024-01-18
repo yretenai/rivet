@@ -9,27 +9,27 @@
 
 namespace rivet::ddl::generated {
 	RenderSubmitStats::RenderSubmitStats([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DynamicShadowCasterCount = serialized->get_uint32(DynamicShadowCasterCount_type_id, 0);
-		StaticShadowCasterCount = serialized->get_uint32(StaticShadowCasterCount_type_id, 0);
-		DynamicShadowCasterHighwaterCount = serialized->get_uint32(DynamicShadowCasterHighwaterCount_type_id, 0);
-		StaticShadowCasterHighwaterCount = serialized->get_uint32(StaticShadowCasterHighwaterCount_type_id, 0);
-		ShadowCacheHitCount = serialized->get_uint32(ShadowCacheHitCount_type_id, 0);
-		SkinGpuSyncFenceOverflow = serialized->get_uint32(SkinGpuSyncFenceOverflow_type_id, 0);
+		DynamicShadowCasterCount = serialized->get_uint32(DynamicShadowCasterCount_type_id, 0u);
+		StaticShadowCasterCount = serialized->get_uint32(StaticShadowCasterCount_type_id, 0u);
+		DynamicShadowCasterHighwaterCount = serialized->get_uint32(DynamicShadowCasterHighwaterCount_type_id, 0u);
+		StaticShadowCasterHighwaterCount = serialized->get_uint32(StaticShadowCasterHighwaterCount_type_id, 0u);
+		ShadowCacheHitCount = serialized->get_uint32(ShadowCacheHitCount_type_id, 0u);
+		SkinGpuSyncFenceOverflow = serialized->get_uint32(SkinGpuSyncFenceOverflow_type_id, 0u);
 		LightStats = serialized->unwrap_into<rivet::ddl::generated::LightStats>(LightStats_type_id);
 		RuntimeEnvProbeLightStats = serialized->unwrap_into<rivet::ddl::generated::LightStats>(RuntimeEnvProbeLightStats_type_id);
-		PotentialModelInstCount = serialized->get_uint32(PotentialModelInstCount_type_id, 0);
-		VisibleModelInstCount = serialized->get_uint32(VisibleModelInstCount_type_id, 0);
-		PotentialHibernateCount = serialized->get_uint32(PotentialHibernateCount_type_id, 0);
-		VisibleHibernateCount = serialized->get_uint32(VisibleHibernateCount_type_id, 0);
-		EnvProbeAvgCpuMicros = serialized->get_uint32(EnvProbeAvgCpuMicros_type_id, 0);
-		EnvProbeAvgGpuMicros = serialized->get_uint32(EnvProbeAvgGpuMicros_type_id, 0);
-		EnvProbesVisible = serialized->get_uint32(EnvProbesVisible_type_id, 0);
-		EnvProbesActive = serialized->get_uint32(EnvProbesActive_type_id, 0);
-		EnvProbesPending = serialized->get_uint32(EnvProbesPending_type_id, 0);
-		EnvProbesRetiring = serialized->get_uint32(EnvProbesRetiring_type_id, 0);
-		EnvProbeRelevantWithoutDrawlists = serialized->get_uint32(EnvProbeRelevantWithoutDrawlists_type_id, 0);
-		EnvProbeFaceRendered = serialized->get_uint32(EnvProbeFaceRendered_type_id, 0);
-		EnvProbeAuxWork = serialized->get_uint32(EnvProbeAuxWork_type_id, 0); 
+		PotentialModelInstCount = serialized->get_uint32(PotentialModelInstCount_type_id, 0u);
+		VisibleModelInstCount = serialized->get_uint32(VisibleModelInstCount_type_id, 0u);
+		PotentialHibernateCount = serialized->get_uint32(PotentialHibernateCount_type_id, 0u);
+		VisibleHibernateCount = serialized->get_uint32(VisibleHibernateCount_type_id, 0u);
+		EnvProbeAvgCpuMicros = serialized->get_uint32(EnvProbeAvgCpuMicros_type_id, 0u);
+		EnvProbeAvgGpuMicros = serialized->get_uint32(EnvProbeAvgGpuMicros_type_id, 0u);
+		EnvProbesVisible = serialized->get_uint32(EnvProbesVisible_type_id, 0u);
+		EnvProbesActive = serialized->get_uint32(EnvProbesActive_type_id, 0u);
+		EnvProbesPending = serialized->get_uint32(EnvProbesPending_type_id, 0u);
+		EnvProbesRetiring = serialized->get_uint32(EnvProbesRetiring_type_id, 0u);
+		EnvProbeRelevantWithoutDrawlists = serialized->get_uint32(EnvProbeRelevantWithoutDrawlists_type_id, 0u);
+		EnvProbeFaceRendered = serialized->get_uint32(EnvProbeFaceRendered_type_id, 0u);
+		EnvProbeAuxWork = serialized->get_uint32(EnvProbeAuxWork_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

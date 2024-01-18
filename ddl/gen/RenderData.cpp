@@ -11,9 +11,9 @@ namespace rivet::ddl::generated {
 	RenderData::RenderData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		CustomInput = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(CustomInput_type_id);
 		Color = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Color_type_id);
-		AlphaValue = serialized->get_float(AlphaValue_type_id, 1.000000);
-		AlphaSortBias = serialized->get_float(AlphaSortBias_type_id, 0.000000);
-		ZBias = serialized->get_float(ZBias_type_id, 0.000000); 
+		AlphaValue = serialized->get_float(AlphaValue_type_id, 1.000000f);
+		AlphaSortBias = serialized->get_float(AlphaSortBias_type_id, 0.000000f);
+		ZBias = serialized->get_float(ZBias_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

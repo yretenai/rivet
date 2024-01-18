@@ -10,7 +10,7 @@ namespace rivet::ddl::generated {
 		EventId = serialized->get_string(EventId_type_id, {});
 		Level = serialized->get_string(Level_type_id, {});
 		LocationType = serialized->get_enum<rivet::ddl::generated::x3947cf7f>(LocationType_type_id, rivet::ddl::generated::x3947cf7f_values, rivet::ddl::generated::x3947cf7f::FlockingVolume);
-		RequiredMax = serialized->get_int32(RequiredMax_type_id, 0); 
+		RequiredMax = serialized->get_int32(RequiredMax_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

@@ -10,7 +10,7 @@
 namespace rivet::ddl::generated {
 	AnimDamageJointEventResponderPrius::AnimDamageJointEventResponderPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		DamageMaps = serialized->unwrap_into_many<rivet::ddl::generated::AnimDamageJointEventResponderElement>(DamageMaps_type_id);
-		EventLayer = serialized->get_uint32(EventLayer_type_id, 0);
+		EventLayer = serialized->get_uint32(EventLayer_type_id, 0u);
 		IgnoreSelfDamage = serialized->get_bool(IgnoreSelfDamage_type_id, false); 
 	}
 

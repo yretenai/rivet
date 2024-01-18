@@ -10,12 +10,12 @@ namespace rivet::ddl::generated {
 		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Camera);
 		StartActive = serialized->get_bool(StartActive_type_id, true);
 		OnlyFireOnChangeEvent = serialized->get_bool(OnlyFireOnChangeEvent_type_id, true);
-		SignalMax = serialized->get_int32(SignalMax_type_id, 1);
-		MaxDistance = serialized->get_float(MaxDistance_type_id, 1000.000000);
+		SignalMax = serialized->get_int32(SignalMax_type_id, 1u);
+		MaxDistance = serialized->get_float(MaxDistance_type_id, 1000.000000f);
 		StartActorsLookedAt = serialized->get_bool(StartActorsLookedAt_type_id, false);
 		CheckWholeCameraView = serialized->get_bool(CheckWholeCameraView_type_id, false);
 		ShouldBeVisible = serialized->get_bool(ShouldBeVisible_type_id, true);
-		PercentVisible = serialized->get_float(PercentVisible_type_id, 0.500000); 
+		PercentVisible = serialized->get_float(PercentVisible_type_id, 0.500000f); 
 	}
 
 	[[nodiscard]] auto

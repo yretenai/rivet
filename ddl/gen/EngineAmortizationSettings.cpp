@@ -7,13 +7,13 @@
 
 namespace rivet::ddl::generated {
 	EngineAmortizationSettings::EngineAmortizationSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ZoneInstantiationBudgetMin = serialized->get_float(ZoneInstantiationBudgetMin_type_id, 0.003000);
-		ZoneInstantiationBudgetMax = serialized->get_float(ZoneInstantiationBudgetMax_type_id, 0.015000);
+		ZoneInstantiationBudgetMin = serialized->get_float(ZoneInstantiationBudgetMin_type_id, 0.003000f);
+		ZoneInstantiationBudgetMax = serialized->get_float(ZoneInstantiationBudgetMax_type_id, 0.015000f);
 		ZoneInstantiationUseLeftoverFrameTime = serialized->get_bool(ZoneInstantiationUseLeftoverFrameTime_type_id, false);
-		AssetInstantiationBudgetMin = serialized->get_float(AssetInstantiationBudgetMin_type_id, 0.004000);
-		AssetInstantiationBudgetMax = serialized->get_float(AssetInstantiationBudgetMax_type_id, 0.015000);
-		AssetDeletionBudgetMin = serialized->get_float(AssetDeletionBudgetMin_type_id, 0.002000);
-		AssetDeletionBudgetMax = serialized->get_float(AssetDeletionBudgetMax_type_id, 0.015000);
+		AssetInstantiationBudgetMin = serialized->get_float(AssetInstantiationBudgetMin_type_id, 0.004000f);
+		AssetInstantiationBudgetMax = serialized->get_float(AssetInstantiationBudgetMax_type_id, 0.015000f);
+		AssetDeletionBudgetMin = serialized->get_float(AssetDeletionBudgetMin_type_id, 0.002000f);
+		AssetDeletionBudgetMax = serialized->get_float(AssetDeletionBudgetMax_type_id, 0.015000f);
 		BatchSoundBankVirtualFrees = serialized->get_bool(BatchSoundBankVirtualFrees_type_id, true); 
 	}
 

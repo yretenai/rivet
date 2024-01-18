@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	LightStat::LightStat([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		LightCount = serialized->get_uint32(LightCount_type_id, 0);
-		ShadowCount = serialized->get_uint32(ShadowCount_type_id, 0); 
+		LightCount = serialized->get_uint32(LightCount_type_id, 0u);
+		ShadowCount = serialized->get_uint32(ShadowCount_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	SheepVolumeSpawnData::SheepVolumeSpawnData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ActorSpawnData(serialized) {
-		SheepHandle = serialized->get_uint32(SheepHandle_type_id, 0);
-		ZoneIndex = serialized->get_int32(ZoneIndex_type_id, 0);
+		SheepHandle = serialized->get_uint32(SheepHandle_type_id, 0u);
+		ZoneIndex = serialized->get_int32(ZoneIndex_type_id, 0u);
 		Position = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Position_type_id); 
 	}
 

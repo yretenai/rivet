@@ -7,19 +7,19 @@
 
 namespace rivet::ddl::generated {
 	FireConeData::FireConeData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SizeMin = serialized->get_float(SizeMin_type_id, 0.000000);
-		SizeMax = serialized->get_float(SizeMax_type_id, 0.000000);
-		MinShotsToBump = serialized->get_float(MinShotsToBump_type_id, 0.000000);
-		ShotBumpAngle = serialized->get_float(ShotBumpAngle_type_id, 0.000000);
-		ShotBumpSpeed = serialized->get_float(ShotBumpSpeed_type_id, 0.000000);
-		ShotBumpAccel = serialized->get_float(ShotBumpAccel_type_id, 0.000000);
-		ShotBumpDecel = serialized->get_float(ShotBumpDecel_type_id, 0.000000);
-		SettleDelay = serialized->get_float(SettleDelay_type_id, 0.150000);
-		SettleSpeed = serialized->get_float(SettleSpeed_type_id, 0.000000);
-		SettleAccel = serialized->get_float(SettleAccel_type_id, 0.000000);
-		SettleDecel = serialized->get_float(SettleDecel_type_id, 0.000000);
-		AutoHitAngle = serialized->get_float(AutoHitAngle_type_id, 0.750000);
-		AutoHitRange = serialized->get_float(AutoHitRange_type_id, 30.000000); 
+		SizeMin = serialized->get_float(SizeMin_type_id, 0.000000f);
+		SizeMax = serialized->get_float(SizeMax_type_id, 0.000000f);
+		MinShotsToBump = serialized->get_float(MinShotsToBump_type_id, 0.000000f);
+		ShotBumpAngle = serialized->get_float(ShotBumpAngle_type_id, 0.000000f);
+		ShotBumpSpeed = serialized->get_float(ShotBumpSpeed_type_id, 0.000000f);
+		ShotBumpAccel = serialized->get_float(ShotBumpAccel_type_id, 0.000000f);
+		ShotBumpDecel = serialized->get_float(ShotBumpDecel_type_id, 0.000000f);
+		SettleDelay = serialized->get_float(SettleDelay_type_id, 0.150000f);
+		SettleSpeed = serialized->get_float(SettleSpeed_type_id, 0.000000f);
+		SettleAccel = serialized->get_float(SettleAccel_type_id, 0.000000f);
+		SettleDecel = serialized->get_float(SettleDecel_type_id, 0.000000f);
+		AutoHitAngle = serialized->get_float(AutoHitAngle_type_id, 0.750000f);
+		AutoHitRange = serialized->get_float(AutoHitRange_type_id, 30.000000f); 
 	}
 
 	[[nodiscard]] auto

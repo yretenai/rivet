@@ -8,11 +8,11 @@
 namespace rivet::ddl::generated {
 	PhysicsMotionPropertiesParam::PhysicsMotionPropertiesParam([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		UseAggressiveRagdollSettling = serialized->get_bool(UseAggressiveRagdollSettling_type_id, false);
-		GravityFactor = serialized->get_float(GravityFactor_type_id, 1.000000);
-		MaxLinearSpeed = serialized->get_float(MaxLinearSpeed_type_id, 200.000000);
-		MaxAngularSpeed = serialized->get_float(MaxAngularSpeed_type_id, 3600.000000);
-		LinearDamping = serialized->get_float(LinearDamping_type_id, 0.000000);
-		AngularDamping = serialized->get_float(AngularDamping_type_id, 0.000000); 
+		GravityFactor = serialized->get_float(GravityFactor_type_id, 1.000000f);
+		MaxLinearSpeed = serialized->get_float(MaxLinearSpeed_type_id, 200.000000f);
+		MaxAngularSpeed = serialized->get_float(MaxAngularSpeed_type_id, 3600.000000f);
+		LinearDamping = serialized->get_float(LinearDamping_type_id, 0.000000f);
+		AngularDamping = serialized->get_float(AngularDamping_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

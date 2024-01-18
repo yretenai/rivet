@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	TriggerResponderDamageModPrius::TriggerResponderDamageModPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): TriggerResponderBasePrius(serialized) {
-		ModWhenTriggered = serialized->get_float(ModWhenTriggered_type_id, 1.000000);
-		ModWhenUntriggered = serialized->get_float(ModWhenUntriggered_type_id, 1.000000); 
+		ModWhenTriggered = serialized->get_float(ModWhenTriggered_type_id, 1.000000f);
+		ModWhenUntriggered = serialized->get_float(ModWhenUntriggered_type_id, 1.000000f); 
 	}
 
 	[[nodiscard]] auto

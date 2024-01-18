@@ -16,7 +16,7 @@ namespace rivet::ddl::generated {
 		ActivityId = serialized->get_string(ActivityId_type_id, {});
 		ActivityLink = serialized->unwrap_into<rivet::ddl::generated::ActivityLinkBase>(ActivityLink_type_id);
 		SendLocationOnEnd = serialized->get_bool(SendLocationOnEnd_type_id, false);
-		DefaultPlaytimeEstimate = serialized->get_uint32(DefaultPlaytimeEstimate_type_id, 5);
+		DefaultPlaytimeEstimate = serialized->get_uint32(DefaultPlaytimeEstimate_type_id, 5u);
 		Hints = serialized->unwrap_into_many<rivet::ddl::generated::ActivityHintWithId>(Hints_type_id); 
 	}
 

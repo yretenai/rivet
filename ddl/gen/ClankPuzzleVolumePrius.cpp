@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	ClankPuzzleVolumePrius::ClankPuzzleVolumePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		VolumeRadius = serialized->get_float(VolumeRadius_type_id, 1.000000);
-		TargetTypes = serialized->get_bitset<rivet::ddl::generated::xf32dacf0>(TargetTypes_type_id, rivet::ddl::generated::xf32dacf0_values, 7); 
+		VolumeRadius = serialized->get_float(VolumeRadius_type_id, 1.000000f);
+		TargetTypes = serialized->get_bitset<rivet::ddl::generated::xf32dacf0>(TargetTypes_type_id, rivet::ddl::generated::xf32dacf0_values, 7u); 
 	}
 
 	[[nodiscard]] auto

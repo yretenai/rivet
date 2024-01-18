@@ -11,19 +11,19 @@ namespace rivet::ddl::generated {
 	MannableTurretCannonPrius::MannableTurretCannonPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		PitchJoint = serialized->get_string(PitchJoint_type_id, "pitch_pivot");
 		FreeYaw = serialized->get_bool(FreeYaw_type_id, false);
-		YawLimitMin = serialized->get_float(YawLimitMin_type_id, 90.000000);
-		YawLimitMax = serialized->get_float(YawLimitMax_type_id, 90.000000);
-		PitchLimitMin = serialized->get_float(PitchLimitMin_type_id, 45.000000);
-		PitchLimitMax = serialized->get_float(PitchLimitMax_type_id, 30.000000);
+		YawLimitMin = serialized->get_float(YawLimitMin_type_id, 90.000000f);
+		YawLimitMax = serialized->get_float(YawLimitMax_type_id, 90.000000f);
+		PitchLimitMin = serialized->get_float(PitchLimitMin_type_id, 45.000000f);
+		PitchLimitMax = serialized->get_float(PitchLimitMax_type_id, 30.000000f);
 		OnlyHeroes = serialized->get_bool(OnlyHeroes_type_id, false);
-		MaxYawSpeed = serialized->get_float(MaxYawSpeed_type_id, 720.000000);
-		MaxPitchSpeed = serialized->get_float(MaxPitchSpeed_type_id, 360.000000);
+		MaxYawSpeed = serialized->get_float(MaxYawSpeed_type_id, 720.000000f);
+		MaxPitchSpeed = serialized->get_float(MaxPitchSpeed_type_id, 360.000000f);
 		FPTurret = serialized->get_string(FPTurret_type_id, {});
 		ShotConfig = serialized->get_string(ShotConfig_type_id, {});
 		ShotEmitLoc = serialized->get_string(ShotEmitLoc_type_id, "");
-		ShotDelay = serialized->get_float(ShotDelay_type_id, 0.500000);
+		ShotDelay = serialized->get_float(ShotDelay_type_id, 0.500000f);
 		ReticleLocator = serialized->get_string(ReticleLocator_type_id, "");
-		IdleLookAt = serialized->get_uint64(IdleLookAt_type_id, 0);
+		IdleLookAt = serialized->get_uint64(IdleLookAt_type_id, 0ull);
 		TurretOfferPrius = serialized->unwrap_into<rivet::ddl::generated::UseTurretOfferPrius>(TurretOfferPrius_type_id); 
 	}
 

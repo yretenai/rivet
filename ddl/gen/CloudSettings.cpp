@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	CloudSettings::CloudSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ShadowPenumbraScale = serialized->get_float(ShadowPenumbraScale_type_id, 6.000000);
-		ShadowTapRatio = serialized->get_float(ShadowTapRatio_type_id, 0.500000);
-		ShadowMaxAtten = serialized->get_float(ShadowMaxAtten_type_id, 0.000000); 
+		ShadowPenumbraScale = serialized->get_float(ShadowPenumbraScale_type_id, 6.000000f);
+		ShadowTapRatio = serialized->get_float(ShadowTapRatio_type_id, 0.500000f);
+		ShadowMaxAtten = serialized->get_float(ShadowMaxAtten_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

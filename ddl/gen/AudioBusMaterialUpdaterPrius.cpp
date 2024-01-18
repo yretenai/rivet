@@ -10,9 +10,9 @@ namespace rivet::ddl::generated {
 		MaterialConstantName = serialized->get_string(MaterialConstantName_type_id, {});
 		MaterialMapName = serialized->get_string(MaterialMapName_type_id, {});
 		AudioBus = serialized->get_string(AudioBus_type_id, {});
-		MinBusValue = serialized->get_float(MinBusValue_type_id, 0.000000);
-		MaxBusValue = serialized->get_float(MaxBusValue_type_id, 1.000000);
-		RandomBonusValue = serialized->get_float(RandomBonusValue_type_id, 0.020000); 
+		MinBusValue = serialized->get_float(MinBusValue_type_id, 0.000000f);
+		MaxBusValue = serialized->get_float(MaxBusValue_type_id, 1.000000f);
+		RandomBonusValue = serialized->get_float(RandomBonusValue_type_id, 0.020000f); 
 	}
 
 	[[nodiscard]] auto

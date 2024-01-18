@@ -20,7 +20,7 @@ namespace rivet::ddl::generated {
 		herofwd = serialized->get_floats(herofwd_type_id);
 		zoneIds = serialized->get_uint64s(zoneIds_type_id);
 		zoneTransforms = serialized->unwrap_into_many<rivet::ddl::generated::DDLMatrix4>(zoneTransforms_type_id);
-		activeZoneId = serialized->get_uint64(activeZoneId_type_id, 0); 
+		activeZoneId = serialized->get_uint64(activeZoneId_type_id, 0ull); 
 	}
 
 	[[nodiscard]] auto

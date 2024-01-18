@@ -7,13 +7,13 @@
 
 namespace rivet::ddl::generated {
 	BloodTrailPrius::BloodTrailPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SplatFrequency = serialized->get_float(SplatFrequency_type_id, 0.500000);
-		MovingSplatFrequency = serialized->get_float(MovingSplatFrequency_type_id, 0.200000);
-		SpeedThreshold = serialized->get_float(SpeedThreshold_type_id, 1.000000);
-		RandOffset = serialized->get_float(RandOffset_type_id, 0.300000);
+		SplatFrequency = serialized->get_float(SplatFrequency_type_id, 0.500000f);
+		MovingSplatFrequency = serialized->get_float(MovingSplatFrequency_type_id, 0.200000f);
+		SpeedThreshold = serialized->get_float(SpeedThreshold_type_id, 1.000000f);
+		RandOffset = serialized->get_float(RandOffset_type_id, 0.300000f);
 		UseDamageTimer = serialized->get_bool(UseDamageTimer_type_id, true);
-		MaxDuration = serialized->get_float(MaxDuration_type_id, 3.000000);
-		MaxDamage = serialized->get_float(MaxDamage_type_id, 30.000000); 
+		MaxDuration = serialized->get_float(MaxDuration_type_id, 3.000000f);
+		MaxDamage = serialized->get_float(MaxDamage_type_id, 30.000000f); 
 	}
 
 	[[nodiscard]] auto

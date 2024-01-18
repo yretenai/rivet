@@ -8,8 +8,8 @@
 namespace rivet::ddl::generated {
 	BotRange::BotRange([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Use = serialized->get_bool(Use_type_id, false);
-		Area = serialized->get_uint64(Area_type_id, 0);
-		Range = serialized->get_float(Range_type_id, 30.000000); 
+		Area = serialized->get_uint64(Area_type_id, 0ull);
+		Range = serialized->get_float(Range_type_id, 30.000000f); 
 	}
 
 	[[nodiscard]] auto

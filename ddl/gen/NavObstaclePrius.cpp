@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	NavObstaclePrius::NavObstaclePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		CapsuleRadius = serialized->get_float(CapsuleRadius_type_id, 0.350000);
-		CapsuleHeight = serialized->get_float(CapsuleHeight_type_id, 1.000000);
+		CapsuleRadius = serialized->get_float(CapsuleRadius_type_id, 0.350000f);
+		CapsuleHeight = serialized->get_float(CapsuleHeight_type_id, 1.000000f);
 		SetLarge = serialized->get_bool(SetLarge_type_id, false);
 		UseBoundingSpherePosition = serialized->get_bool(UseBoundingSpherePosition_type_id, false); 
 	}

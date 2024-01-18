@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	ShootingTauntData::ShootingTauntData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MinRangedAttacksMissedForTaunt = serialized->get_int32(MinRangedAttacksMissedForTaunt_type_id, 3);
-		MaxRangedAttacksMissedForTaunt = serialized->get_int32(MaxRangedAttacksMissedForTaunt_type_id, 3);
-		TauntChance = serialized->get_float(TauntChance_type_id, 0.400000);
-		IdleTauntChance = serialized->get_float(IdleTauntChance_type_id, 0.250000);
-		AimFidgetChance = serialized->get_float(AimFidgetChance_type_id, 0.400000);
-		AimAdjustBias = serialized->get_float(AimAdjustBias_type_id, 0.650000); 
+		MinRangedAttacksMissedForTaunt = serialized->get_int32(MinRangedAttacksMissedForTaunt_type_id, 3u);
+		MaxRangedAttacksMissedForTaunt = serialized->get_int32(MaxRangedAttacksMissedForTaunt_type_id, 3u);
+		TauntChance = serialized->get_float(TauntChance_type_id, 0.400000f);
+		IdleTauntChance = serialized->get_float(IdleTauntChance_type_id, 0.250000f);
+		AimFidgetChance = serialized->get_float(AimFidgetChance_type_id, 0.400000f);
+		AimAdjustBias = serialized->get_float(AimAdjustBias_type_id, 0.650000f); 
 	}
 
 	[[nodiscard]] auto

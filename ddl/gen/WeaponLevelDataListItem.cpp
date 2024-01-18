@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	WeaponLevelDataListItem::WeaponLevelDataListItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		XPRequired = serialized->get_uint32(XPRequired_type_id, 0);
+		XPRequired = serialized->get_uint32(XPRequired_type_id, 0u);
 		UpgradeList = serialized->unwrap_into_many<rivet::ddl::generated::WeaponUpgradeListItem>(UpgradeList_type_id); 
 	}
 

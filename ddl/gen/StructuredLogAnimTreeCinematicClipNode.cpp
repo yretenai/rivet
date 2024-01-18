@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	StructuredLogAnimTreeCinematicClipNode::StructuredLogAnimTreeCinematicClipNode([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): StructuredLogAnimTreeClipNode(serialized) {
-		CineNodeFlags = serialized->get_bitset<rivet::ddl::generated::x596823a1>(CineNodeFlags_type_id, rivet::ddl::generated::x596823a1_values, 0);
+		CineNodeFlags = serialized->get_bitset<rivet::ddl::generated::x596823a1>(CineNodeFlags_type_id, rivet::ddl::generated::x596823a1_values, 0u);
 		ObjSpaceOriginLocatorMat = serialized->unwrap_into<rivet::ddl::generated::StructuredLogMatrix>(ObjSpaceOriginLocatorMat_type_id); 
 	}
 

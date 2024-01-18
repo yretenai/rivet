@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	IntrospectionEngineInstance::IntrospectionEngineInstance([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Port = serialized->get_int32(Port_type_id, 0);
+		Port = serialized->get_int32(Port_type_id, 0u);
 		Ip = serialized->get_string(Ip_type_id, {});
 		HostName = serialized->get_string(HostName_type_id, {});
 		AppName = serialized->get_string(AppName_type_id, {});

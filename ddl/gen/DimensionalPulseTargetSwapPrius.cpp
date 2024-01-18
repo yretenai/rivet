@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	DimensionalPulseTargetSwapPrius::DimensionalPulseTargetSwapPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): DimensionalPulseTargetPrius(serialized) {
-		NextActor = serialized->get_uint64(NextActor_type_id, 0); 
+		NextActor = serialized->get_uint64(NextActor_type_id, 0ull); 
 	}
 
 	[[nodiscard]] auto

@@ -9,7 +9,7 @@ namespace rivet::ddl::generated {
 	LoadSystemSettings::LoadSystemSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		DisplayMode = serialized->get_enum<rivet::ddl::generated::x961f7219>(DisplayMode_type_id, rivet::ddl::generated::x961f7219_values, rivet::ddl::generated::x961f7219::Off);
 		LogVerbosity = serialized->get_enum<rivet::ddl::generated::xa694530c>(LogVerbosity_type_id, rivet::ddl::generated::xa694530c_values, rivet::ddl::generated::xa694530c::Low);
-		DisplayOpenUnitDist = serialized->get_uint32(DisplayOpenUnitDist_type_id, 300);
+		DisplayOpenUnitDist = serialized->get_uint32(DisplayOpenUnitDist_type_id, 300u);
 		DisplayOpenUnitInfo = serialized->get_bool(DisplayOpenUnitInfo_type_id, false);
 		DisplayOpenUnitMap = serialized->get_bool(DisplayOpenUnitMap_type_id, false);
 		DisplayOverlayInfo = serialized->get_bool(DisplayOverlayInfo_type_id, false);
@@ -20,12 +20,12 @@ namespace rivet::ddl::generated {
 		DelayStreamingPaused = serialized->get_bool(DelayStreamingPaused_type_id, false);
 		LightingZonesEnabled = serialized->get_bool(LightingZonesEnabled_type_id, true);
 		DefaultLightingMode = serialized->get_enum<rivet::ddl::generated::LightingMode>(DefaultLightingMode_type_id, rivet::ddl::generated::LightingMode_values, rivet::ddl::generated::LightingMode::Day);
-		DefaultTileRadius = serialized->get_float(DefaultTileRadius_type_id, 91.000000);
-		LargeLoadThresholdBytes = serialized->get_uint32(LargeLoadThresholdBytes_type_id, 0);
-		InstantiationUrgencyStartDist = serialized->get_int32(InstantiationUrgencyStartDist_type_id, 64);
-		InstantiationUrgencyEndDist = serialized->get_int32(InstantiationUrgencyEndDist_type_id, 16);
+		DefaultTileRadius = serialized->get_float(DefaultTileRadius_type_id, 91.000000f);
+		LargeLoadThresholdBytes = serialized->get_uint32(LargeLoadThresholdBytes_type_id, 0u);
+		InstantiationUrgencyStartDist = serialized->get_int32(InstantiationUrgencyStartDist_type_id, 64u);
+		InstantiationUrgencyEndDist = serialized->get_int32(InstantiationUrgencyEndDist_type_id, 16u);
 		WaitOnLightGridsForInitialLoad = serialized->get_bool(WaitOnLightGridsForInitialLoad_type_id, false);
-		LoadTimeDisplayBudget = serialized->get_float(LoadTimeDisplayBudget_type_id, 2.000000);
+		LoadTimeDisplayBudget = serialized->get_float(LoadTimeDisplayBudget_type_id, 2.000000f);
 		LoadTimeDisplayMode = serialized->get_enum<rivet::ddl::generated::LoadTimeDisplayMode>(LoadTimeDisplayMode_type_id, rivet::ddl::generated::LoadTimeDisplayMode_values, rivet::ddl::generated::LoadTimeDisplayMode::None);
 		DisplayNxStorageStats = serialized->get_bool(DisplayNxStorageStats_type_id, false);
 		ThrottleModeNxStorage = serialized->get_enum<rivet::ddl::generated::x45c7d9d6>(ThrottleModeNxStorage_type_id, rivet::ddl::generated::x45c7d9d6_values, rivet::ddl::generated::x45c7d9d6::None); 

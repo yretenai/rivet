@@ -15,7 +15,7 @@ namespace rivet::ddl::generated {
 		IsConnected = serialized->get_bool(IsConnected_type_id, false);
 		PortUI = serialized->unwrap_into<rivet::ddl::generated::MaterialNodePortUI>(PortUI_type_id);
 		UserInput = serialized->unwrap_into<rivet::ddl::generated::MaterialNodeUserInput>(UserInput_type_id);
-		InternalSortOrder = serialized->get_int32(InternalSortOrder_type_id, 0); 
+		InternalSortOrder = serialized->get_int32(InternalSortOrder_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

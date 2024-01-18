@@ -13,7 +13,7 @@ namespace rivet::ddl::generated {
 		CharacterVoice = serialized->get_enum<rivet::ddl::generated::Voice>(CharacterVoice_type_id, rivet::ddl::generated::Voice_values, rivet::ddl::generated::Voice::unused);
 		LineTagStart = serialized->get_string(LineTagStart_type_id, {});
 		LineTagEnd = serialized->get_string(LineTagEnd_type_id, {});
-		Weight = serialized->get_float(Weight_type_id, 1.000000);
+		Weight = serialized->get_float(Weight_type_id, 1.000000f);
 		Writebacks = serialized->unwrap_into_many<rivet::ddl::generated::DEVOLineMemoryWriteback>(Writebacks_type_id);
 		Followup = serialized->unwrap_into<rivet::ddl::generated::DEVOFollowup>(Followup_type_id); 
 	}

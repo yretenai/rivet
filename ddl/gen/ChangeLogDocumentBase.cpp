@@ -9,10 +9,10 @@
 
 namespace rivet::ddl::generated {
 	ChangeLogDocumentBase::ChangeLogDocumentBase([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		_id = serialized->get_int64(_id_type_id, 0);
-		SessionId = serialized->get_uint64(SessionId_type_id, 0);
+		_id = serialized->get_int64(_id_type_id, 0u);
+		SessionId = serialized->get_uint64(SessionId_type_id, 0ull);
 		Action = serialized->get_enum<rivet::ddl::generated::xea0685c5>(Action_type_id, rivet::ddl::generated::xea0685c5_values, rivet::ddl::generated::xea0685c5::Modify);
-		AssetId = serialized->get_uint64(AssetId_type_id, 0);
+		AssetId = serialized->get_uint64(AssetId_type_id, 0ull);
 		AssetType = serialized->get_enum<rivet::ddl::generated::AssetExtensions>(AssetType_type_id, rivet::ddl::generated::AssetExtensions_values, rivet::ddl::generated::AssetExtensions::zone);
 		IsAssetWritable = serialized->get_bool(IsAssetWritable_type_id, false);
 		SourceType = serialized->get_enum<rivet::ddl::generated::xfea7566a>(SourceType_type_id, rivet::ddl::generated::xfea7566a_values, rivet::ddl::generated::xfea7566a::abcinfo);

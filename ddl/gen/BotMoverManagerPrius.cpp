@@ -18,8 +18,8 @@ namespace rivet::ddl::generated {
 		PushOnEqual = serialized->get_bool(PushOnEqual_type_id, true);
 		UseFullSpeedDeflection = serialized->get_bool(UseFullSpeedDeflection_type_id, false);
 		UseSoftCollisions = serialized->get_bool(UseSoftCollisions_type_id, false);
-		SoftCVCInner = serialized->get_float(SoftCVCInner_type_id, 0.250000);
-		SoftCVCOuter = serialized->get_float(SoftCVCOuter_type_id, 0.750000); 
+		SoftCVCInner = serialized->get_float(SoftCVCInner_type_id, 0.250000f);
+		SoftCVCOuter = serialized->get_float(SoftCVCOuter_type_id, 0.750000f); 
 	}
 
 	[[nodiscard]] auto

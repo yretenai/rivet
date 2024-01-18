@@ -8,15 +8,15 @@
 namespace rivet::ddl::generated {
 	AimAssistRelativeSpeedModifier::AimAssistRelativeSpeedModifier([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Enable = serialized->get_bool(Enable_type_id, true);
-		FrictionSpeedMin = serialized->get_float(FrictionSpeedMin_type_id, 1.000000);
-		FrictionSpeedMax = serialized->get_float(FrictionSpeedMax_type_id, 20.000000);
-		FrictionMod = serialized->get_float(FrictionMod_type_id, 1.000000);
-		MagnetSpeedMin = serialized->get_float(MagnetSpeedMin_type_id, 1.000000);
-		MagnetSpeedMax = serialized->get_float(MagnetSpeedMax_type_id, 10.000000);
-		MagnetMod = serialized->get_float(MagnetMod_type_id, 1.000000);
-		CenterSpeedMin = serialized->get_float(CenterSpeedMin_type_id, 1.000000);
-		CenterSpeedMax = serialized->get_float(CenterSpeedMax_type_id, 10.000000);
-		CenterMod = serialized->get_float(CenterMod_type_id, 1.000000); 
+		FrictionSpeedMin = serialized->get_float(FrictionSpeedMin_type_id, 1.000000f);
+		FrictionSpeedMax = serialized->get_float(FrictionSpeedMax_type_id, 20.000000f);
+		FrictionMod = serialized->get_float(FrictionMod_type_id, 1.000000f);
+		MagnetSpeedMin = serialized->get_float(MagnetSpeedMin_type_id, 1.000000f);
+		MagnetSpeedMax = serialized->get_float(MagnetSpeedMax_type_id, 10.000000f);
+		MagnetMod = serialized->get_float(MagnetMod_type_id, 1.000000f);
+		CenterSpeedMin = serialized->get_float(CenterSpeedMin_type_id, 1.000000f);
+		CenterSpeedMax = serialized->get_float(CenterSpeedMax_type_id, 10.000000f);
+		CenterMod = serialized->get_float(CenterMod_type_id, 1.000000f); 
 	}
 
 	[[nodiscard]] auto

@@ -7,17 +7,17 @@
 
 namespace rivet::ddl::generated {
 	HBAOPlusSettings::HBAOPlusSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Radius = serialized->get_float(Radius_type_id, 1.200000);
-		Bias = serialized->get_float(Bias_type_id, 0.350000);
-		SmallScaleAO = serialized->get_float(SmallScaleAO_type_id, 0.600000);
-		LargeScaleAO = serialized->get_float(LargeScaleAO_type_id, 1.000000);
-		PowerExponent = serialized->get_float(PowerExponent_type_id, 3.200000);
+		Radius = serialized->get_float(Radius_type_id, 1.200000f);
+		Bias = serialized->get_float(Bias_type_id, 0.350000f);
+		SmallScaleAO = serialized->get_float(SmallScaleAO_type_id, 0.600000f);
+		LargeScaleAO = serialized->get_float(LargeScaleAO_type_id, 1.000000f);
+		PowerExponent = serialized->get_float(PowerExponent_type_id, 3.200000f);
 		EnableForegroundAO = serialized->get_bool(EnableForegroundAO_type_id, true);
-		ForegroundViewDepth = serialized->get_float(ForegroundViewDepth_type_id, 11.000000);
+		ForegroundViewDepth = serialized->get_float(ForegroundViewDepth_type_id, 11.000000f);
 		EnableBackgroundAO = serialized->get_bool(EnableBackgroundAO_type_id, true);
-		BackgroundViewDepth = serialized->get_float(BackgroundViewDepth_type_id, 110.000000);
+		BackgroundViewDepth = serialized->get_float(BackgroundViewDepth_type_id, 110.000000f);
 		EnableBlur = serialized->get_bool(EnableBlur_type_id, true);
-		BlurSharpness = serialized->get_float(BlurSharpness_type_id, 16.000000);
+		BlurSharpness = serialized->get_float(BlurSharpness_type_id, 16.000000f);
 		EnableNormalMap = serialized->get_bool(EnableNormalMap_type_id, true); 
 	}
 

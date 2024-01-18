@@ -14,7 +14,7 @@ namespace rivet::ddl::generated {
 		PlayerPosInfo = serialized->unwrap_into<rivet::ddl::generated::DevstatsPlayerPositionInfo>(PlayerPosInfo_type_id);
 		PrimarySegmentInfo = serialized->unwrap_into<rivet::ddl::generated::DevstatsPrimarySegmentInfo>(PrimarySegmentInfo_type_id);
 		FilterMode = serialized->get_string(FilterMode_type_id, {});
-		FilterStrength = serialized->get_float(FilterStrength_type_id, 0.000000); 
+		FilterStrength = serialized->get_float(FilterStrength_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

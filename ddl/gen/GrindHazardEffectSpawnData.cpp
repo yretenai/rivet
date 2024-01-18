@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	GrindHazardEffectSpawnData::GrindHazardEffectSpawnData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ActorSpawnData(serialized) {
-		OwnerHandle = serialized->get_uint32(OwnerHandle_type_id, 0);
-		AssetId = serialized->get_uint64(AssetId_type_id, 0);
+		OwnerHandle = serialized->get_uint32(OwnerHandle_type_id, 0u);
+		AssetId = serialized->get_uint64(AssetId_type_id, 0ull);
 		StartPos = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(StartPos_type_id);
 		EndPos = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(EndPos_type_id); 
 	}

@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	NodeGraphSignalDebugMessage::NodeGraphSignalDebugMessage([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AssetId = serialized->get_uint64(AssetId_type_id, 0);
-		ConnectionId = serialized->get_uint64(ConnectionId_type_id, 0);
-		GraphId = serialized->get_uint64(GraphId_type_id, 0);
-		ActorContextId = serialized->get_uint64(ActorContextId_type_id, 0);
-		NodeId = serialized->get_uint64(NodeId_type_id, 0);
-		WorldFrameIndex = serialized->get_uint32(WorldFrameIndex_type_id, 0); 
+		AssetId = serialized->get_uint64(AssetId_type_id, 0ull);
+		ConnectionId = serialized->get_uint64(ConnectionId_type_id, 0ull);
+		GraphId = serialized->get_uint64(GraphId_type_id, 0ull);
+		ActorContextId = serialized->get_uint64(ActorContextId_type_id, 0ull);
+		NodeId = serialized->get_uint64(NodeId_type_id, 0ull);
+		WorldFrameIndex = serialized->get_uint32(WorldFrameIndex_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

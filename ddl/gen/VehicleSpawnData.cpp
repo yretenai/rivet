@@ -10,9 +10,9 @@
 namespace rivet::ddl::generated {
 	VehicleSpawnData::VehicleSpawnData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ActorSpawnData(serialized) {
 		SpawnPos = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(SpawnPos_type_id);
-		SpawnNode = serialized->get_uint32(SpawnNode_type_id, 0);
-		TargetNode = serialized->get_uint32(TargetNode_type_id, 0);
-		Seed = serialized->get_uint32(Seed_type_id, 0); 
+		SpawnNode = serialized->get_uint32(SpawnNode_type_id, 0u);
+		TargetNode = serialized->get_uint32(TargetNode_type_id, 0u);
+		Seed = serialized->get_uint32(Seed_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

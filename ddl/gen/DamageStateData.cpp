@@ -12,7 +12,7 @@
 
 namespace rivet::ddl::generated {
 	DamageStateData::DamageStateData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MinPixelizedSize = serialized->get_float(MinPixelizedSize_type_id, 0.000000);
+		MinPixelizedSize = serialized->get_float(MinPixelizedSize_type_id, 0.000000f);
 		DamageStates = serialized->unwrap_into_many<rivet::ddl::generated::DamageStateElement>(DamageStates_type_id);
 		ChunkableLooks = serialized->unwrap_into_many<rivet::ddl::generated::LookChunk>(ChunkableLooks_type_id);
 		GenericChunks = serialized->unwrap_into_many<rivet::ddl::generated::GenericChunk>(GenericChunks_type_id);

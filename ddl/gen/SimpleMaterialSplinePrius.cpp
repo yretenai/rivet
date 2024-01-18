@@ -8,8 +8,8 @@
 namespace rivet::ddl::generated {
 	SimpleMaterialSplinePrius::SimpleMaterialSplinePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Material = serialized->get_string(Material_type_id, {});
-		Radius = serialized->get_float(Radius_type_id, 0.500000);
-		TilingDistance = serialized->get_float(TilingDistance_type_id, -1.000000);
+		Radius = serialized->get_float(Radius_type_id, 0.500000f);
+		TilingDistance = serialized->get_float(TilingDistance_type_id, -1.000000f);
 		SplineType = serialized->get_enum<rivet::ddl::generated::SplineTypes>(SplineType_type_id, rivet::ddl::generated::SplineTypes_values, rivet::ddl::generated::SplineTypes::CatmullRom);
 		CanMove = serialized->get_bool(CanMove_type_id, false);
 		SkipShadowCast = serialized->get_bool(SkipShadowCast_type_id, false); 

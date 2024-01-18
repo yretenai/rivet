@@ -11,8 +11,8 @@
 
 namespace rivet::ddl::generated {
 	VolcanicEruptorGeyserPrius::VolcanicEruptorGeyserPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Radius = serialized->get_float(Radius_type_id, 0.800000);
-		InitialDelay = serialized->get_float(InitialDelay_type_id, 0.000000);
+		Radius = serialized->get_float(Radius_type_id, 0.800000f);
+		InitialDelay = serialized->get_float(InitialDelay_type_id, 0.000000f);
 		DamageType = serialized->get_enum<rivet::ddl::generated::DamageTypes>(DamageType_type_id, rivet::ddl::generated::DamageTypes_values, rivet::ddl::generated::DamageTypes::Fire);
 		DebugDraw = serialized->get_bool(DebugDraw_type_id, false);
 		BurstData = serialized->unwrap_into<rivet::ddl::generated::GeyserBurstData>(BurstData_type_id);

@@ -20,20 +20,20 @@ namespace rivet::ddl::generated {
 		Mip32AssetIndex = serialized->get_int32(Mip32AssetIndex_type_id, -1);
 		Mip32SubIndex = serialized->get_int32(Mip32SubIndex_type_id, -1);
 		VolumeShape = serialized->get_enum<rivet::ddl::generated::VolumeShapes>(VolumeShape_type_id, rivet::ddl::generated::VolumeShapes_values, rivet::ddl::generated::VolumeShapes::Ellipsoid);
-		Weight = serialized->get_float(Weight_type_id, 1.000000);
+		Weight = serialized->get_float(Weight_type_id, 1.000000f);
 		ProbeOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(ProbeOffset_type_id);
-		FalloffDistNegX = serialized->get_float(FalloffDistNegX_type_id, 1.000000);
-		FalloffDistPosX = serialized->get_float(FalloffDistPosX_type_id, 1.000000);
-		FalloffDistNegY = serialized->get_float(FalloffDistNegY_type_id, 1.000000);
-		FalloffDistPosY = serialized->get_float(FalloffDistPosY_type_id, 1.000000);
-		FalloffDistNegZ = serialized->get_float(FalloffDistNegZ_type_id, 1.000000);
-		FalloffDistPosZ = serialized->get_float(FalloffDistPosZ_type_id, 1.000000);
-		ProxyDistNegX = serialized->get_float(ProxyDistNegX_type_id, 1.000000);
-		ProxyDistPosX = serialized->get_float(ProxyDistPosX_type_id, 1.000000);
-		ProxyDistNegY = serialized->get_float(ProxyDistNegY_type_id, 1.000000);
-		ProxyDistPosY = serialized->get_float(ProxyDistPosY_type_id, 1.000000);
-		ProxyDistNegZ = serialized->get_float(ProxyDistNegZ_type_id, 1.000000);
-		ProxyDistPosZ = serialized->get_float(ProxyDistPosZ_type_id, 1.000000); 
+		FalloffDistNegX = serialized->get_float(FalloffDistNegX_type_id, 1.000000f);
+		FalloffDistPosX = serialized->get_float(FalloffDistPosX_type_id, 1.000000f);
+		FalloffDistNegY = serialized->get_float(FalloffDistNegY_type_id, 1.000000f);
+		FalloffDistPosY = serialized->get_float(FalloffDistPosY_type_id, 1.000000f);
+		FalloffDistNegZ = serialized->get_float(FalloffDistNegZ_type_id, 1.000000f);
+		FalloffDistPosZ = serialized->get_float(FalloffDistPosZ_type_id, 1.000000f);
+		ProxyDistNegX = serialized->get_float(ProxyDistNegX_type_id, 1.000000f);
+		ProxyDistPosX = serialized->get_float(ProxyDistPosX_type_id, 1.000000f);
+		ProxyDistNegY = serialized->get_float(ProxyDistNegY_type_id, 1.000000f);
+		ProxyDistPosY = serialized->get_float(ProxyDistPosY_type_id, 1.000000f);
+		ProxyDistNegZ = serialized->get_float(ProxyDistNegZ_type_id, 1.000000f);
+		ProxyDistPosZ = serialized->get_float(ProxyDistPosZ_type_id, 1.000000f); 
 	}
 
 	[[nodiscard]] auto

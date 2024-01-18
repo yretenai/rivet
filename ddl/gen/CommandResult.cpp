@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	CommandResult::CommandResult([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		StatusCode = serialized->get_int32(StatusCode_type_id, 500);
+		StatusCode = serialized->get_int32(StatusCode_type_id, 500u);
 		StatusMessage = serialized->get_string(StatusMessage_type_id, "");
 		Path = serialized->get_string(Path_type_id, "");
 		Content = serialized->get_field(Content_type_id); 

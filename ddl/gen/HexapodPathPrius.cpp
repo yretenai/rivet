@@ -9,12 +9,12 @@
 
 namespace rivet::ddl::generated {
 	HexapodPathPrius::HexapodPathPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		PathRadius = serialized->get_float(PathRadius_type_id, 0.500000);
-		PointSpacing = serialized->get_float(PointSpacing_type_id, 2.000000);
+		PathRadius = serialized->get_float(PathRadius_type_id, 0.500000f);
+		PointSpacing = serialized->get_float(PointSpacing_type_id, 2.000000f);
 		PathMaterial = serialized->get_string(PathMaterial_type_id, {});
 		UV0Tiling = serialized->unwrap_into<rivet::ddl::generated::UVTiling>(UV0Tiling_type_id);
 		UV1Tiling = serialized->unwrap_into<rivet::ddl::generated::UVTiling>(UV1Tiling_type_id);
-		Roundness = serialized->get_uint8(Roundness_type_id, 16); 
+		Roundness = serialized->get_uint8(Roundness_type_id, 16u); 
 	}
 
 	[[nodiscard]] auto

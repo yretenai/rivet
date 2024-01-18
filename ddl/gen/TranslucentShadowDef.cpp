@@ -8,8 +8,8 @@
 namespace rivet::ddl::generated {
 	TranslucentShadowDef::TranslucentShadowDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		GoboAsset = serialized->get_string(GoboAsset_type_id, {});
-		RampInDistance = serialized->get_float(RampInDistance_type_id, 0.000000);
-		FadeOutDistance = serialized->get_float(FadeOutDistance_type_id, 0.000000);
+		RampInDistance = serialized->get_float(RampInDistance_type_id, 0.000000f);
+		FadeOutDistance = serialized->get_float(FadeOutDistance_type_id, 0.000000f);
 		OrientToLight = serialized->get_bool(OrientToLight_type_id, false); 
 	}
 

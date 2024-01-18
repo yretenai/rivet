@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	FastCurveFollowerAutoStopperPrius::FastCurveFollowerAutoStopperPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): CurveFollowerAutoStopperPrius(serialized) {
-		AutoStopActorGroup = serialized->get_uint64(AutoStopActorGroup_type_id, 0);
+		AutoStopActorGroup = serialized->get_uint64(AutoStopActorGroup_type_id, 0ull);
 		CollJoint = serialized->get_string(CollJoint_type_id, "root"); 
 	}
 

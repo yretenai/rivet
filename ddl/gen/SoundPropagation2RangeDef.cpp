@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	SoundPropagation2RangeDef::SoundPropagation2RangeDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Min = serialized->get_float(Min_type_id, 0.000000);
-		Max = serialized->get_float(Max_type_id, 0.000000); 
+		Min = serialized->get_float(Min_type_id, 0.000000f);
+		Max = serialized->get_float(Max_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

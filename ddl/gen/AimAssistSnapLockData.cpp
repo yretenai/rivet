@@ -8,8 +8,8 @@
 namespace rivet::ddl::generated {
 	AimAssistSnapLockData::AimAssistSnapLockData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Enable = serialized->get_bool(Enable_type_id, true);
-		SnapHoldTime = serialized->get_float(SnapHoldTime_type_id, 0.250000);
-		SnapDecayTime = serialized->get_float(SnapDecayTime_type_id, 0.500000); 
+		SnapHoldTime = serialized->get_float(SnapHoldTime_type_id, 0.250000f);
+		SnapDecayTime = serialized->get_float(SnapDecayTime_type_id, 0.500000f); 
 	}
 
 	[[nodiscard]] auto

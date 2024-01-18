@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	FuseExplosion::FuseExplosion([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): GrenadeExplosionMode(serialized) {
-		FuseTime = serialized->get_float(FuseTime_type_id, 0.000000); 
+		FuseTime = serialized->get_float(FuseTime_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

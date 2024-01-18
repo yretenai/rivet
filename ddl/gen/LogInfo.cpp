@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	LogInfo::LogInfo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Indent = serialized->get_uint32(Indent_type_id, 0);
+		Indent = serialized->get_uint32(Indent_type_id, 0u);
 		Text = serialized->get_string(Text_type_id, {}); 
 	}
 

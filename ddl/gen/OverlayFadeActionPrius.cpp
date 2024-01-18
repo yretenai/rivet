@@ -8,8 +8,8 @@
 namespace rivet::ddl::generated {
 	OverlayFadeActionPrius::OverlayFadeActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::UI);
-		Duration = serialized->get_float(Duration_type_id, 3.000000);
-		Delay = serialized->get_float(Delay_type_id, 0.000000);
+		Duration = serialized->get_float(Duration_type_id, 3.000000f);
+		Delay = serialized->get_float(Delay_type_id, 0.000000f);
 		Fade = serialized->get_enum<rivet::ddl::generated::x6b791e0e>(Fade_type_id, rivet::ddl::generated::x6b791e0e_values, rivet::ddl::generated::x6b791e0e::Fade_In);
 		IsWhite = serialized->get_bool(IsWhite_type_id, false);
 		ClearOnZoneUnload = serialized->get_bool(ClearOnZoneUnload_type_id, false);

@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	BossChaseControllerPrius::BossChaseControllerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		StartSpeed = serialized->get_float(StartSpeed_type_id, 10.000000);
+		StartSpeed = serialized->get_float(StartSpeed_type_id, 10.000000f);
 		ChaseLocator = serialized->get_string(ChaseLocator_type_id, {});
 		DistanceParams = serialized->unwrap_into<rivet::ddl::generated::IdealDistanceParamsDDL>(DistanceParams_type_id); 
 	}

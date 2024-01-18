@@ -10,8 +10,8 @@
 namespace rivet::ddl::generated {
 	WindDef::WindDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Enabled = serialized->get_bool(Enabled_type_id, true);
-		Intensity = serialized->get_float(Intensity_type_id, 1.000000);
-		Azimuth = serialized->get_float(Azimuth_type_id, 0.000000);
+		Intensity = serialized->get_float(Intensity_type_id, 1.000000f);
+		Azimuth = serialized->get_float(Azimuth_type_id, 0.000000f);
 		WindGustsIntensity = serialized->unwrap_into<rivet::ddl::generated::WindMinMax>(WindGustsIntensity_type_id);
 		WindGustsFrequency = serialized->unwrap_into<rivet::ddl::generated::WindMinMax>(WindGustsFrequency_type_id);
 		WindGustsDuration = serialized->unwrap_into<rivet::ddl::generated::WindMinMax>(WindGustsDuration_type_id); 

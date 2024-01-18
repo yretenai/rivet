@@ -18,7 +18,7 @@ namespace rivet::ddl::generated {
 		CardSmallImage = serialized->get_string(CardSmallImage_type_id, {});
 		CardLargeImage = serialized->get_string(CardLargeImage_type_id, {});
 		UnlockSequence = serialized->unwrap_into<rivet::ddl::generated::ObjSysUnlockSequence>(UnlockSequence_type_id);
-		DefaultPlaytimeEstimate = serialized->get_uint32(DefaultPlaytimeEstimate_type_id, 5);
+		DefaultPlaytimeEstimate = serialized->get_uint32(DefaultPlaytimeEstimate_type_id, 5u);
 		GameIntentCheckpoint = serialized->get_string(GameIntentCheckpoint_type_id, {});
 		Reward = serialized->unwrap_into<rivet::ddl::generated::ActivityReward>(Reward_type_id);
 		Hints = serialized->unwrap_into_many<rivet::ddl::generated::ActivityHint>(Hints_type_id);

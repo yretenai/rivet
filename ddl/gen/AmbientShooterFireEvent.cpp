@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	AmbientShooterFireEvent::AmbientShooterFireEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		TargetActor = serialized->get_uint64(TargetActor_type_id, 0);
-		Duration = serialized->get_float(Duration_type_id, 0.000000); 
+		TargetActor = serialized->get_uint64(TargetActor_type_id, 0ull);
+		Duration = serialized->get_float(Duration_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

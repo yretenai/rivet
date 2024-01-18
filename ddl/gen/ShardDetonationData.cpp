@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ShardDetonationData::ShardDetonationData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DamagePercent = serialized->get_float(DamagePercent_type_id, 0.200000); 
+		DamagePercent = serialized->get_float(DamagePercent_type_id, 0.200000f); 
 	}
 
 	[[nodiscard]] auto

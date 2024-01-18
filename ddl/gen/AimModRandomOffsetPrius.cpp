@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	AimModRandomOffsetPrius::AimModRandomOffsetPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): AimModifierPrius(serialized) {
-		VerticalMin = serialized->get_float(VerticalMin_type_id, 0.000000);
-		VerticalMax = serialized->get_float(VerticalMax_type_id, 0.000000);
-		HorizontalMin = serialized->get_float(HorizontalMin_type_id, 0.000000);
-		HorizontalMax = serialized->get_float(HorizontalMax_type_id, 0.000000); 
+		VerticalMin = serialized->get_float(VerticalMin_type_id, 0.000000f);
+		VerticalMax = serialized->get_float(VerticalMax_type_id, 0.000000f);
+		HorizontalMin = serialized->get_float(HorizontalMin_type_id, 0.000000f);
+		HorizontalMax = serialized->get_float(HorizontalMax_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

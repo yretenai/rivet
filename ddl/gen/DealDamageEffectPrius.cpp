@@ -7,14 +7,14 @@
 
 namespace rivet::ddl::generated {
 	DealDamageEffectPrius::DealDamageEffectPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ScriptedShotEffectBasePrius(serialized) {
-		Damage = serialized->get_float(Damage_type_id, 0.000000);
+		Damage = serialized->get_float(Damage_type_id, 0.000000f);
 		KnockbackLevel = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(KnockbackLevel_type_id, rivet::ddl::generated::KnockbackLevels_values, rivet::ddl::generated::KnockbackLevels::None);
-		KnockbackAmount = serialized->get_float(KnockbackAmount_type_id, -1.000000);
-		StatusAmount = serialized->get_float(StatusAmount_type_id, 0.000000);
-		StatusDuration = serialized->get_float(StatusDuration_type_id, 0.000000);
-		NoRepeatTime = serialized->get_float(NoRepeatTime_type_id, 0.000000);
+		KnockbackAmount = serialized->get_float(KnockbackAmount_type_id, -1.000000f);
+		StatusAmount = serialized->get_float(StatusAmount_type_id, 0.000000f);
+		StatusDuration = serialized->get_float(StatusDuration_type_id, 0.000000f);
+		NoRepeatTime = serialized->get_float(NoRepeatTime_type_id, 0.000000f);
 		Type = serialized->get_enum<rivet::ddl::generated::DamageTypes>(Type_type_id, rivet::ddl::generated::DamageTypes_values, rivet::ddl::generated::DamageTypes::Bullet);
-		DamageFlags = serialized->get_bitset<rivet::ddl::generated::x65d7dac2>(DamageFlags_type_id, rivet::ddl::generated::x65d7dac2_values, 0); 
+		DamageFlags = serialized->get_bitset<rivet::ddl::generated::x65d7dac2>(DamageFlags_type_id, rivet::ddl::generated::x65d7dac2_values, 0u); 
 	}
 
 	[[nodiscard]] auto

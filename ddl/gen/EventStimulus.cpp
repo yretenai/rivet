@@ -10,13 +10,13 @@
 namespace rivet::ddl::generated {
 	EventStimulus::EventStimulus([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Event = serialized->unwrap_into<rivet::ddl::generated::EventBase>(Event_type_id);
-		BonusConfirmTime = serialized->get_float(BonusConfirmTime_type_id, 5.000000);
+		BonusConfirmTime = serialized->get_float(BonusConfirmTime_type_id, 5.000000f);
 		NewMinTargetAwareness = serialized->get_enum<rivet::ddl::generated::xbd2e617d>(NewMinTargetAwareness_type_id, rivet::ddl::generated::xbd2e617d_values, rivet::ddl::generated::xbd2e617d::Spotting);
-		Aggro = serialized->get_float(Aggro_type_id, 15.000000);
-		ListenRadius = serialized->get_float(ListenRadius_type_id, 0.000000);
+		Aggro = serialized->get_float(Aggro_type_id, 15.000000f);
+		ListenRadius = serialized->get_float(ListenRadius_type_id, 0.000000f);
 		StealTargetFromFriendlySender = serialized->get_bool(StealTargetFromFriendlySender_type_id, true);
 		StealthDamage = serialized->get_bool(StealthDamage_type_id, false);
-		RelevantAwareness = serialized->get_bitset<rivet::ddl::generated::RelevantAwareness>(RelevantAwareness_type_id, rivet::ddl::generated::RelevantAwareness_values, 1); 
+		RelevantAwareness = serialized->get_bitset<rivet::ddl::generated::RelevantAwareness>(RelevantAwareness_type_id, rivet::ddl::generated::RelevantAwareness_values, 1u); 
 	}
 
 	[[nodiscard]] auto

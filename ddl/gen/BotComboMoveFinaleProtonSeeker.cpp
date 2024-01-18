@@ -14,8 +14,8 @@ namespace rivet::ddl::generated {
 		SpawnedShotConfigExplosive = serialized->get_string(SpawnedShotConfigExplosive_type_id, {});
 		PortalActorAsset = serialized->get_string(PortalActorAsset_type_id, {});
 		WeaponActorAsset = serialized->get_string(WeaponActorAsset_type_id, {});
-		WeaponActorId = serialized->get_uint64(WeaponActorId_type_id, 0);
-		WeaponActorVol = serialized->get_uint64(WeaponActorVol_type_id, 0);
+		WeaponActorId = serialized->get_uint64(WeaponActorId_type_id, 0ull);
+		WeaponActorVol = serialized->get_uint64(WeaponActorVol_type_id, 0ull);
 		WeaponActorEmitLocator = serialized->get_string(WeaponActorEmitLocator_type_id, {});
 		CancelOutOfVolume = serialized->get_bool(CancelOutOfVolume_type_id, false);
 		RemainAfterAttack = serialized->get_bool(RemainAfterAttack_type_id, false);

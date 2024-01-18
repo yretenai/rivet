@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	HealEffectPrius::HealEffectPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ScriptedShotEffectBasePrius(serialized) {
 		ActorType = serialized->get_enum<rivet::ddl::generated::x4891b54>(ActorType_type_id, rivet::ddl::generated::x4891b54_values, rivet::ddl::generated::x4891b54::HitActor);
-		Health = serialized->get_float(Health_type_id, 25.000000);
+		Health = serialized->get_float(Health_type_id, 25.000000f);
 		ContinuousMode = serialized->get_bool(ContinuousMode_type_id, false); 
 	}
 

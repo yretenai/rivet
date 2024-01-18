@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	TargetShapeCone::TargetShapeCone([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Length = serialized->get_float(Length_type_id, 15.000000);
-		HalfAngle = serialized->get_float(HalfAngle_type_id, 45.000000); 
+		Length = serialized->get_float(Length_type_id, 15.000000f);
+		HalfAngle = serialized->get_float(HalfAngle_type_id, 45.000000f); 
 	}
 
 	[[nodiscard]] auto

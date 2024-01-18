@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	SpawnSyncedActorEffectPrius::SpawnSyncedActorEffectPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ScriptedShotEffectBasePrius(serialized) {
 		ActorAsset = serialized->get_string(ActorAsset_type_id, {});
-		LifeTime = serialized->get_float(LifeTime_type_id, -1.000000);
+		LifeTime = serialized->get_float(LifeTime_type_id, -1.000000f);
 		AttachToHitActor = serialized->get_bool(AttachToHitActor_type_id, false);
 		MatchCreatorAllegiance = serialized->get_bool(MatchCreatorAllegiance_type_id, true);
 		MatchCreatorZone = serialized->get_bool(MatchCreatorZone_type_id, false); 

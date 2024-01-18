@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	MountAbilityFireWeapon::MountAbilityFireWeapon([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): MountAbilityBase(serialized) {
-		EquipIndex = serialized->get_uint32(EquipIndex_type_id, 0);
-		TriggerIndex = serialized->get_uint32(TriggerIndex_type_id, 0);
-		ReticleForwardOffsetFromCamera = serialized->get_float(ReticleForwardOffsetFromCamera_type_id, 6.000000);
-		ReticleUpOffsetFromCamera = serialized->get_float(ReticleUpOffsetFromCamera_type_id, 0.000000);
-		ReticleTestDist = serialized->get_float(ReticleTestDist_type_id, 50.000000);
+		EquipIndex = serialized->get_uint32(EquipIndex_type_id, 0u);
+		TriggerIndex = serialized->get_uint32(TriggerIndex_type_id, 0u);
+		ReticleForwardOffsetFromCamera = serialized->get_float(ReticleForwardOffsetFromCamera_type_id, 6.000000f);
+		ReticleUpOffsetFromCamera = serialized->get_float(ReticleUpOffsetFromCamera_type_id, 0.000000f);
+		ReticleTestDist = serialized->get_float(ReticleTestDist_type_id, 50.000000f);
 		ReticleOn = serialized->get_bool(ReticleOn_type_id, true);
 		IDString = serialized->get_string(IDString_type_id, {}); 
 	}

@@ -9,21 +9,21 @@
 
 namespace rivet::ddl::generated {
 	SimplePromptPrius::SimplePromptPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		TriggerCount = serialized->get_uint32(TriggerCount_type_id, 0);
-		RetriggerDelay = serialized->get_float(RetriggerDelay_type_id, 1.000000);
+		TriggerCount = serialized->get_uint32(TriggerCount_type_id, 0u);
+		RetriggerDelay = serialized->get_float(RetriggerDelay_type_id, 1.000000f);
 		PromptText = serialized->get_string(PromptText_type_id, "Use");
 		Tag = serialized->get_string(Tag_type_id, "INVALID");
-		UseRange = serialized->get_float(UseRange_type_id, 3.000000);
+		UseRange = serialized->get_float(UseRange_type_id, 3.000000f);
 		VolumeRange = serialized->get_bool(VolumeRange_type_id, true);
-		AltPromptVolume = serialized->get_uint64(AltPromptVolume_type_id, 0);
+		AltPromptVolume = serialized->get_uint64(AltPromptVolume_type_id, 0ull);
 		PromptOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(PromptOffset_type_id);
-		PromptAngleMin = serialized->get_float(PromptAngleMin_type_id, -180.000000);
-		PromptAngleMax = serialized->get_float(PromptAngleMax_type_id, 180.000000);
+		PromptAngleMin = serialized->get_float(PromptAngleMin_type_id, -180.000000f);
+		PromptAngleMax = serialized->get_float(PromptAngleMax_type_id, 180.000000f);
 		UsePOI = serialized->get_bool(UsePOI_type_id, true);
 		POISubtype = serialized->get_enum<rivet::ddl::generated::x275d9b04>(POISubtype_type_id, rivet::ddl::generated::x275d9b04_values, rivet::ddl::generated::x275d9b04::Pickup);
-		PreviewRange = serialized->get_float(PreviewRange_type_id, 0.000000);
+		PreviewRange = serialized->get_float(PreviewRange_type_id, 0.000000f);
 		StartActive = serialized->get_bool(StartActive_type_id, true);
-		Priority = serialized->get_float(Priority_type_id, 2.000000); 
+		Priority = serialized->get_float(Priority_type_id, 2.000000f); 
 	}
 
 	[[nodiscard]] auto

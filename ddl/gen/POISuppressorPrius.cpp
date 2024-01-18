@@ -10,11 +10,11 @@
 namespace rivet::ddl::generated {
 	POISuppressorPrius::POISuppressorPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Priority = serialized->get_enum<rivet::ddl::generated::xfb0b3aad>(Priority_type_id, rivet::ddl::generated::xfb0b3aad_values, rivet::ddl::generated::xfb0b3aad::POIPriorityNormal);
-		AutoDeleteTimer = serialized->get_float(AutoDeleteTimer_type_id, 2.000000);
+		AutoDeleteTimer = serialized->get_float(AutoDeleteTimer_type_id, 2.000000f);
 		UseActorPosition = serialized->get_bool(UseActorPosition_type_id, true);
 		Dynamic = serialized->get_bool(Dynamic_type_id, false);
 		OverridePosition = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(OverridePosition_type_id);
-		Radius = serialized->get_float(Radius_type_id, 1.000000); 
+		Radius = serialized->get_float(Radius_type_id, 1.000000f); 
 	}
 
 	[[nodiscard]] auto

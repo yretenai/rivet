@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	AnimListElement::AnimListElement([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		AnimationName = serialized->get_string(AnimationName_type_id, {});
-		Priority = serialized->get_uint32(Priority_type_id, 0);
+		Priority = serialized->get_uint32(Priority_type_id, 0u);
 		PlayOnce = serialized->get_bool(PlayOnce_type_id, false);
 		OverrideAlways = serialized->get_bool(OverrideAlways_type_id, false);
 		OverrideByPriority = serialized->get_bool(OverrideByPriority_type_id, true);

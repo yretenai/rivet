@@ -8,10 +8,10 @@
 namespace rivet::ddl::generated {
 	OverlayFlashActionPrius::OverlayFlashActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::UI);
-		DelayTime = serialized->get_float(DelayTime_type_id, 1.000000);
-		InDuration = serialized->get_float(InDuration_type_id, 0.500000);
-		HoldDuration = serialized->get_float(HoldDuration_type_id, 1.000000);
-		OutDuration = serialized->get_float(OutDuration_type_id, 0.500000); 
+		DelayTime = serialized->get_float(DelayTime_type_id, 1.000000f);
+		InDuration = serialized->get_float(InDuration_type_id, 0.500000f);
+		HoldDuration = serialized->get_float(HoldDuration_type_id, 1.000000f);
+		OutDuration = serialized->get_float(OutDuration_type_id, 0.500000f); 
 	}
 
 	[[nodiscard]] auto

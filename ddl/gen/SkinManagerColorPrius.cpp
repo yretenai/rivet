@@ -10,10 +10,10 @@
 
 namespace rivet::ddl::generated {
 	SkinManagerColorPrius::SkinManagerColorPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ColorConstantNameHash = serialized->get_uint32(ColorConstantNameHash_type_id, 0);
+		ColorConstantNameHash = serialized->get_uint32(ColorConstantNameHash_type_id, 0u);
 		ColorValue = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(ColorValue_type_id);
-		ColorConfigAssetId = serialized->get_uint64(ColorConfigAssetId_type_id, 0);
-		ColorConfigNameHash = serialized->get_uint32(ColorConfigNameHash_type_id, 0); 
+		ColorConfigAssetId = serialized->get_uint64(ColorConfigAssetId_type_id, 0ull);
+		ColorConfigNameHash = serialized->get_uint32(ColorConfigNameHash_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

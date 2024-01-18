@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	CameraAutoDeactivatePrius::CameraAutoDeactivatePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		BlendOutTime = serialized->get_float(BlendOutTime_type_id, 1.000000);
-		ExitDistance = serialized->get_float(ExitDistance_type_id, -1.000000);
-		ExitTimeout = serialized->get_float(ExitTimeout_type_id, -1.000000);
-		TestInputDelay = serialized->get_float(TestInputDelay_type_id, 0.500000);
+		BlendOutTime = serialized->get_float(BlendOutTime_type_id, 1.000000f);
+		ExitDistance = serialized->get_float(ExitDistance_type_id, -1.000000f);
+		ExitTimeout = serialized->get_float(ExitTimeout_type_id, -1.000000f);
+		TestInputDelay = serialized->get_float(TestInputDelay_type_id, 0.500000f);
 		ExitOnCameraInput = serialized->get_bool(ExitOnCameraInput_type_id, true);
 		ExitOnMotionInput = serialized->get_bool(ExitOnMotionInput_type_id, true);
 		ExitOnButtonInput = serialized->get_bool(ExitOnButtonInput_type_id, true); 

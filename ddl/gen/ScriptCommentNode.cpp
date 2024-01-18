@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	ScriptCommentNode::ScriptCommentNode([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Id = serialized->get_uint64(Id_type_id, 0);
+		Id = serialized->get_uint64(Id_type_id, 0ull);
 		Name = serialized->get_string(Name_type_id, {});
-		XPos = serialized->get_int32(XPos_type_id, 0);
-		YPos = serialized->get_int32(YPos_type_id, 0);
-		Width = serialized->get_uint32(Width_type_id, 0);
-		Height = serialized->get_uint32(Height_type_id, 0); 
+		XPos = serialized->get_int32(XPos_type_id, 0u);
+		YPos = serialized->get_int32(YPos_type_id, 0u);
+		Width = serialized->get_uint32(Width_type_id, 0u);
+		Height = serialized->get_uint32(Height_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

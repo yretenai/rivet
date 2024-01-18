@@ -20,7 +20,7 @@ namespace rivet::ddl::generated {
 		UVOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(UVOffset_type_id);
 		Material = serialized->get_string(Material_type_id, {});
 		Collision = serialized->get_bool(Collision_type_id, true);
-		CollisionFlags = serialized->get_bitset<rivet::ddl::generated::PhysicsCollFlags>(CollisionFlags_type_id, rivet::ddl::generated::PhysicsCollFlags_values, 1087);
+		CollisionFlags = serialized->get_bitset<rivet::ddl::generated::PhysicsCollFlags>(CollisionFlags_type_id, rivet::ddl::generated::PhysicsCollFlags_values, 1087u);
 		LOD1 = serialized->get_bool(LOD1_type_id, false);
 		LOD2 = serialized->get_bool(LOD2_type_id, false); 
 	}

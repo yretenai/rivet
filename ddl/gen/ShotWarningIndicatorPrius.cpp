@@ -10,8 +10,8 @@
 namespace rivet::ddl::generated {
 	ShotWarningIndicatorPrius::ShotWarningIndicatorPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		TargetPos = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(TargetPos_type_id);
-		Radius = serialized->get_float(Radius_type_id, 1.000000);
-		Timer = serialized->get_float(Timer_type_id, -1.000000);
+		Radius = serialized->get_float(Radius_type_id, 1.000000f);
+		Timer = serialized->get_float(Timer_type_id, -1.000000f);
 		WarnFromActivate = serialized->get_bool(WarnFromActivate_type_id, true); 
 	}
 

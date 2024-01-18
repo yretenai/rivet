@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ChangeBatch::ChangeBatch([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		_id = serialized->get_uint64(_id_type_id, 0);
+		_id = serialized->get_uint64(_id_type_id, 0ull);
 		Description = serialized->get_string(Description_type_id, "");
 		ExplicitChange = serialized->get_bool(ExplicitChange_type_id, false); 
 	}

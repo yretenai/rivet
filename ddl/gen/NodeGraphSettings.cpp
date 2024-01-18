@@ -7,14 +7,14 @@
 
 namespace rivet::ddl::generated {
 	NodeGraphSettings::NodeGraphSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		InstanceMax = serialized->get_uint32(InstanceMax_type_id, 0);
-		ConnectionMax = serialized->get_uint32(ConnectionMax_type_id, 0);
-		PlugMax = serialized->get_uint32(PlugMax_type_id, 0);
-		NodeMax = serialized->get_uint32(NodeMax_type_id, 0);
-		EventHandlerMax = serialized->get_uint32(EventHandlerMax_type_id, 0);
-		MaxPlugsPerGraph = serialized->get_uint32(MaxPlugsPerGraph_type_id, 0);
-		MaxNodesPerGraph = serialized->get_uint32(MaxNodesPerGraph_type_id, 0);
-		PooledInstanceMax = serialized->get_uint32(PooledInstanceMax_type_id, 0); 
+		InstanceMax = serialized->get_uint32(InstanceMax_type_id, 0u);
+		ConnectionMax = serialized->get_uint32(ConnectionMax_type_id, 0u);
+		PlugMax = serialized->get_uint32(PlugMax_type_id, 0u);
+		NodeMax = serialized->get_uint32(NodeMax_type_id, 0u);
+		EventHandlerMax = serialized->get_uint32(EventHandlerMax_type_id, 0u);
+		MaxPlugsPerGraph = serialized->get_uint32(MaxPlugsPerGraph_type_id, 0u);
+		MaxNodesPerGraph = serialized->get_uint32(MaxNodesPerGraph_type_id, 0u);
+		PooledInstanceMax = serialized->get_uint32(PooledInstanceMax_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

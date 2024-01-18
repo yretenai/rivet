@@ -9,7 +9,7 @@ namespace rivet::ddl::generated {
 	PartialReactGamePrius::PartialReactGamePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): PartialReactBasePrius(serialized) {
 		AdditiveReactDriver = serialized->get_string(AdditiveReactDriver_type_id, "React_Twitch");
 		PartialReactDriver = serialized->get_string(PartialReactDriver_type_id, "React_Twitch_Partial");
-		PartialReactCooldown = serialized->get_float(PartialReactCooldown_type_id, 0.250000); 
+		PartialReactCooldown = serialized->get_float(PartialReactCooldown_type_id, 0.250000f); 
 	}
 
 	[[nodiscard]] auto

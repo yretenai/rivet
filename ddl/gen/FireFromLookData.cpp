@@ -10,7 +10,7 @@ namespace rivet::ddl::generated {
 		PerformAdditionalTestsAlongEmitPath = serialized->get_bool(PerformAdditionalTestsAlongEmitPath_type_id, false);
 		CollideWithNonActors = serialized->get_bool(CollideWithNonActors_type_id, false);
 		CollideWithNonTargets = serialized->get_bool(CollideWithNonTargets_type_id, false);
-		CollideWithTargetTypes = serialized->get_bitset<rivet::ddl::generated::TargetType>(CollideWithTargetTypes_type_id, rivet::ddl::generated::TargetType_values, 0); 
+		CollideWithTargetTypes = serialized->get_bitset<rivet::ddl::generated::TargetType>(CollideWithTargetTypes_type_id, rivet::ddl::generated::TargetType_values, 0u); 
 	}
 
 	[[nodiscard]] auto

@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	FlockDensityConfig::FlockDensityConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		MaxActivatedVolumeNum = serialized->get_uint8(MaxActivatedVolumeNum_type_id, 5);
-		MinFlockSize = serialized->get_int32(MinFlockSize_type_id, 6);
-		MaxFlockSize = serialized->get_int32(MaxFlockSize_type_id, 20); 
+		MaxActivatedVolumeNum = serialized->get_uint8(MaxActivatedVolumeNum_type_id, 5u);
+		MinFlockSize = serialized->get_int32(MinFlockSize_type_id, 6u);
+		MaxFlockSize = serialized->get_int32(MaxFlockSize_type_id, 20u); 
 	}
 
 	[[nodiscard]] auto

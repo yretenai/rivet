@@ -13,12 +13,12 @@ namespace rivet::ddl::generated {
 		WwiseEvent = serialized->unwrap_into<rivet::ddl::generated::WwiseSoundEvent>(WwiseEvent_type_id);
 		EventInitiator = serialized->get_string(EventInitiator_type_id, {});
 		TriggerLocator = serialized->get_string(TriggerLocator_type_id, {});
-		UniqueId = serialized->get_uint32(UniqueId_type_id, 0);
-		LineIndex = serialized->get_uint32(LineIndex_type_id, 0);
-		LocalizationTag = serialized->get_uint32(LocalizationTag_type_id, 0);
-		LocalHeroNameHash = serialized->get_uint32(LocalHeroNameHash_type_id, 0);
-		SeekOffset = serialized->get_float(SeekOffset_type_id, 0.000000);
-		StartTime = serialized->get_float(StartTime_type_id, 0.000000);
+		UniqueId = serialized->get_uint32(UniqueId_type_id, 0u);
+		LineIndex = serialized->get_uint32(LineIndex_type_id, 0u);
+		LocalizationTag = serialized->get_uint32(LocalizationTag_type_id, 0u);
+		LocalHeroNameHash = serialized->get_uint32(LocalHeroNameHash_type_id, 0u);
+		SeekOffset = serialized->get_float(SeekOffset_type_id, 0.000000f);
+		StartTime = serialized->get_float(StartTime_type_id, 0.000000f);
 		IgnoreAnimPerformance = serialized->get_bool(IgnoreAnimPerformance_type_id, false);
 		PlayOnlyOnAuthority = serialized->get_bool(PlayOnlyOnAuthority_type_id, false); 
 	}

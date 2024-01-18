@@ -10,7 +10,7 @@ namespace rivet::ddl::generated {
 		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Deprecated);
 		SourceLocator = serialized->get_string(SourceLocator_type_id, {});
 		TargetLocator = serialized->get_string(TargetLocator_type_id, {});
-		CollFlags = serialized->get_bitset<rivet::ddl::generated::PhysicsCollFlags>(CollFlags_type_id, rivet::ddl::generated::PhysicsCollFlags_values, 8); 
+		CollFlags = serialized->get_bitset<rivet::ddl::generated::PhysicsCollFlags>(CollFlags_type_id, rivet::ddl::generated::PhysicsCollFlags_values, 8u); 
 	}
 
 	[[nodiscard]] auto

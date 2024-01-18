@@ -9,14 +9,14 @@
 
 namespace rivet::ddl::generated {
 	RenderBudgets::RenderBudgets([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ManagedBufferSmallHeapSize = serialized->get_uint32(ManagedBufferSmallHeapSize_type_id, 134217728);
-		ManagedBufferMaxAllocs = serialized->get_uint32(ManagedBufferMaxAllocs_type_id, 24576);
-		SkinningBufferSize = serialized->get_uint64(SkinningBufferSize_type_id, 33554432);
-		FrozenSkinningBufferSize = serialized->get_uint64(FrozenSkinningBufferSize_type_id, 0);
-		DynamicD3DBufferSize = serialized->get_uint64(DynamicD3DBufferSize_type_id, 4194304);
-		LightGridBufferSize = serialized->get_uint64(LightGridBufferSize_type_id, 276824064);
-		ConstantBufferRingSize = serialized->get_uint64(ConstantBufferRingSize_type_id, 8388608);
-		DebugDynamicD3DBufferSize = serialized->get_uint32(DebugDynamicD3DBufferSize_type_id, 12582912);
+		ManagedBufferSmallHeapSize = serialized->get_uint32(ManagedBufferSmallHeapSize_type_id, 134217728u);
+		ManagedBufferMaxAllocs = serialized->get_uint32(ManagedBufferMaxAllocs_type_id, 24576u);
+		SkinningBufferSize = serialized->get_uint64(SkinningBufferSize_type_id, 33554432ull);
+		FrozenSkinningBufferSize = serialized->get_uint64(FrozenSkinningBufferSize_type_id, 0ull);
+		DynamicD3DBufferSize = serialized->get_uint64(DynamicD3DBufferSize_type_id, 4194304ull);
+		LightGridBufferSize = serialized->get_uint64(LightGridBufferSize_type_id, 276824064ull);
+		ConstantBufferRingSize = serialized->get_uint64(ConstantBufferRingSize_type_id, 8388608ull);
+		DebugDynamicD3DBufferSize = serialized->get_uint32(DebugDynamicD3DBufferSize_type_id, 12582912u);
 		XMemHeapTemplate = serialized->unwrap_into<rivet::ddl::generated::HeapTemplate>(XMemHeapTemplate_type_id);
 		XMemGpuWCHeapTemplate = serialized->unwrap_into<rivet::ddl::generated::HeapTemplate>(XMemGpuWCHeapTemplate_type_id);
 		XMemShaderHeapTemplate = serialized->unwrap_into<rivet::ddl::generated::HeapTemplate>(XMemShaderHeapTemplate_type_id); 

@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	SoundFocusComponentData::SoundFocusComponentData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		PlayerFocusValue = serialized->get_float(PlayerFocusValue_type_id, 1.000000);
-		DefaultFocusValue = serialized->get_float(DefaultFocusValue_type_id, 0.000000);
-		AttackingFocusValue = serialized->get_float(AttackingFocusValue_type_id, 0.000000);
-		AttackingPlayerFocusValue = serialized->get_float(AttackingPlayerFocusValue_type_id, 1.000000); 
+		PlayerFocusValue = serialized->get_float(PlayerFocusValue_type_id, 1.000000f);
+		DefaultFocusValue = serialized->get_float(DefaultFocusValue_type_id, 0.000000f);
+		AttackingFocusValue = serialized->get_float(AttackingFocusValue_type_id, 0.000000f);
+		AttackingPlayerFocusValue = serialized->get_float(AttackingPlayerFocusValue_type_id, 1.000000f); 
 	}
 
 	[[nodiscard]] auto

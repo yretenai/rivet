@@ -16,11 +16,11 @@ namespace rivet::ddl::generated {
 		Propagation2UseReverb = serialized->get_bool(Propagation2UseReverb_type_id, false);
 		DirectPathPropagation = serialized->get_bool(DirectPathPropagation_type_id, true);
 		SourceDependentReverb = serialized->get_bool(SourceDependentReverb_type_id, false);
-		DirectPathSampleAreaScaleX = serialized->get_float(DirectPathSampleAreaScaleX_type_id, 1.000000);
-		DirectPathSampleAreaScaleY = serialized->get_float(DirectPathSampleAreaScaleY_type_id, 1.000000);
-		DirectPathStickinessIncreasing = serialized->get_float(DirectPathStickinessIncreasing_type_id, 0.000000);
-		DirectPathStickinessDecreasing = serialized->get_float(DirectPathStickinessDecreasing_type_id, 0.000000);
-		SwitchGroupsCountMax = serialized->get_uint32(SwitchGroupsCountMax_type_id, 8);
+		DirectPathSampleAreaScaleX = serialized->get_float(DirectPathSampleAreaScaleX_type_id, 1.000000f);
+		DirectPathSampleAreaScaleY = serialized->get_float(DirectPathSampleAreaScaleY_type_id, 1.000000f);
+		DirectPathStickinessIncreasing = serialized->get_float(DirectPathStickinessIncreasing_type_id, 0.000000f);
+		DirectPathStickinessDecreasing = serialized->get_float(DirectPathStickinessDecreasing_type_id, 0.000000f);
+		SwitchGroupsCountMax = serialized->get_uint32(SwitchGroupsCountMax_type_id, 8u);
 		SwitchGroupList = serialized->unwrap_into_many<rivet::ddl::generated::WwiseSwitch>(SwitchGroupList_type_id);
 		RandomSelectList = serialized->unwrap_into_many<rivet::ddl::generated::WwiseSwitchSelectItem>(RandomSelectList_type_id); 
 	}

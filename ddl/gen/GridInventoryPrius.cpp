@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	GridInventoryPrius::GridInventoryPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Width = serialized->get_uint16(Width_type_id, 0);
-		Height = serialized->get_uint16(Height_type_id, 0); 
+		Width = serialized->get_uint16(Width_type_id, 0u);
+		Height = serialized->get_uint16(Height_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

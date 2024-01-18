@@ -7,13 +7,13 @@
 
 namespace rivet::ddl::generated {
 	SharedDebugSettings::SharedDebugSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		PadIdxOffset = serialized->get_int32(PadIdxOffset_type_id, 0);
+		PadIdxOffset = serialized->get_int32(PadIdxOffset_type_id, 0u);
 		InvertLook = serialized->get_bool(InvertLook_type_id, false);
 		DebugFPSEnable = serialized->get_bool(DebugFPSEnable_type_id, false);
 		DebugActorDefaultFilter = serialized->get_enum<rivet::ddl::generated::xaa15dda>(DebugActorDefaultFilter_type_id, rivet::ddl::generated::xaa15dda_values, rivet::ddl::generated::xaa15dda::Any);
-		DebugActorListDistance = serialized->get_int32(DebugActorListDistance_type_id, 40);
-		DebugActorCamDistDrawLineTo = serialized->get_float(DebugActorCamDistDrawLineTo_type_id, 1.000000);
-		HugeSingleFrameMoveDist = serialized->get_float(HugeSingleFrameMoveDist_type_id, 1000.000000);
+		DebugActorListDistance = serialized->get_int32(DebugActorListDistance_type_id, 40u);
+		DebugActorCamDistDrawLineTo = serialized->get_float(DebugActorCamDistDrawLineTo_type_id, 1.000000f);
+		HugeSingleFrameMoveDist = serialized->get_float(HugeSingleFrameMoveDist_type_id, 1000.000000f);
 		SimpleAnimatedComplainOnNoDriver = serialized->get_bool(SimpleAnimatedComplainOnNoDriver_type_id, true);
 		OnEnterWithJustHeroIsError = serialized->get_bool(OnEnterWithJustHeroIsError_type_id, true);
 		WatermarkString = serialized->get_string(WatermarkString_type_id, {}); 

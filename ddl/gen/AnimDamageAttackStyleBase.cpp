@@ -13,8 +13,8 @@
 
 namespace rivet::ddl::generated {
 	AnimDamageAttackStyleBase::AnimDamageAttackStyleBase([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DamageIdHash = serialized->get_uint32(DamageIdHash_type_id, 0);
-		WeaponIdHash = serialized->get_uint32(WeaponIdHash_type_id, 0); 
+		DamageIdHash = serialized->get_uint32(DamageIdHash_type_id, 0u);
+		WeaponIdHash = serialized->get_uint32(WeaponIdHash_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	WhitelistAllocatorSettings::WhitelistAllocatorSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		WhitelistAllocatorSize = serialized->get_uint32(WhitelistAllocatorSize_type_id, 0);
+		WhitelistAllocatorSize = serialized->get_uint32(WhitelistAllocatorSize_type_id, 0u);
 		WhitelistAssetPaths = serialized->get_strings(WhitelistAssetPaths_type_id); 
 	}
 

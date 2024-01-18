@@ -11,17 +11,17 @@
 namespace rivet::ddl::generated {
 	BotComboShockwave::BotComboShockwave([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BotComboMoveMelee(serialized) {
 		SourceOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(SourceOffset_type_id);
-		Radius = serialized->get_float(Radius_type_id, 0.000000);
-		Thickness = serialized->get_float(Thickness_type_id, 0.000000);
-		Height = serialized->get_float(Height_type_id, 0.000000);
-		Duration = serialized->get_float(Duration_type_id, 0.000000);
-		GrowDuration = serialized->get_float(GrowDuration_type_id, -1.000000);
-		Damage = serialized->get_float(Damage_type_id, 0.000000);
+		Radius = serialized->get_float(Radius_type_id, 0.000000f);
+		Thickness = serialized->get_float(Thickness_type_id, 0.000000f);
+		Height = serialized->get_float(Height_type_id, 0.000000f);
+		Duration = serialized->get_float(Duration_type_id, 0.000000f);
+		GrowDuration = serialized->get_float(GrowDuration_type_id, -1.000000f);
+		Damage = serialized->get_float(Damage_type_id, 0.000000f);
 		DamageType = serialized->get_enum<rivet::ddl::generated::DamageTypes>(DamageType_type_id, rivet::ddl::generated::DamageTypes_values, rivet::ddl::generated::DamageTypes::None);
 		Knockback = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(Knockback_type_id, rivet::ddl::generated::KnockbackLevels_values, rivet::ddl::generated::KnockbackLevels::Four);
-		DamageFriends = serialized->get_uint8(DamageFriends_type_id, 0);
-		StatusAmount = serialized->get_float(StatusAmount_type_id, 0.000000);
-		KnockbackForce = serialized->get_float(KnockbackForce_type_id, 1.000000); 
+		DamageFriends = serialized->get_uint8(DamageFriends_type_id, 0u);
+		StatusAmount = serialized->get_float(StatusAmount_type_id, 0.000000f);
+		KnockbackForce = serialized->get_float(KnockbackForce_type_id, 1.000000f); 
 	}
 
 	[[nodiscard]] auto

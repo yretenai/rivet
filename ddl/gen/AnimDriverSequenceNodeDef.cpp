@@ -11,12 +11,12 @@ namespace rivet::ddl::generated {
 	AnimDriverSequenceNodeDef::AnimDriverSequenceNodeDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Name = serialized->get_string(Name_type_id, {});
 		DisplayName = serialized->get_string(DisplayName_type_id, "");
-		x = serialized->get_float(x_type_id, 0.000000);
-		y = serialized->get_float(y_type_id, 0.000000);
+		x = serialized->get_float(x_type_id, 0.000000f);
+		y = serialized->get_float(y_type_id, 0.000000f);
 		Type = serialized->get_enum<rivet::ddl::generated::xe5615bda>(Type_type_id, rivet::ddl::generated::xe5615bda_values, rivet::ddl::generated::xe5615bda::Default);
-		Rate = serialized->get_float(Rate_type_id, 1.000000);
-		Time = serialized->get_float(Time_type_id, 0.000000);
-		Overlap = serialized->get_float(Overlap_type_id, 0.000000);
+		Rate = serialized->get_float(Rate_type_id, 1.000000f);
+		Time = serialized->get_float(Time_type_id, 0.000000f);
+		Overlap = serialized->get_float(Overlap_type_id, 0.000000f);
 		Connections = serialized->unwrap_into_many<rivet::ddl::generated::AnimDriverConnectionDef>(Connections_type_id); 
 	}
 

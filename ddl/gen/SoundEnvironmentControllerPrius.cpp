@@ -12,9 +12,9 @@
 namespace rivet::ddl::generated {
 	SoundEnvironmentControllerPrius::SoundEnvironmentControllerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		TriggerPosition = serialized->get_enum<rivet::ddl::generated::xb62b6a7f>(TriggerPosition_type_id, rivet::ddl::generated::xb62b6a7f_values, rivet::ddl::generated::xb62b6a7f::Listener);
-		FadeIn = serialized->get_float(FadeIn_type_id, 1.000000);
-		FadeOut = serialized->get_float(FadeOut_type_id, 1.000000);
-		Priority = serialized->get_uint32(Priority_type_id, 5);
+		FadeIn = serialized->get_float(FadeIn_type_id, 1.000000f);
+		FadeOut = serialized->get_float(FadeOut_type_id, 1.000000f);
+		Priority = serialized->get_uint32(Priority_type_id, 5u);
 		IsAdditive = serialized->get_bool(IsAdditive_type_id, false);
 		WwiseAuxSends = serialized->unwrap_into_many<rivet::ddl::generated::WwiseAuxSend>(WwiseAuxSends_type_id);
 		WwiseStates = serialized->unwrap_into_many<rivet::ddl::generated::WwiseState>(WwiseStates_type_id);

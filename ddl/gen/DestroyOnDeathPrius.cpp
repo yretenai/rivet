@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	DestroyOnDeathPrius::DestroyOnDeathPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Delay = serialized->get_float(Delay_type_id, 0.000000); 
+		Delay = serialized->get_float(Delay_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

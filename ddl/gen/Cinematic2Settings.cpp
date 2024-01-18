@@ -8,8 +8,8 @@
 namespace rivet::ddl::generated {
 	Cinematic2Settings::Cinematic2Settings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		TimecodeMode = serialized->get_enum<rivet::ddl::generated::xc74f3c1>(TimecodeMode_type_id, rivet::ddl::generated::xc74f3c1_values, rivet::ddl::generated::xc74f3c1::Disabled);
-		VfxUISpawnDelay = serialized->get_float(VfxUISpawnDelay_type_id, 0.550000);
-		MovieUIUpdateDelay = serialized->get_float(MovieUIUpdateDelay_type_id, 0.100000); 
+		VfxUISpawnDelay = serialized->get_float(VfxUISpawnDelay_type_id, 0.550000f);
+		MovieUIUpdateDelay = serialized->get_float(MovieUIUpdateDelay_type_id, 0.100000f); 
 	}
 
 	[[nodiscard]] auto

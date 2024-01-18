@@ -14,7 +14,7 @@ namespace rivet::ddl::generated {
 		IconPath = serialized->get_string(IconPath_type_id, "");
 		Points = serialized->unwrap_into_many<rivet::ddl::generated::SceneNode>(Points_type_id);
 		PolylineType = serialized->get_enum<rivet::ddl::generated::PolylineType>(PolylineType_type_id, rivet::ddl::generated::PolylineType_values, rivet::ddl::generated::PolylineType::Closed_Planar);
-		Height = serialized->get_float(Height_type_id, 4.000000); 
+		Height = serialized->get_float(Height_type_id, 4.000000f); 
 	}
 
 	[[nodiscard]] auto

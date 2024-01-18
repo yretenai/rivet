@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	WeaponEarnedXPData::WeaponEarnedXPData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		XPSource = serialized->get_enum<rivet::ddl::generated::xaaf755d6>(XPSource_type_id, rivet::ddl::generated::xaaf755d6_values, rivet::ddl::generated::xaaf755d6::Damage);
-		XPValue = serialized->get_float(XPValue_type_id, 0.000000); 
+		XPValue = serialized->get_float(XPValue_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

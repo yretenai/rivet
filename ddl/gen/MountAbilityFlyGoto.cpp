@@ -14,9 +14,9 @@ namespace rivet::ddl::generated {
 		AnimIntroName = serialized->get_string(AnimIntroName_type_id, {});
 		FlyerGotoLocator = serialized->get_string(FlyerGotoLocator_type_id, {});
 		GotoActorLocator = serialized->get_string(GotoActorLocator_type_id, {});
-		GotoSpeed = serialized->get_float(GotoSpeed_type_id, 20.000000);
-		MinOutroSpeed = serialized->get_float(MinOutroSpeed_type_id, 5.000000);
-		MaxOutroSpeed = serialized->get_float(MaxOutroSpeed_type_id, 15.000000); 
+		GotoSpeed = serialized->get_float(GotoSpeed_type_id, 20.000000f);
+		MinOutroSpeed = serialized->get_float(MinOutroSpeed_type_id, 5.000000f);
+		MaxOutroSpeed = serialized->get_float(MaxOutroSpeed_type_id, 15.000000f); 
 	}
 
 	[[nodiscard]] auto

@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	MannableTurretGrindRopePrius::MannableTurretGrindRopePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Range = serialized->get_float(Range_type_id, 100.000000);
-		Damage = serialized->get_float(Damage_type_id, 250.000000); 
+		Range = serialized->get_float(Range_type_id, 100.000000f);
+		Damage = serialized->get_float(Damage_type_id, 250.000000f); 
 	}
 
 	[[nodiscard]] auto

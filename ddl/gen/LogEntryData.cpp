@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	LogEntryData::LogEntryData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActorHandleRaw = serialized->get_uint32(ActorHandleRaw_type_id, 0);
+		ActorHandleRaw = serialized->get_uint32(ActorHandleRaw_type_id, 0u);
 		SystemName = serialized->get_enum<rivet::ddl::generated::x5578becf>(SystemName_type_id, rivet::ddl::generated::x5578becf_values, rivet::ddl::generated::x5578becf::LogSystemUnknown);
 		State = serialized->get_enum<rivet::ddl::generated::xb0ef2921>(State_type_id, rivet::ddl::generated::xb0ef2921_values, rivet::ddl::generated::xb0ef2921::NotInitialized);
 		Data = serialized->unwrap_into_many<rivet::ddl::generated::LogInfo>(Data_type_id); 

@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	AimAssistSnapLocationTargetLocation::AimAssistSnapLocationTargetLocation([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): AimAssistSnapLocation(serialized) {
-		TargetIndex = serialized->get_uint8(TargetIndex_type_id, 0); 
+		TargetIndex = serialized->get_uint8(TargetIndex_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

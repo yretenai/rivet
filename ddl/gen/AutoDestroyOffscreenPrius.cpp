@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	AutoDestroyOffscreenPrius::AutoDestroyOffscreenPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		TimeOffscreen = serialized->get_float(TimeOffscreen_type_id, 2.000000);
+		TimeOffscreen = serialized->get_float(TimeOffscreen_type_id, 2.000000f);
 		ResetTimerOnScreen = serialized->get_bool(ResetTimerOnScreen_type_id, true); 
 	}
 

@@ -10,11 +10,11 @@
 
 namespace rivet::ddl::generated {
 	HeroHookshotConfig::HeroHookshotConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		IdealCableLength = serialized->get_float(IdealCableLength_type_id, 3.000000);
-		Accel = serialized->get_float(Accel_type_id, 40.000000);
-		Decel = serialized->get_float(Decel_type_id, 60.000000);
-		MaxSpeed = serialized->get_float(MaxSpeed_type_id, 20.000000);
-		AnimMaxTargetSpeed = serialized->get_float(AnimMaxTargetSpeed_type_id, 20.000000); 
+		IdealCableLength = serialized->get_float(IdealCableLength_type_id, 3.000000f);
+		Accel = serialized->get_float(Accel_type_id, 40.000000f);
+		Decel = serialized->get_float(Decel_type_id, 60.000000f);
+		MaxSpeed = serialized->get_float(MaxSpeed_type_id, 20.000000f);
+		AnimMaxTargetSpeed = serialized->get_float(AnimMaxTargetSpeed_type_id, 20.000000f); 
 	}
 
 	[[nodiscard]] auto

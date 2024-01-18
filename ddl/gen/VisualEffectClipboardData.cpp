@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	VisualEffectClipboardData::VisualEffectClipboardData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		assetId = serialized->get_uint64(assetId_type_id, 0);
+		assetId = serialized->get_uint64(assetId_type_id, 0ull);
 		clipboardType = serialized->get_string(clipboardType_type_id, {});
 		compatibility = serialized->get_string(compatibility_type_id, {});
 		data = serialized->unwrap_into<rivet::ddl::generated::VisualEffectDef>(data_type_id); 

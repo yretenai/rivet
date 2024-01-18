@@ -15,23 +15,23 @@ namespace rivet::ddl::generated {
 		DamageJointSecondary = serialized->get_string(DamageJointSecondary_type_id, {});
 		LocalOffsetSecondary = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(LocalOffsetSecondary_type_id);
 		SweepFromLastPosition = serialized->get_bool(SweepFromLastPosition_type_id, false);
-		DamageRadius = serialized->get_float(DamageRadius_type_id, 1.000000);
+		DamageRadius = serialized->get_float(DamageRadius_type_id, 1.000000f);
 		LerpRadius = serialized->get_bool(LerpRadius_type_id, false);
-		DamagePrimLength = serialized->get_float(DamagePrimLength_type_id, 1.000000);
+		DamagePrimLength = serialized->get_float(DamagePrimLength_type_id, 1.000000f);
 		LerpLength = serialized->get_bool(LerpLength_type_id, false);
 		DamageType = serialized->get_enum<rivet::ddl::generated::DamageTypes>(DamageType_type_id, rivet::ddl::generated::DamageTypes_values, rivet::ddl::generated::DamageTypes::Melee);
-		DamageAmount = serialized->get_float(DamageAmount_type_id, 1.000000);
-		ArmorPassThroughPercentage = serialized->get_float(ArmorPassThroughPercentage_type_id, 0.000000);
+		DamageAmount = serialized->get_float(DamageAmount_type_id, 1.000000f);
+		ArmorPassThroughPercentage = serialized->get_float(ArmorPassThroughPercentage_type_id, 0.000000f);
 		Knockback = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(Knockback_type_id, rivet::ddl::generated::KnockbackLevels_values, rivet::ddl::generated::KnockbackLevels::None);
-		KnockbackAmount = serialized->get_float(KnockbackAmount_type_id, -1.000000);
-		KnockbackForce = serialized->get_float(KnockbackForce_type_id, -1.000000);
+		KnockbackAmount = serialized->get_float(KnockbackAmount_type_id, -1.000000f);
+		KnockbackForce = serialized->get_float(KnockbackForce_type_id, -1.000000f);
 		FriendlyKnockback = serialized->get_bool(FriendlyKnockback_type_id, false);
 		Condition = serialized->get_enum<rivet::ddl::generated::x257872aa>(Condition_type_id, rivet::ddl::generated::x257872aa_values, rivet::ddl::generated::x257872aa::None);
-		ConditionDuration = serialized->get_float(ConditionDuration_type_id, 2.500000);
-		StatusAmount = serialized->get_float(StatusAmount_type_id, 0.000000);
-		DurationOverride = serialized->get_float(DurationOverride_type_id, 0.000000);
-		HitPauseTime = serialized->get_float(HitPauseTime_type_id, -1.000000);
-		RequestFlags = serialized->get_bitset<rivet::ddl::generated::x65d7dac2>(RequestFlags_type_id, rivet::ddl::generated::x65d7dac2_values, 0); 
+		ConditionDuration = serialized->get_float(ConditionDuration_type_id, 2.500000f);
+		StatusAmount = serialized->get_float(StatusAmount_type_id, 0.000000f);
+		DurationOverride = serialized->get_float(DurationOverride_type_id, 0.000000f);
+		HitPauseTime = serialized->get_float(HitPauseTime_type_id, -1.000000f);
+		RequestFlags = serialized->get_bitset<rivet::ddl::generated::x65d7dac2>(RequestFlags_type_id, rivet::ddl::generated::x65d7dac2_values, 0u); 
 	}
 
 	[[nodiscard]] auto

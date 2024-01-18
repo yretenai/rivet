@@ -8,8 +8,8 @@
 namespace rivet::ddl::generated {
 	WeakSpotDamagedEvent::WeakSpotDamagedEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
 		LocatorName = serialized->get_string(LocatorName_type_id, {});
-		HealthPercent = serialized->get_float(HealthPercent_type_id, 100.000000);
-		DamageAmount = serialized->get_float(DamageAmount_type_id, 0.000000); 
+		HealthPercent = serialized->get_float(HealthPercent_type_id, 100.000000f);
+		DamageAmount = serialized->get_float(DamageAmount_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

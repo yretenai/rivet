@@ -12,7 +12,7 @@ namespace rivet::ddl::generated {
 		SkipDeactivateOnDestroy = serialized->get_bool(SkipDeactivateOnDestroy_type_id, false);
 		ShareSoundSource = serialized->get_bool(ShareSoundSource_type_id, false);
 		SoundSourceLocator = serialized->get_string(SoundSourceLocator_type_id, {});
-		MaxActivateEventDelay = serialized->get_uint32(MaxActivateEventDelay_type_id, 0);
+		MaxActivateEventDelay = serialized->get_uint32(MaxActivateEventDelay_type_id, 0u);
 		Mappings = serialized->get_strings(Mappings_type_id); 
 	}
 

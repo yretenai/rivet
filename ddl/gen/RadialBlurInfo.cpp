@@ -8,8 +8,8 @@
 namespace rivet::ddl::generated {
 	RadialBlurInfo::RadialBlurInfo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		UseWorldPos = serialized->get_bool(UseWorldPos_type_id, true);
-		MinRadius = serialized->get_float(MinRadius_type_id, 0.100000);
-		MaxRadius = serialized->get_float(MaxRadius_type_id, 1.000000); 
+		MinRadius = serialized->get_float(MinRadius_type_id, 0.100000f);
+		MaxRadius = serialized->get_float(MaxRadius_type_id, 1.000000f); 
 	}
 
 	[[nodiscard]] auto

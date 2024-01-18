@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	ChargeAttackParams::ChargeAttackParams([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MinChargeTime = serialized->get_float(MinChargeTime_type_id, -1.000000);
-		MaxChargeTime = serialized->get_float(MaxChargeTime_type_id, -1.000000);
-		MaxDamage = serialized->get_float(MaxDamage_type_id, -1.000000);
-		MaxKnockbackForce = serialized->get_float(MaxKnockbackForce_type_id, -1.000000); 
+		MinChargeTime = serialized->get_float(MinChargeTime_type_id, -1.000000f);
+		MaxChargeTime = serialized->get_float(MaxChargeTime_type_id, -1.000000f);
+		MaxDamage = serialized->get_float(MaxDamage_type_id, -1.000000f);
+		MaxKnockbackForce = serialized->get_float(MaxKnockbackForce_type_id, -1.000000f); 
 	}
 
 	[[nodiscard]] auto

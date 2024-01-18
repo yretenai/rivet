@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	VehicleMergeDistance::VehicleMergeDistance([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Speed = serialized->get_float(Speed_type_id, 0.000000);
-		Distance = serialized->get_float(Distance_type_id, 0.000000); 
+		Speed = serialized->get_float(Speed_type_id, 0.000000f);
+		Distance = serialized->get_float(Distance_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

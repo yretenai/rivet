@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	HoverbootJumpData::HoverbootJumpData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MinInitialHorizontalSpeed = serialized->get_float(MinInitialHorizontalSpeed_type_id, 0.000000);
-		TurnSpeedGain = serialized->get_float(TurnSpeedGain_type_id, -15.000000);
-		TurnSpeedDamp = serialized->get_float(TurnSpeedDamp_type_id, -8.000000);
-		TurnSpeedMax = serialized->get_float(TurnSpeedMax_type_id, 90.000000);
-		BreakableSpeedThreshold = serialized->get_float(BreakableSpeedThreshold_type_id, 10.000000); 
+		MinInitialHorizontalSpeed = serialized->get_float(MinInitialHorizontalSpeed_type_id, 0.000000f);
+		TurnSpeedGain = serialized->get_float(TurnSpeedGain_type_id, -15.000000f);
+		TurnSpeedDamp = serialized->get_float(TurnSpeedDamp_type_id, -8.000000f);
+		TurnSpeedMax = serialized->get_float(TurnSpeedMax_type_id, 90.000000f);
+		BreakableSpeedThreshold = serialized->get_float(BreakableSpeedThreshold_type_id, 10.000000f); 
 	}
 
 	[[nodiscard]] auto

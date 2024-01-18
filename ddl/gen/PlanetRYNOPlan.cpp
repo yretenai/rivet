@@ -11,7 +11,7 @@ namespace rivet::ddl::generated {
 	PlanetRYNOPlan::PlanetRYNOPlan([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		SaveId = serialized->get_enum<rivet::ddl::generated::x81d3e717>(SaveId_type_id, rivet::ddl::generated::x81d3e717_values, rivet::ddl::generated::x81d3e717::Nefarious_City_01);
 		NameTag = serialized->get_string(NameTag_type_id, {});
-		DefaultPlaytimeEstimate = serialized->get_uint32(DefaultPlaytimeEstimate_type_id, 5);
+		DefaultPlaytimeEstimate = serialized->get_uint32(DefaultPlaytimeEstimate_type_id, 5u);
 		Hints = serialized->unwrap_into_many<rivet::ddl::generated::ActivityHint>(Hints_type_id); 
 	}
 

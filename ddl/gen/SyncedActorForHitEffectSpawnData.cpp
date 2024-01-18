@@ -10,9 +10,9 @@
 
 namespace rivet::ddl::generated {
 	SyncedActorForHitEffectSpawnData::SyncedActorForHitEffectSpawnData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ActorSpawnData(serialized) {
-		ShotOwner = serialized->get_uint32(ShotOwner_type_id, 0);
-		HitActor = serialized->get_uint32(HitActor_type_id, 0);
-		AssetId = serialized->get_uint64(AssetId_type_id, 0);
+		ShotOwner = serialized->get_uint32(ShotOwner_type_id, 0u);
+		HitActor = serialized->get_uint32(HitActor_type_id, 0u);
+		AssetId = serialized->get_uint64(AssetId_type_id, 0ull);
 		Pos = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Pos_type_id);
 		Facing = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Facing_type_id);
 		Up = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Up_type_id);

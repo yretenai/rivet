@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	StatusEmitterAuraPrius::StatusEmitterAuraPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): StatusEmitterBasePrius(serialized) {
-		Range = serialized->get_float(Range_type_id, 0.000000);
-		ValidTargetTypes = serialized->get_bitset<rivet::ddl::generated::TargetType>(ValidTargetTypes_type_id, rivet::ddl::generated::TargetType_values, 0); 
+		Range = serialized->get_float(Range_type_id, 0.000000f);
+		ValidTargetTypes = serialized->get_bitset<rivet::ddl::generated::TargetType>(ValidTargetTypes_type_id, rivet::ddl::generated::TargetType_values, 0u); 
 	}
 
 	[[nodiscard]] auto

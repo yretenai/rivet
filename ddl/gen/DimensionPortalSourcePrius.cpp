@@ -12,8 +12,8 @@ namespace rivet::ddl::generated {
 		ActivateOnThrownMeleeHit = serialized->get_bool(ActivateOnThrownMeleeHit_type_id, true);
 		MutuallyExclusive = serialized->get_bool(MutuallyExclusive_type_id, true);
 		UseAsHexStreamingSource = serialized->get_bool(UseAsHexStreamingSource_type_id, true);
-		AutoDeactivateOutOfRangeDelay = serialized->get_float(AutoDeactivateOutOfRangeDelay_type_id, 1.000000);
-		AutoDeactivateRange = serialized->get_float(AutoDeactivateRange_type_id, 50.000000); 
+		AutoDeactivateOutOfRangeDelay = serialized->get_float(AutoDeactivateOutOfRangeDelay_type_id, 1.000000f);
+		AutoDeactivateRange = serialized->get_float(AutoDeactivateRange_type_id, 50.000000f); 
 	}
 
 	[[nodiscard]] auto

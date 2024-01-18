@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	Cinematic2BehaviorPlayAnimEvent::Cinematic2BehaviorPlayAnimEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		TimeNorm = serialized->get_float(TimeNorm_type_id, 0.000000);
-		Rate = serialized->get_float(Rate_type_id, 1.000000); 
+		TimeNorm = serialized->get_float(TimeNorm_type_id, 0.000000f);
+		Rate = serialized->get_float(Rate_type_id, 1.000000f); 
 	}
 
 	[[nodiscard]] auto

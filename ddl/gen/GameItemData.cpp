@@ -11,7 +11,7 @@ namespace rivet::ddl::generated {
 	GameItemData::GameItemData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Icon = serialized->get_string(Icon_type_id, {});
 		Video = serialized->get_string(Video_type_id, {});
-		ScrapAmount = serialized->get_uint32(ScrapAmount_type_id, 10);
+		ScrapAmount = serialized->get_uint32(ScrapAmount_type_id, 10u);
 		MissionUnlock = serialized->get_string(MissionUnlock_type_id, {});
 		ChallengeModePrepBehavior = serialized->get_enum<rivet::ddl::generated::xaa9dd5a4>(ChallengeModePrepBehavior_type_id, rivet::ddl::generated::xaa9dd5a4_values, rivet::ddl::generated::xaa9dd5a4::Keep);
 		DisplayNameTag = serialized->get_string(DisplayNameTag_type_id, "INVALID");

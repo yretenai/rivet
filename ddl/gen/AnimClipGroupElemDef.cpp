@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	AnimClipGroupElemDef::AnimClipGroupElemDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Id = serialized->get_uint64(Id_type_id, 0);
+		Id = serialized->get_uint64(Id_type_id, 0ull);
 		ClipPath = serialized->get_string(ClipPath_type_id, {});
-		ClipWeight = serialized->get_float(ClipWeight_type_id, 1.000000); 
+		ClipWeight = serialized->get_float(ClipWeight_type_id, 1.000000f); 
 	}
 
 	[[nodiscard]] auto

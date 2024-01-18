@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	SceneEditorCreatePrefabOutput::SceneEditorCreatePrefabOutput([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		UndoBatchId = serialized->get_uint64(UndoBatchId_type_id, 0);
+		UndoBatchId = serialized->get_uint64(UndoBatchId_type_id, 0ull);
 		PrefabInstance = serialized->unwrap_into<rivet::ddl::generated::SceneNode>(PrefabInstance_type_id); 
 	}
 

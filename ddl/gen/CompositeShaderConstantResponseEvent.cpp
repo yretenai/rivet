@@ -9,9 +9,9 @@ namespace rivet::ddl::generated {
 	CompositeShaderConstantResponseEvent::CompositeShaderConstantResponseEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ResponseEvent(serialized) {
 		Shader = serialized->get_string(Shader_type_id, {});
 		ConstantName = serialized->get_string(ConstantName_type_id, {});
-		StartValue = serialized->get_float(StartValue_type_id, 0.000000);
-		EndValue = serialized->get_float(EndValue_type_id, 0.000000);
-		TransitionTime = serialized->get_float(TransitionTime_type_id, 0.000000);
+		StartValue = serialized->get_float(StartValue_type_id, 0.000000f);
+		EndValue = serialized->get_float(EndValue_type_id, 0.000000f);
+		TransitionTime = serialized->get_float(TransitionTime_type_id, 0.000000f);
 		RemoveShaderAfterward = serialized->get_bool(RemoveShaderAfterward_type_id, false); 
 	}
 

@@ -16,11 +16,11 @@
 
 namespace rivet::ddl::generated {
 	SlottedInteractObjectPrius::SlottedInteractObjectPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		LinkGroup = serialized->get_uint64(LinkGroup_type_id, 0);
+		LinkGroup = serialized->get_uint64(LinkGroup_type_id, 0ull);
 		RequiredUsers = serialized->get_int32(RequiredUsers_type_id, -1);
-		RetriggerTime = serialized->get_float(RetriggerTime_type_id, -1.000000);
+		RetriggerTime = serialized->get_float(RetriggerTime_type_id, -1.000000f);
 		LoopingInteract = serialized->get_bool(LoopingInteract_type_id, false);
-		LoopingTime = serialized->get_float(LoopingTime_type_id, 3.000000);
+		LoopingTime = serialized->get_float(LoopingTime_type_id, 3.000000f);
 		LoopingLocked = serialized->get_bool(LoopingLocked_type_id, false);
 		ExecuteLocked = serialized->get_bool(ExecuteLocked_type_id, false);
 		StartDisabled = serialized->get_bool(StartDisabled_type_id, false);
@@ -29,9 +29,9 @@ namespace rivet::ddl::generated {
 		DisableGravity = serialized->get_bool(DisableGravity_type_id, false);
 		MakeInvulnerable = serialized->get_bool(MakeInvulnerable_type_id, false);
 		DoStartFade = serialized->get_bool(DoStartFade_type_id, false);
-		StartFadeOutTime = serialized->get_float(StartFadeOutTime_type_id, 1.750000);
-		StartFadeHoldTime = serialized->get_float(StartFadeHoldTime_type_id, 0.100000);
-		StartFadeInTime = serialized->get_float(StartFadeInTime_type_id, 0.500000);
+		StartFadeOutTime = serialized->get_float(StartFadeOutTime_type_id, 1.750000f);
+		StartFadeHoldTime = serialized->get_float(StartFadeHoldTime_type_id, 0.100000f);
+		StartFadeInTime = serialized->get_float(StartFadeInTime_type_id, 0.500000f);
 		LockPlayerInInteract = serialized->get_bool(LockPlayerInInteract_type_id, false);
 		DisplayProgressBar = serialized->get_bool(DisplayProgressBar_type_id, false);
 		DisplayProgressBarFromStart = serialized->get_bool(DisplayProgressBarFromStart_type_id, false);

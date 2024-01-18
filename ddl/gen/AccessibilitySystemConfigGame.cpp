@@ -11,8 +11,8 @@
 namespace rivet::ddl::generated {
 	AccessibilitySystemConfigGame::AccessibilitySystemConfigGame([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): AccessibilitySystemConfig(serialized) {
 		HighContrastPingMaterial = serialized->get_string(HighContrastPingMaterial_type_id, {});
-		ChaseAssistVehicleSpeedMult = serialized->get_float(ChaseAssistVehicleSpeedMult_type_id, 0.750000);
-		ChaseAssistStopDistance = serialized->get_float(ChaseAssistStopDistance_type_id, 140.000000);
+		ChaseAssistVehicleSpeedMult = serialized->get_float(ChaseAssistVehicleSpeedMult_type_id, 0.750000f);
+		ChaseAssistStopDistance = serialized->get_float(ChaseAssistStopDistance_type_id, 140.000000f);
 		DefaultHeroAccesibilityHighlightConfig = serialized->get_string(DefaultHeroAccesibilityHighlightConfig_type_id, {});
 		AccessibilityOptions = serialized->unwrap_into_many<rivet::ddl::generated::AccessibilityOption>(AccessibilityOptions_type_id);
 		ArcColors = serialized->unwrap_into_many<rivet::ddl::generated::AccessibilityColorData>(ArcColors_type_id); 

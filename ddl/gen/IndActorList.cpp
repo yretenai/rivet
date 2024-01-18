@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	IndActorList::IndActorList([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActorUID = serialized->get_uint64(ActorUID_type_id, 0);
+		ActorUID = serialized->get_uint64(ActorUID_type_id, 0ull);
 		EnableType = serialized->get_enum<rivet::ddl::generated::xe47e5cf7>(EnableType_type_id, rivet::ddl::generated::xe47e5cf7_values, rivet::ddl::generated::xe47e5cf7::Enable); 
 	}
 

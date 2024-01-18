@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	CameraProximityTestPrius::CameraProximityTestPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DistanceThreshold = serialized->get_float(DistanceThreshold_type_id, 100.000000); 
+		DistanceThreshold = serialized->get_float(DistanceThreshold_type_id, 100.000000f); 
 	}
 
 	[[nodiscard]] auto

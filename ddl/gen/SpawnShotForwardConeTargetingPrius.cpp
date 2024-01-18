@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	SpawnShotForwardConeTargetingPrius::SpawnShotForwardConeTargetingPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): SpawnShotTargetingPrius(serialized) {
-		MaxAimAngle = serialized->get_float(MaxAimAngle_type_id, 30.000000); 
+		MaxAimAngle = serialized->get_float(MaxAimAngle_type_id, 30.000000f); 
 	}
 
 	[[nodiscard]] auto

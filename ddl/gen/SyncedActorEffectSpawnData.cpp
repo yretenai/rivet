@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	SyncedActorEffectSpawnData::SyncedActorEffectSpawnData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): SyncedActorForHitEffectSpawnData(serialized) {
-		Lifetime = serialized->get_float(Lifetime_type_id, 0.000000);
+		Lifetime = serialized->get_float(Lifetime_type_id, 0.000000f);
 		HitJoint = serialized->get_int32(HitJoint_type_id, -1);
-		Index = serialized->get_int8(Index_type_id, 0); 
+		Index = serialized->get_int8(Index_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

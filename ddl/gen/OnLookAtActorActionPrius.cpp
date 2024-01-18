@@ -9,8 +9,8 @@ namespace rivet::ddl::generated {
 	OnLookAtActorActionPrius::OnLookAtActorActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Camera);
 		StartActive = serialized->get_bool(StartActive_type_id, true);
-		SignalMax = serialized->get_int32(SignalMax_type_id, 1);
-		MaxDistance = serialized->get_float(MaxDistance_type_id, 1000.000000); 
+		SignalMax = serialized->get_int32(SignalMax_type_id, 1u);
+		MaxDistance = serialized->get_float(MaxDistance_type_id, 1000.000000f); 
 	}
 
 	[[nodiscard]] auto

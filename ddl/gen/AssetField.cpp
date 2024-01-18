@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	AssetField::AssetField([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		FieldType = serialized->get_enum<rivet::ddl::generated::xe4016569>(FieldType_type_id, rivet::ddl::generated::xe4016569_values, rivet::ddl::generated::xe4016569::Tris);
-		Value = serialized->get_int32(Value_type_id, 0); 
+		Value = serialized->get_int32(Value_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

@@ -9,14 +9,14 @@
 
 namespace rivet::ddl::generated {
 	AimModWalkToTargetPrius::AimModWalkToTargetPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): AimModifierPrius(serialized) {
-		WalkDurationMin = serialized->get_float(WalkDurationMin_type_id, 0.000000);
-		WalkDurationMax = serialized->get_float(WalkDurationMax_type_id, 0.000000);
-		WalkStartMinX = serialized->get_float(WalkStartMinX_type_id, -4.000000);
-		WalkStartMaxX = serialized->get_float(WalkStartMaxX_type_id, 4.000000);
-		WalkStartMinY = serialized->get_float(WalkStartMinY_type_id, -2.000000);
-		WalkStartMaxY = serialized->get_float(WalkStartMaxY_type_id, -2.000000);
-		WalkStartMinZ = serialized->get_float(WalkStartMinZ_type_id, 6.000000);
-		WalkStartMaxZ = serialized->get_float(WalkStartMaxZ_type_id, 10.000000);
+		WalkDurationMin = serialized->get_float(WalkDurationMin_type_id, 0.000000f);
+		WalkDurationMax = serialized->get_float(WalkDurationMax_type_id, 0.000000f);
+		WalkStartMinX = serialized->get_float(WalkStartMinX_type_id, -4.000000f);
+		WalkStartMaxX = serialized->get_float(WalkStartMaxX_type_id, 4.000000f);
+		WalkStartMinY = serialized->get_float(WalkStartMinY_type_id, -2.000000f);
+		WalkStartMaxY = serialized->get_float(WalkStartMaxY_type_id, -2.000000f);
+		WalkStartMinZ = serialized->get_float(WalkStartMinZ_type_id, 6.000000f);
+		WalkStartMaxZ = serialized->get_float(WalkStartMaxZ_type_id, 10.000000f);
 		CountShots = serialized->get_bool(CountShots_type_id, false);
 		WalkPastTarget = serialized->get_bool(WalkPastTarget_type_id, false);
 		AutoHitInRange = serialized->get_bool(AutoHitInRange_type_id, true); 

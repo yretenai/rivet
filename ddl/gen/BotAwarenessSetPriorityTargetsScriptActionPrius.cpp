@@ -10,7 +10,7 @@ namespace rivet::ddl::generated {
 		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Enemy_Bot);
 		IgnoreBotAreaLimitations = serialized->get_bool(IgnoreBotAreaLimitations_type_id, false);
 		RoundRobinTargetVictims = serialized->get_bool(RoundRobinTargetVictims_type_id, false);
-		RoundRobinSwitchTimer = serialized->get_float(RoundRobinSwitchTimer_type_id, 2.000000); 
+		RoundRobinSwitchTimer = serialized->get_float(RoundRobinSwitchTimer_type_id, 2.000000f); 
 	}
 
 	[[nodiscard]] auto

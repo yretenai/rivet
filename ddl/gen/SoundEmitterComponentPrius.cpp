@@ -12,7 +12,7 @@ namespace rivet::ddl::generated {
 		WwiseEvent = serialized->unwrap_into<rivet::ddl::generated::WwiseSoundEvent>(WwiseEvent_type_id);
 		PlayOnLoad = serialized->get_bool(PlayOnLoad_type_id, false);
 		FadeOnDestroy = serialized->get_bool(FadeOnDestroy_type_id, false);
-		FadeTime = serialized->get_float(FadeTime_type_id, 0.000000); 
+		FadeTime = serialized->get_float(FadeTime_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

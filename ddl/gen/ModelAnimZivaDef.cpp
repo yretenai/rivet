@@ -10,7 +10,7 @@
 namespace rivet::ddl::generated {
 	ModelAnimZivaDef::ModelAnimZivaDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		ZrtPath = serialized->get_string(ZrtPath_type_id, {});
-		PositionTolerance = serialized->get_float(PositionTolerance_type_id, 0.100000);
+		PositionTolerance = serialized->get_float(PositionTolerance_type_id, 0.100000f);
 		Looks = serialized->unwrap_into_many<rivet::ddl::generated::ModelAnimZivaLookDef>(Looks_type_id); 
 	}
 

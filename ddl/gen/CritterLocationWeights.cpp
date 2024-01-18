@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	CritterLocationWeights::CritterLocationWeights([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DistanceFactor = serialized->get_float(DistanceFactor_type_id, 1.000000);
-		AngleFactor = serialized->get_float(AngleFactor_type_id, 1.000000);
-		VisibleFactor = serialized->get_float(VisibleFactor_type_id, 1.000000);
-		ActiveBias = serialized->get_float(ActiveBias_type_id, 0.250000); 
+		DistanceFactor = serialized->get_float(DistanceFactor_type_id, 1.000000f);
+		AngleFactor = serialized->get_float(AngleFactor_type_id, 1.000000f);
+		VisibleFactor = serialized->get_float(VisibleFactor_type_id, 1.000000f);
+		ActiveBias = serialized->get_float(ActiveBias_type_id, 0.250000f); 
 	}
 
 	[[nodiscard]] auto

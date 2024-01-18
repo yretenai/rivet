@@ -9,9 +9,9 @@ namespace rivet::ddl::generated {
 	InteractShaderEffectPrius::InteractShaderEffectPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		EffectType = serialized->get_enum<rivet::ddl::generated::x8f7f2e3>(EffectType_type_id, rivet::ddl::generated::x8f7f2e3_values, rivet::ddl::generated::x8f7f2e3::Use_Toggle);
 		ShaderAttribute = serialized->get_string(ShaderAttribute_type_id, "");
-		MinValue = serialized->get_float(MinValue_type_id, 0.000000);
-		MaxValue = serialized->get_float(MaxValue_type_id, 1.000000);
-		DeltaSpeed = serialized->get_float(DeltaSpeed_type_id, 0.000000); 
+		MinValue = serialized->get_float(MinValue_type_id, 0.000000f);
+		MaxValue = serialized->get_float(MaxValue_type_id, 1.000000f);
+		DeltaSpeed = serialized->get_float(DeltaSpeed_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

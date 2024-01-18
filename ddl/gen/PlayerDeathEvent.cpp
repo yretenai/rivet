@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	PlayerDeathEvent::PlayerDeathEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		ClientIndex = serialized->get_int32(ClientIndex_type_id, 0);
+		ClientIndex = serialized->get_int32(ClientIndex_type_id, 0u);
 		Team = serialized->get_enum<rivet::ddl::generated::xc115d639>(Team_type_id, rivet::ddl::generated::xc115d639_values, rivet::ddl::generated::xc115d639::None);
 		AnimatedDeath = serialized->get_bool(AnimatedDeath_type_id, false);
 		CombatDeath = serialized->get_bool(CombatDeath_type_id, false); 

@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	TargetCheckHunterPerchPrius::TargetCheckHunterPerchPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): TargetCheckBasePrius(serialized) {
-		MinDistance = serialized->get_float(MinDistance_type_id, 0.000000); 
+		MinDistance = serialized->get_float(MinDistance_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	LevelListDragAndDrop::LevelListDragAndDrop([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ItemId = serialized->get_uint64(ItemId_type_id, 0);
-		ParentItemId = serialized->get_uint64(ParentItemId_type_id, 0); 
+		ItemId = serialized->get_uint64(ItemId_type_id, 0ull);
+		ParentItemId = serialized->get_uint64(ParentItemId_type_id, 0ull); 
 	}
 
 	[[nodiscard]] auto

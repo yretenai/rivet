@@ -13,11 +13,11 @@ namespace rivet::ddl::generated {
 		FollowLocJoint = serialized->get_bool(FollowLocJoint_type_id, true);
 		FollowActor = serialized->get_bool(FollowActor_type_id, true);
 		FXPackage = serialized->get_string(FXPackage_type_id, {});
-		StartEffect = serialized->get_int8(StartEffect_type_id, 1);
+		StartEffect = serialized->get_int8(StartEffect_type_id, 1u);
 		OnConduitDelete = serialized->get_int8(OnConduitDelete_type_id, -1);
-		StartDelay = serialized->get_float(StartDelay_type_id, 0.000000);
-		FadeOut = serialized->get_float(FadeOut_type_id, -1.000000);
-		FadeIn = serialized->get_float(FadeIn_type_id, -1.000000);
+		StartDelay = serialized->get_float(StartDelay_type_id, 0.000000f);
+		FadeOut = serialized->get_float(FadeOut_type_id, -1.000000f);
+		FadeIn = serialized->get_float(FadeIn_type_id, -1.000000f);
 		RefLocator = serialized->get_string(RefLocator_type_id, {});
 		SingleViewport = serialized->get_int8(SingleViewport_type_id, -1);
 		ExcludeViewport = serialized->get_int8(ExcludeViewport_type_id, -1);

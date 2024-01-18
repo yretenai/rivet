@@ -9,10 +9,10 @@
 
 namespace rivet::ddl::generated {
 	CameraRotationLimiterBasePrius::CameraRotationLimiterBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		YawMin = serialized->get_float(YawMin_type_id, -180.000000);
-		YawMax = serialized->get_float(YawMax_type_id, 180.000000);
-		PitchMin = serialized->get_float(PitchMin_type_id, -88.000000);
-		PitchMax = serialized->get_float(PitchMax_type_id, 88.000000); 
+		YawMin = serialized->get_float(YawMin_type_id, -180.000000f);
+		YawMax = serialized->get_float(YawMax_type_id, 180.000000f);
+		PitchMin = serialized->get_float(PitchMin_type_id, -88.000000f);
+		PitchMax = serialized->get_float(PitchMax_type_id, 88.000000f); 
 	}
 
 	[[nodiscard]] auto

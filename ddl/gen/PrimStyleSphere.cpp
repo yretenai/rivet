@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	PrimStyleSphere::PrimStyleSphere([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): PrimStyleBase(serialized) {
 		CenterPointLocator = serialized->get_string(CenterPointLocator_type_id, {});
-		Radius = serialized->get_float(Radius_type_id, 0.000000); 
+		Radius = serialized->get_float(Radius_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ShotSpawnerAttachArtEvent::ShotSpawnerAttachArtEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Timeout = serialized->get_float(Timeout_type_id, 10.000000);
+		Timeout = serialized->get_float(Timeout_type_id, 10.000000f);
 		Locator = serialized->get_string(Locator_type_id, {}); 
 	}
 

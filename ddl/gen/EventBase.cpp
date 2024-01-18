@@ -2051,14 +2051,14 @@
 
 namespace rivet::ddl::generated {
 	EventBase::EventBase([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Frame = serialized->get_uint32(Frame_type_id, 0);
-		SenderHandle = serialized->get_uint32(SenderHandle_type_id, 0);
-		TrackedNameHash = serialized->get_uint32(TrackedNameHash_type_id, 0);
-		EventLocatorHash = serialized->get_uint32(EventLocatorHash_type_id, 0);
-		SourceAnimDriverNameHash = serialized->get_uint32(SourceAnimDriverNameHash_type_id, 0);
-		SourceAnimDriverHandle = serialized->get_uint32(SourceAnimDriverHandle_type_id, 0);
+		Frame = serialized->get_uint32(Frame_type_id, 0u);
+		SenderHandle = serialized->get_uint32(SenderHandle_type_id, 0u);
+		TrackedNameHash = serialized->get_uint32(TrackedNameHash_type_id, 0u);
+		EventLocatorHash = serialized->get_uint32(EventLocatorHash_type_id, 0u);
+		SourceAnimDriverNameHash = serialized->get_uint32(SourceAnimDriverNameHash_type_id, 0u);
+		SourceAnimDriverHandle = serialized->get_uint32(SourceAnimDriverHandle_type_id, 0u);
 		Orientation = serialized->unwrap_into<rivet::ddl::generated::DDLTransform>(Orientation_type_id);
-		RequireActivated = serialized->get_uint8(RequireActivated_type_id, 1); 
+		RequireActivated = serialized->get_uint8(RequireActivated_type_id, 1u); 
 	}
 
 	[[nodiscard]] auto

@@ -10,7 +10,7 @@
 namespace rivet::ddl::generated {
 	WeaponEquippedEvent::WeaponEquippedEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
 		ActorPosition = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(ActorPosition_type_id);
-		OldWeaponDuration = serialized->get_float(OldWeaponDuration_type_id, 0.000000); 
+		OldWeaponDuration = serialized->get_float(OldWeaponDuration_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

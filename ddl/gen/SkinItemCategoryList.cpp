@@ -15,7 +15,7 @@ namespace rivet::ddl::generated {
 		IsBodyCategory = serialized->get_bool(IsBodyCategory_type_id, false);
 		ShowOnBootup = serialized->get_bool(ShowOnBootup_type_id, false);
 		SubMenu = serialized->get_enum<rivet::ddl::generated::xca348341>(SubMenu_type_id, rivet::ddl::generated::xca348341_values, rivet::ddl::generated::xca348341::None);
-		MenuPriority = serialized->get_uint32(MenuPriority_type_id, 0); 
+		MenuPriority = serialized->get_uint32(MenuPriority_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

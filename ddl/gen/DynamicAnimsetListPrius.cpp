@@ -10,7 +10,7 @@
 namespace rivet::ddl::generated {
 	DynamicAnimsetListPrius::DynamicAnimsetListPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		ItemList = serialized->unwrap_into_many<rivet::ddl::generated::DynamicAnimsetItem>(ItemList_type_id);
-		AcquireRange = serialized->get_float(AcquireRange_type_id, 8.000000); 
+		AcquireRange = serialized->get_float(AcquireRange_type_id, 8.000000f); 
 	}
 
 	[[nodiscard]] auto

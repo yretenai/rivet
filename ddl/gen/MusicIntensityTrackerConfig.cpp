@@ -9,12 +9,12 @@
 
 namespace rivet::ddl::generated {
 	MusicIntensityTrackerConfig::MusicIntensityTrackerConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		LowIntensityThreshold = serialized->get_float(LowIntensityThreshold_type_id, 0.000000);
-		HighIntensityThreshold = serialized->get_float(HighIntensityThreshold_type_id, 0.000000);
-		Max = serialized->get_float(Max_type_id, 0.000000);
-		SlewRate = serialized->get_float(SlewRate_type_id, 0.000000);
-		DefaultBotValue = serialized->get_float(DefaultBotValue_type_id, 0.000000);
-		DefaultBotRadius = serialized->get_float(DefaultBotRadius_type_id, 0.000000);
+		LowIntensityThreshold = serialized->get_float(LowIntensityThreshold_type_id, 0.000000f);
+		HighIntensityThreshold = serialized->get_float(HighIntensityThreshold_type_id, 0.000000f);
+		Max = serialized->get_float(Max_type_id, 0.000000f);
+		SlewRate = serialized->get_float(SlewRate_type_id, 0.000000f);
+		DefaultBotValue = serialized->get_float(DefaultBotValue_type_id, 0.000000f);
+		DefaultBotRadius = serialized->get_float(DefaultBotRadius_type_id, 0.000000f);
 		OtherValues = serialized->unwrap_into_many<rivet::ddl::generated::BotMusicValue>(OtherValues_type_id); 
 	}
 

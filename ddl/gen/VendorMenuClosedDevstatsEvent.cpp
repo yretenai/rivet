@@ -13,7 +13,7 @@ namespace rivet::ddl::generated {
 		EventId = serialized->get_string(EventId_type_id, {});
 		MenuSegmentId = serialized->get_string(MenuSegmentId_type_id, {});
 		FinalTab = serialized->get_enum<rivet::ddl::generated::x868ac365>(FinalTab_type_id, rivet::ddl::generated::x868ac365_values, rivet::ddl::generated::x868ac365::Purchase);
-		Duration = serialized->get_float(Duration_type_id, 0.000000);
+		Duration = serialized->get_float(Duration_type_id, 0.000000f);
 		PlayerPosInfo = serialized->unwrap_into<rivet::ddl::generated::DevstatsPlayerPositionInfo>(PlayerPosInfo_type_id);
 		PrimarySegmentInfo = serialized->unwrap_into<rivet::ddl::generated::DevstatsPrimarySegmentInfo>(PrimarySegmentInfo_type_id); 
 	}

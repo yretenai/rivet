@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	BotComboConditionTargetHasComponentPrius::BotComboConditionTargetHasComponentPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BotComboConditionBasePrius(serialized) {
 		TargetComponentName = serialized->get_string(TargetComponentName_type_id, {});
-		MaxRange = serialized->get_float(MaxRange_type_id, 1000.000000); 
+		MaxRange = serialized->get_float(MaxRange_type_id, 1000.000000f); 
 	}
 
 	[[nodiscard]] auto

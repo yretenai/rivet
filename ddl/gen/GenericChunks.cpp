@@ -8,8 +8,8 @@
 namespace rivet::ddl::generated {
 	GenericChunks::GenericChunks([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Chunks = serialized->get_strings(Chunks_type_id);
-		Min = serialized->get_uint32(Min_type_id, 0);
-		Max = serialized->get_uint32(Max_type_id, 0); 
+		Min = serialized->get_uint32(Min_type_id, 0u);
+		Max = serialized->get_uint32(Max_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

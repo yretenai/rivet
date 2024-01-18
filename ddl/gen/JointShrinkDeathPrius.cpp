@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	JointShrinkDeathPrius::JointShrinkDeathPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		StartDelay = serialized->get_float(StartDelay_type_id, 0.000000);
-		ShrinkTime = serialized->get_float(ShrinkTime_type_id, 1.000000);
-		JointMoveSpeed = serialized->get_float(JointMoveSpeed_type_id, 0.500000); 
+		StartDelay = serialized->get_float(StartDelay_type_id, 0.000000f);
+		ShrinkTime = serialized->get_float(ShrinkTime_type_id, 1.000000f);
+		JointMoveSpeed = serialized->get_float(JointMoveSpeed_type_id, 0.500000f); 
 	}
 
 	[[nodiscard]] auto

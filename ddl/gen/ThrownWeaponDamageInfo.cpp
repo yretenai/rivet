@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	ThrownWeaponDamageInfo::ThrownWeaponDamageInfo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DamageRadius = serialized->get_float(DamageRadius_type_id, 0.600000);
-		DamageAmount = serialized->get_float(DamageAmount_type_id, 2.000000);
+		DamageRadius = serialized->get_float(DamageRadius_type_id, 0.600000f);
+		DamageAmount = serialized->get_float(DamageAmount_type_id, 2.000000f);
 		KnockbackLevel = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(KnockbackLevel_type_id, rivet::ddl::generated::KnockbackLevels_values, rivet::ddl::generated::KnockbackLevels::Two);
-		KnockbackAmount = serialized->get_float(KnockbackAmount_type_id, 50.000000);
-		HitPauseDuration = serialized->get_float(HitPauseDuration_type_id, 0.033000);
+		KnockbackAmount = serialized->get_float(KnockbackAmount_type_id, 50.000000f);
+		HitPauseDuration = serialized->get_float(HitPauseDuration_type_id, 0.033000f);
 		HitPauseOnBot = serialized->get_bool(HitPauseOnBot_type_id, true);
 		HitPauseOnWeapon = serialized->get_bool(HitPauseOnWeapon_type_id, true);
 		ThrowDamageHash = serialized->get_string(ThrowDamageHash_type_id, ""); 

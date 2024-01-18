@@ -8,9 +8,9 @@
 namespace rivet::ddl::generated {
 	WeaponAmmoData::WeaponAmmoData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BaseComponentAmmoPrius(serialized) {
 		AmmoItemConfig = serialized->get_string(AmmoItemConfig_type_id, {});
-		PickupAmmo = serialized->get_float(PickupAmmo_type_id, 0.000000);
-		SpawnBias = serialized->get_float(SpawnBias_type_id, 0.000000);
-		MaxAmmo = serialized->get_float(MaxAmmo_type_id, 0.000000); 
+		PickupAmmo = serialized->get_float(PickupAmmo_type_id, 0.000000f);
+		SpawnBias = serialized->get_float(SpawnBias_type_id, 0.000000f);
+		MaxAmmo = serialized->get_float(MaxAmmo_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

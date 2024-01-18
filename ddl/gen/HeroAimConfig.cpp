@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	HeroAimConfig::HeroAimConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		StandardAimCameraBlend = serialized->get_float(StandardAimCameraBlend_type_id, 0.130000);
-		GrenadeAimDelay = serialized->get_float(GrenadeAimDelay_type_id, 0.100000); 
+		StandardAimCameraBlend = serialized->get_float(StandardAimCameraBlend_type_id, 0.130000f);
+		GrenadeAimDelay = serialized->get_float(GrenadeAimDelay_type_id, 0.100000f); 
 	}
 
 	[[nodiscard]] auto

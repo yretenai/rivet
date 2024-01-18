@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	CameraEngineItem::CameraEngineItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		CamLodScale = serialized->get_float(CamLodScale_type_id, 1.000000);
-		NearClipDistance = serialized->get_float(NearClipDistance_type_id, 0.010000);
-		FarClipDistance = serialized->get_float(FarClipDistance_type_id, 10000.000000);
-		FieldOfViewDegrees = serialized->get_float(FieldOfViewDegrees_type_id, 90.000000);
+		CamLodScale = serialized->get_float(CamLodScale_type_id, 1.000000f);
+		NearClipDistance = serialized->get_float(NearClipDistance_type_id, 0.010000f);
+		FarClipDistance = serialized->get_float(FarClipDistance_type_id, 10000.000000f);
+		FieldOfViewDegrees = serialized->get_float(FieldOfViewDegrees_type_id, 90.000000f);
 		Projection = serialized->get_enum<rivet::ddl::generated::CameraProjectionType>(Projection_type_id, rivet::ddl::generated::CameraProjectionType_values, rivet::ddl::generated::CameraProjectionType::Perspective); 
 	}
 

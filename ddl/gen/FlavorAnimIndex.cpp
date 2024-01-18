@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	FlavorAnimIndex::FlavorAnimIndex([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Weight = serialized->get_float(Weight_type_id, 1.000000);
+		Weight = serialized->get_float(Weight_type_id, 1.000000f);
 		CanDuplicate = serialized->get_bool(CanDuplicate_type_id, false); 
 	}
 

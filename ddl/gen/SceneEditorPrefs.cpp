@@ -15,8 +15,8 @@
 
 namespace rivet::ddl::generated {
 	SceneEditorPrefs::SceneEditorPrefs([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SpriteSize = serialized->get_float(SpriteSize_type_id, 0.300000);
-		SpriteOffset = serialized->get_float(SpriteOffset_type_id, 0.800000);
+		SpriteSize = serialized->get_float(SpriteSize_type_id, 0.300000f);
+		SpriteOffset = serialized->get_float(SpriteOffset_type_id, 0.800000f);
 		LastSyncDate = serialized->get_string(LastSyncDate_type_id, "");
 		RenderSettings = serialized->unwrap_into<rivet::ddl::generated::EditorRenderSettings>(RenderSettings_type_id);
 		RenderSettings2 = serialized->unwrap_into<rivet::ddl::generated::EditorRenderSettings2>(RenderSettings2_type_id);
@@ -45,19 +45,19 @@ namespace rivet::ddl::generated {
 		GridSpacingX = serialized->get_double(GridSpacingX_type_id, 1.000000);
 		GridSpacingY = serialized->get_double(GridSpacingY_type_id, 1.000000);
 		GridSpacingZ = serialized->get_double(GridSpacingZ_type_id, 1.000000);
-		RotationSnap = serialized->get_float(RotationSnap_type_id, 45.000000);
-		PolylineSnap = serialized->get_float(PolylineSnap_type_id, 2.000000);
-		HFovAsset = serialized->get_float(HFovAsset_type_id, 60.000000);
-		HFovZone = serialized->get_float(HFovZone_type_id, 72.000000);
+		RotationSnap = serialized->get_float(RotationSnap_type_id, 45.000000f);
+		PolylineSnap = serialized->get_float(PolylineSnap_type_id, 2.000000f);
+		HFovAsset = serialized->get_float(HFovAsset_type_id, 60.000000f);
+		HFovZone = serialized->get_float(HFovZone_type_id, 72.000000f);
 		MarqueeTestMode = serialized->get_enum<rivet::ddl::generated::MarqueeTestMode>(MarqueeTestMode_type_id, rivet::ddl::generated::MarqueeTestMode_values, rivet::ddl::generated::MarqueeTestMode::Any);
 		EditorRenderMode = serialized->get_enum<rivet::ddl::generated::EditorRenderMode>(EditorRenderMode_type_id, rivet::ddl::generated::EditorRenderMode_values, rivet::ddl::generated::EditorRenderMode::Full_Lighting);
-		EditorCollisionMode = serialized->get_int32(EditorCollisionMode_type_id, 65535);
+		EditorCollisionMode = serialized->get_int32(EditorCollisionMode_type_id, 65535u);
 		SelectBoundingBox = serialized->get_bool(SelectBoundingBox_type_id, false);
-		FXDynamicScaling = serialized->get_float(FXDynamicScaling_type_id, 1.000000);
-		CamLoDScale = serialized->get_float(CamLoDScale_type_id, 1.000000);
-		FarClipDist = serialized->get_float(FarClipDist_type_id, 1000.000000);
-		MatAlphaSim = serialized->get_float(MatAlphaSim_type_id, 1.000000);
-		FPSSim = serialized->get_float(FPSSim_type_id, 1.000000);
+		FXDynamicScaling = serialized->get_float(FXDynamicScaling_type_id, 1.000000f);
+		CamLoDScale = serialized->get_float(CamLoDScale_type_id, 1.000000f);
+		FarClipDist = serialized->get_float(FarClipDist_type_id, 1000.000000f);
+		MatAlphaSim = serialized->get_float(MatAlphaSim_type_id, 1.000000f);
+		FPSSim = serialized->get_float(FPSSim_type_id, 1.000000f);
 		MatAnimateLoD = serialized->get_bool(MatAnimateLoD_type_id, false);
 		MatDoubleSided = serialized->get_bool(MatDoubleSided_type_id, true);
 		MatColorPicker = serialized->get_bool(MatColorPicker_type_id, false);
@@ -79,7 +79,7 @@ namespace rivet::ddl::generated {
 		ViewerAtmospheres = serialized->get_strings(ViewerAtmospheres_type_id);
 		ModelDisplayFlags = serialized->unwrap_into<rivet::ddl::generated::ModelDisplayOptions>(ModelDisplayFlags_type_id);
 		EventFilterOptions = serialized->unwrap_into<rivet::ddl::generated::EventFilterOptions>(EventFilterOptions_type_id);
-		AVMaterialOverride = serialized->get_int32(AVMaterialOverride_type_id, 0);
+		AVMaterialOverride = serialized->get_int32(AVMaterialOverride_type_id, 0u);
 		RandomizationSettings = serialized->unwrap_into<rivet::ddl::generated::RandomizationSettings>(RandomizationSettings_type_id); 
 	}
 

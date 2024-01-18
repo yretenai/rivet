@@ -8,9 +8,9 @@
 namespace rivet::ddl::generated {
 	DefaultLocalHeroNodeDebugData::DefaultLocalHeroNodeDebugData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): NodeGraphDebugDataBase(serialized) {
 		HeroActorName = serialized->get_string(HeroActorName_type_id, {});
-		HeroActorTuid = serialized->get_uint64(HeroActorTuid_type_id, 0);
-		HeroActorHandle = serialized->get_uint32(HeroActorHandle_type_id, 0);
-		HeroUserIndex = serialized->get_int32(HeroUserIndex_type_id, 0);
+		HeroActorTuid = serialized->get_uint64(HeroActorTuid_type_id, 0ull);
+		HeroActorHandle = serialized->get_uint32(HeroActorHandle_type_id, 0u);
+		HeroUserIndex = serialized->get_int32(HeroUserIndex_type_id, 0u);
 		HeroUserName = serialized->get_string(HeroUserName_type_id, {}); 
 	}
 

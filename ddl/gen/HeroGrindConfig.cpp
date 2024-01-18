@@ -15,18 +15,18 @@ namespace rivet::ddl::generated {
 		SlopeData = serialized->unwrap_into<rivet::ddl::generated::GrindSlopeData>(SlopeData_type_id);
 		GapApproachData = serialized->unwrap_into<rivet::ddl::generated::GrindVolumeApproachData>(GapApproachData_type_id);
 		HazardApproachData = serialized->unwrap_into<rivet::ddl::generated::GrindVolumeApproachData>(HazardApproachData_type_id);
-		MinAccessibilityTimeSlowScale = serialized->get_float(MinAccessibilityTimeSlowScale_type_id, 0.250000);
+		MinAccessibilityTimeSlowScale = serialized->get_float(MinAccessibilityTimeSlowScale_type_id, 0.250000f);
 		CameraShakeConfig = serialized->get_string(CameraShakeConfig_type_id, {});
-		GrindHorizontalTolerance = serialized->get_float(GrindHorizontalTolerance_type_id, 0.650000);
-		GrindVerticalTolerance = serialized->get_float(GrindVerticalTolerance_type_id, 0.650000);
-		GrindPreferCameraAngleTol = serialized->get_float(GrindPreferCameraAngleTol_type_id, 70.000000);
-		GrindPreferPlayerAngleTol = serialized->get_float(GrindPreferPlayerAngleTol_type_id, 45.000000);
-		GrindForwardToleranceJump = serialized->get_float(GrindForwardToleranceJump_type_id, 8.500000);
-		GrindVerticalToleranceJump = serialized->get_float(GrindVerticalToleranceJump_type_id, 2.000000);
-		GrindHorizontalMinimumJump = serialized->get_float(GrindHorizontalMinimumJump_type_id, 1.000000);
-		GrindHorizontalMaximumJump = serialized->get_float(GrindHorizontalMaximumJump_type_id, 4.500000);
-		WallRunTransferLookAheadTime = serialized->get_float(WallRunTransferLookAheadTime_type_id, 0.300000);
-		FastSpeedThresholdPercent = serialized->get_float(FastSpeedThresholdPercent_type_id, 0.800000); 
+		GrindHorizontalTolerance = serialized->get_float(GrindHorizontalTolerance_type_id, 0.650000f);
+		GrindVerticalTolerance = serialized->get_float(GrindVerticalTolerance_type_id, 0.650000f);
+		GrindPreferCameraAngleTol = serialized->get_float(GrindPreferCameraAngleTol_type_id, 70.000000f);
+		GrindPreferPlayerAngleTol = serialized->get_float(GrindPreferPlayerAngleTol_type_id, 45.000000f);
+		GrindForwardToleranceJump = serialized->get_float(GrindForwardToleranceJump_type_id, 8.500000f);
+		GrindVerticalToleranceJump = serialized->get_float(GrindVerticalToleranceJump_type_id, 2.000000f);
+		GrindHorizontalMinimumJump = serialized->get_float(GrindHorizontalMinimumJump_type_id, 1.000000f);
+		GrindHorizontalMaximumJump = serialized->get_float(GrindHorizontalMaximumJump_type_id, 4.500000f);
+		WallRunTransferLookAheadTime = serialized->get_float(WallRunTransferLookAheadTime_type_id, 0.300000f);
+		FastSpeedThresholdPercent = serialized->get_float(FastSpeedThresholdPercent_type_id, 0.800000f); 
 	}
 
 	[[nodiscard]] auto

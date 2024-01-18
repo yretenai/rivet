@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	VendorWeaponStat::VendorWeaponStat([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Type = serialized->get_enum<rivet::ddl::generated::x788cf5f2>(Type_type_id, rivet::ddl::generated::x788cf5f2_values, rivet::ddl::generated::x788cf5f2::Power);
-		Val = serialized->get_uint32(Val_type_id, 10); 
+		Val = serialized->get_uint32(Val_type_id, 10u); 
 	}
 
 	[[nodiscard]] auto

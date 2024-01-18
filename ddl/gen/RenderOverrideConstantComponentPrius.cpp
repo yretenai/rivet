@@ -13,7 +13,7 @@ namespace rivet::ddl::generated {
 		MaterialMappingName = serialized->get_string(MaterialMappingName_type_id, {});
 		StartValue = serialized->unwrap_into<rivet::ddl::generated::DDLVector4>(StartValue_type_id);
 		EndValue = serialized->unwrap_into<rivet::ddl::generated::DDLVector4>(EndValue_type_id);
-		TransitionTime = serialized->get_float(TransitionTime_type_id, 0.000000); 
+		TransitionTime = serialized->get_float(TransitionTime_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

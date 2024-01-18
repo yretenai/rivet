@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	WeaponLevelConfig::WeaponLevelConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		TimeScale = serialized->get_float(TimeScale_type_id, 1.000000);
-		TimeScaleDuration = serialized->get_float(TimeScaleDuration_type_id, 1.000000);
+		TimeScale = serialized->get_float(TimeScale_type_id, 1.000000f);
+		TimeScaleDuration = serialized->get_float(TimeScaleDuration_type_id, 1.000000f);
 		StartCameraShake = serialized->get_string(StartCameraShake_type_id, {});
 		LevelUpCameraShake = serialized->get_string(LevelUpCameraShake_type_id, {}); 
 	}

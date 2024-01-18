@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	DimensionalPulseTargetFlockFleeEvent::DimensionalPulseTargetFlockFleeEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		OverrideFleeReactionTime = serialized->get_float(OverrideFleeReactionTime_type_id, -1.000000); 
+		OverrideFleeReactionTime = serialized->get_float(OverrideFleeReactionTime_type_id, -1.000000f); 
 	}
 
 	[[nodiscard]] auto

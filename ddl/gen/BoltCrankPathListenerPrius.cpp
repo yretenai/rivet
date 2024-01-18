@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	BoltCrankPathListenerPrius::BoltCrankPathListenerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Crank = serialized->get_uint64(Crank_type_id, 0);
-		Path = serialized->get_uint64(Path_type_id, 0);
+		Crank = serialized->get_uint64(Crank_type_id, 0ull);
+		Path = serialized->get_uint64(Path_type_id, 0ull);
 		UsePathOrientation = serialized->get_bool(UsePathOrientation_type_id, true); 
 	}
 

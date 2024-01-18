@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	GameUnpausedEvent::GameUnpausedEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		UserIndex = serialized->get_int32(UserIndex_type_id, 0);
-		Time = serialized->get_float(Time_type_id, 0.000000);
-		ElapsedTime = serialized->get_float(ElapsedTime_type_id, 0.000000); 
+		UserIndex = serialized->get_int32(UserIndex_type_id, 0u);
+		Time = serialized->get_float(Time_type_id, 0.000000f);
+		ElapsedTime = serialized->get_float(ElapsedTime_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

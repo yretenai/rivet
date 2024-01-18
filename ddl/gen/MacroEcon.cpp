@@ -7,15 +7,15 @@
 
 namespace rivet::ddl::generated {
 	MacroEcon::MacroEcon([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SegmentsCompleted = serialized->get_uint32(SegmentsCompleted_type_id, 0);
-		MinBolts = serialized->get_uint32(MinBolts_type_id, 1000);
-		MaxBolts = serialized->get_uint32(MaxBolts_type_id, 2000);
-		MinHeroXP = serialized->get_uint32(MinHeroXP_type_id, 1000);
-		MaxHeroXP = serialized->get_uint32(MaxHeroXP_type_id, 2000);
-		MinWpnXP = serialized->get_uint32(MinWpnXP_type_id, 10);
-		MaxWpnXP = serialized->get_uint32(MaxWpnXP_type_id, 20);
-		MinRaritanium = serialized->get_uint32(MinRaritanium_type_id, 10);
-		MaxRaritanium = serialized->get_uint32(MaxRaritanium_type_id, 20); 
+		SegmentsCompleted = serialized->get_uint32(SegmentsCompleted_type_id, 0u);
+		MinBolts = serialized->get_uint32(MinBolts_type_id, 1000u);
+		MaxBolts = serialized->get_uint32(MaxBolts_type_id, 2000u);
+		MinHeroXP = serialized->get_uint32(MinHeroXP_type_id, 1000u);
+		MaxHeroXP = serialized->get_uint32(MaxHeroXP_type_id, 2000u);
+		MinWpnXP = serialized->get_uint32(MinWpnXP_type_id, 10u);
+		MaxWpnXP = serialized->get_uint32(MaxWpnXP_type_id, 20u);
+		MinRaritanium = serialized->get_uint32(MinRaritanium_type_id, 10u);
+		MaxRaritanium = serialized->get_uint32(MaxRaritanium_type_id, 20u); 
 	}
 
 	[[nodiscard]] auto

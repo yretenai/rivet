@@ -10,7 +10,7 @@
 namespace rivet::ddl::generated {
 	EngineControlModelInstanceData::EngineControlModelInstanceData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		ActiveLooks = serialized->get_bools(ActiveLooks_type_id);
-		Id = serialized->get_uint64(Id_type_id, 0);
+		Id = serialized->get_uint64(Id_type_id, 0ull);
 		ModelAssetPath = serialized->get_string(ModelAssetPath_type_id, {});
 		ObjToWorld = serialized->unwrap_into<rivet::ddl::generated::DDLTransform>(ObjToWorld_type_id);
 		Type = serialized->get_enum<rivet::ddl::generated::x18449e9>(Type_type_id, rivet::ddl::generated::x18449e9_values, rivet::ddl::generated::x18449e9::Model); 

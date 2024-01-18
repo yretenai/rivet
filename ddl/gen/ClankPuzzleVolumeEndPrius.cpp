@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	ClankPuzzleVolumeEndPrius::ClankPuzzleVolumeEndPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		PrimaryBotCountdownTimer = serialized->get_float(PrimaryBotCountdownTimer_type_id, 4.000000);
-		SecondaryBotCountdownTimer = serialized->get_float(SecondaryBotCountdownTimer_type_id, 1.000000);
+		PrimaryBotCountdownTimer = serialized->get_float(PrimaryBotCountdownTimer_type_id, 4.000000f);
+		SecondaryBotCountdownTimer = serialized->get_float(SecondaryBotCountdownTimer_type_id, 1.000000f);
 		GoalMarkers = serialized->get_uint64s(GoalMarkers_type_id); 
 	}
 

@@ -10,7 +10,7 @@ namespace rivet::ddl::generated {
 		Action = serialized->get_enum<rivet::ddl::generated::x38ca42>(Action_type_id, rivet::ddl::generated::x38ca42_values, rivet::ddl::generated::x38ca42::Trigger);
 		Name = serialized->get_string(Name_type_id, {});
 		ValueName = serialized->get_string(ValueName_type_id, {});
-		Value = serialized->get_float(Value_type_id, 0.000000); 
+		Value = serialized->get_float(Value_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

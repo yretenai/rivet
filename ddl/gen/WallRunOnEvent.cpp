@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	WallRunOnEvent::WallRunOnEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Direction = serialized->get_int8(Direction_type_id, 0); 
+		Direction = serialized->get_int8(Direction_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

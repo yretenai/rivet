@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	BootTimeDevstatsEvent::BootTimeDevstatsEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
 		EventId = serialized->get_string(EventId_type_id, {});
-		ElapsedTime = serialized->get_float(ElapsedTime_type_id, 0.000000); 
+		ElapsedTime = serialized->get_float(ElapsedTime_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

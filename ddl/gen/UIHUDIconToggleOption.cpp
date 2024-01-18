@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	UIHUDIconToggleOption::UIHUDIconToggleOption([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		OptionID = serialized->get_enum<rivet::ddl::generated::x33afe7f4>(OptionID_type_id, rivet::ddl::generated::x33afe7f4_values, rivet::ddl::generated::x33afe7f4::Resume);
-		ToggleOnValue = serialized->get_uint8(ToggleOnValue_type_id, 1); 
+		ToggleOnValue = serialized->get_uint8(ToggleOnValue_type_id, 1u); 
 	}
 
 	[[nodiscard]] auto

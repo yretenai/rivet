@@ -15,7 +15,7 @@ namespace rivet::ddl::generated {
 		LipsyncModified = serialized->get_bool(LipsyncModified_type_id, false);
 		DefaultPerformanceClip = serialized->get_string(DefaultPerformanceClip_type_id, {});
 		LocalizationPath = serialized->get_string(LocalizationPath_type_id, {});
-		PreBlendMs = serialized->get_int32(PreBlendMs_type_id, 66);
+		PreBlendMs = serialized->get_int32(PreBlendMs_type_id, 66u);
 		PhonemeOffsetMs = serialized->get_int32(PhonemeOffsetMs_type_id, -50);
 		PhonemeSmoothing = serialized->get_enum<rivet::ddl::generated::x16d59d74>(PhonemeSmoothing_type_id, rivet::ddl::generated::x16d59d74_values, rivet::ddl::generated::x16d59d74::Annosoft_Smoothing);
 		FacialPhonemes = serialized->unwrap_into_many<rivet::ddl::generated::AnimFacialPhonemeDef>(FacialPhonemes_type_id);

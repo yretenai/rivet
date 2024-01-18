@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	RandomizedSpawnPointTargetArcPrius::RandomizedSpawnPointTargetArcPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): RandomizedSpawnPointBasePrius(serialized) {
-		MinRadius = serialized->get_float(MinRadius_type_id, 1.000000);
-		MaxRadius = serialized->get_float(MaxRadius_type_id, 4.000000);
-		TargetArcAngle = serialized->get_float(TargetArcAngle_type_id, 90.000000); 
+		MinRadius = serialized->get_float(MinRadius_type_id, 1.000000f);
+		MaxRadius = serialized->get_float(MaxRadius_type_id, 4.000000f);
+		TargetArcAngle = serialized->get_float(TargetArcAngle_type_id, 90.000000f); 
 	}
 
 	[[nodiscard]] auto

@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	EyeBeamFiringPattern::EyeBeamFiringPattern([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MinShotCount = serialized->get_uint8(MinShotCount_type_id, 1);
-		MaxShotCount = serialized->get_uint8(MaxShotCount_type_id, 5);
-		MinShotDelay = serialized->get_float(MinShotDelay_type_id, 0.000000);
-		MaxShotDelay = serialized->get_float(MaxShotDelay_type_id, 0.500000); 
+		MinShotCount = serialized->get_uint8(MinShotCount_type_id, 1u);
+		MaxShotCount = serialized->get_uint8(MaxShotCount_type_id, 5u);
+		MinShotDelay = serialized->get_float(MinShotDelay_type_id, 0.000000f);
+		MaxShotDelay = serialized->get_float(MaxShotDelay_type_id, 0.500000f); 
 	}
 
 	[[nodiscard]] auto

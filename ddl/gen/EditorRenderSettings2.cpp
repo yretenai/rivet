@@ -10,7 +10,7 @@ namespace rivet::ddl::generated {
 		DimUnselected = serialized->get_bool(DimUnselected_type_id, false);
 		LgcToolMode = serialized->get_enum<rivet::ddl::generated::LgcToolModes>(LgcToolMode_type_id, rivet::ddl::generated::LgcToolModes_values, rivet::ddl::generated::LgcToolModes::LGC_2);
 		HighQualityLgCapture = serialized->get_bool(HighQualityLgCapture_type_id, false);
-		LgcBounceCount = serialized->get_int32(LgcBounceCount_type_id, 1);
+		LgcBounceCount = serialized->get_int32(LgcBounceCount_type_id, 1u);
 		ShowSelectionAABB = serialized->get_bool(ShowSelectionAABB_type_id, false); 
 	}
 

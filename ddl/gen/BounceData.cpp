@@ -7,14 +7,14 @@
 
 namespace rivet::ddl::generated {
 	BounceData::BounceData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		RollBounceScale = serialized->get_float(RollBounceScale_type_id, 0.700000);
-		FlatHitBounceScale = serialized->get_float(FlatHitBounceScale_type_id, 0.700000);
-		EnvironmentHitGravity = serialized->get_float(EnvironmentHitGravity_type_id, 10.000000);
-		ActorRollBounceScale = serialized->get_float(ActorRollBounceScale_type_id, 0.700000);
-		ActorFlatHitBounceScale = serialized->get_float(ActorFlatHitBounceScale_type_id, 0.700000);
-		ActorBounceGravity = serialized->get_float(ActorBounceGravity_type_id, 10.000000);
-		RotationScale = serialized->get_float(RotationScale_type_id, 1.000000);
-		MinBounceSpeed = serialized->get_float(MinBounceSpeed_type_id, 0.000000); 
+		RollBounceScale = serialized->get_float(RollBounceScale_type_id, 0.700000f);
+		FlatHitBounceScale = serialized->get_float(FlatHitBounceScale_type_id, 0.700000f);
+		EnvironmentHitGravity = serialized->get_float(EnvironmentHitGravity_type_id, 10.000000f);
+		ActorRollBounceScale = serialized->get_float(ActorRollBounceScale_type_id, 0.700000f);
+		ActorFlatHitBounceScale = serialized->get_float(ActorFlatHitBounceScale_type_id, 0.700000f);
+		ActorBounceGravity = serialized->get_float(ActorBounceGravity_type_id, 10.000000f);
+		RotationScale = serialized->get_float(RotationScale_type_id, 1.000000f);
+		MinBounceSpeed = serialized->get_float(MinBounceSpeed_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

@@ -11,8 +11,8 @@ namespace rivet::ddl::generated {
 	AnimDriverPerformanceNodeDef::AnimDriverPerformanceNodeDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Name = serialized->get_string(Name_type_id, {});
 		DisplayName = serialized->get_string(DisplayName_type_id, "");
-		x = serialized->get_float(x_type_id, 0.000000);
-		y = serialized->get_float(y_type_id, 0.000000);
+		x = serialized->get_float(x_type_id, 0.000000f);
+		y = serialized->get_float(y_type_id, 0.000000f);
 		Connection = serialized->unwrap_into<rivet::ddl::generated::AnimDriverConnectionDef>(Connection_type_id); 
 	}
 

@@ -10,9 +10,9 @@
 
 namespace rivet::ddl::generated {
 	CameraRotatorBasePrius::CameraRotatorBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		TurnSpeedAccel = serialized->get_float(TurnSpeedAccel_type_id, 2000.000000);
-		TurnSpeedDecel = serialized->get_float(TurnSpeedDecel_type_id, 1000.000000);
-		TurnSpeedMax = serialized->get_float(TurnSpeedMax_type_id, 2000.000000); 
+		TurnSpeedAccel = serialized->get_float(TurnSpeedAccel_type_id, 2000.000000f);
+		TurnSpeedDecel = serialized->get_float(TurnSpeedDecel_type_id, 1000.000000f);
+		TurnSpeedMax = serialized->get_float(TurnSpeedMax_type_id, 2000.000000f); 
 	}
 
 	[[nodiscard]] auto

@@ -10,11 +10,11 @@
 
 namespace rivet::ddl::generated {
 	AimAssistSnapLocation::AimAssistSnapLocation([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		AngleNear = serialized->get_float(AngleNear_type_id, 3.000000);
-		AngleFar = serialized->get_float(AngleFar_type_id, 7.000000);
-		DistanceNear = serialized->get_float(DistanceNear_type_id, 5.000000);
-		DistanceFar = serialized->get_float(DistanceFar_type_id, 15.000000);
-		FaceAngle = serialized->get_float(FaceAngle_type_id, 180.000000);
+		AngleNear = serialized->get_float(AngleNear_type_id, 3.000000f);
+		AngleFar = serialized->get_float(AngleFar_type_id, 7.000000f);
+		DistanceNear = serialized->get_float(DistanceNear_type_id, 5.000000f);
+		DistanceFar = serialized->get_float(DistanceFar_type_id, 15.000000f);
+		FaceAngle = serialized->get_float(FaceAngle_type_id, 180.000000f);
 		LocationType = serialized->get_enum<rivet::ddl::generated::x80286938>(LocationType_type_id, rivet::ddl::generated::x80286938_values, rivet::ddl::generated::x80286938::CenterOfMass); 
 	}
 

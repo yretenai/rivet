@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	DepthOfFieldVolumePrius::DepthOfFieldVolumePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		BlurStartDistance = serialized->get_float(BlurStartDistance_type_id, 50.000000);
-		BlurValue = serialized->get_float(BlurValue_type_id, 2.500000);
-		BlurNearDistance = serialized->get_float(BlurNearDistance_type_id, 0.000000);
-		BlurNearValue = serialized->get_float(BlurNearValue_type_id, 0.000000);
-		BlendOnTime = serialized->get_float(BlendOnTime_type_id, 0.200000);
+		BlurStartDistance = serialized->get_float(BlurStartDistance_type_id, 50.000000f);
+		BlurValue = serialized->get_float(BlurValue_type_id, 2.500000f);
+		BlurNearDistance = serialized->get_float(BlurNearDistance_type_id, 0.000000f);
+		BlurNearValue = serialized->get_float(BlurNearValue_type_id, 0.000000f);
+		BlendOnTime = serialized->get_float(BlendOnTime_type_id, 0.200000f);
 		DisableDOF = serialized->get_bool(DisableDOF_type_id, false); 
 	}
 

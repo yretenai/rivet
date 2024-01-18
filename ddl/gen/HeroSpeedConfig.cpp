@@ -7,15 +7,15 @@
 
 namespace rivet::ddl::generated {
 	HeroSpeedConfig::HeroSpeedConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		WalkRunStickThreshold = serialized->get_float(WalkRunStickThreshold_type_id, 0.980000);
-		WalkSpeedMin = serialized->get_float(WalkSpeedMin_type_id, 2.000000);
-		WalkSpeedMax = serialized->get_float(WalkSpeedMax_type_id, 2.000000);
-		RunSpeedMin = serialized->get_float(RunSpeedMin_type_id, 4.500000);
-		RunSpeedMax = serialized->get_float(RunSpeedMax_type_id, 5.000000);
-		RunSpeedBackwardMin = serialized->get_float(RunSpeedBackwardMin_type_id, 3.000000);
-		RunSpeedBackwardMax = serialized->get_float(RunSpeedBackwardMax_type_id, 3.000000);
-		RunSpeedSideMin = serialized->get_float(RunSpeedSideMin_type_id, 4.000000);
-		RunSpeedSideMax = serialized->get_float(RunSpeedSideMax_type_id, 4.500000); 
+		WalkRunStickThreshold = serialized->get_float(WalkRunStickThreshold_type_id, 0.980000f);
+		WalkSpeedMin = serialized->get_float(WalkSpeedMin_type_id, 2.000000f);
+		WalkSpeedMax = serialized->get_float(WalkSpeedMax_type_id, 2.000000f);
+		RunSpeedMin = serialized->get_float(RunSpeedMin_type_id, 4.500000f);
+		RunSpeedMax = serialized->get_float(RunSpeedMax_type_id, 5.000000f);
+		RunSpeedBackwardMin = serialized->get_float(RunSpeedBackwardMin_type_id, 3.000000f);
+		RunSpeedBackwardMax = serialized->get_float(RunSpeedBackwardMax_type_id, 3.000000f);
+		RunSpeedSideMin = serialized->get_float(RunSpeedSideMin_type_id, 4.000000f);
+		RunSpeedSideMax = serialized->get_float(RunSpeedSideMax_type_id, 4.500000f); 
 	}
 
 	[[nodiscard]] auto

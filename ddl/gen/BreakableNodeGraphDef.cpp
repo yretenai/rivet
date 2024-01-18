@@ -23,7 +23,7 @@
 
 namespace rivet::ddl::generated {
 	BreakableNodeGraphDef::BreakableNodeGraphDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Id = serialized->get_uint64(Id_type_id, 0);
+		Id = serialized->get_uint64(Id_type_id, 0ull);
 		Type = serialized->get_enum<rivet::ddl::generated::x577f103e>(Type_type_id, rivet::ddl::generated::x577f103e_values, rivet::ddl::generated::x577f103e::Invalid);
 		Name = serialized->get_string(Name_type_id, {});
 		BlockNodes = serialized->unwrap_into_many<rivet::ddl::generated::BlockNodeDef>(BlockNodes_type_id);

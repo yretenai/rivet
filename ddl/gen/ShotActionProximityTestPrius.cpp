@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	ShotActionProximityTestPrius::ShotActionProximityTestPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Radius = serialized->get_float(Radius_type_id, 3.000000);
-		AllegianceMask = serialized->get_uint32(AllegianceMask_type_id, 0);
+		Radius = serialized->get_float(Radius_type_id, 3.000000f);
+		AllegianceMask = serialized->get_uint32(AllegianceMask_type_id, 0u);
 		UseLOS = serialized->get_bool(UseLOS_type_id, true);
 		DisableOnBreach = serialized->get_bool(DisableOnBreach_type_id, true);
 		StartActive = serialized->get_bool(StartActive_type_id, false); 

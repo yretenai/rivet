@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	StatusEffectShrubberyPrius::StatusEffectShrubberyPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): StatusEffectBasePrius(serialized) {
-		ModelId = serialized->get_uint64(ModelId_type_id, 0);
+		ModelId = serialized->get_uint64(ModelId_type_id, 0ull);
 		ColorFadeConstant = serialized->get_string(ColorFadeConstant_type_id, {});
 		RemoveBotOnDeath = serialized->get_bool(RemoveBotOnDeath_type_id, true); 
 	}

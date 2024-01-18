@@ -19,8 +19,8 @@ namespace rivet::ddl::generated {
 		Hide = serialized->get_bool(Hide_type_id, false);
 		UseMayaAnimOffset = serialized->get_bool(UseMayaAnimOffset_type_id, true);
 		QuitOnEngaged = serialized->get_bool(QuitOnEngaged_type_id, false);
-		EngagedIntroAbortTime = serialized->get_float(EngagedIntroAbortTime_type_id, -1.000000);
-		EngagedOutroDelay = serialized->get_float(EngagedOutroDelay_type_id, 0.000000);
+		EngagedIntroAbortTime = serialized->get_float(EngagedIntroAbortTime_type_id, -1.000000f);
+		EngagedOutroDelay = serialized->get_float(EngagedOutroDelay_type_id, 0.000000f);
 		SetInvincible = serialized->get_bool(SetInvincible_type_id, false);
 		InterruptibleBy = serialized->get_enum<rivet::ddl::generated::x1879f53b>(InterruptibleBy_type_id, rivet::ddl::generated::x1879f53b_values, rivet::ddl::generated::x1879f53b::Anything);
 		OnScreenIntro = serialized->get_bool(OnScreenIntro_type_id, false);
@@ -44,11 +44,11 @@ namespace rivet::ddl::generated {
 		ObjectOutroAnim = serialized->get_string(ObjectOutroAnim_type_id, {});
 		ObjectIdleAnim = serialized->get_string(ObjectIdleAnim_type_id, "Idle");
 		LoopCount = serialized->get_int32(LoopCount_type_id, -1);
-		MinTimeAtClue = serialized->get_float(MinTimeAtClue_type_id, 0.000000);
+		MinTimeAtClue = serialized->get_float(MinTimeAtClue_type_id, 0.000000f);
 		CanReset = serialized->get_bool(CanReset_type_id, false);
 		AllowMultiUse = serialized->get_bool(AllowMultiUse_type_id, false);
 		MaxAnimIndex = serialized->get_enum<rivet::ddl::generated::xa3886454>(MaxAnimIndex_type_id, rivet::ddl::generated::xa3886454_values, rivet::ddl::generated::xa3886454::None);
-		ObjectActor = serialized->get_uint64(ObjectActor_type_id, 0);
+		ObjectActor = serialized->get_uint64(ObjectActor_type_id, 0ull);
 		AnimSetMapping = serialized->unwrap_into_many<rivet::ddl::generated::AnimSetMapping>(AnimSetMapping_type_id); 
 	}
 

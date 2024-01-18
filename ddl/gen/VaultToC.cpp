@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	VaultToC::VaultToC([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		_id = serialized->get_uint64(_id_type_id, 0);
+		_id = serialized->get_uint64(_id_type_id, 0ull);
 		Path = serialized->get_string(Path_type_id, "");
 		Dir = serialized->get_string(Dir_type_id, "");
 		Name = serialized->get_string(Name_type_id, "");
@@ -15,8 +15,8 @@ namespace rivet::ddl::generated {
 		Crtd = serialized->get_string(Crtd_type_id, "");
 		Mod = serialized->get_string(Mod_type_id, "");
 		Time = serialized->get_string(Time_type_id, "");
-		Stat = serialized->get_uint32(Stat_type_id, 0);
-		Err = serialized->get_uint32(Err_type_id, 0); 
+		Stat = serialized->get_uint32(Stat_type_id, 0u);
+		Err = serialized->get_uint32(Err_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

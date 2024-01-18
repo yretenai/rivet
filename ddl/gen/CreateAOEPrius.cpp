@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	CreateAOEPrius::CreateAOEPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ScriptedShotEffectBasePrius(serialized) {
-		Radius = serialized->get_float(Radius_type_id, 1.000000);
+		Radius = serialized->get_float(Radius_type_id, 1.000000f);
 		LOS = serialized->get_bool(LOS_type_id, true);
 		TriggerExplode = serialized->get_bool(TriggerExplode_type_id, false);
 		IgnoreHitActor = serialized->get_bool(IgnoreHitActor_type_id, false);

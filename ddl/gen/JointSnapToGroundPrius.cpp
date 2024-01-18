@@ -9,8 +9,8 @@ namespace rivet::ddl::generated {
 	JointSnapToGroundPrius::JointSnapToGroundPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Locator = serialized->get_string(Locator_type_id, {});
 		OffsetsAreLocal = serialized->get_bool(OffsetsAreLocal_type_id, true);
-		StartCheckYOffset = serialized->get_float(StartCheckYOffset_type_id, 1.000000);
-		EndCheckYOffset = serialized->get_float(EndCheckYOffset_type_id, -15.000000); 
+		StartCheckYOffset = serialized->get_float(StartCheckYOffset_type_id, 1.000000f);
+		EndCheckYOffset = serialized->get_float(EndCheckYOffset_type_id, -15.000000f); 
 	}
 
 	[[nodiscard]] auto

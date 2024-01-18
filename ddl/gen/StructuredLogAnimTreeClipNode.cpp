@@ -9,10 +9,10 @@
 
 namespace rivet::ddl::generated {
 	StructuredLogAnimTreeClipNode::StructuredLogAnimTreeClipNode([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): StructuredLogAnimTreeNode(serialized) {
-		Time = serialized->get_float(Time_type_id, 0.000000);
-		TimeMotion = serialized->get_float(TimeMotion_type_id, 0.000000);
-		TimePrevMotion = serialized->get_float(TimePrevMotion_type_id, 0.000000);
-		Rate = serialized->get_float(Rate_type_id, 0.000000); 
+		Time = serialized->get_float(Time_type_id, 0.000000f);
+		TimeMotion = serialized->get_float(TimeMotion_type_id, 0.000000f);
+		TimePrevMotion = serialized->get_float(TimePrevMotion_type_id, 0.000000f);
+		Rate = serialized->get_float(Rate_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

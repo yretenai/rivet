@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	WalkingArchivesSoundEvent::WalkingArchivesSoundEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Time = serialized->get_float(Time_type_id, 0.000000); 
+		Time = serialized->get_float(Time_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

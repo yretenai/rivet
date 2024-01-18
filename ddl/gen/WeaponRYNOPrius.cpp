@@ -13,10 +13,10 @@ namespace rivet::ddl::generated {
 	WeaponRYNOPrius::WeaponRYNOPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): WeaponGamePrius(serialized) {
 		PortalPrius = serialized->unwrap_into<rivet::ddl::generated::RYNOPortalPrius>(PortalPrius_type_id);
 		PortalObjectPrius = serialized->unwrap_into<rivet::ddl::generated::RYNOPortalObjectPrius>(PortalObjectPrius_type_id);
-		PreFireTime = serialized->get_float(PreFireTime_type_id, 0.750000);
-		PortalObjectInitialSpeed = serialized->get_float(PortalObjectInitialSpeed_type_id, 1.500000);
-		PortalObjectAccel = serialized->get_float(PortalObjectAccel_type_id, 30.000000);
-		BeamShotSpeed = serialized->get_float(BeamShotSpeed_type_id, 10.000000);
+		PreFireTime = serialized->get_float(PreFireTime_type_id, 0.750000f);
+		PortalObjectInitialSpeed = serialized->get_float(PortalObjectInitialSpeed_type_id, 1.500000f);
+		PortalObjectAccel = serialized->get_float(PortalObjectAccel_type_id, 30.000000f);
+		BeamShotSpeed = serialized->get_float(BeamShotSpeed_type_id, 10.000000f);
 		PortalActor = serialized->get_string(PortalActor_type_id, {});
 		SmallPortalObjectRefs = serialized->unwrap_into_many<rivet::ddl::generated::AssertPortalInfo>(SmallPortalObjectRefs_type_id);
 		MediumPortalObjectRefs = serialized->unwrap_into_many<rivet::ddl::generated::AssertPortalInfo>(MediumPortalObjectRefs_type_id);

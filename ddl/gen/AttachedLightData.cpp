@@ -9,10 +9,10 @@
 
 namespace rivet::ddl::generated {
 	AttachedLightData::AttachedLightData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Light = serialized->get_uint64(Light_type_id, 0);
+		Light = serialized->get_uint64(Light_type_id, 0ull);
 		Locator = serialized->get_string(Locator_type_id, {});
 		InitialLightColor = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(InitialLightColor_type_id);
-		InitialLightIntensity = serialized->get_float(InitialLightIntensity_type_id, 0.000000); 
+		InitialLightIntensity = serialized->get_float(InitialLightIntensity_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

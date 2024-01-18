@@ -9,9 +9,9 @@
 
 namespace rivet::ddl::generated {
 	ColorGradeSolidOpDef::ColorGradeSolidOpDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Id = serialized->get_uint64(Id_type_id, 0);
+		Id = serialized->get_uint64(Id_type_id, 0ull);
 		Name = serialized->get_string(Name_type_id, {});
-		Weight = serialized->get_float(Weight_type_id, 100.000000);
+		Weight = serialized->get_float(Weight_type_id, 100.000000f);
 		Enabled = serialized->get_bool(Enabled_type_id, true);
 		BlendType = serialized->get_enum<rivet::ddl::generated::x58442634>(BlendType_type_id, rivet::ddl::generated::x58442634_values, rivet::ddl::generated::x58442634::Multiply);
 		Color = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Color_type_id); 

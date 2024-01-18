@@ -10,12 +10,12 @@
 namespace rivet::ddl::generated {
 	DbVerifyResult::DbVerifyResult([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		AssetCollection = serialized->unwrap_into_many<rivet::ddl::generated::DbVerifyAssetCollection>(AssetCollection_type_id);
-		FileCount = serialized->get_uint32(FileCount_type_id, 0);
-		DbEntryCount = serialized->get_uint32(DbEntryCount_type_id, 0);
-		ErrorCount = serialized->get_uint32(ErrorCount_type_id, 0);
-		UnionCount = serialized->get_uint32(UnionCount_type_id, 0);
-		UncleanAssetPath = serialized->get_uint32(UncleanAssetPath_type_id, 0);
-		HashClashes = serialized->get_uint32(HashClashes_type_id, 0); 
+		FileCount = serialized->get_uint32(FileCount_type_id, 0u);
+		DbEntryCount = serialized->get_uint32(DbEntryCount_type_id, 0u);
+		ErrorCount = serialized->get_uint32(ErrorCount_type_id, 0u);
+		UnionCount = serialized->get_uint32(UnionCount_type_id, 0u);
+		UncleanAssetPath = serialized->get_uint32(UncleanAssetPath_type_id, 0u);
+		HashClashes = serialized->get_uint32(HashClashes_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

@@ -15,12 +15,12 @@ namespace rivet::ddl::generated {
 		MouseControlFlying = serialized->unwrap_into<rivet::ddl::generated::MouseControl>(MouseControlFlying_type_id);
 		SprintToggle = serialized->get_bool(SprintToggle_type_id, false);
 		ListeningModePC = serialized->get_enum<rivet::ddl::generated::ListeningMode>(ListeningModePC_type_id, rivet::ddl::generated::ListeningMode_values, rivet::ddl::generated::ListeningMode::ListeningModeSpeakers);
-		HudWidescreenScale = serialized->get_int32(HudWidescreenScale_type_id, 0);
+		HudWidescreenScale = serialized->get_int32(HudWidescreenScale_type_id, 0u);
 		EnableAudioHaptics = serialized->get_bool(EnableAudioHaptics_type_id, true);
-		ScePadAudioPathMode = serialized->get_int32(ScePadAudioPathMode_type_id, 0);
+		ScePadAudioPathMode = serialized->get_int32(ScePadAudioPathMode_type_id, 0u);
 		AimInvertX = serialized->get_bool(AimInvertX_type_id, false);
 		AimInvertY = serialized->get_bool(AimInvertY_type_id, false);
-		SoundPerformanceMode = serialized->get_uint32(SoundPerformanceMode_type_id, 0); 
+		SoundPerformanceMode = serialized->get_uint32(SoundPerformanceMode_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

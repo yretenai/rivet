@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	DialogTriggerCooldownOverridePrius::DialogTriggerCooldownOverridePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Trigger = serialized->get_enum<rivet::ddl::generated::x6be956dd>(Trigger_type_id, rivet::ddl::generated::x6be956dd_values, rivet::ddl::generated::x6be956dd::None);
-		Cooldown = serialized->get_float(Cooldown_type_id, 0.000000); 
+		Cooldown = serialized->get_float(Cooldown_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

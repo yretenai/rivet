@@ -11,7 +11,7 @@ namespace rivet::ddl::generated {
 	VisualEffectVelocityKeyFrames::VisualEffectVelocityKeyFrames([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		EnableLooping = serialized->get_bool(EnableLooping_type_id, true);
 		UseEmitterAge = serialized->get_bool(UseEmitterAge_type_id, false);
-		LifeTimeOverride = serialized->get_float(LifeTimeOverride_type_id, 0.000000);
+		LifeTimeOverride = serialized->get_float(LifeTimeOverride_type_id, 0.000000f);
 		Type = serialized->get_enum<rivet::ddl::generated::x333d0e06>(Type_type_id, rivet::ddl::generated::x333d0e06_values, rivet::ddl::generated::x333d0e06::Scale);
 		Space = serialized->get_enum<rivet::ddl::generated::xfe5100b1>(Space_type_id, rivet::ddl::generated::xfe5100b1_values, rivet::ddl::generated::xfe5100b1::World);
 		Value = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Value_type_id); 

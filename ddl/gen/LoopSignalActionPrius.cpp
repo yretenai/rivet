@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	LoopSignalActionPrius::LoopSignalActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Logic);
-		LoopDelay = serialized->get_float(LoopDelay_type_id, 0.250000);
+		LoopDelay = serialized->get_float(LoopDelay_type_id, 0.250000f);
 		LoopCount = serialized->get_int32(LoopCount_type_id, -1);
 		DoFirstLoopOnStart = serialized->get_bool(DoFirstLoopOnStart_type_id, true);
 		UseMinFrameDelay = serialized->get_bool(UseMinFrameDelay_type_id, true);

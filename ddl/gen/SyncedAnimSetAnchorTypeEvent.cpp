@@ -10,8 +10,8 @@ namespace rivet::ddl::generated {
 		AnchorPosType = serialized->get_enum<rivet::ddl::generated::x91b33164>(AnchorPosType_type_id, rivet::ddl::generated::x91b33164_values, rivet::ddl::generated::x91b33164::Guest);
 		AnchorRotType = serialized->get_enum<rivet::ddl::generated::xb40cfc5d>(AnchorRotType_type_id, rivet::ddl::generated::xb40cfc5d_values, rivet::ddl::generated::xb40cfc5d::HostToGuest2D);
 		GuestAnchor = serialized->get_enum<rivet::ddl::generated::x19aa8603>(GuestAnchor_type_id, rivet::ddl::generated::x19aa8603_values, rivet::ddl::generated::x19aa8603::Guest1);
-		ForcePosBlendTime = serialized->get_float(ForcePosBlendTime_type_id, -1.000000);
-		ForceRotBlendTime = serialized->get_float(ForceRotBlendTime_type_id, -1.000000); 
+		ForcePosBlendTime = serialized->get_float(ForcePosBlendTime_type_id, -1.000000f);
+		ForceRotBlendTime = serialized->get_float(ForceRotBlendTime_type_id, -1.000000f); 
 	}
 
 	[[nodiscard]] auto

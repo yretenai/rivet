@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	VonIonBossShipAttackSpawnData::VonIonBossShipAttackSpawnData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ActorSpawnData(serialized) {
-		VonIonBossShipHandle = serialized->get_uint32(VonIonBossShipHandle_type_id, 0);
-		TargetHandle = serialized->get_uint32(TargetHandle_type_id, 0);
-		PatternAction = serialized->get_int32(PatternAction_type_id, 0); 
+		VonIonBossShipHandle = serialized->get_uint32(VonIonBossShipHandle_type_id, 0u);
+		TargetHandle = serialized->get_uint32(TargetHandle_type_id, 0u);
+		PatternAction = serialized->get_int32(PatternAction_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

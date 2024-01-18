@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	AnimClipSoundEvent::AnimClipSoundEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SoundBankId = serialized->get_uint32(SoundBankId_type_id, 0); 
+		SoundBankId = serialized->get_uint32(SoundBankId_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

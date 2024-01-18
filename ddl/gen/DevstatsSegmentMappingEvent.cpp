@@ -10,7 +10,7 @@ namespace rivet::ddl::generated {
 		EventId = serialized->get_string(EventId_type_id, {});
 		SegmentId = serialized->get_string(SegmentId_type_id, {});
 		SegmentType = serialized->get_enum<rivet::ddl::generated::xc6f5c0d7>(SegmentType_type_id, rivet::ddl::generated::xc6f5c0d7_values, rivet::ddl::generated::xc6f5c0d7::Playthrough);
-		SegmentTime = serialized->get_float(SegmentTime_type_id, 0.000000); 
+		SegmentTime = serialized->get_float(SegmentTime_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

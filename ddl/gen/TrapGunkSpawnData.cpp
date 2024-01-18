@@ -9,9 +9,9 @@
 
 namespace rivet::ddl::generated {
 	TrapGunkSpawnData::TrapGunkSpawnData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ActorSpawnData(serialized) {
-		AssetId = serialized->get_uint64(AssetId_type_id, 0);
+		AssetId = serialized->get_uint64(AssetId_type_id, 0ull);
 		SpawnPosition = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(SpawnPosition_type_id);
-		Trap = serialized->get_uint32(Trap_type_id, 0); 
+		Trap = serialized->get_uint32(Trap_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

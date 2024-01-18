@@ -11,8 +11,8 @@
 
 namespace rivet::ddl::generated {
 	SoundPropagation2DistModelDef::SoundPropagation2DistModelDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		VolumedB = serialized->get_float(VolumedB_type_id, 80.000000);
-		NearFieldDistance = serialized->get_float(NearFieldDistance_type_id, 1.000000);
+		VolumedB = serialized->get_float(VolumedB_type_id, 80.000000f);
+		NearFieldDistance = serialized->get_float(NearFieldDistance_type_id, 1.000000f);
 		ModelType = serialized->get_enum<rivet::ddl::generated::xcb4c1031>(ModelType_type_id, rivet::ddl::generated::xcb4c1031_values, rivet::ddl::generated::xcb4c1031::InvSqDb);
 		PropertiesLinear = serialized->unwrap_into<rivet::ddl::generated::SoundPropagation2LinearDef>(PropertiesLinear_type_id);
 		PropertiesBezier = serialized->unwrap_into<rivet::ddl::generated::SoundPropagation2BezierDef>(PropertiesBezier_type_id);

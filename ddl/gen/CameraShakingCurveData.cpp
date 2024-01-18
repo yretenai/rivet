@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	CameraShakingCurveData::CameraShakingCurveData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Magnitude = serialized->get_float(Magnitude_type_id, 1.000000);
-		Frequency = serialized->get_float(Frequency_type_id, 1.000000);
-		Offset = serialized->get_float(Offset_type_id, 0.000000); 
+		Magnitude = serialized->get_float(Magnitude_type_id, 1.000000f);
+		Frequency = serialized->get_float(Frequency_type_id, 1.000000f);
+		Offset = serialized->get_float(Offset_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

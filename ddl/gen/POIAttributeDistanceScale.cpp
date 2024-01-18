@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	POIAttributeDistanceScale::POIAttributeDistanceScale([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): POIAttributeDistanceScaleBase(serialized) {
-		MinScale = serialized->get_float(MinScale_type_id, 0.500000);
-		MaxScale = serialized->get_float(MaxScale_type_id, 1.000000);
-		MinDistance = serialized->get_float(MinDistance_type_id, 100.000000);
-		MaxDistance = serialized->get_float(MaxDistance_type_id, 1000.000000); 
+		MinScale = serialized->get_float(MinScale_type_id, 0.500000f);
+		MaxScale = serialized->get_float(MaxScale_type_id, 1.000000f);
+		MinDistance = serialized->get_float(MinDistance_type_id, 100.000000f);
+		MaxDistance = serialized->get_float(MaxDistance_type_id, 1000.000000f); 
 	}
 
 	[[nodiscard]] auto

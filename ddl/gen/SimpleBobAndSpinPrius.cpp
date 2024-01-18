@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	SimpleBobAndSpinPrius::SimpleBobAndSpinPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Frequency = serialized->get_float(Frequency_type_id, 1.000000);
-		Amplitude = serialized->get_float(Amplitude_type_id, 0.250000);
-		Spin = serialized->get_float(Spin_type_id, 180.000000);
+		Frequency = serialized->get_float(Frequency_type_id, 1.000000f);
+		Amplitude = serialized->get_float(Amplitude_type_id, 0.250000f);
+		Spin = serialized->get_float(Spin_type_id, 180.000000f);
 		RandomizeBob = serialized->get_bool(RandomizeBob_type_id, true); 
 	}
 

@@ -11,8 +11,8 @@ namespace rivet::ddl::generated {
 		StartActive = serialized->get_bool(StartActive_type_id, true);
 		AllowUpgrades = serialized->get_bool(AllowUpgrades_type_id, true);
 		TutorialType = serialized->get_enum<rivet::ddl::generated::xf88150a5>(TutorialType_type_id, rivet::ddl::generated::xf88150a5_values, rivet::ddl::generated::xf88150a5::None);
-		PurchaseVolumeActor = serialized->get_uint64(PurchaseVolumeActor_type_id, 0);
-		PurchaseCameraActor = serialized->get_uint64(PurchaseCameraActor_type_id, 0); 
+		PurchaseVolumeActor = serialized->get_uint64(PurchaseVolumeActor_type_id, 0ull);
+		PurchaseCameraActor = serialized->get_uint64(PurchaseCameraActor_type_id, 0ull); 
 	}
 
 	[[nodiscard]] auto

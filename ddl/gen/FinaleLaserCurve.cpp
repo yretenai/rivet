@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	FinaleLaserCurve::FinaleLaserCurve([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		CurveActor = serialized->get_uint64(CurveActor_type_id, 0);
-		GroundBlastTriggerVolume = serialized->get_uint64(GroundBlastTriggerVolume_type_id, 0); 
+		CurveActor = serialized->get_uint64(CurveActor_type_id, 0ull);
+		GroundBlastTriggerVolume = serialized->get_uint64(GroundBlastTriggerVolume_type_id, 0ull); 
 	}
 
 	[[nodiscard]] auto

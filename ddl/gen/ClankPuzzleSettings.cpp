@@ -12,7 +12,7 @@ namespace rivet::ddl::generated {
 		SlapBotsTurn90 = serialized->get_bool(SlapBotsTurn90_type_id, false);
 		CharactersWorldSpeed = serialized->get_bool(CharactersWorldSpeed_type_id, true);
 		PortalSpeedStack = serialized->get_bool(PortalSpeedStack_type_id, false);
-		WireRideSpeed = serialized->get_int32(WireRideSpeed_type_id, 12);
+		WireRideSpeed = serialized->get_int32(WireRideSpeed_type_id, 12u);
 		CanRecallShots = serialized->get_bool(CanRecallShots_type_id, true);
 		CanTargetsAbsorb = serialized->get_bool(CanTargetsAbsorb_type_id, false);
 		DeathOnBigMove = serialized->get_bool(DeathOnBigMove_type_id, true);

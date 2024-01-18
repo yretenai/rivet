@@ -8,8 +8,8 @@
 namespace rivet::ddl::generated {
 	LevelGridSettings::LevelGridSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		GridType = serialized->get_enum<rivet::ddl::generated::x99f55b7c>(GridType_type_id, rivet::ddl::generated::x99f55b7c_values, rivet::ddl::generated::x99f55b7c::Hex);
-		Width = serialized->get_int32(Width_type_id, 97);
-		Height = serialized->get_int32(Height_type_id, 112); 
+		Width = serialized->get_int32(Width_type_id, 97u);
+		Height = serialized->get_int32(Height_type_id, 112u); 
 	}
 
 	[[nodiscard]] auto

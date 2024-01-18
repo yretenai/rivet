@@ -17,31 +17,31 @@ namespace rivet::ddl::generated {
 		QueuedMessages = serialized->unwrap_into_many<rivet::ddl::generated::QueuedMessage>(QueuedMessages_type_id);
 		DisableOtherMessages = serialized->get_bool(DisableOtherMessages_type_id, true);
 		MessageType = serialized->get_enum<rivet::ddl::generated::x8693007e>(MessageType_type_id, rivet::ddl::generated::x8693007e_values, rivet::ddl::generated::x8693007e::HelpCentered);
-		Duration = serialized->get_float(Duration_type_id, -1.000000);
-		MinimumDuration = serialized->get_float(MinimumDuration_type_id, 0.000000);
-		ConfirmationDelay = serialized->get_float(ConfirmationDelay_type_id, 2.000000);
+		Duration = serialized->get_float(Duration_type_id, -1.000000f);
+		MinimumDuration = serialized->get_float(MinimumDuration_type_id, 0.000000f);
+		ConfirmationDelay = serialized->get_float(ConfirmationDelay_type_id, 2.000000f);
 		DisableMessageClear = serialized->get_bool(DisableMessageClear_type_id, false);
 		SkipInChallengeMode = serialized->get_bool(SkipInChallengeMode_type_id, true);
 		ButtonInputType = serialized->get_enum<rivet::ddl::generated::xb7095bb8>(ButtonInputType_type_id, rivet::ddl::generated::xb7095bb8_values, rivet::ddl::generated::xb7095bb8::Button);
 		Actions = serialized->unwrap_into_many<rivet::ddl::generated::UITutorialAction>(Actions_type_id);
 		Buttons = serialized->get_enums<rivet::ddl::generated::xe50c3252>(Buttons_type_id, rivet::ddl::generated::xe50c3252_values);
 		TriggerOnAllButtons = serialized->get_bool(TriggerOnAllButtons_type_id, true);
-		TriggerOnHoldTime = serialized->get_float(TriggerOnHoldTime_type_id, 0.000000);
+		TriggerOnHoldTime = serialized->get_float(TriggerOnHoldTime_type_id, 0.000000f);
 		TriggerOnHeld = serialized->get_bool(TriggerOnHeld_type_id, true);
 		InputPassThrough = serialized->get_bool(InputPassThrough_type_id, true);
-		InputPassThroughHoldTime = serialized->get_float(InputPassThroughHoldTime_type_id, 0.000000);
+		InputPassThroughHoldTime = serialized->get_float(InputPassThroughHoldTime_type_id, 0.000000f);
 		SendButtonsIndividally = serialized->get_bool(SendButtonsIndividally_type_id, false);
 		LockHeroMoves = serialized->get_bool(LockHeroMoves_type_id, true);
 		LockHeroMoveAbility = serialized->get_bool(LockHeroMoveAbility_type_id, false);
-		SlomoTimescale = serialized->get_float(SlomoTimescale_type_id, 1.000000);
-		SlomoDelay = serialized->get_float(SlomoDelay_type_id, 0.000000);
-		SlomoTimeIn = serialized->get_float(SlomoTimeIn_type_id, 0.000000);
-		SlomoTimeOut = serialized->get_float(SlomoTimeOut_type_id, 0.000000);
-		ForcePauseDelay = serialized->get_float(ForcePauseDelay_type_id, 0.000000);
-		SlomoEndDelay = serialized->get_float(SlomoEndDelay_type_id, 0.000000);
+		SlomoTimescale = serialized->get_float(SlomoTimescale_type_id, 1.000000f);
+		SlomoDelay = serialized->get_float(SlomoDelay_type_id, 0.000000f);
+		SlomoTimeIn = serialized->get_float(SlomoTimeIn_type_id, 0.000000f);
+		SlomoTimeOut = serialized->get_float(SlomoTimeOut_type_id, 0.000000f);
+		ForcePauseDelay = serialized->get_float(ForcePauseDelay_type_id, 0.000000f);
+		SlomoEndDelay = serialized->get_float(SlomoEndDelay_type_id, 0.000000f);
 		ChangePausePage = serialized->get_bool(ChangePausePage_type_id, false);
 		PauseScreen = serialized->get_enum<rivet::ddl::generated::PauseTabs>(PauseScreen_type_id, rivet::ddl::generated::PauseTabs_values, rivet::ddl::generated::PauseTabs::Map);
-		PauseSubScreen = serialized->get_uint32(PauseSubScreen_type_id, 0); 
+		PauseSubScreen = serialized->get_uint32(PauseSubScreen_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	GameMovingSurfaceConveyorPrius::GameMovingSurfaceConveyorPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): MovingSurfacePrius(serialized) {
-		LocalZMotion = serialized->get_float(LocalZMotion_type_id, 1.000000);
-		LocalXMotion = serialized->get_float(LocalXMotion_type_id, 0.000000); 
+		LocalZMotion = serialized->get_float(LocalZMotion_type_id, 1.000000f);
+		LocalXMotion = serialized->get_float(LocalXMotion_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

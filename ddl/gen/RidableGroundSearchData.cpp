@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	RidableGroundSearchData::RidableGroundSearchData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		HorizontalDistance = serialized->get_float(HorizontalDistance_type_id, 3.000000);
-		VerticalUpDistance = serialized->get_float(VerticalUpDistance_type_id, 1.000000);
-		VerticalDownDistance = serialized->get_float(VerticalDownDistance_type_id, 25.000000); 
+		HorizontalDistance = serialized->get_float(HorizontalDistance_type_id, 3.000000f);
+		VerticalUpDistance = serialized->get_float(VerticalUpDistance_type_id, 1.000000f);
+		VerticalDownDistance = serialized->get_float(VerticalDownDistance_type_id, 25.000000f); 
 	}
 
 	[[nodiscard]] auto

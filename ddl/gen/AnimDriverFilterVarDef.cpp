@@ -10,8 +10,8 @@
 namespace rivet::ddl::generated {
 	AnimDriverFilterVarDef::AnimDriverFilterVarDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Name = serialized->get_string(Name_type_id, {});
-		x = serialized->get_float(x_type_id, 0.000000);
-		y = serialized->get_float(y_type_id, 0.000000);
+		x = serialized->get_float(x_type_id, 0.000000f);
+		y = serialized->get_float(y_type_id, 0.000000f);
 		Group = serialized->get_string(Group_type_id, {});
 		Ids = serialized->get_strings(Ids_type_id);
 		Connections = serialized->unwrap_into_many<rivet::ddl::generated::AnimDriverVarConnection>(Connections_type_id); 

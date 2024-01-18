@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	UIOptionTypeSettingSlider::UIOptionTypeSettingSlider([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): UIOptionTypeSettingBase(serialized) {
-		SliderMinimum = serialized->get_int32(SliderMinimum_type_id, 0);
-		SliderFidelity = serialized->get_int32(SliderFidelity_type_id, 10);
+		SliderMinimum = serialized->get_int32(SliderMinimum_type_id, 0u);
+		SliderFidelity = serialized->get_int32(SliderFidelity_type_id, 10u);
 		GamePreview = serialized->get_bool(GamePreview_type_id, false); 
 	}
 

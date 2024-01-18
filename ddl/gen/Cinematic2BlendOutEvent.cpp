@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	Cinematic2BlendOutEvent::Cinematic2BlendOutEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Duration = serialized->get_float(Duration_type_id, -1.000000);
+		Duration = serialized->get_float(Duration_type_id, -1.000000f);
 		CurrentShotOnly = serialized->get_bool(CurrentShotOnly_type_id, false); 
 	}
 

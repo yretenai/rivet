@@ -27,17 +27,17 @@
 
 namespace rivet::ddl::generated {
 	AnimDriverDef::AnimDriverDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Id = serialized->get_uint64(Id_type_id, 0);
+		Id = serialized->get_uint64(Id_type_id, 0ull);
 		RootName = serialized->get_string(RootName_type_id, {});
-		RootIndex = serialized->get_uint32(RootIndex_type_id, 0);
+		RootIndex = serialized->get_uint32(RootIndex_type_id, 0u);
 		Name = serialized->get_string(Name_type_id, {});
 		LayerType = serialized->get_enum<rivet::ddl::generated::x7c99d780>(LayerType_type_id, rivet::ddl::generated::x7c99d780_values, rivet::ddl::generated::x7c99d780::LayerTypeBase);
-		Flags = serialized->get_bitset<rivet::ddl::generated::xc95d8425>(Flags_type_id, rivet::ddl::generated::xc95d8425_values, 1);
-		LayerId = serialized->get_uint32(LayerId_type_id, 0);
-		x = serialized->get_float(x_type_id, 0.000000);
-		y = serialized->get_float(y_type_id, 0.000000);
-		x1 = serialized->get_float(x1_type_id, 0.000000);
-		y1 = serialized->get_float(y1_type_id, 0.000000);
+		Flags = serialized->get_bitset<rivet::ddl::generated::xc95d8425>(Flags_type_id, rivet::ddl::generated::xc95d8425_values, 1u);
+		LayerId = serialized->get_uint32(LayerId_type_id, 0u);
+		x = serialized->get_float(x_type_id, 0.000000f);
+		y = serialized->get_float(y_type_id, 0.000000f);
+		x1 = serialized->get_float(x1_type_id, 0.000000f);
+		y1 = serialized->get_float(y1_type_id, 0.000000f);
 		Color = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Color_type_id);
 		ClipNodes = serialized->unwrap_into_many<rivet::ddl::generated::AnimDriverClipNodeDef>(ClipNodes_type_id);
 		PoseNodes = serialized->unwrap_into_many<rivet::ddl::generated::AnimDriverPoseNodeDef>(PoseNodes_type_id);
@@ -57,10 +57,10 @@ namespace rivet::ddl::generated {
 		SmoothOps = serialized->unwrap_into_many<rivet::ddl::generated::AnimDriverOpSmoothDef>(SmoothOps_type_id);
 		GroupNodes = serialized->unwrap_into_many<rivet::ddl::generated::AnimDriverGroupNodeDef>(GroupNodes_type_id);
 		Comments = serialized->unwrap_into_many<rivet::ddl::generated::AnimDriverCommentDef>(Comments_type_id);
-		TransitionDurationDefault = serialized->get_float(TransitionDurationDefault_type_id, 0.250000);
-		TransitionDurationFromNone = serialized->get_float(TransitionDurationFromNone_type_id, 0.250000);
-		TransitionDurationToNone = serialized->get_float(TransitionDurationToNone_type_id, 0.250000);
-		TransitionDurationSelf = serialized->get_float(TransitionDurationSelf_type_id, 0.250000); 
+		TransitionDurationDefault = serialized->get_float(TransitionDurationDefault_type_id, 0.250000f);
+		TransitionDurationFromNone = serialized->get_float(TransitionDurationFromNone_type_id, 0.250000f);
+		TransitionDurationToNone = serialized->get_float(TransitionDurationToNone_type_id, 0.250000f);
+		TransitionDurationSelf = serialized->get_float(TransitionDurationSelf_type_id, 0.250000f); 
 	}
 
 	[[nodiscard]] auto

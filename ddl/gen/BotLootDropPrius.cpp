@@ -17,9 +17,9 @@ namespace rivet::ddl::generated {
 		Offset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Offset_type_id);
 		MaxNumSpawns = serialized->get_int32(MaxNumSpawns_type_id, -1);
 		LootBlossom = serialized->get_bool(LootBlossom_type_id, true);
-		MinLootSpeed = serialized->get_float(MinLootSpeed_type_id, 8.000000);
-		MaxLootSpeed = serialized->get_float(MaxLootSpeed_type_id, 8.000000);
-		NoPickupTime = serialized->get_float(NoPickupTime_type_id, -1.000000); 
+		MinLootSpeed = serialized->get_float(MinLootSpeed_type_id, 8.000000f);
+		MaxLootSpeed = serialized->get_float(MaxLootSpeed_type_id, 8.000000f);
+		NoPickupTime = serialized->get_float(NoPickupTime_type_id, -1.000000f); 
 	}
 
 	[[nodiscard]] auto

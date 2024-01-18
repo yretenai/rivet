@@ -9,7 +9,7 @@ namespace rivet::ddl::generated {
 	OnPlayerEventActionPrius::OnPlayerEventActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Player);
 		InitListening = serialized->get_bool(InitListening_type_id, false);
-		SignalMax = serialized->get_int8(SignalMax_type_id, 1); 
+		SignalMax = serialized->get_int8(SignalMax_type_id, 1u); 
 	}
 
 	[[nodiscard]] auto

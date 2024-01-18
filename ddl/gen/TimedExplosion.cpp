@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	TimedExplosion::TimedExplosion([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): GrenadeExplosionMode(serialized) {
-		ReleasedTime = serialized->get_float(ReleasedTime_type_id, 0.000000); 
+		ReleasedTime = serialized->get_float(ReleasedTime_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

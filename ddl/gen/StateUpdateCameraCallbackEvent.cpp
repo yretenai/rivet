@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	StateUpdateCameraCallbackEvent::StateUpdateCameraCallbackEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		DeltaTime = serialized->get_float(DeltaTime_type_id, 0.000000); 
+		DeltaTime = serialized->get_float(DeltaTime_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

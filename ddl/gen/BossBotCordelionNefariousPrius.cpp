@@ -11,12 +11,12 @@
 
 namespace rivet::ddl::generated {
 	BossBotCordelionNefariousPrius::BossBotCordelionNefariousPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BotPrius(serialized) {
-		HoverLeanStrength = serialized->get_float(HoverLeanStrength_type_id, 10.000000);
-		HoverLeanVarMultiplier = serialized->get_float(HoverLeanVarMultiplier_type_id, 1.000000);
-		HoverLeanBlendSpeed = serialized->get_float(HoverLeanBlendSpeed_type_id, 2.000000);
+		HoverLeanStrength = serialized->get_float(HoverLeanStrength_type_id, 10.000000f);
+		HoverLeanVarMultiplier = serialized->get_float(HoverLeanVarMultiplier_type_id, 1.000000f);
+		HoverLeanBlendSpeed = serialized->get_float(HoverLeanBlendSpeed_type_id, 2.000000f);
 		HoverShuffleData = serialized->unwrap_into<rivet::ddl::generated::HoverShuffleData>(HoverShuffleData_type_id);
 		ShieldData = serialized->unwrap_into<rivet::ddl::generated::BossBotCordelionNefariousShieldManagerPrius>(ShieldData_type_id);
-		HealthThresholdForSwap = serialized->get_float(HealthThresholdForSwap_type_id, 0.500000);
+		HealthThresholdForSwap = serialized->get_float(HealthThresholdForSwap_type_id, 0.500000f);
 		MaterialSwapsToDo = serialized->unwrap_into_many<rivet::ddl::generated::BossBotCordelionNefMaterialSwaps>(MaterialSwapsToDo_type_id); 
 	}
 

@@ -12,7 +12,7 @@ namespace rivet::ddl::generated {
 		ActorToSpawn = serialized->get_string(ActorToSpawn_type_id, {});
 		SpawnOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(SpawnOffset_type_id);
 		SpawnVelocity = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(SpawnVelocity_type_id);
-		BreakableHitVel = serialized->get_float(BreakableHitVel_type_id, 10.000000); 
+		BreakableHitVel = serialized->get_float(BreakableHitVel_type_id, 10.000000f); 
 	}
 
 	[[nodiscard]] auto

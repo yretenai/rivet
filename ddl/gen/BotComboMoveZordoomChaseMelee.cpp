@@ -10,9 +10,9 @@ namespace rivet::ddl::generated {
 		IntroAnim = serialized->get_string(IntroAnim_type_id, {});
 		ActiveAnim = serialized->get_string(ActiveAnim_type_id, {});
 		OutroAnim = serialized->get_string(OutroAnim_type_id, {});
-		IntroDuration = serialized->get_float(IntroDuration_type_id, 0.000000);
-		ActiveDuration = serialized->get_float(ActiveDuration_type_id, 0.000000);
-		OutroDuration = serialized->get_float(OutroDuration_type_id, 0.000000); 
+		IntroDuration = serialized->get_float(IntroDuration_type_id, 0.000000f);
+		ActiveDuration = serialized->get_float(ActiveDuration_type_id, 0.000000f);
+		OutroDuration = serialized->get_float(OutroDuration_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

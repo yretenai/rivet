@@ -17,7 +17,7 @@ namespace rivet::ddl::generated {
 		GoldBoltsCardDescTag = serialized->get_string(GoldBoltsCardDescTag_type_id, {});
 		GoldBoltsCardSmallImage = serialized->get_string(GoldBoltsCardSmallImage_type_id, {});
 		GoldBoltsCardLargeImage = serialized->get_string(GoldBoltsCardLargeImage_type_id, {});
-		GoldBoltsPlaytimeEstimate = serialized->get_uint32(GoldBoltsPlaytimeEstimate_type_id, 15);
+		GoldBoltsPlaytimeEstimate = serialized->get_uint32(GoldBoltsPlaytimeEstimate_type_id, 15u);
 		GoldBolts = serialized->unwrap_into_many<rivet::ddl::generated::PlanetGoldBolt>(GoldBolts_type_id);
 		RYNOPlans = serialized->unwrap_into_many<rivet::ddl::generated::PlanetRYNOPlan>(RYNOPlans_type_id); 
 	}

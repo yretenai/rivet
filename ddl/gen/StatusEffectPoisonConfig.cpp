@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	StatusEffectPoisonConfig::StatusEffectPoisonConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): StatusEffectConfig(serialized) {
-		DamagePerSecond = serialized->get_float(DamagePerSecond_type_id, 5.000000);
-		Duration = serialized->get_float(Duration_type_id, 8.000000);
+		DamagePerSecond = serialized->get_float(DamagePerSecond_type_id, 5.000000f);
+		Duration = serialized->get_float(Duration_type_id, 8.000000f);
 		ExplosionData = serialized->unwrap_into<rivet::ddl::generated::DamageModifierExplosionPrius>(ExplosionData_type_id);
 		VictimMaterialGraph = serialized->get_string(VictimMaterialGraph_type_id, {}); 
 	}

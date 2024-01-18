@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	CameraRotationLimiterRelativeMatrixPrius::CameraRotationLimiterRelativeMatrixPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): CameraRotationLimiterBasePrius(serialized) {
-		RelativeActor = serialized->get_uint64(RelativeActor_type_id, 0); 
+		RelativeActor = serialized->get_uint64(RelativeActor_type_id, 0ull); 
 	}
 
 	[[nodiscard]] auto

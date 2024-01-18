@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	ModelSplineMaterialExtraFoliage::ModelSplineMaterialExtraFoliage([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Transmittance = serialized->get_float(Transmittance_type_id, 0.500000);
-		LightWrap = serialized->get_float(LightWrap_type_id, 0.500000);
+		Transmittance = serialized->get_float(Transmittance_type_id, 0.500000f);
+		LightWrap = serialized->get_float(LightWrap_type_id, 0.500000f);
 		AverageColor = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(AverageColor_type_id); 
 	}
 

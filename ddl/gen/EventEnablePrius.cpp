@@ -12,9 +12,9 @@ namespace rivet::ddl::generated {
 	EventEnablePrius::EventEnablePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Event = serialized->unwrap_into<rivet::ddl::generated::EventBase>(Event_type_id);
 		IsSelfEvent = serialized->get_bool(IsSelfEvent_type_id, true);
-		EnableActorGroup = serialized->get_uint64(EnableActorGroup_type_id, 0);
-		DisableActorGroup = serialized->get_uint64(DisableActorGroup_type_id, 0);
-		ToggleActorGroup = serialized->get_uint64(ToggleActorGroup_type_id, 0);
+		EnableActorGroup = serialized->get_uint64(EnableActorGroup_type_id, 0ull);
+		DisableActorGroup = serialized->get_uint64(DisableActorGroup_type_id, 0ull);
+		ToggleActorGroup = serialized->get_uint64(ToggleActorGroup_type_id, 0ull);
 		ActorList = serialized->unwrap_into_many<rivet::ddl::generated::IndActorList>(ActorList_type_id); 
 	}
 

@@ -13,7 +13,7 @@ namespace rivet::ddl::generated {
 		MergeMethod = serialized->get_enum<rivet::ddl::generated::xea6549e1>(MergeMethod_type_id, rivet::ddl::generated::xea6549e1_values, rivet::ddl::generated::xea6549e1::Add_to_Above);
 		ModelSource = serialized->get_enum<rivet::ddl::generated::xcba6be41>(ModelSource_type_id, rivet::ddl::generated::xcba6be41_values, rivet::ddl::generated::xcba6be41::Spline);
 		VertexColor = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(VertexColor_type_id);
-		VertexAlpha = serialized->get_float(VertexAlpha_type_id, 1.000000);
+		VertexAlpha = serialized->get_float(VertexAlpha_type_id, 1.000000f);
 		VertexSpacing = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(VertexSpacing_type_id);
 		ReverseU = serialized->get_bool(ReverseU_type_id, false);
 		ReverseV = serialized->get_bool(ReverseV_type_id, false);
@@ -21,11 +21,11 @@ namespace rivet::ddl::generated {
 		UVOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(UVOffset_type_id);
 		Material = serialized->get_string(Material_type_id, {});
 		Collision = serialized->get_bool(Collision_type_id, true);
-		CollisionFlags = serialized->get_bitset<rivet::ddl::generated::PhysicsCollFlags>(CollisionFlags_type_id, rivet::ddl::generated::PhysicsCollFlags_values, 1087);
+		CollisionFlags = serialized->get_bitset<rivet::ddl::generated::PhysicsCollFlags>(CollisionFlags_type_id, rivet::ddl::generated::PhysicsCollFlags_values, 1087u);
 		LOD1 = serialized->get_bool(LOD1_type_id, false);
-		GeomLodDist1 = serialized->get_float(GeomLodDist1_type_id, 10.000000);
+		GeomLodDist1 = serialized->get_float(GeomLodDist1_type_id, 10.000000f);
 		LOD2 = serialized->get_bool(LOD2_type_id, false);
-		GeomLodDist2 = serialized->get_float(GeomLodDist2_type_id, 10.000000); 
+		GeomLodDist2 = serialized->get_float(GeomLodDist2_type_id, 10.000000f); 
 	}
 
 	[[nodiscard]] auto

@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	AmbientFireworkLauncherPrius::AmbientFireworkLauncherPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MinHeight = serialized->get_float(MinHeight_type_id, 20.000000);
-		MaxHeight = serialized->get_float(MaxHeight_type_id, 50.000000);
-		AngleDelta = serialized->get_float(AngleDelta_type_id, 0.350000);
-		NumFires = serialized->get_uint32(NumFires_type_id, 0);
-		MinFireWait = serialized->get_float(MinFireWait_type_id, 0.500000);
-		MaxFireWait = serialized->get_float(MaxFireWait_type_id, 3.000000);
+		MinHeight = serialized->get_float(MinHeight_type_id, 20.000000f);
+		MaxHeight = serialized->get_float(MaxHeight_type_id, 50.000000f);
+		AngleDelta = serialized->get_float(AngleDelta_type_id, 0.350000f);
+		NumFires = serialized->get_uint32(NumFires_type_id, 0u);
+		MinFireWait = serialized->get_float(MinFireWait_type_id, 0.500000f);
+		MaxFireWait = serialized->get_float(MaxFireWait_type_id, 3.000000f);
 		ShotConfig = serialized->get_string(ShotConfig_type_id, "");
 		LaunchLoc = serialized->get_string(LaunchLoc_type_id, ""); 
 	}

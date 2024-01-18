@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	VelocityFromHeightAndSpeed::VelocityFromHeightAndSpeed([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): GrenadeVelocityMode(serialized) {
-		Height = serialized->get_float(Height_type_id, 1.000000);
-		Speed = serialized->get_float(Speed_type_id, 15.000000); 
+		Height = serialized->get_float(Height_type_id, 1.000000f);
+		Speed = serialized->get_float(Speed_type_id, 15.000000f); 
 	}
 
 	[[nodiscard]] auto

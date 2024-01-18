@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	FossilizeDeathEvent::FossilizeDeathEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		ApplyDelay = serialized->get_float(ApplyDelay_type_id, 0.000000);
-		ApplyDuration = serialized->get_float(ApplyDuration_type_id, 0.000000); 
+		ApplyDelay = serialized->get_float(ApplyDelay_type_id, 0.000000f);
+		ApplyDuration = serialized->get_float(ApplyDuration_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

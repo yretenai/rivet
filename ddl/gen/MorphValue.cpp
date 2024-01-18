@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	MorphValue::MorphValue([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Blendname = serialized->get_string(Blendname_type_id, {});
-		Value = serialized->get_float(Value_type_id, 0.000000); 
+		Value = serialized->get_float(Value_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

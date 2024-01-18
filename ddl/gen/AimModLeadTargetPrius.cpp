@@ -11,10 +11,10 @@
 
 namespace rivet::ddl::generated {
 	AimModLeadTargetPrius::AimModLeadTargetPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): AimModifierPrius(serialized) {
-		MaxPredictiveSpeed = serialized->get_float(MaxPredictiveSpeed_type_id, 0.000000);
-		LockOnShotCount = serialized->get_int32(LockOnShotCount_type_id, 1);
-		AdditionalLeadTime = serialized->get_float(AdditionalLeadTime_type_id, 0.000000);
-		MaxLeadTime = serialized->get_float(MaxLeadTime_type_id, -1.000000);
+		MaxPredictiveSpeed = serialized->get_float(MaxPredictiveSpeed_type_id, 0.000000f);
+		LockOnShotCount = serialized->get_int32(LockOnShotCount_type_id, 1u);
+		AdditionalLeadTime = serialized->get_float(AdditionalLeadTime_type_id, 0.000000f);
+		MaxLeadTime = serialized->get_float(MaxLeadTime_type_id, -1.000000f);
 		ConfigModDefs = serialized->unwrap_into_many<rivet::ddl::generated::AimModLeadTargetPriusModDef>(ConfigModDefs_type_id); 
 	}
 

@@ -9,7 +9,7 @@ namespace rivet::ddl::generated {
 	ObjectiveStatesTriggerPrius::ObjectiveStatesTriggerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BaseCustomOverlayTriggerPrius(serialized) {
 		MissionName = serialized->get_string(MissionName_type_id, {});
 		ObjectiveName = serialized->get_string(ObjectiveName_type_id, {});
-		ObjectiveStates = serialized->get_bitset<rivet::ddl::generated::x4b5d5ab9>(ObjectiveStates_type_id, rivet::ddl::generated::x4b5d5ab9_values, 2); 
+		ObjectiveStates = serialized->get_bitset<rivet::ddl::generated::x4b5d5ab9>(ObjectiveStates_type_id, rivet::ddl::generated::x4b5d5ab9_values, 2u); 
 	}
 
 	[[nodiscard]] auto

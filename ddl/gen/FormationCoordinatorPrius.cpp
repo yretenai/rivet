@@ -10,14 +10,14 @@
 
 namespace rivet::ddl::generated {
 	FormationCoordinatorPrius::FormationCoordinatorPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SpawnIntoGroup = serialized->get_uint64(SpawnIntoGroup_type_id, 0);
-		WaitDuration = serialized->get_float(WaitDuration_type_id, 4.000000);
-		AttackDuration = serialized->get_float(AttackDuration_type_id, 0.500000);
-		NumCycles = serialized->get_float(NumCycles_type_id, 1.000000);
+		SpawnIntoGroup = serialized->get_uint64(SpawnIntoGroup_type_id, 0ull);
+		WaitDuration = serialized->get_float(WaitDuration_type_id, 4.000000f);
+		AttackDuration = serialized->get_float(AttackDuration_type_id, 0.500000f);
+		NumCycles = serialized->get_float(NumCycles_type_id, 1.000000f);
 		Entries = serialized->unwrap_into_many<rivet::ddl::generated::FormationEntry>(Entries_type_id);
 		MotionInfo = serialized->unwrap_into_many<rivet::ddl::generated::FormationMotionInfo>(MotionInfo_type_id);
-		MotionPivotActor = serialized->get_uint64(MotionPivotActor_type_id, 0);
-		BotTemplate = serialized->get_uint64(BotTemplate_type_id, 0); 
+		MotionPivotActor = serialized->get_uint64(MotionPivotActor_type_id, 0ull);
+		BotTemplate = serialized->get_uint64(BotTemplate_type_id, 0ull); 
 	}
 
 	[[nodiscard]] auto

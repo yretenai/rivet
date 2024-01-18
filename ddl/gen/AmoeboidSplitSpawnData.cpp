@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	AmoeboidSplitSpawnData::AmoeboidSplitSpawnData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ActorSpawnData(serialized) {
-		SystemIndex = serialized->get_uint8(SystemIndex_type_id, 0);
-		CombineHostHandle = serialized->get_uint32(CombineHostHandle_type_id, 0);
-		CombineSpawnAssetId = serialized->get_uint64(CombineSpawnAssetId_type_id, 0);
+		SystemIndex = serialized->get_uint8(SystemIndex_type_id, 0u);
+		CombineHostHandle = serialized->get_uint32(CombineHostHandle_type_id, 0u);
+		CombineSpawnAssetId = serialized->get_uint64(CombineSpawnAssetId_type_id, 0ull);
 		IsCombine = serialized->get_bool(IsCombine_type_id, false); 
 	}
 

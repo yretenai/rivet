@@ -9,10 +9,10 @@ namespace rivet::ddl::generated {
 	VisualEffectLensFlare::VisualEffectLensFlare([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Enable = serialized->get_bool(Enable_type_id, false);
 		IgnoreZ = serialized->get_bool(IgnoreZ_type_id, true);
-		AngleFade = serialized->get_float(AngleFade_type_id, 0.000000);
-		FadePower = serialized->get_float(FadePower_type_id, 1.000000);
-		ScalePower = serialized->get_float(ScalePower_type_id, 0.000000);
-		Radius = serialized->get_float(Radius_type_id, 0.100000); 
+		AngleFade = serialized->get_float(AngleFade_type_id, 0.000000f);
+		FadePower = serialized->get_float(FadePower_type_id, 1.000000f);
+		ScalePower = serialized->get_float(ScalePower_type_id, 0.000000f);
+		Radius = serialized->get_float(Radius_type_id, 0.100000f); 
 	}
 
 	[[nodiscard]] auto

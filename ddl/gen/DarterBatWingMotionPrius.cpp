@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	DarterBatWingMotionPrius::DarterBatWingMotionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		BankingFactor = serialized->get_float(BankingFactor_type_id, 100.000000);
-		BankingMin = serialized->get_float(BankingMin_type_id, -50.000000);
-		BankingMax = serialized->get_float(BankingMax_type_id, 50.000000); 
+		BankingFactor = serialized->get_float(BankingFactor_type_id, 100.000000f);
+		BankingMin = serialized->get_float(BankingMin_type_id, -50.000000f);
+		BankingMax = serialized->get_float(BankingMax_type_id, 50.000000f); 
 	}
 
 	[[nodiscard]] auto

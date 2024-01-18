@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	RotatableInteractPrius::RotatableInteractPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): SlottedInteractObjectPrius(serialized) {
-		RotationSteps = serialized->get_uint32(RotationSteps_type_id, 255); 
+		RotationSteps = serialized->get_uint32(RotationSteps_type_id, 255u); 
 	}
 
 	[[nodiscard]] auto

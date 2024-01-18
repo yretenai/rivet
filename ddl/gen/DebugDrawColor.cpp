@@ -10,7 +10,7 @@
 namespace rivet::ddl::generated {
 	DebugDrawColor::DebugDrawColor([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Color = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Color_type_id);
-		Alpha = serialized->get_uint8(Alpha_type_id, 255); 
+		Alpha = serialized->get_uint8(Alpha_type_id, 255u); 
 	}
 
 	[[nodiscard]] auto

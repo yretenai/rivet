@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	CrowdSpawnerSettings::CrowdSpawnerSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		InitialMaxSpawners = serialized->get_int32(InitialMaxSpawners_type_id, 32);
-		MaxModels = serialized->get_int32(MaxModels_type_id, 256);
-		ModelSwitchesPerFrame = serialized->get_int32(ModelSwitchesPerFrame_type_id, 32);
-		MaxDisallowVolumes = serialized->get_int32(MaxDisallowVolumes_type_id, 16); 
+		InitialMaxSpawners = serialized->get_int32(InitialMaxSpawners_type_id, 32u);
+		MaxModels = serialized->get_int32(MaxModels_type_id, 256u);
+		ModelSwitchesPerFrame = serialized->get_int32(ModelSwitchesPerFrame_type_id, 32u);
+		MaxDisallowVolumes = serialized->get_int32(MaxDisallowVolumes_type_id, 16u); 
 	}
 
 	[[nodiscard]] auto

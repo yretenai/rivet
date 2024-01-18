@@ -10,15 +10,15 @@
 namespace rivet::ddl::generated {
 	SimpleAmbientSpawnerPrius::SimpleAmbientSpawnerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		StartEnabled = serialized->get_bool(StartEnabled_type_id, true);
-		NumToSpawn = serialized->get_float(NumToSpawn_type_id, -1.000000);
-		NumToSpawnImmed = serialized->get_uint8(NumToSpawnImmed_type_id, 0);
-		SpawnTimeMin = serialized->get_float(SpawnTimeMin_type_id, 60.000000);
-		SpawnTimeMax = serialized->get_float(SpawnTimeMax_type_id, 180.000000);
+		NumToSpawn = serialized->get_float(NumToSpawn_type_id, -1.000000f);
+		NumToSpawnImmed = serialized->get_uint8(NumToSpawnImmed_type_id, 0u);
+		SpawnTimeMin = serialized->get_float(SpawnTimeMin_type_id, 60.000000f);
+		SpawnTimeMax = serialized->get_float(SpawnTimeMax_type_id, 180.000000f);
 		UsePlayerForward = serialized->get_bool(UsePlayerForward_type_id, false);
-		AngleFromPlayerMin = serialized->get_float(AngleFromPlayerMin_type_id, -60.000000);
-		AngleFromPlayerMax = serialized->get_float(AngleFromPlayerMax_type_id, 60.000000);
-		DistFromPlayerMin = serialized->get_float(DistFromPlayerMin_type_id, 50.000000);
-		DistFromPlayerMax = serialized->get_float(DistFromPlayerMax_type_id, 100.000000);
+		AngleFromPlayerMin = serialized->get_float(AngleFromPlayerMin_type_id, -60.000000f);
+		AngleFromPlayerMax = serialized->get_float(AngleFromPlayerMax_type_id, 60.000000f);
+		DistFromPlayerMin = serialized->get_float(DistFromPlayerMin_type_id, 50.000000f);
+		DistFromPlayerMax = serialized->get_float(DistFromPlayerMax_type_id, 100.000000f);
 		SpawnActorList = serialized->unwrap_into_many<rivet::ddl::generated::SimpleSpawnActorAsset>(SpawnActorList_type_id); 
 	}
 

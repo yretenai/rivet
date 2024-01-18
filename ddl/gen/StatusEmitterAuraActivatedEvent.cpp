@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	StatusEmitterAuraActivatedEvent::StatusEmitterAuraActivatedEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Range = serialized->get_float(Range_type_id, 0.000000); 
+		Range = serialized->get_float(Range_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

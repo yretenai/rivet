@@ -11,11 +11,11 @@
 namespace rivet::ddl::generated {
 	SpawnerBotBasePrius::SpawnerBotBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BotPrius(serialized) {
 		OverrideNumActive = serialized->get_int8(OverrideNumActive_type_id, -1);
-		OverrideSpawnDelay = serialized->get_float(OverrideSpawnDelay_type_id, -1.000000);
-		OverrideSpawnTriggerDelay = serialized->get_float(OverrideSpawnTriggerDelay_type_id, -1.000000);
-		SpawnTemplate = serialized->get_uint64(SpawnTemplate_type_id, 0);
-		SpawnGroup = serialized->get_uint64(SpawnGroup_type_id, 0);
-		ExtraSpawnIntoGroup = serialized->get_uint64(ExtraSpawnIntoGroup_type_id, 0);
+		OverrideSpawnDelay = serialized->get_float(OverrideSpawnDelay_type_id, -1.000000f);
+		OverrideSpawnTriggerDelay = serialized->get_float(OverrideSpawnTriggerDelay_type_id, -1.000000f);
+		SpawnTemplate = serialized->get_uint64(SpawnTemplate_type_id, 0ull);
+		SpawnGroup = serialized->get_uint64(SpawnGroup_type_id, 0ull);
+		ExtraSpawnIntoGroup = serialized->get_uint64(ExtraSpawnIntoGroup_type_id, 0ull);
 		SpawnerBotConfig = serialized->get_string(SpawnerBotConfig_type_id, {}); 
 	}
 

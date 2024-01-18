@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	DamageModifierConditionDamageTypePrius::DamageModifierConditionDamageTypePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): DamageModifierConditionBasePrius(serialized) {
-		DamageTypeMask = serialized->get_uint32(DamageTypeMask_type_id, 0); 
+		DamageTypeMask = serialized->get_uint32(DamageTypeMask_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

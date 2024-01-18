@@ -9,7 +9,7 @@ namespace rivet::ddl::generated {
 	GamePreferencesSave::GamePreferencesSave([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): PreferencesSave(serialized) {
 		PerfSpec = serialized->get_enum<rivet::ddl::generated::x11adfe43>(PerfSpec_type_id, rivet::ddl::generated::x11adfe43_values, rivet::ddl::generated::x11adfe43::None);
 		FlyerStickOption = serialized->get_enum<rivet::ddl::generated::FlyerCameraStickOption>(FlyerStickOption_type_id, rivet::ddl::generated::FlyerCameraStickOption_values, rivet::ddl::generated::FlyerCameraStickOption::Right_Stick);
-		SubtitleSizeIndex = serialized->get_uint32(SubtitleSizeIndex_type_id, 0);
+		SubtitleSizeIndex = serialized->get_uint32(SubtitleSizeIndex_type_id, 0u);
 		SubtitleSpeakerColor = serialized->get_string(SubtitleSpeakerColor_type_id, "light_green");
 		SubtitleTextColor = serialized->get_string(SubtitleTextColor_type_id, "white");
 		SubtitleBackgroundColor = serialized->get_string(SubtitleBackgroundColor_type_id, "black");
@@ -36,7 +36,7 @@ namespace rivet::ddl::generated {
 		HazardAccessibilityShaderCustom = serialized->get_string(HazardAccessibilityShaderCustom_type_id, "none");
 		InteractAccessibilityShaderCustom = serialized->get_string(InteractAccessibilityShaderCustom_type_id, "none");
 		CollectableAccessibilityShaderCustom = serialized->get_string(CollectableAccessibilityShaderCustom_type_id, "none");
-		AccessibilityContrastOptions = serialized->get_uint32(AccessibilityContrastOptions_type_id, 0);
+		AccessibilityContrastOptions = serialized->get_uint32(AccessibilityContrastOptions_type_id, 0u);
 		AccessibilityButtonActionUp = serialized->get_enum<rivet::ddl::generated::x847316cf>(AccessibilityButtonActionUp_type_id, rivet::ddl::generated::x847316cf_values, rivet::ddl::generated::x847316cf::None);
 		AccessibilityButtonActionRight = serialized->get_enum<rivet::ddl::generated::x847316cf>(AccessibilityButtonActionRight_type_id, rivet::ddl::generated::x847316cf_values, rivet::ddl::generated::x847316cf::None);
 		AccessibilityButtonActionDown = serialized->get_enum<rivet::ddl::generated::x847316cf>(AccessibilityButtonActionDown_type_id, rivet::ddl::generated::x847316cf_values, rivet::ddl::generated::x847316cf::None);

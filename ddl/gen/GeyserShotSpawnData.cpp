@@ -8,12 +8,12 @@
 namespace rivet::ddl::generated {
 	GeyserShotSpawnData::GeyserShotSpawnData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		ShotConfig = serialized->get_string(ShotConfig_type_id, {});
-		RangeHorizontal = serialized->get_float(RangeHorizontal_type_id, 10.000000);
-		RangeVertical = serialized->get_float(RangeVertical_type_id, 20.000000);
-		IntervalMin = serialized->get_float(IntervalMin_type_id, 0.250000);
-		IntervalMax = serialized->get_float(IntervalMax_type_id, 0.400000);
-		TargetBotCooldownMin = serialized->get_float(TargetBotCooldownMin_type_id, 0.750000);
-		TargetBotCooldownMax = serialized->get_float(TargetBotCooldownMax_type_id, 1.050000); 
+		RangeHorizontal = serialized->get_float(RangeHorizontal_type_id, 10.000000f);
+		RangeVertical = serialized->get_float(RangeVertical_type_id, 20.000000f);
+		IntervalMin = serialized->get_float(IntervalMin_type_id, 0.250000f);
+		IntervalMax = serialized->get_float(IntervalMax_type_id, 0.400000f);
+		TargetBotCooldownMin = serialized->get_float(TargetBotCooldownMin_type_id, 0.750000f);
+		TargetBotCooldownMax = serialized->get_float(TargetBotCooldownMax_type_id, 1.050000f); 
 	}
 
 	[[nodiscard]] auto

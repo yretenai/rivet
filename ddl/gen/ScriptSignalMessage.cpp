@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	ScriptSignalMessage::ScriptSignalMessage([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		fr = serialized->get_int32(fr_type_id, 0);
-		id = serialized->get_uint64(id_type_id, 0);
-		pl = serialized->get_uint32(pl_type_id, 0);
-		outpl = serialized->get_uint32(outpl_type_id, 0);
-		src = serialized->get_uint64(src_type_id, 0);
-		z = serialized->get_uint64(z_type_id, 0);
+		fr = serialized->get_int32(fr_type_id, 0u);
+		id = serialized->get_uint64(id_type_id, 0ull);
+		pl = serialized->get_uint32(pl_type_id, 0u);
+		outpl = serialized->get_uint32(outpl_type_id, 0u);
+		src = serialized->get_uint64(src_type_id, 0ull);
+		z = serialized->get_uint64(z_type_id, 0ull);
 		comment = serialized->get_string(comment_type_id, {});
 		sourceAction = serialized->get_string(sourceAction_type_id, {}); 
 	}

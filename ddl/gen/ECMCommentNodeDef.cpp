@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	ECMCommentNodeDef::ECMCommentNodeDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		NodeId = serialized->get_uint64(NodeId_type_id, 0);
-		XPos = serialized->get_int32(XPos_type_id, 0);
-		YPos = serialized->get_int32(YPos_type_id, 0);
+		NodeId = serialized->get_uint64(NodeId_type_id, 0ull);
+		XPos = serialized->get_int32(XPos_type_id, 0u);
+		YPos = serialized->get_int32(YPos_type_id, 0u);
 		Comment = serialized->get_string(Comment_type_id, {});
-		Width = serialized->get_uint32(Width_type_id, 0);
-		Height = serialized->get_uint32(Height_type_id, 0); 
+		Width = serialized->get_uint32(Width_type_id, 0u);
+		Height = serialized->get_uint32(Height_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

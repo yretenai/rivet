@@ -9,7 +9,7 @@ namespace rivet::ddl::generated {
 	AuthoredNodeData::AuthoredNodeData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		VehicleDensity = serialized->get_enum<rivet::ddl::generated::VehicleDensity>(VehicleDensity_type_id, rivet::ddl::generated::VehicleDensity_values, rivet::ddl::generated::VehicleDensity::Normal);
 		SpeedLimit = serialized->get_enum<rivet::ddl::generated::x9aa61c3c>(SpeedLimit_type_id, rivet::ddl::generated::x9aa61c3c_values, rivet::ddl::generated::x9aa61c3c::Normal);
-		AllowedVehicleClasses = serialized->get_bitset<rivet::ddl::generated::x9fc5ebb3>(AllowedVehicleClasses_type_id, rivet::ddl::generated::x9fc5ebb3_values, 15); 
+		AllowedVehicleClasses = serialized->get_bitset<rivet::ddl::generated::x9fc5ebb3>(AllowedVehicleClasses_type_id, rivet::ddl::generated::x9fc5ebb3_values, 15u); 
 	}
 
 	[[nodiscard]] auto

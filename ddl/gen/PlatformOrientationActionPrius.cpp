@@ -9,7 +9,7 @@ namespace rivet::ddl::generated {
 	PlatformOrientationActionPrius::PlatformOrientationActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Interact);
 		Orientation = serialized->get_enum<rivet::ddl::generated::x3cdeb00d>(Orientation_type_id, rivet::ddl::generated::x3cdeb00d_values, rivet::ddl::generated::x3cdeb00d::As_Placed);
-		BlendTime = serialized->get_float(BlendTime_type_id, 2.000000); 
+		BlendTime = serialized->get_float(BlendTime_type_id, 2.000000f); 
 	}
 
 	[[nodiscard]] auto

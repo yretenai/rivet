@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	GlobalCooldownSetEvent::GlobalCooldownSetEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
 		CooldownType = serialized->get_enum<rivet::ddl::generated::x942b54f2>(CooldownType_type_id, rivet::ddl::generated::x942b54f2_values, rivet::ddl::generated::x942b54f2::Leap);
-		CooldownDuration = serialized->get_float(CooldownDuration_type_id, 0.000000); 
+		CooldownDuration = serialized->get_float(CooldownDuration_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

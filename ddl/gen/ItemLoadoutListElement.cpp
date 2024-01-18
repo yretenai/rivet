@@ -10,8 +10,8 @@
 namespace rivet::ddl::generated {
 	ItemLoadoutListElement::ItemLoadoutListElement([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Item = serialized->get_string(Item_type_id, {});
-		Count = serialized->get_uint32(Count_type_id, 1);
-		ItemProgression = serialized->get_float(ItemProgression_type_id, 0.000000);
+		Count = serialized->get_uint32(Count_type_id, 1u);
+		ItemProgression = serialized->get_float(ItemProgression_type_id, 0.000000f);
 		AutoEquip = serialized->get_bool(AutoEquip_type_id, true);
 		EquipTarget = serialized->get_string(EquipTarget_type_id, {});
 		SkinItemOverrideList = serialized->unwrap_into_many<rivet::ddl::generated::SkinItemOverride>(SkinItemOverrideList_type_id); 

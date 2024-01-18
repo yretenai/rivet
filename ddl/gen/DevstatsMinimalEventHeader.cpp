@@ -10,7 +10,7 @@ namespace rivet::ddl::generated {
 		user_id = serialized->get_string(user_id_type_id, {});
 		session_id = serialized->get_string(session_id_type_id, {});
 		title_id = serialized->get_string(title_id_type_id, {});
-		client_timestamp = serialized->get_uint64(client_timestamp_type_id, 0); 
+		client_timestamp = serialized->get_uint64(client_timestamp_type_id, 0ull); 
 	}
 
 	[[nodiscard]] auto

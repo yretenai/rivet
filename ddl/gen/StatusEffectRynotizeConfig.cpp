@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	StatusEffectRynotizeConfig::StatusEffectRynotizeConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): StatusEffectConfig(serialized) {
 		HealthPackConfig = serialized->get_string(HealthPackConfig_type_id, {});
-		SpeedMultiplier = serialized->get_float(SpeedMultiplier_type_id, 0.500000); 
+		SpeedMultiplier = serialized->get_float(SpeedMultiplier_type_id, 0.500000f); 
 	}
 
 	[[nodiscard]] auto

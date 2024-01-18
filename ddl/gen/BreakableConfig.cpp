@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	BreakableConfig::BreakableConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Gravity = serialized->get_float(Gravity_type_id, 24.000000);
-		LinearDamping = serialized->get_float(LinearDamping_type_id, 0.250000);
-		AngularDamping = serialized->get_float(AngularDamping_type_id, 0.250000);
-		SuggestedMaxDebris = serialized->get_uint32(SuggestedMaxDebris_type_id, 200); 
+		Gravity = serialized->get_float(Gravity_type_id, 24.000000f);
+		LinearDamping = serialized->get_float(LinearDamping_type_id, 0.250000f);
+		AngularDamping = serialized->get_float(AngularDamping_type_id, 0.250000f);
+		SuggestedMaxDebris = serialized->get_uint32(SuggestedMaxDebris_type_id, 200u); 
 	}
 
 	[[nodiscard]] auto

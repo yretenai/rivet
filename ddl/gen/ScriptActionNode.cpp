@@ -10,10 +10,10 @@
 
 namespace rivet::ddl::generated {
 	ScriptActionNode::ScriptActionNode([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Id = serialized->get_uint64(Id_type_id, 0);
+		Id = serialized->get_uint64(Id_type_id, 0ull);
 		Name = serialized->get_string(Name_type_id, {});
-		XPos = serialized->get_int32(XPos_type_id, 0);
-		YPos = serialized->get_int32(YPos_type_id, 0);
+		XPos = serialized->get_int32(XPos_type_id, 0u);
+		YPos = serialized->get_int32(YPos_type_id, 0u);
 		DefName = serialized->get_string(DefName_type_id, {});
 		Collapsed = serialized->get_bool(Collapsed_type_id, false);
 		InputPlugs = serialized->unwrap_into_many<rivet::ddl::generated::ScriptActionInputPlug>(InputPlugs_type_id);

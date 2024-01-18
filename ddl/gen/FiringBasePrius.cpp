@@ -13,19 +13,19 @@
 namespace rivet::ddl::generated {
 	FiringBasePrius::FiringBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		BurstSequence = serialized->unwrap_into<rivet::ddl::generated::BurstSequence>(BurstSequence_type_id);
-		TriggerIndex = serialized->get_uint32(TriggerIndex_type_id, 0);
-		MinFiringDot = serialized->get_float(MinFiringDot_type_id, 0.970000);
-		ShortRange = serialized->get_float(ShortRange_type_id, 1.000000);
-		IdealRange = serialized->get_float(IdealRange_type_id, 20.000000);
-		LongRange = serialized->get_float(LongRange_type_id, 40.000000);
-		MaxRange = serialized->get_float(MaxRange_type_id, 100.000000);
+		TriggerIndex = serialized->get_uint32(TriggerIndex_type_id, 0u);
+		MinFiringDot = serialized->get_float(MinFiringDot_type_id, 0.970000f);
+		ShortRange = serialized->get_float(ShortRange_type_id, 1.000000f);
+		IdealRange = serialized->get_float(IdealRange_type_id, 20.000000f);
+		LongRange = serialized->get_float(LongRange_type_id, 40.000000f);
+		MaxRange = serialized->get_float(MaxRange_type_id, 100.000000f);
 		NeedsLos = serialized->get_bool(NeedsLos_type_id, true);
 		NeedsJob = serialized->get_bool(NeedsJob_type_id, false);
 		RankTargetLocs = serialized->get_bool(RankTargetLocs_type_id, false);
 		AimType = serialized->get_enum<rivet::ddl::generated::x4f5e74b9>(AimType_type_id, rivet::ddl::generated::x4f5e74b9_values, rivet::ddl::generated::x4f5e74b9::BestVisibleLocation);
 		HoldFireForVictimStates = serialized->get_bool(HoldFireForVictimStates_type_id, true);
 		AvoidShootingFriends = serialized->get_bool(AvoidShootingFriends_type_id, true);
-		FireAtUnseenTargetsTime = serialized->get_float(FireAtUnseenTargetsTime_type_id, -1.000000);
+		FireAtUnseenTargetsTime = serialized->get_float(FireAtUnseenTargetsTime_type_id, -1.000000f);
 		TargetLocation = serialized->get_enum<rivet::ddl::generated::x457f748b>(TargetLocation_type_id, rivet::ddl::generated::x457f748b_values, rivet::ddl::generated::x457f748b::Unknown);
 		TargetLocationName = serialized->get_string(TargetLocationName_type_id, {});
 		Aiming = serialized->unwrap_into<rivet::ddl::generated::AimingBasePrius>(Aiming_type_id);

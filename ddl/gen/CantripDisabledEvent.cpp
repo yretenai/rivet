@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	CantripDisabledEvent::CantripDisabledEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		TriggerIndex = serialized->get_int32(TriggerIndex_type_id, 0); 
+		TriggerIndex = serialized->get_int32(TriggerIndex_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	StreamingStaticImageConfig::StreamingStaticImageConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): StreamingVideoBaseConfig(serialized) {
 		TextureAsset = serialized->get_string(TextureAsset_type_id, {});
-		Duration = serialized->get_float(Duration_type_id, 10.000000); 
+		Duration = serialized->get_float(Duration_type_id, 10.000000f); 
 	}
 
 	[[nodiscard]] auto

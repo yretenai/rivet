@@ -13,9 +13,9 @@ namespace rivet::ddl::generated {
 		ColorName = serialized->get_string(ColorName_type_id, {});
 		NameLocTag = serialized->get_string(NameLocTag_type_id, {});
 		Available = serialized->get_enum<rivet::ddl::generated::x7ecfc969>(Available_type_id, rivet::ddl::generated::x7ecfc969_values, rivet::ddl::generated::x7ecfc969::Always);
-		R = serialized->get_uint8(R_type_id, 0);
-		G = serialized->get_uint8(G_type_id, 0);
-		B = serialized->get_uint8(B_type_id, 0);
+		R = serialized->get_uint8(R_type_id, 0u);
+		G = serialized->get_uint8(G_type_id, 0u);
+		B = serialized->get_uint8(B_type_id, 0u);
 		TextureOverrideList = serialized->unwrap_into_many<rivet::ddl::generated::SkinItemTextureOverride>(TextureOverrideList_type_id);
 		MaterialOverrideList = serialized->unwrap_into_many<rivet::ddl::generated::SkinItemMaterialOverride>(MaterialOverrideList_type_id); 
 	}

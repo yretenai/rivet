@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ClothChangeDampingEvent::ClothChangeDampingEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Damping = serialized->get_float(Damping_type_id, 0.200000); 
+		Damping = serialized->get_float(Damping_type_id, 0.200000f); 
 	}
 
 	[[nodiscard]] auto

@@ -19,12 +19,12 @@
 
 namespace rivet::ddl::generated {
 	StatusEffectTrackerBasePrius::StatusEffectTrackerBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Threshhold = serialized->get_float(Threshhold_type_id, 100.000000);
-		DecayRate = serialized->get_float(DecayRate_type_id, 0.000000);
-		DecayDelay = serialized->get_float(DecayDelay_type_id, -1.000000);
-		Vulnerability = serialized->get_float(Vulnerability_type_id, 1.000000);
-		DurationMod = serialized->get_float(DurationMod_type_id, 1.000000);
-		CooldownMod = serialized->get_float(CooldownMod_type_id, 1.000000);
+		Threshhold = serialized->get_float(Threshhold_type_id, 100.000000f);
+		DecayRate = serialized->get_float(DecayRate_type_id, 0.000000f);
+		DecayDelay = serialized->get_float(DecayDelay_type_id, -1.000000f);
+		Vulnerability = serialized->get_float(Vulnerability_type_id, 1.000000f);
+		DurationMod = serialized->get_float(DurationMod_type_id, 1.000000f);
+		CooldownMod = serialized->get_float(CooldownMod_type_id, 1.000000f);
 		AllowRefresh = serialized->get_bool(AllowRefresh_type_id, true);
 		AllowProportionalRefresh = serialized->get_bool(AllowProportionalRefresh_type_id, false);
 		AllowIfDead = serialized->get_bool(AllowIfDead_type_id, true);

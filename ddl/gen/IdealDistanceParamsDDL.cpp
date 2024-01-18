@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	IdealDistanceParamsDDL::IdealDistanceParamsDDL([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		IdealMinDistance = serialized->get_float(IdealMinDistance_type_id, 27.000000);
-		IdealMaxDistance = serialized->get_float(IdealMaxDistance_type_id, 37.000000);
-		MinChaseSpeed = serialized->get_float(MinChaseSpeed_type_id, 8.000000);
-		MaxChaseSpeed = serialized->get_float(MaxChaseSpeed_type_id, 20.000000);
-		Deceleration = serialized->get_float(Deceleration_type_id, -10.000000);
-		Acceleration = serialized->get_float(Acceleration_type_id, 10.000000); 
+		IdealMinDistance = serialized->get_float(IdealMinDistance_type_id, 27.000000f);
+		IdealMaxDistance = serialized->get_float(IdealMaxDistance_type_id, 37.000000f);
+		MinChaseSpeed = serialized->get_float(MinChaseSpeed_type_id, 8.000000f);
+		MaxChaseSpeed = serialized->get_float(MaxChaseSpeed_type_id, 20.000000f);
+		Deceleration = serialized->get_float(Deceleration_type_id, -10.000000f);
+		Acceleration = serialized->get_float(Acceleration_type_id, 10.000000f); 
 	}
 
 	[[nodiscard]] auto

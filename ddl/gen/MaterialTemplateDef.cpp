@@ -17,7 +17,7 @@ namespace rivet::ddl::generated {
 		IconPath = serialized->get_string(IconPath_type_id, "");
 		SourcePath = serialized->get_string(SourcePath_type_id, {});
 		PreviewModel = serialized->unwrap_into<rivet::ddl::generated::PreviewModel>(PreviewModel_type_id);
-		ContentHash = serialized->get_uint32(ContentHash_type_id, 0);
+		ContentHash = serialized->get_uint32(ContentHash_type_id, 0u);
 		Variations = serialized->unwrap_into_many<rivet::ddl::generated::ShaderConstant>(Variations_type_id);
 		Constants = serialized->unwrap_into_many<rivet::ddl::generated::ShaderConstant>(Constants_type_id);
 		Globals = serialized->unwrap_into_many<rivet::ddl::generated::ShaderConstant>(Globals_type_id);

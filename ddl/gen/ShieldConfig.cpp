@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	ShieldConfig::ShieldConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		DamagePassthroughPercent = serialized->get_float(DamagePassthroughPercent_type_id, 0.000000);
-		MaxAngle = serialized->get_float(MaxAngle_type_id, 90.000000); 
+		DamagePassthroughPercent = serialized->get_float(DamagePassthroughPercent_type_id, 0.000000f);
+		MaxAngle = serialized->get_float(MaxAngle_type_id, 90.000000f); 
 	}
 
 	[[nodiscard]] auto

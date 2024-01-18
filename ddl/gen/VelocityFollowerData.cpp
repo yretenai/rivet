@@ -9,23 +9,23 @@ namespace rivet::ddl::generated {
 	VelocityFollowerData::VelocityFollowerData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Enabled = serialized->get_bool(Enabled_type_id, true);
 		MotionMode = serialized->get_enum<rivet::ddl::generated::x79dd0c33>(MotionMode_type_id, rivet::ddl::generated::x79dd0c33_values, rivet::ddl::generated::x79dd0c33::Default);
-		DefaultPitch = serialized->get_float(DefaultPitch_type_id, 3.000000);
-		SpeedTrigger = serialized->get_float(SpeedTrigger_type_id, 2.000000);
-		PostInputDelay = serialized->get_float(PostInputDelay_type_id, 1.000000);
-		SpeedMaxYaw = serialized->get_float(SpeedMaxYaw_type_id, 230.000000);
-		SpeedMaxPitch = serialized->get_float(SpeedMaxPitch_type_id, 57.000000);
-		AccelOrGain = serialized->get_float(AccelOrGain_type_id, 90.000000);
-		AccelOrGainAccel = serialized->get_float(AccelOrGainAccel_type_id, 150.000000);
-		DecelOrDamp = serialized->get_float(DecelOrDamp_type_id, 50.000000);
-		DeadBackAngle = serialized->get_float(DeadBackAngle_type_id, 32.000000);
-		DeadFrontAngle = serialized->get_float(DeadFrontAngle_type_id, 0.000000);
-		PitchScaleUp = serialized->get_float(PitchScaleUp_type_id, 1.000000);
-		PitchScaleDown = serialized->get_float(PitchScaleDown_type_id, 2.000000);
-		MinYawPitchDiffTolerance = serialized->get_float(MinYawPitchDiffTolerance_type_id, 0.000000);
-		MinSpeedTolerance = serialized->get_float(MinSpeedTolerance_type_id, 4.000000);
-		MaxYawDiff = serialized->get_float(MaxYawDiff_type_id, 360.000000);
-		MaxPitch = serialized->get_float(MaxPitch_type_id, 60.000000);
-		MinPitch = serialized->get_float(MinPitch_type_id, 0.000000); 
+		DefaultPitch = serialized->get_float(DefaultPitch_type_id, 3.000000f);
+		SpeedTrigger = serialized->get_float(SpeedTrigger_type_id, 2.000000f);
+		PostInputDelay = serialized->get_float(PostInputDelay_type_id, 1.000000f);
+		SpeedMaxYaw = serialized->get_float(SpeedMaxYaw_type_id, 230.000000f);
+		SpeedMaxPitch = serialized->get_float(SpeedMaxPitch_type_id, 57.000000f);
+		AccelOrGain = serialized->get_float(AccelOrGain_type_id, 90.000000f);
+		AccelOrGainAccel = serialized->get_float(AccelOrGainAccel_type_id, 150.000000f);
+		DecelOrDamp = serialized->get_float(DecelOrDamp_type_id, 50.000000f);
+		DeadBackAngle = serialized->get_float(DeadBackAngle_type_id, 32.000000f);
+		DeadFrontAngle = serialized->get_float(DeadFrontAngle_type_id, 0.000000f);
+		PitchScaleUp = serialized->get_float(PitchScaleUp_type_id, 1.000000f);
+		PitchScaleDown = serialized->get_float(PitchScaleDown_type_id, 2.000000f);
+		MinYawPitchDiffTolerance = serialized->get_float(MinYawPitchDiffTolerance_type_id, 0.000000f);
+		MinSpeedTolerance = serialized->get_float(MinSpeedTolerance_type_id, 4.000000f);
+		MaxYawDiff = serialized->get_float(MaxYawDiff_type_id, 360.000000f);
+		MaxPitch = serialized->get_float(MaxPitch_type_id, 60.000000f);
+		MinPitch = serialized->get_float(MinPitch_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

@@ -10,9 +10,9 @@ namespace rivet::ddl::generated {
 		PostCompositeShader = serialized->get_string(PostCompositeShader_type_id, {});
 		PreCompositeShader = serialized->get_string(PreCompositeShader_type_id, {});
 		Conduit = serialized->get_string(Conduit_type_id, {});
-		PortalActor = serialized->get_uint32(PortalActor_type_id, 0);
+		PortalActor = serialized->get_uint32(PortalActor_type_id, 0u);
 		Size = serialized->get_enum<rivet::ddl::generated::xbf5ff3c6>(Size_type_id, rivet::ddl::generated::xbf5ff3c6_values, rivet::ddl::generated::xbf5ff3c6::Small);
-		VersionIndex = serialized->get_uint8(VersionIndex_type_id, 0); 
+		VersionIndex = serialized->get_uint8(VersionIndex_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

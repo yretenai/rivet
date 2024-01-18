@@ -10,7 +10,7 @@
 
 namespace rivet::ddl::generated {
 	TargetHunterTargetTypePrius::TargetHunterTargetTypePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): TargetHunterBasePrius(serialized) {
-		TargetTypes = serialized->get_bitset<rivet::ddl::generated::TargetType>(TargetTypes_type_id, rivet::ddl::generated::TargetType_values, 0);
+		TargetTypes = serialized->get_bitset<rivet::ddl::generated::TargetType>(TargetTypes_type_id, rivet::ddl::generated::TargetType_values, 0u);
 		ShapeOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(ShapeOffset_type_id);
 		Shapes = serialized->unwrap_into_many<rivet::ddl::generated::TargetShapeContainer>(Shapes_type_id); 
 	}

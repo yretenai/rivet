@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	OrbitCamData::OrbitCamData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		TetherDistance = serialized->get_float(TetherDistance_type_id, 10.000000);
-		MinDistance = serialized->get_float(MinDistance_type_id, 1.000000);
-		ZoomSpeed = serialized->get_float(ZoomSpeed_type_id, 8.000000);
-		ZoomAccel = serialized->get_float(ZoomAccel_type_id, 400.000000);
-		ZoomDecel = serialized->get_float(ZoomDecel_type_id, 10000.000000);
+		TetherDistance = serialized->get_float(TetherDistance_type_id, 10.000000f);
+		MinDistance = serialized->get_float(MinDistance_type_id, 1.000000f);
+		ZoomSpeed = serialized->get_float(ZoomSpeed_type_id, 8.000000f);
+		ZoomAccel = serialized->get_float(ZoomAccel_type_id, 400.000000f);
+		ZoomDecel = serialized->get_float(ZoomDecel_type_id, 10000.000000f);
 		StickConfig = serialized->get_string(StickConfig_type_id, {}); 
 	}
 

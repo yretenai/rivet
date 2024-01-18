@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	BotShoveEvent::BotShoveEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BotForceMoveBaseEvent(serialized) {
 		ShoveLocator = serialized->get_string(ShoveLocator_type_id, {});
-		Speed = serialized->get_float(Speed_type_id, 0.000000); 
+		Speed = serialized->get_float(Speed_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

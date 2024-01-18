@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	WeaponBurstStartedEvent::WeaponBurstStartedEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		NumShots = serialized->get_int32(NumShots_type_id, 0);
-		Duration = serialized->get_float(Duration_type_id, 0.000000); 
+		NumShots = serialized->get_int32(NumShots_type_id, 0u);
+		Duration = serialized->get_float(Duration_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

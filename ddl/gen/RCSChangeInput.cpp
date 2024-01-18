@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	RCSChangeInput::RCSChangeInput([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		KeepAliveTimeout = serialized->get_float(KeepAliveTimeout_type_id, 600.000000);
-		Changelist = serialized->get_uint32(Changelist_type_id, 0);
+		KeepAliveTimeout = serialized->get_float(KeepAliveTimeout_type_id, 600.000000f);
+		Changelist = serialized->get_uint32(Changelist_type_id, 0u);
 		DeleteChangelist = serialized->get_bool(DeleteChangelist_type_id, false); 
 	}
 

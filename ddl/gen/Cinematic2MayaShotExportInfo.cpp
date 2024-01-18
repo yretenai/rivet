@@ -14,9 +14,9 @@ namespace rivet::ddl::generated {
 		UpdateFromMaya = serialized->get_bool(UpdateFromMaya_type_id, false);
 		MayaStartFrame = serialized->get_int32(MayaStartFrame_type_id, -1);
 		MayaEndFrame = serialized->get_int32(MayaEndFrame_type_id, -1);
-		Muid0 = serialized->get_uint64(Muid0_type_id, 0);
-		Muid1 = serialized->get_uint64(Muid1_type_id, 0);
-		MayaShotSplitOrder = serialized->get_uint16(MayaShotSplitOrder_type_id, 65535); 
+		Muid0 = serialized->get_uint64(Muid0_type_id, 0ull);
+		Muid1 = serialized->get_uint64(Muid1_type_id, 0ull);
+		MayaShotSplitOrder = serialized->get_uint16(MayaShotSplitOrder_type_id, 65535u); 
 	}
 
 	[[nodiscard]] auto

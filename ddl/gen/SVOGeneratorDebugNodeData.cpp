@@ -11,7 +11,7 @@ namespace rivet::ddl::generated {
 	SVOGeneratorDebugNodeData::SVOGeneratorDebugNodeData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Center = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Center_type_id);
 		Radii = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Radii_type_id);
-		Id = serialized->get_uint64(Id_type_id, 0); 
+		Id = serialized->get_uint64(Id_type_id, 0ull); 
 	}
 
 	[[nodiscard]] auto

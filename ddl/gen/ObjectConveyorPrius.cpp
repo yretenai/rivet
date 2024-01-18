@@ -7,16 +7,16 @@
 
 namespace rivet::ddl::generated {
 	ObjectConveyorPrius::ObjectConveyorPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ConveyorPath = serialized->get_uint64(ConveyorPath_type_id, 0);
-		ConveyorStartVolume = serialized->get_uint64(ConveyorStartVolume_type_id, 0);
-		ConveyorStopVolume = serialized->get_uint64(ConveyorStopVolume_type_id, 0);
-		TileList = serialized->get_uint64(TileList_type_id, 0);
-		TileSize = serialized->get_float(TileSize_type_id, 0.000000);
+		ConveyorPath = serialized->get_uint64(ConveyorPath_type_id, 0ull);
+		ConveyorStartVolume = serialized->get_uint64(ConveyorStartVolume_type_id, 0ull);
+		ConveyorStopVolume = serialized->get_uint64(ConveyorStopVolume_type_id, 0ull);
+		TileList = serialized->get_uint64(TileList_type_id, 0ull);
+		TileSize = serialized->get_float(TileSize_type_id, 0.000000f);
 		PackTiles = serialized->get_bool(PackTiles_type_id, false);
 		PackEndT = serialized->get_bool(PackEndT_type_id, true);
-		SpeedAccel = serialized->get_float(SpeedAccel_type_id, 1.000000);
-		SpeedDecel = serialized->get_float(SpeedDecel_type_id, 3.000000);
-		SpeedMax = serialized->get_float(SpeedMax_type_id, 1.000000);
+		SpeedAccel = serialized->get_float(SpeedAccel_type_id, 1.000000f);
+		SpeedDecel = serialized->get_float(SpeedDecel_type_id, 3.000000f);
+		SpeedMax = serialized->get_float(SpeedMax_type_id, 1.000000f);
 		StartMoving = serialized->get_bool(StartMoving_type_id, true); 
 	}
 

@@ -10,11 +10,11 @@
 namespace rivet::ddl::generated {
 	EventMeterPrius::EventMeterPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Event = serialized->unwrap_into<rivet::ddl::generated::EventBase>(Event_type_id);
-		Radius = serialized->get_float(Radius_type_id, 0.000000);
-		IncrementPerEvent = serialized->get_float(IncrementPerEvent_type_id, 0.000000);
-		DecayPerSecond = serialized->get_float(DecayPerSecond_type_id, 0.000000);
+		Radius = serialized->get_float(Radius_type_id, 0.000000f);
+		IncrementPerEvent = serialized->get_float(IncrementPerEvent_type_id, 0.000000f);
+		DecayPerSecond = serialized->get_float(DecayPerSecond_type_id, 0.000000f);
 		SelfEventsOnly = serialized->get_bool(SelfEventsOnly_type_id, false);
-		OnlyFromSenderHandle = serialized->get_uint32(OnlyFromSenderHandle_type_id, 0); 
+		OnlyFromSenderHandle = serialized->get_uint32(OnlyFromSenderHandle_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

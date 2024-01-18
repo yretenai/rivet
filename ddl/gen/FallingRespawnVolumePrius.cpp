@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	FallingRespawnVolumePrius::FallingRespawnVolumePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		RespawnLocation = serialized->get_uint64(RespawnLocation_type_id, 0); 
+		RespawnLocation = serialized->get_uint64(RespawnLocation_type_id, 0ull); 
 	}
 
 	[[nodiscard]] auto

@@ -8,25 +8,25 @@
 namespace rivet::ddl::generated {
 	PerfSpecData::PerfSpecData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Spec = serialized->get_enum<rivet::ddl::generated::x11adfe43>(Spec_type_id, rivet::ddl::generated::x11adfe43_values, rivet::ddl::generated::x11adfe43::None);
-		LodScaleMultiplier = serialized->get_float(LodScaleMultiplier_type_id, 1.000000);
+		LodScaleMultiplier = serialized->get_float(LodScaleMultiplier_type_id, 1.000000f);
 		ModelLodClamp = serialized->get_enum<rivet::ddl::generated::x4a11042>(ModelLodClamp_type_id, rivet::ddl::generated::x4a11042_values, rivet::ddl::generated::x4a11042::Lod_0);
-		CsmLodCountBias = serialized->get_int32(CsmLodCountBias_type_id, 0);
-		ShadowDrawDistMultiplier = serialized->get_float(ShadowDrawDistMultiplier_type_id, 1.000000);
-		VolumetricFarDistanceMultiplier = serialized->get_float(VolumetricFarDistanceMultiplier_type_id, 1.000000);
-		VolumetricResolutionMultiplier = serialized->get_float(VolumetricResolutionMultiplier_type_id, 1.000000);
-		AORadiusInMetersMultiplier = serialized->get_float(AORadiusInMetersMultiplier_type_id, 1.000000);
-		AODistanceInMetersMultiplier = serialized->get_float(AODistanceInMetersMultiplier_type_id, 1.000000);
-		WeatherVFXSplashRangeMultiplier = serialized->get_float(WeatherVFXSplashRangeMultiplier_type_id, 1.000000);
-		WeatherParticlesMaxDrawDistanceMultiplier = serialized->get_float(WeatherParticlesMaxDrawDistanceMultiplier_type_id, 1.000000);
-		WeatherParticlesDensityMultiplier = serialized->get_float(WeatherParticlesDensityMultiplier_type_id, 1.000000);
+		CsmLodCountBias = serialized->get_int32(CsmLodCountBias_type_id, 0u);
+		ShadowDrawDistMultiplier = serialized->get_float(ShadowDrawDistMultiplier_type_id, 1.000000f);
+		VolumetricFarDistanceMultiplier = serialized->get_float(VolumetricFarDistanceMultiplier_type_id, 1.000000f);
+		VolumetricResolutionMultiplier = serialized->get_float(VolumetricResolutionMultiplier_type_id, 1.000000f);
+		AORadiusInMetersMultiplier = serialized->get_float(AORadiusInMetersMultiplier_type_id, 1.000000f);
+		AODistanceInMetersMultiplier = serialized->get_float(AODistanceInMetersMultiplier_type_id, 1.000000f);
+		WeatherVFXSplashRangeMultiplier = serialized->get_float(WeatherVFXSplashRangeMultiplier_type_id, 1.000000f);
+		WeatherParticlesMaxDrawDistanceMultiplier = serialized->get_float(WeatherParticlesMaxDrawDistanceMultiplier_type_id, 1.000000f);
+		WeatherParticlesDensityMultiplier = serialized->get_float(WeatherParticlesDensityMultiplier_type_id, 1.000000f);
 		EnabledVolumetricClouds = serialized->get_bool(EnabledVolumetricClouds_type_id, true);
-		CloudDownSample = serialized->get_float(CloudDownSample_type_id, 0.000000);
+		CloudDownSample = serialized->get_float(CloudDownSample_type_id, 0.000000f);
 		EnabledCloudEdgeBlur = serialized->get_bool(EnabledCloudEdgeBlur_type_id, true);
 		EnabledCloudLODDepth = serialized->get_bool(EnabledCloudLODDepth_type_id, true);
 		EnabledCloudShadow = serialized->get_bool(EnabledCloudShadow_type_id, true);
 		EnabledCloudGodray = serialized->get_bool(EnabledCloudGodray_type_id, true);
-		EstTimeToRenderEnvProbeFaceCpu = serialized->get_float(EstTimeToRenderEnvProbeFaceCpu_type_id, 0.001000);
-		EstTimeToRenderEnvProbeFaceGpu = serialized->get_float(EstTimeToRenderEnvProbeFaceGpu_type_id, 0.002000); 
+		EstTimeToRenderEnvProbeFaceCpu = serialized->get_float(EstTimeToRenderEnvProbeFaceCpu_type_id, 0.001000f);
+		EstTimeToRenderEnvProbeFaceGpu = serialized->get_float(EstTimeToRenderEnvProbeFaceGpu_type_id, 0.002000f); 
 	}
 
 	[[nodiscard]] auto

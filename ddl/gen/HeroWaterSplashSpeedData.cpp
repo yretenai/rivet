@@ -7,14 +7,14 @@
 
 namespace rivet::ddl::generated {
 	HeroWaterSplashSpeedData::HeroWaterSplashSpeedData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SplashSmallSpeed = serialized->get_float(SplashSmallSpeed_type_id, 1.000000);
-		SplashMediumSpeed = serialized->get_float(SplashMediumSpeed_type_id, 9.000000);
-		SplashLargeSpeed = serialized->get_float(SplashLargeSpeed_type_id, 15.000000);
-		SplashHugeSpeed = serialized->get_float(SplashHugeSpeed_type_id, 20.000000);
-		SplashExitSmallSpeed = serialized->get_float(SplashExitSmallSpeed_type_id, 1.000000);
-		SplashExitMediumSpeed = serialized->get_float(SplashExitMediumSpeed_type_id, 9.000000);
-		SplashExitLargeSpeed = serialized->get_float(SplashExitLargeSpeed_type_id, 15.000000);
-		SplashExitHugeSpeed = serialized->get_float(SplashExitHugeSpeed_type_id, 20.000000); 
+		SplashSmallSpeed = serialized->get_float(SplashSmallSpeed_type_id, 1.000000f);
+		SplashMediumSpeed = serialized->get_float(SplashMediumSpeed_type_id, 9.000000f);
+		SplashLargeSpeed = serialized->get_float(SplashLargeSpeed_type_id, 15.000000f);
+		SplashHugeSpeed = serialized->get_float(SplashHugeSpeed_type_id, 20.000000f);
+		SplashExitSmallSpeed = serialized->get_float(SplashExitSmallSpeed_type_id, 1.000000f);
+		SplashExitMediumSpeed = serialized->get_float(SplashExitMediumSpeed_type_id, 9.000000f);
+		SplashExitLargeSpeed = serialized->get_float(SplashExitLargeSpeed_type_id, 15.000000f);
+		SplashExitHugeSpeed = serialized->get_float(SplashExitHugeSpeed_type_id, 20.000000f); 
 	}
 
 	[[nodiscard]] auto

@@ -14,10 +14,10 @@ namespace rivet::ddl::generated {
 		ShowFrameGraph = serialized->get_bool(ShowFrameGraph_type_id, false);
 		ShowGraphicsMemoryGraph = serialized->get_bool(ShowGraphicsMemoryGraph_type_id, false);
 		ShowBackendTextures = serialized->get_bool(ShowBackendTextures_type_id, false);
-		Memory = serialized->get_uint32(Memory_type_id, 20971520);
+		Memory = serialized->get_uint32(Memory_type_id, 20971520u);
 		UseSmallBlock = serialized->get_bool(UseSmallBlock_type_id, false);
-		GraphicsMemoryLarge = serialized->get_uint32(GraphicsMemoryLarge_type_id, 255852544);
-		GraphicsMemorySmall = serialized->get_uint32(GraphicsMemorySmall_type_id, 90177536);
+		GraphicsMemoryLarge = serialized->get_uint32(GraphicsMemoryLarge_type_id, 255852544u);
+		GraphicsMemorySmall = serialized->get_uint32(GraphicsMemorySmall_type_id, 90177536u);
 		GraphicsMemoryMetrics = serialized->get_bool(GraphicsMemoryMetrics_type_id, true);
 		LoggingEnabled = serialized->get_bool(LoggingEnabled_type_id, false);
 		DebuggingEnabled = serialized->get_bool(DebuggingEnabled_type_id, false);

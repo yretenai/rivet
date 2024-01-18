@@ -13,7 +13,7 @@ namespace rivet::ddl::generated {
 		EventId = serialized->get_string(EventId_type_id, {});
 		PlayerPosInfo = serialized->unwrap_into<rivet::ddl::generated::DevstatsPlayerPositionInfo>(PlayerPosInfo_type_id);
 		PrimarySegmentInfo = serialized->unwrap_into<rivet::ddl::generated::DevstatsPrimarySegmentInfo>(PrimarySegmentInfo_type_id);
-		TVal = serialized->get_float(TVal_type_id, 0.000000); 
+		TVal = serialized->get_float(TVal_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

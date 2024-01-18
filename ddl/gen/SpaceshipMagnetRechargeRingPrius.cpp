@@ -8,8 +8,8 @@
 namespace rivet::ddl::generated {
 	SpaceshipMagnetRechargeRingPrius::SpaceshipMagnetRechargeRingPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		AutoFaceShip = serialized->get_bool(AutoFaceShip_type_id, false);
-		PercentRecharge = serialized->get_float(PercentRecharge_type_id, 0.100000);
-		CooldownTime = serialized->get_float(CooldownTime_type_id, 5.000000); 
+		PercentRecharge = serialized->get_float(PercentRecharge_type_id, 0.100000f);
+		CooldownTime = serialized->get_float(CooldownTime_type_id, 5.000000f); 
 	}
 
 	[[nodiscard]] auto

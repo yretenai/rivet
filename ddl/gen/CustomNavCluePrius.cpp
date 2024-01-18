@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	CustomNavCluePrius::CustomNavCluePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		TargetNavClue = serialized->get_uint64(TargetNavClue_type_id, 0);
-		TargetHelper = serialized->get_uint64(TargetHelper_type_id, 0);
-		RequiredAbilities = serialized->get_bitset<rivet::ddl::generated::x729ef36c>(RequiredAbilities_type_id, rivet::ddl::generated::x729ef36c_values, 1073741824);
-		RequiredEntityType = serialized->get_bitset<rivet::ddl::generated::x117c3bf3>(RequiredEntityType_type_id, rivet::ddl::generated::x117c3bf3_values, 1); 
+		TargetNavClue = serialized->get_uint64(TargetNavClue_type_id, 0ull);
+		TargetHelper = serialized->get_uint64(TargetHelper_type_id, 0ull);
+		RequiredAbilities = serialized->get_bitset<rivet::ddl::generated::x729ef36c>(RequiredAbilities_type_id, rivet::ddl::generated::x729ef36c_values, 1073741824u);
+		RequiredEntityType = serialized->get_bitset<rivet::ddl::generated::x117c3bf3>(RequiredEntityType_type_id, rivet::ddl::generated::x117c3bf3_values, 1u); 
 	}
 
 	[[nodiscard]] auto

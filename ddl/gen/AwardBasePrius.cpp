@@ -35,7 +35,7 @@ namespace rivet::ddl::generated {
 		Level = serialized->get_enum<rivet::ddl::generated::xfb81cf7c>(Level_type_id, rivet::ddl::generated::xfb81cf7c_values, rivet::ddl::generated::xfb81cf7c::bronze);
 		Hidden = serialized->get_bool(Hidden_type_id, false);
 		Progressive = serialized->get_bool(Progressive_type_id, false);
-		TargetValue = serialized->get_uint32(TargetValue_type_id, 1);
+		TargetValue = serialized->get_uint32(TargetValue_type_id, 1u);
 		Prize = serialized->unwrap_into<rivet::ddl::generated::AwardPrizeBasePrius>(Prize_type_id); 
 	}
 

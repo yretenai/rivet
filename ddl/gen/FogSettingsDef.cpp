@@ -12,24 +12,24 @@ namespace rivet::ddl::generated {
 		Enabled = serialized->get_bool(Enabled_type_id, false);
 		ColorMapAsset = serialized->get_string(ColorMapAsset_type_id, {});
 		AlphaMapAsset = serialized->get_string(AlphaMapAsset_type_id, {});
-		ColorMapDepthRange = serialized->get_float(ColorMapDepthRange_type_id, 1000.000000);
-		ColorMapDepthScale = serialized->get_float(ColorMapDepthScale_type_id, 1.000000);
+		ColorMapDepthRange = serialized->get_float(ColorMapDepthRange_type_id, 1000.000000f);
+		ColorMapDepthScale = serialized->get_float(ColorMapDepthScale_type_id, 1.000000f);
 		Color = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Color_type_id);
-		LuminanceScale = serialized->get_float(LuminanceScale_type_id, 1.000000);
-		KeyLightInfluence = serialized->get_float(KeyLightInfluence_type_id, 1.000000);
-		NearRadius = serialized->get_float(NearRadius_type_id, 0.000000);
-		Height0 = serialized->get_float(Height0_type_id, -100.000000);
-		Opacity0 = serialized->get_float(Opacity0_type_id, 0.500000);
-		Height1 = serialized->get_float(Height1_type_id, 100.000000);
-		Opacity1 = serialized->get_float(Opacity1_type_id, 0.000000);
-		Height2 = serialized->get_float(Height2_type_id, 200.000000);
-		Opacity2 = serialized->get_float(Opacity2_type_id, 0.000000);
-		Height3 = serialized->get_float(Height3_type_id, 300.000000);
-		Opacity3 = serialized->get_float(Opacity3_type_id, 0.000000);
-		Height4 = serialized->get_float(Height4_type_id, 400.000000);
-		Opacity4 = serialized->get_float(Opacity4_type_id, 0.000000);
-		RemapStrength = serialized->get_float(RemapStrength_type_id, 0.000000);
-		RemapKeyOpacity = serialized->get_float(RemapKeyOpacity_type_id, 0.500000); 
+		LuminanceScale = serialized->get_float(LuminanceScale_type_id, 1.000000f);
+		KeyLightInfluence = serialized->get_float(KeyLightInfluence_type_id, 1.000000f);
+		NearRadius = serialized->get_float(NearRadius_type_id, 0.000000f);
+		Height0 = serialized->get_float(Height0_type_id, -100.000000f);
+		Opacity0 = serialized->get_float(Opacity0_type_id, 0.500000f);
+		Height1 = serialized->get_float(Height1_type_id, 100.000000f);
+		Opacity1 = serialized->get_float(Opacity1_type_id, 0.000000f);
+		Height2 = serialized->get_float(Height2_type_id, 200.000000f);
+		Opacity2 = serialized->get_float(Opacity2_type_id, 0.000000f);
+		Height3 = serialized->get_float(Height3_type_id, 300.000000f);
+		Opacity3 = serialized->get_float(Opacity3_type_id, 0.000000f);
+		Height4 = serialized->get_float(Height4_type_id, 400.000000f);
+		Opacity4 = serialized->get_float(Opacity4_type_id, 0.000000f);
+		RemapStrength = serialized->get_float(RemapStrength_type_id, 0.000000f);
+		RemapKeyOpacity = serialized->get_float(RemapKeyOpacity_type_id, 0.500000f); 
 	}
 
 	[[nodiscard]] auto

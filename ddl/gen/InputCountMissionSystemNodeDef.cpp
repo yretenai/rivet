@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	InputCountMissionSystemNodeDef::InputCountMissionSystemNodeDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): AndMissionSystemNodeDef(serialized) {
-		NumRequired = serialized->get_uint32(NumRequired_type_id, 1); 
+		NumRequired = serialized->get_uint32(NumRequired_type_id, 1u); 
 	}
 
 	[[nodiscard]] auto

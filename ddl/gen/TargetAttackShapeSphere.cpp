@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	TargetAttackShapeSphere::TargetAttackShapeSphere([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): TargetedAttackShape(serialized) {
 		Locator = serialized->get_string(Locator_type_id, "");
-		Radius = serialized->get_float(Radius_type_id, 1.000000); 
+		Radius = serialized->get_float(Radius_type_id, 1.000000f); 
 	}
 
 	[[nodiscard]] auto

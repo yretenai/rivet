@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	PlanetMenuViewData::PlanetMenuViewData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): UIViewBaseData(serialized) {
-		BackgroundActor = serialized->get_uint64(BackgroundActor_type_id, 0); 
+		BackgroundActor = serialized->get_uint64(BackgroundActor_type_id, 0ull); 
 	}
 
 	[[nodiscard]] auto

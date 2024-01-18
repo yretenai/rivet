@@ -9,24 +9,24 @@
 
 namespace rivet::ddl::generated {
 	CameraStickConfig::CameraStickConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		MaxHorizontalSpeed = serialized->get_float(MaxHorizontalSpeed_type_id, 210.000000);
-		MaxHorizontalAccelSpeed = serialized->get_float(MaxHorizontalAccelSpeed_type_id, 230.000000);
-		MaxVerticalSpeed = serialized->get_float(MaxVerticalSpeed_type_id, 70.000000);
-		MaxVerticalAccelSpeed = serialized->get_float(MaxVerticalAccelSpeed_type_id, 120.000000);
-		AccelTime = serialized->get_float(AccelTime_type_id, -1.000000);
+		MaxHorizontalSpeed = serialized->get_float(MaxHorizontalSpeed_type_id, 210.000000f);
+		MaxHorizontalAccelSpeed = serialized->get_float(MaxHorizontalAccelSpeed_type_id, 230.000000f);
+		MaxVerticalSpeed = serialized->get_float(MaxVerticalSpeed_type_id, 70.000000f);
+		MaxVerticalAccelSpeed = serialized->get_float(MaxVerticalAccelSpeed_type_id, 120.000000f);
+		AccelTime = serialized->get_float(AccelTime_type_id, -1.000000f);
 		HorizontalSpeedCurve = serialized->get_string(HorizontalSpeedCurve_type_id, "configs\\FollowCameraStickConfig\\DefaultCameraHorizontalCurve.config");
 		VerticalSpeedCurve = serialized->get_string(VerticalSpeedCurve_type_id, "configs\\FollowCameraStickConfig\\DefaultCameraVerticalCurve.config");
 		DiagonalSpeedCurve = serialized->get_string(DiagonalSpeedCurve_type_id, "configs\\FollowCameraStickConfig\\DefaultCameraSpeedMixCurve.config");
-		TurnAccel = serialized->get_float(TurnAccel_type_id, 600.000000);
-		TurnDecel = serialized->get_float(TurnDecel_type_id, 9000.000000);
-		TurnAccelAccel = serialized->get_float(TurnAccelAccel_type_id, 6000.000000);
-		TurnAccelMin = serialized->get_float(TurnAccelMin_type_id, 30.000000);
-		CardinalBias = serialized->get_float(CardinalBias_type_id, 0.160000);
-		BaseFOV = serialized->get_float(BaseFOV_type_id, 84.000000);
+		TurnAccel = serialized->get_float(TurnAccel_type_id, 600.000000f);
+		TurnDecel = serialized->get_float(TurnDecel_type_id, 9000.000000f);
+		TurnAccelAccel = serialized->get_float(TurnAccelAccel_type_id, 6000.000000f);
+		TurnAccelMin = serialized->get_float(TurnAccelMin_type_id, 30.000000f);
+		CardinalBias = serialized->get_float(CardinalBias_type_id, 0.160000f);
+		BaseFOV = serialized->get_float(BaseFOV_type_id, 84.000000f);
 		RelativeToFOV = serialized->get_bool(RelativeToFOV_type_id, false);
 		AllowMenuMoveStickInput = serialized->get_bool(AllowMenuMoveStickInput_type_id, false);
-		MouseHorizontalSensitivityScale = serialized->get_float(MouseHorizontalSensitivityScale_type_id, 1.000000);
-		MouseVerticalSensitivityScale = serialized->get_float(MouseVerticalSensitivityScale_type_id, 1.000000);
+		MouseHorizontalSensitivityScale = serialized->get_float(MouseHorizontalSensitivityScale_type_id, 1.000000f);
+		MouseVerticalSensitivityScale = serialized->get_float(MouseVerticalSensitivityScale_type_id, 1.000000f);
 		ForceLookSettings = serialized->unwrap_into<rivet::ddl::generated::CameraForceLookSettings>(ForceLookSettings_type_id); 
 	}
 

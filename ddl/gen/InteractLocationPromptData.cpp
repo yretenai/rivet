@@ -14,7 +14,7 @@ namespace rivet::ddl::generated {
 		POISubtype = serialized->get_enum<rivet::ddl::generated::x275d9b04>(POISubtype_type_id, rivet::ddl::generated::x275d9b04_values, rivet::ddl::generated::x275d9b04::Pickup);
 		POIPreviewSubtype = serialized->get_enum<rivet::ddl::generated::x8d1d7e8a>(POIPreviewSubtype_type_id, rivet::ddl::generated::x8d1d7e8a_values, rivet::ddl::generated::x8d1d7e8a::Preview);
 		POILOSCheck = serialized->get_bool(POILOSCheck_type_id, false);
-		PreviewRange = serialized->get_float(PreviewRange_type_id, 4.000000);
+		PreviewRange = serialized->get_float(PreviewRange_type_id, 4.000000f);
 		PromptFacingMode = serialized->get_enum<rivet::ddl::generated::x11d5b447>(PromptFacingMode_type_id, rivet::ddl::generated::x11d5b447_values, rivet::ddl::generated::x11d5b447::Camera_facing);
 		FixedPromptForward = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(FixedPromptForward_type_id);
 		POIOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(POIOffset_type_id);

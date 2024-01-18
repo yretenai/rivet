@@ -10,7 +10,7 @@ namespace rivet::ddl::generated {
 		EventId = serialized->get_string(EventId_type_id, {});
 		SegmentId = serialized->get_string(SegmentId_type_id, {});
 		Difficulty = serialized->get_string(Difficulty_type_id, {});
-		Duration = serialized->get_float(Duration_type_id, 0.000000); 
+		Duration = serialized->get_float(Duration_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

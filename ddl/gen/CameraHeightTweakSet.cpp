@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	CameraHeightTweakSet::CameraHeightTweakSet([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): CameraHeightTweak(serialized) {
-		Height = serialized->get_float(Height_type_id, 2.250000);
-		BlendFieldCompletePercent = serialized->get_float(BlendFieldCompletePercent_type_id, 0.000000);
+		Height = serialized->get_float(Height_type_id, 2.250000f);
+		BlendFieldCompletePercent = serialized->get_float(BlendFieldCompletePercent_type_id, 0.000000f);
 		BiDirectionalField = serialized->get_bool(BiDirectionalField_type_id, false); 
 	}
 

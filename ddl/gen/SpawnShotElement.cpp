@@ -11,7 +11,7 @@ namespace rivet::ddl::generated {
 		ShotConfig = serialized->get_string(ShotConfig_type_id, {});
 		EmitterConfig = serialized->get_string(EmitterConfig_type_id, {});
 		TargetingConfig = serialized->get_string(TargetingConfig_type_id, {});
-		MaxShotsPerSecond = serialized->get_float(MaxShotsPerSecond_type_id, 10.000000); 
+		MaxShotsPerSecond = serialized->get_float(MaxShotsPerSecond_type_id, 10.000000f); 
 	}
 
 	[[nodiscard]] auto

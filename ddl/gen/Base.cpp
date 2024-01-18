@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	Base::Base([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Pasternak = serialized->get_float(Pasternak_type_id, 0.000000); 
+		Pasternak = serialized->get_float(Pasternak_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

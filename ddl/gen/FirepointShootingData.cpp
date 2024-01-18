@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	FirepointShootingData::FirepointShootingData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MinRangedAttacksToReposition = serialized->get_int32(MinRangedAttacksToReposition_type_id, 3);
-		MaxRangedAttacksToReposition = serialized->get_int32(MaxRangedAttacksToReposition_type_id, 3);
-		MinRangedAttacksToReload = serialized->get_int32(MinRangedAttacksToReload_type_id, 3);
-		MaxRangedAttacksToReload = serialized->get_int32(MaxRangedAttacksToReload_type_id, 3); 
+		MinRangedAttacksToReposition = serialized->get_int32(MinRangedAttacksToReposition_type_id, 3u);
+		MaxRangedAttacksToReposition = serialized->get_int32(MaxRangedAttacksToReposition_type_id, 3u);
+		MinRangedAttacksToReload = serialized->get_int32(MinRangedAttacksToReload_type_id, 3u);
+		MaxRangedAttacksToReload = serialized->get_int32(MaxRangedAttacksToReload_type_id, 3u); 
 	}
 
 	[[nodiscard]] auto

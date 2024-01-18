@@ -10,7 +10,7 @@ namespace rivet::ddl::generated {
 		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::UI);
 		UseTempText = serialized->get_bool(UseTempText_type_id, false);
 		LocTag = serialized->get_string(LocTag_type_id, "INVALID");
-		Duration = serialized->get_float(Duration_type_id, 6.000000);
+		Duration = serialized->get_float(Duration_type_id, 6.000000f);
 		TextType = serialized->get_enum<rivet::ddl::generated::xdd0cb528>(TextType_type_id, rivet::ddl::generated::xdd0cb528_values, rivet::ddl::generated::xdd0cb528::Location); 
 	}
 

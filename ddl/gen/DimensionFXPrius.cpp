@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	DimensionFXPrius::DimensionFXPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		LinkedDimensionPortal = serialized->get_uint64(LinkedDimensionPortal_type_id, 0);
+		LinkedDimensionPortal = serialized->get_uint64(LinkedDimensionPortal_type_id, 0ull);
 		MaterialConstantName = serialized->get_string(MaterialConstantName_type_id, {});
-		MaterialConstantBlendTime = serialized->get_float(MaterialConstantBlendTime_type_id, 1.000000); 
+		MaterialConstantBlendTime = serialized->get_float(MaterialConstantBlendTime_type_id, 1.000000f); 
 	}
 
 	[[nodiscard]] auto

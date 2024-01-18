@@ -12,9 +12,9 @@ namespace rivet::ddl::generated {
 		StartHidden = serialized->get_bool(StartHidden_type_id, false);
 		SelfEventsOnly = serialized->get_bool(SelfEventsOnly_type_id, true);
 		HideEvent = serialized->unwrap_into<rivet::ddl::generated::EventBase>(HideEvent_type_id);
-		MaxHideCount = serialized->get_int32(MaxHideCount_type_id, 1);
+		MaxHideCount = serialized->get_int32(MaxHideCount_type_id, 1u);
 		UnhideEvent = serialized->unwrap_into<rivet::ddl::generated::EventBase>(UnhideEvent_type_id);
-		MaxUnhideCount = serialized->get_int32(MaxUnhideCount_type_id, 1); 
+		MaxUnhideCount = serialized->get_int32(MaxUnhideCount_type_id, 1u); 
 	}
 
 	[[nodiscard]] auto

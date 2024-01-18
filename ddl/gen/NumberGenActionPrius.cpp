@@ -9,9 +9,9 @@ namespace rivet::ddl::generated {
 	NumberGenActionPrius::NumberGenActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Math);
 		Type = serialized->get_enum<rivet::ddl::generated::x3c1de250>(Type_type_id, rivet::ddl::generated::x3c1de250_values, rivet::ddl::generated::x3c1de250::Sine);
-		Min = serialized->get_float(Min_type_id, 0.000000);
-		Max = serialized->get_float(Max_type_id, 1.000000);
-		Speed = serialized->get_float(Speed_type_id, 1.000000); 
+		Min = serialized->get_float(Min_type_id, 0.000000f);
+		Max = serialized->get_float(Max_type_id, 1.000000f);
+		Speed = serialized->get_float(Speed_type_id, 1.000000f); 
 	}
 
 	[[nodiscard]] auto

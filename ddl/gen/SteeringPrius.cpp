@@ -9,9 +9,9 @@
 
 namespace rivet::ddl::generated {
 	SteeringPrius::SteeringPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActorHeight = serialized->get_float(ActorHeight_type_id, 1.500000);
-		NavCollRadiusHard = serialized->get_float(NavCollRadiusHard_type_id, 0.350000);
-		NavCollRadiusSoft = serialized->get_float(NavCollRadiusSoft_type_id, 1.000000);
+		ActorHeight = serialized->get_float(ActorHeight_type_id, 1.500000f);
+		NavCollRadiusHard = serialized->get_float(NavCollRadiusHard_type_id, 0.350000f);
+		NavCollRadiusSoft = serialized->get_float(NavCollRadiusSoft_type_id, 1.000000f);
 		AlwaysUseAccel = serialized->get_bool(AlwaysUseAccel_type_id, false);
 		UseNavPositionTrackerQueries = serialized->get_bool(UseNavPositionTrackerQueries_type_id, false);
 		PartnerData = serialized->unwrap_into<rivet::ddl::generated::SteeringPartnerCurveConfig>(PartnerData_type_id); 

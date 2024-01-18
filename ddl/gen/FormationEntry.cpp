@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	FormationEntry::FormationEntry([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		StartPoint = serialized->get_uint64(StartPoint_type_id, 0);
-		EntryCurve = serialized->get_uint64(EntryCurve_type_id, 0);
-		AttackPoint = serialized->get_uint64(AttackPoint_type_id, 0);
-		ExitCurve = serialized->get_uint64(ExitCurve_type_id, 0); 
+		StartPoint = serialized->get_uint64(StartPoint_type_id, 0ull);
+		EntryCurve = serialized->get_uint64(EntryCurve_type_id, 0ull);
+		AttackPoint = serialized->get_uint64(AttackPoint_type_id, 0ull);
+		ExitCurve = serialized->get_uint64(ExitCurve_type_id, 0ull); 
 	}
 
 	[[nodiscard]] auto

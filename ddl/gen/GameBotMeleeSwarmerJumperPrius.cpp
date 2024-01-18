@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	GameBotMeleeSwarmerJumperPrius::GameBotMeleeSwarmerJumperPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): GameBotMeleeSwarmerPrius(serialized) {
-		JumpDistMin = serialized->get_float(JumpDistMin_type_id, 6.000000);
-		JumpDistMax = serialized->get_float(JumpDistMax_type_id, 12.000000);
+		JumpDistMin = serialized->get_float(JumpDistMin_type_id, 6.000000f);
+		JumpDistMax = serialized->get_float(JumpDistMax_type_id, 12.000000f);
 		JumpDistVarName = serialized->get_string(JumpDistVarName_type_id, "Distance");
-		JumpDistVarMin = serialized->get_float(JumpDistVarMin_type_id, 0.000000);
-		JumpDistVarMax = serialized->get_float(JumpDistVarMax_type_id, 3.000000);
-		MaxSingleJumpDist = serialized->get_float(MaxSingleJumpDist_type_id, 12.000000); 
+		JumpDistVarMin = serialized->get_float(JumpDistVarMin_type_id, 0.000000f);
+		JumpDistVarMax = serialized->get_float(JumpDistVarMax_type_id, 3.000000f);
+		MaxSingleJumpDist = serialized->get_float(MaxSingleJumpDist_type_id, 12.000000f); 
 	}
 
 	[[nodiscard]] auto

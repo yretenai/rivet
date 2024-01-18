@@ -8,8 +8,8 @@
 namespace rivet::ddl::generated {
 	HitReactSettings::HitReactSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		MirrorVar = serialized->get_string(MirrorVar_type_id, "Grip_Hand");
-		RangeFilterShort = serialized->get_float(RangeFilterShort_type_id, 2.000000);
-		RangeFilterLong = serialized->get_float(RangeFilterLong_type_id, 10.000000); 
+		RangeFilterShort = serialized->get_float(RangeFilterShort_type_id, 2.000000f);
+		RangeFilterLong = serialized->get_float(RangeFilterLong_type_id, 10.000000f); 
 	}
 
 	[[nodiscard]] auto

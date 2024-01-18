@@ -9,15 +9,15 @@
 
 namespace rivet::ddl::generated {
 	SheepSpawnData::SheepSpawnData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ActorSpawnData(serialized) {
-		AssetId = serialized->get_uint64(AssetId_type_id, 0);
-		ShockwaveRingAssetId = serialized->get_uint64(ShockwaveRingAssetId_type_id, 0);
-		SheepStatusMaterialGraphAssetId = serialized->get_uint64(SheepStatusMaterialGraphAssetId_type_id, 0);
+		AssetId = serialized->get_uint64(AssetId_type_id, 0ull);
+		ShockwaveRingAssetId = serialized->get_uint64(ShockwaveRingAssetId_type_id, 0ull);
+		SheepStatusMaterialGraphAssetId = serialized->get_uint64(SheepStatusMaterialGraphAssetId_type_id, 0ull);
 		Position = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Position_type_id);
 		Facing = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Facing_type_id);
 		Up = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Up_type_id);
-		ZoneIndex = serialized->get_int32(ZoneIndex_type_id, 0);
-		DamagerHandle = serialized->get_uint32(DamagerHandle_type_id, 0);
-		SourceHandle = serialized->get_uint32(SourceHandle_type_id, 0); 
+		ZoneIndex = serialized->get_int32(ZoneIndex_type_id, 0u);
+		DamagerHandle = serialized->get_uint32(DamagerHandle_type_id, 0u);
+		SourceHandle = serialized->get_uint32(SourceHandle_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

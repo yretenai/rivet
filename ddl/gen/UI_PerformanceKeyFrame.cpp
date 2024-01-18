@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	UI_PerformanceKeyFrame::UI_PerformanceKeyFrame([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Time = serialized->get_float(Time_type_id, 0.000000);
-		Value = serialized->get_float(Value_type_id, 0.000000);
+		Time = serialized->get_float(Time_type_id, 0.000000f);
+		Value = serialized->get_float(Value_type_id, 0.000000f);
 		ValueDisabled = serialized->get_bool(ValueDisabled_type_id, false);
-		ValueReadOnly = serialized->get_float(ValueReadOnly_type_id, 0.000000); 
+		ValueReadOnly = serialized->get_float(ValueReadOnly_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

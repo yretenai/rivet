@@ -11,8 +11,8 @@ namespace rivet::ddl::generated {
 		level_id = serialized->get_string(level_id_type_id, {});
 		end_reason = serialized->get_string(end_reason_type_id, {});
 		mode = serialized->get_string(mode_type_id, {});
-		player_count = serialized->get_int32(player_count_type_id, 0);
-		player_count_local = serialized->get_int32(player_count_local_type_id, 0);
+		player_count = serialized->get_int32(player_count_type_id, 0u);
+		player_count_local = serialized->get_int32(player_count_local_type_id, 0u);
 		is_online = serialized->get_bool(is_online_type_id, false);
 		duration_secs = serialized->get_int32(duration_secs_type_id, -1);
 		duration_gameplay_secs = serialized->get_int32(duration_gameplay_secs_type_id, -1); 

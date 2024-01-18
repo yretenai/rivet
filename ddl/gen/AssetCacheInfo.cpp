@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	AssetCacheInfo::AssetCacheInfo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Total = serialized->get_uint32(Total_type_id, 0);
-		Cost = serialized->get_int64(Cost_type_id, 0);
+		Total = serialized->get_uint32(Total_type_id, 0u);
+		Cost = serialized->get_int64(Cost_type_id, 0u);
 		Items = serialized->unwrap_into_many<rivet::ddl::generated::AssetCacheEntry>(Items_type_id); 
 	}
 

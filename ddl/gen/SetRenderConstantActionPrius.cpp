@@ -10,10 +10,10 @@ namespace rivet::ddl::generated {
 		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Rendering);
 		ConstantName = serialized->get_string(ConstantName_type_id, {});
 		MaterialMappingName = serialized->get_string(MaterialMappingName_type_id, {});
-		XValue = serialized->get_float(XValue_type_id, 0.000000);
-		YValue = serialized->get_float(YValue_type_id, 0.000000);
-		ZValue = serialized->get_float(ZValue_type_id, 0.000000);
-		WValue = serialized->get_float(WValue_type_id, 0.000000); 
+		XValue = serialized->get_float(XValue_type_id, 0.000000f);
+		YValue = serialized->get_float(YValue_type_id, 0.000000f);
+		ZValue = serialized->get_float(ZValue_type_id, 0.000000f);
+		WValue = serialized->get_float(WValue_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

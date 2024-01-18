@@ -12,12 +12,12 @@ namespace rivet::ddl::generated {
 		Index = serialized->get_enum<rivet::ddl::generated::xef932fba>(Index_type_id, rivet::ddl::generated::xef932fba_values, rivet::ddl::generated::xef932fba::None);
 		HitAnim = serialized->get_string(HitAnim_type_id, {});
 		DamageType = serialized->get_enum<rivet::ddl::generated::DamageTypes>(DamageType_type_id, rivet::ddl::generated::DamageTypes_values, rivet::ddl::generated::DamageTypes::Melee);
-		Damage = serialized->get_float(Damage_type_id, 1.000000);
-		AOE = serialized->get_float(AOE_type_id, 0.400000);
+		Damage = serialized->get_float(Damage_type_id, 1.000000f);
+		AOE = serialized->get_float(AOE_type_id, 0.400000f);
 		Knockback = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(Knockback_type_id, rivet::ddl::generated::KnockbackLevels_values, rivet::ddl::generated::KnockbackLevels::None);
-		KnockbackAmount = serialized->get_float(KnockbackAmount_type_id, 0.000000);
-		OverrideKnockbackDist = serialized->get_float(OverrideKnockbackDist_type_id, -1.000000);
-		DamageBubbleRadiusOverride = serialized->get_float(DamageBubbleRadiusOverride_type_id, -1.000000);
+		KnockbackAmount = serialized->get_float(KnockbackAmount_type_id, 0.000000f);
+		OverrideKnockbackDist = serialized->get_float(OverrideKnockbackDist_type_id, -1.000000f);
+		DamageBubbleRadiusOverride = serialized->get_float(DamageBubbleRadiusOverride_type_id, -1.000000f);
 		IsDamageBubbleFullDuration = serialized->get_bool(IsDamageBubbleFullDuration_type_id, false);
 		OverrideData = serialized->unwrap_into<rivet::ddl::generated::DamageKnockbackOverrideData>(OverrideData_type_id); 
 	}

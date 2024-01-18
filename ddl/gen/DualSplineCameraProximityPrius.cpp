@@ -9,9 +9,9 @@
 
 namespace rivet::ddl::generated {
 	DualSplineCameraProximityPrius::DualSplineCameraProximityPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): CameraPrius(serialized) {
-		MotionSpline = serialized->get_uint64(MotionSpline_type_id, 0);
-		TargetSpline = serialized->get_uint64(TargetSpline_type_id, 0);
-		TargetActor = serialized->get_uint64(TargetActor_type_id, 0);
+		MotionSpline = serialized->get_uint64(MotionSpline_type_id, 0ull);
+		TargetSpline = serialized->get_uint64(TargetSpline_type_id, 0ull);
+		TargetActor = serialized->get_uint64(TargetActor_type_id, 0ull);
 		MotionMode = serialized->get_enum<rivet::ddl::generated::xde534179>(MotionMode_type_id, rivet::ddl::generated::xde534179_values, rivet::ddl::generated::xde534179::Match_Target_T);
 		RotationInput = serialized->unwrap_into<rivet::ddl::generated::CameraRotationInputData>(RotationInput_type_id); 
 	}

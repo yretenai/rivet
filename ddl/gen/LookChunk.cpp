@@ -18,8 +18,8 @@ namespace rivet::ddl::generated {
 		ScaleTestJointName = serialized->get_string(ScaleTestJointName_type_id, {});
 		SetOverrideRenderConstant = serialized->get_bool(SetOverrideRenderConstant_type_id, false);
 		OverrideConstantName = serialized->get_string(OverrideConstantName_type_id, "");
-		OverrideConstantTarget = serialized->get_float(OverrideConstantTarget_type_id, 1.000000);
-		OverrideConstantTimeToTarget = serialized->get_float(OverrideConstantTimeToTarget_type_id, 0.500000); 
+		OverrideConstantTarget = serialized->get_float(OverrideConstantTarget_type_id, 1.000000f);
+		OverrideConstantTimeToTarget = serialized->get_float(OverrideConstantTimeToTarget_type_id, 0.500000f); 
 	}
 
 	[[nodiscard]] auto

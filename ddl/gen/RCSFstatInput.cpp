@@ -9,7 +9,7 @@ namespace rivet::ddl::generated {
 	RCSFstatInput::RCSFstatInput([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Views = serialized->get_strings(Views_type_id);
 		IncludeValidationData = serialized->get_bool(IncludeValidationData_type_id, false);
-		Flags = serialized->get_bitset<rivet::ddl::generated::x8f003545>(Flags_type_id, rivet::ddl::generated::x8f003545_values, 512); 
+		Flags = serialized->get_bitset<rivet::ddl::generated::x8f003545>(Flags_type_id, rivet::ddl::generated::x8f003545_values, 512u); 
 	}
 
 	[[nodiscard]] auto

@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	CinematicAttachActionEngineItem::CinematicAttachActionEngineItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Parent = serialized->get_uint64(Parent_type_id, 0); 
+		Parent = serialized->get_uint64(Parent_type_id, 0ull); 
 	}
 
 	[[nodiscard]] auto

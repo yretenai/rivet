@@ -10,7 +10,7 @@
 namespace rivet::ddl::generated {
 	UDSBulkObjectLink::UDSBulkObjectLink([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		object = serialized->unwrap_into<rivet::ddl::generated::UDSBulkObjectId>(object_type_id);
-		position = serialized->get_int32(position_type_id, 0); 
+		position = serialized->get_int32(position_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

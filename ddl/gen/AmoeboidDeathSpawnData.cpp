@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	AmoeboidDeathSpawnData::AmoeboidDeathSpawnData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActorTemplate = serialized->get_uint64(ActorTemplate_type_id, 0);
+		ActorTemplate = serialized->get_uint64(ActorTemplate_type_id, 0ull);
 		Actor = serialized->get_string(Actor_type_id, {});
-		NumToSpawn = serialized->get_uint8(NumToSpawn_type_id, 2); 
+		NumToSpawn = serialized->get_uint8(NumToSpawn_type_id, 2u); 
 	}
 
 	[[nodiscard]] auto

@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	OffsetSplineData::OffsetSplineData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		OffsetSpline = serialized->get_uint64(OffsetSpline_type_id, 0);
-		OffsetAccel = serialized->get_float(OffsetAccel_type_id, 10.000000);
-		OffsetDecel = serialized->get_float(OffsetDecel_type_id, 5.000000);
-		OffsetSpeed = serialized->get_float(OffsetSpeed_type_id, 5.000000); 
+		OffsetSpline = serialized->get_uint64(OffsetSpline_type_id, 0ull);
+		OffsetAccel = serialized->get_float(OffsetAccel_type_id, 10.000000f);
+		OffsetDecel = serialized->get_float(OffsetDecel_type_id, 5.000000f);
+		OffsetSpeed = serialized->get_float(OffsetSpeed_type_id, 5.000000f); 
 	}
 
 	[[nodiscard]] auto

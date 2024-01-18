@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	WaitForPlatformStopIntroPrius::WaitForPlatformStopIntroPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Platform = serialized->get_uint64(Platform_type_id, 0);
+		Platform = serialized->get_uint64(Platform_type_id, 0ull);
 		OptionalStopDest = serialized->get_int32(OptionalStopDest_type_id, -1); 
 	}
 

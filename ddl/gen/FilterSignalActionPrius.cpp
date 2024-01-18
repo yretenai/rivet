@@ -9,7 +9,7 @@ namespace rivet::ddl::generated {
 	FilterSignalActionPrius::FilterSignalActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Logic);
 		FilterBehavior = serialized->get_enum<rivet::ddl::generated::xb1e939f4>(FilterBehavior_type_id, rivet::ddl::generated::xb1e939f4_values, rivet::ddl::generated::xb1e939f4::Filter_by_Time);
-		FilterTime = serialized->get_float(FilterTime_type_id, 1.000000); 
+		FilterTime = serialized->get_float(FilterTime_type_id, 1.000000f); 
 	}
 
 	[[nodiscard]] auto

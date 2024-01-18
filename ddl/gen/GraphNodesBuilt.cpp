@@ -12,7 +12,7 @@ namespace rivet::ddl::generated {
 		GraphName = serialized->get_string(GraphName_type_id, {});
 		Nodes = serialized->unwrap_into_many<rivet::ddl::generated::BuiltNodeInfo>(Nodes_type_id);
 		SortedNodes = serialized->get_uint64s(SortedNodes_type_id);
-		MaxDepth = serialized->get_uint32(MaxDepth_type_id, 0); 
+		MaxDepth = serialized->get_uint32(MaxDepth_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

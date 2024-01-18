@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	BossBotUnderwaterBaseJuicePrius::BossBotUnderwaterBaseJuicePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BotPrius(serialized) {
-		MaterialEmissiveTimeToFull = serialized->get_float(MaterialEmissiveTimeToFull_type_id, 0.500000); 
+		MaterialEmissiveTimeToFull = serialized->get_float(MaterialEmissiveTimeToFull_type_id, 0.500000f); 
 	}
 
 	[[nodiscard]] auto

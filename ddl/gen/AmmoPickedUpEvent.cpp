@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	AmmoPickedUpEvent::AmmoPickedUpEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		PickupRate = serialized->get_float(PickupRate_type_id, 0.000000);
-		ItemConfig = serialized->get_uint64(ItemConfig_type_id, 0); 
+		PickupRate = serialized->get_float(PickupRate_type_id, 0.000000f);
+		ItemConfig = serialized->get_uint64(ItemConfig_type_id, 0ull); 
 	}
 
 	[[nodiscard]] auto

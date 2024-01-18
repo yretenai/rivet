@@ -28,7 +28,7 @@ namespace rivet::ddl::generated {
 		AudioMaterial = serialized->get_string(AudioMaterial_type_id, {});
 		BuiltIn = serialized->get_enum<rivet::ddl::generated::x92dd42a2>(BuiltIn_type_id, rivet::ddl::generated::x92dd42a2_values, rivet::ddl::generated::x92dd42a2::None);
 		SSReflection = serialized->get_enum<rivet::ddl::generated::x3afd25fe>(SSReflection_type_id, rivet::ddl::generated::x3afd25fe_values, rivet::ddl::generated::x3afd25fe::Disable);
-		LodDist = serialized->get_float(LodDist_type_id, 0.000000);
+		LodDist = serialized->get_float(LodDist_type_id, 0.000000f);
 		DoubleSided = serialized->get_bool(DoubleSided_type_id, false);
 		SkipShadowCast = serialized->get_bool(SkipShadowCast_type_id, false);
 		ShadowCastOnly = serialized->get_bool(ShadowCastOnly_type_id, false);
@@ -41,7 +41,7 @@ namespace rivet::ddl::generated {
 		LensFlareOcclusion = serialized->get_bool(LensFlareOcclusion_type_id, true);
 		SortTriangles = serialized->get_bool(SortTriangles_type_id, false);
 		SkipImpostorPojection = serialized->get_bool(SkipImpostorPojection_type_id, false);
-		VoxelizationOrderBias = serialized->get_int8(VoxelizationOrderBias_type_id, 0);
+		VoxelizationOrderBias = serialized->get_int8(VoxelizationOrderBias_type_id, 0u);
 		WorldMapColor = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(WorldMapColor_type_id);
 		ModelSlotExclusion = serialized->get_strings(ModelSlotExclusion_type_id);
 		PreviewModel = serialized->unwrap_into<rivet::ddl::generated::PreviewModelContainer>(PreviewModel_type_id);

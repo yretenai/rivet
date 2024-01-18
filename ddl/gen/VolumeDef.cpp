@@ -36,13 +36,13 @@ namespace rivet::ddl::generated {
 		VaultMetaData = serialized->unwrap_into<rivet::ddl::generated::VaultMetaData>(VaultMetaData_type_id);
 		IconPath = serialized->get_string(IconPath_type_id, "");
 		VolumeType = serialized->get_enum<rivet::ddl::generated::VolumeNodeShape>(VolumeType_type_id, rivet::ddl::generated::VolumeNodeShape_values, rivet::ddl::generated::VolumeNodeShape::Cuboid);
-		CapsuleEndcapRadius = serialized->get_float(CapsuleEndcapRadius_type_id, 0.500000);
+		CapsuleEndcapRadius = serialized->get_float(CapsuleEndcapRadius_type_id, 0.500000f);
 		Usage = serialized->unwrap_into<rivet::ddl::generated::VolumeNodeUsage>(Usage_type_id);
 		PostFxActive = serialized->get_bool(PostFxActive_type_id, true);
 		PostEffectAtmosphere = serialized->get_string(PostEffectAtmosphere_type_id, {});
-		PostDistanceFactor = serialized->get_float(PostDistanceFactor_type_id, 1.000000);
-		PostPriority = serialized->get_int32(PostPriority_type_id, 1);
-		PostInfluence = serialized->get_float(PostInfluence_type_id, 1.000000);
+		PostDistanceFactor = serialized->get_float(PostDistanceFactor_type_id, 1.000000f);
+		PostPriority = serialized->get_int32(PostPriority_type_id, 1u);
+		PostInfluence = serialized->get_float(PostInfluence_type_id, 1.000000f);
 		SkipLightCapture = serialized->get_bool(SkipLightCapture_type_id, false);
 		OnlyLightCapture = serialized->get_bool(OnlyLightCapture_type_id, false);
 		SkySettings = serialized->unwrap_into<rivet::ddl::generated::SkySettingsDef>(SkySettings_type_id);

@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	StatusEmitterDamagePrius::StatusEmitterDamagePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): StatusEmitterBasePrius(serialized) {
-		ProcPercent = serialized->get_float(ProcPercent_type_id, 100.000000); 
+		ProcPercent = serialized->get_float(ProcPercent_type_id, 100.000000f); 
 	}
 
 	[[nodiscard]] auto

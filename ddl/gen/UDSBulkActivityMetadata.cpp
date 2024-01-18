@@ -17,7 +17,7 @@ namespace rivet::ddl::generated {
 		isRequiredForCompletion = serialized->get_bool(isRequiredForCompletion_type_id, false);
 		hidden = serialized->get_bool(hidden_type_id, false);
 		isOnlineMultiplay = serialized->get_bool(isOnlineMultiplay_type_id, false);
-		defaultPlaytimeEstimate = serialized->get_uint32(defaultPlaytimeEstimate_type_id, 0);
+		defaultPlaytimeEstimate = serialized->get_uint32(defaultPlaytimeEstimate_type_id, 0u);
 		rewards = serialized->unwrap_into_many<rivet::ddl::generated::UDSWebApiReward>(rewards_type_id); 
 	}
 

@@ -15,7 +15,7 @@ namespace rivet::ddl::generated {
 		RegionContainer = serialized->get_string(RegionContainer_type_id, {});
 		RegionUnit = serialized->get_string(RegionUnit_type_id, {});
 		IsOpenWorld = serialized->get_bool(IsOpenWorld_type_id, false);
-		PlaythroughTime = serialized->get_float(PlaythroughTime_type_id, 0.000000);
+		PlaythroughTime = serialized->get_float(PlaythroughTime_type_id, 0.000000f);
 		PlaythroughSegmentId = serialized->get_string(PlaythroughSegmentId_type_id, {});
 		LastGoldenPathMission = serialized->get_string(LastGoldenPathMission_type_id, {});
 		ProjSpecificData = serialized->unwrap_into<rivet::ddl::generated::DevstatsProjSpecificBase>(ProjSpecificData_type_id); 

@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	DamageModifierVerticalLimitPrius::DamageModifierVerticalLimitPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): DamageModifierOutgoingPrius(serialized) {
-		OffsetMin = serialized->get_float(OffsetMin_type_id, 0.000000);
-		OffsetMax = serialized->get_float(OffsetMax_type_id, 1.000000); 
+		OffsetMin = serialized->get_float(OffsetMin_type_id, 0.000000f);
+		OffsetMax = serialized->get_float(OffsetMax_type_id, 1.000000f); 
 	}
 
 	[[nodiscard]] auto

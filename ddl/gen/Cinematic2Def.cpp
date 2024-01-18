@@ -48,8 +48,8 @@ namespace rivet::ddl::generated {
 		Skippable = serialized->get_bool(Skippable_type_id, false);
 		ResetOnFinished = serialized->get_bool(ResetOnFinished_type_id, true);
 		MayaPlayBackCompensate = serialized->get_bool(MayaPlayBackCompensate_type_id, false);
-		OnEnterCameraTransitionDuration = serialized->get_float(OnEnterCameraTransitionDuration_type_id, 0.000000);
-		OnExitCameraTransitionDuration = serialized->get_float(OnExitCameraTransitionDuration_type_id, 0.000000);
+		OnEnterCameraTransitionDuration = serialized->get_float(OnEnterCameraTransitionDuration_type_id, 0.000000f);
+		OnExitCameraTransitionDuration = serialized->get_float(OnExitCameraTransitionDuration_type_id, 0.000000f);
 		AspectBlur = serialized->unwrap_into<rivet::ddl::generated::Cinematic2AspectBlurDef>(AspectBlur_type_id);
 		Tags = serialized->unwrap_into<rivet::ddl::generated::Cinematic2TagsDef>(Tags_type_id);
 		RunGameOptions = serialized->unwrap_into<rivet::ddl::generated::Cinematic2RunGameOptions>(RunGameOptions_type_id);

@@ -8,8 +8,8 @@
 namespace rivet::ddl::generated {
 	DoorScriptActionPrius::DoorScriptActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Interact);
-		OpenTriggerMax = serialized->get_uint32(OpenTriggerMax_type_id, 0);
-		CloseTriggerMax = serialized->get_uint32(CloseTriggerMax_type_id, 0);
+		OpenTriggerMax = serialized->get_uint32(OpenTriggerMax_type_id, 0u);
+		CloseTriggerMax = serialized->get_uint32(CloseTriggerMax_type_id, 0u);
 		OutputRequiresInput = serialized->get_bool(OutputRequiresInput_type_id, false); 
 	}
 

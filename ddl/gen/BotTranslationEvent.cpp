@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	BotTranslationEvent::BotTranslationEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Speed = serialized->get_float(Speed_type_id, 0.000000);
+		Speed = serialized->get_float(Speed_type_id, 0.000000f);
 		DestPos = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(DestPos_type_id); 
 	}
 

@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	VehiclePushablePrius::VehiclePushablePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): VehicleBasePrius(serialized) {
-		Friction = serialized->get_float(Friction_type_id, 0.200000);
-		TorqueDecay = serialized->get_float(TorqueDecay_type_id, 0.900000);
-		Mass = serialized->get_float(Mass_type_id, 20.000000);
-		MaxAutoAccel = serialized->get_float(MaxAutoAccel_type_id, 0.000000); 
+		Friction = serialized->get_float(Friction_type_id, 0.200000f);
+		TorqueDecay = serialized->get_float(TorqueDecay_type_id, 0.900000f);
+		Mass = serialized->get_float(Mass_type_id, 20.000000f);
+		MaxAutoAccel = serialized->get_float(MaxAutoAccel_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

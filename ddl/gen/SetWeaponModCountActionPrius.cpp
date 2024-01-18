@@ -10,7 +10,7 @@ namespace rivet::ddl::generated {
 		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Weapon);
 		WeaponConfig = serialized->get_string(WeaponConfig_type_id, {});
 		ModTileIndex = serialized->get_enum<rivet::ddl::generated::x1b1e7614>(ModTileIndex_type_id, rivet::ddl::generated::x1b1e7614_values, rivet::ddl::generated::x1b1e7614::Empty);
-		ModCount = serialized->get_uint32(ModCount_type_id, 0); 
+		ModCount = serialized->get_uint32(ModCount_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

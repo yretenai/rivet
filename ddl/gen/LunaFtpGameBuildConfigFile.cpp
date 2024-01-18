@@ -10,9 +10,9 @@ namespace rivet::ddl::generated {
 		BuildName = serialized->get_string(BuildName_type_id, "");
 		ProjectId = serialized->get_string(ProjectId_type_id, "");
 		Branch = serialized->get_string(Branch_type_id, "");
-		VersionMajor = serialized->get_int32(VersionMajor_type_id, 0);
-		VersionMinor = serialized->get_int32(VersionMinor_type_id, 0);
-		VersionPatch = serialized->get_int32(VersionPatch_type_id, 0);
+		VersionMajor = serialized->get_int32(VersionMajor_type_id, 0u);
+		VersionMinor = serialized->get_int32(VersionMinor_type_id, 0u);
+		VersionPatch = serialized->get_int32(VersionPatch_type_id, 0u);
 		NameTag = serialized->get_string(NameTag_type_id, "");
 		CreatedBy = serialized->get_string(CreatedBy_type_id, "");
 		CreationDate = serialized->get_string(CreationDate_type_id, "");
@@ -21,9 +21,9 @@ namespace rivet::ddl::generated {
 		IsFastBuild = serialized->get_bool(IsFastBuild_type_id, false);
 		HasDebugInfo = serialized->get_bool(HasDebugInfo_type_id, false);
 		IsInSymStore = serialized->get_bool(IsInSymStore_type_id, false);
-		Platforms = serialized->get_bitset<rivet::ddl::generated::x5753f3c8>(Platforms_type_id, rivet::ddl::generated::x5753f3c8_values, 7);
+		Platforms = serialized->get_bitset<rivet::ddl::generated::x5753f3c8>(Platforms_type_id, rivet::ddl::generated::x5753f3c8_values, 7u);
 		PlatformBuildDates = serialized->get_strings(PlatformBuildDates_type_id);
-		FailedPlatforms = serialized->get_bitset<rivet::ddl::generated::x5753f3c8>(FailedPlatforms_type_id, rivet::ddl::generated::x5753f3c8_values, 7);
+		FailedPlatforms = serialized->get_bitset<rivet::ddl::generated::x5753f3c8>(FailedPlatforms_type_id, rivet::ddl::generated::x5753f3c8_values, 7u);
 		CompatibleUpdaterVersion = serialized->get_string(CompatibleUpdaterVersion_type_id, "");
 		CompatibleHavokVersion = serialized->get_string(CompatibleHavokVersion_type_id, "");
 		CompatibleWinExtVersion = serialized->get_string(CompatibleWinExtVersion_type_id, "");

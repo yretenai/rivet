@@ -14,9 +14,9 @@ namespace rivet::ddl::generated {
 		RemoveFromAllDomains = serialized->get_bool(RemoveFromAllDomains_type_id, false);
 		WantsContactEvent = serialized->get_bool(WantsContactEvent_type_id, false);
 		MatchJointsOnSpawn = serialized->get_bool(MatchJointsOnSpawn_type_id, false);
-		ClothTeleportDistance = serialized->get_float(ClothTeleportDistance_type_id, 16.000000);
-		ClothSettleIterations = serialized->get_uint8(ClothSettleIterations_type_id, 8);
-		ClothSettlingFrameCount = serialized->get_uint8(ClothSettlingFrameCount_type_id, 1);
+		ClothTeleportDistance = serialized->get_float(ClothTeleportDistance_type_id, 16.000000f);
+		ClothSettleIterations = serialized->get_uint8(ClothSettleIterations_type_id, 8u);
+		ClothSettlingFrameCount = serialized->get_uint8(ClothSettlingFrameCount_type_id, 1u);
 		ClothSettleOnSpawn = serialized->get_bool(ClothSettleOnSpawn_type_id, false);
 		HandleStateActionEvents = serialized->get_bool(HandleStateActionEvents_type_id, false);
 		CustomProperties = serialized->unwrap_into<rivet::ddl::generated::PhysicsCustomizationProperties>(CustomProperties_type_id); 

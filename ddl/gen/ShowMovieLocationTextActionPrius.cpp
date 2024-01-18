@@ -10,8 +10,8 @@ namespace rivet::ddl::generated {
 		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::UI);
 		LocTag = serialized->get_string(LocTag_type_id, "INVALID");
 		SecondLocTag = serialized->get_string(SecondLocTag_type_id, "INVALID");
-		Delay = serialized->get_float(Delay_type_id, -1.000000);
-		Duration = serialized->get_float(Duration_type_id, 4.000000); 
+		Delay = serialized->get_float(Delay_type_id, -1.000000f);
+		Duration = serialized->get_float(Duration_type_id, 4.000000f); 
 	}
 
 	[[nodiscard]] auto

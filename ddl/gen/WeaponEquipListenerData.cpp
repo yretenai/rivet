@@ -10,7 +10,7 @@
 namespace rivet::ddl::generated {
 	WeaponEquipListenerData::WeaponEquipListenerData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Animset = serialized->get_string(Animset_type_id, {});
-		StartUnarmedChance = serialized->get_float(StartUnarmedChance_type_id, 0.500000);
+		StartUnarmedChance = serialized->get_float(StartUnarmedChance_type_id, 0.500000f);
 		EnableAutoEquip = serialized->get_bool(EnableAutoEquip_type_id, true);
 		EquipLooksPairs = serialized->unwrap_into_many<rivet::ddl::generated::EquipLooksPair>(EquipLooksPairs_type_id); 
 	}

@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	SVOAStarOpenListEntry::SVOAStarOpenListEntry([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		FValue = serialized->get_float(FValue_type_id, 0.000000);
-		Handle = serialized->get_uint64(Handle_type_id, 0); 
+		FValue = serialized->get_float(FValue_type_id, 0.000000f);
+		Handle = serialized->get_uint64(Handle_type_id, 0ull); 
 	}
 
 	[[nodiscard]] auto

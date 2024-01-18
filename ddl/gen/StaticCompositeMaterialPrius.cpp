@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	StaticCompositeMaterialPrius::StaticCompositeMaterialPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		NewMaterial = serialized->get_string(NewMaterial_type_id, {});
-		MaterialAlpha = serialized->get_float(MaterialAlpha_type_id, 0.500000);
+		MaterialAlpha = serialized->get_float(MaterialAlpha_type_id, 0.500000f);
 		IsPreMaterial = serialized->get_bool(IsPreMaterial_type_id, true); 
 	}
 

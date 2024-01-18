@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	FormationStartAttackEvent::FormationStartAttackEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		WarningDuration = serialized->get_float(WarningDuration_type_id, 0.800000);
-		AttackDuration = serialized->get_float(AttackDuration_type_id, 1.000000); 
+		WarningDuration = serialized->get_float(WarningDuration_type_id, 0.800000f);
+		AttackDuration = serialized->get_float(AttackDuration_type_id, 1.000000f); 
 	}
 
 	[[nodiscard]] auto

@@ -9,9 +9,9 @@ namespace rivet::ddl::generated {
 	MaterialMap::MaterialMap([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		MaterialMappingName = serialized->get_string(MaterialMappingName_type_id, {});
 		AssetMaterialName = serialized->get_string(AssetMaterialName_type_id, {});
-		MaterialLodDist = serialized->get_float(MaterialLodDist_type_id, 0.000000);
-		FadeOutDist = serialized->get_float(FadeOutDist_type_id, 0.000000);
-		TextureStreamBias = serialized->get_float(TextureStreamBias_type_id, 0.000000);
+		MaterialLodDist = serialized->get_float(MaterialLodDist_type_id, 0.000000f);
+		FadeOutDist = serialized->get_float(FadeOutDist_type_id, 0.000000f);
+		TextureStreamBias = serialized->get_float(TextureStreamBias_type_id, 0.000000f);
 		DoubleSidedType = serialized->get_enum<rivet::ddl::generated::DoubleSidedType>(DoubleSidedType_type_id, rivet::ddl::generated::DoubleSidedType_values, rivet::ddl::generated::DoubleSidedType::Inherit_From_Material);
 		ImpostorHQType = serialized->get_enum<rivet::ddl::generated::ImpostorHQType>(ImpostorHQType_type_id, rivet::ddl::generated::ImpostorHQType_values, rivet::ddl::generated::ImpostorHQType::Inherit_From_Material);
 		Disable = serialized->get_bool(Disable_type_id, false);

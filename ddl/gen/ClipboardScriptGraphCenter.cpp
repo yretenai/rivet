@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	ClipboardScriptGraphCenter::ClipboardScriptGraphCenter([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		x = serialized->get_float(x_type_id, 0.000000);
-		y = serialized->get_float(y_type_id, 0.000000); 
+		x = serialized->get_float(x_type_id, 0.000000f);
+		y = serialized->get_float(y_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

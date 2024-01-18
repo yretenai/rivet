@@ -14,11 +14,11 @@
 namespace rivet::ddl::generated {
 	TargetingBasePrius::TargetingBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		AutoReselectTargets = serialized->get_bool(AutoReselectTargets_type_id, true);
-		TimeBetweenReselects = serialized->get_float(TimeBetweenReselects_type_id, 0.500000);
-		AggroMax = serialized->get_float(AggroMax_type_id, 100.000000);
-		StartWarningDistance = serialized->get_float(StartWarningDistance_type_id, 40.000000);
-		StopWarningDistance = serialized->get_float(StopWarningDistance_type_id, 50.000000);
-		WarningTime = serialized->get_float(WarningTime_type_id, -1.000000);
+		TimeBetweenReselects = serialized->get_float(TimeBetweenReselects_type_id, 0.500000f);
+		AggroMax = serialized->get_float(AggroMax_type_id, 100.000000f);
+		StartWarningDistance = serialized->get_float(StartWarningDistance_type_id, 40.000000f);
+		StopWarningDistance = serialized->get_float(StopWarningDistance_type_id, 50.000000f);
+		WarningTime = serialized->get_float(WarningTime_type_id, -1.000000f);
 		AttackJobPool = serialized->get_enum<rivet::ddl::generated::xee596018>(AttackJobPool_type_id, rivet::ddl::generated::xee596018_values, rivet::ddl::generated::xee596018::None); 
 	}
 

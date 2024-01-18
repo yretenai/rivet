@@ -10,16 +10,16 @@
 namespace rivet::ddl::generated {
 	SkirmishAwarenessPrius::SkirmishAwarenessPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): AwarenessBasePrius(serialized) {
 		SourceLocatorName = serialized->get_string(SourceLocatorName_type_id, "head");
-		MaxRaycastsPerFrame = serialized->get_uint8(MaxRaycastsPerFrame_type_id, 4);
-		AcquireTimeDistMin = serialized->get_float(AcquireTimeDistMin_type_id, 10.000000);
-		AcquireTimeDistMax = serialized->get_float(AcquireTimeDistMax_type_id, 50.000000);
-		AcquireTimeMax = serialized->get_float(AcquireTimeMax_type_id, 5.000000);
-		NoLOSTransitionTime = serialized->get_float(NoLOSTransitionTime_type_id, 2.000000);
-		ReacquireTimeMax = serialized->get_float(ReacquireTimeMax_type_id, 3.000000);
-		HiddenTransitionTime = serialized->get_float(HiddenTransitionTime_type_id, 30.000000);
-		DropTime = serialized->get_float(DropTime_type_id, 60.000000);
-		TargetDropDist = serialized->get_float(TargetDropDist_type_id, 50.000000);
-		SharedPosUseDelay = serialized->get_float(SharedPosUseDelay_type_id, 3.000000);
+		MaxRaycastsPerFrame = serialized->get_uint8(MaxRaycastsPerFrame_type_id, 4u);
+		AcquireTimeDistMin = serialized->get_float(AcquireTimeDistMin_type_id, 10.000000f);
+		AcquireTimeDistMax = serialized->get_float(AcquireTimeDistMax_type_id, 50.000000f);
+		AcquireTimeMax = serialized->get_float(AcquireTimeMax_type_id, 5.000000f);
+		NoLOSTransitionTime = serialized->get_float(NoLOSTransitionTime_type_id, 2.000000f);
+		ReacquireTimeMax = serialized->get_float(ReacquireTimeMax_type_id, 3.000000f);
+		HiddenTransitionTime = serialized->get_float(HiddenTransitionTime_type_id, 30.000000f);
+		DropTime = serialized->get_float(DropTime_type_id, 60.000000f);
+		TargetDropDist = serialized->get_float(TargetDropDist_type_id, 50.000000f);
+		SharedPosUseDelay = serialized->get_float(SharedPosUseDelay_type_id, 3.000000f);
 		IdleVision = serialized->unwrap_into<rivet::ddl::generated::VisionConfig>(IdleVision_type_id);
 		EngagedVision = serialized->unwrap_into<rivet::ddl::generated::VisionConfig>(EngagedVision_type_id); 
 	}

@@ -13,8 +13,8 @@ namespace rivet::ddl::generated {
 		StartJointName = serialized->get_string(StartJointName_type_id, {});
 		EndJointName = serialized->get_string(EndJointName_type_id, {});
 		GoalLocatorName = serialized->get_string(GoalLocatorName_type_id, {});
-		SolverErrorPercentage = serialized->get_float(SolverErrorPercentage_type_id, 0.500000);
-		MaxSolverIterations = serialized->get_uint8(MaxSolverIterations_type_id, 40);
+		SolverErrorPercentage = serialized->get_float(SolverErrorPercentage_type_id, 0.500000f);
+		MaxSolverIterations = serialized->get_uint8(MaxSolverIterations_type_id, 40u);
 		AnimPosePreConditioning = serialized->get_bool(AnimPosePreConditioning_type_id, true);
 		AnimStickSolverBendConstraint = serialized->get_bool(AnimStickSolverBendConstraint_type_id, true);
 		CurvePreConditioning = serialized->get_bool(CurvePreConditioning_type_id, false);

@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	TiltAndSinkMotionPrius::TiltAndSinkMotionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SinkSpeed = serialized->get_float(SinkSpeed_type_id, 0.500000);
-		SinkDistance = serialized->get_float(SinkDistance_type_id, 0.100000);
-		RiseDistance = serialized->get_float(RiseDistance_type_id, 0.100000);
-		BobSpeed = serialized->get_float(BobSpeed_type_id, 10.000000); 
+		SinkSpeed = serialized->get_float(SinkSpeed_type_id, 0.500000f);
+		SinkDistance = serialized->get_float(SinkDistance_type_id, 0.100000f);
+		RiseDistance = serialized->get_float(RiseDistance_type_id, 0.100000f);
+		BobSpeed = serialized->get_float(BobSpeed_type_id, 10.000000f); 
 	}
 
 	[[nodiscard]] auto

@@ -8,13 +8,13 @@
 namespace rivet::ddl::generated {
 	MannableTurretRocketPrius::MannableTurretRocketPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		FreeYaw = serialized->get_bool(FreeYaw_type_id, false);
-		YawLimitMin = serialized->get_float(YawLimitMin_type_id, 90.000000);
-		YawLimitMax = serialized->get_float(YawLimitMax_type_id, 90.000000);
-		PitchLimitMin = serialized->get_float(PitchLimitMin_type_id, 45.000000);
-		PitchLimitMax = serialized->get_float(PitchLimitMax_type_id, 30.000000);
+		YawLimitMin = serialized->get_float(YawLimitMin_type_id, 90.000000f);
+		YawLimitMax = serialized->get_float(YawLimitMax_type_id, 90.000000f);
+		PitchLimitMin = serialized->get_float(PitchLimitMin_type_id, 45.000000f);
+		PitchLimitMax = serialized->get_float(PitchLimitMax_type_id, 30.000000f);
 		OnlyHeroes = serialized->get_bool(OnlyHeroes_type_id, false);
-		MaxYawSpeed = serialized->get_float(MaxYawSpeed_type_id, 720.000000);
-		MaxPitchSpeed = serialized->get_float(MaxPitchSpeed_type_id, 360.000000); 
+		MaxYawSpeed = serialized->get_float(MaxYawSpeed_type_id, 720.000000f);
+		MaxPitchSpeed = serialized->get_float(MaxPitchSpeed_type_id, 360.000000f); 
 	}
 
 	[[nodiscard]] auto

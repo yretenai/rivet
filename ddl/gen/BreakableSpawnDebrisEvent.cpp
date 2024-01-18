@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	BreakableSpawnDebrisEvent::BreakableSpawnDebrisEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		StageIndex = serialized->get_int32(StageIndex_type_id, 0);
-		TotalChunkCount = serialized->get_int32(TotalChunkCount_type_id, 0); 
+		StageIndex = serialized->get_int32(StageIndex_type_id, 0u);
+		TotalChunkCount = serialized->get_int32(TotalChunkCount_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

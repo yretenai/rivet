@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	ThemeEngineItem::ThemeEngineItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ColorBase = serialized->get_uint32(ColorBase_type_id, 0);
-		ColorHighlight = serialized->get_uint32(ColorHighlight_type_id, 0);
-		ColorText = serialized->get_uint32(ColorText_type_id, 0);
+		ColorBase = serialized->get_uint32(ColorBase_type_id, 0u);
+		ColorHighlight = serialized->get_uint32(ColorHighlight_type_id, 0u);
+		ColorText = serialized->get_uint32(ColorText_type_id, 0u);
 		IsHighContrast = serialized->get_bool(IsHighContrast_type_id, false); 
 	}
 

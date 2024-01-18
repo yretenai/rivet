@@ -15,7 +15,7 @@ namespace rivet::ddl::generated {
 		VaultMetaData = serialized->unwrap_into<rivet::ddl::generated::VaultMetaData>(VaultMetaData_type_id);
 		IconPath = serialized->get_string(IconPath_type_id, "");
 		DefaultNamedLink = serialized->get_string(DefaultNamedLink_type_id, {});
-		InstallGroup = serialized->get_int32(InstallGroup_type_id, 0);
+		InstallGroup = serialized->get_int32(InstallGroup_type_id, 0u);
 		GlobalRegion = serialized->get_string(GlobalRegion_type_id, {});
 		Regions = serialized->get_strings(Regions_type_id);
 		WorldMapAABB = serialized->unwrap_into<rivet::ddl::generated::DDLAABB>(WorldMapAABB_type_id);

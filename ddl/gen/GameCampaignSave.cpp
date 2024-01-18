@@ -9,13 +9,13 @@
 
 namespace rivet::ddl::generated {
 	GameCampaignSave::GameCampaignSave([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): CampaignSave(serialized) {
-		CareerRaritanium = serialized->get_float(CareerRaritanium_type_id, 0.000000);
-		CareerRaritaniumSpend = serialized->get_float(CareerRaritaniumSpend_type_id, 0.000000);
+		CareerRaritanium = serialized->get_float(CareerRaritanium_type_id, 0.000000f);
+		CareerRaritaniumSpend = serialized->get_float(CareerRaritaniumSpend_type_id, 0.000000f);
 		Playtime = serialized->get_double(Playtime_type_id, 0.000000);
 		GameStage = serialized->get_enum<rivet::ddl::generated::GameStage>(GameStage_type_id, rivet::ddl::generated::GameStage_values, rivet::ddl::generated::GameStage::EarlyGame);
-		GameFlags = serialized->get_bitset<rivet::ddl::generated::xd00d73b0>(GameFlags_type_id, rivet::ddl::generated::xd00d73b0_values, 0);
-		BoltMultiplier = serialized->get_uint8(BoltMultiplier_type_id, 1);
-		BoltMultiplierKillsLeft = serialized->get_uint8(BoltMultiplierKillsLeft_type_id, 2);
+		GameFlags = serialized->get_bitset<rivet::ddl::generated::xd00d73b0>(GameFlags_type_id, rivet::ddl::generated::xd00d73b0_values, 0u);
+		BoltMultiplier = serialized->get_uint8(BoltMultiplier_type_id, 1u);
+		BoltMultiplierKillsLeft = serialized->get_uint8(BoltMultiplierKillsLeft_type_id, 2u);
 		QuickSelectWeaponUp = serialized->get_string(QuickSelectWeaponUp_type_id, {});
 		QuickSelectWeaponRight = serialized->get_string(QuickSelectWeaponRight_type_id, {});
 		QuickSelectWeaponDown = serialized->get_string(QuickSelectWeaponDown_type_id, {});
@@ -25,7 +25,7 @@ namespace rivet::ddl::generated {
 		NewItemsViewed = serialized->get_strings(NewItemsViewed_type_id);
 		NewMissionsViewed = serialized->get_strings(NewMissionsViewed_type_id);
 		ControlRemap = serialized->unwrap_into<rivet::ddl::generated::SaveControlRemapData>(ControlRemap_type_id);
-		CompletionPercent = serialized->get_float(CompletionPercent_type_id, 0.000000); 
+		CompletionPercent = serialized->get_float(CompletionPercent_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

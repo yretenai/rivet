@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ObjectiveSaveDataGame::ObjectiveSaveDataGame([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ObjectiveSaveDataShared(serialized) {
-		ObjectiveFlagsGame = serialized->get_bitset<rivet::ddl::generated::ObjectiveFlagsGame>(ObjectiveFlagsGame_type_id, rivet::ddl::generated::ObjectiveFlagsGame_values, 0); 
+		ObjectiveFlagsGame = serialized->get_bitset<rivet::ddl::generated::ObjectiveFlagsGame>(ObjectiveFlagsGame_type_id, rivet::ddl::generated::ObjectiveFlagsGame_values, 0u); 
 	}
 
 	[[nodiscard]] auto

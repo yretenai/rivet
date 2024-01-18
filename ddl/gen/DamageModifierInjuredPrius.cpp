@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	DamageModifierInjuredPrius::DamageModifierInjuredPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DamageScale = serialized->get_float(DamageScale_type_id, 1.000000);
+		DamageScale = serialized->get_float(DamageScale_type_id, 1.000000f);
 		OnlyHeroDamage = serialized->get_bool(OnlyHeroDamage_type_id, true); 
 	}
 

@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	FlewByStartEvent::FlewByStartEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		StartSpeed = serialized->get_float(StartSpeed_type_id, 0.000000); 
+		StartSpeed = serialized->get_float(StartSpeed_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

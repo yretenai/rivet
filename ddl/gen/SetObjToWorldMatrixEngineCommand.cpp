@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	SetObjToWorldMatrixEngineCommand::SetObjToWorldMatrixEngineCommand([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Id = serialized->get_uint64(Id_type_id, 0);
+		Id = serialized->get_uint64(Id_type_id, 0ull);
 		Matrix = serialized->unwrap_into<rivet::ddl::generated::DDLMatrix4>(Matrix_type_id); 
 	}
 

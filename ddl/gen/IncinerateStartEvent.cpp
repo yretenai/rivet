@@ -9,8 +9,8 @@
 
 namespace rivet::ddl::generated {
 	IncinerateStartEvent::IncinerateStartEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Delay = serialized->get_float(Delay_type_id, -1.000000);
-		Duration = serialized->get_float(Duration_type_id, -1.000000);
+		Delay = serialized->get_float(Delay_type_id, -1.000000f);
+		Duration = serialized->get_float(Duration_type_id, -1.000000f);
 		SourcePosition = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(SourcePosition_type_id); 
 	}
 

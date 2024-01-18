@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	WwiseLookupEventElemDef::WwiseLookupEventElemDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Id = serialized->get_uint32(Id_type_id, 0);
+		Id = serialized->get_uint32(Id_type_id, 0u);
 		Name = serialized->get_string(Name_type_id, {});
 		IsDialog = serialized->get_bool(IsDialog_type_id, false);
-		AttenuationRadius = serialized->get_float(AttenuationRadius_type_id, 0.000000); 
+		AttenuationRadius = serialized->get_float(AttenuationRadius_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

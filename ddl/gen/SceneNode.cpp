@@ -13,11 +13,11 @@ namespace rivet::ddl::generated {
 		LocalTransform = serialized->unwrap_into<rivet::ddl::generated::DDLDoubleTransform>(LocalTransform_type_id);
 		Name = serialized->get_string(Name_type_id, {});
 		NeedsAttention = serialized->get_bool(NeedsAttention_type_id, false);
-		Parent = serialized->get_uint64(Parent_type_id, 0);
-		ParentTerrain = serialized->get_uint64(ParentTerrain_type_id, 0);
-		Id = serialized->get_uint64(Id_type_id, 0);
+		Parent = serialized->get_uint64(Parent_type_id, 0ull);
+		ParentTerrain = serialized->get_uint64(ParentTerrain_type_id, 0ull);
+		Id = serialized->get_uint64(Id_type_id, 0ull);
 		IsDeleted = serialized->get_bool(IsDeleted_type_id, false);
-		SortValue = serialized->get_float(SortValue_type_id, 0.000000);
+		SortValue = serialized->get_float(SortValue_type_id, 0.000000f);
 		AssetType = serialized->get_enum<rivet::ddl::generated::AssetExtensions>(AssetType_type_id, rivet::ddl::generated::AssetExtensions_values, rivet::ddl::generated::AssetExtensions::actor);
 		AssetPath = serialized->get_string(AssetPath_type_id, "");
 		HoudiniIntegration = serialized->unwrap_into<rivet::ddl::generated::HoudiniIntegrationDef>(HoudiniIntegration_type_id);

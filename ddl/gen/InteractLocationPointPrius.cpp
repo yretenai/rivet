@@ -10,7 +10,7 @@
 
 namespace rivet::ddl::generated {
 	InteractLocationPointPrius::InteractLocationPointPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): InteractLocationPrius(serialized) {
-		UseVolume = serialized->get_uint64(UseVolume_type_id, 0);
+		UseVolume = serialized->get_uint64(UseVolume_type_id, 0ull);
 		UseBoxOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(UseBoxOffset_type_id);
 		UserFaceMode = serialized->get_enum<rivet::ddl::generated::xccd3eeab>(UserFaceMode_type_id, rivet::ddl::generated::xccd3eeab_values, rivet::ddl::generated::xccd3eeab::Direction); 
 	}

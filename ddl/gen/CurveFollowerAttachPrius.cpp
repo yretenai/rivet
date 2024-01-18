@@ -9,7 +9,7 @@ namespace rivet::ddl::generated {
 	CurveFollowerAttachPrius::CurveFollowerAttachPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		ApplyFacingDirection = serialized->get_bool(ApplyFacingDirection_type_id, false);
 		ApplyXZFacingOnly = serialized->get_bool(ApplyXZFacingOnly_type_id, false);
-		BlendFacingAmt = serialized->get_float(BlendFacingAmt_type_id, 0.000000);
+		BlendFacingAmt = serialized->get_float(BlendFacingAmt_type_id, 0.000000f);
 		FaceBackOnReverse = serialized->get_bool(FaceBackOnReverse_type_id, false); 
 	}
 

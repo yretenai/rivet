@@ -12,11 +12,11 @@ namespace rivet::ddl::generated {
 		Name = serialized->get_string(Name_type_id, {});
 		Text = serialized->get_string(Text_type_id, {});
 		Color = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Color_type_id);
-		Alpha = serialized->get_float(Alpha_type_id, 0.000000);
-		x = serialized->get_float(x_type_id, 0.000000);
-		y = serialized->get_float(y_type_id, 0.000000);
-		width = serialized->get_float(width_type_id, 0.000000);
-		height = serialized->get_float(height_type_id, 0.000000); 
+		Alpha = serialized->get_float(Alpha_type_id, 0.000000f);
+		x = serialized->get_float(x_type_id, 0.000000f);
+		y = serialized->get_float(y_type_id, 0.000000f);
+		width = serialized->get_float(width_type_id, 0.000000f);
+		height = serialized->get_float(height_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

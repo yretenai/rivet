@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	MagShieldDeployingEvent::MagShieldDeployingEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		Red = serialized->get_float(Red_type_id, 0.000000);
-		Green = serialized->get_float(Green_type_id, 0.000000);
-		Blue = serialized->get_float(Blue_type_id, 0.000000); 
+		Red = serialized->get_float(Red_type_id, 0.000000f);
+		Green = serialized->get_float(Green_type_id, 0.000000f);
+		Blue = serialized->get_float(Blue_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

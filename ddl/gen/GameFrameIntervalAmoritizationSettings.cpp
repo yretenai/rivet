@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	GameFrameIntervalAmoritizationSettings::GameFrameIntervalAmoritizationSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		BotDiveRollCheckerUpdatesPerFrame = serialized->get_uint32(BotDiveRollCheckerUpdatesPerFrame_type_id, 3);
-		AnimClueHunterFramesBetweenUpdates = serialized->get_uint32(AnimClueHunterFramesBetweenUpdates_type_id, 32); 
+		BotDiveRollCheckerUpdatesPerFrame = serialized->get_uint32(BotDiveRollCheckerUpdatesPerFrame_type_id, 3u);
+		AnimClueHunterFramesBetweenUpdates = serialized->get_uint32(AnimClueHunterFramesBetweenUpdates_type_id, 32u); 
 	}
 
 	[[nodiscard]] auto

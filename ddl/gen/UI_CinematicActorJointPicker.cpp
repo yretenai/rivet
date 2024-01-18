@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	UI_CinematicActorJointPicker::UI_CinematicActorJointPicker([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ActorId = serialized->get_uint64(ActorId_type_id, 0);
+		ActorId = serialized->get_uint64(ActorId_type_id, 0ull);
 		JointName = serialized->get_string(JointName_type_id, {}); 
 	}
 

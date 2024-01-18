@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	VanityPerkXP::VanityPerkXP([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): VanityPerkBase(serialized) {
-		XPMultSet = serialized->get_float(XPMultSet_type_id, 0.000000);
-		XPMultPiece = serialized->get_float(XPMultPiece_type_id, 0.000000); 
+		XPMultSet = serialized->get_float(XPMultSet_type_id, 0.000000f);
+		XPMultPiece = serialized->get_float(XPMultPiece_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

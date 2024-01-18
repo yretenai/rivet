@@ -10,7 +10,7 @@
 namespace rivet::ddl::generated {
 	MovingSurfaceCollectionPrius::MovingSurfaceCollectionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		SurfacePrius = serialized->unwrap_into<rivet::ddl::generated::MovingSurfacePrius>(SurfacePrius_type_id);
-		MaxCollisionDistance = serialized->get_float(MaxCollisionDistance_type_id, 0.000000);
+		MaxCollisionDistance = serialized->get_float(MaxCollisionDistance_type_id, 0.000000f);
 		AutoAddCollision = serialized->get_bool(AutoAddCollision_type_id, true); 
 	}
 

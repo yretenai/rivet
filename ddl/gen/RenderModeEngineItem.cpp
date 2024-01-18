@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	RenderModeEngineItem::RenderModeEngineItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		BrightnessScale = serialized->get_float(BrightnessScale_type_id, 0.000000);
+		BrightnessScale = serialized->get_float(BrightnessScale_type_id, 0.000000f);
 		EditorRenderMode = serialized->get_enum<rivet::ddl::generated::EditorRenderMode>(EditorRenderMode_type_id, rivet::ddl::generated::EditorRenderMode_values, rivet::ddl::generated::EditorRenderMode::Full_Lighting);
-		PhysicsCollFlags = serialized->get_bitset<rivet::ddl::generated::PhysicsCollFlags>(PhysicsCollFlags_type_id, rivet::ddl::generated::PhysicsCollFlags_values, 1087);
+		PhysicsCollFlags = serialized->get_bitset<rivet::ddl::generated::PhysicsCollFlags>(PhysicsCollFlags_type_id, rivet::ddl::generated::PhysicsCollFlags_values, 1087u);
 		EngineAlwaysActive = serialized->get_bool(EngineAlwaysActive_type_id, true); 
 	}
 

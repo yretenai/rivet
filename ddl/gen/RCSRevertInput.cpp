@@ -9,7 +9,7 @@ namespace rivet::ddl::generated {
 	RCSRevertInput::RCSRevertInput([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Views = serialized->get_strings(Views_type_id);
 		IfNotModified = serialized->get_bool(IfNotModified_type_id, false);
-		Changelist = serialized->get_uint32(Changelist_type_id, 0); 
+		Changelist = serialized->get_uint32(Changelist_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

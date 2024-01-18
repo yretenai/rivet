@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	RCSMessage::RCSMessage([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Total = serialized->get_uint32(Total_type_id, 0);
+		Total = serialized->get_uint32(Total_type_id, 0u);
 		Messages = serialized->get_strings(Messages_type_id);
 		ClientFilePaths = serialized->get_strings(ClientFilePaths_type_id); 
 	}

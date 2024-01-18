@@ -12,7 +12,7 @@ namespace rivet::ddl::generated {
 		Name = serialized->get_string(Name_type_id, "MyView");
 		URL = serialized->get_string(URL_type_id, "coui://ui/MyPath/MyView.html");
 		StageSize = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(StageSize_type_id);
-		ViewScale = serialized->get_float(ViewScale_type_id, 0.000000); 
+		ViewScale = serialized->get_float(ViewScale_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

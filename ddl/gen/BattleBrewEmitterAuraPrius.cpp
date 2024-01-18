@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	BattleBrewEmitterAuraPrius::BattleBrewEmitterAuraPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): BattleBrewEmitterBasePrius(serialized) {
-		Range = serialized->get_float(Range_type_id, 0.000000);
-		ExpandTime = serialized->get_float(ExpandTime_type_id, 0.000000);
-		Duration = serialized->get_float(Duration_type_id, 0.000000);
-		ValidTargetTypes = serialized->get_bitset<rivet::ddl::generated::TargetType>(ValidTargetTypes_type_id, rivet::ddl::generated::TargetType_values, 0); 
+		Range = serialized->get_float(Range_type_id, 0.000000f);
+		ExpandTime = serialized->get_float(ExpandTime_type_id, 0.000000f);
+		Duration = serialized->get_float(Duration_type_id, 0.000000f);
+		ValidTargetTypes = serialized->get_bitset<rivet::ddl::generated::TargetType>(ValidTargetTypes_type_id, rivet::ddl::generated::TargetType_values, 0u); 
 	}
 
 	[[nodiscard]] auto

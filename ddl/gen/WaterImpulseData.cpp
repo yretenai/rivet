@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	WaterImpulseData::WaterImpulseData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Radius = serialized->get_float(Radius_type_id, 0.250000);
+		Radius = serialized->get_float(Radius_type_id, 0.250000f);
 		LocatorName = serialized->get_string(LocatorName_type_id, ""); 
 	}
 

@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	DamageModifierHitDirectionOutgoingPrius::DamageModifierHitDirectionOutgoingPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): DamageModifierOutgoingPrius(serialized) {
-		ConeAngle = serialized->get_float(ConeAngle_type_id, 0.000000);
+		ConeAngle = serialized->get_float(ConeAngle_type_id, 0.000000f);
 		KeepHitsInCone = serialized->get_bool(KeepHitsInCone_type_id, false); 
 	}
 

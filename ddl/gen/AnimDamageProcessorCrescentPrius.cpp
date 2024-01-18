@@ -8,26 +8,26 @@
 namespace rivet::ddl::generated {
 	AnimDamageProcessorCrescentPrius::AnimDamageProcessorCrescentPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): AnimDamageAttackStyleBase(serialized) {
 		DamageType = serialized->get_enum<rivet::ddl::generated::DamageTypes>(DamageType_type_id, rivet::ddl::generated::DamageTypes_values, rivet::ddl::generated::DamageTypes::Melee);
-		DamageAmount = serialized->get_float(DamageAmount_type_id, 10.000000);
-		DamageFalloff = serialized->get_float(DamageFalloff_type_id, -1.000000);
-		DamageVictimMin = serialized->get_float(DamageVictimMin_type_id, -1.000000);
-		DamageVictimMax = serialized->get_float(DamageVictimMax_type_id, -1.000000);
+		DamageAmount = serialized->get_float(DamageAmount_type_id, 10.000000f);
+		DamageFalloff = serialized->get_float(DamageFalloff_type_id, -1.000000f);
+		DamageVictimMin = serialized->get_float(DamageVictimMin_type_id, -1.000000f);
+		DamageVictimMax = serialized->get_float(DamageVictimMax_type_id, -1.000000f);
 		Knockback = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(Knockback_type_id, rivet::ddl::generated::KnockbackLevels_values, rivet::ddl::generated::KnockbackLevels::None);
-		KnockbackAmount = serialized->get_float(KnockbackAmount_type_id, -1.000000);
+		KnockbackAmount = serialized->get_float(KnockbackAmount_type_id, -1.000000f);
 		KnockbackVictimMax = serialized->get_int32(KnockbackVictimMax_type_id, -1);
-		ArcHeight = serialized->get_float(ArcHeight_type_id, 1.000000);
-		ArcHeightAlt = serialized->get_float(ArcHeightAlt_type_id, -1.000000);
-		SweepAngle = serialized->get_float(SweepAngle_type_id, 135.000000);
-		SweepRange = serialized->get_float(SweepRange_type_id, 2.000000);
-		SweepRangeSide = serialized->get_float(SweepRangeSide_type_id, -1.000000);
-		SweepRangeBack = serialized->get_float(SweepRangeBack_type_id, -1.000000);
-		CollRadius = serialized->get_float(CollRadius_type_id, 0.500000);
-		CollRadiusSide = serialized->get_float(CollRadiusSide_type_id, -1.000000);
-		CollRadiusBack = serialized->get_float(CollRadiusBack_type_id, -1.000000);
+		ArcHeight = serialized->get_float(ArcHeight_type_id, 1.000000f);
+		ArcHeightAlt = serialized->get_float(ArcHeightAlt_type_id, -1.000000f);
+		SweepAngle = serialized->get_float(SweepAngle_type_id, 135.000000f);
+		SweepRange = serialized->get_float(SweepRange_type_id, 2.000000f);
+		SweepRangeSide = serialized->get_float(SweepRangeSide_type_id, -1.000000f);
+		SweepRangeBack = serialized->get_float(SweepRangeBack_type_id, -1.000000f);
+		CollRadius = serialized->get_float(CollRadius_type_id, 0.500000f);
+		CollRadiusSide = serialized->get_float(CollRadiusSide_type_id, -1.000000f);
+		CollRadiusBack = serialized->get_float(CollRadiusBack_type_id, -1.000000f);
 		MaxHits = serialized->get_int32(MaxHits_type_id, -1);
-		PosAngleLimit = serialized->get_float(PosAngleLimit_type_id, 180.000000);
-		RotationRate = serialized->get_float(RotationRate_type_id, 0.000000);
-		Duration = serialized->get_float(Duration_type_id, 0.000000); 
+		PosAngleLimit = serialized->get_float(PosAngleLimit_type_id, 180.000000f);
+		RotationRate = serialized->get_float(RotationRate_type_id, 0.000000f);
+		Duration = serialized->get_float(Duration_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

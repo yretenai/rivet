@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	GameCurveConveyorPrius::GameCurveConveyorPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): MovingSurfacePrius(serialized) {
-		Speed = serialized->get_float(Speed_type_id, 1.000000); 
+		Speed = serialized->get_float(Speed_type_id, 1.000000f); 
 	}
 
 	[[nodiscard]] auto

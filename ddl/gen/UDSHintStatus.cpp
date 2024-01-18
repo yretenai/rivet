@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	UDSHintStatus::UDSHintStatus([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		active = serialized->get_bool(active_type_id, false);
-		order = serialized->get_int32(order_type_id, 0); 
+		order = serialized->get_int32(order_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

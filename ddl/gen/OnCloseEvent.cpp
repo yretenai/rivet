@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	OnCloseEvent::OnCloseEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		SourceSyncId = serialized->get_uint64(SourceSyncId_type_id, 0); 
+		SourceSyncId = serialized->get_uint64(SourceSyncId_type_id, 0ull); 
 	}
 
 	[[nodiscard]] auto

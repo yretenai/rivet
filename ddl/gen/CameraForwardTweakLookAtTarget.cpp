@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	CameraForwardTweakLookAtTarget::CameraForwardTweakLookAtTarget([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): CameraForwardTweakValid(serialized) {
-		LookAtActor = serialized->get_uint64(LookAtActor_type_id, 0);
+		LookAtActor = serialized->get_uint64(LookAtActor_type_id, 0ull);
 		TargetOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(TargetOffset_type_id); 
 	}
 

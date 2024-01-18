@@ -11,11 +11,11 @@ namespace rivet::ddl::generated {
 	AnimSetCommentDef::AnimSetCommentDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Text = serialized->get_string(Text_type_id, {});
 		Color = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Color_type_id);
-		Alpha = serialized->get_float(Alpha_type_id, 0.000000);
-		Height = serialized->get_float(Height_type_id, 0.000000);
-		Width = serialized->get_float(Width_type_id, 0.000000);
-		X = serialized->get_float(X_type_id, 0.000000);
-		Y = serialized->get_float(Y_type_id, 0.000000); 
+		Alpha = serialized->get_float(Alpha_type_id, 0.000000f);
+		Height = serialized->get_float(Height_type_id, 0.000000f);
+		Width = serialized->get_float(Width_type_id, 0.000000f);
+		X = serialized->get_float(X_type_id, 0.000000f);
+		Y = serialized->get_float(Y_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

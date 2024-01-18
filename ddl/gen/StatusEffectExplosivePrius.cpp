@@ -20,7 +20,7 @@ namespace rivet::ddl::generated {
 		LastDamagerIsExplosionDamager = serialized->get_bool(LastDamagerIsExplosionDamager_type_id, false);
 		ExplosionDamageType = serialized->get_enum<rivet::ddl::generated::DamageTypes>(ExplosionDamageType_type_id, rivet::ddl::generated::DamageTypes_values, rivet::ddl::generated::DamageTypes::None);
 		ExplosionKnockbackLevel = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(ExplosionKnockbackLevel_type_id, rivet::ddl::generated::KnockbackLevels_values, rivet::ddl::generated::KnockbackLevels::None);
-		ProximityTargetMask = serialized->get_bitset<rivet::ddl::generated::TargetType>(ProximityTargetMask_type_id, rivet::ddl::generated::TargetType_values, 7); 
+		ProximityTargetMask = serialized->get_bitset<rivet::ddl::generated::TargetType>(ProximityTargetMask_type_id, rivet::ddl::generated::TargetType_values, 7u); 
 	}
 
 	[[nodiscard]] auto

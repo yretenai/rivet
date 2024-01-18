@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	HeroHoverbootSettings::HeroHoverbootSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		OverrideBaseSpeed = serialized->get_float(OverrideBaseSpeed_type_id, 12.000000);
-		OverrideKickExtraSpeedMax = serialized->get_float(OverrideKickExtraSpeedMax_type_id, 6.000000);
-		OverrideGoodKickBoost = serialized->get_float(OverrideGoodKickBoost_type_id, 3.000000);
-		OverrideBadKickBoost = serialized->get_float(OverrideBadKickBoost_type_id, 0.500000);
+		OverrideBaseSpeed = serialized->get_float(OverrideBaseSpeed_type_id, 12.000000f);
+		OverrideKickExtraSpeedMax = serialized->get_float(OverrideKickExtraSpeedMax_type_id, 6.000000f);
+		OverrideGoodKickBoost = serialized->get_float(OverrideGoodKickBoost_type_id, 3.000000f);
+		OverrideBadKickBoost = serialized->get_float(OverrideBadKickBoost_type_id, 0.500000f);
 		UseSpeedOverrides = serialized->get_bool(UseSpeedOverrides_type_id, false);
 		UseTriggerResistance = serialized->get_bool(UseTriggerResistance_type_id, true); 
 	}

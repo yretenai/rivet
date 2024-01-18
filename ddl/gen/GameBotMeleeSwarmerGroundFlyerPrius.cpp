@@ -7,17 +7,17 @@
 
 namespace rivet::ddl::generated {
 	GameBotMeleeSwarmerGroundFlyerPrius::GameBotMeleeSwarmerGroundFlyerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): GameBotMeleeSwarmerPrius(serialized) {
-		DistToLandMin = serialized->get_float(DistToLandMin_type_id, 5.000000);
-		DistToLandMax = serialized->get_float(DistToLandMax_type_id, 10.000000);
-		PreFlyDelayMin = serialized->get_float(PreFlyDelayMin_type_id, 3.000000);
-		PreFlyDelayMax = serialized->get_float(PreFlyDelayMax_type_id, 6.000000);
-		MinDistToFly = serialized->get_float(MinDistToFly_type_id, 4.000000);
-		FlyHeightMin = serialized->get_float(FlyHeightMin_type_id, 2.000000);
-		FlyHeightMax = serialized->get_float(FlyHeightMax_type_id, 5.000000);
-		FlyEngagedHeightMin = serialized->get_float(FlyEngagedHeightMin_type_id, 1.000000);
-		FlyEngagedHeightMax = serialized->get_float(FlyEngagedHeightMax_type_id, 2.000000);
-		FlyMinionHeightMin = serialized->get_float(FlyMinionHeightMin_type_id, 2.000000);
-		FlyMinionHeightMax = serialized->get_float(FlyMinionHeightMax_type_id, 3.000000); 
+		DistToLandMin = serialized->get_float(DistToLandMin_type_id, 5.000000f);
+		DistToLandMax = serialized->get_float(DistToLandMax_type_id, 10.000000f);
+		PreFlyDelayMin = serialized->get_float(PreFlyDelayMin_type_id, 3.000000f);
+		PreFlyDelayMax = serialized->get_float(PreFlyDelayMax_type_id, 6.000000f);
+		MinDistToFly = serialized->get_float(MinDistToFly_type_id, 4.000000f);
+		FlyHeightMin = serialized->get_float(FlyHeightMin_type_id, 2.000000f);
+		FlyHeightMax = serialized->get_float(FlyHeightMax_type_id, 5.000000f);
+		FlyEngagedHeightMin = serialized->get_float(FlyEngagedHeightMin_type_id, 1.000000f);
+		FlyEngagedHeightMax = serialized->get_float(FlyEngagedHeightMax_type_id, 2.000000f);
+		FlyMinionHeightMin = serialized->get_float(FlyMinionHeightMin_type_id, 2.000000f);
+		FlyMinionHeightMax = serialized->get_float(FlyMinionHeightMax_type_id, 3.000000f); 
 	}
 
 	[[nodiscard]] auto

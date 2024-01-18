@@ -13,9 +13,9 @@ namespace rivet::ddl::generated {
 		SpawnLocator = serialized->get_string(SpawnLocator_type_id, "locatorName");
 		SpawnOffset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(SpawnOffset_type_id);
 		SpawnForce = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(SpawnForce_type_id);
-		FadeDelayMin = serialized->get_float(FadeDelayMin_type_id, 3.000000);
-		FadeDelayMax = serialized->get_float(FadeDelayMax_type_id, 6.000000);
-		FadeTime = serialized->get_float(FadeTime_type_id, 0.500000); 
+		FadeDelayMin = serialized->get_float(FadeDelayMin_type_id, 3.000000f);
+		FadeDelayMax = serialized->get_float(FadeDelayMax_type_id, 6.000000f);
+		FadeTime = serialized->get_float(FadeTime_type_id, 0.500000f); 
 	}
 
 	[[nodiscard]] auto

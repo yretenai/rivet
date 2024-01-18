@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	WeaponTargetingInfo::WeaponTargetingInfo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		TargetingRange = serialized->get_float(TargetingRange_type_id, 40.000000);
+		TargetingRange = serialized->get_float(TargetingRange_type_id, 40.000000f);
 		UsesAimAssist = serialized->get_bool(UsesAimAssist_type_id, true);
 		UsesAutoTarget = serialized->get_bool(UsesAutoTarget_type_id, true); 
 	}

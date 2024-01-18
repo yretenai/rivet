@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	MovieAlmostDoneEvent::MovieAlmostDoneEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		MovieHandle = serialized->get_uint16(MovieHandle_type_id, 0); 
+		MovieHandle = serialized->get_uint16(MovieHandle_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

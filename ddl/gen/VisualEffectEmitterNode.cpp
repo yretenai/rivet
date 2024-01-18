@@ -15,23 +15,23 @@
 
 namespace rivet::ddl::generated {
 	VisualEffectEmitterNode::VisualEffectEmitterNode([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		NodeId = serialized->get_uint64(NodeId_type_id, 0);
-		XPos = serialized->get_int32(XPos_type_id, 0);
-		YPos = serialized->get_int32(YPos_type_id, 0);
+		NodeId = serialized->get_uint64(NodeId_type_id, 0ull);
+		XPos = serialized->get_int32(XPos_type_id, 0u);
+		YPos = serialized->get_int32(YPos_type_id, 0u);
 		DisplayName = serialized->get_string(DisplayName_type_id, {});
 		ConnectedInputs = serialized->unwrap_into_many<rivet::ddl::generated::VisualEffectNodeConnectedInputPort>(ConnectedInputs_type_id);
 		ConnectedOutputs = serialized->unwrap_into_many<rivet::ddl::generated::VisualEffectNodeConnectedOutputPort>(ConnectedOutputs_type_id);
 		Collapsed = serialized->get_bool(Collapsed_type_id, true);
-		ActivationChance = serialized->get_float(ActivationChance_type_id, 1.000000);
+		ActivationChance = serialized->get_float(ActivationChance_type_id, 1.000000f);
 		RandomizeInstance = serialized->get_bool(RandomizeInstance_type_id, true);
 		DrawSpawnStyle = serialized->get_bool(DrawSpawnStyle_type_id, false);
 		DynamicScaling = serialized->get_bool(DynamicScaling_type_id, false);
 		ParticleSpace = serialized->get_enum<rivet::ddl::generated::x8db2fd48>(ParticleSpace_type_id, rivet::ddl::generated::x8db2fd48_values, rivet::ddl::generated::x8db2fd48::World);
 		EmitterType = serialized->get_enum<rivet::ddl::generated::EmitterType>(EmitterType_type_id, rivet::ddl::generated::EmitterType_values, rivet::ddl::generated::EmitterType::CPU);
-		MaxActiveParticles = serialized->get_uint32(MaxActiveParticles_type_id, 8192);
-		MaxParticles = serialized->get_uint32(MaxParticles_type_id, 0);
+		MaxActiveParticles = serialized->get_uint32(MaxActiveParticles_type_id, 8192u);
+		MaxParticles = serialized->get_uint32(MaxParticles_type_id, 0u);
 		InheritScreenColor = serialized->get_bool(InheritScreenColor_type_id, false);
-		OnDeathSpawnCount = serialized->get_uint32(OnDeathSpawnCount_type_id, 0);
+		OnDeathSpawnCount = serialized->get_uint32(OnDeathSpawnCount_type_id, 0u);
 		EmitterSpaces = serialized->unwrap_into<rivet::ddl::generated::SeparateSpaces>(EmitterSpaces_type_id);
 		Emission = serialized->unwrap_into<rivet::ddl::generated::VisualEffectEmission>(Emission_type_id);
 		ParticleRender = serialized->unwrap_into<rivet::ddl::generated::VisualEffectParticleRender>(ParticleRender_type_id);

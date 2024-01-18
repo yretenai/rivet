@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	TriggerEffectKeyFrameDataPosition::TriggerEffectKeyFrameDataPosition([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): TriggerEffectKeyFrameDataBase(serialized) {
-		TriggerAnalogValue = serialized->get_float(TriggerAnalogValue_type_id, 0.000000); 
+		TriggerAnalogValue = serialized->get_float(TriggerAnalogValue_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

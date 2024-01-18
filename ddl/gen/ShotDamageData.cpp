@@ -10,16 +10,16 @@
 
 namespace rivet::ddl::generated {
 	ShotDamageData::ShotDamageData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Damage = serialized->get_float(Damage_type_id, 0.000000);
+		Damage = serialized->get_float(Damage_type_id, 0.000000f);
 		DamageType = serialized->get_enum<rivet::ddl::generated::DamageTypes>(DamageType_type_id, rivet::ddl::generated::DamageTypes_values, rivet::ddl::generated::DamageTypes::None);
 		KnockbackTiers = serialized->unwrap_into_many<rivet::ddl::generated::KnockbackTierData>(KnockbackTiers_type_id);
-		DamageFlags = serialized->get_bitset<rivet::ddl::generated::x65d7dac2>(DamageFlags_type_id, rivet::ddl::generated::x65d7dac2_values, 0);
-		HeadshotMod = serialized->get_float(HeadshotMod_type_id, 1.000000);
-		AOE = serialized->get_float(AOE_type_id, 0.000000);
-		Impulse = serialized->get_float(Impulse_type_id, 22.000000);
-		StatusAmount = serialized->get_float(StatusAmount_type_id, 0.000000);
-		IgnoreDuration = serialized->get_float(IgnoreDuration_type_id, 0.000000);
-		HitPauseDuration = serialized->get_float(HitPauseDuration_type_id, 0.000000);
+		DamageFlags = serialized->get_bitset<rivet::ddl::generated::x65d7dac2>(DamageFlags_type_id, rivet::ddl::generated::x65d7dac2_values, 0u);
+		HeadshotMod = serialized->get_float(HeadshotMod_type_id, 1.000000f);
+		AOE = serialized->get_float(AOE_type_id, 0.000000f);
+		Impulse = serialized->get_float(Impulse_type_id, 22.000000f);
+		StatusAmount = serialized->get_float(StatusAmount_type_id, 0.000000f);
+		IgnoreDuration = serialized->get_float(IgnoreDuration_type_id, 0.000000f);
+		HitPauseDuration = serialized->get_float(HitPauseDuration_type_id, 0.000000f);
 		DamageHashString = serialized->get_string(DamageHashString_type_id, {});
 		CustomDamageEntries = serialized->unwrap_into_many<rivet::ddl::generated::CustomDamageContainer>(CustomDamageEntries_type_id); 
 	}

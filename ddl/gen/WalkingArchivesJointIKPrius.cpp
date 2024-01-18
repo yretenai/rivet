@@ -11,9 +11,9 @@ namespace rivet::ddl::generated {
 		IKChainID = serialized->get_strings(IKChainID_type_id);
 		MoveDriver = serialized->get_string(MoveDriver_type_id, {});
 		CameraShake = serialized->get_string(CameraShake_type_id, {});
-		CameraShakeInnerRadius = serialized->get_float(CameraShakeInnerRadius_type_id, 5.000000);
-		CameraShakeOuterRadius = serialized->get_float(CameraShakeOuterRadius_type_id, 20.000000);
-		FootDamageRadius = serialized->get_float(FootDamageRadius_type_id, 3.000000); 
+		CameraShakeInnerRadius = serialized->get_float(CameraShakeInnerRadius_type_id, 5.000000f);
+		CameraShakeOuterRadius = serialized->get_float(CameraShakeOuterRadius_type_id, 20.000000f);
+		FootDamageRadius = serialized->get_float(FootDamageRadius_type_id, 3.000000f); 
 	}
 
 	[[nodiscard]] auto

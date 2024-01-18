@@ -13,13 +13,13 @@ namespace rivet::ddl::generated {
 	CrossSectionBase::CrossSectionBase([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		CrossSection = serialized->unwrap_into<rivet::ddl::generated::CrossSectionChoice>(CrossSection_type_id);
 		Width = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(Width_type_id);
-		Height = serialized->get_float(Height_type_id, 0.500000);
-		Scale = serialized->get_float(Scale_type_id, 1.000000);
+		Height = serialized->get_float(Height_type_id, 0.500000f);
+		Scale = serialized->get_float(Scale_type_id, 1.000000f);
 		Taper = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(Taper_type_id);
 		Placement = serialized->get_enum<rivet::ddl::generated::xb8c27e2a>(Placement_type_id, rivet::ddl::generated::xb8c27e2a_values, rivet::ddl::generated::xb8c27e2a::Centered);
 		Offset = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Offset_type_id);
 		PathNoise = serialized->unwrap_into<rivet::ddl::generated::DDLVector2>(PathNoise_type_id);
-		BankScale = serialized->get_float(BankScale_type_id, 0.000000);
+		BankScale = serialized->get_float(BankScale_type_id, 0.000000f);
 		EndCap = serialized->get_enum<rivet::ddl::generated::x86f6b8ca>(EndCap_type_id, rivet::ddl::generated::x86f6b8ca_values, rivet::ddl::generated::x86f6b8ca::Round);
 		ReverseFaces = serialized->get_bool(ReverseFaces_type_id, false); 
 	}

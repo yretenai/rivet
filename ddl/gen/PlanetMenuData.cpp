@@ -17,9 +17,9 @@ namespace rivet::ddl::generated {
 		DescLocTag = serialized->get_string(DescLocTag_type_id, {});
 		LocationLocTag = serialized->get_string(LocationLocTag_type_id, {});
 		PreviewImage = serialized->get_string(PreviewImage_type_id, {});
-		GoldBolts = serialized->get_int32(GoldBolts_type_id, 0);
-		RYNOPlans = serialized->get_int32(RYNOPlans_type_id, 0);
-		VanityPickups = serialized->get_int32(VanityPickups_type_id, 0);
+		GoldBolts = serialized->get_int32(GoldBolts_type_id, 0u);
+		RYNOPlans = serialized->get_int32(RYNOPlans_type_id, 0u);
+		VanityPickups = serialized->get_int32(VanityPickups_type_id, 0u);
 		FocusDialogs = serialized->unwrap_into_many<rivet::ddl::generated::PlanetMenuDialog>(FocusDialogs_type_id); 
 	}
 

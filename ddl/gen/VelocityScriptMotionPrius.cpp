@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	VelocityScriptMotionPrius::VelocityScriptMotionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		IdealSpeed = serialized->get_float(IdealSpeed_type_id, -1.000000);
-		Accel = serialized->get_float(Accel_type_id, 10.000000);
-		Decel = serialized->get_float(Decel_type_id, 10.000000); 
+		IdealSpeed = serialized->get_float(IdealSpeed_type_id, -1.000000f);
+		Accel = serialized->get_float(Accel_type_id, 10.000000f);
+		Decel = serialized->get_float(Decel_type_id, 10.000000f); 
 	}
 
 	[[nodiscard]] auto

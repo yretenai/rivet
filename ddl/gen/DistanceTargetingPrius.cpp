@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	DistanceTargetingPrius::DistanceTargetingPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): TargetingBasePrius(serialized) {
-		ValidTargetTypes = serialized->get_bitset<rivet::ddl::generated::TargetType>(ValidTargetTypes_type_id, rivet::ddl::generated::TargetType_values, 2147483647); 
+		ValidTargetTypes = serialized->get_bitset<rivet::ddl::generated::TargetType>(ValidTargetTypes_type_id, rivet::ddl::generated::TargetType_values, 2147483647u); 
 	}
 
 	[[nodiscard]] auto

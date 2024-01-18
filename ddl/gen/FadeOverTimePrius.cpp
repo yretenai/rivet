@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	FadeOverTimePrius::FadeOverTimePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SlotIndex = serialized->get_uint8(SlotIndex_type_id, 0);
-		LifeTime = serialized->get_float(LifeTime_type_id, 0.000000);
-		FadeTime = serialized->get_float(FadeTime_type_id, 0.000000); 
+		SlotIndex = serialized->get_uint8(SlotIndex_type_id, 0u);
+		LifeTime = serialized->get_float(LifeTime_type_id, 0.000000f);
+		FadeTime = serialized->get_float(FadeTime_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

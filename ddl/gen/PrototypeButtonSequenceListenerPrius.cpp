@@ -8,10 +8,10 @@
 namespace rivet::ddl::generated {
 	PrototypeButtonSequenceListenerPrius::PrototypeButtonSequenceListenerPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		StartEnabled = serialized->get_bool(StartEnabled_type_id, true);
-		TimeLimit = serialized->get_float(TimeLimit_type_id, -1.000000);
-		ButtonTimeLimit = serialized->get_float(ButtonTimeLimit_type_id, -1.000000);
-		TriggerCount = serialized->get_uint32(TriggerCount_type_id, 0);
-		UseRange = serialized->get_float(UseRange_type_id, 3.000000);
+		TimeLimit = serialized->get_float(TimeLimit_type_id, -1.000000f);
+		ButtonTimeLimit = serialized->get_float(ButtonTimeLimit_type_id, -1.000000f);
+		TriggerCount = serialized->get_uint32(TriggerCount_type_id, 0u);
+		UseRange = serialized->get_float(UseRange_type_id, 3.000000f);
 		VolumeRange = serialized->get_bool(VolumeRange_type_id, true);
 		IgnoreInvalid = serialized->get_bool(IgnoreInvalid_type_id, false);
 		ButtonList = serialized->get_enums<rivet::ddl::generated::xe10f705b>(ButtonList_type_id, rivet::ddl::generated::xe10f705b_values); 

@@ -7,12 +7,12 @@
 
 namespace rivet::ddl::generated {
 	PhaseTimeSettings::PhaseTimeSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		InitMs = serialized->get_float(InitMs_type_id, 1.000000);
-		Phase1Ms = serialized->get_float(Phase1Ms_type_id, 16.000000);
-		Phase2Ms = serialized->get_float(Phase2Ms_type_id, 5.000000);
-		Phase3Ms = serialized->get_float(Phase3Ms_type_id, 10.000000);
-		FinalMs = serialized->get_float(FinalMs_type_id, 1.000000);
-		TotalMs = serialized->get_float(TotalMs_type_id, 33.333328); 
+		InitMs = serialized->get_float(InitMs_type_id, 1.000000f);
+		Phase1Ms = serialized->get_float(Phase1Ms_type_id, 16.000000f);
+		Phase2Ms = serialized->get_float(Phase2Ms_type_id, 5.000000f);
+		Phase3Ms = serialized->get_float(Phase3Ms_type_id, 10.000000f);
+		FinalMs = serialized->get_float(FinalMs_type_id, 1.000000f);
+		TotalMs = serialized->get_float(TotalMs_type_id, 33.333328f); 
 	}
 
 	[[nodiscard]] auto

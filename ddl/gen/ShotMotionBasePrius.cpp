@@ -23,7 +23,7 @@
 namespace rivet::ddl::generated {
 	ShotMotionBasePrius::ShotMotionBasePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Orientation = serialized->unwrap_into<rivet::ddl::generated::OrientationMode>(Orientation_type_id);
-		Range = serialized->get_float(Range_type_id, 60.000000);
+		Range = serialized->get_float(Range_type_id, 60.000000f);
 		Falloff = serialized->unwrap_into<rivet::ddl::generated::FalloffData>(Falloff_type_id);
 		OffsetMode = serialized->unwrap_into<rivet::ddl::generated::OffsetReductionMode>(OffsetMode_type_id);
 		RespondToProjectiles = serialized->get_bool(RespondToProjectiles_type_id, false);

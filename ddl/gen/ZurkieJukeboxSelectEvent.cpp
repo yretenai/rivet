@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ZurkieJukeboxSelectEvent::ZurkieJukeboxSelectEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		SongIndex = serialized->get_float(SongIndex_type_id, 0.000000); 
+		SongIndex = serialized->get_float(SongIndex_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

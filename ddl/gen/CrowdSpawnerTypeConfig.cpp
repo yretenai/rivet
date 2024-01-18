@@ -10,9 +10,9 @@
 namespace rivet::ddl::generated {
 	CrowdSpawnerTypeConfig::CrowdSpawnerTypeConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
 		MemberModel = serialized->get_string(MemberModel_type_id, {});
-		MinModelScale = serialized->get_float(MinModelScale_type_id, 0.900000);
-		MaxModelScale = serialized->get_float(MaxModelScale_type_id, 1.100000);
-		FadeTime = serialized->get_float(FadeTime_type_id, 1.000000);
+		MinModelScale = serialized->get_float(MinModelScale_type_id, 0.900000f);
+		MaxModelScale = serialized->get_float(MaxModelScale_type_id, 1.100000f);
+		FadeTime = serialized->get_float(FadeTime_type_id, 1.000000f);
 		DensityTiers = serialized->unwrap_into_many<rivet::ddl::generated::CrowdDensityTier>(DensityTiers_type_id);
 		DensityTiersPerfMode60 = serialized->unwrap_into_many<rivet::ddl::generated::CrowdDensityTier>(DensityTiersPerfMode60_type_id);
 		DensityTiersPcMedium = serialized->unwrap_into_many<rivet::ddl::generated::CrowdDensityTier>(DensityTiersPcMedium_type_id);

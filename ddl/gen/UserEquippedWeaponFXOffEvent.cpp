@@ -10,7 +10,7 @@ namespace rivet::ddl::generated {
 		WeaponName = serialized->get_string(WeaponName_type_id, {});
 		OwnerIsLocal = serialized->get_bool(OwnerIsLocal_type_id, false);
 		OwnerIsHero = serialized->get_bool(OwnerIsHero_type_id, false);
-		AmmoCount = serialized->get_float(AmmoCount_type_id, 0.000000); 
+		AmmoCount = serialized->get_float(AmmoCount_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

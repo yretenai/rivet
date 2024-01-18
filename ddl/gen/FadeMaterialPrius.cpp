@@ -10,9 +10,9 @@ namespace rivet::ddl::generated {
 		Material = serialized->get_string(Material_type_id, {});
 		AddMaterial = serialized->get_bool(AddMaterial_type_id, true);
 		FadeInVariableName = serialized->get_string(FadeInVariableName_type_id, {});
-		FadeInDuration = serialized->get_float(FadeInDuration_type_id, 1.000000);
+		FadeInDuration = serialized->get_float(FadeInDuration_type_id, 1.000000f);
 		FadeOutVariableName = serialized->get_string(FadeOutVariableName_type_id, {});
-		FadeOutDuration = serialized->get_float(FadeOutDuration_type_id, 1.000000);
+		FadeOutDuration = serialized->get_float(FadeOutDuration_type_id, 1.000000f);
 		DestroyActorOnFadeOut = serialized->get_bool(DestroyActorOnFadeOut_type_id, false);
 		StartFadedIn = serialized->get_bool(StartFadedIn_type_id, false);
 		PreApply = serialized->get_bool(PreApply_type_id, false);

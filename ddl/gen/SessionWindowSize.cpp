@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	SessionWindowSize::SessionWindowSize([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Width = serialized->get_int32(Width_type_id, 512);
-		Height = serialized->get_int32(Height_type_id, 512); 
+		Width = serialized->get_int32(Width_type_id, 512u);
+		Height = serialized->get_int32(Height_type_id, 512u); 
 	}
 
 	[[nodiscard]] auto

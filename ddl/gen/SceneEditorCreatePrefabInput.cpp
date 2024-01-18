@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	SceneEditorCreatePrefabInput::SceneEditorCreatePrefabInput([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SceneNodeId = serialized->get_uint64(SceneNodeId_type_id, 0);
+		SceneNodeId = serialized->get_uint64(SceneNodeId_type_id, 0ull);
 		AssetPath = serialized->get_string(AssetPath_type_id, ""); 
 	}
 

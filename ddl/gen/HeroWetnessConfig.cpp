@@ -10,9 +10,9 @@ namespace rivet::ddl::generated {
 		FurWetnessConstant = serialized->get_string(FurWetnessConstant_type_id, "Fur_Wetness");
 		FurWindStrengthConstant = serialized->get_string(FurWindStrengthConstant_type_id, "Fur_WindStrength");
 		StrandStrengthConstant = serialized->get_string(StrandStrengthConstant_type_id, "ModelStrand_SimulationWindStrength");
-		TimeToWet = serialized->get_float(TimeToWet_type_id, 2.000000);
-		TimeToDry = serialized->get_float(TimeToDry_type_id, 5.000000);
-		MaxCeilingHeight = serialized->get_float(MaxCeilingHeight_type_id, 15.000000); 
+		TimeToWet = serialized->get_float(TimeToWet_type_id, 2.000000f);
+		TimeToDry = serialized->get_float(TimeToDry_type_id, 5.000000f);
+		MaxCeilingHeight = serialized->get_float(MaxCeilingHeight_type_id, 15.000000f); 
 	}
 
 	[[nodiscard]] auto

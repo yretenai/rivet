@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	DamageModifierIncomingForceKnockbackPrius::DamageModifierIncomingForceKnockbackPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): DamageModifierIncomingPrius(serialized) {
 		KnockbackLevel = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(KnockbackLevel_type_id, rivet::ddl::generated::KnockbackLevels_values, rivet::ddl::generated::KnockbackLevels::None);
-		KnockbackAmount = serialized->get_float(KnockbackAmount_type_id, -1.000000); 
+		KnockbackAmount = serialized->get_float(KnockbackAmount_type_id, -1.000000f); 
 	}
 
 	[[nodiscard]] auto

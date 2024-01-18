@@ -12,8 +12,8 @@ namespace rivet::ddl::generated {
 		NormalSpeedConfig = serialized->unwrap_into<rivet::ddl::generated::HeroSpeedConfig>(NormalSpeedConfig_type_id);
 		AimSpeedConfig = serialized->unwrap_into<rivet::ddl::generated::HeroSpeedConfig>(AimSpeedConfig_type_id);
 		JumpSpeedConfig = serialized->unwrap_into<rivet::ddl::generated::HeroSpeedConfig>(JumpSpeedConfig_type_id);
-		RunAccel = serialized->get_float(RunAccel_type_id, 35.000000);
-		RunDecel = serialized->get_float(RunDecel_type_id, 50.000000); 
+		RunAccel = serialized->get_float(RunAccel_type_id, 35.000000f);
+		RunDecel = serialized->get_float(RunDecel_type_id, 50.000000f); 
 	}
 
 	[[nodiscard]] auto

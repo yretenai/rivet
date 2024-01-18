@@ -8,10 +8,10 @@
 namespace rivet::ddl::generated {
 	AssetDbGetMaterialInfoOutput::AssetDbGetMaterialInfoOutput([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		ErrorMessage = serialized->get_string(ErrorMessage_type_id, {});
-		Success = serialized->get_uint8(Success_type_id, 0);
+		Success = serialized->get_uint8(Success_type_id, 0u);
 		JsonText = serialized->get_string(JsonText_type_id, {});
-		TimeStampLow = serialized->get_uint32(TimeStampLow_type_id, 0);
-		TimeStampHigh = serialized->get_uint32(TimeStampHigh_type_id, 0); 
+		TimeStampLow = serialized->get_uint32(TimeStampLow_type_id, 0u);
+		TimeStampHigh = serialized->get_uint32(TimeStampHigh_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

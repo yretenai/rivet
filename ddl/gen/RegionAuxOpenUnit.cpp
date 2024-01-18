@@ -10,11 +10,11 @@
 
 namespace rivet::ddl::generated {
 	RegionAuxOpenUnit::RegionAuxOpenUnit([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		FolderId = serialized->get_uint64(FolderId_type_id, 0);
+		FolderId = serialized->get_uint64(FolderId_type_id, 0ull);
 		LodPosition = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(LodPosition_type_id);
-		TileRadius = serialized->get_uint32(TileRadius_type_id, 0);
-		LoadDistance = serialized->get_uint32(LoadDistance_type_id, 0);
-		UnloadDistance = serialized->get_uint32(UnloadDistance_type_id, 0);
+		TileRadius = serialized->get_uint32(TileRadius_type_id, 0u);
+		LoadDistance = serialized->get_uint32(LoadDistance_type_id, 0u);
+		UnloadDistance = serialized->get_uint32(UnloadDistance_type_id, 0u);
 		Zones = serialized->get_strings(Zones_type_id);
 		NavExclusionZones = serialized->get_strings(NavExclusionZones_type_id);
 		NavInclusionZones = serialized->get_strings(NavInclusionZones_type_id);

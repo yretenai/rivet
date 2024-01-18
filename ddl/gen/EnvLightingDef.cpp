@@ -11,30 +11,30 @@ namespace rivet::ddl::generated {
 	EnvLightingDef::EnvLightingDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Enabled = serialized->get_bool(Enabled_type_id, true);
 		KeyLightColor = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(KeyLightColor_type_id);
-		KeyLightIntensity = serialized->get_float(KeyLightIntensity_type_id, 6.000000);
-		KeyLightAzimuth = serialized->get_float(KeyLightAzimuth_type_id, 135.000000);
-		KeyLightElevation = serialized->get_float(KeyLightElevation_type_id, 55.000000);
-		SunDiskOffsetAzimuth = serialized->get_float(SunDiskOffsetAzimuth_type_id, 0.000000);
-		SunDiskOffsetElevation = serialized->get_float(SunDiskOffsetElevation_type_id, 0.000000);
-		ShadowDrawDist = serialized->get_float(ShadowDrawDist_type_id, 240.000000);
-		CsmLodCount = serialized->get_int8(CsmLodCount_type_id, 6);
+		KeyLightIntensity = serialized->get_float(KeyLightIntensity_type_id, 6.000000f);
+		KeyLightAzimuth = serialized->get_float(KeyLightAzimuth_type_id, 135.000000f);
+		KeyLightElevation = serialized->get_float(KeyLightElevation_type_id, 55.000000f);
+		SunDiskOffsetAzimuth = serialized->get_float(SunDiskOffsetAzimuth_type_id, 0.000000f);
+		SunDiskOffsetElevation = serialized->get_float(SunDiskOffsetElevation_type_id, 0.000000f);
+		ShadowDrawDist = serialized->get_float(ShadowDrawDist_type_id, 240.000000f);
+		CsmLodCount = serialized->get_int8(CsmLodCount_type_id, 6u);
 		FarLodCaching = serialized->get_bool(FarLodCaching_type_id, true);
-		FarLodTransitionDist = serialized->get_float(FarLodTransitionDist_type_id, 0.000000);
+		FarLodTransitionDist = serialized->get_float(FarLodTransitionDist_type_id, 0.000000f);
 		FarLodPerfModeOpts = serialized->get_bool(FarLodPerfModeOpts_type_id, false);
-		TimeOfDay = serialized->get_float(TimeOfDay_type_id, 0.000000);
-		SunDiameter = serialized->get_float(SunDiameter_type_id, 0.500000);
+		TimeOfDay = serialized->get_float(TimeOfDay_type_id, 0.000000f);
+		SunDiameter = serialized->get_float(SunDiameter_type_id, 0.500000f);
 		FillLightCubeMap = serialized->get_string(FillLightCubeMap_type_id, {});
-		LightGridIntensity = serialized->get_float(LightGridIntensity_type_id, 1.000000);
-		LightGridSkyMultiplier = serialized->get_float(LightGridSkyMultiplier_type_id, 1.000000);
-		LightGridAORadius = serialized->get_float(LightGridAORadius_type_id, 15.000000);
+		LightGridIntensity = serialized->get_float(LightGridIntensity_type_id, 1.000000f);
+		LightGridSkyMultiplier = serialized->get_float(LightGridSkyMultiplier_type_id, 1.000000f);
+		LightGridAORadius = serialized->get_float(LightGridAORadius_type_id, 15.000000f);
 		LightGridModConfig = serialized->get_string(LightGridModConfig_type_id, {});
 		KeylightMaterial = serialized->get_string(KeylightMaterial_type_id, {});
-		KeylightMaterialScale = serialized->get_float(KeylightMaterialScale_type_id, 100.000000);
-		CasterRangeLower = serialized->get_float(CasterRangeLower_type_id, -10.000000);
-		CasterRangeUpper = serialized->get_float(CasterRangeUpper_type_id, 400.000000);
-		VFXLightMultiplier = serialized->get_float(VFXLightMultiplier_type_id, 1.000000);
+		KeylightMaterialScale = serialized->get_float(KeylightMaterialScale_type_id, 100.000000f);
+		CasterRangeLower = serialized->get_float(CasterRangeLower_type_id, -10.000000f);
+		CasterRangeUpper = serialized->get_float(CasterRangeUpper_type_id, 400.000000f);
+		VFXLightMultiplier = serialized->get_float(VFXLightMultiplier_type_id, 1.000000f);
 		AmbientFillColor = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(AmbientFillColor_type_id);
-		AmbientFillIntensity = serialized->get_float(AmbientFillIntensity_type_id, 0.000000); 
+		AmbientFillIntensity = serialized->get_float(AmbientFillIntensity_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

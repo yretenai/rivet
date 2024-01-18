@@ -10,8 +10,8 @@
 namespace rivet::ddl::generated {
 	Bounce::Bounce([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): GrenadeLandMode(serialized) {
 		BounceCoefs = serialized->unwrap_into_many<rivet::ddl::generated::BounceData>(BounceCoefs_type_id);
-		StopSpeed = serialized->get_float(StopSpeed_type_id, 2.000000);
-		StopSlope = serialized->get_float(StopSlope_type_id, 0.800000);
+		StopSpeed = serialized->get_float(StopSpeed_type_id, 2.000000f);
+		StopSlope = serialized->get_float(StopSlope_type_id, 0.800000f);
 		IgnoreSpeedIfOnStopSlope = serialized->get_bool(IgnoreSpeedIfOnStopSlope_type_id, false); 
 	}
 

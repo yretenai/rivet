@@ -8,9 +8,9 @@
 namespace rivet::ddl::generated {
 	VolumetricCloudsShadowDef::VolumetricCloudsShadowDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		EnabledShadow = serialized->get_bool(EnabledShadow_type_id, false);
-		ShadowBrightness = serialized->get_float(ShadowBrightness_type_id, 0.500000);
-		ShadowTiling = serialized->get_float(ShadowTiling_type_id, 1.000000);
-		ShadowSpeed = serialized->get_float(ShadowSpeed_type_id, 1.000000); 
+		ShadowBrightness = serialized->get_float(ShadowBrightness_type_id, 0.500000f);
+		ShadowTiling = serialized->get_float(ShadowTiling_type_id, 1.000000f);
+		ShadowSpeed = serialized->get_float(ShadowSpeed_type_id, 1.000000f); 
 	}
 
 	[[nodiscard]] auto

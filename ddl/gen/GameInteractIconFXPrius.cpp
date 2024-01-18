@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	GameInteractIconFXPrius::GameInteractIconFXPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EnabledComponentBasePrius(serialized) {
-		DistToDisplayLocked = serialized->get_float(DistToDisplayLocked_type_id, 5.000000);
-		DistToDisplayAvail = serialized->get_float(DistToDisplayAvail_type_id, 30.000000);
-		OutOfRangePadding = serialized->get_float(OutOfRangePadding_type_id, 2.000000);
-		AutoUseButtonPOIDist = serialized->get_float(AutoUseButtonPOIDist_type_id, 1.500000);
-		NonPOIOffCloseDist = serialized->get_float(NonPOIOffCloseDist_type_id, -1.000000); 
+		DistToDisplayLocked = serialized->get_float(DistToDisplayLocked_type_id, 5.000000f);
+		DistToDisplayAvail = serialized->get_float(DistToDisplayAvail_type_id, 30.000000f);
+		OutOfRangePadding = serialized->get_float(OutOfRangePadding_type_id, 2.000000f);
+		AutoUseButtonPOIDist = serialized->get_float(AutoUseButtonPOIDist_type_id, 1.500000f);
+		NonPOIOffCloseDist = serialized->get_float(NonPOIOffCloseDist_type_id, -1.000000f); 
 	}
 
 	[[nodiscard]] auto

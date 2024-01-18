@@ -10,7 +10,7 @@ namespace rivet::ddl::generated {
 		LinkModeState = serialized->get_enum<rivet::ddl::generated::LinkModeStates>(LinkModeState_type_id, rivet::ddl::generated::LinkModeStates_values, rivet::ddl::generated::LinkModeStates::ExitAndCancel);
 		FieldPath = serialized->get_string(FieldPath_type_id, "");
 		LinkSources = serialized->get_uint64s(LinkSources_type_id);
-		LinkDestination = serialized->get_uint64(LinkDestination_type_id, 0); 
+		LinkDestination = serialized->get_uint64(LinkDestination_type_id, 0ull); 
 	}
 
 	[[nodiscard]] auto

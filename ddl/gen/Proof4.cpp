@@ -9,22 +9,22 @@
 
 namespace rivet::ddl::generated {
 	Proof4::Proof4([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		BaseField = serialized->get_int32(BaseField_type_id, 0);
-		B = serialized->get_float(B_type_id, 0.000000);
+		BaseField = serialized->get_int32(BaseField_type_id, 0u);
+		B = serialized->get_float(B_type_id, 0.000000f);
 		D = serialized->get_double(D_type_id, 0.000000);
 		F64 = serialized->get_double(F64_type_id, 0.000000);
 		Bool = serialized->get_bool(Bool_type_id, false);
 		Boolean = serialized->get_bool(Boolean_type_id, false);
 		C = serialized->get_int32s(C_type_id);
-		BitsB = serialized->get_bitset<rivet::ddl::generated::BitsB>(BitsB_type_id, rivet::ddl::generated::BitsB_values, 0);
+		BitsB = serialized->get_bitset<rivet::ddl::generated::BitsB>(BitsB_type_id, rivet::ddl::generated::BitsB_values, 0u);
 		Proof = serialized->unwrap_into<rivet::ddl::generated::Proof3>(Proof_type_id);
 		Hash = serialized->get_int32s(Hash_type_id);
 		S = serialized->get_string(S_type_id, {});
 		F = serialized->get_string(F_type_id, {});
-		T = serialized->get_uint64(T_type_id, 0);
+		T = serialized->get_uint64(T_type_id, 0ull);
 		J = serialized->get_field(J_type_id);
-		A = serialized->get_uint64(A_type_id, 0);
-		U32b = serialized->get_uint32(U32b_type_id, 0);
+		A = serialized->get_uint64(A_type_id, 0ull);
+		U32b = serialized->get_uint32(U32b_type_id, 0u);
 		MLS = serialized->get_string(MLS_type_id, {});
 		DM = serialized->get_string(DM_type_id, {}); 
 	}

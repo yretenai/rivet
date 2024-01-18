@@ -9,9 +9,9 @@
 
 namespace rivet::ddl::generated {
 	SubBurst::SubBurst([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		PauseDurationMin = serialized->get_float(PauseDurationMin_type_id, 0.300000);
-		PauseDurationMax = serialized->get_float(PauseDurationMax_type_id, 0.500000);
-		PauseDuration = serialized->get_float(PauseDuration_type_id, 0.000000);
+		PauseDurationMin = serialized->get_float(PauseDurationMin_type_id, 0.300000f);
+		PauseDurationMax = serialized->get_float(PauseDurationMax_type_id, 0.500000f);
+		PauseDuration = serialized->get_float(PauseDuration_type_id, 0.000000f);
 		Burst = serialized->unwrap_into<rivet::ddl::generated::Burst>(Burst_type_id); 
 	}
 

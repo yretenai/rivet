@@ -11,7 +11,7 @@
 
 namespace rivet::ddl::generated {
 	CollisionCastBaseActionPrius::CollisionCastBaseActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		CollisionFlags = serialized->get_bitset<rivet::ddl::generated::PhysicsCollFlags>(CollisionFlags_type_id, rivet::ddl::generated::PhysicsCollFlags_values, 5); 
+		CollisionFlags = serialized->get_bitset<rivet::ddl::generated::PhysicsCollFlags>(CollisionFlags_type_id, rivet::ddl::generated::PhysicsCollFlags_values, 5u); 
 	}
 
 	[[nodiscard]] auto

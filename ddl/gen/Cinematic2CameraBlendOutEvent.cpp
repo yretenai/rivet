@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	Cinematic2CameraBlendOutEvent::Cinematic2CameraBlendOutEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		CameraBlendDuration = serialized->get_float(CameraBlendDuration_type_id, -1.000000);
+		CameraBlendDuration = serialized->get_float(CameraBlendDuration_type_id, -1.000000f);
 		PruneFollowTransition = serialized->get_bool(PruneFollowTransition_type_id, true); 
 	}
 

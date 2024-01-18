@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	LosHeuristics::LosHeuristics([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Weight = serialized->get_float(Weight_type_id, 2.000000);
-		VisibleTimeMax = serialized->get_float(VisibleTimeMax_type_id, 5.000000);
-		HiddenTimeMax = serialized->get_float(HiddenTimeMax_type_id, 10.000000); 
+		Weight = serialized->get_float(Weight_type_id, 2.000000f);
+		VisibleTimeMax = serialized->get_float(VisibleTimeMax_type_id, 5.000000f);
+		HiddenTimeMax = serialized->get_float(HiddenTimeMax_type_id, 10.000000f); 
 	}
 
 	[[nodiscard]] auto

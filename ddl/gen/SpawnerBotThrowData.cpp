@@ -9,9 +9,9 @@ namespace rivet::ddl::generated {
 	SpawnerBotThrowData::SpawnerBotThrowData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		ThrowSpawnedBots = serialized->get_bool(ThrowSpawnedBots_type_id, true);
 		ThrowFromJoint = serialized->get_string(ThrowFromJoint_type_id, "kigLoc_spawner");
-		ThrowHeight = serialized->get_float(ThrowHeight_type_id, 2.000000);
-		ThrowRangeMin = serialized->get_float(ThrowRangeMin_type_id, 3.000000);
-		ThrowRangeMax = serialized->get_float(ThrowRangeMax_type_id, 5.000000); 
+		ThrowHeight = serialized->get_float(ThrowHeight_type_id, 2.000000f);
+		ThrowRangeMin = serialized->get_float(ThrowRangeMin_type_id, 3.000000f);
+		ThrowRangeMax = serialized->get_float(ThrowRangeMax_type_id, 5.000000f); 
 	}
 
 	[[nodiscard]] auto

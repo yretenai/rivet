@@ -10,10 +10,10 @@ namespace rivet::ddl::generated {
 		Comment = serialized->get_string(Comment_type_id, {});
 		MinKnockbackLevel = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(MinKnockbackLevel_type_id, rivet::ddl::generated::KnockbackLevels_values, rivet::ddl::generated::KnockbackLevels::None);
 		MaxKnockbackLevel = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(MaxKnockbackLevel_type_id, rivet::ddl::generated::KnockbackLevels_values, rivet::ddl::generated::KnockbackLevels::None);
-		KnockbackFillThreshhold = serialized->get_float(KnockbackFillThreshhold_type_id, 100.000000);
-		InitialFill = serialized->get_float(InitialFill_type_id, 99.000000);
-		ReactCooldown = serialized->get_float(ReactCooldown_type_id, -1.000000);
-		RefillRate = serialized->get_float(RefillRate_type_id, 6.250000);
+		KnockbackFillThreshhold = serialized->get_float(KnockbackFillThreshhold_type_id, 100.000000f);
+		InitialFill = serialized->get_float(InitialFill_type_id, 99.000000f);
+		ReactCooldown = serialized->get_float(ReactCooldown_type_id, -1.000000f);
+		RefillRate = serialized->get_float(RefillRate_type_id, 6.250000f);
 		EmptyLowerBucketsOnReact = serialized->get_bool(EmptyLowerBucketsOnReact_type_id, true);
 		Reaction = serialized->get_enum<rivet::ddl::generated::xf7b2e7be>(Reaction_type_id, rivet::ddl::generated::xf7b2e7be_values, rivet::ddl::generated::xf7b2e7be::Knockback); 
 	}

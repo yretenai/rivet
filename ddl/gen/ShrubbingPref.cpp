@@ -8,16 +8,16 @@
 namespace rivet::ddl::generated {
 	ShrubbingPref::ShrubbingPref([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Algorithm = serialized->get_enum<rivet::ddl::generated::x6ad2490c>(Algorithm_type_id, rivet::ddl::generated::x6ad2490c_values, rivet::ddl::generated::x6ad2490c::Fixed_angle);
-		Rotation = serialized->get_float(Rotation_type_id, 0.000000);
-		RotationRandom = serialized->get_float(RotationRandom_type_id, 1.000000);
-		NormalTilt = serialized->get_float(NormalTilt_type_id, 1.000000);
-		Scale = serialized->get_float(Scale_type_id, 1.000000);
-		ScaleRandom = serialized->get_float(ScaleRandom_type_id, 1.000000);
+		Rotation = serialized->get_float(Rotation_type_id, 0.000000f);
+		RotationRandom = serialized->get_float(RotationRandom_type_id, 1.000000f);
+		NormalTilt = serialized->get_float(NormalTilt_type_id, 1.000000f);
+		Scale = serialized->get_float(Scale_type_id, 1.000000f);
+		ScaleRandom = serialized->get_float(ScaleRandom_type_id, 1.000000f);
 		WheelControl = serialized->get_enum<rivet::ddl::generated::xc6714fdc>(WheelControl_type_id, rivet::ddl::generated::xc6714fdc_values, rivet::ddl::generated::xc6714fdc::Radius);
-		Radius = serialized->get_float(Radius_type_id, 2.000000);
-		Height = serialized->get_float(Height_type_id, 2.000000);
-		Density = serialized->get_float(Density_type_id, 0.350000);
-		Footprint = serialized->get_float(Footprint_type_id, 1.000000); 
+		Radius = serialized->get_float(Radius_type_id, 2.000000f);
+		Height = serialized->get_float(Height_type_id, 2.000000f);
+		Density = serialized->get_float(Density_type_id, 0.350000f);
+		Footprint = serialized->get_float(Footprint_type_id, 1.000000f); 
 	}
 
 	[[nodiscard]] auto

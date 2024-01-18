@@ -9,13 +9,13 @@ namespace rivet::ddl::generated {
 	PrototypeMessageActionPrius::PrototypeMessageActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Debug);
 		MessageText = serialized->get_string(MessageText_type_id, "");
-		Duration = serialized->get_float(Duration_type_id, 6.000000);
+		Duration = serialized->get_float(Duration_type_id, 6.000000f);
 		ClearAllMsgs = serialized->get_bool(ClearAllMsgs_type_id, false);
-		PosX = serialized->get_uint32(PosX_type_id, 960);
-		PosY = serialized->get_uint32(PosY_type_id, 540);
+		PosX = serialized->get_uint32(PosX_type_id, 960u);
+		PosY = serialized->get_uint32(PosY_type_id, 540u);
 		Position3D = serialized->get_bool(Position3D_type_id, false);
 		Align = serialized->get_enum<rivet::ddl::generated::x1946b734>(Align_type_id, rivet::ddl::generated::x1946b734_values, rivet::ddl::generated::x1946b734::Left);
-		Fontsize = serialized->get_float(Fontsize_type_id, 24.000000);
+		Fontsize = serialized->get_float(Fontsize_type_id, 24.000000f);
 		ColorPick = serialized->get_enum<rivet::ddl::generated::x1264b76c>(ColorPick_type_id, rivet::ddl::generated::x1264b76c_values, rivet::ddl::generated::x1264b76c::Gray);
 		FormatAsInt = serialized->get_bool(FormatAsInt_type_id, true);
 		HideOnRegionLoad = serialized->get_bool(HideOnRegionLoad_type_id, false);

@@ -18,22 +18,22 @@ namespace rivet::ddl::generated {
 		FailAllAssetLoads = serialized->get_bool(FailAllAssetLoads_type_id, false);
 		FailAssetsAsMissing = serialized->get_bool(FailAssetsAsMissing_type_id, false);
 		VerifyModelsHaveNoPhysicsOnDestruction = serialized->get_bool(VerifyModelsHaveNoPhysicsOnDestruction_type_id, false);
-		ScriptDebugPort = serialized->get_uint16(ScriptDebugPort_type_id, 1211);
-		ScriptSignalsPerFrameMax = serialized->get_uint32(ScriptSignalsPerFrameMax_type_id, 1024);
+		ScriptDebugPort = serialized->get_uint16(ScriptDebugPort_type_id, 1211u);
+		ScriptSignalsPerFrameMax = serialized->get_uint32(ScriptSignalsPerFrameMax_type_id, 1024u);
 		EnableTopAsserts = serialized->get_bool(EnableTopAsserts_type_id, false);
 		ExtraTextureMemAllocChecks = serialized->get_bool(ExtraTextureMemAllocChecks_type_id, false);
 		StallGameAfterLoadBeforeUpdates = serialized->get_bool(StallGameAfterLoadBeforeUpdates_type_id, false);
 		ErrorActorsEnable = serialized->get_bool(ErrorActorsEnable_type_id, true);
-		AssetLoadTextPosX = serialized->get_uint32(AssetLoadTextPosX_type_id, 20);
-		AssetLoadTextPosY = serialized->get_uint32(AssetLoadTextPosY_type_id, 20);
+		AssetLoadTextPosX = serialized->get_uint32(AssetLoadTextPosX_type_id, 20u);
+		AssetLoadTextPosY = serialized->get_uint32(AssetLoadTextPosY_type_id, 20u);
 		DebugMenuEnable = serialized->get_bool(DebugMenuEnable_type_id, false);
 		DebugMenuEasyDebugDelay = serialized->get_bool(DebugMenuEasyDebugDelay_type_id, true);
-		TargetVertexDensityLow = serialized->get_float(TargetVertexDensityLow_type_id, 0.050000);
-		TargetVertexDensityHigh = serialized->get_float(TargetVertexDensityHigh_type_id, 0.500000);
-		TargetTexelsPerMeterLow = serialized->get_float(TargetTexelsPerMeterLow_type_id, 0.000000);
-		TargetTexelsPerMeterHigh = serialized->get_float(TargetTexelsPerMeterHigh_type_id, 1200.000000);
-		EnvProbeLookupRangeLow = serialized->get_uint16(EnvProbeLookupRangeLow_type_id, 2);
-		EnvProbeLookupRangeHigh = serialized->get_uint16(EnvProbeLookupRangeHigh_type_id, 10); 
+		TargetVertexDensityLow = serialized->get_float(TargetVertexDensityLow_type_id, 0.050000f);
+		TargetVertexDensityHigh = serialized->get_float(TargetVertexDensityHigh_type_id, 0.500000f);
+		TargetTexelsPerMeterLow = serialized->get_float(TargetTexelsPerMeterLow_type_id, 0.000000f);
+		TargetTexelsPerMeterHigh = serialized->get_float(TargetTexelsPerMeterHigh_type_id, 1200.000000f);
+		EnvProbeLookupRangeLow = serialized->get_uint16(EnvProbeLookupRangeLow_type_id, 2u);
+		EnvProbeLookupRangeHigh = serialized->get_uint16(EnvProbeLookupRangeHigh_type_id, 10u); 
 	}
 
 	[[nodiscard]] auto

@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	HarpoonStreamStopEvent::HarpoonStreamStopEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		StreamLength = serialized->get_float(StreamLength_type_id, 1.000000); 
+		StreamLength = serialized->get_float(StreamLength_type_id, 1.000000f); 
 	}
 
 	[[nodiscard]] auto

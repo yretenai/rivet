@@ -7,15 +7,15 @@
 
 namespace rivet::ddl::generated {
 	ShootAtCurveFollowTarget::ShootAtCurveFollowTarget([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ShootAtMortarFiringStyle(serialized) {
-		InitFollowSpeed = serialized->get_float(InitFollowSpeed_type_id, 4.000000);
-		MaxFollowSpeed = serialized->get_float(MaxFollowSpeed_type_id, 10.000000);
-		FollowAccel = serialized->get_float(FollowAccel_type_id, 3.000000);
-		FollowDecel = serialized->get_float(FollowDecel_type_id, 2.000000);
+		InitFollowSpeed = serialized->get_float(InitFollowSpeed_type_id, 4.000000f);
+		MaxFollowSpeed = serialized->get_float(MaxFollowSpeed_type_id, 10.000000f);
+		FollowAccel = serialized->get_float(FollowAccel_type_id, 3.000000f);
+		FollowDecel = serialized->get_float(FollowDecel_type_id, 2.000000f);
 		FollowWhileFiring = serialized->get_bool(FollowWhileFiring_type_id, false);
 		OrientTowardsTarget = serialized->get_bool(OrientTowardsTarget_type_id, false);
 		PredictTargetPos = serialized->get_bool(PredictTargetPos_type_id, false);
-		MaxPredictSpeed = serialized->get_float(MaxPredictSpeed_type_id, 15.000000);
-		ExpectedMortarTime = serialized->get_float(ExpectedMortarTime_type_id, 1.000000);
+		MaxPredictSpeed = serialized->get_float(MaxPredictSpeed_type_id, 15.000000f);
+		ExpectedMortarTime = serialized->get_float(ExpectedMortarTime_type_id, 1.000000f);
 		ClampToCombatArea = serialized->get_bool(ClampToCombatArea_type_id, false); 
 	}
 

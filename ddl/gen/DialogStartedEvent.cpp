@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	DialogStartedEvent::DialogStartedEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		PlayCountId = serialized->get_uint16(PlayCountId_type_id, 0);
+		PlayCountId = serialized->get_uint16(PlayCountId_type_id, 0u);
 		SoundEventName = serialized->get_string(SoundEventName_type_id, {}); 
 	}
 

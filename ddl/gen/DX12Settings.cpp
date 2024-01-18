@@ -12,7 +12,7 @@ namespace rivet::ddl::generated {
 		DX12UnrollResourceBarrierSubmission = serialized->get_bool(DX12UnrollResourceBarrierSubmission_type_id, false);
 		DX12EnableAsyncResourceCreation = serialized->get_bool(DX12EnableAsyncResourceCreation_type_id, false);
 		DX12EnableAsyncPipelineCreation = serialized->get_bool(DX12EnableAsyncPipelineCreation_type_id, true);
-		DX12MaxPipelineCreateThreads = serialized->get_uint32(DX12MaxPipelineCreateThreads_type_id, 6);
+		DX12MaxPipelineCreateThreads = serialized->get_uint32(DX12MaxPipelineCreateThreads_type_id, 6u);
 		DX12UseCopyQueueForUploadPool = serialized->get_bool(DX12UseCopyQueueForUploadPool_type_id, true);
 		DX12EnableAutomaticMemoryMoving = serialized->get_bool(DX12EnableAutomaticMemoryMoving_type_id, true);
 		DX12EnableSmallReadbackBufferAllocators = serialized->get_bool(DX12EnableSmallReadbackBufferAllocators_type_id, true);
@@ -20,13 +20,13 @@ namespace rivet::ddl::generated {
 		DX12EnableRayTracingBufferAllocators = serialized->get_bool(DX12EnableRayTracingBufferAllocators_type_id, true);
 		DX12EnableRenderTargetAllocators = serialized->get_bool(DX12EnableRenderTargetAllocators_type_id, true);
 		DX12EnableAutomaticMemoryMovingStressTest = serialized->get_bool(DX12EnableAutomaticMemoryMovingStressTest_type_id, false);
-		DX12AutomaticMemoryMovingMinFreeVideoMemory = serialized->get_uint64(DX12AutomaticMemoryMovingMinFreeVideoMemory_type_id, 268435456);
-		DX12AutomaticMemoryMovingMaxFreeVideoMemory = serialized->get_uint64(DX12AutomaticMemoryMovingMaxFreeVideoMemory_type_id, 671088640);
-		DX12AutomaticMemoryMovingMinFreeSystemMemory = serialized->get_uint64(DX12AutomaticMemoryMovingMinFreeSystemMemory_type_id, 536870912);
-		DX12AutomaticMemoryMovingMaxResourceSize = serialized->get_uint64(DX12AutomaticMemoryMovingMaxResourceSize_type_id, 1073741824);
-		DX12AutomaticMemoryMovingMaxSecondsPerFrame = serialized->get_float(DX12AutomaticMemoryMovingMaxSecondsPerFrame_type_id, 0.004000);
-		DX12AutomaticMemoryMovingSizePriorityMaxSize = serialized->get_uint64(DX12AutomaticMemoryMovingSizePriorityMaxSize_type_id, 209715200);
-		DX12AutomaticMemoryMovingDebugVideoBudget = serialized->get_uint64(DX12AutomaticMemoryMovingDebugVideoBudget_type_id, 0);
+		DX12AutomaticMemoryMovingMinFreeVideoMemory = serialized->get_uint64(DX12AutomaticMemoryMovingMinFreeVideoMemory_type_id, 268435456ull);
+		DX12AutomaticMemoryMovingMaxFreeVideoMemory = serialized->get_uint64(DX12AutomaticMemoryMovingMaxFreeVideoMemory_type_id, 671088640ull);
+		DX12AutomaticMemoryMovingMinFreeSystemMemory = serialized->get_uint64(DX12AutomaticMemoryMovingMinFreeSystemMemory_type_id, 536870912ull);
+		DX12AutomaticMemoryMovingMaxResourceSize = serialized->get_uint64(DX12AutomaticMemoryMovingMaxResourceSize_type_id, 1073741824ull);
+		DX12AutomaticMemoryMovingMaxSecondsPerFrame = serialized->get_float(DX12AutomaticMemoryMovingMaxSecondsPerFrame_type_id, 0.004000f);
+		DX12AutomaticMemoryMovingSizePriorityMaxSize = serialized->get_uint64(DX12AutomaticMemoryMovingSizePriorityMaxSize_type_id, 209715200ull);
+		DX12AutomaticMemoryMovingDebugVideoBudget = serialized->get_uint64(DX12AutomaticMemoryMovingDebugVideoBudget_type_id, 0ull);
 		DX12DisplayAutomaticMemoryMovingStats = serialized->get_bool(DX12DisplayAutomaticMemoryMovingStats_type_id, false);
 		DX12EnableAutomaticMovingThread = serialized->get_enum<rivet::ddl::generated::xd8ef7ea5>(DX12EnableAutomaticMovingThread_type_id, rivet::ddl::generated::xd8ef7ea5_values, rivet::ddl::generated::xd8ef7ea5::Memory_Thread);
 		DX12EnableDeferredReleaseThread = serialized->get_enum<rivet::ddl::generated::xd8ef7ea5>(DX12EnableDeferredReleaseThread_type_id, rivet::ddl::generated::xd8ef7ea5_values, rivet::ddl::generated::xd8ef7ea5::Memory_Thread);
@@ -46,8 +46,8 @@ namespace rivet::ddl::generated {
 		DX12RaytracingEnableAMDHacks = serialized->get_bool(DX12RaytracingEnableAMDHacks_type_id, true);
 		DX12CompactZoneBVHs = serialized->get_bool(DX12CompactZoneBVHs_type_id, true);
 		DX12MinimizeZoneBVHs = serialized->get_bool(DX12MinimizeZoneBVHs_type_id, true);
-		DX12RaytracingMaxModelsPerFrame = serialized->get_uint32(DX12RaytracingMaxModelsPerFrame_type_id, 32);
-		DX12RaytracingMaxZonesPerFrame = serialized->get_uint32(DX12RaytracingMaxZonesPerFrame_type_id, 16);
+		DX12RaytracingMaxModelsPerFrame = serialized->get_uint32(DX12RaytracingMaxModelsPerFrame_type_id, 32u);
+		DX12RaytracingMaxZonesPerFrame = serialized->get_uint32(DX12RaytracingMaxZonesPerFrame_type_id, 16u);
 		DX12UseCPUBufferOptimize = serialized->get_bool(DX12UseCPUBufferOptimize_type_id, false); 
 	}
 

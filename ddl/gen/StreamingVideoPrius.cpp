@@ -12,7 +12,7 @@ namespace rivet::ddl::generated {
 		Config = serialized->get_string(Config_type_id, {});
 		PreloadVideo = serialized->get_bool(PreloadVideo_type_id, false);
 		PlayOnActivation = serialized->get_bool(PlayOnActivation_type_id, true);
-		ActivationDelay = serialized->get_float(ActivationDelay_type_id, -1.000000);
+		ActivationDelay = serialized->get_float(ActivationDelay_type_id, -1.000000f);
 		MaterialOverride = serialized->unwrap_into<rivet::ddl::generated::StreamingVideoMaterialOverride>(MaterialOverride_type_id);
 		ExtraMaterialOverrides = serialized->unwrap_into_many<rivet::ddl::generated::StreamingVideoMaterialOverride>(ExtraMaterialOverrides_type_id);
 		TextureToReplace = serialized->get_string(TextureToReplace_type_id, {});

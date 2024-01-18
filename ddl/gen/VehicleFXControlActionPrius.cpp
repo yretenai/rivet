@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	VehicleFXControlActionPrius::VehicleFXControlActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::Traffic);
-		EnabledFX = serialized->get_bitset<rivet::ddl::generated::x54399bf0>(EnabledFX_type_id, rivet::ddl::generated::x54399bf0_values, 7); 
+		EnabledFX = serialized->get_bitset<rivet::ddl::generated::x54399bf0>(EnabledFX_type_id, rivet::ddl::generated::x54399bf0_values, 7u); 
 	}
 
 	[[nodiscard]] auto

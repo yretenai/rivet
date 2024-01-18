@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	HealthDropTier::HealthDropTier([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		HealthPrecentage = serialized->get_float(HealthPrecentage_type_id, 60.000000);
-		DropPercentage = serialized->get_float(DropPercentage_type_id, 20.000000); 
+		HealthPrecentage = serialized->get_float(HealthPrecentage_type_id, 60.000000f);
+		DropPercentage = serialized->get_float(DropPercentage_type_id, 20.000000f); 
 	}
 
 	[[nodiscard]] auto

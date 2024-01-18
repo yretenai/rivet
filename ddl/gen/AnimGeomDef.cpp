@@ -13,8 +13,8 @@ namespace rivet::ddl::generated {
 		IconPath = serialized->get_string(IconPath_type_id, "");
 		AbcFilename = serialized->get_string(AbcFilename_type_id, {});
 		FilterNodeName = serialized->get_string(FilterNodeName_type_id, {});
-		StartFrame = serialized->get_int32(StartFrame_type_id, 0);
-		EndFrame = serialized->get_int32(EndFrame_type_id, 0);
+		StartFrame = serialized->get_int32(StartFrame_type_id, 0u);
+		EndFrame = serialized->get_int32(EndFrame_type_id, 0u);
 		IsLooping = serialized->get_bool(IsLooping_type_id, false); 
 	}
 

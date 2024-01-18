@@ -11,9 +11,9 @@ namespace rivet::ddl::generated {
 	AimModAdvContractingSpreadPrius::AimModAdvContractingSpreadPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): AimModifierPrius(serialized) {
 		InitialVolley = serialized->unwrap_into<rivet::ddl::generated::ContractingVolley>(InitialVolley_type_id);
 		FinalVolley = serialized->unwrap_into<rivet::ddl::generated::ContractingVolley>(FinalVolley_type_id);
-		VolleysToReachFinal = serialized->get_float(VolleysToReachFinal_type_id, 0.000000);
-		ResetTime = serialized->get_float(ResetTime_type_id, 0.000000);
-		ResetDist = serialized->get_float(ResetDist_type_id, 0.000000); 
+		VolleysToReachFinal = serialized->get_float(VolleysToReachFinal_type_id, 0.000000f);
+		ResetTime = serialized->get_float(ResetTime_type_id, 0.000000f);
+		ResetDist = serialized->get_float(ResetDist_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

@@ -7,23 +7,23 @@
 
 namespace rivet::ddl::generated {
 	FlightAreaFirepointHunterPrius::FlightAreaFirepointHunterPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MinPlanarDistance = serialized->get_float(MinPlanarDistance_type_id, 10.000000);
-		MaxPlanarDistance = serialized->get_float(MaxPlanarDistance_type_id, 40.000000);
-		MinVerticalOffset = serialized->get_float(MinVerticalOffset_type_id, 3.000000);
-		MaxElevationDegrees = serialized->get_float(MaxElevationDegrees_type_id, 20.000000);
-		MaxTargetDistance = serialized->get_float(MaxTargetDistance_type_id, 80.000000);
-		MinPosDelta = serialized->get_float(MinPosDelta_type_id, 5.000000);
-		MaxPosDelta = serialized->get_float(MaxPosDelta_type_id, 25.000000);
+		MinPlanarDistance = serialized->get_float(MinPlanarDistance_type_id, 10.000000f);
+		MaxPlanarDistance = serialized->get_float(MaxPlanarDistance_type_id, 40.000000f);
+		MinVerticalOffset = serialized->get_float(MinVerticalOffset_type_id, 3.000000f);
+		MaxElevationDegrees = serialized->get_float(MaxElevationDegrees_type_id, 20.000000f);
+		MaxTargetDistance = serialized->get_float(MaxTargetDistance_type_id, 80.000000f);
+		MinPosDelta = serialized->get_float(MinPosDelta_type_id, 5.000000f);
+		MaxPosDelta = serialized->get_float(MaxPosDelta_type_id, 25.000000f);
 		PreferVolumeSwitch = serialized->get_bool(PreferVolumeSwitch_type_id, false);
-		RatingLos = serialized->get_float(RatingLos_type_id, 8.000000);
-		RatingLosError = serialized->get_float(RatingLosError_type_id, 4.000000);
-		RatingDistance = serialized->get_float(RatingDistance_type_id, 4.000000);
-		RatingDistanceError = serialized->get_float(RatingDistanceError_type_id, 2.000000);
-		RatingTargetDistance = serialized->get_float(RatingTargetDistance_type_id, 4.000000);
-		RatingElev = serialized->get_float(RatingElev_type_id, 2.000000);
-		RatingElevError = serialized->get_float(RatingElevError_type_id, 1.000000);
-		RatingPositionDelta = serialized->get_float(RatingPositionDelta_type_id, 1.000000);
-		RatingVolumeWeight = serialized->get_float(RatingVolumeWeight_type_id, -3.000000); 
+		RatingLos = serialized->get_float(RatingLos_type_id, 8.000000f);
+		RatingLosError = serialized->get_float(RatingLosError_type_id, 4.000000f);
+		RatingDistance = serialized->get_float(RatingDistance_type_id, 4.000000f);
+		RatingDistanceError = serialized->get_float(RatingDistanceError_type_id, 2.000000f);
+		RatingTargetDistance = serialized->get_float(RatingTargetDistance_type_id, 4.000000f);
+		RatingElev = serialized->get_float(RatingElev_type_id, 2.000000f);
+		RatingElevError = serialized->get_float(RatingElevError_type_id, 1.000000f);
+		RatingPositionDelta = serialized->get_float(RatingPositionDelta_type_id, 1.000000f);
+		RatingVolumeWeight = serialized->get_float(RatingVolumeWeight_type_id, -3.000000f); 
 	}
 
 	[[nodiscard]] auto

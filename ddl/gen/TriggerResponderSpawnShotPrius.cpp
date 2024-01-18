@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	TriggerResponderSpawnShotPrius::TriggerResponderSpawnShotPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): TriggerResponderBasePrius(serialized) {
-		ShotIndex = serialized->get_int32(ShotIndex_type_id, 0); 
+		ShotIndex = serialized->get_int32(ShotIndex_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

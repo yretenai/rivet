@@ -10,7 +10,7 @@
 namespace rivet::ddl::generated {
 	TriggerByOthersPrius::TriggerByOthersPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): TriggerByBasePrius(serialized) {
 		Mode = serialized->get_enum<rivet::ddl::generated::x6200f389>(Mode_type_id, rivet::ddl::generated::x6200f389_values, rivet::ddl::generated::x6200f389::All);
-		Number = serialized->get_int32(Number_type_id, 1);
+		Number = serialized->get_int32(Number_type_id, 1u);
 		TriggeringActors = serialized->unwrap_into_many<rivet::ddl::generated::TriggerByOthersEntry>(TriggeringActors_type_id); 
 	}
 

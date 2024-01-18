@@ -15,7 +15,7 @@ namespace rivet::ddl::generated {
 		Constants = serialized->unwrap_into<rivet::ddl::generated::DDLVector4>(Constants_type_id);
 		Color = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Color_type_id);
 		Texture = serialized->get_string(Texture_type_id, {});
-		LightHandle = serialized->get_uint32(LightHandle_type_id, 0); 
+		LightHandle = serialized->get_uint32(LightHandle_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

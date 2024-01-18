@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	LootTableElement::LootTableElement([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		LootListConfig = serialized->get_string(LootListConfig_type_id, {});
-		DropChance = serialized->get_float(DropChance_type_id, 10.000000); 
+		DropChance = serialized->get_float(DropChance_type_id, 10.000000f); 
 	}
 
 	[[nodiscard]] auto

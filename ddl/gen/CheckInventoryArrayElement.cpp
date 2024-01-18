@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	CheckInventoryArrayElement::CheckInventoryArrayElement([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		ItemConfig = serialized->get_string(ItemConfig_type_id, {});
-		Count = serialized->get_uint32(Count_type_id, 1);
+		Count = serialized->get_uint32(Count_type_id, 1u);
 		Equipped = serialized->get_bool(Equipped_type_id, false); 
 	}
 

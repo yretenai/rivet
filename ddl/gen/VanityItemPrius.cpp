@@ -9,7 +9,7 @@
 
 namespace rivet::ddl::generated {
 	VanityItemPrius::VanityItemPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): SkinItemPrius(serialized) {
-		BeenPreviewed = serialized->get_uint8(BeenPreviewed_type_id, 0);
+		BeenPreviewed = serialized->get_uint8(BeenPreviewed_type_id, 0u);
 		Color = serialized->unwrap_into<rivet::ddl::generated::VanityColorData>(Color_type_id); 
 	}
 

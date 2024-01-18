@@ -8,8 +8,8 @@
 namespace rivet::ddl::generated {
 	CurveFollowerSimplePrius::CurveFollowerSimplePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		CurveFollowMode = serialized->get_enum<rivet::ddl::generated::x96b277fe>(CurveFollowMode_type_id, rivet::ddl::generated::x96b277fe_values, rivet::ddl::generated::x96b277fe::Loop);
-		Speed = serialized->get_float(Speed_type_id, 10.000000);
-		WaitDuration = serialized->get_float(WaitDuration_type_id, 1.000000); 
+		Speed = serialized->get_float(Speed_type_id, 10.000000f);
+		WaitDuration = serialized->get_float(WaitDuration_type_id, 1.000000f); 
 	}
 
 	[[nodiscard]] auto

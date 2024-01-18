@@ -23,15 +23,15 @@ namespace rivet::ddl::generated {
 		RandomizeY = serialized->get_bool(RandomizeY_type_id, false);
 		RandomizeZ = serialized->get_bool(RandomizeZ_type_id, false);
 		RandomizeT = serialized->get_bool(RandomizeT_type_id, false);
-		InitialSpawnDelayMin = serialized->get_float(InitialSpawnDelayMin_type_id, 0.000000);
-		InitialSpawnDelayMax = serialized->get_float(InitialSpawnDelayMax_type_id, 0.000000);
-		SpawnIntervalMin = serialized->get_float(SpawnIntervalMin_type_id, 0.035000);
-		SpawnIntervalMax = serialized->get_float(SpawnIntervalMax_type_id, 0.035000);
-		RespawnDelayMin = serialized->get_float(RespawnDelayMin_type_id, 0.000000);
-		RespawnDelayMax = serialized->get_float(RespawnDelayMax_type_id, 0.000000);
-		NumSpawns = serialized->get_int32(NumSpawns_type_id, 0);
+		InitialSpawnDelayMin = serialized->get_float(InitialSpawnDelayMin_type_id, 0.000000f);
+		InitialSpawnDelayMax = serialized->get_float(InitialSpawnDelayMax_type_id, 0.000000f);
+		SpawnIntervalMin = serialized->get_float(SpawnIntervalMin_type_id, 0.035000f);
+		SpawnIntervalMax = serialized->get_float(SpawnIntervalMax_type_id, 0.035000f);
+		RespawnDelayMin = serialized->get_float(RespawnDelayMin_type_id, 0.000000f);
+		RespawnDelayMax = serialized->get_float(RespawnDelayMax_type_id, 0.000000f);
+		NumSpawns = serialized->get_int32(NumSpawns_type_id, 0u);
 		MaxSimultaneousSpawns = serialized->get_int32(MaxSimultaneousSpawns_type_id, -1);
-		MinDistanceFromPlayers = serialized->get_float(MinDistanceFromPlayers_type_id, -1.000000); 
+		MinDistanceFromPlayers = serialized->get_float(MinDistanceFromPlayers_type_id, -1.000000f); 
 	}
 
 	[[nodiscard]] auto

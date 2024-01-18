@@ -8,8 +8,8 @@
 namespace rivet::ddl::generated {
 	HUDVisibilityActionPrius::HUDVisibilityActionPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		ActionType = serialized->get_enum<rivet::ddl::generated::x10228b34>(ActionType_type_id, rivet::ddl::generated::x10228b34_values, rivet::ddl::generated::x10228b34::UI);
-		ComponentsChangedFlags = serialized->get_bitset<rivet::ddl::generated::x59818fe0>(ComponentsChangedFlags_type_id, rivet::ddl::generated::x59818fe0_values, 1);
-		OptionFlags = serialized->get_bitset<rivet::ddl::generated::x9976600e>(OptionFlags_type_id, rivet::ddl::generated::x9976600e_values, 0); 
+		ComponentsChangedFlags = serialized->get_bitset<rivet::ddl::generated::x59818fe0>(ComponentsChangedFlags_type_id, rivet::ddl::generated::x59818fe0_values, 1u);
+		OptionFlags = serialized->get_bitset<rivet::ddl::generated::x9976600e>(OptionFlags_type_id, rivet::ddl::generated::x9976600e_values, 0u); 
 	}
 
 	[[nodiscard]] auto

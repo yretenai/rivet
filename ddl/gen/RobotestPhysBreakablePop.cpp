@@ -12,12 +12,12 @@ namespace rivet::ddl::generated {
 	RobotestPhysBreakablePop::RobotestPhysBreakablePop([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		TestName = serialized->get_string(TestName_type_id, {});
 		Actor = serialized->unwrap_into<rivet::ddl::generated::RobotestBasicActorInfo>(Actor_type_id);
-		ChunkPoolInUse = serialized->get_uint16(ChunkPoolInUse_type_id, 0);
-		ChunkPoolMax = serialized->get_uint16(ChunkPoolMax_type_id, 0);
-		MinRadius = serialized->get_float(MinRadius_type_id, 0.000000);
-		AddToIndex = serialized->get_float(AddToIndex_type_id, 0.000000);
-		ChunkSpawnCountIdeal = serialized->get_uint16(ChunkSpawnCountIdeal_type_id, 0);
-		DebrisPerChunk = serialized->get_int16(DebrisPerChunk_type_id, 0);
+		ChunkPoolInUse = serialized->get_uint16(ChunkPoolInUse_type_id, 0u);
+		ChunkPoolMax = serialized->get_uint16(ChunkPoolMax_type_id, 0u);
+		MinRadius = serialized->get_float(MinRadius_type_id, 0.000000f);
+		AddToIndex = serialized->get_float(AddToIndex_type_id, 0.000000f);
+		ChunkSpawnCountIdeal = serialized->get_uint16(ChunkSpawnCountIdeal_type_id, 0u);
+		DebrisPerChunk = serialized->get_int16(DebrisPerChunk_type_id, 0u);
 		Chunks = serialized->unwrap_into_many<rivet::ddl::generated::RobotestPhysBreakableChunkInfo>(Chunks_type_id); 
 	}
 

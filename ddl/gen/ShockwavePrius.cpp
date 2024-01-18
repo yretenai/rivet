@@ -9,21 +9,21 @@
 
 namespace rivet::ddl::generated {
 	ShockwavePrius::ShockwavePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Damage = serialized->get_float(Damage_type_id, 1.000000);
-		StartRadius = serialized->get_float(StartRadius_type_id, 0.000000);
-		Radius = serialized->get_float(Radius_type_id, 10.000000);
-		Height = serialized->get_float(Height_type_id, 0.500000);
-		Thickness = serialized->get_float(Thickness_type_id, 1.000000);
-		GrowDuration = serialized->get_float(GrowDuration_type_id, -1.000000);
-		Duration = serialized->get_float(Duration_type_id, 1.000000);
-		HitPauseTime = serialized->get_float(HitPauseTime_type_id, 0.000000);
+		Damage = serialized->get_float(Damage_type_id, 1.000000f);
+		StartRadius = serialized->get_float(StartRadius_type_id, 0.000000f);
+		Radius = serialized->get_float(Radius_type_id, 10.000000f);
+		Height = serialized->get_float(Height_type_id, 0.500000f);
+		Thickness = serialized->get_float(Thickness_type_id, 1.000000f);
+		GrowDuration = serialized->get_float(GrowDuration_type_id, -1.000000f);
+		Duration = serialized->get_float(Duration_type_id, 1.000000f);
+		HitPauseTime = serialized->get_float(HitPauseTime_type_id, 0.000000f);
 		DamageName = serialized->get_string(DamageName_type_id, {});
 		DamageIsPercent = serialized->get_bool(DamageIsPercent_type_id, false);
 		AllowFriendlyDamage = serialized->get_bool(AllowFriendlyDamage_type_id, true);
 		Center = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(Center_type_id);
 		HitNormal = serialized->unwrap_into<rivet::ddl::generated::DDLVector3>(HitNormal_type_id);
-		ParentActorHandle = serialized->get_uint32(ParentActorHandle_type_id, 0);
-		DamageOwnerHandle = serialized->get_uint32(DamageOwnerHandle_type_id, 0); 
+		ParentActorHandle = serialized->get_uint32(ParentActorHandle_type_id, 0u);
+		DamageOwnerHandle = serialized->get_uint32(DamageOwnerHandle_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

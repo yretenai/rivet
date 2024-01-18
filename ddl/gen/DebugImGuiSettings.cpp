@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	DebugImGuiSettings::DebugImGuiSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		DarkMode = serialized->get_bool(DarkMode_type_id, false);
-		FontScale = serialized->get_float(FontScale_type_id, 1.000000); 
+		FontScale = serialized->get_float(FontScale_type_id, 1.000000f); 
 	}
 
 	[[nodiscard]] auto

@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	ProxAggroRange::ProxAggroRange([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Range = serialized->get_float(Range_type_id, 5.000000);
-		AggroAtRange = serialized->get_float(AggroAtRange_type_id, 0.000000); 
+		Range = serialized->get_float(Range_type_id, 5.000000f);
+		AggroAtRange = serialized->get_float(AggroAtRange_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

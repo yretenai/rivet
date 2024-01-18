@@ -11,12 +11,12 @@
 namespace rivet::ddl::generated {
 	AutoPlaceCritterSystemConfig::AutoPlaceCritterSystemConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
 		CritterTypes = serialized->unwrap_into_many<rivet::ddl::generated::CritterTypeData>(CritterTypes_type_id);
-		MinSpawnDistance = serialized->get_float(MinSpawnDistance_type_id, 10.000000);
-		IdealSpawnDistance = serialized->get_float(IdealSpawnDistance_type_id, 25.000000);
-		MaxActiveDistance = serialized->get_float(MaxActiveDistance_type_id, 50.000000);
-		PanicRadius = serialized->get_float(PanicRadius_type_id, 3.000000);
-		CombatPanicRadius = serialized->get_float(CombatPanicRadius_type_id, 8.000000);
-		RefreshPeriod = serialized->get_float(RefreshPeriod_type_id, 0.500000);
+		MinSpawnDistance = serialized->get_float(MinSpawnDistance_type_id, 10.000000f);
+		IdealSpawnDistance = serialized->get_float(IdealSpawnDistance_type_id, 25.000000f);
+		MaxActiveDistance = serialized->get_float(MaxActiveDistance_type_id, 50.000000f);
+		PanicRadius = serialized->get_float(PanicRadius_type_id, 3.000000f);
+		CombatPanicRadius = serialized->get_float(CombatPanicRadius_type_id, 8.000000f);
+		RefreshPeriod = serialized->get_float(RefreshPeriod_type_id, 0.500000f);
 		LocationSelectionHeuristic = serialized->unwrap_into<rivet::ddl::generated::CritterLocationWeights>(LocationSelectionHeuristic_type_id); 
 	}
 

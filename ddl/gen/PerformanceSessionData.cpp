@@ -10,18 +10,18 @@
 
 namespace rivet::ddl::generated {
 	PerformanceSessionData::PerformanceSessionData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SaveRequired = serialized->get_uint8(SaveRequired_type_id, 0);
-		Looping = serialized->get_uint8(Looping_type_id, 0);
-		Playing = serialized->get_uint8(Playing_type_id, 0);
-		PerformanceClipId = serialized->get_uint32(PerformanceClipId_type_id, 0);
-		BodyActorHandle = serialized->get_uint32(BodyActorHandle_type_id, 0);
+		SaveRequired = serialized->get_uint8(SaveRequired_type_id, 0u);
+		Looping = serialized->get_uint8(Looping_type_id, 0u);
+		Playing = serialized->get_uint8(Playing_type_id, 0u);
+		PerformanceClipId = serialized->get_uint32(PerformanceClipId_type_id, 0u);
+		BodyActorHandle = serialized->get_uint32(BodyActorHandle_type_id, 0u);
 		MuteAnimSet = serialized->get_string(MuteAnimSet_type_id, {});
 		MuteAnimClip = serialized->get_string(MuteAnimClip_type_id, {});
 		SoloExpressions = serialized->get_strings(SoloExpressions_type_id);
 		MuteExpressions = serialized->get_strings(MuteExpressions_type_id);
 		SoloBodyGestures = serialized->get_strings(SoloBodyGestures_type_id);
 		MuteBodyGestures = serialized->get_strings(MuteBodyGestures_type_id);
-		Time = serialized->get_float(Time_type_id, 0.000000);
+		Time = serialized->get_float(Time_type_id, 0.000000f);
 		SelectionData = serialized->unwrap_into<rivet::ddl::generated::PerformanceSelectionData>(SelectionData_type_id);
 		AnimClipData = serialized->unwrap_into_many<rivet::ddl::generated::PerformanceAnimClipData>(AnimClipData_type_id);
 		AnimSets = serialized->get_strings(AnimSets_type_id);

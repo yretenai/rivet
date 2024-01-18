@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	KamehamehaChargeLevel::KamehamehaChargeLevel([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ChargeDuration = serialized->get_float(ChargeDuration_type_id, 0.000000);
-		BeamDuration = serialized->get_float(BeamDuration_type_id, 0.000000);
-		BeamRadius = serialized->get_float(BeamRadius_type_id, 0.000000); 
+		ChargeDuration = serialized->get_float(ChargeDuration_type_id, 0.000000f);
+		BeamDuration = serialized->get_float(BeamDuration_type_id, 0.000000f);
+		BeamRadius = serialized->get_float(BeamRadius_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

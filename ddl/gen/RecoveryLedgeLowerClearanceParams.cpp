@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	RecoveryLedgeLowerClearanceParams::RecoveryLedgeLowerClearanceParams([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MinHeight = serialized->get_float(MinHeight_type_id, 1.750000);
-		MinRearHeight = serialized->get_float(MinRearHeight_type_id, 1.750000); 
+		MinHeight = serialized->get_float(MinHeight_type_id, 1.750000f);
+		MinRearHeight = serialized->get_float(MinRearHeight_type_id, 1.750000f); 
 	}
 
 	[[nodiscard]] auto

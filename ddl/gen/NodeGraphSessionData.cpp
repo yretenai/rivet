@@ -10,8 +10,8 @@
 namespace rivet::ddl::generated {
 	NodeGraphSessionData::NodeGraphSessionData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		AssetPath = serialized->get_string(AssetPath_type_id, {});
-		GraphId = serialized->get_uint64(GraphId_type_id, 0);
-		HoverNode = serialized->get_uint64(HoverNode_type_id, 0);
+		GraphId = serialized->get_uint64(GraphId_type_id, 0ull);
+		HoverNode = serialized->get_uint64(HoverNode_type_id, 0ull);
 		SelectedNodes = serialized->get_uint64s(SelectedNodes_type_id);
 		SelectedConnections = serialized->get_uint64s(SelectedConnections_type_id);
 		HighlightedNodes = serialized->get_uint64s(HighlightedNodes_type_id);

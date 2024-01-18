@@ -13,9 +13,9 @@ namespace rivet::ddl::generated {
 	AnimMultiLookChunkData::AnimMultiLookChunkData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): AnimChunkData(serialized) {
 		Looks = serialized->unwrap_into_many<rivet::ddl::generated::LookChunkData>(Looks_type_id);
 		HideSourceLook = serialized->get_bool(HideSourceLook_type_id, true);
-		Lifetime = serialized->get_float(Lifetime_type_id, 3.000000);
-		MinSpeed = serialized->get_float(MinSpeed_type_id, 5.000000);
-		MaxSpeed = serialized->get_float(MaxSpeed_type_id, 5.000000);
+		Lifetime = serialized->get_float(Lifetime_type_id, 3.000000f);
+		MinSpeed = serialized->get_float(MinSpeed_type_id, 5.000000f);
+		MaxSpeed = serialized->get_float(MaxSpeed_type_id, 5.000000f);
 		ConduitAsset = serialized->get_string(ConduitAsset_type_id, {});
 		RotationalSpeedX = serialized->unwrap_into<rivet::ddl::generated::AnimChunkRange>(RotationalSpeedX_type_id);
 		RotationalSpeedY = serialized->unwrap_into<rivet::ddl::generated::AnimChunkRange>(RotationalSpeedY_type_id);

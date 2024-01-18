@@ -33,7 +33,7 @@ namespace rivet::ddl::generated {
 		ModConfig = serialized->get_string(ModConfig_type_id, {});
 		GridConfig = serialized->get_string(GridConfig_type_id, {});
 		GloveModelOverride = serialized->get_string(GloveModelOverride_type_id, {});
-		AmmoCost = serialized->get_int32(AmmoCost_type_id, 0);
+		AmmoCost = serialized->get_int32(AmmoCost_type_id, 0u);
 		BarrelObstruction = serialized->unwrap_into<rivet::ddl::generated::WeaponObstructionBase>(BarrelObstruction_type_id);
 		WantsTargetLOS = serialized->get_bool(WantsTargetLOS_type_id, false);
 		UseBeamInEquip = serialized->get_bool(UseBeamInEquip_type_id, true);

@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	AttachedActorSpawnData::AttachedActorSpawnData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ActorSpawnData(serialized) {
-		Parent = serialized->get_uint32(Parent_type_id, 0);
-		AssetId = serialized->get_uint64(AssetId_type_id, 0);
-		AttachLocator = serialized->get_uint32(AttachLocator_type_id, 0); 
+		Parent = serialized->get_uint32(Parent_type_id, 0u);
+		AssetId = serialized->get_uint64(AssetId_type_id, 0ull);
+		AttachLocator = serialized->get_uint32(AttachLocator_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

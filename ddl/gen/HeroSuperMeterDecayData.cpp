@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	HeroSuperMeterDecayData::HeroSuperMeterDecayData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Rate = serialized->get_float(Rate_type_id, 0.000000);
-		Delay = serialized->get_float(Delay_type_id, -1.000000); 
+		Rate = serialized->get_float(Rate_type_id, 0.000000f);
+		Delay = serialized->get_float(Delay_type_id, -1.000000f); 
 	}
 
 	[[nodiscard]] auto

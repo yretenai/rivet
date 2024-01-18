@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	RoadMapNodeLink::RoadMapNodeLink([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Target = serialized->get_uint64(Target_type_id, 0); 
+		Target = serialized->get_uint64(Target_type_id, 0ull); 
 	}
 
 	[[nodiscard]] auto

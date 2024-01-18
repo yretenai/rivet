@@ -14,9 +14,9 @@ namespace rivet::ddl::generated {
 		StartEnabled = serialized->get_bool(StartEnabled_type_id, true);
 		CreateJointMover = serialized->get_bool(CreateJointMover_type_id, false);
 		Locator = serialized->get_string(Locator_type_id, {});
-		Accel = serialized->get_float(Accel_type_id, 10.000000);
-		Decel = serialized->get_float(Decel_type_id, 10.000000);
-		Speed = serialized->get_float(Speed_type_id, 10.000000); 
+		Accel = serialized->get_float(Accel_type_id, 10.000000f);
+		Decel = serialized->get_float(Decel_type_id, 10.000000f);
+		Speed = serialized->get_float(Speed_type_id, 10.000000f); 
 	}
 
 	[[nodiscard]] auto

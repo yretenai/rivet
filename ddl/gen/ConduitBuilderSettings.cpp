@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	ConduitBuilderSettings::ConduitBuilderSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MaxValueStackCount = serialized->get_int32(MaxValueStackCount_type_id, 8);
-		MaxResponseGraphDepth = serialized->get_int32(MaxResponseGraphDepth_type_id, 16); 
+		MaxValueStackCount = serialized->get_int32(MaxValueStackCount_type_id, 8u);
+		MaxResponseGraphDepth = serialized->get_int32(MaxResponseGraphDepth_type_id, 16u); 
 	}
 
 	[[nodiscard]] auto

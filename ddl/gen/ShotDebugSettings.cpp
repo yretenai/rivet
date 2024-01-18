@@ -9,9 +9,9 @@ namespace rivet::ddl::generated {
 	ShotDebugSettings::ShotDebugSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		DisplayMenu = serialized->get_bool(DisplayMenu_type_id, false);
 		EnableTracking = serialized->get_bool(EnableTracking_type_id, false);
-		MaxTrackedShots = serialized->get_uint32(MaxTrackedShots_type_id, 50);
-		MaxFramesPerShot = serialized->get_uint32(MaxFramesPerShot_type_id, 120);
-		MaxLifetimeAfterDestroy = serialized->get_uint32(MaxLifetimeAfterDestroy_type_id, 0);
+		MaxTrackedShots = serialized->get_uint32(MaxTrackedShots_type_id, 50u);
+		MaxFramesPerShot = serialized->get_uint32(MaxFramesPerShot_type_id, 120u);
+		MaxLifetimeAfterDestroy = serialized->get_uint32(MaxLifetimeAfterDestroy_type_id, 0u);
 		DrawShotHistory = serialized->get_bool(DrawShotHistory_type_id, false);
 		DrawSelectedShotHistoryOnly = serialized->get_bool(DrawSelectedShotHistoryOnly_type_id, false);
 		DrawProjectedForward = serialized->get_bool(DrawProjectedForward_type_id, true);
@@ -19,8 +19,8 @@ namespace rivet::ddl::generated {
 		DrawCollRadiusDamage = serialized->get_bool(DrawCollRadiusDamage_type_id, false);
 		ShotListSortOrder = serialized->get_enum<rivet::ddl::generated::xd2478acb>(ShotListSortOrder_type_id, rivet::ddl::generated::xd2478acb_values, rivet::ddl::generated::xd2478acb::Descending);
 		FrameListSortOrder = serialized->get_enum<rivet::ddl::generated::xd2478acb>(FrameListSortOrder_type_id, rivet::ddl::generated::xd2478acb_values, rivet::ddl::generated::xd2478acb::Descending);
-		DisplayedAllegiance = serialized->get_bitset<rivet::ddl::generated::x8f57801d>(DisplayedAllegiance_type_id, rivet::ddl::generated::x8f57801d_values, 7);
-		ShotDisplay = serialized->get_bitset<rivet::ddl::generated::xbb69786>(ShotDisplay_type_id, rivet::ddl::generated::xbb69786_values, 15); 
+		DisplayedAllegiance = serialized->get_bitset<rivet::ddl::generated::x8f57801d>(DisplayedAllegiance_type_id, rivet::ddl::generated::x8f57801d_values, 7u);
+		ShotDisplay = serialized->get_bitset<rivet::ddl::generated::xbb69786>(ShotDisplay_type_id, rivet::ddl::generated::xbb69786_values, 15u); 
 	}
 
 	[[nodiscard]] auto

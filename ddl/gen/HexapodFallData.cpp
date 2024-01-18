@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	HexapodFallData::HexapodFallData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MaxSpeed = serialized->get_float(MaxSpeed_type_id, 10.000000);
-		GravityAccel = serialized->get_float(GravityAccel_type_id, 9.000000);
-		WalkSpeedHorizontal = serialized->get_float(WalkSpeedHorizontal_type_id, 1.000000);
-		DashSpeedHorizontal = serialized->get_float(DashSpeedHorizontal_type_id, 2.000000);
-		MoveAccel = serialized->get_float(MoveAccel_type_id, 10.000000); 
+		MaxSpeed = serialized->get_float(MaxSpeed_type_id, 10.000000f);
+		GravityAccel = serialized->get_float(GravityAccel_type_id, 9.000000f);
+		WalkSpeedHorizontal = serialized->get_float(WalkSpeedHorizontal_type_id, 1.000000f);
+		DashSpeedHorizontal = serialized->get_float(DashSpeedHorizontal_type_id, 2.000000f);
+		MoveAccel = serialized->get_float(MoveAccel_type_id, 10.000000f); 
 	}
 
 	[[nodiscard]] auto

@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	HeroSpawnLocationData::HeroSpawnLocationData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		SpawnLocation = serialized->get_uint64(SpawnLocation_type_id, 0);
+		SpawnLocation = serialized->get_uint64(SpawnLocation_type_id, 0ull);
 		StartCrouched = serialized->get_bool(StartCrouched_type_id, false); 
 	}
 

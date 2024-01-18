@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	JsonRpcSettings::JsonRpcSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Port = serialized->get_uint16(Port_type_id, 38002); 
+		Port = serialized->get_uint16(Port_type_id, 38002u); 
 	}
 
 	[[nodiscard]] auto

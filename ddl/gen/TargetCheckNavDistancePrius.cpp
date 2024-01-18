@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	TargetCheckNavDistancePrius::TargetCheckNavDistancePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): TargetCheckBasePrius(serialized) {
-		ActorHandle = serialized->get_uint32(ActorHandle_type_id, 0);
-		DistanceMin = serialized->get_float(DistanceMin_type_id, 0.000000);
-		DistanceMax = serialized->get_float(DistanceMax_type_id, 30.000000); 
+		ActorHandle = serialized->get_uint32(ActorHandle_type_id, 0u);
+		DistanceMin = serialized->get_float(DistanceMin_type_id, 0.000000f);
+		DistanceMax = serialized->get_float(DistanceMax_type_id, 30.000000f); 
 	}
 
 	[[nodiscard]] auto

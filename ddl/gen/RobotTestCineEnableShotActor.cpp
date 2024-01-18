@@ -7,9 +7,9 @@
 
 namespace rivet::ddl::generated {
 	RobotTestCineEnableShotActor::RobotTestCineEnableShotActor([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ShotTuid = serialized->get_uint64(ShotTuid_type_id, 0);
+		ShotTuid = serialized->get_uint64(ShotTuid_type_id, 0ull);
 		ShotName = serialized->get_string(ShotName_type_id, {});
-		ActorTuid = serialized->get_uint64(ActorTuid_type_id, 0);
+		ActorTuid = serialized->get_uint64(ActorTuid_type_id, 0ull);
 		ActorName = serialized->get_string(ActorName_type_id, {}); 
 	}
 

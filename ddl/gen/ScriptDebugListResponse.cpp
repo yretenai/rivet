@@ -10,7 +10,7 @@
 namespace rivet::ddl::generated {
 	ScriptDebugListResponse::ScriptDebugListResponse([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		ListName = serialized->get_string(ListName_type_id, {});
-		VarTuid = serialized->get_uint64(VarTuid_type_id, 0);
+		VarTuid = serialized->get_uint64(VarTuid_type_id, 0ull);
 		Entries = serialized->unwrap_into_many<rivet::ddl::generated::ScriptDebugListEntry>(Entries_type_id); 
 	}
 

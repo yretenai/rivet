@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	TiltingPlatformPrius::TiltingPlatformPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		ResetRotAccel = serialized->get_float(ResetRotAccel_type_id, 2.000000);
-		MaxRotAccel = serialized->get_float(MaxRotAccel_type_id, 20.000000);
-		MaxAngle = serialized->get_float(MaxAngle_type_id, 5.000000);
-		PlatformRadius = serialized->get_float(PlatformRadius_type_id, 15.000000);
-		MaxRotSpeed = serialized->get_float(MaxRotSpeed_type_id, 10.000000); 
+		ResetRotAccel = serialized->get_float(ResetRotAccel_type_id, 2.000000f);
+		MaxRotAccel = serialized->get_float(MaxRotAccel_type_id, 20.000000f);
+		MaxAngle = serialized->get_float(MaxAngle_type_id, 5.000000f);
+		PlatformRadius = serialized->get_float(PlatformRadius_type_id, 15.000000f);
+		MaxRotSpeed = serialized->get_float(MaxRotSpeed_type_id, 10.000000f); 
 	}
 
 	[[nodiscard]] auto

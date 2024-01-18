@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	VolumeCameraClipDef::VolumeCameraClipDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Near = serialized->get_float(Near_type_id, 0.000000);
-		Far = serialized->get_float(Far_type_id, 0.000000); 
+		Near = serialized->get_float(Near_type_id, 0.000000f);
+		Far = serialized->get_float(Far_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

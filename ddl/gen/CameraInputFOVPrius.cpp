@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	CameraInputFOVPrius::CameraInputFOVPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		FOVMin = serialized->get_float(FOVMin_type_id, 20.000000);
-		FOVMax = serialized->get_float(FOVMax_type_id, 90.000000);
-		FOVSpeedAccel = serialized->get_float(FOVSpeedAccel_type_id, 300.000000);
-		FOVSpeedMax = serialized->get_float(FOVSpeedMax_type_id, 30.000000);
-		FOVSpeedSoftZone = serialized->get_float(FOVSpeedSoftZone_type_id, 10.000000);
+		FOVMin = serialized->get_float(FOVMin_type_id, 20.000000f);
+		FOVMax = serialized->get_float(FOVMax_type_id, 90.000000f);
+		FOVSpeedAccel = serialized->get_float(FOVSpeedAccel_type_id, 300.000000f);
+		FOVSpeedMax = serialized->get_float(FOVSpeedMax_type_id, 30.000000f);
+		FOVSpeedSoftZone = serialized->get_float(FOVSpeedSoftZone_type_id, 10.000000f);
 		FromCinematic = serialized->get_bool(FromCinematic_type_id, false); 
 	}
 

@@ -9,12 +9,12 @@ namespace rivet::ddl::generated {
 	StreakData::StreakData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		MaterialOverride = serialized->get_string(MaterialOverride_type_id, {});
 		Style = serialized->get_enum<rivet::ddl::generated::x38953afc>(Style_type_id, rivet::ddl::generated::x38953afc_values, rivet::ddl::generated::x38953afc::Constant_Width);
-		MeleeWidthMinScale = serialized->get_float(MeleeWidthMinScale_type_id, 0.100000);
-		MeleeWidthMaxScale = serialized->get_float(MeleeWidthMaxScale_type_id, 2.500000);
-		MeleeOffset = serialized->get_float(MeleeOffset_type_id, 0.000000);
-		SmashWidthMinScale = serialized->get_float(SmashWidthMinScale_type_id, 0.100000);
-		SmashWidthMaxScale = serialized->get_float(SmashWidthMaxScale_type_id, 2.500000);
-		SmashOffset = serialized->get_float(SmashOffset_type_id, 0.000000); 
+		MeleeWidthMinScale = serialized->get_float(MeleeWidthMinScale_type_id, 0.100000f);
+		MeleeWidthMaxScale = serialized->get_float(MeleeWidthMaxScale_type_id, 2.500000f);
+		MeleeOffset = serialized->get_float(MeleeOffset_type_id, 0.000000f);
+		SmashWidthMinScale = serialized->get_float(SmashWidthMinScale_type_id, 0.100000f);
+		SmashWidthMaxScale = serialized->get_float(SmashWidthMaxScale_type_id, 2.500000f);
+		SmashOffset = serialized->get_float(SmashOffset_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

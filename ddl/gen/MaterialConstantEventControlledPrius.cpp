@@ -12,8 +12,8 @@ namespace rivet::ddl::generated {
 	MaterialConstantEventControlledPrius::MaterialConstantEventControlledPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		ConstantName = serialized->get_string(ConstantName_type_id, "TValue");
 		MaterialMappingName = serialized->get_string(MaterialMappingName_type_id, {});
-		InitialValue = serialized->get_float(InitialValue_type_id, 0.000000);
-		EventValue = serialized->get_float(EventValue_type_id, 1.000000);
+		InitialValue = serialized->get_float(InitialValue_type_id, 0.000000f);
+		EventValue = serialized->get_float(EventValue_type_id, 1.000000f);
 		SetInitialValueOnActivate = serialized->get_bool(SetInitialValueOnActivate_type_id, true);
 		BlendStyle = serialized->unwrap_into<rivet::ddl::generated::MaterialConstantBlendBase>(BlendStyle_type_id);
 		IsSelfEvent = serialized->get_bool(IsSelfEvent_type_id, false);

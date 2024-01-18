@@ -8,12 +8,12 @@
 namespace rivet::ddl::generated {
 	Cinematic2LookAtDataDef::Cinematic2LookAtDataDef([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		LookAtHeroCamera = serialized->get_bool(LookAtHeroCamera_type_id, false);
-		TargetActorId = serialized->get_uint64(TargetActorId_type_id, 0);
+		TargetActorId = serialized->get_uint64(TargetActorId_type_id, 0ull);
 		TargetLocatorName = serialized->get_string(TargetLocatorName_type_id, "igLoc_head");
 		SourceLocatorName = serialized->get_string(SourceLocatorName_type_id, "igLoc_head");
-		FocusHorizontal = serialized->get_float(FocusHorizontal_type_id, 0.000000);
-		FocusVertical = serialized->get_float(FocusVertical_type_id, 0.000000);
-		FocusSpeed = serialized->get_float(FocusSpeed_type_id, 90.000000); 
+		FocusHorizontal = serialized->get_float(FocusHorizontal_type_id, 0.000000f);
+		FocusVertical = serialized->get_float(FocusVertical_type_id, 0.000000f);
+		FocusSpeed = serialized->get_float(FocusSpeed_type_id, 90.000000f); 
 	}
 
 	[[nodiscard]] auto

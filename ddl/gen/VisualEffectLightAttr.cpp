@@ -8,16 +8,16 @@
 namespace rivet::ddl::generated {
 	VisualEffectLightAttr::VisualEffectLightAttr([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		Style = serialized->get_enum<rivet::ddl::generated::xc53d61ca>(Style_type_id, rivet::ddl::generated::xc53d61ca_values, rivet::ddl::generated::xc53d61ca::Point);
-		Radius = serialized->get_float(Radius_type_id, 0.000000);
-		InnerCone = serialized->get_float(InnerCone_type_id, 15.000000);
-		OuterCone = serialized->get_float(OuterCone_type_id, 45.000000);
-		CutOffDist = serialized->get_float(CutOffDist_type_id, 0.000000);
-		CutOnDist = serialized->get_float(CutOnDist_type_id, 0.000000);
-		SpecIntensity = serialized->get_float(SpecIntensity_type_id, 1.000000);
-		ShadowFadeDistance = serialized->get_float(ShadowFadeDistance_type_id, 0.000000);
-		VolumetricFogScale = serialized->get_float(VolumetricFogScale_type_id, 0.000000);
-		BulbRadius = serialized->get_float(BulbRadius_type_id, 0.000000);
-		BulbLength = serialized->get_float(BulbLength_type_id, 0.000000);
+		Radius = serialized->get_float(Radius_type_id, 0.000000f);
+		InnerCone = serialized->get_float(InnerCone_type_id, 15.000000f);
+		OuterCone = serialized->get_float(OuterCone_type_id, 45.000000f);
+		CutOffDist = serialized->get_float(CutOffDist_type_id, 0.000000f);
+		CutOnDist = serialized->get_float(CutOnDist_type_id, 0.000000f);
+		SpecIntensity = serialized->get_float(SpecIntensity_type_id, 1.000000f);
+		ShadowFadeDistance = serialized->get_float(ShadowFadeDistance_type_id, 0.000000f);
+		VolumetricFogScale = serialized->get_float(VolumetricFogScale_type_id, 0.000000f);
+		BulbRadius = serialized->get_float(BulbRadius_type_id, 0.000000f);
+		BulbLength = serialized->get_float(BulbLength_type_id, 0.000000f);
 		BulbIsRectangle = serialized->get_bool(BulbIsRectangle_type_id, false);
 		UseAtmosphereMultiplier = serialized->get_bool(UseAtmosphereMultiplier_type_id, true);
 		SkipLightCapture = serialized->get_bool(SkipLightCapture_type_id, false);

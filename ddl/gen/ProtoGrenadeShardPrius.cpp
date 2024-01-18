@@ -8,10 +8,10 @@
 namespace rivet::ddl::generated {
 	ProtoGrenadeShardPrius::ProtoGrenadeShardPrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		KnockbackLevel = serialized->get_enum<rivet::ddl::generated::KnockbackLevels>(KnockbackLevel_type_id, rivet::ddl::generated::KnockbackLevels_values, rivet::ddl::generated::KnockbackLevels::Two);
-		KnockbackAmount = serialized->get_float(KnockbackAmount_type_id, 4.000000);
-		DetonationTime = serialized->get_float(DetonationTime_type_id, 3.500000);
-		DisappearTimeMin = serialized->get_float(DisappearTimeMin_type_id, 3.000000);
-		DisappearTimeMax = serialized->get_float(DisappearTimeMax_type_id, 4.000000); 
+		KnockbackAmount = serialized->get_float(KnockbackAmount_type_id, 4.000000f);
+		DetonationTime = serialized->get_float(DetonationTime_type_id, 3.500000f);
+		DisappearTimeMin = serialized->get_float(DisappearTimeMin_type_id, 3.000000f);
+		DisappearTimeMax = serialized->get_float(DisappearTimeMax_type_id, 4.000000f); 
 	}
 
 	[[nodiscard]] auto

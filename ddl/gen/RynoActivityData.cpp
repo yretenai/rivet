@@ -14,7 +14,7 @@ namespace rivet::ddl::generated {
 		CardDescTag = serialized->get_string(CardDescTag_type_id, {});
 		CardSmallImage = serialized->get_string(CardSmallImage_type_id, {});
 		CardLargeImage = serialized->get_string(CardLargeImage_type_id, {});
-		PlaytimeEstimate = serialized->get_uint32(PlaytimeEstimate_type_id, 60);
+		PlaytimeEstimate = serialized->get_uint32(PlaytimeEstimate_type_id, 60u);
 		Reward = serialized->unwrap_into<rivet::ddl::generated::ActivityReward>(Reward_type_id); 
 	}
 

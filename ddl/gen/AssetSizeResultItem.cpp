@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	AssetSizeResultItem::AssetSizeResultItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
 		AssetPath = serialized->get_string(AssetPath_type_id, {});
-		SizeInDb = serialized->get_uint32(SizeInDb_type_id, 0); 
+		SizeInDb = serialized->get_uint32(SizeInDb_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ModelLodEngineItem::ModelLodEngineItem([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Lod = serialized->get_int32(Lod_type_id, 0); 
+		Lod = serialized->get_int32(Lod_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

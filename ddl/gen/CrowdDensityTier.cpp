@@ -7,8 +7,8 @@
 
 namespace rivet::ddl::generated {
 	CrowdDensityTier::CrowdDensityTier([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Density = serialized->get_float(Density_type_id, 0.500000);
-		MaxDistance = serialized->get_float(MaxDistance_type_id, 250.000000); 
+		Density = serialized->get_float(Density_type_id, 0.500000f);
+		MaxDistance = serialized->get_float(MaxDistance_type_id, 250.000000f); 
 	}
 
 	[[nodiscard]] auto

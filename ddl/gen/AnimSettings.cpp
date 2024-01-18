@@ -7,15 +7,15 @@
 
 namespace rivet::ddl::generated {
 	AnimSettings::AnimSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MaxJobCount = serialized->get_uint32(MaxJobCount_type_id, 1024);
-		MaxDriverUserPoseCount = serialized->get_uint32(MaxDriverUserPoseCount_type_id, 128);
+		MaxJobCount = serialized->get_uint32(MaxJobCount_type_id, 1024u);
+		MaxDriverUserPoseCount = serialized->get_uint32(MaxDriverUserPoseCount_type_id, 128u);
 		CullAllCullable = serialized->get_bool(CullAllCullable_type_id, false);
 		AnimDriverDataAllocBlockSizes = serialized->get_uint16s(AnimDriverDataAllocBlockSizes_type_id);
 		AnimDriverDataAllocBlockCounts = serialized->get_uint16s(AnimDriverDataAllocBlockCounts_type_id);
-		AnimStreamInitAllocSize = serialized->get_uint32(AnimStreamInitAllocSize_type_id, 18874368);
+		AnimStreamInitAllocSize = serialized->get_uint32(AnimStreamInitAllocSize_type_id, 18874368u);
 		DebugDriverMemoryClearing = serialized->get_bool(DebugDriverMemoryClearing_type_id, false);
 		DebugDriverMemoryAllocating = serialized->get_bool(DebugDriverMemoryAllocating_type_id, false);
-		MorphTargetDeltaChannelPrecision = serialized->get_float(MorphTargetDeltaChannelPrecision_type_id, 0.100000); 
+		MorphTargetDeltaChannelPrecision = serialized->get_float(MorphTargetDeltaChannelPrecision_type_id, 0.100000f); 
 	}
 
 	[[nodiscard]] auto

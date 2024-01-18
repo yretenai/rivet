@@ -15,7 +15,7 @@ namespace rivet::ddl::generated {
 		PauseMenuAtmosphere = serialized->get_string(PauseMenuAtmosphere_type_id, {});
 		PauseMapZone = serialized->get_string(PauseMapZone_type_id, {});
 		PauseMapAtmosphere = serialized->get_string(PauseMapAtmosphere_type_id, {});
-		PauseMenuCameraTransition = serialized->get_float(PauseMenuCameraTransition_type_id, 0.000000);
+		PauseMenuCameraTransition = serialized->get_float(PauseMenuCameraTransition_type_id, 0.000000f);
 		UIDisplayObjectData = serialized->unwrap_into_many<rivet::ddl::generated::UIDisplayObjectData>(UIDisplayObjectData_type_id); 
 	}
 

@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	ExampleRegionData::ExampleRegionData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): RegionGameDataBase(serialized) {
 		stringValue = serialized->get_string(stringValue_type_id, {});
-		intValue = serialized->get_int32(intValue_type_id, 0);
+		intValue = serialized->get_int32(intValue_type_id, 0u);
 		boolValue = serialized->get_bool(boolValue_type_id, false); 
 	}
 

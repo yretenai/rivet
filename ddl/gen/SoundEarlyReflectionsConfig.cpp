@@ -9,18 +9,18 @@
 
 namespace rivet::ddl::generated {
 	SoundEarlyReflectionsConfig::SoundEarlyReflectionsConfig([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): ConfigBase(serialized) {
-		NumSamplesSqrt = serialized->get_uint8(NumSamplesSqrt_type_id, 3);
-		SamplingRadius = serialized->get_float(SamplingRadius_type_id, 0.200000);
-		RayYawAngle = serialized->get_float(RayYawAngle_type_id, 0.000000);
+		NumSamplesSqrt = serialized->get_uint8(NumSamplesSqrt_type_id, 3u);
+		SamplingRadius = serialized->get_float(SamplingRadius_type_id, 0.200000f);
+		RayYawAngle = serialized->get_float(RayYawAngle_type_id, 0.000000f);
 		SamplingPosition = serialized->get_enum<rivet::ddl::generated::xfc5a3cb7>(SamplingPosition_type_id, rivet::ddl::generated::xfc5a3cb7_values, rivet::ddl::generated::xfc5a3cb7::Listener);
 		Orientation = serialized->get_enum<rivet::ddl::generated::x5d0fe319>(Orientation_type_id, rivet::ddl::generated::x5d0fe319_values, rivet::ddl::generated::x5d0fe319::Listener);
-		GroundDistance = serialized->get_float(GroundDistance_type_id, 3.000000);
+		GroundDistance = serialized->get_float(GroundDistance_type_id, 3.000000f);
 		VerticalRayOrientation = serialized->get_enum<rivet::ddl::generated::x5d0fe319>(VerticalRayOrientation_type_id, rivet::ddl::generated::x5d0fe319_values, rivet::ddl::generated::x5d0fe319::Listener);
-		VerticalRayDistance = serialized->get_float(VerticalRayDistance_type_id, 500.000000);
-		VerticalRayMaxRadius = serialized->get_float(VerticalRayMaxRadius_type_id, 0.200000);
-		VerticalRayFilterSize = serialized->get_uint16(VerticalRayFilterSize_type_id, 30);
+		VerticalRayDistance = serialized->get_float(VerticalRayDistance_type_id, 500.000000f);
+		VerticalRayMaxRadius = serialized->get_float(VerticalRayMaxRadius_type_id, 0.200000f);
+		VerticalRayFilterSize = serialized->get_uint16(VerticalRayFilterSize_type_id, 30u);
 		CoefficientPolicy = serialized->get_enum<rivet::ddl::generated::x47d78dec>(CoefficientPolicy_type_id, rivet::ddl::generated::x47d78dec_values, rivet::ddl::generated::x47d78dec::Average);
-		DefaultReflectionCoefficient = serialized->get_float(DefaultReflectionCoefficient_type_id, 0.000000);
+		DefaultReflectionCoefficient = serialized->get_float(DefaultReflectionCoefficient_type_id, 0.000000f);
 		ReflectionProperties = serialized->unwrap_into_many<rivet::ddl::generated::ReflectionProperty>(ReflectionProperties_type_id); 
 	}
 

@@ -13,7 +13,7 @@ namespace rivet::ddl::generated {
 		LastGoldenPathMission = serialized->get_string(LastGoldenPathMission_type_id, {});
 		TaskType = serialized->get_string(TaskType_type_id, {});
 		TaskName = serialized->get_string(TaskName_type_id, {});
-		TaskDuration = serialized->get_float(TaskDuration_type_id, 0.000000);
+		TaskDuration = serialized->get_float(TaskDuration_type_id, 0.000000f);
 		PlayerPosInfo = serialized->unwrap_into<rivet::ddl::generated::DevstatsPlayerPositionInfo>(PlayerPosInfo_type_id); 
 	}
 

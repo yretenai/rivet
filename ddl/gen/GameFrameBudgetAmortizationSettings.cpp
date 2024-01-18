@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	GameFrameBudgetAmortizationSettings::GameFrameBudgetAmortizationSettings([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		MaxDamageStateChunksPerState = serialized->get_uint32(MaxDamageStateChunksPerState_type_id, 20);
-		MaxDamageStateChunksPerFrame = serialized->get_uint32(MaxDamageStateChunksPerFrame_type_id, 30);
-		MaxLootSystemSimpleSpawnPickupsPerFrame = serialized->get_uint32(MaxLootSystemSimpleSpawnPickupsPerFrame_type_id, 40);
-		MaxShardSpawnsPerFrame = serialized->get_uint32(MaxShardSpawnsPerFrame_type_id, 20); 
+		MaxDamageStateChunksPerState = serialized->get_uint32(MaxDamageStateChunksPerState_type_id, 20u);
+		MaxDamageStateChunksPerFrame = serialized->get_uint32(MaxDamageStateChunksPerFrame_type_id, 30u);
+		MaxLootSystemSimpleSpawnPickupsPerFrame = serialized->get_uint32(MaxLootSystemSimpleSpawnPickupsPerFrame_type_id, 40u);
+		MaxShardSpawnsPerFrame = serialized->get_uint32(MaxShardSpawnsPerFrame_type_id, 20u); 
 	}
 
 	[[nodiscard]] auto

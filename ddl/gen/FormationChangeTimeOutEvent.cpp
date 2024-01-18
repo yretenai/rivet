@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	FormationChangeTimeOutEvent::FormationChangeTimeOutEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
-		TimeOut = serialized->get_float(TimeOut_type_id, 0.000000); 
+		TimeOut = serialized->get_float(TimeOut_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

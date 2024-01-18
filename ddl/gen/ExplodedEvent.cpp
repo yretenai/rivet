@@ -8,7 +8,7 @@
 namespace rivet::ddl::generated {
 	ExplodedEvent::ExplodedEvent([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): EventBase(serialized) {
 		LastDamageType = serialized->get_enum<rivet::ddl::generated::DamageTypes>(LastDamageType_type_id, rivet::ddl::generated::DamageTypes_values, rivet::ddl::generated::DamageTypes::None);
-		HideDelay = serialized->get_float(HideDelay_type_id, 0.000000);
+		HideDelay = serialized->get_float(HideDelay_type_id, 0.000000f);
 		SmokePuff = serialized->get_bool(SmokePuff_type_id, false); 
 	}
 

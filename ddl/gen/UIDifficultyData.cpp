@@ -10,9 +10,9 @@ namespace rivet::ddl::generated {
 		DifficultyID = serialized->get_enum<rivet::ddl::generated::xd2b2d773>(DifficultyID_type_id, rivet::ddl::generated::xd2b2d773_values, rivet::ddl::generated::xd2b2d773::Easy);
 		Name = serialized->get_string(Name_type_id, {});
 		Desc = serialized->get_string(Desc_type_id, {});
-		EnemyAggressiveness = serialized->get_float(EnemyAggressiveness_type_id, 1.000000);
-		EnemyDamage = serialized->get_float(EnemyDamage_type_id, 1.000000);
-		EnemyHealth = serialized->get_float(EnemyHealth_type_id, 1.000000); 
+		EnemyAggressiveness = serialized->get_float(EnemyAggressiveness_type_id, 1.000000f);
+		EnemyDamage = serialized->get_float(EnemyDamage_type_id, 1.000000f);
+		EnemyHealth = serialized->get_float(EnemyHealth_type_id, 1.000000f); 
 	}
 
 	[[nodiscard]] auto

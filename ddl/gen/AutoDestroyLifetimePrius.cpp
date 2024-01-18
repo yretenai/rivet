@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	AutoDestroyLifetimePrius::AutoDestroyLifetimePrius([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		Lifetime = serialized->get_float(Lifetime_type_id, 0.000000); 
+		Lifetime = serialized->get_float(Lifetime_type_id, 0.000000f); 
 	}
 
 	[[nodiscard]] auto

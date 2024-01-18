@@ -7,10 +7,10 @@
 
 namespace rivet::ddl::generated {
 	IMGuiConnectionData::IMGuiConnectionData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		DrawColumn = serialized->get_uint32(DrawColumn_type_id, 0);
-		DrawRow = serialized->get_uint32(DrawRow_type_id, 0);
-		ConnectionId = serialized->get_uint64(ConnectionId_type_id, 0);
-		UniqueId = serialized->get_uint32(UniqueId_type_id, 0); 
+		DrawColumn = serialized->get_uint32(DrawColumn_type_id, 0u);
+		DrawRow = serialized->get_uint32(DrawRow_type_id, 0u);
+		ConnectionId = serialized->get_uint64(ConnectionId_type_id, 0ull);
+		UniqueId = serialized->get_uint32(UniqueId_type_id, 0u); 
 	}
 
 	[[nodiscard]] auto

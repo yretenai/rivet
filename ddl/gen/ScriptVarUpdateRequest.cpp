@@ -7,7 +7,7 @@
 
 namespace rivet::ddl::generated {
 	ScriptVarUpdateRequest::ScriptVarUpdateRequest([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		VarTuid = serialized->get_uint64(VarTuid_type_id, 0);
+		VarTuid = serialized->get_uint64(VarTuid_type_id, 0ull);
 		ValueString = serialized->get_string(ValueString_type_id, {}); 
 	}
 

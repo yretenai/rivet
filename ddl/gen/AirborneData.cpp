@@ -7,11 +7,11 @@
 
 namespace rivet::ddl::generated {
 	AirborneData::AirborneData([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		GroundSpeedMin = serialized->get_float(GroundSpeedMin_type_id, 10.000000);
-		GroundSpeedMax = serialized->get_float(GroundSpeedMax_type_id, 10.000000);
-		ApexHeightMin = serialized->get_float(ApexHeightMin_type_id, 2.000000);
-		ApexHeightMax = serialized->get_float(ApexHeightMax_type_id, 2.000000);
-		TimeToApex = serialized->get_float(TimeToApex_type_id, 1.000000); 
+		GroundSpeedMin = serialized->get_float(GroundSpeedMin_type_id, 10.000000f);
+		GroundSpeedMax = serialized->get_float(GroundSpeedMax_type_id, 10.000000f);
+		ApexHeightMin = serialized->get_float(ApexHeightMin_type_id, 2.000000f);
+		ApexHeightMax = serialized->get_float(ApexHeightMax_type_id, 2.000000f);
+		TimeToApex = serialized->get_float(TimeToApex_type_id, 1.000000f); 
 	}
 
 	[[nodiscard]] auto

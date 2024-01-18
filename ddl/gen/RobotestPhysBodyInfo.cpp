@@ -9,14 +9,14 @@
 
 namespace rivet::ddl::generated {
 	RobotestPhysBodyInfo::RobotestPhysBodyInfo([[maybe_unused]] const std::shared_ptr<const rivet::structures::rivet_serialized_object> &serialized): rivet::structures::rivet_ddl_base(serialized) {
-		BodyId = serialized->get_uint32(BodyId_type_id, 0);
-		BodyFlags = serialized->get_uint32(BodyFlags_type_id, 0);
+		BodyId = serialized->get_uint32(BodyId_type_id, 0u);
+		BodyFlags = serialized->get_uint32(BodyFlags_type_id, 0u);
 		IsActive = serialized->get_bool(IsActive_type_id, false);
 		IsDynamic = serialized->get_bool(IsDynamic_type_id, false);
 		IsKeyFramed = serialized->get_bool(IsKeyFramed_type_id, false);
 		IsStatic = serialized->get_bool(IsStatic_type_id, false);
-		CollisionFilterWord = serialized->get_uint32(CollisionFilterWord_type_id, 0);
-		MaterialId = serialized->get_uint16(MaterialId_type_id, 0);
+		CollisionFilterWord = serialized->get_uint32(CollisionFilterWord_type_id, 0u);
+		MaterialId = serialized->get_uint16(MaterialId_type_id, 0u);
 		Transform = serialized->unwrap_into<rivet::ddl::generated::DDLTransform>(Transform_type_id); 
 	}
 
