@@ -1,6 +1,6 @@
 extern_include = [
     include_directories('imgui', 'imgui/backends'),
-    include_directories('ImGuizmo')
+#    include_directories('ImGuizmo')
 ]
 
 extern_src = [
@@ -13,9 +13,9 @@ extern_src = [
     'imgui/backends/imgui_impl_sdlrenderer3.cpp',
     'imgui/backends/imgui_impl_sdl3.cpp'),
 
-    files('ImGuizmo/GraphEditor.cpp',
-    'ImGuizmo/ImCurveEdit.cpp',
-    'ImGuizmo/ImGradient.cpp',
-    'ImGuizmo/ImGuizmo.cpp',
-    'ImGuizmo/ImSequencer.cpp')
+#    files('ImGuizmo/GraphEditor.cpp',
+#    'ImGuizmo/ImCurveEdit.cpp',
+#    'ImGuizmo/ImGradient.cpp',
+#    'ImGuizmo/ImGuizmo.cpp',
+#    'ImGuizmo/ImSequencer.cpp')
 ]
