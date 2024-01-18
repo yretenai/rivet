@@ -88,6 +88,8 @@ namespace rivet::hash {
 	constexpr static auto
 	hash_asset_id(std::string value, const rivet_asset_id hash = asset_hash_basis, const rivet_type_id_flags flags = rivet_type_id_flags::SHIPPED) noexcept -> rivet_asset_id {
 		normalize_asset_path(value);
+		// trim / from start
+		value.erase(0, value.find_first_not_of('/'));
 
 		return hash_asset_id(std::string_view(value), hash, flags);
 	}
