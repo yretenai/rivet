@@ -14,39 +14,18 @@ if get_option('buildtype') == 'custom'
     opt_args = compiler.get_supported_arguments(
         '-march=knl',
         '-mtune=knl',
-        '-fopenmp'
+        '-fopenmp',
+	'-mllvm=-polly',
+	'-mllvm=-polly-vectorizer=stripmine',
+	'-mllvm=-polly-parallel',
+	'-mllvm=-polly-omp-backend=LLVM',
+	'-mllvm=-polly-num-threads=24',
+	'-mllvm=-polly-scheduling=dynamic',
+	'-mllvm=-polly-scheduling-chunksize=1'
     )
 
     if compiler.get_id() == 'clang'
         add_project_arguments('-Ofast', language: 'cpp')
-
-        if compiler.compiles('void test() { }', name: 'has polly', args: ['-mllvm', '-polly'])
-            opt_args += ['-mllvm', '-polly']
-
-            if compiler.compiles('void test() { }', name: 'has polly vectorizer', args: ['-mllvm', '-polly-vectorizer=stripmine'])
-                opt_args += ['-mllvm', '-polly-vectorizer=stripmine']
-            endif
-
-            if compiler.compiles('void test() { }', name: 'has polly parallel', args: ['-mllvm', '-polly-parallel'])
-                opt_args += ['-mllvm', '-polly-parallel']
-            endif
-
-            if compiler.compiles('void test() { }', name: 'has polly omp backend', args: ['-mllvm', '-polly-omp-backend=LLVM'])
-                opt_args += ['-mllvm', '-polly-omp-backend=LLVM']
-            endif
-
-            if compiler.compiles('void test() { }', name: 'has polly num threads', args: ['-mllvm', '-polly-num-threads=24'])
-                opt_args += ['-mllvm', '-polly-num-threads=24']
-            endif
-
-            if compiler.compiles('void test() { }', name: 'has polly scheduling', args: ['-mllvm', '-polly-scheduling=dynamic'])
-                opt_args += ['-mllvm', '-polly-scheduling=dynamic']
-            endif
-
-            if compiler.compiles('void test() { }', name: 'has polly scheduling chunksize', args: ['-mllvm', '-polly-scheduling-chunksize=1'])
-                opt_args += ['-mllvm', '-polly-scheduling-chunksize=1']
-            endif
-        endif
     else
         if compiler.get_id() == 'msvc'
             opt_args += ['/Ox']
