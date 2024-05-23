@@ -1,5 +1,5 @@
 DSAR FORMAT
-	Data Stream Archive
+	Data Storage Archive
 
 	This structure is specialized to Rift Apart.
 	Other iterations of the engine for other games may have different structures.
@@ -33,13 +33,14 @@ CHUNK ENTRY
 	The offset is absolute in the decompressed stream.
 
 	Known types:
-		NONE (0) - No compression, never used.
-		UNKNOWN (1) - Unknown type. Assumption is Oodle on PS5.
-		GDEFLATE (2) - A modified version of DEFLATE, optimized for DirectStorage. Exclusively used for Textures.
+		0x00 - NONE - No compression, never used.
+		0x01 - UNKNOWN - Unknown type. Assumption is Oodle on PS5.
+		0x02 - GDEFLATE - A modified version of DEFLATE, optimized for DirectStorage. Exclusively used for Textures.
 			References
 				https://github.com/microsoft/DirectStorage/tree/56489d25900d916a9cc450f5efe9e62b01789030/GDeflate/GDeflate
 				https://github.com/NVIDIA/libdeflate/tree/3bb5c6924b32a91e6e6a8f54ba00a21f037a8db5
-		LZ4 (3) - Standard LZ4 compression.
+		0x03 - LZ4 - Standard LZ4 compression.
+		0xFE - PADDING - Seen in some PSARC DSARs, does not actually exist. Fill block in uncompressed data with size worth of zero bytes.
 
 APPENDIX A
 	Resolving Assets from TOC
