@@ -1,0 +1,150 @@
+using System.IO.Compression;
+using System.Runtime.CompilerServices;
+using DragonLib;
+using Rivet.IO;
+using Rivet.Models;
+using Rivet.Models.Data;
+
+namespace Rivet.Data;
+
+public sealed class ArchiveTOC : DAT1 {
+	private const uint TypeId = 0x4D7CF320;
+	private const uint TypeIdSpider = 0x51B8E006;
+	private const uint TOCMagic = 0x34E89035;
+	private const uint TOCMagicCompressed = 0x77AF12AF;
+
+	public ArchiveTOC(IUnsafeMemoryOwner<byte> buffer) : base(buffer, GetDAT1Stream(buffer)) {
+		if (Header.Schema.Hash is not (TypeId or TypeIdSpider)) {
+			throw new NotSupportedException("ArchiveTOC is not recognized");
+		}
+
+		var isSpider = Header.Schema.Hash is TypeIdSpider;
+		if (isSpider) {
+			throw new NotImplementedException("SMR and SMMM is not supported yet");
+		}
+
+		var assetGroups = GetSection<PackedPair<int, int>>("Archive TOC Header"u8);
+		var assetIds = GetSection<ulong>("Archive TOC Asset IDs"u8);
+		var assetMetadata = GetSection<AssetMetadata>("Archive TOC Asset Metadata"u8);
+		var assetFileMetadata = GetSection<AssetFileMetadata>("Archive TOC File Metadata"u8);
+		var textureIds = GetSection<ulong>("Archive TOC Texture Asset Ids"u8);
+		var textureMetas = GetSection<AssetTextureHeader>("Archive TOC Texture Meta"u8);
+		var assetHeaders = GetSection<AssetHeader>("Archive TOC Asset Header Data"u8);
+		var keyIds = GetSection<ulong>("Archive TOC Key Asset IDs"u8);
+
+		var textureHeader = GetSection<int>("Archive TOC Texture Header"u8);
+		if (textureHeader.Length > 0) {
+			StreamedTextureCount = textureHeader[0];
+		}
+
+		Archives.EnsureCapacity(assetFileMetadata.Length);
+		foreach (var archive in assetFileMetadata) {
+			var name = archive.Name;
+			Archives.Add(new RivetArchive {
+				Name = ((ReadOnlySpan<byte>) name).ReadUTF8StringNonNull(),
+				Locale = archive.Language,
+			});
+		}
+
+		for (var i = 0; i < 8; ++i) {
+			var dict = new Dictionary<Locale, List<RivetAsset>>();
+			Groups[(AssetCategory) i] = dict;
+			for (var j = 0; j < 32; ++j) {
+				dict[(Locale) j] = [];
+			}
+		}
+
+		Assets.EnsureCapacity(assetIds.Length);
+		for (var localeIndex = 0; localeIndex < assetGroups.Length; localeIndex += 8) {
+			for (AssetCategory category = 0; category < (AssetCategory) 8; ++category) {
+				var (groupStart, groupLength) = assetGroups[localeIndex + (int) category];
+				if (groupLength == 0) {
+					continue;
+				}
+
+				var locale = (Locale) (localeIndex / 8);
+
+				var groupList = Groups[category][locale];
+				groupList.EnsureCapacity(groupLength);
+
+				for (var groupIndex = 0; groupIndex < groupLength; ++groupIndex) {
+					var assetIndex = groupStart + groupIndex;
+
+					var id = assetIds[assetIndex];
+
+					var assetMeta = assetMetadata[assetIndex];
+					var archive = Archives[assetMeta.ArchiveId];
+					var textureIndex = textureIds.IndexOf(id);
+					var isKey = keyIds.Contains(id);
+					AssetHeader? meta = default;
+					if (assetMeta.HeaderOffset != -1) {
+						var normalized = assetMeta.HeaderOffset / Unsafe.SizeOf<AssetHeader>();
+						if (normalized < assetHeaders.Length) {
+							meta = assetHeaders[normalized];
+						}
+					}
+
+					AssetTextureHeader? textureMeta = default;
+					if (textureIndex > -1) {
+						textureMeta = textureMetas[textureIndex];
+					}
+
+					var asset = new RivetAsset {
+						Id = id,
+						Size = assetMeta.Size,
+						Offset = assetMeta.Offset,
+						Archive = archive,
+						Locale = locale,
+						Category = category,
+						Flags = new RivetAssetFlags {
+							IsKey = isKey,
+							IsTexture = textureIndex > -1,
+							HasHeader = meta.HasValue,
+						},
+						TextureHeader = textureMeta ?? default,
+						Header = meta ?? default,
+					};
+					Assets[id] = asset;
+					groupList.Add(asset);
+				}
+			}
+		}
+	}
+
+	public List<RivetArchive> Archives { get; set; } = [];
+	public Dictionary<ulong, RivetAsset> Assets { get; set; } = [];
+	public Dictionary<AssetCategory, Dictionary<Locale, List<RivetAsset>>> Groups { get; set; } = [];
+
+	public int StreamedTextureCount { get; }
+
+	private static unsafe IUnsafeMemoryOwner<byte> GetDAT1Stream(IUnsafeMemoryOwner<byte> buffer) {
+		var reader = new MemoryReader(buffer);
+		var header = reader.Get<ArchiveTOCHeader>();
+		if (header.TypeId == DAT1Magic) {
+			return buffer;
+		}
+
+		var remain = reader.Slice(reader.Unconsumed);
+		if (header.TypeId == TOCMagic) {
+			return remain;
+		}
+
+		if (header.TypeId != TOCMagicCompressed) {
+			throw new NotSupportedException("Unknown filetype");
+		}
+
+		var uncompressed = new RivetMemory<byte>(header.Size);
+		using var pinned = remain.Memory.Pin();
+		using var unsafeStream = new UnmanagedMemoryStream((byte*) pinned.Pointer, remain.Memory.Length);
+		using var zStream = new ZLibStream(unsafeStream, CompressionMode.Decompress, false);
+		zStream.ReadExactly(uncompressed.Memory.Span);
+		return uncompressed;
+	}
+
+	protected override void Dispose(bool disposing) {
+		base.Dispose(disposing);
+		foreach (var archive in Archives) {
+			archive.Dispose();
+		}
+	}
+}

@@ -5,6 +5,7 @@
 		<LangVersion>preview</LangVersion>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -14,6 +15,7 @@
 	<ItemGroup>
 		<ProjectReference Include="..\Libraries\DragonLib\DragonLib\DragonLib.csproj"/>
 		<ProjectReference Include="..\Libraries\GDeflateNet\GDeflateNet\GDeflateNet.csproj"/>
+		<ProjectReference Include="..\Rivet.IO\Rivet.IO.csproj"/>
 	</ItemGroup>
 
 </Project>

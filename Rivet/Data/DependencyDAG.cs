@@ -1,0 +1,112 @@
+using System.IO.Compression;
+using Rivet.IO;
+using Rivet.Models;
+using Rivet.Models.Data;
+
+namespace Rivet.Data;
+
+public sealed class DependencyDAG : DAT1 {
+	private const uint TypeId = 0x2A077A51;
+	private const uint DAGMagic = 0xB8EF3955;
+	private const uint DAGMagicCompressed = 0x891F77AF;
+
+	public DependencyDAG(IUnsafeMemoryOwner<byte> buffer, ArchiveTOC toc) : base(buffer, GetDAT1Stream(buffer)) {
+		if (Header.Schema.Hash is not TypeId) {
+			throw new NotSupportedException("DependencyDAG is not recognized");
+		}
+
+		TOC = toc;
+
+		var ids = GetSection<ulong>("Asset Ids"u8);
+		var links = GetSection<uint>("Dependency Links"u8);
+		var heads = GetSection<uint>("Dependency Links Heads"u8);
+		var names = GetSection<int>("Asset Names"u8);
+		var types = GetSection<AssetType>("Asset Types"u8);
+		var chains = GetSection<uint>("LC Link Heads"u8);
+
+		var reader = new MemoryReader(Buffer);
+
+		for (var index = 0; index < names.Length; index++) {
+			var hash = ids[index];
+			var nameOffset = names[index];
+			var type = types[index];
+
+			if (nameOffset == -1) {
+				continue;
+			}
+
+			reader.Offset = nameOffset;
+			var name = RivetAssetId.NormalizeString(reader.GetCString());
+			var id = RivetAssetId.FromString(name);
+			if (!TOC.Assets.TryGetValue(id, out var asset)) {
+				asset = new RivetAsset {
+					Id = id,
+					Flags = new RivetAssetFlags {
+						IsVirtual = true,
+					},
+				};
+				MissingAssets[id] = asset;
+			}
+
+			asset.Name = name;
+			asset.Type = type;
+			asset.Hash = hash;
+			ResolveDependencies(reader, asset, names, links, heads, chains, heads[index]);
+
+			if (TOC.Assets.TryGetValue(RivetAssetId.FromString(name + ".animstrm"), out var animAsset)) {
+				animAsset.Name = name + ".animstrm";
+			}
+		}
+	}
+
+	public ArchiveTOC TOC { get; }
+	public Dictionary<ulong, RivetAsset> MissingAssets { get; } = [];
+
+	private static void ResolveDependencies(MemoryReader reader, RivetAsset asset, ReadOnlySpan<int> names, ReadOnlySpan<uint> links, ReadOnlySpan<uint> heads, ReadOnlySpan<uint> chains, uint head) {
+		if (head != uint.MaxValue) {
+			if ((head & 0x80000000) != 0) {
+				throw new InvalidOperationException();
+			}
+
+			var currentIndex = links[(int) head];
+			while (currentIndex != uint.MaxValue) {
+				if (currentIndex >> 31 == 1) {
+					var newHead = chains[(int) (currentIndex & 0x7FFFFFFF)];
+					ResolveDependencies(reader, asset, names, links, heads, chains, newHead);
+				} else {
+					var dependencyNameOffset = names[(int) (currentIndex & 0x7FFFFFFF)];
+					reader.Offset = dependencyNameOffset;
+					var dependencyName = RivetAssetId.NormalizeString(reader.GetCString());
+					var dependencyId = RivetAssetId.FromString(dependencyName);
+					asset.Dependencies.Add(dependencyId);
+				}
+
+				currentIndex = links[(int) head++];
+			}
+		}
+	}
+
+	private static unsafe IUnsafeMemoryOwner<byte> GetDAT1Stream(IUnsafeMemoryOwner<byte> buffer) {
+		var reader = new MemoryReader(buffer);
+		var header = reader.Get<DependencyDAGHeader>();
+		if (header.TypeId == DAT1Magic) {
+			return buffer;
+		}
+
+		if (header.TypeId == DAGMagic) {
+			return reader.Slice(header.Size);
+		}
+
+		if (header.TypeId != DAGMagicCompressed) {
+			throw new NotSupportedException("Unknown filetype");
+		}
+
+		var uncompressed = new RivetMemory<byte>(header.Size);
+		var remain = reader.Slice(header.CompressedSize);
+		using var pinned = remain.Memory.Pin();
+		using var unsafeStream = new UnmanagedMemoryStream((byte*) pinned.Pointer, remain.Memory.Length);
+		using var zStream = new ZLibStream(unsafeStream, CompressionMode.Decompress, false);
+		zStream.ReadExactly(uncompressed.Memory.Span);
+		return uncompressed;
+	}
+}

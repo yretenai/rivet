@@ -2,6 +2,6 @@ namespace Rivet.CLI.TOC;
 
 internal class Program {
 	private static void Main(string[] args) {
-		Console.WriteLine("Hello, World!");
+		var game = RivetGame.Create(args[0]);
 	}
 }

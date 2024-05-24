@@ -1,0 +1,10 @@
+using System.Runtime.InteropServices;
+
+namespace Rivet.Models.Data;
+
+[StructLayout(LayoutKind.Sequential, Pack = 1)]
+public record struct DAT1Entry {
+	public RivetTypeId TypeId { get; set; }
+	public int Offset { get; set; }
+	public int Size { get; set; }
+}
