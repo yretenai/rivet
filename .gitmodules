@@ -1,0 +1,15 @@
+[submodule "Libraries/DragonLib"]
+	path = Libraries/DragonLib
+	url = https://github.com/yretenai/DragonLib/
+[submodule "Libraries/Pepper"]
+	path = Libraries/Pepper
+	url = https://github.com/yretenai/Pepper
+[submodule "Libraries/glTFScaffold"]
+	path = Libraries/glTFScaffold
+	url = https://github.com/yretenai/glTFScaffold
+[submodule "Libraries/GDeflateNet"]
+	path = Libraries/GDeflateNet
+	url = https://github.com/yretenai/GDeflateNet
+[submodule "Libraries/TextureDecoder"]
+	path = Libraries/TextureDecoder
+	url = https://github.com/AssetRipper/TextureDecoder
