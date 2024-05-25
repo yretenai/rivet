@@ -9,7 +9,8 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\..\Rivet\Rivet.csproj" />
+		<ProjectReference Include="..\..\Rivet\Rivet.csproj"/>
+		<ProjectReference Include="..\Rivet.CLI\Rivet.CLI.csproj"/>
 	</ItemGroup>
 
 </Project>

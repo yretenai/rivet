@@ -2,6 +2,7 @@ using System.IO.Compression;
 using Rivet.IO;
 using Rivet.Models;
 using Rivet.Models.Data;
+using Serilog;
 
 namespace Rivet.Data;
 
@@ -10,12 +11,13 @@ public sealed class DependencyDAG : DAT1 {
 	private const uint DAGMagic = 0xB8EF3955;
 	private const uint DAGMagicCompressed = 0x891F77AF;
 
-	public DependencyDAG(IUnsafeMemoryOwner<byte> buffer, ArchiveTOC toc) : base(buffer, GetDAT1Stream(buffer)) {
+	public DependencyDAG(IUnsafeMemoryOwner<byte> buffer, RivetGame game) : base(buffer, GetDAT1Stream(buffer)) {
+		Log.Information("Loading DAG");
+		Game = game;
+
 		if (Header.Schema.Hash is not TypeId) {
 			throw new NotSupportedException("DependencyDAG is not recognized");
 		}
-
-		TOC = toc;
 
 		var ids = GetSection<ulong>("Asset Ids"u8);
 		var links = GetSection<uint>("Dependency Links"u8);
@@ -38,7 +40,7 @@ public sealed class DependencyDAG : DAT1 {
 			reader.Offset = nameOffset;
 			var name = RivetAssetId.NormalizeString(reader.GetCString());
 			var id = RivetAssetId.FromString(name);
-			if (!TOC.Assets.TryGetValue(id, out var asset)) {
+			if (!Game.TOC.Assets.TryGetValue(id, out var asset)) {
 				asset = new RivetAsset {
 					Id = id,
 					Flags = new RivetAssetFlags {
@@ -53,13 +55,13 @@ public sealed class DependencyDAG : DAT1 {
 			asset.Hash = hash;
 			ResolveDependencies(reader, asset, names, links, heads, chains, heads[index]);
 
-			if (TOC.Assets.TryGetValue(RivetAssetId.FromString(name + ".animstrm"), out var animAsset)) {
+			if (Game.TOC.Assets.TryGetValue(RivetAssetId.FromString(name + ".animstrm"), out var animAsset)) {
 				animAsset.Name = name + ".animstrm";
 			}
 		}
 	}
 
-	public ArchiveTOC TOC { get; }
+	public RivetGame Game { get; }
 	public Dictionary<ulong, RivetAsset> MissingAssets { get; } = [];
 
 	private static void ResolveDependencies(MemoryReader reader, RivetAsset asset, ReadOnlySpan<int> names, ReadOnlySpan<uint> links, ReadOnlySpan<uint> heads, ReadOnlySpan<uint> chains, uint head) {
@@ -88,7 +90,7 @@ public sealed class DependencyDAG : DAT1 {
 
 	private static unsafe IUnsafeMemoryOwner<byte> GetDAT1Stream(IUnsafeMemoryOwner<byte> buffer) {
 		var reader = new MemoryReader(buffer);
-		var header = reader.Get<DependencyDAGHeader>();
+		var header = reader.Get<DAGHeader>();
 		if (header.TypeId == DAT1Magic) {
 			return buffer;
 		}

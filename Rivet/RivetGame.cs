@@ -20,8 +20,8 @@ public sealed class RivetGame : IDisposable {
 
 		var tocData = new RivetMemory<byte>(new FileInfo(tocPath));
 		var dagData = new RivetMemory<byte>(new FileInfo(dagPath));
-		TOC = new ArchiveTOC(tocData);
-		DAG = new DependencyDAG(dagData, TOC);
+		TOC = new ArchiveTOC(tocData, this);
+		DAG = new DependencyDAG(dagData, this);
 	}
 
 	public ArchiveTOC TOC { get; }
@@ -73,8 +73,4 @@ public sealed class RivetGame : IDisposable {
 		name = null;
 		return false;
 	}
-
-	public IUnsafeMemoryOwner<byte> OpenFile(RivetAsset asset) => IUnsafeMemoryOwner<byte>.Empty;
-
-	public bool PrepareArchive(RivetAsset asset) => false;
 }

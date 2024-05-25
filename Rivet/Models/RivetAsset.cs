@@ -1,3 +1,4 @@
+using Rivet.IO;
 using Rivet.Models.Data;
 
 namespace Rivet.Models;
@@ -19,4 +20,6 @@ public record RivetAsset {
 	public HashSet<RivetAssetId> Dependencies { get; } = [];
 	public AssetType Type { get; set; }
 	public ulong Hash { get; set; }
+
+	public RivetMemory<byte>? Open() => Archive.DataStream?.ReadBytes(Offset, Size);
 }

@@ -6,5 +6,5 @@ namespace Rivet.Models.Data;
 public record struct AssetFileMetadata {
 	public Byte64Array Name { get; set; }
 	public byte Unknown { get; set; } // padding?
-	public Locale Language { get; set; }
+	public Locale Locale { get; set; }
 }

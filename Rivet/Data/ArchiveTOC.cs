@@ -4,6 +4,7 @@ using DragonLib;
 using Rivet.IO;
 using Rivet.Models;
 using Rivet.Models.Data;
+using Serilog;
 
 namespace Rivet.Data;
 
@@ -13,7 +14,10 @@ public sealed class ArchiveTOC : DAT1 {
 	private const uint TOCMagic = 0x34E89035;
 	private const uint TOCMagicCompressed = 0x77AF12AF;
 
-	public ArchiveTOC(IUnsafeMemoryOwner<byte> buffer) : base(buffer, GetDAT1Stream(buffer)) {
+	public ArchiveTOC(IUnsafeMemoryOwner<byte> buffer, RivetGame game) : base(buffer, GetDAT1Stream(buffer)) {
+		Log.Information("Loading TOC");
+		Game = game;
+
 		if (Header.Schema.Hash is not (TypeId or TypeIdSpider)) {
 			throw new NotSupportedException("ArchiveTOC is not recognized");
 		}
@@ -40,9 +44,13 @@ public sealed class ArchiveTOC : DAT1 {
 		Archives.EnsureCapacity(assetFileMetadata.Length);
 		foreach (var archive in assetFileMetadata) {
 			var name = archive.Name;
+			var nameStr = ((ReadOnlySpan<byte>) name).ReadUTF8StringNonNull().Replace('\\', '/');
+			var target = Path.Combine(Game.Root, nameStr);
+			Log.Information("Loading DSAR {Path} ({Locale})", nameStr, archive.Locale);
 			Archives.Add(new RivetArchive {
-				Name = ((ReadOnlySpan<byte>) name).ReadUTF8StringNonNull(),
-				Locale = archive.Language,
+				Name = nameStr,
+				Locale = archive.Locale,
+				DataStream = !Path.Exists(target) ? null : new DataStreamArchive(target),
 			});
 		}
 
@@ -58,11 +66,12 @@ public sealed class ArchiveTOC : DAT1 {
 		for (var localeIndex = 0; localeIndex < assetGroups.Length; localeIndex += 8) {
 			for (AssetCategory category = 0; category < (AssetCategory) 8; ++category) {
 				var (groupStart, groupLength) = assetGroups[localeIndex + (int) category];
+				var locale = (Locale) (localeIndex / 8);
 				if (groupLength == 0) {
 					continue;
 				}
 
-				var locale = (Locale) (localeIndex / 8);
+				Log.Information("Asset Group {Locale} {Category} has {Count} assets", locale, category, groupLength);
 
 				var groupList = Groups[category][locale];
 				groupList.EnsureCapacity(groupLength);
@@ -111,6 +120,7 @@ public sealed class ArchiveTOC : DAT1 {
 		}
 	}
 
+	public RivetGame Game { get; set; }
 	public List<RivetArchive> Archives { get; set; } = [];
 	public Dictionary<ulong, RivetAsset> Assets { get; set; } = [];
 	public Dictionary<AssetCategory, Dictionary<Locale, List<RivetAsset>>> Groups { get; set; } = [];
@@ -119,7 +129,7 @@ public sealed class ArchiveTOC : DAT1 {
 
 	private static unsafe IUnsafeMemoryOwner<byte> GetDAT1Stream(IUnsafeMemoryOwner<byte> buffer) {
 		var reader = new MemoryReader(buffer);
-		var header = reader.Get<ArchiveTOCHeader>();
+		var header = reader.Get<TOCHeader>();
 		if (header.TypeId == DAT1Magic) {
 			return buffer;
 		}
