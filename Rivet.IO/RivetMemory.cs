@@ -1,3 +1,7 @@
+// rivet project
+// Copyright (c) 2024 <https://github.com/yretenai/rivet>
+// SPDX-License-Identifier: MPL-2.0
+
 using System.Buffers;
 using System.Runtime.CompilerServices;
 using DragonLib;
