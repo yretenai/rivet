@@ -1,5 +1,6 @@
 using System.Buffers;
 using System.Diagnostics;
+using System.Runtime.CompilerServices;
 using DragonLib;
 using GDeflateNet;
 using IronCompress;
@@ -46,6 +47,7 @@ public sealed class DataStreamArchive : IDisposable, IAsyncDisposable {
 
 	public void Dispose() => BaseStream.Dispose();
 
+	[MethodImpl(MethodImplOptions.AggressiveOptimization)]
 	public RivetMemory<byte> ReadBytes(long assetOffset, int assetSize) {
 		var assetEnd = assetOffset + assetSize;
 

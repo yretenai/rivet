@@ -14,6 +14,7 @@ public sealed class ArchiveTOC : DAT1 {
 	private const uint TOCMagic = 0x34E89035;
 	private const uint TOCMagicCompressed = 0x77AF12AF;
 
+	[MethodImpl(MethodImplOptions.AggressiveOptimization)]
 	public ArchiveTOC(IUnsafeMemoryOwner<byte> buffer, RivetGame game) : base(buffer, GetDAT1Stream(buffer)) {
 		Log.Information("Loading TOC");
 		Game = game;
