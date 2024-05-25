@@ -6,6 +6,8 @@
 		<LangVersion>preview</LangVersion>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
+		<AssemblyName>rivet-texture</AssemblyName>
+		<ApplicationIcon>../../Rivet/Resources/icon.ico</ApplicationIcon>
 	</PropertyGroup>
 
 </Project>

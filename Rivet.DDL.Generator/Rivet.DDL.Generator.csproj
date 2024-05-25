@@ -6,6 +6,8 @@
 		<LangVersion>preview</LangVersion>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
+		<AssemblyName>rivet-codegen-ddl</AssemblyName>
+		<ApplicationIcon>../Rivet/Resources/icon.ico</ApplicationIcon>
 	</PropertyGroup>
 
 </Project>

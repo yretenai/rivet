@@ -6,10 +6,11 @@
 		<LangVersion>preview</LangVersion>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
+		<AssemblyName>rivet-toc</AssemblyName>
+		<ApplicationIcon>../../Rivet/Resources/icon.ico</ApplicationIcon>
 	</PropertyGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\Rivet\Rivet.csproj"/>
 		<ProjectReference Include="..\Rivet.CLI\Rivet.CLI.csproj"/>
 	</ItemGroup>
 
