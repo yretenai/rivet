@@ -105,6 +105,7 @@ public sealed class DataStreamArchive : IDisposable, IAsyncDisposable {
 					throw new NotSupportedException("compression type 1 has never been seen before");
 				}
 				case DSARCompression.GDeflate: {
+					Debug.Assert((Header.Flags & 0x80) == 0x80, "(Header.Flags & 0x80) == 0x80"); // i suspect this is a "Deflate is TileStream" flag
 					if (!GDeflate.Decompress(compressedBuffer.Memory[..chunk.CompressedSize], uncompressedBuffer.Memory[..chunk.Size], 1)) {
 						throw new InvalidOperationException("gdeflate failure");
 					}
