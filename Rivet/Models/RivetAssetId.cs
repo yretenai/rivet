@@ -44,8 +44,11 @@ public record struct RivetAssetId : IEquatable<ulong>, IEquatable<string> {
 	];
 
 	public RivetAssetId(ulong value) => Value = value;
+	public RivetAssetId(ulong value, RivetAssetIdFlags flags) => Value = (value >> 2) | ((ulong) flags << 62);
+	public RivetAssetId(uint value, RivetAssetIdFlags flags) => Value = value | ((ulong) flags << 62);
 
-	public RivetAssetId(ReadOnlySpan<byte> bytes, RivetAssetIdFlags flags, ulong hash = Basis) => Value = (Checksum(bytes, hash) >> 2) | ((ulong) flags << 62);
+	public RivetAssetId(ReadOnlySpan<byte> bytes, RivetAssetIdFlags flags, ulong hash = Basis) : this(Checksum(bytes, hash), flags) { }
+
 
 	[MethodImpl(MethodImplOptions.AggressiveOptimization)]
 	public static ulong Checksum(ReadOnlySpan<byte> bytes, ulong hash = Basis) {

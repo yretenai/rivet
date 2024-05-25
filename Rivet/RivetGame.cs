@@ -6,6 +6,13 @@ using Rivet.Models;
 namespace Rivet;
 
 public sealed class RivetGame : IDisposable {
+	static RivetGame() {
+		var txt = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources", "streamed_files.txt");
+		if (File.Exists(txt)) {
+			LoadFileList(File.ReadAllText(txt));
+		}
+	}
+
 	public RivetGame(string root) {
 		Root = root;
 		var tocPath = Path.Combine(root, "toc");
@@ -22,6 +29,8 @@ public sealed class RivetGame : IDisposable {
 		var dagData = new RivetMemory<byte>(new FileInfo(dagPath));
 		TOC = new ArchiveTOC(tocData, this);
 		DAG = new DependencyDAG(dagData, this);
+
+		ApplyKnownPaths();
 	}
 
 	public ArchiveTOC TOC { get; }
@@ -38,6 +47,16 @@ public sealed class RivetGame : IDisposable {
 			Instance = null;
 		}
 	}
+
+	public void ApplyKnownPaths() {
+		foreach (var (hash, name) in KnownAssetPaths) {
+			if (TOC.Assets.TryGetValue(hash, out var asset) && string.IsNullOrEmpty(asset.Name)) {
+				asset.Name = name;
+			}
+		}
+	}
+
+	public bool TryFindWemAsset(uint wem, [MaybeNullWhen(false)] out RivetAsset asset) => TOC.Assets.TryGetValue(new RivetAssetId(wem, RivetAssetIdFlags.Ext | RivetAssetIdFlags.Shipped), out asset);
 
 	public static RivetGame Create(string root) {
 		if (Instance != null && Path.GetFullPath(Instance.Root) == Path.GetFullPath(root)) {

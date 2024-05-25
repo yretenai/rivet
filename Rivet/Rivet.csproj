@@ -19,4 +19,10 @@
 		<ProjectReference Include="..\Rivet.IO\Rivet.IO.csproj"/>
 	</ItemGroup>
 
+	<ItemGroup>
+		<None Update="Resources\streamed_files.txt">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+
 </Project>
