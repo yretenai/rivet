@@ -75,7 +75,7 @@ public record struct RivetAssetId : IEquatable<ulong>, IEquatable<string> {
 	public static implicit operator RivetAssetId(string? text) => FromString(text);
 
 
-	public override string ToString() => RivetGame.TryGetAssetName(Value, out var name) ? name : $"0x{Value:x16}";
+	public override string ToString() => RivetGame.Instance?.TryGetAssetName(Value, out var name) == true ? name : $"0x{Value:x16}";
 
 	public bool Equals(ulong other) => Hash == (other & 0x3FFFFFFFFFFFFFFFUL);
 

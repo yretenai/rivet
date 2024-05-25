@@ -49,7 +49,7 @@ public sealed class DependencyDAG : DAT1 {
 						IsVirtual = true,
 					},
 				};
-				MissingAssets[id] = asset;
+				VirtualAssets[id] = asset;
 			}
 
 			asset.Name = name;
@@ -64,7 +64,7 @@ public sealed class DependencyDAG : DAT1 {
 	}
 
 	public RivetGame Game { get; }
-	public Dictionary<ulong, RivetAsset> MissingAssets { get; } = [];
+	public Dictionary<ulong, RivetAsset> VirtualAssets { get; } = [];
 
 	private static void ResolveDependencies(MemoryReader reader, RivetAsset asset, ReadOnlySpan<int> names, ReadOnlySpan<uint> links, ReadOnlySpan<uint> heads, ReadOnlySpan<uint> chains, uint head) {
 		if (head != uint.MaxValue) {
