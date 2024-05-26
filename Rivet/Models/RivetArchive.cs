@@ -10,6 +10,8 @@ namespace Rivet.Models;
 public sealed record RivetArchive : IDisposable, IAsyncDisposable {
 	public required string Name { get; init; }
 	public Locale Locale { get; set; }
+	public int InstallId { get; set; }
+	public int ChunkId { get; set; }
 	public DataStreamArchive? DataStream { get; set; }
 
 	public async ValueTask DisposeAsync() {

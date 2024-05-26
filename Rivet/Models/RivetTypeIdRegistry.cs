@@ -17,6 +17,7 @@ public static class RivetTypeIdRegistry {
 		Names[RivetTypeId.Checksum("Archive TOC Texture Header"u8)] = "Archive TOC Texture Header";
 		Names[RivetTypeId.Checksum("Archive TOC Asset Header Data"u8)] = "Archive TOC Asset Header Data";
 		Names[RivetTypeId.Checksum("Archive TOC Key Asset IDs"u8)] = "Archive TOC Key Asset IDs";
+		Names[RivetTypeId.Checksum("Archive TOC Asset Dupe Metadata"u8)] = "Archive TOC Asset Dupe Metadata";
 		Names[RivetTypeId.Checksum("Asset Types"u8)] = "Asset Types";
 		Names[RivetTypeId.Checksum("Asset Ids"u8)] = "Asset Ids";
 		Names[RivetTypeId.Checksum("Dependency Links"u8)] = "Dependency Links";

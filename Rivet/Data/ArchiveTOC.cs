@@ -28,35 +28,50 @@ public sealed class ArchiveTOC : DAT1 {
 		}
 
 		var isSpider = Header.Schema.Hash is TypeIdSpider;
-		if (isSpider) {
-			throw new NotImplementedException("SMR and SMMM is not supported yet");
-		}
-
 		var assetGroups = GetSection<PackedPair<int, int>>("Archive TOC Header"u8);
 		var assetIds = GetSection<ulong>("Archive TOC Asset IDs"u8);
-		var assetMetadata = GetSection<AssetMetadata>("Archive TOC Asset Metadata"u8);
-		var assetFileMetadata = GetSection<AssetFileMetadata>("Archive TOC File Metadata"u8);
 		var textureIds = GetSection<ulong>("Archive TOC Texture Asset Ids"u8);
 		var textureMetas = GetSection<AssetTextureHeader>("Archive TOC Texture Meta"u8);
 		var assetHeaders = GetSection<AssetHeader>("Archive TOC Asset Header Data"u8);
 		var keyIds = GetSection<ulong>("Archive TOC Key Asset IDs"u8);
-
 		var textureHeader = GetSection<int>("Archive TOC Texture Header"u8);
+		var assetMetadata = GetSection<AssetMetadata>("Archive TOC Asset Metadata"u8);
+		var assetFileMetadata = GetSection<AssetFileMetadata>("Archive TOC File Metadata"u8);
+		var spiderAssetMetadata = GetSection<AssetMetadataSpider>("Archive TOC Asset Metadata"u8);
+		var spiderAssetFileMetadata = GetSection<AssetFileMetadataSpider>("Archive TOC File Metadata"u8);
+		var dupeInfo = GetSection<PackedPair<int, uint>>("Archive TOC Asset Dupe Metadata"u8);
+
 		if (textureHeader.Length > 0) {
 			StreamedTextureCount = textureHeader[0];
 		}
 
-		Archives.EnsureCapacity(assetFileMetadata.Length);
-		foreach (var archive in assetFileMetadata) {
-			var name = archive.Name;
-			var nameStr = ((ReadOnlySpan<byte>) name).ReadUTF8StringNonNull().Replace('\\', '/');
-			var target = Path.Combine(Game.Root, nameStr);
-			Log.Information("Loading DSAR {Path} ({Locale})", nameStr, archive.Locale);
-			Archives.Add(new RivetArchive {
-				Name = nameStr,
-				Locale = archive.Locale,
-				DataStream = !Path.Exists(target) ? null : new DataStreamArchive(target),
-			});
+		if (isSpider) {
+			Archives.EnsureCapacity(spiderAssetFileMetadata.Length);
+			foreach (var archive in spiderAssetFileMetadata) {
+				var name = archive.Name;
+				var nameStr = ((ReadOnlySpan<byte>) name).ReadUTF8StringNonNull().Replace('\\', '/');
+				var target = Path.Combine(Game.Root, nameStr);
+				Log.Information("Loading DSAR {Path} ({Locale})", nameStr, archive);
+				Archives.Add(new RivetArchive {
+					Name = nameStr,
+					InstallId = archive.Id,
+					ChunkId = archive.ChunkId,
+					DataStream = !Path.Exists(target) ? null : new DataStreamArchive(target),
+				});
+			}
+		} else {
+			Archives.EnsureCapacity(assetFileMetadata.Length);
+			foreach (var archive in assetFileMetadata) {
+				var name = archive.Name;
+				var nameStr = ((ReadOnlySpan<byte>) name).ReadUTF8StringNonNull().Replace('\\', '/');
+				var target = Path.Combine(Game.Root, nameStr);
+				Log.Information("Loading DSAR {Path} ({Locale})", nameStr, archive.Locale);
+				Archives.Add(new RivetArchive {
+					Name = nameStr,
+					Locale = archive.Locale,
+					DataStream = !Path.Exists(target) ? null : new DataStreamArchive(target),
+				});
+			}
 		}
 
 		for (var i = 0; i < 8; ++i) {
@@ -86,7 +101,18 @@ public sealed class ArchiveTOC : DAT1 {
 
 					var id = assetIds[assetIndex];
 
-					var assetMeta = assetMetadata[assetIndex];
+					var assetMeta = default(AssetMetadata);
+					if (!isSpider) {
+						assetMeta = assetMetadata[assetIndex];
+					} else {
+						var spiderAssetMeta = spiderAssetMetadata[assetIndex];
+						var dupe = dupeInfo[spiderAssetMeta.DupeId];
+						assetMeta.ArchiveId = dupe.Key;
+						assetMeta.Offset = dupe.Value;
+						assetMeta.Size = spiderAssetMeta.Size;
+						assetMeta.HeaderOffset = -1;
+					}
+
 					var archive = Archives[assetMeta.ArchiveId];
 					var textureIndex = textureIds.IndexOf(id);
 					var isKey = keyIds.Contains(id);
@@ -121,6 +147,7 @@ public sealed class ArchiveTOC : DAT1 {
 					if (!Assets.TryGetValue(asset.Id, out var assets)) {
 						assets = Assets[asset.Id] = [];
 					}
+
 					assets.Add(asset);
 					groupList.Add(asset);
 				}

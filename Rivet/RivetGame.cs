@@ -70,9 +70,7 @@ public sealed class RivetGame : IDisposable {
 		}
 	}
 
-	public bool TryFindWemAsset(uint wem, Locale locale, [MaybeNullWhen(false)] out RivetAsset asset) {
-		return TryFindAsset(new RivetAssetId(wem, RivetAssetIdFlags.Ext | RivetAssetIdFlags.Shipped), locale, AssetCategory.Audio, out asset);
-	}
+	public bool TryFindWemAsset(uint wem, Locale locale, [MaybeNullWhen(false)] out RivetAsset asset) => TryFindAsset(new RivetAssetId(wem, RivetAssetIdFlags.Ext | RivetAssetIdFlags.Shipped), locale, AssetCategory.Audio, out asset);
 
 	public bool TryFindAsset(ulong assetId, Locale locale, AssetCategory category, [MaybeNullWhen(false)] out RivetAsset asset) {
 		asset = DAG.VirtualAssets.FirstOrDefault(x => x.Id == assetId);
@@ -102,9 +100,7 @@ public sealed class RivetGame : IDisposable {
 		return false;
 	}
 
-	public IEnumerable<RivetAsset> TryFindAssetsForId(ulong assetId) {
-		return TOC.Assets.TryGetValue(assetId, out var assets) ? assets : [];
-	}
+	public IEnumerable<RivetAsset> TryFindAssetsForId(ulong assetId) => TOC.Assets.TryGetValue(assetId, out var assets) ? assets : [];
 
 	public static RivetGame Create(string root) {
 		if (Instance != null && Path.GetFullPath(Instance.Root) == Path.GetFullPath(root)) {
