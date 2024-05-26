@@ -17,7 +17,7 @@ internal record ListCommand : RivetCLICommand {
 	public ListCommand(ListFlags flags) : base(flags) {
 		Console.Error.WriteLine("id,name,type,locale,category,is_key,is_texture,size,dag_hash,hash");
 
-		foreach (var asset in Game.TOC.Assets.Values.Concat(Game.DAG.VirtualAssets.Values).OrderBy(x => x.Id)) {
+		foreach (var asset in Game.TOC.Assets.Values.SelectMany(x => x).Concat(Game.DAG.VirtualAssets).OrderBy(x => x.Id)) {
 			var sb = new StringBuilder();
 			sb.Append(asset.Id.ToString("x16"));
 			sb.Append(',');
@@ -48,7 +48,7 @@ internal record ListCommand : RivetCLICommand {
 		Console.Error.WriteLine();
 		Console.Error.WriteLine("--- DAG ---");
 		Console.Error.WriteLine();
-		foreach (var asset in Game.TOC.Assets.Values.Concat(Game.DAG.VirtualAssets.Values).OrderBy(x => x.Id)) {
+		foreach (var asset in Game.TOC.Assets.Values.SelectMany(x => x).Concat(Game.DAG.VirtualAssets).OrderBy(x => x.Id)) {
 			if (asset.Dependencies.Count == 0) {
 				continue;
 			}
@@ -56,9 +56,13 @@ internal record ListCommand : RivetCLICommand {
 			Console.Error.WriteLine(RivetGame.ProcessName(asset));
 
 			foreach (var dependency in asset.Dependencies) {
-				if (Game.TryFindAsset(dependency, out var dependencyAsset)) {
+				var foundOne = false;
+				foreach (var dependencyAsset in Game.TryFindAssetsForId(dependency)) {
+					foundOne = true;
 					Console.Error.WriteLine("\t" + RivetGame.ProcessName(dependencyAsset));
-				} else {
+				}
+
+				if (!foundOne) {
 					Console.Error.WriteLine($"\tunknown/{dependency.Value:x16}.bin");
 				}
 			}

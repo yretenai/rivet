@@ -118,7 +118,10 @@ public sealed class ArchiveTOC : DAT1 {
 						TextureHeader = textureMeta ?? default,
 						Header = meta ?? default,
 					};
-					Assets[id] = asset;
+					if (!Assets.TryGetValue(asset.Id, out var assets)) {
+						assets = Assets[asset.Id] = [];
+					}
+					assets.Add(asset);
 					groupList.Add(asset);
 				}
 			}
@@ -127,7 +130,7 @@ public sealed class ArchiveTOC : DAT1 {
 
 	public RivetGame Game { get; set; }
 	public List<RivetArchive> Archives { get; set; } = [];
-	public Dictionary<ulong, RivetAsset> Assets { get; set; } = [];
+	public Dictionary<ulong, List<RivetAsset>> Assets { get; set; } = [];
 	public Dictionary<AssetCategory, Dictionary<Locale, List<RivetAsset>>> Groups { get; set; } = [];
 
 	public int StreamedTextureCount { get; }

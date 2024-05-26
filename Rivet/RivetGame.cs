@@ -62,25 +62,48 @@ public sealed class RivetGame : IDisposable {
 
 	public void ApplyKnownPaths() {
 		foreach (var (hash, name) in KnownAssetPaths) {
-			if (TOC.Assets.TryGetValue(hash, out var asset) && string.IsNullOrEmpty(asset.Name)) {
-				asset.Name = name;
+			if (TOC.Assets.TryGetValue(hash, out var assets)) {
+				foreach (var asset in assets) {
+					asset.Name = name;
+				}
 			}
 		}
 	}
 
-	public bool TryFindWemAsset(uint wem, [MaybeNullWhen(false)] out RivetAsset asset) => TOC.Assets.TryGetValue(new RivetAssetId(wem, RivetAssetIdFlags.Ext | RivetAssetIdFlags.Shipped), out asset);
+	public bool TryFindWemAsset(uint wem, Locale locale, [MaybeNullWhen(false)] out RivetAsset asset) {
+		return TryFindAsset(new RivetAssetId(wem, RivetAssetIdFlags.Ext | RivetAssetIdFlags.Shipped), locale, AssetCategory.Audio, out asset);
+	}
 
-	public bool TryFindAsset(ulong assetId, [MaybeNullWhen(false)] out RivetAsset asset) {
-		if (TOC.Assets.TryGetValue(assetId, out asset)) {
+	public bool TryFindAsset(ulong assetId, Locale locale, AssetCategory category, [MaybeNullWhen(false)] out RivetAsset asset) {
+		asset = DAG.VirtualAssets.FirstOrDefault(x => x.Id == assetId);
+		return asset != null || TryFindAssetInTOC(assetId, locale, category, out asset);
+	}
+
+	public bool TryFindAssetInTOC(ulong assetId, Locale locale, AssetCategory category, [MaybeNullWhen(false)] out RivetAsset asset) {
+		asset = TOC.Groups[category][locale].FirstOrDefault(x => x.Id == assetId);
+		if (asset != null) {
 			return true;
 		}
 
-		if (DAG.VirtualAssets.TryGetValue(assetId, out asset)) {
-			return true;
+		// Lang -> Eng -> None
+		if (locale is not Locale.Unlocalized) {
+			if (locale is not Locale.English) {
+				if (TryFindAssetInTOC(assetId, Locale.English, category, out asset)) {
+					return true;
+				}
+			} else {
+				if (TryFindAssetInTOC(assetId, Locale.Unlocalized, category, out asset)) {
+					return true;
+				}
+			}
 		}
 
 		asset = null;
 		return false;
+	}
+
+	public IEnumerable<RivetAsset> TryFindAssetsForId(ulong assetId) {
+		return TOC.Assets.TryGetValue(assetId, out var assets) ? assets : [];
 	}
 
 	public static RivetGame Create(string root) {
@@ -109,7 +132,8 @@ public sealed class RivetGame : IDisposable {
 			return true;
 		}
 
-		if (Instance != null && TryFindAsset(hash, out var asset)) {
+		var asset = TryFindAssetsForId(hash).FirstOrDefault();
+		if (asset != null) {
 			name = ProcessName(asset);
 			return true;
 		}

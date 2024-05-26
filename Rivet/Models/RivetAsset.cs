@@ -21,7 +21,7 @@ public record RivetAsset {
 
 	// stuff from dag
 	public string? Name { get; set; }
-	public HashSet<RivetAssetId> Dependencies { get; } = [];
+	public HashSet<RivetAssetId> Dependencies { get; set; } = [];
 	public AssetType Type { get; set; }
 	public ulong Hash { get; set; }
 

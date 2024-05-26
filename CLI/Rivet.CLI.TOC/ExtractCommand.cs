@@ -12,7 +12,7 @@ namespace Rivet.CLI.TOC;
 [Command(typeof(RivetExtractFlags), "extract", "Extracts all game files without conversion")]
 internal record ExtractCommand : TOCCommand {
 	public ExtractCommand(RivetExtractFlags flags) : base(flags) {
-		foreach (var asset in Game.TOC.Assets.Values) {
+		foreach (var asset in Game.TOC.Assets.Values.SelectMany(x => x)) {
 			var name = RivetGame.ProcessName(asset);
 
 			Log.Information("Exporting {Path}", name);

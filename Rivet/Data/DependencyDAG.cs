@@ -46,31 +46,41 @@ public sealed class DependencyDAG : DAT1 {
 			reader.Offset = nameOffset;
 			var name = RivetAssetId.NormalizeString(reader.GetCString());
 			var id = RivetAssetId.FromString(name);
-			if (!Game.TOC.Assets.TryGetValue(id, out var asset)) {
-				asset = new RivetAsset {
+			var dependencies = new HashSet<RivetAssetId>();
+			ResolveDependencies(reader, dependencies, names, links, heads, chains, heads[index]);
+
+			var foundOne = false;
+			foreach (var asset in Game.TryFindAssetsForId(id)) {
+				foundOne = true;
+				asset.Name = name;
+				asset.Type = type;
+				asset.Hash = hash;
+				asset.Dependencies = dependencies;
+			}
+
+			if (!foundOne) {
+				VirtualAssets.Add(new RivetAsset {
 					Id = id,
+					Name = name,
+					Type = type,
+					Hash = hash,
+					Dependencies = dependencies,
 					Flags = new RivetAssetFlags {
 						IsVirtual = true,
 					},
-				};
-				VirtualAssets[id] = asset;
+				});
 			}
 
-			asset.Name = name;
-			asset.Type = type;
-			asset.Hash = hash;
-			ResolveDependencies(reader, asset, names, links, heads, chains, heads[index]);
-
-			if (Game.TOC.Assets.TryGetValue(RivetAssetId.FromString(name + ".animstrm"), out var animAsset)) {
-				animAsset.Name = name + ".animstrm";
+			foreach (var asset in Game.TryFindAssetsForId(RivetAssetId.FromString(name + ".animstrm"))) {
+				asset.Name = name + ".animstrm";
 			}
 		}
 	}
 
 	public RivetGame Game { get; }
-	public Dictionary<ulong, RivetAsset> VirtualAssets { get; } = [];
+	public List<RivetAsset> VirtualAssets { get; } = [];
 
-	private static void ResolveDependencies(MemoryReader reader, RivetAsset asset, ReadOnlySpan<int> names, ReadOnlySpan<uint> links, ReadOnlySpan<uint> heads, ReadOnlySpan<uint> chains, uint head) {
+	private static void ResolveDependencies(MemoryReader reader, HashSet<RivetAssetId> dependencies, ReadOnlySpan<int> names, ReadOnlySpan<uint> links, ReadOnlySpan<uint> heads, ReadOnlySpan<uint> chains, uint head) {
 		if (head != uint.MaxValue) {
 			if ((head & 0x80000000) != 0) {
 				throw new InvalidOperationException();
@@ -80,13 +90,13 @@ public sealed class DependencyDAG : DAT1 {
 			while (currentIndex != uint.MaxValue) {
 				if (currentIndex >> 31 == 1) {
 					var newHead = chains[(int) (currentIndex & 0x7FFFFFFF)];
-					ResolveDependencies(reader, asset, names, links, heads, chains, newHead);
+					ResolveDependencies(reader, dependencies, names, links, heads, chains, newHead);
 				} else {
 					var dependencyNameOffset = names[(int) (currentIndex & 0x7FFFFFFF)];
 					reader.Offset = dependencyNameOffset;
 					var dependencyName = RivetAssetId.NormalizeString(reader.GetCString());
 					var dependencyId = RivetAssetId.FromString(dependencyName);
-					asset.Dependencies.Add(dependencyId);
+					dependencies.Add(dependencyId);
 				}
 
 				currentIndex = links[(int) head++];

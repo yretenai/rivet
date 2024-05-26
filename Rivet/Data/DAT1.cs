@@ -12,7 +12,7 @@ namespace Rivet.Data;
 public class DAT1 : IDisposable {
 	protected const uint DAT1Magic = 0x44415431u;
 
-	protected DAT1(IUnsafeMemoryOwner<byte> owner, IUnsafeMemoryOwner<byte> buffer, IUnsafeMemoryOwner<byte>? residentBuffer = null) {
+	public DAT1(IUnsafeMemoryOwner<byte> owner, IUnsafeMemoryOwner<byte> buffer, IUnsafeMemoryOwner<byte>? residentBuffer = null) {
 		Owner = owner;
 		Buffer = buffer;
 		ResidentBuffer = residentBuffer ?? IUnsafeMemoryOwner<byte>.Empty;
@@ -80,8 +80,8 @@ public class DAT1 : IDisposable {
 		Sections.Clear();
 	}
 
-	protected IUnsafeMemoryOwner<byte> GetSection(ReadOnlySpan<byte> name) => GetSection(RivetTypeId.Checksum(name));
-	protected IUnsafeMemoryOwner<byte> GetSection(uint hash) => !Sections.TryGetValue(hash, out var section) ? IUnsafeMemoryOwner<byte>.Empty : section.Buffer;
-	protected ReadOnlySpan<T> GetSection<T>(ReadOnlySpan<byte> name) where T : struct => GetSection<T>(RivetTypeId.Checksum(name));
-	protected ReadOnlySpan<T> GetSection<T>(uint hash) where T : struct => MemoryMarshal.Cast<byte, T>(GetSection(hash).Memory.Span);
+	public IUnsafeMemoryOwner<byte> GetSection(ReadOnlySpan<byte> name) => GetSection(RivetTypeId.Checksum(name));
+	public IUnsafeMemoryOwner<byte> GetSection(uint hash) => !Sections.TryGetValue(hash, out var section) ? IUnsafeMemoryOwner<byte>.Empty : section.Buffer;
+	public ReadOnlySpan<T> GetSection<T>(ReadOnlySpan<byte> name) where T : struct => GetSection<T>(RivetTypeId.Checksum(name));
+	public ReadOnlySpan<T> GetSection<T>(uint hash) where T : struct => MemoryMarshal.Cast<byte, T>(GetSection(hash).Memory.Span);
 }
