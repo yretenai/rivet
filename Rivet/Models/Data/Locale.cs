@@ -37,4 +37,5 @@ public enum Locale : byte {
 	Vietnamese = 29,
 	Indonesian = 30,
 	Croatian = 31,
+	All = 0xFF,
 }

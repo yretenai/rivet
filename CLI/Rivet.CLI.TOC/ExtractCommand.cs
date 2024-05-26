@@ -13,6 +13,10 @@ namespace Rivet.CLI.TOC;
 internal record ExtractCommand : TOCCommand {
 	public ExtractCommand(RivetExtractFlags flags) : base(flags) {
 		foreach (var asset in Game.TOC.Assets.Values.SelectMany(x => x)) {
+			if (flags.Locale is not Locale.All && asset.Locale != flags.Locale) {
+				continue;
+			}
+
 			var name = RivetGame.ProcessName(asset);
 
 			Log.Information("Exporting {Path}", name);
