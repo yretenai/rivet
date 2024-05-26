@@ -51,11 +51,13 @@ public sealed class ArchiveTOC : DAT1 {
 				var name = archive.Name;
 				var nameStr = ((ReadOnlySpan<byte>) name).ReadUTF8StringNonNull().Replace('\\', '/');
 				var target = Path.Combine(Game.Root, nameStr);
-				Log.Information("Loading DSAR {Path} ({Locale})", nameStr, archive);
+				Log.Information("Loading DSAR {Path} ({Locale})", nameStr, archive.Locale);
 				Archives.Add(new RivetArchive {
 					Name = nameStr,
 					InstallId = archive.Id,
 					ChunkId = archive.ChunkId,
+					Locale = archive.Locale,
+					Category = archive.Category,
 					DataStream = !Path.Exists(target) ? null : new DataStreamArchive(target),
 				});
 			}
@@ -68,6 +70,7 @@ public sealed class ArchiveTOC : DAT1 {
 				Log.Information("Loading DSAR {Path} ({Locale})", nameStr, archive.Locale);
 				Archives.Add(new RivetArchive {
 					Name = nameStr,
+					Category = archive.Category,
 					Locale = archive.Locale,
 					DataStream = !Path.Exists(target) ? null : new DataStreamArchive(target),
 				});
