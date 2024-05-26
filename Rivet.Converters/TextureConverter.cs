@@ -27,7 +27,12 @@ public static class TextureConverter {
 			numMips -= texture.TextureHeader.StreamMips;
 		}
 
-		var streamOnly = hasStream && texture.TextureHeader.SurfaceCount > 1;
+		var surfaceCount = texture.TextureHeader.SurfaceCount;
+		if (texture.TextureHeader.Flags.Dimension == TextureDimension.Cube) {
+			surfaceCount *= 6;
+		}
+
+		var streamOnly = hasStream && surfaceCount > 1;
 		if (streamOnly) {
 			numMips = texture.TextureHeader.StreamMips;
 		}
@@ -38,13 +43,13 @@ public static class TextureConverter {
 		dds.Height = hasStream ? texture.TextureHeader.StreamDimensions.Value : texture.TextureHeader.ResidentDimensions.Value;
 		dds.MipMapCount = numMips;
 		dx10.Format = texture.TextureHeader.Format;
-		dx10.ArraySize = texture.TextureHeader.SurfaceCount;
+		dx10.ArraySize = surfaceCount;
 
 		var (bitsPerBlock, pixelsPerBlock) = texture.TextureHeader.Format.GetPitchFactor();
 		var oneSurface = CalculateSurfaceSize(dds.Width, dds.Height, pixelsPerBlock, bitsPerBlock, numMips, out _);
 		dds.Pitch = oneSurface;
 
-		switch (texture.TextureHeader.Layout) {
+		switch (texture.TextureHeader.Flags.Dimension) {
 			case TextureDimension.Cube:
 				dds.Caps2 |= DDSCaps2.CubeMapAll;
 				break;
@@ -58,7 +63,7 @@ public static class TextureConverter {
 		if (gpuHeader.ResidentSize + gpuHeader.StreamSize > 0) {
 			dx10.ResourceDimension = gpuHeader.Descriptor.Dimension;
 		} else {
-			dx10.ResourceDimension = texture.TextureHeader.Layout switch {
+			dx10.ResourceDimension = texture.TextureHeader.Flags.Dimension switch {
 				                         TextureDimension.Texture1D => DXGIResourceDimension.Texture1D,
 				                         TextureDimension.Texture2D => DXGIResourceDimension.Texture2D,
 				                         TextureDimension.Array => DXGIResourceDimension.Texture2D,
@@ -108,7 +113,12 @@ public static class TextureConverter {
 
 			using var frameBuffer = new RivetMemory<byte>(width * height * (texture.IsHDR ? 16 : 4));
 
-			for (var surface = 0u; surface < Math.Max(1, (int) texture.TextureHeader.SurfaceCount); ++surface) {
+			var surfaceCount = (int) texture.TextureHeader.SurfaceCount;
+			if (texture.TextureHeader.Flags.Dimension == TextureDimension.Cube) {
+				surfaceCount *= 6;
+			}
+
+			for (var surface = 0u; surface < Math.Max(1, surfaceCount); ++surface) {
 				var oneSurface = CalculateSurfaceSize(width, height, pixelsPerBlock, bitsPerBlock, numMips, out var largestMip);
 				var chunk = new SharedRivetMemory<byte>(hasStream ? texture.StreamBuffer : texture.ResidentBuffer, (int) (oneSurface * surface), (int) largestMip);
 
@@ -271,7 +281,7 @@ public static class TextureConverter {
 		var inputOffset = 0;
 		for (var i = 0; i < height; i += 4) {
 			for (var j = 0; j < width; j += 4) {
-				var outputOffset = ((i * width) + j) * Unsafe.SizeOf<ColorRGB<Half>>();
+				var outputOffset = (i * width + j) * Unsafe.SizeOf<ColorRGB<Half>>();
 				BcHelpers.DecompressBc6h(input.Slice(inputOffset, Bc6h.BlockSize), buffer[outputOffset..], width * 3, isSigned);
 				inputOffset += Bc6h.BlockSize;
 			}

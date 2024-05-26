@@ -16,7 +16,7 @@ public record struct TextureHeader {
 	public TextureFlags Flags { get; set; }
 	public DXGIFormat Format { get; set; }
 	public float Bias { get; set; }
-	public TextureDimension Layout { get; set; }
+	public TextureFilter Filter { get; set; }
 	public ushort Mips { get; set; }
 	public byte StreamMips { get; set; }
 	public TextureWrapMode WrapU { get; set; }

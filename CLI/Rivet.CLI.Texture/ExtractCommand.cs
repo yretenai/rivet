@@ -5,6 +5,7 @@
 using DragonLib.CommandLine;
 using Rivet.Converters;
 using Rivet.Models.Data;
+using Rivet.Models.Graphics;
 using Serilog;
 using SixLabors.ImageSharp;
 
@@ -29,7 +30,9 @@ internal record ExtractCommand : RivetCLICommand {
 				case ImageFormat.TIF when !texture.IsSupported():
 					continue;
 				case ImageFormat.Auto:
-					format = texture.IsSupported() ? texture.IsHDR ? ImageFormat.TIF : ImageFormat.PNG : ImageFormat.DDS;
+					var isMultiSurface = texture.TextureHeader.SurfaceCount > 1 ||
+					                     texture.TextureHeader.Flags.Dimension is TextureDimension.Array or TextureDimension.Cube or TextureDimension.Texture3D;
+					format = texture.IsSupported() ? texture.IsHDR || isMultiSurface ? ImageFormat.TIF : ImageFormat.PNG : ImageFormat.DDS;
 					break;
 				case ImageFormat.PNG:
 				case ImageFormat.TIF:

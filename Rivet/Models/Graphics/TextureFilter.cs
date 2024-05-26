@@ -5,8 +5,8 @@
 namespace Rivet.Models.Graphics;
 
 [Flags]
-public enum TextureFilter : byte {
+public enum TextureFilter : ushort {
 	Point = 0,
 	Linear = 1,
-	Anisotropic = 0b110,
+	Anisotropic = 2,
 }
