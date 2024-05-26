@@ -38,6 +38,12 @@ internal record ExtractCommand : RivetCLICommand {
 			return;
 		}
 
+		var name = RivetGame.ProcessName(asset);
+
+		if (flags.Regex.Count != 0 && !flags.Regex.Any(x => x.IsMatch(name))) {
+			return;
+		}
+
 		using var texture = asset.Load<Graphics.Texture>(Game);
 		if (texture == null) {
 			return;
@@ -61,7 +67,6 @@ internal record ExtractCommand : RivetCLICommand {
 				return;
 		}
 
-		var name = RivetGame.ProcessName(asset);
 		Log.Information("Converting {Path} to {Type}", name, format);
 
 		if (flags.Dry) {

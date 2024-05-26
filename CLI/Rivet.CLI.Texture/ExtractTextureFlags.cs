@@ -12,7 +12,4 @@ internal record ExtractTextureFlags : RivetExtractFlags {
 
 	[Flag("flat", Help = "Do not build directory hierarchies")]
 	public bool Flatten { get; set; }
-
-	[Flag("filter", Help = "Only export textures with these paths, paths starting with 0x will be considered an Asset Id", Positional = 2)]
-	public HashSet<string> Filter { get; set; } = [];
 }

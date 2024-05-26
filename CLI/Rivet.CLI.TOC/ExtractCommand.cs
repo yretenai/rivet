@@ -12,12 +12,21 @@ namespace Rivet.CLI.TOC;
 [Command(typeof(RivetExtractFlags), "extract", "Extracts all game files without conversion")]
 internal record ExtractCommand : TOCCommand {
 	public ExtractCommand(RivetExtractFlags flags) : base(flags) {
+		var filter = ProcessFilters(flags.Filter);
 		foreach (var asset in Game.TOC.Assets.Values.SelectMany(x => x)) {
 			if (flags.Locale is not Locale.All && asset.Locale != flags.Locale) {
 				continue;
 			}
 
+			if (filter.Count > 0 && !filter.Contains(asset.Id)) {
+				continue;
+			}
+
 			var name = RivetGame.ProcessName(asset);
+
+			if (flags.Regex.Count != 0 && !flags.Regex.Any(x => x.IsMatch(name))) {
+				continue;
+			}
 
 			Log.Information("Exporting {Path}", name);
 

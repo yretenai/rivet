@@ -2,6 +2,7 @@
 // Copyright (c) 2024 <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: MPL-2.0
 
+using System.Globalization;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -86,4 +87,14 @@ public record struct RivetAssetId : IEquatable<ulong>, IEquatable<string> {
 	public bool Equals(string? other) => FromString(other).Hash == Hash;
 
 	public readonly override int GetHashCode() => Value.GetHashCode();
+
+	public static RivetAssetId Parse(string filter) {
+		filter = filter.Trim();
+
+		if (filter.StartsWith("0x", StringComparison.OrdinalIgnoreCase) && ulong.TryParse(filter[2..], NumberStyles.HexNumber, null, out var id)) {
+			return id;
+		}
+
+		return FromString(NormalizeString(filter));
+	}
 }
