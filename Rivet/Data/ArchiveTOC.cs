@@ -35,10 +35,10 @@ public sealed class ArchiveTOC : DAT1 {
 		var assetHeaders = GetSection<AssetHeader>("Archive TOC Asset Header Data"u8);
 		var keyIds = GetSection<ulong>("Archive TOC Key Asset IDs"u8);
 		var textureHeader = GetSection<int>("Archive TOC Texture Header"u8);
-		var assetMetadata = GetSection<AssetMetadata>("Archive TOC Asset Metadata"u8);
-		var assetFileMetadata = GetSection<AssetFileMetadata>("Archive TOC File Metadata"u8);
-		var spiderAssetMetadata = GetSection<AssetMetadataSpider>("Archive TOC Asset Metadata"u8);
-		var spiderAssetFileMetadata = GetSection<AssetFileMetadataSpider>("Archive TOC File Metadata"u8);
+		var assetMetadata = isSpider ? default : GetSection<AssetMetadata>("Archive TOC Asset Metadata"u8);
+		var assetFileMetadata = isSpider ? default : GetSection<AssetFileMetadata>("Archive TOC File Metadata"u8);
+		var spiderAssetMetadata = !isSpider ? default : GetSection<AssetMetadataSpider>("Archive TOC Asset Metadata"u8);
+		var spiderAssetFileMetadata = !isSpider ? default : GetSection<AssetFileMetadataSpider>("Archive TOC File Metadata"u8);
 		var dupeInfo = GetSection<PackedPair<int, uint>>("Archive TOC Asset Dupe Metadata"u8);
 
 		if (textureHeader.Length > 0) {
