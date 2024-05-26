@@ -8,10 +8,6 @@ using Rivet.Models;
 
 namespace Rivet.CLI.TOC;
 
-internal abstract record TOCCommand : RivetCLICommand {
-	protected TOCCommand(RivetCLIFlags flags) : base(flags) { }
-}
-
 [Command(typeof(ListFlags), "list", "List all TOC and DAG contents")]
 internal record ListCommand : RivetCLICommand {
 	public ListCommand(ListFlags flags) : base(flags) {

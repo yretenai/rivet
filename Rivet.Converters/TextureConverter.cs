@@ -18,7 +18,7 @@ using SixLabors.ImageSharp.PixelFormats;
 namespace Rivet.Converters;
 
 public static class TextureConverter {
-	public static bool IsSupported(this Texture texture) => texture.TextureHeader.Format.GetPitchFactor().PixelsPerBlock > 1;
+	public static bool IsSupported(this Texture texture) => texture.TextureHeader.Format.GetPitchFactor().PixelsPerBlock > 0;
 
 	public static RivetMemory<byte> ToDDS(this Texture texture) {
 		var hasStream = texture.StreamBuffer.Memory.Length > 0;
@@ -263,6 +263,7 @@ public static class TextureConverter {
 		return oneSurface;
 	}
 
+	[MethodImpl(MethodImplOptions.AggressiveOptimization)]
 	private static void DecompressBC6Float(ReadOnlySpan<byte> input, int width, int height, bool isSigned, Span<byte> output) {
 		var bufferSize = width * height * Unsafe.SizeOf<ColorRGB<Half>>();
 		using var bufferArray = MemoryPool<byte>.Shared.Rent(bufferSize);

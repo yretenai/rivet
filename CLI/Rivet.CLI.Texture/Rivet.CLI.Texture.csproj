@@ -10,4 +10,9 @@
 		<ApplicationIcon>../../Rivet/Resources/icon.ico</ApplicationIcon>
 	</PropertyGroup>
 
+	<ItemGroup>
+		<ProjectReference Include="..\..\Rivet.Converters\Rivet.Converters.csproj"/>
+		<ProjectReference Include="..\Rivet.CLI\Rivet.CLI.csproj"/>
+	</ItemGroup>
+
 </Project>
