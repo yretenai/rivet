@@ -23,15 +23,15 @@ internal record ListCommand : RivetCLICommand {
 			sb.Append(',');
 			sb.Append(RivetGame.ProcessName(asset));
 			sb.Append(',');
-			sb.Append(asset.Type.ToString("G").ToUpper());
+			sb.Append(asset.Type.ToString("G").ToLower());
 			sb.Append(',');
 			sb.Append(RivetGame.LocalizationStr[(int) asset.Locale]);
 			sb.Append(',');
-			sb.Append(asset.Category.ToString("G").ToUpper());
+			sb.Append(asset.Category.ToString("G").ToLower());
 			sb.Append(',');
 			sb.Append(asset.Flags.IsKey ? 'y' : 'n');
 			sb.Append(',');
-			sb.Append(asset.Flags.IsVirtual ? 'y' : 'n');
+			sb.Append(asset.Flags.IsTexture ? 'y' : 'n');
 			sb.Append(',');
 			sb.Append(asset.Size);
 			sb.Append(',');
