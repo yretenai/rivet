@@ -4,6 +4,10 @@
 
 namespace Rivet.IO;
 
-public class ZeroOwner<T> : IUnsafeMemoryOwner<T> where T : struct {
+public readonly record struct ZeroOwner<T> : IUnsafeMemoryOwner<T> where T : struct {
 	public Memory<T> Memory => Memory<T>.Empty;
+
+	public IUnsafeMemoryOwner<T> Shift(int offset) => this;
+
+	public IUnsafeMemoryOwner<T> Shift<TShift>() => this;
 }

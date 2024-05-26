@@ -3,22 +3,17 @@
 // SPDX-License-Identifier: MPL-2.0
 
 using System.Runtime.InteropServices;
+using Rivet.Models.Graphics;
 
 namespace Rivet.Models.Data;
 
 [StructLayout(LayoutKind.Sequential, Pack = 1)]
 public record struct AssetTextureHeader {
-	public ulong Unknown1 { get; set; }
-	public ulong Unknown2 { get; set; }
-	public ulong Unknown3 { get; set; }
-	public uint Unknown4 { get; set; }
-	public uint Unknown5 { get; set; }
-	public uint Unknown6 { get; set; }
-	public uint Unknown7 { get; set; }
-	public ulong Unknown8 { get; set; }
-	public uint Unknown9 { get; set; }
-	public uint UnknownA { get; set; }
-	public uint Size { get; set; }
-	public uint StreamedSize { get; set; }
-	public ulong UnknownD { get; set; }
+	public TextureDescriptor Descriptor { get; set; }
+	public uint ResidentSize { get; set; }
+	public uint StreamSize { get; set; }
+	public byte StreamedMips { get; set; }
+	public byte ResidentMips { get; set; }
+	public ushort Reserved { get; set; }
+	public uint Reserved2 { get; set; }
 }

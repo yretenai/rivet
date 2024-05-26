@@ -16,7 +16,7 @@ public class DAT1 : IDisposable {
 		Owner = owner;
 		Buffer = buffer;
 		ResidentBuffer = residentBuffer ?? IUnsafeMemoryOwner<byte>.Empty;
-		var reader = new MemoryReader(buffer);
+		var reader = new MemoryReader(Buffer);
 
 		if (reader.Peek<uint>() != DAT1Magic) {
 			throw new InvalidDataException("Invalid magic value");
@@ -74,9 +74,9 @@ public class DAT1 : IDisposable {
 			residentDisposable.Dispose();
 		}
 
-		Owner = null!;
-		Buffer = null!;
-		ResidentBuffer = null!;
+		Owner = IUnsafeMemoryOwner<byte>.Empty;
+		Buffer = IUnsafeMemoryOwner<byte>.Empty;
+		ResidentBuffer = IUnsafeMemoryOwner<byte>.Empty;
 		Sections.Clear();
 	}
 

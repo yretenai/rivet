@@ -72,27 +72,36 @@ public sealed class RivetGame : IDisposable {
 
 	public bool TryFindWemAsset(uint wem, Locale locale, [MaybeNullWhen(false)] out RivetAsset asset) => TryFindAsset(new RivetAssetId(wem, RivetAssetIdFlags.Ext | RivetAssetIdFlags.Shipped), locale, AssetCategory.Audio, out asset);
 
-	public bool TryFindAsset(ulong assetId, Locale locale, AssetCategory category, [MaybeNullWhen(false)] out RivetAsset asset) {
+	public bool TryFindVirtualAsset(ulong assetId, Locale locale, AssetCategory category, [MaybeNullWhen(false)] out RivetAsset asset) {
 		asset = DAG.VirtualAssets.FirstOrDefault(x => x.Id == assetId);
-		return asset != null || TryFindAssetInTOC(assetId, locale, category, out asset);
+		return asset != null || TryFindAsset(assetId, locale, category, out asset);
 	}
 
-	public bool TryFindAssetInTOC(ulong assetId, Locale locale, AssetCategory category, [MaybeNullWhen(false)] out RivetAsset asset) {
+	public bool TryLoadAsset<T>(ulong assetId, Locale locale, AssetCategory category, [MaybeNullWhen(false)] out T instance) where T : class, IRivetInstance {
+		instance = null;
+		return TryFindAsset(assetId, locale, category, out var asset) && asset.TryLoad(this, out instance);
+	}
+
+	public T? LoadAsset<T>(ulong assetId, Locale locale, AssetCategory category) where T : class, IRivetInstance => TryLoadAsset<T>(assetId, locale, category, out var instance) ? instance : null;
+
+	public bool TryFindAsset(ulong assetId, Locale locale, AssetCategory category, [MaybeNullWhen(false)] out RivetAsset asset) {
 		asset = TOC.Groups[category][locale].FirstOrDefault(x => x.Id == assetId);
 		if (asset != null) {
 			return true;
 		}
 
 		// Lang -> Eng -> None
+		if (locale is not Locale.Unlocalized && locale is not Locale.English) {
+			asset = TOC.Groups[category][Locale.English].FirstOrDefault(x => x.Id == assetId);
+			if (asset != null) {
+				return true;
+			}
+		}
+
 		if (locale is not Locale.Unlocalized) {
-			if (locale is not Locale.English) {
-				if (TryFindAssetInTOC(assetId, Locale.English, category, out asset)) {
-					return true;
-				}
-			} else {
-				if (TryFindAssetInTOC(assetId, Locale.Unlocalized, category, out asset)) {
-					return true;
-				}
+			asset = TOC.Groups[category][Locale.Unlocalized].FirstOrDefault(x => x.Id == assetId);
+			if (asset != null) {
+				return true;
 			}
 		}
 
