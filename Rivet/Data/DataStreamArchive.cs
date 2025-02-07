@@ -1,6 +1,6 @@
 // rivet project
-// Copyright (c) 2024 <https://github.com/yretenai/rivet>
-// SPDX-License-Identifier: MPL-2.0
+// Copyright (c) 2024-2025 Legiayayana <https://github.com/yretenai/rivet>
+// SPDX-License-Identifier: EUPL-1.2
 
 using System.Buffers;
 using System.Diagnostics;
@@ -111,7 +111,7 @@ public sealed class DataStreamArchive : IDisposable, IAsyncDisposable {
 					throw new NotSupportedException("compression type 1 has never been seen before");
 				}
 				case DSARCompression.GDeflate: {
-					Debug.Assert((Header.Flags & 0x80) == 0x80, "(Header.Flags & 0x80) == 0x80"); // i suspect this is a "Deflate is TileStream" flag
+					Debug.Assert((Header.Flags & 0x80) == 0x80); // i suspect this is a "Deflate is TileStream" flag
 					if (!GDeflate.Decompress(compressedBuffer.Memory[..chunk.CompressedSize], uncompressedBuffer.Memory[..chunk.Size], 1)) {
 						throw new InvalidOperationException("gdeflate failure");
 					}

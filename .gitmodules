@@ -10,6 +10,3 @@
 [submodule "Libraries/GDeflateNet"]
 	path = Libraries/GDeflateNet
 	url = https://github.com/yretenai/GDeflateNet
-[submodule "Libraries/TextureDecoder"]
-	path = Libraries/TextureDecoder
-	url = https://github.com/yretenai/TextureDecoder

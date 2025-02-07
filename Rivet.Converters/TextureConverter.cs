@@ -1,6 +1,6 @@
 // rivet project
-// Copyright (c) 2024 <https://github.com/yretenai/rivet>
-// SPDX-License-Identifier: MPL-2.0
+// Copyright (c) 2024-2025 Legiayayana <https://github.com/yretenai/rivet>
+// SPDX-License-Identifier: EUPL-1.2
 
 using System.Buffers;
 using System.Runtime.CompilerServices;
@@ -18,6 +18,7 @@ using SixLabors.ImageSharp.PixelFormats;
 namespace Rivet.Converters;
 
 public static class TextureConverter {
+	private static DecompressBc6h? DecompressBc6HProc { get; set; }
 	public static bool IsSupported(this Texture texture) => texture.TextureHeader.Format.GetPitchFactor().PixelsPerBlock > 0;
 
 	public static RivetMemory<byte> ToDDS(this Texture texture) {
@@ -67,8 +68,8 @@ public static class TextureConverter {
 				                         TextureDimension.Texture1D => DXGIResourceDimension.Texture1D,
 				                         TextureDimension.Texture2D => DXGIResourceDimension.Texture2D,
 				                         TextureDimension.Array => DXGIResourceDimension.Texture2D,
-				                         TextureDimension.Texture3D => DXGIResourceDimension.Texture3D,
 				                         TextureDimension.Cube => DXGIResourceDimension.Texture2D,
+				                         TextureDimension.Texture3D => DXGIResourceDimension.Texture3D,
 				                         _ => DXGIResourceDimension.Texture2D,
 			                         };
 		}
@@ -279,10 +280,14 @@ public static class TextureConverter {
 		using var bufferArray = MemoryPool<byte>.Shared.Rent(bufferSize);
 		var buffer = bufferArray.Memory.Span[..bufferSize];
 		var inputOffset = 0;
+
+		// hack to get access to internal type.
+		DecompressBc6HProc ??= typeof(Bc6h).Assembly.GetType("AssetRipper.TextureDecoder.Bc.BcHelpers")!.GetMethod("DecompressBc6h")!.CreateDelegate<DecompressBc6h>();
+
 		for (var i = 0; i < height; i += 4) {
 			for (var j = 0; j < width; j += 4) {
 				var outputOffset = (i * width + j) * Unsafe.SizeOf<ColorRGB<Half>>();
-				BcHelpers.DecompressBc6h(input.Slice(inputOffset, Bc6h.BlockSize), buffer[outputOffset..], width * 3, isSigned);
+				DecompressBc6HProc(input.Slice(inputOffset, Bc6h.BlockSize), buffer[outputOffset..], width * 3, isSigned);
 				inputOffset += Bc6h.BlockSize;
 			}
 		}
@@ -361,4 +366,6 @@ public static class TextureConverter {
 			default: return (0, 0);
 		}
 	}
+
+	private delegate void DecompressBc6h(ReadOnlySpan<byte> compressedBlock, Span<byte> decompressedBlock, int destinationPitch, bool isSigned);
 }

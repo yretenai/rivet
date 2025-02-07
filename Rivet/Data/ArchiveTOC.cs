@@ -1,9 +1,10 @@
 // rivet project
-// Copyright (c) 2024 <https://github.com/yretenai/rivet>
-// SPDX-License-Identifier: MPL-2.0
+// Copyright (c) 2024-2025 Legiayayana <https://github.com/yretenai/rivet>
+// SPDX-License-Identifier: EUPL-1.2
 
 using System.IO.Compression;
 using System.Runtime.CompilerServices;
+using System.Text;
 using DragonLib;
 using Rivet.IO;
 using Rivet.Models;
@@ -49,7 +50,7 @@ public sealed class ArchiveTOC : DAT1 {
 			Archives.EnsureCapacity(spiderAssetFileMetadata.Length);
 			foreach (var archive in spiderAssetFileMetadata) {
 				var name = archive.Name;
-				var nameStr = ((ReadOnlySpan<byte>) name).ReadUTF8StringNonNull().Replace('\\', '/');
+				var nameStr = (((ReadOnlySpan<byte>) name).ReadString(Encoding.UTF8) ?? string.Empty).Replace('\\', '/');
 				var target = Path.Combine(Game.Root, nameStr);
 				Log.Information("Loading DSAR {Path} ({Locale})", nameStr, archive.Locale);
 				Archives.Add(new RivetArchive {
@@ -65,7 +66,7 @@ public sealed class ArchiveTOC : DAT1 {
 			Archives.EnsureCapacity(assetFileMetadata.Length);
 			foreach (var archive in assetFileMetadata) {
 				var name = archive.Name;
-				var nameStr = ((ReadOnlySpan<byte>) name).ReadUTF8StringNonNull().Replace('\\', '/');
+				var nameStr = (((ReadOnlySpan<byte>) name).ReadString(Encoding.UTF8) ?? string.Empty).Replace('\\', '/');
 				var target = Path.Combine(Game.Root, nameStr);
 				Log.Information("Loading DSAR {Path} ({Locale})", nameStr, archive.Locale);
 				Archives.Add(new RivetArchive {
