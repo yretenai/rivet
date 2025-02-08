@@ -37,11 +37,13 @@ public sealed class RivetGame : IDisposable {
 			throw new InvalidDataException("Missing DAG");
 		}
 
+		#pragma warning disable CA2000
 		var tocData = new RivetMemory<byte>(new FileInfo(tocPath));
 		var dagData = new RivetMemory<byte>(new FileInfo(dagPath));
+		#pragma warning restore CA2000
+
 		TOC = new ArchiveTOC(tocData, this);
 		DAG = new DependencyDAG(dagData, this);
-
 		ApplyKnownPaths();
 	}
 
@@ -151,7 +153,7 @@ public sealed class RivetGame : IDisposable {
 		var name = asset.Name;
 		var assetId = new RivetAssetId(asset.Id);
 		if (string.IsNullOrEmpty(name)) {
-			name = assetId.Flags.HasFlagFast(RivetAssetIdFlags.Ext) ? $"sound/wem/{assetId.Hash}.wem" : $"unknown/{asset.Id:x16}.bin";
+			name = assetId.Flags.HasFlagFast(RivetAssetIdFlags.Ext) ? $"sound/wem/{assetId.Hash & 0xFFFFFFFF}.wem" : $"unknown/{asset.Id:x16}.bin";
 		}
 
 		if (asset.Locale != Locale.Unlocalized) {
