@@ -13,7 +13,7 @@ public record struct SharedRivetMemory<T>(IUnsafeMemoryOwner<T> UnderlyingOwner,
 	public readonly Memory<T> Memory => Size > 0 ? UnderlyingOwner.Memory.Slice(Offset, Size) : Memory<T>.Empty;
 
 	public IUnsafeMemoryOwner<T> Shift(int offset) {
-		if (offset < 0 || offset > Size) {
+		if (Offset + offset < 0 || Offset + offset > Size) {
 			throw new IndexOutOfRangeException();
 		}
 
