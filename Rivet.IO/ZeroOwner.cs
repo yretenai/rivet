@@ -10,4 +10,6 @@ public readonly record struct ZeroOwner<T> : IUnsafeMemoryOwner<T> where T : str
 	public IUnsafeMemoryOwner<T> Shift(int offset) => this;
 
 	public IUnsafeMemoryOwner<T> Shift<TShift>() => this;
+	public void Dispose() { }
+	public void Ref() { }
 }

@@ -33,6 +33,14 @@ public class MemoryReader(IUnsafeMemoryOwner<byte> buffer) {
 		return value;
 	}
 
+	public IUnsafeMemoryOwner<T> Slice<T>(int count) where T : struct {
+		var value = Slice<T>(Offset, count);
+		Offset += Unsafe.SizeOf<T>() * count;
+		return value;
+	}
+
+	public IUnsafeMemoryOwner<T> Slice<T>(int offset, int count) where T : struct => count == 0 ? IUnsafeMemoryOwner<T>.Empty : new TypedRivetMemory<T>(Buffer, offset, count);
+
 	public IUnsafeMemoryOwner<byte> Slice(int count) {
 		var slice = Slice(Offset, count);
 		Offset += count;

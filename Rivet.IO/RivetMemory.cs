@@ -14,10 +14,15 @@ public record struct RivetMemory<T>(int Size) : IUnsafeMemoryOwner<T>, IMemoryOw
 		stream.ReadExactly(Memory.Span.AsBytes());
 	}
 
-	public IMemoryOwner<T> UnderlyingOwner { get; } = MemoryPool<T>.Shared.Rent(Size);
+	public IMemoryOwner<T>? UnderlyingOwner { get; private set; } = MemoryPool<T>.Shared.Rent(Size);
 	public int Offset { get; set; } = 0;
-	public void Dispose() => UnderlyingOwner?.Dispose();
-	public readonly Memory<T> Memory => UnderlyingOwner.Memory.Slice(Offset, Size - Offset);
+
+	public void Dispose() {
+		UnderlyingOwner?.Dispose();
+		UnderlyingOwner = null;
+	}
+
+	public readonly Memory<T> Memory => UnderlyingOwner!.Memory.Slice(Offset, Size - Offset);
 
 	public IUnsafeMemoryOwner<T> Shift(int offset) {
 		if (Offset + offset < 0 || Offset + offset > Size) {
