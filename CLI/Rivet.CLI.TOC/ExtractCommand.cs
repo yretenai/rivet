@@ -46,7 +46,7 @@ internal record ExtractCommand : TOCCommand {
 				continue;
 			}
 
-			stream.Write(buffer.Value.Memory.Span);
+			stream.Write(buffer.Memory.Span);
 		}
 	}
 }

@@ -116,7 +116,7 @@ public sealed class DataStreamArchive : IDisposable, IAsyncDisposable {
 					break;
 				}
 				case DSARCompression.LZ4: {
-					var lz4 = Iron.Decompress(Codec.LZ4, compressedBuffer.Memory[..chunk.CompressedSize].Span, chunk.Size);
+					using var lz4 = Iron.Decompress(Codec.LZ4, compressedBuffer.Memory[..chunk.CompressedSize].Span, chunk.Size);
 					lz4.AsSpan().CopyTo(uncompressedBuffer.Memory.Span);
 					break;
 				}

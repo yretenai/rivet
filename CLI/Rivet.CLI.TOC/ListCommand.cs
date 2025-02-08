@@ -67,6 +67,6 @@ internal record ListCommand : RivetCLICommand {
 
 	private static ulong CalculateChecksum(RivetAsset asset) {
 		using var data = asset.Open();
-		return data == null ? 0 : RivetAssetId.Checksum(data.Value.Memory.Span);
+		return data == null ? 0 : RivetAssetId.Checksum(data.Memory.Span);
 	}
 }

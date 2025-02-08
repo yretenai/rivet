@@ -31,27 +31,20 @@ public record RivetAsset {
 	public T? Load<T>(RivetGame game) where T : class, IRivetInstance => TryLoad<T>(game, out var instance) ? instance : null;
 
 	public bool TryLoad<T>(RivetGame game, [MaybeNullWhen(false)] out T instance) where T : class, IRivetInstance {
-		var data = Open();
+		using var data = Open();
 		if (data != null) {
-			try {
-				var constructed = T.CreateInstance(this, game, data);
-				if (constructed is not T rivetInstance) {
-					if (constructed is IDisposable disposable) {
-						disposable.Dispose();
-					}
-
-					data.Value.Dispose();
-
-					instance = null;
-					return false;
+			var constructed = T.CreateInstance(this, game, data);
+			if (constructed is not T rivetInstance) {
+				if (constructed is IDisposable disposable) {
+					disposable.Dispose();
 				}
 
-				instance = rivetInstance;
-				return true;
-			} catch {
-				data.Value.Dispose();
-				throw;
+				instance = null;
+				return false;
 			}
+
+			instance = rivetInstance;
+			return true;
 		}
 
 		instance = null;

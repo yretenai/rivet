@@ -8,21 +8,28 @@ using DragonLib;
 
 namespace Rivet.IO;
 
-public record struct RivetMemory<T>(int Size) : IUnsafeMemoryOwner<T>, IMemoryOwner<T> where T : struct {
+public sealed record RivetMemory<T>(int Size) : IUnsafeMemoryOwner<T>, IMemoryOwner<T> where T : struct {
 	public RivetMemory(FileInfo info) : this((int) info.Length) {
 		using var stream = new FileStream(info.FullName, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 		stream.ReadExactly(Memory.Span.AsBytes());
 	}
 
+	~RivetMemory() => Dispose(false);
+
 	public IMemoryOwner<T>? UnderlyingOwner { get; private set; } = MemoryPool<T>.Shared.Rent(Size);
-	public int Offset { get; set; } = 0;
+	public int Offset { get; set; }
 
 	public void Dispose() {
+		Dispose(true);
+		GC.SuppressFinalize(this);
+	}
+
+	private void Dispose(bool disposing) {
 		UnderlyingOwner?.Dispose();
 		UnderlyingOwner = null;
 	}
 
-	public readonly Memory<T> Memory => UnderlyingOwner!.Memory.Slice(Offset, Size - Offset);
+	public Memory<T> Memory => UnderlyingOwner!.Memory.Slice(Offset, Size - Offset);
 
 	public IUnsafeMemoryOwner<T> Shift(int offset) {
 		if (Offset + offset < 0 || Offset + offset > Size) {
@@ -35,5 +42,5 @@ public record struct RivetMemory<T>(int Size) : IUnsafeMemoryOwner<T>, IMemoryOw
 	}
 
 	public IUnsafeMemoryOwner<T> Shift<TShift>() => Shift(Unsafe.SizeOf<TShift>());
-	public readonly override string ToString() => $"RivetMemory of {(Size * Unsafe.SizeOf<T>()).GetHumanReadableBytes()}";
+	public override string ToString() => $"RivetMemory of {(Size * Unsafe.SizeOf<T>()).GetHumanReadableBytes()}";
 }

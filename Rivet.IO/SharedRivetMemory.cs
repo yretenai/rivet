@@ -7,10 +7,12 @@ using DragonLib;
 
 namespace Rivet.IO;
 
-public record struct SharedRivetMemory<T>(IUnsafeMemoryOwner<T> UnderlyingOwner, int Offset, int Size) : IUnsafeMemoryOwner<T> where T : struct {
+public sealed record SharedRivetMemory<T>(IUnsafeMemoryOwner<T> UnderlyingOwner, int Offset, int Size) : IUnsafeMemoryOwner<T> where T : struct {
 	public SharedRivetMemory(IUnsafeMemoryOwner<T> underlyingOwner, int offset) : this(underlyingOwner, offset, underlyingOwner.Memory.Length - offset) { }
 
-	public readonly Memory<T> Memory => Size > 0 ? UnderlyingOwner.Memory.Slice(Offset, Size) : Memory<T>.Empty;
+	public Memory<T> Memory => Size > 0 ? UnderlyingOwner.Memory.Slice(Offset, Size) : Memory<T>.Empty;
+	public int Offset { get; set; } = Offset;
+	public int Size { get; set; } = Size;
 
 	public IUnsafeMemoryOwner<T> Shift(int offset) {
 		if (Offset + offset < 0 || Offset + offset > Size) {
@@ -25,5 +27,5 @@ public record struct SharedRivetMemory<T>(IUnsafeMemoryOwner<T> UnderlyingOwner,
 
 	public IUnsafeMemoryOwner<T> Shift<TShift>() => Shift(Unsafe.SizeOf<TShift>());
 
-	public readonly override string ToString() => $"SharedRivetMemory of {(Size * Unsafe.SizeOf<T>()).GetHumanReadableBytes()}";
+	public override string ToString() => $"SharedRivetMemory of {(Size * Unsafe.SizeOf<T>()).GetHumanReadableBytes()}";
 }
