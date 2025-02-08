@@ -11,12 +11,12 @@ using Rivet.Models.Data;
 namespace Rivet;
 
 public sealed class RivetGame : IDisposable {
-	public static string[] LocalizationStr = [
+	public static readonly string[] LocalizationStr = [
 		"none", "us", "gb", "dk", "nl", "fi", "fr", "de", "it", "jp", "kr", "no", "pl", "pt", "ru", "es",
 		"se", "br", "ar", "tr", "la", "cs", "ct", "fc", "cz", "hu", "el", "ro", "th", "vi", "id", "hr",
 	];
 
-	public static string[] StreamExtensions = ["", ".stream", "", ".wem", "", ".animstrm", "", ".lgstream"];
+	public static readonly string[] StreamExtensions = ["", ".stream", "", ".wem", "", ".animstrm", "", ".lgstream"];
 
 	static RivetGame() {
 		var txt = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources", "streamed_files.txt");
