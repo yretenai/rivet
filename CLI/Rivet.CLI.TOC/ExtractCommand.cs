@@ -13,40 +13,42 @@ namespace Rivet.CLI.TOC;
 internal record ExtractCommand : TOCCommand {
 	public ExtractCommand(RivetExtractFlags flags) : base(flags) {
 		var filter = ProcessFilters(flags.Filter);
-		foreach (var asset in Game.TOC.Assets.Values.SelectMany(x => x)) {
-			if (flags.Locale is not Locale.All && asset.Locale != flags.Locale) {
-				continue;
+		foreach (var assetGroup in Game.TOC.Assets.Values) {
+			foreach (var asset in assetGroup) {
+				if (flags.Locale is not Locale.All && asset.Locale != flags.Locale) {
+					continue;
+				}
+
+				if (filter.Count > 0 && !filter.Contains(asset.Id)) {
+					continue;
+				}
+
+				var name = RivetGame.ProcessName(asset);
+
+				if (flags.Regex.Count != 0 && !flags.Regex.Any(x => x.IsMatch(name))) {
+					continue;
+				}
+
+				Log.Information("Exporting {Path}", name);
+
+				if (flags.Dry) {
+					continue;
+				}
+
+				var target = Path.Combine(flags.OutputDir, name);
+				Directory.CreateDirectory(Path.GetDirectoryName(target)!);
+				using var stream = new FileStream(target, FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite);
+
+				var header = asset.Header;
+				stream.Write(new ReadOnlySpan<AssetHeader>(ref header).AsBytes());
+
+				using var buffer = asset.Open();
+				if (buffer == null) {
+					continue;
+				}
+
+				stream.Write(buffer.Memory.Span);
 			}
-
-			if (filter.Count > 0 && !filter.Contains(asset.Id)) {
-				continue;
-			}
-
-			var name = RivetGame.ProcessName(asset);
-
-			if (flags.Regex.Count != 0 && !flags.Regex.Any(x => x.IsMatch(name))) {
-				continue;
-			}
-
-			Log.Information("Exporting {Path}", name);
-
-			if (flags.Dry) {
-				continue;
-			}
-
-			var target = Path.Combine(flags.OutputDir, name);
-			Directory.CreateDirectory(Path.GetDirectoryName(target)!);
-			using var stream = new FileStream(target, FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite);
-
-			var header = asset.Header;
-			stream.Write(new ReadOnlySpan<AssetHeader>(ref header).AsBytes());
-
-			using var buffer = asset.Open();
-			if (buffer == null) {
-				continue;
-			}
-
-			stream.Write(buffer.Memory.Span);
 		}
 	}
 }
