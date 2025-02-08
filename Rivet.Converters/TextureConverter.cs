@@ -274,7 +274,6 @@ public static class TextureConverter {
 		return oneSurface;
 	}
 
-	[MethodImpl(MethodImplOptions.AggressiveOptimization)]
 	private static void DecompressBC6Float(ReadOnlySpan<byte> input, int width, int height, bool isSigned, Span<byte> output) {
 		var bufferSize = width * height * Unsafe.SizeOf<ColorRGB<Half>>();
 		using var bufferArray = MemoryPool<byte>.Shared.Rent(bufferSize);
@@ -296,75 +295,19 @@ public static class TextureConverter {
 	}
 
 	public static (uint BitsPerBlock, uint PixelsPerBlock) GetPitchFactor(this DXGIFormat format) {
-		switch (format) {
-			case DXGIFormat.BC1_UNORM:
-			case DXGIFormat.BC1_UNORM_SRGB:
-			case DXGIFormat.BC2_UNORM:
-			case DXGIFormat.BC2_UNORM_SRGB:
-				return (64, 16);
-
-			case DXGIFormat.BC3_UNORM:
-			case DXGIFormat.BC3_UNORM_SRGB:
-				return (16, 16);
-
-			case DXGIFormat.BC4_UNORM:
-			case DXGIFormat.BC4_SNORM:
-				return (64, 16);
-
-			case DXGIFormat.BC5_UNORM:
-			case DXGIFormat.BC5_SNORM:
-			case DXGIFormat.BC6H_SF16:
-			case DXGIFormat.BC6H_UF16:
-			case DXGIFormat.BC7_UNORM:
-			case DXGIFormat.BC7_UNORM_SRGB:
-				return (128, 16);
-
-			case DXGIFormat.A8_UNORM:
-			case DXGIFormat.R8_UNORM:
-			case DXGIFormat.R8_SNORM: return (8, 1);
-
-			case DXGIFormat.R8G8_SINT:
-			case DXGIFormat.R8G8_UINT:
-			case DXGIFormat.R8G8_SNORM:
-			case DXGIFormat.R8G8_UNORM:
-			case DXGIFormat.R16_SINT:
-			case DXGIFormat.R16_UINT:
-			case DXGIFormat.R16_FLOAT:
-			case DXGIFormat.R16_SNORM:
-			case DXGIFormat.R16_UNORM: return (16, 1);
-
-			case DXGIFormat.R8G8B8A8_UNORM:
-			case DXGIFormat.R8G8B8A8_UNORM_SRGB:
-			case DXGIFormat.R8G8B8A8_SNORM:
-			case DXGIFormat.R8G8B8A8_SINT:
-			case DXGIFormat.R8G8B8A8_UINT:
-			case DXGIFormat.R32_FLOAT:
-			case DXGIFormat.R32_SINT:
-			case DXGIFormat.R32_UINT:
-			case DXGIFormat.R16G16_FLOAT:
-			case DXGIFormat.R16G16_UNORM:
-			case DXGIFormat.R16G16_UINT:
-			case DXGIFormat.R16G16_SNORM:
-			case DXGIFormat.R16G16_SINT:
-			case DXGIFormat.R10G10B10A2_UNORM:
-			case DXGIFormat.R10G10B10A2_UINT:
-			case DXGIFormat.B8G8R8A8_UNORM:
-			case DXGIFormat.B8G8R8A8_UNORM_SRGB:
-			case DXGIFormat.B8G8R8X8_UNORM:
-			case DXGIFormat.B8G8R8X8_UNORM_SRGB: return (32, 1);
-
-			case DXGIFormat.R16G16B16A16_FLOAT:
-			case DXGIFormat.R16G16B16A16_SINT:
-			case DXGIFormat.R16G16B16A16_UINT:
-			case DXGIFormat.R16G16B16A16_SNORM:
-			case DXGIFormat.R16G16B16A16_UNORM:
-			case DXGIFormat.R32G32_FLOAT:
-			case DXGIFormat.R32G32_SINT:
-			case DXGIFormat.R32G32_UINT: return (64, 1);
-
-			case DXGIFormat.R32G32B32A32_FLOAT: return (128, 1);
-			default: return (0, 0);
-		}
+		return format switch {
+			       DXGIFormat.BC1_UNORM or DXGIFormat.BC1_UNORM_SRGB or DXGIFormat.BC2_UNORM or DXGIFormat.BC2_UNORM_SRGB => (64, 16),
+			       DXGIFormat.BC3_UNORM or DXGIFormat.BC3_UNORM_SRGB => (16, 16),
+			       DXGIFormat.BC4_UNORM or DXGIFormat.BC4_SNORM => (64, 16),
+			       DXGIFormat.BC5_UNORM or DXGIFormat.BC5_SNORM or DXGIFormat.BC6H_SF16 or DXGIFormat.BC6H_UF16 or DXGIFormat.BC7_UNORM or DXGIFormat.BC7_UNORM_SRGB => (128, 16),
+			       DXGIFormat.A8_UNORM or DXGIFormat.R8_UNORM or DXGIFormat.R8_SNORM => (8, 1),
+			       DXGIFormat.R8G8_SINT or DXGIFormat.R8G8_UINT or DXGIFormat.R8G8_SNORM or DXGIFormat.R8G8_UNORM or DXGIFormat.R16_SINT or DXGIFormat.R16_UINT or DXGIFormat.R16_FLOAT or DXGIFormat.R16_SNORM or DXGIFormat.R16_UNORM => (16, 1),
+			       DXGIFormat.R8G8B8A8_UNORM or DXGIFormat.R8G8B8A8_UNORM_SRGB or DXGIFormat.R8G8B8A8_SNORM or DXGIFormat.R8G8B8A8_SINT or DXGIFormat.R8G8B8A8_UINT or DXGIFormat.R32_FLOAT or DXGIFormat.R32_SINT or DXGIFormat.R32_UINT or DXGIFormat.R16G16_FLOAT or DXGIFormat.R16G16_UNORM or DXGIFormat.R16G16_UINT or DXGIFormat.R16G16_SNORM or DXGIFormat.R16G16_SINT or DXGIFormat.R10G10B10A2_UNORM or DXGIFormat.R10G10B10A2_UINT or DXGIFormat.B8G8R8A8_UNORM or DXGIFormat.B8G8R8A8_UNORM_SRGB
+				       or DXGIFormat.B8G8R8X8_UNORM or DXGIFormat.B8G8R8X8_UNORM_SRGB => (32, 1),
+			       DXGIFormat.R16G16B16A16_FLOAT or DXGIFormat.R16G16B16A16_SINT or DXGIFormat.R16G16B16A16_UINT or DXGIFormat.R16G16B16A16_SNORM or DXGIFormat.R16G16B16A16_UNORM or DXGIFormat.R32G32_FLOAT or DXGIFormat.R32G32_SINT or DXGIFormat.R32G32_UINT => (64, 1),
+			       DXGIFormat.R32G32B32A32_FLOAT => (128, 1),
+			       _ => (0, 0),
+		       };
 	}
 
 	private delegate void DecompressBc6h(ReadOnlySpan<byte> compressedBlock, Span<byte> decompressedBlock, int destinationPitch, bool isSigned);

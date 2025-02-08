@@ -2,7 +2,6 @@
 // Copyright (c) 2024-2025 Legiayayana <https://github.com/yretenai/rivet>
 // SPDX-License-Identifier: EUPL-1.2
 
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Text;
 
@@ -53,7 +52,6 @@ public record struct RivetTypeId : IEquatable<uint>, IEquatable<string> {
 
 	public RivetTypeId(ReadOnlySpan<byte> bytes, uint hash = Basis) => Hash = Checksum(bytes, hash);
 
-	[MethodImpl(MethodImplOptions.AggressiveOptimization)]
 	public static uint Checksum(ReadOnlySpan<byte> bytes, uint hash = Basis) {
 		foreach (var letter in bytes) {
 			hash = CRC32Table[(int) ((hash ^ letter) & 0xff)] ^ (hash >> 8);
@@ -62,7 +60,6 @@ public record struct RivetTypeId : IEquatable<uint>, IEquatable<string> {
 		return hash;
 	}
 
-	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	public static uint Checksum(string text, uint hash = Basis) => Checksum(Encoding.UTF8.GetBytes(text), hash);
 
 	public static RivetTypeId FromString(string? text, uint hash = Basis) => string.IsNullOrEmpty(text) ? new RivetTypeId(Basis) : new RivetTypeId(Encoding.UTF8.GetBytes(text), hash);

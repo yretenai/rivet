@@ -3,7 +3,6 @@
 // SPDX-License-Identifier: EUPL-1.2
 
 using System.Globalization;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Text;
 
@@ -55,7 +54,6 @@ public record struct RivetAssetId : IEquatable<ulong>, IEquatable<string> {
 	public RivetAssetId(ReadOnlySpan<byte> bytes, RivetAssetIdFlags flags, ulong hash = Basis) : this(Checksum(bytes, hash), flags) { }
 
 
-	[MethodImpl(MethodImplOptions.AggressiveOptimization)]
 	public static ulong Checksum(ReadOnlySpan<byte> bytes, ulong hash = Basis) {
 		foreach (var letter in bytes) {
 			hash = CRC64Table[(int) ((hash ^ letter) & 0xff)] ^ (hash >> 8);
@@ -64,7 +62,6 @@ public record struct RivetAssetId : IEquatable<ulong>, IEquatable<string> {
 		return hash;
 	}
 
-	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	public static ulong Checksum(string text, ulong hash = Basis) => Checksum(Encoding.UTF8.GetBytes(text), hash);
 
 	public static string NormalizeString(string? text) => text?.Replace('\\', '/').ToLower().TrimStart('/') ?? "";

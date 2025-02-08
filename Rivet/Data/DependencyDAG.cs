@@ -3,7 +3,6 @@
 // SPDX-License-Identifier: EUPL-1.2
 
 using System.IO.Compression;
-using System.Runtime.CompilerServices;
 using Rivet.IO;
 using Rivet.Models;
 using Rivet.Models.Data;
@@ -16,7 +15,6 @@ public sealed class DependencyDAG : DAT1 {
 	private const uint DAGMagic = 0xB8EF3955;
 	private const uint DAGMagicCompressed = 0x891F77AF;
 
-	[MethodImpl(MethodImplOptions.AggressiveOptimization)]
 	public DependencyDAG(IUnsafeMemoryOwner<byte> buffer, RivetGame game) : base(buffer, GetDAT1Stream(buffer)) {
 		Log.Information("Loading DAG");
 		Game = game;
