@@ -54,4 +54,29 @@ public static class DDLObjectExtensions {
 
 		return [];
 	}
+
+	public static Dictionary<string, object?> Collapse(this DDLObject obj) {
+		var result = new Dictionary<string, object?>();
+		foreach (var (key, value) in obj) {
+			if (value.Value.Count == 0) {
+				continue;
+			}
+
+			if (value.Value[0] is DDLObject) {
+				if (value.Value.Count == 1) {
+					result[value.Name] = ((DDLObject) value.Value[0]!).Collapse();
+				} else {
+					result[value.Name] = value.Value.Cast<DDLObject>().Select(Collapse).ToList();
+				}
+			} else {
+				if (value.Value.Count == 1) {
+					result[value.Name] = value.Value[0];
+				} else {
+					result[value.Name] = value.Value;
+				}
+			}
+		}
+
+		return result;
+	}
 }

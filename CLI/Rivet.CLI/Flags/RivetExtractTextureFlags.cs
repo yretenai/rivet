@@ -10,7 +10,4 @@ namespace Rivet.CLI.Flags;
 internal record RivetExtractTextureFlags : RivetExtractFlags {
 	[Flag("format", Help = "Force image conversion to this type")]
 	public ImageFormat Format { get; set; } = ImageFormat.Auto;
-
-	[Flag("flat", Help = "Do not build directory hierarchies")]
-	public bool Flatten { get; set; }
 }

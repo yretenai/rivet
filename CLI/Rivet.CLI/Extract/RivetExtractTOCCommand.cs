@@ -21,8 +21,12 @@ internal record RivetExtractTOCCommand(RivetExtractFlags Flags) : RivetExtractCo
 			return;
 		}
 
+		if (Flags.Flatten) {
+			name = Path.GetFileName(name);
+		}
+
 		var target = Path.Combine(Flags.OutputDir, name);
-		Directory.CreateDirectory(Path.GetDirectoryName(target)!);
+		Directory.CreateDirectory(Path.GetDirectoryName(target) ?? Flags.OutputDir);
 		using var stream = new FileStream(target, FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite);
 
 		var header = asset.Header;

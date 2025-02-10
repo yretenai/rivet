@@ -15,6 +15,9 @@ public record RivetExtractFlags : RivetCLIFlags {
 	[Flag("dry", Help = "Do not actually extract anything")]
 	public bool Dry { get; set; }
 
+	[Flag("flat", Help = "Do not build directory hierarchies")]
+	public bool Flatten { get; set; }
+
 	[Flag("locale", Help = "Locale to export")]
 	public Locale Locale { get; set; } = Locale.All;
 

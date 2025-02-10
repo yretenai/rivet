@@ -15,7 +15,7 @@ public class Config : AssetPack, IRivetInstance {
 		using var dat = new DAT1(Buffers[0], Buffers[0]);
 
 		foreach (var reference in dat.GetSection<DAT1AssetReference>("Config Asset Refs"u8)) {
-			AssetReferences.Add(new RivetAssetReference(reference.AssetId, dat.GetString(reference.StringOffset), reference.TypeId));
+			AssetReferences.Add(new RivetAssetReference(reference.AssetId, RivetAssetId.NormalizeString(dat.GetString(reference.StringOffset)), reference.TypeId));
 		}
 
 		Type = DDLSerializer.Deserialize(dat.GetSection("Config Type"u8), dat);

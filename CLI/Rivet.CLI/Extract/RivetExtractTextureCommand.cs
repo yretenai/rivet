@@ -58,7 +58,7 @@ internal record RivetExtractTextureCommand(RivetExtractTextureFlags Flags) : Riv
 		name = Path.ChangeExtension(name, format.ToString("G").ToLower());
 
 		var target = Path.Combine(Flags.OutputDir, name);
-		Directory.CreateDirectory(Path.GetDirectoryName(target)!);
+		Directory.CreateDirectory(Path.GetDirectoryName(target) ?? Flags.OutputDir);
 		using var stream = new FileStream(target, FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite);
 		if (format == ImageFormat.DDS) {
 			using var buffer = texture.ToDDS();
