@@ -5,13 +5,18 @@ namespace Rivet.IO;
 
 public sealed record TypedRivetMemory<T>(IUnsafeMemoryOwner<byte> UnderlyingOwner, int RealOffset, int Size) : IUnsafeMemoryOwner<T>, IDisposable where T : struct {
 	public TypedRivetMemory(IUnsafeMemoryOwner<byte> underlyingOwner, int offset) : this(underlyingOwner, offset, underlyingOwner.Memory.Length - offset) { }
-	~TypedRivetMemory() => Dispose(false);
 
 	public MemoryTypeManager<T, byte>? Manager { get; private set; } = new(UnderlyingOwner.Memory.Slice(RealOffset, Size * Unsafe.SizeOf<T>()));
-	public Memory<T> Memory => Size <= 0 ? Memory<T>.Empty : Manager!.Memory;
 	public int Offset { get; set; }
 	public int RealOffset { get; set; } = RealOffset;
 	public int Size { get; set; } = Size;
+
+	public void Dispose() {
+		Dispose(true);
+		GC.SuppressFinalize(this);
+	}
+
+	public Memory<T> Memory => Size <= 0 ? Memory<T>.Empty : Manager!.Memory;
 
 	public IUnsafeMemoryOwner<T> Shift(int offset) {
 		if (Offset + offset < 0 || Offset + offset > Size) {
@@ -29,13 +34,9 @@ public sealed record TypedRivetMemory<T>(IUnsafeMemoryOwner<byte> UnderlyingOwne
 	}
 
 	public IUnsafeMemoryOwner<T> Shift<TShift>() => Shift(Unsafe.SizeOf<TShift>());
+	~TypedRivetMemory() => Dispose(false);
 
 	public override string ToString() => $"TypedRivetMemory<{typeof(T).Name}> of {(Size * Unsafe.SizeOf<T>()).GetHumanReadableBytes()}";
-
-	public void Dispose() {
-		Dispose(true);
-		GC.SuppressFinalize(this);
-	}
 
 	private void Dispose(bool disposing) {
 		(Manager as IDisposable)?.Dispose();

@@ -14,19 +14,12 @@ public sealed record RivetMemory<T>(int Size) : IUnsafeMemoryOwner<T>, IMemoryOw
 		stream.ReadExactly(Memory.Span.AsBytes());
 	}
 
-	~RivetMemory() => Dispose(false);
-
 	public IMemoryOwner<T>? UnderlyingOwner { get; private set; } = MemoryPool<T>.Shared.Rent(Size);
 	public int Offset { get; set; }
 
 	public void Dispose() {
 		Dispose(true);
 		GC.SuppressFinalize(this);
-	}
-
-	private void Dispose(bool disposing) {
-		UnderlyingOwner?.Dispose();
-		UnderlyingOwner = null;
 	}
 
 	public Memory<T> Memory => UnderlyingOwner!.Memory.Slice(Offset, Size - Offset);
@@ -42,5 +35,13 @@ public sealed record RivetMemory<T>(int Size) : IUnsafeMemoryOwner<T>, IMemoryOw
 	}
 
 	public IUnsafeMemoryOwner<T> Shift<TShift>() => Shift(Unsafe.SizeOf<TShift>());
+
+	~RivetMemory() => Dispose(false);
+
+	private void Dispose(bool disposing) {
+		UnderlyingOwner?.Dispose();
+		UnderlyingOwner = null;
+	}
+
 	public override string ToString() => $"RivetMemory of {(Size * Unsafe.SizeOf<T>()).GetHumanReadableBytes()}";
 }

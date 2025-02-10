@@ -10,13 +10,13 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Serilog.Sinks.Console" Version="6.0.0" />
-		<PackageReference Include="Serilog.Sinks.File" Version="6.0.0" />
+		<PackageReference Include="Serilog.Sinks.Console" Version="6.0.0"/>
+		<PackageReference Include="Serilog.Sinks.File" Version="6.0.0"/>
 	</ItemGroup>
 
 	<ItemGroup>
 		<ProjectReference Include="..\..\Libraries\DragonLib\DragonLib\DragonLib.csproj"/>
-		<ProjectReference Include="..\..\Rivet.Converters\Rivet.Converters.csproj" />
+		<ProjectReference Include="..\..\Rivet.Converters\Rivet.Converters.csproj"/>
 		<ProjectReference Include="..\..\Rivet\Rivet.csproj"/>
 	</ItemGroup>
 

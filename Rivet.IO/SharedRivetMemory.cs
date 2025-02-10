@@ -9,10 +9,10 @@ namespace Rivet.IO;
 
 public sealed record SharedRivetMemory<T>(IUnsafeMemoryOwner<T> UnderlyingOwner, int Offset, int Size) : IUnsafeMemoryOwner<T> where T : struct {
 	public SharedRivetMemory(IUnsafeMemoryOwner<T> underlyingOwner, int offset) : this(underlyingOwner, offset, underlyingOwner.Memory.Length - offset) { }
-
-	public Memory<T> Memory => Size > 0 ? UnderlyingOwner.Memory.Slice(Offset, Size) : Memory<T>.Empty;
 	public int Offset { get; set; } = Offset;
 	public int Size { get; set; } = Size;
+
+	public Memory<T> Memory => Size > 0 ? UnderlyingOwner.Memory.Slice(Offset, Size) : Memory<T>.Empty;
 
 	public IUnsafeMemoryOwner<T> Shift(int offset) {
 		if (Offset + offset < 0 || Offset + offset > Size) {

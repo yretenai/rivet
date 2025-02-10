@@ -11,7 +11,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\Rivet.DDL.Template\Rivet.DDL.Template.csproj" />
+		<ProjectReference Include="..\Rivet.DDL.Template\Rivet.DDL.Template.csproj"/>
 	</ItemGroup>
 
 </Project>

@@ -14,6 +14,7 @@ namespace Rivet.Data;
 
 public sealed class DataStreamArchive : IDisposable, IAsyncDisposable {
 	private const uint DSARMagic = 0x52415344;
+	private const int ChunkSize = 0x8000000;
 	public DataStreamArchive(string path) : this(new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite)) { }
 
 	public DataStreamArchive(Stream stream) {
@@ -45,7 +46,6 @@ public sealed class DataStreamArchive : IDisposable, IAsyncDisposable {
 	public DSARHeader Header { get; }
 	public DSARChunk[] Chunks { get; } = [];
 	private static Iron Iron { get; } = new();
-	private const int ChunkSize = 0x8000000;
 	public ValueTask DisposeAsync() => BaseStream.DisposeAsync();
 
 	public void Dispose() => BaseStream.Dispose();
