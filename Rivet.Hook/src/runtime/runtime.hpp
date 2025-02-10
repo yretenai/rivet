@@ -1,5 +1,5 @@
-// rivet project
-// Copyright (c) 2023-2025 Legiayayana <https://github.com/yretenai/rivet>
+// SPDX-FileCopyrightText: 2025 Legiayayana
+//
 // SPDX-License-Identifier: EUPL-1.2
 
 #pragma once

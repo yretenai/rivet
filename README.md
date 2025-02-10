@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2025 Legiayayana
+
+SPDX-License-Identifier: EUPL-1.2
+-->
+
 # rivet <br/> managing rift apart
 
 rivet is a processor for rift apart archives.

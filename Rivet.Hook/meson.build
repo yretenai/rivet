@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2025 Legiayayana
+#
+# SPDX-License-Identifier: EUPL-1.2
+
 project('rivet', 'cpp',
 	license: 'EUPL-1.2',
 	version: '0.0.6',

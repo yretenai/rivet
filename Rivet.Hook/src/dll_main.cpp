@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2025 Legiayayana
+//
+// SPDX-License-Identifier: EUPL-1.2
+
 #define WIN32_LEAN_AND_MEAN
 #define _CRT_SECURE_NO_WARNINGS // NOLINT(*-reserved-identifier, *-dcl37-c, *-dcl51-cpp)
 #include <windows.h>

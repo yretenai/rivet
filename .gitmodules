@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2025 Legiayayana
+#
+# SPDX-License-Identifier: EUPL-1.2
+
 [submodule "Libraries/DragonLib"]
 	path = Libraries/DragonLib
 	url = https://github.com/yretenai/DragonLib/
