@@ -21,9 +21,9 @@ SPDX-License-Identifier: EUPL-1.2
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\Libraries\DragonLib\DragonLib\DragonLib.csproj"/>
-		<ProjectReference Include="..\..\Rivet.Converters\Rivet.Converters.csproj"/>
-		<ProjectReference Include="..\..\Rivet\Rivet.csproj"/>
+		<ProjectReference Include="..\Libraries\DragonLib\DragonLib\DragonLib.csproj"/>
+		<ProjectReference Include="..\Rivet.Converters\Rivet.Converters.csproj"/>
+		<ProjectReference Include="..\Rivet\Rivet.csproj"/>
 	</ItemGroup>
 
 </Project>
