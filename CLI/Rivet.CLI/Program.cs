@@ -4,7 +4,7 @@
 
 using DragonLib.CommandLine;
 
-namespace Rivet.CLI.TOC;
+namespace Rivet.CLI;
 
 internal class Program {
 	public static void Main(string[] args) {

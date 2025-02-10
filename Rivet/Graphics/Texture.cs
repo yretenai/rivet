@@ -11,14 +11,10 @@ using Rivet.Models.Graphics;
 namespace Rivet.Graphics;
 
 public class Texture : AssetPack, IRivetInstance {
-	public const uint TypeId = 0x8f53a199;
+	public const uint TypeId = 0x8F53A199;
 
 	public Texture(RivetAsset asset, IUnsafeMemoryOwner<byte> buffer, RivetGame game) : base(asset, buffer, game) {
-		if (Asset.Header.Schema != TypeId) {
-			throw new InvalidDataException();
-		}
-
-		if (Buffers.Count < 1) {
+		if (Asset.Header.Schema != TypeId || Buffers.Count < 1) {
 			throw new InvalidDataException();
 		}
 

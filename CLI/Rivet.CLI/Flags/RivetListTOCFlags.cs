@@ -4,10 +4,9 @@
 
 using DragonLib.CommandLine;
 
-namespace Rivet.CLI.TOC;
+namespace Rivet.CLI.Flags;
 
-internal class Program {
-	public static void Main(string[] args) {
-		Command.Run<RivetCommand>(out _, out _)?.Execute();
-	}
+internal record RivetListTOCFlags : RivetCLIFlags {
+	[Flag("dag", Help = "Also list dependency graph")]
+	public bool DAG { get; set; }
 }

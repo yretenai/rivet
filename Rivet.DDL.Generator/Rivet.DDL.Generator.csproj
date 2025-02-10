@@ -10,4 +10,8 @@
 		<ApplicationIcon>../Rivet/Resources/icon.ico</ApplicationIcon>
 	</PropertyGroup>
 
+	<ItemGroup>
+	  <ProjectReference Include="..\Rivet.DDL.Template\Rivet.DDL.Template.csproj" />
+	</ItemGroup>
+
 </Project>
