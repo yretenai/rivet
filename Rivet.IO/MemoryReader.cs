@@ -59,4 +59,6 @@ public class MemoryReader(IUnsafeMemoryOwner<byte> buffer) {
 		Offset += index;
 		return Encoding.UTF8.GetString(span[..index]);
 	}
+
+	public void Align(int n) => Offset = unchecked(Offset + (n - 1)) & ~(n - 1);
 }
