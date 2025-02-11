@@ -68,7 +68,7 @@ public record struct RivetTypeId : IEquatable<uint>, IEquatable<string> {
 	public static implicit operator uint(RivetTypeId rivetAssetId) => rivetAssetId.Hash;
 	public static implicit operator RivetTypeId(uint hash) => new(hash);
 	public static implicit operator RivetTypeId(string? text) => FromString(text);
-	
+
 	public bool Equals(uint other) => Hash == other;
 
 	public bool Equals(string? other) => FromString(other).Hash == Hash;

@@ -1,3 +1,5 @@
+using System.Globalization;
+
 namespace Rivet.DDL.Generator;
 
 public static class DDLTemplate {
@@ -14,10 +16,18 @@ public static class DDLTemplate {
 	public static string Format(string str, Dictionary<string, object> values) {
 		foreach (var (key, value_) in values) {
 			var value = value_ switch {
-				        uint u => u.ToString("x8"),
-				        int u => u.ToString("x"),
-				        _ => value_,
-			        };
+				            ulong u => u.ToString("x16"),
+				            uint u => u.ToString("x8"),
+				            ushort u => u.ToString("x4"),
+				            byte u => u.ToString("x2"),
+				            long u => u.ToString("x"),
+				            int u => u.ToString("x"),
+				            short u => u.ToString("x"),
+				            sbyte u => u.ToString("x"),
+				            float f => f.ToString("F", CultureInfo.InvariantCulture),
+				            decimal f => f.ToString("F", CultureInfo.InvariantCulture),
+				            _ => value_,
+			            };
 
 			str = str.Replace($"%{key}%", value.ToString(), StringComparison.Ordinal);
 		}

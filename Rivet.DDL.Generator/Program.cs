@@ -41,8 +41,6 @@ internal class Program {
 		}
 	}
 
-	public static int Misses { get; set; }
-
 	private static void PermutateNames(DDLRegistry registry, Dictionary<uint, string> nameLookup) {
 		var nameCache = new HashSet<string>();
 		foreach (var value in registry.Types) {
@@ -118,7 +116,6 @@ internal class Program {
 
 		if (!lookup.TryGetValue(value.Id, out var name) && !lookup.TryGetValue(value.Id2, out name)) {
 			name = $"x{value.Id:x8}";
-			Misses++;
 		}
 
 		value.Name = name;
@@ -153,7 +150,7 @@ internal class Program {
 			["type"] = "Enums",
 		}));
 
-		writer.WriteLine(DDLTemplate.Format(EnumTemplate.EnumBody, new Dictionary<string, object>() {
+		writer.WriteLine(DDLTemplate.Format(EnumTemplate.EnumBody, new Dictionary<string, object> {
 			["name"] = name,
 			["body"] = fields.ToString().ReplaceLineEndings("\n").Trim(),
 			["flags"] = string.Empty,
@@ -168,7 +165,6 @@ internal class Program {
 
 		if (!lookup.TryGetValue(value.Id, out var name)) {
 			name = $"x{value.Id:x8}";
-			Misses++;
 		}
 
 		value.Name = name;
@@ -202,7 +198,7 @@ internal class Program {
 			["type"] = "Enums",
 		}));
 
-		writer.WriteLine(DDLTemplate.Format(EnumTemplate.EnumBody, new Dictionary<string, object>() {
+		writer.WriteLine(DDLTemplate.Format(EnumTemplate.EnumBody, new Dictionary<string, object> {
 			["name"] = name,
 			["body"] = fields.ToString().ReplaceLineEndings("\n").Trim(),
 			["flags"] = EnumTemplate.BitsetFlags,
