@@ -67,7 +67,7 @@ public static class DDLSerializer {
 				}
 				case DDLTypeKind.File: {
 					var str = reader.Get<DDLString>();
-					result.Add(RivetAssetId.FromString(Encoding.UTF8.GetString(reader.Get<byte>(str.Length))));
+					result.Add(RivetAssetId.FromString(Encoding.UTF8.GetString(reader.Get<byte>(str.Length)))); // can't we just use str.Checksum?
 					reader.Offset += 1;
 					reader.Align(4);
 					break;
