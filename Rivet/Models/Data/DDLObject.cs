@@ -15,6 +15,14 @@ public class DDLObject : Dictionary<uint, DDLField>, IDDLObject {
 		return defaultValue;
 	}
 
+	public T GetObject<T>(uint id, T defaultValue = default!, int index = 0) where T : DDLObjectType, IDDLObjectType<T> {
+		if (TryGetValue(id, out var field) && field.Value.Count > index && field.Value[index] is DDLObject value) {
+			return T.Create(value);
+		}
+
+		return defaultValue;
+	}
+
 	public T GetEnumValue<T>(uint id, Dictionary<uint, T> enumValues, T defaultValue = default, int fieldIndex = 0) where T : struct {
 		if (TryGetValue(id, out var field) && field.Value.Count > fieldIndex && field.Value[fieldIndex] is string value) {
 			return enumValues.GetValueOrDefault(RivetTypeId.Checksum(value), defaultValue);
@@ -40,6 +48,20 @@ public class DDLObject : Dictionary<uint, DDLField>, IDDLObject {
 	public List<T> GetValues<T>(uint id) {
 		if (TryGetValue(id, out var field) && field.Value.Count > 0 && field.Value[0] is T) {
 			var list = new List<T>(field.Value.Count);
+			list.AddRange(field.Value.Cast<T>());
+			return list;
+		}
+
+		return [];
+	}
+
+	public List<T> GetObjects<T>(uint id) where T : DDLObjectType, IDDLObjectType<T> {
+		if (TryGetValue(id, out var field) && field.Value.Count > 0 && field.Value[0] is DDLObject) {
+			var list = new List<T>(field.Value.Count);
+			foreach (var value in field.Value) {
+				list.Add(T.Create((DDLObject) value!));
+			}
+
 			list.AddRange(field.Value.Cast<T>());
 			return list;
 		}
