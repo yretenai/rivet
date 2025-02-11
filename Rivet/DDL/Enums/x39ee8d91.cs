@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x39ee8d91u)]
 public enum x39ee8d91 : uint {
-	[DDLRegistration(0x07103da6u)] OpenUnit = 0x0u,
-	[DDLRegistration(0x84e1b2d3u)] Global = 0x1u,
-	[DDLRegistration(0x772c0161u)] Level = 0x2u,
-	[DDLRegistration(0x57baddc6u)] AlwaysLoaded = 0x3u,
-	[DDLRegistration(0xcd5cd07au)] UnreferencedAssets = 0x4u,
+	[DDLRegistration(0x07103da6u)] OpenUnit,
+	[DDLRegistration(0x84e1b2d3u)] Global,
+	[DDLRegistration(0x772c0161u)] Level,
+	[DDLRegistration(0x57baddc6u)] AlwaysLoaded,
+	[DDLRegistration(0xcd5cd07au)] UnreferencedAssets,
 }
 
 public static class x39ee8d91Values {

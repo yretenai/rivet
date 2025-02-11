@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xf5af8e81u)]
 public enum xf5af8e81 : uint {
-	[DDLRegistration(0x8636f1c1u)] Locked = 0x0u,
-	[DDLRegistration(0x9f91f890u)] Available = 0x1u,
-	[DDLRegistration(0x13a9e82cu)] Purchased = 0x2u,
+	[DDLRegistration(0x8636f1c1u)] Locked,
+	[DDLRegistration(0x9f91f890u)] Available,
+	[DDLRegistration(0x13a9e82cu)] Purchased,
 }
 
 public static class xf5af8e81Values {

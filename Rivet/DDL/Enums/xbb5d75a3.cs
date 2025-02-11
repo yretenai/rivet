@@ -7,15 +7,15 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xbb5d75a3u)]
 public enum xbb5d75a3 : uint {
-	[DDLRegistration(0x85920badu)] Interact = 0x0u,
-	[DDLRegistration(0x04453c00u)] MoveX = 0x1u,
-	[DDLRegistration(0x73420c96u)] MoveY = 0x2u,
-	[DDLRegistration(0xe5af4a4du)] MoveUp = 0x3u,
-	[DDLRegistration(0xe6750bb0u)] MoveDown = 0x4u,
-	[DDLRegistration(0x80ed7ce3u)] MoveLeft = 0x5u,
-	[DDLRegistration(0x1c584aaau)] MoveRight = 0x6u,
-	[DDLRegistration(0xcf8dea56u)] MoveSlow = 0x7u,
-	[DDLRegistration(0x7a4bf183u)] AnyFaceButton = 0x8u,
+	[DDLRegistration(0x85920badu)] Interact,
+	[DDLRegistration(0x04453c00u)] MoveX,
+	[DDLRegistration(0x73420c96u)] MoveY,
+	[DDLRegistration(0xe5af4a4du)] MoveUp,
+	[DDLRegistration(0xe6750bb0u)] MoveDown,
+	[DDLRegistration(0x80ed7ce3u)] MoveLeft,
+	[DDLRegistration(0x1c584aaau)] MoveRight,
+	[DDLRegistration(0xcf8dea56u)] MoveSlow,
+	[DDLRegistration(0x7a4bf183u)] AnyFaceButton,
 }
 
 public static class xbb5d75a3Values {

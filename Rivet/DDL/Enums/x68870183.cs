@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x68870183u)]
 public enum x68870183 : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0xaa6c80dcu)] MaxPredictiveSpeed = 0x1u,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0xaa6c80dcu, "MaxPredictiveSpeed")] MaxPredictiveSpeed,
 }
 
 public static class x68870183Values {

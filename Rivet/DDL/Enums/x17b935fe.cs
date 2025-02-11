@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x17b935feu)]
 public enum x17b935fe : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0xe3187fe7u)] Gravity = 0x1u,
-	[DDLRegistration(0x77f60694u)] SpeedUp = 0x2u,
-	[DDLRegistration(0x8055a585u)] SlowDown = 0x3u,
-	[DDLRegistration(0xfbf540c1u)] Energy = 0x4u,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0xe3187fe7u)] Gravity,
+	[DDLRegistration(0x77f60694u)] SpeedUp,
+	[DDLRegistration(0x8055a585u)] SlowDown,
+	[DDLRegistration(0xfbf540c1u)] Energy,
 }
 
 public static class x17b935feValues {

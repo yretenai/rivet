@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x15ffe56cu)]
 public enum SyncTypes : uint {
-	[DDLRegistration(0x88e064ffu)] SyncNone = 0x0u,
-	[DDLRegistration(0xb3a2fae2u)] SyncInteract = 0x1u,
-	[DDLRegistration(0x08af8bb3u)] SyncContinuous = 0x2u,
+	[DDLRegistration(0x88e064ffu, "No Sync")] SyncNone,
+	[DDLRegistration(0xb3a2fae2u, "Sync on interact")] SyncInteract,
+	[DDLRegistration(0x08af8bb3u, "Sync continuously")] SyncContinuous,
 }
 
 public static class SyncTypesValues {

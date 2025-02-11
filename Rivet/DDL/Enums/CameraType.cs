@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x34041fcfu)]
 public enum CameraType : uint {
-	[DDLRegistration(0xf836dea7u)] CameraPerspective = 0x0u,
-	[DDLRegistration(0x3d19d205u)] CameraOrtho = 0x1u,
+	[DDLRegistration(0xf836dea7u, "Perspective", "Perspective Camera")] CameraPerspective,
+	[DDLRegistration(0x3d19d205u, "Orthographic", "Orthographic Camera")] CameraOrtho,
 }
 
 public static class CameraTypeValues {

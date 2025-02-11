@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x29cc5733u)]
 public enum x29cc5733 : uint {
-	[DDLRegistration(0x284394b2u)] Random = 0x0u,
-	[DDLRegistration(0x3209c88cu)] ChunkZAxisForward = 0x1u,
-	[DDLRegistration(0xeb57a848u)] AwayFromStump = 0x2u,
+	[DDLRegistration(0x284394b2u)] Random,
+	[DDLRegistration(0x3209c88cu)] ChunkZAxisForward,
+	[DDLRegistration(0xeb57a848u)] AwayFromStump,
 }
 
 public static class x29cc5733Values {

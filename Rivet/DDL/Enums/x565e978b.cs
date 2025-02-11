@@ -7,15 +7,15 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x565e978bu)]
 public enum x565e978b : uint {
-	[DDLRegistration(0xedf933e8u)] ActorNone = 0x0u,
-	[DDLRegistration(0x2984ef02u)] ActorA = 0x1u,
-	[DDLRegistration(0xb08dbeb8u)] ActorB = 0x2u,
-	[DDLRegistration(0xc78a8e2eu)] ActorC = 0x3u,
-	[DDLRegistration(0x59ee1b8du)] ActorD = 0x4u,
-	[DDLRegistration(0x2ee92b1bu)] ActorE = 0x5u,
-	[DDLRegistration(0xb7e07aa1u)] ActorF = 0x6u,
-	[DDLRegistration(0xc0e74a37u)] ActorG = 0x7u,
-	[DDLRegistration(0x505857a6u)] ActorH = 0x8u,
+	[DDLRegistration(0xedf933e8u)] ActorNone,
+	[DDLRegistration(0x2984ef02u, "Script Input A")] ActorA,
+	[DDLRegistration(0xb08dbeb8u, "Script Input B")] ActorB,
+	[DDLRegistration(0xc78a8e2eu, "Script Input C")] ActorC,
+	[DDLRegistration(0x59ee1b8du, "Script Input D")] ActorD,
+	[DDLRegistration(0x2ee92b1bu, "Script Input E")] ActorE,
+	[DDLRegistration(0xb7e07aa1u, "Script Input F")] ActorF,
+	[DDLRegistration(0xc0e74a37u, "Script Input G")] ActorG,
+	[DDLRegistration(0x505857a6u, "Script Input H")] ActorH,
 }
 
 public static class x565e978bValues {

@@ -7,21 +7,21 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x94bfb980u)]
 public enum x94bfb980 : uint {
-	[DDLRegistration(0x165997dbu)] Enemy = 0x0u,
-	[DDLRegistration(0x20ea4c20u)] Hero = 0x1u,
-	[DDLRegistration(0xa6a9b440u)] Friendly = 0x2u,
-	[DDLRegistration(0xb190dcc7u)] Base = 0x3u,
-	[DDLRegistration(0x8388ad14u)] Objective = 0x4u,
-	[DDLRegistration(0x61fc7e86u)] Security = 0x5u,
-	[DDLRegistration(0x70e8990eu)] QuestGiver = 0x6u,
-	[DDLRegistration(0x5720801au)] AreaOfInterest = 0x7u,
-	[DDLRegistration(0xd6da02e0u)] ChallengeStart = 0x8u,
-	[DDLRegistration(0x6fce9042u)] RSCustom1 = 0x9u,
-	[DDLRegistration(0xf6c7c1f8u)] RSCustom2 = 0xau,
-	[DDLRegistration(0x81c0f16eu)] RSCustom3 = 0xbu,
-	[DDLRegistration(0x1fa464cdu)] RSCustom4 = 0xcu,
-	[DDLRegistration(0x68a3545bu)] RSCustom5 = 0xdu,
-	[DDLRegistration(0xf1aa05e1u)] RSCustom6 = 0xeu,
+	[DDLRegistration(0x165997dbu)] Enemy,
+	[DDLRegistration(0x20ea4c20u)] Hero,
+	[DDLRegistration(0xa6a9b440u)] Friendly,
+	[DDLRegistration(0xb190dcc7u)] Base,
+	[DDLRegistration(0x8388ad14u)] Objective,
+	[DDLRegistration(0x61fc7e86u)] Security,
+	[DDLRegistration(0x70e8990eu)] QuestGiver,
+	[DDLRegistration(0x5720801au)] AreaOfInterest,
+	[DDLRegistration(0xd6da02e0u)] ChallengeStart,
+	[DDLRegistration(0x6fce9042u)] RSCustom1,
+	[DDLRegistration(0xf6c7c1f8u)] RSCustom2,
+	[DDLRegistration(0x81c0f16eu)] RSCustom3,
+	[DDLRegistration(0x1fa464cdu)] RSCustom4,
+	[DDLRegistration(0x68a3545bu)] RSCustom5,
+	[DDLRegistration(0xf1aa05e1u)] RSCustom6,
 }
 
 public static class x94bfb980Values {

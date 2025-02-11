@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xbd2e617du)]
 public enum xbd2e617d : uint {
-	[DDLRegistration(0x71f1bc40u)] Spotting = 0x0u,
-	[DDLRegistration(0xc269c782u)] Confirming = 0x1u,
-	[DDLRegistration(0xf25883c9u)] Confirmed = 0x2u,
+	[DDLRegistration(0x71f1bc40u)] Spotting,
+	[DDLRegistration(0xc269c782u)] Confirming,
+	[DDLRegistration(0xf25883c9u)] Confirmed,
 }
 
 public static class xbd2e617dValues {

@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xe5615bdau)]
 public enum xe5615bda : uint {
-	[DDLRegistration(0x8788db93u)] SequenceNodeTypeDefault = 0x0u,
-	[DDLRegistration(0x4142087du)] SequenceNodeTypeCombineAdditive = 0x1u,
+	[DDLRegistration(0x8788db93u, "Default")] SequenceNodeTypeDefault,
+	[DDLRegistration(0x4142087du, "Combine-additive")] SequenceNodeTypeCombineAdditive,
 }
 
 public static class xe5615bdaValues {

@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x37a8306du)]
 public enum BotUsage : uint {
-	[DDLRegistration(0x3d8d2d0au)] EnemyGround = 0x0u,
-	[DDLRegistration(0x88611e74u)] EnemyAir = 0x1u,
-	[DDLRegistration(0x331250bdu)] Ally = 0x2u,
-	[DDLRegistration(0x905006acu)] Sniper = 0x3u,
+	[DDLRegistration(0x3d8d2d0au)] EnemyGround,
+	[DDLRegistration(0x88611e74u)] EnemyAir,
+	[DDLRegistration(0x331250bdu)] Ally,
+	[DDLRegistration(0x905006acu)] Sniper,
 }
 
 public static class BotUsageValues {

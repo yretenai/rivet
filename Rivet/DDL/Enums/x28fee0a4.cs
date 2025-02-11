@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x28fee0a4u)]
 public enum x28fee0a4 : uint {
-	[DDLRegistration(0x5a5b5a9fu)] Default = 0x0u,
-	[DDLRegistration(0x171e7aa6u)] Hover = 0x1u,
-	[DDLRegistration(0x3767eae2u)] Grind = 0x2u,
-	[DDLRegistration(0x8ab3701eu)] Mag = 0x3u,
+	[DDLRegistration(0x5a5b5a9fu)] Default,
+	[DDLRegistration(0x171e7aa6u)] Hover,
+	[DDLRegistration(0x3767eae2u)] Grind,
+	[DDLRegistration(0x8ab3701eu)] Mag,
 }
 
 public static class x28fee0a4Values {

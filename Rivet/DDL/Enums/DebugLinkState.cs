@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x97a17b73u)]
 public enum DebugLinkState : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0x9f91f890u)] Available = 0x1u,
-	[DDLRegistration(0x27fac552u)] Active = 0x2u,
-	[DDLRegistration(0x515f67b8u)] ActiveAndAvailable = 0x3u,
-	[DDLRegistration(0xe6007b64u)] Complete = 0x4u,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0x9f91f890u)] Available,
+	[DDLRegistration(0x27fac552u)] Active,
+	[DDLRegistration(0x515f67b8u)] ActiveAndAvailable,
+	[DDLRegistration(0xe6007b64u)] Complete,
 }
 
 public static class DebugLinkStateValues {

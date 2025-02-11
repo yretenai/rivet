@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x2153dc33u)]
 public enum x2153dc33 : uint {
-	[DDLRegistration(0x50e2f865u)] BlendNone = 0x0u,
-	[DDLRegistration(0x6527150au)] BlendFade = 0x1u,
-	[DDLRegistration(0x74c121e0u)] BlendDissolve = 0x2u,
+	[DDLRegistration(0x50e2f865u)] BlendNone,
+	[DDLRegistration(0x6527150au, "Fade")] BlendFade,
+	[DDLRegistration(0x74c121e0u, "Dissolve")] BlendDissolve,
 }
 
 public static class x2153dc33Values {

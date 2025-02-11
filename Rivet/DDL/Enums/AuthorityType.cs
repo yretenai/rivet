@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xc9120f11u)]
 public enum AuthorityType : uint {
-	[DDLRegistration(0x5a5b5a9fu)] Default = 0x0u,
-	[DDLRegistration(0xe683dc3du)] Permanent = 0x1u,
-	[DDLRegistration(0x429c20c0u)] Invalid = 0x2u,
+	[DDLRegistration(0x5a5b5a9fu)] Default,
+	[DDLRegistration(0xe683dc3du)] Permanent,
+	[DDLRegistration(0x429c20c0u)] Invalid,
 }
 
 public static class AuthorityTypeValues {

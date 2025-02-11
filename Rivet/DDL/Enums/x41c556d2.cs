@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x41c556d2u)]
 public enum x41c556d2 : uint {
-	[DDLRegistration(0x52f47472u)] WiredOverlay = 0x0u,
-	[DDLRegistration(0xf5c121d4u)] Filled = 0x1u,
-	[DDLRegistration(0xd765c90cu)] Wireframe = 0x2u,
+	[DDLRegistration(0x52f47472u)] WiredOverlay,
+	[DDLRegistration(0xf5c121d4u)] Filled,
+	[DDLRegistration(0xd765c90cu)] Wireframe,
 }
 
 public static class x41c556d2Values {

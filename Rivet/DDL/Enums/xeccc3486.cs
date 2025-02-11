@@ -7,19 +7,19 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xeccc3486u)]
 public enum xeccc3486 : uint {
-	[DDLRegistration(0x6a98cd43u)] Lorb_01 = 0x0u,
-	[DDLRegistration(0xf3919cf9u)] Lorb_02 = 0x1u,
-	[DDLRegistration(0x8496ac6fu)] Lorb_03 = 0x2u,
-	[DDLRegistration(0x1af239ccu)] Lorb_04 = 0x3u,
-	[DDLRegistration(0x6df5095au)] Lorb_05 = 0x4u,
-	[DDLRegistration(0xf4fc58e0u)] Lorb_06 = 0x5u,
-	[DDLRegistration(0x83fb6876u)] Lorb_07 = 0x6u,
-	[DDLRegistration(0x134475e7u)] Lorb_08 = 0x7u,
-	[DDLRegistration(0x64434571u)] Lorb_09 = 0x8u,
-	[DDLRegistration(0x0484cc94u)] Lorb_10 = 0x9u,
-	[DDLRegistration(0x7383fc02u)] Lorb_11 = 0xau,
-	[DDLRegistration(0xea8aadb8u)] Lorb_12 = 0xbu,
-	[DDLRegistration(0x0eb42269u)] None = 0xcu,
+	[DDLRegistration(0x6a98cd43u, "Lorb 01")] Lorb_01,
+	[DDLRegistration(0xf3919cf9u, "Lorb 02")] Lorb_02,
+	[DDLRegistration(0x8496ac6fu, "Lorb 03")] Lorb_03,
+	[DDLRegistration(0x1af239ccu, "Lorb 04")] Lorb_04,
+	[DDLRegistration(0x6df5095au, "Lorb 05")] Lorb_05,
+	[DDLRegistration(0xf4fc58e0u, "Lorb 06")] Lorb_06,
+	[DDLRegistration(0x83fb6876u, "Lorb 07")] Lorb_07,
+	[DDLRegistration(0x134475e7u, "Lorb 08")] Lorb_08,
+	[DDLRegistration(0x64434571u, "Lorb 09")] Lorb_09,
+	[DDLRegistration(0x0484cc94u, "Lorb 10")] Lorb_10,
+	[DDLRegistration(0x7383fc02u, "Lorb 11")] Lorb_11,
+	[DDLRegistration(0xea8aadb8u, "Lorb 12")] Lorb_12,
+	[DDLRegistration(0x0eb42269u)] None,
 }
 
 public static class xeccc3486Values {

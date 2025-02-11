@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x7ecb91d5u)]
 public enum x7ecb91d5 : uint {
-	[DDLRegistration(0xb3d48c37u)] BlendAuxTypeDominant = 0x0u,
-	[DDLRegistration(0x4482fd08u)] BlendAuxTypeBranchA = 0x1u,
-	[DDLRegistration(0xdd8bacb2u)] BlendAuxTypeBranchB = 0x2u,
-	[DDLRegistration(0xaa8c9c24u)] BlendAuxTypeBranchC = 0x3u,
-	[DDLRegistration(0x869949f3u)] BlendAuxTypeBranchAll = 0x4u,
+	[DDLRegistration(0xb3d48c37u, "Dominant branch")] BlendAuxTypeDominant,
+	[DDLRegistration(0x4482fd08u, "Branch A")] BlendAuxTypeBranchA,
+	[DDLRegistration(0xdd8bacb2u, "Branch B")] BlendAuxTypeBranchB,
+	[DDLRegistration(0xaa8c9c24u, "Branch C")] BlendAuxTypeBranchC,
+	[DDLRegistration(0x869949f3u, "All Branches")] BlendAuxTypeBranchAll,
 }
 
 public static class x7ecb91d5Values {

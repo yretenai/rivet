@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xedfa7304u)]
 public enum xedfa7304 : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0x7c7306eeu)] SlowOnly = 0x1u,
-	[DDLRegistration(0xa1d52ebfu)] All = 0x2u,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0x7c7306eeu)] SlowOnly,
+	[DDLRegistration(0xa1d52ebfu)] All,
 }
 
 public static class xedfa7304Values {

@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x049737d1u)]
 public enum x049737d1 : uint {
-	[DDLRegistration(0x084527c3u)] Low = 0x0u,
-	[DDLRegistration(0x77d6e4a0u)] Med = 0x1u,
-	[DDLRegistration(0x8021c6f3u)] High = 0x2u,
-	[DDLRegistration(0x24a9e401u)] Cinematic = 0x3u,
+	[DDLRegistration(0x084527c3u, "Low")] Low,
+	[DDLRegistration(0x77d6e4a0u, "Medium")] Med,
+	[DDLRegistration(0x8021c6f3u, "High")] High,
+	[DDLRegistration(0x24a9e401u, "Cinematic")] Cinematic,
 }
 
 public static class x049737d1Values {

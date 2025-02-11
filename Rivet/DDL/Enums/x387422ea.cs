@@ -7,12 +7,12 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x387422eau)]
 public enum x387422ea : uint {
-	[DDLRegistration(0x5a5b5a9fu)] Default = 0x0u,
-	[DDLRegistration(0x60ac00edu)] Red = 0x1u,
-	[DDLRegistration(0x3d5c2353u)] Green = 0x2u,
-	[DDLRegistration(0xbce0d5cfu)] Yellow = 0x3u,
-	[DDLRegistration(0x3981e281u)] WhitePink = 0x4u,
-	[DDLRegistration(0xa25a45e7u)] BlackGold = 0x5u,
+	[DDLRegistration(0x5a5b5a9fu, "Default")] Default,
+	[DDLRegistration(0x60ac00edu, "Red")] Red,
+	[DDLRegistration(0x3d5c2353u, "Green")] Green,
+	[DDLRegistration(0xbce0d5cfu, "Yellow")] Yellow,
+	[DDLRegistration(0x3981e281u, "White / Pink")] WhitePink,
+	[DDLRegistration(0xa25a45e7u, "Black / Gold")] BlackGold,
 }
 
 public static class x387422eaValues {

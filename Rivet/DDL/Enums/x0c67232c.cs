@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x0c67232cu)]
 public enum x0c67232c : uint {
-	[DDLRegistration(0x0a6f1bc5u)] Self = 0x0u,
-	[DDLRegistration(0xa433569cu)] Targeted = 0x1u,
-	[DDLRegistration(0xa1ef20e0u)] Broadcast = 0x2u,
+	[DDLRegistration(0x0a6f1bc5u)] Self,
+	[DDLRegistration(0xa433569cu)] Targeted,
+	[DDLRegistration(0xa1ef20e0u)] Broadcast,
 }
 
 public static class x0c67232cValues {

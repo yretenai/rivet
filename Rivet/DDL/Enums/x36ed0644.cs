@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x36ed0644u)]
 public enum x36ed0644 : uint {
-	[DDLRegistration(0x24a51434u)] Bool = 0x0u,
-	[DDLRegistration(0x246393e7u)] Float = 0x1u,
-	[DDLRegistration(0xf9c13d92u)] Vec = 0x2u,
-	[DDLRegistration(0xf25a8bf9u)] String = 0x3u,
-	[DDLRegistration(0xa9b39b8bu)] Actor = 0x4u,
+	[DDLRegistration(0x24a51434u, "Boolean", "false")] Bool,
+	[DDLRegistration(0x246393e7u, "Number", "0")] Float,
+	[DDLRegistration(0xf9c13d92u, "Vector", "[0,0,0]")] Vec,
+	[DDLRegistration(0xf25a8bf9u, "String", "''")] String,
+	[DDLRegistration(0xa9b39b8bu, "Actor", "'0x0000000000000000'")] Actor,
 }
 
 public static class x36ed0644Values {

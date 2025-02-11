@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x1940ab58u)]
 public enum x1940ab58 : uint {
-	[DDLRegistration(0x50a277c9u)] CollisionOn = 0x0u,
-	[DDLRegistration(0x8ee09606u)] CollisionOff = 0x1u,
-	[DDLRegistration(0x6c62dd0eu)] IgnoreCharacterMove = 0x2u,
-	[DDLRegistration(0x12712332u)] EnableCharacterMove = 0x3u,
+	[DDLRegistration(0x50a277c9u)] CollisionOn,
+	[DDLRegistration(0x8ee09606u)] CollisionOff,
+	[DDLRegistration(0x6c62dd0eu)] IgnoreCharacterMove,
+	[DDLRegistration(0x12712332u)] EnableCharacterMove,
 }
 
 public static class x1940ab58Values {

@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xd8ef6541u)]
 public enum xd8ef6541 : uint {
-	[DDLRegistration(0x869a0a10u)] TutorialTouchpadX = 0x0u,
-	[DDLRegistration(0xf19d3a86u)] TutorialTouchpadY = 0x1u,
-	[DDLRegistration(0xa3cd356bu)] TutorialTouchpadXPinch = 0x2u,
-	[DDLRegistration(0x6891e6ceu)] TutorialTouchpadYPinch = 0x3u,
+	[DDLRegistration(0x869a0a10u)] TutorialTouchpadX,
+	[DDLRegistration(0xf19d3a86u)] TutorialTouchpadY,
+	[DDLRegistration(0xa3cd356bu)] TutorialTouchpadXPinch,
+	[DDLRegistration(0x6891e6ceu)] TutorialTouchpadYPinch,
 }
 
 public static class xd8ef6541Values {

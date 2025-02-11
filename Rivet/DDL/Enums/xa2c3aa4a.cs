@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xa2c3aa4au)]
 public enum xa2c3aa4a : uint {
-	[DDLRegistration(0x6c1626d2u)] Small = 0x0u,
-	[DDLRegistration(0xf80b0bd0u)] Medium = 0x1u,
-	[DDLRegistration(0x4038e57fu)] Large = 0x2u,
-	[DDLRegistration(0x9031a61bu)] Interior = 0x3u,
-	[DDLRegistration(0xe93f0f90u)] Bare = 0x4u,
+	[DDLRegistration(0x6c1626d2u)] Small,
+	[DDLRegistration(0xf80b0bd0u)] Medium,
+	[DDLRegistration(0x4038e57fu)] Large,
+	[DDLRegistration(0x9031a61bu)] Interior,
+	[DDLRegistration(0xe93f0f90u)] Bare,
 }
 
 public static class xa2c3aa4aValues {

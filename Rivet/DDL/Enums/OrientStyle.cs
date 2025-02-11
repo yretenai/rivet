@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xc0645650u)]
 public enum OrientStyle : uint {
-	[DDLRegistration(0x57f8d755u)] Camera = 0x0u,
-	[DDLRegistration(0x6610459au)] Local = 0x1u,
-	[DDLRegistration(0xd7b1dc31u)] World = 0x2u,
-	[DDLRegistration(0xcc726fe3u)] Billboard = 0x3u,
+	[DDLRegistration(0x57f8d755u, "Camera")] Camera,
+	[DDLRegistration(0x6610459au, "Local")] Local,
+	[DDLRegistration(0xd7b1dc31u, "World")] World,
+	[DDLRegistration(0xcc726fe3u, "Billboard")] Billboard,
 }
 
 public static class OrientStyleValues {

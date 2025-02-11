@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xd9297359u)]
 public enum ObjectiveStates : uint {
-	[DDLRegistration(0x2fb4a5a7u)] Inactive = 0x0u,
-	[DDLRegistration(0x27fac552u)] Active = 0x1u,
-	[DDLRegistration(0xe6007b64u)] Complete = 0x2u,
-	[DDLRegistration(0xf26f9a27u)] Failed = 0x3u,
+	[DDLRegistration(0x2fb4a5a7u, "Inactive", "The mission is inactive, or previous prerequisite objectives have not been met")] Inactive,
+	[DDLRegistration(0x27fac552u, "Active", "The previous prerequisite objectives have been met, and this is not yet complete")] Active,
+	[DDLRegistration(0xe6007b64u, "Complete", "This objective has been completed.")] Complete,
+	[DDLRegistration(0xf26f9a27u, "Failed", "This mission or objective is failed.")] Failed,
 }
 
 public static class ObjectiveStatesValues {

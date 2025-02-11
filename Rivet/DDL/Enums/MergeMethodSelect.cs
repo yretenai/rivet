@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xea6549e1u)]
 public enum MergeMethodSelect : uint {
-	[DDLRegistration(0x67d72c85u)] Add = 0x0u,
-	[DDLRegistration(0x9d38c40fu)] And = 0x1u,
-	[DDLRegistration(0x853fb1ceu)] Subtract = 0x2u,
+	[DDLRegistration(0x67d72c85u, "Add to Above", "Geometry created with this item is added to model")] Add,
+	[DDLRegistration(0x9d38c40fu, "And with Above", "Geometry created with this item is boolean added to model exterior surface")] And,
+	[DDLRegistration(0x853fb1ceu, "Subtract from Above", "Geometry created with this item is boolean subtracted from model")] Subtract,
 }
 
 public static class MergeMethodSelectValues {

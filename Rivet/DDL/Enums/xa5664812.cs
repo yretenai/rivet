@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xa5664812u)]
 public enum xa5664812 : uint {
-	[DDLRegistration(0xef69972eu)] Asset = 0x0u,
-	[DDLRegistration(0x69418f94u)] Session = 0x1u,
-	[DDLRegistration(0x99d49d5cu)] AllSessions = 0x2u,
+	[DDLRegistration(0xef69972eu, "Asset")] Asset,
+	[DDLRegistration(0x69418f94u, "Session")] Session,
+	[DDLRegistration(0x99d49d5cu, "AllSessions")] AllSessions,
 }
 
 public static class xa5664812Values {

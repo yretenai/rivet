@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x88e09fe6u)]
 public enum x88e09fe6 : uint {
-	[DDLRegistration(0x7a1745d9u)] Ordered = 0x0u,
-	[DDLRegistration(0x8afb0331u)] Shuffle = 0x1u,
-	[DDLRegistration(0x90dd1e19u)] ShuffleLoop = 0x2u,
+	[DDLRegistration(0x7a1745d9u, "Output in order")] Ordered,
+	[DDLRegistration(0x8afb0331u, "Shuffle outputs once")] Shuffle,
+	[DDLRegistration(0x90dd1e19u, "Shuffle outputs every cycle")] ShuffleLoop,
 }
 
 public static class x88e09fe6Values {

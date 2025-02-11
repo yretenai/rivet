@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xf12451bdu)]
 public enum xf12451bd : uint {
-	[DDLRegistration(0x35eef380u)] Offset = 0x0u,
-	[DDLRegistration(0xb2156f4eu)] Origin = 0x1u,
-	[DDLRegistration(0x11a6750du)] Ratio = 0x2u,
+	[DDLRegistration(0x35eef380u, "Offset", "Treat the numbers as the min and max radius away from the inner radius of the source points.")] Offset,
+	[DDLRegistration(0xb2156f4eu, "Origin", "Treat the numbers as the min and max radius away from the origin of the source points.")] Origin,
+	[DDLRegistration(0x11a6750du, "Ratio", "Treat the numbers as the min and max ratios on the inner radius of the source points away from their origin.")] Ratio,
 }
 
 public static class xf12451bdValues {

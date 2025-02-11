@@ -7,7 +7,7 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x80ef7527u)]
 public enum x80ef7527 : uint {
-	[DDLRegistration(0x4509bd0fu)] PSNObject = 0x0u,
+	[DDLRegistration(0x4509bd0fu)] PSNObject,
 }
 
 public static class x80ef7527Values {

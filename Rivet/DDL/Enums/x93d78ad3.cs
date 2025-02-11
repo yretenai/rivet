@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x93d78ad3u)]
 public enum x93d78ad3 : uint {
-	[DDLRegistration(0x1f2c2fa4u)] ConfirmYes = 0x0u,
-	[DDLRegistration(0x13faa728u)] ConfirmNo = 0x1u,
+	[DDLRegistration(0x1f2c2fa4u)] ConfirmYes,
+	[DDLRegistration(0x13faa728u)] ConfirmNo,
 }
 
 public static class x93d78ad3Values {

@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x2efb4283u)]
 public enum x2efb4283 : uint {
-	[DDLRegistration(0xc03fa53eu)] Here = 0x0u,
-	[DDLRegistration(0x50d10aebu)] FileLink = 0x1u,
+	[DDLRegistration(0xc03fa53eu, "Here")] Here,
+	[DDLRegistration(0x50d10aebu, "Other Config")] FileLink,
 }
 
 public static class x2efb4283Values {

@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xccd3eeabu)]
 public enum xccd3eeab : uint {
-	[DDLRegistration(0x5a633e56u)] Point = 0x0u,
-	[DDLRegistration(0x04548da6u)] Direction = 0x1u,
+	[DDLRegistration(0x5a633e56u, "Point")] Point,
+	[DDLRegistration(0x04548da6u, "Direction")] Direction,
 }
 
 public static class xccd3eeabValues {

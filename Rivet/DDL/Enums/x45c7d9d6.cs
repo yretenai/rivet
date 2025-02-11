@@ -7,12 +7,12 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x45c7d9d6u)]
 public enum x45c7d9d6 : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0x0c649d84u)] SATA300 = 0x1u,
-	[DDLRegistration(0xcea55e3au)] FastHDD = 0x2u,
-	[DDLRegistration(0xc6ec1360u)] HDD = 0x3u,
-	[DDLRegistration(0xf0782be0u)] SlowHDD = 0x4u,
-	[DDLRegistration(0x6aba4899u)] Optical = 0x5u,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0x0c649d84u, "SATA300", "SATA 300 SSD, 300MiB/s, no seek time")] SATA300,
+	[DDLRegistration(0xcea55e3au, "Fast HDD")] FastHDD,
+	[DDLRegistration(0xc6ec1360u, "Regular HDD")] HDD,
+	[DDLRegistration(0xf0782be0u, "Slow HDD")] SlowHDD,
+	[DDLRegistration(0x6aba4899u, "Optical drive")] Optical,
 }
 
 public static class x45c7d9d6Values {

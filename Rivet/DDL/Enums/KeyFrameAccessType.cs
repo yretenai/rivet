@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x521686a5u)]
 public enum KeyFrameAccessType : uint {
-	[DDLRegistration(0xb8f531c6u)] Distance = 0x0u,
-	[DDLRegistration(0x3bfd4fd0u)] Age = 0x1u,
+	[DDLRegistration(0xb8f531c6u, "Distance")] Distance,
+	[DDLRegistration(0x3bfd4fd0u, "Age")] Age,
 }
 
 public static class KeyFrameAccessTypeValues {

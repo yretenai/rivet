@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x16d59d74u)]
 public enum x16d59d74 : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0x3512d8d2u)] AnnosoftSmoothing = 0x1u,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0x3512d8d2u, "Annosoft Smoothing")] AnnosoftSmoothing,
 }
 
 public static class x16d59d74Values {

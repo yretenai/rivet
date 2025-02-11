@@ -7,7 +7,7 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x1a26ec8eu)]
 public enum x1a26ec8e : uint {
-	[DDLRegistration(0xf6517337u)] ge = 0x0u,
+	[DDLRegistration(0xf6517337u)] ge,
 }
 
 public static class x1a26ec8eValues {

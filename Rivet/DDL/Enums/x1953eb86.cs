@@ -7,13 +7,13 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x1953eb86u)]
 public enum x1953eb86 : uint {
-	[DDLRegistration(0xe02a5ddau)] GoldenPath = 0x0u,
-	[DDLRegistration(0xb9a9da2au)] SideQuest = 0x1u,
-	[DDLRegistration(0xd445c7cau)] ArenaBronzeCup = 0x2u,
-	[DDLRegistration(0xbf3c499bu)] ArenaSilverCup = 0x3u,
-	[DDLRegistration(0x38f66ce3u)] ArenaGoldCup = 0x4u,
-	[DDLRegistration(0xd652a537u)] HackingPuzzle = 0x5u,
-	[DDLRegistration(0x349ef852u)] Other = 0x6u,
+	[DDLRegistration(0xe02a5ddau)] GoldenPath,
+	[DDLRegistration(0xb9a9da2au)] SideQuest,
+	[DDLRegistration(0xd445c7cau)] ArenaBronzeCup,
+	[DDLRegistration(0xbf3c499bu)] ArenaSilverCup,
+	[DDLRegistration(0x38f66ce3u)] ArenaGoldCup,
+	[DDLRegistration(0xd652a537u)] HackingPuzzle,
+	[DDLRegistration(0x349ef852u)] Other,
 }
 
 public static class x1953eb86Values {

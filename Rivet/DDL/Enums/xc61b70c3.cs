@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xc61b70c3u)]
 public enum xc61b70c3 : uint {
-	[DDLRegistration(0x7595384du)] QueryLoggers = 0x0u,
-	[DDLRegistration(0xfc41507du)] EnableLogger = 0x1u,
-	[DDLRegistration(0x1e077a95u)] DisableLogger = 0x2u,
+	[DDLRegistration(0x7595384du, description: "Query Name and id of simple loggers")] QueryLoggers,
+	[DDLRegistration(0xfc41507du, description: "Turn on a logger")] EnableLogger,
+	[DDLRegistration(0x1e077a95u, description: "Turn off a logger")] DisableLogger,
 }
 
 public static class xc61b70c3Values {

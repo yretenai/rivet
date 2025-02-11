@@ -7,19 +7,19 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x1b3f99b5u)]
 public enum x1b3f99b5 : uint {
-	[DDLRegistration(0x2887f268u)] SlotHeadActor = 0x0u,
-	[DDLRegistration(0x1e85e174u)] SlotColor = 0x1u,
-	[DDLRegistration(0xe5fd1ba1u)] SlotFeet = 0x2u,
-	[DDLRegistration(0x4df5e300u)] SlotLegLower = 0x3u,
-	[DDLRegistration(0x2d3047bfu)] SlotLegUpper = 0x4u,
-	[DDLRegistration(0xeb227babu)] SlotTorsoLower = 0x5u,
-	[DDLRegistration(0x8be7df14u)] SlotTorsoUpper = 0x6u,
-	[DDLRegistration(0xd51277f7u)] SlotArmLower = 0x7u,
-	[DDLRegistration(0xb5d7d348u)] SlotArmUpper = 0x8u,
-	[DDLRegistration(0x1efd9a65u)] SlotHands = 0x9u,
-	[DDLRegistration(0x7cf9b9f2u)] SlotHead = 0xau,
-	[DDLRegistration(0x2ce76445u)] SlotHat = 0xbu,
-	[DDLRegistration(0x47fd2e77u)] SlotHair = 0xcu,
+	[DDLRegistration(0x2887f268u, "Head actor or variant")] SlotHeadActor,
+	[DDLRegistration(0x1e85e174u, "Color (skin, hair primary/secondary, facial hair, eye)")] SlotColor,
+	[DDLRegistration(0xe5fd1ba1u, "Feet")] SlotFeet,
+	[DDLRegistration(0x4df5e300u, "Leg Lower")] SlotLegLower,
+	[DDLRegistration(0x2d3047bfu, "Leg Upper")] SlotLegUpper,
+	[DDLRegistration(0xeb227babu, "Torso Lower")] SlotTorsoLower,
+	[DDLRegistration(0x8be7df14u, "Torso Upper")] SlotTorsoUpper,
+	[DDLRegistration(0xd51277f7u, "Arm Lower")] SlotArmLower,
+	[DDLRegistration(0xb5d7d348u, "Arm Upper")] SlotArmUpper,
+	[DDLRegistration(0x1efd9a65u, "Hands")] SlotHands,
+	[DDLRegistration(0x7cf9b9f2u, "Head and Face")] SlotHead,
+	[DDLRegistration(0x2ce76445u, "Hats and Helmets")] SlotHat,
+	[DDLRegistration(0x47fd2e77u, "Hair")] SlotHair,
 }
 
 public static class x1b3f99b5Values {

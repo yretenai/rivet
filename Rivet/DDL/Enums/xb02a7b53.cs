@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xb02a7b53u)]
 public enum xb02a7b53 : uint {
-	[DDLRegistration(0x210a2f1au)] IntroCurveBroken = 0x0u,
-	[DDLRegistration(0x3cae71e9u)] IntroCurveFixed = 0x1u,
-	[DDLRegistration(0xe80b63b9u)] BlendCurves = 0x2u,
+	[DDLRegistration(0x210a2f1au, "Intro Curve")] IntroCurveBroken,
+	[DDLRegistration(0x3cae71e9u, "Intro Curve Fixed")] IntroCurveFixed,
+	[DDLRegistration(0xe80b63b9u, "Blend Curves")] BlendCurves,
 }
 
 public static class xb02a7b53Values {

@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x9547deb2u)]
 public enum x9547deb2 : uint {
-	[DDLRegistration(0xa964ec21u)] Character = 0x0u,
-	[DDLRegistration(0xd7b1dc31u)] World = 0x1u,
+	[DDLRegistration(0xa964ec21u, "Write to speaking character's memory")] Character,
+	[DDLRegistration(0xd7b1dc31u, "Write to world memory for all characters")] World,
 }
 
 public static class x9547deb2Values {

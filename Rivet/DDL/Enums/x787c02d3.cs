@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x787c02d3u)]
 public enum x787c02d3 : uint {
-	[DDLRegistration(0xe7768b48u)] Slerp = 0x0u,
-	[DDLRegistration(0x88977a7eu)] RelativeSlerp = 0x1u,
+	[DDLRegistration(0xe7768b48u, "Standard")] Slerp,
+	[DDLRegistration(0x88977a7eu, "Relative")] RelativeSlerp,
 }
 
 public static class x787c02d3Values {

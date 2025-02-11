@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x99f55b7cu)]
 public enum x99f55b7c : uint {
-	[DDLRegistration(0x651c7a04u)] Hex = 0x0u,
-	[DDLRegistration(0x07ab8ba2u)] Tile = 0x1u,
+	[DDLRegistration(0x651c7a04u, "Hex")] Hex,
+	[DDLRegistration(0x07ab8ba2u, "Tile")] Tile,
 }
 
 public static class x99f55b7cValues {

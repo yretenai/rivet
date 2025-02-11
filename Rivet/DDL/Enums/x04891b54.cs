@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x04891b54u)]
 public enum x04891b54 : uint {
-	[DDLRegistration(0x0f400721u)] HitActor = 0x0u,
-	[DDLRegistration(0x38658874u)] DeliveryActor = 0x1u,
-	[DDLRegistration(0xf1d27f4cu)] OwnerActor = 0x2u,
+	[DDLRegistration(0x0f400721u)] HitActor,
+	[DDLRegistration(0x38658874u)] DeliveryActor,
+	[DDLRegistration(0xf1d27f4cu)] OwnerActor,
 }
 
 public static class x04891b54Values {

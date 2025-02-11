@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x8423053fu)]
 public enum x8423053f : uint {
-	[DDLRegistration(0xfe3ea8d6u)] Any = 0x0u,
-	[DDLRegistration(0x0eb42269u)] None = 0x1u,
+	[DDLRegistration(0xfe3ea8d6u)] Any,
+	[DDLRegistration(0x0eb42269u)] None,
 }
 
 public static class x8423053fValues {

@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xa4c61284u)]
 public enum xa4c61284 : uint {
-	[DDLRegistration(0x081e9dc6u)] PersistOnEnd = 0x0u,
-	[DDLRegistration(0x0c1d1d1du)] DeleteOnEnd = 0x1u,
+	[DDLRegistration(0x081e9dc6u, "Persist")] PersistOnEnd,
+	[DDLRegistration(0x0c1d1d1du, "Delete")] DeleteOnEnd,
 }
 
 public static class xa4c61284Values {

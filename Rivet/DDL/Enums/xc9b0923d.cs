@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xc9b0923du)]
 public enum xc9b0923d : uint {
-	[DDLRegistration(0x6b0e1b4cu)] BlockNav = 0x0u,
-	[DDLRegistration(0xbc2a6b27u)] AllowNav = 0x1u,
+	[DDLRegistration(0x6b0e1b4cu, "Block nav")] BlockNav,
+	[DDLRegistration(0xbc2a6b27u, "Allow nav")] AllowNav,
 }
 
 public static class xc9b0923dValues {

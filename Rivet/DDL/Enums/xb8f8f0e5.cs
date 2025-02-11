@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xb8f8f0e5u)]
 public enum xb8f8f0e5 : uint {
-	[DDLRegistration(0x72bf98fdu)] Start = 0x0u,
-	[DDLRegistration(0x9a316cd3u)] End = 0x1u,
-	[DDLRegistration(0x9e8f6552u)] Closest = 0x2u,
+	[DDLRegistration(0x72bf98fdu, "Start")] Start,
+	[DDLRegistration(0x9a316cd3u, "End")] End,
+	[DDLRegistration(0x9e8f6552u, "Closest")] Closest,
 }
 
 public static class xb8f8f0e5Values {

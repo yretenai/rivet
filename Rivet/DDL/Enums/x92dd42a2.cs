@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x92dd42a2u)]
 public enum x92dd42a2 : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0xc595ac41u)] Fur = 0x1u,
-	[DDLRegistration(0x16f5d9a8u)] Water = 0x2u,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0xc595ac41u, "Fur")] Fur,
+	[DDLRegistration(0x16f5d9a8u, "Water")] Water,
 }
 
 public static class x92dd42a2Values {

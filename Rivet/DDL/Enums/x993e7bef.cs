@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x993e7befu)]
 public enum x993e7bef : uint {
-	[DDLRegistration(0x9c016d3bu)] UseEvent = 0x0u,
-	[DDLRegistration(0x073fc8b5u)] DoNotUseEvent = 0x1u,
+	[DDLRegistration(0x9c016d3bu, "Use an Event to Delete")] UseEvent,
+	[DDLRegistration(0x073fc8b5u, "Do Not Use an Event to Delete")] DoNotUseEvent,
 }
 
 public static class x993e7befValues {

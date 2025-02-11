@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xcfc05fffu)]
 public enum xcfc05fff : uint {
-	[DDLRegistration(0x5b598575u)] Ladder = 0x0u,
-	[DDLRegistration(0x6ebe41a8u)] Pipe = 0x1u,
+	[DDLRegistration(0x5b598575u, "Ladder")] Ladder,
+	[DDLRegistration(0x6ebe41a8u, "Pipe")] Pipe,
 }
 
 public static class xcfc05fffValues {

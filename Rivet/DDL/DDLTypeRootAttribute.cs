@@ -5,8 +5,6 @@
 namespace Rivet.DDL;
 
 [AttributeUsage(AttributeTargets.Enum | AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Class)]
-public sealed class DDLRegistrationAttribute(uint id, string? label = null, string? description = null) : Attribute {
+public sealed class DDLTypeRootAttribute(uint id) : Attribute {
 	public uint Id { get; } = id;
-	public string Label { get; } = label ?? string.Empty;
-	public string Description { get; } = description ?? string.Empty;
 }

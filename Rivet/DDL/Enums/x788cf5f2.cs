@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x788cf5f2u)]
 public enum x788cf5f2 : uint {
-	[DDLRegistration(0x464cccd2u)] Power = 0x0u,
-	[DDLRegistration(0xe2e03384u)] Speed = 0x1u,
-	[DDLRegistration(0x7e41973bu)] Range = 0x2u,
-	[DDLRegistration(0x99602fcbu)] Custom = 0x3u,
+	[DDLRegistration(0x464cccd2u, "Power")] Power,
+	[DDLRegistration(0xe2e03384u, "Speed")] Speed,
+	[DDLRegistration(0x7e41973bu, "Range")] Range,
+	[DDLRegistration(0x99602fcbu, "Custom")] Custom,
 }
 
 public static class x788cf5f2Values {

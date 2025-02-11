@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xfc5b2547u)]
 public enum xfc5b2547 : uint {
-	[DDLRegistration(0x669a8b13u)] RenderTextureSlotNone = 0x0u,
-	[DDLRegistration(0x297dbe88u)] RenderTextureSlotA = 0x1u,
-	[DDLRegistration(0xb074ef32u)] RenderTextureSlotB = 0x2u,
-	[DDLRegistration(0xc773dfa4u)] RenderTextureSlotC = 0x3u,
-	[DDLRegistration(0x59174a07u)] RenderTextureSlotD = 0x4u,
+	[DDLRegistration(0x669a8b13u)] RenderTextureSlotNone,
+	[DDLRegistration(0x297dbe88u, "Render Texture Slot A")] RenderTextureSlotA,
+	[DDLRegistration(0xb074ef32u, "Render Texture Slot B")] RenderTextureSlotB,
+	[DDLRegistration(0xc773dfa4u, "Render Texture Slot C")] RenderTextureSlotC,
+	[DDLRegistration(0x59174a07u, "Render Texture Slot D")] RenderTextureSlotD,
 }
 
 public static class xfc5b2547Values {

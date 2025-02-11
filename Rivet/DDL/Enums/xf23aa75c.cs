@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xf23aa75cu)]
 public enum xf23aa75c : uint {
-	[DDLRegistration(0x1dafe79au)] image = 0x0u,
-	[DDLRegistration(0xa45539e9u)] video = 0x1u,
+	[DDLRegistration(0x1dafe79au)] image,
+	[DDLRegistration(0xa45539e9u)] video,
 }
 
 public static class xf23aa75cValues {

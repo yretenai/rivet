@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x8dc10932u)]
 public enum x8dc10932 : uint {
-	[DDLRegistration(0xeb3bb85au)] AnimBlendAuxTypeDominant = 0x0u,
-	[DDLRegistration(0xc3fa8135u)] AnimBlendAuxTypeBranchA = 0x1u,
-	[DDLRegistration(0x5af3d08fu)] AnimBlendAuxTypeBranchB = 0x2u,
-	[DDLRegistration(0x2df4e019u)] AnimBlendAuxTypeBranchC = 0x3u,
+	[DDLRegistration(0xeb3bb85au)] AnimBlendAuxTypeDominant,
+	[DDLRegistration(0xc3fa8135u)] AnimBlendAuxTypeBranchA,
+	[DDLRegistration(0x5af3d08fu)] AnimBlendAuxTypeBranchB,
+	[DDLRegistration(0x2df4e019u)] AnimBlendAuxTypeBranchC,
 }
 
 public static class x8dc10932Values {

@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x53f8509fu)]
 public enum x53f8509f : uint {
-	[DDLRegistration(0x42bd4159u)] BlendNodeTypeDefault = 0x0u,
-	[DDLRegistration(0x94de8b45u)] BlendNodeTypeCombineAdditive = 0x1u,
+	[DDLRegistration(0x42bd4159u, "Default")] BlendNodeTypeDefault,
+	[DDLRegistration(0x94de8b45u, "Combine-additive")] BlendNodeTypeCombineAdditive,
 }
 
 public static class x53f8509fValues {

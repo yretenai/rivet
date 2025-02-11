@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x9e94da32u)]
 public enum x9e94da32 : uint {
-	[DDLRegistration(0x5a5b5a9fu)] Default = 0x0u,
-	[DDLRegistration(0xca40054bu)] Always = 0x1u,
-	[DDLRegistration(0xf7e36f62u)] Never = 0x2u,
+	[DDLRegistration(0x5a5b5a9fu)] Default,
+	[DDLRegistration(0xca40054bu)] Always,
+	[DDLRegistration(0xf7e36f62u)] Never,
 }
 
 public static class x9e94da32Values {

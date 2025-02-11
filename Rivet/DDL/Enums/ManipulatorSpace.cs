@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xbe3ef38cu)]
 public enum ManipulatorSpace : uint {
-	[DDLRegistration(0xd7b1dc31u)] World = 0x0u,
-	[DDLRegistration(0xc44992bcu)] Object = 0x1u,
+	[DDLRegistration(0xd7b1dc31u)] World,
+	[DDLRegistration(0xc44992bcu)] Object,
 }
 
 public static class ManipulatorSpaceValues {

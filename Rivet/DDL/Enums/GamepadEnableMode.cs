@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xcfd4e774u)]
 public enum GamepadEnableMode : uint {
-	[DDLRegistration(0xf7e36f62u)] Never = 0x0u,
-	[DDLRegistration(0xca40054bu)] Always = 0x1u,
-	[DDLRegistration(0x9a48e8c3u)] ApplicationFocus = 0x2u,
-	[DDLRegistration(0xbb152871u)] k3DViewFocus = 0x3u,
+	[DDLRegistration(0xf7e36f62u)] Never,
+	[DDLRegistration(0xca40054bu)] Always,
+	[DDLRegistration(0x9a48e8c3u)] ApplicationFocus,
+	[DDLRegistration(0xbb152871u)] k3DViewFocus,
 }
 
 public static class GamepadEnableModeValues {

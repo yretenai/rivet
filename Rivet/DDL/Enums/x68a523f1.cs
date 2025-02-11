@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x68a523f1u)]
 public enum x68a523f1 : uint {
-	[DDLRegistration(0xd57bc241u)] LeaveOriginal = 0x0u,
-	[DDLRegistration(0xaea0ad40u)] ToggleStump = 0x1u,
-	[DDLRegistration(0x0cce6d8au)] DestroyOriginalActor = 0x2u,
-	[DDLRegistration(0x71b3643eu)] HideOriginalActor = 0x3u,
+	[DDLRegistration(0xd57bc241u, description: "Leave the original model on.")] LeaveOriginal,
+	[DDLRegistration(0xaea0ad40u, description: "Apply a stump look")] ToggleStump,
+	[DDLRegistration(0x0cce6d8au, description: "Destroy the original actor.")] DestroyOriginalActor,
+	[DDLRegistration(0x71b3643eu, description: "Hide the original actor.")] HideOriginalActor,
 }
 
 public static class x68a523f1Values {

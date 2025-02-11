@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x3c1de250u)]
 public enum x3c1de250 : uint {
-	[DDLRegistration(0xe9fe338fu)] Sine = 0x0u,
-	[DDLRegistration(0xe2925e8fu)] Cosine = 0x1u,
-	[DDLRegistration(0x637dd999u)] SawTooth = 0x2u,
-	[DDLRegistration(0xf39b26ceu)] Square = 0x3u,
+	[DDLRegistration(0xe9fe338fu)] Sine,
+	[DDLRegistration(0xe2925e8fu)] Cosine,
+	[DDLRegistration(0x637dd999u)] SawTooth,
+	[DDLRegistration(0xf39b26ceu)] Square,
 }
 
 public static class x3c1de250Values {

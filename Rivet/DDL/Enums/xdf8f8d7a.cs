@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xdf8f8d7au)]
 public enum xdf8f8d7a : uint {
-	[DDLRegistration(0xf1807020u)] FloatOutput = 0x0u,
-	[DDLRegistration(0xaae4ef50u)] Vec2Output = 0x1u,
-	[DDLRegistration(0x8b2189feu)] IntOutput = 0x2u,
+	[DDLRegistration(0xf1807020u)] FloatOutput,
+	[DDLRegistration(0xaae4ef50u)] Vec2Output,
+	[DDLRegistration(0x8b2189feu)] IntOutput,
 }
 
 public static class xdf8f8d7aValues {

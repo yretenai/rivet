@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x1b4f6c9au)]
 public enum BlendType : uint {
-	[DDLRegistration(0x425c684eu)] Additive = 0x0u,
-	[DDLRegistration(0xd0d63681u)] Blended = 0x1u,
-	[DDLRegistration(0x1b6c1f32u)] Modulate = 0x2u,
-	[DDLRegistration(0xf5f96163u)] Hybrid = 0x3u,
-	[DDLRegistration(0x646f4fd6u)] Opaque = 0x4u,
+	[DDLRegistration(0x425c684eu, "Additive", "Renders to Alpha layer with Additive blending")] Additive,
+	[DDLRegistration(0xd0d63681u, "Blended", "Renders to Alpha layer with Lerp blending")] Blended,
+	[DDLRegistration(0x1b6c1f32u, "Modulate", "Renders to Alpha layer with Modulate blending")] Modulate,
+	[DDLRegistration(0xf5f96163u, "Opaque/Blended Hybrid", "Renders in two passes. Pixels with alpha above AlphaTest are opaque. Pixels with alpha below AlphaTest are blended")] Hybrid,
+	[DDLRegistration(0x646f4fd6u, "Opaque", "Renders as opaque to either GBuffer or Forward layer")] Opaque,
 }
 
 public static class BlendTypeValues {

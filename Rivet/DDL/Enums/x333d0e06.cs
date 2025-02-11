@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x333d0e06u)]
 public enum x333d0e06 : uint {
-	[DDLRegistration(0x0180e8f6u)] Scale = 0x0u,
-	[DDLRegistration(0x2664ada2u)] Override = 0x1u,
+	[DDLRegistration(0x0180e8f6u, "Scale")] Scale,
+	[DDLRegistration(0x2664ada2u, "Override")] Override,
 }
 
 public static class x333d0e06Values {

@@ -7,20 +7,20 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x38a8002du)]
 public enum x38a8002d : uint {
-	[DDLRegistration(0xb1710221u)] Off = 0x0u,
-	[DDLRegistration(0x4abd9c8eu)] ClipMap = 0x1u,
-	[DDLRegistration(0x25a6c681u)] ClipMapTiles = 0x2u,
-	[DDLRegistration(0xdcbcf6eau)] CurrentPaintTarget = 0x3u,
-	[DDLRegistration(0xf4db1d40u)] Gray = 0x4u,
-	[DDLRegistration(0x125bf69fu)] UVs = 0x5u,
-	[DDLRegistration(0xe38b7940u)] VistaMap = 0x6u,
-	[DDLRegistration(0x3b8f2e63u)] PipelinePaintBase = 0x7u,
-	[DDLRegistration(0x82f12ec8u)] PipelinePaintBaseOffset = 0x8u,
-	[DDLRegistration(0xcd5067b2u)] PipelinePaintBrush = 0x9u,
-	[DDLRegistration(0x641ed140u)] PipelinePaintBrushAccumulated = 0xau,
-	[DDLRegistration(0xcba62641u)] PipelinePaintBrushAccumulatedValue = 0xbu,
-	[DDLRegistration(0x7dca22bbu)] PipelinePaintComposite = 0xcu,
-	[DDLRegistration(0x3a130f74u)] PipelineProceduralComposite = 0xdu,
+	[DDLRegistration(0xb1710221u, "Off", "The terrain will render using the blended final materials.")] Off,
+	[DDLRegistration(0x4abd9c8eu, "ClipMap", "The terrain will render the different clipmap levels with different colors.")] ClipMap,
+	[DDLRegistration(0x25a6c681u, "ClipMap Tiles", "The terrain will render the tiles that are used for random rotation when generating the ClipMap.")] ClipMapTiles,
+	[DDLRegistration(0xdcbcf6eau, "Current Paint Target", "The terrain will render a mask that represents the current paint target (the heightfield, the selection, or a splatmask layer).")] CurrentPaintTarget,
+	[DDLRegistration(0xf4db1d40u, "Gray", "The terrain will render using a solid gray color for the all the materials.")] Gray,
+	[DDLRegistration(0x125bf69fu, "UVs", "The terrain will render the UVs texture (required/textures/TangentSpaceArrowsTile.texture) to the base map for all splatmask channels.")] UVs,
+	[DDLRegistration(0xe38b7940u, "Vista Map", "The terrain will render only using the Vista Map")] VistaMap,
+	[DDLRegistration(0x3b8f2e63u, "Pipeline (Paint Base)", "This will render the base layer of the terrain painting pipeline.  This is primarily intended for programmer debugging.")] PipelinePaintBase,
+	[DDLRegistration(0x82f12ec8u, "Pipeline (Paint Base Offset)", "This will render the base offset layer of the terrain painting pipeline.  This is primarily intended for programmer debugging.")] PipelinePaintBaseOffset,
+	[DDLRegistration(0xcd5067b2u, "Pipeline (Paint Brush)", "This will render the brush layer of the terrain painting pipeline.  This is primarily intended for programmer debugging.")] PipelinePaintBrush,
+	[DDLRegistration(0x641ed140u, "Pipeline (Paint Brush Accumulated)", "This will render the accumulated brush layer of the terrain painting pipeline.  This is primarily intended for programmer debugging.")] PipelinePaintBrushAccumulated,
+	[DDLRegistration(0xcba62641u, "Pipeline (Paint Brush Accumulated Value)", "This will render the value that will be painted in the brush layer of the terrain painting pipeline.  This is primarily intended for programmer debugging.")] PipelinePaintBrushAccumulatedValue,
+	[DDLRegistration(0x7dca22bbu, "Pipeline (Paint Composite)", "This will render the comsited layer of the terrain painting pipeline.  This is primarily intended for programmer debugging.")] PipelinePaintComposite,
+	[DDLRegistration(0x3a130f74u, "Pipeline (Procedural Composite)", "This will render the procedurally-composited layer of the terrain painting pipeline.  This is primarily intended for programmer debugging.")] PipelineProceduralComposite,
 }
 
 public static class x38a8002dValues {

@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x189ff42fu)]
 public enum x189ff42f : uint {
-	[DDLRegistration(0xeb0be1a1u)] Weapons = 0x0u,
-	[DDLRegistration(0x52e1338eu)] Armor = 0x1u,
-	[DDLRegistration(0x7a60713du)] Gear = 0x2u,
+	[DDLRegistration(0xeb0be1a1u, "Weapons")] Weapons,
+	[DDLRegistration(0x52e1338eu, "Armor")] Armor,
+	[DDLRegistration(0x7a60713du, "Gear")] Gear,
 }
 
 public static class x189ff42fValues {

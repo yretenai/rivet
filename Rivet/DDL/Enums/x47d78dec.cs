@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x47d78decu)]
 public enum x47d78dec : uint {
-	[DDLRegistration(0x92d60a76u)] MostCommon = 0x0u,
-	[DDLRegistration(0x1a467539u)] Average = 0x1u,
-	[DDLRegistration(0x9e8f6552u)] Closest = 0x2u,
+	[DDLRegistration(0x92d60a76u, "Most Common", "Use the most common material type's coefficient value.")] MostCommon,
+	[DDLRegistration(0x1a467539u, "Average", "Average all coefficients")] Average,
+	[DDLRegistration(0x9e8f6552u, "Closest", "Use closest coefficient")] Closest,
 }
 
 public static class x47d78decValues {

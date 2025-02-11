@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xd2478acbu)]
 public enum xd2478acb : uint {
-	[DDLRegistration(0x12bcaba2u)] Ascending = 0x0u,
-	[DDLRegistration(0xcb14e349u)] Descending = 0x1u,
-	[DDLRegistration(0x4f00c07fu)] None = 0x2u,
+	[DDLRegistration(0x12bcaba2u)] Ascending,
+	[DDLRegistration(0xcb14e349u)] Descending,
+	[DDLRegistration(0x4f00c07fu)] None,
 }
 
 public static class xd2478acbValues {

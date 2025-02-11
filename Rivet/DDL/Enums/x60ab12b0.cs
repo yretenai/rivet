@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x60ab12b0u)]
 public enum x60ab12b0 : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0xc329769du)] DefaultWeaponAim = 0x1u,
-	[DDLRegistration(0xe328657fu)] DefaultWeaponFire = 0x2u,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0xc329769du)] DefaultWeaponAim,
+	[DDLRegistration(0xe328657fu)] DefaultWeaponFire,
 }
 
 public static class x60ab12b0Values {

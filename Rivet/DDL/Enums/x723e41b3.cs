@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x723e41b3u)]
 public enum x723e41b3 : uint {
-	[DDLRegistration(0x6a10ea0fu)] OffWhenActive = 0x0u,
-	[DDLRegistration(0x289d60ddu)] OnWhenActive = 0x1u,
+	[DDLRegistration(0x6a10ea0fu)] OffWhenActive,
+	[DDLRegistration(0x289d60ddu)] OnWhenActive,
 }
 
 public static class x723e41b3Values {

@@ -7,14 +7,14 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x4e3b1eddu)]
 public enum HitLocation : uint {
-	[DDLRegistration(0x4f00c07fu)] None = 0x0u,
-	[DDLRegistration(0x9763362cu)] Head = 0x1u,
-	[DDLRegistration(0x3e0c7044u)] Torso = 0x2u,
-	[DDLRegistration(0x25d4507eu)] LeftArm = 0x3u,
-	[DDLRegistration(0x68c42801u)] RightArm = 0x4u,
-	[DDLRegistration(0xc85aaea5u)] LeftLeg = 0x5u,
-	[DDLRegistration(0x854ad6dau)] RightLeg = 0x6u,
-	[DDLRegistration(0x56483790u)] Weakpoint = 0x7u,
+	[DDLRegistration(0x4f00c07fu)] None,
+	[DDLRegistration(0x9763362cu)] Head,
+	[DDLRegistration(0x3e0c7044u)] Torso,
+	[DDLRegistration(0x25d4507eu)] LeftArm,
+	[DDLRegistration(0x68c42801u)] RightArm,
+	[DDLRegistration(0xc85aaea5u)] LeftLeg,
+	[DDLRegistration(0x854ad6dau)] RightLeg,
+	[DDLRegistration(0x56483790u)] Weakpoint,
 }
 
 public static class HitLocationValues {

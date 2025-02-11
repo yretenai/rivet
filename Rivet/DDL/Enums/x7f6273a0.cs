@@ -7,13 +7,13 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x7f6273a0u)]
 public enum x7f6273a0 : uint {
-	[DDLRegistration(0xa666c0d2u)] NoSoundBank = 0x0u,
-	[DDLRegistration(0xbdd09deeu)] Stomped = 0x1u,
-	[DDLRegistration(0xa194551cu)] NotAuthority = 0x2u,
-	[DDLRegistration(0x09c74925u)] NoTrigger = 0x3u,
-	[DDLRegistration(0xda4f6c15u)] InvalidLocTag = 0x4u,
-	[DDLRegistration(0x170a2312u)] Muted = 0x5u,
-	[DDLRegistration(0x0db43d91u)] WWiseEventFail = 0x6u,
+	[DDLRegistration(0xa666c0d2u)] NoSoundBank,
+	[DDLRegistration(0xbdd09deeu)] Stomped,
+	[DDLRegistration(0xa194551cu)] NotAuthority,
+	[DDLRegistration(0x09c74925u)] NoTrigger,
+	[DDLRegistration(0xda4f6c15u)] InvalidLocTag,
+	[DDLRegistration(0x170a2312u)] Muted,
+	[DDLRegistration(0x0db43d91u)] WWiseEventFail,
 }
 
 public static class x7f6273a0Values {

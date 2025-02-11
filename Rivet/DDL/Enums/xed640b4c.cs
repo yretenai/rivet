@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xed640b4cu)]
 public enum xed640b4c : uint {
-	[DDLRegistration(0x4f00c07fu)] None = 0x0u,
-	[DDLRegistration(0xe2b463e7u)] Default = 0x1u,
-	[DDLRegistration(0xfc407227u)] Hue = 0x2u,
-	[DDLRegistration(0xf11cf3b1u)] Saturation = 0x3u,
+	[DDLRegistration(0x4f00c07fu)] None,
+	[DDLRegistration(0xe2b463e7u)] Default,
+	[DDLRegistration(0xfc407227u)] Hue,
+	[DDLRegistration(0xf11cf3b1u)] Saturation,
 }
 
 public static class xed640b4cValues {

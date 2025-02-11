@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x3e7c98efu)]
 public enum Comparison : uint {
-	[DDLRegistration(0xe326546fu)] Less = 0x0u,
-	[DDLRegistration(0xbd4b262bu)] LessOrEqual = 0x1u,
-	[DDLRegistration(0x37f8d936u)] Equal = 0x2u,
-	[DDLRegistration(0x4b3225f5u)] GreaterOrEqual = 0x3u,
-	[DDLRegistration(0xb34c45c2u)] Greater = 0x4u,
+	[DDLRegistration(0xe326546fu)] Less,
+	[DDLRegistration(0xbd4b262bu)] LessOrEqual,
+	[DDLRegistration(0x37f8d936u)] Equal,
+	[DDLRegistration(0x4b3225f5u)] GreaterOrEqual,
+	[DDLRegistration(0xb34c45c2u)] Greater,
 }
 
 public static class ComparisonValues {

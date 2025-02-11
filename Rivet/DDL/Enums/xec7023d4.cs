@@ -7,7 +7,7 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xec7023d4u)]
 public enum xec7023d4 : uint {
-	[DDLRegistration(0x17541a94u)] AcceptOfferPassthrough = 0x0u,
+	[DDLRegistration(0x17541a94u)] AcceptOfferPassthrough,
 }
 
 public static class xec7023d4Values {

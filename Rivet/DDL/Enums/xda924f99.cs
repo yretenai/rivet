@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xda924f99u)]
 public enum xda924f99 : uint {
-	[DDLRegistration(0x20f18231u)] OnAnyEnter = 0x0u,
-	[DDLRegistration(0x9e8efb4bu)] OnFirstEnter = 0x1u,
+	[DDLRegistration(0x20f18231u, description: "Trigger any time this volume is entered")] OnAnyEnter,
+	[DDLRegistration(0x9e8efb4bu, description: "Trigger only the first time this volume is entered")] OnFirstEnter,
 }
 
 public static class xda924f99Values {

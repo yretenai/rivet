@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xddf72fe3u)]
 public enum SpawnCondition : uint {
-	[DDLRegistration(0xbf8e32c1u)] AdditionalInstances = 0x0u,
-	[DDLRegistration(0x9caafe25u)] ExclusiveInstance = 0x1u,
-	[DDLRegistration(0xca40054bu)] Always = 0x2u,
+	[DDLRegistration(0xbf8e32c1u, "Additional Instances")] AdditionalInstances,
+	[DDLRegistration(0x9caafe25u, "Exclusive Instance")] ExclusiveInstance,
+	[DDLRegistration(0xca40054bu, "CoolOff / Radius")] Always,
 }
 
 public static class SpawnConditionValues {

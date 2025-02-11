@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xee077130u)]
 public enum xee077130 : uint {
-	[DDLRegistration(0xf6401711u)] Disable = 0x0u,
-	[DDLRegistration(0x0c11dfdbu)] Vertical = 0x1u,
-	[DDLRegistration(0xbaa7e06du)] Everything = 0x2u,
+	[DDLRegistration(0xf6401711u, "Disable", "In this mode, the decal will not render in ray-traced reflections")] Disable,
+	[DDLRegistration(0x0c11dfdbu, "Vertical", "In this mode, only decals placed on vertical surfaces will render in ray-traced reflections")] Vertical,
+	[DDLRegistration(0xbaa7e06du, "Everything", "In this mode, the decal will render in ray-traced reflections regardless of its world orientation")] Everything,
 }
 
 public static class xee077130Values {

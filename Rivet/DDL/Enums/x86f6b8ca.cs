@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x86f6b8cau)]
 public enum x86f6b8ca : uint {
-	[DDLRegistration(0x28282746u)] Round = 0x0u,
-	[DDLRegistration(0x246e88e2u)] Flat = 0x1u,
-	[DDLRegistration(0x0eb42269u)] None = 0x2u,
+	[DDLRegistration(0x28282746u, "Round")] Round,
+	[DDLRegistration(0x246e88e2u, "Flat")] Flat,
+	[DDLRegistration(0x0eb42269u)] None,
 }
 
 public static class x86f6b8caValues {

@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xff284f2au)]
 public enum xff284f2a : uint {
-	[DDLRegistration(0x2099c5a4u)] Disabled = 0x0u,
-	[DDLRegistration(0x3135a5ecu)] Geometry = 0x1u,
-	[DDLRegistration(0x79bf026du)] Skeleton = 0x2u,
+	[DDLRegistration(0x2099c5a4u, "Disabled")] Disabled,
+	[DDLRegistration(0x3135a5ecu, "Bind to Geometry")] Geometry,
+	[DDLRegistration(0x79bf026du, "Bind to Skeleton")] Skeleton,
 }
 
 public static class xff284f2aValues {

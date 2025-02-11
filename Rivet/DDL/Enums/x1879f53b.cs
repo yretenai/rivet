@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x1879f53bu)]
 public enum x1879f53b : uint {
-	[DDLRegistration(0xe9a87213u)] Anything = 0x0u,
-	[DDLRegistration(0x88ef82adu)] DeathOnly = 0x1u,
-	[DDLRegistration(0x9a0c29dau)] ReactsAndDeath = 0x2u,
-	[DDLRegistration(0x23c3edefu)] Nothing = 0x3u,
+	[DDLRegistration(0xe9a87213u)] Anything,
+	[DDLRegistration(0x88ef82adu)] DeathOnly,
+	[DDLRegistration(0x9a0c29dau)] ReactsAndDeath,
+	[DDLRegistration(0x23c3edefu)] Nothing,
 }
 
 public static class x1879f53bValues {

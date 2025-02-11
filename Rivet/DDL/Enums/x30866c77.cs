@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x30866c77u)]
 public enum x30866c77 : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0xb8d12ed3u)] k0_82 = 0x1u,
-	[DDLRegistration(0x889cc446u)] k1_333 = 0x2u,
-	[DDLRegistration(0xec946d87u)] k1_777 = 0x3u,
-	[DDLRegistration(0x66b94440u)] k2_4 = 0x4u,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0xb8d12ed3u, "0.82")] k0_82,
+	[DDLRegistration(0x889cc446u, "1.333")] k1_333,
+	[DDLRegistration(0xec946d87u, "1.777")] k1_777,
+	[DDLRegistration(0x66b94440u, "2.4")] k2_4,
 }
 
 public static class x30866c77Values {

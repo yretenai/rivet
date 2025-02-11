@@ -7,12 +7,12 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x6a9f4317u)]
 public enum x6a9f4317 : uint {
-	[DDLRegistration(0x41c6002cu)] XPositive = 0x0u,
-	[DDLRegistration(0x56bd146fu)] YPositive = 0x1u,
-	[DDLRegistration(0x6f3028aau)] ZPositive = 0x2u,
-	[DDLRegistration(0x24b07737u)] XNegative = 0x3u,
-	[DDLRegistration(0x33cb6374u)] YNegative = 0x4u,
-	[DDLRegistration(0x0a465fb1u)] ZNegative = 0x5u,
+	[DDLRegistration(0x41c6002cu)] XPositive,
+	[DDLRegistration(0x56bd146fu)] YPositive,
+	[DDLRegistration(0x6f3028aau)] ZPositive,
+	[DDLRegistration(0x24b07737u)] XNegative,
+	[DDLRegistration(0x33cb6374u)] YNegative,
+	[DDLRegistration(0x0a465fb1u)] ZNegative,
 }
 
 public static class x6a9f4317Values {

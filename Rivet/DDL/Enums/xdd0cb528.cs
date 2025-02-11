@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xdd0cb528u)]
 public enum xdd0cb528 : uint {
-	[DDLRegistration(0xc6f0b519u)] Title = 0x0u,
-	[DDLRegistration(0xfaf9228cu)] Location = 0x1u,
-	[DDLRegistration(0xb8c9853eu)] SubLocation = 0x2u,
+	[DDLRegistration(0xc6f0b519u)] Title,
+	[DDLRegistration(0xfaf9228cu)] Location,
+	[DDLRegistration(0xb8c9853eu)] SubLocation,
 }
 
 public static class xdd0cb528Values {

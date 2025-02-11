@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xc1d164eeu)]
 public enum xc1d164ee : uint {
-	[DDLRegistration(0x9f91f890u)] Available = 0x0u,
-	[DDLRegistration(0x72bf98fdu)] Start = 0x1u,
+	[DDLRegistration(0x9f91f890u)] Available,
+	[DDLRegistration(0x72bf98fdu)] Start,
 }
 
 public static class xc1d164eeValues {

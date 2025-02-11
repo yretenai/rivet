@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x039013cdu)]
 public enum x039013cd : uint {
-	[DDLRegistration(0x6f0d7e9fu)] Constant = 0x0u,
-	[DDLRegistration(0x8b90859bu)] Color = 0x1u,
-	[DDLRegistration(0x3b635732u)] Texture = 0x2u,
-	[DDLRegistration(0x86dc9185u)] Light = 0x3u,
+	[DDLRegistration(0x6f0d7e9fu)] Constant,
+	[DDLRegistration(0x8b90859bu)] Color,
+	[DDLRegistration(0x3b635732u)] Texture,
+	[DDLRegistration(0x86dc9185u)] Light,
 }
 
 public static class x039013cdValues {

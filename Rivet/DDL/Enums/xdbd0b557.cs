@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xdbd0b557u)]
 public enum xdbd0b557 : uint {
-	[DDLRegistration(0x7e88a543u)] Center = 0x0u,
-	[DDLRegistration(0x2c8273adu)] Back_CuboidOnly = 0x1u,
+	[DDLRegistration(0x7e88a543u)] Center,
+	[DDLRegistration(0x2c8273adu)] Back_CuboidOnly,
 }
 
 public static class xdbd0b557Values {

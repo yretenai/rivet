@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x6d501980u)]
 public enum x6d501980 : uint {
-	[DDLRegistration(0xc21150e1u)] CritterLocation = 0x0u,
-	[DDLRegistration(0x3fe3a4b8u)] DisableVolume = 0x1u,
+	[DDLRegistration(0xc21150e1u)] CritterLocation,
+	[DDLRegistration(0x3fe3a4b8u)] DisableVolume,
 }
 
 public static class x6d501980Values {

@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x80ca62e9u)]
 public enum x80ca62e9 : uint {
-	[DDLRegistration(0x2a7fe140u)] Impact_Head = 0x0u,
-	[DDLRegistration(0x7ab541e0u)] Impact_Torso = 0x1u,
-	[DDLRegistration(0xfea0d976u)] Impact_Leg = 0x2u,
+	[DDLRegistration(0x2a7fe140u)] Impact_Head,
+	[DDLRegistration(0x7ab541e0u)] Impact_Torso,
+	[DDLRegistration(0xfea0d976u)] Impact_Leg,
 }
 
 public static class x80ca62e9Values {

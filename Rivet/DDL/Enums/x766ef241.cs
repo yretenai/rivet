@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x766ef241u)]
 public enum x766ef241 : uint {
-	[DDLRegistration(0xf8549512u)] console = 0x0u,
-	[DDLRegistration(0x63b99ea7u)] server = 0x1u,
+	[DDLRegistration(0xf8549512u)] console,
+	[DDLRegistration(0x63b99ea7u)] server,
 }
 
 public static class x766ef241Values {

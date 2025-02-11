@@ -7,13 +7,13 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xd0fb54d1u)]
 public enum xd0fb54d1 : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0x028c702au)] X = 0x1u,
-	[DDLRegistration(0x8a8950e7u)] NegX = 0x2u,
-	[DDLRegistration(0x758b40bcu)] Y = 0x3u,
-	[DDLRegistration(0xfd8e6071u)] NegY = 0x4u,
-	[DDLRegistration(0xec821106u)] Z = 0x5u,
-	[DDLRegistration(0x648731cbu)] NegZ = 0x6u,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0x028c702au, "X")] X,
+	[DDLRegistration(0x8a8950e7u, "Negative X")] NegX,
+	[DDLRegistration(0x758b40bcu, "Y")] Y,
+	[DDLRegistration(0xfd8e6071u, "Negative Y")] NegY,
+	[DDLRegistration(0xec821106u, "Z")] Z,
+	[DDLRegistration(0x648731cbu, "Negative Z")] NegZ,
 }
 
 public static class xd0fb54d1Values {

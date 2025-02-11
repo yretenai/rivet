@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x5c2e2f3fu)]
 public enum DropSpreadAngleDireciton : uint {
-	[DDLRegistration(0x2c6f508bu)] Down = 0x0u,
-	[DDLRegistration(0x76fcc3adu)] Up = 0x1u,
+	[DDLRegistration(0x2c6f508bu)] Down,
+	[DDLRegistration(0x76fcc3adu)] Up,
 }
 
 public static class DropSpreadAngleDirecitonValues {

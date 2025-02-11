@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x1bcabc6du)]
 public enum x1bcabc6d : uint {
-	[DDLRegistration(0x0063f982u)] BMP = 0x0u,
-	[DDLRegistration(0x4c256fc3u)] DDS = 0x1u,
-	[DDLRegistration(0xb73f5898u)] PNG = 0x2u,
-	[DDLRegistration(0x3238a631u)] HDR = 0x3u,
+	[DDLRegistration(0x0063f982u, "BMP")] BMP,
+	[DDLRegistration(0x4c256fc3u, "DDS")] DDS,
+	[DDLRegistration(0xb73f5898u, "PNG")] PNG,
+	[DDLRegistration(0x3238a631u, "HDR")] HDR,
 }
 
 public static class x1bcabc6dValues {

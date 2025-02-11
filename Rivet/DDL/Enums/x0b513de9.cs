@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x0b513de9u)]
 public enum x0b513de9 : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0x4c158b66u)] FromStart = 0x1u,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0x4c158b66u, "From Start")] FromStart,
 }
 
 public static class x0b513de9Values {

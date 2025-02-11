@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x17c3a26fu)]
 public enum x17c3a26f : uint {
-	[DDLRegistration(0x391d5fd7u)] Sphere = 0x0u,
-	[DDLRegistration(0x7c9a0756u)] OBB = 0x1u,
-	[DDLRegistration(0xd57ef48eu)] Volume = 0x2u,
+	[DDLRegistration(0x391d5fd7u, "Sphere")] Sphere,
+	[DDLRegistration(0x7c9a0756u, "Box (object-aligned)")] OBB,
+	[DDLRegistration(0xd57ef48eu, "Volume (linked in the prius)")] Volume,
 }
 
 public static class x17c3a26fValues {

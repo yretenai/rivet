@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x0f02da14u)]
 public enum x0f02da14 : uint {
-	[DDLRegistration(0xef69972eu)] Asset = 0x0u,
-	[DDLRegistration(0x8046309du)] Folder = 0x1u,
-	[DDLRegistration(0xff97fd25u)] GameData = 0x2u,
+	[DDLRegistration(0xef69972eu)] Asset,
+	[DDLRegistration(0x8046309du)] Folder,
+	[DDLRegistration(0xff97fd25u)] GameData,
 }
 
 public static class x0f02da14Values {

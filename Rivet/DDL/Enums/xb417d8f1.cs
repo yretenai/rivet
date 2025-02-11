@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xb417d8f1u)]
 public enum xb417d8f1 : uint {
-	[DDLRegistration(0xd735ad2bu)] TriBlendNodeTypeDefault = 0x0u,
-	[DDLRegistration(0x55aeef1eu)] TriBlendNodeTypeCombineAdditive = 0x1u,
+	[DDLRegistration(0xd735ad2bu, "Default")] TriBlendNodeTypeDefault,
+	[DDLRegistration(0x55aeef1eu, "Combine-additive")] TriBlendNodeTypeCombineAdditive,
 }
 
 public static class xb417d8f1Values {

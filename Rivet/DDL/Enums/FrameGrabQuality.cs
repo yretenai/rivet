@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x7b3f76b6u)]
 public enum FrameGrabQuality : uint {
-	[DDLRegistration(0x084527c3u)] Low = 0x0u,
-	[DDLRegistration(0x8021c6f3u)] High = 0x1u,
-	[DDLRegistration(0x2b0bb069u)] Bloom = 0x2u,
-	[DDLRegistration(0x72c3d7ddu)] Ripples = 0x3u,
-	[DDLRegistration(0xe512cb05u)] GBufferDiffuse = 0x4u,
+	[DDLRegistration(0x084527c3u, "Color Half Size")] Low,
+	[DDLRegistration(0x8021c6f3u, "Color Full Size")] High,
+	[DDLRegistration(0x2b0bb069u, "Bloom")] Bloom,
+	[DDLRegistration(0x72c3d7ddu, "Ripples")] Ripples,
+	[DDLRegistration(0xe512cb05u, "Color GBuffer")] GBufferDiffuse,
 }
 
 public static class FrameGrabQualityValues {

@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xed092e3au)]
 public enum xed092e3a : uint {
-	[DDLRegistration(0xeadc0bd8u)] ColladaSourcePath = 0x0u,
-	[DDLRegistration(0x09549fd6u)] AnimateThis = 0x1u,
-	[DDLRegistration(0xacf7bc5bu)] AnimMaya = 0x2u,
+	[DDLRegistration(0xeadc0bd8u, "kColladaSourcePath")] ColladaSourcePath,
+	[DDLRegistration(0x09549fd6u, "kAnimateThis")] AnimateThis,
+	[DDLRegistration(0xacf7bc5bu, "kAnimMaya")] AnimMaya,
 }
 
 public static class xed092e3aValues {

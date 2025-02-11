@@ -7,14 +7,14 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x257872aau)]
 public enum x257872aa : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0xdb835c11u)] ConditionSnared = 0x1u,
-	[DDLRegistration(0x2697c28bu)] ConditionFear = 0x2u,
-	[DDLRegistration(0xa172ec81u)] ConditionDaze = 0x3u,
-	[DDLRegistration(0xc04fdfa2u)] ConditionTakedown = 0x4u,
-	[DDLRegistration(0xec808b02u)] ConditionChoke = 0x5u,
-	[DDLRegistration(0x8b6d0ac3u)] ConditionPounce = 0x6u,
-	[DDLRegistration(0x9af5007fu)] ConditionGrab = 0x7u,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0xdb835c11u, description: "Caught in a trap")] ConditionSnared,
+	[DDLRegistration(0x2697c28bu, description: "Run awaaaaay")] ConditionFear,
+	[DDLRegistration(0xa172ec81u, description: "Stagger forward")] ConditionDaze,
+	[DDLRegistration(0xc04fdfa2u, description: "Being taken down")] ConditionTakedown,
+	[DDLRegistration(0xec808b02u, description: "Being choked")] ConditionChoke,
+	[DDLRegistration(0x8b6d0ac3u, description: "Being pounced on")] ConditionPounce,
+	[DDLRegistration(0x9af5007fu, description: "Being grabbed")] ConditionGrab,
 }
 
 public static class x257872aaValues {

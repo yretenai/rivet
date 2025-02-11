@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xb82a951fu)]
 public enum xb82a951f : uint {
-	[DDLRegistration(0xdaae6862u)] OffsetStyleNone = 0x0u,
-	[DDLRegistration(0xb731d4c4u)] OffsetStyleSniper = 0x1u,
+	[DDLRegistration(0xdaae6862u)] OffsetStyleNone,
+	[DDLRegistration(0xb731d4c4u)] OffsetStyleSniper,
 }
 
 public static class xb82a951fValues {

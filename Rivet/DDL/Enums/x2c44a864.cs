@@ -7,18 +7,18 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x2c44a864u)]
 public enum x2c44a864 : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0x41214441u)] LowLight = 0x1u,
-	[DDLRegistration(0x3659879bu)] LowMedium = 0x2u,
-	[DDLRegistration(0x500a62e9u)] LowHeavy = 0x3u,
-	[DDLRegistration(0x7b507a13u)] MediumLight = 0x4u,
-	[DDLRegistration(0xb306c67du)] MediumMedium = 0x5u,
-	[DDLRegistration(0x6a7b5cbbu)] MediumHeavy = 0x6u,
-	[DDLRegistration(0x3247ab25u)] HighLight = 0x7u,
-	[DDLRegistration(0x7cf54435u)] HighMedium = 0x8u,
-	[DDLRegistration(0x236c8d8du)] HighHeavy = 0x9u,
-	[DDLRegistration(0xc9e35a81u)] Massive = 0xau,
-	[DDLRegistration(0xe478d65cu)] MassiveHeavy = 0xbu,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0x41214441u)] LowLight,
+	[DDLRegistration(0x3659879bu)] LowMedium,
+	[DDLRegistration(0x500a62e9u)] LowHeavy,
+	[DDLRegistration(0x7b507a13u)] MediumLight,
+	[DDLRegistration(0xb306c67du)] MediumMedium,
+	[DDLRegistration(0x6a7b5cbbu)] MediumHeavy,
+	[DDLRegistration(0x3247ab25u)] HighLight,
+	[DDLRegistration(0x7cf54435u)] HighMedium,
+	[DDLRegistration(0x236c8d8du)] HighHeavy,
+	[DDLRegistration(0xc9e35a81u)] Massive,
+	[DDLRegistration(0xe478d65cu)] MassiveHeavy,
 }
 
 public static class x2c44a864Values {

@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x483aa079u)]
 public enum x483aa079 : uint {
-	[DDLRegistration(0x4f00c07fu)] None = 0x0u,
-	[DDLRegistration(0x76fcc3adu)] Up = 0x1u,
-	[DDLRegistration(0x2c6f508bu)] Down = 0x2u,
-	[DDLRegistration(0x4af727d8u)] Left = 0x3u,
-	[DDLRegistration(0xad99b9d5u)] Right = 0x4u,
+	[DDLRegistration(0x4f00c07fu)] None,
+	[DDLRegistration(0x76fcc3adu)] Up,
+	[DDLRegistration(0x2c6f508bu)] Down,
+	[DDLRegistration(0x4af727d8u)] Left,
+	[DDLRegistration(0xad99b9d5u)] Right,
 }
 
 public static class x483aa079Values {

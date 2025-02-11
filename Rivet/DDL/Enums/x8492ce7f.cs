@@ -7,12 +7,12 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x8492ce7fu)]
 public enum x8492ce7f : uint {
-	[DDLRegistration(0xf506dc2au)] Ellipse = 0x0u,
-	[DDLRegistration(0x51f54768u)] Trapezoid = 0x1u,
-	[DDLRegistration(0x3a53bfabu)] Model = 0x2u,
-	[DDLRegistration(0x3852f04fu)] Profile = 0x3u,
-	[DDLRegistration(0xba5f90c5u)] Curve = 0x4u,
-	[DDLRegistration(0x0eb42269u)] None = 0x5u,
+	[DDLRegistration(0xf506dc2au, "Ellipse")] Ellipse,
+	[DDLRegistration(0x51f54768u, "Trapezoid")] Trapezoid,
+	[DDLRegistration(0x3a53bfabu, "Model XY Slice")] Model,
+	[DDLRegistration(0x3852f04fu, "2D Profile")] Profile,
+	[DDLRegistration(0xba5f90c5u, "Curve", "Largest dimension becomes 'X', second largest dimension becomes 'Y'")] Curve,
+	[DDLRegistration(0x0eb42269u)] None,
 }
 
 public static class x8492ce7fValues {

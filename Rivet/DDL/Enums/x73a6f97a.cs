@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x73a6f97au)]
 public enum x73a6f97a : uint {
-	[DDLRegistration(0x2a8b16acu)] Target = 0x0u,
-	[DDLRegistration(0xab08fcdbu)] SplinePlanar = 0x1u,
-	[DDLRegistration(0x2afd0e55u)] SplineFull = 0x2u,
-	[DDLRegistration(0x28eef551u)] SplinePlanarBack = 0x3u,
-	[DDLRegistration(0x605c35a9u)] SplineFullBack = 0x4u,
+	[DDLRegistration(0x2a8b16acu, "Target")] Target,
+	[DDLRegistration(0xab08fcdbu, "Spline Planar")] SplinePlanar,
+	[DDLRegistration(0x2afd0e55u, "Spline Full")] SplineFull,
+	[DDLRegistration(0x28eef551u, "Spline Planar Back")] SplinePlanarBack,
+	[DDLRegistration(0x605c35a9u, "Spline Full Back")] SplineFullBack,
 }
 
 public static class x73a6f97aValues {

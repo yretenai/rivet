@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x4c71dcfdu)]
 public enum VolumeNodeShape : uint {
-	[DDLRegistration(0x5a633e56u)] Point = 0x0u,
-	[DDLRegistration(0x4e304c82u)] Cuboid = 0x1u,
-	[DDLRegistration(0x137957a8u)] Ellipsoid = 0x2u,
-	[DDLRegistration(0x3f63f0adu)] Cylinder = 0x3u,
-	[DDLRegistration(0x7b6dfbc3u)] Capsule = 0x4u,
+	[DDLRegistration(0x5a633e56u, "Point")] Point,
+	[DDLRegistration(0x4e304c82u, "Cuboid")] Cuboid,
+	[DDLRegistration(0x137957a8u, "Ellipsoid")] Ellipsoid,
+	[DDLRegistration(0x3f63f0adu, "Cylinder")] Cylinder,
+	[DDLRegistration(0x7b6dfbc3u, "Capsule")] Capsule,
 }
 
 public static class VolumeNodeShapeValues {

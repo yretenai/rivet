@@ -7,15 +7,15 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x1264b76cu)]
 public enum x1264b76c : uint {
-	[DDLRegistration(0xf4db1d40u)] Gray = 0x0u,
-	[DDLRegistration(0x6443775au)] Black = 0x1u,
-	[DDLRegistration(0xaf0900d6u)] White = 0x2u,
-	[DDLRegistration(0x60ac00edu)] Red = 0x3u,
-	[DDLRegistration(0x71218828u)] Orange = 0x4u,
-	[DDLRegistration(0xbce0d5cfu)] Yellow = 0x5u,
-	[DDLRegistration(0x3d5c2353u)] Green = 0x6u,
-	[DDLRegistration(0xef12e812u)] Blue = 0x7u,
-	[DDLRegistration(0x86614bb6u)] Purple = 0x8u,
+	[DDLRegistration(0xf4db1d40u)] Gray,
+	[DDLRegistration(0x6443775au)] Black,
+	[DDLRegistration(0xaf0900d6u)] White,
+	[DDLRegistration(0x60ac00edu)] Red,
+	[DDLRegistration(0x71218828u)] Orange,
+	[DDLRegistration(0xbce0d5cfu)] Yellow,
+	[DDLRegistration(0x3d5c2353u)] Green,
+	[DDLRegistration(0xef12e812u)] Blue,
+	[DDLRegistration(0x86614bb6u)] Purple,
 }
 
 public static class x1264b76cValues {

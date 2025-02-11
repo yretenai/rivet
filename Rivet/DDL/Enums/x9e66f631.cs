@@ -7,7 +7,7 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x9e66f631u)]
 public enum x9e66f631 : uint {
-	[DDLRegistration(0x3af2fc22u)] Cancel = 0x0u,
+	[DDLRegistration(0x3af2fc22u)] Cancel,
 }
 
 public static class x9e66f631Values {

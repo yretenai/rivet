@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x3126d105u)]
 public enum x3126d105 : uint {
-	[DDLRegistration(0xae40b0c6u)] Primary = 0x0u,
-	[DDLRegistration(0x214d2800u)] Secondary = 0x1u,
-	[DDLRegistration(0x4182a9b1u)] Tertiary = 0x2u,
-	[DDLRegistration(0x3d26f418u)] Alpha = 0x3u,
-	[DDLRegistration(0xa1d52ebfu)] All = 0x4u,
+	[DDLRegistration(0xae40b0c6u)] Primary,
+	[DDLRegistration(0x214d2800u)] Secondary,
+	[DDLRegistration(0x4182a9b1u)] Tertiary,
+	[DDLRegistration(0x3d26f418u)] Alpha,
+	[DDLRegistration(0xa1d52ebfu)] All,
 }
 
 public static class x3126d105Values {

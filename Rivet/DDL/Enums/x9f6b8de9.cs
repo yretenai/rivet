@@ -7,15 +7,15 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x9f6b8de9u)]
 public enum x9f6b8de9 : uint {
-	[DDLRegistration(0x8b90859bu)] Color = 0x0u,
-	[DDLRegistration(0x99602fcbu)] Custom = 0x1u,
-	[DDLRegistration(0xe6a8c961u)] Variance = 0x2u,
-	[DDLRegistration(0x4d6151b4u)] Normal = 0x3u,
-	[DDLRegistration(0xff935f27u)] Gloss = 0x4u,
-	[DDLRegistration(0x2aff22a5u)] SkyLight = 0x5u,
-	[DDLRegistration(0xfe316bd7u)] IESLight = 0x6u,
-	[DDLRegistration(0x9a609e9cu)] RigidBody = 0x7u,
-	[DDLRegistration(0x16450f89u)] SoftBody = 0x8u,
+	[DDLRegistration(0x8b90859bu, "Color (sRGB)", "Use this when the source data is in sRGB space")] Color,
+	[DDLRegistration(0x99602fcbu, "Custom (Linear)", "Use this when the source data is already in linear space (like a mask texture)")] Custom,
+	[DDLRegistration(0xe6a8c961u, "Variance Map", "Use this when the texture along with a normal map")] Variance,
+	[DDLRegistration(0x4d6151b4u, "Normal Map", "Use this when the texture is a normal map")] Normal,
+	[DDLRegistration(0xff935f27u, "Gloss Map", "Use this when the texture is a gloss map (gloss in r and spec in g, or spec in rgb and gloss in a)")] Gloss,
+	[DDLRegistration(0x2aff22a5u, "IBL Cube", "Use this for image-based lighting cube maps")] SkyLight,
+	[DDLRegistration(0xfe316bd7u, "IES Light", "Use this for photometric lights")] IESLight,
+	[DDLRegistration(0x9a609e9cu, "Rigid Body Anim", "Use this for encoding rigid body animation data")] RigidBody,
+	[DDLRegistration(0x16450f89u, "Soft Body Anim", "Use this for encoding soft body animation data")] SoftBody,
 }
 
 public static class x9f6b8de9Values {

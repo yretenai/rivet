@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xa7988bfdu)]
 public enum xa7988bfd : uint {
-	[DDLRegistration(0x7cee1a89u)] ChangelogUpdated = 0x0u,
-	[DDLRegistration(0x6cdef7aeu)] GameBuildUpdated = 0x1u,
-	[DDLRegistration(0x0406a102u)] AssetPlacementListUpdated = 0x2u,
-	[DDLRegistration(0x16d7bc68u)] ThumbnailBuilt = 0x3u,
+	[DDLRegistration(0x7cee1a89u, description: "The changelog was updated; payload will be of type PollChangesResult.")] ChangelogUpdated,
+	[DDLRegistration(0x6cdef7aeu, description: "The gamebuild was changed and symbols need updating; no payload is provided, client needs to issue a call to fetch the symbols.")] GameBuildUpdated,
+	[DDLRegistration(0x0406a102u, description: "Selection changed in the Vault, placement mode in the 3D View should update the list of items that can be added to the zone; payload is an AssetPlacementList.")] AssetPlacementListUpdated,
+	[DDLRegistration(0x16d7bc68u, description: "The SceneEditor finished building a thumbnail; payload will be of type BuiltThumbnail.")] ThumbnailBuilt,
 }
 
 public static class xa7988bfdValues {

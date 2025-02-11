@@ -7,14 +7,14 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xc87cc46bu)]
 public enum xc87cc46b : uint {
-	[DDLRegistration(0xaa708935u)] TypeBindPose = 0x0u,
-	[DDLRegistration(0xe609ef05u)] TypeClip = 0x1u,
-	[DDLRegistration(0xbd901ca9u)] TypePerformanceClip = 0x2u,
-	[DDLRegistration(0x0328131cu)] TypeBiBlend = 0x3u,
-	[DDLRegistration(0x19f80df4u)] TypeTriBlend = 0x4u,
-	[DDLRegistration(0x80ff6e63u)] TypeSnapshot = 0x5u,
-	[DDLRegistration(0x67da602du)] TypeMirror = 0x6u,
-	[DDLRegistration(0x4188e255u)] TypeCinematicClip = 0x7u,
+	[DDLRegistration(0xaa708935u)] TypeBindPose,
+	[DDLRegistration(0xe609ef05u)] TypeClip,
+	[DDLRegistration(0xbd901ca9u)] TypePerformanceClip,
+	[DDLRegistration(0x0328131cu)] TypeBiBlend,
+	[DDLRegistration(0x19f80df4u)] TypeTriBlend,
+	[DDLRegistration(0x80ff6e63u)] TypeSnapshot,
+	[DDLRegistration(0x67da602du)] TypeMirror,
+	[DDLRegistration(0x4188e255u)] TypeCinematicClip,
 }
 
 public static class xc87cc46bValues {

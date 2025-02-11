@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xb774530fu)]
 public enum xb774530f : uint {
-	[DDLRegistration(0x10f65e3eu)] Type1d = 0x0u,
-	[DDLRegistration(0x3bdb0dfdu)] Type2d = 0x1u,
-	[DDLRegistration(0x22c03cbcu)] Type3d = 0x2u,
-	[DDLRegistration(0x6d81aa7bu)] Type4d = 0x3u,
+	[DDLRegistration(0x10f65e3eu, "1D")] Type1d,
+	[DDLRegistration(0x3bdb0dfdu, "2D")] Type2d,
+	[DDLRegistration(0x22c03cbcu, "3D")] Type3d,
+	[DDLRegistration(0x6d81aa7bu, "4D")] Type4d,
 }
 
 public static class xb774530fValues {

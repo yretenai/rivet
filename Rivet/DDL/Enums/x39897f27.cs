@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x39897f27u)]
 public enum x39897f27 : uint {
-	[DDLRegistration(0x000214dcu)] ZoneOpHide = 0x0u,
-	[DDLRegistration(0x969506f6u)] ZoneOpShow = 0x1u,
-	[DDLRegistration(0x819d3beau)] ZoneOpLoad = 0x2u,
+	[DDLRegistration(0x000214dcu, "Zone - Hide")] ZoneOpHide,
+	[DDLRegistration(0x969506f6u, "Zone - Show")] ZoneOpShow,
+	[DDLRegistration(0x819d3beau, "Zone - Load")] ZoneOpLoad,
 }
 
 public static class x39897f27Values {

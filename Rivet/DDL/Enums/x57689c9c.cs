@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x57689c9cu)]
 public enum x57689c9c : uint {
-	[DDLRegistration(0x541d3af1u)] Equals = 0x0u,
-	[DDLRegistration(0x2a9dc139u)] Contains = 0x1u,
-	[DDLRegistration(0xff55bfdeu)] Prefix = 0x2u,
-	[DDLRegistration(0xd954be8eu)] Suffix = 0x3u,
-	[DDLRegistration(0xafc235b8u)] Regex = 0x4u,
+	[DDLRegistration(0x541d3af1u, "Equals")] Equals,
+	[DDLRegistration(0x2a9dc139u, "Contains")] Contains,
+	[DDLRegistration(0xff55bfdeu, "Prefix")] Prefix,
+	[DDLRegistration(0xd954be8eu, "Suffix")] Suffix,
+	[DDLRegistration(0xafc235b8u, "Regex")] Regex,
 }
 
 public static class x57689c9cValues {

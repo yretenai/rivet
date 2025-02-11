@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x65877bb6u)]
 public enum x65877bb6 : uint {
-	[DDLRegistration(0x3a53bfabu)] Model = 0x0u,
-	[DDLRegistration(0x9b406f40u)] PreComposite = 0x1u,
-	[DDLRegistration(0x1abe0a32u)] PostComposite = 0x2u,
+	[DDLRegistration(0x3a53bfabu, "Model")] Model,
+	[DDLRegistration(0x9b406f40u, "Pre-Composite")] PreComposite,
+	[DDLRegistration(0x1abe0a32u, "Post-Composite")] PostComposite,
 }
 
 public static class x65877bb6Values {

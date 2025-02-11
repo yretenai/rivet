@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xf20c2999u)]
 public enum xf20c2999 : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0x59844871u)] ListUIType = 0x1u,
-	[DDLRegistration(0xa67e9c7cu)] ColorGridUIType = 0x2u,
-	[DDLRegistration(0x985388d1u)] TextureGridUIType = 0x3u,
-	[DDLRegistration(0xee8261d4u)] ModelDisplayUIType = 0x4u,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0x59844871u, "List UI Type")] ListUIType,
+	[DDLRegistration(0xa67e9c7cu, "Color Grid UI Type")] ColorGridUIType,
+	[DDLRegistration(0x985388d1u, "Texture Grid UI Type")] TextureGridUIType,
+	[DDLRegistration(0xee8261d4u, "Model Display UI Type")] ModelDisplayUIType,
 }
 
 public static class xf20c2999Values {

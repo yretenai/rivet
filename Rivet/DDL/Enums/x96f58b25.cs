@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x96f58b25u)]
 public enum x96f58b25 : uint {
-	[DDLRegistration(0x672bafc2u)] InteractEnable = 0x0u,
-	[DDLRegistration(0x206edba7u)] InteractDisable = 0x1u,
-	[DDLRegistration(0xb161ca7bu)] InteractToggle = 0x2u,
+	[DDLRegistration(0x672bafc2u)] InteractEnable,
+	[DDLRegistration(0x206edba7u)] InteractDisable,
+	[DDLRegistration(0xb161ca7bu)] InteractToggle,
 }
 
 public static class x96f58b25Values {

@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x66e403a6u)]
 public enum x66e403a6 : uint {
-	[DDLRegistration(0x1ce4dfa1u)] Bolt = 0x0u,
-	[DDLRegistration(0x9eab5c8cu)] Ammo = 0x1u,
-	[DDLRegistration(0xa23e1a43u)] Health = 0x2u,
-	[DDLRegistration(0x0eb42269u)] None = 0x3u,
+	[DDLRegistration(0x1ce4dfa1u, "Bolt")] Bolt,
+	[DDLRegistration(0x9eab5c8cu, "Ammo")] Ammo,
+	[DDLRegistration(0xa23e1a43u, "Health")] Health,
+	[DDLRegistration(0x0eb42269u)] None,
 }
 
 public static class x66e403a6Values {

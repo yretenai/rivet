@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x104b06bdu)]
 public enum x104b06bd : uint {
-	[DDLRegistration(0x815f1402u)] PS4 = 0x0u,
-	[DDLRegistration(0xf6582494u)] PS5 = 0x1u,
-	[DDLRegistration(0x5ae2dfdbu)] Windows = 0x2u,
+	[DDLRegistration(0x815f1402u, "PS4", "PlayStation 4")] PS4,
+	[DDLRegistration(0xf6582494u, "PS5", "PlayStation 5")] PS5,
+	[DDLRegistration(0x5ae2dfdbu, "Windows", "Windows PC")] Windows,
 }
 
 public static class x104b06bdValues {

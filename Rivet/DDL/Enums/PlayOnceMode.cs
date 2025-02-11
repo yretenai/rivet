@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x46c0349du)]
 public enum PlayOnceMode : uint {
-	[DDLRegistration(0x01e9748au)] Off = 0x0u,
-	[DDLRegistration(0xe1847446u)] Line = 0x1u,
-	[DDLRegistration(0x76486c7cu)] Rule = 0x2u,
+	[DDLRegistration(0x01e9748au)] Off,
+	[DDLRegistration(0xe1847446u)] Line,
+	[DDLRegistration(0x76486c7cu)] Rule,
 }
 
 public static class PlayOnceModeValues {

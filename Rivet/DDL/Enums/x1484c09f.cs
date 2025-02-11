@@ -7,12 +7,12 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x1484c09fu)]
 public enum x1484c09f : uint {
-	[DDLRegistration(0x621e5efbu)] Locators = 0x0u,
-	[DDLRegistration(0x92641758u)] Box = 0x1u,
-	[DDLRegistration(0x391d5fd7u)] Sphere = 0x2u,
-	[DDLRegistration(0xc8d2a2ceu)] Sphere75pc = 0x3u,
-	[DDLRegistration(0x6410a8aeu)] Sphere50pc = 0x4u,
-	[DDLRegistration(0xff0c52fcu)] Sphere25pc = 0x5u,
+	[DDLRegistration(0x621e5efbu, "Locators")] Locators,
+	[DDLRegistration(0x92641758u, "Bound Box")] Box,
+	[DDLRegistration(0x391d5fd7u, "Bound Sphere")] Sphere,
+	[DDLRegistration(0xc8d2a2ceu, "Bound Sphere .75")] Sphere75pc,
+	[DDLRegistration(0x6410a8aeu, "Bound Sphere .50")] Sphere50pc,
+	[DDLRegistration(0xff0c52fcu, "Bound Sphere .25")] Sphere25pc,
 }
 
 public static class x1484c09fValues {

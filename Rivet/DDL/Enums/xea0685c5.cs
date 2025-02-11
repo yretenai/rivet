@@ -7,12 +7,12 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xea0685c5u)]
 public enum xea0685c5 : uint {
-	[DDLRegistration(0x9b12f1a9u)] Modify = 0x0u,
-	[DDLRegistration(0x92549954u)] Undo = 0x1u,
-	[DDLRegistration(0x03d64e0cu)] Redo = 0x2u,
-	[DDLRegistration(0xdc425db6u)] ClearUndoRedo = 0x3u,
-	[DDLRegistration(0x7b59df4fu)] Upload = 0x4u,
-	[DDLRegistration(0xabe140acu)] StateChange = 0x5u,
+	[DDLRegistration(0x9b12f1a9u, "Modify")] Modify,
+	[DDLRegistration(0x92549954u, "Undo")] Undo,
+	[DDLRegistration(0x03d64e0cu, "Redo")] Redo,
+	[DDLRegistration(0xdc425db6u, "ClearUndoRedo")] ClearUndoRedo,
+	[DDLRegistration(0x7b59df4fu, "Upload")] Upload,
+	[DDLRegistration(0xabe140acu, "StateChange")] StateChange,
 }
 
 public static class xea0685c5Values {

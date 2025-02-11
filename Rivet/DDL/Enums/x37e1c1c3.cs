@@ -7,12 +7,12 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x37e1c1c3u)]
 public enum x37e1c1c3 : uint {
-	[DDLRegistration(0x6cc16dd5u)] Blur = 0x0u,
-	[DDLRegistration(0x124e49c7u)] Flatten = 0x1u,
-	[DDLRegistration(0x5815506cu)] Ramp = 0x2u,
-	[DDLRegistration(0x754b7f12u)] SculptSpray = 0x3u,
-	[DDLRegistration(0x9e5b4fb8u)] Sharpen = 0x4u,
-	[DDLRegistration(0xb888527au)] Stamp = 0x5u,
+	[DDLRegistration(0x6cc16dd5u, "Blur", "While in this mode, the target bitmap will be blurred as the mouse button is pressed and dragged.")] Blur,
+	[DDLRegistration(0x124e49c7u, "Flatten", "While in this mode, the target bitmap will be set to the value of the mouse position when the mouse button is initially pressed while it is being dragged.")] Flatten,
+	[DDLRegistration(0x5815506cu, "Ramp", "While in this mode, the target bitmap will be ramped from where the mouse button is pressed to where the mouse button is released.")] Ramp,
+	[DDLRegistration(0x754b7f12u, "Sculpt / Spray", "While in this mode, the target bitmap will be painted as the mouse button is pressed and dragged (the heightfield will be sculpted, the splatmask will be sprayed, etc.).")] SculptSpray,
+	[DDLRegistration(0x9e5b4fb8u, "Sharpen", "While in this mode, the target bitmap will be sharpened as the mouse button is pressed and dragged.")] Sharpen,
+	[DDLRegistration(0xb888527au, "Stamp", "While in this mode, the target bitmap will be have this value added as the mouse button is pressed and dragged (this is similar to Sculpt / Spray, but with a fixed value added rather than accumulated).")] Stamp,
 }
 
 public static class x37e1c1c3Values {

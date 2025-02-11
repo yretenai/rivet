@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xaabf8cd7u)]
 public enum xaabf8cd7 : uint {
-	[DDLRegistration(0x391d5fd7u)] Sphere = 0x0u,
-	[DDLRegistration(0xa0309650u)] Line = 0x1u,
-	[DDLRegistration(0x4d77ab84u)] SweptSphere = 0x2u,
+	[DDLRegistration(0x391d5fd7u, "Sphere")] Sphere,
+	[DDLRegistration(0xa0309650u, "Line")] Line,
+	[DDLRegistration(0x4d77ab84u, "SweptSphere")] SweptSphere,
 }
 
 public static class xaabf8cd7Values {

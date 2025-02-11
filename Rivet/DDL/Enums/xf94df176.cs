@@ -7,13 +7,13 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xf94df176u)]
 public enum xf94df176 : uint {
-	[DDLRegistration(0x1db1a201u)] Follower = 0x0u,
-	[DDLRegistration(0x7f69ecd3u)] PitchSettle = 0x1u,
-	[DDLRegistration(0x8553f444u)] GrindFacing = 0x2u,
-	[DDLRegistration(0x9ce88123u)] UserLookAt = 0x3u,
-	[DDLRegistration(0x9f2f5684u)] SprintForward = 0x4u,
-	[DDLRegistration(0xf16e8132u)] IdealFacing = 0x5u,
-	[DDLRegistration(0x5a5b5a9fu)] Default = 0x6u,
+	[DDLRegistration(0x1db1a201u)] Follower,
+	[DDLRegistration(0x7f69ecd3u)] PitchSettle,
+	[DDLRegistration(0x8553f444u)] GrindFacing,
+	[DDLRegistration(0x9ce88123u)] UserLookAt,
+	[DDLRegistration(0x9f2f5684u)] SprintForward,
+	[DDLRegistration(0xf16e8132u)] IdealFacing,
+	[DDLRegistration(0x5a5b5a9fu)] Default,
 }
 
 public static class xf94df176Values {

@@ -7,17 +7,17 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xb60d46beu)]
 public enum xb60d46be : uint {
-	[DDLRegistration(0xa0069bdbu)] VendorPurchase = 0x0u,
-	[DDLRegistration(0xc85b4f02u)] VendorUpgrade = 0x1u,
-	[DDLRegistration(0xe4ba07b3u)] VendorOmegaWeaponIntro = 0x2u,
-	[DDLRegistration(0x0c750a2du)] VendorOmegaWeaponPurchased = 0x3u,
-	[DDLRegistration(0x1989aa7bu)] PauseWeaponsRemap = 0x4u,
-	[DDLRegistration(0xe7c91ec3u)] PauseVanity = 0x5u,
-	[DDLRegistration(0xf087eab3u)] PauseVanityColor = 0x6u,
-	[DDLRegistration(0xa37680cdu)] PauseMap = 0x7u,
-	[DDLRegistration(0xb8a1c097u)] PauseGoldBolts = 0x8u,
-	[DDLRegistration(0xf1287a44u)] PauseSpybots = 0x9u,
-	[DDLRegistration(0xd3102a1bu)] PauseLorbs = 0xau,
+	[DDLRegistration(0xa0069bdbu)] VendorPurchase,
+	[DDLRegistration(0xc85b4f02u)] VendorUpgrade,
+	[DDLRegistration(0xe4ba07b3u)] VendorOmegaWeaponIntro,
+	[DDLRegistration(0x0c750a2du)] VendorOmegaWeaponPurchased,
+	[DDLRegistration(0x1989aa7bu)] PauseWeaponsRemap,
+	[DDLRegistration(0xe7c91ec3u)] PauseVanity,
+	[DDLRegistration(0xf087eab3u)] PauseVanityColor,
+	[DDLRegistration(0xa37680cdu)] PauseMap,
+	[DDLRegistration(0xb8a1c097u)] PauseGoldBolts,
+	[DDLRegistration(0xf1287a44u)] PauseSpybots,
+	[DDLRegistration(0xd3102a1bu)] PauseLorbs,
 }
 
 public static class xb60d46beValues {

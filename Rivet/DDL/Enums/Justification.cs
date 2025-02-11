@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x1946b734u)]
 public enum Justification : uint {
-	[DDLRegistration(0x0b43c5ceu)] Left = 0x0u,
-	[DDLRegistration(0x2c14d274u)] Center = 0x1u,
-	[DDLRegistration(0x590cb866u)] Right = 0x2u,
+	[DDLRegistration(0x0b43c5ceu)] Left,
+	[DDLRegistration(0x2c14d274u)] Center,
+	[DDLRegistration(0x590cb866u)] Right,
 }
 
 public static class JustificationValues {

@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x32784e2fu)]
 public enum x32784e2f : uint {
-	[DDLRegistration(0x04d23c9du)] EventSpawned = 0x0u,
-	[DDLRegistration(0xab1c7629u)] EventStopped = 0x1u,
+	[DDLRegistration(0x04d23c9du)] EventSpawned,
+	[DDLRegistration(0xab1c7629u)] EventStopped,
 }
 
 public static class x32784e2fValues {

@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x91b33164u)]
 public enum x91b33164 : uint {
-	[DDLRegistration(0xbe03315bu)] Host = 0x0u,
-	[DDLRegistration(0x41715747u)] Guest = 0x1u,
-	[DDLRegistration(0xc3e9a6e3u)] ExternalAnchorIsMayaOrigin = 0x2u,
-	[DDLRegistration(0xb434797au)] ExternalAnchorIsGuest = 0x3u,
-	[DDLRegistration(0xf4e95b0cu)] ExternalAnchorIsHost = 0x4u,
+	[DDLRegistration(0xbe03315bu)] Host,
+	[DDLRegistration(0x41715747u)] Guest,
+	[DDLRegistration(0xc3e9a6e3u)] ExternalAnchorIsMayaOrigin,
+	[DDLRegistration(0xb434797au)] ExternalAnchorIsGuest,
+	[DDLRegistration(0xf4e95b0cu)] ExternalAnchorIsHost,
 }
 
 public static class x91b33164Values {

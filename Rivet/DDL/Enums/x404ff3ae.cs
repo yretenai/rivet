@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x404ff3aeu)]
 public enum x404ff3ae : uint {
-	[DDLRegistration(0x61d37fabu)] Collision = 0x0u,
-	[DDLRegistration(0xfcb7f4efu)] User = 0x1u,
-	[DDLRegistration(0x05d79eb6u)] Weapon = 0x2u,
+	[DDLRegistration(0x61d37fabu)] Collision,
+	[DDLRegistration(0xfcb7f4efu)] User,
+	[DDLRegistration(0x05d79eb6u)] Weapon,
 }
 
 public static class x404ff3aeValues {

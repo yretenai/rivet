@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x522ab918u)]
 public enum LoadTimeDisplayMode : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0xdef6a1ebu)] Overbudget = 0x1u,
-	[DDLRegistration(0xca40054bu)] Always = 0x2u,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0xdef6a1ebu, "Overbudget")] Overbudget,
+	[DDLRegistration(0xca40054bu, "Always")] Always,
 }
 
 public static class LoadTimeDisplayModeValues {

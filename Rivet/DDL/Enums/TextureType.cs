@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x58cf7ca5u)]
 public enum TextureType : uint {
-	[DDLRegistration(0x1e3710c1u)] k1D = 0x0u,
-	[DDLRegistration(0x351a4302u)] k2D = 0x1u,
-	[DDLRegistration(0x2c017243u)] k3D = 0x2u,
-	[DDLRegistration(0x41da931eu)] Cube = 0x3u,
-	[DDLRegistration(0xe60e760du)] k2DArray = 0x4u,
+	[DDLRegistration(0x1e3710c1u, "1D")] k1D,
+	[DDLRegistration(0x351a4302u, "2D")] k2D,
+	[DDLRegistration(0x2c017243u, "3D")] k3D,
+	[DDLRegistration(0x41da931eu, "Cube")] Cube,
+	[DDLRegistration(0xe60e760du, "2D Array")] k2DArray,
 }
 
 public static class TextureTypeValues {

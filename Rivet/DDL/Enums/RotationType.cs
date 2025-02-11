@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xe380f68bu)]
 public enum RotationType : uint {
-	[DDLRegistration(0xe2e03384u)] Speed = 0x0u,
-	[DDLRegistration(0xed47887bu)] Angle = 0x1u,
+	[DDLRegistration(0xe2e03384u, "Speed")] Speed,
+	[DDLRegistration(0xed47887bu, "Angle")] Angle,
 }
 
 public static class RotationTypeValues {

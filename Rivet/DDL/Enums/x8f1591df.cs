@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x8f1591dfu)]
 public enum x8f1591df : uint {
-	[DDLRegistration(0xb06d5818u)] Spawned = 0x0u,
-	[DDLRegistration(0x277135d0u)] SkippedRadius = 0x1u,
-	[DDLRegistration(0xdb1b62a2u)] SkippedModelDoesNotExist = 0x2u,
-	[DDLRegistration(0x7856a080u)] SkippedActorCreationFailed = 0x3u,
+	[DDLRegistration(0xb06d5818u, "Spawned", "Chunk spawned properly")] Spawned,
+	[DDLRegistration(0x277135d0u, "Skipped, radius", "Chunk skipped because of minimum radius requirement.")] SkippedRadius,
+	[DDLRegistration(0xdb1b62a2u, "Skipped, asset", "Chunk skipped because the model asset could not be found.")] SkippedModelDoesNotExist,
+	[DDLRegistration(0x7856a080u, "Skipped, no actor", "Chunk skipped because we could not spawn an actor.")] SkippedActorCreationFailed,
 }
 
 public static class x8f1591dfValues {

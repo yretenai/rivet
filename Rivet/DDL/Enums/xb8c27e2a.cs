@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xb8c27e2au)]
 public enum xb8c27e2a : uint {
-	[DDLRegistration(0x2c14d274u)] Center = 0x0u,
-	[DDLRegistration(0xa927b8c0u)] Below = 0x1u,
-	[DDLRegistration(0x19af9ca0u)] Above = 0x2u,
-	[DDLRegistration(0x590cb866u)] Right = 0x3u,
-	[DDLRegistration(0x0b43c5ceu)] Left = 0x4u,
+	[DDLRegistration(0x2c14d274u, "Centered")] Center,
+	[DDLRegistration(0xa927b8c0u, "Below Curve")] Below,
+	[DDLRegistration(0x19af9ca0u, "Above Curve")] Above,
+	[DDLRegistration(0x590cb866u, "On Right")] Right,
+	[DDLRegistration(0x0b43c5ceu, "On Left")] Left,
 }
 
 public static class xb8c27e2aValues {

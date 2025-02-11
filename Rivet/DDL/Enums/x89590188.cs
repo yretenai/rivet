@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x89590188u)]
 public enum x89590188 : uint {
-	[DDLRegistration(0x1199d1f0u)] DisableStandAndLaunch = 0x0u,
-	[DDLRegistration(0xf1df950eu)] DisableLaunch = 0x1u,
+	[DDLRegistration(0x1199d1f0u)] DisableStandAndLaunch,
+	[DDLRegistration(0xf1df950eu)] DisableLaunch,
 }
 
 public static class x89590188Values {

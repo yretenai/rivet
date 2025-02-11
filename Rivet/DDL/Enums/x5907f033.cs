@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x5907f033u)]
 public enum x5907f033 : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0xaa8c2914u)] Body = 0x1u,
-	[DDLRegistration(0xd6d7d43au)] Head = 0x2u,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0xaa8c2914u)] Body,
+	[DDLRegistration(0xd6d7d43au)] Head,
 }
 
 public static class x5907f033Values {

@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xc4393200u)]
 public enum xc4393200 : uint {
-	[DDLRegistration(0x87ae9e6cu)] Tree = 0x0u,
-	[DDLRegistration(0x95ba49c0u)] Bush = 0x1u,
-	[DDLRegistration(0x0198739eu)] Glass = 0x2u,
-	[DDLRegistration(0x9dc162e8u)] Flyby = 0x3u,
+	[DDLRegistration(0x87ae9e6cu)] Tree,
+	[DDLRegistration(0x95ba49c0u)] Bush,
+	[DDLRegistration(0x0198739eu)] Glass,
+	[DDLRegistration(0x9dc162e8u)] Flyby,
 }
 
 public static class xc4393200Values {

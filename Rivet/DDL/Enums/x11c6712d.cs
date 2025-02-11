@@ -7,14 +7,14 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x11c6712du)]
 public enum x11c6712d : uint {
-	[DDLRegistration(0xec241175u)] Static = 0x0u,
-	[DDLRegistration(0x0efedf38u)] StaticCanBeDisabled = 0x1u,
-	[DDLRegistration(0x2809c48du)] KeyFramed = 0x2u,
-	[DDLRegistration(0xc6c3330cu)] KeyFramedNonInteract = 0x3u,
-	[DDLRegistration(0xf2ae50f4u)] Dynamic = 0x4u,
-	[DDLRegistration(0xa4f85e5cu)] Debris = 0x5u,
-	[DDLRegistration(0x4e378602u)] DebrisFast = 0x6u,
-	[DDLRegistration(0xe0bc2f2du)] Fluid = 0x7u,
+	[DDLRegistration(0xec241175u)] Static,
+	[DDLRegistration(0x0efedf38u)] StaticCanBeDisabled,
+	[DDLRegistration(0x2809c48du)] KeyFramed,
+	[DDLRegistration(0xc6c3330cu)] KeyFramedNonInteract,
+	[DDLRegistration(0xf2ae50f4u)] Dynamic,
+	[DDLRegistration(0xa4f85e5cu)] Debris,
+	[DDLRegistration(0x4e378602u)] DebrisFast,
+	[DDLRegistration(0xe0bc2f2du)] Fluid,
 }
 
 public static class x11c6712dValues {

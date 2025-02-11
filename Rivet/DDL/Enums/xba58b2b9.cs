@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xba58b2b9u)]
 public enum xba58b2b9 : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0xb4907cc0u)] Standard = 0x1u,
-	[DDLRegistration(0x9b94411eu)] Verbose = 0x2u,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0xb4907cc0u, "Standard (On-screen, plus new high memory usage printed to TTY)")] Standard,
+	[DDLRegistration(0x9b94411eu, "Verbose (On-screen, plus all new high water marks printed to TTY)")] Verbose,
 }
 
 public static class xba58b2b9Values {

@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x30dbcb6eu)]
 public enum x30dbcb6e : uint {
-	[DDLRegistration(0x028c702au)] X = 0x0u,
-	[DDLRegistration(0x758b40bcu)] Y = 0x1u,
-	[DDLRegistration(0xec821106u)] Z = 0x2u,
+	[DDLRegistration(0x028c702au, "X")] X,
+	[DDLRegistration(0x758b40bcu, "Y")] Y,
+	[DDLRegistration(0xec821106u, "Z")] Z,
 }
 
 public static class x30dbcb6eValues {

@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xc47e2a72u)]
 public enum xc47e2a72 : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0x735d4ab8u)] Skin = 0x1u,
-	[DDLRegistration(0xf025d783u)] HairPrimary = 0x2u,
-	[DDLRegistration(0x7f9539deu)] HairSecondary = 0x3u,
-	[DDLRegistration(0xd63e1630u)] Eyes = 0x4u,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0x735d4ab8u)] Skin,
+	[DDLRegistration(0xf025d783u)] HairPrimary,
+	[DDLRegistration(0x7f9539deu)] HairSecondary,
+	[DDLRegistration(0xd63e1630u)] Eyes,
 }
 
 public static class xc47e2a72Values {

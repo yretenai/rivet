@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x06e9cd50u)]
 public enum x06e9cd50 : uint {
-	[DDLRegistration(0x429c20c0u)] Invalid = 0x0u,
-	[DDLRegistration(0x0eb42269u)] None = 0x1u,
-	[DDLRegistration(0x35eeffa5u)] Input = 0x2u,
-	[DDLRegistration(0xa03a2dceu)] Output = 0x3u,
+	[DDLRegistration(0x429c20c0u, "Invalid")] Invalid,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0x35eeffa5u, "Input")] Input,
+	[DDLRegistration(0xa03a2dceu, "Output")] Output,
 }
 
 public static class x06e9cd50Values {

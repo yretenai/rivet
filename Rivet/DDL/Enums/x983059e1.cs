@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x983059e1u)]
 public enum x983059e1 : uint {
-	[DDLRegistration(0xa1d52ebfu)] All = 0x0u,
-	[DDLRegistration(0x78fe956eu)] StaticOnly = 0x1u,
-	[DDLRegistration(0x73b462a0u)] TerrainOnly = 0x2u,
+	[DDLRegistration(0xa1d52ebfu, "All", "In this mode, screen space decals will apply to all terrain, static, and dynamic models within their bounding box.")] All,
+	[DDLRegistration(0x78fe956eu, "Static Objects Only", "NOTE: Currently, this behaves like kAll.")] StaticOnly,
+	[DDLRegistration(0x73b462a0u, "Terrain Only", "In this mode, screen space decals will apply to only terrain within their bounding box.")] TerrainOnly,
 }
 
 public static class x983059e1Values {

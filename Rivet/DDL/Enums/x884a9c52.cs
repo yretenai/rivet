@@ -7,12 +7,12 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x884a9c52u)]
 public enum x884a9c52 : uint {
-	[DDLRegistration(0x3e2f75e8u)] int32 = 0x0u,
-	[DDLRegistration(0xaa3b2498u)] int64 = 0x1u,
-	[DDLRegistration(0xf36617b0u)] uint32 = 0x2u,
-	[DDLRegistration(0x677246c0u)] uint64 = 0x3u,
-	[DDLRegistration(0x33d7b7e2u)] float32 = 0x4u,
-	[DDLRegistration(0xa7c3e692u)] float64 = 0x5u,
+	[DDLRegistration(0x3e2f75e8u)] int32,
+	[DDLRegistration(0xaa3b2498u)] int64,
+	[DDLRegistration(0xf36617b0u)] uint32,
+	[DDLRegistration(0x677246c0u)] uint64,
+	[DDLRegistration(0x33d7b7e2u)] float32,
+	[DDLRegistration(0xa7c3e692u)] float64,
 }
 
 public static class x884a9c52Values {

@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x8b42b541u)]
 public enum x8b42b541 : uint {
-	[DDLRegistration(0x4423537bu)] Slow = 0x0u,
-	[DDLRegistration(0x54426b62u)] Fast = 0x1u,
+	[DDLRegistration(0x4423537bu, "Slow")] Slow,
+	[DDLRegistration(0x54426b62u, "Fast")] Fast,
 }
 
 public static class x8b42b541Values {

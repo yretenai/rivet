@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x349d9632u)]
 public enum x349d9632 : uint {
-	[DDLRegistration(0x391d5fd7u)] Sphere = 0x0u,
-	[DDLRegistration(0x4e304c82u)] Cuboid = 0x1u,
+	[DDLRegistration(0x391d5fd7u, "Ellipsoid")] Sphere,
+	[DDLRegistration(0x4e304c82u, "Cuboid")] Cuboid,
 }
 
 public static class x349d9632Values {

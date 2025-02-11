@@ -7,17 +7,17 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xbcfeb3f2u)]
 public enum xbcfeb3f2 : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0x29fa2b69u)] Fire = 0x1u,
-	[DDLRegistration(0x8fcbce61u)] CancelFire = 0x2u,
-	[DDLRegistration(0x226532c8u)] StopFire = 0x3u,
-	[DDLRegistration(0xce5cf705u)] Reload = 0x4u,
-	[DDLRegistration(0xd6e5cdcbu)] CancelReload = 0x5u,
-	[DDLRegistration(0xa4de5a40u)] CompleteReload = 0x6u,
-	[DDLRegistration(0x99602fcbu)] Custom = 0x7u,
-	[DDLRegistration(0x04e86c6au)] MultipressPrefire = 0x8u,
-	[DDLRegistration(0xa6a3d731u)] Prefire = 0x9u,
-	[DDLRegistration(0x1432d190u)] SustainFire = 0xau,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0x29fa2b69u)] Fire,
+	[DDLRegistration(0x8fcbce61u)] CancelFire,
+	[DDLRegistration(0x226532c8u)] StopFire,
+	[DDLRegistration(0xce5cf705u)] Reload,
+	[DDLRegistration(0xd6e5cdcbu)] CancelReload,
+	[DDLRegistration(0xa4de5a40u)] CompleteReload,
+	[DDLRegistration(0x99602fcbu)] Custom,
+	[DDLRegistration(0x04e86c6au)] MultipressPrefire,
+	[DDLRegistration(0xa6a3d731u)] Prefire,
+	[DDLRegistration(0x1432d190u)] SustainFire,
 }
 
 public static class xbcfeb3f2Values {

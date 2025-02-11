@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xefbbbac0u)]
 public enum xefbbbac0 : uint {
-	[DDLRegistration(0xfbc83b48u)] ModelsAndImpostors = 0x0u,
-	[DDLRegistration(0x08b738b5u)] ImpostorOnly = 0x1u,
+	[DDLRegistration(0xfbc83b48u, "Models And Impostors")] ModelsAndImpostors,
+	[DDLRegistration(0x08b738b5u, "Impostors Only")] ImpostorOnly,
 }
 
 public static class xefbbbac0Values {

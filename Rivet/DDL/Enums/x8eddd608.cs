@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x8eddd608u)]
 public enum x8eddd608 : uint {
-	[DDLRegistration(0x92641758u)] Box = 0x0u,
-	[DDLRegistration(0x3f63f0adu)] Cylinder = 0x1u,
-	[DDLRegistration(0x391d5fd7u)] Sphere = 0x2u,
+	[DDLRegistration(0x92641758u, "Box", "When selected, built-in Houdini plugins will use this to render debug information as a box.")] Box,
+	[DDLRegistration(0x3f63f0adu, "Cylinder", "When selected, built-in Houdini plugins will use this to render debug information as a cylinder (tube).")] Cylinder,
+	[DDLRegistration(0x391d5fd7u, "Sphere", "When selected, built-in Houdini plugins will use this to render debug information as a sphere.")] Sphere,
 }
 
 public static class x8eddd608Values {

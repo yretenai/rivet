@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x961f7219u)]
 public enum x961f7219 : uint {
-	[DDLRegistration(0xb1710221u)] Off = 0x0u,
-	[DDLRegistration(0x548d3872u)] SystemInfo = 0x1u,
-	[DDLRegistration(0x4a4c1df3u)] ZoneLoading = 0x2u,
+	[DDLRegistration(0xb1710221u, "Off")] Off,
+	[DDLRegistration(0x548d3872u, "System Info")] SystemInfo,
+	[DDLRegistration(0x4a4c1df3u, "Zone Loading")] ZoneLoading,
 }
 
 public static class x961f7219Values {

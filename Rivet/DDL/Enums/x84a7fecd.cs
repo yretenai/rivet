@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x84a7fecdu)]
 public enum x84a7fecd : uint {
-	[DDLRegistration(0xf3782e90u)] HuntingActor = 0x0u,
-	[DDLRegistration(0xfa0370cbu)] TargetHunterTarget = 0x1u,
-	[DDLRegistration(0x119ca888u)] TargetingBestTarget = 0x2u,
+	[DDLRegistration(0xf3782e90u)] HuntingActor,
+	[DDLRegistration(0xfa0370cbu)] TargetHunterTarget,
+	[DDLRegistration(0x119ca888u)] TargetingBestTarget,
 }
 
 public static class x84a7fecdValues {

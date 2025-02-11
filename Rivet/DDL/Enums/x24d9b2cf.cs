@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x24d9b2cfu)]
 public enum x24d9b2cf : uint {
-	[DDLRegistration(0x0e7c9329u)] Use = 0x0u,
-	[DDLRegistration(0x33d0fd19u)] DontUse = 0x1u,
+	[DDLRegistration(0x0e7c9329u, "Use Prius Values")] Use,
+	[DDLRegistration(0x33d0fd19u, "Use Component Defaults")] DontUse,
 }
 
 public static class x24d9b2cfValues {

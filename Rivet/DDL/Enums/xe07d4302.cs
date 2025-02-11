@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xe07d4302u)]
 public enum xe07d4302 : uint {
-	[DDLRegistration(0x097a5987u)] NPCommunicationId = 0x0u,
-	[DDLRegistration(0x05c8e716u)] NPTitleId = 0x1u,
+	[DDLRegistration(0x097a5987u)] NPCommunicationId,
+	[DDLRegistration(0x05c8e716u)] NPTitleId,
 }
 
 public static class xe07d4302Values {

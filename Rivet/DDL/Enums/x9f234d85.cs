@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x9f234d85u)]
 public enum x9f234d85 : uint {
-	[DDLRegistration(0x0b7c977eu)] AnimDriverOpTypeMultiplyAdd = 0x0u,
-	[DDLRegistration(0x823b6622u)] AnimDriverOpTypeClamp = 0x1u,
-	[DDLRegistration(0x2f0ade9au)] AnimDriverOpTypeSmooth = 0x2u,
+	[DDLRegistration(0x0b7c977eu, "Multiply-add")] AnimDriverOpTypeMultiplyAdd,
+	[DDLRegistration(0x823b6622u, "Clamp")] AnimDriverOpTypeClamp,
+	[DDLRegistration(0x2f0ade9au, "Smooth")] AnimDriverOpTypeSmooth,
 }
 
 public static class x9f234d85Values {

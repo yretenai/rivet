@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x660fc875u)]
 public enum RangeStyle : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0x7adfe385u)] Random = 0x1u,
-	[DDLRegistration(0xec8bd522u)] Flicker = 0x2u,
-	[DDLRegistration(0xecf65849u)] EitherOr = 0x3u,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0x7adfe385u, "Random")] Random,
+	[DDLRegistration(0xec8bd522u, "Flicker")] Flicker,
+	[DDLRegistration(0xecf65849u, "Either Or")] EitherOr,
 }
 
 public static class RangeStyleValues {

@@ -7,18 +7,18 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x855c1439u)]
 public enum x855c1439 : uint {
-	[DDLRegistration(0x34aee8a0u)] DestroyActor = 0x0u,
-	[DDLRegistration(0x1fee2d86u)] DestroyActors = 0x1u,
-	[DDLRegistration(0xff273903u)] DisableLook = 0x2u,
-	[DDLRegistration(0x7bc0869bu)] EnableLook = 0x3u,
-	[DDLRegistration(0xd4630044u)] LoadAsset = 0x4u,
-	[DDLRegistration(0x9c4c705eu)] PlayAnimationDriver = 0x5u,
-	[DDLRegistration(0xda1122dcu)] ReleaseAsset = 0x6u,
-	[DDLRegistration(0x30805e2eu)] ToggleLook = 0x7u,
-	[DDLRegistration(0x0041cc88u)] TriggerCreateEvents = 0x8u,
-	[DDLRegistration(0xe5d12010u)] TriggerDeathEvents = 0x9u,
-	[DDLRegistration(0x1940d9d2u)] TriggerGameEvents = 0xau,
-	[DDLRegistration(0x6f6d9f23u)] TriggerHealthEvents = 0xbu,
+	[DDLRegistration(0x34aee8a0u)] DestroyActor,
+	[DDLRegistration(0x1fee2d86u)] DestroyActors,
+	[DDLRegistration(0xff273903u)] DisableLook,
+	[DDLRegistration(0x7bc0869bu)] EnableLook,
+	[DDLRegistration(0xd4630044u)] LoadAsset,
+	[DDLRegistration(0x9c4c705eu)] PlayAnimationDriver,
+	[DDLRegistration(0xda1122dcu)] ReleaseAsset,
+	[DDLRegistration(0x30805e2eu)] ToggleLook,
+	[DDLRegistration(0x0041cc88u)] TriggerCreateEvents,
+	[DDLRegistration(0xe5d12010u)] TriggerDeathEvents,
+	[DDLRegistration(0x1940d9d2u)] TriggerGameEvents,
+	[DDLRegistration(0x6f6d9f23u)] TriggerHealthEvents,
 }
 
 public static class x855c1439Values {

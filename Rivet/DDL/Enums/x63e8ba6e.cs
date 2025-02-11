@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x63e8ba6eu)]
 public enum x63e8ba6e : uint {
-	[DDLRegistration(0x66c84601u)] ReplaceSceneNodes = 0x0u,
-	[DDLRegistration(0xd4630044u)] LoadAsset = 0x1u,
-	[DDLRegistration(0x09eb2e46u)] AddAnimClipsToAnimSet = 0x2u,
-	[DDLRegistration(0x200f20efu)] LaunchChromeVault = 0x3u,
+	[DDLRegistration(0x66c84601u)] ReplaceSceneNodes,
+	[DDLRegistration(0xd4630044u)] LoadAsset,
+	[DDLRegistration(0x09eb2e46u)] AddAnimClipsToAnimSet,
+	[DDLRegistration(0x200f20efu)] LaunchChromeVault,
 }
 
 public static class x63e8ba6eValues {

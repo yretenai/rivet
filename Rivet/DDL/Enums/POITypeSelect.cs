@@ -7,13 +7,13 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xfcb30197u)]
 public enum POITypeSelect : uint {
-	[DDLRegistration(0x0973b660u)] POITypeNone = 0x0u,
-	[DDLRegistration(0x671baf94u)] POITypeObjective = 0x1u,
-	[DDLRegistration(0x59806ce2u)] POITypeObjectiveOptional = 0x2u,
-	[DDLRegistration(0x185f8021u)] POITypeInteract = 0x3u,
-	[DDLRegistration(0x0f6cee57u)] POITypeMapIcon = 0x4u,
-	[DDLRegistration(0x91387f58u)] POITypeNest = 0x5u,
-	[DDLRegistration(0x53368b52u)] POITypePing = 0x6u,
+	[DDLRegistration(0x0973b660u)] POITypeNone,
+	[DDLRegistration(0x671baf94u)] POITypeObjective,
+	[DDLRegistration(0x59806ce2u)] POITypeObjectiveOptional,
+	[DDLRegistration(0x185f8021u)] POITypeInteract,
+	[DDLRegistration(0x0f6cee57u)] POITypeMapIcon,
+	[DDLRegistration(0x91387f58u)] POITypeNest,
+	[DDLRegistration(0x53368b52u)] POITypePing,
 }
 
 public static class POITypeSelectValues {

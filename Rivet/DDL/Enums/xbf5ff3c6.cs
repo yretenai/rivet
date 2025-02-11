@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xbf5ff3c6u)]
 public enum xbf5ff3c6 : uint {
-	[DDLRegistration(0x98832761u)] Small = 0x0u,
-	[DDLRegistration(0xaa977ce7u)] Medium = 0x1u,
-	[DDLRegistration(0xb4ade4ccu)] Large = 0x2u,
+	[DDLRegistration(0x98832761u)] Small,
+	[DDLRegistration(0xaa977ce7u)] Medium,
+	[DDLRegistration(0xb4ade4ccu)] Large,
 }
 
 public static class xbf5ff3c6Values {

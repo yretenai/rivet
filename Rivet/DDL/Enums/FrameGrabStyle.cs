@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x3a08c00fu)]
 public enum FrameGrabStyle : uint {
-	[DDLRegistration(0xb4907cc0u)] Standard = 0x0u,
-	[DDLRegistration(0x18f969e5u)] Persistent = 0x1u,
+	[DDLRegistration(0xb4907cc0u, "Standard")] Standard,
+	[DDLRegistration(0x18f969e5u, "Persistent")] Persistent,
 }
 
 public static class FrameGrabStyleValues {

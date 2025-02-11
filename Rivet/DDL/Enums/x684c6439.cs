@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x684c6439u)]
 public enum x684c6439 : uint {
-	[DDLRegistration(0x51261116u)] HitActor = 0x0u,
-	[DDLRegistration(0x000f3287u)] ShotActor = 0x1u,
-	[DDLRegistration(0xf4e53222u)] EmitActor = 0x2u,
-	[DDLRegistration(0x9501344fu)] OwnerActor = 0x3u,
+	[DDLRegistration(0x51261116u)] HitActor,
+	[DDLRegistration(0x000f3287u)] ShotActor,
+	[DDLRegistration(0xf4e53222u)] EmitActor,
+	[DDLRegistration(0x9501344fu)] OwnerActor,
 }
 
 public static class x684c6439Values {

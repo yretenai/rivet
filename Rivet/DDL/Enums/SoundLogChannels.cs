@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x57da0a80u)]
 public enum SoundLogChannels : uint {
-	[DDLRegistration(0x92e8bb53u)] SoundLogChannelWwise = 0x0u,
-	[DDLRegistration(0xfe5ca31fu)] SoundLogChannelEngine = 0x1u,
-	[DDLRegistration(0x416e87c5u)] SoundLogChannelAll = 0x2u,
+	[DDLRegistration(0x92e8bb53u, description: "Log messages to the Wwise Profiler Log")] SoundLogChannelWwise,
+	[DDLRegistration(0xfe5ca31fu, description: "Log messages to engine output systems such as asserts and TTY")] SoundLogChannelEngine,
+	[DDLRegistration(0x416e87c5u, description: "Log messages to all channels")] SoundLogChannelAll,
 }
 
 public static class SoundLogChannelsValues {

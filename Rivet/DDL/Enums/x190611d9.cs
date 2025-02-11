@@ -7,12 +7,12 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x190611d9u)]
 public enum x190611d9 : uint {
-	[DDLRegistration(0x429c20c0u)] Invalid = 0x0u,
-	[DDLRegistration(0xb190dcc7u)] Base = 0x1u,
-	[DDLRegistration(0x464cccd2u)] Power = 0x2u,
-	[DDLRegistration(0xb8f1a543u)] Stretch = 0x3u,
-	[DDLRegistration(0x07da2d39u)] Spring = 0x4u,
-	[DDLRegistration(0xf12b5bb1u)] Bomb = 0x5u,
+	[DDLRegistration(0x429c20c0u)] Invalid,
+	[DDLRegistration(0xb190dcc7u)] Base,
+	[DDLRegistration(0x464cccd2u)] Power,
+	[DDLRegistration(0xb8f1a543u)] Stretch,
+	[DDLRegistration(0x07da2d39u)] Spring,
+	[DDLRegistration(0xf12b5bb1u)] Bomb,
 }
 
 public static class x190611d9Values {

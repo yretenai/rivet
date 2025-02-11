@@ -7,12 +7,12 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x67c7527du)]
 public enum x67c7527d : uint {
-	[DDLRegistration(0x2fb01a0bu)] Damage = 0x0u,
-	[DDLRegistration(0x9f20ad55u)] FlightSpeed = 0x1u,
-	[DDLRegistration(0x5bf7469fu)] Gravity = 0x2u,
-	[DDLRegistration(0x8ad49688u)] Range = 0x3u,
-	[DDLRegistration(0x4462f172u)] MaxAccel = 0x4u,
-	[DDLRegistration(0x811184bdu)] UpdateInterval = 0x5u,
+	[DDLRegistration(0x2fb01a0bu)] Damage,
+	[DDLRegistration(0x9f20ad55u)] FlightSpeed,
+	[DDLRegistration(0x5bf7469fu)] Gravity,
+	[DDLRegistration(0x8ad49688u)] Range,
+	[DDLRegistration(0x4462f172u)] MaxAccel,
+	[DDLRegistration(0x811184bdu)] UpdateInterval,
 }
 
 public static class x67c7527dValues {

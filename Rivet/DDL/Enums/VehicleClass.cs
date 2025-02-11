@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xc0bc4d5cu)]
 public enum VehicleClass : uint {
-	[DDLRegistration(0xeb731235u)] NormalCar = 0x0u,
-	[DDLRegistration(0x62e50661u)] TallCar = 0x1u,
-	[DDLRegistration(0xf2269adau)] WideCar = 0x2u,
-	[DDLRegistration(0x200a3e78u)] Truck = 0x3u,
+	[DDLRegistration(0xeb731235u, "Normal Car")] NormalCar,
+	[DDLRegistration(0x62e50661u, "Tall Car")] TallCar,
+	[DDLRegistration(0xf2269adau, "Wide Car")] WideCar,
+	[DDLRegistration(0x200a3e78u, "Truck")] Truck,
 }
 
 public static class VehicleClassValues {

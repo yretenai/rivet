@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xa857c0d1u)]
 public enum xa857c0d1 : uint {
-	[DDLRegistration(0xaa2ac62bu)] ActivateState = 0x0u,
-	[DDLRegistration(0x05d95b29u)] DeactivateState = 0x1u,
+	[DDLRegistration(0xaa2ac62bu)] ActivateState,
+	[DDLRegistration(0x05d95b29u)] DeactivateState,
 }
 
 public static class xa857c0d1Values {

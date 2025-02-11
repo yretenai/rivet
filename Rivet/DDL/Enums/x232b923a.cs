@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x232b923au)]
 public enum x232b923a : uint {
-	[DDLRegistration(0xb4ade4ccu)] Large = 0x0u,
-	[DDLRegistration(0xaa977ce7u)] Medium = 0x1u,
-	[DDLRegistration(0x98832761u)] Small = 0x2u,
+	[DDLRegistration(0xb4ade4ccu)] Large,
+	[DDLRegistration(0xaa977ce7u)] Medium,
+	[DDLRegistration(0x98832761u)] Small,
 }
 
 public static class x232b923aValues {

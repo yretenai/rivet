@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x41993474u)]
 public enum x41993474 : uint {
-	[DDLRegistration(0x4d6151b4u)] Normal = 0x0u,
-	[DDLRegistration(0xe4b9d0edu)] Hidden = 0x1u,
-	[DDLRegistration(0xcd47a0afu)] Inherited = 0x2u,
+	[DDLRegistration(0x4d6151b4u, "Normal", "Show this objective with its own distinct values in the UI.")] Normal,
+	[DDLRegistration(0xe4b9d0edu, "Hidden", "This objective is not shown in the UI at all.")] Hidden,
+	[DDLRegistration(0xcd47a0afu, "Inherited from Parent", "In the UI, treat this objective as though it was a continuation of the previous one. Previous objective must be either Inherited or Normal.")] Inherited,
 }
 
 public static class x41993474Values {

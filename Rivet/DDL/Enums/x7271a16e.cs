@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x7271a16eu)]
 public enum x7271a16e : uint {
-	[DDLRegistration(0x5a5b5a9fu)] Default = 0x0u,
-	[DDLRegistration(0x5533166du)] Tlsf = 0x1u,
-	[DDLRegistration(0x73994596u)] SeparateBookkeeping = 0x2u,
-	[DDLRegistration(0x4d9b5877u)] PageDebug = 0x3u,
-	[DDLRegistration(0x5ae2dfdbu)] Windows = 0x4u,
+	[DDLRegistration(0x5a5b5a9fu)] Default,
+	[DDLRegistration(0x5533166du)] Tlsf,
+	[DDLRegistration(0x73994596u)] SeparateBookkeeping,
+	[DDLRegistration(0x4d9b5877u)] PageDebug,
+	[DDLRegistration(0x5ae2dfdbu)] Windows,
 }
 
 public static class x7271a16eValues {

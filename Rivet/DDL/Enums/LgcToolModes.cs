@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xafff15dbu)]
 public enum LgcToolModes : uint {
-	[DDLRegistration(0xea0f0140u)] Lgc2 = 0x0u,
-	[DDLRegistration(0x24c4fcc9u)] Lgc2Debug = 0x1u,
+	[DDLRegistration(0xea0f0140u, "LGC 2")] Lgc2,
+	[DDLRegistration(0x24c4fcc9u, "LGC 2 Debug")] Lgc2Debug,
 }
 
 public static class LgcToolModesValues {

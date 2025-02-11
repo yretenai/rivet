@@ -7,15 +7,15 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x7d682dacu)]
 public enum x7d682dac : uint {
-	[DDLRegistration(0x8d0267e0u)] KeyFrameMod = 0x0u,
-	[DDLRegistration(0xf663a3d7u)] VFX = 0x1u,
-	[DDLRegistration(0x48007ee6u)] WWise = 0x2u,
-	[DDLRegistration(0x15480ef6u)] Sound = 0x3u,
-	[DDLRegistration(0x39ddee3fu)] Decal = 0x4u,
-	[DDLRegistration(0xd8d9ded2u)] Material = 0x5u,
-	[DDLRegistration(0x6f0d7e9fu)] Constant = 0x6u,
-	[DDLRegistration(0x23d7d1d2u)] CompositeShader = 0x7u,
-	[DDLRegistration(0x97e86834u)] CompositeShaderConstant = 0x8u,
+	[DDLRegistration(0x8d0267e0u, "VFX KeyFrame Modifier", "KeyFrameModResponseEvent")] KeyFrameMod,
+	[DDLRegistration(0xf663a3d7u, "Visual Effect", "VisualResponseEvent")] VFX,
+	[DDLRegistration(0x48007ee6u, "WWise Game Sync", "WWiseResponseEvent")] WWise,
+	[DDLRegistration(0x15480ef6u, "Wwise Sound Event", "SoundResponseEvent")] Sound,
+	[DDLRegistration(0x39ddee3fu, "Decal Effect", "DecalResponseEvent")] Decal,
+	[DDLRegistration(0xd8d9ded2u, "Material Override", "MaterialResponseEvent")] Material,
+	[DDLRegistration(0x6f0d7e9fu, "Constant Override", "ConstantResponseEvent")] Constant,
+	[DDLRegistration(0x23d7d1d2u, "Composite Shader", "CompositeShaderResponseEvent")] CompositeShader,
+	[DDLRegistration(0x97e86834u, "Composite Shader Constant", "CompositeShaderConstantResponseEvent")] CompositeShaderConstant,
 }
 
 public static class x7d682dacValues {

@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x45b01dd2u)]
 public enum AttackState : uint {
-	[DDLRegistration(0xacfd18c9u)] Defend = 0x0u,
-	[DDLRegistration(0x9a485be3u)] Block = 0x1u,
-	[DDLRegistration(0x51961912u)] StumbleBack = 0x2u,
-	[DDLRegistration(0x2e553fddu)] Knockback = 0x3u,
+	[DDLRegistration(0xacfd18c9u)] Defend,
+	[DDLRegistration(0x9a485be3u)] Block,
+	[DDLRegistration(0x51961912u)] StumbleBack,
+	[DDLRegistration(0x2e553fddu)] Knockback,
 }
 
 public static class AttackStateValues {

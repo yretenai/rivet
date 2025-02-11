@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xad01e8beu)]
 public enum xad01e8be : uint {
-	[DDLRegistration(0x9bd25b73u)] Bot = 0x0u,
-	[DDLRegistration(0xa285bec6u)] Vehicle = 0x1u,
+	[DDLRegistration(0x9bd25b73u)] Bot,
+	[DDLRegistration(0xa285bec6u)] Vehicle,
 }
 
 public static class xad01e8beValues {

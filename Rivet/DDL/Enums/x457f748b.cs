@@ -7,13 +7,13 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x457f748bu)]
 public enum x457f748b : uint {
-	[DDLRegistration(0x1423fd87u)] Unknown = 0x0u,
-	[DDLRegistration(0x22d55c45u)] LocationHead = 0x1u,
-	[DDLRegistration(0x0ad71fd2u)] LocationTorso = 0x2u,
-	[DDLRegistration(0x5ffe1e5cu)] LocationWeakspot = 0x3u,
-	[DDLRegistration(0x74b071efu)] LocationPathTest = 0x4u,
-	[DDLRegistration(0xf59ef9e3u)] LocationLoSTest = 0x5u,
-	[DDLRegistration(0x5c686fd0u)] LocationNamed = 0x6u,
+	[DDLRegistration(0x1423fd87u, "Unknown")] Unknown,
+	[DDLRegistration(0x22d55c45u, "Head")] LocationHead,
+	[DDLRegistration(0x0ad71fd2u, "Torso")] LocationTorso,
+	[DDLRegistration(0x5ffe1e5cu, "Weak Spot")] LocationWeakspot,
+	[DDLRegistration(0x74b071efu, "Path Test")] LocationPathTest,
+	[DDLRegistration(0xf59ef9e3u, "LoS Test")] LocationLoSTest,
+	[DDLRegistration(0x5c686fd0u, "Named", "This location is identified by name for special cases (like for certain weapons)")] LocationNamed,
 }
 
 public static class x457f748bValues {

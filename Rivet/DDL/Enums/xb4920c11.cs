@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xb4920c11u)]
 public enum xb4920c11 : uint {
-	[DDLRegistration(0x5fc67575u)] SelectAll = 0x0u,
-	[DDLRegistration(0x1eb28259u)] SelectOne = 0x1u,
-	[DDLRegistration(0xc29ec95du)] SelectOneOrNone = 0x2u,
+	[DDLRegistration(0x5fc67575u, description: "Select All")] SelectAll,
+	[DDLRegistration(0x1eb28259u, description: "Select One (Random)")] SelectOne,
+	[DDLRegistration(0xc29ec95du, description: "Select One or None (Random)")] SelectOneOrNone,
 }
 
 public static class xb4920c11Values {

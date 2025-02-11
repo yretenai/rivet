@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xe0e71d6cu)]
 public enum xe0e71d6c : uint {
-	[DDLRegistration(0x425c684eu)] Additive = 0x0u,
-	[DDLRegistration(0xd0d63681u)] Blended = 0x1u,
-	[DDLRegistration(0x646f4fd6u)] Opaque = 0x2u,
-	[DDLRegistration(0x1b6c1f32u)] Modulate = 0x3u,
-	[DDLRegistration(0x0eb42269u)] None = 0x4u,
+	[DDLRegistration(0x425c684eu, "Additive")] Additive,
+	[DDLRegistration(0xd0d63681u, "Blended")] Blended,
+	[DDLRegistration(0x646f4fd6u, "Opaque")] Opaque,
+	[DDLRegistration(0x1b6c1f32u, "Modulate")] Modulate,
+	[DDLRegistration(0x0eb42269u)] None,
 }
 
 public static class xe0e71d6cValues {

@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x99bafe38u)]
 public enum x99bafe38 : uint {
-	[DDLRegistration(0x03766ed1u)] Never = 0x0u,
-	[DDLRegistration(0x98dc727cu)] Always = 0x1u,
-	[DDLRegistration(0x6fa1a8c8u)] MountedOnly = 0x2u,
-	[DDLRegistration(0x45da431cu)] DismountedOnly = 0x3u,
+	[DDLRegistration(0x03766ed1u)] Never,
+	[DDLRegistration(0x98dc727cu)] Always,
+	[DDLRegistration(0x6fa1a8c8u)] MountedOnly,
+	[DDLRegistration(0x45da431cu)] DismountedOnly,
 }
 
 public static class x99bafe38Values {

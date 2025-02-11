@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xaaf755d6u)]
 public enum xaaf755d6 : uint {
-	[DDLRegistration(0x7d2c6d3cu)] Damage = 0x0u,
-	[DDLRegistration(0x760d74cfu)] Kill = 0x1u,
-	[DDLRegistration(0x9c52c8ccu)] StatusApplied = 0x2u,
-	[DDLRegistration(0x85f9e3f3u)] StatusRefreshed = 0x3u,
-	[DDLRegistration(0x7156ecc8u)] StatusBreakOutThreshhold = 0x4u,
+	[DDLRegistration(0x7d2c6d3cu, "Damage")] Damage,
+	[DDLRegistration(0x760d74cfu, "Kill")] Kill,
+	[DDLRegistration(0x9c52c8ccu, "Status Applied")] StatusApplied,
+	[DDLRegistration(0x85f9e3f3u, "Status Refreshed")] StatusRefreshed,
+	[DDLRegistration(0x7156ecc8u, "Status Break Out Threshhold")] StatusBreakOutThreshhold,
 }
 
 public static class xaaf755d6Values {

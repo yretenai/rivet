@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x942777d3u)]
 public enum x942777d3 : uint {
-	[DDLRegistration(0x97a5c2ebu)] Generic = 0x0u,
-	[DDLRegistration(0x3b6b6e0du)] Objective = 0x1u,
+	[DDLRegistration(0x97a5c2ebu)] Generic,
+	[DDLRegistration(0x3b6b6e0du)] Objective,
 }
 
 public static class x942777d3Values {

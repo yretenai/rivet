@@ -7,13 +7,13 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x1242d225u)]
 public enum TargetCategory : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0x98832761u)] Small = 0x1u,
-	[DDLRegistration(0xaa977ce7u)] Medium = 0x2u,
-	[DDLRegistration(0xb4ade4ccu)] Large = 0x3u,
-	[DDLRegistration(0xdc36959fu)] Tank = 0x4u,
-	[DDLRegistration(0x4fda449cu)] Boss = 0x5u,
-	[DDLRegistration(0x5cb57d3bu)] Transport = 0x6u,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0x98832761u, "Small")] Small,
+	[DDLRegistration(0xaa977ce7u, "Medium")] Medium,
+	[DDLRegistration(0xb4ade4ccu, "Large")] Large,
+	[DDLRegistration(0xdc36959fu, "Tank")] Tank,
+	[DDLRegistration(0x4fda449cu, "Boss")] Boss,
+	[DDLRegistration(0x5cb57d3bu, "Transport")] Transport,
 }
 
 public static class TargetCategoryValues {

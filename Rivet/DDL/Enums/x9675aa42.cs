@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x9675aa42u)]
 public enum x9675aa42 : uint {
-	[DDLRegistration(0xbc45acd1u)] TypeStandard = 0x0u,
-	[DDLRegistration(0xecda0dfeu)] TypeHead = 0x1u,
-	[DDLRegistration(0x9081f0d0u)] TypeBody = 0x2u,
+	[DDLRegistration(0xbc45acd1u, "Standard (Head + Body)")] TypeStandard,
+	[DDLRegistration(0xecda0dfeu, "Head")] TypeHead,
+	[DDLRegistration(0x9081f0d0u, "Body")] TypeBody,
 }
 
 public static class x9675aa42Values {

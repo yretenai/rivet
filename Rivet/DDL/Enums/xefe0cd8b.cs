@@ -7,14 +7,14 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xefe0cd8bu)]
 public enum xefe0cd8b : uint {
-	[DDLRegistration(0xffea1812u)] subCategory = 0x0u,
-	[DDLRegistration(0xaf03d67cu)] activity = 0x1u,
-	[DDLRegistration(0x3049af89u)] zone = 0x2u,
-	[DDLRegistration(0x7240015fu)] mechanic = 0x3u,
-	[DDLRegistration(0x9ce7b53cu)] actor = 0x4u,
-	[DDLRegistration(0x28feb1b8u)] trophy = 0x5u,
-	[DDLRegistration(0x0d5d0686u)] trophyGroup = 0x6u,
-	[DDLRegistration(0x4d8e554cu)] trophySet = 0x7u,
+	[DDLRegistration(0xffea1812u)] subCategory,
+	[DDLRegistration(0xaf03d67cu)] activity,
+	[DDLRegistration(0x3049af89u)] zone,
+	[DDLRegistration(0x7240015fu)] mechanic,
+	[DDLRegistration(0x9ce7b53cu)] actor,
+	[DDLRegistration(0x28feb1b8u)] trophy,
+	[DDLRegistration(0x0d5d0686u)] trophyGroup,
+	[DDLRegistration(0x4d8e554cu)] trophySet,
 }
 
 public static class xefe0cd8bValues {

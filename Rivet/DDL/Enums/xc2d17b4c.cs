@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xc2d17b4cu)]
 public enum xc2d17b4c : uint {
-	[DDLRegistration(0x27c2878fu)] Slam = 0x0u,
-	[DDLRegistration(0xa2558c45u)] Throw = 0x1u,
-	[DDLRegistration(0xc01f7923u)] Hit = 0x2u,
+	[DDLRegistration(0x27c2878fu, description: "This button will play ButtonPressedEvent when a wrench/hammer is slammed on it")] Slam,
+	[DDLRegistration(0xa2558c45u, description: "This button will play ButtonPressedEvent when a wrench/hammer is thrown at it.")] Throw,
+	[DDLRegistration(0xc01f7923u, description: "This button will play ButtonPressedEvent when a wrench/hammer is swung at it.")] Hit,
 }
 
 public static class xc2d17b4cValues {

@@ -7,12 +7,12 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x4eda4f54u)]
 public enum x4eda4f54 : uint {
-	[DDLRegistration(0x5e78a90au)] RotOrderXYZ = 0x0u,
-	[DDLRegistration(0x9a99f1d2u)] RotOrderYZX = 0x1u,
-	[DDLRegistration(0xddee1d9fu)] RotOrderZXY = 0x2u,
-	[DDLRegistration(0xec5cab73u)] RotOrderXZY = 0x3u,
-	[DDLRegistration(0x46a1f27cu)] RotOrderYXZ = 0x4u,
-	[DDLRegistration(0xb3f21c48u)] RotOrderZYX = 0x5u,
+	[DDLRegistration(0x5e78a90au, "XYZ")] RotOrderXYZ,
+	[DDLRegistration(0x9a99f1d2u, "YZX")] RotOrderYZX,
+	[DDLRegistration(0xddee1d9fu, "ZXY")] RotOrderZXY,
+	[DDLRegistration(0xec5cab73u, "XZY")] RotOrderXZY,
+	[DDLRegistration(0x46a1f27cu, "YXZ")] RotOrderYXZ,
+	[DDLRegistration(0xb3f21c48u, "ZYX")] RotOrderZYX,
 }
 
 public static class x4eda4f54Values {

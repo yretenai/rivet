@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x0955c23cu)]
 public enum x0955c23c : uint {
-	[DDLRegistration(0xb1710221u)] Off = 0x0u,
-	[DDLRegistration(0xc01b1b6au)] AspectBlur = 0x1u,
-	[DDLRegistration(0x91d946ebu)] VerticalVideoBlur = 0x2u,
-	[DDLRegistration(0xc0a83d9eu)] FadeToBlack = 0x3u,
-	[DDLRegistration(0x5a5b5a9fu)] Default = 0x4u,
+	[DDLRegistration(0xb1710221u, "Off")] Off,
+	[DDLRegistration(0xc01b1b6au, "Aspect Blur")] AspectBlur,
+	[DDLRegistration(0x91d946ebu, "Vertical Video Blur")] VerticalVideoBlur,
+	[DDLRegistration(0xc0a83d9eu, "Fade To Black")] FadeToBlack,
+	[DDLRegistration(0x5a5b5a9fu, "Default")] Default,
 }
 
 public static class x0955c23cValues {

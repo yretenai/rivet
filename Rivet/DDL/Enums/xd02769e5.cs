@@ -7,13 +7,13 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xd02769e5u)]
 public enum xd02769e5 : uint {
-	[DDLRegistration(0xa95b5caau)] Test = 0x0u,
-	[DDLRegistration(0xf8964f93u)] BuildWorkerProgress = 0x1u,
-	[DDLRegistration(0x17e45c4cu)] Status = 0x2u,
-	[DDLRegistration(0x91db0629u)] BuiltDataModified = 0x3u,
-	[DDLRegistration(0x02cc875du)] LogEntry = 0x4u,
-	[DDLRegistration(0x15f237a7u)] Log = 0x5u,
-	[DDLRegistration(0xa2fd2897u)] BuildStatus = 0x6u,
+	[DDLRegistration(0xa95b5caau, description: "Test message")] Test,
+	[DDLRegistration(0xf8964f93u, description: "State of build worker (using BuildWorkerProgress payload)")] BuildWorkerProgress,
+	[DDLRegistration(0x17e45c4cu, description: "Status of all platforms (busy or idle)")] Status,
+	[DDLRegistration(0x91db0629u, description: "Built file is updated and CopyTargetToDatabase has been called")] BuiltDataModified,
+	[DDLRegistration(0x02cc875du, description: "Latest log entry")] LogEntry,
+	[DDLRegistration(0x15f237a7u, description: "Last 500 log entries")] Log,
+	[DDLRegistration(0xa2fd2897u, description: "Build status update. Errors and asset counts.")] BuildStatus,
 }
 
 public static class xd02769e5Values {

@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xb26fac4cu)]
 public enum AwarenessLos : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0x557084c8u)] BestTarget = 0x1u,
-	[DDLRegistration(0xa2cb2db7u)] AllTargets = 0x2u,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0x557084c8u)] BestTarget,
+	[DDLRegistration(0xa2cb2db7u)] AllTargets,
 }
 
 public static class AwarenessLosValues {

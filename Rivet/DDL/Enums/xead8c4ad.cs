@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xead8c4adu)]
 public enum xead8c4ad : uint {
-	[DDLRegistration(0x045a79e0u)] Ok = 0x0u,
-	[DDLRegistration(0xbe04b613u)] NotFound = 0x1u,
-	[DDLRegistration(0x0fdcd319u)] Corrupt = 0x2u,
+	[DDLRegistration(0x045a79e0u, "Ok")] Ok,
+	[DDLRegistration(0xbe04b613u, "Not Found", "This file was not found on disk, but there may still be other files that reference it.  Restore the file or remove references to it.")] NotFound,
+	[DDLRegistration(0x0fdcd319u, "Corrupt", "This file could not be parsed and appears to be corrupted.  Try to restore a previous version from revision control.")] Corrupt,
 }
 
 public static class xead8c4adValues {

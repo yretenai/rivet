@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x4b360d91u)]
 public enum ListeningMode : uint {
-	[DDLRegistration(0x44fab78du)] ListeningModeSpeakers = 0x0u,
-	[DDLRegistration(0xc2c9ee43u)] ListeningModeHeadphones = 0x1u,
-	[DDLRegistration(0x2763ffd7u)] ListeningModeSoundBar = 0x2u,
-	[DDLRegistration(0x9fc6dc86u)] ListeningModeCount = 0x3u,
+	[DDLRegistration(0x44fab78du)] ListeningModeSpeakers,
+	[DDLRegistration(0xc2c9ee43u)] ListeningModeHeadphones,
+	[DDLRegistration(0x2763ffd7u)] ListeningModeSoundBar,
+	[DDLRegistration(0x9fc6dc86u)] ListeningModeCount,
 }
 
 public static class ListeningModeValues {

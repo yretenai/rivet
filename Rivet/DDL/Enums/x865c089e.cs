@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x865c089eu)]
 public enum x865c089e : uint {
-	[DDLRegistration(0x68ee1784u)] SampleRate30Hz = 0x0u,
-	[DDLRegistration(0xc42c1de4u)] SampleRate15Hz = 0x1u,
-	[DDLRegistration(0xc2e7df0fu)] SampleRate10Hz = 0x2u,
+	[DDLRegistration(0x68ee1784u, "30 Hz")] SampleRate30Hz,
+	[DDLRegistration(0xc42c1de4u, "15 Hz")] SampleRate15Hz,
+	[DDLRegistration(0xc2e7df0fu, "10 Hz")] SampleRate10Hz,
 }
 
 public static class x865c089eValues {

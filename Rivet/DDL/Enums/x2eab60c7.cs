@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x2eab60c7u)]
 public enum x2eab60c7 : uint {
-	[DDLRegistration(0xf5f67dc1u)] SceneNode = 0x0u,
-	[DDLRegistration(0x7e893c13u)] ActorGroup = 0x1u,
-	[DDLRegistration(0xb0b6fd5au)] LevelList = 0x2u,
+	[DDLRegistration(0xf5f67dc1u)] SceneNode,
+	[DDLRegistration(0x7e893c13u)] ActorGroup,
+	[DDLRegistration(0xb0b6fd5au)] LevelList,
 }
 
 public static class x2eab60c7Values {

@@ -7,7 +7,7 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x257e8082u)]
 public enum x257e8082 : uint {
-	[DDLRegistration(0xa1fb8430u)] ViewBackpack = 0x0u,
+	[DDLRegistration(0xa1fb8430u)] ViewBackpack,
 }
 
 public static class x257e8082Values {

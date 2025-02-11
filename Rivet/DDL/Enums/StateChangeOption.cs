@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x4f4d3ccau)]
 public enum StateChangeOption : uint {
-	[DDLRegistration(0x553e9c2cu)] OnlyTriggerOnEvent = 0x0u,
-	[DDLRegistration(0x2725ffd0u)] OnlyTriggerOnZoneLoad = 0x1u,
-	[DDLRegistration(0x51c33a58u)] TriggerOnLoadAndEvent = 0x2u,
+	[DDLRegistration(0x553e9c2cu)] OnlyTriggerOnEvent,
+	[DDLRegistration(0x2725ffd0u)] OnlyTriggerOnZoneLoad,
+	[DDLRegistration(0x51c33a58u)] TriggerOnLoadAndEvent,
 }
 
 public static class StateChangeOptionValues {

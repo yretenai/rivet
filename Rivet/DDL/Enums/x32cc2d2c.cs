@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x32cc2d2cu)]
 public enum x32cc2d2c : uint {
-	[DDLRegistration(0x28f1b775u)] DisableShadows = 0x0u,
-	[DDLRegistration(0xba7a7ed3u)] AlwaysCastShadows = 0x1u,
-	[DDLRegistration(0x3ed7b7f8u)] CanDissolveShadows = 0x2u,
+	[DDLRegistration(0x28f1b775u, "Do not cast shadows")] DisableShadows,
+	[DDLRegistration(0xba7a7ed3u, "Always cast shadows")] AlwaysCastShadows,
+	[DDLRegistration(0x3ed7b7f8u, "Dissolve shadows normally")] CanDissolveShadows,
 }
 
 public static class x32cc2d2cValues {

@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x52f67dacu)]
 public enum x52f67dac : uint {
-	[DDLRegistration(0x8844136fu)] LeftToRight = 0x0u,
-	[DDLRegistration(0xa0cd3822u)] RightToLeft = 0x1u,
-	[DDLRegistration(0xd8697195u)] UpToDown = 0x2u,
-	[DDLRegistration(0x4812def3u)] DownToUp = 0x3u,
+	[DDLRegistration(0x8844136fu)] LeftToRight,
+	[DDLRegistration(0xa0cd3822u)] RightToLeft,
+	[DDLRegistration(0xd8697195u)] UpToDown,
+	[DDLRegistration(0x4812def3u)] DownToUp,
 }
 
 public static class x52f67dacValues {

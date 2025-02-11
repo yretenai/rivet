@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xc57b533au)]
 public enum xc57b533a : uint {
-	[DDLRegistration(0xb950bb3bu)] Clamp = 0x0u,
-	[DDLRegistration(0x91cfdd5eu)] Loop = 0x1u,
+	[DDLRegistration(0xb950bb3bu)] Clamp,
+	[DDLRegistration(0x91cfdd5eu)] Loop,
 }
 
 public static class xc57b533aValues {

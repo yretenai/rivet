@@ -7,14 +7,14 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x8b211a61u)]
 public enum x8b211a61 : uint {
-	[DDLRegistration(0xcf9d9b8fu)] Pid = 0x0u,
-	[DDLRegistration(0x89084901u)] Common = 0x1u,
-	[DDLRegistration(0x5ae2dfdbu)] Windows = 0x2u,
-	[DDLRegistration(0x1caa836cu)] FormerlyVulkan = 0x3u,
-	[DDLRegistration(0x03a7432du)] FormerlyDurango = 0x4u,
-	[DDLRegistration(0xc7d05dc2u)] Orbis = 0x5u,
-	[DDLRegistration(0x3a33c748u)] FormerlyNova = 0x6u,
-	[DDLRegistration(0x0ea383acu)] PPR = 0x7u,
+	[DDLRegistration(0xcf9d9b8fu, "PID")] Pid,
+	[DDLRegistration(0x89084901u, "Common")] Common,
+	[DDLRegistration(0x5ae2dfdbu, "Windows")] Windows,
+	[DDLRegistration(0x1caa836cu, "Vulkan (inactive)")] FormerlyVulkan,
+	[DDLRegistration(0x03a7432du, "Durango (inactive)")] FormerlyDurango,
+	[DDLRegistration(0xc7d05dc2u, "Orbis")] Orbis,
+	[DDLRegistration(0x3a33c748u, "Nova (inactive)")] FormerlyNova,
+	[DDLRegistration(0x0ea383acu, "PPR")] PPR,
 }
 
 public static class x8b211a61Values {

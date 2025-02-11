@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x3707daffu)]
 public enum PivotMode : uint {
-	[DDLRegistration(0x5a5b5a9fu)] Default = 0x0u,
-	[DDLRegistration(0xfcb7f4efu)] User = 0x1u,
+	[DDLRegistration(0x5a5b5a9fu, "Default")] Default,
+	[DDLRegistration(0xfcb7f4efu, "User")] User,
 }
 
 public static class PivotModeValues {

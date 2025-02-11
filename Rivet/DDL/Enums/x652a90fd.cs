@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x652a90fdu)]
 public enum x652a90fd : uint {
-	[DDLRegistration(0xabbeb71du)] PortalBendAggregationRuleNearest = 0x0u,
-	[DDLRegistration(0x6e234e7au)] PortalBendAggregationRuleAverage = 0x1u,
-	[DDLRegistration(0x3af8033fu)] PortalBendAggregationRuleMax = 0x2u,
+	[DDLRegistration(0xabbeb71du, "Nearest")] PortalBendAggregationRuleNearest,
+	[DDLRegistration(0x6e234e7au, "Average")] PortalBendAggregationRuleAverage,
+	[DDLRegistration(0x3af8033fu, "Max")] PortalBendAggregationRuleMax,
 }
 
 public static class x652a90fdValues {

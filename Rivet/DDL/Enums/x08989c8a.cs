@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x08989c8au)]
 public enum x08989c8a : uint {
-	[DDLRegistration(0x1abedb42u)] Pressed = 0x0u,
-	[DDLRegistration(0x22cd4861u)] Held = 0x1u,
-	[DDLRegistration(0x0144dc66u)] Released = 0x2u,
+	[DDLRegistration(0x1abedb42u)] Pressed,
+	[DDLRegistration(0x22cd4861u)] Held,
+	[DDLRegistration(0x0144dc66u)] Released,
 }
 
 public static class x08989c8aValues {

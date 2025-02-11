@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xa694530cu)]
 public enum xa694530c : uint {
-	[DDLRegistration(0x2099c5a4u)] Disabled = 0x0u,
-	[DDLRegistration(0x084527c3u)] Low = 0x1u,
-	[DDLRegistration(0x8021c6f3u)] High = 0x2u,
+	[DDLRegistration(0x2099c5a4u, "Disabled")] Disabled,
+	[DDLRegistration(0x084527c3u, "Low")] Low,
+	[DDLRegistration(0x8021c6f3u, "High")] High,
 }
 
 public static class xa694530cValues {

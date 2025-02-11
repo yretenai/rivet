@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x287f0b35u)]
 public enum x287f0b35 : uint {
-	[DDLRegistration(0x7200cc0eu)] Tiled = 0x0u,
-	[DDLRegistration(0x6a3aa53eu)] Monolithic = 0x1u,
+	[DDLRegistration(0x7200cc0eu, "Unit tiles", "Navigation mesh will be split into per-unit (tile) pieces and streamed at runtime")] Tiled,
+	[DDLRegistration(0x6a3aa53eu, "Monolithic", "A single navigation mesh will be generated for the open world")] Monolithic,
 }
 
 public static class x287f0b35Values {

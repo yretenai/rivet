@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xd80b176au)]
 public enum xd80b176a : uint {
-	[DDLRegistration(0x7adfe385u)] Random = 0x0u,
-	[DDLRegistration(0x9eab5c8cu)] Ammo = 0x1u,
+	[DDLRegistration(0x7adfe385u)] Random,
+	[DDLRegistration(0x9eab5c8cu)] Ammo,
 }
 
 public static class xd80b176aValues {

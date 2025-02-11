@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xdb8afcfbu)]
 public enum xdb8afcfb : uint {
-	[DDLRegistration(0xeb2b6d0du)] DropExternal = 0x0u,
-	[DDLRegistration(0xbc69053au)] ThrowExternal = 0x1u,
+	[DDLRegistration(0xeb2b6d0du)] DropExternal,
+	[DDLRegistration(0xbc69053au)] ThrowExternal,
 }
 
 public static class xdb8afcfbValues {

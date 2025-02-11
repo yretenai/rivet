@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x34258d04u)]
 public enum Ability : uint {
-	[DDLRegistration(0x35735bfau)] Jumping = 0x0u,
-	[DDLRegistration(0x39314be2u)] Firing = 0x1u,
+	[DDLRegistration(0x35735bfau)] Jumping,
+	[DDLRegistration(0x39314be2u)] Firing,
 }
 
 public static class AbilityValues {

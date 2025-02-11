@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x26111896u)]
 public enum x26111896 : uint {
-	[DDLRegistration(0x63b4615du)] DefaultCompressed = 0x0u,
-	[DDLRegistration(0xf7b23a85u)] UnCompressed = 0x1u,
+	[DDLRegistration(0x63b4615du, "Default Compression. ( i16 )")] DefaultCompressed,
+	[DDLRegistration(0xf7b23a85u, "Uncompressed. full precision")] UnCompressed,
 }
 
 public static class x26111896Values {

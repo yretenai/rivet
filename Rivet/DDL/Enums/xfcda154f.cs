@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xfcda154fu)]
 public enum xfcda154f : uint {
-	[DDLRegistration(0xdbd71ae0u)] BSphere = 0x0u,
-	[DDLRegistration(0x58713381u)] AllTargetingLocs = 0x1u,
-	[DDLRegistration(0x356aabe1u)] LastKnownPos = 0x2u,
-	[DDLRegistration(0x3e0c7044u)] Torso = 0x3u,
-	[DDLRegistration(0x812a6a26u)] FirstTargetPos = 0x4u,
+	[DDLRegistration(0xdbd71ae0u, description: "Test a ray to the target's bsphere.")] BSphere,
+	[DDLRegistration(0x58713381u, description: "Test a ray to each Target::TargetLocation.")] AllTargetingLocs,
+	[DDLRegistration(0x356aabe1u, description: "Test a ray to the last place we saw the target at.")] LastKnownPos,
+	[DDLRegistration(0x3e0c7044u, description: "Test a ray to the Target::TargetLocator marked as Torso, falls back to BSphere")] Torso,
+	[DDLRegistration(0x812a6a26u, description: "Test a ray to the first Target::TargetLocator falls back to BSphere")] FirstTargetPos,
 }
 
 public static class xfcda154fValues {

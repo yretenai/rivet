@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xa3ea6fcbu)]
 public enum LocationIndex : uint {
-	[DDLRegistration(0x0434dc07u)] IndexOne = 0x0u,
-	[DDLRegistration(0x6f92d090u)] IndexTwo = 0x1u,
-	[DDLRegistration(0xce444a83u)] IndexThree = 0x2u,
-	[DDLRegistration(0x16638683u)] IndexFour = 0x3u,
+	[DDLRegistration(0x0434dc07u, "Index One")] IndexOne,
+	[DDLRegistration(0x6f92d090u, "Index Two")] IndexTwo,
+	[DDLRegistration(0xce444a83u, "Index Three")] IndexThree,
+	[DDLRegistration(0x16638683u, "Index Four")] IndexFour,
 }
 
 public static class LocationIndexValues {

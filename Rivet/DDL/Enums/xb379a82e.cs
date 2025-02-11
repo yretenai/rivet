@@ -7,22 +7,22 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xb379a82eu)]
 public enum xb379a82e : uint {
-	[DDLRegistration(0xbd5fafaau)] DebugNothing = 0x0u,
-	[DDLRegistration(0xdbe6777au)] GetGameStatus = 0x1u,
-	[DDLRegistration(0x2702f456u)] WatchActionAdd = 0x2u,
-	[DDLRegistration(0x34f3c605u)] WatchActionRemove = 0x3u,
-	[DDLRegistration(0x6d69c566u)] BreakRunToHere = 0x4u,
-	[DDLRegistration(0x9745aa36u)] BreakAddBreakpoint = 0x5u,
-	[DDLRegistration(0x63d395c7u)] BreakRemoveBreakpoint = 0x6u,
-	[DDLRegistration(0x8c13e801u)] BreakStop = 0x7u,
-	[DDLRegistration(0xd6e5a259u)] BreakContinue = 0x8u,
-	[DDLRegistration(0xc7737b4bu)] BreakStepInZone = 0x9u,
-	[DDLRegistration(0x4421faebu)] VarSet = 0xau,
-	[DDLRegistration(0xe103c169u)] ActorInfo = 0xbu,
-	[DDLRegistration(0x2675f06cu)] ActorShowInGameAdd = 0xcu,
-	[DDLRegistration(0xb70287d9u)] ActorShowInGameRemove = 0xdu,
-	[DDLRegistration(0xb42e913au)] ActorSetAsDebug = 0xeu,
-	[DDLRegistration(0x96291cc6u)] PropertyQuery = 0xfu,
+	[DDLRegistration(0xbd5fafaau)] DebugNothing,
+	[DDLRegistration(0xdbe6777au)] GetGameStatus,
+	[DDLRegistration(0x2702f456u)] WatchActionAdd,
+	[DDLRegistration(0x34f3c605u)] WatchActionRemove,
+	[DDLRegistration(0x6d69c566u)] BreakRunToHere,
+	[DDLRegistration(0x9745aa36u)] BreakAddBreakpoint,
+	[DDLRegistration(0x63d395c7u)] BreakRemoveBreakpoint,
+	[DDLRegistration(0x8c13e801u)] BreakStop,
+	[DDLRegistration(0xd6e5a259u)] BreakContinue,
+	[DDLRegistration(0xc7737b4bu)] BreakStepInZone,
+	[DDLRegistration(0x4421faebu)] VarSet,
+	[DDLRegistration(0xe103c169u)] ActorInfo,
+	[DDLRegistration(0x2675f06cu)] ActorShowInGameAdd,
+	[DDLRegistration(0xb70287d9u)] ActorShowInGameRemove,
+	[DDLRegistration(0xb42e913au)] ActorSetAsDebug,
+	[DDLRegistration(0x96291cc6u)] PropertyQuery,
 }
 
 public static class xb379a82eValues {

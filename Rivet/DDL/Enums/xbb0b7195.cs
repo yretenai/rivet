@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xbb0b7195u)]
 public enum xbb0b7195 : uint {
-	[DDLRegistration(0x638b34f1u)] HeroPos = 0x0u,
-	[DDLRegistration(0x50bdbca4u)] CameraPos = 0x1u,
-	[DDLRegistration(0x027b2338u)] SoundListenerPos = 0x2u,
+	[DDLRegistration(0x638b34f1u, "Hero Position")] HeroPos,
+	[DDLRegistration(0x50bdbca4u, "Camera Position")] CameraPos,
+	[DDLRegistration(0x027b2338u, "Sound Listener Position")] SoundListenerPos,
 }
 
 public static class xbb0b7195Values {

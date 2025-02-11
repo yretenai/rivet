@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x633f0e50u)]
 public enum x633f0e50 : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0xa1d52ebfu)] All = 0x1u,
-	[DDLRegistration(0xd1cfe2a1u)] Zone = 0x2u,
-	[DDLRegistration(0xf8538606u)] Cine = 0x3u,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0xa1d52ebfu)] All,
+	[DDLRegistration(0xd1cfe2a1u)] Zone,
+	[DDLRegistration(0xf8538606u)] Cine,
 }
 
 public static class x633f0e50Values {

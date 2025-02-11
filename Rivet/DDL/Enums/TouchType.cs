@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x54aa3293u)]
 public enum TouchType : uint {
-	[DDLRegistration(0xc9dc5be0u)] Touched = 0x0u,
-	[DDLRegistration(0x4ef7a276u)] Untouched = 0x1u,
+	[DDLRegistration(0xc9dc5be0u)] Touched,
+	[DDLRegistration(0x4ef7a276u)] Untouched,
 }
 
 public static class TouchTypeValues {

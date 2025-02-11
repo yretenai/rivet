@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x79aee756u)]
 public enum ActivationType : uint {
-	[DDLRegistration(0xdd59ab3au)] EventDriven = 0x0u,
-	[DDLRegistration(0x18f969e5u)] Persistent = 0x1u,
+	[DDLRegistration(0xdd59ab3au, "Use Event to activate motion")] EventDriven,
+	[DDLRegistration(0x18f969e5u, "Persistent effect")] Persistent,
 }
 
 public static class ActivationTypeValues {

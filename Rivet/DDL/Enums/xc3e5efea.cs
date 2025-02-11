@@ -7,13 +7,13 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xc3e5efeau)]
 public enum xc3e5efea : uint {
-	[DDLRegistration(0x14e46812u)] V1 = 0x0u,
-	[DDLRegistration(0x8ded39a8u)] V2 = 0x1u,
-	[DDLRegistration(0xfaea093eu)] V3 = 0x2u,
-	[DDLRegistration(0x2716a5c2u)] V1c = 0x3u,
-	[DDLRegistration(0x0c3bf601u)] V2c = 0x4u,
-	[DDLRegistration(0x1520c740u)] V3c = 0x5u,
-	[DDLRegistration(0xa1d52ebfu)] All = 0x6u,
+	[DDLRegistration(0x14e46812u, "V1")] V1,
+	[DDLRegistration(0x8ded39a8u, "V2")] V2,
+	[DDLRegistration(0xfaea093eu, "V3")] V3,
+	[DDLRegistration(0x2716a5c2u, "V1c")] V1c,
+	[DDLRegistration(0x0c3bf601u, "V2c")] V2c,
+	[DDLRegistration(0x1520c740u, "V3c")] V3c,
+	[DDLRegistration(0xa1d52ebfu, "All")] All,
 }
 
 public static class xc3e5efeaValues {

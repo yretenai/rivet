@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x69c22897u)]
 public enum x69c22897 : uint {
-	[DDLRegistration(0xe452991au)] ThruTarget = 0x0u,
-	[DDLRegistration(0x661e761bu)] StartingFromTarget = 0x1u,
-	[DDLRegistration(0x9d0501f5u)] EndAtTarget = 0x2u,
+	[DDLRegistration(0xe452991au)] ThruTarget,
+	[DDLRegistration(0x661e761bu)] StartingFromTarget,
+	[DDLRegistration(0x9d0501f5u)] EndAtTarget,
 }
 
 public static class x69c22897Values {

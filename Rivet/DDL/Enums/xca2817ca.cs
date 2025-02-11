@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xca2817cau)]
 public enum xca2817ca : uint {
-	[DDLRegistration(0x21762d60u)] progress = 0x0u,
-	[DDLRegistration(0x749ed5dau)] openEnded = 0x1u,
+	[DDLRegistration(0x21762d60u)] progress,
+	[DDLRegistration(0x749ed5dau)] openEnded,
 }
 
 public static class xca2817caValues {

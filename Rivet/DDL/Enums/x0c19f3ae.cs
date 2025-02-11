@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x0c19f3aeu)]
 public enum x0c19f3ae : uint {
-	[DDLRegistration(0x3d26f418u)] Alpha = 0x0u,
-	[DDLRegistration(0xde3ba89fu)] Dissolve = 0x1u,
+	[DDLRegistration(0x3d26f418u, "Alpha")] Alpha,
+	[DDLRegistration(0xde3ba89fu, "Dissolve")] Dissolve,
 }
 
 public static class x0c19f3aeValues {

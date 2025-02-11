@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x7c99d780u)]
 public enum x7c99d780 : uint {
-	[DDLRegistration(0xc6f81722u)] LayerTypeBase = 0x0u,
-	[DDLRegistration(0xd74c7f67u)] LayerTypePartial = 0x1u,
-	[DDLRegistration(0xa04359e5u)] LayerTypePartialAdd = 0x2u,
+	[DDLRegistration(0xc6f81722u, "Base-layer")] LayerTypeBase,
+	[DDLRegistration(0xd74c7f67u, "Partial-layer")] LayerTypePartial,
+	[DDLRegistration(0xa04359e5u, "Partial-additive-layer")] LayerTypePartialAdd,
 }
 
 public static class x7c99d780Values {

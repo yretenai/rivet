@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xb022b3f7u)]
 public enum xb022b3f7 : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0x54711d5du)] Minidump = 0x1u,
-	[DDLRegistration(0x5a3f315fu)] MiniWithIndirectlyReferencedData = 0x2u,
-	[DDLRegistration(0xadf38c24u)] FullMemory = 0x3u,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0x54711d5du)] Minidump,
+	[DDLRegistration(0x5a3f315fu)] MiniWithIndirectlyReferencedData,
+	[DDLRegistration(0xadf38c24u)] FullMemory,
 }
 
 public static class xb022b3f7Values {

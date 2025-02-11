@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x018449e9u)]
 public enum x018449e9 : uint {
-	[DDLRegistration(0x41da931eu)] Cube = 0x0u,
-	[DDLRegistration(0x3a53bfabu)] Model = 0x1u,
-	[DDLRegistration(0x2c75e0f2u)] Plane = 0x2u,
-	[DDLRegistration(0x391d5fd7u)] Sphere = 0x3u,
-	[DDLRegistration(0x88c28a3eu)] Torus = 0x4u,
+	[DDLRegistration(0x41da931eu)] Cube,
+	[DDLRegistration(0x3a53bfabu)] Model,
+	[DDLRegistration(0x2c75e0f2u)] Plane,
+	[DDLRegistration(0x391d5fd7u)] Sphere,
+	[DDLRegistration(0x88c28a3eu)] Torus,
 }
 
 public static class x018449e9Values {

@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xd8ef7ea5u)]
 public enum xd8ef7ea5 : uint {
-	[DDLRegistration(0x31991756u)] RenderThread = 0x0u,
-	[DDLRegistration(0x520e2ccdu)] MemoryThread = 0x1u,
-	[DDLRegistration(0x7f9b1944u)] JobSystem = 0x2u,
+	[DDLRegistration(0x31991756u, "Render Thread")] RenderThread,
+	[DDLRegistration(0x520e2ccdu, "Memory Thread")] MemoryThread,
+	[DDLRegistration(0x7f9b1944u, "Job System")] JobSystem,
 }
 
 public static class xd8ef7ea5Values {

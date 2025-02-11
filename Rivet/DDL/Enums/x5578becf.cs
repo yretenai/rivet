@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x5578becfu)]
 public enum x5578becf : uint {
-	[DDLRegistration(0x29d2e25eu)] LogSystemUnknown = 0x0u,
-	[DDLRegistration(0x600deffau)] LogSoundSystem = 0x1u,
-	[DDLRegistration(0x8c454834u)] LogConduitSystem = 0x2u,
-	[DDLRegistration(0x47c0c363u)] LogSoundInfo = 0x3u,
+	[DDLRegistration(0x29d2e25eu)] LogSystemUnknown,
+	[DDLRegistration(0x600deffau)] LogSoundSystem,
+	[DDLRegistration(0x8c454834u)] LogConduitSystem,
+	[DDLRegistration(0x47c0c363u)] LogSoundInfo,
 }
 
 public static class x5578becfValues {

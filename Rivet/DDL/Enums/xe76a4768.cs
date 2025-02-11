@@ -7,22 +7,22 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xe76a4768u)]
 public enum xe76a4768 : uint {
-	[DDLRegistration(0xd5bde98du)] Hide = 0x0u,
-	[DDLRegistration(0x432afba7u)] Show = 0x1u,
-	[DDLRegistration(0xc54fdc3bu)] Destroy = 0x2u,
-	[DDLRegistration(0x760d74cfu)] Kill = 0x3u,
-	[DDLRegistration(0x11c53fc6u)] PlaceInWorld = 0x4u,
-	[DDLRegistration(0x85cda600u)] LeaveInWorld = 0x5u,
-	[DDLRegistration(0x16ed8ed2u)] AttachLeft = 0x6u,
-	[DDLRegistration(0x4d104a62u)] AttachRight = 0x7u,
-	[DDLRegistration(0x40a19cc0u)] AttachSync = 0x8u,
-	[DDLRegistration(0x93aea074u)] AttachMatrix = 0x9u,
-	[DDLRegistration(0x3cedc047u)] HideWeapon = 0xau,
-	[DDLRegistration(0x59f33faau)] ShowWeapon = 0xbu,
-	[DDLRegistration(0x5a6592f3u)] ArmExplosive = 0xcu,
-	[DDLRegistration(0x7fcbfea3u)] AttachToInteract = 0xdu,
-	[DDLRegistration(0x814b4275u)] DetachFromInteract = 0xeu,
-	[DDLRegistration(0xf49c6607u)] AttachLocator = 0xfu,
+	[DDLRegistration(0xd5bde98du, "Hide")] Hide,
+	[DDLRegistration(0x432afba7u, "Show")] Show,
+	[DDLRegistration(0xc54fdc3bu, "Destroy")] Destroy,
+	[DDLRegistration(0x760d74cfu, "Kill")] Kill,
+	[DDLRegistration(0x11c53fc6u, "Place In World")] PlaceInWorld,
+	[DDLRegistration(0x85cda600u, "Leave In World")] LeaveInWorld,
+	[DDLRegistration(0x16ed8ed2u, "Attach Left")] AttachLeft,
+	[DDLRegistration(0x4d104a62u, "Attach Right")] AttachRight,
+	[DDLRegistration(0x40a19cc0u, "Attach Sync")] AttachSync,
+	[DDLRegistration(0x93aea074u, "Attach Matrix")] AttachMatrix,
+	[DDLRegistration(0x3cedc047u, "Hide Weapon")] HideWeapon,
+	[DDLRegistration(0x59f33faau, "Show Weapon")] ShowWeapon,
+	[DDLRegistration(0x5a6592f3u, "Arm Explosive")] ArmExplosive,
+	[DDLRegistration(0x7fcbfea3u, "Attach To Interact")] AttachToInteract,
+	[DDLRegistration(0x814b4275u, "Detach From Interact")] DetachFromInteract,
+	[DDLRegistration(0xf49c6607u, "Attach Locator")] AttachLocator,
 }
 
 public static class xe76a4768Values {

@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x209cdeb2u)]
 public enum x209cdeb2 : uint {
-	[DDLRegistration(0xda307383u)] AnyAttack = 0x0u,
-	[DDLRegistration(0xcd6283a0u)] MeleeOnly = 0x1u,
-	[DDLRegistration(0x216d16c4u)] NotMelee = 0x2u,
-	[DDLRegistration(0x99602fcbu)] Custom = 0x3u,
+	[DDLRegistration(0xda307383u, "Any Attack")] AnyAttack,
+	[DDLRegistration(0xcd6283a0u, "Melee Only")] MeleeOnly,
+	[DDLRegistration(0x216d16c4u, "Any but Melee")] NotMelee,
+	[DDLRegistration(0x99602fcbu, "Custom Damage Type")] Custom,
 }
 
 public static class x209cdeb2Values {

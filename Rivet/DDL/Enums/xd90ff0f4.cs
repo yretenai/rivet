@@ -7,16 +7,16 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xd90ff0f4u)]
 public enum xd90ff0f4 : uint {
-	[DDLRegistration(0x429c20c0u)] Invalid = 0x0u,
-	[DDLRegistration(0x86dc9185u)] Light = 0x1u,
-	[DDLRegistration(0xf29180cau)] VisualEffectInst = 0x2u,
-	[DDLRegistration(0xf4dd9e81u)] ModelInst = 0x3u,
-	[DDLRegistration(0xba5f90c5u)] Curve = 0x4u,
-	[DDLRegistration(0x39ddee3fu)] Decal = 0x5u,
-	[DDLRegistration(0xd57ef48eu)] Volume = 0x6u,
-	[DDLRegistration(0x82dca740u)] Impostor = 0x7u,
-	[DDLRegistration(0x57f8d755u)] Camera = 0x8u,
-	[DDLRegistration(0xe5344f5fu)] TerrainInst = 0x9u,
+	[DDLRegistration(0x429c20c0u)] Invalid,
+	[DDLRegistration(0x86dc9185u)] Light,
+	[DDLRegistration(0xf29180cau)] VisualEffectInst,
+	[DDLRegistration(0xf4dd9e81u)] ModelInst,
+	[DDLRegistration(0xba5f90c5u)] Curve,
+	[DDLRegistration(0x39ddee3fu)] Decal,
+	[DDLRegistration(0xd57ef48eu)] Volume,
+	[DDLRegistration(0x82dca740u)] Impostor,
+	[DDLRegistration(0x57f8d755u)] Camera,
+	[DDLRegistration(0xe5344f5fu)] TerrainInst,
 }
 
 public static class xd90ff0f4Values {

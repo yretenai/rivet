@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x47a6f45du)]
 public enum x47a6f45d : uint {
-	[DDLRegistration(0x042df234u)] L2_Kick = 0x0u,
-	[DDLRegistration(0x2a0cbe0bu)] Circle_Kick = 0x1u,
-	[DDLRegistration(0xb436354bu)] L2_Or_Circle_Kick = 0x2u,
-	[DDLRegistration(0xb5586709u)] R1_Kick = 0x3u,
+	[DDLRegistration(0x042df234u, "Press L2 to Kick")] L2_Kick,
+	[DDLRegistration(0x2a0cbe0bu, "Press CIRCLE to Kick")] Circle_Kick,
+	[DDLRegistration(0xb436354bu, "Press L2 or CIRCLE to Kick")] L2_Or_Circle_Kick,
+	[DDLRegistration(0xb5586709u, "Press R1 to Kick")] R1_Kick,
 }
 
 public static class x47a6f45dValues {

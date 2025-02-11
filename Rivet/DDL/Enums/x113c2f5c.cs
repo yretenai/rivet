@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x113c2f5cu)]
 public enum x113c2f5c : uint {
-	[DDLRegistration(0x7dc80295u)] Spawn = 0x0u,
-	[DDLRegistration(0xa8edf957u)] Impact = 0x1u,
-	[DDLRegistration(0xed7676cdu)] Explode = 0x2u,
+	[DDLRegistration(0x7dc80295u, "On Spawn")] Spawn,
+	[DDLRegistration(0xa8edf957u, "On Impact")] Impact,
+	[DDLRegistration(0xed7676cdu, "On Explode")] Explode,
 }
 
 public static class x113c2f5cValues {

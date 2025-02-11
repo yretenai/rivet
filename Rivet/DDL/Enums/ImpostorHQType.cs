@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x260c3706u)]
 public enum ImpostorHQType : uint {
-	[DDLRegistration(0x76a3102bu)] InheritFromMaterial = 0x0u,
-	[DDLRegistration(0xd76e034fu)] ForceImpostorHQOff = 0x1u,
-	[DDLRegistration(0x6d0a29b5u)] ForceImpostorHQOn = 0x2u,
+	[DDLRegistration(0x76a3102bu, "Inherit From Material")] InheritFromMaterial,
+	[DDLRegistration(0xd76e034fu, "Force Impostor HQ Off")] ForceImpostorHQOff,
+	[DDLRegistration(0x6d0a29b5u, "Force Impostor HQ On")] ForceImpostorHQOn,
 }
 
 public static class ImpostorHQTypeValues {

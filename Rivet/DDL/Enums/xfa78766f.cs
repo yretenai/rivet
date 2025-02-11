@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xfa78766fu)]
 public enum xfa78766f : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0xb3a85860u)] Screen = 0x1u,
-	[DDLRegistration(0x75f8a3acu)] ScreenFit = 0x2u,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0xb3a85860u, "Screen")] Screen,
+	[DDLRegistration(0x75f8a3acu, "Screen Fit")] ScreenFit,
 }
 
 public static class xfa78766fValues {

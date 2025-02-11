@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xee596018u)]
 public enum xee596018 : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0x0b58cf09u)] SmallMelee = 0x1u,
-	[DDLRegistration(0xecf5d582u)] LargeMelee = 0x2u,
-	[DDLRegistration(0x73fd3425u)] StandardRanged = 0x3u,
-	[DDLRegistration(0xe708b8f3u)] LargeRanged = 0x4u,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0x0b58cf09u, "Small Melee")] SmallMelee,
+	[DDLRegistration(0xecf5d582u, "Large Melee")] LargeMelee,
+	[DDLRegistration(0x73fd3425u, "Standard Ranged")] StandardRanged,
+	[DDLRegistration(0xe708b8f3u, "Large Ranged")] LargeRanged,
 }
 
 public static class xee596018Values {

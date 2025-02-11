@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x45f5c485u)]
 public enum x45f5c485 : uint {
-	[DDLRegistration(0xb1710221u)] Off = 0x0u,
-	[DDLRegistration(0x6610459au)] Local = 0x1u,
-	[DDLRegistration(0xd7b1dc31u)] World = 0x2u,
+	[DDLRegistration(0xb1710221u, "Off")] Off,
+	[DDLRegistration(0x6610459au, "Local")] Local,
+	[DDLRegistration(0xd7b1dc31u, "World")] World,
 }
 
 public static class x45f5c485Values {

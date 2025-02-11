@@ -7,19 +7,19 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x6898de8fu)]
 public enum x6898de8f : uint {
-	[DDLRegistration(0x5a5b5a9fu)] Default = 0x0u,
-	[DDLRegistration(0xef12e812u)] Blue = 0x1u,
-	[DDLRegistration(0x3d5c2353u)] Green = 0x2u,
-	[DDLRegistration(0xf43fe031u)] Cyan = 0x3u,
-	[DDLRegistration(0x60ac00edu)] Red = 0x4u,
-	[DDLRegistration(0x19e5d39eu)] Magenta = 0x5u,
-	[DDLRegistration(0xbce0d5cfu)] Yellow = 0x6u,
-	[DDLRegistration(0xaf0900d6u)] White = 0x7u,
-	[DDLRegistration(0x71218828u)] Orange = 0x8u,
-	[DDLRegistration(0x86614bb6u)] Purple = 0x9u,
-	[DDLRegistration(0xc2c3b42fu)] Teal = 0xau,
-	[DDLRegistration(0x9230cb75u)] Navy = 0xbu,
-	[DDLRegistration(0x07cc05b7u)] Maroon = 0xcu,
+	[DDLRegistration(0x5a5b5a9fu, "Default")] Default,
+	[DDLRegistration(0xef12e812u, "Blue")] Blue,
+	[DDLRegistration(0x3d5c2353u, "Green")] Green,
+	[DDLRegistration(0xf43fe031u, "Cyan")] Cyan,
+	[DDLRegistration(0x60ac00edu, "Red")] Red,
+	[DDLRegistration(0x19e5d39eu, "Magenta")] Magenta,
+	[DDLRegistration(0xbce0d5cfu, "Yellow")] Yellow,
+	[DDLRegistration(0xaf0900d6u, "White")] White,
+	[DDLRegistration(0x71218828u, "Orange")] Orange,
+	[DDLRegistration(0x86614bb6u, "Purple")] Purple,
+	[DDLRegistration(0xc2c3b42fu, "Teal")] Teal,
+	[DDLRegistration(0x9230cb75u, "Navy")] Navy,
+	[DDLRegistration(0x07cc05b7u, "Maroon")] Maroon,
 }
 
 public static class x6898de8fValues {

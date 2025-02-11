@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xbf382bc0u)]
 public enum xbf382bc0 : uint {
-	[DDLRegistration(0x0ccaa143u)] Wait = 0x0u,
-	[DDLRegistration(0x2b24146bu)] Attack = 0x1u,
-	[DDLRegistration(0x76764da2u)] Leave = 0x2u,
+	[DDLRegistration(0x0ccaa143u)] Wait,
+	[DDLRegistration(0x2b24146bu)] Attack,
+	[DDLRegistration(0x76764da2u)] Leave,
 }
 
 public static class xbf382bc0Values {

@@ -7,12 +7,12 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x799f80cdu)]
 public enum PauseTabs : uint {
-	[DDLRegistration(0x0960f5d9u)] Map = 0x0u,
-	[DDLRegistration(0x52e1338eu)] Armor = 0x1u,
-	[DDLRegistration(0xb8b40b4bu)] Collectibles = 0x2u,
-	[DDLRegistration(0x05d79eb6u)] Weapon = 0x3u,
-	[DDLRegistration(0xdabb6edau)] Gadget = 0x4u,
-	[DDLRegistration(0xfe2e227au)] Gallery = 0x5u,
+	[DDLRegistration(0x0960f5d9u)] Map,
+	[DDLRegistration(0x52e1338eu)] Armor,
+	[DDLRegistration(0xb8b40b4bu)] Collectibles,
+	[DDLRegistration(0x05d79eb6u)] Weapon,
+	[DDLRegistration(0xdabb6edau)] Gadget,
+	[DDLRegistration(0xfe2e227au)] Gallery,
 }
 
 public static class PauseTabsValues {

@@ -7,12 +7,12 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x803b6ebbu)]
 public enum x803b6ebb : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0xa015c8eau)] Editor = 0x1u,
-	[DDLRegistration(0x57f8d755u)] Camera = 0x2u,
-	[DDLRegistration(0x73e0fd42u)] Component = 0x3u,
-	[DDLRegistration(0xbff4c8f2u)] Cinematic2 = 0x4u,
-	[DDLRegistration(0x5b13d88fu)] OverrideVolume = 0x5u,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0xa015c8eau, "Editor")] Editor,
+	[DDLRegistration(0x57f8d755u, "Camera System")] Camera,
+	[DDLRegistration(0x73e0fd42u, "Listener Component")] Component,
+	[DDLRegistration(0xbff4c8f2u, "Cinematic2")] Cinematic2,
+	[DDLRegistration(0x5b13d88fu, "Override Volume")] OverrideVolume,
 }
 
 public static class x803b6ebbValues {

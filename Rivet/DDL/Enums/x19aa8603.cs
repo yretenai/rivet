@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x19aa8603u)]
 public enum x19aa8603 : uint {
-	[DDLRegistration(0xbe03315bu)] Host = 0x0u,
-	[DDLRegistration(0xb927a55eu)] Guest1 = 0x1u,
-	[DDLRegistration(0x202ef4e4u)] Guest2 = 0x2u,
+	[DDLRegistration(0xbe03315bu)] Host,
+	[DDLRegistration(0xb927a55eu)] Guest1,
+	[DDLRegistration(0x202ef4e4u)] Guest2,
 }
 
 public static class x19aa8603Values {

@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x46082128u)]
 public enum x46082128 : uint {
-	[DDLRegistration(0x5a1229d3u)] StartVfx = 0x0u,
-	[DDLRegistration(0x1c4f2772u)] StopVfx = 0x1u,
+	[DDLRegistration(0x5a1229d3u)] StartVfx,
+	[DDLRegistration(0x1c4f2772u)] StopVfx,
 }
 
 public static class x46082128Values {

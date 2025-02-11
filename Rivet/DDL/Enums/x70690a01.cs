@@ -7,13 +7,13 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x70690a01u)]
 public enum x70690a01 : uint {
-	[DDLRegistration(0xb8666d53u)] Complete = 0x0u,
-	[DDLRegistration(0xa0f3ed10u)] Failed = 0x1u,
-	[DDLRegistration(0xbdf67aa9u)] Abandoned = 0x2u,
-	[DDLRegistration(0xda8c6e3au)] Skipped = 0x3u,
-	[DDLRegistration(0x5a5f2cd1u)] Unloaded = 0x4u,
-	[DDLRegistration(0x5aa4f3f2u)] DebugReloaded = 0x5u,
-	[DDLRegistration(0xd21c591eu)] PerfTestNextMission = 0x6u,
+	[DDLRegistration(0xb8666d53u)] Complete,
+	[DDLRegistration(0xa0f3ed10u)] Failed,
+	[DDLRegistration(0xbdf67aa9u)] Abandoned,
+	[DDLRegistration(0xda8c6e3au)] Skipped,
+	[DDLRegistration(0x5a5f2cd1u)] Unloaded,
+	[DDLRegistration(0x5aa4f3f2u)] DebugReloaded,
+	[DDLRegistration(0xd21c591eu)] PerfTestNextMission,
 }
 
 public static class x70690a01Values {

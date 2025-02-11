@@ -7,17 +7,17 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x48c27c27u)]
 public enum x48c27c27 : uint {
-	[DDLRegistration(0xed3e75f5u)] BrushParameter = 0x0u,
-	[DDLRegistration(0xfa2cbaefu)] BrushParameterHlslX = 0x1u,
-	[DDLRegistration(0x8d2b8a79u)] BrushParameterHlslY = 0x2u,
-	[DDLRegistration(0x1422dbc3u)] BrushParameterHlslZ = 0x3u,
-	[DDLRegistration(0x6a93a77eu)] BrushParameterHlslW = 0x4u,
-	[DDLRegistration(0xf66876b8u)] Falloff = 0x5u,
-	[DDLRegistration(0x1a12f1c7u)] FalloffEasingMode = 0x6u,
-	[DDLRegistration(0x8532a88fu)] RadiusX = 0x7u,
-	[DDLRegistration(0xf2359819u)] RadiusY = 0x8u,
-	[DDLRegistration(0x6b3cc9a3u)] RadiusZ = 0x9u,
-	[DDLRegistration(0x8d1b33b6u)] Rotation = 0xau,
+	[DDLRegistration(0xed3e75f5u, "Brush Parameter", "While in this mode, using the mouse wheel will adjust the parameter for the given brush (alpha when painting the splatmask, height when stamping the heightfield, etc.).")] BrushParameter,
+	[DDLRegistration(0xfa2cbaefu, "Brush Parameter HLSL X", "While in this mode, if the brush is an HLSL brush, using the mouse wheel will adjust the x parameter).")] BrushParameterHlslX,
+	[DDLRegistration(0x8d2b8a79u, "Brush Parameter HLSL Y", "While in this mode, if the brush is an HLSL brush, using the mouse wheel will adjust the y parameter).")] BrushParameterHlslY,
+	[DDLRegistration(0x1422dbc3u, "Brush Parameter HLSL Z", "While in this mode, if the brush is an HLSL brush, using the mouse wheel will adjust the z parameter).")] BrushParameterHlslZ,
+	[DDLRegistration(0x6a93a77eu, "Brush Parameter HLSL W", "While in this mode, if the brush is an HLSL brush, using the mouse wheel will adjust the w parameter).")] BrushParameterHlslW,
+	[DDLRegistration(0xf66876b8u, "Falloff", "While in this mode, using the mouse wheel will adjust the falloff of the brush.")] Falloff,
+	[DDLRegistration(0x1a12f1c7u, "Falloff Easing Mode", "While in this mode, using the mouse wheel will change the falloff easing mode.")] FalloffEasingMode,
+	[DDLRegistration(0x8532a88fu, "Radius X", "While in this mode, using the mouse wheel will adjust the x value of the radius of the brush.")] RadiusX,
+	[DDLRegistration(0xf2359819u, "Radius Y", "While in this mode, using the mouse wheel will adjust the y value of the radius of the brush.")] RadiusY,
+	[DDLRegistration(0x6b3cc9a3u, "Radius Z", "While in this mode, using the mouse wheel will adjust the z value of the radius of the brush.")] RadiusZ,
+	[DDLRegistration(0x8d1b33b6u, "Rotation", "While in this mode, using the mouse wheel will rotate the brush bitmap.")] Rotation,
 }
 
 public static class x48c27c27Values {

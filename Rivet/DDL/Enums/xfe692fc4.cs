@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xfe692fc4u)]
 public enum xfe692fc4 : uint {
-	[DDLRegistration(0x7bc4e8deu)] HitNormal = 0x0u,
-	[DDLRegistration(0x492a84d0u)] InverseFacing = 0x1u,
-	[DDLRegistration(0xe39d4cf1u)] LocatorFacing = 0x2u,
+	[DDLRegistration(0x7bc4e8deu, "Hit Normal")] HitNormal,
+	[DDLRegistration(0x492a84d0u, "Inverse Facing")] InverseFacing,
+	[DDLRegistration(0xe39d4cf1u, "Locator Facing")] LocatorFacing,
 }
 
 public static class xfe692fc4Values {

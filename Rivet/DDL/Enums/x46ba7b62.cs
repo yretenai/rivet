@@ -7,13 +7,13 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x46ba7b62u)]
 public enum x46ba7b62 : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0x41c6002cu)] XPositive = 0x1u,
-	[DDLRegistration(0x24b07737u)] XNegative = 0x2u,
-	[DDLRegistration(0x56bd146fu)] YPositive = 0x3u,
-	[DDLRegistration(0x33cb6374u)] YNegative = 0x4u,
-	[DDLRegistration(0x6f3028aau)] ZPositive = 0x5u,
-	[DDLRegistration(0x0a465fb1u)] ZNegative = 0x6u,
+	[DDLRegistration(0x0eb42269u, description: "No prescribed initial direction; direction biases towards movement/camera direction.")] None,
+	[DDLRegistration(0x41c6002cu, description: "Run along the panel's positive-x direction.")] XPositive,
+	[DDLRegistration(0x24b07737u, description: "Run along the panel's negative-x direction.")] XNegative,
+	[DDLRegistration(0x56bd146fu, description: "Run along the panel's positive-y direction.")] YPositive,
+	[DDLRegistration(0x33cb6374u, description: "Run along the panel's negative-y direction.")] YNegative,
+	[DDLRegistration(0x6f3028aau, description: "Run along the panel's positive-z direction.")] ZPositive,
+	[DDLRegistration(0x0a465fb1u, description: "Run along the panel's negative-z direction.")] ZNegative,
 }
 
 public static class x46ba7b62Values {

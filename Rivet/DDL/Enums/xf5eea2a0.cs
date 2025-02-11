@@ -7,21 +7,21 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xf5eea2a0u)]
 public enum xf5eea2a0 : uint {
-	[DDLRegistration(0xaebb08f2u)] TriggeringEvent = 0x0u,
-	[DDLRegistration(0x8cc4e1d8u)] SendingActor = 0x1u,
-	[DDLRegistration(0x87c044d9u)] ReceivingActor = 0x2u,
-	[DDLRegistration(0x84e1b2d3u)] Global = 0x3u,
-	[DDLRegistration(0x6f0d7e9fu)] Constant = 0x4u,
-	[DDLRegistration(0xb1ad323fu)] LocalizationTag = 0x5u,
-	[DDLRegistration(0x9fbd3e86u)] PhysMaterial = 0x6u,
-	[DDLRegistration(0x6930a4a5u)] VFXAsset = 0x7u,
-	[DDLRegistration(0x4689519eu)] WwiseAction = 0x8u,
-	[DDLRegistration(0xaa6870c0u)] WwiseEvent = 0x9u,
-	[DDLRegistration(0xfb4b217eu)] MaterialAsset = 0xau,
-	[DDLRegistration(0xb3e20798u)] PhysMaterialArray = 0xbu,
-	[DDLRegistration(0xe9954e57u)] ActorFilterTypes = 0xcu,
-	[DDLRegistration(0xb74375b0u)] VFXSpawnMesh = 0xdu,
-	[DDLRegistration(0x0ad62281u)] ShadowState = 0xeu,
+	[DDLRegistration(0xaebb08f2u, "Triggering Event")] TriggeringEvent,
+	[DDLRegistration(0x8cc4e1d8u, "Sending Actor")] SendingActor,
+	[DDLRegistration(0x87c044d9u, "Receiving Actor")] ReceivingActor,
+	[DDLRegistration(0x84e1b2d3u, "Globals")] Global,
+	[DDLRegistration(0x6f0d7e9fu, "Constant")] Constant,
+	[DDLRegistration(0xb1ad323fu, "Localization Tag")] LocalizationTag,
+	[DDLRegistration(0x9fbd3e86u, "Physics Material")] PhysMaterial,
+	[DDLRegistration(0x6930a4a5u, "Visual Effect Asset")] VFXAsset,
+	[DDLRegistration(0x4689519eu, "Wwise Game Sync")] WwiseAction,
+	[DDLRegistration(0xaa6870c0u, "Wwise Sound Event")] WwiseEvent,
+	[DDLRegistration(0xfb4b217eu, "Material Asset")] MaterialAsset,
+	[DDLRegistration(0xb3e20798u, "Physics Material List")] PhysMaterialArray,
+	[DDLRegistration(0xe9954e57u, "Actor Filter Types")] ActorFilterTypes,
+	[DDLRegistration(0xb74375b0u, "Visual Effect Spawn Mesh")] VFXSpawnMesh,
+	[DDLRegistration(0x0ad62281u, "Shadow State")] ShadowState,
 }
 
 public static class xf5eea2a0Values {

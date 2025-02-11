@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x6b94ddc9u)]
 public enum ChangeType : uint {
-	[DDLRegistration(0x349ef852u)] Other = 0x0u,
-	[DDLRegistration(0x69418f94u)] Session = 0x1u,
-	[DDLRegistration(0xef69972eu)] Asset = 0x2u,
-	[DDLRegistration(0x99d49d5cu)] AllSessions = 0x3u,
+	[DDLRegistration(0x349ef852u, "Other")] Other,
+	[DDLRegistration(0x69418f94u, "Session")] Session,
+	[DDLRegistration(0xef69972eu, "Asset")] Asset,
+	[DDLRegistration(0x99d49d5cu, "Change applies to all sessions")] AllSessions,
 }
 
 public static class ChangeTypeValues {

@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x791bd135u)]
 public enum ToolMode : uint {
-	[DDLRegistration(0xacbb50c2u)] Selection = 0x0u,
-	[DDLRegistration(0x99602fcbu)] Custom = 0x1u,
+	[DDLRegistration(0xacbb50c2u)] Selection,
+	[DDLRegistration(0x99602fcbu)] Custom,
 }
 
 public static class ToolModeValues {

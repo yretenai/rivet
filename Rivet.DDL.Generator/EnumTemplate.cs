@@ -1,7 +1,8 @@
 namespace Rivet.DDL.Generator;
 
 public static class EnumTemplate {
-	public const string EnumField = "\t[DDLRegistration(0x%hash%u)] %name% = 0x%value%u,";
+	public const string EnumField = "\t%attribute% %name%,";
+	public const string BitsetField = "\t%attribute% %name% = 0x%value%u,";
 
 	public const string BitsetFlags = ", Flags";
 

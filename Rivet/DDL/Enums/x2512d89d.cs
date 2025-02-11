@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x2512d89du)]
 public enum x2512d89d : uint {
-	[DDLRegistration(0xaf5112c5u)] Retreat = 0x0u,
-	[DDLRegistration(0x0a81185cu)] Death = 0x1u,
+	[DDLRegistration(0xaf5112c5u)] Retreat,
+	[DDLRegistration(0x0a81185cu)] Death,
 }
 
 public static class x2512d89dValues {

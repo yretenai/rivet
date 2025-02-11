@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x0038ca42u)]
 public enum x0038ca42 : uint {
-	[DDLRegistration(0xa36e551du)] Trigger = 0x0u,
-	[DDLRegistration(0x52970d08u)] Environment = 0x1u,
-	[DDLRegistration(0x1089cd05u)] Parameter = 0x2u,
-	[DDLRegistration(0x030d7248u)] Switch = 0x3u,
-	[DDLRegistration(0x4e551f89u)] State = 0x4u,
+	[DDLRegistration(0xa36e551du, "Trigger")] Trigger,
+	[DDLRegistration(0x52970d08u, "AuxSend")] Environment,
+	[DDLRegistration(0x1089cd05u, "Parameter")] Parameter,
+	[DDLRegistration(0x030d7248u, "Switch")] Switch,
+	[DDLRegistration(0x4e551f89u, "State")] State,
 }
 
 public static class x0038ca42Values {

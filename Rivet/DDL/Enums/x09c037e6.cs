@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x09c037e6u)]
 public enum x09c037e6 : uint {
-	[DDLRegistration(0x5d5b9046u)] Baked = 0x0u,
-	[DDLRegistration(0x6ca3563bu)] Runtime = 0x1u,
-	[DDLRegistration(0x807e8437u)] Raw = 0x2u,
-	[DDLRegistration(0x2664ada2u)] Override = 0x3u,
+	[DDLRegistration(0x5d5b9046u, "Baked", "Texture-based Cubemap IBL EnvProbe stored in an optimized BC6h format: 512k per probe. Choose this to minimize the lag of probes fading in, however any more than 9 per tile/region will adversely effect streaming performance.")] Baked,
+	[DDLRegistration(0x6ca3563bu, "Runtime", "A texture cubemap is NOT stored (and NOT expected to be visually exactly the same as Baked). Instead a minimal list of ModelInst IDs are stored and used to render the probes during runtime. Choose this to optimize memory usage and improve streaming performance at the cost of runtime performance.")] Runtime,
+	[DDLRegistration(0x807e8437u, "Raw", "A higher-resolution Baked map that is saved as a LatLon hdr for inspection in DCC tools. This also can be used as a default EnvProbe, but not as a LocalEnvProbe source.")] Raw,
+	[DDLRegistration(0x2664ada2u, "Override", "Specify the baked texture used explicitly for all lighting conditions. By contrast, baked maps generate the texture and reference that texture automatically. Override EnvProbes must have their texture source manually defined - often the capture of another envprobe in a different environment.")] Override,
 }
 
 public static class x09c037e6Values {

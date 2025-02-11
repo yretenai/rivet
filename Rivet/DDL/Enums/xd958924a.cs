@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xd958924au)]
 public enum xd958924a : uint {
-	[DDLRegistration(0xb1ecbde3u)] OpaqueOnly = 0x0u,
-	[DDLRegistration(0xa1d52ebfu)] All = 0x1u,
-	[DDLRegistration(0xf6401711u)] Disable = 0x2u,
+	[DDLRegistration(0xb1ecbde3u, "Opaque Only")] OpaqueOnly,
+	[DDLRegistration(0xa1d52ebfu, "All")] All,
+	[DDLRegistration(0xf6401711u, "Disable")] Disable,
 }
 
 public static class xd958924aValues {

@@ -7,12 +7,12 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xff467ac8u)]
 public enum xff467ac8 : uint {
-	[DDLRegistration(0xb1710221u)] Off = 0x0u,
-	[DDLRegistration(0x1513c330u)] RGB = 0x1u,
-	[DDLRegistration(0xe2599934u)] R = 0x2u,
-	[DDLRegistration(0x8f847ddfu)] G = 0x3u,
-	[DDLRegistration(0xffee8950u)] B = 0x4u,
-	[DDLRegistration(0x66e7d8eau)] A = 0x5u,
+	[DDLRegistration(0xb1710221u, "Off")] Off,
+	[DDLRegistration(0x1513c330u, "Color")] RGB,
+	[DDLRegistration(0xe2599934u, "Red")] R,
+	[DDLRegistration(0x8f847ddfu, "Green")] G,
+	[DDLRegistration(0xffee8950u, "Blue")] B,
+	[DDLRegistration(0x66e7d8eau, "Alpha")] A,
 }
 
 public static class xff467ac8Values {

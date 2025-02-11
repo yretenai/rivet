@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x3133560cu)]
 public enum x3133560c : uint {
-	[DDLRegistration(0xa8a767b5u)] XUp = 0x0u,
-	[DDLRegistration(0xa9650d82u)] YUp = 0x1u,
-	[DDLRegistration(0xfe3ea8d6u)] Any = 0x2u,
+	[DDLRegistration(0xa8a767b5u)] XUp,
+	[DDLRegistration(0xa9650d82u)] YUp,
+	[DDLRegistration(0xfe3ea8d6u)] Any,
 }
 
 public static class x3133560cValues {

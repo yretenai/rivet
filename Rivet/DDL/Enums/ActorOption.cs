@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x7e4a5355u)]
 public enum ActorOption : uint {
-	[DDLRegistration(0x4a7392d7u)] ActorOnCurve = 0x0u,
-	[DDLRegistration(0x23bb7521u)] ModelToActor = 0x1u,
-	[DDLRegistration(0x97646923u)] OverrideActorModel = 0x2u,
-	[DDLRegistration(0x0eb42269u)] None = 0x3u,
+	[DDLRegistration(0x4a7392d7u, "Create Curve Actor")] ActorOnCurve,
+	[DDLRegistration(0x23bb7521u, "Make Model Actor", "Replaces the model in the template actor to make a new actor")] ModelToActor,
+	[DDLRegistration(0x97646923u, "Override Actor Model", "Instances template actor and overrides model")] OverrideActorModel,
+	[DDLRegistration(0x0eb42269u, "No Actor")] None,
 }
 
 public static class ActorOptionValues {

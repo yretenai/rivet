@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x2351894bu)]
 public enum x2351894b : uint {
-	[DDLRegistration(0xa49cbaa0u)] OverrideBase = 0x0u,
-	[DDLRegistration(0x9b406f40u)] PreComposite = 0x1u,
-	[DDLRegistration(0x1abe0a32u)] PostComposite = 0x2u,
+	[DDLRegistration(0xa49cbaa0u, "Override Base")] OverrideBase,
+	[DDLRegistration(0x9b406f40u, "Pre-Composite")] PreComposite,
+	[DDLRegistration(0x1abe0a32u, "Post-Composite")] PostComposite,
 }
 
 public static class x2351894bValues {

@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xf8706507u)]
 public enum xf8706507 : uint {
-	[DDLRegistration(0x81638ad5u)] Debug = 0x0u,
-	[DDLRegistration(0xe0d80bf0u)] GUI = 0x1u,
+	[DDLRegistration(0x81638ad5u, description: "Default, 9 times out of 10 you'll want this.")] Debug,
+	[DDLRegistration(0xe0d80bf0u, description: "If this Debug Image needs to render over top of an Overlay Fade, it should be on the GUI RenderLayer.")] GUI,
 }
 
 public static class xf8706507Values {

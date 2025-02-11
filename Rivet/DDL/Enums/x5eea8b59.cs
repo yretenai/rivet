@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x5eea8b59u)]
 public enum x5eea8b59 : uint {
-	[DDLRegistration(0x495f2887u)] TypeSmooth = 0x0u,
-	[DDLRegistration(0x31a3c3d4u)] TypeLinear = 0x1u,
-	[DDLRegistration(0x1e635126u)] TypeFlat = 0x2u,
-	[DDLRegistration(0x06073aaau)] TypeFree = 0x3u,
-	[DDLRegistration(0xedfe3640u)] TypeStepped = 0x4u,
+	[DDLRegistration(0x495f2887u, "Smooth")] TypeSmooth,
+	[DDLRegistration(0x31a3c3d4u, "Linear")] TypeLinear,
+	[DDLRegistration(0x1e635126u, "Flat")] TypeFlat,
+	[DDLRegistration(0x06073aaau, "Free")] TypeFree,
+	[DDLRegistration(0xedfe3640u, "Stepped")] TypeStepped,
 }
 
 public static class x5eea8b59Values {

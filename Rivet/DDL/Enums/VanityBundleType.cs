@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x0f2db3eeu)]
 public enum VanityBundleType : uint {
-	[DDLRegistration(0xd6d7d43au)] Head = 0x0u,
-	[DDLRegistration(0xca9971f7u)] Torso = 0x1u,
-	[DDLRegistration(0x8c3c612cu)] Legs = 0x2u,
+	[DDLRegistration(0xd6d7d43au)] Head,
+	[DDLRegistration(0xca9971f7u)] Torso,
+	[DDLRegistration(0x8c3c612cu)] Legs,
 }
 
 public static class VanityBundleTypeValues {

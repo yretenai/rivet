@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xb7095bb8u)]
 public enum xb7095bb8 : uint {
-	[DDLRegistration(0x047ee25au)] Button = 0x0u,
-	[DDLRegistration(0x79b4c2f5u)] Action = 0x1u,
+	[DDLRegistration(0x047ee25au)] Button,
+	[DDLRegistration(0x79b4c2f5u)] Action,
 }
 
 public static class xb7095bb8Values {

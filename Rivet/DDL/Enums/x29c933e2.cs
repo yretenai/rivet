@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x29c933e2u)]
 public enum x29c933e2 : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0x99602fcbu)] Custom = 0x1u,
-	[DDLRegistration(0xda23aa1du)] Shot = 0x2u,
-	[DDLRegistration(0x24a9e401u)] Cinematic = 0x3u,
-	[DDLRegistration(0x4cba6ee0u)] Forever = 0x4u,
+	[DDLRegistration(0x0eb42269u, description: "The tracked action has no duration.")] None,
+	[DDLRegistration(0x99602fcbu, "Custom", "The tracked action has a custom duration.")] Custom,
+	[DDLRegistration(0xda23aa1du, "End of Shot", "The tracked action exists until the end of the shot.")] Shot,
+	[DDLRegistration(0x24a9e401u, "End of Cinematic", "The tracked action exists until the end of the cinematic.")] Cinematic,
+	[DDLRegistration(0x4cba6ee0u, "Forever", "The tracked action exists forever (currently, that is until the zone unloads).")] Forever,
 }
 
 public static class x29c933e2Values {

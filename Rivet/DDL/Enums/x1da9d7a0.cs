@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x1da9d7a0u)]
 public enum x1da9d7a0 : uint {
-	[DDLRegistration(0x3a3b26c3u)] ZurkonPreFinale = 0x0u,
-	[DDLRegistration(0xf30a7ac2u)] ExitToFrontend = 0x1u,
+	[DDLRegistration(0x3a3b26c3u)] ZurkonPreFinale,
+	[DDLRegistration(0xf30a7ac2u)] ExitToFrontend,
 }
 
 public static class x1da9d7a0Values {

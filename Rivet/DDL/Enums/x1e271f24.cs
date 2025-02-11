@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x1e271f24u)]
 public enum x1e271f24 : uint {
-	[DDLRegistration(0x879ccbf2u)] Prune = 0x0u,
-	[DDLRegistration(0x0b29d224u)] PruneFollow = 0x1u,
-	[DDLRegistration(0x6bfbd190u)] NoPrune = 0x2u,
+	[DDLRegistration(0x879ccbf2u, "Prune Previous")] Prune,
+	[DDLRegistration(0x0b29d224u, "Prune But Follow")] PruneFollow,
+	[DDLRegistration(0x6bfbd190u, "No Prune Previous")] NoPrune,
 }
 
 public static class x1e271f24Values {

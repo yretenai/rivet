@@ -7,13 +7,13 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xbd8d5c4du)]
 public enum xbd8d5c4d : uint {
-	[DDLRegistration(0xb56993c1u)] NULL = 0x0u,
-	[DDLRegistration(0xe0d3d3dau)] GOLDEN_PATH = 0x1u,
-	[DDLRegistration(0xfb965921u)] SIDE_MISSION = 0x2u,
-	[DDLRegistration(0x33087e4du)] ARENA_CUP = 0x3u,
-	[DDLRegistration(0xcbd23f10u)] POCKET_DIMENSION = 0x4u,
-	[DDLRegistration(0x8d737682u)] GOLD_BOLTS = 0x5u,
-	[DDLRegistration(0x636c56d6u)] RYNO_PLANS = 0x6u,
+	[DDLRegistration(0xb56993c1u)] NULL,
+	[DDLRegistration(0xe0d3d3dau)] GOLDEN_PATH,
+	[DDLRegistration(0xfb965921u)] SIDE_MISSION,
+	[DDLRegistration(0x33087e4du)] ARENA_CUP,
+	[DDLRegistration(0xcbd23f10u)] POCKET_DIMENSION,
+	[DDLRegistration(0x8d737682u)] GOLD_BOLTS,
+	[DDLRegistration(0x636c56d6u)] RYNO_PLANS,
 }
 
 public static class xbd8d5c4dValues {

@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xb1a3ff98u)]
 public enum xb1a3ff98 : uint {
-	[DDLRegistration(0x2f4afb93u)] Generic = 0x0u,
-	[DDLRegistration(0x80012eaeu)] ActiveFinisher = 0x1u,
+	[DDLRegistration(0x2f4afb93u)] Generic,
+	[DDLRegistration(0x80012eaeu)] ActiveFinisher,
 }
 
 public static class xb1a3ff98Values {

@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xb5cf515fu)]
 public enum SplineStyle : uint {
-	[DDLRegistration(0xb4907cc0u)] Standard = 0x0u,
-	[DDLRegistration(0x2c14d274u)] Center = 0x1u,
-	[DDLRegistration(0x560f00efu)] CenterLoop = 0x2u,
+	[DDLRegistration(0xb4907cc0u, "Standard")] Standard,
+	[DDLRegistration(0x2c14d274u, "Center")] Center,
+	[DDLRegistration(0x560f00efu, "Center Loop")] CenterLoop,
 }
 
 public static class SplineStyleValues {

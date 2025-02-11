@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x39725a2du)]
 public enum x39725a2d : uint {
-	[DDLRegistration(0x49f67933u)] StopPlaying = 0x0u,
-	[DDLRegistration(0xc4b38a90u)] Repeat = 0x1u,
+	[DDLRegistration(0x49f67933u, "Stop Playing")] StopPlaying,
+	[DDLRegistration(0xc4b38a90u, "Repeat")] Repeat,
 }
 
 public static class x39725a2dValues {

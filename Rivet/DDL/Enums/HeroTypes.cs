@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xc7c22b65u)]
 public enum HeroTypes : uint {
-	[DDLRegistration(0xb0d1367eu)] Ratchet = 0x0u,
-	[DDLRegistration(0xec8d20a7u)] Clank = 0x1u,
-	[DDLRegistration(0x088d5815u)] Ratchette = 0x2u,
-	[DDLRegistration(0xc259c77au)] Kit = 0x3u,
-	[DDLRegistration(0x0eb42269u)] None = 0x4u,
+	[DDLRegistration(0xb0d1367eu, "Ratchet")] Ratchet,
+	[DDLRegistration(0xec8d20a7u, "Clank")] Clank,
+	[DDLRegistration(0x088d5815u, "Rivet")] Ratchette,
+	[DDLRegistration(0xc259c77au, "Kit")] Kit,
+	[DDLRegistration(0x0eb42269u)] None,
 }
 
 public static class HeroTypesValues {

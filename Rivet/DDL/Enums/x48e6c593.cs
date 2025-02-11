@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x48e6c593u)]
 public enum x48e6c593 : uint {
-	[DDLRegistration(0x284394b2u)] Random = 0x0u,
-	[DDLRegistration(0xa8876a5bu)] Sequence = 0x1u,
+	[DDLRegistration(0x284394b2u)] Random,
+	[DDLRegistration(0xa8876a5bu)] Sequence,
 }
 
 public static class x48e6c593Values {

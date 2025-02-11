@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xc2e0975cu)]
 public enum xc2e0975c : uint {
-	[DDLRegistration(0x1423fd87u)] Unknown = 0x0u,
-	[DDLRegistration(0xf2d687bau)] Online = 0x1u,
-	[DDLRegistration(0x6118bc72u)] Offline = 0x2u,
+	[DDLRegistration(0x1423fd87u)] Unknown,
+	[DDLRegistration(0xf2d687bau, description: "Revision control is enabled and accepting commands.")] Online,
+	[DDLRegistration(0x6118bc72u, description: "Revision control is not enabled. Only calls to Get/SetConfig are valid.")] Offline,
 }
 
 public static class xc2e0975cValues {

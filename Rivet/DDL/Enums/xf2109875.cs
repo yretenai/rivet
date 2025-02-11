@@ -7,15 +7,15 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xf2109875u)]
 public enum xf2109875 : uint {
-	[DDLRegistration(0x20ea4c20u)] Hero = 0x0u,
-	[DDLRegistration(0x165997dbu)] Enemy = 0x1u,
-	[DDLRegistration(0x72a6b2abu)] Ally = 0x2u,
-	[DDLRegistration(0x4fda449cu)] Boss = 0x3u,
-	[DDLRegistration(0x879214e3u)] Hazard = 0x4u,
-	[DDLRegistration(0x85920badu)] Interact = 0x5u,
-	[DDLRegistration(0xcc1a6cabu)] Collectable = 0x6u,
-	[DDLRegistration(0xdc9595fbu)] EnemyHeavy = 0x7u,
-	[DDLRegistration(0x2d9383fdu)] ObjectivePing = 0x8u,
+	[DDLRegistration(0x20ea4c20u, "Hero")] Hero,
+	[DDLRegistration(0x165997dbu, "Enemy")] Enemy,
+	[DDLRegistration(0x72a6b2abu, "Ally")] Ally,
+	[DDLRegistration(0x4fda449cu, "Boss")] Boss,
+	[DDLRegistration(0x879214e3u, "Hazard")] Hazard,
+	[DDLRegistration(0x85920badu, "Interact")] Interact,
+	[DDLRegistration(0xcc1a6cabu, "Collectable")] Collectable,
+	[DDLRegistration(0xdc9595fbu, "Enemy Heavy")] EnemyHeavy,
+	[DDLRegistration(0x2d9383fdu, "Objective Ping")] ObjectivePing,
 }
 
 public static class xf2109875Values {

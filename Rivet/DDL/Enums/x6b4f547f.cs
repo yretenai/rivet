@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x6b4f547fu)]
 public enum x6b4f547f : uint {
-	[DDLRegistration(0x8662601bu)] InitializedZones = 0x0u,
-	[DDLRegistration(0x7be0a2e5u)] VisibleZones = 0x1u,
-	[DDLRegistration(0x1fdd94fau)] RequestedOverlays = 0x2u,
-	[DDLRegistration(0x909c9122u)] EnabledOpenUnits = 0x3u,
-	[DDLRegistration(0xa1d52ebfu)] All = 0x4u,
+	[DDLRegistration(0x8662601bu)] InitializedZones,
+	[DDLRegistration(0x7be0a2e5u)] VisibleZones,
+	[DDLRegistration(0x1fdd94fau)] RequestedOverlays,
+	[DDLRegistration(0x909c9122u)] EnabledOpenUnits,
+	[DDLRegistration(0xa1d52ebfu)] All,
 }
 
 public static class x6b4f547fValues {

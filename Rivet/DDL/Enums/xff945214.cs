@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xff945214u)]
 public enum xff945214 : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0x3e2db4c4u)] Swingshot = 0x1u,
-	[DDLRegistration(0x2001e716u)] MeleeThrow = 0x2u,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0x3e2db4c4u)] Swingshot,
+	[DDLRegistration(0x2001e716u)] MeleeThrow,
 }
 
 public static class xff945214Values {

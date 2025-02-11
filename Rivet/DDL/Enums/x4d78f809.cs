@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x4d78f809u)]
 public enum x4d78f809 : uint {
-	[DDLRegistration(0x53b69733u)] Directional = 0x0u,
-	[DDLRegistration(0xf43e8daau)] Radial = 0x1u,
-	[DDLRegistration(0x72c439ebu)] Curl = 0x2u,
+	[DDLRegistration(0x53b69733u, "Directional")] Directional,
+	[DDLRegistration(0xf43e8daau, "Radial")] Radial,
+	[DDLRegistration(0x72c439ebu, "Curl")] Curl,
 }
 
 public static class x4d78f809Values {

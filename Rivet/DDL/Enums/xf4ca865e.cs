@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xf4ca865eu)]
 public enum xf4ca865e : uint {
-	[DDLRegistration(0x7566b265u)] Active = 0x0u,
-	[DDLRegistration(0x241e39d4u)] InGame = 0x1u,
-	[DDLRegistration(0x6b26c40eu)] Menus = 0x2u,
+	[DDLRegistration(0x7566b265u)] Active,
+	[DDLRegistration(0x241e39d4u)] InGame,
+	[DDLRegistration(0x6b26c40eu)] Menus,
 }
 
 public static class xf4ca865eValues {

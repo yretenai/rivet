@@ -7,7 +7,7 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xd53eb9d4u)]
 public enum xd53eb9d4 : uint {
-	[DDLRegistration(0x7bb74728u)] AcceptOffer = 0x0u,
+	[DDLRegistration(0x7bb74728u)] AcceptOffer,
 }
 
 public static class xd53eb9d4Values {

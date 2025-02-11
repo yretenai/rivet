@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x6bf154abu)]
 public enum KeyFrameModifierOp : uint {
-	[DDLRegistration(0xb5d18a0cu)] Multiply = 0x0u,
-	[DDLRegistration(0xb5987e05u)] Replace = 0x1u,
-	[DDLRegistration(0x67d72c85u)] Add = 0x2u,
+	[DDLRegistration(0xb5d18a0cu, "Multiply")] Multiply,
+	[DDLRegistration(0xb5987e05u, "Replace")] Replace,
+	[DDLRegistration(0x67d72c85u, "Add")] Add,
 }
 
 public static class KeyFrameModifierOpValues {

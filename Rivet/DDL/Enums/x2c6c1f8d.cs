@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x2c6c1f8du)]
 public enum x2c6c1f8d : uint {
-	[DDLRegistration(0x86e406ccu)] Size = 0x0u,
-	[DDLRegistration(0xfbc80b20u)] Pressure = 0x1u,
+	[DDLRegistration(0x86e406ccu, "Size")] Size,
+	[DDLRegistration(0xfbc80b20u, "Pressure")] Pressure,
 }
 
 public static class x2c6c1f8dValues {

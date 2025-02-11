@@ -7,12 +7,12 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x85cb9e0eu)]
 public enum x85cb9e0e : uint {
-	[DDLRegistration(0xe0a1d993u)] One = 0x0u,
-	[DDLRegistration(0x8b07d504u)] Two = 0x1u,
-	[DDLRegistration(0xab031587u)] Three = 0x2u,
-	[DDLRegistration(0xe1e544dbu)] Four = 0x3u,
-	[DDLRegistration(0x4d96ee6du)] Five = 0x4u,
-	[DDLRegistration(0xd9da7999u)] Six = 0x5u,
+	[DDLRegistration(0xe0a1d993u, "One")] One,
+	[DDLRegistration(0x8b07d504u, "Two")] Two,
+	[DDLRegistration(0xab031587u, "Three")] Three,
+	[DDLRegistration(0xe1e544dbu, "Four")] Four,
+	[DDLRegistration(0x4d96ee6du, "Five")] Five,
+	[DDLRegistration(0xd9da7999u, "Six")] Six,
 }
 
 public static class x85cb9e0eValues {

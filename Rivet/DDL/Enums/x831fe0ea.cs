@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x831fe0eau)]
 public enum x831fe0ea : uint {
-	[DDLRegistration(0xb1710221u)] Off = 0x0u,
-	[DDLRegistration(0x6092e4ffu)] Inv = 0x1u,
-	[DDLRegistration(0x69e2d7d2u)] Rand = 0x2u,
+	[DDLRegistration(0xb1710221u, "Keep")] Off,
+	[DDLRegistration(0x6092e4ffu, "Invert")] Inv,
+	[DDLRegistration(0x69e2d7d2u, "Random")] Rand,
 }
 
 public static class x831fe0eaValues {

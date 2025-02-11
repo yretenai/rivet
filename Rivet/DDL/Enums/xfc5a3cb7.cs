@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xfc5a3cb7u)]
 public enum xfc5a3cb7 : uint {
-	[DDLRegistration(0x31fb9f65u)] Listener = 0x0u,
-	[DDLRegistration(0x57f8d755u)] Camera = 0x1u,
+	[DDLRegistration(0x31fb9f65u, "Listener", "Sampling rays cast from listener")] Listener,
+	[DDLRegistration(0x57f8d755u, "Camera", "Sampling rays cast from camera")] Camera,
 }
 
 public static class xfc5a3cb7Values {

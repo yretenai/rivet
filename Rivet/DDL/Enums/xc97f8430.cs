@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xc97f8430u)]
 public enum xc97f8430 : uint {
-	[DDLRegistration(0x8b15dbc2u)] Original = 0x0u,
-	[DDLRegistration(0x1b4e241du)] Forwarder = 0x1u,
-	[DDLRegistration(0x2a8b16acu)] Target = 0x2u,
+	[DDLRegistration(0x8b15dbc2u)] Original,
+	[DDLRegistration(0x1b4e241du)] Forwarder,
+	[DDLRegistration(0x2a8b16acu)] Target,
 }
 
 public static class xc97f8430Values {

@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xd3ac14c9u)]
 public enum xd3ac14c9 : uint {
-	[DDLRegistration(0x7adfe385u)] Random = 0x0u,
-	[DDLRegistration(0x6ccd0e8au)] Sequential = 0x1u,
+	[DDLRegistration(0x7adfe385u, "Random")] Random,
+	[DDLRegistration(0x6ccd0e8au, "Sequential")] Sequential,
 }
 
 public static class xd3ac14c9Values {

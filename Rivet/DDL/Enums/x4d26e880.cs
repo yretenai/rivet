@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x4d26e880u)]
 public enum x4d26e880 : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0xd07b3f48u)] Loop = 0x1u,
-	[DDLRegistration(0x3bff8b06u)] Last = 0x2u,
+	[DDLRegistration(0x0eb42269u, "No More Signals")] None,
+	[DDLRegistration(0xd07b3f48u, "Loop to First Signal")] Loop,
+	[DDLRegistration(0x3bff8b06u, "Continue Last Signal")] Last,
 }
 
 public static class x4d26e880Values {

@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xb118f295u)]
 public enum LocalizationFlags : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0xcf8773a1u)] NotSubtitled = 0x1u,
-	[DDLRegistration(0x8d774354u)] ForceSubtitle = 0x2u,
+	[DDLRegistration(0x0eb42269u, description: "No flags")] None,
+	[DDLRegistration(0xcf8773a1u, "Not Subtitled", "This Loc Tag will not be subtitled.")] NotSubtitled,
+	[DDLRegistration(0x8d774354u, "Force Subtitle", "This Loc Tag will always show subtitles.")] ForceSubtitle,
 }
 
 public static class LocalizationFlagsValues {

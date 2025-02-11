@@ -7,12 +7,12 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x8af8ec29u)]
 public enum x8af8ec29 : uint {
-	[DDLRegistration(0xf6b93f1fu)] RenderTextureTypeNone = 0x0u,
-	[DDLRegistration(0x6956eb70u)] RenderTextureTypeFull = 0x1u,
-	[DDLRegistration(0x25dcc93eu)] RenderTextureTypeThreeQuarter = 0x2u,
-	[DDLRegistration(0x46818b13u)] RenderTextureTypeTwoThird = 0x3u,
-	[DDLRegistration(0x72737ef1u)] RenderTextureTypeHalf = 0x4u,
-	[DDLRegistration(0x7425bffcu)] RenderTextureTypeQuarter = 0x5u,
+	[DDLRegistration(0xf6b93f1fu)] RenderTextureTypeNone,
+	[DDLRegistration(0x6956eb70u, "Full", "Render at full size")] RenderTextureTypeFull,
+	[DDLRegistration(0x25dcc93eu, "Three quarter", "Render at 3/4 size")] RenderTextureTypeThreeQuarter,
+	[DDLRegistration(0x46818b13u, "Two third", "Render at 2/3 size")] RenderTextureTypeTwoThird,
+	[DDLRegistration(0x72737ef1u, "Half", "Render at 1/2 size")] RenderTextureTypeHalf,
+	[DDLRegistration(0x7425bffcu, "Quarter", "Render at 1/4 size")] RenderTextureTypeQuarter,
 }
 
 public static class x8af8ec29Values {

@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xa7ea7084u)]
 public enum xa7ea7084 : uint {
-	[DDLRegistration(0x31968ddfu)] Everybody = 0x0u,
-	[DDLRegistration(0x165997dbu)] Enemy = 0x1u,
-	[DDLRegistration(0xb8ffe39au)] OnlyHeroShip = 0x2u,
-	[DDLRegistration(0x64ac8c72u)] HeroTurret = 0x3u,
-	[DDLRegistration(0xee3796d6u)] HeroShipOrTurret = 0x4u,
+	[DDLRegistration(0x31968ddfu, description: "Everybody is valid.")] Everybody,
+	[DDLRegistration(0x165997dbu, description: "An enemy of the actor this is on.")] Enemy,
+	[DDLRegistration(0xb8ffe39au, description: "Only the hero ship is valid.")] OnlyHeroShip,
+	[DDLRegistration(0x64ac8c72u, description: "Only the hero using a turret.")] HeroTurret,
+	[DDLRegistration(0xee3796d6u, description: "Only the hero using a turret or the hero ship.")] HeroShipOrTurret,
 }
 
 public static class xa7ea7084Values {

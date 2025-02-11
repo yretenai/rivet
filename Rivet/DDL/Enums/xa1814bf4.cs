@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xa1814bf4u)]
 public enum xa1814bf4 : uint {
-	[DDLRegistration(0xbad46aadu)] Keep = 0x0u,
-	[DDLRegistration(0xfec74cb6u)] Close = 0x1u,
-	[DDLRegistration(0xd5bde98du)] Hide = 0x2u,
+	[DDLRegistration(0xbad46aadu, "Keep", "Keep window open upon exit")] Keep,
+	[DDLRegistration(0xfec74cb6u, "Close", "Close window upon exit")] Close,
+	[DDLRegistration(0xd5bde98du, "Hide", "No window")] Hide,
 }
 
 public static class xa1814bf4Values {

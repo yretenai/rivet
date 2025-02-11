@@ -7,16 +7,16 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x3cdeb00du)]
 public enum x3cdeb00d : uint {
-	[DDLRegistration(0x220f5edau)] PathPlanar = 0x0u,
-	[DDLRegistration(0x182c7536u)] PathFull = 0x1u,
-	[DDLRegistration(0x1198d0c2u)] Placed = 0x2u,
-	[DDLRegistration(0x497a4104u)] PlacedPlusPath = 0x3u,
-	[DDLRegistration(0xd6b96b59u)] PlacedPlusPathPlanar = 0x4u,
-	[DDLRegistration(0xc8723410u)] Stop = 0x5u,
-	[DDLRegistration(0x8cfafcadu)] LookAtHero = 0x6u,
-	[DDLRegistration(0x3a1674a6u)] LookAtActor = 0x7u,
-	[DDLRegistration(0x4e531009u)] PlacedPlusLookAtActor = 0x8u,
-	[DDLRegistration(0x061badaeu)] MatchActor = 0x9u,
+	[DDLRegistration(0x220f5edau, "Path Planar")] PathPlanar,
+	[DDLRegistration(0x182c7536u, "Path Full")] PathFull,
+	[DDLRegistration(0x1198d0c2u, "As Placed")] Placed,
+	[DDLRegistration(0x497a4104u, "Placed Plus Path")] PlacedPlusPath,
+	[DDLRegistration(0xd6b96b59u, "Placed Plus Path Planar")] PlacedPlusPathPlanar,
+	[DDLRegistration(0xc8723410u, "Stop Match")] Stop,
+	[DDLRegistration(0x8cfafcadu, "Look At Hero")] LookAtHero,
+	[DDLRegistration(0x3a1674a6u, "Look At Actor")] LookAtActor,
+	[DDLRegistration(0x4e531009u, "Placed Plus Look At Actor")] PlacedPlusLookAtActor,
+	[DDLRegistration(0x061badaeu, "Match Actor")] MatchActor,
 }
 
 public static class x3cdeb00dValues {

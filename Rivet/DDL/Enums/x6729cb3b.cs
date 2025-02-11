@@ -7,12 +7,12 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x6729cb3bu)]
 public enum x6729cb3b : uint {
-	[DDLRegistration(0xdbd71ae0u)] BSphere = 0x0u,
-	[DDLRegistration(0x6a683c71u)] ActorPos = 0x1u,
-	[DDLRegistration(0xc343242fu)] Locator = 0x2u,
-	[DDLRegistration(0x6f57a6a8u)] BodyHead = 0x3u,
-	[DDLRegistration(0xd42103edu)] BodyTorso = 0x4u,
-	[DDLRegistration(0x57f8d755u)] Camera = 0x5u,
+	[DDLRegistration(0xdbd71ae0u, "BSphere")] BSphere,
+	[DDLRegistration(0x6a683c71u, "Actor Position")] ActorPos,
+	[DDLRegistration(0xc343242fu, "Locator (specify)")] Locator,
+	[DDLRegistration(0x6f57a6a8u, "Locator for the Head")] BodyHead,
+	[DDLRegistration(0xd42103edu, "Locator for the Torso")] BodyTorso,
+	[DDLRegistration(0x57f8d755u, "Camera position")] Camera,
 }
 
 public static class x6729cb3bValues {

@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x960da16du)]
 public enum FireMode : uint {
-	[DDLRegistration(0x5a5b5a9fu)] Default = 0x0u,
-	[DDLRegistration(0x6eee2fa1u)] Hold = 0x1u,
-	[DDLRegistration(0x490e94dbu)] Toggle = 0x2u,
+	[DDLRegistration(0x5a5b5a9fu, "Default")] Default,
+	[DDLRegistration(0x6eee2fa1u, "Hold")] Hold,
+	[DDLRegistration(0x490e94dbu, "Toggle")] Toggle,
 }
 
 public static class FireModeValues {

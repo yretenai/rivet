@@ -7,14 +7,14 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xef932fbau)]
 public enum xef932fba : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0xc063a8edu)] MeleeAttack1 = 0x1u,
-	[DDLRegistration(0x596af957u)] MeleeAttack2 = 0x2u,
-	[DDLRegistration(0x2e6dc9c1u)] MeleeAttack3 = 0x3u,
-	[DDLRegistration(0x34050e56u)] MeleeSmashDescend = 0x4u,
-	[DDLRegistration(0xc0292da9u)] MeleeSmashSlam = 0x5u,
-	[DDLRegistration(0xfddd1c82u)] MeleeOnGrind = 0x6u,
-	[DDLRegistration(0x41069e4eu)] MeleeHoverboot = 0x7u,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0xc063a8edu, "Attack 1")] MeleeAttack1,
+	[DDLRegistration(0x596af957u, "Attack 2")] MeleeAttack2,
+	[DDLRegistration(0x2e6dc9c1u, "Attack 3")] MeleeAttack3,
+	[DDLRegistration(0x34050e56u, "Smash Descend")] MeleeSmashDescend,
+	[DDLRegistration(0xc0292da9u, "Smash Slam")] MeleeSmashSlam,
+	[DDLRegistration(0xfddd1c82u, "Melee On Grind")] MeleeOnGrind,
+	[DDLRegistration(0x41069e4eu, "Melee Hoverboot")] MeleeHoverboot,
 }
 
 public static class xef932fbaValues {

@@ -7,12 +7,12 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x95ca39fbu)]
 public enum x95ca39fb : uint {
-	[DDLRegistration(0x6f3197c4u)] XYZ = 0x0u,
-	[DDLRegistration(0xabd0cf1cu)] YZX = 0x1u,
-	[DDLRegistration(0xeca72351u)] ZXY = 0x2u,
-	[DDLRegistration(0xdd1595bdu)] XZY = 0x3u,
-	[DDLRegistration(0x77e8ccb2u)] YXZ = 0x4u,
-	[DDLRegistration(0x82bb2286u)] ZYX = 0x5u,
+	[DDLRegistration(0x6f3197c4u)] XYZ,
+	[DDLRegistration(0xabd0cf1cu)] YZX,
+	[DDLRegistration(0xeca72351u)] ZXY,
+	[DDLRegistration(0xdd1595bdu)] XZY,
+	[DDLRegistration(0x77e8ccb2u)] YXZ,
+	[DDLRegistration(0x82bb2286u)] ZYX,
 }
 
 public static class x95ca39fbValues {

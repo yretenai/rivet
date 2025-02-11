@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xd1591f1cu)]
 public enum AnimSyncMode : uint {
-	[DDLRegistration(0x2a8ff107u)] FromBeginning = 0x0u,
-	[DDLRegistration(0x7116299cu)] NormT = 0x1u,
-	[DDLRegistration(0xfbcb9ad1u)] OneMinusNormT = 0x2u,
+	[DDLRegistration(0x2a8ff107u, "From Beginning")] FromBeginning,
+	[DDLRegistration(0x7116299cu, "Norm T")] NormT,
+	[DDLRegistration(0xfbcb9ad1u, "One Minus Norm T")] OneMinusNormT,
 }
 
 public static class AnimSyncModeValues {

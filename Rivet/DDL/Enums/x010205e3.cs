@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x010205e3u)]
 public enum x010205e3 : uint {
-	[DDLRegistration(0x015f70c8u)] BeginningOfShot = 0x0u,
-	[DDLRegistration(0xb27694e2u)] EndOfShot = 0x1u,
+	[DDLRegistration(0x015f70c8u, "Beginning Of Shot")] BeginningOfShot,
+	[DDLRegistration(0xb27694e2u, "End Of Shot")] EndOfShot,
 }
 
 public static class x010205e3Values {

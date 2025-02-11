@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x9b43a852u)]
 public enum x9b43a852 : uint {
-	[DDLRegistration(0x57f8d755u)] Camera = 0x0u,
-	[DDLRegistration(0x86dc9185u)] Light = 0x1u,
-	[DDLRegistration(0x7cea0751u)] Stickers = 0x2u,
-	[DDLRegistration(0xa964ec21u)] Character = 0x3u,
+	[DDLRegistration(0x57f8d755u)] Camera,
+	[DDLRegistration(0x86dc9185u)] Light,
+	[DDLRegistration(0x7cea0751u)] Stickers,
+	[DDLRegistration(0xa964ec21u)] Character,
 }
 
 public static class x9b43a852Values {

@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xf7b2e7beu)]
 public enum xf7b2e7be : uint {
-	[DDLRegistration(0x4f00c07fu)] None = 0x0u,
-	[DDLRegistration(0x2e553fddu)] Knockback = 0x1u,
-	[DDLRegistration(0x5f646ed1u)] Knockdown = 0x2u,
-	[DDLRegistration(0x15e08356u)] StumbleWhileMoving = 0x3u,
+	[DDLRegistration(0x4f00c07fu)] None,
+	[DDLRegistration(0x2e553fddu)] Knockback,
+	[DDLRegistration(0x5f646ed1u)] Knockdown,
+	[DDLRegistration(0x15e08356u)] StumbleWhileMoving,
 }
 
 public static class xf7b2e7beValues {

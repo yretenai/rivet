@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xc850698fu)]
 public enum OpenCurveFollowMode : uint {
-	[DDLRegistration(0xd07b3f48u)] Loop = 0x0u,
-	[DDLRegistration(0xfa1bc292u)] Oscillate = 0x1u,
-	[DDLRegistration(0x10cad7bcu)] OneShot = 0x2u,
+	[DDLRegistration(0xd07b3f48u)] Loop,
+	[DDLRegistration(0xfa1bc292u)] Oscillate,
+	[DDLRegistration(0x10cad7bcu)] OneShot,
 }
 
 public static class OpenCurveFollowModeValues {

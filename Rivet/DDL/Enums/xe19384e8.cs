@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xe19384e8u)]
 public enum xe19384e8 : uint {
-	[DDLRegistration(0x5a633e56u)] Point = 0x0u,
-	[DDLRegistration(0x4e304c82u)] Cuboid = 0x1u,
-	[DDLRegistration(0x137957a8u)] Ellipsoid = 0x2u,
-	[DDLRegistration(0x3f63f0adu)] Cylinder = 0x3u,
-	[DDLRegistration(0x7b6dfbc3u)] Capsule = 0x4u,
+	[DDLRegistration(0x5a633e56u)] Point,
+	[DDLRegistration(0x4e304c82u)] Cuboid,
+	[DDLRegistration(0x137957a8u)] Ellipsoid,
+	[DDLRegistration(0x3f63f0adu)] Cylinder,
+	[DDLRegistration(0x7b6dfbc3u)] Capsule,
 }
 
 public static class xe19384e8Values {

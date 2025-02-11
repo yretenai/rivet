@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x7487ff22u)]
 public enum x7487ff22 : uint {
-	[DDLRegistration(0x5d6a80afu)] LaserLeftArm = 0x0u,
-	[DDLRegistration(0x99687493u)] LaserRightArm = 0x1u,
+	[DDLRegistration(0x5d6a80afu)] LaserLeftArm,
+	[DDLRegistration(0x99687493u)] LaserRightArm,
 }
 
 public static class x7487ff22Values {

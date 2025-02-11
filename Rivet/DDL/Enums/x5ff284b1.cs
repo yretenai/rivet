@@ -7,14 +7,14 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x5ff284b1u)]
 public enum x5ff284b1 : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0x26795d99u)] Added = 0x1u,
-	[DDLRegistration(0x0769a03du)] Removed = 0x2u,
-	[DDLRegistration(0x6f961a5bu)] Increment = 0x3u,
-	[DDLRegistration(0xc3b3e15au)] Decrement = 0x4u,
-	[DDLRegistration(0xdbe1013au)] Transferred = 0x5u,
-	[DDLRegistration(0x27637e77u)] Loaded = 0x6u,
-	[DDLRegistration(0x284c584eu)] Transfered = 0x7u,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0x26795d99u)] Added,
+	[DDLRegistration(0x0769a03du)] Removed,
+	[DDLRegistration(0x6f961a5bu)] Increment,
+	[DDLRegistration(0xc3b3e15au)] Decrement,
+	[DDLRegistration(0xdbe1013au)] Transferred,
+	[DDLRegistration(0x27637e77u)] Loaded,
+	[DDLRegistration(0x284c584eu)] Transfered,
 }
 
 public static class x5ff284b1Values {

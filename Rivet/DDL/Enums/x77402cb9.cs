@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x77402cb9u)]
 public enum x77402cb9 : uint {
-	[DDLRegistration(0xfed58730u)] ParentMode = 0x0u,
-	[DDLRegistration(0x6cf262b2u)] FollowMode = 0x1u,
+	[DDLRegistration(0xfed58730u, "Parent", "Users will apply motion after local motion")] ParentMode,
+	[DDLRegistration(0x6cf262b2u, "Follow", "Users will apply motion as part of local motion")] FollowMode,
 }
 
 public static class x77402cb9Values {

@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x597cb7dau)]
 public enum x597cb7da : uint {
-	[DDLRegistration(0x2d7d5eb6u)] FireStyleLight = 0x0u,
-	[DDLRegistration(0x15ecbc3eu)] FireStyleMedium = 0x1u,
-	[DDLRegistration(0x3c56781eu)] FireStyleHeavy = 0x2u,
+	[DDLRegistration(0x2d7d5eb6u)] FireStyleLight,
+	[DDLRegistration(0x15ecbc3eu)] FireStyleMedium,
+	[DDLRegistration(0x3c56781eu)] FireStyleHeavy,
 }
 
 public static class x597cb7daValues {

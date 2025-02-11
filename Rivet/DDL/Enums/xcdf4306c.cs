@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xcdf4306cu)]
 public enum xcdf4306c : uint {
-	[DDLRegistration(0x74308d6fu)] On = 0x0u,
-	[DDLRegistration(0x8467ac12u)] Fill = 0x1u,
+	[DDLRegistration(0x74308d6fu, "On")] On,
+	[DDLRegistration(0x8467ac12u, "Fill")] Fill,
 }
 
 public static class xcdf4306cValues {

@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x38e4d198u)]
 public enum x38e4d198 : uint {
-	[DDLRegistration(0xaf03d67cu)] activity = 0x0u,
-	[DDLRegistration(0xc2dcb4abu)] task = 0x1u,
-	[DDLRegistration(0xe5ae5c34u)] subTask = 0x2u,
+	[DDLRegistration(0xaf03d67cu)] activity,
+	[DDLRegistration(0xc2dcb4abu)] task,
+	[DDLRegistration(0xe5ae5c34u)] subTask,
 }
 
 public static class x38e4d198Values {

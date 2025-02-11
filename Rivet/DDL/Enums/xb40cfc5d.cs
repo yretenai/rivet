@@ -7,14 +7,14 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xb40cfc5du)]
 public enum xb40cfc5d : uint {
-	[DDLRegistration(0xbe03315bu)] Host = 0x0u,
-	[DDLRegistration(0x41715747u)] Guest = 0x1u,
-	[DDLRegistration(0xb31f7703u)] HostToGuest2D = 0x2u,
-	[DDLRegistration(0xaa044642u)] HostToGuest3D = 0x3u,
-	[DDLRegistration(0xc3e9a6e3u)] ExternalAnchorIsMayaOrigin = 0x4u,
-	[DDLRegistration(0xb434797au)] ExternalAnchorIsGuest = 0x5u,
-	[DDLRegistration(0xf4e95b0cu)] ExternalAnchorIsHost = 0x6u,
-	[DDLRegistration(0x705c0594u)] GuestToGuest2D = 0x7u,
+	[DDLRegistration(0xbe03315bu)] Host,
+	[DDLRegistration(0x41715747u)] Guest,
+	[DDLRegistration(0xb31f7703u)] HostToGuest2D,
+	[DDLRegistration(0xaa044642u)] HostToGuest3D,
+	[DDLRegistration(0xc3e9a6e3u)] ExternalAnchorIsMayaOrigin,
+	[DDLRegistration(0xb434797au)] ExternalAnchorIsGuest,
+	[DDLRegistration(0xf4e95b0cu)] ExternalAnchorIsHost,
+	[DDLRegistration(0x705c0594u)] GuestToGuest2D,
 }
 
 public static class xb40cfc5dValues {

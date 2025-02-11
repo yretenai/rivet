@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xec2141ecu)]
 public enum xec2141ec : uint {
-	[DDLRegistration(0xa0cdb0c8u)] DbUpToDate = 0x0u,
-	[DDLRegistration(0x92ba18d2u)] DbBehind = 0x1u,
-	[DDLRegistration(0xfd881be0u)] DbAhead = 0x2u,
-	[DDLRegistration(0xed27a2eeu)] DbMissing = 0x3u,
-	[DDLRegistration(0x547096e5u)] DbExtra = 0x4u,
+	[DDLRegistration(0xa0cdb0c8u, "Db version is Up-to-date with what is on disk")] DbUpToDate,
+	[DDLRegistration(0x92ba18d2u, "DB version is behind version on disk")] DbBehind,
+	[DDLRegistration(0xfd881be0u, "Db version is ahead of version on disk")] DbAhead,
+	[DDLRegistration(0xed27a2eeu, "Db entry does not exist")] DbMissing,
+	[DDLRegistration(0x547096e5u, "Db has an extra entry that does not exist on disk")] DbExtra,
 }
 
 public static class xec2141ecValues {

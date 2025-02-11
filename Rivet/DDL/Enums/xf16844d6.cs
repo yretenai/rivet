@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xf16844d6u)]
 public enum xf16844d6 : uint {
-	[DDLRegistration(0x8cfafcadu)] LookAtHero = 0x0u,
-	[DDLRegistration(0x78310c02u)] LookAtSpecificTarget = 0x1u,
+	[DDLRegistration(0x8cfafcadu)] LookAtHero,
+	[DDLRegistration(0x78310c02u)] LookAtSpecificTarget,
 }
 
 public static class xf16844d6Values {

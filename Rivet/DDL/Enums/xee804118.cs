@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xee804118u)]
 public enum xee804118 : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0x0f19755fu)] ActorSwap = 0x1u,
-	[DDLRegistration(0x674aaaa0u)] Portal = 0x2u,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0x0f19755fu)] ActorSwap,
+	[DDLRegistration(0x674aaaa0u)] Portal,
 }
 
 public static class xee804118Values {

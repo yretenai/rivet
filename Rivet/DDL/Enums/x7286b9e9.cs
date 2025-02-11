@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x7286b9e9u)]
 public enum x7286b9e9 : uint {
-	[DDLRegistration(0x31407175u)] BiBlendNodeTypeDefault = 0x0u,
-	[DDLRegistration(0x02e87803u)] BiBlendNodeTypeAdditive = 0x1u,
-	[DDLRegistration(0x851ac9d6u)] BiBlendNodeTypeCombineAdditive = 0x2u,
-	[DDLRegistration(0x34b33e2cu)] BiBlendNodeTypeDifference = 0x3u,
+	[DDLRegistration(0x31407175u, "Default")] BiBlendNodeTypeDefault,
+	[DDLRegistration(0x02e87803u, "Additive")] BiBlendNodeTypeAdditive,
+	[DDLRegistration(0x851ac9d6u, "Combine-additive")] BiBlendNodeTypeCombineAdditive,
+	[DDLRegistration(0x34b33e2cu, "Difference")] BiBlendNodeTypeDifference,
 }
 
 public static class x7286b9e9Values {

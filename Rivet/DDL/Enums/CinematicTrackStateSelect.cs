@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x8bdec143u)]
 public enum CinematicTrackStateSelect : uint {
-	[DDLRegistration(0x27fac552u)] Active = 0x0u,
-	[DDLRegistration(0xbd9d51fau)] Mute = 0x1u,
-	[DDLRegistration(0x7e2426b7u)] Solo = 0x2u,
+	[DDLRegistration(0x27fac552u)] Active,
+	[DDLRegistration(0xbd9d51fau)] Mute,
+	[DDLRegistration(0x7e2426b7u)] Solo,
 }
 
 public static class CinematicTrackStateSelectValues {

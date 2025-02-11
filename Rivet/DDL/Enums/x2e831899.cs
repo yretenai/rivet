@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x2e831899u)]
 public enum x2e831899 : uint {
-	[DDLRegistration(0x187468d4u)] CheckLastPlaythrough = 0x0u,
-	[DDLRegistration(0x4e97e9fdu)] CheckNextPlaythrough = 0x1u,
+	[DDLRegistration(0x187468d4u)] CheckLastPlaythrough,
+	[DDLRegistration(0x4e97e9fdu)] CheckNextPlaythrough,
 }
 
 public static class x2e831899Values {

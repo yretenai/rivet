@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xcc18a97du)]
 public enum xcc18a97d : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0x8e8112a9u)] LeftBias = 0x1u,
-	[DDLRegistration(0xa8f3bb52u)] RightBias = 0x2u,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0x8e8112a9u, "Left Bias")] LeftBias,
+	[DDLRegistration(0xa8f3bb52u, "Right Bias")] RightBias,
 }
 
 public static class xcc18a97dValues {

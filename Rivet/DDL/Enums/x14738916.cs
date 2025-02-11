@@ -7,13 +7,13 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x14738916u)]
 public enum x14738916 : uint {
-	[DDLRegistration(0x429c90dbu)] InOrder = 0x0u,
-	[DDLRegistration(0x32143a49u)] Shuffle = 0x1u,
-	[DDLRegistration(0xe42f0aacu)] Cluster = 0x2u,
-	[DDLRegistration(0x42cdee1fu)] Spread = 0x3u,
-	[DDLRegistration(0xbf344ea2u)] CloseToPlayers = 0x4u,
-	[DDLRegistration(0x9c02881eu)] FarFromPlayers = 0x5u,
-	[DDLRegistration(0xecc32324u)] CustomCode = 0x6u,
+	[DDLRegistration(0x429c90dbu)] InOrder,
+	[DDLRegistration(0x32143a49u)] Shuffle,
+	[DDLRegistration(0xe42f0aacu)] Cluster,
+	[DDLRegistration(0x42cdee1fu)] Spread,
+	[DDLRegistration(0xbf344ea2u)] CloseToPlayers,
+	[DDLRegistration(0x9c02881eu)] FarFromPlayers,
+	[DDLRegistration(0xecc32324u)] CustomCode,
 }
 
 public static class x14738916Values {

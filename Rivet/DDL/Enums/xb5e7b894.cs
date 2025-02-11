@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xb5e7b894u)]
 public enum xb5e7b894 : uint {
-	[DDLRegistration(0x01e9748au)] Off = 0x0u,
-	[DDLRegistration(0x3cde0415u)] On = 0x1u,
-	[DDLRegistration(0x336a865cu)] NoReload = 0x2u,
+	[DDLRegistration(0x01e9748au)] Off,
+	[DDLRegistration(0x3cde0415u)] On,
+	[DDLRegistration(0x336a865cu)] NoReload,
 }
 
 public static class xb5e7b894Values {

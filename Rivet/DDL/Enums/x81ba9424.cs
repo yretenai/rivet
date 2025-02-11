@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x81ba9424u)]
 public enum x81ba9424 : uint {
-	[DDLRegistration(0x39d3bd38u)] TypeDirectional = 0x0u,
-	[DDLRegistration(0x37b620bcu)] TypeCylinder = 0x1u,
-	[DDLRegistration(0x69841de0u)] TypeSphere = 0x2u,
+	[DDLRegistration(0x39d3bd38u, "Force Shape - Directional")] TypeDirectional,
+	[DDLRegistration(0x37b620bcu, "Force Shape - Cylinder")] TypeCylinder,
+	[DDLRegistration(0x69841de0u, "Force Shape - Sphere")] TypeSphere,
 }
 
 public static class x81ba9424Values {

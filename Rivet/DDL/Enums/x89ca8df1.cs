@@ -7,13 +7,13 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x89ca8df1u)]
 public enum x89ca8df1 : uint {
-	[DDLRegistration(0x6c09e478u)] FieldResponse = 0x0u,
-	[DDLRegistration(0x716558f5u)] FieldStack = 0x1u,
-	[DDLRegistration(0x5a0b4770u)] FieldConst = 0x2u,
-	[DDLRegistration(0x0b632938u)] FieldEvent = 0x3u,
-	[DDLRegistration(0xed82e6b4u)] FieldSender = 0x4u,
-	[DDLRegistration(0x74b87566u)] FieldActor = 0x5u,
-	[DDLRegistration(0x5a8727f8u)] FieldGlobal = 0x6u,
+	[DDLRegistration(0x6c09e478u, "Effect Response")] FieldResponse,
+	[DDLRegistration(0x716558f5u, "Field Stack")] FieldStack,
+	[DDLRegistration(0x5a0b4770u, "Constant")] FieldConst,
+	[DDLRegistration(0x0b632938u, "Input Event")] FieldEvent,
+	[DDLRegistration(0xed82e6b4u, "Sending Actor")] FieldSender,
+	[DDLRegistration(0x74b87566u, "Receiving Actor")] FieldActor,
+	[DDLRegistration(0x5a8727f8u, "Global Value")] FieldGlobal,
 }
 
 public static class x89ca8df1Values {

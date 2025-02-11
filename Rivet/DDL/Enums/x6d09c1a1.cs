@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x6d09c1a1u)]
 public enum x6d09c1a1 : uint {
-	[DDLRegistration(0xf243fd69u)] NoLock = 0x0u,
-	[DDLRegistration(0x6f26b45bu)] LockAtStartOfWalk = 0x1u,
-	[DDLRegistration(0x44cab5dbu)] LockAtEndOfWalk = 0x2u,
-	[DDLRegistration(0x9a3a4cfeu)] LockTriggeredByEvent = 0x3u,
+	[DDLRegistration(0xf243fd69u, "Never Aim Locked (always tracks target)")] NoLock,
+	[DDLRegistration(0x6f26b45bu, "Aim Lock at Start of Walk")] LockAtStartOfWalk,
+	[DDLRegistration(0x44cab5dbu, "Aim Lock at End of Walk")] LockAtEndOfWalk,
+	[DDLRegistration(0x9a3a4cfeu, "Aim Lock Triggered by Event (AimModWalkToTargetLockAimEvent)")] LockTriggeredByEvent,
 }
 
 public static class x6d09c1a1Values {

@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xdf426005u)]
 public enum SplineTypes : uint {
-	[DDLRegistration(0xf74957e0u)] Centripetal = 0x0u,
-	[DDLRegistration(0x2fd79cc2u)] SurfaceBound = 0x1u,
-	[DDLRegistration(0x613a81e3u)] Linear = 0x2u,
-	[DDLRegistration(0x275f3b41u)] CatmullRom = 0x3u,
-	[DDLRegistration(0x4f2923f7u)] Uniform = 0x4u,
+	[DDLRegistration(0xf74957e0u, "Centripetal")] Centripetal,
+	[DDLRegistration(0x2fd79cc2u, "Surface Bound")] SurfaceBound,
+	[DDLRegistration(0x613a81e3u, "Linear")] Linear,
+	[DDLRegistration(0x275f3b41u, "Catmull-Rom")] CatmullRom,
+	[DDLRegistration(0x4f2923f7u, "Uniform")] Uniform,
 }
 
 public static class SplineTypesValues {

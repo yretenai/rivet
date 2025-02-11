@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x051c5867u)]
 public enum x051c5867 : uint {
-	[DDLRegistration(0xb1710221u)] Off = 0x0u,
-	[DDLRegistration(0x3c32711cu)] ObjectSpace = 0x1u,
-	[DDLRegistration(0xd4b749cbu)] WorldSpace = 0x2u,
+	[DDLRegistration(0xb1710221u, "Off", "The height will not be clamped.")] Off,
+	[DDLRegistration(0x3c32711cu, "Object Space", "The height will be clamped; the height value is specified in object space.")] ObjectSpace,
+	[DDLRegistration(0xd4b749cbu, "World Space", "The height will be clamped; the height value is specified in world space.")] WorldSpace,
 }
 
 public static class x051c5867Values {

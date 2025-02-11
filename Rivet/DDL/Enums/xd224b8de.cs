@@ -7,15 +7,15 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xd224b8deu)]
 public enum xd224b8de : uint {
-	[DDLRegistration(0x35b7c43cu)] OpMul = 0x0u,
-	[DDLRegistration(0x21735b94u)] OpDiv = 0x1u,
-	[DDLRegistration(0x61af967au)] OpAdd = 0x2u,
-	[DDLRegistration(0xc4b76741u)] OpSub = 0x3u,
-	[DDLRegistration(0x8b41b6d5u)] OpMod = 0x4u,
-	[DDLRegistration(0x9b407ef0u)] OpAnd = 0x5u,
-	[DDLRegistration(0xae3e3165u)] OpOr = 0x6u,
-	[DDLRegistration(0x6761a7d5u)] OpRandSelect = 0x7u,
-	[DDLRegistration(0xd63eb4d1u)] OpRandRange = 0x8u,
+	[DDLRegistration(0x35b7c43cu, "Multiply")] OpMul,
+	[DDLRegistration(0x21735b94u, "Divide")] OpDiv,
+	[DDLRegistration(0x61af967au, "Add")] OpAdd,
+	[DDLRegistration(0xc4b76741u, "Subtract")] OpSub,
+	[DDLRegistration(0x8b41b6d5u, "Modulo")] OpMod,
+	[DDLRegistration(0x9b407ef0u, "And")] OpAnd,
+	[DDLRegistration(0xae3e3165u, "Or")] OpOr,
+	[DDLRegistration(0x6761a7d5u, "Rand Select")] OpRandSelect,
+	[DDLRegistration(0xd63eb4d1u, "Rand Range")] OpRandRange,
 }
 
 public static class xd224b8deValues {

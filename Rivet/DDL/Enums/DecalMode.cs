@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xcef8d297u)]
 public enum DecalMode : uint {
-	[DDLRegistration(0x904b18f0u)] Mesh = 0x0u,
-	[DDLRegistration(0xa199b880u)] ScreenSpace = 0x1u,
+	[DDLRegistration(0x904b18f0u, description: "In this mode, the decal will render using the normal mesh-based pipeline.")] Mesh,
+	[DDLRegistration(0xa199b880u, description: "In this mode, the decal will render using screen space projection.")] ScreenSpace,
 }
 
 public static class DecalModeValues {

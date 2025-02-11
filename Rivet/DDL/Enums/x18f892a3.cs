@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x18f892a3u)]
 public enum x18f892a3 : uint {
-	[DDLRegistration(0x6f0d7e9fu)] Constant = 0x0u,
-	[DDLRegistration(0x8b90859bu)] Color = 0x1u,
-	[DDLRegistration(0x3b635732u)] Texture = 0x2u,
+	[DDLRegistration(0x6f0d7e9fu)] Constant,
+	[DDLRegistration(0x8b90859bu)] Color,
+	[DDLRegistration(0x3b635732u)] Texture,
 }
 
 public static class x18f892a3Values {

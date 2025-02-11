@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x2822817au)]
 public enum x2822817a : uint {
-	[DDLRegistration(0xce9b126cu)] TargetLocal = 0x0u,
-	[DDLRegistration(0x931ea69cu)] InitialMoverLocal = 0x1u,
-	[DDLRegistration(0xd7b1dc31u)] World = 0x2u,
+	[DDLRegistration(0xce9b126cu)] TargetLocal,
+	[DDLRegistration(0x931ea69cu)] InitialMoverLocal,
+	[DDLRegistration(0xd7b1dc31u)] World,
 }
 
 public static class x2822817aValues {

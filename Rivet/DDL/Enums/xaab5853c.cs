@@ -7,20 +7,20 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xaab5853cu)]
 public enum xaab5853c : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0x3e347b4fu)] SingleShot = 0x1u,
-	[DDLRegistration(0xc2f47c55u)] AutoShot = 0x2u,
-	[DDLRegistration(0xb5f42cc3u)] Continuous = 0x3u,
-	[DDLRegistration(0x18e6a0f8u)] ChargeUp = 0x4u,
-	[DDLRegistration(0x2221b6d3u)] Melee = 0x5u,
-	[DDLRegistration(0x99602fcbu)] Custom = 0x6u,
-	[DDLRegistration(0x5b658cb9u)] SingleShotRelease = 0x7u,
-	[DDLRegistration(0xd1ef33fdu)] SingleShotTap = 0x8u,
-	[DDLRegistration(0xc93ce0e8u)] Multipress = 0x9u,
-	[DDLRegistration(0x765ccc05u)] MultiPressFireOnRelease = 0xau,
-	[DDLRegistration(0x139e13c5u)] ChargeUpAutoRelease = 0xbu,
-	[DDLRegistration(0x378dc4b0u)] CookedSingleShot = 0xcu,
-	[DDLRegistration(0xc3a99378u)] SpinUpAutoShot = 0xdu,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0x3e347b4fu)] SingleShot,
+	[DDLRegistration(0xc2f47c55u)] AutoShot,
+	[DDLRegistration(0xb5f42cc3u)] Continuous,
+	[DDLRegistration(0x18e6a0f8u)] ChargeUp,
+	[DDLRegistration(0x2221b6d3u)] Melee,
+	[DDLRegistration(0x99602fcbu)] Custom,
+	[DDLRegistration(0x5b658cb9u)] SingleShotRelease,
+	[DDLRegistration(0xd1ef33fdu)] SingleShotTap,
+	[DDLRegistration(0xc93ce0e8u)] Multipress,
+	[DDLRegistration(0x765ccc05u)] MultiPressFireOnRelease,
+	[DDLRegistration(0x139e13c5u)] ChargeUpAutoRelease,
+	[DDLRegistration(0x378dc4b0u)] CookedSingleShot,
+	[DDLRegistration(0xc3a99378u)] SpinUpAutoShot,
 }
 
 public static class xaab5853cValues {

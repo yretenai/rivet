@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x8693007eu)]
 public enum x8693007e : uint {
-	[DDLRegistration(0x79a37e0au)] Help = 0x0u,
-	[DDLRegistration(0x0f355985u)] HelpCentered = 0x1u,
-	[DDLRegistration(0x419085b4u)] Confirmation = 0x2u,
+	[DDLRegistration(0x79a37e0au)] Help,
+	[DDLRegistration(0x0f355985u)] HelpCentered,
+	[DDLRegistration(0x419085b4u)] Confirmation,
 }
 
 public static class x8693007eValues {

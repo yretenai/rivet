@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x11d5b447u)]
 public enum x11d5b447 : uint {
-	[DDLRegistration(0x730f0340u)] Fixed = 0x0u,
-	[DDLRegistration(0x913d9368u)] AlwaysFacing = 0x1u,
+	[DDLRegistration(0x730f0340u, "Fixed")] Fixed,
+	[DDLRegistration(0x913d9368u, "Camera facing")] AlwaysFacing,
 }
 
 public static class x11d5b447Values {

@@ -7,20 +7,20 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x63d44adau)]
 public enum WeaponMacroType : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0x7804ee72u)] Handgun = 0x1u,
-	[DDLRegistration(0x57ab09a1u)] Shotgun = 0x2u,
-	[DDLRegistration(0x561237a7u)] Rifle = 0x3u,
-	[DDLRegistration(0xc2cc719bu)] Sniper = 0x4u,
-	[DDLRegistration(0xd3e5b9f1u)] Grenade = 0x5u,
-	[DDLRegistration(0x60fab329u)] RPG = 0x6u,
-	[DDLRegistration(0x9e54b502u)] SMG = 0x7u,
-	[DDLRegistration(0x2221b6d3u)] Melee = 0x8u,
-	[DDLRegistration(0x04765ed5u)] Whip = 0x9u,
-	[DDLRegistration(0x7277ebb8u)] Shield = 0xau,
-	[DDLRegistration(0xb22af749u)] Perk = 0xbu,
-	[DDLRegistration(0x892e514fu)] LMG = 0xcu,
-	[DDLRegistration(0xafea75edu)] Grapplegun = 0xdu,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0x7804ee72u)] Handgun,
+	[DDLRegistration(0x57ab09a1u)] Shotgun,
+	[DDLRegistration(0x561237a7u)] Rifle,
+	[DDLRegistration(0xc2cc719bu)] Sniper,
+	[DDLRegistration(0xd3e5b9f1u)] Grenade,
+	[DDLRegistration(0x60fab329u)] RPG,
+	[DDLRegistration(0x9e54b502u)] SMG,
+	[DDLRegistration(0x2221b6d3u)] Melee,
+	[DDLRegistration(0x04765ed5u)] Whip,
+	[DDLRegistration(0x7277ebb8u)] Shield,
+	[DDLRegistration(0xb22af749u)] Perk,
+	[DDLRegistration(0x892e514fu)] LMG,
+	[DDLRegistration(0xafea75edu)] Grapplegun,
 }
 
 public static class WeaponMacroTypeValues {

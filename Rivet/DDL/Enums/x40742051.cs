@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x40742051u)]
 public enum x40742051 : uint {
-	[DDLRegistration(0x4d6151b4u)] Normal = 0x0u,
-	[DDLRegistration(0x9c134e28u)] TraversalBlock = 0x1u,
-	[DDLRegistration(0x9b94d47fu)] ActiveTraversalBlock = 0x2u,
-	[DDLRegistration(0xe11be523u)] AttackBarrier = 0x3u,
+	[DDLRegistration(0x4d6151b4u, "Attack")] Normal,
+	[DDLRegistration(0x9c134e28u, "TraversalObjectBlock")] TraversalBlock,
+	[DDLRegistration(0x9b94d47fu, "ActiveTraversalBlock")] ActiveTraversalBlock,
+	[DDLRegistration(0xe11be523u, "AttackFortBarrier")] AttackBarrier,
 }
 
 public static class x40742051Values {

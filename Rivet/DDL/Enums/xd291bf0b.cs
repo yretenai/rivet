@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xd291bf0bu)]
 public enum xd291bf0b : uint {
-	[DDLRegistration(0x522665f1u)] OverrideOcean = 0x0u,
-	[DDLRegistration(0xe42d342cu)] LocalWater = 0x1u,
-	[DDLRegistration(0x81e59d6cu)] Ocean = 0x2u,
-	[DDLRegistration(0x19e91f37u)] Hole = 0x3u,
-	[DDLRegistration(0x1825aa59u)] River = 0x4u,
+	[DDLRegistration(0x522665f1u, "Override Ocean")] OverrideOcean,
+	[DDLRegistration(0xe42d342cu, "Local Water")] LocalWater,
+	[DDLRegistration(0x81e59d6cu, "Ocean")] Ocean,
+	[DDLRegistration(0x19e91f37u, "Hole")] Hole,
+	[DDLRegistration(0x1825aa59u, "River")] River,
 }
 
 public static class xd291bf0bValues {

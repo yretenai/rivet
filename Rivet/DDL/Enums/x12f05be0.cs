@@ -7,12 +7,12 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x12f05be0u)]
 public enum x12f05be0 : uint {
-	[DDLRegistration(0x5e9475c6u)] Forward = 0x0u,
-	[DDLRegistration(0x1ceae391u)] Back = 0x1u,
-	[DDLRegistration(0x0b43c5ceu)] Left = 0x2u,
-	[DDLRegistration(0x590cb866u)] Right = 0x3u,
-	[DDLRegistration(0x3e124ad7u)] Up = 0x4u,
-	[DDLRegistration(0x6ddbb29du)] Down = 0x5u,
+	[DDLRegistration(0x5e9475c6u, "Forward")] Forward,
+	[DDLRegistration(0x1ceae391u, "Back")] Back,
+	[DDLRegistration(0x0b43c5ceu, "Left")] Left,
+	[DDLRegistration(0x590cb866u, "Right")] Right,
+	[DDLRegistration(0x3e124ad7u, "Up")] Up,
+	[DDLRegistration(0x6ddbb29du, "Down")] Down,
 }
 
 public static class x12f05be0Values {

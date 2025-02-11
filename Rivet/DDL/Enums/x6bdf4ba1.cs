@@ -7,19 +7,19 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x6bdf4ba1u)]
 public enum x6bdf4ba1 : uint {
-	[DDLRegistration(0x1d21bfb0u)] Neutral = 0x0u,
-	[DDLRegistration(0x5036470bu)] BlueTeam = 0x1u,
-	[DDLRegistration(0x2e83dd65u)] RedTeam = 0x2u,
-	[DDLRegistration(0xe8a6c970u)] Indigenous = 0x3u,
-	[DDLRegistration(0x65001359u)] Thugs4Less = 0x4u,
-	[DDLRegistration(0x0a127212u)] NeoNefarious = 0x5u,
-	[DDLRegistration(0xbc8e602bu)] Pirate = 0x6u,
-	[DDLRegistration(0x51b8d510u)] NeoNefariousCivilian = 0x7u,
-	[DDLRegistration(0x01540130u)] MegalopolisCivilian = 0x8u,
-	[DDLRegistration(0x950b3a62u)] CivilianEnemy = 0x9u,
-	[DDLRegistration(0x457d68c7u)] AmbientTarget = 0xau,
-	[DDLRegistration(0xc823ae92u)] CordelionWorker = 0xbu,
-	[DDLRegistration(0xd7698682u)] Virus = 0xcu,
+	[DDLRegistration(0x1d21bfb0u, "Neutral")] Neutral,
+	[DDLRegistration(0x5036470bu, "Hero (MP Blue Team)")] BlueTeam,
+	[DDLRegistration(0x2e83dd65u, "MP Red Team")] RedTeam,
+	[DDLRegistration(0xe8a6c970u, "Indigenous")] Indigenous,
+	[DDLRegistration(0x65001359u, "Thugs 4 Less")] Thugs4Less,
+	[DDLRegistration(0x0a127212u, "Neo-Nefarious")] NeoNefarious,
+	[DDLRegistration(0xbc8e602bu, "Pirate")] Pirate,
+	[DDLRegistration(0x51b8d510u, "Neo-Nefarious Civilian")] NeoNefariousCivilian,
+	[DDLRegistration(0x01540130u, "Megalopolis Civilian")] MegalopolisCivilian,
+	[DDLRegistration(0x950b3a62u, "CivilianEnemy")] CivilianEnemy,
+	[DDLRegistration(0x457d68c7u, "Ambient Target")] AmbientTarget,
+	[DDLRegistration(0xc823ae92u, "Cordelion Worker")] CordelionWorker,
+	[DDLRegistration(0xd7698682u, "Virus")] Virus,
 }
 
 public static class x6bdf4ba1Values {

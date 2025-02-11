@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x2a6b461bu)]
 public enum HUDCollectibleMessageType : uint {
-	[DDLRegistration(0x99a77209u)] GoldBolt = 0x0u,
-	[DDLRegistration(0x2370d2d2u)] RynoPlan = 0x1u,
-	[DDLRegistration(0x92f62222u)] RuinToken = 0x2u,
-	[DDLRegistration(0x5a7a2d27u)] Vanity = 0x3u,
+	[DDLRegistration(0x99a77209u)] GoldBolt,
+	[DDLRegistration(0x2370d2d2u)] RynoPlan,
+	[DDLRegistration(0x92f62222u)] RuinToken,
+	[DDLRegistration(0x5a7a2d27u)] Vanity,
 }
 
 public static class HUDCollectibleMessageTypeValues {

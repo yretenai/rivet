@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x944d8042u)]
 public enum x944d8042 : uint {
-	[DDLRegistration(0x890449efu)] MatchDistanceT = 0x0u,
-	[DDLRegistration(0x8ddc71b9u)] MatchPosition = 0x1u,
+	[DDLRegistration(0x890449efu, "Match Distance T")] MatchDistanceT,
+	[DDLRegistration(0x8ddc71b9u, "Match Position")] MatchPosition,
 }
 
 public static class x944d8042Values {

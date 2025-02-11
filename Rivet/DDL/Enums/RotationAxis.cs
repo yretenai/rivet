@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xea512758u)]
 public enum RotationAxis : uint {
-	[DDLRegistration(0x028c702au)] X = 0x0u,
-	[DDLRegistration(0x758b40bcu)] Y = 0x1u,
-	[DDLRegistration(0xec821106u)] Z = 0x2u,
-	[DDLRegistration(0x7adfe385u)] Random = 0x3u,
+	[DDLRegistration(0x028c702au)] X,
+	[DDLRegistration(0x758b40bcu)] Y,
+	[DDLRegistration(0xec821106u)] Z,
+	[DDLRegistration(0x7adfe385u)] Random,
 }
 
 public static class RotationAxisValues {

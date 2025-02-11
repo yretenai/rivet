@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x5f40dd5cu)]
 public enum x5f40dd5c : uint {
-	[DDLRegistration(0x52970d08u)] Environment = 0x0u,
-	[DDLRegistration(0x1089cd05u)] Parameter = 0x1u,
-	[DDLRegistration(0x4e551f89u)] State = 0x2u,
-	[DDLRegistration(0x030d7248u)] Switch = 0x3u,
-	[DDLRegistration(0xa36e551du)] Trigger = 0x4u,
+	[DDLRegistration(0x52970d08u, "Wwise Environment (Global)")] Environment,
+	[DDLRegistration(0x1089cd05u, "Wwise Paramater (Actor Optional)")] Parameter,
+	[DDLRegistration(0x4e551f89u, "Wwise State (Global)")] State,
+	[DDLRegistration(0x030d7248u, "Wwise Switch (Requires Actor)")] Switch,
+	[DDLRegistration(0xa36e551du, "Wwise Trigger (Requires Actor)")] Trigger,
 }
 
 public static class x5f40dd5cValues {

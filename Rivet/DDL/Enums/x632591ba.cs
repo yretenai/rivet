@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x632591bau)]
 public enum x632591ba : uint {
-	[DDLRegistration(0x3001d20fu)] CycleShots = 0x0u,
-	[DDLRegistration(0xaed14725u)] AllShots = 0x1u,
+	[DDLRegistration(0x3001d20fu)] CycleShots,
+	[DDLRegistration(0xaed14725u)] AllShots,
 }
 
 public static class x632591baValues {

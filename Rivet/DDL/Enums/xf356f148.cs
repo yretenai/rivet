@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xf356f148u)]
 public enum xf356f148 : uint {
-	[DDLRegistration(0x6ddbb29du)] Down = 0x0u,
-	[DDLRegistration(0x3e124ad7u)] Up = 0x1u,
-	[DDLRegistration(0xd2af81f0u)] HitDirection = 0x2u,
-	[DDLRegistration(0x7bc4e8deu)] HitNormal = 0x3u,
+	[DDLRegistration(0x6ddbb29du)] Down,
+	[DDLRegistration(0x3e124ad7u)] Up,
+	[DDLRegistration(0xd2af81f0u)] HitDirection,
+	[DDLRegistration(0x7bc4e8deu)] HitNormal,
 }
 
 public static class xf356f148Values {

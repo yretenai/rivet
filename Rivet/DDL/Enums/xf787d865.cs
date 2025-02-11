@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xf787d865u)]
 public enum xf787d865 : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0x979d0877u)] Match = 0x1u,
-	[DDLRegistration(0xbd5b723fu)] Reset = 0x2u,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0x979d0877u, "Match Previous")] Match,
+	[DDLRegistration(0xbd5b723fu, "Reset To Zero")] Reset,
 }
 
 public static class xf787d865Values {

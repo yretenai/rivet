@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x868ac365u)]
 public enum VendorTabs : uint {
-	[DDLRegistration(0xc5707a7cu)] Purchase = 0x0u,
-	[DDLRegistration(0x0e632e5au)] Upgrade = 0x1u,
+	[DDLRegistration(0xc5707a7cu)] Purchase,
+	[DDLRegistration(0x0e632e5au)] Upgrade,
 }
 
 public static class VendorTabsValues {

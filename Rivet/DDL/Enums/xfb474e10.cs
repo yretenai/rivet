@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xfb474e10u)]
 public enum xfb474e10 : uint {
-	[DDLRegistration(0x8857b461u)] InitialVelocityDir = 0x0u,
-	[DDLRegistration(0xe9e4a4c4u)] AuxiliaryDir = 0x1u,
+	[DDLRegistration(0x8857b461u)] InitialVelocityDir,
+	[DDLRegistration(0xe9e4a4c4u)] AuxiliaryDir,
 }
 
 public static class xfb474e10Values {

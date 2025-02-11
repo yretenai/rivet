@@ -7,13 +7,13 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x70316bbeu)]
 public enum x70316bbe : uint {
-	[DDLRegistration(0xe72baec0u)] KeyExists = 0x0u,
-	[DDLRegistration(0x032a5156u)] KeyNotExists = 0x1u,
-	[DDLRegistration(0xa445040bu)] ValueEqual = 0x2u,
-	[DDLRegistration(0x5704f4e2u)] ValueLess = 0x3u,
-	[DDLRegistration(0x21c630a8u)] ValueGreater = 0x4u,
-	[DDLRegistration(0x6487195eu)] ValueLessOrEqual = 0x5u,
-	[DDLRegistration(0xd3042b30u)] ValueGreaterOrEqual = 0x6u,
+	[DDLRegistration(0xe72baec0u)] KeyExists,
+	[DDLRegistration(0x032a5156u)] KeyNotExists,
+	[DDLRegistration(0xa445040bu)] ValueEqual,
+	[DDLRegistration(0x5704f4e2u)] ValueLess,
+	[DDLRegistration(0x21c630a8u)] ValueGreater,
+	[DDLRegistration(0x6487195eu)] ValueLessOrEqual,
+	[DDLRegistration(0xd3042b30u)] ValueGreaterOrEqual,
 }
 
 public static class x70316bbeValues {

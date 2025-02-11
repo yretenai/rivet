@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x3749ca1bu)]
 public enum x3749ca1b : uint {
-	[DDLRegistration(0x7a4bf15du)] MirrorAxisNone = 0x0u,
-	[DDLRegistration(0x4c311befu)] MirrorAxisYZ = 0x1u,
-	[DDLRegistration(0x552a2aaeu)] MirrorAxisXZ = 0x2u,
-	[DDLRegistration(0xcc237b14u)] MirrorAxisXY = 0x3u,
+	[DDLRegistration(0x7a4bf15du)] MirrorAxisNone,
+	[DDLRegistration(0x4c311befu, "y-z axis")] MirrorAxisYZ,
+	[DDLRegistration(0x552a2aaeu, "x-z axis")] MirrorAxisXZ,
+	[DDLRegistration(0xcc237b14u, "x-y axis")] MirrorAxisXY,
 }
 
 public static class x3749ca1bValues {

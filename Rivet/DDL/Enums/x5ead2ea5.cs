@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x5ead2ea5u)]
 public enum x5ead2ea5 : uint {
-	[DDLRegistration(0x8b222296u)] First = 0x0u,
-	[DDLRegistration(0x7a4b6910u)] Last = 0x1u,
+	[DDLRegistration(0x8b222296u)] First,
+	[DDLRegistration(0x7a4b6910u)] Last,
 }
 
 public static class x5ead2ea5Values {

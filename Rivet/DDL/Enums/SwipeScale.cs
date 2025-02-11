@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x2150ae07u)]
 public enum SwipeScale : uint {
-	[DDLRegistration(0xb2156f4eu)] Origin = 0x0u,
-	[DDLRegistration(0x2c14d274u)] Center = 0x1u,
+	[DDLRegistration(0xb2156f4eu, "Origin")] Origin,
+	[DDLRegistration(0x2c14d274u, "Center")] Center,
 }
 
 public static class SwipeScaleValues {

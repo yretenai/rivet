@@ -7,12 +7,12 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x62abe5d0u)]
 public enum VisualEffectState : uint {
-	[DDLRegistration(0xcabbfba2u)] Run = 0x0u,
-	[DDLRegistration(0x2a5577cbu)] Paused = 0x1u,
-	[DDLRegistration(0x98d268a8u)] SlowMotion = 0x2u,
-	[DDLRegistration(0xd00688d5u)] TimeStep = 0x3u,
-	[DDLRegistration(0x760d74cfu)] Kill = 0x4u,
-	[DDLRegistration(0x6d4d8e23u)] KillImmediate = 0x5u,
+	[DDLRegistration(0xcabbfba2u)] Run,
+	[DDLRegistration(0x2a5577cbu)] Paused,
+	[DDLRegistration(0x98d268a8u)] SlowMotion,
+	[DDLRegistration(0xd00688d5u)] TimeStep,
+	[DDLRegistration(0x760d74cfu)] Kill,
+	[DDLRegistration(0x6d4d8e23u)] KillImmediate,
 }
 
 public static class VisualEffectStateValues {

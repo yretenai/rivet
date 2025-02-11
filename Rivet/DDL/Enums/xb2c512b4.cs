@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xb2c512b4u)]
 public enum xb2c512b4 : uint {
-	[DDLRegistration(0x23716612u)] BuiltNode = 0x0u,
-	[DDLRegistration(0x829d36beu)] HorizontalSpacer = 0x1u,
-	[DDLRegistration(0x8ea13d81u)] VerticalSpacer = 0x2u,
+	[DDLRegistration(0x23716612u)] BuiltNode,
+	[DDLRegistration(0x829d36beu)] HorizontalSpacer,
+	[DDLRegistration(0x8ea13d81u)] VerticalSpacer,
 }
 
 public static class xb2c512b4Values {

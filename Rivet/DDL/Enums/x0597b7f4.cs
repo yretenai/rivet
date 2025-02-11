@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x0597b7f4u)]
 public enum x0597b7f4 : uint {
-	[DDLRegistration(0x5a633e56u)] Point = 0x0u,
-	[DDLRegistration(0x613a81e3u)] Linear = 0x1u,
-	[DDLRegistration(0x0dab9735u)] LowAniso = 0x2u,
-	[DDLRegistration(0xe033b8d0u)] MedAniso = 0x3u,
-	[DDLRegistration(0x7ecd7851u)] HighAniso = 0x4u,
+	[DDLRegistration(0x5a633e56u, "Point")] Point,
+	[DDLRegistration(0x613a81e3u, "Linear")] Linear,
+	[DDLRegistration(0x0dab9735u, "Low Aniso")] LowAniso,
+	[DDLRegistration(0xe033b8d0u, "Medium Aniso")] MedAniso,
+	[DDLRegistration(0x7ecd7851u, "High Aniso")] HighAniso,
 }
 
 public static class x0597b7f4Values {

@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xb521b086u)]
 public enum xb521b086 : uint {
-	[DDLRegistration(0x611947c0u)] PruneLevelNone = 0x0u,
-	[DDLRegistration(0xfef693afu)] PruneLevelFull = 0x1u,
+	[DDLRegistration(0x611947c0u, "Prune Level None", "No clips are pruned")] PruneLevelNone,
+	[DDLRegistration(0xfef693afu, "Prune Level Full", "All unreferenced clips are pruned")] PruneLevelFull,
 }
 
 public static class xb521b086Values {

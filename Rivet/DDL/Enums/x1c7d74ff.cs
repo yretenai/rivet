@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x1c7d74ffu)]
 public enum x1c7d74ff : uint {
-	[DDLRegistration(0xd1d47641u)] CombineMin = 0x0u,
-	[DDLRegistration(0xedd94918u)] CombineMax = 0x1u,
-	[DDLRegistration(0x6c48391fu)] CombineAvg = 0x2u,
+	[DDLRegistration(0xd1d47641u, description: "The smaller of two values wins")] CombineMin,
+	[DDLRegistration(0xedd94918u, description: "The larger of two values wins")] CombineMax,
+	[DDLRegistration(0x6c48391fu, description: "Use the average of 'this' and 'that's value")] CombineAvg,
 }
 
 public static class x1c7d74ffValues {

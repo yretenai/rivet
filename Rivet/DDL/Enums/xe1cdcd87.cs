@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xe1cdcd87u)]
 public enum xe1cdcd87 : uint {
-	[DDLRegistration(0xd7b1dc31u)] World = 0x0u,
-	[DDLRegistration(0x4d6151b4u)] Normal = 0x1u,
-	[DDLRegistration(0x6610459au)] Local = 0x2u,
+	[DDLRegistration(0xd7b1dc31u, "World")] World,
+	[DDLRegistration(0x4d6151b4u, "Normal")] Normal,
+	[DDLRegistration(0x6610459au, "Local")] Local,
 }
 
 public static class xe1cdcd87Values {

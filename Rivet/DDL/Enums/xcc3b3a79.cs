@@ -7,12 +7,12 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xcc3b3a79u)]
 public enum xcc3b3a79 : uint {
-	[DDLRegistration(0xa015c8eau)] Editor = 0x0u,
-	[DDLRegistration(0xd1cfe2a1u)] Zone = 0x1u,
-	[DDLRegistration(0x76bb3b41u)] DragBegin = 0x2u,
-	[DDLRegistration(0x1c618fcdu)] Drag = 0x3u,
-	[DDLRegistration(0xd8297c06u)] DragEnd = 0x4u,
-	[DDLRegistration(0x844c23ddu)] Engine = 0x5u,
+	[DDLRegistration(0xa015c8eau)] Editor,
+	[DDLRegistration(0xd1cfe2a1u)] Zone,
+	[DDLRegistration(0x76bb3b41u)] DragBegin,
+	[DDLRegistration(0x1c618fcdu)] Drag,
+	[DDLRegistration(0xd8297c06u)] DragEnd,
+	[DDLRegistration(0x844c23ddu)] Engine,
 }
 
 public static class xcc3b3a79Values {

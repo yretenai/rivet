@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xb9555036u)]
 public enum xb9555036 : uint {
-	[DDLRegistration(0xbc45acd1u)] TypeStandard = 0x0u,
-	[DDLRegistration(0x72210b1eu)] TypeCurves = 0x1u,
-	[DDLRegistration(0xb7cdb48au)] TypeFacialPoses = 0x2u,
+	[DDLRegistration(0xbc45acd1u, "Standard clip")] TypeStandard,
+	[DDLRegistration(0x72210b1eu, "Curves clip")] TypeCurves,
+	[DDLRegistration(0xb7cdb48au, "Facial poses clip")] TypeFacialPoses,
 }
 
 public static class xb9555036Values {

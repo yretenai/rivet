@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x80286938u)]
 public enum x80286938 : uint {
-	[DDLRegistration(0x88a30db2u)] CenterOfMass = 0x0u,
-	[DDLRegistration(0xcb1bba38u)] Ground = 0x1u,
-	[DDLRegistration(0x0b62b029u)] Weakspot = 0x2u,
+	[DDLRegistration(0x88a30db2u)] CenterOfMass,
+	[DDLRegistration(0xcb1bba38u)] Ground,
+	[DDLRegistration(0x0b62b029u)] Weakspot,
 }
 
 public static class x80286938Values {

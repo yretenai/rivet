@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x49646b18u)]
 public enum x49646b18 : uint {
-	[DDLRegistration(0xd3856793u)] ReferencesTo = 0x0u,
-	[DDLRegistration(0x036f14adu)] ReferencesOf = 0x1u,
+	[DDLRegistration(0xd3856793u)] ReferencesTo,
+	[DDLRegistration(0x036f14adu)] ReferencesOf,
 }
 
 public static class x49646b18Values {

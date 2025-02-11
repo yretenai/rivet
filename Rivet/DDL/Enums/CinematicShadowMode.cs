@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x30108ce6u)]
 public enum CinematicShadowMode : uint {
-	[DDLRegistration(0x179e075cu)] Auto = 0x0u,
-	[DDLRegistration(0xca40054bu)] Always = 0x1u,
-	[DDLRegistration(0xf7e36f62u)] Never = 0x2u,
+	[DDLRegistration(0x179e075cu, "Auto")] Auto,
+	[DDLRegistration(0xca40054bu, "Always")] Always,
+	[DDLRegistration(0xf7e36f62u, "Never ")] Never,
 }
 
 public static class CinematicShadowModeValues {

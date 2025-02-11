@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x925714c8u)]
 public enum x925714c8 : uint {
-	[DDLRegistration(0x4e2d1b4fu)] TrackGround = 0x0u,
-	[DDLRegistration(0xfa2234d9u)] TrackActor = 0x1u,
+	[DDLRegistration(0x4e2d1b4fu, description: "Keep the camera target on the ground below the player, only follow the player if they go offscreen.")] TrackGround,
+	[DDLRegistration(0xfa2234d9u, description: "Camera tracks player motion as they bounce.")] TrackActor,
 }
 
 public static class x925714c8Values {

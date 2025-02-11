@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x96e13489u)]
 public enum x96e13489 : uint {
-	[DDLRegistration(0x761706c4u)] Degrees = 0x0u,
-	[DDLRegistration(0xcdcd367fu)] Radians = 0x1u,
-	[DDLRegistration(0xc6f8952du)] Normalized = 0x2u,
+	[DDLRegistration(0x761706c4u, "Degrees", "Degrees (-90, 90)")] Degrees,
+	[DDLRegistration(0xcdcd367fu, "Radians", "Radians (-1.57, 1.57)")] Radians,
+	[DDLRegistration(0xc6f8952du, "Normalized", "Normalized (0, 1)")] Normalized,
 }
 
 public static class x96e13489Values {

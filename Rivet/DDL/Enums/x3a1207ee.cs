@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x3a1207eeu)]
 public enum x3a1207ee : uint {
-	[DDLRegistration(0x68c15727u)] Bolts = 0x0u,
-	[DDLRegistration(0xdcc5d336u)] Raritanium = 0x1u,
-	[DDLRegistration(0x99a77209u)] GoldBolt = 0x2u,
+	[DDLRegistration(0x68c15727u)] Bolts,
+	[DDLRegistration(0xdcc5d336u)] Raritanium,
+	[DDLRegistration(0x99a77209u)] GoldBolt,
 }
 
 public static class x3a1207eeValues {

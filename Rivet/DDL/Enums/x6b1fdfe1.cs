@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x6b1fdfe1u)]
 public enum x6b1fdfe1 : uint {
-	[DDLRegistration(0xfcfd94c6u)] HeightField = 0x0u,
-	[DDLRegistration(0x96b0239fu)] SelectionMask = 0x1u,
-	[DDLRegistration(0xc49c2948u)] SplatMask = 0x2u,
-	[DDLRegistration(0x717309f1u)] Terrain = 0x3u,
+	[DDLRegistration(0xfcfd94c6u, "HeightField", "While in this mode, paint will be applied to the heightfield.")] HeightField,
+	[DDLRegistration(0x96b0239fu, "Selection Mask", "While in this mode, paint will be applied to the selection mask.")] SelectionMask,
+	[DDLRegistration(0xc49c2948u, "SplatMask", "While in this mode, paint will be applied to the terrain's splatmask using a specified id.")] SplatMask,
+	[DDLRegistration(0x717309f1u, "Terrain", "While in this mode, paint will be applied to the heightfield as well as the splatmask.")] Terrain,
 }
 
 public static class x6b1fdfe1Values {

@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xee77c9cau)]
 public enum xee77c9ca : uint {
-	[DDLRegistration(0x2f075ca0u)] Name = 0x0u,
-	[DDLRegistration(0x7a70a9a9u)] Path = 0x1u,
-	[DDLRegistration(0x9b1ec960u)] Ext = 0x2u,
-	[DDLRegistration(0xfda6ca03u)] ModifiedTime = 0x3u,
+	[DDLRegistration(0x2f075ca0u, "File Name")] Name,
+	[DDLRegistration(0x7a70a9a9u, "Path")] Path,
+	[DDLRegistration(0x9b1ec960u, "Extension")] Ext,
+	[DDLRegistration(0xfda6ca03u, "Modified Time")] ModifiedTime,
 }
 
 public static class xee77c9caValues {

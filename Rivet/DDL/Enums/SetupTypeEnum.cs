@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x545e4076u)]
 public enum SetupTypeEnum : uint {
-	[DDLRegistration(0xd0f2307bu)] Major = 0x0u,
-	[DDLRegistration(0x124fb048u)] Minor = 0x1u,
-	[DDLRegistration(0x8afe1bb7u)] Both = 0x2u,
+	[DDLRegistration(0xd0f2307bu, "Major")] Major,
+	[DDLRegistration(0x124fb048u, "Minor")] Minor,
+	[DDLRegistration(0x8afe1bb7u, "Both")] Both,
 }
 
 public static class SetupTypeEnumValues {

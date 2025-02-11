@@ -7,17 +7,17 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x4223680au)]
 public enum LevelEnum : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0xe426642du)] Megalopolis = 0x1u,
-	[DDLRegistration(0xd903e9fdu)] NefariousCity = 0x2u,
-	[DDLRegistration(0xaf91b208u)] Sargasso = 0x3u,
-	[DDLRegistration(0xce2b1a4fu)] Zurkies = 0x4u,
-	[DDLRegistration(0x0ea51a61u)] Savali = 0x5u,
-	[DDLRegistration(0x197db317u)] Blizar = 0x6u,
-	[DDLRegistration(0x03498b40u)] Molonoth = 0x7u,
-	[DDLRegistration(0x77ebb09du)] Cordelion = 0x8u,
-	[DDLRegistration(0x7c4b9a51u)] Ardolis = 0x9u,
-	[DDLRegistration(0x306882bfu)] Zordoom = 0xau,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0xe426642du, "Megalopolis")] Megalopolis,
+	[DDLRegistration(0xd903e9fdu, "Nefarious City")] NefariousCity,
+	[DDLRegistration(0xaf91b208u, "Sargasso")] Sargasso,
+	[DDLRegistration(0xce2b1a4fu, "Zurkies")] Zurkies,
+	[DDLRegistration(0x0ea51a61u, "Savali")] Savali,
+	[DDLRegistration(0x197db317u, "Blizar")] Blizar,
+	[DDLRegistration(0x03498b40u, "Molonoth")] Molonoth,
+	[DDLRegistration(0x77ebb09du, "Cordelion")] Cordelion,
+	[DDLRegistration(0x7c4b9a51u, "Ardolis")] Ardolis,
+	[DDLRegistration(0x306882bfu, "Zordoom")] Zordoom,
 }
 
 public static class LevelEnumValues {

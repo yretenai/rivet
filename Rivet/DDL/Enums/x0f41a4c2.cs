@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x0f41a4c2u)]
 public enum x0f41a4c2 : uint {
-	[DDLRegistration(0xe16243acu)] ApplyFirstContact = 0x0u,
-	[DDLRegistration(0xfa000f23u)] ApplyAttachedOnly = 0x1u,
-	[DDLRegistration(0x1d9d474du)] ApplyIfOver = 0x2u,
-	[DDLRegistration(0x61cda4edu)] ApplyAlwaysJumps = 0x3u,
-	[DDLRegistration(0x635e9145u)] ApplyMomentum = 0x4u,
+	[DDLRegistration(0xe16243acu, "First Contact", "Start effecting motion once character touches")] ApplyFirstContact,
+	[DDLRegistration(0xfa000f23u, "Attach Only", "Only apply motion if character touching")] ApplyAttachedOnly,
+	[DDLRegistration(0x1d9d474du, "Always If Over", "Always apply motion if character above surface")] ApplyIfOver,
+	[DDLRegistration(0x61cda4edu, "Always and in jumps", "Always apply motion if the character is above the surface or if jumping from it.")] ApplyAlwaysJumps,
+	[DDLRegistration(0x635e9145u, "Attached Plus Jump Momentum", "Applies while the character is touching and adds to jump velocity")] ApplyMomentum,
 }
 
 public static class x0f41a4c2Values {

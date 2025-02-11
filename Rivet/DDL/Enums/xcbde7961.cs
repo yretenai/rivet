@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xcbde7961u)]
 public enum xcbde7961 : uint {
-	[DDLRegistration(0x553780a7u)] ConstraintTypeSimple = 0x0u,
-	[DDLRegistration(0x6c80ad45u)] ConstraintTypeCone = 0x1u,
-	[DDLRegistration(0x095cc7e4u)] ConstraintTypeHalfCone = 0x2u,
-	[DDLRegistration(0xa3431ea0u)] ConstraintTypeLimitedCone = 0x3u,
+	[DDLRegistration(0x553780a7u, "Simple")] ConstraintTypeSimple,
+	[DDLRegistration(0x6c80ad45u, "Cone")] ConstraintTypeCone,
+	[DDLRegistration(0x095cc7e4u, "Half-Cone")] ConstraintTypeHalfCone,
+	[DDLRegistration(0xa3431ea0u, "Limited-Cone")] ConstraintTypeLimitedCone,
 }
 
 public static class xcbde7961Values {

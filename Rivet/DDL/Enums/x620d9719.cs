@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x620d9719u)]
 public enum x620d9719 : uint {
-	[DDLRegistration(0x3146c41eu)] RTPCLogModeOff = 0x0u,
-	[DDLRegistration(0x5a9f1da7u)] RTPCLogModeErrors = 0x1u,
-	[DDLRegistration(0x21e2e880u)] RTPCLogModeAll = 0x2u,
+	[DDLRegistration(0x3146c41eu, description: "Don't log any RTPC-related messages")] RTPCLogModeOff,
+	[DDLRegistration(0x5a9f1da7u, description: "Only log RTPC errors")] RTPCLogModeErrors,
+	[DDLRegistration(0x21e2e880u, description: "Log everything about RTPCs")] RTPCLogModeAll,
 }
 
 public static class x620d9719Values {

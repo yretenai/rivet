@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x74a6ffccu)]
 public enum x74a6ffcc : uint {
-	[DDLRegistration(0xf04c570du)] ExtrapolateClamp = 0x0u,
-	[DDLRegistration(0x3aabbb99u)] ExtrapolateNone = 0x1u,
-	[DDLRegistration(0x59dc74d2u)] ExtrapolateRepeat = 0x2u,
+	[DDLRegistration(0xf04c570du, "Constant", "Clamp to first / last key value")] ExtrapolateClamp,
+	[DDLRegistration(0x3aabbb99u, description: "No value set outside first / last")] ExtrapolateNone,
+	[DDLRegistration(0x59dc74d2u, "Cycle", "Repeat outside first / last")] ExtrapolateRepeat,
 }
 
 public static class x74a6ffccValues {

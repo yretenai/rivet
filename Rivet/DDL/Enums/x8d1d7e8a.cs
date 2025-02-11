@@ -7,7 +7,7 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x8d1d7e8au)]
 public enum x8d1d7e8a : uint {
-	[DDLRegistration(0x00807570u)] Preview = 0x0u,
+	[DDLRegistration(0x00807570u)] Preview,
 }
 
 public static class x8d1d7e8aValues {

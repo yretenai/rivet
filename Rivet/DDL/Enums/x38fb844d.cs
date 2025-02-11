@@ -7,12 +7,12 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x38fb844du)]
 public enum x38fb844d : uint {
-	[DDLRegistration(0xdfe58314u)] AnimClipGeomTypeNone = 0x0u,
-	[DDLRegistration(0x400a577bu)] AnimClipGeomTypeFull = 0x1u,
-	[DDLRegistration(0x55e06f8bu)] AnimClipGeomTypeDelta = 0x2u,
-	[DDLRegistration(0xb2e8eb47u)] AnimClipGeomTypeDelta2 = 0x3u,
-	[DDLRegistration(0xc5efdbd1u)] AnimClipGeomTypeDelta3 = 0x4u,
-	[DDLRegistration(0x0ff81312u)] AnimClipGeomTypeDeltaUncompressed = 0x5u,
+	[DDLRegistration(0xdfe58314u)] AnimClipGeomTypeNone,
+	[DDLRegistration(0x400a577bu)] AnimClipGeomTypeFull,
+	[DDLRegistration(0x55e06f8bu)] AnimClipGeomTypeDelta,
+	[DDLRegistration(0xb2e8eb47u)] AnimClipGeomTypeDelta2,
+	[DDLRegistration(0xc5efdbd1u)] AnimClipGeomTypeDelta3,
+	[DDLRegistration(0x0ff81312u)] AnimClipGeomTypeDeltaUncompressed,
 }
 
 public static class x38fb844dValues {

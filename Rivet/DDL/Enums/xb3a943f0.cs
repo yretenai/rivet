@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xb3a943f0u)]
 public enum xb3a943f0 : uint {
-	[DDLRegistration(0x4f00c07fu)] None = 0x0u,
-	[DDLRegistration(0x4bdbf9d3u)] Self = 0x1u,
-	[DDLRegistration(0x4ea6de7du)] Any = 0x2u,
-	[DDLRegistration(0x231dc6c7u)] SpecificPerson = 0x3u,
+	[DDLRegistration(0x4f00c07fu, description: "Disable this followup.")] None,
+	[DDLRegistration(0x4bdbf9d3u, description: "Followup only by myself")] Self,
+	[DDLRegistration(0x4ea6de7du, description: "Transmit to anyone within the radius")] Any,
+	[DDLRegistration(0x231dc6c7u, description: "Transmit to a specific named individual")] SpecificPerson,
 }
 
 public static class xb3a943f0Values {

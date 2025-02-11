@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x08f7f2e3u)]
 public enum x08f7f2e3 : uint {
-	[DDLRegistration(0x0ef6320eu)] UseToggle = 0x0u,
-	[DDLRegistration(0x238c399eu)] CompleteToggle = 0x1u,
-	[DDLRegistration(0x5a18b89fu)] UseCompleteToggle = 0x2u,
-	[DDLRegistration(0xd8b3da79u)] Percent = 0x3u,
+	[DDLRegistration(0x0ef6320eu, "Use Toggle")] UseToggle,
+	[DDLRegistration(0x238c399eu, "Complete Toggle")] CompleteToggle,
+	[DDLRegistration(0x5a18b89fu, "Use Complete Toggle")] UseCompleteToggle,
+	[DDLRegistration(0xd8b3da79u, "Percent")] Percent,
 }
 
 public static class x08f7f2e3Values {

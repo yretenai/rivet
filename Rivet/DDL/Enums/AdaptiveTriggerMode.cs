@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xa1a56643u)]
 public enum AdaptiveTriggerMode : uint {
-	[DDLRegistration(0x5a5b5a9fu)] Default = 0x0u,
-	[DDLRegistration(0x86dc9185u)] Light = 0x1u,
-	[DDLRegistration(0xb1710221u)] Off = 0x2u,
+	[DDLRegistration(0x5a5b5a9fu, "Default")] Default,
+	[DDLRegistration(0x86dc9185u, "Light")] Light,
+	[DDLRegistration(0xb1710221u, "Off")] Off,
 }
 
 public static class AdaptiveTriggerModeValues {

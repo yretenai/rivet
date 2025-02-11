@@ -7,15 +7,15 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x8c1c9e5cu)]
 public enum x8c1c9e5c : uint {
-	[DDLRegistration(0x56cd1468u)] GripStyleNeutral = 0x0u,
-	[DDLRegistration(0x264a8aceu)] GripStylePistol = 0x1u,
-	[DDLRegistration(0x915921e0u)] GripStyleRifle = 0x2u,
-	[DDLRegistration(0x446133e9u)] GripStyleThrown = 0x3u,
-	[DDLRegistration(0x50bca16au)] GripStyleHeavy = 0x4u,
-	[DDLRegistration(0xe56aa094u)] GripStyleMelee = 0x5u,
-	[DDLRegistration(0x67bf631du)] GripStyleArmCannon = 0x6u,
-	[DDLRegistration(0xb0681c3au)] GripStyleSword = 0x7u,
-	[DDLRegistration(0x5a6e2c43u)] GripStyleHammer = 0x8u,
+	[DDLRegistration(0x56cd1468u)] GripStyleNeutral,
+	[DDLRegistration(0x264a8aceu)] GripStylePistol,
+	[DDLRegistration(0x915921e0u)] GripStyleRifle,
+	[DDLRegistration(0x446133e9u)] GripStyleThrown,
+	[DDLRegistration(0x50bca16au)] GripStyleHeavy,
+	[DDLRegistration(0xe56aa094u)] GripStyleMelee,
+	[DDLRegistration(0x67bf631du)] GripStyleArmCannon,
+	[DDLRegistration(0xb0681c3au)] GripStyleSword,
+	[DDLRegistration(0x5a6e2c43u)] GripStyleHammer,
 }
 
 public static class x8c1c9e5cValues {

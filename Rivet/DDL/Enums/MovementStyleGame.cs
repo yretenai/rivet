@@ -7,13 +7,13 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xe8421db7u)]
 public enum MovementStyleGame : uint {
-	[DDLRegistration(0xbd01bae5u)] Walk = 0x0u,
-	[DDLRegistration(0x88024652u)] Strafe = 0x1u,
-	[DDLRegistration(0x7a238d09u)] Run = 0x2u,
-	[DDLRegistration(0x79dfaa7au)] Fly = 0x3u,
-	[DDLRegistration(0x524eb7fbu)] Underground = 0x4u,
-	[DDLRegistration(0x58acddc1u)] Fossilize = 0x5u,
-	[DDLRegistration(0x17f741a3u)] Shielded = 0x6u,
+	[DDLRegistration(0xbd01bae5u)] Walk,
+	[DDLRegistration(0x88024652u)] Strafe,
+	[DDLRegistration(0x7a238d09u)] Run,
+	[DDLRegistration(0x79dfaa7au)] Fly,
+	[DDLRegistration(0x524eb7fbu)] Underground,
+	[DDLRegistration(0x58acddc1u)] Fossilize,
+	[DDLRegistration(0x17f741a3u)] Shielded,
 }
 
 public static class MovementStyleGameValues {

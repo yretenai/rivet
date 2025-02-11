@@ -7,12 +7,12 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xd6051860u)]
 public enum xd6051860 : uint {
-	[DDLRegistration(0x06d0b82bu)] TravelMapSelect = 0x0u,
-	[DDLRegistration(0x84835257u)] TravelMapBack = 0x1u,
-	[DDLRegistration(0xa42f0b62u)] TravelMapUp = 0x2u,
-	[DDLRegistration(0xf5b2035bu)] TravelMapDown = 0x3u,
-	[DDLRegistration(0x932a7408u)] TravelMapLeft = 0x4u,
-	[DDLRegistration(0x2b93b652u)] TravelMapRight = 0x5u,
+	[DDLRegistration(0x06d0b82bu)] TravelMapSelect,
+	[DDLRegistration(0x84835257u)] TravelMapBack,
+	[DDLRegistration(0xa42f0b62u)] TravelMapUp,
+	[DDLRegistration(0xf5b2035bu)] TravelMapDown,
+	[DDLRegistration(0x932a7408u)] TravelMapLeft,
+	[DDLRegistration(0x2b93b652u)] TravelMapRight,
 }
 
 public static class xd6051860Values {

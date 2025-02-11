@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x4bc99fe3u)]
 public enum x4bc99fe3 : uint {
-	[DDLRegistration(0xbea68d89u)] DoNotAutoDisable = 0x0u,
-	[DDLRegistration(0xc6f5769du)] DisableOnTrigger = 0x1u,
-	[DDLRegistration(0x721c19b5u)] DisableOnUnTrigger = 0x2u,
+	[DDLRegistration(0xbea68d89u, "Do Not Auto Disable", "Do not auto disable when triggered or untriggered.")] DoNotAutoDisable,
+	[DDLRegistration(0xc6f5769du, "Disable on Trigger", "Disable the trigger when we are triggered.")] DisableOnTrigger,
+	[DDLRegistration(0x721c19b5u, "Disable on UnTrigger", "Disable the trigger when we are untriggered.")] DisableOnUnTrigger,
 }
 
 public static class x4bc99fe3Values {

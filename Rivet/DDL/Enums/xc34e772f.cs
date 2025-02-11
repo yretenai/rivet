@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xc34e772fu)]
 public enum xc34e772f : uint {
-	[DDLRegistration(0xcedf98b6u)] Parallel = 0x0u,
-	[DDLRegistration(0xe6da633bu)] Perpendicular = 0x1u,
-	[DDLRegistration(0x6f0d7e9fu)] Constant = 0x2u,
+	[DDLRegistration(0xcedf98b6u, "Along Curve", "Instance rotated perpendicular to curve before adding InstanceRotation and InstanceRotationVariation values")] Parallel,
+	[DDLRegistration(0xe6da633bu, "Perpendicular to Curve", "Instance rotated perpendicular to curve before adding InstanceRotation and  InstanceRotationVariation values")] Perpendicular,
+	[DDLRegistration(0x6f0d7e9fu, "Constant Instance Rotation", "Instance gets Rotation value")] Constant,
 }
 
 public static class xc34e772fValues {

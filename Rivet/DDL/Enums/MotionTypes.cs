@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x2ecf4eb3u)]
 public enum MotionTypes : uint {
-	[DDLRegistration(0x6336567au)] SmoothStep = 0x0u,
-	[DDLRegistration(0x613a81e3u)] Linear = 0x1u,
-	[DDLRegistration(0x522f098du)] Quadratic = 0x2u,
-	[DDLRegistration(0x8240981eu)] Cubic = 0x3u,
+	[DDLRegistration(0x6336567au)] SmoothStep,
+	[DDLRegistration(0x613a81e3u)] Linear,
+	[DDLRegistration(0x522f098du)] Quadratic,
+	[DDLRegistration(0x8240981eu)] Cubic,
 }
 
 public static class MotionTypesValues {

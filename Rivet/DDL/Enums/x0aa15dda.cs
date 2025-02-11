@@ -7,20 +7,20 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x0aa15ddau)]
 public enum x0aa15dda : uint {
-	[DDLRegistration(0xfe3ea8d6u)] Any = 0x0u,
-	[DDLRegistration(0x683a3cc1u)] OnlyBots = 0x1u,
-	[DDLRegistration(0xdb92e5c1u)] ExcludeHeroes = 0x2u,
-	[DDLRegistration(0xf77473d9u)] OnlyHeroes = 0x3u,
-	[DDLRegistration(0x2083cf7du)] Targetable = 0x4u,
-	[DDLRegistration(0xba5f90c5u)] Curve = 0x5u,
-	[DDLRegistration(0x442ecc17u)] OnlyModels = 0x6u,
-	[DDLRegistration(0xfc9497c0u)] OnlySelectedCineActors = 0x7u,
-	[DDLRegistration(0x0e9ca360u)] AnimComponent = 0x8u,
-	[DDLRegistration(0xb5dc4763u)] ConduitComponent = 0x9u,
-	[DDLRegistration(0x4ec900bfu)] HasActivecloth = 0xau,
-	[DDLRegistration(0x50b273b8u)] ExcludeCameras = 0xbu,
-	[DDLRegistration(0xd25a7d2au)] Cameras = 0xcu,
-	[DDLRegistration(0xc3d9f055u)] Volumes = 0xdu,
+	[DDLRegistration(0xfe3ea8d6u, "Any")] Any,
+	[DDLRegistration(0x683a3cc1u, "Only Bots")] OnlyBots,
+	[DDLRegistration(0xdb92e5c1u, "Exclude Heroes")] ExcludeHeroes,
+	[DDLRegistration(0xf77473d9u, "Only Heroes")] OnlyHeroes,
+	[DDLRegistration(0x2083cf7du, "Targetable")] Targetable,
+	[DDLRegistration(0xba5f90c5u, "Curves")] Curve,
+	[DDLRegistration(0x442ecc17u, "Only Models")] OnlyModels,
+	[DDLRegistration(0xfc9497c0u, "Only Selected Cine Actors")] OnlySelectedCineActors,
+	[DDLRegistration(0x0e9ca360u, "Has AnimComponent")] AnimComponent,
+	[DDLRegistration(0xb5dc4763u, "Has ConduitComponent")] ConduitComponent,
+	[DDLRegistration(0x4ec900bfu, "Has Active Cloth")] HasActivecloth,
+	[DDLRegistration(0x50b273b8u, "Exclude Cameras")] ExcludeCameras,
+	[DDLRegistration(0xd25a7d2au, "Cameras")] Cameras,
+	[DDLRegistration(0xc3d9f055u, "Volumes")] Volumes,
 }
 
 public static class x0aa15ddaValues {

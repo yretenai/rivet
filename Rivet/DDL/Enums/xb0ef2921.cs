@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xb0ef2921u)]
 public enum xb0ef2921 : uint {
-	[DDLRegistration(0x3272826du)] NotInitialized = 0x0u,
-	[DDLRegistration(0x1a5df4aau)] ActorDisabled = 0x1u,
-	[DDLRegistration(0x395b9eadu)] SystemDisabled = 0x2u,
-	[DDLRegistration(0x6e161113u)] ActorAndSystemDisabled = 0x3u,
-	[DDLRegistration(0x5c383a64u)] Sending = 0x4u,
+	[DDLRegistration(0x3272826du)] NotInitialized,
+	[DDLRegistration(0x1a5df4aau)] ActorDisabled,
+	[DDLRegistration(0x395b9eadu)] SystemDisabled,
+	[DDLRegistration(0x6e161113u)] ActorAndSystemDisabled,
+	[DDLRegistration(0x5c383a64u)] Sending,
 }
 
 public static class xb0ef2921Values {

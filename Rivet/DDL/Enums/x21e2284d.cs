@@ -7,15 +7,15 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x21e2284du)]
 public enum x21e2284d : uint {
-	[DDLRegistration(0xfc84c0e6u)] OnSpawn = 0x0u,
-	[DDLRegistration(0x60bb658eu)] OnHitEnemy = 0x1u,
-	[DDLRegistration(0xa4505806u)] OnHitFriendly = 0x2u,
-	[DDLRegistration(0x15fe7f23u)] OnHitNonFriendly = 0x3u,
-	[DDLRegistration(0x102a0a20u)] OnHitEnvironment = 0x4u,
-	[DDLRegistration(0xb5378862u)] OnHitAnything = 0x5u,
-	[DDLRegistration(0xa84b1dc5u)] OnUpdateInterval = 0x6u,
-	[DDLRegistration(0xacd83f46u)] OnLifetimeExpired = 0x7u,
-	[DDLRegistration(0xd60d7484u)] PostInit = 0x8u,
+	[DDLRegistration(0xfc84c0e6u)] OnSpawn,
+	[DDLRegistration(0x60bb658eu)] OnHitEnemy,
+	[DDLRegistration(0xa4505806u)] OnHitFriendly,
+	[DDLRegistration(0x15fe7f23u)] OnHitNonFriendly,
+	[DDLRegistration(0x102a0a20u)] OnHitEnvironment,
+	[DDLRegistration(0xb5378862u)] OnHitAnything,
+	[DDLRegistration(0xa84b1dc5u)] OnUpdateInterval,
+	[DDLRegistration(0xacd83f46u)] OnLifetimeExpired,
+	[DDLRegistration(0xd60d7484u)] PostInit,
 }
 
 public static class x21e2284dValues {

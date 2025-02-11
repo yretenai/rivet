@@ -7,14 +7,14 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xa8fd47b8u)]
 public enum xa8fd47b8 : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0xe63f67b9u)] XAxis = 0x1u,
-	[DDLRegistration(0xdb5f4e09u)] YAxis = 0x2u,
-	[DDLRegistration(0x9cff34d9u)] ZAxis = 0x3u,
-	[DDLRegistration(0x59b4c861u)] Orbit = 0x4u,
-	[DDLRegistration(0x391d5fd7u)] Sphere = 0x5u,
-	[DDLRegistration(0x8d1b33b6u)] Rotation = 0x6u,
-	[DDLRegistration(0x3bff8b06u)] Last = 0x7u,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0xe63f67b9u)] XAxis,
+	[DDLRegistration(0xdb5f4e09u)] YAxis,
+	[DDLRegistration(0x9cff34d9u)] ZAxis,
+	[DDLRegistration(0x59b4c861u)] Orbit,
+	[DDLRegistration(0x391d5fd7u)] Sphere,
+	[DDLRegistration(0x8d1b33b6u)] Rotation,
+	[DDLRegistration(0x3bff8b06u)] Last,
 }
 
 public static class xa8fd47b8Values {

@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x90d1aef7u)]
 public enum x90d1aef7 : uint {
-	[DDLRegistration(0x084527c3u)] Low = 0x0u,
-	[DDLRegistration(0xaa977ce7u)] Medium = 0x1u,
-	[DDLRegistration(0x8021c6f3u)] High = 0x2u,
+	[DDLRegistration(0x084527c3u)] Low,
+	[DDLRegistration(0xaa977ce7u)] Medium,
+	[DDLRegistration(0x8021c6f3u)] High,
 }
 
 public static class x90d1aef7Values {

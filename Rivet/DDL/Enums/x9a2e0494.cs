@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x9a2e0494u)]
 public enum x9a2e0494 : uint {
-	[DDLRegistration(0x23ed85e1u)] OffscreenHalf = 0x0u,
-	[DDLRegistration(0x38c81060u)] OffscreenFull = 0x1u,
+	[DDLRegistration(0x23ed85e1u, "Offscreen Half")] OffscreenHalf,
+	[DDLRegistration(0x38c81060u, "Offscreen Full")] OffscreenFull,
 }
 
 public static class x9a2e0494Values {

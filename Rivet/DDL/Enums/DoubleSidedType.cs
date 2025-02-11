@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x0a20f844u)]
 public enum DoubleSidedType : uint {
-	[DDLRegistration(0x76a3102bu)] InheritFromMaterial = 0x0u,
-	[DDLRegistration(0x1c7c6d0eu)] ForceSingleSidedInLod1 = 0x1u,
-	[DDLRegistration(0xb98ced2bu)] ForceSingleSided = 0x2u,
+	[DDLRegistration(0x76a3102bu, "Inherit From Material")] InheritFromMaterial,
+	[DDLRegistration(0x1c7c6d0eu, "Force Single In Lod 1")] ForceSingleSidedInLod1,
+	[DDLRegistration(0xb98ced2bu, "Force Single Sided")] ForceSingleSided,
 }
 
 public static class DoubleSidedTypeValues {

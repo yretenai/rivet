@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x33ef665au)]
 public enum x33ef665a : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0xe6007b64u)] Complete = 0x1u,
-	[DDLRegistration(0xf26f9a27u)] Failed = 0x2u,
-	[DDLRegistration(0x7ef0af7bu)] Deactivated = 0x3u,
-	[DDLRegistration(0x328ef533u)] Quit = 0x4u,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0xe6007b64u, "complete")] Complete,
+	[DDLRegistration(0xf26f9a27u, "failed")] Failed,
+	[DDLRegistration(0x7ef0af7bu, "deactivated")] Deactivated,
+	[DDLRegistration(0x328ef533u, "quit")] Quit,
 }
 
 public static class x33ef665aValues {

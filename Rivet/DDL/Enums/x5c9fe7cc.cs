@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x5c9fe7ccu)]
 public enum x5c9fe7cc : uint {
-	[DDLRegistration(0x6e800a29u)] Safe = 0x0u,
-	[DDLRegistration(0x06af5a2bu)] Merge = 0x1u,
-	[DDLRegistration(0x314c2588u)] AcceptTheirs = 0x2u,
-	[DDLRegistration(0x85fbc3a9u)] AcceptYours = 0x3u,
+	[DDLRegistration(0x6e800a29u, description: "'Safe' resolve; skip files that need merging.")] Safe,
+	[DDLRegistration(0x06af5a2bu, description: "Resolve by merging; skip files with conflicts.")] Merge,
+	[DDLRegistration(0x314c2588u, description: "Force acceptance of theirs; overwrites yours.")] AcceptTheirs,
+	[DDLRegistration(0x85fbc3a9u, description: "Force acceptance of yours; ignores theirs.")] AcceptYours,
 }
 
 public static class x5c9fe7ccValues {

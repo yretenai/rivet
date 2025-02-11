@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xfb252bceu)]
 public enum xfb252bce : uint {
-	[DDLRegistration(0x613a81e3u)] Linear = 0x0u,
-	[DDLRegistration(0xa3e73049u)] EaseInOut = 0x1u,
+	[DDLRegistration(0x613a81e3u, "Linear")] Linear,
+	[DDLRegistration(0xa3e73049u, "Ease In Out")] EaseInOut,
 }
 
 public static class xfb252bceValues {

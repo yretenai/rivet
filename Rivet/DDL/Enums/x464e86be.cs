@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x464e86beu)]
 public enum x464e86be : uint {
-	[DDLRegistration(0xa188b7dfu)] BatchedStatic = 0x0u,
-	[DDLRegistration(0x336c3171u)] DynamicProximty = 0x1u,
-	[DDLRegistration(0xcbbe6ee7u)] DynamicNoProximity = 0x2u,
+	[DDLRegistration(0xa188b7dfu, "Batched Static", "Manually added and removed by systems")] BatchedStatic,
+	[DDLRegistration(0x336c3171u, "Dynamic Proximity", "Added and removed based on distance to active bots, but only when this actor is not moving")] DynamicProximty,
+	[DDLRegistration(0xcbbe6ee7u, "Dynamic No Proximity", "Added and removed without active bot distance check, but only when this actor is not moving")] DynamicNoProximity,
 }
 
 public static class x464e86beValues {

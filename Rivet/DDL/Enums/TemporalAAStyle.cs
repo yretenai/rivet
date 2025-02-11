@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xd219660au)]
 public enum TemporalAAStyle : uint {
-	[DDLRegistration(0x00c157b9u)] InheritMaterial = 0x0u,
-	[DDLRegistration(0x525e833cu)] NonResponsive = 0x1u,
-	[DDLRegistration(0xd3016a83u)] Responsive = 0x2u,
+	[DDLRegistration(0x00c157b9u, "Inherit Material")] InheritMaterial,
+	[DDLRegistration(0x525e833cu, "Non-Responsive")] NonResponsive,
+	[DDLRegistration(0xd3016a83u, "Responsive")] Responsive,
 }
 
 public static class TemporalAAStyleValues {

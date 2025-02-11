@@ -7,15 +7,15 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xa3499465u)]
 public enum xa3499465 : uint {
-	[DDLRegistration(0xd6d7d43au)] Head = 0x0u,
-	[DDLRegistration(0xca9971f7u)] Torso = 0x1u,
-	[DDLRegistration(0x8c3c612cu)] Legs = 0x2u,
-	[DDLRegistration(0xf737ca93u)] MeleeWeapon = 0x3u,
-	[DDLRegistration(0xe5a96777u)] Sets = 0x4u,
-	[DDLRegistration(0x447a071du)] BodyType = 0x5u,
-	[DDLRegistration(0x743059c1u)] Face = 0x6u,
-	[DDLRegistration(0x6d5ad409u)] Customize = 0x7u,
-	[DDLRegistration(0x99c60aa6u)] Vendor = 0x8u,
+	[DDLRegistration(0xd6d7d43au, "Head")] Head,
+	[DDLRegistration(0xca9971f7u, "Torso")] Torso,
+	[DDLRegistration(0x8c3c612cu, "Legs")] Legs,
+	[DDLRegistration(0xf737ca93u, "Melee Weapon")] MeleeWeapon,
+	[DDLRegistration(0xe5a96777u, "Sets")] Sets,
+	[DDLRegistration(0x447a071du, "Body Type")] BodyType,
+	[DDLRegistration(0x743059c1u, "Face")] Face,
+	[DDLRegistration(0x6d5ad409u, "Customize Option")] Customize,
+	[DDLRegistration(0x99c60aa6u, "Vendor Option")] Vendor,
 }
 
 public static class xa3499465Values {

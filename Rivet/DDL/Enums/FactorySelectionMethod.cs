@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xb2f1d014u)]
 public enum FactorySelectionMethod : uint {
-	[DDLRegistration(0x9176309eu)] RoundRobin = 0x0u,
-	[DDLRegistration(0x035855cdu)] FinishEach = 0x1u,
+	[DDLRegistration(0x9176309eu)] RoundRobin,
+	[DDLRegistration(0x035855cdu)] FinishEach,
 }
 
 public static class FactorySelectionMethodValues {

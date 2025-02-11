@@ -7,12 +7,12 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xa2b63d63u)]
 public enum xa2b63d63 : uint {
-	[DDLRegistration(0xad0097b3u)] Idle = 0x0u,
-	[DDLRegistration(0x43e1f228u)] CheckingDependencies = 0x1u,
-	[DDLRegistration(0x4508ca93u)] Building = 0x2u,
-	[DDLRegistration(0xa464618fu)] GeneratingDependencies = 0x3u,
-	[DDLRegistration(0x874c175du)] CacheAccess = 0x4u,
-	[DDLRegistration(0xe7f665a1u)] Finishing = 0x5u,
+	[DDLRegistration(0xad0097b3u, "Idle")] Idle,
+	[DDLRegistration(0x43e1f228u, "Checking Dependencies")] CheckingDependencies,
+	[DDLRegistration(0x4508ca93u, "Building")] Building,
+	[DDLRegistration(0xa464618fu, "Generating Dependencies")] GeneratingDependencies,
+	[DDLRegistration(0x874c175du, "Accessing CCS")] CacheAccess,
+	[DDLRegistration(0xe7f665a1u, "Finishing")] Finishing,
 }
 
 public static class xa2b63d63Values {

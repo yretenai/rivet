@@ -7,20 +7,20 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x756cf95fu)]
 public enum x756cf95f : uint {
-	[DDLRegistration(0x74d38c15u)] CampaignEasyDifficulty = 0x0u,
-	[DDLRegistration(0x50626603u)] CampaignEasyDifficulty2Players = 0x1u,
-	[DDLRegistration(0x55f14406u)] CampaignNormalDifficulty = 0x2u,
-	[DDLRegistration(0xeb6123aeu)] CampaignNormalDifficulty2Players = 0x3u,
-	[DDLRegistration(0x3dee39edu)] CampaignHardDifficulty = 0x4u,
-	[DDLRegistration(0xe3a627b0u)] CampaignHardDifficulty2Players = 0x5u,
-	[DDLRegistration(0x52b0156bu)] ChallengeMode = 0x6u,
-	[DDLRegistration(0xa579295du)] k2Deaths = 0x7u,
-	[DDLRegistration(0x030e22e9u)] k3Deaths = 0x8u,
-	[DDLRegistration(0xc6a91c67u)] k4Deaths = 0x9u,
-	[DDLRegistration(0x60de17d3u)] k5Deaths = 0xau,
-	[DDLRegistration(0xfe3ea8d6u)] Any = 0xbu,
-	[DDLRegistration(0x28b39281u)] CampaignHardestDifficulty = 0xcu,
-	[DDLRegistration(0x395e160bu)] CampaignHardestDifficulty2Players = 0xdu,
+	[DDLRegistration(0x74d38c15u, "Campaign Easy Difficulty 1 or more Players")] CampaignEasyDifficulty,
+	[DDLRegistration(0x50626603u, "Campaign Easy Difficulty 2 or more Players")] CampaignEasyDifficulty2Players,
+	[DDLRegistration(0x55f14406u, "Campaign Normal Difficulty 1 or more Players")] CampaignNormalDifficulty,
+	[DDLRegistration(0xeb6123aeu, "Campaign Normal Difficulty 2 or more Players")] CampaignNormalDifficulty2Players,
+	[DDLRegistration(0x3dee39edu, "Campaign Hard Difficulty 1 or more Players")] CampaignHardDifficulty,
+	[DDLRegistration(0xe3a627b0u, "Campaign Hard Difficulty 2 or more Players")] CampaignHardDifficulty2Players,
+	[DDLRegistration(0x52b0156bu, "Challenge Mode mods")] ChallengeMode,
+	[DDLRegistration(0xa579295du, "Died 2+ times")] k2Deaths,
+	[DDLRegistration(0x030e22e9u, "Died 3+ times")] k3Deaths,
+	[DDLRegistration(0xc6a91c67u, "Died 4+ times")] k4Deaths,
+	[DDLRegistration(0x60de17d3u, "Died 5+ times")] k5Deaths,
+	[DDLRegistration(0xfe3ea8d6u, "Always used")] Any,
+	[DDLRegistration(0x28b39281u, "Campaign Hardest Difficulty 1 or more Players")] CampaignHardestDifficulty,
+	[DDLRegistration(0x395e160bu, "Campaign Hardest Difficulty 2 or more Players")] CampaignHardestDifficulty2Players,
 }
 
 public static class x756cf95fValues {

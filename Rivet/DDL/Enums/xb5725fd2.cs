@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xb5725fd2u)]
 public enum xb5725fd2 : uint {
-	[DDLRegistration(0xe743d22fu)] SceneMode = 0x0u,
-	[DDLRegistration(0x986713eau)] VaultMode = 0x1u,
+	[DDLRegistration(0xe743d22fu, "Scene Mode")] SceneMode,
+	[DDLRegistration(0x986713eau, "Vault Mode")] VaultMode,
 }
 
 public static class xb5725fd2Values {

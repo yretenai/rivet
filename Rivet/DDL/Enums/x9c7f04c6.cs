@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x9c7f04c6u)]
 public enum x9c7f04c6 : uint {
-	[DDLRegistration(0xe2b463e7u)] Default = 0x0u,
-	[DDLRegistration(0x75f68b66u)] Debug = 0x1u,
-	[DDLRegistration(0x5301e501u)] CoreOpt = 0x2u,
-	[DDLRegistration(0x9fad6025u)] Release = 0x3u,
-	[DDLRegistration(0xf5869007u)] Final = 0x4u,
+	[DDLRegistration(0xe2b463e7u)] Default,
+	[DDLRegistration(0x75f68b66u)] Debug,
+	[DDLRegistration(0x5301e501u)] CoreOpt,
+	[DDLRegistration(0x9fad6025u)] Release,
+	[DDLRegistration(0xf5869007u)] Final,
 }
 
 public static class x9c7f04c6Values {

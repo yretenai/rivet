@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x53914cb6u)]
 public enum x53914cb6 : uint {
-	[DDLRegistration(0x425b6e37u)] SmoothingLinear = 0x0u,
-	[DDLRegistration(0xbe0b0999u)] SmoothingEaseIn = 0x1u,
-	[DDLRegistration(0x73be22e4u)] SmoothingEaseOut = 0x2u,
-	[DDLRegistration(0xca34136bu)] SmoothingEaseInOut = 0x3u,
+	[DDLRegistration(0x425b6e37u, "Linear")] SmoothingLinear,
+	[DDLRegistration(0xbe0b0999u, "Ease In")] SmoothingEaseIn,
+	[DDLRegistration(0x73be22e4u, "Ease Out")] SmoothingEaseOut,
+	[DDLRegistration(0xca34136bu, "Ease In/Out")] SmoothingEaseInOut,
 }
 
 public static class x53914cb6Values {

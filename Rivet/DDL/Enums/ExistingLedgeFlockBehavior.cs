@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xc723d92au)]
 public enum ExistingLedgeFlockBehavior : uint {
-	[DDLRegistration(0x377bde14u)] ScatterBirds = 0x0u,
-	[DDLRegistration(0x8ccde7fbu)] DestroyBirds = 0x1u,
+	[DDLRegistration(0x377bde14u, "Scatter Birds")] ScatterBirds,
+	[DDLRegistration(0x8ccde7fbu, "Destroy Birds")] DestroyBirds,
 }
 
 public static class ExistingLedgeFlockBehaviorValues {

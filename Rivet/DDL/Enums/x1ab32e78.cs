@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x1ab32e78u)]
 public enum x1ab32e78 : uint {
-	[DDLRegistration(0x516a591fu)] Parent = 0x0u,
-	[DDLRegistration(0x0a6f1bc5u)] Self = 0x1u,
+	[DDLRegistration(0x516a591fu, "Parent")] Parent,
+	[DDLRegistration(0x0a6f1bc5u, "Self")] Self,
 }
 
 public static class x1ab32e78Values {

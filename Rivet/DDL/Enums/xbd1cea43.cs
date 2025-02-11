@@ -7,13 +7,13 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xbd1cea43u)]
 public enum xbd1cea43 : uint {
-	[DDLRegistration(0x2f075ca0u)] Name = 0x0u,
-	[DDLRegistration(0x7a70a9a9u)] Path = 0x1u,
-	[DDLRegistration(0xe9481a57u)] CreatedBy = 0x2u,
-	[DDLRegistration(0x251f0520u)] LastModifiedBy = 0x3u,
-	[DDLRegistration(0x43a87008u)] Collection = 0x4u,
-	[DDLRegistration(0x1e98b680u)] Tags = 0x5u,
-	[DDLRegistration(0x10270a55u)] VaultId = 0x6u,
+	[DDLRegistration(0x2f075ca0u, "File Name")] Name,
+	[DDLRegistration(0x7a70a9a9u, "Path")] Path,
+	[DDLRegistration(0xe9481a57u, "Created By")] CreatedBy,
+	[DDLRegistration(0x251f0520u, "Last Modified By")] LastModifiedBy,
+	[DDLRegistration(0x43a87008u, "Collection")] Collection,
+	[DDLRegistration(0x1e98b680u, "Tags")] Tags,
+	[DDLRegistration(0x10270a55u, "Asset ID")] VaultId,
 }
 
 public static class xbd1cea43Values {

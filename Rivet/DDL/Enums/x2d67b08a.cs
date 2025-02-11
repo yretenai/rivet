@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x2d67b08au)]
 public enum x2d67b08a : uint {
-	[DDLRegistration(0xb5d18a0cu)] Multiply = 0x0u,
-	[DDLRegistration(0x67d72c85u)] Add = 0x1u,
-	[DDLRegistration(0x7cd97abeu)] Set = 0x2u,
+	[DDLRegistration(0xb5d18a0cu)] Multiply,
+	[DDLRegistration(0x67d72c85u)] Add,
+	[DDLRegistration(0x7cd97abeu)] Set,
 }
 
 public static class x2d67b08aValues {

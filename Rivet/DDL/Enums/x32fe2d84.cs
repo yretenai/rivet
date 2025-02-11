@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x32fe2d84u)]
 public enum x32fe2d84 : uint {
-	[DDLRegistration(0xd7cd31afu)] CycleAntiClockwise = 0x0u,
-	[DDLRegistration(0x07418566u)] CycleClockwise = 0x1u,
-	[DDLRegistration(0xcaf91892u)] PingPong = 0x2u,
+	[DDLRegistration(0xd7cd31afu, "Cycle anti-clockwise")] CycleAntiClockwise,
+	[DDLRegistration(0x07418566u, "Cycle clockwise")] CycleClockwise,
+	[DDLRegistration(0xcaf91892u, "PingPong")] PingPong,
 }
 
 public static class x32fe2d84Values {

@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x7484f9dfu)]
 public enum x7484f9df : uint {
-	[DDLRegistration(0x4f00c07fu)] None = 0x0u,
-	[DDLRegistration(0x8090f7eeu)] Bronze = 0x1u,
-	[DDLRegistration(0x1123563cu)] Silver = 0x2u,
-	[DDLRegistration(0x7739dde1u)] Gold = 0x3u,
-	[DDLRegistration(0xd5b3811du)] Platinum = 0x4u,
+	[DDLRegistration(0x4f00c07fu)] None,
+	[DDLRegistration(0x8090f7eeu)] Bronze,
+	[DDLRegistration(0x1123563cu)] Silver,
+	[DDLRegistration(0x7739dde1u)] Gold,
+	[DDLRegistration(0xd5b3811du)] Platinum,
 }
 
 public static class x7484f9dfValues {

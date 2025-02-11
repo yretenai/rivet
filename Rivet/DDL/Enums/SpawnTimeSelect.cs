@@ -7,7 +7,7 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x87a08fd4u)]
 public enum SpawnTimeSelect : uint {
-	[DDLRegistration(0x576c09b7u)] OnDestroyedEvent = 0x0u,
+	[DDLRegistration(0x576c09b7u)] OnDestroyedEvent,
 }
 
 public static class SpawnTimeSelectValues {

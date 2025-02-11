@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x0d3dac94u)]
 public enum x0d3dac94 : uint {
-	[DDLRegistration(0xba9994cbu)] ReloadStyleNone = 0x0u,
-	[DDLRegistration(0xd703b08bu)] ReloadStyleSpin = 0x1u,
-	[DDLRegistration(0xf36d899au)] ReloadStyleSnap = 0x2u,
-	[DDLRegistration(0x5d1e25e9u)] ReloadStylePump = 0x3u,
-	[DDLRegistration(0xa1ac1642u)] ReloadStyleShake = 0x4u,
+	[DDLRegistration(0xba9994cbu)] ReloadStyleNone,
+	[DDLRegistration(0xd703b08bu)] ReloadStyleSpin,
+	[DDLRegistration(0xf36d899au)] ReloadStyleSnap,
+	[DDLRegistration(0x5d1e25e9u)] ReloadStylePump,
+	[DDLRegistration(0xa1ac1642u)] ReloadStyleShake,
 }
 
 public static class x0d3dac94Values {

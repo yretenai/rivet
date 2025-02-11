@@ -7,7 +7,7 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xc533d93fu)]
 public enum xc533d93f : uint {
-	[DDLRegistration(0x6379aa77u)] Held = 0x0u,
+	[DDLRegistration(0x6379aa77u)] Held,
 }
 
 public static class xc533d93fValues {

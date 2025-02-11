@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xd839f866u)]
 public enum xd839f866 : uint {
-	[DDLRegistration(0xfa1437fcu)] TTY = 0x0u,
-	[DDLRegistration(0x2985e132u)] Dialog = 0x1u,
-	[DDLRegistration(0x0eb42269u)] None = 0x2u,
+	[DDLRegistration(0xfa1437fcu, "output to TTY")] TTY,
+	[DDLRegistration(0x2985e132u, "present dialog and output to TTY")] Dialog,
+	[DDLRegistration(0x0eb42269u, "no special handling of the failure state will be performed by the application")] None,
 }
 
 public static class xd839f866Values {

@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xc53d61cau)]
 public enum xc53d61ca : uint {
-	[DDLRegistration(0xc0a509d9u)] PyramidLight = 0x0u,
-	[DDLRegistration(0xc19bf1b0u)] PointLight = 0x1u,
-	[DDLRegistration(0x38ddd10eu)] SpotLight = 0x2u,
+	[DDLRegistration(0xc0a509d9u, "Pyramid")] PyramidLight,
+	[DDLRegistration(0xc19bf1b0u, "Point")] PointLight,
+	[DDLRegistration(0x38ddd10eu, "Spot")] SpotLight,
 }
 
 public static class xc53d61caValues {

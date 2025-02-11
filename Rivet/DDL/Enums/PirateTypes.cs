@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xe952edf0u)]
 public enum PirateTypes : uint {
-	[DDLRegistration(0xc9c922e0u)] Green = 0x0u,
-	[DDLRegistration(0x23bdff1fu)] Orange = 0x1u,
-	[DDLRegistration(0xaea60a04u)] Blue = 0x2u,
-	[DDLRegistration(0xee7ca2f8u)] Yellow = 0x3u,
-	[DDLRegistration(0xd4fd3c81u)] Purple = 0x4u,
+	[DDLRegistration(0xc9c922e0u)] Green,
+	[DDLRegistration(0x23bdff1fu)] Orange,
+	[DDLRegistration(0xaea60a04u)] Blue,
+	[DDLRegistration(0xee7ca2f8u)] Yellow,
+	[DDLRegistration(0xd4fd3c81u)] Purple,
 }
 
 public static class PirateTypesValues {

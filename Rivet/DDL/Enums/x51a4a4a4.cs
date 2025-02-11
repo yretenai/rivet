@@ -7,12 +7,12 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x51a4a4a4u)]
 public enum x51a4a4a4 : uint {
-	[DDLRegistration(0xe2e7da63u)] Unmodified = 0x0u,
-	[DDLRegistration(0xdfdb8c5eu)] Nearest = 0x1u,
-	[DDLRegistration(0x7f6df8fcu)] Smaller = 0x2u,
-	[DDLRegistration(0x2c6d336fu)] Larger = 0x3u,
-	[DDLRegistration(0x07441187u)] Pad = 0x4u,
-	[DDLRegistration(0x6117c2dfu)] UI = 0x5u,
+	[DDLRegistration(0xe2e7da63u, "No Alignment, Keep Mips")] Unmodified,
+	[DDLRegistration(0xdfdb8c5eu, "Nearest Power Of Two")] Nearest,
+	[DDLRegistration(0x7f6df8fcu, "Smaller Power Of Two")] Smaller,
+	[DDLRegistration(0x2c6d336fu, "Larger Power Of Two")] Larger,
+	[DDLRegistration(0x07441187u, "Pad")] Pad,
+	[DDLRegistration(0x6117c2dfu, "UI - No Align, No Mips")] UI,
 }
 
 public static class x51a4a4a4Values {

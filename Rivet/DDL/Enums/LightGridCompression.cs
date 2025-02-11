@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x845970a5u)]
 public enum LightGridCompression : uint {
-	[DDLRegistration(0x15aafc73u)] NoCompression = 0x0u,
-	[DDLRegistration(0x574fd94bu)] LowCompression = 0x1u,
-	[DDLRegistration(0xf267d1efu)] MediumCompression = 0x2u,
-	[DDLRegistration(0x2654badfu)] HighCompression = 0x3u,
-	[DDLRegistration(0xf1632dfeu)] HighestCompression = 0x4u,
+	[DDLRegistration(0x15aafc73u, "No Compression")] NoCompression,
+	[DDLRegistration(0x574fd94bu, "Low Compression")] LowCompression,
+	[DDLRegistration(0xf267d1efu, "Medium Compression")] MediumCompression,
+	[DDLRegistration(0x2654badfu, "High Compression")] HighCompression,
+	[DDLRegistration(0xf1632dfeu, "Highest Compression")] HighestCompression,
 }
 
 public static class LightGridCompressionValues {

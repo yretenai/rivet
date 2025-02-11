@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x3d49dc75u)]
 public enum x3d49dc75 : uint {
-	[DDLRegistration(0xf6401711u)] Disable = 0x0u,
-	[DDLRegistration(0xa1d52ebfu)] All = 0x1u,
-	[DDLRegistration(0x7b69c766u)] k30 = 0x2u,
-	[DDLRegistration(0xe8c1c093u)] k30Plus = 0x3u,
+	[DDLRegistration(0xf6401711u, "Disable")] Disable,
+	[DDLRegistration(0xa1d52ebfu, "All FPS")] All,
+	[DDLRegistration(0x7b69c766u, "30 Only")] k30,
+	[DDLRegistration(0xe8c1c093u, "30+")] k30Plus,
 }
 
 public static class x3d49dc75Values {

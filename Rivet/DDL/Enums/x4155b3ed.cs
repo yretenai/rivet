@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x4155b3edu)]
 public enum x4155b3ed : uint {
-	[DDLRegistration(0x3c3a0663u)] CoverageUsingMaskLayer = 0x0u,
-	[DDLRegistration(0xd13e8c2fu)] DensityUsingMaskLayer = 0x1u,
-	[DDLRegistration(0x7f4cef37u)] TotalPointCountUsingMaskLayer = 0x2u,
-	[DDLRegistration(0x200f701fu)] PerPointCountUsingSourcePoints = 0x3u,
+	[DDLRegistration(0x3c3a0663u, "By Coverage using Mask Layer", "Given a certain Coverage value and Variability values, this method will scatter points so that they would cover the set amount of Coverage on the painted mask on the heightfield.")] CoverageUsingMaskLayer,
+	[DDLRegistration(0xd13e8c2fu, "By Density using Mask Layer", "Given a certain Density value, this method will scatter points so that they would have Density as their number of points per meter square on the painted mask on the heightfield.")] DensityUsingMaskLayer,
+	[DDLRegistration(0x7f4cef37u, "Total Point Count using Mask Layer", "Given a certain Total Point Count value, this method will scatter points so that they would have exactly the number set as their number of points on the painted mask on the heightfield.")] TotalPointCountUsingMaskLayer,
+	[DDLRegistration(0x200f701fu, "Per Point Count using Source Points", "Given a certain range or exact value, this method will scatter points around the points with tags matching Source Point Tag.")] PerPointCountUsingSourcePoints,
 }
 
 public static class x4155b3edValues {

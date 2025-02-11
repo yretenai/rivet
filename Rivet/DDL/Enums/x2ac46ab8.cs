@@ -7,14 +7,14 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x2ac46ab8u)]
 public enum x2ac46ab8 : uint {
-	[DDLRegistration(0x7adfe385u)] Random = 0x0u,
-	[DDLRegistration(0x6db5aa73u)] Index = 0x1u,
-	[DDLRegistration(0x9e8f6552u)] Closest = 0x2u,
-	[DDLRegistration(0xc0dd816cu)] Furthest = 0x3u,
-	[DDLRegistration(0x142bc311u)] CloserThanDistanceValue = 0x4u,
-	[DDLRegistration(0x767d9493u)] FurtherThanDistanceValue = 0x5u,
-	[DDLRegistration(0x370896d0u)] InAnyCameraView = 0x6u,
-	[DDLRegistration(0x59044392u)] NotInAnyCameraView = 0x7u,
+	[DDLRegistration(0x7adfe385u, description: "This randomly picks an Actor within the Actor Group.")] Random,
+	[DDLRegistration(0x6db5aa73u, description: "This will pick the Actor indexed at <i>Value</i> from the Actor Group.")] Index,
+	[DDLRegistration(0x9e8f6552u, description: "This will pick the Actor closest to the <i>Reference</i>.")] Closest,
+	[DDLRegistration(0xc0dd816cu, description: "This will pick The Actor furthest from the <i>Reference</i>.")] Furthest,
+	[DDLRegistration(0x142bc311u, description: "This will pick the Actor that's closer than <i>Value</i> from <i>Reference</i>.")] CloserThanDistanceValue,
+	[DDLRegistration(0x767d9493u, description: "This will pick the Actor that's further than <i>Value</i> from <i>Reference</i>.")] FurtherThanDistanceValue,
+	[DDLRegistration(0x370896d0u, description: "This will pick an Actor in view.")] InAnyCameraView,
+	[DDLRegistration(0x59044392u, description: "This will pick an Actor that is not in a camera view frustum. This doesn't account for ray traced reflections.")] NotInAnyCameraView,
 }
 
 public static class x2ac46ab8Values {

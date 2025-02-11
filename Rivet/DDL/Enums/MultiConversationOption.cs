@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xea118791u)]
 public enum MultiConversationOption : uint {
-	[DDLRegistration(0x6a88877bu)] SingleConversation = 0x0u,
-	[DDLRegistration(0x91cfdd5eu)] Loop = 0x1u,
-	[DDLRegistration(0x181b6134u)] PlayAllOnce = 0x2u,
+	[DDLRegistration(0x6a88877bu)] SingleConversation,
+	[DDLRegistration(0x91cfdd5eu)] Loop,
+	[DDLRegistration(0x181b6134u)] PlayAllOnce,
 }
 
 public static class MultiConversationOptionValues {

@@ -7,12 +7,12 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xc457a124u)]
 public enum xc457a124 : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0x5a7a2d27u)] Vanity = 0x1u,
-	[DDLRegistration(0x05d79eb6u)] Weapon = 0x2u,
-	[DDLRegistration(0xacdf7fc2u)] Gameplay = 0x3u,
-	[DDLRegistration(0xd8d99d22u)] VendorSetVanity = 0x4u,
-	[DDLRegistration(0xa1d52ebfu)] All = 0x5u,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0x5a7a2d27u, description: "Vanity Loadouts")] Vanity,
+	[DDLRegistration(0x05d79eb6u, description: "Weapon Loadouts")] Weapon,
+	[DDLRegistration(0xacdf7fc2u, description: "Gameplay Loadouts")] Gameplay,
+	[DDLRegistration(0xd8d99d22u, description: "Vendor Set Vanity Loadouts")] VendorSetVanity,
+	[DDLRegistration(0xa1d52ebfu, description: "All categories")] All,
 }
 
 public static class xc457a124Values {

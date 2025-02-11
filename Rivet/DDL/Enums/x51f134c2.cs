@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x51f134c2u)]
 public enum x51f134c2 : uint {
-	[DDLRegistration(0x7adfe385u)] Random = 0x0u,
-	[DDLRegistration(0xb1710221u)] Off = 0x1u,
-	[DDLRegistration(0x74308d6fu)] On = 0x2u,
+	[DDLRegistration(0x7adfe385u, "Random")] Random,
+	[DDLRegistration(0xb1710221u, "Off")] Off,
+	[DDLRegistration(0x74308d6fu, "On")] On,
 }
 
 public static class x51f134c2Values {

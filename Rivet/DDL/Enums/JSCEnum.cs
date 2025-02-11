@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xa9c1295eu)]
 public enum JSCEnum : uint {
-	[DDLRegistration(0xa5a928dbu)] System = 0x0u,
-	[DDLRegistration(0x6115bf9au)] Job = 0x1u,
-	[DDLRegistration(0x008dd4edu)] Class = 0x2u,
+	[DDLRegistration(0xa5a928dbu, "System")] System,
+	[DDLRegistration(0x6115bf9au, "Job")] Job,
+	[DDLRegistration(0x008dd4edu, "Class")] Class,
 }
 
 public static class JSCEnumValues {

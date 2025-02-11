@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xb7a407a9u)]
 public enum xb7a407a9 : uint {
-	[DDLRegistration(0xa10751f9u)] Square = 0x0u,
-	[DDLRegistration(0xb8535c29u)] Circle = 0x1u,
+	[DDLRegistration(0xa10751f9u, "Square")] Square,
+	[DDLRegistration(0xb8535c29u, "Circle")] Circle,
 }
 
 public static class xb7a407a9Values {

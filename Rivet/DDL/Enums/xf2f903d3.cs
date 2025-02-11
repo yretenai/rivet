@@ -7,19 +7,19 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xf2f903d3u)]
 public enum xf2f903d3 : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0xacdf7fc2u)] Gameplay = 0x1u,
-	[DDLRegistration(0xf7f0bf8fu)] PauseSP = 0x2u,
-	[DDLRegistration(0x95ebb164u)] PauseCredits = 0x3u,
-	[DDLRegistration(0xa2f1e594u)] PauseCinematic = 0x4u,
-	[DDLRegistration(0xe7cfa92au)] Popup = 0x5u,
-	[DDLRegistration(0x09ace1d3u)] Levelup = 0x6u,
-	[DDLRegistration(0x99c60aa6u)] Vendor = 0x7u,
-	[DDLRegistration(0x5422c6bbu)] Load = 0x8u,
-	[DDLRegistration(0xafcb7fddu)] SystemConstrained = 0x9u,
-	[DDLRegistration(0x8a7367c4u)] QuickSelect = 0xau,
-	[DDLRegistration(0x8ad53b9du)] FullScreenMovie = 0xbu,
-	[DDLRegistration(0x5d173d91u)] GalacticMap = 0xcu,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0xacdf7fc2u)] Gameplay,
+	[DDLRegistration(0xf7f0bf8fu)] PauseSP,
+	[DDLRegistration(0x95ebb164u)] PauseCredits,
+	[DDLRegistration(0xa2f1e594u)] PauseCinematic,
+	[DDLRegistration(0xe7cfa92au)] Popup,
+	[DDLRegistration(0x09ace1d3u)] Levelup,
+	[DDLRegistration(0x99c60aa6u)] Vendor,
+	[DDLRegistration(0x5422c6bbu)] Load,
+	[DDLRegistration(0xafcb7fddu)] SystemConstrained,
+	[DDLRegistration(0x8a7367c4u)] QuickSelect,
+	[DDLRegistration(0x8ad53b9du)] FullScreenMovie,
+	[DDLRegistration(0x5d173d91u)] GalacticMap,
 }
 
 public static class xf2f903d3Values {

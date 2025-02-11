@@ -7,16 +7,16 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x7756f5e5u)]
 public enum x7756f5e5 : uint {
-	[DDLRegistration(0x70b5ae63u)] ActivateTracks = 0x0u,
-	[DDLRegistration(0x5422c6bbu)] Load = 0x1u,
-	[DDLRegistration(0xa1d50685u)] MuteTracks = 0x2u,
-	[DDLRegistration(0x3a5c5f9fu)] Pause = 0x3u,
-	[DDLRegistration(0x2fadfc1cu)] Play = 0x4u,
-	[DDLRegistration(0x6b6fd031u)] SetCinematic2Options = 0x5u,
-	[DDLRegistration(0x43607f09u)] SetTime = 0x6u,
-	[DDLRegistration(0xecc70adbu)] SetTransform = 0x7u,
-	[DDLRegistration(0xaa720ae1u)] SoloTracks = 0x8u,
-	[DDLRegistration(0xdceefce4u)] UpdateCinematic2Def = 0x9u,
+	[DDLRegistration(0x70b5ae63u)] ActivateTracks,
+	[DDLRegistration(0x5422c6bbu)] Load,
+	[DDLRegistration(0xa1d50685u)] MuteTracks,
+	[DDLRegistration(0x3a5c5f9fu)] Pause,
+	[DDLRegistration(0x2fadfc1cu)] Play,
+	[DDLRegistration(0x6b6fd031u)] SetCinematic2Options,
+	[DDLRegistration(0x43607f09u)] SetTime,
+	[DDLRegistration(0xecc70adbu)] SetTransform,
+	[DDLRegistration(0xaa720ae1u)] SoloTracks,
+	[DDLRegistration(0xdceefce4u)] UpdateCinematic2Def,
 }
 
 public static class x7756f5e5Values {

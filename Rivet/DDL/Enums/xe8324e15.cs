@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xe8324e15u)]
 public enum xe8324e15 : uint {
-	[DDLRegistration(0x2099c5a4u)] Disabled = 0x0u,
-	[DDLRegistration(0xe9fce1c4u)] Enabled = 0x1u,
-	[DDLRegistration(0x38d1e329u)] EnabledCine = 0x2u,
+	[DDLRegistration(0x2099c5a4u)] Disabled,
+	[DDLRegistration(0xe9fce1c4u)] Enabled,
+	[DDLRegistration(0x38d1e329u)] EnabledCine,
 }
 
 public static class xe8324e15Values {

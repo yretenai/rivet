@@ -7,13 +7,13 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x77d81d02u)]
 public enum SelB : uint {
-	[DDLRegistration(0x7b50c88eu)] Q = 0x0u,
-	[DDLRegistration(0x66e7d8eau)] A = 0x1u,
-	[DDLRegistration(0xffee8950u)] B = 0x2u,
-	[DDLRegistration(0x88e9b9c6u)] C = 0x3u,
-	[DDLRegistration(0x618a1cf3u)] E = 0x4u,
-	[DDLRegistration(0xf8834d49u)] F = 0x5u,
-	[DDLRegistration(0x8f847ddfu)] G = 0x6u,
+	[DDLRegistration(0x7b50c88eu)] Q,
+	[DDLRegistration(0x66e7d8eau)] A,
+	[DDLRegistration(0xffee8950u)] B,
+	[DDLRegistration(0x88e9b9c6u)] C,
+	[DDLRegistration(0x618a1cf3u)] E,
+	[DDLRegistration(0xf8834d49u)] F,
+	[DDLRegistration(0x8f847ddfu)] G,
 }
 
 public static class SelBValues {

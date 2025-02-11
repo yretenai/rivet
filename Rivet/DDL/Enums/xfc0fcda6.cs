@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xfc0fcda6u)]
 public enum xfc0fcda6 : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0xeef5530bu)] Entitlement = 0x1u,
-	[DDLRegistration(0x2962a87cu)] Mission = 0x2u,
-	[DDLRegistration(0x0e83381cu)] Misc = 0x3u,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0xeef5530bu)] Entitlement,
+	[DDLRegistration(0x2962a87cu)] Mission,
+	[DDLRegistration(0x0e83381cu)] Misc,
 }
 
 public static class xfc0fcda6Values {

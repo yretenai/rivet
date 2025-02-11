@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xa80d41ffu)]
 public enum xa80d41ff : uint {
-	[DDLRegistration(0xc0b300f9u)] FillZero = 0x0u,
-	[DDLRegistration(0x6e5f7245u)] FillColor = 0x1u,
-	[DDLRegistration(0x04642460u)] Remove = 0x2u,
+	[DDLRegistration(0xc0b300f9u, "Fill with zero")] FillZero,
+	[DDLRegistration(0x6e5f7245u, "Fill with color")] FillColor,
+	[DDLRegistration(0x04642460u, "Remove data")] Remove,
 }
 
 public static class xa80d41ffValues {

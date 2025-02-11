@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x8578b610u)]
 public enum x8578b610 : uint {
-	[DDLRegistration(0x97a5c2ebu)] Generic = 0x0u,
-	[DDLRegistration(0x3b6b6e0du)] Objective = 0x1u,
-	[DDLRegistration(0xa6613402u)] Player = 0x2u,
+	[DDLRegistration(0x97a5c2ebu)] Generic,
+	[DDLRegistration(0x3b6b6e0du)] Objective,
+	[DDLRegistration(0xa6613402u)] Player,
 }
 
 public static class x8578b610Values {

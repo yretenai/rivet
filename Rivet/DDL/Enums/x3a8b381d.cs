@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x3a8b381du)]
 public enum x3a8b381d : uint {
-	[DDLRegistration(0x238f76adu)] TranslationRangeStd = 0x0u,
-	[DDLRegistration(0x287725a9u)] TranslationRangeLarge = 0x1u,
+	[DDLRegistration(0x238f76adu)] TranslationRangeStd,
+	[DDLRegistration(0x287725a9u)] TranslationRangeLarge,
 }
 
 public static class x3a8b381dValues {

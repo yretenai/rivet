@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x18e441ceu)]
 public enum x18e441ce : uint {
-	[DDLRegistration(0x546898e2u)] WeaponHide = 0x0u,
-	[DDLRegistration(0xc2ff8ac8u)] WeaponShow = 0x1u,
-	[DDLRegistration(0x10d591dcu)] WeaponStartFiring = 0x2u,
-	[DDLRegistration(0x262b29f9u)] WeaponStopFiring = 0x3u,
-	[DDLRegistration(0x7c67e4ffu)] WeaponFireOnce = 0x4u,
+	[DDLRegistration(0x546898e2u)] WeaponHide,
+	[DDLRegistration(0xc2ff8ac8u)] WeaponShow,
+	[DDLRegistration(0x10d591dcu)] WeaponStartFiring,
+	[DDLRegistration(0x262b29f9u)] WeaponStopFiring,
+	[DDLRegistration(0x7c67e4ffu)] WeaponFireOnce,
 }
 
 public static class x18e441ceValues {

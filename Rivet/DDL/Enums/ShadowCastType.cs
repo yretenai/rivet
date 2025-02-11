@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xa056bfc6u)]
 public enum ShadowCastType : uint {
-	[DDLRegistration(0x57d5bbaeu)] CacheStaticModels = 0x0u,
-	[DDLRegistration(0x4da22cc5u)] OnlyStaticModels = 0x1u,
-	[DDLRegistration(0x33c663ceu)] OnlyDynamicModels = 0x2u,
+	[DDLRegistration(0x57d5bbaeu, "Cache Static Models")] CacheStaticModels,
+	[DDLRegistration(0x4da22cc5u, "Only Static Models")] OnlyStaticModels,
+	[DDLRegistration(0x33c663ceu, "Only Dynamic Models")] OnlyDynamicModels,
 }
 
 public static class ShadowCastTypeValues {

@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xba3c7381u)]
 public enum xba3c7381 : uint {
-	[DDLRegistration(0x2fb4a5a7u)] Inactive = 0x0u,
-	[DDLRegistration(0xcfeaa78fu)] Passive = 0x1u,
-	[DDLRegistration(0x785c546bu)] Engaged = 0x2u,
+	[DDLRegistration(0x2fb4a5a7u)] Inactive,
+	[DDLRegistration(0xcfeaa78fu)] Passive,
+	[DDLRegistration(0x785c546bu)] Engaged,
 }
 
 public static class xba3c7381Values {

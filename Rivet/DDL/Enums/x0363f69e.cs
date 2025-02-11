@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x0363f69eu)]
 public enum x0363f69e : uint {
-	[DDLRegistration(0xc24ac804u)] FromSystem = 0x0u,
-	[DDLRegistration(0x6c0f590fu)] ForceV1 = 0x1u,
-	[DDLRegistration(0xf50608b5u)] ForceV2 = 0x2u,
-	[DDLRegistration(0x82013823u)] ForceV3 = 0x3u,
+	[DDLRegistration(0xc24ac804u, "From System")] FromSystem,
+	[DDLRegistration(0x6c0f590fu, "Force V1")] ForceV1,
+	[DDLRegistration(0xf50608b5u, "Force V2")] ForceV2,
+	[DDLRegistration(0x82013823u, "Force V3")] ForceV3,
 }
 
 public static class x0363f69eValues {

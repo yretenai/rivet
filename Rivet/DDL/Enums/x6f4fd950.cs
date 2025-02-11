@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x6f4fd950u)]
 public enum x6f4fd950 : uint {
-	[DDLRegistration(0x87e724f8u)] SoundEventActionPlay = 0x0u,
-	[DDLRegistration(0x9d933326u)] SoundEventActionPause = 0x1u,
-	[DDLRegistration(0xbe3f2db4u)] SoundEventActionResume = 0x2u,
-	[DDLRegistration(0x6038ecf4u)] SoundEventActionStop = 0x3u,
+	[DDLRegistration(0x87e724f8u)] SoundEventActionPlay,
+	[DDLRegistration(0x9d933326u)] SoundEventActionPause,
+	[DDLRegistration(0xbe3f2db4u)] SoundEventActionResume,
+	[DDLRegistration(0x6038ecf4u)] SoundEventActionStop,
 }
 
 public static class x6f4fd950Values {

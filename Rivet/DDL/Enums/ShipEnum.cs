@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x5c4496c6u)]
 public enum ShipEnum : uint {
-	[DDLRegistration(0x479e20a5u)] Ship_None = 0x0u,
-	[DDLRegistration(0x42a6feebu)] Ship_Micron = 0x1u,
-	[DDLRegistration(0x863f08e7u)] Ship_Ranger = 0x2u,
+	[DDLRegistration(0x479e20a5u)] Ship_None,
+	[DDLRegistration(0x42a6feebu)] Ship_Micron,
+	[DDLRegistration(0x863f08e7u)] Ship_Ranger,
 }
 
 public static class ShipEnumValues {

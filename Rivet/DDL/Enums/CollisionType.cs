@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x56defaedu)]
 public enum CollisionType : uint {
-	[DDLRegistration(0xec241175u)] Static = 0x0u,
-	[DDLRegistration(0xf2ae50f4u)] Dynamic = 0x1u,
-	[DDLRegistration(0x2fb4a5a7u)] Inactive = 0x2u,
+	[DDLRegistration(0xec241175u, "Static")] Static,
+	[DDLRegistration(0xf2ae50f4u, "Dynamic")] Dynamic,
+	[DDLRegistration(0x2fb4a5a7u, "Inactive")] Inactive,
 }
 
 public static class CollisionTypeValues {

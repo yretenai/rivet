@@ -7,13 +7,13 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x56d897acu)]
 public enum x56d897ac : uint {
-	[DDLRegistration(0x5675b42au)] Activity = 0x0u,
-	[DDLRegistration(0x907b00b7u)] Zone = 0x1u,
-	[DDLRegistration(0x5d269a38u)] Actor = 0x2u,
-	[DDLRegistration(0x8b366309u)] Mechanic = 0x3u,
-	[DDLRegistration(0x8bc18951u)] TrophyGroup = 0x4u,
-	[DDLRegistration(0xcf7fd7efu)] TrophySet = 0x5u,
-	[DDLRegistration(0x2f52b48eu)] Trophy = 0x6u,
+	[DDLRegistration(0x5675b42au)] Activity,
+	[DDLRegistration(0x907b00b7u)] Zone,
+	[DDLRegistration(0x5d269a38u)] Actor,
+	[DDLRegistration(0x8b366309u)] Mechanic,
+	[DDLRegistration(0x8bc18951u)] TrophyGroup,
+	[DDLRegistration(0xcf7fd7efu)] TrophySet,
+	[DDLRegistration(0x2f52b48eu)] Trophy,
 }
 
 public static class x56d897acValues {

@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x072fd960u)]
 public enum x072fd960 : uint {
-	[DDLRegistration(0xd69724b0u)] Jump = 0x0u,
-	[DDLRegistration(0x29fa2b69u)] Fire = 0x1u,
+	[DDLRegistration(0xd69724b0u)] Jump,
+	[DDLRegistration(0x29fa2b69u)] Fire,
 }
 
 public static class x072fd960Values {

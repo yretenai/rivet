@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x1678ea2fu)]
 public enum x1678ea2f : uint {
-	[DDLRegistration(0xc9a6d4bdu)] ResHigh = 0x0u,
-	[DDLRegistration(0xe6102425u)] ResLow = 0x1u,
+	[DDLRegistration(0xc9a6d4bdu, "High (default)")] ResHigh,
+	[DDLRegistration(0xe6102425u, "Low")] ResLow,
 }
 
 public static class x1678ea2fValues {

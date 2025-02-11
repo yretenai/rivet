@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xd38acf04u)]
 public enum xd38acf04 : uint {
-	[DDLRegistration(0x5404c1ebu)] CameraInputX = 0x0u,
-	[DDLRegistration(0x2303f17du)] CameraInputY = 0x1u,
-	[DDLRegistration(0xbd5e9772u)] CameraInputGyroX = 0x2u,
-	[DDLRegistration(0xca59a7e4u)] CameraInputGyroY = 0x3u,
+	[DDLRegistration(0x5404c1ebu)] CameraInputX,
+	[DDLRegistration(0x2303f17du)] CameraInputY,
+	[DDLRegistration(0xbd5e9772u)] CameraInputGyroX,
+	[DDLRegistration(0xca59a7e4u)] CameraInputGyroY,
 }
 
 public static class xd38acf04Values {

@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x82d89fa6u)]
 public enum x82d89fa6 : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0x52503e0du)] HitReact = 0x1u,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0x52503e0du, "Hit React")] HitReact,
 }
 
 public static class x82d89fa6Values {

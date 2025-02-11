@@ -7,13 +7,13 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x34a3a095u)]
 public enum x34a3a095 : uint {
-	[DDLRegistration(0x65f66e4bu)] Current = 0x0u,
-	[DDLRegistration(0xc8c0f426u)] k256s = 0x1u,
-	[DDLRegistration(0x3672a147u)] k512s = 0x2u,
-	[DDLRegistration(0xade8a487u)] k1080 = 0x3u,
-	[DDLRegistration(0x06544357u)] k1440 = 0x4u,
-	[DDLRegistration(0x201c4cd0u)] k2160 = 0x5u,
-	[DDLRegistration(0x629f0266u)] k4320 = 0x6u,
+	[DDLRegistration(0x65f66e4bu, "Current")] Current,
+	[DDLRegistration(0xc8c0f426u, "256 Square")] k256s,
+	[DDLRegistration(0x3672a147u, "512 Square")] k512s,
+	[DDLRegistration(0xade8a487u, "1080P")] k1080,
+	[DDLRegistration(0x06544357u, "1440P")] k1440,
+	[DDLRegistration(0x201c4cd0u, "4K")] k2160,
+	[DDLRegistration(0x629f0266u, "8K")] k4320,
 }
 
 public static class x34a3a095Values {

@@ -12,4 +12,17 @@ public static class StringExtensions {
 			       _ => value,
 		       };
 	}
+
+	public static string Strip(this string? value) {
+		value = value?.ReplaceLineEndings("\n")
+		             .Replace("\n", @"\n", StringComparison.Ordinal)
+		             .Replace("\t", @"\t", StringComparison.Ordinal)
+		             .Replace("\"", "\\\"", StringComparison.Ordinal);
+
+		if (string.IsNullOrWhiteSpace(value) || value.Equals("NONE", StringComparison.OrdinalIgnoreCase)) {
+			return string.Empty;
+		}
+
+		return value;
+	}
 }

@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xdcbe36a2u)]
 public enum xdcbe36a2 : uint {
-	[DDLRegistration(0x936071e4u)] MeshStandard = 0x0u,
-	[DDLRegistration(0x8e9f36b1u)] MeshLarge = 0x1u,
-	[DDLRegistration(0x57cb8050u)] MeshDeepWater = 0x2u,
+	[DDLRegistration(0x936071e4u)] MeshStandard,
+	[DDLRegistration(0x8e9f36b1u)] MeshLarge,
+	[DDLRegistration(0x57cb8050u)] MeshDeepWater,
 }
 
 public static class xdcbe36a2Values {

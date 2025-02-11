@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x3953b966u)]
 public enum VerticalSpacingMode : uint {
-	[DDLRegistration(0x9aa2e52cu)] CompactSpacing = 0x0u,
-	[DDLRegistration(0x2d14e4ccu)] StraightenLines = 0x1u,
-	[DDLRegistration(0x89bbd8e4u)] BalancedSpacing = 0x2u,
-	[DDLRegistration(0xd3781ccbu)] MaxSpacing = 0x3u,
+	[DDLRegistration(0x9aa2e52cu)] CompactSpacing,
+	[DDLRegistration(0x2d14e4ccu)] StraightenLines,
+	[DDLRegistration(0x89bbd8e4u)] BalancedSpacing,
+	[DDLRegistration(0xd3781ccbu)] MaxSpacing,
 }
 
 public static class VerticalSpacingModeValues {

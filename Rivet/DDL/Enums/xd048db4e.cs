@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xd048db4eu)]
 public enum xd048db4e : uint {
-	[DDLRegistration(0x64726b6du)] AdvanceTutorialStep = 0x0u,
-	[DDLRegistration(0xa965cfdfu)] RemainInTutorialStep = 0x1u,
+	[DDLRegistration(0x64726b6du)] AdvanceTutorialStep,
+	[DDLRegistration(0xa965cfdfu)] RemainInTutorialStep,
 }
 
 public static class xd048db4eValues {

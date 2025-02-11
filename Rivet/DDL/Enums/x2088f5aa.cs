@@ -7,12 +7,12 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x2088f5aau)]
 public enum x2088f5aa : uint {
-	[DDLRegistration(0xb4907cc0u)] Standard = 0x0u,
-	[DDLRegistration(0x735d4ab8u)] Skin = 0x1u,
-	[DDLRegistration(0xcf37a6ccu)] Cloth = 0x2u,
-	[DDLRegistration(0xedd343bfu)] Hair = 0x3u,
-	[DDLRegistration(0x4bacd80du)] DualAniso = 0x4u,
-	[DDLRegistration(0x7130aa0bu)] Foliage = 0x5u,
+	[DDLRegistration(0xb4907cc0u, "Standard")] Standard,
+	[DDLRegistration(0x735d4ab8u, "Skin")] Skin,
+	[DDLRegistration(0xcf37a6ccu, "Cloth")] Cloth,
+	[DDLRegistration(0xedd343bfu, "Hair")] Hair,
+	[DDLRegistration(0x4bacd80du, "Dual Aniso")] DualAniso,
+	[DDLRegistration(0x7130aa0bu, "Foliage")] Foliage,
 }
 
 public static class x2088f5aaValues {

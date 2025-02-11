@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x5d6518bau)]
 public enum OverlapType : uint {
-	[DDLRegistration(0x915bf606u)] Full = 0x0u,
-	[DDLRegistration(0xe73b2c0eu)] ColorOnly = 0x1u,
-	[DDLRegistration(0xea4ab9f3u)] NormalOnly = 0x2u,
+	[DDLRegistration(0x915bf606u, "Full")] Full,
+	[DDLRegistration(0xe73b2c0eu, "Color Only")] ColorOnly,
+	[DDLRegistration(0xea4ab9f3u, "Normal Only")] NormalOnly,
 }
 
 public static class OverlapTypeValues {

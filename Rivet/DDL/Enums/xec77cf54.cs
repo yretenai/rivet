@@ -7,13 +7,13 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xec77cf54u)]
 public enum xec77cf54 : uint {
-	[DDLRegistration(0xfbf6b134u)] SelOpEQ = 0x0u,
-	[DDLRegistration(0x1fd85bd2u)] SelOpNEQ = 0x1u,
-	[DDLRegistration(0xb9aa2739u)] SelOpGT = 0x2u,
-	[DDLRegistration(0x590a9730u)] SelOpGTE = 0x3u,
-	[DDLRegistration(0x5a5efef2u)] SelOpLT = 0x4u,
-	[DDLRegistration(0x555f78d1u)] SelOpLTE = 0x5u,
-	[DDLRegistration(0x832ec9a6u)] SelOpMABF = 0x6u,
+	[DDLRegistration(0xfbf6b134u, "Equal")] SelOpEQ,
+	[DDLRegistration(0x1fd85bd2u, "Not Equal")] SelOpNEQ,
+	[DDLRegistration(0xb9aa2739u, "Greater Than")] SelOpGT,
+	[DDLRegistration(0x590a9730u, "Greater Or Equal To")] SelOpGTE,
+	[DDLRegistration(0x5a5efef2u, "Less Than")] SelOpLT,
+	[DDLRegistration(0x555f78d1u, "Less Or Equal To")] SelOpLTE,
+	[DDLRegistration(0x832ec9a6u, "Matching Any Bit Flags")] SelOpMABF,
 }
 
 public static class xec77cf54Values {

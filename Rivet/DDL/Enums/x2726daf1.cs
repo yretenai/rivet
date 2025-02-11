@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x2726daf1u)]
 public enum x2726daf1 : uint {
-	[DDLRegistration(0xd61acbe4u)] Inside = 0x0u,
-	[DDLRegistration(0x0cefa7e6u)] Outside = 0x1u,
+	[DDLRegistration(0xd61acbe4u, description: "Checks if the Actors are inside the location.")] Inside,
+	[DDLRegistration(0x0cefa7e6u, description: "Checks if the Actors are outside the location.")] Outside,
 }
 
 public static class x2726daf1Values {

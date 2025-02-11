@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xb87f7049u)]
 public enum xb87f7049 : uint {
-	[DDLRegistration(0x525e833cu)] NonResponsive = 0x0u,
-	[DDLRegistration(0xd3016a83u)] Responsive = 0x1u,
+	[DDLRegistration(0x525e833cu, "Non-Responsive")] NonResponsive,
+	[DDLRegistration(0xd3016a83u, "Responsive")] Responsive,
 }
 
 public static class xb87f7049Values {

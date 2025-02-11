@@ -7,16 +7,16 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xae1208efu)]
 public enum xae1208ef : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0xdab69f0fu)] PointComposite = 0x1u,
-	[DDLRegistration(0xbe1f2411u)] Bicubic = 0x2u,
-	[DDLRegistration(0x8240981eu)] Cubic = 0x3u,
-	[DDLRegistration(0x412974acu)] Sinc = 0x4u,
-	[DDLRegistration(0x92641758u)] Box = 0x5u,
-	[DDLRegistration(0xe76655c7u)] Mitchell = 0x6u,
-	[DDLRegistration(0x7bf0c6c0u)] Triangle = 0x7u,
-	[DDLRegistration(0x522f098du)] Quadratic = 0x8u,
-	[DDLRegistration(0xbbd8298eu)] BSpline = 0x9u,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0xdab69f0fu, "PointComposite (Sharp)")] PointComposite,
+	[DDLRegistration(0xbe1f2411u, "Bicubic (Sharp)")] Bicubic,
+	[DDLRegistration(0x8240981eu, "Cubic (Med Sharp)")] Cubic,
+	[DDLRegistration(0x412974acu, "Sinc (Med Sharp)")] Sinc,
+	[DDLRegistration(0x92641758u, "Box (Med Sharp)")] Box,
+	[DDLRegistration(0xe76655c7u, "Mitchell (Med Smooth)")] Mitchell,
+	[DDLRegistration(0x7bf0c6c0u, "Triangle (Med Smooth)")] Triangle,
+	[DDLRegistration(0x522f098du, "Quadratic (Smooth)")] Quadratic,
+	[DDLRegistration(0xbbd8298eu, "BSpline (Smooth)")] BSpline,
 }
 
 public static class xae1208efValues {

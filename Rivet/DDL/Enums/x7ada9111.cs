@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x7ada9111u)]
 public enum x7ada9111 : uint {
-	[DDLRegistration(0xdd1ef27bu)] Wrap = 0x0u,
-	[DDLRegistration(0x3743221au)] Mirror = 0x1u,
-	[DDLRegistration(0x4dc5ba88u)] Clamp = 0x2u,
+	[DDLRegistration(0xdd1ef27bu, "Wrap")] Wrap,
+	[DDLRegistration(0x3743221au, "Mirror")] Mirror,
+	[DDLRegistration(0x4dc5ba88u, "Clamp")] Clamp,
 }
 
 public static class x7ada9111Values {

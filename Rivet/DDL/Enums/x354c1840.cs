@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x354c1840u)]
 public enum x354c1840 : uint {
-	[DDLRegistration(0xe729156cu)] MoveStick = 0x0u,
-	[DDLRegistration(0x381eb942u)] LookStick = 0x1u,
-	[DDLRegistration(0xcec65017u)] LeftStick = 0x2u,
-	[DDLRegistration(0xe48f092au)] RightStick = 0x3u,
-	[DDLRegistration(0x051163cau)] RightStickOrMouseDelta = 0x4u,
+	[DDLRegistration(0xe729156cu)] MoveStick,
+	[DDLRegistration(0x381eb942u)] LookStick,
+	[DDLRegistration(0xcec65017u)] LeftStick,
+	[DDLRegistration(0xe48f092au)] RightStick,
+	[DDLRegistration(0x051163cau)] RightStickOrMouseDelta,
 }
 
 public static class x354c1840Values {

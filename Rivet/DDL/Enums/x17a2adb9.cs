@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x17a2adb9u)]
 public enum x17a2adb9 : uint {
-	[DDLRegistration(0x7a17ee16u)] PoissonDistribution = 0x0u,
-	[DDLRegistration(0x968ee096u)] ExactNumber = 0x1u,
+	[DDLRegistration(0x7a17ee16u, "Poisson Distribution", "Scatter points according to a poisson distribution given the range.")] PoissonDistribution,
+	[DDLRegistration(0x968ee096u, "Exact Number", "Scatter points by exactly placing down Exact Number many points.")] ExactNumber,
 }
 
 public static class x17a2adb9Values {

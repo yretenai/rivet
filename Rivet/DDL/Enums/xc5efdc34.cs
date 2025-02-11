@@ -7,7 +7,7 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xc5efdc34u)]
 public enum xc5efdc34 : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
+	[DDLRegistration(0x0eb42269u, "( none )")] None,
 }
 
 public static class xc5efdc34Values {

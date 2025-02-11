@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xaa9dd5a4u)]
 public enum xaa9dd5a4 : uint {
-	[DDLRegistration(0xaacc809bu)] KeepItem = 0x0u,
-	[DDLRegistration(0x9cf326b9u)] RemoveItem = 0x1u,
+	[DDLRegistration(0xaacc809bu, "Keep")] KeepItem,
+	[DDLRegistration(0x9cf326b9u, "Remove from Inventory")] RemoveItem,
 }
 
 public static class xaa9dd5a4Values {

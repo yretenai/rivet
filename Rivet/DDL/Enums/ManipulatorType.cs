@@ -7,13 +7,13 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x1d5f1904u)]
 public enum ManipulatorType : uint {
-	[DDLRegistration(0xa0d89645u)] Translation = 0x0u,
-	[DDLRegistration(0xac016355u)] TranslationWithSnap = 0x1u,
-	[DDLRegistration(0x8d1b33b6u)] Rotation = 0x2u,
-	[DDLRegistration(0x0180e8f6u)] Scale = 0x3u,
-	[DDLRegistration(0x166bd01bu)] VolumeBounds = 0x4u,
-	[DDLRegistration(0xacbb50c2u)] Selection = 0x5u,
-	[DDLRegistration(0xaba5ea6cu)] Aim = 0x6u,
+	[DDLRegistration(0xa0d89645u)] Translation,
+	[DDLRegistration(0xac016355u)] TranslationWithSnap,
+	[DDLRegistration(0x8d1b33b6u)] Rotation,
+	[DDLRegistration(0x0180e8f6u)] Scale,
+	[DDLRegistration(0x166bd01bu)] VolumeBounds,
+	[DDLRegistration(0xacbb50c2u)] Selection,
+	[DDLRegistration(0xaba5ea6cu)] Aim,
 }
 
 public static class ManipulatorTypeValues {

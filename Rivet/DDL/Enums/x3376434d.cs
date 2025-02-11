@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x3376434du)]
 public enum x3376434d : uint {
-	[DDLRegistration(0xfbc64b8eu)] ClosestPoint = 0x0u,
-	[DDLRegistration(0xf4913aa9u)] ClosestTangent = 0x1u,
-	[DDLRegistration(0x7de52426u)] CurveStart = 0x2u,
+	[DDLRegistration(0xfbc64b8eu, "Closest Point")] ClosestPoint,
+	[DDLRegistration(0xf4913aa9u, "Closest Tangent")] ClosestTangent,
+	[DDLRegistration(0x7de52426u, "Start of Curve")] CurveStart,
 }
 
 public static class x3376434dValues {

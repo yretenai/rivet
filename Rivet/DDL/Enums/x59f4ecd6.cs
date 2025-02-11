@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x59f4ecd6u)]
 public enum x59f4ecd6 : uint {
-	[DDLRegistration(0x429c90dbu)] InOrder = 0x0u,
-	[DDLRegistration(0x32143a49u)] Shuffle = 0x1u,
-	[DDLRegistration(0xecc32324u)] CustomCode = 0x2u,
+	[DDLRegistration(0x429c90dbu)] InOrder,
+	[DDLRegistration(0x32143a49u)] Shuffle,
+	[DDLRegistration(0xecc32324u)] CustomCode,
 }
 
 public static class x59f4ecd6Values {

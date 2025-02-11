@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xf3b79606u)]
 public enum ToggleType : uint {
-	[DDLRegistration(0x22332933u)] TurnOn = 0x0u,
-	[DDLRegistration(0xd3fa1c5au)] TurnOff = 0x1u,
-	[DDLRegistration(0x490e94dbu)] Toggle = 0x2u,
+	[DDLRegistration(0x22332933u)] TurnOn,
+	[DDLRegistration(0xd3fa1c5au)] TurnOff,
+	[DDLRegistration(0x490e94dbu)] Toggle,
 }
 
 public static class ToggleTypeValues {

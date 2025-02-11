@@ -7,12 +7,12 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x53ecdc9cu)]
 public enum x53ecdc9c : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0x6c24939au)] Swarmer = 0x1u,
-	[DDLRegistration(0x2221b6d3u)] Melee = 0x2u,
-	[DDLRegistration(0x90108a08u)] Shooter = 0x3u,
-	[DDLRegistration(0x97f7b72du)] Heavy = 0x4u,
-	[DDLRegistration(0xf56e65a3u)] Special = 0x5u,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0x6c24939au, "Swarmer")] Swarmer,
+	[DDLRegistration(0x2221b6d3u, "Melee")] Melee,
+	[DDLRegistration(0x90108a08u, "Shooter")] Shooter,
+	[DDLRegistration(0x97f7b72du, "Heavy")] Heavy,
+	[DDLRegistration(0xf56e65a3u, "Special")] Special,
 }
 
 public static class x53ecdc9cValues {

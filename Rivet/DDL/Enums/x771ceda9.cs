@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x771ceda9u)]
 public enum x771ceda9 : uint {
-	[DDLRegistration(0xaa977ce7u)] Medium = 0x0u,
-	[DDLRegistration(0x8021c6f3u)] High = 0x1u,
+	[DDLRegistration(0xaa977ce7u, "Compressed")] Medium,
+	[DDLRegistration(0x8021c6f3u, "Uncompressed")] High,
 }
 
 public static class x771ceda9Values {

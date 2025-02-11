@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xac8d000fu)]
 public enum DebugMissionSortOrder : uint {
-	[DDLRegistration(0xeaed4c31u)] Alphabetical = 0x0u,
-	[DDLRegistration(0x57d5c37cu)] DepthFirst = 0x1u,
+	[DDLRegistration(0xeaed4c31u, "Alphabetical", "Easy to find by name but hard to find the next mission/objective sequentially.")] Alphabetical,
+	[DDLRegistration(0x57d5c37cu, "Mission Order", "Group missions topologically, then sort the mission groups by generation (number of jumps from the start node).")] DepthFirst,
 }
 
 public static class DebugMissionSortOrderValues {

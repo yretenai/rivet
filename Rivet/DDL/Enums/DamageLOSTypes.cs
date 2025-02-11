@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xdf278d34u)]
 public enum DamageLOSTypes : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0xa1c2e7b0u)] LOS = 0x1u,
-	[DDLRegistration(0x31661972u)] LOSBlocker = 0x2u,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0xa1c2e7b0u)] LOS,
+	[DDLRegistration(0x31661972u)] LOSBlocker,
 }
 
 public static class DamageLOSTypesValues {

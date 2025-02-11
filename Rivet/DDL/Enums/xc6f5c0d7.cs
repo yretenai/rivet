@@ -7,16 +7,16 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xc6f5c0d7u)]
 public enum xc6f5c0d7 : uint {
-	[DDLRegistration(0x0c9dda22u)] Playthrough = 0x0u,
-	[DDLRegistration(0x13bbf13cu)] Game = 0x1u,
-	[DDLRegistration(0x918d9104u)] Mission = 0x2u,
-	[DDLRegistration(0x3b6b6e0du)] Objective = 0x3u,
-	[DDLRegistration(0x9d9a9075u)] OpenWorld = 0x4u,
-	[DDLRegistration(0x605d31d6u)] Difficulty = 0x5u,
-	[DDLRegistration(0x1651da3du)] PauseMenu = 0x6u,
-	[DDLRegistration(0x4338697au)] PauseTab = 0x7u,
-	[DDLRegistration(0xe9449995u)] VendorMenu = 0x8u,
-	[DDLRegistration(0x5911b1a3u)] VendorTab = 0x9u,
+	[DDLRegistration(0x0c9dda22u)] Playthrough,
+	[DDLRegistration(0x13bbf13cu)] Game,
+	[DDLRegistration(0x918d9104u)] Mission,
+	[DDLRegistration(0x3b6b6e0du)] Objective,
+	[DDLRegistration(0x9d9a9075u)] OpenWorld,
+	[DDLRegistration(0x605d31d6u)] Difficulty,
+	[DDLRegistration(0x1651da3du)] PauseMenu,
+	[DDLRegistration(0x4338697au)] PauseTab,
+	[DDLRegistration(0xe9449995u)] VendorMenu,
+	[DDLRegistration(0x5911b1a3u)] VendorTab,
 }
 
 public static class xc6f5c0d7Values {

@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x94fdc626u)]
 public enum x94fdc626 : uint {
-	[DDLRegistration(0x4f1ae5c7u)] Soft = 0x0u,
-	[DDLRegistration(0x1ffd2683u)] Normal = 0x1u,
-	[DDLRegistration(0x6362b69eu)] Heavy = 0x2u,
-	[DDLRegistration(0x46837ec3u)] Stomp = 0x3u,
+	[DDLRegistration(0x4f1ae5c7u)] Soft,
+	[DDLRegistration(0x1ffd2683u)] Normal,
+	[DDLRegistration(0x6362b69eu)] Heavy,
+	[DDLRegistration(0x46837ec3u)] Stomp,
 }
 
 public static class x94fdc626Values {

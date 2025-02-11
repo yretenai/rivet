@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x6310440eu)]
 public enum x6310440e : uint {
-	[DDLRegistration(0xa23e1a43u)] Health = 0x0u,
-	[DDLRegistration(0x7277ebb8u)] Shield = 0x1u,
-	[DDLRegistration(0x32d5ffa2u)] SpeedBoost = 0x2u,
+	[DDLRegistration(0xa23e1a43u)] Health,
+	[DDLRegistration(0x7277ebb8u)] Shield,
+	[DDLRegistration(0x32d5ffa2u)] SpeedBoost,
 }
 
 public static class x6310440eValues {

@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xd7c06e8bu)]
 public enum xd7c06e8b : uint {
-	[DDLRegistration(0x22fc61f3u)] Box = 0x0u,
-	[DDLRegistration(0x6105e69au)] Cylinder = 0x1u,
+	[DDLRegistration(0x22fc61f3u)] Box,
+	[DDLRegistration(0x6105e69au)] Cylinder,
 }
 
 public static class xd7c06e8bValues {

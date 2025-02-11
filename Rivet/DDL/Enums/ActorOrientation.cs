@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xa073542au)]
 public enum ActorOrientation : uint {
-	[DDLRegistration(0x73389775u)] PredictedVelocityAtImpactIsZAxis = 0x0u,
-	[DDLRegistration(0x140db2cdu)] CameraToHitIsZAxis = 0x1u,
-	[DDLRegistration(0x73c26ac4u)] CollisionNormalIsZAxis = 0x2u,
+	[DDLRegistration(0x73389775u, "Predicted Velocity At Impact Is Z-Axis")] PredictedVelocityAtImpactIsZAxis,
+	[DDLRegistration(0x140db2cdu, "Camera To Hit Is Z-Axis")] CameraToHitIsZAxis,
+	[DDLRegistration(0x73c26ac4u, "Collision Normal Is Z-Axis")] CollisionNormalIsZAxis,
 }
 
 public static class ActorOrientationValues {

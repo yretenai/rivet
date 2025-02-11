@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x792f84a6u)]
 public enum AmbientShadowType : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0xe0c5465du)] Pedestrian = 0x1u,
-	[DDLRegistration(0xf4fd4335u)] Player = 0x2u,
-	[DDLRegistration(0xa285bec6u)] Vehicle = 0x3u,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0xe0c5465du, "Pedestrian")] Pedestrian,
+	[DDLRegistration(0xf4fd4335u, "Player")] Player,
+	[DDLRegistration(0xa285bec6u, "Vehicle")] Vehicle,
 }
 
 public static class AmbientShadowTypeValues {

@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xc6714fdcu)]
 public enum xc6714fdc : uint {
-	[DDLRegistration(0x5798570au)] Radius = 0x0u,
-	[DDLRegistration(0x99a9dc5fu)] Height = 0x1u,
-	[DDLRegistration(0x79ad30bau)] Density = 0x2u,
+	[DDLRegistration(0x5798570au, "Radius")] Radius,
+	[DDLRegistration(0x99a9dc5fu, "Height")] Height,
+	[DDLRegistration(0x79ad30bau, "Density")] Density,
 }
 
 public static class xc6714fdcValues {

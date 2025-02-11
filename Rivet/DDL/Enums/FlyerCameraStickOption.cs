@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xda2adf7du)]
 public enum FlyerCameraStickOption : uint {
-	[DDLRegistration(0xcec65017u)] LeftStick = 0x0u,
-	[DDLRegistration(0xe48f092au)] RightStick = 0x1u,
+	[DDLRegistration(0xcec65017u, "Left Stick")] LeftStick,
+	[DDLRegistration(0xe48f092au, "Right Stick")] RightStick,
 }
 
 public static class FlyerCameraStickOptionValues {

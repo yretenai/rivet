@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x07bee456u)]
 public enum x07bee456 : uint {
-	[DDLRegistration(0xe7feb3bdu)] KeepTarget = 0x0u,
-	[DDLRegistration(0xb8f531c6u)] Distance = 0x1u,
+	[DDLRegistration(0xe7feb3bdu)] KeepTarget,
+	[DDLRegistration(0xb8f531c6u)] Distance,
 }
 
 public static class x07bee456Values {

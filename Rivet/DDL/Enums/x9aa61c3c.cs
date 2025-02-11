@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x9aa61c3cu)]
 public enum x9aa61c3c : uint {
-	[DDLRegistration(0x4423537bu)] Slow = 0x0u,
-	[DDLRegistration(0x4d6151b4u)] Normal = 0x1u,
-	[DDLRegistration(0x54426b62u)] Fast = 0x2u,
+	[DDLRegistration(0x4423537bu)] Slow,
+	[DDLRegistration(0x4d6151b4u)] Normal,
+	[DDLRegistration(0x54426b62u)] Fast,
 }
 
 public static class x9aa61c3cValues {

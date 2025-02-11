@@ -7,15 +7,15 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xce74edfbu)]
 public enum HudGadgetEnum : uint {
-	[DDLRegistration(0xa132099fu)] Omniboots = 0x0u,
-	[DDLRegistration(0x772a9b63u)] Grindboots = 0x1u,
-	[DDLRegistration(0xf3f86ae6u)] Magboots = 0x2u,
-	[DDLRegistration(0xa9bdf333u)] Hoverboots = 0x3u,
-	[DDLRegistration(0xbd85fed2u)] Omniglove = 0x4u,
-	[DDLRegistration(0x9265d26fu)] RiftTether = 0x5u,
-	[DDLRegistration(0x8c7a9456u)] Glitch = 0x6u,
-	[DDLRegistration(0x6f99cae1u)] MapOMatic = 0x7u,
-	[DDLRegistration(0xd02766a3u)] BoxBreaker = 0x8u,
+	[DDLRegistration(0xa132099fu)] Omniboots,
+	[DDLRegistration(0x772a9b63u)] Grindboots,
+	[DDLRegistration(0xf3f86ae6u)] Magboots,
+	[DDLRegistration(0xa9bdf333u)] Hoverboots,
+	[DDLRegistration(0xbd85fed2u)] Omniglove,
+	[DDLRegistration(0x9265d26fu)] RiftTether,
+	[DDLRegistration(0x8c7a9456u)] Glitch,
+	[DDLRegistration(0x6f99cae1u)] MapOMatic,
+	[DDLRegistration(0xd02766a3u)] BoxBreaker,
 }
 
 public static class HudGadgetEnumValues {

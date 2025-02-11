@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x399b7397u)]
 public enum x399b7397 : uint {
-	[DDLRegistration(0xbcdde1a9u)] MaterialSpline = 0x0u,
-	[DDLRegistration(0x0bfdcd6fu)] ModelSpline = 0x1u,
+	[DDLRegistration(0xbcdde1a9u)] MaterialSpline,
+	[DDLRegistration(0x0bfdcd6fu)] ModelSpline,
 }
 
 public static class x399b7397Values {

@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x59a8501fu)]
 public enum x59a8501f : uint {
-	[DDLRegistration(0x46e326a3u)] FullLength = 0x0u,
-	[DDLRegistration(0xab93fe81u)] PerMeter = 0x1u,
+	[DDLRegistration(0x46e326a3u, "Full Length")] FullLength,
+	[DDLRegistration(0xab93fe81u, "Per-Meter")] PerMeter,
 }
 
 public static class x59a8501fValues {

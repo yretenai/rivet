@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x49df4feeu)]
 public enum x49df4fee : uint {
-	[DDLRegistration(0x0b43c5ceu)] Left = 0x0u,
-	[DDLRegistration(0x590cb866u)] Right = 0x1u,
+	[DDLRegistration(0x0b43c5ceu)] Left,
+	[DDLRegistration(0x590cb866u)] Right,
 }
 
 public static class x49df4feeValues {

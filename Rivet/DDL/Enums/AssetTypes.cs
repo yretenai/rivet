@@ -7,20 +7,20 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xfa864ddeu)]
 public enum AssetTypes : uint {
-	[DDLRegistration(0x11e6228au)] ActorAsset = 0x0u,
-	[DDLRegistration(0x4f5832dau)] ConduitAsset = 0x1u,
-	[DDLRegistration(0x1a5a8a99u)] ConfigAsset = 0x2u,
-	[DDLRegistration(0x4670fad3u)] CinematicAsset = 0x3u,
-	[DDLRegistration(0x3a53bfabu)] Model = 0x4u,
-	[DDLRegistration(0x47202c89u)] AnimSet = 0x5u,
-	[DDLRegistration(0xd8d9ded2u)] Material = 0x6u,
-	[DDLRegistration(0x3844d2bau)] MaterialTemplate = 0x7u,
-	[DDLRegistration(0xfe54c4f9u)] TextureAsset = 0x8u,
-	[DDLRegistration(0x1d2ece99u)] Atmosphere = 0x9u,
-	[DDLRegistration(0x6585d69cu)] VisualEffect = 0xau,
-	[DDLRegistration(0xa5f88acfu)] SoundBank = 0xbu,
-	[DDLRegistration(0x96d46c9cu)] LocalizationAsset = 0xcu,
-	[DDLRegistration(0xd1cfe2a1u)] Zone = 0xdu,
+	[DDLRegistration(0x11e6228au, "Actor")] ActorAsset,
+	[DDLRegistration(0x4f5832dau, "Conduit")] ConduitAsset,
+	[DDLRegistration(0x1a5a8a99u, "Config")] ConfigAsset,
+	[DDLRegistration(0x4670fad3u, "Cinematic")] CinematicAsset,
+	[DDLRegistration(0x3a53bfabu, "Model")] Model,
+	[DDLRegistration(0x47202c89u, "AnimSet")] AnimSet,
+	[DDLRegistration(0xd8d9ded2u, "Material")] Material,
+	[DDLRegistration(0x3844d2bau, "Material Template")] MaterialTemplate,
+	[DDLRegistration(0xfe54c4f9u, "Texture")] TextureAsset,
+	[DDLRegistration(0x1d2ece99u, "Atmosphere")] Atmosphere,
+	[DDLRegistration(0x6585d69cu, "Visual Effect")] VisualEffect,
+	[DDLRegistration(0xa5f88acfu, "Sound Bank")] SoundBank,
+	[DDLRegistration(0x96d46c9cu, "Localization")] LocalizationAsset,
+	[DDLRegistration(0xd1cfe2a1u, "Zone")] Zone,
 }
 
 public static class AssetTypesValues {

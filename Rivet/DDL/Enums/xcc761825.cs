@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xcc761825u)]
 public enum xcc761825 : uint {
-	[DDLRegistration(0x9f91f890u)] Available = 0x0u,
-	[DDLRegistration(0x72bf98fdu)] Start = 0x1u,
+	[DDLRegistration(0x9f91f890u)] Available,
+	[DDLRegistration(0x72bf98fdu)] Start,
 }
 
 public static class xcc761825Values {

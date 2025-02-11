@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xfc263405u)]
 public enum LinkModeStates : uint {
-	[DDLRegistration(0x54b60d1cu)] Enter = 0x0u,
-	[DDLRegistration(0x0bd1bed3u)] ExitAndSave = 0x1u,
-	[DDLRegistration(0x48b4b04eu)] ExitAndCancel = 0x2u,
+	[DDLRegistration(0x54b60d1cu)] Enter,
+	[DDLRegistration(0x0bd1bed3u)] ExitAndSave,
+	[DDLRegistration(0x48b4b04eu)] ExitAndCancel,
 }
 
 public static class LinkModeStatesValues {

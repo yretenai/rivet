@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x07632d21u)]
 public enum x07632d21 : uint {
-	[DDLRegistration(0x14251e57u)] Saved = 0x0u,
-	[DDLRegistration(0x970630a0u)] Unsaved = 0x1u,
+	[DDLRegistration(0x14251e57u)] Saved,
+	[DDLRegistration(0x970630a0u)] Unsaved,
 }
 
 public static class x07632d21Values {

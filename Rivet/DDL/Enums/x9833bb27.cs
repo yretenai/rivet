@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x9833bb27u)]
 public enum x9833bb27 : uint {
-	[DDLRegistration(0x9d5b1e87u)] DoNotWarn = 0x0u,
-	[DDLRegistration(0x9f0cc3f7u)] DynamicObjects = 0x1u,
-	[DDLRegistration(0xbf92ff57u)] AllObjects = 0x2u,
+	[DDLRegistration(0x9d5b1e87u, "Do not warn for excessive collision")] DoNotWarn,
+	[DDLRegistration(0x9f0cc3f7u, "Warn for possibly-moving things")] DynamicObjects,
+	[DDLRegistration(0xbf92ff57u, "Warn for static & dynamic things")] AllObjects,
 }
 
 public static class x9833bb27Values {

@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x08dc8128u)]
 public enum PhotoModeStatus : uint {
-	[DDLRegistration(0xe9fce1c4u)] Enabled = 0x0u,
-	[DDLRegistration(0x2099c5a4u)] Disabled = 0x1u,
-	[DDLRegistration(0x3b3d44e9u)] Exclusive = 0x2u,
+	[DDLRegistration(0xe9fce1c4u, "Enabled")] Enabled,
+	[DDLRegistration(0x2099c5a4u, "Disabled")] Disabled,
+	[DDLRegistration(0x3b3d44e9u, "Exclusive")] Exclusive,
 }
 
 public static class PhotoModeStatusValues {

@@ -7,13 +7,13 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x4f5e74b9u)]
 public enum x4f5e74b9 : uint {
-	[DDLRegistration(0x0241e2a3u)] BestVisibleLocation = 0x0u,
-	[DDLRegistration(0xf7c25771u)] BoundingSphereCenter = 0x1u,
-	[DDLRegistration(0x7c3f8794u)] Manual = 0x2u,
-	[DDLRegistration(0x088a86ffu)] BarrelDirection = 0x3u,
-	[DDLRegistration(0xc420bc7du)] TargetLocation = 0x4u,
-	[DDLRegistration(0xd88f7ebcu)] ActorPosition = 0x5u,
-	[DDLRegistration(0x2ec89544u)] FirstTargetLocation = 0x6u,
+	[DDLRegistration(0x0241e2a3u, description: "Aim at best visible target location")] BestVisibleLocation,
+	[DDLRegistration(0xf7c25771u, description: "Aim directly at the target's BSphere")] BoundingSphereCenter,
+	[DDLRegistration(0x7c3f8794u, description: "Aim at the position specified directly (in code, use Firing::SetManualAimPos)")] Manual,
+	[DDLRegistration(0x088a86ffu, description: "Shoot where your gun's pointing.")] BarrelDirection,
+	[DDLRegistration(0xc420bc7du, description: "Shoot at a specific target location.")] TargetLocation,
+	[DDLRegistration(0xd88f7ebcu, description: "Shoot at the target's origin.")] ActorPosition,
+	[DDLRegistration(0x2ec89544u, description: "Shoot at the first target location.")] FirstTargetLocation,
 }
 
 public static class x4f5e74b9Values {

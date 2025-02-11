@@ -7,22 +7,22 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x2bd8d9b9u)]
 public enum x2bd8d9b9 : uint {
-	[DDLRegistration(0x5d74a037u)] Sync0 = 0x0u,
-	[DDLRegistration(0x2a7390a1u)] Sync1 = 0x1u,
-	[DDLRegistration(0xb37ac11bu)] Sync2 = 0x2u,
-	[DDLRegistration(0xc47df18du)] Sync3 = 0x3u,
-	[DDLRegistration(0x5a19642eu)] Sync4 = 0x4u,
-	[DDLRegistration(0x2d1e54b8u)] Sync5 = 0x5u,
-	[DDLRegistration(0xb4170502u)] Sync6 = 0x6u,
-	[DDLRegistration(0xc3103594u)] Sync7 = 0x7u,
-	[DDLRegistration(0x53af2805u)] Sync8 = 0x8u,
-	[DDLRegistration(0x24a81893u)] Sync9 = 0x9u,
-	[DDLRegistration(0x8722d042u)] Sync10 = 0xau,
-	[DDLRegistration(0xf025e0d4u)] Sync11 = 0xbu,
-	[DDLRegistration(0x692cb16eu)] Sync12 = 0xcu,
-	[DDLRegistration(0x1e2b81f8u)] Sync13 = 0xdu,
-	[DDLRegistration(0x804f145bu)] Sync14 = 0xeu,
-	[DDLRegistration(0xf74824cdu)] Sync15 = 0xfu,
+	[DDLRegistration(0x5d74a037u)] Sync0,
+	[DDLRegistration(0x2a7390a1u)] Sync1,
+	[DDLRegistration(0xb37ac11bu)] Sync2,
+	[DDLRegistration(0xc47df18du)] Sync3,
+	[DDLRegistration(0x5a19642eu)] Sync4,
+	[DDLRegistration(0x2d1e54b8u)] Sync5,
+	[DDLRegistration(0xb4170502u)] Sync6,
+	[DDLRegistration(0xc3103594u)] Sync7,
+	[DDLRegistration(0x53af2805u)] Sync8,
+	[DDLRegistration(0x24a81893u)] Sync9,
+	[DDLRegistration(0x8722d042u)] Sync10,
+	[DDLRegistration(0xf025e0d4u)] Sync11,
+	[DDLRegistration(0x692cb16eu)] Sync12,
+	[DDLRegistration(0x1e2b81f8u)] Sync13,
+	[DDLRegistration(0x804f145bu)] Sync14,
+	[DDLRegistration(0xf74824cdu)] Sync15,
 }
 
 public static class x2bd8d9b9Values {

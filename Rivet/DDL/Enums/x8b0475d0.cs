@@ -7,12 +7,12 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x8b0475d0u)]
 public enum x8b0475d0 : uint {
-	[DDLRegistration(0x7c3f8794u)] Manual = 0x0u,
-	[DDLRegistration(0x3a5c5f9fu)] Pause = 0x1u,
-	[DDLRegistration(0x0a095e87u)] WaitForRider = 0x2u,
-	[DDLRegistration(0xbdbf656bu)] AllHeroes = 0x3u,
-	[DDLRegistration(0x8e79e0a2u)] UseOffer = 0x4u,
-	[DDLRegistration(0xbc459cc0u)] PassThrough = 0x5u,
+	[DDLRegistration(0x7c3f8794u, "Script Only")] Manual,
+	[DDLRegistration(0x3a5c5f9fu, "Pause")] Pause,
+	[DDLRegistration(0x0a095e87u, "Wait For Rider")] WaitForRider,
+	[DDLRegistration(0xbdbf656bu, "Wait For All Heroes")] AllHeroes,
+	[DDLRegistration(0x8e79e0a2u, "Use Interact offer", "Use an interact offer (prompt) to leave this stop. ")] UseOffer,
+	[DDLRegistration(0xbc459cc0u, "Pass Through")] PassThrough,
 }
 
 public static class x8b0475d0Values {

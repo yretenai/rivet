@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xe1e68a34u)]
 public enum FFOrientStyle : uint {
-	[DDLRegistration(0x6610459au)] Local = 0x0u,
-	[DDLRegistration(0xd7b1dc31u)] World = 0x1u,
+	[DDLRegistration(0x6610459au, "Local")] Local,
+	[DDLRegistration(0xd7b1dc31u, "World")] World,
 }
 
 public static class FFOrientStyleValues {

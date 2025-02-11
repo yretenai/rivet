@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xba90f6fdu)]
 public enum xba90f6fd : uint {
-	[DDLRegistration(0x1eb0bae3u)] Time = 0x0u,
-	[DDLRegistration(0xaad06ff5u)] Shots = 0x1u,
+	[DDLRegistration(0x1eb0bae3u)] Time,
+	[DDLRegistration(0xaad06ff5u)] Shots,
 }
 
 public static class xba90f6fdValues {

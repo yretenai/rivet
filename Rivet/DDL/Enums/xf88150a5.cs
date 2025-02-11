@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xf88150a5u)]
 public enum xf88150a5 : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0x01016f50u)] PurchaseGrenade = 0x1u,
-	[DDLRegistration(0x8d75cc2au)] WeaponUpgrade = 0x2u,
-	[DDLRegistration(0xa0aca7deu)] OmegaWeapons = 0x3u,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0x01016f50u)] PurchaseGrenade,
+	[DDLRegistration(0x8d75cc2au)] WeaponUpgrade,
+	[DDLRegistration(0xa0aca7deu)] OmegaWeapons,
 }
 
 public static class xf88150a5Values {

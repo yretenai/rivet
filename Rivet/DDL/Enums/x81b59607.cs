@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x81b59607u)]
 public enum x81b59607 : uint {
-	[DDLRegistration(0xfcdefab4u)] Cone = 0x0u,
-	[DDLRegistration(0x738b7796u)] Disc = 0x1u,
-	[DDLRegistration(0x2c75e0f2u)] Plane = 0x2u,
-	[DDLRegistration(0x226182b1u)] BoxEx = 0x3u,
-	[DDLRegistration(0x92641758u)] Box = 0x4u,
+	[DDLRegistration(0xfcdefab4u, "Cone")] Cone,
+	[DDLRegistration(0x738b7796u, "Disc")] Disc,
+	[DDLRegistration(0x2c75e0f2u, "Plane")] Plane,
+	[DDLRegistration(0x226182b1u, "Box")] BoxEx,
+	[DDLRegistration(0x92641758u, "Box Deprecated")] Box,
 }
 
 public static class x81b59607Values {

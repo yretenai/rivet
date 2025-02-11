@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xe41b4b91u)]
 public enum xe41b4b91 : uint {
-	[DDLRegistration(0x584ba0e8u)] Barrier = 0x0u,
-	[DDLRegistration(0xfdbcb00eu)] Container = 0x1u,
+	[DDLRegistration(0x584ba0e8u, description: "Barrier boundaries are used to keep the flyer from moving through the volume.")] Barrier,
+	[DDLRegistration(0xfdbcb00eu, description: "Container boundaries are used to keep the flyer from moving out of the volume.")] Container,
 }
 
 public static class xe41b4b91Values {

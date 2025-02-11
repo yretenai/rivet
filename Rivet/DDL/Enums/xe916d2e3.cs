@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xe916d2e3u)]
 public enum xe916d2e3 : uint {
-	[DDLRegistration(0x1beb281du)] ShotPaneA = 0x0u,
-	[DDLRegistration(0x82e279a7u)] ShotPaneB = 0x1u,
-	[DDLRegistration(0xf5e54931u)] ShotPaneC = 0x2u,
-	[DDLRegistration(0x6b81dc92u)] ShotPaneD = 0x3u,
+	[DDLRegistration(0x1beb281du, "Pane A")] ShotPaneA,
+	[DDLRegistration(0x82e279a7u, "Pane B")] ShotPaneB,
+	[DDLRegistration(0xf5e54931u, "Pane C")] ShotPaneC,
+	[DDLRegistration(0x6b81dc92u, "Pane D")] ShotPaneD,
 }
 
 public static class xe916d2e3Values {

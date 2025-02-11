@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x89e6bc43u)]
 public enum x89e6bc43 : uint {
-	[DDLRegistration(0x85920badu)] Interact = 0x0u,
-	[DDLRegistration(0x2221b6d3u)] Melee = 0x1u,
-	[DDLRegistration(0x9f8f4410u)] WrenchThrow = 0x2u,
+	[DDLRegistration(0x85920badu)] Interact,
+	[DDLRegistration(0x2221b6d3u)] Melee,
+	[DDLRegistration(0x9f8f4410u)] WrenchThrow,
 }
 
 public static class x89e6bc43Values {

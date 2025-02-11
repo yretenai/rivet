@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xf4a2a500u)]
 public enum xf4a2a500 : uint {
-	[DDLRegistration(0x4e03ad2eu)] SystemPause = 0x0u,
-	[DDLRegistration(0x144f5fe2u)] SystemPause2 = 0x1u,
-	[DDLRegistration(0x63486f74u)] SystemPause3 = 0x2u,
+	[DDLRegistration(0x4e03ad2eu)] SystemPause,
+	[DDLRegistration(0x144f5fe2u)] SystemPause2,
+	[DDLRegistration(0x63486f74u)] SystemPause3,
 }
 
 public static class xf4a2a500Values {

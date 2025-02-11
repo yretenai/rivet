@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xcf5ccb68u)]
 public enum xcf5ccb68 : uint {
-	[DDLRegistration(0x897fd5c4u)] Stand = 0x0u,
-	[DDLRegistration(0x2364ac59u)] Ledge = 0x1u,
-	[DDLRegistration(0x07d0b645u)] MagSurface = 0x2u,
-	[DDLRegistration(0x674aaaa0u)] Portal = 0x3u,
+	[DDLRegistration(0x897fd5c4u, "Stand")] Stand,
+	[DDLRegistration(0x2364ac59u, "Ledge")] Ledge,
+	[DDLRegistration(0x07d0b645u, "Mag Surface")] MagSurface,
+	[DDLRegistration(0x674aaaa0u, "Portal")] Portal,
 }
 
 public static class xcf5ccb68Values {

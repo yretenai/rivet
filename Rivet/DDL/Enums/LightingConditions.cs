@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xfda14c35u)]
 public enum LightingConditions : uint {
-	[DDLRegistration(0x7f6d76f2u)] Day = 0x0u,
-	[DDLRegistration(0xafe16884u)] Overcast = 0x1u,
-	[DDLRegistration(0xa30ef4ddu)] Sunset = 0x2u,
-	[DDLRegistration(0xfc1cc2e5u)] Night = 0x3u,
-	[DDLRegistration(0xa82be092u)] Blackout = 0x4u,
+	[DDLRegistration(0x7f6d76f2u, "Day")] Day,
+	[DDLRegistration(0xafe16884u, "Overcast")] Overcast,
+	[DDLRegistration(0xa30ef4ddu, "Sunset")] Sunset,
+	[DDLRegistration(0xfc1cc2e5u, "Night")] Night,
+	[DDLRegistration(0xa82be092u, "Blackout")] Blackout,
 }
 
 public static class LightingConditionsValues {

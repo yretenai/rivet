@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x3c7c71d2u)]
 public enum x3c7c71d2 : uint {
-	[DDLRegistration(0xa1d52ebfu)] All = 0x0u,
-	[DDLRegistration(0x32ff8fa1u)] SelfOnly = 0x1u,
-	[DDLRegistration(0x2ef991fcu)] RemoteOnly = 0x2u,
+	[DDLRegistration(0xa1d52ebfu, "All Events")] All,
+	[DDLRegistration(0x32ff8fa1u, "Self Event Only")] SelfOnly,
+	[DDLRegistration(0x2ef991fcu, "Remote Event Only")] RemoteOnly,
 }
 
 public static class x3c7c71d2Values {

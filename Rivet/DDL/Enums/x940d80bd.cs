@@ -7,13 +7,13 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x940d80bdu)]
 public enum x940d80bd : uint {
-	[DDLRegistration(0xa0c6fcceu)] String = 0x0u,
-	[DDLRegistration(0x5d269a38u)] Actor = 0x1u,
-	[DDLRegistration(0xa8e85133u)] Number = 0x2u,
-	[DDLRegistration(0x2516063cu)] Vector = 0x3u,
-	[DDLRegistration(0x6511f622u)] Bool = 0x4u,
-	[DDLRegistration(0x562ae54au)] Auto = 0x5u,
-	[DDLRegistration(0xbaf79254u)] Composite = 0x6u,
+	[DDLRegistration(0xa0c6fcceu)] String,
+	[DDLRegistration(0x5d269a38u)] Actor,
+	[DDLRegistration(0xa8e85133u)] Number,
+	[DDLRegistration(0x2516063cu)] Vector,
+	[DDLRegistration(0x6511f622u)] Bool,
+	[DDLRegistration(0x562ae54au)] Auto,
+	[DDLRegistration(0xbaf79254u)] Composite,
 }
 
 public static class x940d80bdValues {

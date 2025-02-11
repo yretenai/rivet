@@ -7,15 +7,15 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xca348341u)]
 public enum xca348341 : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0xb5a16aa7u)] BodyMenu = 0x1u,
-	[DDLRegistration(0xbc33b685u)] CategoryMenu = 0x2u,
-	[DDLRegistration(0x48aceba1u)] HeadMenu = 0x3u,
-	[DDLRegistration(0x69c37c35u)] TorsoMenu = 0x4u,
-	[DDLRegistration(0xc87f4dd4u)] LegsMenu = 0x5u,
-	[DDLRegistration(0x50be8a63u)] MeleeMenu = 0x6u,
-	[DDLRegistration(0xe8a61e66u)] SetsMenu = 0x7u,
-	[DDLRegistration(0xd9c1553bu)] FaceMenu = 0x8u,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0xb5a16aa7u, "Body Menu")] BodyMenu,
+	[DDLRegistration(0xbc33b685u, "Category Menu")] CategoryMenu,
+	[DDLRegistration(0x48aceba1u, "Head Menu")] HeadMenu,
+	[DDLRegistration(0x69c37c35u, "Torso Menu")] TorsoMenu,
+	[DDLRegistration(0xc87f4dd4u, "Legs Menu")] LegsMenu,
+	[DDLRegistration(0x50be8a63u, "Melee Weapons Menu")] MeleeMenu,
+	[DDLRegistration(0xe8a61e66u, "Sets Menu")] SetsMenu,
+	[DDLRegistration(0xd9c1553bu, "Face Menu")] FaceMenu,
 }
 
 public static class xca348341Values {

@@ -7,7 +7,7 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xfb0b3aadu)]
 public enum xfb0b3aad : uint {
-	[DDLRegistration(0xb7687556u)] POIPriorityNormal = 0x0u,
+	[DDLRegistration(0xb7687556u)] POIPriorityNormal,
 }
 
 public static class xfb0b3aadValues {

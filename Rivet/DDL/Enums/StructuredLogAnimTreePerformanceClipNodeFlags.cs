@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x38a2d189u)]
 public enum StructuredLogAnimTreePerformanceClipNodeFlags : uint {
-	[DDLRegistration(0x0c8e9720u)] FlagsNone = 0x0u,
-	[DDLRegistration(0xdc9587e7u)] FlagsPerformanceHead = 0x1u,
-	[DDLRegistration(0xa0ce7ac9u)] FlagsPerformanceBody = 0x2u,
+	[DDLRegistration(0x0c8e9720u)] FlagsNone,
+	[DDLRegistration(0xdc9587e7u)] FlagsPerformanceHead,
+	[DDLRegistration(0xa0ce7ac9u)] FlagsPerformanceBody,
 }
 
 public static class StructuredLogAnimTreePerformanceClipNodeFlagsValues {

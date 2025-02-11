@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xda97903eu)]
 public enum SpecType : uint {
-	[DDLRegistration(0x8afe1bb7u)] Both = 0x0u,
-	[DDLRegistration(0x88afc278u)] DiffuseOnly = 0x1u,
-	[DDLRegistration(0xe8f6e270u)] SpecOnly = 0x2u,
+	[DDLRegistration(0x8afe1bb7u, "Diff + Spec")] Both,
+	[DDLRegistration(0x88afc278u, "Diff Only")] DiffuseOnly,
+	[DDLRegistration(0xe8f6e270u, "Spec Only")] SpecOnly,
 }
 
 public static class SpecTypeValues {

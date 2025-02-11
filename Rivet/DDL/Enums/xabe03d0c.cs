@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xabe03d0cu)]
 public enum xabe03d0c : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0x3ab79decu)] Gained = 0x1u,
-	[DDLRegistration(0x3161a60cu)] Lost = 0x2u,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0x3ab79decu)] Gained,
+	[DDLRegistration(0x3161a60cu)] Lost,
 }
 
 public static class xabe03d0cValues {

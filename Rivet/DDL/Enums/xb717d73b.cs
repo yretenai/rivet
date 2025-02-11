@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xb717d73bu)]
 public enum xb717d73b : uint {
-	[DDLRegistration(0x27c548dcu)] RandomValidNav = 0x0u,
-	[DDLRegistration(0xf264239fu)] Middle = 0x1u,
-	[DDLRegistration(0x862bcaa5u)] RandomXZ = 0x2u,
-	[DDLRegistration(0x06a99784u)] RandomXYZ = 0x3u,
+	[DDLRegistration(0x27c548dcu)] RandomValidNav,
+	[DDLRegistration(0xf264239fu)] Middle,
+	[DDLRegistration(0x862bcaa5u)] RandomXZ,
+	[DDLRegistration(0x06a99784u)] RandomXYZ,
 }
 
 public static class xb717d73bValues {

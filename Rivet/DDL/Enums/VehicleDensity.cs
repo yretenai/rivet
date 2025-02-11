@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x0da04492u)]
 public enum VehicleDensity : uint {
-	[DDLRegistration(0x084527c3u)] Low = 0x0u,
-	[DDLRegistration(0x4d6151b4u)] Normal = 0x1u,
-	[DDLRegistration(0x8021c6f3u)] High = 0x2u,
+	[DDLRegistration(0x084527c3u)] Low,
+	[DDLRegistration(0x4d6151b4u)] Normal,
+	[DDLRegistration(0x8021c6f3u)] High,
 }
 
 public static class VehicleDensityValues {

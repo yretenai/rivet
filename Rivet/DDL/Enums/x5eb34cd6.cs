@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x5eb34cd6u)]
 public enum x5eb34cd6 : uint {
-	[DDLRegistration(0x4b87b677u)] LayerClothingTight = 0x0u,
-	[DDLRegistration(0x1fa1fbdeu)] LayerTattoo = 0x1u,
-	[DDLRegistration(0x31ad974cu)] LayerUnderwear = 0x2u,
-	[DDLRegistration(0xf3e98f38u)] LayerClothingLoose = 0x3u,
-	[DDLRegistration(0x2fd6e062u)] LayerAttachments = 0x4u,
+	[DDLRegistration(0x4b87b677u, "Skin and Clothing Tight")] LayerClothingTight,
+	[DDLRegistration(0x1fa1fbdeu, "Tattoo")] LayerTattoo,
+	[DDLRegistration(0x31ad974cu, "Underwear")] LayerUnderwear,
+	[DDLRegistration(0xf3e98f38u, "Clothing Loose")] LayerClothingLoose,
+	[DDLRegistration(0x2fd6e062u, "Attachments")] LayerAttachments,
 }
 
 public static class x5eb34cd6Values {

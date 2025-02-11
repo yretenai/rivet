@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x9750cc97u)]
 public enum x9750cc97 : uint {
-	[DDLRegistration(0x7ddfcea6u)] LoadAll = 0x0u,
-	[DDLRegistration(0x6a038049u)] LoadNone = 0x1u,
-	[DDLRegistration(0xb7a32e2eu)] LoadMarked = 0x2u,
+	[DDLRegistration(0x7ddfcea6u, "Load All")] LoadAll,
+	[DDLRegistration(0x6a038049u, "Load None")] LoadNone,
+	[DDLRegistration(0xb7a32e2eu, "Load Marked")] LoadMarked,
 }
 
 public static class x9750cc97Values {

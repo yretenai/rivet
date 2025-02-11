@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xd7e26c97u)]
 public enum xd7e26c97 : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0x5ae2dfdbu)] Windows = 0x1u,
-	[DDLRegistration(0x815f1402u)] PS4 = 0x2u,
-	[DDLRegistration(0xf6582494u)] PS5 = 0x3u,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0x5ae2dfdbu)] Windows,
+	[DDLRegistration(0x815f1402u)] PS4,
+	[DDLRegistration(0xf6582494u)] PS5,
 }
 
 public static class xd7e26c97Values {

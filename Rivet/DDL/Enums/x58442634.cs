@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x58442634u)]
 public enum x58442634 : uint {
-	[DDLRegistration(0xb5d18a0cu)] Multiply = 0x0u,
-	[DDLRegistration(0xb3a85860u)] Screen = 0x1u,
-	[DDLRegistration(0x737c9abdu)] Lighten = 0x2u,
-	[DDLRegistration(0xdd251429u)] Darken = 0x3u,
+	[DDLRegistration(0xb5d18a0cu)] Multiply,
+	[DDLRegistration(0xb3a85860u)] Screen,
+	[DDLRegistration(0x737c9abdu)] Lighten,
+	[DDLRegistration(0xdd251429u)] Darken,
 }
 
 public static class x58442634Values {

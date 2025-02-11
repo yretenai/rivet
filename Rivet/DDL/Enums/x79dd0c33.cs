@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x79dd0c33u)]
 public enum x79dd0c33 : uint {
-	[DDLRegistration(0x5a5b5a9fu)] Default = 0x0u,
-	[DDLRegistration(0xa1b10fa6u)] Gain = 0x1u,
-	[DDLRegistration(0xf81a3948u)] AccelAngle = 0x2u,
+	[DDLRegistration(0x5a5b5a9fu)] Default,
+	[DDLRegistration(0xa1b10fa6u)] Gain,
+	[DDLRegistration(0xf81a3948u)] AccelAngle,
 }
 
 public static class x79dd0c33Values {

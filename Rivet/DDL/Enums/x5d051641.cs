@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x5d051641u)]
 public enum x5d051641 : uint {
-	[DDLRegistration(0x5422c6bbu)] Load = 0x0u,
-	[DDLRegistration(0x127eb3cbu)] ClearAll = 0x1u,
-	[DDLRegistration(0x7065be6au)] Script = 0x2u,
+	[DDLRegistration(0x5422c6bbu)] Load,
+	[DDLRegistration(0x127eb3cbu)] ClearAll,
+	[DDLRegistration(0x7065be6au)] Script,
 }
 
 public static class x5d051641Values {

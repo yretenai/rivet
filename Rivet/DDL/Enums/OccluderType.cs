@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xe6e6cd23u)]
 public enum OccluderType : uint {
-	[DDLRegistration(0x802f5a20u)] OccludeIfStatic = 0x0u,
-	[DDLRegistration(0x6c7cdfdfu)] NeverOcclude = 0x1u,
+	[DDLRegistration(0x802f5a20u, "Occlude If Static")] OccludeIfStatic,
+	[DDLRegistration(0x6c7cdfdfu, "Never Occlude")] NeverOcclude,
 }
 
 public static class OccluderTypeValues {

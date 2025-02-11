@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xe542f097u)]
 public enum xe542f097 : uint {
-	[DDLRegistration(0x331570b9u)] DofFollowBSphere = 0x0u,
-	[DDLRegistration(0xa73feccbu)] DofFollowFixed = 0x1u,
+	[DDLRegistration(0x331570b9u, "BSphere", "Set the focus window to the size of the target actor's B-Sphere.")] DofFollowBSphere,
+	[DDLRegistration(0xa73feccbu, "Fixed", "Use a fixed focus window defined by FocusWindowFixedSize in the DOF follow action.")] DofFollowFixed,
 }
 
 public static class xe542f097Values {

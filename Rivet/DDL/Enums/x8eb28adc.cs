@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x8eb28adcu)]
 public enum x8eb28adc : uint {
-	[DDLRegistration(0xa0c82c97u)] NotSpecified = 0x0u,
-	[DDLRegistration(0x0b04d56bu)] ExplicitlyAdded = 0x1u,
-	[DDLRegistration(0x97d7b123u)] ExplicitlyDeleted = 0x2u,
+	[DDLRegistration(0xa0c82c97u)] NotSpecified,
+	[DDLRegistration(0x0b04d56bu)] ExplicitlyAdded,
+	[DDLRegistration(0x97d7b123u)] ExplicitlyDeleted,
 }
 
 public static class x8eb28adcValues {

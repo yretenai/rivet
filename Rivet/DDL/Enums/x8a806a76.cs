@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x8a806a76u)]
 public enum x8a806a76 : uint {
-	[DDLRegistration(0x5a5b5a9fu)] Default = 0x0u,
-	[DDLRegistration(0xfc02d77du)] Rebellion = 0x1u,
-	[DDLRegistration(0xbcb5dd56u)] GalacticRanger = 0x2u,
-	[DDLRegistration(0xaa43d9c1u)] WarMachine = 0x3u,
-	[DDLRegistration(0x0313ebe9u)] BadBunny = 0x4u,
+	[DDLRegistration(0x5a5b5a9fu, "Default")] Default,
+	[DDLRegistration(0xfc02d77du, "Rebellion")] Rebellion,
+	[DDLRegistration(0xbcb5dd56u, "Galactive Ranger")] GalacticRanger,
+	[DDLRegistration(0xaa43d9c1u, "War Machine")] WarMachine,
+	[DDLRegistration(0x0313ebe9u, "Bad Bunny")] BadBunny,
 }
 
 public static class x8a806a76Values {

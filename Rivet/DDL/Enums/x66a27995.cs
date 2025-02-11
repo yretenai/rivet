@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x66a27995u)]
 public enum x66a27995 : uint {
-	[DDLRegistration(0x425c684eu)] Additive = 0x0u,
-	[DDLRegistration(0xd332b203u)] Subtractive = 0x1u,
+	[DDLRegistration(0x425c684eu, description: "This tri adds navigation geometry to the scene")] Additive,
+	[DDLRegistration(0xd332b203u, description: "This tri removes navigation geometry from the scene")] Subtractive,
 }
 
 public static class x66a27995Values {

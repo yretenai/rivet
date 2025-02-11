@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x387e77cdu)]
 public enum x387e77cd : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0xaebe80b7u)] MinSpeed = 0x1u,
-	[DDLRegistration(0x48de2f56u)] MaxSpeed = 0x2u,
-	[DDLRegistration(0xbd63916fu)] FlightTime = 0x3u,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0xaebe80b7u, "MinSpeed")] MinSpeed,
+	[DDLRegistration(0x48de2f56u, "MaxSpeed")] MaxSpeed,
+	[DDLRegistration(0xbd63916fu, "FlightTime")] FlightTime,
 }
 
 public static class x387e77cdValues {

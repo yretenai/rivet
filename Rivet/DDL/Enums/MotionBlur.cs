@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xea782a54u)]
 public enum MotionBlur : uint {
-	[DDLRegistration(0x938f8d9au)] Allow = 0x0u,
-	[DDLRegistration(0x030193d7u)] AccuateAlpha = 0x1u,
+	[DDLRegistration(0x938f8d9au, "Opaque Only")] Allow,
+	[DDLRegistration(0x030193d7u, "Accurate Alpha")] AccuateAlpha,
 }
 
 public static class MotionBlurValues {

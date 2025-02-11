@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x8db2fd48u)]
 public enum x8db2fd48 : uint {
-	[DDLRegistration(0x6610459au)] Local = 0x0u,
-	[DDLRegistration(0xd7b1dc31u)] World = 0x1u,
-	[DDLRegistration(0x6134bda3u)] Physics = 0x2u,
+	[DDLRegistration(0x6610459au, "Local")] Local,
+	[DDLRegistration(0xd7b1dc31u, "World")] World,
+	[DDLRegistration(0x6134bda3u, "Physics")] Physics,
 }
 
 public static class x8db2fd48Values {

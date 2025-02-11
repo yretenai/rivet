@@ -7,16 +7,16 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xbe0e44abu)]
 public enum xbe0e44ab : uint {
-	[DDLRegistration(0x2f4afb93u)] Generic = 0x0u,
-	[DDLRegistration(0x2c14d274u)] Center = 0x1u,
-	[DDLRegistration(0x2d7a00adu)] Pickup = 0x2u,
-	[DDLRegistration(0x09ae4444u)] Collectible = 0x3u,
-	[DDLRegistration(0xfaf9228cu)] Location = 0x4u,
-	[DDLRegistration(0x04f753f5u)] Planet = 0x5u,
-	[DDLRegistration(0x6dda0454u)] Corner = 0x6u,
-	[DDLRegistration(0x620c54aeu)] Tutorial = 0x7u,
-	[DDLRegistration(0x6d2ac58fu)] ArenaWave = 0x8u,
-	[DDLRegistration(0x1a3b996eu)] ArenaReward = 0x9u,
+	[DDLRegistration(0x2f4afb93u)] Generic,
+	[DDLRegistration(0x2c14d274u)] Center,
+	[DDLRegistration(0x2d7a00adu)] Pickup,
+	[DDLRegistration(0x09ae4444u)] Collectible,
+	[DDLRegistration(0xfaf9228cu)] Location,
+	[DDLRegistration(0x04f753f5u)] Planet,
+	[DDLRegistration(0x6dda0454u)] Corner,
+	[DDLRegistration(0x620c54aeu)] Tutorial,
+	[DDLRegistration(0x6d2ac58fu)] ArenaWave,
+	[DDLRegistration(0x1a3b996eu)] ArenaReward,
 }
 
 public static class xbe0e44abValues {

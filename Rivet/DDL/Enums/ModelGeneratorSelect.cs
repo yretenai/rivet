@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xcba6be41u)]
 public enum ModelGeneratorSelect : uint {
-	[DDLRegistration(0x59126cb9u)] Spline = 0x0u,
-	[DDLRegistration(0xd57ef48eu)] Volume = 0x1u,
-	[DDLRegistration(0xed93b8feu)] Geo = 0x2u,
+	[DDLRegistration(0x59126cb9u, "Spline", "Model from Splines")] Spline,
+	[DDLRegistration(0xd57ef48eu, "Volume", "Model from Volumes")] Volume,
+	[DDLRegistration(0xed93b8feu, "Models", "Build from Models and prefabs")] Geo,
 }
 
 public static class ModelGeneratorSelectValues {

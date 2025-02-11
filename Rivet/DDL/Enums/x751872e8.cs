@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x751872e8u)]
 public enum x751872e8 : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0xa23e1a43u)] Health = 0x1u,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0xa23e1a43u, "Health")] Health,
 }
 
 public static class x751872e8Values {

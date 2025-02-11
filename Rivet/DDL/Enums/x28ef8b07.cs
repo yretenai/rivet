@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x28ef8b07u)]
 public enum x28ef8b07 : uint {
-	[DDLRegistration(0x5a5b5a9fu)] Default = 0x0u,
-	[DDLRegistration(0xc15f1b93u)] Wire = 0x1u,
-	[DDLRegistration(0x551c2b47u)] Faint = 0x2u,
-	[DDLRegistration(0xf6d7f74bu)] Strong = 0x3u,
+	[DDLRegistration(0x5a5b5a9fu, "Default")] Default,
+	[DDLRegistration(0xc15f1b93u, "Wire")] Wire,
+	[DDLRegistration(0x551c2b47u, "Faint")] Faint,
+	[DDLRegistration(0xf6d7f74bu, "Strong")] Strong,
 }
 
 public static class x28ef8b07Values {

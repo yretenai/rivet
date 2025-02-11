@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x626794b4u)]
 public enum x626794b4 : uint {
-	[DDLRegistration(0x87b44028u)] TriggerLeft = 0x0u,
-	[DDLRegistration(0x10e908aeu)] TriggerRight = 0x1u,
-	[DDLRegistration(0x06099e51u)] TriggerBoth = 0x2u,
+	[DDLRegistration(0x87b44028u, "Left")] TriggerLeft,
+	[DDLRegistration(0x10e908aeu, "Right")] TriggerRight,
+	[DDLRegistration(0x06099e51u, "Both")] TriggerBoth,
 }
 
 public static class x626794b4Values {

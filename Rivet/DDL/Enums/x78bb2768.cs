@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x78bb2768u)]
 public enum x78bb2768 : uint {
-	[DDLRegistration(0x97ae027eu)] CaptureAllGrids = 0x0u,
-	[DDLRegistration(0x4388d9e4u)] CaptureSelectedGrids = 0x1u,
+	[DDLRegistration(0x97ae027eu)] CaptureAllGrids,
+	[DDLRegistration(0x4388d9e4u)] CaptureSelectedGrids,
 }
 
 public static class x78bb2768Values {

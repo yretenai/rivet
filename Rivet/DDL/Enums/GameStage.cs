@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x37703f56u)]
 public enum GameStage : uint {
-	[DDLRegistration(0x84fce146u)] EarlyGame = 0x0u,
-	[DDLRegistration(0x2f1c66aau)] MidGame = 0x1u,
-	[DDLRegistration(0x01f61875u)] EndGame = 0x2u,
+	[DDLRegistration(0x84fce146u)] EarlyGame,
+	[DDLRegistration(0x2f1c66aau)] MidGame,
+	[DDLRegistration(0x01f61875u)] EndGame,
 }
 
 public static class GameStageValues {

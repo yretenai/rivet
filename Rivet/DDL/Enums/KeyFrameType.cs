@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x4c68ca42u)]
 public enum KeyFrameType : uint {
-	[DDLRegistration(0x246393e7u)] Float = 0x0u,
-	[DDLRegistration(0xf69d45c8u)] Float2 = 0x1u,
-	[DDLRegistration(0x819a755eu)] Float3 = 0x2u,
-	[DDLRegistration(0x1513c330u)] RGB = 0x3u,
+	[DDLRegistration(0x246393e7u)] Float,
+	[DDLRegistration(0xf69d45c8u)] Float2,
+	[DDLRegistration(0x819a755eu)] Float3,
+	[DDLRegistration(0x1513c330u)] RGB,
 }
 
 public static class KeyFrameTypeValues {

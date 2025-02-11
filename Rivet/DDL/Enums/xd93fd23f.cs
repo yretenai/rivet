@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xd93fd23fu)]
 public enum xd93fd23f : uint {
-	[DDLRegistration(0x10cad7bcu)] OneShot = 0x0u,
-	[DDLRegistration(0xd07b3f48u)] Loop = 0x1u,
+	[DDLRegistration(0x10cad7bcu)] OneShot,
+	[DDLRegistration(0xd07b3f48u)] Loop,
 }
 
 public static class xd93fd23fValues {

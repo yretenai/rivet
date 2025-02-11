@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xc115d639u)]
 public enum xc115d639 : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0x60ac00edu)] Red = 0x1u,
-	[DDLRegistration(0xef12e812u)] Blue = 0x2u,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0x60ac00edu, description: "Red Team")] Red,
+	[DDLRegistration(0xef12e812u, description: "Blue Team")] Blue,
 }
 
 public static class xc115d639Values {

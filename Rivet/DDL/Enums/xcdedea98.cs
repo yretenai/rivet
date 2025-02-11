@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xcdedea98u)]
 public enum xcdedea98 : uint {
-	[DDLRegistration(0xcabbfba2u)] Run = 0x0u,
-	[DDLRegistration(0x3a5c5f9fu)] Pause = 0x1u,
+	[DDLRegistration(0xcabbfba2u)] Run,
+	[DDLRegistration(0x3a5c5f9fu)] Pause,
 }
 
 public static class xcdedea98Values {

@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x2f68eb77u)]
 public enum MarqueeTestMode : uint {
-	[DDLRegistration(0xfe3ea8d6u)] Any = 0x0u,
-	[DDLRegistration(0xa1d52ebfu)] All = 0x1u,
+	[DDLRegistration(0xfe3ea8d6u, "Any")] Any,
+	[DDLRegistration(0xa1d52ebfu, "All")] All,
 }
 
 public static class MarqueeTestModeValues {

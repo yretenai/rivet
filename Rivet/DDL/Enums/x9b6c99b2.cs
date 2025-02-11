@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x9b6c99b2u)]
 public enum x9b6c99b2 : uint {
-	[DDLRegistration(0x3d5d42eau)] CameraAdjustAll = 0x0u,
-	[DDLRegistration(0x3ecab498u)] CameraAdjustRotation = 0x1u,
-	[DDLRegistration(0x519ac89cu)] CameraAdjustPosition = 0x2u,
-	[DDLRegistration(0x15290f7eu)] CameraAdjustNone = 0x3u,
+	[DDLRegistration(0x3d5d42eau, "All", "Adjust camera position and rotation when on surface")] CameraAdjustAll,
+	[DDLRegistration(0x3ecab498u, "Rotation", "Adjust camera rotation but not position")] CameraAdjustRotation,
+	[DDLRegistration(0x519ac89cu, "Position", "Adjust camera position but not rotation")] CameraAdjustPosition,
+	[DDLRegistration(0x15290f7eu, description: "Don't adjust camera when on surface")] CameraAdjustNone,
 }
 
 public static class x9b6c99b2Values {

@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x477e8a6au)]
 public enum ControllerSpeakerModeEnum : uint {
-	[DDLRegistration(0x730cc0d5u)] Experiential = 0x0u,
-	[DDLRegistration(0x58e24711u)] Functional = 0x1u,
-	[DDLRegistration(0xb1710221u)] Off = 0x2u,
+	[DDLRegistration(0x730cc0d5u, "Experiential")] Experiential,
+	[DDLRegistration(0x58e24711u, "Functional")] Functional,
+	[DDLRegistration(0xb1710221u, "Off")] Off,
 }
 
 public static class ControllerSpeakerModeEnumValues {

@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x726217e6u)]
 public enum x726217e6 : uint {
-	[DDLRegistration(0xe63f67b9u)] XAxis = 0x0u,
-	[DDLRegistration(0xdb5f4e09u)] YAxis = 0x1u,
-	[DDLRegistration(0x9cff34d9u)] ZAxis = 0x2u,
+	[DDLRegistration(0xe63f67b9u)] XAxis,
+	[DDLRegistration(0xdb5f4e09u)] YAxis,
+	[DDLRegistration(0x9cff34d9u)] ZAxis,
 }
 
 public static class x726217e6Values {

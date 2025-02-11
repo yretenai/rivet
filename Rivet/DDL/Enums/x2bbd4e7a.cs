@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x2bbd4e7au)]
 public enum x2bbd4e7a : uint {
-	[DDLRegistration(0x1a3485aau)] EitherCheckpoint = 0x0u,
-	[DDLRegistration(0xebbed3ddu)] CheckpointA = 0x1u,
-	[DDLRegistration(0x72b78267u)] CheckpointB = 0x2u,
+	[DDLRegistration(0x1a3485aau, description: "This crystal is visible all of the time.")] EitherCheckpoint,
+	[DDLRegistration(0xebbed3ddu, description: "This crystal is only visible if the container region for Checkpoint A is loaded.")] CheckpointA,
+	[DDLRegistration(0x72b78267u, description: "This crystal is only visible if the container region for Checkpoint B is loaded.")] CheckpointB,
 }
 
 public static class x2bbd4e7aValues {

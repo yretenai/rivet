@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x71dc1c4au)]
 public enum x71dc1c4a : uint {
-	[DDLRegistration(0x20ac8a47u)] PromptReloadMissionState = 0x0u,
-	[DDLRegistration(0xee0df2b7u)] AutoReloadMissionState = 0x1u,
-	[DDLRegistration(0x7eb82d08u)] RemoveFromMissionList = 0x2u,
+	[DDLRegistration(0x20ac8a47u)] PromptReloadMissionState,
+	[DDLRegistration(0xee0df2b7u)] AutoReloadMissionState,
+	[DDLRegistration(0x7eb82d08u)] RemoveFromMissionList,
 }
 
 public static class x71dc1c4aValues {

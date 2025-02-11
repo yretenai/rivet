@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x39cee5acu)]
 public enum x39cee5ac : uint {
-	[DDLRegistration(0xb83232dcu)] PlayOne = 0x0u,
-	[DDLRegistration(0xf946c5f0u)] PlayAll = 0x1u,
-	[DDLRegistration(0x15a619d5u)] PlayForever = 0x2u,
+	[DDLRegistration(0xb83232dcu, "Play One")] PlayOne,
+	[DDLRegistration(0xf946c5f0u, "Play All")] PlayAll,
+	[DDLRegistration(0x15a619d5u, "Play Forever")] PlayForever,
 }
 
 public static class x39cee5acValues {

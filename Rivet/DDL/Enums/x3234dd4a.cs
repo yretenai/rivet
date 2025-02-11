@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x3234dd4au)]
 public enum x3234dd4a : uint {
-	[DDLRegistration(0x830a0479u)] GridNodeTypeDefault = 0x0u,
-	[DDLRegistration(0xa821516bu)] GridNodeTypeCombineAdditive = 0x1u,
+	[DDLRegistration(0x830a0479u, "Default")] GridNodeTypeDefault,
+	[DDLRegistration(0xa821516bu, "Combine-additive")] GridNodeTypeCombineAdditive,
 }
 
 public static class x3234dd4aValues {

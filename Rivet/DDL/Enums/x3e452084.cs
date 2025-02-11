@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x3e452084u)]
 public enum x3e452084 : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0x6eff4d56u)] FromTopAndBottom = 0x1u,
-	[DDLRegistration(0x4b9a4391u)] FromTopOnly = 0x2u,
-	[DDLRegistration(0xb265ec9cu)] FromBottomOnly = 0x3u,
+	[DDLRegistration(0x0eb42269u, description: "Do not center the player on the wallrun panel.")] None,
+	[DDLRegistration(0x6eff4d56u, description: "Center the player on the panel by pulling away from the top and bottom edges of the wallrun panel.")] FromTopAndBottom,
+	[DDLRegistration(0x4b9a4391u, description: "Center the player on the panel by pulling away from the top edge of the wallrun panel.")] FromTopOnly,
+	[DDLRegistration(0xb265ec9cu, description: "Center the player on the panel by pulling away from the bottom edge of the wallrun panel.")] FromBottomOnly,
 }
 
 public static class x3e452084Values {

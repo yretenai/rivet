@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xa54ee12bu)]
 public enum xa54ee12b : uint {
-	[DDLRegistration(0xb7848198u)] Continue = 0x0u,
-	[DDLRegistration(0xc8723410u)] Stop = 0x1u,
-	[DDLRegistration(0x760d74cfu)] Kill = 0x2u,
+	[DDLRegistration(0xb7848198u, "Continue Effects", "Allow spawned effects to continue")] Continue,
+	[DDLRegistration(0xc8723410u, "Stop Effects", "Cause spawned effects to stop")] Stop,
+	[DDLRegistration(0x760d74cfu, "Kill Effects", "Cause spawned effects to IMMEDIATELY vanish")] Kill,
 }
 
 public static class xa54ee12bValues {

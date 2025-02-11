@@ -7,12 +7,12 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x2069d6e7u)]
 public enum x2069d6e7 : uint {
-	[DDLRegistration(0x6b590caau)] InstanceCollection = 0x0u,
-	[DDLRegistration(0x30a77827u)] InstanceUnit = 0x1u,
-	[DDLRegistration(0x8f2799d8u)] OpenCollection = 0x2u,
-	[DDLRegistration(0x07103da6u)] OpenUnit = 0x3u,
-	[DDLRegistration(0x09a46a73u)] OpenLod = 0x4u,
-	[DDLRegistration(0x2962a87cu)] Mission = 0x5u,
+	[DDLRegistration(0x6b590caau)] InstanceCollection,
+	[DDLRegistration(0x30a77827u)] InstanceUnit,
+	[DDLRegistration(0x8f2799d8u)] OpenCollection,
+	[DDLRegistration(0x07103da6u)] OpenUnit,
+	[DDLRegistration(0x09a46a73u)] OpenLod,
+	[DDLRegistration(0x2962a87cu)] Mission,
 }
 
 public static class x2069d6e7Values {

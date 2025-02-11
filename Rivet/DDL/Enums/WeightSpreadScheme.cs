@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xab2ca92fu)]
 public enum WeightSpreadScheme : uint {
-	[DDLRegistration(0x614195adu)] EvenSpread = 0x0u,
-	[DDLRegistration(0x265afbd8u)] FavorBaseOfChain = 0x1u,
-	[DDLRegistration(0xa4c00687u)] FavorEndOfChain = 0x2u,
+	[DDLRegistration(0x614195adu)] EvenSpread,
+	[DDLRegistration(0x265afbd8u)] FavorBaseOfChain,
+	[DDLRegistration(0xa4c00687u)] FavorEndOfChain,
 }
 
 public static class WeightSpreadSchemeValues {

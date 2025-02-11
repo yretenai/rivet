@@ -7,13 +7,13 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xd3395131u)]
 public enum xd3395131 : uint {
-	[DDLRegistration(0x92d9fb0au)] ConfigDefault = 0x0u,
-	[DDLRegistration(0x44a2f2d8u)] DeleteInstant = 0x1u,
-	[DDLRegistration(0xbed952d5u)] DeleteOffCamera = 0x2u,
-	[DDLRegistration(0x89915a6du)] DeleteOffCameraOutOfRange = 0x3u,
-	[DDLRegistration(0x6e4d2bc9u)] DeleteBehindCamOutOfRange = 0x4u,
-	[DDLRegistration(0xba6ee468u)] DeleteNotRenderedOutOfRange = 0x5u,
-	[DDLRegistration(0x9841f9acu)] ReZoneToActivator = 0x6u,
+	[DDLRegistration(0x92d9fb0au, description: "Spawned bots are cleaned up based on the setting in the active proximity spawn config")] ConfigDefault,
+	[DDLRegistration(0x44a2f2d8u, description: "Spawned bots are instantly deleted when the prox spawn system is stopped")] DeleteInstant,
+	[DDLRegistration(0xbed952d5u, description: "Spawned bots are deleted off-camera when the prox spawn system is stopped")] DeleteOffCamera,
+	[DDLRegistration(0x89915a6du, description: "Spawned bots are deleted off-camera AND out of the MinDeleteRadius when the prox spawn system is stopped")] DeleteOffCameraOutOfRange,
+	[DDLRegistration(0x6e4d2bc9u, description: "Spawned bots are deleted behind camera plane AND out of the MinDeleteRadius when the prox spawn system is stopped")] DeleteBehindCamOutOfRange,
+	[DDLRegistration(0xba6ee468u, description: "Spawned bots are deleted when they aren't drawn and out of range")] DeleteNotRenderedOutOfRange,
+	[DDLRegistration(0x9841f9acu, description: "Spawned bots are deleted with the zone of the thing (NavClue or AnimClue) that activated them. ")] ReZoneToActivator,
 }
 
 public static class xd3395131Values {

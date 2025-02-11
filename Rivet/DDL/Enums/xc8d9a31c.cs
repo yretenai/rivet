@@ -7,13 +7,13 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xc8d9a31cu)]
 public enum xc8d9a31c : uint {
-	[DDLRegistration(0xa1d52ebfu)] All = 0x0u,
-	[DDLRegistration(0x5a633e56u)] Point = 0x1u,
-	[DDLRegistration(0xc81658d5u)] Spot = 0x2u,
-	[DDLRegistration(0x5a4b0709u)] Pyramid = 0x3u,
-	[DDLRegistration(0x46dea78fu)] Shaft = 0x4u,
-	[DDLRegistration(0x1b6c1f32u)] Modulate = 0x5u,
-	[DDLRegistration(0xbffb25e3u)] LightGridMod = 0x6u,
+	[DDLRegistration(0xa1d52ebfu)] All,
+	[DDLRegistration(0x5a633e56u)] Point,
+	[DDLRegistration(0xc81658d5u)] Spot,
+	[DDLRegistration(0x5a4b0709u)] Pyramid,
+	[DDLRegistration(0x46dea78fu)] Shaft,
+	[DDLRegistration(0x1b6c1f32u)] Modulate,
+	[DDLRegistration(0xbffb25e3u)] LightGridMod,
 }
 
 public static class xc8d9a31cValues {

@@ -7,12 +7,12 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xf93e2b39u)]
 public enum xf93e2b39 : uint {
-	[DDLRegistration(0x100003e9u)] XAxisLocal = 0x0u,
-	[DDLRegistration(0xffc268d7u)] YAxisLocal = 0x1u,
-	[DDLRegistration(0x14f5d3d4u)] ZAxisLocal = 0x2u,
-	[DDLRegistration(0xa1a19a42u)] XAxisWorld = 0x3u,
-	[DDLRegistration(0x4e63f17cu)] YAxisWorld = 0x4u,
-	[DDLRegistration(0xa5544a7fu)] ZAxisWorld = 0x5u,
+	[DDLRegistration(0x100003e9u)] XAxisLocal,
+	[DDLRegistration(0xffc268d7u)] YAxisLocal,
+	[DDLRegistration(0x14f5d3d4u)] ZAxisLocal,
+	[DDLRegistration(0xa1a19a42u)] XAxisWorld,
+	[DDLRegistration(0x4e63f17cu)] YAxisWorld,
+	[DDLRegistration(0xa5544a7fu)] ZAxisWorld,
 }
 
 public static class xf93e2b39Values {

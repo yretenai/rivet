@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x2f0b644bu)]
 public enum x2f0b644b : uint {
-	[DDLRegistration(0xb5987e05u)] Replace = 0x0u,
-	[DDLRegistration(0x67d72c85u)] Add = 0x1u,
-	[DDLRegistration(0x853fb1ceu)] Subtract = 0x2u,
-	[DDLRegistration(0xb5d18a0cu)] Multiply = 0x3u,
-	[DDLRegistration(0xef7af418u)] Divide = 0x4u,
+	[DDLRegistration(0xb5987e05u, "=")] Replace,
+	[DDLRegistration(0x67d72c85u, "+")] Add,
+	[DDLRegistration(0x853fb1ceu, "-")] Subtract,
+	[DDLRegistration(0xb5d18a0cu, "x")] Multiply,
+	[DDLRegistration(0xef7af418u, "/")] Divide,
 }
 
 public static class x2f0b644bValues {

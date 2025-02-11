@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x7080cd4bu)]
 public enum x7080cd4b : uint {
-	[DDLRegistration(0x70ddbb2eu)] full = 0x0u,
-	[DDLRegistration(0x4ed11d1cu)] delta = 0x1u,
+	[DDLRegistration(0x70ddbb2eu)] full,
+	[DDLRegistration(0x4ed11d1cu)] delta,
 }
 
 public static class x7080cd4bValues {

@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x51b3e0b1u)]
 public enum x51b3e0b1 : uint {
-	[DDLRegistration(0x4c67b9ddu)] Activate = 0x0u,
-	[DDLRegistration(0xdc76ef3cu)] DeActivate = 0x1u,
+	[DDLRegistration(0x4c67b9ddu, description: "Activate the camera pane")] Activate,
+	[DDLRegistration(0xdc76ef3cu, description: "Deactivate the camera pane")] DeActivate,
 }
 
 public static class x51b3e0b1Values {

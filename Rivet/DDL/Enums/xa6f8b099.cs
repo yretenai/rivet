@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xa6f8b099u)]
 public enum xa6f8b099 : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0xb9efa8a0u)] Cold = 0x1u,
-	[DDLRegistration(0x94654b76u)] MediumTemp = 0x2u,
-	[DDLRegistration(0xeaf33090u)] HighTemp = 0x3u,
-	[DDLRegistration(0x2b84e870u)] Overheated = 0x4u,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0xb9efa8a0u, "Cold")] Cold,
+	[DDLRegistration(0x94654b76u, "MediumTemp")] MediumTemp,
+	[DDLRegistration(0xeaf33090u, "HighTemp")] HighTemp,
+	[DDLRegistration(0x2b84e870u, "Overheated")] Overheated,
 }
 
 public static class xa6f8b099Values {

@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xfa97354eu)]
 public enum xfa97354e : uint {
-	[DDLRegistration(0xe3cf7fc6u)] PivotCentered = 0x0u,
-	[DDLRegistration(0xc769e0e2u)] PivotAtStart = 0x1u,
+	[DDLRegistration(0xe3cf7fc6u)] PivotCentered,
+	[DDLRegistration(0xc769e0e2u)] PivotAtStart,
 }
 
 public static class xfa97354eValues {

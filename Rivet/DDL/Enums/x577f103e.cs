@@ -7,22 +7,22 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x577f103eu)]
 public enum x577f103e : uint {
-	[DDLRegistration(0x429c20c0u)] Invalid = 0x0u,
-	[DDLRegistration(0xac4bb760u)] AssetReferenceNode = 0x1u,
-	[DDLRegistration(0x06f3b654u)] BlobDef = 0x2u,
-	[DDLRegistration(0x2d71082cu)] Comment = 0x3u,
-	[DDLRegistration(0x9612665cu)] Connection = 0x4u,
-	[DDLRegistration(0xd731d82au)] ConnectionPin = 0x5u,
-	[DDLRegistration(0x44ac06cbu)] ConnectionTuid = 0x6u,
-	[DDLRegistration(0x38975f69u)] EmbeddedGraphNode = 0x7u,
-	[DDLRegistration(0x566a5ffcu)] InputNode = 0x8u,
-	[DDLRegistration(0x593d8335u)] InputPlug = 0x9u,
-	[DDLRegistration(0xf45bcae3u)] Node = 0xau,
-	[DDLRegistration(0x681b8b40u)] NodeGraph = 0xbu,
-	[DDLRegistration(0xb3a8b859u)] NodeGraphCollection = 0xcu,
-	[DDLRegistration(0x5171a970u)] OutputNode = 0xdu,
-	[DDLRegistration(0x5e2675b9u)] OutputPlug = 0xeu,
-	[DDLRegistration(0xba1f5472u)] ReferencedGraphNode = 0xfu,
+	[DDLRegistration(0x429c20c0u)] Invalid,
+	[DDLRegistration(0xac4bb760u)] AssetReferenceNode,
+	[DDLRegistration(0x06f3b654u)] BlobDef,
+	[DDLRegistration(0x2d71082cu)] Comment,
+	[DDLRegistration(0x9612665cu)] Connection,
+	[DDLRegistration(0xd731d82au)] ConnectionPin,
+	[DDLRegistration(0x44ac06cbu)] ConnectionTuid,
+	[DDLRegistration(0x38975f69u)] EmbeddedGraphNode,
+	[DDLRegistration(0x566a5ffcu)] InputNode,
+	[DDLRegistration(0x593d8335u)] InputPlug,
+	[DDLRegistration(0xf45bcae3u)] Node,
+	[DDLRegistration(0x681b8b40u)] NodeGraph,
+	[DDLRegistration(0xb3a8b859u)] NodeGraphCollection,
+	[DDLRegistration(0x5171a970u)] OutputNode,
+	[DDLRegistration(0x5e2675b9u)] OutputPlug,
+	[DDLRegistration(0xba1f5472u)] ReferencedGraphNode,
 }
 
 public static class x577f103eValues {

@@ -7,7 +7,7 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x56bca86cu)]
 public enum x56bca86c : uint {
-	[DDLRegistration(0xa96d6873u)] Rebreather = 0x0u,
+	[DDLRegistration(0xa96d6873u)] Rebreather,
 }
 
 public static class x56bca86cValues {

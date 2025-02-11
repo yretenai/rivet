@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xcef7a1a6u)]
 public enum xcef7a1a6 : uint {
-	[DDLRegistration(0x9dce1ef4u)] PartialRampNone = 0x0u,
-	[DDLRegistration(0xce9c6bd6u)] PartialRampOneStep = 0x1u,
-	[DDLRegistration(0xd47e1c0au)] PartialRampTwoSteps = 0x2u,
-	[DDLRegistration(0x268bd474u)] PartialRampThreeSteps = 0x3u,
+	[DDLRegistration(0x9dce1ef4u, "Zero Step")] PartialRampNone,
+	[DDLRegistration(0xce9c6bd6u, "One Step")] PartialRampOneStep,
+	[DDLRegistration(0xd47e1c0au, "Two Step")] PartialRampTwoSteps,
+	[DDLRegistration(0x268bd474u, "Three Step")] PartialRampThreeSteps,
 }
 
 public static class xcef7a1a6Values {

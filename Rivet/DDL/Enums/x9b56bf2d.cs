@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x9b56bf2du)]
 public enum x9b56bf2d : uint {
-	[DDLRegistration(0x43a87008u)] Collection = 0x0u,
-	[DDLRegistration(0x78a02fbeu)] SmartCollection = 0x1u,
+	[DDLRegistration(0x43a87008u, description: "Collection is a manually maintained list of assets.")] Collection,
+	[DDLRegistration(0x78a02fbeu, description: "Search driven, dynamic collision.")] SmartCollection,
 }
 
 public static class x9b56bf2dValues {

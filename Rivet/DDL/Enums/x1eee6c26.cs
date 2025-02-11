@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x1eee6c26u)]
 public enum x1eee6c26 : uint {
-	[DDLRegistration(0x0cce5005u)] MainGame = 0x0u,
-	[DDLRegistration(0xef45c9bdu)] PaidDLC = 0x1u,
-	[DDLRegistration(0x13459a18u)] FreeDLC = 0x2u,
-	[DDLRegistration(0x01522e8du)] MinorUpdate = 0x3u,
-	[DDLRegistration(0x4f693f75u)] MajorUpdate = 0x4u,
+	[DDLRegistration(0x0cce5005u, "Main Game (285-1050 pts)", "For the trophy group representing the main/base game. May have at most 1 main game group per title.<br><b>NOTE:</b> If this group has 950 or more points in it, it must have a platinum trophy.")] MainGame,
+	[DDLRegistration(0xef45c9bdu, "Paid DLC (0-200 pts)", "For trophy groups representing content in a paid DLC. Cannot have a platinum trophy.")] PaidDLC,
+	[DDLRegistration(0x13459a18u, "Free DLC (0-45 pts)", "For trophy groups representing content in a free DLC. Cannot have a platinum trophy.")] FreeDLC,
+	[DDLRegistration(0x01522e8du, "Minor Update (0-45 pts)", "For trophy groups representing content in a minor update that will be released to everyone.<br><b>NOTE:</b> Cannot have a platinum trophy.")] MinorUpdate,
+	[DDLRegistration(0x4f693f75u, "Major Update (0-200 pts)", "For trophy groups representing content in a major update that will be released to everyone. Major updates must follow these criteria:<br><ul><li>Playing time of ten hours or more (recommended) is required to unlock all the added trophies.</li><li>Three months or more has passed since the last major update.</li></ul><br><b>NOTE:</b> Cannot have a platinum trophy.")] MajorUpdate,
 }
 
 public static class x1eee6c26Values {

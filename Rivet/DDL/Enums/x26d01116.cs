@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x26d01116u)]
 public enum x26d01116 : uint {
-	[DDLRegistration(0x6e08d6d4u)] UpToDate = 0x0u,
-	[DDLRegistration(0x60ce100eu)] OutOfDate = 0x1u,
-	[DDLRegistration(0x3789be11u)] Processing = 0x2u,
-	[DDLRegistration(0xb01b7103u)] Error = 0x3u,
+	[DDLRegistration(0x6e08d6d4u)] UpToDate,
+	[DDLRegistration(0x60ce100eu)] OutOfDate,
+	[DDLRegistration(0x3789be11u)] Processing,
+	[DDLRegistration(0xb01b7103u)] Error,
 }
 
 public static class x26d01116Values {

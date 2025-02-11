@@ -7,22 +7,22 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xf23ee100u)]
 public enum xf23ee100 : uint {
-	[DDLRegistration(0x429c20c0u)] Invalid = 0x0u,
-	[DDLRegistration(0xebfca3ddu)] ClipTime = 0x1u,
-	[DDLRegistration(0x5b8404a1u)] ClipRate = 0x2u,
-	[DDLRegistration(0x578d24d7u)] BiBlendFactor = 0x3u,
-	[DDLRegistration(0xf4046f0eu)] BiBlendRate = 0x4u,
-	[DDLRegistration(0x66cfc8b4u)] TriBlendWeights = 0x5u,
-	[DDLRegistration(0x70f0226fu)] TriBlendRate = 0x6u,
-	[DDLRegistration(0x42652ac1u)] BlendCurrentValue = 0x7u,
-	[DDLRegistration(0xc77cb226u)] BlendCurrentRate = 0x8u,
-	[DDLRegistration(0x175bcdf3u)] BlendInterval = 0x9u,
-	[DDLRegistration(0xc4d80600u)] SequenceCurrentTime = 0xau,
-	[DDLRegistration(0x613a0310u)] SequenceRate = 0xbu,
-	[DDLRegistration(0x7e8ed84cu)] GridCurrentPoint = 0xcu,
-	[DDLRegistration(0x376d5d7cu)] GridPoint = 0xdu,
-	[DDLRegistration(0x7d4fdc8au)] GridRate = 0xeu,
-	[DDLRegistration(0x86825e8cu)] SelectCurrentIndex = 0xfu,
+	[DDLRegistration(0x429c20c0u)] Invalid,
+	[DDLRegistration(0xebfca3ddu)] ClipTime,
+	[DDLRegistration(0x5b8404a1u)] ClipRate,
+	[DDLRegistration(0x578d24d7u)] BiBlendFactor,
+	[DDLRegistration(0xf4046f0eu)] BiBlendRate,
+	[DDLRegistration(0x66cfc8b4u)] TriBlendWeights,
+	[DDLRegistration(0x70f0226fu)] TriBlendRate,
+	[DDLRegistration(0x42652ac1u)] BlendCurrentValue,
+	[DDLRegistration(0xc77cb226u)] BlendCurrentRate,
+	[DDLRegistration(0x175bcdf3u)] BlendInterval,
+	[DDLRegistration(0xc4d80600u)] SequenceCurrentTime,
+	[DDLRegistration(0x613a0310u)] SequenceRate,
+	[DDLRegistration(0x7e8ed84cu)] GridCurrentPoint,
+	[DDLRegistration(0x376d5d7cu)] GridPoint,
+	[DDLRegistration(0x7d4fdc8au)] GridRate,
+	[DDLRegistration(0x86825e8cu)] SelectCurrentIndex,
 }
 
 public static class xf23ee100Values {

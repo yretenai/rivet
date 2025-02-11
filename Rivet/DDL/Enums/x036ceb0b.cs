@@ -7,21 +7,21 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x036ceb0bu)]
 public enum x036ceb0b : uint {
-	[DDLRegistration(0xaa8c2914u)] Body = 0x0u,
-	[DDLRegistration(0x6917ac85u)] GloveLeft = 0x1u,
-	[DDLRegistration(0xb8607417u)] GloveRight = 0x2u,
-	[DDLRegistration(0xaa95091au)] GloveUpgrade = 0x3u,
-	[DDLRegistration(0x6a87e97eu)] Boots = 0x4u,
-	[DDLRegistration(0xd6d7d43au)] Head = 0x5u,
-	[DDLRegistration(0x164ed7f6u)] Helmet = 0x6u,
-	[DDLRegistration(0x8c3c612cu)] Legs = 0x7u,
-	[DDLRegistration(0xe95ecf4cu)] Jetpack = 0x8u,
-	[DDLRegistration(0x6f99cae1u)] MapOMatic = 0x9u,
-	[DDLRegistration(0x3e2db4c4u)] Swingshot = 0xau,
-	[DDLRegistration(0xc188606eu)] Ears = 0xbu,
-	[DDLRegistration(0x743059c1u)] Face = 0xcu,
-	[DDLRegistration(0x03fed8d3u)] Cap = 0xdu,
-	[DDLRegistration(0x98a92b72u)] OxygenTank = 0xeu,
+	[DDLRegistration(0xaa8c2914u)] Body,
+	[DDLRegistration(0x6917ac85u)] GloveLeft,
+	[DDLRegistration(0xb8607417u)] GloveRight,
+	[DDLRegistration(0xaa95091au)] GloveUpgrade,
+	[DDLRegistration(0x6a87e97eu)] Boots,
+	[DDLRegistration(0xd6d7d43au)] Head,
+	[DDLRegistration(0x164ed7f6u)] Helmet,
+	[DDLRegistration(0x8c3c612cu)] Legs,
+	[DDLRegistration(0xe95ecf4cu)] Jetpack,
+	[DDLRegistration(0x6f99cae1u)] MapOMatic,
+	[DDLRegistration(0x3e2db4c4u)] Swingshot,
+	[DDLRegistration(0xc188606eu)] Ears,
+	[DDLRegistration(0x743059c1u)] Face,
+	[DDLRegistration(0x03fed8d3u)] Cap,
+	[DDLRegistration(0x98a92b72u)] OxygenTank,
 }
 
 public static class x036ceb0bValues {

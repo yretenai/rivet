@@ -7,15 +7,15 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x5d60d87eu)]
 public enum x5d60d87e : uint {
-	[DDLRegistration(0x37412d9au)] HM1 = 0x0u,
-	[DDLRegistration(0xae487c20u)] HM2 = 0x1u,
-	[DDLRegistration(0xd94f4cb6u)] HM3 = 0x2u,
-	[DDLRegistration(0xd4b5f451u)] HF1 = 0x3u,
-	[DDLRegistration(0x4dbca5ebu)] HF2 = 0x4u,
-	[DDLRegistration(0x3abb957du)] HF3 = 0x5u,
-	[DDLRegistration(0xa1d52ebfu)] All = 0x6u,
-	[DDLRegistration(0xfea70789u)] AllMale = 0x7u,
-	[DDLRegistration(0xa04760c0u)] AllFemale = 0x8u,
+	[DDLRegistration(0x37412d9au, description: "Human Male 1")] HM1,
+	[DDLRegistration(0xae487c20u, description: "Human Male 2")] HM2,
+	[DDLRegistration(0xd94f4cb6u, description: "Human Male 3")] HM3,
+	[DDLRegistration(0xd4b5f451u, description: "Human Female 1")] HF1,
+	[DDLRegistration(0x4dbca5ebu, description: "Human Female 2")] HF2,
+	[DDLRegistration(0x3abb957du, description: "Human Female 3")] HF3,
+	[DDLRegistration(0xa1d52ebfu, description: "All body types")] All,
+	[DDLRegistration(0xfea70789u, description: "All male body types")] AllMale,
+	[DDLRegistration(0xa04760c0u, description: "All female body types")] AllFemale,
 }
 
 public static class x5d60d87eValues {

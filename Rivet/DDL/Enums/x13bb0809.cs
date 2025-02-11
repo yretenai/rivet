@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x13bb0809u)]
 public enum x13bb0809 : uint {
-	[DDLRegistration(0x77777993u)] SwarmFlock = 0x0u,
-	[DDLRegistration(0xdee5f1c5u)] PlanarFlock = 0x1u,
+	[DDLRegistration(0x77777993u, "Swarm (3D)")] SwarmFlock,
+	[DDLRegistration(0xdee5f1c5u, "Planar (2D)")] PlanarFlock,
 }
 
 public static class x13bb0809Values {

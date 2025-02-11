@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xbb647502u)]
 public enum xbb647502 : uint {
-	[DDLRegistration(0xa99b53deu)] Cursor = 0x0u,
-	[DDLRegistration(0x88e4f99bu)] CameraCrosshair = 0x1u,
-	[DDLRegistration(0xd0569a39u)] Gun = 0x2u,
-	[DDLRegistration(0x437e0805u)] Automatic = 0x3u,
+	[DDLRegistration(0xa99b53deu)] Cursor,
+	[DDLRegistration(0x88e4f99bu)] CameraCrosshair,
+	[DDLRegistration(0xd0569a39u)] Gun,
+	[DDLRegistration(0x437e0805u)] Automatic,
 }
 
 public static class xbb647502Values {

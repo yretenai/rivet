@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x11adfe43u)]
 public enum PerfSpecTypeGame : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0xdb1014abu)] PS5_30 = 0x1u,
-	[DDLRegistration(0x847c3046u)] PS5_60RT = 0x2u,
-	[DDLRegistration(0xa667e0eeu)] PS5_60 = 0x3u,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0xdb1014abu, "PS5 30-FPS")] PS5_30,
+	[DDLRegistration(0x847c3046u, "PS5 60-FPS w/ RT")] PS5_60RT,
+	[DDLRegistration(0xa667e0eeu, "PS5 60-FPS")] PS5_60,
 }
 
 public static class PerfSpecTypeGameValues {

@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x4344f8a2u)]
 public enum ShadowRes : uint {
-	[DDLRegistration(0xf1246ad1u)] LowRes = 0x0u,
-	[DDLRegistration(0x4d6151b4u)] Normal = 0x1u,
-	[DDLRegistration(0xd8f5e825u)] HighRes = 0x2u,
-	[DDLRegistration(0x24a9e401u)] Cinematic = 0x3u,
+	[DDLRegistration(0xf1246ad1u, "Low Res")] LowRes,
+	[DDLRegistration(0x4d6151b4u, "Normal")] Normal,
+	[DDLRegistration(0xd8f5e825u, "High Res")] HighRes,
+	[DDLRegistration(0x24a9e401u, "Cinematic")] Cinematic,
 }
 
 public static class ShadowResValues {

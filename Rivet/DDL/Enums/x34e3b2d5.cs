@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x34e3b2d5u)]
 public enum x34e3b2d5 : uint {
-	[DDLRegistration(0x9ceb2b8du)] Sky = 0x0u,
-	[DDLRegistration(0x93f711d5u)] Model3D = 0x1u,
-	[DDLRegistration(0xf64b656fu)] Particles = 0x2u,
-	[DDLRegistration(0x9400f1c6u)] PostProcess = 0x3u,
+	[DDLRegistration(0x9ceb2b8du, "Sky")] Sky,
+	[DDLRegistration(0x93f711d5u, "Model3D")] Model3D,
+	[DDLRegistration(0xf64b656fu, "Particles")] Particles,
+	[DDLRegistration(0x9400f1c6u, "PostProcess")] PostProcess,
 }
 
 public static class x34e3b2d5Values {

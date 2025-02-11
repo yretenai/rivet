@@ -7,12 +7,12 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xe4016569u)]
 public enum xe4016569 : uint {
-	[DDLRegistration(0x3f69e8afu)] TriCount = 0x0u,
-	[DDLRegistration(0x334133f7u)] ResidentVram = 0x1u,
-	[DDLRegistration(0x7d1c7d4du)] Ram = 0x2u,
-	[DDLRegistration(0x005f02beu)] InstanceCount = 0x3u,
-	[DDLRegistration(0x6a7a01e3u)] CollRam = 0x4u,
-	[DDLRegistration(0x2503eab9u)] NavRam = 0x5u,
+	[DDLRegistration(0x3f69e8afu, "Tris")] TriCount,
+	[DDLRegistration(0x334133f7u, "Resident VRAM")] ResidentVram,
+	[DDLRegistration(0x7d1c7d4du, "RAM usage")] Ram,
+	[DDLRegistration(0x005f02beu, "Instances")] InstanceCount,
+	[DDLRegistration(0x6a7a01e3u, "RAM for Collision")] CollRam,
+	[DDLRegistration(0x2503eab9u, "RAM for Navigation")] NavRam,
 }
 
 public static class xe4016569Values {

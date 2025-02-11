@@ -12,10 +12,18 @@ public class DDLObject : Dictionary<uint, DDLField> {
 			switch (field.Value[index]) {
 				case T value:
 					return value;
+				case ulong u when typeof(T) == typeof(RivetAssetId):
+					return (T) (object) u;
+				case uint u when typeof(T) == typeof(RivetTypeId):
+					return (T) (object) u;
 				case DDLFullString str when typeof(T) == typeof(RivetTypeId):
 					return (T) (object) str.Type;
 				case DDLFullString str when typeof(T) == typeof(RivetAssetId):
 					return (T) (object) str.Asset;
+				case null:
+					break;
+				default:
+					throw new InvalidOperationException($"Cannot cast to {typeof(T).FullName}");
 			}
 		}
 
@@ -68,12 +76,22 @@ public class DDLObject : Dictionary<uint, DDLField> {
 					case T value:
 						list.Add(value);
 						break;
+					case ulong u when typeof(T) == typeof(RivetAssetId):
+						list.Add((T) (object) u);
+						break;
+					case uint u when typeof(T) == typeof(RivetTypeId):
+						list.Add((T) (object) u);
+						break;
 					case DDLFullString str when typeof(T) == typeof(RivetTypeId):
 						list.Add((T) (object) str.Type);
 						break;
 					case DDLFullString str when typeof(T) == typeof(RivetAssetId):
 						list.Add((T) (object) str.Asset);
 						break;
+					case null:
+						break;
+					default:
+						throw new InvalidOperationException($"Cannot cast to {typeof(T).FullName}");
 				}
 			}
 

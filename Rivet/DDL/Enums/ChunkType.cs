@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x6df07d3cu)]
 public enum ChunkType : uint {
-	[DDLRegistration(0x886ab0c1u)] Breakable = 0x0u,
-	[DDLRegistration(0x9bd25b73u)] Bot = 0x1u,
-	[DDLRegistration(0x0e83381cu)] Misc = 0x2u,
+	[DDLRegistration(0x886ab0c1u, "Breakable", "Example: cover chunks")] Breakable,
+	[DDLRegistration(0x9bd25b73u, "Bot", "Example: bot armor")] Bot,
+	[DDLRegistration(0x0e83381cu, "Misc", "Everything that doesn't fall under one of the other categories.")] Misc,
 }
 
 public static class ChunkTypeValues {

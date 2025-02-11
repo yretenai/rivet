@@ -7,12 +7,12 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x531b18aau)]
 public enum x531b18aa : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0xd7b1dc31u)] World = 0x1u,
-	[DDLRegistration(0xf4e5026fu)] TargetRelative = 0x2u,
-	[DDLRegistration(0xe24b4fb2u)] Position = 0x3u,
-	[DDLRegistration(0xa9b39b8bu)] Actor = 0x4u,
-	[DDLRegistration(0xacd779c2u)] StoredPositionToActor = 0x5u,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0xd7b1dc31u)] World,
+	[DDLRegistration(0xf4e5026fu)] TargetRelative,
+	[DDLRegistration(0xe24b4fb2u)] Position,
+	[DDLRegistration(0xa9b39b8bu)] Actor,
+	[DDLRegistration(0xacd779c2u)] StoredPositionToActor,
 }
 
 public static class x531b18aaValues {

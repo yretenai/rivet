@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xafae1264u)]
 public enum xafae1264 : uint {
-	[DDLRegistration(0xc6f5769du)] DisableOnTrigger = 0x0u,
-	[DDLRegistration(0xbda12029u)] DisableOnUntrigger = 0x1u,
-	[DDLRegistration(0xac2729d1u)] DoNotDisable = 0x2u,
+	[DDLRegistration(0xc6f5769du, "Disable on trigger", "Will require a untrigger to occur first if set to use Untrigger by Dist.")] DisableOnTrigger,
+	[DDLRegistration(0xbda12029u, "Disable on untrigger", "Will require a untrigger to occur first if not set to use Untrigger by Dist.")] DisableOnUntrigger,
+	[DDLRegistration(0xac2729d1u, "Do not auto disable")] DoNotDisable,
 }
 
 public static class xafae1264Values {

@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x9443909fu)]
 public enum x9443909f : uint {
-	[DDLRegistration(0xa9b39b8bu)] Actor = 0x0u,
-	[DDLRegistration(0x80249555u)] LastDamager = 0x1u,
+	[DDLRegistration(0xa9b39b8bu, "Actor", "Shots spawned are owned by this actor")] Actor,
+	[DDLRegistration(0x80249555u, "Last Damager", "Shots spawned are owned by the last actor that damaged this one")] LastDamager,
 }
 
 public static class x9443909fValues {

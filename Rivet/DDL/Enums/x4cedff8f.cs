@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x4cedff8fu)]
 public enum x4cedff8f : uint {
-	[DDLRegistration(0xe6ca6f37u)] TypeSfx = 0x0u,
-	[DDLRegistration(0x5d38676fu)] TypeDialogue = 0x1u,
-	[DDLRegistration(0xbca7e448u)] TypeMusic = 0x2u,
+	[DDLRegistration(0xe6ca6f37u)] TypeSfx,
+	[DDLRegistration(0x5d38676fu)] TypeDialogue,
+	[DDLRegistration(0xbca7e448u)] TypeMusic,
 }
 
 public static class x4cedff8fValues {

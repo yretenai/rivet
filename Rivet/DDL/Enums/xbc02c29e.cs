@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xbc02c29eu)]
 public enum xbc02c29e : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0xe1e544dbu)] Four = 0x1u,
-	[DDLRegistration(0x8bccf3f4u)] Eight = 0x2u,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0xe1e544dbu)] Four,
+	[DDLRegistration(0x8bccf3f4u)] Eight,
 }
 
 public static class xbc02c29eValues {

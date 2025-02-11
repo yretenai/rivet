@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x8f7062e6u)]
 public enum x8f7062e6 : uint {
-	[DDLRegistration(0xff79a83fu)] Latest = 0x0u,
-	[DDLRegistration(0x0eb42269u)] None = 0x1u,
-	[DDLRegistration(0x6db5bab8u)] UseDate = 0x2u,
-	[DDLRegistration(0x9fc1413au)] UseChangelist = 0x3u,
-	[DDLRegistration(0xa9083774u)] UseLabel = 0x4u,
+	[DDLRegistration(0xff79a83fu, description: "Get all the latest files on the server.")] Latest,
+	[DDLRegistration(0x0eb42269u, description: "Remove all files from workspace (sync to revision 0).")] None,
+	[DDLRegistration(0x6db5bab8u, description: "Use the specified sync date.")] UseDate,
+	[DDLRegistration(0x9fc1413au, description: "Use the specified changelist.")] UseChangelist,
+	[DDLRegistration(0xa9083774u, description: "Use the specified label.")] UseLabel,
 }
 
 public static class x8f7062e6Values {

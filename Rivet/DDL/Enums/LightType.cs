@@ -7,12 +7,12 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xba4bdcdau)]
 public enum LightType : uint {
-	[DDLRegistration(0x5a633e56u)] Point = 0x0u,
-	[DDLRegistration(0xc81658d5u)] Spot = 0x1u,
-	[DDLRegistration(0x3fdccbf1u)] Gobo = 0x2u,
-	[DDLRegistration(0x46dea78fu)] Shaft = 0x3u,
-	[DDLRegistration(0x1b6c1f32u)] Modulate = 0x4u,
-	[DDLRegistration(0xbffb25e3u)] LightGridMod = 0x5u,
+	[DDLRegistration(0x5a633e56u, "Point")] Point,
+	[DDLRegistration(0xc81658d5u, "Spot")] Spot,
+	[DDLRegistration(0x3fdccbf1u, "Pyramid")] Gobo,
+	[DDLRegistration(0x46dea78fu, "Shaft")] Shaft,
+	[DDLRegistration(0x1b6c1f32u, "Modulate")] Modulate,
+	[DDLRegistration(0xbffb25e3u, "LightGridMod")] LightGridMod,
 }
 
 public static class LightTypeValues {

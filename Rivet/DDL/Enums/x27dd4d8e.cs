@@ -7,12 +7,12 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x27dd4d8eu)]
 public enum x27dd4d8e : uint {
-	[DDLRegistration(0x28019f64u)] CryptographyNone = 0x0u,
-	[DDLRegistration(0xf1ba8e37u)] CryptographyPartial = 0x1u,
-	[DDLRegistration(0xade1939bu)] CryptographySimple = 0x2u,
-	[DDLRegistration(0xc8ebabccu)] CryptographyTcpOnly = 0x3u,
-	[DDLRegistration(0x739990c0u)] CryptographyUdpOnly = 0x4u,
-	[DDLRegistration(0xb7ee4b0bu)] CryptographyFull = 0x5u,
+	[DDLRegistration(0x28019f64u)] CryptographyNone,
+	[DDLRegistration(0xf1ba8e37u)] CryptographyPartial,
+	[DDLRegistration(0xade1939bu)] CryptographySimple,
+	[DDLRegistration(0xc8ebabccu)] CryptographyTcpOnly,
+	[DDLRegistration(0x739990c0u)] CryptographyUdpOnly,
+	[DDLRegistration(0xb7ee4b0bu)] CryptographyFull,
 }
 
 public static class x27dd4d8eValues {

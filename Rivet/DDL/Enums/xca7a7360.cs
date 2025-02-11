@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xca7a7360u)]
 public enum xca7a7360 : uint {
-	[DDLRegistration(0xf2215a3cu)] NotUsed = 0x0u,
-	[DDLRegistration(0x4bf732abu)] FromCenter = 0x1u,
+	[DDLRegistration(0xf2215a3cu, description: "Offset not used")] NotUsed,
+	[DDLRegistration(0x4bf732abu, description: "Loot placement offset from bounding sphere center")] FromCenter,
 }
 
 public static class xca7a7360Values {

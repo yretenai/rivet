@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xd2417a1cu)]
 public enum xd2417a1c : uint {
-	[DDLRegistration(0x4d2ca982u)] FacingDirection = 0x0u,
-	[DDLRegistration(0x56ee56e9u)] MoveDirection = 0x1u,
+	[DDLRegistration(0x4d2ca982u)] FacingDirection,
+	[DDLRegistration(0x56ee56e9u)] MoveDirection,
 }
 
 public static class xd2417a1cValues {

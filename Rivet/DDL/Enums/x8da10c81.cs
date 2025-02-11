@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x8da10c81u)]
 public enum x8da10c81 : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0x10ac898cu)] AnimDamageAttackAmount = 0x1u,
-	[DDLRegistration(0x7616f022u)] ChargeAttackMaxDamage = 0x2u,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0x10ac898cu, "Attack Damage Amount")] AnimDamageAttackAmount,
+	[DDLRegistration(0x7616f022u, "Charge Max Damage")] ChargeAttackMaxDamage,
 }
 
 public static class x8da10c81Values {

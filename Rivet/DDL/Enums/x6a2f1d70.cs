@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x6a2f1d70u)]
 public enum x6a2f1d70 : uint {
-	[DDLRegistration(0x3cfd536fu)] PlaybackTypeOneShot = 0x0u,
-	[DDLRegistration(0xa219988eu)] PlaybackTypeLooping = 0x1u,
-	[DDLRegistration(0x10e6a053u)] PlaybackTypeMixed = 0x2u,
-	[DDLRegistration(0x38147954u)] PlaybackTypeUnknown = 0x3u,
+	[DDLRegistration(0x3cfd536fu)] PlaybackTypeOneShot,
+	[DDLRegistration(0xa219988eu)] PlaybackTypeLooping,
+	[DDLRegistration(0x10e6a053u)] PlaybackTypeMixed,
+	[DDLRegistration(0x38147954u)] PlaybackTypeUnknown,
 }
 
 public static class x6a2f1d70Values {

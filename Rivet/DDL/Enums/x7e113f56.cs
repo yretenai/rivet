@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x7e113f56u)]
 public enum x7e113f56 : uint {
-	[DDLRegistration(0x760d74cfu)] Kill = 0x0u,
-	[DDLRegistration(0x65f39e50u)] WarpToLastGoodGround = 0x1u,
+	[DDLRegistration(0x760d74cfu)] Kill,
+	[DDLRegistration(0x65f39e50u)] WarpToLastGoodGround,
 }
 
 public static class x7e113f56Values {

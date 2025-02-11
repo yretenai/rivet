@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x275d9b04u)]
 public enum x275d9b04 : uint {
-	[DDLRegistration(0x2d7a00adu)] Pickup = 0x0u,
-	[DDLRegistration(0x2221b6d3u)] Melee = 0x1u,
-	[DDLRegistration(0xd69724b0u)] Jump = 0x2u,
-	[DDLRegistration(0xea4affa6u)] Dash = 0x3u,
+	[DDLRegistration(0x2d7a00adu)] Pickup,
+	[DDLRegistration(0x2221b6d3u)] Melee,
+	[DDLRegistration(0xd69724b0u)] Jump,
+	[DDLRegistration(0xea4affa6u)] Dash,
 }
 
 public static class x275d9b04Values {

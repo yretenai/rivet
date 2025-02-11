@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xe84ddf61u)]
 public enum CameraControlType : uint {
-	[DDLRegistration(0x59b4c861u)] Orbit = 0x0u,
-	[DDLRegistration(0x610f6cf8u)] FPS = 0x1u,
+	[DDLRegistration(0x59b4c861u)] Orbit,
+	[DDLRegistration(0x610f6cf8u)] FPS,
 }
 
 public static class CameraControlTypeValues {

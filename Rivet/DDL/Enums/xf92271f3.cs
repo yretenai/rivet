@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xf92271f3u)]
 public enum xf92271f3 : uint {
-	[DDLRegistration(0x25231303u)] MirrorNodeAxisYZ = 0x0u,
-	[DDLRegistration(0x3c382242u)] MirrorNodeAxisXZ = 0x1u,
-	[DDLRegistration(0xa53173f8u)] MirrorNodeAxisXY = 0x2u,
+	[DDLRegistration(0x25231303u, "y-z axis")] MirrorNodeAxisYZ,
+	[DDLRegistration(0x3c382242u, "x-z axis")] MirrorNodeAxisXZ,
+	[DDLRegistration(0xa53173f8u, "x-y axis")] MirrorNodeAxisXY,
 }
 
 public static class xf92271f3Values {

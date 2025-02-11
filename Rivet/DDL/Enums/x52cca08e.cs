@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x52cca08eu)]
 public enum x52cca08e : uint {
-	[DDLRegistration(0x4d6151b4u)] Normal = 0x0u,
-	[DDLRegistration(0x9ad580b5u)] ShowDetailDisplacement = 0x1u,
-	[DDLRegistration(0x21fe1c8bu)] ShowLod = 0x2u,
-	[DDLRegistration(0x66185172u)] ShowTiles = 0x3u,
-	[DDLRegistration(0xf144b2fau)] SceneEditorMesh = 0x4u,
+	[DDLRegistration(0x4d6151b4u, "Normal", "The wireframe will render using the standard wireframe color.")] Normal,
+	[DDLRegistration(0x9ad580b5u, "Show Detail Displacement", "The wireframe will render using the default displacement material graph.")] ShowDetailDisplacement,
+	[DDLRegistration(0x21fe1c8bu, "Show LoD", "The wireframe will render different terrain LoDs at different colors.")] ShowLod,
+	[DDLRegistration(0x66185172u, "Show Tiles", "The wireframe will render different terrain tiles using different colors.")] ShowTiles,
+	[DDLRegistration(0xf144b2fau, "Scene Editor Mesh", "The wireframe will render using the scene editor mesh.  This is primarily intended for programmer debugging.")] SceneEditorMesh,
 }
 
 public static class x52cca08eValues {

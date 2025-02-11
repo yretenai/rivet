@@ -7,14 +7,14 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xce61f0efu)]
 public enum xce61f0ef : uint {
-	[DDLRegistration(0x31ed9200u)] MountAbilitySquare = 0x0u,
-	[DDLRegistration(0x28b99fd0u)] MountAbilityCircle = 0x1u,
-	[DDLRegistration(0xbce39fd4u)] MountAbilityTriangle = 0x2u,
-	[DDLRegistration(0xc4ad2665u)] MountAbilityX = 0x3u,
-	[DDLRegistration(0x962dd041u)] MountAbilityR1 = 0x4u,
-	[DDLRegistration(0x426cef9eu)] MountAbilityL1 = 0x5u,
-	[DDLRegistration(0x0f2481fbu)] MountAbilityR2 = 0x6u,
-	[DDLRegistration(0xdb65be24u)] MountAbilityL2 = 0x7u,
+	[DDLRegistration(0x31ed9200u)] MountAbilitySquare,
+	[DDLRegistration(0x28b99fd0u)] MountAbilityCircle,
+	[DDLRegistration(0xbce39fd4u)] MountAbilityTriangle,
+	[DDLRegistration(0xc4ad2665u)] MountAbilityX,
+	[DDLRegistration(0x962dd041u)] MountAbilityR1,
+	[DDLRegistration(0x426cef9eu)] MountAbilityL1,
+	[DDLRegistration(0x0f2481fbu)] MountAbilityR2,
+	[DDLRegistration(0xdb65be24u)] MountAbilityL2,
 }
 
 public static class xce61f0efValues {

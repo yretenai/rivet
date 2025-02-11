@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x8b182f8eu)]
 public enum x8b182f8e : uint {
-	[DDLRegistration(0xd64fc14au)] boot = 0x0u,
-	[DDLRegistration(0x846f734au)] liveTile = 0x1u,
-	[DDLRegistration(0x59159bf1u)] resume = 0x2u,
-	[DDLRegistration(0x180d21cau)] debugReboot = 0x3u,
+	[DDLRegistration(0xd64fc14au)] boot,
+	[DDLRegistration(0x846f734au)] liveTile,
+	[DDLRegistration(0x59159bf1u)] resume,
+	[DDLRegistration(0x180d21cau)] debugReboot,
 }
 
 public static class x8b182f8eValues {

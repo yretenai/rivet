@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x7d9b794eu)]
 public enum x7d9b794e : uint {
-	[DDLRegistration(0x3df09603u)] GameTime = 0x0u,
-	[DDLRegistration(0x97add93au)] RealWorldTime = 0x1u,
-	[DDLRegistration(0xa636e6bau)] AnimTime = 0x2u,
+	[DDLRegistration(0x3df09603u)] GameTime,
+	[DDLRegistration(0x97add93au)] RealWorldTime,
+	[DDLRegistration(0xa636e6bau)] AnimTime,
 }
 
 public static class x7d9b794eValues {

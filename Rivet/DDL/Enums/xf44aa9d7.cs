@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xf44aa9d7u)]
 public enum xf44aa9d7 : uint {
-	[DDLRegistration(0x0e7463cau)] k2d = 0x0u,
-	[DDLRegistration(0x176f528bu)] k3d = 0x1u,
+	[DDLRegistration(0x0e7463cau)] k2d,
+	[DDLRegistration(0x176f528bu)] k3d,
 }
 
 public static class xf44aa9d7Values {

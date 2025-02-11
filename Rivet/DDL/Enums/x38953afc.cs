@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x38953afcu)]
 public enum x38953afc : uint {
-	[DDLRegistration(0x6f0d7e9fu)] Constant = 0x0u,
-	[DDLRegistration(0x2ae0e381u)] Increasing = 0x1u,
-	[DDLRegistration(0x5d4bf6ecu)] Decreasing = 0x2u,
-	[DDLRegistration(0xc38b56e0u)] WideCenter = 0x3u,
-	[DDLRegistration(0x9d5790e0u)] WideEnds = 0x4u,
+	[DDLRegistration(0x6f0d7e9fu, "Constant Width")] Constant,
+	[DDLRegistration(0x2ae0e381u, "Increading Width")] Increasing,
+	[DDLRegistration(0x5d4bf6ecu, "Decreasing Width")] Decreasing,
+	[DDLRegistration(0xc38b56e0u, "Wide Center")] WideCenter,
+	[DDLRegistration(0x9d5790e0u, "Wide Ends")] WideEnds,
 }
 
 public static class x38953afcValues {

@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x0658f8aau)]
 public enum GameType : uint {
-	[DDLRegistration(0xbb72b99au)] Campaign = 0x0u,
-	[DDLRegistration(0x51aec80fu)] Multiplayer = 0x1u,
+	[DDLRegistration(0xbb72b99au, "Campaign")] Campaign,
+	[DDLRegistration(0x51aec80fu, "Multiplayer")] Multiplayer,
 }
 
 public static class GameTypeValues {

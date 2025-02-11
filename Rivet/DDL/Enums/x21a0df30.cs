@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x21a0df30u)]
 public enum x21a0df30 : uint {
-	[DDLRegistration(0x1da06c34u)] Good = 0x0u,
-	[DDLRegistration(0x18e66699u)] Bad = 0x1u,
+	[DDLRegistration(0x1da06c34u, "Good")] Good,
+	[DDLRegistration(0x18e66699u, "Bad")] Bad,
 }
 
 public static class x21a0df30Values {

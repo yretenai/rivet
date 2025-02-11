@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x22e01f8du)]
 public enum OptimizeUVMode : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0x87cc6f9au)] Uv0Only = 0x1u,
-	[DDLRegistration(0xbaac462au)] Uv1Only = 0x2u,
-	[DDLRegistration(0xdc03f730u)] UV0AndUV1 = 0x3u,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0x87cc6f9au, "UV0 Only")] Uv0Only,
+	[DDLRegistration(0xbaac462au, "UV1 Only")] Uv1Only,
+	[DDLRegistration(0xdc03f730u, "UV0 And UV1")] UV0AndUV1,
 }
 
 public static class OptimizeUVModeValues {

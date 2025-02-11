@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xca8fba90u)]
 public enum xca8fba90 : uint {
-	[DDLRegistration(0x4f00c07fu)] None = 0x0u,
-	[DDLRegistration(0xed3a9d13u)] Above = 0x1u,
-	[DDLRegistration(0x5db2b973u)] Below = 0x2u,
+	[DDLRegistration(0x4f00c07fu)] None,
+	[DDLRegistration(0xed3a9d13u)] Above,
+	[DDLRegistration(0x5db2b973u)] Below,
 }
 
 public static class xca8fba90Values {

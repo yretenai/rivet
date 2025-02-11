@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xde534179u)]
 public enum xde534179 : uint {
-	[DDLRegistration(0xc6189db2u)] Independent = 0x0u,
-	[DDLRegistration(0x94051beeu)] MatchTargetT = 0x1u,
-	[DDLRegistration(0x8e6c5e1du)] MatchMotionT = 0x2u,
-	[DDLRegistration(0x66f87cb9u)] MatchTargetPos = 0x3u,
-	[DDLRegistration(0x5fdf61b1u)] MatchMotionPos = 0x4u,
+	[DDLRegistration(0xc6189db2u, "Independent")] Independent,
+	[DDLRegistration(0x94051beeu, "Match Target T")] MatchTargetT,
+	[DDLRegistration(0x8e6c5e1du, "Match Motion T")] MatchMotionT,
+	[DDLRegistration(0x66f87cb9u, "Match Target Position")] MatchTargetPos,
+	[DDLRegistration(0x5fdf61b1u, "Match Motion Position")] MatchMotionPos,
 }
 
 public static class xde534179Values {

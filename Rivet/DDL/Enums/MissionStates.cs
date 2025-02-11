@@ -7,12 +7,12 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x13b9234fu)]
 public enum MissionStates : uint {
-	[DDLRegistration(0x2fb4a5a7u)] Inactive = 0x0u,
-	[DDLRegistration(0x9f91f890u)] Available = 0x1u,
-	[DDLRegistration(0x27fac552u)] Active = 0x2u,
-	[DDLRegistration(0xbe62f929u)] CompleteCleaning = 0x3u,
-	[DDLRegistration(0x27410eecu)] CompleteFinished = 0x4u,
-	[DDLRegistration(0xf26f9a27u)] Failed = 0x5u,
+	[DDLRegistration(0x2fb4a5a7u, "Inactive", "Mission mission prerequisites have not yet been met, not yet known or visible to the player")] Inactive,
+	[DDLRegistration(0x9f91f890u, "Available", "Mission prerequesites have been met, Player can start mission")] Available,
+	[DDLRegistration(0x27fac552u, "Active", "Mission has been started by the player, but not yet complete")] Active,
+	[DDLRegistration(0xbe62f929u, "Complete Cleaning", "Mission has been finished by the player, but potentially in view of some mission assets, etc")] CompleteCleaning,
+	[DDLRegistration(0x27410eecu, "Complete Finished", "Mission is completed and unloaded")] CompleteFinished,
+	[DDLRegistration(0xf26f9a27u, "Failed", "Mission is failed and unloaded")] Failed,
 }
 
 public static class MissionStatesValues {

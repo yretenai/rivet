@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xb1e939f4u)]
 public enum xb1e939f4 : uint {
-	[DDLRegistration(0x4356e8f6u)] FilterByTime = 0x0u,
-	[DDLRegistration(0x35bef306u)] FilterByFrame = 0x1u,
+	[DDLRegistration(0x4356e8f6u, "Filter by Time", "Don't allow a signal to pass through more than once per Filter Period.")] FilterByTime,
+	[DDLRegistration(0x35bef306u, "Filter by Frame", "Don't allow a signal to pass through more than once per frame.")] FilterByFrame,
 }
 
 public static class xb1e939f4Values {

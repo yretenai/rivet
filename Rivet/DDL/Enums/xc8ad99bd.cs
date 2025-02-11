@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xc8ad99bdu)]
 public enum xc8ad99bd : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0x246e88e2u)] Flat = 0x1u,
-	[DDLRegistration(0xa16bcceeu)] Curved = 0x2u,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0x246e88e2u, "Flat")] Flat,
+	[DDLRegistration(0xa16bcceeu, "Curved")] Curved,
 }
 
 public static class xc8ad99bdValues {

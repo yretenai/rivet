@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xc968d790u)]
 public enum xc968d790 : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0xc772bd3au)] Hip = 0x1u,
-	[DDLRegistration(0xb55c0118u)] Wrist = 0x2u,
-	[DDLRegistration(0xe5d9385bu)] BackLeft = 0x3u,
-	[DDLRegistration(0xd9874550u)] BackRight = 0x4u,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0xc772bd3au)] Hip,
+	[DDLRegistration(0xb55c0118u)] Wrist,
+	[DDLRegistration(0xe5d9385bu)] BackLeft,
+	[DDLRegistration(0xd9874550u)] BackRight,
 }
 
 public static class xc968d790Values {

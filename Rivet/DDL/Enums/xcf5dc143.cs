@@ -7,7 +7,7 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xcf5dc143u)]
 public enum xcf5dc143 : uint {
-	[DDLRegistration(0x46c0523fu)] PS5 = 0x0u,
+	[DDLRegistration(0x46c0523fu)] PS5,
 }
 
 public static class xcf5dc143Values {

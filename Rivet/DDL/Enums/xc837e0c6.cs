@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xc837e0c6u)]
 public enum xc837e0c6 : uint {
-	[DDLRegistration(0xc51aefa8u)] HiddenNone = 0x0u,
-	[DDLRegistration(0x81f1987fu)] HiddenModelOuter = 0x1u,
-	[DDLRegistration(0x98189be7u)] HiddenModelInner = 0x2u,
-	[DDLRegistration(0xd2e43060u)] HiddenModelBoth = 0x3u,
+	[DDLRegistration(0xc51aefa8u, "Not hidden")] HiddenNone,
+	[DDLRegistration(0x81f1987fu, "Hidden when using Model Outer Layer")] HiddenModelOuter,
+	[DDLRegistration(0x98189be7u, "Hidden when using Model Inner Layer")] HiddenModelInner,
+	[DDLRegistration(0xd2e43060u, "Hidden when using Model Outer and Inner Layers")] HiddenModelBoth,
 }
 
 public static class xc837e0c6Values {

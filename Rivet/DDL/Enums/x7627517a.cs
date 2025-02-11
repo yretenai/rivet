@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x7627517au)]
 public enum x7627517a : uint {
-	[DDLRegistration(0x0228007bu)] Finished = 0x0u,
-	[DDLRegistration(0x1fa312acu)] Stopped = 0x1u,
-	[DDLRegistration(0xf26f9a27u)] Failed = 0x2u,
+	[DDLRegistration(0x0228007bu)] Finished,
+	[DDLRegistration(0x1fa312acu)] Stopped,
+	[DDLRegistration(0xf26f9a27u)] Failed,
 }
 
 public static class x7627517aValues {

@@ -7,12 +7,12 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x3f08814bu)]
 public enum PolylineType : uint {
-	[DDLRegistration(0x9685f03du)] OpenFree = 0x0u,
-	[DDLRegistration(0x9cd0d602u)] OpenPlanar = 0x1u,
-	[DDLRegistration(0xf07036a0u)] ClosedFree = 0x2u,
-	[DDLRegistration(0x2a382325u)] ClosedPlanar = 0x3u,
-	[DDLRegistration(0x378eed19u)] PolygonPlanar = 0x4u,
-	[DDLRegistration(0xcade0d40u)] VolumePlanar = 0x5u,
+	[DDLRegistration(0x9685f03du, "Open Freeform")] OpenFree,
+	[DDLRegistration(0x9cd0d602u, "Open Planar")] OpenPlanar,
+	[DDLRegistration(0xf07036a0u, "Closed Freeform")] ClosedFree,
+	[DDLRegistration(0x2a382325u, "Closed Planar")] ClosedPlanar,
+	[DDLRegistration(0x378eed19u, "Polygon")] PolygonPlanar,
+	[DDLRegistration(0xcade0d40u, "Volume")] VolumePlanar,
 }
 
 public static class PolylineTypeValues {

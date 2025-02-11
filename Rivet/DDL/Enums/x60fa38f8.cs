@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x60fa38f8u)]
 public enum x60fa38f8 : uint {
-	[DDLRegistration(0x0b34c45fu)] BlendDurationTypeInterpolate = 0x0u,
-	[DDLRegistration(0x2e6a771du)] BlendDurationTypeBranchA = 0x1u,
-	[DDLRegistration(0xb76326a7u)] BlendDurationTypeBranchB = 0x2u,
-	[DDLRegistration(0xc0641631u)] BlendDurationTypeBranchC = 0x3u,
+	[DDLRegistration(0x0b34c45fu, "Interpolate")] BlendDurationTypeInterpolate,
+	[DDLRegistration(0x2e6a771du, "Branch A")] BlendDurationTypeBranchA,
+	[DDLRegistration(0xb76326a7u, "Branch B")] BlendDurationTypeBranchB,
+	[DDLRegistration(0xc0641631u, "Branch C")] BlendDurationTypeBranchC,
 }
 
 public static class x60fa38f8Values {

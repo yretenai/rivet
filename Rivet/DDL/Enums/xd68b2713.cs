@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xd68b2713u)]
 public enum xd68b2713 : uint {
-	[DDLRegistration(0xfe3ea8d6u)] Any = 0x0u,
-	[DDLRegistration(0x6dd020f9u)] Pending = 0x1u,
-	[DDLRegistration(0x2818b1cfu)] Submitted = 0x2u,
-	[DDLRegistration(0x3f455c78u)] Shelved = 0x3u,
+	[DDLRegistration(0xfe3ea8d6u, description: "List changelists regardless of status (the default behavior).")] Any,
+	[DDLRegistration(0x6dd020f9u, description: "List only pending changelists (-s pending).")] Pending,
+	[DDLRegistration(0x2818b1cfu, description: "List only submitted changelists (-s submitted).")] Submitted,
+	[DDLRegistration(0x3f455c78u, description: "List only shelved changelists (-s shelved).")] Shelved,
 }
 
 public static class xd68b2713Values {

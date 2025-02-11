@@ -7,13 +7,13 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x87a65665u)]
 public enum CameraProjectionType : uint {
-	[DDLRegistration(0xc7754dbdu)] Perspective = 0x0u,
-	[DDLRegistration(0xd9a8ae7bu)] OrthographicX = 0x1u,
-	[DDLRegistration(0x0175f606u)] OrthographicXNeg = 0x2u,
-	[DDLRegistration(0xaeaf9eedu)] OrthographicY = 0x3u,
-	[DDLRegistration(0xb9c99163u)] OrthographicYNeg = 0x4u,
-	[DDLRegistration(0x37a6cf57u)] OrthographicZ = 0x5u,
-	[DDLRegistration(0xab7c3e8du)] OrthographicZNeg = 0x6u,
+	[DDLRegistration(0xc7754dbdu, "Perspective")] Perspective,
+	[DDLRegistration(0xd9a8ae7bu, "Left")] OrthographicX,
+	[DDLRegistration(0x0175f606u, "Right")] OrthographicXNeg,
+	[DDLRegistration(0xaeaf9eedu, "Top")] OrthographicY,
+	[DDLRegistration(0xb9c99163u, "Bottom")] OrthographicYNeg,
+	[DDLRegistration(0x37a6cf57u, "Front")] OrthographicZ,
+	[DDLRegistration(0xab7c3e8du, "Back")] OrthographicZNeg,
 }
 
 public static class CameraProjectionTypeValues {

@@ -7,16 +7,16 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x48fb1e07u)]
 public enum x48fb1e07 : uint {
-	[DDLRegistration(0xf269183cu)] MapOpAssign = 0x0u,
-	[DDLRegistration(0x73da5a83u)] MapOpMul = 0x1u,
-	[DDLRegistration(0x671ec52bu)] MapOpDiv = 0x2u,
-	[DDLRegistration(0x27c208c5u)] MapOpAdd = 0x3u,
-	[DDLRegistration(0x82daf9feu)] MapOpSub = 0x4u,
-	[DDLRegistration(0xcd2c286au)] MapOpMod = 0x5u,
-	[DDLRegistration(0xdd2de04fu)] MapOpAnd = 0x6u,
-	[DDLRegistration(0xaa1ef7cau)] MapOpOr = 0x7u,
-	[DDLRegistration(0x49ed5bb2u)] MapOpRandSelect = 0x8u,
-	[DDLRegistration(0xeecf52acu)] MapOpRandRange = 0x9u,
+	[DDLRegistration(0xf269183cu, "=")] MapOpAssign,
+	[DDLRegistration(0x73da5a83u, "*=")] MapOpMul,
+	[DDLRegistration(0x671ec52bu, "/=")] MapOpDiv,
+	[DDLRegistration(0x27c208c5u, "+=")] MapOpAdd,
+	[DDLRegistration(0x82daf9feu, "-=")] MapOpSub,
+	[DDLRegistration(0xcd2c286au, "mod=")] MapOpMod,
+	[DDLRegistration(0xdd2de04fu, "&&=")] MapOpAnd,
+	[DDLRegistration(0xaa1ef7cau, "||=")] MapOpOr,
+	[DDLRegistration(0x49ed5bb2u, "RS=")] MapOpRandSelect,
+	[DDLRegistration(0xeecf52acu, "RR=")] MapOpRandRange,
 }
 
 public static class x48fb1e07Values {

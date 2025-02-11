@@ -7,13 +7,13 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x57d39d58u)]
 public enum x57d39d58 : uint {
-	[DDLRegistration(0x2e0cec4du)] CompQualityHighest = 0x0u,
-	[DDLRegistration(0xcfe6fc9fu)] CompQualityHigher = 0x1u,
-	[DDLRegistration(0xda6c40deu)] CompQualityHigh = 0x2u,
-	[DDLRegistration(0x69907703u)] CompQualityNormal = 0x3u,
-	[DDLRegistration(0x401c113du)] CompQualityLow = 0x4u,
-	[DDLRegistration(0xa6d9a7a2u)] CompQualityLower = 0x5u,
-	[DDLRegistration(0x760d9f07u)] CompQualityLowest = 0x6u,
+	[DDLRegistration(0x2e0cec4du, "Highest")] CompQualityHighest,
+	[DDLRegistration(0xcfe6fc9fu, "Higher")] CompQualityHigher,
+	[DDLRegistration(0xda6c40deu, "High")] CompQualityHigh,
+	[DDLRegistration(0x69907703u, "Normal")] CompQualityNormal,
+	[DDLRegistration(0x401c113du, "Low")] CompQualityLow,
+	[DDLRegistration(0xa6d9a7a2u, "Lower")] CompQualityLower,
+	[DDLRegistration(0x760d9f07u, "Lowest")] CompQualityLowest,
 }
 
 public static class x57d39d58Values {

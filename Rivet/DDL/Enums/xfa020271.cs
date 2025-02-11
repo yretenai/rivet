@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xfa020271u)]
 public enum xfa020271 : uint {
-	[DDLRegistration(0xcb4af9a1u)] Both = 0x0u,
-	[DDLRegistration(0x4af727d8u)] Left = 0x1u,
-	[DDLRegistration(0xad99b9d5u)] Right = 0x2u,
+	[DDLRegistration(0xcb4af9a1u, description: "clockwise and counterclockwise")] Both,
+	[DDLRegistration(0x4af727d8u, description: "counterclockwise")] Left,
+	[DDLRegistration(0xad99b9d5u, description: "clockwise")] Right,
 }
 
 public static class xfa020271Values {

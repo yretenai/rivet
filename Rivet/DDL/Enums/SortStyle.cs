@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x7b0b2803u)]
 public enum SortStyle : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0x3bff8b06u)] Last = 0x1u,
-	[DDLRegistration(0x80966f78u)] CameraDistance = 0x2u,
-	[DDLRegistration(0xf81dec10u)] CameraDepth = 0x3u,
+	[DDLRegistration(0x0eb42269u, "Newest Draws Last")] None,
+	[DDLRegistration(0x3bff8b06u, "Oldest Draws Last")] Last,
+	[DDLRegistration(0x80966f78u, "Camera Distance")] CameraDistance,
+	[DDLRegistration(0xf81dec10u, "Camera Depth")] CameraDepth,
 }
 
 public static class SortStyleValues {

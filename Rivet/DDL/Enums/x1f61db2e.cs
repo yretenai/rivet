@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x1f61db2eu)]
 public enum x1f61db2e : uint {
-	[DDLRegistration(0xdf606217u)] ClassA = 0x0u,
-	[DDLRegistration(0x466933adu)] ClassB = 0x1u,
-	[DDLRegistration(0x316e033bu)] ClassC = 0x2u,
-	[DDLRegistration(0xaf0a9698u)] ClassD = 0x3u,
+	[DDLRegistration(0xdf606217u, "Class A")] ClassA,
+	[DDLRegistration(0x466933adu, "Class B")] ClassB,
+	[DDLRegistration(0x316e033bu, "Class C")] ClassC,
+	[DDLRegistration(0xaf0a9698u, "Class D")] ClassD,
 }
 
 public static class x1f61db2eValues {

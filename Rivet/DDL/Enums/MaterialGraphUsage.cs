@@ -7,15 +7,15 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x5771f07cu)]
 public enum MaterialGraphUsage : uint {
-	[DDLRegistration(0xf925af2au)] WeatherParticle = 0x0u,
-	[DDLRegistration(0xcac7eb5bu)] Model3DUnlit = 0x1u,
-	[DDLRegistration(0x93f711d5u)] Model3D = 0x2u,
-	[DDLRegistration(0x6585d69cu)] VisualEffect = 0x3u,
-	[DDLRegistration(0x130ae18du)] PostEffect = 0x4u,
-	[DDLRegistration(0x0214514du)] Composite = 0x5u,
-	[DDLRegistration(0x16f5d9a8u)] Water = 0x6u,
-	[DDLRegistration(0x9ceb2b8du)] Sky = 0x7u,
-	[DDLRegistration(0xff062364u)] ScreenSpaceDecal = 0x8u,
+	[DDLRegistration(0xf925af2au, "Weather Particle")] WeatherParticle,
+	[DDLRegistration(0xcac7eb5bu, "Model3D Unlit")] Model3DUnlit,
+	[DDLRegistration(0x93f711d5u, "Model3D")] Model3D,
+	[DDLRegistration(0x6585d69cu, "Visual FX")] VisualEffect,
+	[DDLRegistration(0x130ae18du, "Post FX")] PostEffect,
+	[DDLRegistration(0x0214514du, "Composite")] Composite,
+	[DDLRegistration(0x16f5d9a8u, "Water")] Water,
+	[DDLRegistration(0x9ceb2b8du, "Sky")] Sky,
+	[DDLRegistration(0xff062364u, "Screen Space Decal")] ScreenSpaceDecal,
 }
 
 public static class MaterialGraphUsageValues {

@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x6c25f7e9u)]
 public enum x6c25f7e9 : uint {
-	[DDLRegistration(0x36148fb2u)] TypeInt = 0x0u,
-	[DDLRegistration(0xb8509897u)] TypeFloat = 0x1u,
-	[DDLRegistration(0xec22bb11u)] TypeVec2 = 0x2u,
+	[DDLRegistration(0x36148fb2u)] TypeInt,
+	[DDLRegistration(0xb8509897u)] TypeFloat,
+	[DDLRegistration(0xec22bb11u)] TypeVec2,
 }
 
 public static class x6c25f7e9Values {

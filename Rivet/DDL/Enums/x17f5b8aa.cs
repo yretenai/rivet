@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x17f5b8aau)]
 public enum x17f5b8aa : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0x9116454fu)] AnchorPos = 0x1u,
-	[DDLRegistration(0xbe03315bu)] Host = 0x2u,
-	[DDLRegistration(0x41715747u)] Guest = 0x3u,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0x9116454fu)] AnchorPos,
+	[DDLRegistration(0xbe03315bu)] Host,
+	[DDLRegistration(0x41715747u)] Guest,
 }
 
 public static class x17f5b8aaValues {

@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x2f974565u)]
 public enum ModelInstType : uint {
-	[DDLRegistration(0x3a53bfabu)] Model = 0x0u,
-	[DDLRegistration(0xe771a77bu)] DefaultCube = 0x1u,
-	[DDLRegistration(0x110bde11u)] DefaultPlane = 0x2u,
-	[DDLRegistration(0x0023922bu)] DefaultSphere = 0x3u,
-	[DDLRegistration(0xb5bcb4ddu)] DefaultTorus = 0x4u,
+	[DDLRegistration(0x3a53bfabu)] Model,
+	[DDLRegistration(0xe771a77bu)] DefaultCube,
+	[DDLRegistration(0x110bde11u)] DefaultPlane,
+	[DDLRegistration(0x0023922bu)] DefaultSphere,
+	[DDLRegistration(0xb5bcb4ddu)] DefaultTorus,
 }
 
 public static class ModelInstTypeValues {

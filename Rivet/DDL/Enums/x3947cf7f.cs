@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x3947cf7fu)]
 public enum x3947cf7f : uint {
-	[DDLRegistration(0x23b6b39au)] FlockingVolume = 0x0u,
-	[DDLRegistration(0x3fe3a4b8u)] DisableVolume = 0x1u,
+	[DDLRegistration(0x23b6b39au)] FlockingVolume,
+	[DDLRegistration(0x3fe3a4b8u)] DisableVolume,
 }
 
 public static class x3947cf7fValues {

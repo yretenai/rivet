@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x73ee3658u)]
 public enum HLMEnum : uint {
-	[DDLRegistration(0x7c6a8c82u)] Homeworld = 0x0u,
-	[DDLRegistration(0xfaf9228cu)] Location = 0x1u,
-	[DDLRegistration(0x34a77154u)] Manufacturer = 0x2u,
+	[DDLRegistration(0x7c6a8c82u, "Homeworld")] Homeworld,
+	[DDLRegistration(0xfaf9228cu, "Location")] Location,
+	[DDLRegistration(0x34a77154u, "Manufacturer")] Manufacturer,
 }
 
 public static class HLMEnumValues {

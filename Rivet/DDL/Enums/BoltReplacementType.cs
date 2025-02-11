@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x0b840480u)]
 public enum BoltReplacementType : uint {
-	[DDLRegistration(0x5a5b5a9fu)] Default = 0x0u,
-	[DDLRegistration(0xe34746a7u)] Coins = 0x1u,
-	[DDLRegistration(0xfa978f72u)] Orbs = 0x2u,
-	[DDLRegistration(0xad512bc5u)] Rubies = 0x3u,
-	[DDLRegistration(0xf86ff2a4u)] Overcharge = 0x4u,
+	[DDLRegistration(0x5a5b5a9fu, "Default")] Default,
+	[DDLRegistration(0xe34746a7u, "Coins")] Coins,
+	[DDLRegistration(0xfa978f72u, "Orbs")] Orbs,
+	[DDLRegistration(0xad512bc5u, "Rubies")] Rubies,
+	[DDLRegistration(0xf86ff2a4u, "Overcharge")] Overcharge,
 }
 
 public static class BoltReplacementTypeValues {

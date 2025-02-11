@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xb62b6a7fu)]
 public enum xb62b6a7f : uint {
-	[DDLRegistration(0x31fb9f65u)] Listener = 0x0u,
-	[DDLRegistration(0xf4fd4335u)] Player = 0x1u,
+	[DDLRegistration(0x31fb9f65u)] Listener,
+	[DDLRegistration(0xf4fd4335u)] Player,
 }
 
 public static class xb62b6a7fValues {

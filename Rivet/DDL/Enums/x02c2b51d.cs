@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x02c2b51du)]
 public enum x02c2b51d : uint {
-	[DDLRegistration(0x1c6b1a2bu)] Dad = 0x0u,
-	[DDLRegistration(0x1d462565u)] Jr = 0x1u,
+	[DDLRegistration(0x1c6b1a2bu)] Dad,
+	[DDLRegistration(0x1d462565u)] Jr,
 }
 
 public static class x02c2b51dValues {

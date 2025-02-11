@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xb34024eau)]
 public enum BlendStyle : uint {
-	[DDLRegistration(0x1b6c1f32u)] Modulate = 0x0u,
-	[DDLRegistration(0x646f4fd6u)] Opaque = 0x1u,
-	[DDLRegistration(0x3d26f418u)] Alpha = 0x2u,
-	[DDLRegistration(0x67d72c85u)] Add = 0x3u,
+	[DDLRegistration(0x1b6c1f32u, "Modulate")] Modulate,
+	[DDLRegistration(0x646f4fd6u, "Opaque")] Opaque,
+	[DDLRegistration(0x3d26f418u, "Alpha")] Alpha,
+	[DDLRegistration(0x67d72c85u, "Add")] Add,
 }
 
 public static class BlendStyleValues {

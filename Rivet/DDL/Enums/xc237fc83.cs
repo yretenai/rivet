@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xc237fc83u)]
 public enum xc237fc83 : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0x136db1d0u)] NoSpawnOnEnd = 0x1u,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0x136db1d0u, "Dont Spawn when starting in End mode")] NoSpawnOnEnd,
 }
 
 public static class xc237fc83Values {

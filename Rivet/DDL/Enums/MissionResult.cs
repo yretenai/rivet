@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x31119511u)]
 public enum MissionResult : uint {
-	[DDLRegistration(0xf26f9a27u)] Failed = 0x0u,
-	[DDLRegistration(0x00e6007bu)] Completed = 0x1u,
-	[DDLRegistration(0x0515b9b0u)] Abandoned = 0x2u,
+	[DDLRegistration(0xf26f9a27u)] Failed,
+	[DDLRegistration(0x00e6007bu)] Completed,
+	[DDLRegistration(0x0515b9b0u)] Abandoned,
 }
 
 public static class MissionResultValues {

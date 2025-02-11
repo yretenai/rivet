@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x5e401570u)]
 public enum x5e401570 : uint {
-	[DDLRegistration(0x2b2e8482u)] OnAvailable = 0x0u,
-	[DDLRegistration(0xb011bf21u)] OnActive = 0x1u,
-	[DDLRegistration(0xbad6a565u)] OnCleanup = 0x2u,
-	[DDLRegistration(0x52c25e98u)] OnComplete = 0x3u,
+	[DDLRegistration(0x2b2e8482u)] OnAvailable,
+	[DDLRegistration(0xb011bf21u)] OnActive,
+	[DDLRegistration(0xbad6a565u)] OnCleanup,
+	[DDLRegistration(0x52c25e98u)] OnComplete,
 }
 
 public static class x5e401570Values {

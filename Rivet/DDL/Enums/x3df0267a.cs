@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x3df0267au)]
 public enum x3df0267a : uint {
-	[DDLRegistration(0x232732fbu)] Out = 0x0u,
-	[DDLRegistration(0x226a2ae9u)] In = 0x1u,
-	[DDLRegistration(0x8afe1bb7u)] Both = 0x2u,
+	[DDLRegistration(0x232732fbu, "Out")] Out,
+	[DDLRegistration(0x226a2ae9u, "In")] In,
+	[DDLRegistration(0x8afe1bb7u, "Both")] Both,
 }
 
 public static class x3df0267aValues {

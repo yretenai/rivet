@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x6200f389u)]
 public enum x6200f389 : uint {
-	[DDLRegistration(0xa1d52ebfu)] All = 0x0u,
-	[DDLRegistration(0xfe3ea8d6u)] Any = 0x1u,
-	[DDLRegistration(0x131c5d99u)] MinimumCount = 0x2u,
-	[DDLRegistration(0x21fa39d8u)] TriggerCount = 0x3u,
+	[DDLRegistration(0xa1d52ebfu, "All")] All,
+	[DDLRegistration(0xfe3ea8d6u, "Any")] Any,
+	[DDLRegistration(0x131c5d99u, "At least active", "At least number active at this time")] MinimumCount,
+	[DDLRegistration(0x21fa39d8u, "Trigger count", "When a count of triggers has been received")] TriggerCount,
 }
 
 public static class x6200f389Values {

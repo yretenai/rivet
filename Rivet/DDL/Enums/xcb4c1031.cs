@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xcb4c1031u)]
 public enum xcb4c1031 : uint {
-	[DDLRegistration(0x8ec97122u)] NoDistancing = 0x0u,
-	[DDLRegistration(0x6ac24df4u)] LinearGain = 0x1u,
-	[DDLRegistration(0x36ff99e0u)] BezierGain = 0x2u,
-	[DDLRegistration(0xc509df13u)] InvSqDb = 0x3u,
+	[DDLRegistration(0x8ec97122u)] NoDistancing,
+	[DDLRegistration(0x6ac24df4u)] LinearGain,
+	[DDLRegistration(0x36ff99e0u)] BezierGain,
+	[DDLRegistration(0xc509df13u)] InvSqDb,
 }
 
 public static class xcb4c1031Values {

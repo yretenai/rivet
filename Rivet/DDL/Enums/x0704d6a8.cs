@@ -7,16 +7,16 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x0704d6a8u)]
 public enum x0704d6a8 : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0x8b07d504u)] Two = 0x1u,
-	[DDLRegistration(0xe1e544dbu)] Four = 0x2u,
-	[DDLRegistration(0x8bccf3f4u)] Eight = 0x3u,
-	[DDLRegistration(0x077157a9u)] Sixteen = 0x4u,
-	[DDLRegistration(0xe631781du)] ThirtyTwo = 0x5u,
-	[DDLRegistration(0x70dc4941u)] SixtyFour = 0x6u,
-	[DDLRegistration(0xc97a8893u)] OneTwentyEight = 0x7u,
-	[DDLRegistration(0x178dad28u)] TwoFiftySix = 0x8u,
-	[DDLRegistration(0x1682cd3du)] FiveTwelve = 0x9u,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0x8b07d504u, "2 Slices")] Two,
+	[DDLRegistration(0xe1e544dbu, "4 Slices")] Four,
+	[DDLRegistration(0x8bccf3f4u, "8 Slices")] Eight,
+	[DDLRegistration(0x077157a9u, "16 Slices")] Sixteen,
+	[DDLRegistration(0xe631781du, "32 Slices")] ThirtyTwo,
+	[DDLRegistration(0x70dc4941u, "64 Slices")] SixtyFour,
+	[DDLRegistration(0xc97a8893u, "128 Slices")] OneTwentyEight,
+	[DDLRegistration(0x178dad28u, "256 Slices")] TwoFiftySix,
+	[DDLRegistration(0x1682cd3du, "512 Slices")] FiveTwelve,
 }
 
 public static class x0704d6a8Values {

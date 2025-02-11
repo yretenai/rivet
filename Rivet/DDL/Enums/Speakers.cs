@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xdbc1a66eu)]
 public enum Speakers : uint {
-	[DDLRegistration(0x1d7590e5u)] Speaker1 = 0x0u,
-	[DDLRegistration(0x847cc15fu)] Speaker2 = 0x1u,
-	[DDLRegistration(0xf37bf1c9u)] Speaker3 = 0x2u,
-	[DDLRegistration(0x6d1f646au)] Speaker4 = 0x3u,
+	[DDLRegistration(0x1d7590e5u)] Speaker1,
+	[DDLRegistration(0x847cc15fu)] Speaker2,
+	[DDLRegistration(0xf37bf1c9u)] Speaker3,
+	[DDLRegistration(0x6d1f646au)] Speaker4,
 }
 
 public static class SpeakersValues {

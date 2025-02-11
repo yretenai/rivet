@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xd458e3dfu)]
 public enum xd458e3df : uint {
-	[DDLRegistration(0x5a5b5a9fu)] Default = 0x0u,
-	[DDLRegistration(0xb4a22f54u)] MatchAnim = 0x1u,
-	[DDLRegistration(0xbdd431abu)] DontMatchAnim = 0x2u,
+	[DDLRegistration(0x5a5b5a9fu)] Default,
+	[DDLRegistration(0xb4a22f54u)] MatchAnim,
+	[DDLRegistration(0xbdd431abu)] DontMatchAnim,
 }
 
 public static class xd458e3dfValues {

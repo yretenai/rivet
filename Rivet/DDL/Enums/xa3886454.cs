@@ -7,13 +7,13 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xa3886454u)]
 public enum xa3886454 : uint {
-	[DDLRegistration(0x4f00c07fu)] None = 0x0u,
-	[DDLRegistration(0x5039af38u)] One = 0x1u,
-	[DDLRegistration(0x3b9fa3afu)] Two = 0x2u,
-	[DDLRegistration(0x5f961434u)] Three = 0x3u,
-	[DDLRegistration(0xa051a6cdu)] Four = 0x4u,
-	[DDLRegistration(0x0c220c7bu)] Five = 0x5u,
-	[DDLRegistration(0x69420f32u)] Six = 0x6u,
+	[DDLRegistration(0x4f00c07fu)] None,
+	[DDLRegistration(0x5039af38u)] One,
+	[DDLRegistration(0x3b9fa3afu)] Two,
+	[DDLRegistration(0x5f961434u)] Three,
+	[DDLRegistration(0xa051a6cdu)] Four,
+	[DDLRegistration(0x0c220c7bu)] Five,
+	[DDLRegistration(0x69420f32u)] Six,
 }
 
 public static class xa3886454Values {

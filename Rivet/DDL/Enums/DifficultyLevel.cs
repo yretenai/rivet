@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xd2b2d773u)]
 public enum DifficultyLevel : uint {
-	[DDLRegistration(0x3846b831u)] Easy = 0x0u,
-	[DDLRegistration(0x4d6151b4u)] Normal = 0x1u,
-	[DDLRegistration(0xb0313d74u)] Hard = 0x2u,
-	[DDLRegistration(0x75a81e63u)] Hardest = 0x3u,
+	[DDLRegistration(0x3846b831u, "Easy")] Easy,
+	[DDLRegistration(0x4d6151b4u, "Normal")] Normal,
+	[DDLRegistration(0xb0313d74u, "Hard")] Hard,
+	[DDLRegistration(0x75a81e63u, "Hardest")] Hardest,
 }
 
 public static class DifficultyLevelValues {

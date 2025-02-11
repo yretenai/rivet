@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xbdfca5a1u)]
 public enum xbdfca5a1 : uint {
-	[DDLRegistration(0xf952f64fu)] SelectUp = 0x0u,
-	[DDLRegistration(0x94a0f1cdu)] SelectRight = 0x1u,
-	[DDLRegistration(0x16948a68u)] SelectDown = 0x2u,
-	[DDLRegistration(0x700cfd3bu)] SelectLeft = 0x3u,
+	[DDLRegistration(0xf952f64fu)] SelectUp,
+	[DDLRegistration(0x94a0f1cdu)] SelectRight,
+	[DDLRegistration(0x16948a68u)] SelectDown,
+	[DDLRegistration(0x700cfd3bu)] SelectLeft,
 }
 
 public static class xbdfca5a1Values {

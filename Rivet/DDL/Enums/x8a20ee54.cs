@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x8a20ee54u)]
 public enum x8a20ee54 : uint {
-	[DDLRegistration(0x2f4afb93u)] Generic = 0x0u,
-	[DDLRegistration(0x8d4c3c37u)] BossHealth = 0x1u,
-	[DDLRegistration(0x52f04e07u)] ArachCharge = 0x2u,
-	[DDLRegistration(0xc941c920u)] ArachHealth = 0x3u,
-	[DDLRegistration(0xd5f6be0fu)] Nests = 0x4u,
+	[DDLRegistration(0x2f4afb93u)] Generic,
+	[DDLRegistration(0x8d4c3c37u)] BossHealth,
+	[DDLRegistration(0x52f04e07u)] ArachCharge,
+	[DDLRegistration(0xc941c920u)] ArachHealth,
+	[DDLRegistration(0xd5f6be0fu)] Nests,
 }
 
 public static class x8a20ee54Values {

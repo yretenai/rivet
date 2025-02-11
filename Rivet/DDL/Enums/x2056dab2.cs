@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x2056dab2u)]
 public enum x2056dab2 : uint {
-	[DDLRegistration(0x5a5b5a9fu)] Default = 0x0u,
-	[DDLRegistration(0x27e2a346u)] HeroOnly = 0x1u,
-	[DDLRegistration(0x611b795eu)] BotsOnly = 0x2u,
-	[DDLRegistration(0xd43b4cb8u)] HeroAndBotsOnly = 0x3u,
+	[DDLRegistration(0x5a5b5a9fu)] Default,
+	[DDLRegistration(0x27e2a346u)] HeroOnly,
+	[DDLRegistration(0x611b795eu)] BotsOnly,
+	[DDLRegistration(0xd43b4cb8u)] HeroAndBotsOnly,
 }
 
 public static class x2056dab2Values {

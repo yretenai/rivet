@@ -7,7 +7,7 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xb1be5abdu)]
 public enum xb1be5abd : uint {
-	[DDLRegistration(0xb190dcc7u)] Base = 0x0u,
+	[DDLRegistration(0xb190dcc7u)] Base,
 }
 
 public static class xb1be5abdValues {

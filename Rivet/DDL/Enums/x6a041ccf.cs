@@ -7,13 +7,13 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x6a041ccfu)]
 public enum x6a041ccf : uint {
-	[DDLRegistration(0x9cfaf8c1u)] InventorySelect = 0x0u,
-	[DDLRegistration(0xe081400du)] InventoryRotate = 0x1u,
-	[DDLRegistration(0xc895519fu)] InventoryBack = 0x2u,
-	[DDLRegistration(0xddb4912eu)] InventoryUp = 0x3u,
-	[DDLRegistration(0xb9a40093u)] InventoryDown = 0x4u,
-	[DDLRegistration(0xdf3c77c0u)] InventoryLeft = 0x5u,
-	[DDLRegistration(0xbe60ead3u)] InventoryRight = 0x6u,
+	[DDLRegistration(0x9cfaf8c1u)] InventorySelect,
+	[DDLRegistration(0xe081400du)] InventoryRotate,
+	[DDLRegistration(0xc895519fu)] InventoryBack,
+	[DDLRegistration(0xddb4912eu)] InventoryUp,
+	[DDLRegistration(0xb9a40093u)] InventoryDown,
+	[DDLRegistration(0xdf3c77c0u)] InventoryLeft,
+	[DDLRegistration(0xbe60ead3u)] InventoryRight,
 }
 
 public static class x6a041ccfValues {

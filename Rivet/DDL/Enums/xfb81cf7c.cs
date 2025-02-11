@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xfb81cf7cu)]
 public enum xfb81cf7c : uint {
-	[DDLRegistration(0x873cf2d8u)] bronze = 0x0u,
-	[DDLRegistration(0x168f530au)] silver = 0x1u,
-	[DDLRegistration(0xd70b72dfu)] gold = 0x2u,
-	[DDLRegistration(0x2cc5e34bu)] platinum = 0x3u,
+	[DDLRegistration(0x873cf2d8u, "Bronze (15 pts)")] bronze,
+	[DDLRegistration(0x168f530au, "Silver (30 pts)")] silver,
+	[DDLRegistration(0xd70b72dfu, "Gold (90 pts)")] gold,
+	[DDLRegistration(0x2cc5e34bu, "Platinum", "If a platinum trophy is included, it must be the first trophy in the set.")] platinum,
 }
 
 public static class xfb81cf7cValues {

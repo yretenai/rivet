@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x0f588598u)]
 public enum HibernateMode : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0x9384076eu)] MidRange = 0x1u,
-	[DDLRegistration(0x288eb4d9u)] FarRange = 0x2u,
-	[DDLRegistration(0xf7e36f62u)] Never = 0x3u,
+	[DDLRegistration(0x0eb42269u, description: "The model will not automatically generate hibernates, but can still generate them if flagged to do so on the instance or prefab")] None,
+	[DDLRegistration(0x9384076eu, "Mid Range", "The model will automatically generate hibernates with a mid-range draw distance")] MidRange,
+	[DDLRegistration(0x288eb4d9u, "Far Range", "The model will automatically generate hibernates with a long-range draw distance")] FarRange,
+	[DDLRegistration(0xf7e36f62u, "Never", "The model will never generate hibernates, even if flagged to do so on the instance or prefab")] Never,
 }
 
 public static class HibernateModeValues {

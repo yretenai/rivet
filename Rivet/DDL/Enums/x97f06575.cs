@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x97f06575u)]
 public enum x97f06575 : uint {
-	[DDLRegistration(0xebec914du)] Unresponded = 0x0u,
-	[DDLRegistration(0xe9e297afu)] Continue = 0x1u,
-	[DDLRegistration(0x89c6d606u)] Stop = 0x2u,
+	[DDLRegistration(0xebec914du, "Unresponded Systems")] Unresponded,
+	[DDLRegistration(0xe9e297afu, "Continue All")] Continue,
+	[DDLRegistration(0x89c6d606u, "Stop All")] Stop,
 }
 
 public static class x97f06575Values {

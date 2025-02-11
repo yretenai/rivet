@@ -7,17 +7,17 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x81d3e717u)]
 public enum x81d3e717 : uint {
-	[DDLRegistration(0x3a34e373u)] NefCity_01 = 0x0u,
-	[DDLRegistration(0xb69061bbu)] Sargasso_01 = 0x1u,
-	[DDLRegistration(0x2fa644e0u)] Zurkons_01 = 0x2u,
-	[DDLRegistration(0xb6af155au)] Zurkons_02 = 0x3u,
-	[DDLRegistration(0xcfaee1d8u)] Cordelion_01 = 0x4u,
-	[DDLRegistration(0x4e956a33u)] Molonoth_01 = 0x5u,
-	[DDLRegistration(0x114d1a52u)] Blizar_01 = 0x6u,
-	[DDLRegistration(0xb6fc53e1u)] Savali_01 = 0x7u,
-	[DDLRegistration(0xeea6e137u)] Ardolis_01 = 0x8u,
-	[DDLRegistration(0x6da6f5fau)] Zordoom_01 = 0x9u,
-	[DDLRegistration(0x0eb42269u)] None = 0xau,
+	[DDLRegistration(0x3a34e373u, "Nefarious City 01")] NefCity_01,
+	[DDLRegistration(0xb69061bbu, "Sargasso 01")] Sargasso_01,
+	[DDLRegistration(0x2fa644e0u, "Zurkon's 01")] Zurkons_01,
+	[DDLRegistration(0xb6af155au, "Zurkon's 02")] Zurkons_02,
+	[DDLRegistration(0xcfaee1d8u, "Cordelion 01")] Cordelion_01,
+	[DDLRegistration(0x4e956a33u, "Molonoth 01")] Molonoth_01,
+	[DDLRegistration(0x114d1a52u, "Blizar 01")] Blizar_01,
+	[DDLRegistration(0xb6fc53e1u, "Savali 01")] Savali_01,
+	[DDLRegistration(0xeea6e137u, "Ardolis 01")] Ardolis_01,
+	[DDLRegistration(0x6da6f5fau, "Zordoom 01")] Zordoom_01,
+	[DDLRegistration(0x0eb42269u)] None,
 }
 
 public static class x81d3e717Values {

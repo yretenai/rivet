@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xff5a79fbu)]
 public enum xff5a79fb : uint {
-	[DDLRegistration(0x28ad95dcu)] WireOverlay = 0x0u,
-	[DDLRegistration(0x49fe00ceu)] Solid = 0x1u,
-	[DDLRegistration(0xd765c90cu)] Wireframe = 0x2u,
+	[DDLRegistration(0x28ad95dcu, "Wire Overlay")] WireOverlay,
+	[DDLRegistration(0x49fe00ceu, "Solid")] Solid,
+	[DDLRegistration(0xd765c90cu, "Wireframe")] Wireframe,
 }
 
 public static class xff5a79fbValues {

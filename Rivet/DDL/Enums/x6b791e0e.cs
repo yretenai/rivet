@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x6b791e0eu)]
 public enum x6b791e0e : uint {
-	[DDLRegistration(0xd630fbc5u)] FadeIn = 0x0u,
-	[DDLRegistration(0x110b04c9u)] FadeOut = 0x1u,
+	[DDLRegistration(0xd630fbc5u, "Fade In")] FadeIn,
+	[DDLRegistration(0x110b04c9u, "Fade Out")] FadeOut,
 }
 
 public static class x6b791e0eValues {

@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xed66a9aeu)]
 public enum QuadStyle : uint {
-	[DDLRegistration(0xe7e06f5fu)] Quad = 0x0u,
-	[DDLRegistration(0xc0b68cfau)] Beam = 0x1u,
+	[DDLRegistration(0xe7e06f5fu, "Quad")] Quad,
+	[DDLRegistration(0xc0b68cfau, "Beam")] Beam,
 }
 
 public static class QuadStyleValues {

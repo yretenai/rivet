@@ -7,13 +7,13 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xcafc543du)]
 public enum xcafc543d : uint {
-	[DDLRegistration(0x84e1b2d3u)] Global = 0x0u,
-	[DDLRegistration(0x81638ad5u)] Debug = 0x1u,
-	[DDLRegistration(0x0e788c36u)] InstanceContainer = 0x2u,
-	[DDLRegistration(0x30a77827u)] InstanceUnit = 0x3u,
-	[DDLRegistration(0x7e22f5bau)] OpenContainer = 0x4u,
-	[DDLRegistration(0x07103da6u)] OpenUnit = 0x5u,
-	[DDLRegistration(0x00fa66feu)] Overlay = 0x6u,
+	[DDLRegistration(0x84e1b2d3u)] Global,
+	[DDLRegistration(0x81638ad5u)] Debug,
+	[DDLRegistration(0x0e788c36u)] InstanceContainer,
+	[DDLRegistration(0x30a77827u)] InstanceUnit,
+	[DDLRegistration(0x7e22f5bau)] OpenContainer,
+	[DDLRegistration(0x07103da6u)] OpenUnit,
+	[DDLRegistration(0x00fa66feu)] Overlay,
 }
 
 public static class xcafc543dValues {

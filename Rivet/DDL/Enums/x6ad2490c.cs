@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x6ad2490cu)]
 public enum x6ad2490c : uint {
-	[DDLRegistration(0x730f0340u)] Fixed = 0x0u,
-	[DDLRegistration(0xece734adu)] Downhill = 0x1u,
+	[DDLRegistration(0x730f0340u, "Fixed angle")] Fixed,
+	[DDLRegistration(0xece734adu, "Face downhill")] Downhill,
 }
 
 public static class x6ad2490cValues {

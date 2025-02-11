@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x7ffe9612u)]
 public enum x7ffe9612 : uint {
-	[DDLRegistration(0x74308d6fu)] On = 0x0u,
-	[DDLRegistration(0x490e94dbu)] Toggle = 0x1u,
-	[DDLRegistration(0xb1710221u)] Off = 0x2u,
+	[DDLRegistration(0x74308d6fu, "On")] On,
+	[DDLRegistration(0x490e94dbu, "Toggle")] Toggle,
+	[DDLRegistration(0xb1710221u, "Off")] Off,
 }
 
 public static class x7ffe9612Values {

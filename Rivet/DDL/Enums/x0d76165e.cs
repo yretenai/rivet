@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x0d76165eu)]
 public enum x0d76165e : uint {
-	[DDLRegistration(0x1a2c8cb8u)] No = 0x0u,
-	[DDLRegistration(0x084527c3u)] Low = 0x1u,
-	[DDLRegistration(0xaa977ce7u)] Medium = 0x2u,
-	[DDLRegistration(0x8021c6f3u)] High = 0x3u,
+	[DDLRegistration(0x1a2c8cb8u, "No", "Advance load machine only one state per turn. Slow!")] No,
+	[DDLRegistration(0x084527c3u, "Low", "Between LoadState::kStateRegionPoolsActivating && state < LoadState::kStateRunning, pump UpdateLocalLoadState() until it stops changing state, except in state kStateActorsInitializing")] Low,
+	[DDLRegistration(0xaa977ce7u, "Medium", "Pump UpdateSyncLoadState() and UpdateLocalLoadState() until m_LoadState stops changing")] Medium,
+	[DDLRegistration(0x8021c6f3u, "High", "As medium, but also do this in load state kStateActorsInitializing")] High,
 }
 
 public static class x0d76165eValues {

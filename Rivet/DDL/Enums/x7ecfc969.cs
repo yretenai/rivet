@@ -7,16 +7,16 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x7ecfc969u)]
 public enum x7ecfc969 : uint {
-	[DDLRegistration(0xca40054bu)] Always = 0x0u,
-	[DDLRegistration(0xf7e36f62u)] Never = 0x1u,
-	[DDLRegistration(0x13a9e82cu)] Purchased = 0x2u,
-	[DDLRegistration(0x994bf5afu)] DLC = 0x3u,
-	[DDLRegistration(0xb2067dbfu)] Preordered = 0x4u,
-	[DDLRegistration(0xa56cb550u)] Unlocked = 0x5u,
-	[DDLRegistration(0xd0cc8ea6u)] Merchant = 0x6u,
-	[DDLRegistration(0x72ab2d24u)] NPC = 0x7u,
-	[DDLRegistration(0x20ea4c20u)] Hero = 0x8u,
-	[DDLRegistration(0x5a5b5a9fu)] Default = 0x9u,
+	[DDLRegistration(0xca40054bu, description: "Always available")] Always,
+	[DDLRegistration(0xf7e36f62u, description: "Disabled")] Never,
+	[DDLRegistration(0x13a9e82cu, description: "Purchased from online store")] Purchased,
+	[DDLRegistration(0x994bf5afu, description: "DLC")] DLC,
+	[DDLRegistration(0xb2067dbfu, description: "Preorder bonus")] Preordered,
+	[DDLRegistration(0xa56cb550u, description: "Unlocked in game")] Unlocked,
+	[DDLRegistration(0xd0cc8ea6u, description: "Purchased from merchant in game")] Merchant,
+	[DDLRegistration(0x72ab2d24u, description: "Only available for NPCs")] NPC,
+	[DDLRegistration(0x20ea4c20u, description: "Only available for Heroes")] Hero,
+	[DDLRegistration(0x5a5b5a9fu, description: "Default (bare skin) only")] Default,
 }
 
 public static class x7ecfc969Values {

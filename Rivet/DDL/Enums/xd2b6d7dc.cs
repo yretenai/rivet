@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xd2b6d7dcu)]
 public enum xd2b6d7dc : uint {
-	[DDLRegistration(0x4b6fffc0u)] BlendFactor = 0x0u,
-	[DDLRegistration(0x4de879d2u)] FootLocatorOffsetFromGround = 0x1u,
-	[DDLRegistration(0x108aec49u)] FootAngle = 0x2u,
+	[DDLRegistration(0x4b6fffc0u, "BlendFactorCurve")] BlendFactor,
+	[DDLRegistration(0x4de879d2u, "Foot locator offset from ground")] FootLocatorOffsetFromGround,
+	[DDLRegistration(0x108aec49u, "Foot angle with respect to flat ground")] FootAngle,
 }
 
 public static class xd2b6d7dcValues {

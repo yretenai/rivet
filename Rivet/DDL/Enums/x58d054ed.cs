@@ -7,16 +7,16 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x58d054edu)]
 public enum x58d054ed : uint {
-	[DDLRegistration(0x8bcbbe76u)] InputFire = 0x0u,
-	[DDLRegistration(0xe9f6a826u)] InputAltFire = 0x1u,
-	[DDLRegistration(0x83633c61u)] InputReload = 0x2u,
-	[DDLRegistration(0x643ececdu)] InputZoom = 0x3u,
-	[DDLRegistration(0x2fffb025u)] InputThrow = 0x4u,
-	[DDLRegistration(0xe3776630u)] InputBlock = 0x5u,
-	[DDLRegistration(0x89ef0060u)] InputMoveX = 0x6u,
-	[DDLRegistration(0xfee830f6u)] InputMoveY = 0x7u,
-	[DDLRegistration(0xac9d8f01u)] InputWebLine = 0x8u,
-	[DDLRegistration(0x0eb42269u)] None = 0x9u,
+	[DDLRegistration(0x8bcbbe76u)] InputFire,
+	[DDLRegistration(0xe9f6a826u)] InputAltFire,
+	[DDLRegistration(0x83633c61u)] InputReload,
+	[DDLRegistration(0x643ececdu)] InputZoom,
+	[DDLRegistration(0x2fffb025u)] InputThrow,
+	[DDLRegistration(0xe3776630u)] InputBlock,
+	[DDLRegistration(0x89ef0060u)] InputMoveX,
+	[DDLRegistration(0xfee830f6u)] InputMoveY,
+	[DDLRegistration(0xac9d8f01u)] InputWebLine,
+	[DDLRegistration(0x0eb42269u)] None,
 }
 
 public static class x58d054edValues {

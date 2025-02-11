@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xb2718beau)]
 public enum xb2718bea : uint {
-	[DDLRegistration(0xaa49da3eu)] latest = 0x0u,
-	[DDLRegistration(0x8f6e4da0u)] max = 0x1u,
-	[DDLRegistration(0xb36372f9u)] min = 0x2u,
-	[DDLRegistration(0xdaa5f064u)] sum = 0x3u,
-	[DDLRegistration(0x5d4ba7a7u)] count = 0x4u,
+	[DDLRegistration(0xaa49da3eu)] latest,
+	[DDLRegistration(0x8f6e4da0u)] max,
+	[DDLRegistration(0xb36372f9u)] min,
+	[DDLRegistration(0xdaa5f064u)] sum,
+	[DDLRegistration(0x5d4ba7a7u)] count,
 }
 
 public static class xb2718beaValues {

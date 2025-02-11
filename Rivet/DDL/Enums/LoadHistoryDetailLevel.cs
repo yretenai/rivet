@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xa3c0a673u)]
 public enum LoadHistoryDetailLevel : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0xf932a8cau)] Minimal = 0x1u,
-	[DDLRegistration(0x2d3d1869u)] Detailed = 0x2u,
+	[DDLRegistration(0x0eb42269u)] None,
+	[DDLRegistration(0xf932a8cau)] Minimal,
+	[DDLRegistration(0x2d3d1869u)] Detailed,
 }
 
 public static class LoadHistoryDetailLevelValues {

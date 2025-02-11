@@ -2,6 +2,7 @@
 //
 // SPDX-License-Identifier: EUPL-1.2
 
+using System.Diagnostics.CodeAnalysis;
 using System.Text;
 using System.Text.Json;
 using Rivet.DDL.Generator.Structs;
@@ -9,6 +10,7 @@ using Serilog;
 
 namespace Rivet.DDL.Generator;
 
+[SuppressMessage("ReSharper", "ArrangeObjectCreationWhenTypeNotEvident")]
 internal class Program {
 	private static JsonSerializerOptions Options { get; } = new() {
 		PropertyNameCaseInsensitive = true,
@@ -125,14 +127,36 @@ internal class Program {
 		var fields = new StringBuilder();
 		var fwdlookup = new StringBuilder();
 		var revLookup = new StringBuilder();
-		for (var index = 0; index < value.Values.Count; index++) {
-			var field = value.Values[index];
-			fields.AppendLine(DDLTemplate.Format(EnumTemplate.EnumField, new Dictionary<string, object> {
+		foreach (var field in value.Values) {
+			var label = string.Empty;
+			var descriptionPrefix = "description: ";
+
+			var fieldLabel = field.Label.Strip();
+			if (!string.IsNullOrWhiteSpace(fieldLabel)) {
+				label = DDLTemplate.Format(DDLTemplate.LabelAttributeField, new() {
+					["label"] = fieldLabel,
+					["type"] = string.Empty,
+				});
+				descriptionPrefix = string.Empty;
+			}
+
+			var fieldDescription = field.Description.Strip();
+			if (!string.IsNullOrWhiteSpace(fieldDescription)) {
+				label += DDLTemplate.Format(DDLTemplate.LabelAttributeField, new() {
+					["label"] = fieldDescription,
+					["type"] = descriptionPrefix,
+				});
+			}
+
+			fields.AppendLine(DDLTemplate.Format(EnumTemplate.EnumField, new() {
 				["name"] = field.Name!.Sanitize(),
 				["hash"] = field.Id,
-				["value"] = index,
+				["attribute"] = DDLTemplate.Format(DDLTemplate.FieldAttribute, new() {
+					["hash"] = field.Id,
+					["label"] = label,
+				})
 			}));
-			var lookupDict = new Dictionary<string, object> {
+			var lookupDict = new Dictionary<string, object>() {
 				["name"] = field.Name!,
 				["enum-name"] = name,
 				["hash"] = field.Id,
@@ -146,11 +170,11 @@ internal class Program {
 		using var writer = new StreamWriter(stream);
 		writer.NewLine = "\n";
 
-		writer.WriteLine(DDLTemplate.Format(DDLTemplate.Header, new Dictionary<string, object> {
+		writer.WriteLine(DDLTemplate.Format(DDLTemplate.Header, new() {
 			["type"] = "Enums",
 		}));
 
-		writer.WriteLine(DDLTemplate.Format(EnumTemplate.EnumBody, new Dictionary<string, object> {
+		writer.WriteLine(DDLTemplate.Format(EnumTemplate.EnumBody, new() {
 			["name"] = name,
 			["body"] = fields.ToString().ReplaceLineEndings("\n").Trim(),
 			["flags"] = string.Empty,
@@ -175,12 +199,17 @@ internal class Program {
 		var fwdlookup = new StringBuilder();
 		var revLookup = new StringBuilder();
 		foreach (var field in value.Values) {
-			fields.AppendLine(DDLTemplate.Format(EnumTemplate.EnumField, new Dictionary<string, object> {
+			fields.AppendLine(DDLTemplate.Format(EnumTemplate.BitsetField, new() {
 				["name"] = field.Name!.Sanitize(),
 				["hash"] = field.Id,
 				["value"] = field.Value,
+				["attribute"] = DDLTemplate.Format(DDLTemplate.FieldAttribute, new() {
+					["hash"] = field.Id,
+					["label"] = string.Empty,
+				}),
 			}));
-			var lookupDict = new Dictionary<string, object> {
+
+			var lookupDict = new Dictionary<string, object>() {
 				["name"] = field.Name!,
 				["enum-name"] = name,
 				["hash"] = field.Id,
@@ -194,11 +223,11 @@ internal class Program {
 		using var writer = new StreamWriter(stream);
 		writer.NewLine = "\n";
 
-		writer.WriteLine(DDLTemplate.Format(DDLTemplate.Header, new Dictionary<string, object> {
+		writer.WriteLine(DDLTemplate.Format(DDLTemplate.Header, new() {
 			["type"] = "Enums",
 		}));
 
-		writer.WriteLine(DDLTemplate.Format(EnumTemplate.EnumBody, new Dictionary<string, object> {
+		writer.WriteLine(DDLTemplate.Format(EnumTemplate.EnumBody, new() {
 			["name"] = name,
 			["body"] = fields.ToString().ReplaceLineEndings("\n").Trim(),
 			["flags"] = EnumTemplate.BitsetFlags,

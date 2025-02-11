@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x4dc5b7aeu)]
 public enum x4dc5b7ae : uint {
-	[DDLRegistration(0x57fdd4b9u)] ExitToPreviousFrontend = 0x0u,
-	[DDLRegistration(0xf88cf51du)] ExitToDebugFrontend = 0x1u,
-	[DDLRegistration(0x86cec880u)] ExitToLobby = 0x2u,
+	[DDLRegistration(0x57fdd4b9u)] ExitToPreviousFrontend,
+	[DDLRegistration(0xf88cf51du)] ExitToDebugFrontend,
+	[DDLRegistration(0x86cec880u)] ExitToLobby,
 }
 
 public static class x4dc5b7aeValues {

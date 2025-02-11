@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x0a752b9au)]
 public enum x0a752b9a : uint {
-	[DDLRegistration(0xf9baf9d3u)] ModeFree = 0x0u,
-	[DDLRegistration(0xc2397e4au)] ModeLevel = 0x1u,
-	[DDLRegistration(0x683854b9u)] ModeInverted = 0x2u,
+	[DDLRegistration(0xf9baf9d3u, "Free")] ModeFree,
+	[DDLRegistration(0xc2397e4au, "Level")] ModeLevel,
+	[DDLRegistration(0x683854b9u, "Inverted")] ModeInverted,
 }
 
 public static class x0a752b9aValues {

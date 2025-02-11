@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x1343dca9u)]
 public enum x1343dca9 : uint {
-	[DDLRegistration(0x1370112bu)] OnAnyExit = 0x0u,
-	[DDLRegistration(0xf6b8a8d2u)] OnAllExit = 0x1u,
+	[DDLRegistration(0x1370112bu, description: "Trigger any time this volume is exited")] OnAnyExit,
+	[DDLRegistration(0xf6b8a8d2u, description: "Trigger only when this volume is completely empty")] OnAllExit,
 }
 
 public static class x1343dca9Values {

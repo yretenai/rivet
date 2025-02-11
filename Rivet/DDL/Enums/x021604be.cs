@@ -7,12 +7,12 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x021604beu)]
 public enum x021604be : uint {
-	[DDLRegistration(0x541d3af1u)] Equals = 0x0u,
-	[DDLRegistration(0xd7cdf396u)] NotEquals = 0x1u,
-	[DDLRegistration(0xe99b1dbcu)] GreaterThan = 0x2u,
-	[DDLRegistration(0x20f6b80du)] GreaterThanEqual = 0x3u,
-	[DDLRegistration(0x780c533cu)] LessThan = 0x4u,
-	[DDLRegistration(0xa8507db3u)] LessThanEqualTo = 0x5u,
+	[DDLRegistration(0x541d3af1u, "=")] Equals,
+	[DDLRegistration(0xd7cdf396u, "!=")] NotEquals,
+	[DDLRegistration(0xe99b1dbcu, ">")] GreaterThan,
+	[DDLRegistration(0x20f6b80du, ">=")] GreaterThanEqual,
+	[DDLRegistration(0x780c533cu, "<")] LessThan,
+	[DDLRegistration(0xa8507db3u, "<=")] LessThanEqualTo,
 }
 
 public static class x021604beValues {

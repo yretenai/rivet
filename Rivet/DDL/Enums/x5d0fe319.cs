@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x5d0fe319u)]
 public enum x5d0fe319 : uint {
-	[DDLRegistration(0x31fb9f65u)] Listener = 0x0u,
-	[DDLRegistration(0xcb1bba38u)] Ground = 0x1u,
-	[DDLRegistration(0x90abc57au)] XZPlane = 0x2u,
+	[DDLRegistration(0x31fb9f65u, "Listener", "Orientation follows listener")] Listener,
+	[DDLRegistration(0xcb1bba38u, "Ground", "Orientation follows ground when within GroundDistance, otherwise follows XZ Plane")] Ground,
+	[DDLRegistration(0x90abc57au, "XZ Plane", "Orientation follows XZ Plane")] XZPlane,
 }
 
 public static class x5d0fe319Values {

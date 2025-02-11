@@ -7,13 +7,13 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x04a11042u)]
 public enum x04a11042 : uint {
-	[DDLRegistration(0x4553a713u)] Lod0 = 0x0u,
-	[DDLRegistration(0x32549785u)] Lod1 = 0x1u,
-	[DDLRegistration(0xab5dc63fu)] Lod2 = 0x2u,
-	[DDLRegistration(0xdc5af6a9u)] Lod3 = 0x3u,
-	[DDLRegistration(0x423e630au)] Lod4 = 0x4u,
-	[DDLRegistration(0x3539539cu)] Lod5 = 0x5u,
-	[DDLRegistration(0xe4b9d0edu)] Hidden = 0x6u,
+	[DDLRegistration(0x4553a713u, "Lod 0")] Lod0,
+	[DDLRegistration(0x32549785u, "Lod 1")] Lod1,
+	[DDLRegistration(0xab5dc63fu, "Lod 2")] Lod2,
+	[DDLRegistration(0xdc5af6a9u, "Lod 3")] Lod3,
+	[DDLRegistration(0x423e630au, "Lod 4")] Lod4,
+	[DDLRegistration(0x3539539cu, "Lod 5")] Lod5,
+	[DDLRegistration(0xe4b9d0edu, "Model Hidden")] Hidden,
 }
 
 public static class x04a11042Values {

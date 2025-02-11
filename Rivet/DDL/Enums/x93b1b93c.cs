@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x93b1b93cu)]
 public enum x93b1b93c : uint {
-	[DDLRegistration(0x0eb42269u)] None = 0x0u,
-	[DDLRegistration(0x9d6ae64du)] EaseIn = 0x1u,
-	[DDLRegistration(0xa3e73049u)] EaseInOut = 0x2u,
-	[DDLRegistration(0xf22355c6u)] EaseOut = 0x3u,
-	[DDLRegistration(0x613a81e3u)] Linear = 0x4u,
+	[DDLRegistration(0x0eb42269u, description: "No easing will be applied to the falloff.")] None,
+	[DDLRegistration(0x9d6ae64du, "Ease In", "The falloff will ease in from the edge.")] EaseIn,
+	[DDLRegistration(0xa3e73049u, "Ease In/Out", "The falloff will ease in from the edge and out to the center.")] EaseInOut,
+	[DDLRegistration(0xf22355c6u, "Ease Out", "The falloff will ease out from the center.")] EaseOut,
+	[DDLRegistration(0x613a81e3u, "Linear", "The linear falloff will be applied from the edge.")] Linear,
 }
 
 public static class x93b1b93cValues {

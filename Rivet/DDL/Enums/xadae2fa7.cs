@@ -7,16 +7,16 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xadae2fa7u)]
 public enum xadae2fa7 : uint {
-	[DDLRegistration(0x29ad8bb5u)] ShotTagNone = 0x0u,
-	[DDLRegistration(0xd648b8ecu)] ShotTagA = 0x1u,
-	[DDLRegistration(0x4f41e956u)] ShotTagB = 0x2u,
-	[DDLRegistration(0x3846d9c0u)] ShotTagC = 0x3u,
-	[DDLRegistration(0xa6224c63u)] ShotTagD = 0x4u,
-	[DDLRegistration(0xd1257cf5u)] ShotTagE = 0x5u,
-	[DDLRegistration(0x482c2d4fu)] ShotTagF = 0x6u,
-	[DDLRegistration(0x3f2b1dd9u)] ShotTagG = 0x7u,
-	[DDLRegistration(0xaf940048u)] ShotTagH = 0x8u,
-	[DDLRegistration(0xd89330deu)] ShotTagI = 0x9u,
+	[DDLRegistration(0x29ad8bb5u)] ShotTagNone,
+	[DDLRegistration(0xd648b8ecu, "Script Tag A")] ShotTagA,
+	[DDLRegistration(0x4f41e956u, "Script Tag B")] ShotTagB,
+	[DDLRegistration(0x3846d9c0u, "Script Tag C")] ShotTagC,
+	[DDLRegistration(0xa6224c63u, "Script Tag D")] ShotTagD,
+	[DDLRegistration(0xd1257cf5u, "Script Tag E")] ShotTagE,
+	[DDLRegistration(0x482c2d4fu, "Script Tag F")] ShotTagF,
+	[DDLRegistration(0x3f2b1dd9u, "Script Tag G")] ShotTagG,
+	[DDLRegistration(0xaf940048u, "Script Tag H")] ShotTagH,
+	[DDLRegistration(0xd89330deu, "Script Tag I")] ShotTagI,
 }
 
 public static class xadae2fa7Values {

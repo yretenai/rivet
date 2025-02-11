@@ -7,10 +7,10 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xbabeae30u)]
 public enum xbabeae30 : uint {
-	[DDLRegistration(0xdea9c787u)] AEndToBStart = 0x0u,
-	[DDLRegistration(0x364718bdu)] AEndToBEnd = 0x1u,
-	[DDLRegistration(0x37bc901fu)] AStartToBStart = 0x2u,
-	[DDLRegistration(0x18ab8efdu)] AStartToBEnd = 0x3u,
+	[DDLRegistration(0xdea9c787u)] AEndToBStart,
+	[DDLRegistration(0x364718bdu)] AEndToBEnd,
+	[DDLRegistration(0x37bc901fu)] AStartToBStart,
+	[DDLRegistration(0x18ab8efdu)] AStartToBEnd,
 }
 
 public static class xbabeae30Values {

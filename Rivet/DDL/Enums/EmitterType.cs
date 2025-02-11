@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xf5bf036du)]
 public enum EmitterType : uint {
-	[DDLRegistration(0x8ea70b26u)] CPU = 0x0u,
-	[DDLRegistration(0x89aea3fau)] GPU = 0x1u,
+	[DDLRegistration(0x8ea70b26u, "CPU")] CPU,
+	[DDLRegistration(0x89aea3fau, "GPU")] GPU,
 }
 
 public static class EmitterTypeValues {

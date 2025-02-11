@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x7452ffcbu)]
 public enum ManipSpaceMode : uint {
-	[DDLRegistration(0xd7b1dc31u)] World = 0x0u,
-	[DDLRegistration(0xc44992bcu)] Object = 0x1u,
+	[DDLRegistration(0xd7b1dc31u, "World")] World,
+	[DDLRegistration(0xc44992bcu, "Object")] Object,
 }
 
 public static class ManipSpaceModeValues {

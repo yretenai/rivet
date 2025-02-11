@@ -7,12 +7,12 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x61afe359u)]
 public enum TargetLocationType : uint {
-	[DDLRegistration(0xdfc96c54u)] LocalOffset = 0x0u,
-	[DDLRegistration(0x9936ceb1u)] GlobalOffset = 0x1u,
-	[DDLRegistration(0x7033b175u)] Joint = 0x2u,
-	[DDLRegistration(0xc343242fu)] Locator = 0x3u,
-	[DDLRegistration(0xdbd71ae0u)] BSphere = 0x4u,
-	[DDLRegistration(0xf397ff27u)] WorldPos = 0x5u,
+	[DDLRegistration(0xdfc96c54u, "Local Offset")] LocalOffset,
+	[DDLRegistration(0x9936ceb1u, "Global Offset")] GlobalOffset,
+	[DDLRegistration(0x7033b175u, "Joint")] Joint,
+	[DDLRegistration(0xc343242fu, "Locator")] Locator,
+	[DDLRegistration(0xdbd71ae0u, "BSphere")] BSphere,
+	[DDLRegistration(0xf397ff27u, "World Position")] WorldPos,
 }
 
 public static class TargetLocationTypeValues {

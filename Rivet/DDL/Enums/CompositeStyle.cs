@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x40250330u)]
 public enum CompositeStyle : uint {
-	[DDLRegistration(0xf8053c63u)] FullResolution = 0x0u,
-	[DDLRegistration(0xa58ffd2bu)] HalfResolution = 0x1u,
+	[DDLRegistration(0xf8053c63u, "Full Resolution")] FullResolution,
+	[DDLRegistration(0xa58ffd2bu, "Half Resolution")] HalfResolution,
 }
 
 public static class CompositeStyleValues {

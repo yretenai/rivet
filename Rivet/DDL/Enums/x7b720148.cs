@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x7b720148u)]
 public enum x7b720148 : uint {
-	[DDLRegistration(0x20ea4c20u)] Hero = 0x0u,
-	[DDLRegistration(0x9bd25b73u)] Bot = 0x1u,
+	[DDLRegistration(0x20ea4c20u)] Hero,
+	[DDLRegistration(0x9bd25b73u)] Bot,
 }
 
 public static class x7b720148Values {

@@ -7,13 +7,13 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xc5336d41u)]
 public enum AllegianceRelation : uint {
-	[DDLRegistration(0xfe3ea8d6u)] Any = 0x0u,
-	[DDLRegistration(0x91fd11f6u)] Only = 0x1u,
-	[DDLRegistration(0x98eb2a29u)] Friends = 0x2u,
-	[DDLRegistration(0xc107107eu)] Enemies = 0x3u,
-	[DDLRegistration(0x1d21bfb0u)] Neutral = 0x4u,
-	[DDLRegistration(0x4bbe0e1bu)] NotFriends = 0x5u,
-	[DDLRegistration(0x1252344cu)] NotEnemies = 0x6u,
+	[DDLRegistration(0xfe3ea8d6u, "Any")] Any,
+	[DDLRegistration(0x91fd11f6u, "Only")] Only,
+	[DDLRegistration(0x98eb2a29u, "Friends")] Friends,
+	[DDLRegistration(0xc107107eu, "Enemies")] Enemies,
+	[DDLRegistration(0x1d21bfb0u, "Neutral")] Neutral,
+	[DDLRegistration(0x4bbe0e1bu, "Not Friends")] NotFriends,
+	[DDLRegistration(0x1252344cu, "Not Enemies")] NotEnemies,
 }
 
 public static class AllegianceRelationValues {

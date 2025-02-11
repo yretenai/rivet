@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x1c49d08au)]
 public enum x1c49d08a : uint {
-	[DDLRegistration(0xfe4a4104u)] AnimMirrorYZ = 0x0u,
-	[DDLRegistration(0xe7517045u)] AnimMirrorXZ = 0x1u,
-	[DDLRegistration(0x7e5821ffu)] AnimMirrorXY = 0x2u,
+	[DDLRegistration(0xfe4a4104u)] AnimMirrorYZ,
+	[DDLRegistration(0xe7517045u)] AnimMirrorXZ,
+	[DDLRegistration(0x7e5821ffu)] AnimMirrorXY,
 }
 
 public static class x1c49d08aValues {

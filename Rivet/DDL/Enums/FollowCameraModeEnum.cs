@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xde3cdb81u)]
 public enum FollowCameraModeEnum : uint {
-	[DDLRegistration(0x74308d6fu)] On = 0x0u,
-	[DDLRegistration(0x54426b62u)] Fast = 0x1u,
-	[DDLRegistration(0xb1710221u)] Off = 0x2u,
+	[DDLRegistration(0x74308d6fu, "On")] On,
+	[DDLRegistration(0x54426b62u, "Fast")] Fast,
+	[DDLRegistration(0xb1710221u, "Off")] Off,
 }
 
 public static class FollowCameraModeEnumValues {

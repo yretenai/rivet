@@ -7,8 +7,8 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xd73d2720u)]
 public enum xd73d2720 : uint {
-	[DDLRegistration(0x613a81e3u)] Linear = 0x0u,
-	[DDLRegistration(0x00ea6232u)] SCurve = 0x1u,
+	[DDLRegistration(0x613a81e3u, "Linear")] Linear,
+	[DDLRegistration(0x00ea6232u, "SCurve")] SCurve,
 }
 
 public static class xd73d2720Values {

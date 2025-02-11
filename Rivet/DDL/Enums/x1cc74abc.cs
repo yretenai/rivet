@@ -7,9 +7,9 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x1cc74abcu)]
 public enum x1cc74abc : uint {
-	[DDLRegistration(0x1423fd87u)] Unknown = 0x0u,
-	[DDLRegistration(0x06d91443u)] AllData = 0x1u,
-	[DDLRegistration(0xf932a8cau)] Minimal = 0x2u,
+	[DDLRegistration(0x1423fd87u, description: "This platform/device/user has no privacy setting that can be checked. So by default, work similarly to kAllData.")] Unknown,
+	[DDLRegistration(0x06d91443u, description: "This platform/device/user has given us permission to collect and use all data.")] AllData,
+	[DDLRegistration(0xf932a8cau, description: "This platform/device/user is allowing only minimal data to be collected. We still send all of the events, but we can only use these events to pursue legal action and will delete them once that is finished. (Per GDPR)")] Minimal,
 }
 
 public static class x1cc74abcValues {

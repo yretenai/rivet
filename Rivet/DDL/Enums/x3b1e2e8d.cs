@@ -7,11 +7,11 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x3b1e2e8du)]
 public enum x3b1e2e8d : uint {
-	[DDLRegistration(0xf21c1713u)] Impact_None = 0x0u,
-	[DDLRegistration(0x36f0a192u)] Impact_Light = 0x1u,
-	[DDLRegistration(0x29f4d510u)] Impact_Medium = 0x2u,
-	[DDLRegistration(0x27db873au)] Impact_Heavy = 0x3u,
-	[DDLRegistration(0x573fca28u)] Impact_Extreme = 0x4u,
+	[DDLRegistration(0xf21c1713u)] Impact_None,
+	[DDLRegistration(0x36f0a192u)] Impact_Light,
+	[DDLRegistration(0x29f4d510u)] Impact_Medium,
+	[DDLRegistration(0x27db873au)] Impact_Heavy,
+	[DDLRegistration(0x573fca28u)] Impact_Extreme,
 }
 
 public static class x3b1e2e8dValues {
