@@ -65,13 +65,6 @@ public static class DDLSerializer {
 					result.Add(new RivetAssetId(reader.Get<ulong>()));
 					break;
 				}
-				case DDLTypeKind.File: {
-					var str = reader.Get<DDLString>();
-					result.Add(RivetAssetId.FromString(Encoding.UTF8.GetString(reader.Get<byte>(str.Length)))); // can't we just use str.Checksum?
-					reader.Offset += 1;
-					reader.Align(4);
-					break;
-				}
 				case DDLTypeKind.Int8: {
 					result.Add(reader.Get<sbyte>());
 					break;
@@ -99,9 +92,11 @@ public static class DDLSerializer {
 				case DDLTypeKind.Enum:
 				case DDLTypeKind.Bitfield:
 				case DDLTypeKind.Json:
-				case DDLTypeKind.String: {
+				case DDLTypeKind.String:
+				case DDLTypeKind.File: {
 					var str = reader.Get<DDLString>();
-					result.Add(str.Length == 0 ? string.Empty : Encoding.UTF8.GetString(reader.Get<byte>(str.Length)));
+					var value = str.Length == 0 ? string.Empty : Encoding.UTF8.GetString(reader.Get<byte>(str.Length));
+					result.Add(new DDLFullString(value, str.Hash, str.Checksum));
 					reader.Offset += 1;
 					reader.Align(4);
 					break;

@@ -5,7 +5,7 @@ public static class EnumTemplate {
 
 	public const string BitsetFlags = ", Flags";
 
-	public const string LookupEntry = "\t\t[\"%name%\"] = %enum-name%.%field-name%,";
+	public const string LookupEntry = "\t\t[0x%hash%u] = %enum-name%.%field-name%,";
 	public const string ReverseLookupEntry = "\t\t[%enum-name%.%field-name%] = 0x%hash%u,";
 
 	public const string EnumBody =
@@ -17,7 +17,7 @@ public static class EnumTemplate {
 		}
 
 		public static class %name%Values {
-			public static Dictionary<string, %name%> Lookup = new() {
+			public static Dictionary<uint, %name%> Lookup = new() {
 				%lookup%
 			};
 
