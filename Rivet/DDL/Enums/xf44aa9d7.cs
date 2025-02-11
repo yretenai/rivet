@@ -7,19 +7,19 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xf44aa9d7u)]
 public enum xf44aa9d7 : uint {
-	[DDLRegistration(0x0e7463cau)] k2d,
-	[DDLRegistration(0x176f528bu)] k3d,
+	[DDLRegistration(0x0e7463cau)] K2d,
+	[DDLRegistration(0x176f528bu)] K3d,
 }
 
 public static class xf44aa9d7Values {
 	public static Dictionary<uint, xf44aa9d7> Lookup = new() {
-		[0x0e7463cau] = xf44aa9d7.k2d,
-		[0x176f528bu] = xf44aa9d7.k3d,
+		[0x0e7463cau] = xf44aa9d7.K2d,
+		[0x176f528bu] = xf44aa9d7.K3d,
 	};
 
 	public static Dictionary<xf44aa9d7, uint> ReverseLookup = new() {
-		[xf44aa9d7.k2d] = 0x0e7463cau,
-		[xf44aa9d7.k3d] = 0x176f528bu,
+		[xf44aa9d7.K2d] = 0x0e7463cau,
+		[xf44aa9d7.K3d] = 0x176f528bu,
 	};
 
 	public static uint TypeId => 0xf44aa9d7u;

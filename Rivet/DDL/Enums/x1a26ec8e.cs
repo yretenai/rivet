@@ -7,16 +7,16 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x1a26ec8eu)]
 public enum x1a26ec8e : uint {
-	[DDLRegistration(0xf6517337u)] ge,
+	[DDLRegistration(0xf6517337u)] Ge,
 }
 
 public static class x1a26ec8eValues {
 	public static Dictionary<uint, x1a26ec8e> Lookup = new() {
-		[0xf6517337u] = x1a26ec8e.ge,
+		[0xf6517337u] = x1a26ec8e.Ge,
 	};
 
 	public static Dictionary<x1a26ec8e, uint> ReverseLookup = new() {
-		[x1a26ec8e.ge] = 0xf6517337u,
+		[x1a26ec8e.Ge] = 0xf6517337u,
 	};
 
 	public static uint TypeId => 0x1a26ec8eu;

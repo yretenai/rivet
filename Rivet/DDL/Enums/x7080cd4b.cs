@@ -7,19 +7,19 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x7080cd4bu)]
 public enum x7080cd4b : uint {
-	[DDLRegistration(0x70ddbb2eu)] full,
-	[DDLRegistration(0x4ed11d1cu)] delta,
+	[DDLRegistration(0x70ddbb2eu)] Full,
+	[DDLRegistration(0x4ed11d1cu)] Delta,
 }
 
 public static class x7080cd4bValues {
 	public static Dictionary<uint, x7080cd4b> Lookup = new() {
-		[0x70ddbb2eu] = x7080cd4b.full,
-		[0x4ed11d1cu] = x7080cd4b.delta,
+		[0x70ddbb2eu] = x7080cd4b.Full,
+		[0x4ed11d1cu] = x7080cd4b.Delta,
 	};
 
 	public static Dictionary<x7080cd4b, uint> ReverseLookup = new() {
-		[x7080cd4b.full] = 0x70ddbb2eu,
-		[x7080cd4b.delta] = 0x4ed11d1cu,
+		[x7080cd4b.Full] = 0x70ddbb2eu,
+		[x7080cd4b.Delta] = 0x4ed11d1cu,
 	};
 
 	public static uint TypeId => 0x7080cd4bu;

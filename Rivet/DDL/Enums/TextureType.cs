@@ -7,28 +7,28 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x58cf7ca5u)]
 public enum TextureType : uint {
-	[DDLRegistration(0x1e3710c1u, "1D")] k1D,
-	[DDLRegistration(0x351a4302u, "2D")] k2D,
-	[DDLRegistration(0x2c017243u, "3D")] k3D,
+	[DDLRegistration(0x1e3710c1u, "1D")] K1D,
+	[DDLRegistration(0x351a4302u, "2D")] K2D,
+	[DDLRegistration(0x2c017243u, "3D")] K3D,
 	[DDLRegistration(0x41da931eu, "Cube")] Cube,
-	[DDLRegistration(0xe60e760du, "2D Array")] k2DArray,
+	[DDLRegistration(0xe60e760du, "2D Array")] K2DArray,
 }
 
 public static class TextureTypeValues {
 	public static Dictionary<uint, TextureType> Lookup = new() {
-		[0x1e3710c1u] = TextureType.k1D,
-		[0x351a4302u] = TextureType.k2D,
-		[0x2c017243u] = TextureType.k3D,
+		[0x1e3710c1u] = TextureType.K1D,
+		[0x351a4302u] = TextureType.K2D,
+		[0x2c017243u] = TextureType.K3D,
 		[0x41da931eu] = TextureType.Cube,
-		[0xe60e760du] = TextureType.k2DArray,
+		[0xe60e760du] = TextureType.K2DArray,
 	};
 
 	public static Dictionary<TextureType, uint> ReverseLookup = new() {
-		[TextureType.k1D] = 0x1e3710c1u,
-		[TextureType.k2D] = 0x351a4302u,
-		[TextureType.k3D] = 0x2c017243u,
+		[TextureType.K1D] = 0x1e3710c1u,
+		[TextureType.K2D] = 0x351a4302u,
+		[TextureType.K3D] = 0x2c017243u,
 		[TextureType.Cube] = 0x41da931eu,
-		[TextureType.k2DArray] = 0xe60e760du,
+		[TextureType.K2DArray] = 0xe60e760du,
 	};
 
 	public static uint TypeId => 0x58cf7ca5u;

@@ -12,6 +12,3 @@ public record struct DDLString {
 	public uint Hash { get; set; }
 	public ulong Checksum { get; set; }
 }
-
-[StructLayout(LayoutKind.Sequential, Pack = 8)]
-public record DDLFullString(string Value, RivetTypeId Type, RivetAssetId Asset);

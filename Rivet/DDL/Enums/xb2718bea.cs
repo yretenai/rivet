@@ -7,28 +7,28 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xb2718beau)]
 public enum xb2718bea : uint {
-	[DDLRegistration(0xaa49da3eu)] latest,
-	[DDLRegistration(0x8f6e4da0u)] max,
-	[DDLRegistration(0xb36372f9u)] min,
-	[DDLRegistration(0xdaa5f064u)] sum,
-	[DDLRegistration(0x5d4ba7a7u)] count,
+	[DDLRegistration(0xaa49da3eu)] Latest,
+	[DDLRegistration(0x8f6e4da0u)] Max,
+	[DDLRegistration(0xb36372f9u)] Min,
+	[DDLRegistration(0xdaa5f064u)] Sum,
+	[DDLRegistration(0x5d4ba7a7u)] Count,
 }
 
 public static class xb2718beaValues {
 	public static Dictionary<uint, xb2718bea> Lookup = new() {
-		[0xaa49da3eu] = xb2718bea.latest,
-		[0x8f6e4da0u] = xb2718bea.max,
-		[0xb36372f9u] = xb2718bea.min,
-		[0xdaa5f064u] = xb2718bea.sum,
-		[0x5d4ba7a7u] = xb2718bea.count,
+		[0xaa49da3eu] = xb2718bea.Latest,
+		[0x8f6e4da0u] = xb2718bea.Max,
+		[0xb36372f9u] = xb2718bea.Min,
+		[0xdaa5f064u] = xb2718bea.Sum,
+		[0x5d4ba7a7u] = xb2718bea.Count,
 	};
 
 	public static Dictionary<xb2718bea, uint> ReverseLookup = new() {
-		[xb2718bea.latest] = 0xaa49da3eu,
-		[xb2718bea.max] = 0x8f6e4da0u,
-		[xb2718bea.min] = 0xb36372f9u,
-		[xb2718bea.sum] = 0xdaa5f064u,
-		[xb2718bea.count] = 0x5d4ba7a7u,
+		[xb2718bea.Latest] = 0xaa49da3eu,
+		[xb2718bea.Max] = 0x8f6e4da0u,
+		[xb2718bea.Min] = 0xb36372f9u,
+		[xb2718bea.Sum] = 0xdaa5f064u,
+		[xb2718bea.Count] = 0x5d4ba7a7u,
 	};
 
 	public static uint TypeId => 0xb2718beau;

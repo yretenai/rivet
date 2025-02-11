@@ -7,25 +7,25 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x8b182f8eu)]
 public enum x8b182f8e : uint {
-	[DDLRegistration(0xd64fc14au)] boot,
-	[DDLRegistration(0x846f734au)] liveTile,
-	[DDLRegistration(0x59159bf1u)] resume,
-	[DDLRegistration(0x180d21cau)] debugReboot,
+	[DDLRegistration(0xd64fc14au)] Boot,
+	[DDLRegistration(0x846f734au)] LiveTile,
+	[DDLRegistration(0x59159bf1u)] Resume,
+	[DDLRegistration(0x180d21cau)] DebugReboot,
 }
 
 public static class x8b182f8eValues {
 	public static Dictionary<uint, x8b182f8e> Lookup = new() {
-		[0xd64fc14au] = x8b182f8e.boot,
-		[0x846f734au] = x8b182f8e.liveTile,
-		[0x59159bf1u] = x8b182f8e.resume,
-		[0x180d21cau] = x8b182f8e.debugReboot,
+		[0xd64fc14au] = x8b182f8e.Boot,
+		[0x846f734au] = x8b182f8e.LiveTile,
+		[0x59159bf1u] = x8b182f8e.Resume,
+		[0x180d21cau] = x8b182f8e.DebugReboot,
 	};
 
 	public static Dictionary<x8b182f8e, uint> ReverseLookup = new() {
-		[x8b182f8e.boot] = 0xd64fc14au,
-		[x8b182f8e.liveTile] = 0x846f734au,
-		[x8b182f8e.resume] = 0x59159bf1u,
-		[x8b182f8e.debugReboot] = 0x180d21cau,
+		[x8b182f8e.Boot] = 0xd64fc14au,
+		[x8b182f8e.LiveTile] = 0x846f734au,
+		[x8b182f8e.Resume] = 0x59159bf1u,
+		[x8b182f8e.DebugReboot] = 0x180d21cau,
 	};
 
 	public static uint TypeId => 0x8b182f8eu;

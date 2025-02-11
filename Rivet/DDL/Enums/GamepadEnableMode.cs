@@ -10,7 +10,7 @@ public enum GamepadEnableMode : uint {
 	[DDLRegistration(0xf7e36f62u)] Never,
 	[DDLRegistration(0xca40054bu)] Always,
 	[DDLRegistration(0x9a48e8c3u)] ApplicationFocus,
-	[DDLRegistration(0xbb152871u)] k3DViewFocus,
+	[DDLRegistration(0xbb152871u)] K3DViewFocus,
 }
 
 public static class GamepadEnableModeValues {
@@ -18,14 +18,14 @@ public static class GamepadEnableModeValues {
 		[0xf7e36f62u] = GamepadEnableMode.Never,
 		[0xca40054bu] = GamepadEnableMode.Always,
 		[0x9a48e8c3u] = GamepadEnableMode.ApplicationFocus,
-		[0xbb152871u] = GamepadEnableMode.k3DViewFocus,
+		[0xbb152871u] = GamepadEnableMode.K3DViewFocus,
 	};
 
 	public static Dictionary<GamepadEnableMode, uint> ReverseLookup = new() {
 		[GamepadEnableMode.Never] = 0xf7e36f62u,
 		[GamepadEnableMode.Always] = 0xca40054bu,
 		[GamepadEnableMode.ApplicationFocus] = 0x9a48e8c3u,
-		[GamepadEnableMode.k3DViewFocus] = 0xbb152871u,
+		[GamepadEnableMode.K3DViewFocus] = 0xbb152871u,
 	};
 
 	public static uint TypeId => 0xcfd4e774u;

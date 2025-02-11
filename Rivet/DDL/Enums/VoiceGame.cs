@@ -7,7 +7,7 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x8d474ebbu)]
 public enum VoiceGame : uint {
-	[DDLRegistration(0xadf803a8u)] unused,
+	[DDLRegistration(0xadf803a8u)] Unused,
 	[DDLRegistration(0x5eb5b653u)] NoVoice,
 	[DDLRegistration(0x083e0f06u)] Ratchet,
 	[DDLRegistration(0x18182114u)] Clank,
@@ -74,7 +74,7 @@ public enum VoiceGame : uint {
 
 public static class VoiceGameValues {
 	public static Dictionary<uint, VoiceGame> Lookup = new() {
-		[0xadf803a8u] = VoiceGame.unused,
+		[0xadf803a8u] = VoiceGame.Unused,
 		[0x5eb5b653u] = VoiceGame.NoVoice,
 		[0x083e0f06u] = VoiceGame.Ratchet,
 		[0x18182114u] = VoiceGame.Clank,
@@ -140,7 +140,7 @@ public static class VoiceGameValues {
 	};
 
 	public static Dictionary<VoiceGame, uint> ReverseLookup = new() {
-		[VoiceGame.unused] = 0xadf803a8u,
+		[VoiceGame.Unused] = 0xadf803a8u,
 		[VoiceGame.NoVoice] = 0x5eb5b653u,
 		[VoiceGame.Ratchet] = 0x083e0f06u,
 		[VoiceGame.Clank] = 0x18182114u,

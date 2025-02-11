@@ -9,23 +9,23 @@ namespace Rivet.DDL.Enums;
 public enum x3d49dc75 : uint {
 	[DDLRegistration(0xf6401711u, "Disable")] Disable,
 	[DDLRegistration(0xa1d52ebfu, "All FPS")] All,
-	[DDLRegistration(0x7b69c766u, "30 Only")] k30,
-	[DDLRegistration(0xe8c1c093u, "30+")] k30Plus,
+	[DDLRegistration(0x7b69c766u, "30 Only")] K30,
+	[DDLRegistration(0xe8c1c093u, "30+")] K30Plus,
 }
 
 public static class x3d49dc75Values {
 	public static Dictionary<uint, x3d49dc75> Lookup = new() {
 		[0xf6401711u] = x3d49dc75.Disable,
 		[0xa1d52ebfu] = x3d49dc75.All,
-		[0x7b69c766u] = x3d49dc75.k30,
-		[0xe8c1c093u] = x3d49dc75.k30Plus,
+		[0x7b69c766u] = x3d49dc75.K30,
+		[0xe8c1c093u] = x3d49dc75.K30Plus,
 	};
 
 	public static Dictionary<x3d49dc75, uint> ReverseLookup = new() {
 		[x3d49dc75.Disable] = 0xf6401711u,
 		[x3d49dc75.All] = 0xa1d52ebfu,
-		[x3d49dc75.k30] = 0x7b69c766u,
-		[x3d49dc75.k30Plus] = 0xe8c1c093u,
+		[x3d49dc75.K30] = 0x7b69c766u,
+		[x3d49dc75.K30Plus] = 0xe8c1c093u,
 	};
 
 	public static uint TypeId => 0x3d49dc75u;

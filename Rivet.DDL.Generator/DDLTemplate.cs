@@ -6,7 +6,9 @@ namespace Rivet.DDL.Generator;
 public static class DDLTemplate {
 	public const string LabelAttributeField = ", %type%\"%label%\"";
 
-	public const string FieldAttribute = "[DDLRegistration(0x%hash%u%label%)]";
+	public const string RegistrationAttribute = "DDLRegistration(0x%hash%u%label%)";
+
+	public const string RootAttribute = "DDLTypeRoot(0x%hash%u, \"%label%\"), ";
 
 	public const string Header =
 		"""
@@ -17,6 +19,45 @@ public static class DDLTemplate {
 
 		namespace Rivet.DDL.%type%;
 		""";
+
+	public const string DDLField = "\t[%attribute%]\n\tpublic %type% %name% { get; set; } = %default-prefix%%default%;\n";
+
+	public const string DDLInit = "\t\t%name% = ddl.%method%;";
+
+	public const string DDLBody =
+		"""
+
+		#nullable enable
+
+		using Rivet.Models;
+		using Rivet.DDL.Enums;
+
+		[%attribute%]
+		public class %name% : %base-name%, IDDLObjectType<%name%> {
+			public %new%static RivetTypeId TypeId { get; } = new RivetTypeId(0x%hash%u);
+		
+			public %name%(DDLObject ddl) : base(ddl) {
+				%init-body%
+			}
+		
+			%field-body%
+		
+			public %new%static %name% Create(DDLObject ddl) => new(ddl);
+		}
+
+		""";
+
+	public const string DefaultArrayArgument = "0x%hash%u";
+
+	public const string DefaultReader = "GetValue<%type%>(0x%hash%u, %name%)";
+	public const string DefaultArrayReader = "GetValues<%type%>(0x%hash%u)";
+
+	public static readonly Dictionary<DDLArrayKind, string> ArrayMapping = new() {
+		[DDLArrayKind.None] = "%type%",
+		[DDLArrayKind.Fixed] = "List<%type%>",
+		[DDLArrayKind.Dynamic] = "List<%type%>",
+		[DDLArrayKind.Map] = "Dictionary<%map-type%, %type%>",
+	};
 
 	public static readonly Dictionary<DDLTypeKind, string> TypeMapping = new() {
 		[DDLTypeKind.UInt8] = "byte",
@@ -29,13 +70,37 @@ public static class DDLTemplate {
 		[DDLTypeKind.Int64] = "long",
 		[DDLTypeKind.Float] = "float",
 		[DDLTypeKind.Double] = "double",
-		[DDLTypeKind.String] = "string",
+		[DDLTypeKind.String] = "string?",
 		[DDLTypeKind.Bool] = "bool",
 		[DDLTypeKind.File] = "RivetAssetId",
 		[DDLTypeKind.Identifier] = "RivetAssetId",
-		[DDLTypeKind.Json] = "string",
-		[DDLTypeKind.Default] = "DDLObject",
+		[DDLTypeKind.Json] = "string?",
+		[DDLTypeKind.Unknown] = "object?",
 		[DDLTypeKind.Asset] = "RivetAssetId",
+	};
+
+	public static readonly Dictionary<DDLTypeKind, string> ArgumentMapping = new() {
+		[DDLTypeKind.String] = "0x%hash%u",
+		[DDLTypeKind.Json] = "0x%hash%u",
+		[DDLTypeKind.Unknown] = "0x%hash%u",
+	};
+
+	public static readonly Dictionary<DDLTypeKind, string> ReaderMapping = new() {
+		[DDLTypeKind.String] = "GetString(0x%hash%) ?? %name%",
+		[DDLTypeKind.Json] = "GetString(0x%hash%) ?? %name%",
+		[DDLTypeKind.Enum] = "GetEnum<%type%>(0x%hash%u, %type%Values.Lookup)",
+		[DDLTypeKind.Bitfield] = "GetBitset<%type%>(0x%hash%u, %type%Values.Lookup)",
+		[DDLTypeKind.Struct] = "GetObject<%type%>(0x%hash%u)",
+		[DDLTypeKind.Unknown] = "GetField(0x%hash%)",
+	};
+
+	public static readonly Dictionary<DDLTypeKind, string?> ArrayReaderMapping = new() {
+		[DDLTypeKind.String] = "GetStrings(0x%hash%u)",
+		[DDLTypeKind.Json] = "GetStrings(0x%hash%u)",
+		[DDLTypeKind.Enum] = "GetEnums<%type%>(0x%hash%u, %type%Values.Lookup)",
+		[DDLTypeKind.Bitfield] = null,
+		[DDLTypeKind.Struct] = "GetObjects<%type%>(0x%hash%u)",
+		[DDLTypeKind.Unknown] = "GetFields(0x%hash%u)",
 	};
 
 	public static string Format(string str, Dictionary<string, object> values) {
@@ -49,8 +114,8 @@ public static class DDLTemplate {
 				            int u => u.ToString("x"),
 				            short u => u.ToString("x"),
 				            sbyte u => u.ToString("x"),
-				            float f => f.ToString("F", CultureInfo.InvariantCulture),
-				            decimal f => f.ToString("F", CultureInfo.InvariantCulture),
+				            float f => f.ToString("F", CultureInfo.InvariantCulture) + "f",
+				            decimal f => f.ToString("F", CultureInfo.InvariantCulture) + "d",
 				            _ => value_,
 			            };
 

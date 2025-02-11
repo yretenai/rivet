@@ -7,22 +7,22 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x38e4d198u)]
 public enum x38e4d198 : uint {
-	[DDLRegistration(0xaf03d67cu)] activity,
-	[DDLRegistration(0xc2dcb4abu)] task,
-	[DDLRegistration(0xe5ae5c34u)] subTask,
+	[DDLRegistration(0xaf03d67cu)] Activity,
+	[DDLRegistration(0xc2dcb4abu)] Task,
+	[DDLRegistration(0xe5ae5c34u)] SubTask,
 }
 
 public static class x38e4d198Values {
 	public static Dictionary<uint, x38e4d198> Lookup = new() {
-		[0xaf03d67cu] = x38e4d198.activity,
-		[0xc2dcb4abu] = x38e4d198.task,
-		[0xe5ae5c34u] = x38e4d198.subTask,
+		[0xaf03d67cu] = x38e4d198.Activity,
+		[0xc2dcb4abu] = x38e4d198.Task,
+		[0xe5ae5c34u] = x38e4d198.SubTask,
 	};
 
 	public static Dictionary<x38e4d198, uint> ReverseLookup = new() {
-		[x38e4d198.activity] = 0xaf03d67cu,
-		[x38e4d198.task] = 0xc2dcb4abu,
-		[x38e4d198.subTask] = 0xe5ae5c34u,
+		[x38e4d198.Activity] = 0xaf03d67cu,
+		[x38e4d198.Task] = 0xc2dcb4abu,
+		[x38e4d198.SubTask] = 0xe5ae5c34u,
 	};
 
 	public static uint TypeId => 0x38e4d198u;

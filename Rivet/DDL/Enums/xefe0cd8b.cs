@@ -7,37 +7,37 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xefe0cd8bu)]
 public enum xefe0cd8b : uint {
-	[DDLRegistration(0xffea1812u)] subCategory,
-	[DDLRegistration(0xaf03d67cu)] activity,
-	[DDLRegistration(0x3049af89u)] zone,
-	[DDLRegistration(0x7240015fu)] mechanic,
-	[DDLRegistration(0x9ce7b53cu)] actor,
-	[DDLRegistration(0x28feb1b8u)] trophy,
-	[DDLRegistration(0x0d5d0686u)] trophyGroup,
-	[DDLRegistration(0x4d8e554cu)] trophySet,
+	[DDLRegistration(0xffea1812u)] SubCategory,
+	[DDLRegistration(0xaf03d67cu)] Activity,
+	[DDLRegistration(0x3049af89u)] Zone,
+	[DDLRegistration(0x7240015fu)] Mechanic,
+	[DDLRegistration(0x9ce7b53cu)] Actor,
+	[DDLRegistration(0x28feb1b8u)] Trophy,
+	[DDLRegistration(0x0d5d0686u)] TrophyGroup,
+	[DDLRegistration(0x4d8e554cu)] TrophySet,
 }
 
 public static class xefe0cd8bValues {
 	public static Dictionary<uint, xefe0cd8b> Lookup = new() {
-		[0xffea1812u] = xefe0cd8b.subCategory,
-		[0xaf03d67cu] = xefe0cd8b.activity,
-		[0x3049af89u] = xefe0cd8b.zone,
-		[0x7240015fu] = xefe0cd8b.mechanic,
-		[0x9ce7b53cu] = xefe0cd8b.actor,
-		[0x28feb1b8u] = xefe0cd8b.trophy,
-		[0x0d5d0686u] = xefe0cd8b.trophyGroup,
-		[0x4d8e554cu] = xefe0cd8b.trophySet,
+		[0xffea1812u] = xefe0cd8b.SubCategory,
+		[0xaf03d67cu] = xefe0cd8b.Activity,
+		[0x3049af89u] = xefe0cd8b.Zone,
+		[0x7240015fu] = xefe0cd8b.Mechanic,
+		[0x9ce7b53cu] = xefe0cd8b.Actor,
+		[0x28feb1b8u] = xefe0cd8b.Trophy,
+		[0x0d5d0686u] = xefe0cd8b.TrophyGroup,
+		[0x4d8e554cu] = xefe0cd8b.TrophySet,
 	};
 
 	public static Dictionary<xefe0cd8b, uint> ReverseLookup = new() {
-		[xefe0cd8b.subCategory] = 0xffea1812u,
-		[xefe0cd8b.activity] = 0xaf03d67cu,
-		[xefe0cd8b.zone] = 0x3049af89u,
-		[xefe0cd8b.mechanic] = 0x7240015fu,
-		[xefe0cd8b.actor] = 0x9ce7b53cu,
-		[xefe0cd8b.trophy] = 0x28feb1b8u,
-		[xefe0cd8b.trophyGroup] = 0x0d5d0686u,
-		[xefe0cd8b.trophySet] = 0x4d8e554cu,
+		[xefe0cd8b.SubCategory] = 0xffea1812u,
+		[xefe0cd8b.Activity] = 0xaf03d67cu,
+		[xefe0cd8b.Zone] = 0x3049af89u,
+		[xefe0cd8b.Mechanic] = 0x7240015fu,
+		[xefe0cd8b.Actor] = 0x9ce7b53cu,
+		[xefe0cd8b.Trophy] = 0x28feb1b8u,
+		[xefe0cd8b.TrophyGroup] = 0x0d5d0686u,
+		[xefe0cd8b.TrophySet] = 0x4d8e554cu,
 	};
 
 	public static uint TypeId => 0xefe0cd8bu;

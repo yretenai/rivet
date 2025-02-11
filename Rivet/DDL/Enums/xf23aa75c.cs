@@ -7,19 +7,19 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xf23aa75cu)]
 public enum xf23aa75c : uint {
-	[DDLRegistration(0x1dafe79au)] image,
-	[DDLRegistration(0xa45539e9u)] video,
+	[DDLRegistration(0x1dafe79au)] Image,
+	[DDLRegistration(0xa45539e9u)] Video,
 }
 
 public static class xf23aa75cValues {
 	public static Dictionary<uint, xf23aa75c> Lookup = new() {
-		[0x1dafe79au] = xf23aa75c.image,
-		[0xa45539e9u] = xf23aa75c.video,
+		[0x1dafe79au] = xf23aa75c.Image,
+		[0xa45539e9u] = xf23aa75c.Video,
 	};
 
 	public static Dictionary<xf23aa75c, uint> ReverseLookup = new() {
-		[xf23aa75c.image] = 0x1dafe79au,
-		[xf23aa75c.video] = 0xa45539e9u,
+		[xf23aa75c.Image] = 0x1dafe79au,
+		[xf23aa75c.Video] = 0xa45539e9u,
 	};
 
 	public static uint TypeId => 0xf23aa75cu;

@@ -8,33 +8,33 @@ namespace Rivet.DDL.Enums;
 [DDLRegistration(0x34a3a095u)]
 public enum x34a3a095 : uint {
 	[DDLRegistration(0x65f66e4bu, "Current")] Current,
-	[DDLRegistration(0xc8c0f426u, "256 Square")] k256s,
-	[DDLRegistration(0x3672a147u, "512 Square")] k512s,
-	[DDLRegistration(0xade8a487u, "1080P")] k1080,
-	[DDLRegistration(0x06544357u, "1440P")] k1440,
-	[DDLRegistration(0x201c4cd0u, "4K")] k2160,
-	[DDLRegistration(0x629f0266u, "8K")] k4320,
+	[DDLRegistration(0xc8c0f426u, "256 Square")] K256s,
+	[DDLRegistration(0x3672a147u, "512 Square")] K512s,
+	[DDLRegistration(0xade8a487u, "1080P")] K1080,
+	[DDLRegistration(0x06544357u, "1440P")] K1440,
+	[DDLRegistration(0x201c4cd0u, "4K")] K2160,
+	[DDLRegistration(0x629f0266u, "8K")] K4320,
 }
 
 public static class x34a3a095Values {
 	public static Dictionary<uint, x34a3a095> Lookup = new() {
 		[0x65f66e4bu] = x34a3a095.Current,
-		[0xc8c0f426u] = x34a3a095.k256s,
-		[0x3672a147u] = x34a3a095.k512s,
-		[0xade8a487u] = x34a3a095.k1080,
-		[0x06544357u] = x34a3a095.k1440,
-		[0x201c4cd0u] = x34a3a095.k2160,
-		[0x629f0266u] = x34a3a095.k4320,
+		[0xc8c0f426u] = x34a3a095.K256s,
+		[0x3672a147u] = x34a3a095.K512s,
+		[0xade8a487u] = x34a3a095.K1080,
+		[0x06544357u] = x34a3a095.K1440,
+		[0x201c4cd0u] = x34a3a095.K2160,
+		[0x629f0266u] = x34a3a095.K4320,
 	};
 
 	public static Dictionary<x34a3a095, uint> ReverseLookup = new() {
 		[x34a3a095.Current] = 0x65f66e4bu,
-		[x34a3a095.k256s] = 0xc8c0f426u,
-		[x34a3a095.k512s] = 0x3672a147u,
-		[x34a3a095.k1080] = 0xade8a487u,
-		[x34a3a095.k1440] = 0x06544357u,
-		[x34a3a095.k2160] = 0x201c4cd0u,
-		[x34a3a095.k4320] = 0x629f0266u,
+		[x34a3a095.K256s] = 0xc8c0f426u,
+		[x34a3a095.K512s] = 0x3672a147u,
+		[x34a3a095.K1080] = 0xade8a487u,
+		[x34a3a095.K1440] = 0x06544357u,
+		[x34a3a095.K2160] = 0x201c4cd0u,
+		[x34a3a095.K4320] = 0x629f0266u,
 	};
 
 	public static uint TypeId => 0x34a3a095u;

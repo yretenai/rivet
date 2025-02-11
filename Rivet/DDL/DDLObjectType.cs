@@ -2,8 +2,6 @@
 //
 // SPDX-License-Identifier: EUPL-1.2
 
-using Rivet.Models.Data;
-
 namespace Rivet.DDL;
 
 public abstract class DDLObjectType {

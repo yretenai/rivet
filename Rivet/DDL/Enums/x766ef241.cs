@@ -7,19 +7,19 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x766ef241u)]
 public enum x766ef241 : uint {
-	[DDLRegistration(0xf8549512u)] console,
-	[DDLRegistration(0x63b99ea7u)] server,
+	[DDLRegistration(0xf8549512u)] Console,
+	[DDLRegistration(0x63b99ea7u)] Server,
 }
 
 public static class x766ef241Values {
 	public static Dictionary<uint, x766ef241> Lookup = new() {
-		[0xf8549512u] = x766ef241.console,
-		[0x63b99ea7u] = x766ef241.server,
+		[0xf8549512u] = x766ef241.Console,
+		[0x63b99ea7u] = x766ef241.Server,
 	};
 
 	public static Dictionary<x766ef241, uint> ReverseLookup = new() {
-		[x766ef241.console] = 0xf8549512u,
-		[x766ef241.server] = 0x63b99ea7u,
+		[x766ef241.Console] = 0xf8549512u,
+		[x766ef241.Server] = 0x63b99ea7u,
 	};
 
 	public static uint TypeId => 0x766ef241u;

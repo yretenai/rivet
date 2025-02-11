@@ -7,25 +7,25 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xfb81cf7cu)]
 public enum xfb81cf7c : uint {
-	[DDLRegistration(0x873cf2d8u, "Bronze (15 pts)")] bronze,
-	[DDLRegistration(0x168f530au, "Silver (30 pts)")] silver,
-	[DDLRegistration(0xd70b72dfu, "Gold (90 pts)")] gold,
-	[DDLRegistration(0x2cc5e34bu, "Platinum", "If a platinum trophy is included, it must be the first trophy in the set.")] platinum,
+	[DDLRegistration(0x873cf2d8u, "Bronze (15 pts)")] Bronze,
+	[DDLRegistration(0x168f530au, "Silver (30 pts)")] Silver,
+	[DDLRegistration(0xd70b72dfu, "Gold (90 pts)")] Gold,
+	[DDLRegistration(0x2cc5e34bu, "Platinum", "If a platinum trophy is included, it must be the first trophy in the set.")] Platinum,
 }
 
 public static class xfb81cf7cValues {
 	public static Dictionary<uint, xfb81cf7c> Lookup = new() {
-		[0x873cf2d8u] = xfb81cf7c.bronze,
-		[0x168f530au] = xfb81cf7c.silver,
-		[0xd70b72dfu] = xfb81cf7c.gold,
-		[0x2cc5e34bu] = xfb81cf7c.platinum,
+		[0x873cf2d8u] = xfb81cf7c.Bronze,
+		[0x168f530au] = xfb81cf7c.Silver,
+		[0xd70b72dfu] = xfb81cf7c.Gold,
+		[0x2cc5e34bu] = xfb81cf7c.Platinum,
 	};
 
 	public static Dictionary<xfb81cf7c, uint> ReverseLookup = new() {
-		[xfb81cf7c.bronze] = 0x873cf2d8u,
-		[xfb81cf7c.silver] = 0x168f530au,
-		[xfb81cf7c.gold] = 0xd70b72dfu,
-		[xfb81cf7c.platinum] = 0x2cc5e34bu,
+		[xfb81cf7c.Bronze] = 0x873cf2d8u,
+		[xfb81cf7c.Silver] = 0x168f530au,
+		[xfb81cf7c.Gold] = 0xd70b72dfu,
+		[xfb81cf7c.Platinum] = 0x2cc5e34bu,
 	};
 
 	public static uint TypeId => 0xfb81cf7cu;

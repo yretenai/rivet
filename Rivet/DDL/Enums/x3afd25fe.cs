@@ -7,20 +7,20 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x3afd25feu)]
 public enum x3afd25fe : uint {
-	[DDLRegistration(0xf9dedbafu, "30FPS Only")] k30FPSOnly,
+	[DDLRegistration(0xf9dedbafu, "30FPS Only")] K30FPSOnly,
 	[DDLRegistration(0xf6401711u, "Disable")] Disable,
 	[DDLRegistration(0x938f8d9au, "Allow")] Allow,
 }
 
 public static class x3afd25feValues {
 	public static Dictionary<uint, x3afd25fe> Lookup = new() {
-		[0xf9dedbafu] = x3afd25fe.k30FPSOnly,
+		[0xf9dedbafu] = x3afd25fe.K30FPSOnly,
 		[0xf6401711u] = x3afd25fe.Disable,
 		[0x938f8d9au] = x3afd25fe.Allow,
 	};
 
 	public static Dictionary<x3afd25fe, uint> ReverseLookup = new() {
-		[x3afd25fe.k30FPSOnly] = 0xf9dedbafu,
+		[x3afd25fe.K30FPSOnly] = 0xf9dedbafu,
 		[x3afd25fe.Disable] = 0xf6401711u,
 		[x3afd25fe.Allow] = 0x938f8d9au,
 	};

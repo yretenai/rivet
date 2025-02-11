@@ -8,27 +8,27 @@ namespace Rivet.DDL.Enums;
 [DDLRegistration(0x30866c77u)]
 public enum x30866c77 : uint {
 	[DDLRegistration(0x0eb42269u)] None,
-	[DDLRegistration(0xb8d12ed3u, "0.82")] k0_82,
-	[DDLRegistration(0x889cc446u, "1.333")] k1_333,
-	[DDLRegistration(0xec946d87u, "1.777")] k1_777,
-	[DDLRegistration(0x66b94440u, "2.4")] k2_4,
+	[DDLRegistration(0xb8d12ed3u, "0.82")] K0_82,
+	[DDLRegistration(0x889cc446u, "1.333")] K1_333,
+	[DDLRegistration(0xec946d87u, "1.777")] K1_777,
+	[DDLRegistration(0x66b94440u, "2.4")] K2_4,
 }
 
 public static class x30866c77Values {
 	public static Dictionary<uint, x30866c77> Lookup = new() {
 		[0x0eb42269u] = x30866c77.None,
-		[0xb8d12ed3u] = x30866c77.k0_82,
-		[0x889cc446u] = x30866c77.k1_333,
-		[0xec946d87u] = x30866c77.k1_777,
-		[0x66b94440u] = x30866c77.k2_4,
+		[0xb8d12ed3u] = x30866c77.K0_82,
+		[0x889cc446u] = x30866c77.K1_333,
+		[0xec946d87u] = x30866c77.K1_777,
+		[0x66b94440u] = x30866c77.K2_4,
 	};
 
 	public static Dictionary<x30866c77, uint> ReverseLookup = new() {
 		[x30866c77.None] = 0x0eb42269u,
-		[x30866c77.k0_82] = 0xb8d12ed3u,
-		[x30866c77.k1_333] = 0x889cc446u,
-		[x30866c77.k1_777] = 0xec946d87u,
-		[x30866c77.k2_4] = 0x66b94440u,
+		[x30866c77.K0_82] = 0xb8d12ed3u,
+		[x30866c77.K1_333] = 0x889cc446u,
+		[x30866c77.K1_777] = 0xec946d87u,
+		[x30866c77.K2_4] = 0x66b94440u,
 	};
 
 	public static uint TypeId => 0x30866c77u;

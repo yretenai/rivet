@@ -7,22 +7,22 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x57af8350u)]
 public enum x57af8350 : uint {
-	[DDLRegistration(0x3af441c1u)] completed,
-	[DDLRegistration(0xa75fe826u)] failed,
-	[DDLRegistration(0x3f07f80au)] abandoned,
+	[DDLRegistration(0x3af441c1u)] Completed,
+	[DDLRegistration(0xa75fe826u)] Failed,
+	[DDLRegistration(0x3f07f80au)] Abandoned,
 }
 
 public static class x57af8350Values {
 	public static Dictionary<uint, x57af8350> Lookup = new() {
-		[0x3af441c1u] = x57af8350.completed,
-		[0xa75fe826u] = x57af8350.failed,
-		[0x3f07f80au] = x57af8350.abandoned,
+		[0x3af441c1u] = x57af8350.Completed,
+		[0xa75fe826u] = x57af8350.Failed,
+		[0x3f07f80au] = x57af8350.Abandoned,
 	};
 
 	public static Dictionary<x57af8350, uint> ReverseLookup = new() {
-		[x57af8350.completed] = 0x3af441c1u,
-		[x57af8350.failed] = 0xa75fe826u,
-		[x57af8350.abandoned] = 0x3f07f80au,
+		[x57af8350.Completed] = 0x3af441c1u,
+		[x57af8350.Failed] = 0xa75fe826u,
+		[x57af8350.Abandoned] = 0x3f07f80au,
 	};
 
 	public static uint TypeId => 0x57af8350u;

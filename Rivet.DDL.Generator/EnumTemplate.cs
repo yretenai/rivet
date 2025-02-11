@@ -1,8 +1,8 @@
 namespace Rivet.DDL.Generator;
 
 public static class EnumTemplate {
-	public const string EnumField = "\t%attribute% %name%,";
-	public const string BitsetField = "\t%attribute% %name% = 0x%value%u,";
+	public const string EnumField = "\t[%attribute%] %name%,";
+	public const string BitsetField = "\t[%attribute%] %name% = 0x%value%u,";
 
 	public const string BitsetFlags = ", Flags";
 
@@ -12,7 +12,7 @@ public static class EnumTemplate {
 	public const string EnumBody =
 		"""
 
-		[DDLRegistration(0x%hash%u)%flags%]
+		[%attribute%%flags%]
 		public enum %name% : uint {
 			%body%
 		}
@@ -21,11 +21,11 @@ public static class EnumTemplate {
 			public static Dictionary<uint, %name%> Lookup = new() {
 				%lookup%
 			};
-
+		
 			public static Dictionary<%name%, uint> ReverseLookup = new() {
 				%reverse-lookup%
 			};
-
+		
 			public static uint TypeId => 0x%hash%u;
 		}
 		""";

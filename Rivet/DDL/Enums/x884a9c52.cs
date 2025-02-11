@@ -7,31 +7,31 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0x884a9c52u)]
 public enum x884a9c52 : uint {
-	[DDLRegistration(0x3e2f75e8u)] int32,
-	[DDLRegistration(0xaa3b2498u)] int64,
-	[DDLRegistration(0xf36617b0u)] uint32,
-	[DDLRegistration(0x677246c0u)] uint64,
-	[DDLRegistration(0x33d7b7e2u)] float32,
-	[DDLRegistration(0xa7c3e692u)] float64,
+	[DDLRegistration(0x3e2f75e8u)] Int32,
+	[DDLRegistration(0xaa3b2498u)] Int64,
+	[DDLRegistration(0xf36617b0u)] Uint32,
+	[DDLRegistration(0x677246c0u)] Uint64,
+	[DDLRegistration(0x33d7b7e2u)] Float32,
+	[DDLRegistration(0xa7c3e692u)] Float64,
 }
 
 public static class x884a9c52Values {
 	public static Dictionary<uint, x884a9c52> Lookup = new() {
-		[0x3e2f75e8u] = x884a9c52.int32,
-		[0xaa3b2498u] = x884a9c52.int64,
-		[0xf36617b0u] = x884a9c52.uint32,
-		[0x677246c0u] = x884a9c52.uint64,
-		[0x33d7b7e2u] = x884a9c52.float32,
-		[0xa7c3e692u] = x884a9c52.float64,
+		[0x3e2f75e8u] = x884a9c52.Int32,
+		[0xaa3b2498u] = x884a9c52.Int64,
+		[0xf36617b0u] = x884a9c52.Uint32,
+		[0x677246c0u] = x884a9c52.Uint64,
+		[0x33d7b7e2u] = x884a9c52.Float32,
+		[0xa7c3e692u] = x884a9c52.Float64,
 	};
 
 	public static Dictionary<x884a9c52, uint> ReverseLookup = new() {
-		[x884a9c52.int32] = 0x3e2f75e8u,
-		[x884a9c52.int64] = 0xaa3b2498u,
-		[x884a9c52.uint32] = 0xf36617b0u,
-		[x884a9c52.uint64] = 0x677246c0u,
-		[x884a9c52.float32] = 0x33d7b7e2u,
-		[x884a9c52.float64] = 0xa7c3e692u,
+		[x884a9c52.Int32] = 0x3e2f75e8u,
+		[x884a9c52.Int64] = 0xaa3b2498u,
+		[x884a9c52.Uint32] = 0xf36617b0u,
+		[x884a9c52.Uint64] = 0x677246c0u,
+		[x884a9c52.Float32] = 0x33d7b7e2u,
+		[x884a9c52.Float64] = 0xa7c3e692u,
 	};
 
 	public static uint TypeId => 0x884a9c52u;

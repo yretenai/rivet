@@ -7,19 +7,19 @@ namespace Rivet.DDL.Enums;
 
 [DDLRegistration(0xca2817cau)]
 public enum xca2817ca : uint {
-	[DDLRegistration(0x21762d60u)] progress,
-	[DDLRegistration(0x749ed5dau)] openEnded,
+	[DDLRegistration(0x21762d60u)] Progress,
+	[DDLRegistration(0x749ed5dau)] OpenEnded,
 }
 
 public static class xca2817caValues {
 	public static Dictionary<uint, xca2817ca> Lookup = new() {
-		[0x21762d60u] = xca2817ca.progress,
-		[0x749ed5dau] = xca2817ca.openEnded,
+		[0x21762d60u] = xca2817ca.Progress,
+		[0x749ed5dau] = xca2817ca.OpenEnded,
 	};
 
 	public static Dictionary<xca2817ca, uint> ReverseLookup = new() {
-		[xca2817ca.progress] = 0x21762d60u,
-		[xca2817ca.openEnded] = 0x749ed5dau,
+		[xca2817ca.Progress] = 0x21762d60u,
+		[xca2817ca.OpenEnded] = 0x749ed5dau,
 	};
 
 	public static uint TypeId => 0xca2817cau;

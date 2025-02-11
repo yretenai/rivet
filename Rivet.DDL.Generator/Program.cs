@@ -28,6 +28,12 @@ internal class Program {
 		using var stream = new FileStream(args[0], FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 		var registry = JsonSerializer.Deserialize<DDLRegistry>(stream, Options)!;
 
+		foreach (var value in registry.Types) {
+			if (value.Name!.StartsWith("WWise")) {
+				value.Name = $"WwiseAudio{value.Name[5..]}";
+			}
+		}
+
 		Log.Information("Permutating strings...");
 		var nameLookup = new Dictionary<uint, string>();
 		PermutateNames(registry, nameLookup);
@@ -40,6 +46,14 @@ internal class Program {
 		Log.Information("Generating bitsets...");
 		foreach (var value in registry.Bitsets) {
 			GenerateBitset(nameLookup, value, Path.Combine(args[1], "Enums"));
+		}
+
+		Log.Information("Generating structs...");
+		var roots = registry.Roots.Where(x => x.Parent != null).GroupBy(x => x.Parent!.Id).ToDictionary(x => x.Key, x => x.ToList());
+		var typeMap = registry.Types.ToDictionary(x => x.Id, x => x);
+		var enumMap = registry.Enums.ToDictionary(x => x.Id, x => x);
+		foreach (var value in registry.Types) {
+			GenerateStruct(nameLookup, value, roots, typeMap, enumMap, Path.Combine(args[1], "Types"));
 		}
 	}
 
@@ -120,10 +134,11 @@ internal class Program {
 			name = $"x{value.Id:x8}";
 		}
 
+		name = name.Strip();
+
 		value.Name = name;
 		Log.Information("Writing {Name}", name);
 
-		var target = Path.Combine(path, $"{name}.cs");
 		var fields = new StringBuilder();
 		var fwdlookup = new StringBuilder();
 		var revLookup = new StringBuilder();
@@ -151,12 +166,12 @@ internal class Program {
 			fields.AppendLine(DDLTemplate.Format(EnumTemplate.EnumField, new() {
 				["name"] = field.Name!.Sanitize(),
 				["hash"] = field.Id,
-				["attribute"] = DDLTemplate.Format(DDLTemplate.FieldAttribute, new() {
+				["attribute"] = DDLTemplate.Format(DDLTemplate.RegistrationAttribute, new() {
 					["hash"] = field.Id,
 					["label"] = label,
-				})
+				}),
 			}));
-			var lookupDict = new Dictionary<string, object>() {
+			var lookupDict = new Dictionary<string, object> {
 				["name"] = field.Name!,
 				["enum-name"] = name,
 				["hash"] = field.Id,
@@ -166,6 +181,7 @@ internal class Program {
 			revLookup.AppendLine(DDLTemplate.Format(EnumTemplate.ReverseLookupEntry, lookupDict));
 		}
 
+		var target = Path.Combine(path, $"{name}.cs");
 		using var stream = new FileStream(target, FileMode.Create, FileAccess.Write, FileShare.ReadWrite);
 		using var writer = new StreamWriter(stream);
 		writer.NewLine = "\n";
@@ -181,6 +197,10 @@ internal class Program {
 			["hash"] = value.Id,
 			["lookup"] = fwdlookup.ToString().ReplaceLineEndings("\n").Trim(),
 			["reverse-lookup"] = revLookup.ToString().ReplaceLineEndings("\n").Trim(),
+			["attribute"] = DDLTemplate.Format(DDLTemplate.RegistrationAttribute, new() {
+				["hash"] = value.Id,
+				["label"] = string.Empty,
+			}),
 		}));
 	}
 
@@ -191,10 +211,11 @@ internal class Program {
 			name = $"x{value.Id:x8}";
 		}
 
+		name = name.Strip();
+
 		value.Name = name;
 		Log.Information("Writing {Name}", name);
 
-		var target = Path.Combine(path, $"{name}.cs");
 		var fields = new StringBuilder();
 		var fwdlookup = new StringBuilder();
 		var revLookup = new StringBuilder();
@@ -203,13 +224,13 @@ internal class Program {
 				["name"] = field.Name!.Sanitize(),
 				["hash"] = field.Id,
 				["value"] = field.Value,
-				["attribute"] = DDLTemplate.Format(DDLTemplate.FieldAttribute, new() {
+				["attribute"] = DDLTemplate.Format(DDLTemplate.RegistrationAttribute, new() {
 					["hash"] = field.Id,
 					["label"] = string.Empty,
 				}),
 			}));
 
-			var lookupDict = new Dictionary<string, object>() {
+			var lookupDict = new Dictionary<string, object> {
 				["name"] = field.Name!,
 				["enum-name"] = name,
 				["hash"] = field.Id,
@@ -219,6 +240,7 @@ internal class Program {
 			revLookup.AppendLine(DDLTemplate.Format(EnumTemplate.ReverseLookupEntry, lookupDict));
 		}
 
+		var target = Path.Combine(path, $"{name}.cs");
 		using var stream = new FileStream(target, FileMode.Create, FileAccess.Write, FileShare.ReadWrite);
 		using var writer = new StreamWriter(stream);
 		writer.NewLine = "\n";
@@ -234,6 +256,229 @@ internal class Program {
 			["hash"] = value.Id,
 			["lookup"] = fwdlookup.ToString().ReplaceLineEndings("\n").Trim(),
 			["reverse-lookup"] = revLookup.ToString().ReplaceLineEndings("\n").Trim(),
+			["attribute"] = DDLTemplate.Format(DDLTemplate.RegistrationAttribute, new() {
+				["hash"] = value.Id,
+				["label"] = string.Empty,
+			}),
 		}));
+	}
+
+	private static void GenerateStruct(Dictionary<uint, string> nameLookup, DDLType value, Dictionary<uint, List<DDLTypeRef>> rootLookup, Dictionary<uint, DDLType> typeMap, Dictionary<uint, DDLEnum> enumMap, string path) {
+		Directory.CreateDirectory(path);
+
+		var attribute = DDLTemplate.Format(DDLTemplate.RegistrationAttribute, new() {
+			["hash"] = value.Id,
+			["label"] = string.Empty,
+		});
+
+		if (rootLookup.TryGetValue(value.Id, out var roots)) {
+			foreach (var root in roots) {
+				attribute = DDLTemplate.Format(DDLTemplate.RootAttribute, new() {
+					["hash"] = root.Id,
+					["label"] = root.Name.Strip(),
+				}) + attribute;
+			}
+		}
+
+		var name = value.Name!.Sanitize();
+		var baseName = value.ParentId == 0 ? "DDLObjectType" : nameLookup[value.ParentId].Sanitize();
+
+		var initBody = new StringBuilder();
+		var fieldBody = new StringBuilder();
+
+		var parentFields = new HashSet<uint>();
+		var parentId = value.ParentId;
+		while (parentId != 0) {
+			var parent = typeMap[parentId];
+			parentFields.UnionWith(parent.Fields.Select(x => x.Id));
+			parentId = parent.ParentId;
+		}
+
+		foreach (var field in value.Fields) {
+			if (parentFields.Contains(field.Id)) {
+				continue;
+			}
+
+			field.Name = field.Id switch {
+				             0x1919b90eu => "AssetDocument",
+				             0x927eba20u => "Collections",
+				             _ => field.Name,
+			             };
+
+			var type = field.Type switch {
+				           DDLTypeKind.Struct => typeMap[field.TypeId].Name!.Sanitize() + "?",
+				           DDLTypeKind.Bitfield => nameLookup.GetValueOrDefault(field.TypeId)?.Sanitize() ?? $"x{field.TypeId:x8}",
+				           DDLTypeKind.Enum => nameLookup.GetValueOrDefault(field.EnumTypeId)?.Sanitize() ?? nameLookup.GetValueOrDefault(field.TypeId)?.Sanitize() ?? $"x{field.EnumTypeId:x8}",
+				           _ => DDLTemplate.TypeMapping[field.Type],
+			           };
+
+			object defaultValue = field.ArrayType switch {
+				                      DDLArrayKind.None => "default",
+				                      _ => "[]",
+			                      };
+
+			var defaultPrefix = "";
+			if (field.Default.HasValue) {
+				switch (field.Default.Value.ValueKind) {
+					case JsonValueKind.Object: {
+						defaultValue = $"\"{field.Default.Value.GetProperty("value").ToString().Replace(@"\", "/", StringComparison.Ordinal).Strip()}\"";
+
+						if (field.Type is DDLTypeKind.Asset or DDLTypeKind.Identifier) {
+							defaultValue = $"new RivetAssetId.FromString({defaultValue})";
+						}
+
+						break;
+					}
+					case JsonValueKind.Number: {
+						switch (field.Type) {
+							case DDLTypeKind.UInt8: {
+								defaultPrefix = "0x";
+								defaultValue = field.Default.Value.GetByte();
+								break;
+							}
+							case DDLTypeKind.UInt16: {
+								defaultPrefix = "0x";
+								defaultValue = field.Default.Value.GetUInt16();
+								break;
+							}
+							case DDLTypeKind.UInt32: {
+								defaultPrefix = "0x";
+								defaultValue = field.Default.Value.GetUInt32();
+								break;
+							}
+							case DDLTypeKind.UInt64: {
+								defaultPrefix = "0x";
+								defaultValue = field.Default.Value.GetUInt64();
+								break;
+							}
+							case DDLTypeKind.Identifier:
+							case DDLTypeKind.Asset: {
+								defaultValue = $"new RivetAssetId(0x{field.Default.Value.GetUInt64():x16})";
+								break;
+							}
+							case DDLTypeKind.Int8: {
+								defaultValue = field.Default.Value.GetSByte().ToString("D");
+								break;
+							}
+							case DDLTypeKind.Int16: {
+								defaultValue = field.Default.Value.GetInt16().ToString("D");
+								break;
+							}
+							case DDLTypeKind.Int32: {
+								defaultValue = field.Default.Value.GetInt32().ToString("D");
+								break;
+							}
+							case DDLTypeKind.Int64: {
+								defaultValue = field.Default.Value.GetInt64().ToString("D");
+								break;
+							}
+							case DDLTypeKind.Float: {
+								defaultValue = field.Default.Value.GetSingle();
+								break;
+							}
+							case DDLTypeKind.Double: {
+								defaultValue = field.Default.Value.GetDouble();
+								break;
+							}
+							case DDLTypeKind.Enum: {
+								defaultValue = $"{type}.{enumMap[field.EnumTypeId].Values[field.Default.Value.GetInt32()].Name!.Sanitize()}";
+								break;
+							}
+							case DDLTypeKind.Bitfield: {
+								defaultValue = $"({type}) 0x{field.Default.Value.GetUInt32():x8}";
+								break;
+							}
+							default: throw new NotSupportedException();
+						}
+
+						break;
+					}
+					case JsonValueKind.True or JsonValueKind.False: {
+						defaultValue = field.Default.Value.ToString().ToLower();
+						break;
+					}
+					default:
+						defaultValue = field.Default.Value.ToString();
+						break;
+				}
+			}
+
+			var label = string.Empty;
+			var descriptionPrefix = "description: ";
+
+			var fieldLabel = field.Label.Strip();
+			if (!string.IsNullOrWhiteSpace(fieldLabel)) {
+				label = DDLTemplate.Format(DDLTemplate.LabelAttributeField, new() {
+					["label"] = fieldLabel,
+					["type"] = string.Empty,
+				});
+				descriptionPrefix = string.Empty;
+			}
+
+			var fieldDescription = field.Description.Strip();
+			if (!string.IsNullOrWhiteSpace(fieldDescription)) {
+				label += DDLTemplate.Format(DDLTemplate.LabelAttributeField, new() {
+					["label"] = fieldDescription,
+					["type"] = descriptionPrefix,
+				});
+			}
+
+			fieldBody.AppendLine(DDLTemplate.Format(DDLTemplate.DDLField, new() {
+				["type"] = DDLTemplate.Format(DDLTemplate.ArrayMapping[field.ArrayType], new() {
+					["size"] = field.FixedSize,
+					["type"] = type,
+					["map-type"] = DDLTemplate.TypeMapping[field.MapType].Replace("?", "", StringComparison.Ordinal),
+				}),
+				["name"] = field.Name!.Sanitize(),
+				["default"] = defaultValue,
+				["default-prefix"] = defaultPrefix,
+				["attribute"] = DDLTemplate.Format(DDLTemplate.RegistrationAttribute, new() {
+					["hash"] = value.Id,
+					["label"] = label,
+				}),
+			}));
+
+			// find something that serializes this because i haven't seen a DDL serializer yet.
+			if (field.ArrayType == DDLArrayKind.Map) {
+				continue;
+			}
+
+			string? initTemplate;
+			if (field.ArrayType != DDLArrayKind.None) {
+				initTemplate = DDLTemplate.ArrayReaderMapping.GetValueOrDefault(field.Type, DDLTemplate.DefaultArrayReader);
+			} else {
+				initTemplate = DDLTemplate.ReaderMapping.GetValueOrDefault(field.Type, DDLTemplate.DefaultReader);
+			}
+
+			if (!string.IsNullOrEmpty(initTemplate)) {
+				initBody.AppendLine(DDLTemplate.Format(DDLTemplate.DDLInit, new() {
+					["name"] = field.Name!.Sanitize(),
+					["method"] = DDLTemplate.Format(initTemplate, new() {
+						["type"] = type.Replace("?", "", StringComparison.Ordinal),
+						["hash"] = field.Id,
+						["name"] = field.Name!.Sanitize(),
+					}),
+				}));
+			}
+		}
+
+		var target = Path.Combine(path, $"{name}.cs");
+		using var stream = new FileStream(target, FileMode.Create, FileAccess.Write, FileShare.ReadWrite);
+		using var writer = new StreamWriter(stream);
+		writer.NewLine = "\n";
+
+		writer.WriteLine(DDLTemplate.Format(DDLTemplate.Header, new() {
+			["type"] = "Types",
+		}));
+
+		writer.WriteLine(DDLTemplate.Format(DDLTemplate.DDLBody, new() {
+			["name"] = name,
+			["new"] = value.ParentId == 0 ? string.Empty : "new ",
+			["base-name"] = baseName,
+			["hash"] = value.Id,
+			["init-body"] = initBody.ToString().ReplaceLineEndings("\n").Trim(),
+			["field-body"] = fieldBody.ToString().ReplaceLineEndings("\n").Trim(),
+			["attribute"] = attribute,
+		}).Fixup());
 	}
 }
