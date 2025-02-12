@@ -15,6 +15,8 @@ public class ObjectiveSystemBuiltData : DDLObjectType, IDDLObjectType<ObjectiveS
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x9ce7354bu);
 
 	public ObjectiveSystemBuiltData(DDLObject ddl) : base(ddl) {
+		ObjectiveGraphs = ddl.GetDictionary<RivetAssetId, ObjectiveGraphBuiltTableEntry>(0x7c8910e5, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<ObjectiveGraphBuiltTableEntry>(mapId));
+		MissionGraphs = ddl.GetDictionary<RivetAssetId, MissionGraphBuiltTableEntry>(0xb61940f3, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<MissionGraphBuiltTableEntry>(mapId));
 		AllMissions = ddl.GetObjects<BuiltMissionEntry>(0xae2856c0u);
 	}
 

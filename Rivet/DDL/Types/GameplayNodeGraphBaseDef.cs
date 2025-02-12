@@ -14,7 +14,12 @@ using Rivet.DDL.Enums;
 public class GameplayNodeGraphBaseDef : NodeGraphBaseDef, IDDLObjectType<GameplayNodeGraphBaseDef> {
 	public new static RivetTypeId TypeId { get; } = new RivetTypeId(0xe91b7f23u);
 
-	public GameplayNodeGraphBaseDef(DDLObject ddl) : base(ddl) { }
+	public GameplayNodeGraphBaseDef(DDLObject ddl) : base(ddl) {
+		EmbeddedSubGraphs = ddl.GetDictionary<RivetAssetId, EmbeddedGraphNodeBaseDef>(0x5895c331, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<EmbeddedGraphNodeBaseDef>(mapId));
+		SubGraphs = ddl.GetDictionary<RivetAssetId, ReferencedGraphNodeBaseDef>(0x774f06ee, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<ReferencedGraphNodeBaseDef>(mapId));
+		Connections = ddl.GetDictionary<RivetAssetId, ConnectionTuidDef>(0x322aadce, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<ConnectionTuidDef>(mapId));
+		Comments = ddl.GetDictionary<RivetAssetId, CommentBaseDef>(0xa59f2b5a, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<CommentBaseDef>(mapId));
+	}
 
 	[DDLRegistration(0xe91b7f23u)]
 	public Dictionary<RivetAssetId, EmbeddedGraphNodeBaseDef?> EmbeddedSubGraphs { get; set; } = [];

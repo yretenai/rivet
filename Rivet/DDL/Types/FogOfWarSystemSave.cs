@@ -14,7 +14,9 @@ using Rivet.DDL.Enums;
 public class FogOfWarSystemSave : DDLObjectType, IDDLObjectType<FogOfWarSystemSave> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x0d43cef8u);
 
-	public FogOfWarSystemSave(DDLObject ddl) : base(ddl) { }
+	public FogOfWarSystemSave(DDLObject ddl) : base(ddl) {
+		MapAreas = ddl.GetDictionary<ulong, FogOfWarSavedMapArea>(0xad7df7a6, DDLMapTypeHandler.VisitULong, (mapId, mapDDL) => mapDDL.GetObject<FogOfWarSavedMapArea>(mapId));
+	}
 
 	[DDLRegistration(0x0d43cef8u)]
 	public Dictionary<ulong, FogOfWarSavedMapArea?> MapAreas { get; set; } = [];

@@ -14,7 +14,9 @@ using Rivet.DDL.Enums;
 public class ActiveLooksEngineItem : DDLObjectType, IDDLObjectType<ActiveLooksEngineItem> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x3d3a8840u);
 
-	public ActiveLooksEngineItem(DDLObject ddl) : base(ddl) { }
+	public ActiveLooksEngineItem(DDLObject ddl) : base(ddl) {
+		ActiveLookHashes = ddl.GetDictionary<uint, bool>(0xd73f8ebe, DDLMapTypeHandler.VisitUInt, (mapId, mapDDL) => mapDDL.GetValue<bool>(mapId));
+	}
 
 	[DDLRegistration(0x3d3a8840u)]
 	public Dictionary<uint, bool> ActiveLookHashes { get; set; } = [];

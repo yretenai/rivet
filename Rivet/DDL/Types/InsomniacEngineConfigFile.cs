@@ -28,6 +28,7 @@ public class InsomniacEngineConfigFile : DDLObjectType, IDDLObjectType<Insomniac
 		InstalledWinExtVersion = ddl.GetString(0x8fcab4cf) ?? InstalledWinExtVersion;
 		InstalledMaya2018Version = ddl.GetString(0xb92cfc70) ?? InstalledMaya2018Version;
 		InstalledMaya2020Version = ddl.GetString(0x5344db00) ?? InstalledMaya2020Version;
+		PreviousBranch = ddl.GetDictionary<string, string>(0x8fb2fa46, DDLMapTypeHandler.VisitString, (mapId, mapDDL) => mapDDL.GetString(mapId));
 	}
 
 	[DDLRegistration(0xfd209d15u)]

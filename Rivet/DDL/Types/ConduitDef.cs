@@ -17,6 +17,7 @@ public class ConduitDef : DDLObjectType, IDDLObjectType<ConduitDef> {
 	public ConduitDef(DDLObject ddl) : base(ddl) {
 		VaultMetaData = ddl.GetObject<VaultMetaData>(0x037889aau);
 		IconPath = ddl.GetValue<RivetAssetId>(0xbf5b007fu, IconPath);
+		Events = ddl.GetDictionary<string, ECMEventDef>(0x6dff192d, DDLMapTypeHandler.VisitString, (mapId, mapDDL) => mapDDL.GetObject<ECMEventDef>(mapId));
 	}
 
 	[DDLRegistration(0xdb76dd20u)]

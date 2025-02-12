@@ -14,7 +14,9 @@ using Rivet.DDL.Enums;
 public class AnimSetSessionData : DDLObjectType, IDDLObjectType<AnimSetSessionData> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x1897dbd9u);
 
-	public AnimSetSessionData(DDLObject ddl) : base(ddl) { }
+	public AnimSetSessionData(DDLObject ddl) : base(ddl) {
+		Selection = ddl.GetDictionary<RivetAssetId, RivetAssetId>(0x145893db, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetValue<RivetAssetId>(mapId));
+	}
 
 	[DDLRegistration(0x1897dbd9u)]
 	public Dictionary<RivetAssetId, RivetAssetId> Selection { get; set; } = [];

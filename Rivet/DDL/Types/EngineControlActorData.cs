@@ -15,6 +15,7 @@ public class EngineControlActorData : DDLObjectType, IDDLObjectType<EngineContro
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x0d85ea29u);
 
 	public EngineControlActorData(DDLObject ddl) : base(ddl) {
+		ActiveLooks = ddl.GetDictionary<uint, bool>(0x0a7308e7, DDLMapTypeHandler.VisitUInt, (mapId, mapDDL) => mapDDL.GetValue<bool>(mapId));
 		ActorDef = ddl.GetObject<ActorDef>(0xb8132d8bu);
 		AnimInfo = ddl.GetObject<EngineControlActorAnimInfo>(0x5c4d599fu);
 		Id = ddl.GetValue<RivetAssetId>(0x8a514a8du, Id);

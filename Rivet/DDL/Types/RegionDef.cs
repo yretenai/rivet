@@ -20,7 +20,9 @@ public class RegionDef : DDLObjectType, IDDLObjectType<RegionDef> {
 		Type = ddl.GetEnum<xcafc543d>(0xbc4e9799u, xcafc543dValues.Lookup);
 		InstallGroup = ddl.GetValue<int>(0xfa716c43u, InstallGroup);
 		ParentAsset = ddl.GetValue<RivetAssetId>(0x2e74622cu, ParentAsset);
+		Bookmarks = ddl.GetDictionary<RivetAssetId, RegionBookmark>(0xfa2f5e4c, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<RegionBookmark>(mapId));
 		Aux = ddl.GetString(0x90972571) ?? Aux;
+		GameData = ddl.GetDictionary<RivetAssetId, DDLStructInst>(0xa1f1eb12, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<DDLStructInst>(mapId));
 	}
 
 	[DDLRegistration(0x4813fce8u)]

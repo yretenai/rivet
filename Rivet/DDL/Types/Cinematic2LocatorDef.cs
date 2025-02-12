@@ -18,8 +18,12 @@ public class Cinematic2LocatorDef : DDLObjectType, IDDLObjectType<Cinematic2Loca
 		Id = ddl.GetValue<RivetAssetId>(0x8a514a8du, Id);
 		Name = ddl.GetString(0x6eb3beb6) ?? Name;
 		StartTransform = ddl.GetObject<DDLTransform>(0x96f1f1f8u);
+		EventTracks = ddl.GetDictionary<RivetAssetId, Cinematic2PlacedInstanceEventTrackDef>(0x653e2373, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2PlacedInstanceEventTrackDef>(mapId));
 		HideTrack = ddl.GetObject<Cinematic2PlacedInstanceHideTrackDef>(0xba2bc52eu);
 		PosRotScaleTrack = ddl.GetObject<Cinematic2PlacedInstancePosRotScaleTrackDef>(0x6125fb96u);
+		OrphanTracks = ddl.GetDictionary<RivetAssetId, Cinematic2PlacedInstanceOrphanTrackDef>(0x00ea59a6, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2PlacedInstanceOrphanTrackDef>(mapId));
+		AudioTracks = ddl.GetDictionary<RivetAssetId, Cinematic2LocatorAudioTrackDef>(0x46b73e9c, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2LocatorAudioTrackDef>(mapId));
+		VfxTracks = ddl.GetDictionary<RivetAssetId, Cinematic2LocatorVfxTrackDef>(0xbc4d8836, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2LocatorVfxTrackDef>(mapId));
 	}
 
 	[DDLRegistration(0x0ff71740u)]

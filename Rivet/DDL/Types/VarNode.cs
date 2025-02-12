@@ -14,7 +14,13 @@ using Rivet.DDL.Enums;
 public class VarNode : DDLObjectType, IDDLObjectType<VarNode> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x578dae60u);
 
-	public VarNode(DDLObject ddl) : base(ddl) { }
+	public VarNode(DDLObject ddl) : base(ddl) {
+		SceneNodeReferences = ddl.GetDictionary<RivetAssetId, VarSceneNodeReference>(0xee2eb97e, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<VarSceneNodeReference>(mapId));
+		MaterialOverrides = ddl.GetDictionary<RivetAssetId, VarMaterialOverride>(0x68221c5d, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<VarMaterialOverride>(mapId));
+		RenderConstantOverrides = ddl.GetDictionary<RivetAssetId, VarRenderConstantOverride>(0xfee09530, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<VarRenderConstantOverride>(mapId));
+		RenderColorOverrides = ddl.GetDictionary<RivetAssetId, VarRenderColorOverride>(0xcc0be14a, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<VarRenderColorOverride>(mapId));
+		RenderTextureOverrides = ddl.GetDictionary<RivetAssetId, VarRenderTextureOverride>(0xe301fc32, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<VarRenderTextureOverride>(mapId));
+	}
 
 	[DDLRegistration(0x578dae60u)]
 	public Dictionary<RivetAssetId, VarSceneNodeReference?> SceneNodeReferences { get; set; } = [];

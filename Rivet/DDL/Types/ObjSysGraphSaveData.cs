@@ -16,6 +16,7 @@ public class ObjSysGraphSaveData : DDLObjectType, IDDLObjectType<ObjSysGraphSave
 
 	public ObjSysGraphSaveData(DDLObject ddl) : base(ddl) {
 		GraphAsset = ddl.GetValue<ulong>(0xc410bd69u, GraphAsset);
+		NodeDataTable = ddl.GetDictionary<uint, ObjSysNodeSaveDataTableEntry>(0xfc6726b8, DDLMapTypeHandler.VisitUInt, (mapId, mapDDL) => mapDDL.GetObject<ObjSysNodeSaveDataTableEntry>(mapId));
 	}
 
 	[DDLRegistration(0x1f627715u)]

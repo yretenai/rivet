@@ -15,6 +15,8 @@ public class EngineState : DDLObjectType, IDDLObjectType<EngineState> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0xd8901ac0u);
 
 	public EngineState(DDLObject ddl) : base(ddl) {
+		SceneObjects = ddl.GetDictionary<RivetAssetId, EngineSceneObject>(0xf9164c1e, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<EngineSceneObject>(mapId));
+		ModelInsts = ddl.GetDictionary<RivetAssetId, EngineModelInst>(0x379405ad, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<EngineModelInst>(mapId));
 		Atmosphere = ddl.GetValue<RivetAssetId>(0x79fd859au, Atmosphere);
 	}
 

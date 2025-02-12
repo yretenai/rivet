@@ -17,8 +17,10 @@ public class MissionSaveDataShared : ObjSysNodeSaveData, IDDLObjectType<MissionS
 	public MissionSaveDataShared(DDLObject ddl) : base(ddl) {
 		MissionState = ddl.GetEnum<MissionStates>(0xd5bb196bu, MissionStatesValues.Lookup);
 		MissionFlagsShared = ddl.GetBitset<MissionFlagsSharedBitfield>(0xf6f252adu, MissionFlagsSharedBitfieldValues.Lookup);
+		MissionDataStore = ddl.GetDictionary<ulong, bool>(0x3d39f130, DDLMapTypeHandler.VisitULong, (mapId, mapDDL) => mapDDL.GetValue<bool>(mapId));
 		CompletedCount = ddl.GetValue<uint>(0x2fe71fe5u, CompletedCount);
 		DevstatsSegmentId = ddl.GetValue<uint>(0x70b2117bu, DevstatsSegmentId);
+		SyncOutputState = ddl.GetDictionary<uint, SyncOutputData>(0xf2a55da9, DDLMapTypeHandler.VisitUInt, (mapId, mapDDL) => mapDDL.GetObject<SyncOutputData>(mapId));
 	}
 
 	[DDLRegistration(0x282ddc12u)]

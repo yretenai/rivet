@@ -16,8 +16,12 @@ public class EngineControlSessionData : DDLObjectType, IDDLObjectType<EngineCont
 
 	public EngineControlSessionData(DDLObject ddl) : base(ddl) {
 		Active = ddl.GetValue<bool>(0x7566b265u, Active);
+		Actors = ddl.GetDictionary<RivetAssetId, EngineControlActorData>(0xe153be82, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<EngineControlActorData>(mapId));
+		AssetOverrides = ddl.GetDictionary<RivetAssetId, EngineControlAssetOverride>(0xb7eef61d, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<EngineControlAssetOverride>(mapId));
 		Atmosphere = ddl.GetValue<RivetAssetId>(0x79fd859au, Atmosphere);
 		BrightnessScale = ddl.GetValue<float>(0x42a1ebf3u, BrightnessScale);
+		Cameras = ddl.GetDictionary<string, EngineControlCamera>(0x6ab54452, DDLMapTypeHandler.VisitString, (mapId, mapDDL) => mapDDL.GetObject<EngineControlCamera>(mapId));
+		ModelInstances = ddl.GetDictionary<RivetAssetId, EngineControlModelInstanceData>(0x4e9467ed, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<EngineControlModelInstanceData>(mapId));
 	}
 
 	[DDLRegistration(0xbb476265u)]

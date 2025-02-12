@@ -20,6 +20,7 @@ public class Cinematic2CameraDofFollowTrackDef : DDLObjectType, IDDLObjectType<C
 		PlatformFilter = ddl.GetBitset<xb52df7e7>(0x92542397u, xb52df7e7Values.Lookup);
 		Tags = ddl.GetObject<Cinematic2TrackTagsDef>(0x5f2c5496u);
 		Global = ddl.GetValue<bool>(0xd67dc5e4u, Global);
+		FollowActions = ddl.GetDictionary<RivetAssetId, Cinematic2CameraDofFollowActionDef>(0x271e731d, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2CameraDofFollowActionDef>(mapId));
 	}
 
 	[DDLRegistration(0x45d1831eu)]

@@ -29,6 +29,7 @@ public class Cinematic2VfxActionDef : DDLObjectType, IDDLObjectType<Cinematic2Vf
 		KillImmediate = ddl.GetValue<bool>(0x635c25beu, KillImmediate);
 		PreserveOnJump = ddl.GetValue<bool>(0xc0f60590u, PreserveOnJump);
 		InstanceCountMax = ddl.GetValue<int>(0x8ed02efbu, InstanceCountMax);
+		SubActions = ddl.GetDictionary<RivetAssetId, Cinematic2VfxSubActionDef>(0x5aa13e85, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2VfxSubActionDef>(mapId));
 	}
 
 	[DDLRegistration(0x2f4354dau)]

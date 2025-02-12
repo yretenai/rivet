@@ -17,6 +17,7 @@ public class ObjectiveGraphBuiltShared : DDLObjectType, IDDLObjectType<Objective
 	public ObjectiveGraphBuiltShared(DDLObject ddl) : base(ddl) {
 		Nodes = ddl.GetObject<GraphNodesBuilt>(0x046ec93du);
 		SortedObjectives = ddl.GetObject<SortedNodeNames>(0xac7cac92u);
+		Objectives = ddl.GetDictionary<uint, ObjectiveNodeBuiltTableEntry>(0xb7863755, DDLMapTypeHandler.VisitUInt, (mapId, mapDDL) => mapDDL.GetObject<ObjectiveNodeBuiltTableEntry>(mapId));
 	}
 
 	[DDLRegistration(0x29725cf7u)]

@@ -17,6 +17,7 @@ public class AnimInfoEngineItem : DDLObjectType, IDDLObjectType<AnimInfoEngineIt
 	public AnimInfoEngineItem(DDLObject ddl) : base(ddl) {
 		AnimationDuration = ddl.GetValue<float>(0x13d5b73du, AnimationDuration);
 		AnimationTime = ddl.GetValue<float>(0x61e5a0d8u, AnimationTime);
+		AnimLayers = ddl.GetDictionary<int, string>(0xe71bdc47, DDLMapTypeHandler.VisitInt, (mapId, mapDDL) => mapDDL.GetString(mapId));
 		AnimPlaying = ddl.GetValue<bool>(0x8229ca99u, AnimPlaying);
 	}
 

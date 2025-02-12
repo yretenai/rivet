@@ -21,6 +21,10 @@ public class ECMFilterDef : DDLObjectType, IDDLObjectType<ECMFilterDef> {
 		Name = ddl.GetString(0x6eb3beb6) ?? Name;
 		ContinueType = ddl.GetEnum<x97f06575>(0x55624b9fu, x97f06575Values.Lookup);
 		Scope = ddl.GetEnum<x3c7c71d2>(0x19fc9912u, x3c7c71d2Values.Lookup);
+		SelectorNodes = ddl.GetDictionary<RivetAssetId, ECMSelectorNodeDef>(0x86fc0ba6, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<ECMSelectorNodeDef>(mapId));
+		InputNodes = ddl.GetDictionary<RivetAssetId, ECMInputNodeDef>(0x1982bfed, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<ECMInputNodeDef>(mapId));
+		CommentNodes = ddl.GetDictionary<RivetAssetId, ECMCommentNodeDef>(0x6461c08f, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<ECMCommentNodeDef>(mapId));
+		Responses = ddl.GetDictionary<RivetAssetId, ECMResponseDef>(0xb3a20098, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<ECMResponseDef>(mapId));
 	}
 
 	[DDLRegistration(0xc9e150ebu)]

@@ -22,6 +22,7 @@ public class UI_MaterialGraphNode : DDLObjectType, IDDLObjectType<UI_MaterialGra
 		PrependNodeName = ddl.GetValue<bool>(0x5dda1f00u, PrependNodeName);
 		SortOrder = ddl.GetValue<int>(0xbd9f03f1u, SortOrder);
 		IsSubGraph = ddl.GetValue<bool>(0xf2039ed8u, IsSubGraph);
+		InputList = ddl.GetDictionary<uint, UI_MaterialGraphNodeInput>(0x2f3e8cb8, DDLMapTypeHandler.VisitUInt, (mapId, mapDDL) => mapDDL.GetObject<UI_MaterialGraphNodeInput>(mapId));
 	}
 
 	[DDLRegistration(0x8b6e1f19u)]

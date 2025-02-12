@@ -18,6 +18,7 @@ public class UI_BezierCurveDef : DDLObjectType, IDDLObjectType<UI_BezierCurveDef
 		Id = ddl.GetValue<RivetAssetId>(0x8a514a8du, Id);
 		Name = ddl.GetString(0x6eb3beb6) ?? Name;
 		DimensionOrder = ddl.GetValues<RivetAssetId>(0x7ce4669fu);
+		Dimensions = ddl.GetDictionary<RivetAssetId, BezierCurveDimensionDef>(0x394bd59c, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<BezierCurveDimensionDef>(mapId));
 		ExtrapolateModeIn = ddl.GetEnum<x74a6ffcc>(0xb0cececau, x74a6ffccValues.Lookup);
 		ExtrapolateModeOut = ddl.GetEnum<x74a6ffcc>(0x81d2e76du, x74a6ffccValues.Lookup);
 		RotationOrder = ddl.GetEnum<x4eda4f54>(0x1f9ce070u, x4eda4f54Values.Lookup);

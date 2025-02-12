@@ -14,7 +14,9 @@ using Rivet.DDL.Enums;
 public class UDSWebApiSubCategoryMetadata : DDLObjectType, IDDLObjectType<UDSWebApiSubCategoryMetadata> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x9fd50ec2u);
 
-	public UDSWebApiSubCategoryMetadata(DDLObject ddl) : base(ddl) { }
+	public UDSWebApiSubCategoryMetadata(DDLObject ddl) : base(ddl) {
+		Name = ddl.GetDictionary<string, string>(0xce811188, DDLMapTypeHandler.VisitString, (mapId, mapDDL) => mapDDL.GetString(mapId));
+	}
 
 	[DDLRegistration(0x9fd50ec2u)]
 	public Dictionary<string, string?> Name { get; set; } = [];

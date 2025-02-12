@@ -14,7 +14,10 @@ using Rivet.DDL.Enums;
 public class AnimPerformanceClipUpdateData : DDLObjectType, IDDLObjectType<AnimPerformanceClipUpdateData> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0xea582e9eu);
 
-	public AnimPerformanceClipUpdateData(DDLObject ddl) : base(ddl) { }
+	public AnimPerformanceClipUpdateData(DDLObject ddl) : base(ddl) {
+		BodyGestures = ddl.GetDictionary<RivetAssetId, AnimGestureUpdateData>(0x9a327d20, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<AnimGestureUpdateData>(mapId));
+		FacialExpressions = ddl.GetDictionary<RivetAssetId, AnimFacialExpressionUpdateData>(0xcd0fa43a, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<AnimFacialExpressionUpdateData>(mapId));
+	}
 
 	[DDLRegistration(0xea582e9eu)]
 	public Dictionary<RivetAssetId, AnimGestureUpdateData?> BodyGestures { get; set; } = [];

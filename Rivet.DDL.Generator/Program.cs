@@ -438,13 +438,18 @@ internal class Program {
 				}),
 			}));
 
-			// find something that serializes this because i haven't seen a DDL serializer yet.
-			if (field.ArrayType == DDLArrayKind.Map) {
-				continue;
-			}
-
 			string? initTemplate;
-			if (field.ArrayType != DDLArrayKind.None) {
+			var visitor = string.Empty;
+			var keyHandler = string.Empty;
+			if (field.ArrayType == DDLArrayKind.Map) {
+				initTemplate = DDLTemplate.MapReader;
+				visitor = DDLTemplate.Format(DDLTemplate.DictionaryReaderMapping.GetValueOrDefault(field.Type, DDLTemplate.DefaultMapReader), new() {
+					["type"] = type.Replace("?", "", StringComparison.Ordinal),
+				});
+				keyHandler = DDLTemplate.Format(DDLTemplate.DefaultMapKeyHandler, new() {
+					["type"] = DDLTemplate.MapTypeMapping[field.MapType],
+				});
+			} else if (field.ArrayType != DDLArrayKind.None) {
 				initTemplate = DDLTemplate.ArrayReaderMapping.GetValueOrDefault(field.Type, DDLTemplate.DefaultArrayReader);
 			} else {
 				initTemplate = DDLTemplate.ReaderMapping.GetValueOrDefault(field.Type, DDLTemplate.DefaultReader);
@@ -455,6 +460,9 @@ internal class Program {
 					["name"] = field.Name!.Sanitize(),
 					["method"] = DDLTemplate.Format(initTemplate, new() {
 						["type"] = type.Replace("?", "", StringComparison.Ordinal),
+						["map-type"] = DDLTemplate.TypeMapping[field.MapType].Replace("?", "", StringComparison.Ordinal),
+						["key-handler"] = keyHandler,
+						["visitor"] = visitor,
 						["hash"] = field.Id,
 						["name"] = field.Name!.Sanitize(),
 					}),

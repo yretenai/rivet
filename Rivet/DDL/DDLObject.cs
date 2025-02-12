@@ -3,8 +3,10 @@
 // SPDX-License-Identifier: EUPL-1.2
 
 using System.Diagnostics;
+using System.Globalization;
 using System.Reflection;
 using Rivet.Models;
+using Rivet.Models.Data;
 
 namespace Rivet.DDL;
 
@@ -36,12 +38,10 @@ public class DDLObject : Dictionary<uint, DDLField> {
 
 			TypeRegistration[attr.Id] = type;
 
-			var rootAttribute = type.GetCustomAttribute<DDLTypeRootAttribute>();
-			if (rootAttribute == null) {
-				continue;
+			var rootAttributes = type.GetCustomAttributes<DDLTypeRootAttribute>();
+			foreach (var rootAttribute in rootAttributes) {
+				RootRegistration[rootAttribute.Id] = type;
 			}
-
-			RootRegistration[rootAttribute.Id] = type;
 		}
 	}
 
@@ -69,7 +69,7 @@ public class DDLObject : Dictionary<uint, DDLField> {
 				case null:
 					break;
 				default:
-					throw new InvalidOperationException($"Cannot cast to {typeof(T).FullName}");
+					return (T) Convert.ChangeType(field.Value[index], typeof(T))!;
 			}
 		}
 
@@ -155,7 +155,8 @@ public class DDLObject : Dictionary<uint, DDLField> {
 					case null:
 						break;
 					default:
-						throw new InvalidOperationException($"Cannot cast to {typeof(T).FullName}");
+						list.Add((T) Convert.ChangeType(field.Value[index], typeof(T))!);
+						break;
 				}
 			}
 
@@ -221,6 +222,20 @@ public class DDLObject : Dictionary<uint, DDLField> {
 		return [];
 	}
 
+	public Dictionary<TKey, TValue?> GetDictionary<TKey, TValue>(uint id, Func<string, TKey> keyVisitor, Func<uint, DDLObject, TValue?> valueVisitor) where TKey : notnull {
+		if (GetField(id) is not DDLObject ddl) {
+			return [];
+		}
+
+		var result = new Dictionary<TKey, TValue?>();
+
+		foreach (var (_, value) in ddl) {
+			result[keyVisitor(value.Name)] = valueVisitor(value.Id, ddl);
+		}
+
+		return result;
+	}
+
 	public Dictionary<string, object?> Collapse() {
 		var result = new Dictionary<string, object?>();
 		foreach (var (_, value) in this) {
@@ -257,4 +272,21 @@ public class DDLObject : Dictionary<uint, DDLField> {
 	}
 
 	private delegate DDLObjectType? CreateDelegate(Type T, DDLPolymorphicObject instance);
+}
+
+public static class DDLMapTypeHandler {
+	public static bool VisitBool(string value) => bool.TryParse(value, out var result) ? result : default;
+	public static string VisitString(string value) => value;
+	public static byte VisitByte(string value) => byte.TryParse(value, NumberStyles.Integer, null, out var result) ? result : default;
+	public static sbyte VisitSByte(string value) => sbyte.TryParse(value, NumberStyles.Integer, null, out var result) ? result : default;
+	public static ushort VisitUShort(string value) => ushort.TryParse(value, NumberStyles.Integer, null, out var result) ? result : default;
+	public static short VisitShort(string value) => short.TryParse(value, NumberStyles.Integer, null, out var result) ? result : default;
+	public static uint VisitUInt(string value) => uint.TryParse(value, NumberStyles.Integer, null, out var result) ? result : default;
+	public static int VisitInt(string value) => int.TryParse(value, NumberStyles.Integer, null, out var result) ? result : default;
+	public static ulong VisitULong(string value) => ulong.TryParse(value, NumberStyles.Integer, null, out var result) ? result : default;
+	public static long VisitLong(string value) => long.TryParse(value, NumberStyles.Integer, null, out var result) ? result : default;
+	public static float VisitFloat(string value) => float.TryParse(value, NumberStyles.Float, null, out var result) ? result : default;
+	public static double VisitDouble(string value) => double.TryParse(value, NumberStyles.Float, null, out var result) ? result : default;
+	public static RivetTypeId VisitRivetTypeId(string value) => new(VisitUInt(value));
+	public static RivetAssetId VisitRivetAssetId(string value) => ulong.TryParse(value, NumberStyles.Integer, null, out var result) ? new RivetAssetId(result) : RivetAssetId.FromString(RivetAssetId.NormalizeString(value));
 }

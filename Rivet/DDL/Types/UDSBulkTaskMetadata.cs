@@ -16,6 +16,7 @@ public class UDSBulkTaskMetadata : DDLObjectType, IDDLObjectType<UDSBulkTaskMeta
 
 	public UDSBulkTaskMetadata(DDLObject ddl) : base(ddl) {
 		Type = ddl.GetEnum<x38e4d198>(0x1c7c38a7u, x38e4d198Values.Lookup);
+		Name = ddl.GetDictionary<string, string>(0xce811188, DDLMapTypeHandler.VisitString, (mapId, mapDDL) => mapDDL.GetString(mapId));
 		DefaultPlaytimeEstimate = ddl.GetValue<uint>(0xa5884b3eu, DefaultPlaytimeEstimate);
 		IsRequiredForCompletion = ddl.GetValue<bool>(0x054f0180u, IsRequiredForCompletion);
 		Hidden = ddl.GetValue<bool>(0xb189a2ecu, Hidden);

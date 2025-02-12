@@ -30,6 +30,7 @@ public class SceneUIEngineItem : DDLObjectType, IDDLObjectType<SceneUIEngineItem
 		DebugCameraId = ddl.GetValue<RivetAssetId>(0xe2407c64u, DebugCameraId);
 		CameraControlType = ddl.GetEnum<CameraControlType>(0xe84ddf61u, CameraControlTypeValues.Lookup);
 		GamepadEnableMode = ddl.GetEnum<GamepadEnableMode>(0xcfd4e774u, GamepadEnableModeValues.Lookup);
+		SelectableNodes = ddl.GetDictionary<RivetAssetId, bool>(0x0e6c7821, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetValue<bool>(mapId));
 	}
 
 	[DDLRegistration(0x5ee2cf6eu)]

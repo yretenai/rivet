@@ -23,6 +23,10 @@ public class AnimSetSequenceDef : DDLObjectType, IDDLObjectType<AnimSetSequenceD
 		InitialVars = ddl.GetObjects<AnimSetSequenceVarDef>(0x280451c2u);
 		InitialFilters = ddl.GetObjects<AnimSetSequenceFilterDef>(0x6575d7cau);
 		InitialDrivers = ddl.GetStrings(0xf9127340u);
+		Vars = ddl.GetDictionary<RivetAssetId, AnimSetSequenceVarDef>(0xc2907a09, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<AnimSetSequenceVarDef>(mapId));
+		Filters = ddl.GetDictionary<RivetAssetId, AnimSetSequenceFilterDef>(0x799d04b5, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<AnimSetSequenceFilterDef>(mapId));
+		Drivers = ddl.GetDictionary<RivetAssetId, AnimSetSequenceDriverDef>(0xe5faa03f, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<AnimSetSequenceDriverDef>(mapId));
+		Transforms = ddl.GetDictionary<RivetAssetId, AnimSetSequenceTransformDef>(0x6828fce6, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<AnimSetSequenceTransformDef>(mapId));
 	}
 
 	[DDLRegistration(0xefd77d5bu)]

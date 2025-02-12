@@ -14,7 +14,9 @@ using Rivet.DDL.Enums;
 public class MaterialOverridesEngineItem : DDLObjectType, IDDLObjectType<MaterialOverridesEngineItem> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0xd0672e59u);
 
-	public MaterialOverridesEngineItem(DDLObject ddl) : base(ddl) { }
+	public MaterialOverridesEngineItem(DDLObject ddl) : base(ddl) {
+		AssetPath = ddl.GetDictionary<string, RivetAssetId>(0x0efa614b, DDLMapTypeHandler.VisitString, (mapId, mapDDL) => mapDDL.GetValue<RivetAssetId>(mapId));
+	}
 
 	[DDLRegistration(0xd0672e59u)]
 	public Dictionary<string, RivetAssetId> AssetPath { get; set; } = [];

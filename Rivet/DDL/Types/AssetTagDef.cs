@@ -17,6 +17,7 @@ public class AssetTagDef : DDLObjectType, IDDLObjectType<AssetTagDef> {
 	public AssetTagDef(DDLObject ddl) : base(ddl) {
 		VaultMetaData = ddl.GetObject<VaultMetaData>(0x037889aau);
 		IconPath = ddl.GetValue<RivetAssetId>(0xbf5b007fu, IconPath);
+		Assets = ddl.GetDictionary<RivetAssetId, AssetTagEntry>(0x47a933e9, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<AssetTagEntry>(mapId));
 	}
 
 	[DDLRegistration(0x7d099796u)]

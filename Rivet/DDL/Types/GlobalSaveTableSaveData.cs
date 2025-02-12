@@ -14,7 +14,9 @@ using Rivet.DDL.Enums;
 public class GlobalSaveTableSaveData : DDLObjectType, IDDLObjectType<GlobalSaveTableSaveData> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x4f38bae1u);
 
-	public GlobalSaveTableSaveData(DDLObject ddl) : base(ddl) { }
+	public GlobalSaveTableSaveData(DDLObject ddl) : base(ddl) {
+		Table = ddl.GetDictionary<uint, float>(0xef7a4387, DDLMapTypeHandler.VisitUInt, (mapId, mapDDL) => mapDDL.GetValue<float>(mapId));
+	}
 
 	[DDLRegistration(0x4f38bae1u)]
 	public Dictionary<uint, float> Table { get; set; } = [];

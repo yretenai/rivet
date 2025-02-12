@@ -14,7 +14,9 @@ using Rivet.DDL.Enums;
 public class TweakVars : DDLObjectType, IDDLObjectType<TweakVars> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0xe89cb288u);
 
-	public TweakVars(DDLObject ddl) : base(ddl) { }
+	public TweakVars(DDLObject ddl) : base(ddl) {
+		Files = ddl.GetDictionary<int, TweakVarFile>(0x1f668c98, DDLMapTypeHandler.VisitInt, (mapId, mapDDL) => mapDDL.GetObject<TweakVarFile>(mapId));
+	}
 
 	[DDLRegistration(0xe89cb288u)]
 	public Dictionary<int, TweakVarFile?> Files { get; set; } = [];

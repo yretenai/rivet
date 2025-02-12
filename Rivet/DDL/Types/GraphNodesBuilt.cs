@@ -16,6 +16,7 @@ public class GraphNodesBuilt : DDLObjectType, IDDLObjectType<GraphNodesBuilt> {
 
 	public GraphNodesBuilt(DDLObject ddl) : base(ddl) {
 		GraphName = ddl.GetString(0xe277891a) ?? GraphName;
+		Nodes = ddl.GetDictionary<ulong, BuiltNodeInfo>(0x046ec93d, DDLMapTypeHandler.VisitULong, (mapId, mapDDL) => mapDDL.GetObject<BuiltNodeInfo>(mapId));
 		SortedNodes = ddl.GetValues<ulong>(0x070d0ceau);
 		MaxDepth = ddl.GetValue<uint>(0xe33ddbfeu, MaxDepth);
 	}

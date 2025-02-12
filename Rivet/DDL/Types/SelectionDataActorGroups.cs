@@ -14,7 +14,9 @@ using Rivet.DDL.Enums;
 public class SelectionDataActorGroups : DDLObjectType, IDDLObjectType<SelectionDataActorGroups> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0xf75435fcu);
 
-	public SelectionDataActorGroups(DDLObject ddl) : base(ddl) { }
+	public SelectionDataActorGroups(DDLObject ddl) : base(ddl) {
+		SelectedObjects = ddl.GetDictionary<RivetAssetId, RivetAssetId>(0x7bd56f26, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetValue<RivetAssetId>(mapId));
+	}
 
 	[DDLRegistration(0xf75435fcu)]
 	public Dictionary<RivetAssetId, RivetAssetId> SelectedObjects { get; set; } = [];

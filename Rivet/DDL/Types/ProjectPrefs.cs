@@ -14,7 +14,9 @@ using Rivet.DDL.Enums;
 public class ProjectPrefs : DDLObjectType, IDDLObjectType<ProjectPrefs> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x2c8a352eu);
 
-	public ProjectPrefs(DDLObject ddl) : base(ddl) { }
+	public ProjectPrefs(DDLObject ddl) : base(ddl) {
+		Project = ddl.GetDictionary<string, ProjectDef>(0x2e59b3d6, DDLMapTypeHandler.VisitString, (mapId, mapDDL) => mapDDL.GetObject<ProjectDef>(mapId));
+	}
 
 	[DDLRegistration(0x2c8a352eu)]
 	public Dictionary<string, ProjectDef?> Project { get; set; } = [];

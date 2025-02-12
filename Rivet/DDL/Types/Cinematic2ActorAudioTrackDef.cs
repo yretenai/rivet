@@ -20,6 +20,10 @@ public class Cinematic2ActorAudioTrackDef : DDLObjectType, IDDLObjectType<Cinema
 		PlatformFilter = ddl.GetBitset<xb52df7e7>(0x92542397u, xb52df7e7Values.Lookup);
 		Tags = ddl.GetObject<Cinematic2TrackTagsDef>(0x5f2c5496u);
 		Global = ddl.GetValue<bool>(0xd67dc5e4u, Global);
+		AudioActions = ddl.GetDictionary<RivetAssetId, Cinematic2AudioActionDef>(0xf24716d6, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2AudioActionDef>(mapId));
+		AudioRtpcTracks = ddl.GetDictionary<RivetAssetId, Cinematic2AudioRtpcTrackDef>(0x6d0f9919, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2AudioRtpcTrackDef>(mapId));
+		SwitchGroupActions = ddl.GetDictionary<RivetAssetId, Cinematic2AudioGameSyncGroupActionDef>(0xef6dee92, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2AudioGameSyncGroupActionDef>(mapId));
+		TriggerActions = ddl.GetDictionary<RivetAssetId, Cinematic2AudioGameSyncActionDef>(0xfabff2d2, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2AudioGameSyncActionDef>(mapId));
 	}
 
 	[DDLRegistration(0xf4b2784au)]

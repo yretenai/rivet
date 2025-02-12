@@ -20,6 +20,7 @@ public class Cinematic2HideTrackDef : DDLObjectType, IDDLObjectType<Cinematic2Hi
 		PlatformFilter = ddl.GetBitset<xb52df7e7>(0x92542397u, xb52df7e7Values.Lookup);
 		Tags = ddl.GetObject<Cinematic2TrackTagsDef>(0x5f2c5496u);
 		Global = ddl.GetValue<bool>(0xd67dc5e4u, Global);
+		Actions = ddl.GetDictionary<RivetAssetId, Cinematic2HideActionDef>(0x04a292d7, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2HideActionDef>(mapId));
 	}
 
 	[DDLRegistration(0x49b8dc37u)]

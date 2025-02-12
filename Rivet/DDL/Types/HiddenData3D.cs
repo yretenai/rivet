@@ -14,7 +14,9 @@ using Rivet.DDL.Enums;
 public class HiddenData3D : DDLObjectType, IDDLObjectType<HiddenData3D> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x3f94c183u);
 
-	public HiddenData3D(DDLObject ddl) : base(ddl) { }
+	public HiddenData3D(DDLObject ddl) : base(ddl) {
+		HiddenObjects = ddl.GetDictionary<RivetAssetId, RivetAssetId>(0xda59e67e, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetValue<RivetAssetId>(mapId));
+	}
 
 	[DDLRegistration(0x3f94c183u)]
 	public Dictionary<RivetAssetId, RivetAssetId> HiddenObjects { get; set; } = [];

@@ -35,6 +35,7 @@ public class AnimClipDef : DDLObjectType, IDDLObjectType<AnimClipDef> {
 		PartialMotion = ddl.GetValue<bool>(0x83e58212u, PartialMotion);
 		MotionJointDataQuality = ddl.GetEnum<x26111896>(0xf1c95fc9u, x26111896Values.Lookup);
 		Curves = ddl.GetObjects<BezierCurveDef>(0x70243e1eu);
+		CustomTracks = ddl.GetDictionary<RivetAssetId, BezierCurveDef>(0xa97a036d, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<BezierCurveDef>(mapId));
 		FacialVisemePoses = ddl.GetObjects<AnimFacialPoseDef>(0xce26cee7u);
 		FacialVisemeMap = ddl.GetObjects<AnimFacialVisemeMapDef>(0x8bc3379cu);
 		FacialExpressionPoses = ddl.GetObjects<AnimFacialPoseDef>(0x41bf9457u);

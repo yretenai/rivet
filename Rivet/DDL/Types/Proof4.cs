@@ -24,6 +24,7 @@ public class Proof4 : DDLObjectType, IDDLObjectType<Proof4> {
 		C = ddl.GetValues<int>(0xd4568861u);
 		BitsB = ddl.GetBitset<BitsB>(0xb5956d7du, BitsBValues.Lookup);
 		Proof = ddl.GetObject<Proof3>(0xe2aa8c1cu);
+		Hash = ddl.GetDictionary<int, int>(0xe128a208, DDLMapTypeHandler.VisitInt, (mapId, mapDDL) => mapDDL.GetValue<int>(mapId));
 		S = ddl.GetString(0xc9e19805) ?? S;
 		F = ddl.GetValue<RivetAssetId>(0xa43c7ceeu, F);
 		T = ddl.GetValue<RivetAssetId>(0x57850da6u, T);

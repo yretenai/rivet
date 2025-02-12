@@ -15,6 +15,7 @@ public class UDSWebApiTrophySetMetadata : DDLObjectType, IDDLObjectType<UDSWebAp
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x6fadc6f0u);
 
 	public UDSWebApiTrophySetMetadata(DDLObject ddl) : base(ddl) {
+		Name = ddl.GetDictionary<string, string>(0xce811188, DDLMapTypeHandler.VisitString, (mapId, mapDDL) => mapDDL.GetString(mapId));
 		Platform = ddl.GetEnums<xcf5dc143>(0x3a250fedu, xcf5dc143Values.Lookup);
 		TrophySetVersion = ddl.GetString(0x558d3d7b) ?? TrophySetVersion;
 		TrophySchemaVersion = ddl.GetString(0xff91af69) ?? TrophySchemaVersion;

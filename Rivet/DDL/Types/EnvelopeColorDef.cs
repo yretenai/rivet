@@ -25,6 +25,7 @@ public class EnvelopeColorDef : DDLObjectType, IDDLObjectType<EnvelopeColorDef> 
 		VisibleMaxX = ddl.GetValue<float>(0x4b4472a2u, VisibleMaxX);
 		VisibleMaxY = ddl.GetValue<float>(0x3c434234u, VisibleMaxY);
 		DefaultPoints = ddl.GetString(0x7c71d118) ?? DefaultPoints;
+		Points = ddl.GetDictionary<RivetAssetId, EnvelopePointColor>(0x19c2c04e, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<EnvelopePointColor>(mapId));
 	}
 
 	[DDLRegistration(0xfa18ee13u)]

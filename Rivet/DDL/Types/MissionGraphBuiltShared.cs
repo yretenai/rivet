@@ -16,6 +16,7 @@ public class MissionGraphBuiltShared : DDLObjectType, IDDLObjectType<MissionGrap
 
 	public MissionGraphBuiltShared(DDLObject ddl) : base(ddl) {
 		Nodes = ddl.GetObject<GraphNodesBuilt>(0x046ec93du);
+		Missions = ddl.GetDictionary<uint, MissionNodeBuiltTableEntry>(0xcef0690e, DDLMapTypeHandler.VisitUInt, (mapId, mapDDL) => mapDDL.GetObject<MissionNodeBuiltTableEntry>(mapId));
 		SortedMissions = ddl.GetObject<SortedNodeNames>(0x24005951u);
 	}
 

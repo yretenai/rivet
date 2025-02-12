@@ -16,6 +16,8 @@ public class UDSHint : DDLObjectType, IDDLObjectType<UDSHint> {
 
 	public UDSHint(DDLObject ddl) : base(ddl) {
 		ObjectId = ddl.GetString(0x9a05f2f9) ?? ObjectId;
+		Name = ddl.GetDictionary<string, string>(0xce811188, DDLMapTypeHandler.VisitString, (mapId, mapDDL) => mapDDL.GetString(mapId));
+		Description = ddl.GetDictionary<string, string>(0xe03811fd, DDLMapTypeHandler.VisitString, (mapId, mapDDL) => mapDDL.GetString(mapId));
 		ActiveStatus = ddl.GetObject<UDSHintStatus>(0xab16dd88u);
 		Links = ddl.GetObject<UDSHintLinks>(0x091042ddu);
 	}

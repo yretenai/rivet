@@ -21,6 +21,8 @@ public class Cinematic2PaneDef : DDLObjectType, IDDLObjectType<Cinematic2PaneDef
 		FarClipPlane = ddl.GetValue<float>(0xafd55002u, FarClipPlane);
 		LodScaleMultiplier = ddl.GetValue<float>(0xdcd98a8du, LodScaleMultiplier);
 		ImpostorHQBaseDistance = ddl.GetValue<float>(0x0e0979abu, ImpostorHQBaseDistance);
+		CameraIds = ddl.GetDictionary<RivetAssetId, Cinematic2IdMapDef>(0x185d3e89, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2IdMapDef>(mapId));
+		LightGroupIds = ddl.GetDictionary<RivetAssetId, Cinematic2IdMapDef>(0x4bf984fd, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2IdMapDef>(mapId));
 	}
 
 	[DDLRegistration(0xd9d61f51u)]

@@ -14,7 +14,9 @@ using Rivet.DDL.Enums;
 public class AnimFacialExpressionUpdateData : DDLObjectType, IDDLObjectType<AnimFacialExpressionUpdateData> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x57d61a6du);
 
-	public AnimFacialExpressionUpdateData(DDLObject ddl) : base(ddl) { }
+	public AnimFacialExpressionUpdateData(DDLObject ddl) : base(ddl) {
+		Elems = ddl.GetDictionary<RivetAssetId, AnimFacialExpressionDef>(0xa810b7fd, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<AnimFacialExpressionDef>(mapId));
+	}
 
 	[DDLRegistration(0x57d61a6du)]
 	public Dictionary<RivetAssetId, AnimFacialExpressionDef?> Elems { get; set; } = [];

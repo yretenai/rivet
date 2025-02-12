@@ -14,7 +14,9 @@ using Rivet.DDL.Enums;
 public class AssetSizeResult : DDLObjectType, IDDLObjectType<AssetSizeResult> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0xa33e70f4u);
 
-	public AssetSizeResult(DDLObject ddl) : base(ddl) { }
+	public AssetSizeResult(DDLObject ddl) : base(ddl) {
+		Results = ddl.GetDictionary<RivetAssetId, AssetSizeResultItem>(0x9e49872c, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<AssetSizeResultItem>(mapId));
+	}
 
 	[DDLRegistration(0xa33e70f4u)]
 	public Dictionary<RivetAssetId, AssetSizeResultItem?> Results { get; set; } = [];

@@ -14,7 +14,9 @@ using Rivet.DDL.Enums;
 public class UI_Cinematic2FolderHash : DDLObjectType, IDDLObjectType<UI_Cinematic2FolderHash> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0xeeaf3157u);
 
-	public UI_Cinematic2FolderHash(DDLObject ddl) : base(ddl) { }
+	public UI_Cinematic2FolderHash(DDLObject ddl) : base(ddl) {
+		Folders = ddl.GetDictionary<RivetAssetId, Cinematic2FolderDef>(0xffddb037, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2FolderDef>(mapId));
+	}
 
 	[DDLRegistration(0xeeaf3157u)]
 	public Dictionary<RivetAssetId, Cinematic2FolderDef?> Folders { get; set; } = [];

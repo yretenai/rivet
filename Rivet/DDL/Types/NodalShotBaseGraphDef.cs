@@ -14,7 +14,54 @@ using Rivet.DDL.Enums;
 public class NodalShotBaseGraphDef : GameplayNodeGraphBaseDef, IDDLObjectType<NodalShotBaseGraphDef> {
 	public new static RivetTypeId TypeId { get; } = new RivetTypeId(0x8afd83e3u);
 
-	public NodalShotBaseGraphDef(DDLObject ddl) : base(ddl) { }
+	public NodalShotBaseGraphDef(DDLObject ddl) : base(ddl) {
+		NodalShotInitFirstStateNodes = ddl.GetDictionary<RivetAssetId, NodalShotInitFirstStateNodeDef>(0xcd942e2f, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<NodalShotInitFirstStateNodeDef>(mapId));
+		NodalShotInitNewStateNodes = ddl.GetDictionary<RivetAssetId, NodalShotInitNewStateNodeDef>(0xb4e5255d, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<NodalShotInitNewStateNodeDef>(mapId));
+		NodalShotTransitionStateNodes = ddl.GetDictionary<RivetAssetId, NodalShotTransitionStateNodeDef>(0x733aa768, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<NodalShotTransitionStateNodeDef>(mapId));
+		OnHitAnythingNodes = ddl.GetDictionary<RivetAssetId, OnHitAnythingNodeDef>(0x59cc5798, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<OnHitAnythingNodeDef>(mapId));
+		OnHitEnemyNodes = ddl.GetDictionary<RivetAssetId, OnHitEnemyNodeDef>(0x31ed2e57, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<OnHitEnemyNodeDef>(mapId));
+		OnHitEnvironmentNodes = ddl.GetDictionary<RivetAssetId, OnHitEnvironmentNodeDef>(0x4d298a09, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<OnHitEnvironmentNodeDef>(mapId));
+		OnHitFriendlyNodes = ddl.GetDictionary<RivetAssetId, OnHitFriendlyNodeDef>(0x0d6bc139, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<OnHitFriendlyNodeDef>(mapId));
+		OnHitNonFriendlyNodes = ddl.GetDictionary<RivetAssetId, OnHitNonFriendlyNodeDef>(0xa19fc9de, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<OnHitNonFriendlyNodeDef>(mapId));
+		OnLifetimeExpiredNodes = ddl.GetDictionary<RivetAssetId, OnLifetimeExpiredNodeDef>(0xd353a72f, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<OnLifetimeExpiredNodeDef>(mapId));
+		OnUpdateIntervalNodes = ddl.GetDictionary<RivetAssetId, OnUpdateIntervalNodeDef>(0x05da2827, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<OnUpdateIntervalNodeDef>(mapId));
+		OnPassMaxRangeNodes = ddl.GetDictionary<RivetAssetId, OnPassMaxRangeNodeDef>(0xf54804bf, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<OnPassMaxRangeNodeDef>(mapId));
+		OnPostInitNodes = ddl.GetDictionary<RivetAssetId, OnPostInitNodeDef>(0x6df5c674, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<OnPostInitNodeDef>(mapId));
+		AddStatModifierEffectNodes = ddl.GetDictionary<RivetAssetId, AddStatModifierEffectNodeDef>(0xae40268b, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<AddStatModifierEffectNodeDef>(mapId));
+		AddStatusEffectNodes = ddl.GetDictionary<RivetAssetId, AddStatusEffectNodeDef>(0x1edfbb0f, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<AddStatusEffectNodeDef>(mapId));
+		AttachToActorEffectNodes = ddl.GetDictionary<RivetAssetId, AttachToActorEffectNodeDef>(0xb2048de1, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<AttachToActorEffectNodeDef>(mapId));
+		AttachToHitSurfaceEffectNodes = ddl.GetDictionary<RivetAssetId, AttachToHitSurfaceEffectNodeDef>(0xee56fbe1, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<AttachToHitSurfaceEffectNodeDef>(mapId));
+		BounceEffectNodes = ddl.GetDictionary<RivetAssetId, BounceEffectNodeDef>(0x1d48b928, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<BounceEffectNodeDef>(mapId));
+		CameraShakeEffectNodes = ddl.GetDictionary<RivetAssetId, CameraShakeEffectNodeDef>(0x28656389, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<CameraShakeEffectNodeDef>(mapId));
+		ChangeShotMotionEffectNodes = ddl.GetDictionary<RivetAssetId, ChangeShotMotionEffectNodeDef>(0x673ba2fc, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<ChangeShotMotionEffectNodeDef>(mapId));
+		ContinueShotMotionEffectNodes = ddl.GetDictionary<RivetAssetId, ContinueShotMotionEffectNodeDef>(0x693fbc22, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<ContinueShotMotionEffectNodeDef>(mapId));
+		DealDamageEffectNodes = ddl.GetDictionary<RivetAssetId, DealDamageEffectNodeDef>(0xc374101b, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<DealDamageEffectNodeDef>(mapId));
+		DestroyShotEffectNodes = ddl.GetDictionary<RivetAssetId, DestroyShotEffectNodeDef>(0x2b7208cf, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<DestroyShotEffectNodeDef>(mapId));
+		DontDestroyShotAfterCollisionEffectNodes = ddl.GetDictionary<RivetAssetId, DontDestroyShotAfterCollisionEffectNodeDef>(0x81bb67f8, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<DontDestroyShotAfterCollisionEffectNodeDef>(mapId));
+		EnterRagdollStateEffectNodes = ddl.GetDictionary<RivetAssetId, EnterRagdollStateEffectNodeDef>(0xaf1cfad2, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<EnterRagdollStateEffectNodeDef>(mapId));
+		ExplodeEffectNodes = ddl.GetDictionary<RivetAssetId, ExplodeEffectNodeDef>(0xc63ad40a, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<ExplodeEffectNodeDef>(mapId));
+		GiveItemEffectNodes = ddl.GetDictionary<RivetAssetId, GiveItemEffectNodeDef>(0xe55bd9de, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<GiveItemEffectNodeDef>(mapId));
+		HealEffectNodes = ddl.GetDictionary<RivetAssetId, HealEffectNodeDef>(0x536bca39, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<HealEffectNodeDef>(mapId));
+		PlayAnimEffectNodes = ddl.GetDictionary<RivetAssetId, PlayAnimEffectNodeDef>(0xcfad9393, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<PlayAnimEffectNodeDef>(mapId));
+		SpawnShotEffectNodes = ddl.GetDictionary<RivetAssetId, SpawnShotEffectNodeDef>(0xb79e345c, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<SpawnShotEffectNodeDef>(mapId));
+		SpawnSyncedActorEffectNodes = ddl.GetDictionary<RivetAssetId, SpawnSyncedActorEffectNodeDef>(0xae507f4f, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<SpawnSyncedActorEffectNodeDef>(mapId));
+		SpawnSyncedActorForHitEffectNodes = ddl.GetDictionary<RivetAssetId, SpawnSyncedActorForHitEffectNodeDef>(0x8128fb48, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<SpawnSyncedActorForHitEffectNodeDef>(mapId));
+		TargetedBounceEffectNodes = ddl.GetDictionary<RivetAssetId, TargetedBounceEffectNodeDef>(0xbacd98de, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<TargetedBounceEffectNodeDef>(mapId));
+		ToggleLightsEffectNodes = ddl.GetDictionary<RivetAssetId, ToggleLightsEffectNodeDef>(0x040dbaff, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<ToggleLightsEffectNodeDef>(mapId));
+		TriggerConduitEventEffectNodes = ddl.GetDictionary<RivetAssetId, TriggerConduitEventEffectNodeDef>(0x61b46c20, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<TriggerConduitEventEffectNodeDef>(mapId));
+		NodalShotUIntVariableNodes = ddl.GetDictionary<RivetAssetId, NodalShotUIntVariableNodeDef>(0x98067a6c, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<NodalShotUIntVariableNodeDef>(mapId));
+		SignalInputNodes = ddl.GetDictionary<RivetAssetId, SignalInputNodeDef>(0xf50eb81f, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<SignalInputNodeDef>(mapId));
+		SignalOutputNodes = ddl.GetDictionary<RivetAssetId, SignalOutputNodeDef>(0x536abdd5, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<SignalOutputNodeDef>(mapId));
+		EventInitializationInputNodes = ddl.GetDictionary<RivetAssetId, EventInitializationInputNodeDef>(0xf98d90df, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<EventInitializationInputNodeDef>(mapId));
+		EventInitializationOutputNodes = ddl.GetDictionary<RivetAssetId, EventInitializationOutputNodeDef>(0xc802fc4d, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<EventInitializationOutputNodeDef>(mapId));
+		BooleanOutNodes = ddl.GetDictionary<RivetAssetId, BooleanOutNodeDef>(0xaf9580d8, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<BooleanOutNodeDef>(mapId));
+		FloatOutNodes = ddl.GetDictionary<RivetAssetId, FloatOutNodeDef>(0x2785a28b, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<FloatOutNodeDef>(mapId));
+		StringOutNodes = ddl.GetDictionary<RivetAssetId, StringOutNodeDef>(0xbfe4da68, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<StringOutNodeDef>(mapId));
+		Vec3OutNodes = ddl.GetDictionary<RivetAssetId, Vec3OutNodeDef>(0xbb431e1a, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Vec3OutNodeDef>(mapId));
+		StringHashOutNodes = ddl.GetDictionary<RivetAssetId, StringHashOutNodeDef>(0x32392a81, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<StringHashOutNodeDef>(mapId));
+		IntOutNodes = ddl.GetDictionary<RivetAssetId, IntOutNodeDef>(0x6b23536f, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<IntOutNodeDef>(mapId));
+		UIntOutNodes = ddl.GetDictionary<RivetAssetId, UIntOutNodeDef>(0x0f563484, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<UIntOutNodeDef>(mapId));
+	}
 
 	[DDLRegistration(0x8afd83e3u)]
 	public Dictionary<RivetAssetId, NodalShotInitFirstStateNodeDef?> NodalShotInitFirstStateNodes { get; set; } = [];

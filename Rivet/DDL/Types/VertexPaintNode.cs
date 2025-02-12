@@ -17,6 +17,7 @@ public class VertexPaintNode : DDLObjectType, IDDLObjectType<VertexPaintNode> {
 	public VertexPaintNode(DDLObject ddl) : base(ddl) {
 		Id = ddl.GetValue<RivetAssetId>(0x8a514a8du, Id);
 		IsDeleted = ddl.GetValue<bool>(0x0f0182ffu, IsDeleted);
+		ColorMap = ddl.GetDictionary<RivetAssetId, uint>(0x4d7a8bae, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetValue<uint>(mapId));
 		DefaultColor = ddl.GetValue<uint>(0x7ccd1470u, DefaultColor);
 		MetersPerVoxel = ddl.GetValue<float>(0x8e7d5e11u, MetersPerVoxel);
 	}

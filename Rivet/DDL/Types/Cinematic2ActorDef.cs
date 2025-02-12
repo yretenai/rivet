@@ -18,8 +18,10 @@ public class Cinematic2ActorDef : DDLObjectType, IDDLObjectType<Cinematic2ActorD
 		Id = ddl.GetValue<RivetAssetId>(0x8a514a8du, Id);
 		Name = ddl.GetString(0x6eb3beb6) ?? Name;
 		StartTransform = ddl.GetObject<DDLTransform>(0x96f1f1f8u);
+		EventTracks = ddl.GetDictionary<RivetAssetId, Cinematic2PlacedInstanceEventTrackDef>(0x653e2373, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2PlacedInstanceEventTrackDef>(mapId));
 		HideTrack = ddl.GetObject<Cinematic2PlacedInstanceHideTrackDef>(0xba2bc52eu);
 		PosRotScaleTrack = ddl.GetObject<Cinematic2PlacedInstancePosRotScaleTrackDef>(0x6125fb96u);
+		OrphanTracks = ddl.GetDictionary<RivetAssetId, Cinematic2PlacedInstanceOrphanTrackDef>(0x00ea59a6, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2PlacedInstanceOrphanTrackDef>(mapId));
 		PlatformFilter = ddl.GetBitset<xb52df7e7>(0x92542397u, xb52df7e7Values.Lookup);
 		DefaultActorPath = ddl.GetValue<RivetAssetId>(0xf0bd2b69u, DefaultActorPath);
 		EditorOnly = ddl.GetValue<bool>(0xc2612b29u, EditorOnly);
@@ -35,9 +37,17 @@ public class Cinematic2ActorDef : DDLObjectType, IDDLObjectType<Cinematic2ActorD
 		BlendOutNonCineDrivers = ddl.GetValue<bool>(0xa49e1a88u, BlendOutNonCineDrivers);
 		UseSpawnedHead = ddl.GetValue<bool>(0x69ff93a8u, UseSpawnedHead);
 		BlendOutDuration = ddl.GetValue<float>(0x21329878u, BlendOutDuration);
+		AudioTracks = ddl.GetDictionary<RivetAssetId, Cinematic2ActorAudioTrackDef>(0x46b73e9c, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2ActorAudioTrackDef>(mapId));
+		BehaviorTracks = ddl.GetDictionary<RivetAssetId, Cinematic2ActorBehaviorTrackDef>(0xa920c62a, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2ActorBehaviorTrackDef>(mapId));
+		JointTweakTracks = ddl.GetDictionary<RivetAssetId, Cinematic2ActorJointTweakTrackDef>(0x4ad0df61, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2ActorJointTweakTrackDef>(mapId));
+		MaterialTracks = ddl.GetDictionary<RivetAssetId, Cinematic2ActorMaterialOverrideTrackDef>(0xad469e6e, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2ActorMaterialOverrideTrackDef>(mapId));
+		VfxTracks = ddl.GetDictionary<RivetAssetId, Cinematic2ActorVfxTrackDef>(0xbc4d8836, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2ActorVfxTrackDef>(mapId));
+		MovieTracks = ddl.GetDictionary<RivetAssetId, Cinematic2ActorMovieTrackDef>(0x5a6788c3, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2ActorMovieTrackDef>(mapId));
 		LooksTrack = ddl.GetObject<Cinematic2ActorLooksTrackDef>(0xac71691cu);
 		DialogGroupTrack = ddl.GetObject<Cinematic2ActorDialogGroupTrackDef>(0x1db7c94eu);
+		TagTracks = ddl.GetDictionary<RivetAssetId, Cinematic2ActorTagTrackDef>(0x09e8458e, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2ActorTagTrackDef>(mapId));
 		ClothTrack = ddl.GetObject<Cinematic2ActorClothTrackDef>(0x9c70102bu);
+		TextureTracks = ddl.GetDictionary<RivetAssetId, Cinematic2ActorTextureTrackDef>(0x5e3ec2c7, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2ActorTextureTrackDef>(mapId));
 	}
 
 	[DDLRegistration(0xb0f5b2b9u)]

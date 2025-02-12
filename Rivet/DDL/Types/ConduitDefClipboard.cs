@@ -17,6 +17,11 @@ public class ConduitDefClipboard : DDLObjectType, IDDLObjectType<ConduitDefClipb
 	public ConduitDefClipboard(DDLObject ddl) : base(ddl) {
 		Compatibility = ddl.GetString(0xffcb8104) ?? Compatibility;
 		ClipboardType = ddl.GetString(0xb1ad53f6) ?? ClipboardType;
+		CommentNodes = ddl.GetDictionary<RivetAssetId, ECMCommentNodeDef>(0x6461c08f, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<ECMCommentNodeDef>(mapId));
+		InputNodes = ddl.GetDictionary<RivetAssetId, ECMInputNodeDef>(0x1982bfed, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<ECMInputNodeDef>(mapId));
+		EffectNodes = ddl.GetDictionary<RivetAssetId, ECMEffectNodeDef>(0x9c603cc1, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<ECMEffectNodeDef>(mapId));
+		FieldOpNodes = ddl.GetDictionary<RivetAssetId, ECMFieldOpNodeDef>(0x2e2a59cb, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<ECMFieldOpNodeDef>(mapId));
+		SelectorNodes = ddl.GetDictionary<RivetAssetId, ECMSelectorNodeDef>(0x86fc0ba6, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<ECMSelectorNodeDef>(mapId));
 		GraphId = ddl.GetValue<RivetAssetId>(0x76b05713u, GraphId);
 		Events = ddl.GetObjects<ECMEventDef>(0x6dff192du);
 		Filters = ddl.GetObjects<ECMFilterDef>(0x799d04b5u);

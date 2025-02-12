@@ -15,6 +15,7 @@ public class VaultSearchHistory : DDLObjectType, IDDLObjectType<VaultSearchHisto
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0xd1eba68au);
 
 	public VaultSearchHistory(DDLObject ddl) : base(ddl) {
+		SearchRecords = ddl.GetDictionary<uint, VaultSearchRecord>(0x4c880bd3, DDLMapTypeHandler.VisitUInt, (mapId, mapDDL) => mapDDL.GetObject<VaultSearchRecord>(mapId));
 		HistoryOrder = ddl.GetObjects<VaultHistoryEntry>(0xa176847bu);
 	}
 

@@ -14,7 +14,9 @@ using Rivet.DDL.Enums;
 public class NodalShotGraphDef : NodalShotBaseGraphDef, IDDLObjectType<NodalShotGraphDef> {
 	public new static RivetTypeId TypeId { get; } = new RivetTypeId(0x33a51938u);
 
-	public NodalShotGraphDef(DDLObject ddl) : base(ddl) { }
+	public NodalShotGraphDef(DDLObject ddl) : base(ddl) {
+		SpawnHazardDamageAreaEffectNodes = ddl.GetDictionary<RivetAssetId, SpawnHazardDamageAreaEffectNodeDef>(0x3e08b768, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<SpawnHazardDamageAreaEffectNodeDef>(mapId));
+	}
 
 	[DDLRegistration(0x33a51938u)]
 	public Dictionary<RivetAssetId, SpawnHazardDamageAreaEffectNodeDef?> SpawnHazardDamageAreaEffectNodes { get; set; } = [];

@@ -17,6 +17,7 @@ public class CurveDef : DDLObjectType, IDDLObjectType<CurveDef> {
 	public CurveDef(DDLObject ddl) : base(ddl) {
 		VaultMetaData = ddl.GetObject<VaultMetaData>(0x037889aau);
 		IconPath = ddl.GetValue<RivetAssetId>(0xbf5b007fu, IconPath);
+		Points = ddl.GetDictionary<RivetAssetId, SceneNode>(0x19c2c04e, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<SceneNode>(mapId));
 		IsLooped = ddl.GetValue<bool>(0x8b1e8c12u, IsLooped);
 		LoopStartPointIndex = ddl.GetValue<ushort>(0xbd8d3c97u, LoopStartPointIndex);
 		IsReversed = ddl.GetValue<bool>(0x5b90e340u, IsReversed);

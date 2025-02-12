@@ -19,6 +19,7 @@ public class BreakableDef : DDLObjectType, IDDLObjectType<BreakableDef> {
 		IconPath = ddl.GetValue<RivetAssetId>(0xbf5b007fu, IconPath);
 		Foundation = ddl.GetValue<RivetAssetId>(0x84a54ba3u, Foundation);
 		NodeGraphCollection = ddl.GetObject<NodeGraphCollectionDef>(0xf79c0eb3u);
+		BreakableAssetList = ddl.GetDictionary<RivetAssetId, RivetAssetId>(0x3397c683, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetValue<RivetAssetId>(mapId));
 	}
 
 	[DDLRegistration(0xd8240b9au)]

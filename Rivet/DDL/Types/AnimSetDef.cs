@@ -28,7 +28,9 @@ public class AnimSetDef : DDLObjectType, IDDLObjectType<AnimSetDef> {
 		Transitions = ddl.GetObjects<AnimDriverTransitionDef>(0x1d9b339du);
 		AttachmentCollection = ddl.GetValue<RivetAssetId>(0xafcec3f9u, AttachmentCollection);
 		Attachments = ddl.GetObjects<AnimAttachmentDef>(0xca18ab0du);
+		Sequences = ddl.GetDictionary<RivetAssetId, AnimSetSequenceDef>(0x351d2f90, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<AnimSetSequenceDef>(mapId));
 		UiTimeStamp = ddl.GetString(0x44336e0b) ?? UiTimeStamp;
+		Comments = ddl.GetDictionary<RivetAssetId, AnimSetCommentDef>(0xa59f2b5a, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<AnimSetCommentDef>(mapId));
 	}
 
 	[DDLRegistration(0x43a05ebeu)]

@@ -20,6 +20,11 @@ public class Cinematic2ActorMaterialOverrideTrackDef : DDLObjectType, IDDLObject
 		PlatformFilter = ddl.GetBitset<xb52df7e7>(0x92542397u, xb52df7e7Values.Lookup);
 		Tags = ddl.GetObject<Cinematic2TrackTagsDef>(0x5f2c5496u);
 		Global = ddl.GetValue<bool>(0xd67dc5e4u, Global);
+		ConstOverrideTracks = ddl.GetDictionary<RivetAssetId, Cinematic2MaterialOverrideConstTrackDef>(0xda8760bf, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2MaterialOverrideConstTrackDef>(mapId));
+		TextureOverrideActions = ddl.GetDictionary<RivetAssetId, Cinematic2MaterialOverrideTextureActionDef>(0xd5e966f9, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2MaterialOverrideTextureActionDef>(mapId));
+		MaterialOverrideActions = ddl.GetDictionary<RivetAssetId, Cinematic2MaterialOverrideMaterialActionDef>(0xd3e6413c, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2MaterialOverrideMaterialActionDef>(mapId));
+		PreCompositeMaterialActions = ddl.GetDictionary<RivetAssetId, Cinematic2PreCompositeMaterialActionDef>(0x2ebd96a8, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2PreCompositeMaterialActionDef>(mapId));
+		PostCompositeMaterialActions = ddl.GetDictionary<RivetAssetId, Cinematic2PostCompositeMaterialActionDef>(0x874a8f12, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2PostCompositeMaterialActionDef>(mapId));
 	}
 
 	[DDLRegistration(0x81ad6717u)]

@@ -18,8 +18,10 @@ public class Cinematic2LightDef : DDLObjectType, IDDLObjectType<Cinematic2LightD
 		Id = ddl.GetValue<RivetAssetId>(0x8a514a8du, Id);
 		Name = ddl.GetString(0x6eb3beb6) ?? Name;
 		StartTransform = ddl.GetObject<DDLTransform>(0x96f1f1f8u);
+		EventTracks = ddl.GetDictionary<RivetAssetId, Cinematic2PlacedInstanceEventTrackDef>(0x653e2373, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2PlacedInstanceEventTrackDef>(mapId));
 		HideTrack = ddl.GetObject<Cinematic2PlacedInstanceHideTrackDef>(0xba2bc52eu);
 		PosRotScaleTrack = ddl.GetObject<Cinematic2PlacedInstancePosRotScaleTrackDef>(0x6125fb96u);
+		OrphanTracks = ddl.GetDictionary<RivetAssetId, Cinematic2PlacedInstanceOrphanTrackDef>(0x00ea59a6, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2PlacedInstanceOrphanTrackDef>(mapId));
 		PlatformFilter = ddl.GetBitset<xb52df7e7>(0x92542397u, xb52df7e7Values.Lookup);
 		Light = ddl.GetObject<LightDef>(0x72499036u);
 		ColorTrack = ddl.GetObject<Cinematic2LightColorCurveTrackDef>(0xece6c2c4u);

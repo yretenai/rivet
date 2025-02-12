@@ -18,9 +18,11 @@ public class ZoneSessionData : DDLObjectType, IDDLObjectType<ZoneSessionData> {
 		CurrentSelection = ddl.GetEnum<x2eab60c7>(0xe6e44afeu, x2eab60c7Values.Lookup);
 		Selection3D = ddl.GetObject<SelectionData3D>(0x8e102acbu);
 		SelectionActorGroups = ddl.GetObject<SelectionDataActorGroups>(0x83ff85dfu);
+		SelectionActorGroupActors = ddl.GetDictionary<RivetAssetId, SelectionDataActorGroups>(0x9be77afb, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<SelectionDataActorGroups>(mapId));
 		SelectionLevelList = ddl.GetObject<SelectionDataLevelList>(0x5170bce9u);
 		Hidden3D = ddl.GetObject<HiddenData3D>(0xb6bf4d42u);
 		TargetSceneNodeStack = ddl.GetObjects<TargetSceneNode>(0x56235257u);
+		Regions = ddl.GetDictionary<RivetAssetId, RegionDefTemp>(0xa38d1acb, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<RegionDefTemp>(mapId));
 		ActiveZone = ddl.GetValue<RivetAssetId>(0xf877d4f8u, ActiveZone);
 		ReferenceableZones = ddl.GetValues<RivetAssetId>(0xff5f46b4u);
 		CameraPosition = ddl.GetObject<DDLVector3>(0x5498ef5eu);

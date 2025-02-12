@@ -14,7 +14,9 @@ using Rivet.DDL.Enums;
 public class LevelListFavorites : DDLObjectType, IDDLObjectType<LevelListFavorites> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x6a77cc08u);
 
-	public LevelListFavorites(DDLObject ddl) : base(ddl) { }
+	public LevelListFavorites(DDLObject ddl) : base(ddl) {
+		Levels = ddl.GetDictionary<RivetAssetId, LevelListFavoriteZones>(0xa1522a7e, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<LevelListFavoriteZones>(mapId));
+	}
 
 	[DDLRegistration(0x6a77cc08u)]
 	public Dictionary<RivetAssetId, LevelListFavoriteZones?> Levels { get; set; } = [];

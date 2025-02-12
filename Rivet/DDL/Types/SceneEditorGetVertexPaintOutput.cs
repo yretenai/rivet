@@ -14,7 +14,9 @@ using Rivet.DDL.Enums;
 public class SceneEditorGetVertexPaintOutput : DDLObjectType, IDDLObjectType<SceneEditorGetVertexPaintOutput> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0xc5b2c017u);
 
-	public SceneEditorGetVertexPaintOutput(DDLObject ddl) : base(ddl) { }
+	public SceneEditorGetVertexPaintOutput(DDLObject ddl) : base(ddl) {
+		VertexPaintNodes = ddl.GetDictionary<RivetAssetId, VertexPaintNode>(0xb9ed55e1, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<VertexPaintNode>(mapId));
+	}
 
 	[DDLRegistration(0xc5b2c017u)]
 	public Dictionary<RivetAssetId, VertexPaintNode?> VertexPaintNodes { get; set; } = [];

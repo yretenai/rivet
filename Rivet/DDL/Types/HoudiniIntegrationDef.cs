@@ -18,6 +18,7 @@ public class HoudiniIntegrationDef : DDLObjectType, IDDLObjectType<HoudiniIntegr
 		License = ddl.GetObject<HoudiniIntegrationLicense>(0x56829721u);
 		Plugin = ddl.GetObject<HoudiniIntegrationPlugin>(0xd71669f3u);
 		Parameters = ddl.GetObject<TweakVarFile>(0xdda516c7u);
+		SavedParameters = ddl.GetDictionary<string, TweakVarFile>(0x32627343, DDLMapTypeHandler.VisitString, (mapId, mapDDL) => mapDDL.GetObject<TweakVarFile>(mapId));
 	}
 
 	[DDLRegistration(0x880bf299u)]

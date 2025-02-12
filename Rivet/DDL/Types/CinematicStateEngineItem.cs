@@ -22,6 +22,8 @@ public class CinematicStateEngineItem : DDLObjectType, IDDLObjectType<CinematicS
 		ObjToWorld = ddl.GetObject<DDLMatrix4>(0x3842c592u);
 		Playing = ddl.GetValue<bool>(0xd21350dau, Playing);
 		Time = ddl.GetValue<double>(0x5f0458f5u, Time);
+		TracksInactive = ddl.GetDictionary<RivetAssetId, RivetAssetId>(0x27e71ee4, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetValue<RivetAssetId>(mapId));
+		TrackState = ddl.GetDictionary<RivetAssetId, CinematicTrackState>(0x7917fbd8, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<CinematicTrackState>(mapId));
 	}
 
 	[DDLRegistration(0xa1bb7d92u)]

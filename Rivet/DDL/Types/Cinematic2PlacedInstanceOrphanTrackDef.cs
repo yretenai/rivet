@@ -20,6 +20,35 @@ public class Cinematic2PlacedInstanceOrphanTrackDef : DDLObjectType, IDDLObjectT
 		PlatformFilter = ddl.GetBitset<xb52df7e7>(0x92542397u, xb52df7e7Values.Lookup);
 		Tags = ddl.GetObject<Cinematic2TrackTagsDef>(0x5f2c5496u);
 		Global = ddl.GetValue<bool>(0xd67dc5e4u, Global);
+		PlayAnimActions = ddl.GetDictionary<RivetAssetId, Cinematic2BehaviorPlayAnimClipActionDef>(0x2a95c808, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2BehaviorPlayAnimClipActionDef>(mapId));
+		BehaviorGoToActions = ddl.GetDictionary<RivetAssetId, Cinematic2BehaviorGoToActionDef>(0x1a0c8f02, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2BehaviorGoToActionDef>(mapId));
+		PlayDriverActions = ddl.GetDictionary<RivetAssetId, Cinematic2BehaviorPlayDriverActionDef>(0x0f706a76, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2BehaviorPlayDriverActionDef>(mapId));
+		DialogActions = ddl.GetDictionary<RivetAssetId, Cinematic2DialogActionDef>(0x1f501f9a, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2DialogActionDef>(mapId));
+		LookAtActions = ddl.GetDictionary<RivetAssetId, Cinematic2LookAtActionDef>(0xa2c33691, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2LookAtActionDef>(mapId));
+		BlinkActions = ddl.GetDictionary<RivetAssetId, Cinematic2BlinkActionDef>(0x45b7d6eb, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2BlinkActionDef>(mapId));
+		MovieActions = ddl.GetDictionary<RivetAssetId, Cinematic2MovieActionDef>(0x098f8a05, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2MovieActionDef>(mapId));
+		AtmosphereActions = ddl.GetDictionary<RivetAssetId, Cinematic2AtmosphereActionDef>(0xf4cfc0ee, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2AtmosphereActionDef>(mapId));
+		AudioActions = ddl.GetDictionary<RivetAssetId, Cinematic2AudioActionDef>(0xf24716d6, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2AudioActionDef>(mapId));
+		AudioGameSyncGroupActions = ddl.GetDictionary<RivetAssetId, Cinematic2AudioGameSyncGroupActionDef>(0xda497481, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2AudioGameSyncGroupActionDef>(mapId));
+		AudioGameSyncActions = ddl.GetDictionary<RivetAssetId, Cinematic2AudioGameSyncActionDef>(0xa2a94853, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2AudioGameSyncActionDef>(mapId));
+		FollowActions = ddl.GetDictionary<RivetAssetId, Cinematic2CameraDofFollowActionDef>(0x271e731d, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2CameraDofFollowActionDef>(mapId));
+		HideActions = ddl.GetDictionary<RivetAssetId, Cinematic2HideActionDef>(0xefa3d18a, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2HideActionDef>(mapId));
+		TextureOverrideActions = ddl.GetDictionary<RivetAssetId, Cinematic2MaterialOverrideTextureActionDef>(0xd5e966f9, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2MaterialOverrideTextureActionDef>(mapId));
+		MaterialOverrideActions = ddl.GetDictionary<RivetAssetId, Cinematic2MaterialOverrideMaterialActionDef>(0xd3e6413c, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2MaterialOverrideMaterialActionDef>(mapId));
+		PreCompositeMaterialActions = ddl.GetDictionary<RivetAssetId, Cinematic2PreCompositeMaterialActionDef>(0x2ebd96a8, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2PreCompositeMaterialActionDef>(mapId));
+		PostCompositeMaterialActions = ddl.GetDictionary<RivetAssetId, Cinematic2PostCompositeMaterialActionDef>(0x874a8f12, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2PostCompositeMaterialActionDef>(mapId));
+		SyncActions = ddl.GetDictionary<RivetAssetId, Cinematic2SyncActionDef>(0x169b90f4, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2SyncActionDef>(mapId));
+		VfxActions = ddl.GetDictionary<RivetAssetId, Cinematic2VfxActionDef>(0xc4bea696, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2VfxActionDef>(mapId));
+		LightAttachActions = ddl.GetDictionary<RivetAssetId, Cinematic2LightAttachActionDef>(0x920a6fd9, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2LightAttachActionDef>(mapId));
+		Events = ddl.GetDictionary<RivetAssetId, AnimTriggerEventDef>(0x6dff192d, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<AnimTriggerEventDef>(mapId));
+		CharacterActions = ddl.GetDictionary<RivetAssetId, Cinematic2CharacterLookActionDef>(0xd18c17a3, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2CharacterLookActionDef>(mapId));
+		OptInActions = ddl.GetDictionary<RivetAssetId, Cinematic2OptInLookActionDef>(0x03d46a5f, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2OptInLookActionDef>(mapId));
+		ToggleLookActions = ddl.GetDictionary<RivetAssetId, Cinematic2ToggleLookActionDef>(0x9134f197, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2ToggleLookActionDef>(mapId));
+		ToggleGroupActions = ddl.GetDictionary<RivetAssetId, Cinematic2ToggleLookGroupActionDef>(0x9b27e500, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2ToggleLookGroupActionDef>(mapId));
+		ApplyGroupActions = ddl.GetDictionary<RivetAssetId, Cinematic2ApplyLookGroupActionDef>(0xb55ca35c, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2ApplyLookGroupActionDef>(mapId));
+		TagActions = ddl.GetDictionary<RivetAssetId, Cinematic2TagActionDef>(0x01b138e5, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2TagActionDef>(mapId));
+		WindActions = ddl.GetDictionary<RivetAssetId, Cinematic2WindActionDef>(0x8b296b87, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2WindActionDef>(mapId));
+		TextureActions = ddl.GetDictionary<RivetAssetId, Cinematic2TextureActionDef>(0x0ee61756, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2TextureActionDef>(mapId));
 	}
 
 	[DDLRegistration(0x9fedd135u)]

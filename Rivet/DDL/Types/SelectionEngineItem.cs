@@ -15,6 +15,7 @@ public class SelectionEngineItem : DDLObjectType, IDDLObjectType<SelectionEngine
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x94c8af86u);
 
 	public SelectionEngineItem(DDLObject ddl) : base(ddl) {
+		SelectedNodes = ddl.GetDictionary<RivetAssetId, bool>(0xf703b56e, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetValue<bool>(mapId));
 		LastSelectedNode = ddl.GetValue<RivetAssetId>(0xe5dee6adu, LastSelectedNode);
 	}
 

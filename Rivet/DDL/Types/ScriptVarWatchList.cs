@@ -14,7 +14,9 @@ using Rivet.DDL.Enums;
 public class ScriptVarWatchList : DDLObjectType, IDDLObjectType<ScriptVarWatchList> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x78071630u);
 
-	public ScriptVarWatchList(DDLObject ddl) : base(ddl) { }
+	public ScriptVarWatchList(DDLObject ddl) : base(ddl) {
+		Variables = ddl.GetDictionary<RivetAssetId, ScriptVarWatch>(0x0a36e21d, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<ScriptVarWatch>(mapId));
+	}
 
 	[DDLRegistration(0x78071630u)]
 	public Dictionary<RivetAssetId, ScriptVarWatch?> Variables { get; set; } = [];

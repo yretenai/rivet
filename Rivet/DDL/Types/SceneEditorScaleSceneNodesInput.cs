@@ -14,7 +14,9 @@ using Rivet.DDL.Enums;
 public class SceneEditorScaleSceneNodesInput : DDLObjectType, IDDLObjectType<SceneEditorScaleSceneNodesInput> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x0a73910eu);
 
-	public SceneEditorScaleSceneNodesInput(DDLObject ddl) : base(ddl) { }
+	public SceneEditorScaleSceneNodesInput(DDLObject ddl) : base(ddl) {
+		NodeWorldIdToScale = ddl.GetDictionary<RivetAssetId, SceneEditorScaleFactor>(0xd2e4a309, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<SceneEditorScaleFactor>(mapId));
+	}
 
 	[DDLRegistration(0x0a73910eu)]
 	public Dictionary<RivetAssetId, SceneEditorScaleFactor?> NodeWorldIdToScale { get; set; } = [];

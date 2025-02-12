@@ -17,6 +17,7 @@ public class PolylineDef : DDLObjectType, IDDLObjectType<PolylineDef> {
 	public PolylineDef(DDLObject ddl) : base(ddl) {
 		VaultMetaData = ddl.GetObject<VaultMetaData>(0x037889aau);
 		IconPath = ddl.GetValue<RivetAssetId>(0xbf5b007fu, IconPath);
+		Points = ddl.GetDictionary<RivetAssetId, SceneNode>(0x19c2c04e, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<SceneNode>(mapId));
 		PolylineType = ddl.GetEnum<PolylineType>(0x3f08814bu, PolylineTypeValues.Lookup);
 		Height = ddl.GetValue<float>(0xcb35ab68u, Height);
 	}

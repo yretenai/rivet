@@ -14,7 +14,9 @@ using Rivet.DDL.Enums;
 public class LevelDefAux : DDLObjectType, IDDLObjectType<LevelDefAux> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x7a67923fu);
 
-	public LevelDefAux(DDLObject ddl) : base(ddl) { }
+	public LevelDefAux(DDLObject ddl) : base(ddl) {
+		OverlayFolders = ddl.GetDictionary<RivetAssetId, RegionFolderNode>(0xca3e2e80, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<RegionFolderNode>(mapId));
+	}
 
 	[DDLRegistration(0x7a67923fu)]
 	public Dictionary<RivetAssetId, RegionFolderNode?> OverlayFolders { get; set; } = [];

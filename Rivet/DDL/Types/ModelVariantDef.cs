@@ -16,6 +16,7 @@ public class ModelVariantDef : DDLObjectType, IDDLObjectType<ModelVariantDef> {
 
 	public ModelVariantDef(DDLObject ddl) : base(ddl) {
 		EditorModel = ddl.GetValue<RivetAssetId>(0x2c6cecd4u, EditorModel);
+		Variants = ddl.GetDictionary<RivetAssetId, ModelVariantSingle>(0x4999ee91, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<ModelVariantSingle>(mapId));
 	}
 
 	[DDLRegistration(0x5142d0cdu, description: "The model which this variant modifies.")]

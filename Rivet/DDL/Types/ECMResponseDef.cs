@@ -19,6 +19,10 @@ public class ECMResponseDef : DDLObjectType, IDDLObjectType<ECMResponseDef> {
 		Index = ddl.GetValue<int>(0x9920abc0u, Index);
 		Enabled = ddl.GetValue<bool>(0x5113d8bcu, Enabled);
 		Name = ddl.GetString(0x6eb3beb6) ?? Name;
+		EffectNodes = ddl.GetDictionary<RivetAssetId, ECMEffectNodeDef>(0x9c603cc1, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<ECMEffectNodeDef>(mapId));
+		InputNodes = ddl.GetDictionary<RivetAssetId, ECMInputNodeDef>(0x1982bfed, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<ECMInputNodeDef>(mapId));
+		FieldOpNodes = ddl.GetDictionary<RivetAssetId, ECMFieldOpNodeDef>(0x2e2a59cb, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<ECMFieldOpNodeDef>(mapId));
+		CommentNodes = ddl.GetDictionary<RivetAssetId, ECMCommentNodeDef>(0x6461c08f, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<ECMCommentNodeDef>(mapId));
 	}
 
 	[DDLRegistration(0x61365696u)]

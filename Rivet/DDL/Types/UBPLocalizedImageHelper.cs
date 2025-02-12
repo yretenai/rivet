@@ -14,7 +14,9 @@ using Rivet.DDL.Enums;
 public class UBPLocalizedImageHelper : DDLObjectType, IDDLObjectType<UBPLocalizedImageHelper> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0xe4e4ffd4u);
 
-	public UBPLocalizedImageHelper(DDLObject ddl) : base(ddl) { }
+	public UBPLocalizedImageHelper(DDLObject ddl) : base(ddl) {
+		Image_elements = ddl.GetDictionary<string, UBPImage>(0x54860089, DDLMapTypeHandler.VisitString, (mapId, mapDDL) => mapDDL.GetObject<UBPImage>(mapId));
+	}
 
 	[DDLRegistration(0xe4e4ffd4u)]
 	public Dictionary<string, UBPImage?> Image_elements { get; set; } = [];

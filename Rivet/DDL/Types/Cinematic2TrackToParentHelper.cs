@@ -14,7 +14,9 @@ using Rivet.DDL.Enums;
 public class Cinematic2TrackToParentHelper : DDLObjectType, IDDLObjectType<Cinematic2TrackToParentHelper> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x0052b1acu);
 
-	public Cinematic2TrackToParentHelper(DDLObject ddl) : base(ddl) { }
+	public Cinematic2TrackToParentHelper(DDLObject ddl) : base(ddl) {
+		TrackToParentMap = ddl.GetDictionary<RivetAssetId, RivetAssetId>(0xc0bdb0b2, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetValue<RivetAssetId>(mapId));
+	}
 
 	[DDLRegistration(0x0052b1acu)]
 	public Dictionary<RivetAssetId, RivetAssetId> TrackToParentMap { get; set; } = [];

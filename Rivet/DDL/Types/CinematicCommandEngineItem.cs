@@ -22,6 +22,7 @@ public class CinematicCommandEngineItem : DDLObjectType, IDDLObjectType<Cinemati
 		ValueDouble = ddl.GetValue<double>(0x2509cfb5u, ValueDouble);
 		ValueMatrix = ddl.GetObject<DDLMatrix4>(0x07dd7c95u);
 		ValueString = ddl.GetString(0x61508ff3) ?? ValueString;
+		ValueTuidSet = ddl.GetDictionary<RivetAssetId, RivetAssetId>(0x8699c128, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetValue<RivetAssetId>(mapId));
 	}
 
 	[DDLRegistration(0x625fa169u)]

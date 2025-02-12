@@ -14,7 +14,10 @@ using Rivet.DDL.Enums;
 public class SessionPropertyPanelState : DDLObjectType, IDDLObjectType<SessionPropertyPanelState> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0xb3b794f3u);
 
-	public SessionPropertyPanelState(DDLObject ddl) : base(ddl) { }
+	public SessionPropertyPanelState(DDLObject ddl) : base(ddl) {
+		ScrollTo = ddl.GetDictionary<RivetAssetId, string>(0x69cd7022, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetString(mapId));
+		CollapsedPanels = ddl.GetDictionary<RivetAssetId, string>(0x9091ab86, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetString(mapId));
+	}
 
 	[DDLRegistration(0xb3b794f3u)]
 	public Dictionary<RivetAssetId, string?> ScrollTo { get; set; } = [];

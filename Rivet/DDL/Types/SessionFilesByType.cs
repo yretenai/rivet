@@ -14,7 +14,9 @@ using Rivet.DDL.Enums;
 public class SessionFilesByType : DDLObjectType, IDDLObjectType<SessionFilesByType> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x1f3f01ffu);
 
-	public SessionFilesByType(DDLObject ddl) : base(ddl) { }
+	public SessionFilesByType(DDLObject ddl) : base(ddl) {
+		Files = ddl.GetDictionary<RivetAssetId, SessionFileInfo>(0x1f668c98, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<SessionFileInfo>(mapId));
+	}
 
 	[DDLRegistration(0x1f3f01ffu, description: "File information, indexed by the asset id (hash of the file path)")]
 	public Dictionary<RivetAssetId, SessionFileInfo?> Files { get; set; } = [];

@@ -15,6 +15,7 @@ public class DbVerifyResult : DDLObjectType, IDDLObjectType<DbVerifyResult> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x42f419cau);
 
 	public DbVerifyResult(DDLObject ddl) : base(ddl) {
+		AssetCollection = ddl.GetDictionary<uint, DbVerifyAssetCollection>(0x105dff48, DDLMapTypeHandler.VisitUInt, (mapId, mapDDL) => mapDDL.GetObject<DbVerifyAssetCollection>(mapId));
 		FileCount = ddl.GetValue<uint>(0x123cec1fu, FileCount);
 		DbEntryCount = ddl.GetValue<uint>(0x8a7f8ea9u, DbEntryCount);
 		ErrorCount = ddl.GetValue<uint>(0x867c8878u, ErrorCount);

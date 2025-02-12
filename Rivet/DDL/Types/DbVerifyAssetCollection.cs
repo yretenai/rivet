@@ -14,7 +14,9 @@ using Rivet.DDL.Enums;
 public class DbVerifyAssetCollection : DDLObjectType, IDDLObjectType<DbVerifyAssetCollection> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0xe0c67793u);
 
-	public DbVerifyAssetCollection(DDLObject ddl) : base(ddl) { }
+	public DbVerifyAssetCollection(DDLObject ddl) : base(ddl) {
+		AssetItem = ddl.GetDictionary<ulong, DbVerifyAssetItem>(0x1ab5cf5a, DDLMapTypeHandler.VisitULong, (mapId, mapDDL) => mapDDL.GetObject<DbVerifyAssetItem>(mapId));
+	}
 
 	[DDLRegistration(0xe0c67793u)]
 	public Dictionary<ulong, DbVerifyAssetItem?> AssetItem { get; set; } = [];

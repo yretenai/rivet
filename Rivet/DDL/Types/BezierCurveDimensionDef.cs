@@ -16,6 +16,7 @@ public class BezierCurveDimensionDef : DDLObjectType, IDDLObjectType<BezierCurve
 
 	public BezierCurveDimensionDef(DDLObject ddl) : base(ddl) {
 		Id = ddl.GetValue<RivetAssetId>(0x8a514a8du, Id);
+		Keys = ddl.GetDictionary<RivetAssetId, BezierCurveKeyDef>(0x841e845c, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<BezierCurveKeyDef>(mapId));
 	}
 
 	[DDLRegistration(0x1954036au)]

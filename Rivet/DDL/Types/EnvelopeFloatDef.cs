@@ -25,6 +25,7 @@ public class EnvelopeFloatDef : DDLObjectType, IDDLObjectType<EnvelopeFloatDef> 
 		VisibleMaxX = ddl.GetValue<float>(0x4b4472a2u, VisibleMaxX);
 		VisibleMaxY = ddl.GetValue<float>(0x3c434234u, VisibleMaxY);
 		DefaultPoints = ddl.GetString(0x7c71d118) ?? DefaultPoints;
+		Points = ddl.GetDictionary<RivetAssetId, EnvelopePointFloat>(0x19c2c04e, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<EnvelopePointFloat>(mapId));
 	}
 
 	[DDLRegistration(0x9fdf69f9u)]

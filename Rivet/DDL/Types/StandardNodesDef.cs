@@ -14,7 +14,66 @@ using Rivet.DDL.Enums;
 public class StandardNodesDef : GameplayNodeGraphBaseDef, IDDLObjectType<StandardNodesDef> {
 	public new static RivetTypeId TypeId { get; } = new RivetTypeId(0x4adb03c1u);
 
-	public StandardNodesDef(DDLObject ddl) : base(ddl) { }
+	public StandardNodesDef(DDLObject ddl) : base(ddl) {
+		AssetReferenceNodes = ddl.GetDictionary<RivetAssetId, AssetReferenceNodeDef>(0xc026bc83, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<AssetReferenceNodeDef>(mapId));
+		ActorValidNodes = ddl.GetDictionary<RivetAssetId, ActorValidNodeDef>(0xb647a649, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<ActorValidNodeDef>(mapId));
+		ActorPositionNodes = ddl.GetDictionary<RivetAssetId, ActorPositionNodeDef>(0xd71a6599, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<ActorPositionNodeDef>(mapId));
+		RandomFloatNodes = ddl.GetDictionary<RivetAssetId, RandomFloatGeneratorNodeDef>(0xc1ae98e0, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<RandomFloatGeneratorNodeDef>(mapId));
+		CompareFloatsNodes = ddl.GetDictionary<RivetAssetId, CompareFloatsNodeDef>(0xd75337c3, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<CompareFloatsNodeDef>(mapId));
+		CompareFloatsInlineNodes = ddl.GetDictionary<RivetAssetId, CompareFloatsInlineNodeDef>(0xbb63fc9d, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<CompareFloatsInlineNodeDef>(mapId));
+		MinFloatNodes = ddl.GetDictionary<RivetAssetId, MinFloatNodeDef>(0x491f97b3, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<MinFloatNodeDef>(mapId));
+		MaxFloatNodes = ddl.GetDictionary<RivetAssetId, MaxFloatNodeDef>(0x0950efc5, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<MaxFloatNodeDef>(mapId));
+		ClampFloatNodes = ddl.GetDictionary<RivetAssetId, ClampFloatNodeDef>(0x3d7dbc19, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<ClampFloatNodeDef>(mapId));
+		AddFloatsNodes = ddl.GetDictionary<RivetAssetId, AddFloatsNodeDef>(0x92dd8e33, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<AddFloatsNodeDef>(mapId));
+		SubtractFloatsNodes = ddl.GetDictionary<RivetAssetId, SubtractFloatsNodeDef>(0xd97e5a96, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<SubtractFloatsNodeDef>(mapId));
+		MultiplyFloatsNodes = ddl.GetDictionary<RivetAssetId, MultiplyFloatsNodeDef>(0xc791bfec, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<MultiplyFloatsNodeDef>(mapId));
+		DivideFloatsNodes = ddl.GetDictionary<RivetAssetId, DivideFloatsNodeDef>(0xf97b7db4, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<DivideFloatsNodeDef>(mapId));
+		CompareIntsNodes = ddl.GetDictionary<RivetAssetId, CompareIntsNodeDef>(0x3037d96e, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<CompareIntsNodeDef>(mapId));
+		CompareIntsInlineNodes = ddl.GetDictionary<RivetAssetId, CompareIntsInlineNodeDef>(0x91ec2162, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<CompareIntsInlineNodeDef>(mapId));
+		RandomIntGeneratorNodes = ddl.GetDictionary<RivetAssetId, RandomIntGeneratorNodeDef>(0xd23d9e7e, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<RandomIntGeneratorNodeDef>(mapId));
+		FloatsToVecNodes = ddl.GetDictionary<RivetAssetId, FloatsToVecNodeDef>(0x64545fd9, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<FloatsToVecNodeDef>(mapId));
+		NormalizeFloatNodes = ddl.GetDictionary<RivetAssetId, NormalizeFloatNodeDef>(0x9f5226b5, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<NormalizeFloatNodeDef>(mapId));
+		VecToFloatsNodes = ddl.GetDictionary<RivetAssetId, VecToFloatsNodeDef>(0xd6461adc, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<VecToFloatsNodeDef>(mapId));
+		VecDistanceNodes = ddl.GetDictionary<RivetAssetId, VecDistanceNodeDef>(0x862cb55c, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<VecDistanceNodeDef>(mapId));
+		AddVectorsNodes = ddl.GetDictionary<RivetAssetId, AddVectorsNodeDef>(0xf4c8c438, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<AddVectorsNodeDef>(mapId));
+		SubtractVectorsNodes = ddl.GetDictionary<RivetAssetId, SubtractVectorsNodeDef>(0x523f308b, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<SubtractVectorsNodeDef>(mapId));
+		NegateVectorNodes = ddl.GetDictionary<RivetAssetId, NegateVectorNodeDef>(0x38bbb5a5, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<NegateVectorNodeDef>(mapId));
+		MultiplyVectorByScalarNodes = ddl.GetDictionary<RivetAssetId, MultiplyVectorByScalarNodeDef>(0x6ba4b8f1, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<MultiplyVectorByScalarNodeDef>(mapId));
+		NormalizeVectorNodes = ddl.GetDictionary<RivetAssetId, NormalizeVectorNodeDef>(0xd28f474e, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<NormalizeVectorNodeDef>(mapId));
+		VectorLengthNodes = ddl.GetDictionary<RivetAssetId, VectorLengthNodeDef>(0x026fed37, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<VectorLengthNodeDef>(mapId));
+		RandomBoolGeneratorNodes = ddl.GetDictionary<RivetAssetId, RandomBoolGeneratorNodeDef>(0x9b1776f8, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<RandomBoolGeneratorNodeDef>(mapId));
+		OrSignalNodes = ddl.GetDictionary<RivetAssetId, OrSignalNodeDef>(0xa81b2bf9, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<OrSignalNodeDef>(mapId));
+		OrNodes = ddl.GetDictionary<RivetAssetId, OrNodeDef>(0xbd4cf165, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<OrNodeDef>(mapId));
+		AndNodes = ddl.GetDictionary<RivetAssetId, AndNodeDef>(0xd150652d, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<AndNodeDef>(mapId));
+		CheckBoolNodes = ddl.GetDictionary<RivetAssetId, CheckBoolNodeDef>(0x96d6885a, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<CheckBoolNodeDef>(mapId));
+		SubstringNodes = ddl.GetDictionary<RivetAssetId, SubstringNodeDef>(0x2b6ab791, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<SubstringNodeDef>(mapId));
+		CompareStringHashesNodes = ddl.GetDictionary<RivetAssetId, CompareStringHashesNodeDef>(0x9f0571b8, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<CompareStringHashesNodeDef>(mapId));
+		InputNodeActors = ddl.GetDictionary<RivetAssetId, InputNodeActorDef>(0x0817104b, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<InputNodeActorDef>(mapId));
+		InputNodeBooleans = ddl.GetDictionary<RivetAssetId, InputNodeBooleanDef>(0x89ba1535, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<InputNodeBooleanDef>(mapId));
+		InputNodeFloats = ddl.GetDictionary<RivetAssetId, InputNodeFloatDef>(0x4c9eed30, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<InputNodeFloatDef>(mapId));
+		InputNodeSignals = ddl.GetDictionary<RivetAssetId, InputNodeSignalDef>(0x3516988f, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<InputNodeSignalDef>(mapId));
+		InputNodeStrings = ddl.GetDictionary<RivetAssetId, InputNodeStringDef>(0x57213777, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<InputNodeStringDef>(mapId));
+		InputNodeVec3s = ddl.GetDictionary<RivetAssetId, InputNodeVec3Def>(0xf5e6e54b, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<InputNodeVec3Def>(mapId));
+		InputNodeStringHashes = ddl.GetDictionary<RivetAssetId, InputNodeStringHashDef>(0xce5c989e, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<InputNodeStringHashDef>(mapId));
+		InputNodeUInts = ddl.GetDictionary<RivetAssetId, InputNodeUIntDef>(0xef42c58c, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<InputNodeUIntDef>(mapId));
+		InputNodeInts = ddl.GetDictionary<RivetAssetId, InputNodeIntDef>(0x9e51710a, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<InputNodeIntDef>(mapId));
+		OutputNodeActors = ddl.GetDictionary<RivetAssetId, OutputNodeActorDef>(0x73254955, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<OutputNodeActorDef>(mapId));
+		OutputNodeBooleans = ddl.GetDictionary<RivetAssetId, OutputNodeBooleanDef>(0x4f4cb888, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<OutputNodeBooleanDef>(mapId));
+		OutputNodeFloats = ddl.GetDictionary<RivetAssetId, OutputNodeFloatDef>(0x37acb42e, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<OutputNodeFloatDef>(mapId));
+		OutputNodeSignals = ddl.GetDictionary<RivetAssetId, OutputNodeSignalDef>(0xcf6297b5, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<OutputNodeSignalDef>(mapId));
+		OutputNodeStrings = ddl.GetDictionary<RivetAssetId, OutputNodeStringDef>(0xad55384d, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<OutputNodeStringDef>(mapId));
+		OutputNodeVec3s = ddl.GetDictionary<RivetAssetId, OutputNodeVec3Def>(0x76945581, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<OutputNodeVec3Def>(mapId));
+		OutputNodeStringHashes = ddl.GetDictionary<RivetAssetId, OutputNodeStringHashDef>(0xc005e154, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<OutputNodeStringHashDef>(mapId));
+		OutputNodeUInts = ddl.GetDictionary<RivetAssetId, OutputNodeUIntDef>(0x6c307546, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<OutputNodeUIntDef>(mapId));
+		OutputNodeInts = ddl.GetDictionary<RivetAssetId, OutputNodeIntDef>(0x3f647c1d, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<OutputNodeIntDef>(mapId));
+		BooleanOutNodes = ddl.GetDictionary<RivetAssetId, BooleanOutNodeDef>(0xaf9580d8, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<BooleanOutNodeDef>(mapId));
+		FloatOutNodes = ddl.GetDictionary<RivetAssetId, FloatOutNodeDef>(0x2785a28b, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<FloatOutNodeDef>(mapId));
+		StringOutNodes = ddl.GetDictionary<RivetAssetId, StringOutNodeDef>(0xbfe4da68, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<StringOutNodeDef>(mapId));
+		Vec3OutNodes = ddl.GetDictionary<RivetAssetId, Vec3OutNodeDef>(0xbb431e1a, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Vec3OutNodeDef>(mapId));
+		StringHashOutNodes = ddl.GetDictionary<RivetAssetId, StringHashOutNodeDef>(0x32392a81, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<StringHashOutNodeDef>(mapId));
+		IntOutNodes = ddl.GetDictionary<RivetAssetId, IntOutNodeDef>(0x6b23536f, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<IntOutNodeDef>(mapId));
+		UIntOutNodes = ddl.GetDictionary<RivetAssetId, UIntOutNodeDef>(0x0f563484, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<UIntOutNodeDef>(mapId));
+	}
 
 	[DDLRegistration(0x4adb03c1u)]
 	public Dictionary<RivetAssetId, AssetReferenceNodeDef?> AssetReferenceNodes { get; set; } = [];

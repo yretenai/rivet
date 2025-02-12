@@ -20,6 +20,11 @@ public class Cinematic2LooksTrackDef : DDLObjectType, IDDLObjectType<Cinematic2L
 		PlatformFilter = ddl.GetBitset<xb52df7e7>(0x92542397u, xb52df7e7Values.Lookup);
 		Tags = ddl.GetObject<Cinematic2TrackTagsDef>(0x5f2c5496u);
 		Global = ddl.GetValue<bool>(0xd67dc5e4u, Global);
+		CharacterActions = ddl.GetDictionary<RivetAssetId, Cinematic2CharacterLookActionDef>(0xd18c17a3, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2CharacterLookActionDef>(mapId));
+		OptInActions = ddl.GetDictionary<RivetAssetId, Cinematic2OptInLookActionDef>(0x03d46a5f, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2OptInLookActionDef>(mapId));
+		ToggleLookActions = ddl.GetDictionary<RivetAssetId, Cinematic2ToggleLookActionDef>(0x9134f197, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2ToggleLookActionDef>(mapId));
+		ToggleGroupActions = ddl.GetDictionary<RivetAssetId, Cinematic2ToggleLookGroupActionDef>(0x9b27e500, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2ToggleLookGroupActionDef>(mapId));
+		ApplyGroupActions = ddl.GetDictionary<RivetAssetId, Cinematic2ApplyLookGroupActionDef>(0xb55ca35c, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2ApplyLookGroupActionDef>(mapId));
 	}
 
 	[DDLRegistration(0x16bd8961u)]

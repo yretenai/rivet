@@ -20,6 +20,9 @@ public class Cinematic2BehaviorTrackDef : DDLObjectType, IDDLObjectType<Cinemati
 		PlatformFilter = ddl.GetBitset<xb52df7e7>(0x92542397u, xb52df7e7Values.Lookup);
 		Tags = ddl.GetObject<Cinematic2TrackTagsDef>(0x5f2c5496u);
 		Global = ddl.GetValue<bool>(0xd67dc5e4u, Global);
+		PlayAnimActions = ddl.GetDictionary<RivetAssetId, Cinematic2BehaviorPlayAnimClipActionDef>(0x2a95c808, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2BehaviorPlayAnimClipActionDef>(mapId));
+		BehaviorGoToActions = ddl.GetDictionary<RivetAssetId, Cinematic2BehaviorGoToActionDef>(0x1a0c8f02, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2BehaviorGoToActionDef>(mapId));
+		PlayDriverActions = ddl.GetDictionary<RivetAssetId, Cinematic2BehaviorPlayDriverActionDef>(0x0f706a76, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2BehaviorPlayDriverActionDef>(mapId));
 		MayaExportInfo = ddl.GetObject<Cinematic2MayaExportInfo>(0xa1192d52u);
 	}
 

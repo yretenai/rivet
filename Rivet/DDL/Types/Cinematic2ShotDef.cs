@@ -21,6 +21,7 @@ public class Cinematic2ShotDef : DDLObjectType, IDDLObjectType<Cinematic2ShotDef
 		JumpToShotId = ddl.GetValue<RivetAssetId>(0xf5e23913u, JumpToShotId);
 		ScriptShotTag = ddl.GetEnum<xadae2fa7>(0xf6da13a9u, xadae2fa7Values.Lookup);
 		MayaExportInfo = ddl.GetObject<Cinematic2MayaShotExportInfo>(0xa1192d52u);
+		Panes = ddl.GetDictionary<RivetAssetId, Cinematic2PaneDef>(0x36f6123b, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2PaneDef>(mapId));
 		DepthOnlyFrameAtStart = ddl.GetValue<bool>(0x8e57949du, DepthOnlyFrameAtStart);
 		IsTransitionTarget = ddl.GetValue<bool>(0xeda89527u, IsTransitionTarget);
 		StartRelativeActor = ddl.GetValue<RivetAssetId>(0x7205a541u, StartRelativeActor);

@@ -16,6 +16,7 @@ public class UDSWebApiTaskMetadata : DDLObjectType, IDDLObjectType<UDSWebApiTask
 
 	public UDSWebApiTaskMetadata(DDLObject ddl) : base(ddl) {
 		Type = ddl.GetEnum<x38e4d198>(0x1c7c38a7u, x38e4d198Values.Lookup);
+		Name = ddl.GetDictionary<string, string>(0xce811188, DDLMapTypeHandler.VisitString, (mapId, mapDDL) => mapDDL.GetString(mapId));
 		IsRequiredForCompletion = ddl.GetValue<bool>(0x054f0180u, IsRequiredForCompletion);
 		Hidden = ddl.GetValue<bool>(0xb189a2ecu, Hidden);
 	}

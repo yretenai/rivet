@@ -25,6 +25,7 @@ public class ActorDef : DDLObjectType, IDDLObjectType<ActorDef> {
 		LookGroup = ddl.GetString(0xa286144c) ?? LookGroup;
 		UIColor = ddl.GetEnum<x6898de8f>(0x6b34889eu, x6898de8fValues.Lookup);
 		UIOpacity = ddl.GetEnum<x28ef8b07>(0xf93e5f7au, x28ef8b07Values.Lookup);
+		Components = ddl.GetDictionary<RivetAssetId, ComponentPrius>(0x357eabc4, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<ComponentPrius>(mapId));
 		AssetRefs = ddl.GetObjects<AssetReferenceDef>(0x516bb823u);
 		OldAssetData = ddl.GetString(0x2e07bd45) ?? OldAssetData;
 	}

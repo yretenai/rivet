@@ -15,6 +15,7 @@ public class Cinematic2SessionData : DDLObjectType, IDDLObjectType<Cinematic2Ses
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x28f06c28u);
 
 	public Cinematic2SessionData(DDLObject ddl) : base(ddl) {
+		Selection = ddl.GetDictionary<RivetAssetId, RivetAssetId>(0x145893db, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetValue<RivetAssetId>(mapId));
 		RenderMode = ddl.GetEnum<EditorRenderMode>(0xabfb67b1u, EditorRenderModeValues.Lookup);
 		DebugOptions = ddl.GetObject<EditorDebugOptions>(0x856074f2u);
 	}

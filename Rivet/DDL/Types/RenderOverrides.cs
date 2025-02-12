@@ -14,7 +14,11 @@ using Rivet.DDL.Enums;
 public class RenderOverrides : DDLObjectType, IDDLObjectType<RenderOverrides> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0xd1f6fba2u);
 
-	public RenderOverrides(DDLObject ddl) : base(ddl) { }
+	public RenderOverrides(DDLObject ddl) : base(ddl) {
+		Constants = ddl.GetDictionary<RivetAssetId, RenderConstantOverride>(0x11306034, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<RenderConstantOverride>(mapId));
+		Textures = ddl.GetDictionary<RivetAssetId, RenderTextureOverride>(0x5f860466, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<RenderTextureOverride>(mapId));
+		Colors = ddl.GetDictionary<RivetAssetId, RenderColorOverride>(0xfcc68df8, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<RenderColorOverride>(mapId));
+	}
 
 	[DDLRegistration(0xd1f6fba2u, description: "Float constants that have been overridden")]
 	public Dictionary<RivetAssetId, RenderConstantOverride?> Constants { get; set; } = [];

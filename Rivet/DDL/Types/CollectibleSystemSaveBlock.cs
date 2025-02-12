@@ -14,7 +14,9 @@ using Rivet.DDL.Enums;
 public class CollectibleSystemSaveBlock : DDLObjectType, IDDLObjectType<CollectibleSystemSaveBlock> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0xbd8fd24au);
 
-	public CollectibleSystemSaveBlock(DDLObject ddl) : base(ddl) { }
+	public CollectibleSystemSaveBlock(DDLObject ddl) : base(ddl) {
+		TypeSaveData = ddl.GetDictionary<uint, CollectibleTypeSaveData>(0xac814fb5, DDLMapTypeHandler.VisitUInt, (mapId, mapDDL) => mapDDL.GetObject<CollectibleTypeSaveData>(mapId));
+	}
 
 	[DDLRegistration(0xbd8fd24au)]
 	public Dictionary<uint, CollectibleTypeSaveData?> TypeSaveData { get; set; } = [];

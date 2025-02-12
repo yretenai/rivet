@@ -14,7 +14,22 @@ using Rivet.DDL.Enums;
 public class MissionGraphSharedDef : GameplayNodeGraphBaseDef, IDDLObjectType<MissionGraphSharedDef> {
 	public new static RivetTypeId TypeId { get; } = new RivetTypeId(0x4a3bfcfbu);
 
-	public MissionGraphSharedDef(DDLObject ddl) : base(ddl) { }
+	public MissionGraphSharedDef(DDLObject ddl) : base(ddl) {
+		OrNodes = ddl.GetDictionary<RivetAssetId, OrMissionSystemNodeDef>(0xbd4cf165, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<OrMissionSystemNodeDef>(mapId));
+		AndNodes = ddl.GetDictionary<RivetAssetId, AndMissionSystemNodeDef>(0xd150652d, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<AndMissionSystemNodeDef>(mapId));
+		InputCountNodes = ddl.GetDictionary<RivetAssetId, InputCountMissionSystemNodeDef>(0xacd738f6, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<InputCountMissionSystemNodeDef>(mapId));
+		NotNodes = ddl.GetDictionary<RivetAssetId, NotMissionSystemNodeDef>(0xadd17eae, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<NotMissionSystemNodeDef>(mapId));
+		GSTNodes = ddl.GetDictionary<RivetAssetId, GlobalSaveTableNodeDef>(0xdaf1af95, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<GlobalSaveTableNodeDef>(mapId));
+		XorStartNodes = ddl.GetDictionary<RivetAssetId, XOrStartGroupNodeDef>(0x3ec54f32, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<XOrStartGroupNodeDef>(mapId));
+		XorEndNodes = ddl.GetDictionary<RivetAssetId, XOrEndGroupNodeDef>(0x6f4c8cb7, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<XOrEndGroupNodeDef>(mapId));
+		DebugChainStartNodes = ddl.GetDictionary<RivetAssetId, DebugChainStartNodeDef>(0xb8940154, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<DebugChainStartNodeDef>(mapId));
+		DebugChainEndNodes = ddl.GetDictionary<RivetAssetId, DebugChainEndNodeDef>(0xfb0a9de1, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<DebugChainEndNodeDef>(mapId));
+		DemoStartNodes = ddl.GetDictionary<RivetAssetId, DemoBranchStartNodeDef>(0x6228b283, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<DemoBranchStartNodeDef>(mapId));
+		DemoEndNodes = ddl.GetDictionary<RivetAssetId, DemoBranchEndNodeDef>(0x260039cf, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<DemoBranchEndNodeDef>(mapId));
+		DebugMarkerNodes = ddl.GetDictionary<RivetAssetId, DebugMarkerNodeDef>(0x524ff51c, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<DebugMarkerNodeDef>(mapId));
+		InputNodes = ddl.GetDictionary<RivetAssetId, InputNodeBooleanDef>(0x1982bfed, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<InputNodeBooleanDef>(mapId));
+		OutputNodes = ddl.GetDictionary<RivetAssetId, OutputNodeBooleanDef>(0x0035a2e2, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<OutputNodeBooleanDef>(mapId));
+	}
 
 	[DDLRegistration(0x4a3bfcfbu)]
 	public Dictionary<RivetAssetId, OrMissionSystemNodeDef?> OrNodes { get; set; } = [];

@@ -17,6 +17,8 @@ public class TestUIElementLabel5 : DDLObjectType, IDDLObjectType<TestUIElementLa
 	public TestUIElementLabel5(DDLObject ddl) : base(ddl) {
 		TestLabel1 = ddl.GetObjects<TestUIElementLabel1>(0x707f3335u);
 		TestLabel2 = ddl.GetObjects<TestUIElementLabel1>(0xe976628fu);
+		TestLabel3 = ddl.GetDictionary<RivetAssetId, TestUIElementLabel1>(0x9e715219, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<TestUIElementLabel1>(mapId));
+		TestLabel4 = ddl.GetDictionary<RivetAssetId, TestUIElementLabel1>(0x0015c7ba, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<TestUIElementLabel1>(mapId));
 	}
 
 	[DDLRegistration(0x6eb87dcau)]

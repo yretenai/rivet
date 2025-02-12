@@ -16,6 +16,7 @@ public class UDSWebApiDef : DDLObjectType, IDDLObjectType<UDSWebApiDef> {
 
 	public UDSWebApiDef(DDLObject ddl) : base(ddl) {
 		Objects = ddl.GetObjects<UDSWebApiObject>(0xb3f0afcbu);
+		ObjectIdTypes = ddl.GetDictionary<string, xefe0cd8b>(0x098356a7, DDLMapTypeHandler.VisitString, (mapId, mapDDL) => mapDDL.GetEnum<xefe0cd8b>(mapId, xefe0cd8bValues.Lookup));
 		TrophyStatDefinitions = ddl.GetObjects<UDSWebApiStatDef>(0x77f59a8cu);
 		TrophyStatExtractions = ddl.GetObjects<UDSWebApiStatRule>(0x901f5b11u);
 	}

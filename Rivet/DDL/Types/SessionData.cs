@@ -18,6 +18,9 @@ public class SessionData : DDLObjectType, IDDLObjectType<SessionData> {
 		PersistentData = ddl.GetObject<SessionPersistentData>(0xd280fe14u);
 		TransientData = ddl.GetObject<SessionTransientData>(0x11685cf3u);
 		WindowSize = ddl.GetObject<SessionWindowSize>(0xa2979036u);
+		OpenAssets = ddl.GetDictionary<string, SessionFilesByType>(0x64ceea1b, DDLMapTypeHandler.VisitString, (mapId, mapDDL) => mapDDL.GetObject<SessionFilesByType>(mapId));
+		RequestOpen = ddl.GetDictionary<string, SessionFilesByType>(0x09df25f7, DDLMapTypeHandler.VisitString, (mapId, mapDDL) => mapDDL.GetObject<SessionFilesByType>(mapId));
+		AssetErrors = ddl.GetDictionary<RivetAssetId, SessionAssetError>(0xa942c52b, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<SessionAssetError>(mapId));
 		ZoneData = ddl.GetObject<ZoneSessionData>(0x90e4c61bu);
 		ScriptData = ddl.GetObject<NodeGraphSessionData>(0x9b82e2e1u);
 		MaterialGraphData = ddl.GetObject<MaterialGraphSessionData>(0x30945dd4u);

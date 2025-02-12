@@ -2,6 +2,7 @@
 //
 // SPDX-License-Identifier: EUPL-1.2
 
+using System.Runtime.CompilerServices;
 using System.Text;
 using Rivet.Data;
 using Rivet.IO;
@@ -14,9 +15,13 @@ public static class DDLSerializer {
 	public static DDLObject Deserialize(IUnsafeMemoryOwner<byte> data, DAT1 dat) => Deserialize(new MemoryReader(data), dat);
 
 	public static DDLObject Deserialize(MemoryReader reader, DAT1 dat) {
+		if (reader.Unconsumed <= Unsafe.SizeOf<DDLHeader>()) {
+			return [];
+		}
+
 		var header = reader.Get<DDLHeader>();
 		if (header.Magic != DDLHeader.MagicValue) {
-			throw new InvalidDataException();
+			return [];
 		}
 
 		var objectBlob = new MemoryReader(reader.Slice(header.Size));

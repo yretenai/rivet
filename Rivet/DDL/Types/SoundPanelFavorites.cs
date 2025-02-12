@@ -14,7 +14,10 @@ using Rivet.DDL.Enums;
 public class SoundPanelFavorites : DDLObjectType, IDDLObjectType<SoundPanelFavorites> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x99065be0u);
 
-	public SoundPanelFavorites(DDLObject ddl) : base(ddl) { }
+	public SoundPanelFavorites(DDLObject ddl) : base(ddl) {
+		FavoriteBanks = ddl.GetDictionary<RivetAssetId, bool>(0xe69d9323, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetValue<bool>(mapId));
+		FavoriteItems = ddl.GetDictionary<RivetAssetId, bool>(0xac854df8, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetValue<bool>(mapId));
+	}
 
 	[DDLRegistration(0x99065be0u)]
 	public Dictionary<RivetAssetId, bool> FavoriteBanks { get; set; } = [];

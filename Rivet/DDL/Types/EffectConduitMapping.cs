@@ -17,6 +17,7 @@ public class EffectConduitMapping : DDLObjectType, IDDLObjectType<EffectConduitM
 	public EffectConduitMapping(DDLObject ddl) : base(ddl) {
 		BuiltValueStackSize = ddl.GetValue<int>(0xbeb0349du, BuiltValueStackSize);
 		AssetId64 = ddl.GetValue<ulong>(0x85b28bedu, AssetId64);
+		Events = ddl.GetDictionary<string, ECMEvent>(0x6dff192d, DDLMapTypeHandler.VisitString, (mapId, mapDDL) => mapDDL.GetObject<ECMEvent>(mapId));
 	}
 
 	[DDLRegistration(0xce7c9ea4u)]

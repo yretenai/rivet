@@ -28,6 +28,7 @@ public class AssetProfileData : DDLObjectType, IDDLObjectType<AssetProfileData> 
 		ManualLoadWwiseEventDeps = ddl.GetObjects<AssetProfileWwiseEventDependency>(0x49a26fc8u);
 		HibernatedAssets = ddl.GetStrings(0xdc3692e8u);
 		DelayStreamAssets = ddl.GetStrings(0x308c6cc7u);
+		LightingConditionReferences = ddl.GetDictionary<uint, AssetProfileDataReferenceArray>(0x7cf3f883, DDLMapTypeHandler.VisitUInt, (mapId, mapDDL) => mapDDL.GetObject<AssetProfileDataReferenceArray>(mapId));
 		RuntimeZoneTotalModelInstCount = ddl.GetValue<uint>(0x5a453bf7u, RuntimeZoneTotalModelInstCount);
 		RuntimeZoneDelayModelInstCount = ddl.GetValue<uint>(0xdd263255u, RuntimeZoneDelayModelInstCount);
 		AnimClipSizes = ddl.GetObjects<NamedSize>(0xe9a1ee16u);

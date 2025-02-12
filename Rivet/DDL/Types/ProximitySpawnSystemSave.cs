@@ -14,7 +14,9 @@ using Rivet.DDL.Enums;
 public class ProximitySpawnSystemSave : DDLObjectType, IDDLObjectType<ProximitySpawnSystemSave> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x209a1b1au);
 
-	public ProximitySpawnSystemSave(DDLObject ddl) : base(ddl) { }
+	public ProximitySpawnSystemSave(DDLObject ddl) : base(ddl) {
+		ProximitySpawnData = ddl.GetDictionary<ulong, ProximitySpawnSaveData>(0x8c2f999f, DDLMapTypeHandler.VisitULong, (mapId, mapDDL) => mapDDL.GetObject<ProximitySpawnSaveData>(mapId));
+	}
 
 	[DDLRegistration(0x209a1b1au)]
 	public Dictionary<ulong, ProximitySpawnSaveData?> ProximitySpawnData { get; set; } = [];

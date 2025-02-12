@@ -17,6 +17,7 @@ public class MmInner : DDLObjectType, IDDLObjectType<MmInner> {
 	public MmInner(DDLObject ddl) : base(ddl) {
 		Scalar = ddl.GetString(0xdc2475e2) ?? Scalar;
 		Array = ddl.GetStrings(0xb85f2276u);
+		Hash = ddl.GetDictionary<string, MmLeaf>(0xe128a208, DDLMapTypeHandler.VisitString, (mapId, mapDDL) => mapDDL.GetObject<MmLeaf>(mapId));
 	}
 
 	[DDLRegistration(0xa85f5e37u)]

@@ -16,6 +16,7 @@ public class DimensionLoadSystemSave : DDLObjectType, IDDLObjectType<DimensionLo
 
 	public DimensionLoadSystemSave(DDLObject ddl) : base(ddl) {
 		DimensionCheckpointHash = ddl.GetValue<uint>(0x0d8554f9u, DimensionCheckpointHash);
+		DimensionSaves = ddl.GetDictionary<RivetAssetId, DimensionSaveData>(0xf3fda3e5, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<DimensionSaveData>(mapId));
 	}
 
 	[DDLRegistration(0x752c3800u)]

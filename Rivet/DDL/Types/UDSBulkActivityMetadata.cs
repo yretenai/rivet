@@ -17,6 +17,8 @@ public class UDSBulkActivityMetadata : DDLObjectType, IDDLObjectType<UDSBulkActi
 	public UDSBulkActivityMetadata(DDLObject ddl) : base(ddl) {
 		Type = ddl.GetEnum<x38e4d198>(0x1c7c38a7u, x38e4d198Values.Lookup);
 		Category = ddl.GetEnum<xca2817ca>(0x053bc6e7u, xca2817caValues.Lookup);
+		Name = ddl.GetDictionary<string, string>(0xce811188, DDLMapTypeHandler.VisitString, (mapId, mapDDL) => mapDDL.GetString(mapId));
+		Description = ddl.GetDictionary<string, string>(0xe03811fd, DDLMapTypeHandler.VisitString, (mapId, mapDDL) => mapDDL.GetString(mapId));
 		AvailableByDefault = ddl.GetValue<bool>(0xdcbdf284u, AvailableByDefault);
 		IsRequiredForCompletion = ddl.GetValue<bool>(0x054f0180u, IsRequiredForCompletion);
 		Hidden = ddl.GetValue<bool>(0xb189a2ecu, Hidden);

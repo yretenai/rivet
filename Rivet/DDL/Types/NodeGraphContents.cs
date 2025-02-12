@@ -17,6 +17,10 @@ public class NodeGraphContents : DDLObjectType, IDDLObjectType<NodeGraphContents
 	public NodeGraphContents(DDLObject ddl) : base(ddl) {
 		Name = ddl.GetString(0x6eb3beb6) ?? Name;
 		Id = ddl.GetValue<RivetAssetId>(0x8a514a8du, Id);
+		Nodes = ddl.GetDictionary<RivetAssetId, GraphNode>(0x046ec93d, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<GraphNode>(mapId));
+		Connections = ddl.GetDictionary<RivetAssetId, GraphConnection>(0x322aadce, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<GraphConnection>(mapId));
+		IO = ddl.GetDictionary<RivetAssetId, GraphIOMeta>(0x26edb3cd, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<GraphIOMeta>(mapId));
+		GlobalNotes = ddl.GetDictionary<RivetAssetId, string>(0x11749824, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetString(mapId));
 	}
 
 	[DDLRegistration(0x65179b96u, " Display Name")]

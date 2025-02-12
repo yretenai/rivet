@@ -20,6 +20,7 @@ public class Cinematic2ActorDialogGroupTrackDef : DDLObjectType, IDDLObjectType<
 		PlatformFilter = ddl.GetBitset<xb52df7e7>(0x92542397u, xb52df7e7Values.Lookup);
 		Tags = ddl.GetObject<Cinematic2TrackTagsDef>(0x5f2c5496u);
 		Global = ddl.GetValue<bool>(0xd67dc5e4u, Global);
+		DialogTracks = ddl.GetDictionary<RivetAssetId, Cinematic2DialogTrackDef>(0xe93d521c, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2DialogTrackDef>(mapId));
 		PlayIdleTrack = ddl.GetObject<Cinematic2BehaviorTrackDef>(0xdf189d6au);
 	}
 

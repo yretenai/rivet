@@ -18,9 +18,21 @@ public class BreakableNodeGraphDef : DDLObjectType, IDDLObjectType<BreakableNode
 		Id = ddl.GetValue<RivetAssetId>(0x8a514a8du, Id);
 		Type = ddl.GetEnum<x577f103e>(0xbc4e9799u, x577f103eValues.Lookup);
 		Name = ddl.GetString(0x6eb3beb6) ?? Name;
+		BlockNodes = ddl.GetDictionary<RivetAssetId, BlockNodeDef>(0x9c8156a1, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<BlockNodeDef>(mapId));
+		BlockSetNodes = ddl.GetDictionary<RivetAssetId, BlockSetNodeDef>(0xdc7a2d2a, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<BlockSetNodeDef>(mapId));
+		Comments = ddl.GetDictionary<RivetAssetId, CommentBaseDef>(0xa59f2b5a, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<CommentBaseDef>(mapId));
+		Connections = ddl.GetDictionary<RivetAssetId, ConnectionTuidDef>(0x322aadce, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<ConnectionTuidDef>(mapId));
 		CreateNode = ddl.GetObject<CreateNodeDef>(0xac9ba46cu);
 		DeathNode = ddl.GetObject<DeathNodeDef>(0xed4959b8u);
+		DestroyActorNodes = ddl.GetDictionary<RivetAssetId, DestroyActorNodeDef>(0x3f982dd6, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<DestroyActorNodeDef>(mapId));
+		DisableLookNodes = ddl.GetDictionary<RivetAssetId, DisableLookNodeDef>(0xacf3d374, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<DisableLookNodeDef>(mapId));
+		EnableLookNodes = ddl.GetDictionary<RivetAssetId, EnableLookNodeDef>(0xacb59458, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<EnableLookNodeDef>(mapId));
+		GameEventNodes = ddl.GetDictionary<RivetAssetId, GameEventNodeDef>(0x1c2d8423, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<GameEventNodeDef>(mapId));
 		HealthNode = ddl.GetObject<HealthNodeDef>(0x81d7dba8u);
+		PhysicsPropertyNodes = ddl.GetDictionary<RivetAssetId, PhysicsPropertyNodeDef>(0x8059da88, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<PhysicsPropertyNodeDef>(mapId));
+		PlayAnimNodes = ddl.GetDictionary<RivetAssetId, PlayAnimationDriverNodeDef>(0x80b5732a, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<PlayAnimationDriverNodeDef>(mapId));
+		SpawnNodes = ddl.GetDictionary<RivetAssetId, SpawnNodeDef>(0xc8cf364e, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<SpawnNodeDef>(mapId));
+		ToggleLookNodes = ddl.GetDictionary<RivetAssetId, ToggleLookNodeDef>(0xf4659944, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<ToggleLookNodeDef>(mapId));
 	}
 
 	[DDLRegistration(0x8a5864b1u)]

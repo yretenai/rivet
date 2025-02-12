@@ -15,7 +15,9 @@ public class ObjectiveGraphGameDef : ObjectiveGraphSharedDef, IDDLObjectType<Obj
 	public new static RivetTypeId TypeId { get; } = new RivetTypeId(0xd2c5e2d6u);
 
 	public ObjectiveGraphGameDef(DDLObject ddl) : base(ddl) {
+		ObjectiveNodes = ddl.GetDictionary<RivetAssetId, ObjectiveNodeGameDef>(0x4187529d, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<ObjectiveNodeGameDef>(mapId));
 		StartNode = ddl.GetObject<MissionStartObjectiveNodeGameDef>(0xe6b0de2bu);
+		EndNodes = ddl.GetDictionary<RivetAssetId, MissionCompleteObjectiveNodeGameDef>(0x551a6bd7, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<MissionCompleteObjectiveNodeGameDef>(mapId));
 	}
 
 	[DDLRegistration(0xd2c5e2d6u)]

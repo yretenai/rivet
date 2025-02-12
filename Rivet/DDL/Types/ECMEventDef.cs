@@ -16,6 +16,7 @@ public class ECMEventDef : DDLObjectType, IDDLObjectType<ECMEventDef> {
 
 	public ECMEventDef(DDLObject ddl) : base(ddl) {
 		EventName = ddl.GetString(0x2048921d) ?? EventName;
+		Filters = ddl.GetDictionary<RivetAssetId, ECMFilterDef>(0x799d04b5, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<ECMFilterDef>(mapId));
 	}
 
 	[DDLRegistration(0x22e3b5bbu)]

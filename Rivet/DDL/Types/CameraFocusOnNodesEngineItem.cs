@@ -15,6 +15,7 @@ public class CameraFocusOnNodesEngineItem : DDLObjectType, IDDLObjectType<Camera
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x57d30fa5u);
 
 	public CameraFocusOnNodesEngineItem(DDLObject ddl) : base(ddl) {
+		Nodes = ddl.GetDictionary<RivetAssetId, bool>(0x046ec93d, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetValue<bool>(mapId));
 		UseClusters = ddl.GetValue<bool>(0x127904f6u, UseClusters);
 		DistanceFactor = ddl.GetValue<float>(0xf4e39365u, DistanceFactor);
 	}

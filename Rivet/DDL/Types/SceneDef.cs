@@ -17,7 +17,12 @@ public class SceneDef : DDLObjectType, IDDLObjectType<SceneDef> {
 	public SceneDef(DDLObject ddl) : base(ddl) {
 		VaultMetaData = ddl.GetObject<VaultMetaData>(0x037889aau);
 		IconPath = ddl.GetValue<RivetAssetId>(0xbf5b007fu, IconPath);
+		SceneNodes = ddl.GetDictionary<RivetAssetId, SceneNode>(0x41496fde, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<SceneNode>(mapId));
+		ActorGroups = ddl.GetDictionary<RivetAssetId, ActorGroupNode>(0xd4a16a95, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<ActorGroupNode>(mapId));
 		MainScriptGraphId = ddl.GetValue<RivetAssetId>(0x98b21bedu, MainScriptGraphId);
+		ScriptGraphs = ddl.GetDictionary<RivetAssetId, NodeGraphContents>(0xb6beea44, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<NodeGraphContents>(mapId));
+		VarNodes = ddl.GetDictionary<RivetAssetId, VarNode>(0x84e9cc70, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<VarNode>(mapId));
+		VertexPaintNodes = ddl.GetDictionary<RivetAssetId, VertexPaintNode>(0xb9ed55e1, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<VertexPaintNode>(mapId));
 	}
 
 	[DDLRegistration(0xbea98c75u)]

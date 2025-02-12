@@ -14,7 +14,15 @@ using Rivet.DDL.Enums;
 public class TestGraphDef : GameplayNodeGraphBaseDef, IDDLObjectType<TestGraphDef> {
 	public new static RivetTypeId TypeId { get; } = new RivetTypeId(0x592a45e5u);
 
-	public TestGraphDef(DDLObject ddl) : base(ddl) { }
+	public TestGraphDef(DDLObject ddl) : base(ddl) {
+		TestNodes = ddl.GetDictionary<RivetAssetId, TestNodeDef>(0x065def20, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<TestNodeDef>(mapId));
+		TriggerNodes = ddl.GetDictionary<RivetAssetId, TestTriggerNodeDef>(0x733dd74e, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<TestTriggerNodeDef>(mapId));
+		MakeStringNodes = ddl.GetDictionary<RivetAssetId, TestMakeStringNodeDef>(0xf9b8ef84, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<TestMakeStringNodeDef>(mapId));
+		InputIntNodes = ddl.GetDictionary<RivetAssetId, InputNodeIntDef>(0x5c33390d, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<InputNodeIntDef>(mapId));
+		InputStringNodes = ddl.GetDictionary<RivetAssetId, InputNodeStringDef>(0x5795b3b8, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<InputNodeStringDef>(mapId));
+		OutputIntNodes = ddl.GetDictionary<RivetAssetId, OutputNodeIntDef>(0xfd06341a, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<OutputNodeIntDef>(mapId));
+		OutputStringNodes = ddl.GetDictionary<RivetAssetId, OutputNodeStringDef>(0xade1bc82, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<OutputNodeStringDef>(mapId));
+	}
 
 	[DDLRegistration(0x592a45e5u)]
 	public Dictionary<RivetAssetId, TestNodeDef?> TestNodes { get; set; } = [];

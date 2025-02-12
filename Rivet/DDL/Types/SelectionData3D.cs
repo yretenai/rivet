@@ -15,6 +15,7 @@ public class SelectionData3D : DDLObjectType, IDDLObjectType<SelectionData3D> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0xe3c0fd2fu);
 
 	public SelectionData3D(DDLObject ddl) : base(ddl) {
+		SelectedObjects = ddl.GetDictionary<RivetAssetId, RivetAssetId>(0x7bd56f26, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetValue<RivetAssetId>(mapId));
 		LastSelectedObject = ddl.GetValue<RivetAssetId>(0x986b8d51u, LastSelectedObject);
 	}
 

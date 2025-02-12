@@ -17,6 +17,7 @@ public class TweakVarFile : DDLObjectType, IDDLObjectType<TweakVarFile> {
 	public TweakVarFile(DDLObject ddl) : base(ddl) {
 		FileName = ddl.GetString(0x6638fb2b) ?? FileName;
 		FilePath = ddl.GetValue<RivetAssetId>(0x334f0e22u, FilePath);
+		Variables = ddl.GetDictionary<int, TweakVarVariable>(0x0a36e21d, DDLMapTypeHandler.VisitInt, (mapId, mapDDL) => mapDDL.GetObject<TweakVarVariable>(mapId));
 	}
 
 	[DDLRegistration(0xb40f10c5u)]

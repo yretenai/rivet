@@ -23,6 +23,9 @@ public class Proof2 : DDLObjectType, IDDLObjectType<Proof2> {
 		B = ddl.GetBitset<x1ea7317b>(0xa351b8f7u, x1ea7317bValues.Lookup);
 		PrimArray = ddl.GetObjects<Prims>(0x7689fd86u);
 		PrimFixedArray = ddl.GetObjects<Prims>(0x6d4aadd2u);
+		HM = ddl.GetDictionary<int, int>(0xd1f8e3a0, DDLMapTypeHandler.VisitInt, (mapId, mapDDL) => mapDDL.GetValue<int>(mapId));
+		SHM = ddl.GetDictionary<string, string>(0xb36edef2, DDLMapTypeHandler.VisitString, (mapId, mapDDL) => mapDDL.GetString(mapId));
+		FHM = ddl.GetDictionary<RivetAssetId, int>(0xa983bf69, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetValue<int>(mapId));
 	}
 
 	[DDLRegistration(0xdc34a743u)]

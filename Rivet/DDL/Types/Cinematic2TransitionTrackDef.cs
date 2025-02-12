@@ -20,6 +20,9 @@ public class Cinematic2TransitionTrackDef : DDLObjectType, IDDLObjectType<Cinema
 		PlatformFilter = ddl.GetBitset<xb52df7e7>(0x92542397u, xb52df7e7Values.Lookup);
 		Tags = ddl.GetObject<Cinematic2TrackTagsDef>(0x5f2c5496u);
 		Global = ddl.GetValue<bool>(0xd67dc5e4u, Global);
+		FadeTransitions = ddl.GetDictionary<RivetAssetId, Cinematic2TransitionFadeDef>(0xa6c9db89, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2TransitionFadeDef>(mapId));
+		AnimatedTransitions = ddl.GetDictionary<RivetAssetId, Cinematic2TransitionAnimatedDef>(0x60772a9a, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2TransitionAnimatedDef>(mapId));
+		VfxTransitions = ddl.GetDictionary<RivetAssetId, Cinematic2TransitionVfxDef>(0x6042de64, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2TransitionVfxDef>(mapId));
 	}
 
 	[DDLRegistration(0xb5bf3369u)]

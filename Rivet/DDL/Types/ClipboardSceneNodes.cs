@@ -14,7 +14,10 @@ using Rivet.DDL.Enums;
 public class ClipboardSceneNodes : DDLObjectType, IDDLObjectType<ClipboardSceneNodes> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x4ee897dbu);
 
-	public ClipboardSceneNodes(DDLObject ddl) : base(ddl) { }
+	public ClipboardSceneNodes(DDLObject ddl) : base(ddl) {
+		PayloadSceneNodes = ddl.GetDictionary<RivetAssetId, SceneNode>(0xe982452e, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<SceneNode>(mapId));
+		PayloadVertexPaintNodes = ddl.GetDictionary<RivetAssetId, VertexPaintNode>(0x51291e82, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<VertexPaintNode>(mapId));
+	}
 
 	[DDLRegistration(0x4ee897dbu)]
 	public Dictionary<RivetAssetId, SceneNode?> PayloadSceneNodes { get; set; } = [];

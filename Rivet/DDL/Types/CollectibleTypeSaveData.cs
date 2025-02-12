@@ -15,6 +15,7 @@ public class CollectibleTypeSaveData : DDLObjectType, IDDLObjectType<Collectible
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0xf0a755f9u);
 
 	public CollectibleTypeSaveData(DDLObject ddl) : base(ddl) {
+		InstanceSaveData = ddl.GetDictionary<ulong, CollectibleInstanceSaveData>(0xc1b22ec3, DDLMapTypeHandler.VisitULong, (mapId, mapDDL) => mapDDL.GetObject<CollectibleInstanceSaveData>(mapId));
 		NumCompleted = ddl.GetValue<uint>(0x8c54faebu, NumCompleted);
 	}
 

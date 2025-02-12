@@ -22,10 +22,15 @@ public class PerformanceSessionData : DDLObjectType, IDDLObjectType<PerformanceS
 		BodyActorHandle = ddl.GetValue<uint>(0x46eb0bb6u, BodyActorHandle);
 		MuteAnimSet = ddl.GetString(0xf4cbd9f9) ?? MuteAnimSet;
 		MuteAnimClip = ddl.GetString(0x3434f051) ?? MuteAnimClip;
+		SoloExpressions = ddl.GetDictionary<string, string>(0x5615394c, DDLMapTypeHandler.VisitString, (mapId, mapDDL) => mapDDL.GetString(mapId));
+		MuteExpressions = ddl.GetDictionary<string, string>(0x4fb2c557, DDLMapTypeHandler.VisitString, (mapId, mapDDL) => mapDDL.GetString(mapId));
+		SoloBodyGestures = ddl.GetDictionary<string, string>(0xf8587858, DDLMapTypeHandler.VisitString, (mapId, mapDDL) => mapDDL.GetString(mapId));
+		MuteBodyGestures = ddl.GetDictionary<string, string>(0x72241648, DDLMapTypeHandler.VisitString, (mapId, mapDDL) => mapDDL.GetString(mapId));
 		Time = ddl.GetValue<float>(0x5f0458f5u, Time);
 		SelectionData = ddl.GetObject<PerformanceSelectionData>(0x4a3db851u);
 		AnimClipData = ddl.GetObjects<PerformanceAnimClipData>(0x9878f47cu);
 		AnimSets = ddl.GetStrings(0x03492d19u);
+		Selection = ddl.GetDictionary<RivetAssetId, RivetAssetId>(0x145893db, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetValue<RivetAssetId>(mapId));
 		MuteNameList = ddl.GetStrings(0x595577bcu);
 		SoloNameList = ddl.GetStrings(0x51729e93u);
 	}

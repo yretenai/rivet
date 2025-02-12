@@ -15,6 +15,8 @@ public class UDSWebApiTrophyMetadata : DDLObjectType, IDDLObjectType<UDSWebApiTr
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x3fe88e5du);
 
 	public UDSWebApiTrophyMetadata(DDLObject ddl) : base(ddl) {
+		Name = ddl.GetDictionary<string, string>(0xce811188, DDLMapTypeHandler.VisitString, (mapId, mapDDL) => mapDDL.GetString(mapId));
+		Description = ddl.GetDictionary<string, string>(0xe03811fd, DDLMapTypeHandler.VisitString, (mapId, mapDDL) => mapDDL.GetString(mapId));
 		Grade = ddl.GetEnum<xfb81cf7c>(0x81c84df1u, xfb81cf7cValues.Lookup);
 		Hidden = ddl.GetValue<bool>(0xb189a2ecu, Hidden);
 		SortKey = ddl.GetString(0x5dca42dc) ?? SortKey;

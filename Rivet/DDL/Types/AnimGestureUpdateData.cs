@@ -14,7 +14,9 @@ using Rivet.DDL.Enums;
 public class AnimGestureUpdateData : DDLObjectType, IDDLObjectType<AnimGestureUpdateData> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x1c9848c1u);
 
-	public AnimGestureUpdateData(DDLObject ddl) : base(ddl) { }
+	public AnimGestureUpdateData(DDLObject ddl) : base(ddl) {
+		Elems = ddl.GetDictionary<RivetAssetId, AnimGestureDef>(0xa810b7fd, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<AnimGestureDef>(mapId));
+	}
 
 	[DDLRegistration(0x1c9848c1u)]
 	public Dictionary<RivetAssetId, AnimGestureDef?> Elems { get; set; } = [];

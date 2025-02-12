@@ -20,6 +20,7 @@ public class GraphNode : DDLObjectType, IDDLObjectType<GraphNode> {
 		YPos = ddl.GetValue<float>(0x403689e4u, YPos);
 		Collapsed = ddl.GetValue<bool>(0xf07e7fafu, Collapsed);
 		Disabled = ddl.GetValue<bool>(0x7effd393u, Disabled);
+		ConMeta = ddl.GetDictionary<RivetAssetId, GraphConMeta>(0xaffcfa8a, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<GraphConMeta>(mapId));
 		Comment = ddl.GetString(0x959e3154) ?? Comment;
 		Type = ddl.GetString(0xbc4e9799) ?? Type;
 		SubType = ddl.GetString(0xf4b3e9a4) ?? SubType;

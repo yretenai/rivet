@@ -28,6 +28,9 @@ public class Cinematic2DialogTrackDef : DDLObjectType, IDDLObjectType<Cinematic2
 		VarEyeVertical = ddl.GetString(0x05cf7a97) ?? VarEyeVertical;
 		VarBlink = ddl.GetString(0xabec5c51) ?? VarBlink;
 		LookAtUnits = ddl.GetEnum<x96e13489>(0x0ebed4e7u, x96e13489Values.Lookup);
+		DialogActions = ddl.GetDictionary<RivetAssetId, Cinematic2DialogActionDef>(0x1f501f9a, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2DialogActionDef>(mapId));
+		LookAtActions = ddl.GetDictionary<RivetAssetId, Cinematic2LookAtActionDef>(0xa2c33691, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2LookAtActionDef>(mapId));
+		BlinkActions = ddl.GetDictionary<RivetAssetId, Cinematic2BlinkActionDef>(0x45b7d6eb, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2BlinkActionDef>(mapId));
 	}
 
 	[DDLRegistration(0x198e7519u)]

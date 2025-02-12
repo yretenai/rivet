@@ -14,7 +14,9 @@ using Rivet.DDL.Enums;
 public class SoundStatusEngineItem : DDLObjectType, IDDLObjectType<SoundStatusEngineItem> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x685616f6u);
 
-	public SoundStatusEngineItem(DDLObject ddl) : base(ddl) { }
+	public SoundStatusEngineItem(DDLObject ddl) : base(ddl) {
+		ActiveSoundEventIds = ddl.GetDictionary<uint, uint>(0x4f2f7f71, DDLMapTypeHandler.VisitUInt, (mapId, mapDDL) => mapDDL.GetValue<uint>(mapId));
+	}
 
 	[DDLRegistration(0x685616f6u)]
 	public Dictionary<uint, uint> ActiveSoundEventIds { get; set; } = [];

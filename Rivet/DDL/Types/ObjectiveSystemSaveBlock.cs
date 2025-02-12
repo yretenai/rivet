@@ -16,6 +16,7 @@ public class ObjectiveSystemSaveBlock : DDLObjectType, IDDLObjectType<ObjectiveS
 
 	public ObjectiveSystemSaveBlock(DDLObject ddl) : base(ddl) {
 		SystemData = ddl.GetObject<ObjSysSaveDataShared>(0x5624b145u);
+		GraphDataTable = ddl.GetDictionary<ulong, ObjSysGraphSaveData>(0x8ac4dfe3, DDLMapTypeHandler.VisitULong, (mapId, mapDDL) => mapDDL.GetObject<ObjSysGraphSaveData>(mapId));
 	}
 
 	[DDLRegistration(0xcd1b6b32u)]

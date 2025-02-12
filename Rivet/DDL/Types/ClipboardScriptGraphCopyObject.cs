@@ -19,6 +19,7 @@ public class ClipboardScriptGraphCopyObject : DDLObjectType, IDDLObjectType<Clip
 		Center = ddl.GetObject<ClipboardScriptGraphCenter>(0x7e88a543u);
 		ClipboardId = ddl.GetValue<RivetAssetId>(0x1c73b6c7u, ClipboardId);
 		Connections = ddl.GetObjects<GraphConnection>(0x322aadceu);
+		EmbeddedSubGraphs = ddl.GetDictionary<RivetAssetId, NodeGraphContents>(0x5895c331, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<NodeGraphContents>(mapId));
 		GraphId = ddl.GetValue<RivetAssetId>(0x76b05713u, GraphId);
 		Nodes = ddl.GetObjects<GraphNode>(0x046ec93du);
 	}

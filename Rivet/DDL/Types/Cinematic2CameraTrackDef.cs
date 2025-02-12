@@ -23,6 +23,15 @@ public class Cinematic2CameraTrackDef : DDLObjectType, IDDLObjectType<Cinematic2
 		StartTransform = ddl.GetObject<DDLTransform>(0x96f1f1f8u);
 		DefaultValues = ddl.GetObject<Cinematic2DefaultCameraValuesDef>(0x616c13d7u);
 		InheritGameDof = ddl.GetValue<bool>(0x6ebf4684u, InheritGameDof);
+		PlayAnimActions = ddl.GetDictionary<RivetAssetId, Cinematic2BehaviorPlayAnimClipActionDef>(0x2a95c808, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2BehaviorPlayAnimClipActionDef>(mapId));
+		DofTracks = ddl.GetDictionary<RivetAssetId, Cinematic2CameraDofTrackDef>(0x16d51e79, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2CameraDofTrackDef>(mapId));
+		Fov = ddl.GetDictionary<RivetAssetId, Cinematic2CameraFovCurveDef>(0xc24de428, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2CameraFovCurveDef>(mapId));
+		FocalLength = ddl.GetDictionary<RivetAssetId, Cinematic2CameraFocalLengthCurveDef>(0xfc7ce243, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2CameraFocalLengthCurveDef>(mapId));
+		PosRotTracks = ddl.GetDictionary<RivetAssetId, Cinematic2CameraPosRotTrackDef>(0x9d08821a, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2CameraPosRotTrackDef>(mapId));
+		Shake = ddl.GetDictionary<RivetAssetId, Cinematic2CameraShakeTrackDef>(0x6d55f883, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2CameraShakeTrackDef>(mapId));
+		VfxTracks = ddl.GetDictionary<RivetAssetId, Cinematic2CameraVfxTrackDef>(0xbc4d8836, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2CameraVfxTrackDef>(mapId));
+		EventTracks = ddl.GetDictionary<RivetAssetId, Cinematic2CameraEventTrackDef>(0x653e2373, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2CameraEventTrackDef>(mapId));
+		OrphanTracks = ddl.GetDictionary<RivetAssetId, Cinematic2CameraOrphanTrackDef>(0x00ea59a6, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2CameraOrphanTrackDef>(mapId));
 	}
 
 	[DDLRegistration(0xf94d0c62u)]

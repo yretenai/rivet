@@ -19,6 +19,7 @@ public class RegionNamedLink : DDLObjectType, IDDLObjectType<RegionNamedLink> {
 		Order = ddl.GetValue<float>(0xec7a5f59u, Order);
 		Name = ddl.GetString(0x6eb3beb6) ?? Name;
 		Link = ddl.GetString(0x063c5941) ?? Link;
+		GameData = ddl.GetDictionary<RivetAssetId, DDLStructInst>(0xa1f1eb12, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<DDLStructInst>(mapId));
 	}
 
 	[DDLRegistration(0xdbc47693u)]

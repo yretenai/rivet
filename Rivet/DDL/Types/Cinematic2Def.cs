@@ -35,9 +35,20 @@ public class Cinematic2Def : DDLObjectType, IDDLObjectType<Cinematic2Def> {
 		ToTexture = ddl.GetObject<Cinematic2ToTextureDef>(0x10c740fcu);
 		FromTexture = ddl.GetObject<Cinematic2FromTextureDef>(0xb405f966u);
 		ActorCustomizationConfig = ddl.GetValue<RivetAssetId>(0x5d0f4089u, ActorCustomizationConfig);
+		PreviewRegions = ddl.GetDictionary<RivetAssetId, RivetAssetId>(0x78679d88, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetValue<RivetAssetId>(mapId));
+		UserRegions = ddl.GetDictionary<RivetAssetId, Cinematic2UserRegionDef>(0x7c67ed0a, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2UserRegionDef>(mapId));
+		Cameras = ddl.GetDictionary<RivetAssetId, Cinematic2CameraTrackDef>(0x6ab54452, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2CameraTrackDef>(mapId));
+		LightGroups = ddl.GetDictionary<RivetAssetId, Cinematic2LightGroupDef>(0xf44ff5cc, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2LightGroupDef>(mapId));
 		ShotOrder = ddl.GetValues<RivetAssetId>(0xb153f7e6u);
+		Shots = ddl.GetDictionary<RivetAssetId, Cinematic2ShotDef>(0x5e456e46, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2ShotDef>(mapId));
+		Actors = ddl.GetDictionary<RivetAssetId, Cinematic2ActorDef>(0xe153be82, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2ActorDef>(mapId));
+		Lights = ddl.GetDictionary<RivetAssetId, Cinematic2LightDef>(0x06c4fc8f, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2LightDef>(mapId));
+		Locators = ddl.GetDictionary<RivetAssetId, Cinematic2LocatorDef>(0x3c7848cc, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2LocatorDef>(mapId));
 		AtmosphereTrack = ddl.GetObject<Cinematic2GlobalAtmosphereTrackDef>(0xd3d07b3bu);
 		AudioListenerTrack = ddl.GetObject<Cinematic2GlobalAudioListenerTrackDef>(0xcbfe62f1u);
+		AudioStateGroupTracks = ddl.GetDictionary<RivetAssetId, Cinematic2GlobalAudioGameSyncGroupTrackDef>(0x4ac451eb, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2GlobalAudioGameSyncGroupTrackDef>(mapId));
+		EventTracks = ddl.GetDictionary<RivetAssetId, Cinematic2GlobalEventTrackDef>(0x653e2373, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2GlobalEventTrackDef>(mapId));
+		MovieTracks = ddl.GetDictionary<RivetAssetId, Cinematic2GlobalMovieTrackDef>(0x5a6788c3, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2GlobalMovieTrackDef>(mapId));
 		MasterFaderTrack = ddl.GetObject<Cinematic2GlobalAudioFaderTrackDef>(0x5ef83290u);
 		MusicTrack = ddl.GetObject<Cinematic2GlobalMusicTrackDef>(0xc500fd1bu);
 		RateTrack = ddl.GetObject<Cinematic2GlobalRateTrackDef>(0x37fe8abau);
@@ -46,6 +57,8 @@ public class Cinematic2Def : DDLObjectType, IDDLObjectType<Cinematic2Def> {
 		VfxModifierTrack = ddl.GetObject<Cinematic2GlobalVfxModifierTrackDef>(0x5b97322fu);
 		ZoneTrack = ddl.GetObject<Cinematic2GlobalZoneTrackDef>(0x5a02f910u);
 		TagTrack = ddl.GetObject<Cinematic2GlobalTagTrackDef>(0x5e09a57fu);
+		Folders = ddl.GetDictionary<RivetAssetId, Cinematic2FolderDef>(0xffddb037, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2FolderDef>(mapId));
+		OrphanTracks = ddl.GetDictionary<RivetAssetId, Cinematic2GlobalOrphanTrackDef>(0x00ea59a6, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2GlobalOrphanTrackDef>(mapId));
 	}
 
 	[DDLRegistration(0xca6a194cu)]

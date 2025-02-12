@@ -17,6 +17,7 @@ public class RegionAuxInstanceUnit : DDLObjectType, IDDLObjectType<RegionAuxInst
 	public RegionAuxInstanceUnit(DDLObject ddl) : base(ddl) {
 		MapOverlay = ddl.GetObject<Region2DMapOverlay>(0x10c367a4u);
 		Zones = ddl.GetValues<RivetAssetId>(0x9c997da9u);
+		NamedLinks = ddl.GetDictionary<RivetAssetId, RegionNamedLink>(0x6bee750e, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<RegionNamedLink>(mapId));
 	}
 
 	[DDLRegistration(0x25a9c1fcu, "Map Overlay (Devstats Only)")]

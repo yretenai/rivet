@@ -15,6 +15,7 @@ public class DevstatsSegmentSystemSaveData : DDLObjectType, IDDLObjectType<Devst
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0xd6277b15u);
 
 	public DevstatsSegmentSystemSaveData(DDLObject ddl) : base(ddl) {
+		Segments = ddl.GetDictionary<uint, DevstatsSegmentSaveData>(0xdccf6659, DDLMapTypeHandler.VisitUInt, (mapId, mapDDL) => mapDDL.GetObject<DevstatsSegmentSaveData>(mapId));
 		PrimarySegment = ddl.GetValue<uint>(0x84a0626eu, PrimarySegment);
 	}
 

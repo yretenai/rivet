@@ -23,6 +23,7 @@ public class RegionAuxOpenUnit : DDLObjectType, IDDLObjectType<RegionAuxOpenUnit
 		Zones = ddl.GetValues<RivetAssetId>(0x9c997da9u);
 		NavExclusionZones = ddl.GetValues<RivetAssetId>(0xfaaad4d2u);
 		NavInclusionZones = ddl.GetValues<RivetAssetId>(0xc4bd3cf8u);
+		NamedLinks = ddl.GetDictionary<RivetAssetId, RegionNamedLink>(0x6bee750e, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<RegionNamedLink>(mapId));
 	}
 
 	[DDLRegistration(0x13f29253u)]

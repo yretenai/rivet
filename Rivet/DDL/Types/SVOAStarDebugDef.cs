@@ -20,6 +20,7 @@ public class SVOAStarDebugDef : DDLObjectType, IDDLObjectType<SVOAStarDebugDef> 
 		End = ddl.GetObject<DDLVector3>(0x2aa91a78u);
 		PathPoints = ddl.GetObjects<DDLVector3>(0x847a9164u);
 		PathHandles = ddl.GetValues<ulong>(0x3e5c37e4u);
+		SmoothingConsideredNeighbors = ddl.GetDictionary<ulong, bool>(0xac341ebd, DDLMapTypeHandler.VisitULong, (mapId, mapDDL) => mapDDL.GetValue<bool>(mapId));
 		SmoothPathSteps = ddl.GetObjects<Nav3DSmoothPathStepElement>(0xa6e24f1du);
 	}
 

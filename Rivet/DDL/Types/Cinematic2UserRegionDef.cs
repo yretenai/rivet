@@ -17,6 +17,7 @@ public class Cinematic2UserRegionDef : DDLObjectType, IDDLObjectType<Cinematic2U
 	public Cinematic2UserRegionDef(DDLObject ddl) : base(ddl) {
 		Id = ddl.GetValue<RivetAssetId>(0x8a514a8du, Id);
 		Name = ddl.GetString(0x6eb3beb6) ?? Name;
+		UserZones = ddl.GetDictionary<RivetAssetId, Cinematic2UserZoneDef>(0xe1523db2, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<Cinematic2UserZoneDef>(mapId));
 	}
 
 	[DDLRegistration(0xe25f9ebcu)]

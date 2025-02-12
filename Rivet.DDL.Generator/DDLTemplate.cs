@@ -35,13 +35,13 @@ public static class DDLTemplate {
 		[%attribute%]
 		public class %name% : %base-name%, IDDLObjectType<%name%> {
 			public %new%static RivetTypeId TypeId { get; } = new RivetTypeId(0x%hash%u);
-		
+
 			public %name%(DDLObject ddl) : base(ddl) {
 				%init-body%
 			}
-		
+
 			%field-body%
-		
+
 			public %new%static %name% Create(DDLObject ddl) => new(ddl);
 		}
 
@@ -51,6 +51,9 @@ public static class DDLTemplate {
 
 	public const string DefaultReader = "GetValue<%type%>(0x%hash%u, %name%)";
 	public const string DefaultArrayReader = "GetValues<%type%>(0x%hash%u)";
+	public const string DefaultMapReader = "(mapId, mapDDL) => mapDDL.GetValue<%type%>(mapId)";
+	public const string DefaultMapKeyHandler = "DDLMapTypeHandler.Visit%type%";
+	public const string MapReader = "GetDictionary<%map-type%, %type%>(0x%hash%, %key-handler%, %visitor%)";
 
 	public static readonly Dictionary<DDLArrayKind, string> ArrayMapping = new() {
 		[DDLArrayKind.None] = "%type%",
@@ -79,6 +82,25 @@ public static class DDLTemplate {
 		[DDLTypeKind.Asset] = "RivetAssetId",
 	};
 
+	public static readonly Dictionary<DDLTypeKind, string> MapTypeMapping = new() {
+		[DDLTypeKind.UInt8] = "Byte",
+		[DDLTypeKind.UInt16] = "UShort",
+		[DDLTypeKind.UInt32] = "UInt",
+		[DDLTypeKind.UInt64] = "ULong",
+		[DDLTypeKind.Int8] = "SByte",
+		[DDLTypeKind.Int16] = "Short",
+		[DDLTypeKind.Int32] = "Int",
+		[DDLTypeKind.Int64] = "Long",
+		[DDLTypeKind.Float] = "Float",
+		[DDLTypeKind.Double] = "Double",
+		[DDLTypeKind.String] = "String",
+		[DDLTypeKind.Bool] = "Bool",
+		[DDLTypeKind.File] = "RivetAssetId",
+		[DDLTypeKind.Identifier] = "RivetAssetId",
+		[DDLTypeKind.Json] = "String",
+		[DDLTypeKind.Asset] = "RivetAssetId",
+	};
+
 	public static readonly Dictionary<DDLTypeKind, string> ArgumentMapping = new() {
 		[DDLTypeKind.String] = "0x%hash%u",
 		[DDLTypeKind.Json] = "0x%hash%u",
@@ -101,6 +123,15 @@ public static class DDLTemplate {
 		[DDLTypeKind.Bitfield] = null,
 		[DDLTypeKind.Struct] = "GetObjects<%type%>(0x%hash%u)",
 		[DDLTypeKind.Unknown] = "GetFields(0x%hash%u)",
+	};
+
+	public static readonly Dictionary<DDLTypeKind, string> DictionaryReaderMapping = new() {
+		[DDLTypeKind.String] = "(mapId, mapDDL) => mapDDL.GetString(mapId)",
+		[DDLTypeKind.Json] = "(mapId, mapDDL) => mapDDL.GetString(mapId)",
+		[DDLTypeKind.Enum] = "(mapId, mapDDL) => mapDDL.GetEnum<%type%>(mapId, %type%Values.Lookup)",
+		[DDLTypeKind.Bitfield] = "(mapId, mapDDL) => mapDDL.GetBitset<%type%>(mapId, %type%Values.Lookup)",
+		[DDLTypeKind.Struct] = "(mapId, mapDDL) => mapDDL.GetObject<%type%>(mapId)",
+		[DDLTypeKind.Unknown] = "(mapId, mapDDL) => mapDDL.GetField(mapId)",
 	};
 
 	public static string Format(string str, Dictionary<string, object> values) {

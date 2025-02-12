@@ -18,6 +18,7 @@ public class ScriptGraphDef : DDLObjectType, IDDLObjectType<ScriptGraphDef> {
 		VaultMetaData = ddl.GetObject<VaultMetaData>(0x037889aau);
 		IconPath = ddl.GetValue<RivetAssetId>(0xbf5b007fu, IconPath);
 		MainScriptGraphId = ddl.GetValue<RivetAssetId>(0x98b21bedu, MainScriptGraphId);
+		ScriptGraphs = ddl.GetDictionary<RivetAssetId, NodeGraphContents>(0xb6beea44, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<NodeGraphContents>(mapId));
 	}
 
 	[DDLRegistration(0x49b59f43u)]

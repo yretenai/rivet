@@ -16,6 +16,7 @@ public class UDSHintLinks : DDLObjectType, IDDLObjectType<UDSHintLinks> {
 
 	public UDSHintLinks(DDLObject ddl) : base(ddl) {
 		AssociatedActivity = ddl.GetObject<UBPObjectId>(0xc7096228u);
+		AssociatedMedia = ddl.GetDictionary<string, UDSHintMedia>(0xcc2c8447, DDLMapTypeHandler.VisitString, (mapId, mapDDL) => mapDDL.GetObject<UDSHintMedia>(mapId));
 	}
 
 	[DDLRegistration(0x07b544ccu)]

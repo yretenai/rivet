@@ -15,6 +15,7 @@ public class MmArrayAndHash : DDLObjectType, IDDLObjectType<MmArrayAndHash> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0x1ad64495u);
 
 	public MmArrayAndHash(DDLObject ddl) : base(ddl) {
+		Hash = ddl.GetDictionary<RivetAssetId, MmLeaf>(0xe128a208, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetObject<MmLeaf>(mapId));
 		Array = ddl.GetObjects<MmLeaf>(0xb85f2276u);
 	}
 

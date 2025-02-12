@@ -14,7 +14,9 @@ using Rivet.DDL.Enums;
 public class CameraRotateSpecifiedNodesEngineItem : DDLObjectType, IDDLObjectType<CameraRotateSpecifiedNodesEngineItem> {
 	public static RivetTypeId TypeId { get; } = new RivetTypeId(0xdfbc9e85u);
 
-	public CameraRotateSpecifiedNodesEngineItem(DDLObject ddl) : base(ddl) { }
+	public CameraRotateSpecifiedNodesEngineItem(DDLObject ddl) : base(ddl) {
+		RotateObjectsByYawAngle = ddl.GetDictionary<RivetAssetId, double>(0x936112a6, DDLMapTypeHandler.VisitRivetAssetId, (mapId, mapDDL) => mapDDL.GetValue<double>(mapId));
+	}
 
 	[DDLRegistration(0xdfbc9e85u)]
 	public Dictionary<RivetAssetId, double> RotateObjectsByYawAngle { get; set; } = [];
